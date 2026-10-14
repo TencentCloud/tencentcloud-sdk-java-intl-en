@@ -24,2091 +24,2487 @@ import java.util.HashMap;
 public class InstanceInfo extends AbstractModel {
 
     /**
-    * Instance ID
+    * <p>Instance ID.</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Instance name
+    * <p>Instance name.</p>
     */
     @SerializedName("InstanceName")
     @Expose
     private String InstanceName;
 
     /**
-    * Region
+    * <p>Region.</p>
     */
     @SerializedName("Region")
     @Expose
     private String Region;
 
     /**
-    * Availability Zone
+    * <p>AZ.</p>
     */
     @SerializedName("Zone")
     @Expose
     private String Zone;
 
     /**
-    * User ID
+    * <p>uid</p>
     */
     @SerializedName("AppId")
     @Expose
     private Long AppId;
 
     /**
-    * User UIN
+    * <p>User UIN.</p>
     */
     @SerializedName("Uin")
     @Expose
     private String Uin;
 
     /**
-    * UID of the VPC where the instance resides
+    * <p>UID of the VPC to which the instance belongs</p>
     */
     @SerializedName("VpcUid")
     @Expose
     private String VpcUid;
 
     /**
-    * UID of the subnet where the instance resides
+    * <p>UID of the subnet to which the instance belongs</p>
     */
     @SerializedName("SubnetUid")
     @Expose
     private String SubnetUid;
 
     /**
-    * Instance status. `0`: Processing; `1`: Normal; `-1`: `Stopped`; `-2`: Being terminated; `-3`: Terminated; `2`: Initializing during the cluster creation.
+    * <p>Instance status. 0: processing, 1: normal, -1: stopped, -2: being destroyed, -3: terminated, -4: isolated, 2: initializing when creating a cluster</p>
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * This parameter is not used on the global website
+    * <p>Auto-renewal flag. Value range: <br>RENEW_FLAG_AUTO: auto renewal<br>RENEW_FLAG_MANUAL: no auto-renewal<br>Default value: <br>RENEW_FLAG_DEFAULT: no auto-renewal<br>If this parameter is set to RENEW_FLAG_AUTO, the instance will automatically renew on a monthly basis after expiration if the account balance is sufficient.</p>
     */
     @SerializedName("RenewFlag")
     @Expose
     private String RenewFlag;
 
     /**
-    * Instance billing method. Valid values: POSTPAID_BY_HOUR (pay-as-you-go hourly); CDHPAID (billed based on CDH, i.e., only CDH is billed but not the instances on CDH)
+    * <p>Instance billing mode. Value ranges: PREPAID: prepaid mode, i.e., monthly subscription. POSTPAID_BY_HOUR: postpaid, i.e., pay-as-you-go. CDHPAID: CDH-paid mode, i.e., only charges for CDH, without charging for instances on CDH.</p>
     */
     @SerializedName("ChargeType")
     @Expose
     private String ChargeType;
 
     /**
-    * This parameter is not used on the global website
+    * <p>Annual and monthly subscription duration, unit: month</p>
     */
     @SerializedName("ChargePeriod")
     @Expose
     private Long ChargePeriod;
 
     /**
-    * Node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
+    * <p>Node specification<li>ES.S1.SMALL2: 1-core 2G</li><li>ES.S1.MEDIUM4: 2-core 4G</li><li>ES.S1.MEDIUM8: 2-core 8G</li><li>ES.S1.LARGE16: 4-core 16G</li><li>ES.S1.2XLARGE32: 8-core 32G</li><li>ES.S1.4XLARGE32: 16-core 32G</li><li>ES.S1.4XLARGE64: 16-core 64G</li></p>
     */
     @SerializedName("NodeType")
     @Expose
     private String NodeType;
 
     /**
-    * Number of nodes
+    * <p>Number of nodes</p>
     */
     @SerializedName("NodeNum")
     @Expose
     private Long NodeNum;
 
     /**
-    * Number of CPU cores of the node
+    * <p>Number of node CPU cores.</p>
     */
     @SerializedName("CpuNum")
     @Expose
     private Long CpuNum;
 
     /**
-    * Node memory size in GB
+    * <p>Node memory size (GB).</p>
     */
     @SerializedName("MemSize")
     @Expose
     private Long MemSize;
 
     /**
-    * Node disk type
+    * <p>Node disk type</p>
     */
     @SerializedName("DiskType")
     @Expose
     private String DiskType;
 
     /**
-    * Node disk size in GB
+    * <p>Node disk size (GB).</p>
     */
     @SerializedName("DiskSize")
     @Expose
     private Long DiskSize;
 
     /**
-    * ES domain name
+    * <p>ES domain name</p>
     */
     @SerializedName("EsDomain")
     @Expose
     private String EsDomain;
 
     /**
-    * ES VIP
+    * <p>ES VIP</p>
     */
     @SerializedName("EsVip")
     @Expose
     private String EsVip;
 
     /**
-    * ES port
+    * <p>ES port</p>
     */
     @SerializedName("EsPort")
     @Expose
     private Long EsPort;
 
     /**
-    * Kibana access URL
+    * <p>Kibana access url</p>
     */
     @SerializedName("KibanaUrl")
     @Expose
     private String KibanaUrl;
 
     /**
-    * ES version number
+    * <p>ES version number</p>
     */
     @SerializedName("EsVersion")
     @Expose
     private String EsVersion;
 
     /**
-    * ES configuration item
+    * <p>ES configuration item</p>
     */
     @SerializedName("EsConfig")
     @Expose
     private String EsConfig;
 
     /**
-    * Kibana access control configuration
+    * <p>Kibana Access Control Configuration</p>
     */
     @SerializedName("EsAcl")
     @Expose
     private EsAcl EsAcl;
 
     /**
-    * Instance creation time
+    * <p>Instance creation time</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * Last modified time of the instance
+    * <p>Last modification time of the instance</p>
     */
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
 
     /**
-    * This parameter is not used on the global website
+    * <p>Instance expiration time</p>
     */
     @SerializedName("Deadline")
     @Expose
     private String Deadline;
 
     /**
-    * Instance type (instance type identifier, which can be only 1 or 2 currently)
+    * <p>Instance type (instance type flag, currently only 1 and 2)</p>
     */
     @SerializedName("InstanceType")
     @Expose
     private Long InstanceType;
 
     /**
-    * IK analyzer configuration
+    * <p>Ik analyzer configuration</p>
     */
     @SerializedName("IkConfig")
     @Expose
     private EsDictionaryInfo IkConfig;
 
     /**
-    * Dedicated primary node configuration
+    * <p>Dedicated master node configuration</p>
     */
     @SerializedName("MasterNodeInfo")
     @Expose
     private MasterNodeInfo MasterNodeInfo;
 
     /**
-    * Auto-backup to COS configuration
+    * <p>cos automatic backup configuration</p>
     */
     @SerializedName("CosBackup")
     @Expose
     private CosBackup CosBackup;
 
     /**
-    * Whether to allow auto-backup to COS
+    * <p>Whether cos automatic backup is allowed</p>
     */
     @SerializedName("AllowCosBackup")
     @Expose
     private Boolean AllowCosBackup;
 
     /**
-    * List of tags owned by the instance
+    * <p>Tag list of the instance</p>
     */
     @SerializedName("TagList")
     @Expose
     private TagInfo [] TagList;
 
     /**
-    * License type <li>oss: Open Source Edition </li><li>basic: Basic Edition </li><li>platinum: Platinum Edition </li>Default value: Platinum
+    * <p>License type<li>oss: open source edition</li><li>basic: basic version</li><li>platinum: platinum version</li>Default value: platinum</p>
     */
     @SerializedName("LicenseType")
     @Expose
     private String LicenseType;
 
     /**
-    * Whether it is a hot/warm cluster <li>true: yes </li><li>false: no</li>
-Note: this field may return null, indicating that no valid values can be obtained.
+    * <p>License type<li>oss: open source edition</li><li>basic: basic version</li><li>platinum: platinum version</li><li>enterprise: enterprise edition</li>Default value: platinum</p>
+    */
+    @SerializedName("RealLicenseType")
+    @Expose
+    private String RealLicenseType;
+
+    /**
+    * <p>Whether it is a hot-cold cluster<li>true: Hot-cold cluster</li><li>false: Non-hot-cold cluster</li></p>
     */
     @SerializedName("EnableHotWarmMode")
     @Expose
     private Boolean EnableHotWarmMode;
 
     /**
-    * Warm node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
-Note: This field may return `null`, indicating that no valid value was found.
+    * <p>Warm node specification<li>ES.S1.SMALL2: 1-core 2G</li><li>ES.S1.MEDIUM4: 2-core 4G</li><li>ES.S1.MEDIUM8: 2-core 8G</li><li>ES.S1.LARGE16: 4-core 16G</li><li>ES.S1.2XLARGE32: 8-core 32G</li><li>ES.S1.4XLARGE32: 16-core 32G</li><li>ES.S1.4XLARGE64: 16-core 64G</li></p>
     */
     @SerializedName("WarmNodeType")
     @Expose
     private String WarmNodeType;
 
     /**
-    * Number of warm nodes
-Note: This field may return `null`, indicating that no valid value was found.
+    * <p>Number of warm nodes</p>
     */
     @SerializedName("WarmNodeNum")
     @Expose
     private Long WarmNodeNum;
 
     /**
-    * Number of warm node CPU cores
-Note: This field may return `null`, indicating that no valid value was found.
+    * <p>Warm node CPU cores</p>
     */
     @SerializedName("WarmCpuNum")
     @Expose
     private Long WarmCpuNum;
 
     /**
-    * Warm node memory size (in GB)
-Note: This field may return `null`, indicating that no valid value was found.
+    * <p>Warm node memory size (GB).</p>
     */
     @SerializedName("WarmMemSize")
     @Expose
     private Long WarmMemSize;
 
     /**
-    * Warm node disk type
-Note: This field may return `null`, indicating that no valid value was found.
+    * <p>Warm node disk type</p>
     */
     @SerializedName("WarmDiskType")
     @Expose
     private String WarmDiskType;
 
     /**
-    * Warm node disk size (in GB)
-Note: This field may return `null`, indicating that no valid value was found.
+    * <p>Warm node disk size (GB).</p>
     */
     @SerializedName("WarmDiskSize")
     @Expose
     private Long WarmDiskSize;
 
     /**
-    * Cluster node information list
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Cluster node information list</p>
     */
     @SerializedName("NodeInfoList")
     @Expose
     private NodeInfo [] NodeInfoList;
 
     /**
-    * ES public IP address
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Es public network address</p>
     */
     @SerializedName("EsPublicUrl")
     @Expose
     private String EsPublicUrl;
 
     /**
-    * Multi-AZ network information
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Multi-AZ network info</p>
     */
     @SerializedName("MultiZoneInfo")
     @Expose
     private ZoneDetail [] MultiZoneInfo;
 
     /**
-    * Deployment mode <li>0: single-AZ </li><li>1: multi-AZ</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Deployment mode<li>0: single availability zone</li><li>1: multi-availability zone, Beijing, Shanghai, Shanghai Finance, Guangzhou, Nanjing, Hong Kong, Singapore, Frankfurt (allowlist control)</li></p>
     */
     @SerializedName("DeployMode")
     @Expose
     private Long DeployMode;
 
     /**
-    * ES public access status <li>OPEN: enabled </li><li>CLOSE: disabled
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>ES public access status<li>OPEN: enable</li><li>CLOSE: disable</li></p>
     */
     @SerializedName("PublicAccess")
     @Expose
     private String PublicAccess;
 
     /**
-    * ES public access control configuration
+    * <p>ES public network access control configuration</p>
     */
     @SerializedName("EsPublicAcl")
     @Expose
     private EsAcl EsPublicAcl;
 
     /**
-    * Kibana private IP address
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Kibana private network address</p>
     */
     @SerializedName("KibanaPrivateUrl")
     @Expose
     private String KibanaPrivateUrl;
 
     /**
-    * Kibana public access status <li>OPEN: enabled </li><li>CLOSE: disabled
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Kibana public access status<li>OPEN: enabled</li><li>CLOSE: disabled</li></p>
     */
     @SerializedName("KibanaPublicAccess")
     @Expose
     private String KibanaPublicAccess;
 
     /**
-    * Kibana private access status <li>OPEN: enabled </li><li>CLOSE: disabled
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Kibana internal access status<li>OPEN: enable</li><li>CLOSE: disable</li></p>
     */
     @SerializedName("KibanaPrivateAccess")
     @Expose
     private String KibanaPrivateAccess;
 
     /**
-    * Whether to enable X-Pack security authentication in Basic Edition 6.8 (and above) <li>1: disabled </li><li>2: enabled</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Whether xpack security authentication is enabled for basic version 6.8 (and above versions)<li>1: not enabled</li><li>2: enabled</li></p>
     */
     @SerializedName("SecurityType")
     @Expose
     private Long SecurityType;
 
     /**
-    * Scenario template type. 0: not enabled; 1: general scenario; 2: log scenario; 3: search scenario
-Note: this field may return null, indicating that no valid values can be obtained.
+    * <p>Scenario template type: 0, not enabled; 1, common scenarios; 2, log scenario; 3, search scenario</p>
     */
     @SerializedName("SceneType")
     @Expose
     private Long SceneType;
 
     /**
-    * Kibana configuration item.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * <p>Kibana configuration item</p>
     */
     @SerializedName("KibanaConfig")
     @Expose
     private String KibanaConfig;
 
     /**
-    * Kibana node information
-Note: this field may return `null`, indicating that no valid value can be obtained.
+    * <p>Kibana node information</p>
     */
     @SerializedName("KibanaNodeInfo")
     @Expose
     private KibanaNodeInfo KibanaNodeInfo;
 
     /**
-    * Visual node configuration
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * <p>Visualize node configuration</p>
     */
     @SerializedName("WebNodeTypeInfo")
     @Expose
     private WebNodeTypeInfo WebNodeTypeInfo;
 
     /**
-    * JDK type. Valid values: `oracle`, `kona`
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * <p>JDK type. Valid values: oracle, kona</p>
     */
     @SerializedName("Jdk")
     @Expose
     private String Jdk;
 
     /**
-    * Cluster network communication protocol
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * <p>Cluster network communication protocol</p>
     */
     @SerializedName("Protocol")
     @Expose
     private String Protocol;
 
     /**
-    * Security group ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * <p>Security group id</p>
     */
     @SerializedName("SecurityGroups")
     @Expose
     private String [] SecurityGroups;
 
     /**
-    * Cold node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
-Note: This field may return `null`, indicating that no valid value was found.
+    * <p>Cold node specification<li>ES.S1.SMALL2: 1-core 2G</li><li>ES.S1.MEDIUM4: 2-core 4G</li><li>ES.S1.MEDIUM8: 2-core 8G</li><li>ES.S1.LARGE16: 4-core 16G</li><li>ES.S1.2XLARGE32: 8-core 32G</li><li>ES.S1.4XLARGE32: 16-core 32G</li><li>ES.S1.4XLARGE64: 16-core 64G</li></p>
     */
     @SerializedName("ColdNodeType")
     @Expose
     private String ColdNodeType;
 
     /**
-    * Number of cold nodes
-Note: This field may return `null`, indicating that no valid value was found.
+    * <p>Number of cold nodes</p>
     */
     @SerializedName("ColdNodeNum")
     @Expose
     private Long ColdNodeNum;
 
     /**
-    * Number of cold node CPU cores
-Note: This field may return `null`, indicating that no valid value was found.
+    * <p>Cold node CPU cores</p>
     */
     @SerializedName("ColdCpuNum")
     @Expose
     private Long ColdCpuNum;
 
     /**
-    * Cold node memory size (in GB)
-Note: This field may return `null`, indicating that no valid value was found.
+    * <p>Cold node memory size (GB).</p>
     */
     @SerializedName("ColdMemSize")
     @Expose
     private Long ColdMemSize;
 
     /**
-    * Cold node disk type
-Note: This field may return `null`, indicating that no valid value was found.
+    * <p>Cold node disk type</p>
     */
     @SerializedName("ColdDiskType")
     @Expose
     private String ColdDiskType;
 
     /**
-    * Cold node disk size (in GB)
-Note: This field may return `null`, indicating that no valid value was found.
+    * <p>Cold node disk size (GB).</p>
     */
     @SerializedName("ColdDiskSize")
     @Expose
     private Long ColdDiskSize;
 
     /**
-    * Frozen node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
-Note: This field may return `null`, indicating that no valid value was found.
+    * <p>Frozen node specification<li>ES.S1.SMALL2: 1-core 2GB</li><li>ES.S1.MEDIUM4: 2-core 4GB</li><li>ES.S1.MEDIUM8: 2-core 8GB</li><li>ES.S1.LARGE16: 4-core 16GB</li><li>ES.S1.2XLARGE32: 8-core 32GB</li><li>ES.S1.4XLARGE32: 16-core 32GB</li><li>ES.S1.4XLARGE64: 16-core 64GB</li></p>
     */
     @SerializedName("FrozenNodeType")
     @Expose
     private String FrozenNodeType;
 
     /**
-    * Number of frozen nodes
-Note: This field may return `null`, indicating that no valid value was found.
+    * <p>Number of frozen nodes</p>
     */
     @SerializedName("FrozenNodeNum")
     @Expose
     private Long FrozenNodeNum;
 
     /**
-    * Number of frozen node CPU cores
-Note: This field may return `null`, indicating that no valid value was found.
+    * <p>Frozen node CPU cores</p>
     */
     @SerializedName("FrozenCpuNum")
     @Expose
     private Long FrozenCpuNum;
 
     /**
-    * Frozen node memory size (GB)
-Note: This field may return `null`, indicating that no valid value was found.
+    * <p>Frozen node memory size (GB).</p>
     */
     @SerializedName("FrozenMemSize")
     @Expose
     private Long FrozenMemSize;
 
     /**
-    * Frozen node disk type
-Note: This field may return `null`, indicating that no valid value was found.
+    * <p>Frozen node disk type</p>
     */
     @SerializedName("FrozenDiskType")
     @Expose
     private String FrozenDiskType;
 
     /**
-    * Frozen node disk size (in GB)
-Note: This field may return `null`, indicating that no valid value was found.
+    * <p>Frozen node disk size (GB).</p>
     */
     @SerializedName("FrozenDiskSize")
     @Expose
     private Long FrozenDiskSize;
 
     /**
-    * Cluster health status. `-1`: Unknown; `0`: Green; `1`: Yellow; `2`: Red
-Note: This field may return `null`, indicating that no valid value was found.
+    * <p>Cluster health status: -1 unknown; 0 Green; 1 Yellow; 2 Red</p>
     */
     @SerializedName("HealthStatus")
     @Expose
     private Long HealthStatus;
 
     /**
-    * Private URL of the HTTPS cluster
-Note: This field may return `null`, indicating that no valid value was found.
+    * <p>Intracluster network url for https.</p>
     */
     @SerializedName("EsPrivateUrl")
     @Expose
     private String EsPrivateUrl;
 
     /**
-    * Private domain of the HTTPS cluster
-Note: This field may return `null`, indicating that no valid value was found.
+    * <p>https cluster private network domain name</p>
     */
     @SerializedName("EsPrivateDomain")
     @Expose
     private String EsPrivateDomain;
 
     /**
-    * Configuration set info of the cluster.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Cluster configuration group information.</p>
     */
     @SerializedName("EsConfigSets")
     @Expose
     private EsConfigSetInfo [] EsConfigSets;
 
     /**
-    * The maintenance time slot of the cluster
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Cluster maintenance time slot</p>
     */
     @SerializedName("OperationDuration")
     @Expose
     private OperationDuration OperationDuration;
 
     /**
-    * Web node list
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>web node list</p>
     */
     @SerializedName("OptionalWebServiceInfos")
     @Expose
     private OptionalWebServiceInfo [] OptionalWebServiceInfos;
 
     /**
-    * Autonomous index option
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Autonomous index switch</p>
     */
     @SerializedName("AutoIndexEnabled")
     @Expose
     private Boolean AutoIndexEnabled;
 
     /**
-    * Whether the storage-computing separation feature is enabled.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Whether storage and computation separation is supported.</p>
     */
     @SerializedName("EnableHybridStorage")
     @Expose
     private Boolean EnableHybridStorage;
 
     /**
-    * The process progress
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Process progress.</p>
     */
     @SerializedName("ProcessPercent")
     @Expose
     private Float ProcessPercent;
 
     /**
-    * The alerting policy of Kibana over the public network. <li>`OPEN`: Enable the policy;</li><li>`CLOSE`: Disable the policy.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Kibana alerting public network alert policy<li>OPEN: enable</li><li>CLOSE: disable</li></p>
     */
     @SerializedName("KibanaAlteringPublicAccess")
     @Expose
     private String KibanaAlteringPublicAccess;
 
     /**
-     * Get Instance ID 
-     * @return InstanceId Instance ID
+    * <p>Whether there is a kernel update this month: false (no) and true (yes).</p>
+    */
+    @SerializedName("HasKernelUpgrade")
+    @Expose
+    private Boolean HasKernelUpgrade;
+
+    /**
+    * <p>cdcId, pass it when using a CDC subnet</p>
+    */
+    @SerializedName("CdcId")
+    @Expose
+    private String CdcId;
+
+    /**
+    * <p>kibana intranet vip</p>
+    */
+    @SerializedName("KibanaPrivateVip")
+    @Expose
+    private String KibanaPrivateVip;
+
+    /**
+    * <p>Customize the private network url of kibana</p>
+    */
+    @SerializedName("CustomKibanaPrivateUrl")
+    @Expose
+    private String CustomKibanaPrivateUrl;
+
+    /**
+    * <p>Node outbound access detailed information.</p>
+    */
+    @SerializedName("OutboundPublicAcls")
+    @Expose
+    private OutboundPublicAcl [] OutboundPublicAcls;
+
+    /**
+    * <p>Network connection solution</p>
+    */
+    @SerializedName("NetConnectScheme")
+    @Expose
+    private String NetConnectScheme;
+
+    /**
+    * <p>Placement group related parameters</p>
+    */
+    @SerializedName("DisasterRecoverGroupAffinity")
+    @Expose
+    private Long DisasterRecoverGroupAffinity;
+
+    /**
+    * <p>Sub-product ID enumeration values: open source edition: "sp_es_io2", basic version: "sp_es_basic", platinum version: "sp_es_platinum", AI Search Enhancement Edition: "sp_es_aisearch", enterprise edition: "sp_es_enterprise", CDC platinum version: "sp_es_CDC_platinum", Log Enhancement Edition: "sp_es_enlogging", tsearch: "sp_tsearch_io2", logstash: "sp_es_logstash". It can be empty. When it is empty, the backend maps this field based on LicenseType.</p>
+    */
+    @SerializedName("SubProductCode")
+    @Expose
+    private String SubProductCode;
+
+    /**
+    * <p>Storage-compute separation cos usage, Unit: M</p>
+    */
+    @SerializedName("CosBucketStorageSize")
+    @Expose
+    private Long CosBucketStorageSize;
+
+    /**
+    * <p>Read-write separation mode: 0: not enabled; 1: local read/write separation; 2: remote read/write separation.</p>
+    */
+    @SerializedName("ReadWriteMode")
+    @Expose
+    private Long ReadWriteMode;
+
+    /**
+    * <p>Whether there is an asynchronous task scheduling for placement groups</p>
+    */
+    @SerializedName("EnableScheduleRecoverGroup")
+    @Expose
+    private Boolean EnableScheduleRecoverGroup;
+
+    /**
+    * <p>The time when an asynchronous task is scheduled</p>
+    */
+    @SerializedName("EnableScheduleOperationDuration")
+    @Expose
+    private EnableScheduleOperationDuration EnableScheduleOperationDuration;
+
+    /**
+    * <p>Cluster protection: OPEN: enable, CLOSE: disable</p>
+    */
+    @SerializedName("EnableDestroyProtection")
+    @Expose
+    private String EnableDestroyProtection;
+
+    /**
+    * <p>kibana intranet access address</p>
+    */
+    @SerializedName("ShowKibanaIpPort")
+    @Expose
+    private String ShowKibanaIpPort;
+
+    /**
+    * <p>Whether it is a CDZLite availability zone</p>
+    */
+    @SerializedName("IsCdzLite")
+    @Expose
+    private Boolean IsCdzLite;
+
+    /**
+    * <p>Cluster private network tcp address</p>
+    */
+    @SerializedName("EsPrivateTcpUrl")
+    @Expose
+    private String EsPrivateTcpUrl;
+
+    /**
+    * <p>Whether it is in the recycle bin</p><p>Default value: false</p>
+    */
+    @SerializedName("IsInRecycleBin")
+    @Expose
+    private Boolean IsInRecycleBin;
+
+    /**
+    * <p>Is locked in the recycle bin</p><p>Default value: false</p>
+    */
+    @SerializedName("RecycleLockEnabled")
+    @Expose
+    private Boolean RecycleLockEnabled;
+
+    /**
+    * <p>The time when termination is expected</p><p>Parameter format: YYYY-MM-DD hh:mm:ss</p>
+    */
+    @SerializedName("MayDestroyPoint")
+    @Expose
+    private String MayDestroyPoint;
+
+    /**
+    * <p>The time when termination is delayed</p><p>Unit: day</p>
+    */
+    @SerializedName("DelayDestroyInterval")
+    @Expose
+    private Long DelayDestroyInterval;
+
+    /**
+    * <p>Enable automatic replacement of unhealthy nodes. 0: disable, 1: enable</p>
+    */
+    @SerializedName("EnableAutoReplace")
+    @Expose
+    private Long EnableAutoReplace;
+
+    /**
+    * <p>Enable mtls. 0: disable, 1: enable</p>
+    */
+    @SerializedName("OpenMTLS")
+    @Expose
+    private Long OpenMTLS;
+
+    /**
+    * <p>Certificate type</p>
+    */
+    @SerializedName("ServerCertSource")
+    @Expose
+    private String ServerCertSource;
+
+    /**
+    * <p>VIP pending migration for the cluster</p>
+    */
+    @SerializedName("OldEsVip")
+    @Expose
+    private String OldEsVip;
+
+    /**
+    * <p>Cluster TCP address to be migrated</p>
+    */
+    @SerializedName("OldEsPrivateTcpUrl")
+    @Expose
+    private String OldEsPrivateTcpUrl;
+
+    /**
+    * <p>Whether to take old nodes offline from the VIP</p>
+    */
+    @SerializedName("NeedOfflineOldNodesNotify")
+    @Expose
+    private Boolean NeedOfflineOldNodesNotify;
+
+    /**
+     * Get <p>Instance ID.</p> 
+     * @return InstanceId <p>Instance ID.</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID
-     * @param InstanceId Instance ID
+     * Set <p>Instance ID.</p>
+     * @param InstanceId <p>Instance ID.</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Instance name 
-     * @return InstanceName Instance name
+     * Get <p>Instance name.</p> 
+     * @return InstanceName <p>Instance name.</p>
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set Instance name
-     * @param InstanceName Instance name
+     * Set <p>Instance name.</p>
+     * @param InstanceName <p>Instance name.</p>
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
     }
 
     /**
-     * Get Region 
-     * @return Region Region
+     * Get <p>Region.</p> 
+     * @return Region <p>Region.</p>
      */
     public String getRegion() {
         return this.Region;
     }
 
     /**
-     * Set Region
-     * @param Region Region
+     * Set <p>Region.</p>
+     * @param Region <p>Region.</p>
      */
     public void setRegion(String Region) {
         this.Region = Region;
     }
 
     /**
-     * Get Availability Zone 
-     * @return Zone Availability Zone
+     * Get <p>AZ.</p> 
+     * @return Zone <p>AZ.</p>
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * Set Availability Zone
-     * @param Zone Availability Zone
+     * Set <p>AZ.</p>
+     * @param Zone <p>AZ.</p>
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
     }
 
     /**
-     * Get User ID 
-     * @return AppId User ID
+     * Get <p>uid</p> 
+     * @return AppId <p>uid</p>
      */
     public Long getAppId() {
         return this.AppId;
     }
 
     /**
-     * Set User ID
-     * @param AppId User ID
+     * Set <p>uid</p>
+     * @param AppId <p>uid</p>
      */
     public void setAppId(Long AppId) {
         this.AppId = AppId;
     }
 
     /**
-     * Get User UIN 
-     * @return Uin User UIN
+     * Get <p>User UIN.</p> 
+     * @return Uin <p>User UIN.</p>
      */
     public String getUin() {
         return this.Uin;
     }
 
     /**
-     * Set User UIN
-     * @param Uin User UIN
+     * Set <p>User UIN.</p>
+     * @param Uin <p>User UIN.</p>
      */
     public void setUin(String Uin) {
         this.Uin = Uin;
     }
 
     /**
-     * Get UID of the VPC where the instance resides 
-     * @return VpcUid UID of the VPC where the instance resides
+     * Get <p>UID of the VPC to which the instance belongs</p> 
+     * @return VpcUid <p>UID of the VPC to which the instance belongs</p>
      */
     public String getVpcUid() {
         return this.VpcUid;
     }
 
     /**
-     * Set UID of the VPC where the instance resides
-     * @param VpcUid UID of the VPC where the instance resides
+     * Set <p>UID of the VPC to which the instance belongs</p>
+     * @param VpcUid <p>UID of the VPC to which the instance belongs</p>
      */
     public void setVpcUid(String VpcUid) {
         this.VpcUid = VpcUid;
     }
 
     /**
-     * Get UID of the subnet where the instance resides 
-     * @return SubnetUid UID of the subnet where the instance resides
+     * Get <p>UID of the subnet to which the instance belongs</p> 
+     * @return SubnetUid <p>UID of the subnet to which the instance belongs</p>
      */
     public String getSubnetUid() {
         return this.SubnetUid;
     }
 
     /**
-     * Set UID of the subnet where the instance resides
-     * @param SubnetUid UID of the subnet where the instance resides
+     * Set <p>UID of the subnet to which the instance belongs</p>
+     * @param SubnetUid <p>UID of the subnet to which the instance belongs</p>
      */
     public void setSubnetUid(String SubnetUid) {
         this.SubnetUid = SubnetUid;
     }
 
     /**
-     * Get Instance status. `0`: Processing; `1`: Normal; `-1`: `Stopped`; `-2`: Being terminated; `-3`: Terminated; `2`: Initializing during the cluster creation. 
-     * @return Status Instance status. `0`: Processing; `1`: Normal; `-1`: `Stopped`; `-2`: Being terminated; `-3`: Terminated; `2`: Initializing during the cluster creation.
+     * Get <p>Instance status. 0: processing, 1: normal, -1: stopped, -2: being destroyed, -3: terminated, -4: isolated, 2: initializing when creating a cluster</p> 
+     * @return Status <p>Instance status. 0: processing, 1: normal, -1: stopped, -2: being destroyed, -3: terminated, -4: isolated, 2: initializing when creating a cluster</p>
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Instance status. `0`: Processing; `1`: Normal; `-1`: `Stopped`; `-2`: Being terminated; `-3`: Terminated; `2`: Initializing during the cluster creation.
-     * @param Status Instance status. `0`: Processing; `1`: Normal; `-1`: `Stopped`; `-2`: Being terminated; `-3`: Terminated; `2`: Initializing during the cluster creation.
+     * Set <p>Instance status. 0: processing, 1: normal, -1: stopped, -2: being destroyed, -3: terminated, -4: isolated, 2: initializing when creating a cluster</p>
+     * @param Status <p>Instance status. 0: processing, 1: normal, -1: stopped, -2: being destroyed, -3: terminated, -4: isolated, 2: initializing when creating a cluster</p>
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get This parameter is not used on the global website 
-     * @return RenewFlag This parameter is not used on the global website
+     * Get <p>Auto-renewal flag. Value range: <br>RENEW_FLAG_AUTO: auto renewal<br>RENEW_FLAG_MANUAL: no auto-renewal<br>Default value: <br>RENEW_FLAG_DEFAULT: no auto-renewal<br>If this parameter is set to RENEW_FLAG_AUTO, the instance will automatically renew on a monthly basis after expiration if the account balance is sufficient.</p> 
+     * @return RenewFlag <p>Auto-renewal flag. Value range: <br>RENEW_FLAG_AUTO: auto renewal<br>RENEW_FLAG_MANUAL: no auto-renewal<br>Default value: <br>RENEW_FLAG_DEFAULT: no auto-renewal<br>If this parameter is set to RENEW_FLAG_AUTO, the instance will automatically renew on a monthly basis after expiration if the account balance is sufficient.</p>
      */
     public String getRenewFlag() {
         return this.RenewFlag;
     }
 
     /**
-     * Set This parameter is not used on the global website
-     * @param RenewFlag This parameter is not used on the global website
+     * Set <p>Auto-renewal flag. Value range: <br>RENEW_FLAG_AUTO: auto renewal<br>RENEW_FLAG_MANUAL: no auto-renewal<br>Default value: <br>RENEW_FLAG_DEFAULT: no auto-renewal<br>If this parameter is set to RENEW_FLAG_AUTO, the instance will automatically renew on a monthly basis after expiration if the account balance is sufficient.</p>
+     * @param RenewFlag <p>Auto-renewal flag. Value range: <br>RENEW_FLAG_AUTO: auto renewal<br>RENEW_FLAG_MANUAL: no auto-renewal<br>Default value: <br>RENEW_FLAG_DEFAULT: no auto-renewal<br>If this parameter is set to RENEW_FLAG_AUTO, the instance will automatically renew on a monthly basis after expiration if the account balance is sufficient.</p>
      */
     public void setRenewFlag(String RenewFlag) {
         this.RenewFlag = RenewFlag;
     }
 
     /**
-     * Get Instance billing method. Valid values: POSTPAID_BY_HOUR (pay-as-you-go hourly); CDHPAID (billed based on CDH, i.e., only CDH is billed but not the instances on CDH) 
-     * @return ChargeType Instance billing method. Valid values: POSTPAID_BY_HOUR (pay-as-you-go hourly); CDHPAID (billed based on CDH, i.e., only CDH is billed but not the instances on CDH)
+     * Get <p>Instance billing mode. Value ranges: PREPAID: prepaid mode, i.e., monthly subscription. POSTPAID_BY_HOUR: postpaid, i.e., pay-as-you-go. CDHPAID: CDH-paid mode, i.e., only charges for CDH, without charging for instances on CDH.</p> 
+     * @return ChargeType <p>Instance billing mode. Value ranges: PREPAID: prepaid mode, i.e., monthly subscription. POSTPAID_BY_HOUR: postpaid, i.e., pay-as-you-go. CDHPAID: CDH-paid mode, i.e., only charges for CDH, without charging for instances on CDH.</p>
      */
     public String getChargeType() {
         return this.ChargeType;
     }
 
     /**
-     * Set Instance billing method. Valid values: POSTPAID_BY_HOUR (pay-as-you-go hourly); CDHPAID (billed based on CDH, i.e., only CDH is billed but not the instances on CDH)
-     * @param ChargeType Instance billing method. Valid values: POSTPAID_BY_HOUR (pay-as-you-go hourly); CDHPAID (billed based on CDH, i.e., only CDH is billed but not the instances on CDH)
+     * Set <p>Instance billing mode. Value ranges: PREPAID: prepaid mode, i.e., monthly subscription. POSTPAID_BY_HOUR: postpaid, i.e., pay-as-you-go. CDHPAID: CDH-paid mode, i.e., only charges for CDH, without charging for instances on CDH.</p>
+     * @param ChargeType <p>Instance billing mode. Value ranges: PREPAID: prepaid mode, i.e., monthly subscription. POSTPAID_BY_HOUR: postpaid, i.e., pay-as-you-go. CDHPAID: CDH-paid mode, i.e., only charges for CDH, without charging for instances on CDH.</p>
      */
     public void setChargeType(String ChargeType) {
         this.ChargeType = ChargeType;
     }
 
     /**
-     * Get This parameter is not used on the global website 
-     * @return ChargePeriod This parameter is not used on the global website
+     * Get <p>Annual and monthly subscription duration, unit: month</p> 
+     * @return ChargePeriod <p>Annual and monthly subscription duration, unit: month</p>
      */
     public Long getChargePeriod() {
         return this.ChargePeriod;
     }
 
     /**
-     * Set This parameter is not used on the global website
-     * @param ChargePeriod This parameter is not used on the global website
+     * Set <p>Annual and monthly subscription duration, unit: month</p>
+     * @param ChargePeriod <p>Annual and monthly subscription duration, unit: month</p>
      */
     public void setChargePeriod(Long ChargePeriod) {
         this.ChargePeriod = ChargePeriod;
     }
 
     /**
-     * Get Node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li> 
-     * @return NodeType Node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
+     * Get <p>Node specification<li>ES.S1.SMALL2: 1-core 2G</li><li>ES.S1.MEDIUM4: 2-core 4G</li><li>ES.S1.MEDIUM8: 2-core 8G</li><li>ES.S1.LARGE16: 4-core 16G</li><li>ES.S1.2XLARGE32: 8-core 32G</li><li>ES.S1.4XLARGE32: 16-core 32G</li><li>ES.S1.4XLARGE64: 16-core 64G</li></p> 
+     * @return NodeType <p>Node specification<li>ES.S1.SMALL2: 1-core 2G</li><li>ES.S1.MEDIUM4: 2-core 4G</li><li>ES.S1.MEDIUM8: 2-core 8G</li><li>ES.S1.LARGE16: 4-core 16G</li><li>ES.S1.2XLARGE32: 8-core 32G</li><li>ES.S1.4XLARGE32: 16-core 32G</li><li>ES.S1.4XLARGE64: 16-core 64G</li></p>
      */
     public String getNodeType() {
         return this.NodeType;
     }
 
     /**
-     * Set Node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
-     * @param NodeType Node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
+     * Set <p>Node specification<li>ES.S1.SMALL2: 1-core 2G</li><li>ES.S1.MEDIUM4: 2-core 4G</li><li>ES.S1.MEDIUM8: 2-core 8G</li><li>ES.S1.LARGE16: 4-core 16G</li><li>ES.S1.2XLARGE32: 8-core 32G</li><li>ES.S1.4XLARGE32: 16-core 32G</li><li>ES.S1.4XLARGE64: 16-core 64G</li></p>
+     * @param NodeType <p>Node specification<li>ES.S1.SMALL2: 1-core 2G</li><li>ES.S1.MEDIUM4: 2-core 4G</li><li>ES.S1.MEDIUM8: 2-core 8G</li><li>ES.S1.LARGE16: 4-core 16G</li><li>ES.S1.2XLARGE32: 8-core 32G</li><li>ES.S1.4XLARGE32: 16-core 32G</li><li>ES.S1.4XLARGE64: 16-core 64G</li></p>
      */
     public void setNodeType(String NodeType) {
         this.NodeType = NodeType;
     }
 
     /**
-     * Get Number of nodes 
-     * @return NodeNum Number of nodes
+     * Get <p>Number of nodes</p> 
+     * @return NodeNum <p>Number of nodes</p>
      */
     public Long getNodeNum() {
         return this.NodeNum;
     }
 
     /**
-     * Set Number of nodes
-     * @param NodeNum Number of nodes
+     * Set <p>Number of nodes</p>
+     * @param NodeNum <p>Number of nodes</p>
      */
     public void setNodeNum(Long NodeNum) {
         this.NodeNum = NodeNum;
     }
 
     /**
-     * Get Number of CPU cores of the node 
-     * @return CpuNum Number of CPU cores of the node
+     * Get <p>Number of node CPU cores.</p> 
+     * @return CpuNum <p>Number of node CPU cores.</p>
      */
     public Long getCpuNum() {
         return this.CpuNum;
     }
 
     /**
-     * Set Number of CPU cores of the node
-     * @param CpuNum Number of CPU cores of the node
+     * Set <p>Number of node CPU cores.</p>
+     * @param CpuNum <p>Number of node CPU cores.</p>
      */
     public void setCpuNum(Long CpuNum) {
         this.CpuNum = CpuNum;
     }
 
     /**
-     * Get Node memory size in GB 
-     * @return MemSize Node memory size in GB
+     * Get <p>Node memory size (GB).</p> 
+     * @return MemSize <p>Node memory size (GB).</p>
      */
     public Long getMemSize() {
         return this.MemSize;
     }
 
     /**
-     * Set Node memory size in GB
-     * @param MemSize Node memory size in GB
+     * Set <p>Node memory size (GB).</p>
+     * @param MemSize <p>Node memory size (GB).</p>
      */
     public void setMemSize(Long MemSize) {
         this.MemSize = MemSize;
     }
 
     /**
-     * Get Node disk type 
-     * @return DiskType Node disk type
+     * Get <p>Node disk type</p> 
+     * @return DiskType <p>Node disk type</p>
      */
     public String getDiskType() {
         return this.DiskType;
     }
 
     /**
-     * Set Node disk type
-     * @param DiskType Node disk type
+     * Set <p>Node disk type</p>
+     * @param DiskType <p>Node disk type</p>
      */
     public void setDiskType(String DiskType) {
         this.DiskType = DiskType;
     }
 
     /**
-     * Get Node disk size in GB 
-     * @return DiskSize Node disk size in GB
+     * Get <p>Node disk size (GB).</p> 
+     * @return DiskSize <p>Node disk size (GB).</p>
      */
     public Long getDiskSize() {
         return this.DiskSize;
     }
 
     /**
-     * Set Node disk size in GB
-     * @param DiskSize Node disk size in GB
+     * Set <p>Node disk size (GB).</p>
+     * @param DiskSize <p>Node disk size (GB).</p>
      */
     public void setDiskSize(Long DiskSize) {
         this.DiskSize = DiskSize;
     }
 
     /**
-     * Get ES domain name 
-     * @return EsDomain ES domain name
+     * Get <p>ES domain name</p> 
+     * @return EsDomain <p>ES domain name</p>
      */
     public String getEsDomain() {
         return this.EsDomain;
     }
 
     /**
-     * Set ES domain name
-     * @param EsDomain ES domain name
+     * Set <p>ES domain name</p>
+     * @param EsDomain <p>ES domain name</p>
      */
     public void setEsDomain(String EsDomain) {
         this.EsDomain = EsDomain;
     }
 
     /**
-     * Get ES VIP 
-     * @return EsVip ES VIP
+     * Get <p>ES VIP</p> 
+     * @return EsVip <p>ES VIP</p>
      */
     public String getEsVip() {
         return this.EsVip;
     }
 
     /**
-     * Set ES VIP
-     * @param EsVip ES VIP
+     * Set <p>ES VIP</p>
+     * @param EsVip <p>ES VIP</p>
      */
     public void setEsVip(String EsVip) {
         this.EsVip = EsVip;
     }
 
     /**
-     * Get ES port 
-     * @return EsPort ES port
+     * Get <p>ES port</p> 
+     * @return EsPort <p>ES port</p>
      */
     public Long getEsPort() {
         return this.EsPort;
     }
 
     /**
-     * Set ES port
-     * @param EsPort ES port
+     * Set <p>ES port</p>
+     * @param EsPort <p>ES port</p>
      */
     public void setEsPort(Long EsPort) {
         this.EsPort = EsPort;
     }
 
     /**
-     * Get Kibana access URL 
-     * @return KibanaUrl Kibana access URL
+     * Get <p>Kibana access url</p> 
+     * @return KibanaUrl <p>Kibana access url</p>
      */
     public String getKibanaUrl() {
         return this.KibanaUrl;
     }
 
     /**
-     * Set Kibana access URL
-     * @param KibanaUrl Kibana access URL
+     * Set <p>Kibana access url</p>
+     * @param KibanaUrl <p>Kibana access url</p>
      */
     public void setKibanaUrl(String KibanaUrl) {
         this.KibanaUrl = KibanaUrl;
     }
 
     /**
-     * Get ES version number 
-     * @return EsVersion ES version number
+     * Get <p>ES version number</p> 
+     * @return EsVersion <p>ES version number</p>
      */
     public String getEsVersion() {
         return this.EsVersion;
     }
 
     /**
-     * Set ES version number
-     * @param EsVersion ES version number
+     * Set <p>ES version number</p>
+     * @param EsVersion <p>ES version number</p>
      */
     public void setEsVersion(String EsVersion) {
         this.EsVersion = EsVersion;
     }
 
     /**
-     * Get ES configuration item 
-     * @return EsConfig ES configuration item
+     * Get <p>ES configuration item</p> 
+     * @return EsConfig <p>ES configuration item</p>
      */
     public String getEsConfig() {
         return this.EsConfig;
     }
 
     /**
-     * Set ES configuration item
-     * @param EsConfig ES configuration item
+     * Set <p>ES configuration item</p>
+     * @param EsConfig <p>ES configuration item</p>
      */
     public void setEsConfig(String EsConfig) {
         this.EsConfig = EsConfig;
     }
 
     /**
-     * Get Kibana access control configuration 
-     * @return EsAcl Kibana access control configuration
+     * Get <p>Kibana Access Control Configuration</p> 
+     * @return EsAcl <p>Kibana Access Control Configuration</p>
      */
     public EsAcl getEsAcl() {
         return this.EsAcl;
     }
 
     /**
-     * Set Kibana access control configuration
-     * @param EsAcl Kibana access control configuration
+     * Set <p>Kibana Access Control Configuration</p>
+     * @param EsAcl <p>Kibana Access Control Configuration</p>
      */
     public void setEsAcl(EsAcl EsAcl) {
         this.EsAcl = EsAcl;
     }
 
     /**
-     * Get Instance creation time 
-     * @return CreateTime Instance creation time
+     * Get <p>Instance creation time</p> 
+     * @return CreateTime <p>Instance creation time</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set Instance creation time
-     * @param CreateTime Instance creation time
+     * Set <p>Instance creation time</p>
+     * @param CreateTime <p>Instance creation time</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get Last modified time of the instance 
-     * @return UpdateTime Last modified time of the instance
+     * Get <p>Last modification time of the instance</p> 
+     * @return UpdateTime <p>Last modification time of the instance</p>
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set Last modified time of the instance
-     * @param UpdateTime Last modified time of the instance
+     * Set <p>Last modification time of the instance</p>
+     * @param UpdateTime <p>Last modification time of the instance</p>
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
     }
 
     /**
-     * Get This parameter is not used on the global website 
-     * @return Deadline This parameter is not used on the global website
+     * Get <p>Instance expiration time</p> 
+     * @return Deadline <p>Instance expiration time</p>
      */
     public String getDeadline() {
         return this.Deadline;
     }
 
     /**
-     * Set This parameter is not used on the global website
-     * @param Deadline This parameter is not used on the global website
+     * Set <p>Instance expiration time</p>
+     * @param Deadline <p>Instance expiration time</p>
      */
     public void setDeadline(String Deadline) {
         this.Deadline = Deadline;
     }
 
     /**
-     * Get Instance type (instance type identifier, which can be only 1 or 2 currently) 
-     * @return InstanceType Instance type (instance type identifier, which can be only 1 or 2 currently)
+     * Get <p>Instance type (instance type flag, currently only 1 and 2)</p> 
+     * @return InstanceType <p>Instance type (instance type flag, currently only 1 and 2)</p>
      */
     public Long getInstanceType() {
         return this.InstanceType;
     }
 
     /**
-     * Set Instance type (instance type identifier, which can be only 1 or 2 currently)
-     * @param InstanceType Instance type (instance type identifier, which can be only 1 or 2 currently)
+     * Set <p>Instance type (instance type flag, currently only 1 and 2)</p>
+     * @param InstanceType <p>Instance type (instance type flag, currently only 1 and 2)</p>
      */
     public void setInstanceType(Long InstanceType) {
         this.InstanceType = InstanceType;
     }
 
     /**
-     * Get IK analyzer configuration 
-     * @return IkConfig IK analyzer configuration
+     * Get <p>Ik analyzer configuration</p> 
+     * @return IkConfig <p>Ik analyzer configuration</p>
      */
     public EsDictionaryInfo getIkConfig() {
         return this.IkConfig;
     }
 
     /**
-     * Set IK analyzer configuration
-     * @param IkConfig IK analyzer configuration
+     * Set <p>Ik analyzer configuration</p>
+     * @param IkConfig <p>Ik analyzer configuration</p>
      */
     public void setIkConfig(EsDictionaryInfo IkConfig) {
         this.IkConfig = IkConfig;
     }
 
     /**
-     * Get Dedicated primary node configuration 
-     * @return MasterNodeInfo Dedicated primary node configuration
+     * Get <p>Dedicated master node configuration</p> 
+     * @return MasterNodeInfo <p>Dedicated master node configuration</p>
      */
     public MasterNodeInfo getMasterNodeInfo() {
         return this.MasterNodeInfo;
     }
 
     /**
-     * Set Dedicated primary node configuration
-     * @param MasterNodeInfo Dedicated primary node configuration
+     * Set <p>Dedicated master node configuration</p>
+     * @param MasterNodeInfo <p>Dedicated master node configuration</p>
      */
     public void setMasterNodeInfo(MasterNodeInfo MasterNodeInfo) {
         this.MasterNodeInfo = MasterNodeInfo;
     }
 
     /**
-     * Get Auto-backup to COS configuration 
-     * @return CosBackup Auto-backup to COS configuration
+     * Get <p>cos automatic backup configuration</p> 
+     * @return CosBackup <p>cos automatic backup configuration</p>
      */
     public CosBackup getCosBackup() {
         return this.CosBackup;
     }
 
     /**
-     * Set Auto-backup to COS configuration
-     * @param CosBackup Auto-backup to COS configuration
+     * Set <p>cos automatic backup configuration</p>
+     * @param CosBackup <p>cos automatic backup configuration</p>
      */
     public void setCosBackup(CosBackup CosBackup) {
         this.CosBackup = CosBackup;
     }
 
     /**
-     * Get Whether to allow auto-backup to COS 
-     * @return AllowCosBackup Whether to allow auto-backup to COS
+     * Get <p>Whether cos automatic backup is allowed</p> 
+     * @return AllowCosBackup <p>Whether cos automatic backup is allowed</p>
      */
     public Boolean getAllowCosBackup() {
         return this.AllowCosBackup;
     }
 
     /**
-     * Set Whether to allow auto-backup to COS
-     * @param AllowCosBackup Whether to allow auto-backup to COS
+     * Set <p>Whether cos automatic backup is allowed</p>
+     * @param AllowCosBackup <p>Whether cos automatic backup is allowed</p>
      */
     public void setAllowCosBackup(Boolean AllowCosBackup) {
         this.AllowCosBackup = AllowCosBackup;
     }
 
     /**
-     * Get List of tags owned by the instance 
-     * @return TagList List of tags owned by the instance
+     * Get <p>Tag list of the instance</p> 
+     * @return TagList <p>Tag list of the instance</p>
      */
     public TagInfo [] getTagList() {
         return this.TagList;
     }
 
     /**
-     * Set List of tags owned by the instance
-     * @param TagList List of tags owned by the instance
+     * Set <p>Tag list of the instance</p>
+     * @param TagList <p>Tag list of the instance</p>
      */
     public void setTagList(TagInfo [] TagList) {
         this.TagList = TagList;
     }
 
     /**
-     * Get License type <li>oss: Open Source Edition </li><li>basic: Basic Edition </li><li>platinum: Platinum Edition </li>Default value: Platinum 
-     * @return LicenseType License type <li>oss: Open Source Edition </li><li>basic: Basic Edition </li><li>platinum: Platinum Edition </li>Default value: Platinum
+     * Get <p>License type<li>oss: open source edition</li><li>basic: basic version</li><li>platinum: platinum version</li>Default value: platinum</p> 
+     * @return LicenseType <p>License type<li>oss: open source edition</li><li>basic: basic version</li><li>platinum: platinum version</li>Default value: platinum</p>
      */
     public String getLicenseType() {
         return this.LicenseType;
     }
 
     /**
-     * Set License type <li>oss: Open Source Edition </li><li>basic: Basic Edition </li><li>platinum: Platinum Edition </li>Default value: Platinum
-     * @param LicenseType License type <li>oss: Open Source Edition </li><li>basic: Basic Edition </li><li>platinum: Platinum Edition </li>Default value: Platinum
+     * Set <p>License type<li>oss: open source edition</li><li>basic: basic version</li><li>platinum: platinum version</li>Default value: platinum</p>
+     * @param LicenseType <p>License type<li>oss: open source edition</li><li>basic: basic version</li><li>platinum: platinum version</li>Default value: platinum</p>
      */
     public void setLicenseType(String LicenseType) {
         this.LicenseType = LicenseType;
     }
 
     /**
-     * Get Whether it is a hot/warm cluster <li>true: yes </li><li>false: no</li>
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return EnableHotWarmMode Whether it is a hot/warm cluster <li>true: yes </li><li>false: no</li>
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get <p>License type<li>oss: open source edition</li><li>basic: basic version</li><li>platinum: platinum version</li><li>enterprise: enterprise edition</li>Default value: platinum</p> 
+     * @return RealLicenseType <p>License type<li>oss: open source edition</li><li>basic: basic version</li><li>platinum: platinum version</li><li>enterprise: enterprise edition</li>Default value: platinum</p>
+     */
+    public String getRealLicenseType() {
+        return this.RealLicenseType;
+    }
+
+    /**
+     * Set <p>License type<li>oss: open source edition</li><li>basic: basic version</li><li>platinum: platinum version</li><li>enterprise: enterprise edition</li>Default value: platinum</p>
+     * @param RealLicenseType <p>License type<li>oss: open source edition</li><li>basic: basic version</li><li>platinum: platinum version</li><li>enterprise: enterprise edition</li>Default value: platinum</p>
+     */
+    public void setRealLicenseType(String RealLicenseType) {
+        this.RealLicenseType = RealLicenseType;
+    }
+
+    /**
+     * Get <p>Whether it is a hot-cold cluster<li>true: Hot-cold cluster</li><li>false: Non-hot-cold cluster</li></p> 
+     * @return EnableHotWarmMode <p>Whether it is a hot-cold cluster<li>true: Hot-cold cluster</li><li>false: Non-hot-cold cluster</li></p>
      */
     public Boolean getEnableHotWarmMode() {
         return this.EnableHotWarmMode;
     }
 
     /**
-     * Set Whether it is a hot/warm cluster <li>true: yes </li><li>false: no</li>
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param EnableHotWarmMode Whether it is a hot/warm cluster <li>true: yes </li><li>false: no</li>
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set <p>Whether it is a hot-cold cluster<li>true: Hot-cold cluster</li><li>false: Non-hot-cold cluster</li></p>
+     * @param EnableHotWarmMode <p>Whether it is a hot-cold cluster<li>true: Hot-cold cluster</li><li>false: Non-hot-cold cluster</li></p>
      */
     public void setEnableHotWarmMode(Boolean EnableHotWarmMode) {
         this.EnableHotWarmMode = EnableHotWarmMode;
     }
 
     /**
-     * Get Warm node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
-Note: This field may return `null`, indicating that no valid value was found. 
-     * @return WarmNodeType Warm node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
-Note: This field may return `null`, indicating that no valid value was found.
+     * Get <p>Warm node specification<li>ES.S1.SMALL2: 1-core 2G</li><li>ES.S1.MEDIUM4: 2-core 4G</li><li>ES.S1.MEDIUM8: 2-core 8G</li><li>ES.S1.LARGE16: 4-core 16G</li><li>ES.S1.2XLARGE32: 8-core 32G</li><li>ES.S1.4XLARGE32: 16-core 32G</li><li>ES.S1.4XLARGE64: 16-core 64G</li></p> 
+     * @return WarmNodeType <p>Warm node specification<li>ES.S1.SMALL2: 1-core 2G</li><li>ES.S1.MEDIUM4: 2-core 4G</li><li>ES.S1.MEDIUM8: 2-core 8G</li><li>ES.S1.LARGE16: 4-core 16G</li><li>ES.S1.2XLARGE32: 8-core 32G</li><li>ES.S1.4XLARGE32: 16-core 32G</li><li>ES.S1.4XLARGE64: 16-core 64G</li></p>
      */
     public String getWarmNodeType() {
         return this.WarmNodeType;
     }
 
     /**
-     * Set Warm node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
-Note: This field may return `null`, indicating that no valid value was found.
-     * @param WarmNodeType Warm node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
-Note: This field may return `null`, indicating that no valid value was found.
+     * Set <p>Warm node specification<li>ES.S1.SMALL2: 1-core 2G</li><li>ES.S1.MEDIUM4: 2-core 4G</li><li>ES.S1.MEDIUM8: 2-core 8G</li><li>ES.S1.LARGE16: 4-core 16G</li><li>ES.S1.2XLARGE32: 8-core 32G</li><li>ES.S1.4XLARGE32: 16-core 32G</li><li>ES.S1.4XLARGE64: 16-core 64G</li></p>
+     * @param WarmNodeType <p>Warm node specification<li>ES.S1.SMALL2: 1-core 2G</li><li>ES.S1.MEDIUM4: 2-core 4G</li><li>ES.S1.MEDIUM8: 2-core 8G</li><li>ES.S1.LARGE16: 4-core 16G</li><li>ES.S1.2XLARGE32: 8-core 32G</li><li>ES.S1.4XLARGE32: 16-core 32G</li><li>ES.S1.4XLARGE64: 16-core 64G</li></p>
      */
     public void setWarmNodeType(String WarmNodeType) {
         this.WarmNodeType = WarmNodeType;
     }
 
     /**
-     * Get Number of warm nodes
-Note: This field may return `null`, indicating that no valid value was found. 
-     * @return WarmNodeNum Number of warm nodes
-Note: This field may return `null`, indicating that no valid value was found.
+     * Get <p>Number of warm nodes</p> 
+     * @return WarmNodeNum <p>Number of warm nodes</p>
      */
     public Long getWarmNodeNum() {
         return this.WarmNodeNum;
     }
 
     /**
-     * Set Number of warm nodes
-Note: This field may return `null`, indicating that no valid value was found.
-     * @param WarmNodeNum Number of warm nodes
-Note: This field may return `null`, indicating that no valid value was found.
+     * Set <p>Number of warm nodes</p>
+     * @param WarmNodeNum <p>Number of warm nodes</p>
      */
     public void setWarmNodeNum(Long WarmNodeNum) {
         this.WarmNodeNum = WarmNodeNum;
     }
 
     /**
-     * Get Number of warm node CPU cores
-Note: This field may return `null`, indicating that no valid value was found. 
-     * @return WarmCpuNum Number of warm node CPU cores
-Note: This field may return `null`, indicating that no valid value was found.
+     * Get <p>Warm node CPU cores</p> 
+     * @return WarmCpuNum <p>Warm node CPU cores</p>
      */
     public Long getWarmCpuNum() {
         return this.WarmCpuNum;
     }
 
     /**
-     * Set Number of warm node CPU cores
-Note: This field may return `null`, indicating that no valid value was found.
-     * @param WarmCpuNum Number of warm node CPU cores
-Note: This field may return `null`, indicating that no valid value was found.
+     * Set <p>Warm node CPU cores</p>
+     * @param WarmCpuNum <p>Warm node CPU cores</p>
      */
     public void setWarmCpuNum(Long WarmCpuNum) {
         this.WarmCpuNum = WarmCpuNum;
     }
 
     /**
-     * Get Warm node memory size (in GB)
-Note: This field may return `null`, indicating that no valid value was found. 
-     * @return WarmMemSize Warm node memory size (in GB)
-Note: This field may return `null`, indicating that no valid value was found.
+     * Get <p>Warm node memory size (GB).</p> 
+     * @return WarmMemSize <p>Warm node memory size (GB).</p>
      */
     public Long getWarmMemSize() {
         return this.WarmMemSize;
     }
 
     /**
-     * Set Warm node memory size (in GB)
-Note: This field may return `null`, indicating that no valid value was found.
-     * @param WarmMemSize Warm node memory size (in GB)
-Note: This field may return `null`, indicating that no valid value was found.
+     * Set <p>Warm node memory size (GB).</p>
+     * @param WarmMemSize <p>Warm node memory size (GB).</p>
      */
     public void setWarmMemSize(Long WarmMemSize) {
         this.WarmMemSize = WarmMemSize;
     }
 
     /**
-     * Get Warm node disk type
-Note: This field may return `null`, indicating that no valid value was found. 
-     * @return WarmDiskType Warm node disk type
-Note: This field may return `null`, indicating that no valid value was found.
+     * Get <p>Warm node disk type</p> 
+     * @return WarmDiskType <p>Warm node disk type</p>
      */
     public String getWarmDiskType() {
         return this.WarmDiskType;
     }
 
     /**
-     * Set Warm node disk type
-Note: This field may return `null`, indicating that no valid value was found.
-     * @param WarmDiskType Warm node disk type
-Note: This field may return `null`, indicating that no valid value was found.
+     * Set <p>Warm node disk type</p>
+     * @param WarmDiskType <p>Warm node disk type</p>
      */
     public void setWarmDiskType(String WarmDiskType) {
         this.WarmDiskType = WarmDiskType;
     }
 
     /**
-     * Get Warm node disk size (in GB)
-Note: This field may return `null`, indicating that no valid value was found. 
-     * @return WarmDiskSize Warm node disk size (in GB)
-Note: This field may return `null`, indicating that no valid value was found.
+     * Get <p>Warm node disk size (GB).</p> 
+     * @return WarmDiskSize <p>Warm node disk size (GB).</p>
      */
     public Long getWarmDiskSize() {
         return this.WarmDiskSize;
     }
 
     /**
-     * Set Warm node disk size (in GB)
-Note: This field may return `null`, indicating that no valid value was found.
-     * @param WarmDiskSize Warm node disk size (in GB)
-Note: This field may return `null`, indicating that no valid value was found.
+     * Set <p>Warm node disk size (GB).</p>
+     * @param WarmDiskSize <p>Warm node disk size (GB).</p>
      */
     public void setWarmDiskSize(Long WarmDiskSize) {
         this.WarmDiskSize = WarmDiskSize;
     }
 
     /**
-     * Get Cluster node information list
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return NodeInfoList Cluster node information list
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Cluster node information list</p> 
+     * @return NodeInfoList <p>Cluster node information list</p>
      */
     public NodeInfo [] getNodeInfoList() {
         return this.NodeInfoList;
     }
 
     /**
-     * Set Cluster node information list
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param NodeInfoList Cluster node information list
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Cluster node information list</p>
+     * @param NodeInfoList <p>Cluster node information list</p>
      */
     public void setNodeInfoList(NodeInfo [] NodeInfoList) {
         this.NodeInfoList = NodeInfoList;
     }
 
     /**
-     * Get ES public IP address
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return EsPublicUrl ES public IP address
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Es public network address</p> 
+     * @return EsPublicUrl <p>Es public network address</p>
      */
     public String getEsPublicUrl() {
         return this.EsPublicUrl;
     }
 
     /**
-     * Set ES public IP address
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param EsPublicUrl ES public IP address
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Es public network address</p>
+     * @param EsPublicUrl <p>Es public network address</p>
      */
     public void setEsPublicUrl(String EsPublicUrl) {
         this.EsPublicUrl = EsPublicUrl;
     }
 
     /**
-     * Get Multi-AZ network information
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return MultiZoneInfo Multi-AZ network information
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Multi-AZ network info</p> 
+     * @return MultiZoneInfo <p>Multi-AZ network info</p>
      */
     public ZoneDetail [] getMultiZoneInfo() {
         return this.MultiZoneInfo;
     }
 
     /**
-     * Set Multi-AZ network information
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param MultiZoneInfo Multi-AZ network information
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Multi-AZ network info</p>
+     * @param MultiZoneInfo <p>Multi-AZ network info</p>
      */
     public void setMultiZoneInfo(ZoneDetail [] MultiZoneInfo) {
         this.MultiZoneInfo = MultiZoneInfo;
     }
 
     /**
-     * Get Deployment mode <li>0: single-AZ </li><li>1: multi-AZ</li>
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return DeployMode Deployment mode <li>0: single-AZ </li><li>1: multi-AZ</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Deployment mode<li>0: single availability zone</li><li>1: multi-availability zone, Beijing, Shanghai, Shanghai Finance, Guangzhou, Nanjing, Hong Kong, Singapore, Frankfurt (allowlist control)</li></p> 
+     * @return DeployMode <p>Deployment mode<li>0: single availability zone</li><li>1: multi-availability zone, Beijing, Shanghai, Shanghai Finance, Guangzhou, Nanjing, Hong Kong, Singapore, Frankfurt (allowlist control)</li></p>
      */
     public Long getDeployMode() {
         return this.DeployMode;
     }
 
     /**
-     * Set Deployment mode <li>0: single-AZ </li><li>1: multi-AZ</li>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param DeployMode Deployment mode <li>0: single-AZ </li><li>1: multi-AZ</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Deployment mode<li>0: single availability zone</li><li>1: multi-availability zone, Beijing, Shanghai, Shanghai Finance, Guangzhou, Nanjing, Hong Kong, Singapore, Frankfurt (allowlist control)</li></p>
+     * @param DeployMode <p>Deployment mode<li>0: single availability zone</li><li>1: multi-availability zone, Beijing, Shanghai, Shanghai Finance, Guangzhou, Nanjing, Hong Kong, Singapore, Frankfurt (allowlist control)</li></p>
      */
     public void setDeployMode(Long DeployMode) {
         this.DeployMode = DeployMode;
     }
 
     /**
-     * Get ES public access status <li>OPEN: enabled </li><li>CLOSE: disabled
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return PublicAccess ES public access status <li>OPEN: enabled </li><li>CLOSE: disabled
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>ES public access status<li>OPEN: enable</li><li>CLOSE: disable</li></p> 
+     * @return PublicAccess <p>ES public access status<li>OPEN: enable</li><li>CLOSE: disable</li></p>
      */
     public String getPublicAccess() {
         return this.PublicAccess;
     }
 
     /**
-     * Set ES public access status <li>OPEN: enabled </li><li>CLOSE: disabled
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param PublicAccess ES public access status <li>OPEN: enabled </li><li>CLOSE: disabled
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>ES public access status<li>OPEN: enable</li><li>CLOSE: disable</li></p>
+     * @param PublicAccess <p>ES public access status<li>OPEN: enable</li><li>CLOSE: disable</li></p>
      */
     public void setPublicAccess(String PublicAccess) {
         this.PublicAccess = PublicAccess;
     }
 
     /**
-     * Get ES public access control configuration 
-     * @return EsPublicAcl ES public access control configuration
+     * Get <p>ES public network access control configuration</p> 
+     * @return EsPublicAcl <p>ES public network access control configuration</p>
      */
     public EsAcl getEsPublicAcl() {
         return this.EsPublicAcl;
     }
 
     /**
-     * Set ES public access control configuration
-     * @param EsPublicAcl ES public access control configuration
+     * Set <p>ES public network access control configuration</p>
+     * @param EsPublicAcl <p>ES public network access control configuration</p>
      */
     public void setEsPublicAcl(EsAcl EsPublicAcl) {
         this.EsPublicAcl = EsPublicAcl;
     }
 
     /**
-     * Get Kibana private IP address
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return KibanaPrivateUrl Kibana private IP address
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Kibana private network address</p> 
+     * @return KibanaPrivateUrl <p>Kibana private network address</p>
      */
     public String getKibanaPrivateUrl() {
         return this.KibanaPrivateUrl;
     }
 
     /**
-     * Set Kibana private IP address
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param KibanaPrivateUrl Kibana private IP address
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Kibana private network address</p>
+     * @param KibanaPrivateUrl <p>Kibana private network address</p>
      */
     public void setKibanaPrivateUrl(String KibanaPrivateUrl) {
         this.KibanaPrivateUrl = KibanaPrivateUrl;
     }
 
     /**
-     * Get Kibana public access status <li>OPEN: enabled </li><li>CLOSE: disabled
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return KibanaPublicAccess Kibana public access status <li>OPEN: enabled </li><li>CLOSE: disabled
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Kibana public access status<li>OPEN: enabled</li><li>CLOSE: disabled</li></p> 
+     * @return KibanaPublicAccess <p>Kibana public access status<li>OPEN: enabled</li><li>CLOSE: disabled</li></p>
      */
     public String getKibanaPublicAccess() {
         return this.KibanaPublicAccess;
     }
 
     /**
-     * Set Kibana public access status <li>OPEN: enabled </li><li>CLOSE: disabled
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param KibanaPublicAccess Kibana public access status <li>OPEN: enabled </li><li>CLOSE: disabled
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Kibana public access status<li>OPEN: enabled</li><li>CLOSE: disabled</li></p>
+     * @param KibanaPublicAccess <p>Kibana public access status<li>OPEN: enabled</li><li>CLOSE: disabled</li></p>
      */
     public void setKibanaPublicAccess(String KibanaPublicAccess) {
         this.KibanaPublicAccess = KibanaPublicAccess;
     }
 
     /**
-     * Get Kibana private access status <li>OPEN: enabled </li><li>CLOSE: disabled
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return KibanaPrivateAccess Kibana private access status <li>OPEN: enabled </li><li>CLOSE: disabled
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Kibana internal access status<li>OPEN: enable</li><li>CLOSE: disable</li></p> 
+     * @return KibanaPrivateAccess <p>Kibana internal access status<li>OPEN: enable</li><li>CLOSE: disable</li></p>
      */
     public String getKibanaPrivateAccess() {
         return this.KibanaPrivateAccess;
     }
 
     /**
-     * Set Kibana private access status <li>OPEN: enabled </li><li>CLOSE: disabled
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param KibanaPrivateAccess Kibana private access status <li>OPEN: enabled </li><li>CLOSE: disabled
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Kibana internal access status<li>OPEN: enable</li><li>CLOSE: disable</li></p>
+     * @param KibanaPrivateAccess <p>Kibana internal access status<li>OPEN: enable</li><li>CLOSE: disable</li></p>
      */
     public void setKibanaPrivateAccess(String KibanaPrivateAccess) {
         this.KibanaPrivateAccess = KibanaPrivateAccess;
     }
 
     /**
-     * Get Whether to enable X-Pack security authentication in Basic Edition 6.8 (and above) <li>1: disabled </li><li>2: enabled</li>
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return SecurityType Whether to enable X-Pack security authentication in Basic Edition 6.8 (and above) <li>1: disabled </li><li>2: enabled</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Whether xpack security authentication is enabled for basic version 6.8 (and above versions)<li>1: not enabled</li><li>2: enabled</li></p> 
+     * @return SecurityType <p>Whether xpack security authentication is enabled for basic version 6.8 (and above versions)<li>1: not enabled</li><li>2: enabled</li></p>
      */
     public Long getSecurityType() {
         return this.SecurityType;
     }
 
     /**
-     * Set Whether to enable X-Pack security authentication in Basic Edition 6.8 (and above) <li>1: disabled </li><li>2: enabled</li>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param SecurityType Whether to enable X-Pack security authentication in Basic Edition 6.8 (and above) <li>1: disabled </li><li>2: enabled</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Whether xpack security authentication is enabled for basic version 6.8 (and above versions)<li>1: not enabled</li><li>2: enabled</li></p>
+     * @param SecurityType <p>Whether xpack security authentication is enabled for basic version 6.8 (and above versions)<li>1: not enabled</li><li>2: enabled</li></p>
      */
     public void setSecurityType(Long SecurityType) {
         this.SecurityType = SecurityType;
     }
 
     /**
-     * Get Scenario template type. 0: not enabled; 1: general scenario; 2: log scenario; 3: search scenario
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return SceneType Scenario template type. 0: not enabled; 1: general scenario; 2: log scenario; 3: search scenario
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get <p>Scenario template type: 0, not enabled; 1, common scenarios; 2, log scenario; 3, search scenario</p> 
+     * @return SceneType <p>Scenario template type: 0, not enabled; 1, common scenarios; 2, log scenario; 3, search scenario</p>
      */
     public Long getSceneType() {
         return this.SceneType;
     }
 
     /**
-     * Set Scenario template type. 0: not enabled; 1: general scenario; 2: log scenario; 3: search scenario
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param SceneType Scenario template type. 0: not enabled; 1: general scenario; 2: log scenario; 3: search scenario
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set <p>Scenario template type: 0, not enabled; 1, common scenarios; 2, log scenario; 3, search scenario</p>
+     * @param SceneType <p>Scenario template type: 0, not enabled; 1, common scenarios; 2, log scenario; 3, search scenario</p>
      */
     public void setSceneType(Long SceneType) {
         this.SceneType = SceneType;
     }
 
     /**
-     * Get Kibana configuration item.
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return KibanaConfig Kibana configuration item.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get <p>Kibana configuration item</p> 
+     * @return KibanaConfig <p>Kibana configuration item</p>
      */
     public String getKibanaConfig() {
         return this.KibanaConfig;
     }
 
     /**
-     * Set Kibana configuration item.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param KibanaConfig Kibana configuration item.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set <p>Kibana configuration item</p>
+     * @param KibanaConfig <p>Kibana configuration item</p>
      */
     public void setKibanaConfig(String KibanaConfig) {
         this.KibanaConfig = KibanaConfig;
     }
 
     /**
-     * Get Kibana node information
-Note: this field may return `null`, indicating that no valid value can be obtained. 
-     * @return KibanaNodeInfo Kibana node information
-Note: this field may return `null`, indicating that no valid value can be obtained.
+     * Get <p>Kibana node information</p> 
+     * @return KibanaNodeInfo <p>Kibana node information</p>
      */
     public KibanaNodeInfo getKibanaNodeInfo() {
         return this.KibanaNodeInfo;
     }
 
     /**
-     * Set Kibana node information
-Note: this field may return `null`, indicating that no valid value can be obtained.
-     * @param KibanaNodeInfo Kibana node information
-Note: this field may return `null`, indicating that no valid value can be obtained.
+     * Set <p>Kibana node information</p>
+     * @param KibanaNodeInfo <p>Kibana node information</p>
      */
     public void setKibanaNodeInfo(KibanaNodeInfo KibanaNodeInfo) {
         this.KibanaNodeInfo = KibanaNodeInfo;
     }
 
     /**
-     * Get Visual node configuration
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return WebNodeTypeInfo Visual node configuration
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get <p>Visualize node configuration</p> 
+     * @return WebNodeTypeInfo <p>Visualize node configuration</p>
      */
     public WebNodeTypeInfo getWebNodeTypeInfo() {
         return this.WebNodeTypeInfo;
     }
 
     /**
-     * Set Visual node configuration
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param WebNodeTypeInfo Visual node configuration
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set <p>Visualize node configuration</p>
+     * @param WebNodeTypeInfo <p>Visualize node configuration</p>
      */
     public void setWebNodeTypeInfo(WebNodeTypeInfo WebNodeTypeInfo) {
         this.WebNodeTypeInfo = WebNodeTypeInfo;
     }
 
     /**
-     * Get JDK type. Valid values: `oracle`, `kona`
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return Jdk JDK type. Valid values: `oracle`, `kona`
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get <p>JDK type. Valid values: oracle, kona</p> 
+     * @return Jdk <p>JDK type. Valid values: oracle, kona</p>
      */
     public String getJdk() {
         return this.Jdk;
     }
 
     /**
-     * Set JDK type. Valid values: `oracle`, `kona`
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param Jdk JDK type. Valid values: `oracle`, `kona`
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set <p>JDK type. Valid values: oracle, kona</p>
+     * @param Jdk <p>JDK type. Valid values: oracle, kona</p>
      */
     public void setJdk(String Jdk) {
         this.Jdk = Jdk;
     }
 
     /**
-     * Get Cluster network communication protocol
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return Protocol Cluster network communication protocol
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get <p>Cluster network communication protocol</p> 
+     * @return Protocol <p>Cluster network communication protocol</p>
      */
     public String getProtocol() {
         return this.Protocol;
     }
 
     /**
-     * Set Cluster network communication protocol
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param Protocol Cluster network communication protocol
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set <p>Cluster network communication protocol</p>
+     * @param Protocol <p>Cluster network communication protocol</p>
      */
     public void setProtocol(String Protocol) {
         this.Protocol = Protocol;
     }
 
     /**
-     * Get Security group ID
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return SecurityGroups Security group ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get <p>Security group id</p> 
+     * @return SecurityGroups <p>Security group id</p>
      */
     public String [] getSecurityGroups() {
         return this.SecurityGroups;
     }
 
     /**
-     * Set Security group ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param SecurityGroups Security group ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set <p>Security group id</p>
+     * @param SecurityGroups <p>Security group id</p>
      */
     public void setSecurityGroups(String [] SecurityGroups) {
         this.SecurityGroups = SecurityGroups;
     }
 
     /**
-     * Get Cold node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
-Note: This field may return `null`, indicating that no valid value was found. 
-     * @return ColdNodeType Cold node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
-Note: This field may return `null`, indicating that no valid value was found.
+     * Get <p>Cold node specification<li>ES.S1.SMALL2: 1-core 2G</li><li>ES.S1.MEDIUM4: 2-core 4G</li><li>ES.S1.MEDIUM8: 2-core 8G</li><li>ES.S1.LARGE16: 4-core 16G</li><li>ES.S1.2XLARGE32: 8-core 32G</li><li>ES.S1.4XLARGE32: 16-core 32G</li><li>ES.S1.4XLARGE64: 16-core 64G</li></p> 
+     * @return ColdNodeType <p>Cold node specification<li>ES.S1.SMALL2: 1-core 2G</li><li>ES.S1.MEDIUM4: 2-core 4G</li><li>ES.S1.MEDIUM8: 2-core 8G</li><li>ES.S1.LARGE16: 4-core 16G</li><li>ES.S1.2XLARGE32: 8-core 32G</li><li>ES.S1.4XLARGE32: 16-core 32G</li><li>ES.S1.4XLARGE64: 16-core 64G</li></p>
      */
     public String getColdNodeType() {
         return this.ColdNodeType;
     }
 
     /**
-     * Set Cold node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
-Note: This field may return `null`, indicating that no valid value was found.
-     * @param ColdNodeType Cold node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
-Note: This field may return `null`, indicating that no valid value was found.
+     * Set <p>Cold node specification<li>ES.S1.SMALL2: 1-core 2G</li><li>ES.S1.MEDIUM4: 2-core 4G</li><li>ES.S1.MEDIUM8: 2-core 8G</li><li>ES.S1.LARGE16: 4-core 16G</li><li>ES.S1.2XLARGE32: 8-core 32G</li><li>ES.S1.4XLARGE32: 16-core 32G</li><li>ES.S1.4XLARGE64: 16-core 64G</li></p>
+     * @param ColdNodeType <p>Cold node specification<li>ES.S1.SMALL2: 1-core 2G</li><li>ES.S1.MEDIUM4: 2-core 4G</li><li>ES.S1.MEDIUM8: 2-core 8G</li><li>ES.S1.LARGE16: 4-core 16G</li><li>ES.S1.2XLARGE32: 8-core 32G</li><li>ES.S1.4XLARGE32: 16-core 32G</li><li>ES.S1.4XLARGE64: 16-core 64G</li></p>
      */
     public void setColdNodeType(String ColdNodeType) {
         this.ColdNodeType = ColdNodeType;
     }
 
     /**
-     * Get Number of cold nodes
-Note: This field may return `null`, indicating that no valid value was found. 
-     * @return ColdNodeNum Number of cold nodes
-Note: This field may return `null`, indicating that no valid value was found.
+     * Get <p>Number of cold nodes</p> 
+     * @return ColdNodeNum <p>Number of cold nodes</p>
      */
     public Long getColdNodeNum() {
         return this.ColdNodeNum;
     }
 
     /**
-     * Set Number of cold nodes
-Note: This field may return `null`, indicating that no valid value was found.
-     * @param ColdNodeNum Number of cold nodes
-Note: This field may return `null`, indicating that no valid value was found.
+     * Set <p>Number of cold nodes</p>
+     * @param ColdNodeNum <p>Number of cold nodes</p>
      */
     public void setColdNodeNum(Long ColdNodeNum) {
         this.ColdNodeNum = ColdNodeNum;
     }
 
     /**
-     * Get Number of cold node CPU cores
-Note: This field may return `null`, indicating that no valid value was found. 
-     * @return ColdCpuNum Number of cold node CPU cores
-Note: This field may return `null`, indicating that no valid value was found.
+     * Get <p>Cold node CPU cores</p> 
+     * @return ColdCpuNum <p>Cold node CPU cores</p>
      */
     public Long getColdCpuNum() {
         return this.ColdCpuNum;
     }
 
     /**
-     * Set Number of cold node CPU cores
-Note: This field may return `null`, indicating that no valid value was found.
-     * @param ColdCpuNum Number of cold node CPU cores
-Note: This field may return `null`, indicating that no valid value was found.
+     * Set <p>Cold node CPU cores</p>
+     * @param ColdCpuNum <p>Cold node CPU cores</p>
      */
     public void setColdCpuNum(Long ColdCpuNum) {
         this.ColdCpuNum = ColdCpuNum;
     }
 
     /**
-     * Get Cold node memory size (in GB)
-Note: This field may return `null`, indicating that no valid value was found. 
-     * @return ColdMemSize Cold node memory size (in GB)
-Note: This field may return `null`, indicating that no valid value was found.
+     * Get <p>Cold node memory size (GB).</p> 
+     * @return ColdMemSize <p>Cold node memory size (GB).</p>
      */
     public Long getColdMemSize() {
         return this.ColdMemSize;
     }
 
     /**
-     * Set Cold node memory size (in GB)
-Note: This field may return `null`, indicating that no valid value was found.
-     * @param ColdMemSize Cold node memory size (in GB)
-Note: This field may return `null`, indicating that no valid value was found.
+     * Set <p>Cold node memory size (GB).</p>
+     * @param ColdMemSize <p>Cold node memory size (GB).</p>
      */
     public void setColdMemSize(Long ColdMemSize) {
         this.ColdMemSize = ColdMemSize;
     }
 
     /**
-     * Get Cold node disk type
-Note: This field may return `null`, indicating that no valid value was found. 
-     * @return ColdDiskType Cold node disk type
-Note: This field may return `null`, indicating that no valid value was found.
+     * Get <p>Cold node disk type</p> 
+     * @return ColdDiskType <p>Cold node disk type</p>
      */
     public String getColdDiskType() {
         return this.ColdDiskType;
     }
 
     /**
-     * Set Cold node disk type
-Note: This field may return `null`, indicating that no valid value was found.
-     * @param ColdDiskType Cold node disk type
-Note: This field may return `null`, indicating that no valid value was found.
+     * Set <p>Cold node disk type</p>
+     * @param ColdDiskType <p>Cold node disk type</p>
      */
     public void setColdDiskType(String ColdDiskType) {
         this.ColdDiskType = ColdDiskType;
     }
 
     /**
-     * Get Cold node disk size (in GB)
-Note: This field may return `null`, indicating that no valid value was found. 
-     * @return ColdDiskSize Cold node disk size (in GB)
-Note: This field may return `null`, indicating that no valid value was found.
+     * Get <p>Cold node disk size (GB).</p> 
+     * @return ColdDiskSize <p>Cold node disk size (GB).</p>
      */
     public Long getColdDiskSize() {
         return this.ColdDiskSize;
     }
 
     /**
-     * Set Cold node disk size (in GB)
-Note: This field may return `null`, indicating that no valid value was found.
-     * @param ColdDiskSize Cold node disk size (in GB)
-Note: This field may return `null`, indicating that no valid value was found.
+     * Set <p>Cold node disk size (GB).</p>
+     * @param ColdDiskSize <p>Cold node disk size (GB).</p>
      */
     public void setColdDiskSize(Long ColdDiskSize) {
         this.ColdDiskSize = ColdDiskSize;
     }
 
     /**
-     * Get Frozen node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
-Note: This field may return `null`, indicating that no valid value was found. 
-     * @return FrozenNodeType Frozen node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
-Note: This field may return `null`, indicating that no valid value was found.
+     * Get <p>Frozen node specification<li>ES.S1.SMALL2: 1-core 2GB</li><li>ES.S1.MEDIUM4: 2-core 4GB</li><li>ES.S1.MEDIUM8: 2-core 8GB</li><li>ES.S1.LARGE16: 4-core 16GB</li><li>ES.S1.2XLARGE32: 8-core 32GB</li><li>ES.S1.4XLARGE32: 16-core 32GB</li><li>ES.S1.4XLARGE64: 16-core 64GB</li></p> 
+     * @return FrozenNodeType <p>Frozen node specification<li>ES.S1.SMALL2: 1-core 2GB</li><li>ES.S1.MEDIUM4: 2-core 4GB</li><li>ES.S1.MEDIUM8: 2-core 8GB</li><li>ES.S1.LARGE16: 4-core 16GB</li><li>ES.S1.2XLARGE32: 8-core 32GB</li><li>ES.S1.4XLARGE32: 16-core 32GB</li><li>ES.S1.4XLARGE64: 16-core 64GB</li></p>
      */
     public String getFrozenNodeType() {
         return this.FrozenNodeType;
     }
 
     /**
-     * Set Frozen node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
-Note: This field may return `null`, indicating that no valid value was found.
-     * @param FrozenNodeType Frozen node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
-Note: This field may return `null`, indicating that no valid value was found.
+     * Set <p>Frozen node specification<li>ES.S1.SMALL2: 1-core 2GB</li><li>ES.S1.MEDIUM4: 2-core 4GB</li><li>ES.S1.MEDIUM8: 2-core 8GB</li><li>ES.S1.LARGE16: 4-core 16GB</li><li>ES.S1.2XLARGE32: 8-core 32GB</li><li>ES.S1.4XLARGE32: 16-core 32GB</li><li>ES.S1.4XLARGE64: 16-core 64GB</li></p>
+     * @param FrozenNodeType <p>Frozen node specification<li>ES.S1.SMALL2: 1-core 2GB</li><li>ES.S1.MEDIUM4: 2-core 4GB</li><li>ES.S1.MEDIUM8: 2-core 8GB</li><li>ES.S1.LARGE16: 4-core 16GB</li><li>ES.S1.2XLARGE32: 8-core 32GB</li><li>ES.S1.4XLARGE32: 16-core 32GB</li><li>ES.S1.4XLARGE64: 16-core 64GB</li></p>
      */
     public void setFrozenNodeType(String FrozenNodeType) {
         this.FrozenNodeType = FrozenNodeType;
     }
 
     /**
-     * Get Number of frozen nodes
-Note: This field may return `null`, indicating that no valid value was found. 
-     * @return FrozenNodeNum Number of frozen nodes
-Note: This field may return `null`, indicating that no valid value was found.
+     * Get <p>Number of frozen nodes</p> 
+     * @return FrozenNodeNum <p>Number of frozen nodes</p>
      */
     public Long getFrozenNodeNum() {
         return this.FrozenNodeNum;
     }
 
     /**
-     * Set Number of frozen nodes
-Note: This field may return `null`, indicating that no valid value was found.
-     * @param FrozenNodeNum Number of frozen nodes
-Note: This field may return `null`, indicating that no valid value was found.
+     * Set <p>Number of frozen nodes</p>
+     * @param FrozenNodeNum <p>Number of frozen nodes</p>
      */
     public void setFrozenNodeNum(Long FrozenNodeNum) {
         this.FrozenNodeNum = FrozenNodeNum;
     }
 
     /**
-     * Get Number of frozen node CPU cores
-Note: This field may return `null`, indicating that no valid value was found. 
-     * @return FrozenCpuNum Number of frozen node CPU cores
-Note: This field may return `null`, indicating that no valid value was found.
+     * Get <p>Frozen node CPU cores</p> 
+     * @return FrozenCpuNum <p>Frozen node CPU cores</p>
      */
     public Long getFrozenCpuNum() {
         return this.FrozenCpuNum;
     }
 
     /**
-     * Set Number of frozen node CPU cores
-Note: This field may return `null`, indicating that no valid value was found.
-     * @param FrozenCpuNum Number of frozen node CPU cores
-Note: This field may return `null`, indicating that no valid value was found.
+     * Set <p>Frozen node CPU cores</p>
+     * @param FrozenCpuNum <p>Frozen node CPU cores</p>
      */
     public void setFrozenCpuNum(Long FrozenCpuNum) {
         this.FrozenCpuNum = FrozenCpuNum;
     }
 
     /**
-     * Get Frozen node memory size (GB)
-Note: This field may return `null`, indicating that no valid value was found. 
-     * @return FrozenMemSize Frozen node memory size (GB)
-Note: This field may return `null`, indicating that no valid value was found.
+     * Get <p>Frozen node memory size (GB).</p> 
+     * @return FrozenMemSize <p>Frozen node memory size (GB).</p>
      */
     public Long getFrozenMemSize() {
         return this.FrozenMemSize;
     }
 
     /**
-     * Set Frozen node memory size (GB)
-Note: This field may return `null`, indicating that no valid value was found.
-     * @param FrozenMemSize Frozen node memory size (GB)
-Note: This field may return `null`, indicating that no valid value was found.
+     * Set <p>Frozen node memory size (GB).</p>
+     * @param FrozenMemSize <p>Frozen node memory size (GB).</p>
      */
     public void setFrozenMemSize(Long FrozenMemSize) {
         this.FrozenMemSize = FrozenMemSize;
     }
 
     /**
-     * Get Frozen node disk type
-Note: This field may return `null`, indicating that no valid value was found. 
-     * @return FrozenDiskType Frozen node disk type
-Note: This field may return `null`, indicating that no valid value was found.
+     * Get <p>Frozen node disk type</p> 
+     * @return FrozenDiskType <p>Frozen node disk type</p>
      */
     public String getFrozenDiskType() {
         return this.FrozenDiskType;
     }
 
     /**
-     * Set Frozen node disk type
-Note: This field may return `null`, indicating that no valid value was found.
-     * @param FrozenDiskType Frozen node disk type
-Note: This field may return `null`, indicating that no valid value was found.
+     * Set <p>Frozen node disk type</p>
+     * @param FrozenDiskType <p>Frozen node disk type</p>
      */
     public void setFrozenDiskType(String FrozenDiskType) {
         this.FrozenDiskType = FrozenDiskType;
     }
 
     /**
-     * Get Frozen node disk size (in GB)
-Note: This field may return `null`, indicating that no valid value was found. 
-     * @return FrozenDiskSize Frozen node disk size (in GB)
-Note: This field may return `null`, indicating that no valid value was found.
+     * Get <p>Frozen node disk size (GB).</p> 
+     * @return FrozenDiskSize <p>Frozen node disk size (GB).</p>
      */
     public Long getFrozenDiskSize() {
         return this.FrozenDiskSize;
     }
 
     /**
-     * Set Frozen node disk size (in GB)
-Note: This field may return `null`, indicating that no valid value was found.
-     * @param FrozenDiskSize Frozen node disk size (in GB)
-Note: This field may return `null`, indicating that no valid value was found.
+     * Set <p>Frozen node disk size (GB).</p>
+     * @param FrozenDiskSize <p>Frozen node disk size (GB).</p>
      */
     public void setFrozenDiskSize(Long FrozenDiskSize) {
         this.FrozenDiskSize = FrozenDiskSize;
     }
 
     /**
-     * Get Cluster health status. `-1`: Unknown; `0`: Green; `1`: Yellow; `2`: Red
-Note: This field may return `null`, indicating that no valid value was found. 
-     * @return HealthStatus Cluster health status. `-1`: Unknown; `0`: Green; `1`: Yellow; `2`: Red
-Note: This field may return `null`, indicating that no valid value was found.
+     * Get <p>Cluster health status: -1 unknown; 0 Green; 1 Yellow; 2 Red</p> 
+     * @return HealthStatus <p>Cluster health status: -1 unknown; 0 Green; 1 Yellow; 2 Red</p>
      */
     public Long getHealthStatus() {
         return this.HealthStatus;
     }
 
     /**
-     * Set Cluster health status. `-1`: Unknown; `0`: Green; `1`: Yellow; `2`: Red
-Note: This field may return `null`, indicating that no valid value was found.
-     * @param HealthStatus Cluster health status. `-1`: Unknown; `0`: Green; `1`: Yellow; `2`: Red
-Note: This field may return `null`, indicating that no valid value was found.
+     * Set <p>Cluster health status: -1 unknown; 0 Green; 1 Yellow; 2 Red</p>
+     * @param HealthStatus <p>Cluster health status: -1 unknown; 0 Green; 1 Yellow; 2 Red</p>
      */
     public void setHealthStatus(Long HealthStatus) {
         this.HealthStatus = HealthStatus;
     }
 
     /**
-     * Get Private URL of the HTTPS cluster
-Note: This field may return `null`, indicating that no valid value was found. 
-     * @return EsPrivateUrl Private URL of the HTTPS cluster
-Note: This field may return `null`, indicating that no valid value was found.
+     * Get <p>Intracluster network url for https.</p> 
+     * @return EsPrivateUrl <p>Intracluster network url for https.</p>
      */
     public String getEsPrivateUrl() {
         return this.EsPrivateUrl;
     }
 
     /**
-     * Set Private URL of the HTTPS cluster
-Note: This field may return `null`, indicating that no valid value was found.
-     * @param EsPrivateUrl Private URL of the HTTPS cluster
-Note: This field may return `null`, indicating that no valid value was found.
+     * Set <p>Intracluster network url for https.</p>
+     * @param EsPrivateUrl <p>Intracluster network url for https.</p>
      */
     public void setEsPrivateUrl(String EsPrivateUrl) {
         this.EsPrivateUrl = EsPrivateUrl;
     }
 
     /**
-     * Get Private domain of the HTTPS cluster
-Note: This field may return `null`, indicating that no valid value was found. 
-     * @return EsPrivateDomain Private domain of the HTTPS cluster
-Note: This field may return `null`, indicating that no valid value was found.
+     * Get <p>https cluster private network domain name</p> 
+     * @return EsPrivateDomain <p>https cluster private network domain name</p>
      */
     public String getEsPrivateDomain() {
         return this.EsPrivateDomain;
     }
 
     /**
-     * Set Private domain of the HTTPS cluster
-Note: This field may return `null`, indicating that no valid value was found.
-     * @param EsPrivateDomain Private domain of the HTTPS cluster
-Note: This field may return `null`, indicating that no valid value was found.
+     * Set <p>https cluster private network domain name</p>
+     * @param EsPrivateDomain <p>https cluster private network domain name</p>
      */
     public void setEsPrivateDomain(String EsPrivateDomain) {
         this.EsPrivateDomain = EsPrivateDomain;
     }
 
     /**
-     * Get Configuration set info of the cluster.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return EsConfigSets Configuration set info of the cluster.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Cluster configuration group information.</p> 
+     * @return EsConfigSets <p>Cluster configuration group information.</p>
      */
     public EsConfigSetInfo [] getEsConfigSets() {
         return this.EsConfigSets;
     }
 
     /**
-     * Set Configuration set info of the cluster.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param EsConfigSets Configuration set info of the cluster.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Cluster configuration group information.</p>
+     * @param EsConfigSets <p>Cluster configuration group information.</p>
      */
     public void setEsConfigSets(EsConfigSetInfo [] EsConfigSets) {
         this.EsConfigSets = EsConfigSets;
     }
 
     /**
-     * Get The maintenance time slot of the cluster
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return OperationDuration The maintenance time slot of the cluster
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Cluster maintenance time slot</p> 
+     * @return OperationDuration <p>Cluster maintenance time slot</p>
      */
     public OperationDuration getOperationDuration() {
         return this.OperationDuration;
     }
 
     /**
-     * Set The maintenance time slot of the cluster
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param OperationDuration The maintenance time slot of the cluster
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Cluster maintenance time slot</p>
+     * @param OperationDuration <p>Cluster maintenance time slot</p>
      */
     public void setOperationDuration(OperationDuration OperationDuration) {
         this.OperationDuration = OperationDuration;
     }
 
     /**
-     * Get Web node list
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return OptionalWebServiceInfos Web node list
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>web node list</p> 
+     * @return OptionalWebServiceInfos <p>web node list</p>
      */
     public OptionalWebServiceInfo [] getOptionalWebServiceInfos() {
         return this.OptionalWebServiceInfos;
     }
 
     /**
-     * Set Web node list
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param OptionalWebServiceInfos Web node list
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>web node list</p>
+     * @param OptionalWebServiceInfos <p>web node list</p>
      */
     public void setOptionalWebServiceInfos(OptionalWebServiceInfo [] OptionalWebServiceInfos) {
         this.OptionalWebServiceInfos = OptionalWebServiceInfos;
     }
 
     /**
-     * Get Autonomous index option
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return AutoIndexEnabled Autonomous index option
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Autonomous index switch</p> 
+     * @return AutoIndexEnabled <p>Autonomous index switch</p>
      */
     public Boolean getAutoIndexEnabled() {
         return this.AutoIndexEnabled;
     }
 
     /**
-     * Set Autonomous index option
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param AutoIndexEnabled Autonomous index option
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Autonomous index switch</p>
+     * @param AutoIndexEnabled <p>Autonomous index switch</p>
      */
     public void setAutoIndexEnabled(Boolean AutoIndexEnabled) {
         this.AutoIndexEnabled = AutoIndexEnabled;
     }
 
     /**
-     * Get Whether the storage-computing separation feature is enabled.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return EnableHybridStorage Whether the storage-computing separation feature is enabled.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Whether storage and computation separation is supported.</p> 
+     * @return EnableHybridStorage <p>Whether storage and computation separation is supported.</p>
      */
     public Boolean getEnableHybridStorage() {
         return this.EnableHybridStorage;
     }
 
     /**
-     * Set Whether the storage-computing separation feature is enabled.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param EnableHybridStorage Whether the storage-computing separation feature is enabled.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Whether storage and computation separation is supported.</p>
+     * @param EnableHybridStorage <p>Whether storage and computation separation is supported.</p>
      */
     public void setEnableHybridStorage(Boolean EnableHybridStorage) {
         this.EnableHybridStorage = EnableHybridStorage;
     }
 
     /**
-     * Get The process progress
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ProcessPercent The process progress
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Process progress.</p> 
+     * @return ProcessPercent <p>Process progress.</p>
      */
     public Float getProcessPercent() {
         return this.ProcessPercent;
     }
 
     /**
-     * Set The process progress
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ProcessPercent The process progress
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Process progress.</p>
+     * @param ProcessPercent <p>Process progress.</p>
      */
     public void setProcessPercent(Float ProcessPercent) {
         this.ProcessPercent = ProcessPercent;
     }
 
     /**
-     * Get The alerting policy of Kibana over the public network. <li>`OPEN`: Enable the policy;</li><li>`CLOSE`: Disable the policy.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return KibanaAlteringPublicAccess The alerting policy of Kibana over the public network. <li>`OPEN`: Enable the policy;</li><li>`CLOSE`: Disable the policy.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Kibana alerting public network alert policy<li>OPEN: enable</li><li>CLOSE: disable</li></p> 
+     * @return KibanaAlteringPublicAccess <p>Kibana alerting public network alert policy<li>OPEN: enable</li><li>CLOSE: disable</li></p>
      */
     public String getKibanaAlteringPublicAccess() {
         return this.KibanaAlteringPublicAccess;
     }
 
     /**
-     * Set The alerting policy of Kibana over the public network. <li>`OPEN`: Enable the policy;</li><li>`CLOSE`: Disable the policy.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param KibanaAlteringPublicAccess The alerting policy of Kibana over the public network. <li>`OPEN`: Enable the policy;</li><li>`CLOSE`: Disable the policy.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Kibana alerting public network alert policy<li>OPEN: enable</li><li>CLOSE: disable</li></p>
+     * @param KibanaAlteringPublicAccess <p>Kibana alerting public network alert policy<li>OPEN: enable</li><li>CLOSE: disable</li></p>
      */
     public void setKibanaAlteringPublicAccess(String KibanaAlteringPublicAccess) {
         this.KibanaAlteringPublicAccess = KibanaAlteringPublicAccess;
+    }
+
+    /**
+     * Get <p>Whether there is a kernel update this month: false (no) and true (yes).</p> 
+     * @return HasKernelUpgrade <p>Whether there is a kernel update this month: false (no) and true (yes).</p>
+     */
+    public Boolean getHasKernelUpgrade() {
+        return this.HasKernelUpgrade;
+    }
+
+    /**
+     * Set <p>Whether there is a kernel update this month: false (no) and true (yes).</p>
+     * @param HasKernelUpgrade <p>Whether there is a kernel update this month: false (no) and true (yes).</p>
+     */
+    public void setHasKernelUpgrade(Boolean HasKernelUpgrade) {
+        this.HasKernelUpgrade = HasKernelUpgrade;
+    }
+
+    /**
+     * Get <p>cdcId, pass it when using a CDC subnet</p> 
+     * @return CdcId <p>cdcId, pass it when using a CDC subnet</p>
+     */
+    public String getCdcId() {
+        return this.CdcId;
+    }
+
+    /**
+     * Set <p>cdcId, pass it when using a CDC subnet</p>
+     * @param CdcId <p>cdcId, pass it when using a CDC subnet</p>
+     */
+    public void setCdcId(String CdcId) {
+        this.CdcId = CdcId;
+    }
+
+    /**
+     * Get <p>kibana intranet vip</p> 
+     * @return KibanaPrivateVip <p>kibana intranet vip</p>
+     */
+    public String getKibanaPrivateVip() {
+        return this.KibanaPrivateVip;
+    }
+
+    /**
+     * Set <p>kibana intranet vip</p>
+     * @param KibanaPrivateVip <p>kibana intranet vip</p>
+     */
+    public void setKibanaPrivateVip(String KibanaPrivateVip) {
+        this.KibanaPrivateVip = KibanaPrivateVip;
+    }
+
+    /**
+     * Get <p>Customize the private network url of kibana</p> 
+     * @return CustomKibanaPrivateUrl <p>Customize the private network url of kibana</p>
+     */
+    public String getCustomKibanaPrivateUrl() {
+        return this.CustomKibanaPrivateUrl;
+    }
+
+    /**
+     * Set <p>Customize the private network url of kibana</p>
+     * @param CustomKibanaPrivateUrl <p>Customize the private network url of kibana</p>
+     */
+    public void setCustomKibanaPrivateUrl(String CustomKibanaPrivateUrl) {
+        this.CustomKibanaPrivateUrl = CustomKibanaPrivateUrl;
+    }
+
+    /**
+     * Get <p>Node outbound access detailed information.</p> 
+     * @return OutboundPublicAcls <p>Node outbound access detailed information.</p>
+     */
+    public OutboundPublicAcl [] getOutboundPublicAcls() {
+        return this.OutboundPublicAcls;
+    }
+
+    /**
+     * Set <p>Node outbound access detailed information.</p>
+     * @param OutboundPublicAcls <p>Node outbound access detailed information.</p>
+     */
+    public void setOutboundPublicAcls(OutboundPublicAcl [] OutboundPublicAcls) {
+        this.OutboundPublicAcls = OutboundPublicAcls;
+    }
+
+    /**
+     * Get <p>Network connection solution</p> 
+     * @return NetConnectScheme <p>Network connection solution</p>
+     */
+    public String getNetConnectScheme() {
+        return this.NetConnectScheme;
+    }
+
+    /**
+     * Set <p>Network connection solution</p>
+     * @param NetConnectScheme <p>Network connection solution</p>
+     */
+    public void setNetConnectScheme(String NetConnectScheme) {
+        this.NetConnectScheme = NetConnectScheme;
+    }
+
+    /**
+     * Get <p>Placement group related parameters</p> 
+     * @return DisasterRecoverGroupAffinity <p>Placement group related parameters</p>
+     */
+    public Long getDisasterRecoverGroupAffinity() {
+        return this.DisasterRecoverGroupAffinity;
+    }
+
+    /**
+     * Set <p>Placement group related parameters</p>
+     * @param DisasterRecoverGroupAffinity <p>Placement group related parameters</p>
+     */
+    public void setDisasterRecoverGroupAffinity(Long DisasterRecoverGroupAffinity) {
+        this.DisasterRecoverGroupAffinity = DisasterRecoverGroupAffinity;
+    }
+
+    /**
+     * Get <p>Sub-product ID enumeration values: open source edition: "sp_es_io2", basic version: "sp_es_basic", platinum version: "sp_es_platinum", AI Search Enhancement Edition: "sp_es_aisearch", enterprise edition: "sp_es_enterprise", CDC platinum version: "sp_es_CDC_platinum", Log Enhancement Edition: "sp_es_enlogging", tsearch: "sp_tsearch_io2", logstash: "sp_es_logstash". It can be empty. When it is empty, the backend maps this field based on LicenseType.</p> 
+     * @return SubProductCode <p>Sub-product ID enumeration values: open source edition: "sp_es_io2", basic version: "sp_es_basic", platinum version: "sp_es_platinum", AI Search Enhancement Edition: "sp_es_aisearch", enterprise edition: "sp_es_enterprise", CDC platinum version: "sp_es_CDC_platinum", Log Enhancement Edition: "sp_es_enlogging", tsearch: "sp_tsearch_io2", logstash: "sp_es_logstash". It can be empty. When it is empty, the backend maps this field based on LicenseType.</p>
+     */
+    public String getSubProductCode() {
+        return this.SubProductCode;
+    }
+
+    /**
+     * Set <p>Sub-product ID enumeration values: open source edition: "sp_es_io2", basic version: "sp_es_basic", platinum version: "sp_es_platinum", AI Search Enhancement Edition: "sp_es_aisearch", enterprise edition: "sp_es_enterprise", CDC platinum version: "sp_es_CDC_platinum", Log Enhancement Edition: "sp_es_enlogging", tsearch: "sp_tsearch_io2", logstash: "sp_es_logstash". It can be empty. When it is empty, the backend maps this field based on LicenseType.</p>
+     * @param SubProductCode <p>Sub-product ID enumeration values: open source edition: "sp_es_io2", basic version: "sp_es_basic", platinum version: "sp_es_platinum", AI Search Enhancement Edition: "sp_es_aisearch", enterprise edition: "sp_es_enterprise", CDC platinum version: "sp_es_CDC_platinum", Log Enhancement Edition: "sp_es_enlogging", tsearch: "sp_tsearch_io2", logstash: "sp_es_logstash". It can be empty. When it is empty, the backend maps this field based on LicenseType.</p>
+     */
+    public void setSubProductCode(String SubProductCode) {
+        this.SubProductCode = SubProductCode;
+    }
+
+    /**
+     * Get <p>Storage-compute separation cos usage, Unit: M</p> 
+     * @return CosBucketStorageSize <p>Storage-compute separation cos usage, Unit: M</p>
+     */
+    public Long getCosBucketStorageSize() {
+        return this.CosBucketStorageSize;
+    }
+
+    /**
+     * Set <p>Storage-compute separation cos usage, Unit: M</p>
+     * @param CosBucketStorageSize <p>Storage-compute separation cos usage, Unit: M</p>
+     */
+    public void setCosBucketStorageSize(Long CosBucketStorageSize) {
+        this.CosBucketStorageSize = CosBucketStorageSize;
+    }
+
+    /**
+     * Get <p>Read-write separation mode: 0: not enabled; 1: local read/write separation; 2: remote read/write separation.</p> 
+     * @return ReadWriteMode <p>Read-write separation mode: 0: not enabled; 1: local read/write separation; 2: remote read/write separation.</p>
+     */
+    public Long getReadWriteMode() {
+        return this.ReadWriteMode;
+    }
+
+    /**
+     * Set <p>Read-write separation mode: 0: not enabled; 1: local read/write separation; 2: remote read/write separation.</p>
+     * @param ReadWriteMode <p>Read-write separation mode: 0: not enabled; 1: local read/write separation; 2: remote read/write separation.</p>
+     */
+    public void setReadWriteMode(Long ReadWriteMode) {
+        this.ReadWriteMode = ReadWriteMode;
+    }
+
+    /**
+     * Get <p>Whether there is an asynchronous task scheduling for placement groups</p> 
+     * @return EnableScheduleRecoverGroup <p>Whether there is an asynchronous task scheduling for placement groups</p>
+     */
+    public Boolean getEnableScheduleRecoverGroup() {
+        return this.EnableScheduleRecoverGroup;
+    }
+
+    /**
+     * Set <p>Whether there is an asynchronous task scheduling for placement groups</p>
+     * @param EnableScheduleRecoverGroup <p>Whether there is an asynchronous task scheduling for placement groups</p>
+     */
+    public void setEnableScheduleRecoverGroup(Boolean EnableScheduleRecoverGroup) {
+        this.EnableScheduleRecoverGroup = EnableScheduleRecoverGroup;
+    }
+
+    /**
+     * Get <p>The time when an asynchronous task is scheduled</p> 
+     * @return EnableScheduleOperationDuration <p>The time when an asynchronous task is scheduled</p>
+     */
+    public EnableScheduleOperationDuration getEnableScheduleOperationDuration() {
+        return this.EnableScheduleOperationDuration;
+    }
+
+    /**
+     * Set <p>The time when an asynchronous task is scheduled</p>
+     * @param EnableScheduleOperationDuration <p>The time when an asynchronous task is scheduled</p>
+     */
+    public void setEnableScheduleOperationDuration(EnableScheduleOperationDuration EnableScheduleOperationDuration) {
+        this.EnableScheduleOperationDuration = EnableScheduleOperationDuration;
+    }
+
+    /**
+     * Get <p>Cluster protection: OPEN: enable, CLOSE: disable</p> 
+     * @return EnableDestroyProtection <p>Cluster protection: OPEN: enable, CLOSE: disable</p>
+     */
+    public String getEnableDestroyProtection() {
+        return this.EnableDestroyProtection;
+    }
+
+    /**
+     * Set <p>Cluster protection: OPEN: enable, CLOSE: disable</p>
+     * @param EnableDestroyProtection <p>Cluster protection: OPEN: enable, CLOSE: disable</p>
+     */
+    public void setEnableDestroyProtection(String EnableDestroyProtection) {
+        this.EnableDestroyProtection = EnableDestroyProtection;
+    }
+
+    /**
+     * Get <p>kibana intranet access address</p> 
+     * @return ShowKibanaIpPort <p>kibana intranet access address</p>
+     */
+    public String getShowKibanaIpPort() {
+        return this.ShowKibanaIpPort;
+    }
+
+    /**
+     * Set <p>kibana intranet access address</p>
+     * @param ShowKibanaIpPort <p>kibana intranet access address</p>
+     */
+    public void setShowKibanaIpPort(String ShowKibanaIpPort) {
+        this.ShowKibanaIpPort = ShowKibanaIpPort;
+    }
+
+    /**
+     * Get <p>Whether it is a CDZLite availability zone</p> 
+     * @return IsCdzLite <p>Whether it is a CDZLite availability zone</p>
+     */
+    public Boolean getIsCdzLite() {
+        return this.IsCdzLite;
+    }
+
+    /**
+     * Set <p>Whether it is a CDZLite availability zone</p>
+     * @param IsCdzLite <p>Whether it is a CDZLite availability zone</p>
+     */
+    public void setIsCdzLite(Boolean IsCdzLite) {
+        this.IsCdzLite = IsCdzLite;
+    }
+
+    /**
+     * Get <p>Cluster private network tcp address</p> 
+     * @return EsPrivateTcpUrl <p>Cluster private network tcp address</p>
+     */
+    public String getEsPrivateTcpUrl() {
+        return this.EsPrivateTcpUrl;
+    }
+
+    /**
+     * Set <p>Cluster private network tcp address</p>
+     * @param EsPrivateTcpUrl <p>Cluster private network tcp address</p>
+     */
+    public void setEsPrivateTcpUrl(String EsPrivateTcpUrl) {
+        this.EsPrivateTcpUrl = EsPrivateTcpUrl;
+    }
+
+    /**
+     * Get <p>Whether it is in the recycle bin</p><p>Default value: false</p> 
+     * @return IsInRecycleBin <p>Whether it is in the recycle bin</p><p>Default value: false</p>
+     */
+    public Boolean getIsInRecycleBin() {
+        return this.IsInRecycleBin;
+    }
+
+    /**
+     * Set <p>Whether it is in the recycle bin</p><p>Default value: false</p>
+     * @param IsInRecycleBin <p>Whether it is in the recycle bin</p><p>Default value: false</p>
+     */
+    public void setIsInRecycleBin(Boolean IsInRecycleBin) {
+        this.IsInRecycleBin = IsInRecycleBin;
+    }
+
+    /**
+     * Get <p>Is locked in the recycle bin</p><p>Default value: false</p> 
+     * @return RecycleLockEnabled <p>Is locked in the recycle bin</p><p>Default value: false</p>
+     */
+    public Boolean getRecycleLockEnabled() {
+        return this.RecycleLockEnabled;
+    }
+
+    /**
+     * Set <p>Is locked in the recycle bin</p><p>Default value: false</p>
+     * @param RecycleLockEnabled <p>Is locked in the recycle bin</p><p>Default value: false</p>
+     */
+    public void setRecycleLockEnabled(Boolean RecycleLockEnabled) {
+        this.RecycleLockEnabled = RecycleLockEnabled;
+    }
+
+    /**
+     * Get <p>The time when termination is expected</p><p>Parameter format: YYYY-MM-DD hh:mm:ss</p> 
+     * @return MayDestroyPoint <p>The time when termination is expected</p><p>Parameter format: YYYY-MM-DD hh:mm:ss</p>
+     */
+    public String getMayDestroyPoint() {
+        return this.MayDestroyPoint;
+    }
+
+    /**
+     * Set <p>The time when termination is expected</p><p>Parameter format: YYYY-MM-DD hh:mm:ss</p>
+     * @param MayDestroyPoint <p>The time when termination is expected</p><p>Parameter format: YYYY-MM-DD hh:mm:ss</p>
+     */
+    public void setMayDestroyPoint(String MayDestroyPoint) {
+        this.MayDestroyPoint = MayDestroyPoint;
+    }
+
+    /**
+     * Get <p>The time when termination is delayed</p><p>Unit: day</p> 
+     * @return DelayDestroyInterval <p>The time when termination is delayed</p><p>Unit: day</p>
+     */
+    public Long getDelayDestroyInterval() {
+        return this.DelayDestroyInterval;
+    }
+
+    /**
+     * Set <p>The time when termination is delayed</p><p>Unit: day</p>
+     * @param DelayDestroyInterval <p>The time when termination is delayed</p><p>Unit: day</p>
+     */
+    public void setDelayDestroyInterval(Long DelayDestroyInterval) {
+        this.DelayDestroyInterval = DelayDestroyInterval;
+    }
+
+    /**
+     * Get <p>Enable automatic replacement of unhealthy nodes. 0: disable, 1: enable</p> 
+     * @return EnableAutoReplace <p>Enable automatic replacement of unhealthy nodes. 0: disable, 1: enable</p>
+     */
+    public Long getEnableAutoReplace() {
+        return this.EnableAutoReplace;
+    }
+
+    /**
+     * Set <p>Enable automatic replacement of unhealthy nodes. 0: disable, 1: enable</p>
+     * @param EnableAutoReplace <p>Enable automatic replacement of unhealthy nodes. 0: disable, 1: enable</p>
+     */
+    public void setEnableAutoReplace(Long EnableAutoReplace) {
+        this.EnableAutoReplace = EnableAutoReplace;
+    }
+
+    /**
+     * Get <p>Enable mtls. 0: disable, 1: enable</p> 
+     * @return OpenMTLS <p>Enable mtls. 0: disable, 1: enable</p>
+     */
+    public Long getOpenMTLS() {
+        return this.OpenMTLS;
+    }
+
+    /**
+     * Set <p>Enable mtls. 0: disable, 1: enable</p>
+     * @param OpenMTLS <p>Enable mtls. 0: disable, 1: enable</p>
+     */
+    public void setOpenMTLS(Long OpenMTLS) {
+        this.OpenMTLS = OpenMTLS;
+    }
+
+    /**
+     * Get <p>Certificate type</p> 
+     * @return ServerCertSource <p>Certificate type</p>
+     */
+    public String getServerCertSource() {
+        return this.ServerCertSource;
+    }
+
+    /**
+     * Set <p>Certificate type</p>
+     * @param ServerCertSource <p>Certificate type</p>
+     */
+    public void setServerCertSource(String ServerCertSource) {
+        this.ServerCertSource = ServerCertSource;
+    }
+
+    /**
+     * Get <p>VIP pending migration for the cluster</p> 
+     * @return OldEsVip <p>VIP pending migration for the cluster</p>
+     */
+    public String getOldEsVip() {
+        return this.OldEsVip;
+    }
+
+    /**
+     * Set <p>VIP pending migration for the cluster</p>
+     * @param OldEsVip <p>VIP pending migration for the cluster</p>
+     */
+    public void setOldEsVip(String OldEsVip) {
+        this.OldEsVip = OldEsVip;
+    }
+
+    /**
+     * Get <p>Cluster TCP address to be migrated</p> 
+     * @return OldEsPrivateTcpUrl <p>Cluster TCP address to be migrated</p>
+     */
+    public String getOldEsPrivateTcpUrl() {
+        return this.OldEsPrivateTcpUrl;
+    }
+
+    /**
+     * Set <p>Cluster TCP address to be migrated</p>
+     * @param OldEsPrivateTcpUrl <p>Cluster TCP address to be migrated</p>
+     */
+    public void setOldEsPrivateTcpUrl(String OldEsPrivateTcpUrl) {
+        this.OldEsPrivateTcpUrl = OldEsPrivateTcpUrl;
+    }
+
+    /**
+     * Get <p>Whether to take old nodes offline from the VIP</p> 
+     * @return NeedOfflineOldNodesNotify <p>Whether to take old nodes offline from the VIP</p>
+     */
+    public Boolean getNeedOfflineOldNodesNotify() {
+        return this.NeedOfflineOldNodesNotify;
+    }
+
+    /**
+     * Set <p>Whether to take old nodes offline from the VIP</p>
+     * @param NeedOfflineOldNodesNotify <p>Whether to take old nodes offline from the VIP</p>
+     */
+    public void setNeedOfflineOldNodesNotify(Boolean NeedOfflineOldNodesNotify) {
+        this.NeedOfflineOldNodesNotify = NeedOfflineOldNodesNotify;
     }
 
     public InstanceInfo() {
@@ -2226,6 +2622,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         }
         if (source.LicenseType != null) {
             this.LicenseType = new String(source.LicenseType);
+        }
+        if (source.RealLicenseType != null) {
+            this.RealLicenseType = new String(source.RealLicenseType);
         }
         if (source.EnableHotWarmMode != null) {
             this.EnableHotWarmMode = new Boolean(source.EnableHotWarmMode);
@@ -2380,6 +2779,87 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.KibanaAlteringPublicAccess != null) {
             this.KibanaAlteringPublicAccess = new String(source.KibanaAlteringPublicAccess);
         }
+        if (source.HasKernelUpgrade != null) {
+            this.HasKernelUpgrade = new Boolean(source.HasKernelUpgrade);
+        }
+        if (source.CdcId != null) {
+            this.CdcId = new String(source.CdcId);
+        }
+        if (source.KibanaPrivateVip != null) {
+            this.KibanaPrivateVip = new String(source.KibanaPrivateVip);
+        }
+        if (source.CustomKibanaPrivateUrl != null) {
+            this.CustomKibanaPrivateUrl = new String(source.CustomKibanaPrivateUrl);
+        }
+        if (source.OutboundPublicAcls != null) {
+            this.OutboundPublicAcls = new OutboundPublicAcl[source.OutboundPublicAcls.length];
+            for (int i = 0; i < source.OutboundPublicAcls.length; i++) {
+                this.OutboundPublicAcls[i] = new OutboundPublicAcl(source.OutboundPublicAcls[i]);
+            }
+        }
+        if (source.NetConnectScheme != null) {
+            this.NetConnectScheme = new String(source.NetConnectScheme);
+        }
+        if (source.DisasterRecoverGroupAffinity != null) {
+            this.DisasterRecoverGroupAffinity = new Long(source.DisasterRecoverGroupAffinity);
+        }
+        if (source.SubProductCode != null) {
+            this.SubProductCode = new String(source.SubProductCode);
+        }
+        if (source.CosBucketStorageSize != null) {
+            this.CosBucketStorageSize = new Long(source.CosBucketStorageSize);
+        }
+        if (source.ReadWriteMode != null) {
+            this.ReadWriteMode = new Long(source.ReadWriteMode);
+        }
+        if (source.EnableScheduleRecoverGroup != null) {
+            this.EnableScheduleRecoverGroup = new Boolean(source.EnableScheduleRecoverGroup);
+        }
+        if (source.EnableScheduleOperationDuration != null) {
+            this.EnableScheduleOperationDuration = new EnableScheduleOperationDuration(source.EnableScheduleOperationDuration);
+        }
+        if (source.EnableDestroyProtection != null) {
+            this.EnableDestroyProtection = new String(source.EnableDestroyProtection);
+        }
+        if (source.ShowKibanaIpPort != null) {
+            this.ShowKibanaIpPort = new String(source.ShowKibanaIpPort);
+        }
+        if (source.IsCdzLite != null) {
+            this.IsCdzLite = new Boolean(source.IsCdzLite);
+        }
+        if (source.EsPrivateTcpUrl != null) {
+            this.EsPrivateTcpUrl = new String(source.EsPrivateTcpUrl);
+        }
+        if (source.IsInRecycleBin != null) {
+            this.IsInRecycleBin = new Boolean(source.IsInRecycleBin);
+        }
+        if (source.RecycleLockEnabled != null) {
+            this.RecycleLockEnabled = new Boolean(source.RecycleLockEnabled);
+        }
+        if (source.MayDestroyPoint != null) {
+            this.MayDestroyPoint = new String(source.MayDestroyPoint);
+        }
+        if (source.DelayDestroyInterval != null) {
+            this.DelayDestroyInterval = new Long(source.DelayDestroyInterval);
+        }
+        if (source.EnableAutoReplace != null) {
+            this.EnableAutoReplace = new Long(source.EnableAutoReplace);
+        }
+        if (source.OpenMTLS != null) {
+            this.OpenMTLS = new Long(source.OpenMTLS);
+        }
+        if (source.ServerCertSource != null) {
+            this.ServerCertSource = new String(source.ServerCertSource);
+        }
+        if (source.OldEsVip != null) {
+            this.OldEsVip = new String(source.OldEsVip);
+        }
+        if (source.OldEsPrivateTcpUrl != null) {
+            this.OldEsPrivateTcpUrl = new String(source.OldEsPrivateTcpUrl);
+        }
+        if (source.NeedOfflineOldNodesNotify != null) {
+            this.NeedOfflineOldNodesNotify = new Boolean(source.NeedOfflineOldNodesNotify);
+        }
     }
 
 
@@ -2422,6 +2902,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "AllowCosBackup", this.AllowCosBackup);
         this.setParamArrayObj(map, prefix + "TagList.", this.TagList);
         this.setParamSimple(map, prefix + "LicenseType", this.LicenseType);
+        this.setParamSimple(map, prefix + "RealLicenseType", this.RealLicenseType);
         this.setParamSimple(map, prefix + "EnableHotWarmMode", this.EnableHotWarmMode);
         this.setParamSimple(map, prefix + "WarmNodeType", this.WarmNodeType);
         this.setParamSimple(map, prefix + "WarmNodeNum", this.WarmNodeNum);
@@ -2468,6 +2949,32 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "EnableHybridStorage", this.EnableHybridStorage);
         this.setParamSimple(map, prefix + "ProcessPercent", this.ProcessPercent);
         this.setParamSimple(map, prefix + "KibanaAlteringPublicAccess", this.KibanaAlteringPublicAccess);
+        this.setParamSimple(map, prefix + "HasKernelUpgrade", this.HasKernelUpgrade);
+        this.setParamSimple(map, prefix + "CdcId", this.CdcId);
+        this.setParamSimple(map, prefix + "KibanaPrivateVip", this.KibanaPrivateVip);
+        this.setParamSimple(map, prefix + "CustomKibanaPrivateUrl", this.CustomKibanaPrivateUrl);
+        this.setParamArrayObj(map, prefix + "OutboundPublicAcls.", this.OutboundPublicAcls);
+        this.setParamSimple(map, prefix + "NetConnectScheme", this.NetConnectScheme);
+        this.setParamSimple(map, prefix + "DisasterRecoverGroupAffinity", this.DisasterRecoverGroupAffinity);
+        this.setParamSimple(map, prefix + "SubProductCode", this.SubProductCode);
+        this.setParamSimple(map, prefix + "CosBucketStorageSize", this.CosBucketStorageSize);
+        this.setParamSimple(map, prefix + "ReadWriteMode", this.ReadWriteMode);
+        this.setParamSimple(map, prefix + "EnableScheduleRecoverGroup", this.EnableScheduleRecoverGroup);
+        this.setParamObj(map, prefix + "EnableScheduleOperationDuration.", this.EnableScheduleOperationDuration);
+        this.setParamSimple(map, prefix + "EnableDestroyProtection", this.EnableDestroyProtection);
+        this.setParamSimple(map, prefix + "ShowKibanaIpPort", this.ShowKibanaIpPort);
+        this.setParamSimple(map, prefix + "IsCdzLite", this.IsCdzLite);
+        this.setParamSimple(map, prefix + "EsPrivateTcpUrl", this.EsPrivateTcpUrl);
+        this.setParamSimple(map, prefix + "IsInRecycleBin", this.IsInRecycleBin);
+        this.setParamSimple(map, prefix + "RecycleLockEnabled", this.RecycleLockEnabled);
+        this.setParamSimple(map, prefix + "MayDestroyPoint", this.MayDestroyPoint);
+        this.setParamSimple(map, prefix + "DelayDestroyInterval", this.DelayDestroyInterval);
+        this.setParamSimple(map, prefix + "EnableAutoReplace", this.EnableAutoReplace);
+        this.setParamSimple(map, prefix + "OpenMTLS", this.OpenMTLS);
+        this.setParamSimple(map, prefix + "ServerCertSource", this.ServerCertSource);
+        this.setParamSimple(map, prefix + "OldEsVip", this.OldEsVip);
+        this.setParamSimple(map, prefix + "OldEsPrivateTcpUrl", this.OldEsPrivateTcpUrl);
+        this.setParamSimple(map, prefix + "NeedOfflineOldNodesNotify", this.NeedOfflineOldNodesNotify);
 
     }
 }

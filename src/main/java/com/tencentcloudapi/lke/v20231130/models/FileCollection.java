@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class FileCollection extends AbstractModel {
 
     /**
-    * 
+    * Maximum number of files to be uploaded
     */
     @SerializedName("MaxFileCount")
     @Expose
     private Long MaxFileCount;
 
     /**
-    * 
+    * Supported upload file types
     */
     @SerializedName("SupportedFileTypes")
     @Expose
     private String [] SupportedFileTypes;
 
     /**
-     * Get  
-     * @return MaxFileCount 
+     * Get Maximum number of files to be uploaded 
+     * @return MaxFileCount Maximum number of files to be uploaded
      */
     public Long getMaxFileCount() {
         return this.MaxFileCount;
     }
 
     /**
-     * Set 
-     * @param MaxFileCount 
+     * Set Maximum number of files to be uploaded
+     * @param MaxFileCount Maximum number of files to be uploaded
      */
     public void setMaxFileCount(Long MaxFileCount) {
         this.MaxFileCount = MaxFileCount;
     }
 
     /**
-     * Get  
-     * @return SupportedFileTypes 
+     * Get Supported upload file types 
+     * @return SupportedFileTypes Supported upload file types
      */
     public String [] getSupportedFileTypes() {
         return this.SupportedFileTypes;
     }
 
     /**
-     * Set 
-     * @param SupportedFileTypes 
+     * Set Supported upload file types
+     * @param SupportedFileTypes Supported upload file types
      */
     public void setSupportedFileTypes(String [] SupportedFileTypes) {
         this.SupportedFileTypes = SupportedFileTypes;

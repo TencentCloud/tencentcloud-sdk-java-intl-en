@@ -31,7 +31,7 @@ public class AiAnalysisTaskHighlightOutput extends AbstractModel {
     private MediaAiAnalysisHighlightItem [] HighlightSet;
 
     /**
-    * 
+    * Storage location of highlights.
     */
     @SerializedName("OutputStorage")
     @Expose
@@ -54,16 +54,16 @@ public class AiAnalysisTaskHighlightOutput extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return OutputStorage 
+     * Get Storage location of highlights. 
+     * @return OutputStorage Storage location of highlights.
      */
     public TaskOutputStorage getOutputStorage() {
         return this.OutputStorage;
     }
 
     /**
-     * Set 
-     * @param OutputStorage 
+     * Set Storage location of highlights.
+     * @param OutputStorage Storage location of highlights.
      */
     public void setOutputStorage(TaskOutputStorage OutputStorage) {
         this.OutputStorage = OutputStorage;

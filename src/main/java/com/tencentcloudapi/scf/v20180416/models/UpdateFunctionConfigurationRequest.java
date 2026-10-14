@@ -24,112 +24,113 @@ import java.util.HashMap;
 public class UpdateFunctionConfigurationRequest extends AbstractModel {
 
     /**
-    * Name of the function to be modified
+    * The function name to be modified
     */
     @SerializedName("FunctionName")
     @Expose
     private String FunctionName;
 
     /**
-    * Function description. It can contain up to 1,000 characters, including letters, digits, spaces, commas (,), periods (.), and Chinese characters.
+    * Function description. Supports up to 1,000 English letters, digits, spaces, commas, and periods. Chinese is supported.
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * Memory size available for function during execution. Default value: 128 MB. Value range: 64 or 128-3,072 MB in increments of 128 MB.
+    * Memory size of the function runtime. Default value: 128 MB. Selectable range: 64 MB, or 128 MB to 3072 MB in 128 MB increments.
     */
     @SerializedName("MemorySize")
     @Expose
     private Long MemorySize;
 
     /**
-    * Maximum execution duration of function in seconds. Value range: 1-900 seconds. Default value: 3 seconds
+    * Maximum execution time of the function, in seconds. Value range: 1-900 seconds. Default value: 3 seconds.
     */
     @SerializedName("Timeout")
     @Expose
     private Long Timeout;
 
     /**
-    * Function runtime environment. Valid values: Python2.7, Python3.6, Nodejs6.10, Nodejs8.9, Nodejs10.15, Nodejs12.16, PHP5, PHP7, Go1, Java8, CustomRuntime
+    * Runtime environment. It is specified upon creation and currently does not support modification.
     */
     @SerializedName("Runtime")
     @Expose
     private String Runtime;
 
     /**
-    * Function environment variable
+    * Environment variable of the function
     */
     @SerializedName("Environment")
     @Expose
     private Environment Environment;
 
     /**
-    * Function namespace
+    * Namespace of the function
+Default value: default
     */
     @SerializedName("Namespace")
     @Expose
     private String Namespace;
 
     /**
-    * Function VPC configuration
+    * VPC configuration of the function
     */
     @SerializedName("VpcConfig")
     @Expose
     private VpcConfig VpcConfig;
 
     /**
-    * Role bound to the function
+    * Role bound to a function
     */
     @SerializedName("Role")
     @Expose
     private String Role;
 
     /**
-    * Specifies whether to [install dependency online](https://intl.cloud.tencent.com/document/product/583/37920?from_cn_redirect=1). `TRUE`: yes. Default to `FALSE`. It is only available for Node.js functions.
+    * [Install dependency online](https://www.tencentcloud.com/document/product/583/37920?from_cn_redirect=1). TRUE indicates installation. Default value: FALSE. Only supported for Node.js functions.
     */
     @SerializedName("InstallDependency")
     @Expose
     private String InstallDependency;
 
     /**
-    * CLS logset ID to which logs are shipped
+    * ID of the cls Log Set for log delivery
     */
     @SerializedName("ClsLogsetId")
     @Expose
     private String ClsLogsetId;
 
     /**
-    * CLS Topic ID to which logs are shipped
+    * cls Topic ID for log delivery
     */
     @SerializedName("ClsTopicId")
     @Expose
     private String ClsTopicId;
 
     /**
-    * It specifies whether to synchronously publish a new version during the update. The default value is `FALSE`, indicating not to publish a new version
+    * Whether to release a new version synchronously when updating. Default value: FALSE, which means no new version is released.
     */
     @SerializedName("Publish")
     @Expose
     private String Publish;
 
     /**
-    * Whether to enable L5 access. TRUE: enable; FALSE: not enable
+    * Whether L5 access capability is enabled. TRUE to enable, FALSE to shutdown.
     */
     @SerializedName("L5Enable")
     @Expose
     private String L5Enable;
 
     /**
-    * List of layer versions that bound with the function. Files with the same name will be overridden by the bound layer versions according to the ascending order in the list. 
+    * List of layer versions to associate with the function. The layer versions overwrite each other sequentially in the order in the list.
     */
     @SerializedName("Layers")
     @Expose
     private LayerVersionSimple [] Layers;
 
     /**
-    * Information of a dead letter queue associated with a function
+    * Dead letter queue information associated with the function
     */
     @SerializedName("DeadLetterConfig")
     @Expose
@@ -143,277 +144,309 @@ public class UpdateFunctionConfigurationRequest extends AbstractModel {
     private PublicNetConfigIn PublicNetConfig;
 
     /**
-    * File system configuration input parameter, which is used for the function to bind the CFS file system
+    * File system configuration parameters for binding a CFS file system in SCF
     */
     @SerializedName("CfsConfig")
     @Expose
     private CfsConfig CfsConfig;
 
     /**
-    * The function initialization timeout period
+    * Function initialization timeout period
     */
     @SerializedName("InitTimeout")
     @Expose
     private Long InitTimeout;
 
     /**
-    * Parameters of the specified protocol
+    * Configure ProtocolType access protocol for an HTTP function. Parameters configurable for the current protocol.
     */
     @SerializedName("ProtocolParams")
     @Expose
     private ProtocolParams ProtocolParams;
 
     /**
-     * Get Name of the function to be modified 
-     * @return FunctionName Name of the function to be modified
+    * Single-instance multi-concurrency configuration. Supports only Web functions.
+    */
+    @SerializedName("InstanceConcurrencyConfig")
+    @Expose
+    private InstanceConcurrencyConfig InstanceConcurrencyConfig;
+
+    /**
+    * Whether the Dns caching capability is enabled. Supports only the EVENT function. Defaults to FALSE. TRUE to enable, FALSE to shutdown.
+    */
+    @SerializedName("DnsCache")
+    @Expose
+    private String DnsCache;
+
+    /**
+    * Private network access configuration
+    */
+    @SerializedName("IntranetConfig")
+    @Expose
+    private IntranetConfigIn IntranetConfig;
+
+    /**
+    * Ignorable system log reporting
+    */
+    @SerializedName("IgnoreSysLog")
+    @Expose
+    private Boolean IgnoreSysLog;
+
+    /**
+     * Get The function name to be modified 
+     * @return FunctionName The function name to be modified
      */
     public String getFunctionName() {
         return this.FunctionName;
     }
 
     /**
-     * Set Name of the function to be modified
-     * @param FunctionName Name of the function to be modified
+     * Set The function name to be modified
+     * @param FunctionName The function name to be modified
      */
     public void setFunctionName(String FunctionName) {
         this.FunctionName = FunctionName;
     }
 
     /**
-     * Get Function description. It can contain up to 1,000 characters, including letters, digits, spaces, commas (,), periods (.), and Chinese characters. 
-     * @return Description Function description. It can contain up to 1,000 characters, including letters, digits, spaces, commas (,), periods (.), and Chinese characters.
+     * Get Function description. Supports up to 1,000 English letters, digits, spaces, commas, and periods. Chinese is supported. 
+     * @return Description Function description. Supports up to 1,000 English letters, digits, spaces, commas, and periods. Chinese is supported.
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set Function description. It can contain up to 1,000 characters, including letters, digits, spaces, commas (,), periods (.), and Chinese characters.
-     * @param Description Function description. It can contain up to 1,000 characters, including letters, digits, spaces, commas (,), periods (.), and Chinese characters.
+     * Set Function description. Supports up to 1,000 English letters, digits, spaces, commas, and periods. Chinese is supported.
+     * @param Description Function description. Supports up to 1,000 English letters, digits, spaces, commas, and periods. Chinese is supported.
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get Memory size available for function during execution. Default value: 128 MB. Value range: 64 or 128-3,072 MB in increments of 128 MB. 
-     * @return MemorySize Memory size available for function during execution. Default value: 128 MB. Value range: 64 or 128-3,072 MB in increments of 128 MB.
+     * Get Memory size of the function runtime. Default value: 128 MB. Selectable range: 64 MB, or 128 MB to 3072 MB in 128 MB increments. 
+     * @return MemorySize Memory size of the function runtime. Default value: 128 MB. Selectable range: 64 MB, or 128 MB to 3072 MB in 128 MB increments.
      */
     public Long getMemorySize() {
         return this.MemorySize;
     }
 
     /**
-     * Set Memory size available for function during execution. Default value: 128 MB. Value range: 64 or 128-3,072 MB in increments of 128 MB.
-     * @param MemorySize Memory size available for function during execution. Default value: 128 MB. Value range: 64 or 128-3,072 MB in increments of 128 MB.
+     * Set Memory size of the function runtime. Default value: 128 MB. Selectable range: 64 MB, or 128 MB to 3072 MB in 128 MB increments.
+     * @param MemorySize Memory size of the function runtime. Default value: 128 MB. Selectable range: 64 MB, or 128 MB to 3072 MB in 128 MB increments.
      */
     public void setMemorySize(Long MemorySize) {
         this.MemorySize = MemorySize;
     }
 
     /**
-     * Get Maximum execution duration of function in seconds. Value range: 1-900 seconds. Default value: 3 seconds 
-     * @return Timeout Maximum execution duration of function in seconds. Value range: 1-900 seconds. Default value: 3 seconds
+     * Get Maximum execution time of the function, in seconds. Value range: 1-900 seconds. Default value: 3 seconds. 
+     * @return Timeout Maximum execution time of the function, in seconds. Value range: 1-900 seconds. Default value: 3 seconds.
      */
     public Long getTimeout() {
         return this.Timeout;
     }
 
     /**
-     * Set Maximum execution duration of function in seconds. Value range: 1-900 seconds. Default value: 3 seconds
-     * @param Timeout Maximum execution duration of function in seconds. Value range: 1-900 seconds. Default value: 3 seconds
+     * Set Maximum execution time of the function, in seconds. Value range: 1-900 seconds. Default value: 3 seconds.
+     * @param Timeout Maximum execution time of the function, in seconds. Value range: 1-900 seconds. Default value: 3 seconds.
      */
     public void setTimeout(Long Timeout) {
         this.Timeout = Timeout;
     }
 
     /**
-     * Get Function runtime environment. Valid values: Python2.7, Python3.6, Nodejs6.10, Nodejs8.9, Nodejs10.15, Nodejs12.16, PHP5, PHP7, Go1, Java8, CustomRuntime 
-     * @return Runtime Function runtime environment. Valid values: Python2.7, Python3.6, Nodejs6.10, Nodejs8.9, Nodejs10.15, Nodejs12.16, PHP5, PHP7, Go1, Java8, CustomRuntime
+     * Get Runtime environment. It is specified upon creation and currently does not support modification. 
+     * @return Runtime Runtime environment. It is specified upon creation and currently does not support modification.
      */
     public String getRuntime() {
         return this.Runtime;
     }
 
     /**
-     * Set Function runtime environment. Valid values: Python2.7, Python3.6, Nodejs6.10, Nodejs8.9, Nodejs10.15, Nodejs12.16, PHP5, PHP7, Go1, Java8, CustomRuntime
-     * @param Runtime Function runtime environment. Valid values: Python2.7, Python3.6, Nodejs6.10, Nodejs8.9, Nodejs10.15, Nodejs12.16, PHP5, PHP7, Go1, Java8, CustomRuntime
+     * Set Runtime environment. It is specified upon creation and currently does not support modification.
+     * @param Runtime Runtime environment. It is specified upon creation and currently does not support modification.
      */
     public void setRuntime(String Runtime) {
         this.Runtime = Runtime;
     }
 
     /**
-     * Get Function environment variable 
-     * @return Environment Function environment variable
+     * Get Environment variable of the function 
+     * @return Environment Environment variable of the function
      */
     public Environment getEnvironment() {
         return this.Environment;
     }
 
     /**
-     * Set Function environment variable
-     * @param Environment Function environment variable
+     * Set Environment variable of the function
+     * @param Environment Environment variable of the function
      */
     public void setEnvironment(Environment Environment) {
         this.Environment = Environment;
     }
 
     /**
-     * Get Function namespace 
-     * @return Namespace Function namespace
+     * Get Namespace of the function
+Default value: default 
+     * @return Namespace Namespace of the function
+Default value: default
      */
     public String getNamespace() {
         return this.Namespace;
     }
 
     /**
-     * Set Function namespace
-     * @param Namespace Function namespace
+     * Set Namespace of the function
+Default value: default
+     * @param Namespace Namespace of the function
+Default value: default
      */
     public void setNamespace(String Namespace) {
         this.Namespace = Namespace;
     }
 
     /**
-     * Get Function VPC configuration 
-     * @return VpcConfig Function VPC configuration
+     * Get VPC configuration of the function 
+     * @return VpcConfig VPC configuration of the function
      */
     public VpcConfig getVpcConfig() {
         return this.VpcConfig;
     }
 
     /**
-     * Set Function VPC configuration
-     * @param VpcConfig Function VPC configuration
+     * Set VPC configuration of the function
+     * @param VpcConfig VPC configuration of the function
      */
     public void setVpcConfig(VpcConfig VpcConfig) {
         this.VpcConfig = VpcConfig;
     }
 
     /**
-     * Get Role bound to the function 
-     * @return Role Role bound to the function
+     * Get Role bound to a function 
+     * @return Role Role bound to a function
      */
     public String getRole() {
         return this.Role;
     }
 
     /**
-     * Set Role bound to the function
-     * @param Role Role bound to the function
+     * Set Role bound to a function
+     * @param Role Role bound to a function
      */
     public void setRole(String Role) {
         this.Role = Role;
     }
 
     /**
-     * Get Specifies whether to [install dependency online](https://intl.cloud.tencent.com/document/product/583/37920?from_cn_redirect=1). `TRUE`: yes. Default to `FALSE`. It is only available for Node.js functions. 
-     * @return InstallDependency Specifies whether to [install dependency online](https://intl.cloud.tencent.com/document/product/583/37920?from_cn_redirect=1). `TRUE`: yes. Default to `FALSE`. It is only available for Node.js functions.
+     * Get [Install dependency online](https://www.tencentcloud.com/document/product/583/37920?from_cn_redirect=1). TRUE indicates installation. Default value: FALSE. Only supported for Node.js functions. 
+     * @return InstallDependency [Install dependency online](https://www.tencentcloud.com/document/product/583/37920?from_cn_redirect=1). TRUE indicates installation. Default value: FALSE. Only supported for Node.js functions.
      */
     public String getInstallDependency() {
         return this.InstallDependency;
     }
 
     /**
-     * Set Specifies whether to [install dependency online](https://intl.cloud.tencent.com/document/product/583/37920?from_cn_redirect=1). `TRUE`: yes. Default to `FALSE`. It is only available for Node.js functions.
-     * @param InstallDependency Specifies whether to [install dependency online](https://intl.cloud.tencent.com/document/product/583/37920?from_cn_redirect=1). `TRUE`: yes. Default to `FALSE`. It is only available for Node.js functions.
+     * Set [Install dependency online](https://www.tencentcloud.com/document/product/583/37920?from_cn_redirect=1). TRUE indicates installation. Default value: FALSE. Only supported for Node.js functions.
+     * @param InstallDependency [Install dependency online](https://www.tencentcloud.com/document/product/583/37920?from_cn_redirect=1). TRUE indicates installation. Default value: FALSE. Only supported for Node.js functions.
      */
     public void setInstallDependency(String InstallDependency) {
         this.InstallDependency = InstallDependency;
     }
 
     /**
-     * Get CLS logset ID to which logs are shipped 
-     * @return ClsLogsetId CLS logset ID to which logs are shipped
+     * Get ID of the cls Log Set for log delivery 
+     * @return ClsLogsetId ID of the cls Log Set for log delivery
      */
     public String getClsLogsetId() {
         return this.ClsLogsetId;
     }
 
     /**
-     * Set CLS logset ID to which logs are shipped
-     * @param ClsLogsetId CLS logset ID to which logs are shipped
+     * Set ID of the cls Log Set for log delivery
+     * @param ClsLogsetId ID of the cls Log Set for log delivery
      */
     public void setClsLogsetId(String ClsLogsetId) {
         this.ClsLogsetId = ClsLogsetId;
     }
 
     /**
-     * Get CLS Topic ID to which logs are shipped 
-     * @return ClsTopicId CLS Topic ID to which logs are shipped
+     * Get cls Topic ID for log delivery 
+     * @return ClsTopicId cls Topic ID for log delivery
      */
     public String getClsTopicId() {
         return this.ClsTopicId;
     }
 
     /**
-     * Set CLS Topic ID to which logs are shipped
-     * @param ClsTopicId CLS Topic ID to which logs are shipped
+     * Set cls Topic ID for log delivery
+     * @param ClsTopicId cls Topic ID for log delivery
      */
     public void setClsTopicId(String ClsTopicId) {
         this.ClsTopicId = ClsTopicId;
     }
 
     /**
-     * Get It specifies whether to synchronously publish a new version during the update. The default value is `FALSE`, indicating not to publish a new version 
-     * @return Publish It specifies whether to synchronously publish a new version during the update. The default value is `FALSE`, indicating not to publish a new version
+     * Get Whether to release a new version synchronously when updating. Default value: FALSE, which means no new version is released. 
+     * @return Publish Whether to release a new version synchronously when updating. Default value: FALSE, which means no new version is released.
      */
     public String getPublish() {
         return this.Publish;
     }
 
     /**
-     * Set It specifies whether to synchronously publish a new version during the update. The default value is `FALSE`, indicating not to publish a new version
-     * @param Publish It specifies whether to synchronously publish a new version during the update. The default value is `FALSE`, indicating not to publish a new version
+     * Set Whether to release a new version synchronously when updating. Default value: FALSE, which means no new version is released.
+     * @param Publish Whether to release a new version synchronously when updating. Default value: FALSE, which means no new version is released.
      */
     public void setPublish(String Publish) {
         this.Publish = Publish;
     }
 
     /**
-     * Get Whether to enable L5 access. TRUE: enable; FALSE: not enable 
-     * @return L5Enable Whether to enable L5 access. TRUE: enable; FALSE: not enable
+     * Get Whether L5 access capability is enabled. TRUE to enable, FALSE to shutdown. 
+     * @return L5Enable Whether L5 access capability is enabled. TRUE to enable, FALSE to shutdown.
      */
     public String getL5Enable() {
         return this.L5Enable;
     }
 
     /**
-     * Set Whether to enable L5 access. TRUE: enable; FALSE: not enable
-     * @param L5Enable Whether to enable L5 access. TRUE: enable; FALSE: not enable
+     * Set Whether L5 access capability is enabled. TRUE to enable, FALSE to shutdown.
+     * @param L5Enable Whether L5 access capability is enabled. TRUE to enable, FALSE to shutdown.
      */
     public void setL5Enable(String L5Enable) {
         this.L5Enable = L5Enable;
     }
 
     /**
-     * Get List of layer versions that bound with the function. Files with the same name will be overridden by the bound layer versions according to the ascending order in the list.  
-     * @return Layers List of layer versions that bound with the function. Files with the same name will be overridden by the bound layer versions according to the ascending order in the list. 
+     * Get List of layer versions to associate with the function. The layer versions overwrite each other sequentially in the order in the list. 
+     * @return Layers List of layer versions to associate with the function. The layer versions overwrite each other sequentially in the order in the list.
      */
     public LayerVersionSimple [] getLayers() {
         return this.Layers;
     }
 
     /**
-     * Set List of layer versions that bound with the function. Files with the same name will be overridden by the bound layer versions according to the ascending order in the list. 
-     * @param Layers List of layer versions that bound with the function. Files with the same name will be overridden by the bound layer versions according to the ascending order in the list. 
+     * Set List of layer versions to associate with the function. The layer versions overwrite each other sequentially in the order in the list.
+     * @param Layers List of layer versions to associate with the function. The layer versions overwrite each other sequentially in the order in the list.
      */
     public void setLayers(LayerVersionSimple [] Layers) {
         this.Layers = Layers;
     }
 
     /**
-     * Get Information of a dead letter queue associated with a function 
-     * @return DeadLetterConfig Information of a dead letter queue associated with a function
+     * Get Dead letter queue information associated with the function 
+     * @return DeadLetterConfig Dead letter queue information associated with the function
      */
     public DeadLetterConfig getDeadLetterConfig() {
         return this.DeadLetterConfig;
     }
 
     /**
-     * Set Information of a dead letter queue associated with a function
-     * @param DeadLetterConfig Information of a dead letter queue associated with a function
+     * Set Dead letter queue information associated with the function
+     * @param DeadLetterConfig Dead letter queue information associated with the function
      */
     public void setDeadLetterConfig(DeadLetterConfig DeadLetterConfig) {
         this.DeadLetterConfig = DeadLetterConfig;
@@ -436,51 +469,115 @@ public class UpdateFunctionConfigurationRequest extends AbstractModel {
     }
 
     /**
-     * Get File system configuration input parameter, which is used for the function to bind the CFS file system 
-     * @return CfsConfig File system configuration input parameter, which is used for the function to bind the CFS file system
+     * Get File system configuration parameters for binding a CFS file system in SCF 
+     * @return CfsConfig File system configuration parameters for binding a CFS file system in SCF
      */
     public CfsConfig getCfsConfig() {
         return this.CfsConfig;
     }
 
     /**
-     * Set File system configuration input parameter, which is used for the function to bind the CFS file system
-     * @param CfsConfig File system configuration input parameter, which is used for the function to bind the CFS file system
+     * Set File system configuration parameters for binding a CFS file system in SCF
+     * @param CfsConfig File system configuration parameters for binding a CFS file system in SCF
      */
     public void setCfsConfig(CfsConfig CfsConfig) {
         this.CfsConfig = CfsConfig;
     }
 
     /**
-     * Get The function initialization timeout period 
-     * @return InitTimeout The function initialization timeout period
+     * Get Function initialization timeout period 
+     * @return InitTimeout Function initialization timeout period
      */
     public Long getInitTimeout() {
         return this.InitTimeout;
     }
 
     /**
-     * Set The function initialization timeout period
-     * @param InitTimeout The function initialization timeout period
+     * Set Function initialization timeout period
+     * @param InitTimeout Function initialization timeout period
      */
     public void setInitTimeout(Long InitTimeout) {
         this.InitTimeout = InitTimeout;
     }
 
     /**
-     * Get Parameters of the specified protocol 
-     * @return ProtocolParams Parameters of the specified protocol
+     * Get Configure ProtocolType access protocol for an HTTP function. Parameters configurable for the current protocol. 
+     * @return ProtocolParams Configure ProtocolType access protocol for an HTTP function. Parameters configurable for the current protocol.
      */
     public ProtocolParams getProtocolParams() {
         return this.ProtocolParams;
     }
 
     /**
-     * Set Parameters of the specified protocol
-     * @param ProtocolParams Parameters of the specified protocol
+     * Set Configure ProtocolType access protocol for an HTTP function. Parameters configurable for the current protocol.
+     * @param ProtocolParams Configure ProtocolType access protocol for an HTTP function. Parameters configurable for the current protocol.
      */
     public void setProtocolParams(ProtocolParams ProtocolParams) {
         this.ProtocolParams = ProtocolParams;
+    }
+
+    /**
+     * Get Single-instance multi-concurrency configuration. Supports only Web functions. 
+     * @return InstanceConcurrencyConfig Single-instance multi-concurrency configuration. Supports only Web functions.
+     */
+    public InstanceConcurrencyConfig getInstanceConcurrencyConfig() {
+        return this.InstanceConcurrencyConfig;
+    }
+
+    /**
+     * Set Single-instance multi-concurrency configuration. Supports only Web functions.
+     * @param InstanceConcurrencyConfig Single-instance multi-concurrency configuration. Supports only Web functions.
+     */
+    public void setInstanceConcurrencyConfig(InstanceConcurrencyConfig InstanceConcurrencyConfig) {
+        this.InstanceConcurrencyConfig = InstanceConcurrencyConfig;
+    }
+
+    /**
+     * Get Whether the Dns caching capability is enabled. Supports only the EVENT function. Defaults to FALSE. TRUE to enable, FALSE to shutdown. 
+     * @return DnsCache Whether the Dns caching capability is enabled. Supports only the EVENT function. Defaults to FALSE. TRUE to enable, FALSE to shutdown.
+     */
+    public String getDnsCache() {
+        return this.DnsCache;
+    }
+
+    /**
+     * Set Whether the Dns caching capability is enabled. Supports only the EVENT function. Defaults to FALSE. TRUE to enable, FALSE to shutdown.
+     * @param DnsCache Whether the Dns caching capability is enabled. Supports only the EVENT function. Defaults to FALSE. TRUE to enable, FALSE to shutdown.
+     */
+    public void setDnsCache(String DnsCache) {
+        this.DnsCache = DnsCache;
+    }
+
+    /**
+     * Get Private network access configuration 
+     * @return IntranetConfig Private network access configuration
+     */
+    public IntranetConfigIn getIntranetConfig() {
+        return this.IntranetConfig;
+    }
+
+    /**
+     * Set Private network access configuration
+     * @param IntranetConfig Private network access configuration
+     */
+    public void setIntranetConfig(IntranetConfigIn IntranetConfig) {
+        this.IntranetConfig = IntranetConfig;
+    }
+
+    /**
+     * Get Ignorable system log reporting 
+     * @return IgnoreSysLog Ignorable system log reporting
+     */
+    public Boolean getIgnoreSysLog() {
+        return this.IgnoreSysLog;
+    }
+
+    /**
+     * Set Ignorable system log reporting
+     * @param IgnoreSysLog Ignorable system log reporting
+     */
+    public void setIgnoreSysLog(Boolean IgnoreSysLog) {
+        this.IgnoreSysLog = IgnoreSysLog;
     }
 
     public UpdateFunctionConfigurationRequest() {
@@ -554,6 +651,18 @@ public class UpdateFunctionConfigurationRequest extends AbstractModel {
         if (source.ProtocolParams != null) {
             this.ProtocolParams = new ProtocolParams(source.ProtocolParams);
         }
+        if (source.InstanceConcurrencyConfig != null) {
+            this.InstanceConcurrencyConfig = new InstanceConcurrencyConfig(source.InstanceConcurrencyConfig);
+        }
+        if (source.DnsCache != null) {
+            this.DnsCache = new String(source.DnsCache);
+        }
+        if (source.IntranetConfig != null) {
+            this.IntranetConfig = new IntranetConfigIn(source.IntranetConfig);
+        }
+        if (source.IgnoreSysLog != null) {
+            this.IgnoreSysLog = new Boolean(source.IgnoreSysLog);
+        }
     }
 
 
@@ -581,6 +690,10 @@ public class UpdateFunctionConfigurationRequest extends AbstractModel {
         this.setParamObj(map, prefix + "CfsConfig.", this.CfsConfig);
         this.setParamSimple(map, prefix + "InitTimeout", this.InitTimeout);
         this.setParamObj(map, prefix + "ProtocolParams.", this.ProtocolParams);
+        this.setParamObj(map, prefix + "InstanceConcurrencyConfig.", this.InstanceConcurrencyConfig);
+        this.setParamSimple(map, prefix + "DnsCache", this.DnsCache);
+        this.setParamObj(map, prefix + "IntranetConfig.", this.IntranetConfig);
+        this.setParamSimple(map, prefix + "IgnoreSysLog", this.IgnoreSysLog);
 
     }
 }

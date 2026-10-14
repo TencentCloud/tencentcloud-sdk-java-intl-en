@@ -24,28 +24,28 @@ import java.util.HashMap;
 public class AddAssetImageRegistryRegistryDetailRequest extends AbstractModel {
 
     /**
-    * Repository name
+    * Repository Name
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * Username
+    * Username.
     */
     @SerializedName("Username")
     @Expose
     private String Username;
 
     /**
-    * Password
+    * Password.
     */
     @SerializedName("Password")
     @Expose
     private String Password;
 
     /**
-    * Repository URL
+    * Warehouse url
     */
     @SerializedName("Url")
     @Expose
@@ -59,21 +59,21 @@ public class AddAssetImageRegistryRegistryDetailRequest extends AbstractModel {
     private String RegistryType;
 
     /**
-    * Network type, which can be `public` (public network).
+    * Network type. List: public
     */
     @SerializedName("NetType")
     @Expose
     private String NetType;
 
     /**
-    * Repository version
+    * Warehouse version
     */
     @SerializedName("RegistryVersion")
     @Expose
     private String RegistryVersion;
 
     /**
-    * Region. Default value: `default`.
+    * Region, list: default.
     */
     @SerializedName("RegistryRegion")
     @Expose
@@ -87,14 +87,14 @@ public class AddAssetImageRegistryRegistryDetailRequest extends AbstractModel {
     private Long SpeedLimit;
 
     /**
-    * Valid values: `0` (secure mode with certificate verification, which is the default value); `1` (unsecure mode that skips certificate verification).
+    * 0: Secure Mode (Certificate Verification) (Default); 1: Insecure Mode (Skip Certificate Verification)
     */
     @SerializedName("Insecure")
     @Expose
     private Long Insecure;
 
     /**
-    * 
+    * Record ID of Connectivity Check
     */
     @SerializedName("ConnDetectConfig")
     @Expose
@@ -136,64 +136,64 @@ public class AddAssetImageRegistryRegistryDetailRequest extends AbstractModel {
     private String InstanceId;
 
     /**
-     * Get Repository name 
-     * @return Name Repository name
+     * Get Repository Name 
+     * @return Name Repository Name
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Repository name
-     * @param Name Repository name
+     * Set Repository Name
+     * @param Name Repository Name
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Username 
-     * @return Username Username
+     * Get Username. 
+     * @return Username Username.
      */
     public String getUsername() {
         return this.Username;
     }
 
     /**
-     * Set Username
-     * @param Username Username
+     * Set Username.
+     * @param Username Username.
      */
     public void setUsername(String Username) {
         this.Username = Username;
     }
 
     /**
-     * Get Password 
-     * @return Password Password
+     * Get Password. 
+     * @return Password Password.
      */
     public String getPassword() {
         return this.Password;
     }
 
     /**
-     * Set Password
-     * @param Password Password
+     * Set Password.
+     * @param Password Password.
      */
     public void setPassword(String Password) {
         this.Password = Password;
     }
 
     /**
-     * Get Repository URL 
-     * @return Url Repository URL
+     * Get Warehouse url 
+     * @return Url Warehouse url
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * Set Repository URL
-     * @param Url Repository URL
+     * Set Warehouse url
+     * @param Url Warehouse url
      */
     public void setUrl(String Url) {
         this.Url = Url;
@@ -216,48 +216,48 @@ public class AddAssetImageRegistryRegistryDetailRequest extends AbstractModel {
     }
 
     /**
-     * Get Network type, which can be `public` (public network). 
-     * @return NetType Network type, which can be `public` (public network).
+     * Get Network type. List: public 
+     * @return NetType Network type. List: public
      */
     public String getNetType() {
         return this.NetType;
     }
 
     /**
-     * Set Network type, which can be `public` (public network).
-     * @param NetType Network type, which can be `public` (public network).
+     * Set Network type. List: public
+     * @param NetType Network type. List: public
      */
     public void setNetType(String NetType) {
         this.NetType = NetType;
     }
 
     /**
-     * Get Repository version 
-     * @return RegistryVersion Repository version
+     * Get Warehouse version 
+     * @return RegistryVersion Warehouse version
      */
     public String getRegistryVersion() {
         return this.RegistryVersion;
     }
 
     /**
-     * Set Repository version
-     * @param RegistryVersion Repository version
+     * Set Warehouse version
+     * @param RegistryVersion Warehouse version
      */
     public void setRegistryVersion(String RegistryVersion) {
         this.RegistryVersion = RegistryVersion;
     }
 
     /**
-     * Get Region. Default value: `default`. 
-     * @return RegistryRegion Region. Default value: `default`.
+     * Get Region, list: default. 
+     * @return RegistryRegion Region, list: default.
      */
     public String getRegistryRegion() {
         return this.RegistryRegion;
     }
 
     /**
-     * Set Region. Default value: `default`.
-     * @param RegistryRegion Region. Default value: `default`.
+     * Set Region, list: default.
+     * @param RegistryRegion Region, list: default.
      */
     public void setRegistryRegion(String RegistryRegion) {
         this.RegistryRegion = RegistryRegion;
@@ -280,32 +280,32 @@ public class AddAssetImageRegistryRegistryDetailRequest extends AbstractModel {
     }
 
     /**
-     * Get Valid values: `0` (secure mode with certificate verification, which is the default value); `1` (unsecure mode that skips certificate verification). 
-     * @return Insecure Valid values: `0` (secure mode with certificate verification, which is the default value); `1` (unsecure mode that skips certificate verification).
+     * Get 0: Secure Mode (Certificate Verification) (Default); 1: Insecure Mode (Skip Certificate Verification) 
+     * @return Insecure 0: Secure Mode (Certificate Verification) (Default); 1: Insecure Mode (Skip Certificate Verification)
      */
     public Long getInsecure() {
         return this.Insecure;
     }
 
     /**
-     * Set Valid values: `0` (secure mode with certificate verification, which is the default value); `1` (unsecure mode that skips certificate verification).
-     * @param Insecure Valid values: `0` (secure mode with certificate verification, which is the default value); `1` (unsecure mode that skips certificate verification).
+     * Set 0: Secure Mode (Certificate Verification) (Default); 1: Insecure Mode (Skip Certificate Verification)
+     * @param Insecure 0: Secure Mode (Certificate Verification) (Default); 1: Insecure Mode (Skip Certificate Verification)
      */
     public void setInsecure(Long Insecure) {
         this.Insecure = Insecure;
     }
 
     /**
-     * Get  
-     * @return ConnDetectConfig 
+     * Get Record ID of Connectivity Check 
+     * @return ConnDetectConfig Record ID of Connectivity Check
      */
     public ConnDetectConfig [] getConnDetectConfig() {
         return this.ConnDetectConfig;
     }
 
     /**
-     * Set 
-     * @param ConnDetectConfig 
+     * Set Record ID of Connectivity Check
+     * @param ConnDetectConfig Record ID of Connectivity Check
      */
     public void setConnDetectConfig(ConnDetectConfig [] ConnDetectConfig) {
         this.ConnDetectConfig = ConnDetectConfig;

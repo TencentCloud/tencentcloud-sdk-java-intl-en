@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class QualityControlItem extends AbstractModel {
 
     /**
-    * 
+    * Confidence, with a value range from 0 to 100.
     */
     @SerializedName("Confidence")
     @Expose
     private Long Confidence;
 
     /**
-    * Start time of occurrence, in seconds.
+    * Start timestamp of the occurrence, in seconds.
     */
     @SerializedName("StartTimeOffset")
     @Expose
@@ -45,39 +45,39 @@ public class QualityControlItem extends AbstractModel {
     private Float EndTimeOffset;
 
     /**
-    * 
+    * Area coordinates (px), i.e. coordinates of the top-left corner and coordinate of the bottom-right corner.
     */
     @SerializedName("AreaCoordSet")
     @Expose
     private Long [] AreaCoordSet;
 
     /**
-     * Get  
-     * @return Confidence 
+     * Get Confidence, with a value range from 0 to 100. 
+     * @return Confidence Confidence, with a value range from 0 to 100.
      */
     public Long getConfidence() {
         return this.Confidence;
     }
 
     /**
-     * Set 
-     * @param Confidence 
+     * Set Confidence, with a value range from 0 to 100.
+     * @param Confidence Confidence, with a value range from 0 to 100.
      */
     public void setConfidence(Long Confidence) {
         this.Confidence = Confidence;
     }
 
     /**
-     * Get Start time of occurrence, in seconds. 
-     * @return StartTimeOffset Start time of occurrence, in seconds.
+     * Get Start timestamp of the occurrence, in seconds. 
+     * @return StartTimeOffset Start timestamp of the occurrence, in seconds.
      */
     public Float getStartTimeOffset() {
         return this.StartTimeOffset;
     }
 
     /**
-     * Set Start time of occurrence, in seconds.
-     * @param StartTimeOffset Start time of occurrence, in seconds.
+     * Set Start timestamp of the occurrence, in seconds.
+     * @param StartTimeOffset Start timestamp of the occurrence, in seconds.
      */
     public void setStartTimeOffset(Float StartTimeOffset) {
         this.StartTimeOffset = StartTimeOffset;
@@ -100,16 +100,16 @@ public class QualityControlItem extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return AreaCoordSet 
+     * Get Area coordinates (px), i.e. coordinates of the top-left corner and coordinate of the bottom-right corner. 
+     * @return AreaCoordSet Area coordinates (px), i.e. coordinates of the top-left corner and coordinate of the bottom-right corner.
      */
     public Long [] getAreaCoordSet() {
         return this.AreaCoordSet;
     }
 
     /**
-     * Set 
-     * @param AreaCoordSet 
+     * Set Area coordinates (px), i.e. coordinates of the top-left corner and coordinate of the bottom-right corner.
+     * @param AreaCoordSet Area coordinates (px), i.e. coordinates of the top-left corner and coordinate of the bottom-right corner.
      */
     public void setAreaCoordSet(Long [] AreaCoordSet) {
         this.AreaCoordSet = AreaCoordSet;

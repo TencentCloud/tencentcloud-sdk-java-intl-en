@@ -24,49 +24,72 @@ import java.util.HashMap;
 public class UnderstandImageConfig extends AbstractModel {
 
     /**
-    * <p>Image understanding model</p><p>Enumeration value:</p><ul><li>WAND-understand-1.0-lite: Lightweight understanding model</li><li>WAND-understand-1.0-flash: Quality-speed balanced understanding model</li><li>WAND-understand-1.0-pro: High-quality understanding model</li></ul>
+    * <p>Image understanding model</p><p>Enumeration values:</p><ul><li>understand-1.0-lite: Lightweight understanding model</li><li>understand-1.0-flash: Quality-speed balanced understanding model</li><li>understand-1.0-pro: High-quality understanding model</li></ul>
     */
     @SerializedName("Model")
     @Expose
     private String Model;
 
     /**
-    * <p>Image understanding directive</p>
+    * <p>Image understanding instruction</p>
     */
     @SerializedName("Prompt")
     @Expose
     private String Prompt;
 
     /**
-     * Get <p>Image understanding model</p><p>Enumeration value:</p><ul><li>WAND-understand-1.0-lite: Lightweight understanding model</li><li>WAND-understand-1.0-flash: Quality-speed balanced understanding model</li><li>WAND-understand-1.0-pro: High-quality understanding model</li></ul> 
-     * @return Model <p>Image understanding model</p><p>Enumeration value:</p><ul><li>WAND-understand-1.0-lite: Lightweight understanding model</li><li>WAND-understand-1.0-flash: Quality-speed balanced understanding model</li><li>WAND-understand-1.0-pro: High-quality understanding model</li></ul>
+    * <p>Image understanding model parameters, of JSON string type.</p>
+    */
+    @SerializedName("Parameters")
+    @Expose
+    private String Parameters;
+
+    /**
+     * Get <p>Image understanding model</p><p>Enumeration values:</p><ul><li>understand-1.0-lite: Lightweight understanding model</li><li>understand-1.0-flash: Quality-speed balanced understanding model</li><li>understand-1.0-pro: High-quality understanding model</li></ul> 
+     * @return Model <p>Image understanding model</p><p>Enumeration values:</p><ul><li>understand-1.0-lite: Lightweight understanding model</li><li>understand-1.0-flash: Quality-speed balanced understanding model</li><li>understand-1.0-pro: High-quality understanding model</li></ul>
      */
     public String getModel() {
         return this.Model;
     }
 
     /**
-     * Set <p>Image understanding model</p><p>Enumeration value:</p><ul><li>WAND-understand-1.0-lite: Lightweight understanding model</li><li>WAND-understand-1.0-flash: Quality-speed balanced understanding model</li><li>WAND-understand-1.0-pro: High-quality understanding model</li></ul>
-     * @param Model <p>Image understanding model</p><p>Enumeration value:</p><ul><li>WAND-understand-1.0-lite: Lightweight understanding model</li><li>WAND-understand-1.0-flash: Quality-speed balanced understanding model</li><li>WAND-understand-1.0-pro: High-quality understanding model</li></ul>
+     * Set <p>Image understanding model</p><p>Enumeration values:</p><ul><li>understand-1.0-lite: Lightweight understanding model</li><li>understand-1.0-flash: Quality-speed balanced understanding model</li><li>understand-1.0-pro: High-quality understanding model</li></ul>
+     * @param Model <p>Image understanding model</p><p>Enumeration values:</p><ul><li>understand-1.0-lite: Lightweight understanding model</li><li>understand-1.0-flash: Quality-speed balanced understanding model</li><li>understand-1.0-pro: High-quality understanding model</li></ul>
      */
     public void setModel(String Model) {
         this.Model = Model;
     }
 
     /**
-     * Get <p>Image understanding directive</p> 
-     * @return Prompt <p>Image understanding directive</p>
+     * Get <p>Image understanding instruction</p> 
+     * @return Prompt <p>Image understanding instruction</p>
      */
     public String getPrompt() {
         return this.Prompt;
     }
 
     /**
-     * Set <p>Image understanding directive</p>
-     * @param Prompt <p>Image understanding directive</p>
+     * Set <p>Image understanding instruction</p>
+     * @param Prompt <p>Image understanding instruction</p>
      */
     public void setPrompt(String Prompt) {
         this.Prompt = Prompt;
+    }
+
+    /**
+     * Get <p>Image understanding model parameters, of JSON string type.</p> 
+     * @return Parameters <p>Image understanding model parameters, of JSON string type.</p>
+     */
+    public String getParameters() {
+        return this.Parameters;
+    }
+
+    /**
+     * Set <p>Image understanding model parameters, of JSON string type.</p>
+     * @param Parameters <p>Image understanding model parameters, of JSON string type.</p>
+     */
+    public void setParameters(String Parameters) {
+        this.Parameters = Parameters;
     }
 
     public UnderstandImageConfig() {
@@ -83,6 +106,9 @@ public class UnderstandImageConfig extends AbstractModel {
         if (source.Prompt != null) {
             this.Prompt = new String(source.Prompt);
         }
+        if (source.Parameters != null) {
+            this.Parameters = new String(source.Parameters);
+        }
     }
 
 
@@ -92,6 +118,7 @@ public class UnderstandImageConfig extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Model", this.Model);
         this.setParamSimple(map, prefix + "Prompt", this.Prompt);
+        this.setParamSimple(map, prefix + "Parameters", this.Parameters);
 
     }
 }

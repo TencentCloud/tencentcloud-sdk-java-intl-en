@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class CfsConfig extends AbstractModel {
 
     /**
-    * File system information list
+    * List of file system information
     */
     @SerializedName("CfsInsList")
     @Expose
     private CfsInsInfo [] CfsInsList;
 
     /**
-     * Get File system information list 
-     * @return CfsInsList File system information list
+     * Get List of file system information 
+     * @return CfsInsList List of file system information
      */
     public CfsInsInfo [] getCfsInsList() {
         return this.CfsInsList;
     }
 
     /**
-     * Set File system information list
-     * @param CfsInsList File system information list
+     * Set List of file system information
+     * @param CfsInsList List of file system information
      */
     public void setCfsInsList(CfsInsInfo [] CfsInsList) {
         this.CfsInsList = CfsInsList;

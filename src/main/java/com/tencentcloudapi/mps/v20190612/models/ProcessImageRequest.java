@@ -46,13 +46,13 @@ public class ProcessImageRequest extends AbstractModel {
 
     /**
     * Output path, which can be a relative or absolute path.
-To define the output path, the path must end with `.{format}`. For variable names, please refer to the Filename Variable Explanation (https://www.tencentcloud.com/document/product/862/37039?from_cn_redirect=1).
+To define the output path, it must end with `.{format}`. For variable names, please refer to [Filename Variable Explanation](https://www.tencentcloud.com/document/product/862/37039?from_cn_redirect=1).
 Relative path example:
-<li>Filename_{Variable name}.{format}</li>
-<li>Filename.{format}</li>
+<li>Filename_{Variable name}.{format}.</li>
+<li>Filename.{format}.</li>
 Absolute path example:
 <li>/Custom path/Filename_{Variable name}.{format}</li>
-If not filled in, default relative path: {inputName}.{format}.
+If not filled in, the default relative path is: {inputName}.{format}.
     */
     @SerializedName("OutputPath")
     @Expose
@@ -137,21 +137,21 @@ The image template feature is in beta testing. If you want to use it, submit a t
 
     /**
      * Get Output path, which can be a relative or absolute path.
-To define the output path, the path must end with `.{format}`. For variable names, please refer to the Filename Variable Explanation (https://www.tencentcloud.com/document/product/862/37039?from_cn_redirect=1).
+To define the output path, it must end with `.{format}`. For variable names, please refer to [Filename Variable Explanation](https://www.tencentcloud.com/document/product/862/37039?from_cn_redirect=1).
 Relative path example:
-<li>Filename_{Variable name}.{format}</li>
-<li>Filename.{format}</li>
+<li>Filename_{Variable name}.{format}.</li>
+<li>Filename.{format}.</li>
 Absolute path example:
 <li>/Custom path/Filename_{Variable name}.{format}</li>
-If not filled in, default relative path: {inputName}.{format}. 
+If not filled in, the default relative path is: {inputName}.{format}. 
      * @return OutputPath Output path, which can be a relative or absolute path.
-To define the output path, the path must end with `.{format}`. For variable names, please refer to the Filename Variable Explanation (https://www.tencentcloud.com/document/product/862/37039?from_cn_redirect=1).
+To define the output path, it must end with `.{format}`. For variable names, please refer to [Filename Variable Explanation](https://www.tencentcloud.com/document/product/862/37039?from_cn_redirect=1).
 Relative path example:
-<li>Filename_{Variable name}.{format}</li>
-<li>Filename.{format}</li>
+<li>Filename_{Variable name}.{format}.</li>
+<li>Filename.{format}.</li>
 Absolute path example:
 <li>/Custom path/Filename_{Variable name}.{format}</li>
-If not filled in, default relative path: {inputName}.{format}.
+If not filled in, the default relative path is: {inputName}.{format}.
      */
     public String getOutputPath() {
         return this.OutputPath;
@@ -159,21 +159,21 @@ If not filled in, default relative path: {inputName}.{format}.
 
     /**
      * Set Output path, which can be a relative or absolute path.
-To define the output path, the path must end with `.{format}`. For variable names, please refer to the Filename Variable Explanation (https://www.tencentcloud.com/document/product/862/37039?from_cn_redirect=1).
+To define the output path, it must end with `.{format}`. For variable names, please refer to [Filename Variable Explanation](https://www.tencentcloud.com/document/product/862/37039?from_cn_redirect=1).
 Relative path example:
-<li>Filename_{Variable name}.{format}</li>
-<li>Filename.{format}</li>
+<li>Filename_{Variable name}.{format}.</li>
+<li>Filename.{format}.</li>
 Absolute path example:
 <li>/Custom path/Filename_{Variable name}.{format}</li>
-If not filled in, default relative path: {inputName}.{format}.
+If not filled in, the default relative path is: {inputName}.{format}.
      * @param OutputPath Output path, which can be a relative or absolute path.
-To define the output path, the path must end with `.{format}`. For variable names, please refer to the Filename Variable Explanation (https://www.tencentcloud.com/document/product/862/37039?from_cn_redirect=1).
+To define the output path, it must end with `.{format}`. For variable names, please refer to [Filename Variable Explanation](https://www.tencentcloud.com/document/product/862/37039?from_cn_redirect=1).
 Relative path example:
-<li>Filename_{Variable name}.{format}</li>
-<li>Filename.{format}</li>
+<li>Filename_{Variable name}.{format}.</li>
+<li>Filename.{format}.</li>
 Absolute path example:
 <li>/Custom path/Filename_{Variable name}.{format}</li>
-If not filled in, default relative path: {inputName}.{format}.
+If not filled in, the default relative path is: {inputName}.{format}.
      */
     public void setOutputPath(String OutputPath) {
         this.OutputPath = OutputPath;

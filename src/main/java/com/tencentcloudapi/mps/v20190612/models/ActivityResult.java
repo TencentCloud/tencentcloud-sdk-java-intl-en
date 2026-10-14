@@ -24,106 +24,46 @@ import java.util.HashMap;
 public class ActivityResult extends AbstractModel {
 
     /**
-    * Atomic task type.
-<li>Transcode: transcoding.</li>
-<li>SampleSnapshot: sampled screenshot taking.</li>
-<li>AnimatedGraphics: Animated image.</li>
-<li>SnapshotByTimeOffset: time point screenshot taking.</li>
-<li>ImageSprites: sprite sheet.</li>
-<li>AdaptiveDynamicStreaming: adaptive bitrate streaming.</li>
-<li>AiContentReview: content moderation.</li>
-<li>AIRecognition: intelligent recognition.</li>
-<li>AIAnalysis: AI analysis.</li>
-<li>AiQualityControl: media quality inspection</li>
-<Li>SmartSubtitles: smart subtitle</li>
-<li>SmartErase: intelligent removal.</li>
+    * <p>Atomic task type.</p><li>Transcode: Transcoding.</li><li>SampleSnapshot: Sampled screenshot.</li><li>AnimatedGraphics: Animated image.</li><li>SnapshotByTimeOffset: Time point screenshot.</li><li>ImageSprites: Sprite sheet.</li><li>AdaptiveDynamicStreaming: Adaptive bitrate stream.</li><li>AiContentReview: Content review.</li><li>AIRecognition: Intelligent recognition.</li><li>AIAnalysis: Intelligent analysis.</li><li>AiQualityControl: Media quality inspection.</li><li>SmartSubtitles: Smart subtitle.</li><li>SmartErase: Smart erasing.</li><li>Dubbing: AI dubbing.</li>
     */
     @SerializedName("ActivityType")
     @Expose
     private String ActivityType;
 
     /**
-    * Atomic task output.
+    * <p>Output of the atomic task.</p>
     */
     @SerializedName("ActivityResItem")
     @Expose
     private ActivityResItem ActivityResItem;
 
     /**
-     * Get Atomic task type.
-<li>Transcode: transcoding.</li>
-<li>SampleSnapshot: sampled screenshot taking.</li>
-<li>AnimatedGraphics: Animated image.</li>
-<li>SnapshotByTimeOffset: time point screenshot taking.</li>
-<li>ImageSprites: sprite sheet.</li>
-<li>AdaptiveDynamicStreaming: adaptive bitrate streaming.</li>
-<li>AiContentReview: content moderation.</li>
-<li>AIRecognition: intelligent recognition.</li>
-<li>AIAnalysis: AI analysis.</li>
-<li>AiQualityControl: media quality inspection</li>
-<Li>SmartSubtitles: smart subtitle</li>
-<li>SmartErase: intelligent removal.</li> 
-     * @return ActivityType Atomic task type.
-<li>Transcode: transcoding.</li>
-<li>SampleSnapshot: sampled screenshot taking.</li>
-<li>AnimatedGraphics: Animated image.</li>
-<li>SnapshotByTimeOffset: time point screenshot taking.</li>
-<li>ImageSprites: sprite sheet.</li>
-<li>AdaptiveDynamicStreaming: adaptive bitrate streaming.</li>
-<li>AiContentReview: content moderation.</li>
-<li>AIRecognition: intelligent recognition.</li>
-<li>AIAnalysis: AI analysis.</li>
-<li>AiQualityControl: media quality inspection</li>
-<Li>SmartSubtitles: smart subtitle</li>
-<li>SmartErase: intelligent removal.</li>
+     * Get <p>Atomic task type.</p><li>Transcode: Transcoding.</li><li>SampleSnapshot: Sampled screenshot.</li><li>AnimatedGraphics: Animated image.</li><li>SnapshotByTimeOffset: Time point screenshot.</li><li>ImageSprites: Sprite sheet.</li><li>AdaptiveDynamicStreaming: Adaptive bitrate stream.</li><li>AiContentReview: Content review.</li><li>AIRecognition: Intelligent recognition.</li><li>AIAnalysis: Intelligent analysis.</li><li>AiQualityControl: Media quality inspection.</li><li>SmartSubtitles: Smart subtitle.</li><li>SmartErase: Smart erasing.</li><li>Dubbing: AI dubbing.</li> 
+     * @return ActivityType <p>Atomic task type.</p><li>Transcode: Transcoding.</li><li>SampleSnapshot: Sampled screenshot.</li><li>AnimatedGraphics: Animated image.</li><li>SnapshotByTimeOffset: Time point screenshot.</li><li>ImageSprites: Sprite sheet.</li><li>AdaptiveDynamicStreaming: Adaptive bitrate stream.</li><li>AiContentReview: Content review.</li><li>AIRecognition: Intelligent recognition.</li><li>AIAnalysis: Intelligent analysis.</li><li>AiQualityControl: Media quality inspection.</li><li>SmartSubtitles: Smart subtitle.</li><li>SmartErase: Smart erasing.</li><li>Dubbing: AI dubbing.</li>
      */
     public String getActivityType() {
         return this.ActivityType;
     }
 
     /**
-     * Set Atomic task type.
-<li>Transcode: transcoding.</li>
-<li>SampleSnapshot: sampled screenshot taking.</li>
-<li>AnimatedGraphics: Animated image.</li>
-<li>SnapshotByTimeOffset: time point screenshot taking.</li>
-<li>ImageSprites: sprite sheet.</li>
-<li>AdaptiveDynamicStreaming: adaptive bitrate streaming.</li>
-<li>AiContentReview: content moderation.</li>
-<li>AIRecognition: intelligent recognition.</li>
-<li>AIAnalysis: AI analysis.</li>
-<li>AiQualityControl: media quality inspection</li>
-<Li>SmartSubtitles: smart subtitle</li>
-<li>SmartErase: intelligent removal.</li>
-     * @param ActivityType Atomic task type.
-<li>Transcode: transcoding.</li>
-<li>SampleSnapshot: sampled screenshot taking.</li>
-<li>AnimatedGraphics: Animated image.</li>
-<li>SnapshotByTimeOffset: time point screenshot taking.</li>
-<li>ImageSprites: sprite sheet.</li>
-<li>AdaptiveDynamicStreaming: adaptive bitrate streaming.</li>
-<li>AiContentReview: content moderation.</li>
-<li>AIRecognition: intelligent recognition.</li>
-<li>AIAnalysis: AI analysis.</li>
-<li>AiQualityControl: media quality inspection</li>
-<Li>SmartSubtitles: smart subtitle</li>
-<li>SmartErase: intelligent removal.</li>
+     * Set <p>Atomic task type.</p><li>Transcode: Transcoding.</li><li>SampleSnapshot: Sampled screenshot.</li><li>AnimatedGraphics: Animated image.</li><li>SnapshotByTimeOffset: Time point screenshot.</li><li>ImageSprites: Sprite sheet.</li><li>AdaptiveDynamicStreaming: Adaptive bitrate stream.</li><li>AiContentReview: Content review.</li><li>AIRecognition: Intelligent recognition.</li><li>AIAnalysis: Intelligent analysis.</li><li>AiQualityControl: Media quality inspection.</li><li>SmartSubtitles: Smart subtitle.</li><li>SmartErase: Smart erasing.</li><li>Dubbing: AI dubbing.</li>
+     * @param ActivityType <p>Atomic task type.</p><li>Transcode: Transcoding.</li><li>SampleSnapshot: Sampled screenshot.</li><li>AnimatedGraphics: Animated image.</li><li>SnapshotByTimeOffset: Time point screenshot.</li><li>ImageSprites: Sprite sheet.</li><li>AdaptiveDynamicStreaming: Adaptive bitrate stream.</li><li>AiContentReview: Content review.</li><li>AIRecognition: Intelligent recognition.</li><li>AIAnalysis: Intelligent analysis.</li><li>AiQualityControl: Media quality inspection.</li><li>SmartSubtitles: Smart subtitle.</li><li>SmartErase: Smart erasing.</li><li>Dubbing: AI dubbing.</li>
      */
     public void setActivityType(String ActivityType) {
         this.ActivityType = ActivityType;
     }
 
     /**
-     * Get Atomic task output. 
-     * @return ActivityResItem Atomic task output.
+     * Get <p>Output of the atomic task.</p> 
+     * @return ActivityResItem <p>Output of the atomic task.</p>
      */
     public ActivityResItem getActivityResItem() {
         return this.ActivityResItem;
     }
 
     /**
-     * Set Atomic task output.
-     * @param ActivityResItem Atomic task output.
+     * Set <p>Output of the atomic task.</p>
+     * @param ActivityResItem <p>Output of the atomic task.</p>
      */
     public void setActivityResItem(ActivityResItem ActivityResItem) {
         this.ActivityResItem = ActivityResItem;

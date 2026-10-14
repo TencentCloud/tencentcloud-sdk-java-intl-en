@@ -24,77 +24,77 @@ import java.util.HashMap;
 public class DescribeAigcTaskStatusResponse extends AbstractModel {
 
     /**
-    * 
+    * <p>Task ID.</p>
     */
     @SerializedName("TaskId")
     @Expose
     private String TaskId;
 
     /**
-    * 
+    * <p>Task status description</p><p>Enumeration values: </p><ul><li>PENDING: Task waiting for scheduling</li><li>RUNNING: Task running</li><li>FINISHED: Task executed successfully</li><li>STOP: Task termination</li><li>FAILED: Task failure</li><li>TIMEOUT: Task timeout</li></ul>
     */
     @SerializedName("TaskStatus")
     @Expose
     private String TaskStatus;
 
     /**
-    * 
+    * <p>Output url</p>
     */
     @SerializedName("OutputUrl")
     @Expose
     private String OutputUrl;
 
     /**
-    * 
+    * <p>Task creation time</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 
+    * <p>Task scheduling time</p>
     */
     @SerializedName("ScheduledTime")
     @Expose
     private String ScheduledTime;
 
     /**
-    * 
+    * <p>Task completion time</p>
     */
     @SerializedName("FinishedTime")
     @Expose
     private String FinishedTime;
 
     /**
-    * 
+    * <p>Task error code</p>
     */
     @SerializedName("TaskResultCode")
     @Expose
     private Long TaskResultCode;
 
     /**
-    * 
+    * <p>Task returned error message</p>
     */
     @SerializedName("TaskResultMsg")
     @Expose
     private String TaskResultMsg;
 
     /**
-    * 
+    * <p>Request structure</p>
     */
     @SerializedName("RequestBody")
     @Expose
     private String RequestBody;
 
     /**
-    * 
+    * <p>Task type</p>
     */
     @SerializedName("TaskType")
     @Expose
     private String TaskType;
 
     /**
-    * <p>Other job information</p>
+    * <p>Other task information</p>
     */
     @SerializedName("TaskInfo")
     @Expose
@@ -115,176 +115,176 @@ public class DescribeAigcTaskStatusResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get  
-     * @return TaskId 
+     * Get <p>Task ID.</p> 
+     * @return TaskId <p>Task ID.</p>
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 
-     * @param TaskId 
+     * Set <p>Task ID.</p>
+     * @param TaskId <p>Task ID.</p>
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * Get  
-     * @return TaskStatus 
+     * Get <p>Task status description</p><p>Enumeration values: </p><ul><li>PENDING: Task waiting for scheduling</li><li>RUNNING: Task running</li><li>FINISHED: Task executed successfully</li><li>STOP: Task termination</li><li>FAILED: Task failure</li><li>TIMEOUT: Task timeout</li></ul> 
+     * @return TaskStatus <p>Task status description</p><p>Enumeration values: </p><ul><li>PENDING: Task waiting for scheduling</li><li>RUNNING: Task running</li><li>FINISHED: Task executed successfully</li><li>STOP: Task termination</li><li>FAILED: Task failure</li><li>TIMEOUT: Task timeout</li></ul>
      */
     public String getTaskStatus() {
         return this.TaskStatus;
     }
 
     /**
-     * Set 
-     * @param TaskStatus 
+     * Set <p>Task status description</p><p>Enumeration values: </p><ul><li>PENDING: Task waiting for scheduling</li><li>RUNNING: Task running</li><li>FINISHED: Task executed successfully</li><li>STOP: Task termination</li><li>FAILED: Task failure</li><li>TIMEOUT: Task timeout</li></ul>
+     * @param TaskStatus <p>Task status description</p><p>Enumeration values: </p><ul><li>PENDING: Task waiting for scheduling</li><li>RUNNING: Task running</li><li>FINISHED: Task executed successfully</li><li>STOP: Task termination</li><li>FAILED: Task failure</li><li>TIMEOUT: Task timeout</li></ul>
      */
     public void setTaskStatus(String TaskStatus) {
         this.TaskStatus = TaskStatus;
     }
 
     /**
-     * Get  
-     * @return OutputUrl 
+     * Get <p>Output url</p> 
+     * @return OutputUrl <p>Output url</p>
      */
     public String getOutputUrl() {
         return this.OutputUrl;
     }
 
     /**
-     * Set 
-     * @param OutputUrl 
+     * Set <p>Output url</p>
+     * @param OutputUrl <p>Output url</p>
      */
     public void setOutputUrl(String OutputUrl) {
         this.OutputUrl = OutputUrl;
     }
 
     /**
-     * Get  
-     * @return CreateTime 
+     * Get <p>Task creation time</p> 
+     * @return CreateTime <p>Task creation time</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 
-     * @param CreateTime 
+     * Set <p>Task creation time</p>
+     * @param CreateTime <p>Task creation time</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get  
-     * @return ScheduledTime 
+     * Get <p>Task scheduling time</p> 
+     * @return ScheduledTime <p>Task scheduling time</p>
      */
     public String getScheduledTime() {
         return this.ScheduledTime;
     }
 
     /**
-     * Set 
-     * @param ScheduledTime 
+     * Set <p>Task scheduling time</p>
+     * @param ScheduledTime <p>Task scheduling time</p>
      */
     public void setScheduledTime(String ScheduledTime) {
         this.ScheduledTime = ScheduledTime;
     }
 
     /**
-     * Get  
-     * @return FinishedTime 
+     * Get <p>Task completion time</p> 
+     * @return FinishedTime <p>Task completion time</p>
      */
     public String getFinishedTime() {
         return this.FinishedTime;
     }
 
     /**
-     * Set 
-     * @param FinishedTime 
+     * Set <p>Task completion time</p>
+     * @param FinishedTime <p>Task completion time</p>
      */
     public void setFinishedTime(String FinishedTime) {
         this.FinishedTime = FinishedTime;
     }
 
     /**
-     * Get  
-     * @return TaskResultCode 
+     * Get <p>Task error code</p> 
+     * @return TaskResultCode <p>Task error code</p>
      */
     public Long getTaskResultCode() {
         return this.TaskResultCode;
     }
 
     /**
-     * Set 
-     * @param TaskResultCode 
+     * Set <p>Task error code</p>
+     * @param TaskResultCode <p>Task error code</p>
      */
     public void setTaskResultCode(Long TaskResultCode) {
         this.TaskResultCode = TaskResultCode;
     }
 
     /**
-     * Get  
-     * @return TaskResultMsg 
+     * Get <p>Task returned error message</p> 
+     * @return TaskResultMsg <p>Task returned error message</p>
      */
     public String getTaskResultMsg() {
         return this.TaskResultMsg;
     }
 
     /**
-     * Set 
-     * @param TaskResultMsg 
+     * Set <p>Task returned error message</p>
+     * @param TaskResultMsg <p>Task returned error message</p>
      */
     public void setTaskResultMsg(String TaskResultMsg) {
         this.TaskResultMsg = TaskResultMsg;
     }
 
     /**
-     * Get  
-     * @return RequestBody 
+     * Get <p>Request structure</p> 
+     * @return RequestBody <p>Request structure</p>
      */
     public String getRequestBody() {
         return this.RequestBody;
     }
 
     /**
-     * Set 
-     * @param RequestBody 
+     * Set <p>Request structure</p>
+     * @param RequestBody <p>Request structure</p>
      */
     public void setRequestBody(String RequestBody) {
         this.RequestBody = RequestBody;
     }
 
     /**
-     * Get  
-     * @return TaskType 
+     * Get <p>Task type</p> 
+     * @return TaskType <p>Task type</p>
      */
     public String getTaskType() {
         return this.TaskType;
     }
 
     /**
-     * Set 
-     * @param TaskType 
+     * Set <p>Task type</p>
+     * @param TaskType <p>Task type</p>
      */
     public void setTaskType(String TaskType) {
         this.TaskType = TaskType;
     }
 
     /**
-     * Get <p>Other job information</p> 
-     * @return TaskInfo <p>Other job information</p>
+     * Get <p>Other task information</p> 
+     * @return TaskInfo <p>Other task information</p>
      */
     public String getTaskInfo() {
         return this.TaskInfo;
     }
 
     /**
-     * Set <p>Other job information</p>
-     * @param TaskInfo <p>Other job information</p>
+     * Set <p>Other task information</p>
+     * @param TaskInfo <p>Other task information</p>
      */
     public void setTaskInfo(String TaskInfo) {
         this.TaskInfo = TaskInfo;

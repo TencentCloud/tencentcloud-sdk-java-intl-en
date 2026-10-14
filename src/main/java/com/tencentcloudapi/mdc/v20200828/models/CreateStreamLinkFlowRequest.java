@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class CreateStreamLinkFlowRequest extends AbstractModel {
 
     /**
-    * Flow name
+    * Stream name.
     */
     @SerializedName("FlowName")
     @Expose
     private String FlowName;
 
     /**
-    * Maximum bandwidth in bps. Valid values: `10000000`, `20000000`, `50000000`
+    * Maximum bandwidth in bps. Options: [10000000, 20000000].
     */
     @SerializedName("MaxBandwidth")
     @Expose
     private Long MaxBandwidth;
 
     /**
-    * Flow input group
+    * Input group of a stream.
     */
     @SerializedName("InputGroup")
     @Expose
     private CreateInput [] InputGroup;
 
     /**
-    * The media transmission event ID associated with the Flow. Each flow can only be associated with one event.
+    * Media transmission Event ID associated with the Flow. Each Flow can only be associated with one Event.
     */
     @SerializedName("EventId")
     @Expose
     private String EventId;
 
     /**
-    * Flow output group.
+    * Output group of the stream.
     */
     @SerializedName("OutputGroup")
     @Expose
     private CreateOutputInfo [] OutputGroup;
 
     /**
-     * Get Flow name 
-     * @return FlowName Flow name
+     * Get Stream name. 
+     * @return FlowName Stream name.
      */
     public String getFlowName() {
         return this.FlowName;
     }
 
     /**
-     * Set Flow name
-     * @param FlowName Flow name
+     * Set Stream name.
+     * @param FlowName Stream name.
      */
     public void setFlowName(String FlowName) {
         this.FlowName = FlowName;
     }
 
     /**
-     * Get Maximum bandwidth in bps. Valid values: `10000000`, `20000000`, `50000000` 
-     * @return MaxBandwidth Maximum bandwidth in bps. Valid values: `10000000`, `20000000`, `50000000`
+     * Get Maximum bandwidth in bps. Options: [10000000, 20000000]. 
+     * @return MaxBandwidth Maximum bandwidth in bps. Options: [10000000, 20000000].
      */
     public Long getMaxBandwidth() {
         return this.MaxBandwidth;
     }
 
     /**
-     * Set Maximum bandwidth in bps. Valid values: `10000000`, `20000000`, `50000000`
-     * @param MaxBandwidth Maximum bandwidth in bps. Valid values: `10000000`, `20000000`, `50000000`
+     * Set Maximum bandwidth in bps. Options: [10000000, 20000000].
+     * @param MaxBandwidth Maximum bandwidth in bps. Options: [10000000, 20000000].
      */
     public void setMaxBandwidth(Long MaxBandwidth) {
         this.MaxBandwidth = MaxBandwidth;
     }
 
     /**
-     * Get Flow input group 
-     * @return InputGroup Flow input group
+     * Get Input group of a stream. 
+     * @return InputGroup Input group of a stream.
      */
     public CreateInput [] getInputGroup() {
         return this.InputGroup;
     }
 
     /**
-     * Set Flow input group
-     * @param InputGroup Flow input group
+     * Set Input group of a stream.
+     * @param InputGroup Input group of a stream.
      */
     public void setInputGroup(CreateInput [] InputGroup) {
         this.InputGroup = InputGroup;
     }
 
     /**
-     * Get The media transmission event ID associated with the Flow. Each flow can only be associated with one event. 
-     * @return EventId The media transmission event ID associated with the Flow. Each flow can only be associated with one event.
+     * Get Media transmission Event ID associated with the Flow. Each Flow can only be associated with one Event. 
+     * @return EventId Media transmission Event ID associated with the Flow. Each Flow can only be associated with one Event.
      */
     public String getEventId() {
         return this.EventId;
     }
 
     /**
-     * Set The media transmission event ID associated with the Flow. Each flow can only be associated with one event.
-     * @param EventId The media transmission event ID associated with the Flow. Each flow can only be associated with one event.
+     * Set Media transmission Event ID associated with the Flow. Each Flow can only be associated with one Event.
+     * @param EventId Media transmission Event ID associated with the Flow. Each Flow can only be associated with one Event.
      */
     public void setEventId(String EventId) {
         this.EventId = EventId;
     }
 
     /**
-     * Get Flow output group. 
-     * @return OutputGroup Flow output group.
+     * Get Output group of the stream. 
+     * @return OutputGroup Output group of the stream.
      */
     public CreateOutputInfo [] getOutputGroup() {
         return this.OutputGroup;
     }
 
     /**
-     * Set Flow output group.
-     * @param OutputGroup Flow output group.
+     * Set Output group of the stream.
+     * @param OutputGroup Output group of the stream.
      */
     public void setOutputGroup(CreateOutputInfo [] OutputGroup) {
         this.OutputGroup = OutputGroup;

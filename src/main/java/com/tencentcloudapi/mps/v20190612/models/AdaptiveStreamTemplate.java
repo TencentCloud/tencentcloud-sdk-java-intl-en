@@ -40,7 +40,7 @@ public class AdaptiveStreamTemplate extends AbstractModel {
     /**
     * Whether to remove the audio stream. Value range:
 <li>`0`: no,</li>
-<li>1: yes.</li>
+<li>1: Yes.</li>
     */
     @SerializedName("RemoveAudio")
     @Expose
@@ -49,14 +49,15 @@ public class AdaptiveStreamTemplate extends AbstractModel {
     /**
     * Whether to remove the video stream. Value range:
 <li>`0`: no,</li>
-<li>1: yes.</li>
+<li>1: Yes.</li>
     */
     @SerializedName("RemoveVideo")
     @Expose
     private Long RemoveVideo;
 
     /**
-    * 
+    * Audio parameter information list.
+Note: This parameter is used only when audio tracks are merged in self-adaptive transcoding. The maximum length of the parameter array is 64.
     */
     @SerializedName("AudioList")
     @Expose
@@ -97,10 +98,10 @@ public class AdaptiveStreamTemplate extends AbstractModel {
     /**
      * Get Whether to remove the audio stream. Value range:
 <li>`0`: no,</li>
-<li>1: yes.</li> 
+<li>1: Yes.</li> 
      * @return RemoveAudio Whether to remove the audio stream. Value range:
 <li>`0`: no,</li>
-<li>1: yes.</li>
+<li>1: Yes.</li>
      */
     public Long getRemoveAudio() {
         return this.RemoveAudio;
@@ -109,10 +110,10 @@ public class AdaptiveStreamTemplate extends AbstractModel {
     /**
      * Set Whether to remove the audio stream. Value range:
 <li>`0`: no,</li>
-<li>1: yes.</li>
+<li>1: Yes.</li>
      * @param RemoveAudio Whether to remove the audio stream. Value range:
 <li>`0`: no,</li>
-<li>1: yes.</li>
+<li>1: Yes.</li>
      */
     public void setRemoveAudio(Long RemoveAudio) {
         this.RemoveAudio = RemoveAudio;
@@ -121,10 +122,10 @@ public class AdaptiveStreamTemplate extends AbstractModel {
     /**
      * Get Whether to remove the video stream. Value range:
 <li>`0`: no,</li>
-<li>1: yes.</li> 
+<li>1: Yes.</li> 
      * @return RemoveVideo Whether to remove the video stream. Value range:
 <li>`0`: no,</li>
-<li>1: yes.</li>
+<li>1: Yes.</li>
      */
     public Long getRemoveVideo() {
         return this.RemoveVideo;
@@ -133,26 +134,30 @@ public class AdaptiveStreamTemplate extends AbstractModel {
     /**
      * Set Whether to remove the video stream. Value range:
 <li>`0`: no,</li>
-<li>1: yes.</li>
+<li>1: Yes.</li>
      * @param RemoveVideo Whether to remove the video stream. Value range:
 <li>`0`: no,</li>
-<li>1: yes.</li>
+<li>1: Yes.</li>
      */
     public void setRemoveVideo(Long RemoveVideo) {
         this.RemoveVideo = RemoveVideo;
     }
 
     /**
-     * Get  
-     * @return AudioList 
+     * Get Audio parameter information list.
+Note: This parameter is used only when audio tracks are merged in self-adaptive transcoding. The maximum length of the parameter array is 64. 
+     * @return AudioList Audio parameter information list.
+Note: This parameter is used only when audio tracks are merged in self-adaptive transcoding. The maximum length of the parameter array is 64.
      */
     public AudioTemplateInfo [] getAudioList() {
         return this.AudioList;
     }
 
     /**
-     * Set 
-     * @param AudioList 
+     * Set Audio parameter information list.
+Note: This parameter is used only when audio tracks are merged in self-adaptive transcoding. The maximum length of the parameter array is 64.
+     * @param AudioList Audio parameter information list.
+Note: This parameter is used only when audio tracks are merged in self-adaptive transcoding. The maximum length of the parameter array is 64.
      */
     public void setAudioList(AudioTemplateInfo [] AudioList) {
         this.AudioList = AudioList;

@@ -31,35 +31,35 @@ public class UpdatePluginsRequest extends AbstractModel {
     private String InstanceId;
 
     /**
-    * List of names of the plugins to be installed
+    * Name list of plug-ins that needs to be installed
     */
     @SerializedName("InstallPluginList")
     @Expose
     private String [] InstallPluginList;
 
     /**
-    * List of names of the plugins to be uninstalled
+    * List of plug-in names to uninstall
     */
     @SerializedName("RemovePluginList")
     @Expose
     private String [] RemovePluginList;
 
     /**
-    * Whether to force restart the cluster. The default value is `false`.
+    * Whether to force restart. Default value: false
     */
     @SerializedName("ForceRestart")
     @Expose
     private Boolean ForceRestart;
 
     /**
-    * Whether to reinstall the cluster. The default value is `false`.
+    * Whether to reinstall. Default value: false
     */
     @SerializedName("ForceUpdate")
     @Expose
     private Boolean ForceUpdate;
 
     /**
-    * 0: system plugin
+    * 0: System plugin
     */
     @SerializedName("PluginType")
     @Expose
@@ -82,80 +82,80 @@ public class UpdatePluginsRequest extends AbstractModel {
     }
 
     /**
-     * Get List of names of the plugins to be installed 
-     * @return InstallPluginList List of names of the plugins to be installed
+     * Get Name list of plug-ins that needs to be installed 
+     * @return InstallPluginList Name list of plug-ins that needs to be installed
      */
     public String [] getInstallPluginList() {
         return this.InstallPluginList;
     }
 
     /**
-     * Set List of names of the plugins to be installed
-     * @param InstallPluginList List of names of the plugins to be installed
+     * Set Name list of plug-ins that needs to be installed
+     * @param InstallPluginList Name list of plug-ins that needs to be installed
      */
     public void setInstallPluginList(String [] InstallPluginList) {
         this.InstallPluginList = InstallPluginList;
     }
 
     /**
-     * Get List of names of the plugins to be uninstalled 
-     * @return RemovePluginList List of names of the plugins to be uninstalled
+     * Get List of plug-in names to uninstall 
+     * @return RemovePluginList List of plug-in names to uninstall
      */
     public String [] getRemovePluginList() {
         return this.RemovePluginList;
     }
 
     /**
-     * Set List of names of the plugins to be uninstalled
-     * @param RemovePluginList List of names of the plugins to be uninstalled
+     * Set List of plug-in names to uninstall
+     * @param RemovePluginList List of plug-in names to uninstall
      */
     public void setRemovePluginList(String [] RemovePluginList) {
         this.RemovePluginList = RemovePluginList;
     }
 
     /**
-     * Get Whether to force restart the cluster. The default value is `false`. 
-     * @return ForceRestart Whether to force restart the cluster. The default value is `false`.
+     * Get Whether to force restart. Default value: false 
+     * @return ForceRestart Whether to force restart. Default value: false
      */
     public Boolean getForceRestart() {
         return this.ForceRestart;
     }
 
     /**
-     * Set Whether to force restart the cluster. The default value is `false`.
-     * @param ForceRestart Whether to force restart the cluster. The default value is `false`.
+     * Set Whether to force restart. Default value: false
+     * @param ForceRestart Whether to force restart. Default value: false
      */
     public void setForceRestart(Boolean ForceRestart) {
         this.ForceRestart = ForceRestart;
     }
 
     /**
-     * Get Whether to reinstall the cluster. The default value is `false`. 
-     * @return ForceUpdate Whether to reinstall the cluster. The default value is `false`.
+     * Get Whether to reinstall. Default value: false 
+     * @return ForceUpdate Whether to reinstall. Default value: false
      */
     public Boolean getForceUpdate() {
         return this.ForceUpdate;
     }
 
     /**
-     * Set Whether to reinstall the cluster. The default value is `false`.
-     * @param ForceUpdate Whether to reinstall the cluster. The default value is `false`.
+     * Set Whether to reinstall. Default value: false
+     * @param ForceUpdate Whether to reinstall. Default value: false
      */
     public void setForceUpdate(Boolean ForceUpdate) {
         this.ForceUpdate = ForceUpdate;
     }
 
     /**
-     * Get 0: system plugin 
-     * @return PluginType 0: system plugin
+     * Get 0: System plugin 
+     * @return PluginType 0: System plugin
      */
     public Long getPluginType() {
         return this.PluginType;
     }
 
     /**
-     * Set 0: system plugin
-     * @param PluginType 0: system plugin
+     * Set 0: System plugin
+     * @param PluginType 0: System plugin
      */
     public void setPluginType(Long PluginType) {
         this.PluginType = PluginType;

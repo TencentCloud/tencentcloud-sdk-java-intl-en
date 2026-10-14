@@ -24,210 +24,233 @@ import java.util.HashMap;
 public class CreateInputSRTSettings extends AbstractModel {
 
     /**
-    * The SRT mode. Valid values: LISTENER (default), CALLER.
+    * SRT mode. Options: [LISTENER|CALLER]. Default value: LISTENER.
     */
     @SerializedName("Mode")
     @Expose
     private String Mode;
 
     /**
-    * Stream ID, which can contain 0 to 512 letters, digits, and special characters (.#!:&,=_-).
+    * Stream Id. It can contain upper- and lower-case letters, digits, and special characters (.#!:&,=_-), with a length of 0 to 512. For the specific format, see: https://github.com/Haivision/srt/blob/master/docs/features/access-control.md#standard-keys.	
     */
     @SerializedName("StreamId")
     @Expose
     private String StreamId;
 
     /**
-    * Latency in ms. Default value: 0. Value range: [0, 3000].
+    * Delay. Default value: 0. Unit: ms. Range: [0, 3000].
     */
     @SerializedName("Latency")
     @Expose
     private Long Latency;
 
     /**
-    * Receive latency in ms. Default value: 120. Value range: [0, 3000].
+    * Receive latency. Default value: 120. Unit: ms. Range: [0, 3000].
     */
     @SerializedName("RecvLatency")
     @Expose
     private Long RecvLatency;
 
     /**
-    * Peer latency in ms. Default value: 0. Value range: [0, 3000].
+    * Peer delay. Default value: 0. Unit: ms. Range: [0, 3000].
     */
     @SerializedName("PeerLatency")
     @Expose
     private Long PeerLatency;
 
     /**
-    * Peer timeout period in ms. Default value: 5000. Value range: [1000, 10000].
+    * Peer timeout. Default value: 5000 ms. Range: [1000, 10000].
     */
     @SerializedName("PeerIdleTimeout")
     @Expose
     private Long PeerIdleTimeout;
 
     /**
-    * Decryption key, which is empty by default, indicating not to encrypt. Only ASCII codes can be filled. Length: [10, 79].
+    * Decryption key. Empty by default, which means not encrypted. Only ascii characters are supported. Length range: [10, 79].
     */
     @SerializedName("Passphrase")
     @Expose
     private String Passphrase;
 
     /**
-    * Key length. Default value: 0. Valid values: 0, 16, 24, 32.
+    * Key length. Default value: 0. Options: [0|16|24|32].
     */
     @SerializedName("PbKeyLen")
     @Expose
     private Long PbKeyLen;
 
     /**
-    * The SRT peer address, which is required if `Mode` is `CALLER`. Only one address is allowed.
+    * SRT peer address. Required when Mode is CALLER, and can only contain 1 group.
     */
     @SerializedName("SourceAddresses")
     @Expose
     private SRTSourceAddressReq [] SourceAddresses;
 
     /**
-     * Get The SRT mode. Valid values: LISTENER (default), CALLER. 
-     * @return Mode The SRT mode. Valid values: LISTENER (default), CALLER.
+    * SRT FEC settings
+    */
+    @SerializedName("FEC")
+    @Expose
+    private SRTFECSimpleOptions FEC;
+
+    /**
+     * Get SRT mode. Options: [LISTENER|CALLER]. Default value: LISTENER. 
+     * @return Mode SRT mode. Options: [LISTENER|CALLER]. Default value: LISTENER.
      */
     public String getMode() {
         return this.Mode;
     }
 
     /**
-     * Set The SRT mode. Valid values: LISTENER (default), CALLER.
-     * @param Mode The SRT mode. Valid values: LISTENER (default), CALLER.
+     * Set SRT mode. Options: [LISTENER|CALLER]. Default value: LISTENER.
+     * @param Mode SRT mode. Options: [LISTENER|CALLER]. Default value: LISTENER.
      */
     public void setMode(String Mode) {
         this.Mode = Mode;
     }
 
     /**
-     * Get Stream ID, which can contain 0 to 512 letters, digits, and special characters (.#!:&,=_-). 
-     * @return StreamId Stream ID, which can contain 0 to 512 letters, digits, and special characters (.#!:&,=_-).
+     * Get Stream Id. It can contain upper- and lower-case letters, digits, and special characters (.#!:&,=_-), with a length of 0 to 512. For the specific format, see: https://github.com/Haivision/srt/blob/master/docs/features/access-control.md#standard-keys.	 
+     * @return StreamId Stream Id. It can contain upper- and lower-case letters, digits, and special characters (.#!:&,=_-), with a length of 0 to 512. For the specific format, see: https://github.com/Haivision/srt/blob/master/docs/features/access-control.md#standard-keys.	
      */
     public String getStreamId() {
         return this.StreamId;
     }
 
     /**
-     * Set Stream ID, which can contain 0 to 512 letters, digits, and special characters (.#!:&,=_-).
-     * @param StreamId Stream ID, which can contain 0 to 512 letters, digits, and special characters (.#!:&,=_-).
+     * Set Stream Id. It can contain upper- and lower-case letters, digits, and special characters (.#!:&,=_-), with a length of 0 to 512. For the specific format, see: https://github.com/Haivision/srt/blob/master/docs/features/access-control.md#standard-keys.	
+     * @param StreamId Stream Id. It can contain upper- and lower-case letters, digits, and special characters (.#!:&,=_-), with a length of 0 to 512. For the specific format, see: https://github.com/Haivision/srt/blob/master/docs/features/access-control.md#standard-keys.	
      */
     public void setStreamId(String StreamId) {
         this.StreamId = StreamId;
     }
 
     /**
-     * Get Latency in ms. Default value: 0. Value range: [0, 3000]. 
-     * @return Latency Latency in ms. Default value: 0. Value range: [0, 3000].
+     * Get Delay. Default value: 0. Unit: ms. Range: [0, 3000]. 
+     * @return Latency Delay. Default value: 0. Unit: ms. Range: [0, 3000].
      */
     public Long getLatency() {
         return this.Latency;
     }
 
     /**
-     * Set Latency in ms. Default value: 0. Value range: [0, 3000].
-     * @param Latency Latency in ms. Default value: 0. Value range: [0, 3000].
+     * Set Delay. Default value: 0. Unit: ms. Range: [0, 3000].
+     * @param Latency Delay. Default value: 0. Unit: ms. Range: [0, 3000].
      */
     public void setLatency(Long Latency) {
         this.Latency = Latency;
     }
 
     /**
-     * Get Receive latency in ms. Default value: 120. Value range: [0, 3000]. 
-     * @return RecvLatency Receive latency in ms. Default value: 120. Value range: [0, 3000].
+     * Get Receive latency. Default value: 120. Unit: ms. Range: [0, 3000]. 
+     * @return RecvLatency Receive latency. Default value: 120. Unit: ms. Range: [0, 3000].
      */
     public Long getRecvLatency() {
         return this.RecvLatency;
     }
 
     /**
-     * Set Receive latency in ms. Default value: 120. Value range: [0, 3000].
-     * @param RecvLatency Receive latency in ms. Default value: 120. Value range: [0, 3000].
+     * Set Receive latency. Default value: 120. Unit: ms. Range: [0, 3000].
+     * @param RecvLatency Receive latency. Default value: 120. Unit: ms. Range: [0, 3000].
      */
     public void setRecvLatency(Long RecvLatency) {
         this.RecvLatency = RecvLatency;
     }
 
     /**
-     * Get Peer latency in ms. Default value: 0. Value range: [0, 3000]. 
-     * @return PeerLatency Peer latency in ms. Default value: 0. Value range: [0, 3000].
+     * Get Peer delay. Default value: 0. Unit: ms. Range: [0, 3000]. 
+     * @return PeerLatency Peer delay. Default value: 0. Unit: ms. Range: [0, 3000].
      */
     public Long getPeerLatency() {
         return this.PeerLatency;
     }
 
     /**
-     * Set Peer latency in ms. Default value: 0. Value range: [0, 3000].
-     * @param PeerLatency Peer latency in ms. Default value: 0. Value range: [0, 3000].
+     * Set Peer delay. Default value: 0. Unit: ms. Range: [0, 3000].
+     * @param PeerLatency Peer delay. Default value: 0. Unit: ms. Range: [0, 3000].
      */
     public void setPeerLatency(Long PeerLatency) {
         this.PeerLatency = PeerLatency;
     }
 
     /**
-     * Get Peer timeout period in ms. Default value: 5000. Value range: [1000, 10000]. 
-     * @return PeerIdleTimeout Peer timeout period in ms. Default value: 5000. Value range: [1000, 10000].
+     * Get Peer timeout. Default value: 5000 ms. Range: [1000, 10000]. 
+     * @return PeerIdleTimeout Peer timeout. Default value: 5000 ms. Range: [1000, 10000].
      */
     public Long getPeerIdleTimeout() {
         return this.PeerIdleTimeout;
     }
 
     /**
-     * Set Peer timeout period in ms. Default value: 5000. Value range: [1000, 10000].
-     * @param PeerIdleTimeout Peer timeout period in ms. Default value: 5000. Value range: [1000, 10000].
+     * Set Peer timeout. Default value: 5000 ms. Range: [1000, 10000].
+     * @param PeerIdleTimeout Peer timeout. Default value: 5000 ms. Range: [1000, 10000].
      */
     public void setPeerIdleTimeout(Long PeerIdleTimeout) {
         this.PeerIdleTimeout = PeerIdleTimeout;
     }
 
     /**
-     * Get Decryption key, which is empty by default, indicating not to encrypt. Only ASCII codes can be filled. Length: [10, 79]. 
-     * @return Passphrase Decryption key, which is empty by default, indicating not to encrypt. Only ASCII codes can be filled. Length: [10, 79].
+     * Get Decryption key. Empty by default, which means not encrypted. Only ascii characters are supported. Length range: [10, 79]. 
+     * @return Passphrase Decryption key. Empty by default, which means not encrypted. Only ascii characters are supported. Length range: [10, 79].
      */
     public String getPassphrase() {
         return this.Passphrase;
     }
 
     /**
-     * Set Decryption key, which is empty by default, indicating not to encrypt. Only ASCII codes can be filled. Length: [10, 79].
-     * @param Passphrase Decryption key, which is empty by default, indicating not to encrypt. Only ASCII codes can be filled. Length: [10, 79].
+     * Set Decryption key. Empty by default, which means not encrypted. Only ascii characters are supported. Length range: [10, 79].
+     * @param Passphrase Decryption key. Empty by default, which means not encrypted. Only ascii characters are supported. Length range: [10, 79].
      */
     public void setPassphrase(String Passphrase) {
         this.Passphrase = Passphrase;
     }
 
     /**
-     * Get Key length. Default value: 0. Valid values: 0, 16, 24, 32. 
-     * @return PbKeyLen Key length. Default value: 0. Valid values: 0, 16, 24, 32.
+     * Get Key length. Default value: 0. Options: [0|16|24|32]. 
+     * @return PbKeyLen Key length. Default value: 0. Options: [0|16|24|32].
      */
     public Long getPbKeyLen() {
         return this.PbKeyLen;
     }
 
     /**
-     * Set Key length. Default value: 0. Valid values: 0, 16, 24, 32.
-     * @param PbKeyLen Key length. Default value: 0. Valid values: 0, 16, 24, 32.
+     * Set Key length. Default value: 0. Options: [0|16|24|32].
+     * @param PbKeyLen Key length. Default value: 0. Options: [0|16|24|32].
      */
     public void setPbKeyLen(Long PbKeyLen) {
         this.PbKeyLen = PbKeyLen;
     }
 
     /**
-     * Get The SRT peer address, which is required if `Mode` is `CALLER`. Only one address is allowed. 
-     * @return SourceAddresses The SRT peer address, which is required if `Mode` is `CALLER`. Only one address is allowed.
+     * Get SRT peer address. Required when Mode is CALLER, and can only contain 1 group. 
+     * @return SourceAddresses SRT peer address. Required when Mode is CALLER, and can only contain 1 group.
      */
     public SRTSourceAddressReq [] getSourceAddresses() {
         return this.SourceAddresses;
     }
 
     /**
-     * Set The SRT peer address, which is required if `Mode` is `CALLER`. Only one address is allowed.
-     * @param SourceAddresses The SRT peer address, which is required if `Mode` is `CALLER`. Only one address is allowed.
+     * Set SRT peer address. Required when Mode is CALLER, and can only contain 1 group.
+     * @param SourceAddresses SRT peer address. Required when Mode is CALLER, and can only contain 1 group.
      */
     public void setSourceAddresses(SRTSourceAddressReq [] SourceAddresses) {
         this.SourceAddresses = SourceAddresses;
+    }
+
+    /**
+     * Get SRT FEC settings 
+     * @return FEC SRT FEC settings
+     */
+    public SRTFECSimpleOptions getFEC() {
+        return this.FEC;
+    }
+
+    /**
+     * Set SRT FEC settings
+     * @param FEC SRT FEC settings
+     */
+    public void setFEC(SRTFECSimpleOptions FEC) {
+        this.FEC = FEC;
     }
 
     public CreateInputSRTSettings() {
@@ -268,6 +291,9 @@ public class CreateInputSRTSettings extends AbstractModel {
                 this.SourceAddresses[i] = new SRTSourceAddressReq(source.SourceAddresses[i]);
             }
         }
+        if (source.FEC != null) {
+            this.FEC = new SRTFECSimpleOptions(source.FEC);
+        }
     }
 
 
@@ -284,6 +310,7 @@ public class CreateInputSRTSettings extends AbstractModel {
         this.setParamSimple(map, prefix + "Passphrase", this.Passphrase);
         this.setParamSimple(map, prefix + "PbKeyLen", this.PbKeyLen);
         this.setParamArrayObj(map, prefix + "SourceAddresses.", this.SourceAddresses);
+        this.setParamObj(map, prefix + "FEC.", this.FEC);
 
     }
 }

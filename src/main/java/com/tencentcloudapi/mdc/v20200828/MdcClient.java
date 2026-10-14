@@ -72,6 +72,17 @@ public class MdcClient extends AbstractClient{
     }
 
     /**
+     *Create security group.
+     * @param req CreateStreamLinkSecurityGroupRequest
+     * @return CreateStreamLinkSecurityGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateStreamLinkSecurityGroupResponse CreateStreamLinkSecurityGroup(CreateStreamLinkSecurityGroupRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateStreamLinkSecurityGroup", CreateStreamLinkSecurityGroupResponse.class);
+    }
+
+    /**
      *This API is used to delete a StreamLink flow.
      * @param req DeleteStreamLinkFlowRequest
      * @return DeleteStreamLinkFlowResponse

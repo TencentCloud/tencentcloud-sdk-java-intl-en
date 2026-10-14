@@ -24,302 +24,371 @@ import java.util.HashMap;
 public class CreateInput extends AbstractModel {
 
     /**
-    * Input name, which can contain 1 to 32 letters, digits, and underscores.
+    * Enter a name. It can contain uppercase letters, lowercase letters, digits, and underscores. Length: [1, 32].
     */
     @SerializedName("InputName")
     @Expose
     private String InputName;
 
     /**
-    * Input protocol. Valid values: `SRT`, `RTP`, `RTMP`, `RTMP_PULL`, `RTSP_PULL `, `HLS_PULL`.
+    * Input protocol. Selectable: [SRT|RTP|RTMP|RTMP_PULL|RTSP_PULL|RIST].
     */
     @SerializedName("Protocol")
     @Expose
     private String Protocol;
 
     /**
-    * Input description. Length: [0, 255].
+    * Enter description. Length: [0, 255].
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * Allowlist of input IPs in CIDR format.
+    * Input IP allowlist in CIDR format.
     */
     @SerializedName("AllowIpList")
     @Expose
     private String [] AllowIpList;
 
     /**
-    * SRT configuration information of input.
+    * SRT configuration information of the input.
     */
     @SerializedName("SRTSettings")
     @Expose
     private CreateInputSRTSettings SRTSettings;
 
     /**
-    * RTP configuration information of input.
+    * Input RTP configuration message.
     */
     @SerializedName("RTPSettings")
     @Expose
     private CreateInputRTPSettings RTPSettings;
 
     /**
-    * Input failover. Valid values: `OPEN`, `CLOSE` (default)
+    * Primary/replica switch input. Selectable values: `OPEN` and `CLOSE`. Default value: `CLOSE`.
     */
     @SerializedName("FailOver")
     @Expose
     private String FailOver;
 
     /**
-    * Input RTMP_PULL configuration information.
+    * Input RTMP_PULL configuration message.
     */
     @SerializedName("RTMPPullSettings")
     @Expose
     private CreateInputRTMPPullSettings RTMPPullSettings;
 
     /**
-    * Input RTSP_PULL configuration information.
+    * Input RTSP_PULL configuration message.
     */
     @SerializedName("RTSPPullSettings")
     @Expose
     private CreateInputRTSPPullSettings RTSPPullSettings;
 
     /**
-    * Input HLS_PULL configuration information.
+    * Input HLS_PULL configuration message.
     */
     @SerializedName("HLSPullSettings")
     @Expose
     private CreateInputHLSPullSettings HLSPullSettings;
 
     /**
-    * Delayed broadcast smooth streaming configuration information.
+    * Configuration message for smooth streaming during delayed broadcasting.
     */
     @SerializedName("ResilientStream")
     @Expose
     private ResilientStreamConf ResilientStream;
 
     /**
-    * The bound security group IDs.
+    * Bound input security group ID.
     */
     @SerializedName("SecurityGroupIds")
     @Expose
     private String [] SecurityGroupIds;
 
     /**
-    * Availability zone, optional. If disaster recovery is enabled, you must enter two different availability zones. Otherwise, you can only enter one availability zone at most.
+    * Availability zone. This parameter is optional. If disaster recovery is enabled, two different availability zones must be input. Otherwise, only one availability zone can be input.
     */
     @SerializedName("Zones")
     @Expose
     private String [] Zones;
 
     /**
-     * Get Input name, which can contain 1 to 32 letters, digits, and underscores. 
-     * @return InputName Input name, which can contain 1 to 32 letters, digits, and underscores.
+    * Input RIST configuration message.
+    */
+    @SerializedName("RISTSettings")
+    @Expose
+    private CreateInputRISTSettings RISTSettings;
+
+    /**
+    * Region of the input node
+    */
+    @SerializedName("InputRegion")
+    @Expose
+    private String InputRegion;
+
+    /**
+    * Hot/cold backup
+    */
+    @SerializedName("FailOverOption")
+    @Expose
+    private FailOverOption FailOverOption;
+
+    /**
+     * Get Enter a name. It can contain uppercase letters, lowercase letters, digits, and underscores. Length: [1, 32]. 
+     * @return InputName Enter a name. It can contain uppercase letters, lowercase letters, digits, and underscores. Length: [1, 32].
      */
     public String getInputName() {
         return this.InputName;
     }
 
     /**
-     * Set Input name, which can contain 1 to 32 letters, digits, and underscores.
-     * @param InputName Input name, which can contain 1 to 32 letters, digits, and underscores.
+     * Set Enter a name. It can contain uppercase letters, lowercase letters, digits, and underscores. Length: [1, 32].
+     * @param InputName Enter a name. It can contain uppercase letters, lowercase letters, digits, and underscores. Length: [1, 32].
      */
     public void setInputName(String InputName) {
         this.InputName = InputName;
     }
 
     /**
-     * Get Input protocol. Valid values: `SRT`, `RTP`, `RTMP`, `RTMP_PULL`, `RTSP_PULL `, `HLS_PULL`. 
-     * @return Protocol Input protocol. Valid values: `SRT`, `RTP`, `RTMP`, `RTMP_PULL`, `RTSP_PULL `, `HLS_PULL`.
+     * Get Input protocol. Selectable: [SRT|RTP|RTMP|RTMP_PULL|RTSP_PULL|RIST]. 
+     * @return Protocol Input protocol. Selectable: [SRT|RTP|RTMP|RTMP_PULL|RTSP_PULL|RIST].
      */
     public String getProtocol() {
         return this.Protocol;
     }
 
     /**
-     * Set Input protocol. Valid values: `SRT`, `RTP`, `RTMP`, `RTMP_PULL`, `RTSP_PULL `, `HLS_PULL`.
-     * @param Protocol Input protocol. Valid values: `SRT`, `RTP`, `RTMP`, `RTMP_PULL`, `RTSP_PULL `, `HLS_PULL`.
+     * Set Input protocol. Selectable: [SRT|RTP|RTMP|RTMP_PULL|RTSP_PULL|RIST].
+     * @param Protocol Input protocol. Selectable: [SRT|RTP|RTMP|RTMP_PULL|RTSP_PULL|RIST].
      */
     public void setProtocol(String Protocol) {
         this.Protocol = Protocol;
     }
 
     /**
-     * Get Input description. Length: [0, 255]. 
-     * @return Description Input description. Length: [0, 255].
+     * Get Enter description. Length: [0, 255]. 
+     * @return Description Enter description. Length: [0, 255].
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set Input description. Length: [0, 255].
-     * @param Description Input description. Length: [0, 255].
+     * Set Enter description. Length: [0, 255].
+     * @param Description Enter description. Length: [0, 255].
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get Allowlist of input IPs in CIDR format. 
-     * @return AllowIpList Allowlist of input IPs in CIDR format.
+     * Get Input IP allowlist in CIDR format. 
+     * @return AllowIpList Input IP allowlist in CIDR format.
      */
     public String [] getAllowIpList() {
         return this.AllowIpList;
     }
 
     /**
-     * Set Allowlist of input IPs in CIDR format.
-     * @param AllowIpList Allowlist of input IPs in CIDR format.
+     * Set Input IP allowlist in CIDR format.
+     * @param AllowIpList Input IP allowlist in CIDR format.
      */
     public void setAllowIpList(String [] AllowIpList) {
         this.AllowIpList = AllowIpList;
     }
 
     /**
-     * Get SRT configuration information of input. 
-     * @return SRTSettings SRT configuration information of input.
+     * Get SRT configuration information of the input. 
+     * @return SRTSettings SRT configuration information of the input.
      */
     public CreateInputSRTSettings getSRTSettings() {
         return this.SRTSettings;
     }
 
     /**
-     * Set SRT configuration information of input.
-     * @param SRTSettings SRT configuration information of input.
+     * Set SRT configuration information of the input.
+     * @param SRTSettings SRT configuration information of the input.
      */
     public void setSRTSettings(CreateInputSRTSettings SRTSettings) {
         this.SRTSettings = SRTSettings;
     }
 
     /**
-     * Get RTP configuration information of input. 
-     * @return RTPSettings RTP configuration information of input.
+     * Get Input RTP configuration message. 
+     * @return RTPSettings Input RTP configuration message.
      */
     public CreateInputRTPSettings getRTPSettings() {
         return this.RTPSettings;
     }
 
     /**
-     * Set RTP configuration information of input.
-     * @param RTPSettings RTP configuration information of input.
+     * Set Input RTP configuration message.
+     * @param RTPSettings Input RTP configuration message.
      */
     public void setRTPSettings(CreateInputRTPSettings RTPSettings) {
         this.RTPSettings = RTPSettings;
     }
 
     /**
-     * Get Input failover. Valid values: `OPEN`, `CLOSE` (default) 
-     * @return FailOver Input failover. Valid values: `OPEN`, `CLOSE` (default)
+     * Get Primary/replica switch input. Selectable values: `OPEN` and `CLOSE`. Default value: `CLOSE`. 
+     * @return FailOver Primary/replica switch input. Selectable values: `OPEN` and `CLOSE`. Default value: `CLOSE`.
      */
     public String getFailOver() {
         return this.FailOver;
     }
 
     /**
-     * Set Input failover. Valid values: `OPEN`, `CLOSE` (default)
-     * @param FailOver Input failover. Valid values: `OPEN`, `CLOSE` (default)
+     * Set Primary/replica switch input. Selectable values: `OPEN` and `CLOSE`. Default value: `CLOSE`.
+     * @param FailOver Primary/replica switch input. Selectable values: `OPEN` and `CLOSE`. Default value: `CLOSE`.
      */
     public void setFailOver(String FailOver) {
         this.FailOver = FailOver;
     }
 
     /**
-     * Get Input RTMP_PULL configuration information. 
-     * @return RTMPPullSettings Input RTMP_PULL configuration information.
+     * Get Input RTMP_PULL configuration message. 
+     * @return RTMPPullSettings Input RTMP_PULL configuration message.
      */
     public CreateInputRTMPPullSettings getRTMPPullSettings() {
         return this.RTMPPullSettings;
     }
 
     /**
-     * Set Input RTMP_PULL configuration information.
-     * @param RTMPPullSettings Input RTMP_PULL configuration information.
+     * Set Input RTMP_PULL configuration message.
+     * @param RTMPPullSettings Input RTMP_PULL configuration message.
      */
     public void setRTMPPullSettings(CreateInputRTMPPullSettings RTMPPullSettings) {
         this.RTMPPullSettings = RTMPPullSettings;
     }
 
     /**
-     * Get Input RTSP_PULL configuration information. 
-     * @return RTSPPullSettings Input RTSP_PULL configuration information.
+     * Get Input RTSP_PULL configuration message. 
+     * @return RTSPPullSettings Input RTSP_PULL configuration message.
      */
     public CreateInputRTSPPullSettings getRTSPPullSettings() {
         return this.RTSPPullSettings;
     }
 
     /**
-     * Set Input RTSP_PULL configuration information.
-     * @param RTSPPullSettings Input RTSP_PULL configuration information.
+     * Set Input RTSP_PULL configuration message.
+     * @param RTSPPullSettings Input RTSP_PULL configuration message.
      */
     public void setRTSPPullSettings(CreateInputRTSPPullSettings RTSPPullSettings) {
         this.RTSPPullSettings = RTSPPullSettings;
     }
 
     /**
-     * Get Input HLS_PULL configuration information. 
-     * @return HLSPullSettings Input HLS_PULL configuration information.
+     * Get Input HLS_PULL configuration message. 
+     * @return HLSPullSettings Input HLS_PULL configuration message.
      */
     public CreateInputHLSPullSettings getHLSPullSettings() {
         return this.HLSPullSettings;
     }
 
     /**
-     * Set Input HLS_PULL configuration information.
-     * @param HLSPullSettings Input HLS_PULL configuration information.
+     * Set Input HLS_PULL configuration message.
+     * @param HLSPullSettings Input HLS_PULL configuration message.
      */
     public void setHLSPullSettings(CreateInputHLSPullSettings HLSPullSettings) {
         this.HLSPullSettings = HLSPullSettings;
     }
 
     /**
-     * Get Delayed broadcast smooth streaming configuration information. 
-     * @return ResilientStream Delayed broadcast smooth streaming configuration information.
+     * Get Configuration message for smooth streaming during delayed broadcasting. 
+     * @return ResilientStream Configuration message for smooth streaming during delayed broadcasting.
      */
     public ResilientStreamConf getResilientStream() {
         return this.ResilientStream;
     }
 
     /**
-     * Set Delayed broadcast smooth streaming configuration information.
-     * @param ResilientStream Delayed broadcast smooth streaming configuration information.
+     * Set Configuration message for smooth streaming during delayed broadcasting.
+     * @param ResilientStream Configuration message for smooth streaming during delayed broadcasting.
      */
     public void setResilientStream(ResilientStreamConf ResilientStream) {
         this.ResilientStream = ResilientStream;
     }
 
     /**
-     * Get The bound security group IDs. 
-     * @return SecurityGroupIds The bound security group IDs.
+     * Get Bound input security group ID. 
+     * @return SecurityGroupIds Bound input security group ID.
      */
     public String [] getSecurityGroupIds() {
         return this.SecurityGroupIds;
     }
 
     /**
-     * Set The bound security group IDs.
-     * @param SecurityGroupIds The bound security group IDs.
+     * Set Bound input security group ID.
+     * @param SecurityGroupIds Bound input security group ID.
      */
     public void setSecurityGroupIds(String [] SecurityGroupIds) {
         this.SecurityGroupIds = SecurityGroupIds;
     }
 
     /**
-     * Get Availability zone, optional. If disaster recovery is enabled, you must enter two different availability zones. Otherwise, you can only enter one availability zone at most. 
-     * @return Zones Availability zone, optional. If disaster recovery is enabled, you must enter two different availability zones. Otherwise, you can only enter one availability zone at most.
+     * Get Availability zone. This parameter is optional. If disaster recovery is enabled, two different availability zones must be input. Otherwise, only one availability zone can be input. 
+     * @return Zones Availability zone. This parameter is optional. If disaster recovery is enabled, two different availability zones must be input. Otherwise, only one availability zone can be input.
      */
     public String [] getZones() {
         return this.Zones;
     }
 
     /**
-     * Set Availability zone, optional. If disaster recovery is enabled, you must enter two different availability zones. Otherwise, you can only enter one availability zone at most.
-     * @param Zones Availability zone, optional. If disaster recovery is enabled, you must enter two different availability zones. Otherwise, you can only enter one availability zone at most.
+     * Set Availability zone. This parameter is optional. If disaster recovery is enabled, two different availability zones must be input. Otherwise, only one availability zone can be input.
+     * @param Zones Availability zone. This parameter is optional. If disaster recovery is enabled, two different availability zones must be input. Otherwise, only one availability zone can be input.
      */
     public void setZones(String [] Zones) {
         this.Zones = Zones;
+    }
+
+    /**
+     * Get Input RIST configuration message. 
+     * @return RISTSettings Input RIST configuration message.
+     */
+    public CreateInputRISTSettings getRISTSettings() {
+        return this.RISTSettings;
+    }
+
+    /**
+     * Set Input RIST configuration message.
+     * @param RISTSettings Input RIST configuration message.
+     */
+    public void setRISTSettings(CreateInputRISTSettings RISTSettings) {
+        this.RISTSettings = RISTSettings;
+    }
+
+    /**
+     * Get Region of the input node 
+     * @return InputRegion Region of the input node
+     */
+    public String getInputRegion() {
+        return this.InputRegion;
+    }
+
+    /**
+     * Set Region of the input node
+     * @param InputRegion Region of the input node
+     */
+    public void setInputRegion(String InputRegion) {
+        this.InputRegion = InputRegion;
+    }
+
+    /**
+     * Get Hot/cold backup 
+     * @return FailOverOption Hot/cold backup
+     */
+    public FailOverOption getFailOverOption() {
+        return this.FailOverOption;
+    }
+
+    /**
+     * Set Hot/cold backup
+     * @param FailOverOption Hot/cold backup
+     */
+    public void setFailOverOption(FailOverOption FailOverOption) {
+        this.FailOverOption = FailOverOption;
     }
 
     public CreateInput() {
@@ -378,6 +447,15 @@ public class CreateInput extends AbstractModel {
                 this.Zones[i] = new String(source.Zones[i]);
             }
         }
+        if (source.RISTSettings != null) {
+            this.RISTSettings = new CreateInputRISTSettings(source.RISTSettings);
+        }
+        if (source.InputRegion != null) {
+            this.InputRegion = new String(source.InputRegion);
+        }
+        if (source.FailOverOption != null) {
+            this.FailOverOption = new FailOverOption(source.FailOverOption);
+        }
     }
 
 
@@ -398,6 +476,9 @@ public class CreateInput extends AbstractModel {
         this.setParamObj(map, prefix + "ResilientStream.", this.ResilientStream);
         this.setParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
         this.setParamArraySimple(map, prefix + "Zones.", this.Zones);
+        this.setParamObj(map, prefix + "RISTSettings.", this.RISTSettings);
+        this.setParamSimple(map, prefix + "InputRegion", this.InputRegion);
+        this.setParamObj(map, prefix + "FailOverOption.", this.FailOverOption);
 
     }
 }

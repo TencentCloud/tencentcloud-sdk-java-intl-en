@@ -52,14 +52,14 @@ public class AiReviewTaskProhibitedOcrResult extends AbstractModel {
     private String Message;
 
     /**
-    * Content review Ocr text prohibited task input.
+    * Input of the prohibited Ocr text task in content review.
     */
     @SerializedName("Input")
     @Expose
     private AiReviewProhibitedOcrTaskInput Input;
 
     /**
-    * 
+    * Content review Ocr text prohibited information recognition task output.
     */
     @SerializedName("Output")
     @Expose
@@ -130,32 +130,32 @@ public class AiReviewTaskProhibitedOcrResult extends AbstractModel {
     }
 
     /**
-     * Get Content review Ocr text prohibited task input. 
-     * @return Input Content review Ocr text prohibited task input.
+     * Get Input of the prohibited Ocr text task in content review. 
+     * @return Input Input of the prohibited Ocr text task in content review.
      */
     public AiReviewProhibitedOcrTaskInput getInput() {
         return this.Input;
     }
 
     /**
-     * Set Content review Ocr text prohibited task input.
-     * @param Input Content review Ocr text prohibited task input.
+     * Set Input of the prohibited Ocr text task in content review.
+     * @param Input Input of the prohibited Ocr text task in content review.
      */
     public void setInput(AiReviewProhibitedOcrTaskInput Input) {
         this.Input = Input;
     }
 
     /**
-     * Get  
-     * @return Output 
+     * Get Content review Ocr text prohibited information recognition task output. 
+     * @return Output Content review Ocr text prohibited information recognition task output.
      */
     public AiReviewProhibitedOcrTaskOutput getOutput() {
         return this.Output;
     }
 
     /**
-     * Set 
-     * @param Output 
+     * Set Content review Ocr text prohibited information recognition task output.
+     * @param Output Content review Ocr text prohibited information recognition task output.
      */
     public void setOutput(AiReviewProhibitedOcrTaskOutput Output) {
         this.Output = Output;

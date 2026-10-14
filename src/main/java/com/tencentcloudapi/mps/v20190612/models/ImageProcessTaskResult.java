@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ImageProcessTaskResult extends AbstractModel {
 
     /**
-    * 
+    * Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
     */
     @SerializedName("Status")
     @Expose
@@ -38,37 +38,37 @@ public class ImageProcessTaskResult extends AbstractModel {
     private String ErrMsg;
 
     /**
-    * 
+    * Error message.
     */
     @SerializedName("Message")
     @Expose
     private String Message;
 
     /**
-    * 
+    * Transcoding task output.
     */
     @SerializedName("Output")
     @Expose
     private ImageProcessTaskOutput Output;
 
     /**
-    * 
+    * Transcoding progress, with a value range of [0-100].
     */
     @SerializedName("Progress")
     @Expose
     private Long Progress;
 
     /**
-     * Get  
-     * @return Status 
+     * Get Task status. Valid values are PROCESSING, SUCCESS, and FAIL. 
+     * @return Status Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 
-     * @param Status 
+     * Set Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
+     * @param Status Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
      */
     public void setStatus(String Status) {
         this.Status = Status;
@@ -91,48 +91,48 @@ public class ImageProcessTaskResult extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return Message 
+     * Get Error message. 
+     * @return Message Error message.
      */
     public String getMessage() {
         return this.Message;
     }
 
     /**
-     * Set 
-     * @param Message 
+     * Set Error message.
+     * @param Message Error message.
      */
     public void setMessage(String Message) {
         this.Message = Message;
     }
 
     /**
-     * Get  
-     * @return Output 
+     * Get Transcoding task output. 
+     * @return Output Transcoding task output.
      */
     public ImageProcessTaskOutput getOutput() {
         return this.Output;
     }
 
     /**
-     * Set 
-     * @param Output 
+     * Set Transcoding task output.
+     * @param Output Transcoding task output.
      */
     public void setOutput(ImageProcessTaskOutput Output) {
         this.Output = Output;
     }
 
     /**
-     * Get  
-     * @return Progress 
+     * Get Transcoding progress, with a value range of [0-100]. 
+     * @return Progress Transcoding progress, with a value range of [0-100].
      */
     public Long getProgress() {
         return this.Progress;
     }
 
     /**
-     * Set 
-     * @param Progress 
+     * Set Transcoding progress, with a value range of [0-100].
+     * @param Progress Transcoding progress, with a value range of [0-100].
      */
     public void setProgress(Long Progress) {
         this.Progress = Progress;

@@ -31,7 +31,7 @@ public class LogSearchContext extends AbstractModel {
     private String Offset;
 
     /**
-    * Log record number
+    * Number of logs.
     */
     @SerializedName("Limit")
     @Expose
@@ -45,7 +45,7 @@ public class LogSearchContext extends AbstractModel {
     private String Keyword;
 
     /**
-    * Log type. The value is `Application` (default) or `Platform`.
+    * Log type. Valid values: `Application`, `Platform`. Default value: `Application`.
     */
     @SerializedName("Type")
     @Expose
@@ -68,16 +68,16 @@ public class LogSearchContext extends AbstractModel {
     }
 
     /**
-     * Get Log record number 
-     * @return Limit Log record number
+     * Get Number of logs. 
+     * @return Limit Number of logs.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Log record number
-     * @param Limit Log record number
+     * Set Number of logs.
+     * @param Limit Number of logs.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
@@ -100,16 +100,16 @@ public class LogSearchContext extends AbstractModel {
     }
 
     /**
-     * Get Log type. The value is `Application` (default) or `Platform`. 
-     * @return Type Log type. The value is `Application` (default) or `Platform`.
+     * Get Log type. Valid values: `Application`, `Platform`. Default value: `Application`. 
+     * @return Type Log type. Valid values: `Application`, `Platform`. Default value: `Application`.
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Log type. The value is `Application` (default) or `Platform`.
-     * @param Type Log type. The value is `Application` (default) or `Platform`.
+     * Set Log type. Valid values: `Application`, `Platform`. Default value: `Application`.
+     * @param Type Log type. Valid values: `Application`, `Platform`. Default value: `Application`.
      */
     public void setType(String Type) {
         this.Type = Type;

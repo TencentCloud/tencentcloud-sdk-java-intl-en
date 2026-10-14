@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class CreateStreamLinkOutputInfoRequest extends AbstractModel {
 
     /**
-    * The flow ID.
+    * Transport stream Id.
     */
     @SerializedName("FlowId")
     @Expose
     private String FlowId;
 
     /**
-    * The output configuration of the flow.
+    * Output configuration of the transport stream.
     */
     @SerializedName("Output")
     @Expose
     private CreateOutputInfo Output;
 
     /**
-     * Get The flow ID. 
-     * @return FlowId The flow ID.
+     * Get Transport stream Id. 
+     * @return FlowId Transport stream Id.
      */
     public String getFlowId() {
         return this.FlowId;
     }
 
     /**
-     * Set The flow ID.
-     * @param FlowId The flow ID.
+     * Set Transport stream Id.
+     * @param FlowId Transport stream Id.
      */
     public void setFlowId(String FlowId) {
         this.FlowId = FlowId;
     }
 
     /**
-     * Get The output configuration of the flow. 
-     * @return Output The output configuration of the flow.
+     * Get Output configuration of the transport stream. 
+     * @return Output Output configuration of the transport stream.
      */
     public CreateOutputInfo getOutput() {
         return this.Output;
     }
 
     /**
-     * Set The output configuration of the flow.
-     * @param Output The output configuration of the flow.
+     * Set Output configuration of the transport stream.
+     * @param Output Output configuration of the transport stream.
      */
     public void setOutput(CreateOutputInfo Output) {
         this.Output = Output;

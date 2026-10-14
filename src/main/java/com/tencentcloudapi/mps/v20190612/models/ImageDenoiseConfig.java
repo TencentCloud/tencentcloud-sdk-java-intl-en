@@ -24,9 +24,9 @@ import java.util.HashMap;
 public class ImageDenoiseConfig extends AbstractModel {
 
     /**
-    * Capability configuration enabling status. Valid values:
-<li>ON: enabled.</li>
-<li>OFF: disabled.</li>
+    * Capability configuration switch. Available values:
+<li>ON: enabled</li>
+<li>OFF: disabled</li>
 Default value: ON.
     */
     @SerializedName("Switch")
@@ -34,7 +34,7 @@ Default value: ON.
     private String Switch;
 
     /**
-    * Type, available values:
+    * Type. Valid values:
 <li>weak</li>
 <li>strong</li>
 Default value: weak.
@@ -44,13 +44,13 @@ Default value: weak.
     private String Type;
 
     /**
-     * Get Capability configuration enabling status. Valid values:
-<li>ON: enabled.</li>
-<li>OFF: disabled.</li>
+     * Get Capability configuration switch. Available values:
+<li>ON: enabled</li>
+<li>OFF: disabled</li>
 Default value: ON. 
-     * @return Switch Capability configuration enabling status. Valid values:
-<li>ON: enabled.</li>
-<li>OFF: disabled.</li>
+     * @return Switch Capability configuration switch. Available values:
+<li>ON: enabled</li>
+<li>OFF: disabled</li>
 Default value: ON.
      */
     public String getSwitch() {
@@ -58,13 +58,13 @@ Default value: ON.
     }
 
     /**
-     * Set Capability configuration enabling status. Valid values:
-<li>ON: enabled.</li>
-<li>OFF: disabled.</li>
+     * Set Capability configuration switch. Available values:
+<li>ON: enabled</li>
+<li>OFF: disabled</li>
 Default value: ON.
-     * @param Switch Capability configuration enabling status. Valid values:
-<li>ON: enabled.</li>
-<li>OFF: disabled.</li>
+     * @param Switch Capability configuration switch. Available values:
+<li>ON: enabled</li>
+<li>OFF: disabled</li>
 Default value: ON.
      */
     public void setSwitch(String Switch) {
@@ -72,11 +72,11 @@ Default value: ON.
     }
 
     /**
-     * Get Type, available values:
+     * Get Type. Valid values:
 <li>weak</li>
 <li>strong</li>
 Default value: weak. 
-     * @return Type Type, available values:
+     * @return Type Type. Valid values:
 <li>weak</li>
 <li>strong</li>
 Default value: weak.
@@ -86,11 +86,11 @@ Default value: weak.
     }
 
     /**
-     * Set Type, available values:
+     * Set Type. Valid values:
 <li>weak</li>
 <li>strong</li>
 Default value: weak.
-     * @param Type Type, available values:
+     * @param Type Type. Valid values:
 <li>weak</li>
 <li>strong</li>
 Default value: weak.

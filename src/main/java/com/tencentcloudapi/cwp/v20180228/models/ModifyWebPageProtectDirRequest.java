@@ -31,7 +31,7 @@ public class ModifyWebPageProtectDirRequest extends AbstractModel {
     private String ProtectDirAddr;
 
     /**
-    * Website protection directory name
+    * Name of the website protection directory
     */
     @SerializedName("ProtectDirName")
     @Expose
@@ -68,16 +68,16 @@ public class ModifyWebPageProtectDirRequest extends AbstractModel {
     }
 
     /**
-     * Get Website protection directory name 
-     * @return ProtectDirName Website protection directory name
+     * Get Name of the website protection directory 
+     * @return ProtectDirName Name of the website protection directory
      */
     public String getProtectDirName() {
         return this.ProtectDirName;
     }
 
     /**
-     * Set Website protection directory name
-     * @param ProtectDirName Website protection directory name
+     * Set Name of the website protection directory
+     * @param ProtectDirName Name of the website protection directory
      */
     public void setProtectDirName(String ProtectDirName) {
         this.ProtectDirName = ProtectDirName;

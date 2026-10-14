@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class ServerlessNodeNumSpec extends AbstractModel {
 
     /**
-    * 
+    * <p>Minimum number of nodes.</p>
     */
     @SerializedName("MinNodeNum")
     @Expose
     private Long MinNodeNum;
 
     /**
-    * 
+    * <p>Maximum number of nodes.</p>
     */
     @SerializedName("MaxNodeNum")
     @Expose
     private Long MaxNodeNum;
 
     /**
-     * Get  
-     * @return MinNodeNum 
+     * Get <p>Minimum number of nodes.</p> 
+     * @return MinNodeNum <p>Minimum number of nodes.</p>
      */
     public Long getMinNodeNum() {
         return this.MinNodeNum;
     }
 
     /**
-     * Set 
-     * @param MinNodeNum 
+     * Set <p>Minimum number of nodes.</p>
+     * @param MinNodeNum <p>Minimum number of nodes.</p>
      */
     public void setMinNodeNum(Long MinNodeNum) {
         this.MinNodeNum = MinNodeNum;
     }
 
     /**
-     * Get  
-     * @return MaxNodeNum 
+     * Get <p>Maximum number of nodes.</p> 
+     * @return MaxNodeNum <p>Maximum number of nodes.</p>
      */
     public Long getMaxNodeNum() {
         return this.MaxNodeNum;
     }
 
     /**
-     * Set 
-     * @param MaxNodeNum 
+     * Set <p>Maximum number of nodes.</p>
+     * @param MaxNodeNum <p>Maximum number of nodes.</p>
      */
     public void setMaxNodeNum(Long MaxNodeNum) {
         this.MaxNodeNum = MaxNodeNum;

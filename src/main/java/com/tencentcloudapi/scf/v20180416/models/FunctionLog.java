@@ -24,77 +24,77 @@ import java.util.HashMap;
 public class FunctionLog extends AbstractModel {
 
     /**
-    * Function name
+    * Function name.
     */
     @SerializedName("FunctionName")
     @Expose
     private String FunctionName;
 
     /**
-    * Return value after the function is executed
+    * Returned value after function execution
     */
     @SerializedName("RetMsg")
     @Expose
     private String RetMsg;
 
     /**
-    * RequestId corresponding to the executed function
+    * requestId for executing the function
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
 
     /**
-    * Start time of the function execution
+    * Time point when the function starts execution
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * Function execution result. `0` indicates successful execution and other values indicate failure.
+    * Function execution result. 0 indicates successful execution, 2 indicates the function is running, 3 indicates an execution interrupt, and other values indicate failure.
     */
     @SerializedName("RetCode")
     @Expose
     private Long RetCode;
 
     /**
-    * It specifies whether the function invocation is finished. `1` indicates execution completion and other values indicate that exceptions occurred during the invocation.
+    * Whether the function call ends. If so, 1 means execution ended, and additional values indicate a call exception.
     */
     @SerializedName("InvokeFinished")
     @Expose
     private Long InvokeFinished;
 
     /**
-    * Duration of the function execution. The unit is millisecond (ms).
+    * Function execution duration in milliseconds.
     */
     @SerializedName("Duration")
     @Expose
     private Float Duration;
 
     /**
-    * Function billing duration. The unit is millisecond (ms). The value is rounded up to a multiple of 100 ms.
+    * Billing duration of a function. It is rounded up to the nearest 100 ms based on the duration, in ms.
     */
     @SerializedName("BillDuration")
     @Expose
     private Long BillDuration;
 
     /**
-    * Actual memory size used during the function execution. The unit is byte.
+    * Memory size actually consumed during function execution, in bytes.
     */
     @SerializedName("MemUsage")
     @Expose
     private Long MemUsage;
 
     /**
-    * Function execution logs
+    * Log output during function execution
     */
     @SerializedName("Log")
     @Expose
     private String Log;
 
     /**
-    * Log level
+    * Log level.
     */
     @SerializedName("Level")
     @Expose
@@ -108,175 +108,175 @@ public class FunctionLog extends AbstractModel {
     private String Source;
 
     /**
-    * Number of retries
+    * Number of retries.
     */
     @SerializedName("RetryNum")
     @Expose
     private Long RetryNum;
 
     /**
-     * Get Function name 
-     * @return FunctionName Function name
+     * Get Function name. 
+     * @return FunctionName Function name.
      */
     public String getFunctionName() {
         return this.FunctionName;
     }
 
     /**
-     * Set Function name
-     * @param FunctionName Function name
+     * Set Function name.
+     * @param FunctionName Function name.
      */
     public void setFunctionName(String FunctionName) {
         this.FunctionName = FunctionName;
     }
 
     /**
-     * Get Return value after the function is executed 
-     * @return RetMsg Return value after the function is executed
+     * Get Returned value after function execution 
+     * @return RetMsg Returned value after function execution
      */
     public String getRetMsg() {
         return this.RetMsg;
     }
 
     /**
-     * Set Return value after the function is executed
-     * @param RetMsg Return value after the function is executed
+     * Set Returned value after function execution
+     * @param RetMsg Returned value after function execution
      */
     public void setRetMsg(String RetMsg) {
         this.RetMsg = RetMsg;
     }
 
     /**
-     * Get RequestId corresponding to the executed function 
-     * @return RequestId RequestId corresponding to the executed function
+     * Get requestId for executing the function 
+     * @return RequestId requestId for executing the function
      */
     public String getRequestId() {
         return this.RequestId;
     }
 
     /**
-     * Set RequestId corresponding to the executed function
-     * @param RequestId RequestId corresponding to the executed function
+     * Set requestId for executing the function
+     * @param RequestId requestId for executing the function
      */
     public void setRequestId(String RequestId) {
         this.RequestId = RequestId;
     }
 
     /**
-     * Get Start time of the function execution 
-     * @return StartTime Start time of the function execution
+     * Get Time point when the function starts execution 
+     * @return StartTime Time point when the function starts execution
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set Start time of the function execution
-     * @param StartTime Start time of the function execution
+     * Set Time point when the function starts execution
+     * @param StartTime Time point when the function starts execution
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get Function execution result. `0` indicates successful execution and other values indicate failure. 
-     * @return RetCode Function execution result. `0` indicates successful execution and other values indicate failure.
+     * Get Function execution result. 0 indicates successful execution, 2 indicates the function is running, 3 indicates an execution interrupt, and other values indicate failure. 
+     * @return RetCode Function execution result. 0 indicates successful execution, 2 indicates the function is running, 3 indicates an execution interrupt, and other values indicate failure.
      */
     public Long getRetCode() {
         return this.RetCode;
     }
 
     /**
-     * Set Function execution result. `0` indicates successful execution and other values indicate failure.
-     * @param RetCode Function execution result. `0` indicates successful execution and other values indicate failure.
+     * Set Function execution result. 0 indicates successful execution, 2 indicates the function is running, 3 indicates an execution interrupt, and other values indicate failure.
+     * @param RetCode Function execution result. 0 indicates successful execution, 2 indicates the function is running, 3 indicates an execution interrupt, and other values indicate failure.
      */
     public void setRetCode(Long RetCode) {
         this.RetCode = RetCode;
     }
 
     /**
-     * Get It specifies whether the function invocation is finished. `1` indicates execution completion and other values indicate that exceptions occurred during the invocation. 
-     * @return InvokeFinished It specifies whether the function invocation is finished. `1` indicates execution completion and other values indicate that exceptions occurred during the invocation.
+     * Get Whether the function call ends. If so, 1 means execution ended, and additional values indicate a call exception. 
+     * @return InvokeFinished Whether the function call ends. If so, 1 means execution ended, and additional values indicate a call exception.
      */
     public Long getInvokeFinished() {
         return this.InvokeFinished;
     }
 
     /**
-     * Set It specifies whether the function invocation is finished. `1` indicates execution completion and other values indicate that exceptions occurred during the invocation.
-     * @param InvokeFinished It specifies whether the function invocation is finished. `1` indicates execution completion and other values indicate that exceptions occurred during the invocation.
+     * Set Whether the function call ends. If so, 1 means execution ended, and additional values indicate a call exception.
+     * @param InvokeFinished Whether the function call ends. If so, 1 means execution ended, and additional values indicate a call exception.
      */
     public void setInvokeFinished(Long InvokeFinished) {
         this.InvokeFinished = InvokeFinished;
     }
 
     /**
-     * Get Duration of the function execution. The unit is millisecond (ms). 
-     * @return Duration Duration of the function execution. The unit is millisecond (ms).
+     * Get Function execution duration in milliseconds. 
+     * @return Duration Function execution duration in milliseconds.
      */
     public Float getDuration() {
         return this.Duration;
     }
 
     /**
-     * Set Duration of the function execution. The unit is millisecond (ms).
-     * @param Duration Duration of the function execution. The unit is millisecond (ms).
+     * Set Function execution duration in milliseconds.
+     * @param Duration Function execution duration in milliseconds.
      */
     public void setDuration(Float Duration) {
         this.Duration = Duration;
     }
 
     /**
-     * Get Function billing duration. The unit is millisecond (ms). The value is rounded up to a multiple of 100 ms. 
-     * @return BillDuration Function billing duration. The unit is millisecond (ms). The value is rounded up to a multiple of 100 ms.
+     * Get Billing duration of a function. It is rounded up to the nearest 100 ms based on the duration, in ms. 
+     * @return BillDuration Billing duration of a function. It is rounded up to the nearest 100 ms based on the duration, in ms.
      */
     public Long getBillDuration() {
         return this.BillDuration;
     }
 
     /**
-     * Set Function billing duration. The unit is millisecond (ms). The value is rounded up to a multiple of 100 ms.
-     * @param BillDuration Function billing duration. The unit is millisecond (ms). The value is rounded up to a multiple of 100 ms.
+     * Set Billing duration of a function. It is rounded up to the nearest 100 ms based on the duration, in ms.
+     * @param BillDuration Billing duration of a function. It is rounded up to the nearest 100 ms based on the duration, in ms.
      */
     public void setBillDuration(Long BillDuration) {
         this.BillDuration = BillDuration;
     }
 
     /**
-     * Get Actual memory size used during the function execution. The unit is byte. 
-     * @return MemUsage Actual memory size used during the function execution. The unit is byte.
+     * Get Memory size actually consumed during function execution, in bytes. 
+     * @return MemUsage Memory size actually consumed during function execution, in bytes.
      */
     public Long getMemUsage() {
         return this.MemUsage;
     }
 
     /**
-     * Set Actual memory size used during the function execution. The unit is byte.
-     * @param MemUsage Actual memory size used during the function execution. The unit is byte.
+     * Set Memory size actually consumed during function execution, in bytes.
+     * @param MemUsage Memory size actually consumed during function execution, in bytes.
      */
     public void setMemUsage(Long MemUsage) {
         this.MemUsage = MemUsage;
     }
 
     /**
-     * Get Function execution logs 
-     * @return Log Function execution logs
+     * Get Log output during function execution 
+     * @return Log Log output during function execution
      */
     public String getLog() {
         return this.Log;
     }
 
     /**
-     * Set Function execution logs
-     * @param Log Function execution logs
+     * Set Log output during function execution
+     * @param Log Log output during function execution
      */
     public void setLog(String Log) {
         this.Log = Log;
     }
 
     /**
-     * Get Log level 
-     * @return Level Log level
+     * Get Log level. 
+     * @return Level Log level.
      * @deprecated
      */
     @Deprecated
@@ -285,8 +285,8 @@ public class FunctionLog extends AbstractModel {
     }
 
     /**
-     * Set Log level
-     * @param Level Log level
+     * Set Log level.
+     * @param Level Log level.
      * @deprecated
      */
     @Deprecated
@@ -315,16 +315,16 @@ public class FunctionLog extends AbstractModel {
     }
 
     /**
-     * Get Number of retries 
-     * @return RetryNum Number of retries
+     * Get Number of retries. 
+     * @return RetryNum Number of retries.
      */
     public Long getRetryNum() {
         return this.RetryNum;
     }
 
     /**
-     * Set Number of retries
-     * @param RetryNum Number of retries
+     * Set Number of retries.
+     * @param RetryNum Number of retries.
      */
     public void setRetryNum(Long RetryNum) {
         this.RetryNum = RetryNum;

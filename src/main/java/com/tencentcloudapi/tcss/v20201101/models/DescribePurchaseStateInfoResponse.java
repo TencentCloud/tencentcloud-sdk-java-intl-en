@@ -24,152 +24,158 @@ import java.util.HashMap;
 public class DescribePurchaseStateInfoResponse extends AbstractModel {
 
     /**
-    * Valid values: `0` (available for trial and purchase); `1` (available for purchase only after failed trial review or trial expiration); `2` (trial effective); `3` (Pro Edition effective); `4` (Pro Edition expired).
+    * <p>0: available for trial application and purchase; 1: purchase only (including failed trial review and expired trial); 2: trial active; 3: Pro Edition active; 4: Pro Edition expired</p>
     */
     @SerializedName("State")
     @Expose
     private Long State;
 
     /**
-    * 
+    * <p>Total resource cores = total protected cores + unprotected cores</p>
     */
     @SerializedName("AllCoresCnt")
     @Expose
     private Long AllCoresCnt;
 
     /**
-    * Total number of protected cores. It is the sum of the number of purchased cores, the number of free trial cores, and the number of elastic billing cores.
+    * <p>Total protected cores = purchased cores + trial granted cores + elastic billing cores</p>
     */
     @SerializedName("CoresCnt")
     @Expose
     private Long CoresCnt;
 
     /**
-    * 
+    * <p>Unprotected cores (number of resource cores with protection not enabled)</p>
     */
     @SerializedName("UndefendCoresCnt")
     @Expose
     private Long UndefendCoresCnt;
 
     /**
-    * Number of purchased cores
+    * <p>Number of purchased cores</p>
     */
     @SerializedName("AuthorizedCoresCnt")
     @Expose
     private Long AuthorizedCoresCnt;
 
     /**
-    * Number of free trial cores for Pro Edition.
+    * <p>Trial giveaway of Pro Edition cores</p>
     */
     @SerializedName("GivenAuthorizedCoresCnt")
     @Expose
     private Long GivenAuthorizedCoresCnt;
 
     /**
-    * 
+    * <p>Current number of elastic billing cores</p>
     */
     @SerializedName("CurrentFlexibleCoresCnt")
     @Expose
     private Long CurrentFlexibleCoresCnt;
 
     /**
-    * Image count
+    * <p>Number of images.</p>
     */
     @SerializedName("ImageCnt")
     @Expose
     private Long ImageCnt;
 
     /**
-    * Number of licensed images
+    * <p>Number of licensed images</p>
     */
     @SerializedName("AuthorizedImageCnt")
     @Expose
     private Long AuthorizedImageCnt;
 
     /**
-    * Expiration time
+    * <p>Expiration time.</p>
     */
     @SerializedName("ExpirationTime")
     @Expose
     private String ExpirationTime;
 
     /**
-    * Number of purchased image licenses
+    * <p>Number of purchased image licenses</p>
     */
     @SerializedName("PurchasedAuthorizedCnt")
     @Expose
     private Long PurchasedAuthorizedCnt;
 
     /**
-    * 0 indicates the default status (it has not been set by the user, namely the initial status); 1 indicates automatic renewal; 2 indicates explicit non-automatic renewal (it has been set by the user).
+    * <p>0 indicates the default state (not set by the user, i.e., the initial state), 1 indicates auto-renewal, and 2 indicates explicitly no auto-renewal (set by the user).</p>
     */
     @SerializedName("AutomaticRenewal")
     @Expose
     private Long AutomaticRenewal;
 
     /**
-    * Complimentary image licenses during the trial period may expire.
+    * <p>Complimentary image licenses during the trial period may expire.</p>
     */
     @SerializedName("GivenAuthorizedCnt")
     @Expose
     private Long GivenAuthorizedCnt;
 
     /**
-    * Start time.
+    * <p>Start time</p>
     */
     @SerializedName("BeginTime")
     @Expose
     private String BeginTime;
 
     /**
-    * Substatus (specific meaning depending on the State field)
-Valid values when State is 4: ISOLATE, TERMINATED.
+    * <p>Sub-status (specific meaning depending on the State field)<br>When State is 4, valid values: ISOLATE (isolated) DESTROED (terminated)</p>
     */
     @SerializedName("SubState")
     @Expose
     private String SubState;
 
     /**
-    * Billing key.
+    * <p>Billing key</p>
     */
     @SerializedName("InquireKey")
     @Expose
     private String InquireKey;
 
     /**
-    * 
+    * <p>Protection policy</p>
     */
     @SerializedName("DefendPolicy")
     @Expose
     private String DefendPolicy;
 
     /**
-    * 
+    * <p>Upper limit of elastic billing cores</p>
     */
     @SerializedName("FlexibleCoresLimit")
     @Expose
     private Long FlexibleCoresLimit;
 
     /**
-    * 
+    * <p>Number of cores in the protected cluster</p>
     */
     @SerializedName("DefendClusterCoresCnt")
     @Expose
     private Long DefendClusterCoresCnt;
 
     /**
-    * 
+    * <p>Protected host cores</p>
     */
     @SerializedName("DefendHostCoresCnt")
     @Expose
     private Long DefendHostCoresCnt;
 
     /**
-    * Number of trial cores for Pro Edition.
+    * <p>Number of cores of the Pro Edition for trial use</p>
     */
     @SerializedName("TrialCoresCnt")
     @Expose
     private Long TrialCoresCnt;
+
+    /**
+    * <p>Number of machines with zero protection containers.</p>
+    */
+    @SerializedName("NoContainerCoresCnt")
+    @Expose
+    private Long NoContainerCoresCnt;
 
     /**
     * The unique request ID, generated by the server, will be returned for every request (if the request fails to reach the server for other reasons, the request will not obtain a RequestId). RequestId is required for locating a problem.
@@ -179,343 +185,355 @@ Valid values when State is 4: ISOLATE, TERMINATED.
     private String RequestId;
 
     /**
-     * Get Valid values: `0` (available for trial and purchase); `1` (available for purchase only after failed trial review or trial expiration); `2` (trial effective); `3` (Pro Edition effective); `4` (Pro Edition expired). 
-     * @return State Valid values: `0` (available for trial and purchase); `1` (available for purchase only after failed trial review or trial expiration); `2` (trial effective); `3` (Pro Edition effective); `4` (Pro Edition expired).
+     * Get <p>0: available for trial application and purchase; 1: purchase only (including failed trial review and expired trial); 2: trial active; 3: Pro Edition active; 4: Pro Edition expired</p> 
+     * @return State <p>0: available for trial application and purchase; 1: purchase only (including failed trial review and expired trial); 2: trial active; 3: Pro Edition active; 4: Pro Edition expired</p>
      */
     public Long getState() {
         return this.State;
     }
 
     /**
-     * Set Valid values: `0` (available for trial and purchase); `1` (available for purchase only after failed trial review or trial expiration); `2` (trial effective); `3` (Pro Edition effective); `4` (Pro Edition expired).
-     * @param State Valid values: `0` (available for trial and purchase); `1` (available for purchase only after failed trial review or trial expiration); `2` (trial effective); `3` (Pro Edition effective); `4` (Pro Edition expired).
+     * Set <p>0: available for trial application and purchase; 1: purchase only (including failed trial review and expired trial); 2: trial active; 3: Pro Edition active; 4: Pro Edition expired</p>
+     * @param State <p>0: available for trial application and purchase; 1: purchase only (including failed trial review and expired trial); 2: trial active; 3: Pro Edition active; 4: Pro Edition expired</p>
      */
     public void setState(Long State) {
         this.State = State;
     }
 
     /**
-     * Get  
-     * @return AllCoresCnt 
+     * Get <p>Total resource cores = total protected cores + unprotected cores</p> 
+     * @return AllCoresCnt <p>Total resource cores = total protected cores + unprotected cores</p>
      */
     public Long getAllCoresCnt() {
         return this.AllCoresCnt;
     }
 
     /**
-     * Set 
-     * @param AllCoresCnt 
+     * Set <p>Total resource cores = total protected cores + unprotected cores</p>
+     * @param AllCoresCnt <p>Total resource cores = total protected cores + unprotected cores</p>
      */
     public void setAllCoresCnt(Long AllCoresCnt) {
         this.AllCoresCnt = AllCoresCnt;
     }
 
     /**
-     * Get Total number of protected cores. It is the sum of the number of purchased cores, the number of free trial cores, and the number of elastic billing cores. 
-     * @return CoresCnt Total number of protected cores. It is the sum of the number of purchased cores, the number of free trial cores, and the number of elastic billing cores.
+     * Get <p>Total protected cores = purchased cores + trial granted cores + elastic billing cores</p> 
+     * @return CoresCnt <p>Total protected cores = purchased cores + trial granted cores + elastic billing cores</p>
      */
     public Long getCoresCnt() {
         return this.CoresCnt;
     }
 
     /**
-     * Set Total number of protected cores. It is the sum of the number of purchased cores, the number of free trial cores, and the number of elastic billing cores.
-     * @param CoresCnt Total number of protected cores. It is the sum of the number of purchased cores, the number of free trial cores, and the number of elastic billing cores.
+     * Set <p>Total protected cores = purchased cores + trial granted cores + elastic billing cores</p>
+     * @param CoresCnt <p>Total protected cores = purchased cores + trial granted cores + elastic billing cores</p>
      */
     public void setCoresCnt(Long CoresCnt) {
         this.CoresCnt = CoresCnt;
     }
 
     /**
-     * Get  
-     * @return UndefendCoresCnt 
+     * Get <p>Unprotected cores (number of resource cores with protection not enabled)</p> 
+     * @return UndefendCoresCnt <p>Unprotected cores (number of resource cores with protection not enabled)</p>
      */
     public Long getUndefendCoresCnt() {
         return this.UndefendCoresCnt;
     }
 
     /**
-     * Set 
-     * @param UndefendCoresCnt 
+     * Set <p>Unprotected cores (number of resource cores with protection not enabled)</p>
+     * @param UndefendCoresCnt <p>Unprotected cores (number of resource cores with protection not enabled)</p>
      */
     public void setUndefendCoresCnt(Long UndefendCoresCnt) {
         this.UndefendCoresCnt = UndefendCoresCnt;
     }
 
     /**
-     * Get Number of purchased cores 
-     * @return AuthorizedCoresCnt Number of purchased cores
+     * Get <p>Number of purchased cores</p> 
+     * @return AuthorizedCoresCnt <p>Number of purchased cores</p>
      */
     public Long getAuthorizedCoresCnt() {
         return this.AuthorizedCoresCnt;
     }
 
     /**
-     * Set Number of purchased cores
-     * @param AuthorizedCoresCnt Number of purchased cores
+     * Set <p>Number of purchased cores</p>
+     * @param AuthorizedCoresCnt <p>Number of purchased cores</p>
      */
     public void setAuthorizedCoresCnt(Long AuthorizedCoresCnt) {
         this.AuthorizedCoresCnt = AuthorizedCoresCnt;
     }
 
     /**
-     * Get Number of free trial cores for Pro Edition. 
-     * @return GivenAuthorizedCoresCnt Number of free trial cores for Pro Edition.
+     * Get <p>Trial giveaway of Pro Edition cores</p> 
+     * @return GivenAuthorizedCoresCnt <p>Trial giveaway of Pro Edition cores</p>
      */
     public Long getGivenAuthorizedCoresCnt() {
         return this.GivenAuthorizedCoresCnt;
     }
 
     /**
-     * Set Number of free trial cores for Pro Edition.
-     * @param GivenAuthorizedCoresCnt Number of free trial cores for Pro Edition.
+     * Set <p>Trial giveaway of Pro Edition cores</p>
+     * @param GivenAuthorizedCoresCnt <p>Trial giveaway of Pro Edition cores</p>
      */
     public void setGivenAuthorizedCoresCnt(Long GivenAuthorizedCoresCnt) {
         this.GivenAuthorizedCoresCnt = GivenAuthorizedCoresCnt;
     }
 
     /**
-     * Get  
-     * @return CurrentFlexibleCoresCnt 
+     * Get <p>Current number of elastic billing cores</p> 
+     * @return CurrentFlexibleCoresCnt <p>Current number of elastic billing cores</p>
      */
     public Long getCurrentFlexibleCoresCnt() {
         return this.CurrentFlexibleCoresCnt;
     }
 
     /**
-     * Set 
-     * @param CurrentFlexibleCoresCnt 
+     * Set <p>Current number of elastic billing cores</p>
+     * @param CurrentFlexibleCoresCnt <p>Current number of elastic billing cores</p>
      */
     public void setCurrentFlexibleCoresCnt(Long CurrentFlexibleCoresCnt) {
         this.CurrentFlexibleCoresCnt = CurrentFlexibleCoresCnt;
     }
 
     /**
-     * Get Image count 
-     * @return ImageCnt Image count
+     * Get <p>Number of images.</p> 
+     * @return ImageCnt <p>Number of images.</p>
      */
     public Long getImageCnt() {
         return this.ImageCnt;
     }
 
     /**
-     * Set Image count
-     * @param ImageCnt Image count
+     * Set <p>Number of images.</p>
+     * @param ImageCnt <p>Number of images.</p>
      */
     public void setImageCnt(Long ImageCnt) {
         this.ImageCnt = ImageCnt;
     }
 
     /**
-     * Get Number of licensed images 
-     * @return AuthorizedImageCnt Number of licensed images
+     * Get <p>Number of licensed images</p> 
+     * @return AuthorizedImageCnt <p>Number of licensed images</p>
      */
     public Long getAuthorizedImageCnt() {
         return this.AuthorizedImageCnt;
     }
 
     /**
-     * Set Number of licensed images
-     * @param AuthorizedImageCnt Number of licensed images
+     * Set <p>Number of licensed images</p>
+     * @param AuthorizedImageCnt <p>Number of licensed images</p>
      */
     public void setAuthorizedImageCnt(Long AuthorizedImageCnt) {
         this.AuthorizedImageCnt = AuthorizedImageCnt;
     }
 
     /**
-     * Get Expiration time 
-     * @return ExpirationTime Expiration time
+     * Get <p>Expiration time.</p> 
+     * @return ExpirationTime <p>Expiration time.</p>
      */
     public String getExpirationTime() {
         return this.ExpirationTime;
     }
 
     /**
-     * Set Expiration time
-     * @param ExpirationTime Expiration time
+     * Set <p>Expiration time.</p>
+     * @param ExpirationTime <p>Expiration time.</p>
      */
     public void setExpirationTime(String ExpirationTime) {
         this.ExpirationTime = ExpirationTime;
     }
 
     /**
-     * Get Number of purchased image licenses 
-     * @return PurchasedAuthorizedCnt Number of purchased image licenses
+     * Get <p>Number of purchased image licenses</p> 
+     * @return PurchasedAuthorizedCnt <p>Number of purchased image licenses</p>
      */
     public Long getPurchasedAuthorizedCnt() {
         return this.PurchasedAuthorizedCnt;
     }
 
     /**
-     * Set Number of purchased image licenses
-     * @param PurchasedAuthorizedCnt Number of purchased image licenses
+     * Set <p>Number of purchased image licenses</p>
+     * @param PurchasedAuthorizedCnt <p>Number of purchased image licenses</p>
      */
     public void setPurchasedAuthorizedCnt(Long PurchasedAuthorizedCnt) {
         this.PurchasedAuthorizedCnt = PurchasedAuthorizedCnt;
     }
 
     /**
-     * Get 0 indicates the default status (it has not been set by the user, namely the initial status); 1 indicates automatic renewal; 2 indicates explicit non-automatic renewal (it has been set by the user). 
-     * @return AutomaticRenewal 0 indicates the default status (it has not been set by the user, namely the initial status); 1 indicates automatic renewal; 2 indicates explicit non-automatic renewal (it has been set by the user).
+     * Get <p>0 indicates the default state (not set by the user, i.e., the initial state), 1 indicates auto-renewal, and 2 indicates explicitly no auto-renewal (set by the user).</p> 
+     * @return AutomaticRenewal <p>0 indicates the default state (not set by the user, i.e., the initial state), 1 indicates auto-renewal, and 2 indicates explicitly no auto-renewal (set by the user).</p>
      */
     public Long getAutomaticRenewal() {
         return this.AutomaticRenewal;
     }
 
     /**
-     * Set 0 indicates the default status (it has not been set by the user, namely the initial status); 1 indicates automatic renewal; 2 indicates explicit non-automatic renewal (it has been set by the user).
-     * @param AutomaticRenewal 0 indicates the default status (it has not been set by the user, namely the initial status); 1 indicates automatic renewal; 2 indicates explicit non-automatic renewal (it has been set by the user).
+     * Set <p>0 indicates the default state (not set by the user, i.e., the initial state), 1 indicates auto-renewal, and 2 indicates explicitly no auto-renewal (set by the user).</p>
+     * @param AutomaticRenewal <p>0 indicates the default state (not set by the user, i.e., the initial state), 1 indicates auto-renewal, and 2 indicates explicitly no auto-renewal (set by the user).</p>
      */
     public void setAutomaticRenewal(Long AutomaticRenewal) {
         this.AutomaticRenewal = AutomaticRenewal;
     }
 
     /**
-     * Get Complimentary image licenses during the trial period may expire. 
-     * @return GivenAuthorizedCnt Complimentary image licenses during the trial period may expire.
+     * Get <p>Complimentary image licenses during the trial period may expire.</p> 
+     * @return GivenAuthorizedCnt <p>Complimentary image licenses during the trial period may expire.</p>
      */
     public Long getGivenAuthorizedCnt() {
         return this.GivenAuthorizedCnt;
     }
 
     /**
-     * Set Complimentary image licenses during the trial period may expire.
-     * @param GivenAuthorizedCnt Complimentary image licenses during the trial period may expire.
+     * Set <p>Complimentary image licenses during the trial period may expire.</p>
+     * @param GivenAuthorizedCnt <p>Complimentary image licenses during the trial period may expire.</p>
      */
     public void setGivenAuthorizedCnt(Long GivenAuthorizedCnt) {
         this.GivenAuthorizedCnt = GivenAuthorizedCnt;
     }
 
     /**
-     * Get Start time. 
-     * @return BeginTime Start time.
+     * Get <p>Start time</p> 
+     * @return BeginTime <p>Start time</p>
      */
     public String getBeginTime() {
         return this.BeginTime;
     }
 
     /**
-     * Set Start time.
-     * @param BeginTime Start time.
+     * Set <p>Start time</p>
+     * @param BeginTime <p>Start time</p>
      */
     public void setBeginTime(String BeginTime) {
         this.BeginTime = BeginTime;
     }
 
     /**
-     * Get Substatus (specific meaning depending on the State field)
-Valid values when State is 4: ISOLATE, TERMINATED. 
-     * @return SubState Substatus (specific meaning depending on the State field)
-Valid values when State is 4: ISOLATE, TERMINATED.
+     * Get <p>Sub-status (specific meaning depending on the State field)<br>When State is 4, valid values: ISOLATE (isolated) DESTROED (terminated)</p> 
+     * @return SubState <p>Sub-status (specific meaning depending on the State field)<br>When State is 4, valid values: ISOLATE (isolated) DESTROED (terminated)</p>
      */
     public String getSubState() {
         return this.SubState;
     }
 
     /**
-     * Set Substatus (specific meaning depending on the State field)
-Valid values when State is 4: ISOLATE, TERMINATED.
-     * @param SubState Substatus (specific meaning depending on the State field)
-Valid values when State is 4: ISOLATE, TERMINATED.
+     * Set <p>Sub-status (specific meaning depending on the State field)<br>When State is 4, valid values: ISOLATE (isolated) DESTROED (terminated)</p>
+     * @param SubState <p>Sub-status (specific meaning depending on the State field)<br>When State is 4, valid values: ISOLATE (isolated) DESTROED (terminated)</p>
      */
     public void setSubState(String SubState) {
         this.SubState = SubState;
     }
 
     /**
-     * Get Billing key. 
-     * @return InquireKey Billing key.
+     * Get <p>Billing key</p> 
+     * @return InquireKey <p>Billing key</p>
      */
     public String getInquireKey() {
         return this.InquireKey;
     }
 
     /**
-     * Set Billing key.
-     * @param InquireKey Billing key.
+     * Set <p>Billing key</p>
+     * @param InquireKey <p>Billing key</p>
      */
     public void setInquireKey(String InquireKey) {
         this.InquireKey = InquireKey;
     }
 
     /**
-     * Get  
-     * @return DefendPolicy 
+     * Get <p>Protection policy</p> 
+     * @return DefendPolicy <p>Protection policy</p>
      */
     public String getDefendPolicy() {
         return this.DefendPolicy;
     }
 
     /**
-     * Set 
-     * @param DefendPolicy 
+     * Set <p>Protection policy</p>
+     * @param DefendPolicy <p>Protection policy</p>
      */
     public void setDefendPolicy(String DefendPolicy) {
         this.DefendPolicy = DefendPolicy;
     }
 
     /**
-     * Get  
-     * @return FlexibleCoresLimit 
+     * Get <p>Upper limit of elastic billing cores</p> 
+     * @return FlexibleCoresLimit <p>Upper limit of elastic billing cores</p>
      */
     public Long getFlexibleCoresLimit() {
         return this.FlexibleCoresLimit;
     }
 
     /**
-     * Set 
-     * @param FlexibleCoresLimit 
+     * Set <p>Upper limit of elastic billing cores</p>
+     * @param FlexibleCoresLimit <p>Upper limit of elastic billing cores</p>
      */
     public void setFlexibleCoresLimit(Long FlexibleCoresLimit) {
         this.FlexibleCoresLimit = FlexibleCoresLimit;
     }
 
     /**
-     * Get  
-     * @return DefendClusterCoresCnt 
+     * Get <p>Number of cores in the protected cluster</p> 
+     * @return DefendClusterCoresCnt <p>Number of cores in the protected cluster</p>
      */
     public Long getDefendClusterCoresCnt() {
         return this.DefendClusterCoresCnt;
     }
 
     /**
-     * Set 
-     * @param DefendClusterCoresCnt 
+     * Set <p>Number of cores in the protected cluster</p>
+     * @param DefendClusterCoresCnt <p>Number of cores in the protected cluster</p>
      */
     public void setDefendClusterCoresCnt(Long DefendClusterCoresCnt) {
         this.DefendClusterCoresCnt = DefendClusterCoresCnt;
     }
 
     /**
-     * Get  
-     * @return DefendHostCoresCnt 
+     * Get <p>Protected host cores</p> 
+     * @return DefendHostCoresCnt <p>Protected host cores</p>
      */
     public Long getDefendHostCoresCnt() {
         return this.DefendHostCoresCnt;
     }
 
     /**
-     * Set 
-     * @param DefendHostCoresCnt 
+     * Set <p>Protected host cores</p>
+     * @param DefendHostCoresCnt <p>Protected host cores</p>
      */
     public void setDefendHostCoresCnt(Long DefendHostCoresCnt) {
         this.DefendHostCoresCnt = DefendHostCoresCnt;
     }
 
     /**
-     * Get Number of trial cores for Pro Edition. 
-     * @return TrialCoresCnt Number of trial cores for Pro Edition.
+     * Get <p>Number of cores of the Pro Edition for trial use</p> 
+     * @return TrialCoresCnt <p>Number of cores of the Pro Edition for trial use</p>
      */
     public Long getTrialCoresCnt() {
         return this.TrialCoresCnt;
     }
 
     /**
-     * Set Number of trial cores for Pro Edition.
-     * @param TrialCoresCnt Number of trial cores for Pro Edition.
+     * Set <p>Number of cores of the Pro Edition for trial use</p>
+     * @param TrialCoresCnt <p>Number of cores of the Pro Edition for trial use</p>
      */
     public void setTrialCoresCnt(Long TrialCoresCnt) {
         this.TrialCoresCnt = TrialCoresCnt;
+    }
+
+    /**
+     * Get <p>Number of machines with zero protection containers.</p> 
+     * @return NoContainerCoresCnt <p>Number of machines with zero protection containers.</p>
+     */
+    public Long getNoContainerCoresCnt() {
+        return this.NoContainerCoresCnt;
+    }
+
+    /**
+     * Set <p>Number of machines with zero protection containers.</p>
+     * @param NoContainerCoresCnt <p>Number of machines with zero protection containers.</p>
+     */
+    public void setNoContainerCoresCnt(Long NoContainerCoresCnt) {
+        this.NoContainerCoresCnt = NoContainerCoresCnt;
     }
 
     /**
@@ -605,6 +623,9 @@ Valid values when State is 4: ISOLATE, TERMINATED.
         if (source.TrialCoresCnt != null) {
             this.TrialCoresCnt = new Long(source.TrialCoresCnt);
         }
+        if (source.NoContainerCoresCnt != null) {
+            this.NoContainerCoresCnt = new Long(source.NoContainerCoresCnt);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -636,6 +657,7 @@ Valid values when State is 4: ISOLATE, TERMINATED.
         this.setParamSimple(map, prefix + "DefendClusterCoresCnt", this.DefendClusterCoresCnt);
         this.setParamSimple(map, prefix + "DefendHostCoresCnt", this.DefendHostCoresCnt);
         this.setParamSimple(map, prefix + "TrialCoresCnt", this.TrialCoresCnt);
+        this.setParamSimple(map, prefix + "NoContainerCoresCnt", this.NoContainerCoresCnt);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

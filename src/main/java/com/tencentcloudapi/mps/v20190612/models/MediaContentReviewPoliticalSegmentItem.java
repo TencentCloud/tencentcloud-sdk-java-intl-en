@@ -38,14 +38,14 @@ public class MediaContentReviewPoliticalSegmentItem extends AbstractModel {
     private Float EndTimeOffset;
 
     /**
-    * Suspected segment sensitivity score.
+    * Sensitivity score of the suspected segment.
     */
     @SerializedName("Confidence")
     @Expose
     private Float Confidence;
 
     /**
-    * Suspected segment sensitive result suggestion, value ranges from...to...
+    * Sensitivity result suggestion for the suspected segment. Value range:
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
@@ -55,24 +55,24 @@ public class MediaContentReviewPoliticalSegmentItem extends AbstractModel {
     private String Suggestion;
 
     /**
-    * Sensitive person, violative icon name.
+    * Sensitive person and violative icon name.
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * Suspected segment sensitive result Tag. The mapping between the LabelSet parameter in the content moderation template [visual sensitive task control parameter](https://www.tencentcloud.com/document/api/862/37615?from_cn_redirect=1#PoliticalImgReviewTemplateInfo) and the parameter value range of this parameter:
+    * Suspected segment moderation result tag. Mapping between the LabelSet parameter in the moderation template frame moderation task control parameter (https://www.tencentcloud.com/document/api/862/37615?from_cn_redirect=1#PoliticalImgReviewTemplateInfo) and the value range of this parameter:
 violation_photo:
 <li>violation_photo: violation icon.</li>
 politician:
-<li>nation_politician: State leaders;</li>
+<li>nation_politician: State leaders.</li>
 <li>province_politician: provincial and ministerial leaders;</li>
 <li>bureau_politician: bureau-level official;</li>
 <li>county_politician: county-level official;</li>
 <li>rural_politician: township-level official;</li>
 <li>sensitive_politician: sensitive person.</li>
-<li>foreign_politician: state leaders of other countries.</li>
+<li>foreign_politician: State leaders of other countries.</li>
 entertainment:
 <li>sensitive_entertainment: sensitive entertainment figure.</li>
 sport:
@@ -80,7 +80,7 @@ sport:
 entrepreneur:
 <li>sensitive_entrepreneur: sensitive entrepreneur.</li>
 scholar:
-<li>sensitive_scholar: Sensitive educational scholars.</li>
+<li>sensitive_scholar: Sensitive educational scholar.</li>
 celebrity:
 <li>sensitive_celebrity: sensitive celebrity.</li>
 <li>historical_celebrity: historical celebrity.</li>
@@ -92,22 +92,22 @@ military:
     private String Label;
 
     /**
-    * Suspected image URL (Images are not retained permanently upon arrival)
-The image will be deleted after the PicUrlExpireTime time point.
+    * Suspected image URL (images are not retained permanently and will be deleted upon reaching
+Images will be deleted after the PicUrlExpireTime time point).
     */
     @SerializedName("Url")
     @Expose
     private String Url;
 
     /**
-    * Area coordinates of sensitive person and violation icon occurrence (pixel-level), [x1, y1, x2, y2], i.e., coordinates of the top-left corner and coordinate of the bottom-right corner.
+    * Zone coordinates where sensitive persons and violation icons appear (pixel-level), [x1, y1, x2, y2], i.e. coordinates of the top-left corner and bottom-right corner.
     */
     @SerializedName("AreaCoordSet")
     @Expose
     private Long [] AreaCoordSet;
 
     /**
-    * Expiration time of the suspected image URL, using the ISO date format (https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
+    * Expiration time of the suspected image URL in ISO date format (https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
     */
     @SerializedName("PicUrlExpireTime")
     @Expose
@@ -146,27 +146,27 @@ The image will be deleted after the PicUrlExpireTime time point.
     }
 
     /**
-     * Get Suspected segment sensitivity score. 
-     * @return Confidence Suspected segment sensitivity score.
+     * Get Sensitivity score of the suspected segment. 
+     * @return Confidence Sensitivity score of the suspected segment.
      */
     public Float getConfidence() {
         return this.Confidence;
     }
 
     /**
-     * Set Suspected segment sensitivity score.
-     * @param Confidence Suspected segment sensitivity score.
+     * Set Sensitivity score of the suspected segment.
+     * @param Confidence Sensitivity score of the suspected segment.
      */
     public void setConfidence(Float Confidence) {
         this.Confidence = Confidence;
     }
 
     /**
-     * Get Suspected segment sensitive result suggestion, value ranges from...to...
+     * Get Sensitivity result suggestion for the suspected segment. Value range:
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li> 
-     * @return Suggestion Suspected segment sensitive result suggestion, value ranges from...to...
+     * @return Suggestion Sensitivity result suggestion for the suspected segment. Value range:
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
@@ -176,11 +176,11 @@ The image will be deleted after the PicUrlExpireTime time point.
     }
 
     /**
-     * Set Suspected segment sensitive result suggestion, value ranges from...to...
+     * Set Sensitivity result suggestion for the suspected segment. Value range:
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
-     * @param Suggestion Suspected segment sensitive result suggestion, value ranges from...to...
+     * @param Suggestion Sensitivity result suggestion for the suspected segment. Value range:
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
@@ -190,33 +190,33 @@ The image will be deleted after the PicUrlExpireTime time point.
     }
 
     /**
-     * Get Sensitive person, violative icon name. 
-     * @return Name Sensitive person, violative icon name.
+     * Get Sensitive person and violative icon name. 
+     * @return Name Sensitive person and violative icon name.
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Sensitive person, violative icon name.
-     * @param Name Sensitive person, violative icon name.
+     * Set Sensitive person and violative icon name.
+     * @param Name Sensitive person and violative icon name.
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Suspected segment sensitive result Tag. The mapping between the LabelSet parameter in the content moderation template [visual sensitive task control parameter](https://www.tencentcloud.com/document/api/862/37615?from_cn_redirect=1#PoliticalImgReviewTemplateInfo) and the parameter value range of this parameter:
+     * Get Suspected segment moderation result tag. Mapping between the LabelSet parameter in the moderation template frame moderation task control parameter (https://www.tencentcloud.com/document/api/862/37615?from_cn_redirect=1#PoliticalImgReviewTemplateInfo) and the value range of this parameter:
 violation_photo:
 <li>violation_photo: violation icon.</li>
 politician:
-<li>nation_politician: State leaders;</li>
+<li>nation_politician: State leaders.</li>
 <li>province_politician: provincial and ministerial leaders;</li>
 <li>bureau_politician: bureau-level official;</li>
 <li>county_politician: county-level official;</li>
 <li>rural_politician: township-level official;</li>
 <li>sensitive_politician: sensitive person.</li>
-<li>foreign_politician: state leaders of other countries.</li>
+<li>foreign_politician: State leaders of other countries.</li>
 entertainment:
 <li>sensitive_entertainment: sensitive entertainment figure.</li>
 sport:
@@ -224,23 +224,23 @@ sport:
 entrepreneur:
 <li>sensitive_entrepreneur: sensitive entrepreneur.</li>
 scholar:
-<li>sensitive_scholar: Sensitive educational scholars.</li>
+<li>sensitive_scholar: Sensitive educational scholar.</li>
 celebrity:
 <li>sensitive_celebrity: sensitive celebrity.</li>
 <li>historical_celebrity: historical celebrity.</li>
 military:
 <li>sensitive_military: sensitive military figure.</li> 
-     * @return Label Suspected segment sensitive result Tag. The mapping between the LabelSet parameter in the content moderation template [visual sensitive task control parameter](https://www.tencentcloud.com/document/api/862/37615?from_cn_redirect=1#PoliticalImgReviewTemplateInfo) and the parameter value range of this parameter:
+     * @return Label Suspected segment moderation result tag. Mapping between the LabelSet parameter in the moderation template frame moderation task control parameter (https://www.tencentcloud.com/document/api/862/37615?from_cn_redirect=1#PoliticalImgReviewTemplateInfo) and the value range of this parameter:
 violation_photo:
 <li>violation_photo: violation icon.</li>
 politician:
-<li>nation_politician: State leaders;</li>
+<li>nation_politician: State leaders.</li>
 <li>province_politician: provincial and ministerial leaders;</li>
 <li>bureau_politician: bureau-level official;</li>
 <li>county_politician: county-level official;</li>
 <li>rural_politician: township-level official;</li>
 <li>sensitive_politician: sensitive person.</li>
-<li>foreign_politician: state leaders of other countries.</li>
+<li>foreign_politician: State leaders of other countries.</li>
 entertainment:
 <li>sensitive_entertainment: sensitive entertainment figure.</li>
 sport:
@@ -248,7 +248,7 @@ sport:
 entrepreneur:
 <li>sensitive_entrepreneur: sensitive entrepreneur.</li>
 scholar:
-<li>sensitive_scholar: Sensitive educational scholars.</li>
+<li>sensitive_scholar: Sensitive educational scholar.</li>
 celebrity:
 <li>sensitive_celebrity: sensitive celebrity.</li>
 <li>historical_celebrity: historical celebrity.</li>
@@ -260,17 +260,17 @@ military:
     }
 
     /**
-     * Set Suspected segment sensitive result Tag. The mapping between the LabelSet parameter in the content moderation template [visual sensitive task control parameter](https://www.tencentcloud.com/document/api/862/37615?from_cn_redirect=1#PoliticalImgReviewTemplateInfo) and the parameter value range of this parameter:
+     * Set Suspected segment moderation result tag. Mapping between the LabelSet parameter in the moderation template frame moderation task control parameter (https://www.tencentcloud.com/document/api/862/37615?from_cn_redirect=1#PoliticalImgReviewTemplateInfo) and the value range of this parameter:
 violation_photo:
 <li>violation_photo: violation icon.</li>
 politician:
-<li>nation_politician: State leaders;</li>
+<li>nation_politician: State leaders.</li>
 <li>province_politician: provincial and ministerial leaders;</li>
 <li>bureau_politician: bureau-level official;</li>
 <li>county_politician: county-level official;</li>
 <li>rural_politician: township-level official;</li>
 <li>sensitive_politician: sensitive person.</li>
-<li>foreign_politician: state leaders of other countries.</li>
+<li>foreign_politician: State leaders of other countries.</li>
 entertainment:
 <li>sensitive_entertainment: sensitive entertainment figure.</li>
 sport:
@@ -278,23 +278,23 @@ sport:
 entrepreneur:
 <li>sensitive_entrepreneur: sensitive entrepreneur.</li>
 scholar:
-<li>sensitive_scholar: Sensitive educational scholars.</li>
+<li>sensitive_scholar: Sensitive educational scholar.</li>
 celebrity:
 <li>sensitive_celebrity: sensitive celebrity.</li>
 <li>historical_celebrity: historical celebrity.</li>
 military:
 <li>sensitive_military: sensitive military figure.</li>
-     * @param Label Suspected segment sensitive result Tag. The mapping between the LabelSet parameter in the content moderation template [visual sensitive task control parameter](https://www.tencentcloud.com/document/api/862/37615?from_cn_redirect=1#PoliticalImgReviewTemplateInfo) and the parameter value range of this parameter:
+     * @param Label Suspected segment moderation result tag. Mapping between the LabelSet parameter in the moderation template frame moderation task control parameter (https://www.tencentcloud.com/document/api/862/37615?from_cn_redirect=1#PoliticalImgReviewTemplateInfo) and the value range of this parameter:
 violation_photo:
 <li>violation_photo: violation icon.</li>
 politician:
-<li>nation_politician: State leaders;</li>
+<li>nation_politician: State leaders.</li>
 <li>province_politician: provincial and ministerial leaders;</li>
 <li>bureau_politician: bureau-level official;</li>
 <li>county_politician: county-level official;</li>
 <li>rural_politician: township-level official;</li>
 <li>sensitive_politician: sensitive person.</li>
-<li>foreign_politician: state leaders of other countries.</li>
+<li>foreign_politician: State leaders of other countries.</li>
 entertainment:
 <li>sensitive_entertainment: sensitive entertainment figure.</li>
 sport:
@@ -302,7 +302,7 @@ sport:
 entrepreneur:
 <li>sensitive_entrepreneur: sensitive entrepreneur.</li>
 scholar:
-<li>sensitive_scholar: Sensitive educational scholars.</li>
+<li>sensitive_scholar: Sensitive educational scholar.</li>
 celebrity:
 <li>sensitive_celebrity: sensitive celebrity.</li>
 <li>historical_celebrity: historical celebrity.</li>
@@ -314,52 +314,52 @@ military:
     }
 
     /**
-     * Get Suspected image URL (Images are not retained permanently upon arrival)
-The image will be deleted after the PicUrlExpireTime time point. 
-     * @return Url Suspected image URL (Images are not retained permanently upon arrival)
-The image will be deleted after the PicUrlExpireTime time point.
+     * Get Suspected image URL (images are not retained permanently and will be deleted upon reaching
+Images will be deleted after the PicUrlExpireTime time point). 
+     * @return Url Suspected image URL (images are not retained permanently and will be deleted upon reaching
+Images will be deleted after the PicUrlExpireTime time point).
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * Set Suspected image URL (Images are not retained permanently upon arrival)
-The image will be deleted after the PicUrlExpireTime time point.
-     * @param Url Suspected image URL (Images are not retained permanently upon arrival)
-The image will be deleted after the PicUrlExpireTime time point.
+     * Set Suspected image URL (images are not retained permanently and will be deleted upon reaching
+Images will be deleted after the PicUrlExpireTime time point).
+     * @param Url Suspected image URL (images are not retained permanently and will be deleted upon reaching
+Images will be deleted after the PicUrlExpireTime time point).
      */
     public void setUrl(String Url) {
         this.Url = Url;
     }
 
     /**
-     * Get Area coordinates of sensitive person and violation icon occurrence (pixel-level), [x1, y1, x2, y2], i.e., coordinates of the top-left corner and coordinate of the bottom-right corner. 
-     * @return AreaCoordSet Area coordinates of sensitive person and violation icon occurrence (pixel-level), [x1, y1, x2, y2], i.e., coordinates of the top-left corner and coordinate of the bottom-right corner.
+     * Get Zone coordinates where sensitive persons and violation icons appear (pixel-level), [x1, y1, x2, y2], i.e. coordinates of the top-left corner and bottom-right corner. 
+     * @return AreaCoordSet Zone coordinates where sensitive persons and violation icons appear (pixel-level), [x1, y1, x2, y2], i.e. coordinates of the top-left corner and bottom-right corner.
      */
     public Long [] getAreaCoordSet() {
         return this.AreaCoordSet;
     }
 
     /**
-     * Set Area coordinates of sensitive person and violation icon occurrence (pixel-level), [x1, y1, x2, y2], i.e., coordinates of the top-left corner and coordinate of the bottom-right corner.
-     * @param AreaCoordSet Area coordinates of sensitive person and violation icon occurrence (pixel-level), [x1, y1, x2, y2], i.e., coordinates of the top-left corner and coordinate of the bottom-right corner.
+     * Set Zone coordinates where sensitive persons and violation icons appear (pixel-level), [x1, y1, x2, y2], i.e. coordinates of the top-left corner and bottom-right corner.
+     * @param AreaCoordSet Zone coordinates where sensitive persons and violation icons appear (pixel-level), [x1, y1, x2, y2], i.e. coordinates of the top-left corner and bottom-right corner.
      */
     public void setAreaCoordSet(Long [] AreaCoordSet) {
         this.AreaCoordSet = AreaCoordSet;
     }
 
     /**
-     * Get Expiration time of the suspected image URL, using the ISO date format (https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52). 
-     * @return PicUrlExpireTime Expiration time of the suspected image URL, using the ISO date format (https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
+     * Get Expiration time of the suspected image URL in ISO date format (https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52). 
+     * @return PicUrlExpireTime Expiration time of the suspected image URL in ISO date format (https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
      */
     public String getPicUrlExpireTime() {
         return this.PicUrlExpireTime;
     }
 
     /**
-     * Set Expiration time of the suspected image URL, using the ISO date format (https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
-     * @param PicUrlExpireTime Expiration time of the suspected image URL, using the ISO date format (https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
+     * Set Expiration time of the suspected image URL in ISO date format (https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
+     * @param PicUrlExpireTime Expiration time of the suspected image URL in ISO date format (https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
      */
     public void setPicUrlExpireTime(String PicUrlExpireTime) {
         this.PicUrlExpireTime = PicUrlExpireTime;

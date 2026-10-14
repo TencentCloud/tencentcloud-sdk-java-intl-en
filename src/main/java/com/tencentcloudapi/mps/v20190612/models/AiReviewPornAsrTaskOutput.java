@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class AiReviewPornAsrTaskOutput extends AbstractModel {
 
     /**
-    * Asr text porn score, ranging from 0 to 100.
+    * Porn score of the Asr text. The score ranges from 0 to 100.
     */
     @SerializedName("Confidence")
     @Expose
     private Float Confidence;
 
     /**
-    * Asr text pornographic result suggestion, value ranges from...to...
+    * Asr text porn detection result suggestion. Value ranges from pass to review to block.
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
@@ -41,34 +41,34 @@ public class AiReviewPornAsrTaskOutput extends AbstractModel {
     private String Suggestion;
 
     /**
-    * Video segment list with suspect Asr text pornographic information.
+    * List of video segments whose Asr text is suspected of involving pornography.
     */
     @SerializedName("SegmentSet")
     @Expose
     private MediaContentReviewAsrTextSegmentItem [] SegmentSet;
 
     /**
-     * Get Asr text porn score, ranging from 0 to 100. 
-     * @return Confidence Asr text porn score, ranging from 0 to 100.
+     * Get Porn score of the Asr text. The score ranges from 0 to 100. 
+     * @return Confidence Porn score of the Asr text. The score ranges from 0 to 100.
      */
     public Float getConfidence() {
         return this.Confidence;
     }
 
     /**
-     * Set Asr text porn score, ranging from 0 to 100.
-     * @param Confidence Asr text porn score, ranging from 0 to 100.
+     * Set Porn score of the Asr text. The score ranges from 0 to 100.
+     * @param Confidence Porn score of the Asr text. The score ranges from 0 to 100.
      */
     public void setConfidence(Float Confidence) {
         this.Confidence = Confidence;
     }
 
     /**
-     * Get Asr text pornographic result suggestion, value ranges from...to...
+     * Get Asr text porn detection result suggestion. Value ranges from pass to review to block.
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li> 
-     * @return Suggestion Asr text pornographic result suggestion, value ranges from...to...
+     * @return Suggestion Asr text porn detection result suggestion. Value ranges from pass to review to block.
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
@@ -78,11 +78,11 @@ public class AiReviewPornAsrTaskOutput extends AbstractModel {
     }
 
     /**
-     * Set Asr text pornographic result suggestion, value ranges from...to...
+     * Set Asr text porn detection result suggestion. Value ranges from pass to review to block.
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
-     * @param Suggestion Asr text pornographic result suggestion, value ranges from...to...
+     * @param Suggestion Asr text porn detection result suggestion. Value ranges from pass to review to block.
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
@@ -92,16 +92,16 @@ public class AiReviewPornAsrTaskOutput extends AbstractModel {
     }
 
     /**
-     * Get Video segment list with suspect Asr text pornographic information. 
-     * @return SegmentSet Video segment list with suspect Asr text pornographic information.
+     * Get List of video segments whose Asr text is suspected of involving pornography. 
+     * @return SegmentSet List of video segments whose Asr text is suspected of involving pornography.
      */
     public MediaContentReviewAsrTextSegmentItem [] getSegmentSet() {
         return this.SegmentSet;
     }
 
     /**
-     * Set Video segment list with suspect Asr text pornographic information.
-     * @param SegmentSet Video segment list with suspect Asr text pornographic information.
+     * Set List of video segments whose Asr text is suspected of involving pornography.
+     * @param SegmentSet List of video segments whose Asr text is suspected of involving pornography.
      */
     public void setSegmentSet(MediaContentReviewAsrTextSegmentItem [] SegmentSet) {
         this.SegmentSet = SegmentSet;

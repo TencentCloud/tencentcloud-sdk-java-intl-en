@@ -38,7 +38,7 @@ public class InstanceLog extends AbstractModel {
     private String Level;
 
     /**
-    * Cluster node IP
+    * Cluster node IP address.
     */
     @SerializedName("Ip")
     @Expose
@@ -50,6 +50,34 @@ public class InstanceLog extends AbstractModel {
     @SerializedName("Message")
     @Expose
     private String Message;
+
+    /**
+    * Cluster node ID.
+    */
+    @SerializedName("NodeID")
+    @Expose
+    private String NodeID;
+
+    /**
+    * Slow log index name
+    */
+    @SerializedName("IndexName")
+    @Expose
+    private String IndexName;
+
+    /**
+    * Slow log index shards
+    */
+    @SerializedName("Shard")
+    @Expose
+    private String Shard;
+
+    /**
+    * Slow log index query time
+    */
+    @SerializedName("QueryCost")
+    @Expose
+    private String QueryCost;
 
     /**
      * Get Log time 
@@ -84,16 +112,16 @@ public class InstanceLog extends AbstractModel {
     }
 
     /**
-     * Get Cluster node IP 
-     * @return Ip Cluster node IP
+     * Get Cluster node IP address. 
+     * @return Ip Cluster node IP address.
      */
     public String getIp() {
         return this.Ip;
     }
 
     /**
-     * Set Cluster node IP
-     * @param Ip Cluster node IP
+     * Set Cluster node IP address.
+     * @param Ip Cluster node IP address.
      */
     public void setIp(String Ip) {
         this.Ip = Ip;
@@ -113,6 +141,70 @@ public class InstanceLog extends AbstractModel {
      */
     public void setMessage(String Message) {
         this.Message = Message;
+    }
+
+    /**
+     * Get Cluster node ID. 
+     * @return NodeID Cluster node ID.
+     */
+    public String getNodeID() {
+        return this.NodeID;
+    }
+
+    /**
+     * Set Cluster node ID.
+     * @param NodeID Cluster node ID.
+     */
+    public void setNodeID(String NodeID) {
+        this.NodeID = NodeID;
+    }
+
+    /**
+     * Get Slow log index name 
+     * @return IndexName Slow log index name
+     */
+    public String getIndexName() {
+        return this.IndexName;
+    }
+
+    /**
+     * Set Slow log index name
+     * @param IndexName Slow log index name
+     */
+    public void setIndexName(String IndexName) {
+        this.IndexName = IndexName;
+    }
+
+    /**
+     * Get Slow log index shards 
+     * @return Shard Slow log index shards
+     */
+    public String getShard() {
+        return this.Shard;
+    }
+
+    /**
+     * Set Slow log index shards
+     * @param Shard Slow log index shards
+     */
+    public void setShard(String Shard) {
+        this.Shard = Shard;
+    }
+
+    /**
+     * Get Slow log index query time 
+     * @return QueryCost Slow log index query time
+     */
+    public String getQueryCost() {
+        return this.QueryCost;
+    }
+
+    /**
+     * Set Slow log index query time
+     * @param QueryCost Slow log index query time
+     */
+    public void setQueryCost(String QueryCost) {
+        this.QueryCost = QueryCost;
     }
 
     public InstanceLog() {
@@ -135,6 +227,18 @@ public class InstanceLog extends AbstractModel {
         if (source.Message != null) {
             this.Message = new String(source.Message);
         }
+        if (source.NodeID != null) {
+            this.NodeID = new String(source.NodeID);
+        }
+        if (source.IndexName != null) {
+            this.IndexName = new String(source.IndexName);
+        }
+        if (source.Shard != null) {
+            this.Shard = new String(source.Shard);
+        }
+        if (source.QueryCost != null) {
+            this.QueryCost = new String(source.QueryCost);
+        }
     }
 
 
@@ -146,6 +250,10 @@ public class InstanceLog extends AbstractModel {
         this.setParamSimple(map, prefix + "Level", this.Level);
         this.setParamSimple(map, prefix + "Ip", this.Ip);
         this.setParamSimple(map, prefix + "Message", this.Message);
+        this.setParamSimple(map, prefix + "NodeID", this.NodeID);
+        this.setParamSimple(map, prefix + "IndexName", this.IndexName);
+        this.setParamSimple(map, prefix + "Shard", this.Shard);
+        this.setParamSimple(map, prefix + "QueryCost", this.QueryCost);
 
     }
 }

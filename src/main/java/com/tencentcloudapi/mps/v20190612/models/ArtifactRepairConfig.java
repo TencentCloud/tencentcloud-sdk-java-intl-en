@@ -26,7 +26,7 @@ public class ArtifactRepairConfig extends AbstractModel {
     /**
     * Capability configuration switch. Valid values:
 <li>ON: enabled;</li>
-<li>OFF: disabled.</li>
+<li>OFF: disabled</li>
 Default value: ON.
     */
     @SerializedName("Switch")
@@ -34,7 +34,10 @@ Default value: ON.
     private String Switch;
 
     /**
-    * 
+    * Type. Valid values:
+<li>weak</li>
+<li>strong</li>
+Default value: weak.
     */
     @SerializedName("Type")
     @Expose
@@ -43,11 +46,11 @@ Default value: ON.
     /**
      * Get Capability configuration switch. Valid values:
 <li>ON: enabled;</li>
-<li>OFF: disabled.</li>
+<li>OFF: disabled</li>
 Default value: ON. 
      * @return Switch Capability configuration switch. Valid values:
 <li>ON: enabled;</li>
-<li>OFF: disabled.</li>
+<li>OFF: disabled</li>
 Default value: ON.
      */
     public String getSwitch() {
@@ -57,11 +60,11 @@ Default value: ON.
     /**
      * Set Capability configuration switch. Valid values:
 <li>ON: enabled;</li>
-<li>OFF: disabled.</li>
+<li>OFF: disabled</li>
 Default value: ON.
      * @param Switch Capability configuration switch. Valid values:
 <li>ON: enabled;</li>
-<li>OFF: disabled.</li>
+<li>OFF: disabled</li>
 Default value: ON.
      */
     public void setSwitch(String Switch) {
@@ -69,16 +72,28 @@ Default value: ON.
     }
 
     /**
-     * Get  
-     * @return Type 
+     * Get Type. Valid values:
+<li>weak</li>
+<li>strong</li>
+Default value: weak. 
+     * @return Type Type. Valid values:
+<li>weak</li>
+<li>strong</li>
+Default value: weak.
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 
-     * @param Type 
+     * Set Type. Valid values:
+<li>weak</li>
+<li>strong</li>
+Default value: weak.
+     * @param Type Type. Valid values:
+<li>weak</li>
+<li>strong</li>
+Default value: weak.
      */
     public void setType(String Type) {
         this.Type = Type;

@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class UrlInputInfo extends AbstractModel {
 
     /**
-    * Video URL.
+    * URL of the video.
     */
     @SerializedName("Url")
     @Expose
     private String Url;
 
     /**
-     * Get Video URL. 
-     * @return Url Video URL.
+     * Get URL of the video. 
+     * @return Url URL of the video.
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * Set Video URL.
-     * @param Url Video URL.
+     * Set URL of the video.
+     * @param Url URL of the video.
      */
     public void setUrl(String Url) {
         this.Url = Url;

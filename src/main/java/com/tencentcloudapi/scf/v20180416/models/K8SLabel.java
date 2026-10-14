@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class K8SLabel extends AbstractModel {
 
     /**
-    * 
+    * Name of the label
     */
     @SerializedName("Key")
     @Expose
     private String Key;
 
     /**
-    * 
+    * Value of the label
     */
     @SerializedName("Value")
     @Expose
     private String Value;
 
     /**
-     * Get  
-     * @return Key 
+     * Get Name of the label 
+     * @return Key Name of the label
      */
     public String getKey() {
         return this.Key;
     }
 
     /**
-     * Set 
-     * @param Key 
+     * Set Name of the label
+     * @param Key Name of the label
      */
     public void setKey(String Key) {
         this.Key = Key;
     }
 
     /**
-     * Get  
-     * @return Value 
+     * Get Value of the label 
+     * @return Value Value of the label
      */
     public String getValue() {
         return this.Value;
     }
 
     /**
-     * Set 
-     * @param Value 
+     * Set Value of the label
+     * @param Value Value of the label
      */
     public void setValue(String Value) {
         this.Value = Value;

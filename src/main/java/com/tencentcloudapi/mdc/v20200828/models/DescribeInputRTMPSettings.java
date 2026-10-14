@@ -24,56 +24,51 @@ import java.util.HashMap;
 public class DescribeInputRTMPSettings extends AbstractModel {
 
     /**
-    * Path for RTMP stream pushing
-Note: this field may return `null`, indicating that no valid value was found.
+    * RTMP push path.
     */
     @SerializedName("AppName")
     @Expose
     private String AppName;
 
     /**
-    * StreamKey for RTMP stream pushing
-Format of an RTMP stream pushing URL: rtmp://IP address:1935/AppName/StreamKey
+    * RTMP push StreamKey.
+RTMP push URL splicing rule: rtmp://Ip:1935/AppName/StreamKey
     */
     @SerializedName("StreamKey")
     @Expose
     private String StreamKey;
 
     /**
-     * Get Path for RTMP stream pushing
-Note: this field may return `null`, indicating that no valid value was found. 
-     * @return AppName Path for RTMP stream pushing
-Note: this field may return `null`, indicating that no valid value was found.
+     * Get RTMP push path. 
+     * @return AppName RTMP push path.
      */
     public String getAppName() {
         return this.AppName;
     }
 
     /**
-     * Set Path for RTMP stream pushing
-Note: this field may return `null`, indicating that no valid value was found.
-     * @param AppName Path for RTMP stream pushing
-Note: this field may return `null`, indicating that no valid value was found.
+     * Set RTMP push path.
+     * @param AppName RTMP push path.
      */
     public void setAppName(String AppName) {
         this.AppName = AppName;
     }
 
     /**
-     * Get StreamKey for RTMP stream pushing
-Format of an RTMP stream pushing URL: rtmp://IP address:1935/AppName/StreamKey 
-     * @return StreamKey StreamKey for RTMP stream pushing
-Format of an RTMP stream pushing URL: rtmp://IP address:1935/AppName/StreamKey
+     * Get RTMP push StreamKey.
+RTMP push URL splicing rule: rtmp://Ip:1935/AppName/StreamKey 
+     * @return StreamKey RTMP push StreamKey.
+RTMP push URL splicing rule: rtmp://Ip:1935/AppName/StreamKey
      */
     public String getStreamKey() {
         return this.StreamKey;
     }
 
     /**
-     * Set StreamKey for RTMP stream pushing
-Format of an RTMP stream pushing URL: rtmp://IP address:1935/AppName/StreamKey
-     * @param StreamKey StreamKey for RTMP stream pushing
-Format of an RTMP stream pushing URL: rtmp://IP address:1935/AppName/StreamKey
+     * Set RTMP push StreamKey.
+RTMP push URL splicing rule: rtmp://Ip:1935/AppName/StreamKey
+     * @param StreamKey RTMP push StreamKey.
+RTMP push URL splicing rule: rtmp://Ip:1935/AppName/StreamKey
      */
     public void setStreamKey(String StreamKey) {
         this.StreamKey = StreamKey;

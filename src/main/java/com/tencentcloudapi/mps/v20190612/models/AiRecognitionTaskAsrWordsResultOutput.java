@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class AiRecognitionTaskAsrWordsResultOutput extends AbstractModel {
 
     /**
-    * Speech keyword recognition result set.
+    * Result set of speech keyword recognition.
     */
     @SerializedName("ResultSet")
     @Expose
     private AiRecognitionTaskAsrWordsResultItem [] ResultSet;
 
     /**
-     * Get Speech keyword recognition result set. 
-     * @return ResultSet Speech keyword recognition result set.
+     * Get Result set of speech keyword recognition. 
+     * @return ResultSet Result set of speech keyword recognition.
      */
     public AiRecognitionTaskAsrWordsResultItem [] getResultSet() {
         return this.ResultSet;
     }
 
     /**
-     * Set Speech keyword recognition result set.
-     * @param ResultSet Speech keyword recognition result set.
+     * Set Result set of speech keyword recognition.
+     * @param ResultSet Result set of speech keyword recognition.
      */
     public void setResultSet(AiRecognitionTaskAsrWordsResultItem [] ResultSet) {
         this.ResultSet = ResultSet;

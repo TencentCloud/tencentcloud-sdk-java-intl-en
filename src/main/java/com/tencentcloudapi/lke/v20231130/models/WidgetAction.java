@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class WidgetAction extends AbstractModel {
 
     /**
-    * 
+    * Widget configuration ID
     */
     @SerializedName("WidgetId")
     @Expose
     private String WidgetId;
 
     /**
-    * 
+    * Widget instance ID
     */
     @SerializedName("WidgetRunId")
     @Expose
     private String WidgetRunId;
 
     /**
-    * 
+    * Widget action
     */
     @SerializedName("ActionType")
     @Expose
     private String ActionType;
 
     /**
-    * 
+    * Data submitted by the Widget action
     */
     @SerializedName("Payload")
     @Expose
     private String Payload;
 
     /**
-     * Get  
-     * @return WidgetId 
+     * Get Widget configuration ID 
+     * @return WidgetId Widget configuration ID
      */
     public String getWidgetId() {
         return this.WidgetId;
     }
 
     /**
-     * Set 
-     * @param WidgetId 
+     * Set Widget configuration ID
+     * @param WidgetId Widget configuration ID
      */
     public void setWidgetId(String WidgetId) {
         this.WidgetId = WidgetId;
     }
 
     /**
-     * Get  
-     * @return WidgetRunId 
+     * Get Widget instance ID 
+     * @return WidgetRunId Widget instance ID
      */
     public String getWidgetRunId() {
         return this.WidgetRunId;
     }
 
     /**
-     * Set 
-     * @param WidgetRunId 
+     * Set Widget instance ID
+     * @param WidgetRunId Widget instance ID
      */
     public void setWidgetRunId(String WidgetRunId) {
         this.WidgetRunId = WidgetRunId;
     }
 
     /**
-     * Get  
-     * @return ActionType 
+     * Get Widget action 
+     * @return ActionType Widget action
      */
     public String getActionType() {
         return this.ActionType;
     }
 
     /**
-     * Set 
-     * @param ActionType 
+     * Set Widget action
+     * @param ActionType Widget action
      */
     public void setActionType(String ActionType) {
         this.ActionType = ActionType;
     }
 
     /**
-     * Get  
-     * @return Payload 
+     * Get Data submitted by the Widget action 
+     * @return Payload Data submitted by the Widget action
      */
     public String getPayload() {
         return this.Payload;
     }
 
     /**
-     * Set 
-     * @param Payload 
+     * Set Data submitted by the Widget action
+     * @param Payload Data submitted by the Widget action
      */
     public void setPayload(String Payload) {
         this.Payload = Payload;

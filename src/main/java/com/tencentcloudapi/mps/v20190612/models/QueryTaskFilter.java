@@ -31,7 +31,7 @@ public class QueryTaskFilter extends AbstractModel {
     private String TaskId;
 
     /**
-    * <p>Task type</p>
+    * <p>Task type</p><p>Enumeration values:</p><ul><li>RedrawVideo: Video redraw</li><li>AIDrama: AI drama</li><li>DocGenVideo: Document to video</li><li>FissionVideo: Video fission</li></ul>
     */
     @SerializedName("TaskType")
     @Expose
@@ -59,6 +59,27 @@ public class QueryTaskFilter extends AbstractModel {
     private String Ratio;
 
     /**
+    * <p>Task execution mode</p><p>Enumeration values:</p><ul><li>auto: Direct generation</li><li>phased: Generate after confirmation</li></ul>
+    */
+    @SerializedName("ExecuteMode")
+    @Expose
+    private String ExecuteMode;
+
+    /**
+    * <p>Fission task video type filter: ugc, talk, display, unboxing, reaction</p><p>Enumeration values:</p><ul><li>ugc: UGC recommendation</li><li>talk: Product talk-over</li><li>display: Product display</li><li>unboxing: Unboxing sharing</li><li>reaction: Reaction display</li></ul>
+    */
+    @SerializedName("VideoType")
+    @Expose
+    private String VideoType;
+
+    /**
+    * <p>Model type</p><p>Enumeration values:</p><ul><li>standard: standard version</li><li>flagship: advanced edition</li></ul>
+    */
+    @SerializedName("ModelTier")
+    @Expose
+    private String ModelTier;
+
+    /**
      * Get <p>Task ID.</p> 
      * @return TaskId <p>Task ID.</p>
      */
@@ -75,16 +96,16 @@ public class QueryTaskFilter extends AbstractModel {
     }
 
     /**
-     * Get <p>Task type</p> 
-     * @return TaskType <p>Task type</p>
+     * Get <p>Task type</p><p>Enumeration values:</p><ul><li>RedrawVideo: Video redraw</li><li>AIDrama: AI drama</li><li>DocGenVideo: Document to video</li><li>FissionVideo: Video fission</li></ul> 
+     * @return TaskType <p>Task type</p><p>Enumeration values:</p><ul><li>RedrawVideo: Video redraw</li><li>AIDrama: AI drama</li><li>DocGenVideo: Document to video</li><li>FissionVideo: Video fission</li></ul>
      */
     public String getTaskType() {
         return this.TaskType;
     }
 
     /**
-     * Set <p>Task type</p>
-     * @param TaskType <p>Task type</p>
+     * Set <p>Task type</p><p>Enumeration values:</p><ul><li>RedrawVideo: Video redraw</li><li>AIDrama: AI drama</li><li>DocGenVideo: Document to video</li><li>FissionVideo: Video fission</li></ul>
+     * @param TaskType <p>Task type</p><p>Enumeration values:</p><ul><li>RedrawVideo: Video redraw</li><li>AIDrama: AI drama</li><li>DocGenVideo: Document to video</li><li>FissionVideo: Video fission</li></ul>
      */
     public void setTaskType(String TaskType) {
         this.TaskType = TaskType;
@@ -138,6 +159,54 @@ public class QueryTaskFilter extends AbstractModel {
         this.Ratio = Ratio;
     }
 
+    /**
+     * Get <p>Task execution mode</p><p>Enumeration values:</p><ul><li>auto: Direct generation</li><li>phased: Generate after confirmation</li></ul> 
+     * @return ExecuteMode <p>Task execution mode</p><p>Enumeration values:</p><ul><li>auto: Direct generation</li><li>phased: Generate after confirmation</li></ul>
+     */
+    public String getExecuteMode() {
+        return this.ExecuteMode;
+    }
+
+    /**
+     * Set <p>Task execution mode</p><p>Enumeration values:</p><ul><li>auto: Direct generation</li><li>phased: Generate after confirmation</li></ul>
+     * @param ExecuteMode <p>Task execution mode</p><p>Enumeration values:</p><ul><li>auto: Direct generation</li><li>phased: Generate after confirmation</li></ul>
+     */
+    public void setExecuteMode(String ExecuteMode) {
+        this.ExecuteMode = ExecuteMode;
+    }
+
+    /**
+     * Get <p>Fission task video type filter: ugc, talk, display, unboxing, reaction</p><p>Enumeration values:</p><ul><li>ugc: UGC recommendation</li><li>talk: Product talk-over</li><li>display: Product display</li><li>unboxing: Unboxing sharing</li><li>reaction: Reaction display</li></ul> 
+     * @return VideoType <p>Fission task video type filter: ugc, talk, display, unboxing, reaction</p><p>Enumeration values:</p><ul><li>ugc: UGC recommendation</li><li>talk: Product talk-over</li><li>display: Product display</li><li>unboxing: Unboxing sharing</li><li>reaction: Reaction display</li></ul>
+     */
+    public String getVideoType() {
+        return this.VideoType;
+    }
+
+    /**
+     * Set <p>Fission task video type filter: ugc, talk, display, unboxing, reaction</p><p>Enumeration values:</p><ul><li>ugc: UGC recommendation</li><li>talk: Product talk-over</li><li>display: Product display</li><li>unboxing: Unboxing sharing</li><li>reaction: Reaction display</li></ul>
+     * @param VideoType <p>Fission task video type filter: ugc, talk, display, unboxing, reaction</p><p>Enumeration values:</p><ul><li>ugc: UGC recommendation</li><li>talk: Product talk-over</li><li>display: Product display</li><li>unboxing: Unboxing sharing</li><li>reaction: Reaction display</li></ul>
+     */
+    public void setVideoType(String VideoType) {
+        this.VideoType = VideoType;
+    }
+
+    /**
+     * Get <p>Model type</p><p>Enumeration values:</p><ul><li>standard: standard version</li><li>flagship: advanced edition</li></ul> 
+     * @return ModelTier <p>Model type</p><p>Enumeration values:</p><ul><li>standard: standard version</li><li>flagship: advanced edition</li></ul>
+     */
+    public String getModelTier() {
+        return this.ModelTier;
+    }
+
+    /**
+     * Set <p>Model type</p><p>Enumeration values:</p><ul><li>standard: standard version</li><li>flagship: advanced edition</li></ul>
+     * @param ModelTier <p>Model type</p><p>Enumeration values:</p><ul><li>standard: standard version</li><li>flagship: advanced edition</li></ul>
+     */
+    public void setModelTier(String ModelTier) {
+        this.ModelTier = ModelTier;
+    }
+
     public QueryTaskFilter() {
     }
 
@@ -161,6 +230,15 @@ public class QueryTaskFilter extends AbstractModel {
         if (source.Ratio != null) {
             this.Ratio = new String(source.Ratio);
         }
+        if (source.ExecuteMode != null) {
+            this.ExecuteMode = new String(source.ExecuteMode);
+        }
+        if (source.VideoType != null) {
+            this.VideoType = new String(source.VideoType);
+        }
+        if (source.ModelTier != null) {
+            this.ModelTier = new String(source.ModelTier);
+        }
     }
 
 
@@ -173,6 +251,9 @@ public class QueryTaskFilter extends AbstractModel {
         this.setParamSimple(map, prefix + "TaskStatus", this.TaskStatus);
         this.setParamSimple(map, prefix + "Resolution", this.Resolution);
         this.setParamSimple(map, prefix + "Ratio", this.Ratio);
+        this.setParamSimple(map, prefix + "ExecuteMode", this.ExecuteMode);
+        this.setParamSimple(map, prefix + "VideoType", this.VideoType);
+        this.setParamSimple(map, prefix + "ModelTier", this.ModelTier);
 
     }
 }

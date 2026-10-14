@@ -206,28 +206,28 @@ public class DescribeDBInstanceDetailResponse extends AbstractModel {
     private String PayMode;
 
     /**
-    * 
+    * <p>Expiration time.</p>
     */
     @SerializedName("ExpireAt")
     @Expose
     private String ExpireAt;
 
     /**
-    * 
+    * <p>Isolation time</p>
     */
     @SerializedName("IsolatedAt")
     @Expose
     private String IsolatedAt;
 
     /**
-    * 
+    * <p>Instance Architecture Type, separate: decoupled architecture; hybrid: peer-to-peer architecture</p>
     */
     @SerializedName("InstanceType")
     @Expose
     private String InstanceType;
 
     /**
-    * 
+    * <p>Disk Type, CLOUD_HSSD enhanced SSD, CLOUD_TCS local SSD disk</p>
     */
     @SerializedName("StorageType")
     @Expose
@@ -241,7 +241,7 @@ public class DescribeDBInstanceDetailResponse extends AbstractModel {
     private String [] Zones;
 
     /**
-    * 
+    * <p>Disk usage of the largest node</p>
     */
     @SerializedName("DiskUsage")
     @Expose
@@ -444,14 +444,14 @@ public class DescribeDBInstanceDetailResponse extends AbstractModel {
     private Long EncryptionEnable;
 
     /**
-    * <p>Real use kms region for subsequent call to kms service</p>
+    * <p>Real use kms region for subsequent calls to the kms service</p>
     */
     @SerializedName("EncryptionKmsRegion")
     @Expose
     private String EncryptionKmsRegion;
 
     /**
-    * 
+    * <p>serverless automatic configuration adjustment configuration</p>
     */
     @SerializedName("AutoScaleConfigs")
     @Expose
@@ -881,64 +881,64 @@ public class DescribeDBInstanceDetailResponse extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return ExpireAt 
+     * Get <p>Expiration time.</p> 
+     * @return ExpireAt <p>Expiration time.</p>
      */
     public String getExpireAt() {
         return this.ExpireAt;
     }
 
     /**
-     * Set 
-     * @param ExpireAt 
+     * Set <p>Expiration time.</p>
+     * @param ExpireAt <p>Expiration time.</p>
      */
     public void setExpireAt(String ExpireAt) {
         this.ExpireAt = ExpireAt;
     }
 
     /**
-     * Get  
-     * @return IsolatedAt 
+     * Get <p>Isolation time</p> 
+     * @return IsolatedAt <p>Isolation time</p>
      */
     public String getIsolatedAt() {
         return this.IsolatedAt;
     }
 
     /**
-     * Set 
-     * @param IsolatedAt 
+     * Set <p>Isolation time</p>
+     * @param IsolatedAt <p>Isolation time</p>
      */
     public void setIsolatedAt(String IsolatedAt) {
         this.IsolatedAt = IsolatedAt;
     }
 
     /**
-     * Get  
-     * @return InstanceType 
+     * Get <p>Instance Architecture Type, separate: decoupled architecture; hybrid: peer-to-peer architecture</p> 
+     * @return InstanceType <p>Instance Architecture Type, separate: decoupled architecture; hybrid: peer-to-peer architecture</p>
      */
     public String getInstanceType() {
         return this.InstanceType;
     }
 
     /**
-     * Set 
-     * @param InstanceType 
+     * Set <p>Instance Architecture Type, separate: decoupled architecture; hybrid: peer-to-peer architecture</p>
+     * @param InstanceType <p>Instance Architecture Type, separate: decoupled architecture; hybrid: peer-to-peer architecture</p>
      */
     public void setInstanceType(String InstanceType) {
         this.InstanceType = InstanceType;
     }
 
     /**
-     * Get  
-     * @return StorageType 
+     * Get <p>Disk Type, CLOUD_HSSD enhanced SSD, CLOUD_TCS local SSD disk</p> 
+     * @return StorageType <p>Disk Type, CLOUD_HSSD enhanced SSD, CLOUD_TCS local SSD disk</p>
      */
     public String getStorageType() {
         return this.StorageType;
     }
 
     /**
-     * Set 
-     * @param StorageType 
+     * Set <p>Disk Type, CLOUD_HSSD enhanced SSD, CLOUD_TCS local SSD disk</p>
+     * @param StorageType <p>Disk Type, CLOUD_HSSD enhanced SSD, CLOUD_TCS local SSD disk</p>
      */
     public void setStorageType(String StorageType) {
         this.StorageType = StorageType;
@@ -961,16 +961,16 @@ public class DescribeDBInstanceDetailResponse extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return DiskUsage 
+     * Get <p>Disk usage of the largest node</p> 
+     * @return DiskUsage <p>Disk usage of the largest node</p>
      */
     public Long getDiskUsage() {
         return this.DiskUsage;
     }
 
     /**
-     * Set 
-     * @param DiskUsage 
+     * Set <p>Disk usage of the largest node</p>
+     * @param DiskUsage <p>Disk usage of the largest node</p>
      */
     public void setDiskUsage(Long DiskUsage) {
         this.DiskUsage = DiskUsage;
@@ -1425,32 +1425,32 @@ public class DescribeDBInstanceDetailResponse extends AbstractModel {
     }
 
     /**
-     * Get <p>Real use kms region for subsequent call to kms service</p> 
-     * @return EncryptionKmsRegion <p>Real use kms region for subsequent call to kms service</p>
+     * Get <p>Real use kms region for subsequent calls to the kms service</p> 
+     * @return EncryptionKmsRegion <p>Real use kms region for subsequent calls to the kms service</p>
      */
     public String getEncryptionKmsRegion() {
         return this.EncryptionKmsRegion;
     }
 
     /**
-     * Set <p>Real use kms region for subsequent call to kms service</p>
-     * @param EncryptionKmsRegion <p>Real use kms region for subsequent call to kms service</p>
+     * Set <p>Real use kms region for subsequent calls to the kms service</p>
+     * @param EncryptionKmsRegion <p>Real use kms region for subsequent calls to the kms service</p>
      */
     public void setEncryptionKmsRegion(String EncryptionKmsRegion) {
         this.EncryptionKmsRegion = EncryptionKmsRegion;
     }
 
     /**
-     * Get  
-     * @return AutoScaleConfigs 
+     * Get <p>serverless automatic configuration adjustment configuration</p> 
+     * @return AutoScaleConfigs <p>serverless automatic configuration adjustment configuration</p>
      */
     public AutoScalingConfig [] getAutoScaleConfigs() {
         return this.AutoScaleConfigs;
     }
 
     /**
-     * Set 
-     * @param AutoScaleConfigs 
+     * Set <p>serverless automatic configuration adjustment configuration</p>
+     * @param AutoScaleConfigs <p>serverless automatic configuration adjustment configuration</p>
      */
     public void setAutoScaleConfigs(AutoScalingConfig [] AutoScaleConfigs) {
         this.AutoScaleConfigs = AutoScaleConfigs;

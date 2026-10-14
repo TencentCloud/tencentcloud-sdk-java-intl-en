@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class LiveSmartSubtitlesTaskInput extends AbstractModel {
 
     /**
-    * 
+    * Smart subtitle template ID.	
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-    * 
+    * User extension field, which does not need to be filled in for general scenarios.
     */
     @SerializedName("UserExtPara")
     @Expose
     private String UserExtPara;
 
     /**
-     * Get  
-     * @return Definition 
+     * Get Smart subtitle template ID.	 
+     * @return Definition Smart subtitle template ID.	
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set 
-     * @param Definition 
+     * Set Smart subtitle template ID.	
+     * @param Definition Smart subtitle template ID.	
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
     }
 
     /**
-     * Get  
-     * @return UserExtPara 
+     * Get User extension field, which does not need to be filled in for general scenarios. 
+     * @return UserExtPara User extension field, which does not need to be filled in for general scenarios.
      */
     public String getUserExtPara() {
         return this.UserExtPara;
     }
 
     /**
-     * Set 
-     * @param UserExtPara 
+     * Set User extension field, which does not need to be filled in for general scenarios.
+     * @param UserExtPara User extension field, which does not need to be filled in for general scenarios.
      */
     public void setUserExtPara(String UserExtPara) {
         this.UserExtPara = UserExtPara;

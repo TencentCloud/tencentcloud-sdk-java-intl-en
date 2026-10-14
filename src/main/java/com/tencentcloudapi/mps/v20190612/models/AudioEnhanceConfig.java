@@ -24,95 +24,118 @@ import java.util.HashMap;
 public class AudioEnhanceConfig extends AbstractModel {
 
     /**
-    * 
+    * <p>Audio noise reduction configuration.</p>
     */
     @SerializedName("Denoise")
     @Expose
     private AudioDenoiseConfig Denoise;
 
     /**
-    * 
+    * <p>Audio separation configuration.</p>
     */
     @SerializedName("Separate")
     @Expose
     private AudioSeparateConfig Separate;
 
     /**
-    * 
+    * <p>Volume equalization configuration.</p>
     */
     @SerializedName("VolumeBalance")
     @Expose
     private VolumeBalanceConfig VolumeBalance;
 
     /**
-    * 
+    * <p>Audio beautification configurations.</p>
     */
     @SerializedName("Beautify")
     @Expose
     private AudioBeautifyConfig Beautify;
 
     /**
-     * Get  
-     * @return Denoise 
+    * <p>Audio enhancement edit.</p>
+    */
+    @SerializedName("AudioEnhanceEdit")
+    @Expose
+    private AudioEnhanceEditConfig AudioEnhanceEdit;
+
+    /**
+     * Get <p>Audio noise reduction configuration.</p> 
+     * @return Denoise <p>Audio noise reduction configuration.</p>
      */
     public AudioDenoiseConfig getDenoise() {
         return this.Denoise;
     }
 
     /**
-     * Set 
-     * @param Denoise 
+     * Set <p>Audio noise reduction configuration.</p>
+     * @param Denoise <p>Audio noise reduction configuration.</p>
      */
     public void setDenoise(AudioDenoiseConfig Denoise) {
         this.Denoise = Denoise;
     }
 
     /**
-     * Get  
-     * @return Separate 
+     * Get <p>Audio separation configuration.</p> 
+     * @return Separate <p>Audio separation configuration.</p>
      */
     public AudioSeparateConfig getSeparate() {
         return this.Separate;
     }
 
     /**
-     * Set 
-     * @param Separate 
+     * Set <p>Audio separation configuration.</p>
+     * @param Separate <p>Audio separation configuration.</p>
      */
     public void setSeparate(AudioSeparateConfig Separate) {
         this.Separate = Separate;
     }
 
     /**
-     * Get  
-     * @return VolumeBalance 
+     * Get <p>Volume equalization configuration.</p> 
+     * @return VolumeBalance <p>Volume equalization configuration.</p>
      */
     public VolumeBalanceConfig getVolumeBalance() {
         return this.VolumeBalance;
     }
 
     /**
-     * Set 
-     * @param VolumeBalance 
+     * Set <p>Volume equalization configuration.</p>
+     * @param VolumeBalance <p>Volume equalization configuration.</p>
      */
     public void setVolumeBalance(VolumeBalanceConfig VolumeBalance) {
         this.VolumeBalance = VolumeBalance;
     }
 
     /**
-     * Get  
-     * @return Beautify 
+     * Get <p>Audio beautification configurations.</p> 
+     * @return Beautify <p>Audio beautification configurations.</p>
      */
     public AudioBeautifyConfig getBeautify() {
         return this.Beautify;
     }
 
     /**
-     * Set 
-     * @param Beautify 
+     * Set <p>Audio beautification configurations.</p>
+     * @param Beautify <p>Audio beautification configurations.</p>
      */
     public void setBeautify(AudioBeautifyConfig Beautify) {
         this.Beautify = Beautify;
+    }
+
+    /**
+     * Get <p>Audio enhancement edit.</p> 
+     * @return AudioEnhanceEdit <p>Audio enhancement edit.</p>
+     */
+    public AudioEnhanceEditConfig getAudioEnhanceEdit() {
+        return this.AudioEnhanceEdit;
+    }
+
+    /**
+     * Set <p>Audio enhancement edit.</p>
+     * @param AudioEnhanceEdit <p>Audio enhancement edit.</p>
+     */
+    public void setAudioEnhanceEdit(AudioEnhanceEditConfig AudioEnhanceEdit) {
+        this.AudioEnhanceEdit = AudioEnhanceEdit;
     }
 
     public AudioEnhanceConfig() {
@@ -135,6 +158,9 @@ public class AudioEnhanceConfig extends AbstractModel {
         if (source.Beautify != null) {
             this.Beautify = new AudioBeautifyConfig(source.Beautify);
         }
+        if (source.AudioEnhanceEdit != null) {
+            this.AudioEnhanceEdit = new AudioEnhanceEditConfig(source.AudioEnhanceEdit);
+        }
     }
 
 
@@ -146,6 +172,7 @@ public class AudioEnhanceConfig extends AbstractModel {
         this.setParamObj(map, prefix + "Separate.", this.Separate);
         this.setParamObj(map, prefix + "VolumeBalance.", this.VolumeBalance);
         this.setParamObj(map, prefix + "Beautify.", this.Beautify);
+        this.setParamObj(map, prefix + "AudioEnhanceEdit.", this.AudioEnhanceEdit);
 
     }
 }

@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class AddAssetImageRegistryRegistryDetailResponse extends AbstractModel {
 
     /**
-    * Connection error message
+    * Connection error information
     */
     @SerializedName("HealthCheckErr")
     @Expose
     private String HealthCheckErr;
 
     /**
-    * Error message of the name
+    * Incorrect name message
     */
     @SerializedName("NameRepeatErr")
     @Expose
@@ -52,32 +52,32 @@ public class AddAssetImageRegistryRegistryDetailResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Connection error message 
-     * @return HealthCheckErr Connection error message
+     * Get Connection error information 
+     * @return HealthCheckErr Connection error information
      */
     public String getHealthCheckErr() {
         return this.HealthCheckErr;
     }
 
     /**
-     * Set Connection error message
-     * @param HealthCheckErr Connection error message
+     * Set Connection error information
+     * @param HealthCheckErr Connection error information
      */
     public void setHealthCheckErr(String HealthCheckErr) {
         this.HealthCheckErr = HealthCheckErr;
     }
 
     /**
-     * Get Error message of the name 
-     * @return NameRepeatErr Error message of the name
+     * Get Incorrect name message 
+     * @return NameRepeatErr Incorrect name message
      */
     public String getNameRepeatErr() {
         return this.NameRepeatErr;
     }
 
     /**
-     * Set Error message of the name
-     * @param NameRepeatErr Error message of the name
+     * Set Incorrect name message
+     * @param NameRepeatErr Incorrect name message
      */
     public void setNameRepeatErr(String NameRepeatErr) {
         this.NameRepeatErr = NameRepeatErr;

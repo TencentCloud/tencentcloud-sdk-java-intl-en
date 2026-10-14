@@ -62,7 +62,7 @@ public class PureSubtitleTransResult extends AbstractModel {
     private SmartSubtitleTaskResultInput Input;
 
     /**
-    * 
+    * Translation output result of pure subtitle files.
     */
     @SerializedName("Output")
     @Expose
@@ -168,16 +168,16 @@ public class PureSubtitleTransResult extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return Output 
+     * Get Translation output result of pure subtitle files. 
+     * @return Output Translation output result of pure subtitle files.
      */
     public PureSubtitleTransResultOutput getOutput() {
         return this.Output;
     }
 
     /**
-     * Set 
-     * @param Output 
+     * Set Translation output result of pure subtitle files.
+     * @param Output Translation output result of pure subtitle files.
      */
     public void setOutput(PureSubtitleTransResultOutput Output) {
         this.Output = Output;

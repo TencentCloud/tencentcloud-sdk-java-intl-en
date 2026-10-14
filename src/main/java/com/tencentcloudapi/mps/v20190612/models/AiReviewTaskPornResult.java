@@ -52,14 +52,14 @@ public class AiReviewTaskPornResult extends AbstractModel {
     private String Message;
 
     /**
-    * Content review porn task input.
+    * Input for the content review pornography detection task.
     */
     @SerializedName("Input")
     @Expose
     private AiReviewPornTaskInput Input;
 
     /**
-    * 
+    * Pornography detection task output of content review.
     */
     @SerializedName("Output")
     @Expose
@@ -130,32 +130,32 @@ public class AiReviewTaskPornResult extends AbstractModel {
     }
 
     /**
-     * Get Content review porn task input. 
-     * @return Input Content review porn task input.
+     * Get Input for the content review pornography detection task. 
+     * @return Input Input for the content review pornography detection task.
      */
     public AiReviewPornTaskInput getInput() {
         return this.Input;
     }
 
     /**
-     * Set Content review porn task input.
-     * @param Input Content review porn task input.
+     * Set Input for the content review pornography detection task.
+     * @param Input Input for the content review pornography detection task.
      */
     public void setInput(AiReviewPornTaskInput Input) {
         this.Input = Input;
     }
 
     /**
-     * Get  
-     * @return Output 
+     * Get Pornography detection task output of content review. 
+     * @return Output Pornography detection task output of content review.
      */
     public AiReviewPornTaskOutput getOutput() {
         return this.Output;
     }
 
     /**
-     * Set 
-     * @param Output 
+     * Set Pornography detection task output of content review.
+     * @param Output Pornography detection task output of content review.
      */
     public void setOutput(AiReviewPornTaskOutput Output) {
         this.Output = Output;

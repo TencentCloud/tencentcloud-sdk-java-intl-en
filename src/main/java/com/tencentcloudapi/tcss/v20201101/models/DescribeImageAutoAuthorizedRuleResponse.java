@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeImageAutoAuthorizedRuleResponse extends AbstractModel {
 
     /**
-    * Whether the rule takes effect. Valid values: `0` (no); `1` (yes).
+    * Whether the Rule Is Effective. 0: Not Effective; 1: Effective
     */
     @SerializedName("IsEnabled")
     @Expose
@@ -59,14 +59,14 @@ public class DescribeImageAutoAuthorizedRuleResponse extends AbstractModel {
     private Long RuleId;
 
     /**
-    * 
+    * Auto-Scan Switch. 0: Off; 1: On
     */
     @SerializedName("AutoScanEnabled")
     @Expose
     private Long AutoScanEnabled;
 
     /**
-    * 
+    * Auto-Scan Range
     */
     @SerializedName("ScanType")
     @Expose
@@ -80,16 +80,16 @@ public class DescribeImageAutoAuthorizedRuleResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Whether the rule takes effect. Valid values: `0` (no); `1` (yes). 
-     * @return IsEnabled Whether the rule takes effect. Valid values: `0` (no); `1` (yes).
+     * Get Whether the Rule Is Effective. 0: Not Effective; 1: Effective 
+     * @return IsEnabled Whether the Rule Is Effective. 0: Not Effective; 1: Effective
      */
     public Long getIsEnabled() {
         return this.IsEnabled;
     }
 
     /**
-     * Set Whether the rule takes effect. Valid values: `0` (no); `1` (yes).
-     * @param IsEnabled Whether the rule takes effect. Valid values: `0` (no); `1` (yes).
+     * Set Whether the Rule Is Effective. 0: Not Effective; 1: Effective
+     * @param IsEnabled Whether the Rule Is Effective. 0: Not Effective; 1: Effective
      */
     public void setIsEnabled(Long IsEnabled) {
         this.IsEnabled = IsEnabled;
@@ -160,32 +160,32 @@ public class DescribeImageAutoAuthorizedRuleResponse extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return AutoScanEnabled 
+     * Get Auto-Scan Switch. 0: Off; 1: On 
+     * @return AutoScanEnabled Auto-Scan Switch. 0: Off; 1: On
      */
     public Long getAutoScanEnabled() {
         return this.AutoScanEnabled;
     }
 
     /**
-     * Set 
-     * @param AutoScanEnabled 
+     * Set Auto-Scan Switch. 0: Off; 1: On
+     * @param AutoScanEnabled Auto-Scan Switch. 0: Off; 1: On
      */
     public void setAutoScanEnabled(Long AutoScanEnabled) {
         this.AutoScanEnabled = AutoScanEnabled;
     }
 
     /**
-     * Get  
-     * @return ScanType 
+     * Get Auto-Scan Range 
+     * @return ScanType Auto-Scan Range
      */
     public String [] getScanType() {
         return this.ScanType;
     }
 
     /**
-     * Set 
-     * @param ScanType 
+     * Set Auto-Scan Range
+     * @param ScanType Auto-Scan Range
      */
     public void setScanType(String [] ScanType) {
         this.ScanType = ScanType;

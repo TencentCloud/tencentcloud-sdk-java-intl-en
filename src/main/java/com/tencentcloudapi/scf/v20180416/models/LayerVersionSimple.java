@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class LayerVersionSimple extends AbstractModel {
 
     /**
-    * Name of the layer to bind. Leave it blank if you want to unbind layers
+    * Name of the bound layer. Pass an empty string to unbind the layer.
     */
     @SerializedName("LayerName")
     @Expose
     private String LayerName;
 
     /**
-    * Version ID f the layer to bind/unbind. If the layer version to unbind is the only layer version of the function version, enter `0`.
+    * Bind or unbind a layer version. To unbind the last layer version associated with a function version, set LayerVersion to 0.
     */
     @SerializedName("LayerVersion")
     @Expose
     private Long LayerVersion;
 
     /**
-     * Get Name of the layer to bind. Leave it blank if you want to unbind layers 
-     * @return LayerName Name of the layer to bind. Leave it blank if you want to unbind layers
+     * Get Name of the bound layer. Pass an empty string to unbind the layer. 
+     * @return LayerName Name of the bound layer. Pass an empty string to unbind the layer.
      */
     public String getLayerName() {
         return this.LayerName;
     }
 
     /**
-     * Set Name of the layer to bind. Leave it blank if you want to unbind layers
-     * @param LayerName Name of the layer to bind. Leave it blank if you want to unbind layers
+     * Set Name of the bound layer. Pass an empty string to unbind the layer.
+     * @param LayerName Name of the bound layer. Pass an empty string to unbind the layer.
      */
     public void setLayerName(String LayerName) {
         this.LayerName = LayerName;
     }
 
     /**
-     * Get Version ID f the layer to bind/unbind. If the layer version to unbind is the only layer version of the function version, enter `0`. 
-     * @return LayerVersion Version ID f the layer to bind/unbind. If the layer version to unbind is the only layer version of the function version, enter `0`.
+     * Get Bind or unbind a layer version. To unbind the last layer version associated with a function version, set LayerVersion to 0. 
+     * @return LayerVersion Bind or unbind a layer version. To unbind the last layer version associated with a function version, set LayerVersion to 0.
      */
     public Long getLayerVersion() {
         return this.LayerVersion;
     }
 
     /**
-     * Set Version ID f the layer to bind/unbind. If the layer version to unbind is the only layer version of the function version, enter `0`.
-     * @param LayerVersion Version ID f the layer to bind/unbind. If the layer version to unbind is the only layer version of the function version, enter `0`.
+     * Set Bind or unbind a layer version. To unbind the last layer version associated with a function version, set LayerVersion to 0.
+     * @param LayerVersion Bind or unbind a layer version. To unbind the last layer version associated with a function version, set LayerVersion to 0.
      */
     public void setLayerVersion(Long LayerVersion) {
         this.LayerVersion = LayerVersion;

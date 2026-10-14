@@ -24,69 +24,104 @@ import java.util.HashMap;
 public class AudioTrackChannelInfo extends AbstractModel {
 
     /**
-    * 
+    * Whether to enable audio mixing. Available values:
+0: audio mixing disabled
+1: Whether to enable audio mixing
+Default value: 0
     */
     @SerializedName("ChannelsRemix")
     @Expose
     private Long ChannelsRemix;
 
     /**
-    * 
+    * Merge audio track input type. Available values:
+track: indicates usage of the audio track id.
+track_channel: indicates usage of the audio track id and sound channel id.
+Default value: track.
+Note: If the original video is multichannel, recommend using track_channel.
     */
     @SerializedName("SelectType")
     @Expose
     private String SelectType;
 
     /**
-    * 
+    * Audio track information.
     */
     @SerializedName("InputTrackInfo")
     @Expose
     private TrackInfo [] InputTrackInfo;
 
     /**
-     * Get  
-     * @return ChannelsRemix 
+     * Get Whether to enable audio mixing. Available values:
+0: audio mixing disabled
+1: Whether to enable audio mixing
+Default value: 0 
+     * @return ChannelsRemix Whether to enable audio mixing. Available values:
+0: audio mixing disabled
+1: Whether to enable audio mixing
+Default value: 0
      */
     public Long getChannelsRemix() {
         return this.ChannelsRemix;
     }
 
     /**
-     * Set 
-     * @param ChannelsRemix 
+     * Set Whether to enable audio mixing. Available values:
+0: audio mixing disabled
+1: Whether to enable audio mixing
+Default value: 0
+     * @param ChannelsRemix Whether to enable audio mixing. Available values:
+0: audio mixing disabled
+1: Whether to enable audio mixing
+Default value: 0
      */
     public void setChannelsRemix(Long ChannelsRemix) {
         this.ChannelsRemix = ChannelsRemix;
     }
 
     /**
-     * Get  
-     * @return SelectType 
+     * Get Merge audio track input type. Available values:
+track: indicates usage of the audio track id.
+track_channel: indicates usage of the audio track id and sound channel id.
+Default value: track.
+Note: If the original video is multichannel, recommend using track_channel. 
+     * @return SelectType Merge audio track input type. Available values:
+track: indicates usage of the audio track id.
+track_channel: indicates usage of the audio track id and sound channel id.
+Default value: track.
+Note: If the original video is multichannel, recommend using track_channel.
      */
     public String getSelectType() {
         return this.SelectType;
     }
 
     /**
-     * Set 
-     * @param SelectType 
+     * Set Merge audio track input type. Available values:
+track: indicates usage of the audio track id.
+track_channel: indicates usage of the audio track id and sound channel id.
+Default value: track.
+Note: If the original video is multichannel, recommend using track_channel.
+     * @param SelectType Merge audio track input type. Available values:
+track: indicates usage of the audio track id.
+track_channel: indicates usage of the audio track id and sound channel id.
+Default value: track.
+Note: If the original video is multichannel, recommend using track_channel.
      */
     public void setSelectType(String SelectType) {
         this.SelectType = SelectType;
     }
 
     /**
-     * Get  
-     * @return InputTrackInfo 
+     * Get Audio track information. 
+     * @return InputTrackInfo Audio track information.
      */
     public TrackInfo [] getInputTrackInfo() {
         return this.InputTrackInfo;
     }
 
     /**
-     * Set 
-     * @param InputTrackInfo 
+     * Set Audio track information.
+     * @param InputTrackInfo Audio track information.
      */
     public void setInputTrackInfo(TrackInfo [] InputTrackInfo) {
         this.InputTrackInfo = InputTrackInfo;

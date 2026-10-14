@@ -38,42 +38,42 @@ public class ClusterView extends AbstractModel {
     private Float Visible;
 
     /**
-    * Whether the cluster encounters circuit breaking
+    * Whether to fuse the cluster
     */
     @SerializedName("Break")
     @Expose
     private Float Break;
 
     /**
-    * Average disk usage
+    * Average Disk Usage
     */
     @SerializedName("AvgDiskUsage")
     @Expose
     private Float AvgDiskUsage;
 
     /**
-    * Average memory usage
+    * Average memory utilization
     */
     @SerializedName("AvgMemUsage")
     @Expose
     private Float AvgMemUsage;
 
     /**
-    * Average CPU usage
+    * Average CPU Usage
     */
     @SerializedName("AvgCpuUsage")
     @Expose
     private Float AvgCpuUsage;
 
     /**
-    * Total disk size of the cluster
+    * Total storage size of a cluster.
     */
     @SerializedName("TotalDiskSize")
     @Expose
     private Long TotalDiskSize;
 
     /**
-    * Types of nodes to receive client requests
+    * Client request node
     */
     @SerializedName("TargetNodeTypes")
     @Expose
@@ -94,14 +94,14 @@ public class ClusterView extends AbstractModel {
     private Long TotalNodeNum;
 
     /**
-    * Number of data nodes
+    * Number of Data Nodes
     */
     @SerializedName("DataNodeNum")
     @Expose
     private Long DataNodeNum;
 
     /**
-    * Number of indices
+    * Index count
     */
     @SerializedName("IndexNum")
     @Expose
@@ -115,7 +115,7 @@ public class ClusterView extends AbstractModel {
     private Long DocNum;
 
     /**
-    * Used disk size (in bytes)
+    * Used bytes of the disk
     */
     @SerializedName("DiskUsedInBytes")
     @Expose
@@ -136,14 +136,14 @@ public class ClusterView extends AbstractModel {
     private Long PrimaryShardNum;
 
     /**
-    * Number of relocating shards
+    * Number of migrating shards
     */
     @SerializedName("RelocatingShardNum")
     @Expose
     private Long RelocatingShardNum;
 
     /**
-    * Number of initializing shards
+    * Number of initializing shards.
     */
     @SerializedName("InitializingShardNum")
     @Expose
@@ -157,23 +157,21 @@ public class ClusterView extends AbstractModel {
     private Long UnassignedShardNum;
 
     /**
-    * Total COS storage of an enterprise cluster, in GB
+    * Enterprise Edition COS storage capacity size in GB
     */
     @SerializedName("TotalCosStorage")
     @Expose
     private Long TotalCosStorage;
 
     /**
-    * Name of the COS bucket that stores searchable snapshots of an enterprise cluster
-Note: This field may return `null`, indicating that no valid value was found.
+    * bucket name for storing cos searchable snapshots in the Enterprise Edition cluster
     */
     @SerializedName("SearchableSnapshotCosBucket")
     @Expose
     private String SearchableSnapshotCosBucket;
 
     /**
-    * COS app ID of the searchable snapshots of an enterprise cluster
-Note: This field may return `null`, indicating that no valid value was found.
+    * App ID of the cos bucket for searchable snapshots in the Enterprise Edition cluster
     */
     @SerializedName("SearchableSnapshotCosAppId")
     @Expose
@@ -212,96 +210,96 @@ Note: This field may return `null`, indicating that no valid value was found.
     }
 
     /**
-     * Get Whether the cluster encounters circuit breaking 
-     * @return Break Whether the cluster encounters circuit breaking
+     * Get Whether to fuse the cluster 
+     * @return Break Whether to fuse the cluster
      */
     public Float getBreak() {
         return this.Break;
     }
 
     /**
-     * Set Whether the cluster encounters circuit breaking
-     * @param Break Whether the cluster encounters circuit breaking
+     * Set Whether to fuse the cluster
+     * @param Break Whether to fuse the cluster
      */
     public void setBreak(Float Break) {
         this.Break = Break;
     }
 
     /**
-     * Get Average disk usage 
-     * @return AvgDiskUsage Average disk usage
+     * Get Average Disk Usage 
+     * @return AvgDiskUsage Average Disk Usage
      */
     public Float getAvgDiskUsage() {
         return this.AvgDiskUsage;
     }
 
     /**
-     * Set Average disk usage
-     * @param AvgDiskUsage Average disk usage
+     * Set Average Disk Usage
+     * @param AvgDiskUsage Average Disk Usage
      */
     public void setAvgDiskUsage(Float AvgDiskUsage) {
         this.AvgDiskUsage = AvgDiskUsage;
     }
 
     /**
-     * Get Average memory usage 
-     * @return AvgMemUsage Average memory usage
+     * Get Average memory utilization 
+     * @return AvgMemUsage Average memory utilization
      */
     public Float getAvgMemUsage() {
         return this.AvgMemUsage;
     }
 
     /**
-     * Set Average memory usage
-     * @param AvgMemUsage Average memory usage
+     * Set Average memory utilization
+     * @param AvgMemUsage Average memory utilization
      */
     public void setAvgMemUsage(Float AvgMemUsage) {
         this.AvgMemUsage = AvgMemUsage;
     }
 
     /**
-     * Get Average CPU usage 
-     * @return AvgCpuUsage Average CPU usage
+     * Get Average CPU Usage 
+     * @return AvgCpuUsage Average CPU Usage
      */
     public Float getAvgCpuUsage() {
         return this.AvgCpuUsage;
     }
 
     /**
-     * Set Average CPU usage
-     * @param AvgCpuUsage Average CPU usage
+     * Set Average CPU Usage
+     * @param AvgCpuUsage Average CPU Usage
      */
     public void setAvgCpuUsage(Float AvgCpuUsage) {
         this.AvgCpuUsage = AvgCpuUsage;
     }
 
     /**
-     * Get Total disk size of the cluster 
-     * @return TotalDiskSize Total disk size of the cluster
+     * Get Total storage size of a cluster. 
+     * @return TotalDiskSize Total storage size of a cluster.
      */
     public Long getTotalDiskSize() {
         return this.TotalDiskSize;
     }
 
     /**
-     * Set Total disk size of the cluster
-     * @param TotalDiskSize Total disk size of the cluster
+     * Set Total storage size of a cluster.
+     * @param TotalDiskSize Total storage size of a cluster.
      */
     public void setTotalDiskSize(Long TotalDiskSize) {
         this.TotalDiskSize = TotalDiskSize;
     }
 
     /**
-     * Get Types of nodes to receive client requests 
-     * @return TargetNodeTypes Types of nodes to receive client requests
+     * Get Client request node 
+     * @return TargetNodeTypes Client request node
      */
     public String [] getTargetNodeTypes() {
         return this.TargetNodeTypes;
     }
 
     /**
-     * Set Types of nodes to receive client requests
-     * @param TargetNodeTypes Types of nodes to receive client requests
+     * Set Client request node
+     * @param TargetNodeTypes Client request node
      */
     public void setTargetNodeTypes(String [] TargetNodeTypes) {
         this.TargetNodeTypes = TargetNodeTypes;
@@ -340,32 +338,32 @@ Note: This field may return `null`, indicating that no valid value was found.
     }
 
     /**
-     * Get Number of data nodes 
-     * @return DataNodeNum Number of data nodes
+     * Get Number of Data Nodes 
+     * @return DataNodeNum Number of Data Nodes
      */
     public Long getDataNodeNum() {
         return this.DataNodeNum;
     }
 
     /**
-     * Set Number of data nodes
-     * @param DataNodeNum Number of data nodes
+     * Set Number of Data Nodes
+     * @param DataNodeNum Number of Data Nodes
      */
     public void setDataNodeNum(Long DataNodeNum) {
         this.DataNodeNum = DataNodeNum;
     }
 
     /**
-     * Get Number of indices 
-     * @return IndexNum Number of indices
+     * Get Index count 
+     * @return IndexNum Index count
      */
     public Long getIndexNum() {
         return this.IndexNum;
     }
 
     /**
-     * Set Number of indices
-     * @param IndexNum Number of indices
+     * Set Index count
+     * @param IndexNum Index count
      */
     public void setIndexNum(Long IndexNum) {
         this.IndexNum = IndexNum;
@@ -388,16 +386,16 @@ Note: This field may return `null`, indicating that no valid value was found.
     }
 
     /**
-     * Get Used disk size (in bytes) 
-     * @return DiskUsedInBytes Used disk size (in bytes)
+     * Get Used bytes of the disk 
+     * @return DiskUsedInBytes Used bytes of the disk
      */
     public Long getDiskUsedInBytes() {
         return this.DiskUsedInBytes;
     }
 
     /**
-     * Set Used disk size (in bytes)
-     * @param DiskUsedInBytes Used disk size (in bytes)
+     * Set Used bytes of the disk
+     * @param DiskUsedInBytes Used bytes of the disk
      */
     public void setDiskUsedInBytes(Long DiskUsedInBytes) {
         this.DiskUsedInBytes = DiskUsedInBytes;
@@ -436,32 +434,32 @@ Note: This field may return `null`, indicating that no valid value was found.
     }
 
     /**
-     * Get Number of relocating shards 
-     * @return RelocatingShardNum Number of relocating shards
+     * Get Number of migrating shards 
+     * @return RelocatingShardNum Number of migrating shards
      */
     public Long getRelocatingShardNum() {
         return this.RelocatingShardNum;
     }
 
     /**
-     * Set Number of relocating shards
-     * @param RelocatingShardNum Number of relocating shards
+     * Set Number of migrating shards
+     * @param RelocatingShardNum Number of migrating shards
      */
     public void setRelocatingShardNum(Long RelocatingShardNum) {
         this.RelocatingShardNum = RelocatingShardNum;
     }
 
     /**
-     * Get Number of initializing shards 
-     * @return InitializingShardNum Number of initializing shards
+     * Get Number of initializing shards. 
+     * @return InitializingShardNum Number of initializing shards.
      */
     public Long getInitializingShardNum() {
         return this.InitializingShardNum;
     }
 
     /**
-     * Set Number of initializing shards
-     * @param InitializingShardNum Number of initializing shards
+     * Set Number of initializing shards.
+     * @param InitializingShardNum Number of initializing shards.
      */
     public void setInitializingShardNum(Long InitializingShardNum) {
         this.InitializingShardNum = InitializingShardNum;
@@ -484,56 +482,48 @@ Note: This field may return `null`, indicating that no valid value was found.
     }
 
     /**
-     * Get Total COS storage of an enterprise cluster, in GB 
-     * @return TotalCosStorage Total COS storage of an enterprise cluster, in GB
+     * Get Enterprise Edition COS storage capacity size in GB 
+     * @return TotalCosStorage Enterprise Edition COS storage capacity size in GB
      */
     public Long getTotalCosStorage() {
         return this.TotalCosStorage;
     }
 
     /**
-     * Set Total COS storage of an enterprise cluster, in GB
-     * @param TotalCosStorage Total COS storage of an enterprise cluster, in GB
+     * Set Enterprise Edition COS storage capacity size in GB
+     * @param TotalCosStorage Enterprise Edition COS storage capacity size in GB
      */
     public void setTotalCosStorage(Long TotalCosStorage) {
         this.TotalCosStorage = TotalCosStorage;
     }
 
     /**
-     * Get Name of the COS bucket that stores searchable snapshots of an enterprise cluster
-Note: This field may return `null`, indicating that no valid value was found. 
-     * @return SearchableSnapshotCosBucket Name of the COS bucket that stores searchable snapshots of an enterprise cluster
-Note: This field may return `null`, indicating that no valid value was found.
+     * Get bucket name for storing cos searchable snapshots in the Enterprise Edition cluster 
+     * @return SearchableSnapshotCosBucket bucket name for storing cos searchable snapshots in the Enterprise Edition cluster
      */
     public String getSearchableSnapshotCosBucket() {
         return this.SearchableSnapshotCosBucket;
     }
 
     /**
-     * Set Name of the COS bucket that stores searchable snapshots of an enterprise cluster
-Note: This field may return `null`, indicating that no valid value was found.
-     * @param SearchableSnapshotCosBucket Name of the COS bucket that stores searchable snapshots of an enterprise cluster
-Note: This field may return `null`, indicating that no valid value was found.
+     * Set bucket name for storing cos searchable snapshots in the Enterprise Edition cluster
+     * @param SearchableSnapshotCosBucket bucket name for storing cos searchable snapshots in the Enterprise Edition cluster
      */
     public void setSearchableSnapshotCosBucket(String SearchableSnapshotCosBucket) {
         this.SearchableSnapshotCosBucket = SearchableSnapshotCosBucket;
     }
 
     /**
-     * Get COS app ID of the searchable snapshots of an enterprise cluster
-Note: This field may return `null`, indicating that no valid value was found. 
-     * @return SearchableSnapshotCosAppId COS app ID of the searchable snapshots of an enterprise cluster
-Note: This field may return `null`, indicating that no valid value was found.
+     * Get App ID of the cos bucket for searchable snapshots in the Enterprise Edition cluster 
+     * @return SearchableSnapshotCosAppId App ID of the cos bucket for searchable snapshots in the Enterprise Edition cluster
      */
     public String getSearchableSnapshotCosAppId() {
         return this.SearchableSnapshotCosAppId;
     }
 
     /**
-     * Set COS app ID of the searchable snapshots of an enterprise cluster
-Note: This field may return `null`, indicating that no valid value was found.
-     * @param SearchableSnapshotCosAppId COS app ID of the searchable snapshots of an enterprise cluster
-Note: This field may return `null`, indicating that no valid value was found.
+     * Set App ID of the cos bucket for searchable snapshots in the Enterprise Edition cluster
+     * @param SearchableSnapshotCosAppId App ID of the cos bucket for searchable snapshots in the Enterprise Edition cluster
      */
     public void setSearchableSnapshotCosAppId(String SearchableSnapshotCosAppId) {
         this.SearchableSnapshotCosAppId = SearchableSnapshotCosAppId;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeInputRTPSettings extends AbstractModel {
 
     /**
-    * Whether it is FEC.
+    * Whether to enable FEC.
     */
     @SerializedName("FEC")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeInputRTPSettings extends AbstractModel {
     private Long IdleTimeout;
 
     /**
-     * Get Whether it is FEC. 
-     * @return FEC Whether it is FEC.
+     * Get Whether to enable FEC. 
+     * @return FEC Whether to enable FEC.
      */
     public String getFEC() {
         return this.FEC;
     }
 
     /**
-     * Set Whether it is FEC.
-     * @param FEC Whether it is FEC.
+     * Set Whether to enable FEC.
+     * @param FEC Whether to enable FEC.
      */
     public void setFEC(String FEC) {
         this.FEC = FEC;

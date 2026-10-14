@@ -24,161 +24,166 @@ import java.util.HashMap;
 public class Widget extends AbstractModel {
 
     /**
-    * 
+    * Widget configuration ID
+
     */
     @SerializedName("WidgetId")
     @Expose
     private String WidgetId;
 
     /**
-    * 
+    * Widget instance ID
     */
     @SerializedName("WidgetRunId")
     @Expose
     private String WidgetRunId;
 
     /**
-    * 
+    * Widget display data
     */
     @SerializedName("View")
     @Expose
     private String View;
 
     /**
-    * 
+    * Widget status information
     */
     @SerializedName("State")
     @Expose
     private String State;
 
     /**
-    * 
+    * Widget position
     */
     @SerializedName("Position")
     @Expose
     private Long Position;
 
     /**
-    * 
+    * Base64-encoded Widget information.
     */
     @SerializedName("EncodedWidget")
     @Expose
     private String EncodedWidget;
 
     /**
-    * 
+    * payload of the user's last submission
     */
     @SerializedName("Payload")
     @Expose
     private String Payload;
 
     /**
-     * Get  
-     * @return WidgetId 
+     * Get Widget configuration ID
+ 
+     * @return WidgetId Widget configuration ID
+
      */
     public String getWidgetId() {
         return this.WidgetId;
     }
 
     /**
-     * Set 
-     * @param WidgetId 
+     * Set Widget configuration ID
+
+     * @param WidgetId Widget configuration ID
+
      */
     public void setWidgetId(String WidgetId) {
         this.WidgetId = WidgetId;
     }
 
     /**
-     * Get  
-     * @return WidgetRunId 
+     * Get Widget instance ID 
+     * @return WidgetRunId Widget instance ID
      */
     public String getWidgetRunId() {
         return this.WidgetRunId;
     }
 
     /**
-     * Set 
-     * @param WidgetRunId 
+     * Set Widget instance ID
+     * @param WidgetRunId Widget instance ID
      */
     public void setWidgetRunId(String WidgetRunId) {
         this.WidgetRunId = WidgetRunId;
     }
 
     /**
-     * Get  
-     * @return View 
+     * Get Widget display data 
+     * @return View Widget display data
      */
     public String getView() {
         return this.View;
     }
 
     /**
-     * Set 
-     * @param View 
+     * Set Widget display data
+     * @param View Widget display data
      */
     public void setView(String View) {
         this.View = View;
     }
 
     /**
-     * Get  
-     * @return State 
+     * Get Widget status information 
+     * @return State Widget status information
      */
     public String getState() {
         return this.State;
     }
 
     /**
-     * Set 
-     * @param State 
+     * Set Widget status information
+     * @param State Widget status information
      */
     public void setState(String State) {
         this.State = State;
     }
 
     /**
-     * Get  
-     * @return Position 
+     * Get Widget position 
+     * @return Position Widget position
      */
     public Long getPosition() {
         return this.Position;
     }
 
     /**
-     * Set 
-     * @param Position 
+     * Set Widget position
+     * @param Position Widget position
      */
     public void setPosition(Long Position) {
         this.Position = Position;
     }
 
     /**
-     * Get  
-     * @return EncodedWidget 
+     * Get Base64-encoded Widget information. 
+     * @return EncodedWidget Base64-encoded Widget information.
      */
     public String getEncodedWidget() {
         return this.EncodedWidget;
     }
 
     /**
-     * Set 
-     * @param EncodedWidget 
+     * Set Base64-encoded Widget information.
+     * @param EncodedWidget Base64-encoded Widget information.
      */
     public void setEncodedWidget(String EncodedWidget) {
         this.EncodedWidget = EncodedWidget;
     }
 
     /**
-     * Get  
-     * @return Payload 
+     * Get payload of the user's last submission 
+     * @return Payload payload of the user's last submission
      */
     public String getPayload() {
         return this.Payload;
     }
 
     /**
-     * Set 
-     * @param Payload 
+     * Set payload of the user's last submission
+     * @param Payload payload of the user's last submission
      */
     public void setPayload(String Payload) {
         this.Payload = Payload;

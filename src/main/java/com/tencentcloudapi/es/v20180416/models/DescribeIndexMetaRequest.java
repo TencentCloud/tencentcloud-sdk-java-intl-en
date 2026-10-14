@@ -31,28 +31,28 @@ public class DescribeIndexMetaRequest extends AbstractModel {
     private String InstanceId;
 
     /**
-    * Index type. `auto`: Automated; `normal`: General.
+    * Index type. auto: autonomous index; normal: general index
     */
     @SerializedName("IndexType")
     @Expose
     private String IndexType;
 
     /**
-    * Index name. `null` indicates that all indexes are requested.
+    * Index name. If this parameter is left empty, all indexes are obtained.
     */
     @SerializedName("IndexName")
     @Expose
     private String IndexName;
 
     /**
-    * Username for cluster access
+    * Cluster access username.
     */
     @SerializedName("Username")
     @Expose
     private String Username;
 
     /**
-    * Password for cluster access
+    * Cluster access password
     */
     @SerializedName("Password")
     @Expose
@@ -75,64 +75,64 @@ public class DescribeIndexMetaRequest extends AbstractModel {
     }
 
     /**
-     * Get Index type. `auto`: Automated; `normal`: General. 
-     * @return IndexType Index type. `auto`: Automated; `normal`: General.
+     * Get Index type. auto: autonomous index; normal: general index 
+     * @return IndexType Index type. auto: autonomous index; normal: general index
      */
     public String getIndexType() {
         return this.IndexType;
     }
 
     /**
-     * Set Index type. `auto`: Automated; `normal`: General.
-     * @param IndexType Index type. `auto`: Automated; `normal`: General.
+     * Set Index type. auto: autonomous index; normal: general index
+     * @param IndexType Index type. auto: autonomous index; normal: general index
      */
     public void setIndexType(String IndexType) {
         this.IndexType = IndexType;
     }
 
     /**
-     * Get Index name. `null` indicates that all indexes are requested. 
-     * @return IndexName Index name. `null` indicates that all indexes are requested.
+     * Get Index name. If this parameter is left empty, all indexes are obtained. 
+     * @return IndexName Index name. If this parameter is left empty, all indexes are obtained.
      */
     public String getIndexName() {
         return this.IndexName;
     }
 
     /**
-     * Set Index name. `null` indicates that all indexes are requested.
-     * @param IndexName Index name. `null` indicates that all indexes are requested.
+     * Set Index name. If this parameter is left empty, all indexes are obtained.
+     * @param IndexName Index name. If this parameter is left empty, all indexes are obtained.
      */
     public void setIndexName(String IndexName) {
         this.IndexName = IndexName;
     }
 
     /**
-     * Get Username for cluster access 
-     * @return Username Username for cluster access
+     * Get Cluster access username. 
+     * @return Username Cluster access username.
      */
     public String getUsername() {
         return this.Username;
     }
 
     /**
-     * Set Username for cluster access
-     * @param Username Username for cluster access
+     * Set Cluster access username.
+     * @param Username Cluster access username.
      */
     public void setUsername(String Username) {
         this.Username = Username;
     }
 
     /**
-     * Get Password for cluster access 
-     * @return Password Password for cluster access
+     * Get Cluster access password 
+     * @return Password Cluster access password
      */
     public String getPassword() {
         return this.Password;
     }
 
     /**
-     * Set Password for cluster access
-     * @param Password Password for cluster access
+     * Set Cluster access password
+     * @param Password Cluster access password
      */
     public void setPassword(String Password) {
         this.Password = Password;

@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class LocalDiskInfo extends AbstractModel {
 
     /**
-    * Local disk type <li>LOCAL_SATA: big data </li><li>NVME_SSD: high IO</li>
+    * Local disk type<li>LOCAL_SATA: big data type</li><li>NVME_SSD: high IO type</li>
     */
     @SerializedName("LocalDiskType")
     @Expose
     private String LocalDiskType;
 
     /**
-    * Size of a single local disk
+    * Single local disk size
     */
     @SerializedName("LocalDiskSize")
     @Expose
     private Long LocalDiskSize;
 
     /**
-    * Number of local disks
+    * Number of local disk blocks
     */
     @SerializedName("LocalDiskCount")
     @Expose
     private Long LocalDiskCount;
 
     /**
-     * Get Local disk type <li>LOCAL_SATA: big data </li><li>NVME_SSD: high IO</li> 
-     * @return LocalDiskType Local disk type <li>LOCAL_SATA: big data </li><li>NVME_SSD: high IO</li>
+     * Get Local disk type<li>LOCAL_SATA: big data type</li><li>NVME_SSD: high IO type</li> 
+     * @return LocalDiskType Local disk type<li>LOCAL_SATA: big data type</li><li>NVME_SSD: high IO type</li>
      */
     public String getLocalDiskType() {
         return this.LocalDiskType;
     }
 
     /**
-     * Set Local disk type <li>LOCAL_SATA: big data </li><li>NVME_SSD: high IO</li>
-     * @param LocalDiskType Local disk type <li>LOCAL_SATA: big data </li><li>NVME_SSD: high IO</li>
+     * Set Local disk type<li>LOCAL_SATA: big data type</li><li>NVME_SSD: high IO type</li>
+     * @param LocalDiskType Local disk type<li>LOCAL_SATA: big data type</li><li>NVME_SSD: high IO type</li>
      */
     public void setLocalDiskType(String LocalDiskType) {
         this.LocalDiskType = LocalDiskType;
     }
 
     /**
-     * Get Size of a single local disk 
-     * @return LocalDiskSize Size of a single local disk
+     * Get Single local disk size 
+     * @return LocalDiskSize Single local disk size
      */
     public Long getLocalDiskSize() {
         return this.LocalDiskSize;
     }
 
     /**
-     * Set Size of a single local disk
-     * @param LocalDiskSize Size of a single local disk
+     * Set Single local disk size
+     * @param LocalDiskSize Single local disk size
      */
     public void setLocalDiskSize(Long LocalDiskSize) {
         this.LocalDiskSize = LocalDiskSize;
     }
 
     /**
-     * Get Number of local disks 
-     * @return LocalDiskCount Number of local disks
+     * Get Number of local disk blocks 
+     * @return LocalDiskCount Number of local disk blocks
      */
     public Long getLocalDiskCount() {
         return this.LocalDiskCount;
     }
 
     /**
-     * Set Number of local disks
-     * @param LocalDiskCount Number of local disks
+     * Set Number of local disk blocks
+     * @param LocalDiskCount Number of local disk blocks
      */
     public void setLocalDiskCount(Long LocalDiskCount) {
         this.LocalDiskCount = LocalDiskCount;

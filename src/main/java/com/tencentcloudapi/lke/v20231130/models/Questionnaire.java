@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class Questionnaire extends AbstractModel {
 
     /**
-    * 
+    * <p>Questionnaire title</p>
     */
     @SerializedName("Title")
     @Expose
     private String Title;
 
     /**
-    * 
+    * <p>Question list of the questionnaire</p>
     */
     @SerializedName("Questions")
     @Expose
     private QuestionnaireQuestion [] Questions;
 
     /**
-    * 
+    * <p>List of answers to the questionnaire</p>
     */
     @SerializedName("Answers")
     @Expose
     private QuestionnaireQuestionAnswer [] Answers;
 
     /**
-     * Get  
-     * @return Title 
+     * Get <p>Questionnaire title</p> 
+     * @return Title <p>Questionnaire title</p>
      */
     public String getTitle() {
         return this.Title;
     }
 
     /**
-     * Set 
-     * @param Title 
+     * Set <p>Questionnaire title</p>
+     * @param Title <p>Questionnaire title</p>
      */
     public void setTitle(String Title) {
         this.Title = Title;
     }
 
     /**
-     * Get  
-     * @return Questions 
+     * Get <p>Question list of the questionnaire</p> 
+     * @return Questions <p>Question list of the questionnaire</p>
      */
     public QuestionnaireQuestion [] getQuestions() {
         return this.Questions;
     }
 
     /**
-     * Set 
-     * @param Questions 
+     * Set <p>Question list of the questionnaire</p>
+     * @param Questions <p>Question list of the questionnaire</p>
      */
     public void setQuestions(QuestionnaireQuestion [] Questions) {
         this.Questions = Questions;
     }
 
     /**
-     * Get  
-     * @return Answers 
+     * Get <p>List of answers to the questionnaire</p> 
+     * @return Answers <p>List of answers to the questionnaire</p>
      */
     public QuestionnaireQuestionAnswer [] getAnswers() {
         return this.Answers;
     }
 
     /**
-     * Set 
-     * @param Answers 
+     * Set <p>List of answers to the questionnaire</p>
+     * @param Answers <p>List of answers to the questionnaire</p>
      */
     public void setAnswers(QuestionnaireQuestionAnswer [] Answers) {
         this.Answers = Answers;

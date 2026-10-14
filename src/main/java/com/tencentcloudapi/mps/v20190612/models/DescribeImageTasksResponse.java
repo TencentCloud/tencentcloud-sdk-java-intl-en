@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class DescribeImageTasksResponse extends AbstractModel {
 
     /**
-    * 
+    * <p>Total number of records that meet filter conditions.</p><p>Unit: entries</p>
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * 
+    * <p>Scrolling identifier. If a request does not return all the data entries, this field indicates the ID of the next entry. If this field is an empty string, there is no more data.</p>
     */
     @SerializedName("ScrollToken")
     @Expose
     private String ScrollToken;
 
     /**
-    * 
+    * <p>Image task summary list.</p>
     */
     @SerializedName("TaskSet")
     @Expose
@@ -52,48 +52,48 @@ public class DescribeImageTasksResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get  
-     * @return TotalCount 
+     * Get <p>Total number of records that meet filter conditions.</p><p>Unit: entries</p> 
+     * @return TotalCount <p>Total number of records that meet filter conditions.</p><p>Unit: entries</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 
-     * @param TotalCount 
+     * Set <p>Total number of records that meet filter conditions.</p><p>Unit: entries</p>
+     * @param TotalCount <p>Total number of records that meet filter conditions.</p><p>Unit: entries</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get  
-     * @return ScrollToken 
+     * Get <p>Scrolling identifier. If a request does not return all the data entries, this field indicates the ID of the next entry. If this field is an empty string, there is no more data.</p> 
+     * @return ScrollToken <p>Scrolling identifier. If a request does not return all the data entries, this field indicates the ID of the next entry. If this field is an empty string, there is no more data.</p>
      */
     public String getScrollToken() {
         return this.ScrollToken;
     }
 
     /**
-     * Set 
-     * @param ScrollToken 
+     * Set <p>Scrolling identifier. If a request does not return all the data entries, this field indicates the ID of the next entry. If this field is an empty string, there is no more data.</p>
+     * @param ScrollToken <p>Scrolling identifier. If a request does not return all the data entries, this field indicates the ID of the next entry. If this field is an empty string, there is no more data.</p>
      */
     public void setScrollToken(String ScrollToken) {
         this.ScrollToken = ScrollToken;
     }
 
     /**
-     * Get  
-     * @return TaskSet 
+     * Get <p>Image task summary list.</p> 
+     * @return TaskSet <p>Image task summary list.</p>
      */
     public ImageTaskInfo [] getTaskSet() {
         return this.TaskSet;
     }
 
     /**
-     * Set 
-     * @param TaskSet 
+     * Set <p>Image task summary list.</p>
+     * @param TaskSet <p>Image task summary list.</p>
      */
     public void setTaskSet(ImageTaskInfo [] TaskSet) {
         this.TaskSet = TaskSet;

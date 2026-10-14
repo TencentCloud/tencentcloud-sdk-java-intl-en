@@ -24,66 +24,66 @@ import java.util.HashMap;
 public class TEHDConfig extends AbstractModel {
 
     /**
-    * Top speed Codec type. Available values:
-<li>TEHD-100: top speed codec-100 (video top speed codec).</li>
-<li>TEHD-200: top speed codec-200 (audio top speed codec).</li>
-If not specified, top speed Codec is not enabled.
+    * TSC type. Available values:
+<li>TEHD-100: TSC-100 (video top speed codec).</li>
+<li>TEHD-200: Top Speed Codec-200 (audio top speed codec).</li>
+If not specified, Top Speed Codec is not enabled.
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * Maximum video bitrate. Valid when Type is set to top speed Codec.
-If this is not specified or is set to 0, no upper limit is set for the video bitrate.
+    * Maximum video bitrate. Valid when Type is set to Top Speed Codec.
+If this parameter is not specified or is set to 0, no upper limit is set for the video bitrate.
     */
     @SerializedName("MaxVideoBitrate")
     @Expose
     private Long MaxVideoBitrate;
 
     /**
-     * Get Top speed Codec type. Available values:
-<li>TEHD-100: top speed codec-100 (video top speed codec).</li>
-<li>TEHD-200: top speed codec-200 (audio top speed codec).</li>
-If not specified, top speed Codec is not enabled. 
-     * @return Type Top speed Codec type. Available values:
-<li>TEHD-100: top speed codec-100 (video top speed codec).</li>
-<li>TEHD-200: top speed codec-200 (audio top speed codec).</li>
-If not specified, top speed Codec is not enabled.
+     * Get TSC type. Available values:
+<li>TEHD-100: TSC-100 (video top speed codec).</li>
+<li>TEHD-200: Top Speed Codec-200 (audio top speed codec).</li>
+If not specified, Top Speed Codec is not enabled. 
+     * @return Type TSC type. Available values:
+<li>TEHD-100: TSC-100 (video top speed codec).</li>
+<li>TEHD-200: Top Speed Codec-200 (audio top speed codec).</li>
+If not specified, Top Speed Codec is not enabled.
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Top speed Codec type. Available values:
-<li>TEHD-100: top speed codec-100 (video top speed codec).</li>
-<li>TEHD-200: top speed codec-200 (audio top speed codec).</li>
-If not specified, top speed Codec is not enabled.
-     * @param Type Top speed Codec type. Available values:
-<li>TEHD-100: top speed codec-100 (video top speed codec).</li>
-<li>TEHD-200: top speed codec-200 (audio top speed codec).</li>
-If not specified, top speed Codec is not enabled.
+     * Set TSC type. Available values:
+<li>TEHD-100: TSC-100 (video top speed codec).</li>
+<li>TEHD-200: Top Speed Codec-200 (audio top speed codec).</li>
+If not specified, Top Speed Codec is not enabled.
+     * @param Type TSC type. Available values:
+<li>TEHD-100: TSC-100 (video top speed codec).</li>
+<li>TEHD-200: Top Speed Codec-200 (audio top speed codec).</li>
+If not specified, Top Speed Codec is not enabled.
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get Maximum video bitrate. Valid when Type is set to top speed Codec.
-If this is not specified or is set to 0, no upper limit is set for the video bitrate. 
-     * @return MaxVideoBitrate Maximum video bitrate. Valid when Type is set to top speed Codec.
-If this is not specified or is set to 0, no upper limit is set for the video bitrate.
+     * Get Maximum video bitrate. Valid when Type is set to Top Speed Codec.
+If this parameter is not specified or is set to 0, no upper limit is set for the video bitrate. 
+     * @return MaxVideoBitrate Maximum video bitrate. Valid when Type is set to Top Speed Codec.
+If this parameter is not specified or is set to 0, no upper limit is set for the video bitrate.
      */
     public Long getMaxVideoBitrate() {
         return this.MaxVideoBitrate;
     }
 
     /**
-     * Set Maximum video bitrate. Valid when Type is set to top speed Codec.
-If this is not specified or is set to 0, no upper limit is set for the video bitrate.
-     * @param MaxVideoBitrate Maximum video bitrate. Valid when Type is set to top speed Codec.
-If this is not specified or is set to 0, no upper limit is set for the video bitrate.
+     * Set Maximum video bitrate. Valid when Type is set to Top Speed Codec.
+If this parameter is not specified or is set to 0, no upper limit is set for the video bitrate.
+     * @param MaxVideoBitrate Maximum video bitrate. Valid when Type is set to Top Speed Codec.
+If this parameter is not specified or is set to 0, no upper limit is set for the video bitrate.
      */
     public void setMaxVideoBitrate(Long MaxVideoBitrate) {
         this.MaxVideoBitrate = MaxVideoBitrate;

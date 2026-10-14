@@ -34,7 +34,10 @@ Default value: ON.
     private String Switch;
 
     /**
-    * 
+    * Type. Valid values:
+<li>loudNorm: loudness normalization</li>
+<li>gainControl: reduce abrupt change</li>
+Default value: loudNorm.
     */
     @SerializedName("Type")
     @Expose
@@ -69,16 +72,28 @@ Default value: ON.
     }
 
     /**
-     * Get  
-     * @return Type 
+     * Get Type. Valid values:
+<li>loudNorm: loudness normalization</li>
+<li>gainControl: reduce abrupt change</li>
+Default value: loudNorm. 
+     * @return Type Type. Valid values:
+<li>loudNorm: loudness normalization</li>
+<li>gainControl: reduce abrupt change</li>
+Default value: loudNorm.
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 
-     * @param Type 
+     * Set Type. Valid values:
+<li>loudNorm: loudness normalization</li>
+<li>gainControl: reduce abrupt change</li>
+Default value: loudNorm.
+     * @param Type Type. Valid values:
+<li>loudNorm: loudness normalization</li>
+<li>gainControl: reduce abrupt change</li>
+Default value: loudNorm.
      */
     public void setType(String Type) {
         this.Type = Type;

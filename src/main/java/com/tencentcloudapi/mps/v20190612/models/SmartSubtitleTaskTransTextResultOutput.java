@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class SmartSubtitleTaskTransTextResultOutput extends AbstractModel {
 
     /**
-    * 
+    * <p>List of segments for translation.</p>
     */
     @SerializedName("SegmentSet")
     @Expose
@@ -59,16 +59,16 @@ public class SmartSubtitleTaskTransTextResultOutput extends AbstractModel {
     private SubtitleTransResultItem [] SubtitleResults;
 
     /**
-     * Get  
-     * @return SegmentSet 
+     * Get <p>List of segments for translation.</p> 
+     * @return SegmentSet <p>List of segments for translation.</p>
      */
     public SmartSubtitleTaskTransTextSegmentItem [] getSegmentSet() {
         return this.SegmentSet;
     }
 
     /**
-     * Set 
-     * @param SegmentSet 
+     * Set <p>List of segments for translation.</p>
+     * @param SegmentSet <p>List of segments for translation.</p>
      */
     public void setSegmentSet(SmartSubtitleTaskTransTextSegmentItem [] SegmentSet) {
         this.SegmentSet = SegmentSet;

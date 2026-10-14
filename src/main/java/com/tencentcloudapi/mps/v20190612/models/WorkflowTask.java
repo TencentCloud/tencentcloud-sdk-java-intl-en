@@ -24,312 +24,325 @@ import java.util.HashMap;
 public class WorkflowTask extends AbstractModel {
 
     /**
-    * Media processing task ID.
+    * <p>Media processing task ID.</p>
     */
     @SerializedName("TaskId")
     @Expose
     private String TaskId;
 
     /**
-    * Task flow status. Valid values:
-<li>PROCESSING: Processing;</li>
-<li>FINISH: completed</li>
+    * <p>Task flow status. Valid values: </p><li>PROCESSING: Processing; </li><li>FINISH: Completed.</li>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * An error code other than 0 is returned in case of a source exception. Use the error code of the specific task when a value of 0 is returned.
+    * <p>Returns a non-zero error code when a source error occurs. If 0 is returned, use the ErrCode of each specific task.</p>
     */
     @SerializedName("ErrCode")
     @Expose
     private Long ErrCode;
 
     /**
-    * The corresponding exception message is returned in case of a source exception. If no source exception occurs, use the message of each specific task.
+    * <p>Returns the corresponding error Message when a source error occurs. Otherwise, use the Message of each specific task.</p>
     */
     @SerializedName("Message")
     @Expose
     private String Message;
 
     /**
-    * 
+    * <p>Target file information of media processing.</p>
     */
     @SerializedName("InputInfo")
     @Expose
     private MediaInputInfo InputInfo;
 
     /**
-    * 
+    * <p>Metadata of the original video.</p>
     */
     @SerializedName("MetaData")
     @Expose
     private MediaMetaData MetaData;
 
     /**
-    * Execution status and results of a Media Processing Service task.
+    * <p>Execution status and result of the media processing task.</p>
     */
     @SerializedName("MediaProcessResultSet")
     @Expose
     private MediaProcessTaskResult [] MediaProcessResultSet;
 
     /**
-    * Execution status and results of a video content review task.
+    * <p>Execution status and results of the video content review task.</p>
     */
     @SerializedName("AiContentReviewResultSet")
     @Expose
     private AiContentReviewResult [] AiContentReviewResultSet;
 
     /**
-    * Execution status and results of a video content analysis task.
+    * <p>Execution status and results of the video content analysis task.</p>
     */
     @SerializedName("AiAnalysisResultSet")
     @Expose
     private AiAnalysisResult [] AiAnalysisResultSet;
 
     /**
-    * Task execution status and results of the video content recognition task.
+    * <p>Execution status and results of the video content recognition task.</p>
     */
     @SerializedName("AiRecognitionResultSet")
     @Expose
     private AiRecognitionResult [] AiRecognitionResultSet;
 
     /**
-    * 
+    * <p>Execution status and results of a media quality inspection task.</p>
     */
     @SerializedName("AiQualityControlTaskResult")
     @Expose
     private ScheduleQualityControlTaskResult AiQualityControlTaskResult;
 
     /**
-    * 
+    * <p>Execution result of the smart subtitle task</p>
     */
     @SerializedName("SmartSubtitlesTaskResult")
     @Expose
     private SmartSubtitlesResult [] SmartSubtitlesTaskResult;
 
     /**
-    * 
+    * <p>Outcome of the intelligent erasure task</p>
     */
     @SerializedName("SmartEraseTaskResult")
     @Expose
     private SmartEraseTaskResult SmartEraseTaskResult;
 
     /**
-     * Get Media processing task ID. 
-     * @return TaskId Media processing task ID.
+    * <p>Outcome of the AI dubbing task.</p>
+    */
+    @SerializedName("AiDubbingTaskResult")
+    @Expose
+    private AIDubbingTaskResult AiDubbingTaskResult;
+
+    /**
+     * Get <p>Media processing task ID.</p> 
+     * @return TaskId <p>Media processing task ID.</p>
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set Media processing task ID.
-     * @param TaskId Media processing task ID.
+     * Set <p>Media processing task ID.</p>
+     * @param TaskId <p>Media processing task ID.</p>
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * Get Task flow status. Valid values:
-<li>PROCESSING: Processing;</li>
-<li>FINISH: completed</li> 
-     * @return Status Task flow status. Valid values:
-<li>PROCESSING: Processing;</li>
-<li>FINISH: completed</li>
+     * Get <p>Task flow status. Valid values: </p><li>PROCESSING: Processing; </li><li>FINISH: Completed.</li> 
+     * @return Status <p>Task flow status. Valid values: </p><li>PROCESSING: Processing; </li><li>FINISH: Completed.</li>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Task flow status. Valid values:
-<li>PROCESSING: Processing;</li>
-<li>FINISH: completed</li>
-     * @param Status Task flow status. Valid values:
-<li>PROCESSING: Processing;</li>
-<li>FINISH: completed</li>
+     * Set <p>Task flow status. Valid values: </p><li>PROCESSING: Processing; </li><li>FINISH: Completed.</li>
+     * @param Status <p>Task flow status. Valid values: </p><li>PROCESSING: Processing; </li><li>FINISH: Completed.</li>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get An error code other than 0 is returned in case of a source exception. Use the error code of the specific task when a value of 0 is returned. 
-     * @return ErrCode An error code other than 0 is returned in case of a source exception. Use the error code of the specific task when a value of 0 is returned.
+     * Get <p>Returns a non-zero error code when a source error occurs. If 0 is returned, use the ErrCode of each specific task.</p> 
+     * @return ErrCode <p>Returns a non-zero error code when a source error occurs. If 0 is returned, use the ErrCode of each specific task.</p>
      */
     public Long getErrCode() {
         return this.ErrCode;
     }
 
     /**
-     * Set An error code other than 0 is returned in case of a source exception. Use the error code of the specific task when a value of 0 is returned.
-     * @param ErrCode An error code other than 0 is returned in case of a source exception. Use the error code of the specific task when a value of 0 is returned.
+     * Set <p>Returns a non-zero error code when a source error occurs. If 0 is returned, use the ErrCode of each specific task.</p>
+     * @param ErrCode <p>Returns a non-zero error code when a source error occurs. If 0 is returned, use the ErrCode of each specific task.</p>
      */
     public void setErrCode(Long ErrCode) {
         this.ErrCode = ErrCode;
     }
 
     /**
-     * Get The corresponding exception message is returned in case of a source exception. If no source exception occurs, use the message of each specific task. 
-     * @return Message The corresponding exception message is returned in case of a source exception. If no source exception occurs, use the message of each specific task.
+     * Get <p>Returns the corresponding error Message when a source error occurs. Otherwise, use the Message of each specific task.</p> 
+     * @return Message <p>Returns the corresponding error Message when a source error occurs. Otherwise, use the Message of each specific task.</p>
      */
     public String getMessage() {
         return this.Message;
     }
 
     /**
-     * Set The corresponding exception message is returned in case of a source exception. If no source exception occurs, use the message of each specific task.
-     * @param Message The corresponding exception message is returned in case of a source exception. If no source exception occurs, use the message of each specific task.
+     * Set <p>Returns the corresponding error Message when a source error occurs. Otherwise, use the Message of each specific task.</p>
+     * @param Message <p>Returns the corresponding error Message when a source error occurs. Otherwise, use the Message of each specific task.</p>
      */
     public void setMessage(String Message) {
         this.Message = Message;
     }
 
     /**
-     * Get  
-     * @return InputInfo 
+     * Get <p>Target file information of media processing.</p> 
+     * @return InputInfo <p>Target file information of media processing.</p>
      */
     public MediaInputInfo getInputInfo() {
         return this.InputInfo;
     }
 
     /**
-     * Set 
-     * @param InputInfo 
+     * Set <p>Target file information of media processing.</p>
+     * @param InputInfo <p>Target file information of media processing.</p>
      */
     public void setInputInfo(MediaInputInfo InputInfo) {
         this.InputInfo = InputInfo;
     }
 
     /**
-     * Get  
-     * @return MetaData 
+     * Get <p>Metadata of the original video.</p> 
+     * @return MetaData <p>Metadata of the original video.</p>
      */
     public MediaMetaData getMetaData() {
         return this.MetaData;
     }
 
     /**
-     * Set 
-     * @param MetaData 
+     * Set <p>Metadata of the original video.</p>
+     * @param MetaData <p>Metadata of the original video.</p>
      */
     public void setMetaData(MediaMetaData MetaData) {
         this.MetaData = MetaData;
     }
 
     /**
-     * Get Execution status and results of a Media Processing Service task. 
-     * @return MediaProcessResultSet Execution status and results of a Media Processing Service task.
+     * Get <p>Execution status and result of the media processing task.</p> 
+     * @return MediaProcessResultSet <p>Execution status and result of the media processing task.</p>
      */
     public MediaProcessTaskResult [] getMediaProcessResultSet() {
         return this.MediaProcessResultSet;
     }
 
     /**
-     * Set Execution status and results of a Media Processing Service task.
-     * @param MediaProcessResultSet Execution status and results of a Media Processing Service task.
+     * Set <p>Execution status and result of the media processing task.</p>
+     * @param MediaProcessResultSet <p>Execution status and result of the media processing task.</p>
      */
     public void setMediaProcessResultSet(MediaProcessTaskResult [] MediaProcessResultSet) {
         this.MediaProcessResultSet = MediaProcessResultSet;
     }
 
     /**
-     * Get Execution status and results of a video content review task. 
-     * @return AiContentReviewResultSet Execution status and results of a video content review task.
+     * Get <p>Execution status and results of the video content review task.</p> 
+     * @return AiContentReviewResultSet <p>Execution status and results of the video content review task.</p>
      */
     public AiContentReviewResult [] getAiContentReviewResultSet() {
         return this.AiContentReviewResultSet;
     }
 
     /**
-     * Set Execution status and results of a video content review task.
-     * @param AiContentReviewResultSet Execution status and results of a video content review task.
+     * Set <p>Execution status and results of the video content review task.</p>
+     * @param AiContentReviewResultSet <p>Execution status and results of the video content review task.</p>
      */
     public void setAiContentReviewResultSet(AiContentReviewResult [] AiContentReviewResultSet) {
         this.AiContentReviewResultSet = AiContentReviewResultSet;
     }
 
     /**
-     * Get Execution status and results of a video content analysis task. 
-     * @return AiAnalysisResultSet Execution status and results of a video content analysis task.
+     * Get <p>Execution status and results of the video content analysis task.</p> 
+     * @return AiAnalysisResultSet <p>Execution status and results of the video content analysis task.</p>
      */
     public AiAnalysisResult [] getAiAnalysisResultSet() {
         return this.AiAnalysisResultSet;
     }
 
     /**
-     * Set Execution status and results of a video content analysis task.
-     * @param AiAnalysisResultSet Execution status and results of a video content analysis task.
+     * Set <p>Execution status and results of the video content analysis task.</p>
+     * @param AiAnalysisResultSet <p>Execution status and results of the video content analysis task.</p>
      */
     public void setAiAnalysisResultSet(AiAnalysisResult [] AiAnalysisResultSet) {
         this.AiAnalysisResultSet = AiAnalysisResultSet;
     }
 
     /**
-     * Get Task execution status and results of the video content recognition task. 
-     * @return AiRecognitionResultSet Task execution status and results of the video content recognition task.
+     * Get <p>Execution status and results of the video content recognition task.</p> 
+     * @return AiRecognitionResultSet <p>Execution status and results of the video content recognition task.</p>
      */
     public AiRecognitionResult [] getAiRecognitionResultSet() {
         return this.AiRecognitionResultSet;
     }
 
     /**
-     * Set Task execution status and results of the video content recognition task.
-     * @param AiRecognitionResultSet Task execution status and results of the video content recognition task.
+     * Set <p>Execution status and results of the video content recognition task.</p>
+     * @param AiRecognitionResultSet <p>Execution status and results of the video content recognition task.</p>
      */
     public void setAiRecognitionResultSet(AiRecognitionResult [] AiRecognitionResultSet) {
         this.AiRecognitionResultSet = AiRecognitionResultSet;
     }
 
     /**
-     * Get  
-     * @return AiQualityControlTaskResult 
+     * Get <p>Execution status and results of a media quality inspection task.</p> 
+     * @return AiQualityControlTaskResult <p>Execution status and results of a media quality inspection task.</p>
      */
     public ScheduleQualityControlTaskResult getAiQualityControlTaskResult() {
         return this.AiQualityControlTaskResult;
     }
 
     /**
-     * Set 
-     * @param AiQualityControlTaskResult 
+     * Set <p>Execution status and results of a media quality inspection task.</p>
+     * @param AiQualityControlTaskResult <p>Execution status and results of a media quality inspection task.</p>
      */
     public void setAiQualityControlTaskResult(ScheduleQualityControlTaskResult AiQualityControlTaskResult) {
         this.AiQualityControlTaskResult = AiQualityControlTaskResult;
     }
 
     /**
-     * Get  
-     * @return SmartSubtitlesTaskResult 
+     * Get <p>Execution result of the smart subtitle task</p> 
+     * @return SmartSubtitlesTaskResult <p>Execution result of the smart subtitle task</p>
      */
     public SmartSubtitlesResult [] getSmartSubtitlesTaskResult() {
         return this.SmartSubtitlesTaskResult;
     }
 
     /**
-     * Set 
-     * @param SmartSubtitlesTaskResult 
+     * Set <p>Execution result of the smart subtitle task</p>
+     * @param SmartSubtitlesTaskResult <p>Execution result of the smart subtitle task</p>
      */
     public void setSmartSubtitlesTaskResult(SmartSubtitlesResult [] SmartSubtitlesTaskResult) {
         this.SmartSubtitlesTaskResult = SmartSubtitlesTaskResult;
     }
 
     /**
-     * Get  
-     * @return SmartEraseTaskResult 
+     * Get <p>Outcome of the intelligent erasure task</p> 
+     * @return SmartEraseTaskResult <p>Outcome of the intelligent erasure task</p>
      */
     public SmartEraseTaskResult getSmartEraseTaskResult() {
         return this.SmartEraseTaskResult;
     }
 
     /**
-     * Set 
-     * @param SmartEraseTaskResult 
+     * Set <p>Outcome of the intelligent erasure task</p>
+     * @param SmartEraseTaskResult <p>Outcome of the intelligent erasure task</p>
      */
     public void setSmartEraseTaskResult(SmartEraseTaskResult SmartEraseTaskResult) {
         this.SmartEraseTaskResult = SmartEraseTaskResult;
+    }
+
+    /**
+     * Get <p>Outcome of the AI dubbing task.</p> 
+     * @return AiDubbingTaskResult <p>Outcome of the AI dubbing task.</p>
+     */
+    public AIDubbingTaskResult getAiDubbingTaskResult() {
+        return this.AiDubbingTaskResult;
+    }
+
+    /**
+     * Set <p>Outcome of the AI dubbing task.</p>
+     * @param AiDubbingTaskResult <p>Outcome of the AI dubbing task.</p>
+     */
+    public void setAiDubbingTaskResult(AIDubbingTaskResult AiDubbingTaskResult) {
+        this.AiDubbingTaskResult = AiDubbingTaskResult;
     }
 
     public WorkflowTask() {
@@ -394,6 +407,9 @@ public class WorkflowTask extends AbstractModel {
         if (source.SmartEraseTaskResult != null) {
             this.SmartEraseTaskResult = new SmartEraseTaskResult(source.SmartEraseTaskResult);
         }
+        if (source.AiDubbingTaskResult != null) {
+            this.AiDubbingTaskResult = new AIDubbingTaskResult(source.AiDubbingTaskResult);
+        }
     }
 
 
@@ -414,6 +430,7 @@ public class WorkflowTask extends AbstractModel {
         this.setParamObj(map, prefix + "AiQualityControlTaskResult.", this.AiQualityControlTaskResult);
         this.setParamArrayObj(map, prefix + "SmartSubtitlesTaskResult.", this.SmartSubtitlesTaskResult);
         this.setParamObj(map, prefix + "SmartEraseTaskResult.", this.SmartEraseTaskResult);
+        this.setParamObj(map, prefix + "AiDubbingTaskResult.", this.AiDubbingTaskResult);
 
     }
 }

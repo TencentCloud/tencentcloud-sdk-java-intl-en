@@ -52,7 +52,7 @@ public class AudioTemplateInfo extends AbstractModel {
     private Long AudioChannel;
 
     /**
-    * 
+    * <p>Audio track merging information.<br>Note: This field only takes effect for adaptive transcoding.</p>
     */
     @SerializedName("TrackChannelInfo")
     @Expose
@@ -144,16 +144,16 @@ public class AudioTemplateInfo extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return TrackChannelInfo 
+     * Get <p>Audio track merging information.<br>Note: This field only takes effect for adaptive transcoding.</p> 
+     * @return TrackChannelInfo <p>Audio track merging information.<br>Note: This field only takes effect for adaptive transcoding.</p>
      */
     public AudioTrackChannelInfo getTrackChannelInfo() {
         return this.TrackChannelInfo;
     }
 
     /**
-     * Set 
-     * @param TrackChannelInfo 
+     * Set <p>Audio track merging information.<br>Note: This field only takes effect for adaptive transcoding.</p>
+     * @param TrackChannelInfo <p>Audio track merging information.<br>Note: This field only takes effect for adaptive transcoding.</p>
      */
     public void setTrackChannelInfo(AudioTrackChannelInfo TrackChannelInfo) {
         this.TrackChannelInfo = TrackChannelInfo;

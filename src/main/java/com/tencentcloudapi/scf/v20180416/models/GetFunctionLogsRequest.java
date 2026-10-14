@@ -25,50 +25,50 @@ public class GetFunctionLogsRequest extends AbstractModel {
 
     /**
     * Function name.
-- To ensure the compatibility of the [`GetFunctionLogs`](https://intl.cloud.tencent.com/document/product/583/18583) API, the input parameter `FunctionName` is optional, but we recommend you enter it; otherwise, log acquisition may fail.
-- After the function is connected to CLS, we recommend you use the [related CLS API](https://intl.cloud.tencent.com/document/product/614/16875) to get the best log retrieval experience.
+-To ensure compatibility of the [retrieve function execution log](https://www.tencentcloud.com/document/product/583/18583?from_cn_redirect=1) API `GetFunctionLogs`, the input parameter `FunctionName` remains an optional field, but it is recommended to fill in this parameter. Otherwise, log acquisition failure may occur.
+- After associating a function with CLS, it is recommended to use the relevant CLS APIs (https://www.tencentcloud.com/document/product/614/16875?from_cn_redirect=1) to get the best log retrieval experience.
     */
     @SerializedName("FunctionName")
     @Expose
     private String FunctionName;
 
     /**
-    * Data offset. The addition of `Offset` and `Limit` cannot exceed 10,000.
+    * Offset of the data. Offset + Limit cannot be greater than 10000.
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * Length of the return data. The addition of `Offset` and `Limit` cannot exceed 10,000.
+    * Length of the returned data. Offset + Limit cannot be greater than 10000.
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * It specifies whether to sort the logs in an ascending or descending order. The value is `desc` or `asc`.
+    * Whether to sort logs in descending or ascending order. Available values: `desc` and `asc`.
     */
     @SerializedName("Order")
     @Expose
     private String Order;
 
     /**
-    * It specifies the sorting order of the logs based on a specified field, such as `function_name`, `duration`, `mem_usage`, and `start_time`.
+    * Sort logs by a certain field. The following fields are supported: function_name, duration, mem_usage, start_time
     */
     @SerializedName("OrderBy")
     @Expose
     private String OrderBy;
 
     /**
-    * Log filter used to identify whether to return logs of successful or failed requests. `filter.RetCode=not0` indicates that only the logs of failed requests will be returned. `filter.RetCode=is0` indicates that only the logs of successful requests will be returned. If this parameter is left blank, all logs will be returned. 
+    * Log filter criteria. It can be used to distinguish correct and error logs. filter.RetCode=not0 means only return error logs, filter.RetCode=is0 means only return correct logs. If not passed, all logs are returned.
     */
     @SerializedName("Filter")
     @Expose
     private LogFilter Filter;
 
     /**
-    * Function namespace
+    * Namespace of the function
     */
     @SerializedName("Namespace")
     @Expose
@@ -82,28 +82,28 @@ public class GetFunctionLogsRequest extends AbstractModel {
     private String Qualifier;
 
     /**
-    * RequestId corresponding to the executed function
+    * Request ID for executing the function
     */
     @SerializedName("FunctionRequestId")
     @Expose
     private String FunctionRequestId;
 
     /**
-    * Query date, for example, 2017-05-16 20:00:00. The date must be within one day of the end time.
+    * Specific date of the query, for example: 2017-05-16 20:00:00. It must differ from endtime by no more than one day.
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * Query date, for example, 2017-05-16 20:59:59. The date must be within one day of the start time.
+    * Specific date of the query, for example: 2017-05-16 20:59:59. It must differ from startTime by no more than one day.
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-    * This field is disused.
+    * This field is offline.
     */
     @SerializedName("SearchContext")
     @Expose
@@ -111,11 +111,11 @@ public class GetFunctionLogsRequest extends AbstractModel {
 
     /**
      * Get Function name.
-- To ensure the compatibility of the [`GetFunctionLogs`](https://intl.cloud.tencent.com/document/product/583/18583) API, the input parameter `FunctionName` is optional, but we recommend you enter it; otherwise, log acquisition may fail.
-- After the function is connected to CLS, we recommend you use the [related CLS API](https://intl.cloud.tencent.com/document/product/614/16875) to get the best log retrieval experience. 
+-To ensure compatibility of the [retrieve function execution log](https://www.tencentcloud.com/document/product/583/18583?from_cn_redirect=1) API `GetFunctionLogs`, the input parameter `FunctionName` remains an optional field, but it is recommended to fill in this parameter. Otherwise, log acquisition failure may occur.
+- After associating a function with CLS, it is recommended to use the relevant CLS APIs (https://www.tencentcloud.com/document/product/614/16875?from_cn_redirect=1) to get the best log retrieval experience. 
      * @return FunctionName Function name.
-- To ensure the compatibility of the [`GetFunctionLogs`](https://intl.cloud.tencent.com/document/product/583/18583) API, the input parameter `FunctionName` is optional, but we recommend you enter it; otherwise, log acquisition may fail.
-- After the function is connected to CLS, we recommend you use the [related CLS API](https://intl.cloud.tencent.com/document/product/614/16875) to get the best log retrieval experience.
+-To ensure compatibility of the [retrieve function execution log](https://www.tencentcloud.com/document/product/583/18583?from_cn_redirect=1) API `GetFunctionLogs`, the input parameter `FunctionName` remains an optional field, but it is recommended to fill in this parameter. Otherwise, log acquisition failure may occur.
+- After associating a function with CLS, it is recommended to use the relevant CLS APIs (https://www.tencentcloud.com/document/product/614/16875?from_cn_redirect=1) to get the best log retrieval experience.
      */
     public String getFunctionName() {
         return this.FunctionName;
@@ -123,107 +123,107 @@ public class GetFunctionLogsRequest extends AbstractModel {
 
     /**
      * Set Function name.
-- To ensure the compatibility of the [`GetFunctionLogs`](https://intl.cloud.tencent.com/document/product/583/18583) API, the input parameter `FunctionName` is optional, but we recommend you enter it; otherwise, log acquisition may fail.
-- After the function is connected to CLS, we recommend you use the [related CLS API](https://intl.cloud.tencent.com/document/product/614/16875) to get the best log retrieval experience.
+-To ensure compatibility of the [retrieve function execution log](https://www.tencentcloud.com/document/product/583/18583?from_cn_redirect=1) API `GetFunctionLogs`, the input parameter `FunctionName` remains an optional field, but it is recommended to fill in this parameter. Otherwise, log acquisition failure may occur.
+- After associating a function with CLS, it is recommended to use the relevant CLS APIs (https://www.tencentcloud.com/document/product/614/16875?from_cn_redirect=1) to get the best log retrieval experience.
      * @param FunctionName Function name.
-- To ensure the compatibility of the [`GetFunctionLogs`](https://intl.cloud.tencent.com/document/product/583/18583) API, the input parameter `FunctionName` is optional, but we recommend you enter it; otherwise, log acquisition may fail.
-- After the function is connected to CLS, we recommend you use the [related CLS API](https://intl.cloud.tencent.com/document/product/614/16875) to get the best log retrieval experience.
+-To ensure compatibility of the [retrieve function execution log](https://www.tencentcloud.com/document/product/583/18583?from_cn_redirect=1) API `GetFunctionLogs`, the input parameter `FunctionName` remains an optional field, but it is recommended to fill in this parameter. Otherwise, log acquisition failure may occur.
+- After associating a function with CLS, it is recommended to use the relevant CLS APIs (https://www.tencentcloud.com/document/product/614/16875?from_cn_redirect=1) to get the best log retrieval experience.
      */
     public void setFunctionName(String FunctionName) {
         this.FunctionName = FunctionName;
     }
 
     /**
-     * Get Data offset. The addition of `Offset` and `Limit` cannot exceed 10,000. 
-     * @return Offset Data offset. The addition of `Offset` and `Limit` cannot exceed 10,000.
+     * Get Offset of the data. Offset + Limit cannot be greater than 10000. 
+     * @return Offset Offset of the data. Offset + Limit cannot be greater than 10000.
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Data offset. The addition of `Offset` and `Limit` cannot exceed 10,000.
-     * @param Offset Data offset. The addition of `Offset` and `Limit` cannot exceed 10,000.
+     * Set Offset of the data. Offset + Limit cannot be greater than 10000.
+     * @param Offset Offset of the data. Offset + Limit cannot be greater than 10000.
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get Length of the return data. The addition of `Offset` and `Limit` cannot exceed 10,000. 
-     * @return Limit Length of the return data. The addition of `Offset` and `Limit` cannot exceed 10,000.
+     * Get Length of the returned data. Offset + Limit cannot be greater than 10000. 
+     * @return Limit Length of the returned data. Offset + Limit cannot be greater than 10000.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Length of the return data. The addition of `Offset` and `Limit` cannot exceed 10,000.
-     * @param Limit Length of the return data. The addition of `Offset` and `Limit` cannot exceed 10,000.
+     * Set Length of the returned data. Offset + Limit cannot be greater than 10000.
+     * @param Limit Length of the returned data. Offset + Limit cannot be greater than 10000.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get It specifies whether to sort the logs in an ascending or descending order. The value is `desc` or `asc`. 
-     * @return Order It specifies whether to sort the logs in an ascending or descending order. The value is `desc` or `asc`.
+     * Get Whether to sort logs in descending or ascending order. Available values: `desc` and `asc`. 
+     * @return Order Whether to sort logs in descending or ascending order. Available values: `desc` and `asc`.
      */
     public String getOrder() {
         return this.Order;
     }
 
     /**
-     * Set It specifies whether to sort the logs in an ascending or descending order. The value is `desc` or `asc`.
-     * @param Order It specifies whether to sort the logs in an ascending or descending order. The value is `desc` or `asc`.
+     * Set Whether to sort logs in descending or ascending order. Available values: `desc` and `asc`.
+     * @param Order Whether to sort logs in descending or ascending order. Available values: `desc` and `asc`.
      */
     public void setOrder(String Order) {
         this.Order = Order;
     }
 
     /**
-     * Get It specifies the sorting order of the logs based on a specified field, such as `function_name`, `duration`, `mem_usage`, and `start_time`. 
-     * @return OrderBy It specifies the sorting order of the logs based on a specified field, such as `function_name`, `duration`, `mem_usage`, and `start_time`.
+     * Get Sort logs by a certain field. The following fields are supported: function_name, duration, mem_usage, start_time 
+     * @return OrderBy Sort logs by a certain field. The following fields are supported: function_name, duration, mem_usage, start_time
      */
     public String getOrderBy() {
         return this.OrderBy;
     }
 
     /**
-     * Set It specifies the sorting order of the logs based on a specified field, such as `function_name`, `duration`, `mem_usage`, and `start_time`.
-     * @param OrderBy It specifies the sorting order of the logs based on a specified field, such as `function_name`, `duration`, `mem_usage`, and `start_time`.
+     * Set Sort logs by a certain field. The following fields are supported: function_name, duration, mem_usage, start_time
+     * @param OrderBy Sort logs by a certain field. The following fields are supported: function_name, duration, mem_usage, start_time
      */
     public void setOrderBy(String OrderBy) {
         this.OrderBy = OrderBy;
     }
 
     /**
-     * Get Log filter used to identify whether to return logs of successful or failed requests. `filter.RetCode=not0` indicates that only the logs of failed requests will be returned. `filter.RetCode=is0` indicates that only the logs of successful requests will be returned. If this parameter is left blank, all logs will be returned.  
-     * @return Filter Log filter used to identify whether to return logs of successful or failed requests. `filter.RetCode=not0` indicates that only the logs of failed requests will be returned. `filter.RetCode=is0` indicates that only the logs of successful requests will be returned. If this parameter is left blank, all logs will be returned. 
+     * Get Log filter criteria. It can be used to distinguish correct and error logs. filter.RetCode=not0 means only return error logs, filter.RetCode=is0 means only return correct logs. If not passed, all logs are returned. 
+     * @return Filter Log filter criteria. It can be used to distinguish correct and error logs. filter.RetCode=not0 means only return error logs, filter.RetCode=is0 means only return correct logs. If not passed, all logs are returned.
      */
     public LogFilter getFilter() {
         return this.Filter;
     }
 
     /**
-     * Set Log filter used to identify whether to return logs of successful or failed requests. `filter.RetCode=not0` indicates that only the logs of failed requests will be returned. `filter.RetCode=is0` indicates that only the logs of successful requests will be returned. If this parameter is left blank, all logs will be returned. 
-     * @param Filter Log filter used to identify whether to return logs of successful or failed requests. `filter.RetCode=not0` indicates that only the logs of failed requests will be returned. `filter.RetCode=is0` indicates that only the logs of successful requests will be returned. If this parameter is left blank, all logs will be returned. 
+     * Set Log filter criteria. It can be used to distinguish correct and error logs. filter.RetCode=not0 means only return error logs, filter.RetCode=is0 means only return correct logs. If not passed, all logs are returned.
+     * @param Filter Log filter criteria. It can be used to distinguish correct and error logs. filter.RetCode=not0 means only return error logs, filter.RetCode=is0 means only return correct logs. If not passed, all logs are returned.
      */
     public void setFilter(LogFilter Filter) {
         this.Filter = Filter;
     }
 
     /**
-     * Get Function namespace 
-     * @return Namespace Function namespace
+     * Get Namespace of the function 
+     * @return Namespace Namespace of the function
      */
     public String getNamespace() {
         return this.Namespace;
     }
 
     /**
-     * Set Function namespace
-     * @param Namespace Function namespace
+     * Set Namespace of the function
+     * @param Namespace Namespace of the function
      */
     public void setNamespace(String Namespace) {
         this.Namespace = Namespace;
@@ -246,64 +246,64 @@ public class GetFunctionLogsRequest extends AbstractModel {
     }
 
     /**
-     * Get RequestId corresponding to the executed function 
-     * @return FunctionRequestId RequestId corresponding to the executed function
+     * Get Request ID for executing the function 
+     * @return FunctionRequestId Request ID for executing the function
      */
     public String getFunctionRequestId() {
         return this.FunctionRequestId;
     }
 
     /**
-     * Set RequestId corresponding to the executed function
-     * @param FunctionRequestId RequestId corresponding to the executed function
+     * Set Request ID for executing the function
+     * @param FunctionRequestId Request ID for executing the function
      */
     public void setFunctionRequestId(String FunctionRequestId) {
         this.FunctionRequestId = FunctionRequestId;
     }
 
     /**
-     * Get Query date, for example, 2017-05-16 20:00:00. The date must be within one day of the end time. 
-     * @return StartTime Query date, for example, 2017-05-16 20:00:00. The date must be within one day of the end time.
+     * Get Specific date of the query, for example: 2017-05-16 20:00:00. It must differ from endtime by no more than one day. 
+     * @return StartTime Specific date of the query, for example: 2017-05-16 20:00:00. It must differ from endtime by no more than one day.
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set Query date, for example, 2017-05-16 20:00:00. The date must be within one day of the end time.
-     * @param StartTime Query date, for example, 2017-05-16 20:00:00. The date must be within one day of the end time.
+     * Set Specific date of the query, for example: 2017-05-16 20:00:00. It must differ from endtime by no more than one day.
+     * @param StartTime Specific date of the query, for example: 2017-05-16 20:00:00. It must differ from endtime by no more than one day.
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get Query date, for example, 2017-05-16 20:59:59. The date must be within one day of the start time. 
-     * @return EndTime Query date, for example, 2017-05-16 20:59:59. The date must be within one day of the start time.
+     * Get Specific date of the query, for example: 2017-05-16 20:59:59. It must differ from startTime by no more than one day. 
+     * @return EndTime Specific date of the query, for example: 2017-05-16 20:59:59. It must differ from startTime by no more than one day.
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set Query date, for example, 2017-05-16 20:59:59. The date must be within one day of the start time.
-     * @param EndTime Query date, for example, 2017-05-16 20:59:59. The date must be within one day of the start time.
+     * Set Specific date of the query, for example: 2017-05-16 20:59:59. It must differ from startTime by no more than one day.
+     * @param EndTime Specific date of the query, for example: 2017-05-16 20:59:59. It must differ from startTime by no more than one day.
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get This field is disused. 
-     * @return SearchContext This field is disused.
+     * Get This field is offline. 
+     * @return SearchContext This field is offline.
      */
     public LogSearchContext getSearchContext() {
         return this.SearchContext;
     }
 
     /**
-     * Set This field is disused.
-     * @param SearchContext This field is disused.
+     * Set This field is offline.
+     * @param SearchContext This field is offline.
      */
     public void setSearchContext(LogSearchContext SearchContext) {
         this.SearchContext = SearchContext;

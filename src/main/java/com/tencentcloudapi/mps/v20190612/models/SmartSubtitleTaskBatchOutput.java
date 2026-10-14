@@ -52,14 +52,14 @@ public class SmartSubtitleTaskBatchOutput extends AbstractModel {
     private String Message;
 
     /**
-    * 
+    * <p>Translation task output information.</p>
     */
     @SerializedName("TransTextTask")
     @Expose
     private SmartSubtitleTaskTransTextResultOutput TransTextTask;
 
     /**
-    * 
+    * <p>Full speech recognition task output information.</p>
     */
     @SerializedName("AsrFullTextTask")
     @Expose
@@ -130,32 +130,32 @@ public class SmartSubtitleTaskBatchOutput extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return TransTextTask 
+     * Get <p>Translation task output information.</p> 
+     * @return TransTextTask <p>Translation task output information.</p>
      */
     public SmartSubtitleTaskTransTextResultOutput getTransTextTask() {
         return this.TransTextTask;
     }
 
     /**
-     * Set 
-     * @param TransTextTask 
+     * Set <p>Translation task output information.</p>
+     * @param TransTextTask <p>Translation task output information.</p>
      */
     public void setTransTextTask(SmartSubtitleTaskTransTextResultOutput TransTextTask) {
         this.TransTextTask = TransTextTask;
     }
 
     /**
-     * Get  
-     * @return AsrFullTextTask 
+     * Get <p>Full speech recognition task output information.</p> 
+     * @return AsrFullTextTask <p>Full speech recognition task output information.</p>
      */
     public SmartSubtitleTaskAsrFullTextResultOutput getAsrFullTextTask() {
         return this.AsrFullTextTask;
     }
 
     /**
-     * Set 
-     * @param AsrFullTextTask 
+     * Set <p>Full speech recognition task output information.</p>
+     * @param AsrFullTextTask <p>Full speech recognition task output information.</p>
      */
     public void setAsrFullTextTask(SmartSubtitleTaskAsrFullTextResultOutput AsrFullTextTask) {
         this.AsrFullTextTask = AsrFullTextTask;

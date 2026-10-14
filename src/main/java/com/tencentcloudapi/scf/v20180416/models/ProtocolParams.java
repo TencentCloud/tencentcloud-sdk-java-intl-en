@@ -24,28 +24,23 @@ import java.util.HashMap;
 public class ProtocolParams extends AbstractModel {
 
     /**
-    * Parameters of WebSockets protocol
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Supported parameters of the WebSockets protocol
     */
     @SerializedName("WSParams")
     @Expose
     private WSParams WSParams;
 
     /**
-     * Get Parameters of WebSockets protocol
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return WSParams Parameters of WebSockets protocol
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get Supported parameters of the WebSockets protocol 
+     * @return WSParams Supported parameters of the WebSockets protocol
      */
     public WSParams getWSParams() {
         return this.WSParams;
     }
 
     /**
-     * Set Parameters of WebSockets protocol
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param WSParams Parameters of WebSockets protocol
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set Supported parameters of the WebSockets protocol
+     * @param WSParams Supported parameters of the WebSockets protocol
      */
     public void setWSParams(WSParams WSParams) {
         this.WSParams = WSParams;

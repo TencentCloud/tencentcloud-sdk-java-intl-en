@@ -24,72 +24,95 @@ import java.util.HashMap;
 public class RestartInstanceRequest extends AbstractModel {
 
     /**
-    * Instance ID
+    * <p>Instance ID.</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Whether to force restart <li>true: Yes </li><li>false: No </li>Default value: false
+    * <p>Whether to force restart<li>true: force restart</li><li>false: do not force restart</li>Default value: false</p>
     */
     @SerializedName("ForceRestart")
     @Expose
     private Boolean ForceRestart;
 
     /**
-    * Restart mode. `0`: rolling restart; `1`: full restart
+    * <p>Restart mode: 0 rolling restart; 1 full restart</p>
     */
     @SerializedName("RestartMode")
     @Expose
     private Long RestartMode;
 
     /**
-     * Get Instance ID 
-     * @return InstanceId Instance ID
+    * <p>Select whether to upgrade the kernel patch version upon restart</p>
+    */
+    @SerializedName("UpgradeKernel")
+    @Expose
+    private Boolean UpgradeKernel;
+
+    /**
+     * Get <p>Instance ID.</p> 
+     * @return InstanceId <p>Instance ID.</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID
-     * @param InstanceId Instance ID
+     * Set <p>Instance ID.</p>
+     * @param InstanceId <p>Instance ID.</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Whether to force restart <li>true: Yes </li><li>false: No </li>Default value: false 
-     * @return ForceRestart Whether to force restart <li>true: Yes </li><li>false: No </li>Default value: false
+     * Get <p>Whether to force restart<li>true: force restart</li><li>false: do not force restart</li>Default value: false</p> 
+     * @return ForceRestart <p>Whether to force restart<li>true: force restart</li><li>false: do not force restart</li>Default value: false</p>
      */
     public Boolean getForceRestart() {
         return this.ForceRestart;
     }
 
     /**
-     * Set Whether to force restart <li>true: Yes </li><li>false: No </li>Default value: false
-     * @param ForceRestart Whether to force restart <li>true: Yes </li><li>false: No </li>Default value: false
+     * Set <p>Whether to force restart<li>true: force restart</li><li>false: do not force restart</li>Default value: false</p>
+     * @param ForceRestart <p>Whether to force restart<li>true: force restart</li><li>false: do not force restart</li>Default value: false</p>
      */
     public void setForceRestart(Boolean ForceRestart) {
         this.ForceRestart = ForceRestart;
     }
 
     /**
-     * Get Restart mode. `0`: rolling restart; `1`: full restart 
-     * @return RestartMode Restart mode. `0`: rolling restart; `1`: full restart
+     * Get <p>Restart mode: 0 rolling restart; 1 full restart</p> 
+     * @return RestartMode <p>Restart mode: 0 rolling restart; 1 full restart</p>
      */
     public Long getRestartMode() {
         return this.RestartMode;
     }
 
     /**
-     * Set Restart mode. `0`: rolling restart; `1`: full restart
-     * @param RestartMode Restart mode. `0`: rolling restart; `1`: full restart
+     * Set <p>Restart mode: 0 rolling restart; 1 full restart</p>
+     * @param RestartMode <p>Restart mode: 0 rolling restart; 1 full restart</p>
      */
     public void setRestartMode(Long RestartMode) {
         this.RestartMode = RestartMode;
+    }
+
+    /**
+     * Get <p>Select whether to upgrade the kernel patch version upon restart</p> 
+     * @return UpgradeKernel <p>Select whether to upgrade the kernel patch version upon restart</p>
+     */
+    public Boolean getUpgradeKernel() {
+        return this.UpgradeKernel;
+    }
+
+    /**
+     * Set <p>Select whether to upgrade the kernel patch version upon restart</p>
+     * @param UpgradeKernel <p>Select whether to upgrade the kernel patch version upon restart</p>
+     */
+    public void setUpgradeKernel(Boolean UpgradeKernel) {
+        this.UpgradeKernel = UpgradeKernel;
     }
 
     public RestartInstanceRequest() {
@@ -109,6 +132,9 @@ public class RestartInstanceRequest extends AbstractModel {
         if (source.RestartMode != null) {
             this.RestartMode = new Long(source.RestartMode);
         }
+        if (source.UpgradeKernel != null) {
+            this.UpgradeKernel = new Boolean(source.UpgradeKernel);
+        }
     }
 
 
@@ -119,6 +145,7 @@ public class RestartInstanceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "ForceRestart", this.ForceRestart);
         this.setParamSimple(map, prefix + "RestartMode", this.RestartMode);
+        this.setParamSimple(map, prefix + "UpgradeKernel", this.UpgradeKernel);
 
     }
 }

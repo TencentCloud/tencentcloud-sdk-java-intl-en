@@ -73,7 +73,7 @@ public class AiPosterSuiteConfig extends AbstractModel {
     private CustomVariable [] CustomVariables;
 
     /**
-    * <p>Model name.</p><p>Enumeration value:</p><ul><li>WAND-suite-1.0-flash: WAND-suite-1.0-flash.</li></ul>
+    * <p>Model name.</p><p>Enumeration value:</p><ul><li>suite-1.0-flash: suite-1.0-flash.</li></ul>
     */
     @SerializedName("Model")
     @Expose
@@ -192,16 +192,16 @@ public class AiPosterSuiteConfig extends AbstractModel {
     }
 
     /**
-     * Get <p>Model name.</p><p>Enumeration value:</p><ul><li>WAND-suite-1.0-flash: WAND-suite-1.0-flash.</li></ul> 
-     * @return Model <p>Model name.</p><p>Enumeration value:</p><ul><li>WAND-suite-1.0-flash: WAND-suite-1.0-flash.</li></ul>
+     * Get <p>Model name.</p><p>Enumeration value:</p><ul><li>suite-1.0-flash: suite-1.0-flash.</li></ul> 
+     * @return Model <p>Model name.</p><p>Enumeration value:</p><ul><li>suite-1.0-flash: suite-1.0-flash.</li></ul>
      */
     public String getModel() {
         return this.Model;
     }
 
     /**
-     * Set <p>Model name.</p><p>Enumeration value:</p><ul><li>WAND-suite-1.0-flash: WAND-suite-1.0-flash.</li></ul>
-     * @param Model <p>Model name.</p><p>Enumeration value:</p><ul><li>WAND-suite-1.0-flash: WAND-suite-1.0-flash.</li></ul>
+     * Set <p>Model name.</p><p>Enumeration value:</p><ul><li>suite-1.0-flash: suite-1.0-flash.</li></ul>
+     * @param Model <p>Model name.</p><p>Enumeration value:</p><ul><li>suite-1.0-flash: suite-1.0-flash.</li></ul>
      */
     public void setModel(String Model) {
         this.Model = Model;

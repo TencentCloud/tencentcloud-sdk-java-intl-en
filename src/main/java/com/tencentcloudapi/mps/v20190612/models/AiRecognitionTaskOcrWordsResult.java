@@ -52,14 +52,14 @@ public class AiRecognitionTaskOcrWordsResult extends AbstractModel {
     private String Message;
 
     /**
-    * Text keyword recognition task input.
+    * Input information for the text keyword recognition task.
     */
     @SerializedName("Input")
     @Expose
     private AiRecognitionTaskOcrWordsResultInput Input;
 
     /**
-    * 
+    * Output message of the text keyword recognition task.
     */
     @SerializedName("Output")
     @Expose
@@ -130,32 +130,32 @@ public class AiRecognitionTaskOcrWordsResult extends AbstractModel {
     }
 
     /**
-     * Get Text keyword recognition task input. 
-     * @return Input Text keyword recognition task input.
+     * Get Input information for the text keyword recognition task. 
+     * @return Input Input information for the text keyword recognition task.
      */
     public AiRecognitionTaskOcrWordsResultInput getInput() {
         return this.Input;
     }
 
     /**
-     * Set Text keyword recognition task input.
-     * @param Input Text keyword recognition task input.
+     * Set Input information for the text keyword recognition task.
+     * @param Input Input information for the text keyword recognition task.
      */
     public void setInput(AiRecognitionTaskOcrWordsResultInput Input) {
         this.Input = Input;
     }
 
     /**
-     * Get  
-     * @return Output 
+     * Get Output message of the text keyword recognition task. 
+     * @return Output Output message of the text keyword recognition task.
      */
     public AiRecognitionTaskOcrWordsResultOutput getOutput() {
         return this.Output;
     }
 
     /**
-     * Set 
-     * @param Output 
+     * Set Output message of the text keyword recognition task.
+     * @param Output Output message of the text keyword recognition task.
      */
     public void setOutput(AiRecognitionTaskOcrWordsResultOutput Output) {
         this.Output = Output;

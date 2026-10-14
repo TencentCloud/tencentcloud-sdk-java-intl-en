@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class RegionInfo extends AbstractModel {
 
     /**
-    * Region name
+    * Zone name.
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-     * Get Region name 
-     * @return Name Region name
+     * Get Zone name. 
+     * @return Name Zone name.
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Region name
-     * @param Name Region name
+     * Set Zone name.
+     * @param Name Zone name.
      */
     public void setName(String Name) {
         this.Name = Name;

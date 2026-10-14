@@ -52,14 +52,14 @@ public class DescribeDBInstancesRequest extends AbstractModel {
     private String EngineType;
 
     /**
-    * 
+    * <p>Query By Field, supporting StorageNodeNum/CreateTime/CreateVersion</p>
     */
     @SerializedName("OrderBy")
     @Expose
     private String OrderBy;
 
     /**
-    * 
+    * <p>Sorting order</p><p>Enumeration values:</p><ul><li>ASC: ascending</li><li>DESC: descending</li></ul><p>Default value: DESC</p>
     */
     @SerializedName("OrderDirection")
     @Expose
@@ -130,32 +130,32 @@ public class DescribeDBInstancesRequest extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return OrderBy 
+     * Get <p>Query By Field, supporting StorageNodeNum/CreateTime/CreateVersion</p> 
+     * @return OrderBy <p>Query By Field, supporting StorageNodeNum/CreateTime/CreateVersion</p>
      */
     public String getOrderBy() {
         return this.OrderBy;
     }
 
     /**
-     * Set 
-     * @param OrderBy 
+     * Set <p>Query By Field, supporting StorageNodeNum/CreateTime/CreateVersion</p>
+     * @param OrderBy <p>Query By Field, supporting StorageNodeNum/CreateTime/CreateVersion</p>
      */
     public void setOrderBy(String OrderBy) {
         this.OrderBy = OrderBy;
     }
 
     /**
-     * Get  
-     * @return OrderDirection 
+     * Get <p>Sorting order</p><p>Enumeration values:</p><ul><li>ASC: ascending</li><li>DESC: descending</li></ul><p>Default value: DESC</p> 
+     * @return OrderDirection <p>Sorting order</p><p>Enumeration values:</p><ul><li>ASC: ascending</li><li>DESC: descending</li></ul><p>Default value: DESC</p>
      */
     public String getOrderDirection() {
         return this.OrderDirection;
     }
 
     /**
-     * Set 
-     * @param OrderDirection 
+     * Set <p>Sorting order</p><p>Enumeration values:</p><ul><li>ASC: ascending</li><li>DESC: descending</li></ul><p>Default value: DESC</p>
+     * @param OrderDirection <p>Sorting order</p><p>Enumeration values:</p><ul><li>ASC: ascending</li><li>DESC: descending</li></ul><p>Default value: DESC</p>
      */
     public void setOrderDirection(String OrderDirection) {
         this.OrderDirection = OrderDirection;

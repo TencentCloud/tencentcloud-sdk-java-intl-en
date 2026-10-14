@@ -27,21 +27,21 @@ public class ParseNotificationResponse extends AbstractModel {
     * Supported event types. Currently, the valid values include:
 <li>WorkflowTask: video workflow processing task.</li>
 <li>EditMediaTask: video editing task.</li>
-<li>ScheduleTask: Orchestration task.</li>
+<li>ScheduleTask: orchestration task.</li>
     */
     @SerializedName("EventType")
     @Expose
     private String EventType;
 
     /**
-    * 
+    * Video processing task information. This field has a value only when EventType is WorkflowTask.
     */
     @SerializedName("WorkflowTaskEvent")
     @Expose
     private WorkflowTask WorkflowTaskEvent;
 
     /**
-    * 
+    * Video editing task information. This field has a value only when EventType is EditMediaTask.
     */
     @SerializedName("EditMediaTaskEvent")
     @Expose
@@ -62,16 +62,16 @@ public class ParseNotificationResponse extends AbstractModel {
     private String SessionContext;
 
     /**
-    * 
+    * Orchestration task information. This field has a value only when EventType is ScheduleTask.
     */
     @SerializedName("ScheduleTaskEvent")
     @Expose
     private ScheduleTask ScheduleTaskEvent;
 
     /**
-    * -Expiration time, event notification signature expiration UNIX timestamp.
--The default expiration time for notifications from Media Processing Service (MPS) is 10 minutes. If the time specified by the Timestamp value in a message notification has expired, the notification can be deemed invalid, which helps prevent network replay attacks.
--Timestamp is in decimal UNIX Timestamp format, which is the seconds elapsed since midnight (UTC/GMT) on January 1, 1970.
+    * -Expiration time. The event notification signature expires at this UNIX timestamp.
+-The default expiration time for notifications from Media Processing Service (MPS) is 10 minutes. If the time specified by the Timestamp value in a notification has expired, the notification can be deemed invalid, which can prevent network replay attacks.
+-Timestamp is in decimal UNIX timestamp format, i.e., the seconds elapsed since January 1, 1970 (UTC/GMT midnight).
 
     */
     @SerializedName("Timestamp")
@@ -86,14 +86,14 @@ public class ParseNotificationResponse extends AbstractModel {
     private String Sign;
 
     /**
-    * 
+    * Batch operation information. This field has a value only when EventType is BatchTask.
     */
     @SerializedName("BatchTaskEvent")
     @Expose
     private BatchSubTaskResult BatchTaskEvent;
 
     /**
-    * 
+    * Information about the digital watermark extraction task. This field has a value only when EventType is ExtractBlindWatermark.
     */
     @SerializedName("ExtractBlindWatermarkTask")
     @Expose
@@ -110,11 +110,11 @@ public class ParseNotificationResponse extends AbstractModel {
      * Get Supported event types. Currently, the valid values include:
 <li>WorkflowTask: video workflow processing task.</li>
 <li>EditMediaTask: video editing task.</li>
-<li>ScheduleTask: Orchestration task.</li> 
+<li>ScheduleTask: orchestration task.</li> 
      * @return EventType Supported event types. Currently, the valid values include:
 <li>WorkflowTask: video workflow processing task.</li>
 <li>EditMediaTask: video editing task.</li>
-<li>ScheduleTask: Orchestration task.</li>
+<li>ScheduleTask: orchestration task.</li>
      */
     public String getEventType() {
         return this.EventType;
@@ -124,43 +124,43 @@ public class ParseNotificationResponse extends AbstractModel {
      * Set Supported event types. Currently, the valid values include:
 <li>WorkflowTask: video workflow processing task.</li>
 <li>EditMediaTask: video editing task.</li>
-<li>ScheduleTask: Orchestration task.</li>
+<li>ScheduleTask: orchestration task.</li>
      * @param EventType Supported event types. Currently, the valid values include:
 <li>WorkflowTask: video workflow processing task.</li>
 <li>EditMediaTask: video editing task.</li>
-<li>ScheduleTask: Orchestration task.</li>
+<li>ScheduleTask: orchestration task.</li>
      */
     public void setEventType(String EventType) {
         this.EventType = EventType;
     }
 
     /**
-     * Get  
-     * @return WorkflowTaskEvent 
+     * Get Video processing task information. This field has a value only when EventType is WorkflowTask. 
+     * @return WorkflowTaskEvent Video processing task information. This field has a value only when EventType is WorkflowTask.
      */
     public WorkflowTask getWorkflowTaskEvent() {
         return this.WorkflowTaskEvent;
     }
 
     /**
-     * Set 
-     * @param WorkflowTaskEvent 
+     * Set Video processing task information. This field has a value only when EventType is WorkflowTask.
+     * @param WorkflowTaskEvent Video processing task information. This field has a value only when EventType is WorkflowTask.
      */
     public void setWorkflowTaskEvent(WorkflowTask WorkflowTaskEvent) {
         this.WorkflowTaskEvent = WorkflowTaskEvent;
     }
 
     /**
-     * Get  
-     * @return EditMediaTaskEvent 
+     * Get Video editing task information. This field has a value only when EventType is EditMediaTask. 
+     * @return EditMediaTaskEvent Video editing task information. This field has a value only when EventType is EditMediaTask.
      */
     public EditMediaTask getEditMediaTaskEvent() {
         return this.EditMediaTaskEvent;
     }
 
     /**
-     * Set 
-     * @param EditMediaTaskEvent 
+     * Set Video editing task information. This field has a value only when EventType is EditMediaTask.
+     * @param EditMediaTaskEvent Video editing task information. This field has a value only when EventType is EditMediaTask.
      */
     public void setEditMediaTaskEvent(EditMediaTask EditMediaTaskEvent) {
         this.EditMediaTaskEvent = EditMediaTaskEvent;
@@ -199,29 +199,29 @@ public class ParseNotificationResponse extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return ScheduleTaskEvent 
+     * Get Orchestration task information. This field has a value only when EventType is ScheduleTask. 
+     * @return ScheduleTaskEvent Orchestration task information. This field has a value only when EventType is ScheduleTask.
      */
     public ScheduleTask getScheduleTaskEvent() {
         return this.ScheduleTaskEvent;
     }
 
     /**
-     * Set 
-     * @param ScheduleTaskEvent 
+     * Set Orchestration task information. This field has a value only when EventType is ScheduleTask.
+     * @param ScheduleTaskEvent Orchestration task information. This field has a value only when EventType is ScheduleTask.
      */
     public void setScheduleTaskEvent(ScheduleTask ScheduleTaskEvent) {
         this.ScheduleTaskEvent = ScheduleTaskEvent;
     }
 
     /**
-     * Get -Expiration time, event notification signature expiration UNIX timestamp.
--The default expiration time for notifications from Media Processing Service (MPS) is 10 minutes. If the time specified by the Timestamp value in a message notification has expired, the notification can be deemed invalid, which helps prevent network replay attacks.
--Timestamp is in decimal UNIX Timestamp format, which is the seconds elapsed since midnight (UTC/GMT) on January 1, 1970.
+     * Get -Expiration time. The event notification signature expires at this UNIX timestamp.
+-The default expiration time for notifications from Media Processing Service (MPS) is 10 minutes. If the time specified by the Timestamp value in a notification has expired, the notification can be deemed invalid, which can prevent network replay attacks.
+-Timestamp is in decimal UNIX timestamp format, i.e., the seconds elapsed since January 1, 1970 (UTC/GMT midnight).
  
-     * @return Timestamp -Expiration time, event notification signature expiration UNIX timestamp.
--The default expiration time for notifications from Media Processing Service (MPS) is 10 minutes. If the time specified by the Timestamp value in a message notification has expired, the notification can be deemed invalid, which helps prevent network replay attacks.
--Timestamp is in decimal UNIX Timestamp format, which is the seconds elapsed since midnight (UTC/GMT) on January 1, 1970.
+     * @return Timestamp -Expiration time. The event notification signature expires at this UNIX timestamp.
+-The default expiration time for notifications from Media Processing Service (MPS) is 10 minutes. If the time specified by the Timestamp value in a notification has expired, the notification can be deemed invalid, which can prevent network replay attacks.
+-Timestamp is in decimal UNIX timestamp format, i.e., the seconds elapsed since January 1, 1970 (UTC/GMT midnight).
 
      */
     public Long getTimestamp() {
@@ -229,13 +229,13 @@ public class ParseNotificationResponse extends AbstractModel {
     }
 
     /**
-     * Set -Expiration time, event notification signature expiration UNIX timestamp.
--The default expiration time for notifications from Media Processing Service (MPS) is 10 minutes. If the time specified by the Timestamp value in a message notification has expired, the notification can be deemed invalid, which helps prevent network replay attacks.
--Timestamp is in decimal UNIX Timestamp format, which is the seconds elapsed since midnight (UTC/GMT) on January 1, 1970.
+     * Set -Expiration time. The event notification signature expires at this UNIX timestamp.
+-The default expiration time for notifications from Media Processing Service (MPS) is 10 minutes. If the time specified by the Timestamp value in a notification has expired, the notification can be deemed invalid, which can prevent network replay attacks.
+-Timestamp is in decimal UNIX timestamp format, i.e., the seconds elapsed since January 1, 1970 (UTC/GMT midnight).
 
-     * @param Timestamp -Expiration time, event notification signature expiration UNIX timestamp.
--The default expiration time for notifications from Media Processing Service (MPS) is 10 minutes. If the time specified by the Timestamp value in a message notification has expired, the notification can be deemed invalid, which helps prevent network replay attacks.
--Timestamp is in decimal UNIX Timestamp format, which is the seconds elapsed since midnight (UTC/GMT) on January 1, 1970.
+     * @param Timestamp -Expiration time. The event notification signature expires at this UNIX timestamp.
+-The default expiration time for notifications from Media Processing Service (MPS) is 10 minutes. If the time specified by the Timestamp value in a notification has expired, the notification can be deemed invalid, which can prevent network replay attacks.
+-Timestamp is in decimal UNIX timestamp format, i.e., the seconds elapsed since January 1, 1970 (UTC/GMT midnight).
 
      */
     public void setTimestamp(Long Timestamp) {
@@ -259,32 +259,32 @@ public class ParseNotificationResponse extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return BatchTaskEvent 
+     * Get Batch operation information. This field has a value only when EventType is BatchTask. 
+     * @return BatchTaskEvent Batch operation information. This field has a value only when EventType is BatchTask.
      */
     public BatchSubTaskResult getBatchTaskEvent() {
         return this.BatchTaskEvent;
     }
 
     /**
-     * Set 
-     * @param BatchTaskEvent 
+     * Set Batch operation information. This field has a value only when EventType is BatchTask.
+     * @param BatchTaskEvent Batch operation information. This field has a value only when EventType is BatchTask.
      */
     public void setBatchTaskEvent(BatchSubTaskResult BatchTaskEvent) {
         this.BatchTaskEvent = BatchTaskEvent;
     }
 
     /**
-     * Get  
-     * @return ExtractBlindWatermarkTask 
+     * Get Information about the digital watermark extraction task. This field has a value only when EventType is ExtractBlindWatermark. 
+     * @return ExtractBlindWatermarkTask Information about the digital watermark extraction task. This field has a value only when EventType is ExtractBlindWatermark.
      */
     public ExtractBlindWatermarkTask getExtractBlindWatermarkTask() {
         return this.ExtractBlindWatermarkTask;
     }
 
     /**
-     * Set 
-     * @param ExtractBlindWatermarkTask 
+     * Set Information about the digital watermark extraction task. This field has a value only when EventType is ExtractBlindWatermark.
+     * @param ExtractBlindWatermarkTask Information about the digital watermark extraction task. This field has a value only when EventType is ExtractBlindWatermark.
      */
     public void setExtractBlindWatermarkTask(ExtractBlindWatermarkTask ExtractBlindWatermarkTask) {
         this.ExtractBlindWatermarkTask = ExtractBlindWatermarkTask;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class StreamUrlDetail extends AbstractModel {
 
     /**
-    * 
+    * Describes carrier information and other details.
     */
     @SerializedName("Label")
     @Expose
@@ -38,23 +38,24 @@ public class StreamUrlDetail extends AbstractModel {
     private String Url;
 
     /**
-    * 
+    * Playback: stream playback address;
+RelayDestination: relay destination address; SourceCaptureUrl: source pull stream address; IngestEndpoint: streaming address
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-     * Get  
-     * @return Label 
+     * Get Describes carrier information and other details. 
+     * @return Label Describes carrier information and other details.
      */
     public String getLabel() {
         return this.Label;
     }
 
     /**
-     * Set 
-     * @param Label 
+     * Set Describes carrier information and other details.
+     * @param Label Describes carrier information and other details.
      */
     public void setLabel(String Label) {
         this.Label = Label;
@@ -77,16 +78,20 @@ public class StreamUrlDetail extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return Type 
+     * Get Playback: stream playback address;
+RelayDestination: relay destination address; SourceCaptureUrl: source pull stream address; IngestEndpoint: streaming address 
+     * @return Type Playback: stream playback address;
+RelayDestination: relay destination address; SourceCaptureUrl: source pull stream address; IngestEndpoint: streaming address
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 
-     * @param Type 
+     * Set Playback: stream playback address;
+RelayDestination: relay destination address; SourceCaptureUrl: source pull stream address; IngestEndpoint: streaming address
+     * @param Type Playback: stream playback address;
+RelayDestination: relay destination address; SourceCaptureUrl: source pull stream address; IngestEndpoint: streaming address
      */
     public void setType(String Type) {
         this.Type = Type;

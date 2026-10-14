@@ -24,26 +24,72 @@ import java.util.HashMap;
 public class DeleteInstanceRequest extends AbstractModel {
 
     /**
-    * Instance ID
+    * <p>Instance ID.</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-     * Get Instance ID 
-     * @return InstanceId Instance ID
+    * <p>Recycle bin lock settings. If true, it cannot be manually terminated and will be automatically destroyed after the preset time.</p><p>Default value: false</p>
+    */
+    @SerializedName("LockEnabled")
+    @Expose
+    private Boolean LockEnabled;
+
+    /**
+    * <p>Lock time after being put into the recycle bin</p><p>Value range: [1, 7]</p><p>Unit: day</p><p>Default value: 1</p>
+    */
+    @SerializedName("LockDuration")
+    @Expose
+    private Long LockDuration;
+
+    /**
+     * Get <p>Instance ID.</p> 
+     * @return InstanceId <p>Instance ID.</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID
-     * @param InstanceId Instance ID
+     * Set <p>Instance ID.</p>
+     * @param InstanceId <p>Instance ID.</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
+    }
+
+    /**
+     * Get <p>Recycle bin lock settings. If true, it cannot be manually terminated and will be automatically destroyed after the preset time.</p><p>Default value: false</p> 
+     * @return LockEnabled <p>Recycle bin lock settings. If true, it cannot be manually terminated and will be automatically destroyed after the preset time.</p><p>Default value: false</p>
+     */
+    public Boolean getLockEnabled() {
+        return this.LockEnabled;
+    }
+
+    /**
+     * Set <p>Recycle bin lock settings. If true, it cannot be manually terminated and will be automatically destroyed after the preset time.</p><p>Default value: false</p>
+     * @param LockEnabled <p>Recycle bin lock settings. If true, it cannot be manually terminated and will be automatically destroyed after the preset time.</p><p>Default value: false</p>
+     */
+    public void setLockEnabled(Boolean LockEnabled) {
+        this.LockEnabled = LockEnabled;
+    }
+
+    /**
+     * Get <p>Lock time after being put into the recycle bin</p><p>Value range: [1, 7]</p><p>Unit: day</p><p>Default value: 1</p> 
+     * @return LockDuration <p>Lock time after being put into the recycle bin</p><p>Value range: [1, 7]</p><p>Unit: day</p><p>Default value: 1</p>
+     */
+    public Long getLockDuration() {
+        return this.LockDuration;
+    }
+
+    /**
+     * Set <p>Lock time after being put into the recycle bin</p><p>Value range: [1, 7]</p><p>Unit: day</p><p>Default value: 1</p>
+     * @param LockDuration <p>Lock time after being put into the recycle bin</p><p>Value range: [1, 7]</p><p>Unit: day</p><p>Default value: 1</p>
+     */
+    public void setLockDuration(Long LockDuration) {
+        this.LockDuration = LockDuration;
     }
 
     public DeleteInstanceRequest() {
@@ -57,6 +103,12 @@ public class DeleteInstanceRequest extends AbstractModel {
         if (source.InstanceId != null) {
             this.InstanceId = new String(source.InstanceId);
         }
+        if (source.LockEnabled != null) {
+            this.LockEnabled = new Boolean(source.LockEnabled);
+        }
+        if (source.LockDuration != null) {
+            this.LockDuration = new Long(source.LockDuration);
+        }
     }
 
 
@@ -65,6 +117,8 @@ public class DeleteInstanceRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamSimple(map, prefix + "LockEnabled", this.LockEnabled);
+        this.setParamSimple(map, prefix + "LockDuration", this.LockDuration);
 
     }
 }

@@ -24,184 +24,199 @@ import java.util.HashMap;
 public class NamespaceResourceEnvTKE extends AbstractModel {
 
     /**
-    * 
+    * Cluster ID
     */
     @SerializedName("ClusterID")
     @Expose
     private String ClusterID;
 
     /**
-    * 
+    * Subnet ID.
     */
     @SerializedName("SubnetID")
     @Expose
     private String SubnetID;
 
     /**
-    * 
+    * Namespace
     */
     @SerializedName("Namespace")
     @Expose
     private String Namespace;
 
     /**
-    * 
+    * Data storage address
     */
     @SerializedName("DataPath")
     @Expose
     private String DataPath;
 
     /**
-    * 
+    * node selector
     */
     @SerializedName("NodeSelector")
     @Expose
     private K8SLabel [] NodeSelector;
 
     /**
-    * 
+    * Taint and toleration
     */
     @SerializedName("Tolerations")
     @Expose
     private K8SToleration [] Tolerations;
 
     /**
-    * 
+    * Starting node port number occupied by the scf component
     */
     @SerializedName("Port")
     @Expose
     private Long Port;
 
     /**
-    * 
+    * pod patch content in yaml format, for example
+metadata:
+  labels:
+    key: value
     */
     @SerializedName("PodTemplatePatch")
     @Expose
     private String PodTemplatePatch;
 
     /**
-     * Get  
-     * @return ClusterID 
+     * Get Cluster ID 
+     * @return ClusterID Cluster ID
      */
     public String getClusterID() {
         return this.ClusterID;
     }
 
     /**
-     * Set 
-     * @param ClusterID 
+     * Set Cluster ID
+     * @param ClusterID Cluster ID
      */
     public void setClusterID(String ClusterID) {
         this.ClusterID = ClusterID;
     }
 
     /**
-     * Get  
-     * @return SubnetID 
+     * Get Subnet ID. 
+     * @return SubnetID Subnet ID.
      */
     public String getSubnetID() {
         return this.SubnetID;
     }
 
     /**
-     * Set 
-     * @param SubnetID 
+     * Set Subnet ID.
+     * @param SubnetID Subnet ID.
      */
     public void setSubnetID(String SubnetID) {
         this.SubnetID = SubnetID;
     }
 
     /**
-     * Get  
-     * @return Namespace 
+     * Get Namespace 
+     * @return Namespace Namespace
      */
     public String getNamespace() {
         return this.Namespace;
     }
 
     /**
-     * Set 
-     * @param Namespace 
+     * Set Namespace
+     * @param Namespace Namespace
      */
     public void setNamespace(String Namespace) {
         this.Namespace = Namespace;
     }
 
     /**
-     * Get  
-     * @return DataPath 
+     * Get Data storage address 
+     * @return DataPath Data storage address
      */
     public String getDataPath() {
         return this.DataPath;
     }
 
     /**
-     * Set 
-     * @param DataPath 
+     * Set Data storage address
+     * @param DataPath Data storage address
      */
     public void setDataPath(String DataPath) {
         this.DataPath = DataPath;
     }
 
     /**
-     * Get  
-     * @return NodeSelector 
+     * Get node selector 
+     * @return NodeSelector node selector
      */
     public K8SLabel [] getNodeSelector() {
         return this.NodeSelector;
     }
 
     /**
-     * Set 
-     * @param NodeSelector 
+     * Set node selector
+     * @param NodeSelector node selector
      */
     public void setNodeSelector(K8SLabel [] NodeSelector) {
         this.NodeSelector = NodeSelector;
     }
 
     /**
-     * Get  
-     * @return Tolerations 
+     * Get Taint and toleration 
+     * @return Tolerations Taint and toleration
      */
     public K8SToleration [] getTolerations() {
         return this.Tolerations;
     }
 
     /**
-     * Set 
-     * @param Tolerations 
+     * Set Taint and toleration
+     * @param Tolerations Taint and toleration
      */
     public void setTolerations(K8SToleration [] Tolerations) {
         this.Tolerations = Tolerations;
     }
 
     /**
-     * Get  
-     * @return Port 
+     * Get Starting node port number occupied by the scf component 
+     * @return Port Starting node port number occupied by the scf component
      */
     public Long getPort() {
         return this.Port;
     }
 
     /**
-     * Set 
-     * @param Port 
+     * Set Starting node port number occupied by the scf component
+     * @param Port Starting node port number occupied by the scf component
      */
     public void setPort(Long Port) {
         this.Port = Port;
     }
 
     /**
-     * Get  
-     * @return PodTemplatePatch 
+     * Get pod patch content in yaml format, for example
+metadata:
+  labels:
+    key: value 
+     * @return PodTemplatePatch pod patch content in yaml format, for example
+metadata:
+  labels:
+    key: value
      */
     public String getPodTemplatePatch() {
         return this.PodTemplatePatch;
     }
 
     /**
-     * Set 
-     * @param PodTemplatePatch 
+     * Set pod patch content in yaml format, for example
+metadata:
+  labels:
+    key: value
+     * @param PodTemplatePatch pod patch content in yaml format, for example
+metadata:
+  labels:
+    key: value
      */
     public void setPodTemplatePatch(String PodTemplatePatch) {
         this.PodTemplatePatch = PodTemplatePatch;

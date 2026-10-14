@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class LiveRecordFile extends AbstractModel {
 
     /**
-    * 
+    * Live recording file URL
     */
     @SerializedName("Url")
     @Expose
     private String Url;
 
     /**
-    * 
+    * Live recording file size
     */
     @SerializedName("Size")
     @Expose
     private Long Size;
 
     /**
-    * 
+    * Recording file duration of live stream
     */
     @SerializedName("Duration")
     @Expose
     private Long Duration;
 
     /**
-    * 
+    * Start time of the live streaming recording file in [ISO date format](https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 
+    * End time of the live streaming recording file in [ISO date format](https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-     * Get  
-     * @return Url 
+     * Get Live recording file URL 
+     * @return Url Live recording file URL
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * Set 
-     * @param Url 
+     * Set Live recording file URL
+     * @param Url Live recording file URL
      */
     public void setUrl(String Url) {
         this.Url = Url;
     }
 
     /**
-     * Get  
-     * @return Size 
+     * Get Live recording file size 
+     * @return Size Live recording file size
      */
     public Long getSize() {
         return this.Size;
     }
 
     /**
-     * Set 
-     * @param Size 
+     * Set Live recording file size
+     * @param Size Live recording file size
      */
     public void setSize(Long Size) {
         this.Size = Size;
     }
 
     /**
-     * Get  
-     * @return Duration 
+     * Get Recording file duration of live stream 
+     * @return Duration Recording file duration of live stream
      */
     public Long getDuration() {
         return this.Duration;
     }
 
     /**
-     * Set 
-     * @param Duration 
+     * Set Recording file duration of live stream
+     * @param Duration Recording file duration of live stream
      */
     public void setDuration(Long Duration) {
         this.Duration = Duration;
     }
 
     /**
-     * Get  
-     * @return StartTime 
+     * Get Start time of the live streaming recording file in [ISO date format](https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52). 
+     * @return StartTime Start time of the live streaming recording file in [ISO date format](https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 
-     * @param StartTime 
+     * Set Start time of the live streaming recording file in [ISO date format](https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
+     * @param StartTime Start time of the live streaming recording file in [ISO date format](https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get  
-     * @return EndTime 
+     * Get End time of the live streaming recording file in [ISO date format](https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52). 
+     * @return EndTime End time of the live streaming recording file in [ISO date format](https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 
-     * @param EndTime 
+     * Set End time of the live streaming recording file in [ISO date format](https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
+     * @param EndTime End time of the live streaming recording file in [ISO date format](https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;

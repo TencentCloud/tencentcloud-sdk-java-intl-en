@@ -25,7 +25,6 @@ public class DescribeIndexMetaResponse extends AbstractModel {
 
     /**
     * Index metadata field
-Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("IndexMetaField")
     @Expose
@@ -39,10 +38,8 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     private String RequestId;
 
     /**
-     * Get Index metadata field
-Note: This field may return `null`, indicating that no valid value can be obtained. 
+     * Get Index metadata field 
      * @return IndexMetaField Index metadata field
-Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public IndexMetaField getIndexMetaField() {
         return this.IndexMetaField;
@@ -50,9 +47,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 
     /**
      * Set Index metadata field
-Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param IndexMetaField Index metadata field
-Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setIndexMetaField(IndexMetaField IndexMetaField) {
         this.IndexMetaField = IndexMetaField;

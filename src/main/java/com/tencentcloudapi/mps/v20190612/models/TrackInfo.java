@@ -24,46 +24,96 @@ import java.util.HashMap;
 public class TrackInfo extends AbstractModel {
 
     /**
-    * 
+    * Audio track and number of sound channels. Description:
+When SelectType is track, this value is an integer, for example: 1;
+When SelectType is track_channel, this value is a decimal, for example: 1.0;
+Default value: 1.0.
+Note: The integer part represents the audio track serial number, and the decimal part represents the sound channel. The audio track serial number is the stream index of the audio track, and supports input of 0 and positive integers. The decimal part supports up to 2 decimal places and only supports 0-63. However, if Codec is aac/eac3/ac3, the decimal part only supports 0-15. For example: For an audio track with stream index 1, 1.0 represents the first sound channel of this audio track, and 1.1 represents the second sound channel of this audio track.
     */
     @SerializedName("TrackNum")
     @Expose
     private String TrackNum;
 
     /**
-    * 
+    * Sound channel volume. Description:
+When the value of AudioChannel is 1, the length of this array is 1, for example: [6];
+When the value of AudioChannel is 2, the length of this array is 2, for example: [0,6];
+When the value of AudioChannel is 6, the length of this array is greater than 2 and less than 16, for example: [-60,0,0,6].
+Value range: [-60, 6]. -60 means mute, 0 means keep the original volume, and 6 means double the original volume. Default value: -60.
+Note: Supports 3 decimal places.
+
     */
     @SerializedName("ChannelVolume")
     @Expose
     private Float [] ChannelVolume;
 
     /**
-     * Get  
-     * @return TrackNum 
+     * Get Audio track and number of sound channels. Description:
+When SelectType is track, this value is an integer, for example: 1;
+When SelectType is track_channel, this value is a decimal, for example: 1.0;
+Default value: 1.0.
+Note: The integer part represents the audio track serial number, and the decimal part represents the sound channel. The audio track serial number is the stream index of the audio track, and supports input of 0 and positive integers. The decimal part supports up to 2 decimal places and only supports 0-63. However, if Codec is aac/eac3/ac3, the decimal part only supports 0-15. For example: For an audio track with stream index 1, 1.0 represents the first sound channel of this audio track, and 1.1 represents the second sound channel of this audio track. 
+     * @return TrackNum Audio track and number of sound channels. Description:
+When SelectType is track, this value is an integer, for example: 1;
+When SelectType is track_channel, this value is a decimal, for example: 1.0;
+Default value: 1.0.
+Note: The integer part represents the audio track serial number, and the decimal part represents the sound channel. The audio track serial number is the stream index of the audio track, and supports input of 0 and positive integers. The decimal part supports up to 2 decimal places and only supports 0-63. However, if Codec is aac/eac3/ac3, the decimal part only supports 0-15. For example: For an audio track with stream index 1, 1.0 represents the first sound channel of this audio track, and 1.1 represents the second sound channel of this audio track.
      */
     public String getTrackNum() {
         return this.TrackNum;
     }
 
     /**
-     * Set 
-     * @param TrackNum 
+     * Set Audio track and number of sound channels. Description:
+When SelectType is track, this value is an integer, for example: 1;
+When SelectType is track_channel, this value is a decimal, for example: 1.0;
+Default value: 1.0.
+Note: The integer part represents the audio track serial number, and the decimal part represents the sound channel. The audio track serial number is the stream index of the audio track, and supports input of 0 and positive integers. The decimal part supports up to 2 decimal places and only supports 0-63. However, if Codec is aac/eac3/ac3, the decimal part only supports 0-15. For example: For an audio track with stream index 1, 1.0 represents the first sound channel of this audio track, and 1.1 represents the second sound channel of this audio track.
+     * @param TrackNum Audio track and number of sound channels. Description:
+When SelectType is track, this value is an integer, for example: 1;
+When SelectType is track_channel, this value is a decimal, for example: 1.0;
+Default value: 1.0.
+Note: The integer part represents the audio track serial number, and the decimal part represents the sound channel. The audio track serial number is the stream index of the audio track, and supports input of 0 and positive integers. The decimal part supports up to 2 decimal places and only supports 0-63. However, if Codec is aac/eac3/ac3, the decimal part only supports 0-15. For example: For an audio track with stream index 1, 1.0 represents the first sound channel of this audio track, and 1.1 represents the second sound channel of this audio track.
      */
     public void setTrackNum(String TrackNum) {
         this.TrackNum = TrackNum;
     }
 
     /**
-     * Get  
-     * @return ChannelVolume 
+     * Get Sound channel volume. Description:
+When the value of AudioChannel is 1, the length of this array is 1, for example: [6];
+When the value of AudioChannel is 2, the length of this array is 2, for example: [0,6];
+When the value of AudioChannel is 6, the length of this array is greater than 2 and less than 16, for example: [-60,0,0,6].
+Value range: [-60, 6]. -60 means mute, 0 means keep the original volume, and 6 means double the original volume. Default value: -60.
+Note: Supports 3 decimal places.
+ 
+     * @return ChannelVolume Sound channel volume. Description:
+When the value of AudioChannel is 1, the length of this array is 1, for example: [6];
+When the value of AudioChannel is 2, the length of this array is 2, for example: [0,6];
+When the value of AudioChannel is 6, the length of this array is greater than 2 and less than 16, for example: [-60,0,0,6].
+Value range: [-60, 6]. -60 means mute, 0 means keep the original volume, and 6 means double the original volume. Default value: -60.
+Note: Supports 3 decimal places.
+
      */
     public Float [] getChannelVolume() {
         return this.ChannelVolume;
     }
 
     /**
-     * Set 
-     * @param ChannelVolume 
+     * Set Sound channel volume. Description:
+When the value of AudioChannel is 1, the length of this array is 1, for example: [6];
+When the value of AudioChannel is 2, the length of this array is 2, for example: [0,6];
+When the value of AudioChannel is 6, the length of this array is greater than 2 and less than 16, for example: [-60,0,0,6].
+Value range: [-60, 6]. -60 means mute, 0 means keep the original volume, and 6 means double the original volume. Default value: -60.
+Note: Supports 3 decimal places.
+
+     * @param ChannelVolume Sound channel volume. Description:
+When the value of AudioChannel is 1, the length of this array is 1, for example: [6];
+When the value of AudioChannel is 2, the length of this array is 2, for example: [0,6];
+When the value of AudioChannel is 6, the length of this array is greater than 2 and less than 16, for example: [-60,0,0,6].
+Value range: [-60, 6]. -60 means mute, 0 means keep the original volume, and 6 means double the original volume. Default value: -60.
+Note: Supports 3 decimal places.
+
      */
     public void setChannelVolume(Float [] ChannelVolume) {
         this.ChannelVolume = ChannelVolume;

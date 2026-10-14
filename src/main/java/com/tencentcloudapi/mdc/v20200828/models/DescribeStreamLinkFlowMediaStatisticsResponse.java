@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeStreamLinkFlowMediaStatisticsResponse extends AbstractModel {
 
     /**
-    * A list of the media data.
+    * List of media data in the transport stream.
     */
     @SerializedName("Infos")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeStreamLinkFlowMediaStatisticsResponse extends AbstractModel
     private String RequestId;
 
     /**
-     * Get A list of the media data. 
-     * @return Infos A list of the media data.
+     * Get List of media data in the transport stream. 
+     * @return Infos List of media data in the transport stream.
      */
     public FlowMediaInfo [] getInfos() {
         return this.Infos;
     }
 
     /**
-     * Set A list of the media data.
-     * @param Infos A list of the media data.
+     * Set List of media data in the transport stream.
+     * @param Infos List of media data in the transport stream.
      */
     public void setInfos(FlowMediaInfo [] Infos) {
         this.Infos = Infos;

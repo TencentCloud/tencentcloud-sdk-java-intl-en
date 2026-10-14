@@ -24,46 +24,66 @@ import java.util.HashMap;
 public class SmartErasePrivacyConfig extends AbstractModel {
 
     /**
-    * 
+    * Erasing method of privacy protection.
+- Blur: blur.
+- mosaic
     */
     @SerializedName("PrivacyModel")
     @Expose
     private String PrivacyModel;
 
     /**
-    * 
+    * Privacy protection target. (When API Explorer is used, it is not required to specify an array. Add the corresponding items and enter the corresponding values.)
+- face Human face
+- plate: license plate.
     */
     @SerializedName("PrivacyTargets")
     @Expose
     private String [] PrivacyTargets;
 
     /**
-     * Get  
-     * @return PrivacyModel 
+     * Get Erasing method of privacy protection.
+- Blur: blur.
+- mosaic 
+     * @return PrivacyModel Erasing method of privacy protection.
+- Blur: blur.
+- mosaic
      */
     public String getPrivacyModel() {
         return this.PrivacyModel;
     }
 
     /**
-     * Set 
-     * @param PrivacyModel 
+     * Set Erasing method of privacy protection.
+- Blur: blur.
+- mosaic
+     * @param PrivacyModel Erasing method of privacy protection.
+- Blur: blur.
+- mosaic
      */
     public void setPrivacyModel(String PrivacyModel) {
         this.PrivacyModel = PrivacyModel;
     }
 
     /**
-     * Get  
-     * @return PrivacyTargets 
+     * Get Privacy protection target. (When API Explorer is used, it is not required to specify an array. Add the corresponding items and enter the corresponding values.)
+- face Human face
+- plate: license plate. 
+     * @return PrivacyTargets Privacy protection target. (When API Explorer is used, it is not required to specify an array. Add the corresponding items and enter the corresponding values.)
+- face Human face
+- plate: license plate.
      */
     public String [] getPrivacyTargets() {
         return this.PrivacyTargets;
     }
 
     /**
-     * Set 
-     * @param PrivacyTargets 
+     * Set Privacy protection target. (When API Explorer is used, it is not required to specify an array. Add the corresponding items and enter the corresponding values.)
+- face Human face
+- plate: license plate.
+     * @param PrivacyTargets Privacy protection target. (When API Explorer is used, it is not required to specify an array. Add the corresponding items and enter the corresponding values.)
+- face Human face
+- plate: license plate.
      */
     public void setPrivacyTargets(String [] PrivacyTargets) {
         this.PrivacyTargets = PrivacyTargets;

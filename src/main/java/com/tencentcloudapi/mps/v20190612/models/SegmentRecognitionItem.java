@@ -31,28 +31,28 @@ public class SegmentRecognitionItem extends AbstractModel {
     private Float Confidence;
 
     /**
-    * Start time offset of a recording clip.
+    * Start time offset of the segment.
     */
     @SerializedName("StartTimeOffset")
     @Expose
     private Float StartTimeOffset;
 
     /**
-    * End time offset of the recording clip.
+    * Segment end time offset.
     */
     @SerializedName("EndTimeOffset")
     @Expose
     private Float EndTimeOffset;
 
     /**
-    * Split segment URL.
+    * Segment URL.
     */
     @SerializedName("SegmentUrl")
     @Expose
     private String SegmentUrl;
 
     /**
-    * Segment cover.
+    * Split clip cover.
     */
     @SerializedName("CovImgUrl")
     @Expose
@@ -94,7 +94,7 @@ public class SegmentRecognitionItem extends AbstractModel {
     private String EndTime;
 
     /**
-    * Specify the figure ID.
+    * Specify the person ID.
     */
     @SerializedName("PersonId")
     @Expose
@@ -117,64 +117,64 @@ public class SegmentRecognitionItem extends AbstractModel {
     }
 
     /**
-     * Get Start time offset of a recording clip. 
-     * @return StartTimeOffset Start time offset of a recording clip.
+     * Get Start time offset of the segment. 
+     * @return StartTimeOffset Start time offset of the segment.
      */
     public Float getStartTimeOffset() {
         return this.StartTimeOffset;
     }
 
     /**
-     * Set Start time offset of a recording clip.
-     * @param StartTimeOffset Start time offset of a recording clip.
+     * Set Start time offset of the segment.
+     * @param StartTimeOffset Start time offset of the segment.
      */
     public void setStartTimeOffset(Float StartTimeOffset) {
         this.StartTimeOffset = StartTimeOffset;
     }
 
     /**
-     * Get End time offset of the recording clip. 
-     * @return EndTimeOffset End time offset of the recording clip.
+     * Get Segment end time offset. 
+     * @return EndTimeOffset Segment end time offset.
      */
     public Float getEndTimeOffset() {
         return this.EndTimeOffset;
     }
 
     /**
-     * Set End time offset of the recording clip.
-     * @param EndTimeOffset End time offset of the recording clip.
+     * Set Segment end time offset.
+     * @param EndTimeOffset Segment end time offset.
      */
     public void setEndTimeOffset(Float EndTimeOffset) {
         this.EndTimeOffset = EndTimeOffset;
     }
 
     /**
-     * Get Split segment URL. 
-     * @return SegmentUrl Split segment URL.
+     * Get Segment URL. 
+     * @return SegmentUrl Segment URL.
      */
     public String getSegmentUrl() {
         return this.SegmentUrl;
     }
 
     /**
-     * Set Split segment URL.
-     * @param SegmentUrl Split segment URL.
+     * Set Segment URL.
+     * @param SegmentUrl Segment URL.
      */
     public void setSegmentUrl(String SegmentUrl) {
         this.SegmentUrl = SegmentUrl;
     }
 
     /**
-     * Get Segment cover. 
-     * @return CovImgUrl Segment cover.
+     * Get Split clip cover. 
+     * @return CovImgUrl Split clip cover.
      */
     public String getCovImgUrl() {
         return this.CovImgUrl;
     }
 
     /**
-     * Set Segment cover.
-     * @param CovImgUrl Segment cover.
+     * Set Split clip cover.
+     * @param CovImgUrl Split clip cover.
      */
     public void setCovImgUrl(String CovImgUrl) {
         this.CovImgUrl = CovImgUrl;
@@ -261,16 +261,16 @@ public class SegmentRecognitionItem extends AbstractModel {
     }
 
     /**
-     * Get Specify the figure ID. 
-     * @return PersonId Specify the figure ID.
+     * Get Specify the person ID. 
+     * @return PersonId Specify the person ID.
      */
     public String getPersonId() {
         return this.PersonId;
     }
 
     /**
-     * Set Specify the figure ID.
-     * @param PersonId Specify the figure ID.
+     * Set Specify the person ID.
+     * @param PersonId Specify the person ID.
      */
     public void setPersonId(String PersonId) {
         this.PersonId = PersonId;

@@ -38,14 +38,14 @@ public class InstanceInfo extends AbstractModel {
     private String Zone;
 
     /**
-    * 
+    * <p>Create an instance version</p>
     */
     @SerializedName("CreateVersion")
     @Expose
     private String CreateVersion;
 
     /**
-    * 
+    * <p>Initialize instance parameters</p>
     */
     @SerializedName("InitParams")
     @Expose
@@ -73,14 +73,14 @@ public class InstanceInfo extends AbstractModel {
     private Long StorageNodeNum;
 
     /**
-    * 
+    * <p>Instance tag information.</p>
     */
     @SerializedName("ResourceTags")
     @Expose
     private ResourceTag [] ResourceTags;
 
     /**
-    * 
+    * <p>Instance name</p>
     */
     @SerializedName("InstanceName")
     @Expose
@@ -157,56 +157,56 @@ public class InstanceInfo extends AbstractModel {
     private String StatusDesc;
 
     /**
-    * 
+    * <p>CPU cores of the control node</p>
     */
     @SerializedName("MCCpu")
     @Expose
     private Long MCCpu;
 
     /**
-    * 
+    * <p>CPU size of the control node</p>
     */
     @SerializedName("MCMem")
     @Expose
     private Long MCMem;
 
     /**
-    * 
+    * <p>CPU cores of the computing node</p>
     */
     @SerializedName("ComputerNodeCpu")
     @Expose
     private Long ComputerNodeCpu;
 
     /**
-    * 
+    * <p>Compute node memory size</p>
     */
     @SerializedName("ComputerNodeMem")
     @Expose
     private Long ComputerNodeMem;
 
     /**
-    * 
+    * <p>CPU cores of the storage node</p>
     */
     @SerializedName("StorageNodeCpu")
     @Expose
     private Long StorageNodeCpu;
 
     /**
-    * 
+    * <p>Storage node memory size</p>
     */
     @SerializedName("StorageNodeMem")
     @Expose
     private Long StorageNodeMem;
 
     /**
-    * 
+    * <p>Number of control nodes</p>
     */
     @SerializedName("MCNum")
     @Expose
     private Long MCNum;
 
     /**
-    * 
+    * <p>Renewal flag</p>
     */
     @SerializedName("RenewFlag")
     @Expose
@@ -220,21 +220,21 @@ public class InstanceInfo extends AbstractModel {
     private String PayMode;
 
     /**
-    * 
+    * <p>User tag, inner: internal user; external: external user</p>
     */
     @SerializedName("AccountTag")
     @Expose
     private String AccountTag;
 
     /**
-    * 
+    * <p>Instance Architecture Type, separate: decoupled architecture; hyper: peer-to-peer architecture</p>
     */
     @SerializedName("InstanceType")
     @Expose
     private String InstanceType;
 
     /**
-    * 
+    * <p>Disk Type, CLOUD_HSSD enhanced SSD, CLOUD_TCS local SSD disk</p>
     */
     @SerializedName("StorageType")
     @Expose
@@ -283,35 +283,35 @@ public class InstanceInfo extends AbstractModel {
     private Long FullReplications;
 
     /**
-    * 
+    * <p>Account information</p>
     */
     @SerializedName("AppId")
     @Expose
     private Long AppId;
 
     /**
-    * 
+    * <p>Account information</p>
     */
     @SerializedName("SubAccountUin")
     @Expose
     private String SubAccountUin;
 
     /**
-    * 
+    * <p>Account information</p>
     */
     @SerializedName("Uin")
     @Expose
     private String Uin;
 
     /**
-    * 
+    * <p>AZ information</p>
     */
     @SerializedName("Zones")
     @Expose
     private String [] Zones;
 
     /**
-    * 
+    * <p>Instance node</p>
     */
     @SerializedName("Nodes")
     @Expose
@@ -346,21 +346,21 @@ public class InstanceInfo extends AbstractModel {
     private Long CdcNodeNum;
 
     /**
-    * 
+    * <p>az mode. 1: Single az 2: Multi-az non-primary az mode 3: Multi-az primary az mode</p>
     */
     @SerializedName("AZMode")
     @Expose
     private Long AZMode;
 
     /**
-    * 
+    * <p>Disaster recovery flag. 1: No disaster recovery relationship; 2: Primary instance for disaster recovery; 3: Disaster Recovery Standby Instance</p>
     */
     @SerializedName("StandbyFlag")
     @Expose
     private Long StandbyFlag;
 
     /**
-    * 
+    * <p>Number of connected standby instances (Valid only when StandbyFlag == 2)</p>
     */
     @SerializedName("StandbySecondaryNum")
     @Expose
@@ -465,7 +465,7 @@ public class InstanceInfo extends AbstractModel {
     private AnalysisInstanceInfo AnalysisInstanceInfo;
 
     /**
-    * 
+    * <p>Multiple automatic configuration adjustment configurations of the instance, including ccu and nodecount values</p>
     */
     @SerializedName("AutoScaleConfigs")
     @Expose
@@ -508,32 +508,32 @@ public class InstanceInfo extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return CreateVersion 
+     * Get <p>Create an instance version</p> 
+     * @return CreateVersion <p>Create an instance version</p>
      */
     public String getCreateVersion() {
         return this.CreateVersion;
     }
 
     /**
-     * Set 
-     * @param CreateVersion 
+     * Set <p>Create an instance version</p>
+     * @param CreateVersion <p>Create an instance version</p>
      */
     public void setCreateVersion(String CreateVersion) {
         this.CreateVersion = CreateVersion;
     }
 
     /**
-     * Get  
-     * @return InitParams 
+     * Get <p>Initialize instance parameters</p> 
+     * @return InitParams <p>Initialize instance parameters</p>
      */
     public InstanceParam [] getInitParams() {
         return this.InitParams;
     }
 
     /**
-     * Set 
-     * @param InitParams 
+     * Set <p>Initialize instance parameters</p>
+     * @param InitParams <p>Initialize instance parameters</p>
      */
     public void setInitParams(InstanceParam [] InitParams) {
         this.InitParams = InitParams;
@@ -588,32 +588,32 @@ public class InstanceInfo extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return ResourceTags 
+     * Get <p>Instance tag information.</p> 
+     * @return ResourceTags <p>Instance tag information.</p>
      */
     public ResourceTag [] getResourceTags() {
         return this.ResourceTags;
     }
 
     /**
-     * Set 
-     * @param ResourceTags 
+     * Set <p>Instance tag information.</p>
+     * @param ResourceTags <p>Instance tag information.</p>
      */
     public void setResourceTags(ResourceTag [] ResourceTags) {
         this.ResourceTags = ResourceTags;
     }
 
     /**
-     * Get  
-     * @return InstanceName 
+     * Get <p>Instance name</p> 
+     * @return InstanceName <p>Instance name</p>
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set 
-     * @param InstanceName 
+     * Set <p>Instance name</p>
+     * @param InstanceName <p>Instance name</p>
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
@@ -788,8 +788,8 @@ public class InstanceInfo extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return MCCpu 
+     * Get <p>CPU cores of the control node</p> 
+     * @return MCCpu <p>CPU cores of the control node</p>
      * @deprecated
      */
     @Deprecated
@@ -798,8 +798,8 @@ public class InstanceInfo extends AbstractModel {
     }
 
     /**
-     * Set 
-     * @param MCCpu 
+     * Set <p>CPU cores of the control node</p>
+     * @param MCCpu <p>CPU cores of the control node</p>
      * @deprecated
      */
     @Deprecated
@@ -808,8 +808,8 @@ public class InstanceInfo extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return MCMem 
+     * Get <p>CPU size of the control node</p> 
+     * @return MCMem <p>CPU size of the control node</p>
      * @deprecated
      */
     @Deprecated
@@ -818,8 +818,8 @@ public class InstanceInfo extends AbstractModel {
     }
 
     /**
-     * Set 
-     * @param MCMem 
+     * Set <p>CPU size of the control node</p>
+     * @param MCMem <p>CPU size of the control node</p>
      * @deprecated
      */
     @Deprecated
@@ -828,8 +828,8 @@ public class InstanceInfo extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return ComputerNodeCpu 
+     * Get <p>CPU cores of the computing node</p> 
+     * @return ComputerNodeCpu <p>CPU cores of the computing node</p>
      * @deprecated
      */
     @Deprecated
@@ -838,8 +838,8 @@ public class InstanceInfo extends AbstractModel {
     }
 
     /**
-     * Set 
-     * @param ComputerNodeCpu 
+     * Set <p>CPU cores of the computing node</p>
+     * @param ComputerNodeCpu <p>CPU cores of the computing node</p>
      * @deprecated
      */
     @Deprecated
@@ -848,8 +848,8 @@ public class InstanceInfo extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return ComputerNodeMem 
+     * Get <p>Compute node memory size</p> 
+     * @return ComputerNodeMem <p>Compute node memory size</p>
      * @deprecated
      */
     @Deprecated
@@ -858,8 +858,8 @@ public class InstanceInfo extends AbstractModel {
     }
 
     /**
-     * Set 
-     * @param ComputerNodeMem 
+     * Set <p>Compute node memory size</p>
+     * @param ComputerNodeMem <p>Compute node memory size</p>
      * @deprecated
      */
     @Deprecated
@@ -868,40 +868,40 @@ public class InstanceInfo extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return StorageNodeCpu 
+     * Get <p>CPU cores of the storage node</p> 
+     * @return StorageNodeCpu <p>CPU cores of the storage node</p>
      */
     public Long getStorageNodeCpu() {
         return this.StorageNodeCpu;
     }
 
     /**
-     * Set 
-     * @param StorageNodeCpu 
+     * Set <p>CPU cores of the storage node</p>
+     * @param StorageNodeCpu <p>CPU cores of the storage node</p>
      */
     public void setStorageNodeCpu(Long StorageNodeCpu) {
         this.StorageNodeCpu = StorageNodeCpu;
     }
 
     /**
-     * Get  
-     * @return StorageNodeMem 
+     * Get <p>Storage node memory size</p> 
+     * @return StorageNodeMem <p>Storage node memory size</p>
      */
     public Long getStorageNodeMem() {
         return this.StorageNodeMem;
     }
 
     /**
-     * Set 
-     * @param StorageNodeMem 
+     * Set <p>Storage node memory size</p>
+     * @param StorageNodeMem <p>Storage node memory size</p>
      */
     public void setStorageNodeMem(Long StorageNodeMem) {
         this.StorageNodeMem = StorageNodeMem;
     }
 
     /**
-     * Get  
-     * @return MCNum 
+     * Get <p>Number of control nodes</p> 
+     * @return MCNum <p>Number of control nodes</p>
      * @deprecated
      */
     @Deprecated
@@ -910,8 +910,8 @@ public class InstanceInfo extends AbstractModel {
     }
 
     /**
-     * Set 
-     * @param MCNum 
+     * Set <p>Number of control nodes</p>
+     * @param MCNum <p>Number of control nodes</p>
      * @deprecated
      */
     @Deprecated
@@ -920,16 +920,16 @@ public class InstanceInfo extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return RenewFlag 
+     * Get <p>Renewal flag</p> 
+     * @return RenewFlag <p>Renewal flag</p>
      */
     public Long getRenewFlag() {
         return this.RenewFlag;
     }
 
     /**
-     * Set 
-     * @param RenewFlag 
+     * Set <p>Renewal flag</p>
+     * @param RenewFlag <p>Renewal flag</p>
      */
     public void setRenewFlag(Long RenewFlag) {
         this.RenewFlag = RenewFlag;
@@ -952,48 +952,48 @@ public class InstanceInfo extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return AccountTag 
+     * Get <p>User tag, inner: internal user; external: external user</p> 
+     * @return AccountTag <p>User tag, inner: internal user; external: external user</p>
      */
     public String getAccountTag() {
         return this.AccountTag;
     }
 
     /**
-     * Set 
-     * @param AccountTag 
+     * Set <p>User tag, inner: internal user; external: external user</p>
+     * @param AccountTag <p>User tag, inner: internal user; external: external user</p>
      */
     public void setAccountTag(String AccountTag) {
         this.AccountTag = AccountTag;
     }
 
     /**
-     * Get  
-     * @return InstanceType 
+     * Get <p>Instance Architecture Type, separate: decoupled architecture; hyper: peer-to-peer architecture</p> 
+     * @return InstanceType <p>Instance Architecture Type, separate: decoupled architecture; hyper: peer-to-peer architecture</p>
      */
     public String getInstanceType() {
         return this.InstanceType;
     }
 
     /**
-     * Set 
-     * @param InstanceType 
+     * Set <p>Instance Architecture Type, separate: decoupled architecture; hyper: peer-to-peer architecture</p>
+     * @param InstanceType <p>Instance Architecture Type, separate: decoupled architecture; hyper: peer-to-peer architecture</p>
      */
     public void setInstanceType(String InstanceType) {
         this.InstanceType = InstanceType;
     }
 
     /**
-     * Get  
-     * @return StorageType 
+     * Get <p>Disk Type, CLOUD_HSSD enhanced SSD, CLOUD_TCS local SSD disk</p> 
+     * @return StorageType <p>Disk Type, CLOUD_HSSD enhanced SSD, CLOUD_TCS local SSD disk</p>
      */
     public String getStorageType() {
         return this.StorageType;
     }
 
     /**
-     * Set 
-     * @param StorageType 
+     * Set <p>Disk Type, CLOUD_HSSD enhanced SSD, CLOUD_TCS local SSD disk</p>
+     * @param StorageType <p>Disk Type, CLOUD_HSSD enhanced SSD, CLOUD_TCS local SSD disk</p>
      */
     public void setStorageType(String StorageType) {
         this.StorageType = StorageType;
@@ -1096,80 +1096,80 @@ public class InstanceInfo extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return AppId 
+     * Get <p>Account information</p> 
+     * @return AppId <p>Account information</p>
      */
     public Long getAppId() {
         return this.AppId;
     }
 
     /**
-     * Set 
-     * @param AppId 
+     * Set <p>Account information</p>
+     * @param AppId <p>Account information</p>
      */
     public void setAppId(Long AppId) {
         this.AppId = AppId;
     }
 
     /**
-     * Get  
-     * @return SubAccountUin 
+     * Get <p>Account information</p> 
+     * @return SubAccountUin <p>Account information</p>
      */
     public String getSubAccountUin() {
         return this.SubAccountUin;
     }
 
     /**
-     * Set 
-     * @param SubAccountUin 
+     * Set <p>Account information</p>
+     * @param SubAccountUin <p>Account information</p>
      */
     public void setSubAccountUin(String SubAccountUin) {
         this.SubAccountUin = SubAccountUin;
     }
 
     /**
-     * Get  
-     * @return Uin 
+     * Get <p>Account information</p> 
+     * @return Uin <p>Account information</p>
      */
     public String getUin() {
         return this.Uin;
     }
 
     /**
-     * Set 
-     * @param Uin 
+     * Set <p>Account information</p>
+     * @param Uin <p>Account information</p>
      */
     public void setUin(String Uin) {
         this.Uin = Uin;
     }
 
     /**
-     * Get  
-     * @return Zones 
+     * Get <p>AZ information</p> 
+     * @return Zones <p>AZ information</p>
      */
     public String [] getZones() {
         return this.Zones;
     }
 
     /**
-     * Set 
-     * @param Zones 
+     * Set <p>AZ information</p>
+     * @param Zones <p>AZ information</p>
      */
     public void setZones(String [] Zones) {
         this.Zones = Zones;
     }
 
     /**
-     * Get  
-     * @return Nodes 
+     * Get <p>Instance node</p> 
+     * @return Nodes <p>Instance node</p>
      */
     public InstanceNode [] getNodes() {
         return this.Nodes;
     }
 
     /**
-     * Set 
-     * @param Nodes 
+     * Set <p>Instance node</p>
+     * @param Nodes <p>Instance node</p>
      */
     public void setNodes(InstanceNode [] Nodes) {
         this.Nodes = Nodes;
@@ -1252,48 +1252,48 @@ public class InstanceInfo extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return AZMode 
+     * Get <p>az mode. 1: Single az 2: Multi-az non-primary az mode 3: Multi-az primary az mode</p> 
+     * @return AZMode <p>az mode. 1: Single az 2: Multi-az non-primary az mode 3: Multi-az primary az mode</p>
      */
     public Long getAZMode() {
         return this.AZMode;
     }
 
     /**
-     * Set 
-     * @param AZMode 
+     * Set <p>az mode. 1: Single az 2: Multi-az non-primary az mode 3: Multi-az primary az mode</p>
+     * @param AZMode <p>az mode. 1: Single az 2: Multi-az non-primary az mode 3: Multi-az primary az mode</p>
      */
     public void setAZMode(Long AZMode) {
         this.AZMode = AZMode;
     }
 
     /**
-     * Get  
-     * @return StandbyFlag 
+     * Get <p>Disaster recovery flag. 1: No disaster recovery relationship; 2: Primary instance for disaster recovery; 3: Disaster Recovery Standby Instance</p> 
+     * @return StandbyFlag <p>Disaster recovery flag. 1: No disaster recovery relationship; 2: Primary instance for disaster recovery; 3: Disaster Recovery Standby Instance</p>
      */
     public Long getStandbyFlag() {
         return this.StandbyFlag;
     }
 
     /**
-     * Set 
-     * @param StandbyFlag 
+     * Set <p>Disaster recovery flag. 1: No disaster recovery relationship; 2: Primary instance for disaster recovery; 3: Disaster Recovery Standby Instance</p>
+     * @param StandbyFlag <p>Disaster recovery flag. 1: No disaster recovery relationship; 2: Primary instance for disaster recovery; 3: Disaster Recovery Standby Instance</p>
      */
     public void setStandbyFlag(Long StandbyFlag) {
         this.StandbyFlag = StandbyFlag;
     }
 
     /**
-     * Get  
-     * @return StandbySecondaryNum 
+     * Get <p>Number of connected standby instances (Valid only when StandbyFlag == 2)</p> 
+     * @return StandbySecondaryNum <p>Number of connected standby instances (Valid only when StandbyFlag == 2)</p>
      */
     public Long getStandbySecondaryNum() {
         return this.StandbySecondaryNum;
     }
 
     /**
-     * Set 
-     * @param StandbySecondaryNum 
+     * Set <p>Number of connected standby instances (Valid only when StandbyFlag == 2)</p>
+     * @param StandbySecondaryNum <p>Number of connected standby instances (Valid only when StandbyFlag == 2)</p>
      */
     public void setStandbySecondaryNum(Long StandbySecondaryNum) {
         this.StandbySecondaryNum = StandbySecondaryNum;
@@ -1528,16 +1528,16 @@ public class InstanceInfo extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return AutoScaleConfigs 
+     * Get <p>Multiple automatic configuration adjustment configurations of the instance, including ccu and nodecount values</p> 
+     * @return AutoScaleConfigs <p>Multiple automatic configuration adjustment configurations of the instance, including ccu and nodecount values</p>
      */
     public AutoScalingConfig [] getAutoScaleConfigs() {
         return this.AutoScaleConfigs;
     }
 
     /**
-     * Set 
-     * @param AutoScaleConfigs 
+     * Set <p>Multiple automatic configuration adjustment configurations of the instance, including ccu and nodecount values</p>
+     * @param AutoScaleConfigs <p>Multiple automatic configuration adjustment configurations of the instance, including ccu and nodecount values</p>
      */
     public void setAutoScaleConfigs(AutoScalingConfig [] AutoScaleConfigs) {
         this.AutoScaleConfigs = AutoScaleConfigs;

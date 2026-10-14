@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class SandboxContent extends AbstractModel {
 
     /**
-    * 
+    * URL address of the sandbox
     */
     @SerializedName("Url")
     @Expose
     private String Url;
 
     /**
-    * 
+    * URL address for opening the sandbox through a browser
     */
     @SerializedName("DisplayUrl")
     @Expose
     private String DisplayUrl;
 
     /**
-    * 
+    * Sandbox output content
     */
     @SerializedName("Content")
     @Expose
     private String Content;
 
     /**
-     * Get  
-     * @return Url 
+     * Get URL address of the sandbox 
+     * @return Url URL address of the sandbox
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * Set 
-     * @param Url 
+     * Set URL address of the sandbox
+     * @param Url URL address of the sandbox
      */
     public void setUrl(String Url) {
         this.Url = Url;
     }
 
     /**
-     * Get  
-     * @return DisplayUrl 
+     * Get URL address for opening the sandbox through a browser 
+     * @return DisplayUrl URL address for opening the sandbox through a browser
      */
     public String getDisplayUrl() {
         return this.DisplayUrl;
     }
 
     /**
-     * Set 
-     * @param DisplayUrl 
+     * Set URL address for opening the sandbox through a browser
+     * @param DisplayUrl URL address for opening the sandbox through a browser
      */
     public void setDisplayUrl(String DisplayUrl) {
         this.DisplayUrl = DisplayUrl;
     }
 
     /**
-     * Get  
-     * @return Content 
+     * Get Sandbox output content 
+     * @return Content Sandbox output content
      */
     public String getContent() {
         return this.Content;
     }
 
     /**
-     * Set 
-     * @param Content 
+     * Set Sandbox output content
+     * @param Content Sandbox output content
      */
     public void setContent(String Content) {
         this.Content = Content;

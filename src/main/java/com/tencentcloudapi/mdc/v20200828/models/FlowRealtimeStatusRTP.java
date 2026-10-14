@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class FlowRealtimeStatusRTP extends AbstractModel {
 
     /**
-    * The number of packets transmitted.
+    * Number of transmitted packets
     */
     @SerializedName("Packets")
     @Expose
     private Long Packets;
 
     /**
-     * Get The number of packets transmitted. 
-     * @return Packets The number of packets transmitted.
+     * Get Number of transmitted packets 
+     * @return Packets Number of transmitted packets
      */
     public Long getPackets() {
         return this.Packets;
     }
 
     /**
-     * Set The number of packets transmitted.
-     * @param Packets The number of packets transmitted.
+     * Set Number of transmitted packets
+     * @param Packets Number of transmitted packets
      */
     public void setPackets(Long Packets) {
         this.Packets = Packets;

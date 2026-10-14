@@ -24,35 +24,35 @@ import java.util.HashMap;
 public class CloneVoiceResponse extends AbstractModel {
 
     /**
-    * 
+    * <p>Error code. 0 is returned if the request is successful.</p>
     */
     @SerializedName("ErrorCode")
     @Expose
     private Long ErrorCode;
 
     /**
-    * 
+    * <p>Error message. success is returned if the request is successful.</p>
     */
     @SerializedName("Msg")
     @Expose
     private String Msg;
 
     /**
-    * 
+    * <p>ID of the cloned generated voice type</p>
     */
     @SerializedName("VoiceId")
     @Expose
     private String VoiceId;
 
     /**
-    * 
+    * <p>base64-encoded synthetic audio</p>
     */
     @SerializedName("AudioData")
     @Expose
     private String AudioData;
 
     /**
-    * 
+    * <p>Synthetic audio Url, valid for 24 hours</p>
     */
     @SerializedName("AudioUrl")
     @Expose
@@ -73,80 +73,80 @@ public class CloneVoiceResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get  
-     * @return ErrorCode 
+     * Get <p>Error code. 0 is returned if the request is successful.</p> 
+     * @return ErrorCode <p>Error code. 0 is returned if the request is successful.</p>
      */
     public Long getErrorCode() {
         return this.ErrorCode;
     }
 
     /**
-     * Set 
-     * @param ErrorCode 
+     * Set <p>Error code. 0 is returned if the request is successful.</p>
+     * @param ErrorCode <p>Error code. 0 is returned if the request is successful.</p>
      */
     public void setErrorCode(Long ErrorCode) {
         this.ErrorCode = ErrorCode;
     }
 
     /**
-     * Get  
-     * @return Msg 
+     * Get <p>Error message. success is returned if the request is successful.</p> 
+     * @return Msg <p>Error message. success is returned if the request is successful.</p>
      */
     public String getMsg() {
         return this.Msg;
     }
 
     /**
-     * Set 
-     * @param Msg 
+     * Set <p>Error message. success is returned if the request is successful.</p>
+     * @param Msg <p>Error message. success is returned if the request is successful.</p>
      */
     public void setMsg(String Msg) {
         this.Msg = Msg;
     }
 
     /**
-     * Get  
-     * @return VoiceId 
+     * Get <p>ID of the cloned generated voice type</p> 
+     * @return VoiceId <p>ID of the cloned generated voice type</p>
      */
     public String getVoiceId() {
         return this.VoiceId;
     }
 
     /**
-     * Set 
-     * @param VoiceId 
+     * Set <p>ID of the cloned generated voice type</p>
+     * @param VoiceId <p>ID of the cloned generated voice type</p>
      */
     public void setVoiceId(String VoiceId) {
         this.VoiceId = VoiceId;
     }
 
     /**
-     * Get  
-     * @return AudioData 
+     * Get <p>base64-encoded synthetic audio</p> 
+     * @return AudioData <p>base64-encoded synthetic audio</p>
      */
     public String getAudioData() {
         return this.AudioData;
     }
 
     /**
-     * Set 
-     * @param AudioData 
+     * Set <p>base64-encoded synthetic audio</p>
+     * @param AudioData <p>base64-encoded synthetic audio</p>
      */
     public void setAudioData(String AudioData) {
         this.AudioData = AudioData;
     }
 
     /**
-     * Get  
-     * @return AudioUrl 
+     * Get <p>Synthetic audio Url, valid for 24 hours</p> 
+     * @return AudioUrl <p>Synthetic audio Url, valid for 24 hours</p>
      */
     public String getAudioUrl() {
         return this.AudioUrl;
     }
 
     /**
-     * Set 
-     * @param AudioUrl 
+     * Set <p>Synthetic audio Url, valid for 24 hours</p>
+     * @param AudioUrl <p>Synthetic audio Url, valid for 24 hours</p>
      */
     public void setAudioUrl(String AudioUrl) {
         this.AudioUrl = AudioUrl;

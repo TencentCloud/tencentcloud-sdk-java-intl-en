@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class OperationDetail extends AbstractModel {
 
     /**
-    * Original instance configuration information
+    * Original configuration message of the instance
     */
     @SerializedName("OldInfo")
     @Expose
     private KeyValue [] OldInfo;
 
     /**
-    * Updated instance configuration information
+    * Configuration message after the instance update
     */
     @SerializedName("NewInfo")
     @Expose
     private KeyValue [] NewInfo;
 
     /**
-     * Get Original instance configuration information 
-     * @return OldInfo Original instance configuration information
+     * Get Original configuration message of the instance 
+     * @return OldInfo Original configuration message of the instance
      */
     public KeyValue [] getOldInfo() {
         return this.OldInfo;
     }
 
     /**
-     * Set Original instance configuration information
-     * @param OldInfo Original instance configuration information
+     * Set Original configuration message of the instance
+     * @param OldInfo Original configuration message of the instance
      */
     public void setOldInfo(KeyValue [] OldInfo) {
         this.OldInfo = OldInfo;
     }
 
     /**
-     * Get Updated instance configuration information 
-     * @return NewInfo Updated instance configuration information
+     * Get Configuration message after the instance update 
+     * @return NewInfo Configuration message after the instance update
      */
     public KeyValue [] getNewInfo() {
         return this.NewInfo;
     }
 
     /**
-     * Set Updated instance configuration information
-     * @param NewInfo Updated instance configuration information
+     * Set Configuration message after the instance update
+     * @param NewInfo Configuration message after the instance update
      */
     public void setNewInfo(KeyValue [] NewInfo) {
         this.NewInfo = NewInfo;

@@ -25,15 +25,13 @@ public class DescribeIndexListResponse extends AbstractModel {
 
     /**
     * Index metadata field
-Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("IndexMetaFields")
     @Expose
     private IndexMetaField [] IndexMetaFields;
 
     /**
-    * Total number of results
-Note: This field may return `null`, indicating that no valid value can be obtained.
+    * Total query count
     */
     @SerializedName("TotalCount")
     @Expose
@@ -47,10 +45,8 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     private String RequestId;
 
     /**
-     * Get Index metadata field
-Note: This field may return `null`, indicating that no valid value can be obtained. 
+     * Get Index metadata field 
      * @return IndexMetaFields Index metadata field
-Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public IndexMetaField [] getIndexMetaFields() {
         return this.IndexMetaFields;
@@ -58,29 +54,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 
     /**
      * Set Index metadata field
-Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param IndexMetaFields Index metadata field
-Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setIndexMetaFields(IndexMetaField [] IndexMetaFields) {
         this.IndexMetaFields = IndexMetaFields;
     }
 
     /**
-     * Get Total number of results
-Note: This field may return `null`, indicating that no valid value can be obtained. 
-     * @return TotalCount Total number of results
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Get Total query count 
+     * @return TotalCount Total query count
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Total number of results
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param TotalCount Total number of results
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Set Total query count
+     * @param TotalCount Total query count
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

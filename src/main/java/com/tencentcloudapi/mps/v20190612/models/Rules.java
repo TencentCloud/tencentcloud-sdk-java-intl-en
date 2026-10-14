@@ -24,92 +24,107 @@ import java.util.HashMap;
 public class Rules extends AbstractModel {
 
     /**
-    * 
+    * Judgment condition id
     */
     @SerializedName("Id")
     @Expose
     private String Id;
 
     /**
-    * 
+    * Judgment condition configuration
     */
     @SerializedName("Conditions")
     @Expose
     private RuleConditionItem [] Conditions;
 
     /**
-    * 
+    * Logical operator for the list of conditions. Valid values:
+
+- &&: logical AND
+- ||: logical OR
     */
     @SerializedName("Linker")
     @Expose
     private String Linker;
 
     /**
-    * 
+    * Indexes of the nodes to execute if the judgment conditions are met.
     */
     @SerializedName("RearDriveIndexs")
     @Expose
     private Long [] RearDriveIndexs;
 
     /**
-     * Get  
-     * @return Id 
+     * Get Judgment condition id 
+     * @return Id Judgment condition id
      */
     public String getId() {
         return this.Id;
     }
 
     /**
-     * Set 
-     * @param Id 
+     * Set Judgment condition id
+     * @param Id Judgment condition id
      */
     public void setId(String Id) {
         this.Id = Id;
     }
 
     /**
-     * Get  
-     * @return Conditions 
+     * Get Judgment condition configuration 
+     * @return Conditions Judgment condition configuration
      */
     public RuleConditionItem [] getConditions() {
         return this.Conditions;
     }
 
     /**
-     * Set 
-     * @param Conditions 
+     * Set Judgment condition configuration
+     * @param Conditions Judgment condition configuration
      */
     public void setConditions(RuleConditionItem [] Conditions) {
         this.Conditions = Conditions;
     }
 
     /**
-     * Get  
-     * @return Linker 
+     * Get Logical operator for the list of conditions. Valid values:
+
+- &&: logical AND
+- ||: logical OR 
+     * @return Linker Logical operator for the list of conditions. Valid values:
+
+- &&: logical AND
+- ||: logical OR
      */
     public String getLinker() {
         return this.Linker;
     }
 
     /**
-     * Set 
-     * @param Linker 
+     * Set Logical operator for the list of conditions. Valid values:
+
+- &&: logical AND
+- ||: logical OR
+     * @param Linker Logical operator for the list of conditions. Valid values:
+
+- &&: logical AND
+- ||: logical OR
      */
     public void setLinker(String Linker) {
         this.Linker = Linker;
     }
 
     /**
-     * Get  
-     * @return RearDriveIndexs 
+     * Get Indexes of the nodes to execute if the judgment conditions are met. 
+     * @return RearDriveIndexs Indexes of the nodes to execute if the judgment conditions are met.
      */
     public Long [] getRearDriveIndexs() {
         return this.RearDriveIndexs;
     }
 
     /**
-     * Set 
-     * @param RearDriveIndexs 
+     * Set Indexes of the nodes to execute if the judgment conditions are met.
+     * @param RearDriveIndexs Indexes of the nodes to execute if the judgment conditions are met.
      */
     public void setRearDriveIndexs(Long [] RearDriveIndexs) {
         this.RearDriveIndexs = RearDriveIndexs;

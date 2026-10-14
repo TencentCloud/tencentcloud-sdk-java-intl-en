@@ -24,344 +24,349 @@ import java.util.HashMap;
 public class ModifyOutputInfo extends AbstractModel {
 
     /**
-    * The ID of the output to modify.
+    * Id of the Output to be modified.
     */
     @SerializedName("OutputId")
     @Expose
     private String OutputId;
 
     /**
-    * The output name.
+    * Output name.
     */
     @SerializedName("OutputName")
     @Expose
     private String OutputName;
 
     /**
-    * The description of the output.
+    * Output description.
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * The output protocol. Valid values: SRT, RTP, RTMP.
+    * Output relay protocol. Supports SRT, RTP, RTMP, RTMP_PULL, RTSP_PULL, and RIST.
     */
     @SerializedName("Protocol")
     @Expose
     private String Protocol;
 
     /**
-    * Output Type: Internet/Tencent CSS/StreamLive
+    * Output type: Internet/TencentCSS/StreamLive
     */
     @SerializedName("OutputType")
     @Expose
     private String OutputType;
 
     /**
-    * Output module types include Pinpoint (single-point output, supporting up to four concurrent outputs) and MultiMesh (multi-output, supporting concurrent outputs exceeding four, currently capable of reaching 200 channels). The default type is Pinpoint output. For a single Flow, only one MultiMesh output can be assigned per region.
+    * Output module type, including Pinpoint (single-point output, supports up to four concurrent outputs); MultiMesh (multiple outputs, supports more than four concurrent outputs, currently up to 200). The default type is Pinpoint output. For a single Flow, only one MultiMesh output is allowed in one zone.
     */
     @SerializedName("OutputKind")
     @Expose
     private String OutputKind;
 
     /**
-    * The SRT relay configuration.
+    * Configuration of the relayed SRT.
     */
     @SerializedName("SRTSettings")
     @Expose
     private CreateOutputSrtSettings SRTSettings;
 
     /**
-    * The RTP relay configuration.
+    * Configuration of the relayed RTP.
     */
     @SerializedName("RTPSettings")
     @Expose
     private CreateOutputInfoRTPSettings RTPSettings;
 
     /**
-    * The RTMP relay configuration.
+    * Configuration for relaying RTMP.
     */
     @SerializedName("RTMPSettings")
     @Expose
     private CreateOutputRTMPSettings RTMPSettings;
 
     /**
-    * IP whitelist, in CIDR format, such as 0.0.0.0/0. This is valid when Protocol is RTMP_PULL, and empty means no restriction on client IP.
+    * IP whitelist list in CIDR format, for example, 0.0.0.0/0.
+Valid when Protocol is RTMP_PULL. If empty, it represents no limit on client IP.
     */
     @SerializedName("AllowIpList")
     @Expose
     private String [] AllowIpList;
 
     /**
-    * The maximum number of concurrent stream pulls is 4, and the default value is 4.
+    * Maximum number of concurrent stream pulls. Maximum value: 4. Default value: 4.
     */
     @SerializedName("MaxConcurrent")
     @Expose
     private Long MaxConcurrent;
 
     /**
-    * The bound security group IDs.
+    * ID of the bound security group. Only one security group can be associated.	
     */
     @SerializedName("SecurityGroupIds")
     @Expose
     private String [] SecurityGroupIds;
 
     /**
-    * Availability Zone
+    * AZ.
     */
     @SerializedName("Zones")
     @Expose
     private String [] Zones;
 
     /**
-    * Transfer the configuration of RIST.
+    * Relay RIST configuration.
     */
     @SerializedName("RISTSettings")
     @Expose
     private CreateOutputRistSettings RISTSettings;
 
     /**
-    * For streams containing multiple audio/video tracks, you can specify the tracks that need to be used
+    * For streams with multiple audio/video tracks, you can specify the track to be used.
     */
     @SerializedName("PidSelector")
     @Expose
     private PidSelector PidSelector;
 
     /**
-    * For streams containing multiple audio/video tracks, you can specify the tracks that need to be used
+    * For streams with multiple audio/video tracks, you can specify the track to be used.
     */
     @SerializedName("StreamSelector")
     @Expose
     private StreamSelector StreamSelector;
 
     /**
-     * Get The ID of the output to modify. 
-     * @return OutputId The ID of the output to modify.
+     * Get Id of the Output to be modified. 
+     * @return OutputId Id of the Output to be modified.
      */
     public String getOutputId() {
         return this.OutputId;
     }
 
     /**
-     * Set The ID of the output to modify.
-     * @param OutputId The ID of the output to modify.
+     * Set Id of the Output to be modified.
+     * @param OutputId Id of the Output to be modified.
      */
     public void setOutputId(String OutputId) {
         this.OutputId = OutputId;
     }
 
     /**
-     * Get The output name. 
-     * @return OutputName The output name.
+     * Get Output name. 
+     * @return OutputName Output name.
      */
     public String getOutputName() {
         return this.OutputName;
     }
 
     /**
-     * Set The output name.
-     * @param OutputName The output name.
+     * Set Output name.
+     * @param OutputName Output name.
      */
     public void setOutputName(String OutputName) {
         this.OutputName = OutputName;
     }
 
     /**
-     * Get The description of the output. 
-     * @return Description The description of the output.
+     * Get Output description. 
+     * @return Description Output description.
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set The description of the output.
-     * @param Description The description of the output.
+     * Set Output description.
+     * @param Description Output description.
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get The output protocol. Valid values: SRT, RTP, RTMP. 
-     * @return Protocol The output protocol. Valid values: SRT, RTP, RTMP.
+     * Get Output relay protocol. Supports SRT, RTP, RTMP, RTMP_PULL, RTSP_PULL, and RIST. 
+     * @return Protocol Output relay protocol. Supports SRT, RTP, RTMP, RTMP_PULL, RTSP_PULL, and RIST.
      */
     public String getProtocol() {
         return this.Protocol;
     }
 
     /**
-     * Set The output protocol. Valid values: SRT, RTP, RTMP.
-     * @param Protocol The output protocol. Valid values: SRT, RTP, RTMP.
+     * Set Output relay protocol. Supports SRT, RTP, RTMP, RTMP_PULL, RTSP_PULL, and RIST.
+     * @param Protocol Output relay protocol. Supports SRT, RTP, RTMP, RTMP_PULL, RTSP_PULL, and RIST.
      */
     public void setProtocol(String Protocol) {
         this.Protocol = Protocol;
     }
 
     /**
-     * Get Output Type: Internet/Tencent CSS/StreamLive 
-     * @return OutputType Output Type: Internet/Tencent CSS/StreamLive
+     * Get Output type: Internet/TencentCSS/StreamLive 
+     * @return OutputType Output type: Internet/TencentCSS/StreamLive
      */
     public String getOutputType() {
         return this.OutputType;
     }
 
     /**
-     * Set Output Type: Internet/Tencent CSS/StreamLive
-     * @param OutputType Output Type: Internet/Tencent CSS/StreamLive
+     * Set Output type: Internet/TencentCSS/StreamLive
+     * @param OutputType Output type: Internet/TencentCSS/StreamLive
      */
     public void setOutputType(String OutputType) {
         this.OutputType = OutputType;
     }
 
     /**
-     * Get Output module types include Pinpoint (single-point output, supporting up to four concurrent outputs) and MultiMesh (multi-output, supporting concurrent outputs exceeding four, currently capable of reaching 200 channels). The default type is Pinpoint output. For a single Flow, only one MultiMesh output can be assigned per region. 
-     * @return OutputKind Output module types include Pinpoint (single-point output, supporting up to four concurrent outputs) and MultiMesh (multi-output, supporting concurrent outputs exceeding four, currently capable of reaching 200 channels). The default type is Pinpoint output. For a single Flow, only one MultiMesh output can be assigned per region.
+     * Get Output module type, including Pinpoint (single-point output, supports up to four concurrent outputs); MultiMesh (multiple outputs, supports more than four concurrent outputs, currently up to 200). The default type is Pinpoint output. For a single Flow, only one MultiMesh output is allowed in one zone. 
+     * @return OutputKind Output module type, including Pinpoint (single-point output, supports up to four concurrent outputs); MultiMesh (multiple outputs, supports more than four concurrent outputs, currently up to 200). The default type is Pinpoint output. For a single Flow, only one MultiMesh output is allowed in one zone.
      */
     public String getOutputKind() {
         return this.OutputKind;
     }
 
     /**
-     * Set Output module types include Pinpoint (single-point output, supporting up to four concurrent outputs) and MultiMesh (multi-output, supporting concurrent outputs exceeding four, currently capable of reaching 200 channels). The default type is Pinpoint output. For a single Flow, only one MultiMesh output can be assigned per region.
-     * @param OutputKind Output module types include Pinpoint (single-point output, supporting up to four concurrent outputs) and MultiMesh (multi-output, supporting concurrent outputs exceeding four, currently capable of reaching 200 channels). The default type is Pinpoint output. For a single Flow, only one MultiMesh output can be assigned per region.
+     * Set Output module type, including Pinpoint (single-point output, supports up to four concurrent outputs); MultiMesh (multiple outputs, supports more than four concurrent outputs, currently up to 200). The default type is Pinpoint output. For a single Flow, only one MultiMesh output is allowed in one zone.
+     * @param OutputKind Output module type, including Pinpoint (single-point output, supports up to four concurrent outputs); MultiMesh (multiple outputs, supports more than four concurrent outputs, currently up to 200). The default type is Pinpoint output. For a single Flow, only one MultiMesh output is allowed in one zone.
      */
     public void setOutputKind(String OutputKind) {
         this.OutputKind = OutputKind;
     }
 
     /**
-     * Get The SRT relay configuration. 
-     * @return SRTSettings The SRT relay configuration.
+     * Get Configuration of the relayed SRT. 
+     * @return SRTSettings Configuration of the relayed SRT.
      */
     public CreateOutputSrtSettings getSRTSettings() {
         return this.SRTSettings;
     }
 
     /**
-     * Set The SRT relay configuration.
-     * @param SRTSettings The SRT relay configuration.
+     * Set Configuration of the relayed SRT.
+     * @param SRTSettings Configuration of the relayed SRT.
      */
     public void setSRTSettings(CreateOutputSrtSettings SRTSettings) {
         this.SRTSettings = SRTSettings;
     }
 
     /**
-     * Get The RTP relay configuration. 
-     * @return RTPSettings The RTP relay configuration.
+     * Get Configuration of the relayed RTP. 
+     * @return RTPSettings Configuration of the relayed RTP.
      */
     public CreateOutputInfoRTPSettings getRTPSettings() {
         return this.RTPSettings;
     }
 
     /**
-     * Set The RTP relay configuration.
-     * @param RTPSettings The RTP relay configuration.
+     * Set Configuration of the relayed RTP.
+     * @param RTPSettings Configuration of the relayed RTP.
      */
     public void setRTPSettings(CreateOutputInfoRTPSettings RTPSettings) {
         this.RTPSettings = RTPSettings;
     }
 
     /**
-     * Get The RTMP relay configuration. 
-     * @return RTMPSettings The RTMP relay configuration.
+     * Get Configuration for relaying RTMP. 
+     * @return RTMPSettings Configuration for relaying RTMP.
      */
     public CreateOutputRTMPSettings getRTMPSettings() {
         return this.RTMPSettings;
     }
 
     /**
-     * Set The RTMP relay configuration.
-     * @param RTMPSettings The RTMP relay configuration.
+     * Set Configuration for relaying RTMP.
+     * @param RTMPSettings Configuration for relaying RTMP.
      */
     public void setRTMPSettings(CreateOutputRTMPSettings RTMPSettings) {
         this.RTMPSettings = RTMPSettings;
     }
 
     /**
-     * Get IP whitelist, in CIDR format, such as 0.0.0.0/0. This is valid when Protocol is RTMP_PULL, and empty means no restriction on client IP. 
-     * @return AllowIpList IP whitelist, in CIDR format, such as 0.0.0.0/0. This is valid when Protocol is RTMP_PULL, and empty means no restriction on client IP.
+     * Get IP whitelist list in CIDR format, for example, 0.0.0.0/0.
+Valid when Protocol is RTMP_PULL. If empty, it represents no limit on client IP. 
+     * @return AllowIpList IP whitelist list in CIDR format, for example, 0.0.0.0/0.
+Valid when Protocol is RTMP_PULL. If empty, it represents no limit on client IP.
      */
     public String [] getAllowIpList() {
         return this.AllowIpList;
     }
 
     /**
-     * Set IP whitelist, in CIDR format, such as 0.0.0.0/0. This is valid when Protocol is RTMP_PULL, and empty means no restriction on client IP.
-     * @param AllowIpList IP whitelist, in CIDR format, such as 0.0.0.0/0. This is valid when Protocol is RTMP_PULL, and empty means no restriction on client IP.
+     * Set IP whitelist list in CIDR format, for example, 0.0.0.0/0.
+Valid when Protocol is RTMP_PULL. If empty, it represents no limit on client IP.
+     * @param AllowIpList IP whitelist list in CIDR format, for example, 0.0.0.0/0.
+Valid when Protocol is RTMP_PULL. If empty, it represents no limit on client IP.
      */
     public void setAllowIpList(String [] AllowIpList) {
         this.AllowIpList = AllowIpList;
     }
 
     /**
-     * Get The maximum number of concurrent stream pulls is 4, and the default value is 4. 
-     * @return MaxConcurrent The maximum number of concurrent stream pulls is 4, and the default value is 4.
+     * Get Maximum number of concurrent stream pulls. Maximum value: 4. Default value: 4. 
+     * @return MaxConcurrent Maximum number of concurrent stream pulls. Maximum value: 4. Default value: 4.
      */
     public Long getMaxConcurrent() {
         return this.MaxConcurrent;
     }
 
     /**
-     * Set The maximum number of concurrent stream pulls is 4, and the default value is 4.
-     * @param MaxConcurrent The maximum number of concurrent stream pulls is 4, and the default value is 4.
+     * Set Maximum number of concurrent stream pulls. Maximum value: 4. Default value: 4.
+     * @param MaxConcurrent Maximum number of concurrent stream pulls. Maximum value: 4. Default value: 4.
      */
     public void setMaxConcurrent(Long MaxConcurrent) {
         this.MaxConcurrent = MaxConcurrent;
     }
 
     /**
-     * Get The bound security group IDs. 
-     * @return SecurityGroupIds The bound security group IDs.
+     * Get ID of the bound security group. Only one security group can be associated.	 
+     * @return SecurityGroupIds ID of the bound security group. Only one security group can be associated.	
      */
     public String [] getSecurityGroupIds() {
         return this.SecurityGroupIds;
     }
 
     /**
-     * Set The bound security group IDs.
-     * @param SecurityGroupIds The bound security group IDs.
+     * Set ID of the bound security group. Only one security group can be associated.	
+     * @param SecurityGroupIds ID of the bound security group. Only one security group can be associated.	
      */
     public void setSecurityGroupIds(String [] SecurityGroupIds) {
         this.SecurityGroupIds = SecurityGroupIds;
     }
 
     /**
-     * Get Availability Zone 
-     * @return Zones Availability Zone
+     * Get AZ. 
+     * @return Zones AZ.
      */
     public String [] getZones() {
         return this.Zones;
     }
 
     /**
-     * Set Availability Zone
-     * @param Zones Availability Zone
+     * Set AZ.
+     * @param Zones AZ.
      */
     public void setZones(String [] Zones) {
         this.Zones = Zones;
     }
 
     /**
-     * Get Transfer the configuration of RIST. 
-     * @return RISTSettings Transfer the configuration of RIST.
+     * Get Relay RIST configuration. 
+     * @return RISTSettings Relay RIST configuration.
      */
     public CreateOutputRistSettings getRISTSettings() {
         return this.RISTSettings;
     }
 
     /**
-     * Set Transfer the configuration of RIST.
-     * @param RISTSettings Transfer the configuration of RIST.
+     * Set Relay RIST configuration.
+     * @param RISTSettings Relay RIST configuration.
      */
     public void setRISTSettings(CreateOutputRistSettings RISTSettings) {
         this.RISTSettings = RISTSettings;
     }
 
     /**
-     * Get For streams containing multiple audio/video tracks, you can specify the tracks that need to be used 
-     * @return PidSelector For streams containing multiple audio/video tracks, you can specify the tracks that need to be used
+     * Get For streams with multiple audio/video tracks, you can specify the track to be used. 
+     * @return PidSelector For streams with multiple audio/video tracks, you can specify the track to be used.
      * @deprecated
      */
     @Deprecated
@@ -370,8 +375,8 @@ public class ModifyOutputInfo extends AbstractModel {
     }
 
     /**
-     * Set For streams containing multiple audio/video tracks, you can specify the tracks that need to be used
-     * @param PidSelector For streams containing multiple audio/video tracks, you can specify the tracks that need to be used
+     * Set For streams with multiple audio/video tracks, you can specify the track to be used.
+     * @param PidSelector For streams with multiple audio/video tracks, you can specify the track to be used.
      * @deprecated
      */
     @Deprecated
@@ -380,16 +385,16 @@ public class ModifyOutputInfo extends AbstractModel {
     }
 
     /**
-     * Get For streams containing multiple audio/video tracks, you can specify the tracks that need to be used 
-     * @return StreamSelector For streams containing multiple audio/video tracks, you can specify the tracks that need to be used
+     * Get For streams with multiple audio/video tracks, you can specify the track to be used. 
+     * @return StreamSelector For streams with multiple audio/video tracks, you can specify the track to be used.
      */
     public StreamSelector getStreamSelector() {
         return this.StreamSelector;
     }
 
     /**
-     * Set For streams containing multiple audio/video tracks, you can specify the tracks that need to be used
-     * @param StreamSelector For streams containing multiple audio/video tracks, you can specify the tracks that need to be used
+     * Set For streams with multiple audio/video tracks, you can specify the track to be used.
+     * @param StreamSelector For streams with multiple audio/video tracks, you can specify the track to be used.
      */
     public void setStreamSelector(StreamSelector StreamSelector) {
         this.StreamSelector = StreamSelector;

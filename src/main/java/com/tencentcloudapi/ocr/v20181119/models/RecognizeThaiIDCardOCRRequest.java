@@ -25,7 +25,7 @@ public class RecognizeThaiIDCardOCRRequest extends AbstractModel {
 
     /**
     * The Base64-encoded value of an image. The image cannot exceed 7 MB after being Base64-encoded. A resolution above 500 x 800 is recommended. PNG, JPG, JPEG, and BMP formats are supported. It is recommended that the card part occupy more than 2/3 area of the image.
-Either `ImageUrl` or `ImageBase64` of the image must be provided. If both are provided, `ImageUrl` is used.
+Either ImageUrl or ImageBase64 of the image must be provided. If both are provided, ImageUrl is used.
     */
     @SerializedName("ImageBase64")
     @Expose
@@ -54,8 +54,8 @@ We recommend that you store the image in Tencent Cloud for higher download speed
     private String BackImageUrl;
 
     /**
-    * Whether to crop the profile photo. The default value is `false`, meaning not to return the Base64-encoded value of the profile photo on the Thai identity card.
-When this parameter is set to `true`, the Base64-encoded value of the profile photo on the Thai identity card after rotation correction is returned.
+    * Whether to crop the profile photo. The default value is false, meaning not to return the Base64-encoded value of the profile photo on the Thai identity card.
+When this parameter is set to true, the Base64-encoded value of the profile photo on the Thai identity card after rotation correction is returned.
     */
     @SerializedName("CropPortrait")
     @Expose
@@ -63,9 +63,9 @@ When this parameter is set to `true`, the Base64-encoded value of the profile ph
 
     /**
      * Get The Base64-encoded value of an image. The image cannot exceed 7 MB after being Base64-encoded. A resolution above 500 x 800 is recommended. PNG, JPG, JPEG, and BMP formats are supported. It is recommended that the card part occupy more than 2/3 area of the image.
-Either `ImageUrl` or `ImageBase64` of the image must be provided. If both are provided, `ImageUrl` is used. 
+Either ImageUrl or ImageBase64 of the image must be provided. If both are provided, ImageUrl is used. 
      * @return ImageBase64 The Base64-encoded value of an image. The image cannot exceed 7 MB after being Base64-encoded. A resolution above 500 x 800 is recommended. PNG, JPG, JPEG, and BMP formats are supported. It is recommended that the card part occupy more than 2/3 area of the image.
-Either `ImageUrl` or `ImageBase64` of the image must be provided. If both are provided, `ImageUrl` is used.
+Either ImageUrl or ImageBase64 of the image must be provided. If both are provided, ImageUrl is used.
      */
     public String getImageBase64() {
         return this.ImageBase64;
@@ -73,9 +73,9 @@ Either `ImageUrl` or `ImageBase64` of the image must be provided. If both are pr
 
     /**
      * Set The Base64-encoded value of an image. The image cannot exceed 7 MB after being Base64-encoded. A resolution above 500 x 800 is recommended. PNG, JPG, JPEG, and BMP formats are supported. It is recommended that the card part occupy more than 2/3 area of the image.
-Either `ImageUrl` or `ImageBase64` of the image must be provided. If both are provided, `ImageUrl` is used.
+Either ImageUrl or ImageBase64 of the image must be provided. If both are provided, ImageUrl is used.
      * @param ImageBase64 The Base64-encoded value of an image. The image cannot exceed 7 MB after being Base64-encoded. A resolution above 500 x 800 is recommended. PNG, JPG, JPEG, and BMP formats are supported. It is recommended that the card part occupy more than 2/3 area of the image.
-Either `ImageUrl` or `ImageBase64` of the image must be provided. If both are provided, `ImageUrl` is used.
+Either ImageUrl or ImageBase64 of the image must be provided. If both are provided, ImageUrl is used.
      */
     public void setImageBase64(String ImageBase64) {
         this.ImageBase64 = ImageBase64;
@@ -134,20 +134,20 @@ We recommend that you store the image in Tencent Cloud for higher download speed
     }
 
     /**
-     * Get Whether to crop the profile photo. The default value is `false`, meaning not to return the Base64-encoded value of the profile photo on the Thai identity card.
-When this parameter is set to `true`, the Base64-encoded value of the profile photo on the Thai identity card after rotation correction is returned. 
-     * @return CropPortrait Whether to crop the profile photo. The default value is `false`, meaning not to return the Base64-encoded value of the profile photo on the Thai identity card.
-When this parameter is set to `true`, the Base64-encoded value of the profile photo on the Thai identity card after rotation correction is returned.
+     * Get Whether to crop the profile photo. The default value is false, meaning not to return the Base64-encoded value of the profile photo on the Thai identity card.
+When this parameter is set to true, the Base64-encoded value of the profile photo on the Thai identity card after rotation correction is returned. 
+     * @return CropPortrait Whether to crop the profile photo. The default value is false, meaning not to return the Base64-encoded value of the profile photo on the Thai identity card.
+When this parameter is set to true, the Base64-encoded value of the profile photo on the Thai identity card after rotation correction is returned.
      */
     public Boolean getCropPortrait() {
         return this.CropPortrait;
     }
 
     /**
-     * Set Whether to crop the profile photo. The default value is `false`, meaning not to return the Base64-encoded value of the profile photo on the Thai identity card.
-When this parameter is set to `true`, the Base64-encoded value of the profile photo on the Thai identity card after rotation correction is returned.
-     * @param CropPortrait Whether to crop the profile photo. The default value is `false`, meaning not to return the Base64-encoded value of the profile photo on the Thai identity card.
-When this parameter is set to `true`, the Base64-encoded value of the profile photo on the Thai identity card after rotation correction is returned.
+     * Set Whether to crop the profile photo. The default value is false, meaning not to return the Base64-encoded value of the profile photo on the Thai identity card.
+When this parameter is set to true, the Base64-encoded value of the profile photo on the Thai identity card after rotation correction is returned.
+     * @param CropPortrait Whether to crop the profile photo. The default value is false, meaning not to return the Base64-encoded value of the profile photo on the Thai identity card.
+When this parameter is set to true, the Base64-encoded value of the profile photo on the Thai identity card after rotation correction is returned.
      */
     public void setCropPortrait(Boolean CropPortrait) {
         this.CropPortrait = CropPortrait;

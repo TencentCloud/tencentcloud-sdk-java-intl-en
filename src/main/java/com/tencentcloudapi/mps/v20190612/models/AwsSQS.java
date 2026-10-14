@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class AwsSQS extends AbstractModel {
 
     /**
-    * 
+    * SQS queue area.
     */
     @SerializedName("SQSRegion")
     @Expose
     private String SQSRegion;
 
     /**
-    * 
+    * SQS queue name.
     */
     @SerializedName("SQSQueueName")
     @Expose
     private String SQSQueueName;
 
     /**
-    * 
+    * id for read-write access to SQS.
     */
     @SerializedName("S3SecretId")
     @Expose
     private String S3SecretId;
 
     /**
-    * 
+    * key for read-write access to SQS.
     */
     @SerializedName("S3SecretKey")
     @Expose
     private String S3SecretKey;
 
     /**
-     * Get  
-     * @return SQSRegion 
+     * Get SQS queue area. 
+     * @return SQSRegion SQS queue area.
      */
     public String getSQSRegion() {
         return this.SQSRegion;
     }
 
     /**
-     * Set 
-     * @param SQSRegion 
+     * Set SQS queue area.
+     * @param SQSRegion SQS queue area.
      */
     public void setSQSRegion(String SQSRegion) {
         this.SQSRegion = SQSRegion;
     }
 
     /**
-     * Get  
-     * @return SQSQueueName 
+     * Get SQS queue name. 
+     * @return SQSQueueName SQS queue name.
      */
     public String getSQSQueueName() {
         return this.SQSQueueName;
     }
 
     /**
-     * Set 
-     * @param SQSQueueName 
+     * Set SQS queue name.
+     * @param SQSQueueName SQS queue name.
      */
     public void setSQSQueueName(String SQSQueueName) {
         this.SQSQueueName = SQSQueueName;
     }
 
     /**
-     * Get  
-     * @return S3SecretId 
+     * Get id for read-write access to SQS. 
+     * @return S3SecretId id for read-write access to SQS.
      */
     public String getS3SecretId() {
         return this.S3SecretId;
     }
 
     /**
-     * Set 
-     * @param S3SecretId 
+     * Set id for read-write access to SQS.
+     * @param S3SecretId id for read-write access to SQS.
      */
     public void setS3SecretId(String S3SecretId) {
         this.S3SecretId = S3SecretId;
     }
 
     /**
-     * Get  
-     * @return S3SecretKey 
+     * Get key for read-write access to SQS. 
+     * @return S3SecretKey key for read-write access to SQS.
      */
     public String getS3SecretKey() {
         return this.S3SecretKey;
     }
 
     /**
-     * Set 
-     * @param S3SecretKey 
+     * Set key for read-write access to SQS.
+     * @param S3SecretKey key for read-write access to SQS.
      */
     public void setS3SecretKey(String S3SecretKey) {
         this.S3SecretKey = S3SecretKey;

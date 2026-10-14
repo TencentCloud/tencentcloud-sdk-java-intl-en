@@ -25,7 +25,7 @@ public class LowLightEnhanceConfig extends AbstractModel {
 
     /**
     * Capability configuration switch. Valid values:
-<li>ON: enabled</li>
+<li>ON: enabled;</li>
 <li>OFF: disabled</li>
 Default value: ON.
     */
@@ -34,7 +34,9 @@ Default value: ON.
     private String Switch;
 
     /**
-    * 
+    * Type. Valid values:
+<li>normal</li>
+Default value: normal.
     */
     @SerializedName("Type")
     @Expose
@@ -42,11 +44,11 @@ Default value: ON.
 
     /**
      * Get Capability configuration switch. Valid values:
-<li>ON: enabled</li>
+<li>ON: enabled;</li>
 <li>OFF: disabled</li>
 Default value: ON. 
      * @return Switch Capability configuration switch. Valid values:
-<li>ON: enabled</li>
+<li>ON: enabled;</li>
 <li>OFF: disabled</li>
 Default value: ON.
      */
@@ -56,11 +58,11 @@ Default value: ON.
 
     /**
      * Set Capability configuration switch. Valid values:
-<li>ON: enabled</li>
+<li>ON: enabled;</li>
 <li>OFF: disabled</li>
 Default value: ON.
      * @param Switch Capability configuration switch. Valid values:
-<li>ON: enabled</li>
+<li>ON: enabled;</li>
 <li>OFF: disabled</li>
 Default value: ON.
      */
@@ -69,16 +71,24 @@ Default value: ON.
     }
 
     /**
-     * Get  
-     * @return Type 
+     * Get Type. Valid values:
+<li>normal</li>
+Default value: normal. 
+     * @return Type Type. Valid values:
+<li>normal</li>
+Default value: normal.
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 
-     * @param Type 
+     * Set Type. Valid values:
+<li>normal</li>
+Default value: normal.
+     * @param Type Type. Valid values:
+<li>normal</li>
+Default value: normal.
      */
     public void setType(String Type) {
         this.Type = Type;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModifyStreamLinkInputResponse extends AbstractModel {
 
     /**
-    * The input information after modification.
+    * Input information after modification.
     */
     @SerializedName("Info")
     @Expose
@@ -38,16 +38,16 @@ public class ModifyStreamLinkInputResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get The input information after modification. 
-     * @return Info The input information after modification.
+     * Get Input information after modification. 
+     * @return Info Input information after modification.
      */
     public DescribeInput getInfo() {
         return this.Info;
     }
 
     /**
-     * Set The input information after modification.
-     * @param Info The input information after modification.
+     * Set Input information after modification.
+     * @param Info Input information after modification.
      */
     public void setInfo(DescribeInput Info) {
         this.Info = Info;

@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class AICallConfig extends AbstractModel {
 
     /**
-    * 
+    * Enable the voice interaction feature
     */
     @SerializedName("EnableVoiceInteract")
     @Expose
     private Boolean EnableVoiceInteract;
 
     /**
-    * 
+    * Enable voice call
     */
     @SerializedName("EnableVoiceCall")
     @Expose
     private Boolean EnableVoiceCall;
 
     /**
-    * 
+    * Enable digital human
     */
     @SerializedName("EnableDigitalHuman")
     @Expose
     private Boolean EnableDigitalHuman;
 
     /**
-    * 
+    * Voice type configuration
     */
     @SerializedName("Voice")
     @Expose
     private VoiceConfig Voice;
 
     /**
-    * 
+    * Digital human configuration
     */
     @SerializedName("DigitalHuman")
     @Expose
     private DigitalHumanConfig DigitalHuman;
 
     /**
-     * Get  
-     * @return EnableVoiceInteract 
+     * Get Enable the voice interaction feature 
+     * @return EnableVoiceInteract Enable the voice interaction feature
      */
     public Boolean getEnableVoiceInteract() {
         return this.EnableVoiceInteract;
     }
 
     /**
-     * Set 
-     * @param EnableVoiceInteract 
+     * Set Enable the voice interaction feature
+     * @param EnableVoiceInteract Enable the voice interaction feature
      */
     public void setEnableVoiceInteract(Boolean EnableVoiceInteract) {
         this.EnableVoiceInteract = EnableVoiceInteract;
     }
 
     /**
-     * Get  
-     * @return EnableVoiceCall 
+     * Get Enable voice call 
+     * @return EnableVoiceCall Enable voice call
      */
     public Boolean getEnableVoiceCall() {
         return this.EnableVoiceCall;
     }
 
     /**
-     * Set 
-     * @param EnableVoiceCall 
+     * Set Enable voice call
+     * @param EnableVoiceCall Enable voice call
      */
     public void setEnableVoiceCall(Boolean EnableVoiceCall) {
         this.EnableVoiceCall = EnableVoiceCall;
     }
 
     /**
-     * Get  
-     * @return EnableDigitalHuman 
+     * Get Enable digital human 
+     * @return EnableDigitalHuman Enable digital human
      */
     public Boolean getEnableDigitalHuman() {
         return this.EnableDigitalHuman;
     }
 
     /**
-     * Set 
-     * @param EnableDigitalHuman 
+     * Set Enable digital human
+     * @param EnableDigitalHuman Enable digital human
      */
     public void setEnableDigitalHuman(Boolean EnableDigitalHuman) {
         this.EnableDigitalHuman = EnableDigitalHuman;
     }
 
     /**
-     * Get  
-     * @return Voice 
+     * Get Voice type configuration 
+     * @return Voice Voice type configuration
      */
     public VoiceConfig getVoice() {
         return this.Voice;
     }
 
     /**
-     * Set 
-     * @param Voice 
+     * Set Voice type configuration
+     * @param Voice Voice type configuration
      */
     public void setVoice(VoiceConfig Voice) {
         this.Voice = Voice;
     }
 
     /**
-     * Get  
-     * @return DigitalHuman 
+     * Get Digital human configuration 
+     * @return DigitalHuman Digital human configuration
      */
     public DigitalHumanConfig getDigitalHuman() {
         return this.DigitalHuman;
     }
 
     /**
-     * Set 
-     * @param DigitalHuman 
+     * Set Digital human configuration
+     * @param DigitalHuman Digital human configuration
      */
     public void setDigitalHuman(DigitalHumanConfig DigitalHuman) {
         this.DigitalHuman = DigitalHuman;

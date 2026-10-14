@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateStreamLinkInputResponse extends AbstractModel {
 
     /**
-    * Created Flow information.
+    * <p>Information of the created Flow.</p>
     */
     @SerializedName("Info")
     @Expose
@@ -38,16 +38,16 @@ public class CreateStreamLinkInputResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Created Flow information. 
-     * @return Info Created Flow information.
+     * Get <p>Information of the created Flow.</p> 
+     * @return Info <p>Information of the created Flow.</p>
      */
     public DescribeFlow getInfo() {
         return this.Info;
     }
 
     /**
-     * Set Created Flow information.
-     * @param Info Created Flow information.
+     * Set <p>Information of the created Flow.</p>
+     * @param Info <p>Information of the created Flow.</p>
      */
     public void setInfo(DescribeFlow Info) {
         this.Info = Info;

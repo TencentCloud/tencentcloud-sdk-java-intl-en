@@ -24,15 +24,14 @@ import java.util.HashMap;
 public class CreateInstanceResponse extends AbstractModel {
 
     /**
-    * Instance ID
+    * <p>Instance ID.</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Order ID
-Note: This field may return `null`, indicating that no valid value was found.
+    * <p>Order ID.</p>
     */
     @SerializedName("DealName")
     @Expose
@@ -46,36 +45,32 @@ Note: This field may return `null`, indicating that no valid value was found.
     private String RequestId;
 
     /**
-     * Get Instance ID 
-     * @return InstanceId Instance ID
+     * Get <p>Instance ID.</p> 
+     * @return InstanceId <p>Instance ID.</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID
-     * @param InstanceId Instance ID
+     * Set <p>Instance ID.</p>
+     * @param InstanceId <p>Instance ID.</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Order ID
-Note: This field may return `null`, indicating that no valid value was found. 
-     * @return DealName Order ID
-Note: This field may return `null`, indicating that no valid value was found.
+     * Get <p>Order ID.</p> 
+     * @return DealName <p>Order ID.</p>
      */
     public String getDealName() {
         return this.DealName;
     }
 
     /**
-     * Set Order ID
-Note: This field may return `null`, indicating that no valid value was found.
-     * @param DealName Order ID
-Note: This field may return `null`, indicating that no valid value was found.
+     * Set <p>Order ID.</p>
+     * @param DealName <p>Order ID.</p>
      */
     public void setDealName(String DealName) {
         this.DealName = DealName;

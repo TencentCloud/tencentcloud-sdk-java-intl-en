@@ -24,28 +24,23 @@ import java.util.HashMap;
 public class WSParams extends AbstractModel {
 
     /**
-    * Idle timeout period in seconds. Default: 15; range: 1 to 1800
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Idle timeout in seconds. Default value: 15s. Configurable range: 1-1800s.
     */
     @SerializedName("IdleTimeOut")
     @Expose
     private Long IdleTimeOut;
 
     /**
-     * Get Idle timeout period in seconds. Default: 15; range: 1 to 1800
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return IdleTimeOut Idle timeout period in seconds. Default: 15; range: 1 to 1800
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get Idle timeout in seconds. Default value: 15s. Configurable range: 1-1800s. 
+     * @return IdleTimeOut Idle timeout in seconds. Default value: 15s. Configurable range: 1-1800s.
      */
     public Long getIdleTimeOut() {
         return this.IdleTimeOut;
     }
 
     /**
-     * Set Idle timeout period in seconds. Default: 15; range: 1 to 1800
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param IdleTimeOut Idle timeout period in seconds. Default: 15; range: 1 to 1800
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set Idle timeout in seconds. Default value: 15s. Configurable range: 1-1800s.
+     * @param IdleTimeOut Idle timeout in seconds. Default value: 15s. Configurable range: 1-1800s.
      */
     public void setIdleTimeOut(Long IdleTimeOut) {
         this.IdleTimeOut = IdleTimeOut;

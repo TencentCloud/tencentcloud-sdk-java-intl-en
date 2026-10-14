@@ -24,217 +24,207 @@ import java.util.HashMap;
 public class CreateTriggerRequest extends AbstractModel {
 
     /**
-    * Name of the function bound to the new trigger
+    * Function name bound to the created trigger
     */
     @SerializedName("FunctionName")
     @Expose
     private String FunctionName;
 
     /**
-    * Name of a new trigger. For a timer trigger, the name can contain up to 100 letters, digits, dashes, and underscores; for a COS trigger, it should be an access domain name of the corresponding COS bucket applicable to the XML API (e.g., 5401-5ff414-12345.cos.ap-shanghai.myqcloud.com); for other triggers, please see the descriptions of parameters bound to the specific trigger.
+    * Name of the trigger to create. If it is a scheduled trigger, the name supports English letters, digits, hyphens, and underscores, up to 100 characters. If it is a COS trigger, it must be the access domain of the corresponding COS storage bucket suitable for the XML API (for example, 5401-5ff414-12345.cos.ap-shanghai.myqcloud.com). For other triggers, see the parameter description of the specific trigger binding.
     */
     @SerializedName("TriggerName")
     @Expose
     private String TriggerName;
 
     /**
-    * Type of trigger. Values: `cos`, `cmq`, `timer`, `ckafka`, `http`. 
-To create Function URL please refer to [Creating a Function URL](https://www.tencentcloud.com/document/product/583/69492?lang=en&pg=)
-To create a CLS trigger, please refer to [Create Deliver CloudFunction (SCF)](https://www.tencentcloud.com/zh/document/product/614/59903).
+    * Trigger type. Currently supports cos, cls, timer, ckafka, and http types. To create a function URL, please use the http type. See [Creating a Function URL](https://www.tencentcloud.com/document/product/583/100227?from_cn_redirect=1#33bbbda4-9131-48a6-ac37-ac62ffe01424). To create a cls trigger, see CLS Creating Delivery SCF Task.
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * For parameters of triggers, see [Trigger Description](https://intl.cloud.tencent.com/document/product/583/39901?from_cn_redirect=1)
+    * Parameters corresponding to the trigger. For details, see [Trigger Description](https://www.tencentcloud.com/document/product/583/39901?from_cn_redirect=1).
     */
     @SerializedName("TriggerDesc")
     @Expose
     private String TriggerDesc;
 
     /**
-    * Function namespace
+    * Namespace of the function
     */
     @SerializedName("Namespace")
     @Expose
     private String Namespace;
 
     /**
-    * Function version. It defaults to `$LATEST`. It's recommended to use [$DEFAULT](https://www.tencentcloud.com/document/product/583/37458?lang=en&pg=) for canary release.
+    * Version or alias that the trigger takes effect on. It is recommended to fill in $DEFAULT for future grayscale release. Default value: $LATEST.
     */
     @SerializedName("Qualifier")
     @Expose
     private String Qualifier;
 
     /**
-    * Initial enabling status of the trigger. `OPEN` indicates enabled, and `CLOSE` indicates disabled.
+    * Initial status of the trigger. OPEN means enabling, and CLOSE means disabling.
     */
     @SerializedName("Enable")
     @Expose
     private String Enable;
 
     /**
-    * Custom argument, supporting only the timer trigger.
+    * User-defined parameter. Only timer triggers are supported.
     */
     @SerializedName("CustomArgument")
     @Expose
     private String CustomArgument;
 
     /**
-    * Trigger description
+    * Trigger description.
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-     * Get Name of the function bound to the new trigger 
-     * @return FunctionName Name of the function bound to the new trigger
+     * Get Function name bound to the created trigger 
+     * @return FunctionName Function name bound to the created trigger
      */
     public String getFunctionName() {
         return this.FunctionName;
     }
 
     /**
-     * Set Name of the function bound to the new trigger
-     * @param FunctionName Name of the function bound to the new trigger
+     * Set Function name bound to the created trigger
+     * @param FunctionName Function name bound to the created trigger
      */
     public void setFunctionName(String FunctionName) {
         this.FunctionName = FunctionName;
     }
 
     /**
-     * Get Name of a new trigger. For a timer trigger, the name can contain up to 100 letters, digits, dashes, and underscores; for a COS trigger, it should be an access domain name of the corresponding COS bucket applicable to the XML API (e.g., 5401-5ff414-12345.cos.ap-shanghai.myqcloud.com); for other triggers, please see the descriptions of parameters bound to the specific trigger. 
-     * @return TriggerName Name of a new trigger. For a timer trigger, the name can contain up to 100 letters, digits, dashes, and underscores; for a COS trigger, it should be an access domain name of the corresponding COS bucket applicable to the XML API (e.g., 5401-5ff414-12345.cos.ap-shanghai.myqcloud.com); for other triggers, please see the descriptions of parameters bound to the specific trigger.
+     * Get Name of the trigger to create. If it is a scheduled trigger, the name supports English letters, digits, hyphens, and underscores, up to 100 characters. If it is a COS trigger, it must be the access domain of the corresponding COS storage bucket suitable for the XML API (for example, 5401-5ff414-12345.cos.ap-shanghai.myqcloud.com). For other triggers, see the parameter description of the specific trigger binding. 
+     * @return TriggerName Name of the trigger to create. If it is a scheduled trigger, the name supports English letters, digits, hyphens, and underscores, up to 100 characters. If it is a COS trigger, it must be the access domain of the corresponding COS storage bucket suitable for the XML API (for example, 5401-5ff414-12345.cos.ap-shanghai.myqcloud.com). For other triggers, see the parameter description of the specific trigger binding.
      */
     public String getTriggerName() {
         return this.TriggerName;
     }
 
     /**
-     * Set Name of a new trigger. For a timer trigger, the name can contain up to 100 letters, digits, dashes, and underscores; for a COS trigger, it should be an access domain name of the corresponding COS bucket applicable to the XML API (e.g., 5401-5ff414-12345.cos.ap-shanghai.myqcloud.com); for other triggers, please see the descriptions of parameters bound to the specific trigger.
-     * @param TriggerName Name of a new trigger. For a timer trigger, the name can contain up to 100 letters, digits, dashes, and underscores; for a COS trigger, it should be an access domain name of the corresponding COS bucket applicable to the XML API (e.g., 5401-5ff414-12345.cos.ap-shanghai.myqcloud.com); for other triggers, please see the descriptions of parameters bound to the specific trigger.
+     * Set Name of the trigger to create. If it is a scheduled trigger, the name supports English letters, digits, hyphens, and underscores, up to 100 characters. If it is a COS trigger, it must be the access domain of the corresponding COS storage bucket suitable for the XML API (for example, 5401-5ff414-12345.cos.ap-shanghai.myqcloud.com). For other triggers, see the parameter description of the specific trigger binding.
+     * @param TriggerName Name of the trigger to create. If it is a scheduled trigger, the name supports English letters, digits, hyphens, and underscores, up to 100 characters. If it is a COS trigger, it must be the access domain of the corresponding COS storage bucket suitable for the XML API (for example, 5401-5ff414-12345.cos.ap-shanghai.myqcloud.com). For other triggers, see the parameter description of the specific trigger binding.
      */
     public void setTriggerName(String TriggerName) {
         this.TriggerName = TriggerName;
     }
 
     /**
-     * Get Type of trigger. Values: `cos`, `cmq`, `timer`, `ckafka`, `http`. 
-To create Function URL please refer to [Creating a Function URL](https://www.tencentcloud.com/document/product/583/69492?lang=en&pg=)
-To create a CLS trigger, please refer to [Create Deliver CloudFunction (SCF)](https://www.tencentcloud.com/zh/document/product/614/59903). 
-     * @return Type Type of trigger. Values: `cos`, `cmq`, `timer`, `ckafka`, `http`. 
-To create Function URL please refer to [Creating a Function URL](https://www.tencentcloud.com/document/product/583/69492?lang=en&pg=)
-To create a CLS trigger, please refer to [Create Deliver CloudFunction (SCF)](https://www.tencentcloud.com/zh/document/product/614/59903).
+     * Get Trigger type. Currently supports cos, cls, timer, ckafka, and http types. To create a function URL, please use the http type. See [Creating a Function URL](https://www.tencentcloud.com/document/product/583/100227?from_cn_redirect=1#33bbbda4-9131-48a6-ac37-ac62ffe01424). To create a cls trigger, see CLS Creating Delivery SCF Task. 
+     * @return Type Trigger type. Currently supports cos, cls, timer, ckafka, and http types. To create a function URL, please use the http type. See [Creating a Function URL](https://www.tencentcloud.com/document/product/583/100227?from_cn_redirect=1#33bbbda4-9131-48a6-ac37-ac62ffe01424). To create a cls trigger, see CLS Creating Delivery SCF Task.
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Type of trigger. Values: `cos`, `cmq`, `timer`, `ckafka`, `http`. 
-To create Function URL please refer to [Creating a Function URL](https://www.tencentcloud.com/document/product/583/69492?lang=en&pg=)
-To create a CLS trigger, please refer to [Create Deliver CloudFunction (SCF)](https://www.tencentcloud.com/zh/document/product/614/59903).
-     * @param Type Type of trigger. Values: `cos`, `cmq`, `timer`, `ckafka`, `http`. 
-To create Function URL please refer to [Creating a Function URL](https://www.tencentcloud.com/document/product/583/69492?lang=en&pg=)
-To create a CLS trigger, please refer to [Create Deliver CloudFunction (SCF)](https://www.tencentcloud.com/zh/document/product/614/59903).
+     * Set Trigger type. Currently supports cos, cls, timer, ckafka, and http types. To create a function URL, please use the http type. See [Creating a Function URL](https://www.tencentcloud.com/document/product/583/100227?from_cn_redirect=1#33bbbda4-9131-48a6-ac37-ac62ffe01424). To create a cls trigger, see CLS Creating Delivery SCF Task.
+     * @param Type Trigger type. Currently supports cos, cls, timer, ckafka, and http types. To create a function URL, please use the http type. See [Creating a Function URL](https://www.tencentcloud.com/document/product/583/100227?from_cn_redirect=1#33bbbda4-9131-48a6-ac37-ac62ffe01424). To create a cls trigger, see CLS Creating Delivery SCF Task.
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get For parameters of triggers, see [Trigger Description](https://intl.cloud.tencent.com/document/product/583/39901?from_cn_redirect=1) 
-     * @return TriggerDesc For parameters of triggers, see [Trigger Description](https://intl.cloud.tencent.com/document/product/583/39901?from_cn_redirect=1)
+     * Get Parameters corresponding to the trigger. For details, see [Trigger Description](https://www.tencentcloud.com/document/product/583/39901?from_cn_redirect=1). 
+     * @return TriggerDesc Parameters corresponding to the trigger. For details, see [Trigger Description](https://www.tencentcloud.com/document/product/583/39901?from_cn_redirect=1).
      */
     public String getTriggerDesc() {
         return this.TriggerDesc;
     }
 
     /**
-     * Set For parameters of triggers, see [Trigger Description](https://intl.cloud.tencent.com/document/product/583/39901?from_cn_redirect=1)
-     * @param TriggerDesc For parameters of triggers, see [Trigger Description](https://intl.cloud.tencent.com/document/product/583/39901?from_cn_redirect=1)
+     * Set Parameters corresponding to the trigger. For details, see [Trigger Description](https://www.tencentcloud.com/document/product/583/39901?from_cn_redirect=1).
+     * @param TriggerDesc Parameters corresponding to the trigger. For details, see [Trigger Description](https://www.tencentcloud.com/document/product/583/39901?from_cn_redirect=1).
      */
     public void setTriggerDesc(String TriggerDesc) {
         this.TriggerDesc = TriggerDesc;
     }
 
     /**
-     * Get Function namespace 
-     * @return Namespace Function namespace
+     * Get Namespace of the function 
+     * @return Namespace Namespace of the function
      */
     public String getNamespace() {
         return this.Namespace;
     }
 
     /**
-     * Set Function namespace
-     * @param Namespace Function namespace
+     * Set Namespace of the function
+     * @param Namespace Namespace of the function
      */
     public void setNamespace(String Namespace) {
         this.Namespace = Namespace;
     }
 
     /**
-     * Get Function version. It defaults to `$LATEST`. It's recommended to use [$DEFAULT](https://www.tencentcloud.com/document/product/583/37458?lang=en&pg=) for canary release. 
-     * @return Qualifier Function version. It defaults to `$LATEST`. It's recommended to use [$DEFAULT](https://www.tencentcloud.com/document/product/583/37458?lang=en&pg=) for canary release.
+     * Get Version or alias that the trigger takes effect on. It is recommended to fill in $DEFAULT for future grayscale release. Default value: $LATEST. 
+     * @return Qualifier Version or alias that the trigger takes effect on. It is recommended to fill in $DEFAULT for future grayscale release. Default value: $LATEST.
      */
     public String getQualifier() {
         return this.Qualifier;
     }
 
     /**
-     * Set Function version. It defaults to `$LATEST`. It's recommended to use [$DEFAULT](https://www.tencentcloud.com/document/product/583/37458?lang=en&pg=) for canary release.
-     * @param Qualifier Function version. It defaults to `$LATEST`. It's recommended to use [$DEFAULT](https://www.tencentcloud.com/document/product/583/37458?lang=en&pg=) for canary release.
+     * Set Version or alias that the trigger takes effect on. It is recommended to fill in $DEFAULT for future grayscale release. Default value: $LATEST.
+     * @param Qualifier Version or alias that the trigger takes effect on. It is recommended to fill in $DEFAULT for future grayscale release. Default value: $LATEST.
      */
     public void setQualifier(String Qualifier) {
         this.Qualifier = Qualifier;
     }
 
     /**
-     * Get Initial enabling status of the trigger. `OPEN` indicates enabled, and `CLOSE` indicates disabled. 
-     * @return Enable Initial enabling status of the trigger. `OPEN` indicates enabled, and `CLOSE` indicates disabled.
+     * Get Initial status of the trigger. OPEN means enabling, and CLOSE means disabling. 
+     * @return Enable Initial status of the trigger. OPEN means enabling, and CLOSE means disabling.
      */
     public String getEnable() {
         return this.Enable;
     }
 
     /**
-     * Set Initial enabling status of the trigger. `OPEN` indicates enabled, and `CLOSE` indicates disabled.
-     * @param Enable Initial enabling status of the trigger. `OPEN` indicates enabled, and `CLOSE` indicates disabled.
+     * Set Initial status of the trigger. OPEN means enabling, and CLOSE means disabling.
+     * @param Enable Initial status of the trigger. OPEN means enabling, and CLOSE means disabling.
      */
     public void setEnable(String Enable) {
         this.Enable = Enable;
     }
 
     /**
-     * Get Custom argument, supporting only the timer trigger. 
-     * @return CustomArgument Custom argument, supporting only the timer trigger.
+     * Get User-defined parameter. Only timer triggers are supported. 
+     * @return CustomArgument User-defined parameter. Only timer triggers are supported.
      */
     public String getCustomArgument() {
         return this.CustomArgument;
     }
 
     /**
-     * Set Custom argument, supporting only the timer trigger.
-     * @param CustomArgument Custom argument, supporting only the timer trigger.
+     * Set User-defined parameter. Only timer triggers are supported.
+     * @param CustomArgument User-defined parameter. Only timer triggers are supported.
      */
     public void setCustomArgument(String CustomArgument) {
         this.CustomArgument = CustomArgument;
     }
 
     /**
-     * Get Trigger description 
-     * @return Description Trigger description
+     * Get Trigger description. 
+     * @return Description Trigger description.
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set Trigger description
-     * @param Description Trigger description
+     * Set Trigger description.
+     * @param Description Trigger description.
      */
     public void setDescription(String Description) {
         this.Description = Description;

@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class AiReviewPornTaskOutput extends AbstractModel {
 
     /**
-    * Video porn detection score, ranging from 0 to 100.
+    * Porn information detection score in a video. The score ranges from 0 to 100.
     */
     @SerializedName("Confidence")
     @Expose
     private Float Confidence;
 
     /**
-    * Pornographic result recommendation, value ranges from...to...
+    * Pornographic result suggestion. Value range:
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
@@ -41,10 +41,10 @@ public class AiReviewPornTaskOutput extends AbstractModel {
     private String Suggestion;
 
     /**
-    * Video pornographic result tag, value ranges from...to...
+    * Porn information detection result tag. Value range:
 <li>porn: pornography.</li>
 <li>sexy: sexy.</li>
-<li>vulgar: vulgarity.</li>
+<li>vulgar: vulgar.</li>
 <li>intimacy: intimate behavior.</li>
     */
     @SerializedName("Label")
@@ -52,34 +52,34 @@ public class AiReviewPornTaskOutput extends AbstractModel {
     private String Label;
 
     /**
-    * List of video segments suspected of containing pornographic content.
+    * List of video segments suspected of pornography.
     */
     @SerializedName("SegmentSet")
     @Expose
     private MediaContentReviewSegmentItem [] SegmentSet;
 
     /**
-     * Get Video porn detection score, ranging from 0 to 100. 
-     * @return Confidence Video porn detection score, ranging from 0 to 100.
+     * Get Porn information detection score in a video. The score ranges from 0 to 100. 
+     * @return Confidence Porn information detection score in a video. The score ranges from 0 to 100.
      */
     public Float getConfidence() {
         return this.Confidence;
     }
 
     /**
-     * Set Video porn detection score, ranging from 0 to 100.
-     * @param Confidence Video porn detection score, ranging from 0 to 100.
+     * Set Porn information detection score in a video. The score ranges from 0 to 100.
+     * @param Confidence Porn information detection score in a video. The score ranges from 0 to 100.
      */
     public void setConfidence(Float Confidence) {
         this.Confidence = Confidence;
     }
 
     /**
-     * Get Pornographic result recommendation, value ranges from...to...
+     * Get Pornographic result suggestion. Value range:
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li> 
-     * @return Suggestion Pornographic result recommendation, value ranges from...to...
+     * @return Suggestion Pornographic result suggestion. Value range:
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
@@ -89,11 +89,11 @@ public class AiReviewPornTaskOutput extends AbstractModel {
     }
 
     /**
-     * Set Pornographic result recommendation, value ranges from...to...
+     * Set Pornographic result suggestion. Value range:
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
-     * @param Suggestion Pornographic result recommendation, value ranges from...to...
+     * @param Suggestion Pornographic result suggestion. Value range:
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
@@ -103,15 +103,15 @@ public class AiReviewPornTaskOutput extends AbstractModel {
     }
 
     /**
-     * Get Video pornographic result tag, value ranges from...to...
+     * Get Porn information detection result tag. Value range:
 <li>porn: pornography.</li>
 <li>sexy: sexy.</li>
-<li>vulgar: vulgarity.</li>
+<li>vulgar: vulgar.</li>
 <li>intimacy: intimate behavior.</li> 
-     * @return Label Video pornographic result tag, value ranges from...to...
+     * @return Label Porn information detection result tag. Value range:
 <li>porn: pornography.</li>
 <li>sexy: sexy.</li>
-<li>vulgar: vulgarity.</li>
+<li>vulgar: vulgar.</li>
 <li>intimacy: intimate behavior.</li>
      */
     public String getLabel() {
@@ -119,15 +119,15 @@ public class AiReviewPornTaskOutput extends AbstractModel {
     }
 
     /**
-     * Set Video pornographic result tag, value ranges from...to...
+     * Set Porn information detection result tag. Value range:
 <li>porn: pornography.</li>
 <li>sexy: sexy.</li>
-<li>vulgar: vulgarity.</li>
+<li>vulgar: vulgar.</li>
 <li>intimacy: intimate behavior.</li>
-     * @param Label Video pornographic result tag, value ranges from...to...
+     * @param Label Porn information detection result tag. Value range:
 <li>porn: pornography.</li>
 <li>sexy: sexy.</li>
-<li>vulgar: vulgarity.</li>
+<li>vulgar: vulgar.</li>
 <li>intimacy: intimate behavior.</li>
      */
     public void setLabel(String Label) {
@@ -135,16 +135,16 @@ public class AiReviewPornTaskOutput extends AbstractModel {
     }
 
     /**
-     * Get List of video segments suspected of containing pornographic content. 
-     * @return SegmentSet List of video segments suspected of containing pornographic content.
+     * Get List of video segments suspected of pornography. 
+     * @return SegmentSet List of video segments suspected of pornography.
      */
     public MediaContentReviewSegmentItem [] getSegmentSet() {
         return this.SegmentSet;
     }
 
     /**
-     * Set List of video segments suspected of containing pornographic content.
-     * @param SegmentSet List of video segments suspected of containing pornographic content.
+     * Set List of video segments suspected of pornography.
+     * @param SegmentSet List of video segments suspected of pornography.
      */
     public void setSegmentSet(MediaContentReviewSegmentItem [] SegmentSet) {
         this.SegmentSet = SegmentSet;

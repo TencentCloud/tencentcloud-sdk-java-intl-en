@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class QuestionOption extends AbstractModel {
 
     /**
-    * 
+    * <p>Tag of the option</p>
     */
     @SerializedName("Label")
     @Expose
     private String Label;
 
     /**
-    * 
+    * <p>Description of the option.</p>
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-     * Get  
-     * @return Label 
+     * Get <p>Tag of the option</p> 
+     * @return Label <p>Tag of the option</p>
      */
     public String getLabel() {
         return this.Label;
     }
 
     /**
-     * Set 
-     * @param Label 
+     * Set <p>Tag of the option</p>
+     * @param Label <p>Tag of the option</p>
      */
     public void setLabel(String Label) {
         this.Label = Label;
     }
 
     /**
-     * Get  
-     * @return Description 
+     * Get <p>Description of the option.</p> 
+     * @return Description <p>Description of the option.</p>
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 
-     * @param Description 
+     * Set <p>Description of the option.</p>
+     * @param Description <p>Description of the option.</p>
      */
     public void setDescription(String Description) {
         this.Description = Description;

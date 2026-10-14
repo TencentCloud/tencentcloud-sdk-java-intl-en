@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class SpekeDrm extends AbstractModel {
 
     /**
-    * Resource tagging. The field content is user-customized;
+    * Resource tag. The field content is user-customized;
 Supports 1 to 128 characters consisting of digits, letters, underscores (_), and hyphens (-).
 This field corresponds to the cid field in the Speke request.
 Note: Different DRM vendors have different restrictions on this field (for example, SDMC Technology Co., Ltd. does not support this field containing underscores). For specific rules, check with the vendors.
@@ -36,7 +36,7 @@ Note: Different DRM vendors have different restrictions on this field (for examp
     /**
     * DRM manufacturer access address. This field content is obtained from the DRM manufacturer.
 
-Note: Different DRM manufacturers have different limits on the number of substreams. For example, PallyCon limits the number to 5 substreams, while DRMtoday supports stream encryption for a maximum of 9 substreams.
+Note: Different DRM manufacturers have different limits on the number of substreams. For example, PallyCon cannot exceed 5 substreams, while DRMtoday supports stream encryption for a maximum of 9 substreams.
     */
     @SerializedName("KeyServerUrl")
     @Expose
@@ -52,7 +52,7 @@ Note: Different DRM manufacturers have different limits on the number of substre
     /**
     * Encryption method. Valid values:
 cbcs: PlayReady, Widevine, FairPlay, WideVine+FairPlay, Widevine+Playready, Playready+Fairplay, Widevine+Playready+Fairplay are supported.
-cenc: PlayReady, Widevine, and Widevine+PlayReady are supported.
+cenc: PlayReady, Widevine, and Widevine+Playready are supported.
 
 If it is left unspecified:
 Use cbcs for FairPlay by default.
@@ -65,9 +65,9 @@ Use cenc for Widevine+PlayReady by default.
     private String EncryptionMethod;
 
     /**
-    * Substream encryption rule. Default value: preset0.
+    * Encryption rule for substreams. Default value: preset 0
 preset 0: use the same key to encrypt all substreams;
-preset1: use different keys for each substream
+preset1: use different keys for each substream;
 
     */
     @SerializedName("EncryptionPreset")
@@ -75,11 +75,11 @@ preset1: use different keys for each substream
     private String EncryptionPreset;
 
     /**
-     * Get Resource tagging. The field content is user-customized;
+     * Get Resource tag. The field content is user-customized;
 Supports 1 to 128 characters consisting of digits, letters, underscores (_), and hyphens (-).
 This field corresponds to the cid field in the Speke request.
 Note: Different DRM vendors have different restrictions on this field (for example, SDMC Technology Co., Ltd. does not support this field containing underscores). For specific rules, check with the vendors. 
-     * @return ResourceId Resource tagging. The field content is user-customized;
+     * @return ResourceId Resource tag. The field content is user-customized;
 Supports 1 to 128 characters consisting of digits, letters, underscores (_), and hyphens (-).
 This field corresponds to the cid field in the Speke request.
 Note: Different DRM vendors have different restrictions on this field (for example, SDMC Technology Co., Ltd. does not support this field containing underscores). For specific rules, check with the vendors.
@@ -89,11 +89,11 @@ Note: Different DRM vendors have different restrictions on this field (for examp
     }
 
     /**
-     * Set Resource tagging. The field content is user-customized;
+     * Set Resource tag. The field content is user-customized;
 Supports 1 to 128 characters consisting of digits, letters, underscores (_), and hyphens (-).
 This field corresponds to the cid field in the Speke request.
 Note: Different DRM vendors have different restrictions on this field (for example, SDMC Technology Co., Ltd. does not support this field containing underscores). For specific rules, check with the vendors.
-     * @param ResourceId Resource tagging. The field content is user-customized;
+     * @param ResourceId Resource tag. The field content is user-customized;
 Supports 1 to 128 characters consisting of digits, letters, underscores (_), and hyphens (-).
 This field corresponds to the cid field in the Speke request.
 Note: Different DRM vendors have different restrictions on this field (for example, SDMC Technology Co., Ltd. does not support this field containing underscores). For specific rules, check with the vendors.
@@ -105,10 +105,10 @@ Note: Different DRM vendors have different restrictions on this field (for examp
     /**
      * Get DRM manufacturer access address. This field content is obtained from the DRM manufacturer.
 
-Note: Different DRM manufacturers have different limits on the number of substreams. For example, PallyCon limits the number to 5 substreams, while DRMtoday supports stream encryption for a maximum of 9 substreams. 
+Note: Different DRM manufacturers have different limits on the number of substreams. For example, PallyCon cannot exceed 5 substreams, while DRMtoday supports stream encryption for a maximum of 9 substreams. 
      * @return KeyServerUrl DRM manufacturer access address. This field content is obtained from the DRM manufacturer.
 
-Note: Different DRM manufacturers have different limits on the number of substreams. For example, PallyCon limits the number to 5 substreams, while DRMtoday supports stream encryption for a maximum of 9 substreams.
+Note: Different DRM manufacturers have different limits on the number of substreams. For example, PallyCon cannot exceed 5 substreams, while DRMtoday supports stream encryption for a maximum of 9 substreams.
      */
     public String getKeyServerUrl() {
         return this.KeyServerUrl;
@@ -117,10 +117,10 @@ Note: Different DRM manufacturers have different limits on the number of substre
     /**
      * Set DRM manufacturer access address. This field content is obtained from the DRM manufacturer.
 
-Note: Different DRM manufacturers have different limits on the number of substreams. For example, PallyCon limits the number to 5 substreams, while DRMtoday supports stream encryption for a maximum of 9 substreams.
+Note: Different DRM manufacturers have different limits on the number of substreams. For example, PallyCon cannot exceed 5 substreams, while DRMtoday supports stream encryption for a maximum of 9 substreams.
      * @param KeyServerUrl DRM manufacturer access address. This field content is obtained from the DRM manufacturer.
 
-Note: Different DRM manufacturers have different limits on the number of substreams. For example, PallyCon limits the number to 5 substreams, while DRMtoday supports stream encryption for a maximum of 9 substreams.
+Note: Different DRM manufacturers have different limits on the number of substreams. For example, PallyCon cannot exceed 5 substreams, while DRMtoday supports stream encryption for a maximum of 9 substreams.
      */
     public void setKeyServerUrl(String KeyServerUrl) {
         this.KeyServerUrl = KeyServerUrl;
@@ -145,7 +145,7 @@ Note: Different DRM manufacturers have different limits on the number of substre
     /**
      * Get Encryption method. Valid values:
 cbcs: PlayReady, Widevine, FairPlay, WideVine+FairPlay, Widevine+Playready, Playready+Fairplay, Widevine+Playready+Fairplay are supported.
-cenc: PlayReady, Widevine, and Widevine+PlayReady are supported.
+cenc: PlayReady, Widevine, and Widevine+Playready are supported.
 
 If it is left unspecified:
 Use cbcs for FairPlay by default.
@@ -154,7 +154,7 @@ WideVine+FairPlay, Playready+Fairplay, Widevine+Playready+Fairplay default to cb
 Use cenc for Widevine+PlayReady by default. 
      * @return EncryptionMethod Encryption method. Valid values:
 cbcs: PlayReady, Widevine, FairPlay, WideVine+FairPlay, Widevine+Playready, Playready+Fairplay, Widevine+Playready+Fairplay are supported.
-cenc: PlayReady, Widevine, and Widevine+PlayReady are supported.
+cenc: PlayReady, Widevine, and Widevine+Playready are supported.
 
 If it is left unspecified:
 Use cbcs for FairPlay by default.
@@ -169,7 +169,7 @@ Use cenc for Widevine+PlayReady by default.
     /**
      * Set Encryption method. Valid values:
 cbcs: PlayReady, Widevine, FairPlay, WideVine+FairPlay, Widevine+Playready, Playready+Fairplay, Widevine+Playready+Fairplay are supported.
-cenc: PlayReady, Widevine, and Widevine+PlayReady are supported.
+cenc: PlayReady, Widevine, and Widevine+Playready are supported.
 
 If it is left unspecified:
 Use cbcs for FairPlay by default.
@@ -178,7 +178,7 @@ WideVine+FairPlay, Playready+Fairplay, Widevine+Playready+Fairplay default to cb
 Use cenc for Widevine+PlayReady by default.
      * @param EncryptionMethod Encryption method. Valid values:
 cbcs: PlayReady, Widevine, FairPlay, WideVine+FairPlay, Widevine+Playready, Playready+Fairplay, Widevine+Playready+Fairplay are supported.
-cenc: PlayReady, Widevine, and Widevine+PlayReady are supported.
+cenc: PlayReady, Widevine, and Widevine+Playready are supported.
 
 If it is left unspecified:
 Use cbcs for FairPlay by default.
@@ -191,13 +191,13 @@ Use cenc for Widevine+PlayReady by default.
     }
 
     /**
-     * Get Substream encryption rule. Default value: preset0.
+     * Get Encryption rule for substreams. Default value: preset 0
 preset 0: use the same key to encrypt all substreams;
-preset1: use different keys for each substream
+preset1: use different keys for each substream;
  
-     * @return EncryptionPreset Substream encryption rule. Default value: preset0.
+     * @return EncryptionPreset Encryption rule for substreams. Default value: preset 0
 preset 0: use the same key to encrypt all substreams;
-preset1: use different keys for each substream
+preset1: use different keys for each substream;
 
      */
     public String getEncryptionPreset() {
@@ -205,13 +205,13 @@ preset1: use different keys for each substream
     }
 
     /**
-     * Set Substream encryption rule. Default value: preset0.
+     * Set Encryption rule for substreams. Default value: preset 0
 preset 0: use the same key to encrypt all substreams;
-preset1: use different keys for each substream
+preset1: use different keys for each substream;
 
-     * @param EncryptionPreset Substream encryption rule. Default value: preset0.
+     * @param EncryptionPreset Encryption rule for substreams. Default value: preset 0
 preset 0: use the same key to encrypt all substreams;
-preset1: use different keys for each substream
+preset1: use different keys for each substream;
 
      */
     public void setEncryptionPreset(String EncryptionPreset) {

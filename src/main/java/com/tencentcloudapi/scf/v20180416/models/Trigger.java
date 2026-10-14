@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class Trigger extends AbstractModel {
 
     /**
-    * Latest modification time of the trigger
+    * Last modification time of the trigger
     */
     @SerializedName("ModTime")
     @Expose
@@ -38,35 +38,35 @@ public class Trigger extends AbstractModel {
     private String Type;
 
     /**
-    * Detailed trigger configuration
+    * Trigger detailed configuration
     */
     @SerializedName("TriggerDesc")
     @Expose
     private String TriggerDesc;
 
     /**
-    * Trigger name
+    * Trigger name.
     */
     @SerializedName("TriggerName")
     @Expose
     private String TriggerName;
 
     /**
-    * Creation time of the trigger
+    * Trigger creation time
     */
     @SerializedName("AddTime")
     @Expose
     private String AddTime;
 
     /**
-    * Enabling switch
+    * Enable switch
     */
     @SerializedName("Enable")
     @Expose
     private Long Enable;
 
     /**
-    * Custom parameter
+    * Customer custom parameter
     */
     @SerializedName("CustomArgument")
     @Expose
@@ -80,51 +80,51 @@ public class Trigger extends AbstractModel {
     private String AvailableStatus;
 
     /**
-    * Minimum resource ID of trigger
+    * Minimum resource ID of the trigger
     */
     @SerializedName("ResourceId")
     @Expose
     private String ResourceId;
 
     /**
-    * Trigger-Function binding status
+    * Binding status of the trigger and SCF
     */
     @SerializedName("BindStatus")
     @Expose
     private String BindStatus;
 
     /**
-    * Trigger type. Two-way means that the trigger can be manipulated in both consoles, while one-way means that the trigger can be created only in the SCF Console
+    * Trigger type. Two-way means both the left and right consoles can operate. One-way means only the SCF console can create.
     */
     @SerializedName("TriggerAttribute")
     @Expose
     private String TriggerAttribute;
 
     /**
-    * The alias or version bound with the trigger
+    * Alias name or version bound to the trigger
     */
     @SerializedName("Qualifier")
     @Expose
     private String Qualifier;
 
     /**
-    * Trigger description
+    * Trigger description.
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-     * Get Latest modification time of the trigger 
-     * @return ModTime Latest modification time of the trigger
+     * Get Last modification time of the trigger 
+     * @return ModTime Last modification time of the trigger
      */
     public String getModTime() {
         return this.ModTime;
     }
 
     /**
-     * Set Latest modification time of the trigger
-     * @param ModTime Latest modification time of the trigger
+     * Set Last modification time of the trigger
+     * @param ModTime Last modification time of the trigger
      */
     public void setModTime(String ModTime) {
         this.ModTime = ModTime;
@@ -147,80 +147,80 @@ public class Trigger extends AbstractModel {
     }
 
     /**
-     * Get Detailed trigger configuration 
-     * @return TriggerDesc Detailed trigger configuration
+     * Get Trigger detailed configuration 
+     * @return TriggerDesc Trigger detailed configuration
      */
     public String getTriggerDesc() {
         return this.TriggerDesc;
     }
 
     /**
-     * Set Detailed trigger configuration
-     * @param TriggerDesc Detailed trigger configuration
+     * Set Trigger detailed configuration
+     * @param TriggerDesc Trigger detailed configuration
      */
     public void setTriggerDesc(String TriggerDesc) {
         this.TriggerDesc = TriggerDesc;
     }
 
     /**
-     * Get Trigger name 
-     * @return TriggerName Trigger name
+     * Get Trigger name. 
+     * @return TriggerName Trigger name.
      */
     public String getTriggerName() {
         return this.TriggerName;
     }
 
     /**
-     * Set Trigger name
-     * @param TriggerName Trigger name
+     * Set Trigger name.
+     * @param TriggerName Trigger name.
      */
     public void setTriggerName(String TriggerName) {
         this.TriggerName = TriggerName;
     }
 
     /**
-     * Get Creation time of the trigger 
-     * @return AddTime Creation time of the trigger
+     * Get Trigger creation time 
+     * @return AddTime Trigger creation time
      */
     public String getAddTime() {
         return this.AddTime;
     }
 
     /**
-     * Set Creation time of the trigger
-     * @param AddTime Creation time of the trigger
+     * Set Trigger creation time
+     * @param AddTime Trigger creation time
      */
     public void setAddTime(String AddTime) {
         this.AddTime = AddTime;
     }
 
     /**
-     * Get Enabling switch 
-     * @return Enable Enabling switch
+     * Get Enable switch 
+     * @return Enable Enable switch
      */
     public Long getEnable() {
         return this.Enable;
     }
 
     /**
-     * Set Enabling switch
-     * @param Enable Enabling switch
+     * Set Enable switch
+     * @param Enable Enable switch
      */
     public void setEnable(Long Enable) {
         this.Enable = Enable;
     }
 
     /**
-     * Get Custom parameter 
-     * @return CustomArgument Custom parameter
+     * Get Customer custom parameter 
+     * @return CustomArgument Customer custom parameter
      */
     public String getCustomArgument() {
         return this.CustomArgument;
     }
 
     /**
-     * Set Custom parameter
-     * @param CustomArgument Custom parameter
+     * Set Customer custom parameter
+     * @param CustomArgument Customer custom parameter
      */
     public void setCustomArgument(String CustomArgument) {
         this.CustomArgument = CustomArgument;
@@ -243,8 +243,8 @@ public class Trigger extends AbstractModel {
     }
 
     /**
-     * Get Minimum resource ID of trigger 
-     * @return ResourceId Minimum resource ID of trigger
+     * Get Minimum resource ID of the trigger 
+     * @return ResourceId Minimum resource ID of the trigger
      * @deprecated
      */
     @Deprecated
@@ -253,8 +253,8 @@ public class Trigger extends AbstractModel {
     }
 
     /**
-     * Set Minimum resource ID of trigger
-     * @param ResourceId Minimum resource ID of trigger
+     * Set Minimum resource ID of the trigger
+     * @param ResourceId Minimum resource ID of the trigger
      * @deprecated
      */
     @Deprecated
@@ -263,8 +263,8 @@ public class Trigger extends AbstractModel {
     }
 
     /**
-     * Get Trigger-Function binding status 
-     * @return BindStatus Trigger-Function binding status
+     * Get Binding status of the trigger and SCF 
+     * @return BindStatus Binding status of the trigger and SCF
      * @deprecated
      */
     @Deprecated
@@ -273,8 +273,8 @@ public class Trigger extends AbstractModel {
     }
 
     /**
-     * Set Trigger-Function binding status
-     * @param BindStatus Trigger-Function binding status
+     * Set Binding status of the trigger and SCF
+     * @param BindStatus Binding status of the trigger and SCF
      * @deprecated
      */
     @Deprecated
@@ -283,8 +283,8 @@ public class Trigger extends AbstractModel {
     }
 
     /**
-     * Get Trigger type. Two-way means that the trigger can be manipulated in both consoles, while one-way means that the trigger can be created only in the SCF Console 
-     * @return TriggerAttribute Trigger type. Two-way means that the trigger can be manipulated in both consoles, while one-way means that the trigger can be created only in the SCF Console
+     * Get Trigger type. Two-way means both the left and right consoles can operate. One-way means only the SCF console can create. 
+     * @return TriggerAttribute Trigger type. Two-way means both the left and right consoles can operate. One-way means only the SCF console can create.
      * @deprecated
      */
     @Deprecated
@@ -293,8 +293,8 @@ public class Trigger extends AbstractModel {
     }
 
     /**
-     * Set Trigger type. Two-way means that the trigger can be manipulated in both consoles, while one-way means that the trigger can be created only in the SCF Console
-     * @param TriggerAttribute Trigger type. Two-way means that the trigger can be manipulated in both consoles, while one-way means that the trigger can be created only in the SCF Console
+     * Set Trigger type. Two-way means both the left and right consoles can operate. One-way means only the SCF console can create.
+     * @param TriggerAttribute Trigger type. Two-way means both the left and right consoles can operate. One-way means only the SCF console can create.
      * @deprecated
      */
     @Deprecated
@@ -303,32 +303,32 @@ public class Trigger extends AbstractModel {
     }
 
     /**
-     * Get The alias or version bound with the trigger 
-     * @return Qualifier The alias or version bound with the trigger
+     * Get Alias name or version bound to the trigger 
+     * @return Qualifier Alias name or version bound to the trigger
      */
     public String getQualifier() {
         return this.Qualifier;
     }
 
     /**
-     * Set The alias or version bound with the trigger
-     * @param Qualifier The alias or version bound with the trigger
+     * Set Alias name or version bound to the trigger
+     * @param Qualifier Alias name or version bound to the trigger
      */
     public void setQualifier(String Qualifier) {
         this.Qualifier = Qualifier;
     }
 
     /**
-     * Get Trigger description 
-     * @return Description Trigger description
+     * Get Trigger description. 
+     * @return Description Trigger description.
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set Trigger description
-     * @param Description Trigger description
+     * Set Trigger description.
+     * @param Description Trigger description.
      */
     public void setDescription(String Description) {
         this.Description = Description;

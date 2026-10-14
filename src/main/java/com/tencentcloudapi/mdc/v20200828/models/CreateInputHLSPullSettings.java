@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class CreateInputHLSPullSettings extends AbstractModel {
 
     /**
-    * 
+    * HLS origin server address. Only one is allowed.
     */
     @SerializedName("SourceAddresses")
     @Expose
     private HLSPullSourceAddress [] SourceAddresses;
 
     /**
-     * Get  
-     * @return SourceAddresses 
+     * Get HLS origin server address. Only one is allowed. 
+     * @return SourceAddresses HLS origin server address. Only one is allowed.
      */
     public HLSPullSourceAddress [] getSourceAddresses() {
         return this.SourceAddresses;
     }
 
     /**
-     * Set 
-     * @param SourceAddresses 
+     * Set HLS origin server address. Only one is allowed.
+     * @param SourceAddresses HLS origin server address. Only one is allowed.
      */
     public void setSourceAddresses(HLSPullSourceAddress [] SourceAddresses) {
         this.SourceAddresses = SourceAddresses;

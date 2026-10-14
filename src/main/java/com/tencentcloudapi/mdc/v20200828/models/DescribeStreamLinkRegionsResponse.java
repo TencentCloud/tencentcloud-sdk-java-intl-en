@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeStreamLinkRegionsResponse extends AbstractModel {
 
     /**
-    * StreamLink region information
+    * Media transmission region information.
     */
     @SerializedName("Info")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeStreamLinkRegionsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get StreamLink region information 
-     * @return Info StreamLink region information
+     * Get Media transmission region information. 
+     * @return Info Media transmission region information.
      */
     public StreamLinkRegionInfo getInfo() {
         return this.Info;
     }
 
     /**
-     * Set StreamLink region information
-     * @param Info StreamLink region information
+     * Set Media transmission region information.
+     * @param Info Media transmission region information.
      */
     public void setInfo(StreamLinkRegionInfo Info) {
         this.Info = Info;

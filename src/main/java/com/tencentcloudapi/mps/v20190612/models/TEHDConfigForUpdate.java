@@ -24,46 +24,61 @@ import java.util.HashMap;
 public class TEHDConfigForUpdate extends AbstractModel {
 
     /**
-    * 
+    * Top Speed Codec type. Available values:
+<li>TEHD-100: Top Speed Codec-100 (video top speed codec).</li>
+<li>TEHD-200: Top Speed Codec-200 (audio TSC).</li>
+Leave it blank to indicate no modification.
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * 
+    * Maximum video bitrate. If this parameter is left empty, no modification is made.
     */
     @SerializedName("MaxVideoBitrate")
     @Expose
     private Long MaxVideoBitrate;
 
     /**
-     * Get  
-     * @return Type 
+     * Get Top Speed Codec type. Available values:
+<li>TEHD-100: Top Speed Codec-100 (video top speed codec).</li>
+<li>TEHD-200: Top Speed Codec-200 (audio TSC).</li>
+Leave it blank to indicate no modification. 
+     * @return Type Top Speed Codec type. Available values:
+<li>TEHD-100: Top Speed Codec-100 (video top speed codec).</li>
+<li>TEHD-200: Top Speed Codec-200 (audio TSC).</li>
+Leave it blank to indicate no modification.
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 
-     * @param Type 
+     * Set Top Speed Codec type. Available values:
+<li>TEHD-100: Top Speed Codec-100 (video top speed codec).</li>
+<li>TEHD-200: Top Speed Codec-200 (audio TSC).</li>
+Leave it blank to indicate no modification.
+     * @param Type Top Speed Codec type. Available values:
+<li>TEHD-100: Top Speed Codec-100 (video top speed codec).</li>
+<li>TEHD-200: Top Speed Codec-200 (audio TSC).</li>
+Leave it blank to indicate no modification.
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get  
-     * @return MaxVideoBitrate 
+     * Get Maximum video bitrate. If this parameter is left empty, no modification is made. 
+     * @return MaxVideoBitrate Maximum video bitrate. If this parameter is left empty, no modification is made.
      */
     public Long getMaxVideoBitrate() {
         return this.MaxVideoBitrate;
     }
 
     /**
-     * Set 
-     * @param MaxVideoBitrate 
+     * Set Maximum video bitrate. If this parameter is left empty, no modification is made.
+     * @param MaxVideoBitrate Maximum video bitrate. If this parameter is left empty, no modification is made.
      */
     public void setMaxVideoBitrate(Long MaxVideoBitrate) {
         this.MaxVideoBitrate = MaxVideoBitrate;

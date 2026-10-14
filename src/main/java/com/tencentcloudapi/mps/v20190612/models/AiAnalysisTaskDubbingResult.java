@@ -45,14 +45,14 @@ public class AiAnalysisTaskDubbingResult extends AbstractModel {
     private String Message;
 
     /**
-    * Intelligent dubbing task input.
+    * Intelligent captioning task input.
     */
     @SerializedName("Input")
     @Expose
     private AiAnalysisTaskDubbingInput Input;
 
     /**
-    * 
+    * Intelligent captioning task output.
     */
     @SerializedName("Output")
     @Expose
@@ -107,32 +107,32 @@ public class AiAnalysisTaskDubbingResult extends AbstractModel {
     }
 
     /**
-     * Get Intelligent dubbing task input. 
-     * @return Input Intelligent dubbing task input.
+     * Get Intelligent captioning task input. 
+     * @return Input Intelligent captioning task input.
      */
     public AiAnalysisTaskDubbingInput getInput() {
         return this.Input;
     }
 
     /**
-     * Set Intelligent dubbing task input.
-     * @param Input Intelligent dubbing task input.
+     * Set Intelligent captioning task input.
+     * @param Input Intelligent captioning task input.
      */
     public void setInput(AiAnalysisTaskDubbingInput Input) {
         this.Input = Input;
     }
 
     /**
-     * Get  
-     * @return Output 
+     * Get Intelligent captioning task output. 
+     * @return Output Intelligent captioning task output.
      */
     public AiAnalysisTaskDubbingOutput getOutput() {
         return this.Output;
     }
 
     /**
-     * Set 
-     * @param Output 
+     * Set Intelligent captioning task output.
+     * @param Output Intelligent captioning task output.
      */
     public void setOutput(AiAnalysisTaskDubbingOutput Output) {
         this.Output = Output;

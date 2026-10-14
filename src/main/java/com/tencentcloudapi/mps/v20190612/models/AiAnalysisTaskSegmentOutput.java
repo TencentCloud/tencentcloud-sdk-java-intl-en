@@ -31,7 +31,7 @@ public class AiAnalysisTaskSegmentOutput extends AbstractModel {
     private SegmentRecognitionItem [] SegmentSet;
 
     /**
-    * 
+    * Video summary, used for offline scenarios.
     */
     @SerializedName("Abstract")
     @Expose
@@ -54,16 +54,16 @@ public class AiAnalysisTaskSegmentOutput extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return Abstract 
+     * Get Video summary, used for offline scenarios. 
+     * @return Abstract Video summary, used for offline scenarios.
      */
     public String getAbstract() {
         return this.Abstract;
     }
 
     /**
-     * Set 
-     * @param Abstract 
+     * Set Video summary, used for offline scenarios.
+     * @param Abstract Video summary, used for offline scenarios.
      */
     public void setAbstract(String Abstract) {
         this.Abstract = Abstract;

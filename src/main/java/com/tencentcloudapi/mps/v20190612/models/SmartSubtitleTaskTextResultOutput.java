@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class SmartSubtitleTaskTextResultOutput extends AbstractModel {
 
     /**
-    * 
+    * <p>List of segments for smart subtitle recognition.</p>
     */
     @SerializedName("SegmentSet")
     @Expose
     private SmartSubtitleTaskFullTextSegmentItem [] SegmentSet;
 
     /**
-    * 
+    * <p>Subtitle recognition result</p>
     */
     @SerializedName("RecognizeSubtitleResult")
     @Expose
     private SubtitleResult [] RecognizeSubtitleResult;
 
     /**
-    * 
+    * <p>Translated subtitles</p>
     */
     @SerializedName("TransSubtitleResult")
     @Expose
     private SubtitleResult [] TransSubtitleResult;
 
     /**
-    * 
+    * <p>Storage location of the subtitle file</p>
     */
     @SerializedName("OutputStorage")
     @Expose
     private TaskOutputStorage OutputStorage;
 
     /**
-     * Get  
-     * @return SegmentSet 
+     * Get <p>List of segments for smart subtitle recognition.</p> 
+     * @return SegmentSet <p>List of segments for smart subtitle recognition.</p>
      */
     public SmartSubtitleTaskFullTextSegmentItem [] getSegmentSet() {
         return this.SegmentSet;
     }
 
     /**
-     * Set 
-     * @param SegmentSet 
+     * Set <p>List of segments for smart subtitle recognition.</p>
+     * @param SegmentSet <p>List of segments for smart subtitle recognition.</p>
      */
     public void setSegmentSet(SmartSubtitleTaskFullTextSegmentItem [] SegmentSet) {
         this.SegmentSet = SegmentSet;
     }
 
     /**
-     * Get  
-     * @return RecognizeSubtitleResult 
+     * Get <p>Subtitle recognition result</p> 
+     * @return RecognizeSubtitleResult <p>Subtitle recognition result</p>
      */
     public SubtitleResult [] getRecognizeSubtitleResult() {
         return this.RecognizeSubtitleResult;
     }
 
     /**
-     * Set 
-     * @param RecognizeSubtitleResult 
+     * Set <p>Subtitle recognition result</p>
+     * @param RecognizeSubtitleResult <p>Subtitle recognition result</p>
      */
     public void setRecognizeSubtitleResult(SubtitleResult [] RecognizeSubtitleResult) {
         this.RecognizeSubtitleResult = RecognizeSubtitleResult;
     }
 
     /**
-     * Get  
-     * @return TransSubtitleResult 
+     * Get <p>Translated subtitles</p> 
+     * @return TransSubtitleResult <p>Translated subtitles</p>
      */
     public SubtitleResult [] getTransSubtitleResult() {
         return this.TransSubtitleResult;
     }
 
     /**
-     * Set 
-     * @param TransSubtitleResult 
+     * Set <p>Translated subtitles</p>
+     * @param TransSubtitleResult <p>Translated subtitles</p>
      */
     public void setTransSubtitleResult(SubtitleResult [] TransSubtitleResult) {
         this.TransSubtitleResult = TransSubtitleResult;
     }
 
     /**
-     * Get  
-     * @return OutputStorage 
+     * Get <p>Storage location of the subtitle file</p> 
+     * @return OutputStorage <p>Storage location of the subtitle file</p>
      */
     public TaskOutputStorage getOutputStorage() {
         return this.OutputStorage;
     }
 
     /**
-     * Set 
-     * @param OutputStorage 
+     * Set <p>Storage location of the subtitle file</p>
+     * @param OutputStorage <p>Storage location of the subtitle file</p>
      */
     public void setOutputStorage(TaskOutputStorage OutputStorage) {
         this.OutputStorage = OutputStorage;

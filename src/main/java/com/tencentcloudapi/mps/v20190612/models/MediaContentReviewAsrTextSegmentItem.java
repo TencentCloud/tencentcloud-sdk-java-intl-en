@@ -45,7 +45,7 @@ public class MediaContentReviewAsrTextSegmentItem extends AbstractModel {
     private Float Confidence;
 
     /**
-    * Review result suggestion for suspected segment, value ranges from...to...
+    * Suggested review result for the suspected segment. Value range:
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
@@ -55,7 +55,7 @@ public class MediaContentReviewAsrTextSegmentItem extends AbstractModel {
     private String Suggestion;
 
     /**
-    * Suspicious keyword list.
+    * List of suspicious keywords.
     */
     @SerializedName("KeywordSet")
     @Expose
@@ -110,11 +110,11 @@ public class MediaContentReviewAsrTextSegmentItem extends AbstractModel {
     }
 
     /**
-     * Get Review result suggestion for suspected segment, value ranges from...to...
+     * Get Suggested review result for the suspected segment. Value range:
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li> 
-     * @return Suggestion Review result suggestion for suspected segment, value ranges from...to...
+     * @return Suggestion Suggested review result for the suspected segment. Value range:
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
@@ -124,11 +124,11 @@ public class MediaContentReviewAsrTextSegmentItem extends AbstractModel {
     }
 
     /**
-     * Set Review result suggestion for suspected segment, value ranges from...to...
+     * Set Suggested review result for the suspected segment. Value range:
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
-     * @param Suggestion Review result suggestion for suspected segment, value ranges from...to...
+     * @param Suggestion Suggested review result for the suspected segment. Value range:
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
@@ -138,16 +138,16 @@ public class MediaContentReviewAsrTextSegmentItem extends AbstractModel {
     }
 
     /**
-     * Get Suspicious keyword list. 
-     * @return KeywordSet Suspicious keyword list.
+     * Get List of suspicious keywords. 
+     * @return KeywordSet List of suspicious keywords.
      */
     public String [] getKeywordSet() {
         return this.KeywordSet;
     }
 
     /**
-     * Set Suspicious keyword list.
-     * @param KeywordSet Suspicious keyword list.
+     * Set List of suspicious keywords.
+     * @param KeywordSet List of suspicious keywords.
      */
     public void setKeywordSet(String [] KeywordSet) {
         this.KeywordSet = KeywordSet;

@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class AiReviewPoliticalAsrTaskOutput extends AbstractModel {
 
     /**
-    * Asr text sensitivity scoring, with a score ranging from 0 to -100.
+    * Sensitive score of the Asr text. Value range: 0–100.
     */
     @SerializedName("Confidence")
     @Expose
     private Float Confidence;
 
     /**
-    * Asr text sensitive result recommendation, value ranges from...to...
+    * Sensitive result suggestions for Asr text. Value range:
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
@@ -41,34 +41,34 @@ public class AiReviewPoliticalAsrTaskOutput extends AbstractModel {
     private String Suggestion;
 
     /**
-    * Video segment list with Asr text suspected of sensitivity.
+    * List of video segments with sensitive Asr text.
     */
     @SerializedName("SegmentSet")
     @Expose
     private MediaContentReviewAsrTextSegmentItem [] SegmentSet;
 
     /**
-     * Get Asr text sensitivity scoring, with a score ranging from 0 to -100. 
-     * @return Confidence Asr text sensitivity scoring, with a score ranging from 0 to -100.
+     * Get Sensitive score of the Asr text. Value range: 0–100. 
+     * @return Confidence Sensitive score of the Asr text. Value range: 0–100.
      */
     public Float getConfidence() {
         return this.Confidence;
     }
 
     /**
-     * Set Asr text sensitivity scoring, with a score ranging from 0 to -100.
-     * @param Confidence Asr text sensitivity scoring, with a score ranging from 0 to -100.
+     * Set Sensitive score of the Asr text. Value range: 0–100.
+     * @param Confidence Sensitive score of the Asr text. Value range: 0–100.
      */
     public void setConfidence(Float Confidence) {
         this.Confidence = Confidence;
     }
 
     /**
-     * Get Asr text sensitive result recommendation, value ranges from...to...
+     * Get Sensitive result suggestions for Asr text. Value range:
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li> 
-     * @return Suggestion Asr text sensitive result recommendation, value ranges from...to...
+     * @return Suggestion Sensitive result suggestions for Asr text. Value range:
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
@@ -78,11 +78,11 @@ public class AiReviewPoliticalAsrTaskOutput extends AbstractModel {
     }
 
     /**
-     * Set Asr text sensitive result recommendation, value ranges from...to...
+     * Set Sensitive result suggestions for Asr text. Value range:
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
-     * @param Suggestion Asr text sensitive result recommendation, value ranges from...to...
+     * @param Suggestion Sensitive result suggestions for Asr text. Value range:
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
@@ -92,16 +92,16 @@ public class AiReviewPoliticalAsrTaskOutput extends AbstractModel {
     }
 
     /**
-     * Get Video segment list with Asr text suspected of sensitivity. 
-     * @return SegmentSet Video segment list with Asr text suspected of sensitivity.
+     * Get List of video segments with sensitive Asr text. 
+     * @return SegmentSet List of video segments with sensitive Asr text.
      */
     public MediaContentReviewAsrTextSegmentItem [] getSegmentSet() {
         return this.SegmentSet;
     }
 
     /**
-     * Set Video segment list with Asr text suspected of sensitivity.
-     * @param SegmentSet Video segment list with Asr text suspected of sensitivity.
+     * Set List of video segments with sensitive Asr text.
+     * @param SegmentSet List of video segments with sensitive Asr text.
      */
     public void setSegmentSet(MediaContentReviewAsrTextSegmentItem [] SegmentSet) {
         this.SegmentSet = SegmentSet;

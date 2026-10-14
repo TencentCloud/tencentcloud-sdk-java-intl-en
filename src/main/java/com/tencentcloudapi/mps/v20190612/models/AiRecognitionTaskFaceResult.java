@@ -52,14 +52,14 @@ public class AiRecognitionTaskFaceResult extends AbstractModel {
     private String Message;
 
     /**
-    * Face Recognition task input.
+    * Face recognition task input information.
     */
     @SerializedName("Input")
     @Expose
     private AiRecognitionTaskFaceResultInput Input;
 
     /**
-    * 
+    * Output information of the face recognition task.
     */
     @SerializedName("Output")
     @Expose
@@ -130,32 +130,32 @@ public class AiRecognitionTaskFaceResult extends AbstractModel {
     }
 
     /**
-     * Get Face Recognition task input. 
-     * @return Input Face Recognition task input.
+     * Get Face recognition task input information. 
+     * @return Input Face recognition task input information.
      */
     public AiRecognitionTaskFaceResultInput getInput() {
         return this.Input;
     }
 
     /**
-     * Set Face Recognition task input.
-     * @param Input Face Recognition task input.
+     * Set Face recognition task input information.
+     * @param Input Face recognition task input information.
      */
     public void setInput(AiRecognitionTaskFaceResultInput Input) {
         this.Input = Input;
     }
 
     /**
-     * Get  
-     * @return Output 
+     * Get Output information of the face recognition task. 
+     * @return Output Output information of the face recognition task.
      */
     public AiRecognitionTaskFaceResultOutput getOutput() {
         return this.Output;
     }
 
     /**
-     * Set 
-     * @param Output 
+     * Set Output information of the face recognition task.
+     * @param Output Output information of the face recognition task.
      */
     public void setOutput(AiRecognitionTaskFaceResultOutput Output) {
         this.Output = Output;

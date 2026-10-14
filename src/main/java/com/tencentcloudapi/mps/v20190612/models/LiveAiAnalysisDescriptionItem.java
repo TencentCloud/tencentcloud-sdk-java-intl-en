@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class LiveAiAnalysisDescriptionItem extends AbstractModel {
 
     /**
-    * 
+    * Segmentation result.
     */
     @SerializedName("Paragraphs")
     @Expose
     private LiveAiParagraphInfo [] Paragraphs;
 
     /**
-     * Get  
-     * @return Paragraphs 
+     * Get Segmentation result. 
+     * @return Paragraphs Segmentation result.
      */
     public LiveAiParagraphInfo [] getParagraphs() {
         return this.Paragraphs;
     }
 
     /**
-     * Set 
-     * @param Paragraphs 
+     * Set Segmentation result.
+     * @param Paragraphs Segmentation result.
      */
     public void setParagraphs(LiveAiParagraphInfo [] Paragraphs) {
         this.Paragraphs = Paragraphs;

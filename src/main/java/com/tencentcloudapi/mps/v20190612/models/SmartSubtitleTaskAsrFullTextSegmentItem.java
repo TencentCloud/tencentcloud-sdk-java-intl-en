@@ -52,7 +52,7 @@ public class SmartSubtitleTaskAsrFullTextSegmentItem extends AbstractModel {
     private String Text;
 
     /**
-    * 
+    * <p>Word timestamp information.</p>
     */
     @SerializedName("Wordlist")
     @Expose
@@ -130,16 +130,16 @@ public class SmartSubtitleTaskAsrFullTextSegmentItem extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return Wordlist 
+     * Get <p>Word timestamp information.</p> 
+     * @return Wordlist <p>Word timestamp information.</p>
      */
     public WordResult [] getWordlist() {
         return this.Wordlist;
     }
 
     /**
-     * Set 
-     * @param Wordlist 
+     * Set <p>Word timestamp information.</p>
+     * @param Wordlist <p>Word timestamp information.</p>
      */
     public void setWordlist(WordResult [] Wordlist) {
         this.Wordlist = Wordlist;

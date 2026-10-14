@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class RestartNodesRequest extends AbstractModel {
 
     /**
-    * Cluster instance ID
+    * Cluster instance ID.
     */
     @SerializedName("InstanceId")
     @Expose
@@ -38,37 +38,79 @@ public class RestartNodesRequest extends AbstractModel {
     private String [] NodeNames;
 
     /**
-    * Whether to force restart
+    * Whether to perform forced reboot.
     */
     @SerializedName("ForceRestart")
     @Expose
     private Boolean ForceRestart;
 
     /**
-    * The restart mode. Valid values: `in-place` (default), `blue-green`.
+    * Optional restart mode. `in-place`: restart; `blue-green`: blue-green restart. Default value: `in-place`.
     */
     @SerializedName("RestartMode")
     @Expose
     private String RestartMode;
 
     /**
-    * The node status, applicable in the blue/green mode. The blue/green restart is risky if the node is offline.
+    * Node status, for use in blue-green mode; offline node blue/green at risk
     */
     @SerializedName("IsOffline")
     @Expose
     private Boolean IsOffline;
 
     /**
-     * Get Cluster instance ID 
-     * @return InstanceId Cluster instance ID
+    * cvm delay listing time
+    */
+    @SerializedName("CvmDelayOnlineTime")
+    @Expose
+    private Long CvmDelayOnlineTime;
+
+    /**
+    * Number of concurrent shard migrations
+    */
+    @SerializedName("ShardAllocationConcurrents")
+    @Expose
+    private Long ShardAllocationConcurrents;
+
+    /**
+    * Shard migration concurrency speed
+    */
+    @SerializedName("ShardAllocationBytes")
+    @Expose
+    private Long ShardAllocationBytes;
+
+    /**
+    * Whether to enable the placement group asynchronous task
+    */
+    @SerializedName("EnableScheduleRecoverGroup")
+    @Expose
+    private Boolean EnableScheduleRecoverGroup;
+
+    /**
+    * Time period of the async task for the placement group
+    */
+    @SerializedName("EnableScheduleOperationDuration")
+    @Expose
+    private EnableScheduleOperationDuration EnableScheduleOperationDuration;
+
+    /**
+    * Event ID list.
+    */
+    @SerializedName("EventTypeIds")
+    @Expose
+    private String [] EventTypeIds;
+
+    /**
+     * Get Cluster instance ID. 
+     * @return InstanceId Cluster instance ID.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Cluster instance ID
-     * @param InstanceId Cluster instance ID
+     * Set Cluster instance ID.
+     * @param InstanceId Cluster instance ID.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
@@ -91,51 +133,147 @@ public class RestartNodesRequest extends AbstractModel {
     }
 
     /**
-     * Get Whether to force restart 
-     * @return ForceRestart Whether to force restart
+     * Get Whether to perform forced reboot. 
+     * @return ForceRestart Whether to perform forced reboot.
      */
     public Boolean getForceRestart() {
         return this.ForceRestart;
     }
 
     /**
-     * Set Whether to force restart
-     * @param ForceRestart Whether to force restart
+     * Set Whether to perform forced reboot.
+     * @param ForceRestart Whether to perform forced reboot.
      */
     public void setForceRestart(Boolean ForceRestart) {
         this.ForceRestart = ForceRestart;
     }
 
     /**
-     * Get The restart mode. Valid values: `in-place` (default), `blue-green`. 
-     * @return RestartMode The restart mode. Valid values: `in-place` (default), `blue-green`.
+     * Get Optional restart mode. `in-place`: restart; `blue-green`: blue-green restart. Default value: `in-place`. 
+     * @return RestartMode Optional restart mode. `in-place`: restart; `blue-green`: blue-green restart. Default value: `in-place`.
      */
     public String getRestartMode() {
         return this.RestartMode;
     }
 
     /**
-     * Set The restart mode. Valid values: `in-place` (default), `blue-green`.
-     * @param RestartMode The restart mode. Valid values: `in-place` (default), `blue-green`.
+     * Set Optional restart mode. `in-place`: restart; `blue-green`: blue-green restart. Default value: `in-place`.
+     * @param RestartMode Optional restart mode. `in-place`: restart; `blue-green`: blue-green restart. Default value: `in-place`.
      */
     public void setRestartMode(String RestartMode) {
         this.RestartMode = RestartMode;
     }
 
     /**
-     * Get The node status, applicable in the blue/green mode. The blue/green restart is risky if the node is offline. 
-     * @return IsOffline The node status, applicable in the blue/green mode. The blue/green restart is risky if the node is offline.
+     * Get Node status, for use in blue-green mode; offline node blue/green at risk 
+     * @return IsOffline Node status, for use in blue-green mode; offline node blue/green at risk
      */
     public Boolean getIsOffline() {
         return this.IsOffline;
     }
 
     /**
-     * Set The node status, applicable in the blue/green mode. The blue/green restart is risky if the node is offline.
-     * @param IsOffline The node status, applicable in the blue/green mode. The blue/green restart is risky if the node is offline.
+     * Set Node status, for use in blue-green mode; offline node blue/green at risk
+     * @param IsOffline Node status, for use in blue-green mode; offline node blue/green at risk
      */
     public void setIsOffline(Boolean IsOffline) {
         this.IsOffline = IsOffline;
+    }
+
+    /**
+     * Get cvm delay listing time 
+     * @return CvmDelayOnlineTime cvm delay listing time
+     */
+    public Long getCvmDelayOnlineTime() {
+        return this.CvmDelayOnlineTime;
+    }
+
+    /**
+     * Set cvm delay listing time
+     * @param CvmDelayOnlineTime cvm delay listing time
+     */
+    public void setCvmDelayOnlineTime(Long CvmDelayOnlineTime) {
+        this.CvmDelayOnlineTime = CvmDelayOnlineTime;
+    }
+
+    /**
+     * Get Number of concurrent shard migrations 
+     * @return ShardAllocationConcurrents Number of concurrent shard migrations
+     */
+    public Long getShardAllocationConcurrents() {
+        return this.ShardAllocationConcurrents;
+    }
+
+    /**
+     * Set Number of concurrent shard migrations
+     * @param ShardAllocationConcurrents Number of concurrent shard migrations
+     */
+    public void setShardAllocationConcurrents(Long ShardAllocationConcurrents) {
+        this.ShardAllocationConcurrents = ShardAllocationConcurrents;
+    }
+
+    /**
+     * Get Shard migration concurrency speed 
+     * @return ShardAllocationBytes Shard migration concurrency speed
+     */
+    public Long getShardAllocationBytes() {
+        return this.ShardAllocationBytes;
+    }
+
+    /**
+     * Set Shard migration concurrency speed
+     * @param ShardAllocationBytes Shard migration concurrency speed
+     */
+    public void setShardAllocationBytes(Long ShardAllocationBytes) {
+        this.ShardAllocationBytes = ShardAllocationBytes;
+    }
+
+    /**
+     * Get Whether to enable the placement group asynchronous task 
+     * @return EnableScheduleRecoverGroup Whether to enable the placement group asynchronous task
+     */
+    public Boolean getEnableScheduleRecoverGroup() {
+        return this.EnableScheduleRecoverGroup;
+    }
+
+    /**
+     * Set Whether to enable the placement group asynchronous task
+     * @param EnableScheduleRecoverGroup Whether to enable the placement group asynchronous task
+     */
+    public void setEnableScheduleRecoverGroup(Boolean EnableScheduleRecoverGroup) {
+        this.EnableScheduleRecoverGroup = EnableScheduleRecoverGroup;
+    }
+
+    /**
+     * Get Time period of the async task for the placement group 
+     * @return EnableScheduleOperationDuration Time period of the async task for the placement group
+     */
+    public EnableScheduleOperationDuration getEnableScheduleOperationDuration() {
+        return this.EnableScheduleOperationDuration;
+    }
+
+    /**
+     * Set Time period of the async task for the placement group
+     * @param EnableScheduleOperationDuration Time period of the async task for the placement group
+     */
+    public void setEnableScheduleOperationDuration(EnableScheduleOperationDuration EnableScheduleOperationDuration) {
+        this.EnableScheduleOperationDuration = EnableScheduleOperationDuration;
+    }
+
+    /**
+     * Get Event ID list. 
+     * @return EventTypeIds Event ID list.
+     */
+    public String [] getEventTypeIds() {
+        return this.EventTypeIds;
+    }
+
+    /**
+     * Set Event ID list.
+     * @param EventTypeIds Event ID list.
+     */
+    public void setEventTypeIds(String [] EventTypeIds) {
+        this.EventTypeIds = EventTypeIds;
     }
 
     public RestartNodesRequest() {
@@ -164,6 +302,27 @@ public class RestartNodesRequest extends AbstractModel {
         if (source.IsOffline != null) {
             this.IsOffline = new Boolean(source.IsOffline);
         }
+        if (source.CvmDelayOnlineTime != null) {
+            this.CvmDelayOnlineTime = new Long(source.CvmDelayOnlineTime);
+        }
+        if (source.ShardAllocationConcurrents != null) {
+            this.ShardAllocationConcurrents = new Long(source.ShardAllocationConcurrents);
+        }
+        if (source.ShardAllocationBytes != null) {
+            this.ShardAllocationBytes = new Long(source.ShardAllocationBytes);
+        }
+        if (source.EnableScheduleRecoverGroup != null) {
+            this.EnableScheduleRecoverGroup = new Boolean(source.EnableScheduleRecoverGroup);
+        }
+        if (source.EnableScheduleOperationDuration != null) {
+            this.EnableScheduleOperationDuration = new EnableScheduleOperationDuration(source.EnableScheduleOperationDuration);
+        }
+        if (source.EventTypeIds != null) {
+            this.EventTypeIds = new String[source.EventTypeIds.length];
+            for (int i = 0; i < source.EventTypeIds.length; i++) {
+                this.EventTypeIds[i] = new String(source.EventTypeIds[i]);
+            }
+        }
     }
 
 
@@ -176,6 +335,12 @@ public class RestartNodesRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ForceRestart", this.ForceRestart);
         this.setParamSimple(map, prefix + "RestartMode", this.RestartMode);
         this.setParamSimple(map, prefix + "IsOffline", this.IsOffline);
+        this.setParamSimple(map, prefix + "CvmDelayOnlineTime", this.CvmDelayOnlineTime);
+        this.setParamSimple(map, prefix + "ShardAllocationConcurrents", this.ShardAllocationConcurrents);
+        this.setParamSimple(map, prefix + "ShardAllocationBytes", this.ShardAllocationBytes);
+        this.setParamSimple(map, prefix + "EnableScheduleRecoverGroup", this.EnableScheduleRecoverGroup);
+        this.setParamObj(map, prefix + "EnableScheduleOperationDuration.", this.EnableScheduleOperationDuration);
+        this.setParamArraySimple(map, prefix + "EventTypeIds.", this.EventTypeIds);
 
     }
 }

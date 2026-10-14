@@ -38,7 +38,7 @@ public class GetFunctionLogsResponse extends AbstractModel {
     private FunctionLog [] Data;
 
     /**
-    * This field is disused.
+    * This field is offline.
     */
     @SerializedName("SearchContext")
     @Expose
@@ -84,16 +84,16 @@ public class GetFunctionLogsResponse extends AbstractModel {
     }
 
     /**
-     * Get This field is disused. 
-     * @return SearchContext This field is disused.
+     * Get This field is offline. 
+     * @return SearchContext This field is offline.
      */
     public LogSearchContext getSearchContext() {
         return this.SearchContext;
     }
 
     /**
-     * Set This field is disused.
-     * @param SearchContext This field is disused.
+     * Set This field is offline.
+     * @param SearchContext This field is offline.
      */
     public void setSearchContext(LogSearchContext SearchContext) {
         this.SearchContext = SearchContext;

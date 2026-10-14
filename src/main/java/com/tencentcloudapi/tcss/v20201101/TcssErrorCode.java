@@ -1,6 +1,6 @@
 package com.tencentcloudapi.tcss.v20201101;
 public enum TcssErrorCode {
-     /* A CAM signature/authentication error occurred. */
+     /* CAM signature/authentication error. */
      AUTHFAILURE("AuthFailure"),
      
      /* The operation failed. */
@@ -12,7 +12,7 @@ public enum TcssErrorCode {
      /* Licenses are insufficient. */
      FAILEDOPERATION_AUTHORIZEDNOTENOUGH("FailedOperation.AuthorizedNotEnough"),
      
-     /* The response data value is incorrect. */
+     /* data value is incorrect. */
      FAILEDOPERATION_DATAVALUENOTCORRECT("FailedOperation.DataValueNotCorrect"),
      
      /* The scan is in progress or there is no scan permission. We recommend you perform the scan after authorization. */
@@ -39,31 +39,31 @@ public enum TcssErrorCode {
      /* Too many images were selected. */
      FAILEDOPERATION_RULESELECTIMAGEOUTRANGE("FailedOperation.RuleSelectImageOutRange"),
      
-     /* An internal error occurred. */
+     /* Internal error. */
      INTERNALERROR("InternalError"),
      
-     /* The user is unauthorized. */
+     /* User not authorized. */
      INTERNALERROR_ERRROLENOTEXIST("InternalError.ErrRoleNotExist"),
      
-     /* The database operation failed. */
+     /* Database operation failed. */
      INTERNALERROR_MAINDBFAIL("InternalError.MainDBFail"),
      
-     /* The parameter is incorrect. */
+     /* Parameter error. */
      INVALIDPARAMETER("InvalidParameter"),
      
      /* The IP format is invalid. */
      INVALIDPARAMETER_ERRIPNOVALID("InvalidParameter.ErrIpNoValid"),
      
-     /* The parameter format is incorrect. */
+     /*  */
      INVALIDPARAMETER_INVALIDFORMAT("InvalidParameter.InvalidFormat"),
      
      /* IP format error */
      INVALIDPARAMETER_IPNOVALID("InvalidParameter.IpNoValid"),
      
-     /* The required parameter is missing. */
+     /*  */
      INVALIDPARAMETER_MISSINGPARAMETER("InvalidParameter.MissingParameter"),
      
-     /* A parameter parsing error occurred. */
+     /* Incorrect parameter parsing. */
      INVALIDPARAMETER_PARSINGERROR("InvalidParameter.ParsingError"),
      
      /* The port format is invalid. */
@@ -81,7 +81,7 @@ public enum TcssErrorCode {
      /* The current rule parameter is invalid. */
      INVALIDPARAMETER_RULEINFOINVALID("InvalidParameter.RuleInfoInValid"),
      
-     /* The parameter value is incorrect. */
+     /* Parameter value error. */
      INVALIDPARAMETERVALUE("InvalidParameterValue"),
      
      /* The current data was not found. */
@@ -111,7 +111,7 @@ public enum TcssErrorCode {
      /* Resources are insufficient. */
      RESOURCEINSUFFICIENT("ResourceInsufficient"),
      
-     /* The resource does not exist. */
+     /*  */
      RESOURCENOTFOUND("ResourceNotFound"),
      
      /* The resource is unavailable. */

@@ -31,35 +31,35 @@ public class CreateIndexRequest extends AbstractModel {
     private String InstanceId;
 
     /**
-    * Type of the index to create. `auto`: Automated; `normal`: General.
+    * Index type of the created index. auto: autonomous index; normal: general index
     */
     @SerializedName("IndexType")
     @Expose
     private String IndexType;
 
     /**
-    * Name of the index to create
+    * Index name of the created index
     */
     @SerializedName("IndexName")
     @Expose
     private String IndexName;
 
     /**
-    * JSON-formatted index metadata to create, such as `mappings` and `settings`
+    * [Required] JSON-formatted index metadata created, such as mappings and settings
     */
     @SerializedName("IndexMetaJson")
     @Expose
     private String IndexMetaJson;
 
     /**
-    * Username for cluster access
+    * Cluster access username.
     */
     @SerializedName("Username")
     @Expose
     private String Username;
 
     /**
-    * Password for cluster access
+    * Cluster access password
     */
     @SerializedName("Password")
     @Expose
@@ -82,80 +82,80 @@ public class CreateIndexRequest extends AbstractModel {
     }
 
     /**
-     * Get Type of the index to create. `auto`: Automated; `normal`: General. 
-     * @return IndexType Type of the index to create. `auto`: Automated; `normal`: General.
+     * Get Index type of the created index. auto: autonomous index; normal: general index 
+     * @return IndexType Index type of the created index. auto: autonomous index; normal: general index
      */
     public String getIndexType() {
         return this.IndexType;
     }
 
     /**
-     * Set Type of the index to create. `auto`: Automated; `normal`: General.
-     * @param IndexType Type of the index to create. `auto`: Automated; `normal`: General.
+     * Set Index type of the created index. auto: autonomous index; normal: general index
+     * @param IndexType Index type of the created index. auto: autonomous index; normal: general index
      */
     public void setIndexType(String IndexType) {
         this.IndexType = IndexType;
     }
 
     /**
-     * Get Name of the index to create 
-     * @return IndexName Name of the index to create
+     * Get Index name of the created index 
+     * @return IndexName Index name of the created index
      */
     public String getIndexName() {
         return this.IndexName;
     }
 
     /**
-     * Set Name of the index to create
-     * @param IndexName Name of the index to create
+     * Set Index name of the created index
+     * @param IndexName Index name of the created index
      */
     public void setIndexName(String IndexName) {
         this.IndexName = IndexName;
     }
 
     /**
-     * Get JSON-formatted index metadata to create, such as `mappings` and `settings` 
-     * @return IndexMetaJson JSON-formatted index metadata to create, such as `mappings` and `settings`
+     * Get [Required] JSON-formatted index metadata created, such as mappings and settings 
+     * @return IndexMetaJson [Required] JSON-formatted index metadata created, such as mappings and settings
      */
     public String getIndexMetaJson() {
         return this.IndexMetaJson;
     }
 
     /**
-     * Set JSON-formatted index metadata to create, such as `mappings` and `settings`
-     * @param IndexMetaJson JSON-formatted index metadata to create, such as `mappings` and `settings`
+     * Set [Required] JSON-formatted index metadata created, such as mappings and settings
+     * @param IndexMetaJson [Required] JSON-formatted index metadata created, such as mappings and settings
      */
     public void setIndexMetaJson(String IndexMetaJson) {
         this.IndexMetaJson = IndexMetaJson;
     }
 
     /**
-     * Get Username for cluster access 
-     * @return Username Username for cluster access
+     * Get Cluster access username. 
+     * @return Username Cluster access username.
      */
     public String getUsername() {
         return this.Username;
     }
 
     /**
-     * Set Username for cluster access
-     * @param Username Username for cluster access
+     * Set Cluster access username.
+     * @param Username Cluster access username.
      */
     public void setUsername(String Username) {
         this.Username = Username;
     }
 
     /**
-     * Get Password for cluster access 
-     * @return Password Password for cluster access
+     * Get Cluster access password 
+     * @return Password Cluster access password
      */
     public String getPassword() {
         return this.Password;
     }
 
     /**
-     * Set Password for cluster access
-     * @param Password Password for cluster access
+     * Set Cluster access password
+     * @param Password Cluster access password
      */
     public void setPassword(String Password) {
         this.Password = Password;

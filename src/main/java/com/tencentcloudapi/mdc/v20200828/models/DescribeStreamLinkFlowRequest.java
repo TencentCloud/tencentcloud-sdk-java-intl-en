@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DescribeStreamLinkFlowRequest extends AbstractModel {
 
     /**
-    * Flow ID
+    * <p>Stream Id.</p>
     */
     @SerializedName("FlowId")
     @Expose
     private String FlowId;
 
     /**
-     * Get Flow ID 
-     * @return FlowId Flow ID
+     * Get <p>Stream Id.</p> 
+     * @return FlowId <p>Stream Id.</p>
      */
     public String getFlowId() {
         return this.FlowId;
     }
 
     /**
-     * Set Flow ID
-     * @param FlowId Flow ID
+     * Set <p>Stream Id.</p>
+     * @param FlowId <p>Stream Id.</p>
      */
     public void setFlowId(String FlowId) {
         this.FlowId = FlowId;

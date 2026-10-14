@@ -3,34 +3,34 @@ public enum ScfErrorCode {
      /* Operation failed. */
      FAILEDOPERATION("FailedOperation"),
      
-     /*  */
+     /* The account balance is insufficient. */
      FAILEDOPERATION_ACCOUNTINSUFFICIENT("FailedOperation.AccountInsufficient"),
      
-     /* Failed to create the API gateway trigger. */
+     /* Failed to create the API Gateway trigger. */
      FAILEDOPERATION_APIGATEWAY("FailedOperation.ApiGateway"),
      
      /* Failed to create the trigger. */
      FAILEDOPERATION_APIGW("FailedOperation.Apigw"),
      
-     /* Failed to obtain Apm InstanceId */
+     /* Failed to obtain the Apm InstanceId. */
      FAILEDOPERATION_APMCONFIGINSTANCEID("FailedOperation.ApmConfigInstanceId"),
      
      /* This operation is not supported by the current async event status. Please try again later. */
      FAILEDOPERATION_ASYNCEVENTSTATUS("FailedOperation.AsyncEventStatus"),
      
-     /* Login information verification failed and token verification failed. */
+     /* Login information verification failed. token verification failed. */
      FAILEDOPERATION_AUTHFAILURE("FailedOperation.AuthFailure"),
      
-     /*  */
+     /* Failed to bind the plugin. Check parameters. */
      FAILEDOPERATION_BINDPLUGIN("FailedOperation.BindPlugin"),
      
-     /*  */
+     /* Failed to call NetDeploy. */
      FAILEDOPERATION_CALLNETDEPLOYFAILED("FailedOperation.CallNetDeployFailed"),
      
      /* Failed to query the role information. */
      FAILEDOPERATION_CALLROLEFAILED("FailedOperation.CallRoleFailed"),
      
-     /*  */
+     /* CLS service is not registered. */
      FAILEDOPERATION_CLSSERVICEUNREGISTERED("FailedOperation.ClsServiceUnregistered"),
      
      /* CopyAsyncRun parameter error */
@@ -42,22 +42,22 @@ public enum ScfErrorCode {
      /* Replication to this region is not supported. */
      FAILEDOPERATION_COPYFUNCTION("FailedOperation.CopyFunction"),
      
-     /* Failed to operate on the COS resources. */
+     /* Failed to manipulate COS resources. */
      FAILEDOPERATION_COS("FailedOperation.Cos"),
      
      /* Failed to create the alias. */
      FAILEDOPERATION_CREATEALIAS("FailedOperation.CreateAlias"),
      
-     /* Failed to create the namespace. */
+     /* Namespace creation failed. */
      FAILEDOPERATION_CREATENAMESPACE("FailedOperation.CreateNamespace"),
      
-     /* This operation is not supported in the current function state. */
+     /* The function status currently does not allow this operation. */
      FAILEDOPERATION_CREATETRIGGER("FailedOperation.CreateTrigger"),
      
      /* This operation cannot be performed in the current debugging status. */
      FAILEDOPERATION_DEBUGMODESTATUS("FailedOperation.DebugModeStatus"),
      
-     /* Execution timeout period cannot be updated in debug mode. */
+     /* The execution timeout period cannot be updated in debugging mode. */
      FAILEDOPERATION_DEBUGMODEUPDATETIMEOUTFAIL("FailedOperation.DebugModeUpdateTimeOutFail"),
      
      /* Failed to delete the alias. */
@@ -75,7 +75,7 @@ public enum ScfErrorCode {
      /* Failed to delete the trigger. */
      FAILEDOPERATION_DELETETRIGGER("FailedOperation.DeleteTrigger"),
      
-     /*  */
+     /* The Url is occupied and cannot be deleted. */
      FAILEDOPERATION_DELETETRIGGER_URLUSED("FailedOperation.DeleteTrigger.UrlUsed"),
      
      /* You cannot update code in the current function state. Please try again when the state is normal. */
@@ -93,22 +93,22 @@ public enum ScfErrorCode {
      /* Failed to get the function code address. */
      FAILEDOPERATION_GETFUNCTIONADDRESS("FailedOperation.GetFunctionAddress"),
      
-     /*  */
+     /* InstanceNotFound: instance does not exist. */
      FAILEDOPERATION_INSTANCENOTFOUND("FailedOperation.InstanceNotFound"),
      
      /* The current account or namespace is in arrears. Please try again when it becomes available. */
      FAILEDOPERATION_INSUFFICIENTBALANCE("FailedOperation.InsufficientBalance"),
      
-     /*  */
+     /* Region resources sold out. */
      FAILEDOPERATION_INSUFFICIENTRESOURCES("FailedOperation.InsufficientResources"),
      
      /* Failed to invoke the function. */
      FAILEDOPERATION_INVOKEFUNCTION("FailedOperation.InvokeFunction"),
      
-     /*  */
+     /* Hybrid node configuration exception. */
      FAILEDOPERATION_MIXNODECONFIG("FailedOperation.MixNodeConfig"),
      
-     /* Failed to activate the service. */
+     /* Service activation failed. */
      FAILEDOPERATION_OPENSERVICE("FailedOperation.OpenService"),
      
      /* Operation conflict. */
@@ -135,10 +135,10 @@ public enum ScfErrorCode {
      /* You cannot publish a version in the current function state. Please try again when the state is normal. */
      FAILEDOPERATION_PUBLISHVERSION("FailedOperation.PublishVersion"),
      
-     /* The role does not exist. */
+     /* Role does not exist. */
      FAILEDOPERATION_QCSROLENOTFOUND("FailedOperation.QcsRoleNotFound"),
      
-     /* Query failed. */
+     /* Failed to query. */
      FAILEDOPERATION_QUERYERROR("FailedOperation.QueryError"),
      
      /* The value of ReservedExceedTotal exceeds the limit. */
@@ -150,10 +150,10 @@ public enum ScfErrorCode {
      /* ServiceClosed. Please check and try again. */
      FAILEDOPERATION_SERVICECLOSED("FailedOperation.ServiceClosed"),
      
-     /*  */
+     /* The SessionName parameter is abnormal. */
      FAILEDOPERATION_SESSIONNAME("FailedOperation.SessionName"),
      
-     /* This topic does not exsit. */
+     /* Topic not found. */
      FAILEDOPERATION_TOPICNOTEXIST("FailedOperation.TopicNotExist"),
      
      /* The user already has a concurrency quota setting task in progress. Please try again later. */
@@ -168,7 +168,7 @@ public enum ScfErrorCode {
      /* You cannot update code in the current function state. Please try again when the state is normal. */
      FAILEDOPERATION_UPDATEFUNCTIONCODE("FailedOperation.UpdateFunctionCode"),
      
-     /* The `UpdateFunctionConfiguration` operation failed. */
+     /* UpdateFunctionConfiguration operation failed. */
      FAILEDOPERATION_UPDATEFUNCTIONCONFIGURATION("FailedOperation.UpdateFunctionConfiguration"),
      
      /* Failed to update the status */
@@ -180,13 +180,13 @@ public enum ScfErrorCode {
      /* Internal error. */
      INTERNALERROR("InternalError"),
      
-     /* Internal errors occurred during the creation of the apigw trigger. */
+     /* Internal error occurred while creating an apigw trigger. */
      INTERNALERROR_APIGATEWAY("InternalError.ApiGateway"),
      
-     /* ckafka API failure. */
+     /* ckafka interface failure. */
      INTERNALERROR_CKAFKA("InternalError.Ckafka"),
      
-     /* Failed to delete the cmq trigger. */
+     /* Failed to delete the cmq Trigger. */
      INTERNALERROR_CMQ("InternalError.Cmq"),
      
      /* Failed to update the trigger. */
@@ -195,10 +195,10 @@ public enum ScfErrorCode {
      /* ES error. */
      INTERNALERROR_ES("InternalError.ES"),
      
-     /* Internal service error */
+     /* Internal service exception. */
      INTERNALERROR_EXCEPTION("InternalError.Exception"),
      
-     /*  */
+     /* Search failed */
      INTERNALERROR_SEARCHFAILED("InternalError.SearchFailed"),
      
      /* Internal system error. */
@@ -207,25 +207,25 @@ public enum ScfErrorCode {
      /* Internal service error. */
      INTERNALERROR_SYSTEMERROR("InternalError.SystemError"),
      
-     /* Log parameter error */
+     /* The log parameter is incorrect. */
      INVALIDPARAMETER_CLS("InvalidParameter.Cls"),
      
      /* The value of `FunctionName` does not conform to the specification. Please fix it and try again. For more information, please visit https://tencentcs.com/5jXKFnBW. */
      INVALIDPARAMETER_FUNCTIONNAME("InvalidParameter.FunctionName"),
      
-     /*  */
+     /* GooseFsRequired is required. */
      INVALIDPARAMETER_GOOSEFSREQUIRED("InvalidParameter.GooseFsRequired"),
      
-     /* Function creation parameter error. */
+     /* Function creation parameter passing exception. */
      INVALIDPARAMETER_PARAMERROR("InvalidParameter.ParamError"),
      
-     /* Invalid request parameter. */
+     /* Invalid request parameters. */
      INVALIDPARAMETER_PAYLOAD("InvalidParameter.Payload"),
      
      /* Request size  */
      INVALIDPARAMETER_REQUESTTOOLARGE("InvalidParameter.RequestTooLarge"),
      
-     /* RoleCheck parameter error */
+     /* RoleCheck parameter error. */
      INVALIDPARAMETER_ROLECHECK("InvalidParameter.RoleCheck"),
      
      /* Incorrect `RoutingConfig` parameter. */
@@ -234,7 +234,7 @@ public enum ScfErrorCode {
      /* Incorrect parameter value. */
      INVALIDPARAMETERVALUE("InvalidParameterValue"),
      
-     /* Invalid `Action` value. For more information, go to https://tencentcs.com/5jXKFnBW. */
+     /* The Action value does not conform to the specification. Fix it and try again. See https://www.tencentcloud.com/document/product/583/17235.?from_cn_redirect=1 */
      INVALIDPARAMETERVALUE_ACTION("InvalidParameterValue.Action"),
      
      /* Incorrect `AdditionalVersionWeights` parameter. */
@@ -246,13 +246,13 @@ public enum ScfErrorCode {
      /* ApiGateway parameter error. */
      INVALIDPARAMETERVALUE_APIGATEWAY("InvalidParameterValue.ApiGateway"),
      
-     /* ApmConfig input error */
+     /* Invalid ApmConfig parameter. */
      INVALIDPARAMETERVALUE_APMCONFIG("InvalidParameterValue.ApmConfig"),
      
-     /* ApmConfigInstanceId input error */
+     /* Invalid ApmConfigInstanceId parameter. */
      INVALIDPARAMETERVALUE_APMCONFIGINSTANCEID("InvalidParameterValue.ApmConfigInstanceId"),
      
-     /* ApmConfigRegion input error */
+     /* Invalid ApmConfigRegion parameter. */
      INVALIDPARAMETERVALUE_APMCONFIGREGION("InvalidParameterValue.ApmConfigRegion"),
      
      /* The value of Args is incorrect. */
@@ -261,52 +261,52 @@ public enum ScfErrorCode {
      /* The parameter for async retry configuration of the function is invalid. */
      INVALIDPARAMETERVALUE_ASYNCTRIGGERCONFIG("InvalidParameterValue.AsyncTriggerConfig"),
      
-     /* Cdn error. */
+     /* Cdn input error. */
      INVALIDPARAMETERVALUE_CDN("InvalidParameterValue.Cdn"),
      
-     /*  */
+     /* The CfsId parameter is abnormal. */
      INVALIDPARAMETERVALUE_CFSID("InvalidParameterValue.CfsId"),
      
-     /*  */
+     /* The CfsLocalMountDir parameter is abnormal. */
      INVALIDPARAMETERVALUE_CFSLOCALMOUNTDIR("InvalidParameterValue.CfsLocalMountDir"),
      
-     /*  */
+     /* The CfsMountInsId parameter is abnormal. */
      INVALIDPARAMETERVALUE_CFSMOUNTINSID("InvalidParameterValue.CfsMountInsId"),
      
-     /* The `cfs` configuration item already exists. */
+     /* Duplicate cfs configuration item. */
      INVALIDPARAMETERVALUE_CFSPARAMETERDUPLICATE("InvalidParameterValue.CfsParameterDuplicate"),
      
-     /* The value of `cfs` configuration item does not meet the specification. */
+     /* cfs configuration item value does not conform to the specification. */
      INVALIDPARAMETERVALUE_CFSPARAMETERERROR("InvalidParameterValue.CfsParameterError"),
      
-     /*  */
+     /* The CfsRegion parameter is abnormal. */
      INVALIDPARAMETERVALUE_CFSREGION("InvalidParameterValue.CfsRegion"),
      
-     /*  */
+     /* The CfsRemoteMountDir parameter is abnormal. */
      INVALIDPARAMETERVALUE_CFSREMOTEMOUNTDIR("InvalidParameterValue.CfsRemoteMountDir"),
      
-     /*  */
+     /* The CfsType parameter is abnormal. */
      INVALIDPARAMETERVALUE_CFSTYPE("InvalidParameterValue.CfsType"),
      
-     /*  */
+     /* The CfsUserGroupId parameter is abnormal. */
      INVALIDPARAMETERVALUE_CFSUSERGROUPID("InvalidParameterValue.CfsUserGroupId"),
      
-     /*  */
+     /* The CfsUserId parameter is abnormal. */
      INVALIDPARAMETERVALUE_CFSUSERID("InvalidParameterValue.CfsUserId"),
      
-     /* Ckafka error. */
+     /* Ckafka input error. */
      INVALIDPARAMETERVALUE_CKAFKA("InvalidParameterValue.Ckafka"),
      
      /* Function running parameter error */
      INVALIDPARAMETERVALUE_CLIENTCONTEXT("InvalidParameterValue.ClientContext"),
      
-     /* Cls error. */
+     /* Cls input error. */
      INVALIDPARAMETERVALUE_CLS("InvalidParameterValue.Cls"),
      
-     /* To modify CLS configuration, Role parameter is required. Please check and try again. */
+     /* To modify the Cls configuration, you need to pass in the Role parameter. Fix it and try again. */
      INVALIDPARAMETERVALUE_CLSROLE("InvalidParameterValue.ClsRole"),
      
-     /* Cmq error. */
+     /* Cmq input error. */
      INVALIDPARAMETERVALUE_CMQ("InvalidParameterValue.Cmq"),
      
      /* Code error. */
@@ -327,7 +327,7 @@ public enum ScfErrorCode {
      /* Incorrect `Content` parameter. */
      INVALIDPARAMETERVALUE_CONTENT("InvalidParameterValue.Content"),
      
-     /* Cos error. */
+     /* Cos input error. */
      INVALIDPARAMETERVALUE_COS("InvalidParameterValue.Cos"),
      
      /* Invalid CosBucketName. */
@@ -336,37 +336,37 @@ public enum ScfErrorCode {
      /* The value of CosBucketRegion is invalid. Please modify and try again. See: https://tencentcs.com/5jXKFnBW */
      INVALIDPARAMETERVALUE_COSBUCKETREGION("InvalidParameterValue.CosBucketRegion"),
      
-     /*  */
+     /* The CosFsBucketMountDir parameter is abnormal. */
      INVALIDPARAMETERVALUE_COSFSBUCKETMOUNTDIR("InvalidParameterValue.CosFsBucketMountDir"),
      
-     /*  */
+     /* The CosFsBucketName parameter is abnormal. */
      INVALIDPARAMETERVALUE_COSFSBUCKETNAME("InvalidParameterValue.CosFsBucketName"),
      
-     /*  */
+     /* The CosFsLocalMountDir parameter is abnormal. */
      INVALIDPARAMETERVALUE_COSFSLOCALMOUNTDIR("InvalidParameterValue.CosFsLocalMountDir"),
      
-     /*  */
+     /* The CosFsRegion parameter is abnormal. */
      INVALIDPARAMETERVALUE_COSFSREGION("InvalidParameterValue.CosFsRegion"),
      
-     /*  */
+     /* The CosFsStruction parameter is abnormal. */
      INVALIDPARAMETERVALUE_COSFSSTRUCTION("InvalidParameterValue.CosFsStruction"),
      
-     /*  */
+     /* The CosFsType parameter is abnormal. */
      INVALIDPARAMETERVALUE_COSFSTYPE("InvalidParameterValue.CosFsType"),
      
-     /* COS notification rule conflict */
+     /* COS notification rule conflict. */
      INVALIDPARAMETERVALUE_COSNOTIFYRULECONFLICT("InvalidParameterValue.CosNotifyRuleConflict"),
      
      /* Invalid CosObjectName. */
      INVALIDPARAMETERVALUE_COSOBJECTNAME("InvalidParameterValue.CosObjectName"),
      
-     /* CustomArgument exceeds the length limit. */
+     /* CustomArgument parameter length exceeds the limit. */
      INVALIDPARAMETERVALUE_CUSTOMARGUMENT("InvalidParameterValue.CustomArgument"),
      
-     /* DateTime error. */
+     /* Invalid DateTime input. */
      INVALIDPARAMETERVALUE_DATETIME("InvalidParameterValue.DateTime"),
      
-     /* Failed to create the default namespace. */
+     /* The default Namespace cannot be created. */
      INVALIDPARAMETERVALUE_DEFAULTNAMESPACE("InvalidParameterValue.DefaultNamespace"),
      
      /* The code parameter of the function template corresponding with the DemoID is error. */
@@ -375,41 +375,38 @@ public enum ScfErrorCode {
      /* The DemoId does not exist. */
      INVALIDPARAMETERVALUE_DEMOID("InvalidParameterValue.DemoId"),
      
-     /* Description error. */
+     /* Invalid Description. */
      INVALIDPARAMETERVALUE_DESCRIPTION("InvalidParameterValue.Description"),
      
-     /*  */
+     /* The DiskSize parameter value is improper. */
      INVALIDPARAMETERVALUE_DISKSIZE("InvalidParameterValue.DiskSize"),
      
      /* The configuration of the environment variable DNS[OS_NAMESERVER] is incorrect. */
      INVALIDPARAMETERVALUE_DNSINFO("InvalidParameterValue.DnsInfo"),
      
-     /*  */
+     /* DynamicEnabled parameter passing error. */
      INVALIDPARAMETERVALUE_DYNAMICENABLED("InvalidParameterValue.DynamicEnabled"),
      
-     /*  */
+     /* EASConfig parameters are abnormal. */
      INVALIDPARAMETERVALUE_EASCONFIG("InvalidParameterValue.EASConfig"),
      
-     /* EipConfig parameter error. */
+     /* The EipConfig parameter is incorrect. */
      INVALIDPARAMETERVALUE_EIPCONFIG("InvalidParameterValue.EipConfig"),
      
-     /* The value of `Enable` does not conform to the specification. Please fix it and try again. For more information, please visit https://tencentcs.com/5jXKFnBW. */
+     /* The Enable value does not conform to the specification. Fix it and try again. */
      INVALIDPARAMETERVALUE_ENABLE("InvalidParameterValue.Enable"),
      
      /* Environment error. */
      INVALIDPARAMETERVALUE_ENVIRONMENT("InvalidParameterValue.Environment"),
      
-     /* The size of the environment variable exceeds the limit. Please keep it within 4 KB. */
+     /* Environment variable size exceeds the limit. Keep it within 4 KB. */
      INVALIDPARAMETERVALUE_ENVIRONMENTEXCEEDEDLIMIT("InvalidParameterValue.EnvironmentExceededLimit"),
      
-     /* You cannot modify the function's system environment variables or runtime environment variables. */
+     /* Function system environment variables and runtime environment variables cannot be modified. */
      INVALIDPARAMETERVALUE_ENVIRONMENTSYSTEMPROTECT("InvalidParameterValue.EnvironmentSystemProtect"),
      
      /* Filters parameter error. */
      INVALIDPARAMETERVALUE_FILTERS("InvalidParameterValue.Filters"),
-     
-     /* The value of `FunctionName` is incorrect. See https://tencentcs.com/5jXKFnBW */
-     INVALIDPARAMETERVALUE_FUNCTION("InvalidParameterValue.Function"),
      
      /* The function does not exist. */
      INVALIDPARAMETERVALUE_FUNCTIONNAME("InvalidParameterValue.FunctionName"),
@@ -417,7 +414,7 @@ public enum ScfErrorCode {
      /* Request ID error */
      INVALIDPARAMETERVALUE_FUNCTIONREQUESTID("InvalidParameterValue.FunctionRequestId"),
      
-     /* FunctionType error */
+     /* FunctionType parameter error. */
      INVALIDPARAMETERVALUE_FUNCTIONTYPE("InvalidParameterValue.FunctionType"),
      
      /* The format of GitBranch is incorrect.  */
@@ -435,43 +432,43 @@ public enum ScfErrorCode {
      /* The format of GitUserName is incorrect. */
      INVALIDPARAMETERVALUE_GITUSERNAME("InvalidParameterValue.GitUserName"),
      
-     /*  */
+     /* GooseFsCluster parameter exception. */
      INVALIDPARAMETERVALUE_GOOSEFSCLUSTER("InvalidParameterValue.GooseFsCluster"),
      
-     /*  */
+     /* GooseFs SiteProperties configuration formatting failed. */
      INVALIDPARAMETERVALUE_GOOSEFSCLUSTERGOOSEFSSITEPROPERTIESBASE64DECODEERR("InvalidParameterValue.GooseFsClusterGooseFsSitePropertiesBase64DecodeErr"),
      
-     /*  */
+     /* GooseFs SiteProperties configuration format exception. */
      INVALIDPARAMETERVALUE_GOOSEFSCLUSTERGOOSEFSSITEPROPERTIESFORMATERR("InvalidParameterValue.GooseFsClusterGooseFsSitePropertiesFormatErr"),
      
-     /*  */
+     /* GooseFsEndpoint parameter exception. */
      INVALIDPARAMETERVALUE_GOOSEFSENDPOINT("InvalidParameterValue.GooseFsEndpoint"),
      
-     /*  */
+     /* GooseFsFuseJVMConfig parameter exception. */
      INVALIDPARAMETERVALUE_GOOSEFSFUSEJVMCONFIG("InvalidParameterValue.GooseFsFuseJVMConfig"),
      
-     /*  */
+     /* GooseFsLocalMountDir parameter exception. */
      INVALIDPARAMETERVALUE_GOOSEFSLOCALMOUNTDIR("InvalidParameterValue.GooseFsLocalMountDir"),
      
-     /*  */
+     /* GooseFsNamespace parameter exception. */
      INVALIDPARAMETERVALUE_GOOSEFSNAMESPACE("InvalidParameterValue.GooseFsNamespace"),
      
-     /*  */
+     /* GooseFsRemoteMountPath parameter exception. */
      INVALIDPARAMETERVALUE_GOOSEFSREMOTEMOUNTPATH("InvalidParameterValue.GooseFsRemoteMountPath"),
      
-     /*  */
+     /* GooseFsStructionError parameter exception. */
      INVALIDPARAMETERVALUE_GOOSEFSSTRUCTIONERROR("InvalidParameterValue.GooseFsStructionError"),
      
-     /*  */
+     /* GooseFsType parameter exception. */
      INVALIDPARAMETERVALUE_GOOSEFSTYPE("InvalidParameterValue.GooseFsType"),
      
      /* Handler error. */
      INVALIDPARAMETERVALUE_HANDLER("InvalidParameterValue.Handler"),
      
-     /* IdleTimeOut input parameter error */
+     /* IdleTimeOut parameter passing error. */
      INVALIDPARAMETERVALUE_IDLETIMEOUT("InvalidParameterValue.IdleTimeOut"),
      
-     /* ImageType error */
+     /* Invalid ImageType parameter value. */
      INVALIDPARAMETERVALUE_IMAGETYPE("InvalidParameterValue.ImageType"),
      
      /* The input of imageUri is incorrect. */
@@ -480,19 +477,19 @@ public enum ScfErrorCode {
      /* Invalid InlineZipFile. */
      INVALIDPARAMETERVALUE_INLINEZIPFILE("InvalidParameterValue.InlineZipFile"),
      
-     /*  */
+     /* InstanceConcurrencyConfig parameter passing error. */
      INVALIDPARAMETERVALUE_INSTANCECONCURRENCYCONFIG("InvalidParameterValue.InstanceConcurrencyConfig"),
      
      /* The `InvokeType` value does not conform to the specification. Please fix it and try again. */
      INVALIDPARAMETERVALUE_INVOKETYPE("InvalidParameterValue.InvokeType"),
      
-     /* The value of L5Enable is invalid. Please modify and try again. */
+     /* The L5Enable value does not match the specification. Fix it and try again. */
      INVALIDPARAMETERVALUE_L5ENABLE("InvalidParameterValue.L5Enable"),
      
      /* Incorrect `LayerName` parameter. */
      INVALIDPARAMETERVALUE_LAYERNAME("InvalidParameterValue.LayerName"),
      
-     /* Layers parameter error. */
+     /* Layers parameter passing error. */
      INVALIDPARAMETERVALUE_LAYERS("InvalidParameterValue.Layers"),
      
      /* Limit error. */
@@ -501,13 +498,13 @@ public enum ScfErrorCode {
      /* The parameter exceeds the length limit. */
      INVALIDPARAMETERVALUE_LIMITEXCEEDED("InvalidParameterValue.LimitExceeded"),
      
-     /*  */
+     /* The log format is incorrect. */
      INVALIDPARAMETERVALUE_LOGFORMAT("InvalidParameterValue.LogFormat"),
      
-     /*  */
+     /* MaxConcurrency parameter passing error. */
      INVALIDPARAMETERVALUE_MAXCONCURRENCY("InvalidParameterValue.MaxConcurrency"),
      
-     /* The value of `Memory` does not conform to the specification. Please fix it and try again. For more information, please visit https://tencentcs.com/5jXKFnBW. */
+     /* The Memory value does not conform to the specification. The function runtime memory size defaults to 128 MB, with an optional range of 64 MB and 128 MB to 3072 MB in 128 MB tiers. Fix it and try again later. */
      INVALIDPARAMETERVALUE_MEMORY("InvalidParameterValue.Memory"),
      
      /* MemorySize error. */
@@ -516,43 +513,43 @@ public enum ScfErrorCode {
      /* MinCapacity parameter input error. */
      INVALIDPARAMETERVALUE_MINCAPACITY("InvalidParameterValue.MinCapacity"),
      
-     /*  */
+     /* The MountOption parameter is abnormal. */
      INVALIDPARAMETERVALUE_MOUNTOPTION("InvalidParameterValue.MountOption"),
      
      /* Incorrect `Name` parameter. */
      INVALIDPARAMETERVALUE_NAME("InvalidParameterValue.Name"),
      
-     /* Namespace error. */
+     /* Namespace parameter error. */
      INVALIDPARAMETERVALUE_NAMESPACE("InvalidParameterValue.Namespace"),
      
-     /* Incorrect Namespace. A namespace contains up to 30 characters of letters, digits, hyphens (-), and underscores (_). */
+     /* The rule is incorrect. The Namespace consists of English letters, digits, and -_ symbols, with a length of 30. */
      INVALIDPARAMETERVALUE_NAMESPACEINVALID("InvalidParameterValue.NamespaceInvalid"),
      
-     /* NodeSpec parameter error */
+     /* NodeSpec parameter passing error. */
      INVALIDPARAMETERVALUE_NODESPEC("InvalidParameterValue.NodeSpec"),
      
-     /* NodeType parameter error */
+     /* NodeType parameter passing error. */
      INVALIDPARAMETERVALUE_NODETYPE("InvalidParameterValue.NodeType"),
      
      /* Invalid offset. */
      INVALIDPARAMETERVALUE_OFFSET("InvalidParameterValue.Offset"),
      
-     /* Order error. */
+     /* Order input error. */
      INVALIDPARAMETERVALUE_ORDER("InvalidParameterValue.Order"),
      
-     /* The value of `OrderBy` does not conform to the specification. Please fix it and try again. For more information, please visit https://tencentcs.com/5jXKFnBW. */
+     /* The OrderBy value does not conform to the specification. Fix it and try again. For example values, see the corresponding API documentation: https://www.tencentcloud.com/document/product/583/17235?from_cn_redirect=1 */
      INVALIDPARAMETERVALUE_ORDERBY("InvalidParameterValue.OrderBy"),
      
      /* The input parameter is not in the standard JSON format. */
      INVALIDPARAMETERVALUE_PARAM("InvalidParameterValue.Param"),
      
-     /*  */
+     /* The Permission parameter is abnormal. */
      INVALIDPARAMETERVALUE_PERMISSION("InvalidParameterValue.Permission"),
      
-     /*  */
+     /* The PluginConfig parameter is abnormal. */
      INVALIDPARAMETERVALUE_PLUGINCONFIG("InvalidParameterValue.PluginConfig"),
      
-     /*  */
+     /* Invalid port number. Refer to the documentation, correct it, and retry later. */
      INVALIDPARAMETERVALUE_PORT("InvalidParameterValue.Port"),
      
      /* Cron expression of the scheduled action already exists */
@@ -567,7 +564,7 @@ public enum ScfErrorCode {
      /* ProvisionType input parameter error */
      INVALIDPARAMETERVALUE_PROVISIONTYPE("InvalidParameterValue.ProvisionType"),
      
-     /* The `PublicNetConfig` parameter is invalid. */
+     /* The PublicNetConfig parameter is incorrect. */
      INVALIDPARAMETERVALUE_PUBLICNETCONFIG("InvalidParameterValue.PublicNetConfig"),
      
      /* Unsupported function version. */
@@ -576,13 +573,13 @@ public enum ScfErrorCode {
      /* Version parameter error */
      INVALIDPARAMETERVALUE_QUERYVERSION("InvalidParameterValue.QueryVersion"),
      
-     /*  */
+     /* Readiness detection parameter error. Please correct it according to the documentation or error prompt and retry later. */
      INVALIDPARAMETERVALUE_READINESSPROBE("InvalidParameterValue.ReadinessProbe"),
      
      /* The value Enterprise Edition image ID [RegistryId] is incorrect. */
      INVALIDPARAMETERVALUE_REGISTRYID("InvalidParameterValue.RegistryId"),
      
-     /* Invalid RetCode */
+     /* Invalid RetCode. */
      INVALIDPARAMETERVALUE_RETCODE("InvalidParameterValue.RetCode"),
      
      /* The value of `RoutingConfig` does not conform to the specification. Please fix it and try again. For more information, please visit https://tencentcs.com/5jXKFnBW. */
@@ -594,31 +591,31 @@ public enum ScfErrorCode {
      /* The searchkey is not `Keyword`, `Tag`, or `Runtime`. */
      INVALIDPARAMETERVALUE_SEARCHKEY("InvalidParameterValue.SearchKey"),
      
-     /* SecretInfo error */
+     /* SecretInfo error. */
      INVALIDPARAMETERVALUE_SECRETINFO("InvalidParameterValue.SecretInfo"),
      
-     /* Invalid ServiceName. */
+     /* ServiceName is not named properly. */
      INVALIDPARAMETERVALUE_SERVICENAME("InvalidParameterValue.ServiceName"),
      
-     /* The value of `Stamp` does not meet the specification. Please fix it and try again. */
+     /* The Stamp value does not conform to the specification. Correct it and try again. */
      INVALIDPARAMETERVALUE_STAMP("InvalidParameterValue.Stamp"),
      
      /* The start time is incorrect. */
      INVALIDPARAMETERVALUE_STARTTIME("InvalidParameterValue.StartTime"),
      
-     /* You need to specify both the start time and the end time. */
+     /* Simultaneously specify the start date and end date. */
      INVALIDPARAMETERVALUE_STARTTIMEORENDTIME("InvalidParameterValue.StartTimeOrEndTime"),
      
      /* The `Status` value does not conform to the specification. Please fix it and try again. */
      INVALIDPARAMETERVALUE_STATUS("InvalidParameterValue.Status"),
      
-     /* The system environment variable is invalid. */
+     /* System environment variable error. */
      INVALIDPARAMETERVALUE_SYSTEMENVIRONMENT("InvalidParameterValue.SystemEnvironment"),
      
      /* Invalid TempCosObjectName. */
      INVALIDPARAMETERVALUE_TEMPCOSOBJECTNAME("InvalidParameterValue.TempCosObjectName"),
      
-     /* The value of `TraceEnable` is invalid. Please modify and try again. */
+     /* The TraceEnable value does not match the specification. Fix it and try again. */
      INVALIDPARAMETERVALUE_TRACEENABLE("InvalidParameterValue.TraceEnable"),
      
      /* TrackingTarget parameter error */
@@ -630,25 +627,25 @@ public enum ScfErrorCode {
      /* The interval of triggering specified in TriggerCronConfig is smaller than the specified value. */
      INVALIDPARAMETERVALUE_TRIGGERCRONCONFIGTIMEINTERVAL("InvalidParameterValue.TriggerCronConfigTimeInterval"),
      
-     /* TriggerDesc error. */
+     /* TriggerDesc input parameter error. */
      INVALIDPARAMETERVALUE_TRIGGERDESC("InvalidParameterValue.TriggerDesc"),
      
-     /* TriggerName error. */
+     /* TriggerName input error. */
      INVALIDPARAMETERVALUE_TRIGGERNAME("InvalidParameterValue.TriggerName"),
      
      /* TriggerProvisionedConcurrencyNum input parameter error */
      INVALIDPARAMETERVALUE_TRIGGERPROVISIONEDCONCURRENCYNUM("InvalidParameterValue.TriggerProvisionedConcurrencyNum"),
      
-     /* Type error. */
+     /* Type input error. */
      INVALIDPARAMETERVALUE_TYPE("InvalidParameterValue.Type"),
      
-     /*  */
+     /* VPC is incorrect. */
      INVALIDPARAMETERVALUE_VPC("InvalidParameterValue.Vpc"),
      
-     /* WebSocketsParams input parameter error */
+     /* WebSocketsParams parameter passing error. */
      INVALIDPARAMETERVALUE_WEBSOCKETSPARAMS("InvalidParameterValue.WebSocketsParams"),
      
-     /* A non-standard zip file was detected. Please recompress and try again. */
+     /* A non-standard zip file is detected. Recompress the file and try again. */
      INVALIDPARAMETERVALUE_ZIPFILE("InvalidParameterValue.ZipFile"),
      
      /* Failed to Base64-decode the compressed file: `Incorrect padding`. Please fix it and try again. */
@@ -657,7 +654,7 @@ public enum ScfErrorCode {
      /* The number of aliases exceeds the upper limit. */
      LIMITEXCEEDED_ALIAS("LimitExceeded.Alias"),
      
-     /* The Cdn usage exceeds the upper limit. */
+     /* Cdn usage exceeds the maximum limit. */
      LIMITEXCEEDED_CDN("LimitExceeded.Cdn"),
      
      /* Reached the upper limit of function versions enabling image acceleration */
@@ -666,16 +663,16 @@ public enum ScfErrorCode {
      /* Reached the upper limit of function versions enabling image acceleration */
      LIMITEXCEEDED_CONTAINERIMAGEACCELERATEQUOTA("LimitExceeded.ContainerImageAccelerateQuota"),
      
-     /* The EIP resource exceeded the limit. */
+     /* eip resource limit exceeded. */
      LIMITEXCEEDED_EIP("LimitExceeded.Eip"),
      
-     /*  */
+     /* File count limit exceeded */
      LIMITEXCEEDED_FS("LimitExceeded.Fs"),
      
      /* If the number of functions exceeds the upper limit, you can apply for an increase by [submitting a ticket](https://console.intl.cloud.tencent.com/workorder/category). */
      LIMITEXCEEDED_FUNCTION("LimitExceeded.Function"),
      
-     /* The number of functions under the same topic exceeds the upper limit. */
+     /* Functions under the same topic exceed the maximum limit. */
      LIMITEXCEEDED_FUNCTIONONTOPIC("LimitExceeded.FunctionOnTopic"),
      
      /* The value of `FunctionProvisionedConcurrencyMemory` has reached the upper limit. You can submit a ticket to increase it at https://mc.tencent.com/dI7DzbBV. */
@@ -690,10 +687,10 @@ public enum ScfErrorCode {
      /* The total amount of provisioned concurrency of the function has exceeded the limit. */
      LIMITEXCEEDED_FUNCTIONTOTALPROVISIONEDCONCURRENCYNUM("LimitExceeded.FunctionTotalProvisionedConcurrencyNum"),
      
-     /* The value of `InitTimeout` has reached the upper limit. You can submit a ticket to increase it at https://tencentcs.com/7Fixwt63. */
+     /* InitTimeout limit reached. Submit a ticket to request a limit increase: https://tencentcs.com/7Fixwt63. */
      LIMITEXCEEDED_INITTIMEOUT("LimitExceeded.InitTimeout"),
      
-     /*  */
+     /* The number of fixed private network IPs exceeds the limit. */
      LIMITEXCEEDED_INTRAIP("LimitExceeded.IntraIp"),
      
      /* The number of layer versions exceeds the upper limit. */
@@ -711,13 +708,13 @@ public enum ScfErrorCode {
      /* The message retention period in the async retry configuration of the function exceeds the limit. */
      LIMITEXCEEDED_MSGTTL("LimitExceeded.MsgTTL"),
      
-     /* If the number of namespaces exceeds the upper limit, you can apply for an increase by [submitting a ticket]( https://console.intl.cloud.tencent.com/workorder/category). */
+     /* The number of namespaces exceeds the maximum limit. You can submit a ticket (https://www.tencentcloud.com/act/event/Online_service?from=scf%7Cindex?from_cn_redirect=1) to apply for a limit increase. */
      LIMITEXCEEDED_NAMESPACE("LimitExceeded.Namespace"),
      
-     /* Offset exceeds the upper limit. */
+     /* Offset exceeds the limit. */
      LIMITEXCEEDED_OFFSET("LimitExceeded.Offset"),
      
-     /*  */
+     /* Failed to enable the privilege container property */
      LIMITEXCEEDED_PRIVILEGECONTAINER("LimitExceeded.PrivilegeContainer"),
      
      /* The number of provisioned concurrency specified for the scheduled action is too large. */
@@ -738,7 +735,7 @@ public enum ScfErrorCode {
      /* The account concurrency memory has exceeded the limit. */
      LIMITEXCEEDED_TOTALCONCURRENCYMEMORY("LimitExceeded.TotalConcurrencyMemory"),
      
-     /* If the number of triggers exceeds the upper limit, you can apply for an increase by [submitting a ticket](https://console.intl.cloud.tencent.com/workorder/category). */
+     /* The number of triggers exceeds the maximum limit. You can submit a ticket (https://www.tencentcloud.com/act/event/Online_service?from=scf%7Cindex?from_cn_redirect=1) to apply for a limit increase. */
      LIMITEXCEEDED_TRIGGER("LimitExceeded.Trigger"),
      
      /* The value of `UserTotalConcurrencyMemory` has reached the upper limit. You can submit a ticket to increase it at https://tencentcs.com/7Fixwt63. */
@@ -753,19 +750,19 @@ public enum ScfErrorCode {
      /* Account does not exist. */
      OPERATIONDENIED_ACCOUNTNOTEXISTS("OperationDenied.AccountNotExists"),
      
-     /* The resource is in use. */
+     /* The resource is occupied. */
      RESOURCEINUSE("ResourceInUse"),
      
      /* The alias is in use. */
      RESOURCEINUSE_ALIAS("ResourceInUse.Alias"),
      
-     /* Cdn is in use. */
+     /* Cdn is occupied. */
      RESOURCEINUSE_CDN("ResourceInUse.Cdn"),
      
-     /* Cmq is in use. */
+     /* Cmq is occupied. */
      RESOURCEINUSE_CMQ("ResourceInUse.Cmq"),
      
-     /* Cos is in use. */
+     /* Cos is occupied. */
      RESOURCEINUSE_COS("ResourceInUse.Cos"),
      
      /* This FunctionName already exists. */
@@ -774,13 +771,13 @@ public enum ScfErrorCode {
      /* The layer version is in use. */
      RESOURCEINUSE_LAYERVERSION("ResourceInUse.LayerVersion"),
      
-     /* This Namespace already exists. */
+     /* Namespace already exists. */
      RESOURCEINUSE_NAMESPACE("ResourceInUse.Namespace"),
      
-     /* This TriggerName already exists. */
+     /* TriggerName already exists. */
      RESOURCEINUSE_TRIGGER("ResourceInUse.Trigger"),
      
-     /* This TriggerName already exists. */
+     /* TriggerName already exists. */
      RESOURCEINUSE_TRIGGERNAME("ResourceInUse.TriggerName"),
      
      /* Insufficient COS resources. */
@@ -801,16 +798,16 @@ public enum ScfErrorCode {
      /* Cdn does not exist. */
      RESOURCENOTFOUND_CDN("ResourceNotFound.Cdn"),
      
-     /* Unable to find the specified mount point under the specified CFS */
+     /* The specified mount point is not found under the designated cfs. */
      RESOURCENOTFOUND_CFSMOUNTINSNOTMATCH("ResourceNotFound.CfsMountInsNotMatch"),
      
-     /*  */
+     /* The CfsProtocolError parameter is abnormal. */
      RESOURCENOTFOUND_CFSPROTOCOLERROR("ResourceNotFound.CfsProtocolError"),
      
-     /* CFS not available */
+     /* Detect that the cfs status is temporarily unavailable. */
      RESOURCENOTFOUND_CFSSTATUSERROR("ResourceNotFound.CfsStatusError"),
      
-     /* VPCs of the CFS instance and the SCF function are different. */
+     /* The vpc of cfs and SCF are different. */
      RESOURCENOTFOUND_CFSVPCNOTMATCH("ResourceNotFound.CfsVpcNotMatch"),
      
      /* Ckafka does not exist. */
@@ -822,31 +819,31 @@ public enum ScfErrorCode {
      /* Cos does not exist. */
      RESOURCENOTFOUND_COS("ResourceNotFound.Cos"),
      
-     /*  */
+     /* The Cos object does not exist. */
      RESOURCENOTFOUND_COSOBJECT("ResourceNotFound.CosObject"),
      
-     /* The function does not exist. */
+     /* Function does not exist. */
      RESOURCENOTFOUND_FUNCTION("ResourceNotFound.Function"),
      
-     /* The function does not exist. */
+     /* Function does not exist. */
      RESOURCENOTFOUND_FUNCTIONNAME("ResourceNotFound.FunctionName"),
      
      /* The function version does not exist. */
      RESOURCENOTFOUND_FUNCTIONVERSION("ResourceNotFound.FunctionVersion"),
      
-     /* An error occurred while getting the CFS mount target information. */
+     /* Error retrieving cfs mount target information. */
      RESOURCENOTFOUND_GETCFSMOUNTINSERROR("ResourceNotFound.GetCfsMountInsError"),
      
-     /* An error occurred while getting the CFS information. */
+     /* Failed to get cfs information. */
      RESOURCENOTFOUND_GETCFSNOTMATCH("ResourceNotFound.GetCfsNotMatch"),
      
-     /*  */
+     /* GooseFsClusterEndpoint does not exist. */
      RESOURCENOTFOUND_GOOSEFSCLUSTERENDPOINT("ResourceNotFound.GooseFsClusterEndpoint"),
      
-     /*  */
+     /* GooseFsClusterId does not exist. */
      RESOURCENOTFOUND_GOOSEFSCLUSTERID("ResourceNotFound.GooseFsClusterId"),
      
-     /*  */
+     /* GooseFsClusterNamespace does not exist. */
      RESOURCENOTFOUND_GOOSEFSCLUSTERNAMESPACE("ResourceNotFound.GooseFsClusterNamespace"),
      
      /* Failed to find the specified `ImageConfig`. Please create it first. */
@@ -864,10 +861,10 @@ public enum ScfErrorCode {
      /* The version does not exist. */
      RESOURCENOTFOUND_QUALIFIER("ResourceNotFound.Qualifier"),
      
-     /* The role does not exist. */
+     /* Role does not exist. */
      RESOURCENOTFOUND_ROLE("ResourceNotFound.Role"),
      
-     /* The role does not exist. */
+     /* The Role does not exist. */
      RESOURCENOTFOUND_ROLECHECK("ResourceNotFound.RoleCheck"),
      
      /* Timer does not exist. */
@@ -897,13 +894,13 @@ public enum ScfErrorCode {
      /* You do not have permissions to access the code. */
      UNAUTHORIZEDOPERATION_CODESECRET("UnauthorizedOperation.CodeSecret"),
      
-     /* You do not have permissions. */
+     /* No permissions. */
      UNAUTHORIZEDOPERATION_CREATETRIGGER("UnauthorizedOperation.CreateTrigger"),
      
      /* Unauthorized operation. */
      UNAUTHORIZEDOPERATION_DELETEFUNCTION("UnauthorizedOperation.DeleteFunction"),
      
-     /* You do not have permissions. */
+     /* No permissions. */
      UNAUTHORIZEDOPERATION_DELETETRIGGER("UnauthorizedOperation.DeleteTrigger"),
      
      /* This API is not called from the console. */
@@ -912,7 +909,7 @@ public enum ScfErrorCode {
      /* Region error. */
      UNAUTHORIZEDOPERATION_REGION("UnauthorizedOperation.Region"),
      
-     /* Not authorized to access your COS resources. */
+     /* No permission to access your Cos resource. */
      UNAUTHORIZEDOPERATION_ROLE("UnauthorizedOperation.Role"),
      
      /* The `Appid` of TempCos is not consistent with the APPID of the request account. */
@@ -924,7 +921,7 @@ public enum ScfErrorCode {
      /* You are not authorized for the operation. */
      UNAUTHORIZEDOPERATION_UPDATETRIGGERSTATUS("UnauthorizedOperation.UpdateTriggerStatus"),
      
-     /* Unsupported operation. */
+     /* The operation is not supported. */
      UNSUPPORTEDOPERATION("UnsupportedOperation"),
      
      /* The resource is bound to an alias, and the current operation cannot be performed. Please unbind the alias and try again. */
@@ -936,10 +933,10 @@ public enum ScfErrorCode {
      /* The function cannot be copied. */
      UNSUPPORTEDOPERATION_COPYFUNCTION("UnsupportedOperation.CopyFunction"),
      
-     /* Cos operation is not supported. */
+     /* The Cos operation is not supported. */
      UNSUPPORTEDOPERATION_COS("UnsupportedOperation.Cos"),
      
-     /*  */
+     /* DiskSize configuration is in beta test. Application is required to enable it. Contact us if needed. */
      UNSUPPORTEDOPERATION_DISKSIZE("UnsupportedOperation.DiskSize"),
      
      /* The specified EipFixed does not exist. */
@@ -954,7 +951,7 @@ public enum ScfErrorCode {
      /* This region is not supported. */
      UNSUPPORTEDOPERATION_REGION("UnsupportedOperation.Region"),
      
-     /* Trigger operation is not supported. */
+     /* The Trigger operation is not supported. */
      UNSUPPORTEDOPERATION_TRIGGER("UnsupportedOperation.Trigger"),
      
      /* The specified configuration is not supported. Please modify and try again. */

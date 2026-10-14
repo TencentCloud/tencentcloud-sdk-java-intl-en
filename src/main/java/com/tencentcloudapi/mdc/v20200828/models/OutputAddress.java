@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class OutputAddress extends AbstractModel {
 
     /**
-    * Output destination IP.
+    * Outbound IP address.
     */
     @SerializedName("Ip")
     @Expose
     private String Ip;
 
     /**
-     * Get Output destination IP. 
-     * @return Ip Output destination IP.
+     * Get Outbound IP address. 
+     * @return Ip Outbound IP address.
      */
     public String getIp() {
         return this.Ip;
     }
 
     /**
-     * Set Output destination IP.
-     * @param Ip Output destination IP.
+     * Set Outbound IP address.
+     * @param Ip Outbound IP address.
      */
     public void setIp(String Ip) {
         this.Ip = Ip;

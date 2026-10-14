@@ -24,245 +24,230 @@ import java.util.HashMap;
 public class FlowRealtimeStatusItem extends AbstractModel {
 
     /**
-    * Whether it is an input or output. Valid values: Input, Output.
+    * Type. Valid values: `Input`, `Output`.
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * The input ID, which is not empty if `Type` is `Input`.
+    * Input Id. If Type is Input, this field is not empty.
     */
     @SerializedName("InputId")
     @Expose
     private String InputId;
 
     /**
-    * The output ID, which is not empty if `Type` is `Output`.
+    * Output Id. If Type is Output, this field is not empty.
     */
     @SerializedName("OutputId")
     @Expose
     private String OutputId;
 
     /**
-    * The flow ID.
+    * Stream Id.
     */
     @SerializedName("FlowId")
     @Expose
     private String FlowId;
 
     /**
-    * The protocol used. Valid values: SRT, RTP, RTMP.
+    * Protocol. SRT | RTMP.
     */
     @SerializedName("Protocol")
     @Expose
     private String Protocol;
 
     /**
-    * The common status information.
+    * Common status information.
     */
     @SerializedName("CommonStatus")
     @Expose
     private FlowRealtimeStatusCommon CommonStatus;
 
     /**
-    * This parameter is returned if `Protocol` is `SRT`.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+    * If it is the SRT Protocol, this field will be present.
     */
     @SerializedName("SRTStatus")
     @Expose
     private FlowRealtimeStatusSRT SRTStatus;
 
     /**
-    * This parameter is returned if `Protocol` is `RTMP`.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+    * If it is the RTMP protocol, this field exists.
     */
     @SerializedName("RTMPStatus")
     @Expose
     private FlowRealtimeStatusRTMP RTMPStatus;
 
     /**
-    * The server IP.
+    * Server IP address.
     */
     @SerializedName("ConnectServerIP")
     @Expose
     private String ConnectServerIP;
 
     /**
-    * This parameter is returned if the RTP protocol is used.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+    * If it is the RTP protocol, this field exists.
     */
     @SerializedName("RTPStatus")
     @Expose
     private FlowRealtimeStatusRTP RTPStatus;
 
     /**
-     * Get Whether it is an input or output. Valid values: Input, Output. 
-     * @return Type Whether it is an input or output. Valid values: Input, Output.
+     * Get Type. Valid values: `Input`, `Output`. 
+     * @return Type Type. Valid values: `Input`, `Output`.
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Whether it is an input or output. Valid values: Input, Output.
-     * @param Type Whether it is an input or output. Valid values: Input, Output.
+     * Set Type. Valid values: `Input`, `Output`.
+     * @param Type Type. Valid values: `Input`, `Output`.
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get The input ID, which is not empty if `Type` is `Input`. 
-     * @return InputId The input ID, which is not empty if `Type` is `Input`.
+     * Get Input Id. If Type is Input, this field is not empty. 
+     * @return InputId Input Id. If Type is Input, this field is not empty.
      */
     public String getInputId() {
         return this.InputId;
     }
 
     /**
-     * Set The input ID, which is not empty if `Type` is `Input`.
-     * @param InputId The input ID, which is not empty if `Type` is `Input`.
+     * Set Input Id. If Type is Input, this field is not empty.
+     * @param InputId Input Id. If Type is Input, this field is not empty.
      */
     public void setInputId(String InputId) {
         this.InputId = InputId;
     }
 
     /**
-     * Get The output ID, which is not empty if `Type` is `Output`. 
-     * @return OutputId The output ID, which is not empty if `Type` is `Output`.
+     * Get Output Id. If Type is Output, this field is not empty. 
+     * @return OutputId Output Id. If Type is Output, this field is not empty.
      */
     public String getOutputId() {
         return this.OutputId;
     }
 
     /**
-     * Set The output ID, which is not empty if `Type` is `Output`.
-     * @param OutputId The output ID, which is not empty if `Type` is `Output`.
+     * Set Output Id. If Type is Output, this field is not empty.
+     * @param OutputId Output Id. If Type is Output, this field is not empty.
      */
     public void setOutputId(String OutputId) {
         this.OutputId = OutputId;
     }
 
     /**
-     * Get The flow ID. 
-     * @return FlowId The flow ID.
+     * Get Stream Id. 
+     * @return FlowId Stream Id.
      */
     public String getFlowId() {
         return this.FlowId;
     }
 
     /**
-     * Set The flow ID.
-     * @param FlowId The flow ID.
+     * Set Stream Id.
+     * @param FlowId Stream Id.
      */
     public void setFlowId(String FlowId) {
         this.FlowId = FlowId;
     }
 
     /**
-     * Get The protocol used. Valid values: SRT, RTP, RTMP. 
-     * @return Protocol The protocol used. Valid values: SRT, RTP, RTMP.
+     * Get Protocol. SRT | RTMP. 
+     * @return Protocol Protocol. SRT | RTMP.
      */
     public String getProtocol() {
         return this.Protocol;
     }
 
     /**
-     * Set The protocol used. Valid values: SRT, RTP, RTMP.
-     * @param Protocol The protocol used. Valid values: SRT, RTP, RTMP.
+     * Set Protocol. SRT | RTMP.
+     * @param Protocol Protocol. SRT | RTMP.
      */
     public void setProtocol(String Protocol) {
         this.Protocol = Protocol;
     }
 
     /**
-     * Get The common status information. 
-     * @return CommonStatus The common status information.
+     * Get Common status information. 
+     * @return CommonStatus Common status information.
      */
     public FlowRealtimeStatusCommon getCommonStatus() {
         return this.CommonStatus;
     }
 
     /**
-     * Set The common status information.
-     * @param CommonStatus The common status information.
+     * Set Common status information.
+     * @param CommonStatus Common status information.
      */
     public void setCommonStatus(FlowRealtimeStatusCommon CommonStatus) {
         this.CommonStatus = CommonStatus;
     }
 
     /**
-     * Get This parameter is returned if `Protocol` is `SRT`.
-Note: This field may return `null`, indicating that no valid value can be obtained. 
-     * @return SRTStatus This parameter is returned if `Protocol` is `SRT`.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Get If it is the SRT Protocol, this field will be present. 
+     * @return SRTStatus If it is the SRT Protocol, this field will be present.
      */
     public FlowRealtimeStatusSRT getSRTStatus() {
         return this.SRTStatus;
     }
 
     /**
-     * Set This parameter is returned if `Protocol` is `SRT`.
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param SRTStatus This parameter is returned if `Protocol` is `SRT`.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Set If it is the SRT Protocol, this field will be present.
+     * @param SRTStatus If it is the SRT Protocol, this field will be present.
      */
     public void setSRTStatus(FlowRealtimeStatusSRT SRTStatus) {
         this.SRTStatus = SRTStatus;
     }
 
     /**
-     * Get This parameter is returned if `Protocol` is `RTMP`.
-Note: This field may return `null`, indicating that no valid value can be obtained. 
-     * @return RTMPStatus This parameter is returned if `Protocol` is `RTMP`.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Get If it is the RTMP protocol, this field exists. 
+     * @return RTMPStatus If it is the RTMP protocol, this field exists.
      */
     public FlowRealtimeStatusRTMP getRTMPStatus() {
         return this.RTMPStatus;
     }
 
     /**
-     * Set This parameter is returned if `Protocol` is `RTMP`.
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param RTMPStatus This parameter is returned if `Protocol` is `RTMP`.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Set If it is the RTMP protocol, this field exists.
+     * @param RTMPStatus If it is the RTMP protocol, this field exists.
      */
     public void setRTMPStatus(FlowRealtimeStatusRTMP RTMPStatus) {
         this.RTMPStatus = RTMPStatus;
     }
 
     /**
-     * Get The server IP. 
-     * @return ConnectServerIP The server IP.
+     * Get Server IP address. 
+     * @return ConnectServerIP Server IP address.
      */
     public String getConnectServerIP() {
         return this.ConnectServerIP;
     }
 
     /**
-     * Set The server IP.
-     * @param ConnectServerIP The server IP.
+     * Set Server IP address.
+     * @param ConnectServerIP Server IP address.
      */
     public void setConnectServerIP(String ConnectServerIP) {
         this.ConnectServerIP = ConnectServerIP;
     }
 
     /**
-     * Get This parameter is returned if the RTP protocol is used.
-Note: This field may return `null`, indicating that no valid value can be obtained. 
-     * @return RTPStatus This parameter is returned if the RTP protocol is used.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Get If it is the RTP protocol, this field exists. 
+     * @return RTPStatus If it is the RTP protocol, this field exists.
      */
     public FlowRealtimeStatusRTP getRTPStatus() {
         return this.RTPStatus;
     }
 
     /**
-     * Set This parameter is returned if the RTP protocol is used.
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param RTPStatus This parameter is returned if the RTP protocol is used.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Set If it is the RTP protocol, this field exists.
+     * @param RTPStatus If it is the RTP protocol, this field exists.
      */
     public void setRTPStatus(FlowRealtimeStatusRTP RTPStatus) {
         this.RTPStatus = RTPStatus;

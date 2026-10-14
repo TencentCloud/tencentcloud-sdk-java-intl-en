@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class QuestionnaireQuestion extends AbstractModel {
 
     /**
-    * 
+    * <p>Serial number of the issue</p>
     */
     @SerializedName("Index")
     @Expose
     private Long Index;
 
     /**
-    * 
+    * <p>Content of the issue</p>
     */
     @SerializedName("Question")
     @Expose
     private String Question;
 
     /**
-    * 
+    * <p>Problem type</p>
     */
     @SerializedName("Type")
     @Expose
     private Long Type;
 
     /**
-    * 
+    * <p>Required or optional</p>
     */
     @SerializedName("Required")
     @Expose
     private Boolean Required;
 
     /**
-    * 
+    * <p>Options for the question</p>
     */
     @SerializedName("Options")
     @Expose
     private QuestionOption [] Options;
 
     /**
-     * Get  
-     * @return Index 
+     * Get <p>Serial number of the issue</p> 
+     * @return Index <p>Serial number of the issue</p>
      */
     public Long getIndex() {
         return this.Index;
     }
 
     /**
-     * Set 
-     * @param Index 
+     * Set <p>Serial number of the issue</p>
+     * @param Index <p>Serial number of the issue</p>
      */
     public void setIndex(Long Index) {
         this.Index = Index;
     }
 
     /**
-     * Get  
-     * @return Question 
+     * Get <p>Content of the issue</p> 
+     * @return Question <p>Content of the issue</p>
      */
     public String getQuestion() {
         return this.Question;
     }
 
     /**
-     * Set 
-     * @param Question 
+     * Set <p>Content of the issue</p>
+     * @param Question <p>Content of the issue</p>
      */
     public void setQuestion(String Question) {
         this.Question = Question;
     }
 
     /**
-     * Get  
-     * @return Type 
+     * Get <p>Problem type</p> 
+     * @return Type <p>Problem type</p>
      */
     public Long getType() {
         return this.Type;
     }
 
     /**
-     * Set 
-     * @param Type 
+     * Set <p>Problem type</p>
+     * @param Type <p>Problem type</p>
      */
     public void setType(Long Type) {
         this.Type = Type;
     }
 
     /**
-     * Get  
-     * @return Required 
+     * Get <p>Required or optional</p> 
+     * @return Required <p>Required or optional</p>
      */
     public Boolean getRequired() {
         return this.Required;
     }
 
     /**
-     * Set 
-     * @param Required 
+     * Set <p>Required or optional</p>
+     * @param Required <p>Required or optional</p>
      */
     public void setRequired(Boolean Required) {
         this.Required = Required;
     }
 
     /**
-     * Get  
-     * @return Options 
+     * Get <p>Options for the question</p> 
+     * @return Options <p>Options for the question</p>
      */
     public QuestionOption [] getOptions() {
         return this.Options;
     }
 
     /**
-     * Set 
-     * @param Options 
+     * Set <p>Options for the question</p>
+     * @param Options <p>Options for the question</p>
      */
     public void setOptions(QuestionOption [] Options) {
         this.Options = Options;

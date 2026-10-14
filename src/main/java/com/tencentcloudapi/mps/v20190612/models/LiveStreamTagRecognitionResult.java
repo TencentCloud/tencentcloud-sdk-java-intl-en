@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class LiveStreamTagRecognitionResult extends AbstractModel {
 
     /**
-    * Timestamp events.
+    * Timestamp event.
     */
     @SerializedName("Id")
     @Expose
@@ -52,16 +52,16 @@ public class LiveStreamTagRecognitionResult extends AbstractModel {
     private Float Confidence;
 
     /**
-     * Get Timestamp events. 
-     * @return Id Timestamp events.
+     * Get Timestamp event. 
+     * @return Id Timestamp event.
      */
     public String getId() {
         return this.Id;
     }
 
     /**
-     * Set Timestamp events.
-     * @param Id Timestamp events.
+     * Set Timestamp event.
+     * @param Id Timestamp event.
      */
     public void setId(String Id) {
         this.Id = Id;

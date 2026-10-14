@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class AiAnalysisTaskHorizontalToVerticalResult extends AbstractModel {
 
     /**
-    * 
+    * Task status. Valid values are `PROCESSING`, `SUCCESS`, and `FAIL`.
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 
+    * Error code. 0: successful; other values: failed.
     */
     @SerializedName("ErrCode")
     @Expose
     private Long ErrCode;
 
     /**
-    * 
+    * Error message
     */
     @SerializedName("Message")
     @Expose
     private String Message;
 
     /**
-    * 
+    * Intelligent horizontal-to-vertical task input.
     */
     @SerializedName("Input")
     @Expose
     private AiAnalysisTaskHorizontalToVerticalInput Input;
 
     /**
-    * 
+    * Intelligent horizontal-to-vertical task output.
     */
     @SerializedName("Output")
     @Expose
     private AiAnalysisTaskHorizontalToVerticalOutput Output;
 
     /**
-     * Get  
-     * @return Status 
+     * Get Task status. Valid values are `PROCESSING`, `SUCCESS`, and `FAIL`. 
+     * @return Status Task status. Valid values are `PROCESSING`, `SUCCESS`, and `FAIL`.
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 
-     * @param Status 
+     * Set Task status. Valid values are `PROCESSING`, `SUCCESS`, and `FAIL`.
+     * @param Status Task status. Valid values are `PROCESSING`, `SUCCESS`, and `FAIL`.
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get  
-     * @return ErrCode 
+     * Get Error code. 0: successful; other values: failed. 
+     * @return ErrCode Error code. 0: successful; other values: failed.
      */
     public Long getErrCode() {
         return this.ErrCode;
     }
 
     /**
-     * Set 
-     * @param ErrCode 
+     * Set Error code. 0: successful; other values: failed.
+     * @param ErrCode Error code. 0: successful; other values: failed.
      */
     public void setErrCode(Long ErrCode) {
         this.ErrCode = ErrCode;
     }
 
     /**
-     * Get  
-     * @return Message 
+     * Get Error message 
+     * @return Message Error message
      */
     public String getMessage() {
         return this.Message;
     }
 
     /**
-     * Set 
-     * @param Message 
+     * Set Error message
+     * @param Message Error message
      */
     public void setMessage(String Message) {
         this.Message = Message;
     }
 
     /**
-     * Get  
-     * @return Input 
+     * Get Intelligent horizontal-to-vertical task input. 
+     * @return Input Intelligent horizontal-to-vertical task input.
      */
     public AiAnalysisTaskHorizontalToVerticalInput getInput() {
         return this.Input;
     }
 
     /**
-     * Set 
-     * @param Input 
+     * Set Intelligent horizontal-to-vertical task input.
+     * @param Input Intelligent horizontal-to-vertical task input.
      */
     public void setInput(AiAnalysisTaskHorizontalToVerticalInput Input) {
         this.Input = Input;
     }
 
     /**
-     * Get  
-     * @return Output 
+     * Get Intelligent horizontal-to-vertical task output. 
+     * @return Output Intelligent horizontal-to-vertical task output.
      */
     public AiAnalysisTaskHorizontalToVerticalOutput getOutput() {
         return this.Output;
     }
 
     /**
-     * Set 
-     * @param Output 
+     * Set Intelligent horizontal-to-vertical task output.
+     * @param Output Intelligent horizontal-to-vertical task output.
      */
     public void setOutput(AiAnalysisTaskHorizontalToVerticalOutput Output) {
         this.Output = Output;

@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class DescribeInstanceOperationsRequest extends AbstractModel {
 
     /**
-    * Cluster instance ID
+    * Cluster instance ID.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Start time, such as "2019-03-07 16:30:39"
+    * Start time, e.g., "2019-03-07 16:30:39"
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * End time, such as "2019-03-30 20:18:03"
+    * End time, e.g., "2019-03-30 20:18:03"
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-    * Pagination start value
+    * Paging Starting Value
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * Number of entries per page
+    * Pagination size.
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-     * Get Cluster instance ID 
-     * @return InstanceId Cluster instance ID
+     * Get Cluster instance ID. 
+     * @return InstanceId Cluster instance ID.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Cluster instance ID
-     * @param InstanceId Cluster instance ID
+     * Set Cluster instance ID.
+     * @param InstanceId Cluster instance ID.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Start time, such as "2019-03-07 16:30:39" 
-     * @return StartTime Start time, such as "2019-03-07 16:30:39"
+     * Get Start time, e.g., "2019-03-07 16:30:39" 
+     * @return StartTime Start time, e.g., "2019-03-07 16:30:39"
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set Start time, such as "2019-03-07 16:30:39"
-     * @param StartTime Start time, such as "2019-03-07 16:30:39"
+     * Set Start time, e.g., "2019-03-07 16:30:39"
+     * @param StartTime Start time, e.g., "2019-03-07 16:30:39"
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get End time, such as "2019-03-30 20:18:03" 
-     * @return EndTime End time, such as "2019-03-30 20:18:03"
+     * Get End time, e.g., "2019-03-30 20:18:03" 
+     * @return EndTime End time, e.g., "2019-03-30 20:18:03"
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set End time, such as "2019-03-30 20:18:03"
-     * @param EndTime End time, such as "2019-03-30 20:18:03"
+     * Set End time, e.g., "2019-03-30 20:18:03"
+     * @param EndTime End time, e.g., "2019-03-30 20:18:03"
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get Pagination start value 
-     * @return Offset Pagination start value
+     * Get Paging Starting Value 
+     * @return Offset Paging Starting Value
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Pagination start value
-     * @param Offset Pagination start value
+     * Set Paging Starting Value
+     * @param Offset Paging Starting Value
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get Number of entries per page 
-     * @return Limit Number of entries per page
+     * Get Pagination size. 
+     * @return Limit Pagination size.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Number of entries per page
-     * @param Limit Number of entries per page
+     * Set Pagination size.
+     * @param Limit Pagination size.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

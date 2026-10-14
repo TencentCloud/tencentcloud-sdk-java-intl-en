@@ -24,199 +24,233 @@ import java.util.HashMap;
 public class IndexOptionsField extends AbstractModel {
 
     /**
-    * Max age for expiry purpose
-Note: This field may return `null`, indicating that no valid value can be obtained.
+    * <p>Expiration time.</p>
     */
     @SerializedName("ExpireMaxAge")
     @Expose
     private String ExpireMaxAge;
 
     /**
-    * Max size for expiry purpose
-Note: This field may return `null`, indicating that no valid value can be obtained.
+    * <p>Expiration size</p>
     */
     @SerializedName("ExpireMaxSize")
     @Expose
     private String ExpireMaxSize;
 
     /**
-    * Rollover cycle
-Note: This field may return `null`, indicating that no valid value can be obtained.
+    * <p>Rollover period</p>
     */
     @SerializedName("RolloverMaxAge")
     @Expose
     private String RolloverMaxAge;
 
     /**
-    * Whether to enable the dynamic rollover
-Note: This field may return `null`, indicating that no valid value can be obtained.
+    * <p>Whether to enable dynamic scrolling</p>
     */
     @SerializedName("RolloverDynamic")
     @Expose
     private String RolloverDynamic;
 
     /**
-    * Whether to enable dynamic sharding
-Note: This field may return `null`, indicating that no valid value can be obtained.
+    * <p>Whether to enable dynamic sharding</p>
     */
     @SerializedName("ShardNumDynamic")
     @Expose
     private String ShardNumDynamic;
 
     /**
-    * Timestamp field
-Note: This field may return `null`, indicating that no valid value can be obtained.
+    * <p>Time partition field</p>
     */
     @SerializedName("TimestampField")
     @Expose
     private String TimestampField;
 
     /**
-    * Write mode
-Note: This field may return `null`, indicating that no valid value can be obtained.
+    * <p>Write mode</p>
     */
     @SerializedName("WriteMode")
     @Expose
     private String WriteMode;
 
     /**
-     * Get Max age for expiry purpose
-Note: This field may return `null`, indicating that no valid value can be obtained. 
-     * @return ExpireMaxAge Max age for expiry purpose
-Note: This field may return `null`, indicating that no valid value can be obtained.
+    * <p>Whether to enable complete uninstallation</p><p>Enumeration values:</p><ul><li>true: enable complete uninstallation</li><li>false: disable complete uninstallation</li></ul>
+    */
+    @SerializedName("FullOffloadedEnable")
+    @Expose
+    private String FullOffloadedEnable;
+
+    /**
+    * <p>Full uninstall lifecycle</p>
+    */
+    @SerializedName("FullOffloadedMaxAge")
+    @Expose
+    private String FullOffloadedMaxAge;
+
+    /**
+    * <p>Completely uninstall the lifecycle after backup index retrieval</p>
+    */
+    @SerializedName("FullOffloadedRetrieveMaxAge")
+    @Expose
+    private String FullOffloadedRetrieveMaxAge;
+
+    /**
+     * Get <p>Expiration time.</p> 
+     * @return ExpireMaxAge <p>Expiration time.</p>
      */
     public String getExpireMaxAge() {
         return this.ExpireMaxAge;
     }
 
     /**
-     * Set Max age for expiry purpose
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param ExpireMaxAge Max age for expiry purpose
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Set <p>Expiration time.</p>
+     * @param ExpireMaxAge <p>Expiration time.</p>
      */
     public void setExpireMaxAge(String ExpireMaxAge) {
         this.ExpireMaxAge = ExpireMaxAge;
     }
 
     /**
-     * Get Max size for expiry purpose
-Note: This field may return `null`, indicating that no valid value can be obtained. 
-     * @return ExpireMaxSize Max size for expiry purpose
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Get <p>Expiration size</p> 
+     * @return ExpireMaxSize <p>Expiration size</p>
      */
     public String getExpireMaxSize() {
         return this.ExpireMaxSize;
     }
 
     /**
-     * Set Max size for expiry purpose
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param ExpireMaxSize Max size for expiry purpose
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Set <p>Expiration size</p>
+     * @param ExpireMaxSize <p>Expiration size</p>
      */
     public void setExpireMaxSize(String ExpireMaxSize) {
         this.ExpireMaxSize = ExpireMaxSize;
     }
 
     /**
-     * Get Rollover cycle
-Note: This field may return `null`, indicating that no valid value can be obtained. 
-     * @return RolloverMaxAge Rollover cycle
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Get <p>Rollover period</p> 
+     * @return RolloverMaxAge <p>Rollover period</p>
      */
     public String getRolloverMaxAge() {
         return this.RolloverMaxAge;
     }
 
     /**
-     * Set Rollover cycle
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param RolloverMaxAge Rollover cycle
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Set <p>Rollover period</p>
+     * @param RolloverMaxAge <p>Rollover period</p>
      */
     public void setRolloverMaxAge(String RolloverMaxAge) {
         this.RolloverMaxAge = RolloverMaxAge;
     }
 
     /**
-     * Get Whether to enable the dynamic rollover
-Note: This field may return `null`, indicating that no valid value can be obtained. 
-     * @return RolloverDynamic Whether to enable the dynamic rollover
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Get <p>Whether to enable dynamic scrolling</p> 
+     * @return RolloverDynamic <p>Whether to enable dynamic scrolling</p>
      */
     public String getRolloverDynamic() {
         return this.RolloverDynamic;
     }
 
     /**
-     * Set Whether to enable the dynamic rollover
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param RolloverDynamic Whether to enable the dynamic rollover
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Set <p>Whether to enable dynamic scrolling</p>
+     * @param RolloverDynamic <p>Whether to enable dynamic scrolling</p>
      */
     public void setRolloverDynamic(String RolloverDynamic) {
         this.RolloverDynamic = RolloverDynamic;
     }
 
     /**
-     * Get Whether to enable dynamic sharding
-Note: This field may return `null`, indicating that no valid value can be obtained. 
-     * @return ShardNumDynamic Whether to enable dynamic sharding
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Get <p>Whether to enable dynamic sharding</p> 
+     * @return ShardNumDynamic <p>Whether to enable dynamic sharding</p>
      */
     public String getShardNumDynamic() {
         return this.ShardNumDynamic;
     }
 
     /**
-     * Set Whether to enable dynamic sharding
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param ShardNumDynamic Whether to enable dynamic sharding
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Set <p>Whether to enable dynamic sharding</p>
+     * @param ShardNumDynamic <p>Whether to enable dynamic sharding</p>
      */
     public void setShardNumDynamic(String ShardNumDynamic) {
         this.ShardNumDynamic = ShardNumDynamic;
     }
 
     /**
-     * Get Timestamp field
-Note: This field may return `null`, indicating that no valid value can be obtained. 
-     * @return TimestampField Timestamp field
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Get <p>Time partition field</p> 
+     * @return TimestampField <p>Time partition field</p>
      */
     public String getTimestampField() {
         return this.TimestampField;
     }
 
     /**
-     * Set Timestamp field
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param TimestampField Timestamp field
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Set <p>Time partition field</p>
+     * @param TimestampField <p>Time partition field</p>
      */
     public void setTimestampField(String TimestampField) {
         this.TimestampField = TimestampField;
     }
 
     /**
-     * Get Write mode
-Note: This field may return `null`, indicating that no valid value can be obtained. 
-     * @return WriteMode Write mode
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Get <p>Write mode</p> 
+     * @return WriteMode <p>Write mode</p>
      */
     public String getWriteMode() {
         return this.WriteMode;
     }
 
     /**
-     * Set Write mode
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param WriteMode Write mode
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Set <p>Write mode</p>
+     * @param WriteMode <p>Write mode</p>
      */
     public void setWriteMode(String WriteMode) {
         this.WriteMode = WriteMode;
+    }
+
+    /**
+     * Get <p>Whether to enable complete uninstallation</p><p>Enumeration values:</p><ul><li>true: enable complete uninstallation</li><li>false: disable complete uninstallation</li></ul> 
+     * @return FullOffloadedEnable <p>Whether to enable complete uninstallation</p><p>Enumeration values:</p><ul><li>true: enable complete uninstallation</li><li>false: disable complete uninstallation</li></ul>
+     */
+    public String getFullOffloadedEnable() {
+        return this.FullOffloadedEnable;
+    }
+
+    /**
+     * Set <p>Whether to enable complete uninstallation</p><p>Enumeration values:</p><ul><li>true: enable complete uninstallation</li><li>false: disable complete uninstallation</li></ul>
+     * @param FullOffloadedEnable <p>Whether to enable complete uninstallation</p><p>Enumeration values:</p><ul><li>true: enable complete uninstallation</li><li>false: disable complete uninstallation</li></ul>
+     */
+    public void setFullOffloadedEnable(String FullOffloadedEnable) {
+        this.FullOffloadedEnable = FullOffloadedEnable;
+    }
+
+    /**
+     * Get <p>Full uninstall lifecycle</p> 
+     * @return FullOffloadedMaxAge <p>Full uninstall lifecycle</p>
+     */
+    public String getFullOffloadedMaxAge() {
+        return this.FullOffloadedMaxAge;
+    }
+
+    /**
+     * Set <p>Full uninstall lifecycle</p>
+     * @param FullOffloadedMaxAge <p>Full uninstall lifecycle</p>
+     */
+    public void setFullOffloadedMaxAge(String FullOffloadedMaxAge) {
+        this.FullOffloadedMaxAge = FullOffloadedMaxAge;
+    }
+
+    /**
+     * Get <p>Completely uninstall the lifecycle after backup index retrieval</p> 
+     * @return FullOffloadedRetrieveMaxAge <p>Completely uninstall the lifecycle after backup index retrieval</p>
+     */
+    public String getFullOffloadedRetrieveMaxAge() {
+        return this.FullOffloadedRetrieveMaxAge;
+    }
+
+    /**
+     * Set <p>Completely uninstall the lifecycle after backup index retrieval</p>
+     * @param FullOffloadedRetrieveMaxAge <p>Completely uninstall the lifecycle after backup index retrieval</p>
+     */
+    public void setFullOffloadedRetrieveMaxAge(String FullOffloadedRetrieveMaxAge) {
+        this.FullOffloadedRetrieveMaxAge = FullOffloadedRetrieveMaxAge;
     }
 
     public IndexOptionsField() {
@@ -248,6 +282,15 @@ Note: This field may return `null`, indicating that no valid value can be obtain
         if (source.WriteMode != null) {
             this.WriteMode = new String(source.WriteMode);
         }
+        if (source.FullOffloadedEnable != null) {
+            this.FullOffloadedEnable = new String(source.FullOffloadedEnable);
+        }
+        if (source.FullOffloadedMaxAge != null) {
+            this.FullOffloadedMaxAge = new String(source.FullOffloadedMaxAge);
+        }
+        if (source.FullOffloadedRetrieveMaxAge != null) {
+            this.FullOffloadedRetrieveMaxAge = new String(source.FullOffloadedRetrieveMaxAge);
+        }
     }
 
 
@@ -262,6 +305,9 @@ Note: This field may return `null`, indicating that no valid value can be obtain
         this.setParamSimple(map, prefix + "ShardNumDynamic", this.ShardNumDynamic);
         this.setParamSimple(map, prefix + "TimestampField", this.TimestampField);
         this.setParamSimple(map, prefix + "WriteMode", this.WriteMode);
+        this.setParamSimple(map, prefix + "FullOffloadedEnable", this.FullOffloadedEnable);
+        this.setParamSimple(map, prefix + "FullOffloadedMaxAge", this.FullOffloadedMaxAge);
+        this.setParamSimple(map, prefix + "FullOffloadedRetrieveMaxAge", this.FullOffloadedRetrieveMaxAge);
 
     }
 }

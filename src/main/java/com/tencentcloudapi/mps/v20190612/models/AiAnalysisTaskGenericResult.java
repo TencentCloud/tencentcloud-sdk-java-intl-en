@@ -1,0 +1,179 @@
+/*
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+package com.tencentcloudapi.mps.v20190612.models;
+
+import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.annotations.Expose;
+import java.util.HashMap;
+
+public class AiAnalysisTaskGenericResult extends AbstractModel {
+
+    /**
+    * <p>Task status. Valid values are PROCESSING, SUCCESS, and FAIL.</p><p>Enumeration values: </p><ul><li>PROCESSING: Processing</li><li>SUCCESS: Success</li><li>FAIL: Failure</li></ul>
+    */
+    @SerializedName("Status")
+    @Expose
+    private String Status;
+
+    /**
+    * <p>Error code. 0: Successful. Other values: Failed.</p>
+    */
+    @SerializedName("ErrCode")
+    @Expose
+    private Long ErrCode;
+
+    /**
+    * <p>Error message.</p>
+    */
+    @SerializedName("Message")
+    @Expose
+    private String Message;
+
+    /**
+    * <p>Intelligent analysis task input.</p>
+    */
+    @SerializedName("Input")
+    @Expose
+    private AiAnalysisTaskGenericInput Input;
+
+    /**
+    * <p>Intelligent analysis task output.</p>
+    */
+    @SerializedName("Output")
+    @Expose
+    private AiAnalysisTaskGenericOutput Output;
+
+    /**
+     * Get <p>Task status. Valid values are PROCESSING, SUCCESS, and FAIL.</p><p>Enumeration values: </p><ul><li>PROCESSING: Processing</li><li>SUCCESS: Success</li><li>FAIL: Failure</li></ul> 
+     * @return Status <p>Task status. Valid values are PROCESSING, SUCCESS, and FAIL.</p><p>Enumeration values: </p><ul><li>PROCESSING: Processing</li><li>SUCCESS: Success</li><li>FAIL: Failure</li></ul>
+     */
+    public String getStatus() {
+        return this.Status;
+    }
+
+    /**
+     * Set <p>Task status. Valid values are PROCESSING, SUCCESS, and FAIL.</p><p>Enumeration values: </p><ul><li>PROCESSING: Processing</li><li>SUCCESS: Success</li><li>FAIL: Failure</li></ul>
+     * @param Status <p>Task status. Valid values are PROCESSING, SUCCESS, and FAIL.</p><p>Enumeration values: </p><ul><li>PROCESSING: Processing</li><li>SUCCESS: Success</li><li>FAIL: Failure</li></ul>
+     */
+    public void setStatus(String Status) {
+        this.Status = Status;
+    }
+
+    /**
+     * Get <p>Error code. 0: Successful. Other values: Failed.</p> 
+     * @return ErrCode <p>Error code. 0: Successful. Other values: Failed.</p>
+     */
+    public Long getErrCode() {
+        return this.ErrCode;
+    }
+
+    /**
+     * Set <p>Error code. 0: Successful. Other values: Failed.</p>
+     * @param ErrCode <p>Error code. 0: Successful. Other values: Failed.</p>
+     */
+    public void setErrCode(Long ErrCode) {
+        this.ErrCode = ErrCode;
+    }
+
+    /**
+     * Get <p>Error message.</p> 
+     * @return Message <p>Error message.</p>
+     */
+    public String getMessage() {
+        return this.Message;
+    }
+
+    /**
+     * Set <p>Error message.</p>
+     * @param Message <p>Error message.</p>
+     */
+    public void setMessage(String Message) {
+        this.Message = Message;
+    }
+
+    /**
+     * Get <p>Intelligent analysis task input.</p> 
+     * @return Input <p>Intelligent analysis task input.</p>
+     */
+    public AiAnalysisTaskGenericInput getInput() {
+        return this.Input;
+    }
+
+    /**
+     * Set <p>Intelligent analysis task input.</p>
+     * @param Input <p>Intelligent analysis task input.</p>
+     */
+    public void setInput(AiAnalysisTaskGenericInput Input) {
+        this.Input = Input;
+    }
+
+    /**
+     * Get <p>Intelligent analysis task output.</p> 
+     * @return Output <p>Intelligent analysis task output.</p>
+     */
+    public AiAnalysisTaskGenericOutput getOutput() {
+        return this.Output;
+    }
+
+    /**
+     * Set <p>Intelligent analysis task output.</p>
+     * @param Output <p>Intelligent analysis task output.</p>
+     */
+    public void setOutput(AiAnalysisTaskGenericOutput Output) {
+        this.Output = Output;
+    }
+
+    public AiAnalysisTaskGenericResult() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AiAnalysisTaskGenericResult(AiAnalysisTaskGenericResult source) {
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+        if (source.ErrCode != null) {
+            this.ErrCode = new Long(source.ErrCode);
+        }
+        if (source.Message != null) {
+            this.Message = new String(source.Message);
+        }
+        if (source.Input != null) {
+            this.Input = new AiAnalysisTaskGenericInput(source.Input);
+        }
+        if (source.Output != null) {
+            this.Output = new AiAnalysisTaskGenericOutput(source.Output);
+        }
+    }
+
+
+    /**
+     * Internal implementation, normal users should not use it.
+     */
+    public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "ErrCode", this.ErrCode);
+        this.setParamSimple(map, prefix + "Message", this.Message);
+        this.setParamObj(map, prefix + "Input.", this.Input);
+        this.setParamObj(map, prefix + "Output.", this.Output);
+
+    }
+}
+

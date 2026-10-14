@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class CreateInputRTPSettings extends AbstractModel {
 
     /**
-    * Default value: none. Valid values: ['none'].
+    * Default value: "none". Available value: ['none'].
     */
     @SerializedName("FEC")
     @Expose
     private String FEC;
 
     /**
-    * Idle timeout period in ms. Default value: 5000. Value range: [1000, 10000].
+    * Idle timeout. Default value: 5000 ms. Range: [1000, 10000].
     */
     @SerializedName("IdleTimeout")
     @Expose
     private Long IdleTimeout;
 
     /**
-     * Get Default value: none. Valid values: ['none']. 
-     * @return FEC Default value: none. Valid values: ['none'].
+     * Get Default value: "none". Available value: ['none']. 
+     * @return FEC Default value: "none". Available value: ['none'].
      */
     public String getFEC() {
         return this.FEC;
     }
 
     /**
-     * Set Default value: none. Valid values: ['none'].
-     * @param FEC Default value: none. Valid values: ['none'].
+     * Set Default value: "none". Available value: ['none'].
+     * @param FEC Default value: "none". Available value: ['none'].
      */
     public void setFEC(String FEC) {
         this.FEC = FEC;
     }
 
     /**
-     * Get Idle timeout period in ms. Default value: 5000. Value range: [1000, 10000]. 
-     * @return IdleTimeout Idle timeout period in ms. Default value: 5000. Value range: [1000, 10000].
+     * Get Idle timeout. Default value: 5000 ms. Range: [1000, 10000]. 
+     * @return IdleTimeout Idle timeout. Default value: 5000 ms. Range: [1000, 10000].
      */
     public Long getIdleTimeout() {
         return this.IdleTimeout;
     }
 
     /**
-     * Set Idle timeout period in ms. Default value: 5000. Value range: [1000, 10000].
-     * @param IdleTimeout Idle timeout period in ms. Default value: 5000. Value range: [1000, 10000].
+     * Set Idle timeout. Default value: 5000 ms. Range: [1000, 10000].
+     * @param IdleTimeout Idle timeout. Default value: 5000 ms. Range: [1000, 10000].
      */
     public void setIdleTimeout(Long IdleTimeout) {
         this.IdleTimeout = IdleTimeout;

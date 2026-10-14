@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class CreateOutputRTPSettingsDestinations extends AbstractModel {
 
     /**
-    * The relay destination IP.
+    * Destination IP for repush.
     */
     @SerializedName("Ip")
     @Expose
     private String Ip;
 
     /**
-    * The relay destination port.
+    * Destination port for push.
     */
     @SerializedName("Port")
     @Expose
     private Long Port;
 
     /**
-     * Get The relay destination IP. 
-     * @return Ip The relay destination IP.
+     * Get Destination IP for repush. 
+     * @return Ip Destination IP for repush.
      */
     public String getIp() {
         return this.Ip;
     }
 
     /**
-     * Set The relay destination IP.
-     * @param Ip The relay destination IP.
+     * Set Destination IP for repush.
+     * @param Ip Destination IP for repush.
      */
     public void setIp(String Ip) {
         this.Ip = Ip;
     }
 
     /**
-     * Get The relay destination port. 
-     * @return Port The relay destination port.
+     * Get Destination port for push. 
+     * @return Port Destination port for push.
      */
     public Long getPort() {
         return this.Port;
     }
 
     /**
-     * Set The relay destination port.
-     * @param Port The relay destination port.
+     * Set Destination port for push.
+     * @param Port Destination port for push.
      */
     public void setPort(Long Port) {
         this.Port = Port;

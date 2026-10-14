@@ -24,21 +24,24 @@ import java.util.HashMap;
 public class DescribeAssetSyncLastTimeResponse extends AbstractModel {
 
     /**
-    * Last asset sync time
+    * Last Synchronization Time of Assets
     */
     @SerializedName("AssetSyncLastTime")
     @Expose
     private String AssetSyncLastTime;
 
     /**
-    * 
+    * Task status.
+PENDING: pending.
+PROCESSING: Processing
+PROCESSED: Completed
     */
     @SerializedName("TaskStatus")
     @Expose
     private String TaskStatus;
 
     /**
-    * 
+    * Task Progress (Percentage)
     */
     @SerializedName("TaskProcess")
     @Expose
@@ -66,48 +69,60 @@ public class DescribeAssetSyncLastTimeResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Last asset sync time 
-     * @return AssetSyncLastTime Last asset sync time
+     * Get Last Synchronization Time of Assets 
+     * @return AssetSyncLastTime Last Synchronization Time of Assets
      */
     public String getAssetSyncLastTime() {
         return this.AssetSyncLastTime;
     }
 
     /**
-     * Set Last asset sync time
-     * @param AssetSyncLastTime Last asset sync time
+     * Set Last Synchronization Time of Assets
+     * @param AssetSyncLastTime Last Synchronization Time of Assets
      */
     public void setAssetSyncLastTime(String AssetSyncLastTime) {
         this.AssetSyncLastTime = AssetSyncLastTime;
     }
 
     /**
-     * Get  
-     * @return TaskStatus 
+     * Get Task status.
+PENDING: pending.
+PROCESSING: Processing
+PROCESSED: Completed 
+     * @return TaskStatus Task status.
+PENDING: pending.
+PROCESSING: Processing
+PROCESSED: Completed
      */
     public String getTaskStatus() {
         return this.TaskStatus;
     }
 
     /**
-     * Set 
-     * @param TaskStatus 
+     * Set Task status.
+PENDING: pending.
+PROCESSING: Processing
+PROCESSED: Completed
+     * @param TaskStatus Task status.
+PENDING: pending.
+PROCESSING: Processing
+PROCESSED: Completed
      */
     public void setTaskStatus(String TaskStatus) {
         this.TaskStatus = TaskStatus;
     }
 
     /**
-     * Get  
-     * @return TaskProcess 
+     * Get Task Progress (Percentage) 
+     * @return TaskProcess Task Progress (Percentage)
      */
     public Long getTaskProcess() {
         return this.TaskProcess;
     }
 
     /**
-     * Set 
-     * @param TaskProcess 
+     * Set Task Progress (Percentage)
+     * @param TaskProcess Task Progress (Percentage)
      */
     public void setTaskProcess(Long TaskProcess) {
         this.TaskProcess = TaskProcess;

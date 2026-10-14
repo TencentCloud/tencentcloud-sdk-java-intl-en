@@ -24,46 +24,71 @@ import java.util.HashMap;
 public class FilterItem extends AbstractModel {
 
     /**
-    * 
+    * Filter the content.
+For example, you can use "AuditStatus" to filter by review status.
     */
     @SerializedName("FilterKey")
     @Expose
     private String FilterKey;
 
     /**
-    * 
+    * Filtering criteria.
+For example, for the filter content "AuditStatus", use the following filtering conditions:
+"ContentFailed": "Content review failed"
+"PictureFailed": "Image review failed",
+"ContentAndPictureFailed": "Image and content review failed",
     */
     @SerializedName("FilterValue")
     @Expose
     private String [] FilterValue;
 
     /**
-     * Get  
-     * @return FilterKey 
+     * Get Filter the content.
+For example, you can use "AuditStatus" to filter by review status. 
+     * @return FilterKey Filter the content.
+For example, you can use "AuditStatus" to filter by review status.
      */
     public String getFilterKey() {
         return this.FilterKey;
     }
 
     /**
-     * Set 
-     * @param FilterKey 
+     * Set Filter the content.
+For example, you can use "AuditStatus" to filter by review status.
+     * @param FilterKey Filter the content.
+For example, you can use "AuditStatus" to filter by review status.
      */
     public void setFilterKey(String FilterKey) {
         this.FilterKey = FilterKey;
     }
 
     /**
-     * Get  
-     * @return FilterValue 
+     * Get Filtering criteria.
+For example, for the filter content "AuditStatus", use the following filtering conditions:
+"ContentFailed": "Content review failed"
+"PictureFailed": "Image review failed",
+"ContentAndPictureFailed": "Image and content review failed", 
+     * @return FilterValue Filtering criteria.
+For example, for the filter content "AuditStatus", use the following filtering conditions:
+"ContentFailed": "Content review failed"
+"PictureFailed": "Image review failed",
+"ContentAndPictureFailed": "Image and content review failed",
      */
     public String [] getFilterValue() {
         return this.FilterValue;
     }
 
     /**
-     * Set 
-     * @param FilterValue 
+     * Set Filtering criteria.
+For example, for the filter content "AuditStatus", use the following filtering conditions:
+"ContentFailed": "Content review failed"
+"PictureFailed": "Image review failed",
+"ContentAndPictureFailed": "Image and content review failed",
+     * @param FilterValue Filtering criteria.
+For example, for the filter content "AuditStatus", use the following filtering conditions:
+"ContentFailed": "Content review failed"
+"PictureFailed": "Image review failed",
+"ContentAndPictureFailed": "Image and content review failed",
      */
     public void setFilterValue(String [] FilterValue) {
         this.FilterValue = FilterValue;

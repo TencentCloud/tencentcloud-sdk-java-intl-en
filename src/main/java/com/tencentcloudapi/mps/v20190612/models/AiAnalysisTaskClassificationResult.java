@@ -24,138 +24,138 @@ import java.util.HashMap;
 public class AiAnalysisTaskClassificationResult extends AbstractModel {
 
     /**
-    * Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
+    * <p>Task status. Valid values are PROCESSING, SUCCESS, and FAIL.</p>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * Error code. An empty string indicates that the task is successful, and other values indicate that the task has failed. For specific values, see [Error Codes] (https://www.tencentcloud.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
+    * <p>Error code. An empty string indicates that the task is successful, while other values indicate that the task has failed. For valid values, see the list of <a href="https://www.tencentcloud.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81">MPS error codes</a>.</p>
     */
     @SerializedName("ErrCodeExt")
     @Expose
     private String ErrCodeExt;
 
     /**
-    * Error code. 0 indicates that the task is successful, and other values indicate that the task has failed. (This field is not recommended. Use the new error code field ErrCodeExt instead.)
+    * <p>Error code. 0 indicates success, and other values indicate failure. (This field is not recommended. Use the new error code field ErrCodeExt instead.)</p>
     */
     @SerializedName("ErrCode")
     @Expose
     private Long ErrCode;
 
     /**
-    * Error message.
+    * <p>Error message.</p>
     */
     @SerializedName("Message")
     @Expose
     private String Message;
 
     /**
-    * Intelligent classification task input.
+    * <p>Intelligent categorization task input.</p>
     */
     @SerializedName("Input")
     @Expose
     private AiAnalysisTaskClassificationInput Input;
 
     /**
-    * 
+    * <p>Intelligent categorization task output.</p>
     */
     @SerializedName("Output")
     @Expose
     private AiAnalysisTaskClassificationOutput Output;
 
     /**
-     * Get Task status. Valid values are PROCESSING, SUCCESS, and FAIL. 
-     * @return Status Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
+     * Get <p>Task status. Valid values are PROCESSING, SUCCESS, and FAIL.</p> 
+     * @return Status <p>Task status. Valid values are PROCESSING, SUCCESS, and FAIL.</p>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
-     * @param Status Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
+     * Set <p>Task status. Valid values are PROCESSING, SUCCESS, and FAIL.</p>
+     * @param Status <p>Task status. Valid values are PROCESSING, SUCCESS, and FAIL.</p>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Error code. An empty string indicates that the task is successful, and other values indicate that the task has failed. For specific values, see [Error Codes] (https://www.tencentcloud.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81). 
-     * @return ErrCodeExt Error code. An empty string indicates that the task is successful, and other values indicate that the task has failed. For specific values, see [Error Codes] (https://www.tencentcloud.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
+     * Get <p>Error code. An empty string indicates that the task is successful, while other values indicate that the task has failed. For valid values, see the list of <a href="https://www.tencentcloud.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81">MPS error codes</a>.</p> 
+     * @return ErrCodeExt <p>Error code. An empty string indicates that the task is successful, while other values indicate that the task has failed. For valid values, see the list of <a href="https://www.tencentcloud.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81">MPS error codes</a>.</p>
      */
     public String getErrCodeExt() {
         return this.ErrCodeExt;
     }
 
     /**
-     * Set Error code. An empty string indicates that the task is successful, and other values indicate that the task has failed. For specific values, see [Error Codes] (https://www.tencentcloud.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
-     * @param ErrCodeExt Error code. An empty string indicates that the task is successful, and other values indicate that the task has failed. For specific values, see [Error Codes] (https://www.tencentcloud.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
+     * Set <p>Error code. An empty string indicates that the task is successful, while other values indicate that the task has failed. For valid values, see the list of <a href="https://www.tencentcloud.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81">MPS error codes</a>.</p>
+     * @param ErrCodeExt <p>Error code. An empty string indicates that the task is successful, while other values indicate that the task has failed. For valid values, see the list of <a href="https://www.tencentcloud.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81">MPS error codes</a>.</p>
      */
     public void setErrCodeExt(String ErrCodeExt) {
         this.ErrCodeExt = ErrCodeExt;
     }
 
     /**
-     * Get Error code. 0 indicates that the task is successful, and other values indicate that the task has failed. (This field is not recommended. Use the new error code field ErrCodeExt instead.) 
-     * @return ErrCode Error code. 0 indicates that the task is successful, and other values indicate that the task has failed. (This field is not recommended. Use the new error code field ErrCodeExt instead.)
+     * Get <p>Error code. 0 indicates success, and other values indicate failure. (This field is not recommended. Use the new error code field ErrCodeExt instead.)</p> 
+     * @return ErrCode <p>Error code. 0 indicates success, and other values indicate failure. (This field is not recommended. Use the new error code field ErrCodeExt instead.)</p>
      */
     public Long getErrCode() {
         return this.ErrCode;
     }
 
     /**
-     * Set Error code. 0 indicates that the task is successful, and other values indicate that the task has failed. (This field is not recommended. Use the new error code field ErrCodeExt instead.)
-     * @param ErrCode Error code. 0 indicates that the task is successful, and other values indicate that the task has failed. (This field is not recommended. Use the new error code field ErrCodeExt instead.)
+     * Set <p>Error code. 0 indicates success, and other values indicate failure. (This field is not recommended. Use the new error code field ErrCodeExt instead.)</p>
+     * @param ErrCode <p>Error code. 0 indicates success, and other values indicate failure. (This field is not recommended. Use the new error code field ErrCodeExt instead.)</p>
      */
     public void setErrCode(Long ErrCode) {
         this.ErrCode = ErrCode;
     }
 
     /**
-     * Get Error message. 
-     * @return Message Error message.
+     * Get <p>Error message.</p> 
+     * @return Message <p>Error message.</p>
      */
     public String getMessage() {
         return this.Message;
     }
 
     /**
-     * Set Error message.
-     * @param Message Error message.
+     * Set <p>Error message.</p>
+     * @param Message <p>Error message.</p>
      */
     public void setMessage(String Message) {
         this.Message = Message;
     }
 
     /**
-     * Get Intelligent classification task input. 
-     * @return Input Intelligent classification task input.
+     * Get <p>Intelligent categorization task input.</p> 
+     * @return Input <p>Intelligent categorization task input.</p>
      */
     public AiAnalysisTaskClassificationInput getInput() {
         return this.Input;
     }
 
     /**
-     * Set Intelligent classification task input.
-     * @param Input Intelligent classification task input.
+     * Set <p>Intelligent categorization task input.</p>
+     * @param Input <p>Intelligent categorization task input.</p>
      */
     public void setInput(AiAnalysisTaskClassificationInput Input) {
         this.Input = Input;
     }
 
     /**
-     * Get  
-     * @return Output 
+     * Get <p>Intelligent categorization task output.</p> 
+     * @return Output <p>Intelligent categorization task output.</p>
      */
     public AiAnalysisTaskClassificationOutput getOutput() {
         return this.Output;
     }
 
     /**
-     * Set 
-     * @param Output 
+     * Set <p>Intelligent categorization task output.</p>
+     * @param Output <p>Intelligent categorization task output.</p>
      */
     public void setOutput(AiAnalysisTaskClassificationOutput Output) {
         this.Output = Output;

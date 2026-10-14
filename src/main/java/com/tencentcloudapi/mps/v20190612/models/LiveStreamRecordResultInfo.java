@@ -24,46 +24,56 @@ import java.util.HashMap;
 public class LiveStreamRecordResultInfo extends AbstractModel {
 
     /**
-    * 
+    * Whether recording ends.
+0: Recording does not end, returning a single file.
+1: Recording ends, returning all recording files.
     */
     @SerializedName("RecordOver")
     @Expose
     private Long RecordOver;
 
     /**
-    * 
+    * File list.
     */
     @SerializedName("FileResults")
     @Expose
     private LiveRecordFile [] FileResults;
 
     /**
-     * Get  
-     * @return RecordOver 
+     * Get Whether recording ends.
+0: Recording does not end, returning a single file.
+1: Recording ends, returning all recording files. 
+     * @return RecordOver Whether recording ends.
+0: Recording does not end, returning a single file.
+1: Recording ends, returning all recording files.
      */
     public Long getRecordOver() {
         return this.RecordOver;
     }
 
     /**
-     * Set 
-     * @param RecordOver 
+     * Set Whether recording ends.
+0: Recording does not end, returning a single file.
+1: Recording ends, returning all recording files.
+     * @param RecordOver Whether recording ends.
+0: Recording does not end, returning a single file.
+1: Recording ends, returning all recording files.
      */
     public void setRecordOver(Long RecordOver) {
         this.RecordOver = RecordOver;
     }
 
     /**
-     * Get  
-     * @return FileResults 
+     * Get File list. 
+     * @return FileResults File list.
      */
     public LiveRecordFile [] getFileResults() {
         return this.FileResults;
     }
 
     /**
-     * Set 
-     * @param FileResults 
+     * Set File list.
+     * @param FileResults File list.
      */
     public void setFileResults(LiveRecordFile [] FileResults) {
         this.FileResults = FileResults;

@@ -227,21 +227,21 @@ public class CreateDBInstancesRequest extends AbstractModel {
     private String SQLMode;
 
     /**
-    * 
+    * <p>ccu configuration change of the SVLS instance</p><p>Input limit: This parameter no longer takes effect when AutoScaleConfigs is also input</p>
     */
     @SerializedName("AutoScaleConfig")
     @Expose
     private AutoScalingConfig AutoScaleConfig;
 
     /**
-    * <p>Security group binding list</p>
+    * <p>List of bound security groups</p>
     */
     @SerializedName("SecurityGroupIds")
     @Expose
     private String [] SecurityGroupIds;
 
     /**
-    * <p>root userName. It defaults to dbaadmin in the current version, and the passed value will be reset to dbaadmin</p>
+    * <p>root userName. The current version defaults to dbaadmin, and the passed value will reset to dbaadmin.</p>
     */
     @SerializedName("UserName")
     @Expose
@@ -255,14 +255,14 @@ public class CreateDBInstancesRequest extends AbstractModel {
     private String Password;
 
     /**
-    * <p>Whether transparent encryption is enabled. 0: not enabled. 1: enabled</p>
+    * <p>Whether to enable transparent encryption. 0: disable, 1: enable</p>
     */
     @SerializedName("EncryptionEnable")
     @Expose
     private Long EncryptionEnable;
 
     /**
-    * 
+    * <p>Relevant restrictions on automatic configuration adjustment for SVLS instances</p><p>Input parameter restriction: The AutoScaleConfig parameter will no longer take effect when passed in</p>
     */
     @SerializedName("AutoScaleConfigs")
     @Expose
@@ -733,48 +733,48 @@ public class CreateDBInstancesRequest extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return AutoScaleConfig 
+     * Get <p>ccu configuration change of the SVLS instance</p><p>Input limit: This parameter no longer takes effect when AutoScaleConfigs is also input</p> 
+     * @return AutoScaleConfig <p>ccu configuration change of the SVLS instance</p><p>Input limit: This parameter no longer takes effect when AutoScaleConfigs is also input</p>
      */
     public AutoScalingConfig getAutoScaleConfig() {
         return this.AutoScaleConfig;
     }
 
     /**
-     * Set 
-     * @param AutoScaleConfig 
+     * Set <p>ccu configuration change of the SVLS instance</p><p>Input limit: This parameter no longer takes effect when AutoScaleConfigs is also input</p>
+     * @param AutoScaleConfig <p>ccu configuration change of the SVLS instance</p><p>Input limit: This parameter no longer takes effect when AutoScaleConfigs is also input</p>
      */
     public void setAutoScaleConfig(AutoScalingConfig AutoScaleConfig) {
         this.AutoScaleConfig = AutoScaleConfig;
     }
 
     /**
-     * Get <p>Security group binding list</p> 
-     * @return SecurityGroupIds <p>Security group binding list</p>
+     * Get <p>List of bound security groups</p> 
+     * @return SecurityGroupIds <p>List of bound security groups</p>
      */
     public String [] getSecurityGroupIds() {
         return this.SecurityGroupIds;
     }
 
     /**
-     * Set <p>Security group binding list</p>
-     * @param SecurityGroupIds <p>Security group binding list</p>
+     * Set <p>List of bound security groups</p>
+     * @param SecurityGroupIds <p>List of bound security groups</p>
      */
     public void setSecurityGroupIds(String [] SecurityGroupIds) {
         this.SecurityGroupIds = SecurityGroupIds;
     }
 
     /**
-     * Get <p>root userName. It defaults to dbaadmin in the current version, and the passed value will be reset to dbaadmin</p> 
-     * @return UserName <p>root userName. It defaults to dbaadmin in the current version, and the passed value will be reset to dbaadmin</p>
+     * Get <p>root userName. The current version defaults to dbaadmin, and the passed value will reset to dbaadmin.</p> 
+     * @return UserName <p>root userName. The current version defaults to dbaadmin, and the passed value will reset to dbaadmin.</p>
      */
     public String getUserName() {
         return this.UserName;
     }
 
     /**
-     * Set <p>root userName. It defaults to dbaadmin in the current version, and the passed value will be reset to dbaadmin</p>
-     * @param UserName <p>root userName. It defaults to dbaadmin in the current version, and the passed value will be reset to dbaadmin</p>
+     * Set <p>root userName. The current version defaults to dbaadmin, and the passed value will reset to dbaadmin.</p>
+     * @param UserName <p>root userName. The current version defaults to dbaadmin, and the passed value will reset to dbaadmin.</p>
      */
     public void setUserName(String UserName) {
         this.UserName = UserName;
@@ -797,32 +797,32 @@ public class CreateDBInstancesRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>Whether transparent encryption is enabled. 0: not enabled. 1: enabled</p> 
-     * @return EncryptionEnable <p>Whether transparent encryption is enabled. 0: not enabled. 1: enabled</p>
+     * Get <p>Whether to enable transparent encryption. 0: disable, 1: enable</p> 
+     * @return EncryptionEnable <p>Whether to enable transparent encryption. 0: disable, 1: enable</p>
      */
     public Long getEncryptionEnable() {
         return this.EncryptionEnable;
     }
 
     /**
-     * Set <p>Whether transparent encryption is enabled. 0: not enabled. 1: enabled</p>
-     * @param EncryptionEnable <p>Whether transparent encryption is enabled. 0: not enabled. 1: enabled</p>
+     * Set <p>Whether to enable transparent encryption. 0: disable, 1: enable</p>
+     * @param EncryptionEnable <p>Whether to enable transparent encryption. 0: disable, 1: enable</p>
      */
     public void setEncryptionEnable(Long EncryptionEnable) {
         this.EncryptionEnable = EncryptionEnable;
     }
 
     /**
-     * Get  
-     * @return AutoScaleConfigs 
+     * Get <p>Relevant restrictions on automatic configuration adjustment for SVLS instances</p><p>Input parameter restriction: The AutoScaleConfig parameter will no longer take effect when passed in</p> 
+     * @return AutoScaleConfigs <p>Relevant restrictions on automatic configuration adjustment for SVLS instances</p><p>Input parameter restriction: The AutoScaleConfig parameter will no longer take effect when passed in</p>
      */
     public AutoScalingConfig [] getAutoScaleConfigs() {
         return this.AutoScaleConfigs;
     }
 
     /**
-     * Set 
-     * @param AutoScaleConfigs 
+     * Set <p>Relevant restrictions on automatic configuration adjustment for SVLS instances</p><p>Input parameter restriction: The AutoScaleConfig parameter will no longer take effect when passed in</p>
+     * @param AutoScaleConfigs <p>Relevant restrictions on automatic configuration adjustment for SVLS instances</p><p>Input parameter restriction: The AutoScaleConfig parameter will no longer take effect when passed in</p>
      */
     public void setAutoScaleConfigs(AutoScalingConfig [] AutoScaleConfigs) {
         this.AutoScaleConfigs = AutoScaleConfigs;

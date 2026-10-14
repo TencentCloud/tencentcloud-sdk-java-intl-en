@@ -52,14 +52,14 @@ public class MediaProcessTaskSnapshotByTimeOffsetResult extends AbstractModel {
     private String Message;
 
     /**
-    * Task input for screenshot taking at specified time points.
+    * Input of the time point screenshot task for videos.
     */
     @SerializedName("Input")
     @Expose
     private SnapshotByTimeOffsetTaskInput Input;
 
     /**
-    * 
+    * Output of the time point screenshot task for videos.
     */
     @SerializedName("Output")
     @Expose
@@ -144,32 +144,32 @@ public class MediaProcessTaskSnapshotByTimeOffsetResult extends AbstractModel {
     }
 
     /**
-     * Get Task input for screenshot taking at specified time points. 
-     * @return Input Task input for screenshot taking at specified time points.
+     * Get Input of the time point screenshot task for videos. 
+     * @return Input Input of the time point screenshot task for videos.
      */
     public SnapshotByTimeOffsetTaskInput getInput() {
         return this.Input;
     }
 
     /**
-     * Set Task input for screenshot taking at specified time points.
-     * @param Input Task input for screenshot taking at specified time points.
+     * Set Input of the time point screenshot task for videos.
+     * @param Input Input of the time point screenshot task for videos.
      */
     public void setInput(SnapshotByTimeOffsetTaskInput Input) {
         this.Input = Input;
     }
 
     /**
-     * Get  
-     * @return Output 
+     * Get Output of the time point screenshot task for videos. 
+     * @return Output Output of the time point screenshot task for videos.
      */
     public MediaSnapshotByTimeOffsetItem getOutput() {
         return this.Output;
     }
 
     /**
-     * Set 
-     * @param Output 
+     * Set Output of the time point screenshot task for videos.
+     * @param Output Output of the time point screenshot task for videos.
      */
     public void setOutput(MediaSnapshotByTimeOffsetItem Output) {
         this.Output = Output;

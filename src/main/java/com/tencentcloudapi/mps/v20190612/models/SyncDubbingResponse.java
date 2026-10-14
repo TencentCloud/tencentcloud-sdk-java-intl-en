@@ -38,7 +38,7 @@ public class SyncDubbingResponse extends AbstractModel {
     private String Msg;
 
     /**
-    * 
+    * <p>base64-encoded synthetic audio in wav format.</p>
     */
     @SerializedName("AudioData")
     @Expose
@@ -52,7 +52,7 @@ public class SyncDubbingResponse extends AbstractModel {
     private String AudioUrl;
 
     /**
-    * 
+    * <p>Id of the cloned voice type.</p>
     */
     @SerializedName("VoiceId")
     @Expose
@@ -105,16 +105,16 @@ public class SyncDubbingResponse extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return AudioData 
+     * Get <p>base64-encoded synthetic audio in wav format.</p> 
+     * @return AudioData <p>base64-encoded synthetic audio in wav format.</p>
      */
     public String getAudioData() {
         return this.AudioData;
     }
 
     /**
-     * Set 
-     * @param AudioData 
+     * Set <p>base64-encoded synthetic audio in wav format.</p>
+     * @param AudioData <p>base64-encoded synthetic audio in wav format.</p>
      */
     public void setAudioData(String AudioData) {
         this.AudioData = AudioData;
@@ -137,16 +137,16 @@ public class SyncDubbingResponse extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return VoiceId 
+     * Get <p>Id of the cloned voice type.</p> 
+     * @return VoiceId <p>Id of the cloned voice type.</p>
      */
     public String getVoiceId() {
         return this.VoiceId;
     }
 
     /**
-     * Set 
-     * @param VoiceId 
+     * Set <p>Id of the cloned voice type.</p>
+     * @param VoiceId <p>Id of the cloned voice type.</p>
      */
     public void setVoiceId(String VoiceId) {
         this.VoiceId = VoiceId;

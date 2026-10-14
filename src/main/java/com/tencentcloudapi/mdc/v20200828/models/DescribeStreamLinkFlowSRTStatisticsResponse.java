@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeStreamLinkFlowSRTStatisticsResponse extends AbstractModel {
 
     /**
-    * A list of the SRT streaming performance data.
+    * List of SRT quality data in the transport stream.
     */
     @SerializedName("Infos")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeStreamLinkFlowSRTStatisticsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get A list of the SRT streaming performance data. 
-     * @return Infos A list of the SRT streaming performance data.
+     * Get List of SRT quality data in the transport stream. 
+     * @return Infos List of SRT quality data in the transport stream.
      */
     public FlowSRTInfo [] getInfos() {
         return this.Infos;
     }
 
     /**
-     * Set A list of the SRT streaming performance data.
-     * @param Infos A list of the SRT streaming performance data.
+     * Set List of SRT quality data in the transport stream.
+     * @param Infos List of SRT quality data in the transport stream.
      */
     public void setInfos(FlowSRTInfo [] Infos) {
         this.Infos = Infos;

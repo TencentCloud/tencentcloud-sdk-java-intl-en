@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class LiveStreamAiReviewImagePoliticalResult extends AbstractModel {
 
     /**
-    * Start PTS time of a suspected segment, in seconds.
+    * Starting PTS time of a suspected segment, in seconds.
     */
     @SerializedName("StartPtsTime")
     @Expose
@@ -45,7 +45,7 @@ public class LiveStreamAiReviewImagePoliticalResult extends AbstractModel {
     private Float Confidence;
 
     /**
-    * Result suggestion for suspected segment porn detection, permissible range:
+    * Pornographic result advice for the suspected segment. Value range:
 <li>pass</li>
 <li>review</li>
 <li>block</li>
@@ -55,7 +55,7 @@ public class LiveStreamAiReviewImagePoliticalResult extends AbstractModel {
     private String Suggestion;
 
     /**
-    * Video sensitive result tag, value ranges from...to...
+    * Video sensitive result tag. Value range:
 <li>politician: sensitive person.</li>
 <li>violation_photo: violation icon.</li>
     */
@@ -64,45 +64,45 @@ public class LiveStreamAiReviewImagePoliticalResult extends AbstractModel {
     private String Label;
 
     /**
-    * Sensitive person, violative icon name.
+    * Sensitive person and violative icon name.
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * Area coordinates (pixel-level) where sensitive persons or violation icons appear. Format: [x1, y1, x2, y2], which indicates the coordinates of the top-left corner and the bottom-right corner.
+    * Zone coordinates (pixel-level) where sensitive persons or violation icons appear. Format: [x1, y1, x2, y2], which indicates the coordinates of the top-left corner and the bottom-right corner.
     */
     @SerializedName("AreaCoordSet")
     @Expose
     private Long [] AreaCoordSet;
 
     /**
-    * Suspected image URL (Images are not retained permanently upon arrival)
-The image will be deleted after the PicUrlExpireTime time point.
+    * Suspected image URL (images are not retained permanently and will reach
+Images will be deleted after the PicUrlExpireTime time point).
     */
     @SerializedName("Url")
     @Expose
     private String Url;
 
     /**
-    * Expiration time of the suspected image URL, using the ISO date format (https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
+    * Expiration time of the suspected image URL in ISO date format (https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
     */
     @SerializedName("PicUrlExpireTime")
     @Expose
     private String PicUrlExpireTime;
 
     /**
-     * Get Start PTS time of a suspected segment, in seconds. 
-     * @return StartPtsTime Start PTS time of a suspected segment, in seconds.
+     * Get Starting PTS time of a suspected segment, in seconds. 
+     * @return StartPtsTime Starting PTS time of a suspected segment, in seconds.
      */
     public Float getStartPtsTime() {
         return this.StartPtsTime;
     }
 
     /**
-     * Set Start PTS time of a suspected segment, in seconds.
-     * @param StartPtsTime Start PTS time of a suspected segment, in seconds.
+     * Set Starting PTS time of a suspected segment, in seconds.
+     * @param StartPtsTime Starting PTS time of a suspected segment, in seconds.
      */
     public void setStartPtsTime(Float StartPtsTime) {
         this.StartPtsTime = StartPtsTime;
@@ -141,11 +141,11 @@ The image will be deleted after the PicUrlExpireTime time point.
     }
 
     /**
-     * Get Result suggestion for suspected segment porn detection, permissible range:
+     * Get Pornographic result advice for the suspected segment. Value range:
 <li>pass</li>
 <li>review</li>
 <li>block</li> 
-     * @return Suggestion Result suggestion for suspected segment porn detection, permissible range:
+     * @return Suggestion Pornographic result advice for the suspected segment. Value range:
 <li>pass</li>
 <li>review</li>
 <li>block</li>
@@ -155,11 +155,11 @@ The image will be deleted after the PicUrlExpireTime time point.
     }
 
     /**
-     * Set Result suggestion for suspected segment porn detection, permissible range:
+     * Set Pornographic result advice for the suspected segment. Value range:
 <li>pass</li>
 <li>review</li>
 <li>block</li>
-     * @param Suggestion Result suggestion for suspected segment porn detection, permissible range:
+     * @param Suggestion Pornographic result advice for the suspected segment. Value range:
 <li>pass</li>
 <li>review</li>
 <li>block</li>
@@ -169,10 +169,10 @@ The image will be deleted after the PicUrlExpireTime time point.
     }
 
     /**
-     * Get Video sensitive result tag, value ranges from...to...
+     * Get Video sensitive result tag. Value range:
 <li>politician: sensitive person.</li>
 <li>violation_photo: violation icon.</li> 
-     * @return Label Video sensitive result tag, value ranges from...to...
+     * @return Label Video sensitive result tag. Value range:
 <li>politician: sensitive person.</li>
 <li>violation_photo: violation icon.</li>
      */
@@ -181,10 +181,10 @@ The image will be deleted after the PicUrlExpireTime time point.
     }
 
     /**
-     * Set Video sensitive result tag, value ranges from...to...
+     * Set Video sensitive result tag. Value range:
 <li>politician: sensitive person.</li>
 <li>violation_photo: violation icon.</li>
-     * @param Label Video sensitive result tag, value ranges from...to...
+     * @param Label Video sensitive result tag. Value range:
 <li>politician: sensitive person.</li>
 <li>violation_photo: violation icon.</li>
      */
@@ -193,68 +193,68 @@ The image will be deleted after the PicUrlExpireTime time point.
     }
 
     /**
-     * Get Sensitive person, violative icon name. 
-     * @return Name Sensitive person, violative icon name.
+     * Get Sensitive person and violative icon name. 
+     * @return Name Sensitive person and violative icon name.
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Sensitive person, violative icon name.
-     * @param Name Sensitive person, violative icon name.
+     * Set Sensitive person and violative icon name.
+     * @param Name Sensitive person and violative icon name.
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Area coordinates (pixel-level) where sensitive persons or violation icons appear. Format: [x1, y1, x2, y2], which indicates the coordinates of the top-left corner and the bottom-right corner. 
-     * @return AreaCoordSet Area coordinates (pixel-level) where sensitive persons or violation icons appear. Format: [x1, y1, x2, y2], which indicates the coordinates of the top-left corner and the bottom-right corner.
+     * Get Zone coordinates (pixel-level) where sensitive persons or violation icons appear. Format: [x1, y1, x2, y2], which indicates the coordinates of the top-left corner and the bottom-right corner. 
+     * @return AreaCoordSet Zone coordinates (pixel-level) where sensitive persons or violation icons appear. Format: [x1, y1, x2, y2], which indicates the coordinates of the top-left corner and the bottom-right corner.
      */
     public Long [] getAreaCoordSet() {
         return this.AreaCoordSet;
     }
 
     /**
-     * Set Area coordinates (pixel-level) where sensitive persons or violation icons appear. Format: [x1, y1, x2, y2], which indicates the coordinates of the top-left corner and the bottom-right corner.
-     * @param AreaCoordSet Area coordinates (pixel-level) where sensitive persons or violation icons appear. Format: [x1, y1, x2, y2], which indicates the coordinates of the top-left corner and the bottom-right corner.
+     * Set Zone coordinates (pixel-level) where sensitive persons or violation icons appear. Format: [x1, y1, x2, y2], which indicates the coordinates of the top-left corner and the bottom-right corner.
+     * @param AreaCoordSet Zone coordinates (pixel-level) where sensitive persons or violation icons appear. Format: [x1, y1, x2, y2], which indicates the coordinates of the top-left corner and the bottom-right corner.
      */
     public void setAreaCoordSet(Long [] AreaCoordSet) {
         this.AreaCoordSet = AreaCoordSet;
     }
 
     /**
-     * Get Suspected image URL (Images are not retained permanently upon arrival)
-The image will be deleted after the PicUrlExpireTime time point. 
-     * @return Url Suspected image URL (Images are not retained permanently upon arrival)
-The image will be deleted after the PicUrlExpireTime time point.
+     * Get Suspected image URL (images are not retained permanently and will reach
+Images will be deleted after the PicUrlExpireTime time point). 
+     * @return Url Suspected image URL (images are not retained permanently and will reach
+Images will be deleted after the PicUrlExpireTime time point).
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * Set Suspected image URL (Images are not retained permanently upon arrival)
-The image will be deleted after the PicUrlExpireTime time point.
-     * @param Url Suspected image URL (Images are not retained permanently upon arrival)
-The image will be deleted after the PicUrlExpireTime time point.
+     * Set Suspected image URL (images are not retained permanently and will reach
+Images will be deleted after the PicUrlExpireTime time point).
+     * @param Url Suspected image URL (images are not retained permanently and will reach
+Images will be deleted after the PicUrlExpireTime time point).
      */
     public void setUrl(String Url) {
         this.Url = Url;
     }
 
     /**
-     * Get Expiration time of the suspected image URL, using the ISO date format (https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52). 
-     * @return PicUrlExpireTime Expiration time of the suspected image URL, using the ISO date format (https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
+     * Get Expiration time of the suspected image URL in ISO date format (https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52). 
+     * @return PicUrlExpireTime Expiration time of the suspected image URL in ISO date format (https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
      */
     public String getPicUrlExpireTime() {
         return this.PicUrlExpireTime;
     }
 
     /**
-     * Set Expiration time of the suspected image URL, using the ISO date format (https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
-     * @param PicUrlExpireTime Expiration time of the suspected image URL, using the ISO date format (https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
+     * Set Expiration time of the suspected image URL in ISO date format (https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
+     * @param PicUrlExpireTime Expiration time of the suspected image URL in ISO date format (https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
      */
     public void setPicUrlExpireTime(String PicUrlExpireTime) {
         this.PicUrlExpireTime = PicUrlExpireTime;

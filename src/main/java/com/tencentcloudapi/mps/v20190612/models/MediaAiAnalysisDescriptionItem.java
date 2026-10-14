@@ -52,14 +52,14 @@ public class MediaAiAnalysisDescriptionItem extends AbstractModel {
     private String [] Keywords;
 
     /**
-    * 
+    * Segmentation result.
     */
     @SerializedName("Paragraphs")
     @Expose
     private AiParagraphInfo [] Paragraphs;
 
     /**
-    * 
+    * Address of the mind map of a summary task.
     */
     @SerializedName("MindMapUrl")
     @Expose
@@ -151,32 +151,32 @@ public class MediaAiAnalysisDescriptionItem extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return Paragraphs 
+     * Get Segmentation result. 
+     * @return Paragraphs Segmentation result.
      */
     public AiParagraphInfo [] getParagraphs() {
         return this.Paragraphs;
     }
 
     /**
-     * Set 
-     * @param Paragraphs 
+     * Set Segmentation result.
+     * @param Paragraphs Segmentation result.
      */
     public void setParagraphs(AiParagraphInfo [] Paragraphs) {
         this.Paragraphs = Paragraphs;
     }
 
     /**
-     * Get  
-     * @return MindMapUrl 
+     * Get Address of the mind map of a summary task. 
+     * @return MindMapUrl Address of the mind map of a summary task.
      */
     public String getMindMapUrl() {
         return this.MindMapUrl;
     }
 
     /**
-     * Set 
-     * @param MindMapUrl 
+     * Set Address of the mind map of a summary task.
+     * @param MindMapUrl Address of the mind map of a summary task.
      */
     public void setMindMapUrl(String MindMapUrl) {
         this.MindMapUrl = MindMapUrl;

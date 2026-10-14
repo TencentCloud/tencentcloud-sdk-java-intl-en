@@ -31,7 +31,7 @@ public class ScheduleTask extends AbstractModel {
     private String TaskId;
 
     /**
-    * Task flow status. Valid values:
+    * Task stream status. Valid values:
 <li>PROCESSING: Processing;</li>
 <li>FINISH: completed</li>
     */
@@ -54,21 +54,21 @@ public class ScheduleTask extends AbstractModel {
     private String Message;
 
     /**
-    * 
+    * Information about the target file for media processing.
     */
     @SerializedName("InputInfo")
     @Expose
     private MediaInputInfo InputInfo;
 
     /**
-    * 
+    * Metadata of the original video.
     */
     @SerializedName("MetaData")
     @Expose
     private MediaMetaData MetaData;
 
     /**
-    * 
+    * Output of the orchestration task.
     */
     @SerializedName("ActivityResultSet")
     @Expose
@@ -91,10 +91,10 @@ public class ScheduleTask extends AbstractModel {
     }
 
     /**
-     * Get Task flow status. Valid values:
+     * Get Task stream status. Valid values:
 <li>PROCESSING: Processing;</li>
 <li>FINISH: completed</li> 
-     * @return Status Task flow status. Valid values:
+     * @return Status Task stream status. Valid values:
 <li>PROCESSING: Processing;</li>
 <li>FINISH: completed</li>
      */
@@ -103,10 +103,10 @@ public class ScheduleTask extends AbstractModel {
     }
 
     /**
-     * Set Task flow status. Valid values:
+     * Set Task stream status. Valid values:
 <li>PROCESSING: Processing;</li>
 <li>FINISH: completed</li>
-     * @param Status Task flow status. Valid values:
+     * @param Status Task stream status. Valid values:
 <li>PROCESSING: Processing;</li>
 <li>FINISH: completed</li>
      */
@@ -147,48 +147,48 @@ public class ScheduleTask extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return InputInfo 
+     * Get Information about the target file for media processing. 
+     * @return InputInfo Information about the target file for media processing.
      */
     public MediaInputInfo getInputInfo() {
         return this.InputInfo;
     }
 
     /**
-     * Set 
-     * @param InputInfo 
+     * Set Information about the target file for media processing.
+     * @param InputInfo Information about the target file for media processing.
      */
     public void setInputInfo(MediaInputInfo InputInfo) {
         this.InputInfo = InputInfo;
     }
 
     /**
-     * Get  
-     * @return MetaData 
+     * Get Metadata of the original video. 
+     * @return MetaData Metadata of the original video.
      */
     public MediaMetaData getMetaData() {
         return this.MetaData;
     }
 
     /**
-     * Set 
-     * @param MetaData 
+     * Set Metadata of the original video.
+     * @param MetaData Metadata of the original video.
      */
     public void setMetaData(MediaMetaData MetaData) {
         this.MetaData = MetaData;
     }
 
     /**
-     * Get  
-     * @return ActivityResultSet 
+     * Get Output of the orchestration task. 
+     * @return ActivityResultSet Output of the orchestration task.
      */
     public ActivityResult [] getActivityResultSet() {
         return this.ActivityResultSet;
     }
 
     /**
-     * Set 
-     * @param ActivityResultSet 
+     * Set Output of the orchestration task.
+     * @param ActivityResultSet Output of the orchestration task.
      */
     public void setActivityResultSet(ActivityResult [] ActivityResultSet) {
         this.ActivityResultSet = ActivityResultSet;

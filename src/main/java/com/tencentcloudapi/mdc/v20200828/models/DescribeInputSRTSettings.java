@@ -24,43 +24,42 @@ import java.util.HashMap;
 public class DescribeInputSRTSettings extends AbstractModel {
 
     /**
-    * The SRT mode.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+    * SRT mode.
     */
     @SerializedName("Mode")
     @Expose
     private String Mode;
 
     /**
-    * Stream ID.
+    * Stream Id.
     */
     @SerializedName("StreamId")
     @Expose
     private String StreamId;
 
     /**
-    * Latency.
+    * Delay.
     */
     @SerializedName("Latency")
     @Expose
     private Long Latency;
 
     /**
-    * Receive latency.
+    * Receive delay.
     */
     @SerializedName("RecvLatency")
     @Expose
     private Long RecvLatency;
 
     /**
-    * Peer latency.
+    * Peer delay.
     */
     @SerializedName("PeerLatency")
     @Expose
     private Long PeerLatency;
 
     /**
-    * Peer idle timeout period.
+    * Idle timeout period of the peer.
     */
     @SerializedName("PeerIdleTimeout")
     @Expose
@@ -81,108 +80,110 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     private Long PbKeyLen;
 
     /**
-    * The SRT peer address.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+    * SRT peer address.
     */
     @SerializedName("SourceAddresses")
     @Expose
     private SRTSourceAddressResp [] SourceAddresses;
 
     /**
-     * Get The SRT mode.
-Note: This field may return `null`, indicating that no valid value can be obtained. 
-     * @return Mode The SRT mode.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+    * FEC settings
+    */
+    @SerializedName("FEC")
+    @Expose
+    private SRTFECSimpleOptions FEC;
+
+    /**
+     * Get SRT mode. 
+     * @return Mode SRT mode.
      */
     public String getMode() {
         return this.Mode;
     }
 
     /**
-     * Set The SRT mode.
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param Mode The SRT mode.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Set SRT mode.
+     * @param Mode SRT mode.
      */
     public void setMode(String Mode) {
         this.Mode = Mode;
     }
 
     /**
-     * Get Stream ID. 
-     * @return StreamId Stream ID.
+     * Get Stream Id. 
+     * @return StreamId Stream Id.
      */
     public String getStreamId() {
         return this.StreamId;
     }
 
     /**
-     * Set Stream ID.
-     * @param StreamId Stream ID.
+     * Set Stream Id.
+     * @param StreamId Stream Id.
      */
     public void setStreamId(String StreamId) {
         this.StreamId = StreamId;
     }
 
     /**
-     * Get Latency. 
-     * @return Latency Latency.
+     * Get Delay. 
+     * @return Latency Delay.
      */
     public Long getLatency() {
         return this.Latency;
     }
 
     /**
-     * Set Latency.
-     * @param Latency Latency.
+     * Set Delay.
+     * @param Latency Delay.
      */
     public void setLatency(Long Latency) {
         this.Latency = Latency;
     }
 
     /**
-     * Get Receive latency. 
-     * @return RecvLatency Receive latency.
+     * Get Receive delay. 
+     * @return RecvLatency Receive delay.
      */
     public Long getRecvLatency() {
         return this.RecvLatency;
     }
 
     /**
-     * Set Receive latency.
-     * @param RecvLatency Receive latency.
+     * Set Receive delay.
+     * @param RecvLatency Receive delay.
      */
     public void setRecvLatency(Long RecvLatency) {
         this.RecvLatency = RecvLatency;
     }
 
     /**
-     * Get Peer latency. 
-     * @return PeerLatency Peer latency.
+     * Get Peer delay. 
+     * @return PeerLatency Peer delay.
      */
     public Long getPeerLatency() {
         return this.PeerLatency;
     }
 
     /**
-     * Set Peer latency.
-     * @param PeerLatency Peer latency.
+     * Set Peer delay.
+     * @param PeerLatency Peer delay.
      */
     public void setPeerLatency(Long PeerLatency) {
         this.PeerLatency = PeerLatency;
     }
 
     /**
-     * Get Peer idle timeout period. 
-     * @return PeerIdleTimeout Peer idle timeout period.
+     * Get Idle timeout period of the peer. 
+     * @return PeerIdleTimeout Idle timeout period of the peer.
      */
     public Long getPeerIdleTimeout() {
         return this.PeerIdleTimeout;
     }
 
     /**
-     * Set Peer idle timeout period.
-     * @param PeerIdleTimeout Peer idle timeout period.
+     * Set Idle timeout period of the peer.
+     * @param PeerIdleTimeout Idle timeout period of the peer.
      */
     public void setPeerIdleTimeout(Long PeerIdleTimeout) {
         this.PeerIdleTimeout = PeerIdleTimeout;
@@ -221,23 +222,35 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     }
 
     /**
-     * Get The SRT peer address.
-Note: This field may return `null`, indicating that no valid value can be obtained. 
-     * @return SourceAddresses The SRT peer address.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Get SRT peer address. 
+     * @return SourceAddresses SRT peer address.
      */
     public SRTSourceAddressResp [] getSourceAddresses() {
         return this.SourceAddresses;
     }
 
     /**
-     * Set The SRT peer address.
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param SourceAddresses The SRT peer address.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Set SRT peer address.
+     * @param SourceAddresses SRT peer address.
      */
     public void setSourceAddresses(SRTSourceAddressResp [] SourceAddresses) {
         this.SourceAddresses = SourceAddresses;
+    }
+
+    /**
+     * Get FEC settings 
+     * @return FEC FEC settings
+     */
+    public SRTFECSimpleOptions getFEC() {
+        return this.FEC;
+    }
+
+    /**
+     * Set FEC settings
+     * @param FEC FEC settings
+     */
+    public void setFEC(SRTFECSimpleOptions FEC) {
+        this.FEC = FEC;
     }
 
     public DescribeInputSRTSettings() {
@@ -278,6 +291,9 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                 this.SourceAddresses[i] = new SRTSourceAddressResp(source.SourceAddresses[i]);
             }
         }
+        if (source.FEC != null) {
+            this.FEC = new SRTFECSimpleOptions(source.FEC);
+        }
     }
 
 
@@ -294,6 +310,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
         this.setParamSimple(map, prefix + "Passphrase", this.Passphrase);
         this.setParamSimple(map, prefix + "PbKeyLen", this.PbKeyLen);
         this.setParamArrayObj(map, prefix + "SourceAddresses.", this.SourceAddresses);
+        this.setParamObj(map, prefix + "FEC.", this.FEC);
 
     }
 }

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class LiveStreamAiReviewImageTerrorismResult extends AbstractModel {
 
     /**
-    * Start PTS time of a suspected segment, in seconds.
+    * Starting PTS time of a suspected segment, in seconds.
     */
     @SerializedName("StartPtsTime")
     @Expose
@@ -38,14 +38,14 @@ public class LiveStreamAiReviewImageTerrorismResult extends AbstractModel {
     private Float EndPtsTime;
 
     /**
-    * Suspected segment sensitivity score.
+    * Sensitivity score of the suspected segment.
     */
     @SerializedName("Confidence")
     @Expose
     private Float Confidence;
 
     /**
-    * Suspected segment sensitive result suggestion, permissible range:
+    * Suspected segment sensitive result suggestion. Value range:
 <li>pass</li>
 <li>review</li>
 <li>block</li>
@@ -55,13 +55,13 @@ public class LiveStreamAiReviewImageTerrorismResult extends AbstractModel {
     private String Suggestion;
 
     /**
-    * Video sensitive content result tag, value ranges from...to...
+    * Sensitive result tag of the video. Value range:
 <li>guns: weapons and firearms.</li>
 <li>crowd: crowd gathering.</li>
 <li>police: police force.</li>
 <li>bloody: graphic violence.</li>
 <li>banners: sensitive flags.</li>
-<li>militant: militant.</li>
+<li>militant: militants.</li>
 <li>explosion: explosions and fires.</li>
 <li>terrorists: sensitive persons.</li>
     */
@@ -70,31 +70,31 @@ public class LiveStreamAiReviewImageTerrorismResult extends AbstractModel {
     private String Label;
 
     /**
-    * Suspected image URL (Images are not retained permanently upon arrival)
-The image will be deleted after the PicUrlExpireTime time point.
+    * Suspected image URL (images are not retained permanently and will be deleted upon reaching
+Images will be deleted after the PicUrlExpireTime time point).
     */
     @SerializedName("Url")
     @Expose
     private String Url;
 
     /**
-    * Expiration time of the suspected image URL, using the ISO date format (https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
+    * Expiration time of the suspected image URL, using the [ISO date format](https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
     */
     @SerializedName("PicUrlExpireTime")
     @Expose
     private String PicUrlExpireTime;
 
     /**
-     * Get Start PTS time of a suspected segment, in seconds. 
-     * @return StartPtsTime Start PTS time of a suspected segment, in seconds.
+     * Get Starting PTS time of a suspected segment, in seconds. 
+     * @return StartPtsTime Starting PTS time of a suspected segment, in seconds.
      */
     public Float getStartPtsTime() {
         return this.StartPtsTime;
     }
 
     /**
-     * Set Start PTS time of a suspected segment, in seconds.
-     * @param StartPtsTime Start PTS time of a suspected segment, in seconds.
+     * Set Starting PTS time of a suspected segment, in seconds.
+     * @param StartPtsTime Starting PTS time of a suspected segment, in seconds.
      */
     public void setStartPtsTime(Float StartPtsTime) {
         this.StartPtsTime = StartPtsTime;
@@ -117,27 +117,27 @@ The image will be deleted after the PicUrlExpireTime time point.
     }
 
     /**
-     * Get Suspected segment sensitivity score. 
-     * @return Confidence Suspected segment sensitivity score.
+     * Get Sensitivity score of the suspected segment. 
+     * @return Confidence Sensitivity score of the suspected segment.
      */
     public Float getConfidence() {
         return this.Confidence;
     }
 
     /**
-     * Set Suspected segment sensitivity score.
-     * @param Confidence Suspected segment sensitivity score.
+     * Set Sensitivity score of the suspected segment.
+     * @param Confidence Sensitivity score of the suspected segment.
      */
     public void setConfidence(Float Confidence) {
         this.Confidence = Confidence;
     }
 
     /**
-     * Get Suspected segment sensitive result suggestion, permissible range:
+     * Get Suspected segment sensitive result suggestion. Value range:
 <li>pass</li>
 <li>review</li>
 <li>block</li> 
-     * @return Suggestion Suspected segment sensitive result suggestion, permissible range:
+     * @return Suggestion Suspected segment sensitive result suggestion. Value range:
 <li>pass</li>
 <li>review</li>
 <li>block</li>
@@ -147,11 +147,11 @@ The image will be deleted after the PicUrlExpireTime time point.
     }
 
     /**
-     * Set Suspected segment sensitive result suggestion, permissible range:
+     * Set Suspected segment sensitive result suggestion. Value range:
 <li>pass</li>
 <li>review</li>
 <li>block</li>
-     * @param Suggestion Suspected segment sensitive result suggestion, permissible range:
+     * @param Suggestion Suspected segment sensitive result suggestion. Value range:
 <li>pass</li>
 <li>review</li>
 <li>block</li>
@@ -161,22 +161,22 @@ The image will be deleted after the PicUrlExpireTime time point.
     }
 
     /**
-     * Get Video sensitive content result tag, value ranges from...to...
+     * Get Sensitive result tag of the video. Value range:
 <li>guns: weapons and firearms.</li>
 <li>crowd: crowd gathering.</li>
 <li>police: police force.</li>
 <li>bloody: graphic violence.</li>
 <li>banners: sensitive flags.</li>
-<li>militant: militant.</li>
+<li>militant: militants.</li>
 <li>explosion: explosions and fires.</li>
 <li>terrorists: sensitive persons.</li> 
-     * @return Label Video sensitive content result tag, value ranges from...to...
+     * @return Label Sensitive result tag of the video. Value range:
 <li>guns: weapons and firearms.</li>
 <li>crowd: crowd gathering.</li>
 <li>police: police force.</li>
 <li>bloody: graphic violence.</li>
 <li>banners: sensitive flags.</li>
-<li>militant: militant.</li>
+<li>militant: militants.</li>
 <li>explosion: explosions and fires.</li>
 <li>terrorists: sensitive persons.</li>
      */
@@ -185,22 +185,22 @@ The image will be deleted after the PicUrlExpireTime time point.
     }
 
     /**
-     * Set Video sensitive content result tag, value ranges from...to...
+     * Set Sensitive result tag of the video. Value range:
 <li>guns: weapons and firearms.</li>
 <li>crowd: crowd gathering.</li>
 <li>police: police force.</li>
 <li>bloody: graphic violence.</li>
 <li>banners: sensitive flags.</li>
-<li>militant: militant.</li>
+<li>militant: militants.</li>
 <li>explosion: explosions and fires.</li>
 <li>terrorists: sensitive persons.</li>
-     * @param Label Video sensitive content result tag, value ranges from...to...
+     * @param Label Sensitive result tag of the video. Value range:
 <li>guns: weapons and firearms.</li>
 <li>crowd: crowd gathering.</li>
 <li>police: police force.</li>
 <li>bloody: graphic violence.</li>
 <li>banners: sensitive flags.</li>
-<li>militant: militant.</li>
+<li>militant: militants.</li>
 <li>explosion: explosions and fires.</li>
 <li>terrorists: sensitive persons.</li>
      */
@@ -209,36 +209,36 @@ The image will be deleted after the PicUrlExpireTime time point.
     }
 
     /**
-     * Get Suspected image URL (Images are not retained permanently upon arrival)
-The image will be deleted after the PicUrlExpireTime time point. 
-     * @return Url Suspected image URL (Images are not retained permanently upon arrival)
-The image will be deleted after the PicUrlExpireTime time point.
+     * Get Suspected image URL (images are not retained permanently and will be deleted upon reaching
+Images will be deleted after the PicUrlExpireTime time point). 
+     * @return Url Suspected image URL (images are not retained permanently and will be deleted upon reaching
+Images will be deleted after the PicUrlExpireTime time point).
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * Set Suspected image URL (Images are not retained permanently upon arrival)
-The image will be deleted after the PicUrlExpireTime time point.
-     * @param Url Suspected image URL (Images are not retained permanently upon arrival)
-The image will be deleted after the PicUrlExpireTime time point.
+     * Set Suspected image URL (images are not retained permanently and will be deleted upon reaching
+Images will be deleted after the PicUrlExpireTime time point).
+     * @param Url Suspected image URL (images are not retained permanently and will be deleted upon reaching
+Images will be deleted after the PicUrlExpireTime time point).
      */
     public void setUrl(String Url) {
         this.Url = Url;
     }
 
     /**
-     * Get Expiration time of the suspected image URL, using the ISO date format (https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52). 
-     * @return PicUrlExpireTime Expiration time of the suspected image URL, using the ISO date format (https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
+     * Get Expiration time of the suspected image URL, using the [ISO date format](https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52). 
+     * @return PicUrlExpireTime Expiration time of the suspected image URL, using the [ISO date format](https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
      */
     public String getPicUrlExpireTime() {
         return this.PicUrlExpireTime;
     }
 
     /**
-     * Set Expiration time of the suspected image URL, using the ISO date format (https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
-     * @param PicUrlExpireTime Expiration time of the suspected image URL, using the ISO date format (https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
+     * Set Expiration time of the suspected image URL, using the [ISO date format](https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
+     * @param PicUrlExpireTime Expiration time of the suspected image URL, using the [ISO date format](https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
      */
     public void setPicUrlExpireTime(String PicUrlExpireTime) {
         this.PicUrlExpireTime = PicUrlExpireTime;

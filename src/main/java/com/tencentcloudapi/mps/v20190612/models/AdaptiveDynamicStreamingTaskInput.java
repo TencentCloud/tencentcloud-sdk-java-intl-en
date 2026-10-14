@@ -38,14 +38,14 @@ public class AdaptiveDynamicStreamingTaskInput extends AbstractModel {
     private WatermarkInput [] WatermarkSet;
 
     /**
-    * 
+    * <p>Digital watermark parameter.</p>
     */
     @SerializedName("BlindWatermark")
     @Expose
     private BlindWatermarkInput BlindWatermark;
 
     /**
-    * 
+    * <p>Target storage for files after adaptive bitrate streaming. If this is not specified, the upper-level OutputStorage value is used.</p>
     */
     @SerializedName("OutputStorage")
     @Expose
@@ -73,14 +73,14 @@ public class AdaptiveDynamicStreamingTaskInput extends AbstractModel {
     private String SegmentObjectName;
 
     /**
-    * 
+    * <p>External subtitle feature. Specifies the subtitle file to be inserted.</p>
     */
     @SerializedName("AddOnSubtitles")
     @Expose
     private AddOnSubtitle [] AddOnSubtitles;
 
     /**
-    * 
+    * <p>Drm information.</p>
     */
     @SerializedName("DrmInfo")
     @Expose
@@ -94,7 +94,7 @@ public class AdaptiveDynamicStreamingTaskInput extends AbstractModel {
     private String DefinitionType;
 
     /**
-    * 
+    * <p>Hard subtitle (burned-in subtitle) feature. Specifies the subtitle source, font size, location, and other subtitle parameters.</p>
     */
     @SerializedName("SubtitleTemplate")
     @Expose
@@ -108,7 +108,7 @@ public class AdaptiveDynamicStreamingTaskInput extends AbstractModel {
     private String StdExtInfo;
 
     /**
-    * 
+    * <p>Set the frame at the specified pts time as a key frame and segment it. Unit: milliseconds (a relative deviation of &lt;=1ms is allowed). When gop and segment duration are specified simultaneously, they will work together. Note that RawPts needs to be enabled, keep the frame rate following the source, and ensure the passed-in pts time has a corresponding frame in the source.</p>
     */
     @SerializedName("KeyPTSList")
     @Expose
@@ -161,32 +161,32 @@ public class AdaptiveDynamicStreamingTaskInput extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return BlindWatermark 
+     * Get <p>Digital watermark parameter.</p> 
+     * @return BlindWatermark <p>Digital watermark parameter.</p>
      */
     public BlindWatermarkInput getBlindWatermark() {
         return this.BlindWatermark;
     }
 
     /**
-     * Set 
-     * @param BlindWatermark 
+     * Set <p>Digital watermark parameter.</p>
+     * @param BlindWatermark <p>Digital watermark parameter.</p>
      */
     public void setBlindWatermark(BlindWatermarkInput BlindWatermark) {
         this.BlindWatermark = BlindWatermark;
     }
 
     /**
-     * Get  
-     * @return OutputStorage 
+     * Get <p>Target storage for files after adaptive bitrate streaming. If this is not specified, the upper-level OutputStorage value is used.</p> 
+     * @return OutputStorage <p>Target storage for files after adaptive bitrate streaming. If this is not specified, the upper-level OutputStorage value is used.</p>
      */
     public TaskOutputStorage getOutputStorage() {
         return this.OutputStorage;
     }
 
     /**
-     * Set 
-     * @param OutputStorage 
+     * Set <p>Target storage for files after adaptive bitrate streaming. If this is not specified, the upper-level OutputStorage value is used.</p>
+     * @param OutputStorage <p>Target storage for files after adaptive bitrate streaming. If this is not specified, the upper-level OutputStorage value is used.</p>
      */
     public void setOutputStorage(TaskOutputStorage OutputStorage) {
         this.OutputStorage = OutputStorage;
@@ -241,32 +241,32 @@ public class AdaptiveDynamicStreamingTaskInput extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return AddOnSubtitles 
+     * Get <p>External subtitle feature. Specifies the subtitle file to be inserted.</p> 
+     * @return AddOnSubtitles <p>External subtitle feature. Specifies the subtitle file to be inserted.</p>
      */
     public AddOnSubtitle [] getAddOnSubtitles() {
         return this.AddOnSubtitles;
     }
 
     /**
-     * Set 
-     * @param AddOnSubtitles 
+     * Set <p>External subtitle feature. Specifies the subtitle file to be inserted.</p>
+     * @param AddOnSubtitles <p>External subtitle feature. Specifies the subtitle file to be inserted.</p>
      */
     public void setAddOnSubtitles(AddOnSubtitle [] AddOnSubtitles) {
         this.AddOnSubtitles = AddOnSubtitles;
     }
 
     /**
-     * Get  
-     * @return DrmInfo 
+     * Get <p>Drm information.</p> 
+     * @return DrmInfo <p>Drm information.</p>
      */
     public DrmInfo getDrmInfo() {
         return this.DrmInfo;
     }
 
     /**
-     * Set 
-     * @param DrmInfo 
+     * Set <p>Drm information.</p>
+     * @param DrmInfo <p>Drm information.</p>
      */
     public void setDrmInfo(DrmInfo DrmInfo) {
         this.DrmInfo = DrmInfo;
@@ -289,16 +289,16 @@ public class AdaptiveDynamicStreamingTaskInput extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return SubtitleTemplate 
+     * Get <p>Hard subtitle (burned-in subtitle) feature. Specifies the subtitle source, font size, location, and other subtitle parameters.</p> 
+     * @return SubtitleTemplate <p>Hard subtitle (burned-in subtitle) feature. Specifies the subtitle source, font size, location, and other subtitle parameters.</p>
      */
     public SubtitleTemplate getSubtitleTemplate() {
         return this.SubtitleTemplate;
     }
 
     /**
-     * Set 
-     * @param SubtitleTemplate 
+     * Set <p>Hard subtitle (burned-in subtitle) feature. Specifies the subtitle source, font size, location, and other subtitle parameters.</p>
+     * @param SubtitleTemplate <p>Hard subtitle (burned-in subtitle) feature. Specifies the subtitle source, font size, location, and other subtitle parameters.</p>
      */
     public void setSubtitleTemplate(SubtitleTemplate SubtitleTemplate) {
         this.SubtitleTemplate = SubtitleTemplate;
@@ -321,16 +321,16 @@ public class AdaptiveDynamicStreamingTaskInput extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return KeyPTSList 
+     * Get <p>Set the frame at the specified pts time as a key frame and segment it. Unit: milliseconds (a relative deviation of &lt;=1ms is allowed). When gop and segment duration are specified simultaneously, they will work together. Note that RawPts needs to be enabled, keep the frame rate following the source, and ensure the passed-in pts time has a corresponding frame in the source.</p> 
+     * @return KeyPTSList <p>Set the frame at the specified pts time as a key frame and segment it. Unit: milliseconds (a relative deviation of &lt;=1ms is allowed). When gop and segment duration are specified simultaneously, they will work together. Note that RawPts needs to be enabled, keep the frame rate following the source, and ensure the passed-in pts time has a corresponding frame in the source.</p>
      */
     public Long [] getKeyPTSList() {
         return this.KeyPTSList;
     }
 
     /**
-     * Set 
-     * @param KeyPTSList 
+     * Set <p>Set the frame at the specified pts time as a key frame and segment it. Unit: milliseconds (a relative deviation of &lt;=1ms is allowed). When gop and segment duration are specified simultaneously, they will work together. Note that RawPts needs to be enabled, keep the frame rate following the source, and ensure the passed-in pts time has a corresponding frame in the source.</p>
+     * @param KeyPTSList <p>Set the frame at the specified pts time as a key frame and segment it. Unit: milliseconds (a relative deviation of &lt;=1ms is allowed). When gop and segment duration are specified simultaneously, they will work together. Note that RawPts needs to be enabled, keep the frame rate following the source, and ensure the passed-in pts time has a corresponding frame in the source.</p>
      */
     public void setKeyPTSList(Long [] KeyPTSList) {
         this.KeyPTSList = KeyPTSList;

@@ -31,14 +31,14 @@ public class AiAnalysisTaskVideoComprehensionOutput extends AbstractModel {
     private String VideoComprehensionAnalysisResult;
 
     /**
-    * Video (Audio) understanding extended information
+    * Extended information for video (audio) understanding.
     */
     @SerializedName("VideoComprehensionExtInfo")
     @Expose
     private String VideoComprehensionExtInfo;
 
     /**
-    * Video shot understanding result
+    * Video storyboard understanding result
     */
     @SerializedName("VideoComprehensionResultList")
     @Expose
@@ -61,32 +61,32 @@ public class AiAnalysisTaskVideoComprehensionOutput extends AbstractModel {
     }
 
     /**
-     * Get Video (Audio) understanding extended information 
-     * @return VideoComprehensionExtInfo Video (Audio) understanding extended information
+     * Get Extended information for video (audio) understanding. 
+     * @return VideoComprehensionExtInfo Extended information for video (audio) understanding.
      */
     public String getVideoComprehensionExtInfo() {
         return this.VideoComprehensionExtInfo;
     }
 
     /**
-     * Set Video (Audio) understanding extended information
-     * @param VideoComprehensionExtInfo Video (Audio) understanding extended information
+     * Set Extended information for video (audio) understanding.
+     * @param VideoComprehensionExtInfo Extended information for video (audio) understanding.
      */
     public void setVideoComprehensionExtInfo(String VideoComprehensionExtInfo) {
         this.VideoComprehensionExtInfo = VideoComprehensionExtInfo;
     }
 
     /**
-     * Get Video shot understanding result 
-     * @return VideoComprehensionResultList Video shot understanding result
+     * Get Video storyboard understanding result 
+     * @return VideoComprehensionResultList Video storyboard understanding result
      */
     public VideoComprehensionResultItem [] getVideoComprehensionResultList() {
         return this.VideoComprehensionResultList;
     }
 
     /**
-     * Set Video shot understanding result
-     * @param VideoComprehensionResultList Video shot understanding result
+     * Set Video storyboard understanding result
+     * @param VideoComprehensionResultList Video storyboard understanding result
      */
     public void setVideoComprehensionResultList(VideoComprehensionResultItem [] VideoComprehensionResultList) {
         this.VideoComprehensionResultList = VideoComprehensionResultList;

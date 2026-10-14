@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class ImageScanInquireInfo extends AbstractModel {
 
     /**
-    * Billing item
+    * Billing item.
     */
     @SerializedName("InquireKey")
     @Expose
     private String InquireKey;
 
     /**
-    * Total Capacity
+    * Total capacity
     */
     @SerializedName("Capcity")
     @Expose
@@ -52,7 +52,7 @@ public class ImageScanInquireInfo extends AbstractModel {
     private String StartTime;
 
     /**
-    * End time
+    * End time.
     */
     @SerializedName("EndTime")
     @Expose
@@ -60,8 +60,8 @@ public class ImageScanInquireInfo extends AbstractModel {
 
     /**
     * Billing status
-Pending purchase
-Normal: Normal.
+Pending: To be purchased
+Normal: normal.
 Isolate
     */
     @SerializedName("PurchaseStatus")
@@ -97,32 +97,32 @@ Isolate
     private Long PayUsage;
 
     /**
-     * Get Billing item 
-     * @return InquireKey Billing item
+     * Get Billing item. 
+     * @return InquireKey Billing item.
      */
     public String getInquireKey() {
         return this.InquireKey;
     }
 
     /**
-     * Set Billing item
-     * @param InquireKey Billing item
+     * Set Billing item.
+     * @param InquireKey Billing item.
      */
     public void setInquireKey(String InquireKey) {
         this.InquireKey = InquireKey;
     }
 
     /**
-     * Get Total Capacity 
-     * @return Capcity Total Capacity
+     * Get Total capacity 
+     * @return Capcity Total capacity
      */
     public Long getCapcity() {
         return this.Capcity;
     }
 
     /**
-     * Set Total Capacity
-     * @param Capcity Total Capacity
+     * Set Total capacity
+     * @param Capcity Total capacity
      */
     public void setCapcity(Long Capcity) {
         this.Capcity = Capcity;
@@ -161,16 +161,16 @@ Isolate
     }
 
     /**
-     * Get End time 
-     * @return EndTime End time
+     * Get End time. 
+     * @return EndTime End time.
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set End time
-     * @param EndTime End time
+     * Set End time.
+     * @param EndTime End time.
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
@@ -178,12 +178,12 @@ Isolate
 
     /**
      * Get Billing status
-Pending purchase
-Normal: Normal.
+Pending: To be purchased
+Normal: normal.
 Isolate 
      * @return PurchaseStatus Billing status
-Pending purchase
-Normal: Normal.
+Pending: To be purchased
+Normal: normal.
 Isolate
      */
     public String getPurchaseStatus() {
@@ -192,12 +192,12 @@ Isolate
 
     /**
      * Set Billing status
-Pending purchase
-Normal: Normal.
+Pending: To be purchased
+Normal: normal.
 Isolate
      * @param PurchaseStatus Billing status
-Pending purchase
-Normal: Normal.
+Pending: To be purchased
+Normal: normal.
 Isolate
      */
     public void setPurchaseStatus(String PurchaseStatus) {

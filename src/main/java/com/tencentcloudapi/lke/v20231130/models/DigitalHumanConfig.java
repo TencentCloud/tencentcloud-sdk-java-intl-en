@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class DigitalHumanConfig extends AbstractModel {
 
     /**
-    * 
+    * Digital human asset key
     */
     @SerializedName("AssetKey")
     @Expose
     private String AssetKey;
 
     /**
-    * 
+    * Digital human name
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 
+    * image
     */
     @SerializedName("Avatar")
     @Expose
     private String Avatar;
 
     /**
-    * 
+    * Preview image
     */
     @SerializedName("PreviewUrl")
     @Expose
     private String PreviewUrl;
 
     /**
-     * Get  
-     * @return AssetKey 
+     * Get Digital human asset key 
+     * @return AssetKey Digital human asset key
      */
     public String getAssetKey() {
         return this.AssetKey;
     }
 
     /**
-     * Set 
-     * @param AssetKey 
+     * Set Digital human asset key
+     * @param AssetKey Digital human asset key
      */
     public void setAssetKey(String AssetKey) {
         this.AssetKey = AssetKey;
     }
 
     /**
-     * Get  
-     * @return Name 
+     * Get Digital human name 
+     * @return Name Digital human name
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 
-     * @param Name 
+     * Set Digital human name
+     * @param Name Digital human name
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get  
-     * @return Avatar 
+     * Get image 
+     * @return Avatar image
      */
     public String getAvatar() {
         return this.Avatar;
     }
 
     /**
-     * Set 
-     * @param Avatar 
+     * Set image
+     * @param Avatar image
      */
     public void setAvatar(String Avatar) {
         this.Avatar = Avatar;
     }
 
     /**
-     * Get  
-     * @return PreviewUrl 
+     * Get Preview image 
+     * @return PreviewUrl Preview image
      */
     public String getPreviewUrl() {
         return this.PreviewUrl;
     }
 
     /**
-     * Set 
-     * @param PreviewUrl 
+     * Set Preview image
+     * @param PreviewUrl Preview image
      */
     public void setPreviewUrl(String PreviewUrl) {
         this.PreviewUrl = PreviewUrl;

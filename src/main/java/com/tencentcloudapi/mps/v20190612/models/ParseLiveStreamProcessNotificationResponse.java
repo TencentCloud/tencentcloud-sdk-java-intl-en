@@ -38,56 +38,56 @@ public class ParseLiveStreamProcessNotificationResponse extends AbstractModel {
     private String NotificationType;
 
     /**
-    * Task ID for video processing.
+    * Video processing task ID.
     */
     @SerializedName("TaskId")
     @Expose
     private String TaskId;
 
     /**
-    * 
+    * Error information of live stream processing. Valid when NotificationType is ProcessEof.
     */
     @SerializedName("ProcessEofInfo")
     @Expose
     private LiveStreamProcessErrorInfo ProcessEofInfo;
 
     /**
-    * 
+    * Content moderation result. Valid when NotificationType is AiReviewResult.
     */
     @SerializedName("AiReviewResultInfo")
     @Expose
     private LiveStreamAiReviewResultInfo AiReviewResultInfo;
 
     /**
-    * 
+    * Content recognition result. Valid when NotificationType is AiRecognitionResult.
     */
     @SerializedName("AiRecognitionResultInfo")
     @Expose
     private LiveStreamAiRecognitionResultInfo AiRecognitionResultInfo;
 
     /**
-    * 
+    * Content analysis result. Valid when NotificationType is AiAnalysisResult.
     */
     @SerializedName("AiAnalysisResultInfo")
     @Expose
     private LiveStreamAiAnalysisResultInfo AiAnalysisResultInfo;
 
     /**
-    * 
+    * Media quality inspection result. Valid when NotificationType is AiQualityControlResult.
     */
     @SerializedName("AiQualityControlResultInfo")
     @Expose
     private LiveStreamAiQualityControlResultInfo AiQualityControlResultInfo;
 
     /**
-    * 
+    * Live streaming result is valid when NotificationType is LiveRecordResult.
     */
     @SerializedName("LiveRecordResultInfo")
     @Expose
     private LiveStreamRecordResultInfo LiveRecordResultInfo;
 
     /**
-    * Smart subtitle result, valid when NotificationType is AiSmartSubtitleResult.
+    * Smart subtitle result. Valid when NotificationType is AiSmartSubtitleResult.
     */
     @SerializedName("AiSmartSubtitleResultInfo")
     @Expose
@@ -108,7 +108,7 @@ public class ParseLiveStreamProcessNotificationResponse extends AbstractModel {
     private String SessionContext;
 
     /**
-    * -Expiration time, the UNIX timestamp for event notification signature expiration. Notifications from Media Processing Service (MPS) have a default expiration time of 10 minutes. If the time specified by the Timestamp value in a notification has expired, the notification can be deemed invalid, which helps prevent network replay attacks. The Timestamp format is a decimal UNIX timestamp, representing the seconds elapsed since midnight on January 1, 1970 (UTC/GMT).
+    * - Expiration time: the UNIX Timestamp when the event notification signature expires. - Message notifications from media processing expire after 10 minutes by default. If the time specified by the Timestamp value in a message notification has expired, the notification is deemed invalid, which prevents network replay attacks. - Timestamp is in decimal UNIX Timestamp format, which is the seconds elapsed since January 1, 1970 (UTC/GMT midnight).
     */
     @SerializedName("Timestamp")
     @Expose
@@ -173,128 +173,128 @@ public class ParseLiveStreamProcessNotificationResponse extends AbstractModel {
     }
 
     /**
-     * Get Task ID for video processing. 
-     * @return TaskId Task ID for video processing.
+     * Get Video processing task ID. 
+     * @return TaskId Video processing task ID.
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set Task ID for video processing.
-     * @param TaskId Task ID for video processing.
+     * Set Video processing task ID.
+     * @param TaskId Video processing task ID.
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * Get  
-     * @return ProcessEofInfo 
+     * Get Error information of live stream processing. Valid when NotificationType is ProcessEof. 
+     * @return ProcessEofInfo Error information of live stream processing. Valid when NotificationType is ProcessEof.
      */
     public LiveStreamProcessErrorInfo getProcessEofInfo() {
         return this.ProcessEofInfo;
     }
 
     /**
-     * Set 
-     * @param ProcessEofInfo 
+     * Set Error information of live stream processing. Valid when NotificationType is ProcessEof.
+     * @param ProcessEofInfo Error information of live stream processing. Valid when NotificationType is ProcessEof.
      */
     public void setProcessEofInfo(LiveStreamProcessErrorInfo ProcessEofInfo) {
         this.ProcessEofInfo = ProcessEofInfo;
     }
 
     /**
-     * Get  
-     * @return AiReviewResultInfo 
+     * Get Content moderation result. Valid when NotificationType is AiReviewResult. 
+     * @return AiReviewResultInfo Content moderation result. Valid when NotificationType is AiReviewResult.
      */
     public LiveStreamAiReviewResultInfo getAiReviewResultInfo() {
         return this.AiReviewResultInfo;
     }
 
     /**
-     * Set 
-     * @param AiReviewResultInfo 
+     * Set Content moderation result. Valid when NotificationType is AiReviewResult.
+     * @param AiReviewResultInfo Content moderation result. Valid when NotificationType is AiReviewResult.
      */
     public void setAiReviewResultInfo(LiveStreamAiReviewResultInfo AiReviewResultInfo) {
         this.AiReviewResultInfo = AiReviewResultInfo;
     }
 
     /**
-     * Get  
-     * @return AiRecognitionResultInfo 
+     * Get Content recognition result. Valid when NotificationType is AiRecognitionResult. 
+     * @return AiRecognitionResultInfo Content recognition result. Valid when NotificationType is AiRecognitionResult.
      */
     public LiveStreamAiRecognitionResultInfo getAiRecognitionResultInfo() {
         return this.AiRecognitionResultInfo;
     }
 
     /**
-     * Set 
-     * @param AiRecognitionResultInfo 
+     * Set Content recognition result. Valid when NotificationType is AiRecognitionResult.
+     * @param AiRecognitionResultInfo Content recognition result. Valid when NotificationType is AiRecognitionResult.
      */
     public void setAiRecognitionResultInfo(LiveStreamAiRecognitionResultInfo AiRecognitionResultInfo) {
         this.AiRecognitionResultInfo = AiRecognitionResultInfo;
     }
 
     /**
-     * Get  
-     * @return AiAnalysisResultInfo 
+     * Get Content analysis result. Valid when NotificationType is AiAnalysisResult. 
+     * @return AiAnalysisResultInfo Content analysis result. Valid when NotificationType is AiAnalysisResult.
      */
     public LiveStreamAiAnalysisResultInfo getAiAnalysisResultInfo() {
         return this.AiAnalysisResultInfo;
     }
 
     /**
-     * Set 
-     * @param AiAnalysisResultInfo 
+     * Set Content analysis result. Valid when NotificationType is AiAnalysisResult.
+     * @param AiAnalysisResultInfo Content analysis result. Valid when NotificationType is AiAnalysisResult.
      */
     public void setAiAnalysisResultInfo(LiveStreamAiAnalysisResultInfo AiAnalysisResultInfo) {
         this.AiAnalysisResultInfo = AiAnalysisResultInfo;
     }
 
     /**
-     * Get  
-     * @return AiQualityControlResultInfo 
+     * Get Media quality inspection result. Valid when NotificationType is AiQualityControlResult. 
+     * @return AiQualityControlResultInfo Media quality inspection result. Valid when NotificationType is AiQualityControlResult.
      */
     public LiveStreamAiQualityControlResultInfo getAiQualityControlResultInfo() {
         return this.AiQualityControlResultInfo;
     }
 
     /**
-     * Set 
-     * @param AiQualityControlResultInfo 
+     * Set Media quality inspection result. Valid when NotificationType is AiQualityControlResult.
+     * @param AiQualityControlResultInfo Media quality inspection result. Valid when NotificationType is AiQualityControlResult.
      */
     public void setAiQualityControlResultInfo(LiveStreamAiQualityControlResultInfo AiQualityControlResultInfo) {
         this.AiQualityControlResultInfo = AiQualityControlResultInfo;
     }
 
     /**
-     * Get  
-     * @return LiveRecordResultInfo 
+     * Get Live streaming result is valid when NotificationType is LiveRecordResult. 
+     * @return LiveRecordResultInfo Live streaming result is valid when NotificationType is LiveRecordResult.
      */
     public LiveStreamRecordResultInfo getLiveRecordResultInfo() {
         return this.LiveRecordResultInfo;
     }
 
     /**
-     * Set 
-     * @param LiveRecordResultInfo 
+     * Set Live streaming result is valid when NotificationType is LiveRecordResult.
+     * @param LiveRecordResultInfo Live streaming result is valid when NotificationType is LiveRecordResult.
      */
     public void setLiveRecordResultInfo(LiveStreamRecordResultInfo LiveRecordResultInfo) {
         this.LiveRecordResultInfo = LiveRecordResultInfo;
     }
 
     /**
-     * Get Smart subtitle result, valid when NotificationType is AiSmartSubtitleResult. 
-     * @return AiSmartSubtitleResultInfo Smart subtitle result, valid when NotificationType is AiSmartSubtitleResult.
+     * Get Smart subtitle result. Valid when NotificationType is AiSmartSubtitleResult. 
+     * @return AiSmartSubtitleResultInfo Smart subtitle result. Valid when NotificationType is AiSmartSubtitleResult.
      */
     public LiveStreamAiSmartSubtitleResultInfo getAiSmartSubtitleResultInfo() {
         return this.AiSmartSubtitleResultInfo;
     }
 
     /**
-     * Set Smart subtitle result, valid when NotificationType is AiSmartSubtitleResult.
-     * @param AiSmartSubtitleResultInfo Smart subtitle result, valid when NotificationType is AiSmartSubtitleResult.
+     * Set Smart subtitle result. Valid when NotificationType is AiSmartSubtitleResult.
+     * @param AiSmartSubtitleResultInfo Smart subtitle result. Valid when NotificationType is AiSmartSubtitleResult.
      */
     public void setAiSmartSubtitleResultInfo(LiveStreamAiSmartSubtitleResultInfo AiSmartSubtitleResultInfo) {
         this.AiSmartSubtitleResultInfo = AiSmartSubtitleResultInfo;
@@ -333,16 +333,16 @@ public class ParseLiveStreamProcessNotificationResponse extends AbstractModel {
     }
 
     /**
-     * Get -Expiration time, the UNIX timestamp for event notification signature expiration. Notifications from Media Processing Service (MPS) have a default expiration time of 10 minutes. If the time specified by the Timestamp value in a notification has expired, the notification can be deemed invalid, which helps prevent network replay attacks. The Timestamp format is a decimal UNIX timestamp, representing the seconds elapsed since midnight on January 1, 1970 (UTC/GMT). 
-     * @return Timestamp -Expiration time, the UNIX timestamp for event notification signature expiration. Notifications from Media Processing Service (MPS) have a default expiration time of 10 minutes. If the time specified by the Timestamp value in a notification has expired, the notification can be deemed invalid, which helps prevent network replay attacks. The Timestamp format is a decimal UNIX timestamp, representing the seconds elapsed since midnight on January 1, 1970 (UTC/GMT).
+     * Get - Expiration time: the UNIX Timestamp when the event notification signature expires. - Message notifications from media processing expire after 10 minutes by default. If the time specified by the Timestamp value in a message notification has expired, the notification is deemed invalid, which prevents network replay attacks. - Timestamp is in decimal UNIX Timestamp format, which is the seconds elapsed since January 1, 1970 (UTC/GMT midnight). 
+     * @return Timestamp - Expiration time: the UNIX Timestamp when the event notification signature expires. - Message notifications from media processing expire after 10 minutes by default. If the time specified by the Timestamp value in a message notification has expired, the notification is deemed invalid, which prevents network replay attacks. - Timestamp is in decimal UNIX Timestamp format, which is the seconds elapsed since January 1, 1970 (UTC/GMT midnight).
      */
     public Long getTimestamp() {
         return this.Timestamp;
     }
 
     /**
-     * Set -Expiration time, the UNIX timestamp for event notification signature expiration. Notifications from Media Processing Service (MPS) have a default expiration time of 10 minutes. If the time specified by the Timestamp value in a notification has expired, the notification can be deemed invalid, which helps prevent network replay attacks. The Timestamp format is a decimal UNIX timestamp, representing the seconds elapsed since midnight on January 1, 1970 (UTC/GMT).
-     * @param Timestamp -Expiration time, the UNIX timestamp for event notification signature expiration. Notifications from Media Processing Service (MPS) have a default expiration time of 10 minutes. If the time specified by the Timestamp value in a notification has expired, the notification can be deemed invalid, which helps prevent network replay attacks. The Timestamp format is a decimal UNIX timestamp, representing the seconds elapsed since midnight on January 1, 1970 (UTC/GMT).
+     * Set - Expiration time: the UNIX Timestamp when the event notification signature expires. - Message notifications from media processing expire after 10 minutes by default. If the time specified by the Timestamp value in a message notification has expired, the notification is deemed invalid, which prevents network replay attacks. - Timestamp is in decimal UNIX Timestamp format, which is the seconds elapsed since January 1, 1970 (UTC/GMT midnight).
+     * @param Timestamp - Expiration time: the UNIX Timestamp when the event notification signature expires. - Message notifications from media processing expire after 10 minutes by default. If the time specified by the Timestamp value in a message notification has expired, the notification is deemed invalid, which prevents network replay attacks. - Timestamp is in decimal UNIX Timestamp format, which is the seconds elapsed since January 1, 1970 (UTC/GMT midnight).
      */
     public void setTimestamp(Long Timestamp) {
         this.Timestamp = Timestamp;

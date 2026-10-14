@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class AsrHotWordsConfigure extends AbstractModel {
 
     /**
-    * 
+    * Hotword switch.
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * 
+    * Hotword lexicon ID
     */
     @SerializedName("LibraryId")
     @Expose
     private String LibraryId;
 
     /**
-     * Get  
-     * @return Switch 
+     * Get Hotword switch. 
+     * @return Switch Hotword switch.
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set 
-     * @param Switch 
+     * Set Hotword switch.
+     * @param Switch Hotword switch.
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get  
-     * @return LibraryId 
+     * Get Hotword lexicon ID 
+     * @return LibraryId Hotword lexicon ID
      */
     public String getLibraryId() {
         return this.LibraryId;
     }
 
     /**
-     * Set 
-     * @param LibraryId 
+     * Set Hotword lexicon ID
+     * @param LibraryId Hotword lexicon ID
      */
     public void setLibraryId(String LibraryId) {
         this.LibraryId = LibraryId;

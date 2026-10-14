@@ -38,7 +38,7 @@ public class SampleSnapshotTaskInput extends AbstractModel {
     private WatermarkInput [] WatermarkSet;
 
     /**
-    * 
+    * <p>Target storage for the file after the sampled screenshot is taken. If this is not specified, it inherits the value from the upper-level OutputStorage.</p>
     */
     @SerializedName("OutputStorage")
     @Expose
@@ -52,7 +52,7 @@ public class SampleSnapshotTaskInput extends AbstractModel {
     private String OutputObjectPath;
 
     /**
-    * 
+    * <p>Rule of the <code>{number}</code> variable in the output path after the sampled screenshot is taken.</p>
     */
     @SerializedName("ObjectNumberFormat")
     @Expose
@@ -98,16 +98,16 @@ public class SampleSnapshotTaskInput extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return OutputStorage 
+     * Get <p>Target storage for the file after the sampled screenshot is taken. If this is not specified, it inherits the value from the upper-level OutputStorage.</p> 
+     * @return OutputStorage <p>Target storage for the file after the sampled screenshot is taken. If this is not specified, it inherits the value from the upper-level OutputStorage.</p>
      */
     public TaskOutputStorage getOutputStorage() {
         return this.OutputStorage;
     }
 
     /**
-     * Set 
-     * @param OutputStorage 
+     * Set <p>Target storage for the file after the sampled screenshot is taken. If this is not specified, it inherits the value from the upper-level OutputStorage.</p>
+     * @param OutputStorage <p>Target storage for the file after the sampled screenshot is taken. If this is not specified, it inherits the value from the upper-level OutputStorage.</p>
      */
     public void setOutputStorage(TaskOutputStorage OutputStorage) {
         this.OutputStorage = OutputStorage;
@@ -130,16 +130,16 @@ public class SampleSnapshotTaskInput extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return ObjectNumberFormat 
+     * Get <p>Rule of the <code>{number}</code> variable in the output path after the sampled screenshot is taken.</p> 
+     * @return ObjectNumberFormat <p>Rule of the <code>{number}</code> variable in the output path after the sampled screenshot is taken.</p>
      */
     public NumberFormat getObjectNumberFormat() {
         return this.ObjectNumberFormat;
     }
 
     /**
-     * Set 
-     * @param ObjectNumberFormat 
+     * Set <p>Rule of the <code>{number}</code> variable in the output path after the sampled screenshot is taken.</p>
+     * @param ObjectNumberFormat <p>Rule of the <code>{number}</code> variable in the output path after the sampled screenshot is taken.</p>
      */
     public void setObjectNumberFormat(NumberFormat ObjectNumberFormat) {
         this.ObjectNumberFormat = ObjectNumberFormat;

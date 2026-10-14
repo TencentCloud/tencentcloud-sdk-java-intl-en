@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class UpdatePeriodInfo extends AbstractModel {
 
     /**
-    * 
+    * Document update frequency type: 0 does not update. -H 1-hour granularity. Currently only support 24 (1 day), 72 (3 days), and 168 (7 days). Only valid for the Tencent document type when source=2.
     */
     @SerializedName("UpdatePeriodH")
     @Expose
     private Long UpdatePeriodH;
 
     /**
-     * Get  
-     * @return UpdatePeriodH 
+     * Get Document update frequency type: 0 does not update. -H 1-hour granularity. Currently only support 24 (1 day), 72 (3 days), and 168 (7 days). Only valid for the Tencent document type when source=2. 
+     * @return UpdatePeriodH Document update frequency type: 0 does not update. -H 1-hour granularity. Currently only support 24 (1 day), 72 (3 days), and 168 (7 days). Only valid for the Tencent document type when source=2.
      */
     public Long getUpdatePeriodH() {
         return this.UpdatePeriodH;
     }
 
     /**
-     * Set 
-     * @param UpdatePeriodH 
+     * Set Document update frequency type: 0 does not update. -H 1-hour granularity. Currently only support 24 (1 day), 72 (3 days), and 168 (7 days). Only valid for the Tencent document type when source=2.
+     * @param UpdatePeriodH Document update frequency type: 0 does not update. -H 1-hour granularity. Currently only support 24 (1 day), 72 (3 days), and 168 (7 days). Only valid for the Tencent document type when source=2.
      */
     public void setUpdatePeriodH(Long UpdatePeriodH) {
         this.UpdatePeriodH = UpdatePeriodH;

@@ -59,7 +59,7 @@ public class ScheduleQualityControlTaskResult extends AbstractModel {
     private AiQualityControlTaskInput Input;
 
     /**
-    * 
+    * Output of a media quality inspection task.
     */
     @SerializedName("Output")
     @Expose
@@ -153,16 +153,16 @@ public class ScheduleQualityControlTaskResult extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return Output 
+     * Get Output of a media quality inspection task. 
+     * @return Output Output of a media quality inspection task.
      */
     public QualityControlData getOutput() {
         return this.Output;
     }
 
     /**
-     * Set 
-     * @param Output 
+     * Set Output of a media quality inspection task.
+     * @param Output Output of a media quality inspection task.
      */
     public void setOutput(QualityControlData Output) {
         this.Output = Output;

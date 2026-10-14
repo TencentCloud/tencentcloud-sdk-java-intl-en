@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class UpdateRequestTargetNodeTypesRequest extends AbstractModel {
 
     /**
-    * Instance ID.
+    * Instance ID
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * A list of node types used to receive requests.
+    * List of target node types that receive requests
     */
     @SerializedName("TargetNodeTypes")
     @Expose
     private String [] TargetNodeTypes;
 
     /**
-     * Get Instance ID. 
-     * @return InstanceId Instance ID.
+     * Get Instance ID 
+     * @return InstanceId Instance ID
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID.
-     * @param InstanceId Instance ID.
+     * Set Instance ID
+     * @param InstanceId Instance ID
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get A list of node types used to receive requests. 
-     * @return TargetNodeTypes A list of node types used to receive requests.
+     * Get List of target node types that receive requests 
+     * @return TargetNodeTypes List of target node types that receive requests
      */
     public String [] getTargetNodeTypes() {
         return this.TargetNodeTypes;
     }
 
     /**
-     * Set A list of node types used to receive requests.
-     * @param TargetNodeTypes A list of node types used to receive requests.
+     * Set List of target node types that receive requests
+     * @param TargetNodeTypes List of target node types that receive requests
      */
     public void setTargetNodeTypes(String [] TargetNodeTypes) {
         this.TargetNodeTypes = TargetNodeTypes;

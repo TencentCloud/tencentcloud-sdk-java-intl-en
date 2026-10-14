@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModifyStreamLinkOutputInfoResponse extends AbstractModel {
 
     /**
-    * The output configuration after modification.
+    * Output configuration after modification.
     */
     @SerializedName("Info")
     @Expose
@@ -38,16 +38,16 @@ public class ModifyStreamLinkOutputInfoResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get The output configuration after modification. 
-     * @return Info The output configuration after modification.
+     * Get Output configuration after modification. 
+     * @return Info Output configuration after modification.
      */
     public DescribeOutput getInfo() {
         return this.Info;
     }
 
     /**
-     * Set The output configuration after modification.
-     * @param Info The output configuration after modification.
+     * Set Output configuration after modification.
+     * @param Info Output configuration after modification.
      */
     public void setInfo(DescribeOutput Info) {
         this.Info = Info;

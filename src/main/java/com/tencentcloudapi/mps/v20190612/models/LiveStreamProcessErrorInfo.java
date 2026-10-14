@@ -25,8 +25,8 @@ public class LiveStreamProcessErrorInfo extends AbstractModel {
 
     /**
     * Error code.
-<li>0 means no error.</li>
-<li>Non-zero means error. Refer to the error information in Message.</li>
+<li>0: no error;</li>
+<li>Non-zero indicates an error. Refer to Message for error information.</li>
     */
     @SerializedName("ErrCode")
     @Expose
@@ -41,11 +41,11 @@ public class LiveStreamProcessErrorInfo extends AbstractModel {
 
     /**
      * Get Error code.
-<li>0 means no error.</li>
-<li>Non-zero means error. Refer to the error information in Message.</li> 
+<li>0: no error;</li>
+<li>Non-zero indicates an error. Refer to Message for error information.</li> 
      * @return ErrCode Error code.
-<li>0 means no error.</li>
-<li>Non-zero means error. Refer to the error information in Message.</li>
+<li>0: no error;</li>
+<li>Non-zero indicates an error. Refer to Message for error information.</li>
      */
     public Long getErrCode() {
         return this.ErrCode;
@@ -53,11 +53,11 @@ public class LiveStreamProcessErrorInfo extends AbstractModel {
 
     /**
      * Set Error code.
-<li>0 means no error.</li>
-<li>Non-zero means error. Refer to the error information in Message.</li>
+<li>0: no error;</li>
+<li>Non-zero indicates an error. Refer to Message for error information.</li>
      * @param ErrCode Error code.
-<li>0 means no error.</li>
-<li>Non-zero means error. Refer to the error information in Message.</li>
+<li>0: no error;</li>
+<li>Non-zero indicates an error. Refer to Message for error information.</li>
      */
     public void setErrCode(Long ErrCode) {
         this.ErrCode = ErrCode;

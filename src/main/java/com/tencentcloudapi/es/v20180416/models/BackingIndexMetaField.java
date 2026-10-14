@@ -24,143 +24,141 @@ import java.util.HashMap;
 public class BackingIndexMetaField extends AbstractModel {
 
     /**
-    * Backing index name
-Note: This field may return `null`, indicating that no valid value can be obtained.
+    * <p>Backing index name</p>
     */
     @SerializedName("IndexName")
     @Expose
     private String IndexName;
 
     /**
-    * Backing index status
-Note: This field may return `null`, indicating that no valid value can be obtained.
+    * <p>Backup index status</p>
     */
     @SerializedName("IndexStatus")
     @Expose
     private String IndexStatus;
 
     /**
-    * Backing index size
-Note: This field may return `null`, indicating that no valid value can be obtained.
+    * <p>Backup index storage size</p>
     */
     @SerializedName("IndexStorage")
     @Expose
     private Long IndexStorage;
 
     /**
-    * Current lifecycle phase of backing index
-Note: This field may return `null`, indicating that no valid value can be obtained.
+    * <p>Backup index current lifecycle</p>
     */
     @SerializedName("IndexPhrase")
     @Expose
     private String IndexPhrase;
 
     /**
-    * Backing index creation time
-Note: This field may return `null`, indicating that no valid value can be obtained.
+    * <p>Backup index creation time</p>
     */
     @SerializedName("IndexCreateTime")
     @Expose
     private String IndexCreateTime;
 
     /**
-     * Get Backing index name
-Note: This field may return `null`, indicating that no valid value can be obtained. 
-     * @return IndexName Backing index name
-Note: This field may return `null`, indicating that no valid value can be obtained.
+    * <p>Index Uuid</p>
+    */
+    @SerializedName("IndexUuid")
+    @Expose
+    private String IndexUuid;
+
+    /**
+     * Get <p>Backing index name</p> 
+     * @return IndexName <p>Backing index name</p>
      */
     public String getIndexName() {
         return this.IndexName;
     }
 
     /**
-     * Set Backing index name
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param IndexName Backing index name
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Set <p>Backing index name</p>
+     * @param IndexName <p>Backing index name</p>
      */
     public void setIndexName(String IndexName) {
         this.IndexName = IndexName;
     }
 
     /**
-     * Get Backing index status
-Note: This field may return `null`, indicating that no valid value can be obtained. 
-     * @return IndexStatus Backing index status
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Get <p>Backup index status</p> 
+     * @return IndexStatus <p>Backup index status</p>
      */
     public String getIndexStatus() {
         return this.IndexStatus;
     }
 
     /**
-     * Set Backing index status
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param IndexStatus Backing index status
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Set <p>Backup index status</p>
+     * @param IndexStatus <p>Backup index status</p>
      */
     public void setIndexStatus(String IndexStatus) {
         this.IndexStatus = IndexStatus;
     }
 
     /**
-     * Get Backing index size
-Note: This field may return `null`, indicating that no valid value can be obtained. 
-     * @return IndexStorage Backing index size
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Get <p>Backup index storage size</p> 
+     * @return IndexStorage <p>Backup index storage size</p>
      */
     public Long getIndexStorage() {
         return this.IndexStorage;
     }
 
     /**
-     * Set Backing index size
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param IndexStorage Backing index size
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Set <p>Backup index storage size</p>
+     * @param IndexStorage <p>Backup index storage size</p>
      */
     public void setIndexStorage(Long IndexStorage) {
         this.IndexStorage = IndexStorage;
     }
 
     /**
-     * Get Current lifecycle phase of backing index
-Note: This field may return `null`, indicating that no valid value can be obtained. 
-     * @return IndexPhrase Current lifecycle phase of backing index
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Get <p>Backup index current lifecycle</p> 
+     * @return IndexPhrase <p>Backup index current lifecycle</p>
      */
     public String getIndexPhrase() {
         return this.IndexPhrase;
     }
 
     /**
-     * Set Current lifecycle phase of backing index
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param IndexPhrase Current lifecycle phase of backing index
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Set <p>Backup index current lifecycle</p>
+     * @param IndexPhrase <p>Backup index current lifecycle</p>
      */
     public void setIndexPhrase(String IndexPhrase) {
         this.IndexPhrase = IndexPhrase;
     }
 
     /**
-     * Get Backing index creation time
-Note: This field may return `null`, indicating that no valid value can be obtained. 
-     * @return IndexCreateTime Backing index creation time
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Get <p>Backup index creation time</p> 
+     * @return IndexCreateTime <p>Backup index creation time</p>
      */
     public String getIndexCreateTime() {
         return this.IndexCreateTime;
     }
 
     /**
-     * Set Backing index creation time
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param IndexCreateTime Backing index creation time
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Set <p>Backup index creation time</p>
+     * @param IndexCreateTime <p>Backup index creation time</p>
      */
     public void setIndexCreateTime(String IndexCreateTime) {
         this.IndexCreateTime = IndexCreateTime;
+    }
+
+    /**
+     * Get <p>Index Uuid</p> 
+     * @return IndexUuid <p>Index Uuid</p>
+     */
+    public String getIndexUuid() {
+        return this.IndexUuid;
+    }
+
+    /**
+     * Set <p>Index Uuid</p>
+     * @param IndexUuid <p>Index Uuid</p>
+     */
+    public void setIndexUuid(String IndexUuid) {
+        this.IndexUuid = IndexUuid;
     }
 
     public BackingIndexMetaField() {
@@ -186,6 +184,9 @@ Note: This field may return `null`, indicating that no valid value can be obtain
         if (source.IndexCreateTime != null) {
             this.IndexCreateTime = new String(source.IndexCreateTime);
         }
+        if (source.IndexUuid != null) {
+            this.IndexUuid = new String(source.IndexUuid);
+        }
     }
 
 
@@ -198,6 +199,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
         this.setParamSimple(map, prefix + "IndexStorage", this.IndexStorage);
         this.setParamSimple(map, prefix + "IndexPhrase", this.IndexPhrase);
         this.setParamSimple(map, prefix + "IndexCreateTime", this.IndexCreateTime);
+        this.setParamSimple(map, prefix + "IndexUuid", this.IndexUuid);
 
     }
 }

@@ -24,291 +24,325 @@ import java.util.HashMap;
 public class NodeInfo extends AbstractModel {
 
     /**
-    * Number of nodes
+    * <p>Number of nodes.</p>
     */
     @SerializedName("NodeNum")
     @Expose
     private Long NodeNum;
 
     /**
-    * Node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
+    * <p>Node specification<li>ES.S1.SMALL2: 1-core 2G</li><li>ES.S1.MEDIUM4: 2-core 4G</li><li>ES.S1.MEDIUM8: 2-core 8G</li><li>ES.S1.LARGE16: 4-core 16G</li><li>ES.S1.2XLARGE32: 8-core 32G</li><li>ES.S1.4XLARGE32: 16-core 32G</li><li>ES.S1.4XLARGE64: 16-core 64G</li></p>
     */
     @SerializedName("NodeType")
     @Expose
     private String NodeType;
 
     /**
-    * Node type<li>`hotData`: hot data node</li>
-<li>`warmData`: warm data node</li>
-<li>`dedicatedMaster`: dedicated master node</li>
-Default value: `hotData`
+    * <p>Node type</p><p>Enumeration values:</p><ul><li>hotData: hot data node</li><li>warmData: cold data node</li><li>dedicatedMaster: dedicated master node</li><li>dedicatedCoordinating: dedicated coordinator node</li><li>dedicatedMl: dedicated Machine Learning node</li></ul>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * Node disk type <li>CLOUD_SSD: SSD cloud storage </li><li>CLOUD_PREMIUM: Premium cloud disk </li>Default value: CLOUD_SSD
+    * <p>Node disk type<li>CLOUD_SSD: ssd cloud disk</li><li>CLOUD_PREMIUM: high-performance cloud disk</li>Default value: CLOUD_SSD</p>
     */
     @SerializedName("DiskType")
     @Expose
     private String DiskType;
 
     /**
-    * Node disk size in GB
+    * <p>Node disk capacity (GB)</p>
     */
     @SerializedName("DiskSize")
     @Expose
     private Long DiskSize;
 
     /**
-    * Local disk information
-Note: this field may return null, indicating that no valid values can be obtained.
+    * <p>Node local disk information.</p>
     */
     @SerializedName("LocalDiskInfo")
     @Expose
     private LocalDiskInfo LocalDiskInfo;
 
     /**
-    * Number of node disks
+    * <p>Number of node disk blocks</p>
     */
     @SerializedName("DiskCount")
     @Expose
     private Long DiskCount;
 
     /**
-    * Whether to encrypt node disk. 0: no (default); 1: yes.
+    * <p>Whether the node disk is encrypted. 0: no encryption; 1: encryption; not encrypted by default</p>
     */
     @SerializedName("DiskEncrypt")
     @Expose
     private Long DiskEncrypt;
 
     /**
-    * CPU number
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Custom encryption key id</p>
+    */
+    @SerializedName("KmsKeyId")
+    @Expose
+    private String KmsKeyId;
+
+    /**
+    * <p>Custom encryption key name</p>
+    */
+    @SerializedName("KmsKeyName")
+    @Expose
+    private String KmsKeyName;
+
+    /**
+    * <p>Number of CPUs</p>
     */
     @SerializedName("CpuNum")
     @Expose
     private Long CpuNum;
 
     /**
-    * Memory size in GB
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Memory size, in GB.</p>
     */
     @SerializedName("MemSize")
     @Expose
     private Long MemSize;
 
     /**
-    * /
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Additional hard disk performance</p>
     */
     @SerializedName("DiskEnhance")
     @Expose
     private Long DiskEnhance;
 
     /**
-     * Get Number of nodes 
-     * @return NodeNum Number of nodes
+    * <p>Gpu information of the node</p>
+    */
+    @SerializedName("GpuInfo")
+    @Expose
+    private GpuInfo GpuInfo;
+
+    /**
+     * Get <p>Number of nodes.</p> 
+     * @return NodeNum <p>Number of nodes.</p>
      */
     public Long getNodeNum() {
         return this.NodeNum;
     }
 
     /**
-     * Set Number of nodes
-     * @param NodeNum Number of nodes
+     * Set <p>Number of nodes.</p>
+     * @param NodeNum <p>Number of nodes.</p>
      */
     public void setNodeNum(Long NodeNum) {
         this.NodeNum = NodeNum;
     }
 
     /**
-     * Get Node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li> 
-     * @return NodeType Node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
+     * Get <p>Node specification<li>ES.S1.SMALL2: 1-core 2G</li><li>ES.S1.MEDIUM4: 2-core 4G</li><li>ES.S1.MEDIUM8: 2-core 8G</li><li>ES.S1.LARGE16: 4-core 16G</li><li>ES.S1.2XLARGE32: 8-core 32G</li><li>ES.S1.4XLARGE32: 16-core 32G</li><li>ES.S1.4XLARGE64: 16-core 64G</li></p> 
+     * @return NodeType <p>Node specification<li>ES.S1.SMALL2: 1-core 2G</li><li>ES.S1.MEDIUM4: 2-core 4G</li><li>ES.S1.MEDIUM8: 2-core 8G</li><li>ES.S1.LARGE16: 4-core 16G</li><li>ES.S1.2XLARGE32: 8-core 32G</li><li>ES.S1.4XLARGE32: 16-core 32G</li><li>ES.S1.4XLARGE64: 16-core 64G</li></p>
      */
     public String getNodeType() {
         return this.NodeType;
     }
 
     /**
-     * Set Node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
-     * @param NodeType Node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
+     * Set <p>Node specification<li>ES.S1.SMALL2: 1-core 2G</li><li>ES.S1.MEDIUM4: 2-core 4G</li><li>ES.S1.MEDIUM8: 2-core 8G</li><li>ES.S1.LARGE16: 4-core 16G</li><li>ES.S1.2XLARGE32: 8-core 32G</li><li>ES.S1.4XLARGE32: 16-core 32G</li><li>ES.S1.4XLARGE64: 16-core 64G</li></p>
+     * @param NodeType <p>Node specification<li>ES.S1.SMALL2: 1-core 2G</li><li>ES.S1.MEDIUM4: 2-core 4G</li><li>ES.S1.MEDIUM8: 2-core 8G</li><li>ES.S1.LARGE16: 4-core 16G</li><li>ES.S1.2XLARGE32: 8-core 32G</li><li>ES.S1.4XLARGE32: 16-core 32G</li><li>ES.S1.4XLARGE64: 16-core 64G</li></p>
      */
     public void setNodeType(String NodeType) {
         this.NodeType = NodeType;
     }
 
     /**
-     * Get Node type<li>`hotData`: hot data node</li>
-<li>`warmData`: warm data node</li>
-<li>`dedicatedMaster`: dedicated master node</li>
-Default value: `hotData` 
-     * @return Type Node type<li>`hotData`: hot data node</li>
-<li>`warmData`: warm data node</li>
-<li>`dedicatedMaster`: dedicated master node</li>
-Default value: `hotData`
+     * Get <p>Node type</p><p>Enumeration values:</p><ul><li>hotData: hot data node</li><li>warmData: cold data node</li><li>dedicatedMaster: dedicated master node</li><li>dedicatedCoordinating: dedicated coordinator node</li><li>dedicatedMl: dedicated Machine Learning node</li></ul> 
+     * @return Type <p>Node type</p><p>Enumeration values:</p><ul><li>hotData: hot data node</li><li>warmData: cold data node</li><li>dedicatedMaster: dedicated master node</li><li>dedicatedCoordinating: dedicated coordinator node</li><li>dedicatedMl: dedicated Machine Learning node</li></ul>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Node type<li>`hotData`: hot data node</li>
-<li>`warmData`: warm data node</li>
-<li>`dedicatedMaster`: dedicated master node</li>
-Default value: `hotData`
-     * @param Type Node type<li>`hotData`: hot data node</li>
-<li>`warmData`: warm data node</li>
-<li>`dedicatedMaster`: dedicated master node</li>
-Default value: `hotData`
+     * Set <p>Node type</p><p>Enumeration values:</p><ul><li>hotData: hot data node</li><li>warmData: cold data node</li><li>dedicatedMaster: dedicated master node</li><li>dedicatedCoordinating: dedicated coordinator node</li><li>dedicatedMl: dedicated Machine Learning node</li></ul>
+     * @param Type <p>Node type</p><p>Enumeration values:</p><ul><li>hotData: hot data node</li><li>warmData: cold data node</li><li>dedicatedMaster: dedicated master node</li><li>dedicatedCoordinating: dedicated coordinator node</li><li>dedicatedMl: dedicated Machine Learning node</li></ul>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get Node disk type <li>CLOUD_SSD: SSD cloud storage </li><li>CLOUD_PREMIUM: Premium cloud disk </li>Default value: CLOUD_SSD 
-     * @return DiskType Node disk type <li>CLOUD_SSD: SSD cloud storage </li><li>CLOUD_PREMIUM: Premium cloud disk </li>Default value: CLOUD_SSD
+     * Get <p>Node disk type<li>CLOUD_SSD: ssd cloud disk</li><li>CLOUD_PREMIUM: high-performance cloud disk</li>Default value: CLOUD_SSD</p> 
+     * @return DiskType <p>Node disk type<li>CLOUD_SSD: ssd cloud disk</li><li>CLOUD_PREMIUM: high-performance cloud disk</li>Default value: CLOUD_SSD</p>
      */
     public String getDiskType() {
         return this.DiskType;
     }
 
     /**
-     * Set Node disk type <li>CLOUD_SSD: SSD cloud storage </li><li>CLOUD_PREMIUM: Premium cloud disk </li>Default value: CLOUD_SSD
-     * @param DiskType Node disk type <li>CLOUD_SSD: SSD cloud storage </li><li>CLOUD_PREMIUM: Premium cloud disk </li>Default value: CLOUD_SSD
+     * Set <p>Node disk type<li>CLOUD_SSD: ssd cloud disk</li><li>CLOUD_PREMIUM: high-performance cloud disk</li>Default value: CLOUD_SSD</p>
+     * @param DiskType <p>Node disk type<li>CLOUD_SSD: ssd cloud disk</li><li>CLOUD_PREMIUM: high-performance cloud disk</li>Default value: CLOUD_SSD</p>
      */
     public void setDiskType(String DiskType) {
         this.DiskType = DiskType;
     }
 
     /**
-     * Get Node disk size in GB 
-     * @return DiskSize Node disk size in GB
+     * Get <p>Node disk capacity (GB)</p> 
+     * @return DiskSize <p>Node disk capacity (GB)</p>
      */
     public Long getDiskSize() {
         return this.DiskSize;
     }
 
     /**
-     * Set Node disk size in GB
-     * @param DiskSize Node disk size in GB
+     * Set <p>Node disk capacity (GB)</p>
+     * @param DiskSize <p>Node disk capacity (GB)</p>
      */
     public void setDiskSize(Long DiskSize) {
         this.DiskSize = DiskSize;
     }
 
     /**
-     * Get Local disk information
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return LocalDiskInfo Local disk information
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get <p>Node local disk information.</p> 
+     * @return LocalDiskInfo <p>Node local disk information.</p>
      */
     public LocalDiskInfo getLocalDiskInfo() {
         return this.LocalDiskInfo;
     }
 
     /**
-     * Set Local disk information
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param LocalDiskInfo Local disk information
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set <p>Node local disk information.</p>
+     * @param LocalDiskInfo <p>Node local disk information.</p>
      */
     public void setLocalDiskInfo(LocalDiskInfo LocalDiskInfo) {
         this.LocalDiskInfo = LocalDiskInfo;
     }
 
     /**
-     * Get Number of node disks 
-     * @return DiskCount Number of node disks
+     * Get <p>Number of node disk blocks</p> 
+     * @return DiskCount <p>Number of node disk blocks</p>
      */
     public Long getDiskCount() {
         return this.DiskCount;
     }
 
     /**
-     * Set Number of node disks
-     * @param DiskCount Number of node disks
+     * Set <p>Number of node disk blocks</p>
+     * @param DiskCount <p>Number of node disk blocks</p>
      */
     public void setDiskCount(Long DiskCount) {
         this.DiskCount = DiskCount;
     }
 
     /**
-     * Get Whether to encrypt node disk. 0: no (default); 1: yes. 
-     * @return DiskEncrypt Whether to encrypt node disk. 0: no (default); 1: yes.
+     * Get <p>Whether the node disk is encrypted. 0: no encryption; 1: encryption; not encrypted by default</p> 
+     * @return DiskEncrypt <p>Whether the node disk is encrypted. 0: no encryption; 1: encryption; not encrypted by default</p>
      */
     public Long getDiskEncrypt() {
         return this.DiskEncrypt;
     }
 
     /**
-     * Set Whether to encrypt node disk. 0: no (default); 1: yes.
-     * @param DiskEncrypt Whether to encrypt node disk. 0: no (default); 1: yes.
+     * Set <p>Whether the node disk is encrypted. 0: no encryption; 1: encryption; not encrypted by default</p>
+     * @param DiskEncrypt <p>Whether the node disk is encrypted. 0: no encryption; 1: encryption; not encrypted by default</p>
      */
     public void setDiskEncrypt(Long DiskEncrypt) {
         this.DiskEncrypt = DiskEncrypt;
     }
 
     /**
-     * Get CPU number
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return CpuNum CPU number
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Custom encryption key id</p> 
+     * @return KmsKeyId <p>Custom encryption key id</p>
+     */
+    public String getKmsKeyId() {
+        return this.KmsKeyId;
+    }
+
+    /**
+     * Set <p>Custom encryption key id</p>
+     * @param KmsKeyId <p>Custom encryption key id</p>
+     */
+    public void setKmsKeyId(String KmsKeyId) {
+        this.KmsKeyId = KmsKeyId;
+    }
+
+    /**
+     * Get <p>Custom encryption key name</p> 
+     * @return KmsKeyName <p>Custom encryption key name</p>
+     */
+    public String getKmsKeyName() {
+        return this.KmsKeyName;
+    }
+
+    /**
+     * Set <p>Custom encryption key name</p>
+     * @param KmsKeyName <p>Custom encryption key name</p>
+     */
+    public void setKmsKeyName(String KmsKeyName) {
+        this.KmsKeyName = KmsKeyName;
+    }
+
+    /**
+     * Get <p>Number of CPUs</p> 
+     * @return CpuNum <p>Number of CPUs</p>
      */
     public Long getCpuNum() {
         return this.CpuNum;
     }
 
     /**
-     * Set CPU number
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param CpuNum CPU number
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Number of CPUs</p>
+     * @param CpuNum <p>Number of CPUs</p>
      */
     public void setCpuNum(Long CpuNum) {
         this.CpuNum = CpuNum;
     }
 
     /**
-     * Get Memory size in GB
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return MemSize Memory size in GB
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Memory size, in GB.</p> 
+     * @return MemSize <p>Memory size, in GB.</p>
      */
     public Long getMemSize() {
         return this.MemSize;
     }
 
     /**
-     * Set Memory size in GB
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param MemSize Memory size in GB
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Memory size, in GB.</p>
+     * @param MemSize <p>Memory size, in GB.</p>
      */
     public void setMemSize(Long MemSize) {
         this.MemSize = MemSize;
     }
 
     /**
-     * Get /
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return DiskEnhance /
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Additional hard disk performance</p> 
+     * @return DiskEnhance <p>Additional hard disk performance</p>
      */
     public Long getDiskEnhance() {
         return this.DiskEnhance;
     }
 
     /**
-     * Set /
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param DiskEnhance /
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Additional hard disk performance</p>
+     * @param DiskEnhance <p>Additional hard disk performance</p>
      */
     public void setDiskEnhance(Long DiskEnhance) {
         this.DiskEnhance = DiskEnhance;
+    }
+
+    /**
+     * Get <p>Gpu information of the node</p> 
+     * @return GpuInfo <p>Gpu information of the node</p>
+     */
+    public GpuInfo getGpuInfo() {
+        return this.GpuInfo;
+    }
+
+    /**
+     * Set <p>Gpu information of the node</p>
+     * @param GpuInfo <p>Gpu information of the node</p>
+     */
+    public void setGpuInfo(GpuInfo GpuInfo) {
+        this.GpuInfo = GpuInfo;
     }
 
     public NodeInfo() {
@@ -343,6 +377,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.DiskEncrypt != null) {
             this.DiskEncrypt = new Long(source.DiskEncrypt);
         }
+        if (source.KmsKeyId != null) {
+            this.KmsKeyId = new String(source.KmsKeyId);
+        }
+        if (source.KmsKeyName != null) {
+            this.KmsKeyName = new String(source.KmsKeyName);
+        }
         if (source.CpuNum != null) {
             this.CpuNum = new Long(source.CpuNum);
         }
@@ -351,6 +391,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         }
         if (source.DiskEnhance != null) {
             this.DiskEnhance = new Long(source.DiskEnhance);
+        }
+        if (source.GpuInfo != null) {
+            this.GpuInfo = new GpuInfo(source.GpuInfo);
         }
     }
 
@@ -367,9 +410,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamObj(map, prefix + "LocalDiskInfo.", this.LocalDiskInfo);
         this.setParamSimple(map, prefix + "DiskCount", this.DiskCount);
         this.setParamSimple(map, prefix + "DiskEncrypt", this.DiskEncrypt);
+        this.setParamSimple(map, prefix + "KmsKeyId", this.KmsKeyId);
+        this.setParamSimple(map, prefix + "KmsKeyName", this.KmsKeyName);
         this.setParamSimple(map, prefix + "CpuNum", this.CpuNum);
         this.setParamSimple(map, prefix + "MemSize", this.MemSize);
         this.setParamSimple(map, prefix + "DiskEnhance", this.DiskEnhance);
+        this.setParamObj(map, prefix + "GpuInfo.", this.GpuInfo);
 
     }
 }

@@ -31,35 +31,35 @@ public class UpgradeLicenseRequest extends AbstractModel {
     private String InstanceId;
 
     /**
-    * License type <li>oss: Open Source Edition </li><li>basic: Basic Edition </li><li>platinum: Platinum Edition </li>Default value: Platinum
+    * License type<li>oss: open source edition</li><li>basic: basic version</li><li>platinum: platinum version</li>Default value: platinum
     */
     @SerializedName("LicenseType")
     @Expose
     private String LicenseType;
 
     /**
-    * Whether to automatically use vouchers <li>0: No </li><li>1: Yes </li>Default value: 0
+    * Indicates whether to use vouchers automatically<li>0: Do not use automatically.</li><li>1: Use automatically.</li>Default value: 0.
     */
     @SerializedName("AutoVoucher")
     @Expose
     private Long AutoVoucher;
 
     /**
-    * List of voucher IDs (only one voucher can be specified at a time currently)
+    * Voucher ID list. Only one voucher can be specified.
     */
     @SerializedName("VoucherIds")
     @Expose
     private String [] VoucherIds;
 
     /**
-    * Whether to enable X-Pack security authentication in Basic Edition 6.8 (and above) <li>1: disabled </li><li>2: enabled</li>
+    * Whether xpack security authentication is enabled for basic version 6.8 (and above versions)<li>1: not enabled</li><li>2: enabled</li><li>If no parameter is passed, the original status is maintained by default. When passing a parameter, note that it can only change from not enabled to enabled, and cannot change from enabled to not enabled</li>
     */
     @SerializedName("BasicSecurityType")
     @Expose
     private Long BasicSecurityType;
 
     /**
-    * Whether to force restart <li>true: yes </li><li>false: no </li>Default value: false
+    * Whether to force restart <li>true: force restart</li><li>false: do not force restart</li> Default value: false
     */
     @SerializedName("ForceRestart")
     @Expose
@@ -82,80 +82,80 @@ public class UpgradeLicenseRequest extends AbstractModel {
     }
 
     /**
-     * Get License type <li>oss: Open Source Edition </li><li>basic: Basic Edition </li><li>platinum: Platinum Edition </li>Default value: Platinum 
-     * @return LicenseType License type <li>oss: Open Source Edition </li><li>basic: Basic Edition </li><li>platinum: Platinum Edition </li>Default value: Platinum
+     * Get License type<li>oss: open source edition</li><li>basic: basic version</li><li>platinum: platinum version</li>Default value: platinum 
+     * @return LicenseType License type<li>oss: open source edition</li><li>basic: basic version</li><li>platinum: platinum version</li>Default value: platinum
      */
     public String getLicenseType() {
         return this.LicenseType;
     }
 
     /**
-     * Set License type <li>oss: Open Source Edition </li><li>basic: Basic Edition </li><li>platinum: Platinum Edition </li>Default value: Platinum
-     * @param LicenseType License type <li>oss: Open Source Edition </li><li>basic: Basic Edition </li><li>platinum: Platinum Edition </li>Default value: Platinum
+     * Set License type<li>oss: open source edition</li><li>basic: basic version</li><li>platinum: platinum version</li>Default value: platinum
+     * @param LicenseType License type<li>oss: open source edition</li><li>basic: basic version</li><li>platinum: platinum version</li>Default value: platinum
      */
     public void setLicenseType(String LicenseType) {
         this.LicenseType = LicenseType;
     }
 
     /**
-     * Get Whether to automatically use vouchers <li>0: No </li><li>1: Yes </li>Default value: 0 
-     * @return AutoVoucher Whether to automatically use vouchers <li>0: No </li><li>1: Yes </li>Default value: 0
+     * Get Indicates whether to use vouchers automatically<li>0: Do not use automatically.</li><li>1: Use automatically.</li>Default value: 0. 
+     * @return AutoVoucher Indicates whether to use vouchers automatically<li>0: Do not use automatically.</li><li>1: Use automatically.</li>Default value: 0.
      */
     public Long getAutoVoucher() {
         return this.AutoVoucher;
     }
 
     /**
-     * Set Whether to automatically use vouchers <li>0: No </li><li>1: Yes </li>Default value: 0
-     * @param AutoVoucher Whether to automatically use vouchers <li>0: No </li><li>1: Yes </li>Default value: 0
+     * Set Indicates whether to use vouchers automatically<li>0: Do not use automatically.</li><li>1: Use automatically.</li>Default value: 0.
+     * @param AutoVoucher Indicates whether to use vouchers automatically<li>0: Do not use automatically.</li><li>1: Use automatically.</li>Default value: 0.
      */
     public void setAutoVoucher(Long AutoVoucher) {
         this.AutoVoucher = AutoVoucher;
     }
 
     /**
-     * Get List of voucher IDs (only one voucher can be specified at a time currently) 
-     * @return VoucherIds List of voucher IDs (only one voucher can be specified at a time currently)
+     * Get Voucher ID list. Only one voucher can be specified. 
+     * @return VoucherIds Voucher ID list. Only one voucher can be specified.
      */
     public String [] getVoucherIds() {
         return this.VoucherIds;
     }
 
     /**
-     * Set List of voucher IDs (only one voucher can be specified at a time currently)
-     * @param VoucherIds List of voucher IDs (only one voucher can be specified at a time currently)
+     * Set Voucher ID list. Only one voucher can be specified.
+     * @param VoucherIds Voucher ID list. Only one voucher can be specified.
      */
     public void setVoucherIds(String [] VoucherIds) {
         this.VoucherIds = VoucherIds;
     }
 
     /**
-     * Get Whether to enable X-Pack security authentication in Basic Edition 6.8 (and above) <li>1: disabled </li><li>2: enabled</li> 
-     * @return BasicSecurityType Whether to enable X-Pack security authentication in Basic Edition 6.8 (and above) <li>1: disabled </li><li>2: enabled</li>
+     * Get Whether xpack security authentication is enabled for basic version 6.8 (and above versions)<li>1: not enabled</li><li>2: enabled</li><li>If no parameter is passed, the original status is maintained by default. When passing a parameter, note that it can only change from not enabled to enabled, and cannot change from enabled to not enabled</li> 
+     * @return BasicSecurityType Whether xpack security authentication is enabled for basic version 6.8 (and above versions)<li>1: not enabled</li><li>2: enabled</li><li>If no parameter is passed, the original status is maintained by default. When passing a parameter, note that it can only change from not enabled to enabled, and cannot change from enabled to not enabled</li>
      */
     public Long getBasicSecurityType() {
         return this.BasicSecurityType;
     }
 
     /**
-     * Set Whether to enable X-Pack security authentication in Basic Edition 6.8 (and above) <li>1: disabled </li><li>2: enabled</li>
-     * @param BasicSecurityType Whether to enable X-Pack security authentication in Basic Edition 6.8 (and above) <li>1: disabled </li><li>2: enabled</li>
+     * Set Whether xpack security authentication is enabled for basic version 6.8 (and above versions)<li>1: not enabled</li><li>2: enabled</li><li>If no parameter is passed, the original status is maintained by default. When passing a parameter, note that it can only change from not enabled to enabled, and cannot change from enabled to not enabled</li>
+     * @param BasicSecurityType Whether xpack security authentication is enabled for basic version 6.8 (and above versions)<li>1: not enabled</li><li>2: enabled</li><li>If no parameter is passed, the original status is maintained by default. When passing a parameter, note that it can only change from not enabled to enabled, and cannot change from enabled to not enabled</li>
      */
     public void setBasicSecurityType(Long BasicSecurityType) {
         this.BasicSecurityType = BasicSecurityType;
     }
 
     /**
-     * Get Whether to force restart <li>true: yes </li><li>false: no </li>Default value: false 
-     * @return ForceRestart Whether to force restart <li>true: yes </li><li>false: no </li>Default value: false
+     * Get Whether to force restart <li>true: force restart</li><li>false: do not force restart</li> Default value: false 
+     * @return ForceRestart Whether to force restart <li>true: force restart</li><li>false: do not force restart</li> Default value: false
      */
     public Boolean getForceRestart() {
         return this.ForceRestart;
     }
 
     /**
-     * Set Whether to force restart <li>true: yes </li><li>false: no </li>Default value: false
-     * @param ForceRestart Whether to force restart <li>true: yes </li><li>false: no </li>Default value: false
+     * Set Whether to force restart <li>true: force restart</li><li>false: do not force restart</li> Default value: false
+     * @param ForceRestart Whether to force restart <li>true: force restart</li><li>false: do not force restart</li> Default value: false
      */
     public void setForceRestart(Boolean ForceRestart) {
         this.ForceRestart = ForceRestart;

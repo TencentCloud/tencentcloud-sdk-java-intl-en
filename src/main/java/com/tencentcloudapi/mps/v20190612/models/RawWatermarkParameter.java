@@ -35,7 +35,7 @@ public class RawWatermarkParameter extends AbstractModel {
     * Origin position. Valid values:
 <li>TopLeft: indicates that the coordinate origin is at the top left corner of the video image and the watermark origin is at the top left corner of the image or text.</li>
 <li>TopRight: indicates that the coordinate origin is at the top right corner of the video image and the watermark origin is at the top right corner of the image or text.</li>
-<li>BottomLeft: indicates that the coordinate origin is at the bottom-left corner of the video image and the watermark origin is at the bottom-left corner of the image or text.</li>
+<li>BottomLeft: indicates that the coordinate origin is at the bottom left corner of the video image and the watermark origin is at the bottom left corner of the image or text.</li>
 <li>BottomRight: indicates that the coordinate origin is at the bottom right corner of the video image and the watermark origin is at the bottom right corner of the image or text.</li>
 Default value: TopLeft.
     */
@@ -44,7 +44,7 @@ Default value: TopLeft.
     private String CoordinateOrigin;
 
     /**
-    * Horizontal position of the watermark origin from the origin of coordinates of the video image. Supports % and px formats.
+    * Horizontal position of the watermark origin relative to the origin of coordinates of the video image. Supports two formats: % and px.
 <li>If a string ends with %, it indicates that the `XPos` of a watermark is a specified percentage of a video's width. For example, `10%` means that `XPos` is 10% of a video's width.</li>
 <li>If a string ends with px, it means the watermark XPos is specified in pixels. For example, 100px means XPos is 100 pixels.</li>
 Default value: 0px.
@@ -64,7 +64,7 @@ Default value: 0px.
     private String YPos;
 
     /**
-    * Image watermark template. This field is required when Type is image, and invalid when Type is text.
+    * Image watermark template. This field is required when Type is image. This field is invalid when Type is text.
     */
     @SerializedName("ImageTemplate")
     @Expose
@@ -94,13 +94,13 @@ Default value: 0px.
      * Get Origin position. Valid values:
 <li>TopLeft: indicates that the coordinate origin is at the top left corner of the video image and the watermark origin is at the top left corner of the image or text.</li>
 <li>TopRight: indicates that the coordinate origin is at the top right corner of the video image and the watermark origin is at the top right corner of the image or text.</li>
-<li>BottomLeft: indicates that the coordinate origin is at the bottom-left corner of the video image and the watermark origin is at the bottom-left corner of the image or text.</li>
+<li>BottomLeft: indicates that the coordinate origin is at the bottom left corner of the video image and the watermark origin is at the bottom left corner of the image or text.</li>
 <li>BottomRight: indicates that the coordinate origin is at the bottom right corner of the video image and the watermark origin is at the bottom right corner of the image or text.</li>
 Default value: TopLeft. 
      * @return CoordinateOrigin Origin position. Valid values:
 <li>TopLeft: indicates that the coordinate origin is at the top left corner of the video image and the watermark origin is at the top left corner of the image or text.</li>
 <li>TopRight: indicates that the coordinate origin is at the top right corner of the video image and the watermark origin is at the top right corner of the image or text.</li>
-<li>BottomLeft: indicates that the coordinate origin is at the bottom-left corner of the video image and the watermark origin is at the bottom-left corner of the image or text.</li>
+<li>BottomLeft: indicates that the coordinate origin is at the bottom left corner of the video image and the watermark origin is at the bottom left corner of the image or text.</li>
 <li>BottomRight: indicates that the coordinate origin is at the bottom right corner of the video image and the watermark origin is at the bottom right corner of the image or text.</li>
 Default value: TopLeft.
      */
@@ -112,13 +112,13 @@ Default value: TopLeft.
      * Set Origin position. Valid values:
 <li>TopLeft: indicates that the coordinate origin is at the top left corner of the video image and the watermark origin is at the top left corner of the image or text.</li>
 <li>TopRight: indicates that the coordinate origin is at the top right corner of the video image and the watermark origin is at the top right corner of the image or text.</li>
-<li>BottomLeft: indicates that the coordinate origin is at the bottom-left corner of the video image and the watermark origin is at the bottom-left corner of the image or text.</li>
+<li>BottomLeft: indicates that the coordinate origin is at the bottom left corner of the video image and the watermark origin is at the bottom left corner of the image or text.</li>
 <li>BottomRight: indicates that the coordinate origin is at the bottom right corner of the video image and the watermark origin is at the bottom right corner of the image or text.</li>
 Default value: TopLeft.
      * @param CoordinateOrigin Origin position. Valid values:
 <li>TopLeft: indicates that the coordinate origin is at the top left corner of the video image and the watermark origin is at the top left corner of the image or text.</li>
 <li>TopRight: indicates that the coordinate origin is at the top right corner of the video image and the watermark origin is at the top right corner of the image or text.</li>
-<li>BottomLeft: indicates that the coordinate origin is at the bottom-left corner of the video image and the watermark origin is at the bottom-left corner of the image or text.</li>
+<li>BottomLeft: indicates that the coordinate origin is at the bottom left corner of the video image and the watermark origin is at the bottom left corner of the image or text.</li>
 <li>BottomRight: indicates that the coordinate origin is at the bottom right corner of the video image and the watermark origin is at the bottom right corner of the image or text.</li>
 Default value: TopLeft.
      */
@@ -127,11 +127,11 @@ Default value: TopLeft.
     }
 
     /**
-     * Get Horizontal position of the watermark origin from the origin of coordinates of the video image. Supports % and px formats.
+     * Get Horizontal position of the watermark origin relative to the origin of coordinates of the video image. Supports two formats: % and px.
 <li>If a string ends with %, it indicates that the `XPos` of a watermark is a specified percentage of a video's width. For example, `10%` means that `XPos` is 10% of a video's width.</li>
 <li>If a string ends with px, it means the watermark XPos is specified in pixels. For example, 100px means XPos is 100 pixels.</li>
 Default value: 0px. 
-     * @return XPos Horizontal position of the watermark origin from the origin of coordinates of the video image. Supports % and px formats.
+     * @return XPos Horizontal position of the watermark origin relative to the origin of coordinates of the video image. Supports two formats: % and px.
 <li>If a string ends with %, it indicates that the `XPos` of a watermark is a specified percentage of a video's width. For example, `10%` means that `XPos` is 10% of a video's width.</li>
 <li>If a string ends with px, it means the watermark XPos is specified in pixels. For example, 100px means XPos is 100 pixels.</li>
 Default value: 0px.
@@ -141,11 +141,11 @@ Default value: 0px.
     }
 
     /**
-     * Set Horizontal position of the watermark origin from the origin of coordinates of the video image. Supports % and px formats.
+     * Set Horizontal position of the watermark origin relative to the origin of coordinates of the video image. Supports two formats: % and px.
 <li>If a string ends with %, it indicates that the `XPos` of a watermark is a specified percentage of a video's width. For example, `10%` means that `XPos` is 10% of a video's width.</li>
 <li>If a string ends with px, it means the watermark XPos is specified in pixels. For example, 100px means XPos is 100 pixels.</li>
 Default value: 0px.
-     * @param XPos Horizontal position of the watermark origin from the origin of coordinates of the video image. Supports % and px formats.
+     * @param XPos Horizontal position of the watermark origin relative to the origin of coordinates of the video image. Supports two formats: % and px.
 <li>If a string ends with %, it indicates that the `XPos` of a watermark is a specified percentage of a video's width. For example, `10%` means that `XPos` is 10% of a video's width.</li>
 <li>If a string ends with px, it means the watermark XPos is specified in pixels. For example, 100px means XPos is 100 pixels.</li>
 Default value: 0px.
@@ -183,16 +183,16 @@ Default value: 0px.
     }
 
     /**
-     * Get Image watermark template. This field is required when Type is image, and invalid when Type is text. 
-     * @return ImageTemplate Image watermark template. This field is required when Type is image, and invalid when Type is text.
+     * Get Image watermark template. This field is required when Type is image. This field is invalid when Type is text. 
+     * @return ImageTemplate Image watermark template. This field is required when Type is image. This field is invalid when Type is text.
      */
     public RawImageWatermarkInput getImageTemplate() {
         return this.ImageTemplate;
     }
 
     /**
-     * Set Image watermark template. This field is required when Type is image, and invalid when Type is text.
-     * @param ImageTemplate Image watermark template. This field is required when Type is image, and invalid when Type is text.
+     * Set Image watermark template. This field is required when Type is image. This field is invalid when Type is text.
+     * @param ImageTemplate Image watermark template. This field is required when Type is image. This field is invalid when Type is text.
      */
     public void setImageTemplate(RawImageWatermarkInput ImageTemplate) {
         this.ImageTemplate = ImageTemplate;

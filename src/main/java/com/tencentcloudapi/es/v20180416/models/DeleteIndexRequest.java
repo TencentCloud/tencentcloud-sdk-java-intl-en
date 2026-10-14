@@ -24,141 +24,164 @@ import java.util.HashMap;
 public class DeleteIndexRequest extends AbstractModel {
 
     /**
-    * ES cluster ID
+    * <p>ES cluster ID</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Type of the index to delete. `auto`: Automated; `normal`: General.
+    * <p>Deleted index type. auto: autonomous index; normal: general index</p>
     */
     @SerializedName("IndexType")
     @Expose
     private String IndexType;
 
     /**
-    * Name of the index to delete
+    * <p>Name of the deleted index</p>
     */
     @SerializedName("IndexName")
     @Expose
     private String IndexName;
 
     /**
-    * Username for cluster access
+    * <p>Cluster access username.</p>
     */
     @SerializedName("Username")
     @Expose
     private String Username;
 
     /**
-    * Password for cluster access
+    * <p>Cluster access password</p>
     */
     @SerializedName("Password")
     @Expose
     private String Password;
 
     /**
-    * Backing index name
+    * <p>Backing index name</p>
     */
     @SerializedName("BackingIndexName")
     @Expose
     private String BackingIndexName;
 
     /**
-     * Get ES cluster ID 
-     * @return InstanceId ES cluster ID
+    * <p>Index life cycle</p>
+    */
+    @SerializedName("IndexPhrase")
+    @Expose
+    private String IndexPhrase;
+
+    /**
+     * Get <p>ES cluster ID</p> 
+     * @return InstanceId <p>ES cluster ID</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set ES cluster ID
-     * @param InstanceId ES cluster ID
+     * Set <p>ES cluster ID</p>
+     * @param InstanceId <p>ES cluster ID</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Type of the index to delete. `auto`: Automated; `normal`: General. 
-     * @return IndexType Type of the index to delete. `auto`: Automated; `normal`: General.
+     * Get <p>Deleted index type. auto: autonomous index; normal: general index</p> 
+     * @return IndexType <p>Deleted index type. auto: autonomous index; normal: general index</p>
      */
     public String getIndexType() {
         return this.IndexType;
     }
 
     /**
-     * Set Type of the index to delete. `auto`: Automated; `normal`: General.
-     * @param IndexType Type of the index to delete. `auto`: Automated; `normal`: General.
+     * Set <p>Deleted index type. auto: autonomous index; normal: general index</p>
+     * @param IndexType <p>Deleted index type. auto: autonomous index; normal: general index</p>
      */
     public void setIndexType(String IndexType) {
         this.IndexType = IndexType;
     }
 
     /**
-     * Get Name of the index to delete 
-     * @return IndexName Name of the index to delete
+     * Get <p>Name of the deleted index</p> 
+     * @return IndexName <p>Name of the deleted index</p>
      */
     public String getIndexName() {
         return this.IndexName;
     }
 
     /**
-     * Set Name of the index to delete
-     * @param IndexName Name of the index to delete
+     * Set <p>Name of the deleted index</p>
+     * @param IndexName <p>Name of the deleted index</p>
      */
     public void setIndexName(String IndexName) {
         this.IndexName = IndexName;
     }
 
     /**
-     * Get Username for cluster access 
-     * @return Username Username for cluster access
+     * Get <p>Cluster access username.</p> 
+     * @return Username <p>Cluster access username.</p>
      */
     public String getUsername() {
         return this.Username;
     }
 
     /**
-     * Set Username for cluster access
-     * @param Username Username for cluster access
+     * Set <p>Cluster access username.</p>
+     * @param Username <p>Cluster access username.</p>
      */
     public void setUsername(String Username) {
         this.Username = Username;
     }
 
     /**
-     * Get Password for cluster access 
-     * @return Password Password for cluster access
+     * Get <p>Cluster access password</p> 
+     * @return Password <p>Cluster access password</p>
      */
     public String getPassword() {
         return this.Password;
     }
 
     /**
-     * Set Password for cluster access
-     * @param Password Password for cluster access
+     * Set <p>Cluster access password</p>
+     * @param Password <p>Cluster access password</p>
      */
     public void setPassword(String Password) {
         this.Password = Password;
     }
 
     /**
-     * Get Backing index name 
-     * @return BackingIndexName Backing index name
+     * Get <p>Backing index name</p> 
+     * @return BackingIndexName <p>Backing index name</p>
      */
     public String getBackingIndexName() {
         return this.BackingIndexName;
     }
 
     /**
-     * Set Backing index name
-     * @param BackingIndexName Backing index name
+     * Set <p>Backing index name</p>
+     * @param BackingIndexName <p>Backing index name</p>
      */
     public void setBackingIndexName(String BackingIndexName) {
         this.BackingIndexName = BackingIndexName;
+    }
+
+    /**
+     * Get <p>Index life cycle</p> 
+     * @return IndexPhrase <p>Index life cycle</p>
+     */
+    public String getIndexPhrase() {
+        return this.IndexPhrase;
+    }
+
+    /**
+     * Set <p>Index life cycle</p>
+     * @param IndexPhrase <p>Index life cycle</p>
+     */
+    public void setIndexPhrase(String IndexPhrase) {
+        this.IndexPhrase = IndexPhrase;
     }
 
     public DeleteIndexRequest() {
@@ -187,6 +210,9 @@ public class DeleteIndexRequest extends AbstractModel {
         if (source.BackingIndexName != null) {
             this.BackingIndexName = new String(source.BackingIndexName);
         }
+        if (source.IndexPhrase != null) {
+            this.IndexPhrase = new String(source.IndexPhrase);
+        }
     }
 
 
@@ -200,6 +226,7 @@ public class DeleteIndexRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Username", this.Username);
         this.setParamSimple(map, prefix + "Password", this.Password);
         this.setParamSimple(map, prefix + "BackingIndexName", this.BackingIndexName);
+        this.setParamSimple(map, prefix + "IndexPhrase", this.IndexPhrase);
 
     }
 }

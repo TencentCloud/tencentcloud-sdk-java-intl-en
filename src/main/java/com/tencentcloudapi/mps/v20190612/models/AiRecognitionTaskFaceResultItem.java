@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class AiRecognitionTaskFaceResultItem extends AbstractModel {
 
     /**
-    * Unique identification ID of the figure.
+    * Unique identification ID of the person.
     */
     @SerializedName("Id")
     @Expose
     private String Id;
 
     /**
-    * Figure library type, indicates which figure library the recognized figure comes from.
+    * Person library type. It indicates the person library that a recognized figure comes from.
 <li>Default: default figure library;</li>
 <li>UserDefine: user-defined character library.</li>
     */
@@ -47,15 +47,15 @@ public class AiRecognitionTaskFaceResultItem extends AbstractModel {
     private String Name;
 
     /**
-    * Result set of segments that contain people.
+    * Result set of segments where the person appears.
     */
     @SerializedName("SegmentSet")
     @Expose
     private AiRecognitionTaskFaceSegmentItem [] SegmentSet;
 
     /**
-    * Gender
-<li>Male: man</li>
+    * Person gender:
+<li>Male: man;</li>
 <li>Female: woman.</li>
     */
     @SerializedName("Gender")
@@ -63,35 +63,35 @@ public class AiRecognitionTaskFaceResultItem extends AbstractModel {
     private String Gender;
 
     /**
-    * Date of birth of a person.
+    * Date of birth of the person.
     */
     @SerializedName("Birthday")
     @Expose
     private String Birthday;
 
     /**
-    * Occupation or position.
+    * Person's occupation or position.
     */
     @SerializedName("Profession")
     @Expose
     private String Profession;
 
     /**
-    * Graduation institution of the person.
+    * University of the person
     */
     @SerializedName("SchoolOfGraduation")
     @Expose
     private String SchoolOfGraduation;
 
     /**
-    * Figure description.
+    * Figure introduction.
     */
     @SerializedName("Abstract")
     @Expose
     private String Abstract;
 
     /**
-    * Birthplace or place of origin of a person.
+    * Birthplace or place of origin of the person.
     */
     @SerializedName("PlaceOfBirth")
     @Expose
@@ -108,7 +108,7 @@ public class AiRecognitionTaskFaceResultItem extends AbstractModel {
 
     /**
     * Sensitivity labeling:
-<li>NORMAL: Normal;</li>
+<li>Normal: The status is normal;</li>
 <li>Sensitive: sensitive.</li>
     */
     @SerializedName("Remark")
@@ -116,33 +116,33 @@ public class AiRecognitionTaskFaceResultItem extends AbstractModel {
     private String Remark;
 
     /**
-    * Screenshot link
+    * Screenshot link.
     */
     @SerializedName("Url")
     @Expose
     private String Url;
 
     /**
-     * Get Unique identification ID of the figure. 
-     * @return Id Unique identification ID of the figure.
+     * Get Unique identification ID of the person. 
+     * @return Id Unique identification ID of the person.
      */
     public String getId() {
         return this.Id;
     }
 
     /**
-     * Set Unique identification ID of the figure.
-     * @param Id Unique identification ID of the figure.
+     * Set Unique identification ID of the person.
+     * @param Id Unique identification ID of the person.
      */
     public void setId(String Id) {
         this.Id = Id;
     }
 
     /**
-     * Get Figure library type, indicates which figure library the recognized figure comes from.
+     * Get Person library type. It indicates the person library that a recognized figure comes from.
 <li>Default: default figure library;</li>
 <li>UserDefine: user-defined character library.</li> 
-     * @return Type Figure library type, indicates which figure library the recognized figure comes from.
+     * @return Type Person library type. It indicates the person library that a recognized figure comes from.
 <li>Default: default figure library;</li>
 <li>UserDefine: user-defined character library.</li>
      */
@@ -151,10 +151,10 @@ public class AiRecognitionTaskFaceResultItem extends AbstractModel {
     }
 
     /**
-     * Set Figure library type, indicates which figure library the recognized figure comes from.
+     * Set Person library type. It indicates the person library that a recognized figure comes from.
 <li>Default: default figure library;</li>
 <li>UserDefine: user-defined character library.</li>
-     * @param Type Figure library type, indicates which figure library the recognized figure comes from.
+     * @param Type Person library type. It indicates the person library that a recognized figure comes from.
 <li>Default: default figure library;</li>
 <li>UserDefine: user-defined character library.</li>
      */
@@ -179,27 +179,27 @@ public class AiRecognitionTaskFaceResultItem extends AbstractModel {
     }
 
     /**
-     * Get Result set of segments that contain people. 
-     * @return SegmentSet Result set of segments that contain people.
+     * Get Result set of segments where the person appears. 
+     * @return SegmentSet Result set of segments where the person appears.
      */
     public AiRecognitionTaskFaceSegmentItem [] getSegmentSet() {
         return this.SegmentSet;
     }
 
     /**
-     * Set Result set of segments that contain people.
-     * @param SegmentSet Result set of segments that contain people.
+     * Set Result set of segments where the person appears.
+     * @param SegmentSet Result set of segments where the person appears.
      */
     public void setSegmentSet(AiRecognitionTaskFaceSegmentItem [] SegmentSet) {
         this.SegmentSet = SegmentSet;
     }
 
     /**
-     * Get Gender
-<li>Male: man</li>
+     * Get Person gender:
+<li>Male: man;</li>
 <li>Female: woman.</li> 
-     * @return Gender Gender
-<li>Male: man</li>
+     * @return Gender Person gender:
+<li>Male: man;</li>
 <li>Female: woman.</li>
      */
     public String getGender() {
@@ -207,11 +207,11 @@ public class AiRecognitionTaskFaceResultItem extends AbstractModel {
     }
 
     /**
-     * Set Gender
-<li>Male: man</li>
+     * Set Person gender:
+<li>Male: man;</li>
 <li>Female: woman.</li>
-     * @param Gender Gender
-<li>Male: man</li>
+     * @param Gender Person gender:
+<li>Male: man;</li>
 <li>Female: woman.</li>
      */
     public void setGender(String Gender) {
@@ -219,80 +219,80 @@ public class AiRecognitionTaskFaceResultItem extends AbstractModel {
     }
 
     /**
-     * Get Date of birth of a person. 
-     * @return Birthday Date of birth of a person.
+     * Get Date of birth of the person. 
+     * @return Birthday Date of birth of the person.
      */
     public String getBirthday() {
         return this.Birthday;
     }
 
     /**
-     * Set Date of birth of a person.
-     * @param Birthday Date of birth of a person.
+     * Set Date of birth of the person.
+     * @param Birthday Date of birth of the person.
      */
     public void setBirthday(String Birthday) {
         this.Birthday = Birthday;
     }
 
     /**
-     * Get Occupation or position. 
-     * @return Profession Occupation or position.
+     * Get Person's occupation or position. 
+     * @return Profession Person's occupation or position.
      */
     public String getProfession() {
         return this.Profession;
     }
 
     /**
-     * Set Occupation or position.
-     * @param Profession Occupation or position.
+     * Set Person's occupation or position.
+     * @param Profession Person's occupation or position.
      */
     public void setProfession(String Profession) {
         this.Profession = Profession;
     }
 
     /**
-     * Get Graduation institution of the person. 
-     * @return SchoolOfGraduation Graduation institution of the person.
+     * Get University of the person 
+     * @return SchoolOfGraduation University of the person
      */
     public String getSchoolOfGraduation() {
         return this.SchoolOfGraduation;
     }
 
     /**
-     * Set Graduation institution of the person.
-     * @param SchoolOfGraduation Graduation institution of the person.
+     * Set University of the person
+     * @param SchoolOfGraduation University of the person
      */
     public void setSchoolOfGraduation(String SchoolOfGraduation) {
         this.SchoolOfGraduation = SchoolOfGraduation;
     }
 
     /**
-     * Get Figure description. 
-     * @return Abstract Figure description.
+     * Get Figure introduction. 
+     * @return Abstract Figure introduction.
      */
     public String getAbstract() {
         return this.Abstract;
     }
 
     /**
-     * Set Figure description.
-     * @param Abstract Figure description.
+     * Set Figure introduction.
+     * @param Abstract Figure introduction.
      */
     public void setAbstract(String Abstract) {
         this.Abstract = Abstract;
     }
 
     /**
-     * Get Birthplace or place of origin of a person. 
-     * @return PlaceOfBirth Birthplace or place of origin of a person.
+     * Get Birthplace or place of origin of the person. 
+     * @return PlaceOfBirth Birthplace or place of origin of the person.
      */
     public String getPlaceOfBirth() {
         return this.PlaceOfBirth;
     }
 
     /**
-     * Set Birthplace or place of origin of a person.
-     * @param PlaceOfBirth Birthplace or place of origin of a person.
+     * Set Birthplace or place of origin of the person.
+     * @param PlaceOfBirth Birthplace or place of origin of the person.
      */
     public void setPlaceOfBirth(String PlaceOfBirth) {
         this.PlaceOfBirth = PlaceOfBirth;
@@ -324,10 +324,10 @@ public class AiRecognitionTaskFaceResultItem extends AbstractModel {
 
     /**
      * Get Sensitivity labeling:
-<li>NORMAL: Normal;</li>
+<li>Normal: The status is normal;</li>
 <li>Sensitive: sensitive.</li> 
      * @return Remark Sensitivity labeling:
-<li>NORMAL: Normal;</li>
+<li>Normal: The status is normal;</li>
 <li>Sensitive: sensitive.</li>
      */
     public String getRemark() {
@@ -336,10 +336,10 @@ public class AiRecognitionTaskFaceResultItem extends AbstractModel {
 
     /**
      * Set Sensitivity labeling:
-<li>NORMAL: Normal;</li>
+<li>Normal: The status is normal;</li>
 <li>Sensitive: sensitive.</li>
      * @param Remark Sensitivity labeling:
-<li>NORMAL: Normal;</li>
+<li>Normal: The status is normal;</li>
 <li>Sensitive: sensitive.</li>
      */
     public void setRemark(String Remark) {
@@ -347,16 +347,16 @@ public class AiRecognitionTaskFaceResultItem extends AbstractModel {
     }
 
     /**
-     * Get Screenshot link 
-     * @return Url Screenshot link
+     * Get Screenshot link. 
+     * @return Url Screenshot link.
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * Set Screenshot link
-     * @param Url Screenshot link
+     * Set Screenshot link.
+     * @param Url Screenshot link.
      */
     public void setUrl(String Url) {
         this.Url = Url;

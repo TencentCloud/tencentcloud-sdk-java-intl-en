@@ -38,7 +38,7 @@ public class MediaAiAnalysisHighlightItem extends AbstractModel {
     private String CovImgPath;
 
     /**
-    * Reliability of the intelligent highlights, with a value range from 0 to 100.
+    * Confidence of the intelligent highlights, with a value range from 0 to 100.
     */
     @SerializedName("Confidence")
     @Expose
@@ -59,14 +59,14 @@ public class MediaAiAnalysisHighlightItem extends AbstractModel {
     private HighlightSegmentItem [] SegmentSet;
 
     /**
-    * 
+    * Intelligent highlight address.
     */
     @SerializedName("HighlightUrl")
     @Expose
     private String HighlightUrl;
 
     /**
-    * 
+    * Intelligent highlight cover address.
     */
     @SerializedName("CovImgUrl")
     @Expose
@@ -105,16 +105,16 @@ public class MediaAiAnalysisHighlightItem extends AbstractModel {
     }
 
     /**
-     * Get Reliability of the intelligent highlights, with a value range from 0 to 100. 
-     * @return Confidence Reliability of the intelligent highlights, with a value range from 0 to 100.
+     * Get Confidence of the intelligent highlights, with a value range from 0 to 100. 
+     * @return Confidence Confidence of the intelligent highlights, with a value range from 0 to 100.
      */
     public Float getConfidence() {
         return this.Confidence;
     }
 
     /**
-     * Set Reliability of the intelligent highlights, with a value range from 0 to 100.
-     * @param Confidence Reliability of the intelligent highlights, with a value range from 0 to 100.
+     * Set Confidence of the intelligent highlights, with a value range from 0 to 100.
+     * @param Confidence Confidence of the intelligent highlights, with a value range from 0 to 100.
      */
     public void setConfidence(Float Confidence) {
         this.Confidence = Confidence;
@@ -153,32 +153,32 @@ public class MediaAiAnalysisHighlightItem extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return HighlightUrl 
+     * Get Intelligent highlight address. 
+     * @return HighlightUrl Intelligent highlight address.
      */
     public String getHighlightUrl() {
         return this.HighlightUrl;
     }
 
     /**
-     * Set 
-     * @param HighlightUrl 
+     * Set Intelligent highlight address.
+     * @param HighlightUrl Intelligent highlight address.
      */
     public void setHighlightUrl(String HighlightUrl) {
         this.HighlightUrl = HighlightUrl;
     }
 
     /**
-     * Get  
-     * @return CovImgUrl 
+     * Get Intelligent highlight cover address. 
+     * @return CovImgUrl Intelligent highlight cover address.
      */
     public String getCovImgUrl() {
         return this.CovImgUrl;
     }
 
     /**
-     * Set 
-     * @param CovImgUrl 
+     * Set Intelligent highlight cover address.
+     * @param CovImgUrl Intelligent highlight cover address.
      */
     public void setCovImgUrl(String CovImgUrl) {
         this.CovImgUrl = CovImgUrl;

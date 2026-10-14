@@ -59,7 +59,7 @@ public class AiRecognitionTaskOcrFullTextResult extends AbstractModel {
     private AiRecognitionTaskOcrFullTextResultInput Input;
 
     /**
-    * 
+    * Output information on the full text recognition task.
     */
     @SerializedName("Output")
     @Expose
@@ -146,16 +146,16 @@ public class AiRecognitionTaskOcrFullTextResult extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return Output 
+     * Get Output information on the full text recognition task. 
+     * @return Output Output information on the full text recognition task.
      */
     public AiRecognitionTaskOcrFullTextResultOutput getOutput() {
         return this.Output;
     }
 
     /**
-     * Set 
-     * @param Output 
+     * Set Output information on the full text recognition task.
+     * @param Output Output information on the full text recognition task.
      */
     public void setOutput(AiRecognitionTaskOcrFullTextResultOutput Output) {
         this.Output = Output;

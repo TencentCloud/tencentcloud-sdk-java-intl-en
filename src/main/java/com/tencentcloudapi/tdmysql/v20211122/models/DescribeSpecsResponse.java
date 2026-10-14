@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeSpecsResponse extends AbstractModel {
 
     /**
-    * 
+    * <p>Purchasable specification list of peer nodes</p>
     */
     @SerializedName("HybridNodeSpecs")
     @Expose
@@ -38,7 +38,7 @@ public class DescribeSpecsResponse extends AbstractModel {
     private ServerlessCcu [] ServerlessCcuSpec;
 
     /**
-    * 
+    * <p>serverless node quantity configuration</p>
     */
     @SerializedName("ServerlessNodeNumSpec")
     @Expose
@@ -52,16 +52,16 @@ public class DescribeSpecsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get  
-     * @return HybridNodeSpecs 
+     * Get <p>Purchasable specification list of peer nodes</p> 
+     * @return HybridNodeSpecs <p>Purchasable specification list of peer nodes</p>
      */
     public StorageNodeSpec [] getHybridNodeSpecs() {
         return this.HybridNodeSpecs;
     }
 
     /**
-     * Set 
-     * @param HybridNodeSpecs 
+     * Set <p>Purchasable specification list of peer nodes</p>
+     * @param HybridNodeSpecs <p>Purchasable specification list of peer nodes</p>
      */
     public void setHybridNodeSpecs(StorageNodeSpec [] HybridNodeSpecs) {
         this.HybridNodeSpecs = HybridNodeSpecs;
@@ -84,16 +84,16 @@ public class DescribeSpecsResponse extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return ServerlessNodeNumSpec 
+     * Get <p>serverless node quantity configuration</p> 
+     * @return ServerlessNodeNumSpec <p>serverless node quantity configuration</p>
      */
     public ServerlessNodeNumSpec getServerlessNodeNumSpec() {
         return this.ServerlessNodeNumSpec;
     }
 
     /**
-     * Set 
-     * @param ServerlessNodeNumSpec 
+     * Set <p>serverless node quantity configuration</p>
+     * @param ServerlessNodeNumSpec <p>serverless node quantity configuration</p>
      */
     public void setServerlessNodeNumSpec(ServerlessNodeNumSpec ServerlessNodeNumSpec) {
         this.ServerlessNodeNumSpec = ServerlessNodeNumSpec;

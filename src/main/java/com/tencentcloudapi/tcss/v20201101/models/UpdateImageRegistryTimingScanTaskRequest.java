@@ -38,21 +38,21 @@ public class UpdateImageRegistryTimingScanTaskRequest extends AbstractModel {
     private Boolean Enable;
 
     /**
-    * Scheduled scan time
+    * The time for scheduled scan
     */
     @SerializedName("ScanTime")
     @Expose
     private String ScanTime;
 
     /**
-    * Array of the scanned trojan types
+    * Array of Trojan horse types to scan
     */
     @SerializedName("ScanType")
     @Expose
     private String [] ScanType;
 
     /**
-    * Scanned image
+    * Scan image
     */
     @SerializedName("Images")
     @Expose
@@ -66,53 +66,60 @@ public class UpdateImageRegistryTimingScanTaskRequest extends AbstractModel {
     private Boolean All;
 
     /**
-    * ID of the image to be scanned
+    * Scan Image ID
     */
     @SerializedName("Id")
     @Expose
     private Long [] Id;
 
     /**
-    * Whether to scan for the latest version
+    * Whether to Scan the Latest Version
     */
     @SerializedName("Latest")
     @Expose
     private Boolean Latest;
 
     /**
-    * 
+    * Whether There Are Running Containers
     */
     @SerializedName("ContainerRunning")
     @Expose
     private Boolean ContainerRunning;
 
     /**
-    * 
+    * Scan end time
     */
     @SerializedName("ScanEndTime")
     @Expose
     private String ScanEndTime;
 
     /**
-    * 
+    * Scan Scope. 0: All Images; 1: Custom Images; 2: Recommended Scan Images
     */
     @SerializedName("ScanScope")
     @Expose
     private Long ScanScope;
 
     /**
-    * 
+    * Repository Type: tcr, ccr, harbor
     */
     @SerializedName("RegistryType")
     @Expose
     private String [] RegistryType;
 
     /**
-    * 
+    * Namespace
     */
     @SerializedName("Namespace")
     @Expose
     private String [] Namespace;
+
+    /**
+    * IDs of excluded image assets.
+    */
+    @SerializedName("ExcludeImageAssetIds")
+    @Expose
+    private Long [] ExcludeImageAssetIds;
 
     /**
      * Get Scheduled scan cycle 
@@ -147,48 +154,48 @@ public class UpdateImageRegistryTimingScanTaskRequest extends AbstractModel {
     }
 
     /**
-     * Get Scheduled scan time 
-     * @return ScanTime Scheduled scan time
+     * Get The time for scheduled scan 
+     * @return ScanTime The time for scheduled scan
      */
     public String getScanTime() {
         return this.ScanTime;
     }
 
     /**
-     * Set Scheduled scan time
-     * @param ScanTime Scheduled scan time
+     * Set The time for scheduled scan
+     * @param ScanTime The time for scheduled scan
      */
     public void setScanTime(String ScanTime) {
         this.ScanTime = ScanTime;
     }
 
     /**
-     * Get Array of the scanned trojan types 
-     * @return ScanType Array of the scanned trojan types
+     * Get Array of Trojan horse types to scan 
+     * @return ScanType Array of Trojan horse types to scan
      */
     public String [] getScanType() {
         return this.ScanType;
     }
 
     /**
-     * Set Array of the scanned trojan types
-     * @param ScanType Array of the scanned trojan types
+     * Set Array of Trojan horse types to scan
+     * @param ScanType Array of Trojan horse types to scan
      */
     public void setScanType(String [] ScanType) {
         this.ScanType = ScanType;
     }
 
     /**
-     * Get Scanned image 
-     * @return Images Scanned image
+     * Get Scan image 
+     * @return Images Scan image
      */
     public ImageInfo [] getImages() {
         return this.Images;
     }
 
     /**
-     * Set Scanned image
-     * @param Images Scanned image
+     * Set Scan image
+     * @param Images Scan image
      */
     public void setImages(ImageInfo [] Images) {
         this.Images = Images;
@@ -215,115 +222,131 @@ public class UpdateImageRegistryTimingScanTaskRequest extends AbstractModel {
     }
 
     /**
-     * Get ID of the image to be scanned 
-     * @return Id ID of the image to be scanned
+     * Get Scan Image ID 
+     * @return Id Scan Image ID
      */
     public Long [] getId() {
         return this.Id;
     }
 
     /**
-     * Set ID of the image to be scanned
-     * @param Id ID of the image to be scanned
+     * Set Scan Image ID
+     * @param Id Scan Image ID
      */
     public void setId(Long [] Id) {
         this.Id = Id;
     }
 
     /**
-     * Get Whether to scan for the latest version 
-     * @return Latest Whether to scan for the latest version
+     * Get Whether to Scan the Latest Version 
+     * @return Latest Whether to Scan the Latest Version
      */
     public Boolean getLatest() {
         return this.Latest;
     }
 
     /**
-     * Set Whether to scan for the latest version
-     * @param Latest Whether to scan for the latest version
+     * Set Whether to Scan the Latest Version
+     * @param Latest Whether to Scan the Latest Version
      */
     public void setLatest(Boolean Latest) {
         this.Latest = Latest;
     }
 
     /**
-     * Get  
-     * @return ContainerRunning 
+     * Get Whether There Are Running Containers 
+     * @return ContainerRunning Whether There Are Running Containers
      */
     public Boolean getContainerRunning() {
         return this.ContainerRunning;
     }
 
     /**
-     * Set 
-     * @param ContainerRunning 
+     * Set Whether There Are Running Containers
+     * @param ContainerRunning Whether There Are Running Containers
      */
     public void setContainerRunning(Boolean ContainerRunning) {
         this.ContainerRunning = ContainerRunning;
     }
 
     /**
-     * Get  
-     * @return ScanEndTime 
+     * Get Scan end time 
+     * @return ScanEndTime Scan end time
      */
     public String getScanEndTime() {
         return this.ScanEndTime;
     }
 
     /**
-     * Set 
-     * @param ScanEndTime 
+     * Set Scan end time
+     * @param ScanEndTime Scan end time
      */
     public void setScanEndTime(String ScanEndTime) {
         this.ScanEndTime = ScanEndTime;
     }
 
     /**
-     * Get  
-     * @return ScanScope 
+     * Get Scan Scope. 0: All Images; 1: Custom Images; 2: Recommended Scan Images 
+     * @return ScanScope Scan Scope. 0: All Images; 1: Custom Images; 2: Recommended Scan Images
      */
     public Long getScanScope() {
         return this.ScanScope;
     }
 
     /**
-     * Set 
-     * @param ScanScope 
+     * Set Scan Scope. 0: All Images; 1: Custom Images; 2: Recommended Scan Images
+     * @param ScanScope Scan Scope. 0: All Images; 1: Custom Images; 2: Recommended Scan Images
      */
     public void setScanScope(Long ScanScope) {
         this.ScanScope = ScanScope;
     }
 
     /**
-     * Get  
-     * @return RegistryType 
+     * Get Repository Type: tcr, ccr, harbor 
+     * @return RegistryType Repository Type: tcr, ccr, harbor
      */
     public String [] getRegistryType() {
         return this.RegistryType;
     }
 
     /**
-     * Set 
-     * @param RegistryType 
+     * Set Repository Type: tcr, ccr, harbor
+     * @param RegistryType Repository Type: tcr, ccr, harbor
      */
     public void setRegistryType(String [] RegistryType) {
         this.RegistryType = RegistryType;
     }
 
     /**
-     * Get  
-     * @return Namespace 
+     * Get Namespace 
+     * @return Namespace Namespace
      */
     public String [] getNamespace() {
         return this.Namespace;
     }
 
     /**
-     * Set 
-     * @param Namespace 
+     * Set Namespace
+     * @param Namespace Namespace
      */
     public void setNamespace(String [] Namespace) {
         this.Namespace = Namespace;
+    }
+
+    /**
+     * Get IDs of excluded image assets. 
+     * @return ExcludeImageAssetIds IDs of excluded image assets.
+     */
+    public Long [] getExcludeImageAssetIds() {
+        return this.ExcludeImageAssetIds;
+    }
+
+    /**
+     * Set IDs of excluded image assets.
+     * @param ExcludeImageAssetIds IDs of excluded image assets.
+     */
+    public void setExcludeImageAssetIds(Long [] ExcludeImageAssetIds) {
+        this.ExcludeImageAssetIds = ExcludeImageAssetIds;
     }
 
     public UpdateImageRegistryTimingScanTaskRequest() {
@@ -388,6 +411,12 @@ public class UpdateImageRegistryTimingScanTaskRequest extends AbstractModel {
                 this.Namespace[i] = new String(source.Namespace[i]);
             }
         }
+        if (source.ExcludeImageAssetIds != null) {
+            this.ExcludeImageAssetIds = new Long[source.ExcludeImageAssetIds.length];
+            for (int i = 0; i < source.ExcludeImageAssetIds.length; i++) {
+                this.ExcludeImageAssetIds[i] = new Long(source.ExcludeImageAssetIds[i]);
+            }
+        }
     }
 
 
@@ -408,6 +437,7 @@ public class UpdateImageRegistryTimingScanTaskRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ScanScope", this.ScanScope);
         this.setParamArraySimple(map, prefix + "RegistryType.", this.RegistryType);
         this.setParamArraySimple(map, prefix + "Namespace.", this.Namespace);
+        this.setParamArraySimple(map, prefix + "ExcludeImageAssetIds.", this.ExcludeImageAssetIds);
 
     }
 }

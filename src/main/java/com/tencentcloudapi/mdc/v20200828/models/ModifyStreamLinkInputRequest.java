@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class ModifyStreamLinkInputRequest extends AbstractModel {
 
     /**
-    * The flow ID.
+    * Stream Id.
     */
     @SerializedName("FlowId")
     @Expose
     private String FlowId;
 
     /**
-    * The input information to modify.
+    * Input information that needs to be modified.
     */
     @SerializedName("Input")
     @Expose
     private ModifyInput Input;
 
     /**
-     * Get The flow ID. 
-     * @return FlowId The flow ID.
+     * Get Stream Id. 
+     * @return FlowId Stream Id.
      */
     public String getFlowId() {
         return this.FlowId;
     }
 
     /**
-     * Set The flow ID.
-     * @param FlowId The flow ID.
+     * Set Stream Id.
+     * @param FlowId Stream Id.
      */
     public void setFlowId(String FlowId) {
         this.FlowId = FlowId;
     }
 
     /**
-     * Get The input information to modify. 
-     * @return Input The input information to modify.
+     * Get Input information that needs to be modified. 
+     * @return Input Input information that needs to be modified.
      */
     public ModifyInput getInput() {
         return this.Input;
     }
 
     /**
-     * Set The input information to modify.
-     * @param Input The input information to modify.
+     * Set Input information that needs to be modified.
+     * @param Input Input information that needs to be modified.
      */
     public void setInput(ModifyInput Input) {
         this.Input = Input;

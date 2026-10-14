@@ -24,9 +24,9 @@ import java.util.HashMap;
 public class SharpEnhanceConfig extends AbstractModel {
 
     /**
-    * Whether to enable the feature. Valid values:
-<li>ON</li>
-<li>OFF</li>
+    * Capability configuration switch. Valid values:
+<li>ON: enabled;</li>
+<li>OFF: disabled</li>
 Default value: ON.
     */
     @SerializedName("Switch")
@@ -34,7 +34,7 @@ Default value: ON.
     private String Switch;
 
     /**
-    * Strength, value ranges from 0.0 to 1.0.
+    * Strength. Value range: 0.0 to 1.0.
 Default: 0.0.
     */
     @SerializedName("Intensity")
@@ -42,13 +42,13 @@ Default: 0.0.
     private Float Intensity;
 
     /**
-     * Get Whether to enable the feature. Valid values:
-<li>ON</li>
-<li>OFF</li>
+     * Get Capability configuration switch. Valid values:
+<li>ON: enabled;</li>
+<li>OFF: disabled</li>
 Default value: ON. 
-     * @return Switch Whether to enable the feature. Valid values:
-<li>ON</li>
-<li>OFF</li>
+     * @return Switch Capability configuration switch. Valid values:
+<li>ON: enabled;</li>
+<li>OFF: disabled</li>
 Default value: ON.
      */
     public String getSwitch() {
@@ -56,13 +56,13 @@ Default value: ON.
     }
 
     /**
-     * Set Whether to enable the feature. Valid values:
-<li>ON</li>
-<li>OFF</li>
+     * Set Capability configuration switch. Valid values:
+<li>ON: enabled;</li>
+<li>OFF: disabled</li>
 Default value: ON.
-     * @param Switch Whether to enable the feature. Valid values:
-<li>ON</li>
-<li>OFF</li>
+     * @param Switch Capability configuration switch. Valid values:
+<li>ON: enabled;</li>
+<li>OFF: disabled</li>
 Default value: ON.
      */
     public void setSwitch(String Switch) {
@@ -70,9 +70,9 @@ Default value: ON.
     }
 
     /**
-     * Get Strength, value ranges from 0.0 to 1.0.
+     * Get Strength. Value range: 0.0 to 1.0.
 Default: 0.0. 
-     * @return Intensity Strength, value ranges from 0.0 to 1.0.
+     * @return Intensity Strength. Value range: 0.0 to 1.0.
 Default: 0.0.
      */
     public Float getIntensity() {
@@ -80,9 +80,9 @@ Default: 0.0.
     }
 
     /**
-     * Set Strength, value ranges from 0.0 to 1.0.
+     * Set Strength. Value range: 0.0 to 1.0.
 Default: 0.0.
-     * @param Intensity Strength, value ranges from 0.0 to 1.0.
+     * @param Intensity Strength. Value range: 0.0 to 1.0.
 Default: 0.0.
      */
     public void setIntensity(Float Intensity) {

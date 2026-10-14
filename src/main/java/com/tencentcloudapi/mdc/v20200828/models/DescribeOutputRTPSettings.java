@@ -24,16 +24,14 @@ import java.util.HashMap;
 public class DescribeOutputRTPSettings extends AbstractModel {
 
     /**
-    * Destination address information list of RTP push.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * List of target address information for RTP repush.
     */
     @SerializedName("Destinations")
     @Expose
     private RTPAddressDestination [] Destinations;
 
     /**
-    * Whether it is FEC.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Whether to enable FEC.
     */
     @SerializedName("FEC")
     @Expose
@@ -41,57 +39,46 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
     * Idle timeout period.
-Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("IdleTimeout")
     @Expose
     private Long IdleTimeout;
 
     /**
-     * Get Destination address information list of RTP push.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Destinations Destination address information list of RTP push.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get List of target address information for RTP repush. 
+     * @return Destinations List of target address information for RTP repush.
      */
     public RTPAddressDestination [] getDestinations() {
         return this.Destinations;
     }
 
     /**
-     * Set Destination address information list of RTP push.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Destinations Destination address information list of RTP push.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set List of target address information for RTP repush.
+     * @param Destinations List of target address information for RTP repush.
      */
     public void setDestinations(RTPAddressDestination [] Destinations) {
         this.Destinations = Destinations;
     }
 
     /**
-     * Get Whether it is FEC.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return FEC Whether it is FEC.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Whether to enable FEC. 
+     * @return FEC Whether to enable FEC.
      */
     public String getFEC() {
         return this.FEC;
     }
 
     /**
-     * Set Whether it is FEC.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param FEC Whether it is FEC.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Whether to enable FEC.
+     * @param FEC Whether to enable FEC.
      */
     public void setFEC(String FEC) {
         this.FEC = FEC;
     }
 
     /**
-     * Get Idle timeout period.
-Note: this field may return null, indicating that no valid values can be obtained. 
+     * Get Idle timeout period. 
      * @return IdleTimeout Idle timeout period.
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public Long getIdleTimeout() {
         return this.IdleTimeout;
@@ -99,9 +86,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Idle timeout period.
-Note: this field may return null, indicating that no valid values can be obtained.
      * @param IdleTimeout Idle timeout period.
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setIdleTimeout(Long IdleTimeout) {
         this.IdleTimeout = IdleTimeout;

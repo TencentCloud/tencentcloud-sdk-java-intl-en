@@ -52,21 +52,21 @@ public class SmartSubtitleTaskFullTextResult extends AbstractModel {
     private String Message;
 
     /**
-    * 
+    * Input information for smart subtitle tasks.
     */
     @SerializedName("Input")
     @Expose
     private SmartSubtitleTaskResultInput Input;
 
     /**
-    * 
+    * Smart subtitle task output information.
     */
     @SerializedName("Output")
     @Expose
     private SmartSubtitleTaskTextResultOutput Output;
 
     /**
-    * 
+    * Task progress.
     */
     @SerializedName("Progress")
     @Expose
@@ -137,48 +137,48 @@ public class SmartSubtitleTaskFullTextResult extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return Input 
+     * Get Input information for smart subtitle tasks. 
+     * @return Input Input information for smart subtitle tasks.
      */
     public SmartSubtitleTaskResultInput getInput() {
         return this.Input;
     }
 
     /**
-     * Set 
-     * @param Input 
+     * Set Input information for smart subtitle tasks.
+     * @param Input Input information for smart subtitle tasks.
      */
     public void setInput(SmartSubtitleTaskResultInput Input) {
         this.Input = Input;
     }
 
     /**
-     * Get  
-     * @return Output 
+     * Get Smart subtitle task output information. 
+     * @return Output Smart subtitle task output information.
      */
     public SmartSubtitleTaskTextResultOutput getOutput() {
         return this.Output;
     }
 
     /**
-     * Set 
-     * @param Output 
+     * Set Smart subtitle task output information.
+     * @param Output Smart subtitle task output information.
      */
     public void setOutput(SmartSubtitleTaskTextResultOutput Output) {
         this.Output = Output;
     }
 
     /**
-     * Get  
-     * @return Progress 
+     * Get Task progress. 
+     * @return Progress Task progress.
      */
     public Long getProgress() {
         return this.Progress;
     }
 
     /**
-     * Set 
-     * @param Progress 
+     * Set Task progress.
+     * @param Progress Task progress.
      */
     public void setProgress(Long Progress) {
         this.Progress = Progress;

@@ -52,14 +52,14 @@ public class AiReviewTaskPornOcrResult extends AbstractModel {
     private String Message;
 
     /**
-    * Content review Ocr text pornography detection task input.
+    * Task input for porn detection in Ocr text during content review.
     */
     @SerializedName("Input")
     @Expose
     private AiReviewPornOcrTaskInput Input;
 
     /**
-    * 
+    * Output of the Ocr text pornography detection task for content review.
     */
     @SerializedName("Output")
     @Expose
@@ -130,32 +130,32 @@ public class AiReviewTaskPornOcrResult extends AbstractModel {
     }
 
     /**
-     * Get Content review Ocr text pornography detection task input. 
-     * @return Input Content review Ocr text pornography detection task input.
+     * Get Task input for porn detection in Ocr text during content review. 
+     * @return Input Task input for porn detection in Ocr text during content review.
      */
     public AiReviewPornOcrTaskInput getInput() {
         return this.Input;
     }
 
     /**
-     * Set Content review Ocr text pornography detection task input.
-     * @param Input Content review Ocr text pornography detection task input.
+     * Set Task input for porn detection in Ocr text during content review.
+     * @param Input Task input for porn detection in Ocr text during content review.
      */
     public void setInput(AiReviewPornOcrTaskInput Input) {
         this.Input = Input;
     }
 
     /**
-     * Get  
-     * @return Output 
+     * Get Output of the Ocr text pornography detection task for content review. 
+     * @return Output Output of the Ocr text pornography detection task for content review.
      */
     public AiReviewPornOcrTaskOutput getOutput() {
         return this.Output;
     }
 
     /**
-     * Set 
-     * @param Output 
+     * Set Output of the Ocr text pornography detection task for content review.
+     * @param Output Output of the Ocr text pornography detection task for content review.
      */
     public void setOutput(AiReviewPornOcrTaskOutput Output) {
         this.Output = Output;

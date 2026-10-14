@@ -31,35 +31,35 @@ public class DeleteTriggerRequest extends AbstractModel {
     private String FunctionName;
 
     /**
-    * Name of the trigger to be deleted
+    * Trigger name to delete
     */
     @SerializedName("TriggerName")
     @Expose
     private String TriggerName;
 
     /**
-    * Type of the trigger to be deleted. Currently, COS, CMQ, timer, and ckafka triggers are supported.
+    * Trigger type to delete. Currently only `timer`, `ckafka`, `apigw`, `cls`, `cos`, `cmq`, and `http` are supported.
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * Function namespace
+    * Namespace of the function
     */
     @SerializedName("Namespace")
     @Expose
     private String Namespace;
 
     /**
-    * This field is required if a COS trigger is to be deleted. It stores the data {"event":"cos:ObjectCreated:*"} in the JSON format. The data content of this field is in the same format as that of SetTrigger. This field is optional if a scheduled trigger or CMQ trigger is to be deleted.
+    * If the trigger type to delete is COS trigger, this field must be specified, storing data in JSON format {"event":"cos:ObjectCreated:*"}. The data content is in the same format as this field in the SetTrigger API. If the trigger type to delete is scheduled trigger or CMQ trigger, this field can be unspecified.
     */
     @SerializedName("TriggerDesc")
     @Expose
     private String TriggerDesc;
 
     /**
-    * Function version. It defaults to `$LATEST`. It's recommended to use `[$DEFAULT](https://www.tencentcloud.com/document/product/583/37458#glossary)` for canary release.
+    * The version or alias that the trigger to be deleted actually points to. Default value: $LATEST.
     */
     @SerializedName("Qualifier")
     @Expose
@@ -82,80 +82,80 @@ public class DeleteTriggerRequest extends AbstractModel {
     }
 
     /**
-     * Get Name of the trigger to be deleted 
-     * @return TriggerName Name of the trigger to be deleted
+     * Get Trigger name to delete 
+     * @return TriggerName Trigger name to delete
      */
     public String getTriggerName() {
         return this.TriggerName;
     }
 
     /**
-     * Set Name of the trigger to be deleted
-     * @param TriggerName Name of the trigger to be deleted
+     * Set Trigger name to delete
+     * @param TriggerName Trigger name to delete
      */
     public void setTriggerName(String TriggerName) {
         this.TriggerName = TriggerName;
     }
 
     /**
-     * Get Type of the trigger to be deleted. Currently, COS, CMQ, timer, and ckafka triggers are supported. 
-     * @return Type Type of the trigger to be deleted. Currently, COS, CMQ, timer, and ckafka triggers are supported.
+     * Get Trigger type to delete. Currently only `timer`, `ckafka`, `apigw`, `cls`, `cos`, `cmq`, and `http` are supported. 
+     * @return Type Trigger type to delete. Currently only `timer`, `ckafka`, `apigw`, `cls`, `cos`, `cmq`, and `http` are supported.
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Type of the trigger to be deleted. Currently, COS, CMQ, timer, and ckafka triggers are supported.
-     * @param Type Type of the trigger to be deleted. Currently, COS, CMQ, timer, and ckafka triggers are supported.
+     * Set Trigger type to delete. Currently only `timer`, `ckafka`, `apigw`, `cls`, `cos`, `cmq`, and `http` are supported.
+     * @param Type Trigger type to delete. Currently only `timer`, `ckafka`, `apigw`, `cls`, `cos`, `cmq`, and `http` are supported.
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get Function namespace 
-     * @return Namespace Function namespace
+     * Get Namespace of the function 
+     * @return Namespace Namespace of the function
      */
     public String getNamespace() {
         return this.Namespace;
     }
 
     /**
-     * Set Function namespace
-     * @param Namespace Function namespace
+     * Set Namespace of the function
+     * @param Namespace Namespace of the function
      */
     public void setNamespace(String Namespace) {
         this.Namespace = Namespace;
     }
 
     /**
-     * Get This field is required if a COS trigger is to be deleted. It stores the data {"event":"cos:ObjectCreated:*"} in the JSON format. The data content of this field is in the same format as that of SetTrigger. This field is optional if a scheduled trigger or CMQ trigger is to be deleted. 
-     * @return TriggerDesc This field is required if a COS trigger is to be deleted. It stores the data {"event":"cos:ObjectCreated:*"} in the JSON format. The data content of this field is in the same format as that of SetTrigger. This field is optional if a scheduled trigger or CMQ trigger is to be deleted.
+     * Get If the trigger type to delete is COS trigger, this field must be specified, storing data in JSON format {"event":"cos:ObjectCreated:*"}. The data content is in the same format as this field in the SetTrigger API. If the trigger type to delete is scheduled trigger or CMQ trigger, this field can be unspecified. 
+     * @return TriggerDesc If the trigger type to delete is COS trigger, this field must be specified, storing data in JSON format {"event":"cos:ObjectCreated:*"}. The data content is in the same format as this field in the SetTrigger API. If the trigger type to delete is scheduled trigger or CMQ trigger, this field can be unspecified.
      */
     public String getTriggerDesc() {
         return this.TriggerDesc;
     }
 
     /**
-     * Set This field is required if a COS trigger is to be deleted. It stores the data {"event":"cos:ObjectCreated:*"} in the JSON format. The data content of this field is in the same format as that of SetTrigger. This field is optional if a scheduled trigger or CMQ trigger is to be deleted.
-     * @param TriggerDesc This field is required if a COS trigger is to be deleted. It stores the data {"event":"cos:ObjectCreated:*"} in the JSON format. The data content of this field is in the same format as that of SetTrigger. This field is optional if a scheduled trigger or CMQ trigger is to be deleted.
+     * Set If the trigger type to delete is COS trigger, this field must be specified, storing data in JSON format {"event":"cos:ObjectCreated:*"}. The data content is in the same format as this field in the SetTrigger API. If the trigger type to delete is scheduled trigger or CMQ trigger, this field can be unspecified.
+     * @param TriggerDesc If the trigger type to delete is COS trigger, this field must be specified, storing data in JSON format {"event":"cos:ObjectCreated:*"}. The data content is in the same format as this field in the SetTrigger API. If the trigger type to delete is scheduled trigger or CMQ trigger, this field can be unspecified.
      */
     public void setTriggerDesc(String TriggerDesc) {
         this.TriggerDesc = TriggerDesc;
     }
 
     /**
-     * Get Function version. It defaults to `$LATEST`. It's recommended to use `[$DEFAULT](https://www.tencentcloud.com/document/product/583/37458#glossary)` for canary release. 
-     * @return Qualifier Function version. It defaults to `$LATEST`. It's recommended to use `[$DEFAULT](https://www.tencentcloud.com/document/product/583/37458#glossary)` for canary release.
+     * Get The version or alias that the trigger to be deleted actually points to. Default value: $LATEST. 
+     * @return Qualifier The version or alias that the trigger to be deleted actually points to. Default value: $LATEST.
      */
     public String getQualifier() {
         return this.Qualifier;
     }
 
     /**
-     * Set Function version. It defaults to `$LATEST`. It's recommended to use `[$DEFAULT](https://www.tencentcloud.com/document/product/583/37458#glossary)` for canary release.
-     * @param Qualifier Function version. It defaults to `$LATEST`. It's recommended to use `[$DEFAULT](https://www.tencentcloud.com/document/product/583/37458#glossary)` for canary release.
+     * Set The version or alias that the trigger to be deleted actually points to. Default value: $LATEST.
+     * @param Qualifier The version or alias that the trigger to be deleted actually points to. Default value: $LATEST.
      */
     public void setQualifier(String Qualifier) {
         this.Qualifier = Qualifier;

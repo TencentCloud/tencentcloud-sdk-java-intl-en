@@ -31,14 +31,14 @@ public class AigcTaskListItem extends AbstractModel {
     private String TaskId;
 
     /**
-    * <p>Task type</p><p>Enumeration value:</p><ul><li>VideoRedraw: Video redraw task</li><li>AIDrama: AI drama task</li></ul>
+    * <p>Task type</p><p>Enumeration values:</p><ul><li>VideoRedraw: Video redraw task</li><li>AIDrama: AI drama task</li></ul>
     */
     @SerializedName("TaskType")
     @Expose
     private String TaskType;
 
     /**
-    * <p>Task status</p><p>Enumeration values:</p><ul><li>PENDING: Task waiting for scheduling</li><li>RUNNING: Task running</li><li>FINISHED: Task executed successfully</li><li>STOP: Task termination</li><li>FAILED: Task failure</li><li>TIMEOUT: Task timeout</li></ul>
+    * <p>Task status</p><p>Enumeration values: </p><ul><li>PENDING: Task waiting for scheduling</li><li>RUNNING: Task running</li><li>FINISHED: Task executed successfully</li><li>STOP: Task termination</li><li>FAILED: Task failure</li><li>TIMEOUT: Task timeout</li></ul>
     */
     @SerializedName("TaskStatus")
     @Expose
@@ -87,7 +87,7 @@ public class AigcTaskListItem extends AbstractModel {
     private String TaskResultMsg;
 
     /**
-    * <p>Output video resolution</p>
+    * <p>Resolution of the output video</p>
     */
     @SerializedName("Resolution")
     @Expose
@@ -101,11 +101,25 @@ public class AigcTaskListItem extends AbstractModel {
     private String Ratio;
 
     /**
-    * <p>Task request package</p>
+    * <p>Task request packet</p>
     */
     @SerializedName("RequestBody")
     @Expose
     private String RequestBody;
+
+    /**
+    * <p>Other task information.</p>
+    */
+    @SerializedName("TaskInfo")
+    @Expose
+    private String TaskInfo;
+
+    /**
+    * <p>Task sub-status.</p>
+    */
+    @SerializedName("Stage")
+    @Expose
+    private String Stage;
 
     /**
      * Get <p>Task ID.</p> 
@@ -124,32 +138,32 @@ public class AigcTaskListItem extends AbstractModel {
     }
 
     /**
-     * Get <p>Task type</p><p>Enumeration value:</p><ul><li>VideoRedraw: Video redraw task</li><li>AIDrama: AI drama task</li></ul> 
-     * @return TaskType <p>Task type</p><p>Enumeration value:</p><ul><li>VideoRedraw: Video redraw task</li><li>AIDrama: AI drama task</li></ul>
+     * Get <p>Task type</p><p>Enumeration values:</p><ul><li>VideoRedraw: Video redraw task</li><li>AIDrama: AI drama task</li></ul> 
+     * @return TaskType <p>Task type</p><p>Enumeration values:</p><ul><li>VideoRedraw: Video redraw task</li><li>AIDrama: AI drama task</li></ul>
      */
     public String getTaskType() {
         return this.TaskType;
     }
 
     /**
-     * Set <p>Task type</p><p>Enumeration value:</p><ul><li>VideoRedraw: Video redraw task</li><li>AIDrama: AI drama task</li></ul>
-     * @param TaskType <p>Task type</p><p>Enumeration value:</p><ul><li>VideoRedraw: Video redraw task</li><li>AIDrama: AI drama task</li></ul>
+     * Set <p>Task type</p><p>Enumeration values:</p><ul><li>VideoRedraw: Video redraw task</li><li>AIDrama: AI drama task</li></ul>
+     * @param TaskType <p>Task type</p><p>Enumeration values:</p><ul><li>VideoRedraw: Video redraw task</li><li>AIDrama: AI drama task</li></ul>
      */
     public void setTaskType(String TaskType) {
         this.TaskType = TaskType;
     }
 
     /**
-     * Get <p>Task status</p><p>Enumeration values:</p><ul><li>PENDING: Task waiting for scheduling</li><li>RUNNING: Task running</li><li>FINISHED: Task executed successfully</li><li>STOP: Task termination</li><li>FAILED: Task failure</li><li>TIMEOUT: Task timeout</li></ul> 
-     * @return TaskStatus <p>Task status</p><p>Enumeration values:</p><ul><li>PENDING: Task waiting for scheduling</li><li>RUNNING: Task running</li><li>FINISHED: Task executed successfully</li><li>STOP: Task termination</li><li>FAILED: Task failure</li><li>TIMEOUT: Task timeout</li></ul>
+     * Get <p>Task status</p><p>Enumeration values: </p><ul><li>PENDING: Task waiting for scheduling</li><li>RUNNING: Task running</li><li>FINISHED: Task executed successfully</li><li>STOP: Task termination</li><li>FAILED: Task failure</li><li>TIMEOUT: Task timeout</li></ul> 
+     * @return TaskStatus <p>Task status</p><p>Enumeration values: </p><ul><li>PENDING: Task waiting for scheduling</li><li>RUNNING: Task running</li><li>FINISHED: Task executed successfully</li><li>STOP: Task termination</li><li>FAILED: Task failure</li><li>TIMEOUT: Task timeout</li></ul>
      */
     public String getTaskStatus() {
         return this.TaskStatus;
     }
 
     /**
-     * Set <p>Task status</p><p>Enumeration values:</p><ul><li>PENDING: Task waiting for scheduling</li><li>RUNNING: Task running</li><li>FINISHED: Task executed successfully</li><li>STOP: Task termination</li><li>FAILED: Task failure</li><li>TIMEOUT: Task timeout</li></ul>
-     * @param TaskStatus <p>Task status</p><p>Enumeration values:</p><ul><li>PENDING: Task waiting for scheduling</li><li>RUNNING: Task running</li><li>FINISHED: Task executed successfully</li><li>STOP: Task termination</li><li>FAILED: Task failure</li><li>TIMEOUT: Task timeout</li></ul>
+     * Set <p>Task status</p><p>Enumeration values: </p><ul><li>PENDING: Task waiting for scheduling</li><li>RUNNING: Task running</li><li>FINISHED: Task executed successfully</li><li>STOP: Task termination</li><li>FAILED: Task failure</li><li>TIMEOUT: Task timeout</li></ul>
+     * @param TaskStatus <p>Task status</p><p>Enumeration values: </p><ul><li>PENDING: Task waiting for scheduling</li><li>RUNNING: Task running</li><li>FINISHED: Task executed successfully</li><li>STOP: Task termination</li><li>FAILED: Task failure</li><li>TIMEOUT: Task timeout</li></ul>
      */
     public void setTaskStatus(String TaskStatus) {
         this.TaskStatus = TaskStatus;
@@ -252,16 +266,16 @@ public class AigcTaskListItem extends AbstractModel {
     }
 
     /**
-     * Get <p>Output video resolution</p> 
-     * @return Resolution <p>Output video resolution</p>
+     * Get <p>Resolution of the output video</p> 
+     * @return Resolution <p>Resolution of the output video</p>
      */
     public String getResolution() {
         return this.Resolution;
     }
 
     /**
-     * Set <p>Output video resolution</p>
-     * @param Resolution <p>Output video resolution</p>
+     * Set <p>Resolution of the output video</p>
+     * @param Resolution <p>Resolution of the output video</p>
      */
     public void setResolution(String Resolution) {
         this.Resolution = Resolution;
@@ -284,19 +298,51 @@ public class AigcTaskListItem extends AbstractModel {
     }
 
     /**
-     * Get <p>Task request package</p> 
-     * @return RequestBody <p>Task request package</p>
+     * Get <p>Task request packet</p> 
+     * @return RequestBody <p>Task request packet</p>
      */
     public String getRequestBody() {
         return this.RequestBody;
     }
 
     /**
-     * Set <p>Task request package</p>
-     * @param RequestBody <p>Task request package</p>
+     * Set <p>Task request packet</p>
+     * @param RequestBody <p>Task request packet</p>
      */
     public void setRequestBody(String RequestBody) {
         this.RequestBody = RequestBody;
+    }
+
+    /**
+     * Get <p>Other task information.</p> 
+     * @return TaskInfo <p>Other task information.</p>
+     */
+    public String getTaskInfo() {
+        return this.TaskInfo;
+    }
+
+    /**
+     * Set <p>Other task information.</p>
+     * @param TaskInfo <p>Other task information.</p>
+     */
+    public void setTaskInfo(String TaskInfo) {
+        this.TaskInfo = TaskInfo;
+    }
+
+    /**
+     * Get <p>Task sub-status.</p> 
+     * @return Stage <p>Task sub-status.</p>
+     */
+    public String getStage() {
+        return this.Stage;
+    }
+
+    /**
+     * Set <p>Task sub-status.</p>
+     * @param Stage <p>Task sub-status.</p>
+     */
+    public void setStage(String Stage) {
+        this.Stage = Stage;
     }
 
     public AigcTaskListItem() {
@@ -346,6 +392,12 @@ public class AigcTaskListItem extends AbstractModel {
         if (source.RequestBody != null) {
             this.RequestBody = new String(source.RequestBody);
         }
+        if (source.TaskInfo != null) {
+            this.TaskInfo = new String(source.TaskInfo);
+        }
+        if (source.Stage != null) {
+            this.Stage = new String(source.Stage);
+        }
     }
 
 
@@ -365,6 +417,8 @@ public class AigcTaskListItem extends AbstractModel {
         this.setParamSimple(map, prefix + "Resolution", this.Resolution);
         this.setParamSimple(map, prefix + "Ratio", this.Ratio);
         this.setParamSimple(map, prefix + "RequestBody", this.RequestBody);
+        this.setParamSimple(map, prefix + "TaskInfo", this.TaskInfo);
+        this.setParamSimple(map, prefix + "Stage", this.Stage);
 
     }
 }

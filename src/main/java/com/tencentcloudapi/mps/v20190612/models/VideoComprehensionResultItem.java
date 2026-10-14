@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class VideoComprehensionResultItem extends AbstractModel {
 
     /**
-    * Segment start time (unit: seconds)
+    * Start time of the storyboard segment, in seconds.
 
     */
     @SerializedName("StartTime")
@@ -32,37 +32,37 @@ public class VideoComprehensionResultItem extends AbstractModel {
     private Float StartTime;
 
     /**
-    * Segment end time (unit: seconds)
+    * Segment end time (unit: second)
     */
     @SerializedName("EndTime")
     @Expose
     private Float EndTime;
 
     /**
-    * Storyboard clip title
+    * Segment title.
     */
     @SerializedName("Title")
     @Expose
     private String Title;
 
     /**
-    * Segment information description
+    * Description of the storyboard segment information
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * Storyboard clip keywords
+    * Segment keywords.
     */
     @SerializedName("Keywords")
     @Expose
     private String [] Keywords;
 
     /**
-     * Get Segment start time (unit: seconds)
+     * Get Start time of the storyboard segment, in seconds.
  
-     * @return StartTime Segment start time (unit: seconds)
+     * @return StartTime Start time of the storyboard segment, in seconds.
 
      */
     public Float getStartTime() {
@@ -70,9 +70,9 @@ public class VideoComprehensionResultItem extends AbstractModel {
     }
 
     /**
-     * Set Segment start time (unit: seconds)
+     * Set Start time of the storyboard segment, in seconds.
 
-     * @param StartTime Segment start time (unit: seconds)
+     * @param StartTime Start time of the storyboard segment, in seconds.
 
      */
     public void setStartTime(Float StartTime) {
@@ -80,64 +80,64 @@ public class VideoComprehensionResultItem extends AbstractModel {
     }
 
     /**
-     * Get Segment end time (unit: seconds) 
-     * @return EndTime Segment end time (unit: seconds)
+     * Get Segment end time (unit: second) 
+     * @return EndTime Segment end time (unit: second)
      */
     public Float getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set Segment end time (unit: seconds)
-     * @param EndTime Segment end time (unit: seconds)
+     * Set Segment end time (unit: second)
+     * @param EndTime Segment end time (unit: second)
      */
     public void setEndTime(Float EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get Storyboard clip title 
-     * @return Title Storyboard clip title
+     * Get Segment title. 
+     * @return Title Segment title.
      */
     public String getTitle() {
         return this.Title;
     }
 
     /**
-     * Set Storyboard clip title
-     * @param Title Storyboard clip title
+     * Set Segment title.
+     * @param Title Segment title.
      */
     public void setTitle(String Title) {
         this.Title = Title;
     }
 
     /**
-     * Get Segment information description 
-     * @return Description Segment information description
+     * Get Description of the storyboard segment information 
+     * @return Description Description of the storyboard segment information
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set Segment information description
-     * @param Description Segment information description
+     * Set Description of the storyboard segment information
+     * @param Description Description of the storyboard segment information
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get Storyboard clip keywords 
-     * @return Keywords Storyboard clip keywords
+     * Get Segment keywords. 
+     * @return Keywords Segment keywords.
      */
     public String [] getKeywords() {
         return this.Keywords;
     }
 
     /**
-     * Set Storyboard clip keywords
-     * @param Keywords Storyboard clip keywords
+     * Set Segment keywords.
+     * @param Keywords Segment keywords.
      */
     public void setKeywords(String [] Keywords) {
         this.Keywords = Keywords;

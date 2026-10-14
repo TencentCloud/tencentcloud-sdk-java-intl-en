@@ -45,42 +45,42 @@ public class AiAnalysisTaskReelResult extends AbstractModel {
     private String Message;
 
     /**
-    * AI narration and video re-creation task input.
+    * Task input for AI narration and video re-creation.
     */
     @SerializedName("Input")
     @Expose
     private AiAnalysisTaskReelInput Input;
 
     /**
-    * 
+    * Task output for AI narration and video re-creation.
     */
     @SerializedName("Output")
     @Expose
     private AiAnalysisTaskReelOutput Output;
 
     /**
-    * 
+    * Error code. A null string indicates that the task is successful, while other values indicate that the task has failed. For valid values, see the list of Media Processing Service (MPS) error codes.
     */
     @SerializedName("ErrCodeExt")
     @Expose
     private String ErrCodeExt;
 
     /**
-    * 
+    * Task progress.
     */
     @SerializedName("Progress")
     @Expose
     private Long Progress;
 
     /**
-    * 
+    * Starting time of task execution, in ISO date and time format.
     */
     @SerializedName("BeginProcessTime")
     @Expose
     private String BeginProcessTime;
 
     /**
-    * 
+    * Task completion time, in ISO date and time format.
     */
     @SerializedName("FinishTime")
     @Expose
@@ -135,96 +135,96 @@ public class AiAnalysisTaskReelResult extends AbstractModel {
     }
 
     /**
-     * Get AI narration and video re-creation task input. 
-     * @return Input AI narration and video re-creation task input.
+     * Get Task input for AI narration and video re-creation. 
+     * @return Input Task input for AI narration and video re-creation.
      */
     public AiAnalysisTaskReelInput getInput() {
         return this.Input;
     }
 
     /**
-     * Set AI narration and video re-creation task input.
-     * @param Input AI narration and video re-creation task input.
+     * Set Task input for AI narration and video re-creation.
+     * @param Input Task input for AI narration and video re-creation.
      */
     public void setInput(AiAnalysisTaskReelInput Input) {
         this.Input = Input;
     }
 
     /**
-     * Get  
-     * @return Output 
+     * Get Task output for AI narration and video re-creation. 
+     * @return Output Task output for AI narration and video re-creation.
      */
     public AiAnalysisTaskReelOutput getOutput() {
         return this.Output;
     }
 
     /**
-     * Set 
-     * @param Output 
+     * Set Task output for AI narration and video re-creation.
+     * @param Output Task output for AI narration and video re-creation.
      */
     public void setOutput(AiAnalysisTaskReelOutput Output) {
         this.Output = Output;
     }
 
     /**
-     * Get  
-     * @return ErrCodeExt 
+     * Get Error code. A null string indicates that the task is successful, while other values indicate that the task has failed. For valid values, see the list of Media Processing Service (MPS) error codes. 
+     * @return ErrCodeExt Error code. A null string indicates that the task is successful, while other values indicate that the task has failed. For valid values, see the list of Media Processing Service (MPS) error codes.
      */
     public String getErrCodeExt() {
         return this.ErrCodeExt;
     }
 
     /**
-     * Set 
-     * @param ErrCodeExt 
+     * Set Error code. A null string indicates that the task is successful, while other values indicate that the task has failed. For valid values, see the list of Media Processing Service (MPS) error codes.
+     * @param ErrCodeExt Error code. A null string indicates that the task is successful, while other values indicate that the task has failed. For valid values, see the list of Media Processing Service (MPS) error codes.
      */
     public void setErrCodeExt(String ErrCodeExt) {
         this.ErrCodeExt = ErrCodeExt;
     }
 
     /**
-     * Get  
-     * @return Progress 
+     * Get Task progress. 
+     * @return Progress Task progress.
      */
     public Long getProgress() {
         return this.Progress;
     }
 
     /**
-     * Set 
-     * @param Progress 
+     * Set Task progress.
+     * @param Progress Task progress.
      */
     public void setProgress(Long Progress) {
         this.Progress = Progress;
     }
 
     /**
-     * Get  
-     * @return BeginProcessTime 
+     * Get Starting time of task execution, in ISO date and time format. 
+     * @return BeginProcessTime Starting time of task execution, in ISO date and time format.
      */
     public String getBeginProcessTime() {
         return this.BeginProcessTime;
     }
 
     /**
-     * Set 
-     * @param BeginProcessTime 
+     * Set Starting time of task execution, in ISO date and time format.
+     * @param BeginProcessTime Starting time of task execution, in ISO date and time format.
      */
     public void setBeginProcessTime(String BeginProcessTime) {
         this.BeginProcessTime = BeginProcessTime;
     }
 
     /**
-     * Get  
-     * @return FinishTime 
+     * Get Task completion time, in ISO date and time format. 
+     * @return FinishTime Task completion time, in ISO date and time format.
      */
     public String getFinishTime() {
         return this.FinishTime;
     }
 
     /**
-     * Set 
-     * @param FinishTime 
+     * Set Task completion time, in ISO date and time format.
+     * @param FinishTime Task completion time, in ISO date and time format.
      */
     public void setFinishTime(String FinishTime) {
         this.FinishTime = FinishTime;

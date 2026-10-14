@@ -24,42 +24,42 @@ import java.util.HashMap;
 public class DescribeAssetHostDetailResponse extends AbstractModel {
 
     /**
-    * TCSS UUID
+    * Container Security UUID
     */
     @SerializedName("UUID")
     @Expose
     private String UUID;
 
     /**
-    * Update time
+    * Update time.
     */
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
 
     /**
-    * Server name
+    * Host name
     */
     @SerializedName("HostName")
     @Expose
     private String HostName;
 
     /**
-    * Server group
+    * Host grouping
     */
     @SerializedName("Group")
     @Expose
     private String Group;
 
     /**
-    * Server IP
+    * Host IP address
     */
     @SerializedName("HostIP")
     @Expose
     private String HostIP;
 
     /**
-    * OS
+    * Operating system.
     */
     @SerializedName("OsName")
     @Expose
@@ -80,42 +80,42 @@ public class DescribeAssetHostDetailResponse extends AbstractModel {
     private String KernelVersion;
 
     /**
-    * Docker version
+    * docker version
     */
     @SerializedName("DockerVersion")
     @Expose
     private String DockerVersion;
 
     /**
-    * Docker API version
+    * docker api version
     */
     @SerializedName("DockerAPIVersion")
     @Expose
     private String DockerAPIVersion;
 
     /**
-    * Docker version for Go
+    * docker go version
     */
     @SerializedName("DockerGoVersion")
     @Expose
     private String DockerGoVersion;
 
     /**
-    * Docker file system type
+    * docker file system type
     */
     @SerializedName("DockerFileSystemDriver")
     @Expose
     private String DockerFileSystemDriver;
 
     /**
-    * Docker root directory
+    * docker root directory
     */
     @SerializedName("DockerRootDir")
     @Expose
     private String DockerRootDir;
 
     /**
-    * Number of images
+    * Image count
     */
     @SerializedName("ImageCnt")
     @Expose
@@ -129,14 +129,14 @@ public class DescribeAssetHostDetailResponse extends AbstractModel {
     private Long ContainerCnt;
 
     /**
-    * K8s IP
+    * k8s IP
     */
     @SerializedName("K8sMasterIP")
     @Expose
     private String K8sMasterIP;
 
     /**
-    * K8s version
+    * k8s version
     */
     @SerializedName("K8sVersion")
     @Expose
@@ -150,77 +150,77 @@ public class DescribeAssetHostDetailResponse extends AbstractModel {
     private String KubeProxyVersion;
 
     /**
-    * Valid values: `UNINSTALL` (not installed); `OFFLINE` (offline); `ONLINE` (defended).
+    * "UNINSTALL": Not Installed; "OFFLINE": Offline; "ONLINE": Protected
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * Whether it is Containerd
+    * Is Containerd
     */
     @SerializedName("IsContainerd")
     @Expose
     private Boolean IsContainerd;
 
     /**
-    * Server source. Valid values: `TENCENTCLOUD` (Tencent Cloud instance); `OTHERCLOUD` (non-Tencent Cloud instance).
+    * Host Source. "TENCENTCLOUD": "Tencent Cloud Servers"; "OTHERCLOUD": "Non-Tencent Cloud Servers"
     */
     @SerializedName("MachineType")
     @Expose
     private String MachineType;
 
     /**
-    * Public IP
+    * Public IP address
     */
     @SerializedName("PublicIp")
     @Expose
     private String PublicIp;
 
     /**
-    * Server instance ID
+    * Host instance ID
     */
     @SerializedName("InstanceID")
     @Expose
     private String InstanceID;
 
     /**
-    * Region ID
+    * Region ID.
     */
     @SerializedName("RegionID")
     @Expose
     private Long RegionID;
 
     /**
-    * Project
+    * Associated project
     */
     @SerializedName("Project")
     @Expose
     private ProjectInfo Project;
 
     /**
-    * Tags
+    * Tag.
     */
     @SerializedName("Tags")
     @Expose
     private TagInfo [] Tags;
 
     /**
-    * 
+    * Cluster ID
     */
     @SerializedName("ClusterID")
     @Expose
     private String ClusterID;
 
     /**
-    * 
+    * Cluster name.
     */
     @SerializedName("ClusterName")
     @Expose
     private String ClusterName;
 
     /**
-    * 
+    * Cluster Access Status
     */
     @SerializedName("ClusterAccessedStatus")
     @Expose
@@ -241,96 +241,96 @@ public class DescribeAssetHostDetailResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get TCSS UUID 
-     * @return UUID TCSS UUID
+     * Get Container Security UUID 
+     * @return UUID Container Security UUID
      */
     public String getUUID() {
         return this.UUID;
     }
 
     /**
-     * Set TCSS UUID
-     * @param UUID TCSS UUID
+     * Set Container Security UUID
+     * @param UUID Container Security UUID
      */
     public void setUUID(String UUID) {
         this.UUID = UUID;
     }
 
     /**
-     * Get Update time 
-     * @return UpdateTime Update time
+     * Get Update time. 
+     * @return UpdateTime Update time.
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set Update time
-     * @param UpdateTime Update time
+     * Set Update time.
+     * @param UpdateTime Update time.
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
     }
 
     /**
-     * Get Server name 
-     * @return HostName Server name
+     * Get Host name 
+     * @return HostName Host name
      */
     public String getHostName() {
         return this.HostName;
     }
 
     /**
-     * Set Server name
-     * @param HostName Server name
+     * Set Host name
+     * @param HostName Host name
      */
     public void setHostName(String HostName) {
         this.HostName = HostName;
     }
 
     /**
-     * Get Server group 
-     * @return Group Server group
+     * Get Host grouping 
+     * @return Group Host grouping
      */
     public String getGroup() {
         return this.Group;
     }
 
     /**
-     * Set Server group
-     * @param Group Server group
+     * Set Host grouping
+     * @param Group Host grouping
      */
     public void setGroup(String Group) {
         this.Group = Group;
     }
 
     /**
-     * Get Server IP 
-     * @return HostIP Server IP
+     * Get Host IP address 
+     * @return HostIP Host IP address
      */
     public String getHostIP() {
         return this.HostIP;
     }
 
     /**
-     * Set Server IP
-     * @param HostIP Server IP
+     * Set Host IP address
+     * @param HostIP Host IP address
      */
     public void setHostIP(String HostIP) {
         this.HostIP = HostIP;
     }
 
     /**
-     * Get OS 
-     * @return OsName OS
+     * Get Operating system. 
+     * @return OsName Operating system.
      */
     public String getOsName() {
         return this.OsName;
     }
 
     /**
-     * Set OS
-     * @param OsName OS
+     * Set Operating system.
+     * @param OsName Operating system.
      */
     public void setOsName(String OsName) {
         this.OsName = OsName;
@@ -369,96 +369,96 @@ public class DescribeAssetHostDetailResponse extends AbstractModel {
     }
 
     /**
-     * Get Docker version 
-     * @return DockerVersion Docker version
+     * Get docker version 
+     * @return DockerVersion docker version
      */
     public String getDockerVersion() {
         return this.DockerVersion;
     }
 
     /**
-     * Set Docker version
-     * @param DockerVersion Docker version
+     * Set docker version
+     * @param DockerVersion docker version
      */
     public void setDockerVersion(String DockerVersion) {
         this.DockerVersion = DockerVersion;
     }
 
     /**
-     * Get Docker API version 
-     * @return DockerAPIVersion Docker API version
+     * Get docker api version 
+     * @return DockerAPIVersion docker api version
      */
     public String getDockerAPIVersion() {
         return this.DockerAPIVersion;
     }
 
     /**
-     * Set Docker API version
-     * @param DockerAPIVersion Docker API version
+     * Set docker api version
+     * @param DockerAPIVersion docker api version
      */
     public void setDockerAPIVersion(String DockerAPIVersion) {
         this.DockerAPIVersion = DockerAPIVersion;
     }
 
     /**
-     * Get Docker version for Go 
-     * @return DockerGoVersion Docker version for Go
+     * Get docker go version 
+     * @return DockerGoVersion docker go version
      */
     public String getDockerGoVersion() {
         return this.DockerGoVersion;
     }
 
     /**
-     * Set Docker version for Go
-     * @param DockerGoVersion Docker version for Go
+     * Set docker go version
+     * @param DockerGoVersion docker go version
      */
     public void setDockerGoVersion(String DockerGoVersion) {
         this.DockerGoVersion = DockerGoVersion;
     }
 
     /**
-     * Get Docker file system type 
-     * @return DockerFileSystemDriver Docker file system type
+     * Get docker file system type 
+     * @return DockerFileSystemDriver docker file system type
      */
     public String getDockerFileSystemDriver() {
         return this.DockerFileSystemDriver;
     }
 
     /**
-     * Set Docker file system type
-     * @param DockerFileSystemDriver Docker file system type
+     * Set docker file system type
+     * @param DockerFileSystemDriver docker file system type
      */
     public void setDockerFileSystemDriver(String DockerFileSystemDriver) {
         this.DockerFileSystemDriver = DockerFileSystemDriver;
     }
 
     /**
-     * Get Docker root directory 
-     * @return DockerRootDir Docker root directory
+     * Get docker root directory 
+     * @return DockerRootDir docker root directory
      */
     public String getDockerRootDir() {
         return this.DockerRootDir;
     }
 
     /**
-     * Set Docker root directory
-     * @param DockerRootDir Docker root directory
+     * Set docker root directory
+     * @param DockerRootDir docker root directory
      */
     public void setDockerRootDir(String DockerRootDir) {
         this.DockerRootDir = DockerRootDir;
     }
 
     /**
-     * Get Number of images 
-     * @return ImageCnt Number of images
+     * Get Image count 
+     * @return ImageCnt Image count
      */
     public Long getImageCnt() {
         return this.ImageCnt;
     }
 
     /**
-     * Set Number of images
-     * @param ImageCnt Number of images
+     * Set Image count
+     * @param ImageCnt Image count
      */
     public void setImageCnt(Long ImageCnt) {
         this.ImageCnt = ImageCnt;
@@ -481,32 +481,32 @@ public class DescribeAssetHostDetailResponse extends AbstractModel {
     }
 
     /**
-     * Get K8s IP 
-     * @return K8sMasterIP K8s IP
+     * Get k8s IP 
+     * @return K8sMasterIP k8s IP
      */
     public String getK8sMasterIP() {
         return this.K8sMasterIP;
     }
 
     /**
-     * Set K8s IP
-     * @param K8sMasterIP K8s IP
+     * Set k8s IP
+     * @param K8sMasterIP k8s IP
      */
     public void setK8sMasterIP(String K8sMasterIP) {
         this.K8sMasterIP = K8sMasterIP;
     }
 
     /**
-     * Get K8s version 
-     * @return K8sVersion K8s version
+     * Get k8s version 
+     * @return K8sVersion k8s version
      */
     public String getK8sVersion() {
         return this.K8sVersion;
     }
 
     /**
-     * Set K8s version
-     * @param K8sVersion K8s version
+     * Set k8s version
+     * @param K8sVersion k8s version
      */
     public void setK8sVersion(String K8sVersion) {
         this.K8sVersion = K8sVersion;
@@ -529,176 +529,176 @@ public class DescribeAssetHostDetailResponse extends AbstractModel {
     }
 
     /**
-     * Get Valid values: `UNINSTALL` (not installed); `OFFLINE` (offline); `ONLINE` (defended). 
-     * @return Status Valid values: `UNINSTALL` (not installed); `OFFLINE` (offline); `ONLINE` (defended).
+     * Get "UNINSTALL": Not Installed; "OFFLINE": Offline; "ONLINE": Protected 
+     * @return Status "UNINSTALL": Not Installed; "OFFLINE": Offline; "ONLINE": Protected
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Valid values: `UNINSTALL` (not installed); `OFFLINE` (offline); `ONLINE` (defended).
-     * @param Status Valid values: `UNINSTALL` (not installed); `OFFLINE` (offline); `ONLINE` (defended).
+     * Set "UNINSTALL": Not Installed; "OFFLINE": Offline; "ONLINE": Protected
+     * @param Status "UNINSTALL": Not Installed; "OFFLINE": Offline; "ONLINE": Protected
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Whether it is Containerd 
-     * @return IsContainerd Whether it is Containerd
+     * Get Is Containerd 
+     * @return IsContainerd Is Containerd
      */
     public Boolean getIsContainerd() {
         return this.IsContainerd;
     }
 
     /**
-     * Set Whether it is Containerd
-     * @param IsContainerd Whether it is Containerd
+     * Set Is Containerd
+     * @param IsContainerd Is Containerd
      */
     public void setIsContainerd(Boolean IsContainerd) {
         this.IsContainerd = IsContainerd;
     }
 
     /**
-     * Get Server source. Valid values: `TENCENTCLOUD` (Tencent Cloud instance); `OTHERCLOUD` (non-Tencent Cloud instance). 
-     * @return MachineType Server source. Valid values: `TENCENTCLOUD` (Tencent Cloud instance); `OTHERCLOUD` (non-Tencent Cloud instance).
+     * Get Host Source. "TENCENTCLOUD": "Tencent Cloud Servers"; "OTHERCLOUD": "Non-Tencent Cloud Servers" 
+     * @return MachineType Host Source. "TENCENTCLOUD": "Tencent Cloud Servers"; "OTHERCLOUD": "Non-Tencent Cloud Servers"
      */
     public String getMachineType() {
         return this.MachineType;
     }
 
     /**
-     * Set Server source. Valid values: `TENCENTCLOUD` (Tencent Cloud instance); `OTHERCLOUD` (non-Tencent Cloud instance).
-     * @param MachineType Server source. Valid values: `TENCENTCLOUD` (Tencent Cloud instance); `OTHERCLOUD` (non-Tencent Cloud instance).
+     * Set Host Source. "TENCENTCLOUD": "Tencent Cloud Servers"; "OTHERCLOUD": "Non-Tencent Cloud Servers"
+     * @param MachineType Host Source. "TENCENTCLOUD": "Tencent Cloud Servers"; "OTHERCLOUD": "Non-Tencent Cloud Servers"
      */
     public void setMachineType(String MachineType) {
         this.MachineType = MachineType;
     }
 
     /**
-     * Get Public IP 
-     * @return PublicIp Public IP
+     * Get Public IP address 
+     * @return PublicIp Public IP address
      */
     public String getPublicIp() {
         return this.PublicIp;
     }
 
     /**
-     * Set Public IP
-     * @param PublicIp Public IP
+     * Set Public IP address
+     * @param PublicIp Public IP address
      */
     public void setPublicIp(String PublicIp) {
         this.PublicIp = PublicIp;
     }
 
     /**
-     * Get Server instance ID 
-     * @return InstanceID Server instance ID
+     * Get Host instance ID 
+     * @return InstanceID Host instance ID
      */
     public String getInstanceID() {
         return this.InstanceID;
     }
 
     /**
-     * Set Server instance ID
-     * @param InstanceID Server instance ID
+     * Set Host instance ID
+     * @param InstanceID Host instance ID
      */
     public void setInstanceID(String InstanceID) {
         this.InstanceID = InstanceID;
     }
 
     /**
-     * Get Region ID 
-     * @return RegionID Region ID
+     * Get Region ID. 
+     * @return RegionID Region ID.
      */
     public Long getRegionID() {
         return this.RegionID;
     }
 
     /**
-     * Set Region ID
-     * @param RegionID Region ID
+     * Set Region ID.
+     * @param RegionID Region ID.
      */
     public void setRegionID(Long RegionID) {
         this.RegionID = RegionID;
     }
 
     /**
-     * Get Project 
-     * @return Project Project
+     * Get Associated project 
+     * @return Project Associated project
      */
     public ProjectInfo getProject() {
         return this.Project;
     }
 
     /**
-     * Set Project
-     * @param Project Project
+     * Set Associated project
+     * @param Project Associated project
      */
     public void setProject(ProjectInfo Project) {
         this.Project = Project;
     }
 
     /**
-     * Get Tags 
-     * @return Tags Tags
+     * Get Tag. 
+     * @return Tags Tag.
      */
     public TagInfo [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set Tags
-     * @param Tags Tags
+     * Set Tag.
+     * @param Tags Tag.
      */
     public void setTags(TagInfo [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get  
-     * @return ClusterID 
+     * Get Cluster ID 
+     * @return ClusterID Cluster ID
      */
     public String getClusterID() {
         return this.ClusterID;
     }
 
     /**
-     * Set 
-     * @param ClusterID 
+     * Set Cluster ID
+     * @param ClusterID Cluster ID
      */
     public void setClusterID(String ClusterID) {
         this.ClusterID = ClusterID;
     }
 
     /**
-     * Get  
-     * @return ClusterName 
+     * Get Cluster name. 
+     * @return ClusterName Cluster name.
      */
     public String getClusterName() {
         return this.ClusterName;
     }
 
     /**
-     * Set 
-     * @param ClusterName 
+     * Set Cluster name.
+     * @param ClusterName Cluster name.
      */
     public void setClusterName(String ClusterName) {
         this.ClusterName = ClusterName;
     }
 
     /**
-     * Get  
-     * @return ClusterAccessedStatus 
+     * Get Cluster Access Status 
+     * @return ClusterAccessedStatus Cluster Access Status
      */
     public String getClusterAccessedStatus() {
         return this.ClusterAccessedStatus;
     }
 
     /**
-     * Set 
-     * @param ClusterAccessedStatus 
+     * Set Cluster Access Status
+     * @param ClusterAccessedStatus Cluster Access Status
      */
     public void setClusterAccessedStatus(String ClusterAccessedStatus) {
         this.ClusterAccessedStatus = ClusterAccessedStatus;

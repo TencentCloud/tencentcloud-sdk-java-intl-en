@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DescribeViewsRequest extends AbstractModel {
 
     /**
-    * Cluster instance ID
+    * Cluster instance ID.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-     * Get Cluster instance ID 
-     * @return InstanceId Cluster instance ID
+     * Get Cluster instance ID. 
+     * @return InstanceId Cluster instance ID.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Cluster instance ID
-     * @param InstanceId Cluster instance ID
+     * Set Cluster instance ID.
+     * @param InstanceId Cluster instance ID.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;

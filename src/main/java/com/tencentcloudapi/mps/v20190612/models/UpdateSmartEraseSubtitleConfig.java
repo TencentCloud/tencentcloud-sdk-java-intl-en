@@ -24,207 +24,437 @@ import java.util.HashMap;
 public class UpdateSmartEraseSubtitleConfig extends AbstractModel {
 
     /**
-    * 
+    * Subtitle erasing method.
+**Automatic erasing:** Video subtitles are automatically recognized using an AI model and are erased without traces to generate a new video. However, missed or incorrect erasing may occur due to image interference and special subtitle styles. In this case, you can specify the erasing area.
+When automatic erasing is used, if AutoAreas is not specified, the default area (lower middle part of the image) will be erased automatically. If AutoAreas is specified, the specified area will be erased automatically.
+**Specified area erasing:** If the subtitle position is relatively fixed, you are recommended to specify the erasing area directly to minimize missed erasing.
+When you choose specified area erasing, specify at least one area for CustomAreas.
+- auto: automatic erasing.
+- custom: specified area erasing.
+
     */
     @SerializedName("SubtitleEraseMethod")
     @Expose
     private String SubtitleEraseMethod;
 
     /**
-    * 
+    * Subtitle erasing model.
+**Standard edition (recommended):** For standard subtitle styles, you are recommended to select this edition to ensure better traceless effects in the details.
+**Area edition:** If the subtitles have special styles, such as calligraphy, shadow, or motion effects, you are recommended to select this edition to ensure a larger erasing area. However, the erasing effect in the details is not as good as the standard edition.
+- standard: standard edition.
+- area: area edition.
     */
     @SerializedName("SubtitleModel")
     @Expose
     private String SubtitleModel;
 
     /**
-    * 
+    * Whether to enable OCR subtitle extraction. The default value is OFF.
+OCR subtitle extraction is supported if and only if SubtitleEraseMethod is set to auto. When enabled, it identifies the text region that appears most persistently and stably within the automatic erasing area as the subtitle area. The text within the subtitle area is extracted and erased.
+- ON: enabled.
+-OFF: disabled.
     */
     @SerializedName("OcrSwitch")
     @Expose
     private String OcrSwitch;
 
     /**
-    * 
+    * Subtitle language, used for OCR recognition. Default value: zh_en. This parameter is valid only when OcrSwitch is ON.
+- zh_en: Chinese and English.
+- `multi`: others.
+The following are other languages supported for recognition:
+Chinese, English, Japanese, Korean, Spanish, French, German, Portuguese, Vietnamese, Malay, Russian, Italian, Dutch, Swedish, Finnish, Danish, Norwegian, Hungarian, Thai, Hindi, Arabic, Bengali (India), Gujarati (India), Kannada (India), Malayalam (India), Tamil (India), Telugu (India), Slovenian, Polish, Catalan, Bosnian, Czech, Estonian, Croatian, Punjabi, Marathi, Azerbaijani, Indonesian, Luxembourgish, Lithuanian, Latvian, Maltese, Slovak, Turkish, Kazakh, Greek, Irish, Belarusian, Khmer, Tagalog, Pashto, Persian, Tajik
+
+
     */
     @SerializedName("SubtitleLang")
     @Expose
     private String SubtitleLang;
 
     /**
-    * 
+    * Subtitle file format. Default value: vtt. This parameter is valid only when OcrSwitch is set to ON.
+-srt format
+- vtt: WebVTT format.
     */
     @SerializedName("SubtitleFormat")
     @Expose
     private String SubtitleFormat;
 
     /**
-    * 
+    * Whether to enable subtitle translation. Default value: OFF. This parameter is valid only when OcrSwitch is ON.
+- ON: enabled.
+-OFF: disabled.
     */
     @SerializedName("TransSwitch")
     @Expose
     private String TransSwitch;
 
     /**
-    * 
+    * Subtitle translation target language. Default value: en. This parameter is valid only when TransSwitch is set to "ON".
+Supported languages:
+zh: Simplified Chinese
+English
+ja: Japanese
+ko: Korean
+fr: French
+es: Spanish
+it: Italian
+de: German
+tr: Turkish
+ru: Russian
+pt: Portuguese
+vi: Vietnamese
+id: Indonesian
+ms: Malay
+th: Thai
+ar: Arabic
+hi: Hindi
     */
     @SerializedName("TransDstLang")
     @Expose
     private String TransDstLang;
 
     /**
-    * 
+    * Custom area for automatic erasing.
+For the specified area, AI models are used to automatically detect and erase the target objects.
+Note: When the erasing method is set to custom, this parameter is invalid. When a template is modified, input [] for the erasing area; if this parameter is unspecified, the template area information will remain unchanged.
     */
     @SerializedName("AutoAreas")
     @Expose
     private EraseArea [] AutoAreas;
 
     /**
-    * 
+    * Specify a custom region for erasure.
+For the specified area, erase the target objects directly without detection and recognition within a selected time period.
+Note: When a template is modified, input [] for the erasing area; if this parameter is unspecified, the template area information will remain unchanged.
     */
     @SerializedName("CustomAreas")
     @Expose
     private EraseTimeArea [] CustomAreas;
 
     /**
-     * Get  
-     * @return SubtitleEraseMethod 
+     * Get Subtitle erasing method.
+**Automatic erasing:** Video subtitles are automatically recognized using an AI model and are erased without traces to generate a new video. However, missed or incorrect erasing may occur due to image interference and special subtitle styles. In this case, you can specify the erasing area.
+When automatic erasing is used, if AutoAreas is not specified, the default area (lower middle part of the image) will be erased automatically. If AutoAreas is specified, the specified area will be erased automatically.
+**Specified area erasing:** If the subtitle position is relatively fixed, you are recommended to specify the erasing area directly to minimize missed erasing.
+When you choose specified area erasing, specify at least one area for CustomAreas.
+- auto: automatic erasing.
+- custom: specified area erasing.
+ 
+     * @return SubtitleEraseMethod Subtitle erasing method.
+**Automatic erasing:** Video subtitles are automatically recognized using an AI model and are erased without traces to generate a new video. However, missed or incorrect erasing may occur due to image interference and special subtitle styles. In this case, you can specify the erasing area.
+When automatic erasing is used, if AutoAreas is not specified, the default area (lower middle part of the image) will be erased automatically. If AutoAreas is specified, the specified area will be erased automatically.
+**Specified area erasing:** If the subtitle position is relatively fixed, you are recommended to specify the erasing area directly to minimize missed erasing.
+When you choose specified area erasing, specify at least one area for CustomAreas.
+- auto: automatic erasing.
+- custom: specified area erasing.
+
      */
     public String getSubtitleEraseMethod() {
         return this.SubtitleEraseMethod;
     }
 
     /**
-     * Set 
-     * @param SubtitleEraseMethod 
+     * Set Subtitle erasing method.
+**Automatic erasing:** Video subtitles are automatically recognized using an AI model and are erased without traces to generate a new video. However, missed or incorrect erasing may occur due to image interference and special subtitle styles. In this case, you can specify the erasing area.
+When automatic erasing is used, if AutoAreas is not specified, the default area (lower middle part of the image) will be erased automatically. If AutoAreas is specified, the specified area will be erased automatically.
+**Specified area erasing:** If the subtitle position is relatively fixed, you are recommended to specify the erasing area directly to minimize missed erasing.
+When you choose specified area erasing, specify at least one area for CustomAreas.
+- auto: automatic erasing.
+- custom: specified area erasing.
+
+     * @param SubtitleEraseMethod Subtitle erasing method.
+**Automatic erasing:** Video subtitles are automatically recognized using an AI model and are erased without traces to generate a new video. However, missed or incorrect erasing may occur due to image interference and special subtitle styles. In this case, you can specify the erasing area.
+When automatic erasing is used, if AutoAreas is not specified, the default area (lower middle part of the image) will be erased automatically. If AutoAreas is specified, the specified area will be erased automatically.
+**Specified area erasing:** If the subtitle position is relatively fixed, you are recommended to specify the erasing area directly to minimize missed erasing.
+When you choose specified area erasing, specify at least one area for CustomAreas.
+- auto: automatic erasing.
+- custom: specified area erasing.
+
      */
     public void setSubtitleEraseMethod(String SubtitleEraseMethod) {
         this.SubtitleEraseMethod = SubtitleEraseMethod;
     }
 
     /**
-     * Get  
-     * @return SubtitleModel 
+     * Get Subtitle erasing model.
+**Standard edition (recommended):** For standard subtitle styles, you are recommended to select this edition to ensure better traceless effects in the details.
+**Area edition:** If the subtitles have special styles, such as calligraphy, shadow, or motion effects, you are recommended to select this edition to ensure a larger erasing area. However, the erasing effect in the details is not as good as the standard edition.
+- standard: standard edition.
+- area: area edition. 
+     * @return SubtitleModel Subtitle erasing model.
+**Standard edition (recommended):** For standard subtitle styles, you are recommended to select this edition to ensure better traceless effects in the details.
+**Area edition:** If the subtitles have special styles, such as calligraphy, shadow, or motion effects, you are recommended to select this edition to ensure a larger erasing area. However, the erasing effect in the details is not as good as the standard edition.
+- standard: standard edition.
+- area: area edition.
      */
     public String getSubtitleModel() {
         return this.SubtitleModel;
     }
 
     /**
-     * Set 
-     * @param SubtitleModel 
+     * Set Subtitle erasing model.
+**Standard edition (recommended):** For standard subtitle styles, you are recommended to select this edition to ensure better traceless effects in the details.
+**Area edition:** If the subtitles have special styles, such as calligraphy, shadow, or motion effects, you are recommended to select this edition to ensure a larger erasing area. However, the erasing effect in the details is not as good as the standard edition.
+- standard: standard edition.
+- area: area edition.
+     * @param SubtitleModel Subtitle erasing model.
+**Standard edition (recommended):** For standard subtitle styles, you are recommended to select this edition to ensure better traceless effects in the details.
+**Area edition:** If the subtitles have special styles, such as calligraphy, shadow, or motion effects, you are recommended to select this edition to ensure a larger erasing area. However, the erasing effect in the details is not as good as the standard edition.
+- standard: standard edition.
+- area: area edition.
      */
     public void setSubtitleModel(String SubtitleModel) {
         this.SubtitleModel = SubtitleModel;
     }
 
     /**
-     * Get  
-     * @return OcrSwitch 
+     * Get Whether to enable OCR subtitle extraction. The default value is OFF.
+OCR subtitle extraction is supported if and only if SubtitleEraseMethod is set to auto. When enabled, it identifies the text region that appears most persistently and stably within the automatic erasing area as the subtitle area. The text within the subtitle area is extracted and erased.
+- ON: enabled.
+-OFF: disabled. 
+     * @return OcrSwitch Whether to enable OCR subtitle extraction. The default value is OFF.
+OCR subtitle extraction is supported if and only if SubtitleEraseMethod is set to auto. When enabled, it identifies the text region that appears most persistently and stably within the automatic erasing area as the subtitle area. The text within the subtitle area is extracted and erased.
+- ON: enabled.
+-OFF: disabled.
      */
     public String getOcrSwitch() {
         return this.OcrSwitch;
     }
 
     /**
-     * Set 
-     * @param OcrSwitch 
+     * Set Whether to enable OCR subtitle extraction. The default value is OFF.
+OCR subtitle extraction is supported if and only if SubtitleEraseMethod is set to auto. When enabled, it identifies the text region that appears most persistently and stably within the automatic erasing area as the subtitle area. The text within the subtitle area is extracted and erased.
+- ON: enabled.
+-OFF: disabled.
+     * @param OcrSwitch Whether to enable OCR subtitle extraction. The default value is OFF.
+OCR subtitle extraction is supported if and only if SubtitleEraseMethod is set to auto. When enabled, it identifies the text region that appears most persistently and stably within the automatic erasing area as the subtitle area. The text within the subtitle area is extracted and erased.
+- ON: enabled.
+-OFF: disabled.
      */
     public void setOcrSwitch(String OcrSwitch) {
         this.OcrSwitch = OcrSwitch;
     }
 
     /**
-     * Get  
-     * @return SubtitleLang 
+     * Get Subtitle language, used for OCR recognition. Default value: zh_en. This parameter is valid only when OcrSwitch is ON.
+- zh_en: Chinese and English.
+- `multi`: others.
+The following are other languages supported for recognition:
+Chinese, English, Japanese, Korean, Spanish, French, German, Portuguese, Vietnamese, Malay, Russian, Italian, Dutch, Swedish, Finnish, Danish, Norwegian, Hungarian, Thai, Hindi, Arabic, Bengali (India), Gujarati (India), Kannada (India), Malayalam (India), Tamil (India), Telugu (India), Slovenian, Polish, Catalan, Bosnian, Czech, Estonian, Croatian, Punjabi, Marathi, Azerbaijani, Indonesian, Luxembourgish, Lithuanian, Latvian, Maltese, Slovak, Turkish, Kazakh, Greek, Irish, Belarusian, Khmer, Tagalog, Pashto, Persian, Tajik
+
+ 
+     * @return SubtitleLang Subtitle language, used for OCR recognition. Default value: zh_en. This parameter is valid only when OcrSwitch is ON.
+- zh_en: Chinese and English.
+- `multi`: others.
+The following are other languages supported for recognition:
+Chinese, English, Japanese, Korean, Spanish, French, German, Portuguese, Vietnamese, Malay, Russian, Italian, Dutch, Swedish, Finnish, Danish, Norwegian, Hungarian, Thai, Hindi, Arabic, Bengali (India), Gujarati (India), Kannada (India), Malayalam (India), Tamil (India), Telugu (India), Slovenian, Polish, Catalan, Bosnian, Czech, Estonian, Croatian, Punjabi, Marathi, Azerbaijani, Indonesian, Luxembourgish, Lithuanian, Latvian, Maltese, Slovak, Turkish, Kazakh, Greek, Irish, Belarusian, Khmer, Tagalog, Pashto, Persian, Tajik
+
+
      */
     public String getSubtitleLang() {
         return this.SubtitleLang;
     }
 
     /**
-     * Set 
-     * @param SubtitleLang 
+     * Set Subtitle language, used for OCR recognition. Default value: zh_en. This parameter is valid only when OcrSwitch is ON.
+- zh_en: Chinese and English.
+- `multi`: others.
+The following are other languages supported for recognition:
+Chinese, English, Japanese, Korean, Spanish, French, German, Portuguese, Vietnamese, Malay, Russian, Italian, Dutch, Swedish, Finnish, Danish, Norwegian, Hungarian, Thai, Hindi, Arabic, Bengali (India), Gujarati (India), Kannada (India), Malayalam (India), Tamil (India), Telugu (India), Slovenian, Polish, Catalan, Bosnian, Czech, Estonian, Croatian, Punjabi, Marathi, Azerbaijani, Indonesian, Luxembourgish, Lithuanian, Latvian, Maltese, Slovak, Turkish, Kazakh, Greek, Irish, Belarusian, Khmer, Tagalog, Pashto, Persian, Tajik
+
+
+     * @param SubtitleLang Subtitle language, used for OCR recognition. Default value: zh_en. This parameter is valid only when OcrSwitch is ON.
+- zh_en: Chinese and English.
+- `multi`: others.
+The following are other languages supported for recognition:
+Chinese, English, Japanese, Korean, Spanish, French, German, Portuguese, Vietnamese, Malay, Russian, Italian, Dutch, Swedish, Finnish, Danish, Norwegian, Hungarian, Thai, Hindi, Arabic, Bengali (India), Gujarati (India), Kannada (India), Malayalam (India), Tamil (India), Telugu (India), Slovenian, Polish, Catalan, Bosnian, Czech, Estonian, Croatian, Punjabi, Marathi, Azerbaijani, Indonesian, Luxembourgish, Lithuanian, Latvian, Maltese, Slovak, Turkish, Kazakh, Greek, Irish, Belarusian, Khmer, Tagalog, Pashto, Persian, Tajik
+
+
      */
     public void setSubtitleLang(String SubtitleLang) {
         this.SubtitleLang = SubtitleLang;
     }
 
     /**
-     * Get  
-     * @return SubtitleFormat 
+     * Get Subtitle file format. Default value: vtt. This parameter is valid only when OcrSwitch is set to ON.
+-srt format
+- vtt: WebVTT format. 
+     * @return SubtitleFormat Subtitle file format. Default value: vtt. This parameter is valid only when OcrSwitch is set to ON.
+-srt format
+- vtt: WebVTT format.
      */
     public String getSubtitleFormat() {
         return this.SubtitleFormat;
     }
 
     /**
-     * Set 
-     * @param SubtitleFormat 
+     * Set Subtitle file format. Default value: vtt. This parameter is valid only when OcrSwitch is set to ON.
+-srt format
+- vtt: WebVTT format.
+     * @param SubtitleFormat Subtitle file format. Default value: vtt. This parameter is valid only when OcrSwitch is set to ON.
+-srt format
+- vtt: WebVTT format.
      */
     public void setSubtitleFormat(String SubtitleFormat) {
         this.SubtitleFormat = SubtitleFormat;
     }
 
     /**
-     * Get  
-     * @return TransSwitch 
+     * Get Whether to enable subtitle translation. Default value: OFF. This parameter is valid only when OcrSwitch is ON.
+- ON: enabled.
+-OFF: disabled. 
+     * @return TransSwitch Whether to enable subtitle translation. Default value: OFF. This parameter is valid only when OcrSwitch is ON.
+- ON: enabled.
+-OFF: disabled.
      */
     public String getTransSwitch() {
         return this.TransSwitch;
     }
 
     /**
-     * Set 
-     * @param TransSwitch 
+     * Set Whether to enable subtitle translation. Default value: OFF. This parameter is valid only when OcrSwitch is ON.
+- ON: enabled.
+-OFF: disabled.
+     * @param TransSwitch Whether to enable subtitle translation. Default value: OFF. This parameter is valid only when OcrSwitch is ON.
+- ON: enabled.
+-OFF: disabled.
      */
     public void setTransSwitch(String TransSwitch) {
         this.TransSwitch = TransSwitch;
     }
 
     /**
-     * Get  
-     * @return TransDstLang 
+     * Get Subtitle translation target language. Default value: en. This parameter is valid only when TransSwitch is set to "ON".
+Supported languages:
+zh: Simplified Chinese
+English
+ja: Japanese
+ko: Korean
+fr: French
+es: Spanish
+it: Italian
+de: German
+tr: Turkish
+ru: Russian
+pt: Portuguese
+vi: Vietnamese
+id: Indonesian
+ms: Malay
+th: Thai
+ar: Arabic
+hi: Hindi 
+     * @return TransDstLang Subtitle translation target language. Default value: en. This parameter is valid only when TransSwitch is set to "ON".
+Supported languages:
+zh: Simplified Chinese
+English
+ja: Japanese
+ko: Korean
+fr: French
+es: Spanish
+it: Italian
+de: German
+tr: Turkish
+ru: Russian
+pt: Portuguese
+vi: Vietnamese
+id: Indonesian
+ms: Malay
+th: Thai
+ar: Arabic
+hi: Hindi
      */
     public String getTransDstLang() {
         return this.TransDstLang;
     }
 
     /**
-     * Set 
-     * @param TransDstLang 
+     * Set Subtitle translation target language. Default value: en. This parameter is valid only when TransSwitch is set to "ON".
+Supported languages:
+zh: Simplified Chinese
+English
+ja: Japanese
+ko: Korean
+fr: French
+es: Spanish
+it: Italian
+de: German
+tr: Turkish
+ru: Russian
+pt: Portuguese
+vi: Vietnamese
+id: Indonesian
+ms: Malay
+th: Thai
+ar: Arabic
+hi: Hindi
+     * @param TransDstLang Subtitle translation target language. Default value: en. This parameter is valid only when TransSwitch is set to "ON".
+Supported languages:
+zh: Simplified Chinese
+English
+ja: Japanese
+ko: Korean
+fr: French
+es: Spanish
+it: Italian
+de: German
+tr: Turkish
+ru: Russian
+pt: Portuguese
+vi: Vietnamese
+id: Indonesian
+ms: Malay
+th: Thai
+ar: Arabic
+hi: Hindi
      */
     public void setTransDstLang(String TransDstLang) {
         this.TransDstLang = TransDstLang;
     }
 
     /**
-     * Get  
-     * @return AutoAreas 
+     * Get Custom area for automatic erasing.
+For the specified area, AI models are used to automatically detect and erase the target objects.
+Note: When the erasing method is set to custom, this parameter is invalid. When a template is modified, input [] for the erasing area; if this parameter is unspecified, the template area information will remain unchanged. 
+     * @return AutoAreas Custom area for automatic erasing.
+For the specified area, AI models are used to automatically detect and erase the target objects.
+Note: When the erasing method is set to custom, this parameter is invalid. When a template is modified, input [] for the erasing area; if this parameter is unspecified, the template area information will remain unchanged.
      */
     public EraseArea [] getAutoAreas() {
         return this.AutoAreas;
     }
 
     /**
-     * Set 
-     * @param AutoAreas 
+     * Set Custom area for automatic erasing.
+For the specified area, AI models are used to automatically detect and erase the target objects.
+Note: When the erasing method is set to custom, this parameter is invalid. When a template is modified, input [] for the erasing area; if this parameter is unspecified, the template area information will remain unchanged.
+     * @param AutoAreas Custom area for automatic erasing.
+For the specified area, AI models are used to automatically detect and erase the target objects.
+Note: When the erasing method is set to custom, this parameter is invalid. When a template is modified, input [] for the erasing area; if this parameter is unspecified, the template area information will remain unchanged.
      */
     public void setAutoAreas(EraseArea [] AutoAreas) {
         this.AutoAreas = AutoAreas;
     }
 
     /**
-     * Get  
-     * @return CustomAreas 
+     * Get Specify a custom region for erasure.
+For the specified area, erase the target objects directly without detection and recognition within a selected time period.
+Note: When a template is modified, input [] for the erasing area; if this parameter is unspecified, the template area information will remain unchanged. 
+     * @return CustomAreas Specify a custom region for erasure.
+For the specified area, erase the target objects directly without detection and recognition within a selected time period.
+Note: When a template is modified, input [] for the erasing area; if this parameter is unspecified, the template area information will remain unchanged.
      */
     public EraseTimeArea [] getCustomAreas() {
         return this.CustomAreas;
     }
 
     /**
-     * Set 
-     * @param CustomAreas 
+     * Set Specify a custom region for erasure.
+For the specified area, erase the target objects directly without detection and recognition within a selected time period.
+Note: When a template is modified, input [] for the erasing area; if this parameter is unspecified, the template area information will remain unchanged.
+     * @param CustomAreas Specify a custom region for erasure.
+For the specified area, erase the target objects directly without detection and recognition within a selected time period.
+Note: When a template is modified, input [] for the erasing area; if this parameter is unspecified, the template area information will remain unchanged.
      */
     public void setCustomAreas(EraseTimeArea [] CustomAreas) {
         this.CustomAreas = CustomAreas;

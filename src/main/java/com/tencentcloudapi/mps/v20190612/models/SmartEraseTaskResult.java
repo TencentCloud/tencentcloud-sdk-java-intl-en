@@ -45,14 +45,14 @@ public class SmartEraseTaskResult extends AbstractModel {
     private String Message;
 
     /**
-    * 
+    * Intelligent removal input.
     */
     @SerializedName("Input")
     @Expose
     private SmartEraseTaskInput Input;
 
     /**
-    * 
+    * Output of the intelligent erasure task.
     */
     @SerializedName("Output")
     @Expose
@@ -128,32 +128,32 @@ public class SmartEraseTaskResult extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return Input 
+     * Get Intelligent removal input. 
+     * @return Input Intelligent removal input.
      */
     public SmartEraseTaskInput getInput() {
         return this.Input;
     }
 
     /**
-     * Set 
-     * @param Input 
+     * Set Intelligent removal input.
+     * @param Input Intelligent removal input.
      */
     public void setInput(SmartEraseTaskInput Input) {
         this.Input = Input;
     }
 
     /**
-     * Get  
-     * @return Output 
+     * Get Output of the intelligent erasure task. 
+     * @return Output Output of the intelligent erasure task.
      */
     public AiAnalysisTaskDelLogoOutput getOutput() {
         return this.Output;
     }
 
     /**
-     * Set 
-     * @param Output 
+     * Set Output of the intelligent erasure task.
+     * @param Output Output of the intelligent erasure task.
      */
     public void setOutput(AiAnalysisTaskDelLogoOutput Output) {
         this.Output = Output;

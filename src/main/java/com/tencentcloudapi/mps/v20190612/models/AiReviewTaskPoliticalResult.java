@@ -52,14 +52,14 @@ public class AiReviewTaskPoliticalResult extends AbstractModel {
     private String Message;
 
     /**
-    * Content review sensitive task input.
+    * Sensitive task input for content review.
     */
     @SerializedName("Input")
     @Expose
     private AiReviewPoliticalTaskInput Input;
 
     /**
-    * 
+    * Output of sensitive tasks in content review.
     */
     @SerializedName("Output")
     @Expose
@@ -130,32 +130,32 @@ public class AiReviewTaskPoliticalResult extends AbstractModel {
     }
 
     /**
-     * Get Content review sensitive task input. 
-     * @return Input Content review sensitive task input.
+     * Get Sensitive task input for content review. 
+     * @return Input Sensitive task input for content review.
      */
     public AiReviewPoliticalTaskInput getInput() {
         return this.Input;
     }
 
     /**
-     * Set Content review sensitive task input.
-     * @param Input Content review sensitive task input.
+     * Set Sensitive task input for content review.
+     * @param Input Sensitive task input for content review.
      */
     public void setInput(AiReviewPoliticalTaskInput Input) {
         this.Input = Input;
     }
 
     /**
-     * Get  
-     * @return Output 
+     * Get Output of sensitive tasks in content review. 
+     * @return Output Output of sensitive tasks in content review.
      */
     public AiReviewPoliticalTaskOutput getOutput() {
         return this.Output;
     }
 
     /**
-     * Set 
-     * @param Output 
+     * Set Output of sensitive tasks in content review.
+     * @param Output Output of sensitive tasks in content review.
      */
     public void setOutput(AiReviewPoliticalTaskOutput Output) {
         this.Output = Output;

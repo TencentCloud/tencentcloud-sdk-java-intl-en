@@ -32,7 +32,7 @@ public class OverrideTranscodeParameter extends AbstractModel {
 
     /**
     * Indicates whether to remove video data. Parameter value:
-<li>`0`: retention;</li>
+<li>0: retention</li>
 <li>1: Remove.</li>
     */
     @SerializedName("RemoveVideo")
@@ -41,7 +41,7 @@ public class OverrideTranscodeParameter extends AbstractModel {
 
     /**
     * Indicates whether to remove audio data. Parameter value:
-<li>`0`: retention;</li>
+<li>0: retention</li>
 <li>1: Remove.</li>
     */
     @SerializedName("RemoveAudio")
@@ -63,7 +63,7 @@ public class OverrideTranscodeParameter extends AbstractModel {
     private AudioTemplateInfoForUpdate AudioTemplate;
 
     /**
-    * 
+    * Top Speed Codec transcoding parameters.
     */
     @SerializedName("TEHDConfig")
     @Expose
@@ -115,10 +115,10 @@ public class OverrideTranscodeParameter extends AbstractModel {
 
     /**
      * Get Indicates whether to remove video data. Parameter value:
-<li>`0`: retention;</li>
+<li>0: retention</li>
 <li>1: Remove.</li> 
      * @return RemoveVideo Indicates whether to remove video data. Parameter value:
-<li>`0`: retention;</li>
+<li>0: retention</li>
 <li>1: Remove.</li>
      */
     public Long getRemoveVideo() {
@@ -127,10 +127,10 @@ public class OverrideTranscodeParameter extends AbstractModel {
 
     /**
      * Set Indicates whether to remove video data. Parameter value:
-<li>`0`: retention;</li>
+<li>0: retention</li>
 <li>1: Remove.</li>
      * @param RemoveVideo Indicates whether to remove video data. Parameter value:
-<li>`0`: retention;</li>
+<li>0: retention</li>
 <li>1: Remove.</li>
      */
     public void setRemoveVideo(Long RemoveVideo) {
@@ -139,10 +139,10 @@ public class OverrideTranscodeParameter extends AbstractModel {
 
     /**
      * Get Indicates whether to remove audio data. Parameter value:
-<li>`0`: retention;</li>
+<li>0: retention</li>
 <li>1: Remove.</li> 
      * @return RemoveAudio Indicates whether to remove audio data. Parameter value:
-<li>`0`: retention;</li>
+<li>0: retention</li>
 <li>1: Remove.</li>
      */
     public Long getRemoveAudio() {
@@ -151,10 +151,10 @@ public class OverrideTranscodeParameter extends AbstractModel {
 
     /**
      * Set Indicates whether to remove audio data. Parameter value:
-<li>`0`: retention;</li>
+<li>0: retention</li>
 <li>1: Remove.</li>
      * @param RemoveAudio Indicates whether to remove audio data. Parameter value:
-<li>`0`: retention;</li>
+<li>0: retention</li>
 <li>1: Remove.</li>
      */
     public void setRemoveAudio(Long RemoveAudio) {
@@ -194,16 +194,16 @@ public class OverrideTranscodeParameter extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return TEHDConfig 
+     * Get Top Speed Codec transcoding parameters. 
+     * @return TEHDConfig Top Speed Codec transcoding parameters.
      */
     public TEHDConfigForUpdate getTEHDConfig() {
         return this.TEHDConfig;
     }
 
     /**
-     * Set 
-     * @param TEHDConfig 
+     * Set Top Speed Codec transcoding parameters.
+     * @param TEHDConfig Top Speed Codec transcoding parameters.
      */
     public void setTEHDConfig(TEHDConfigForUpdate TEHDConfig) {
         this.TEHDConfig = TEHDConfig;

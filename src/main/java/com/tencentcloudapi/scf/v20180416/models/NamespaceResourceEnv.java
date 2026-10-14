@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class NamespaceResourceEnv extends AbstractModel {
 
     /**
-    * 
+    * Resource pool based on a TKE cluster
     */
     @SerializedName("TKE")
     @Expose
     private NamespaceResourceEnvTKE TKE;
 
     /**
-    * 
+    * Namespace of the near-offline computing type
     */
     @SerializedName("OFFLINE")
     @Expose
     private Boolean OFFLINE;
 
     /**
-     * Get  
-     * @return TKE 
+     * Get Resource pool based on a TKE cluster 
+     * @return TKE Resource pool based on a TKE cluster
      */
     public NamespaceResourceEnvTKE getTKE() {
         return this.TKE;
     }
 
     /**
-     * Set 
-     * @param TKE 
+     * Set Resource pool based on a TKE cluster
+     * @param TKE Resource pool based on a TKE cluster
      */
     public void setTKE(NamespaceResourceEnvTKE TKE) {
         this.TKE = TKE;
     }
 
     /**
-     * Get  
-     * @return OFFLINE 
+     * Get Namespace of the near-offline computing type 
+     * @return OFFLINE Namespace of the near-offline computing type
      */
     public Boolean getOFFLINE() {
         return this.OFFLINE;
     }
 
     /**
-     * Set 
-     * @param OFFLINE 
+     * Set Namespace of the near-offline computing type
+     * @param OFFLINE Namespace of the near-offline computing type
      */
     public void setOFFLINE(Boolean OFFLINE) {
         this.OFFLINE = OFFLINE;

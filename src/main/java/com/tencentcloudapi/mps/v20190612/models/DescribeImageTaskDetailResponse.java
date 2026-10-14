@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeImageTaskDetailResponse extends AbstractModel {
 
     /**
-    * 
+    * <p>Task type. Valid value: </p><li>WorkflowTask: Workflow processing task.</li>
     */
     @SerializedName("TaskType")
     @Expose
     private String TaskType;
 
     /**
-    * 
+    * <p>Task status. Valid values: </p><li>WAITING: Waiting; </li><li>PROCESSING: Processing; </li><li>FINISH: Completed.</li>
     */
     @SerializedName("Status")
     @Expose
@@ -59,21 +59,21 @@ public class DescribeImageTaskDetailResponse extends AbstractModel {
     private String Message;
 
     /**
-    * 
+    * <p>Execution status and result of the image processing task.</p>
     */
     @SerializedName("ImageProcessTaskResultSet")
     @Expose
     private ImageProcessTaskResult [] ImageProcessTaskResultSet;
 
     /**
-    * 
+    * <p>Task creation time, in <a href="https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52">ISO date and time format</a>.</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 
+    * <p>Task completion time, in <a href="https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52">ISO date and time format</a>.</p>
     */
     @SerializedName("FinishTime")
     @Expose
@@ -108,32 +108,32 @@ public class DescribeImageTaskDetailResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get  
-     * @return TaskType 
+     * Get <p>Task type. Valid value: </p><li>WorkflowTask: Workflow processing task.</li> 
+     * @return TaskType <p>Task type. Valid value: </p><li>WorkflowTask: Workflow processing task.</li>
      */
     public String getTaskType() {
         return this.TaskType;
     }
 
     /**
-     * Set 
-     * @param TaskType 
+     * Set <p>Task type. Valid value: </p><li>WorkflowTask: Workflow processing task.</li>
+     * @param TaskType <p>Task type. Valid value: </p><li>WorkflowTask: Workflow processing task.</li>
      */
     public void setTaskType(String TaskType) {
         this.TaskType = TaskType;
     }
 
     /**
-     * Get  
-     * @return Status 
+     * Get <p>Task status. Valid values: </p><li>WAITING: Waiting; </li><li>PROCESSING: Processing; </li><li>FINISH: Completed.</li> 
+     * @return Status <p>Task status. Valid values: </p><li>WAITING: Waiting; </li><li>PROCESSING: Processing; </li><li>FINISH: Completed.</li>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 
-     * @param Status 
+     * Set <p>Task status. Valid values: </p><li>WAITING: Waiting; </li><li>PROCESSING: Processing; </li><li>FINISH: Completed.</li>
+     * @param Status <p>Task status. Valid values: </p><li>WAITING: Waiting; </li><li>PROCESSING: Processing; </li><li>FINISH: Completed.</li>
      */
     public void setStatus(String Status) {
         this.Status = Status;
@@ -188,48 +188,48 @@ public class DescribeImageTaskDetailResponse extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return ImageProcessTaskResultSet 
+     * Get <p>Execution status and result of the image processing task.</p> 
+     * @return ImageProcessTaskResultSet <p>Execution status and result of the image processing task.</p>
      */
     public ImageProcessTaskResult [] getImageProcessTaskResultSet() {
         return this.ImageProcessTaskResultSet;
     }
 
     /**
-     * Set 
-     * @param ImageProcessTaskResultSet 
+     * Set <p>Execution status and result of the image processing task.</p>
+     * @param ImageProcessTaskResultSet <p>Execution status and result of the image processing task.</p>
      */
     public void setImageProcessTaskResultSet(ImageProcessTaskResult [] ImageProcessTaskResultSet) {
         this.ImageProcessTaskResultSet = ImageProcessTaskResultSet;
     }
 
     /**
-     * Get  
-     * @return CreateTime 
+     * Get <p>Task creation time, in <a href="https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52">ISO date and time format</a>.</p> 
+     * @return CreateTime <p>Task creation time, in <a href="https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52">ISO date and time format</a>.</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 
-     * @param CreateTime 
+     * Set <p>Task creation time, in <a href="https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52">ISO date and time format</a>.</p>
+     * @param CreateTime <p>Task creation time, in <a href="https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52">ISO date and time format</a>.</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get  
-     * @return FinishTime 
+     * Get <p>Task completion time, in <a href="https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52">ISO date and time format</a>.</p> 
+     * @return FinishTime <p>Task completion time, in <a href="https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52">ISO date and time format</a>.</p>
      */
     public String getFinishTime() {
         return this.FinishTime;
     }
 
     /**
-     * Set 
-     * @param FinishTime 
+     * Set <p>Task completion time, in <a href="https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52">ISO date and time format</a>.</p>
+     * @param FinishTime <p>Task completion time, in <a href="https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52">ISO date and time format</a>.</p>
      */
     public void setFinishTime(String FinishTime) {
         this.FinishTime = FinishTime;

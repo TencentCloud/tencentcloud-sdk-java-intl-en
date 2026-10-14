@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class WebSearchContent extends AbstractModel {
 
     /**
-    * 
+    * Web search result, a string in json format
     */
     @SerializedName("Content")
     @Expose
     private String Content;
 
     /**
-     * Get  
-     * @return Content 
+     * Get Web search result, a string in json format 
+     * @return Content Web search result, a string in json format
      */
     public String getContent() {
         return this.Content;
     }
 
     /**
-     * Set 
-     * @param Content 
+     * Set Web search result, a string in json format
+     * @param Content Web search result, a string in json format
      */
     public void setContent(String Content) {
         this.Content = Content;

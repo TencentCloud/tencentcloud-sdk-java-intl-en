@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class ProtectHostConfig extends AbstractModel {
 
     /**
-    * 
+    * Unique host ID.
     */
     @SerializedName("Quuid")
     @Expose
     private String Quuid;
 
     /**
-    * 
+    * Protection switch: 0 - off; 1 - on
     */
     @SerializedName("ProtectSwitch")
     @Expose
     private Long ProtectSwitch;
 
     /**
-    * 
+    * Auto recovery switch. 0: disabled. 1: enabled.
     */
     @SerializedName("AutoRecovery")
     @Expose
     private Long AutoRecovery;
 
     /**
-     * Get  
-     * @return Quuid 
+     * Get Unique host ID. 
+     * @return Quuid Unique host ID.
      */
     public String getQuuid() {
         return this.Quuid;
     }
 
     /**
-     * Set 
-     * @param Quuid 
+     * Set Unique host ID.
+     * @param Quuid Unique host ID.
      */
     public void setQuuid(String Quuid) {
         this.Quuid = Quuid;
     }
 
     /**
-     * Get  
-     * @return ProtectSwitch 
+     * Get Protection switch: 0 - off; 1 - on 
+     * @return ProtectSwitch Protection switch: 0 - off; 1 - on
      */
     public Long getProtectSwitch() {
         return this.ProtectSwitch;
     }
 
     /**
-     * Set 
-     * @param ProtectSwitch 
+     * Set Protection switch: 0 - off; 1 - on
+     * @param ProtectSwitch Protection switch: 0 - off; 1 - on
      */
     public void setProtectSwitch(Long ProtectSwitch) {
         this.ProtectSwitch = ProtectSwitch;
     }
 
     /**
-     * Get  
-     * @return AutoRecovery 
+     * Get Auto recovery switch. 0: disabled. 1: enabled. 
+     * @return AutoRecovery Auto recovery switch. 0: disabled. 1: enabled.
      */
     public Long getAutoRecovery() {
         return this.AutoRecovery;
     }
 
     /**
-     * Set 
-     * @param AutoRecovery 
+     * Set Auto recovery switch. 0: disabled. 1: enabled.
+     * @param AutoRecovery Auto recovery switch. 0: disabled. 1: enabled.
      */
     public void setAutoRecovery(Long AutoRecovery) {
         this.AutoRecovery = AutoRecovery;

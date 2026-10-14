@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ColorEnhanceConfig extends AbstractModel {
 
     /**
-    * Capability configuration switch. Available values:
+    * Capability configuration switch. Valid values:
 <li>ON: enabled;</li>
 <li>OFF: disabled</li>
 Default value: ON.
@@ -34,18 +34,22 @@ Default value: ON.
     private String Switch;
 
     /**
-    * 
+    * Type. Valid values:
+<li>weak</li>
+<li>normal</li>
+<li>strong</li>
+Default value: weak.
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-     * Get Capability configuration switch. Available values:
+     * Get Capability configuration switch. Valid values:
 <li>ON: enabled;</li>
 <li>OFF: disabled</li>
 Default value: ON. 
-     * @return Switch Capability configuration switch. Available values:
+     * @return Switch Capability configuration switch. Valid values:
 <li>ON: enabled;</li>
 <li>OFF: disabled</li>
 Default value: ON.
@@ -55,11 +59,11 @@ Default value: ON.
     }
 
     /**
-     * Set Capability configuration switch. Available values:
+     * Set Capability configuration switch. Valid values:
 <li>ON: enabled;</li>
 <li>OFF: disabled</li>
 Default value: ON.
-     * @param Switch Capability configuration switch. Available values:
+     * @param Switch Capability configuration switch. Valid values:
 <li>ON: enabled;</li>
 <li>OFF: disabled</li>
 Default value: ON.
@@ -69,16 +73,32 @@ Default value: ON.
     }
 
     /**
-     * Get  
-     * @return Type 
+     * Get Type. Valid values:
+<li>weak</li>
+<li>normal</li>
+<li>strong</li>
+Default value: weak. 
+     * @return Type Type. Valid values:
+<li>weak</li>
+<li>normal</li>
+<li>strong</li>
+Default value: weak.
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 
-     * @param Type 
+     * Set Type. Valid values:
+<li>weak</li>
+<li>normal</li>
+<li>strong</li>
+Default value: weak.
+     * @param Type Type. Valid values:
+<li>weak</li>
+<li>normal</li>
+<li>strong</li>
+Default value: weak.
      */
     public void setType(String Type) {
         this.Type = Type;

@@ -24,555 +24,601 @@ import java.util.HashMap;
 public class FlowSRTInfo extends AbstractModel {
 
     /**
-    * The timestamp (seconds).
+    * <p>Timestamp in seconds.</p>
     */
     @SerializedName("Timestamp")
     @Expose
     private Long Timestamp;
 
     /**
-    * The packet loss rate for sending.
+    * <p>Packet loss rate on transmitting.</p>
     */
     @SerializedName("SendPacketLossRate")
     @Expose
     private Long SendPacketLossRate;
 
     /**
-    * The retry rate for sending.
+    * <p>Retransmission rate.</p>
     */
     @SerializedName("SendRetransmissionRate")
     @Expose
     private Long SendRetransmissionRate;
 
     /**
-    * The packet loss rate for receiving.
+    * <p>Packet loss rate on receiving.</p>
     */
     @SerializedName("RecvPacketLossRate")
     @Expose
     private Long RecvPacketLossRate;
 
     /**
-    * The retry rate for receiving.
+    * <p>Receiving retransmission rate.</p>
     */
     @SerializedName("RecvRetransmissionRate")
     @Expose
     private Long RecvRetransmissionRate;
 
     /**
-    * The peer RTT.
+    * <p>RTT latency to the peer.</p>
     */
     @SerializedName("RTT")
     @Expose
     private Long RTT;
 
     /**
-    * The ID of a push session.
+    * <p>Flag the same streaming session.</p>
     */
     @SerializedName("SessionId")
     @Expose
     private String SessionId;
 
     /**
-    * The number of dropped packets for sending.
+    * <p>Number of discarded packets on sending.</p>
     */
     @SerializedName("SendPacketDropNumber")
     @Expose
     private Long SendPacketDropNumber;
 
     /**
-    * The number of dropped packets for receiving.
+    * <p>Number of received dropped packets.</p>
     */
     @SerializedName("RecvPacketDropNumber")
     @Expose
     private Long RecvPacketDropNumber;
 
     /**
-    * Bandwidth
+    * <p>Bandwidth.</p>
     */
     @SerializedName("Bandwidth")
     @Expose
     private Float Bandwidth;
 
     /**
-    * transmit bandwidth
+    * <p>Transmit bandwidth</p>
     */
     @SerializedName("SendBandwidth")
     @Expose
     private Float SendBandwidth;
 
     /**
-    * Receiving bandwidth
+    * <p>Receiving bandwidth</p>
     */
     @SerializedName("RecvBandwidth")
     @Expose
     private Float RecvBandwidth;
 
     /**
-    * Sent packet count
+    * <p>Sent packet count</p>
     */
     @SerializedName("SendPackets")
     @Expose
     private Long SendPackets;
 
     /**
-    * Received packets
+    * <p>Number of received packets</p>
     */
     @SerializedName("RecvPackets")
     @Expose
     private Long RecvPackets;
 
     /**
-    * Sent lost packets
+    * <p>Sending lost packets</p>
     */
     @SerializedName("SendLostPackets")
     @Expose
     private Long SendLostPackets;
 
     /**
-    * accept lost packets
+    * <p>Accept lost packets</p>
     */
     @SerializedName("RecvLostPackets")
     @Expose
     private Long RecvLostPackets;
 
     /**
-    * Retransmitted packet count
+    * <p>Sent retransmission packet count</p>
     */
     @SerializedName("SendRetransmitPackets")
     @Expose
     private Long SendRetransmitPackets;
 
     /**
-    * Retransmitted packets received
+    * <p>Number of received retransmission packets</p>
     */
     @SerializedName("RecvRetransmitPackets")
     @Expose
     private Long RecvRetransmitPackets;
 
     /**
-    * Window size
+    * <p>Flight window size</p>
     */
     @SerializedName("FlightSize")
     @Expose
     private Long FlightSize;
 
     /**
-    * Congestion window
+    * <p>Congestion window.</p>
     */
     @SerializedName("CongestionWindow")
     @Expose
     private Long CongestionWindow;
 
     /**
-    * Sending buffer (ms)
+    * <p>Sending buffer (ms)</p>
     */
     @SerializedName("SendBuffer")
     @Expose
     private Long SendBuffer;
 
     /**
-    * Receive buffer (ms)
+    * <p>Receive buffer (ms)</p>
     */
     @SerializedName("RecvBuffer")
     @Expose
     private Long RecvBuffer;
 
     /**
-    * Send delay
+    * <p>Sending delay</p>
     */
     @SerializedName("SendLatency")
     @Expose
     private Long SendLatency;
 
     /**
-    * receive latency
+    * <p>Receive latency</p>
     */
     @SerializedName("RecvLatency")
     @Expose
     private Long RecvLatency;
 
     /**
-     * Get The timestamp (seconds). 
-     * @return Timestamp The timestamp (seconds).
+    * <p>Sent NAK packet count</p>
+    */
+    @SerializedName("SendNAKPackets")
+    @Expose
+    private Long SendNAKPackets;
+
+    /**
+    * <p>Number of received NAK packets</p>
+    */
+    @SerializedName("RecvNAKPackets")
+    @Expose
+    private Long RecvNAKPackets;
+
+    /**
+     * Get <p>Timestamp in seconds.</p> 
+     * @return Timestamp <p>Timestamp in seconds.</p>
      */
     public Long getTimestamp() {
         return this.Timestamp;
     }
 
     /**
-     * Set The timestamp (seconds).
-     * @param Timestamp The timestamp (seconds).
+     * Set <p>Timestamp in seconds.</p>
+     * @param Timestamp <p>Timestamp in seconds.</p>
      */
     public void setTimestamp(Long Timestamp) {
         this.Timestamp = Timestamp;
     }
 
     /**
-     * Get The packet loss rate for sending. 
-     * @return SendPacketLossRate The packet loss rate for sending.
+     * Get <p>Packet loss rate on transmitting.</p> 
+     * @return SendPacketLossRate <p>Packet loss rate on transmitting.</p>
      */
     public Long getSendPacketLossRate() {
         return this.SendPacketLossRate;
     }
 
     /**
-     * Set The packet loss rate for sending.
-     * @param SendPacketLossRate The packet loss rate for sending.
+     * Set <p>Packet loss rate on transmitting.</p>
+     * @param SendPacketLossRate <p>Packet loss rate on transmitting.</p>
      */
     public void setSendPacketLossRate(Long SendPacketLossRate) {
         this.SendPacketLossRate = SendPacketLossRate;
     }
 
     /**
-     * Get The retry rate for sending. 
-     * @return SendRetransmissionRate The retry rate for sending.
+     * Get <p>Retransmission rate.</p> 
+     * @return SendRetransmissionRate <p>Retransmission rate.</p>
      */
     public Long getSendRetransmissionRate() {
         return this.SendRetransmissionRate;
     }
 
     /**
-     * Set The retry rate for sending.
-     * @param SendRetransmissionRate The retry rate for sending.
+     * Set <p>Retransmission rate.</p>
+     * @param SendRetransmissionRate <p>Retransmission rate.</p>
      */
     public void setSendRetransmissionRate(Long SendRetransmissionRate) {
         this.SendRetransmissionRate = SendRetransmissionRate;
     }
 
     /**
-     * Get The packet loss rate for receiving. 
-     * @return RecvPacketLossRate The packet loss rate for receiving.
+     * Get <p>Packet loss rate on receiving.</p> 
+     * @return RecvPacketLossRate <p>Packet loss rate on receiving.</p>
      */
     public Long getRecvPacketLossRate() {
         return this.RecvPacketLossRate;
     }
 
     /**
-     * Set The packet loss rate for receiving.
-     * @param RecvPacketLossRate The packet loss rate for receiving.
+     * Set <p>Packet loss rate on receiving.</p>
+     * @param RecvPacketLossRate <p>Packet loss rate on receiving.</p>
      */
     public void setRecvPacketLossRate(Long RecvPacketLossRate) {
         this.RecvPacketLossRate = RecvPacketLossRate;
     }
 
     /**
-     * Get The retry rate for receiving. 
-     * @return RecvRetransmissionRate The retry rate for receiving.
+     * Get <p>Receiving retransmission rate.</p> 
+     * @return RecvRetransmissionRate <p>Receiving retransmission rate.</p>
      */
     public Long getRecvRetransmissionRate() {
         return this.RecvRetransmissionRate;
     }
 
     /**
-     * Set The retry rate for receiving.
-     * @param RecvRetransmissionRate The retry rate for receiving.
+     * Set <p>Receiving retransmission rate.</p>
+     * @param RecvRetransmissionRate <p>Receiving retransmission rate.</p>
      */
     public void setRecvRetransmissionRate(Long RecvRetransmissionRate) {
         this.RecvRetransmissionRate = RecvRetransmissionRate;
     }
 
     /**
-     * Get The peer RTT. 
-     * @return RTT The peer RTT.
+     * Get <p>RTT latency to the peer.</p> 
+     * @return RTT <p>RTT latency to the peer.</p>
      */
     public Long getRTT() {
         return this.RTT;
     }
 
     /**
-     * Set The peer RTT.
-     * @param RTT The peer RTT.
+     * Set <p>RTT latency to the peer.</p>
+     * @param RTT <p>RTT latency to the peer.</p>
      */
     public void setRTT(Long RTT) {
         this.RTT = RTT;
     }
 
     /**
-     * Get The ID of a push session. 
-     * @return SessionId The ID of a push session.
+     * Get <p>Flag the same streaming session.</p> 
+     * @return SessionId <p>Flag the same streaming session.</p>
      */
     public String getSessionId() {
         return this.SessionId;
     }
 
     /**
-     * Set The ID of a push session.
-     * @param SessionId The ID of a push session.
+     * Set <p>Flag the same streaming session.</p>
+     * @param SessionId <p>Flag the same streaming session.</p>
      */
     public void setSessionId(String SessionId) {
         this.SessionId = SessionId;
     }
 
     /**
-     * Get The number of dropped packets for sending. 
-     * @return SendPacketDropNumber The number of dropped packets for sending.
+     * Get <p>Number of discarded packets on sending.</p> 
+     * @return SendPacketDropNumber <p>Number of discarded packets on sending.</p>
      */
     public Long getSendPacketDropNumber() {
         return this.SendPacketDropNumber;
     }
 
     /**
-     * Set The number of dropped packets for sending.
-     * @param SendPacketDropNumber The number of dropped packets for sending.
+     * Set <p>Number of discarded packets on sending.</p>
+     * @param SendPacketDropNumber <p>Number of discarded packets on sending.</p>
      */
     public void setSendPacketDropNumber(Long SendPacketDropNumber) {
         this.SendPacketDropNumber = SendPacketDropNumber;
     }
 
     /**
-     * Get The number of dropped packets for receiving. 
-     * @return RecvPacketDropNumber The number of dropped packets for receiving.
+     * Get <p>Number of received dropped packets.</p> 
+     * @return RecvPacketDropNumber <p>Number of received dropped packets.</p>
      */
     public Long getRecvPacketDropNumber() {
         return this.RecvPacketDropNumber;
     }
 
     /**
-     * Set The number of dropped packets for receiving.
-     * @param RecvPacketDropNumber The number of dropped packets for receiving.
+     * Set <p>Number of received dropped packets.</p>
+     * @param RecvPacketDropNumber <p>Number of received dropped packets.</p>
      */
     public void setRecvPacketDropNumber(Long RecvPacketDropNumber) {
         this.RecvPacketDropNumber = RecvPacketDropNumber;
     }
 
     /**
-     * Get Bandwidth 
-     * @return Bandwidth Bandwidth
+     * Get <p>Bandwidth.</p> 
+     * @return Bandwidth <p>Bandwidth.</p>
      */
     public Float getBandwidth() {
         return this.Bandwidth;
     }
 
     /**
-     * Set Bandwidth
-     * @param Bandwidth Bandwidth
+     * Set <p>Bandwidth.</p>
+     * @param Bandwidth <p>Bandwidth.</p>
      */
     public void setBandwidth(Float Bandwidth) {
         this.Bandwidth = Bandwidth;
     }
 
     /**
-     * Get transmit bandwidth 
-     * @return SendBandwidth transmit bandwidth
+     * Get <p>Transmit bandwidth</p> 
+     * @return SendBandwidth <p>Transmit bandwidth</p>
      */
     public Float getSendBandwidth() {
         return this.SendBandwidth;
     }
 
     /**
-     * Set transmit bandwidth
-     * @param SendBandwidth transmit bandwidth
+     * Set <p>Transmit bandwidth</p>
+     * @param SendBandwidth <p>Transmit bandwidth</p>
      */
     public void setSendBandwidth(Float SendBandwidth) {
         this.SendBandwidth = SendBandwidth;
     }
 
     /**
-     * Get Receiving bandwidth 
-     * @return RecvBandwidth Receiving bandwidth
+     * Get <p>Receiving bandwidth</p> 
+     * @return RecvBandwidth <p>Receiving bandwidth</p>
      */
     public Float getRecvBandwidth() {
         return this.RecvBandwidth;
     }
 
     /**
-     * Set Receiving bandwidth
-     * @param RecvBandwidth Receiving bandwidth
+     * Set <p>Receiving bandwidth</p>
+     * @param RecvBandwidth <p>Receiving bandwidth</p>
      */
     public void setRecvBandwidth(Float RecvBandwidth) {
         this.RecvBandwidth = RecvBandwidth;
     }
 
     /**
-     * Get Sent packet count 
-     * @return SendPackets Sent packet count
+     * Get <p>Sent packet count</p> 
+     * @return SendPackets <p>Sent packet count</p>
      */
     public Long getSendPackets() {
         return this.SendPackets;
     }
 
     /**
-     * Set Sent packet count
-     * @param SendPackets Sent packet count
+     * Set <p>Sent packet count</p>
+     * @param SendPackets <p>Sent packet count</p>
      */
     public void setSendPackets(Long SendPackets) {
         this.SendPackets = SendPackets;
     }
 
     /**
-     * Get Received packets 
-     * @return RecvPackets Received packets
+     * Get <p>Number of received packets</p> 
+     * @return RecvPackets <p>Number of received packets</p>
      */
     public Long getRecvPackets() {
         return this.RecvPackets;
     }
 
     /**
-     * Set Received packets
-     * @param RecvPackets Received packets
+     * Set <p>Number of received packets</p>
+     * @param RecvPackets <p>Number of received packets</p>
      */
     public void setRecvPackets(Long RecvPackets) {
         this.RecvPackets = RecvPackets;
     }
 
     /**
-     * Get Sent lost packets 
-     * @return SendLostPackets Sent lost packets
+     * Get <p>Sending lost packets</p> 
+     * @return SendLostPackets <p>Sending lost packets</p>
      */
     public Long getSendLostPackets() {
         return this.SendLostPackets;
     }
 
     /**
-     * Set Sent lost packets
-     * @param SendLostPackets Sent lost packets
+     * Set <p>Sending lost packets</p>
+     * @param SendLostPackets <p>Sending lost packets</p>
      */
     public void setSendLostPackets(Long SendLostPackets) {
         this.SendLostPackets = SendLostPackets;
     }
 
     /**
-     * Get accept lost packets 
-     * @return RecvLostPackets accept lost packets
+     * Get <p>Accept lost packets</p> 
+     * @return RecvLostPackets <p>Accept lost packets</p>
      */
     public Long getRecvLostPackets() {
         return this.RecvLostPackets;
     }
 
     /**
-     * Set accept lost packets
-     * @param RecvLostPackets accept lost packets
+     * Set <p>Accept lost packets</p>
+     * @param RecvLostPackets <p>Accept lost packets</p>
      */
     public void setRecvLostPackets(Long RecvLostPackets) {
         this.RecvLostPackets = RecvLostPackets;
     }
 
     /**
-     * Get Retransmitted packet count 
-     * @return SendRetransmitPackets Retransmitted packet count
+     * Get <p>Sent retransmission packet count</p> 
+     * @return SendRetransmitPackets <p>Sent retransmission packet count</p>
      */
     public Long getSendRetransmitPackets() {
         return this.SendRetransmitPackets;
     }
 
     /**
-     * Set Retransmitted packet count
-     * @param SendRetransmitPackets Retransmitted packet count
+     * Set <p>Sent retransmission packet count</p>
+     * @param SendRetransmitPackets <p>Sent retransmission packet count</p>
      */
     public void setSendRetransmitPackets(Long SendRetransmitPackets) {
         this.SendRetransmitPackets = SendRetransmitPackets;
     }
 
     /**
-     * Get Retransmitted packets received 
-     * @return RecvRetransmitPackets Retransmitted packets received
+     * Get <p>Number of received retransmission packets</p> 
+     * @return RecvRetransmitPackets <p>Number of received retransmission packets</p>
      */
     public Long getRecvRetransmitPackets() {
         return this.RecvRetransmitPackets;
     }
 
     /**
-     * Set Retransmitted packets received
-     * @param RecvRetransmitPackets Retransmitted packets received
+     * Set <p>Number of received retransmission packets</p>
+     * @param RecvRetransmitPackets <p>Number of received retransmission packets</p>
      */
     public void setRecvRetransmitPackets(Long RecvRetransmitPackets) {
         this.RecvRetransmitPackets = RecvRetransmitPackets;
     }
 
     /**
-     * Get Window size 
-     * @return FlightSize Window size
+     * Get <p>Flight window size</p> 
+     * @return FlightSize <p>Flight window size</p>
      */
     public Long getFlightSize() {
         return this.FlightSize;
     }
 
     /**
-     * Set Window size
-     * @param FlightSize Window size
+     * Set <p>Flight window size</p>
+     * @param FlightSize <p>Flight window size</p>
      */
     public void setFlightSize(Long FlightSize) {
         this.FlightSize = FlightSize;
     }
 
     /**
-     * Get Congestion window 
-     * @return CongestionWindow Congestion window
+     * Get <p>Congestion window.</p> 
+     * @return CongestionWindow <p>Congestion window.</p>
      */
     public Long getCongestionWindow() {
         return this.CongestionWindow;
     }
 
     /**
-     * Set Congestion window
-     * @param CongestionWindow Congestion window
+     * Set <p>Congestion window.</p>
+     * @param CongestionWindow <p>Congestion window.</p>
      */
     public void setCongestionWindow(Long CongestionWindow) {
         this.CongestionWindow = CongestionWindow;
     }
 
     /**
-     * Get Sending buffer (ms) 
-     * @return SendBuffer Sending buffer (ms)
+     * Get <p>Sending buffer (ms)</p> 
+     * @return SendBuffer <p>Sending buffer (ms)</p>
      */
     public Long getSendBuffer() {
         return this.SendBuffer;
     }
 
     /**
-     * Set Sending buffer (ms)
-     * @param SendBuffer Sending buffer (ms)
+     * Set <p>Sending buffer (ms)</p>
+     * @param SendBuffer <p>Sending buffer (ms)</p>
      */
     public void setSendBuffer(Long SendBuffer) {
         this.SendBuffer = SendBuffer;
     }
 
     /**
-     * Get Receive buffer (ms) 
-     * @return RecvBuffer Receive buffer (ms)
+     * Get <p>Receive buffer (ms)</p> 
+     * @return RecvBuffer <p>Receive buffer (ms)</p>
      */
     public Long getRecvBuffer() {
         return this.RecvBuffer;
     }
 
     /**
-     * Set Receive buffer (ms)
-     * @param RecvBuffer Receive buffer (ms)
+     * Set <p>Receive buffer (ms)</p>
+     * @param RecvBuffer <p>Receive buffer (ms)</p>
      */
     public void setRecvBuffer(Long RecvBuffer) {
         this.RecvBuffer = RecvBuffer;
     }
 
     /**
-     * Get Send delay 
-     * @return SendLatency Send delay
+     * Get <p>Sending delay</p> 
+     * @return SendLatency <p>Sending delay</p>
      */
     public Long getSendLatency() {
         return this.SendLatency;
     }
 
     /**
-     * Set Send delay
-     * @param SendLatency Send delay
+     * Set <p>Sending delay</p>
+     * @param SendLatency <p>Sending delay</p>
      */
     public void setSendLatency(Long SendLatency) {
         this.SendLatency = SendLatency;
     }
 
     /**
-     * Get receive latency 
-     * @return RecvLatency receive latency
+     * Get <p>Receive latency</p> 
+     * @return RecvLatency <p>Receive latency</p>
      */
     public Long getRecvLatency() {
         return this.RecvLatency;
     }
 
     /**
-     * Set receive latency
-     * @param RecvLatency receive latency
+     * Set <p>Receive latency</p>
+     * @param RecvLatency <p>Receive latency</p>
      */
     public void setRecvLatency(Long RecvLatency) {
         this.RecvLatency = RecvLatency;
+    }
+
+    /**
+     * Get <p>Sent NAK packet count</p> 
+     * @return SendNAKPackets <p>Sent NAK packet count</p>
+     */
+    public Long getSendNAKPackets() {
+        return this.SendNAKPackets;
+    }
+
+    /**
+     * Set <p>Sent NAK packet count</p>
+     * @param SendNAKPackets <p>Sent NAK packet count</p>
+     */
+    public void setSendNAKPackets(Long SendNAKPackets) {
+        this.SendNAKPackets = SendNAKPackets;
+    }
+
+    /**
+     * Get <p>Number of received NAK packets</p> 
+     * @return RecvNAKPackets <p>Number of received NAK packets</p>
+     */
+    public Long getRecvNAKPackets() {
+        return this.RecvNAKPackets;
+    }
+
+    /**
+     * Set <p>Number of received NAK packets</p>
+     * @param RecvNAKPackets <p>Number of received NAK packets</p>
+     */
+    public void setRecvNAKPackets(Long RecvNAKPackets) {
+        this.RecvNAKPackets = RecvNAKPackets;
     }
 
     public FlowSRTInfo() {
@@ -655,6 +701,12 @@ public class FlowSRTInfo extends AbstractModel {
         if (source.RecvLatency != null) {
             this.RecvLatency = new Long(source.RecvLatency);
         }
+        if (source.SendNAKPackets != null) {
+            this.SendNAKPackets = new Long(source.SendNAKPackets);
+        }
+        if (source.RecvNAKPackets != null) {
+            this.RecvNAKPackets = new Long(source.RecvNAKPackets);
+        }
     }
 
 
@@ -686,6 +738,8 @@ public class FlowSRTInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "RecvBuffer", this.RecvBuffer);
         this.setParamSimple(map, prefix + "SendLatency", this.SendLatency);
         this.setParamSimple(map, prefix + "RecvLatency", this.RecvLatency);
+        this.setParamSimple(map, prefix + "SendNAKPackets", this.SendNAKPackets);
+        this.setParamSimple(map, prefix + "RecvNAKPackets", this.RecvNAKPackets);
 
     }
 }

@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class HeadTailParameter extends AbstractModel {
 
     /**
-    * 
+    * List of opening scenes.
     */
     @SerializedName("HeadSet")
     @Expose
     private MediaInputInfo [] HeadSet;
 
     /**
-    * 
+    * Ending list.
     */
     @SerializedName("TailSet")
     @Expose
     private MediaInputInfo [] TailSet;
 
     /**
-     * Get  
-     * @return HeadSet 
+     * Get List of opening scenes. 
+     * @return HeadSet List of opening scenes.
      */
     public MediaInputInfo [] getHeadSet() {
         return this.HeadSet;
     }
 
     /**
-     * Set 
-     * @param HeadSet 
+     * Set List of opening scenes.
+     * @param HeadSet List of opening scenes.
      */
     public void setHeadSet(MediaInputInfo [] HeadSet) {
         this.HeadSet = HeadSet;
     }
 
     /**
-     * Get  
-     * @return TailSet 
+     * Get Ending list. 
+     * @return TailSet Ending list.
      */
     public MediaInputInfo [] getTailSet() {
         return this.TailSet;
     }
 
     /**
-     * Set 
-     * @param TailSet 
+     * Set Ending list.
+     * @param TailSet Ending list.
      */
     public void setTailSet(MediaInputInfo [] TailSet) {
         this.TailSet = TailSet;

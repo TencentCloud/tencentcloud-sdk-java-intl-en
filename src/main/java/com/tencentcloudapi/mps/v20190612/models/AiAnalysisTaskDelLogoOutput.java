@@ -52,21 +52,21 @@ public class AiAnalysisTaskDelLogoOutput extends AbstractModel {
     private String TranslateSubtitlePath;
 
     /**
-    * 
+    * <p>Subtitle position after removal. <strong>Note</strong>: only applicable to subtitle extraction when return of subtitle position is enabled.</p>
     */
     @SerializedName("SubtitlePos")
     @Expose
     private SubtitlePosition SubtitlePos;
 
     /**
-    * 
+    * <p>File URL of the video after voice type cloning</p>
     */
     @SerializedName("VoiceClonedVideo")
     @Expose
     private String VoiceClonedVideo;
 
     /**
-    * 
+    * <p>File address of the voice type clone annotation</p>
     */
     @SerializedName("VoiceClonedMarkFile")
     @Expose
@@ -172,48 +172,48 @@ public class AiAnalysisTaskDelLogoOutput extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return SubtitlePos 
+     * Get <p>Subtitle position after removal. <strong>Note</strong>: only applicable to subtitle extraction when return of subtitle position is enabled.</p> 
+     * @return SubtitlePos <p>Subtitle position after removal. <strong>Note</strong>: only applicable to subtitle extraction when return of subtitle position is enabled.</p>
      */
     public SubtitlePosition getSubtitlePos() {
         return this.SubtitlePos;
     }
 
     /**
-     * Set 
-     * @param SubtitlePos 
+     * Set <p>Subtitle position after removal. <strong>Note</strong>: only applicable to subtitle extraction when return of subtitle position is enabled.</p>
+     * @param SubtitlePos <p>Subtitle position after removal. <strong>Note</strong>: only applicable to subtitle extraction when return of subtitle position is enabled.</p>
      */
     public void setSubtitlePos(SubtitlePosition SubtitlePos) {
         this.SubtitlePos = SubtitlePos;
     }
 
     /**
-     * Get  
-     * @return VoiceClonedVideo 
+     * Get <p>File URL of the video after voice type cloning</p> 
+     * @return VoiceClonedVideo <p>File URL of the video after voice type cloning</p>
      */
     public String getVoiceClonedVideo() {
         return this.VoiceClonedVideo;
     }
 
     /**
-     * Set 
-     * @param VoiceClonedVideo 
+     * Set <p>File URL of the video after voice type cloning</p>
+     * @param VoiceClonedVideo <p>File URL of the video after voice type cloning</p>
      */
     public void setVoiceClonedVideo(String VoiceClonedVideo) {
         this.VoiceClonedVideo = VoiceClonedVideo;
     }
 
     /**
-     * Get  
-     * @return VoiceClonedMarkFile 
+     * Get <p>File address of the voice type clone annotation</p> 
+     * @return VoiceClonedMarkFile <p>File address of the voice type clone annotation</p>
      */
     public String getVoiceClonedMarkFile() {
         return this.VoiceClonedMarkFile;
     }
 
     /**
-     * Set 
-     * @param VoiceClonedMarkFile 
+     * Set <p>File address of the voice type clone annotation</p>
+     * @param VoiceClonedMarkFile <p>File address of the voice type clone annotation</p>
      */
     public void setVoiceClonedMarkFile(String VoiceClonedMarkFile) {
         this.VoiceClonedMarkFile = VoiceClonedMarkFile;

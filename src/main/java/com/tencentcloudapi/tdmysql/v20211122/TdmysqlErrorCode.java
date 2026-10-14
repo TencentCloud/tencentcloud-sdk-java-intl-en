@@ -12,7 +12,7 @@ public enum TdmysqlErrorCode {
      /* Whitelist authentication error occurred. */
      AUTHFAILURE_UINWHITELISTCHECKERROR("AuthFailure.UinWhiteListCheckError"),
      
-     /* CAM authentication failure. */
+     /* CAM authentication failed. */
      AUTHFAILURE_UNAUTHORIZEDOPERATION("AuthFailure.UnauthorizedOperation"),
      
      /* Failed to bind the tag. */
@@ -39,7 +39,7 @@ public enum TdmysqlErrorCode {
      /* Failed to add instance data. */
      FAILEDOPERATION_DBCREATEINSTANCEERROR("FailedOperation.DBCreateInstanceError"),
      
-     /* Query instance data failed. */
+     /* Failed to query the instance data. */
      FAILEDOPERATION_DBQUERYINSTANCEERROR("FailedOperation.DBQueryInstanceError"),
      
      /* Query user permission error. */
@@ -56,9 +56,6 @@ public enum TdmysqlErrorCode {
      
      /* Failed to update the new instance name. */
      FAILEDOPERATION_DBUPDATEINSTANCEERROR("FailedOperation.DBUpdateInstanceError"),
-     
-     /* Failed to update user data. */
-     FAILEDOPERATION_DBUPDATEUSERERROR("FailedOperation.DBUpdateUserError"),
      
      /* Failed to update and maintain window configuration */
      FAILEDOPERATION_DBUPSERTMAINTENANCEWINDOWERROR("FailedOperation.DBUpsertMaintenanceWindowError"),
@@ -225,11 +222,8 @@ public enum TdmysqlErrorCode {
      /* Instance version validation error. */
      INVALIDPARAMETERVALUE_CHECKINSTANCEVERSIONERROR("InvalidParameterValue.CheckInstanceVersionError"),
      
-     /* Name verification failure. */
+     /* Name verification failed. */
      INVALIDPARAMETERVALUE_CHECKNAMEERROR("InvalidParameterValue.CheckNameError"),
-     
-     /* Password verification failed. */
-     INVALIDPARAMETERVALUE_CHECKPASSWDERROR("InvalidParameterValue.CheckPasswdError"),
      
      /* Instance specification validation error. */
      INVALIDPARAMETERVALUE_CHECKSPECERROR("InvalidParameterValue.CheckSpecError"),
@@ -296,9 +290,6 @@ public enum TdmysqlErrorCode {
      
      /* The number of backups exceeds the quota. backups cannot be created again. */
      OPERATIONDENIED_MANUALBACKUPSETQUOTAEXCEEDEDERR("OperationDenied.ManualBackupSetQuotaExceededErr"),
-     
-     /* Reset super user password failed. */
-     OPERATIONDENIED_RESETUSERPASSWORDERROR("OperationDenied.ResetUserPasswordError"),
      
      /* Instance resource not found. */
      RESOURCENOTFOUND_BIZRESOURCENOTFOUNDERROR("ResourceNotFound.BizResourceNotFoundError"),

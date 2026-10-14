@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class AiAnalysisTaskHorizontalToVerticalOutput extends AbstractModel {
 
     /**
-    * 
+    * Intelligent landscape-to-portrait video list.
     */
     @SerializedName("Path")
     @Expose
     private String Path;
 
     /**
-    * 
+    * Storage location of intelligent landscape-to-portrait videos.
     */
     @SerializedName("OutputStorage")
     @Expose
     private TaskOutputStorage OutputStorage;
 
     /**
-    * 
+    * Confidence degree.	
     */
     @SerializedName("Confidence")
     @Expose
     private Float Confidence;
 
     /**
-     * Get  
-     * @return Path 
+     * Get Intelligent landscape-to-portrait video list. 
+     * @return Path Intelligent landscape-to-portrait video list.
      */
     public String getPath() {
         return this.Path;
     }
 
     /**
-     * Set 
-     * @param Path 
+     * Set Intelligent landscape-to-portrait video list.
+     * @param Path Intelligent landscape-to-portrait video list.
      */
     public void setPath(String Path) {
         this.Path = Path;
     }
 
     /**
-     * Get  
-     * @return OutputStorage 
+     * Get Storage location of intelligent landscape-to-portrait videos. 
+     * @return OutputStorage Storage location of intelligent landscape-to-portrait videos.
      */
     public TaskOutputStorage getOutputStorage() {
         return this.OutputStorage;
     }
 
     /**
-     * Set 
-     * @param OutputStorage 
+     * Set Storage location of intelligent landscape-to-portrait videos.
+     * @param OutputStorage Storage location of intelligent landscape-to-portrait videos.
      */
     public void setOutputStorage(TaskOutputStorage OutputStorage) {
         this.OutputStorage = OutputStorage;
     }
 
     /**
-     * Get  
-     * @return Confidence 
+     * Get Confidence degree.	 
+     * @return Confidence Confidence degree.	
      */
     public Float getConfidence() {
         return this.Confidence;
     }
 
     /**
-     * Set 
-     * @param Confidence 
+     * Set Confidence degree.	
+     * @param Confidence Confidence degree.	
      */
     public void setConfidence(Float Confidence) {
         this.Confidence = Confidence;

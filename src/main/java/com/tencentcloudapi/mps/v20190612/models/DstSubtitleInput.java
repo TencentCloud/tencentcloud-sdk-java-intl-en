@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DstSubtitleInput extends AbstractModel {
 
     /**
-    * <p>External translation subtitle information.</p>
+    * <p>External translated subtitle info.</p>
     */
     @SerializedName("DstSubtitleInfo")
     @Expose
     private MediaInputInfo DstSubtitleInfo;
 
     /**
-     * Get <p>External translation subtitle information.</p> 
-     * @return DstSubtitleInfo <p>External translation subtitle information.</p>
+     * Get <p>External translated subtitle info.</p> 
+     * @return DstSubtitleInfo <p>External translated subtitle info.</p>
      */
     public MediaInputInfo getDstSubtitleInfo() {
         return this.DstSubtitleInfo;
     }
 
     /**
-     * Set <p>External translation subtitle information.</p>
-     * @param DstSubtitleInfo <p>External translation subtitle information.</p>
+     * Set <p>External translated subtitle info.</p>
+     * @param DstSubtitleInfo <p>External translated subtitle info.</p>
      */
     public void setDstSubtitleInfo(MediaInputInfo DstSubtitleInfo) {
         this.DstSubtitleInfo = DstSubtitleInfo;

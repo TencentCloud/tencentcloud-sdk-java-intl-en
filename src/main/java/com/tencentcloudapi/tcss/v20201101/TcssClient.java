@@ -65,7 +65,7 @@ Create a YAML network policy and distribute tasks for the container network.
     }
 
     /**
-     *This API is used to add the details of an image repository.
+     *This example shows you how to add details for an image repository.
      * @param req AddAssetImageRegistryRegistryDetailRequest
      * @return AddAssetImageRegistryRegistryDetailResponse
      * @throws TencentCloudSDKException
@@ -317,7 +317,7 @@ Create a network policy and confirm tasks for the container network.
     }
 
     /**
-     *This API is used to create a quick image scan task for an image repository.
+     *Creating a Task to Scan Images in an Image Repository with One Click
      * @param req CreateAssetImageRegistryScanTaskOneKeyRequest
      * @return CreateAssetImageRegistryScanTaskOneKeyResponse
      * @throws TencentCloudSDKException
@@ -1188,7 +1188,7 @@ Create a network policy and delete tasks for the container network.
     }
 
     /**
-     *This API is used to query the details of a server.
+     *This example shows you how to query host details.
      * @param req DescribeAssetHostDetailRequest
      * @return DescribeAssetHostDetailResponse
      * @throws TencentCloudSDKException
@@ -1353,7 +1353,7 @@ Create a network policy and delete tasks for the container network.
     }
 
     /**
-     *This API is used to query the image statistics of an image repository.
+     *Querying the Image Statistics of an Image Repository
      * @param req DescribeAssetImageRegistrySummaryRequest
      * @return DescribeAssetImageRegistrySummaryResponse
      * @throws TencentCloudSDKException
@@ -1551,7 +1551,7 @@ Create a network policy and delete tasks for the container network.
     }
 
     /**
-     *This API is used to query the last asset sync time.
+     *Query the latest time for asset synchronization.
      * @param req DescribeAssetSyncLastTimeRequest
      * @return DescribeAssetSyncLastTimeResponse
      * @throws TencentCloudSDKException
@@ -1892,7 +1892,7 @@ Create a network policy and delete tasks for the container network.
     }
 
     /**
-     *This API is used to query the image licensing information.
+     *This API is used to query image authorization info.
      * @param req DescribeImageAuthorizedInfoRequest
      * @return DescribeImageAuthorizedInfoResponse
      * @throws TencentCloudSDKException
@@ -1914,7 +1914,7 @@ Create a network policy and delete tasks for the container network.
     }
 
     /**
-     *This API is used to query an automatic licensing rule for local images.
+     *Query local image auto-authorization rules.
      * @param req DescribeImageAutoAuthorizedRuleRequest
      * @return DescribeImageAutoAuthorizedRuleResponse
      * @throws TencentCloudSDKException
@@ -2383,7 +2383,7 @@ View YAML network policy details of clusters for the container network.
     }
 
     /**
-     *This API is used to check whether TCSS is purchased.
+     *This API is used to query the purchase information on the container security service.
      * @param req DescribePurchaseStateInfoRequest
      * @return DescribePurchaseStateInfoResponse
      * @throws TencentCloudSDKException
@@ -3894,7 +3894,7 @@ Update the YAML network policy and distribute tasks for the container network.
     }
 
     /**
-     *This API is used to update a scheduled task for an image repository.
+     *Update scheduled tasks in the mirror repository
      * @param req UpdateImageRegistryTimingScanTaskRequest
      * @return UpdateImageRegistryTimingScanTaskResponse
      * @throws TencentCloudSDKException

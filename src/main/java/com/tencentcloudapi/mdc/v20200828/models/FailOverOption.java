@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class FailOverOption extends AbstractModel {
 
     /**
-    * 
+    * Hot backup
     */
     @SerializedName("FailOverType")
     @Expose
     private String FailOverType;
 
     /**
-     * Get  
-     * @return FailOverType 
+     * Get Hot backup 
+     * @return FailOverType Hot backup
      */
     public String getFailOverType() {
         return this.FailOverType;
     }
 
     /**
-     * Set 
-     * @param FailOverType 
+     * Set Hot backup
+     * @param FailOverType Hot backup
      */
     public void setFailOverType(String FailOverType) {
         this.FailOverType = FailOverType;

@@ -31,14 +31,14 @@ public class LiveSmartSubtitleResult extends AbstractModel {
     private String Text;
 
     /**
-    * Start PTS time of a translated recording clip, in seconds.
+    * Start PTS time of a translated segment, in seconds.
     */
     @SerializedName("StartPTSTime")
     @Expose
     private Float StartPTSTime;
 
     /**
-    * End PTS time of a translated recording clip, in seconds.
+    * End PTS time of a translated segment, in seconds.
     */
     @SerializedName("EndPTSTime")
     @Expose
@@ -52,28 +52,28 @@ public class LiveSmartSubtitleResult extends AbstractModel {
     private String Trans;
 
     /**
-    * 
+    * Translation start UTC time.
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 
+    * UTC time when translation is completed.
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-    * 
+    * Steady-state tag.
     */
     @SerializedName("SteadyState")
     @Expose
     private Boolean SteadyState;
 
     /**
-    * 
+    * UserId for real-time translation over websocket and trtc
     */
     @SerializedName("UserId")
     @Expose
@@ -96,32 +96,32 @@ public class LiveSmartSubtitleResult extends AbstractModel {
     }
 
     /**
-     * Get Start PTS time of a translated recording clip, in seconds. 
-     * @return StartPTSTime Start PTS time of a translated recording clip, in seconds.
+     * Get Start PTS time of a translated segment, in seconds. 
+     * @return StartPTSTime Start PTS time of a translated segment, in seconds.
      */
     public Float getStartPTSTime() {
         return this.StartPTSTime;
     }
 
     /**
-     * Set Start PTS time of a translated recording clip, in seconds.
-     * @param StartPTSTime Start PTS time of a translated recording clip, in seconds.
+     * Set Start PTS time of a translated segment, in seconds.
+     * @param StartPTSTime Start PTS time of a translated segment, in seconds.
      */
     public void setStartPTSTime(Float StartPTSTime) {
         this.StartPTSTime = StartPTSTime;
     }
 
     /**
-     * Get End PTS time of a translated recording clip, in seconds. 
-     * @return EndPTSTime End PTS time of a translated recording clip, in seconds.
+     * Get End PTS time of a translated segment, in seconds. 
+     * @return EndPTSTime End PTS time of a translated segment, in seconds.
      */
     public Float getEndPTSTime() {
         return this.EndPTSTime;
     }
 
     /**
-     * Set End PTS time of a translated recording clip, in seconds.
-     * @param EndPTSTime End PTS time of a translated recording clip, in seconds.
+     * Set End PTS time of a translated segment, in seconds.
+     * @param EndPTSTime End PTS time of a translated segment, in seconds.
      */
     public void setEndPTSTime(Float EndPTSTime) {
         this.EndPTSTime = EndPTSTime;
@@ -144,64 +144,64 @@ public class LiveSmartSubtitleResult extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return StartTime 
+     * Get Translation start UTC time. 
+     * @return StartTime Translation start UTC time.
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 
-     * @param StartTime 
+     * Set Translation start UTC time.
+     * @param StartTime Translation start UTC time.
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get  
-     * @return EndTime 
+     * Get UTC time when translation is completed. 
+     * @return EndTime UTC time when translation is completed.
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 
-     * @param EndTime 
+     * Set UTC time when translation is completed.
+     * @param EndTime UTC time when translation is completed.
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get  
-     * @return SteadyState 
+     * Get Steady-state tag. 
+     * @return SteadyState Steady-state tag.
      */
     public Boolean getSteadyState() {
         return this.SteadyState;
     }
 
     /**
-     * Set 
-     * @param SteadyState 
+     * Set Steady-state tag.
+     * @param SteadyState Steady-state tag.
      */
     public void setSteadyState(Boolean SteadyState) {
         this.SteadyState = SteadyState;
     }
 
     /**
-     * Get  
-     * @return UserId 
+     * Get UserId for real-time translation over websocket and trtc 
+     * @return UserId UserId for real-time translation over websocket and trtc
      */
     public String getUserId() {
         return this.UserId;
     }
 
     /**
-     * Set 
-     * @param UserId 
+     * Set UserId for real-time translation over websocket and trtc
+     * @param UserId UserId for real-time translation over websocket and trtc
      */
     public void setUserId(String UserId) {
         this.UserId = UserId;

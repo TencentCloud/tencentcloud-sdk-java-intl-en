@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class AssetFilters extends AbstractModel {
 
     /**
-    * Filter name
+    * Name of the filter key
     */
     @SerializedName("Name")
     @Expose
@@ -45,16 +45,16 @@ public class AssetFilters extends AbstractModel {
     private Boolean ExactMatch;
 
     /**
-     * Get Filter name 
-     * @return Name Filter name
+     * Get Name of the filter key 
+     * @return Name Name of the filter key
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Filter name
-     * @param Name Filter name
+     * Set Name of the filter key
+     * @param Name Name of the filter key
      */
     public void setName(String Name) {
         this.Name = Name;

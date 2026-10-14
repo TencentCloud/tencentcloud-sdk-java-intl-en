@@ -52,7 +52,7 @@ public class AiAnalysisTaskSegmentResult extends AbstractModel {
     private AiAnalysisTaskSegmentInput Input;
 
     /**
-    * 
+    * Splitting task output.
     */
     @SerializedName("Output")
     @Expose
@@ -123,16 +123,16 @@ public class AiAnalysisTaskSegmentResult extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return Output 
+     * Get Splitting task output. 
+     * @return Output Splitting task output.
      */
     public AiAnalysisTaskSegmentOutput getOutput() {
         return this.Output;
     }
 
     /**
-     * Set 
-     * @param Output 
+     * Set Splitting task output.
+     * @param Output Splitting task output.
      */
     public void setOutput(AiAnalysisTaskSegmentOutput Output) {
         this.Output = Output;

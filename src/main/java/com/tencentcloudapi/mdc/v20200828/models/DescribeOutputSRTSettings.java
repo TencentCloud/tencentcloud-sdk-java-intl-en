@@ -24,48 +24,42 @@ import java.util.HashMap;
 public class DescribeOutputSRTSettings extends AbstractModel {
 
     /**
-    * A list of the destination addresses for relay. This parameter is valid if `Mode` is `CALLER`.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+    * Destination address list. Used when the SRT mode is CALLER.
     */
     @SerializedName("Destinations")
     @Expose
     private SRTAddressDestination [] Destinations;
 
     /**
-    * Stream ID.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Stream Id.
     */
     @SerializedName("StreamId")
     @Expose
     private String StreamId;
 
     /**
-    * Latency.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Delay.
     */
     @SerializedName("Latency")
     @Expose
     private Long Latency;
 
     /**
-    * Receive latency.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Receive delay.
     */
     @SerializedName("RecvLatency")
     @Expose
     private Long RecvLatency;
 
     /**
-    * Peer latency.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Peer delay.
     */
     @SerializedName("PeerLatency")
     @Expose
     private Long PeerLatency;
 
     /**
-    * Peer idle timeout period.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Idle timeout period of the peer.
     */
     @SerializedName("PeerIdleTimeout")
     @Expose
@@ -73,7 +67,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
     * Encryption key.
-Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Passphrase")
     @Expose
@@ -81,153 +74,131 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
     * Encryption key length.
-Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("PbKeyLen")
     @Expose
     private Long PbKeyLen;
 
     /**
-    * The SRT mode.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+    * SRT mode.
     */
     @SerializedName("Mode")
     @Expose
     private String Mode;
 
     /**
-    * The server’s listen address, which is valid if `Mode` is `LISTENER`.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+    * Server listening address, used when the SRT mode is LISTENER.
     */
     @SerializedName("SourceAddresses")
     @Expose
     private OutputSRTSourceAddressResp [] SourceAddresses;
 
     /**
-     * Get A list of the destination addresses for relay. This parameter is valid if `Mode` is `CALLER`.
-Note: This field may return `null`, indicating that no valid value can be obtained. 
-     * @return Destinations A list of the destination addresses for relay. This parameter is valid if `Mode` is `CALLER`.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+    * SRT FEC configuration
+    */
+    @SerializedName("FEC")
+    @Expose
+    private SRTFECFullOptions FEC;
+
+    /**
+     * Get Destination address list. Used when the SRT mode is CALLER. 
+     * @return Destinations Destination address list. Used when the SRT mode is CALLER.
      */
     public SRTAddressDestination [] getDestinations() {
         return this.Destinations;
     }
 
     /**
-     * Set A list of the destination addresses for relay. This parameter is valid if `Mode` is `CALLER`.
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param Destinations A list of the destination addresses for relay. This parameter is valid if `Mode` is `CALLER`.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Set Destination address list. Used when the SRT mode is CALLER.
+     * @param Destinations Destination address list. Used when the SRT mode is CALLER.
      */
     public void setDestinations(SRTAddressDestination [] Destinations) {
         this.Destinations = Destinations;
     }
 
     /**
-     * Get Stream ID.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return StreamId Stream ID.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Stream Id. 
+     * @return StreamId Stream Id.
      */
     public String getStreamId() {
         return this.StreamId;
     }
 
     /**
-     * Set Stream ID.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param StreamId Stream ID.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Stream Id.
+     * @param StreamId Stream Id.
      */
     public void setStreamId(String StreamId) {
         this.StreamId = StreamId;
     }
 
     /**
-     * Get Latency.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Latency Latency.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Delay. 
+     * @return Latency Delay.
      */
     public Long getLatency() {
         return this.Latency;
     }
 
     /**
-     * Set Latency.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Latency Latency.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Delay.
+     * @param Latency Delay.
      */
     public void setLatency(Long Latency) {
         this.Latency = Latency;
     }
 
     /**
-     * Get Receive latency.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return RecvLatency Receive latency.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Receive delay. 
+     * @return RecvLatency Receive delay.
      */
     public Long getRecvLatency() {
         return this.RecvLatency;
     }
 
     /**
-     * Set Receive latency.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param RecvLatency Receive latency.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Receive delay.
+     * @param RecvLatency Receive delay.
      */
     public void setRecvLatency(Long RecvLatency) {
         this.RecvLatency = RecvLatency;
     }
 
     /**
-     * Get Peer latency.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return PeerLatency Peer latency.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Peer delay. 
+     * @return PeerLatency Peer delay.
      */
     public Long getPeerLatency() {
         return this.PeerLatency;
     }
 
     /**
-     * Set Peer latency.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param PeerLatency Peer latency.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Peer delay.
+     * @param PeerLatency Peer delay.
      */
     public void setPeerLatency(Long PeerLatency) {
         this.PeerLatency = PeerLatency;
     }
 
     /**
-     * Get Peer idle timeout period.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return PeerIdleTimeout Peer idle timeout period.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Idle timeout period of the peer. 
+     * @return PeerIdleTimeout Idle timeout period of the peer.
      */
     public Long getPeerIdleTimeout() {
         return this.PeerIdleTimeout;
     }
 
     /**
-     * Set Peer idle timeout period.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param PeerIdleTimeout Peer idle timeout period.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Idle timeout period of the peer.
+     * @param PeerIdleTimeout Idle timeout period of the peer.
      */
     public void setPeerIdleTimeout(Long PeerIdleTimeout) {
         this.PeerIdleTimeout = PeerIdleTimeout;
     }
 
     /**
-     * Get Encryption key.
-Note: this field may return null, indicating that no valid values can be obtained. 
+     * Get Encryption key. 
      * @return Passphrase Encryption key.
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getPassphrase() {
         return this.Passphrase;
@@ -235,19 +206,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Encryption key.
-Note: this field may return null, indicating that no valid values can be obtained.
      * @param Passphrase Encryption key.
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setPassphrase(String Passphrase) {
         this.Passphrase = Passphrase;
     }
 
     /**
-     * Get Encryption key length.
-Note: this field may return null, indicating that no valid values can be obtained. 
+     * Get Encryption key length. 
      * @return PbKeyLen Encryption key length.
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public Long getPbKeyLen() {
         return this.PbKeyLen;
@@ -255,52 +222,58 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Encryption key length.
-Note: this field may return null, indicating that no valid values can be obtained.
      * @param PbKeyLen Encryption key length.
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setPbKeyLen(Long PbKeyLen) {
         this.PbKeyLen = PbKeyLen;
     }
 
     /**
-     * Get The SRT mode.
-Note: This field may return `null`, indicating that no valid value can be obtained. 
-     * @return Mode The SRT mode.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Get SRT mode. 
+     * @return Mode SRT mode.
      */
     public String getMode() {
         return this.Mode;
     }
 
     /**
-     * Set The SRT mode.
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param Mode The SRT mode.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Set SRT mode.
+     * @param Mode SRT mode.
      */
     public void setMode(String Mode) {
         this.Mode = Mode;
     }
 
     /**
-     * Get The server’s listen address, which is valid if `Mode` is `LISTENER`.
-Note: This field may return `null`, indicating that no valid value can be obtained. 
-     * @return SourceAddresses The server’s listen address, which is valid if `Mode` is `LISTENER`.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Get Server listening address, used when the SRT mode is LISTENER. 
+     * @return SourceAddresses Server listening address, used when the SRT mode is LISTENER.
      */
     public OutputSRTSourceAddressResp [] getSourceAddresses() {
         return this.SourceAddresses;
     }
 
     /**
-     * Set The server’s listen address, which is valid if `Mode` is `LISTENER`.
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param SourceAddresses The server’s listen address, which is valid if `Mode` is `LISTENER`.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Set Server listening address, used when the SRT mode is LISTENER.
+     * @param SourceAddresses Server listening address, used when the SRT mode is LISTENER.
      */
     public void setSourceAddresses(OutputSRTSourceAddressResp [] SourceAddresses) {
         this.SourceAddresses = SourceAddresses;
+    }
+
+    /**
+     * Get SRT FEC configuration 
+     * @return FEC SRT FEC configuration
+     */
+    public SRTFECFullOptions getFEC() {
+        return this.FEC;
+    }
+
+    /**
+     * Set SRT FEC configuration
+     * @param FEC SRT FEC configuration
+     */
+    public void setFEC(SRTFECFullOptions FEC) {
+        this.FEC = FEC;
     }
 
     public DescribeOutputSRTSettings() {
@@ -347,6 +320,9 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                 this.SourceAddresses[i] = new OutputSRTSourceAddressResp(source.SourceAddresses[i]);
             }
         }
+        if (source.FEC != null) {
+            this.FEC = new SRTFECFullOptions(source.FEC);
+        }
     }
 
 
@@ -364,6 +340,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
         this.setParamSimple(map, prefix + "PbKeyLen", this.PbKeyLen);
         this.setParamSimple(map, prefix + "Mode", this.Mode);
         this.setParamArrayObj(map, prefix + "SourceAddresses.", this.SourceAddresses);
+        this.setParamObj(map, prefix + "FEC.", this.FEC);
 
     }
 }

@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class TrackSelector extends AbstractModel {
 
     /**
-    * 
+    * Video track serial number. It starts from 1. Maximum value: 32.
     */
     @SerializedName("VideoIndex")
     @Expose
     private Long [] VideoIndex;
 
     /**
-    * 
+    * Video track serial number. Starts from 1. Maximum value: 32.
     */
     @SerializedName("AudioIndex")
     @Expose
     private Long [] AudioIndex;
 
     /**
-     * Get  
-     * @return VideoIndex 
+     * Get Video track serial number. It starts from 1. Maximum value: 32. 
+     * @return VideoIndex Video track serial number. It starts from 1. Maximum value: 32.
      */
     public Long [] getVideoIndex() {
         return this.VideoIndex;
     }
 
     /**
-     * Set 
-     * @param VideoIndex 
+     * Set Video track serial number. It starts from 1. Maximum value: 32.
+     * @param VideoIndex Video track serial number. It starts from 1. Maximum value: 32.
      */
     public void setVideoIndex(Long [] VideoIndex) {
         this.VideoIndex = VideoIndex;
     }
 
     /**
-     * Get  
-     * @return AudioIndex 
+     * Get Video track serial number. Starts from 1. Maximum value: 32. 
+     * @return AudioIndex Video track serial number. Starts from 1. Maximum value: 32.
      */
     public Long [] getAudioIndex() {
         return this.AudioIndex;
     }
 
     /**
-     * Set 
-     * @param AudioIndex 
+     * Set Video track serial number. Starts from 1. Maximum value: 32.
+     * @param AudioIndex Video track serial number. Starts from 1. Maximum value: 32.
      */
     public void setAudioIndex(Long [] AudioIndex) {
         this.AudioIndex = AudioIndex;

@@ -59,7 +59,7 @@ public class LiveStreamObjectRecognitionResult extends AbstractModel {
     private Long [] AreaCoordSet;
 
     /**
-    * 
+    * Screenshot link.
     */
     @SerializedName("Url")
     @Expose
@@ -146,16 +146,16 @@ public class LiveStreamObjectRecognitionResult extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return Url 
+     * Get Screenshot link. 
+     * @return Url Screenshot link.
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * Set 
-     * @param Url 
+     * Set Screenshot link.
+     * @param Url Screenshot link.
      */
     public void setUrl(String Url) {
         this.Url = Url;

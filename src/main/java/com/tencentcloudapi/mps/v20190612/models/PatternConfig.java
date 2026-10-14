@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class PatternConfig extends AbstractModel {
 
     /**
-    * <p>Transparency threshold</p><p>Value ranges from 0 to 255.</p><p>Default value: 30</p>
+    * <p>Transparency threshold</p><p>Value range: [0, 255]</p><p>Default value: 30</p>
     */
     @SerializedName("TransparencyThreshold")
     @Expose
     private Long TransparencyThreshold;
 
     /**
-    * <p>Opaque threshold must be greater than TransparencyThreshold.</p><p>Value ranges from 0 to 255.</p><p>Default value: 127.</p>
+    * <p>Opaque threshold, must be greater than TransparencyThreshold</p><p>Value range: [0, 255]</p><p>Default value: 127</p>
     */
     @SerializedName("OpaqueThreshold")
     @Expose
     private Long OpaqueThreshold;
 
     /**
-    * <p>Edge sampling steps, default 5.</p><p>Value ranges from 1 to 10.</p>
+    * <p>Edge sampling steps. Default value: 5</p><p>Value range: [1, 10]</p>
     */
     @SerializedName("EdgeSamplingStep")
     @Expose
     private Long EdgeSamplingStep;
 
     /**
-    * <p>Edge expansion steps. Default: 5</p>
+    * <p>Edge expansion steps. Default value: 5</p>
     */
     @SerializedName("EdgeExpansionStep")
     @Expose
     private Long EdgeExpansionStep;
 
     /**
-    * <p>Edge fusion strength, default 0.5</p><p>Value ranges from 0 to 1.0</p>
+    * <p>Edge fusion strength, default 0.5</p><p>Value range: [0, 1.0]</p>
     */
     @SerializedName("EdgeBlendingIntensity")
     @Expose
     private Float EdgeBlendingIntensity;
 
     /**
-     * Get <p>Transparency threshold</p><p>Value ranges from 0 to 255.</p><p>Default value: 30</p> 
-     * @return TransparencyThreshold <p>Transparency threshold</p><p>Value ranges from 0 to 255.</p><p>Default value: 30</p>
+     * Get <p>Transparency threshold</p><p>Value range: [0, 255]</p><p>Default value: 30</p> 
+     * @return TransparencyThreshold <p>Transparency threshold</p><p>Value range: [0, 255]</p><p>Default value: 30</p>
      */
     public Long getTransparencyThreshold() {
         return this.TransparencyThreshold;
     }
 
     /**
-     * Set <p>Transparency threshold</p><p>Value ranges from 0 to 255.</p><p>Default value: 30</p>
-     * @param TransparencyThreshold <p>Transparency threshold</p><p>Value ranges from 0 to 255.</p><p>Default value: 30</p>
+     * Set <p>Transparency threshold</p><p>Value range: [0, 255]</p><p>Default value: 30</p>
+     * @param TransparencyThreshold <p>Transparency threshold</p><p>Value range: [0, 255]</p><p>Default value: 30</p>
      */
     public void setTransparencyThreshold(Long TransparencyThreshold) {
         this.TransparencyThreshold = TransparencyThreshold;
     }
 
     /**
-     * Get <p>Opaque threshold must be greater than TransparencyThreshold.</p><p>Value ranges from 0 to 255.</p><p>Default value: 127.</p> 
-     * @return OpaqueThreshold <p>Opaque threshold must be greater than TransparencyThreshold.</p><p>Value ranges from 0 to 255.</p><p>Default value: 127.</p>
+     * Get <p>Opaque threshold, must be greater than TransparencyThreshold</p><p>Value range: [0, 255]</p><p>Default value: 127</p> 
+     * @return OpaqueThreshold <p>Opaque threshold, must be greater than TransparencyThreshold</p><p>Value range: [0, 255]</p><p>Default value: 127</p>
      */
     public Long getOpaqueThreshold() {
         return this.OpaqueThreshold;
     }
 
     /**
-     * Set <p>Opaque threshold must be greater than TransparencyThreshold.</p><p>Value ranges from 0 to 255.</p><p>Default value: 127.</p>
-     * @param OpaqueThreshold <p>Opaque threshold must be greater than TransparencyThreshold.</p><p>Value ranges from 0 to 255.</p><p>Default value: 127.</p>
+     * Set <p>Opaque threshold, must be greater than TransparencyThreshold</p><p>Value range: [0, 255]</p><p>Default value: 127</p>
+     * @param OpaqueThreshold <p>Opaque threshold, must be greater than TransparencyThreshold</p><p>Value range: [0, 255]</p><p>Default value: 127</p>
      */
     public void setOpaqueThreshold(Long OpaqueThreshold) {
         this.OpaqueThreshold = OpaqueThreshold;
     }
 
     /**
-     * Get <p>Edge sampling steps, default 5.</p><p>Value ranges from 1 to 10.</p> 
-     * @return EdgeSamplingStep <p>Edge sampling steps, default 5.</p><p>Value ranges from 1 to 10.</p>
+     * Get <p>Edge sampling steps. Default value: 5</p><p>Value range: [1, 10]</p> 
+     * @return EdgeSamplingStep <p>Edge sampling steps. Default value: 5</p><p>Value range: [1, 10]</p>
      */
     public Long getEdgeSamplingStep() {
         return this.EdgeSamplingStep;
     }
 
     /**
-     * Set <p>Edge sampling steps, default 5.</p><p>Value ranges from 1 to 10.</p>
-     * @param EdgeSamplingStep <p>Edge sampling steps, default 5.</p><p>Value ranges from 1 to 10.</p>
+     * Set <p>Edge sampling steps. Default value: 5</p><p>Value range: [1, 10]</p>
+     * @param EdgeSamplingStep <p>Edge sampling steps. Default value: 5</p><p>Value range: [1, 10]</p>
      */
     public void setEdgeSamplingStep(Long EdgeSamplingStep) {
         this.EdgeSamplingStep = EdgeSamplingStep;
     }
 
     /**
-     * Get <p>Edge expansion steps. Default: 5</p> 
-     * @return EdgeExpansionStep <p>Edge expansion steps. Default: 5</p>
+     * Get <p>Edge expansion steps. Default value: 5</p> 
+     * @return EdgeExpansionStep <p>Edge expansion steps. Default value: 5</p>
      */
     public Long getEdgeExpansionStep() {
         return this.EdgeExpansionStep;
     }
 
     /**
-     * Set <p>Edge expansion steps. Default: 5</p>
-     * @param EdgeExpansionStep <p>Edge expansion steps. Default: 5</p>
+     * Set <p>Edge expansion steps. Default value: 5</p>
+     * @param EdgeExpansionStep <p>Edge expansion steps. Default value: 5</p>
      */
     public void setEdgeExpansionStep(Long EdgeExpansionStep) {
         this.EdgeExpansionStep = EdgeExpansionStep;
     }
 
     /**
-     * Get <p>Edge fusion strength, default 0.5</p><p>Value ranges from 0 to 1.0</p> 
-     * @return EdgeBlendingIntensity <p>Edge fusion strength, default 0.5</p><p>Value ranges from 0 to 1.0</p>
+     * Get <p>Edge fusion strength, default 0.5</p><p>Value range: [0, 1.0]</p> 
+     * @return EdgeBlendingIntensity <p>Edge fusion strength, default 0.5</p><p>Value range: [0, 1.0]</p>
      */
     public Float getEdgeBlendingIntensity() {
         return this.EdgeBlendingIntensity;
     }
 
     /**
-     * Set <p>Edge fusion strength, default 0.5</p><p>Value ranges from 0 to 1.0</p>
-     * @param EdgeBlendingIntensity <p>Edge fusion strength, default 0.5</p><p>Value ranges from 0 to 1.0</p>
+     * Set <p>Edge fusion strength, default 0.5</p><p>Value range: [0, 1.0]</p>
+     * @param EdgeBlendingIntensity <p>Edge fusion strength, default 0.5</p><p>Value range: [0, 1.0]</p>
      */
     public void setEdgeBlendingIntensity(Float EdgeBlendingIntensity) {
         this.EdgeBlendingIntensity = EdgeBlendingIntensity;

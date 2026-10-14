@@ -24,23 +24,38 @@ import java.util.HashMap;
 public class LiveStreamAiAnalysisResultInfo extends AbstractModel {
 
     /**
-    * 
+    * Live stream analysis subtask result. Supports:
+<li>Live streaming video splitting.</li>
+<li>Live streaming highlight.</li>
+<li>Live streaming summary.</li>
     */
     @SerializedName("ResultSet")
     @Expose
     private LiveStreamAiAnalysisResultItem [] ResultSet;
 
     /**
-     * Get  
-     * @return ResultSet 
+     * Get Live stream analysis subtask result. Supports:
+<li>Live streaming video splitting.</li>
+<li>Live streaming highlight.</li>
+<li>Live streaming summary.</li> 
+     * @return ResultSet Live stream analysis subtask result. Supports:
+<li>Live streaming video splitting.</li>
+<li>Live streaming highlight.</li>
+<li>Live streaming summary.</li>
      */
     public LiveStreamAiAnalysisResultItem [] getResultSet() {
         return this.ResultSet;
     }
 
     /**
-     * Set 
-     * @param ResultSet 
+     * Set Live stream analysis subtask result. Supports:
+<li>Live streaming video splitting.</li>
+<li>Live streaming highlight.</li>
+<li>Live streaming summary.</li>
+     * @param ResultSet Live stream analysis subtask result. Supports:
+<li>Live streaming video splitting.</li>
+<li>Live streaming highlight.</li>
+<li>Live streaming summary.</li>
      */
     public void setResultSet(LiveStreamAiAnalysisResultItem [] ResultSet) {
         this.ResultSet = ResultSet;

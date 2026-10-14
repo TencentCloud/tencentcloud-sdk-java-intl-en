@@ -52,7 +52,7 @@ public class AiAnalysisTaskHeadTailResult extends AbstractModel {
     private AiAnalysisTaskHeadTailInput Input;
 
     /**
-    * 
+    * Output of the opening and closing credits task.
     */
     @SerializedName("Output")
     @Expose
@@ -123,16 +123,16 @@ public class AiAnalysisTaskHeadTailResult extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return Output 
+     * Get Output of the opening and closing credits task. 
+     * @return Output Output of the opening and closing credits task.
      */
     public AiAnalysisTaskHeadTailOutput getOutput() {
         return this.Output;
     }
 
     /**
-     * Set 
-     * @param Output 
+     * Set Output of the opening and closing credits task.
+     * @param Output Output of the opening and closing credits task.
      */
     public void setOutput(AiAnalysisTaskHeadTailOutput Output) {
         this.Output = Output;

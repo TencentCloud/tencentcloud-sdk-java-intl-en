@@ -38,6 +38,13 @@ public class DescribeSpecsRequest extends AbstractModel {
     private Long IsExclusiveInstance;
 
     /**
+    * <p>Availability zone combination list</p>
+    */
+    @SerializedName("Zones")
+    @Expose
+    private String [] Zones;
+
+    /**
      * Get <p>Number of replicas. Currently supported range: 1-3. Default is 3.</p> 
      * @return FullReplications <p>Number of replicas. Currently supported range: 1-3. Default is 3.</p>
      */
@@ -69,6 +76,22 @@ public class DescribeSpecsRequest extends AbstractModel {
         this.IsExclusiveInstance = IsExclusiveInstance;
     }
 
+    /**
+     * Get <p>Availability zone combination list</p> 
+     * @return Zones <p>Availability zone combination list</p>
+     */
+    public String [] getZones() {
+        return this.Zones;
+    }
+
+    /**
+     * Set <p>Availability zone combination list</p>
+     * @param Zones <p>Availability zone combination list</p>
+     */
+    public void setZones(String [] Zones) {
+        this.Zones = Zones;
+    }
+
     public DescribeSpecsRequest() {
     }
 
@@ -83,6 +106,12 @@ public class DescribeSpecsRequest extends AbstractModel {
         if (source.IsExclusiveInstance != null) {
             this.IsExclusiveInstance = new Long(source.IsExclusiveInstance);
         }
+        if (source.Zones != null) {
+            this.Zones = new String[source.Zones.length];
+            for (int i = 0; i < source.Zones.length; i++) {
+                this.Zones[i] = new String(source.Zones[i]);
+            }
+        }
     }
 
 
@@ -92,6 +121,7 @@ public class DescribeSpecsRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "FullReplications", this.FullReplications);
         this.setParamSimple(map, prefix + "IsExclusiveInstance", this.IsExclusiveInstance);
+        this.setParamArraySimple(map, prefix + "Zones.", this.Zones);
 
     }
 }

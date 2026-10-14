@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class PureSubtitleTransResultOutput extends AbstractModel {
 
     /**
-    * 
+    * Storage location of the subtitle file.
     */
     @SerializedName("OutputStorage")
     @Expose
@@ -38,16 +38,16 @@ public class PureSubtitleTransResultOutput extends AbstractModel {
     private SubtitleTransResultItem [] SubtitleResults;
 
     /**
-     * Get  
-     * @return OutputStorage 
+     * Get Storage location of the subtitle file. 
+     * @return OutputStorage Storage location of the subtitle file.
      */
     public TaskOutputStorage getOutputStorage() {
         return this.OutputStorage;
     }
 
     /**
-     * Set 
-     * @param OutputStorage 
+     * Set Storage location of the subtitle file.
+     * @param OutputStorage Storage location of the subtitle file.
      */
     public void setOutputStorage(TaskOutputStorage OutputStorage) {
         this.OutputStorage = OutputStorage;

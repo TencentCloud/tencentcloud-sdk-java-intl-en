@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class QuestionnaireQuestionAnswer extends AbstractModel {
 
     /**
-    * 
+    * <p>Issue.</p>
     */
     @SerializedName("Question")
     @Expose
     private String Question;
 
     /**
-    * 
+    * <p>Selected answer tag.</p>
     */
     @SerializedName("SelectedLabels")
     @Expose
     private String [] SelectedLabels;
 
     /**
-     * Get  
-     * @return Question 
+     * Get <p>Issue.</p> 
+     * @return Question <p>Issue.</p>
      */
     public String getQuestion() {
         return this.Question;
     }
 
     /**
-     * Set 
-     * @param Question 
+     * Set <p>Issue.</p>
+     * @param Question <p>Issue.</p>
      */
     public void setQuestion(String Question) {
         this.Question = Question;
     }
 
     /**
-     * Get  
-     * @return SelectedLabels 
+     * Get <p>Selected answer tag.</p> 
+     * @return SelectedLabels <p>Selected answer tag.</p>
      */
     public String [] getSelectedLabels() {
         return this.SelectedLabels;
     }
 
     /**
-     * Set 
-     * @param SelectedLabels 
+     * Set <p>Selected answer tag.</p>
+     * @param SelectedLabels <p>Selected answer tag.</p>
      */
     public void setSelectedLabels(String [] SelectedLabels) {
         this.SelectedLabels = SelectedLabels;

@@ -31,7 +31,7 @@ public class DescribeDBInstancesResponse extends AbstractModel {
     private InstanceInfo [] Instances;
 
     /**
-    * <p>Total number of items that meet the conditions.</p>
+    * <p>Total number of items that meet the conditions</p>
     */
     @SerializedName("TotalCount")
     @Expose
@@ -61,16 +61,16 @@ public class DescribeDBInstancesResponse extends AbstractModel {
     }
 
     /**
-     * Get <p>Total number of items that meet the conditions.</p> 
-     * @return TotalCount <p>Total number of items that meet the conditions.</p>
+     * Get <p>Total number of items that meet the conditions</p> 
+     * @return TotalCount <p>Total number of items that meet the conditions</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set <p>Total number of items that meet the conditions.</p>
-     * @param TotalCount <p>Total number of items that meet the conditions.</p>
+     * Set <p>Total number of items that meet the conditions</p>
+     * @param TotalCount <p>Total number of items that meet the conditions</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

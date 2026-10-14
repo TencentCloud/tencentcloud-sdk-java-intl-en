@@ -52,7 +52,7 @@ public class AiAnalysisTaskVideoComprehensionResult extends AbstractModel {
     private AiAnalysisTaskVideoComprehensionInput Input;
 
     /**
-    * 
+    * Output file for video (audio) recognition.
     */
     @SerializedName("Output")
     @Expose
@@ -151,16 +151,16 @@ public class AiAnalysisTaskVideoComprehensionResult extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return Output 
+     * Get Output file for video (audio) recognition. 
+     * @return Output Output file for video (audio) recognition.
      */
     public AiAnalysisTaskVideoComprehensionOutput getOutput() {
         return this.Output;
     }
 
     /**
-     * Set 
-     * @param Output 
+     * Set Output file for video (audio) recognition.
+     * @param Output Output file for video (audio) recognition.
      */
     public void setOutput(AiAnalysisTaskVideoComprehensionOutput Output) {
         this.Output = Output;

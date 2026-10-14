@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class RecognizePhilippinesVoteIDOCRResponse extends AbstractModel {
 
     /**
-    * The Base64-encoded identity photo.
+    * Base64 encoded result of portrait photo.
     */
     @SerializedName("HeadPortrait")
     @Expose
@@ -52,7 +52,7 @@ public class RecognizePhilippinesVoteIDOCRResponse extends AbstractModel {
     private TextDetectionResult FirstName;
 
     /**
-    * 
+    * The middle name.
     */
     @SerializedName("MiddleName")
     @Expose
@@ -101,16 +101,16 @@ public class RecognizePhilippinesVoteIDOCRResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get The Base64-encoded identity photo. 
-     * @return HeadPortrait The Base64-encoded identity photo.
+     * Get Base64 encoded result of portrait photo. 
+     * @return HeadPortrait Base64 encoded result of portrait photo.
      */
     public TextDetectionResult getHeadPortrait() {
         return this.HeadPortrait;
     }
 
     /**
-     * Set The Base64-encoded identity photo.
-     * @param HeadPortrait The Base64-encoded identity photo.
+     * Set Base64 encoded result of portrait photo.
+     * @param HeadPortrait Base64 encoded result of portrait photo.
      */
     public void setHeadPortrait(TextDetectionResult HeadPortrait) {
         this.HeadPortrait = HeadPortrait;
@@ -165,16 +165,16 @@ public class RecognizePhilippinesVoteIDOCRResponse extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return MiddleName 
+     * Get The middle name. 
+     * @return MiddleName The middle name.
      */
     public TextDetectionResult getMiddleName() {
         return this.MiddleName;
     }
 
     /**
-     * Set 
-     * @param MiddleName 
+     * Set The middle name.
+     * @param MiddleName The middle name.
      */
     public void setMiddleName(TextDetectionResult MiddleName) {
         this.MiddleName = MiddleName;

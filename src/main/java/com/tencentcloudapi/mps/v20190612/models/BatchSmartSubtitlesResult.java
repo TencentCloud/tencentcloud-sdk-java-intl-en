@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class BatchSmartSubtitlesResult extends AbstractModel {
 
     /**
-    * 
+    * Input information for smart subtitle tasks.
     */
     @SerializedName("Input")
     @Expose
     private SmartSubtitleTaskResultInput Input;
 
     /**
-    * 
+    * Output information for smart subtitle tasks.
     */
     @SerializedName("Outputs")
     @Expose
     private SmartSubtitleTaskBatchOutput [] Outputs;
 
     /**
-     * Get  
-     * @return Input 
+     * Get Input information for smart subtitle tasks. 
+     * @return Input Input information for smart subtitle tasks.
      */
     public SmartSubtitleTaskResultInput getInput() {
         return this.Input;
     }
 
     /**
-     * Set 
-     * @param Input 
+     * Set Input information for smart subtitle tasks.
+     * @param Input Input information for smart subtitle tasks.
      */
     public void setInput(SmartSubtitleTaskResultInput Input) {
         this.Input = Input;
     }
 
     /**
-     * Get  
-     * @return Outputs 
+     * Get Output information for smart subtitle tasks. 
+     * @return Outputs Output information for smart subtitle tasks.
      */
     public SmartSubtitleTaskBatchOutput [] getOutputs() {
         return this.Outputs;
     }
 
     /**
-     * Set 
-     * @param Outputs 
+     * Set Output information for smart subtitle tasks.
+     * @param Outputs Output information for smart subtitle tasks.
      */
     public void setOutputs(SmartSubtitleTaskBatchOutput [] Outputs) {
         this.Outputs = Outputs;

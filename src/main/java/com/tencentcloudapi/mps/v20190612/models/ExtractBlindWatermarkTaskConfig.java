@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ExtractBlindWatermarkTaskConfig extends AbstractModel {
 
     /**
-    * Valid when the digital watermark type is blind-abseq, used to specify the segment duration of the input video. Unit: ms.
+    * Valid when the digital watermark extraction type is blind-abseq. Used to specify the segment duration of the input video. Unit: ms.
 If left empty, the default segment duration is 5 seconds.
     */
     @SerializedName("SegmentDuration")
@@ -32,9 +32,9 @@ If left empty, the default segment duration is 5 seconds.
     private Long SegmentDuration;
 
     /**
-     * Get Valid when the digital watermark type is blind-abseq, used to specify the segment duration of the input video. Unit: ms.
+     * Get Valid when the digital watermark extraction type is blind-abseq. Used to specify the segment duration of the input video. Unit: ms.
 If left empty, the default segment duration is 5 seconds. 
-     * @return SegmentDuration Valid when the digital watermark type is blind-abseq, used to specify the segment duration of the input video. Unit: ms.
+     * @return SegmentDuration Valid when the digital watermark extraction type is blind-abseq. Used to specify the segment duration of the input video. Unit: ms.
 If left empty, the default segment duration is 5 seconds.
      */
     public Long getSegmentDuration() {
@@ -42,9 +42,9 @@ If left empty, the default segment duration is 5 seconds.
     }
 
     /**
-     * Set Valid when the digital watermark type is blind-abseq, used to specify the segment duration of the input video. Unit: ms.
+     * Set Valid when the digital watermark extraction type is blind-abseq. Used to specify the segment duration of the input video. Unit: ms.
 If left empty, the default segment duration is 5 seconds.
-     * @param SegmentDuration Valid when the digital watermark type is blind-abseq, used to specify the segment duration of the input video. Unit: ms.
+     * @param SegmentDuration Valid when the digital watermark extraction type is blind-abseq. Used to specify the segment duration of the input video. Unit: ms.
 If left empty, the default segment duration is 5 seconds.
      */
     public void setSegmentDuration(Long SegmentDuration) {

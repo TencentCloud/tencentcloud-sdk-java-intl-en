@@ -39,7 +39,7 @@ public class MpsClient extends AbstractClient{
     }
 
     /**
-     *This API is used to initiate batch processing tasks for URL video links, with features:
+     *This API is used to initiate batch processing tasks for URL video links, with features including:
 Smart subtitle (full speech, speech hotword, and speech translation)
      * @param req BatchProcessMediaRequest
      * @return BatchProcessMediaResponse
@@ -73,7 +73,7 @@ Smart subtitle (full speech, speech hotword, and speech translation)
     }
 
     /**
-     *This API is used to clone a voice type from a reference audio.
+     *This API is used to clone a voice from reference audio.
      * @param req CloneVoiceRequest
      * @return CloneVoiceResponse
      * @throws TencentCloudSDKException
@@ -761,7 +761,7 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
     }
 
     /**
-     *Query AIGC task list details
+     *Query the list details of AIGC tasks.
      * @param req DescribeAigcTaskListRequest
      * @return DescribeAigcTaskListResponse
      * @throws TencentCloudSDKException
@@ -1540,8 +1540,8 @@ Contains two actions: confirm and regenerate.
     }
 
     /**
-     *After receiving the message from CMQ, parse out the content of the MPS live stream processing event notification from the msgBody field of the message.
-This API is not used to trigger network calls, but to help generate SDKs for each language platform. You can refer to the parsing implementation in the SDK to parse event notifications.
+     *After receiving a message from CMQ, parse out the content of the MPS live stream processing event notification from the msgBody field in the message.
+This API is not used to initiate network calls. Instead, it helps generate SDKs for each language platform. You can refer to the parsing implementation in the SDK for event notification parsing.
      * @param req ParseLiveStreamProcessNotificationRequest
      * @return ParseLiveStreamProcessNotificationResponse
      * @throws TencentCloudSDKException
@@ -1552,8 +1552,8 @@ This API is not used to trigger network calls, but to help generate SDKs for eac
     }
 
     /**
-     *After receiving a message from CMQ, parse out the content of the MPS event notification from the msgBody field of the message.
-This API is not used to trigger network calls, but to help generate SDKs for each language platform. You can refer to the parsing function in the SDK to implement event notification parsing.
+     *After a message is received from CMQ, parse out the content of the MPS event notification from the msgBody field.
+This API is not used to initiate network calls. Instead, it is used to help generate SDKs for each language platform. You can refer to the parsing functions in the SDK to implement event notification parsing.
      * @param req ParseNotificationRequest
      * @return ParseNotificationResponse
      * @throws TencentCloudSDKException
@@ -1567,7 +1567,8 @@ This API is not used to trigger network calls, but to help generate SDKs for eac
      *This API is used to initiate image processing. Its features include:
 1. Format conversion;
 2. Image enhancement;
-3. Image erasure;4. Digital watermark;
+3. Image erasure.
+4. Digital watermark;
 5. Beauty filter;
      * @param req ProcessImageRequest
      * @return ProcessImageResponse
@@ -1579,15 +1580,15 @@ This API is not used to trigger network calls, but to help generate SDKs for eac
     }
 
     /**
-     *This API is used to initiate processing tasks on a live stream. Features include:
+     *Initiate processing task for live streaming. Features include:
 
-Intelligent content moderation (porn detection in images, sensitive information detection, audio pornography detection);
+* Intelligent content moderation (porn detection in images, sensitive information detection, and audio pornography detection);
 * Smart content recognition (human faces, full texts, text keywords, full speech, speech keywords, real-time speech translation, object recognition, and game tagging).
-Intelligent content analysis (clipping, highlights).
+Intelligent content analysis (highlight splitting and compilation).
 Quality inspection (live stream format diagnosis, audio and video content detection (jitter, blur, low light, overexposure, black and white edges, black and white screens, screen glitch, noise, mosaic, QR code, and more), and no-reference scoring).
-Recording
+* Recording
 
-Live stream processing event notification supports HTTP callbacks and also supports real-time writing to the message queue CMQ specified by the user. The user obtains the event notification result from the message queue CMQ. Meanwhile, if an output file exists during the process, it will be written to the target storage of the output file specified by the user.
+Live stream processing event notification supports HTTP callback and real-time writing to a user-specified TDMQ CMQ. Users obtain event notification results from TDMQ CMQ. If output files exist during the process, they are written to the target storage of the user-specified output files.
      * @param req ProcessLiveStreamRequest
      * @return ProcessLiveStreamResponse
      * @throws TencentCloudSDKException

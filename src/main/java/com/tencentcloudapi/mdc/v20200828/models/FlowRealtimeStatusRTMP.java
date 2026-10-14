@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class FlowRealtimeStatusRTMP extends AbstractModel {
 
     /**
-    * The video frame rate.
+    * Video frame rate.
     */
     @SerializedName("VideoFPS")
     @Expose
     private Long VideoFPS;
 
     /**
-    * The audio frame rate.
+    * Audio frame rate.
     */
     @SerializedName("AudioFPS")
     @Expose
     private Long AudioFPS;
 
     /**
-     * Get The video frame rate. 
-     * @return VideoFPS The video frame rate.
+     * Get Video frame rate. 
+     * @return VideoFPS Video frame rate.
      */
     public Long getVideoFPS() {
         return this.VideoFPS;
     }
 
     /**
-     * Set The video frame rate.
-     * @param VideoFPS The video frame rate.
+     * Set Video frame rate.
+     * @param VideoFPS Video frame rate.
      */
     public void setVideoFPS(Long VideoFPS) {
         this.VideoFPS = VideoFPS;
     }
 
     /**
-     * Get The audio frame rate. 
-     * @return AudioFPS The audio frame rate.
+     * Get Audio frame rate. 
+     * @return AudioFPS Audio frame rate.
      */
     public Long getAudioFPS() {
         return this.AudioFPS;
     }
 
     /**
-     * Set The audio frame rate.
-     * @param AudioFPS The audio frame rate.
+     * Set Audio frame rate.
+     * @param AudioFPS Audio frame rate.
      */
     public void setAudioFPS(Long AudioFPS) {
         this.AudioFPS = AudioFPS;

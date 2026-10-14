@@ -31,7 +31,7 @@ public class AiRestorationConfig extends AbstractModel {
     private String Switch;
 
     /**
-    * 
+    * <p>Strength type</p><p>Enumeration values: </p><ul><li>weak: Weak</li><li>normal: Medium</li><li>strong: Strong</li></ul><p>Default value: normal</p>
     */
     @SerializedName("Type")
     @Expose
@@ -54,16 +54,16 @@ public class AiRestorationConfig extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return Type 
+     * Get <p>Strength type</p><p>Enumeration values: </p><ul><li>weak: Weak</li><li>normal: Medium</li><li>strong: Strong</li></ul><p>Default value: normal</p> 
+     * @return Type <p>Strength type</p><p>Enumeration values: </p><ul><li>weak: Weak</li><li>normal: Medium</li><li>strong: Strong</li></ul><p>Default value: normal</p>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 
-     * @param Type 
+     * Set <p>Strength type</p><p>Enumeration values: </p><ul><li>weak: Weak</li><li>normal: Medium</li><li>strong: Strong</li></ul><p>Default value: normal</p>
+     * @param Type <p>Strength type</p><p>Enumeration values: </p><ul><li>weak: Weak</li><li>normal: Medium</li><li>strong: Strong</li></ul><p>Default value: normal</p>
      */
     public void setType(String Type) {
         this.Type = Type;

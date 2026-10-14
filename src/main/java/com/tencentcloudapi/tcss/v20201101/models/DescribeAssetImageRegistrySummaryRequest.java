@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DescribeAssetImageRegistrySummaryRequest extends AbstractModel {
 
     /**
-    * 
+    * Filter fields
     */
     @SerializedName("Filters")
     @Expose
     private AssetFilters [] Filters;
 
     /**
-     * Get  
-     * @return Filters 
+     * Get Filter fields 
+     * @return Filters Filter fields
      */
     public AssetFilters [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 
-     * @param Filters 
+     * Set Filter fields
+     * @param Filters Filter fields
      */
     public void setFilters(AssetFilters [] Filters) {
         this.Filters = Filters;

@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class EipConfigIn extends AbstractModel {
 
     /**
-    * Status of the EIP. Values: ['ENABLE','DISABLE']
+    * Eip status. Valid values: `ENABLE` and `DISABLE`
     */
     @SerializedName("EipStatus")
     @Expose
     private String EipStatus;
 
     /**
-     * Get Status of the EIP. Values: ['ENABLE','DISABLE'] 
-     * @return EipStatus Status of the EIP. Values: ['ENABLE','DISABLE']
+     * Get Eip status. Valid values: `ENABLE` and `DISABLE` 
+     * @return EipStatus Eip status. Valid values: `ENABLE` and `DISABLE`
      */
     public String getEipStatus() {
         return this.EipStatus;
     }
 
     /**
-     * Set Status of the EIP. Values: ['ENABLE','DISABLE']
-     * @param EipStatus Status of the EIP. Values: ['ENABLE','DISABLE']
+     * Set Eip status. Valid values: `ENABLE` and `DISABLE`
+     * @param EipStatus Eip status. Valid values: `ENABLE` and `DISABLE`
      */
     public void setEipStatus(String EipStatus) {
         this.EipStatus = EipStatus;

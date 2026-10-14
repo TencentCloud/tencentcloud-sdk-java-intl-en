@@ -52,14 +52,14 @@ public class SubTaskDetail extends AbstractModel {
     private String Type;
 
     /**
-    * Subtask status. 0: processing, 1: succeeded, -1: failed
+    * Subtask status. 0: processing, 1: success, -1: failure
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * Name of the index for which the check for upgrade failed
+    * Index name that failed the upgrade check
     */
     @SerializedName("FailedIndices")
     @Expose
@@ -73,7 +73,7 @@ public class SubTaskDetail extends AbstractModel {
     private String FinishTime;
 
     /**
-    * Subtask level. 1: warning, 2: failed
+    * Subtask level. 1: warning; 2: failure
     */
     @SerializedName("Level")
     @Expose
@@ -144,32 +144,32 @@ public class SubTaskDetail extends AbstractModel {
     }
 
     /**
-     * Get Subtask status. 0: processing, 1: succeeded, -1: failed 
-     * @return Status Subtask status. 0: processing, 1: succeeded, -1: failed
+     * Get Subtask status. 0: processing, 1: success, -1: failure 
+     * @return Status Subtask status. 0: processing, 1: success, -1: failure
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Subtask status. 0: processing, 1: succeeded, -1: failed
-     * @param Status Subtask status. 0: processing, 1: succeeded, -1: failed
+     * Set Subtask status. 0: processing, 1: success, -1: failure
+     * @param Status Subtask status. 0: processing, 1: success, -1: failure
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Name of the index for which the check for upgrade failed 
-     * @return FailedIndices Name of the index for which the check for upgrade failed
+     * Get Index name that failed the upgrade check 
+     * @return FailedIndices Index name that failed the upgrade check
      */
     public String [] getFailedIndices() {
         return this.FailedIndices;
     }
 
     /**
-     * Set Name of the index for which the check for upgrade failed
-     * @param FailedIndices Name of the index for which the check for upgrade failed
+     * Set Index name that failed the upgrade check
+     * @param FailedIndices Index name that failed the upgrade check
      */
     public void setFailedIndices(String [] FailedIndices) {
         this.FailedIndices = FailedIndices;
@@ -192,16 +192,16 @@ public class SubTaskDetail extends AbstractModel {
     }
 
     /**
-     * Get Subtask level. 1: warning, 2: failed 
-     * @return Level Subtask level. 1: warning, 2: failed
+     * Get Subtask level. 1: warning; 2: failure 
+     * @return Level Subtask level. 1: warning; 2: failure
      */
     public Long getLevel() {
         return this.Level;
     }
 
     /**
-     * Set Subtask level. 1: warning, 2: failed
-     * @param Level Subtask level. 1: warning, 2: failed
+     * Set Subtask level. 1: warning; 2: failure
+     * @param Level Subtask level. 1: warning; 2: failure
      */
     public void setLevel(Long Level) {
         this.Level = Level;

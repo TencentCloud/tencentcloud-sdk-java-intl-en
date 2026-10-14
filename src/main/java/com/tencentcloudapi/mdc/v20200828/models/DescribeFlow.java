@@ -24,28 +24,28 @@ import java.util.HashMap;
 public class DescribeFlow extends AbstractModel {
 
     /**
-    * Flow ID.
+    * Stream Id.
     */
     @SerializedName("FlowId")
     @Expose
     private String FlowId;
 
     /**
-    * Flow name.
+    * Stream name.
     */
     @SerializedName("FlowName")
     @Expose
     private String FlowName;
 
     /**
-    * Flow status. Valid values: `IDLE`, `RUNNING`
+    * Stream status. Valid values: IDLE, RUNNING.
     */
     @SerializedName("State")
     @Expose
     private String State;
 
     /**
-    * Maximum bandwidth value.
+    * Maximum bandwidth.
     */
     @SerializedName("MaxBandwidth")
     @Expose
@@ -60,78 +60,98 @@ public class DescribeFlow extends AbstractModel {
 
     /**
     * Output group.
-Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("OutputGroup")
     @Expose
     private DescribeOutput [] OutputGroup;
 
     /**
-    * EventId of the StreamLink event associated with this Flow.
+    * EventId of the media transmission event associated with this Flow.
     */
     @SerializedName("EventId")
     @Expose
     private String EventId;
 
     /**
-     * Get Flow ID. 
-     * @return FlowId Flow ID.
+    * Creation time of the Flow in UTC format.
+    */
+    @SerializedName("CreateTime")
+    @Expose
+    private String CreateTime;
+
+    /**
+    * Input protocols that can be created for this Flow.
+    */
+    @SerializedName("AllowedInputProtocols")
+    @Expose
+    private String [] AllowedInputProtocols;
+
+    /**
+    * Output protocols allowed to be created by this Flow
+    */
+    @SerializedName("AllowedOutputProtocols")
+    @Expose
+    private String [] AllowedOutputProtocols;
+
+    /**
+     * Get Stream Id. 
+     * @return FlowId Stream Id.
      */
     public String getFlowId() {
         return this.FlowId;
     }
 
     /**
-     * Set Flow ID.
-     * @param FlowId Flow ID.
+     * Set Stream Id.
+     * @param FlowId Stream Id.
      */
     public void setFlowId(String FlowId) {
         this.FlowId = FlowId;
     }
 
     /**
-     * Get Flow name. 
-     * @return FlowName Flow name.
+     * Get Stream name. 
+     * @return FlowName Stream name.
      */
     public String getFlowName() {
         return this.FlowName;
     }
 
     /**
-     * Set Flow name.
-     * @param FlowName Flow name.
+     * Set Stream name.
+     * @param FlowName Stream name.
      */
     public void setFlowName(String FlowName) {
         this.FlowName = FlowName;
     }
 
     /**
-     * Get Flow status. Valid values: `IDLE`, `RUNNING` 
-     * @return State Flow status. Valid values: `IDLE`, `RUNNING`
+     * Get Stream status. Valid values: IDLE, RUNNING. 
+     * @return State Stream status. Valid values: IDLE, RUNNING.
      */
     public String getState() {
         return this.State;
     }
 
     /**
-     * Set Flow status. Valid values: `IDLE`, `RUNNING`
-     * @param State Flow status. Valid values: `IDLE`, `RUNNING`
+     * Set Stream status. Valid values: IDLE, RUNNING.
+     * @param State Stream status. Valid values: IDLE, RUNNING.
      */
     public void setState(String State) {
         this.State = State;
     }
 
     /**
-     * Get Maximum bandwidth value. 
-     * @return MaxBandwidth Maximum bandwidth value.
+     * Get Maximum bandwidth. 
+     * @return MaxBandwidth Maximum bandwidth.
      */
     public Long getMaxBandwidth() {
         return this.MaxBandwidth;
     }
 
     /**
-     * Set Maximum bandwidth value.
-     * @param MaxBandwidth Maximum bandwidth value.
+     * Set Maximum bandwidth.
+     * @param MaxBandwidth Maximum bandwidth.
      */
     public void setMaxBandwidth(Long MaxBandwidth) {
         this.MaxBandwidth = MaxBandwidth;
@@ -154,10 +174,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Output group.
-Note: this field may return null, indicating that no valid values can be obtained. 
+     * Get Output group. 
      * @return OutputGroup Output group.
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public DescribeOutput [] getOutputGroup() {
         return this.OutputGroup;
@@ -165,28 +183,74 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Output group.
-Note: this field may return null, indicating that no valid values can be obtained.
      * @param OutputGroup Output group.
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setOutputGroup(DescribeOutput [] OutputGroup) {
         this.OutputGroup = OutputGroup;
     }
 
     /**
-     * Get EventId of the StreamLink event associated with this Flow. 
-     * @return EventId EventId of the StreamLink event associated with this Flow.
+     * Get EventId of the media transmission event associated with this Flow. 
+     * @return EventId EventId of the media transmission event associated with this Flow.
      */
     public String getEventId() {
         return this.EventId;
     }
 
     /**
-     * Set EventId of the StreamLink event associated with this Flow.
-     * @param EventId EventId of the StreamLink event associated with this Flow.
+     * Set EventId of the media transmission event associated with this Flow.
+     * @param EventId EventId of the media transmission event associated with this Flow.
      */
     public void setEventId(String EventId) {
         this.EventId = EventId;
+    }
+
+    /**
+     * Get Creation time of the Flow in UTC format. 
+     * @return CreateTime Creation time of the Flow in UTC format.
+     */
+    public String getCreateTime() {
+        return this.CreateTime;
+    }
+
+    /**
+     * Set Creation time of the Flow in UTC format.
+     * @param CreateTime Creation time of the Flow in UTC format.
+     */
+    public void setCreateTime(String CreateTime) {
+        this.CreateTime = CreateTime;
+    }
+
+    /**
+     * Get Input protocols that can be created for this Flow. 
+     * @return AllowedInputProtocols Input protocols that can be created for this Flow.
+     */
+    public String [] getAllowedInputProtocols() {
+        return this.AllowedInputProtocols;
+    }
+
+    /**
+     * Set Input protocols that can be created for this Flow.
+     * @param AllowedInputProtocols Input protocols that can be created for this Flow.
+     */
+    public void setAllowedInputProtocols(String [] AllowedInputProtocols) {
+        this.AllowedInputProtocols = AllowedInputProtocols;
+    }
+
+    /**
+     * Get Output protocols allowed to be created by this Flow 
+     * @return AllowedOutputProtocols Output protocols allowed to be created by this Flow
+     */
+    public String [] getAllowedOutputProtocols() {
+        return this.AllowedOutputProtocols;
+    }
+
+    /**
+     * Set Output protocols allowed to be created by this Flow
+     * @param AllowedOutputProtocols Output protocols allowed to be created by this Flow
+     */
+    public void setAllowedOutputProtocols(String [] AllowedOutputProtocols) {
+        this.AllowedOutputProtocols = AllowedOutputProtocols;
     }
 
     public DescribeFlow() {
@@ -224,6 +288,21 @@ Note: this field may return null, indicating that no valid values can be obtaine
         if (source.EventId != null) {
             this.EventId = new String(source.EventId);
         }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.AllowedInputProtocols != null) {
+            this.AllowedInputProtocols = new String[source.AllowedInputProtocols.length];
+            for (int i = 0; i < source.AllowedInputProtocols.length; i++) {
+                this.AllowedInputProtocols[i] = new String(source.AllowedInputProtocols[i]);
+            }
+        }
+        if (source.AllowedOutputProtocols != null) {
+            this.AllowedOutputProtocols = new String[source.AllowedOutputProtocols.length];
+            for (int i = 0; i < source.AllowedOutputProtocols.length; i++) {
+                this.AllowedOutputProtocols[i] = new String(source.AllowedOutputProtocols[i]);
+            }
+        }
     }
 
 
@@ -238,6 +317,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamArrayObj(map, prefix + "InputGroup.", this.InputGroup);
         this.setParamArrayObj(map, prefix + "OutputGroup.", this.OutputGroup);
         this.setParamSimple(map, prefix + "EventId", this.EventId);
+        this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
+        this.setParamArraySimple(map, prefix + "AllowedInputProtocols.", this.AllowedInputProtocols);
+        this.setParamArraySimple(map, prefix + "AllowedOutputProtocols.", this.AllowedOutputProtocols);
 
     }
 }

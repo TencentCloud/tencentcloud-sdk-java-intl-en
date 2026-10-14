@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class FlowRealtimeStatusCommon extends AbstractModel {
 
     /**
-    * The connection status. Valid values: Connected, Waiting, Idle.
+    * Current connection status. Connected | Waiting | Idle.
     */
     @SerializedName("State")
     @Expose
     private String State;
 
     /**
-    * The connection mode. Valid values: Listener, Caller.
+    * Connection mode. Listener|Caller.
     */
     @SerializedName("Mode")
     @Expose
     private String Mode;
 
     /**
-    * The connected time.
+    * Connection duration, unit: ms.
     */
     @SerializedName("ConnectedTime")
     @Expose
     private Long ConnectedTime;
 
     /**
-    * The real-time bitrate (bps).
+    * Real-time bitrate, unit in bps.
     */
     @SerializedName("Bitrate")
     @Expose
     private Long Bitrate;
 
     /**
-    * The number of retries.
+    * Number of retries.
     */
     @SerializedName("Reconnections")
     @Expose
     private Long Reconnections;
 
     /**
-     * Get The connection status. Valid values: Connected, Waiting, Idle. 
-     * @return State The connection status. Valid values: Connected, Waiting, Idle.
+     * Get Current connection status. Connected | Waiting | Idle. 
+     * @return State Current connection status. Connected | Waiting | Idle.
      */
     public String getState() {
         return this.State;
     }
 
     /**
-     * Set The connection status. Valid values: Connected, Waiting, Idle.
-     * @param State The connection status. Valid values: Connected, Waiting, Idle.
+     * Set Current connection status. Connected | Waiting | Idle.
+     * @param State Current connection status. Connected | Waiting | Idle.
      */
     public void setState(String State) {
         this.State = State;
     }
 
     /**
-     * Get The connection mode. Valid values: Listener, Caller. 
-     * @return Mode The connection mode. Valid values: Listener, Caller.
+     * Get Connection mode. Listener|Caller. 
+     * @return Mode Connection mode. Listener|Caller.
      */
     public String getMode() {
         return this.Mode;
     }
 
     /**
-     * Set The connection mode. Valid values: Listener, Caller.
-     * @param Mode The connection mode. Valid values: Listener, Caller.
+     * Set Connection mode. Listener|Caller.
+     * @param Mode Connection mode. Listener|Caller.
      */
     public void setMode(String Mode) {
         this.Mode = Mode;
     }
 
     /**
-     * Get The connected time. 
-     * @return ConnectedTime The connected time.
+     * Get Connection duration, unit: ms. 
+     * @return ConnectedTime Connection duration, unit: ms.
      */
     public Long getConnectedTime() {
         return this.ConnectedTime;
     }
 
     /**
-     * Set The connected time.
-     * @param ConnectedTime The connected time.
+     * Set Connection duration, unit: ms.
+     * @param ConnectedTime Connection duration, unit: ms.
      */
     public void setConnectedTime(Long ConnectedTime) {
         this.ConnectedTime = ConnectedTime;
     }
 
     /**
-     * Get The real-time bitrate (bps). 
-     * @return Bitrate The real-time bitrate (bps).
+     * Get Real-time bitrate, unit in bps. 
+     * @return Bitrate Real-time bitrate, unit in bps.
      */
     public Long getBitrate() {
         return this.Bitrate;
     }
 
     /**
-     * Set The real-time bitrate (bps).
-     * @param Bitrate The real-time bitrate (bps).
+     * Set Real-time bitrate, unit in bps.
+     * @param Bitrate Real-time bitrate, unit in bps.
      */
     public void setBitrate(Long Bitrate) {
         this.Bitrate = Bitrate;
     }
 
     /**
-     * Get The number of retries. 
-     * @return Reconnections The number of retries.
+     * Get Number of retries. 
+     * @return Reconnections Number of retries.
      */
     public Long getReconnections() {
         return this.Reconnections;
     }
 
     /**
-     * Set The number of retries.
-     * @param Reconnections The number of retries.
+     * Set Number of retries.
+     * @param Reconnections Number of retries.
      */
     public void setReconnections(Long Reconnections) {
         this.Reconnections = Reconnections;

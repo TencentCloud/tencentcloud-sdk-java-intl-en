@@ -24,28 +24,32 @@ import java.util.HashMap;
 public class SubtitleTemplate extends AbstractModel {
 
     /**
-    * 
+    * Subtitle file URL to be suppressed into the video.
     */
     @SerializedName("Path")
     @Expose
     private String Path;
 
     /**
-    * 
+    * Specifies the subtitle track for embedding subtitles into the video. The Streamindex value starts from 0, where 0 indicates usage of the first subtitle track in the source video. If Path is specified, use Path preferentially. Either Path or Streamindex should be specified.
+
+-Note: StreamIndex must match the subtitle track index in the source file. For example, if the subtitle track in the source file is stream#0:3, StreamIndex should be 3. Otherwise, task processing may fail.
+
+
     */
     @SerializedName("StreamIndex")
     @Expose
     private Long StreamIndex;
 
     /**
-    * 
+    * Input information on the subtitle file to be embedded into the video. Currently, only subtitle files stored in COS are supported.
     */
     @SerializedName("SubtitleFileInput")
     @Expose
     private MediaInputInfo SubtitleFileInput;
 
     /**
-    * Input information for the subtitle font file to be suppressed. Currently only support url and cos. If both are filled, url takes precedence over cos. If FontFileInput is filled, FontFileInput takes precedence over FontType.
+    * Input information for suppressing subtitle font files. Currently only support url and cos. If both are filled, url takes precedence over cos. If FontFileInput is filled, FontFileInput takes precedence over FontType.
 
     */
     @SerializedName("FontFileInput")
@@ -53,70 +57,144 @@ public class SubtitleTemplate extends AbstractModel {
     private MediaInputInfo FontFileInput;
 
     /**
-    * 
+    * Font type. Valid values:
+<li>hei.ttf: SimHei</li>
+<li>song.ttf: SimSun.</li>
+<li>kai.ttf (recommend) or simkai.ttf: KaiTi.</li>
+<li>msyh.ttf: Microsoft YaHei.</li>
+<li>msyhbd.ttf: Microsoft YaHei Bold.</li>
+<li>hkjgt.ttf: DynaFont King Gothic.</li>
+<li>dhttx.ttf: DianHei Extra Light.</li>
+<li>xqgdzt.ttf: XiQue GuZiDian.</li>
+<li>qpcyt.ttf: Smart Splice Super Round Body</li>
+<li>arial.ttf: English only.</li>
+<li>dinalternate.ttf:DIN Alternate Bold</li>
+<li>helveticalt.ttf:Helvetica</li>
+<li>helveticains.ttf:Helvetica Inserat</li>
+<li>trajanpro.ttf:TrajanPro-Bold</li>
+<li>korean.ttf: Korean.</li>
+<li>japanese.ttf: Japanese.</li>
+<li>thai.ttf: Thai.</li>
+<li>roboto.ttf:Roboto</li>
+<li>notosans.ttf:NotoSans</li>
+<li>notosansthai.ttf: Thai NotoSansThai</li>
+<li>sarabun.ttf: Thai Sarabun</li>
+<li>kanit.ttf: Thai Kanit</li>
+<li>charmonman.ttf: Thai Charmonman.</li>
+<li>notonaskharabic.ttf: Arabic NotoNaskhArabic.</li>
+<li>notosansdevanagari.ttf: NotoSansDevanagari for India.</li>
+<li>notosanstc.ttf: Cantonese Source Han Sans NotoSansTC</li>
+<li>notosanskr.ttf: Korean NotoSansKR.</li>
+<li>gothica1.ttf: Korean GothicA1.</li>
+<li>nanummyeongjo.ttf: Korean NanumMyeongjo.</li>
+<li>notosansjp.ttf: Japanese NotoSansJP.</li>
+<li>notoserifjp.ttf: Japanese NotoSerifJP.</li>
+<li>shipporimincho.ttf: Japanese ShipporiMincho.</li>
+Default value: hei.ttf.
+<br>Note:
+<li>kai.ttf is recommended for SimKai.</li>
+<li>FontFileInput takes precedence when specified.</li>
+
     */
     @SerializedName("FontType")
     @Expose
     private String FontType;
 
     /**
-    * 
+    * Font size. If not specified, the font size of the subtitle file applies. Pixel and percentage formats are supported:
+
+- Pixel: Npx. Value range of N: (0,4096].
+- Percentage: N%. Value range of N: (0,100]. For example, 10% means the subtitle font size is 10% of the source video height.
+
+The default size is 5% of the source video height if this parameter is not specified or the font size is not configured in the subtitle file.
+
     */
     @SerializedName("FontSize")
     @Expose
     private String FontSize;
 
     /**
-    * 
+    * Font color. Format: 0xRRGGBB. Default value: 0xFFFFFF (white).
     */
     @SerializedName("FontColor")
     @Expose
     private String FontColor;
 
     /**
-    * 
+    * Text opacity, value ranges from 0 to 1.
+<li>0: completely transparent.</li>
+<li>1: completely opaque.</li>
+Default value: 1.
     */
     @SerializedName("FontAlpha")
     @Expose
     private Float FontAlpha;
 
     /**
-    * 
+    * Subtitle y-axis coordinate position. If you specify this parameter, the built-in coordinates of the subtitle file are ignored. Pixel and percentage formats are supported.
+
+- Pixel: Npx. Value range of N: [0,4096].
+-Percentage: N%, N range: [0,100]. For example, 10% means the subtitle y-coordinate = 10% * source video height.
+
+Default value: 4% of the source video height.
+Note: The origin of the coordinate axes is at the bottom of the central axis of the source video, and the subtitle reference position is at the bottom of the central axis of the subtitles, as shown in the figure below.
+![image](https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png)
+
     */
     @SerializedName("YPos")
     @Expose
     private String YPos;
 
     /**
-    * 
+    * y-axis coordinate position of the subtitle background base plate. Supports pixel and percentage formats.
+
+- Pixel: Npx. Value range of N: [0,4096].
+-Percentage: N%, N range: [0,100]. For example, 10% means the y-coordinate of the subtitle background base plate = 10% * source video height.
+
+If this parameter is not specified, the subtitle background base plate is disabled.
+Note: The origin of the coordinate axes is at the bottom of the central axis of the source video, and the reference position of the subtitle background base plate is at the bottom of its central axis, as shown in the figure below.
+![image](https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png)
+
     */
     @SerializedName("BoardY")
     @Expose
     private String BoardY;
 
     /**
-    * 
+    * Base plate width. The value should be a positive integer.
+- Value range for pixels: [0,4096].
+- Value range for percentages: [0, 100].
+If background is enabled and this parameter is not specified, the default width is 90% of the source video width.
+
     */
     @SerializedName("BoardWidth")
     @Expose
     private Long BoardWidth;
 
     /**
-    * 
+    * Height of the base plate. Positive integer.
+- Value range for pixels: [0,4096].
+- Value range for percentages: [0, 100].
+If background is enabled and this parameter is not specified, the default height is 15% of the source video height.
+
     */
     @SerializedName("BoardHeight")
     @Expose
     private Long BoardHeight;
 
     /**
-    * 
+    * Board color. Format: 0xRRGGBB.
+Default value: 0x000000 (black).
     */
     @SerializedName("BoardColor")
     @Expose
     private String BoardColor;
 
     /**
-    * 
+    * Subtitle background transparency. Value range: [0, 1].
+<li>0: completely transparent.</li>
+<li>1: completely opaque.</li>
+Default value: 0.8.
     */
     @SerializedName("BoardAlpha")
     @Expose
@@ -126,7 +204,7 @@ public class SubtitleTemplate extends AbstractModel {
     * Stroke width. The value should be a floating-point number.
 - Value range for pixels: [0, 1000].
 - Value range for percentages: [0, 100].
-0.3% of the source video height by default if left blank.
+If this is not specified, the default width is 0.3% of the source video height.
 
     */
     @SerializedName("OutlineWidth")
@@ -153,7 +231,7 @@ public class SubtitleTemplate extends AbstractModel {
     * Shadow width. Floating-point number.
 - Value range for pixels: [0, 1000].
 - Value range for percentages: [0, 100].
-No shading by default if left blank.
+If this is not specified, no shadow is applied by default.
 
     */
     @SerializedName("ShadowWidth")
@@ -161,7 +239,7 @@ No shading by default if left blank.
     private Float ShadowWidth;
 
     /**
-    * Shadow color. 6-bit base RGB. Black by default if left blank (when shadow has set).
+    * Shadow color. 6-bit base-16 RGB. Black by default if left blank (when shadow has been set).
 
     */
     @SerializedName("ShadowColor")
@@ -169,7 +247,7 @@ No shading by default if left blank.
     private String ShadowColor;
 
     /**
-    * Shadow transparency. The value should be a positive floating-point number in the range of (0, 1]. If this is not specified, the default value is 1, which means completely opaque (with shadow configured).
+    * Shadow transparency. The value should be a positive floating-point number in the range of (0, 1]. If not specified, the default value is 1, which means completely opaque (with shadow configured).
 
     */
     @SerializedName("ShadowAlpha")
@@ -227,7 +305,7 @@ No shading by default if left blank.
     private Long ShadowWidthUnit;
 
     /**
-    * Default value: 0. If this is set to 1, the value of LineSpacing is a percentage based on the video height.
+    * Default value is 0. If this is set to 1, the value of LineSpacing is a percentage based on the video height.
 
     */
     @SerializedName("LineSpacingUnit")
@@ -235,57 +313,73 @@ No shading by default if left blank.
     private Long LineSpacingUnit;
 
     /**
-     * Get  
-     * @return Path 
+     * Get Subtitle file URL to be suppressed into the video. 
+     * @return Path Subtitle file URL to be suppressed into the video.
      */
     public String getPath() {
         return this.Path;
     }
 
     /**
-     * Set 
-     * @param Path 
+     * Set Subtitle file URL to be suppressed into the video.
+     * @param Path Subtitle file URL to be suppressed into the video.
      */
     public void setPath(String Path) {
         this.Path = Path;
     }
 
     /**
-     * Get  
-     * @return StreamIndex 
+     * Get Specifies the subtitle track for embedding subtitles into the video. The Streamindex value starts from 0, where 0 indicates usage of the first subtitle track in the source video. If Path is specified, use Path preferentially. Either Path or Streamindex should be specified.
+
+-Note: StreamIndex must match the subtitle track index in the source file. For example, if the subtitle track in the source file is stream#0:3, StreamIndex should be 3. Otherwise, task processing may fail.
+
+ 
+     * @return StreamIndex Specifies the subtitle track for embedding subtitles into the video. The Streamindex value starts from 0, where 0 indicates usage of the first subtitle track in the source video. If Path is specified, use Path preferentially. Either Path or Streamindex should be specified.
+
+-Note: StreamIndex must match the subtitle track index in the source file. For example, if the subtitle track in the source file is stream#0:3, StreamIndex should be 3. Otherwise, task processing may fail.
+
+
      */
     public Long getStreamIndex() {
         return this.StreamIndex;
     }
 
     /**
-     * Set 
-     * @param StreamIndex 
+     * Set Specifies the subtitle track for embedding subtitles into the video. The Streamindex value starts from 0, where 0 indicates usage of the first subtitle track in the source video. If Path is specified, use Path preferentially. Either Path or Streamindex should be specified.
+
+-Note: StreamIndex must match the subtitle track index in the source file. For example, if the subtitle track in the source file is stream#0:3, StreamIndex should be 3. Otherwise, task processing may fail.
+
+
+     * @param StreamIndex Specifies the subtitle track for embedding subtitles into the video. The Streamindex value starts from 0, where 0 indicates usage of the first subtitle track in the source video. If Path is specified, use Path preferentially. Either Path or Streamindex should be specified.
+
+-Note: StreamIndex must match the subtitle track index in the source file. For example, if the subtitle track in the source file is stream#0:3, StreamIndex should be 3. Otherwise, task processing may fail.
+
+
      */
     public void setStreamIndex(Long StreamIndex) {
         this.StreamIndex = StreamIndex;
     }
 
     /**
-     * Get  
-     * @return SubtitleFileInput 
+     * Get Input information on the subtitle file to be embedded into the video. Currently, only subtitle files stored in COS are supported. 
+     * @return SubtitleFileInput Input information on the subtitle file to be embedded into the video. Currently, only subtitle files stored in COS are supported.
      */
     public MediaInputInfo getSubtitleFileInput() {
         return this.SubtitleFileInput;
     }
 
     /**
-     * Set 
-     * @param SubtitleFileInput 
+     * Set Input information on the subtitle file to be embedded into the video. Currently, only subtitle files stored in COS are supported.
+     * @param SubtitleFileInput Input information on the subtitle file to be embedded into the video. Currently, only subtitle files stored in COS are supported.
      */
     public void setSubtitleFileInput(MediaInputInfo SubtitleFileInput) {
         this.SubtitleFileInput = SubtitleFileInput;
     }
 
     /**
-     * Get Input information for the subtitle font file to be suppressed. Currently only support url and cos. If both are filled, url takes precedence over cos. If FontFileInput is filled, FontFileInput takes precedence over FontType.
+     * Get Input information for suppressing subtitle font files. Currently only support url and cos. If both are filled, url takes precedence over cos. If FontFileInput is filled, FontFileInput takes precedence over FontType.
  
-     * @return FontFileInput Input information for the subtitle font file to be suppressed. Currently only support url and cos. If both are filled, url takes precedence over cos. If FontFileInput is filled, FontFileInput takes precedence over FontType.
+     * @return FontFileInput Input information for suppressing subtitle font files. Currently only support url and cos. If both are filled, url takes precedence over cos. If FontFileInput is filled, FontFileInput takes precedence over FontType.
 
      */
     public MediaInputInfo getFontFileInput() {
@@ -293,9 +387,9 @@ No shading by default if left blank.
     }
 
     /**
-     * Set Input information for the subtitle font file to be suppressed. Currently only support url and cos. If both are filled, url takes precedence over cos. If FontFileInput is filled, FontFileInput takes precedence over FontType.
+     * Set Input information for suppressing subtitle font files. Currently only support url and cos. If both are filled, url takes precedence over cos. If FontFileInput is filled, FontFileInput takes precedence over FontType.
 
-     * @param FontFileInput Input information for the subtitle font file to be suppressed. Currently only support url and cos. If both are filled, url takes precedence over cos. If FontFileInput is filled, FontFileInput takes precedence over FontType.
+     * @param FontFileInput Input information for suppressing subtitle font files. Currently only support url and cos. If both are filled, url takes precedence over cos. If FontFileInput is filled, FontFileInput takes precedence over FontType.
 
      */
     public void setFontFileInput(MediaInputInfo FontFileInput) {
@@ -303,160 +397,456 @@ No shading by default if left blank.
     }
 
     /**
-     * Get  
-     * @return FontType 
+     * Get Font type. Valid values:
+<li>hei.ttf: SimHei</li>
+<li>song.ttf: SimSun.</li>
+<li>kai.ttf (recommend) or simkai.ttf: KaiTi.</li>
+<li>msyh.ttf: Microsoft YaHei.</li>
+<li>msyhbd.ttf: Microsoft YaHei Bold.</li>
+<li>hkjgt.ttf: DynaFont King Gothic.</li>
+<li>dhttx.ttf: DianHei Extra Light.</li>
+<li>xqgdzt.ttf: XiQue GuZiDian.</li>
+<li>qpcyt.ttf: Smart Splice Super Round Body</li>
+<li>arial.ttf: English only.</li>
+<li>dinalternate.ttf:DIN Alternate Bold</li>
+<li>helveticalt.ttf:Helvetica</li>
+<li>helveticains.ttf:Helvetica Inserat</li>
+<li>trajanpro.ttf:TrajanPro-Bold</li>
+<li>korean.ttf: Korean.</li>
+<li>japanese.ttf: Japanese.</li>
+<li>thai.ttf: Thai.</li>
+<li>roboto.ttf:Roboto</li>
+<li>notosans.ttf:NotoSans</li>
+<li>notosansthai.ttf: Thai NotoSansThai</li>
+<li>sarabun.ttf: Thai Sarabun</li>
+<li>kanit.ttf: Thai Kanit</li>
+<li>charmonman.ttf: Thai Charmonman.</li>
+<li>notonaskharabic.ttf: Arabic NotoNaskhArabic.</li>
+<li>notosansdevanagari.ttf: NotoSansDevanagari for India.</li>
+<li>notosanstc.ttf: Cantonese Source Han Sans NotoSansTC</li>
+<li>notosanskr.ttf: Korean NotoSansKR.</li>
+<li>gothica1.ttf: Korean GothicA1.</li>
+<li>nanummyeongjo.ttf: Korean NanumMyeongjo.</li>
+<li>notosansjp.ttf: Japanese NotoSansJP.</li>
+<li>notoserifjp.ttf: Japanese NotoSerifJP.</li>
+<li>shipporimincho.ttf: Japanese ShipporiMincho.</li>
+Default value: hei.ttf.
+<br>Note:
+<li>kai.ttf is recommended for SimKai.</li>
+<li>FontFileInput takes precedence when specified.</li>
+ 
+     * @return FontType Font type. Valid values:
+<li>hei.ttf: SimHei</li>
+<li>song.ttf: SimSun.</li>
+<li>kai.ttf (recommend) or simkai.ttf: KaiTi.</li>
+<li>msyh.ttf: Microsoft YaHei.</li>
+<li>msyhbd.ttf: Microsoft YaHei Bold.</li>
+<li>hkjgt.ttf: DynaFont King Gothic.</li>
+<li>dhttx.ttf: DianHei Extra Light.</li>
+<li>xqgdzt.ttf: XiQue GuZiDian.</li>
+<li>qpcyt.ttf: Smart Splice Super Round Body</li>
+<li>arial.ttf: English only.</li>
+<li>dinalternate.ttf:DIN Alternate Bold</li>
+<li>helveticalt.ttf:Helvetica</li>
+<li>helveticains.ttf:Helvetica Inserat</li>
+<li>trajanpro.ttf:TrajanPro-Bold</li>
+<li>korean.ttf: Korean.</li>
+<li>japanese.ttf: Japanese.</li>
+<li>thai.ttf: Thai.</li>
+<li>roboto.ttf:Roboto</li>
+<li>notosans.ttf:NotoSans</li>
+<li>notosansthai.ttf: Thai NotoSansThai</li>
+<li>sarabun.ttf: Thai Sarabun</li>
+<li>kanit.ttf: Thai Kanit</li>
+<li>charmonman.ttf: Thai Charmonman.</li>
+<li>notonaskharabic.ttf: Arabic NotoNaskhArabic.</li>
+<li>notosansdevanagari.ttf: NotoSansDevanagari for India.</li>
+<li>notosanstc.ttf: Cantonese Source Han Sans NotoSansTC</li>
+<li>notosanskr.ttf: Korean NotoSansKR.</li>
+<li>gothica1.ttf: Korean GothicA1.</li>
+<li>nanummyeongjo.ttf: Korean NanumMyeongjo.</li>
+<li>notosansjp.ttf: Japanese NotoSansJP.</li>
+<li>notoserifjp.ttf: Japanese NotoSerifJP.</li>
+<li>shipporimincho.ttf: Japanese ShipporiMincho.</li>
+Default value: hei.ttf.
+<br>Note:
+<li>kai.ttf is recommended for SimKai.</li>
+<li>FontFileInput takes precedence when specified.</li>
+
      */
     public String getFontType() {
         return this.FontType;
     }
 
     /**
-     * Set 
-     * @param FontType 
+     * Set Font type. Valid values:
+<li>hei.ttf: SimHei</li>
+<li>song.ttf: SimSun.</li>
+<li>kai.ttf (recommend) or simkai.ttf: KaiTi.</li>
+<li>msyh.ttf: Microsoft YaHei.</li>
+<li>msyhbd.ttf: Microsoft YaHei Bold.</li>
+<li>hkjgt.ttf: DynaFont King Gothic.</li>
+<li>dhttx.ttf: DianHei Extra Light.</li>
+<li>xqgdzt.ttf: XiQue GuZiDian.</li>
+<li>qpcyt.ttf: Smart Splice Super Round Body</li>
+<li>arial.ttf: English only.</li>
+<li>dinalternate.ttf:DIN Alternate Bold</li>
+<li>helveticalt.ttf:Helvetica</li>
+<li>helveticains.ttf:Helvetica Inserat</li>
+<li>trajanpro.ttf:TrajanPro-Bold</li>
+<li>korean.ttf: Korean.</li>
+<li>japanese.ttf: Japanese.</li>
+<li>thai.ttf: Thai.</li>
+<li>roboto.ttf:Roboto</li>
+<li>notosans.ttf:NotoSans</li>
+<li>notosansthai.ttf: Thai NotoSansThai</li>
+<li>sarabun.ttf: Thai Sarabun</li>
+<li>kanit.ttf: Thai Kanit</li>
+<li>charmonman.ttf: Thai Charmonman.</li>
+<li>notonaskharabic.ttf: Arabic NotoNaskhArabic.</li>
+<li>notosansdevanagari.ttf: NotoSansDevanagari for India.</li>
+<li>notosanstc.ttf: Cantonese Source Han Sans NotoSansTC</li>
+<li>notosanskr.ttf: Korean NotoSansKR.</li>
+<li>gothica1.ttf: Korean GothicA1.</li>
+<li>nanummyeongjo.ttf: Korean NanumMyeongjo.</li>
+<li>notosansjp.ttf: Japanese NotoSansJP.</li>
+<li>notoserifjp.ttf: Japanese NotoSerifJP.</li>
+<li>shipporimincho.ttf: Japanese ShipporiMincho.</li>
+Default value: hei.ttf.
+<br>Note:
+<li>kai.ttf is recommended for SimKai.</li>
+<li>FontFileInput takes precedence when specified.</li>
+
+     * @param FontType Font type. Valid values:
+<li>hei.ttf: SimHei</li>
+<li>song.ttf: SimSun.</li>
+<li>kai.ttf (recommend) or simkai.ttf: KaiTi.</li>
+<li>msyh.ttf: Microsoft YaHei.</li>
+<li>msyhbd.ttf: Microsoft YaHei Bold.</li>
+<li>hkjgt.ttf: DynaFont King Gothic.</li>
+<li>dhttx.ttf: DianHei Extra Light.</li>
+<li>xqgdzt.ttf: XiQue GuZiDian.</li>
+<li>qpcyt.ttf: Smart Splice Super Round Body</li>
+<li>arial.ttf: English only.</li>
+<li>dinalternate.ttf:DIN Alternate Bold</li>
+<li>helveticalt.ttf:Helvetica</li>
+<li>helveticains.ttf:Helvetica Inserat</li>
+<li>trajanpro.ttf:TrajanPro-Bold</li>
+<li>korean.ttf: Korean.</li>
+<li>japanese.ttf: Japanese.</li>
+<li>thai.ttf: Thai.</li>
+<li>roboto.ttf:Roboto</li>
+<li>notosans.ttf:NotoSans</li>
+<li>notosansthai.ttf: Thai NotoSansThai</li>
+<li>sarabun.ttf: Thai Sarabun</li>
+<li>kanit.ttf: Thai Kanit</li>
+<li>charmonman.ttf: Thai Charmonman.</li>
+<li>notonaskharabic.ttf: Arabic NotoNaskhArabic.</li>
+<li>notosansdevanagari.ttf: NotoSansDevanagari for India.</li>
+<li>notosanstc.ttf: Cantonese Source Han Sans NotoSansTC</li>
+<li>notosanskr.ttf: Korean NotoSansKR.</li>
+<li>gothica1.ttf: Korean GothicA1.</li>
+<li>nanummyeongjo.ttf: Korean NanumMyeongjo.</li>
+<li>notosansjp.ttf: Japanese NotoSansJP.</li>
+<li>notoserifjp.ttf: Japanese NotoSerifJP.</li>
+<li>shipporimincho.ttf: Japanese ShipporiMincho.</li>
+Default value: hei.ttf.
+<br>Note:
+<li>kai.ttf is recommended for SimKai.</li>
+<li>FontFileInput takes precedence when specified.</li>
+
      */
     public void setFontType(String FontType) {
         this.FontType = FontType;
     }
 
     /**
-     * Get  
-     * @return FontSize 
+     * Get Font size. If not specified, the font size of the subtitle file applies. Pixel and percentage formats are supported:
+
+- Pixel: Npx. Value range of N: (0,4096].
+- Percentage: N%. Value range of N: (0,100]. For example, 10% means the subtitle font size is 10% of the source video height.
+
+The default size is 5% of the source video height if this parameter is not specified or the font size is not configured in the subtitle file.
+ 
+     * @return FontSize Font size. If not specified, the font size of the subtitle file applies. Pixel and percentage formats are supported:
+
+- Pixel: Npx. Value range of N: (0,4096].
+- Percentage: N%. Value range of N: (0,100]. For example, 10% means the subtitle font size is 10% of the source video height.
+
+The default size is 5% of the source video height if this parameter is not specified or the font size is not configured in the subtitle file.
+
      */
     public String getFontSize() {
         return this.FontSize;
     }
 
     /**
-     * Set 
-     * @param FontSize 
+     * Set Font size. If not specified, the font size of the subtitle file applies. Pixel and percentage formats are supported:
+
+- Pixel: Npx. Value range of N: (0,4096].
+- Percentage: N%. Value range of N: (0,100]. For example, 10% means the subtitle font size is 10% of the source video height.
+
+The default size is 5% of the source video height if this parameter is not specified or the font size is not configured in the subtitle file.
+
+     * @param FontSize Font size. If not specified, the font size of the subtitle file applies. Pixel and percentage formats are supported:
+
+- Pixel: Npx. Value range of N: (0,4096].
+- Percentage: N%. Value range of N: (0,100]. For example, 10% means the subtitle font size is 10% of the source video height.
+
+The default size is 5% of the source video height if this parameter is not specified or the font size is not configured in the subtitle file.
+
      */
     public void setFontSize(String FontSize) {
         this.FontSize = FontSize;
     }
 
     /**
-     * Get  
-     * @return FontColor 
+     * Get Font color. Format: 0xRRGGBB. Default value: 0xFFFFFF (white). 
+     * @return FontColor Font color. Format: 0xRRGGBB. Default value: 0xFFFFFF (white).
      */
     public String getFontColor() {
         return this.FontColor;
     }
 
     /**
-     * Set 
-     * @param FontColor 
+     * Set Font color. Format: 0xRRGGBB. Default value: 0xFFFFFF (white).
+     * @param FontColor Font color. Format: 0xRRGGBB. Default value: 0xFFFFFF (white).
      */
     public void setFontColor(String FontColor) {
         this.FontColor = FontColor;
     }
 
     /**
-     * Get  
-     * @return FontAlpha 
+     * Get Text opacity, value ranges from 0 to 1.
+<li>0: completely transparent.</li>
+<li>1: completely opaque.</li>
+Default value: 1. 
+     * @return FontAlpha Text opacity, value ranges from 0 to 1.
+<li>0: completely transparent.</li>
+<li>1: completely opaque.</li>
+Default value: 1.
      */
     public Float getFontAlpha() {
         return this.FontAlpha;
     }
 
     /**
-     * Set 
-     * @param FontAlpha 
+     * Set Text opacity, value ranges from 0 to 1.
+<li>0: completely transparent.</li>
+<li>1: completely opaque.</li>
+Default value: 1.
+     * @param FontAlpha Text opacity, value ranges from 0 to 1.
+<li>0: completely transparent.</li>
+<li>1: completely opaque.</li>
+Default value: 1.
      */
     public void setFontAlpha(Float FontAlpha) {
         this.FontAlpha = FontAlpha;
     }
 
     /**
-     * Get  
-     * @return YPos 
+     * Get Subtitle y-axis coordinate position. If you specify this parameter, the built-in coordinates of the subtitle file are ignored. Pixel and percentage formats are supported.
+
+- Pixel: Npx. Value range of N: [0,4096].
+-Percentage: N%, N range: [0,100]. For example, 10% means the subtitle y-coordinate = 10% * source video height.
+
+Default value: 4% of the source video height.
+Note: The origin of the coordinate axes is at the bottom of the central axis of the source video, and the subtitle reference position is at the bottom of the central axis of the subtitles, as shown in the figure below.
+![image](https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png)
+ 
+     * @return YPos Subtitle y-axis coordinate position. If you specify this parameter, the built-in coordinates of the subtitle file are ignored. Pixel and percentage formats are supported.
+
+- Pixel: Npx. Value range of N: [0,4096].
+-Percentage: N%, N range: [0,100]. For example, 10% means the subtitle y-coordinate = 10% * source video height.
+
+Default value: 4% of the source video height.
+Note: The origin of the coordinate axes is at the bottom of the central axis of the source video, and the subtitle reference position is at the bottom of the central axis of the subtitles, as shown in the figure below.
+![image](https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png)
+
      */
     public String getYPos() {
         return this.YPos;
     }
 
     /**
-     * Set 
-     * @param YPos 
+     * Set Subtitle y-axis coordinate position. If you specify this parameter, the built-in coordinates of the subtitle file are ignored. Pixel and percentage formats are supported.
+
+- Pixel: Npx. Value range of N: [0,4096].
+-Percentage: N%, N range: [0,100]. For example, 10% means the subtitle y-coordinate = 10% * source video height.
+
+Default value: 4% of the source video height.
+Note: The origin of the coordinate axes is at the bottom of the central axis of the source video, and the subtitle reference position is at the bottom of the central axis of the subtitles, as shown in the figure below.
+![image](https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png)
+
+     * @param YPos Subtitle y-axis coordinate position. If you specify this parameter, the built-in coordinates of the subtitle file are ignored. Pixel and percentage formats are supported.
+
+- Pixel: Npx. Value range of N: [0,4096].
+-Percentage: N%, N range: [0,100]. For example, 10% means the subtitle y-coordinate = 10% * source video height.
+
+Default value: 4% of the source video height.
+Note: The origin of the coordinate axes is at the bottom of the central axis of the source video, and the subtitle reference position is at the bottom of the central axis of the subtitles, as shown in the figure below.
+![image](https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png)
+
      */
     public void setYPos(String YPos) {
         this.YPos = YPos;
     }
 
     /**
-     * Get  
-     * @return BoardY 
+     * Get y-axis coordinate position of the subtitle background base plate. Supports pixel and percentage formats.
+
+- Pixel: Npx. Value range of N: [0,4096].
+-Percentage: N%, N range: [0,100]. For example, 10% means the y-coordinate of the subtitle background base plate = 10% * source video height.
+
+If this parameter is not specified, the subtitle background base plate is disabled.
+Note: The origin of the coordinate axes is at the bottom of the central axis of the source video, and the reference position of the subtitle background base plate is at the bottom of its central axis, as shown in the figure below.
+![image](https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png)
+ 
+     * @return BoardY y-axis coordinate position of the subtitle background base plate. Supports pixel and percentage formats.
+
+- Pixel: Npx. Value range of N: [0,4096].
+-Percentage: N%, N range: [0,100]. For example, 10% means the y-coordinate of the subtitle background base plate = 10% * source video height.
+
+If this parameter is not specified, the subtitle background base plate is disabled.
+Note: The origin of the coordinate axes is at the bottom of the central axis of the source video, and the reference position of the subtitle background base plate is at the bottom of its central axis, as shown in the figure below.
+![image](https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png)
+
      */
     public String getBoardY() {
         return this.BoardY;
     }
 
     /**
-     * Set 
-     * @param BoardY 
+     * Set y-axis coordinate position of the subtitle background base plate. Supports pixel and percentage formats.
+
+- Pixel: Npx. Value range of N: [0,4096].
+-Percentage: N%, N range: [0,100]. For example, 10% means the y-coordinate of the subtitle background base plate = 10% * source video height.
+
+If this parameter is not specified, the subtitle background base plate is disabled.
+Note: The origin of the coordinate axes is at the bottom of the central axis of the source video, and the reference position of the subtitle background base plate is at the bottom of its central axis, as shown in the figure below.
+![image](https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png)
+
+     * @param BoardY y-axis coordinate position of the subtitle background base plate. Supports pixel and percentage formats.
+
+- Pixel: Npx. Value range of N: [0,4096].
+-Percentage: N%, N range: [0,100]. For example, 10% means the y-coordinate of the subtitle background base plate = 10% * source video height.
+
+If this parameter is not specified, the subtitle background base plate is disabled.
+Note: The origin of the coordinate axes is at the bottom of the central axis of the source video, and the reference position of the subtitle background base plate is at the bottom of its central axis, as shown in the figure below.
+![image](https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png)
+
      */
     public void setBoardY(String BoardY) {
         this.BoardY = BoardY;
     }
 
     /**
-     * Get  
-     * @return BoardWidth 
+     * Get Base plate width. The value should be a positive integer.
+- Value range for pixels: [0,4096].
+- Value range for percentages: [0, 100].
+If background is enabled and this parameter is not specified, the default width is 90% of the source video width.
+ 
+     * @return BoardWidth Base plate width. The value should be a positive integer.
+- Value range for pixels: [0,4096].
+- Value range for percentages: [0, 100].
+If background is enabled and this parameter is not specified, the default width is 90% of the source video width.
+
      */
     public Long getBoardWidth() {
         return this.BoardWidth;
     }
 
     /**
-     * Set 
-     * @param BoardWidth 
+     * Set Base plate width. The value should be a positive integer.
+- Value range for pixels: [0,4096].
+- Value range for percentages: [0, 100].
+If background is enabled and this parameter is not specified, the default width is 90% of the source video width.
+
+     * @param BoardWidth Base plate width. The value should be a positive integer.
+- Value range for pixels: [0,4096].
+- Value range for percentages: [0, 100].
+If background is enabled and this parameter is not specified, the default width is 90% of the source video width.
+
      */
     public void setBoardWidth(Long BoardWidth) {
         this.BoardWidth = BoardWidth;
     }
 
     /**
-     * Get  
-     * @return BoardHeight 
+     * Get Height of the base plate. Positive integer.
+- Value range for pixels: [0,4096].
+- Value range for percentages: [0, 100].
+If background is enabled and this parameter is not specified, the default height is 15% of the source video height.
+ 
+     * @return BoardHeight Height of the base plate. Positive integer.
+- Value range for pixels: [0,4096].
+- Value range for percentages: [0, 100].
+If background is enabled and this parameter is not specified, the default height is 15% of the source video height.
+
      */
     public Long getBoardHeight() {
         return this.BoardHeight;
     }
 
     /**
-     * Set 
-     * @param BoardHeight 
+     * Set Height of the base plate. Positive integer.
+- Value range for pixels: [0,4096].
+- Value range for percentages: [0, 100].
+If background is enabled and this parameter is not specified, the default height is 15% of the source video height.
+
+     * @param BoardHeight Height of the base plate. Positive integer.
+- Value range for pixels: [0,4096].
+- Value range for percentages: [0, 100].
+If background is enabled and this parameter is not specified, the default height is 15% of the source video height.
+
      */
     public void setBoardHeight(Long BoardHeight) {
         this.BoardHeight = BoardHeight;
     }
 
     /**
-     * Get  
-     * @return BoardColor 
+     * Get Board color. Format: 0xRRGGBB.
+Default value: 0x000000 (black). 
+     * @return BoardColor Board color. Format: 0xRRGGBB.
+Default value: 0x000000 (black).
      */
     public String getBoardColor() {
         return this.BoardColor;
     }
 
     /**
-     * Set 
-     * @param BoardColor 
+     * Set Board color. Format: 0xRRGGBB.
+Default value: 0x000000 (black).
+     * @param BoardColor Board color. Format: 0xRRGGBB.
+Default value: 0x000000 (black).
      */
     public void setBoardColor(String BoardColor) {
         this.BoardColor = BoardColor;
     }
 
     /**
-     * Get  
-     * @return BoardAlpha 
+     * Get Subtitle background transparency. Value range: [0, 1].
+<li>0: completely transparent.</li>
+<li>1: completely opaque.</li>
+Default value: 0.8. 
+     * @return BoardAlpha Subtitle background transparency. Value range: [0, 1].
+<li>0: completely transparent.</li>
+<li>1: completely opaque.</li>
+Default value: 0.8.
      */
     public Float getBoardAlpha() {
         return this.BoardAlpha;
     }
 
     /**
-     * Set 
-     * @param BoardAlpha 
+     * Set Subtitle background transparency. Value range: [0, 1].
+<li>0: completely transparent.</li>
+<li>1: completely opaque.</li>
+Default value: 0.8.
+     * @param BoardAlpha Subtitle background transparency. Value range: [0, 1].
+<li>0: completely transparent.</li>
+<li>1: completely opaque.</li>
+Default value: 0.8.
      */
     public void setBoardAlpha(Float BoardAlpha) {
         this.BoardAlpha = BoardAlpha;
@@ -466,12 +856,12 @@ No shading by default if left blank.
      * Get Stroke width. The value should be a floating-point number.
 - Value range for pixels: [0, 1000].
 - Value range for percentages: [0, 100].
-0.3% of the source video height by default if left blank.
+If this is not specified, the default width is 0.3% of the source video height.
  
      * @return OutlineWidth Stroke width. The value should be a floating-point number.
 - Value range for pixels: [0, 1000].
 - Value range for percentages: [0, 100].
-0.3% of the source video height by default if left blank.
+If this is not specified, the default width is 0.3% of the source video height.
 
      */
     public Float getOutlineWidth() {
@@ -482,12 +872,12 @@ No shading by default if left blank.
      * Set Stroke width. The value should be a floating-point number.
 - Value range for pixels: [0, 1000].
 - Value range for percentages: [0, 100].
-0.3% of the source video height by default if left blank.
+If this is not specified, the default width is 0.3% of the source video height.
 
      * @param OutlineWidth Stroke width. The value should be a floating-point number.
 - Value range for pixels: [0, 1000].
 - Value range for percentages: [0, 100].
-0.3% of the source video height by default if left blank.
+If this is not specified, the default width is 0.3% of the source video height.
 
      */
     public void setOutlineWidth(Float OutlineWidth) {
@@ -538,12 +928,12 @@ No shading by default if left blank.
      * Get Shadow width. Floating-point number.
 - Value range for pixels: [0, 1000].
 - Value range for percentages: [0, 100].
-No shading by default if left blank.
+If this is not specified, no shadow is applied by default.
  
      * @return ShadowWidth Shadow width. Floating-point number.
 - Value range for pixels: [0, 1000].
 - Value range for percentages: [0, 100].
-No shading by default if left blank.
+If this is not specified, no shadow is applied by default.
 
      */
     public Float getShadowWidth() {
@@ -554,12 +944,12 @@ No shading by default if left blank.
      * Set Shadow width. Floating-point number.
 - Value range for pixels: [0, 1000].
 - Value range for percentages: [0, 100].
-No shading by default if left blank.
+If this is not specified, no shadow is applied by default.
 
      * @param ShadowWidth Shadow width. Floating-point number.
 - Value range for pixels: [0, 1000].
 - Value range for percentages: [0, 100].
-No shading by default if left blank.
+If this is not specified, no shadow is applied by default.
 
      */
     public void setShadowWidth(Float ShadowWidth) {
@@ -567,9 +957,9 @@ No shading by default if left blank.
     }
 
     /**
-     * Get Shadow color. 6-bit base RGB. Black by default if left blank (when shadow has set).
+     * Get Shadow color. 6-bit base-16 RGB. Black by default if left blank (when shadow has been set).
  
-     * @return ShadowColor Shadow color. 6-bit base RGB. Black by default if left blank (when shadow has set).
+     * @return ShadowColor Shadow color. 6-bit base-16 RGB. Black by default if left blank (when shadow has been set).
 
      */
     public String getShadowColor() {
@@ -577,9 +967,9 @@ No shading by default if left blank.
     }
 
     /**
-     * Set Shadow color. 6-bit base RGB. Black by default if left blank (when shadow has set).
+     * Set Shadow color. 6-bit base-16 RGB. Black by default if left blank (when shadow has been set).
 
-     * @param ShadowColor Shadow color. 6-bit base RGB. Black by default if left blank (when shadow has set).
+     * @param ShadowColor Shadow color. 6-bit base-16 RGB. Black by default if left blank (when shadow has been set).
 
      */
     public void setShadowColor(String ShadowColor) {
@@ -587,9 +977,9 @@ No shading by default if left blank.
     }
 
     /**
-     * Get Shadow transparency. The value should be a positive floating-point number in the range of (0, 1]. If this is not specified, the default value is 1, which means completely opaque (with shadow configured).
+     * Get Shadow transparency. The value should be a positive floating-point number in the range of (0, 1]. If not specified, the default value is 1, which means completely opaque (with shadow configured).
  
-     * @return ShadowAlpha Shadow transparency. The value should be a positive floating-point number in the range of (0, 1]. If this is not specified, the default value is 1, which means completely opaque (with shadow configured).
+     * @return ShadowAlpha Shadow transparency. The value should be a positive floating-point number in the range of (0, 1]. If not specified, the default value is 1, which means completely opaque (with shadow configured).
 
      */
     public Float getShadowAlpha() {
@@ -597,9 +987,9 @@ No shading by default if left blank.
     }
 
     /**
-     * Set Shadow transparency. The value should be a positive floating-point number in the range of (0, 1]. If this is not specified, the default value is 1, which means completely opaque (with shadow configured).
+     * Set Shadow transparency. The value should be a positive floating-point number in the range of (0, 1]. If not specified, the default value is 1, which means completely opaque (with shadow configured).
 
-     * @param ShadowAlpha Shadow transparency. The value should be a positive floating-point number in the range of (0, 1]. If this is not specified, the default value is 1, which means completely opaque (with shadow configured).
+     * @param ShadowAlpha Shadow transparency. The value should be a positive floating-point number in the range of (0, 1]. If not specified, the default value is 1, which means completely opaque (with shadow configured).
 
      */
     public void setShadowAlpha(Float ShadowAlpha) {
@@ -735,9 +1125,9 @@ No shading by default if left blank.
     }
 
     /**
-     * Get Default value: 0. If this is set to 1, the value of LineSpacing is a percentage based on the video height.
+     * Get Default value is 0. If this is set to 1, the value of LineSpacing is a percentage based on the video height.
  
-     * @return LineSpacingUnit Default value: 0. If this is set to 1, the value of LineSpacing is a percentage based on the video height.
+     * @return LineSpacingUnit Default value is 0. If this is set to 1, the value of LineSpacing is a percentage based on the video height.
 
      */
     public Long getLineSpacingUnit() {
@@ -745,9 +1135,9 @@ No shading by default if left blank.
     }
 
     /**
-     * Set Default value: 0. If this is set to 1, the value of LineSpacing is a percentage based on the video height.
+     * Set Default value is 0. If this is set to 1, the value of LineSpacing is a percentage based on the video height.
 
-     * @param LineSpacingUnit Default value: 0. If this is set to 1, the value of LineSpacing is a percentage based on the video height.
+     * @param LineSpacingUnit Default value is 0. If this is set to 1, the value of LineSpacing is a percentage based on the video height.
 
      */
     public void setLineSpacingUnit(Long LineSpacingUnit) {

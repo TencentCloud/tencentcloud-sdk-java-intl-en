@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class PublicNetConfigIn extends AbstractModel {
 
     /**
-    * Whether to enable public network access. Valid values: ['DISABLE', 'ENABLE']
+    * Whether to enable public network access. Valid values: DISABLE, ENABLE.
     */
     @SerializedName("PublicNetStatus")
     @Expose
     private String PublicNetStatus;
 
     /**
-    * EIP configuration
+    * Eip configuration
     */
     @SerializedName("EipConfig")
     @Expose
     private EipConfigIn EipConfig;
 
     /**
-     * Get Whether to enable public network access. Valid values: ['DISABLE', 'ENABLE'] 
-     * @return PublicNetStatus Whether to enable public network access. Valid values: ['DISABLE', 'ENABLE']
+     * Get Whether to enable public network access. Valid values: DISABLE, ENABLE. 
+     * @return PublicNetStatus Whether to enable public network access. Valid values: DISABLE, ENABLE.
      */
     public String getPublicNetStatus() {
         return this.PublicNetStatus;
     }
 
     /**
-     * Set Whether to enable public network access. Valid values: ['DISABLE', 'ENABLE']
-     * @param PublicNetStatus Whether to enable public network access. Valid values: ['DISABLE', 'ENABLE']
+     * Set Whether to enable public network access. Valid values: DISABLE, ENABLE.
+     * @param PublicNetStatus Whether to enable public network access. Valid values: DISABLE, ENABLE.
      */
     public void setPublicNetStatus(String PublicNetStatus) {
         this.PublicNetStatus = PublicNetStatus;
     }
 
     /**
-     * Get EIP configuration 
-     * @return EipConfig EIP configuration
+     * Get Eip configuration 
+     * @return EipConfig Eip configuration
      */
     public EipConfigIn getEipConfig() {
         return this.EipConfig;
     }
 
     /**
-     * Set EIP configuration
-     * @param EipConfig EIP configuration
+     * Set Eip configuration
+     * @param EipConfig Eip configuration
      */
     public void setEipConfig(EipConfigIn EipConfig) {
         this.EipConfig = EipConfig;

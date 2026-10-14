@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class AiAnalysisTaskFrameTagOutput extends AbstractModel {
 
     /**
-    * Video frame tagging list.
+    * Frame-specific tag list of the video.
     */
     @SerializedName("SegmentSet")
     @Expose
     private MediaAiAnalysisFrameTagSegmentItem [] SegmentSet;
 
     /**
-     * Get Video frame tagging list. 
-     * @return SegmentSet Video frame tagging list.
+     * Get Frame-specific tag list of the video. 
+     * @return SegmentSet Frame-specific tag list of the video.
      */
     public MediaAiAnalysisFrameTagSegmentItem [] getSegmentSet() {
         return this.SegmentSet;
     }
 
     /**
-     * Set Video frame tagging list.
-     * @param SegmentSet Video frame tagging list.
+     * Set Frame-specific tag list of the video.
+     * @param SegmentSet Frame-specific tag list of the video.
      */
     public void setSegmentSet(MediaAiAnalysisFrameTagSegmentItem [] SegmentSet) {
         this.SegmentSet = SegmentSet;

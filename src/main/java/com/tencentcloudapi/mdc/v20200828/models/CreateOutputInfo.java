@@ -24,256 +24,380 @@ import java.util.HashMap;
 public class CreateOutputInfo extends AbstractModel {
 
     /**
-    * The output name.
+    * Output name.
     */
     @SerializedName("OutputName")
     @Expose
     private String OutputName;
 
     /**
-    * Description of the output.
+    * Output description.
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * The output protocol. Valid values: SRT, RTP, RTMP, RTMP_PULL.
+    * Output relay protocol. Supports SRT, RTP, RTMP, RTMP_PULL, RTSP_PULL, and RIST.
     */
     @SerializedName("Protocol")
     @Expose
     private String Protocol;
 
     /**
-    * The output region.
+    * Output region.
     */
     @SerializedName("OutputRegion")
     @Expose
     private String OutputRegion;
 
     /**
-    * The SRT configuration.
+    * Configuration of the output SRT.
     */
     @SerializedName("SRTSettings")
     @Expose
     private CreateOutputSrtSettings SRTSettings;
 
     /**
-    * The RTMP configuration.
+    * Configuration of the output RTMP.
     */
     @SerializedName("RTMPSettings")
     @Expose
     private CreateOutputRTMPSettings RTMPSettings;
 
     /**
-    * The RTP configuration.
+    * Configuration of the output RTP.
     */
     @SerializedName("RTPSettings")
     @Expose
     private CreateOutputInfoRTPSettings RTPSettings;
 
     /**
-    * IP whitelist, in CIDR format, such as 0.0.0.0/0. This is valid when Protocol is RTMP_PULL, and empty means no restriction on client IP.
+    * IP whitelist list in CIDR format, for example, 0.0.0.0/0.
+Valid when Protocol is RTMP_PULL. If empty, it represents no limit on client IP.
     */
     @SerializedName("AllowIpList")
     @Expose
     private String [] AllowIpList;
 
     /**
-    * The maximum number of concurrent stream pulls is 4, and the default value is 4.
+    * Maximum number of concurrent stream pulls. Maximum value: 4. Default value: 4.
     */
     @SerializedName("MaxConcurrent")
     @Expose
     private Long MaxConcurrent;
 
     /**
-    * The bound security group IDs.
+    * ID of the bound input security group.
     */
     @SerializedName("SecurityGroupIds")
     @Expose
     private String [] SecurityGroupIds;
 
     /**
-    * Availability zone: output supports at most one availability zone as input.
+    * Availability zone. output supports a maximum of one user-submitted input availability zone.
     */
     @SerializedName("Zones")
     @Expose
     private String [] Zones;
 
     /**
-     * Get The output name. 
-     * @return OutputName The output name.
+    * Output type: Internet/TencentCSS/StreamLive
+    */
+    @SerializedName("OutputType")
+    @Expose
+    private String OutputType;
+
+    /**
+    * Output RIST configuration.
+    */
+    @SerializedName("RISTSettings")
+    @Expose
+    private CreateOutputRistSettings RISTSettings;
+
+    /**
+    * For streams with multiple audio/video tracks, you can specify the track to be used
+    */
+    @SerializedName("PidSelector")
+    @Expose
+    private PidSelector PidSelector;
+
+    /**
+    * Output module type, including Pinpoint (single-point output, supports up to four concurrent outputs); MultiMesh (multiple streams output, supports more than four concurrent outputs, currently up to 200). The default type is Pinpoint output. For a single Flow, only one MultiMesh output is allowed per zone.
+    */
+    @SerializedName("OutputKind")
+    @Expose
+    private String OutputKind;
+
+    /**
+    * For streams with multiple audio/video tracks, you can specify the track to be used
+    */
+    @SerializedName("StreamSelector")
+    @Expose
+    private StreamSelector StreamSelector;
+
+    /**
+     * Get Output name. 
+     * @return OutputName Output name.
      */
     public String getOutputName() {
         return this.OutputName;
     }
 
     /**
-     * Set The output name.
-     * @param OutputName The output name.
+     * Set Output name.
+     * @param OutputName Output name.
      */
     public void setOutputName(String OutputName) {
         this.OutputName = OutputName;
     }
 
     /**
-     * Get Description of the output. 
-     * @return Description Description of the output.
+     * Get Output description. 
+     * @return Description Output description.
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set Description of the output.
-     * @param Description Description of the output.
+     * Set Output description.
+     * @param Description Output description.
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get The output protocol. Valid values: SRT, RTP, RTMP, RTMP_PULL. 
-     * @return Protocol The output protocol. Valid values: SRT, RTP, RTMP, RTMP_PULL.
+     * Get Output relay protocol. Supports SRT, RTP, RTMP, RTMP_PULL, RTSP_PULL, and RIST. 
+     * @return Protocol Output relay protocol. Supports SRT, RTP, RTMP, RTMP_PULL, RTSP_PULL, and RIST.
      */
     public String getProtocol() {
         return this.Protocol;
     }
 
     /**
-     * Set The output protocol. Valid values: SRT, RTP, RTMP, RTMP_PULL.
-     * @param Protocol The output protocol. Valid values: SRT, RTP, RTMP, RTMP_PULL.
+     * Set Output relay protocol. Supports SRT, RTP, RTMP, RTMP_PULL, RTSP_PULL, and RIST.
+     * @param Protocol Output relay protocol. Supports SRT, RTP, RTMP, RTMP_PULL, RTSP_PULL, and RIST.
      */
     public void setProtocol(String Protocol) {
         this.Protocol = Protocol;
     }
 
     /**
-     * Get The output region. 
-     * @return OutputRegion The output region.
+     * Get Output region. 
+     * @return OutputRegion Output region.
      */
     public String getOutputRegion() {
         return this.OutputRegion;
     }
 
     /**
-     * Set The output region.
-     * @param OutputRegion The output region.
+     * Set Output region.
+     * @param OutputRegion Output region.
      */
     public void setOutputRegion(String OutputRegion) {
         this.OutputRegion = OutputRegion;
     }
 
     /**
-     * Get The SRT configuration. 
-     * @return SRTSettings The SRT configuration.
+     * Get Configuration of the output SRT. 
+     * @return SRTSettings Configuration of the output SRT.
      */
     public CreateOutputSrtSettings getSRTSettings() {
         return this.SRTSettings;
     }
 
     /**
-     * Set The SRT configuration.
-     * @param SRTSettings The SRT configuration.
+     * Set Configuration of the output SRT.
+     * @param SRTSettings Configuration of the output SRT.
      */
     public void setSRTSettings(CreateOutputSrtSettings SRTSettings) {
         this.SRTSettings = SRTSettings;
     }
 
     /**
-     * Get The RTMP configuration. 
-     * @return RTMPSettings The RTMP configuration.
+     * Get Configuration of the output RTMP. 
+     * @return RTMPSettings Configuration of the output RTMP.
      */
     public CreateOutputRTMPSettings getRTMPSettings() {
         return this.RTMPSettings;
     }
 
     /**
-     * Set The RTMP configuration.
-     * @param RTMPSettings The RTMP configuration.
+     * Set Configuration of the output RTMP.
+     * @param RTMPSettings Configuration of the output RTMP.
      */
     public void setRTMPSettings(CreateOutputRTMPSettings RTMPSettings) {
         this.RTMPSettings = RTMPSettings;
     }
 
     /**
-     * Get The RTP configuration. 
-     * @return RTPSettings The RTP configuration.
+     * Get Configuration of the output RTP. 
+     * @return RTPSettings Configuration of the output RTP.
      */
     public CreateOutputInfoRTPSettings getRTPSettings() {
         return this.RTPSettings;
     }
 
     /**
-     * Set The RTP configuration.
-     * @param RTPSettings The RTP configuration.
+     * Set Configuration of the output RTP.
+     * @param RTPSettings Configuration of the output RTP.
      */
     public void setRTPSettings(CreateOutputInfoRTPSettings RTPSettings) {
         this.RTPSettings = RTPSettings;
     }
 
     /**
-     * Get IP whitelist, in CIDR format, such as 0.0.0.0/0. This is valid when Protocol is RTMP_PULL, and empty means no restriction on client IP. 
-     * @return AllowIpList IP whitelist, in CIDR format, such as 0.0.0.0/0. This is valid when Protocol is RTMP_PULL, and empty means no restriction on client IP.
+     * Get IP whitelist list in CIDR format, for example, 0.0.0.0/0.
+Valid when Protocol is RTMP_PULL. If empty, it represents no limit on client IP. 
+     * @return AllowIpList IP whitelist list in CIDR format, for example, 0.0.0.0/0.
+Valid when Protocol is RTMP_PULL. If empty, it represents no limit on client IP.
      */
     public String [] getAllowIpList() {
         return this.AllowIpList;
     }
 
     /**
-     * Set IP whitelist, in CIDR format, such as 0.0.0.0/0. This is valid when Protocol is RTMP_PULL, and empty means no restriction on client IP.
-     * @param AllowIpList IP whitelist, in CIDR format, such as 0.0.0.0/0. This is valid when Protocol is RTMP_PULL, and empty means no restriction on client IP.
+     * Set IP whitelist list in CIDR format, for example, 0.0.0.0/0.
+Valid when Protocol is RTMP_PULL. If empty, it represents no limit on client IP.
+     * @param AllowIpList IP whitelist list in CIDR format, for example, 0.0.0.0/0.
+Valid when Protocol is RTMP_PULL. If empty, it represents no limit on client IP.
      */
     public void setAllowIpList(String [] AllowIpList) {
         this.AllowIpList = AllowIpList;
     }
 
     /**
-     * Get The maximum number of concurrent stream pulls is 4, and the default value is 4. 
-     * @return MaxConcurrent The maximum number of concurrent stream pulls is 4, and the default value is 4.
+     * Get Maximum number of concurrent stream pulls. Maximum value: 4. Default value: 4. 
+     * @return MaxConcurrent Maximum number of concurrent stream pulls. Maximum value: 4. Default value: 4.
      */
     public Long getMaxConcurrent() {
         return this.MaxConcurrent;
     }
 
     /**
-     * Set The maximum number of concurrent stream pulls is 4, and the default value is 4.
-     * @param MaxConcurrent The maximum number of concurrent stream pulls is 4, and the default value is 4.
+     * Set Maximum number of concurrent stream pulls. Maximum value: 4. Default value: 4.
+     * @param MaxConcurrent Maximum number of concurrent stream pulls. Maximum value: 4. Default value: 4.
      */
     public void setMaxConcurrent(Long MaxConcurrent) {
         this.MaxConcurrent = MaxConcurrent;
     }
 
     /**
-     * Get The bound security group IDs. 
-     * @return SecurityGroupIds The bound security group IDs.
+     * Get ID of the bound input security group. 
+     * @return SecurityGroupIds ID of the bound input security group.
      */
     public String [] getSecurityGroupIds() {
         return this.SecurityGroupIds;
     }
 
     /**
-     * Set The bound security group IDs.
-     * @param SecurityGroupIds The bound security group IDs.
+     * Set ID of the bound input security group.
+     * @param SecurityGroupIds ID of the bound input security group.
      */
     public void setSecurityGroupIds(String [] SecurityGroupIds) {
         this.SecurityGroupIds = SecurityGroupIds;
     }
 
     /**
-     * Get Availability zone: output supports at most one availability zone as input. 
-     * @return Zones Availability zone: output supports at most one availability zone as input.
+     * Get Availability zone. output supports a maximum of one user-submitted input availability zone. 
+     * @return Zones Availability zone. output supports a maximum of one user-submitted input availability zone.
      */
     public String [] getZones() {
         return this.Zones;
     }
 
     /**
-     * Set Availability zone: output supports at most one availability zone as input.
-     * @param Zones Availability zone: output supports at most one availability zone as input.
+     * Set Availability zone. output supports a maximum of one user-submitted input availability zone.
+     * @param Zones Availability zone. output supports a maximum of one user-submitted input availability zone.
      */
     public void setZones(String [] Zones) {
         this.Zones = Zones;
+    }
+
+    /**
+     * Get Output type: Internet/TencentCSS/StreamLive 
+     * @return OutputType Output type: Internet/TencentCSS/StreamLive
+     */
+    public String getOutputType() {
+        return this.OutputType;
+    }
+
+    /**
+     * Set Output type: Internet/TencentCSS/StreamLive
+     * @param OutputType Output type: Internet/TencentCSS/StreamLive
+     */
+    public void setOutputType(String OutputType) {
+        this.OutputType = OutputType;
+    }
+
+    /**
+     * Get Output RIST configuration. 
+     * @return RISTSettings Output RIST configuration.
+     */
+    public CreateOutputRistSettings getRISTSettings() {
+        return this.RISTSettings;
+    }
+
+    /**
+     * Set Output RIST configuration.
+     * @param RISTSettings Output RIST configuration.
+     */
+    public void setRISTSettings(CreateOutputRistSettings RISTSettings) {
+        this.RISTSettings = RISTSettings;
+    }
+
+    /**
+     * Get For streams with multiple audio/video tracks, you can specify the track to be used 
+     * @return PidSelector For streams with multiple audio/video tracks, you can specify the track to be used
+     * @deprecated
+     */
+    @Deprecated
+    public PidSelector getPidSelector() {
+        return this.PidSelector;
+    }
+
+    /**
+     * Set For streams with multiple audio/video tracks, you can specify the track to be used
+     * @param PidSelector For streams with multiple audio/video tracks, you can specify the track to be used
+     * @deprecated
+     */
+    @Deprecated
+    public void setPidSelector(PidSelector PidSelector) {
+        this.PidSelector = PidSelector;
+    }
+
+    /**
+     * Get Output module type, including Pinpoint (single-point output, supports up to four concurrent outputs); MultiMesh (multiple streams output, supports more than four concurrent outputs, currently up to 200). The default type is Pinpoint output. For a single Flow, only one MultiMesh output is allowed per zone. 
+     * @return OutputKind Output module type, including Pinpoint (single-point output, supports up to four concurrent outputs); MultiMesh (multiple streams output, supports more than four concurrent outputs, currently up to 200). The default type is Pinpoint output. For a single Flow, only one MultiMesh output is allowed per zone.
+     */
+    public String getOutputKind() {
+        return this.OutputKind;
+    }
+
+    /**
+     * Set Output module type, including Pinpoint (single-point output, supports up to four concurrent outputs); MultiMesh (multiple streams output, supports more than four concurrent outputs, currently up to 200). The default type is Pinpoint output. For a single Flow, only one MultiMesh output is allowed per zone.
+     * @param OutputKind Output module type, including Pinpoint (single-point output, supports up to four concurrent outputs); MultiMesh (multiple streams output, supports more than four concurrent outputs, currently up to 200). The default type is Pinpoint output. For a single Flow, only one MultiMesh output is allowed per zone.
+     */
+    public void setOutputKind(String OutputKind) {
+        this.OutputKind = OutputKind;
+    }
+
+    /**
+     * Get For streams with multiple audio/video tracks, you can specify the track to be used 
+     * @return StreamSelector For streams with multiple audio/video tracks, you can specify the track to be used
+     */
+    public StreamSelector getStreamSelector() {
+        return this.StreamSelector;
+    }
+
+    /**
+     * Set For streams with multiple audio/video tracks, you can specify the track to be used
+     * @param StreamSelector For streams with multiple audio/video tracks, you can specify the track to be used
+     */
+    public void setStreamSelector(StreamSelector StreamSelector) {
+        this.StreamSelector = StreamSelector;
     }
 
     public CreateOutputInfo() {
@@ -326,6 +450,21 @@ public class CreateOutputInfo extends AbstractModel {
                 this.Zones[i] = new String(source.Zones[i]);
             }
         }
+        if (source.OutputType != null) {
+            this.OutputType = new String(source.OutputType);
+        }
+        if (source.RISTSettings != null) {
+            this.RISTSettings = new CreateOutputRistSettings(source.RISTSettings);
+        }
+        if (source.PidSelector != null) {
+            this.PidSelector = new PidSelector(source.PidSelector);
+        }
+        if (source.OutputKind != null) {
+            this.OutputKind = new String(source.OutputKind);
+        }
+        if (source.StreamSelector != null) {
+            this.StreamSelector = new StreamSelector(source.StreamSelector);
+        }
     }
 
 
@@ -344,6 +483,11 @@ public class CreateOutputInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "MaxConcurrent", this.MaxConcurrent);
         this.setParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
         this.setParamArraySimple(map, prefix + "Zones.", this.Zones);
+        this.setParamSimple(map, prefix + "OutputType", this.OutputType);
+        this.setParamObj(map, prefix + "RISTSettings.", this.RISTSettings);
+        this.setParamObj(map, prefix + "PidSelector.", this.PidSelector);
+        this.setParamSimple(map, prefix + "OutputKind", this.OutputKind);
+        this.setParamObj(map, prefix + "StreamSelector.", this.StreamSelector);
 
     }
 }

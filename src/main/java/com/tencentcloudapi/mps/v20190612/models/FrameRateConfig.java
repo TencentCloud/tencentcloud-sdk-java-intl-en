@@ -25,8 +25,8 @@ public class FrameRateConfig extends AbstractModel {
 
     /**
     * Capability configuration switch. Valid values:
-<li>ON: enabled</li>
-<li>OFF: disabled.</li>
+<li>ON: enabled;</li>
+<li>OFF: disabled</li>
 Default value: ON.
     */
     @SerializedName("Switch")
@@ -34,7 +34,9 @@ Default value: ON.
     private String Switch;
 
     /**
-    * 
+    * Frame rate. Value ranges from 0 to 100. Measurement unit: Hz.
+Default value: 0.
+Note: For transcoding, this parameter overrides the internal Fps in VideoTemplate.
     */
     @SerializedName("Fps")
     @Expose
@@ -42,12 +44,12 @@ Default value: ON.
 
     /**
      * Get Capability configuration switch. Valid values:
-<li>ON: enabled</li>
-<li>OFF: disabled.</li>
+<li>ON: enabled;</li>
+<li>OFF: disabled</li>
 Default value: ON. 
      * @return Switch Capability configuration switch. Valid values:
-<li>ON: enabled</li>
-<li>OFF: disabled.</li>
+<li>ON: enabled;</li>
+<li>OFF: disabled</li>
 Default value: ON.
      */
     public String getSwitch() {
@@ -56,12 +58,12 @@ Default value: ON.
 
     /**
      * Set Capability configuration switch. Valid values:
-<li>ON: enabled</li>
-<li>OFF: disabled.</li>
+<li>ON: enabled;</li>
+<li>OFF: disabled</li>
 Default value: ON.
      * @param Switch Capability configuration switch. Valid values:
-<li>ON: enabled</li>
-<li>OFF: disabled.</li>
+<li>ON: enabled;</li>
+<li>OFF: disabled</li>
 Default value: ON.
      */
     public void setSwitch(String Switch) {
@@ -69,16 +71,24 @@ Default value: ON.
     }
 
     /**
-     * Get  
-     * @return Fps 
+     * Get Frame rate. Value ranges from 0 to 100. Measurement unit: Hz.
+Default value: 0.
+Note: For transcoding, this parameter overrides the internal Fps in VideoTemplate. 
+     * @return Fps Frame rate. Value ranges from 0 to 100. Measurement unit: Hz.
+Default value: 0.
+Note: For transcoding, this parameter overrides the internal Fps in VideoTemplate.
      */
     public Long getFps() {
         return this.Fps;
     }
 
     /**
-     * Set 
-     * @param Fps 
+     * Set Frame rate. Value ranges from 0 to 100. Measurement unit: Hz.
+Default value: 0.
+Note: For transcoding, this parameter overrides the internal Fps in VideoTemplate.
+     * @param Fps Frame rate. Value ranges from 0 to 100. Measurement unit: Hz.
+Default value: 0.
+Note: For transcoding, this parameter overrides the internal Fps in VideoTemplate.
      */
     public void setFps(Long Fps) {
         this.Fps = Fps;

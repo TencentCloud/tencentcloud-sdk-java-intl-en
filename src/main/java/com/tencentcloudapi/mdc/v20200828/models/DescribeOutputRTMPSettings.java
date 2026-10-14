@@ -25,7 +25,6 @@ public class DescribeOutputRTMPSettings extends AbstractModel {
 
     /**
     * Idle timeout period.
-Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("IdleTimeout")
     @Expose
@@ -33,25 +32,21 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
     * Chunk size.
-Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ChunkSize")
     @Expose
     private Long ChunkSize;
 
     /**
-    * Destination address information list of RTMP push.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * List of target address information for RTMP repush.
     */
     @SerializedName("Destinations")
     @Expose
     private RTMPAddressDestination [] Destinations;
 
     /**
-     * Get Idle timeout period.
-Note: this field may return null, indicating that no valid values can be obtained. 
+     * Get Idle timeout period. 
      * @return IdleTimeout Idle timeout period.
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public Long getIdleTimeout() {
         return this.IdleTimeout;
@@ -59,19 +54,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Idle timeout period.
-Note: this field may return null, indicating that no valid values can be obtained.
      * @param IdleTimeout Idle timeout period.
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setIdleTimeout(Long IdleTimeout) {
         this.IdleTimeout = IdleTimeout;
     }
 
     /**
-     * Get Chunk size.
-Note: this field may return null, indicating that no valid values can be obtained. 
+     * Get Chunk size. 
      * @return ChunkSize Chunk size.
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public Long getChunkSize() {
         return this.ChunkSize;
@@ -79,29 +70,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Chunk size.
-Note: this field may return null, indicating that no valid values can be obtained.
      * @param ChunkSize Chunk size.
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setChunkSize(Long ChunkSize) {
         this.ChunkSize = ChunkSize;
     }
 
     /**
-     * Get Destination address information list of RTMP push.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Destinations Destination address information list of RTMP push.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get List of target address information for RTMP repush. 
+     * @return Destinations List of target address information for RTMP repush.
      */
     public RTMPAddressDestination [] getDestinations() {
         return this.Destinations;
     }
 
     /**
-     * Set Destination address information list of RTMP push.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Destinations Destination address information list of RTMP push.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set List of target address information for RTMP repush.
+     * @param Destinations List of target address information for RTMP repush.
      */
     public void setDestinations(RTMPAddressDestination [] Destinations) {
         this.Destinations = Destinations;

@@ -59,7 +59,7 @@ public class MediaProcessTaskTranscodeResult extends AbstractModel {
     private TranscodeTaskInput Input;
 
     /**
-    * 
+    * Transcoding task output.
     */
     @SerializedName("Output")
     @Expose
@@ -153,16 +153,16 @@ public class MediaProcessTaskTranscodeResult extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return Output 
+     * Get Transcoding task output. 
+     * @return Output Transcoding task output.
      */
     public MediaTranscodeItem getOutput() {
         return this.Output;
     }
 
     /**
-     * Set 
-     * @param Output 
+     * Set Transcoding task output.
+     * @param Output Transcoding task output.
      */
     public void setOutput(MediaTranscodeItem Output) {
         this.Output = Output;

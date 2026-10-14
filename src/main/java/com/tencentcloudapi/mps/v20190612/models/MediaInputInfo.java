@@ -25,7 +25,7 @@ public class MediaInputInfo extends AbstractModel {
 
     /**
     * Type of the input source object. Supported values:
-<li>COS: COS origin</li>
+<li> COS: COS origin</li>
 <li> URL: URL source</li>
 <li> AWS-S3: AWS source, currently only support transcoding task </li>
 <li> VOD: VOD Pro Edition </li>
@@ -35,28 +35,28 @@ public class MediaInputInfo extends AbstractModel {
     private String Type;
 
     /**
-    * Required when `Type` is `COS`. It represents the COS object information for media processing.
+    * Required when Type is COS. It refers to the COS object information for media processing.
     */
     @SerializedName("CosInputInfo")
     @Expose
     private CosInputInfo CosInputInfo;
 
     /**
-    * 
+    * Valid when Type is URL. This item is required and refers to media processing URL object information.
     */
     @SerializedName("UrlInputInfo")
     @Expose
     private UrlInputInfo UrlInputInfo;
 
     /**
-    * 
+    * Valid when Type is AWS-S3. This item is required and refers to the AWS S3 object information for media processing.
     */
     @SerializedName("S3InputInfo")
     @Expose
     private S3InputInfo S3InputInfo;
 
     /**
-    * 
+    * Required when `Type` is `VOD`. It represents the object information of MPS on-demand pro edition.
     */
     @SerializedName("VODInputInfo")
     @Expose
@@ -64,12 +64,12 @@ public class MediaInputInfo extends AbstractModel {
 
     /**
      * Get Type of the input source object. Supported values:
-<li>COS: COS origin</li>
+<li> COS: COS origin</li>
 <li> URL: URL source</li>
 <li> AWS-S3: AWS source, currently only support transcoding task </li>
 <li> VOD: VOD Pro Edition </li> 
      * @return Type Type of the input source object. Supported values:
-<li>COS: COS origin</li>
+<li> COS: COS origin</li>
 <li> URL: URL source</li>
 <li> AWS-S3: AWS source, currently only support transcoding task </li>
 <li> VOD: VOD Pro Edition </li>
@@ -80,12 +80,12 @@ public class MediaInputInfo extends AbstractModel {
 
     /**
      * Set Type of the input source object. Supported values:
-<li>COS: COS origin</li>
+<li> COS: COS origin</li>
 <li> URL: URL source</li>
 <li> AWS-S3: AWS source, currently only support transcoding task </li>
 <li> VOD: VOD Pro Edition </li>
      * @param Type Type of the input source object. Supported values:
-<li>COS: COS origin</li>
+<li> COS: COS origin</li>
 <li> URL: URL source</li>
 <li> AWS-S3: AWS source, currently only support transcoding task </li>
 <li> VOD: VOD Pro Edition </li>
@@ -95,64 +95,64 @@ public class MediaInputInfo extends AbstractModel {
     }
 
     /**
-     * Get Required when `Type` is `COS`. It represents the COS object information for media processing. 
-     * @return CosInputInfo Required when `Type` is `COS`. It represents the COS object information for media processing.
+     * Get Required when Type is COS. It refers to the COS object information for media processing. 
+     * @return CosInputInfo Required when Type is COS. It refers to the COS object information for media processing.
      */
     public CosInputInfo getCosInputInfo() {
         return this.CosInputInfo;
     }
 
     /**
-     * Set Required when `Type` is `COS`. It represents the COS object information for media processing.
-     * @param CosInputInfo Required when `Type` is `COS`. It represents the COS object information for media processing.
+     * Set Required when Type is COS. It refers to the COS object information for media processing.
+     * @param CosInputInfo Required when Type is COS. It refers to the COS object information for media processing.
      */
     public void setCosInputInfo(CosInputInfo CosInputInfo) {
         this.CosInputInfo = CosInputInfo;
     }
 
     /**
-     * Get  
-     * @return UrlInputInfo 
+     * Get Valid when Type is URL. This item is required and refers to media processing URL object information. 
+     * @return UrlInputInfo Valid when Type is URL. This item is required and refers to media processing URL object information.
      */
     public UrlInputInfo getUrlInputInfo() {
         return this.UrlInputInfo;
     }
 
     /**
-     * Set 
-     * @param UrlInputInfo 
+     * Set Valid when Type is URL. This item is required and refers to media processing URL object information.
+     * @param UrlInputInfo Valid when Type is URL. This item is required and refers to media processing URL object information.
      */
     public void setUrlInputInfo(UrlInputInfo UrlInputInfo) {
         this.UrlInputInfo = UrlInputInfo;
     }
 
     /**
-     * Get  
-     * @return S3InputInfo 
+     * Get Valid when Type is AWS-S3. This item is required and refers to the AWS S3 object information for media processing. 
+     * @return S3InputInfo Valid when Type is AWS-S3. This item is required and refers to the AWS S3 object information for media processing.
      */
     public S3InputInfo getS3InputInfo() {
         return this.S3InputInfo;
     }
 
     /**
-     * Set 
-     * @param S3InputInfo 
+     * Set Valid when Type is AWS-S3. This item is required and refers to the AWS S3 object information for media processing.
+     * @param S3InputInfo Valid when Type is AWS-S3. This item is required and refers to the AWS S3 object information for media processing.
      */
     public void setS3InputInfo(S3InputInfo S3InputInfo) {
         this.S3InputInfo = S3InputInfo;
     }
 
     /**
-     * Get  
-     * @return VODInputInfo 
+     * Get Required when `Type` is `VOD`. It represents the object information of MPS on-demand pro edition. 
+     * @return VODInputInfo Required when `Type` is `VOD`. It represents the object information of MPS on-demand pro edition.
      */
     public VODInputInfo getVODInputInfo() {
         return this.VODInputInfo;
     }
 
     /**
-     * Set 
-     * @param VODInputInfo 
+     * Set Required when `Type` is `VOD`. It represents the object information of MPS on-demand pro edition.
+     * @param VODInputInfo Required when `Type` is `VOD`. It represents the object information of MPS on-demand pro edition.
      */
     public void setVODInputInfo(VODInputInfo VODInputInfo) {
         this.VODInputInfo = VODInputInfo;

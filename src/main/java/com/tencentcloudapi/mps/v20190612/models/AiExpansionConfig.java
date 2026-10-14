@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class AiExpansionConfig extends AbstractModel {
 
     /**
-    * <p>Capability configuration switch, available values: ON: Enable; OFF: Disable. Default value: ON.</p>
+    * <p>Capability configuration switch. Available values: ON: Enable; OFF: Disable. Default value: ON.</p>
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * <p>Target ratio, for example "16:9"</p>
+    * <p>Target ratio, for example, "16:9"</p>
     */
     @SerializedName("AspectRatio")
     @Expose
     private String AspectRatio;
 
     /**
-    * <p>Target width (pixel)</p><p>Value ranges from 0 to 2048.</p>
+    * <p>Target width (pixel)</p><p>Value range: [0, 2048]</p>
     */
     @SerializedName("Width")
     @Expose
     private Long Width;
 
     /**
-    * <p>Target height (pixel)</p><p>Value ranges from 0 to 2048.</p>
+    * <p>Target height (pixel)</p><p>Value range: [0, 2048]</p>
     */
     @SerializedName("Height")
     @Expose
     private Long Height;
 
     /**
-     * Get <p>Capability configuration switch, available values: ON: Enable; OFF: Disable. Default value: ON.</p> 
-     * @return Switch <p>Capability configuration switch, available values: ON: Enable; OFF: Disable. Default value: ON.</p>
+     * Get <p>Capability configuration switch. Available values: ON: Enable; OFF: Disable. Default value: ON.</p> 
+     * @return Switch <p>Capability configuration switch. Available values: ON: Enable; OFF: Disable. Default value: ON.</p>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set <p>Capability configuration switch, available values: ON: Enable; OFF: Disable. Default value: ON.</p>
-     * @param Switch <p>Capability configuration switch, available values: ON: Enable; OFF: Disable. Default value: ON.</p>
+     * Set <p>Capability configuration switch. Available values: ON: Enable; OFF: Disable. Default value: ON.</p>
+     * @param Switch <p>Capability configuration switch. Available values: ON: Enable; OFF: Disable. Default value: ON.</p>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get <p>Target ratio, for example "16:9"</p> 
-     * @return AspectRatio <p>Target ratio, for example "16:9"</p>
+     * Get <p>Target ratio, for example, "16:9"</p> 
+     * @return AspectRatio <p>Target ratio, for example, "16:9"</p>
      */
     public String getAspectRatio() {
         return this.AspectRatio;
     }
 
     /**
-     * Set <p>Target ratio, for example "16:9"</p>
-     * @param AspectRatio <p>Target ratio, for example "16:9"</p>
+     * Set <p>Target ratio, for example, "16:9"</p>
+     * @param AspectRatio <p>Target ratio, for example, "16:9"</p>
      */
     public void setAspectRatio(String AspectRatio) {
         this.AspectRatio = AspectRatio;
     }
 
     /**
-     * Get <p>Target width (pixel)</p><p>Value ranges from 0 to 2048.</p> 
-     * @return Width <p>Target width (pixel)</p><p>Value ranges from 0 to 2048.</p>
+     * Get <p>Target width (pixel)</p><p>Value range: [0, 2048]</p> 
+     * @return Width <p>Target width (pixel)</p><p>Value range: [0, 2048]</p>
      */
     public Long getWidth() {
         return this.Width;
     }
 
     /**
-     * Set <p>Target width (pixel)</p><p>Value ranges from 0 to 2048.</p>
-     * @param Width <p>Target width (pixel)</p><p>Value ranges from 0 to 2048.</p>
+     * Set <p>Target width (pixel)</p><p>Value range: [0, 2048]</p>
+     * @param Width <p>Target width (pixel)</p><p>Value range: [0, 2048]</p>
      */
     public void setWidth(Long Width) {
         this.Width = Width;
     }
 
     /**
-     * Get <p>Target height (pixel)</p><p>Value ranges from 0 to 2048.</p> 
-     * @return Height <p>Target height (pixel)</p><p>Value ranges from 0 to 2048.</p>
+     * Get <p>Target height (pixel)</p><p>Value range: [0, 2048]</p> 
+     * @return Height <p>Target height (pixel)</p><p>Value range: [0, 2048]</p>
      */
     public Long getHeight() {
         return this.Height;
     }
 
     /**
-     * Set <p>Target height (pixel)</p><p>Value ranges from 0 to 2048.</p>
-     * @param Height <p>Target height (pixel)</p><p>Value ranges from 0 to 2048.</p>
+     * Set <p>Target height (pixel)</p><p>Value range: [0, 2048]</p>
+     * @param Height <p>Target height (pixel)</p><p>Value range: [0, 2048]</p>
      */
     public void setHeight(Long Height) {
         this.Height = Height;

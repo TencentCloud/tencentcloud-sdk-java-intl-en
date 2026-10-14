@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class ImageProcessTaskOutput extends AbstractModel {
 
     /**
-    * 
+    * <p>Path of the output file.</p>
     */
     @SerializedName("Path")
     @Expose
     private String Path;
 
     /**
-    * 
+    * <p>Storage location of the output file.</p>
     */
     @SerializedName("OutputStorage")
     @Expose
@@ -52,32 +52,32 @@ public class ImageProcessTaskOutput extends AbstractModel {
     private String FileId;
 
     /**
-     * Get  
-     * @return Path 
+     * Get <p>Path of the output file.</p> 
+     * @return Path <p>Path of the output file.</p>
      */
     public String getPath() {
         return this.Path;
     }
 
     /**
-     * Set 
-     * @param Path 
+     * Set <p>Path of the output file.</p>
+     * @param Path <p>Path of the output file.</p>
      */
     public void setPath(String Path) {
         this.Path = Path;
     }
 
     /**
-     * Get  
-     * @return OutputStorage 
+     * Get <p>Storage location of the output file.</p> 
+     * @return OutputStorage <p>Storage location of the output file.</p>
      */
     public TaskOutputStorage getOutputStorage() {
         return this.OutputStorage;
     }
 
     /**
-     * Set 
-     * @param OutputStorage 
+     * Set <p>Storage location of the output file.</p>
+     * @param OutputStorage <p>Storage location of the output file.</p>
      */
     public void setOutputStorage(TaskOutputStorage OutputStorage) {
         this.OutputStorage = OutputStorage;

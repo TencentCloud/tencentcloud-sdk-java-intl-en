@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeIndexListRequest extends AbstractModel {
 
     /**
-    * Index type. `auto`: Automated; `normal`: General.
+    * Index type. auto: autonomous index; normal: general index
     */
     @SerializedName("IndexType")
     @Expose
@@ -38,72 +38,72 @@ public class DescribeIndexListRequest extends AbstractModel {
     private String InstanceId;
 
     /**
-    * Index name. `null` indicates that all indexes are requested.
+    * Index name. If this parameter is left empty, all indexes are obtained.
     */
     @SerializedName("IndexName")
     @Expose
     private String IndexName;
 
     /**
-    * Username for cluster access
+    * Cluster access username.
     */
     @SerializedName("Username")
     @Expose
     private String Username;
 
     /**
-    * Password for cluster access
+    * Cluster access password
     */
     @SerializedName("Password")
     @Expose
     private String Password;
 
     /**
-    * The starting position of paging
+    * Paging start position
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * The number of results per page
+    * Number of items displayed per page
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * Sorting condition field, which can be `IndexName`, `IndexStorage`, or `IndexCreateTime`.
+    * Sorting fields, which support the following index names: IndexName, IndexStorage, and IndexCreateTime.
     */
     @SerializedName("OrderBy")
     @Expose
     private String OrderBy;
 
     /**
-    * Filtering by index status
+    * Filter by index status
     */
     @SerializedName("IndexStatusList")
     @Expose
     private String [] IndexStatusList;
 
     /**
-    * Sorting mode, which can be `asc` and `desc`.
+    * Sort order. Supports asc and desc. Defaults to desc. Data format: "asc", "desc"
     */
     @SerializedName("Order")
     @Expose
     private String Order;
 
     /**
-     * Get Index type. `auto`: Automated; `normal`: General. 
-     * @return IndexType Index type. `auto`: Automated; `normal`: General.
+     * Get Index type. auto: autonomous index; normal: general index 
+     * @return IndexType Index type. auto: autonomous index; normal: general index
      */
     public String getIndexType() {
         return this.IndexType;
     }
 
     /**
-     * Set Index type. `auto`: Automated; `normal`: General.
-     * @param IndexType Index type. `auto`: Automated; `normal`: General.
+     * Set Index type. auto: autonomous index; normal: general index
+     * @param IndexType Index type. auto: autonomous index; normal: general index
      */
     public void setIndexType(String IndexType) {
         this.IndexType = IndexType;
@@ -126,128 +126,128 @@ public class DescribeIndexListRequest extends AbstractModel {
     }
 
     /**
-     * Get Index name. `null` indicates that all indexes are requested. 
-     * @return IndexName Index name. `null` indicates that all indexes are requested.
+     * Get Index name. If this parameter is left empty, all indexes are obtained. 
+     * @return IndexName Index name. If this parameter is left empty, all indexes are obtained.
      */
     public String getIndexName() {
         return this.IndexName;
     }
 
     /**
-     * Set Index name. `null` indicates that all indexes are requested.
-     * @param IndexName Index name. `null` indicates that all indexes are requested.
+     * Set Index name. If this parameter is left empty, all indexes are obtained.
+     * @param IndexName Index name. If this parameter is left empty, all indexes are obtained.
      */
     public void setIndexName(String IndexName) {
         this.IndexName = IndexName;
     }
 
     /**
-     * Get Username for cluster access 
-     * @return Username Username for cluster access
+     * Get Cluster access username. 
+     * @return Username Cluster access username.
      */
     public String getUsername() {
         return this.Username;
     }
 
     /**
-     * Set Username for cluster access
-     * @param Username Username for cluster access
+     * Set Cluster access username.
+     * @param Username Cluster access username.
      */
     public void setUsername(String Username) {
         this.Username = Username;
     }
 
     /**
-     * Get Password for cluster access 
-     * @return Password Password for cluster access
+     * Get Cluster access password 
+     * @return Password Cluster access password
      */
     public String getPassword() {
         return this.Password;
     }
 
     /**
-     * Set Password for cluster access
-     * @param Password Password for cluster access
+     * Set Cluster access password
+     * @param Password Cluster access password
      */
     public void setPassword(String Password) {
         this.Password = Password;
     }
 
     /**
-     * Get The starting position of paging 
-     * @return Offset The starting position of paging
+     * Get Paging start position 
+     * @return Offset Paging start position
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set The starting position of paging
-     * @param Offset The starting position of paging
+     * Set Paging start position
+     * @param Offset Paging start position
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get The number of results per page 
-     * @return Limit The number of results per page
+     * Get Number of items displayed per page 
+     * @return Limit Number of items displayed per page
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set The number of results per page
-     * @param Limit The number of results per page
+     * Set Number of items displayed per page
+     * @param Limit Number of items displayed per page
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get Sorting condition field, which can be `IndexName`, `IndexStorage`, or `IndexCreateTime`. 
-     * @return OrderBy Sorting condition field, which can be `IndexName`, `IndexStorage`, or `IndexCreateTime`.
+     * Get Sorting fields, which support the following index names: IndexName, IndexStorage, and IndexCreateTime. 
+     * @return OrderBy Sorting fields, which support the following index names: IndexName, IndexStorage, and IndexCreateTime.
      */
     public String getOrderBy() {
         return this.OrderBy;
     }
 
     /**
-     * Set Sorting condition field, which can be `IndexName`, `IndexStorage`, or `IndexCreateTime`.
-     * @param OrderBy Sorting condition field, which can be `IndexName`, `IndexStorage`, or `IndexCreateTime`.
+     * Set Sorting fields, which support the following index names: IndexName, IndexStorage, and IndexCreateTime.
+     * @param OrderBy Sorting fields, which support the following index names: IndexName, IndexStorage, and IndexCreateTime.
      */
     public void setOrderBy(String OrderBy) {
         this.OrderBy = OrderBy;
     }
 
     /**
-     * Get Filtering by index status 
-     * @return IndexStatusList Filtering by index status
+     * Get Filter by index status 
+     * @return IndexStatusList Filter by index status
      */
     public String [] getIndexStatusList() {
         return this.IndexStatusList;
     }
 
     /**
-     * Set Filtering by index status
-     * @param IndexStatusList Filtering by index status
+     * Set Filter by index status
+     * @param IndexStatusList Filter by index status
      */
     public void setIndexStatusList(String [] IndexStatusList) {
         this.IndexStatusList = IndexStatusList;
     }
 
     /**
-     * Get Sorting mode, which can be `asc` and `desc`. 
-     * @return Order Sorting mode, which can be `asc` and `desc`.
+     * Get Sort order. Supports asc and desc. Defaults to desc. Data format: "asc", "desc" 
+     * @return Order Sort order. Supports asc and desc. Defaults to desc. Data format: "asc", "desc"
      */
     public String getOrder() {
         return this.Order;
     }
 
     /**
-     * Set Sorting mode, which can be `asc` and `desc`.
-     * @param Order Sorting mode, which can be `asc` and `desc`.
+     * Set Sort order. Supports asc and desc. Defaults to desc. Data format: "asc", "desc"
+     * @param Order Sort order. Supports asc and desc. Defaults to desc. Data format: "asc", "desc"
      */
     public void setOrder(String Order) {
         this.Order = Order;

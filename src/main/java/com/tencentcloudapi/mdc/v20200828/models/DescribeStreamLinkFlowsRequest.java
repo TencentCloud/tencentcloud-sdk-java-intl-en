@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class DescribeStreamLinkFlowsRequest extends AbstractModel {
 
     /**
-    * Number of the current page. Default value: `1`
+    * Current page number. Default value: 1.
     */
     @SerializedName("PageNum")
     @Expose
     private Long PageNum;
 
     /**
-    * Number of entries per page. Default value: `10`
+    * Size per page. Default value: 10.
     */
     @SerializedName("PageSize")
     @Expose
     private Long PageSize;
 
     /**
-     * Get Number of the current page. Default value: `1` 
-     * @return PageNum Number of the current page. Default value: `1`
+     * Get Current page number. Default value: 1. 
+     * @return PageNum Current page number. Default value: 1.
      */
     public Long getPageNum() {
         return this.PageNum;
     }
 
     /**
-     * Set Number of the current page. Default value: `1`
-     * @param PageNum Number of the current page. Default value: `1`
+     * Set Current page number. Default value: 1.
+     * @param PageNum Current page number. Default value: 1.
      */
     public void setPageNum(Long PageNum) {
         this.PageNum = PageNum;
     }
 
     /**
-     * Get Number of entries per page. Default value: `10` 
-     * @return PageSize Number of entries per page. Default value: `10`
+     * Get Size per page. Default value: 10. 
+     * @return PageSize Size per page. Default value: 10.
      */
     public Long getPageSize() {
         return this.PageSize;
     }
 
     /**
-     * Set Number of entries per page. Default value: `10`
-     * @param PageSize Number of entries per page. Default value: `10`
+     * Set Size per page. Default value: 10.
+     * @param PageSize Size per page. Default value: 10.
      */
     public void setPageSize(Long PageSize) {
         this.PageSize = PageSize;

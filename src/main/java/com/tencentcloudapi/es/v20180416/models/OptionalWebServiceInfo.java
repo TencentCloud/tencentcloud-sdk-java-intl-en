@@ -24,48 +24,42 @@ import java.util.HashMap;
 public class OptionalWebServiceInfo extends AbstractModel {
 
     /**
-    * Type
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Type.
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * Status
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Status.
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * Public URL
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Public url
     */
     @SerializedName("PublicUrl")
     @Expose
     private String PublicUrl;
 
     /**
-    * Private URL
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Private network url
     */
     @SerializedName("PrivateUrl")
     @Expose
     private String PrivateUrl;
 
     /**
-    * Public network access
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Public access permissions
     */
     @SerializedName("PublicAccess")
     @Expose
     private String PublicAccess;
 
     /**
-    * Private network access
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Private network access permission
     */
     @SerializedName("PrivateAccess")
     @Expose
@@ -73,137 +67,124 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Version
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Version")
     @Expose
     private String Version;
 
     /**
-     * Get Type
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Type Type
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Intranet vip of the web service
+    */
+    @SerializedName("PrivateVip")
+    @Expose
+    private String PrivateVip;
+
+    /**
+    * Custom url of cerebro on the private network
+    */
+    @SerializedName("CustomPrivateUrl")
+    @Expose
+    private String CustomPrivateUrl;
+
+    /**
+     * Get Type. 
+     * @return Type Type.
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Type
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Type Type
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Type.
+     * @param Type Type.
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get Status
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Status Status
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Status. 
+     * @return Status Status.
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Status
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Status Status
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Status.
+     * @param Status Status.
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Public URL
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return PublicUrl Public URL
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Public url 
+     * @return PublicUrl Public url
      */
     public String getPublicUrl() {
         return this.PublicUrl;
     }
 
     /**
-     * Set Public URL
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param PublicUrl Public URL
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Public url
+     * @param PublicUrl Public url
      */
     public void setPublicUrl(String PublicUrl) {
         this.PublicUrl = PublicUrl;
     }
 
     /**
-     * Get Private URL
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return PrivateUrl Private URL
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Private network url 
+     * @return PrivateUrl Private network url
      */
     public String getPrivateUrl() {
         return this.PrivateUrl;
     }
 
     /**
-     * Set Private URL
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param PrivateUrl Private URL
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Private network url
+     * @param PrivateUrl Private network url
      */
     public void setPrivateUrl(String PrivateUrl) {
         this.PrivateUrl = PrivateUrl;
     }
 
     /**
-     * Get Public network access
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return PublicAccess Public network access
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Public access permissions 
+     * @return PublicAccess Public access permissions
      */
     public String getPublicAccess() {
         return this.PublicAccess;
     }
 
     /**
-     * Set Public network access
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param PublicAccess Public network access
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Public access permissions
+     * @param PublicAccess Public access permissions
      */
     public void setPublicAccess(String PublicAccess) {
         this.PublicAccess = PublicAccess;
     }
 
     /**
-     * Get Private network access
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return PrivateAccess Private network access
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Private network access permission 
+     * @return PrivateAccess Private network access permission
      */
     public String getPrivateAccess() {
         return this.PrivateAccess;
     }
 
     /**
-     * Set Private network access
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param PrivateAccess Private network access
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Private network access permission
+     * @param PrivateAccess Private network access permission
      */
     public void setPrivateAccess(String PrivateAccess) {
         this.PrivateAccess = PrivateAccess;
     }
 
     /**
-     * Get Version
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Version 
      * @return Version Version
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getVersion() {
         return this.Version;
@@ -211,12 +192,42 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Version
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Version Version
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setVersion(String Version) {
         this.Version = Version;
+    }
+
+    /**
+     * Get Intranet vip of the web service 
+     * @return PrivateVip Intranet vip of the web service
+     */
+    public String getPrivateVip() {
+        return this.PrivateVip;
+    }
+
+    /**
+     * Set Intranet vip of the web service
+     * @param PrivateVip Intranet vip of the web service
+     */
+    public void setPrivateVip(String PrivateVip) {
+        this.PrivateVip = PrivateVip;
+    }
+
+    /**
+     * Get Custom url of cerebro on the private network 
+     * @return CustomPrivateUrl Custom url of cerebro on the private network
+     */
+    public String getCustomPrivateUrl() {
+        return this.CustomPrivateUrl;
+    }
+
+    /**
+     * Set Custom url of cerebro on the private network
+     * @param CustomPrivateUrl Custom url of cerebro on the private network
+     */
+    public void setCustomPrivateUrl(String CustomPrivateUrl) {
+        this.CustomPrivateUrl = CustomPrivateUrl;
     }
 
     public OptionalWebServiceInfo() {
@@ -248,6 +259,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.Version != null) {
             this.Version = new String(source.Version);
         }
+        if (source.PrivateVip != null) {
+            this.PrivateVip = new String(source.PrivateVip);
+        }
+        if (source.CustomPrivateUrl != null) {
+            this.CustomPrivateUrl = new String(source.CustomPrivateUrl);
+        }
     }
 
 
@@ -262,6 +279,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "PublicAccess", this.PublicAccess);
         this.setParamSimple(map, prefix + "PrivateAccess", this.PrivateAccess);
         this.setParamSimple(map, prefix + "Version", this.Version);
+        this.setParamSimple(map, prefix + "PrivateVip", this.PrivateVip);
+        this.setParamSimple(map, prefix + "CustomPrivateUrl", this.CustomPrivateUrl);
 
     }
 }

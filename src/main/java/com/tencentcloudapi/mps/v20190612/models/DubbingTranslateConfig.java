@@ -38,7 +38,7 @@ public class DubbingTranslateConfig extends AbstractModel {
     private String TranslateDstLanguage;
 
     /**
-    * <p>Intelligent translation simplification.</p><p>Enumeration values: </p><ul><li>ON: Turn on intelligent translation simplification.</li><li>OFF: Turn off intelligent translation simplification.</li></ul><p>Default value: OFF</p>
+    * <p>Intelligent translation simplification.</p><p>Enumeration values: </p><ul><li>ON: Enable intelligent translation simplification.</li><li>OFF: Disable intelligent translation simplification.</li></ul><p>Default value: OFF</p>
     */
     @SerializedName("SimplifyTranslation")
     @Expose
@@ -77,16 +77,16 @@ public class DubbingTranslateConfig extends AbstractModel {
     }
 
     /**
-     * Get <p>Intelligent translation simplification.</p><p>Enumeration values: </p><ul><li>ON: Turn on intelligent translation simplification.</li><li>OFF: Turn off intelligent translation simplification.</li></ul><p>Default value: OFF</p> 
-     * @return SimplifyTranslation <p>Intelligent translation simplification.</p><p>Enumeration values: </p><ul><li>ON: Turn on intelligent translation simplification.</li><li>OFF: Turn off intelligent translation simplification.</li></ul><p>Default value: OFF</p>
+     * Get <p>Intelligent translation simplification.</p><p>Enumeration values: </p><ul><li>ON: Enable intelligent translation simplification.</li><li>OFF: Disable intelligent translation simplification.</li></ul><p>Default value: OFF</p> 
+     * @return SimplifyTranslation <p>Intelligent translation simplification.</p><p>Enumeration values: </p><ul><li>ON: Enable intelligent translation simplification.</li><li>OFF: Disable intelligent translation simplification.</li></ul><p>Default value: OFF</p>
      */
     public String getSimplifyTranslation() {
         return this.SimplifyTranslation;
     }
 
     /**
-     * Set <p>Intelligent translation simplification.</p><p>Enumeration values: </p><ul><li>ON: Turn on intelligent translation simplification.</li><li>OFF: Turn off intelligent translation simplification.</li></ul><p>Default value: OFF</p>
-     * @param SimplifyTranslation <p>Intelligent translation simplification.</p><p>Enumeration values: </p><ul><li>ON: Turn on intelligent translation simplification.</li><li>OFF: Turn off intelligent translation simplification.</li></ul><p>Default value: OFF</p>
+     * Set <p>Intelligent translation simplification.</p><p>Enumeration values: </p><ul><li>ON: Enable intelligent translation simplification.</li><li>OFF: Disable intelligent translation simplification.</li></ul><p>Default value: OFF</p>
+     * @param SimplifyTranslation <p>Intelligent translation simplification.</p><p>Enumeration values: </p><ul><li>ON: Enable intelligent translation simplification.</li><li>OFF: Disable intelligent translation simplification.</li></ul><p>Default value: OFF</p>
      */
     public void setSimplifyTranslation(String SimplifyTranslation) {
         this.SimplifyTranslation = SimplifyTranslation;

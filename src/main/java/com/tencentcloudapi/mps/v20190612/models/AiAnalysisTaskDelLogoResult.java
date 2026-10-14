@@ -52,7 +52,7 @@ public class AiAnalysisTaskDelLogoResult extends AbstractModel {
     private AiAnalysisTaskDelLogoInput Input;
 
     /**
-    * 
+    * Output of intelligent erasure task.
     */
     @SerializedName("Output")
     @Expose
@@ -123,16 +123,16 @@ public class AiAnalysisTaskDelLogoResult extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return Output 
+     * Get Output of intelligent erasure task. 
+     * @return Output Output of intelligent erasure task.
      */
     public AiAnalysisTaskDelLogoOutput getOutput() {
         return this.Output;
     }
 
     /**
-     * Set 
-     * @param Output 
+     * Set Output of intelligent erasure task.
+     * @param Output Output of intelligent erasure task.
      */
     public void setOutput(AiAnalysisTaskDelLogoOutput Output) {
         this.Output = Output;

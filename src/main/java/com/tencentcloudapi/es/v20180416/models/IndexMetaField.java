@@ -25,7 +25,6 @@ public class IndexMetaField extends AbstractModel {
 
     /**
     * Index type
-Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("IndexType")
     @Expose
@@ -33,14 +32,13 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 
     /**
     * Index name
-Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("IndexName")
     @Expose
     private String IndexName;
 
     /**
-    * 
+    * JSON-formatted index metadata
     */
     @SerializedName("IndexMetaJson")
     @Expose
@@ -48,15 +46,13 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 
     /**
     * Index status
-Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("IndexStatus")
     @Expose
     private String IndexStatus;
 
     /**
-    * Index size (in byte)
-Note: This field may return `null`, indicating that no valid value can be obtained.
+    * Index storage size in bytes
     */
     @SerializedName("IndexStorage")
     @Expose
@@ -64,89 +60,84 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 
     /**
     * Index creation time
-Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("IndexCreateTime")
     @Expose
     private String IndexCreateTime;
 
     /**
-    * Backing index
-Note: This field may return `null`, indicating that no valid value can be obtained.
+    * Backup index
     */
     @SerializedName("BackingIndices")
     @Expose
     private BackingIndexMetaField [] BackingIndices;
 
     /**
-    * Cluster ID
-Note: This field may return `null`, indicating that no valid value can be obtained.
+    * Cluster ID of the index
     */
     @SerializedName("ClusterId")
     @Expose
     private String ClusterId;
 
     /**
-    * Cluster name
-Note: This field may return `null`, indicating that no valid value can be obtained.
+    * Cluster name of the index
     */
     @SerializedName("ClusterName")
     @Expose
     private String ClusterName;
 
     /**
-    * Cluster version
-Note: This field may return `null`, indicating that no valid value can be obtained.
+    * Version number of the cluster to which the index belongs
     */
     @SerializedName("ClusterVersion")
     @Expose
     private String ClusterVersion;
 
     /**
-    * Index lifecycle policy field
-Note: This field may return `null`, indicating that no valid value can be obtained.
+    * Index lifecycle field
     */
     @SerializedName("IndexPolicyField")
     @Expose
     private IndexPolicyField IndexPolicyField;
 
     /**
-    * Index automation field
-Note: This field may return `null`, indicating that no valid value can be obtained.
+    * Index autonomous field
     */
     @SerializedName("IndexOptionsField")
     @Expose
     private IndexOptionsField IndexOptionsField;
 
     /**
-    * Index setting field
-Note: This field may return `null`, indicating that no valid value can be obtained.
+    * Index configuration field
     */
     @SerializedName("IndexSettingsField")
     @Expose
     private IndexSettingsField IndexSettingsField;
 
     /**
-    * Cluster APP ID
-Note: This field may return `null`, indicating that no valid value can be obtained.
+    * Index alias field
+    */
+    @SerializedName("IndexAliasesField")
+    @Expose
+    private String [] IndexAliasesField;
+
+    /**
+    * APP ID of the cluster to which the index belongs
     */
     @SerializedName("AppId")
     @Expose
     private Long AppId;
 
     /**
-    * The number of index docs.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Number of indexed documents
     */
     @SerializedName("IndexDocs")
     @Expose
     private Long IndexDocs;
 
     /**
-     * Get Index type
-Note: This field may return `null`, indicating that no valid value can be obtained. 
+     * Get Index type 
      * @return IndexType Index type
-Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public String getIndexType() {
         return this.IndexType;
@@ -154,19 +145,15 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 
     /**
      * Set Index type
-Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param IndexType Index type
-Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setIndexType(String IndexType) {
         this.IndexType = IndexType;
     }
 
     /**
-     * Get Index name
-Note: This field may return `null`, indicating that no valid value can be obtained. 
+     * Get Index name 
      * @return IndexName Index name
-Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public String getIndexName() {
         return this.IndexName;
@@ -174,35 +161,31 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 
     /**
      * Set Index name
-Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param IndexName Index name
-Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setIndexName(String IndexName) {
         this.IndexName = IndexName;
     }
 
     /**
-     * Get  
-     * @return IndexMetaJson 
+     * Get JSON-formatted index metadata 
+     * @return IndexMetaJson JSON-formatted index metadata
      */
     public String getIndexMetaJson() {
         return this.IndexMetaJson;
     }
 
     /**
-     * Set 
-     * @param IndexMetaJson 
+     * Set JSON-formatted index metadata
+     * @param IndexMetaJson JSON-formatted index metadata
      */
     public void setIndexMetaJson(String IndexMetaJson) {
         this.IndexMetaJson = IndexMetaJson;
     }
 
     /**
-     * Get Index status
-Note: This field may return `null`, indicating that no valid value can be obtained. 
+     * Get Index status 
      * @return IndexStatus Index status
-Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public String getIndexStatus() {
         return this.IndexStatus;
@@ -210,39 +193,31 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 
     /**
      * Set Index status
-Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param IndexStatus Index status
-Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setIndexStatus(String IndexStatus) {
         this.IndexStatus = IndexStatus;
     }
 
     /**
-     * Get Index size (in byte)
-Note: This field may return `null`, indicating that no valid value can be obtained. 
-     * @return IndexStorage Index size (in byte)
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Get Index storage size in bytes 
+     * @return IndexStorage Index storage size in bytes
      */
     public Long getIndexStorage() {
         return this.IndexStorage;
     }
 
     /**
-     * Set Index size (in byte)
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param IndexStorage Index size (in byte)
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Set Index storage size in bytes
+     * @param IndexStorage Index storage size in bytes
      */
     public void setIndexStorage(Long IndexStorage) {
         this.IndexStorage = IndexStorage;
     }
 
     /**
-     * Get Index creation time
-Note: This field may return `null`, indicating that no valid value can be obtained. 
+     * Get Index creation time 
      * @return IndexCreateTime Index creation time
-Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public String getIndexCreateTime() {
         return this.IndexCreateTime;
@@ -250,189 +225,167 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 
     /**
      * Set Index creation time
-Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param IndexCreateTime Index creation time
-Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setIndexCreateTime(String IndexCreateTime) {
         this.IndexCreateTime = IndexCreateTime;
     }
 
     /**
-     * Get Backing index
-Note: This field may return `null`, indicating that no valid value can be obtained. 
-     * @return BackingIndices Backing index
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Get Backup index 
+     * @return BackingIndices Backup index
      */
     public BackingIndexMetaField [] getBackingIndices() {
         return this.BackingIndices;
     }
 
     /**
-     * Set Backing index
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param BackingIndices Backing index
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Set Backup index
+     * @param BackingIndices Backup index
      */
     public void setBackingIndices(BackingIndexMetaField [] BackingIndices) {
         this.BackingIndices = BackingIndices;
     }
 
     /**
-     * Get Cluster ID
-Note: This field may return `null`, indicating that no valid value can be obtained. 
-     * @return ClusterId Cluster ID
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Get Cluster ID of the index 
+     * @return ClusterId Cluster ID of the index
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set Cluster ID
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param ClusterId Cluster ID
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Set Cluster ID of the index
+     * @param ClusterId Cluster ID of the index
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get Cluster name
-Note: This field may return `null`, indicating that no valid value can be obtained. 
-     * @return ClusterName Cluster name
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Get Cluster name of the index 
+     * @return ClusterName Cluster name of the index
      */
     public String getClusterName() {
         return this.ClusterName;
     }
 
     /**
-     * Set Cluster name
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param ClusterName Cluster name
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Set Cluster name of the index
+     * @param ClusterName Cluster name of the index
      */
     public void setClusterName(String ClusterName) {
         this.ClusterName = ClusterName;
     }
 
     /**
-     * Get Cluster version
-Note: This field may return `null`, indicating that no valid value can be obtained. 
-     * @return ClusterVersion Cluster version
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Get Version number of the cluster to which the index belongs 
+     * @return ClusterVersion Version number of the cluster to which the index belongs
      */
     public String getClusterVersion() {
         return this.ClusterVersion;
     }
 
     /**
-     * Set Cluster version
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param ClusterVersion Cluster version
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Set Version number of the cluster to which the index belongs
+     * @param ClusterVersion Version number of the cluster to which the index belongs
      */
     public void setClusterVersion(String ClusterVersion) {
         this.ClusterVersion = ClusterVersion;
     }
 
     /**
-     * Get Index lifecycle policy field
-Note: This field may return `null`, indicating that no valid value can be obtained. 
-     * @return IndexPolicyField Index lifecycle policy field
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Get Index lifecycle field 
+     * @return IndexPolicyField Index lifecycle field
      */
     public IndexPolicyField getIndexPolicyField() {
         return this.IndexPolicyField;
     }
 
     /**
-     * Set Index lifecycle policy field
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param IndexPolicyField Index lifecycle policy field
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Set Index lifecycle field
+     * @param IndexPolicyField Index lifecycle field
      */
     public void setIndexPolicyField(IndexPolicyField IndexPolicyField) {
         this.IndexPolicyField = IndexPolicyField;
     }
 
     /**
-     * Get Index automation field
-Note: This field may return `null`, indicating that no valid value can be obtained. 
-     * @return IndexOptionsField Index automation field
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Get Index autonomous field 
+     * @return IndexOptionsField Index autonomous field
      */
     public IndexOptionsField getIndexOptionsField() {
         return this.IndexOptionsField;
     }
 
     /**
-     * Set Index automation field
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param IndexOptionsField Index automation field
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Set Index autonomous field
+     * @param IndexOptionsField Index autonomous field
      */
     public void setIndexOptionsField(IndexOptionsField IndexOptionsField) {
         this.IndexOptionsField = IndexOptionsField;
     }
 
     /**
-     * Get Index setting field
-Note: This field may return `null`, indicating that no valid value can be obtained. 
-     * @return IndexSettingsField Index setting field
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Get Index configuration field 
+     * @return IndexSettingsField Index configuration field
      */
     public IndexSettingsField getIndexSettingsField() {
         return this.IndexSettingsField;
     }
 
     /**
-     * Set Index setting field
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param IndexSettingsField Index setting field
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Set Index configuration field
+     * @param IndexSettingsField Index configuration field
      */
     public void setIndexSettingsField(IndexSettingsField IndexSettingsField) {
         this.IndexSettingsField = IndexSettingsField;
     }
 
     /**
-     * Get Cluster APP ID
-Note: This field may return `null`, indicating that no valid value can be obtained. 
-     * @return AppId Cluster APP ID
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Get Index alias field 
+     * @return IndexAliasesField Index alias field
+     */
+    public String [] getIndexAliasesField() {
+        return this.IndexAliasesField;
+    }
+
+    /**
+     * Set Index alias field
+     * @param IndexAliasesField Index alias field
+     */
+    public void setIndexAliasesField(String [] IndexAliasesField) {
+        this.IndexAliasesField = IndexAliasesField;
+    }
+
+    /**
+     * Get APP ID of the cluster to which the index belongs 
+     * @return AppId APP ID of the cluster to which the index belongs
      */
     public Long getAppId() {
         return this.AppId;
     }
 
     /**
-     * Set Cluster APP ID
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param AppId Cluster APP ID
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Set APP ID of the cluster to which the index belongs
+     * @param AppId APP ID of the cluster to which the index belongs
      */
     public void setAppId(Long AppId) {
         this.AppId = AppId;
     }
 
     /**
-     * Get The number of index docs.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return IndexDocs The number of index docs.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Number of indexed documents 
+     * @return IndexDocs Number of indexed documents
      */
     public Long getIndexDocs() {
         return this.IndexDocs;
     }
 
     /**
-     * Set The number of index docs.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param IndexDocs The number of index docs.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Number of indexed documents
+     * @param IndexDocs Number of indexed documents
      */
     public void setIndexDocs(Long IndexDocs) {
         this.IndexDocs = IndexDocs;
@@ -488,6 +441,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.IndexSettingsField != null) {
             this.IndexSettingsField = new IndexSettingsField(source.IndexSettingsField);
         }
+        if (source.IndexAliasesField != null) {
+            this.IndexAliasesField = new String[source.IndexAliasesField.length];
+            for (int i = 0; i < source.IndexAliasesField.length; i++) {
+                this.IndexAliasesField[i] = new String(source.IndexAliasesField[i]);
+            }
+        }
         if (source.AppId != null) {
             this.AppId = new Long(source.AppId);
         }
@@ -514,6 +473,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamObj(map, prefix + "IndexPolicyField.", this.IndexPolicyField);
         this.setParamObj(map, prefix + "IndexOptionsField.", this.IndexOptionsField);
         this.setParamObj(map, prefix + "IndexSettingsField.", this.IndexSettingsField);
+        this.setParamArraySimple(map, prefix + "IndexAliasesField.", this.IndexAliasesField);
         this.setParamSimple(map, prefix + "AppId", this.AppId);
         this.setParamSimple(map, prefix + "IndexDocs", this.IndexDocs);
 

@@ -52,28 +52,28 @@ public class LiveStreamAsrFullTextRecognitionResult extends AbstractModel {
     private Float Confidence;
 
     /**
-    * 
+    * Recognition start UTC time.
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 
+    * UTC time when recognition is completed.
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-    * 
+    * Steady-state tag.
     */
     @SerializedName("SteadyState")
     @Expose
     private Boolean SteadyState;
 
     /**
-    * 
+    * UserId of the websocket and trtc recognition result
     */
     @SerializedName("UserId")
     @Expose
@@ -144,64 +144,64 @@ public class LiveStreamAsrFullTextRecognitionResult extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return StartTime 
+     * Get Recognition start UTC time. 
+     * @return StartTime Recognition start UTC time.
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 
-     * @param StartTime 
+     * Set Recognition start UTC time.
+     * @param StartTime Recognition start UTC time.
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get  
-     * @return EndTime 
+     * Get UTC time when recognition is completed. 
+     * @return EndTime UTC time when recognition is completed.
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 
-     * @param EndTime 
+     * Set UTC time when recognition is completed.
+     * @param EndTime UTC time when recognition is completed.
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get  
-     * @return SteadyState 
+     * Get Steady-state tag. 
+     * @return SteadyState Steady-state tag.
      */
     public Boolean getSteadyState() {
         return this.SteadyState;
     }
 
     /**
-     * Set 
-     * @param SteadyState 
+     * Set Steady-state tag.
+     * @param SteadyState Steady-state tag.
      */
     public void setSteadyState(Boolean SteadyState) {
         this.SteadyState = SteadyState;
     }
 
     /**
-     * Get  
-     * @return UserId 
+     * Get UserId of the websocket and trtc recognition result 
+     * @return UserId UserId of the websocket and trtc recognition result
      */
     public String getUserId() {
         return this.UserId;
     }
 
     /**
-     * Set 
-     * @param UserId 
+     * Set UserId of the websocket and trtc recognition result
+     * @param UserId UserId of the websocket and trtc recognition result
      */
     public void setUserId(String UserId) {
         this.UserId = UserId;

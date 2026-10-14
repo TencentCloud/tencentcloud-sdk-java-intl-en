@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DescribeOutputHLSPullSettings extends AbstractModel {
 
     /**
-    * 
+    * List of HLS pull addresses.
     */
     @SerializedName("ServerUrls")
     @Expose
     private DescribeOutputHLSPullServerUrl [] ServerUrls;
 
     /**
-     * Get  
-     * @return ServerUrls 
+     * Get List of HLS pull addresses. 
+     * @return ServerUrls List of HLS pull addresses.
      */
     public DescribeOutputHLSPullServerUrl [] getServerUrls() {
         return this.ServerUrls;
     }
 
     /**
-     * Set 
-     * @param ServerUrls 
+     * Set List of HLS pull addresses.
+     * @param ServerUrls List of HLS pull addresses.
      */
     public void setServerUrls(DescribeOutputHLSPullServerUrl [] ServerUrls) {
         this.ServerUrls = ServerUrls;

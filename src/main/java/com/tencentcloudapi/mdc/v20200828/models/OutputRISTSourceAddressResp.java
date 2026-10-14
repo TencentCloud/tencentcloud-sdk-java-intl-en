@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class OutputRISTSourceAddressResp extends AbstractModel {
 
     /**
-    * 
+    * Listening IP.
     */
     @SerializedName("Ip")
     @Expose
     private String Ip;
 
     /**
-    * 
+    * Listening port.
     */
     @SerializedName("Port")
     @Expose
     private Long Port;
 
     /**
-     * Get  
-     * @return Ip 
+     * Get Listening IP. 
+     * @return Ip Listening IP.
      */
     public String getIp() {
         return this.Ip;
     }
 
     /**
-     * Set 
-     * @param Ip 
+     * Set Listening IP.
+     * @param Ip Listening IP.
      */
     public void setIp(String Ip) {
         this.Ip = Ip;
     }
 
     /**
-     * Get  
-     * @return Port 
+     * Get Listening port. 
+     * @return Port Listening port.
      */
     public Long getPort() {
         return this.Port;
     }
 
     /**
-     * Set 
-     * @param Port 
+     * Set Listening port.
+     * @param Port Listening port.
      */
     public void setPort(Long Port) {
         this.Port = Port;

@@ -45,7 +45,7 @@ public class OverrideAIDubbingParameter extends AbstractModel {
     private DubbingConfig DubbingConfig;
 
     /**
-    * <p>Output configuration information.</p>
+    * <p>Outputs configuration message.</p>
     */
     @SerializedName("OutputConfig")
     @Expose
@@ -100,16 +100,16 @@ public class OverrideAIDubbingParameter extends AbstractModel {
     }
 
     /**
-     * Get <p>Output configuration information.</p> 
-     * @return OutputConfig <p>Output configuration information.</p>
+     * Get <p>Outputs configuration message.</p> 
+     * @return OutputConfig <p>Outputs configuration message.</p>
      */
     public DubbingOutputConfig getOutputConfig() {
         return this.OutputConfig;
     }
 
     /**
-     * Set <p>Output configuration information.</p>
-     * @param OutputConfig <p>Output configuration information.</p>
+     * Set <p>Outputs configuration message.</p>
+     * @param OutputConfig <p>Outputs configuration message.</p>
      */
     public void setOutputConfig(DubbingOutputConfig OutputConfig) {
         this.OutputConfig = OutputConfig;

@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class ModifyStreamLinkFlowRequest extends AbstractModel {
 
     /**
-    * Flow ID
+    * Stream Id.
     */
     @SerializedName("FlowId")
     @Expose
     private String FlowId;
 
     /**
-    * Name of the flow to modify
+    * Stream name to be modified.
     */
     @SerializedName("FlowName")
     @Expose
     private String FlowName;
 
     /**
-     * Get Flow ID 
-     * @return FlowId Flow ID
+     * Get Stream Id. 
+     * @return FlowId Stream Id.
      */
     public String getFlowId() {
         return this.FlowId;
     }
 
     /**
-     * Set Flow ID
-     * @param FlowId Flow ID
+     * Set Stream Id.
+     * @param FlowId Stream Id.
      */
     public void setFlowId(String FlowId) {
         this.FlowId = FlowId;
     }
 
     /**
-     * Get Name of the flow to modify 
-     * @return FlowName Name of the flow to modify
+     * Get Stream name to be modified. 
+     * @return FlowName Stream name to be modified.
      */
     public String getFlowName() {
         return this.FlowName;
     }
 
     /**
-     * Set Name of the flow to modify
-     * @param FlowName Name of the flow to modify
+     * Set Stream name to be modified.
+     * @param FlowName Stream name to be modified.
      */
     public void setFlowName(String FlowName) {
         this.FlowName = FlowName;

@@ -24,28 +24,28 @@ import java.util.HashMap;
 public class CreateAssetImageRegistryScanTaskOneKeyRequest extends AbstractModel {
 
     /**
-    * Whether to scan all images
+    * Scan All Images (Deprecated)
     */
     @SerializedName("All")
     @Expose
     private Boolean All;
 
     /**
-    * List of scanned images
+    * Scanned Image List
     */
     @SerializedName("Images")
     @Expose
     private ImageInfo [] Images;
 
     /**
-    * Array of scan types
+    * Type Array for scanning
     */
     @SerializedName("ScanType")
     @Expose
     private String [] ScanType;
 
     /**
-    * List of IDs of scanned images
+    * Scanned Image List ID
     */
     @SerializedName("Id")
     @Expose
@@ -59,50 +59,50 @@ public class CreateAssetImageRegistryScanTaskOneKeyRequest extends AbstractModel
     private Long [] ExcludeIDs;
 
     /**
-    * 
+    * Whether the Latest Image
     */
     @SerializedName("IsLatest")
     @Expose
     private Boolean IsLatest;
 
     /**
-    * 
+    * Scan Scope. 0: All Images; 1: Custom Images; 2: Recommended Scan Images
     */
     @SerializedName("ScanScope")
     @Expose
     private Long ScanScope;
 
     /**
-    * 
+    * Repository type
     */
     @SerializedName("RegistryType")
     @Expose
     private String [] RegistryType;
 
     /**
-    * 
+    * Namespace
     */
     @SerializedName("Namespace")
     @Expose
     private String [] Namespace;
 
     /**
-    * 
+    * Whether There Are Running Containers
     */
     @SerializedName("ContainerRunning")
     @Expose
     private Boolean ContainerRunning;
 
     /**
-    * 
+    * Task Timeout Duration Unit (s)
     */
     @SerializedName("Timeout")
     @Expose
     private Long Timeout;
 
     /**
-     * Get Whether to scan all images 
-     * @return All Whether to scan all images
+     * Get Scan All Images (Deprecated) 
+     * @return All Scan All Images (Deprecated)
      * @deprecated
      */
     @Deprecated
@@ -111,8 +111,8 @@ public class CreateAssetImageRegistryScanTaskOneKeyRequest extends AbstractModel
     }
 
     /**
-     * Set Whether to scan all images
-     * @param All Whether to scan all images
+     * Set Scan All Images (Deprecated)
+     * @param All Scan All Images (Deprecated)
      * @deprecated
      */
     @Deprecated
@@ -121,48 +121,48 @@ public class CreateAssetImageRegistryScanTaskOneKeyRequest extends AbstractModel
     }
 
     /**
-     * Get List of scanned images 
-     * @return Images List of scanned images
+     * Get Scanned Image List 
+     * @return Images Scanned Image List
      */
     public ImageInfo [] getImages() {
         return this.Images;
     }
 
     /**
-     * Set List of scanned images
-     * @param Images List of scanned images
+     * Set Scanned Image List
+     * @param Images Scanned Image List
      */
     public void setImages(ImageInfo [] Images) {
         this.Images = Images;
     }
 
     /**
-     * Get Array of scan types 
-     * @return ScanType Array of scan types
+     * Get Type Array for scanning 
+     * @return ScanType Type Array for scanning
      */
     public String [] getScanType() {
         return this.ScanType;
     }
 
     /**
-     * Set Array of scan types
-     * @param ScanType Array of scan types
+     * Set Type Array for scanning
+     * @param ScanType Type Array for scanning
      */
     public void setScanType(String [] ScanType) {
         this.ScanType = ScanType;
     }
 
     /**
-     * Get List of IDs of scanned images 
-     * @return Id List of IDs of scanned images
+     * Get Scanned Image List ID 
+     * @return Id Scanned Image List ID
      */
     public Long [] getId() {
         return this.Id;
     }
 
     /**
-     * Set List of IDs of scanned images
-     * @param Id List of IDs of scanned images
+     * Set Scanned Image List ID
+     * @param Id Scanned Image List ID
      */
     public void setId(Long [] Id) {
         this.Id = Id;
@@ -185,96 +185,96 @@ public class CreateAssetImageRegistryScanTaskOneKeyRequest extends AbstractModel
     }
 
     /**
-     * Get  
-     * @return IsLatest 
+     * Get Whether the Latest Image 
+     * @return IsLatest Whether the Latest Image
      */
     public Boolean getIsLatest() {
         return this.IsLatest;
     }
 
     /**
-     * Set 
-     * @param IsLatest 
+     * Set Whether the Latest Image
+     * @param IsLatest Whether the Latest Image
      */
     public void setIsLatest(Boolean IsLatest) {
         this.IsLatest = IsLatest;
     }
 
     /**
-     * Get  
-     * @return ScanScope 
+     * Get Scan Scope. 0: All Images; 1: Custom Images; 2: Recommended Scan Images 
+     * @return ScanScope Scan Scope. 0: All Images; 1: Custom Images; 2: Recommended Scan Images
      */
     public Long getScanScope() {
         return this.ScanScope;
     }
 
     /**
-     * Set 
-     * @param ScanScope 
+     * Set Scan Scope. 0: All Images; 1: Custom Images; 2: Recommended Scan Images
+     * @param ScanScope Scan Scope. 0: All Images; 1: Custom Images; 2: Recommended Scan Images
      */
     public void setScanScope(Long ScanScope) {
         this.ScanScope = ScanScope;
     }
 
     /**
-     * Get  
-     * @return RegistryType 
+     * Get Repository type 
+     * @return RegistryType Repository type
      */
     public String [] getRegistryType() {
         return this.RegistryType;
     }
 
     /**
-     * Set 
-     * @param RegistryType 
+     * Set Repository type
+     * @param RegistryType Repository type
      */
     public void setRegistryType(String [] RegistryType) {
         this.RegistryType = RegistryType;
     }
 
     /**
-     * Get  
-     * @return Namespace 
+     * Get Namespace 
+     * @return Namespace Namespace
      */
     public String [] getNamespace() {
         return this.Namespace;
     }
 
     /**
-     * Set 
-     * @param Namespace 
+     * Set Namespace
+     * @param Namespace Namespace
      */
     public void setNamespace(String [] Namespace) {
         this.Namespace = Namespace;
     }
 
     /**
-     * Get  
-     * @return ContainerRunning 
+     * Get Whether There Are Running Containers 
+     * @return ContainerRunning Whether There Are Running Containers
      */
     public Boolean getContainerRunning() {
         return this.ContainerRunning;
     }
 
     /**
-     * Set 
-     * @param ContainerRunning 
+     * Set Whether There Are Running Containers
+     * @param ContainerRunning Whether There Are Running Containers
      */
     public void setContainerRunning(Boolean ContainerRunning) {
         this.ContainerRunning = ContainerRunning;
     }
 
     /**
-     * Get  
-     * @return Timeout 
+     * Get Task Timeout Duration Unit (s) 
+     * @return Timeout Task Timeout Duration Unit (s)
      */
     public Long getTimeout() {
         return this.Timeout;
     }
 
     /**
-     * Set 
-     * @param Timeout 
+     * Set Task Timeout Duration Unit (s)
+     * @param Timeout Task Timeout Duration Unit (s)
      */
     public void setTimeout(Long Timeout) {
         this.Timeout = Timeout;

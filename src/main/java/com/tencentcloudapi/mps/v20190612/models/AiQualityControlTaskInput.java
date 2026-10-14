@@ -24,46 +24,71 @@ import java.util.HashMap;
 public class AiQualityControlTaskInput extends AbstractModel {
 
     /**
-    * 
+    * Media quality inspection template ID.
+You can directly use a preset template or customize a template in the console. The preset templates are as follows:
+- 10: Enable all quality inspection items.
+- 20: Only enable quality inspection items corresponding to format diagnosis.
+- 30: Only enable quality inspection items corresponding to no-reference scoring.
+- 40: Only enable quality inspection items corresponding to screen quality.
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-    * 
+    * Channel expansion parameter, json serialized string.
     */
     @SerializedName("ChannelExtPara")
     @Expose
     private String ChannelExtPara;
 
     /**
-     * Get  
-     * @return Definition 
+     * Get Media quality inspection template ID.
+You can directly use a preset template or customize a template in the console. The preset templates are as follows:
+- 10: Enable all quality inspection items.
+- 20: Only enable quality inspection items corresponding to format diagnosis.
+- 30: Only enable quality inspection items corresponding to no-reference scoring.
+- 40: Only enable quality inspection items corresponding to screen quality. 
+     * @return Definition Media quality inspection template ID.
+You can directly use a preset template or customize a template in the console. The preset templates are as follows:
+- 10: Enable all quality inspection items.
+- 20: Only enable quality inspection items corresponding to format diagnosis.
+- 30: Only enable quality inspection items corresponding to no-reference scoring.
+- 40: Only enable quality inspection items corresponding to screen quality.
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set 
-     * @param Definition 
+     * Set Media quality inspection template ID.
+You can directly use a preset template or customize a template in the console. The preset templates are as follows:
+- 10: Enable all quality inspection items.
+- 20: Only enable quality inspection items corresponding to format diagnosis.
+- 30: Only enable quality inspection items corresponding to no-reference scoring.
+- 40: Only enable quality inspection items corresponding to screen quality.
+     * @param Definition Media quality inspection template ID.
+You can directly use a preset template or customize a template in the console. The preset templates are as follows:
+- 10: Enable all quality inspection items.
+- 20: Only enable quality inspection items corresponding to format diagnosis.
+- 30: Only enable quality inspection items corresponding to no-reference scoring.
+- 40: Only enable quality inspection items corresponding to screen quality.
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
     }
 
     /**
-     * Get  
-     * @return ChannelExtPara 
+     * Get Channel expansion parameter, json serialized string. 
+     * @return ChannelExtPara Channel expansion parameter, json serialized string.
      */
     public String getChannelExtPara() {
         return this.ChannelExtPara;
     }
 
     /**
-     * Set 
-     * @param ChannelExtPara 
+     * Set Channel expansion parameter, json serialized string.
+     * @param ChannelExtPara Channel expansion parameter, json serialized string.
      */
     public void setChannelExtPara(String ChannelExtPara) {
         this.ChannelExtPara = ChannelExtPara;

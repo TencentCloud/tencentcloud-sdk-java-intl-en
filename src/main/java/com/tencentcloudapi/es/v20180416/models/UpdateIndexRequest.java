@@ -24,230 +24,230 @@ import java.util.HashMap;
 public class UpdateIndexRequest extends AbstractModel {
 
     /**
-    * ES cluster ID
+    * <p>ES cluster ID</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Type of the index to update. `auto`: Automated; `normal`: General.
+    * <p>Updated index type. auto: autonomous index; normal: general index</p>
     */
     @SerializedName("IndexType")
     @Expose
     private String IndexType;
 
     /**
-    * Name of the index to update
+    * <p>Updated index name</p>
     */
     @SerializedName("IndexName")
     @Expose
     private String IndexName;
 
     /**
-    * JSON-formatted index metadata to update, such as `mappings` and `settings`.
+    * <p>Updated JSON-formatted index metadata, such as mappings and settings</p>
     */
     @SerializedName("UpdateMetaJson")
     @Expose
     private String UpdateMetaJson;
 
     /**
-    * Username for cluster access
+    * <p>Cluster access username.</p>
     */
     @SerializedName("Username")
     @Expose
     private String Username;
 
     /**
-    * Password for cluster access
+    * <p>Cluster access password</p>
     */
     @SerializedName("Password")
     @Expose
     private String Password;
 
     /**
-    * Whether to roll over the backup index
+    * <p>Whether to scroll the backup index</p>
     */
     @SerializedName("RolloverBackingIndex")
     @Expose
     private Boolean RolloverBackingIndex;
 
     /**
-    * 
+    * <p>Whether to retrieve the full uninstall index</p>
     */
     @SerializedName("MountIndex")
     @Expose
     private Boolean MountIndex;
 
     /**
-    * 
+    * <p>Index Uuid</p>
     */
     @SerializedName("IndexUuid")
     @Expose
     private String IndexUuid;
 
     /**
-    * 
+    * <p>Backing index name</p>
     */
     @SerializedName("BackingIndexName")
     @Expose
     private String BackingIndexName;
 
     /**
-     * Get ES cluster ID 
-     * @return InstanceId ES cluster ID
+     * Get <p>ES cluster ID</p> 
+     * @return InstanceId <p>ES cluster ID</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set ES cluster ID
-     * @param InstanceId ES cluster ID
+     * Set <p>ES cluster ID</p>
+     * @param InstanceId <p>ES cluster ID</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Type of the index to update. `auto`: Automated; `normal`: General. 
-     * @return IndexType Type of the index to update. `auto`: Automated; `normal`: General.
+     * Get <p>Updated index type. auto: autonomous index; normal: general index</p> 
+     * @return IndexType <p>Updated index type. auto: autonomous index; normal: general index</p>
      */
     public String getIndexType() {
         return this.IndexType;
     }
 
     /**
-     * Set Type of the index to update. `auto`: Automated; `normal`: General.
-     * @param IndexType Type of the index to update. `auto`: Automated; `normal`: General.
+     * Set <p>Updated index type. auto: autonomous index; normal: general index</p>
+     * @param IndexType <p>Updated index type. auto: autonomous index; normal: general index</p>
      */
     public void setIndexType(String IndexType) {
         this.IndexType = IndexType;
     }
 
     /**
-     * Get Name of the index to update 
-     * @return IndexName Name of the index to update
+     * Get <p>Updated index name</p> 
+     * @return IndexName <p>Updated index name</p>
      */
     public String getIndexName() {
         return this.IndexName;
     }
 
     /**
-     * Set Name of the index to update
-     * @param IndexName Name of the index to update
+     * Set <p>Updated index name</p>
+     * @param IndexName <p>Updated index name</p>
      */
     public void setIndexName(String IndexName) {
         this.IndexName = IndexName;
     }
 
     /**
-     * Get JSON-formatted index metadata to update, such as `mappings` and `settings`. 
-     * @return UpdateMetaJson JSON-formatted index metadata to update, such as `mappings` and `settings`.
+     * Get <p>Updated JSON-formatted index metadata, such as mappings and settings</p> 
+     * @return UpdateMetaJson <p>Updated JSON-formatted index metadata, such as mappings and settings</p>
      */
     public String getUpdateMetaJson() {
         return this.UpdateMetaJson;
     }
 
     /**
-     * Set JSON-formatted index metadata to update, such as `mappings` and `settings`.
-     * @param UpdateMetaJson JSON-formatted index metadata to update, such as `mappings` and `settings`.
+     * Set <p>Updated JSON-formatted index metadata, such as mappings and settings</p>
+     * @param UpdateMetaJson <p>Updated JSON-formatted index metadata, such as mappings and settings</p>
      */
     public void setUpdateMetaJson(String UpdateMetaJson) {
         this.UpdateMetaJson = UpdateMetaJson;
     }
 
     /**
-     * Get Username for cluster access 
-     * @return Username Username for cluster access
+     * Get <p>Cluster access username.</p> 
+     * @return Username <p>Cluster access username.</p>
      */
     public String getUsername() {
         return this.Username;
     }
 
     /**
-     * Set Username for cluster access
-     * @param Username Username for cluster access
+     * Set <p>Cluster access username.</p>
+     * @param Username <p>Cluster access username.</p>
      */
     public void setUsername(String Username) {
         this.Username = Username;
     }
 
     /**
-     * Get Password for cluster access 
-     * @return Password Password for cluster access
+     * Get <p>Cluster access password</p> 
+     * @return Password <p>Cluster access password</p>
      */
     public String getPassword() {
         return this.Password;
     }
 
     /**
-     * Set Password for cluster access
-     * @param Password Password for cluster access
+     * Set <p>Cluster access password</p>
+     * @param Password <p>Cluster access password</p>
      */
     public void setPassword(String Password) {
         this.Password = Password;
     }
 
     /**
-     * Get Whether to roll over the backup index 
-     * @return RolloverBackingIndex Whether to roll over the backup index
+     * Get <p>Whether to scroll the backup index</p> 
+     * @return RolloverBackingIndex <p>Whether to scroll the backup index</p>
      */
     public Boolean getRolloverBackingIndex() {
         return this.RolloverBackingIndex;
     }
 
     /**
-     * Set Whether to roll over the backup index
-     * @param RolloverBackingIndex Whether to roll over the backup index
+     * Set <p>Whether to scroll the backup index</p>
+     * @param RolloverBackingIndex <p>Whether to scroll the backup index</p>
      */
     public void setRolloverBackingIndex(Boolean RolloverBackingIndex) {
         this.RolloverBackingIndex = RolloverBackingIndex;
     }
 
     /**
-     * Get  
-     * @return MountIndex 
+     * Get <p>Whether to retrieve the full uninstall index</p> 
+     * @return MountIndex <p>Whether to retrieve the full uninstall index</p>
      */
     public Boolean getMountIndex() {
         return this.MountIndex;
     }
 
     /**
-     * Set 
-     * @param MountIndex 
+     * Set <p>Whether to retrieve the full uninstall index</p>
+     * @param MountIndex <p>Whether to retrieve the full uninstall index</p>
      */
     public void setMountIndex(Boolean MountIndex) {
         this.MountIndex = MountIndex;
     }
 
     /**
-     * Get  
-     * @return IndexUuid 
+     * Get <p>Index Uuid</p> 
+     * @return IndexUuid <p>Index Uuid</p>
      */
     public String getIndexUuid() {
         return this.IndexUuid;
     }
 
     /**
-     * Set 
-     * @param IndexUuid 
+     * Set <p>Index Uuid</p>
+     * @param IndexUuid <p>Index Uuid</p>
      */
     public void setIndexUuid(String IndexUuid) {
         this.IndexUuid = IndexUuid;
     }
 
     /**
-     * Get  
-     * @return BackingIndexName 
+     * Get <p>Backing index name</p> 
+     * @return BackingIndexName <p>Backing index name</p>
      */
     public String getBackingIndexName() {
         return this.BackingIndexName;
     }
 
     /**
-     * Set 
-     * @param BackingIndexName 
+     * Set <p>Backing index name</p>
+     * @param BackingIndexName <p>Backing index name</p>
      */
     public void setBackingIndexName(String BackingIndexName) {
         this.BackingIndexName = BackingIndexName;

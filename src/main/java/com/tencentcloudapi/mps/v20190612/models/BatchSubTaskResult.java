@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class BatchSubTaskResult extends AbstractModel {
 
     /**
-    * 
+    * Input information for a batch task.
     */
     @SerializedName("InputInfos")
     @Expose
     private MediaInputInfo [] InputInfos;
 
     /**
-    * 
+    * Metadata of the original video.
     */
     @SerializedName("Metadatas")
     @Expose
     private MediaMetaData [] Metadatas;
 
     /**
-    * 
+    * Execution result of the smart subtitle task.
     */
     @SerializedName("SmartSubtitlesTaskResult")
     @Expose
     private BatchSmartSubtitlesResult SmartSubtitlesTaskResult;
 
     /**
-     * Get  
-     * @return InputInfos 
+     * Get Input information for a batch task. 
+     * @return InputInfos Input information for a batch task.
      */
     public MediaInputInfo [] getInputInfos() {
         return this.InputInfos;
     }
 
     /**
-     * Set 
-     * @param InputInfos 
+     * Set Input information for a batch task.
+     * @param InputInfos Input information for a batch task.
      */
     public void setInputInfos(MediaInputInfo [] InputInfos) {
         this.InputInfos = InputInfos;
     }
 
     /**
-     * Get  
-     * @return Metadatas 
+     * Get Metadata of the original video. 
+     * @return Metadatas Metadata of the original video.
      */
     public MediaMetaData [] getMetadatas() {
         return this.Metadatas;
     }
 
     /**
-     * Set 
-     * @param Metadatas 
+     * Set Metadata of the original video.
+     * @param Metadatas Metadata of the original video.
      */
     public void setMetadatas(MediaMetaData [] Metadatas) {
         this.Metadatas = Metadatas;
     }
 
     /**
-     * Get  
-     * @return SmartSubtitlesTaskResult 
+     * Get Execution result of the smart subtitle task. 
+     * @return SmartSubtitlesTaskResult Execution result of the smart subtitle task.
      */
     public BatchSmartSubtitlesResult getSmartSubtitlesTaskResult() {
         return this.SmartSubtitlesTaskResult;
     }
 
     /**
-     * Set 
-     * @param SmartSubtitlesTaskResult 
+     * Set Execution result of the smart subtitle task.
+     * @param SmartSubtitlesTaskResult Execution result of the smart subtitle task.
      */
     public void setSmartSubtitlesTaskResult(BatchSmartSubtitlesResult SmartSubtitlesTaskResult) {
         this.SmartSubtitlesTaskResult = SmartSubtitlesTaskResult;

@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class KeyValue extends AbstractModel {
 
     /**
-    * Key
+    * Key.
     */
     @SerializedName("Key")
     @Expose
     private String Key;
 
     /**
-    * Value
+    * Value.
     */
     @SerializedName("Value")
     @Expose
     private String Value;
 
     /**
-     * Get Key 
-     * @return Key Key
+     * Get Key. 
+     * @return Key Key.
      */
     public String getKey() {
         return this.Key;
     }
 
     /**
-     * Set Key
-     * @param Key Key
+     * Set Key.
+     * @param Key Key.
      */
     public void setKey(String Key) {
         this.Key = Key;
     }
 
     /**
-     * Get Value 
-     * @return Value Value
+     * Get Value. 
+     * @return Value Value.
      */
     public String getValue() {
         return this.Value;
     }
 
     /**
-     * Set Value
-     * @param Value Value
+     * Set Value.
+     * @param Value Value.
      */
     public void setValue(String Value) {
         this.Value = Value;

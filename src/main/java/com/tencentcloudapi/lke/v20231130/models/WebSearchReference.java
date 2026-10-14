@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class WebSearchReference extends AbstractModel {
 
     /**
-    * 
+    * Webpage URL
     */
     @SerializedName("Url")
     @Expose
     private String Url;
 
     /**
-     * Get  
-     * @return Url 
+     * Get Webpage URL 
+     * @return Url Webpage URL
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * Set 
-     * @param Url 
+     * Set Webpage URL
+     * @param Url Webpage URL
      */
     public void setUrl(String Url) {
         this.Url = Url;

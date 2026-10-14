@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class EraseTimeArea extends AbstractModel {
 
     /**
-    * 
+    * Start time in milliseconds.
     */
     @SerializedName("BeginMs")
     @Expose
     private Long BeginMs;
 
     /**
-    * 
+    * End time in ms.
     */
     @SerializedName("EndMs")
     @Expose
     private Long EndMs;
 
     /**
-    * 
+    * List of regions removed within the period
     */
     @SerializedName("Areas")
     @Expose
     private EraseArea [] Areas;
 
     /**
-     * Get  
-     * @return BeginMs 
+     * Get Start time in milliseconds. 
+     * @return BeginMs Start time in milliseconds.
      */
     public Long getBeginMs() {
         return this.BeginMs;
     }
 
     /**
-     * Set 
-     * @param BeginMs 
+     * Set Start time in milliseconds.
+     * @param BeginMs Start time in milliseconds.
      */
     public void setBeginMs(Long BeginMs) {
         this.BeginMs = BeginMs;
     }
 
     /**
-     * Get  
-     * @return EndMs 
+     * Get End time in ms. 
+     * @return EndMs End time in ms.
      */
     public Long getEndMs() {
         return this.EndMs;
     }
 
     /**
-     * Set 
-     * @param EndMs 
+     * Set End time in ms.
+     * @param EndMs End time in ms.
      */
     public void setEndMs(Long EndMs) {
         this.EndMs = EndMs;
     }
 
     /**
-     * Get  
-     * @return Areas 
+     * Get List of regions removed within the period 
+     * @return Areas List of regions removed within the period
      */
     public EraseArea [] getAreas() {
         return this.Areas;
     }
 
     /**
-     * Set 
-     * @param Areas 
+     * Set List of regions removed within the period
+     * @param Areas List of regions removed within the period
      */
     public void setAreas(EraseArea [] Areas) {
         this.Areas = Areas;

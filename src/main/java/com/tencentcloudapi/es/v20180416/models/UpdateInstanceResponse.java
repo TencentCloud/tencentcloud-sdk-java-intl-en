@@ -25,7 +25,6 @@ public class UpdateInstanceResponse extends AbstractModel {
 
     /**
     * Order ID
-Note: This field may return `null`, indicating that no valid value was found.
     */
     @SerializedName("DealName")
     @Expose
@@ -39,10 +38,8 @@ Note: This field may return `null`, indicating that no valid value was found.
     private String RequestId;
 
     /**
-     * Get Order ID
-Note: This field may return `null`, indicating that no valid value was found. 
+     * Get Order ID 
      * @return DealName Order ID
-Note: This field may return `null`, indicating that no valid value was found.
      */
     public String getDealName() {
         return this.DealName;
@@ -50,9 +47,7 @@ Note: This field may return `null`, indicating that no valid value was found.
 
     /**
      * Set Order ID
-Note: This field may return `null`, indicating that no valid value was found.
      * @param DealName Order ID
-Note: This field may return `null`, indicating that no valid value was found.
      */
     public void setDealName(String DealName) {
         this.DealName = DealName;

@@ -24,961 +24,779 @@ import java.util.HashMap;
 public class GeneralCard extends AbstractModel {
 
     /**
-    * ID number.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>ID number</p>
     */
     @SerializedName("LicenseNumber")
     @Expose
     private String LicenseNumber;
 
     /**
-    * Personal number. 
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Personal number, returned when the identity document type is passport</p>
     */
     @SerializedName("PersonalNumber")
     @Expose
     private String PersonalNumber;
 
     /**
-    * Full name on the document.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Name</p>
     */
     @SerializedName("FullName")
     @Expose
     private String FullName;
 
     /**
-    * Full name in local language.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Localized name</p>
     */
     @SerializedName("FullNameLocal")
     @Expose
     private String FullNameLocal;
 
     /**
-    * First name or given name.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Name</p>
     */
     @SerializedName("FirstName")
     @Expose
     private String FirstName;
 
     /**
-    * First name in local language.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Localized name</p>
     */
     @SerializedName("FirstNameLocal")
     @Expose
     private String FirstNameLocal;
 
     /**
-    * Middle name.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Middle name</p>
     */
     @SerializedName("MiddleName")
     @Expose
     private String MiddleName;
 
     /**
-    * Middle name in local language.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Localized middle name</p>
     */
     @SerializedName("MiddleNameLocal")
     @Expose
     private String MiddleNameLocal;
 
     /**
-    * Last name or surname.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Last name</p>
     */
     @SerializedName("LastName")
     @Expose
     private String LastName;
 
     /**
-    * Last name in local language.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Localized last name</p>
     */
     @SerializedName("LastNameLocal")
     @Expose
     private String LastNameLocal;
 
     /**
-    * Gender on the document.
-- M: man.
-- F: woman.
-- X: other gender identity.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Gender on the document</p><ul><li>M: man</li><li>F: woman</li><li>X: other gender identity</li></ul>
     */
     @SerializedName("Sex")
     @Expose
     private String Sex;
 
     /**
-    * Date of birth.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Date of birth</p>
     */
     @SerializedName("Birthday")
     @Expose
     private String Birthday;
 
     /**
-    * Birth place.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Birth place</p>
     */
     @SerializedName("BirthPlace")
     @Expose
     private String BirthPlace;
 
     /**
-    * Issue date.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Issue date, in YYYY-MM-DD format</p>
     */
     @SerializedName("IssuedDate")
     @Expose
     private String IssuedDate;
 
     /**
-    * Issuing authority.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Issuing authority</p>
     */
     @SerializedName("IssuedAuthority")
     @Expose
     private String IssuedAuthority;
 
     /**
-    * Place of issue.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Place where the specified file is issued</p>
     */
     @SerializedName("IssuedPlace")
     @Expose
     private String IssuedPlace;
 
     /**
-    * Issuing country.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Issuing country</p>
     */
     @SerializedName("IssuedCountry")
     @Expose
     private String IssuedCountry;
 
     /**
-    * Country code of issue, ISO Alpha-3 format.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Country code of the country that issued the file, ISO ALPHA-3 country/region code</p>
     */
     @SerializedName("IssuedCountryCode")
     @Expose
     private String IssuedCountryCode;
 
     /**
-    * Expiry date.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Expiration date, in YYYY-MM-DD format</p>
     */
     @SerializedName("ExpirationDate")
     @Expose
     private String ExpirationDate;
 
     /**
-    * First line of the Machine Readable Zone (MRZ).
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Content of the single-line machine-readable zone (MRZ) on the document. The number represents the order in which the line appears in the MRZ</p>
     */
     @SerializedName("MRZLine1")
     @Expose
     private String MRZLine1;
 
     /**
-    * Second line of the Machine Readable Zone (MRZ).
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Content of the single-line machine-readable zone (MRZ) on the document. The number represents the line count in the order of the MRZ</p>
     */
     @SerializedName("MRZLine2")
     @Expose
     private String MRZLine2;
 
     /**
-    * Document nationality, following ISO 3166 country coding specification.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Document nationality, returned following the ISO 3166 country coding specification</p>
     */
     @SerializedName("Nationality")
     @Expose
     private String Nationality;
 
     /**
-    * Address information on the document.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Address information on the document</p>
     */
     @SerializedName("Address")
     @Expose
     private AddressInfo Address;
 
     /**
-    * Religion (if displayed on the document).
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Religious belief</p>
     */
     @SerializedName("Religion")
     @Expose
     private String Religion;
 
     /**
-    * Type of document.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Document type</p>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * Blood type.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Blood type</p>
     */
     @SerializedName("BloodType")
     @Expose
     private String BloodType;
 
     /**
-    * Height.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Height</p>
     */
     @SerializedName("Height")
     @Expose
     private String Height;
 
     /**
-    * Weight.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Weight</p>
     */
     @SerializedName("Weight")
     @Expose
     private String Weight;
 
     /**
-    * Vehicle class authorized on the driver license (e.g., A, B, C).
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Driver's license vehicle type (for example, A/B/C)</p>
     */
     @SerializedName("VehicleClass")
     @Expose
     private String VehicleClass;
 
     /**
-    * Restrictions on the driver license.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Driver's license restriction condition</p>
     */
     @SerializedName("Restrictions")
     @Expose
     private String Restrictions;
 
     /**
-    * Endorsements or additional records on the driver license.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Driver's license extra records</p>
     */
     @SerializedName("Endorsement")
     @Expose
     private String Endorsement;
 
     /**
-    * Supplementary fields (varies by document type).
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Additional field</p>
     */
     @SerializedName("Others")
     @Expose
     private String Others;
 
     /**
-    * First line of the passport MRZ (Machine Readable Zone).
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>MRZ line 1 of the passport</p>
     */
     @SerializedName("PassportCodeFirst")
     @Expose
     private String PassportCodeFirst;
 
     /**
-    * Second line of the passport MRZ (Machine Readable Zone).
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>MRZ line 2 of the passport</p>
     */
     @SerializedName("PassportCodeSecond")
     @Expose
     private String PassportCodeSecond;
 
     /**
-    * Expiry date.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Validity date, in YYYY-MM-DD format</p>
     */
     @SerializedName("DueDate")
     @Expose
     private String DueDate;
 
     /**
-    * Age. 0 means no valid info.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Age. 0 means no valid info is obtained</p>
     */
     @SerializedName("Age")
     @Expose
     private String Age;
 
     /**
-    * Registration number.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Registration number</p>
     */
     @SerializedName("RegistrationNumber")
     @Expose
     private String RegistrationNumber;
 
     /**
-     * Get ID number.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return LicenseNumber ID number.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>ID number</p> 
+     * @return LicenseNumber <p>ID number</p>
      */
     public String getLicenseNumber() {
         return this.LicenseNumber;
     }
 
     /**
-     * Set ID number.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param LicenseNumber ID number.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>ID number</p>
+     * @param LicenseNumber <p>ID number</p>
      */
     public void setLicenseNumber(String LicenseNumber) {
         this.LicenseNumber = LicenseNumber;
     }
 
     /**
-     * Get Personal number. 
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return PersonalNumber Personal number. 
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Personal number, returned when the identity document type is passport</p> 
+     * @return PersonalNumber <p>Personal number, returned when the identity document type is passport</p>
      */
     public String getPersonalNumber() {
         return this.PersonalNumber;
     }
 
     /**
-     * Set Personal number. 
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param PersonalNumber Personal number. 
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Personal number, returned when the identity document type is passport</p>
+     * @param PersonalNumber <p>Personal number, returned when the identity document type is passport</p>
      */
     public void setPersonalNumber(String PersonalNumber) {
         this.PersonalNumber = PersonalNumber;
     }
 
     /**
-     * Get Full name on the document.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return FullName Full name on the document.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Name</p> 
+     * @return FullName <p>Name</p>
      */
     public String getFullName() {
         return this.FullName;
     }
 
     /**
-     * Set Full name on the document.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param FullName Full name on the document.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Name</p>
+     * @param FullName <p>Name</p>
      */
     public void setFullName(String FullName) {
         this.FullName = FullName;
     }
 
     /**
-     * Get Full name in local language.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return FullNameLocal Full name in local language.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Localized name</p> 
+     * @return FullNameLocal <p>Localized name</p>
      */
     public String getFullNameLocal() {
         return this.FullNameLocal;
     }
 
     /**
-     * Set Full name in local language.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param FullNameLocal Full name in local language.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Localized name</p>
+     * @param FullNameLocal <p>Localized name</p>
      */
     public void setFullNameLocal(String FullNameLocal) {
         this.FullNameLocal = FullNameLocal;
     }
 
     /**
-     * Get First name or given name.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return FirstName First name or given name.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Name</p> 
+     * @return FirstName <p>Name</p>
      */
     public String getFirstName() {
         return this.FirstName;
     }
 
     /**
-     * Set First name or given name.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param FirstName First name or given name.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Name</p>
+     * @param FirstName <p>Name</p>
      */
     public void setFirstName(String FirstName) {
         this.FirstName = FirstName;
     }
 
     /**
-     * Get First name in local language.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return FirstNameLocal First name in local language.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Localized name</p> 
+     * @return FirstNameLocal <p>Localized name</p>
      */
     public String getFirstNameLocal() {
         return this.FirstNameLocal;
     }
 
     /**
-     * Set First name in local language.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param FirstNameLocal First name in local language.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Localized name</p>
+     * @param FirstNameLocal <p>Localized name</p>
      */
     public void setFirstNameLocal(String FirstNameLocal) {
         this.FirstNameLocal = FirstNameLocal;
     }
 
     /**
-     * Get Middle name.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return MiddleName Middle name.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Middle name</p> 
+     * @return MiddleName <p>Middle name</p>
      */
     public String getMiddleName() {
         return this.MiddleName;
     }
 
     /**
-     * Set Middle name.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param MiddleName Middle name.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Middle name</p>
+     * @param MiddleName <p>Middle name</p>
      */
     public void setMiddleName(String MiddleName) {
         this.MiddleName = MiddleName;
     }
 
     /**
-     * Get Middle name in local language.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return MiddleNameLocal Middle name in local language.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Localized middle name</p> 
+     * @return MiddleNameLocal <p>Localized middle name</p>
      */
     public String getMiddleNameLocal() {
         return this.MiddleNameLocal;
     }
 
     /**
-     * Set Middle name in local language.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param MiddleNameLocal Middle name in local language.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Localized middle name</p>
+     * @param MiddleNameLocal <p>Localized middle name</p>
      */
     public void setMiddleNameLocal(String MiddleNameLocal) {
         this.MiddleNameLocal = MiddleNameLocal;
     }
 
     /**
-     * Get Last name or surname.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return LastName Last name or surname.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Last name</p> 
+     * @return LastName <p>Last name</p>
      */
     public String getLastName() {
         return this.LastName;
     }
 
     /**
-     * Set Last name or surname.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param LastName Last name or surname.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Last name</p>
+     * @param LastName <p>Last name</p>
      */
     public void setLastName(String LastName) {
         this.LastName = LastName;
     }
 
     /**
-     * Get Last name in local language.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return LastNameLocal Last name in local language.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Localized last name</p> 
+     * @return LastNameLocal <p>Localized last name</p>
      */
     public String getLastNameLocal() {
         return this.LastNameLocal;
     }
 
     /**
-     * Set Last name in local language.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param LastNameLocal Last name in local language.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Localized last name</p>
+     * @param LastNameLocal <p>Localized last name</p>
      */
     public void setLastNameLocal(String LastNameLocal) {
         this.LastNameLocal = LastNameLocal;
     }
 
     /**
-     * Get Gender on the document.
-- M: man.
-- F: woman.
-- X: other gender identity.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Sex Gender on the document.
-- M: man.
-- F: woman.
-- X: other gender identity.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Gender on the document</p><ul><li>M: man</li><li>F: woman</li><li>X: other gender identity</li></ul> 
+     * @return Sex <p>Gender on the document</p><ul><li>M: man</li><li>F: woman</li><li>X: other gender identity</li></ul>
      */
     public String getSex() {
         return this.Sex;
     }
 
     /**
-     * Set Gender on the document.
-- M: man.
-- F: woman.
-- X: other gender identity.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Sex Gender on the document.
-- M: man.
-- F: woman.
-- X: other gender identity.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Gender on the document</p><ul><li>M: man</li><li>F: woman</li><li>X: other gender identity</li></ul>
+     * @param Sex <p>Gender on the document</p><ul><li>M: man</li><li>F: woman</li><li>X: other gender identity</li></ul>
      */
     public void setSex(String Sex) {
         this.Sex = Sex;
     }
 
     /**
-     * Get Date of birth.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Birthday Date of birth.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Date of birth</p> 
+     * @return Birthday <p>Date of birth</p>
      */
     public String getBirthday() {
         return this.Birthday;
     }
 
     /**
-     * Set Date of birth.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Birthday Date of birth.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Date of birth</p>
+     * @param Birthday <p>Date of birth</p>
      */
     public void setBirthday(String Birthday) {
         this.Birthday = Birthday;
     }
 
     /**
-     * Get Birth place.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return BirthPlace Birth place.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Birth place</p> 
+     * @return BirthPlace <p>Birth place</p>
      */
     public String getBirthPlace() {
         return this.BirthPlace;
     }
 
     /**
-     * Set Birth place.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param BirthPlace Birth place.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Birth place</p>
+     * @param BirthPlace <p>Birth place</p>
      */
     public void setBirthPlace(String BirthPlace) {
         this.BirthPlace = BirthPlace;
     }
 
     /**
-     * Get Issue date.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return IssuedDate Issue date.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Issue date, in YYYY-MM-DD format</p> 
+     * @return IssuedDate <p>Issue date, in YYYY-MM-DD format</p>
      */
     public String getIssuedDate() {
         return this.IssuedDate;
     }
 
     /**
-     * Set Issue date.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param IssuedDate Issue date.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Issue date, in YYYY-MM-DD format</p>
+     * @param IssuedDate <p>Issue date, in YYYY-MM-DD format</p>
      */
     public void setIssuedDate(String IssuedDate) {
         this.IssuedDate = IssuedDate;
     }
 
     /**
-     * Get Issuing authority.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return IssuedAuthority Issuing authority.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Issuing authority</p> 
+     * @return IssuedAuthority <p>Issuing authority</p>
      */
     public String getIssuedAuthority() {
         return this.IssuedAuthority;
     }
 
     /**
-     * Set Issuing authority.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param IssuedAuthority Issuing authority.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Issuing authority</p>
+     * @param IssuedAuthority <p>Issuing authority</p>
      */
     public void setIssuedAuthority(String IssuedAuthority) {
         this.IssuedAuthority = IssuedAuthority;
     }
 
     /**
-     * Get Place of issue.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return IssuedPlace Place of issue.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Place where the specified file is issued</p> 
+     * @return IssuedPlace <p>Place where the specified file is issued</p>
      */
     public String getIssuedPlace() {
         return this.IssuedPlace;
     }
 
     /**
-     * Set Place of issue.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param IssuedPlace Place of issue.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Place where the specified file is issued</p>
+     * @param IssuedPlace <p>Place where the specified file is issued</p>
      */
     public void setIssuedPlace(String IssuedPlace) {
         this.IssuedPlace = IssuedPlace;
     }
 
     /**
-     * Get Issuing country.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return IssuedCountry Issuing country.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Issuing country</p> 
+     * @return IssuedCountry <p>Issuing country</p>
      */
     public String getIssuedCountry() {
         return this.IssuedCountry;
     }
 
     /**
-     * Set Issuing country.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param IssuedCountry Issuing country.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Issuing country</p>
+     * @param IssuedCountry <p>Issuing country</p>
      */
     public void setIssuedCountry(String IssuedCountry) {
         this.IssuedCountry = IssuedCountry;
     }
 
     /**
-     * Get Country code of issue, ISO Alpha-3 format.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return IssuedCountryCode Country code of issue, ISO Alpha-3 format.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Country code of the country that issued the file, ISO ALPHA-3 country/region code</p> 
+     * @return IssuedCountryCode <p>Country code of the country that issued the file, ISO ALPHA-3 country/region code</p>
      */
     public String getIssuedCountryCode() {
         return this.IssuedCountryCode;
     }
 
     /**
-     * Set Country code of issue, ISO Alpha-3 format.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param IssuedCountryCode Country code of issue, ISO Alpha-3 format.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Country code of the country that issued the file, ISO ALPHA-3 country/region code</p>
+     * @param IssuedCountryCode <p>Country code of the country that issued the file, ISO ALPHA-3 country/region code</p>
      */
     public void setIssuedCountryCode(String IssuedCountryCode) {
         this.IssuedCountryCode = IssuedCountryCode;
     }
 
     /**
-     * Get Expiry date.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ExpirationDate Expiry date.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Expiration date, in YYYY-MM-DD format</p> 
+     * @return ExpirationDate <p>Expiration date, in YYYY-MM-DD format</p>
      */
     public String getExpirationDate() {
         return this.ExpirationDate;
     }
 
     /**
-     * Set Expiry date.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ExpirationDate Expiry date.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Expiration date, in YYYY-MM-DD format</p>
+     * @param ExpirationDate <p>Expiration date, in YYYY-MM-DD format</p>
      */
     public void setExpirationDate(String ExpirationDate) {
         this.ExpirationDate = ExpirationDate;
     }
 
     /**
-     * Get First line of the Machine Readable Zone (MRZ).
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return MRZLine1 First line of the Machine Readable Zone (MRZ).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Content of the single-line machine-readable zone (MRZ) on the document. The number represents the order in which the line appears in the MRZ</p> 
+     * @return MRZLine1 <p>Content of the single-line machine-readable zone (MRZ) on the document. The number represents the order in which the line appears in the MRZ</p>
      */
     public String getMRZLine1() {
         return this.MRZLine1;
     }
 
     /**
-     * Set First line of the Machine Readable Zone (MRZ).
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param MRZLine1 First line of the Machine Readable Zone (MRZ).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Content of the single-line machine-readable zone (MRZ) on the document. The number represents the order in which the line appears in the MRZ</p>
+     * @param MRZLine1 <p>Content of the single-line machine-readable zone (MRZ) on the document. The number represents the order in which the line appears in the MRZ</p>
      */
     public void setMRZLine1(String MRZLine1) {
         this.MRZLine1 = MRZLine1;
     }
 
     /**
-     * Get Second line of the Machine Readable Zone (MRZ).
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return MRZLine2 Second line of the Machine Readable Zone (MRZ).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Content of the single-line machine-readable zone (MRZ) on the document. The number represents the line count in the order of the MRZ</p> 
+     * @return MRZLine2 <p>Content of the single-line machine-readable zone (MRZ) on the document. The number represents the line count in the order of the MRZ</p>
      */
     public String getMRZLine2() {
         return this.MRZLine2;
     }
 
     /**
-     * Set Second line of the Machine Readable Zone (MRZ).
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param MRZLine2 Second line of the Machine Readable Zone (MRZ).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Content of the single-line machine-readable zone (MRZ) on the document. The number represents the line count in the order of the MRZ</p>
+     * @param MRZLine2 <p>Content of the single-line machine-readable zone (MRZ) on the document. The number represents the line count in the order of the MRZ</p>
      */
     public void setMRZLine2(String MRZLine2) {
         this.MRZLine2 = MRZLine2;
     }
 
     /**
-     * Get Document nationality, following ISO 3166 country coding specification.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Nationality Document nationality, following ISO 3166 country coding specification.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Document nationality, returned following the ISO 3166 country coding specification</p> 
+     * @return Nationality <p>Document nationality, returned following the ISO 3166 country coding specification</p>
      */
     public String getNationality() {
         return this.Nationality;
     }
 
     /**
-     * Set Document nationality, following ISO 3166 country coding specification.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Nationality Document nationality, following ISO 3166 country coding specification.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Document nationality, returned following the ISO 3166 country coding specification</p>
+     * @param Nationality <p>Document nationality, returned following the ISO 3166 country coding specification</p>
      */
     public void setNationality(String Nationality) {
         this.Nationality = Nationality;
     }
 
     /**
-     * Get Address information on the document.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Address Address information on the document.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Address information on the document</p> 
+     * @return Address <p>Address information on the document</p>
      */
     public AddressInfo getAddress() {
         return this.Address;
     }
 
     /**
-     * Set Address information on the document.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Address Address information on the document.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Address information on the document</p>
+     * @param Address <p>Address information on the document</p>
      */
     public void setAddress(AddressInfo Address) {
         this.Address = Address;
     }
 
     /**
-     * Get Religion (if displayed on the document).
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Religion Religion (if displayed on the document).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Religious belief</p> 
+     * @return Religion <p>Religious belief</p>
      */
     public String getReligion() {
         return this.Religion;
     }
 
     /**
-     * Set Religion (if displayed on the document).
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Religion Religion (if displayed on the document).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Religious belief</p>
+     * @param Religion <p>Religious belief</p>
      */
     public void setReligion(String Religion) {
         this.Religion = Religion;
     }
 
     /**
-     * Get Type of document.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Type Type of document.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Document type</p> 
+     * @return Type <p>Document type</p>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Type of document.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Type Type of document.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Document type</p>
+     * @param Type <p>Document type</p>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get Blood type.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return BloodType Blood type.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Blood type</p> 
+     * @return BloodType <p>Blood type</p>
      */
     public String getBloodType() {
         return this.BloodType;
     }
 
     /**
-     * Set Blood type.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param BloodType Blood type.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Blood type</p>
+     * @param BloodType <p>Blood type</p>
      */
     public void setBloodType(String BloodType) {
         this.BloodType = BloodType;
     }
 
     /**
-     * Get Height.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Height Height.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Height</p> 
+     * @return Height <p>Height</p>
      */
     public String getHeight() {
         return this.Height;
     }
 
     /**
-     * Set Height.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Height Height.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Height</p>
+     * @param Height <p>Height</p>
      */
     public void setHeight(String Height) {
         this.Height = Height;
     }
 
     /**
-     * Get Weight.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Weight Weight.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Weight</p> 
+     * @return Weight <p>Weight</p>
      */
     public String getWeight() {
         return this.Weight;
     }
 
     /**
-     * Set Weight.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Weight Weight.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Weight</p>
+     * @param Weight <p>Weight</p>
      */
     public void setWeight(String Weight) {
         this.Weight = Weight;
     }
 
     /**
-     * Get Vehicle class authorized on the driver license (e.g., A, B, C).
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return VehicleClass Vehicle class authorized on the driver license (e.g., A, B, C).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Driver's license vehicle type (for example, A/B/C)</p> 
+     * @return VehicleClass <p>Driver's license vehicle type (for example, A/B/C)</p>
      */
     public String getVehicleClass() {
         return this.VehicleClass;
     }
 
     /**
-     * Set Vehicle class authorized on the driver license (e.g., A, B, C).
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param VehicleClass Vehicle class authorized on the driver license (e.g., A, B, C).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Driver's license vehicle type (for example, A/B/C)</p>
+     * @param VehicleClass <p>Driver's license vehicle type (for example, A/B/C)</p>
      */
     public void setVehicleClass(String VehicleClass) {
         this.VehicleClass = VehicleClass;
     }
 
     /**
-     * Get Restrictions on the driver license.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Restrictions Restrictions on the driver license.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Driver's license restriction condition</p> 
+     * @return Restrictions <p>Driver's license restriction condition</p>
      */
     public String getRestrictions() {
         return this.Restrictions;
     }
 
     /**
-     * Set Restrictions on the driver license.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Restrictions Restrictions on the driver license.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Driver's license restriction condition</p>
+     * @param Restrictions <p>Driver's license restriction condition</p>
      */
     public void setRestrictions(String Restrictions) {
         this.Restrictions = Restrictions;
     }
 
     /**
-     * Get Endorsements or additional records on the driver license.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Endorsement Endorsements or additional records on the driver license.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Driver's license extra records</p> 
+     * @return Endorsement <p>Driver's license extra records</p>
      */
     public String getEndorsement() {
         return this.Endorsement;
     }
 
     /**
-     * Set Endorsements or additional records on the driver license.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Endorsement Endorsements or additional records on the driver license.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Driver's license extra records</p>
+     * @param Endorsement <p>Driver's license extra records</p>
      */
     public void setEndorsement(String Endorsement) {
         this.Endorsement = Endorsement;
     }
 
     /**
-     * Get Supplementary fields (varies by document type).
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Others Supplementary fields (varies by document type).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Additional field</p> 
+     * @return Others <p>Additional field</p>
      */
     public String getOthers() {
         return this.Others;
     }
 
     /**
-     * Set Supplementary fields (varies by document type).
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Others Supplementary fields (varies by document type).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Additional field</p>
+     * @param Others <p>Additional field</p>
      */
     public void setOthers(String Others) {
         this.Others = Others;
     }
 
     /**
-     * Get First line of the passport MRZ (Machine Readable Zone).
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return PassportCodeFirst First line of the passport MRZ (Machine Readable Zone).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>MRZ line 1 of the passport</p> 
+     * @return PassportCodeFirst <p>MRZ line 1 of the passport</p>
      * @deprecated
      */
     @Deprecated
@@ -987,10 +805,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set First line of the passport MRZ (Machine Readable Zone).
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param PassportCodeFirst First line of the passport MRZ (Machine Readable Zone).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>MRZ line 1 of the passport</p>
+     * @param PassportCodeFirst <p>MRZ line 1 of the passport</p>
      * @deprecated
      */
     @Deprecated
@@ -999,10 +815,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Second line of the passport MRZ (Machine Readable Zone).
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return PassportCodeSecond Second line of the passport MRZ (Machine Readable Zone).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>MRZ line 2 of the passport</p> 
+     * @return PassportCodeSecond <p>MRZ line 2 of the passport</p>
      * @deprecated
      */
     @Deprecated
@@ -1011,10 +825,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Second line of the passport MRZ (Machine Readable Zone).
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param PassportCodeSecond Second line of the passport MRZ (Machine Readable Zone).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>MRZ line 2 of the passport</p>
+     * @param PassportCodeSecond <p>MRZ line 2 of the passport</p>
      * @deprecated
      */
     @Deprecated
@@ -1023,10 +835,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Expiry date.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return DueDate Expiry date.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Validity date, in YYYY-MM-DD format</p> 
+     * @return DueDate <p>Validity date, in YYYY-MM-DD format</p>
      * @deprecated
      */
     @Deprecated
@@ -1035,10 +845,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Expiry date.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param DueDate Expiry date.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Validity date, in YYYY-MM-DD format</p>
+     * @param DueDate <p>Validity date, in YYYY-MM-DD format</p>
      * @deprecated
      */
     @Deprecated
@@ -1047,10 +855,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Age. 0 means no valid info.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Age Age. 0 means no valid info.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Age. 0 means no valid info is obtained</p> 
+     * @return Age <p>Age. 0 means no valid info is obtained</p>
      * @deprecated
      */
     @Deprecated
@@ -1059,10 +865,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Age. 0 means no valid info.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Age Age. 0 means no valid info.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Age. 0 means no valid info is obtained</p>
+     * @param Age <p>Age. 0 means no valid info is obtained</p>
      * @deprecated
      */
     @Deprecated
@@ -1071,10 +875,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Registration number.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return RegistrationNumber Registration number.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Registration number</p> 
+     * @return RegistrationNumber <p>Registration number</p>
      * @deprecated
      */
     @Deprecated
@@ -1083,10 +885,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Registration number.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param RegistrationNumber Registration number.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Registration number</p>
+     * @param RegistrationNumber <p>Registration number</p>
      * @deprecated
      */
     @Deprecated

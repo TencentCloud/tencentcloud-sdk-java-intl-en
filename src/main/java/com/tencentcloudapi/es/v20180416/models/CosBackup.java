@@ -24,417 +24,486 @@ import java.util.HashMap;
 public class CosBackup extends AbstractModel {
 
     /**
-    * Whether to enable auto-backup to COS
+    * <p>Whether to enable cos automatic backup</p>
     */
     @SerializedName("IsAutoBackup")
     @Expose
     private Boolean IsAutoBackup;
 
     /**
-    * Auto-backup time (accurate down to the hour), such as "22:00"
+    * <p>Automatic backup execution time (accurate to the hour), e.g. "22:00"</p>
     */
     @SerializedName("BackupTime")
     @Expose
     private String BackupTime;
 
     /**
-    * Backup snapshot prefix.
+    * <p>Backup snapshot prefix</p>
     */
     @SerializedName("SnapshotName")
     @Expose
     private String SnapshotName;
 
     /**
-    * Valid values: 0 (Tencent Cloud repository) and 1 (customer repository).
+    * <p>0 (Tencent Cloud repository); 1 (customer repository)</p>
     */
     @SerializedName("EsRepositoryType")
     @Expose
     private Long EsRepositoryType;
 
     /**
-    * Managed snapshot repository name.
+    * <p>Managed snapshot repository name.</p>
     */
     @SerializedName("PaasEsRepository")
     @Expose
     private String PaasEsRepository;
 
     /**
-    * Customer snapshot repository name.
+    * <p>Customer snapshot repository name</p>
     */
     @SerializedName("UserEsRepository")
     @Expose
     private String UserEsRepository;
 
     /**
-    * COS storage folder directory.
+    * <p>cos storage folder directory</p>
     */
     @SerializedName("CosBasePath")
     @Expose
     private String CosBasePath;
 
     /**
-    * Snapshot storage cycle in days.
+    * <p>Snapshot storage cycle in days</p>
     */
     @SerializedName("StorageDuration")
     @Expose
     private Long StorageDuration;
 
     /**
-    * Auto backup frequency in hours.
+    * <p>Auto backup frequency in hours.</p>
     */
     @SerializedName("AutoBackupInterval")
     @Expose
     private Long AutoBackupInterval;
 
     /**
-    * Backup lock. Valid values: 0 (not locked) and 1 (locked).
+    * <p>Backup lock. Valid values: 0 (not locked) and 1 (locked).</p>
     */
     @SerializedName("CosRetention")
     @Expose
     private Long CosRetention;
 
     /**
-    * Lock expiration date, such as 2022-12-10T08:34:48.000Z.
+    * <p>Lock expiration date, such as 2022-12-10T08:34:48.000Z.</p>
     */
     @SerializedName("RetainUntilDate")
     @Expose
     private String RetainUntilDate;
 
     /**
-    * Lock grace period.
+    * <p>Lock grace period</p>
     */
     @SerializedName("RetentionGraceTime")
     @Expose
     private Long RetentionGraceTime;
 
     /**
-    * Cross-region backup. Valid values: 0 (disabled) and 1 (enabled).
+    * <p>Cross-region backup. Valid values: 0 (disabled) and 1 (enabled).</p>
     */
     @SerializedName("RemoteCos")
     @Expose
     private Long RemoteCos;
 
     /**
-    * Region name for cross-region backup, such as ap-guangzhou.
+    * <p>Region name for cross-regional backup, such as ap-guangzhou.</p>
     */
     @SerializedName("RemoteCosRegion")
     @Expose
     private String RemoteCosRegion;
 
     /**
-    * Policy name.
+    * <p>Policy name.</p>
     */
     @SerializedName("StrategyName")
     @Expose
     private String StrategyName;
 
     /**
-    * Backup index list. If left empty, it means to back up all indexes.
+    * <p>Backup index list. If left empty, it means to back up all indexes.</p>
     */
     @SerializedName("Indices")
     @Expose
     private String Indices;
 
     /**
-    * 
+    * <p>cos multi-AZ backup. 0: single AZ; 1: multi-AZ</p>
     */
     @SerializedName("MultiAz")
     @Expose
     private Long MultiAz;
 
     /**
-    * Policy creation time.
+    * <p>Maximum speed of write to the repository per node max_snapshot_bytes_per_sec, default 40m</p>
+    */
+    @SerializedName("MaxSnapshotPerSec")
+    @Expose
+    private String MaxSnapshotPerSec;
+
+    /**
+    * <p>Maximum speed of reading the repository per node max_restore_bytes_per_sec. Default is 40m before 710, and default unlimited from 710 onwards</p>
+    */
+    @SerializedName("MaxRestorePerSec")
+    @Expose
+    private String MaxRestorePerSec;
+
+    /**
+    * <p>Policy creation time</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-     * Get Whether to enable auto-backup to COS 
-     * @return IsAutoBackup Whether to enable auto-backup to COS
+    * <p>Instance ID.</p>
+    */
+    @SerializedName("InstanceId")
+    @Expose
+    private String InstanceId;
+
+    /**
+     * Get <p>Whether to enable cos automatic backup</p> 
+     * @return IsAutoBackup <p>Whether to enable cos automatic backup</p>
      */
     public Boolean getIsAutoBackup() {
         return this.IsAutoBackup;
     }
 
     /**
-     * Set Whether to enable auto-backup to COS
-     * @param IsAutoBackup Whether to enable auto-backup to COS
+     * Set <p>Whether to enable cos automatic backup</p>
+     * @param IsAutoBackup <p>Whether to enable cos automatic backup</p>
      */
     public void setIsAutoBackup(Boolean IsAutoBackup) {
         this.IsAutoBackup = IsAutoBackup;
     }
 
     /**
-     * Get Auto-backup time (accurate down to the hour), such as "22:00" 
-     * @return BackupTime Auto-backup time (accurate down to the hour), such as "22:00"
+     * Get <p>Automatic backup execution time (accurate to the hour), e.g. "22:00"</p> 
+     * @return BackupTime <p>Automatic backup execution time (accurate to the hour), e.g. "22:00"</p>
      */
     public String getBackupTime() {
         return this.BackupTime;
     }
 
     /**
-     * Set Auto-backup time (accurate down to the hour), such as "22:00"
-     * @param BackupTime Auto-backup time (accurate down to the hour), such as "22:00"
+     * Set <p>Automatic backup execution time (accurate to the hour), e.g. "22:00"</p>
+     * @param BackupTime <p>Automatic backup execution time (accurate to the hour), e.g. "22:00"</p>
      */
     public void setBackupTime(String BackupTime) {
         this.BackupTime = BackupTime;
     }
 
     /**
-     * Get Backup snapshot prefix. 
-     * @return SnapshotName Backup snapshot prefix.
+     * Get <p>Backup snapshot prefix</p> 
+     * @return SnapshotName <p>Backup snapshot prefix</p>
      */
     public String getSnapshotName() {
         return this.SnapshotName;
     }
 
     /**
-     * Set Backup snapshot prefix.
-     * @param SnapshotName Backup snapshot prefix.
+     * Set <p>Backup snapshot prefix</p>
+     * @param SnapshotName <p>Backup snapshot prefix</p>
      */
     public void setSnapshotName(String SnapshotName) {
         this.SnapshotName = SnapshotName;
     }
 
     /**
-     * Get Valid values: 0 (Tencent Cloud repository) and 1 (customer repository). 
-     * @return EsRepositoryType Valid values: 0 (Tencent Cloud repository) and 1 (customer repository).
+     * Get <p>0 (Tencent Cloud repository); 1 (customer repository)</p> 
+     * @return EsRepositoryType <p>0 (Tencent Cloud repository); 1 (customer repository)</p>
      */
     public Long getEsRepositoryType() {
         return this.EsRepositoryType;
     }
 
     /**
-     * Set Valid values: 0 (Tencent Cloud repository) and 1 (customer repository).
-     * @param EsRepositoryType Valid values: 0 (Tencent Cloud repository) and 1 (customer repository).
+     * Set <p>0 (Tencent Cloud repository); 1 (customer repository)</p>
+     * @param EsRepositoryType <p>0 (Tencent Cloud repository); 1 (customer repository)</p>
      */
     public void setEsRepositoryType(Long EsRepositoryType) {
         this.EsRepositoryType = EsRepositoryType;
     }
 
     /**
-     * Get Managed snapshot repository name. 
-     * @return PaasEsRepository Managed snapshot repository name.
+     * Get <p>Managed snapshot repository name.</p> 
+     * @return PaasEsRepository <p>Managed snapshot repository name.</p>
      */
     public String getPaasEsRepository() {
         return this.PaasEsRepository;
     }
 
     /**
-     * Set Managed snapshot repository name.
-     * @param PaasEsRepository Managed snapshot repository name.
+     * Set <p>Managed snapshot repository name.</p>
+     * @param PaasEsRepository <p>Managed snapshot repository name.</p>
      */
     public void setPaasEsRepository(String PaasEsRepository) {
         this.PaasEsRepository = PaasEsRepository;
     }
 
     /**
-     * Get Customer snapshot repository name. 
-     * @return UserEsRepository Customer snapshot repository name.
+     * Get <p>Customer snapshot repository name</p> 
+     * @return UserEsRepository <p>Customer snapshot repository name</p>
      */
     public String getUserEsRepository() {
         return this.UserEsRepository;
     }
 
     /**
-     * Set Customer snapshot repository name.
-     * @param UserEsRepository Customer snapshot repository name.
+     * Set <p>Customer snapshot repository name</p>
+     * @param UserEsRepository <p>Customer snapshot repository name</p>
      */
     public void setUserEsRepository(String UserEsRepository) {
         this.UserEsRepository = UserEsRepository;
     }
 
     /**
-     * Get COS storage folder directory. 
-     * @return CosBasePath COS storage folder directory.
+     * Get <p>cos storage folder directory</p> 
+     * @return CosBasePath <p>cos storage folder directory</p>
      */
     public String getCosBasePath() {
         return this.CosBasePath;
     }
 
     /**
-     * Set COS storage folder directory.
-     * @param CosBasePath COS storage folder directory.
+     * Set <p>cos storage folder directory</p>
+     * @param CosBasePath <p>cos storage folder directory</p>
      */
     public void setCosBasePath(String CosBasePath) {
         this.CosBasePath = CosBasePath;
     }
 
     /**
-     * Get Snapshot storage cycle in days. 
-     * @return StorageDuration Snapshot storage cycle in days.
+     * Get <p>Snapshot storage cycle in days</p> 
+     * @return StorageDuration <p>Snapshot storage cycle in days</p>
      */
     public Long getStorageDuration() {
         return this.StorageDuration;
     }
 
     /**
-     * Set Snapshot storage cycle in days.
-     * @param StorageDuration Snapshot storage cycle in days.
+     * Set <p>Snapshot storage cycle in days</p>
+     * @param StorageDuration <p>Snapshot storage cycle in days</p>
      */
     public void setStorageDuration(Long StorageDuration) {
         this.StorageDuration = StorageDuration;
     }
 
     /**
-     * Get Auto backup frequency in hours. 
-     * @return AutoBackupInterval Auto backup frequency in hours.
+     * Get <p>Auto backup frequency in hours.</p> 
+     * @return AutoBackupInterval <p>Auto backup frequency in hours.</p>
      */
     public Long getAutoBackupInterval() {
         return this.AutoBackupInterval;
     }
 
     /**
-     * Set Auto backup frequency in hours.
-     * @param AutoBackupInterval Auto backup frequency in hours.
+     * Set <p>Auto backup frequency in hours.</p>
+     * @param AutoBackupInterval <p>Auto backup frequency in hours.</p>
      */
     public void setAutoBackupInterval(Long AutoBackupInterval) {
         this.AutoBackupInterval = AutoBackupInterval;
     }
 
     /**
-     * Get Backup lock. Valid values: 0 (not locked) and 1 (locked). 
-     * @return CosRetention Backup lock. Valid values: 0 (not locked) and 1 (locked).
+     * Get <p>Backup lock. Valid values: 0 (not locked) and 1 (locked).</p> 
+     * @return CosRetention <p>Backup lock. Valid values: 0 (not locked) and 1 (locked).</p>
      */
     public Long getCosRetention() {
         return this.CosRetention;
     }
 
     /**
-     * Set Backup lock. Valid values: 0 (not locked) and 1 (locked).
-     * @param CosRetention Backup lock. Valid values: 0 (not locked) and 1 (locked).
+     * Set <p>Backup lock. Valid values: 0 (not locked) and 1 (locked).</p>
+     * @param CosRetention <p>Backup lock. Valid values: 0 (not locked) and 1 (locked).</p>
      */
     public void setCosRetention(Long CosRetention) {
         this.CosRetention = CosRetention;
     }
 
     /**
-     * Get Lock expiration date, such as 2022-12-10T08:34:48.000Z. 
-     * @return RetainUntilDate Lock expiration date, such as 2022-12-10T08:34:48.000Z.
+     * Get <p>Lock expiration date, such as 2022-12-10T08:34:48.000Z.</p> 
+     * @return RetainUntilDate <p>Lock expiration date, such as 2022-12-10T08:34:48.000Z.</p>
      */
     public String getRetainUntilDate() {
         return this.RetainUntilDate;
     }
 
     /**
-     * Set Lock expiration date, such as 2022-12-10T08:34:48.000Z.
-     * @param RetainUntilDate Lock expiration date, such as 2022-12-10T08:34:48.000Z.
+     * Set <p>Lock expiration date, such as 2022-12-10T08:34:48.000Z.</p>
+     * @param RetainUntilDate <p>Lock expiration date, such as 2022-12-10T08:34:48.000Z.</p>
      */
     public void setRetainUntilDate(String RetainUntilDate) {
         this.RetainUntilDate = RetainUntilDate;
     }
 
     /**
-     * Get Lock grace period. 
-     * @return RetentionGraceTime Lock grace period.
+     * Get <p>Lock grace period</p> 
+     * @return RetentionGraceTime <p>Lock grace period</p>
      */
     public Long getRetentionGraceTime() {
         return this.RetentionGraceTime;
     }
 
     /**
-     * Set Lock grace period.
-     * @param RetentionGraceTime Lock grace period.
+     * Set <p>Lock grace period</p>
+     * @param RetentionGraceTime <p>Lock grace period</p>
      */
     public void setRetentionGraceTime(Long RetentionGraceTime) {
         this.RetentionGraceTime = RetentionGraceTime;
     }
 
     /**
-     * Get Cross-region backup. Valid values: 0 (disabled) and 1 (enabled). 
-     * @return RemoteCos Cross-region backup. Valid values: 0 (disabled) and 1 (enabled).
+     * Get <p>Cross-region backup. Valid values: 0 (disabled) and 1 (enabled).</p> 
+     * @return RemoteCos <p>Cross-region backup. Valid values: 0 (disabled) and 1 (enabled).</p>
      */
     public Long getRemoteCos() {
         return this.RemoteCos;
     }
 
     /**
-     * Set Cross-region backup. Valid values: 0 (disabled) and 1 (enabled).
-     * @param RemoteCos Cross-region backup. Valid values: 0 (disabled) and 1 (enabled).
+     * Set <p>Cross-region backup. Valid values: 0 (disabled) and 1 (enabled).</p>
+     * @param RemoteCos <p>Cross-region backup. Valid values: 0 (disabled) and 1 (enabled).</p>
      */
     public void setRemoteCos(Long RemoteCos) {
         this.RemoteCos = RemoteCos;
     }
 
     /**
-     * Get Region name for cross-region backup, such as ap-guangzhou. 
-     * @return RemoteCosRegion Region name for cross-region backup, such as ap-guangzhou.
+     * Get <p>Region name for cross-regional backup, such as ap-guangzhou.</p> 
+     * @return RemoteCosRegion <p>Region name for cross-regional backup, such as ap-guangzhou.</p>
      */
     public String getRemoteCosRegion() {
         return this.RemoteCosRegion;
     }
 
     /**
-     * Set Region name for cross-region backup, such as ap-guangzhou.
-     * @param RemoteCosRegion Region name for cross-region backup, such as ap-guangzhou.
+     * Set <p>Region name for cross-regional backup, such as ap-guangzhou.</p>
+     * @param RemoteCosRegion <p>Region name for cross-regional backup, such as ap-guangzhou.</p>
      */
     public void setRemoteCosRegion(String RemoteCosRegion) {
         this.RemoteCosRegion = RemoteCosRegion;
     }
 
     /**
-     * Get Policy name. 
-     * @return StrategyName Policy name.
+     * Get <p>Policy name.</p> 
+     * @return StrategyName <p>Policy name.</p>
      */
     public String getStrategyName() {
         return this.StrategyName;
     }
 
     /**
-     * Set Policy name.
-     * @param StrategyName Policy name.
+     * Set <p>Policy name.</p>
+     * @param StrategyName <p>Policy name.</p>
      */
     public void setStrategyName(String StrategyName) {
         this.StrategyName = StrategyName;
     }
 
     /**
-     * Get Backup index list. If left empty, it means to back up all indexes. 
-     * @return Indices Backup index list. If left empty, it means to back up all indexes.
+     * Get <p>Backup index list. If left empty, it means to back up all indexes.</p> 
+     * @return Indices <p>Backup index list. If left empty, it means to back up all indexes.</p>
      */
     public String getIndices() {
         return this.Indices;
     }
 
     /**
-     * Set Backup index list. If left empty, it means to back up all indexes.
-     * @param Indices Backup index list. If left empty, it means to back up all indexes.
+     * Set <p>Backup index list. If left empty, it means to back up all indexes.</p>
+     * @param Indices <p>Backup index list. If left empty, it means to back up all indexes.</p>
      */
     public void setIndices(String Indices) {
         this.Indices = Indices;
     }
 
     /**
-     * Get  
-     * @return MultiAz 
+     * Get <p>cos multi-AZ backup. 0: single AZ; 1: multi-AZ</p> 
+     * @return MultiAz <p>cos multi-AZ backup. 0: single AZ; 1: multi-AZ</p>
      */
     public Long getMultiAz() {
         return this.MultiAz;
     }
 
     /**
-     * Set 
-     * @param MultiAz 
+     * Set <p>cos multi-AZ backup. 0: single AZ; 1: multi-AZ</p>
+     * @param MultiAz <p>cos multi-AZ backup. 0: single AZ; 1: multi-AZ</p>
      */
     public void setMultiAz(Long MultiAz) {
         this.MultiAz = MultiAz;
     }
 
     /**
-     * Get Policy creation time. 
-     * @return CreateTime Policy creation time.
+     * Get <p>Maximum speed of write to the repository per node max_snapshot_bytes_per_sec, default 40m</p> 
+     * @return MaxSnapshotPerSec <p>Maximum speed of write to the repository per node max_snapshot_bytes_per_sec, default 40m</p>
+     */
+    public String getMaxSnapshotPerSec() {
+        return this.MaxSnapshotPerSec;
+    }
+
+    /**
+     * Set <p>Maximum speed of write to the repository per node max_snapshot_bytes_per_sec, default 40m</p>
+     * @param MaxSnapshotPerSec <p>Maximum speed of write to the repository per node max_snapshot_bytes_per_sec, default 40m</p>
+     */
+    public void setMaxSnapshotPerSec(String MaxSnapshotPerSec) {
+        this.MaxSnapshotPerSec = MaxSnapshotPerSec;
+    }
+
+    /**
+     * Get <p>Maximum speed of reading the repository per node max_restore_bytes_per_sec. Default is 40m before 710, and default unlimited from 710 onwards</p> 
+     * @return MaxRestorePerSec <p>Maximum speed of reading the repository per node max_restore_bytes_per_sec. Default is 40m before 710, and default unlimited from 710 onwards</p>
+     */
+    public String getMaxRestorePerSec() {
+        return this.MaxRestorePerSec;
+    }
+
+    /**
+     * Set <p>Maximum speed of reading the repository per node max_restore_bytes_per_sec. Default is 40m before 710, and default unlimited from 710 onwards</p>
+     * @param MaxRestorePerSec <p>Maximum speed of reading the repository per node max_restore_bytes_per_sec. Default is 40m before 710, and default unlimited from 710 onwards</p>
+     */
+    public void setMaxRestorePerSec(String MaxRestorePerSec) {
+        this.MaxRestorePerSec = MaxRestorePerSec;
+    }
+
+    /**
+     * Get <p>Policy creation time</p> 
+     * @return CreateTime <p>Policy creation time</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set Policy creation time.
-     * @param CreateTime Policy creation time.
+     * Set <p>Policy creation time</p>
+     * @param CreateTime <p>Policy creation time</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
+    }
+
+    /**
+     * Get <p>Instance ID.</p> 
+     * @return InstanceId <p>Instance ID.</p>
+     */
+    public String getInstanceId() {
+        return this.InstanceId;
+    }
+
+    /**
+     * Set <p>Instance ID.</p>
+     * @param InstanceId <p>Instance ID.</p>
+     */
+    public void setInstanceId(String InstanceId) {
+        this.InstanceId = InstanceId;
     }
 
     public CosBackup() {
@@ -496,8 +565,17 @@ public class CosBackup extends AbstractModel {
         if (source.MultiAz != null) {
             this.MultiAz = new Long(source.MultiAz);
         }
+        if (source.MaxSnapshotPerSec != null) {
+            this.MaxSnapshotPerSec = new String(source.MaxSnapshotPerSec);
+        }
+        if (source.MaxRestorePerSec != null) {
+            this.MaxRestorePerSec = new String(source.MaxRestorePerSec);
+        }
         if (source.CreateTime != null) {
             this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
         }
     }
 
@@ -523,7 +601,10 @@ public class CosBackup extends AbstractModel {
         this.setParamSimple(map, prefix + "StrategyName", this.StrategyName);
         this.setParamSimple(map, prefix + "Indices", this.Indices);
         this.setParamSimple(map, prefix + "MultiAz", this.MultiAz);
+        this.setParamSimple(map, prefix + "MaxSnapshotPerSec", this.MaxSnapshotPerSec);
+        this.setParamSimple(map, prefix + "MaxRestorePerSec", this.MaxRestorePerSec);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
+        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
 
     }
 }

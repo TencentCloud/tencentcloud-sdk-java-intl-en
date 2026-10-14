@@ -31,7 +31,7 @@ public class DescribeAigcTaskListResponse extends AbstractModel {
     private Long Total;
 
     /**
-    * <p>Query page started</p>
+    * <p>Start query page</p>
     */
     @SerializedName("PageNum")
     @Expose
@@ -45,7 +45,7 @@ public class DescribeAigcTaskListResponse extends AbstractModel {
     private Long PageSize;
 
     /**
-    * <p>Task detail data</p>
+    * <p>Task detail data.</p>
     */
     @SerializedName("Tasks")
     @Expose
@@ -75,16 +75,16 @@ public class DescribeAigcTaskListResponse extends AbstractModel {
     }
 
     /**
-     * Get <p>Query page started</p> 
-     * @return PageNum <p>Query page started</p>
+     * Get <p>Start query page</p> 
+     * @return PageNum <p>Start query page</p>
      */
     public Long getPageNum() {
         return this.PageNum;
     }
 
     /**
-     * Set <p>Query page started</p>
-     * @param PageNum <p>Query page started</p>
+     * Set <p>Start query page</p>
+     * @param PageNum <p>Start query page</p>
      */
     public void setPageNum(Long PageNum) {
         this.PageNum = PageNum;
@@ -107,16 +107,16 @@ public class DescribeAigcTaskListResponse extends AbstractModel {
     }
 
     /**
-     * Get <p>Task detail data</p> 
-     * @return Tasks <p>Task detail data</p>
+     * Get <p>Task detail data.</p> 
+     * @return Tasks <p>Task detail data.</p>
      */
     public AigcTaskListItem [] getTasks() {
         return this.Tasks;
     }
 
     /**
-     * Set <p>Task detail data</p>
-     * @param Tasks <p>Task detail data</p>
+     * Set <p>Task detail data.</p>
+     * @param Tasks <p>Task detail data.</p>
      */
     public void setTasks(AigcTaskListItem [] Tasks) {
         this.Tasks = Tasks;

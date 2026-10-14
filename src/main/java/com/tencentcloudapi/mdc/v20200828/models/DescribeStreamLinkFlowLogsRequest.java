@@ -24,194 +24,184 @@ import java.util.HashMap;
 public class DescribeStreamLinkFlowLogsRequest extends AbstractModel {
 
     /**
-    * The flow ID.
+    * <p>Transport stream Id.</p>
     */
     @SerializedName("FlowId")
     @Expose
     private String FlowId;
 
     /**
-    * The start time for query, which is 1 hour ago by default. You can query statistics in the last 7 days.
-It must be in UTC format, such as `2020-01-01T12:00:00Z`.
+    * <p>Start time for statistics, defaults to the last hour, supports querying up to the last 7 days.<br>UTC time, for example, '2020-01-01T12:00:00Z'.</p>
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * The end time for query, which is 1 hour after the start time by default. The longest time range allowed for query is 24 hours.
-It must be in UTC format, such as `2020-01-01T12:00:00Z`.
+    * <p>End time for statistics, defaulting to one hour after StartTime, with support for querying up to 24 hours of data.<br>UTC time, for example, '2020-01-01T12:00:00Z'.</p>
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-    * Whether to query the inputs or outputs. Valid values: input, output.
+    * <p>Input or output type. Valid values: `input`, `output`.</p>
     */
     @SerializedName("Type")
     @Expose
     private String [] Type;
 
     /**
-    * Whether to query the primary or backup pipeline. Valid values: 0, 1.
+    * <p>Primary or backup channel. Option [0|1].</p>
     */
     @SerializedName("Pipeline")
     @Expose
     private String [] Pipeline;
 
     /**
-    * The page size. Value range: [1, 1000]. Default: 100.
+    * <p>Size per page. Default value: 100. Value range: [1, 1000].</p>
     */
     @SerializedName("PageSize")
     @Expose
     private Long PageSize;
 
     /**
-    * Whether to sort the records by timestamp in descending or ascending order. Valid values: desc (default), asc.
+    * <p>Sort by Timestamp in ascending or descending order. The default is descending order. Options: [desc|asc].</p>
     */
     @SerializedName("SortType")
     @Expose
     private String SortType;
 
     /**
-    * The page number. Value range: [1, 1000]. Default: 1.
+    * <p>Page number. Default value: 1. Value range: [1, 1000].</p>
     */
     @SerializedName("PageNum")
     @Expose
     private Long PageNum;
 
     /**
-     * Get The flow ID. 
-     * @return FlowId The flow ID.
+     * Get <p>Transport stream Id.</p> 
+     * @return FlowId <p>Transport stream Id.</p>
      */
     public String getFlowId() {
         return this.FlowId;
     }
 
     /**
-     * Set The flow ID.
-     * @param FlowId The flow ID.
+     * Set <p>Transport stream Id.</p>
+     * @param FlowId <p>Transport stream Id.</p>
      */
     public void setFlowId(String FlowId) {
         this.FlowId = FlowId;
     }
 
     /**
-     * Get The start time for query, which is 1 hour ago by default. You can query statistics in the last 7 days.
-It must be in UTC format, such as `2020-01-01T12:00:00Z`. 
-     * @return StartTime The start time for query, which is 1 hour ago by default. You can query statistics in the last 7 days.
-It must be in UTC format, such as `2020-01-01T12:00:00Z`.
+     * Get <p>Start time for statistics, defaults to the last hour, supports querying up to the last 7 days.<br>UTC time, for example, '2020-01-01T12:00:00Z'.</p> 
+     * @return StartTime <p>Start time for statistics, defaults to the last hour, supports querying up to the last 7 days.<br>UTC time, for example, '2020-01-01T12:00:00Z'.</p>
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set The start time for query, which is 1 hour ago by default. You can query statistics in the last 7 days.
-It must be in UTC format, such as `2020-01-01T12:00:00Z`.
-     * @param StartTime The start time for query, which is 1 hour ago by default. You can query statistics in the last 7 days.
-It must be in UTC format, such as `2020-01-01T12:00:00Z`.
+     * Set <p>Start time for statistics, defaults to the last hour, supports querying up to the last 7 days.<br>UTC time, for example, '2020-01-01T12:00:00Z'.</p>
+     * @param StartTime <p>Start time for statistics, defaults to the last hour, supports querying up to the last 7 days.<br>UTC time, for example, '2020-01-01T12:00:00Z'.</p>
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get The end time for query, which is 1 hour after the start time by default. The longest time range allowed for query is 24 hours.
-It must be in UTC format, such as `2020-01-01T12:00:00Z`. 
-     * @return EndTime The end time for query, which is 1 hour after the start time by default. The longest time range allowed for query is 24 hours.
-It must be in UTC format, such as `2020-01-01T12:00:00Z`.
+     * Get <p>End time for statistics, defaulting to one hour after StartTime, with support for querying up to 24 hours of data.<br>UTC time, for example, '2020-01-01T12:00:00Z'.</p> 
+     * @return EndTime <p>End time for statistics, defaulting to one hour after StartTime, with support for querying up to 24 hours of data.<br>UTC time, for example, '2020-01-01T12:00:00Z'.</p>
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set The end time for query, which is 1 hour after the start time by default. The longest time range allowed for query is 24 hours.
-It must be in UTC format, such as `2020-01-01T12:00:00Z`.
-     * @param EndTime The end time for query, which is 1 hour after the start time by default. The longest time range allowed for query is 24 hours.
-It must be in UTC format, such as `2020-01-01T12:00:00Z`.
+     * Set <p>End time for statistics, defaulting to one hour after StartTime, with support for querying up to 24 hours of data.<br>UTC time, for example, '2020-01-01T12:00:00Z'.</p>
+     * @param EndTime <p>End time for statistics, defaulting to one hour after StartTime, with support for querying up to 24 hours of data.<br>UTC time, for example, '2020-01-01T12:00:00Z'.</p>
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get Whether to query the inputs or outputs. Valid values: input, output. 
-     * @return Type Whether to query the inputs or outputs. Valid values: input, output.
+     * Get <p>Input or output type. Valid values: `input`, `output`.</p> 
+     * @return Type <p>Input or output type. Valid values: `input`, `output`.</p>
      */
     public String [] getType() {
         return this.Type;
     }
 
     /**
-     * Set Whether to query the inputs or outputs. Valid values: input, output.
-     * @param Type Whether to query the inputs or outputs. Valid values: input, output.
+     * Set <p>Input or output type. Valid values: `input`, `output`.</p>
+     * @param Type <p>Input or output type. Valid values: `input`, `output`.</p>
      */
     public void setType(String [] Type) {
         this.Type = Type;
     }
 
     /**
-     * Get Whether to query the primary or backup pipeline. Valid values: 0, 1. 
-     * @return Pipeline Whether to query the primary or backup pipeline. Valid values: 0, 1.
+     * Get <p>Primary or backup channel. Option [0|1].</p> 
+     * @return Pipeline <p>Primary or backup channel. Option [0|1].</p>
      */
     public String [] getPipeline() {
         return this.Pipeline;
     }
 
     /**
-     * Set Whether to query the primary or backup pipeline. Valid values: 0, 1.
-     * @param Pipeline Whether to query the primary or backup pipeline. Valid values: 0, 1.
+     * Set <p>Primary or backup channel. Option [0|1].</p>
+     * @param Pipeline <p>Primary or backup channel. Option [0|1].</p>
      */
     public void setPipeline(String [] Pipeline) {
         this.Pipeline = Pipeline;
     }
 
     /**
-     * Get The page size. Value range: [1, 1000]. Default: 100. 
-     * @return PageSize The page size. Value range: [1, 1000]. Default: 100.
+     * Get <p>Size per page. Default value: 100. Value range: [1, 1000].</p> 
+     * @return PageSize <p>Size per page. Default value: 100. Value range: [1, 1000].</p>
      */
     public Long getPageSize() {
         return this.PageSize;
     }
 
     /**
-     * Set The page size. Value range: [1, 1000]. Default: 100.
-     * @param PageSize The page size. Value range: [1, 1000]. Default: 100.
+     * Set <p>Size per page. Default value: 100. Value range: [1, 1000].</p>
+     * @param PageSize <p>Size per page. Default value: 100. Value range: [1, 1000].</p>
      */
     public void setPageSize(Long PageSize) {
         this.PageSize = PageSize;
     }
 
     /**
-     * Get Whether to sort the records by timestamp in descending or ascending order. Valid values: desc (default), asc. 
-     * @return SortType Whether to sort the records by timestamp in descending or ascending order. Valid values: desc (default), asc.
+     * Get <p>Sort by Timestamp in ascending or descending order. The default is descending order. Options: [desc|asc].</p> 
+     * @return SortType <p>Sort by Timestamp in ascending or descending order. The default is descending order. Options: [desc|asc].</p>
      */
     public String getSortType() {
         return this.SortType;
     }
 
     /**
-     * Set Whether to sort the records by timestamp in descending or ascending order. Valid values: desc (default), asc.
-     * @param SortType Whether to sort the records by timestamp in descending or ascending order. Valid values: desc (default), asc.
+     * Set <p>Sort by Timestamp in ascending or descending order. The default is descending order. Options: [desc|asc].</p>
+     * @param SortType <p>Sort by Timestamp in ascending or descending order. The default is descending order. Options: [desc|asc].</p>
      */
     public void setSortType(String SortType) {
         this.SortType = SortType;
     }
 
     /**
-     * Get The page number. Value range: [1, 1000]. Default: 1. 
-     * @return PageNum The page number. Value range: [1, 1000]. Default: 1.
+     * Get <p>Page number. Default value: 1. Value range: [1, 1000].</p> 
+     * @return PageNum <p>Page number. Default value: 1. Value range: [1, 1000].</p>
      */
     public Long getPageNum() {
         return this.PageNum;
     }
 
     /**
-     * Set The page number. Value range: [1, 1000]. Default: 1.
-     * @param PageNum The page number. Value range: [1, 1000]. Default: 1.
+     * Set <p>Page number. Default value: 1. Value range: [1, 1000].</p>
+     * @param PageNum <p>Page number. Default value: 1. Value range: [1, 1000].</p>
      */
     public void setPageNum(Long PageNum) {
         this.PageNum = PageNum;

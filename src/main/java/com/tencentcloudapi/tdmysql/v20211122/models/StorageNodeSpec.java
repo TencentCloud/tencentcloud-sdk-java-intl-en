@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class StorageNodeSpec extends AbstractModel {
 
     /**
-    * 
+    * <p>Specification code</p>
     */
     @SerializedName("SpecCode")
     @Expose
@@ -73,14 +73,14 @@ public class StorageNodeSpec extends AbstractModel {
     private Long StorageNodeMinDisk;
 
     /**
-    * 
+    * <p>Disk Type, CLOUD_HSSD enhanced SSD, CLOUD_TCS local SSD disk</p>
     */
     @SerializedName("StorageType")
     @Expose
     private String StorageType;
 
     /**
-    * 
+    * <p>Default disk size of storage node for frontend display</p>
     */
     @SerializedName("StorageNodeDefaultDisk")
     @Expose
@@ -101,16 +101,16 @@ public class StorageNodeSpec extends AbstractModel {
     private String DiskTypeCategory;
 
     /**
-     * Get  
-     * @return SpecCode 
+     * Get <p>Specification code</p> 
+     * @return SpecCode <p>Specification code</p>
      */
     public String getSpecCode() {
         return this.SpecCode;
     }
 
     /**
-     * Set 
-     * @param SpecCode 
+     * Set <p>Specification code</p>
+     * @param SpecCode <p>Specification code</p>
      */
     public void setSpecCode(String SpecCode) {
         this.SpecCode = SpecCode;
@@ -213,32 +213,32 @@ public class StorageNodeSpec extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return StorageType 
+     * Get <p>Disk Type, CLOUD_HSSD enhanced SSD, CLOUD_TCS local SSD disk</p> 
+     * @return StorageType <p>Disk Type, CLOUD_HSSD enhanced SSD, CLOUD_TCS local SSD disk</p>
      */
     public String getStorageType() {
         return this.StorageType;
     }
 
     /**
-     * Set 
-     * @param StorageType 
+     * Set <p>Disk Type, CLOUD_HSSD enhanced SSD, CLOUD_TCS local SSD disk</p>
+     * @param StorageType <p>Disk Type, CLOUD_HSSD enhanced SSD, CLOUD_TCS local SSD disk</p>
      */
     public void setStorageType(String StorageType) {
         this.StorageType = StorageType;
     }
 
     /**
-     * Get  
-     * @return StorageNodeDefaultDisk 
+     * Get <p>Default disk size of storage node for frontend display</p> 
+     * @return StorageNodeDefaultDisk <p>Default disk size of storage node for frontend display</p>
      */
     public Long getStorageNodeDefaultDisk() {
         return this.StorageNodeDefaultDisk;
     }
 
     /**
-     * Set 
-     * @param StorageNodeDefaultDisk 
+     * Set <p>Default disk size of storage node for frontend display</p>
+     * @param StorageNodeDefaultDisk <p>Default disk size of storage node for frontend display</p>
      */
     public void setStorageNodeDefaultDisk(Long StorageNodeDefaultDisk) {
         this.StorageNodeDefaultDisk = StorageNodeDefaultDisk;

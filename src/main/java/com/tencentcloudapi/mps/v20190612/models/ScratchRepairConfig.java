@@ -24,9 +24,9 @@ import java.util.HashMap;
 public class ScratchRepairConfig extends AbstractModel {
 
     /**
-    * Capability configuration switch. Valid values:
+    * Capability configuration switch. Available values:
 <li>ON: enabled</li>
-<li>OFF: disabled</li>
+<li>OFF: disabled.</li>
 Default value: ON.
     */
     @SerializedName("Switch")
@@ -34,20 +34,21 @@ Default value: ON.
     private String Switch;
 
     /**
-    * 
+    * Strength. Value range: 0.0 to 1.0.
+Default: 0.0.
     */
     @SerializedName("Intensity")
     @Expose
     private Float Intensity;
 
     /**
-     * Get Capability configuration switch. Valid values:
+     * Get Capability configuration switch. Available values:
 <li>ON: enabled</li>
-<li>OFF: disabled</li>
+<li>OFF: disabled.</li>
 Default value: ON. 
-     * @return Switch Capability configuration switch. Valid values:
+     * @return Switch Capability configuration switch. Available values:
 <li>ON: enabled</li>
-<li>OFF: disabled</li>
+<li>OFF: disabled.</li>
 Default value: ON.
      */
     public String getSwitch() {
@@ -55,13 +56,13 @@ Default value: ON.
     }
 
     /**
-     * Set Capability configuration switch. Valid values:
+     * Set Capability configuration switch. Available values:
 <li>ON: enabled</li>
-<li>OFF: disabled</li>
+<li>OFF: disabled.</li>
 Default value: ON.
-     * @param Switch Capability configuration switch. Valid values:
+     * @param Switch Capability configuration switch. Available values:
 <li>ON: enabled</li>
-<li>OFF: disabled</li>
+<li>OFF: disabled.</li>
 Default value: ON.
      */
     public void setSwitch(String Switch) {
@@ -69,16 +70,20 @@ Default value: ON.
     }
 
     /**
-     * Get  
-     * @return Intensity 
+     * Get Strength. Value range: 0.0 to 1.0.
+Default: 0.0. 
+     * @return Intensity Strength. Value range: 0.0 to 1.0.
+Default: 0.0.
      */
     public Float getIntensity() {
         return this.Intensity;
     }
 
     /**
-     * Set 
-     * @param Intensity 
+     * Set Strength. Value range: 0.0 to 1.0.
+Default: 0.0.
+     * @param Intensity Strength. Value range: 0.0 to 1.0.
+Default: 0.0.
      */
     public void setIntensity(Float Intensity) {
         this.Intensity = Intensity;

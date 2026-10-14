@@ -32,7 +32,7 @@ public class RawTranscodeParameter extends AbstractModel {
 
     /**
     * Indicates whether to remove video data. Parameter value:
-<li>`0`: retention;</li>
+<li>0: retention</li>
 <li>1: Remove.</li>
 Default value: 0.
     */
@@ -41,8 +41,8 @@ Default value: 0.
     private Long RemoveVideo;
 
     /**
-    * Whether to remove audio data. Parameter Value:
-<li>`0`: retention;</li>
+    * Whether to remove audio data. Parameter value:
+<li>0: retention</li>
 <li>1: Remove.</li>
 Default value: 0.
     */
@@ -65,7 +65,7 @@ Default value: 0.
     private AudioTemplateInfo AudioTemplate;
 
     /**
-    * TSC transcoding parameters.
+    * Top Speed Codec transcoding parameters.
     */
     @SerializedName("TEHDConfig")
     @Expose
@@ -79,14 +79,14 @@ Default value: 0.
     private String StdExtInfo;
 
     /**
-    * 
+    * Audio/Video enhancement configuration.
     */
     @SerializedName("EnhanceConfig")
     @Expose
     private EnhanceConfig EnhanceConfig;
 
     /**
-    * 
+    * Subtitle parameters.
     */
     @SerializedName("SubtitleTemplate")
     @Expose
@@ -110,11 +110,11 @@ Default value: 0.
 
     /**
      * Get Indicates whether to remove video data. Parameter value:
-<li>`0`: retention;</li>
+<li>0: retention</li>
 <li>1: Remove.</li>
 Default value: 0. 
      * @return RemoveVideo Indicates whether to remove video data. Parameter value:
-<li>`0`: retention;</li>
+<li>0: retention</li>
 <li>1: Remove.</li>
 Default value: 0.
      */
@@ -124,11 +124,11 @@ Default value: 0.
 
     /**
      * Set Indicates whether to remove video data. Parameter value:
-<li>`0`: retention;</li>
+<li>0: retention</li>
 <li>1: Remove.</li>
 Default value: 0.
      * @param RemoveVideo Indicates whether to remove video data. Parameter value:
-<li>`0`: retention;</li>
+<li>0: retention</li>
 <li>1: Remove.</li>
 Default value: 0.
      */
@@ -137,12 +137,12 @@ Default value: 0.
     }
 
     /**
-     * Get Whether to remove audio data. Parameter Value:
-<li>`0`: retention;</li>
+     * Get Whether to remove audio data. Parameter value:
+<li>0: retention</li>
 <li>1: Remove.</li>
 Default value: 0. 
-     * @return RemoveAudio Whether to remove audio data. Parameter Value:
-<li>`0`: retention;</li>
+     * @return RemoveAudio Whether to remove audio data. Parameter value:
+<li>0: retention</li>
 <li>1: Remove.</li>
 Default value: 0.
      */
@@ -151,12 +151,12 @@ Default value: 0.
     }
 
     /**
-     * Set Whether to remove audio data. Parameter Value:
-<li>`0`: retention;</li>
+     * Set Whether to remove audio data. Parameter value:
+<li>0: retention</li>
 <li>1: Remove.</li>
 Default value: 0.
-     * @param RemoveAudio Whether to remove audio data. Parameter Value:
-<li>`0`: retention;</li>
+     * @param RemoveAudio Whether to remove audio data. Parameter value:
+<li>0: retention</li>
 <li>1: Remove.</li>
 Default value: 0.
      */
@@ -197,16 +197,16 @@ Default value: 0.
     }
 
     /**
-     * Get TSC transcoding parameters. 
-     * @return TEHDConfig TSC transcoding parameters.
+     * Get Top Speed Codec transcoding parameters. 
+     * @return TEHDConfig Top Speed Codec transcoding parameters.
      */
     public TEHDConfig getTEHDConfig() {
         return this.TEHDConfig;
     }
 
     /**
-     * Set TSC transcoding parameters.
-     * @param TEHDConfig TSC transcoding parameters.
+     * Set Top Speed Codec transcoding parameters.
+     * @param TEHDConfig Top Speed Codec transcoding parameters.
      */
     public void setTEHDConfig(TEHDConfig TEHDConfig) {
         this.TEHDConfig = TEHDConfig;
@@ -229,32 +229,32 @@ Default value: 0.
     }
 
     /**
-     * Get  
-     * @return EnhanceConfig 
+     * Get Audio/Video enhancement configuration. 
+     * @return EnhanceConfig Audio/Video enhancement configuration.
      */
     public EnhanceConfig getEnhanceConfig() {
         return this.EnhanceConfig;
     }
 
     /**
-     * Set 
-     * @param EnhanceConfig 
+     * Set Audio/Video enhancement configuration.
+     * @param EnhanceConfig Audio/Video enhancement configuration.
      */
     public void setEnhanceConfig(EnhanceConfig EnhanceConfig) {
         this.EnhanceConfig = EnhanceConfig;
     }
 
     /**
-     * Get  
-     * @return SubtitleTemplate 
+     * Get Subtitle parameters. 
+     * @return SubtitleTemplate Subtitle parameters.
      */
     public SubtitleTemplate getSubtitleTemplate() {
         return this.SubtitleTemplate;
     }
 
     /**
-     * Set 
-     * @param SubtitleTemplate 
+     * Set Subtitle parameters.
+     * @param SubtitleTemplate Subtitle parameters.
      */
     public void setSubtitleTemplate(SubtitleTemplate SubtitleTemplate) {
         this.SubtitleTemplate = SubtitleTemplate;

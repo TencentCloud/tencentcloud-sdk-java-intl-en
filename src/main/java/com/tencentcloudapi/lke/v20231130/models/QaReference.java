@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class QaReference extends AbstractModel {
 
     /**
-    * 
+    * <p>QA business ID</p>
     */
     @SerializedName("QaBizId")
     @Expose
-    private Long QaBizId;
+    private String QaBizId;
 
     /**
-    * 
+    * <p>Document fragment reference ID</p>
     */
     @SerializedName("ReferBizId")
     @Expose
-    private Long ReferBizId;
+    private String ReferBizId;
 
     /**
-    * 
+    * <p>Business ID of the knowledge base where the QA resides</p>
     */
     @SerializedName("KnowledgeBizId")
     @Expose
-    private Long KnowledgeBizId;
+    private String KnowledgeBizId;
 
     /**
-    * 
+    * <p>Name of the knowledge base where the QA resides</p>
     */
     @SerializedName("KnowledgeName")
     @Expose
     private String KnowledgeName;
 
     /**
-     * Get  
-     * @return QaBizId 
+     * Get <p>QA business ID</p> 
+     * @return QaBizId <p>QA business ID</p>
      */
-    public Long getQaBizId() {
+    public String getQaBizId() {
         return this.QaBizId;
     }
 
     /**
-     * Set 
-     * @param QaBizId 
+     * Set <p>QA business ID</p>
+     * @param QaBizId <p>QA business ID</p>
      */
-    public void setQaBizId(Long QaBizId) {
+    public void setQaBizId(String QaBizId) {
         this.QaBizId = QaBizId;
     }
 
     /**
-     * Get  
-     * @return ReferBizId 
+     * Get <p>Document fragment reference ID</p> 
+     * @return ReferBizId <p>Document fragment reference ID</p>
      */
-    public Long getReferBizId() {
+    public String getReferBizId() {
         return this.ReferBizId;
     }
 
     /**
-     * Set 
-     * @param ReferBizId 
+     * Set <p>Document fragment reference ID</p>
+     * @param ReferBizId <p>Document fragment reference ID</p>
      */
-    public void setReferBizId(Long ReferBizId) {
+    public void setReferBizId(String ReferBizId) {
         this.ReferBizId = ReferBizId;
     }
 
     /**
-     * Get  
-     * @return KnowledgeBizId 
+     * Get <p>Business ID of the knowledge base where the QA resides</p> 
+     * @return KnowledgeBizId <p>Business ID of the knowledge base where the QA resides</p>
      */
-    public Long getKnowledgeBizId() {
+    public String getKnowledgeBizId() {
         return this.KnowledgeBizId;
     }
 
     /**
-     * Set 
-     * @param KnowledgeBizId 
+     * Set <p>Business ID of the knowledge base where the QA resides</p>
+     * @param KnowledgeBizId <p>Business ID of the knowledge base where the QA resides</p>
      */
-    public void setKnowledgeBizId(Long KnowledgeBizId) {
+    public void setKnowledgeBizId(String KnowledgeBizId) {
         this.KnowledgeBizId = KnowledgeBizId;
     }
 
     /**
-     * Get  
-     * @return KnowledgeName 
+     * Get <p>Name of the knowledge base where the QA resides</p> 
+     * @return KnowledgeName <p>Name of the knowledge base where the QA resides</p>
      */
     public String getKnowledgeName() {
         return this.KnowledgeName;
     }
 
     /**
-     * Set 
-     * @param KnowledgeName 
+     * Set <p>Name of the knowledge base where the QA resides</p>
+     * @param KnowledgeName <p>Name of the knowledge base where the QA resides</p>
      */
     public void setKnowledgeName(String KnowledgeName) {
         this.KnowledgeName = KnowledgeName;
@@ -124,13 +124,13 @@ public class QaReference extends AbstractModel {
      */
     public QaReference(QaReference source) {
         if (source.QaBizId != null) {
-            this.QaBizId = new Long(source.QaBizId);
+            this.QaBizId = new String(source.QaBizId);
         }
         if (source.ReferBizId != null) {
-            this.ReferBizId = new Long(source.ReferBizId);
+            this.ReferBizId = new String(source.ReferBizId);
         }
         if (source.KnowledgeBizId != null) {
-            this.KnowledgeBizId = new Long(source.KnowledgeBizId);
+            this.KnowledgeBizId = new String(source.KnowledgeBizId);
         }
         if (source.KnowledgeName != null) {
             this.KnowledgeName = new String(source.KnowledgeName);

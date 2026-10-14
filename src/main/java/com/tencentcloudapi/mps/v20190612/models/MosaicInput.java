@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class MosaicInput extends AbstractModel {
 
     /**
-    * <p>Origin position. Currently, only the following is supported:</p><li>TopLeft: indicates that the coordinate origin is at the top left corner of the video image and the mosaic origin is at the top left corner of the image or text.</li>Default value: TopLeft.
+    * <p>Origin position. Currently, only the following is supported:</p><li>TopLeft: indicates that the coordinate origin is at the top-left corner of the video image and the mosaic origin is at the top-left corner of the image or text.</li>Default value: TopLeft.
     */
     @SerializedName("CoordinateOrigin")
     @Expose
     private String CoordinateOrigin;
 
     /**
-    * <p>Horizontal position of the mosaic origin relative to the origin of coordinates of the video image. Supports two formats: % and px:</p><li>If a string ends with %, the mosaic XPos is a specified percentage of the video width. For example, 10% means XPos is 10% of the video width;</li><li>If a string ends with px, the mosaic XPos is a specified pixel. For example, 100px means XPos is 100 pixels.</li>Default value: 0px.
+    * <p>Horizontal position of the mosaic origin relative to the origin of coordinates of the video image. Supports two formats: % and px:</p><li>If a string ends with %, the mosaic XPos is a specified percentage of the video width. For example, 10% means the XPos is 10% of the video width.</li><li>If a string ends with px, the mosaic XPos is a specified pixel. For example, 100px means the XPos is 100 pixels.</li>Default value: 0px.
     */
     @SerializedName("XPos")
     @Expose
@@ -45,60 +45,60 @@ public class MosaicInput extends AbstractModel {
     private String YPos;
 
     /**
-    * <p>Mosaic width. Supports two formats: % and px:</p><li>If a string ends with %, it indicates that the mosaic `Width` is a percentage of a video's width. For example, `10%` means that `Width` is 10% of a video's width.</li><li>If a string ends with px, it indicates that the mosaic `Width` is in pixels. For example, `100px` means that `Width` is 100 pixels.</li>Default value: 10%.
+    * <p>Width of the mosaic. Supports two formats: % and px:</p><li>If a string ends with %, it indicates that the mosaic `Width` is a percentage of a video's width. For example, `10%` means that `Width` is 10% of a video's width.</li><li>If a string ends with px, it indicates that the unit of the mosaic `Width` is pixel. For example, `100px` means that `Width` is 100 pixels.</li>Default value: 10%.
     */
     @SerializedName("Width")
     @Expose
     private String Width;
 
     /**
-    * <p>Height of a mosaic. Two formats are supported: % and px.</p><li>If a string ends with %, it indicates that the `Height` of a mosaic is a percentage of a video's height. For example, `10%` means that `Height` is 10% of a video's height.</li><li>If a string ends with px, it indicates that the `Height` of a mosaic is in pixels. For example, `100px` means that `Height` is 100 pixels.</li>Default value: 10%.
+    * <p>Mosaic height. Supports two formats: % and px:</p><li>If a string ends with %, it indicates that the `Height` of a mosaic is a percentage of a video's height. For example, `10%` means that `Height` is 10% of a video's height.</li><li>If a string ends with px, it indicates that the `Height` unit of a mosaic is pixel. For example, `100px` means that `Height` is 100 pixels.</li>Default value: 10%.
     */
     @SerializedName("Height")
     @Expose
     private String Height;
 
     /**
-    * <p>Start time offset of mosaic, in seconds. If not specified or set to 0, the mosaic appears when the frame appears.</p><li>If not specified or set to 0, the mosaic appears from the start of the frame;</li><li>If the value is greater than 0 (assuming n), the mosaic appears at the nth second from the start of the frame;</li><li>If the value is less than 0 (assuming -n), the mosaic appears n seconds before the end of the frame.</li>
+    * <p>Start time offset of mosaic, in seconds. Leave empty or enter 0 to make the mosaic appear when the frame appears.</p><li>Leave empty or enter 0 to make the mosaic appear at the start of the frame;</li><li>If the value is greater than 0 (assuming n), the mosaic appears at the nth second after the frame starts;</li><li>If the value is less than 0 (assuming -n), the mosaic appears n seconds before the end of the frame.</li>
     */
     @SerializedName("StartTimeOffset")
     @Expose
     private Float StartTimeOffset;
 
     /**
-    * <p>End time offset of mosaic, in seconds.</p><li>If not specified or set to 0, the mosaic lasts until the end of a video;</li><li>If the value is greater than 0 (assuming n), the mosaic disappears at second n;</li><li>If the value is less than 0 (assuming -n), the mosaic disappears n seconds before the end of a video.</li>
+    * <p>End time offset of the mosaic, in seconds.</p><li>If not specified or set to 0, the mosaic lasts until the end of a video;</li><li>If the value is greater than 0 (assuming n), the mosaic disappears at second n;</li><li>If the value is less than 0 (assuming -n), the mosaic disappears n seconds before the end of a video.</li>
     */
     @SerializedName("EndTimeOffset")
     @Expose
     private Float EndTimeOffset;
 
     /**
-     * Get <p>Origin position. Currently, only the following is supported:</p><li>TopLeft: indicates that the coordinate origin is at the top left corner of the video image and the mosaic origin is at the top left corner of the image or text.</li>Default value: TopLeft. 
-     * @return CoordinateOrigin <p>Origin position. Currently, only the following is supported:</p><li>TopLeft: indicates that the coordinate origin is at the top left corner of the video image and the mosaic origin is at the top left corner of the image or text.</li>Default value: TopLeft.
+     * Get <p>Origin position. Currently, only the following is supported:</p><li>TopLeft: indicates that the coordinate origin is at the top-left corner of the video image and the mosaic origin is at the top-left corner of the image or text.</li>Default value: TopLeft. 
+     * @return CoordinateOrigin <p>Origin position. Currently, only the following is supported:</p><li>TopLeft: indicates that the coordinate origin is at the top-left corner of the video image and the mosaic origin is at the top-left corner of the image or text.</li>Default value: TopLeft.
      */
     public String getCoordinateOrigin() {
         return this.CoordinateOrigin;
     }
 
     /**
-     * Set <p>Origin position. Currently, only the following is supported:</p><li>TopLeft: indicates that the coordinate origin is at the top left corner of the video image and the mosaic origin is at the top left corner of the image or text.</li>Default value: TopLeft.
-     * @param CoordinateOrigin <p>Origin position. Currently, only the following is supported:</p><li>TopLeft: indicates that the coordinate origin is at the top left corner of the video image and the mosaic origin is at the top left corner of the image or text.</li>Default value: TopLeft.
+     * Set <p>Origin position. Currently, only the following is supported:</p><li>TopLeft: indicates that the coordinate origin is at the top-left corner of the video image and the mosaic origin is at the top-left corner of the image or text.</li>Default value: TopLeft.
+     * @param CoordinateOrigin <p>Origin position. Currently, only the following is supported:</p><li>TopLeft: indicates that the coordinate origin is at the top-left corner of the video image and the mosaic origin is at the top-left corner of the image or text.</li>Default value: TopLeft.
      */
     public void setCoordinateOrigin(String CoordinateOrigin) {
         this.CoordinateOrigin = CoordinateOrigin;
     }
 
     /**
-     * Get <p>Horizontal position of the mosaic origin relative to the origin of coordinates of the video image. Supports two formats: % and px:</p><li>If a string ends with %, the mosaic XPos is a specified percentage of the video width. For example, 10% means XPos is 10% of the video width;</li><li>If a string ends with px, the mosaic XPos is a specified pixel. For example, 100px means XPos is 100 pixels.</li>Default value: 0px. 
-     * @return XPos <p>Horizontal position of the mosaic origin relative to the origin of coordinates of the video image. Supports two formats: % and px:</p><li>If a string ends with %, the mosaic XPos is a specified percentage of the video width. For example, 10% means XPos is 10% of the video width;</li><li>If a string ends with px, the mosaic XPos is a specified pixel. For example, 100px means XPos is 100 pixels.</li>Default value: 0px.
+     * Get <p>Horizontal position of the mosaic origin relative to the origin of coordinates of the video image. Supports two formats: % and px:</p><li>If a string ends with %, the mosaic XPos is a specified percentage of the video width. For example, 10% means the XPos is 10% of the video width.</li><li>If a string ends with px, the mosaic XPos is a specified pixel. For example, 100px means the XPos is 100 pixels.</li>Default value: 0px. 
+     * @return XPos <p>Horizontal position of the mosaic origin relative to the origin of coordinates of the video image. Supports two formats: % and px:</p><li>If a string ends with %, the mosaic XPos is a specified percentage of the video width. For example, 10% means the XPos is 10% of the video width.</li><li>If a string ends with px, the mosaic XPos is a specified pixel. For example, 100px means the XPos is 100 pixels.</li>Default value: 0px.
      */
     public String getXPos() {
         return this.XPos;
     }
 
     /**
-     * Set <p>Horizontal position of the mosaic origin relative to the origin of coordinates of the video image. Supports two formats: % and px:</p><li>If a string ends with %, the mosaic XPos is a specified percentage of the video width. For example, 10% means XPos is 10% of the video width;</li><li>If a string ends with px, the mosaic XPos is a specified pixel. For example, 100px means XPos is 100 pixels.</li>Default value: 0px.
-     * @param XPos <p>Horizontal position of the mosaic origin relative to the origin of coordinates of the video image. Supports two formats: % and px:</p><li>If a string ends with %, the mosaic XPos is a specified percentage of the video width. For example, 10% means XPos is 10% of the video width;</li><li>If a string ends with px, the mosaic XPos is a specified pixel. For example, 100px means XPos is 100 pixels.</li>Default value: 0px.
+     * Set <p>Horizontal position of the mosaic origin relative to the origin of coordinates of the video image. Supports two formats: % and px:</p><li>If a string ends with %, the mosaic XPos is a specified percentage of the video width. For example, 10% means the XPos is 10% of the video width.</li><li>If a string ends with px, the mosaic XPos is a specified pixel. For example, 100px means the XPos is 100 pixels.</li>Default value: 0px.
+     * @param XPos <p>Horizontal position of the mosaic origin relative to the origin of coordinates of the video image. Supports two formats: % and px:</p><li>If a string ends with %, the mosaic XPos is a specified percentage of the video width. For example, 10% means the XPos is 10% of the video width.</li><li>If a string ends with px, the mosaic XPos is a specified pixel. For example, 100px means the XPos is 100 pixels.</li>Default value: 0px.
      */
     public void setXPos(String XPos) {
         this.XPos = XPos;
@@ -121,64 +121,64 @@ public class MosaicInput extends AbstractModel {
     }
 
     /**
-     * Get <p>Mosaic width. Supports two formats: % and px:</p><li>If a string ends with %, it indicates that the mosaic `Width` is a percentage of a video's width. For example, `10%` means that `Width` is 10% of a video's width.</li><li>If a string ends with px, it indicates that the mosaic `Width` is in pixels. For example, `100px` means that `Width` is 100 pixels.</li>Default value: 10%. 
-     * @return Width <p>Mosaic width. Supports two formats: % and px:</p><li>If a string ends with %, it indicates that the mosaic `Width` is a percentage of a video's width. For example, `10%` means that `Width` is 10% of a video's width.</li><li>If a string ends with px, it indicates that the mosaic `Width` is in pixels. For example, `100px` means that `Width` is 100 pixels.</li>Default value: 10%.
+     * Get <p>Width of the mosaic. Supports two formats: % and px:</p><li>If a string ends with %, it indicates that the mosaic `Width` is a percentage of a video's width. For example, `10%` means that `Width` is 10% of a video's width.</li><li>If a string ends with px, it indicates that the unit of the mosaic `Width` is pixel. For example, `100px` means that `Width` is 100 pixels.</li>Default value: 10%. 
+     * @return Width <p>Width of the mosaic. Supports two formats: % and px:</p><li>If a string ends with %, it indicates that the mosaic `Width` is a percentage of a video's width. For example, `10%` means that `Width` is 10% of a video's width.</li><li>If a string ends with px, it indicates that the unit of the mosaic `Width` is pixel. For example, `100px` means that `Width` is 100 pixels.</li>Default value: 10%.
      */
     public String getWidth() {
         return this.Width;
     }
 
     /**
-     * Set <p>Mosaic width. Supports two formats: % and px:</p><li>If a string ends with %, it indicates that the mosaic `Width` is a percentage of a video's width. For example, `10%` means that `Width` is 10% of a video's width.</li><li>If a string ends with px, it indicates that the mosaic `Width` is in pixels. For example, `100px` means that `Width` is 100 pixels.</li>Default value: 10%.
-     * @param Width <p>Mosaic width. Supports two formats: % and px:</p><li>If a string ends with %, it indicates that the mosaic `Width` is a percentage of a video's width. For example, `10%` means that `Width` is 10% of a video's width.</li><li>If a string ends with px, it indicates that the mosaic `Width` is in pixels. For example, `100px` means that `Width` is 100 pixels.</li>Default value: 10%.
+     * Set <p>Width of the mosaic. Supports two formats: % and px:</p><li>If a string ends with %, it indicates that the mosaic `Width` is a percentage of a video's width. For example, `10%` means that `Width` is 10% of a video's width.</li><li>If a string ends with px, it indicates that the unit of the mosaic `Width` is pixel. For example, `100px` means that `Width` is 100 pixels.</li>Default value: 10%.
+     * @param Width <p>Width of the mosaic. Supports two formats: % and px:</p><li>If a string ends with %, it indicates that the mosaic `Width` is a percentage of a video's width. For example, `10%` means that `Width` is 10% of a video's width.</li><li>If a string ends with px, it indicates that the unit of the mosaic `Width` is pixel. For example, `100px` means that `Width` is 100 pixels.</li>Default value: 10%.
      */
     public void setWidth(String Width) {
         this.Width = Width;
     }
 
     /**
-     * Get <p>Height of a mosaic. Two formats are supported: % and px.</p><li>If a string ends with %, it indicates that the `Height` of a mosaic is a percentage of a video's height. For example, `10%` means that `Height` is 10% of a video's height.</li><li>If a string ends with px, it indicates that the `Height` of a mosaic is in pixels. For example, `100px` means that `Height` is 100 pixels.</li>Default value: 10%. 
-     * @return Height <p>Height of a mosaic. Two formats are supported: % and px.</p><li>If a string ends with %, it indicates that the `Height` of a mosaic is a percentage of a video's height. For example, `10%` means that `Height` is 10% of a video's height.</li><li>If a string ends with px, it indicates that the `Height` of a mosaic is in pixels. For example, `100px` means that `Height` is 100 pixels.</li>Default value: 10%.
+     * Get <p>Mosaic height. Supports two formats: % and px:</p><li>If a string ends with %, it indicates that the `Height` of a mosaic is a percentage of a video's height. For example, `10%` means that `Height` is 10% of a video's height.</li><li>If a string ends with px, it indicates that the `Height` unit of a mosaic is pixel. For example, `100px` means that `Height` is 100 pixels.</li>Default value: 10%. 
+     * @return Height <p>Mosaic height. Supports two formats: % and px:</p><li>If a string ends with %, it indicates that the `Height` of a mosaic is a percentage of a video's height. For example, `10%` means that `Height` is 10% of a video's height.</li><li>If a string ends with px, it indicates that the `Height` unit of a mosaic is pixel. For example, `100px` means that `Height` is 100 pixels.</li>Default value: 10%.
      */
     public String getHeight() {
         return this.Height;
     }
 
     /**
-     * Set <p>Height of a mosaic. Two formats are supported: % and px.</p><li>If a string ends with %, it indicates that the `Height` of a mosaic is a percentage of a video's height. For example, `10%` means that `Height` is 10% of a video's height.</li><li>If a string ends with px, it indicates that the `Height` of a mosaic is in pixels. For example, `100px` means that `Height` is 100 pixels.</li>Default value: 10%.
-     * @param Height <p>Height of a mosaic. Two formats are supported: % and px.</p><li>If a string ends with %, it indicates that the `Height` of a mosaic is a percentage of a video's height. For example, `10%` means that `Height` is 10% of a video's height.</li><li>If a string ends with px, it indicates that the `Height` of a mosaic is in pixels. For example, `100px` means that `Height` is 100 pixels.</li>Default value: 10%.
+     * Set <p>Mosaic height. Supports two formats: % and px:</p><li>If a string ends with %, it indicates that the `Height` of a mosaic is a percentage of a video's height. For example, `10%` means that `Height` is 10% of a video's height.</li><li>If a string ends with px, it indicates that the `Height` unit of a mosaic is pixel. For example, `100px` means that `Height` is 100 pixels.</li>Default value: 10%.
+     * @param Height <p>Mosaic height. Supports two formats: % and px:</p><li>If a string ends with %, it indicates that the `Height` of a mosaic is a percentage of a video's height. For example, `10%` means that `Height` is 10% of a video's height.</li><li>If a string ends with px, it indicates that the `Height` unit of a mosaic is pixel. For example, `100px` means that `Height` is 100 pixels.</li>Default value: 10%.
      */
     public void setHeight(String Height) {
         this.Height = Height;
     }
 
     /**
-     * Get <p>Start time offset of mosaic, in seconds. If not specified or set to 0, the mosaic appears when the frame appears.</p><li>If not specified or set to 0, the mosaic appears from the start of the frame;</li><li>If the value is greater than 0 (assuming n), the mosaic appears at the nth second from the start of the frame;</li><li>If the value is less than 0 (assuming -n), the mosaic appears n seconds before the end of the frame.</li> 
-     * @return StartTimeOffset <p>Start time offset of mosaic, in seconds. If not specified or set to 0, the mosaic appears when the frame appears.</p><li>If not specified or set to 0, the mosaic appears from the start of the frame;</li><li>If the value is greater than 0 (assuming n), the mosaic appears at the nth second from the start of the frame;</li><li>If the value is less than 0 (assuming -n), the mosaic appears n seconds before the end of the frame.</li>
+     * Get <p>Start time offset of mosaic, in seconds. Leave empty or enter 0 to make the mosaic appear when the frame appears.</p><li>Leave empty or enter 0 to make the mosaic appear at the start of the frame;</li><li>If the value is greater than 0 (assuming n), the mosaic appears at the nth second after the frame starts;</li><li>If the value is less than 0 (assuming -n), the mosaic appears n seconds before the end of the frame.</li> 
+     * @return StartTimeOffset <p>Start time offset of mosaic, in seconds. Leave empty or enter 0 to make the mosaic appear when the frame appears.</p><li>Leave empty or enter 0 to make the mosaic appear at the start of the frame;</li><li>If the value is greater than 0 (assuming n), the mosaic appears at the nth second after the frame starts;</li><li>If the value is less than 0 (assuming -n), the mosaic appears n seconds before the end of the frame.</li>
      */
     public Float getStartTimeOffset() {
         return this.StartTimeOffset;
     }
 
     /**
-     * Set <p>Start time offset of mosaic, in seconds. If not specified or set to 0, the mosaic appears when the frame appears.</p><li>If not specified or set to 0, the mosaic appears from the start of the frame;</li><li>If the value is greater than 0 (assuming n), the mosaic appears at the nth second from the start of the frame;</li><li>If the value is less than 0 (assuming -n), the mosaic appears n seconds before the end of the frame.</li>
-     * @param StartTimeOffset <p>Start time offset of mosaic, in seconds. If not specified or set to 0, the mosaic appears when the frame appears.</p><li>If not specified or set to 0, the mosaic appears from the start of the frame;</li><li>If the value is greater than 0 (assuming n), the mosaic appears at the nth second from the start of the frame;</li><li>If the value is less than 0 (assuming -n), the mosaic appears n seconds before the end of the frame.</li>
+     * Set <p>Start time offset of mosaic, in seconds. Leave empty or enter 0 to make the mosaic appear when the frame appears.</p><li>Leave empty or enter 0 to make the mosaic appear at the start of the frame;</li><li>If the value is greater than 0 (assuming n), the mosaic appears at the nth second after the frame starts;</li><li>If the value is less than 0 (assuming -n), the mosaic appears n seconds before the end of the frame.</li>
+     * @param StartTimeOffset <p>Start time offset of mosaic, in seconds. Leave empty or enter 0 to make the mosaic appear when the frame appears.</p><li>Leave empty or enter 0 to make the mosaic appear at the start of the frame;</li><li>If the value is greater than 0 (assuming n), the mosaic appears at the nth second after the frame starts;</li><li>If the value is less than 0 (assuming -n), the mosaic appears n seconds before the end of the frame.</li>
      */
     public void setStartTimeOffset(Float StartTimeOffset) {
         this.StartTimeOffset = StartTimeOffset;
     }
 
     /**
-     * Get <p>End time offset of mosaic, in seconds.</p><li>If not specified or set to 0, the mosaic lasts until the end of a video;</li><li>If the value is greater than 0 (assuming n), the mosaic disappears at second n;</li><li>If the value is less than 0 (assuming -n), the mosaic disappears n seconds before the end of a video.</li> 
-     * @return EndTimeOffset <p>End time offset of mosaic, in seconds.</p><li>If not specified or set to 0, the mosaic lasts until the end of a video;</li><li>If the value is greater than 0 (assuming n), the mosaic disappears at second n;</li><li>If the value is less than 0 (assuming -n), the mosaic disappears n seconds before the end of a video.</li>
+     * Get <p>End time offset of the mosaic, in seconds.</p><li>If not specified or set to 0, the mosaic lasts until the end of a video;</li><li>If the value is greater than 0 (assuming n), the mosaic disappears at second n;</li><li>If the value is less than 0 (assuming -n), the mosaic disappears n seconds before the end of a video.</li> 
+     * @return EndTimeOffset <p>End time offset of the mosaic, in seconds.</p><li>If not specified or set to 0, the mosaic lasts until the end of a video;</li><li>If the value is greater than 0 (assuming n), the mosaic disappears at second n;</li><li>If the value is less than 0 (assuming -n), the mosaic disappears n seconds before the end of a video.</li>
      */
     public Float getEndTimeOffset() {
         return this.EndTimeOffset;
     }
 
     /**
-     * Set <p>End time offset of mosaic, in seconds.</p><li>If not specified or set to 0, the mosaic lasts until the end of a video;</li><li>If the value is greater than 0 (assuming n), the mosaic disappears at second n;</li><li>If the value is less than 0 (assuming -n), the mosaic disappears n seconds before the end of a video.</li>
-     * @param EndTimeOffset <p>End time offset of mosaic, in seconds.</p><li>If not specified or set to 0, the mosaic lasts until the end of a video;</li><li>If the value is greater than 0 (assuming n), the mosaic disappears at second n;</li><li>If the value is less than 0 (assuming -n), the mosaic disappears n seconds before the end of a video.</li>
+     * Set <p>End time offset of the mosaic, in seconds.</p><li>If not specified or set to 0, the mosaic lasts until the end of a video;</li><li>If the value is greater than 0 (assuming n), the mosaic disappears at second n;</li><li>If the value is less than 0 (assuming -n), the mosaic disappears n seconds before the end of a video.</li>
+     * @param EndTimeOffset <p>End time offset of the mosaic, in seconds.</p><li>If not specified or set to 0, the mosaic lasts until the end of a video;</li><li>If the value is greater than 0 (assuming n), the mosaic disappears at second n;</li><li>If the value is less than 0 (assuming -n), the mosaic disappears n seconds before the end of a video.</li>
      */
     public void setEndTimeOffset(Float EndTimeOffset) {
         this.EndTimeOffset = EndTimeOffset;

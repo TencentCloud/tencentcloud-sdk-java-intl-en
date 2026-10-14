@@ -24,161 +24,161 @@ import java.util.HashMap;
 public class UpdateDictionariesRequest extends AbstractModel {
 
     /**
-    * ES instance ID
+    * ES instance ID.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * COS address of the main dictionary for the IK analyzer
+    * Address of the COS main dictionary for IK word segmentation entered during installation, and the dictionary name such as test.dic entered during deletion.
     */
     @SerializedName("IkMainDicts")
     @Expose
     private String [] IkMainDicts;
 
     /**
-    * COS address of the stopword dictionary for the IK analyzer
+    * Address of the COS stopword dictionary for IK word segmentation during installation. When deleting, enter the dictionary name, for example, test.dic.
     */
     @SerializedName("IkStopwords")
     @Expose
     private String [] IkStopwords;
 
     /**
-    * COS address of the synonym dictionary
+    * Address of the synonym dictionary COS during installation, and the dictionary name such as test.dic when deleting.
     */
     @SerializedName("Synonym")
     @Expose
     private String [] Synonym;
 
     /**
-    * COS address of the QQ dictionary
+    * Address of the COS QQ tokenizer dictionary during installation, and the dictionary name such as test.dic during deletion.
     */
     @SerializedName("QQDict")
     @Expose
     private String [] QQDict;
 
     /**
-    * `0` (default): Install, `1`: Delete
+    * 0: installation; 1: deletion. Default value: 0
     */
     @SerializedName("UpdateType")
     @Expose
     private Long UpdateType;
 
     /**
-    * Whether to force restart the cluster. The default value is `false`.
+    * Whether to force restart the cluster. Default value: false
     */
     @SerializedName("ForceRestart")
     @Expose
     private Boolean ForceRestart;
 
     /**
-     * Get ES instance ID 
-     * @return InstanceId ES instance ID
+     * Get ES instance ID. 
+     * @return InstanceId ES instance ID.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set ES instance ID
-     * @param InstanceId ES instance ID
+     * Set ES instance ID.
+     * @param InstanceId ES instance ID.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get COS address of the main dictionary for the IK analyzer 
-     * @return IkMainDicts COS address of the main dictionary for the IK analyzer
+     * Get Address of the COS main dictionary for IK word segmentation entered during installation, and the dictionary name such as test.dic entered during deletion. 
+     * @return IkMainDicts Address of the COS main dictionary for IK word segmentation entered during installation, and the dictionary name such as test.dic entered during deletion.
      */
     public String [] getIkMainDicts() {
         return this.IkMainDicts;
     }
 
     /**
-     * Set COS address of the main dictionary for the IK analyzer
-     * @param IkMainDicts COS address of the main dictionary for the IK analyzer
+     * Set Address of the COS main dictionary for IK word segmentation entered during installation, and the dictionary name such as test.dic entered during deletion.
+     * @param IkMainDicts Address of the COS main dictionary for IK word segmentation entered during installation, and the dictionary name such as test.dic entered during deletion.
      */
     public void setIkMainDicts(String [] IkMainDicts) {
         this.IkMainDicts = IkMainDicts;
     }
 
     /**
-     * Get COS address of the stopword dictionary for the IK analyzer 
-     * @return IkStopwords COS address of the stopword dictionary for the IK analyzer
+     * Get Address of the COS stopword dictionary for IK word segmentation during installation. When deleting, enter the dictionary name, for example, test.dic. 
+     * @return IkStopwords Address of the COS stopword dictionary for IK word segmentation during installation. When deleting, enter the dictionary name, for example, test.dic.
      */
     public String [] getIkStopwords() {
         return this.IkStopwords;
     }
 
     /**
-     * Set COS address of the stopword dictionary for the IK analyzer
-     * @param IkStopwords COS address of the stopword dictionary for the IK analyzer
+     * Set Address of the COS stopword dictionary for IK word segmentation during installation. When deleting, enter the dictionary name, for example, test.dic.
+     * @param IkStopwords Address of the COS stopword dictionary for IK word segmentation during installation. When deleting, enter the dictionary name, for example, test.dic.
      */
     public void setIkStopwords(String [] IkStopwords) {
         this.IkStopwords = IkStopwords;
     }
 
     /**
-     * Get COS address of the synonym dictionary 
-     * @return Synonym COS address of the synonym dictionary
+     * Get Address of the synonym dictionary COS during installation, and the dictionary name such as test.dic when deleting. 
+     * @return Synonym Address of the synonym dictionary COS during installation, and the dictionary name such as test.dic when deleting.
      */
     public String [] getSynonym() {
         return this.Synonym;
     }
 
     /**
-     * Set COS address of the synonym dictionary
-     * @param Synonym COS address of the synonym dictionary
+     * Set Address of the synonym dictionary COS during installation, and the dictionary name such as test.dic when deleting.
+     * @param Synonym Address of the synonym dictionary COS during installation, and the dictionary name such as test.dic when deleting.
      */
     public void setSynonym(String [] Synonym) {
         this.Synonym = Synonym;
     }
 
     /**
-     * Get COS address of the QQ dictionary 
-     * @return QQDict COS address of the QQ dictionary
+     * Get Address of the COS QQ tokenizer dictionary during installation, and the dictionary name such as test.dic during deletion. 
+     * @return QQDict Address of the COS QQ tokenizer dictionary during installation, and the dictionary name such as test.dic during deletion.
      */
     public String [] getQQDict() {
         return this.QQDict;
     }
 
     /**
-     * Set COS address of the QQ dictionary
-     * @param QQDict COS address of the QQ dictionary
+     * Set Address of the COS QQ tokenizer dictionary during installation, and the dictionary name such as test.dic during deletion.
+     * @param QQDict Address of the COS QQ tokenizer dictionary during installation, and the dictionary name such as test.dic during deletion.
      */
     public void setQQDict(String [] QQDict) {
         this.QQDict = QQDict;
     }
 
     /**
-     * Get `0` (default): Install, `1`: Delete 
-     * @return UpdateType `0` (default): Install, `1`: Delete
+     * Get 0: installation; 1: deletion. Default value: 0 
+     * @return UpdateType 0: installation; 1: deletion. Default value: 0
      */
     public Long getUpdateType() {
         return this.UpdateType;
     }
 
     /**
-     * Set `0` (default): Install, `1`: Delete
-     * @param UpdateType `0` (default): Install, `1`: Delete
+     * Set 0: installation; 1: deletion. Default value: 0
+     * @param UpdateType 0: installation; 1: deletion. Default value: 0
      */
     public void setUpdateType(Long UpdateType) {
         this.UpdateType = UpdateType;
     }
 
     /**
-     * Get Whether to force restart the cluster. The default value is `false`. 
-     * @return ForceRestart Whether to force restart the cluster. The default value is `false`.
+     * Get Whether to force restart the cluster. Default value: false 
+     * @return ForceRestart Whether to force restart the cluster. Default value: false
      */
     public Boolean getForceRestart() {
         return this.ForceRestart;
     }
 
     /**
-     * Set Whether to force restart the cluster. The default value is `false`.
-     * @param ForceRestart Whether to force restart the cluster. The default value is `false`.
+     * Set Whether to force restart the cluster. Default value: false
+     * @param ForceRestart Whether to force restart the cluster. Default value: false
      */
     public void setForceRestart(Boolean ForceRestart) {
         this.ForceRestart = ForceRestart;

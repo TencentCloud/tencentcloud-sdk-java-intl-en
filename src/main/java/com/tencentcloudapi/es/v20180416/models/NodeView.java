@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class NodeView extends AbstractModel {
 
     /**
-    * Node ID
+    * Node ID.
     */
     @SerializedName("NodeId")
     @Expose
@@ -45,56 +45,56 @@ public class NodeView extends AbstractModel {
     private Float Visible;
 
     /**
-    * Whether the node encounters circuit breaking
+    * Whether to fuse
     */
     @SerializedName("Break")
     @Expose
     private Float Break;
 
     /**
-    * Node disk size
+    * Total node disk size
     */
     @SerializedName("DiskSize")
     @Expose
     private Long DiskSize;
 
     /**
-    * Disk usage
+    * Disk utilization rate
     */
     @SerializedName("DiskUsage")
     @Expose
     private Float DiskUsage;
 
     /**
-    * Node memory size (in GB)
+    * Node memory size (unit: GB)
     */
     @SerializedName("MemSize")
     @Expose
     private Long MemSize;
 
     /**
-    * Memory usage
+    * Memory usage rate
     */
     @SerializedName("MemUsage")
     @Expose
     private Float MemUsage;
 
     /**
-    * Number of node CPUs
+    * Number of CPUs on the node
     */
     @SerializedName("CpuNum")
     @Expose
     private Long CpuNum;
 
     /**
-    * CPU usage
+    * CPU utilization
     */
     @SerializedName("CpuUsage")
     @Expose
     private Float CpuUsage;
 
     /**
-    * Availability zone
+    * AZ.
     */
     @SerializedName("Zone")
     @Expose
@@ -115,44 +115,72 @@ public class NodeView extends AbstractModel {
     private String NodeHttpIp;
 
     /**
-    * JVM memory usage
+    * JVM memory usage rate
     */
     @SerializedName("JvmMemUsage")
     @Expose
     private Float JvmMemUsage;
 
     /**
-    * Number of node shards
+    * Number of shards per node
     */
     @SerializedName("ShardNum")
     @Expose
     private Long ShardNum;
 
     /**
-    * ID list of node disks
+    * Disk ID list on node
     */
     @SerializedName("DiskIds")
     @Expose
     private String [] DiskIds;
 
     /**
-    * Whether a hidden availability zone
+    * Whether it is a hidden AZ
     */
     @SerializedName("Hidden")
     @Expose
     private Boolean Hidden;
 
     /**
-     * Get Node ID 
-     * @return NodeId Node ID
+    * Whether to act as the coordination node role
+    */
+    @SerializedName("IsCoordinationNode")
+    @Expose
+    private Boolean IsCoordinationNode;
+
+    /**
+    * CVM running state
+    */
+    @SerializedName("CVMStatus")
+    @Expose
+    private String CVMStatus;
+
+    /**
+    * id of the placement group bound to the cvm
+    */
+    @SerializedName("CVMDisasterRecoverGroupId")
+    @Expose
+    private String CVMDisasterRecoverGroupId;
+
+    /**
+    * Status of the placement group bound to the cvm. 2: Bound; 1: Binding; 0: Not enabled
+    */
+    @SerializedName("CVMDisasterRecoverGroupStatus")
+    @Expose
+    private Long CVMDisasterRecoverGroupStatus;
+
+    /**
+     * Get Node ID. 
+     * @return NodeId Node ID.
      */
     public String getNodeId() {
         return this.NodeId;
     }
 
     /**
-     * Set Node ID
-     * @param NodeId Node ID
+     * Set Node ID.
+     * @param NodeId Node ID.
      */
     public void setNodeId(String NodeId) {
         this.NodeId = NodeId;
@@ -191,128 +219,128 @@ public class NodeView extends AbstractModel {
     }
 
     /**
-     * Get Whether the node encounters circuit breaking 
-     * @return Break Whether the node encounters circuit breaking
+     * Get Whether to fuse 
+     * @return Break Whether to fuse
      */
     public Float getBreak() {
         return this.Break;
     }
 
     /**
-     * Set Whether the node encounters circuit breaking
-     * @param Break Whether the node encounters circuit breaking
+     * Set Whether to fuse
+     * @param Break Whether to fuse
      */
     public void setBreak(Float Break) {
         this.Break = Break;
     }
 
     /**
-     * Get Node disk size 
-     * @return DiskSize Node disk size
+     * Get Total node disk size 
+     * @return DiskSize Total node disk size
      */
     public Long getDiskSize() {
         return this.DiskSize;
     }
 
     /**
-     * Set Node disk size
-     * @param DiskSize Node disk size
+     * Set Total node disk size
+     * @param DiskSize Total node disk size
      */
     public void setDiskSize(Long DiskSize) {
         this.DiskSize = DiskSize;
     }
 
     /**
-     * Get Disk usage 
-     * @return DiskUsage Disk usage
+     * Get Disk utilization rate 
+     * @return DiskUsage Disk utilization rate
      */
     public Float getDiskUsage() {
         return this.DiskUsage;
     }
 
     /**
-     * Set Disk usage
-     * @param DiskUsage Disk usage
+     * Set Disk utilization rate
+     * @param DiskUsage Disk utilization rate
      */
     public void setDiskUsage(Float DiskUsage) {
         this.DiskUsage = DiskUsage;
     }
 
     /**
-     * Get Node memory size (in GB) 
-     * @return MemSize Node memory size (in GB)
+     * Get Node memory size (unit: GB) 
+     * @return MemSize Node memory size (unit: GB)
      */
     public Long getMemSize() {
         return this.MemSize;
     }
 
     /**
-     * Set Node memory size (in GB)
-     * @param MemSize Node memory size (in GB)
+     * Set Node memory size (unit: GB)
+     * @param MemSize Node memory size (unit: GB)
      */
     public void setMemSize(Long MemSize) {
         this.MemSize = MemSize;
     }
 
     /**
-     * Get Memory usage 
-     * @return MemUsage Memory usage
+     * Get Memory usage rate 
+     * @return MemUsage Memory usage rate
      */
     public Float getMemUsage() {
         return this.MemUsage;
     }
 
     /**
-     * Set Memory usage
-     * @param MemUsage Memory usage
+     * Set Memory usage rate
+     * @param MemUsage Memory usage rate
      */
     public void setMemUsage(Float MemUsage) {
         this.MemUsage = MemUsage;
     }
 
     /**
-     * Get Number of node CPUs 
-     * @return CpuNum Number of node CPUs
+     * Get Number of CPUs on the node 
+     * @return CpuNum Number of CPUs on the node
      */
     public Long getCpuNum() {
         return this.CpuNum;
     }
 
     /**
-     * Set Number of node CPUs
-     * @param CpuNum Number of node CPUs
+     * Set Number of CPUs on the node
+     * @param CpuNum Number of CPUs on the node
      */
     public void setCpuNum(Long CpuNum) {
         this.CpuNum = CpuNum;
     }
 
     /**
-     * Get CPU usage 
-     * @return CpuUsage CPU usage
+     * Get CPU utilization 
+     * @return CpuUsage CPU utilization
      */
     public Float getCpuUsage() {
         return this.CpuUsage;
     }
 
     /**
-     * Set CPU usage
-     * @param CpuUsage CPU usage
+     * Set CPU utilization
+     * @param CpuUsage CPU utilization
      */
     public void setCpuUsage(Float CpuUsage) {
         this.CpuUsage = CpuUsage;
     }
 
     /**
-     * Get Availability zone 
-     * @return Zone Availability zone
+     * Get AZ. 
+     * @return Zone AZ.
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * Set Availability zone
-     * @param Zone Availability zone
+     * Set AZ.
+     * @param Zone AZ.
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
@@ -351,67 +379,131 @@ public class NodeView extends AbstractModel {
     }
 
     /**
-     * Get JVM memory usage 
-     * @return JvmMemUsage JVM memory usage
+     * Get JVM memory usage rate 
+     * @return JvmMemUsage JVM memory usage rate
      */
     public Float getJvmMemUsage() {
         return this.JvmMemUsage;
     }
 
     /**
-     * Set JVM memory usage
-     * @param JvmMemUsage JVM memory usage
+     * Set JVM memory usage rate
+     * @param JvmMemUsage JVM memory usage rate
      */
     public void setJvmMemUsage(Float JvmMemUsage) {
         this.JvmMemUsage = JvmMemUsage;
     }
 
     /**
-     * Get Number of node shards 
-     * @return ShardNum Number of node shards
+     * Get Number of shards per node 
+     * @return ShardNum Number of shards per node
      */
     public Long getShardNum() {
         return this.ShardNum;
     }
 
     /**
-     * Set Number of node shards
-     * @param ShardNum Number of node shards
+     * Set Number of shards per node
+     * @param ShardNum Number of shards per node
      */
     public void setShardNum(Long ShardNum) {
         this.ShardNum = ShardNum;
     }
 
     /**
-     * Get ID list of node disks 
-     * @return DiskIds ID list of node disks
+     * Get Disk ID list on node 
+     * @return DiskIds Disk ID list on node
      */
     public String [] getDiskIds() {
         return this.DiskIds;
     }
 
     /**
-     * Set ID list of node disks
-     * @param DiskIds ID list of node disks
+     * Set Disk ID list on node
+     * @param DiskIds Disk ID list on node
      */
     public void setDiskIds(String [] DiskIds) {
         this.DiskIds = DiskIds;
     }
 
     /**
-     * Get Whether a hidden availability zone 
-     * @return Hidden Whether a hidden availability zone
+     * Get Whether it is a hidden AZ 
+     * @return Hidden Whether it is a hidden AZ
      */
     public Boolean getHidden() {
         return this.Hidden;
     }
 
     /**
-     * Set Whether a hidden availability zone
-     * @param Hidden Whether a hidden availability zone
+     * Set Whether it is a hidden AZ
+     * @param Hidden Whether it is a hidden AZ
      */
     public void setHidden(Boolean Hidden) {
         this.Hidden = Hidden;
+    }
+
+    /**
+     * Get Whether to act as the coordination node role 
+     * @return IsCoordinationNode Whether to act as the coordination node role
+     */
+    public Boolean getIsCoordinationNode() {
+        return this.IsCoordinationNode;
+    }
+
+    /**
+     * Set Whether to act as the coordination node role
+     * @param IsCoordinationNode Whether to act as the coordination node role
+     */
+    public void setIsCoordinationNode(Boolean IsCoordinationNode) {
+        this.IsCoordinationNode = IsCoordinationNode;
+    }
+
+    /**
+     * Get CVM running state 
+     * @return CVMStatus CVM running state
+     */
+    public String getCVMStatus() {
+        return this.CVMStatus;
+    }
+
+    /**
+     * Set CVM running state
+     * @param CVMStatus CVM running state
+     */
+    public void setCVMStatus(String CVMStatus) {
+        this.CVMStatus = CVMStatus;
+    }
+
+    /**
+     * Get id of the placement group bound to the cvm 
+     * @return CVMDisasterRecoverGroupId id of the placement group bound to the cvm
+     */
+    public String getCVMDisasterRecoverGroupId() {
+        return this.CVMDisasterRecoverGroupId;
+    }
+
+    /**
+     * Set id of the placement group bound to the cvm
+     * @param CVMDisasterRecoverGroupId id of the placement group bound to the cvm
+     */
+    public void setCVMDisasterRecoverGroupId(String CVMDisasterRecoverGroupId) {
+        this.CVMDisasterRecoverGroupId = CVMDisasterRecoverGroupId;
+    }
+
+    /**
+     * Get Status of the placement group bound to the cvm. 2: Bound; 1: Binding; 0: Not enabled 
+     * @return CVMDisasterRecoverGroupStatus Status of the placement group bound to the cvm. 2: Bound; 1: Binding; 0: Not enabled
+     */
+    public Long getCVMDisasterRecoverGroupStatus() {
+        return this.CVMDisasterRecoverGroupStatus;
+    }
+
+    /**
+     * Set Status of the placement group bound to the cvm. 2: Bound; 1: Binding; 0: Not enabled
+     * @param CVMDisasterRecoverGroupStatus Status of the placement group bound to the cvm. 2: Bound; 1: Binding; 0: Not enabled
+     */
+    public void setCVMDisasterRecoverGroupStatus(Long CVMDisasterRecoverGroupStatus) {
+        this.CVMDisasterRecoverGroupStatus = CVMDisasterRecoverGroupStatus;
     }
 
     public NodeView() {
@@ -476,6 +568,18 @@ public class NodeView extends AbstractModel {
         if (source.Hidden != null) {
             this.Hidden = new Boolean(source.Hidden);
         }
+        if (source.IsCoordinationNode != null) {
+            this.IsCoordinationNode = new Boolean(source.IsCoordinationNode);
+        }
+        if (source.CVMStatus != null) {
+            this.CVMStatus = new String(source.CVMStatus);
+        }
+        if (source.CVMDisasterRecoverGroupId != null) {
+            this.CVMDisasterRecoverGroupId = new String(source.CVMDisasterRecoverGroupId);
+        }
+        if (source.CVMDisasterRecoverGroupStatus != null) {
+            this.CVMDisasterRecoverGroupStatus = new Long(source.CVMDisasterRecoverGroupStatus);
+        }
     }
 
 
@@ -500,6 +604,10 @@ public class NodeView extends AbstractModel {
         this.setParamSimple(map, prefix + "ShardNum", this.ShardNum);
         this.setParamArraySimple(map, prefix + "DiskIds.", this.DiskIds);
         this.setParamSimple(map, prefix + "Hidden", this.Hidden);
+        this.setParamSimple(map, prefix + "IsCoordinationNode", this.IsCoordinationNode);
+        this.setParamSimple(map, prefix + "CVMStatus", this.CVMStatus);
+        this.setParamSimple(map, prefix + "CVMDisasterRecoverGroupId", this.CVMDisasterRecoverGroupId);
+        this.setParamSimple(map, prefix + "CVMDisasterRecoverGroupStatus", this.CVMDisasterRecoverGroupStatus);
 
     }
 }

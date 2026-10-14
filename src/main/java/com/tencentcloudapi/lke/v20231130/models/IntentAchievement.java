@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class IntentAchievement extends AbstractModel {
 
     /**
-    * 
+    * Intent attainment method. `qa`: QA reply, `doc`: document reply, `workflow`: workflow reply, `llm`: large model reply.
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 
+    * Description of the method to attain the intent
     */
     @SerializedName("Desc")
     @Expose
     private String Desc;
 
     /**
-     * Get  
-     * @return Name 
+     * Get Intent attainment method. `qa`: QA reply, `doc`: document reply, `workflow`: workflow reply, `llm`: large model reply. 
+     * @return Name Intent attainment method. `qa`: QA reply, `doc`: document reply, `workflow`: workflow reply, `llm`: large model reply.
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 
-     * @param Name 
+     * Set Intent attainment method. `qa`: QA reply, `doc`: document reply, `workflow`: workflow reply, `llm`: large model reply.
+     * @param Name Intent attainment method. `qa`: QA reply, `doc`: document reply, `workflow`: workflow reply, `llm`: large model reply.
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get  
-     * @return Desc 
+     * Get Description of the method to attain the intent 
+     * @return Desc Description of the method to attain the intent
      */
     public String getDesc() {
         return this.Desc;
     }
 
     /**
-     * Set 
-     * @param Desc 
+     * Set Description of the method to attain the intent
+     * @param Desc Description of the method to attain the intent
      */
     public void setDesc(String Desc) {
         this.Desc = Desc;

@@ -24,210 +24,248 @@ import java.util.HashMap;
 public class CreateOutputSrtSettings extends AbstractModel {
 
     /**
-    * The relay destination address, which is required if `Mode` is `CALLER`. Only one address is allowed.
+    * Target address for push. Required when Mode is CALLER. Only 1 group can be filled in.
     */
     @SerializedName("Destinations")
     @Expose
     private CreateOutputSrtSettingsDestinations [] Destinations;
 
     /**
-    * The stream ID for relay, which can contain 0 to 512 letters, digits, and special characters (.#!:&,=_-).
-    */
-    @SerializedName("StreamId")
-    @Expose
-    private String StreamId;
-
-    /**
-    * The total latency (ms) of SRT relay. Value range: [0, 3000]. Default: 0.
-    */
-    @SerializedName("Latency")
-    @Expose
-    private Long Latency;
-
-    /**
-    * The receive latency (ms) of SRT relay. Value range: [0, 3000]. Default: 120.
-    */
-    @SerializedName("RecvLatency")
-    @Expose
-    private Long RecvLatency;
-
-    /**
-    * The peer-to-peer latency (ms) of SRT relay. Value range: [0, 3000]. Default: 0.
-    */
-    @SerializedName("PeerLatency")
-    @Expose
-    private Long PeerLatency;
-
-    /**
-    * The timeout period (ms) for the SRT relay peer. Value range: [1000, 10000]. Default: 5000.
-    */
-    @SerializedName("PeerIdleTimeout")
-    @Expose
-    private Long PeerIdleTimeout;
-
-    /**
-    * The encryption key for SRT relay, which is empty by default, indicating not to encrypt. Only ASCII codes are allowed. Length: [10, 79].
-    */
-    @SerializedName("Passphrase")
-    @Expose
-    private String Passphrase;
-
-    /**
-    * The key length for SRT relay. Valid values: 0 (default), 16, 24, 32.
-    */
-    @SerializedName("PbKeyLen")
-    @Expose
-    private Long PbKeyLen;
-
-    /**
-    * The SRT mode. Valid values: LISTENER, CALLER (default).
+    * SRT mode. Valid values: `LISTENER` and `CALLER`. Default value: `CALLER`.
     */
     @SerializedName("Mode")
     @Expose
     private String Mode;
 
     /**
-     * Get The relay destination address, which is required if `Mode` is `CALLER`. Only one address is allowed. 
-     * @return Destinations The relay destination address, which is required if `Mode` is `CALLER`. Only one address is allowed.
+    * Stream Id for SRT retransmission. It can contain upper- and lower-case letters, digits, and special characters (.#!:&,=_-), with a length of 0 to 512.
+    */
+    @SerializedName("StreamId")
+    @Expose
+    private String StreamId;
+
+    /**
+    * Total delay for SRT retransmission. Default value: 0. Unit: ms. Range: [0, 3000]. This parameter simultaneously sets the sender and recipient delays (recvlatency and peerlatency) to the same value. Recommended configuration: at least 3 times the RTT to ensure effective handling of packet retransmission and confirmation during network congestion.
+    */
+    @SerializedName("Latency")
+    @Expose
+    private Long Latency;
+
+    /**
+    * Receive latency for SRT relay. Default value: 120. Unit: ms. Range: [0, 3000].
+This parameter indicates the time length for the recipient to cache data packets.
+    */
+    @SerializedName("RecvLatency")
+    @Expose
+    private Long RecvLatency;
+
+    /**
+    * Peer delay for SRT retransmission. Default value: 0. Unit: ms. Range: [0, 3000].
+This parameter is set by the sender to inform the recipient of the expected buffer time for delay.
+    */
+    @SerializedName("PeerLatency")
+    @Expose
+    private Long PeerLatency;
+
+    /**
+    * Idle timeout for SRT relay. Default value: 5000 ms. Range: [1000, 10000].
+If there is no activity on a connection within the set timeout period, it will be closed.
+    */
+    @SerializedName("PeerIdleTimeout")
+    @Expose
+    private Long PeerIdleTimeout;
+
+    /**
+    * Encryption key for SRT retweet. It is empty by default, indicating not encrypted. Only ascii characters are allowed, with a length of [10, 79].
+    */
+    @SerializedName("Passphrase")
+    @Expose
+    private String Passphrase;
+
+    /**
+    * Key length for SRT retransmission. Default value: 0. Options: [0|16|24|32].
+    */
+    @SerializedName("PbKeyLen")
+    @Expose
+    private Long PbKeyLen;
+
+    /**
+    * SRT FEC settings
+    */
+    @SerializedName("FEC")
+    @Expose
+    private SRTFECFullOptions FEC;
+
+    /**
+     * Get Target address for push. Required when Mode is CALLER. Only 1 group can be filled in. 
+     * @return Destinations Target address for push. Required when Mode is CALLER. Only 1 group can be filled in.
      */
     public CreateOutputSrtSettingsDestinations [] getDestinations() {
         return this.Destinations;
     }
 
     /**
-     * Set The relay destination address, which is required if `Mode` is `CALLER`. Only one address is allowed.
-     * @param Destinations The relay destination address, which is required if `Mode` is `CALLER`. Only one address is allowed.
+     * Set Target address for push. Required when Mode is CALLER. Only 1 group can be filled in.
+     * @param Destinations Target address for push. Required when Mode is CALLER. Only 1 group can be filled in.
      */
     public void setDestinations(CreateOutputSrtSettingsDestinations [] Destinations) {
         this.Destinations = Destinations;
     }
 
     /**
-     * Get The stream ID for relay, which can contain 0 to 512 letters, digits, and special characters (.#!:&,=_-). 
-     * @return StreamId The stream ID for relay, which can contain 0 to 512 letters, digits, and special characters (.#!:&,=_-).
-     */
-    public String getStreamId() {
-        return this.StreamId;
-    }
-
-    /**
-     * Set The stream ID for relay, which can contain 0 to 512 letters, digits, and special characters (.#!:&,=_-).
-     * @param StreamId The stream ID for relay, which can contain 0 to 512 letters, digits, and special characters (.#!:&,=_-).
-     */
-    public void setStreamId(String StreamId) {
-        this.StreamId = StreamId;
-    }
-
-    /**
-     * Get The total latency (ms) of SRT relay. Value range: [0, 3000]. Default: 0. 
-     * @return Latency The total latency (ms) of SRT relay. Value range: [0, 3000]. Default: 0.
-     */
-    public Long getLatency() {
-        return this.Latency;
-    }
-
-    /**
-     * Set The total latency (ms) of SRT relay. Value range: [0, 3000]. Default: 0.
-     * @param Latency The total latency (ms) of SRT relay. Value range: [0, 3000]. Default: 0.
-     */
-    public void setLatency(Long Latency) {
-        this.Latency = Latency;
-    }
-
-    /**
-     * Get The receive latency (ms) of SRT relay. Value range: [0, 3000]. Default: 120. 
-     * @return RecvLatency The receive latency (ms) of SRT relay. Value range: [0, 3000]. Default: 120.
-     */
-    public Long getRecvLatency() {
-        return this.RecvLatency;
-    }
-
-    /**
-     * Set The receive latency (ms) of SRT relay. Value range: [0, 3000]. Default: 120.
-     * @param RecvLatency The receive latency (ms) of SRT relay. Value range: [0, 3000]. Default: 120.
-     */
-    public void setRecvLatency(Long RecvLatency) {
-        this.RecvLatency = RecvLatency;
-    }
-
-    /**
-     * Get The peer-to-peer latency (ms) of SRT relay. Value range: [0, 3000]. Default: 0. 
-     * @return PeerLatency The peer-to-peer latency (ms) of SRT relay. Value range: [0, 3000]. Default: 0.
-     */
-    public Long getPeerLatency() {
-        return this.PeerLatency;
-    }
-
-    /**
-     * Set The peer-to-peer latency (ms) of SRT relay. Value range: [0, 3000]. Default: 0.
-     * @param PeerLatency The peer-to-peer latency (ms) of SRT relay. Value range: [0, 3000]. Default: 0.
-     */
-    public void setPeerLatency(Long PeerLatency) {
-        this.PeerLatency = PeerLatency;
-    }
-
-    /**
-     * Get The timeout period (ms) for the SRT relay peer. Value range: [1000, 10000]. Default: 5000. 
-     * @return PeerIdleTimeout The timeout period (ms) for the SRT relay peer. Value range: [1000, 10000]. Default: 5000.
-     */
-    public Long getPeerIdleTimeout() {
-        return this.PeerIdleTimeout;
-    }
-
-    /**
-     * Set The timeout period (ms) for the SRT relay peer. Value range: [1000, 10000]. Default: 5000.
-     * @param PeerIdleTimeout The timeout period (ms) for the SRT relay peer. Value range: [1000, 10000]. Default: 5000.
-     */
-    public void setPeerIdleTimeout(Long PeerIdleTimeout) {
-        this.PeerIdleTimeout = PeerIdleTimeout;
-    }
-
-    /**
-     * Get The encryption key for SRT relay, which is empty by default, indicating not to encrypt. Only ASCII codes are allowed. Length: [10, 79]. 
-     * @return Passphrase The encryption key for SRT relay, which is empty by default, indicating not to encrypt. Only ASCII codes are allowed. Length: [10, 79].
-     */
-    public String getPassphrase() {
-        return this.Passphrase;
-    }
-
-    /**
-     * Set The encryption key for SRT relay, which is empty by default, indicating not to encrypt. Only ASCII codes are allowed. Length: [10, 79].
-     * @param Passphrase The encryption key for SRT relay, which is empty by default, indicating not to encrypt. Only ASCII codes are allowed. Length: [10, 79].
-     */
-    public void setPassphrase(String Passphrase) {
-        this.Passphrase = Passphrase;
-    }
-
-    /**
-     * Get The key length for SRT relay. Valid values: 0 (default), 16, 24, 32. 
-     * @return PbKeyLen The key length for SRT relay. Valid values: 0 (default), 16, 24, 32.
-     */
-    public Long getPbKeyLen() {
-        return this.PbKeyLen;
-    }
-
-    /**
-     * Set The key length for SRT relay. Valid values: 0 (default), 16, 24, 32.
-     * @param PbKeyLen The key length for SRT relay. Valid values: 0 (default), 16, 24, 32.
-     */
-    public void setPbKeyLen(Long PbKeyLen) {
-        this.PbKeyLen = PbKeyLen;
-    }
-
-    /**
-     * Get The SRT mode. Valid values: LISTENER, CALLER (default). 
-     * @return Mode The SRT mode. Valid values: LISTENER, CALLER (default).
+     * Get SRT mode. Valid values: `LISTENER` and `CALLER`. Default value: `CALLER`. 
+     * @return Mode SRT mode. Valid values: `LISTENER` and `CALLER`. Default value: `CALLER`.
      */
     public String getMode() {
         return this.Mode;
     }
 
     /**
-     * Set The SRT mode. Valid values: LISTENER, CALLER (default).
-     * @param Mode The SRT mode. Valid values: LISTENER, CALLER (default).
+     * Set SRT mode. Valid values: `LISTENER` and `CALLER`. Default value: `CALLER`.
+     * @param Mode SRT mode. Valid values: `LISTENER` and `CALLER`. Default value: `CALLER`.
      */
     public void setMode(String Mode) {
         this.Mode = Mode;
+    }
+
+    /**
+     * Get Stream Id for SRT retransmission. It can contain upper- and lower-case letters, digits, and special characters (.#!:&,=_-), with a length of 0 to 512. 
+     * @return StreamId Stream Id for SRT retransmission. It can contain upper- and lower-case letters, digits, and special characters (.#!:&,=_-), with a length of 0 to 512.
+     */
+    public String getStreamId() {
+        return this.StreamId;
+    }
+
+    /**
+     * Set Stream Id for SRT retransmission. It can contain upper- and lower-case letters, digits, and special characters (.#!:&,=_-), with a length of 0 to 512.
+     * @param StreamId Stream Id for SRT retransmission. It can contain upper- and lower-case letters, digits, and special characters (.#!:&,=_-), with a length of 0 to 512.
+     */
+    public void setStreamId(String StreamId) {
+        this.StreamId = StreamId;
+    }
+
+    /**
+     * Get Total delay for SRT retransmission. Default value: 0. Unit: ms. Range: [0, 3000]. This parameter simultaneously sets the sender and recipient delays (recvlatency and peerlatency) to the same value. Recommended configuration: at least 3 times the RTT to ensure effective handling of packet retransmission and confirmation during network congestion. 
+     * @return Latency Total delay for SRT retransmission. Default value: 0. Unit: ms. Range: [0, 3000]. This parameter simultaneously sets the sender and recipient delays (recvlatency and peerlatency) to the same value. Recommended configuration: at least 3 times the RTT to ensure effective handling of packet retransmission and confirmation during network congestion.
+     */
+    public Long getLatency() {
+        return this.Latency;
+    }
+
+    /**
+     * Set Total delay for SRT retransmission. Default value: 0. Unit: ms. Range: [0, 3000]. This parameter simultaneously sets the sender and recipient delays (recvlatency and peerlatency) to the same value. Recommended configuration: at least 3 times the RTT to ensure effective handling of packet retransmission and confirmation during network congestion.
+     * @param Latency Total delay for SRT retransmission. Default value: 0. Unit: ms. Range: [0, 3000]. This parameter simultaneously sets the sender and recipient delays (recvlatency and peerlatency) to the same value. Recommended configuration: at least 3 times the RTT to ensure effective handling of packet retransmission and confirmation during network congestion.
+     */
+    public void setLatency(Long Latency) {
+        this.Latency = Latency;
+    }
+
+    /**
+     * Get Receive latency for SRT relay. Default value: 120. Unit: ms. Range: [0, 3000].
+This parameter indicates the time length for the recipient to cache data packets. 
+     * @return RecvLatency Receive latency for SRT relay. Default value: 120. Unit: ms. Range: [0, 3000].
+This parameter indicates the time length for the recipient to cache data packets.
+     */
+    public Long getRecvLatency() {
+        return this.RecvLatency;
+    }
+
+    /**
+     * Set Receive latency for SRT relay. Default value: 120. Unit: ms. Range: [0, 3000].
+This parameter indicates the time length for the recipient to cache data packets.
+     * @param RecvLatency Receive latency for SRT relay. Default value: 120. Unit: ms. Range: [0, 3000].
+This parameter indicates the time length for the recipient to cache data packets.
+     */
+    public void setRecvLatency(Long RecvLatency) {
+        this.RecvLatency = RecvLatency;
+    }
+
+    /**
+     * Get Peer delay for SRT retransmission. Default value: 0. Unit: ms. Range: [0, 3000].
+This parameter is set by the sender to inform the recipient of the expected buffer time for delay. 
+     * @return PeerLatency Peer delay for SRT retransmission. Default value: 0. Unit: ms. Range: [0, 3000].
+This parameter is set by the sender to inform the recipient of the expected buffer time for delay.
+     */
+    public Long getPeerLatency() {
+        return this.PeerLatency;
+    }
+
+    /**
+     * Set Peer delay for SRT retransmission. Default value: 0. Unit: ms. Range: [0, 3000].
+This parameter is set by the sender to inform the recipient of the expected buffer time for delay.
+     * @param PeerLatency Peer delay for SRT retransmission. Default value: 0. Unit: ms. Range: [0, 3000].
+This parameter is set by the sender to inform the recipient of the expected buffer time for delay.
+     */
+    public void setPeerLatency(Long PeerLatency) {
+        this.PeerLatency = PeerLatency;
+    }
+
+    /**
+     * Get Idle timeout for SRT relay. Default value: 5000 ms. Range: [1000, 10000].
+If there is no activity on a connection within the set timeout period, it will be closed. 
+     * @return PeerIdleTimeout Idle timeout for SRT relay. Default value: 5000 ms. Range: [1000, 10000].
+If there is no activity on a connection within the set timeout period, it will be closed.
+     */
+    public Long getPeerIdleTimeout() {
+        return this.PeerIdleTimeout;
+    }
+
+    /**
+     * Set Idle timeout for SRT relay. Default value: 5000 ms. Range: [1000, 10000].
+If there is no activity on a connection within the set timeout period, it will be closed.
+     * @param PeerIdleTimeout Idle timeout for SRT relay. Default value: 5000 ms. Range: [1000, 10000].
+If there is no activity on a connection within the set timeout period, it will be closed.
+     */
+    public void setPeerIdleTimeout(Long PeerIdleTimeout) {
+        this.PeerIdleTimeout = PeerIdleTimeout;
+    }
+
+    /**
+     * Get Encryption key for SRT retweet. It is empty by default, indicating not encrypted. Only ascii characters are allowed, with a length of [10, 79]. 
+     * @return Passphrase Encryption key for SRT retweet. It is empty by default, indicating not encrypted. Only ascii characters are allowed, with a length of [10, 79].
+     */
+    public String getPassphrase() {
+        return this.Passphrase;
+    }
+
+    /**
+     * Set Encryption key for SRT retweet. It is empty by default, indicating not encrypted. Only ascii characters are allowed, with a length of [10, 79].
+     * @param Passphrase Encryption key for SRT retweet. It is empty by default, indicating not encrypted. Only ascii characters are allowed, with a length of [10, 79].
+     */
+    public void setPassphrase(String Passphrase) {
+        this.Passphrase = Passphrase;
+    }
+
+    /**
+     * Get Key length for SRT retransmission. Default value: 0. Options: [0|16|24|32]. 
+     * @return PbKeyLen Key length for SRT retransmission. Default value: 0. Options: [0|16|24|32].
+     */
+    public Long getPbKeyLen() {
+        return this.PbKeyLen;
+    }
+
+    /**
+     * Set Key length for SRT retransmission. Default value: 0. Options: [0|16|24|32].
+     * @param PbKeyLen Key length for SRT retransmission. Default value: 0. Options: [0|16|24|32].
+     */
+    public void setPbKeyLen(Long PbKeyLen) {
+        this.PbKeyLen = PbKeyLen;
+    }
+
+    /**
+     * Get SRT FEC settings 
+     * @return FEC SRT FEC settings
+     */
+    public SRTFECFullOptions getFEC() {
+        return this.FEC;
+    }
+
+    /**
+     * Set SRT FEC settings
+     * @param FEC SRT FEC settings
+     */
+    public void setFEC(SRTFECFullOptions FEC) {
+        this.FEC = FEC;
     }
 
     public CreateOutputSrtSettings() {
@@ -243,6 +281,9 @@ public class CreateOutputSrtSettings extends AbstractModel {
             for (int i = 0; i < source.Destinations.length; i++) {
                 this.Destinations[i] = new CreateOutputSrtSettingsDestinations(source.Destinations[i]);
             }
+        }
+        if (source.Mode != null) {
+            this.Mode = new String(source.Mode);
         }
         if (source.StreamId != null) {
             this.StreamId = new String(source.StreamId);
@@ -265,8 +306,8 @@ public class CreateOutputSrtSettings extends AbstractModel {
         if (source.PbKeyLen != null) {
             this.PbKeyLen = new Long(source.PbKeyLen);
         }
-        if (source.Mode != null) {
-            this.Mode = new String(source.Mode);
+        if (source.FEC != null) {
+            this.FEC = new SRTFECFullOptions(source.FEC);
         }
     }
 
@@ -276,6 +317,7 @@ public class CreateOutputSrtSettings extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "Destinations.", this.Destinations);
+        this.setParamSimple(map, prefix + "Mode", this.Mode);
         this.setParamSimple(map, prefix + "StreamId", this.StreamId);
         this.setParamSimple(map, prefix + "Latency", this.Latency);
         this.setParamSimple(map, prefix + "RecvLatency", this.RecvLatency);
@@ -283,7 +325,7 @@ public class CreateOutputSrtSettings extends AbstractModel {
         this.setParamSimple(map, prefix + "PeerIdleTimeout", this.PeerIdleTimeout);
         this.setParamSimple(map, prefix + "Passphrase", this.Passphrase);
         this.setParamSimple(map, prefix + "PbKeyLen", this.PbKeyLen);
-        this.setParamSimple(map, prefix + "Mode", this.Mode);
+        this.setParamObj(map, prefix + "FEC.", this.FEC);
 
     }
 }

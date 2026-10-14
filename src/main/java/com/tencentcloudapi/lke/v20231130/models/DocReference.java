@@ -24,138 +24,138 @@ import java.util.HashMap;
 public class DocReference extends AbstractModel {
 
     /**
-    * 
+    * <p>Document business ID</p>
     */
     @SerializedName("DocBizId")
     @Expose
-    private Long DocBizId;
+    private String DocBizId;
 
     /**
-    * 
+    * <p>Document fragment reference ID</p>
     */
     @SerializedName("ReferBizId")
     @Expose
-    private Long ReferBizId;
+    private String ReferBizId;
 
     /**
-    * 
+    * <p>Document name</p>
     */
     @SerializedName("DocName")
     @Expose
     private String DocName;
 
     /**
-    * 
+    * <p>Business ID of the knowledge base where the document resides</p>
     */
     @SerializedName("KnowledgeBizId")
     @Expose
-    private Long KnowledgeBizId;
+    private String KnowledgeBizId;
 
     /**
-    * 
+    * <p>Name of the knowledge base where the document resides</p>
     */
     @SerializedName("KnowledgeName")
     @Expose
     private String KnowledgeName;
 
     /**
-    * 
+    * <p>Document Access Address</p>
     */
     @SerializedName("Url")
     @Expose
     private String Url;
 
     /**
-     * Get  
-     * @return DocBizId 
+     * Get <p>Document business ID</p> 
+     * @return DocBizId <p>Document business ID</p>
      */
-    public Long getDocBizId() {
+    public String getDocBizId() {
         return this.DocBizId;
     }
 
     /**
-     * Set 
-     * @param DocBizId 
+     * Set <p>Document business ID</p>
+     * @param DocBizId <p>Document business ID</p>
      */
-    public void setDocBizId(Long DocBizId) {
+    public void setDocBizId(String DocBizId) {
         this.DocBizId = DocBizId;
     }
 
     /**
-     * Get  
-     * @return ReferBizId 
+     * Get <p>Document fragment reference ID</p> 
+     * @return ReferBizId <p>Document fragment reference ID</p>
      */
-    public Long getReferBizId() {
+    public String getReferBizId() {
         return this.ReferBizId;
     }
 
     /**
-     * Set 
-     * @param ReferBizId 
+     * Set <p>Document fragment reference ID</p>
+     * @param ReferBizId <p>Document fragment reference ID</p>
      */
-    public void setReferBizId(Long ReferBizId) {
+    public void setReferBizId(String ReferBizId) {
         this.ReferBizId = ReferBizId;
     }
 
     /**
-     * Get  
-     * @return DocName 
+     * Get <p>Document name</p> 
+     * @return DocName <p>Document name</p>
      */
     public String getDocName() {
         return this.DocName;
     }
 
     /**
-     * Set 
-     * @param DocName 
+     * Set <p>Document name</p>
+     * @param DocName <p>Document name</p>
      */
     public void setDocName(String DocName) {
         this.DocName = DocName;
     }
 
     /**
-     * Get  
-     * @return KnowledgeBizId 
+     * Get <p>Business ID of the knowledge base where the document resides</p> 
+     * @return KnowledgeBizId <p>Business ID of the knowledge base where the document resides</p>
      */
-    public Long getKnowledgeBizId() {
+    public String getKnowledgeBizId() {
         return this.KnowledgeBizId;
     }
 
     /**
-     * Set 
-     * @param KnowledgeBizId 
+     * Set <p>Business ID of the knowledge base where the document resides</p>
+     * @param KnowledgeBizId <p>Business ID of the knowledge base where the document resides</p>
      */
-    public void setKnowledgeBizId(Long KnowledgeBizId) {
+    public void setKnowledgeBizId(String KnowledgeBizId) {
         this.KnowledgeBizId = KnowledgeBizId;
     }
 
     /**
-     * Get  
-     * @return KnowledgeName 
+     * Get <p>Name of the knowledge base where the document resides</p> 
+     * @return KnowledgeName <p>Name of the knowledge base where the document resides</p>
      */
     public String getKnowledgeName() {
         return this.KnowledgeName;
     }
 
     /**
-     * Set 
-     * @param KnowledgeName 
+     * Set <p>Name of the knowledge base where the document resides</p>
+     * @param KnowledgeName <p>Name of the knowledge base where the document resides</p>
      */
     public void setKnowledgeName(String KnowledgeName) {
         this.KnowledgeName = KnowledgeName;
     }
 
     /**
-     * Get  
-     * @return Url 
+     * Get <p>Document Access Address</p> 
+     * @return Url <p>Document Access Address</p>
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * Set 
-     * @param Url 
+     * Set <p>Document Access Address</p>
+     * @param Url <p>Document Access Address</p>
      */
     public void setUrl(String Url) {
         this.Url = Url;
@@ -170,16 +170,16 @@ public class DocReference extends AbstractModel {
      */
     public DocReference(DocReference source) {
         if (source.DocBizId != null) {
-            this.DocBizId = new Long(source.DocBizId);
+            this.DocBizId = new String(source.DocBizId);
         }
         if (source.ReferBizId != null) {
-            this.ReferBizId = new Long(source.ReferBizId);
+            this.ReferBizId = new String(source.ReferBizId);
         }
         if (source.DocName != null) {
             this.DocName = new String(source.DocName);
         }
         if (source.KnowledgeBizId != null) {
-            this.KnowledgeBizId = new Long(source.KnowledgeBizId);
+            this.KnowledgeBizId = new String(source.KnowledgeBizId);
         }
         if (source.KnowledgeName != null) {
             this.KnowledgeName = new String(source.KnowledgeName);

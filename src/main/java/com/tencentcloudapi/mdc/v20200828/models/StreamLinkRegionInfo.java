@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class StreamLinkRegionInfo extends AbstractModel {
 
     /**
-    * List of StreamLink regions
+    * List of region information for media direct transmission.
     */
     @SerializedName("Regions")
     @Expose
     private RegionInfo [] Regions;
 
     /**
-     * Get List of StreamLink regions 
-     * @return Regions List of StreamLink regions
+     * Get List of region information for media direct transmission. 
+     * @return Regions List of region information for media direct transmission.
      */
     public RegionInfo [] getRegions() {
         return this.Regions;
     }
 
     /**
-     * Set List of StreamLink regions
-     * @param Regions List of StreamLink regions
+     * Set List of region information for media direct transmission.
+     * @param Regions List of region information for media direct transmission.
      */
     public void setRegions(RegionInfo [] Regions) {
         this.Regions = Regions;

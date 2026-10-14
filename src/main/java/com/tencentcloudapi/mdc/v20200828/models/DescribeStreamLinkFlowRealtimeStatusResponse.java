@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeStreamLinkFlowRealtimeStatusResponse extends AbstractModel {
 
     /**
-    * The timestamp (seconds) of the query.
+    * <p>Inquiry time. Unit: s.</p>
     */
     @SerializedName("Timestamp")
     @Expose
     private Long Timestamp;
 
     /**
-    * A list of the real-time data.
+    * <p>Real-time data information list.</p>
     */
     @SerializedName("Datas")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeStreamLinkFlowRealtimeStatusResponse extends AbstractModel 
     private String RequestId;
 
     /**
-     * Get The timestamp (seconds) of the query. 
-     * @return Timestamp The timestamp (seconds) of the query.
+     * Get <p>Inquiry time. Unit: s.</p> 
+     * @return Timestamp <p>Inquiry time. Unit: s.</p>
      */
     public Long getTimestamp() {
         return this.Timestamp;
     }
 
     /**
-     * Set The timestamp (seconds) of the query.
-     * @param Timestamp The timestamp (seconds) of the query.
+     * Set <p>Inquiry time. Unit: s.</p>
+     * @param Timestamp <p>Inquiry time. Unit: s.</p>
      */
     public void setTimestamp(Long Timestamp) {
         this.Timestamp = Timestamp;
     }
 
     /**
-     * Get A list of the real-time data. 
-     * @return Datas A list of the real-time data.
+     * Get <p>Real-time data information list.</p> 
+     * @return Datas <p>Real-time data information list.</p>
      */
     public FlowRealtimeStatusItem [] getDatas() {
         return this.Datas;
     }
 
     /**
-     * Set A list of the real-time data.
-     * @param Datas A list of the real-time data.
+     * Set <p>Real-time data information list.</p>
+     * @param Datas <p>Real-time data information list.</p>
      */
     public void setDatas(FlowRealtimeStatusItem [] Datas) {
         this.Datas = Datas;

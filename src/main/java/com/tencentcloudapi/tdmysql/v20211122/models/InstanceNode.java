@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class InstanceNode extends AbstractModel {
 
     /**
-    * 
+    * Primary key
     */
     @SerializedName("ID")
     @Expose
     private Long ID;
 
     /**
-    * 
+    * Instance ID.
     */
     @SerializedName("InstanceId")
     @Expose
@@ -45,193 +45,193 @@ public class InstanceNode extends AbstractModel {
     private String NodeId;
 
     /**
-    * 
+    * Instance Ip
     */
     @SerializedName("Ip")
     @Expose
     private String Ip;
 
     /**
-    * 
+    * Instance EniIp
     */
     @SerializedName("EniIp")
     @Expose
     private String EniIp;
 
     /**
-    * 
+    * Instance Port
     */
     @SerializedName("Port")
     @Expose
     private Long Port;
 
     /**
-    * 
+    * Instance SpecCode
     */
     @SerializedName("SpecCode")
     @Expose
     private String SpecCode;
 
     /**
-    * 
+    * Instance NodeName
     */
     @SerializedName("NodeName")
     @Expose
     private String NodeName;
 
     /**
-    * 
+    * Instance Cpu
     */
     @SerializedName("Cpu")
     @Expose
     private Long Cpu;
 
     /**
-    * 
+    * Instance memory
     */
     @SerializedName("Mem")
     @Expose
     private Long Mem;
 
     /**
-    * 
+    * Instance Disk
     */
     @SerializedName("Disk")
     @Expose
     private Long Disk;
 
     /**
-    * 
+    * Instance type
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * 
+    * Instance status
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 
+    * Instance version
     */
     @SerializedName("Version")
     @Expose
     private String Version;
 
     /**
-    * 
+    * Instance region
     */
     @SerializedName("Zone")
     @Expose
     private String Zone;
 
     /**
-    * 
+    * Instance LocalDNS
     */
     @SerializedName("LocalDNS")
     @Expose
     private String LocalDNS;
 
     /**
-    * 
+    * Instance Region
     */
     @SerializedName("Region")
     @Expose
     private String Region;
 
     /**
-    * 
+    * Instance log disk
     */
     @SerializedName("LogDisk")
     @Expose
     private Long LogDisk;
 
     /**
-    * 
+    * Instance data disk
     */
     @SerializedName("DataDisk")
     @Expose
     private Long DataDisk;
 
     /**
-    * 
+    * Instance Zone ID
     */
     @SerializedName("ZoneID")
     @Expose
     private String ZoneID;
 
     /**
-    * 
+    * Instance SpecName
     */
     @SerializedName("SpecName")
     @Expose
     private String SpecName;
 
     /**
-    * 
+    * Instance Replicas
     */
     @SerializedName("Replicas")
     @Expose
     private Long Replicas;
 
     /**
-    * 
+    * Instance Shards
     */
     @SerializedName("Shards")
     @Expose
     private Long Shards;
 
     /**
-    * 
+    * Instance data replica
     */
     @SerializedName("DataReplicas")
     @Expose
     private Long DataReplicas;
 
     /**
-    * 
+    * Instance initialization parameter
     */
     @SerializedName("Params")
     @Expose
     private String Params;
 
     /**
-    * 
+    * Storage medium, CLOUD_PREMIUM: Premium Cloud Disk, CLOUD_SSD: SSD cloud disk, CLOUD_HSSD: HSSD cloud disk
     */
     @SerializedName("StorageType")
     @Expose
     private String StorageType;
 
     /**
-     * Get  
-     * @return ID 
+     * Get Primary key 
+     * @return ID Primary key
      */
     public Long getID() {
         return this.ID;
     }
 
     /**
-     * Set 
-     * @param ID 
+     * Set Primary key
+     * @param ID Primary key
      */
     public void setID(Long ID) {
         this.ID = ID;
     }
 
     /**
-     * Get  
-     * @return InstanceId 
+     * Get Instance ID. 
+     * @return InstanceId Instance ID.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 
-     * @param InstanceId 
+     * Set Instance ID.
+     * @param InstanceId Instance ID.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
@@ -254,368 +254,368 @@ public class InstanceNode extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return Ip 
+     * Get Instance Ip 
+     * @return Ip Instance Ip
      */
     public String getIp() {
         return this.Ip;
     }
 
     /**
-     * Set 
-     * @param Ip 
+     * Set Instance Ip
+     * @param Ip Instance Ip
      */
     public void setIp(String Ip) {
         this.Ip = Ip;
     }
 
     /**
-     * Get  
-     * @return EniIp 
+     * Get Instance EniIp 
+     * @return EniIp Instance EniIp
      */
     public String getEniIp() {
         return this.EniIp;
     }
 
     /**
-     * Set 
-     * @param EniIp 
+     * Set Instance EniIp
+     * @param EniIp Instance EniIp
      */
     public void setEniIp(String EniIp) {
         this.EniIp = EniIp;
     }
 
     /**
-     * Get  
-     * @return Port 
+     * Get Instance Port 
+     * @return Port Instance Port
      */
     public Long getPort() {
         return this.Port;
     }
 
     /**
-     * Set 
-     * @param Port 
+     * Set Instance Port
+     * @param Port Instance Port
      */
     public void setPort(Long Port) {
         this.Port = Port;
     }
 
     /**
-     * Get  
-     * @return SpecCode 
+     * Get Instance SpecCode 
+     * @return SpecCode Instance SpecCode
      */
     public String getSpecCode() {
         return this.SpecCode;
     }
 
     /**
-     * Set 
-     * @param SpecCode 
+     * Set Instance SpecCode
+     * @param SpecCode Instance SpecCode
      */
     public void setSpecCode(String SpecCode) {
         this.SpecCode = SpecCode;
     }
 
     /**
-     * Get  
-     * @return NodeName 
+     * Get Instance NodeName 
+     * @return NodeName Instance NodeName
      */
     public String getNodeName() {
         return this.NodeName;
     }
 
     /**
-     * Set 
-     * @param NodeName 
+     * Set Instance NodeName
+     * @param NodeName Instance NodeName
      */
     public void setNodeName(String NodeName) {
         this.NodeName = NodeName;
     }
 
     /**
-     * Get  
-     * @return Cpu 
+     * Get Instance Cpu 
+     * @return Cpu Instance Cpu
      */
     public Long getCpu() {
         return this.Cpu;
     }
 
     /**
-     * Set 
-     * @param Cpu 
+     * Set Instance Cpu
+     * @param Cpu Instance Cpu
      */
     public void setCpu(Long Cpu) {
         this.Cpu = Cpu;
     }
 
     /**
-     * Get  
-     * @return Mem 
+     * Get Instance memory 
+     * @return Mem Instance memory
      */
     public Long getMem() {
         return this.Mem;
     }
 
     /**
-     * Set 
-     * @param Mem 
+     * Set Instance memory
+     * @param Mem Instance memory
      */
     public void setMem(Long Mem) {
         this.Mem = Mem;
     }
 
     /**
-     * Get  
-     * @return Disk 
+     * Get Instance Disk 
+     * @return Disk Instance Disk
      */
     public Long getDisk() {
         return this.Disk;
     }
 
     /**
-     * Set 
-     * @param Disk 
+     * Set Instance Disk
+     * @param Disk Instance Disk
      */
     public void setDisk(Long Disk) {
         this.Disk = Disk;
     }
 
     /**
-     * Get  
-     * @return Type 
+     * Get Instance type 
+     * @return Type Instance type
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 
-     * @param Type 
+     * Set Instance type
+     * @param Type Instance type
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get  
-     * @return Status 
+     * Get Instance status 
+     * @return Status Instance status
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 
-     * @param Status 
+     * Set Instance status
+     * @param Status Instance status
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get  
-     * @return Version 
+     * Get Instance version 
+     * @return Version Instance version
      */
     public String getVersion() {
         return this.Version;
     }
 
     /**
-     * Set 
-     * @param Version 
+     * Set Instance version
+     * @param Version Instance version
      */
     public void setVersion(String Version) {
         this.Version = Version;
     }
 
     /**
-     * Get  
-     * @return Zone 
+     * Get Instance region 
+     * @return Zone Instance region
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * Set 
-     * @param Zone 
+     * Set Instance region
+     * @param Zone Instance region
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
     }
 
     /**
-     * Get  
-     * @return LocalDNS 
+     * Get Instance LocalDNS 
+     * @return LocalDNS Instance LocalDNS
      */
     public String getLocalDNS() {
         return this.LocalDNS;
     }
 
     /**
-     * Set 
-     * @param LocalDNS 
+     * Set Instance LocalDNS
+     * @param LocalDNS Instance LocalDNS
      */
     public void setLocalDNS(String LocalDNS) {
         this.LocalDNS = LocalDNS;
     }
 
     /**
-     * Get  
-     * @return Region 
+     * Get Instance Region 
+     * @return Region Instance Region
      */
     public String getRegion() {
         return this.Region;
     }
 
     /**
-     * Set 
-     * @param Region 
+     * Set Instance Region
+     * @param Region Instance Region
      */
     public void setRegion(String Region) {
         this.Region = Region;
     }
 
     /**
-     * Get  
-     * @return LogDisk 
+     * Get Instance log disk 
+     * @return LogDisk Instance log disk
      */
     public Long getLogDisk() {
         return this.LogDisk;
     }
 
     /**
-     * Set 
-     * @param LogDisk 
+     * Set Instance log disk
+     * @param LogDisk Instance log disk
      */
     public void setLogDisk(Long LogDisk) {
         this.LogDisk = LogDisk;
     }
 
     /**
-     * Get  
-     * @return DataDisk 
+     * Get Instance data disk 
+     * @return DataDisk Instance data disk
      */
     public Long getDataDisk() {
         return this.DataDisk;
     }
 
     /**
-     * Set 
-     * @param DataDisk 
+     * Set Instance data disk
+     * @param DataDisk Instance data disk
      */
     public void setDataDisk(Long DataDisk) {
         this.DataDisk = DataDisk;
     }
 
     /**
-     * Get  
-     * @return ZoneID 
+     * Get Instance Zone ID 
+     * @return ZoneID Instance Zone ID
      */
     public String getZoneID() {
         return this.ZoneID;
     }
 
     /**
-     * Set 
-     * @param ZoneID 
+     * Set Instance Zone ID
+     * @param ZoneID Instance Zone ID
      */
     public void setZoneID(String ZoneID) {
         this.ZoneID = ZoneID;
     }
 
     /**
-     * Get  
-     * @return SpecName 
+     * Get Instance SpecName 
+     * @return SpecName Instance SpecName
      */
     public String getSpecName() {
         return this.SpecName;
     }
 
     /**
-     * Set 
-     * @param SpecName 
+     * Set Instance SpecName
+     * @param SpecName Instance SpecName
      */
     public void setSpecName(String SpecName) {
         this.SpecName = SpecName;
     }
 
     /**
-     * Get  
-     * @return Replicas 
+     * Get Instance Replicas 
+     * @return Replicas Instance Replicas
      */
     public Long getReplicas() {
         return this.Replicas;
     }
 
     /**
-     * Set 
-     * @param Replicas 
+     * Set Instance Replicas
+     * @param Replicas Instance Replicas
      */
     public void setReplicas(Long Replicas) {
         this.Replicas = Replicas;
     }
 
     /**
-     * Get  
-     * @return Shards 
+     * Get Instance Shards 
+     * @return Shards Instance Shards
      */
     public Long getShards() {
         return this.Shards;
     }
 
     /**
-     * Set 
-     * @param Shards 
+     * Set Instance Shards
+     * @param Shards Instance Shards
      */
     public void setShards(Long Shards) {
         this.Shards = Shards;
     }
 
     /**
-     * Get  
-     * @return DataReplicas 
+     * Get Instance data replica 
+     * @return DataReplicas Instance data replica
      */
     public Long getDataReplicas() {
         return this.DataReplicas;
     }
 
     /**
-     * Set 
-     * @param DataReplicas 
+     * Set Instance data replica
+     * @param DataReplicas Instance data replica
      */
     public void setDataReplicas(Long DataReplicas) {
         this.DataReplicas = DataReplicas;
     }
 
     /**
-     * Get  
-     * @return Params 
+     * Get Instance initialization parameter 
+     * @return Params Instance initialization parameter
      */
     public String getParams() {
         return this.Params;
     }
 
     /**
-     * Set 
-     * @param Params 
+     * Set Instance initialization parameter
+     * @param Params Instance initialization parameter
      */
     public void setParams(String Params) {
         this.Params = Params;
     }
 
     /**
-     * Get  
-     * @return StorageType 
+     * Get Storage medium, CLOUD_PREMIUM: Premium Cloud Disk, CLOUD_SSD: SSD cloud disk, CLOUD_HSSD: HSSD cloud disk 
+     * @return StorageType Storage medium, CLOUD_PREMIUM: Premium Cloud Disk, CLOUD_SSD: SSD cloud disk, CLOUD_HSSD: HSSD cloud disk
      */
     public String getStorageType() {
         return this.StorageType;
     }
 
     /**
-     * Set 
-     * @param StorageType 
+     * Set Storage medium, CLOUD_PREMIUM: Premium Cloud Disk, CLOUD_SSD: SSD cloud disk, CLOUD_HSSD: HSSD cloud disk
+     * @param StorageType Storage medium, CLOUD_PREMIUM: Premium Cloud Disk, CLOUD_SSD: SSD cloud disk, CLOUD_HSSD: HSSD cloud disk
      */
     public void setStorageType(String StorageType) {
         this.StorageType = StorageType;

@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class AdaptiveDynamicStreamingInfoItem extends AbstractModel {
 
     /**
-    * Adaptive bitrate streaming specification.
+    * Adaptive bitstreaming specification.
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-    * Packaging format, which may be two kinds: HLS and MPEG-DASH.
+    * Packaging format. Possible values: HLS and MPEG-DASH.
     */
     @SerializedName("Package")
     @Expose
@@ -52,32 +52,32 @@ public class AdaptiveDynamicStreamingInfoItem extends AbstractModel {
     private TaskOutputStorage Storage;
 
     /**
-     * Get Adaptive bitrate streaming specification. 
-     * @return Definition Adaptive bitrate streaming specification.
+     * Get Adaptive bitstreaming specification. 
+     * @return Definition Adaptive bitstreaming specification.
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set Adaptive bitrate streaming specification.
-     * @param Definition Adaptive bitrate streaming specification.
+     * Set Adaptive bitstreaming specification.
+     * @param Definition Adaptive bitstreaming specification.
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
     }
 
     /**
-     * Get Packaging format, which may be two kinds: HLS and MPEG-DASH. 
-     * @return Package Packaging format, which may be two kinds: HLS and MPEG-DASH.
+     * Get Packaging format. Possible values: HLS and MPEG-DASH. 
+     * @return Package Packaging format. Possible values: HLS and MPEG-DASH.
      */
     public String getPackage() {
         return this.Package;
     }
 
     /**
-     * Set Packaging format, which may be two kinds: HLS and MPEG-DASH.
-     * @param Package Packaging format, which may be two kinds: HLS and MPEG-DASH.
+     * Set Packaging format. Possible values: HLS and MPEG-DASH.
+     * @param Package Packaging format. Possible values: HLS and MPEG-DASH.
      */
     public void setPackage(String Package) {
         this.Package = Package;

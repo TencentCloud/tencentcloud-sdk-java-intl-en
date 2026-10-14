@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DeleteStreamLinkFlowRequest extends AbstractModel {
 
     /**
-    * Flow ID
+    * <p>Transport stream Id.</p>
     */
     @SerializedName("FlowId")
     @Expose
     private String FlowId;
 
     /**
-     * Get Flow ID 
-     * @return FlowId Flow ID
+     * Get <p>Transport stream Id.</p> 
+     * @return FlowId <p>Transport stream Id.</p>
      */
     public String getFlowId() {
         return this.FlowId;
     }
 
     /**
-     * Set Flow ID
-     * @param FlowId Flow ID
+     * Set <p>Transport stream Id.</p>
+     * @param FlowId <p>Transport stream Id.</p>
      */
     public void setFlowId(String FlowId) {
         this.FlowId = FlowId;

@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class AiStoryboardConfig extends AbstractModel {
 
     /**
-    * <p>Capability configuration switch, available values: ON: Enable; OFF: Disable. Default value: ON.</p>
+    * <p>Capability configuration switch. Available values: ON: Enable; OFF: Disable. Default value: ON.</p>
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * <p>Specify the serial number of the storyboard to extract. Counting begins from 0. If not specified, return all storyboards.</p>
+    * <p>Specify the serial number of the storyboard image to extract. Counting begins from 0. If not specified, return all storyboard images.</p>
     */
     @SerializedName("ProcessIndex")
     @Expose
     private Long ProcessIndex;
 
     /**
-     * Get <p>Capability configuration switch, available values: ON: Enable; OFF: Disable. Default value: ON.</p> 
-     * @return Switch <p>Capability configuration switch, available values: ON: Enable; OFF: Disable. Default value: ON.</p>
+     * Get <p>Capability configuration switch. Available values: ON: Enable; OFF: Disable. Default value: ON.</p> 
+     * @return Switch <p>Capability configuration switch. Available values: ON: Enable; OFF: Disable. Default value: ON.</p>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set <p>Capability configuration switch, available values: ON: Enable; OFF: Disable. Default value: ON.</p>
-     * @param Switch <p>Capability configuration switch, available values: ON: Enable; OFF: Disable. Default value: ON.</p>
+     * Set <p>Capability configuration switch. Available values: ON: Enable; OFF: Disable. Default value: ON.</p>
+     * @param Switch <p>Capability configuration switch. Available values: ON: Enable; OFF: Disable. Default value: ON.</p>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get <p>Specify the serial number of the storyboard to extract. Counting begins from 0. If not specified, return all storyboards.</p> 
-     * @return ProcessIndex <p>Specify the serial number of the storyboard to extract. Counting begins from 0. If not specified, return all storyboards.</p>
+     * Get <p>Specify the serial number of the storyboard image to extract. Counting begins from 0. If not specified, return all storyboard images.</p> 
+     * @return ProcessIndex <p>Specify the serial number of the storyboard image to extract. Counting begins from 0. If not specified, return all storyboard images.</p>
      */
     public Long getProcessIndex() {
         return this.ProcessIndex;
     }
 
     /**
-     * Set <p>Specify the serial number of the storyboard to extract. Counting begins from 0. If not specified, return all storyboards.</p>
-     * @param ProcessIndex <p>Specify the serial number of the storyboard to extract. Counting begins from 0. If not specified, return all storyboards.</p>
+     * Set <p>Specify the serial number of the storyboard image to extract. Counting begins from 0. If not specified, return all storyboard images.</p>
+     * @param ProcessIndex <p>Specify the serial number of the storyboard image to extract. Counting begins from 0. If not specified, return all storyboard images.</p>
      */
     public void setProcessIndex(Long ProcessIndex) {
         this.ProcessIndex = ProcessIndex;

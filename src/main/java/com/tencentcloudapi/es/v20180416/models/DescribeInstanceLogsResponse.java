@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeInstanceLogsResponse extends AbstractModel {
 
     /**
-    * Number of returned logs
+    * Number of returned log entries
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * Log details list
+    * List of log details
     */
     @SerializedName("InstanceLogList")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeInstanceLogsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Number of returned logs 
-     * @return TotalCount Number of returned logs
+     * Get Number of returned log entries 
+     * @return TotalCount Number of returned log entries
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Number of returned logs
-     * @param TotalCount Number of returned logs
+     * Set Number of returned log entries
+     * @param TotalCount Number of returned log entries
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get Log details list 
-     * @return InstanceLogList Log details list
+     * Get List of log details 
+     * @return InstanceLogList List of log details
      */
     public InstanceLog [] getInstanceLogList() {
         return this.InstanceLogList;
     }
 
     /**
-     * Set Log details list
-     * @param InstanceLogList Log details list
+     * Set List of log details
+     * @param InstanceLogList List of log details
      */
     public void setInstanceLogList(InstanceLog [] InstanceLogList) {
         this.InstanceLogList = InstanceLogList;

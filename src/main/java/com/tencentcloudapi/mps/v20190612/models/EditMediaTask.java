@@ -41,8 +41,8 @@ public class EditMediaTask extends AbstractModel {
 
     /**
     * Error code.
-<li>0: Success;</li>
-<li>Additional values: fail.</li>
+<li>0: success;</li>
+<li>Other values: Failed.</li>
     */
     @SerializedName("ErrCode")
     @Expose
@@ -56,14 +56,14 @@ public class EditMediaTask extends AbstractModel {
     private String Message;
 
     /**
-    * Input for video editing tasks.
+    * Input for a video editing task.
     */
     @SerializedName("Input")
     @Expose
     private EditMediaTaskInput Input;
 
     /**
-    * 
+    * Output of the video editing task.
     */
     @SerializedName("Output")
     @Expose
@@ -111,11 +111,11 @@ public class EditMediaTask extends AbstractModel {
 
     /**
      * Get Error code.
-<li>0: Success;</li>
-<li>Additional values: fail.</li> 
+<li>0: success;</li>
+<li>Other values: Failed.</li> 
      * @return ErrCode Error code.
-<li>0: Success;</li>
-<li>Additional values: fail.</li>
+<li>0: success;</li>
+<li>Other values: Failed.</li>
      */
     public Long getErrCode() {
         return this.ErrCode;
@@ -123,11 +123,11 @@ public class EditMediaTask extends AbstractModel {
 
     /**
      * Set Error code.
-<li>0: Success;</li>
-<li>Additional values: fail.</li>
+<li>0: success;</li>
+<li>Other values: Failed.</li>
      * @param ErrCode Error code.
-<li>0: Success;</li>
-<li>Additional values: fail.</li>
+<li>0: success;</li>
+<li>Other values: Failed.</li>
      */
     public void setErrCode(Long ErrCode) {
         this.ErrCode = ErrCode;
@@ -150,32 +150,32 @@ public class EditMediaTask extends AbstractModel {
     }
 
     /**
-     * Get Input for video editing tasks. 
-     * @return Input Input for video editing tasks.
+     * Get Input for a video editing task. 
+     * @return Input Input for a video editing task.
      */
     public EditMediaTaskInput getInput() {
         return this.Input;
     }
 
     /**
-     * Set Input for video editing tasks.
-     * @param Input Input for video editing tasks.
+     * Set Input for a video editing task.
+     * @param Input Input for a video editing task.
      */
     public void setInput(EditMediaTaskInput Input) {
         this.Input = Input;
     }
 
     /**
-     * Get  
-     * @return Output 
+     * Get Output of the video editing task. 
+     * @return Output Output of the video editing task.
      */
     public EditMediaTaskOutput getOutput() {
         return this.Output;
     }
 
     /**
-     * Set 
-     * @param Output 
+     * Set Output of the video editing task.
+     * @param Output Output of the video editing task.
      */
     public void setOutput(EditMediaTaskOutput Output) {
         this.Output = Output;

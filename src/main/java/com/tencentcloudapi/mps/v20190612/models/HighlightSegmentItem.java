@@ -38,14 +38,14 @@ public class HighlightSegmentItem extends AbstractModel {
     private Float StartTimeOffset;
 
     /**
-    * End time offset of the recording clip.
+    * End time offset of a recording clip.
     */
     @SerializedName("EndTimeOffset")
     @Expose
     private Float EndTimeOffset;
 
     /**
-    * 
+    * Segment tag.
     */
     @SerializedName("SegmentTags")
     @Expose
@@ -112,32 +112,32 @@ public class HighlightSegmentItem extends AbstractModel {
     }
 
     /**
-     * Get End time offset of the recording clip. 
-     * @return EndTimeOffset End time offset of the recording clip.
+     * Get End time offset of a recording clip. 
+     * @return EndTimeOffset End time offset of a recording clip.
      */
     public Float getEndTimeOffset() {
         return this.EndTimeOffset;
     }
 
     /**
-     * Set End time offset of the recording clip.
-     * @param EndTimeOffset End time offset of the recording clip.
+     * Set End time offset of a recording clip.
+     * @param EndTimeOffset End time offset of a recording clip.
      */
     public void setEndTimeOffset(Float EndTimeOffset) {
         this.EndTimeOffset = EndTimeOffset;
     }
 
     /**
-     * Get  
-     * @return SegmentTags 
+     * Get Segment tag. 
+     * @return SegmentTags Segment tag.
      */
     public String [] getSegmentTags() {
         return this.SegmentTags;
     }
 
     /**
-     * Set 
-     * @param SegmentTags 
+     * Set Segment tag.
+     * @param SegmentTags Segment tag.
      */
     public void setSegmentTags(String [] SegmentTags) {
         this.SegmentTags = SegmentTags;

@@ -52,7 +52,7 @@ public class AiAnalysisTaskCutoutResult extends AbstractModel {
     private AiAnalysisTaskCutoutInput Input;
 
     /**
-    * 
+    * Output of the video matting task.
     */
     @SerializedName("Output")
     @Expose
@@ -144,16 +144,16 @@ public class AiAnalysisTaskCutoutResult extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return Output 
+     * Get Output of the video matting task. 
+     * @return Output Output of the video matting task.
      */
     public AiAnalysisTaskCutoutOutput getOutput() {
         return this.Output;
     }
 
     /**
-     * Set 
-     * @param Output 
+     * Set Output of the video matting task.
+     * @param Output Output of the video matting task.
      */
     public void setOutput(AiAnalysisTaskCutoutOutput Output) {
         this.Output = Output;

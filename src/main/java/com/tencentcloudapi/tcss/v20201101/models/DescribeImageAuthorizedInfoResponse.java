@@ -24,70 +24,70 @@ import java.util.HashMap;
 public class DescribeImageAuthorizedInfoResponse extends AbstractModel {
 
     /**
-    * Total number of valid image licenses
+    * Total number of effective image licenses.
     */
     @SerializedName("TotalAuthorizedCnt")
     @Expose
     private Long TotalAuthorizedCnt;
 
     /**
-    * Number of used image licenses
+    * Used image licenses
     */
     @SerializedName("UsedAuthorizedCnt")
     @Expose
     private Long UsedAuthorizedCnt;
 
     /**
-    * Number of images with scan enabled
+    * Scan image count enabled
     */
     @SerializedName("ScannedImageCnt")
     @Expose
     private Long ScannedImageCnt;
 
     /**
-    * Number of images with scan not enabled
+    * Scan image count when not enabled
     */
     @SerializedName("NotScannedImageCnt")
     @Expose
     private Long NotScannedImageCnt;
 
     /**
-    * Number of local images with scan not enabled
+    * Number of Local Images with Scans Not Enabled
     */
     @SerializedName("NotScannedLocalImageCnt")
     @Expose
     private Long NotScannedLocalImageCnt;
 
     /**
-    * 
+    * Number of licensed trial images.
     */
     @SerializedName("TrialAuthorizedCnt")
     @Expose
     private Long TrialAuthorizedCnt;
 
     /**
-    * 
+    * Number of licensed trial images that have been used.
     */
     @SerializedName("UsedTrialAuthorizedCnt")
     @Expose
     private Long UsedTrialAuthorizedCnt;
 
     /**
-    * 
+    * Number of purchased image authorizations
     */
     @SerializedName("PurchasedAuthorizedCnt")
     @Expose
     private Long PurchasedAuthorizedCnt;
 
     /**
-    * 
+    * Number of purchased licensed images that have been used.
     */
     @SerializedName("UsedPurchasedAuthorizedCnt")
     @Expose
     private Long UsedPurchasedAuthorizedCnt;
 
     /**
-    * 
+    * Whether the free image licenses can be collected.
     */
     @SerializedName("CanApplyFreeImageAuthorize")
     @Expose
@@ -115,160 +115,160 @@ public class DescribeImageAuthorizedInfoResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Total number of valid image licenses 
-     * @return TotalAuthorizedCnt Total number of valid image licenses
+     * Get Total number of effective image licenses. 
+     * @return TotalAuthorizedCnt Total number of effective image licenses.
      */
     public Long getTotalAuthorizedCnt() {
         return this.TotalAuthorizedCnt;
     }
 
     /**
-     * Set Total number of valid image licenses
-     * @param TotalAuthorizedCnt Total number of valid image licenses
+     * Set Total number of effective image licenses.
+     * @param TotalAuthorizedCnt Total number of effective image licenses.
      */
     public void setTotalAuthorizedCnt(Long TotalAuthorizedCnt) {
         this.TotalAuthorizedCnt = TotalAuthorizedCnt;
     }
 
     /**
-     * Get Number of used image licenses 
-     * @return UsedAuthorizedCnt Number of used image licenses
+     * Get Used image licenses 
+     * @return UsedAuthorizedCnt Used image licenses
      */
     public Long getUsedAuthorizedCnt() {
         return this.UsedAuthorizedCnt;
     }
 
     /**
-     * Set Number of used image licenses
-     * @param UsedAuthorizedCnt Number of used image licenses
+     * Set Used image licenses
+     * @param UsedAuthorizedCnt Used image licenses
      */
     public void setUsedAuthorizedCnt(Long UsedAuthorizedCnt) {
         this.UsedAuthorizedCnt = UsedAuthorizedCnt;
     }
 
     /**
-     * Get Number of images with scan enabled 
-     * @return ScannedImageCnt Number of images with scan enabled
+     * Get Scan image count enabled 
+     * @return ScannedImageCnt Scan image count enabled
      */
     public Long getScannedImageCnt() {
         return this.ScannedImageCnt;
     }
 
     /**
-     * Set Number of images with scan enabled
-     * @param ScannedImageCnt Number of images with scan enabled
+     * Set Scan image count enabled
+     * @param ScannedImageCnt Scan image count enabled
      */
     public void setScannedImageCnt(Long ScannedImageCnt) {
         this.ScannedImageCnt = ScannedImageCnt;
     }
 
     /**
-     * Get Number of images with scan not enabled 
-     * @return NotScannedImageCnt Number of images with scan not enabled
+     * Get Scan image count when not enabled 
+     * @return NotScannedImageCnt Scan image count when not enabled
      */
     public Long getNotScannedImageCnt() {
         return this.NotScannedImageCnt;
     }
 
     /**
-     * Set Number of images with scan not enabled
-     * @param NotScannedImageCnt Number of images with scan not enabled
+     * Set Scan image count when not enabled
+     * @param NotScannedImageCnt Scan image count when not enabled
      */
     public void setNotScannedImageCnt(Long NotScannedImageCnt) {
         this.NotScannedImageCnt = NotScannedImageCnt;
     }
 
     /**
-     * Get Number of local images with scan not enabled 
-     * @return NotScannedLocalImageCnt Number of local images with scan not enabled
+     * Get Number of Local Images with Scans Not Enabled 
+     * @return NotScannedLocalImageCnt Number of Local Images with Scans Not Enabled
      */
     public Long getNotScannedLocalImageCnt() {
         return this.NotScannedLocalImageCnt;
     }
 
     /**
-     * Set Number of local images with scan not enabled
-     * @param NotScannedLocalImageCnt Number of local images with scan not enabled
+     * Set Number of Local Images with Scans Not Enabled
+     * @param NotScannedLocalImageCnt Number of Local Images with Scans Not Enabled
      */
     public void setNotScannedLocalImageCnt(Long NotScannedLocalImageCnt) {
         this.NotScannedLocalImageCnt = NotScannedLocalImageCnt;
     }
 
     /**
-     * Get  
-     * @return TrialAuthorizedCnt 
+     * Get Number of licensed trial images. 
+     * @return TrialAuthorizedCnt Number of licensed trial images.
      */
     public Long getTrialAuthorizedCnt() {
         return this.TrialAuthorizedCnt;
     }
 
     /**
-     * Set 
-     * @param TrialAuthorizedCnt 
+     * Set Number of licensed trial images.
+     * @param TrialAuthorizedCnt Number of licensed trial images.
      */
     public void setTrialAuthorizedCnt(Long TrialAuthorizedCnt) {
         this.TrialAuthorizedCnt = TrialAuthorizedCnt;
     }
 
     /**
-     * Get  
-     * @return UsedTrialAuthorizedCnt 
+     * Get Number of licensed trial images that have been used. 
+     * @return UsedTrialAuthorizedCnt Number of licensed trial images that have been used.
      */
     public Long getUsedTrialAuthorizedCnt() {
         return this.UsedTrialAuthorizedCnt;
     }
 
     /**
-     * Set 
-     * @param UsedTrialAuthorizedCnt 
+     * Set Number of licensed trial images that have been used.
+     * @param UsedTrialAuthorizedCnt Number of licensed trial images that have been used.
      */
     public void setUsedTrialAuthorizedCnt(Long UsedTrialAuthorizedCnt) {
         this.UsedTrialAuthorizedCnt = UsedTrialAuthorizedCnt;
     }
 
     /**
-     * Get  
-     * @return PurchasedAuthorizedCnt 
+     * Get Number of purchased image authorizations 
+     * @return PurchasedAuthorizedCnt Number of purchased image authorizations
      */
     public Long getPurchasedAuthorizedCnt() {
         return this.PurchasedAuthorizedCnt;
     }
 
     /**
-     * Set 
-     * @param PurchasedAuthorizedCnt 
+     * Set Number of purchased image authorizations
+     * @param PurchasedAuthorizedCnt Number of purchased image authorizations
      */
     public void setPurchasedAuthorizedCnt(Long PurchasedAuthorizedCnt) {
         this.PurchasedAuthorizedCnt = PurchasedAuthorizedCnt;
     }
 
     /**
-     * Get  
-     * @return UsedPurchasedAuthorizedCnt 
+     * Get Number of purchased licensed images that have been used. 
+     * @return UsedPurchasedAuthorizedCnt Number of purchased licensed images that have been used.
      */
     public Long getUsedPurchasedAuthorizedCnt() {
         return this.UsedPurchasedAuthorizedCnt;
     }
 
     /**
-     * Set 
-     * @param UsedPurchasedAuthorizedCnt 
+     * Set Number of purchased licensed images that have been used.
+     * @param UsedPurchasedAuthorizedCnt Number of purchased licensed images that have been used.
      */
     public void setUsedPurchasedAuthorizedCnt(Long UsedPurchasedAuthorizedCnt) {
         this.UsedPurchasedAuthorizedCnt = UsedPurchasedAuthorizedCnt;
     }
 
     /**
-     * Get  
-     * @return CanApplyFreeImageAuthorize 
+     * Get Whether the free image licenses can be collected. 
+     * @return CanApplyFreeImageAuthorize Whether the free image licenses can be collected.
      */
     public Boolean getCanApplyFreeImageAuthorize() {
         return this.CanApplyFreeImageAuthorize;
     }
 
     /**
-     * Set 
-     * @param CanApplyFreeImageAuthorize 
+     * Set Whether the free image licenses can be collected.
+     * @param CanApplyFreeImageAuthorize Whether the free image licenses can be collected.
      */
     public void setCanApplyFreeImageAuthorize(Boolean CanApplyFreeImageAuthorize) {
         this.CanApplyFreeImageAuthorize = CanApplyFreeImageAuthorize;

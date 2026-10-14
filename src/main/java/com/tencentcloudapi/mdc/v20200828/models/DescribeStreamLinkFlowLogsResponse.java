@@ -24,35 +24,35 @@ import java.util.HashMap;
 public class DescribeStreamLinkFlowLogsResponse extends AbstractModel {
 
     /**
-    * A list of the logs.
+    * <p>Log information list.</p>
     */
     @SerializedName("Infos")
     @Expose
     private FlowLogInfo [] Infos;
 
     /**
-    * The current page number.
+    * <p>Current page.</p>
     */
     @SerializedName("PageNum")
     @Expose
     private Long PageNum;
 
     /**
-    * The number of records per page.
+    * <p>Size per page.</p>
     */
     @SerializedName("PageSize")
     @Expose
     private Long PageSize;
 
     /**
-    * The total number of records.
+    * <p>Total quantity.</p>
     */
     @SerializedName("TotalNum")
     @Expose
     private Long TotalNum;
 
     /**
-    * The total number of pages.
+    * <p>Total number of pages.</p>
     */
     @SerializedName("TotalPage")
     @Expose
@@ -66,80 +66,80 @@ public class DescribeStreamLinkFlowLogsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get A list of the logs. 
-     * @return Infos A list of the logs.
+     * Get <p>Log information list.</p> 
+     * @return Infos <p>Log information list.</p>
      */
     public FlowLogInfo [] getInfos() {
         return this.Infos;
     }
 
     /**
-     * Set A list of the logs.
-     * @param Infos A list of the logs.
+     * Set <p>Log information list.</p>
+     * @param Infos <p>Log information list.</p>
      */
     public void setInfos(FlowLogInfo [] Infos) {
         this.Infos = Infos;
     }
 
     /**
-     * Get The current page number. 
-     * @return PageNum The current page number.
+     * Get <p>Current page.</p> 
+     * @return PageNum <p>Current page.</p>
      */
     public Long getPageNum() {
         return this.PageNum;
     }
 
     /**
-     * Set The current page number.
-     * @param PageNum The current page number.
+     * Set <p>Current page.</p>
+     * @param PageNum <p>Current page.</p>
      */
     public void setPageNum(Long PageNum) {
         this.PageNum = PageNum;
     }
 
     /**
-     * Get The number of records per page. 
-     * @return PageSize The number of records per page.
+     * Get <p>Size per page.</p> 
+     * @return PageSize <p>Size per page.</p>
      */
     public Long getPageSize() {
         return this.PageSize;
     }
 
     /**
-     * Set The number of records per page.
-     * @param PageSize The number of records per page.
+     * Set <p>Size per page.</p>
+     * @param PageSize <p>Size per page.</p>
      */
     public void setPageSize(Long PageSize) {
         this.PageSize = PageSize;
     }
 
     /**
-     * Get The total number of records. 
-     * @return TotalNum The total number of records.
+     * Get <p>Total quantity.</p> 
+     * @return TotalNum <p>Total quantity.</p>
      */
     public Long getTotalNum() {
         return this.TotalNum;
     }
 
     /**
-     * Set The total number of records.
-     * @param TotalNum The total number of records.
+     * Set <p>Total quantity.</p>
+     * @param TotalNum <p>Total quantity.</p>
      */
     public void setTotalNum(Long TotalNum) {
         this.TotalNum = TotalNum;
     }
 
     /**
-     * Get The total number of pages. 
-     * @return TotalPage The total number of pages.
+     * Get <p>Total number of pages.</p> 
+     * @return TotalPage <p>Total number of pages.</p>
      */
     public Long getTotalPage() {
         return this.TotalPage;
     }
 
     /**
-     * Set The total number of pages.
-     * @param TotalPage The total number of pages.
+     * Set <p>Total number of pages.</p>
+     * @param TotalPage <p>Total number of pages.</p>
      */
     public void setTotalPage(Long TotalPage) {
         this.TotalPage = TotalPage;

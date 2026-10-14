@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class RTMPPullSourceAddress extends AbstractModel {
 
     /**
-    * 
+    * TcUrl of the RTMP origin server.
     */
     @SerializedName("TcUrl")
     @Expose
     private String TcUrl;
 
     /**
-    * 
+    * StreamKey information of the RTMP origin server.
     */
     @SerializedName("StreamKey")
     @Expose
     private String StreamKey;
 
     /**
-     * Get  
-     * @return TcUrl 
+     * Get TcUrl of the RTMP origin server. 
+     * @return TcUrl TcUrl of the RTMP origin server.
      */
     public String getTcUrl() {
         return this.TcUrl;
     }
 
     /**
-     * Set 
-     * @param TcUrl 
+     * Set TcUrl of the RTMP origin server.
+     * @param TcUrl TcUrl of the RTMP origin server.
      */
     public void setTcUrl(String TcUrl) {
         this.TcUrl = TcUrl;
     }
 
     /**
-     * Get  
-     * @return StreamKey 
+     * Get StreamKey information of the RTMP origin server. 
+     * @return StreamKey StreamKey information of the RTMP origin server.
      */
     public String getStreamKey() {
         return this.StreamKey;
     }
 
     /**
-     * Set 
-     * @param StreamKey 
+     * Set StreamKey information of the RTMP origin server.
+     * @param StreamKey StreamKey information of the RTMP origin server.
      */
     public void setStreamKey(String StreamKey) {
         this.StreamKey = StreamKey;

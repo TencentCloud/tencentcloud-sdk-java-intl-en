@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class AiReviewPornOcrTaskOutput extends AbstractModel {
 
     /**
-    * Ocr text involves pornographic content scoring, with a score ranging from 0 to 100.
+    * Ocr text porn score. Value range: 0-100.
     */
     @SerializedName("Confidence")
     @Expose
     private Float Confidence;
 
     /**
-    * Result Suggestions for Ocr text pornographic content, value ranges from...to...
+    * Suggestion for the porn detection result of Ocr text. Value range:
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
@@ -41,34 +41,34 @@ public class AiReviewPornOcrTaskOutput extends AbstractModel {
     private String Suggestion;
 
     /**
-    * Video segment list with suspect Ocr text pornographic information.
+    * List of video segments where the Ocr text is suspected of containing pornographic content.
     */
     @SerializedName("SegmentSet")
     @Expose
     private MediaContentReviewOcrTextSegmentItem [] SegmentSet;
 
     /**
-     * Get Ocr text involves pornographic content scoring, with a score ranging from 0 to 100. 
-     * @return Confidence Ocr text involves pornographic content scoring, with a score ranging from 0 to 100.
+     * Get Ocr text porn score. Value range: 0-100. 
+     * @return Confidence Ocr text porn score. Value range: 0-100.
      */
     public Float getConfidence() {
         return this.Confidence;
     }
 
     /**
-     * Set Ocr text involves pornographic content scoring, with a score ranging from 0 to 100.
-     * @param Confidence Ocr text involves pornographic content scoring, with a score ranging from 0 to 100.
+     * Set Ocr text porn score. Value range: 0-100.
+     * @param Confidence Ocr text porn score. Value range: 0-100.
      */
     public void setConfidence(Float Confidence) {
         this.Confidence = Confidence;
     }
 
     /**
-     * Get Result Suggestions for Ocr text pornographic content, value ranges from...to...
+     * Get Suggestion for the porn detection result of Ocr text. Value range:
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li> 
-     * @return Suggestion Result Suggestions for Ocr text pornographic content, value ranges from...to...
+     * @return Suggestion Suggestion for the porn detection result of Ocr text. Value range:
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
@@ -78,11 +78,11 @@ public class AiReviewPornOcrTaskOutput extends AbstractModel {
     }
 
     /**
-     * Set Result Suggestions for Ocr text pornographic content, value ranges from...to...
+     * Set Suggestion for the porn detection result of Ocr text. Value range:
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
-     * @param Suggestion Result Suggestions for Ocr text pornographic content, value ranges from...to...
+     * @param Suggestion Suggestion for the porn detection result of Ocr text. Value range:
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
@@ -92,16 +92,16 @@ public class AiReviewPornOcrTaskOutput extends AbstractModel {
     }
 
     /**
-     * Get Video segment list with suspect Ocr text pornographic information. 
-     * @return SegmentSet Video segment list with suspect Ocr text pornographic information.
+     * Get List of video segments where the Ocr text is suspected of containing pornographic content. 
+     * @return SegmentSet List of video segments where the Ocr text is suspected of containing pornographic content.
      */
     public MediaContentReviewOcrTextSegmentItem [] getSegmentSet() {
         return this.SegmentSet;
     }
 
     /**
-     * Set Video segment list with suspect Ocr text pornographic information.
-     * @param SegmentSet Video segment list with suspect Ocr text pornographic information.
+     * Set List of video segments where the Ocr text is suspected of containing pornographic content.
+     * @param SegmentSet List of video segments where the Ocr text is suspected of containing pornographic content.
      */
     public void setSegmentSet(MediaContentReviewOcrTextSegmentItem [] SegmentSet) {
         this.SegmentSet = SegmentSet;

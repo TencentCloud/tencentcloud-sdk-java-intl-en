@@ -59,14 +59,14 @@ public class AiRecognitionTaskTransTextResult extends AbstractModel {
     private AiRecognitionTaskTransTextResultInput Input;
 
     /**
-    * 
+    * Translation task output information.
     */
     @SerializedName("Output")
     @Expose
     private AiRecognitionTaskTransTextResultOutput Output;
 
     /**
-    * 
+    * Task progress.
     */
     @SerializedName("Progress")
     @Expose
@@ -153,32 +153,32 @@ public class AiRecognitionTaskTransTextResult extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return Output 
+     * Get Translation task output information. 
+     * @return Output Translation task output information.
      */
     public AiRecognitionTaskTransTextResultOutput getOutput() {
         return this.Output;
     }
 
     /**
-     * Set 
-     * @param Output 
+     * Set Translation task output information.
+     * @param Output Translation task output information.
      */
     public void setOutput(AiRecognitionTaskTransTextResultOutput Output) {
         this.Output = Output;
     }
 
     /**
-     * Get  
-     * @return Progress 
+     * Get Task progress. 
+     * @return Progress Task progress.
      */
     public Long getProgress() {
         return this.Progress;
     }
 
     /**
-     * Set 
-     * @param Progress 
+     * Set Task progress.
+     * @param Progress Task progress.
      */
     public void setProgress(Long Progress) {
         this.Progress = Progress;

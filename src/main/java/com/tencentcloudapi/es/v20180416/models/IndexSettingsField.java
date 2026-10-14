@@ -24,84 +24,69 @@ import java.util.HashMap;
 public class IndexSettingsField extends AbstractModel {
 
     /**
-    * Number of primary shards
-Note: This field may return `null`, indicating that no valid value can be obtained.
+    * Number of index primary shards
     */
     @SerializedName("NumberOfShards")
     @Expose
     private String NumberOfShards;
 
     /**
-    * Number of replica shards
-Note: This field may return `null`, indicating that no valid value can be obtained.
+    * Replica shard count of an index
     */
     @SerializedName("NumberOfReplicas")
     @Expose
     private String NumberOfReplicas;
 
     /**
-    * Index refresh interval
-Note: This field may return `null`, indicating that no valid value can be obtained.
+    * Index refresh frequency
     */
     @SerializedName("RefreshInterval")
     @Expose
     private String RefreshInterval;
 
     /**
-     * Get Number of primary shards
-Note: This field may return `null`, indicating that no valid value can be obtained. 
-     * @return NumberOfShards Number of primary shards
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Get Number of index primary shards 
+     * @return NumberOfShards Number of index primary shards
      */
     public String getNumberOfShards() {
         return this.NumberOfShards;
     }
 
     /**
-     * Set Number of primary shards
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param NumberOfShards Number of primary shards
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Set Number of index primary shards
+     * @param NumberOfShards Number of index primary shards
      */
     public void setNumberOfShards(String NumberOfShards) {
         this.NumberOfShards = NumberOfShards;
     }
 
     /**
-     * Get Number of replica shards
-Note: This field may return `null`, indicating that no valid value can be obtained. 
-     * @return NumberOfReplicas Number of replica shards
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Get Replica shard count of an index 
+     * @return NumberOfReplicas Replica shard count of an index
      */
     public String getNumberOfReplicas() {
         return this.NumberOfReplicas;
     }
 
     /**
-     * Set Number of replica shards
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param NumberOfReplicas Number of replica shards
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Set Replica shard count of an index
+     * @param NumberOfReplicas Replica shard count of an index
      */
     public void setNumberOfReplicas(String NumberOfReplicas) {
         this.NumberOfReplicas = NumberOfReplicas;
     }
 
     /**
-     * Get Index refresh interval
-Note: This field may return `null`, indicating that no valid value can be obtained. 
-     * @return RefreshInterval Index refresh interval
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Get Index refresh frequency 
+     * @return RefreshInterval Index refresh frequency
      */
     public String getRefreshInterval() {
         return this.RefreshInterval;
     }
 
     /**
-     * Set Index refresh interval
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param RefreshInterval Index refresh interval
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Set Index refresh frequency
+     * @param RefreshInterval Index refresh frequency
      */
     public void setRefreshInterval(String RefreshInterval) {
         this.RefreshInterval = RefreshInterval;

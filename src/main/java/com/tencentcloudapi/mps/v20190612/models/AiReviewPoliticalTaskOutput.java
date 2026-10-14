@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class AiReviewPoliticalTaskOutput extends AbstractModel {
 
     /**
-    * Video sensitive content score, ranging from 0 to 100.
+    * Sensitive score of the video. The score ranges from 0 to 100.
     */
     @SerializedName("Confidence")
     @Expose
     private Float Confidence;
 
     /**
-    * Result Suggestions for sensitive content, value ranges from...to...
+    * Sensitive result suggestion. Value range:
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
@@ -41,10 +41,10 @@ public class AiReviewPoliticalTaskOutput extends AbstractModel {
     private String Suggestion;
 
     /**
-    * Video sensitive content result tag. The mapping between the LabelSet parameter in the content moderation template's visual sensitive content task control parameter (https://www.tencentcloud.com/document/api/862/37615?from_cn_redirect=1#AiReviewPoliticalTaskOutput) and the parameter value range of this parameter:
+    * Video sensitive information tag. Mapping between the LabelSet parameter in the frame sensitive information task control parameter (https://www.tencentcloud.com/document/api/862/37615?from_cn_redirect=1#AiReviewPoliticalTaskOutput) of the content review template and the value range of this parameter:
 violation_photo:
 <li>violation_photo: violation icon.</li>
-Other (i.e., politician/entertainment/sport/entrepreneur/scholar/celebrity/military):
+Other (politician/entertainment/sport/entrepreneur/scholar/celebrity/military):
 <li>politician: sensitive person.</li>
     */
     @SerializedName("Label")
@@ -59,27 +59,27 @@ Other (i.e., politician/entertainment/sport/entrepreneur/scholar/celebrity/milit
     private MediaContentReviewPoliticalSegmentItem [] SegmentSet;
 
     /**
-     * Get Video sensitive content score, ranging from 0 to 100. 
-     * @return Confidence Video sensitive content score, ranging from 0 to 100.
+     * Get Sensitive score of the video. The score ranges from 0 to 100. 
+     * @return Confidence Sensitive score of the video. The score ranges from 0 to 100.
      */
     public Float getConfidence() {
         return this.Confidence;
     }
 
     /**
-     * Set Video sensitive content score, ranging from 0 to 100.
-     * @param Confidence Video sensitive content score, ranging from 0 to 100.
+     * Set Sensitive score of the video. The score ranges from 0 to 100.
+     * @param Confidence Sensitive score of the video. The score ranges from 0 to 100.
      */
     public void setConfidence(Float Confidence) {
         this.Confidence = Confidence;
     }
 
     /**
-     * Get Result Suggestions for sensitive content, value ranges from...to...
+     * Get Sensitive result suggestion. Value range:
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li> 
-     * @return Suggestion Result Suggestions for sensitive content, value ranges from...to...
+     * @return Suggestion Sensitive result suggestion. Value range:
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
@@ -89,11 +89,11 @@ Other (i.e., politician/entertainment/sport/entrepreneur/scholar/celebrity/milit
     }
 
     /**
-     * Set Result Suggestions for sensitive content, value ranges from...to...
+     * Set Sensitive result suggestion. Value range:
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
-     * @param Suggestion Result Suggestions for sensitive content, value ranges from...to...
+     * @param Suggestion Sensitive result suggestion. Value range:
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
@@ -103,15 +103,15 @@ Other (i.e., politician/entertainment/sport/entrepreneur/scholar/celebrity/milit
     }
 
     /**
-     * Get Video sensitive content result tag. The mapping between the LabelSet parameter in the content moderation template's visual sensitive content task control parameter (https://www.tencentcloud.com/document/api/862/37615?from_cn_redirect=1#AiReviewPoliticalTaskOutput) and the parameter value range of this parameter:
+     * Get Video sensitive information tag. Mapping between the LabelSet parameter in the frame sensitive information task control parameter (https://www.tencentcloud.com/document/api/862/37615?from_cn_redirect=1#AiReviewPoliticalTaskOutput) of the content review template and the value range of this parameter:
 violation_photo:
 <li>violation_photo: violation icon.</li>
-Other (i.e., politician/entertainment/sport/entrepreneur/scholar/celebrity/military):
+Other (politician/entertainment/sport/entrepreneur/scholar/celebrity/military):
 <li>politician: sensitive person.</li> 
-     * @return Label Video sensitive content result tag. The mapping between the LabelSet parameter in the content moderation template's visual sensitive content task control parameter (https://www.tencentcloud.com/document/api/862/37615?from_cn_redirect=1#AiReviewPoliticalTaskOutput) and the parameter value range of this parameter:
+     * @return Label Video sensitive information tag. Mapping between the LabelSet parameter in the frame sensitive information task control parameter (https://www.tencentcloud.com/document/api/862/37615?from_cn_redirect=1#AiReviewPoliticalTaskOutput) of the content review template and the value range of this parameter:
 violation_photo:
 <li>violation_photo: violation icon.</li>
-Other (i.e., politician/entertainment/sport/entrepreneur/scholar/celebrity/military):
+Other (politician/entertainment/sport/entrepreneur/scholar/celebrity/military):
 <li>politician: sensitive person.</li>
      */
     public String getLabel() {
@@ -119,15 +119,15 @@ Other (i.e., politician/entertainment/sport/entrepreneur/scholar/celebrity/milit
     }
 
     /**
-     * Set Video sensitive content result tag. The mapping between the LabelSet parameter in the content moderation template's visual sensitive content task control parameter (https://www.tencentcloud.com/document/api/862/37615?from_cn_redirect=1#AiReviewPoliticalTaskOutput) and the parameter value range of this parameter:
+     * Set Video sensitive information tag. Mapping between the LabelSet parameter in the frame sensitive information task control parameter (https://www.tencentcloud.com/document/api/862/37615?from_cn_redirect=1#AiReviewPoliticalTaskOutput) of the content review template and the value range of this parameter:
 violation_photo:
 <li>violation_photo: violation icon.</li>
-Other (i.e., politician/entertainment/sport/entrepreneur/scholar/celebrity/military):
+Other (politician/entertainment/sport/entrepreneur/scholar/celebrity/military):
 <li>politician: sensitive person.</li>
-     * @param Label Video sensitive content result tag. The mapping between the LabelSet parameter in the content moderation template's visual sensitive content task control parameter (https://www.tencentcloud.com/document/api/862/37615?from_cn_redirect=1#AiReviewPoliticalTaskOutput) and the parameter value range of this parameter:
+     * @param Label Video sensitive information tag. Mapping between the LabelSet parameter in the frame sensitive information task control parameter (https://www.tencentcloud.com/document/api/862/37615?from_cn_redirect=1#AiReviewPoliticalTaskOutput) of the content review template and the value range of this parameter:
 violation_photo:
 <li>violation_photo: violation icon.</li>
-Other (i.e., politician/entertainment/sport/entrepreneur/scholar/celebrity/military):
+Other (politician/entertainment/sport/entrepreneur/scholar/celebrity/military):
 <li>politician: sensitive person.</li>
      */
     public void setLabel(String Label) {

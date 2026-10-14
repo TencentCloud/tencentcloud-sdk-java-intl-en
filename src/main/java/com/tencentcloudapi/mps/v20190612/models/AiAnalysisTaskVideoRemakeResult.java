@@ -45,14 +45,14 @@ public class AiAnalysisTaskVideoRemakeResult extends AbstractModel {
     private String Message;
 
     /**
-    * Task input for deduplication
+    * Input of the deduplication task.
     */
     @SerializedName("Input")
     @Expose
     private AiAnalysisTaskVideoRemakeInput Input;
 
     /**
-    * 
+    * Output of the deduplication task.
     */
     @SerializedName("Output")
     @Expose
@@ -107,32 +107,32 @@ public class AiAnalysisTaskVideoRemakeResult extends AbstractModel {
     }
 
     /**
-     * Get Task input for deduplication 
-     * @return Input Task input for deduplication
+     * Get Input of the deduplication task. 
+     * @return Input Input of the deduplication task.
      */
     public AiAnalysisTaskVideoRemakeInput getInput() {
         return this.Input;
     }
 
     /**
-     * Set Task input for deduplication
-     * @param Input Task input for deduplication
+     * Set Input of the deduplication task.
+     * @param Input Input of the deduplication task.
      */
     public void setInput(AiAnalysisTaskVideoRemakeInput Input) {
         this.Input = Input;
     }
 
     /**
-     * Get  
-     * @return Output 
+     * Get Output of the deduplication task. 
+     * @return Output Output of the deduplication task.
      */
     public AiAnalysisTaskVideoRemakeOutput getOutput() {
         return this.Output;
     }
 
     /**
-     * Set 
-     * @param Output 
+     * Set Output of the deduplication task.
+     * @param Output Output of the deduplication task.
      */
     public void setOutput(AiAnalysisTaskVideoRemakeOutput Output) {
         this.Output = Output;

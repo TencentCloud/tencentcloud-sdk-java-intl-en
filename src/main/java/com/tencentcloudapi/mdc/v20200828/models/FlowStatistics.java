@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class FlowStatistics extends AbstractModel {
 
     /**
-    * The session ID.
+    * Session ID.
     */
     @SerializedName("SessionId")
     @Expose
     private String SessionId;
 
     /**
-    * The peer IP.
+    * Peer IP.
     */
     @SerializedName("ClientIp")
     @Expose
     private String ClientIp;
 
     /**
-    * The total bandwidth.
+    * Total bandwidth.
     */
     @SerializedName("Network")
     @Expose
     private Long Network;
 
     /**
-    * The video data.
+    * Video data.
     */
     @SerializedName("Video")
     @Expose
     private FlowVideo [] Video;
 
     /**
-    * The audio data.
+    * Audio data.
     */
     @SerializedName("Audio")
     @Expose
     private FlowAudio [] Audio;
 
     /**
-     * Get The session ID. 
-     * @return SessionId The session ID.
+     * Get Session ID. 
+     * @return SessionId Session ID.
      */
     public String getSessionId() {
         return this.SessionId;
     }
 
     /**
-     * Set The session ID.
-     * @param SessionId The session ID.
+     * Set Session ID.
+     * @param SessionId Session ID.
      */
     public void setSessionId(String SessionId) {
         this.SessionId = SessionId;
     }
 
     /**
-     * Get The peer IP. 
-     * @return ClientIp The peer IP.
+     * Get Peer IP. 
+     * @return ClientIp Peer IP.
      */
     public String getClientIp() {
         return this.ClientIp;
     }
 
     /**
-     * Set The peer IP.
-     * @param ClientIp The peer IP.
+     * Set Peer IP.
+     * @param ClientIp Peer IP.
      */
     public void setClientIp(String ClientIp) {
         this.ClientIp = ClientIp;
     }
 
     /**
-     * Get The total bandwidth. 
-     * @return Network The total bandwidth.
+     * Get Total bandwidth. 
+     * @return Network Total bandwidth.
      */
     public Long getNetwork() {
         return this.Network;
     }
 
     /**
-     * Set The total bandwidth.
-     * @param Network The total bandwidth.
+     * Set Total bandwidth.
+     * @param Network Total bandwidth.
      */
     public void setNetwork(Long Network) {
         this.Network = Network;
     }
 
     /**
-     * Get The video data. 
-     * @return Video The video data.
+     * Get Video data. 
+     * @return Video Video data.
      */
     public FlowVideo [] getVideo() {
         return this.Video;
     }
 
     /**
-     * Set The video data.
-     * @param Video The video data.
+     * Set Video data.
+     * @param Video Video data.
      */
     public void setVideo(FlowVideo [] Video) {
         this.Video = Video;
     }
 
     /**
-     * Get The audio data. 
-     * @return Audio The audio data.
+     * Get Audio data. 
+     * @return Audio Audio data.
      */
     public FlowAudio [] getAudio() {
         return this.Audio;
     }
 
     /**
-     * Set The audio data.
-     * @param Audio The audio data.
+     * Set Audio data.
+     * @param Audio Audio data.
      */
     public void setAudio(FlowAudio [] Audio) {
         this.Audio = Audio;

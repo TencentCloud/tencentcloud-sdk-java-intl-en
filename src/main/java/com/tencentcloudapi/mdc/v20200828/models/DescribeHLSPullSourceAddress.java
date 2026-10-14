@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DescribeHLSPullSourceAddress extends AbstractModel {
 
     /**
-    * 
+    * Url of the HLS origin server.
     */
     @SerializedName("Url")
     @Expose
     private String Url;
 
     /**
-     * Get  
-     * @return Url 
+     * Get Url of the HLS origin server. 
+     * @return Url Url of the HLS origin server.
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * Set 
-     * @param Url 
+     * Set Url of the HLS origin server.
+     * @param Url Url of the HLS origin server.
      */
     public void setUrl(String Url) {
         this.Url = Url;

@@ -31,14 +31,14 @@ public class MediaVideoStreamItem extends AbstractModel {
     private Long Bitrate;
 
     /**
-    * Height of a video stream. Unit: px.
+    * Height of the video stream. Unit: px.
     */
     @SerializedName("Height")
     @Expose
     private Long Height;
 
     /**
-    * Video stream width in px.
+    * Video stream width. Unit: px.
     */
     @SerializedName("Width")
     @Expose
@@ -59,49 +59,49 @@ public class MediaVideoStreamItem extends AbstractModel {
     private Long Fps;
 
     /**
-    * 
+    * Colorspace.
     */
     @SerializedName("ColorPrimaries")
     @Expose
     private String ColorPrimaries;
 
     /**
-    * 
+    * Colorspace.
     */
     @SerializedName("ColorSpace")
     @Expose
     private String ColorSpace;
 
     /**
-    * 
+    * Colorspace.
     */
     @SerializedName("ColorTransfer")
     @Expose
     private String ColorTransfer;
 
     /**
-    * 
+    * HDR type.
     */
     @SerializedName("HdrType")
     @Expose
     private String HdrType;
 
     /**
-    * 
+    * Video Codecs.
     */
     @SerializedName("Codecs")
     @Expose
     private String Codecs;
 
     /**
-    * 
+    * Numerator of the frame rate.
     */
     @SerializedName("FpsNumerator")
     @Expose
     private Long FpsNumerator;
 
     /**
-    * 
+    * Denominator of the frame rate.
     */
     @SerializedName("FpsDenominator")
     @Expose
@@ -124,32 +124,32 @@ public class MediaVideoStreamItem extends AbstractModel {
     }
 
     /**
-     * Get Height of a video stream. Unit: px. 
-     * @return Height Height of a video stream. Unit: px.
+     * Get Height of the video stream. Unit: px. 
+     * @return Height Height of the video stream. Unit: px.
      */
     public Long getHeight() {
         return this.Height;
     }
 
     /**
-     * Set Height of a video stream. Unit: px.
-     * @param Height Height of a video stream. Unit: px.
+     * Set Height of the video stream. Unit: px.
+     * @param Height Height of the video stream. Unit: px.
      */
     public void setHeight(Long Height) {
         this.Height = Height;
     }
 
     /**
-     * Get Video stream width in px. 
-     * @return Width Video stream width in px.
+     * Get Video stream width. Unit: px. 
+     * @return Width Video stream width. Unit: px.
      */
     public Long getWidth() {
         return this.Width;
     }
 
     /**
-     * Set Video stream width in px.
-     * @param Width Video stream width in px.
+     * Set Video stream width. Unit: px.
+     * @param Width Video stream width. Unit: px.
      */
     public void setWidth(Long Width) {
         this.Width = Width;
@@ -188,112 +188,112 @@ public class MediaVideoStreamItem extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return ColorPrimaries 
+     * Get Colorspace. 
+     * @return ColorPrimaries Colorspace.
      */
     public String getColorPrimaries() {
         return this.ColorPrimaries;
     }
 
     /**
-     * Set 
-     * @param ColorPrimaries 
+     * Set Colorspace.
+     * @param ColorPrimaries Colorspace.
      */
     public void setColorPrimaries(String ColorPrimaries) {
         this.ColorPrimaries = ColorPrimaries;
     }
 
     /**
-     * Get  
-     * @return ColorSpace 
+     * Get Colorspace. 
+     * @return ColorSpace Colorspace.
      */
     public String getColorSpace() {
         return this.ColorSpace;
     }
 
     /**
-     * Set 
-     * @param ColorSpace 
+     * Set Colorspace.
+     * @param ColorSpace Colorspace.
      */
     public void setColorSpace(String ColorSpace) {
         this.ColorSpace = ColorSpace;
     }
 
     /**
-     * Get  
-     * @return ColorTransfer 
+     * Get Colorspace. 
+     * @return ColorTransfer Colorspace.
      */
     public String getColorTransfer() {
         return this.ColorTransfer;
     }
 
     /**
-     * Set 
-     * @param ColorTransfer 
+     * Set Colorspace.
+     * @param ColorTransfer Colorspace.
      */
     public void setColorTransfer(String ColorTransfer) {
         this.ColorTransfer = ColorTransfer;
     }
 
     /**
-     * Get  
-     * @return HdrType 
+     * Get HDR type. 
+     * @return HdrType HDR type.
      */
     public String getHdrType() {
         return this.HdrType;
     }
 
     /**
-     * Set 
-     * @param HdrType 
+     * Set HDR type.
+     * @param HdrType HDR type.
      */
     public void setHdrType(String HdrType) {
         this.HdrType = HdrType;
     }
 
     /**
-     * Get  
-     * @return Codecs 
+     * Get Video Codecs. 
+     * @return Codecs Video Codecs.
      */
     public String getCodecs() {
         return this.Codecs;
     }
 
     /**
-     * Set 
-     * @param Codecs 
+     * Set Video Codecs.
+     * @param Codecs Video Codecs.
      */
     public void setCodecs(String Codecs) {
         this.Codecs = Codecs;
     }
 
     /**
-     * Get  
-     * @return FpsNumerator 
+     * Get Numerator of the frame rate. 
+     * @return FpsNumerator Numerator of the frame rate.
      */
     public Long getFpsNumerator() {
         return this.FpsNumerator;
     }
 
     /**
-     * Set 
-     * @param FpsNumerator 
+     * Set Numerator of the frame rate.
+     * @param FpsNumerator Numerator of the frame rate.
      */
     public void setFpsNumerator(Long FpsNumerator) {
         this.FpsNumerator = FpsNumerator;
     }
 
     /**
-     * Get  
-     * @return FpsDenominator 
+     * Get Denominator of the frame rate. 
+     * @return FpsDenominator Denominator of the frame rate.
      */
     public Long getFpsDenominator() {
         return this.FpsDenominator;
     }
 
     /**
-     * Set 
-     * @param FpsDenominator 
+     * Set Denominator of the frame rate.
+     * @param FpsDenominator Denominator of the frame rate.
      */
     public void setFpsDenominator(Long FpsDenominator) {
         this.FpsDenominator = FpsDenominator;

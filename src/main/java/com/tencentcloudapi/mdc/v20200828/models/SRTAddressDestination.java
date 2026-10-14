@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class SRTAddressDestination extends AbstractModel {
 
     /**
-    * Destination address IP.
+    * IP of the target address.
     */
     @SerializedName("Ip")
     @Expose
     private String Ip;
 
     /**
-    * Destination address port.
+    * The port of the destination address.
     */
     @SerializedName("Port")
     @Expose
     private Long Port;
 
     /**
-     * Get Destination address IP. 
-     * @return Ip Destination address IP.
+     * Get IP of the target address. 
+     * @return Ip IP of the target address.
      */
     public String getIp() {
         return this.Ip;
     }
 
     /**
-     * Set Destination address IP.
-     * @param Ip Destination address IP.
+     * Set IP of the target address.
+     * @param Ip IP of the target address.
      */
     public void setIp(String Ip) {
         this.Ip = Ip;
     }
 
     /**
-     * Get Destination address port. 
-     * @return Port Destination address port.
+     * Get The port of the destination address. 
+     * @return Port The port of the destination address.
      */
     public Long getPort() {
         return this.Port;
     }
 
     /**
-     * Set Destination address port.
-     * @param Port Destination address port.
+     * Set The port of the destination address.
+     * @param Port The port of the destination address.
      */
     public void setPort(Long Port) {
         this.Port = Port;

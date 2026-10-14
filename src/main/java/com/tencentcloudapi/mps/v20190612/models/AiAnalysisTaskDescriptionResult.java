@@ -52,7 +52,7 @@ public class AiAnalysisTaskDescriptionResult extends AbstractModel {
     private AiAnalysisTaskDescriptionInput Input;
 
     /**
-    * 
+    * Intelligent description task output.
     */
     @SerializedName("Output")
     @Expose
@@ -123,16 +123,16 @@ public class AiAnalysisTaskDescriptionResult extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return Output 
+     * Get Intelligent description task output. 
+     * @return Output Intelligent description task output.
      */
     public AiAnalysisTaskDescriptionOutput getOutput() {
         return this.Output;
     }
 
     /**
-     * Set 
-     * @param Output 
+     * Set Intelligent description task output.
+     * @param Output Intelligent description task output.
      */
     public void setOutput(AiAnalysisTaskDescriptionOutput Output) {
         this.Output = Output;

@@ -52,14 +52,14 @@ public class MediaProcessTaskSampleSnapshotResult extends AbstractModel {
     private String Message;
 
     /**
-    * Input for the sampling screenshot task on a video.
+    * Input of the sampling screenshot task for videos.
     */
     @SerializedName("Input")
     @Expose
     private SampleSnapshotTaskInput Input;
 
     /**
-    * 
+    * Output of the sampling screenshot task for videos.
     */
     @SerializedName("Output")
     @Expose
@@ -144,32 +144,32 @@ public class MediaProcessTaskSampleSnapshotResult extends AbstractModel {
     }
 
     /**
-     * Get Input for the sampling screenshot task on a video. 
-     * @return Input Input for the sampling screenshot task on a video.
+     * Get Input of the sampling screenshot task for videos. 
+     * @return Input Input of the sampling screenshot task for videos.
      */
     public SampleSnapshotTaskInput getInput() {
         return this.Input;
     }
 
     /**
-     * Set Input for the sampling screenshot task on a video.
-     * @param Input Input for the sampling screenshot task on a video.
+     * Set Input of the sampling screenshot task for videos.
+     * @param Input Input of the sampling screenshot task for videos.
      */
     public void setInput(SampleSnapshotTaskInput Input) {
         this.Input = Input;
     }
 
     /**
-     * Get  
-     * @return Output 
+     * Get Output of the sampling screenshot task for videos. 
+     * @return Output Output of the sampling screenshot task for videos.
      */
     public MediaSampleSnapshotItem getOutput() {
         return this.Output;
     }
 
     /**
-     * Set 
-     * @param Output 
+     * Set Output of the sampling screenshot task for videos.
+     * @param Output Output of the sampling screenshot task for videos.
      */
     public void setOutput(MediaSampleSnapshotItem Output) {
         this.Output = Output;

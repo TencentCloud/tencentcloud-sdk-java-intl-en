@@ -24,138 +24,153 @@ import java.util.HashMap;
 public class ContentReference extends AbstractModel {
 
     /**
-    * 
+    * Source index ID
     */
     @SerializedName("Index")
     @Expose
     private Long Index;
 
     /**
-    * 
+    * Reference source name
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 
+    * Reference source type
+1: QA
+2: Document fragment
+4: Online retrieved content
     */
     @SerializedName("Type")
     @Expose
     private Long Type;
 
     /**
-    * 
+    * Document fragment reference
     */
     @SerializedName("DocRefer")
     @Expose
     private DocReference DocRefer;
 
     /**
-    * 
+    * QA reference
     */
     @SerializedName("QaRefer")
     @Expose
     private QaReference QaRefer;
 
     /**
-    * 
+    * Reference information for online retrieval content
     */
     @SerializedName("WebSearchRefer")
     @Expose
     private WebSearchReference WebSearchRefer;
 
     /**
-     * Get  
-     * @return Index 
+     * Get Source index ID 
+     * @return Index Source index ID
      */
     public Long getIndex() {
         return this.Index;
     }
 
     /**
-     * Set 
-     * @param Index 
+     * Set Source index ID
+     * @param Index Source index ID
      */
     public void setIndex(Long Index) {
         this.Index = Index;
     }
 
     /**
-     * Get  
-     * @return Name 
+     * Get Reference source name 
+     * @return Name Reference source name
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 
-     * @param Name 
+     * Set Reference source name
+     * @param Name Reference source name
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get  
-     * @return Type 
+     * Get Reference source type
+1: QA
+2: Document fragment
+4: Online retrieved content 
+     * @return Type Reference source type
+1: QA
+2: Document fragment
+4: Online retrieved content
      */
     public Long getType() {
         return this.Type;
     }
 
     /**
-     * Set 
-     * @param Type 
+     * Set Reference source type
+1: QA
+2: Document fragment
+4: Online retrieved content
+     * @param Type Reference source type
+1: QA
+2: Document fragment
+4: Online retrieved content
      */
     public void setType(Long Type) {
         this.Type = Type;
     }
 
     /**
-     * Get  
-     * @return DocRefer 
+     * Get Document fragment reference 
+     * @return DocRefer Document fragment reference
      */
     public DocReference getDocRefer() {
         return this.DocRefer;
     }
 
     /**
-     * Set 
-     * @param DocRefer 
+     * Set Document fragment reference
+     * @param DocRefer Document fragment reference
      */
     public void setDocRefer(DocReference DocRefer) {
         this.DocRefer = DocRefer;
     }
 
     /**
-     * Get  
-     * @return QaRefer 
+     * Get QA reference 
+     * @return QaRefer QA reference
      */
     public QaReference getQaRefer() {
         return this.QaRefer;
     }
 
     /**
-     * Set 
-     * @param QaRefer 
+     * Set QA reference
+     * @param QaRefer QA reference
      */
     public void setQaRefer(QaReference QaRefer) {
         this.QaRefer = QaRefer;
     }
 
     /**
-     * Get  
-     * @return WebSearchRefer 
+     * Get Reference information for online retrieval content 
+     * @return WebSearchRefer Reference information for online retrieval content
      */
     public WebSearchReference getWebSearchRefer() {
         return this.WebSearchRefer;
     }
 
     /**
-     * Set 
-     * @param WebSearchRefer 
+     * Set Reference information for online retrieval content
+     * @param WebSearchRefer Reference information for online retrieval content
      */
     public void setWebSearchRefer(WebSearchReference WebSearchRefer) {
         this.WebSearchRefer = WebSearchRefer;

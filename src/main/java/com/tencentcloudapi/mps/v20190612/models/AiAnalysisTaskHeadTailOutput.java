@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class AiAnalysisTaskHeadTailOutput extends AbstractModel {
 
     /**
-    * 
+    * Opening pts.
     */
     @SerializedName("HeadTimeOffset")
     @Expose
     private Float HeadTimeOffset;
 
     /**
-    * 
+    * Outro pts.
     */
     @SerializedName("TailTimeOffset")
     @Expose
     private Float TailTimeOffset;
 
     /**
-     * Get  
-     * @return HeadTimeOffset 
+     * Get Opening pts. 
+     * @return HeadTimeOffset Opening pts.
      */
     public Float getHeadTimeOffset() {
         return this.HeadTimeOffset;
     }
 
     /**
-     * Set 
-     * @param HeadTimeOffset 
+     * Set Opening pts.
+     * @param HeadTimeOffset Opening pts.
      */
     public void setHeadTimeOffset(Float HeadTimeOffset) {
         this.HeadTimeOffset = HeadTimeOffset;
     }
 
     /**
-     * Get  
-     * @return TailTimeOffset 
+     * Get Outro pts. 
+     * @return TailTimeOffset Outro pts.
      */
     public Float getTailTimeOffset() {
         return this.TailTimeOffset;
     }
 
     /**
-     * Set 
-     * @param TailTimeOffset 
+     * Set Outro pts.
+     * @param TailTimeOffset Outro pts.
      */
     public void setTailTimeOffset(Float TailTimeOffset) {
         this.TailTimeOffset = TailTimeOffset;

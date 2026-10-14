@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class CreateOutputRTMPSettings extends AbstractModel {
 
     /**
-    * The relay destination addresses. One or two addresses are allowed.
+    * Target address for repost. You can enter 1 to 2 addresses.
     */
     @SerializedName("Destinations")
     @Expose
     private CreateOutputRtmpSettingsDestinations [] Destinations;
 
     /**
-    * The RTMP chunk size. Value range: [4096, 40960].
+    * Chunk size of RTMP, ranging from 4096 to 40960.
     */
     @SerializedName("ChunkSize")
     @Expose
     private Long ChunkSize;
 
     /**
-     * Get The relay destination addresses. One or two addresses are allowed. 
-     * @return Destinations The relay destination addresses. One or two addresses are allowed.
+     * Get Target address for repost. You can enter 1 to 2 addresses. 
+     * @return Destinations Target address for repost. You can enter 1 to 2 addresses.
      */
     public CreateOutputRtmpSettingsDestinations [] getDestinations() {
         return this.Destinations;
     }
 
     /**
-     * Set The relay destination addresses. One or two addresses are allowed.
-     * @param Destinations The relay destination addresses. One or two addresses are allowed.
+     * Set Target address for repost. You can enter 1 to 2 addresses.
+     * @param Destinations Target address for repost. You can enter 1 to 2 addresses.
      */
     public void setDestinations(CreateOutputRtmpSettingsDestinations [] Destinations) {
         this.Destinations = Destinations;
     }
 
     /**
-     * Get The RTMP chunk size. Value range: [4096, 40960]. 
-     * @return ChunkSize The RTMP chunk size. Value range: [4096, 40960].
+     * Get Chunk size of RTMP, ranging from 4096 to 40960. 
+     * @return ChunkSize Chunk size of RTMP, ranging from 4096 to 40960.
      */
     public Long getChunkSize() {
         return this.ChunkSize;
     }
 
     /**
-     * Set The RTMP chunk size. Value range: [4096, 40960].
-     * @param ChunkSize The RTMP chunk size. Value range: [4096, 40960].
+     * Set Chunk size of RTMP, ranging from 4096 to 40960.
+     * @param ChunkSize Chunk size of RTMP, ranging from 4096 to 40960.
      */
     public void setChunkSize(Long ChunkSize) {
         this.ChunkSize = ChunkSize;

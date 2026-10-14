@@ -52,14 +52,14 @@ public class AiRecognitionTaskAsrWordsResult extends AbstractModel {
     private String Message;
 
     /**
-    * Input for the speech keyword recognition task.
+    * Input information on the speech keyword recognition task.
     */
     @SerializedName("Input")
     @Expose
     private AiRecognitionTaskAsrWordsResultInput Input;
 
     /**
-    * 
+    * Output information on the speech keyword recognition task.
     */
     @SerializedName("Output")
     @Expose
@@ -130,32 +130,32 @@ public class AiRecognitionTaskAsrWordsResult extends AbstractModel {
     }
 
     /**
-     * Get Input for the speech keyword recognition task. 
-     * @return Input Input for the speech keyword recognition task.
+     * Get Input information on the speech keyword recognition task. 
+     * @return Input Input information on the speech keyword recognition task.
      */
     public AiRecognitionTaskAsrWordsResultInput getInput() {
         return this.Input;
     }
 
     /**
-     * Set Input for the speech keyword recognition task.
-     * @param Input Input for the speech keyword recognition task.
+     * Set Input information on the speech keyword recognition task.
+     * @param Input Input information on the speech keyword recognition task.
      */
     public void setInput(AiRecognitionTaskAsrWordsResultInput Input) {
         this.Input = Input;
     }
 
     /**
-     * Get  
-     * @return Output 
+     * Get Output information on the speech keyword recognition task. 
+     * @return Output Output information on the speech keyword recognition task.
      */
     public AiRecognitionTaskAsrWordsResultOutput getOutput() {
         return this.Output;
     }
 
     /**
-     * Set 
-     * @param Output 
+     * Set Output information on the speech keyword recognition task.
+     * @param Output Output information on the speech keyword recognition task.
      */
     public void setOutput(AiRecognitionTaskAsrWordsResultOutput Output) {
         this.Output = Output;

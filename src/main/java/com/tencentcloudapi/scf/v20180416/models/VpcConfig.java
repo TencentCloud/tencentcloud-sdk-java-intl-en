@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class VpcConfig extends AbstractModel {
 
     /**
-    * VPC ID
+    * Id of the private network
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * Subnet ID
+    * Subnet Id
     */
     @SerializedName("SubnetId")
     @Expose
     private String SubnetId;
 
     /**
-     * Get VPC ID 
-     * @return VpcId VPC ID
+     * Get Id of the private network 
+     * @return VpcId Id of the private network
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set VPC ID
-     * @param VpcId VPC ID
+     * Set Id of the private network
+     * @param VpcId Id of the private network
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get Subnet ID 
-     * @return SubnetId Subnet ID
+     * Get Subnet Id 
+     * @return SubnetId Subnet Id
      */
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set Subnet ID
-     * @param SubnetId Subnet ID
+     * Set Subnet Id
+     * @param SubnetId Subnet Id
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateStreamLinkOutputInfoResponse extends AbstractModel {
 
     /**
-    * The information of the created output.
+    * Output information after creation.
     */
     @SerializedName("Info")
     @Expose
@@ -38,16 +38,16 @@ public class CreateStreamLinkOutputInfoResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get The information of the created output. 
-     * @return Info The information of the created output.
+     * Get Output information after creation. 
+     * @return Info Output information after creation.
      */
     public DescribeOutput getInfo() {
         return this.Info;
     }
 
     /**
-     * Set The information of the created output.
-     * @param Info The information of the created output.
+     * Set Output information after creation.
+     * @param Info Output information after creation.
      */
     public void setInfo(DescribeOutput Info) {
         this.Info = Info;

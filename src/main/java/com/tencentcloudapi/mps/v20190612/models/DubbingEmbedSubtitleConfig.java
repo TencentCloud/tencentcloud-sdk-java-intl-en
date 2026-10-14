@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DubbingEmbedSubtitleConfig extends AbstractModel {
 
     /**
-    * <p>id of the suppressed subtitles.</p>
+    * <p>Subtitle suppression id.</p>
     */
     @SerializedName("SubtitleEmbedId")
     @Expose
@@ -45,16 +45,16 @@ public class DubbingEmbedSubtitleConfig extends AbstractModel {
     private Long UseOriginalSize;
 
     /**
-     * Get <p>id of the suppressed subtitles.</p> 
-     * @return SubtitleEmbedId <p>id of the suppressed subtitles.</p>
+     * Get <p>Subtitle suppression id.</p> 
+     * @return SubtitleEmbedId <p>Subtitle suppression id.</p>
      */
     public Long getSubtitleEmbedId() {
         return this.SubtitleEmbedId;
     }
 
     /**
-     * Set <p>id of the suppressed subtitles.</p>
-     * @param SubtitleEmbedId <p>id of the suppressed subtitles.</p>
+     * Set <p>Subtitle suppression id.</p>
+     * @param SubtitleEmbedId <p>Subtitle suppression id.</p>
      */
     public void setSubtitleEmbedId(Long SubtitleEmbedId) {
         this.SubtitleEmbedId = SubtitleEmbedId;

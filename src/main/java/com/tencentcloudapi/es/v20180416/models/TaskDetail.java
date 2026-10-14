@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class TaskDetail extends AbstractModel {
 
     /**
-    * Task name
+    * Task Name
     */
     @SerializedName("Name")
     @Expose
@@ -52,24 +52,30 @@ public class TaskDetail extends AbstractModel {
     private SubTaskDetail [] SubTasks;
 
     /**
-    * The task time.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Time taken by the task
     */
     @SerializedName("ElapsedTime")
     @Expose
     private Long ElapsedTime;
 
     /**
-     * Get Task name 
-     * @return Name Task name
+    * Task progress details
+    */
+    @SerializedName("ProcessInfo")
+    @Expose
+    private ProcessDetail ProcessInfo;
+
+    /**
+     * Get Task Name 
+     * @return Name Task Name
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Task name
-     * @param Name Task name
+     * Set Task Name
+     * @param Name Task Name
      */
     public void setName(String Name) {
         this.Name = Name;
@@ -124,23 +130,35 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get The task time.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ElapsedTime The task time.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Time taken by the task 
+     * @return ElapsedTime Time taken by the task
      */
     public Long getElapsedTime() {
         return this.ElapsedTime;
     }
 
     /**
-     * Set The task time.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ElapsedTime The task time.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Time taken by the task
+     * @param ElapsedTime Time taken by the task
      */
     public void setElapsedTime(Long ElapsedTime) {
         this.ElapsedTime = ElapsedTime;
+    }
+
+    /**
+     * Get Task progress details 
+     * @return ProcessInfo Task progress details
+     */
+    public ProcessDetail getProcessInfo() {
+        return this.ProcessInfo;
+    }
+
+    /**
+     * Set Task progress details
+     * @param ProcessInfo Task progress details
+     */
+    public void setProcessInfo(ProcessDetail ProcessInfo) {
+        this.ProcessInfo = ProcessInfo;
     }
 
     public TaskDetail() {
@@ -169,6 +187,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.ElapsedTime != null) {
             this.ElapsedTime = new Long(source.ElapsedTime);
         }
+        if (source.ProcessInfo != null) {
+            this.ProcessInfo = new ProcessDetail(source.ProcessInfo);
+        }
     }
 
 
@@ -181,6 +202,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "FinishTime", this.FinishTime);
         this.setParamArrayObj(map, prefix + "SubTasks.", this.SubTasks);
         this.setParamSimple(map, prefix + "ElapsedTime", this.ElapsedTime);
+        this.setParamObj(map, prefix + "ProcessInfo.", this.ProcessInfo);
 
     }
 }

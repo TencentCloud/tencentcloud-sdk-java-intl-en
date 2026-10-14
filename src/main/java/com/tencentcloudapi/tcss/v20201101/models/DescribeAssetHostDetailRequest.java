@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DescribeAssetHostDetailRequest extends AbstractModel {
 
     /**
-    * Server ID
+    * Host ID
     */
     @SerializedName("HostId")
     @Expose
     private String HostId;
 
     /**
-     * Get Server ID 
-     * @return HostId Server ID
+     * Get Host ID 
+     * @return HostId Host ID
      */
     public String getHostId() {
         return this.HostId;
     }
 
     /**
-     * Set Server ID
-     * @param HostId Server ID
+     * Set Host ID
+     * @param HostId Host ID
      */
     public void setHostId(String HostId) {
         this.HostId = HostId;

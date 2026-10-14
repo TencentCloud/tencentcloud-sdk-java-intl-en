@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateTriggerResponse extends AbstractModel {
 
     /**
-    * Trigger information
+    * Trigger information.
     */
     @SerializedName("TriggerInfo")
     @Expose
@@ -38,16 +38,16 @@ public class CreateTriggerResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Trigger information 
-     * @return TriggerInfo Trigger information
+     * Get Trigger information. 
+     * @return TriggerInfo Trigger information.
      */
     public Trigger getTriggerInfo() {
         return this.TriggerInfo;
     }
 
     /**
-     * Set Trigger information
-     * @param TriggerInfo Trigger information
+     * Set Trigger information.
+     * @param TriggerInfo Trigger information.
      */
     public void setTriggerInfo(Trigger TriggerInfo) {
         this.TriggerInfo = TriggerInfo;

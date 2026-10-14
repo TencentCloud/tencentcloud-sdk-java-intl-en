@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class EsPublicAcl extends AbstractModel {
 
     /**
-    * Access blocklist
+    * Access the blocklist
     */
     @SerializedName("BlackIpList")
     @Expose
@@ -38,16 +38,16 @@ public class EsPublicAcl extends AbstractModel {
     private String [] WhiteIpList;
 
     /**
-     * Get Access blocklist 
-     * @return BlackIpList Access blocklist
+     * Get Access the blocklist 
+     * @return BlackIpList Access the blocklist
      */
     public String [] getBlackIpList() {
         return this.BlackIpList;
     }
 
     /**
-     * Set Access blocklist
-     * @param BlackIpList Access blocklist
+     * Set Access the blocklist
+     * @param BlackIpList Access the blocklist
      */
     public void setBlackIpList(String [] BlackIpList) {
         this.BlackIpList = BlackIpList;

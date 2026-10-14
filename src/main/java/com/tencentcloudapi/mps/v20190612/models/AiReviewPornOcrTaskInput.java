@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class AiReviewPornOcrTaskInput extends AbstractModel {
 
     /**
-    * Template ID for porn detection.
+    * Porn detection template ID.
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-     * Get Template ID for porn detection. 
-     * @return Definition Template ID for porn detection.
+     * Get Porn detection template ID. 
+     * @return Definition Porn detection template ID.
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set Template ID for porn detection.
-     * @param Definition Template ID for porn detection.
+     * Set Porn detection template ID.
+     * @param Definition Porn detection template ID.
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;

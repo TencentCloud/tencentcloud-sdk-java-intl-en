@@ -24,161 +24,161 @@ import java.util.HashMap;
 public class FlowRealtimeStatusSRT extends AbstractModel {
 
     /**
-    * The latency (ms).
+    * Delay in ms.
     */
     @SerializedName("Latency")
     @Expose
     private Long Latency;
 
     /**
-    * RTT (ms).
+    * RTT in ms.
     */
     @SerializedName("RTT")
     @Expose
     private Long RTT;
 
     /**
-    * The number of packets sent or received.
+    * Number of packets sent or received in real time.
     */
     @SerializedName("Packets")
     @Expose
     private Long Packets;
 
     /**
-    * The packet loss rate.
+    * Packet loss rate.
     */
     @SerializedName("PacketLossRate")
     @Expose
     private Float PacketLossRate;
 
     /**
-    * The retransmission rate.
+    * Retransmission rate.
     */
     @SerializedName("RetransmitRate")
     @Expose
     private Float RetransmitRate;
 
     /**
-    * The number of packets dropped.
+    * Real-time packet loss count.
     */
     @SerializedName("DroppedPackets")
     @Expose
     private Long DroppedPackets;
 
     /**
-    * Whether to encrypt the stream. Valid values: On, Off.
+    * Whether to encrypt. On | Off.
     */
     @SerializedName("Encryption")
     @Expose
     private String Encryption;
 
     /**
-     * Get The latency (ms). 
-     * @return Latency The latency (ms).
+     * Get Delay in ms. 
+     * @return Latency Delay in ms.
      */
     public Long getLatency() {
         return this.Latency;
     }
 
     /**
-     * Set The latency (ms).
-     * @param Latency The latency (ms).
+     * Set Delay in ms.
+     * @param Latency Delay in ms.
      */
     public void setLatency(Long Latency) {
         this.Latency = Latency;
     }
 
     /**
-     * Get RTT (ms). 
-     * @return RTT RTT (ms).
+     * Get RTT in ms. 
+     * @return RTT RTT in ms.
      */
     public Long getRTT() {
         return this.RTT;
     }
 
     /**
-     * Set RTT (ms).
-     * @param RTT RTT (ms).
+     * Set RTT in ms.
+     * @param RTT RTT in ms.
      */
     public void setRTT(Long RTT) {
         this.RTT = RTT;
     }
 
     /**
-     * Get The number of packets sent or received. 
-     * @return Packets The number of packets sent or received.
+     * Get Number of packets sent or received in real time. 
+     * @return Packets Number of packets sent or received in real time.
      */
     public Long getPackets() {
         return this.Packets;
     }
 
     /**
-     * Set The number of packets sent or received.
-     * @param Packets The number of packets sent or received.
+     * Set Number of packets sent or received in real time.
+     * @param Packets Number of packets sent or received in real time.
      */
     public void setPackets(Long Packets) {
         this.Packets = Packets;
     }
 
     /**
-     * Get The packet loss rate. 
-     * @return PacketLossRate The packet loss rate.
+     * Get Packet loss rate. 
+     * @return PacketLossRate Packet loss rate.
      */
     public Float getPacketLossRate() {
         return this.PacketLossRate;
     }
 
     /**
-     * Set The packet loss rate.
-     * @param PacketLossRate The packet loss rate.
+     * Set Packet loss rate.
+     * @param PacketLossRate Packet loss rate.
      */
     public void setPacketLossRate(Float PacketLossRate) {
         this.PacketLossRate = PacketLossRate;
     }
 
     /**
-     * Get The retransmission rate. 
-     * @return RetransmitRate The retransmission rate.
+     * Get Retransmission rate. 
+     * @return RetransmitRate Retransmission rate.
      */
     public Float getRetransmitRate() {
         return this.RetransmitRate;
     }
 
     /**
-     * Set The retransmission rate.
-     * @param RetransmitRate The retransmission rate.
+     * Set Retransmission rate.
+     * @param RetransmitRate Retransmission rate.
      */
     public void setRetransmitRate(Float RetransmitRate) {
         this.RetransmitRate = RetransmitRate;
     }
 
     /**
-     * Get The number of packets dropped. 
-     * @return DroppedPackets The number of packets dropped.
+     * Get Real-time packet loss count. 
+     * @return DroppedPackets Real-time packet loss count.
      */
     public Long getDroppedPackets() {
         return this.DroppedPackets;
     }
 
     /**
-     * Set The number of packets dropped.
-     * @param DroppedPackets The number of packets dropped.
+     * Set Real-time packet loss count.
+     * @param DroppedPackets Real-time packet loss count.
      */
     public void setDroppedPackets(Long DroppedPackets) {
         this.DroppedPackets = DroppedPackets;
     }
 
     /**
-     * Get Whether to encrypt the stream. Valid values: On, Off. 
-     * @return Encryption Whether to encrypt the stream. Valid values: On, Off.
+     * Get Whether to encrypt. On | Off. 
+     * @return Encryption Whether to encrypt. On | Off.
      */
     public String getEncryption() {
         return this.Encryption;
     }
 
     /**
-     * Set Whether to encrypt the stream. Valid values: On, Off.
-     * @param Encryption Whether to encrypt the stream. Valid values: On, Off.
+     * Set Whether to encrypt. On | Off.
+     * @param Encryption Whether to encrypt. On | Off.
      */
     public void setEncryption(String Encryption) {
         this.Encryption = Encryption;

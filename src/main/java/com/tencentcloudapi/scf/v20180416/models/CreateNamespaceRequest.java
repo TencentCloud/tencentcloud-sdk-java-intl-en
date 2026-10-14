@@ -38,7 +38,7 @@ public class CreateNamespaceRequest extends AbstractModel {
     private String Description;
 
     /**
-    * 
+    * Resource pool configuration
     */
     @SerializedName("ResourceEnv")
     @Expose
@@ -77,16 +77,16 @@ public class CreateNamespaceRequest extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return ResourceEnv 
+     * Get Resource pool configuration 
+     * @return ResourceEnv Resource pool configuration
      */
     public NamespaceResourceEnv getResourceEnv() {
         return this.ResourceEnv;
     }
 
     /**
-     * Set 
-     * @param ResourceEnv 
+     * Set Resource pool configuration
+     * @param ResourceEnv Resource pool configuration
      */
     public void setResourceEnv(NamespaceResourceEnv ResourceEnv) {
         this.ResourceEnv = ResourceEnv;

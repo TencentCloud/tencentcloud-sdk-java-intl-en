@@ -52,14 +52,14 @@ public class AiReviewTaskTerrorismOcrResult extends AbstractModel {
     private String Message;
 
     /**
-    * Content review Ocr text sensitivity task input.
+    * Content review Ocr text sensitive task input.
     */
     @SerializedName("Input")
     @Expose
     private AiReviewTerrorismOcrTaskInput Input;
 
     /**
-    * 
+    * Content review Ocr text sensitive task output.
     */
     @SerializedName("Output")
     @Expose
@@ -130,32 +130,32 @@ public class AiReviewTaskTerrorismOcrResult extends AbstractModel {
     }
 
     /**
-     * Get Content review Ocr text sensitivity task input. 
-     * @return Input Content review Ocr text sensitivity task input.
+     * Get Content review Ocr text sensitive task input. 
+     * @return Input Content review Ocr text sensitive task input.
      */
     public AiReviewTerrorismOcrTaskInput getInput() {
         return this.Input;
     }
 
     /**
-     * Set Content review Ocr text sensitivity task input.
-     * @param Input Content review Ocr text sensitivity task input.
+     * Set Content review Ocr text sensitive task input.
+     * @param Input Content review Ocr text sensitive task input.
      */
     public void setInput(AiReviewTerrorismOcrTaskInput Input) {
         this.Input = Input;
     }
 
     /**
-     * Get  
-     * @return Output 
+     * Get Content review Ocr text sensitive task output. 
+     * @return Output Content review Ocr text sensitive task output.
      */
     public AiReviewTerrorismOcrTaskOutput getOutput() {
         return this.Output;
     }
 
     /**
-     * Set 
-     * @param Output 
+     * Set Content review Ocr text sensitive task output.
+     * @param Output Content review Ocr text sensitive task output.
      */
     public void setOutput(AiReviewTerrorismOcrTaskOutput Output) {
         this.Output = Output;

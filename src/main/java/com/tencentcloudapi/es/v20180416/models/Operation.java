@@ -24,164 +24,256 @@ import java.util.HashMap;
 public class Operation extends AbstractModel {
 
     /**
-    * Unique operation ID
+    * <p>Unique id of the operation</p>
     */
     @SerializedName("Id")
     @Expose
     private Long Id;
 
     /**
-    * Operation start time
+    * <p>Operation start time.</p>
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * Operation type
+    * <p>Operation type.</p>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * Operation details
+    * <p>Operation details.</p>
     */
     @SerializedName("Detail")
     @Expose
     private OperationDetail Detail;
 
     /**
-    * Operation result
+    * <p>Operation result.</p>
     */
     @SerializedName("Result")
     @Expose
     private String Result;
 
     /**
-    * Workflow task information
+    * <p>Process task info</p>
     */
     @SerializedName("Tasks")
     @Expose
     private TaskDetail [] Tasks;
 
     /**
-    * Operation progress
+    * <p>Operation progress.</p>
     */
     @SerializedName("Progress")
     @Expose
     private Float Progress;
 
     /**
-     * Get Unique operation ID 
-     * @return Id Unique operation ID
+    * <p>Rollback tag. 0: not rolled back, 1: rolling back, 2: rolled back</p>
+    */
+    @SerializedName("RollbackTag")
+    @Expose
+    private Long RollbackTag;
+
+    /**
+    * <p>Operator Uin</p>
+    */
+    @SerializedName("SubAccountUin")
+    @Expose
+    private String SubAccountUin;
+
+    /**
+    * <p>Auto scaling flag. Valid values: 0 (non-auto) and 1 (auto).</p>
+    */
+    @SerializedName("AutoScaleTag")
+    @Expose
+    private Long AutoScaleTag;
+
+    /**
+    * <p>Process exception cause</p>
+    */
+    @SerializedName("SuspendedReason")
+    @Expose
+    private String SuspendedReason;
+
+    /**
+     * Get <p>Unique id of the operation</p> 
+     * @return Id <p>Unique id of the operation</p>
      */
     public Long getId() {
         return this.Id;
     }
 
     /**
-     * Set Unique operation ID
-     * @param Id Unique operation ID
+     * Set <p>Unique id of the operation</p>
+     * @param Id <p>Unique id of the operation</p>
      */
     public void setId(Long Id) {
         this.Id = Id;
     }
 
     /**
-     * Get Operation start time 
-     * @return StartTime Operation start time
+     * Get <p>Operation start time.</p> 
+     * @return StartTime <p>Operation start time.</p>
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set Operation start time
-     * @param StartTime Operation start time
+     * Set <p>Operation start time.</p>
+     * @param StartTime <p>Operation start time.</p>
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get Operation type 
-     * @return Type Operation type
+     * Get <p>Operation type.</p> 
+     * @return Type <p>Operation type.</p>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Operation type
-     * @param Type Operation type
+     * Set <p>Operation type.</p>
+     * @param Type <p>Operation type.</p>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get Operation details 
-     * @return Detail Operation details
+     * Get <p>Operation details.</p> 
+     * @return Detail <p>Operation details.</p>
      */
     public OperationDetail getDetail() {
         return this.Detail;
     }
 
     /**
-     * Set Operation details
-     * @param Detail Operation details
+     * Set <p>Operation details.</p>
+     * @param Detail <p>Operation details.</p>
      */
     public void setDetail(OperationDetail Detail) {
         this.Detail = Detail;
     }
 
     /**
-     * Get Operation result 
-     * @return Result Operation result
+     * Get <p>Operation result.</p> 
+     * @return Result <p>Operation result.</p>
      */
     public String getResult() {
         return this.Result;
     }
 
     /**
-     * Set Operation result
-     * @param Result Operation result
+     * Set <p>Operation result.</p>
+     * @param Result <p>Operation result.</p>
      */
     public void setResult(String Result) {
         this.Result = Result;
     }
 
     /**
-     * Get Workflow task information 
-     * @return Tasks Workflow task information
+     * Get <p>Process task info</p> 
+     * @return Tasks <p>Process task info</p>
      */
     public TaskDetail [] getTasks() {
         return this.Tasks;
     }
 
     /**
-     * Set Workflow task information
-     * @param Tasks Workflow task information
+     * Set <p>Process task info</p>
+     * @param Tasks <p>Process task info</p>
      */
     public void setTasks(TaskDetail [] Tasks) {
         this.Tasks = Tasks;
     }
 
     /**
-     * Get Operation progress 
-     * @return Progress Operation progress
+     * Get <p>Operation progress.</p> 
+     * @return Progress <p>Operation progress.</p>
      */
     public Float getProgress() {
         return this.Progress;
     }
 
     /**
-     * Set Operation progress
-     * @param Progress Operation progress
+     * Set <p>Operation progress.</p>
+     * @param Progress <p>Operation progress.</p>
      */
     public void setProgress(Float Progress) {
         this.Progress = Progress;
+    }
+
+    /**
+     * Get <p>Rollback tag. 0: not rolled back, 1: rolling back, 2: rolled back</p> 
+     * @return RollbackTag <p>Rollback tag. 0: not rolled back, 1: rolling back, 2: rolled back</p>
+     */
+    public Long getRollbackTag() {
+        return this.RollbackTag;
+    }
+
+    /**
+     * Set <p>Rollback tag. 0: not rolled back, 1: rolling back, 2: rolled back</p>
+     * @param RollbackTag <p>Rollback tag. 0: not rolled back, 1: rolling back, 2: rolled back</p>
+     */
+    public void setRollbackTag(Long RollbackTag) {
+        this.RollbackTag = RollbackTag;
+    }
+
+    /**
+     * Get <p>Operator Uin</p> 
+     * @return SubAccountUin <p>Operator Uin</p>
+     */
+    public String getSubAccountUin() {
+        return this.SubAccountUin;
+    }
+
+    /**
+     * Set <p>Operator Uin</p>
+     * @param SubAccountUin <p>Operator Uin</p>
+     */
+    public void setSubAccountUin(String SubAccountUin) {
+        this.SubAccountUin = SubAccountUin;
+    }
+
+    /**
+     * Get <p>Auto scaling flag. Valid values: 0 (non-auto) and 1 (auto).</p> 
+     * @return AutoScaleTag <p>Auto scaling flag. Valid values: 0 (non-auto) and 1 (auto).</p>
+     */
+    public Long getAutoScaleTag() {
+        return this.AutoScaleTag;
+    }
+
+    /**
+     * Set <p>Auto scaling flag. Valid values: 0 (non-auto) and 1 (auto).</p>
+     * @param AutoScaleTag <p>Auto scaling flag. Valid values: 0 (non-auto) and 1 (auto).</p>
+     */
+    public void setAutoScaleTag(Long AutoScaleTag) {
+        this.AutoScaleTag = AutoScaleTag;
+    }
+
+    /**
+     * Get <p>Process exception cause</p> 
+     * @return SuspendedReason <p>Process exception cause</p>
+     */
+    public String getSuspendedReason() {
+        return this.SuspendedReason;
+    }
+
+    /**
+     * Set <p>Process exception cause</p>
+     * @param SuspendedReason <p>Process exception cause</p>
+     */
+    public void setSuspendedReason(String SuspendedReason) {
+        this.SuspendedReason = SuspendedReason;
     }
 
     public Operation() {
@@ -216,6 +308,18 @@ public class Operation extends AbstractModel {
         if (source.Progress != null) {
             this.Progress = new Float(source.Progress);
         }
+        if (source.RollbackTag != null) {
+            this.RollbackTag = new Long(source.RollbackTag);
+        }
+        if (source.SubAccountUin != null) {
+            this.SubAccountUin = new String(source.SubAccountUin);
+        }
+        if (source.AutoScaleTag != null) {
+            this.AutoScaleTag = new Long(source.AutoScaleTag);
+        }
+        if (source.SuspendedReason != null) {
+            this.SuspendedReason = new String(source.SuspendedReason);
+        }
     }
 
 
@@ -230,6 +334,10 @@ public class Operation extends AbstractModel {
         this.setParamSimple(map, prefix + "Result", this.Result);
         this.setParamArrayObj(map, prefix + "Tasks.", this.Tasks);
         this.setParamSimple(map, prefix + "Progress", this.Progress);
+        this.setParamSimple(map, prefix + "RollbackTag", this.RollbackTag);
+        this.setParamSimple(map, prefix + "SubAccountUin", this.SubAccountUin);
+        this.setParamSimple(map, prefix + "AutoScaleTag", this.AutoScaleTag);
+        this.setParamSimple(map, prefix + "SuspendedReason", this.SuspendedReason);
 
     }
 }

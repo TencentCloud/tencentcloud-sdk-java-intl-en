@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class AgentDebugInfo extends AbstractModel {
 
     /**
-    * 
+    * Input information of the tool and large model, json
     */
     @SerializedName("Input")
     @Expose
     private String Input;
 
     /**
-    * 
+    * Output information of tools and large models, in json format
     */
     @SerializedName("Output")
     @Expose
     private String Output;
 
     /**
-    * 
+    * Model name.
     */
     @SerializedName("ModelName")
     @Expose
     private String ModelName;
 
     /**
-     * Get  
-     * @return Input 
+     * Get Input information of the tool and large model, json 
+     * @return Input Input information of the tool and large model, json
      */
     public String getInput() {
         return this.Input;
     }
 
     /**
-     * Set 
-     * @param Input 
+     * Set Input information of the tool and large model, json
+     * @param Input Input information of the tool and large model, json
      */
     public void setInput(String Input) {
         this.Input = Input;
     }
 
     /**
-     * Get  
-     * @return Output 
+     * Get Output information of tools and large models, in json format 
+     * @return Output Output information of tools and large models, in json format
      */
     public String getOutput() {
         return this.Output;
     }
 
     /**
-     * Set 
-     * @param Output 
+     * Set Output information of tools and large models, in json format
+     * @param Output Output information of tools and large models, in json format
      */
     public void setOutput(String Output) {
         this.Output = Output;
     }
 
     /**
-     * Get  
-     * @return ModelName 
+     * Get Model name. 
+     * @return ModelName Model name.
      */
     public String getModelName() {
         return this.ModelName;
     }
 
     /**
-     * Set 
-     * @param ModelName 
+     * Set Model name.
+     * @param ModelName Model name.
      */
     public void setModelName(String ModelName) {
         this.ModelName = ModelName;

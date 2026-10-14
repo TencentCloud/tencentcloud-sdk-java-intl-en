@@ -45,7 +45,7 @@ public class MediaContentReviewOcrTextSegmentItem extends AbstractModel {
     private Float Confidence;
 
     /**
-    * Result Suggestions for suspected segment review, value ranges from...to...
+    * Suggested review result for the suspected segment. Value range:
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
@@ -55,29 +55,29 @@ public class MediaContentReviewOcrTextSegmentItem extends AbstractModel {
     private String Suggestion;
 
     /**
-    * Suspicious keyword list.
+    * List of suspicious keywords.
     */
     @SerializedName("KeywordSet")
     @Expose
     private String [] KeywordSet;
 
     /**
-    * Area coordinates of suspected text occurrence (pixel-level), [x1, y1, x2, y2], i.e., coordinates of the top-left corner and bottom-right corner.
+    * Coordinates of the area where suspected text appears (pixel-level), [x1, y1, x2, y2], i.e. coordinates of the top-left corner and bottom-right corner.
     */
     @SerializedName("AreaCoordSet")
     @Expose
     private Long [] AreaCoordSet;
 
     /**
-    * Suspected image URL (Images are not retained permanently, reaching
-The image will be deleted after the PicUrlExpireTime time point.
+    * Suspected image URL (images are not retained permanently and will reach
+Images will be deleted after the PicUrlExpireTime time point).
     */
     @SerializedName("Url")
     @Expose
     private String Url;
 
     /**
-    * Expiration time of the suspected image URL, using the ISO date format (https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
+    * Expiration time of the suspected image URL in ISO date format (https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
     */
     @SerializedName("PicUrlExpireTime")
     @Expose
@@ -132,11 +132,11 @@ The image will be deleted after the PicUrlExpireTime time point.
     }
 
     /**
-     * Get Result Suggestions for suspected segment review, value ranges from...to...
+     * Get Suggested review result for the suspected segment. Value range:
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li> 
-     * @return Suggestion Result Suggestions for suspected segment review, value ranges from...to...
+     * @return Suggestion Suggested review result for the suspected segment. Value range:
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
@@ -146,11 +146,11 @@ The image will be deleted after the PicUrlExpireTime time point.
     }
 
     /**
-     * Set Result Suggestions for suspected segment review, value ranges from...to...
+     * Set Suggested review result for the suspected segment. Value range:
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
-     * @param Suggestion Result Suggestions for suspected segment review, value ranges from...to...
+     * @param Suggestion Suggested review result for the suspected segment. Value range:
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
@@ -160,68 +160,68 @@ The image will be deleted after the PicUrlExpireTime time point.
     }
 
     /**
-     * Get Suspicious keyword list. 
-     * @return KeywordSet Suspicious keyword list.
+     * Get List of suspicious keywords. 
+     * @return KeywordSet List of suspicious keywords.
      */
     public String [] getKeywordSet() {
         return this.KeywordSet;
     }
 
     /**
-     * Set Suspicious keyword list.
-     * @param KeywordSet Suspicious keyword list.
+     * Set List of suspicious keywords.
+     * @param KeywordSet List of suspicious keywords.
      */
     public void setKeywordSet(String [] KeywordSet) {
         this.KeywordSet = KeywordSet;
     }
 
     /**
-     * Get Area coordinates of suspected text occurrence (pixel-level), [x1, y1, x2, y2], i.e., coordinates of the top-left corner and bottom-right corner. 
-     * @return AreaCoordSet Area coordinates of suspected text occurrence (pixel-level), [x1, y1, x2, y2], i.e., coordinates of the top-left corner and bottom-right corner.
+     * Get Coordinates of the area where suspected text appears (pixel-level), [x1, y1, x2, y2], i.e. coordinates of the top-left corner and bottom-right corner. 
+     * @return AreaCoordSet Coordinates of the area where suspected text appears (pixel-level), [x1, y1, x2, y2], i.e. coordinates of the top-left corner and bottom-right corner.
      */
     public Long [] getAreaCoordSet() {
         return this.AreaCoordSet;
     }
 
     /**
-     * Set Area coordinates of suspected text occurrence (pixel-level), [x1, y1, x2, y2], i.e., coordinates of the top-left corner and bottom-right corner.
-     * @param AreaCoordSet Area coordinates of suspected text occurrence (pixel-level), [x1, y1, x2, y2], i.e., coordinates of the top-left corner and bottom-right corner.
+     * Set Coordinates of the area where suspected text appears (pixel-level), [x1, y1, x2, y2], i.e. coordinates of the top-left corner and bottom-right corner.
+     * @param AreaCoordSet Coordinates of the area where suspected text appears (pixel-level), [x1, y1, x2, y2], i.e. coordinates of the top-left corner and bottom-right corner.
      */
     public void setAreaCoordSet(Long [] AreaCoordSet) {
         this.AreaCoordSet = AreaCoordSet;
     }
 
     /**
-     * Get Suspected image URL (Images are not retained permanently, reaching
-The image will be deleted after the PicUrlExpireTime time point. 
-     * @return Url Suspected image URL (Images are not retained permanently, reaching
-The image will be deleted after the PicUrlExpireTime time point.
+     * Get Suspected image URL (images are not retained permanently and will reach
+Images will be deleted after the PicUrlExpireTime time point). 
+     * @return Url Suspected image URL (images are not retained permanently and will reach
+Images will be deleted after the PicUrlExpireTime time point).
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * Set Suspected image URL (Images are not retained permanently, reaching
-The image will be deleted after the PicUrlExpireTime time point.
-     * @param Url Suspected image URL (Images are not retained permanently, reaching
-The image will be deleted after the PicUrlExpireTime time point.
+     * Set Suspected image URL (images are not retained permanently and will reach
+Images will be deleted after the PicUrlExpireTime time point).
+     * @param Url Suspected image URL (images are not retained permanently and will reach
+Images will be deleted after the PicUrlExpireTime time point).
      */
     public void setUrl(String Url) {
         this.Url = Url;
     }
 
     /**
-     * Get Expiration time of the suspected image URL, using the ISO date format (https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52). 
-     * @return PicUrlExpireTime Expiration time of the suspected image URL, using the ISO date format (https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
+     * Get Expiration time of the suspected image URL in ISO date format (https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52). 
+     * @return PicUrlExpireTime Expiration time of the suspected image URL in ISO date format (https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
      */
     public String getPicUrlExpireTime() {
         return this.PicUrlExpireTime;
     }
 
     /**
-     * Set Expiration time of the suspected image URL, using the ISO date format (https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
-     * @param PicUrlExpireTime Expiration time of the suspected image URL, using the ISO date format (https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
+     * Set Expiration time of the suspected image URL in ISO date format (https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
+     * @param PicUrlExpireTime Expiration time of the suspected image URL in ISO date format (https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
      */
     public void setPicUrlExpireTime(String PicUrlExpireTime) {
         this.PicUrlExpireTime = PicUrlExpireTime;

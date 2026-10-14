@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class DescribeInputRISTSettings extends AbstractModel {
 
     /**
-    * 
+    * RIST mode. Options: [LISTENER|CALLER]. Default value: LISTENER.
     */
     @SerializedName("Mode")
     @Expose
     private String Mode;
 
     /**
-    * 
+    * RIST configuration solution. Options: [MAIN|SIMPLE]. Default: MAIN.
     */
     @SerializedName("Profile")
     @Expose
     private String Profile;
 
     /**
-    * 
+    * RIST buffer size in milliseconds. Minimum value: 50 ms. Maximum value: 5000 ms. Default value: 120.
     */
     @SerializedName("Buffer")
     @Expose
     private Long Buffer;
 
     /**
-     * Get  
-     * @return Mode 
+     * Get RIST mode. Options: [LISTENER|CALLER]. Default value: LISTENER. 
+     * @return Mode RIST mode. Options: [LISTENER|CALLER]. Default value: LISTENER.
      */
     public String getMode() {
         return this.Mode;
     }
 
     /**
-     * Set 
-     * @param Mode 
+     * Set RIST mode. Options: [LISTENER|CALLER]. Default value: LISTENER.
+     * @param Mode RIST mode. Options: [LISTENER|CALLER]. Default value: LISTENER.
      */
     public void setMode(String Mode) {
         this.Mode = Mode;
     }
 
     /**
-     * Get  
-     * @return Profile 
+     * Get RIST configuration solution. Options: [MAIN|SIMPLE]. Default: MAIN. 
+     * @return Profile RIST configuration solution. Options: [MAIN|SIMPLE]. Default: MAIN.
      */
     public String getProfile() {
         return this.Profile;
     }
 
     /**
-     * Set 
-     * @param Profile 
+     * Set RIST configuration solution. Options: [MAIN|SIMPLE]. Default: MAIN.
+     * @param Profile RIST configuration solution. Options: [MAIN|SIMPLE]. Default: MAIN.
      */
     public void setProfile(String Profile) {
         this.Profile = Profile;
     }
 
     /**
-     * Get  
-     * @return Buffer 
+     * Get RIST buffer size in milliseconds. Minimum value: 50 ms. Maximum value: 5000 ms. Default value: 120. 
+     * @return Buffer RIST buffer size in milliseconds. Minimum value: 50 ms. Maximum value: 5000 ms. Default value: 120.
      */
     public Long getBuffer() {
         return this.Buffer;
     }
 
     /**
-     * Set 
-     * @param Buffer 
+     * Set RIST buffer size in milliseconds. Minimum value: 50 ms. Maximum value: 5000 ms. Default value: 120.
+     * @param Buffer RIST buffer size in milliseconds. Minimum value: 50 ms. Maximum value: 5000 ms. Default value: 120.
      */
     public void setBuffer(Long Buffer) {
         this.Buffer = Buffer;

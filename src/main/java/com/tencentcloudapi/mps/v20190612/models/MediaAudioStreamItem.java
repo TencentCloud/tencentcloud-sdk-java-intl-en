@@ -45,21 +45,21 @@ public class MediaAudioStreamItem extends AbstractModel {
     private String Codec;
 
     /**
-    * 
+    * Number of audio channels, for example, 2.
     */
     @SerializedName("Channel")
     @Expose
     private Long Channel;
 
     /**
-    * 
+    * Audio Codecs.
     */
     @SerializedName("Codecs")
     @Expose
     private String Codecs;
 
     /**
-    * 
+    * Audio loudness.
     */
     @SerializedName("Loudness")
     @Expose
@@ -114,48 +114,48 @@ public class MediaAudioStreamItem extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return Channel 
+     * Get Number of audio channels, for example, 2. 
+     * @return Channel Number of audio channels, for example, 2.
      */
     public Long getChannel() {
         return this.Channel;
     }
 
     /**
-     * Set 
-     * @param Channel 
+     * Set Number of audio channels, for example, 2.
+     * @param Channel Number of audio channels, for example, 2.
      */
     public void setChannel(Long Channel) {
         this.Channel = Channel;
     }
 
     /**
-     * Get  
-     * @return Codecs 
+     * Get Audio Codecs. 
+     * @return Codecs Audio Codecs.
      */
     public String getCodecs() {
         return this.Codecs;
     }
 
     /**
-     * Set 
-     * @param Codecs 
+     * Set Audio Codecs.
+     * @param Codecs Audio Codecs.
      */
     public void setCodecs(String Codecs) {
         this.Codecs = Codecs;
     }
 
     /**
-     * Get  
-     * @return Loudness 
+     * Get Audio loudness. 
+     * @return Loudness Audio loudness.
      */
     public Float getLoudness() {
         return this.Loudness;
     }
 
     /**
-     * Set 
-     * @param Loudness 
+     * Set Audio loudness.
+     * @param Loudness Audio loudness.
      */
     public void setLoudness(Float Loudness) {
         this.Loudness = Loudness;

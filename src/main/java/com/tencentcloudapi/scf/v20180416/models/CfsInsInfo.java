@@ -31,59 +31,59 @@ public class CfsInsInfo extends AbstractModel {
     private String UserId;
 
     /**
-    * User group ID
+    * User group id.
     */
     @SerializedName("UserGroupId")
     @Expose
     private String UserGroupId;
 
     /**
-    * CFS instance ID
+    * File system instance id
     */
     @SerializedName("CfsId")
     @Expose
     private String CfsId;
 
     /**
-    * File system mount target ID
+    * File system mount point id
     */
     @SerializedName("MountInsId")
     @Expose
     private String MountInsId;
 
     /**
-    * Local mount target
+    * Local mount point
     */
     @SerializedName("LocalMountDir")
     @Expose
     private String LocalMountDir;
 
     /**
-    * Remote mount target
+    * Remote mount point.
     */
     @SerializedName("RemoteMountDir")
     @Expose
     private String RemoteMountDir;
 
     /**
-    * File system IP, which is not required when you configure CFS.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * File system ip. No need to specify when configuring cfs.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("IpAddress")
     @Expose
     private String IpAddress;
 
     /**
-    * VPC ID of file system, which is not required when you configure CFS.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * VPC id where the file system is located. Not required when configuring cfs.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("MountVpcId")
     @Expose
     private String MountVpcId;
 
     /**
-    * VPC subnet ID of file system, which is not required when you configure CFS.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Subnet id of the private network where the file system resides. Not required when configuring cfs.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("MountSubnetId")
     @Expose
@@ -106,140 +106,140 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get User group ID 
-     * @return UserGroupId User group ID
+     * Get User group id. 
+     * @return UserGroupId User group id.
      */
     public String getUserGroupId() {
         return this.UserGroupId;
     }
 
     /**
-     * Set User group ID
-     * @param UserGroupId User group ID
+     * Set User group id.
+     * @param UserGroupId User group id.
      */
     public void setUserGroupId(String UserGroupId) {
         this.UserGroupId = UserGroupId;
     }
 
     /**
-     * Get CFS instance ID 
-     * @return CfsId CFS instance ID
+     * Get File system instance id 
+     * @return CfsId File system instance id
      */
     public String getCfsId() {
         return this.CfsId;
     }
 
     /**
-     * Set CFS instance ID
-     * @param CfsId CFS instance ID
+     * Set File system instance id
+     * @param CfsId File system instance id
      */
     public void setCfsId(String CfsId) {
         this.CfsId = CfsId;
     }
 
     /**
-     * Get File system mount target ID 
-     * @return MountInsId File system mount target ID
+     * Get File system mount point id 
+     * @return MountInsId File system mount point id
      */
     public String getMountInsId() {
         return this.MountInsId;
     }
 
     /**
-     * Set File system mount target ID
-     * @param MountInsId File system mount target ID
+     * Set File system mount point id
+     * @param MountInsId File system mount point id
      */
     public void setMountInsId(String MountInsId) {
         this.MountInsId = MountInsId;
     }
 
     /**
-     * Get Local mount target 
-     * @return LocalMountDir Local mount target
+     * Get Local mount point 
+     * @return LocalMountDir Local mount point
      */
     public String getLocalMountDir() {
         return this.LocalMountDir;
     }
 
     /**
-     * Set Local mount target
-     * @param LocalMountDir Local mount target
+     * Set Local mount point
+     * @param LocalMountDir Local mount point
      */
     public void setLocalMountDir(String LocalMountDir) {
         this.LocalMountDir = LocalMountDir;
     }
 
     /**
-     * Get Remote mount target 
-     * @return RemoteMountDir Remote mount target
+     * Get Remote mount point. 
+     * @return RemoteMountDir Remote mount point.
      */
     public String getRemoteMountDir() {
         return this.RemoteMountDir;
     }
 
     /**
-     * Set Remote mount target
-     * @param RemoteMountDir Remote mount target
+     * Set Remote mount point.
+     * @param RemoteMountDir Remote mount point.
      */
     public void setRemoteMountDir(String RemoteMountDir) {
         this.RemoteMountDir = RemoteMountDir;
     }
 
     /**
-     * Get File system IP, which is not required when you configure CFS.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return IpAddress File system IP, which is not required when you configure CFS.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get File system ip. No need to specify when configuring cfs.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return IpAddress File system ip. No need to specify when configuring cfs.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getIpAddress() {
         return this.IpAddress;
     }
 
     /**
-     * Set File system IP, which is not required when you configure CFS.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param IpAddress File system IP, which is not required when you configure CFS.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set File system ip. No need to specify when configuring cfs.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param IpAddress File system ip. No need to specify when configuring cfs.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setIpAddress(String IpAddress) {
         this.IpAddress = IpAddress;
     }
 
     /**
-     * Get VPC ID of file system, which is not required when you configure CFS.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return MountVpcId VPC ID of file system, which is not required when you configure CFS.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get VPC id where the file system is located. Not required when configuring cfs.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return MountVpcId VPC id where the file system is located. Not required when configuring cfs.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getMountVpcId() {
         return this.MountVpcId;
     }
 
     /**
-     * Set VPC ID of file system, which is not required when you configure CFS.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param MountVpcId VPC ID of file system, which is not required when you configure CFS.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set VPC id where the file system is located. Not required when configuring cfs.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param MountVpcId VPC id where the file system is located. Not required when configuring cfs.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setMountVpcId(String MountVpcId) {
         this.MountVpcId = MountVpcId;
     }
 
     /**
-     * Get VPC subnet ID of file system, which is not required when you configure CFS.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return MountSubnetId VPC subnet ID of file system, which is not required when you configure CFS.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Subnet id of the private network where the file system resides. Not required when configuring cfs.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return MountSubnetId Subnet id of the private network where the file system resides. Not required when configuring cfs.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getMountSubnetId() {
         return this.MountSubnetId;
     }
 
     /**
-     * Set VPC subnet ID of file system, which is not required when you configure CFS.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param MountSubnetId VPC subnet ID of file system, which is not required when you configure CFS.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Subnet id of the private network where the file system resides. Not required when configuring cfs.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param MountSubnetId Subnet id of the private network where the file system resides. Not required when configuring cfs.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setMountSubnetId(String MountSubnetId) {
         this.MountSubnetId = MountSubnetId;

@@ -24,74 +24,74 @@ import java.util.HashMap;
 public class MediaAiAnalysisFrameTagItem extends AbstractModel {
 
     /**
-    * Tag name by frame.
+    * Frame-specific tag name.
     */
     @SerializedName("Tag")
     @Expose
     private String Tag;
 
     /**
-    * Classification list by frame tag name. CategorySet.N indicates the (N+1)th level classification.
-For example, when the Tag is "tower", CategorySet contains two elements: CategorySet.0 is "scenario" and CategorySet.1 is "building", which means the frame Tag is "tower", the first-level category is "scenario", and the second-level category is "building".
+    * Classification list by frame tag name. CategorySet.N refers to the (N+1)-level category.
+For example, when Tag is "tower", CategorySet contains two elements: CategorySet.0 is "scenario" and CategorySet.1 is "building", which means the frame tag is "tower", the level-1 category is "scenario", and the level-2 category is "building".
     */
     @SerializedName("CategorySet")
     @Expose
     private String [] CategorySet;
 
     /**
-    * Reliability of frame tagging, with a value range from 0 to -100.
+    * Confidence of frame tagging, with a value range from 0 to 100.
     */
     @SerializedName("Confidence")
     @Expose
     private Float Confidence;
 
     /**
-     * Get Tag name by frame. 
-     * @return Tag Tag name by frame.
+     * Get Frame-specific tag name. 
+     * @return Tag Frame-specific tag name.
      */
     public String getTag() {
         return this.Tag;
     }
 
     /**
-     * Set Tag name by frame.
-     * @param Tag Tag name by frame.
+     * Set Frame-specific tag name.
+     * @param Tag Frame-specific tag name.
      */
     public void setTag(String Tag) {
         this.Tag = Tag;
     }
 
     /**
-     * Get Classification list by frame tag name. CategorySet.N indicates the (N+1)th level classification.
-For example, when the Tag is "tower", CategorySet contains two elements: CategorySet.0 is "scenario" and CategorySet.1 is "building", which means the frame Tag is "tower", the first-level category is "scenario", and the second-level category is "building". 
-     * @return CategorySet Classification list by frame tag name. CategorySet.N indicates the (N+1)th level classification.
-For example, when the Tag is "tower", CategorySet contains two elements: CategorySet.0 is "scenario" and CategorySet.1 is "building", which means the frame Tag is "tower", the first-level category is "scenario", and the second-level category is "building".
+     * Get Classification list by frame tag name. CategorySet.N refers to the (N+1)-level category.
+For example, when Tag is "tower", CategorySet contains two elements: CategorySet.0 is "scenario" and CategorySet.1 is "building", which means the frame tag is "tower", the level-1 category is "scenario", and the level-2 category is "building". 
+     * @return CategorySet Classification list by frame tag name. CategorySet.N refers to the (N+1)-level category.
+For example, when Tag is "tower", CategorySet contains two elements: CategorySet.0 is "scenario" and CategorySet.1 is "building", which means the frame tag is "tower", the level-1 category is "scenario", and the level-2 category is "building".
      */
     public String [] getCategorySet() {
         return this.CategorySet;
     }
 
     /**
-     * Set Classification list by frame tag name. CategorySet.N indicates the (N+1)th level classification.
-For example, when the Tag is "tower", CategorySet contains two elements: CategorySet.0 is "scenario" and CategorySet.1 is "building", which means the frame Tag is "tower", the first-level category is "scenario", and the second-level category is "building".
-     * @param CategorySet Classification list by frame tag name. CategorySet.N indicates the (N+1)th level classification.
-For example, when the Tag is "tower", CategorySet contains two elements: CategorySet.0 is "scenario" and CategorySet.1 is "building", which means the frame Tag is "tower", the first-level category is "scenario", and the second-level category is "building".
+     * Set Classification list by frame tag name. CategorySet.N refers to the (N+1)-level category.
+For example, when Tag is "tower", CategorySet contains two elements: CategorySet.0 is "scenario" and CategorySet.1 is "building", which means the frame tag is "tower", the level-1 category is "scenario", and the level-2 category is "building".
+     * @param CategorySet Classification list by frame tag name. CategorySet.N refers to the (N+1)-level category.
+For example, when Tag is "tower", CategorySet contains two elements: CategorySet.0 is "scenario" and CategorySet.1 is "building", which means the frame tag is "tower", the level-1 category is "scenario", and the level-2 category is "building".
      */
     public void setCategorySet(String [] CategorySet) {
         this.CategorySet = CategorySet;
     }
 
     /**
-     * Get Reliability of frame tagging, with a value range from 0 to -100. 
-     * @return Confidence Reliability of frame tagging, with a value range from 0 to -100.
+     * Get Confidence of frame tagging, with a value range from 0 to 100. 
+     * @return Confidence Confidence of frame tagging, with a value range from 0 to 100.
      */
     public Float getConfidence() {
         return this.Confidence;
     }
 
     /**
-     * Set Reliability of frame tagging, with a value range from 0 to -100.
-     * @param Confidence Reliability of frame tagging, with a value range from 0 to -100.
+     * Set Confidence of frame tagging, with a value range from 0 to 100.
+     * @param Confidence Confidence of frame tagging, with a value range from 0 to 100.
      */
     public void setConfidence(Float Confidence) {
         this.Confidence = Confidence;

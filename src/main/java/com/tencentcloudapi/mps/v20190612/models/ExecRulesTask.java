@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class ExecRulesTask extends AbstractModel {
 
     /**
-    * 
+    * Conditional judgment information.
     */
     @SerializedName("Rules")
     @Expose
     private Rules [] Rules;
 
     /**
-     * Get  
-     * @return Rules 
+     * Get Conditional judgment information. 
+     * @return Rules Conditional judgment information.
      */
     public Rules [] getRules() {
         return this.Rules;
     }
 
     /**
-     * Set 
-     * @param Rules 
+     * Set Conditional judgment information.
+     * @param Rules Conditional judgment information.
      */
     public void setRules(Rules [] Rules) {
         this.Rules = Rules;

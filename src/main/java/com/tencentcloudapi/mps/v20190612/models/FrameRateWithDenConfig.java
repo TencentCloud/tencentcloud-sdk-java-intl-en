@@ -25,8 +25,8 @@ public class FrameRateWithDenConfig extends AbstractModel {
 
     /**
     * Capability configuration switch. Valid values:
-<li>ON: enabled</li>
-<li>OFF: disabled</li>
+<li>ON: enabled;</li>
+<li>OFF: disabled.</li>
 Default value: ON.
     */
     @SerializedName("Switch")
@@ -34,14 +34,14 @@ Default value: ON.
     private String Switch;
 
     /**
-    * 
+    * Frame rate numerator. Value range: non-negative number, which should be less than 120 when divided by the denominator, and in the unit of Hz. The default value is 0. Note: For transcoding, this parameter will overwrite the Fps in the VideoTemplate.
     */
     @SerializedName("FpsNum")
     @Expose
     private Long FpsNum;
 
     /**
-    * 
+    * Frame rate denominator. Value range: numbers equal to or greater than 1. The default value is 1. Note: For transcoding, this parameter will override the FpsDenominator in the VideoTemplate.
     */
     @SerializedName("FpsDen")
     @Expose
@@ -49,12 +49,12 @@ Default value: ON.
 
     /**
      * Get Capability configuration switch. Valid values:
-<li>ON: enabled</li>
-<li>OFF: disabled</li>
+<li>ON: enabled;</li>
+<li>OFF: disabled.</li>
 Default value: ON. 
      * @return Switch Capability configuration switch. Valid values:
-<li>ON: enabled</li>
-<li>OFF: disabled</li>
+<li>ON: enabled;</li>
+<li>OFF: disabled.</li>
 Default value: ON.
      */
     public String getSwitch() {
@@ -63,12 +63,12 @@ Default value: ON.
 
     /**
      * Set Capability configuration switch. Valid values:
-<li>ON: enabled</li>
-<li>OFF: disabled</li>
+<li>ON: enabled;</li>
+<li>OFF: disabled.</li>
 Default value: ON.
      * @param Switch Capability configuration switch. Valid values:
-<li>ON: enabled</li>
-<li>OFF: disabled</li>
+<li>ON: enabled;</li>
+<li>OFF: disabled.</li>
 Default value: ON.
      */
     public void setSwitch(String Switch) {
@@ -76,32 +76,32 @@ Default value: ON.
     }
 
     /**
-     * Get  
-     * @return FpsNum 
+     * Get Frame rate numerator. Value range: non-negative number, which should be less than 120 when divided by the denominator, and in the unit of Hz. The default value is 0. Note: For transcoding, this parameter will overwrite the Fps in the VideoTemplate. 
+     * @return FpsNum Frame rate numerator. Value range: non-negative number, which should be less than 120 when divided by the denominator, and in the unit of Hz. The default value is 0. Note: For transcoding, this parameter will overwrite the Fps in the VideoTemplate.
      */
     public Long getFpsNum() {
         return this.FpsNum;
     }
 
     /**
-     * Set 
-     * @param FpsNum 
+     * Set Frame rate numerator. Value range: non-negative number, which should be less than 120 when divided by the denominator, and in the unit of Hz. The default value is 0. Note: For transcoding, this parameter will overwrite the Fps in the VideoTemplate.
+     * @param FpsNum Frame rate numerator. Value range: non-negative number, which should be less than 120 when divided by the denominator, and in the unit of Hz. The default value is 0. Note: For transcoding, this parameter will overwrite the Fps in the VideoTemplate.
      */
     public void setFpsNum(Long FpsNum) {
         this.FpsNum = FpsNum;
     }
 
     /**
-     * Get  
-     * @return FpsDen 
+     * Get Frame rate denominator. Value range: numbers equal to or greater than 1. The default value is 1. Note: For transcoding, this parameter will override the FpsDenominator in the VideoTemplate. 
+     * @return FpsDen Frame rate denominator. Value range: numbers equal to or greater than 1. The default value is 1. Note: For transcoding, this parameter will override the FpsDenominator in the VideoTemplate.
      */
     public Long getFpsDen() {
         return this.FpsDen;
     }
 
     /**
-     * Set 
-     * @param FpsDen 
+     * Set Frame rate denominator. Value range: numbers equal to or greater than 1. The default value is 1. Note: For transcoding, this parameter will override the FpsDenominator in the VideoTemplate.
+     * @param FpsDen Frame rate denominator. Value range: numbers equal to or greater than 1. The default value is 1. Note: For transcoding, this parameter will override the FpsDenominator in the VideoTemplate.
      */
     public void setFpsDen(Long FpsDen) {
         this.FpsDen = FpsDen;

@@ -31,7 +31,7 @@ public class MediaAiAnalysisCoverItem extends AbstractModel {
     private String CoverPath;
 
     /**
-    * Reliability of the intelligent cover, with a value range from 0 to -100.
+    * Confidence of the intelligent cover, with a value range from 0 to 100.
     */
     @SerializedName("Confidence")
     @Expose
@@ -54,16 +54,16 @@ public class MediaAiAnalysisCoverItem extends AbstractModel {
     }
 
     /**
-     * Get Reliability of the intelligent cover, with a value range from 0 to -100. 
-     * @return Confidence Reliability of the intelligent cover, with a value range from 0 to -100.
+     * Get Confidence of the intelligent cover, with a value range from 0 to 100. 
+     * @return Confidence Confidence of the intelligent cover, with a value range from 0 to 100.
      */
     public Float getConfidence() {
         return this.Confidence;
     }
 
     /**
-     * Set Reliability of the intelligent cover, with a value range from 0 to -100.
-     * @param Confidence Reliability of the intelligent cover, with a value range from 0 to -100.
+     * Set Confidence of the intelligent cover, with a value range from 0 to 100.
+     * @param Confidence Confidence of the intelligent cover, with a value range from 0 to 100.
      */
     public void setConfidence(Float Confidence) {
         this.Confidence = Confidence;

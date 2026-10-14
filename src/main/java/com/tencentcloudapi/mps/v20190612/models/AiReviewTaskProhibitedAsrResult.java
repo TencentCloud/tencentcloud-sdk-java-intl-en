@@ -52,14 +52,14 @@ public class AiReviewTaskProhibitedAsrResult extends AbstractModel {
     private String Message;
 
     /**
-    * Content review Asr text prohibited task input.
+    * Input of the prohibited task for content review of Asr text.
     */
     @SerializedName("Input")
     @Expose
     private AiReviewProhibitedAsrTaskInput Input;
 
     /**
-    * 
+    * Output of the prohibited task for content review of Asr text.
     */
     @SerializedName("Output")
     @Expose
@@ -130,32 +130,32 @@ public class AiReviewTaskProhibitedAsrResult extends AbstractModel {
     }
 
     /**
-     * Get Content review Asr text prohibited task input. 
-     * @return Input Content review Asr text prohibited task input.
+     * Get Input of the prohibited task for content review of Asr text. 
+     * @return Input Input of the prohibited task for content review of Asr text.
      */
     public AiReviewProhibitedAsrTaskInput getInput() {
         return this.Input;
     }
 
     /**
-     * Set Content review Asr text prohibited task input.
-     * @param Input Content review Asr text prohibited task input.
+     * Set Input of the prohibited task for content review of Asr text.
+     * @param Input Input of the prohibited task for content review of Asr text.
      */
     public void setInput(AiReviewProhibitedAsrTaskInput Input) {
         this.Input = Input;
     }
 
     /**
-     * Get  
-     * @return Output 
+     * Get Output of the prohibited task for content review of Asr text. 
+     * @return Output Output of the prohibited task for content review of Asr text.
      */
     public AiReviewProhibitedAsrTaskOutput getOutput() {
         return this.Output;
     }
 
     /**
-     * Set 
-     * @param Output 
+     * Set Output of the prohibited task for content review of Asr text.
+     * @param Output Output of the prohibited task for content review of Asr text.
      */
     public void setOutput(AiReviewProhibitedAsrTaskOutput Output) {
         this.Output = Output;

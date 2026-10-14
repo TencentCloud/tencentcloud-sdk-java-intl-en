@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class ResilientStreamConf extends AbstractModel {
 
     /**
-    * 
+    * Whether to enable smooth delivery during delayed streaming. true: enable; false: disable. Not enabled by default.
     */
     @SerializedName("Enable")
     @Expose
     private Boolean Enable;
 
     /**
-    * 
+    * Delay time in seconds, ranging from 10 to 300 for the time being.
     */
     @SerializedName("BufferTime")
     @Expose
     private Long BufferTime;
 
     /**
-     * Get  
-     * @return Enable 
+     * Get Whether to enable smooth delivery during delayed streaming. true: enable; false: disable. Not enabled by default. 
+     * @return Enable Whether to enable smooth delivery during delayed streaming. true: enable; false: disable. Not enabled by default.
      */
     public Boolean getEnable() {
         return this.Enable;
     }
 
     /**
-     * Set 
-     * @param Enable 
+     * Set Whether to enable smooth delivery during delayed streaming. true: enable; false: disable. Not enabled by default.
+     * @param Enable Whether to enable smooth delivery during delayed streaming. true: enable; false: disable. Not enabled by default.
      */
     public void setEnable(Boolean Enable) {
         this.Enable = Enable;
     }
 
     /**
-     * Get  
-     * @return BufferTime 
+     * Get Delay time in seconds, ranging from 10 to 300 for the time being. 
+     * @return BufferTime Delay time in seconds, ranging from 10 to 300 for the time being.
      */
     public Long getBufferTime() {
         return this.BufferTime;
     }
 
     /**
-     * Set 
-     * @param BufferTime 
+     * Set Delay time in seconds, ranging from 10 to 300 for the time being.
+     * @param BufferTime Delay time in seconds, ranging from 10 to 300 for the time being.
      */
     public void setBufferTime(Long BufferTime) {
         this.BufferTime = BufferTime;

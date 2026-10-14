@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class RawImageWatermarkInput extends AbstractModel {
 
     /**
-    * Input content of the watermark image. jpeg and png image formats are supported.
+    * Input content of the watermark image. Supports jpeg and png image formats.
     */
     @SerializedName("ImageContent")
     @Expose
@@ -33,7 +33,7 @@ public class RawImageWatermarkInput extends AbstractModel {
     /**
     * Width of a watermark, supporting two formats: % and px.
 <li>If a string ends with %, it indicates that the `Width` of a watermark is a percentage of a video's width. For example, `10%` means that `Width` is 10% of a video's width.</li>
-<li>If a string ends with px, it means the watermark Width is in pixels. For example, 100px means the Width is 100 pixels.</li>
+<li>If a string ends with px, Width is in pixels. For example, 100px means Width is 100 pixels.</li>
 Default value: 10%.
     */
     @SerializedName("Width")
@@ -41,7 +41,7 @@ Default value: 10%.
     private String Width;
 
     /**
-    * Height of a watermark. Supports two formats: % and px.
+    * Height of a watermark, supporting two formats: % and px.
 <li>If a string ends with %, it indicates that the `Height` of a watermark is a percentage of a video's height. For example, `10%` means that `Height` is 10% of a video's height.</li>
 <li>If a string ends with px, it means the watermark Height is in pixels. For example, 100px means the Height is 100 pixels.</li>
 Default value: 0px, which means Height is scaled according to the aspect ratio of the raw watermark image.
@@ -51,26 +51,26 @@ Default value: 0px, which means Height is scaled according to the aspect ratio o
     private String Height;
 
     /**
-    * Watermark repeat type. Usage scenario: the watermark is a dynamic image. Value range:
-<li>once: The dynamic watermark will no longer appear after it has finished playing;</li>
-<li>repeat_last_frame: Stay on the last frame after the watermark finished playing;</li>
-<li>repeat: Watermark loops until the video ends (default value).</li>
+    * Watermark repeat type. Usage scenario: The watermark is a dynamic image. Value range:
+<li>once: The dynamic watermark no longer appears after it is finished playing;</li>
+<li>repeat_last_frame: after the watermark finishes playing, stay on the last frame;</li>
+<li>repeat: watermark loops until the video ends (default value).</li>
     */
     @SerializedName("RepeatType")
     @Expose
     private String RepeatType;
 
     /**
-     * Get Input content of the watermark image. jpeg and png image formats are supported. 
-     * @return ImageContent Input content of the watermark image. jpeg and png image formats are supported.
+     * Get Input content of the watermark image. Supports jpeg and png image formats. 
+     * @return ImageContent Input content of the watermark image. Supports jpeg and png image formats.
      */
     public MediaInputInfo getImageContent() {
         return this.ImageContent;
     }
 
     /**
-     * Set Input content of the watermark image. jpeg and png image formats are supported.
-     * @param ImageContent Input content of the watermark image. jpeg and png image formats are supported.
+     * Set Input content of the watermark image. Supports jpeg and png image formats.
+     * @param ImageContent Input content of the watermark image. Supports jpeg and png image formats.
      */
     public void setImageContent(MediaInputInfo ImageContent) {
         this.ImageContent = ImageContent;
@@ -79,11 +79,11 @@ Default value: 0px, which means Height is scaled according to the aspect ratio o
     /**
      * Get Width of a watermark, supporting two formats: % and px.
 <li>If a string ends with %, it indicates that the `Width` of a watermark is a percentage of a video's width. For example, `10%` means that `Width` is 10% of a video's width.</li>
-<li>If a string ends with px, it means the watermark Width is in pixels. For example, 100px means the Width is 100 pixels.</li>
+<li>If a string ends with px, Width is in pixels. For example, 100px means Width is 100 pixels.</li>
 Default value: 10%. 
      * @return Width Width of a watermark, supporting two formats: % and px.
 <li>If a string ends with %, it indicates that the `Width` of a watermark is a percentage of a video's width. For example, `10%` means that `Width` is 10% of a video's width.</li>
-<li>If a string ends with px, it means the watermark Width is in pixels. For example, 100px means the Width is 100 pixels.</li>
+<li>If a string ends with px, Width is in pixels. For example, 100px means Width is 100 pixels.</li>
 Default value: 10%.
      */
     public String getWidth() {
@@ -93,11 +93,11 @@ Default value: 10%.
     /**
      * Set Width of a watermark, supporting two formats: % and px.
 <li>If a string ends with %, it indicates that the `Width` of a watermark is a percentage of a video's width. For example, `10%` means that `Width` is 10% of a video's width.</li>
-<li>If a string ends with px, it means the watermark Width is in pixels. For example, 100px means the Width is 100 pixels.</li>
+<li>If a string ends with px, Width is in pixels. For example, 100px means Width is 100 pixels.</li>
 Default value: 10%.
      * @param Width Width of a watermark, supporting two formats: % and px.
 <li>If a string ends with %, it indicates that the `Width` of a watermark is a percentage of a video's width. For example, `10%` means that `Width` is 10% of a video's width.</li>
-<li>If a string ends with px, it means the watermark Width is in pixels. For example, 100px means the Width is 100 pixels.</li>
+<li>If a string ends with px, Width is in pixels. For example, 100px means Width is 100 pixels.</li>
 Default value: 10%.
      */
     public void setWidth(String Width) {
@@ -105,11 +105,11 @@ Default value: 10%.
     }
 
     /**
-     * Get Height of a watermark. Supports two formats: % and px.
+     * Get Height of a watermark, supporting two formats: % and px.
 <li>If a string ends with %, it indicates that the `Height` of a watermark is a percentage of a video's height. For example, `10%` means that `Height` is 10% of a video's height.</li>
 <li>If a string ends with px, it means the watermark Height is in pixels. For example, 100px means the Height is 100 pixels.</li>
 Default value: 0px, which means Height is scaled according to the aspect ratio of the raw watermark image. 
-     * @return Height Height of a watermark. Supports two formats: % and px.
+     * @return Height Height of a watermark, supporting two formats: % and px.
 <li>If a string ends with %, it indicates that the `Height` of a watermark is a percentage of a video's height. For example, `10%` means that `Height` is 10% of a video's height.</li>
 <li>If a string ends with px, it means the watermark Height is in pixels. For example, 100px means the Height is 100 pixels.</li>
 Default value: 0px, which means Height is scaled according to the aspect ratio of the raw watermark image.
@@ -119,11 +119,11 @@ Default value: 0px, which means Height is scaled according to the aspect ratio o
     }
 
     /**
-     * Set Height of a watermark. Supports two formats: % and px.
+     * Set Height of a watermark, supporting two formats: % and px.
 <li>If a string ends with %, it indicates that the `Height` of a watermark is a percentage of a video's height. For example, `10%` means that `Height` is 10% of a video's height.</li>
 <li>If a string ends with px, it means the watermark Height is in pixels. For example, 100px means the Height is 100 pixels.</li>
 Default value: 0px, which means Height is scaled according to the aspect ratio of the raw watermark image.
-     * @param Height Height of a watermark. Supports two formats: % and px.
+     * @param Height Height of a watermark, supporting two formats: % and px.
 <li>If a string ends with %, it indicates that the `Height` of a watermark is a percentage of a video's height. For example, `10%` means that `Height` is 10% of a video's height.</li>
 <li>If a string ends with px, it means the watermark Height is in pixels. For example, 100px means the Height is 100 pixels.</li>
 Default value: 0px, which means Height is scaled according to the aspect ratio of the raw watermark image.
@@ -133,28 +133,28 @@ Default value: 0px, which means Height is scaled according to the aspect ratio o
     }
 
     /**
-     * Get Watermark repeat type. Usage scenario: the watermark is a dynamic image. Value range:
-<li>once: The dynamic watermark will no longer appear after it has finished playing;</li>
-<li>repeat_last_frame: Stay on the last frame after the watermark finished playing;</li>
-<li>repeat: Watermark loops until the video ends (default value).</li> 
-     * @return RepeatType Watermark repeat type. Usage scenario: the watermark is a dynamic image. Value range:
-<li>once: The dynamic watermark will no longer appear after it has finished playing;</li>
-<li>repeat_last_frame: Stay on the last frame after the watermark finished playing;</li>
-<li>repeat: Watermark loops until the video ends (default value).</li>
+     * Get Watermark repeat type. Usage scenario: The watermark is a dynamic image. Value range:
+<li>once: The dynamic watermark no longer appears after it is finished playing;</li>
+<li>repeat_last_frame: after the watermark finishes playing, stay on the last frame;</li>
+<li>repeat: watermark loops until the video ends (default value).</li> 
+     * @return RepeatType Watermark repeat type. Usage scenario: The watermark is a dynamic image. Value range:
+<li>once: The dynamic watermark no longer appears after it is finished playing;</li>
+<li>repeat_last_frame: after the watermark finishes playing, stay on the last frame;</li>
+<li>repeat: watermark loops until the video ends (default value).</li>
      */
     public String getRepeatType() {
         return this.RepeatType;
     }
 
     /**
-     * Set Watermark repeat type. Usage scenario: the watermark is a dynamic image. Value range:
-<li>once: The dynamic watermark will no longer appear after it has finished playing;</li>
-<li>repeat_last_frame: Stay on the last frame after the watermark finished playing;</li>
-<li>repeat: Watermark loops until the video ends (default value).</li>
-     * @param RepeatType Watermark repeat type. Usage scenario: the watermark is a dynamic image. Value range:
-<li>once: The dynamic watermark will no longer appear after it has finished playing;</li>
-<li>repeat_last_frame: Stay on the last frame after the watermark finished playing;</li>
-<li>repeat: Watermark loops until the video ends (default value).</li>
+     * Set Watermark repeat type. Usage scenario: The watermark is a dynamic image. Value range:
+<li>once: The dynamic watermark no longer appears after it is finished playing;</li>
+<li>repeat_last_frame: after the watermark finishes playing, stay on the last frame;</li>
+<li>repeat: watermark loops until the video ends (default value).</li>
+     * @param RepeatType Watermark repeat type. Usage scenario: The watermark is a dynamic image. Value range:
+<li>once: The dynamic watermark no longer appears after it is finished playing;</li>
+<li>repeat_last_frame: after the watermark finishes playing, stay on the last frame;</li>
+<li>repeat: watermark loops until the video ends (default value).</li>
      */
     public void setRepeatType(String RepeatType) {
         this.RepeatType = RepeatType;

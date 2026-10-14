@@ -31,35 +31,35 @@ public class DescribeDesignTaskResponse extends AbstractModel {
     private Long ErrorCode;
 
     /**
-    * 
+    * <p>Error message. success is returned if the request is successful.</p>
     */
     @SerializedName("Msg")
     @Expose
     private String Msg;
 
     /**
-    * 
+    * <p>Task status.</p><p>Enumeration values: </p><ul><li>success: Success, </li><li>fail: Failure, </li><li>processing: Processing.</li></ul>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 
+    * <p>Voice type id</p>
     */
     @SerializedName("VoiceId")
     @Expose
     private String VoiceId;
 
     /**
-    * 
+    * <p>Audition audio URL.</p>
     */
     @SerializedName("AudioUrl")
     @Expose
     private String AudioUrl;
 
     /**
-    * 
+    * <p>Extended information.</p>
     */
     @SerializedName("ExtInfo")
     @Expose
@@ -89,80 +89,80 @@ public class DescribeDesignTaskResponse extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return Msg 
+     * Get <p>Error message. success is returned if the request is successful.</p> 
+     * @return Msg <p>Error message. success is returned if the request is successful.</p>
      */
     public String getMsg() {
         return this.Msg;
     }
 
     /**
-     * Set 
-     * @param Msg 
+     * Set <p>Error message. success is returned if the request is successful.</p>
+     * @param Msg <p>Error message. success is returned if the request is successful.</p>
      */
     public void setMsg(String Msg) {
         this.Msg = Msg;
     }
 
     /**
-     * Get  
-     * @return Status 
+     * Get <p>Task status.</p><p>Enumeration values: </p><ul><li>success: Success, </li><li>fail: Failure, </li><li>processing: Processing.</li></ul> 
+     * @return Status <p>Task status.</p><p>Enumeration values: </p><ul><li>success: Success, </li><li>fail: Failure, </li><li>processing: Processing.</li></ul>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 
-     * @param Status 
+     * Set <p>Task status.</p><p>Enumeration values: </p><ul><li>success: Success, </li><li>fail: Failure, </li><li>processing: Processing.</li></ul>
+     * @param Status <p>Task status.</p><p>Enumeration values: </p><ul><li>success: Success, </li><li>fail: Failure, </li><li>processing: Processing.</li></ul>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get  
-     * @return VoiceId 
+     * Get <p>Voice type id</p> 
+     * @return VoiceId <p>Voice type id</p>
      */
     public String getVoiceId() {
         return this.VoiceId;
     }
 
     /**
-     * Set 
-     * @param VoiceId 
+     * Set <p>Voice type id</p>
+     * @param VoiceId <p>Voice type id</p>
      */
     public void setVoiceId(String VoiceId) {
         this.VoiceId = VoiceId;
     }
 
     /**
-     * Get  
-     * @return AudioUrl 
+     * Get <p>Audition audio URL.</p> 
+     * @return AudioUrl <p>Audition audio URL.</p>
      */
     public String getAudioUrl() {
         return this.AudioUrl;
     }
 
     /**
-     * Set 
-     * @param AudioUrl 
+     * Set <p>Audition audio URL.</p>
+     * @param AudioUrl <p>Audition audio URL.</p>
      */
     public void setAudioUrl(String AudioUrl) {
         this.AudioUrl = AudioUrl;
     }
 
     /**
-     * Get  
-     * @return ExtInfo 
+     * Get <p>Extended information.</p> 
+     * @return ExtInfo <p>Extended information.</p>
      */
     public String getExtInfo() {
         return this.ExtInfo;
     }
 
     /**
-     * Set 
-     * @param ExtInfo 
+     * Set <p>Extended information.</p>
+     * @param ExtInfo <p>Extended information.</p>
      */
     public void setExtInfo(String ExtInfo) {
         this.ExtInfo = ExtInfo;

@@ -24,53 +24,53 @@ import java.util.HashMap;
 public class LogFilter extends AbstractModel {
 
     /**
-    * Values of `filter.RetCode` include:
-not0, indicating that only logs of failed execution will be returned.
-is0, indicating that only logs of successful execution will be returned.
-TimeLimitExceeded, indicating that logs of function invocations which timed out will be returned.
-ResourceLimitExceeded, indicating that logs of function invocations during which resources exceeded the upper limit will be returned.
-UserCodeException, indicating that logs of function invocations during which a user code error occurred will be returned.
-Blank, indicating that all logs will be returned.
+    * Valid values of filter.RetCode:
+not0 means only error logs are returned.
+is0 means only return correct logs.
+TimeLimitExceeded returns the logs of function call timed out.
+ResourceLimitExceeded returns the logs of resource limit exceeded during function calls.
+UserCodeException returns the logs of user code errors in function calls.
+If there is no input, all logs are returned.
     */
     @SerializedName("RetCode")
     @Expose
     private String RetCode;
 
     /**
-     * Get Values of `filter.RetCode` include:
-not0, indicating that only logs of failed execution will be returned.
-is0, indicating that only logs of successful execution will be returned.
-TimeLimitExceeded, indicating that logs of function invocations which timed out will be returned.
-ResourceLimitExceeded, indicating that logs of function invocations during which resources exceeded the upper limit will be returned.
-UserCodeException, indicating that logs of function invocations during which a user code error occurred will be returned.
-Blank, indicating that all logs will be returned. 
-     * @return RetCode Values of `filter.RetCode` include:
-not0, indicating that only logs of failed execution will be returned.
-is0, indicating that only logs of successful execution will be returned.
-TimeLimitExceeded, indicating that logs of function invocations which timed out will be returned.
-ResourceLimitExceeded, indicating that logs of function invocations during which resources exceeded the upper limit will be returned.
-UserCodeException, indicating that logs of function invocations during which a user code error occurred will be returned.
-Blank, indicating that all logs will be returned.
+     * Get Valid values of filter.RetCode:
+not0 means only error logs are returned.
+is0 means only return correct logs.
+TimeLimitExceeded returns the logs of function call timed out.
+ResourceLimitExceeded returns the logs of resource limit exceeded during function calls.
+UserCodeException returns the logs of user code errors in function calls.
+If there is no input, all logs are returned. 
+     * @return RetCode Valid values of filter.RetCode:
+not0 means only error logs are returned.
+is0 means only return correct logs.
+TimeLimitExceeded returns the logs of function call timed out.
+ResourceLimitExceeded returns the logs of resource limit exceeded during function calls.
+UserCodeException returns the logs of user code errors in function calls.
+If there is no input, all logs are returned.
      */
     public String getRetCode() {
         return this.RetCode;
     }
 
     /**
-     * Set Values of `filter.RetCode` include:
-not0, indicating that only logs of failed execution will be returned.
-is0, indicating that only logs of successful execution will be returned.
-TimeLimitExceeded, indicating that logs of function invocations which timed out will be returned.
-ResourceLimitExceeded, indicating that logs of function invocations during which resources exceeded the upper limit will be returned.
-UserCodeException, indicating that logs of function invocations during which a user code error occurred will be returned.
-Blank, indicating that all logs will be returned.
-     * @param RetCode Values of `filter.RetCode` include:
-not0, indicating that only logs of failed execution will be returned.
-is0, indicating that only logs of successful execution will be returned.
-TimeLimitExceeded, indicating that logs of function invocations which timed out will be returned.
-ResourceLimitExceeded, indicating that logs of function invocations during which resources exceeded the upper limit will be returned.
-UserCodeException, indicating that logs of function invocations during which a user code error occurred will be returned.
-Blank, indicating that all logs will be returned.
+     * Set Valid values of filter.RetCode:
+not0 means only error logs are returned.
+is0 means only return correct logs.
+TimeLimitExceeded returns the logs of function call timed out.
+ResourceLimitExceeded returns the logs of resource limit exceeded during function calls.
+UserCodeException returns the logs of user code errors in function calls.
+If there is no input, all logs are returned.
+     * @param RetCode Valid values of filter.RetCode:
+not0 means only error logs are returned.
+is0 means only return correct logs.
+TimeLimitExceeded returns the logs of function call timed out.
+ResourceLimitExceeded returns the logs of resource limit exceeded during function calls.
+UserCodeException returns the logs of user code errors in function calls.
+If there is no input, all logs are returned.
      */
     public void setRetCode(String RetCode) {
         this.RetCode = RetCode;

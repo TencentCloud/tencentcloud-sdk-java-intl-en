@@ -52,7 +52,7 @@ public class AiRecognitionTaskObjectResult extends AbstractModel {
     private AiRecognitionTaskObjectResultInput Input;
 
     /**
-    * 
+    * Object recognition task output information.
     */
     @SerializedName("Output")
     @Expose
@@ -123,16 +123,16 @@ public class AiRecognitionTaskObjectResult extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return Output 
+     * Get Object recognition task output information. 
+     * @return Output Object recognition task output information.
      */
     public AiRecognitionTaskObjectResultOutput getOutput() {
         return this.Output;
     }
 
     /**
-     * Set 
-     * @param Output 
+     * Set Object recognition task output information.
+     * @param Output Object recognition task output information.
      */
     public void setOutput(AiRecognitionTaskObjectResultOutput Output) {
         this.Output = Output;

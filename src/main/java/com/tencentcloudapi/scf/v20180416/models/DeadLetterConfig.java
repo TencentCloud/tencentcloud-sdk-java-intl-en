@@ -38,7 +38,7 @@ public class DeadLetterConfig extends AbstractModel {
     private String Name;
 
     /**
-    * Tag form of a dead letter queue topic mode
+    * Tag format of the DLQ topic model
     */
     @SerializedName("FilterType")
     @Expose
@@ -77,16 +77,16 @@ public class DeadLetterConfig extends AbstractModel {
     }
 
     /**
-     * Get Tag form of a dead letter queue topic mode 
-     * @return FilterType Tag form of a dead letter queue topic mode
+     * Get Tag format of the DLQ topic model 
+     * @return FilterType Tag format of the DLQ topic model
      */
     public String getFilterType() {
         return this.FilterType;
     }
 
     /**
-     * Set Tag form of a dead letter queue topic mode
-     * @param FilterType Tag form of a dead letter queue topic mode
+     * Set Tag format of the DLQ topic model
+     * @param FilterType Tag format of the DLQ topic model
      */
     public void setFilterType(String FilterType) {
         this.FilterType = FilterType;

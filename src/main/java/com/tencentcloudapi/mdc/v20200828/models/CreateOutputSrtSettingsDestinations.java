@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class CreateOutputSrtSettingsDestinations extends AbstractModel {
 
     /**
-    * The output IP.
+    * Output IP or domain.
     */
     @SerializedName("Ip")
     @Expose
     private String Ip;
 
     /**
-    * The output port.
+    * Output port.
     */
     @SerializedName("Port")
     @Expose
     private Long Port;
 
     /**
-     * Get The output IP. 
-     * @return Ip The output IP.
+     * Get Output IP or domain. 
+     * @return Ip Output IP or domain.
      */
     public String getIp() {
         return this.Ip;
     }
 
     /**
-     * Set The output IP.
-     * @param Ip The output IP.
+     * Set Output IP or domain.
+     * @param Ip Output IP or domain.
      */
     public void setIp(String Ip) {
         this.Ip = Ip;
     }
 
     /**
-     * Get The output port. 
-     * @return Port The output port.
+     * Get Output port. 
+     * @return Port Output port.
      */
     public Long getPort() {
         return this.Port;
     }
 
     /**
-     * Set The output port.
-     * @param Port The output port.
+     * Set Output port.
+     * @param Port Output port.
      */
     public void setPort(Long Port) {
         this.Port = Port;

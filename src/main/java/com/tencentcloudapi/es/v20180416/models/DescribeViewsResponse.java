@@ -24,24 +24,21 @@ import java.util.HashMap;
 public class DescribeViewsResponse extends AbstractModel {
 
     /**
-    * Cluster view
-Note: This field may return `null`, indicating that no valid value was found.
+    * Cluster dimension view
     */
     @SerializedName("ClusterView")
     @Expose
     private ClusterView ClusterView;
 
     /**
-    * Node view
-Note: This field may return `null`, indicating that no valid value was found.
+    * Node dimension view
     */
     @SerializedName("NodesView")
     @Expose
     private NodeView [] NodesView;
 
     /**
-    * Kibana view
-Note: This field may return `null`, indicating that no valid value was found.
+    * Kibana dimensional view
     */
     @SerializedName("KibanasView")
     @Expose
@@ -55,60 +52,48 @@ Note: This field may return `null`, indicating that no valid value was found.
     private String RequestId;
 
     /**
-     * Get Cluster view
-Note: This field may return `null`, indicating that no valid value was found. 
-     * @return ClusterView Cluster view
-Note: This field may return `null`, indicating that no valid value was found.
+     * Get Cluster dimension view 
+     * @return ClusterView Cluster dimension view
      */
     public ClusterView getClusterView() {
         return this.ClusterView;
     }
 
     /**
-     * Set Cluster view
-Note: This field may return `null`, indicating that no valid value was found.
-     * @param ClusterView Cluster view
-Note: This field may return `null`, indicating that no valid value was found.
+     * Set Cluster dimension view
+     * @param ClusterView Cluster dimension view
      */
     public void setClusterView(ClusterView ClusterView) {
         this.ClusterView = ClusterView;
     }
 
     /**
-     * Get Node view
-Note: This field may return `null`, indicating that no valid value was found. 
-     * @return NodesView Node view
-Note: This field may return `null`, indicating that no valid value was found.
+     * Get Node dimension view 
+     * @return NodesView Node dimension view
      */
     public NodeView [] getNodesView() {
         return this.NodesView;
     }
 
     /**
-     * Set Node view
-Note: This field may return `null`, indicating that no valid value was found.
-     * @param NodesView Node view
-Note: This field may return `null`, indicating that no valid value was found.
+     * Set Node dimension view
+     * @param NodesView Node dimension view
      */
     public void setNodesView(NodeView [] NodesView) {
         this.NodesView = NodesView;
     }
 
     /**
-     * Get Kibana view
-Note: This field may return `null`, indicating that no valid value was found. 
-     * @return KibanasView Kibana view
-Note: This field may return `null`, indicating that no valid value was found.
+     * Get Kibana dimensional view 
+     * @return KibanasView Kibana dimensional view
      */
     public KibanaView [] getKibanasView() {
         return this.KibanasView;
     }
 
     /**
-     * Set Kibana view
-Note: This field may return `null`, indicating that no valid value was found.
-     * @param KibanasView Kibana view
-Note: This field may return `null`, indicating that no valid value was found.
+     * Set Kibana dimensional view
+     * @param KibanasView Kibana dimensional view
      */
     public void setKibanasView(KibanaView [] KibanasView) {
         this.KibanasView = KibanasView;

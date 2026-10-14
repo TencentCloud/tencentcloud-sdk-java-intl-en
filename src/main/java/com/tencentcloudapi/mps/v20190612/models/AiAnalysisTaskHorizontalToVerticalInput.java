@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class AiAnalysisTaskHorizontalToVerticalInput extends AbstractModel {
 
     /**
-    * 
+    * <p>ID of the horizontal-to-vertical video transformation template.</p>
     */
     @SerializedName("Definition")
     @Expose
@@ -38,16 +38,16 @@ public class AiAnalysisTaskHorizontalToVerticalInput extends AbstractModel {
     private String ExtendedParameter;
 
     /**
-     * Get  
-     * @return Definition 
+     * Get <p>ID of the horizontal-to-vertical video transformation template.</p> 
+     * @return Definition <p>ID of the horizontal-to-vertical video transformation template.</p>
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set 
-     * @param Definition 
+     * Set <p>ID of the horizontal-to-vertical video transformation template.</p>
+     * @param Definition <p>ID of the horizontal-to-vertical video transformation template.</p>
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;

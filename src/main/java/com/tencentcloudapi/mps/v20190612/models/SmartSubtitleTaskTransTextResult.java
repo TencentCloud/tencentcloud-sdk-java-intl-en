@@ -52,21 +52,21 @@ public class SmartSubtitleTaskTransTextResult extends AbstractModel {
     private String Message;
 
     /**
-    * 
+    * Translation task input information.
     */
     @SerializedName("Input")
     @Expose
     private SmartSubtitleTaskResultInput Input;
 
     /**
-    * 
+    * Translation task output information.
     */
     @SerializedName("Output")
     @Expose
     private SmartSubtitleTaskTransTextResultOutput Output;
 
     /**
-    * 
+    * Task progress.
     */
     @SerializedName("Progress")
     @Expose
@@ -137,48 +137,48 @@ public class SmartSubtitleTaskTransTextResult extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return Input 
+     * Get Translation task input information. 
+     * @return Input Translation task input information.
      */
     public SmartSubtitleTaskResultInput getInput() {
         return this.Input;
     }
 
     /**
-     * Set 
-     * @param Input 
+     * Set Translation task input information.
+     * @param Input Translation task input information.
      */
     public void setInput(SmartSubtitleTaskResultInput Input) {
         this.Input = Input;
     }
 
     /**
-     * Get  
-     * @return Output 
+     * Get Translation task output information. 
+     * @return Output Translation task output information.
      */
     public SmartSubtitleTaskTransTextResultOutput getOutput() {
         return this.Output;
     }
 
     /**
-     * Set 
-     * @param Output 
+     * Set Translation task output information.
+     * @param Output Translation task output information.
      */
     public void setOutput(SmartSubtitleTaskTransTextResultOutput Output) {
         this.Output = Output;
     }
 
     /**
-     * Get  
-     * @return Progress 
+     * Get Task progress. 
+     * @return Progress Task progress.
      */
     public Long getProgress() {
         return this.Progress;
     }
 
     /**
-     * Set 
-     * @param Progress 
+     * Set Task progress.
+     * @param Progress Task progress.
      */
     public void setProgress(Long Progress) {
         this.Progress = Progress;

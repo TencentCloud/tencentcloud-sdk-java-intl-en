@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class RecognizePhilippinesSssIDOCRRequest extends AbstractModel {
 
     /**
-    * Whether to return the identity photo.
+    * Whether to return the portrait photo.
     */
     @SerializedName("ReturnHeadImage")
     @Expose
@@ -52,16 +52,16 @@ For a non-Tencent Cloud URL, the download speed and stability may be affected.
     private String ImageUrl;
 
     /**
-     * Get Whether to return the identity photo. 
-     * @return ReturnHeadImage Whether to return the identity photo.
+     * Get Whether to return the portrait photo. 
+     * @return ReturnHeadImage Whether to return the portrait photo.
      */
     public Boolean getReturnHeadImage() {
         return this.ReturnHeadImage;
     }
 
     /**
-     * Set Whether to return the identity photo.
-     * @param ReturnHeadImage Whether to return the identity photo.
+     * Set Whether to return the portrait photo.
+     * @param ReturnHeadImage Whether to return the portrait photo.
      */
     public void setReturnHeadImage(Boolean ReturnHeadImage) {
         this.ReturnHeadImage = ReturnHeadImage;

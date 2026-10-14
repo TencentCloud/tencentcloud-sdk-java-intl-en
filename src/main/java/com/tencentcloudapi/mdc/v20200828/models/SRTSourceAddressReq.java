@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class SRTSourceAddressReq extends AbstractModel {
 
     /**
-    * The peer IP.
+    * Peer IP or domain
     */
     @SerializedName("Ip")
     @Expose
     private String Ip;
 
     /**
-    * The peer port.
+    * Peer port.
     */
     @SerializedName("Port")
     @Expose
     private Long Port;
 
     /**
-     * Get The peer IP. 
-     * @return Ip The peer IP.
+     * Get Peer IP or domain 
+     * @return Ip Peer IP or domain
      */
     public String getIp() {
         return this.Ip;
     }
 
     /**
-     * Set The peer IP.
-     * @param Ip The peer IP.
+     * Set Peer IP or domain
+     * @param Ip Peer IP or domain
      */
     public void setIp(String Ip) {
         this.Ip = Ip;
     }
 
     /**
-     * Get The peer port. 
-     * @return Port The peer port.
+     * Get Peer port. 
+     * @return Port Peer port.
      */
     public Long getPort() {
         return this.Port;
     }
 
     /**
-     * Set The peer port.
-     * @param Port The peer port.
+     * Set Peer port.
+     * @param Port Peer port.
      */
     public void setPort(Long Port) {
         this.Port = Port;

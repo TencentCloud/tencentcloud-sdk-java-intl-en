@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class DubbingSubtitleConfig extends AbstractModel {
 
     /**
-    * <p>Subtitle source.</p><p>Enumeration values:</p><ul><li>OCR: OCR text recognition, recognizes text in video frames.</li><li>ASR: ASR speech recognition, recognizes voice dialogue in videos.</li><li>External: External subtitle file, provide the URL of the original/translated subtitles.</li></ul>
+    * <p>Subtitle source.</p><p>Enumeration values:</p><ul><li>OCR: OCR text recognition, recognizes text in video footage.</li><li>ASR: ASR speech recognition, recognizes voice dialogue in videos.</li><li>External: External subtitle file, provided by original/translated subtitle URL.</li></ul>
     */
     @SerializedName("SubtitleSource")
     @Expose
     private String SubtitleSource;
 
     /**
-    * <p>Use ASR to assist OCR.</p><p>Enumeration values:</p><ul><li>ON: Enable the use of ASR to assist OCR.</li><li>OFF: Disable the use of ASR to assist OCR.</li></ul><p>Default value: OFF</p><p>Can be set to ON only when SubtitleSource=OCR</p>
+    * <p>Use ASR to assist OCR.</p><p>Enumeration values:</p><ul><li>ON: Enable ASR to assist OCR.</li><li>OFF: Disable ASR to assist OCR.</li></ul><p>Default value: OFF</p><p>Can be set to ON only when SubtitleSource is OCR</p>
     */
     @SerializedName("AsrAssistOcr")
     @Expose
     private String AsrAssistOcr;
 
     /**
-    * <p>Erase the original subtitle.</p><p>Enumeration values:</p><ul><li>ON: Erase the original subtitle.</li><li>OFF: Retain the original subtitle.</li></ul><p>Default value: OFF</p><p>Cannot be set to ON when SubtitleSource=External</p>
+    * <p>Erase the original subtitle.</p><p>Enumeration values:</p><ul><li>ON: Erase the original subtitle.</li><li>OFF: Keep the original subtitle.</li></ul><p>Default value: OFF</p><p>Cannot be set to ON when SubtitleSource=External</p>
     */
     @SerializedName("EraseOriginalSubtitle")
     @Expose
     private String EraseOriginalSubtitle;
 
     /**
-    * <p>Subtitle location information.</p>
+    * <p>Subtitle position information.</p>
     */
     @SerializedName("SelectingSubtitleAreasConfig")
     @Expose
     private SelectingSubtitleAreasConfig SelectingSubtitleAreasConfig;
 
     /**
-     * Get <p>Subtitle source.</p><p>Enumeration values:</p><ul><li>OCR: OCR text recognition, recognizes text in video frames.</li><li>ASR: ASR speech recognition, recognizes voice dialogue in videos.</li><li>External: External subtitle file, provide the URL of the original/translated subtitles.</li></ul> 
-     * @return SubtitleSource <p>Subtitle source.</p><p>Enumeration values:</p><ul><li>OCR: OCR text recognition, recognizes text in video frames.</li><li>ASR: ASR speech recognition, recognizes voice dialogue in videos.</li><li>External: External subtitle file, provide the URL of the original/translated subtitles.</li></ul>
+     * Get <p>Subtitle source.</p><p>Enumeration values:</p><ul><li>OCR: OCR text recognition, recognizes text in video footage.</li><li>ASR: ASR speech recognition, recognizes voice dialogue in videos.</li><li>External: External subtitle file, provided by original/translated subtitle URL.</li></ul> 
+     * @return SubtitleSource <p>Subtitle source.</p><p>Enumeration values:</p><ul><li>OCR: OCR text recognition, recognizes text in video footage.</li><li>ASR: ASR speech recognition, recognizes voice dialogue in videos.</li><li>External: External subtitle file, provided by original/translated subtitle URL.</li></ul>
      */
     public String getSubtitleSource() {
         return this.SubtitleSource;
     }
 
     /**
-     * Set <p>Subtitle source.</p><p>Enumeration values:</p><ul><li>OCR: OCR text recognition, recognizes text in video frames.</li><li>ASR: ASR speech recognition, recognizes voice dialogue in videos.</li><li>External: External subtitle file, provide the URL of the original/translated subtitles.</li></ul>
-     * @param SubtitleSource <p>Subtitle source.</p><p>Enumeration values:</p><ul><li>OCR: OCR text recognition, recognizes text in video frames.</li><li>ASR: ASR speech recognition, recognizes voice dialogue in videos.</li><li>External: External subtitle file, provide the URL of the original/translated subtitles.</li></ul>
+     * Set <p>Subtitle source.</p><p>Enumeration values:</p><ul><li>OCR: OCR text recognition, recognizes text in video footage.</li><li>ASR: ASR speech recognition, recognizes voice dialogue in videos.</li><li>External: External subtitle file, provided by original/translated subtitle URL.</li></ul>
+     * @param SubtitleSource <p>Subtitle source.</p><p>Enumeration values:</p><ul><li>OCR: OCR text recognition, recognizes text in video footage.</li><li>ASR: ASR speech recognition, recognizes voice dialogue in videos.</li><li>External: External subtitle file, provided by original/translated subtitle URL.</li></ul>
      */
     public void setSubtitleSource(String SubtitleSource) {
         this.SubtitleSource = SubtitleSource;
     }
 
     /**
-     * Get <p>Use ASR to assist OCR.</p><p>Enumeration values:</p><ul><li>ON: Enable the use of ASR to assist OCR.</li><li>OFF: Disable the use of ASR to assist OCR.</li></ul><p>Default value: OFF</p><p>Can be set to ON only when SubtitleSource=OCR</p> 
-     * @return AsrAssistOcr <p>Use ASR to assist OCR.</p><p>Enumeration values:</p><ul><li>ON: Enable the use of ASR to assist OCR.</li><li>OFF: Disable the use of ASR to assist OCR.</li></ul><p>Default value: OFF</p><p>Can be set to ON only when SubtitleSource=OCR</p>
+     * Get <p>Use ASR to assist OCR.</p><p>Enumeration values:</p><ul><li>ON: Enable ASR to assist OCR.</li><li>OFF: Disable ASR to assist OCR.</li></ul><p>Default value: OFF</p><p>Can be set to ON only when SubtitleSource is OCR</p> 
+     * @return AsrAssistOcr <p>Use ASR to assist OCR.</p><p>Enumeration values:</p><ul><li>ON: Enable ASR to assist OCR.</li><li>OFF: Disable ASR to assist OCR.</li></ul><p>Default value: OFF</p><p>Can be set to ON only when SubtitleSource is OCR</p>
      */
     public String getAsrAssistOcr() {
         return this.AsrAssistOcr;
     }
 
     /**
-     * Set <p>Use ASR to assist OCR.</p><p>Enumeration values:</p><ul><li>ON: Enable the use of ASR to assist OCR.</li><li>OFF: Disable the use of ASR to assist OCR.</li></ul><p>Default value: OFF</p><p>Can be set to ON only when SubtitleSource=OCR</p>
-     * @param AsrAssistOcr <p>Use ASR to assist OCR.</p><p>Enumeration values:</p><ul><li>ON: Enable the use of ASR to assist OCR.</li><li>OFF: Disable the use of ASR to assist OCR.</li></ul><p>Default value: OFF</p><p>Can be set to ON only when SubtitleSource=OCR</p>
+     * Set <p>Use ASR to assist OCR.</p><p>Enumeration values:</p><ul><li>ON: Enable ASR to assist OCR.</li><li>OFF: Disable ASR to assist OCR.</li></ul><p>Default value: OFF</p><p>Can be set to ON only when SubtitleSource is OCR</p>
+     * @param AsrAssistOcr <p>Use ASR to assist OCR.</p><p>Enumeration values:</p><ul><li>ON: Enable ASR to assist OCR.</li><li>OFF: Disable ASR to assist OCR.</li></ul><p>Default value: OFF</p><p>Can be set to ON only when SubtitleSource is OCR</p>
      */
     public void setAsrAssistOcr(String AsrAssistOcr) {
         this.AsrAssistOcr = AsrAssistOcr;
     }
 
     /**
-     * Get <p>Erase the original subtitle.</p><p>Enumeration values:</p><ul><li>ON: Erase the original subtitle.</li><li>OFF: Retain the original subtitle.</li></ul><p>Default value: OFF</p><p>Cannot be set to ON when SubtitleSource=External</p> 
-     * @return EraseOriginalSubtitle <p>Erase the original subtitle.</p><p>Enumeration values:</p><ul><li>ON: Erase the original subtitle.</li><li>OFF: Retain the original subtitle.</li></ul><p>Default value: OFF</p><p>Cannot be set to ON when SubtitleSource=External</p>
+     * Get <p>Erase the original subtitle.</p><p>Enumeration values:</p><ul><li>ON: Erase the original subtitle.</li><li>OFF: Keep the original subtitle.</li></ul><p>Default value: OFF</p><p>Cannot be set to ON when SubtitleSource=External</p> 
+     * @return EraseOriginalSubtitle <p>Erase the original subtitle.</p><p>Enumeration values:</p><ul><li>ON: Erase the original subtitle.</li><li>OFF: Keep the original subtitle.</li></ul><p>Default value: OFF</p><p>Cannot be set to ON when SubtitleSource=External</p>
      */
     public String getEraseOriginalSubtitle() {
         return this.EraseOriginalSubtitle;
     }
 
     /**
-     * Set <p>Erase the original subtitle.</p><p>Enumeration values:</p><ul><li>ON: Erase the original subtitle.</li><li>OFF: Retain the original subtitle.</li></ul><p>Default value: OFF</p><p>Cannot be set to ON when SubtitleSource=External</p>
-     * @param EraseOriginalSubtitle <p>Erase the original subtitle.</p><p>Enumeration values:</p><ul><li>ON: Erase the original subtitle.</li><li>OFF: Retain the original subtitle.</li></ul><p>Default value: OFF</p><p>Cannot be set to ON when SubtitleSource=External</p>
+     * Set <p>Erase the original subtitle.</p><p>Enumeration values:</p><ul><li>ON: Erase the original subtitle.</li><li>OFF: Keep the original subtitle.</li></ul><p>Default value: OFF</p><p>Cannot be set to ON when SubtitleSource=External</p>
+     * @param EraseOriginalSubtitle <p>Erase the original subtitle.</p><p>Enumeration values:</p><ul><li>ON: Erase the original subtitle.</li><li>OFF: Keep the original subtitle.</li></ul><p>Default value: OFF</p><p>Cannot be set to ON when SubtitleSource=External</p>
      */
     public void setEraseOriginalSubtitle(String EraseOriginalSubtitle) {
         this.EraseOriginalSubtitle = EraseOriginalSubtitle;
     }
 
     /**
-     * Get <p>Subtitle location information.</p> 
-     * @return SelectingSubtitleAreasConfig <p>Subtitle location information.</p>
+     * Get <p>Subtitle position information.</p> 
+     * @return SelectingSubtitleAreasConfig <p>Subtitle position information.</p>
      */
     public SelectingSubtitleAreasConfig getSelectingSubtitleAreasConfig() {
         return this.SelectingSubtitleAreasConfig;
     }
 
     /**
-     * Set <p>Subtitle location information.</p>
-     * @param SelectingSubtitleAreasConfig <p>Subtitle location information.</p>
+     * Set <p>Subtitle position information.</p>
+     * @param SelectingSubtitleAreasConfig <p>Subtitle position information.</p>
      */
     public void setSelectingSubtitleAreasConfig(SelectingSubtitleAreasConfig SelectingSubtitleAreasConfig) {
         this.SelectingSubtitleAreasConfig = SelectingSubtitleAreasConfig;

@@ -24,184 +24,184 @@ import java.util.HashMap;
 public class WorkflowInfo extends AbstractModel {
 
     /**
-    * 
+    * <p>Workflow ID</p>
     */
     @SerializedName("WorkflowId")
     @Expose
     private String WorkflowId;
 
     /**
-    * 
+    * <p>Workflow name.</p>
     */
     @SerializedName("WorkflowName")
     @Expose
     private String WorkflowName;
 
     /**
-    * 
+    * <p>Workflow run ID</p>
     */
     @SerializedName("WorkflowRunId")
     @Expose
     private String WorkflowRunId;
 
     /**
-    * 
+    * <p>Tab</p>
     */
     @SerializedName("OptionCards")
     @Expose
     private String [] OptionCards;
 
     /**
-    * 
+    * <p>Output result of multiple bubbles</p>
     */
     @SerializedName("Outputs")
     @Expose
     private String [] Outputs;
 
     /**
-    * 
+    * <p>Workflow release time, unix timestamp.</p>
     */
     @SerializedName("WorkflowReleaseTime")
     @Expose
     private String WorkflowReleaseTime;
 
     /**
-    * 
+    * <p>Workflow multi-bubble output</p>
     */
     @SerializedName("Contents")
     @Expose
     private Content [] Contents;
 
     /**
-    * 
+    * <p>Flag indicating whether the tab is single-selection or dual-selection</p><p>Enumeration values:</p><ul><li>0: single selection</li><li>1: multiple selection</li></ul>
     */
     @SerializedName("OptionMode")
     @Expose
     private Long OptionMode;
 
     /**
-     * Get  
-     * @return WorkflowId 
+     * Get <p>Workflow ID</p> 
+     * @return WorkflowId <p>Workflow ID</p>
      */
     public String getWorkflowId() {
         return this.WorkflowId;
     }
 
     /**
-     * Set 
-     * @param WorkflowId 
+     * Set <p>Workflow ID</p>
+     * @param WorkflowId <p>Workflow ID</p>
      */
     public void setWorkflowId(String WorkflowId) {
         this.WorkflowId = WorkflowId;
     }
 
     /**
-     * Get  
-     * @return WorkflowName 
+     * Get <p>Workflow name.</p> 
+     * @return WorkflowName <p>Workflow name.</p>
      */
     public String getWorkflowName() {
         return this.WorkflowName;
     }
 
     /**
-     * Set 
-     * @param WorkflowName 
+     * Set <p>Workflow name.</p>
+     * @param WorkflowName <p>Workflow name.</p>
      */
     public void setWorkflowName(String WorkflowName) {
         this.WorkflowName = WorkflowName;
     }
 
     /**
-     * Get  
-     * @return WorkflowRunId 
+     * Get <p>Workflow run ID</p> 
+     * @return WorkflowRunId <p>Workflow run ID</p>
      */
     public String getWorkflowRunId() {
         return this.WorkflowRunId;
     }
 
     /**
-     * Set 
-     * @param WorkflowRunId 
+     * Set <p>Workflow run ID</p>
+     * @param WorkflowRunId <p>Workflow run ID</p>
      */
     public void setWorkflowRunId(String WorkflowRunId) {
         this.WorkflowRunId = WorkflowRunId;
     }
 
     /**
-     * Get  
-     * @return OptionCards 
+     * Get <p>Tab</p> 
+     * @return OptionCards <p>Tab</p>
      */
     public String [] getOptionCards() {
         return this.OptionCards;
     }
 
     /**
-     * Set 
-     * @param OptionCards 
+     * Set <p>Tab</p>
+     * @param OptionCards <p>Tab</p>
      */
     public void setOptionCards(String [] OptionCards) {
         this.OptionCards = OptionCards;
     }
 
     /**
-     * Get  
-     * @return Outputs 
+     * Get <p>Output result of multiple bubbles</p> 
+     * @return Outputs <p>Output result of multiple bubbles</p>
      */
     public String [] getOutputs() {
         return this.Outputs;
     }
 
     /**
-     * Set 
-     * @param Outputs 
+     * Set <p>Output result of multiple bubbles</p>
+     * @param Outputs <p>Output result of multiple bubbles</p>
      */
     public void setOutputs(String [] Outputs) {
         this.Outputs = Outputs;
     }
 
     /**
-     * Get  
-     * @return WorkflowReleaseTime 
+     * Get <p>Workflow release time, unix timestamp.</p> 
+     * @return WorkflowReleaseTime <p>Workflow release time, unix timestamp.</p>
      */
     public String getWorkflowReleaseTime() {
         return this.WorkflowReleaseTime;
     }
 
     /**
-     * Set 
-     * @param WorkflowReleaseTime 
+     * Set <p>Workflow release time, unix timestamp.</p>
+     * @param WorkflowReleaseTime <p>Workflow release time, unix timestamp.</p>
      */
     public void setWorkflowReleaseTime(String WorkflowReleaseTime) {
         this.WorkflowReleaseTime = WorkflowReleaseTime;
     }
 
     /**
-     * Get  
-     * @return Contents 
+     * Get <p>Workflow multi-bubble output</p> 
+     * @return Contents <p>Workflow multi-bubble output</p>
      */
     public Content [] getContents() {
         return this.Contents;
     }
 
     /**
-     * Set 
-     * @param Contents 
+     * Set <p>Workflow multi-bubble output</p>
+     * @param Contents <p>Workflow multi-bubble output</p>
      */
     public void setContents(Content [] Contents) {
         this.Contents = Contents;
     }
 
     /**
-     * Get  
-     * @return OptionMode 
+     * Get <p>Flag indicating whether the tab is single-selection or dual-selection</p><p>Enumeration values:</p><ul><li>0: single selection</li><li>1: multiple selection</li></ul> 
+     * @return OptionMode <p>Flag indicating whether the tab is single-selection or dual-selection</p><p>Enumeration values:</p><ul><li>0: single selection</li><li>1: multiple selection</li></ul>
      */
     public Long getOptionMode() {
         return this.OptionMode;
     }
 
     /**
-     * Set 
-     * @param OptionMode 
+     * Set <p>Flag indicating whether the tab is single-selection or dual-selection</p><p>Enumeration values:</p><ul><li>0: single selection</li><li>1: multiple selection</li></ul>
+     * @param OptionMode <p>Flag indicating whether the tab is single-selection or dual-selection</p><p>Enumeration values:</p><ul><li>0: single selection</li><li>1: multiple selection</li></ul>
      */
     public void setOptionMode(Long OptionMode) {
         this.OptionMode = OptionMode;

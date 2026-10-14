@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class MediaAiAnalysisFrameTagSegmentItem extends AbstractModel {
 
     /**
-    * Offset time starting from frame tagging.
+    * Time offset starting from the frame tag.
     */
     @SerializedName("StartTimeOffset")
     @Expose
     private Float StartTimeOffset;
 
     /**
-    * Offset time for frame tagging completion.
+    * Offset time for frame tagging to end.
     */
     @SerializedName("EndTimeOffset")
     @Expose
     private Float EndTimeOffset;
 
     /**
-    * Tag list within the time segment.
+    * Tag list in the time segment.
     */
     @SerializedName("TagSet")
     @Expose
     private MediaAiAnalysisFrameTagItem [] TagSet;
 
     /**
-     * Get Offset time starting from frame tagging. 
-     * @return StartTimeOffset Offset time starting from frame tagging.
+     * Get Time offset starting from the frame tag. 
+     * @return StartTimeOffset Time offset starting from the frame tag.
      */
     public Float getStartTimeOffset() {
         return this.StartTimeOffset;
     }
 
     /**
-     * Set Offset time starting from frame tagging.
-     * @param StartTimeOffset Offset time starting from frame tagging.
+     * Set Time offset starting from the frame tag.
+     * @param StartTimeOffset Time offset starting from the frame tag.
      */
     public void setStartTimeOffset(Float StartTimeOffset) {
         this.StartTimeOffset = StartTimeOffset;
     }
 
     /**
-     * Get Offset time for frame tagging completion. 
-     * @return EndTimeOffset Offset time for frame tagging completion.
+     * Get Offset time for frame tagging to end. 
+     * @return EndTimeOffset Offset time for frame tagging to end.
      */
     public Float getEndTimeOffset() {
         return this.EndTimeOffset;
     }
 
     /**
-     * Set Offset time for frame tagging completion.
-     * @param EndTimeOffset Offset time for frame tagging completion.
+     * Set Offset time for frame tagging to end.
+     * @param EndTimeOffset Offset time for frame tagging to end.
      */
     public void setEndTimeOffset(Float EndTimeOffset) {
         this.EndTimeOffset = EndTimeOffset;
     }
 
     /**
-     * Get Tag list within the time segment. 
-     * @return TagSet Tag list within the time segment.
+     * Get Tag list in the time segment. 
+     * @return TagSet Tag list in the time segment.
      */
     public MediaAiAnalysisFrameTagItem [] getTagSet() {
         return this.TagSet;
     }
 
     /**
-     * Set Tag list within the time segment.
-     * @param TagSet Tag list within the time segment.
+     * Set Tag list in the time segment.
+     * @param TagSet Tag list in the time segment.
      */
     public void setTagSet(MediaAiAnalysisFrameTagItem [] TagSet) {
         this.TagSet = TagSet;

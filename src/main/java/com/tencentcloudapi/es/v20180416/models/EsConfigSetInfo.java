@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class EsConfigSetInfo extends AbstractModel {
 
     /**
-    * Configuration set type, such as `LDAP` and `AD`.
+    * Configuration group type, for example, ldap and ad
     */
     @SerializedName("Type")
     @Expose
@@ -38,16 +38,16 @@ public class EsConfigSetInfo extends AbstractModel {
     private String EsConfig;
 
     /**
-     * Get Configuration set type, such as `LDAP` and `AD`. 
-     * @return Type Configuration set type, such as `LDAP` and `AD`.
+     * Get Configuration group type, for example, ldap and ad 
+     * @return Type Configuration group type, for example, ldap and ad
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Configuration set type, such as `LDAP` and `AD`.
-     * @param Type Configuration set type, such as `LDAP` and `AD`.
+     * Set Configuration group type, for example, ldap and ad
+     * @param Type Configuration group type, for example, ldap and ad
      */
     public void setType(String Type) {
         this.Type = Type;

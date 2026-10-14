@@ -31,7 +31,7 @@ public class SmartSubtitleTaskResultInput extends AbstractModel {
     private Long Definition;
 
     /**
-    * 
+    * <p>Custom smart subtitle parameter. It takes effect when Definition is set to 0.<br>This parameter is used in highly customized scenarios. We recommend that you use Definition to specify smart subtitle parameters.</p>
     */
     @SerializedName("RawParameter")
     @Expose
@@ -61,16 +61,16 @@ public class SmartSubtitleTaskResultInput extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return RawParameter 
+     * Get <p>Custom smart subtitle parameter. It takes effect when Definition is set to 0.<br>This parameter is used in highly customized scenarios. We recommend that you use Definition to specify smart subtitle parameters.</p> 
+     * @return RawParameter <p>Custom smart subtitle parameter. It takes effect when Definition is set to 0.<br>This parameter is used in highly customized scenarios. We recommend that you use Definition to specify smart subtitle parameters.</p>
      */
     public RawSmartSubtitleParameter getRawParameter() {
         return this.RawParameter;
     }
 
     /**
-     * Set 
-     * @param RawParameter 
+     * Set <p>Custom smart subtitle parameter. It takes effect when Definition is set to 0.<br>This parameter is used in highly customized scenarios. We recommend that you use Definition to specify smart subtitle parameters.</p>
+     * @param RawParameter <p>Custom smart subtitle parameter. It takes effect when Definition is set to 0.<br>This parameter is used in highly customized scenarios. We recommend that you use Definition to specify smart subtitle parameters.</p>
      */
     public void setRawParameter(RawSmartSubtitleParameter RawParameter) {
         this.RawParameter = RawParameter;

@@ -24,22 +24,22 @@ import java.util.HashMap;
 public class LiveStreamFaceRecognitionResult extends AbstractModel {
 
     /**
-    * Unique identification ID of a figure.
+    * Unique identification ID of a person.
     */
     @SerializedName("Id")
     @Expose
     private String Id;
 
     /**
-    * Figure name.
+    * Character name.
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * Figure library type, which indicates which figure library the recognized figure comes from.
-<li>Default: Default figure library;</li><li>UserDefine: User-defined character library.</li>
+    * Library type of the figure, indicating which figure library the recognized figure comes from:
+<li>Default: default figure library;</li><li>UserDefine: user-defined character library.</li>
     */
     @SerializedName("Type")
     @Expose
@@ -74,52 +74,52 @@ public class LiveStreamFaceRecognitionResult extends AbstractModel {
     private Long [] AreaCoordSet;
 
     /**
-     * Get Unique identification ID of a figure. 
-     * @return Id Unique identification ID of a figure.
+     * Get Unique identification ID of a person. 
+     * @return Id Unique identification ID of a person.
      */
     public String getId() {
         return this.Id;
     }
 
     /**
-     * Set Unique identification ID of a figure.
-     * @param Id Unique identification ID of a figure.
+     * Set Unique identification ID of a person.
+     * @param Id Unique identification ID of a person.
      */
     public void setId(String Id) {
         this.Id = Id;
     }
 
     /**
-     * Get Figure name. 
-     * @return Name Figure name.
+     * Get Character name. 
+     * @return Name Character name.
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Figure name.
-     * @param Name Figure name.
+     * Set Character name.
+     * @param Name Character name.
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Figure library type, which indicates which figure library the recognized figure comes from.
-<li>Default: Default figure library;</li><li>UserDefine: User-defined character library.</li> 
-     * @return Type Figure library type, which indicates which figure library the recognized figure comes from.
-<li>Default: Default figure library;</li><li>UserDefine: User-defined character library.</li>
+     * Get Library type of the figure, indicating which figure library the recognized figure comes from:
+<li>Default: default figure library;</li><li>UserDefine: user-defined character library.</li> 
+     * @return Type Library type of the figure, indicating which figure library the recognized figure comes from:
+<li>Default: default figure library;</li><li>UserDefine: user-defined character library.</li>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Figure library type, which indicates which figure library the recognized figure comes from.
-<li>Default: Default figure library;</li><li>UserDefine: User-defined character library.</li>
-     * @param Type Figure library type, which indicates which figure library the recognized figure comes from.
-<li>Default: Default figure library;</li><li>UserDefine: User-defined character library.</li>
+     * Set Library type of the figure, indicating which figure library the recognized figure comes from:
+<li>Default: default figure library;</li><li>UserDefine: user-defined character library.</li>
+     * @param Type Library type of the figure, indicating which figure library the recognized figure comes from:
+<li>Default: default figure library;</li><li>UserDefine: user-defined character library.</li>
      */
     public void setType(String Type) {
         this.Type = Type;

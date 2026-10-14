@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class Variable extends AbstractModel {
 
     /**
-    * Variable name
+    * Variable name. Cannot be empty.
     */
     @SerializedName("Key")
     @Expose
     private String Key;
 
     /**
-    * Variable value
+    * Variable value. Cannot be empty.
     */
     @SerializedName("Value")
     @Expose
     private String Value;
 
     /**
-     * Get Variable name 
-     * @return Key Variable name
+     * Get Variable name. Cannot be empty. 
+     * @return Key Variable name. Cannot be empty.
      */
     public String getKey() {
         return this.Key;
     }
 
     /**
-     * Set Variable name
-     * @param Key Variable name
+     * Set Variable name. Cannot be empty.
+     * @param Key Variable name. Cannot be empty.
      */
     public void setKey(String Key) {
         this.Key = Key;
     }
 
     /**
-     * Get Variable value 
-     * @return Value Variable value
+     * Get Variable value. Cannot be empty. 
+     * @return Value Variable value. Cannot be empty.
      */
     public String getValue() {
         return this.Value;
     }
 
     /**
-     * Set Variable value
-     * @param Value Variable value
+     * Set Variable value. Cannot be empty.
+     * @param Value Variable value. Cannot be empty.
      */
     public void setValue(String Value) {
         this.Value = Value;

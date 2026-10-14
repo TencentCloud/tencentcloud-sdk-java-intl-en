@@ -31,7 +31,7 @@ public class DescribeInstanceOperationsResponse extends AbstractModel {
     private Long TotalCount;
 
     /**
-    * Operation history
+    * Operation record
     */
     @SerializedName("Operations")
     @Expose
@@ -61,16 +61,16 @@ public class DescribeInstanceOperationsResponse extends AbstractModel {
     }
 
     /**
-     * Get Operation history 
-     * @return Operations Operation history
+     * Get Operation record 
+     * @return Operations Operation record
      */
     public Operation [] getOperations() {
         return this.Operations;
     }
 
     /**
-     * Set Operation history
-     * @param Operations Operation history
+     * Set Operation record
+     * @param Operations Operation record
      */
     public void setOperations(Operation [] Operations) {
         this.Operations = Operations;

@@ -52,7 +52,7 @@ public class ScheduleExecRuleTaskResult extends AbstractModel {
     private ExecRulesTask Input;
 
     /**
-    * 
+    * Output of the conditional judgment task.
     */
     @SerializedName("Output")
     @Expose
@@ -123,16 +123,16 @@ public class ScheduleExecRuleTaskResult extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return Output 
+     * Get Output of the conditional judgment task. 
+     * @return Output Output of the conditional judgment task.
      */
     public ExecRuleTaskData getOutput() {
         return this.Output;
     }
 
     /**
-     * Set 
-     * @param Output 
+     * Set Output of the conditional judgment task.
+     * @param Output Output of the conditional judgment task.
      */
     public void setOutput(ExecRuleTaskData Output) {
         this.Output = Output;

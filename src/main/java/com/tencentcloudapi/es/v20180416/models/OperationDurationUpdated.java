@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class OperationDurationUpdated extends AbstractModel {
 
     /**
-    * Maintenance period, which can be one or more days from Monday to Sunday. Valid values: [0, 6].
+    * Maintenance period, which refers to Monday to Sunday. Valid values: [0, 6].
     */
     @SerializedName("Periods")
     @Expose
     private Long [] Periods;
 
     /**
-    * The maintenance start time
+    * Maintenance start time
     */
     @SerializedName("TimeStart")
     @Expose
     private String TimeStart;
 
     /**
-    * The maintenance end time
+    * Maintenance end time.
     */
     @SerializedName("TimeEnd")
     @Expose
     private String TimeEnd;
 
     /**
-    * The time zone expressed in UTC.
+    * Time zone in UTC format
     */
     @SerializedName("TimeZone")
     @Expose
     private String TimeZone;
 
     /**
-    * The array of ES cluster IDs
+    * ES cluster ID array
     */
     @SerializedName("MoreInstances")
     @Expose
     private String [] MoreInstances;
 
     /**
-     * Get Maintenance period, which can be one or more days from Monday to Sunday. Valid values: [0, 6]. 
-     * @return Periods Maintenance period, which can be one or more days from Monday to Sunday. Valid values: [0, 6].
+     * Get Maintenance period, which refers to Monday to Sunday. Valid values: [0, 6]. 
+     * @return Periods Maintenance period, which refers to Monday to Sunday. Valid values: [0, 6].
      */
     public Long [] getPeriods() {
         return this.Periods;
     }
 
     /**
-     * Set Maintenance period, which can be one or more days from Monday to Sunday. Valid values: [0, 6].
-     * @param Periods Maintenance period, which can be one or more days from Monday to Sunday. Valid values: [0, 6].
+     * Set Maintenance period, which refers to Monday to Sunday. Valid values: [0, 6].
+     * @param Periods Maintenance period, which refers to Monday to Sunday. Valid values: [0, 6].
      */
     public void setPeriods(Long [] Periods) {
         this.Periods = Periods;
     }
 
     /**
-     * Get The maintenance start time 
-     * @return TimeStart The maintenance start time
+     * Get Maintenance start time 
+     * @return TimeStart Maintenance start time
      */
     public String getTimeStart() {
         return this.TimeStart;
     }
 
     /**
-     * Set The maintenance start time
-     * @param TimeStart The maintenance start time
+     * Set Maintenance start time
+     * @param TimeStart Maintenance start time
      */
     public void setTimeStart(String TimeStart) {
         this.TimeStart = TimeStart;
     }
 
     /**
-     * Get The maintenance end time 
-     * @return TimeEnd The maintenance end time
+     * Get Maintenance end time. 
+     * @return TimeEnd Maintenance end time.
      */
     public String getTimeEnd() {
         return this.TimeEnd;
     }
 
     /**
-     * Set The maintenance end time
-     * @param TimeEnd The maintenance end time
+     * Set Maintenance end time.
+     * @param TimeEnd Maintenance end time.
      */
     public void setTimeEnd(String TimeEnd) {
         this.TimeEnd = TimeEnd;
     }
 
     /**
-     * Get The time zone expressed in UTC. 
-     * @return TimeZone The time zone expressed in UTC.
+     * Get Time zone in UTC format 
+     * @return TimeZone Time zone in UTC format
      */
     public String getTimeZone() {
         return this.TimeZone;
     }
 
     /**
-     * Set The time zone expressed in UTC.
-     * @param TimeZone The time zone expressed in UTC.
+     * Set Time zone in UTC format
+     * @param TimeZone Time zone in UTC format
      */
     public void setTimeZone(String TimeZone) {
         this.TimeZone = TimeZone;
     }
 
     /**
-     * Get The array of ES cluster IDs 
-     * @return MoreInstances The array of ES cluster IDs
+     * Get ES cluster ID array 
+     * @return MoreInstances ES cluster ID array
      */
     public String [] getMoreInstances() {
         return this.MoreInstances;
     }
 
     /**
-     * Set The array of ES cluster IDs
-     * @param MoreInstances The array of ES cluster IDs
+     * Set ES cluster ID array
+     * @param MoreInstances ES cluster ID array
      */
     public void setMoreInstances(String [] MoreInstances) {
         this.MoreInstances = MoreInstances;

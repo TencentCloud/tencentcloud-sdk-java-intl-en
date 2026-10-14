@@ -24,187 +24,233 @@ import java.util.HashMap;
 public class KibanaView extends AbstractModel {
 
     /**
-    * Kibana node IP
+    * <p>Kibana node IP</p>
     */
     @SerializedName("Ip")
     @Expose
     private String Ip;
 
     /**
-    * Node disk size
+    * <p>Total node disk size</p>
     */
     @SerializedName("DiskSize")
     @Expose
     private Long DiskSize;
 
     /**
-    * Disk usage
+    * <p>Disk utilization rate</p>
     */
     @SerializedName("DiskUsage")
     @Expose
     private Float DiskUsage;
 
     /**
-    * Node memory size
+    * <p>Node memory size</p>
     */
     @SerializedName("MemSize")
     @Expose
     private Long MemSize;
 
     /**
-    * Memory usage
+    * <p>Memory usage rate</p>
     */
     @SerializedName("MemUsage")
     @Expose
     private Float MemUsage;
 
     /**
-    * Number of node CPUs
+    * <p>Number of CPUs on the node</p>
     */
     @SerializedName("CpuNum")
     @Expose
     private Long CpuNum;
 
     /**
-    * CPU usage
+    * <p>cpu utilization</p>
     */
     @SerializedName("CpuUsage")
     @Expose
     private Float CpuUsage;
 
     /**
-    * Availability zone
+    * <p>AZ.</p>
     */
     @SerializedName("Zone")
     @Expose
     private String Zone;
 
     /**
-     * Get Kibana node IP 
-     * @return Ip Kibana node IP
+    * <p>ts-0noqayxu-az6-hot-03222010-0</p>
+    */
+    @SerializedName("NodeId")
+    @Expose
+    private String NodeId;
+
+    /**
+    * <p>Client-side Ip info</p>
+    */
+    @SerializedName("UserIp")
+    @Expose
+    private String UserIp;
+
+    /**
+     * Get <p>Kibana node IP</p> 
+     * @return Ip <p>Kibana node IP</p>
      */
     public String getIp() {
         return this.Ip;
     }
 
     /**
-     * Set Kibana node IP
-     * @param Ip Kibana node IP
+     * Set <p>Kibana node IP</p>
+     * @param Ip <p>Kibana node IP</p>
      */
     public void setIp(String Ip) {
         this.Ip = Ip;
     }
 
     /**
-     * Get Node disk size 
-     * @return DiskSize Node disk size
+     * Get <p>Total node disk size</p> 
+     * @return DiskSize <p>Total node disk size</p>
      */
     public Long getDiskSize() {
         return this.DiskSize;
     }
 
     /**
-     * Set Node disk size
-     * @param DiskSize Node disk size
+     * Set <p>Total node disk size</p>
+     * @param DiskSize <p>Total node disk size</p>
      */
     public void setDiskSize(Long DiskSize) {
         this.DiskSize = DiskSize;
     }
 
     /**
-     * Get Disk usage 
-     * @return DiskUsage Disk usage
+     * Get <p>Disk utilization rate</p> 
+     * @return DiskUsage <p>Disk utilization rate</p>
      */
     public Float getDiskUsage() {
         return this.DiskUsage;
     }
 
     /**
-     * Set Disk usage
-     * @param DiskUsage Disk usage
+     * Set <p>Disk utilization rate</p>
+     * @param DiskUsage <p>Disk utilization rate</p>
      */
     public void setDiskUsage(Float DiskUsage) {
         this.DiskUsage = DiskUsage;
     }
 
     /**
-     * Get Node memory size 
-     * @return MemSize Node memory size
+     * Get <p>Node memory size</p> 
+     * @return MemSize <p>Node memory size</p>
      */
     public Long getMemSize() {
         return this.MemSize;
     }
 
     /**
-     * Set Node memory size
-     * @param MemSize Node memory size
+     * Set <p>Node memory size</p>
+     * @param MemSize <p>Node memory size</p>
      */
     public void setMemSize(Long MemSize) {
         this.MemSize = MemSize;
     }
 
     /**
-     * Get Memory usage 
-     * @return MemUsage Memory usage
+     * Get <p>Memory usage rate</p> 
+     * @return MemUsage <p>Memory usage rate</p>
      */
     public Float getMemUsage() {
         return this.MemUsage;
     }
 
     /**
-     * Set Memory usage
-     * @param MemUsage Memory usage
+     * Set <p>Memory usage rate</p>
+     * @param MemUsage <p>Memory usage rate</p>
      */
     public void setMemUsage(Float MemUsage) {
         this.MemUsage = MemUsage;
     }
 
     /**
-     * Get Number of node CPUs 
-     * @return CpuNum Number of node CPUs
+     * Get <p>Number of CPUs on the node</p> 
+     * @return CpuNum <p>Number of CPUs on the node</p>
      */
     public Long getCpuNum() {
         return this.CpuNum;
     }
 
     /**
-     * Set Number of node CPUs
-     * @param CpuNum Number of node CPUs
+     * Set <p>Number of CPUs on the node</p>
+     * @param CpuNum <p>Number of CPUs on the node</p>
      */
     public void setCpuNum(Long CpuNum) {
         this.CpuNum = CpuNum;
     }
 
     /**
-     * Get CPU usage 
-     * @return CpuUsage CPU usage
+     * Get <p>cpu utilization</p> 
+     * @return CpuUsage <p>cpu utilization</p>
      */
     public Float getCpuUsage() {
         return this.CpuUsage;
     }
 
     /**
-     * Set CPU usage
-     * @param CpuUsage CPU usage
+     * Set <p>cpu utilization</p>
+     * @param CpuUsage <p>cpu utilization</p>
      */
     public void setCpuUsage(Float CpuUsage) {
         this.CpuUsage = CpuUsage;
     }
 
     /**
-     * Get Availability zone 
-     * @return Zone Availability zone
+     * Get <p>AZ.</p> 
+     * @return Zone <p>AZ.</p>
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * Set Availability zone
-     * @param Zone Availability zone
+     * Set <p>AZ.</p>
+     * @param Zone <p>AZ.</p>
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
+    }
+
+    /**
+     * Get <p>ts-0noqayxu-az6-hot-03222010-0</p> 
+     * @return NodeId <p>ts-0noqayxu-az6-hot-03222010-0</p>
+     */
+    public String getNodeId() {
+        return this.NodeId;
+    }
+
+    /**
+     * Set <p>ts-0noqayxu-az6-hot-03222010-0</p>
+     * @param NodeId <p>ts-0noqayxu-az6-hot-03222010-0</p>
+     */
+    public void setNodeId(String NodeId) {
+        this.NodeId = NodeId;
+    }
+
+    /**
+     * Get <p>Client-side Ip info</p> 
+     * @return UserIp <p>Client-side Ip info</p>
+     */
+    public String getUserIp() {
+        return this.UserIp;
+    }
+
+    /**
+     * Set <p>Client-side Ip info</p>
+     * @param UserIp <p>Client-side Ip info</p>
+     */
+    public void setUserIp(String UserIp) {
+        this.UserIp = UserIp;
     }
 
     public KibanaView() {
@@ -239,6 +285,12 @@ public class KibanaView extends AbstractModel {
         if (source.Zone != null) {
             this.Zone = new String(source.Zone);
         }
+        if (source.NodeId != null) {
+            this.NodeId = new String(source.NodeId);
+        }
+        if (source.UserIp != null) {
+            this.UserIp = new String(source.UserIp);
+        }
     }
 
 
@@ -254,6 +306,8 @@ public class KibanaView extends AbstractModel {
         this.setParamSimple(map, prefix + "CpuNum", this.CpuNum);
         this.setParamSimple(map, prefix + "CpuUsage", this.CpuUsage);
         this.setParamSimple(map, prefix + "Zone", this.Zone);
+        this.setParamSimple(map, prefix + "NodeId", this.NodeId);
+        this.setParamSimple(map, prefix + "UserIp", this.UserIp);
 
     }
 }

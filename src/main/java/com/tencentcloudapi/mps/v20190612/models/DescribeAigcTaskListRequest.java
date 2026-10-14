@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class DescribeAigcTaskListRequest extends AbstractModel {
 
     /**
-    * <p>Query page started</p>
+    * <p>Start query page</p>
     */
     @SerializedName("PageNum")
     @Expose
     private Long PageNum;
 
     /**
-    * <p>How many data to get on the current page</p>
+    * <p>How many data entries to retrieve on the current page</p>
     */
     @SerializedName("PageSize")
     @Expose
     private Long PageSize;
 
     /**
-    * <p>Query filter criteria</p>
+    * <p>Query filter conditions.</p>
     */
     @SerializedName("QueryTaskFilter")
     @Expose
     private QueryTaskFilter QueryTaskFilter;
 
     /**
-     * Get <p>Query page started</p> 
-     * @return PageNum <p>Query page started</p>
+     * Get <p>Start query page</p> 
+     * @return PageNum <p>Start query page</p>
      */
     public Long getPageNum() {
         return this.PageNum;
     }
 
     /**
-     * Set <p>Query page started</p>
-     * @param PageNum <p>Query page started</p>
+     * Set <p>Start query page</p>
+     * @param PageNum <p>Start query page</p>
      */
     public void setPageNum(Long PageNum) {
         this.PageNum = PageNum;
     }
 
     /**
-     * Get <p>How many data to get on the current page</p> 
-     * @return PageSize <p>How many data to get on the current page</p>
+     * Get <p>How many data entries to retrieve on the current page</p> 
+     * @return PageSize <p>How many data entries to retrieve on the current page</p>
      */
     public Long getPageSize() {
         return this.PageSize;
     }
 
     /**
-     * Set <p>How many data to get on the current page</p>
-     * @param PageSize <p>How many data to get on the current page</p>
+     * Set <p>How many data entries to retrieve on the current page</p>
+     * @param PageSize <p>How many data entries to retrieve on the current page</p>
      */
     public void setPageSize(Long PageSize) {
         this.PageSize = PageSize;
     }
 
     /**
-     * Get <p>Query filter criteria</p> 
-     * @return QueryTaskFilter <p>Query filter criteria</p>
+     * Get <p>Query filter conditions.</p> 
+     * @return QueryTaskFilter <p>Query filter conditions.</p>
      */
     public QueryTaskFilter getQueryTaskFilter() {
         return this.QueryTaskFilter;
     }
 
     /**
-     * Set <p>Query filter criteria</p>
-     * @param QueryTaskFilter <p>Query filter criteria</p>
+     * Set <p>Query filter conditions.</p>
+     * @param QueryTaskFilter <p>Query filter conditions.</p>
      */
     public void setQueryTaskFilter(QueryTaskFilter QueryTaskFilter) {
         this.QueryTaskFilter = QueryTaskFilter;

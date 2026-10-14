@@ -38,14 +38,14 @@ public class LiveStreamAiReviewVoicePornResult extends AbstractModel {
     private Float EndPtsTime;
 
     /**
-    * Suspected segment porn score.
+    * Porn score of the suspected segment.
     */
     @SerializedName("Confidence")
     @Expose
     private Float Confidence;
 
     /**
-    * Pornographic result suggestion for suspected segment, value ranges from...to...
+    * Porn detection result suggestion for the suspected segment. Value range:
 <li>pass</li>
 <li>review</li>
 <li>block</li>
@@ -55,8 +55,8 @@ public class LiveStreamAiReviewVoicePornResult extends AbstractModel {
     private String Suggestion;
 
     /**
-    * Video porn detection result tag, value ranges from...to...
-<li>sexual_moan: Moan.</li>
+    * Porn information detection result tag. Value range:
+<li>sexual_moan: moan.</li>
     */
     @SerializedName("Label")
     @Expose
@@ -95,27 +95,27 @@ public class LiveStreamAiReviewVoicePornResult extends AbstractModel {
     }
 
     /**
-     * Get Suspected segment porn score. 
-     * @return Confidence Suspected segment porn score.
+     * Get Porn score of the suspected segment. 
+     * @return Confidence Porn score of the suspected segment.
      */
     public Float getConfidence() {
         return this.Confidence;
     }
 
     /**
-     * Set Suspected segment porn score.
-     * @param Confidence Suspected segment porn score.
+     * Set Porn score of the suspected segment.
+     * @param Confidence Porn score of the suspected segment.
      */
     public void setConfidence(Float Confidence) {
         this.Confidence = Confidence;
     }
 
     /**
-     * Get Pornographic result suggestion for suspected segment, value ranges from...to...
+     * Get Porn detection result suggestion for the suspected segment. Value range:
 <li>pass</li>
 <li>review</li>
 <li>block</li> 
-     * @return Suggestion Pornographic result suggestion for suspected segment, value ranges from...to...
+     * @return Suggestion Porn detection result suggestion for the suspected segment. Value range:
 <li>pass</li>
 <li>review</li>
 <li>block</li>
@@ -125,11 +125,11 @@ public class LiveStreamAiReviewVoicePornResult extends AbstractModel {
     }
 
     /**
-     * Set Pornographic result suggestion for suspected segment, value ranges from...to...
+     * Set Porn detection result suggestion for the suspected segment. Value range:
 <li>pass</li>
 <li>review</li>
 <li>block</li>
-     * @param Suggestion Pornographic result suggestion for suspected segment, value ranges from...to...
+     * @param Suggestion Porn detection result suggestion for the suspected segment. Value range:
 <li>pass</li>
 <li>review</li>
 <li>block</li>
@@ -139,20 +139,20 @@ public class LiveStreamAiReviewVoicePornResult extends AbstractModel {
     }
 
     /**
-     * Get Video porn detection result tag, value ranges from...to...
-<li>sexual_moan: Moan.</li> 
-     * @return Label Video porn detection result tag, value ranges from...to...
-<li>sexual_moan: Moan.</li>
+     * Get Porn information detection result tag. Value range:
+<li>sexual_moan: moan.</li> 
+     * @return Label Porn information detection result tag. Value range:
+<li>sexual_moan: moan.</li>
      */
     public String getLabel() {
         return this.Label;
     }
 
     /**
-     * Set Video porn detection result tag, value ranges from...to...
-<li>sexual_moan: Moan.</li>
-     * @param Label Video porn detection result tag, value ranges from...to...
-<li>sexual_moan: Moan.</li>
+     * Set Porn information detection result tag. Value range:
+<li>sexual_moan: moan.</li>
+     * @param Label Porn information detection result tag. Value range:
+<li>sexual_moan: moan.</li>
      */
     public void setLabel(String Label) {
         this.Label = Label;

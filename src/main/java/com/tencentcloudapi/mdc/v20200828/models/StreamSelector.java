@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class StreamSelector extends AbstractModel {
 
     /**
-    * 
+    * Selection type: PID | TRACK
     */
     @SerializedName("SelectorType")
     @Expose
     private String SelectorType;
 
     /**
-    * 
+    * Based on the PID configuration selector
     */
     @SerializedName("PidSelector")
     @Expose
     private PidSelector PidSelector;
 
     /**
-    * 
+    * Select a selector based on the Track configuration
     */
     @SerializedName("TrackSelector")
     @Expose
     private TrackSelector TrackSelector;
 
     /**
-     * Get  
-     * @return SelectorType 
+     * Get Selection type: PID | TRACK 
+     * @return SelectorType Selection type: PID | TRACK
      */
     public String getSelectorType() {
         return this.SelectorType;
     }
 
     /**
-     * Set 
-     * @param SelectorType 
+     * Set Selection type: PID | TRACK
+     * @param SelectorType Selection type: PID | TRACK
      */
     public void setSelectorType(String SelectorType) {
         this.SelectorType = SelectorType;
     }
 
     /**
-     * Get  
-     * @return PidSelector 
+     * Get Based on the PID configuration selector 
+     * @return PidSelector Based on the PID configuration selector
      */
     public PidSelector getPidSelector() {
         return this.PidSelector;
     }
 
     /**
-     * Set 
-     * @param PidSelector 
+     * Set Based on the PID configuration selector
+     * @param PidSelector Based on the PID configuration selector
      */
     public void setPidSelector(PidSelector PidSelector) {
         this.PidSelector = PidSelector;
     }
 
     /**
-     * Get  
-     * @return TrackSelector 
+     * Get Select a selector based on the Track configuration 
+     * @return TrackSelector Select a selector based on the Track configuration
      */
     public TrackSelector getTrackSelector() {
         return this.TrackSelector;
     }
 
     /**
-     * Set 
-     * @param TrackSelector 
+     * Set Select a selector based on the Track configuration
+     * @param TrackSelector Select a selector based on the Track configuration
      */
     public void setTrackSelector(TrackSelector TrackSelector) {
         this.TrackSelector = TrackSelector;

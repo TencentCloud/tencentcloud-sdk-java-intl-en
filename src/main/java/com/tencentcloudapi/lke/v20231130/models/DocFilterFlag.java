@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class DocFilterFlag extends AbstractModel {
 
     /**
-    * 
+    * Identifier bit
     */
     @SerializedName("Flag")
     @Expose
     private String Flag;
 
     /**
-    * 
+    * Identifier value
     */
     @SerializedName("Value")
     @Expose
     private Boolean Value;
 
     /**
-     * Get  
-     * @return Flag 
+     * Get Identifier bit 
+     * @return Flag Identifier bit
      */
     public String getFlag() {
         return this.Flag;
     }
 
     /**
-     * Set 
-     * @param Flag 
+     * Set Identifier bit
+     * @param Flag Identifier bit
      */
     public void setFlag(String Flag) {
         this.Flag = Flag;
     }
 
     /**
-     * Get  
-     * @return Value 
+     * Get Identifier value 
+     * @return Value Identifier value
      */
     public Boolean getValue() {
         return this.Value;
     }
 
     /**
-     * Set 
-     * @param Value 
+     * Set Identifier value
+     * @param Value Identifier value
      */
     public void setValue(Boolean Value) {
         this.Value = Value;

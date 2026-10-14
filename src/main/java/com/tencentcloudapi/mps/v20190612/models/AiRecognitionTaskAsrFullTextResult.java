@@ -59,14 +59,14 @@ public class AiRecognitionTaskAsrFullTextResult extends AbstractModel {
     private AiRecognitionTaskAsrFullTextResultInput Input;
 
     /**
-    * 
+    * Output information on the full speech recognition task.
     */
     @SerializedName("Output")
     @Expose
     private AiRecognitionTaskAsrFullTextResultOutput Output;
 
     /**
-    * 
+    * Task progress.
     */
     @SerializedName("Progress")
     @Expose
@@ -153,32 +153,32 @@ public class AiRecognitionTaskAsrFullTextResult extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return Output 
+     * Get Output information on the full speech recognition task. 
+     * @return Output Output information on the full speech recognition task.
      */
     public AiRecognitionTaskAsrFullTextResultOutput getOutput() {
         return this.Output;
     }
 
     /**
-     * Set 
-     * @param Output 
+     * Set Output information on the full speech recognition task.
+     * @param Output Output information on the full speech recognition task.
      */
     public void setOutput(AiRecognitionTaskAsrFullTextResultOutput Output) {
         this.Output = Output;
     }
 
     /**
-     * Get  
-     * @return Progress 
+     * Get Task progress. 
+     * @return Progress Task progress.
      */
     public Long getProgress() {
         return this.Progress;
     }
 
     /**
-     * Set 
-     * @param Progress 
+     * Set Task progress.
+     * @param Progress Task progress.
      */
     public void setProgress(Long Progress) {
         this.Progress = Progress;

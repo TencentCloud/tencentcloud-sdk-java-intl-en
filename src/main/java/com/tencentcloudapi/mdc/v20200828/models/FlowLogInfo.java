@@ -24,230 +24,230 @@ import java.util.HashMap;
 public class FlowLogInfo extends AbstractModel {
 
     /**
-    * The timestamp (seconds).
+    * Timestamp in seconds.
     */
     @SerializedName("Timestamp")
     @Expose
     private Long Timestamp;
 
     /**
-    * Whether it is an input or output.
+    * Input/output type. Valid values: `input`, `output`.
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * The input or output ID.
+    * Input or output Id.
     */
     @SerializedName("InputOutputId")
     @Expose
     private String InputOutputId;
 
     /**
-    * The protocol.
+    * Protocol.
     */
     @SerializedName("Protocol")
     @Expose
     private String Protocol;
 
     /**
-    * The event code.
+    * Event code.
     */
     @SerializedName("EventCode")
     @Expose
     private String EventCode;
 
     /**
-    * The event information.
+    * Event information.
     */
     @SerializedName("EventMessage")
     @Expose
     private String EventMessage;
 
     /**
-    * The peer IP.
+    * Peer IP.
     */
     @SerializedName("RemoteIp")
     @Expose
     private String RemoteIp;
 
     /**
-    * The peer port.
+    * Peer port.
     */
     @SerializedName("RemotePort")
     @Expose
     private String RemotePort;
 
     /**
-    * Whether it is a primary or backup pipeline. Valid values: 0 (primary), 1 (backup).
+    * Primary/secondary tunnel. 0: primary, 1: backup.
     */
     @SerializedName("Pipeline")
     @Expose
     private String Pipeline;
 
     /**
-    * The input or output name.
+    * Input or output name.
     */
     @SerializedName("InputOutputName")
     @Expose
     private String InputOutputName;
 
     /**
-     * Get The timestamp (seconds). 
-     * @return Timestamp The timestamp (seconds).
+     * Get Timestamp in seconds. 
+     * @return Timestamp Timestamp in seconds.
      */
     public Long getTimestamp() {
         return this.Timestamp;
     }
 
     /**
-     * Set The timestamp (seconds).
-     * @param Timestamp The timestamp (seconds).
+     * Set Timestamp in seconds.
+     * @param Timestamp Timestamp in seconds.
      */
     public void setTimestamp(Long Timestamp) {
         this.Timestamp = Timestamp;
     }
 
     /**
-     * Get Whether it is an input or output. 
-     * @return Type Whether it is an input or output.
+     * Get Input/output type. Valid values: `input`, `output`. 
+     * @return Type Input/output type. Valid values: `input`, `output`.
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Whether it is an input or output.
-     * @param Type Whether it is an input or output.
+     * Set Input/output type. Valid values: `input`, `output`.
+     * @param Type Input/output type. Valid values: `input`, `output`.
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get The input or output ID. 
-     * @return InputOutputId The input or output ID.
+     * Get Input or output Id. 
+     * @return InputOutputId Input or output Id.
      */
     public String getInputOutputId() {
         return this.InputOutputId;
     }
 
     /**
-     * Set The input or output ID.
-     * @param InputOutputId The input or output ID.
+     * Set Input or output Id.
+     * @param InputOutputId Input or output Id.
      */
     public void setInputOutputId(String InputOutputId) {
         this.InputOutputId = InputOutputId;
     }
 
     /**
-     * Get The protocol. 
-     * @return Protocol The protocol.
+     * Get Protocol. 
+     * @return Protocol Protocol.
      */
     public String getProtocol() {
         return this.Protocol;
     }
 
     /**
-     * Set The protocol.
-     * @param Protocol The protocol.
+     * Set Protocol.
+     * @param Protocol Protocol.
      */
     public void setProtocol(String Protocol) {
         this.Protocol = Protocol;
     }
 
     /**
-     * Get The event code. 
-     * @return EventCode The event code.
+     * Get Event code. 
+     * @return EventCode Event code.
      */
     public String getEventCode() {
         return this.EventCode;
     }
 
     /**
-     * Set The event code.
-     * @param EventCode The event code.
+     * Set Event code.
+     * @param EventCode Event code.
      */
     public void setEventCode(String EventCode) {
         this.EventCode = EventCode;
     }
 
     /**
-     * Get The event information. 
-     * @return EventMessage The event information.
+     * Get Event information. 
+     * @return EventMessage Event information.
      */
     public String getEventMessage() {
         return this.EventMessage;
     }
 
     /**
-     * Set The event information.
-     * @param EventMessage The event information.
+     * Set Event information.
+     * @param EventMessage Event information.
      */
     public void setEventMessage(String EventMessage) {
         this.EventMessage = EventMessage;
     }
 
     /**
-     * Get The peer IP. 
-     * @return RemoteIp The peer IP.
+     * Get Peer IP. 
+     * @return RemoteIp Peer IP.
      */
     public String getRemoteIp() {
         return this.RemoteIp;
     }
 
     /**
-     * Set The peer IP.
-     * @param RemoteIp The peer IP.
+     * Set Peer IP.
+     * @param RemoteIp Peer IP.
      */
     public void setRemoteIp(String RemoteIp) {
         this.RemoteIp = RemoteIp;
     }
 
     /**
-     * Get The peer port. 
-     * @return RemotePort The peer port.
+     * Get Peer port. 
+     * @return RemotePort Peer port.
      */
     public String getRemotePort() {
         return this.RemotePort;
     }
 
     /**
-     * Set The peer port.
-     * @param RemotePort The peer port.
+     * Set Peer port.
+     * @param RemotePort Peer port.
      */
     public void setRemotePort(String RemotePort) {
         this.RemotePort = RemotePort;
     }
 
     /**
-     * Get Whether it is a primary or backup pipeline. Valid values: 0 (primary), 1 (backup). 
-     * @return Pipeline Whether it is a primary or backup pipeline. Valid values: 0 (primary), 1 (backup).
+     * Get Primary/secondary tunnel. 0: primary, 1: backup. 
+     * @return Pipeline Primary/secondary tunnel. 0: primary, 1: backup.
      */
     public String getPipeline() {
         return this.Pipeline;
     }
 
     /**
-     * Set Whether it is a primary or backup pipeline. Valid values: 0 (primary), 1 (backup).
-     * @param Pipeline Whether it is a primary or backup pipeline. Valid values: 0 (primary), 1 (backup).
+     * Set Primary/secondary tunnel. 0: primary, 1: backup.
+     * @param Pipeline Primary/secondary tunnel. 0: primary, 1: backup.
      */
     public void setPipeline(String Pipeline) {
         this.Pipeline = Pipeline;
     }
 
     /**
-     * Get The input or output name. 
-     * @return InputOutputName The input or output name.
+     * Get Input or output name. 
+     * @return InputOutputName Input or output name.
      */
     public String getInputOutputName() {
         return this.InputOutputName;
     }
 
     /**
-     * Set The input or output name.
-     * @param InputOutputName The input or output name.
+     * Set Input or output name.
+     * @param InputOutputName Input or output name.
      */
     public void setInputOutputName(String InputOutputName) {
         this.InputOutputName = InputOutputName;

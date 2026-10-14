@@ -31,7 +31,7 @@ public class ExtractBlindWatermarkTask extends AbstractModel {
     private String TaskId;
 
     /**
-    * Task flow status. Valid values:
+    * Task stream status. Valid values:
 <li>WAITING: waiting.</li>
 <li>PROCESSING: Processing;</li>
 <li>FINISH: completed</li>
@@ -55,7 +55,7 @@ public class ExtractBlindWatermarkTask extends AbstractModel {
     private String Message;
 
     /**
-    * Target file info of Media Processing Service.
+    * Information of the media processing target file.
     */
     @SerializedName("InputInfo")
     @Expose
@@ -69,21 +69,21 @@ public class ExtractBlindWatermarkTask extends AbstractModel {
     private String Type;
 
     /**
-    * Tag whether a watermark is detected. If this parameter is true, the Result field will return the watermark extraction Result. If this parameter is false, the Result field will not return it.
+    * Whether a watermark is detected. If this parameter is true, the Result field will return the watermark extraction Result. If this parameter is false, the Result field will not return.
     */
     @SerializedName("IsDetected")
     @Expose
     private Boolean IsDetected;
 
     /**
-    * Watermark content fetched. Field will not be returned if no digital watermark is detected.
+    * Fetched digital watermark content. This field will not be returned if no watermark is detected.
     */
     @SerializedName("Result")
     @Expose
     private String Result;
 
     /**
-    * Extract digital watermark configuration.
+    * Configuration of digital watermark extraction.
     */
     @SerializedName("ExtractBlindWatermarkConfig")
     @Expose
@@ -106,11 +106,11 @@ public class ExtractBlindWatermarkTask extends AbstractModel {
     }
 
     /**
-     * Get Task flow status. Valid values:
+     * Get Task stream status. Valid values:
 <li>WAITING: waiting.</li>
 <li>PROCESSING: Processing;</li>
 <li>FINISH: completed</li> 
-     * @return Status Task flow status. Valid values:
+     * @return Status Task stream status. Valid values:
 <li>WAITING: waiting.</li>
 <li>PROCESSING: Processing;</li>
 <li>FINISH: completed</li>
@@ -120,11 +120,11 @@ public class ExtractBlindWatermarkTask extends AbstractModel {
     }
 
     /**
-     * Set Task flow status. Valid values:
+     * Set Task stream status. Valid values:
 <li>WAITING: waiting.</li>
 <li>PROCESSING: Processing;</li>
 <li>FINISH: completed</li>
-     * @param Status Task flow status. Valid values:
+     * @param Status Task stream status. Valid values:
 <li>WAITING: waiting.</li>
 <li>PROCESSING: Processing;</li>
 <li>FINISH: completed</li>
@@ -166,16 +166,16 @@ public class ExtractBlindWatermarkTask extends AbstractModel {
     }
 
     /**
-     * Get Target file info of Media Processing Service. 
-     * @return InputInfo Target file info of Media Processing Service.
+     * Get Information of the media processing target file. 
+     * @return InputInfo Information of the media processing target file.
      */
     public MediaInputInfo getInputInfo() {
         return this.InputInfo;
     }
 
     /**
-     * Set Target file info of Media Processing Service.
-     * @param InputInfo Target file info of Media Processing Service.
+     * Set Information of the media processing target file.
+     * @param InputInfo Information of the media processing target file.
      */
     public void setInputInfo(MediaInputInfo InputInfo) {
         this.InputInfo = InputInfo;
@@ -198,48 +198,48 @@ public class ExtractBlindWatermarkTask extends AbstractModel {
     }
 
     /**
-     * Get Tag whether a watermark is detected. If this parameter is true, the Result field will return the watermark extraction Result. If this parameter is false, the Result field will not return it. 
-     * @return IsDetected Tag whether a watermark is detected. If this parameter is true, the Result field will return the watermark extraction Result. If this parameter is false, the Result field will not return it.
+     * Get Whether a watermark is detected. If this parameter is true, the Result field will return the watermark extraction Result. If this parameter is false, the Result field will not return. 
+     * @return IsDetected Whether a watermark is detected. If this parameter is true, the Result field will return the watermark extraction Result. If this parameter is false, the Result field will not return.
      */
     public Boolean getIsDetected() {
         return this.IsDetected;
     }
 
     /**
-     * Set Tag whether a watermark is detected. If this parameter is true, the Result field will return the watermark extraction Result. If this parameter is false, the Result field will not return it.
-     * @param IsDetected Tag whether a watermark is detected. If this parameter is true, the Result field will return the watermark extraction Result. If this parameter is false, the Result field will not return it.
+     * Set Whether a watermark is detected. If this parameter is true, the Result field will return the watermark extraction Result. If this parameter is false, the Result field will not return.
+     * @param IsDetected Whether a watermark is detected. If this parameter is true, the Result field will return the watermark extraction Result. If this parameter is false, the Result field will not return.
      */
     public void setIsDetected(Boolean IsDetected) {
         this.IsDetected = IsDetected;
     }
 
     /**
-     * Get Watermark content fetched. Field will not be returned if no digital watermark is detected. 
-     * @return Result Watermark content fetched. Field will not be returned if no digital watermark is detected.
+     * Get Fetched digital watermark content. This field will not be returned if no watermark is detected. 
+     * @return Result Fetched digital watermark content. This field will not be returned if no watermark is detected.
      */
     public String getResult() {
         return this.Result;
     }
 
     /**
-     * Set Watermark content fetched. Field will not be returned if no digital watermark is detected.
-     * @param Result Watermark content fetched. Field will not be returned if no digital watermark is detected.
+     * Set Fetched digital watermark content. This field will not be returned if no watermark is detected.
+     * @param Result Fetched digital watermark content. This field will not be returned if no watermark is detected.
      */
     public void setResult(String Result) {
         this.Result = Result;
     }
 
     /**
-     * Get Extract digital watermark configuration. 
-     * @return ExtractBlindWatermarkConfig Extract digital watermark configuration.
+     * Get Configuration of digital watermark extraction. 
+     * @return ExtractBlindWatermarkConfig Configuration of digital watermark extraction.
      */
     public ExtractBlindWatermarkTaskConfig getExtractBlindWatermarkConfig() {
         return this.ExtractBlindWatermarkConfig;
     }
 
     /**
-     * Set Extract digital watermark configuration.
-     * @param ExtractBlindWatermarkConfig Extract digital watermark configuration.
+     * Set Configuration of digital watermark extraction.
+     * @param ExtractBlindWatermarkConfig Configuration of digital watermark extraction.
      */
     public void setExtractBlindWatermarkConfig(ExtractBlindWatermarkTaskConfig ExtractBlindWatermarkConfig) {
         this.ExtractBlindWatermarkConfig = ExtractBlindWatermarkConfig;

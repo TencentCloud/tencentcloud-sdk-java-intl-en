@@ -24,49 +24,72 @@ import java.util.HashMap;
 public class ZoneDetail extends AbstractModel {
 
     /**
-    * AZ
+    * AZ.
     */
     @SerializedName("Zone")
     @Expose
     private String Zone;
 
     /**
-    * Subnet ID
+    * Subnet ID.
     */
     @SerializedName("SubnetId")
     @Expose
     private String SubnetId;
 
     /**
-     * Get AZ 
-     * @return Zone AZ
+    * Whether it is a hidden AZ
+    */
+    @SerializedName("Hidden")
+    @Expose
+    private Boolean Hidden;
+
+    /**
+     * Get AZ. 
+     * @return Zone AZ.
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * Set AZ
-     * @param Zone AZ
+     * Set AZ.
+     * @param Zone AZ.
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
     }
 
     /**
-     * Get Subnet ID 
-     * @return SubnetId Subnet ID
+     * Get Subnet ID. 
+     * @return SubnetId Subnet ID.
      */
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set Subnet ID
-     * @param SubnetId Subnet ID
+     * Set Subnet ID.
+     * @param SubnetId Subnet ID.
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
+    }
+
+    /**
+     * Get Whether it is a hidden AZ 
+     * @return Hidden Whether it is a hidden AZ
+     */
+    public Boolean getHidden() {
+        return this.Hidden;
+    }
+
+    /**
+     * Set Whether it is a hidden AZ
+     * @param Hidden Whether it is a hidden AZ
+     */
+    public void setHidden(Boolean Hidden) {
+        this.Hidden = Hidden;
     }
 
     public ZoneDetail() {
@@ -83,6 +106,9 @@ public class ZoneDetail extends AbstractModel {
         if (source.SubnetId != null) {
             this.SubnetId = new String(source.SubnetId);
         }
+        if (source.Hidden != null) {
+            this.Hidden = new Boolean(source.Hidden);
+        }
     }
 
 
@@ -92,6 +118,7 @@ public class ZoneDetail extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Zone", this.Zone);
         this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
+        this.setParamSimple(map, prefix + "Hidden", this.Hidden);
 
     }
 }

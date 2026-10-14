@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class FlowStatisticsArray extends AbstractModel {
 
     /**
-    * The timestamp.
+    * Timestamp.
     */
     @SerializedName("Timestamp")
     @Expose
     private Long Timestamp;
 
     /**
-    * The statistics of all the sessions.
+    * Statistics for each session.
     */
     @SerializedName("FlowStatistics")
     @Expose
     private FlowStatistics [] FlowStatistics;
 
     /**
-     * Get The timestamp. 
-     * @return Timestamp The timestamp.
+     * Get Timestamp. 
+     * @return Timestamp Timestamp.
      */
     public Long getTimestamp() {
         return this.Timestamp;
     }
 
     /**
-     * Set The timestamp.
-     * @param Timestamp The timestamp.
+     * Set Timestamp.
+     * @param Timestamp Timestamp.
      */
     public void setTimestamp(Long Timestamp) {
         this.Timestamp = Timestamp;
     }
 
     /**
-     * Get The statistics of all the sessions. 
-     * @return FlowStatistics The statistics of all the sessions.
+     * Get Statistics for each session. 
+     * @return FlowStatistics Statistics for each session.
      */
     public FlowStatistics [] getFlowStatistics() {
         return this.FlowStatistics;
     }
 
     /**
-     * Set The statistics of all the sessions.
-     * @param FlowStatistics The statistics of all the sessions.
+     * Set Statistics for each session.
+     * @param FlowStatistics Statistics for each session.
      */
     public void setFlowStatistics(FlowStatistics [] FlowStatistics) {
         this.FlowStatistics = FlowStatistics;

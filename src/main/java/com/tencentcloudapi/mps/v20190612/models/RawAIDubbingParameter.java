@@ -31,7 +31,7 @@ public class RawAIDubbingParameter extends AbstractModel {
     private DubbingTranslateConfig TranslateConfig;
 
     /**
-    * <p>Subtitle configuration information.</p>
+    * <p>Subtitle configuration message.</p>
     */
     @SerializedName("SubtitleConfig")
     @Expose
@@ -45,7 +45,7 @@ public class RawAIDubbingParameter extends AbstractModel {
     private DubbingConfig DubbingConfig;
 
     /**
-    * <p>Output configuration message.</p>
+    * <p>Outputs configuration message.</p>
     */
     @SerializedName("OutputConfig")
     @Expose
@@ -68,16 +68,16 @@ public class RawAIDubbingParameter extends AbstractModel {
     }
 
     /**
-     * Get <p>Subtitle configuration information.</p> 
-     * @return SubtitleConfig <p>Subtitle configuration information.</p>
+     * Get <p>Subtitle configuration message.</p> 
+     * @return SubtitleConfig <p>Subtitle configuration message.</p>
      */
     public DubbingSubtitleConfig getSubtitleConfig() {
         return this.SubtitleConfig;
     }
 
     /**
-     * Set <p>Subtitle configuration information.</p>
-     * @param SubtitleConfig <p>Subtitle configuration information.</p>
+     * Set <p>Subtitle configuration message.</p>
+     * @param SubtitleConfig <p>Subtitle configuration message.</p>
      */
     public void setSubtitleConfig(DubbingSubtitleConfig SubtitleConfig) {
         this.SubtitleConfig = SubtitleConfig;
@@ -100,16 +100,16 @@ public class RawAIDubbingParameter extends AbstractModel {
     }
 
     /**
-     * Get <p>Output configuration message.</p> 
-     * @return OutputConfig <p>Output configuration message.</p>
+     * Get <p>Outputs configuration message.</p> 
+     * @return OutputConfig <p>Outputs configuration message.</p>
      */
     public DubbingOutputConfig getOutputConfig() {
         return this.OutputConfig;
     }
 
     /**
-     * Set <p>Output configuration message.</p>
-     * @param OutputConfig <p>Output configuration message.</p>
+     * Set <p>Outputs configuration message.</p>
+     * @param OutputConfig <p>Outputs configuration message.</p>
      */
     public void setOutputConfig(DubbingOutputConfig OutputConfig) {
         this.OutputConfig = OutputConfig;

@@ -40,7 +40,7 @@ public class LiveStreamAiRecognitionResultItem extends AbstractModel {
 
     /**
     * Face recognition result, which is valid when Type is
-FaceRecognition is valid at that time.
+Valid for FaceRecognition.
     */
     @SerializedName("FaceRecognitionResultSet")
     @Expose
@@ -48,7 +48,7 @@ FaceRecognition is valid at that time.
 
     /**
     * Speech keyword recognition result. When Type is
-AsrWordsRecognition.
+Valid when AsrWordsRecognition is used.
     */
     @SerializedName("AsrWordsRecognitionResultSet")
     @Expose
@@ -56,7 +56,7 @@ AsrWordsRecognition.
 
     /**
     * Text keyword recognition result. When Type is
-OcrWordsRecognition.
+Valid for OcrWordsRecognition.
     */
     @SerializedName("OcrWordsRecognitionResultSet")
     @Expose
@@ -64,15 +64,15 @@ OcrWordsRecognition.
 
     /**
     * Full speech recognition result. When Type is
-AsrFullTextRecognition.
+Valid when AsrFullTextRecognition is used.
     */
     @SerializedName("AsrFullTextRecognitionResultSet")
     @Expose
     private LiveStreamAsrFullTextRecognitionResult [] AsrFullTextRecognitionResultSet;
 
     /**
-    * Full text recognition result, when Type is
-OcrFullTextRecognition.
+    * Full text recognition result. This parameter is returned only when `Type` is set to
+Valid for OcrFullTextRecognition.
     */
     @SerializedName("OcrFullTextRecognitionResultSet")
     @Expose
@@ -93,7 +93,7 @@ OcrFullTextRecognition.
     private LiveStreamObjectRecognitionResult [] ObjectRecognitionResultSet;
 
     /**
-    * 
+    * Marking point result. Valid when Type is TagRecognition.
     */
     @SerializedName("TagRecognitionResultSet")
     @Expose
@@ -149,9 +149,9 @@ OcrFullTextRecognition.
 
     /**
      * Get Face recognition result, which is valid when Type is
-FaceRecognition is valid at that time. 
+Valid for FaceRecognition. 
      * @return FaceRecognitionResultSet Face recognition result, which is valid when Type is
-FaceRecognition is valid at that time.
+Valid for FaceRecognition.
      */
     public LiveStreamFaceRecognitionResult [] getFaceRecognitionResultSet() {
         return this.FaceRecognitionResultSet;
@@ -159,9 +159,9 @@ FaceRecognition is valid at that time.
 
     /**
      * Set Face recognition result, which is valid when Type is
-FaceRecognition is valid at that time.
+Valid for FaceRecognition.
      * @param FaceRecognitionResultSet Face recognition result, which is valid when Type is
-FaceRecognition is valid at that time.
+Valid for FaceRecognition.
      */
     public void setFaceRecognitionResultSet(LiveStreamFaceRecognitionResult [] FaceRecognitionResultSet) {
         this.FaceRecognitionResultSet = FaceRecognitionResultSet;
@@ -169,9 +169,9 @@ FaceRecognition is valid at that time.
 
     /**
      * Get Speech keyword recognition result. When Type is
-AsrWordsRecognition. 
+Valid when AsrWordsRecognition is used. 
      * @return AsrWordsRecognitionResultSet Speech keyword recognition result. When Type is
-AsrWordsRecognition.
+Valid when AsrWordsRecognition is used.
      */
     public LiveStreamAsrWordsRecognitionResult [] getAsrWordsRecognitionResultSet() {
         return this.AsrWordsRecognitionResultSet;
@@ -179,9 +179,9 @@ AsrWordsRecognition.
 
     /**
      * Set Speech keyword recognition result. When Type is
-AsrWordsRecognition.
+Valid when AsrWordsRecognition is used.
      * @param AsrWordsRecognitionResultSet Speech keyword recognition result. When Type is
-AsrWordsRecognition.
+Valid when AsrWordsRecognition is used.
      */
     public void setAsrWordsRecognitionResultSet(LiveStreamAsrWordsRecognitionResult [] AsrWordsRecognitionResultSet) {
         this.AsrWordsRecognitionResultSet = AsrWordsRecognitionResultSet;
@@ -189,9 +189,9 @@ AsrWordsRecognition.
 
     /**
      * Get Text keyword recognition result. When Type is
-OcrWordsRecognition. 
+Valid for OcrWordsRecognition. 
      * @return OcrWordsRecognitionResultSet Text keyword recognition result. When Type is
-OcrWordsRecognition.
+Valid for OcrWordsRecognition.
      */
     public LiveStreamOcrWordsRecognitionResult [] getOcrWordsRecognitionResultSet() {
         return this.OcrWordsRecognitionResultSet;
@@ -199,9 +199,9 @@ OcrWordsRecognition.
 
     /**
      * Set Text keyword recognition result. When Type is
-OcrWordsRecognition.
+Valid for OcrWordsRecognition.
      * @param OcrWordsRecognitionResultSet Text keyword recognition result. When Type is
-OcrWordsRecognition.
+Valid for OcrWordsRecognition.
      */
     public void setOcrWordsRecognitionResultSet(LiveStreamOcrWordsRecognitionResult [] OcrWordsRecognitionResultSet) {
         this.OcrWordsRecognitionResultSet = OcrWordsRecognitionResultSet;
@@ -209,9 +209,9 @@ OcrWordsRecognition.
 
     /**
      * Get Full speech recognition result. When Type is
-AsrFullTextRecognition. 
+Valid when AsrFullTextRecognition is used. 
      * @return AsrFullTextRecognitionResultSet Full speech recognition result. When Type is
-AsrFullTextRecognition.
+Valid when AsrFullTextRecognition is used.
      */
     public LiveStreamAsrFullTextRecognitionResult [] getAsrFullTextRecognitionResultSet() {
         return this.AsrFullTextRecognitionResultSet;
@@ -219,29 +219,29 @@ AsrFullTextRecognition.
 
     /**
      * Set Full speech recognition result. When Type is
-AsrFullTextRecognition.
+Valid when AsrFullTextRecognition is used.
      * @param AsrFullTextRecognitionResultSet Full speech recognition result. When Type is
-AsrFullTextRecognition.
+Valid when AsrFullTextRecognition is used.
      */
     public void setAsrFullTextRecognitionResultSet(LiveStreamAsrFullTextRecognitionResult [] AsrFullTextRecognitionResultSet) {
         this.AsrFullTextRecognitionResultSet = AsrFullTextRecognitionResultSet;
     }
 
     /**
-     * Get Full text recognition result, when Type is
-OcrFullTextRecognition. 
-     * @return OcrFullTextRecognitionResultSet Full text recognition result, when Type is
-OcrFullTextRecognition.
+     * Get Full text recognition result. This parameter is returned only when `Type` is set to
+Valid for OcrFullTextRecognition. 
+     * @return OcrFullTextRecognitionResultSet Full text recognition result. This parameter is returned only when `Type` is set to
+Valid for OcrFullTextRecognition.
      */
     public LiveStreamOcrFullTextRecognitionResult [] getOcrFullTextRecognitionResultSet() {
         return this.OcrFullTextRecognitionResultSet;
     }
 
     /**
-     * Set Full text recognition result, when Type is
-OcrFullTextRecognition.
-     * @param OcrFullTextRecognitionResultSet Full text recognition result, when Type is
-OcrFullTextRecognition.
+     * Set Full text recognition result. This parameter is returned only when `Type` is set to
+Valid for OcrFullTextRecognition.
+     * @param OcrFullTextRecognitionResultSet Full text recognition result. This parameter is returned only when `Type` is set to
+Valid for OcrFullTextRecognition.
      */
     public void setOcrFullTextRecognitionResultSet(LiveStreamOcrFullTextRecognitionResult [] OcrFullTextRecognitionResultSet) {
         this.OcrFullTextRecognitionResultSet = OcrFullTextRecognitionResultSet;
@@ -280,16 +280,16 @@ OcrFullTextRecognition.
     }
 
     /**
-     * Get  
-     * @return TagRecognitionResultSet 
+     * Get Marking point result. Valid when Type is TagRecognition. 
+     * @return TagRecognitionResultSet Marking point result. Valid when Type is TagRecognition.
      */
     public LiveStreamTagRecognitionResult [] getTagRecognitionResultSet() {
         return this.TagRecognitionResultSet;
     }
 
     /**
-     * Set 
-     * @param TagRecognitionResultSet 
+     * Set Marking point result. Valid when Type is TagRecognition.
+     * @param TagRecognitionResultSet Marking point result. Valid when Type is TagRecognition.
      */
     public void setTagRecognitionResultSet(LiveStreamTagRecognitionResult [] TagRecognitionResultSet) {
         this.TagRecognitionResultSet = TagRecognitionResultSet;

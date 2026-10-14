@@ -24,28 +24,28 @@ import java.util.HashMap;
 public class MediaImageSpriteItem extends AbstractModel {
 
     /**
-    * Sprite sheet specification, please refer to the [Sprite Sheet Parameter Template](https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF).
+    * Sprite screenshot specification. See [sprite sheet parameter template](https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF).
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-    * Height of small images in sprite sheet.
+    * Height of small images in sprite image.
     */
     @SerializedName("Height")
     @Expose
     private Long Height;
 
     /**
-    * Width of small images in sprite sheet.
+    * Width of a small image in the sprite sheet.
     */
     @SerializedName("Width")
     @Expose
     private Long Width;
 
     /**
-    * Number of small images in each sprite sheet.
+    * Number of small images in each sprite image.
     */
     @SerializedName("TotalCount")
     @Expose
@@ -59,7 +59,7 @@ public class MediaImageSpriteItem extends AbstractModel {
     private String [] ImagePathSet;
 
     /**
-    * 
+    * Path of the WebVtt file that describes the temporal relationship between sprite sub-images and their positions. The WebVtt file indicates the time point corresponding to each sprite sub-image and its coordinate position in the sprite sheet. It is generally used by the player to implement preview.
     */
     @SerializedName("WebVttPath")
     @Expose
@@ -73,64 +73,64 @@ public class MediaImageSpriteItem extends AbstractModel {
     private TaskOutputStorage Storage;
 
     /**
-     * Get Sprite sheet specification, please refer to the [Sprite Sheet Parameter Template](https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF). 
-     * @return Definition Sprite sheet specification, please refer to the [Sprite Sheet Parameter Template](https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF).
+     * Get Sprite screenshot specification. See [sprite sheet parameter template](https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF). 
+     * @return Definition Sprite screenshot specification. See [sprite sheet parameter template](https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF).
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set Sprite sheet specification, please refer to the [Sprite Sheet Parameter Template](https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF).
-     * @param Definition Sprite sheet specification, please refer to the [Sprite Sheet Parameter Template](https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF).
+     * Set Sprite screenshot specification. See [sprite sheet parameter template](https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF).
+     * @param Definition Sprite screenshot specification. See [sprite sheet parameter template](https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF).
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
     }
 
     /**
-     * Get Height of small images in sprite sheet. 
-     * @return Height Height of small images in sprite sheet.
+     * Get Height of small images in sprite image. 
+     * @return Height Height of small images in sprite image.
      */
     public Long getHeight() {
         return this.Height;
     }
 
     /**
-     * Set Height of small images in sprite sheet.
-     * @param Height Height of small images in sprite sheet.
+     * Set Height of small images in sprite image.
+     * @param Height Height of small images in sprite image.
      */
     public void setHeight(Long Height) {
         this.Height = Height;
     }
 
     /**
-     * Get Width of small images in sprite sheet. 
-     * @return Width Width of small images in sprite sheet.
+     * Get Width of a small image in the sprite sheet. 
+     * @return Width Width of a small image in the sprite sheet.
      */
     public Long getWidth() {
         return this.Width;
     }
 
     /**
-     * Set Width of small images in sprite sheet.
-     * @param Width Width of small images in sprite sheet.
+     * Set Width of a small image in the sprite sheet.
+     * @param Width Width of a small image in the sprite sheet.
      */
     public void setWidth(Long Width) {
         this.Width = Width;
     }
 
     /**
-     * Get Number of small images in each sprite sheet. 
-     * @return TotalCount Number of small images in each sprite sheet.
+     * Get Number of small images in each sprite image. 
+     * @return TotalCount Number of small images in each sprite image.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Number of small images in each sprite sheet.
-     * @param TotalCount Number of small images in each sprite sheet.
+     * Set Number of small images in each sprite image.
+     * @param TotalCount Number of small images in each sprite image.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
@@ -153,16 +153,16 @@ public class MediaImageSpriteItem extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return WebVttPath 
+     * Get Path of the WebVtt file that describes the temporal relationship between sprite sub-images and their positions. The WebVtt file indicates the time point corresponding to each sprite sub-image and its coordinate position in the sprite sheet. It is generally used by the player to implement preview. 
+     * @return WebVttPath Path of the WebVtt file that describes the temporal relationship between sprite sub-images and their positions. The WebVtt file indicates the time point corresponding to each sprite sub-image and its coordinate position in the sprite sheet. It is generally used by the player to implement preview.
      */
     public String getWebVttPath() {
         return this.WebVttPath;
     }
 
     /**
-     * Set 
-     * @param WebVttPath 
+     * Set Path of the WebVtt file that describes the temporal relationship between sprite sub-images and their positions. The WebVtt file indicates the time point corresponding to each sprite sub-image and its coordinate position in the sprite sheet. It is generally used by the player to implement preview.
+     * @param WebVttPath Path of the WebVtt file that describes the temporal relationship between sprite sub-images and their positions. The WebVtt file indicates the time point corresponding to each sprite sub-image and its coordinate position in the sprite sheet. It is generally used by the player to implement preview.
      */
     public void setWebVttPath(String WebVttPath) {
         this.WebVttPath = WebVttPath;

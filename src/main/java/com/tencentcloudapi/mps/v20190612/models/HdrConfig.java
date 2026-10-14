@@ -25,8 +25,8 @@ public class HdrConfig extends AbstractModel {
 
     /**
     * Capability configuration switch. Valid values:
-<li>ON: enabled;</li>
-<li>OFF: disabled</li>
+<li>ON: enabled</li>
+<li>OFF: disabled.</li>
 Default value: ON.
     */
     @SerializedName("Switch")
@@ -34,7 +34,12 @@ Default value: ON.
     private String Switch;
 
     /**
-    * 
+    * Type. Valid values:
+<li>HDR10</li>
+<li>HLG</li>
+Default Value: HDR10.
+Note: The video encoding method should be h264 or h265.
+Note: The video encoding bit depth is 10.
     */
     @SerializedName("Type")
     @Expose
@@ -42,12 +47,12 @@ Default value: ON.
 
     /**
      * Get Capability configuration switch. Valid values:
-<li>ON: enabled;</li>
-<li>OFF: disabled</li>
+<li>ON: enabled</li>
+<li>OFF: disabled.</li>
 Default value: ON. 
      * @return Switch Capability configuration switch. Valid values:
-<li>ON: enabled;</li>
-<li>OFF: disabled</li>
+<li>ON: enabled</li>
+<li>OFF: disabled.</li>
 Default value: ON.
      */
     public String getSwitch() {
@@ -56,12 +61,12 @@ Default value: ON.
 
     /**
      * Set Capability configuration switch. Valid values:
-<li>ON: enabled;</li>
-<li>OFF: disabled</li>
+<li>ON: enabled</li>
+<li>OFF: disabled.</li>
 Default value: ON.
      * @param Switch Capability configuration switch. Valid values:
-<li>ON: enabled;</li>
-<li>OFF: disabled</li>
+<li>ON: enabled</li>
+<li>OFF: disabled.</li>
 Default value: ON.
      */
     public void setSwitch(String Switch) {
@@ -69,16 +74,36 @@ Default value: ON.
     }
 
     /**
-     * Get  
-     * @return Type 
+     * Get Type. Valid values:
+<li>HDR10</li>
+<li>HLG</li>
+Default Value: HDR10.
+Note: The video encoding method should be h264 or h265.
+Note: The video encoding bit depth is 10. 
+     * @return Type Type. Valid values:
+<li>HDR10</li>
+<li>HLG</li>
+Default Value: HDR10.
+Note: The video encoding method should be h264 or h265.
+Note: The video encoding bit depth is 10.
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 
-     * @param Type 
+     * Set Type. Valid values:
+<li>HDR10</li>
+<li>HLG</li>
+Default Value: HDR10.
+Note: The video encoding method should be h264 or h265.
+Note: The video encoding bit depth is 10.
+     * @param Type Type. Valid values:
+<li>HDR10</li>
+<li>HLG</li>
+Default Value: HDR10.
+Note: The video encoding method should be h264 or h265.
+Note: The video encoding bit depth is 10.
      */
     public void setType(String Type) {
         this.Type = Type;

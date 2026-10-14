@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class AgentTask extends AbstractModel {
 
     /**
-    * 
+    * <p>Task serial number</p>
     */
     @SerializedName("Index")
     @Expose
     private Long Index;
 
     /**
-    * 
+    * <p>Task content</p>
     */
     @SerializedName("Content")
     @Expose
     private String Content;
 
     /**
-    * 
+    * <p>Task status.</p>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-     * Get  
-     * @return Index 
+     * Get <p>Task serial number</p> 
+     * @return Index <p>Task serial number</p>
      */
     public Long getIndex() {
         return this.Index;
     }
 
     /**
-     * Set 
-     * @param Index 
+     * Set <p>Task serial number</p>
+     * @param Index <p>Task serial number</p>
      */
     public void setIndex(Long Index) {
         this.Index = Index;
     }
 
     /**
-     * Get  
-     * @return Content 
+     * Get <p>Task content</p> 
+     * @return Content <p>Task content</p>
      */
     public String getContent() {
         return this.Content;
     }
 
     /**
-     * Set 
-     * @param Content 
+     * Set <p>Task content</p>
+     * @param Content <p>Task content</p>
      */
     public void setContent(String Content) {
         this.Content = Content;
     }
 
     /**
-     * Get  
-     * @return Status 
+     * Get <p>Task status.</p> 
+     * @return Status <p>Task status.</p>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 
-     * @param Status 
+     * Set <p>Task status.</p>
+     * @param Status <p>Task status.</p>
      */
     public void setStatus(String Status) {
         this.Status = Status;

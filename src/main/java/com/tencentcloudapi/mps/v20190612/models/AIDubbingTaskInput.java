@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class AIDubbingTaskInput extends AbstractModel {
 
     /**
-    * <p>AI Dubbing template id.</p>
+    * <p>AI dubbing template id.</p>
     */
     @SerializedName("Definition")
     @Expose
@@ -38,14 +38,14 @@ public class AIDubbingTaskInput extends AbstractModel {
     private RawAIDubbingParameter RawParameter;
 
     /**
-    * <p>AI Dubbing custom parameters. Valid when Definition is not filled with 0. When some dubbing parameters in this structure are filled in, the filled parameters will be used to override the parameters in the AI Dubbing template. This parameter is used for highly customized scenarios. We recommend you use only Definition to specify dubbing parameters.</p>
+    * <p>Custom parameters for AI dubbing. Valid when Definition is not 0. If you fill in some dubbing parameters in this structure, the filled parameters will be used to override the parameters in the AI dubbing template. This parameter is used for highly customized scenarios. We recommend you use only Definition to specify dubbing parameters.</p>
     */
     @SerializedName("OverrideParameter")
     @Expose
     private OverrideAIDubbingParameter OverrideParameter;
 
     /**
-    * <p>Target storage for the file. If this is not specified, it inherits the value from the upper-level OutputStorage.</p>
+    * <p>Target storage for the file. If not specified, it inherits the upper-level OutputStorage value.</p>
     */
     @SerializedName("OutputStorage")
     @Expose
@@ -59,7 +59,7 @@ public class AIDubbingTaskInput extends AbstractModel {
     private MediaInputInfo SrcSubtitleInfo;
 
     /**
-    * <p>External subtitle file information, translated subtitles.</p>
+    * <p>External subtitle file info, translated subtitles.</p>
     */
     @SerializedName("DstSubtitleInfos")
     @Expose
@@ -73,30 +73,30 @@ public class AIDubbingTaskInput extends AbstractModel {
     private String OutputObjectPath;
 
     /**
-    * <p>Additional parameters for AI Dubbing, serialized json string.</p>
+    * <p>AI dubbing extension parameter, serialized json string.</p>
     */
     @SerializedName("ExtendedParameter")
     @Expose
     private String ExtendedParameter;
 
     /**
-    * <p>ID of the associated drama series.<br>Note: This value takes effect when dubbing mode is intelligent dubbing by role.</p>
+    * <p>Associated drama series ID.<br>Note: This value takes effect when the dubbing mode is intelligent dubbing by role.</p>
     */
     @SerializedName("DramaId")
     @Expose
     private String DramaId;
 
     /**
-     * Get <p>AI Dubbing template id.</p> 
-     * @return Definition <p>AI Dubbing template id.</p>
+     * Get <p>AI dubbing template id.</p> 
+     * @return Definition <p>AI dubbing template id.</p>
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set <p>AI Dubbing template id.</p>
-     * @param Definition <p>AI Dubbing template id.</p>
+     * Set <p>AI dubbing template id.</p>
+     * @param Definition <p>AI dubbing template id.</p>
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
@@ -119,32 +119,32 @@ public class AIDubbingTaskInput extends AbstractModel {
     }
 
     /**
-     * Get <p>AI Dubbing custom parameters. Valid when Definition is not filled with 0. When some dubbing parameters in this structure are filled in, the filled parameters will be used to override the parameters in the AI Dubbing template. This parameter is used for highly customized scenarios. We recommend you use only Definition to specify dubbing parameters.</p> 
-     * @return OverrideParameter <p>AI Dubbing custom parameters. Valid when Definition is not filled with 0. When some dubbing parameters in this structure are filled in, the filled parameters will be used to override the parameters in the AI Dubbing template. This parameter is used for highly customized scenarios. We recommend you use only Definition to specify dubbing parameters.</p>
+     * Get <p>Custom parameters for AI dubbing. Valid when Definition is not 0. If you fill in some dubbing parameters in this structure, the filled parameters will be used to override the parameters in the AI dubbing template. This parameter is used for highly customized scenarios. We recommend you use only Definition to specify dubbing parameters.</p> 
+     * @return OverrideParameter <p>Custom parameters for AI dubbing. Valid when Definition is not 0. If you fill in some dubbing parameters in this structure, the filled parameters will be used to override the parameters in the AI dubbing template. This parameter is used for highly customized scenarios. We recommend you use only Definition to specify dubbing parameters.</p>
      */
     public OverrideAIDubbingParameter getOverrideParameter() {
         return this.OverrideParameter;
     }
 
     /**
-     * Set <p>AI Dubbing custom parameters. Valid when Definition is not filled with 0. When some dubbing parameters in this structure are filled in, the filled parameters will be used to override the parameters in the AI Dubbing template. This parameter is used for highly customized scenarios. We recommend you use only Definition to specify dubbing parameters.</p>
-     * @param OverrideParameter <p>AI Dubbing custom parameters. Valid when Definition is not filled with 0. When some dubbing parameters in this structure are filled in, the filled parameters will be used to override the parameters in the AI Dubbing template. This parameter is used for highly customized scenarios. We recommend you use only Definition to specify dubbing parameters.</p>
+     * Set <p>Custom parameters for AI dubbing. Valid when Definition is not 0. If you fill in some dubbing parameters in this structure, the filled parameters will be used to override the parameters in the AI dubbing template. This parameter is used for highly customized scenarios. We recommend you use only Definition to specify dubbing parameters.</p>
+     * @param OverrideParameter <p>Custom parameters for AI dubbing. Valid when Definition is not 0. If you fill in some dubbing parameters in this structure, the filled parameters will be used to override the parameters in the AI dubbing template. This parameter is used for highly customized scenarios. We recommend you use only Definition to specify dubbing parameters.</p>
      */
     public void setOverrideParameter(OverrideAIDubbingParameter OverrideParameter) {
         this.OverrideParameter = OverrideParameter;
     }
 
     /**
-     * Get <p>Target storage for the file. If this is not specified, it inherits the value from the upper-level OutputStorage.</p> 
-     * @return OutputStorage <p>Target storage for the file. If this is not specified, it inherits the value from the upper-level OutputStorage.</p>
+     * Get <p>Target storage for the file. If not specified, it inherits the upper-level OutputStorage value.</p> 
+     * @return OutputStorage <p>Target storage for the file. If not specified, it inherits the upper-level OutputStorage value.</p>
      */
     public TaskOutputStorage getOutputStorage() {
         return this.OutputStorage;
     }
 
     /**
-     * Set <p>Target storage for the file. If this is not specified, it inherits the value from the upper-level OutputStorage.</p>
-     * @param OutputStorage <p>Target storage for the file. If this is not specified, it inherits the value from the upper-level OutputStorage.</p>
+     * Set <p>Target storage for the file. If not specified, it inherits the upper-level OutputStorage value.</p>
+     * @param OutputStorage <p>Target storage for the file. If not specified, it inherits the upper-level OutputStorage value.</p>
      */
     public void setOutputStorage(TaskOutputStorage OutputStorage) {
         this.OutputStorage = OutputStorage;
@@ -167,16 +167,16 @@ public class AIDubbingTaskInput extends AbstractModel {
     }
 
     /**
-     * Get <p>External subtitle file information, translated subtitles.</p> 
-     * @return DstSubtitleInfos <p>External subtitle file information, translated subtitles.</p>
+     * Get <p>External subtitle file info, translated subtitles.</p> 
+     * @return DstSubtitleInfos <p>External subtitle file info, translated subtitles.</p>
      */
     public DstSubtitleInput [] getDstSubtitleInfos() {
         return this.DstSubtitleInfos;
     }
 
     /**
-     * Set <p>External subtitle file information, translated subtitles.</p>
-     * @param DstSubtitleInfos <p>External subtitle file information, translated subtitles.</p>
+     * Set <p>External subtitle file info, translated subtitles.</p>
+     * @param DstSubtitleInfos <p>External subtitle file info, translated subtitles.</p>
      */
     public void setDstSubtitleInfos(DstSubtitleInput [] DstSubtitleInfos) {
         this.DstSubtitleInfos = DstSubtitleInfos;
@@ -199,32 +199,32 @@ public class AIDubbingTaskInput extends AbstractModel {
     }
 
     /**
-     * Get <p>Additional parameters for AI Dubbing, serialized json string.</p> 
-     * @return ExtendedParameter <p>Additional parameters for AI Dubbing, serialized json string.</p>
+     * Get <p>AI dubbing extension parameter, serialized json string.</p> 
+     * @return ExtendedParameter <p>AI dubbing extension parameter, serialized json string.</p>
      */
     public String getExtendedParameter() {
         return this.ExtendedParameter;
     }
 
     /**
-     * Set <p>Additional parameters for AI Dubbing, serialized json string.</p>
-     * @param ExtendedParameter <p>Additional parameters for AI Dubbing, serialized json string.</p>
+     * Set <p>AI dubbing extension parameter, serialized json string.</p>
+     * @param ExtendedParameter <p>AI dubbing extension parameter, serialized json string.</p>
      */
     public void setExtendedParameter(String ExtendedParameter) {
         this.ExtendedParameter = ExtendedParameter;
     }
 
     /**
-     * Get <p>ID of the associated drama series.<br>Note: This value takes effect when dubbing mode is intelligent dubbing by role.</p> 
-     * @return DramaId <p>ID of the associated drama series.<br>Note: This value takes effect when dubbing mode is intelligent dubbing by role.</p>
+     * Get <p>Associated drama series ID.<br>Note: This value takes effect when the dubbing mode is intelligent dubbing by role.</p> 
+     * @return DramaId <p>Associated drama series ID.<br>Note: This value takes effect when the dubbing mode is intelligent dubbing by role.</p>
      */
     public String getDramaId() {
         return this.DramaId;
     }
 
     /**
-     * Set <p>ID of the associated drama series.<br>Note: This value takes effect when dubbing mode is intelligent dubbing by role.</p>
-     * @param DramaId <p>ID of the associated drama series.<br>Note: This value takes effect when dubbing mode is intelligent dubbing by role.</p>
+     * Set <p>Associated drama series ID.<br>Note: This value takes effect when the dubbing mode is intelligent dubbing by role.</p>
+     * @param DramaId <p>Associated drama series ID.<br>Note: This value takes effect when the dubbing mode is intelligent dubbing by role.</p>
      */
     public void setDramaId(String DramaId) {
         this.DramaId = DramaId;

@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class CreateOutputInfoRTPSettings extends AbstractModel {
 
     /**
-    * The relay destination addresses. One or two addresses are allowed.
+    * Destination address. You can enter 1 to 2 addresses.
     */
     @SerializedName("Destinations")
     @Expose
     private CreateOutputRTPSettingsDestinations [] Destinations;
 
     /**
-    * This parameter must be set to `none`.
+    * Can only be filled in with none.
     */
     @SerializedName("FEC")
     @Expose
     private String FEC;
 
     /**
-    * The timeout period (ms).
+    * Idle timeout period, in milliseconds.
     */
     @SerializedName("IdleTimeout")
     @Expose
     private Long IdleTimeout;
 
     /**
-     * Get The relay destination addresses. One or two addresses are allowed. 
-     * @return Destinations The relay destination addresses. One or two addresses are allowed.
+     * Get Destination address. You can enter 1 to 2 addresses. 
+     * @return Destinations Destination address. You can enter 1 to 2 addresses.
      */
     public CreateOutputRTPSettingsDestinations [] getDestinations() {
         return this.Destinations;
     }
 
     /**
-     * Set The relay destination addresses. One or two addresses are allowed.
-     * @param Destinations The relay destination addresses. One or two addresses are allowed.
+     * Set Destination address. You can enter 1 to 2 addresses.
+     * @param Destinations Destination address. You can enter 1 to 2 addresses.
      */
     public void setDestinations(CreateOutputRTPSettingsDestinations [] Destinations) {
         this.Destinations = Destinations;
     }
 
     /**
-     * Get This parameter must be set to `none`. 
-     * @return FEC This parameter must be set to `none`.
+     * Get Can only be filled in with none. 
+     * @return FEC Can only be filled in with none.
      */
     public String getFEC() {
         return this.FEC;
     }
 
     /**
-     * Set This parameter must be set to `none`.
-     * @param FEC This parameter must be set to `none`.
+     * Set Can only be filled in with none.
+     * @param FEC Can only be filled in with none.
      */
     public void setFEC(String FEC) {
         this.FEC = FEC;
     }
 
     /**
-     * Get The timeout period (ms). 
-     * @return IdleTimeout The timeout period (ms).
+     * Get Idle timeout period, in milliseconds. 
+     * @return IdleTimeout Idle timeout period, in milliseconds.
      */
     public Long getIdleTimeout() {
         return this.IdleTimeout;
     }
 
     /**
-     * Set The timeout period (ms).
-     * @param IdleTimeout The timeout period (ms).
+     * Set Idle timeout period, in milliseconds.
+     * @param IdleTimeout Idle timeout period, in milliseconds.
      */
     public void setIdleTimeout(Long IdleTimeout) {
         this.IdleTimeout = IdleTimeout;

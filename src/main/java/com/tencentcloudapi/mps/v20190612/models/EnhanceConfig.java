@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class EnhanceConfig extends AbstractModel {
 
     /**
-    * 
+    * Video enhancement configuration.
     */
     @SerializedName("VideoEnhance")
     @Expose
     private VideoEnhanceConfig VideoEnhance;
 
     /**
-    * 
+    * Audio enhancement configuration.
     */
     @SerializedName("AudioEnhance")
     @Expose
     private AudioEnhanceConfig AudioEnhance;
 
     /**
-     * Get  
-     * @return VideoEnhance 
+     * Get Video enhancement configuration. 
+     * @return VideoEnhance Video enhancement configuration.
      */
     public VideoEnhanceConfig getVideoEnhance() {
         return this.VideoEnhance;
     }
 
     /**
-     * Set 
-     * @param VideoEnhance 
+     * Set Video enhancement configuration.
+     * @param VideoEnhance Video enhancement configuration.
      */
     public void setVideoEnhance(VideoEnhanceConfig VideoEnhance) {
         this.VideoEnhance = VideoEnhance;
     }
 
     /**
-     * Get  
-     * @return AudioEnhance 
+     * Get Audio enhancement configuration. 
+     * @return AudioEnhance Audio enhancement configuration.
      */
     public AudioEnhanceConfig getAudioEnhance() {
         return this.AudioEnhance;
     }
 
     /**
-     * Set 
-     * @param AudioEnhance 
+     * Set Audio enhancement configuration.
+     * @param AudioEnhance Audio enhancement configuration.
      */
     public void setAudioEnhance(AudioEnhanceConfig AudioEnhance) {
         this.AudioEnhance = AudioEnhance;

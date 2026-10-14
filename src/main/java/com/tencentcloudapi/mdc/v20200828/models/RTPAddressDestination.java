@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class RTPAddressDestination extends AbstractModel {
 
     /**
-    * Push destination address IP.
+    * IP of the destination address for repush.
     */
     @SerializedName("Ip")
     @Expose
     private String Ip;
 
     /**
-    * Push destination address port.
+    * Port of the destination address for push.
     */
     @SerializedName("Port")
     @Expose
     private Long Port;
 
     /**
-     * Get Push destination address IP. 
-     * @return Ip Push destination address IP.
+     * Get IP of the destination address for repush. 
+     * @return Ip IP of the destination address for repush.
      */
     public String getIp() {
         return this.Ip;
     }
 
     /**
-     * Set Push destination address IP.
-     * @param Ip Push destination address IP.
+     * Set IP of the destination address for repush.
+     * @param Ip IP of the destination address for repush.
      */
     public void setIp(String Ip) {
         this.Ip = Ip;
     }
 
     /**
-     * Get Push destination address port. 
-     * @return Port Push destination address port.
+     * Get Port of the destination address for push. 
+     * @return Port Port of the destination address for push.
      */
     public Long getPort() {
         return this.Port;
     }
 
     /**
-     * Set Push destination address port.
-     * @param Port Push destination address port.
+     * Set Port of the destination address for push.
+     * @param Port Port of the destination address for push.
      */
     public void setPort(Long Port) {
         this.Port = Port;

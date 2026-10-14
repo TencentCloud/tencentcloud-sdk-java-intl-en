@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class CreateStreamLinkInputRequest extends AbstractModel {
 
     /**
-    * StreamLink stream ID.
+    * <p>Media transmission stream ID.</p>
     */
     @SerializedName("FlowId")
     @Expose
     private String FlowId;
 
     /**
-    * The input group of the Flow.
+    * <p>Input group of a stream.</p>
     */
     @SerializedName("InputGroup")
     @Expose
     private CreateInput [] InputGroup;
 
     /**
-     * Get StreamLink stream ID. 
-     * @return FlowId StreamLink stream ID.
+     * Get <p>Media transmission stream ID.</p> 
+     * @return FlowId <p>Media transmission stream ID.</p>
      */
     public String getFlowId() {
         return this.FlowId;
     }
 
     /**
-     * Set StreamLink stream ID.
-     * @param FlowId StreamLink stream ID.
+     * Set <p>Media transmission stream ID.</p>
+     * @param FlowId <p>Media transmission stream ID.</p>
      */
     public void setFlowId(String FlowId) {
         this.FlowId = FlowId;
     }
 
     /**
-     * Get The input group of the Flow. 
-     * @return InputGroup The input group of the Flow.
+     * Get <p>Input group of a stream.</p> 
+     * @return InputGroup <p>Input group of a stream.</p>
      */
     public CreateInput [] getInputGroup() {
         return this.InputGroup;
     }
 
     /**
-     * Set The input group of the Flow.
-     * @param InputGroup The input group of the Flow.
+     * Set <p>Input group of a stream.</p>
+     * @param InputGroup <p>Input group of a stream.</p>
      */
     public void setInputGroup(CreateInput [] InputGroup) {
         this.InputGroup = InputGroup;

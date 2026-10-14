@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class DuplicateFileHandle extends AbstractModel {
 
     /**
-    * 
+    * Document repetition judgment method. 1: Judge whether to repeat by document content, that is, the cos_hash field.
     */
     @SerializedName("CheckType")
     @Expose
     private Long CheckType;
 
     /**
-    * 
+    * Duplicate document processing method. 1: return an error. 2: skip and return the business ID of the duplicate document.
     */
     @SerializedName("HandleType")
     @Expose
     private Long HandleType;
 
     /**
-     * Get  
-     * @return CheckType 
+     * Get Document repetition judgment method. 1: Judge whether to repeat by document content, that is, the cos_hash field. 
+     * @return CheckType Document repetition judgment method. 1: Judge whether to repeat by document content, that is, the cos_hash field.
      */
     public Long getCheckType() {
         return this.CheckType;
     }
 
     /**
-     * Set 
-     * @param CheckType 
+     * Set Document repetition judgment method. 1: Judge whether to repeat by document content, that is, the cos_hash field.
+     * @param CheckType Document repetition judgment method. 1: Judge whether to repeat by document content, that is, the cos_hash field.
      */
     public void setCheckType(Long CheckType) {
         this.CheckType = CheckType;
     }
 
     /**
-     * Get  
-     * @return HandleType 
+     * Get Duplicate document processing method. 1: return an error. 2: skip and return the business ID of the duplicate document. 
+     * @return HandleType Duplicate document processing method. 1: return an error. 2: skip and return the business ID of the duplicate document.
      */
     public Long getHandleType() {
         return this.HandleType;
     }
 
     /**
-     * Set 
-     * @param HandleType 
+     * Set Duplicate document processing method. 1: return an error. 2: skip and return the business ID of the duplicate document.
+     * @param HandleType Duplicate document processing method. 1: return an error. 2: skip and return the business ID of the duplicate document.
      */
     public void setHandleType(Long HandleType) {
         this.HandleType = HandleType;

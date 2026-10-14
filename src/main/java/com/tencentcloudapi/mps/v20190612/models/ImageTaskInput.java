@@ -52,14 +52,14 @@ public class ImageTaskInput extends AbstractModel {
     private AiPosterSuiteConfig AiPosterSuiteConfig;
 
     /**
-    * <p>Ai image cutout configuration</p>
+    * <p>Ai cutout configuration</p>
     */
     @SerializedName("AiCutoutConfig")
     @Expose
     private AiCutoutConfig AiCutoutConfig;
 
     /**
-    * <p>Ai Image Expansion Configuration</p>
+    * <p>Ai outpainting configuration</p>
     */
     @SerializedName("AiExpansionConfig")
     @Expose
@@ -73,11 +73,32 @@ public class ImageTaskInput extends AbstractModel {
     private AiStoryboardConfig AiStoryboardConfig;
 
     /**
-    * <p>Image understanding configuration.</p>
+    * <p>Image understanding configuration</p>
     */
     @SerializedName("UnderstandImageConfig")
     @Expose
     private UnderstandImageConfig UnderstandImageConfig;
+
+    /**
+    * <p>Image quality assessment configuration</p>
+    */
+    @SerializedName("ImageQualityConfig")
+    @Expose
+    private ImageQualityConfig ImageQualityConfig;
+
+    /**
+    * <p>Layer fusion configuration.</p>
+    */
+    @SerializedName("AiComposeConfig")
+    @Expose
+    private AiComposeConfig AiComposeConfig;
+
+    /**
+    * <p>Layer separation configuration.</p>
+    */
+    @SerializedName("AiDecomposeConfig")
+    @Expose
+    private AiDecomposeConfig AiDecomposeConfig;
 
     /**
      * Get <p>Image encoding configuration.</p> 
@@ -144,32 +165,32 @@ public class ImageTaskInput extends AbstractModel {
     }
 
     /**
-     * Get <p>Ai image cutout configuration</p> 
-     * @return AiCutoutConfig <p>Ai image cutout configuration</p>
+     * Get <p>Ai cutout configuration</p> 
+     * @return AiCutoutConfig <p>Ai cutout configuration</p>
      */
     public AiCutoutConfig getAiCutoutConfig() {
         return this.AiCutoutConfig;
     }
 
     /**
-     * Set <p>Ai image cutout configuration</p>
-     * @param AiCutoutConfig <p>Ai image cutout configuration</p>
+     * Set <p>Ai cutout configuration</p>
+     * @param AiCutoutConfig <p>Ai cutout configuration</p>
      */
     public void setAiCutoutConfig(AiCutoutConfig AiCutoutConfig) {
         this.AiCutoutConfig = AiCutoutConfig;
     }
 
     /**
-     * Get <p>Ai Image Expansion Configuration</p> 
-     * @return AiExpansionConfig <p>Ai Image Expansion Configuration</p>
+     * Get <p>Ai outpainting configuration</p> 
+     * @return AiExpansionConfig <p>Ai outpainting configuration</p>
      */
     public AiExpansionConfig getAiExpansionConfig() {
         return this.AiExpansionConfig;
     }
 
     /**
-     * Set <p>Ai Image Expansion Configuration</p>
-     * @param AiExpansionConfig <p>Ai Image Expansion Configuration</p>
+     * Set <p>Ai outpainting configuration</p>
+     * @param AiExpansionConfig <p>Ai outpainting configuration</p>
      */
     public void setAiExpansionConfig(AiExpansionConfig AiExpansionConfig) {
         this.AiExpansionConfig = AiExpansionConfig;
@@ -192,19 +213,67 @@ public class ImageTaskInput extends AbstractModel {
     }
 
     /**
-     * Get <p>Image understanding configuration.</p> 
-     * @return UnderstandImageConfig <p>Image understanding configuration.</p>
+     * Get <p>Image understanding configuration</p> 
+     * @return UnderstandImageConfig <p>Image understanding configuration</p>
      */
     public UnderstandImageConfig getUnderstandImageConfig() {
         return this.UnderstandImageConfig;
     }
 
     /**
-     * Set <p>Image understanding configuration.</p>
-     * @param UnderstandImageConfig <p>Image understanding configuration.</p>
+     * Set <p>Image understanding configuration</p>
+     * @param UnderstandImageConfig <p>Image understanding configuration</p>
      */
     public void setUnderstandImageConfig(UnderstandImageConfig UnderstandImageConfig) {
         this.UnderstandImageConfig = UnderstandImageConfig;
+    }
+
+    /**
+     * Get <p>Image quality assessment configuration</p> 
+     * @return ImageQualityConfig <p>Image quality assessment configuration</p>
+     */
+    public ImageQualityConfig getImageQualityConfig() {
+        return this.ImageQualityConfig;
+    }
+
+    /**
+     * Set <p>Image quality assessment configuration</p>
+     * @param ImageQualityConfig <p>Image quality assessment configuration</p>
+     */
+    public void setImageQualityConfig(ImageQualityConfig ImageQualityConfig) {
+        this.ImageQualityConfig = ImageQualityConfig;
+    }
+
+    /**
+     * Get <p>Layer fusion configuration.</p> 
+     * @return AiComposeConfig <p>Layer fusion configuration.</p>
+     */
+    public AiComposeConfig getAiComposeConfig() {
+        return this.AiComposeConfig;
+    }
+
+    /**
+     * Set <p>Layer fusion configuration.</p>
+     * @param AiComposeConfig <p>Layer fusion configuration.</p>
+     */
+    public void setAiComposeConfig(AiComposeConfig AiComposeConfig) {
+        this.AiComposeConfig = AiComposeConfig;
+    }
+
+    /**
+     * Get <p>Layer separation configuration.</p> 
+     * @return AiDecomposeConfig <p>Layer separation configuration.</p>
+     */
+    public AiDecomposeConfig getAiDecomposeConfig() {
+        return this.AiDecomposeConfig;
+    }
+
+    /**
+     * Set <p>Layer separation configuration.</p>
+     * @param AiDecomposeConfig <p>Layer separation configuration.</p>
+     */
+    public void setAiDecomposeConfig(AiDecomposeConfig AiDecomposeConfig) {
+        this.AiDecomposeConfig = AiDecomposeConfig;
     }
 
     public ImageTaskInput() {
@@ -239,6 +308,15 @@ public class ImageTaskInput extends AbstractModel {
         if (source.UnderstandImageConfig != null) {
             this.UnderstandImageConfig = new UnderstandImageConfig(source.UnderstandImageConfig);
         }
+        if (source.ImageQualityConfig != null) {
+            this.ImageQualityConfig = new ImageQualityConfig(source.ImageQualityConfig);
+        }
+        if (source.AiComposeConfig != null) {
+            this.AiComposeConfig = new AiComposeConfig(source.AiComposeConfig);
+        }
+        if (source.AiDecomposeConfig != null) {
+            this.AiDecomposeConfig = new AiDecomposeConfig(source.AiDecomposeConfig);
+        }
     }
 
 
@@ -254,6 +332,9 @@ public class ImageTaskInput extends AbstractModel {
         this.setParamObj(map, prefix + "AiExpansionConfig.", this.AiExpansionConfig);
         this.setParamObj(map, prefix + "AiStoryboardConfig.", this.AiStoryboardConfig);
         this.setParamObj(map, prefix + "UnderstandImageConfig.", this.UnderstandImageConfig);
+        this.setParamObj(map, prefix + "ImageQualityConfig.", this.ImageQualityConfig);
+        this.setParamObj(map, prefix + "AiComposeConfig.", this.AiComposeConfig);
+        this.setParamObj(map, prefix + "AiDecomposeConfig.", this.AiDecomposeConfig);
 
     }
 }

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ImageInfo extends AbstractModel {
 
     /**
-    * Instance name
+    * Instance name.
     */
     @SerializedName("InstanceName")
     @Expose
@@ -38,7 +38,7 @@ public class ImageInfo extends AbstractModel {
     private String Namespace;
 
     /**
-    * Image name
+    * Image name.
     */
     @SerializedName("ImageName")
     @Expose
@@ -52,14 +52,14 @@ public class ImageInfo extends AbstractModel {
     private String ImageTag;
 
     /**
-    * Forced scan
+    * Force scan
     */
     @SerializedName("Force")
     @Expose
     private String Force;
 
     /**
-    * Image ID
+    * Image id
     */
     @SerializedName("ImageDigest")
     @Expose
@@ -80,23 +80,23 @@ public class ImageInfo extends AbstractModel {
     private String ImageRepoAddress;
 
     /**
-    * Instance ID
+    * Instance ID.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-     * Get Instance name 
-     * @return InstanceName Instance name
+     * Get Instance name. 
+     * @return InstanceName Instance name.
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set Instance name
-     * @param InstanceName Instance name
+     * Set Instance name.
+     * @param InstanceName Instance name.
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
@@ -119,16 +119,16 @@ public class ImageInfo extends AbstractModel {
     }
 
     /**
-     * Get Image name 
-     * @return ImageName Image name
+     * Get Image name. 
+     * @return ImageName Image name.
      */
     public String getImageName() {
         return this.ImageName;
     }
 
     /**
-     * Set Image name
-     * @param ImageName Image name
+     * Set Image name.
+     * @param ImageName Image name.
      */
     public void setImageName(String ImageName) {
         this.ImageName = ImageName;
@@ -151,32 +151,32 @@ public class ImageInfo extends AbstractModel {
     }
 
     /**
-     * Get Forced scan 
-     * @return Force Forced scan
+     * Get Force scan 
+     * @return Force Force scan
      */
     public String getForce() {
         return this.Force;
     }
 
     /**
-     * Set Forced scan
-     * @param Force Forced scan
+     * Set Force scan
+     * @param Force Force scan
      */
     public void setForce(String Force) {
         this.Force = Force;
     }
 
     /**
-     * Get Image ID 
-     * @return ImageDigest Image ID
+     * Get Image id 
+     * @return ImageDigest Image id
      */
     public String getImageDigest() {
         return this.ImageDigest;
     }
 
     /**
-     * Set Image ID
-     * @param ImageDigest Image ID
+     * Set Image id
+     * @param ImageDigest Image id
      */
     public void setImageDigest(String ImageDigest) {
         this.ImageDigest = ImageDigest;
@@ -215,16 +215,16 @@ public class ImageInfo extends AbstractModel {
     }
 
     /**
-     * Get Instance ID 
-     * @return InstanceId Instance ID
+     * Get Instance ID. 
+     * @return InstanceId Instance ID.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID
-     * @param InstanceId Instance ID
+     * Set Instance ID.
+     * @param InstanceId Instance ID.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;

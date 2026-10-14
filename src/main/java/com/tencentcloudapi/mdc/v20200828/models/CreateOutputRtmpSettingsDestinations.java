@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class CreateOutputRtmpSettingsDestinations extends AbstractModel {
 
     /**
-    * The relay URL. Format: `rtmp://domain/live`.
+    * URL for push forwarding, in the format of rtmp://domain/live.
     */
     @SerializedName("Url")
     @Expose
     private String Url;
 
     /**
-    * The `StreamKey` for relay. Format: `stream?key=value`.
+    * StreamKey for republishing, in the format of: stream?key=value.
     */
     @SerializedName("StreamKey")
     @Expose
     private String StreamKey;
 
     /**
-     * Get The relay URL. Format: `rtmp://domain/live`. 
-     * @return Url The relay URL. Format: `rtmp://domain/live`.
+     * Get URL for push forwarding, in the format of rtmp://domain/live. 
+     * @return Url URL for push forwarding, in the format of rtmp://domain/live.
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * Set The relay URL. Format: `rtmp://domain/live`.
-     * @param Url The relay URL. Format: `rtmp://domain/live`.
+     * Set URL for push forwarding, in the format of rtmp://domain/live.
+     * @param Url URL for push forwarding, in the format of rtmp://domain/live.
      */
     public void setUrl(String Url) {
         this.Url = Url;
     }
 
     /**
-     * Get The `StreamKey` for relay. Format: `stream?key=value`. 
-     * @return StreamKey The `StreamKey` for relay. Format: `stream?key=value`.
+     * Get StreamKey for republishing, in the format of: stream?key=value. 
+     * @return StreamKey StreamKey for republishing, in the format of: stream?key=value.
      */
     public String getStreamKey() {
         return this.StreamKey;
     }
 
     /**
-     * Set The `StreamKey` for relay. Format: `stream?key=value`.
-     * @param StreamKey The `StreamKey` for relay. Format: `stream?key=value`.
+     * Set StreamKey for republishing, in the format of: stream?key=value.
+     * @param StreamKey StreamKey for republishing, in the format of: stream?key=value.
      */
     public void setStreamKey(String StreamKey) {
         this.StreamKey = StreamKey;

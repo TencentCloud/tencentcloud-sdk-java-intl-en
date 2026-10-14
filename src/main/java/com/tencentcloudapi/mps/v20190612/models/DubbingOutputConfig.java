@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DubbingOutputConfig extends AbstractModel {
 
     /**
-    * <p>Output method</p><p>Enumeration values:</p><ul><li>FinalVideoOnly: default, final video only</li><li>AudioAndSubtitle: translation audio + translation subtitle</li><li>Custom: customization</li></ul><p>Default value: FinalVideoOnly</p><p>No translation audio and subtitle are returned when using external subtitles</p>
+    * <p>Output method</p><p>Enumeration values:</p><ul><li>FinalVideoOnly: default, final video only</li><li>AudioAndSubtitle: translated audio + translated subtitles</li><li>Custom: custom</li></ul><p>Default value: FinalVideoOnly</p><p>No translated audio + subtitles are returned when external subtitles are used</p>
     */
     @SerializedName("OutputMode")
     @Expose
@@ -38,37 +38,37 @@ public class DubbingOutputConfig extends AbstractModel {
     private String OutputFinalVideo;
 
     /**
-    * <p>Switch to output subtitle files (contains both original voice subtitles and target language subtitles)</p><p>Enumeration values:</p><ul><li>ON: enable</li><li>OFF: disable</li></ul><p>Default value: OFF</p>
+    * <p>Switch for output subtitle files (contains both original voice subtitles and target language subtitles)</p><p>Enumeration values:</p><ul><li>ON: turn on</li><li>OFF: turn off</li></ul><p>Default value: OFF</p>
     */
     @SerializedName("OutputSubtitle")
     @Expose
     private String OutputSubtitle;
 
     /**
-    * <p>Audio switch for output translation dubbing</p><p>Enumeration values: </p><ul><li>ON: Enable</li><li>OFF: Disable</li></ul><p>Default value: OFF</p><p>Only takes effect in Custom mode</p>
+    * <p>Output translation dubbing audio switch</p><p>Enumeration values: </p><ul><li>ON: Enable</li><li>OFF: Disable</li></ul><p>Default value: OFF</p><p>Only takes effect in Custom mode</p>
     */
     @SerializedName("OutputDstAudio")
     @Expose
     private String OutputDstAudio;
 
     /**
-    * <p>Subtitle suppression configuration message.</p>
+    * <p>Suppression subtitle configuration message.</p>
     */
     @SerializedName("EmbedSubtitleConfig")
     @Expose
     private DubbingEmbedSubtitleConfig EmbedSubtitleConfig;
 
     /**
-     * Get <p>Output method</p><p>Enumeration values:</p><ul><li>FinalVideoOnly: default, final video only</li><li>AudioAndSubtitle: translation audio + translation subtitle</li><li>Custom: customization</li></ul><p>Default value: FinalVideoOnly</p><p>No translation audio and subtitle are returned when using external subtitles</p> 
-     * @return OutputMode <p>Output method</p><p>Enumeration values:</p><ul><li>FinalVideoOnly: default, final video only</li><li>AudioAndSubtitle: translation audio + translation subtitle</li><li>Custom: customization</li></ul><p>Default value: FinalVideoOnly</p><p>No translation audio and subtitle are returned when using external subtitles</p>
+     * Get <p>Output method</p><p>Enumeration values:</p><ul><li>FinalVideoOnly: default, final video only</li><li>AudioAndSubtitle: translated audio + translated subtitles</li><li>Custom: custom</li></ul><p>Default value: FinalVideoOnly</p><p>No translated audio + subtitles are returned when external subtitles are used</p> 
+     * @return OutputMode <p>Output method</p><p>Enumeration values:</p><ul><li>FinalVideoOnly: default, final video only</li><li>AudioAndSubtitle: translated audio + translated subtitles</li><li>Custom: custom</li></ul><p>Default value: FinalVideoOnly</p><p>No translated audio + subtitles are returned when external subtitles are used</p>
      */
     public String getOutputMode() {
         return this.OutputMode;
     }
 
     /**
-     * Set <p>Output method</p><p>Enumeration values:</p><ul><li>FinalVideoOnly: default, final video only</li><li>AudioAndSubtitle: translation audio + translation subtitle</li><li>Custom: customization</li></ul><p>Default value: FinalVideoOnly</p><p>No translation audio and subtitle are returned when using external subtitles</p>
-     * @param OutputMode <p>Output method</p><p>Enumeration values:</p><ul><li>FinalVideoOnly: default, final video only</li><li>AudioAndSubtitle: translation audio + translation subtitle</li><li>Custom: customization</li></ul><p>Default value: FinalVideoOnly</p><p>No translation audio and subtitle are returned when using external subtitles</p>
+     * Set <p>Output method</p><p>Enumeration values:</p><ul><li>FinalVideoOnly: default, final video only</li><li>AudioAndSubtitle: translated audio + translated subtitles</li><li>Custom: custom</li></ul><p>Default value: FinalVideoOnly</p><p>No translated audio + subtitles are returned when external subtitles are used</p>
+     * @param OutputMode <p>Output method</p><p>Enumeration values:</p><ul><li>FinalVideoOnly: default, final video only</li><li>AudioAndSubtitle: translated audio + translated subtitles</li><li>Custom: custom</li></ul><p>Default value: FinalVideoOnly</p><p>No translated audio + subtitles are returned when external subtitles are used</p>
      */
     public void setOutputMode(String OutputMode) {
         this.OutputMode = OutputMode;
@@ -91,48 +91,48 @@ public class DubbingOutputConfig extends AbstractModel {
     }
 
     /**
-     * Get <p>Switch to output subtitle files (contains both original voice subtitles and target language subtitles)</p><p>Enumeration values:</p><ul><li>ON: enable</li><li>OFF: disable</li></ul><p>Default value: OFF</p> 
-     * @return OutputSubtitle <p>Switch to output subtitle files (contains both original voice subtitles and target language subtitles)</p><p>Enumeration values:</p><ul><li>ON: enable</li><li>OFF: disable</li></ul><p>Default value: OFF</p>
+     * Get <p>Switch for output subtitle files (contains both original voice subtitles and target language subtitles)</p><p>Enumeration values:</p><ul><li>ON: turn on</li><li>OFF: turn off</li></ul><p>Default value: OFF</p> 
+     * @return OutputSubtitle <p>Switch for output subtitle files (contains both original voice subtitles and target language subtitles)</p><p>Enumeration values:</p><ul><li>ON: turn on</li><li>OFF: turn off</li></ul><p>Default value: OFF</p>
      */
     public String getOutputSubtitle() {
         return this.OutputSubtitle;
     }
 
     /**
-     * Set <p>Switch to output subtitle files (contains both original voice subtitles and target language subtitles)</p><p>Enumeration values:</p><ul><li>ON: enable</li><li>OFF: disable</li></ul><p>Default value: OFF</p>
-     * @param OutputSubtitle <p>Switch to output subtitle files (contains both original voice subtitles and target language subtitles)</p><p>Enumeration values:</p><ul><li>ON: enable</li><li>OFF: disable</li></ul><p>Default value: OFF</p>
+     * Set <p>Switch for output subtitle files (contains both original voice subtitles and target language subtitles)</p><p>Enumeration values:</p><ul><li>ON: turn on</li><li>OFF: turn off</li></ul><p>Default value: OFF</p>
+     * @param OutputSubtitle <p>Switch for output subtitle files (contains both original voice subtitles and target language subtitles)</p><p>Enumeration values:</p><ul><li>ON: turn on</li><li>OFF: turn off</li></ul><p>Default value: OFF</p>
      */
     public void setOutputSubtitle(String OutputSubtitle) {
         this.OutputSubtitle = OutputSubtitle;
     }
 
     /**
-     * Get <p>Audio switch for output translation dubbing</p><p>Enumeration values: </p><ul><li>ON: Enable</li><li>OFF: Disable</li></ul><p>Default value: OFF</p><p>Only takes effect in Custom mode</p> 
-     * @return OutputDstAudio <p>Audio switch for output translation dubbing</p><p>Enumeration values: </p><ul><li>ON: Enable</li><li>OFF: Disable</li></ul><p>Default value: OFF</p><p>Only takes effect in Custom mode</p>
+     * Get <p>Output translation dubbing audio switch</p><p>Enumeration values: </p><ul><li>ON: Enable</li><li>OFF: Disable</li></ul><p>Default value: OFF</p><p>Only takes effect in Custom mode</p> 
+     * @return OutputDstAudio <p>Output translation dubbing audio switch</p><p>Enumeration values: </p><ul><li>ON: Enable</li><li>OFF: Disable</li></ul><p>Default value: OFF</p><p>Only takes effect in Custom mode</p>
      */
     public String getOutputDstAudio() {
         return this.OutputDstAudio;
     }
 
     /**
-     * Set <p>Audio switch for output translation dubbing</p><p>Enumeration values: </p><ul><li>ON: Enable</li><li>OFF: Disable</li></ul><p>Default value: OFF</p><p>Only takes effect in Custom mode</p>
-     * @param OutputDstAudio <p>Audio switch for output translation dubbing</p><p>Enumeration values: </p><ul><li>ON: Enable</li><li>OFF: Disable</li></ul><p>Default value: OFF</p><p>Only takes effect in Custom mode</p>
+     * Set <p>Output translation dubbing audio switch</p><p>Enumeration values: </p><ul><li>ON: Enable</li><li>OFF: Disable</li></ul><p>Default value: OFF</p><p>Only takes effect in Custom mode</p>
+     * @param OutputDstAudio <p>Output translation dubbing audio switch</p><p>Enumeration values: </p><ul><li>ON: Enable</li><li>OFF: Disable</li></ul><p>Default value: OFF</p><p>Only takes effect in Custom mode</p>
      */
     public void setOutputDstAudio(String OutputDstAudio) {
         this.OutputDstAudio = OutputDstAudio;
     }
 
     /**
-     * Get <p>Subtitle suppression configuration message.</p> 
-     * @return EmbedSubtitleConfig <p>Subtitle suppression configuration message.</p>
+     * Get <p>Suppression subtitle configuration message.</p> 
+     * @return EmbedSubtitleConfig <p>Suppression subtitle configuration message.</p>
      */
     public DubbingEmbedSubtitleConfig getEmbedSubtitleConfig() {
         return this.EmbedSubtitleConfig;
     }
 
     /**
-     * Set <p>Subtitle suppression configuration message.</p>
-     * @param EmbedSubtitleConfig <p>Subtitle suppression configuration message.</p>
+     * Set <p>Suppression subtitle configuration message.</p>
+     * @param EmbedSubtitleConfig <p>Suppression subtitle configuration message.</p>
      */
     public void setEmbedSubtitleConfig(DubbingEmbedSubtitleConfig EmbedSubtitleConfig) {
         this.EmbedSubtitleConfig = EmbedSubtitleConfig;

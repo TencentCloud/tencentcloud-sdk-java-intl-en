@@ -24,92 +24,102 @@ import java.util.HashMap;
 public class EditMediaFileInfo extends AbstractModel {
 
     /**
-    * Input video information.
+    * Video input information.
     */
     @SerializedName("InputInfo")
     @Expose
     private MediaInputInfo InputInfo;
 
     /**
-    * [Edit] task takes effect, video editing start time offset, measurement unit: second.
+    * [Edit] task takes effect. Start time offset for video editing, in seconds.
     */
     @SerializedName("StartTimeOffset")
     @Expose
     private Float StartTimeOffset;
 
     /**
-    * [Edit] task takes effect, video editing end time offset, measurement unit: second.
+    * [Edit] task takes effect. End time offset of video editing. Measurement unit: second.
     */
     @SerializedName("EndTimeOffset")
     @Expose
     private Float EndTimeOffset;
 
     /**
-    * 
+    * [Compose] task required, used for media in track elements to associate source material ID.
+
+Note: It can include letters (case insensitive), digits, -, and _, up to 32 characters.
     */
     @SerializedName("Id")
     @Expose
     private String Id;
 
     /**
-     * Get Input video information. 
-     * @return InputInfo Input video information.
+     * Get Video input information. 
+     * @return InputInfo Video input information.
      */
     public MediaInputInfo getInputInfo() {
         return this.InputInfo;
     }
 
     /**
-     * Set Input video information.
-     * @param InputInfo Input video information.
+     * Set Video input information.
+     * @param InputInfo Video input information.
      */
     public void setInputInfo(MediaInputInfo InputInfo) {
         this.InputInfo = InputInfo;
     }
 
     /**
-     * Get [Edit] task takes effect, video editing start time offset, measurement unit: second. 
-     * @return StartTimeOffset [Edit] task takes effect, video editing start time offset, measurement unit: second.
+     * Get [Edit] task takes effect. Start time offset for video editing, in seconds. 
+     * @return StartTimeOffset [Edit] task takes effect. Start time offset for video editing, in seconds.
      */
     public Float getStartTimeOffset() {
         return this.StartTimeOffset;
     }
 
     /**
-     * Set [Edit] task takes effect, video editing start time offset, measurement unit: second.
-     * @param StartTimeOffset [Edit] task takes effect, video editing start time offset, measurement unit: second.
+     * Set [Edit] task takes effect. Start time offset for video editing, in seconds.
+     * @param StartTimeOffset [Edit] task takes effect. Start time offset for video editing, in seconds.
      */
     public void setStartTimeOffset(Float StartTimeOffset) {
         this.StartTimeOffset = StartTimeOffset;
     }
 
     /**
-     * Get [Edit] task takes effect, video editing end time offset, measurement unit: second. 
-     * @return EndTimeOffset [Edit] task takes effect, video editing end time offset, measurement unit: second.
+     * Get [Edit] task takes effect. End time offset of video editing. Measurement unit: second. 
+     * @return EndTimeOffset [Edit] task takes effect. End time offset of video editing. Measurement unit: second.
      */
     public Float getEndTimeOffset() {
         return this.EndTimeOffset;
     }
 
     /**
-     * Set [Edit] task takes effect, video editing end time offset, measurement unit: second.
-     * @param EndTimeOffset [Edit] task takes effect, video editing end time offset, measurement unit: second.
+     * Set [Edit] task takes effect. End time offset of video editing. Measurement unit: second.
+     * @param EndTimeOffset [Edit] task takes effect. End time offset of video editing. Measurement unit: second.
      */
     public void setEndTimeOffset(Float EndTimeOffset) {
         this.EndTimeOffset = EndTimeOffset;
     }
 
     /**
-     * Get  
-     * @return Id 
+     * Get [Compose] task required, used for media in track elements to associate source material ID.
+
+Note: It can include letters (case insensitive), digits, -, and _, up to 32 characters. 
+     * @return Id [Compose] task required, used for media in track elements to associate source material ID.
+
+Note: It can include letters (case insensitive), digits, -, and _, up to 32 characters.
      */
     public String getId() {
         return this.Id;
     }
 
     /**
-     * Set 
-     * @param Id 
+     * Set [Compose] task required, used for media in track elements to associate source material ID.
+
+Note: It can include letters (case insensitive), digits, -, and _, up to 32 characters.
+     * @param Id [Compose] task required, used for media in track elements to associate source material ID.
+
+Note: It can include letters (case insensitive), digits, -, and _, up to 32 characters.
      */
     public void setId(String Id) {
         this.Id = Id;

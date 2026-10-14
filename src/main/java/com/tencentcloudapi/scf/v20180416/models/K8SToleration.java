@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class K8SToleration extends AbstractModel {
 
     /**
-    * 
+    * Matched taint name
     */
     @SerializedName("Key")
     @Expose
     private String Key;
 
     /**
-    * 
+    * Match mode. Default value: Equal.
     */
     @SerializedName("Operator")
     @Expose
     private String Operator;
 
     /**
-    * 
+    * Execution policy
     */
     @SerializedName("Effect")
     @Expose
     private String Effect;
 
     /**
-    * 
+    * Taint value to match. Required when Operator is Equal.
     */
     @SerializedName("Value")
     @Expose
     private String Value;
 
     /**
-    * 
+    * How long a Pod can still run on a node when the taint is not tolerated
     */
     @SerializedName("TolerationSeconds")
     @Expose
     private Long TolerationSeconds;
 
     /**
-     * Get  
-     * @return Key 
+     * Get Matched taint name 
+     * @return Key Matched taint name
      */
     public String getKey() {
         return this.Key;
     }
 
     /**
-     * Set 
-     * @param Key 
+     * Set Matched taint name
+     * @param Key Matched taint name
      */
     public void setKey(String Key) {
         this.Key = Key;
     }
 
     /**
-     * Get  
-     * @return Operator 
+     * Get Match mode. Default value: Equal. 
+     * @return Operator Match mode. Default value: Equal.
      */
     public String getOperator() {
         return this.Operator;
     }
 
     /**
-     * Set 
-     * @param Operator 
+     * Set Match mode. Default value: Equal.
+     * @param Operator Match mode. Default value: Equal.
      */
     public void setOperator(String Operator) {
         this.Operator = Operator;
     }
 
     /**
-     * Get  
-     * @return Effect 
+     * Get Execution policy 
+     * @return Effect Execution policy
      */
     public String getEffect() {
         return this.Effect;
     }
 
     /**
-     * Set 
-     * @param Effect 
+     * Set Execution policy
+     * @param Effect Execution policy
      */
     public void setEffect(String Effect) {
         this.Effect = Effect;
     }
 
     /**
-     * Get  
-     * @return Value 
+     * Get Taint value to match. Required when Operator is Equal. 
+     * @return Value Taint value to match. Required when Operator is Equal.
      */
     public String getValue() {
         return this.Value;
     }
 
     /**
-     * Set 
-     * @param Value 
+     * Set Taint value to match. Required when Operator is Equal.
+     * @param Value Taint value to match. Required when Operator is Equal.
      */
     public void setValue(String Value) {
         this.Value = Value;
     }
 
     /**
-     * Get  
-     * @return TolerationSeconds 
+     * Get How long a Pod can still run on a node when the taint is not tolerated 
+     * @return TolerationSeconds How long a Pod can still run on a node when the taint is not tolerated
      */
     public Long getTolerationSeconds() {
         return this.TolerationSeconds;
     }
 
     /**
-     * Set 
-     * @param TolerationSeconds 
+     * Set How long a Pod can still run on a node when the taint is not tolerated
+     * @param TolerationSeconds How long a Pod can still run on a node when the taint is not tolerated
      */
     public void setTolerationSeconds(Long TolerationSeconds) {
         this.TolerationSeconds = TolerationSeconds;

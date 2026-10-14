@@ -24,28 +24,23 @@ import java.util.HashMap;
 public class DescribeOutputRTMPPullSettings extends AbstractModel {
 
     /**
-    * List of pull URLs
-Note: This field may return `null`, indicating that no valid value was found.
+    * List of pull addresses.
     */
     @SerializedName("ServerUrls")
     @Expose
     private DescribeOutputRTMPPullServerUrl [] ServerUrls;
 
     /**
-     * Get List of pull URLs
-Note: This field may return `null`, indicating that no valid value was found. 
-     * @return ServerUrls List of pull URLs
-Note: This field may return `null`, indicating that no valid value was found.
+     * Get List of pull addresses. 
+     * @return ServerUrls List of pull addresses.
      */
     public DescribeOutputRTMPPullServerUrl [] getServerUrls() {
         return this.ServerUrls;
     }
 
     /**
-     * Set List of pull URLs
-Note: This field may return `null`, indicating that no valid value was found.
-     * @param ServerUrls List of pull URLs
-Note: This field may return `null`, indicating that no valid value was found.
+     * Set List of pull addresses.
+     * @param ServerUrls List of pull addresses.
      */
     public void setServerUrls(DescribeOutputRTMPPullServerUrl [] ServerUrls) {
         this.ServerUrls = ServerUrls;

@@ -59,7 +59,7 @@ public class AiAnalysisTaskTagResult extends AbstractModel {
     private AiAnalysisTaskTagInput Input;
 
     /**
-    * 
+    * Intelligent tag task output.
     */
     @SerializedName("Output")
     @Expose
@@ -146,16 +146,16 @@ public class AiAnalysisTaskTagResult extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return Output 
+     * Get Intelligent tag task output. 
+     * @return Output Intelligent tag task output.
      */
     public AiAnalysisTaskTagOutput getOutput() {
         return this.Output;
     }
 
     /**
-     * Set 
-     * @param Output 
+     * Set Intelligent tag task output.
+     * @param Output Intelligent tag task output.
      */
     public void setOutput(AiAnalysisTaskTagOutput Output) {
         this.Output = Output;

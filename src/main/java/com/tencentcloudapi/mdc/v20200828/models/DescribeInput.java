@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeInput extends AbstractModel {
 
     /**
-    * Input ID.
+    * Input Id.
     */
     @SerializedName("InputId")
     @Expose
@@ -39,7 +39,6 @@ public class DescribeInput extends AbstractModel {
 
     /**
     * Input description.
-Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Description")
     @Expose
@@ -53,30 +52,28 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String Protocol;
 
     /**
-    * Input address list.
+    * Input the address list.
     */
     @SerializedName("InputAddressList")
     @Expose
     private InputAddress [] InputAddressList;
 
     /**
-    * Input IP allowlist.
+    * Input the IP whitelist list.
     */
     @SerializedName("AllowIpList")
     @Expose
     private String [] AllowIpList;
 
     /**
-    * SRT configuration information of input.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * SRT configuration information of the input.
     */
     @SerializedName("SRTSettings")
     @Expose
     private DescribeInputSRTSettings SRTSettings;
 
     /**
-    * RTP configuration information of input.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Input RTP configuration message.
     */
     @SerializedName("RTPSettings")
     @Expose
@@ -90,94 +87,93 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String InputRegion;
 
     /**
-    * RTMP configuration information of an input
+    * Input RTMP configuration message.
     */
     @SerializedName("RTMPSettings")
     @Expose
     private DescribeInputRTMPSettings RTMPSettings;
 
     /**
-    * Input failover
-Note: this field may return `null`, indicating that no valid value was found.
+    * Primary/replica switch input.
     */
     @SerializedName("FailOver")
     @Expose
     private String FailOver;
 
     /**
-    * Available Zone Configuration: Under disaster recovery conditions, up to two are supported, corresponding to pipeline 0 and 1 in order. Otherwise, only one available zone is allowed.
+    * Availability zone configuration. In the current situation with disaster recovery enabled, there can be up to two, corresponding to pipeline 0 and 1 in sequence. Otherwise, there is only one availability zone.
     */
     @SerializedName("Zones")
     @Expose
     private String [] Zones;
 
     /**
-    * The input RTMP_PULL configuration information.
+    * Input RTMP_PULL configuration message.
     */
     @SerializedName("RTMPPullSettings")
     @Expose
     private DescribeInputRTMPPullSettings RTMPPullSettings;
 
     /**
-    * The RTSP_PULL configuration information entered.
+    * Input RTSP_PULL configuration message.
     */
     @SerializedName("RTSPPullSettings")
     @Expose
     private DescribeInputRTSPPullSettings RTSPPullSettings;
 
     /**
-    * The input HLS-PULL configuration information.
+    * Input HLS_PULL configuration message.
     */
     @SerializedName("HLSPullSettings")
     @Expose
     private DescribeInputHLSPullSettings HLSPullSettings;
 
     /**
-    * Extended smooth streaming configuration information.
+    * Configuration message for smooth streaming during delayed broadcasting.
     */
     @SerializedName("ResilientStream")
     @Expose
     private ResilientStreamConf ResilientStream;
 
     /**
-    * The bound security group ID.
+    * Bound input security group ID.	
     */
     @SerializedName("SecurityGroupIds")
     @Expose
     private String [] SecurityGroupIds;
 
     /**
-    * The input RIST configuration information.
+    * Input RIST configuration message.
     */
     @SerializedName("RISTSettings")
     @Expose
     private DescribeInputRISTSettings RISTSettings;
 
     /**
-    * Enter URL information related to module configuration, including the provided streaming address or the configured third-party source address
+    * Input URL information related to module settings, including the provided streaming address or the configured third-party source stream URL.
     */
     @SerializedName("StreamUrls")
     @Expose
     private StreamUrlDetail [] StreamUrls;
 
     /**
-    * Disaster recovery configuration items
+    * Disaster recovery configuration item
     */
     @SerializedName("FailOverOption")
     @Expose
     private FailOverOption FailOverOption;
 
     /**
-     * Get Input ID. 
-     * @return InputId Input ID.
+     * Get Input Id. 
+     * @return InputId Input Id.
      */
     public String getInputId() {
         return this.InputId;
     }
 
     /**
-     * Set Input ID.
-     * @param InputId Input ID.
+     * Set Input Id.
+     * @param InputId Input Id.
      */
     public void setInputId(String InputId) {
         this.InputId = InputId;
@@ -200,10 +196,8 @@ Note: this field may return `null`, indicating that no valid value was found.
     }
 
     /**
-     * Get Input description.
-Note: this field may return null, indicating that no valid values can be obtained. 
+     * Get Input description. 
      * @return Description Input description.
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getDescription() {
         return this.Description;
@@ -211,9 +205,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Input description.
-Note: this field may return null, indicating that no valid values can be obtained.
      * @param Description Input description.
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setDescription(String Description) {
         this.Description = Description;
@@ -236,72 +228,64 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Input address list. 
-     * @return InputAddressList Input address list.
+     * Get Input the address list. 
+     * @return InputAddressList Input the address list.
      */
     public InputAddress [] getInputAddressList() {
         return this.InputAddressList;
     }
 
     /**
-     * Set Input address list.
-     * @param InputAddressList Input address list.
+     * Set Input the address list.
+     * @param InputAddressList Input the address list.
      */
     public void setInputAddressList(InputAddress [] InputAddressList) {
         this.InputAddressList = InputAddressList;
     }
 
     /**
-     * Get Input IP allowlist. 
-     * @return AllowIpList Input IP allowlist.
+     * Get Input the IP whitelist list. 
+     * @return AllowIpList Input the IP whitelist list.
      */
     public String [] getAllowIpList() {
         return this.AllowIpList;
     }
 
     /**
-     * Set Input IP allowlist.
-     * @param AllowIpList Input IP allowlist.
+     * Set Input the IP whitelist list.
+     * @param AllowIpList Input the IP whitelist list.
      */
     public void setAllowIpList(String [] AllowIpList) {
         this.AllowIpList = AllowIpList;
     }
 
     /**
-     * Get SRT configuration information of input.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return SRTSettings SRT configuration information of input.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get SRT configuration information of the input. 
+     * @return SRTSettings SRT configuration information of the input.
      */
     public DescribeInputSRTSettings getSRTSettings() {
         return this.SRTSettings;
     }
 
     /**
-     * Set SRT configuration information of input.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param SRTSettings SRT configuration information of input.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set SRT configuration information of the input.
+     * @param SRTSettings SRT configuration information of the input.
      */
     public void setSRTSettings(DescribeInputSRTSettings SRTSettings) {
         this.SRTSettings = SRTSettings;
     }
 
     /**
-     * Get RTP configuration information of input.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return RTPSettings RTP configuration information of input.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Input RTP configuration message. 
+     * @return RTPSettings Input RTP configuration message.
      */
     public DescribeInputRTPSettings getRTPSettings() {
         return this.RTPSettings;
     }
 
     /**
-     * Set RTP configuration information of input.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param RTPSettings RTP configuration information of input.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Input RTP configuration message.
+     * @param RTPSettings Input RTP configuration message.
      */
     public void setRTPSettings(DescribeInputRTPSettings RTPSettings) {
         this.RTPSettings = RTPSettings;
@@ -324,180 +308,176 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get RTMP configuration information of an input 
-     * @return RTMPSettings RTMP configuration information of an input
+     * Get Input RTMP configuration message. 
+     * @return RTMPSettings Input RTMP configuration message.
      */
     public DescribeInputRTMPSettings getRTMPSettings() {
         return this.RTMPSettings;
     }
 
     /**
-     * Set RTMP configuration information of an input
-     * @param RTMPSettings RTMP configuration information of an input
+     * Set Input RTMP configuration message.
+     * @param RTMPSettings Input RTMP configuration message.
      */
     public void setRTMPSettings(DescribeInputRTMPSettings RTMPSettings) {
         this.RTMPSettings = RTMPSettings;
     }
 
     /**
-     * Get Input failover
-Note: this field may return `null`, indicating that no valid value was found. 
-     * @return FailOver Input failover
-Note: this field may return `null`, indicating that no valid value was found.
+     * Get Primary/replica switch input. 
+     * @return FailOver Primary/replica switch input.
      */
     public String getFailOver() {
         return this.FailOver;
     }
 
     /**
-     * Set Input failover
-Note: this field may return `null`, indicating that no valid value was found.
-     * @param FailOver Input failover
-Note: this field may return `null`, indicating that no valid value was found.
+     * Set Primary/replica switch input.
+     * @param FailOver Primary/replica switch input.
      */
     public void setFailOver(String FailOver) {
         this.FailOver = FailOver;
     }
 
     /**
-     * Get Available Zone Configuration: Under disaster recovery conditions, up to two are supported, corresponding to pipeline 0 and 1 in order. Otherwise, only one available zone is allowed. 
-     * @return Zones Available Zone Configuration: Under disaster recovery conditions, up to two are supported, corresponding to pipeline 0 and 1 in order. Otherwise, only one available zone is allowed.
+     * Get Availability zone configuration. In the current situation with disaster recovery enabled, there can be up to two, corresponding to pipeline 0 and 1 in sequence. Otherwise, there is only one availability zone. 
+     * @return Zones Availability zone configuration. In the current situation with disaster recovery enabled, there can be up to two, corresponding to pipeline 0 and 1 in sequence. Otherwise, there is only one availability zone.
      */
     public String [] getZones() {
         return this.Zones;
     }
 
     /**
-     * Set Available Zone Configuration: Under disaster recovery conditions, up to two are supported, corresponding to pipeline 0 and 1 in order. Otherwise, only one available zone is allowed.
-     * @param Zones Available Zone Configuration: Under disaster recovery conditions, up to two are supported, corresponding to pipeline 0 and 1 in order. Otherwise, only one available zone is allowed.
+     * Set Availability zone configuration. In the current situation with disaster recovery enabled, there can be up to two, corresponding to pipeline 0 and 1 in sequence. Otherwise, there is only one availability zone.
+     * @param Zones Availability zone configuration. In the current situation with disaster recovery enabled, there can be up to two, corresponding to pipeline 0 and 1 in sequence. Otherwise, there is only one availability zone.
      */
     public void setZones(String [] Zones) {
         this.Zones = Zones;
     }
 
     /**
-     * Get The input RTMP_PULL configuration information. 
-     * @return RTMPPullSettings The input RTMP_PULL configuration information.
+     * Get Input RTMP_PULL configuration message. 
+     * @return RTMPPullSettings Input RTMP_PULL configuration message.
      */
     public DescribeInputRTMPPullSettings getRTMPPullSettings() {
         return this.RTMPPullSettings;
     }
 
     /**
-     * Set The input RTMP_PULL configuration information.
-     * @param RTMPPullSettings The input RTMP_PULL configuration information.
+     * Set Input RTMP_PULL configuration message.
+     * @param RTMPPullSettings Input RTMP_PULL configuration message.
      */
     public void setRTMPPullSettings(DescribeInputRTMPPullSettings RTMPPullSettings) {
         this.RTMPPullSettings = RTMPPullSettings;
     }
 
     /**
-     * Get The RTSP_PULL configuration information entered. 
-     * @return RTSPPullSettings The RTSP_PULL configuration information entered.
+     * Get Input RTSP_PULL configuration message. 
+     * @return RTSPPullSettings Input RTSP_PULL configuration message.
      */
     public DescribeInputRTSPPullSettings getRTSPPullSettings() {
         return this.RTSPPullSettings;
     }
 
     /**
-     * Set The RTSP_PULL configuration information entered.
-     * @param RTSPPullSettings The RTSP_PULL configuration information entered.
+     * Set Input RTSP_PULL configuration message.
+     * @param RTSPPullSettings Input RTSP_PULL configuration message.
      */
     public void setRTSPPullSettings(DescribeInputRTSPPullSettings RTSPPullSettings) {
         this.RTSPPullSettings = RTSPPullSettings;
     }
 
     /**
-     * Get The input HLS-PULL configuration information. 
-     * @return HLSPullSettings The input HLS-PULL configuration information.
+     * Get Input HLS_PULL configuration message. 
+     * @return HLSPullSettings Input HLS_PULL configuration message.
      */
     public DescribeInputHLSPullSettings getHLSPullSettings() {
         return this.HLSPullSettings;
     }
 
     /**
-     * Set The input HLS-PULL configuration information.
-     * @param HLSPullSettings The input HLS-PULL configuration information.
+     * Set Input HLS_PULL configuration message.
+     * @param HLSPullSettings Input HLS_PULL configuration message.
      */
     public void setHLSPullSettings(DescribeInputHLSPullSettings HLSPullSettings) {
         this.HLSPullSettings = HLSPullSettings;
     }
 
     /**
-     * Get Extended smooth streaming configuration information. 
-     * @return ResilientStream Extended smooth streaming configuration information.
+     * Get Configuration message for smooth streaming during delayed broadcasting. 
+     * @return ResilientStream Configuration message for smooth streaming during delayed broadcasting.
      */
     public ResilientStreamConf getResilientStream() {
         return this.ResilientStream;
     }
 
     /**
-     * Set Extended smooth streaming configuration information.
-     * @param ResilientStream Extended smooth streaming configuration information.
+     * Set Configuration message for smooth streaming during delayed broadcasting.
+     * @param ResilientStream Configuration message for smooth streaming during delayed broadcasting.
      */
     public void setResilientStream(ResilientStreamConf ResilientStream) {
         this.ResilientStream = ResilientStream;
     }
 
     /**
-     * Get The bound security group ID. 
-     * @return SecurityGroupIds The bound security group ID.
+     * Get Bound input security group ID.	 
+     * @return SecurityGroupIds Bound input security group ID.	
      */
     public String [] getSecurityGroupIds() {
         return this.SecurityGroupIds;
     }
 
     /**
-     * Set The bound security group ID.
-     * @param SecurityGroupIds The bound security group ID.
+     * Set Bound input security group ID.	
+     * @param SecurityGroupIds Bound input security group ID.	
      */
     public void setSecurityGroupIds(String [] SecurityGroupIds) {
         this.SecurityGroupIds = SecurityGroupIds;
     }
 
     /**
-     * Get The input RIST configuration information. 
-     * @return RISTSettings The input RIST configuration information.
+     * Get Input RIST configuration message. 
+     * @return RISTSettings Input RIST configuration message.
      */
     public DescribeInputRISTSettings getRISTSettings() {
         return this.RISTSettings;
     }
 
     /**
-     * Set The input RIST configuration information.
-     * @param RISTSettings The input RIST configuration information.
+     * Set Input RIST configuration message.
+     * @param RISTSettings Input RIST configuration message.
      */
     public void setRISTSettings(DescribeInputRISTSettings RISTSettings) {
         this.RISTSettings = RISTSettings;
     }
 
     /**
-     * Get Enter URL information related to module configuration, including the provided streaming address or the configured third-party source address 
-     * @return StreamUrls Enter URL information related to module configuration, including the provided streaming address or the configured third-party source address
+     * Get Input URL information related to module settings, including the provided streaming address or the configured third-party source stream URL. 
+     * @return StreamUrls Input URL information related to module settings, including the provided streaming address or the configured third-party source stream URL.
      */
     public StreamUrlDetail [] getStreamUrls() {
         return this.StreamUrls;
     }
 
     /**
-     * Set Enter URL information related to module configuration, including the provided streaming address or the configured third-party source address
-     * @param StreamUrls Enter URL information related to module configuration, including the provided streaming address or the configured third-party source address
+     * Set Input URL information related to module settings, including the provided streaming address or the configured third-party source stream URL.
+     * @param StreamUrls Input URL information related to module settings, including the provided streaming address or the configured third-party source stream URL.
      */
     public void setStreamUrls(StreamUrlDetail [] StreamUrls) {
         this.StreamUrls = StreamUrls;
     }
 
     /**
-     * Get Disaster recovery configuration items 
-     * @return FailOverOption Disaster recovery configuration items
+     * Get Disaster recovery configuration item 
+     * @return FailOverOption Disaster recovery configuration item
      */
     public FailOverOption getFailOverOption() {
         return this.FailOverOption;
     }
 
     /**
-     * Set Disaster recovery configuration items
-     * @param FailOverOption Disaster recovery configuration items
+     * Set Disaster recovery configuration item
+     * @param FailOverOption Disaster recovery configuration item
      */
     public void setFailOverOption(FailOverOption FailOverOption) {
         this.FailOverOption = FailOverOption;

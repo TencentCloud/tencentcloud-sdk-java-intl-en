@@ -52,7 +52,7 @@ public class ScheduleAnalysisTaskResult extends AbstractModel {
     private String Message;
 
     /**
-    * Analyze the input of the task.
+    * Input of the analysis task.
     */
     @SerializedName("Input")
     @Expose
@@ -144,16 +144,16 @@ public class ScheduleAnalysisTaskResult extends AbstractModel {
     }
 
     /**
-     * Get Analyze the input of the task. 
-     * @return Input Analyze the input of the task.
+     * Get Input of the analysis task. 
+     * @return Input Input of the analysis task.
      */
     public AiAnalysisTaskInput getInput() {
         return this.Input;
     }
 
     /**
-     * Set Analyze the input of the task.
-     * @param Input Analyze the input of the task.
+     * Set Input of the analysis task.
+     * @param Input Input of the analysis task.
      */
     public void setInput(AiAnalysisTaskInput Input) {
         this.Input = Input;

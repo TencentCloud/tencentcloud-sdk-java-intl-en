@@ -24,42 +24,42 @@ import java.util.HashMap;
 public class NodeInfo extends AbstractModel {
 
     /**
-    * 
+    * <p>Node IP information</p>
     */
     @SerializedName("IP")
     @Expose
     private String IP;
 
     /**
-    * 
+    * <p>Node types, such as sqlengine, tdstore, mc</p>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * 
+    * <p>Unique identifier of the node</p>
     */
     @SerializedName("NodeId")
     @Expose
     private String NodeId;
 
     /**
-    * 
+    * <p>Node port information</p>
     */
     @SerializedName("Port")
     @Expose
     private Long Port;
 
     /**
-    * 
+    * <p>Availability zone of the node</p>
     */
     @SerializedName("Zone")
     @Expose
     private String Zone;
 
     /**
-    * 
+    * <p>Machine ip of the node</p>
     */
     @SerializedName("Host")
     @Expose
@@ -94,96 +94,96 @@ public class NodeInfo extends AbstractModel {
     private Long DataDisk;
 
     /**
-     * Get  
-     * @return IP 
+     * Get <p>Node IP information</p> 
+     * @return IP <p>Node IP information</p>
      */
     public String getIP() {
         return this.IP;
     }
 
     /**
-     * Set 
-     * @param IP 
+     * Set <p>Node IP information</p>
+     * @param IP <p>Node IP information</p>
      */
     public void setIP(String IP) {
         this.IP = IP;
     }
 
     /**
-     * Get  
-     * @return Type 
+     * Get <p>Node types, such as sqlengine, tdstore, mc</p> 
+     * @return Type <p>Node types, such as sqlengine, tdstore, mc</p>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 
-     * @param Type 
+     * Set <p>Node types, such as sqlengine, tdstore, mc</p>
+     * @param Type <p>Node types, such as sqlengine, tdstore, mc</p>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get  
-     * @return NodeId 
+     * Get <p>Unique identifier of the node</p> 
+     * @return NodeId <p>Unique identifier of the node</p>
      */
     public String getNodeId() {
         return this.NodeId;
     }
 
     /**
-     * Set 
-     * @param NodeId 
+     * Set <p>Unique identifier of the node</p>
+     * @param NodeId <p>Unique identifier of the node</p>
      */
     public void setNodeId(String NodeId) {
         this.NodeId = NodeId;
     }
 
     /**
-     * Get  
-     * @return Port 
+     * Get <p>Node port information</p> 
+     * @return Port <p>Node port information</p>
      */
     public Long getPort() {
         return this.Port;
     }
 
     /**
-     * Set 
-     * @param Port 
+     * Set <p>Node port information</p>
+     * @param Port <p>Node port information</p>
      */
     public void setPort(Long Port) {
         this.Port = Port;
     }
 
     /**
-     * Get  
-     * @return Zone 
+     * Get <p>Availability zone of the node</p> 
+     * @return Zone <p>Availability zone of the node</p>
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * Set 
-     * @param Zone 
+     * Set <p>Availability zone of the node</p>
+     * @param Zone <p>Availability zone of the node</p>
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
     }
 
     /**
-     * Get  
-     * @return Host 
+     * Get <p>Machine ip of the node</p> 
+     * @return Host <p>Machine ip of the node</p>
      */
     public String getHost() {
         return this.Host;
     }
 
     /**
-     * Set 
-     * @param Host 
+     * Set <p>Machine ip of the node</p>
+     * @param Host <p>Machine ip of the node</p>
      */
     public void setHost(String Host) {
         this.Host = Host;

@@ -52,21 +52,21 @@ public class SmartSubtitleTaskAsrFullTextResult extends AbstractModel {
     private String Message;
 
     /**
-    * 
+    * Input information on the full speech recognition task.
     */
     @SerializedName("Input")
     @Expose
     private SmartSubtitleTaskResultInput Input;
 
     /**
-    * 
+    * Output information on the full speech recognition task.
     */
     @SerializedName("Output")
     @Expose
     private SmartSubtitleTaskAsrFullTextResultOutput Output;
 
     /**
-    * 
+    * Task progress.
     */
     @SerializedName("Progress")
     @Expose
@@ -137,48 +137,48 @@ public class SmartSubtitleTaskAsrFullTextResult extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return Input 
+     * Get Input information on the full speech recognition task. 
+     * @return Input Input information on the full speech recognition task.
      */
     public SmartSubtitleTaskResultInput getInput() {
         return this.Input;
     }
 
     /**
-     * Set 
-     * @param Input 
+     * Set Input information on the full speech recognition task.
+     * @param Input Input information on the full speech recognition task.
      */
     public void setInput(SmartSubtitleTaskResultInput Input) {
         this.Input = Input;
     }
 
     /**
-     * Get  
-     * @return Output 
+     * Get Output information on the full speech recognition task. 
+     * @return Output Output information on the full speech recognition task.
      */
     public SmartSubtitleTaskAsrFullTextResultOutput getOutput() {
         return this.Output;
     }
 
     /**
-     * Set 
-     * @param Output 
+     * Set Output information on the full speech recognition task.
+     * @param Output Output information on the full speech recognition task.
      */
     public void setOutput(SmartSubtitleTaskAsrFullTextResultOutput Output) {
         this.Output = Output;
     }
 
     /**
-     * Get  
-     * @return Progress 
+     * Get Task progress. 
+     * @return Progress Task progress.
      */
     public Long getProgress() {
         return this.Progress;
     }
 
     /**
-     * Set 
-     * @param Progress 
+     * Set Task progress.
+     * @param Progress Task progress.
      */
     public void setProgress(Long Progress) {
         this.Progress = Progress;

@@ -24,138 +24,138 @@ import java.util.HashMap;
 public class FlowMediaInfo extends AbstractModel {
 
     /**
-    * The timestamp (seconds).
+    * Timestamp in seconds.
     */
     @SerializedName("Timestamp")
     @Expose
     private Long Timestamp;
 
     /**
-    * The total bandwidth.
+    * Total bandwidth.
     */
     @SerializedName("Network")
     @Expose
     private Long Network;
 
     /**
-    * The video data of the flow.
+    * Video data of the transport stream.
     */
     @SerializedName("Video")
     @Expose
     private FlowMediaVideo [] Video;
 
     /**
-    * The audio data of the flow.
+    * Audio data of the transport stream.
     */
     @SerializedName("Audio")
     @Expose
     private FlowMediaAudio [] Audio;
 
     /**
-    * The ID of a push session.
+    * Flag of the same push.
     */
     @SerializedName("SessionId")
     @Expose
     private String SessionId;
 
     /**
-    * The client IP.
+    * Client IP.
     */
     @SerializedName("ClientIp")
     @Expose
     private String ClientIp;
 
     /**
-     * Get The timestamp (seconds). 
-     * @return Timestamp The timestamp (seconds).
+     * Get Timestamp in seconds. 
+     * @return Timestamp Timestamp in seconds.
      */
     public Long getTimestamp() {
         return this.Timestamp;
     }
 
     /**
-     * Set The timestamp (seconds).
-     * @param Timestamp The timestamp (seconds).
+     * Set Timestamp in seconds.
+     * @param Timestamp Timestamp in seconds.
      */
     public void setTimestamp(Long Timestamp) {
         this.Timestamp = Timestamp;
     }
 
     /**
-     * Get The total bandwidth. 
-     * @return Network The total bandwidth.
+     * Get Total bandwidth. 
+     * @return Network Total bandwidth.
      */
     public Long getNetwork() {
         return this.Network;
     }
 
     /**
-     * Set The total bandwidth.
-     * @param Network The total bandwidth.
+     * Set Total bandwidth.
+     * @param Network Total bandwidth.
      */
     public void setNetwork(Long Network) {
         this.Network = Network;
     }
 
     /**
-     * Get The video data of the flow. 
-     * @return Video The video data of the flow.
+     * Get Video data of the transport stream. 
+     * @return Video Video data of the transport stream.
      */
     public FlowMediaVideo [] getVideo() {
         return this.Video;
     }
 
     /**
-     * Set The video data of the flow.
-     * @param Video The video data of the flow.
+     * Set Video data of the transport stream.
+     * @param Video Video data of the transport stream.
      */
     public void setVideo(FlowMediaVideo [] Video) {
         this.Video = Video;
     }
 
     /**
-     * Get The audio data of the flow. 
-     * @return Audio The audio data of the flow.
+     * Get Audio data of the transport stream. 
+     * @return Audio Audio data of the transport stream.
      */
     public FlowMediaAudio [] getAudio() {
         return this.Audio;
     }
 
     /**
-     * Set The audio data of the flow.
-     * @param Audio The audio data of the flow.
+     * Set Audio data of the transport stream.
+     * @param Audio Audio data of the transport stream.
      */
     public void setAudio(FlowMediaAudio [] Audio) {
         this.Audio = Audio;
     }
 
     /**
-     * Get The ID of a push session. 
-     * @return SessionId The ID of a push session.
+     * Get Flag of the same push. 
+     * @return SessionId Flag of the same push.
      */
     public String getSessionId() {
         return this.SessionId;
     }
 
     /**
-     * Set The ID of a push session.
-     * @param SessionId The ID of a push session.
+     * Set Flag of the same push.
+     * @param SessionId Flag of the same push.
      */
     public void setSessionId(String SessionId) {
         this.SessionId = SessionId;
     }
 
     /**
-     * Get The client IP. 
-     * @return ClientIp The client IP.
+     * Get Client IP. 
+     * @return ClientIp Client IP.
      */
     public String getClientIp() {
         return this.ClientIp;
     }
 
     /**
-     * Set The client IP.
-     * @param ClientIp The client IP.
+     * Set Client IP.
+     * @param ClientIp Client IP.
      */
     public void setClientIp(String ClientIp) {
         this.ClientIp = ClientIp;

@@ -24,48 +24,42 @@ import java.util.HashMap;
 public class IndexPolicyField extends AbstractModel {
 
     /**
-    * Whether to enable the warm phase
-Note: This field may return `null`, indicating that no valid value can be obtained.
+    * Whether the warm phase is enabled
     */
     @SerializedName("WarmEnable")
     @Expose
     private String WarmEnable;
 
     /**
-    * Min age before data transitions to the warm phase
-Note: This field may return `null`, indicating that no valid value can be obtained.
+    * Transfer time to the warm phase
     */
     @SerializedName("WarmMinAge")
     @Expose
     private String WarmMinAge;
 
     /**
-    * Whether to enable the cold phase
-Note: This field may return `null`, indicating that no valid value can be obtained.
+    * Whether the cold phase is enabled
     */
     @SerializedName("ColdEnable")
     @Expose
     private String ColdEnable;
 
     /**
-    * Min age before data transitions to the cold phase
-Note: This field may return `null`, indicating that no valid value can be obtained.
+    * Transfer time to the cold phase
     */
     @SerializedName("ColdMinAge")
     @Expose
     private String ColdMinAge;
 
     /**
-    * Whether to enable the frozen phase
-Note: This field may return `null`, indicating that no valid value can be obtained.
+    * Whether the frozen phase is enabled
     */
     @SerializedName("FrozenEnable")
     @Expose
     private String FrozenEnable;
 
     /**
-    * Min age before data transitions to the frozen phase
-Note: This field may return `null`, indicating that no valid value can be obtained.
+    * Time of transfer to the frozen stage
     */
     @SerializedName("FrozenMinAge")
     @Expose
@@ -73,137 +67,110 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 
     /**
     * /
-Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("ColdAction")
     @Expose
     private String ColdAction;
 
     /**
-     * Get Whether to enable the warm phase
-Note: This field may return `null`, indicating that no valid value can be obtained. 
-     * @return WarmEnable Whether to enable the warm phase
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Get Whether the warm phase is enabled 
+     * @return WarmEnable Whether the warm phase is enabled
      */
     public String getWarmEnable() {
         return this.WarmEnable;
     }
 
     /**
-     * Set Whether to enable the warm phase
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param WarmEnable Whether to enable the warm phase
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Set Whether the warm phase is enabled
+     * @param WarmEnable Whether the warm phase is enabled
      */
     public void setWarmEnable(String WarmEnable) {
         this.WarmEnable = WarmEnable;
     }
 
     /**
-     * Get Min age before data transitions to the warm phase
-Note: This field may return `null`, indicating that no valid value can be obtained. 
-     * @return WarmMinAge Min age before data transitions to the warm phase
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Get Transfer time to the warm phase 
+     * @return WarmMinAge Transfer time to the warm phase
      */
     public String getWarmMinAge() {
         return this.WarmMinAge;
     }
 
     /**
-     * Set Min age before data transitions to the warm phase
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param WarmMinAge Min age before data transitions to the warm phase
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Set Transfer time to the warm phase
+     * @param WarmMinAge Transfer time to the warm phase
      */
     public void setWarmMinAge(String WarmMinAge) {
         this.WarmMinAge = WarmMinAge;
     }
 
     /**
-     * Get Whether to enable the cold phase
-Note: This field may return `null`, indicating that no valid value can be obtained. 
-     * @return ColdEnable Whether to enable the cold phase
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Get Whether the cold phase is enabled 
+     * @return ColdEnable Whether the cold phase is enabled
      */
     public String getColdEnable() {
         return this.ColdEnable;
     }
 
     /**
-     * Set Whether to enable the cold phase
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param ColdEnable Whether to enable the cold phase
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Set Whether the cold phase is enabled
+     * @param ColdEnable Whether the cold phase is enabled
      */
     public void setColdEnable(String ColdEnable) {
         this.ColdEnable = ColdEnable;
     }
 
     /**
-     * Get Min age before data transitions to the cold phase
-Note: This field may return `null`, indicating that no valid value can be obtained. 
-     * @return ColdMinAge Min age before data transitions to the cold phase
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Get Transfer time to the cold phase 
+     * @return ColdMinAge Transfer time to the cold phase
      */
     public String getColdMinAge() {
         return this.ColdMinAge;
     }
 
     /**
-     * Set Min age before data transitions to the cold phase
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param ColdMinAge Min age before data transitions to the cold phase
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Set Transfer time to the cold phase
+     * @param ColdMinAge Transfer time to the cold phase
      */
     public void setColdMinAge(String ColdMinAge) {
         this.ColdMinAge = ColdMinAge;
     }
 
     /**
-     * Get Whether to enable the frozen phase
-Note: This field may return `null`, indicating that no valid value can be obtained. 
-     * @return FrozenEnable Whether to enable the frozen phase
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Get Whether the frozen phase is enabled 
+     * @return FrozenEnable Whether the frozen phase is enabled
      */
     public String getFrozenEnable() {
         return this.FrozenEnable;
     }
 
     /**
-     * Set Whether to enable the frozen phase
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param FrozenEnable Whether to enable the frozen phase
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Set Whether the frozen phase is enabled
+     * @param FrozenEnable Whether the frozen phase is enabled
      */
     public void setFrozenEnable(String FrozenEnable) {
         this.FrozenEnable = FrozenEnable;
     }
 
     /**
-     * Get Min age before data transitions to the frozen phase
-Note: This field may return `null`, indicating that no valid value can be obtained. 
-     * @return FrozenMinAge Min age before data transitions to the frozen phase
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Get Time of transfer to the frozen stage 
+     * @return FrozenMinAge Time of transfer to the frozen stage
      */
     public String getFrozenMinAge() {
         return this.FrozenMinAge;
     }
 
     /**
-     * Set Min age before data transitions to the frozen phase
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param FrozenMinAge Min age before data transitions to the frozen phase
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Set Time of transfer to the frozen stage
+     * @param FrozenMinAge Time of transfer to the frozen stage
      */
     public void setFrozenMinAge(String FrozenMinAge) {
         this.FrozenMinAge = FrozenMinAge;
     }
 
     /**
-     * Get /
-Note: This field may return null, indicating that no valid value can be obtained. 
+     * Get / 
      * @return ColdAction /
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public String getColdAction() {
         return this.ColdAction;
@@ -211,9 +178,7 @@ Note: This field may return null, indicating that no valid value can be obtained
 
     /**
      * Set /
-Note: This field may return null, indicating that no valid value can be obtained.
      * @param ColdAction /
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setColdAction(String ColdAction) {
         this.ColdAction = ColdAction;

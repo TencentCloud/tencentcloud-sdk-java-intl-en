@@ -59,7 +59,7 @@ public class MediaProcessTaskImageSpriteResult extends AbstractModel {
     private ImageSpriteTaskInput Input;
 
     /**
-    * 
+    * Output of the image sprite task for videos.
     */
     @SerializedName("Output")
     @Expose
@@ -160,16 +160,16 @@ public class MediaProcessTaskImageSpriteResult extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return Output 
+     * Get Output of the image sprite task for videos. 
+     * @return Output Output of the image sprite task for videos.
      */
     public MediaImageSpriteItem getOutput() {
         return this.Output;
     }
 
     /**
-     * Set 
-     * @param Output 
+     * Set Output of the image sprite task for videos.
+     * @param Output Output of the image sprite task for videos.
      */
     public void setOutput(MediaImageSpriteItem Output) {
         this.Output = Output;

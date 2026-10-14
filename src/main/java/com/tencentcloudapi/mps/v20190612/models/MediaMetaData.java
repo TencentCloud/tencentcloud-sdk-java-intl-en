@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class MediaMetaData extends AbstractModel {
 
     /**
-    * Size of the uploaded media file (for HLS videos, the size is the total of the m3u8 and ts file sizes), unit: byte.
+    * Size of the uploaded media file (for HLS videos, the size is the sum of the m3u8 and ts file sizes), unit: byte.
     */
     @SerializedName("Size")
     @Expose
@@ -45,7 +45,7 @@ public class MediaMetaData extends AbstractModel {
     private Long Bitrate;
 
     /**
-    * Maximum height of a video stream. Unit: px.
+    * Maximum height of the video stream. Measurement unit: px.
     */
     @SerializedName("Height")
     @Expose
@@ -66,7 +66,7 @@ public class MediaMetaData extends AbstractModel {
     private Float Duration;
 
     /**
-    * Selection angle during video shooting. Unit: degree.
+    * Selection angle during video shooting. Measurement unit: degree.
     */
     @SerializedName("Rotate")
     @Expose
@@ -101,16 +101,16 @@ public class MediaMetaData extends AbstractModel {
     private Float AudioDuration;
 
     /**
-     * Get Size of the uploaded media file (for HLS videos, the size is the total of the m3u8 and ts file sizes), unit: byte. 
-     * @return Size Size of the uploaded media file (for HLS videos, the size is the total of the m3u8 and ts file sizes), unit: byte.
+     * Get Size of the uploaded media file (for HLS videos, the size is the sum of the m3u8 and ts file sizes), unit: byte. 
+     * @return Size Size of the uploaded media file (for HLS videos, the size is the sum of the m3u8 and ts file sizes), unit: byte.
      */
     public Long getSize() {
         return this.Size;
     }
 
     /**
-     * Set Size of the uploaded media file (for HLS videos, the size is the total of the m3u8 and ts file sizes), unit: byte.
-     * @param Size Size of the uploaded media file (for HLS videos, the size is the total of the m3u8 and ts file sizes), unit: byte.
+     * Set Size of the uploaded media file (for HLS videos, the size is the sum of the m3u8 and ts file sizes), unit: byte.
+     * @param Size Size of the uploaded media file (for HLS videos, the size is the sum of the m3u8 and ts file sizes), unit: byte.
      */
     public void setSize(Long Size) {
         this.Size = Size;
@@ -149,16 +149,16 @@ public class MediaMetaData extends AbstractModel {
     }
 
     /**
-     * Get Maximum height of a video stream. Unit: px. 
-     * @return Height Maximum height of a video stream. Unit: px.
+     * Get Maximum height of the video stream. Measurement unit: px. 
+     * @return Height Maximum height of the video stream. Measurement unit: px.
      */
     public Long getHeight() {
         return this.Height;
     }
 
     /**
-     * Set Maximum height of a video stream. Unit: px.
-     * @param Height Maximum height of a video stream. Unit: px.
+     * Set Maximum height of the video stream. Measurement unit: px.
+     * @param Height Maximum height of the video stream. Measurement unit: px.
      */
     public void setHeight(Long Height) {
         this.Height = Height;
@@ -197,16 +197,16 @@ public class MediaMetaData extends AbstractModel {
     }
 
     /**
-     * Get Selection angle during video shooting. Unit: degree. 
-     * @return Rotate Selection angle during video shooting. Unit: degree.
+     * Get Selection angle during video shooting. Measurement unit: degree. 
+     * @return Rotate Selection angle during video shooting. Measurement unit: degree.
      */
     public Long getRotate() {
         return this.Rotate;
     }
 
     /**
-     * Set Selection angle during video shooting. Unit: degree.
-     * @param Rotate Selection angle during video shooting. Unit: degree.
+     * Set Selection angle during video shooting. Measurement unit: degree.
+     * @param Rotate Selection angle during video shooting. Measurement unit: degree.
      */
     public void setRotate(Long Rotate) {
         this.Rotate = Rotate;

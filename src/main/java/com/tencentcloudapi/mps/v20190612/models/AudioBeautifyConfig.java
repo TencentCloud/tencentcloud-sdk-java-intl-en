@@ -31,7 +31,7 @@ public class AudioBeautifyConfig extends AbstractModel {
     private String Switch;
 
     /**
-    * <p>Type. Multiple selections allowed. Available values:</p><li>declick: noise removal</li><li>deesser: de-ess</li>Default value: declick.
+    * <p>Type, multiple selections allowed. Available values:</p><li>declick: noise removal</li><li>deesser: de-ess</li>Default value: declick.
     */
     @SerializedName("Types")
     @Expose
@@ -54,16 +54,16 @@ public class AudioBeautifyConfig extends AbstractModel {
     }
 
     /**
-     * Get <p>Type. Multiple selections allowed. Available values:</p><li>declick: noise removal</li><li>deesser: de-ess</li>Default value: declick. 
-     * @return Types <p>Type. Multiple selections allowed. Available values:</p><li>declick: noise removal</li><li>deesser: de-ess</li>Default value: declick.
+     * Get <p>Type, multiple selections allowed. Available values:</p><li>declick: noise removal</li><li>deesser: de-ess</li>Default value: declick. 
+     * @return Types <p>Type, multiple selections allowed. Available values:</p><li>declick: noise removal</li><li>deesser: de-ess</li>Default value: declick.
      */
     public String [] getTypes() {
         return this.Types;
     }
 
     /**
-     * Set <p>Type. Multiple selections allowed. Available values:</p><li>declick: noise removal</li><li>deesser: de-ess</li>Default value: declick.
-     * @param Types <p>Type. Multiple selections allowed. Available values:</p><li>declick: noise removal</li><li>deesser: de-ess</li>Default value: declick.
+     * Set <p>Type, multiple selections allowed. Available values:</p><li>declick: noise removal</li><li>deesser: de-ess</li>Default value: declick.
+     * @param Types <p>Type, multiple selections allowed. Available values:</p><li>declick: noise removal</li><li>deesser: de-ess</li>Default value: declick.
      */
     public void setTypes(String [] Types) {
         this.Types = Types;

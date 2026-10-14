@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class ModifyStreamLinkOutputInfoRequest extends AbstractModel {
 
     /**
-    * The flow ID.
+    * 01937702ecc509dc0f3269ca3420
     */
     @SerializedName("FlowId")
     @Expose
     private String FlowId;
 
     /**
-    * The output configuration to modify.
+    * Output configuration that needs to be modified.
     */
     @SerializedName("Output")
     @Expose
     private ModifyOutputInfo Output;
 
     /**
-     * Get The flow ID. 
-     * @return FlowId The flow ID.
+     * Get 01937702ecc509dc0f3269ca3420 
+     * @return FlowId 01937702ecc509dc0f3269ca3420
      */
     public String getFlowId() {
         return this.FlowId;
     }
 
     /**
-     * Set The flow ID.
-     * @param FlowId The flow ID.
+     * Set 01937702ecc509dc0f3269ca3420
+     * @param FlowId 01937702ecc509dc0f3269ca3420
      */
     public void setFlowId(String FlowId) {
         this.FlowId = FlowId;
     }
 
     /**
-     * Get The output configuration to modify. 
-     * @return Output The output configuration to modify.
+     * Get Output configuration that needs to be modified. 
+     * @return Output Output configuration that needs to be modified.
      */
     public ModifyOutputInfo getOutput() {
         return this.Output;
     }
 
     /**
-     * Set The output configuration to modify.
-     * @param Output The output configuration to modify.
+     * Set Output configuration that needs to be modified.
+     * @param Output Output configuration that needs to be modified.
      */
     public void setOutput(ModifyOutputInfo Output) {
         this.Output = Output;

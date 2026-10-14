@@ -24,46 +24,51 @@ import java.util.HashMap;
 public class DescribeRTMPPullSourceAddress extends AbstractModel {
 
     /**
-    * 
+    * TcUrl of the RTMP origin server.
     */
     @SerializedName("TcUrl")
     @Expose
     private String TcUrl;
 
     /**
-    * 
+    * StreamKey of the RTMP origin server.
+RTMP origin server URL splicing rule: $TcUrl/$StreamKey.
     */
     @SerializedName("StreamKey")
     @Expose
     private String StreamKey;
 
     /**
-     * Get  
-     * @return TcUrl 
+     * Get TcUrl of the RTMP origin server. 
+     * @return TcUrl TcUrl of the RTMP origin server.
      */
     public String getTcUrl() {
         return this.TcUrl;
     }
 
     /**
-     * Set 
-     * @param TcUrl 
+     * Set TcUrl of the RTMP origin server.
+     * @param TcUrl TcUrl of the RTMP origin server.
      */
     public void setTcUrl(String TcUrl) {
         this.TcUrl = TcUrl;
     }
 
     /**
-     * Get  
-     * @return StreamKey 
+     * Get StreamKey of the RTMP origin server.
+RTMP origin server URL splicing rule: $TcUrl/$StreamKey. 
+     * @return StreamKey StreamKey of the RTMP origin server.
+RTMP origin server URL splicing rule: $TcUrl/$StreamKey.
      */
     public String getStreamKey() {
         return this.StreamKey;
     }
 
     /**
-     * Set 
-     * @param StreamKey 
+     * Set StreamKey of the RTMP origin server.
+RTMP origin server URL splicing rule: $TcUrl/$StreamKey.
+     * @param StreamKey StreamKey of the RTMP origin server.
+RTMP origin server URL splicing rule: $TcUrl/$StreamKey.
      */
     public void setStreamKey(String StreamKey) {
         this.StreamKey = StreamKey;

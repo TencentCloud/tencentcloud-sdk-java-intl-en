@@ -24,480 +24,457 @@ import java.util.HashMap;
 public class DescribeOutput extends AbstractModel {
 
     /**
-    * Output ID.
+    * <p>Output Id.</p>
     */
     @SerializedName("OutputId")
     @Expose
     private String OutputId;
 
     /**
-    * Output name.
+    * <p>Output name.</p>
     */
     @SerializedName("OutputName")
     @Expose
     private String OutputName;
 
     /**
-    * Output type.
+    * <p>Output type.</p>
     */
     @SerializedName("OutputType")
     @Expose
     private String OutputType;
 
     /**
-    * Output description.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * <p>Output description.</p>
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * Output protocol.
+    * <p>Output protocol.</p>
     */
     @SerializedName("Protocol")
     @Expose
     private String Protocol;
 
     /**
-    * Output destination address information list.
+    * <p>List of output egress address information.</p>
     */
     @SerializedName("OutputAddressList")
     @Expose
     private OutputAddress [] OutputAddressList;
 
     /**
-    * Output region.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * <p>Output region.</p>
     */
     @SerializedName("OutputRegion")
     @Expose
     private String OutputRegion;
 
     /**
-    * SRT configuration information of output.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * <p>SRT configuration information of the output.</p>
     */
     @SerializedName("SRTSettings")
     @Expose
     private DescribeOutputSRTSettings SRTSettings;
 
     /**
-    * RTP configuration information of output.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * <p>Output RTP configuration message.</p>
     */
     @SerializedName("RTPSettings")
     @Expose
     private DescribeOutputRTPSettings RTPSettings;
 
     /**
-    * RTMP configuration information of output.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * <p>Output RTMP configuration message.</p>
     */
     @SerializedName("RTMPSettings")
     @Expose
     private DescribeOutputRTMPSettings RTMPSettings;
 
     /**
-    * RTMP pull configuration of the output
-Note: This field may return `null`, indicating that no valid value was found.
+    * <p>Output RTMP pull configuration message.</p>
     */
     @SerializedName("RTMPPullSettings")
     @Expose
     private DescribeOutputRTMPPullSettings RTMPPullSettings;
 
     /**
-    * CIDR Whitelist List. Effective when Protocol is RTMP_PULL. Empty means no restriction on client IP.
+    * <p>CIDR allowlist.<br>Valid when Protocol is RTMP_PULL. If empty, it represents no limit on client IP.</p>
     */
     @SerializedName("AllowIpList")
     @Expose
     private String [] AllowIpList;
 
     /**
-    * The output RTSP streaming configuration information.
+    * <p>Output RTSP pull stream configuration message.</p>
     */
     @SerializedName("RTSPPullSettings")
     @Expose
     private DescribeOutputRTSPPullSettings RTSPPullSettings;
 
     /**
-    * Output the HLS streaming configuration information.
+    * <p>Output HLS pull configuration message.</p>
     */
     @SerializedName("HLSPullSettings")
     @Expose
     private DescribeOutputHLSPullSettings HLSPullSettings;
 
     /**
-    * The maximum number of concurrent streams is 4, with a default of 4.
+    * <p>Maximum number of concurrent stream pulls. Maximum value: 4. Default value: 4.</p>
     */
     @SerializedName("MaxConcurrent")
     @Expose
     private Long MaxConcurrent;
 
     /**
-    * The bound security group IDs.
+    * <p>ID of the bound security group.</p>
     */
     @SerializedName("SecurityGroupIds")
     @Expose
     private String [] SecurityGroupIds;
 
     /**
-    * The available zone currently only supports a maximum of one output.
+    * <p>Availability zone. output currently supports a maximum of one.</p>
     */
     @SerializedName("Zones")
     @Expose
     private String [] Zones;
 
     /**
-    * Output RIST configuration information.
+    * <p>Output RIST configuration message.</p>
     */
     @SerializedName("RISTSettings")
     @Expose
     private DescribeOutputRISTSettings RISTSettings;
 
     /**
-    * For streams containing multiple audio/video tracks, you can specify the tracks that need to be used
+    * <p>For streams with multiple audio/video tracks, you can specify the track to be used</p>
     */
     @SerializedName("PidSelector")
     @Expose
     private PidSelector PidSelector;
 
     /**
-    * Output module types, including Pinpoint (single point output, supporting up to four concurrent outputs); MultiMesh (Multi output, supports concurrent outputs greater than four, currently up to 200). The default type is Pinpoint output. For a single Flow, a region can only have a maximum of one MultiMesh output.
+    * <p>Output module type, including Pinpoint (single-point output, supports up to four concurrent outputs); MultiMesh (multiple streams output, supports more than four concurrent outputs, currently up to 200). The default type is Pinpoint output. For one Flow, only one MultiMesh output is allowed in one zone.</p>
     */
     @SerializedName("OutputKind")
     @Expose
     private String OutputKind;
 
     /**
-    * Output module configuration, relevant URLs, including provided streaming addresses or configured output to third-party forwarding addresses
+    * <p>Output module configuration, related URLs, including the provided pull stream address or the configured relay address for output to a third party</p>
     */
     @SerializedName("StreamUrls")
     @Expose
     private StreamUrlDetail [] StreamUrls;
 
     /**
-    * For streams containing multiple audio/video tracks, you can specify the tracks that need to be used
+    * <p>For streams with multiple audio/video tracks, you can specify the track to be used</p>
     */
     @SerializedName("StreamSelector")
     @Expose
     private StreamSelector StreamSelector;
 
     /**
-     * Get Output ID. 
-     * @return OutputId Output ID.
+    * <p>Output status.</p><p>Enumeration values:</p><ul><li>DISABLED</li><li>ENABLED</li></ul>
+    */
+    @SerializedName("State")
+    @Expose
+    private String State;
+
+    /**
+     * Get <p>Output Id.</p> 
+     * @return OutputId <p>Output Id.</p>
      */
     public String getOutputId() {
         return this.OutputId;
     }
 
     /**
-     * Set Output ID.
-     * @param OutputId Output ID.
+     * Set <p>Output Id.</p>
+     * @param OutputId <p>Output Id.</p>
      */
     public void setOutputId(String OutputId) {
         this.OutputId = OutputId;
     }
 
     /**
-     * Get Output name. 
-     * @return OutputName Output name.
+     * Get <p>Output name.</p> 
+     * @return OutputName <p>Output name.</p>
      */
     public String getOutputName() {
         return this.OutputName;
     }
 
     /**
-     * Set Output name.
-     * @param OutputName Output name.
+     * Set <p>Output name.</p>
+     * @param OutputName <p>Output name.</p>
      */
     public void setOutputName(String OutputName) {
         this.OutputName = OutputName;
     }
 
     /**
-     * Get Output type. 
-     * @return OutputType Output type.
+     * Get <p>Output type.</p> 
+     * @return OutputType <p>Output type.</p>
      */
     public String getOutputType() {
         return this.OutputType;
     }
 
     /**
-     * Set Output type.
-     * @param OutputType Output type.
+     * Set <p>Output type.</p>
+     * @param OutputType <p>Output type.</p>
      */
     public void setOutputType(String OutputType) {
         this.OutputType = OutputType;
     }
 
     /**
-     * Get Output description.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Description Output description.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get <p>Output description.</p> 
+     * @return Description <p>Output description.</p>
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set Output description.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Description Output description.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set <p>Output description.</p>
+     * @param Description <p>Output description.</p>
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get Output protocol. 
-     * @return Protocol Output protocol.
+     * Get <p>Output protocol.</p> 
+     * @return Protocol <p>Output protocol.</p>
      */
     public String getProtocol() {
         return this.Protocol;
     }
 
     /**
-     * Set Output protocol.
-     * @param Protocol Output protocol.
+     * Set <p>Output protocol.</p>
+     * @param Protocol <p>Output protocol.</p>
      */
     public void setProtocol(String Protocol) {
         this.Protocol = Protocol;
     }
 
     /**
-     * Get Output destination address information list. 
-     * @return OutputAddressList Output destination address information list.
+     * Get <p>List of output egress address information.</p> 
+     * @return OutputAddressList <p>List of output egress address information.</p>
      */
     public OutputAddress [] getOutputAddressList() {
         return this.OutputAddressList;
     }
 
     /**
-     * Set Output destination address information list.
-     * @param OutputAddressList Output destination address information list.
+     * Set <p>List of output egress address information.</p>
+     * @param OutputAddressList <p>List of output egress address information.</p>
      */
     public void setOutputAddressList(OutputAddress [] OutputAddressList) {
         this.OutputAddressList = OutputAddressList;
     }
 
     /**
-     * Get Output region.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return OutputRegion Output region.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get <p>Output region.</p> 
+     * @return OutputRegion <p>Output region.</p>
      */
     public String getOutputRegion() {
         return this.OutputRegion;
     }
 
     /**
-     * Set Output region.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param OutputRegion Output region.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set <p>Output region.</p>
+     * @param OutputRegion <p>Output region.</p>
      */
     public void setOutputRegion(String OutputRegion) {
         this.OutputRegion = OutputRegion;
     }
 
     /**
-     * Get SRT configuration information of output.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return SRTSettings SRT configuration information of output.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get <p>SRT configuration information of the output.</p> 
+     * @return SRTSettings <p>SRT configuration information of the output.</p>
      */
     public DescribeOutputSRTSettings getSRTSettings() {
         return this.SRTSettings;
     }
 
     /**
-     * Set SRT configuration information of output.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param SRTSettings SRT configuration information of output.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set <p>SRT configuration information of the output.</p>
+     * @param SRTSettings <p>SRT configuration information of the output.</p>
      */
     public void setSRTSettings(DescribeOutputSRTSettings SRTSettings) {
         this.SRTSettings = SRTSettings;
     }
 
     /**
-     * Get RTP configuration information of output.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return RTPSettings RTP configuration information of output.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get <p>Output RTP configuration message.</p> 
+     * @return RTPSettings <p>Output RTP configuration message.</p>
      */
     public DescribeOutputRTPSettings getRTPSettings() {
         return this.RTPSettings;
     }
 
     /**
-     * Set RTP configuration information of output.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param RTPSettings RTP configuration information of output.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set <p>Output RTP configuration message.</p>
+     * @param RTPSettings <p>Output RTP configuration message.</p>
      */
     public void setRTPSettings(DescribeOutputRTPSettings RTPSettings) {
         this.RTPSettings = RTPSettings;
     }
 
     /**
-     * Get RTMP configuration information of output.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return RTMPSettings RTMP configuration information of output.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get <p>Output RTMP configuration message.</p> 
+     * @return RTMPSettings <p>Output RTMP configuration message.</p>
      */
     public DescribeOutputRTMPSettings getRTMPSettings() {
         return this.RTMPSettings;
     }
 
     /**
-     * Set RTMP configuration information of output.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param RTMPSettings RTMP configuration information of output.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set <p>Output RTMP configuration message.</p>
+     * @param RTMPSettings <p>Output RTMP configuration message.</p>
      */
     public void setRTMPSettings(DescribeOutputRTMPSettings RTMPSettings) {
         this.RTMPSettings = RTMPSettings;
     }
 
     /**
-     * Get RTMP pull configuration of the output
-Note: This field may return `null`, indicating that no valid value was found. 
-     * @return RTMPPullSettings RTMP pull configuration of the output
-Note: This field may return `null`, indicating that no valid value was found.
+     * Get <p>Output RTMP pull configuration message.</p> 
+     * @return RTMPPullSettings <p>Output RTMP pull configuration message.</p>
      */
     public DescribeOutputRTMPPullSettings getRTMPPullSettings() {
         return this.RTMPPullSettings;
     }
 
     /**
-     * Set RTMP pull configuration of the output
-Note: This field may return `null`, indicating that no valid value was found.
-     * @param RTMPPullSettings RTMP pull configuration of the output
-Note: This field may return `null`, indicating that no valid value was found.
+     * Set <p>Output RTMP pull configuration message.</p>
+     * @param RTMPPullSettings <p>Output RTMP pull configuration message.</p>
      */
     public void setRTMPPullSettings(DescribeOutputRTMPPullSettings RTMPPullSettings) {
         this.RTMPPullSettings = RTMPPullSettings;
     }
 
     /**
-     * Get CIDR Whitelist List. Effective when Protocol is RTMP_PULL. Empty means no restriction on client IP. 
-     * @return AllowIpList CIDR Whitelist List. Effective when Protocol is RTMP_PULL. Empty means no restriction on client IP.
+     * Get <p>CIDR allowlist.<br>Valid when Protocol is RTMP_PULL. If empty, it represents no limit on client IP.</p> 
+     * @return AllowIpList <p>CIDR allowlist.<br>Valid when Protocol is RTMP_PULL. If empty, it represents no limit on client IP.</p>
      */
     public String [] getAllowIpList() {
         return this.AllowIpList;
     }
 
     /**
-     * Set CIDR Whitelist List. Effective when Protocol is RTMP_PULL. Empty means no restriction on client IP.
-     * @param AllowIpList CIDR Whitelist List. Effective when Protocol is RTMP_PULL. Empty means no restriction on client IP.
+     * Set <p>CIDR allowlist.<br>Valid when Protocol is RTMP_PULL. If empty, it represents no limit on client IP.</p>
+     * @param AllowIpList <p>CIDR allowlist.<br>Valid when Protocol is RTMP_PULL. If empty, it represents no limit on client IP.</p>
      */
     public void setAllowIpList(String [] AllowIpList) {
         this.AllowIpList = AllowIpList;
     }
 
     /**
-     * Get The output RTSP streaming configuration information. 
-     * @return RTSPPullSettings The output RTSP streaming configuration information.
+     * Get <p>Output RTSP pull stream configuration message.</p> 
+     * @return RTSPPullSettings <p>Output RTSP pull stream configuration message.</p>
      */
     public DescribeOutputRTSPPullSettings getRTSPPullSettings() {
         return this.RTSPPullSettings;
     }
 
     /**
-     * Set The output RTSP streaming configuration information.
-     * @param RTSPPullSettings The output RTSP streaming configuration information.
+     * Set <p>Output RTSP pull stream configuration message.</p>
+     * @param RTSPPullSettings <p>Output RTSP pull stream configuration message.</p>
      */
     public void setRTSPPullSettings(DescribeOutputRTSPPullSettings RTSPPullSettings) {
         this.RTSPPullSettings = RTSPPullSettings;
     }
 
     /**
-     * Get Output the HLS streaming configuration information. 
-     * @return HLSPullSettings Output the HLS streaming configuration information.
+     * Get <p>Output HLS pull configuration message.</p> 
+     * @return HLSPullSettings <p>Output HLS pull configuration message.</p>
      */
     public DescribeOutputHLSPullSettings getHLSPullSettings() {
         return this.HLSPullSettings;
     }
 
     /**
-     * Set Output the HLS streaming configuration information.
-     * @param HLSPullSettings Output the HLS streaming configuration information.
+     * Set <p>Output HLS pull configuration message.</p>
+     * @param HLSPullSettings <p>Output HLS pull configuration message.</p>
      */
     public void setHLSPullSettings(DescribeOutputHLSPullSettings HLSPullSettings) {
         this.HLSPullSettings = HLSPullSettings;
     }
 
     /**
-     * Get The maximum number of concurrent streams is 4, with a default of 4. 
-     * @return MaxConcurrent The maximum number of concurrent streams is 4, with a default of 4.
+     * Get <p>Maximum number of concurrent stream pulls. Maximum value: 4. Default value: 4.</p> 
+     * @return MaxConcurrent <p>Maximum number of concurrent stream pulls. Maximum value: 4. Default value: 4.</p>
      */
     public Long getMaxConcurrent() {
         return this.MaxConcurrent;
     }
 
     /**
-     * Set The maximum number of concurrent streams is 4, with a default of 4.
-     * @param MaxConcurrent The maximum number of concurrent streams is 4, with a default of 4.
+     * Set <p>Maximum number of concurrent stream pulls. Maximum value: 4. Default value: 4.</p>
+     * @param MaxConcurrent <p>Maximum number of concurrent stream pulls. Maximum value: 4. Default value: 4.</p>
      */
     public void setMaxConcurrent(Long MaxConcurrent) {
         this.MaxConcurrent = MaxConcurrent;
     }
 
     /**
-     * Get The bound security group IDs. 
-     * @return SecurityGroupIds The bound security group IDs.
+     * Get <p>ID of the bound security group.</p> 
+     * @return SecurityGroupIds <p>ID of the bound security group.</p>
      */
     public String [] getSecurityGroupIds() {
         return this.SecurityGroupIds;
     }
 
     /**
-     * Set The bound security group IDs.
-     * @param SecurityGroupIds The bound security group IDs.
+     * Set <p>ID of the bound security group.</p>
+     * @param SecurityGroupIds <p>ID of the bound security group.</p>
      */
     public void setSecurityGroupIds(String [] SecurityGroupIds) {
         this.SecurityGroupIds = SecurityGroupIds;
     }
 
     /**
-     * Get The available zone currently only supports a maximum of one output. 
-     * @return Zones The available zone currently only supports a maximum of one output.
+     * Get <p>Availability zone. output currently supports a maximum of one.</p> 
+     * @return Zones <p>Availability zone. output currently supports a maximum of one.</p>
      */
     public String [] getZones() {
         return this.Zones;
     }
 
     /**
-     * Set The available zone currently only supports a maximum of one output.
-     * @param Zones The available zone currently only supports a maximum of one output.
+     * Set <p>Availability zone. output currently supports a maximum of one.</p>
+     * @param Zones <p>Availability zone. output currently supports a maximum of one.</p>
      */
     public void setZones(String [] Zones) {
         this.Zones = Zones;
     }
 
     /**
-     * Get Output RIST configuration information. 
-     * @return RISTSettings Output RIST configuration information.
+     * Get <p>Output RIST configuration message.</p> 
+     * @return RISTSettings <p>Output RIST configuration message.</p>
      */
     public DescribeOutputRISTSettings getRISTSettings() {
         return this.RISTSettings;
     }
 
     /**
-     * Set Output RIST configuration information.
-     * @param RISTSettings Output RIST configuration information.
+     * Set <p>Output RIST configuration message.</p>
+     * @param RISTSettings <p>Output RIST configuration message.</p>
      */
     public void setRISTSettings(DescribeOutputRISTSettings RISTSettings) {
         this.RISTSettings = RISTSettings;
     }
 
     /**
-     * Get For streams containing multiple audio/video tracks, you can specify the tracks that need to be used 
-     * @return PidSelector For streams containing multiple audio/video tracks, you can specify the tracks that need to be used
+     * Get <p>For streams with multiple audio/video tracks, you can specify the track to be used</p> 
+     * @return PidSelector <p>For streams with multiple audio/video tracks, you can specify the track to be used</p>
      * @deprecated
      */
     @Deprecated
@@ -506,8 +483,8 @@ Note: This field may return `null`, indicating that no valid value was found.
     }
 
     /**
-     * Set For streams containing multiple audio/video tracks, you can specify the tracks that need to be used
-     * @param PidSelector For streams containing multiple audio/video tracks, you can specify the tracks that need to be used
+     * Set <p>For streams with multiple audio/video tracks, you can specify the track to be used</p>
+     * @param PidSelector <p>For streams with multiple audio/video tracks, you can specify the track to be used</p>
      * @deprecated
      */
     @Deprecated
@@ -516,51 +493,67 @@ Note: This field may return `null`, indicating that no valid value was found.
     }
 
     /**
-     * Get Output module types, including Pinpoint (single point output, supporting up to four concurrent outputs); MultiMesh (Multi output, supports concurrent outputs greater than four, currently up to 200). The default type is Pinpoint output. For a single Flow, a region can only have a maximum of one MultiMesh output. 
-     * @return OutputKind Output module types, including Pinpoint (single point output, supporting up to four concurrent outputs); MultiMesh (Multi output, supports concurrent outputs greater than four, currently up to 200). The default type is Pinpoint output. For a single Flow, a region can only have a maximum of one MultiMesh output.
+     * Get <p>Output module type, including Pinpoint (single-point output, supports up to four concurrent outputs); MultiMesh (multiple streams output, supports more than four concurrent outputs, currently up to 200). The default type is Pinpoint output. For one Flow, only one MultiMesh output is allowed in one zone.</p> 
+     * @return OutputKind <p>Output module type, including Pinpoint (single-point output, supports up to four concurrent outputs); MultiMesh (multiple streams output, supports more than four concurrent outputs, currently up to 200). The default type is Pinpoint output. For one Flow, only one MultiMesh output is allowed in one zone.</p>
      */
     public String getOutputKind() {
         return this.OutputKind;
     }
 
     /**
-     * Set Output module types, including Pinpoint (single point output, supporting up to four concurrent outputs); MultiMesh (Multi output, supports concurrent outputs greater than four, currently up to 200). The default type is Pinpoint output. For a single Flow, a region can only have a maximum of one MultiMesh output.
-     * @param OutputKind Output module types, including Pinpoint (single point output, supporting up to four concurrent outputs); MultiMesh (Multi output, supports concurrent outputs greater than four, currently up to 200). The default type is Pinpoint output. For a single Flow, a region can only have a maximum of one MultiMesh output.
+     * Set <p>Output module type, including Pinpoint (single-point output, supports up to four concurrent outputs); MultiMesh (multiple streams output, supports more than four concurrent outputs, currently up to 200). The default type is Pinpoint output. For one Flow, only one MultiMesh output is allowed in one zone.</p>
+     * @param OutputKind <p>Output module type, including Pinpoint (single-point output, supports up to four concurrent outputs); MultiMesh (multiple streams output, supports more than four concurrent outputs, currently up to 200). The default type is Pinpoint output. For one Flow, only one MultiMesh output is allowed in one zone.</p>
      */
     public void setOutputKind(String OutputKind) {
         this.OutputKind = OutputKind;
     }
 
     /**
-     * Get Output module configuration, relevant URLs, including provided streaming addresses or configured output to third-party forwarding addresses 
-     * @return StreamUrls Output module configuration, relevant URLs, including provided streaming addresses or configured output to third-party forwarding addresses
+     * Get <p>Output module configuration, related URLs, including the provided pull stream address or the configured relay address for output to a third party</p> 
+     * @return StreamUrls <p>Output module configuration, related URLs, including the provided pull stream address or the configured relay address for output to a third party</p>
      */
     public StreamUrlDetail [] getStreamUrls() {
         return this.StreamUrls;
     }
 
     /**
-     * Set Output module configuration, relevant URLs, including provided streaming addresses or configured output to third-party forwarding addresses
-     * @param StreamUrls Output module configuration, relevant URLs, including provided streaming addresses or configured output to third-party forwarding addresses
+     * Set <p>Output module configuration, related URLs, including the provided pull stream address or the configured relay address for output to a third party</p>
+     * @param StreamUrls <p>Output module configuration, related URLs, including the provided pull stream address or the configured relay address for output to a third party</p>
      */
     public void setStreamUrls(StreamUrlDetail [] StreamUrls) {
         this.StreamUrls = StreamUrls;
     }
 
     /**
-     * Get For streams containing multiple audio/video tracks, you can specify the tracks that need to be used 
-     * @return StreamSelector For streams containing multiple audio/video tracks, you can specify the tracks that need to be used
+     * Get <p>For streams with multiple audio/video tracks, you can specify the track to be used</p> 
+     * @return StreamSelector <p>For streams with multiple audio/video tracks, you can specify the track to be used</p>
      */
     public StreamSelector getStreamSelector() {
         return this.StreamSelector;
     }
 
     /**
-     * Set For streams containing multiple audio/video tracks, you can specify the tracks that need to be used
-     * @param StreamSelector For streams containing multiple audio/video tracks, you can specify the tracks that need to be used
+     * Set <p>For streams with multiple audio/video tracks, you can specify the track to be used</p>
+     * @param StreamSelector <p>For streams with multiple audio/video tracks, you can specify the track to be used</p>
      */
     public void setStreamSelector(StreamSelector StreamSelector) {
         this.StreamSelector = StreamSelector;
+    }
+
+    /**
+     * Get <p>Output status.</p><p>Enumeration values:</p><ul><li>DISABLED</li><li>ENABLED</li></ul> 
+     * @return State <p>Output status.</p><p>Enumeration values:</p><ul><li>DISABLED</li><li>ENABLED</li></ul>
+     */
+    public String getState() {
+        return this.State;
+    }
+
+    /**
+     * Set <p>Output status.</p><p>Enumeration values:</p><ul><li>DISABLED</li><li>ENABLED</li></ul>
+     * @param State <p>Output status.</p><p>Enumeration values:</p><ul><li>DISABLED</li><li>ENABLED</li></ul>
+     */
+    public void setState(String State) {
+        this.State = State;
     }
 
     public DescribeOutput() {
@@ -652,6 +645,9 @@ Note: This field may return `null`, indicating that no valid value was found.
         if (source.StreamSelector != null) {
             this.StreamSelector = new StreamSelector(source.StreamSelector);
         }
+        if (source.State != null) {
+            this.State = new String(source.State);
+        }
     }
 
 
@@ -681,6 +677,7 @@ Note: This field may return `null`, indicating that no valid value was found.
         this.setParamSimple(map, prefix + "OutputKind", this.OutputKind);
         this.setParamArrayObj(map, prefix + "StreamUrls.", this.StreamUrls);
         this.setParamObj(map, prefix + "StreamSelector.", this.StreamSelector);
+        this.setParamSimple(map, prefix + "State", this.State);
 
     }
 }

@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class DescribeStreamLinkFlowRealtimeStatusRequest extends AbstractModel {
 
     /**
-    * The flow ID.
+    * <p>Stream ID.</p>
     */
     @SerializedName("FlowId")
     @Expose
     private String FlowId;
 
     /**
-    * The IDs of the inputs to query. If this parameter and `OutputIds` are both empty, all inputs and outputs are queried.
+    * <p>Input an id array. If both the input and output arrays are empty, it signifies a full query.</p>
     */
     @SerializedName("InputIds")
     @Expose
     private String [] InputIds;
 
     /**
-    * The IDs of the outputs to query. If this parameter and `OutputIds` are both empty, all inputs and outputs are queried.
+    * <p>Output id array. If both input and output arrays are empty, it signifies a full query.</p>
     */
     @SerializedName("OutputIds")
     @Expose
     private String [] OutputIds;
 
     /**
-     * Get The flow ID. 
-     * @return FlowId The flow ID.
+     * Get <p>Stream ID.</p> 
+     * @return FlowId <p>Stream ID.</p>
      */
     public String getFlowId() {
         return this.FlowId;
     }
 
     /**
-     * Set The flow ID.
-     * @param FlowId The flow ID.
+     * Set <p>Stream ID.</p>
+     * @param FlowId <p>Stream ID.</p>
      */
     public void setFlowId(String FlowId) {
         this.FlowId = FlowId;
     }
 
     /**
-     * Get The IDs of the inputs to query. If this parameter and `OutputIds` are both empty, all inputs and outputs are queried. 
-     * @return InputIds The IDs of the inputs to query. If this parameter and `OutputIds` are both empty, all inputs and outputs are queried.
+     * Get <p>Input an id array. If both the input and output arrays are empty, it signifies a full query.</p> 
+     * @return InputIds <p>Input an id array. If both the input and output arrays are empty, it signifies a full query.</p>
      */
     public String [] getInputIds() {
         return this.InputIds;
     }
 
     /**
-     * Set The IDs of the inputs to query. If this parameter and `OutputIds` are both empty, all inputs and outputs are queried.
-     * @param InputIds The IDs of the inputs to query. If this parameter and `OutputIds` are both empty, all inputs and outputs are queried.
+     * Set <p>Input an id array. If both the input and output arrays are empty, it signifies a full query.</p>
+     * @param InputIds <p>Input an id array. If both the input and output arrays are empty, it signifies a full query.</p>
      */
     public void setInputIds(String [] InputIds) {
         this.InputIds = InputIds;
     }
 
     /**
-     * Get The IDs of the outputs to query. If this parameter and `OutputIds` are both empty, all inputs and outputs are queried. 
-     * @return OutputIds The IDs of the outputs to query. If this parameter and `OutputIds` are both empty, all inputs and outputs are queried.
+     * Get <p>Output id array. If both input and output arrays are empty, it signifies a full query.</p> 
+     * @return OutputIds <p>Output id array. If both input and output arrays are empty, it signifies a full query.</p>
      */
     public String [] getOutputIds() {
         return this.OutputIds;
     }
 
     /**
-     * Set The IDs of the outputs to query. If this parameter and `OutputIds` are both empty, all inputs and outputs are queried.
-     * @param OutputIds The IDs of the outputs to query. If this parameter and `OutputIds` are both empty, all inputs and outputs are queried.
+     * Set <p>Output id array. If both input and output arrays are empty, it signifies a full query.</p>
+     * @param OutputIds <p>Output id array. If both input and output arrays are empty, it signifies a full query.</p>
      */
     public void setOutputIds(String [] OutputIds) {
         this.OutputIds = OutputIds;

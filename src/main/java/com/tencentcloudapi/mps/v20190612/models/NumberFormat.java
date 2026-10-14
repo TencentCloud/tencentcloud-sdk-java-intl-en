@@ -31,7 +31,7 @@ public class NumberFormat extends AbstractModel {
     private Long InitialValue;
 
     /**
-    * The growth step length of the `{number}` variable, with a default value of 1.
+    * The increase step length of the `{number}` variable. Default value: 1.
     */
     @SerializedName("Increment")
     @Expose
@@ -68,16 +68,16 @@ public class NumberFormat extends AbstractModel {
     }
 
     /**
-     * Get The growth step length of the `{number}` variable, with a default value of 1. 
-     * @return Increment The growth step length of the `{number}` variable, with a default value of 1.
+     * Get The increase step length of the `{number}` variable. Default value: 1. 
+     * @return Increment The increase step length of the `{number}` variable. Default value: 1.
      */
     public Long getIncrement() {
         return this.Increment;
     }
 
     /**
-     * Set The growth step length of the `{number}` variable, with a default value of 1.
-     * @param Increment The growth step length of the `{number}` variable, with a default value of 1.
+     * Set The increase step length of the `{number}` variable. Default value: 1.
+     * @param Increment The increase step length of the `{number}` variable. Default value: 1.
      */
     public void setIncrement(Long Increment) {
         this.Increment = Increment;

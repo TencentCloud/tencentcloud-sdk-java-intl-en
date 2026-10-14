@@ -24,36 +24,36 @@ import java.util.HashMap;
 public class LiveStreamAiQualityControlResultInfo extends AbstractModel {
 
     /**
-    * 
+    * Content quality inspection result list.
     */
     @SerializedName("QualityControlResults")
     @Expose
     private QualityControlResult [] QualityControlResults;
 
     /**
-    * 
+    * Format diagnostic result list.
     */
     @SerializedName("DiagnoseResults")
     @Expose
     private DiagnoseResult [] DiagnoseResults;
 
     /**
-    * 
+    * Content quality inspection result list.
     */
     @SerializedName("QualityControlResultSet")
     @Expose
     private QualityControlResult [] QualityControlResultSet;
 
     /**
-    * 
+    * Format diagnostic result list.
     */
     @SerializedName("DiagnoseResultSet")
     @Expose
     private DiagnoseResult [] DiagnoseResultSet;
 
     /**
-     * Get  
-     * @return QualityControlResults 
+     * Get Content quality inspection result list. 
+     * @return QualityControlResults Content quality inspection result list.
      * @deprecated
      */
     @Deprecated
@@ -62,8 +62,8 @@ public class LiveStreamAiQualityControlResultInfo extends AbstractModel {
     }
 
     /**
-     * Set 
-     * @param QualityControlResults 
+     * Set Content quality inspection result list.
+     * @param QualityControlResults Content quality inspection result list.
      * @deprecated
      */
     @Deprecated
@@ -72,8 +72,8 @@ public class LiveStreamAiQualityControlResultInfo extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return DiagnoseResults 
+     * Get Format diagnostic result list. 
+     * @return DiagnoseResults Format diagnostic result list.
      * @deprecated
      */
     @Deprecated
@@ -82,8 +82,8 @@ public class LiveStreamAiQualityControlResultInfo extends AbstractModel {
     }
 
     /**
-     * Set 
-     * @param DiagnoseResults 
+     * Set Format diagnostic result list.
+     * @param DiagnoseResults Format diagnostic result list.
      * @deprecated
      */
     @Deprecated
@@ -92,32 +92,32 @@ public class LiveStreamAiQualityControlResultInfo extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return QualityControlResultSet 
+     * Get Content quality inspection result list. 
+     * @return QualityControlResultSet Content quality inspection result list.
      */
     public QualityControlResult [] getQualityControlResultSet() {
         return this.QualityControlResultSet;
     }
 
     /**
-     * Set 
-     * @param QualityControlResultSet 
+     * Set Content quality inspection result list.
+     * @param QualityControlResultSet Content quality inspection result list.
      */
     public void setQualityControlResultSet(QualityControlResult [] QualityControlResultSet) {
         this.QualityControlResultSet = QualityControlResultSet;
     }
 
     /**
-     * Get  
-     * @return DiagnoseResultSet 
+     * Get Format diagnostic result list. 
+     * @return DiagnoseResultSet Format diagnostic result list.
      */
     public DiagnoseResult [] getDiagnoseResultSet() {
         return this.DiagnoseResultSet;
     }
 
     /**
-     * Set 
-     * @param DiagnoseResultSet 
+     * Set Format diagnostic result list.
+     * @param DiagnoseResultSet Format diagnostic result list.
      */
     public void setDiagnoseResultSet(DiagnoseResult [] DiagnoseResultSet) {
         this.DiagnoseResultSet = DiagnoseResultSet;

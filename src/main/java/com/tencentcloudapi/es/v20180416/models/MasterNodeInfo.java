@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class MasterNodeInfo extends AbstractModel {
 
     /**
-    * Whether to enable the dedicated primary node
+    * Whether the dedicated master node is enabled or not
     */
     @SerializedName("EnableDedicatedMaster")
     @Expose
     private Boolean EnableDedicatedMaster;
 
     /**
-    * Dedicated primary node specification <li>ES.S1.SMALL2: 1-core 2 GB</li><li>ES.S1.MEDIUM4: 2-core 4 GB</li><li>ES.S1.MEDIUM8: 2-core 8 GB</li><li>ES.S1.LARGE16: 4-core 16 GB</li><li>ES.S1.2XLARGE32: 8-core 32 GB</li><li>ES.S1.4XLARGE32: 16-core 32 GB</li><li>ES.S1.4XLARGE64: 16-core 64 GB</li>
+    * Dedicated primary node specification<li>ES.S1.SMALL2: 1-core 2G</li><li>ES.S1.MEDIUM4: 2-core 4G</li><li>ES.S1.MEDIUM8: 2-core 8G</li><li>ES.S1.LARGE16: 4-core 16G</li><li>ES.S1.2XLARGE32: 8-core 32G</li><li>ES.S1.4XLARGE32: 16-core 32G</li><li>ES.S1.4XLARGE64: 16-core 64G</li>
     */
     @SerializedName("MasterNodeType")
     @Expose
@@ -45,60 +45,60 @@ public class MasterNodeInfo extends AbstractModel {
     private Long MasterNodeNum;
 
     /**
-    * Number of CPU cores of the dedicated primary node
+    * Number of CPU cores of the dedicated master node
     */
     @SerializedName("MasterNodeCpuNum")
     @Expose
     private Long MasterNodeCpuNum;
 
     /**
-    * Memory size of the dedicated primary node in GB
+    * Dedicated primary node memory size, in GB.
     */
     @SerializedName("MasterNodeMemSize")
     @Expose
     private Long MasterNodeMemSize;
 
     /**
-    * Disk size of the dedicated primary node in GB
+    * Dedicated primary node disk size in GB
     */
     @SerializedName("MasterNodeDiskSize")
     @Expose
     private Long MasterNodeDiskSize;
 
     /**
-    * Disk type of the dedicated primary node
+    * Dedicated primary node disk type
     */
     @SerializedName("MasterNodeDiskType")
     @Expose
     private String MasterNodeDiskType;
 
     /**
-     * Get Whether to enable the dedicated primary node 
-     * @return EnableDedicatedMaster Whether to enable the dedicated primary node
+     * Get Whether the dedicated master node is enabled or not 
+     * @return EnableDedicatedMaster Whether the dedicated master node is enabled or not
      */
     public Boolean getEnableDedicatedMaster() {
         return this.EnableDedicatedMaster;
     }
 
     /**
-     * Set Whether to enable the dedicated primary node
-     * @param EnableDedicatedMaster Whether to enable the dedicated primary node
+     * Set Whether the dedicated master node is enabled or not
+     * @param EnableDedicatedMaster Whether the dedicated master node is enabled or not
      */
     public void setEnableDedicatedMaster(Boolean EnableDedicatedMaster) {
         this.EnableDedicatedMaster = EnableDedicatedMaster;
     }
 
     /**
-     * Get Dedicated primary node specification <li>ES.S1.SMALL2: 1-core 2 GB</li><li>ES.S1.MEDIUM4: 2-core 4 GB</li><li>ES.S1.MEDIUM8: 2-core 8 GB</li><li>ES.S1.LARGE16: 4-core 16 GB</li><li>ES.S1.2XLARGE32: 8-core 32 GB</li><li>ES.S1.4XLARGE32: 16-core 32 GB</li><li>ES.S1.4XLARGE64: 16-core 64 GB</li> 
-     * @return MasterNodeType Dedicated primary node specification <li>ES.S1.SMALL2: 1-core 2 GB</li><li>ES.S1.MEDIUM4: 2-core 4 GB</li><li>ES.S1.MEDIUM8: 2-core 8 GB</li><li>ES.S1.LARGE16: 4-core 16 GB</li><li>ES.S1.2XLARGE32: 8-core 32 GB</li><li>ES.S1.4XLARGE32: 16-core 32 GB</li><li>ES.S1.4XLARGE64: 16-core 64 GB</li>
+     * Get Dedicated primary node specification<li>ES.S1.SMALL2: 1-core 2G</li><li>ES.S1.MEDIUM4: 2-core 4G</li><li>ES.S1.MEDIUM8: 2-core 8G</li><li>ES.S1.LARGE16: 4-core 16G</li><li>ES.S1.2XLARGE32: 8-core 32G</li><li>ES.S1.4XLARGE32: 16-core 32G</li><li>ES.S1.4XLARGE64: 16-core 64G</li> 
+     * @return MasterNodeType Dedicated primary node specification<li>ES.S1.SMALL2: 1-core 2G</li><li>ES.S1.MEDIUM4: 2-core 4G</li><li>ES.S1.MEDIUM8: 2-core 8G</li><li>ES.S1.LARGE16: 4-core 16G</li><li>ES.S1.2XLARGE32: 8-core 32G</li><li>ES.S1.4XLARGE32: 16-core 32G</li><li>ES.S1.4XLARGE64: 16-core 64G</li>
      */
     public String getMasterNodeType() {
         return this.MasterNodeType;
     }
 
     /**
-     * Set Dedicated primary node specification <li>ES.S1.SMALL2: 1-core 2 GB</li><li>ES.S1.MEDIUM4: 2-core 4 GB</li><li>ES.S1.MEDIUM8: 2-core 8 GB</li><li>ES.S1.LARGE16: 4-core 16 GB</li><li>ES.S1.2XLARGE32: 8-core 32 GB</li><li>ES.S1.4XLARGE32: 16-core 32 GB</li><li>ES.S1.4XLARGE64: 16-core 64 GB</li>
-     * @param MasterNodeType Dedicated primary node specification <li>ES.S1.SMALL2: 1-core 2 GB</li><li>ES.S1.MEDIUM4: 2-core 4 GB</li><li>ES.S1.MEDIUM8: 2-core 8 GB</li><li>ES.S1.LARGE16: 4-core 16 GB</li><li>ES.S1.2XLARGE32: 8-core 32 GB</li><li>ES.S1.4XLARGE32: 16-core 32 GB</li><li>ES.S1.4XLARGE64: 16-core 64 GB</li>
+     * Set Dedicated primary node specification<li>ES.S1.SMALL2: 1-core 2G</li><li>ES.S1.MEDIUM4: 2-core 4G</li><li>ES.S1.MEDIUM8: 2-core 8G</li><li>ES.S1.LARGE16: 4-core 16G</li><li>ES.S1.2XLARGE32: 8-core 32G</li><li>ES.S1.4XLARGE32: 16-core 32G</li><li>ES.S1.4XLARGE64: 16-core 64G</li>
+     * @param MasterNodeType Dedicated primary node specification<li>ES.S1.SMALL2: 1-core 2G</li><li>ES.S1.MEDIUM4: 2-core 4G</li><li>ES.S1.MEDIUM8: 2-core 8G</li><li>ES.S1.LARGE16: 4-core 16G</li><li>ES.S1.2XLARGE32: 8-core 32G</li><li>ES.S1.4XLARGE32: 16-core 32G</li><li>ES.S1.4XLARGE64: 16-core 64G</li>
      */
     public void setMasterNodeType(String MasterNodeType) {
         this.MasterNodeType = MasterNodeType;
@@ -121,64 +121,64 @@ public class MasterNodeInfo extends AbstractModel {
     }
 
     /**
-     * Get Number of CPU cores of the dedicated primary node 
-     * @return MasterNodeCpuNum Number of CPU cores of the dedicated primary node
+     * Get Number of CPU cores of the dedicated master node 
+     * @return MasterNodeCpuNum Number of CPU cores of the dedicated master node
      */
     public Long getMasterNodeCpuNum() {
         return this.MasterNodeCpuNum;
     }
 
     /**
-     * Set Number of CPU cores of the dedicated primary node
-     * @param MasterNodeCpuNum Number of CPU cores of the dedicated primary node
+     * Set Number of CPU cores of the dedicated master node
+     * @param MasterNodeCpuNum Number of CPU cores of the dedicated master node
      */
     public void setMasterNodeCpuNum(Long MasterNodeCpuNum) {
         this.MasterNodeCpuNum = MasterNodeCpuNum;
     }
 
     /**
-     * Get Memory size of the dedicated primary node in GB 
-     * @return MasterNodeMemSize Memory size of the dedicated primary node in GB
+     * Get Dedicated primary node memory size, in GB. 
+     * @return MasterNodeMemSize Dedicated primary node memory size, in GB.
      */
     public Long getMasterNodeMemSize() {
         return this.MasterNodeMemSize;
     }
 
     /**
-     * Set Memory size of the dedicated primary node in GB
-     * @param MasterNodeMemSize Memory size of the dedicated primary node in GB
+     * Set Dedicated primary node memory size, in GB.
+     * @param MasterNodeMemSize Dedicated primary node memory size, in GB.
      */
     public void setMasterNodeMemSize(Long MasterNodeMemSize) {
         this.MasterNodeMemSize = MasterNodeMemSize;
     }
 
     /**
-     * Get Disk size of the dedicated primary node in GB 
-     * @return MasterNodeDiskSize Disk size of the dedicated primary node in GB
+     * Get Dedicated primary node disk size in GB 
+     * @return MasterNodeDiskSize Dedicated primary node disk size in GB
      */
     public Long getMasterNodeDiskSize() {
         return this.MasterNodeDiskSize;
     }
 
     /**
-     * Set Disk size of the dedicated primary node in GB
-     * @param MasterNodeDiskSize Disk size of the dedicated primary node in GB
+     * Set Dedicated primary node disk size in GB
+     * @param MasterNodeDiskSize Dedicated primary node disk size in GB
      */
     public void setMasterNodeDiskSize(Long MasterNodeDiskSize) {
         this.MasterNodeDiskSize = MasterNodeDiskSize;
     }
 
     /**
-     * Get Disk type of the dedicated primary node 
-     * @return MasterNodeDiskType Disk type of the dedicated primary node
+     * Get Dedicated primary node disk type 
+     * @return MasterNodeDiskType Dedicated primary node disk type
      */
     public String getMasterNodeDiskType() {
         return this.MasterNodeDiskType;
     }
 
     /**
-     * Set Disk type of the dedicated primary node
-     * @param MasterNodeDiskType Disk type of the dedicated primary node
+     * Set Dedicated primary node disk type
+     * @param MasterNodeDiskType Dedicated primary node disk type
      */
     public void setMasterNodeDiskType(String MasterNodeDiskType) {
         this.MasterNodeDiskType = MasterNodeDiskType;

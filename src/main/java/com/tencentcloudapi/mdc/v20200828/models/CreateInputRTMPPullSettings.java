@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class CreateInputRTMPPullSettings extends AbstractModel {
 
     /**
-    * 
+    * RTMP origin server address. Only one is allowed.
     */
     @SerializedName("SourceAddresses")
     @Expose
     private RTMPPullSourceAddress [] SourceAddresses;
 
     /**
-     * Get  
-     * @return SourceAddresses 
+     * Get RTMP origin server address. Only one is allowed. 
+     * @return SourceAddresses RTMP origin server address. Only one is allowed.
      */
     public RTMPPullSourceAddress [] getSourceAddresses() {
         return this.SourceAddresses;
     }
 
     /**
-     * Set 
-     * @param SourceAddresses 
+     * Set RTMP origin server address. Only one is allowed.
+     * @param SourceAddresses RTMP origin server address. Only one is allowed.
      */
     public void setSourceAddresses(RTMPPullSourceAddress [] SourceAddresses) {
         this.SourceAddresses = SourceAddresses;

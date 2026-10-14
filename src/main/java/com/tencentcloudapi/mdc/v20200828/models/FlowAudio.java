@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class FlowAudio extends AbstractModel {
 
     /**
-    * The frame rate.
+    * Frame rate.
     */
     @SerializedName("Fps")
     @Expose
     private Long Fps;
 
     /**
-    * The bitrate (bps).
+    * Bitrate in bps.
     */
     @SerializedName("Rate")
     @Expose
     private Long Rate;
 
     /**
-    * The audio PID.
+    * Audio Pid.
     */
     @SerializedName("Pid")
     @Expose
     private Long Pid;
 
     /**
-     * Get The frame rate. 
-     * @return Fps The frame rate.
+     * Get Frame rate. 
+     * @return Fps Frame rate.
      */
     public Long getFps() {
         return this.Fps;
     }
 
     /**
-     * Set The frame rate.
-     * @param Fps The frame rate.
+     * Set Frame rate.
+     * @param Fps Frame rate.
      */
     public void setFps(Long Fps) {
         this.Fps = Fps;
     }
 
     /**
-     * Get The bitrate (bps). 
-     * @return Rate The bitrate (bps).
+     * Get Bitrate in bps. 
+     * @return Rate Bitrate in bps.
      */
     public Long getRate() {
         return this.Rate;
     }
 
     /**
-     * Set The bitrate (bps).
-     * @param Rate The bitrate (bps).
+     * Set Bitrate in bps.
+     * @param Rate Bitrate in bps.
      */
     public void setRate(Long Rate) {
         this.Rate = Rate;
     }
 
     /**
-     * Get The audio PID. 
-     * @return Pid The audio PID.
+     * Get Audio Pid. 
+     * @return Pid Audio Pid.
      */
     public Long getPid() {
         return this.Pid;
     }
 
     /**
-     * Set The audio PID.
-     * @param Pid The audio PID.
+     * Set Audio Pid.
+     * @param Pid Audio Pid.
      */
     public void setPid(Long Pid) {
         this.Pid = Pid;

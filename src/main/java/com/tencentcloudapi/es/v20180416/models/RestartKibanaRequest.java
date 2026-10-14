@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class RestartKibanaRequest extends AbstractModel {
 
     /**
-    * ES instance ID
+    * ES instance ID.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-     * Get ES instance ID 
-     * @return InstanceId ES instance ID
+     * Get ES instance ID. 
+     * @return InstanceId ES instance ID.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set ES instance ID
-     * @param InstanceId ES instance ID
+     * Set ES instance ID.
+     * @param InstanceId ES instance ID.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;

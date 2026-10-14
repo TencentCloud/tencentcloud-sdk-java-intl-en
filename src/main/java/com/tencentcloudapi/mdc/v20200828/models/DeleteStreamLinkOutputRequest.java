@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class DeleteStreamLinkOutputRequest extends AbstractModel {
 
     /**
-    * Flow ID
+    * Stream Id.
     */
     @SerializedName("FlowId")
     @Expose
     private String FlowId;
 
     /**
-    * Output ID
+    * Output Id.
     */
     @SerializedName("OutputId")
     @Expose
     private String OutputId;
 
     /**
-     * Get Flow ID 
-     * @return FlowId Flow ID
+     * Get Stream Id. 
+     * @return FlowId Stream Id.
      */
     public String getFlowId() {
         return this.FlowId;
     }
 
     /**
-     * Set Flow ID
-     * @param FlowId Flow ID
+     * Set Stream Id.
+     * @param FlowId Stream Id.
      */
     public void setFlowId(String FlowId) {
         this.FlowId = FlowId;
     }
 
     /**
-     * Get Output ID 
-     * @return OutputId Output ID
+     * Get Output Id. 
+     * @return OutputId Output Id.
      */
     public String getOutputId() {
         return this.OutputId;
     }
 
     /**
-     * Set Output ID
-     * @param OutputId Output ID
+     * Set Output Id.
+     * @param OutputId Output Id.
      */
     public void setOutputId(String OutputId) {
         this.OutputId = OutputId;

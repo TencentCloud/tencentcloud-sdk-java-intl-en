@@ -34,14 +34,15 @@ public class LiveStreamAiAnalysisResultItem extends AbstractModel {
     private String Type;
 
     /**
-    * 
+    * Split result. When `Type` is
+Valid for SegmentRecognition.
     */
     @SerializedName("SegmentResultSet")
     @Expose
     private SegmentRecognitionItem [] SegmentResultSet;
 
     /**
-    * 
+    * Highlight result. This field is valid when Type is set to Highlight.
     */
     @SerializedName("HighlightResultSet")
     @Expose
@@ -83,32 +84,36 @@ public class LiveStreamAiAnalysisResultItem extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return SegmentResultSet 
+     * Get Split result. When `Type` is
+Valid for SegmentRecognition. 
+     * @return SegmentResultSet Split result. When `Type` is
+Valid for SegmentRecognition.
      */
     public SegmentRecognitionItem [] getSegmentResultSet() {
         return this.SegmentResultSet;
     }
 
     /**
-     * Set 
-     * @param SegmentResultSet 
+     * Set Split result. When `Type` is
+Valid for SegmentRecognition.
+     * @param SegmentResultSet Split result. When `Type` is
+Valid for SegmentRecognition.
      */
     public void setSegmentResultSet(SegmentRecognitionItem [] SegmentResultSet) {
         this.SegmentResultSet = SegmentResultSet;
     }
 
     /**
-     * Get  
-     * @return HighlightResultSet 
+     * Get Highlight result. This field is valid when Type is set to Highlight. 
+     * @return HighlightResultSet Highlight result. This field is valid when Type is set to Highlight.
      */
     public MediaAiAnalysisHighlightItem [] getHighlightResultSet() {
         return this.HighlightResultSet;
     }
 
     /**
-     * Set 
-     * @param HighlightResultSet 
+     * Set Highlight result. This field is valid when Type is set to Highlight.
+     * @param HighlightResultSet Highlight result. This field is valid when Type is set to Highlight.
      */
     public void setHighlightResultSet(MediaAiAnalysisHighlightItem [] HighlightResultSet) {
         this.HighlightResultSet = HighlightResultSet;

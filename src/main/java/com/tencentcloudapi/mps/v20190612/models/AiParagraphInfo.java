@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class AiParagraphInfo extends AbstractModel {
 
     /**
-    * 
+    * Segment summary.
     */
     @SerializedName("Summary")
     @Expose
@@ -45,30 +45,30 @@ public class AiParagraphInfo extends AbstractModel {
     private String [] Keywords;
 
     /**
-    * 
+    * Starting time point of the segment, in seconds.
     */
     @SerializedName("StartTimeOffset")
     @Expose
     private Float StartTimeOffset;
 
     /**
-    * 
+    * End time point of the segment, in seconds.
     */
     @SerializedName("EndTimeOffset")
     @Expose
     private Float EndTimeOffset;
 
     /**
-     * Get  
-     * @return Summary 
+     * Get Segment summary. 
+     * @return Summary Segment summary.
      */
     public String getSummary() {
         return this.Summary;
     }
 
     /**
-     * Set 
-     * @param Summary 
+     * Set Segment summary.
+     * @param Summary Segment summary.
      */
     public void setSummary(String Summary) {
         this.Summary = Summary;
@@ -107,32 +107,32 @@ public class AiParagraphInfo extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return StartTimeOffset 
+     * Get Starting time point of the segment, in seconds. 
+     * @return StartTimeOffset Starting time point of the segment, in seconds.
      */
     public Float getStartTimeOffset() {
         return this.StartTimeOffset;
     }
 
     /**
-     * Set 
-     * @param StartTimeOffset 
+     * Set Starting time point of the segment, in seconds.
+     * @param StartTimeOffset Starting time point of the segment, in seconds.
      */
     public void setStartTimeOffset(Float StartTimeOffset) {
         this.StartTimeOffset = StartTimeOffset;
     }
 
     /**
-     * Get  
-     * @return EndTimeOffset 
+     * Get End time point of the segment, in seconds. 
+     * @return EndTimeOffset End time point of the segment, in seconds.
      */
     public Float getEndTimeOffset() {
         return this.EndTimeOffset;
     }
 
     /**
-     * Set 
-     * @param EndTimeOffset 
+     * Set End time point of the segment, in seconds.
+     * @param EndTimeOffset End time point of the segment, in seconds.
      */
     public void setEndTimeOffset(Float EndTimeOffset) {
         this.EndTimeOffset = EndTimeOffset;

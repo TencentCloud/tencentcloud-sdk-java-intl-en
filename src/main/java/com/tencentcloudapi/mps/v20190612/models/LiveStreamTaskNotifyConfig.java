@@ -24,161 +24,181 @@ import java.util.HashMap;
 public class LiveStreamTaskNotifyConfig extends AbstractModel {
 
     /**
-    * 
+    * Notification type:
+TDMQ-CMQ: message queue.
+"URL": When a URL is specified, the HTTP callback is pushed to the address specified by NotifyUrl. The callback protocol is http+json. The content of the packet body is the same as the output parameters of the [ParseLiveStreamProcessNotification API](https://www.tencentcloud.com/document/product/862/39229?from_cn_redirect=1).
+
+<Font color="red"> Note: if it is unspecified or left blank, no callback will be sent. To send a callback, fill in the corresponding type value. </font>
     */
     @SerializedName("NotifyType")
     @Expose
     private String NotifyType;
 
     /**
-    * 
+    * HTTP callback URL. This is required if NotifyType is URL.
     */
     @SerializedName("NotifyUrl")
     @Expose
     private String NotifyUrl;
 
     /**
-    * 
+    * Queue and Topic models are provided.
     */
     @SerializedName("CmqModel")
     @Expose
     private String CmqModel;
 
     /**
-    * 
+    * Region when NotifyType is set to TDMQ-CMQ. For example, sh or bj.
     */
     @SerializedName("CmqRegion")
     @Expose
     private String CmqRegion;
 
     /**
-    * 
+    * This field is valid when the model is Queue. It indicates the name of the TDMQ for CMQ queue for receiving event notifications.
     */
     @SerializedName("QueueName")
     @Expose
     private String QueueName;
 
     /**
-    * 
+    * This field is valid when the model is Topic. It indicates the name of the TDMQ for CMQ topic for receiving event notifications.
     */
     @SerializedName("TopicName")
     @Expose
     private String TopicName;
 
     /**
-    * 
+    * Key used to generate a callback signature.
     */
     @SerializedName("NotifyKey")
     @Expose
     private String NotifyKey;
 
     /**
-     * Get  
-     * @return NotifyType 
+     * Get Notification type:
+TDMQ-CMQ: message queue.
+"URL": When a URL is specified, the HTTP callback is pushed to the address specified by NotifyUrl. The callback protocol is http+json. The content of the packet body is the same as the output parameters of the [ParseLiveStreamProcessNotification API](https://www.tencentcloud.com/document/product/862/39229?from_cn_redirect=1).
+
+<Font color="red"> Note: if it is unspecified or left blank, no callback will be sent. To send a callback, fill in the corresponding type value. </font> 
+     * @return NotifyType Notification type:
+TDMQ-CMQ: message queue.
+"URL": When a URL is specified, the HTTP callback is pushed to the address specified by NotifyUrl. The callback protocol is http+json. The content of the packet body is the same as the output parameters of the [ParseLiveStreamProcessNotification API](https://www.tencentcloud.com/document/product/862/39229?from_cn_redirect=1).
+
+<Font color="red"> Note: if it is unspecified or left blank, no callback will be sent. To send a callback, fill in the corresponding type value. </font>
      */
     public String getNotifyType() {
         return this.NotifyType;
     }
 
     /**
-     * Set 
-     * @param NotifyType 
+     * Set Notification type:
+TDMQ-CMQ: message queue.
+"URL": When a URL is specified, the HTTP callback is pushed to the address specified by NotifyUrl. The callback protocol is http+json. The content of the packet body is the same as the output parameters of the [ParseLiveStreamProcessNotification API](https://www.tencentcloud.com/document/product/862/39229?from_cn_redirect=1).
+
+<Font color="red"> Note: if it is unspecified or left blank, no callback will be sent. To send a callback, fill in the corresponding type value. </font>
+     * @param NotifyType Notification type:
+TDMQ-CMQ: message queue.
+"URL": When a URL is specified, the HTTP callback is pushed to the address specified by NotifyUrl. The callback protocol is http+json. The content of the packet body is the same as the output parameters of the [ParseLiveStreamProcessNotification API](https://www.tencentcloud.com/document/product/862/39229?from_cn_redirect=1).
+
+<Font color="red"> Note: if it is unspecified or left blank, no callback will be sent. To send a callback, fill in the corresponding type value. </font>
      */
     public void setNotifyType(String NotifyType) {
         this.NotifyType = NotifyType;
     }
 
     /**
-     * Get  
-     * @return NotifyUrl 
+     * Get HTTP callback URL. This is required if NotifyType is URL. 
+     * @return NotifyUrl HTTP callback URL. This is required if NotifyType is URL.
      */
     public String getNotifyUrl() {
         return this.NotifyUrl;
     }
 
     /**
-     * Set 
-     * @param NotifyUrl 
+     * Set HTTP callback URL. This is required if NotifyType is URL.
+     * @param NotifyUrl HTTP callback URL. This is required if NotifyType is URL.
      */
     public void setNotifyUrl(String NotifyUrl) {
         this.NotifyUrl = NotifyUrl;
     }
 
     /**
-     * Get  
-     * @return CmqModel 
+     * Get Queue and Topic models are provided. 
+     * @return CmqModel Queue and Topic models are provided.
      */
     public String getCmqModel() {
         return this.CmqModel;
     }
 
     /**
-     * Set 
-     * @param CmqModel 
+     * Set Queue and Topic models are provided.
+     * @param CmqModel Queue and Topic models are provided.
      */
     public void setCmqModel(String CmqModel) {
         this.CmqModel = CmqModel;
     }
 
     /**
-     * Get  
-     * @return CmqRegion 
+     * Get Region when NotifyType is set to TDMQ-CMQ. For example, sh or bj. 
+     * @return CmqRegion Region when NotifyType is set to TDMQ-CMQ. For example, sh or bj.
      */
     public String getCmqRegion() {
         return this.CmqRegion;
     }
 
     /**
-     * Set 
-     * @param CmqRegion 
+     * Set Region when NotifyType is set to TDMQ-CMQ. For example, sh or bj.
+     * @param CmqRegion Region when NotifyType is set to TDMQ-CMQ. For example, sh or bj.
      */
     public void setCmqRegion(String CmqRegion) {
         this.CmqRegion = CmqRegion;
     }
 
     /**
-     * Get  
-     * @return QueueName 
+     * Get This field is valid when the model is Queue. It indicates the name of the TDMQ for CMQ queue for receiving event notifications. 
+     * @return QueueName This field is valid when the model is Queue. It indicates the name of the TDMQ for CMQ queue for receiving event notifications.
      */
     public String getQueueName() {
         return this.QueueName;
     }
 
     /**
-     * Set 
-     * @param QueueName 
+     * Set This field is valid when the model is Queue. It indicates the name of the TDMQ for CMQ queue for receiving event notifications.
+     * @param QueueName This field is valid when the model is Queue. It indicates the name of the TDMQ for CMQ queue for receiving event notifications.
      */
     public void setQueueName(String QueueName) {
         this.QueueName = QueueName;
     }
 
     /**
-     * Get  
-     * @return TopicName 
+     * Get This field is valid when the model is Topic. It indicates the name of the TDMQ for CMQ topic for receiving event notifications. 
+     * @return TopicName This field is valid when the model is Topic. It indicates the name of the TDMQ for CMQ topic for receiving event notifications.
      */
     public String getTopicName() {
         return this.TopicName;
     }
 
     /**
-     * Set 
-     * @param TopicName 
+     * Set This field is valid when the model is Topic. It indicates the name of the TDMQ for CMQ topic for receiving event notifications.
+     * @param TopicName This field is valid when the model is Topic. It indicates the name of the TDMQ for CMQ topic for receiving event notifications.
      */
     public void setTopicName(String TopicName) {
         this.TopicName = TopicName;
     }
 
     /**
-     * Get  
-     * @return NotifyKey 
+     * Get Key used to generate a callback signature. 
+     * @return NotifyKey Key used to generate a callback signature.
      */
     public String getNotifyKey() {
         return this.NotifyKey;
     }
 
     /**
-     * Set 
-     * @param NotifyKey 
+     * Set Key used to generate a callback signature.
+     * @param NotifyKey Key used to generate a callback signature.
      */
     public void setNotifyKey(String NotifyKey) {
         this.NotifyKey = NotifyKey;

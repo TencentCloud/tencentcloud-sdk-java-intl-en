@@ -38,28 +38,28 @@ public class KibanaNodeInfo extends AbstractModel {
     private Long KibanaNodeNum;
 
     /**
-    * Number of Kibana node's CPUs
+    * Number of CPUs of the Kibana node
     */
     @SerializedName("KibanaNodeCpuNum")
     @Expose
     private Long KibanaNodeCpuNum;
 
     /**
-    * Kibana node's memory in GB
+    * Kibana node memory in GB
     */
     @SerializedName("KibanaNodeMemSize")
     @Expose
     private Long KibanaNodeMemSize;
 
     /**
-    * Kibana node's disk type
+    * Kibana node disk type
     */
     @SerializedName("KibanaNodeDiskType")
     @Expose
     private String KibanaNodeDiskType;
 
     /**
-    * Kibana node's disk size
+    * Kibana node disk size
     */
     @SerializedName("KibanaNodeDiskSize")
     @Expose
@@ -98,64 +98,64 @@ public class KibanaNodeInfo extends AbstractModel {
     }
 
     /**
-     * Get Number of Kibana node's CPUs 
-     * @return KibanaNodeCpuNum Number of Kibana node's CPUs
+     * Get Number of CPUs of the Kibana node 
+     * @return KibanaNodeCpuNum Number of CPUs of the Kibana node
      */
     public Long getKibanaNodeCpuNum() {
         return this.KibanaNodeCpuNum;
     }
 
     /**
-     * Set Number of Kibana node's CPUs
-     * @param KibanaNodeCpuNum Number of Kibana node's CPUs
+     * Set Number of CPUs of the Kibana node
+     * @param KibanaNodeCpuNum Number of CPUs of the Kibana node
      */
     public void setKibanaNodeCpuNum(Long KibanaNodeCpuNum) {
         this.KibanaNodeCpuNum = KibanaNodeCpuNum;
     }
 
     /**
-     * Get Kibana node's memory in GB 
-     * @return KibanaNodeMemSize Kibana node's memory in GB
+     * Get Kibana node memory in GB 
+     * @return KibanaNodeMemSize Kibana node memory in GB
      */
     public Long getKibanaNodeMemSize() {
         return this.KibanaNodeMemSize;
     }
 
     /**
-     * Set Kibana node's memory in GB
-     * @param KibanaNodeMemSize Kibana node's memory in GB
+     * Set Kibana node memory in GB
+     * @param KibanaNodeMemSize Kibana node memory in GB
      */
     public void setKibanaNodeMemSize(Long KibanaNodeMemSize) {
         this.KibanaNodeMemSize = KibanaNodeMemSize;
     }
 
     /**
-     * Get Kibana node's disk type 
-     * @return KibanaNodeDiskType Kibana node's disk type
+     * Get Kibana node disk type 
+     * @return KibanaNodeDiskType Kibana node disk type
      */
     public String getKibanaNodeDiskType() {
         return this.KibanaNodeDiskType;
     }
 
     /**
-     * Set Kibana node's disk type
-     * @param KibanaNodeDiskType Kibana node's disk type
+     * Set Kibana node disk type
+     * @param KibanaNodeDiskType Kibana node disk type
      */
     public void setKibanaNodeDiskType(String KibanaNodeDiskType) {
         this.KibanaNodeDiskType = KibanaNodeDiskType;
     }
 
     /**
-     * Get Kibana node's disk size 
-     * @return KibanaNodeDiskSize Kibana node's disk size
+     * Get Kibana node disk size 
+     * @return KibanaNodeDiskSize Kibana node disk size
      */
     public Long getKibanaNodeDiskSize() {
         return this.KibanaNodeDiskSize;
     }
 
     /**
-     * Set Kibana node's disk size
-     * @param KibanaNodeDiskSize Kibana node's disk size
+     * Set Kibana node disk size
+     * @param KibanaNodeDiskSize Kibana node disk size
      */
     public void setKibanaNodeDiskSize(Long KibanaNodeDiskSize) {
         this.KibanaNodeDiskSize = KibanaNodeDiskSize;

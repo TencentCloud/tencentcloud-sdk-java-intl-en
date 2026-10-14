@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class AiRecognitionTaskAsrFullTextResultOutput extends AbstractModel {
 
     /**
-    * Full speech recognition segment list.
+    * List of segments for full speech recognition.
     */
     @SerializedName("SegmentSet")
     @Expose
@@ -45,16 +45,16 @@ public class AiRecognitionTaskAsrFullTextResultOutput extends AbstractModel {
     private TaskOutputStorage OutputStorage;
 
     /**
-     * Get Full speech recognition segment list. 
-     * @return SegmentSet Full speech recognition segment list.
+     * Get List of segments for full speech recognition. 
+     * @return SegmentSet List of segments for full speech recognition.
      */
     public AiRecognitionTaskAsrFullTextSegmentItem [] getSegmentSet() {
         return this.SegmentSet;
     }
 
     /**
-     * Set Full speech recognition segment list.
-     * @param SegmentSet Full speech recognition segment list.
+     * Set List of segments for full speech recognition.
+     * @param SegmentSet List of segments for full speech recognition.
      */
     public void setSegmentSet(AiRecognitionTaskAsrFullTextSegmentItem [] SegmentSet) {
         this.SegmentSet = SegmentSet;

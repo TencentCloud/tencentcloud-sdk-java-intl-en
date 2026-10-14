@@ -52,7 +52,7 @@ public class AiAnalysisTaskHighlightResult extends AbstractModel {
     private AiAnalysisTaskHighlightInput Input;
 
     /**
-    * 
+    * Output of the intelligent highlight task.
     */
     @SerializedName("Output")
     @Expose
@@ -123,16 +123,16 @@ public class AiAnalysisTaskHighlightResult extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return Output 
+     * Get Output of the intelligent highlight task. 
+     * @return Output Output of the intelligent highlight task.
      */
     public AiAnalysisTaskHighlightOutput getOutput() {
         return this.Output;
     }
 
     /**
-     * Set 
-     * @param Output 
+     * Set Output of the intelligent highlight task.
+     * @param Output Output of the intelligent highlight task.
      */
     public void setOutput(AiAnalysisTaskHighlightOutput Output) {
         this.Output = Output;

@@ -38,7 +38,7 @@ public class DubbingConfig extends AbstractModel {
     private Long BackgroundVolume;
 
     /**
-    * <p>Secondary fine-tuning switch. Available values: <br>ON: enable secondary fine-tuning; <br>OFF: disable secondary fine-tuning;</p><p>Default value: OFF</p><p>It can be set to ON only for RoleBasedSmartDubbing.</p>
+    * <p>Secondary fine-tuning switch. Available values: <br>ON: Enable secondary fine-tuning; <br>OFF: Disable secondary fine-tuning;</p><p>Default value: OFF</p><p>It can be set to ON only for RoleBasedSmartDubbing.</p>
     */
     @SerializedName("SecondaryTuning")
     @Expose
@@ -91,16 +91,16 @@ public class DubbingConfig extends AbstractModel {
     }
 
     /**
-     * Get <p>Secondary fine-tuning switch. Available values: <br>ON: enable secondary fine-tuning; <br>OFF: disable secondary fine-tuning;</p><p>Default value: OFF</p><p>It can be set to ON only for RoleBasedSmartDubbing.</p> 
-     * @return SecondaryTuning <p>Secondary fine-tuning switch. Available values: <br>ON: enable secondary fine-tuning; <br>OFF: disable secondary fine-tuning;</p><p>Default value: OFF</p><p>It can be set to ON only for RoleBasedSmartDubbing.</p>
+     * Get <p>Secondary fine-tuning switch. Available values: <br>ON: Enable secondary fine-tuning; <br>OFF: Disable secondary fine-tuning;</p><p>Default value: OFF</p><p>It can be set to ON only for RoleBasedSmartDubbing.</p> 
+     * @return SecondaryTuning <p>Secondary fine-tuning switch. Available values: <br>ON: Enable secondary fine-tuning; <br>OFF: Disable secondary fine-tuning;</p><p>Default value: OFF</p><p>It can be set to ON only for RoleBasedSmartDubbing.</p>
      */
     public String getSecondaryTuning() {
         return this.SecondaryTuning;
     }
 
     /**
-     * Set <p>Secondary fine-tuning switch. Available values: <br>ON: enable secondary fine-tuning; <br>OFF: disable secondary fine-tuning;</p><p>Default value: OFF</p><p>It can be set to ON only for RoleBasedSmartDubbing.</p>
-     * @param SecondaryTuning <p>Secondary fine-tuning switch. Available values: <br>ON: enable secondary fine-tuning; <br>OFF: disable secondary fine-tuning;</p><p>Default value: OFF</p><p>It can be set to ON only for RoleBasedSmartDubbing.</p>
+     * Set <p>Secondary fine-tuning switch. Available values: <br>ON: Enable secondary fine-tuning; <br>OFF: Disable secondary fine-tuning;</p><p>Default value: OFF</p><p>It can be set to ON only for RoleBasedSmartDubbing.</p>
+     * @param SecondaryTuning <p>Secondary fine-tuning switch. Available values: <br>ON: Enable secondary fine-tuning; <br>OFF: Disable secondary fine-tuning;</p><p>Default value: OFF</p><p>It can be set to ON only for RoleBasedSmartDubbing.</p>
      */
     public void setSecondaryTuning(String SecondaryTuning) {
         this.SecondaryTuning = SecondaryTuning;

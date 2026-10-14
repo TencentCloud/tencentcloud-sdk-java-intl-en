@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DictInfo extends AbstractModel {
 
     /**
-    * Dictionary key value
+    * Dictionary key-value
     */
     @SerializedName("Key")
     @Expose
@@ -38,23 +38,23 @@ public class DictInfo extends AbstractModel {
     private String Name;
 
     /**
-    * Dictionary size in B
+    * Dictionary size. Unit: B.
     */
     @SerializedName("Size")
     @Expose
     private Long Size;
 
     /**
-     * Get Dictionary key value 
-     * @return Key Dictionary key value
+     * Get Dictionary key-value 
+     * @return Key Dictionary key-value
      */
     public String getKey() {
         return this.Key;
     }
 
     /**
-     * Set Dictionary key value
-     * @param Key Dictionary key value
+     * Set Dictionary key-value
+     * @param Key Dictionary key-value
      */
     public void setKey(String Key) {
         this.Key = Key;
@@ -77,16 +77,16 @@ public class DictInfo extends AbstractModel {
     }
 
     /**
-     * Get Dictionary size in B 
-     * @return Size Dictionary size in B
+     * Get Dictionary size. Unit: B. 
+     * @return Size Dictionary size. Unit: B.
      */
     public Long getSize() {
         return this.Size;
     }
 
     /**
-     * Set Dictionary size in B
-     * @param Size Dictionary size in B
+     * Set Dictionary size. Unit: B.
+     * @param Size Dictionary size. Unit: B.
      */
     public void setSize(Long Size) {
         this.Size = Size;

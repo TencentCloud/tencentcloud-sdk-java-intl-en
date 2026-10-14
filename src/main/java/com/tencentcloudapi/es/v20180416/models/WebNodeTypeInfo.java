@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class WebNodeTypeInfo extends AbstractModel {
 
     /**
-    * Number of visual nodes. The value is always `1`.
+    * Number of nodes to visualize, fixed as 1
     */
     @SerializedName("NodeNum")
     @Expose
     private Long NodeNum;
 
     /**
-    * Visual node specification
+    * Visualize node specifications
     */
     @SerializedName("NodeType")
     @Expose
     private String NodeType;
 
     /**
-     * Get Number of visual nodes. The value is always `1`. 
-     * @return NodeNum Number of visual nodes. The value is always `1`.
+     * Get Number of nodes to visualize, fixed as 1 
+     * @return NodeNum Number of nodes to visualize, fixed as 1
      */
     public Long getNodeNum() {
         return this.NodeNum;
     }
 
     /**
-     * Set Number of visual nodes. The value is always `1`.
-     * @param NodeNum Number of visual nodes. The value is always `1`.
+     * Set Number of nodes to visualize, fixed as 1
+     * @param NodeNum Number of nodes to visualize, fixed as 1
      */
     public void setNodeNum(Long NodeNum) {
         this.NodeNum = NodeNum;
     }
 
     /**
-     * Get Visual node specification 
-     * @return NodeType Visual node specification
+     * Get Visualize node specifications 
+     * @return NodeType Visualize node specifications
      */
     public String getNodeType() {
         return this.NodeType;
     }
 
     /**
-     * Set Visual node specification
-     * @param NodeType Visual node specification
+     * Set Visualize node specifications
+     * @param NodeType Visualize node specifications
      */
     public void setNodeType(String NodeType) {
         this.NodeType = NodeType;

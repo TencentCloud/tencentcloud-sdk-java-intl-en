@@ -24,174 +24,197 @@ import java.util.HashMap;
 public class DescribeStreamLinkFlowStatisticsRequest extends AbstractModel {
 
     /**
-    * The flow ID.
+    * Transport stream ID.
     */
     @SerializedName("FlowId")
     @Expose
     private String FlowId;
 
     /**
-    * Whether to query the inputs or outputs. Valid values: input, output.
+    * Input or output type. Valid values: `input`, `output`.
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * The input or output ID.
+    * Input or output Id.
     */
     @SerializedName("InputOutputId")
     @Expose
     private String InputOutputId;
 
     /**
-    * Whether to query the primary or backup pipeline. Valid values: 0, 1.
+    * Primary or backup channel. Valid values: 0 and 1.
     */
     @SerializedName("Pipeline")
     @Expose
     private String Pipeline;
 
     /**
-    * The query interval. Valid values: 5s, 1min, 5min, 15min.
+    * Query interval. Option: [5s|1min|5min|15min].
     */
     @SerializedName("Period")
     @Expose
     private String Period;
 
     /**
-    * The start time for query, which is 1 hour ago by default. You can query statistics in the last 7 days.
-It must be in UTC format, such as `2020-01-01T12:00:00Z`.
+    * Start time for statistics. Default value: last hour. You can query data from the last 7 days at most.
+UTC time, for example, '2020-01-01T12:00:00Z'.
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * The end time for query, which is 1 hour after the start time by default. The longest time range allowed for query is 24 hours.
-It must be in UTC format, such as `2020-01-01T12:00:00Z`.
+    * End time for statistics. Defaults to one hour after `StartTime`. You can query the data of up to 24 hours.
+UTC time, for example, '2020-01-01T12:00:00Z'.
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-     * Get The flow ID. 
-     * @return FlowId The flow ID.
+    * Peer client or server IP address.
+    */
+    @SerializedName("RemoteIp")
+    @Expose
+    private String RemoteIp;
+
+    /**
+     * Get Transport stream ID. 
+     * @return FlowId Transport stream ID.
      */
     public String getFlowId() {
         return this.FlowId;
     }
 
     /**
-     * Set The flow ID.
-     * @param FlowId The flow ID.
+     * Set Transport stream ID.
+     * @param FlowId Transport stream ID.
      */
     public void setFlowId(String FlowId) {
         this.FlowId = FlowId;
     }
 
     /**
-     * Get Whether to query the inputs or outputs. Valid values: input, output. 
-     * @return Type Whether to query the inputs or outputs. Valid values: input, output.
+     * Get Input or output type. Valid values: `input`, `output`. 
+     * @return Type Input or output type. Valid values: `input`, `output`.
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Whether to query the inputs or outputs. Valid values: input, output.
-     * @param Type Whether to query the inputs or outputs. Valid values: input, output.
+     * Set Input or output type. Valid values: `input`, `output`.
+     * @param Type Input or output type. Valid values: `input`, `output`.
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get The input or output ID. 
-     * @return InputOutputId The input or output ID.
+     * Get Input or output Id. 
+     * @return InputOutputId Input or output Id.
      */
     public String getInputOutputId() {
         return this.InputOutputId;
     }
 
     /**
-     * Set The input or output ID.
-     * @param InputOutputId The input or output ID.
+     * Set Input or output Id.
+     * @param InputOutputId Input or output Id.
      */
     public void setInputOutputId(String InputOutputId) {
         this.InputOutputId = InputOutputId;
     }
 
     /**
-     * Get Whether to query the primary or backup pipeline. Valid values: 0, 1. 
-     * @return Pipeline Whether to query the primary or backup pipeline. Valid values: 0, 1.
+     * Get Primary or backup channel. Valid values: 0 and 1. 
+     * @return Pipeline Primary or backup channel. Valid values: 0 and 1.
      */
     public String getPipeline() {
         return this.Pipeline;
     }
 
     /**
-     * Set Whether to query the primary or backup pipeline. Valid values: 0, 1.
-     * @param Pipeline Whether to query the primary or backup pipeline. Valid values: 0, 1.
+     * Set Primary or backup channel. Valid values: 0 and 1.
+     * @param Pipeline Primary or backup channel. Valid values: 0 and 1.
      */
     public void setPipeline(String Pipeline) {
         this.Pipeline = Pipeline;
     }
 
     /**
-     * Get The query interval. Valid values: 5s, 1min, 5min, 15min. 
-     * @return Period The query interval. Valid values: 5s, 1min, 5min, 15min.
+     * Get Query interval. Option: [5s|1min|5min|15min]. 
+     * @return Period Query interval. Option: [5s|1min|5min|15min].
      */
     public String getPeriod() {
         return this.Period;
     }
 
     /**
-     * Set The query interval. Valid values: 5s, 1min, 5min, 15min.
-     * @param Period The query interval. Valid values: 5s, 1min, 5min, 15min.
+     * Set Query interval. Option: [5s|1min|5min|15min].
+     * @param Period Query interval. Option: [5s|1min|5min|15min].
      */
     public void setPeriod(String Period) {
         this.Period = Period;
     }
 
     /**
-     * Get The start time for query, which is 1 hour ago by default. You can query statistics in the last 7 days.
-It must be in UTC format, such as `2020-01-01T12:00:00Z`. 
-     * @return StartTime The start time for query, which is 1 hour ago by default. You can query statistics in the last 7 days.
-It must be in UTC format, such as `2020-01-01T12:00:00Z`.
+     * Get Start time for statistics. Default value: last hour. You can query data from the last 7 days at most.
+UTC time, for example, '2020-01-01T12:00:00Z'. 
+     * @return StartTime Start time for statistics. Default value: last hour. You can query data from the last 7 days at most.
+UTC time, for example, '2020-01-01T12:00:00Z'.
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set The start time for query, which is 1 hour ago by default. You can query statistics in the last 7 days.
-It must be in UTC format, such as `2020-01-01T12:00:00Z`.
-     * @param StartTime The start time for query, which is 1 hour ago by default. You can query statistics in the last 7 days.
-It must be in UTC format, such as `2020-01-01T12:00:00Z`.
+     * Set Start time for statistics. Default value: last hour. You can query data from the last 7 days at most.
+UTC time, for example, '2020-01-01T12:00:00Z'.
+     * @param StartTime Start time for statistics. Default value: last hour. You can query data from the last 7 days at most.
+UTC time, for example, '2020-01-01T12:00:00Z'.
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get The end time for query, which is 1 hour after the start time by default. The longest time range allowed for query is 24 hours.
-It must be in UTC format, such as `2020-01-01T12:00:00Z`. 
-     * @return EndTime The end time for query, which is 1 hour after the start time by default. The longest time range allowed for query is 24 hours.
-It must be in UTC format, such as `2020-01-01T12:00:00Z`.
+     * Get End time for statistics. Defaults to one hour after `StartTime`. You can query the data of up to 24 hours.
+UTC time, for example, '2020-01-01T12:00:00Z'. 
+     * @return EndTime End time for statistics. Defaults to one hour after `StartTime`. You can query the data of up to 24 hours.
+UTC time, for example, '2020-01-01T12:00:00Z'.
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set The end time for query, which is 1 hour after the start time by default. The longest time range allowed for query is 24 hours.
-It must be in UTC format, such as `2020-01-01T12:00:00Z`.
-     * @param EndTime The end time for query, which is 1 hour after the start time by default. The longest time range allowed for query is 24 hours.
-It must be in UTC format, such as `2020-01-01T12:00:00Z`.
+     * Set End time for statistics. Defaults to one hour after `StartTime`. You can query the data of up to 24 hours.
+UTC time, for example, '2020-01-01T12:00:00Z'.
+     * @param EndTime End time for statistics. Defaults to one hour after `StartTime`. You can query the data of up to 24 hours.
+UTC time, for example, '2020-01-01T12:00:00Z'.
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
+    }
+
+    /**
+     * Get Peer client or server IP address. 
+     * @return RemoteIp Peer client or server IP address.
+     */
+    public String getRemoteIp() {
+        return this.RemoteIp;
+    }
+
+    /**
+     * Set Peer client or server IP address.
+     * @param RemoteIp Peer client or server IP address.
+     */
+    public void setRemoteIp(String RemoteIp) {
+        this.RemoteIp = RemoteIp;
     }
 
     public DescribeStreamLinkFlowStatisticsRequest() {
@@ -223,6 +246,9 @@ It must be in UTC format, such as `2020-01-01T12:00:00Z`.
         if (source.EndTime != null) {
             this.EndTime = new String(source.EndTime);
         }
+        if (source.RemoteIp != null) {
+            this.RemoteIp = new String(source.RemoteIp);
+        }
     }
 
 
@@ -237,6 +263,7 @@ It must be in UTC format, such as `2020-01-01T12:00:00Z`.
         this.setParamSimple(map, prefix + "Period", this.Period);
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
+        this.setParamSimple(map, prefix + "RemoteIp", this.RemoteIp);
 
     }
 }

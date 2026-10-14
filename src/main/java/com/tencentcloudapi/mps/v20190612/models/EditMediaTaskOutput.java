@@ -38,7 +38,7 @@ public class EditMediaTaskOutput extends AbstractModel {
     private String Path;
 
     /**
-    * 
+    * Metadata of the edited video file.
     */
     @SerializedName("MetaData")
     @Expose
@@ -77,16 +77,16 @@ public class EditMediaTaskOutput extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return MetaData 
+     * Get Metadata of the edited video file. 
+     * @return MetaData Metadata of the edited video file.
      */
     public MediaMetaData getMetaData() {
         return this.MetaData;
     }
 
     /**
-     * Set 
-     * @param MetaData 
+     * Set Metadata of the edited video file.
+     * @param MetaData Metadata of the edited video file.
      */
     public void setMetaData(MediaMetaData MetaData) {
         this.MetaData = MetaData;

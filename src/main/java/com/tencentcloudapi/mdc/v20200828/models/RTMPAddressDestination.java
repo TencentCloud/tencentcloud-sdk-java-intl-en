@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class RTMPAddressDestination extends AbstractModel {
 
     /**
-    * Destination URL of RTMP push in the format of 'rtmp://domain/live'.
+    * Destination Url for RTMP repush, in the format of 'RTMP://domain/live'.
     */
     @SerializedName("Url")
     @Expose
     private String Url;
 
     /**
-    * Destination `StreamKey` of RTMP push in the format of 'streamid?key=value'.
+    * Target StreamKey for RTMP republishing, in the format of 'steamid?key=value'.
     */
     @SerializedName("StreamKey")
     @Expose
     private String StreamKey;
 
     /**
-     * Get Destination URL of RTMP push in the format of 'rtmp://domain/live'. 
-     * @return Url Destination URL of RTMP push in the format of 'rtmp://domain/live'.
+     * Get Destination Url for RTMP repush, in the format of 'RTMP://domain/live'. 
+     * @return Url Destination Url for RTMP repush, in the format of 'RTMP://domain/live'.
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * Set Destination URL of RTMP push in the format of 'rtmp://domain/live'.
-     * @param Url Destination URL of RTMP push in the format of 'rtmp://domain/live'.
+     * Set Destination Url for RTMP repush, in the format of 'RTMP://domain/live'.
+     * @param Url Destination Url for RTMP repush, in the format of 'RTMP://domain/live'.
      */
     public void setUrl(String Url) {
         this.Url = Url;
     }
 
     /**
-     * Get Destination `StreamKey` of RTMP push in the format of 'streamid?key=value'. 
-     * @return StreamKey Destination `StreamKey` of RTMP push in the format of 'streamid?key=value'.
+     * Get Target StreamKey for RTMP republishing, in the format of 'steamid?key=value'. 
+     * @return StreamKey Target StreamKey for RTMP republishing, in the format of 'steamid?key=value'.
      */
     public String getStreamKey() {
         return this.StreamKey;
     }
 
     /**
-     * Set Destination `StreamKey` of RTMP push in the format of 'streamid?key=value'.
-     * @param StreamKey Destination `StreamKey` of RTMP push in the format of 'streamid?key=value'.
+     * Set Target StreamKey for RTMP republishing, in the format of 'steamid?key=value'.
+     * @param StreamKey Target StreamKey for RTMP republishing, in the format of 'steamid?key=value'.
      */
     public void setStreamKey(String StreamKey) {
         this.StreamKey = StreamKey;

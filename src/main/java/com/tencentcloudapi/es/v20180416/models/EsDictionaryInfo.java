@@ -24,118 +24,210 @@ import java.util.HashMap;
 public class EsDictionaryInfo extends AbstractModel {
 
     /**
-    * List of non-stop words
+    * List of enabled word dictionaries
     */
     @SerializedName("MainDict")
     @Expose
     private DictInfo [] MainDict;
 
     /**
-    * List of stop words
+    * List of stopword dictionaries
     */
     @SerializedName("Stopwords")
     @Expose
     private DictInfo [] Stopwords;
 
     /**
-    * QQ dictionary list
+    * List of QQ word segmentation dictionaries
     */
     @SerializedName("QQDict")
     @Expose
     private DictInfo [] QQDict;
 
     /**
-    * Synonym dictionary list
+    * List of synonym dictionaries
     */
     @SerializedName("Synonym")
     @Expose
     private DictInfo [] Synonym;
 
     /**
-    * Update dictionary type
+    * Update the dictionary type
     */
     @SerializedName("UpdateType")
     @Expose
     private String UpdateType;
 
     /**
-     * Get List of non-stop words 
-     * @return MainDict List of non-stop words
+    * List of ansj enabled word dictionaries
+    */
+    @SerializedName("AnsjMain")
+    @Expose
+    private DictInfo [] AnsjMain;
+
+    /**
+    * List of ansj stopword dictionaries
+    */
+    @SerializedName("AnsjStop")
+    @Expose
+    private DictInfo [] AnsjStop;
+
+    /**
+    * List of ansj ambiguity lexicons
+    */
+    @SerializedName("AnsjAmbiguity")
+    @Expose
+    private DictInfo [] AnsjAmbiguity;
+
+    /**
+    * List of ansj synonym dictionaries
+    */
+    @SerializedName("AnsjSynonyms")
+    @Expose
+    private DictInfo [] AnsjSynonyms;
+
+    /**
+     * Get List of enabled word dictionaries 
+     * @return MainDict List of enabled word dictionaries
      */
     public DictInfo [] getMainDict() {
         return this.MainDict;
     }
 
     /**
-     * Set List of non-stop words
-     * @param MainDict List of non-stop words
+     * Set List of enabled word dictionaries
+     * @param MainDict List of enabled word dictionaries
      */
     public void setMainDict(DictInfo [] MainDict) {
         this.MainDict = MainDict;
     }
 
     /**
-     * Get List of stop words 
-     * @return Stopwords List of stop words
+     * Get List of stopword dictionaries 
+     * @return Stopwords List of stopword dictionaries
      */
     public DictInfo [] getStopwords() {
         return this.Stopwords;
     }
 
     /**
-     * Set List of stop words
-     * @param Stopwords List of stop words
+     * Set List of stopword dictionaries
+     * @param Stopwords List of stopword dictionaries
      */
     public void setStopwords(DictInfo [] Stopwords) {
         this.Stopwords = Stopwords;
     }
 
     /**
-     * Get QQ dictionary list 
-     * @return QQDict QQ dictionary list
+     * Get List of QQ word segmentation dictionaries 
+     * @return QQDict List of QQ word segmentation dictionaries
      */
     public DictInfo [] getQQDict() {
         return this.QQDict;
     }
 
     /**
-     * Set QQ dictionary list
-     * @param QQDict QQ dictionary list
+     * Set List of QQ word segmentation dictionaries
+     * @param QQDict List of QQ word segmentation dictionaries
      */
     public void setQQDict(DictInfo [] QQDict) {
         this.QQDict = QQDict;
     }
 
     /**
-     * Get Synonym dictionary list 
-     * @return Synonym Synonym dictionary list
+     * Get List of synonym dictionaries 
+     * @return Synonym List of synonym dictionaries
      */
     public DictInfo [] getSynonym() {
         return this.Synonym;
     }
 
     /**
-     * Set Synonym dictionary list
-     * @param Synonym Synonym dictionary list
+     * Set List of synonym dictionaries
+     * @param Synonym List of synonym dictionaries
      */
     public void setSynonym(DictInfo [] Synonym) {
         this.Synonym = Synonym;
     }
 
     /**
-     * Get Update dictionary type 
-     * @return UpdateType Update dictionary type
+     * Get Update the dictionary type 
+     * @return UpdateType Update the dictionary type
      */
     public String getUpdateType() {
         return this.UpdateType;
     }
 
     /**
-     * Set Update dictionary type
-     * @param UpdateType Update dictionary type
+     * Set Update the dictionary type
+     * @param UpdateType Update the dictionary type
      */
     public void setUpdateType(String UpdateType) {
         this.UpdateType = UpdateType;
+    }
+
+    /**
+     * Get List of ansj enabled word dictionaries 
+     * @return AnsjMain List of ansj enabled word dictionaries
+     */
+    public DictInfo [] getAnsjMain() {
+        return this.AnsjMain;
+    }
+
+    /**
+     * Set List of ansj enabled word dictionaries
+     * @param AnsjMain List of ansj enabled word dictionaries
+     */
+    public void setAnsjMain(DictInfo [] AnsjMain) {
+        this.AnsjMain = AnsjMain;
+    }
+
+    /**
+     * Get List of ansj stopword dictionaries 
+     * @return AnsjStop List of ansj stopword dictionaries
+     */
+    public DictInfo [] getAnsjStop() {
+        return this.AnsjStop;
+    }
+
+    /**
+     * Set List of ansj stopword dictionaries
+     * @param AnsjStop List of ansj stopword dictionaries
+     */
+    public void setAnsjStop(DictInfo [] AnsjStop) {
+        this.AnsjStop = AnsjStop;
+    }
+
+    /**
+     * Get List of ansj ambiguity lexicons 
+     * @return AnsjAmbiguity List of ansj ambiguity lexicons
+     */
+    public DictInfo [] getAnsjAmbiguity() {
+        return this.AnsjAmbiguity;
+    }
+
+    /**
+     * Set List of ansj ambiguity lexicons
+     * @param AnsjAmbiguity List of ansj ambiguity lexicons
+     */
+    public void setAnsjAmbiguity(DictInfo [] AnsjAmbiguity) {
+        this.AnsjAmbiguity = AnsjAmbiguity;
+    }
+
+    /**
+     * Get List of ansj synonym dictionaries 
+     * @return AnsjSynonyms List of ansj synonym dictionaries
+     */
+    public DictInfo [] getAnsjSynonyms() {
+        return this.AnsjSynonyms;
+    }
+
+    /**
+     * Set List of ansj synonym dictionaries
+     * @param AnsjSynonyms List of ansj synonym dictionaries
+     */
+    public void setAnsjSynonyms(DictInfo [] AnsjSynonyms) {
+        this.AnsjSynonyms = AnsjSynonyms;
     }
 
     public EsDictionaryInfo() {
@@ -173,6 +265,30 @@ public class EsDictionaryInfo extends AbstractModel {
         if (source.UpdateType != null) {
             this.UpdateType = new String(source.UpdateType);
         }
+        if (source.AnsjMain != null) {
+            this.AnsjMain = new DictInfo[source.AnsjMain.length];
+            for (int i = 0; i < source.AnsjMain.length; i++) {
+                this.AnsjMain[i] = new DictInfo(source.AnsjMain[i]);
+            }
+        }
+        if (source.AnsjStop != null) {
+            this.AnsjStop = new DictInfo[source.AnsjStop.length];
+            for (int i = 0; i < source.AnsjStop.length; i++) {
+                this.AnsjStop[i] = new DictInfo(source.AnsjStop[i]);
+            }
+        }
+        if (source.AnsjAmbiguity != null) {
+            this.AnsjAmbiguity = new DictInfo[source.AnsjAmbiguity.length];
+            for (int i = 0; i < source.AnsjAmbiguity.length; i++) {
+                this.AnsjAmbiguity[i] = new DictInfo(source.AnsjAmbiguity[i]);
+            }
+        }
+        if (source.AnsjSynonyms != null) {
+            this.AnsjSynonyms = new DictInfo[source.AnsjSynonyms.length];
+            for (int i = 0; i < source.AnsjSynonyms.length; i++) {
+                this.AnsjSynonyms[i] = new DictInfo(source.AnsjSynonyms[i]);
+            }
+        }
     }
 
 
@@ -185,6 +301,10 @@ public class EsDictionaryInfo extends AbstractModel {
         this.setParamArrayObj(map, prefix + "QQDict.", this.QQDict);
         this.setParamArrayObj(map, prefix + "Synonym.", this.Synonym);
         this.setParamSimple(map, prefix + "UpdateType", this.UpdateType);
+        this.setParamArrayObj(map, prefix + "AnsjMain.", this.AnsjMain);
+        this.setParamArrayObj(map, prefix + "AnsjStop.", this.AnsjStop);
+        this.setParamArrayObj(map, prefix + "AnsjAmbiguity.", this.AnsjAmbiguity);
+        this.setParamArrayObj(map, prefix + "AnsjSynonyms.", this.AnsjSynonyms);
 
     }
 }

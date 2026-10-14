@@ -50,6 +50,17 @@ public class OcrClient extends AbstractClient{
     }
 
     /**
+     *This API retrieves a token before each call to the OCR SDK verification service. Save the token to initiate the verification process and retrieve the verification result after the process completes.
+     * @param req ApplyOcrTokenRequest
+     * @return ApplyOcrTokenResponse
+     * @throws TencentCloudSDKException
+     */
+    public ApplyOcrTokenResponse ApplyOcrToken(ApplyOcrTokenRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ApplyOcrToken", ApplyOcrTokenResponse.class);
+    }
+
+    /**
      *This API supports identifying and extracting field information in structured scenarios such as complex scenarios and multiple formats. Key scenarios include: finance, health care, transportation, travel, insurance. Click [experience now](https://ocrdemo.cloud.tencent.com/).
 This API is used to set the alias SmartStructuralPro.
 
@@ -106,6 +117,17 @@ This API is not fully available for the time being. For more information, please
     public GetCardVerificationExternalResultResponse GetCardVerificationExternalResult(GetCardVerificationExternalResultRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "GetCardVerificationExternalResult", GetCardVerificationExternalResultResponse.class);
+    }
+
+    /**
+     *This API retrieves the SDK verification result.
+     * @param req GetOcrVerificationResultRequest
+     * @return GetOcrVerificationResultResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetOcrVerificationResultResponse GetOcrVerificationResult(GetOcrVerificationResultRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetOcrVerificationResult", GetOcrVerificationResultResponse.class);
     }
 
     /**
@@ -380,7 +402,9 @@ As shown in the table below. <table style="width:650px"> <thead> <tr> <th width=
     }
 
     /**
-     *This API is used to recognize the fields on a Thai identity card, including name in Thai, name in English, address, date of birth, identification number, date of issue, and date of expiry.
+     *Domain name for API request: ocr.intl.tencentcloudapi.com.
+
+This API is used to recognize the fields on a Thai identity card, including name in Thai, name in English, address, date of birth, identification number, date of issue, and date of expiry.
 
 A maximum of 10 requests can be initiated per second for this API.
      * @param req RecognizeThaiIDCardOCRRequest

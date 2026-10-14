@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class AiReviewPoliticalOcrTaskOutput extends AbstractModel {
 
     /**
-    * Ocr text sensitivity score, ranging from 0 to 100.
+    * Sensitive score of the Ocr text. Value range: 0–100.
     */
     @SerializedName("Confidence")
     @Expose
     private Float Confidence;
 
     /**
-    * Ocr text sensitive result recommendation, value ranges from...to...
+    * Sensitive result suggestions for Ocr text. Value range:
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
@@ -41,34 +41,34 @@ public class AiReviewPoliticalOcrTaskOutput extends AbstractModel {
     private String Suggestion;
 
     /**
-    * Video segment list with suspect Ocr text sensitivity.
+    * List of video segments with sensitive Ocr text.
     */
     @SerializedName("SegmentSet")
     @Expose
     private MediaContentReviewOcrTextSegmentItem [] SegmentSet;
 
     /**
-     * Get Ocr text sensitivity score, ranging from 0 to 100. 
-     * @return Confidence Ocr text sensitivity score, ranging from 0 to 100.
+     * Get Sensitive score of the Ocr text. Value range: 0–100. 
+     * @return Confidence Sensitive score of the Ocr text. Value range: 0–100.
      */
     public Float getConfidence() {
         return this.Confidence;
     }
 
     /**
-     * Set Ocr text sensitivity score, ranging from 0 to 100.
-     * @param Confidence Ocr text sensitivity score, ranging from 0 to 100.
+     * Set Sensitive score of the Ocr text. Value range: 0–100.
+     * @param Confidence Sensitive score of the Ocr text. Value range: 0–100.
      */
     public void setConfidence(Float Confidence) {
         this.Confidence = Confidence;
     }
 
     /**
-     * Get Ocr text sensitive result recommendation, value ranges from...to...
+     * Get Sensitive result suggestions for Ocr text. Value range:
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li> 
-     * @return Suggestion Ocr text sensitive result recommendation, value ranges from...to...
+     * @return Suggestion Sensitive result suggestions for Ocr text. Value range:
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
@@ -78,11 +78,11 @@ public class AiReviewPoliticalOcrTaskOutput extends AbstractModel {
     }
 
     /**
-     * Set Ocr text sensitive result recommendation, value ranges from...to...
+     * Set Sensitive result suggestions for Ocr text. Value range:
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
-     * @param Suggestion Ocr text sensitive result recommendation, value ranges from...to...
+     * @param Suggestion Sensitive result suggestions for Ocr text. Value range:
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
@@ -92,16 +92,16 @@ public class AiReviewPoliticalOcrTaskOutput extends AbstractModel {
     }
 
     /**
-     * Get Video segment list with suspect Ocr text sensitivity. 
-     * @return SegmentSet Video segment list with suspect Ocr text sensitivity.
+     * Get List of video segments with sensitive Ocr text. 
+     * @return SegmentSet List of video segments with sensitive Ocr text.
      */
     public MediaContentReviewOcrTextSegmentItem [] getSegmentSet() {
         return this.SegmentSet;
     }
 
     /**
-     * Set Video segment list with suspect Ocr text sensitivity.
-     * @param SegmentSet Video segment list with suspect Ocr text sensitivity.
+     * Set List of video segments with sensitive Ocr text.
+     * @param SegmentSet List of video segments with sensitive Ocr text.
      */
     public void setSegmentSet(MediaContentReviewOcrTextSegmentItem [] SegmentSet) {
         this.SegmentSet = SegmentSet;

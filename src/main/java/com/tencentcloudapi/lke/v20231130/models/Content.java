@@ -24,394 +24,440 @@ import java.util.HashMap;
 public class Content extends AbstractModel {
 
     /**
-    * 
+    * <p>Message content type<br>text: text<br>image: image<br>file: file<br>option_cards: tabs<br>custom_params: custom business parameters<br>sandbox: cloud desktop<br>custom_variables: custom input parameters<br>web_search: web search content<br>file_collection: file collection information<br>widget: widget info<br>widget_action: client-side widget action information</p>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * 
+    * <p>Text content</p>
     */
     @SerializedName("Text")
     @Expose
     private String Text;
 
     /**
-    * 
+    * <p>Reference info.</p>
     */
     @SerializedName("QuoteInfos")
     @Expose
     private QuoteInfo [] QuoteInfos;
 
     /**
-    * 
+    * <p>Reference information</p>
     */
     @SerializedName("References")
     @Expose
     private ContentReference [] References;
 
     /**
-    * 
+    * <p>Image information.</p>
     */
     @SerializedName("Image")
     @Expose
     private ImageInfoContent Image;
 
     /**
-    * 
+    * <p>File information</p>
     */
     @SerializedName("File")
     @Expose
     private FileInfoContent File;
 
     /**
-    * 
+    * <p>Tab info.</p>
     */
     @SerializedName("OptionCards")
     @Expose
     private String [] OptionCards;
 
     /**
-    * 
+    * <p>User-customized business parameter information.</p>
     */
     @SerializedName("CustomParams")
     @Expose
     private String [] CustomParams;
 
     /**
-    * 
+    * <p>Custom Variable</p>
     */
     @SerializedName("CustomVariables")
     @Expose
     private String [] CustomVariables;
 
     /**
-    * 
+    * <p>Sandbox information</p>
     */
     @SerializedName("Sandbox")
     @Expose
     private SandboxContent Sandbox;
 
     /**
-    * 
+    * <p>Web page search content</p>
     */
     @SerializedName("WebSearch")
     @Expose
     private WebSearchContent WebSearch;
 
     /**
-    * 
+    * <p>File information collection</p>
     */
     @SerializedName("FileCollection")
     @Expose
     private FileCollection FileCollection;
 
     /**
-    * 
+    * <p>Widget information.</p>
     */
     @SerializedName("Widget")
     @Expose
     private Widget Widget;
 
     /**
-    * 
+    * <p>Widget action information</p>
     */
     @SerializedName("WidgetAction")
     @Expose
     private WidgetAction WidgetAction;
 
     /**
-    * 
+    * <p>Task List</p>
     */
     @SerializedName("Tasks")
     @Expose
     private AgentTask [] Tasks;
 
     /**
-    * 
+    * <p>Questionnaire information</p>
     */
     @SerializedName("Questionnaire")
     @Expose
     private Questionnaire Questionnaire;
 
     /**
-    * 
+    * <p>Tab mode</p>
     */
     @SerializedName("OptionMode")
     @Expose
     private Long OptionMode;
 
     /**
-     * Get  
-     * @return Type 
+    * <p>MCP APP information returned</p>
+    */
+    @SerializedName("McpApp")
+    @Expose
+    private ConversationMcpApp McpApp;
+
+    /**
+    * <p>Application or workflow resource product</p>
+    */
+    @SerializedName("Resource")
+    @Expose
+    private ConversationResourceArtifact Resource;
+
+    /**
+     * Get <p>Message content type<br>text: text<br>image: image<br>file: file<br>option_cards: tabs<br>custom_params: custom business parameters<br>sandbox: cloud desktop<br>custom_variables: custom input parameters<br>web_search: web search content<br>file_collection: file collection information<br>widget: widget info<br>widget_action: client-side widget action information</p> 
+     * @return Type <p>Message content type<br>text: text<br>image: image<br>file: file<br>option_cards: tabs<br>custom_params: custom business parameters<br>sandbox: cloud desktop<br>custom_variables: custom input parameters<br>web_search: web search content<br>file_collection: file collection information<br>widget: widget info<br>widget_action: client-side widget action information</p>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 
-     * @param Type 
+     * Set <p>Message content type<br>text: text<br>image: image<br>file: file<br>option_cards: tabs<br>custom_params: custom business parameters<br>sandbox: cloud desktop<br>custom_variables: custom input parameters<br>web_search: web search content<br>file_collection: file collection information<br>widget: widget info<br>widget_action: client-side widget action information</p>
+     * @param Type <p>Message content type<br>text: text<br>image: image<br>file: file<br>option_cards: tabs<br>custom_params: custom business parameters<br>sandbox: cloud desktop<br>custom_variables: custom input parameters<br>web_search: web search content<br>file_collection: file collection information<br>widget: widget info<br>widget_action: client-side widget action information</p>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get  
-     * @return Text 
+     * Get <p>Text content</p> 
+     * @return Text <p>Text content</p>
      */
     public String getText() {
         return this.Text;
     }
 
     /**
-     * Set 
-     * @param Text 
+     * Set <p>Text content</p>
+     * @param Text <p>Text content</p>
      */
     public void setText(String Text) {
         this.Text = Text;
     }
 
     /**
-     * Get  
-     * @return QuoteInfos 
+     * Get <p>Reference info.</p> 
+     * @return QuoteInfos <p>Reference info.</p>
      */
     public QuoteInfo [] getQuoteInfos() {
         return this.QuoteInfos;
     }
 
     /**
-     * Set 
-     * @param QuoteInfos 
+     * Set <p>Reference info.</p>
+     * @param QuoteInfos <p>Reference info.</p>
      */
     public void setQuoteInfos(QuoteInfo [] QuoteInfos) {
         this.QuoteInfos = QuoteInfos;
     }
 
     /**
-     * Get  
-     * @return References 
+     * Get <p>Reference information</p> 
+     * @return References <p>Reference information</p>
      */
     public ContentReference [] getReferences() {
         return this.References;
     }
 
     /**
-     * Set 
-     * @param References 
+     * Set <p>Reference information</p>
+     * @param References <p>Reference information</p>
      */
     public void setReferences(ContentReference [] References) {
         this.References = References;
     }
 
     /**
-     * Get  
-     * @return Image 
+     * Get <p>Image information.</p> 
+     * @return Image <p>Image information.</p>
      */
     public ImageInfoContent getImage() {
         return this.Image;
     }
 
     /**
-     * Set 
-     * @param Image 
+     * Set <p>Image information.</p>
+     * @param Image <p>Image information.</p>
      */
     public void setImage(ImageInfoContent Image) {
         this.Image = Image;
     }
 
     /**
-     * Get  
-     * @return File 
+     * Get <p>File information</p> 
+     * @return File <p>File information</p>
      */
     public FileInfoContent getFile() {
         return this.File;
     }
 
     /**
-     * Set 
-     * @param File 
+     * Set <p>File information</p>
+     * @param File <p>File information</p>
      */
     public void setFile(FileInfoContent File) {
         this.File = File;
     }
 
     /**
-     * Get  
-     * @return OptionCards 
+     * Get <p>Tab info.</p> 
+     * @return OptionCards <p>Tab info.</p>
      */
     public String [] getOptionCards() {
         return this.OptionCards;
     }
 
     /**
-     * Set 
-     * @param OptionCards 
+     * Set <p>Tab info.</p>
+     * @param OptionCards <p>Tab info.</p>
      */
     public void setOptionCards(String [] OptionCards) {
         this.OptionCards = OptionCards;
     }
 
     /**
-     * Get  
-     * @return CustomParams 
+     * Get <p>User-customized business parameter information.</p> 
+     * @return CustomParams <p>User-customized business parameter information.</p>
      */
     public String [] getCustomParams() {
         return this.CustomParams;
     }
 
     /**
-     * Set 
-     * @param CustomParams 
+     * Set <p>User-customized business parameter information.</p>
+     * @param CustomParams <p>User-customized business parameter information.</p>
      */
     public void setCustomParams(String [] CustomParams) {
         this.CustomParams = CustomParams;
     }
 
     /**
-     * Get  
-     * @return CustomVariables 
+     * Get <p>Custom Variable</p> 
+     * @return CustomVariables <p>Custom Variable</p>
      */
     public String [] getCustomVariables() {
         return this.CustomVariables;
     }
 
     /**
-     * Set 
-     * @param CustomVariables 
+     * Set <p>Custom Variable</p>
+     * @param CustomVariables <p>Custom Variable</p>
      */
     public void setCustomVariables(String [] CustomVariables) {
         this.CustomVariables = CustomVariables;
     }
 
     /**
-     * Get  
-     * @return Sandbox 
+     * Get <p>Sandbox information</p> 
+     * @return Sandbox <p>Sandbox information</p>
      */
     public SandboxContent getSandbox() {
         return this.Sandbox;
     }
 
     /**
-     * Set 
-     * @param Sandbox 
+     * Set <p>Sandbox information</p>
+     * @param Sandbox <p>Sandbox information</p>
      */
     public void setSandbox(SandboxContent Sandbox) {
         this.Sandbox = Sandbox;
     }
 
     /**
-     * Get  
-     * @return WebSearch 
+     * Get <p>Web page search content</p> 
+     * @return WebSearch <p>Web page search content</p>
      */
     public WebSearchContent getWebSearch() {
         return this.WebSearch;
     }
 
     /**
-     * Set 
-     * @param WebSearch 
+     * Set <p>Web page search content</p>
+     * @param WebSearch <p>Web page search content</p>
      */
     public void setWebSearch(WebSearchContent WebSearch) {
         this.WebSearch = WebSearch;
     }
 
     /**
-     * Get  
-     * @return FileCollection 
+     * Get <p>File information collection</p> 
+     * @return FileCollection <p>File information collection</p>
      */
     public FileCollection getFileCollection() {
         return this.FileCollection;
     }
 
     /**
-     * Set 
-     * @param FileCollection 
+     * Set <p>File information collection</p>
+     * @param FileCollection <p>File information collection</p>
      */
     public void setFileCollection(FileCollection FileCollection) {
         this.FileCollection = FileCollection;
     }
 
     /**
-     * Get  
-     * @return Widget 
+     * Get <p>Widget information.</p> 
+     * @return Widget <p>Widget information.</p>
      */
     public Widget getWidget() {
         return this.Widget;
     }
 
     /**
-     * Set 
-     * @param Widget 
+     * Set <p>Widget information.</p>
+     * @param Widget <p>Widget information.</p>
      */
     public void setWidget(Widget Widget) {
         this.Widget = Widget;
     }
 
     /**
-     * Get  
-     * @return WidgetAction 
+     * Get <p>Widget action information</p> 
+     * @return WidgetAction <p>Widget action information</p>
      */
     public WidgetAction getWidgetAction() {
         return this.WidgetAction;
     }
 
     /**
-     * Set 
-     * @param WidgetAction 
+     * Set <p>Widget action information</p>
+     * @param WidgetAction <p>Widget action information</p>
      */
     public void setWidgetAction(WidgetAction WidgetAction) {
         this.WidgetAction = WidgetAction;
     }
 
     /**
-     * Get  
-     * @return Tasks 
+     * Get <p>Task List</p> 
+     * @return Tasks <p>Task List</p>
      */
     public AgentTask [] getTasks() {
         return this.Tasks;
     }
 
     /**
-     * Set 
-     * @param Tasks 
+     * Set <p>Task List</p>
+     * @param Tasks <p>Task List</p>
      */
     public void setTasks(AgentTask [] Tasks) {
         this.Tasks = Tasks;
     }
 
     /**
-     * Get  
-     * @return Questionnaire 
+     * Get <p>Questionnaire information</p> 
+     * @return Questionnaire <p>Questionnaire information</p>
      */
     public Questionnaire getQuestionnaire() {
         return this.Questionnaire;
     }
 
     /**
-     * Set 
-     * @param Questionnaire 
+     * Set <p>Questionnaire information</p>
+     * @param Questionnaire <p>Questionnaire information</p>
      */
     public void setQuestionnaire(Questionnaire Questionnaire) {
         this.Questionnaire = Questionnaire;
     }
 
     /**
-     * Get  
-     * @return OptionMode 
+     * Get <p>Tab mode</p> 
+     * @return OptionMode <p>Tab mode</p>
      */
     public Long getOptionMode() {
         return this.OptionMode;
     }
 
     /**
-     * Set 
-     * @param OptionMode 
+     * Set <p>Tab mode</p>
+     * @param OptionMode <p>Tab mode</p>
      */
     public void setOptionMode(Long OptionMode) {
         this.OptionMode = OptionMode;
+    }
+
+    /**
+     * Get <p>MCP APP information returned</p> 
+     * @return McpApp <p>MCP APP information returned</p>
+     */
+    public ConversationMcpApp getMcpApp() {
+        return this.McpApp;
+    }
+
+    /**
+     * Set <p>MCP APP information returned</p>
+     * @param McpApp <p>MCP APP information returned</p>
+     */
+    public void setMcpApp(ConversationMcpApp McpApp) {
+        this.McpApp = McpApp;
+    }
+
+    /**
+     * Get <p>Application or workflow resource product</p> 
+     * @return Resource <p>Application or workflow resource product</p>
+     */
+    public ConversationResourceArtifact getResource() {
+        return this.Resource;
+    }
+
+    /**
+     * Set <p>Application or workflow resource product</p>
+     * @param Resource <p>Application or workflow resource product</p>
+     */
+    public void setResource(ConversationResourceArtifact Resource) {
+        this.Resource = Resource;
     }
 
     public Content() {
@@ -491,6 +537,12 @@ public class Content extends AbstractModel {
         if (source.OptionMode != null) {
             this.OptionMode = new Long(source.OptionMode);
         }
+        if (source.McpApp != null) {
+            this.McpApp = new ConversationMcpApp(source.McpApp);
+        }
+        if (source.Resource != null) {
+            this.Resource = new ConversationResourceArtifact(source.Resource);
+        }
     }
 
 
@@ -515,6 +567,8 @@ public class Content extends AbstractModel {
         this.setParamArrayObj(map, prefix + "Tasks.", this.Tasks);
         this.setParamObj(map, prefix + "Questionnaire.", this.Questionnaire);
         this.setParamSimple(map, prefix + "OptionMode", this.OptionMode);
+        this.setParamObj(map, prefix + "McpApp.", this.McpApp);
+        this.setParamObj(map, prefix + "Resource.", this.Resource);
 
     }
 }

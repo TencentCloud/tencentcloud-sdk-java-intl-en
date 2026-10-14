@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class MediaSnapshotByTimePicInfoItem extends AbstractModel {
 
     /**
-    * The screenshot corresponds to the time offset in the video file, expressed in seconds.
+    * Time offset of this screenshot in the video file, in seconds.
     */
     @SerializedName("TimeOffset")
     @Expose
@@ -38,23 +38,23 @@ public class MediaSnapshotByTimePicInfoItem extends AbstractModel {
     private String Path;
 
     /**
-    * If a screenshot is watermarked, list of template IDs used for watermarking.
+    * List of template IDs for watermarking if the screenshot is watermarked.
     */
     @SerializedName("WaterMarkDefinition")
     @Expose
     private Long [] WaterMarkDefinition;
 
     /**
-     * Get The screenshot corresponds to the time offset in the video file, expressed in seconds. 
-     * @return TimeOffset The screenshot corresponds to the time offset in the video file, expressed in seconds.
+     * Get Time offset of this screenshot in the video file, in seconds. 
+     * @return TimeOffset Time offset of this screenshot in the video file, in seconds.
      */
     public Float getTimeOffset() {
         return this.TimeOffset;
     }
 
     /**
-     * Set The screenshot corresponds to the time offset in the video file, expressed in seconds.
-     * @param TimeOffset The screenshot corresponds to the time offset in the video file, expressed in seconds.
+     * Set Time offset of this screenshot in the video file, in seconds.
+     * @param TimeOffset Time offset of this screenshot in the video file, in seconds.
      */
     public void setTimeOffset(Float TimeOffset) {
         this.TimeOffset = TimeOffset;
@@ -77,16 +77,16 @@ public class MediaSnapshotByTimePicInfoItem extends AbstractModel {
     }
 
     /**
-     * Get If a screenshot is watermarked, list of template IDs used for watermarking. 
-     * @return WaterMarkDefinition If a screenshot is watermarked, list of template IDs used for watermarking.
+     * Get List of template IDs for watermarking if the screenshot is watermarked. 
+     * @return WaterMarkDefinition List of template IDs for watermarking if the screenshot is watermarked.
      */
     public Long [] getWaterMarkDefinition() {
         return this.WaterMarkDefinition;
     }
 
     /**
-     * Set If a screenshot is watermarked, list of template IDs used for watermarking.
-     * @param WaterMarkDefinition If a screenshot is watermarked, list of template IDs used for watermarking.
+     * Set List of template IDs for watermarking if the screenshot is watermarked.
+     * @param WaterMarkDefinition List of template IDs for watermarking if the screenshot is watermarked.
      */
     public void setWaterMarkDefinition(Long [] WaterMarkDefinition) {
         this.WaterMarkDefinition = WaterMarkDefinition;

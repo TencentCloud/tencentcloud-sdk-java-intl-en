@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class InputAddress extends AbstractModel {
 
     /**
-    * Input address IP.
+    * IP of the input address.
     */
     @SerializedName("Ip")
     @Expose
     private String Ip;
 
     /**
-    * Input address port.
+    * The port of the input address.
     */
     @SerializedName("Port")
     @Expose
     private Long Port;
 
     /**
-     * Get Input address IP. 
-     * @return Ip Input address IP.
+     * Get IP of the input address. 
+     * @return Ip IP of the input address.
      */
     public String getIp() {
         return this.Ip;
     }
 
     /**
-     * Set Input address IP.
-     * @param Ip Input address IP.
+     * Set IP of the input address.
+     * @param Ip IP of the input address.
      */
     public void setIp(String Ip) {
         this.Ip = Ip;
     }
 
     /**
-     * Get Input address port. 
-     * @return Port Input address port.
+     * Get The port of the input address. 
+     * @return Port The port of the input address.
      */
     public Long getPort() {
         return this.Port;
     }
 
     /**
-     * Set Input address port.
-     * @param Port Input address port.
+     * Set The port of the input address.
+     * @param Port The port of the input address.
      */
     public void setPort(Long Port) {
         this.Port = Port;

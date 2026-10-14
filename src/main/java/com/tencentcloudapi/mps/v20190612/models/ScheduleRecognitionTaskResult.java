@@ -52,14 +52,14 @@ public class ScheduleRecognitionTaskResult extends AbstractModel {
     private String Message;
 
     /**
-    * Recognition task input.
+    * Input of the recognition task.
     */
     @SerializedName("Input")
     @Expose
     private AiRecognitionTaskInput Input;
 
     /**
-    * Recognition task output.
+    * Output of the identification task.
     */
     @SerializedName("Output")
     @Expose
@@ -144,32 +144,32 @@ public class ScheduleRecognitionTaskResult extends AbstractModel {
     }
 
     /**
-     * Get Recognition task input. 
-     * @return Input Recognition task input.
+     * Get Input of the recognition task. 
+     * @return Input Input of the recognition task.
      */
     public AiRecognitionTaskInput getInput() {
         return this.Input;
     }
 
     /**
-     * Set Recognition task input.
-     * @param Input Recognition task input.
+     * Set Input of the recognition task.
+     * @param Input Input of the recognition task.
      */
     public void setInput(AiRecognitionTaskInput Input) {
         this.Input = Input;
     }
 
     /**
-     * Get Recognition task output. 
-     * @return Output Recognition task output.
+     * Get Output of the identification task. 
+     * @return Output Output of the identification task.
      */
     public AiRecognitionResult [] getOutput() {
         return this.Output;
     }
 
     /**
-     * Set Recognition task output.
-     * @param Output Recognition task output.
+     * Set Output of the identification task.
+     * @param Output Output of the identification task.
      */
     public void setOutput(AiRecognitionResult [] Output) {
         this.Output = Output;

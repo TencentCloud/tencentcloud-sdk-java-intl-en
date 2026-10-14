@@ -38,14 +38,14 @@ public class LiveStreamAiReviewImagePornResult extends AbstractModel {
     private Float EndPtsTime;
 
     /**
-    * Suspected segment porn score.
+    * Pornography score of the suspected segment.
     */
     @SerializedName("Confidence")
     @Expose
     private Float Confidence;
 
     /**
-    * Pornographic result suggestion for suspected segment, value ranges from...to...
+    * Porn detection result suggestion for the suspected segment. Pass in the range of [min,max].
 <li>pass</li>
 <li>review</li>
 <li>block</li>
@@ -55,10 +55,10 @@ public class LiveStreamAiReviewImagePornResult extends AbstractModel {
     private String Suggestion;
 
     /**
-    * Pornographic result tag for video, value ranges from...to...
+    * Pornographic result tag of the video. Value range:
 <li>porn: pornography.</li>
 <li>sexy: sexy.</li>
-<li>vulgar: vulgarity.</li>
+<li>vulgar: vulgar.</li>
 <li>intimacy: intimate behavior.</li>
     */
     @SerializedName("Label")
@@ -66,15 +66,15 @@ public class LiveStreamAiReviewImagePornResult extends AbstractModel {
     private String Label;
 
     /**
-    * Suspected image URL (Images are not retained permanently upon arrival)
-The image will be deleted after the PicUrlExpireTime time point.
+    * Suspected image URL (images are not retained permanently and will be deleted upon reaching
+Images will be deleted after the PicUrlExpireTime time point).
     */
     @SerializedName("Url")
     @Expose
     private String Url;
 
     /**
-    * Expiration time of the suspected image URL, using the ISO date format (https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
+    * Expiration time of the suspected image URL, using the [ISO date format](https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
     */
     @SerializedName("PicUrlExpireTime")
     @Expose
@@ -113,27 +113,27 @@ The image will be deleted after the PicUrlExpireTime time point.
     }
 
     /**
-     * Get Suspected segment porn score. 
-     * @return Confidence Suspected segment porn score.
+     * Get Pornography score of the suspected segment. 
+     * @return Confidence Pornography score of the suspected segment.
      */
     public Float getConfidence() {
         return this.Confidence;
     }
 
     /**
-     * Set Suspected segment porn score.
-     * @param Confidence Suspected segment porn score.
+     * Set Pornography score of the suspected segment.
+     * @param Confidence Pornography score of the suspected segment.
      */
     public void setConfidence(Float Confidence) {
         this.Confidence = Confidence;
     }
 
     /**
-     * Get Pornographic result suggestion for suspected segment, value ranges from...to...
+     * Get Porn detection result suggestion for the suspected segment. Pass in the range of [min,max].
 <li>pass</li>
 <li>review</li>
 <li>block</li> 
-     * @return Suggestion Pornographic result suggestion for suspected segment, value ranges from...to...
+     * @return Suggestion Porn detection result suggestion for the suspected segment. Pass in the range of [min,max].
 <li>pass</li>
 <li>review</li>
 <li>block</li>
@@ -143,11 +143,11 @@ The image will be deleted after the PicUrlExpireTime time point.
     }
 
     /**
-     * Set Pornographic result suggestion for suspected segment, value ranges from...to...
+     * Set Porn detection result suggestion for the suspected segment. Pass in the range of [min,max].
 <li>pass</li>
 <li>review</li>
 <li>block</li>
-     * @param Suggestion Pornographic result suggestion for suspected segment, value ranges from...to...
+     * @param Suggestion Porn detection result suggestion for the suspected segment. Pass in the range of [min,max].
 <li>pass</li>
 <li>review</li>
 <li>block</li>
@@ -157,15 +157,15 @@ The image will be deleted after the PicUrlExpireTime time point.
     }
 
     /**
-     * Get Pornographic result tag for video, value ranges from...to...
+     * Get Pornographic result tag of the video. Value range:
 <li>porn: pornography.</li>
 <li>sexy: sexy.</li>
-<li>vulgar: vulgarity.</li>
+<li>vulgar: vulgar.</li>
 <li>intimacy: intimate behavior.</li> 
-     * @return Label Pornographic result tag for video, value ranges from...to...
+     * @return Label Pornographic result tag of the video. Value range:
 <li>porn: pornography.</li>
 <li>sexy: sexy.</li>
-<li>vulgar: vulgarity.</li>
+<li>vulgar: vulgar.</li>
 <li>intimacy: intimate behavior.</li>
      */
     public String getLabel() {
@@ -173,15 +173,15 @@ The image will be deleted after the PicUrlExpireTime time point.
     }
 
     /**
-     * Set Pornographic result tag for video, value ranges from...to...
+     * Set Pornographic result tag of the video. Value range:
 <li>porn: pornography.</li>
 <li>sexy: sexy.</li>
-<li>vulgar: vulgarity.</li>
+<li>vulgar: vulgar.</li>
 <li>intimacy: intimate behavior.</li>
-     * @param Label Pornographic result tag for video, value ranges from...to...
+     * @param Label Pornographic result tag of the video. Value range:
 <li>porn: pornography.</li>
 <li>sexy: sexy.</li>
-<li>vulgar: vulgarity.</li>
+<li>vulgar: vulgar.</li>
 <li>intimacy: intimate behavior.</li>
      */
     public void setLabel(String Label) {
@@ -189,36 +189,36 @@ The image will be deleted after the PicUrlExpireTime time point.
     }
 
     /**
-     * Get Suspected image URL (Images are not retained permanently upon arrival)
-The image will be deleted after the PicUrlExpireTime time point. 
-     * @return Url Suspected image URL (Images are not retained permanently upon arrival)
-The image will be deleted after the PicUrlExpireTime time point.
+     * Get Suspected image URL (images are not retained permanently and will be deleted upon reaching
+Images will be deleted after the PicUrlExpireTime time point). 
+     * @return Url Suspected image URL (images are not retained permanently and will be deleted upon reaching
+Images will be deleted after the PicUrlExpireTime time point).
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * Set Suspected image URL (Images are not retained permanently upon arrival)
-The image will be deleted after the PicUrlExpireTime time point.
-     * @param Url Suspected image URL (Images are not retained permanently upon arrival)
-The image will be deleted after the PicUrlExpireTime time point.
+     * Set Suspected image URL (images are not retained permanently and will be deleted upon reaching
+Images will be deleted after the PicUrlExpireTime time point).
+     * @param Url Suspected image URL (images are not retained permanently and will be deleted upon reaching
+Images will be deleted after the PicUrlExpireTime time point).
      */
     public void setUrl(String Url) {
         this.Url = Url;
     }
 
     /**
-     * Get Expiration time of the suspected image URL, using the ISO date format (https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52). 
-     * @return PicUrlExpireTime Expiration time of the suspected image URL, using the ISO date format (https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
+     * Get Expiration time of the suspected image URL, using the [ISO date format](https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52). 
+     * @return PicUrlExpireTime Expiration time of the suspected image URL, using the [ISO date format](https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
      */
     public String getPicUrlExpireTime() {
         return this.PicUrlExpireTime;
     }
 
     /**
-     * Set Expiration time of the suspected image URL, using the ISO date format (https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
-     * @param PicUrlExpireTime Expiration time of the suspected image URL, using the ISO date format (https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
+     * Set Expiration time of the suspected image URL, using the [ISO date format](https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
+     * @param PicUrlExpireTime Expiration time of the suspected image URL, using the [ISO date format](https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
      */
     public void setPicUrlExpireTime(String PicUrlExpireTime) {
         this.PicUrlExpireTime = PicUrlExpireTime;

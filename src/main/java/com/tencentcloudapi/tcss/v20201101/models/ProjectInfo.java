@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class ProjectInfo extends AbstractModel {
 
     /**
-    * Project name
+    * Project name.
     */
     @SerializedName("ProjectName")
     @Expose
     private String ProjectName;
 
     /**
-    * Project ID
+    * Project ID.
     */
     @SerializedName("ProjectID")
     @Expose
     private Long ProjectID;
 
     /**
-     * Get Project name 
-     * @return ProjectName Project name
+     * Get Project name. 
+     * @return ProjectName Project name.
      */
     public String getProjectName() {
         return this.ProjectName;
     }
 
     /**
-     * Set Project name
-     * @param ProjectName Project name
+     * Set Project name.
+     * @param ProjectName Project name.
      */
     public void setProjectName(String ProjectName) {
         this.ProjectName = ProjectName;
     }
 
     /**
-     * Get Project ID 
-     * @return ProjectID Project ID
+     * Get Project ID. 
+     * @return ProjectID Project ID.
      */
     public Long getProjectID() {
         return this.ProjectID;
     }
 
     /**
-     * Set Project ID
-     * @param ProjectID Project ID
+     * Set Project ID.
+     * @param ProjectID Project ID.
      */
     public void setProjectID(Long ProjectID) {
         this.ProjectID = ProjectID;

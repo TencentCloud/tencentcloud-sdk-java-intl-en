@@ -24,302 +24,325 @@ import java.util.HashMap;
 public class MediaTranscodeItem extends AbstractModel {
 
     /**
-    * Target storage of the transcoded file.
+    * <p>Target storage for the transcoded file.</p>
     */
     @SerializedName("OutputStorage")
     @Expose
     private TaskOutputStorage OutputStorage;
 
     /**
-    * Video file path after transcoding.
+    * <p>Transcoded video file path.</p>
     */
     @SerializedName("Path")
     @Expose
     private String Path;
 
     /**
-    * Transcoding specification ID. Please refer to the transcoding parameter template (https://www.tencentcloud.com/document/product/862/37042?from_cn_redirect=1).
+    * <p>Transcoding specification ID. Please refer to <a href="https://www.tencentcloud.com/document/product/862/37042?from_cn_redirect=1">transcoding parameter template</a>.</p>
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-    * Sum of the average video stream bitrate and the average audio stream bit rate. Measurement unit: bps.
+    * <p>Sum of the mean video stream bitrate and the mean audio stream bitrate. Unit: bps.</p>
     */
     @SerializedName("Bitrate")
     @Expose
     private Long Bitrate;
 
     /**
-    * Maximum value of video stream height, measurement unit: px.
+    * <p>Maximum height of the video stream. Unit: px.</p>
     */
     @SerializedName("Height")
     @Expose
     private Long Height;
 
     /**
-    * Maximum value of the video stream width in px.
+    * <p>Maximum video stream width. Unit: px.</p>
     */
     @SerializedName("Width")
     @Expose
     private Long Width;
 
     /**
-    * Total size of media files (when the video is HLS, the size is the sum of m3u8 and ts file sizes), measurement unit: byte.
+    * <p>Total size of media files (for HLS videos, the size is the sum of m3u8 and ts file sizes), unit: byte.</p>
     */
     @SerializedName("Size")
     @Expose
     private Long Size;
 
     /**
-    * Video duration, in seconds.
+    * <p>Video duration, in seconds.</p>
     */
     @SerializedName("Duration")
     @Expose
     private Float Duration;
 
     /**
-    * Container type, such as m4a and mp4.
+    * <p>Container type, for example, m4a, mp4.</p>
     */
     @SerializedName("Container")
     @Expose
     private String Container;
 
     /**
-    * md5 value of the video.
+    * <p>md5 value of the video.</p>
     */
     @SerializedName("Md5")
     @Expose
     private String Md5;
 
     /**
-    * Audio stream information.
+    * <p>Audio stream information.</p>
     */
     @SerializedName("AudioStreamSet")
     @Expose
     private MediaAudioStreamItem [] AudioStreamSet;
 
     /**
-    * Video stream information.
+    * <p>Video stream information.</p>
     */
     @SerializedName("VideoStreamSet")
     @Expose
     private MediaVideoStreamItem [] VideoStreamSet;
 
     /**
-    * 
+    * <p>Video transcoding enhancement item descriptions and explanations</p><li>hdr: HDR configuration</li><li>wd_fps: Frame interpolation frame rate configuration</li><li>video_super_resolution: Super-resolution configuration</li><li>repair: Comprehensive enhancement configuration</li><li>denoise: Video noise reduction configuration</li><li>color_enhance: Color enhancement configuration</li><li>scratch: Scratches removal configuration</li><li>artifact: Artifacts removal (burrs) configuration</li><li>sharp: Detail enhancement configuration</li><li>low_light: Low-light enhancement configuration</li><li>face_enhance: Face enhancement configuration</li>
     */
     @SerializedName("CallBackExtInfo")
     @Expose
     private String CallBackExtInfo;
 
     /**
-     * Get Target storage of the transcoded file. 
-     * @return OutputStorage Target storage of the transcoded file.
+    * <p>MediaTranscodeItem</p>
+    */
+    @SerializedName("Usage")
+    @Expose
+    private MediaUsageItem Usage;
+
+    /**
+     * Get <p>Target storage for the transcoded file.</p> 
+     * @return OutputStorage <p>Target storage for the transcoded file.</p>
      */
     public TaskOutputStorage getOutputStorage() {
         return this.OutputStorage;
     }
 
     /**
-     * Set Target storage of the transcoded file.
-     * @param OutputStorage Target storage of the transcoded file.
+     * Set <p>Target storage for the transcoded file.</p>
+     * @param OutputStorage <p>Target storage for the transcoded file.</p>
      */
     public void setOutputStorage(TaskOutputStorage OutputStorage) {
         this.OutputStorage = OutputStorage;
     }
 
     /**
-     * Get Video file path after transcoding. 
-     * @return Path Video file path after transcoding.
+     * Get <p>Transcoded video file path.</p> 
+     * @return Path <p>Transcoded video file path.</p>
      */
     public String getPath() {
         return this.Path;
     }
 
     /**
-     * Set Video file path after transcoding.
-     * @param Path Video file path after transcoding.
+     * Set <p>Transcoded video file path.</p>
+     * @param Path <p>Transcoded video file path.</p>
      */
     public void setPath(String Path) {
         this.Path = Path;
     }
 
     /**
-     * Get Transcoding specification ID. Please refer to the transcoding parameter template (https://www.tencentcloud.com/document/product/862/37042?from_cn_redirect=1). 
-     * @return Definition Transcoding specification ID. Please refer to the transcoding parameter template (https://www.tencentcloud.com/document/product/862/37042?from_cn_redirect=1).
+     * Get <p>Transcoding specification ID. Please refer to <a href="https://www.tencentcloud.com/document/product/862/37042?from_cn_redirect=1">transcoding parameter template</a>.</p> 
+     * @return Definition <p>Transcoding specification ID. Please refer to <a href="https://www.tencentcloud.com/document/product/862/37042?from_cn_redirect=1">transcoding parameter template</a>.</p>
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set Transcoding specification ID. Please refer to the transcoding parameter template (https://www.tencentcloud.com/document/product/862/37042?from_cn_redirect=1).
-     * @param Definition Transcoding specification ID. Please refer to the transcoding parameter template (https://www.tencentcloud.com/document/product/862/37042?from_cn_redirect=1).
+     * Set <p>Transcoding specification ID. Please refer to <a href="https://www.tencentcloud.com/document/product/862/37042?from_cn_redirect=1">transcoding parameter template</a>.</p>
+     * @param Definition <p>Transcoding specification ID. Please refer to <a href="https://www.tencentcloud.com/document/product/862/37042?from_cn_redirect=1">transcoding parameter template</a>.</p>
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
     }
 
     /**
-     * Get Sum of the average video stream bitrate and the average audio stream bit rate. Measurement unit: bps. 
-     * @return Bitrate Sum of the average video stream bitrate and the average audio stream bit rate. Measurement unit: bps.
+     * Get <p>Sum of the mean video stream bitrate and the mean audio stream bitrate. Unit: bps.</p> 
+     * @return Bitrate <p>Sum of the mean video stream bitrate and the mean audio stream bitrate. Unit: bps.</p>
      */
     public Long getBitrate() {
         return this.Bitrate;
     }
 
     /**
-     * Set Sum of the average video stream bitrate and the average audio stream bit rate. Measurement unit: bps.
-     * @param Bitrate Sum of the average video stream bitrate and the average audio stream bit rate. Measurement unit: bps.
+     * Set <p>Sum of the mean video stream bitrate and the mean audio stream bitrate. Unit: bps.</p>
+     * @param Bitrate <p>Sum of the mean video stream bitrate and the mean audio stream bitrate. Unit: bps.</p>
      */
     public void setBitrate(Long Bitrate) {
         this.Bitrate = Bitrate;
     }
 
     /**
-     * Get Maximum value of video stream height, measurement unit: px. 
-     * @return Height Maximum value of video stream height, measurement unit: px.
+     * Get <p>Maximum height of the video stream. Unit: px.</p> 
+     * @return Height <p>Maximum height of the video stream. Unit: px.</p>
      */
     public Long getHeight() {
         return this.Height;
     }
 
     /**
-     * Set Maximum value of video stream height, measurement unit: px.
-     * @param Height Maximum value of video stream height, measurement unit: px.
+     * Set <p>Maximum height of the video stream. Unit: px.</p>
+     * @param Height <p>Maximum height of the video stream. Unit: px.</p>
      */
     public void setHeight(Long Height) {
         this.Height = Height;
     }
 
     /**
-     * Get Maximum value of the video stream width in px. 
-     * @return Width Maximum value of the video stream width in px.
+     * Get <p>Maximum video stream width. Unit: px.</p> 
+     * @return Width <p>Maximum video stream width. Unit: px.</p>
      */
     public Long getWidth() {
         return this.Width;
     }
 
     /**
-     * Set Maximum value of the video stream width in px.
-     * @param Width Maximum value of the video stream width in px.
+     * Set <p>Maximum video stream width. Unit: px.</p>
+     * @param Width <p>Maximum video stream width. Unit: px.</p>
      */
     public void setWidth(Long Width) {
         this.Width = Width;
     }
 
     /**
-     * Get Total size of media files (when the video is HLS, the size is the sum of m3u8 and ts file sizes), measurement unit: byte. 
-     * @return Size Total size of media files (when the video is HLS, the size is the sum of m3u8 and ts file sizes), measurement unit: byte.
+     * Get <p>Total size of media files (for HLS videos, the size is the sum of m3u8 and ts file sizes), unit: byte.</p> 
+     * @return Size <p>Total size of media files (for HLS videos, the size is the sum of m3u8 and ts file sizes), unit: byte.</p>
      */
     public Long getSize() {
         return this.Size;
     }
 
     /**
-     * Set Total size of media files (when the video is HLS, the size is the sum of m3u8 and ts file sizes), measurement unit: byte.
-     * @param Size Total size of media files (when the video is HLS, the size is the sum of m3u8 and ts file sizes), measurement unit: byte.
+     * Set <p>Total size of media files (for HLS videos, the size is the sum of m3u8 and ts file sizes), unit: byte.</p>
+     * @param Size <p>Total size of media files (for HLS videos, the size is the sum of m3u8 and ts file sizes), unit: byte.</p>
      */
     public void setSize(Long Size) {
         this.Size = Size;
     }
 
     /**
-     * Get Video duration, in seconds. 
-     * @return Duration Video duration, in seconds.
+     * Get <p>Video duration, in seconds.</p> 
+     * @return Duration <p>Video duration, in seconds.</p>
      */
     public Float getDuration() {
         return this.Duration;
     }
 
     /**
-     * Set Video duration, in seconds.
-     * @param Duration Video duration, in seconds.
+     * Set <p>Video duration, in seconds.</p>
+     * @param Duration <p>Video duration, in seconds.</p>
      */
     public void setDuration(Float Duration) {
         this.Duration = Duration;
     }
 
     /**
-     * Get Container type, such as m4a and mp4. 
-     * @return Container Container type, such as m4a and mp4.
+     * Get <p>Container type, for example, m4a, mp4.</p> 
+     * @return Container <p>Container type, for example, m4a, mp4.</p>
      */
     public String getContainer() {
         return this.Container;
     }
 
     /**
-     * Set Container type, such as m4a and mp4.
-     * @param Container Container type, such as m4a and mp4.
+     * Set <p>Container type, for example, m4a, mp4.</p>
+     * @param Container <p>Container type, for example, m4a, mp4.</p>
      */
     public void setContainer(String Container) {
         this.Container = Container;
     }
 
     /**
-     * Get md5 value of the video. 
-     * @return Md5 md5 value of the video.
+     * Get <p>md5 value of the video.</p> 
+     * @return Md5 <p>md5 value of the video.</p>
      */
     public String getMd5() {
         return this.Md5;
     }
 
     /**
-     * Set md5 value of the video.
-     * @param Md5 md5 value of the video.
+     * Set <p>md5 value of the video.</p>
+     * @param Md5 <p>md5 value of the video.</p>
      */
     public void setMd5(String Md5) {
         this.Md5 = Md5;
     }
 
     /**
-     * Get Audio stream information. 
-     * @return AudioStreamSet Audio stream information.
+     * Get <p>Audio stream information.</p> 
+     * @return AudioStreamSet <p>Audio stream information.</p>
      */
     public MediaAudioStreamItem [] getAudioStreamSet() {
         return this.AudioStreamSet;
     }
 
     /**
-     * Set Audio stream information.
-     * @param AudioStreamSet Audio stream information.
+     * Set <p>Audio stream information.</p>
+     * @param AudioStreamSet <p>Audio stream information.</p>
      */
     public void setAudioStreamSet(MediaAudioStreamItem [] AudioStreamSet) {
         this.AudioStreamSet = AudioStreamSet;
     }
 
     /**
-     * Get Video stream information. 
-     * @return VideoStreamSet Video stream information.
+     * Get <p>Video stream information.</p> 
+     * @return VideoStreamSet <p>Video stream information.</p>
      */
     public MediaVideoStreamItem [] getVideoStreamSet() {
         return this.VideoStreamSet;
     }
 
     /**
-     * Set Video stream information.
-     * @param VideoStreamSet Video stream information.
+     * Set <p>Video stream information.</p>
+     * @param VideoStreamSet <p>Video stream information.</p>
      */
     public void setVideoStreamSet(MediaVideoStreamItem [] VideoStreamSet) {
         this.VideoStreamSet = VideoStreamSet;
     }
 
     /**
-     * Get  
-     * @return CallBackExtInfo 
+     * Get <p>Video transcoding enhancement item descriptions and explanations</p><li>hdr: HDR configuration</li><li>wd_fps: Frame interpolation frame rate configuration</li><li>video_super_resolution: Super-resolution configuration</li><li>repair: Comprehensive enhancement configuration</li><li>denoise: Video noise reduction configuration</li><li>color_enhance: Color enhancement configuration</li><li>scratch: Scratches removal configuration</li><li>artifact: Artifacts removal (burrs) configuration</li><li>sharp: Detail enhancement configuration</li><li>low_light: Low-light enhancement configuration</li><li>face_enhance: Face enhancement configuration</li> 
+     * @return CallBackExtInfo <p>Video transcoding enhancement item descriptions and explanations</p><li>hdr: HDR configuration</li><li>wd_fps: Frame interpolation frame rate configuration</li><li>video_super_resolution: Super-resolution configuration</li><li>repair: Comprehensive enhancement configuration</li><li>denoise: Video noise reduction configuration</li><li>color_enhance: Color enhancement configuration</li><li>scratch: Scratches removal configuration</li><li>artifact: Artifacts removal (burrs) configuration</li><li>sharp: Detail enhancement configuration</li><li>low_light: Low-light enhancement configuration</li><li>face_enhance: Face enhancement configuration</li>
      */
     public String getCallBackExtInfo() {
         return this.CallBackExtInfo;
     }
 
     /**
-     * Set 
-     * @param CallBackExtInfo 
+     * Set <p>Video transcoding enhancement item descriptions and explanations</p><li>hdr: HDR configuration</li><li>wd_fps: Frame interpolation frame rate configuration</li><li>video_super_resolution: Super-resolution configuration</li><li>repair: Comprehensive enhancement configuration</li><li>denoise: Video noise reduction configuration</li><li>color_enhance: Color enhancement configuration</li><li>scratch: Scratches removal configuration</li><li>artifact: Artifacts removal (burrs) configuration</li><li>sharp: Detail enhancement configuration</li><li>low_light: Low-light enhancement configuration</li><li>face_enhance: Face enhancement configuration</li>
+     * @param CallBackExtInfo <p>Video transcoding enhancement item descriptions and explanations</p><li>hdr: HDR configuration</li><li>wd_fps: Frame interpolation frame rate configuration</li><li>video_super_resolution: Super-resolution configuration</li><li>repair: Comprehensive enhancement configuration</li><li>denoise: Video noise reduction configuration</li><li>color_enhance: Color enhancement configuration</li><li>scratch: Scratches removal configuration</li><li>artifact: Artifacts removal (burrs) configuration</li><li>sharp: Detail enhancement configuration</li><li>low_light: Low-light enhancement configuration</li><li>face_enhance: Face enhancement configuration</li>
      */
     public void setCallBackExtInfo(String CallBackExtInfo) {
         this.CallBackExtInfo = CallBackExtInfo;
+    }
+
+    /**
+     * Get <p>MediaTranscodeItem</p> 
+     * @return Usage <p>MediaTranscodeItem</p>
+     */
+    public MediaUsageItem getUsage() {
+        return this.Usage;
+    }
+
+    /**
+     * Set <p>MediaTranscodeItem</p>
+     * @param Usage <p>MediaTranscodeItem</p>
+     */
+    public void setUsage(MediaUsageItem Usage) {
+        this.Usage = Usage;
     }
 
     public MediaTranscodeItem() {
@@ -375,6 +398,9 @@ public class MediaTranscodeItem extends AbstractModel {
         if (source.CallBackExtInfo != null) {
             this.CallBackExtInfo = new String(source.CallBackExtInfo);
         }
+        if (source.Usage != null) {
+            this.Usage = new MediaUsageItem(source.Usage);
+        }
     }
 
 
@@ -395,6 +421,7 @@ public class MediaTranscodeItem extends AbstractModel {
         this.setParamArrayObj(map, prefix + "AudioStreamSet.", this.AudioStreamSet);
         this.setParamArrayObj(map, prefix + "VideoStreamSet.", this.VideoStreamSet);
         this.setParamSimple(map, prefix + "CallBackExtInfo", this.CallBackExtInfo);
+        this.setParamObj(map, prefix + "Usage.", this.Usage);
 
     }
 }

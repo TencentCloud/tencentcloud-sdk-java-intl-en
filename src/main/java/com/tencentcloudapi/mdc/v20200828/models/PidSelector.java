@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class PidSelector extends AbstractModel {
 
     /**
-    * 
+    * For streams containing multiple audio tracks, specify the audio track to use by entering a PID. The PID can be a positive integer between 1 and 8191.
     */
     @SerializedName("AudioPID")
     @Expose
     private Long [] AudioPID;
 
     /**
-    * 
+    * For streams containing multiple video tracks, specify the video track to be used by entering a PID. You can enter a positive integer between 1 and 8191 for the PID.
     */
     @SerializedName("VideoPID")
     @Expose
     private Long [] VideoPID;
 
     /**
-     * Get  
-     * @return AudioPID 
+     * Get For streams containing multiple audio tracks, specify the audio track to use by entering a PID. The PID can be a positive integer between 1 and 8191. 
+     * @return AudioPID For streams containing multiple audio tracks, specify the audio track to use by entering a PID. The PID can be a positive integer between 1 and 8191.
      */
     public Long [] getAudioPID() {
         return this.AudioPID;
     }
 
     /**
-     * Set 
-     * @param AudioPID 
+     * Set For streams containing multiple audio tracks, specify the audio track to use by entering a PID. The PID can be a positive integer between 1 and 8191.
+     * @param AudioPID For streams containing multiple audio tracks, specify the audio track to use by entering a PID. The PID can be a positive integer between 1 and 8191.
      */
     public void setAudioPID(Long [] AudioPID) {
         this.AudioPID = AudioPID;
     }
 
     /**
-     * Get  
-     * @return VideoPID 
+     * Get For streams containing multiple video tracks, specify the video track to be used by entering a PID. You can enter a positive integer between 1 and 8191 for the PID. 
+     * @return VideoPID For streams containing multiple video tracks, specify the video track to be used by entering a PID. You can enter a positive integer between 1 and 8191 for the PID.
      */
     public Long [] getVideoPID() {
         return this.VideoPID;
     }
 
     /**
-     * Set 
-     * @param VideoPID 
+     * Set For streams containing multiple video tracks, specify the video track to be used by entering a PID. You can enter a positive integer between 1 and 8191 for the PID.
+     * @param VideoPID For streams containing multiple video tracks, specify the video track to be used by entering a PID. You can enter a positive integer between 1 and 8191 for the PID.
      */
     public void setVideoPID(Long [] VideoPID) {
         this.VideoPID = VideoPID;
