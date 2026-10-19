@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class Filter extends AbstractModel {
 
     /**
-    * Query field name Resource name: resourceName Resource ID: resourceId Resource type: resourceType Resource region: resourceRegion Deletion status: resourceDelete 0 not deleted, 1 deleted resourceregionandzone region/az
+    * Query field name. Valid values: resourceName (resource name), resourceId (resource ID), resourceType (resource type), resourceRegion (resource region), resourceDelete (deletion status; 0 indicates not deleted and 1 indicates deleted), and resourceRegionAndZone (region and availability zone).
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * Value of the field to query
+    * Queried field values.
     */
     @SerializedName("Values")
     @Expose
     private String [] Values;
 
     /**
-     * Get Query field name Resource name: resourceName Resource ID: resourceId Resource type: resourceType Resource region: resourceRegion Deletion status: resourceDelete 0 not deleted, 1 deleted resourceregionandzone region/az 
-     * @return Name Query field name Resource name: resourceName Resource ID: resourceId Resource type: resourceType Resource region: resourceRegion Deletion status: resourceDelete 0 not deleted, 1 deleted resourceregionandzone region/az
+     * Get Query field name. Valid values: resourceName (resource name), resourceId (resource ID), resourceType (resource type), resourceRegion (resource region), resourceDelete (deletion status; 0 indicates not deleted and 1 indicates deleted), and resourceRegionAndZone (region and availability zone). 
+     * @return Name Query field name. Valid values: resourceName (resource name), resourceId (resource ID), resourceType (resource type), resourceRegion (resource region), resourceDelete (deletion status; 0 indicates not deleted and 1 indicates deleted), and resourceRegionAndZone (region and availability zone).
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Query field name Resource name: resourceName Resource ID: resourceId Resource type: resourceType Resource region: resourceRegion Deletion status: resourceDelete 0 not deleted, 1 deleted resourceregionandzone region/az
-     * @param Name Query field name Resource name: resourceName Resource ID: resourceId Resource type: resourceType Resource region: resourceRegion Deletion status: resourceDelete 0 not deleted, 1 deleted resourceregionandzone region/az
+     * Set Query field name. Valid values: resourceName (resource name), resourceId (resource ID), resourceType (resource type), resourceRegion (resource region), resourceDelete (deletion status; 0 indicates not deleted and 1 indicates deleted), and resourceRegionAndZone (region and availability zone).
+     * @param Name Query field name. Valid values: resourceName (resource name), resourceId (resource ID), resourceType (resource type), resourceRegion (resource region), resourceDelete (deletion status; 0 indicates not deleted and 1 indicates deleted), and resourceRegionAndZone (region and availability zone).
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Value of the field to query 
-     * @return Values Value of the field to query
+     * Get Queried field values. 
+     * @return Values Queried field values.
      */
     public String [] getValues() {
         return this.Values;
     }
 
     /**
-     * Set Value of the field to query
-     * @param Values Value of the field to query
+     * Set Queried field values.
+     * @param Values Queried field values.
      */
     public void setValues(String [] Values) {
         this.Values = Values;

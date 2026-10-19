@@ -24,227 +24,207 @@ import java.util.HashMap;
 public class ListAggregateConfigRulesRequest extends AbstractModel {
 
     /**
-    * Specifies the limit per page.
+    * <p>Number of items per page.</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * Offset.
+    * <p>Offset.</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * Account group ID
+    * <p>Account group ID.</p>
     */
     @SerializedName("AccountGroupId")
     @Expose
     private String AccountGroupId;
 
     /**
-    * Sort type, descending: desc, ascending: asc.
+    * <p>Sorting type. Valid values: desc (descending) and asc (ascending).</p>
     */
     @SerializedName("OrderType")
     @Expose
     private String OrderType;
 
     /**
-    * Risk level
-
-1: High risk.
-2: Medium risk.
-3: Low risk.
+    * <p>Risk level. Valid values:<br>1: high-risk<br>2: medium-risk<br>3: low risk</p>
     */
     @SerializedName("RiskLevel")
     @Expose
     private Long [] RiskLevel;
 
     /**
-    * Rule status
+    * <p>Rule status.</p>
     */
     @SerializedName("State")
     @Expose
     private String State;
 
     /**
-    * Evaluation result
+    * <p>Evaluation results.</p>
     */
     @SerializedName("ComplianceResult")
     @Expose
     private String [] ComplianceResult;
 
     /**
-    * Name of the rule
+    * <p>Rule name.</p>
     */
     @SerializedName("RuleName")
     @Expose
     private String RuleName;
 
     /**
-    * Rule ownership account ID
+    * <p>ID of the account to which the rule belongs.</p>
     */
     @SerializedName("RuleOwnerId")
     @Expose
     private Long RuleOwnerId;
 
     /**
-     * Get Specifies the limit per page. 
-     * @return Limit Specifies the limit per page.
+     * Get <p>Number of items per page.</p> 
+     * @return Limit <p>Number of items per page.</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Specifies the limit per page.
-     * @param Limit Specifies the limit per page.
+     * Set <p>Number of items per page.</p>
+     * @param Limit <p>Number of items per page.</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get Offset. 
-     * @return Offset Offset.
+     * Get <p>Offset.</p> 
+     * @return Offset <p>Offset.</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Offset.
-     * @param Offset Offset.
+     * Set <p>Offset.</p>
+     * @param Offset <p>Offset.</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get Account group ID 
-     * @return AccountGroupId Account group ID
+     * Get <p>Account group ID.</p> 
+     * @return AccountGroupId <p>Account group ID.</p>
      */
     public String getAccountGroupId() {
         return this.AccountGroupId;
     }
 
     /**
-     * Set Account group ID
-     * @param AccountGroupId Account group ID
+     * Set <p>Account group ID.</p>
+     * @param AccountGroupId <p>Account group ID.</p>
      */
     public void setAccountGroupId(String AccountGroupId) {
         this.AccountGroupId = AccountGroupId;
     }
 
     /**
-     * Get Sort type, descending: desc, ascending: asc. 
-     * @return OrderType Sort type, descending: desc, ascending: asc.
+     * Get <p>Sorting type. Valid values: desc (descending) and asc (ascending).</p> 
+     * @return OrderType <p>Sorting type. Valid values: desc (descending) and asc (ascending).</p>
      */
     public String getOrderType() {
         return this.OrderType;
     }
 
     /**
-     * Set Sort type, descending: desc, ascending: asc.
-     * @param OrderType Sort type, descending: desc, ascending: asc.
+     * Set <p>Sorting type. Valid values: desc (descending) and asc (ascending).</p>
+     * @param OrderType <p>Sorting type. Valid values: desc (descending) and asc (ascending).</p>
      */
     public void setOrderType(String OrderType) {
         this.OrderType = OrderType;
     }
 
     /**
-     * Get Risk level
-
-1: High risk.
-2: Medium risk.
-3: Low risk. 
-     * @return RiskLevel Risk level
-
-1: High risk.
-2: Medium risk.
-3: Low risk.
+     * Get <p>Risk level. Valid values:<br>1: high-risk<br>2: medium-risk<br>3: low risk</p> 
+     * @return RiskLevel <p>Risk level. Valid values:<br>1: high-risk<br>2: medium-risk<br>3: low risk</p>
      */
     public Long [] getRiskLevel() {
         return this.RiskLevel;
     }
 
     /**
-     * Set Risk level
-
-1: High risk.
-2: Medium risk.
-3: Low risk.
-     * @param RiskLevel Risk level
-
-1: High risk.
-2: Medium risk.
-3: Low risk.
+     * Set <p>Risk level. Valid values:<br>1: high-risk<br>2: medium-risk<br>3: low risk</p>
+     * @param RiskLevel <p>Risk level. Valid values:<br>1: high-risk<br>2: medium-risk<br>3: low risk</p>
      */
     public void setRiskLevel(Long [] RiskLevel) {
         this.RiskLevel = RiskLevel;
     }
 
     /**
-     * Get Rule status 
-     * @return State Rule status
+     * Get <p>Rule status.</p> 
+     * @return State <p>Rule status.</p>
      */
     public String getState() {
         return this.State;
     }
 
     /**
-     * Set Rule status
-     * @param State Rule status
+     * Set <p>Rule status.</p>
+     * @param State <p>Rule status.</p>
      */
     public void setState(String State) {
         this.State = State;
     }
 
     /**
-     * Get Evaluation result 
-     * @return ComplianceResult Evaluation result
+     * Get <p>Evaluation results.</p> 
+     * @return ComplianceResult <p>Evaluation results.</p>
      */
     public String [] getComplianceResult() {
         return this.ComplianceResult;
     }
 
     /**
-     * Set Evaluation result
-     * @param ComplianceResult Evaluation result
+     * Set <p>Evaluation results.</p>
+     * @param ComplianceResult <p>Evaluation results.</p>
      */
     public void setComplianceResult(String [] ComplianceResult) {
         this.ComplianceResult = ComplianceResult;
     }
 
     /**
-     * Get Name of the rule 
-     * @return RuleName Name of the rule
+     * Get <p>Rule name.</p> 
+     * @return RuleName <p>Rule name.</p>
      */
     public String getRuleName() {
         return this.RuleName;
     }
 
     /**
-     * Set Name of the rule
-     * @param RuleName Name of the rule
+     * Set <p>Rule name.</p>
+     * @param RuleName <p>Rule name.</p>
      */
     public void setRuleName(String RuleName) {
         this.RuleName = RuleName;
     }
 
     /**
-     * Get Rule ownership account ID 
-     * @return RuleOwnerId Rule ownership account ID
+     * Get <p>ID of the account to which the rule belongs.</p> 
+     * @return RuleOwnerId <p>ID of the account to which the rule belongs.</p>
      */
     public Long getRuleOwnerId() {
         return this.RuleOwnerId;
     }
 
     /**
-     * Set Rule ownership account ID
-     * @param RuleOwnerId Rule ownership account ID
+     * Set <p>ID of the account to which the rule belongs.</p>
+     * @param RuleOwnerId <p>ID of the account to which the rule belongs.</p>
      */
     public void setRuleOwnerId(Long RuleOwnerId) {
         this.RuleOwnerId = RuleOwnerId;

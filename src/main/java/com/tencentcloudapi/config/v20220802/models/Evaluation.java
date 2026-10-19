@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class Evaluation extends AbstractModel {
 
     /**
-    * Evaluated resource id. It can contain 0 to 256 characters.
+    * Evaluated resource ID, which is 0 to 256 characters in length.
     */
     @SerializedName("ComplianceResourceId")
     @Expose
@@ -32,8 +32,8 @@ public class Evaluation extends AbstractModel {
 
     /**
     * Evaluated resource type.
-Supported:
-QCS::CVM::Instance、 QCS::CBS::Disk、QCS::VPC::Vpc、QCS::VPC::Subnet、QCS::VPC::SecurityGroup、 QCS::CAM::User、QCS::CAM::Group、QCS::CAM::Policy、QCS::CAM::Role、QCS::COS::Bucket
+Support
+QCS::CVM::Instance, QCS::CBS::Disk,QCS::VPC::Vpc,QCS::VPC::Subnet,QCS::VPC::SecurityGroup, QCS::CAM::User,QCS::CAM::Group,QCS::CAM::Policy,QCS::CAM::Role,QCS::COS::Bucket
     */
     @SerializedName("ComplianceResourceType")
     @Expose
@@ -41,39 +41,39 @@ QCS::CVM::Instance、 QCS::CBS::Disk、QCS::VPC::Vpc、QCS::VPC::Subnet、QCS::V
 
     /**
     * Evaluated resource region.
-It can contain 0 to 32 characters.
+0 to 32 characters in length.
     */
     @SerializedName("ComplianceRegion")
     @Expose
     private String ComplianceRegion;
 
     /**
-    * Compliance type. Valid values:
-COMPLIANT: Compliant,
-NON_COMPLIANT: Non-compliant
+    * Compliance type. Value:
+COMPLIANT: compliant
+NON_COMPLIANT: non-compliance
     */
     @SerializedName("ComplianceType")
     @Expose
     private String ComplianceType;
 
     /**
-    * Supplementary information for non-compliant resources.
+    * Supplementary information of non-compliant resources.
     */
     @SerializedName("Annotation")
     @Expose
     private Annotation Annotation;
 
     /**
-     * Get Evaluated resource id. It can contain 0 to 256 characters. 
-     * @return ComplianceResourceId Evaluated resource id. It can contain 0 to 256 characters.
+     * Get Evaluated resource ID, which is 0 to 256 characters in length. 
+     * @return ComplianceResourceId Evaluated resource ID, which is 0 to 256 characters in length.
      */
     public String getComplianceResourceId() {
         return this.ComplianceResourceId;
     }
 
     /**
-     * Set Evaluated resource id. It can contain 0 to 256 characters.
-     * @param ComplianceResourceId Evaluated resource id. It can contain 0 to 256 characters.
+     * Set Evaluated resource ID, which is 0 to 256 characters in length.
+     * @param ComplianceResourceId Evaluated resource ID, which is 0 to 256 characters in length.
      */
     public void setComplianceResourceId(String ComplianceResourceId) {
         this.ComplianceResourceId = ComplianceResourceId;
@@ -81,11 +81,11 @@ NON_COMPLIANT: Non-compliant
 
     /**
      * Get Evaluated resource type.
-Supported:
-QCS::CVM::Instance、 QCS::CBS::Disk、QCS::VPC::Vpc、QCS::VPC::Subnet、QCS::VPC::SecurityGroup、 QCS::CAM::User、QCS::CAM::Group、QCS::CAM::Policy、QCS::CAM::Role、QCS::COS::Bucket 
+Support
+QCS::CVM::Instance, QCS::CBS::Disk,QCS::VPC::Vpc,QCS::VPC::Subnet,QCS::VPC::SecurityGroup, QCS::CAM::User,QCS::CAM::Group,QCS::CAM::Policy,QCS::CAM::Role,QCS::COS::Bucket 
      * @return ComplianceResourceType Evaluated resource type.
-Supported:
-QCS::CVM::Instance、 QCS::CBS::Disk、QCS::VPC::Vpc、QCS::VPC::Subnet、QCS::VPC::SecurityGroup、 QCS::CAM::User、QCS::CAM::Group、QCS::CAM::Policy、QCS::CAM::Role、QCS::COS::Bucket
+Support
+QCS::CVM::Instance, QCS::CBS::Disk,QCS::VPC::Vpc,QCS::VPC::Subnet,QCS::VPC::SecurityGroup, QCS::CAM::User,QCS::CAM::Group,QCS::CAM::Policy,QCS::CAM::Role,QCS::COS::Bucket
      */
     public String getComplianceResourceType() {
         return this.ComplianceResourceType;
@@ -93,11 +93,11 @@ QCS::CVM::Instance、 QCS::CBS::Disk、QCS::VPC::Vpc、QCS::VPC::Subnet、QCS::V
 
     /**
      * Set Evaluated resource type.
-Supported:
-QCS::CVM::Instance、 QCS::CBS::Disk、QCS::VPC::Vpc、QCS::VPC::Subnet、QCS::VPC::SecurityGroup、 QCS::CAM::User、QCS::CAM::Group、QCS::CAM::Policy、QCS::CAM::Role、QCS::COS::Bucket
+Support
+QCS::CVM::Instance, QCS::CBS::Disk,QCS::VPC::Vpc,QCS::VPC::Subnet,QCS::VPC::SecurityGroup, QCS::CAM::User,QCS::CAM::Group,QCS::CAM::Policy,QCS::CAM::Role,QCS::COS::Bucket
      * @param ComplianceResourceType Evaluated resource type.
-Supported:
-QCS::CVM::Instance、 QCS::CBS::Disk、QCS::VPC::Vpc、QCS::VPC::Subnet、QCS::VPC::SecurityGroup、 QCS::CAM::User、QCS::CAM::Group、QCS::CAM::Policy、QCS::CAM::Role、QCS::COS::Bucket
+Support
+QCS::CVM::Instance, QCS::CBS::Disk,QCS::VPC::Vpc,QCS::VPC::Subnet,QCS::VPC::SecurityGroup, QCS::CAM::User,QCS::CAM::Group,QCS::CAM::Policy,QCS::CAM::Role,QCS::COS::Bucket
      */
     public void setComplianceResourceType(String ComplianceResourceType) {
         this.ComplianceResourceType = ComplianceResourceType;
@@ -105,9 +105,9 @@ QCS::CVM::Instance、 QCS::CBS::Disk、QCS::VPC::Vpc、QCS::VPC::Subnet、QCS::V
 
     /**
      * Get Evaluated resource region.
-It can contain 0 to 32 characters. 
+0 to 32 characters in length. 
      * @return ComplianceRegion Evaluated resource region.
-It can contain 0 to 32 characters.
+0 to 32 characters in length.
      */
     public String getComplianceRegion() {
         return this.ComplianceRegion;
@@ -115,49 +115,49 @@ It can contain 0 to 32 characters.
 
     /**
      * Set Evaluated resource region.
-It can contain 0 to 32 characters.
+0 to 32 characters in length.
      * @param ComplianceRegion Evaluated resource region.
-It can contain 0 to 32 characters.
+0 to 32 characters in length.
      */
     public void setComplianceRegion(String ComplianceRegion) {
         this.ComplianceRegion = ComplianceRegion;
     }
 
     /**
-     * Get Compliance type. Valid values:
-COMPLIANT: Compliant,
-NON_COMPLIANT: Non-compliant 
-     * @return ComplianceType Compliance type. Valid values:
-COMPLIANT: Compliant,
-NON_COMPLIANT: Non-compliant
+     * Get Compliance type. Value:
+COMPLIANT: compliant
+NON_COMPLIANT: non-compliance 
+     * @return ComplianceType Compliance type. Value:
+COMPLIANT: compliant
+NON_COMPLIANT: non-compliance
      */
     public String getComplianceType() {
         return this.ComplianceType;
     }
 
     /**
-     * Set Compliance type. Valid values:
-COMPLIANT: Compliant,
-NON_COMPLIANT: Non-compliant
-     * @param ComplianceType Compliance type. Valid values:
-COMPLIANT: Compliant,
-NON_COMPLIANT: Non-compliant
+     * Set Compliance type. Value:
+COMPLIANT: compliant
+NON_COMPLIANT: non-compliance
+     * @param ComplianceType Compliance type. Value:
+COMPLIANT: compliant
+NON_COMPLIANT: non-compliance
      */
     public void setComplianceType(String ComplianceType) {
         this.ComplianceType = ComplianceType;
     }
 
     /**
-     * Get Supplementary information for non-compliant resources. 
-     * @return Annotation Supplementary information for non-compliant resources.
+     * Get Supplementary information of non-compliant resources. 
+     * @return Annotation Supplementary information of non-compliant resources.
      */
     public Annotation getAnnotation() {
         return this.Annotation;
     }
 
     /**
-     * Set Supplementary information for non-compliant resources.
-     * @param Annotation Supplementary information for non-compliant resources.
+     * Set Supplementary information of non-compliant resources.
+     * @param Annotation Supplementary information of non-compliant resources.
      */
     public void setAnnotation(Annotation Annotation) {
         this.Annotation = Annotation;

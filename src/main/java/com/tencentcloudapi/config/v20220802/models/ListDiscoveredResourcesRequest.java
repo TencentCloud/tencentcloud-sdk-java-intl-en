@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class ListDiscoveredResourcesRequest extends AbstractModel {
 
     /**
-    * Items per Page
+    * <p>Number of results displayed per page</p>
     */
     @SerializedName("MaxResults")
     @Expose
     private Long MaxResults;
 
     /**
-    * resourceName: Resource name resourceId: Resource ID
+    * <p>resourceName: resource name  resourceId: resource ID</p>
     */
     @SerializedName("Filters")
     @Expose
     private Filter [] Filters;
 
     /**
-    * Tag
+    * <p>Tag.</p>
     */
     @SerializedName("Tags")
     @Expose
     private Tag [] Tags;
 
     /**
-    * Next page token.
+    * <p>Next page token</p>
     */
     @SerializedName("NextToken")
     @Expose
     private String NextToken;
 
     /**
-    * Sorting method asc, desc
+    * <p>Sorting method: asc, desc</p>
     */
     @SerializedName("OrderType")
     @Expose
     private String OrderType;
 
     /**
-     * Get Items per Page 
-     * @return MaxResults Items per Page
+     * Get <p>Number of results displayed per page</p> 
+     * @return MaxResults <p>Number of results displayed per page</p>
      */
     public Long getMaxResults() {
         return this.MaxResults;
     }
 
     /**
-     * Set Items per Page
-     * @param MaxResults Items per Page
+     * Set <p>Number of results displayed per page</p>
+     * @param MaxResults <p>Number of results displayed per page</p>
      */
     public void setMaxResults(Long MaxResults) {
         this.MaxResults = MaxResults;
     }
 
     /**
-     * Get resourceName: Resource name resourceId: Resource ID 
-     * @return Filters resourceName: Resource name resourceId: Resource ID
+     * Get <p>resourceName: resource name  resourceId: resource ID</p> 
+     * @return Filters <p>resourceName: resource name  resourceId: resource ID</p>
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set resourceName: Resource name resourceId: Resource ID
-     * @param Filters resourceName: Resource name resourceId: Resource ID
+     * Set <p>resourceName: resource name  resourceId: resource ID</p>
+     * @param Filters <p>resourceName: resource name  resourceId: resource ID</p>
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;
     }
 
     /**
-     * Get Tag 
-     * @return Tags Tag
+     * Get <p>Tag.</p> 
+     * @return Tags <p>Tag.</p>
      */
     public Tag [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set Tag
-     * @param Tags Tag
+     * Set <p>Tag.</p>
+     * @param Tags <p>Tag.</p>
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get Next page token. 
-     * @return NextToken Next page token.
+     * Get <p>Next page token</p> 
+     * @return NextToken <p>Next page token</p>
      */
     public String getNextToken() {
         return this.NextToken;
     }
 
     /**
-     * Set Next page token.
-     * @param NextToken Next page token.
+     * Set <p>Next page token</p>
+     * @param NextToken <p>Next page token</p>
      */
     public void setNextToken(String NextToken) {
         this.NextToken = NextToken;
     }
 
     /**
-     * Get Sorting method asc, desc 
-     * @return OrderType Sorting method asc, desc
+     * Get <p>Sorting method: asc, desc</p> 
+     * @return OrderType <p>Sorting method: asc, desc</p>
      */
     public String getOrderType() {
         return this.OrderType;
     }
 
     /**
-     * Set Sorting method asc, desc
-     * @param OrderType Sorting method asc, desc
+     * Set <p>Sorting method: asc, desc</p>
+     * @param OrderType <p>Sorting method: asc, desc</p>
      */
     public void setOrderType(String OrderType) {
         this.OrderType = OrderType;

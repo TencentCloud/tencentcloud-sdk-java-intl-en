@@ -38,7 +38,7 @@ public class RedisBackupSet extends AbstractModel {
     private String BackupId;
 
     /**
-    * <p>Backup type.</p><ul><li>1: Automatic backup initiated by the system in the wee hours.</li><li>0: Manual backup initiated by the user.</li></ul>
+    * <p>Backup type.</p><p>Enumeration values:</p><ul><li>0: User-initiated manual backup</li><li>1: Automatic backup initiated by the system in the wee hours</li><li>2: Backup triggered by configuration changes</li></ul>
     */
     @SerializedName("BackupType")
     @Expose
@@ -168,16 +168,16 @@ public class RedisBackupSet extends AbstractModel {
     }
 
     /**
-     * Get <p>Backup type.</p><ul><li>1: Automatic backup initiated by the system in the wee hours.</li><li>0: Manual backup initiated by the user.</li></ul> 
-     * @return BackupType <p>Backup type.</p><ul><li>1: Automatic backup initiated by the system in the wee hours.</li><li>0: Manual backup initiated by the user.</li></ul>
+     * Get <p>Backup type.</p><p>Enumeration values:</p><ul><li>0: User-initiated manual backup</li><li>1: Automatic backup initiated by the system in the wee hours</li><li>2: Backup triggered by configuration changes</li></ul> 
+     * @return BackupType <p>Backup type.</p><p>Enumeration values:</p><ul><li>0: User-initiated manual backup</li><li>1: Automatic backup initiated by the system in the wee hours</li><li>2: Backup triggered by configuration changes</li></ul>
      */
     public String getBackupType() {
         return this.BackupType;
     }
 
     /**
-     * Set <p>Backup type.</p><ul><li>1: Automatic backup initiated by the system in the wee hours.</li><li>0: Manual backup initiated by the user.</li></ul>
-     * @param BackupType <p>Backup type.</p><ul><li>1: Automatic backup initiated by the system in the wee hours.</li><li>0: Manual backup initiated by the user.</li></ul>
+     * Set <p>Backup type.</p><p>Enumeration values:</p><ul><li>0: User-initiated manual backup</li><li>1: Automatic backup initiated by the system in the wee hours</li><li>2: Backup triggered by configuration changes</li></ul>
+     * @param BackupType <p>Backup type.</p><p>Enumeration values:</p><ul><li>0: User-initiated manual backup</li><li>1: Automatic backup initiated by the system in the wee hours</li><li>2: Backup triggered by configuration changes</li></ul>
      */
     public void setBackupType(String BackupType) {
         this.BackupType = BackupType;

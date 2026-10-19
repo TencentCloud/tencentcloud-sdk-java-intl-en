@@ -567,6 +567,17 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
+     *This API is used to query database audit logs.
+     * @param req DescribeAuditLogsRequest
+     * @return DescribeAuditLogsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAuditLogsResponse DescribeAuditLogs(DescribeAuditLogsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAuditLogs", DescribeAuditLogsResponse.class);
+    }
+
+    /**
      *This API is used to query audit rule template information.
      * @param req DescribeAuditRuleTemplatesRequest
      * @return DescribeAuditRuleTemplatesResponse

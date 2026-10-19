@@ -59,7 +59,7 @@ public class DescribeInstanceBackupsRequest extends AbstractModel {
     private String EndTime;
 
     /**
-    * <p>Backup task status:<br>1: Backup is in progress.<br>2: Backup is normal.<br>3: Backup is switching to RDB file processing.<br>4: RDB switch completed.<br>-1: Backup has expired.<br>-2: Backup has been deleted.</p>
+    * <p>Backup status:</p><p>Enumeration values:</p><ul><li>1: Backup is in process.</li><li>2: Backup is normal.</li></ul><p>Default value: 2</p>
     */
     @SerializedName("Status")
     @Expose
@@ -153,16 +153,16 @@ public class DescribeInstanceBackupsRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>Backup task status:<br>1: Backup is in progress.<br>2: Backup is normal.<br>3: Backup is switching to RDB file processing.<br>4: RDB switch completed.<br>-1: Backup has expired.<br>-2: Backup has been deleted.</p> 
-     * @return Status <p>Backup task status:<br>1: Backup is in progress.<br>2: Backup is normal.<br>3: Backup is switching to RDB file processing.<br>4: RDB switch completed.<br>-1: Backup has expired.<br>-2: Backup has been deleted.</p>
+     * Get <p>Backup status:</p><p>Enumeration values:</p><ul><li>1: Backup is in process.</li><li>2: Backup is normal.</li></ul><p>Default value: 2</p> 
+     * @return Status <p>Backup status:</p><p>Enumeration values:</p><ul><li>1: Backup is in process.</li><li>2: Backup is normal.</li></ul><p>Default value: 2</p>
      */
     public Long [] getStatus() {
         return this.Status;
     }
 
     /**
-     * Set <p>Backup task status:<br>1: Backup is in progress.<br>2: Backup is normal.<br>3: Backup is switching to RDB file processing.<br>4: RDB switch completed.<br>-1: Backup has expired.<br>-2: Backup has been deleted.</p>
-     * @param Status <p>Backup task status:<br>1: Backup is in progress.<br>2: Backup is normal.<br>3: Backup is switching to RDB file processing.<br>4: RDB switch completed.<br>-1: Backup has expired.<br>-2: Backup has been deleted.</p>
+     * Set <p>Backup status:</p><p>Enumeration values:</p><ul><li>1: Backup is in process.</li><li>2: Backup is normal.</li></ul><p>Default value: 2</p>
+     * @param Status <p>Backup status:</p><p>Enumeration values:</p><ul><li>1: Backup is in process.</li><li>2: Backup is normal.</li></ul><p>Default value: 2</p>
      */
     public void setStatus(Long [] Status) {
         this.Status = Status;

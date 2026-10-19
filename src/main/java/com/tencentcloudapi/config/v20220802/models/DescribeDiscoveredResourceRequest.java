@@ -31,7 +31,7 @@ public class DescribeDiscoveredResourceRequest extends AbstractModel {
     private String ResourceId;
 
     /**
-    * Resource type
+    * Resource type.
     */
     @SerializedName("ResourceType")
     @Expose
@@ -61,16 +61,16 @@ public class DescribeDiscoveredResourceRequest extends AbstractModel {
     }
 
     /**
-     * Get Resource type 
-     * @return ResourceType Resource type
+     * Get Resource type. 
+     * @return ResourceType Resource type.
      */
     public String getResourceType() {
         return this.ResourceType;
     }
 
     /**
-     * Set Resource type
-     * @param ResourceType Resource type
+     * Set Resource type.
+     * @param ResourceType Resource type.
      */
     public void setResourceType(String ResourceType) {
         this.ResourceType = ResourceType;

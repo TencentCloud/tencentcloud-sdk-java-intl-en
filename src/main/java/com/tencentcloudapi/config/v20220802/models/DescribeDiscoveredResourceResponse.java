@@ -25,26 +25,20 @@ public class DescribeDiscoveredResourceResponse extends AbstractModel {
 
     /**
     * Resource ID
-
-Note: This field may return null, indicating that no valid value is found.
     */
     @SerializedName("ResourceId")
     @Expose
     private String ResourceId;
 
     /**
-    * Resource type
-
-Note: This field may return null, indicating that no valid value is found.
+    * Resource type.
     */
     @SerializedName("ResourceType")
     @Expose
     private String ResourceType;
 
     /**
-    * Resource Name
-
-Note: This field may return null, indicating that no valid value is found.
+    * Resource name
     */
     @SerializedName("ResourceName")
     @Expose
@@ -52,25 +46,20 @@ Note: This field may return null, indicating that no valid value is found.
 
     /**
     * Resource region
-
-Note: This field may return null, indicating that no valid value is found.
     */
     @SerializedName("ResourceRegion")
     @Expose
     private String ResourceRegion;
 
     /**
-    * Resource availability zone
-Note: This field may return null, indicating that no valid value is found.
+    * Resource availability zone.
     */
     @SerializedName("ResourceZone")
     @Expose
     private String ResourceZone;
 
     /**
-    * Resource configuration
-
-Note: This field may return null, indicating that no valid value is found.
+    * Resource configuration.
     */
     @SerializedName("Configuration")
     @Expose
@@ -78,8 +67,6 @@ Note: This field may return null, indicating that no valid value is found.
 
     /**
     * Resource creation time
-
-Note: This field may return null, indicating that no valid value is found.
     */
     @SerializedName("ResourceCreateTime")
     @Expose
@@ -87,16 +74,13 @@ Note: This field may return null, indicating that no valid value is found.
 
     /**
     * Resource tag
-
-Note: This field may return null, indicating that no valid value is found.
     */
     @SerializedName("Tags")
     @Expose
     private Tag [] Tags;
 
     /**
-    * Resource update time
-Note: This field may return null, indicating that no valid value is found.
+    * Resource update time.
     */
     @SerializedName("UpdateTime")
     @Expose
@@ -110,12 +94,8 @@ Note: This field may return null, indicating that no valid value is found.
     private String RequestId;
 
     /**
-     * Get Resource ID
-
-Note: This field may return null, indicating that no valid value is found. 
+     * Get Resource ID 
      * @return ResourceId Resource ID
-
-Note: This field may return null, indicating that no valid value is found.
      */
     public String getResourceId() {
         return this.ResourceId;
@@ -123,71 +103,47 @@ Note: This field may return null, indicating that no valid value is found.
 
     /**
      * Set Resource ID
-
-Note: This field may return null, indicating that no valid value is found.
      * @param ResourceId Resource ID
-
-Note: This field may return null, indicating that no valid value is found.
      */
     public void setResourceId(String ResourceId) {
         this.ResourceId = ResourceId;
     }
 
     /**
-     * Get Resource type
-
-Note: This field may return null, indicating that no valid value is found. 
-     * @return ResourceType Resource type
-
-Note: This field may return null, indicating that no valid value is found.
+     * Get Resource type. 
+     * @return ResourceType Resource type.
      */
     public String getResourceType() {
         return this.ResourceType;
     }
 
     /**
-     * Set Resource type
-
-Note: This field may return null, indicating that no valid value is found.
-     * @param ResourceType Resource type
-
-Note: This field may return null, indicating that no valid value is found.
+     * Set Resource type.
+     * @param ResourceType Resource type.
      */
     public void setResourceType(String ResourceType) {
         this.ResourceType = ResourceType;
     }
 
     /**
-     * Get Resource Name
-
-Note: This field may return null, indicating that no valid value is found. 
-     * @return ResourceName Resource Name
-
-Note: This field may return null, indicating that no valid value is found.
+     * Get Resource name 
+     * @return ResourceName Resource name
      */
     public String getResourceName() {
         return this.ResourceName;
     }
 
     /**
-     * Set Resource Name
-
-Note: This field may return null, indicating that no valid value is found.
-     * @param ResourceName Resource Name
-
-Note: This field may return null, indicating that no valid value is found.
+     * Set Resource name
+     * @param ResourceName Resource name
      */
     public void setResourceName(String ResourceName) {
         this.ResourceName = ResourceName;
     }
 
     /**
-     * Get Resource region
-
-Note: This field may return null, indicating that no valid value is found. 
+     * Get Resource region 
      * @return ResourceRegion Resource region
-
-Note: This field may return null, indicating that no valid value is found.
      */
     public String getResourceRegion() {
         return this.ResourceRegion;
@@ -195,67 +151,47 @@ Note: This field may return null, indicating that no valid value is found.
 
     /**
      * Set Resource region
-
-Note: This field may return null, indicating that no valid value is found.
      * @param ResourceRegion Resource region
-
-Note: This field may return null, indicating that no valid value is found.
      */
     public void setResourceRegion(String ResourceRegion) {
         this.ResourceRegion = ResourceRegion;
     }
 
     /**
-     * Get Resource availability zone
-Note: This field may return null, indicating that no valid value is found. 
-     * @return ResourceZone Resource availability zone
-Note: This field may return null, indicating that no valid value is found.
+     * Get Resource availability zone. 
+     * @return ResourceZone Resource availability zone.
      */
     public String getResourceZone() {
         return this.ResourceZone;
     }
 
     /**
-     * Set Resource availability zone
-Note: This field may return null, indicating that no valid value is found.
-     * @param ResourceZone Resource availability zone
-Note: This field may return null, indicating that no valid value is found.
+     * Set Resource availability zone.
+     * @param ResourceZone Resource availability zone.
      */
     public void setResourceZone(String ResourceZone) {
         this.ResourceZone = ResourceZone;
     }
 
     /**
-     * Get Resource configuration
-
-Note: This field may return null, indicating that no valid value is found. 
-     * @return Configuration Resource configuration
-
-Note: This field may return null, indicating that no valid value is found.
+     * Get Resource configuration. 
+     * @return Configuration Resource configuration.
      */
     public String getConfiguration() {
         return this.Configuration;
     }
 
     /**
-     * Set Resource configuration
-
-Note: This field may return null, indicating that no valid value is found.
-     * @param Configuration Resource configuration
-
-Note: This field may return null, indicating that no valid value is found.
+     * Set Resource configuration.
+     * @param Configuration Resource configuration.
      */
     public void setConfiguration(String Configuration) {
         this.Configuration = Configuration;
     }
 
     /**
-     * Get Resource creation time
-
-Note: This field may return null, indicating that no valid value is found. 
+     * Get Resource creation time 
      * @return ResourceCreateTime Resource creation time
-
-Note: This field may return null, indicating that no valid value is found.
      */
     public String getResourceCreateTime() {
         return this.ResourceCreateTime;
@@ -263,23 +199,15 @@ Note: This field may return null, indicating that no valid value is found.
 
     /**
      * Set Resource creation time
-
-Note: This field may return null, indicating that no valid value is found.
      * @param ResourceCreateTime Resource creation time
-
-Note: This field may return null, indicating that no valid value is found.
      */
     public void setResourceCreateTime(String ResourceCreateTime) {
         this.ResourceCreateTime = ResourceCreateTime;
     }
 
     /**
-     * Get Resource tag
-
-Note: This field may return null, indicating that no valid value is found. 
+     * Get Resource tag 
      * @return Tags Resource tag
-
-Note: This field may return null, indicating that no valid value is found.
      */
     public Tag [] getTags() {
         return this.Tags;
@@ -287,31 +215,23 @@ Note: This field may return null, indicating that no valid value is found.
 
     /**
      * Set Resource tag
-
-Note: This field may return null, indicating that no valid value is found.
      * @param Tags Resource tag
-
-Note: This field may return null, indicating that no valid value is found.
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get Resource update time
-Note: This field may return null, indicating that no valid value is found. 
-     * @return UpdateTime Resource update time
-Note: This field may return null, indicating that no valid value is found.
+     * Get Resource update time. 
+     * @return UpdateTime Resource update time.
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set Resource update time
-Note: This field may return null, indicating that no valid value is found.
-     * @param UpdateTime Resource update time
-Note: This field may return null, indicating that no valid value is found.
+     * Set Resource update time.
+     * @param UpdateTime Resource update time.
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;

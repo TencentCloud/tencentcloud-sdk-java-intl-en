@@ -31,46 +31,36 @@ public class CommonFilter extends AbstractModel {
     private String Name;
 
     /**
-    * Search values.
-    */
-    @SerializedName("Values")
-    @Expose
-    private String [] Values;
-
-    /**
-    * Enum of integers that represent relations between Name and Values.
+    * Enumeration type, representing the matching relationship between Name and Values.
 enum FilterOperatorType {
-    // Invalid
-    FILTER_OPERATOR_TYPE_INVALID = 0;
-    // Equal to
+equal
     FILTER_OPERATOR_TYPE_EQUAL = 1;
-    // Greater than
+Above
     FILTER_OPERATOR_TYPE_GREATER = 2;
-    // Less than
+less than
     FILTER_OPERATOR_TYPE_LESS = 3;
-    // Greater than or equal to
+>=
     FILTER_OPERATOR_TYPE_GREATER_EQ = 4;
-    // Less than or equal to
+<=
     FILTER_OPERATOR_TYPE_LESS_EQ = 5;
-    // Not equal to
+neq
     FILTER_OPERATOR_TYPE_NO_EQ = 6;
-    // In (contained in the array)
-    FILTER_OPERATOR_TYPE_IN = 7;
-    // Not in
+    //not in
     FILTER_OPERATOR_TYPE_NOT_IN = 8;
-    // Fuzzily matched
+Fuzzy matching
     FILTER_OPERATOR_TYPE_FUZZINESS = 9;
-    // Existing
-    FILTER_OPERATOR_TYPE_EXIST = 10;
-    // Not existing
-    FILTER_OPERATOR_TYPE_NOT_EXIST = 11;
-    // Regular
-    FILTER_OPERATOR_TYPE_REGULAR = 12;
 }
     */
     @SerializedName("OperatorType")
     @Expose
     private Long OperatorType;
+
+    /**
+    * Search values, with an OR relationship between each search value.
+    */
+    @SerializedName("Values")
+    @Expose
+    private String [] Values;
 
     /**
      * Get Search key. 
@@ -89,79 +79,43 @@ enum FilterOperatorType {
     }
 
     /**
-     * Get Search values. 
-     * @return Values Search values.
-     */
-    public String [] getValues() {
-        return this.Values;
-    }
-
-    /**
-     * Set Search values.
-     * @param Values Search values.
-     */
-    public void setValues(String [] Values) {
-        this.Values = Values;
-    }
-
-    /**
-     * Get Enum of integers that represent relations between Name and Values.
+     * Get Enumeration type, representing the matching relationship between Name and Values.
 enum FilterOperatorType {
-    // Invalid
-    FILTER_OPERATOR_TYPE_INVALID = 0;
-    // Equal to
+equal
     FILTER_OPERATOR_TYPE_EQUAL = 1;
-    // Greater than
+Above
     FILTER_OPERATOR_TYPE_GREATER = 2;
-    // Less than
+less than
     FILTER_OPERATOR_TYPE_LESS = 3;
-    // Greater than or equal to
+>=
     FILTER_OPERATOR_TYPE_GREATER_EQ = 4;
-    // Less than or equal to
+<=
     FILTER_OPERATOR_TYPE_LESS_EQ = 5;
-    // Not equal to
+neq
     FILTER_OPERATOR_TYPE_NO_EQ = 6;
-    // In (contained in the array)
-    FILTER_OPERATOR_TYPE_IN = 7;
-    // Not in
+    //not in
     FILTER_OPERATOR_TYPE_NOT_IN = 8;
-    // Fuzzily matched
+Fuzzy matching
     FILTER_OPERATOR_TYPE_FUZZINESS = 9;
-    // Existing
-    FILTER_OPERATOR_TYPE_EXIST = 10;
-    // Not existing
-    FILTER_OPERATOR_TYPE_NOT_EXIST = 11;
-    // Regular
-    FILTER_OPERATOR_TYPE_REGULAR = 12;
 } 
-     * @return OperatorType Enum of integers that represent relations between Name and Values.
+     * @return OperatorType Enumeration type, representing the matching relationship between Name and Values.
 enum FilterOperatorType {
-    // Invalid
-    FILTER_OPERATOR_TYPE_INVALID = 0;
-    // Equal to
+equal
     FILTER_OPERATOR_TYPE_EQUAL = 1;
-    // Greater than
+Above
     FILTER_OPERATOR_TYPE_GREATER = 2;
-    // Less than
+less than
     FILTER_OPERATOR_TYPE_LESS = 3;
-    // Greater than or equal to
+>=
     FILTER_OPERATOR_TYPE_GREATER_EQ = 4;
-    // Less than or equal to
+<=
     FILTER_OPERATOR_TYPE_LESS_EQ = 5;
-    // Not equal to
+neq
     FILTER_OPERATOR_TYPE_NO_EQ = 6;
-    // In (contained in the array)
-    FILTER_OPERATOR_TYPE_IN = 7;
-    // Not in
+    //not in
     FILTER_OPERATOR_TYPE_NOT_IN = 8;
-    // Fuzzily matched
+Fuzzy matching
     FILTER_OPERATOR_TYPE_FUZZINESS = 9;
-    // Existing
-    FILTER_OPERATOR_TYPE_EXIST = 10;
-    // Not existing
-    FILTER_OPERATOR_TYPE_NOT_EXIST = 11;
-    // Regular
-    FILTER_OPERATOR_TYPE_REGULAR = 12;
 }
      */
     public Long getOperatorType() {
@@ -169,67 +123,63 @@ enum FilterOperatorType {
     }
 
     /**
-     * Set Enum of integers that represent relations between Name and Values.
+     * Set Enumeration type, representing the matching relationship between Name and Values.
 enum FilterOperatorType {
-    // Invalid
-    FILTER_OPERATOR_TYPE_INVALID = 0;
-    // Equal to
+equal
     FILTER_OPERATOR_TYPE_EQUAL = 1;
-    // Greater than
+Above
     FILTER_OPERATOR_TYPE_GREATER = 2;
-    // Less than
+less than
     FILTER_OPERATOR_TYPE_LESS = 3;
-    // Greater than or equal to
+>=
     FILTER_OPERATOR_TYPE_GREATER_EQ = 4;
-    // Less than or equal to
+<=
     FILTER_OPERATOR_TYPE_LESS_EQ = 5;
-    // Not equal to
+neq
     FILTER_OPERATOR_TYPE_NO_EQ = 6;
-    // In (contained in the array)
-    FILTER_OPERATOR_TYPE_IN = 7;
-    // Not in
+    //not in
     FILTER_OPERATOR_TYPE_NOT_IN = 8;
-    // Fuzzily matched
+Fuzzy matching
     FILTER_OPERATOR_TYPE_FUZZINESS = 9;
-    // Existing
-    FILTER_OPERATOR_TYPE_EXIST = 10;
-    // Not existing
-    FILTER_OPERATOR_TYPE_NOT_EXIST = 11;
-    // Regular
-    FILTER_OPERATOR_TYPE_REGULAR = 12;
 }
-     * @param OperatorType Enum of integers that represent relations between Name and Values.
+     * @param OperatorType Enumeration type, representing the matching relationship between Name and Values.
 enum FilterOperatorType {
-    // Invalid
-    FILTER_OPERATOR_TYPE_INVALID = 0;
-    // Equal to
+equal
     FILTER_OPERATOR_TYPE_EQUAL = 1;
-    // Greater than
+Above
     FILTER_OPERATOR_TYPE_GREATER = 2;
-    // Less than
+less than
     FILTER_OPERATOR_TYPE_LESS = 3;
-    // Greater than or equal to
+>=
     FILTER_OPERATOR_TYPE_GREATER_EQ = 4;
-    // Less than or equal to
+<=
     FILTER_OPERATOR_TYPE_LESS_EQ = 5;
-    // Not equal to
+neq
     FILTER_OPERATOR_TYPE_NO_EQ = 6;
-    // In (contained in the array)
-    FILTER_OPERATOR_TYPE_IN = 7;
-    // Not in
+    //not in
     FILTER_OPERATOR_TYPE_NOT_IN = 8;
-    // Fuzzily matched
+Fuzzy matching
     FILTER_OPERATOR_TYPE_FUZZINESS = 9;
-    // Existing
-    FILTER_OPERATOR_TYPE_EXIST = 10;
-    // Not existing
-    FILTER_OPERATOR_TYPE_NOT_EXIST = 11;
-    // Regular
-    FILTER_OPERATOR_TYPE_REGULAR = 12;
 }
      */
     public void setOperatorType(Long OperatorType) {
         this.OperatorType = OperatorType;
+    }
+
+    /**
+     * Get Search values, with an OR relationship between each search value. 
+     * @return Values Search values, with an OR relationship between each search value.
+     */
+    public String [] getValues() {
+        return this.Values;
+    }
+
+    /**
+     * Set Search values, with an OR relationship between each search value.
+     * @param Values Search values, with an OR relationship between each search value.
+     */
+    public void setValues(String [] Values) {
+        this.Values = Values;
     }
 
     public CommonFilter() {
@@ -243,14 +193,14 @@ enum FilterOperatorType {
         if (source.Name != null) {
             this.Name = new String(source.Name);
         }
+        if (source.OperatorType != null) {
+            this.OperatorType = new Long(source.OperatorType);
+        }
         if (source.Values != null) {
             this.Values = new String[source.Values.length];
             for (int i = 0; i < source.Values.length; i++) {
                 this.Values[i] = new String(source.Values[i]);
             }
-        }
-        if (source.OperatorType != null) {
-            this.OperatorType = new Long(source.OperatorType);
         }
     }
 
@@ -260,8 +210,8 @@ enum FilterOperatorType {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Name", this.Name);
-        this.setParamArraySimple(map, prefix + "Values.", this.Values);
         this.setParamSimple(map, prefix + "OperatorType", this.OperatorType);
+        this.setParamArraySimple(map, prefix + "Values.", this.Values);
 
     }
 }

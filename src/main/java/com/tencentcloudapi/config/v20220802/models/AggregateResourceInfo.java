@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class AggregateResourceInfo extends AbstractModel {
 
     /**
-    * Resource type
+    * Resource type.
     */
     @SerializedName("ResourceType")
     @Expose
@@ -45,26 +45,21 @@ public class AggregateResourceInfo extends AbstractModel {
     private String ResourceId;
 
     /**
-    * Region
-
-Note: This field may return null, indicating that no valid value is found.
+    * Region.
     */
     @SerializedName("ResourceRegion")
     @Expose
     private String ResourceRegion;
 
     /**
-    * Resource Status
-
-Note: This field may return null, indicating that no valid value is found.
+    * Resource status.
     */
     @SerializedName("ResourceStatus")
     @Expose
     private String ResourceStatus;
 
     /**
-    * Whether to delete. 1: Deleted; 0: Not deleted.
-Note: This field may return null, indicating that no valid value is found.
+    * Deletion status. Valid values: 1 (deleted) and 0 (not deleted).
     */
     @SerializedName("ResourceDelete")
     @Expose
@@ -72,26 +67,20 @@ Note: This field may return null, indicating that no valid value is found.
 
     /**
     * Resource creation time
-
-Note: This field may return null, indicating that no valid value is found.
     */
     @SerializedName("ResourceCreateTime")
     @Expose
     private String ResourceCreateTime;
 
     /**
-    * Tag information
-
-Note: This field may return null, indicating that no valid value is found.
+    * Tag information.
     */
     @SerializedName("Tags")
     @Expose
     private Tag [] Tags;
 
     /**
-    * Availability zone
-
-Note: This field may return null, indicating that no valid value is found.
+    * AZ.
     */
     @SerializedName("ResourceZone")
     @Expose
@@ -99,38 +88,36 @@ Note: This field may return null, indicating that no valid value is found.
 
     /**
     * Compliance status
-Note: This field may return null, indicating that no valid value is found.
     */
     @SerializedName("ComplianceResult")
     @Expose
     private String ComplianceResult;
 
     /**
-    * Resource owner uid
+    * Resource owner ID.
     */
     @SerializedName("ResourceOwnerId")
     @Expose
     private Long ResourceOwnerId;
 
     /**
-    * User nickname
-Note: This field may return null, indicating that no valid value is found.
+    * User Nickname
     */
     @SerializedName("ResourceOwnerName")
     @Expose
     private String ResourceOwnerName;
 
     /**
-     * Get Resource type 
-     * @return ResourceType Resource type
+     * Get Resource type. 
+     * @return ResourceType Resource type.
      */
     public String getResourceType() {
         return this.ResourceType;
     }
 
     /**
-     * Set Resource type
-     * @param ResourceType Resource type
+     * Set Resource type.
+     * @param ResourceType Resource type.
      */
     public void setResourceType(String ResourceType) {
         this.ResourceType = ResourceType;
@@ -169,80 +156,56 @@ Note: This field may return null, indicating that no valid value is found.
     }
 
     /**
-     * Get Region
-
-Note: This field may return null, indicating that no valid value is found. 
-     * @return ResourceRegion Region
-
-Note: This field may return null, indicating that no valid value is found.
+     * Get Region. 
+     * @return ResourceRegion Region.
      */
     public String getResourceRegion() {
         return this.ResourceRegion;
     }
 
     /**
-     * Set Region
-
-Note: This field may return null, indicating that no valid value is found.
-     * @param ResourceRegion Region
-
-Note: This field may return null, indicating that no valid value is found.
+     * Set Region.
+     * @param ResourceRegion Region.
      */
     public void setResourceRegion(String ResourceRegion) {
         this.ResourceRegion = ResourceRegion;
     }
 
     /**
-     * Get Resource Status
-
-Note: This field may return null, indicating that no valid value is found. 
-     * @return ResourceStatus Resource Status
-
-Note: This field may return null, indicating that no valid value is found.
+     * Get Resource status. 
+     * @return ResourceStatus Resource status.
      */
     public String getResourceStatus() {
         return this.ResourceStatus;
     }
 
     /**
-     * Set Resource Status
-
-Note: This field may return null, indicating that no valid value is found.
-     * @param ResourceStatus Resource Status
-
-Note: This field may return null, indicating that no valid value is found.
+     * Set Resource status.
+     * @param ResourceStatus Resource status.
      */
     public void setResourceStatus(String ResourceStatus) {
         this.ResourceStatus = ResourceStatus;
     }
 
     /**
-     * Get Whether to delete. 1: Deleted; 0: Not deleted.
-Note: This field may return null, indicating that no valid value is found. 
-     * @return ResourceDelete Whether to delete. 1: Deleted; 0: Not deleted.
-Note: This field may return null, indicating that no valid value is found.
+     * Get Deletion status. Valid values: 1 (deleted) and 0 (not deleted). 
+     * @return ResourceDelete Deletion status. Valid values: 1 (deleted) and 0 (not deleted).
      */
     public Long getResourceDelete() {
         return this.ResourceDelete;
     }
 
     /**
-     * Set Whether to delete. 1: Deleted; 0: Not deleted.
-Note: This field may return null, indicating that no valid value is found.
-     * @param ResourceDelete Whether to delete. 1: Deleted; 0: Not deleted.
-Note: This field may return null, indicating that no valid value is found.
+     * Set Deletion status. Valid values: 1 (deleted) and 0 (not deleted).
+     * @param ResourceDelete Deletion status. Valid values: 1 (deleted) and 0 (not deleted).
      */
     public void setResourceDelete(Long ResourceDelete) {
         this.ResourceDelete = ResourceDelete;
     }
 
     /**
-     * Get Resource creation time
-
-Note: This field may return null, indicating that no valid value is found. 
+     * Get Resource creation time 
      * @return ResourceCreateTime Resource creation time
-
-Note: This field may return null, indicating that no valid value is found.
      */
     public String getResourceCreateTime() {
         return this.ResourceCreateTime;
@@ -250,69 +213,47 @@ Note: This field may return null, indicating that no valid value is found.
 
     /**
      * Set Resource creation time
-
-Note: This field may return null, indicating that no valid value is found.
      * @param ResourceCreateTime Resource creation time
-
-Note: This field may return null, indicating that no valid value is found.
      */
     public void setResourceCreateTime(String ResourceCreateTime) {
         this.ResourceCreateTime = ResourceCreateTime;
     }
 
     /**
-     * Get Tag information
-
-Note: This field may return null, indicating that no valid value is found. 
-     * @return Tags Tag information
-
-Note: This field may return null, indicating that no valid value is found.
+     * Get Tag information. 
+     * @return Tags Tag information.
      */
     public Tag [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set Tag information
-
-Note: This field may return null, indicating that no valid value is found.
-     * @param Tags Tag information
-
-Note: This field may return null, indicating that no valid value is found.
+     * Set Tag information.
+     * @param Tags Tag information.
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get Availability zone
-
-Note: This field may return null, indicating that no valid value is found. 
-     * @return ResourceZone Availability zone
-
-Note: This field may return null, indicating that no valid value is found.
+     * Get AZ. 
+     * @return ResourceZone AZ.
      */
     public String getResourceZone() {
         return this.ResourceZone;
     }
 
     /**
-     * Set Availability zone
-
-Note: This field may return null, indicating that no valid value is found.
-     * @param ResourceZone Availability zone
-
-Note: This field may return null, indicating that no valid value is found.
+     * Set AZ.
+     * @param ResourceZone AZ.
      */
     public void setResourceZone(String ResourceZone) {
         this.ResourceZone = ResourceZone;
     }
 
     /**
-     * Get Compliance status
-Note: This field may return null, indicating that no valid value is found. 
+     * Get Compliance status 
      * @return ComplianceResult Compliance status
-Note: This field may return null, indicating that no valid value is found.
      */
     public String getComplianceResult() {
         return this.ComplianceResult;
@@ -320,45 +261,39 @@ Note: This field may return null, indicating that no valid value is found.
 
     /**
      * Set Compliance status
-Note: This field may return null, indicating that no valid value is found.
      * @param ComplianceResult Compliance status
-Note: This field may return null, indicating that no valid value is found.
      */
     public void setComplianceResult(String ComplianceResult) {
         this.ComplianceResult = ComplianceResult;
     }
 
     /**
-     * Get Resource owner uid 
-     * @return ResourceOwnerId Resource owner uid
+     * Get Resource owner ID. 
+     * @return ResourceOwnerId Resource owner ID.
      */
     public Long getResourceOwnerId() {
         return this.ResourceOwnerId;
     }
 
     /**
-     * Set Resource owner uid
-     * @param ResourceOwnerId Resource owner uid
+     * Set Resource owner ID.
+     * @param ResourceOwnerId Resource owner ID.
      */
     public void setResourceOwnerId(Long ResourceOwnerId) {
         this.ResourceOwnerId = ResourceOwnerId;
     }
 
     /**
-     * Get User nickname
-Note: This field may return null, indicating that no valid value is found. 
-     * @return ResourceOwnerName User nickname
-Note: This field may return null, indicating that no valid value is found.
+     * Get User Nickname 
+     * @return ResourceOwnerName User Nickname
      */
     public String getResourceOwnerName() {
         return this.ResourceOwnerName;
     }
 
     /**
-     * Set User nickname
-Note: This field may return null, indicating that no valid value is found.
-     * @param ResourceOwnerName User nickname
-Note: This field may return null, indicating that no valid value is found.
+     * Set User Nickname
+     * @param ResourceOwnerName User Nickname
      */
     public void setResourceOwnerName(String ResourceOwnerName) {
         this.ResourceOwnerName = ResourceOwnerName;

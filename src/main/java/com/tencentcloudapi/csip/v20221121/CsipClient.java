@@ -503,6 +503,50 @@ Create an AI scheduled task by entering the task name, prompt content, and trigg
     }
 
     /**
+     *Creates an asset sync task
+     * @param req CreateCosAssetSyncTaskRequest
+     * @return CreateCosAssetSyncTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateCosAssetSyncTaskResponse CreateCosAssetSyncTask(CreateCosAssetSyncTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateCosAssetSyncTask", CreateCosAssetSyncTaskResponse.class);
+    }
+
+    /**
+     *This API is used to create cos virus scan and sensitive data identification tasks.
+     * @param req CreateCosObjectScanTaskRequest
+     * @return CreateCosObjectScanTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateCosObjectScanTaskResponse CreateCosObjectScanTask(CreateCosObjectScanTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateCosObjectScanTask", CreateCosObjectScanTaskResponse.class);
+    }
+
+    /**
+     *Add a cos alarm policy
+     * @param req CreateCosPolicyRequest
+     * @return CreateCosPolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateCosPolicyResponse CreateCosPolicy(CreateCosPolicyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateCosPolicy", CreateCosPolicyResponse.class);
+    }
+
+    /**
+     *This API is used to create a risk monitor task.
+     * @param req CreateCosRiskScanTaskRequest
+     * @return CreateCosRiskScanTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateCosRiskScanTaskResponse CreateCosRiskScanTask(CreateCosRiskScanTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateCosRiskScanTask", CreateCosRiskScanTaskResponse.class);
+    }
+
+    /**
      *Create Domain and IP Information
      * @param req CreateDomainAndIpRequest
      * @return CreateDomainAndIpResponse
@@ -1327,6 +1371,28 @@ This API is used to delete a scheduled task based on the specified AI scheduled 
     public DeleteClusterResponse DeleteCluster(DeleteClusterRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteCluster", DeleteClusterResponse.class);
+    }
+
+    /**
+     *Delete deleted cos ak assets.
+     * @param req DeleteCosAkAssetRequest
+     * @return DeleteCosAkAssetResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteCosAkAssetResponse DeleteCosAkAsset(DeleteCosAkAssetRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteCosAkAsset", DeleteCosAkAssetResponse.class);
+    }
+
+    /**
+     *Deleting a Policy
+     * @param req DeleteCosPolicyRequest
+     * @return DeleteCosPolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteCosPolicyResponse DeleteCosPolicy(DeleteCosPolicyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteCosPolicy", DeleteCosPolicyResponse.class);
     }
 
     /**
@@ -2288,6 +2354,17 @@ Queries the historical execution records of AI scheduled tasks. Supports paginat
     }
 
     /**
+     *Query whether it is bound to a role
+     * @param req DescribeAssumeRoleRequest
+     * @return DescribeAssumeRoleResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAssumeRoleResponse DescribeAssumeRole(DescribeAssumeRoleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAssumeRole", DescribeAssumeRoleResponse.class);
+    }
+
+    /**
      *This API is used to query the region list of the backend scanning engine.
      * @param req DescribeBackendScanEngineRegionListRequest
      * @return DescribeBackendScanEngineRegionListResponse
@@ -2527,6 +2604,17 @@ Queries the historical execution records of AI scheduled tasks. Supports paginat
     public DescribeBruteAttackRulesResponse DescribeBruteAttackRules(DescribeBruteAttackRulesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeBruteAttackRules", DescribeBruteAttackRulesResponse.class);
+    }
+
+    /**
+     *This API is used to view the bucket call source ip list.
+     * @param req DescribeBucketInvokeIpListRequest
+     * @return DescribeBucketInvokeIpListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBucketInvokeIpListResponse DescribeBucketInvokeIpList(DescribeBucketInvokeIpListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeBucketInvokeIpList", DescribeBucketInvokeIpListResponse.class);
     }
 
     /**
@@ -3132,6 +3220,314 @@ Queries the historical execution records of AI scheduled tasks. Supports paginat
     public DescribeConfigCheckRulesResponse DescribeConfigCheckRules(DescribeConfigCheckRulesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeConfigCheckRules", DescribeConfigCheckRulesResponse.class);
+    }
+
+    /**
+     *View cos bucket access permission information
+     * @param req DescribeCosAccessPermissionRequest
+     * @return DescribeCosAccessPermissionResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCosAccessPermissionResponse DescribeCosAccessPermission(DescribeCosAccessPermissionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCosAccessPermission", DescribeCosAccessPermissionResponse.class);
+    }
+
+    /**
+     *View the access privilege list of object storage
+     * @param req DescribeCosAccessPermissionsRequest
+     * @return DescribeCosAccessPermissionsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCosAccessPermissionsResponse DescribeCosAccessPermissions(DescribeCosAccessPermissionsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCosAccessPermissions", DescribeCosAccessPermissionsResponse.class);
+    }
+
+    /**
+     *View the COS API list
+     * @param req DescribeCosActionListRequest
+     * @return DescribeCosActionListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCosActionListResponse DescribeCosActionList(DescribeCosActionListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCosActionList", DescribeCosActionListResponse.class);
+    }
+
+    /**
+     *View the ak asset information list
+     * @param req DescribeCosAkAssetRequest
+     * @return DescribeCosAkAssetResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCosAkAssetResponse DescribeCosAkAsset(DescribeCosAkAssetRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCosAkAsset", DescribeCosAkAssetResponse.class);
+    }
+
+    /**
+     *View the source ip list of bucket calls
+     * @param req DescribeCosAkInvokeIpListRequest
+     * @return DescribeCosAkInvokeIpListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCosAkInvokeIpListResponse DescribeCosAkInvokeIpList(DescribeCosAkInvokeIpListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCosAkInvokeIpList", DescribeCosAkInvokeIpListResponse.class);
+    }
+
+    /**
+     *View alarm list
+     * @param req DescribeCosAlarmListRequest
+     * @return DescribeCosAlarmListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCosAlarmListResponse DescribeCosAlarmList(DescribeCosAlarmListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCosAlarmList", DescribeCosAlarmListResponse.class);
+    }
+
+    /**
+     *Daily alerts newly added data
+     * @param req DescribeCosAlarmTrendDataRequest
+     * @return DescribeCosAlarmTrendDataResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCosAlarmTrendDataResponse DescribeCosAlarmTrendData(DescribeCosAlarmTrendDataRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCosAlarmTrendData", DescribeCosAlarmTrendDataResponse.class);
+    }
+
+    /**
+     *Views the cos asset list
+     * @param req DescribeCosAssetRequest
+     * @return DescribeCosAssetResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCosAssetResponse DescribeCosAsset(DescribeCosAssetRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCosAsset", DescribeCosAssetResponse.class);
+    }
+
+    /**
+     *Get the taskid currently being scanned for the corresponding appid.
+     * @param req DescribeCosAssetSyncTaskRequest
+     * @return DescribeCosAssetSyncTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCosAssetSyncTaskResponse DescribeCosAssetSyncTask(DescribeCosAssetSyncTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCosAssetSyncTask", DescribeCosAssetSyncTaskResponse.class);
+    }
+
+    /**
+     *View the purchased appid collection under this appid.
+     * @param req DescribeCosAuditAppIdListRequest
+     * @return DescribeCosAuditAppIdListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCosAuditAppIdListResponse DescribeCosAuditAppIdList(DescribeCosAuditAppIdListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCosAuditAppIdList", DescribeCosAuditAppIdListResponse.class);
+    }
+
+    /**
+     *Query the cos audit dictionary information list.
+     * @param req DescribeCosAuditDictionaryListRequest
+     * @return DescribeCosAuditDictionaryListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCosAuditDictionaryListResponse DescribeCosAuditDictionaryList(DescribeCosAuditDictionaryListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCosAuditDictionaryList", DescribeCosAuditDictionaryListResponse.class);
+    }
+
+    /**
+     *This API is used to obtain audit payment information.
+     * @param req DescribeCosAuditPayInfoRequest
+     * @return DescribeCosAuditPayInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCosAuditPayInfoResponse DescribeCosAuditPayInfo(DescribeCosAuditPayInfoRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCosAuditPayInfo", DescribeCosAuditPayInfoResponse.class);
+    }
+
+    /**
+     *This API is used to obtain the billing information of a bucket.
+     * @param req DescribeCosBucketBillingInfoRequest
+     * @return DescribeCosBucketBillingInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCosBucketBillingInfoResponse DescribeCosBucketBillingInfo(DescribeCosBucketBillingInfoRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCosBucketBillingInfo", DescribeCosBucketBillingInfoResponse.class);
+    }
+
+    /**
+     *This API is used to obtain bucket information.
+     * @param req DescribeCosBucketListRequest
+     * @return DescribeCosBucketListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCosBucketListResponse DescribeCosBucketList(DescribeCosBucketListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCosBucketList", DescribeCosBucketListResponse.class);
+    }
+
+    /**
+     *Views the risk asset perspective
+     * @param req DescribeCosBucketRiskRequest
+     * @return DescribeCosBucketRiskResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCosBucketRiskResponse DescribeCosBucketRisk(DescribeCosBucketRiskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCosBucketRisk", DescribeCosBucketRiskResponse.class);
+    }
+
+    /**
+     *Queries the list of cos file data identification results.
+     * @param req DescribeCosIdentifyFileListRequest
+     * @return DescribeCosIdentifyFileListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCosIdentifyFileListResponse DescribeCosIdentifyFileList(DescribeCosIdentifyFileListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCosIdentifyFileList", DescribeCosIdentifyFileListResponse.class);
+    }
+
+    /**
+     *View file information associated with call records
+     * @param req DescribeCosInvokeUaRequest
+     * @return DescribeCosInvokeUaResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCosInvokeUaResponse DescribeCosInvokeUa(DescribeCosInvokeUaRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCosInvokeUa", DescribeCosInvokeUaResponse.class);
+    }
+
+    /**
+     *Views the cos call log.
+     * @param req DescribeCosIpInvokeLogRequest
+     * @return DescribeCosIpInvokeLogResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCosIpInvokeLogResponse DescribeCosIpInvokeLog(DescribeCosIpInvokeLogRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCosIpInvokeLog", DescribeCosIpInvokeLogResponse.class);
+    }
+
+    /**
+     *View file information associated with the call record
+     * @param req DescribeCosIpInvokeRecordFileRequest
+     * @return DescribeCosIpInvokeRecordFileResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCosIpInvokeRecordFileResponse DescribeCosIpInvokeRecordFile(DescribeCosIpInvokeRecordFileRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCosIpInvokeRecordFile", DescribeCosIpInvokeRecordFileResponse.class);
+    }
+
+    /**
+     *Query cos risk file scan tasks
+     * @param req DescribeCosObjectScanTaskRequest
+     * @return DescribeCosObjectScanTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCosObjectScanTaskResponse DescribeCosObjectScanTask(DescribeCosObjectScanTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCosObjectScanTask", DescribeCosObjectScanTaskResponse.class);
+    }
+
+    /**
+     *cos overview information
+     * @param req DescribeCosOverviewRequest
+     * @return DescribeCosOverviewResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCosOverviewResponse DescribeCosOverview(DescribeCosOverviewRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCosOverview", DescribeCosOverviewResponse.class);
+    }
+
+    /**
+     *Gets policy list information
+     * @param req DescribeCosPolicyRequest
+     * @return DescribeCosPolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCosPolicyResponse DescribeCosPolicy(DescribeCosPolicyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCosPolicy", DescribeCosPolicyResponse.class);
+    }
+
+    /**
+     *Risk API information list
+     * @param req DescribeCosRiskActionListRequest
+     * @return DescribeCosRiskActionListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCosRiskActionListResponse DescribeCosRiskActionList(DescribeCosRiskActionListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCosRiskActionList", DescribeCosRiskActionListResponse.class);
+    }
+
+    /**
+     *View risk evidence and description.
+     * @param req DescribeCosRiskEvidenceRequest
+     * @return DescribeCosRiskEvidenceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCosRiskEvidenceResponse DescribeCosRiskEvidence(DescribeCosRiskEvidenceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCosRiskEvidence", DescribeCosRiskEvidenceResponse.class);
+    }
+
+    /**
+     *View bucket scan task details
+     * @param req DescribeCosRiskScanTaskRequest
+     * @return DescribeCosRiskScanTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCosRiskScanTaskResponse DescribeCosRiskScanTask(DescribeCosRiskScanTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCosRiskScanTask", DescribeCosRiskScanTaskResponse.class);
+    }
+
+    /**
+     *Views cos bucket access permission information
+     * @param req DescribeCosRoleAccessPermissionRequest
+     * @return DescribeCosRoleAccessPermissionResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCosRoleAccessPermissionResponse DescribeCosRoleAccessPermission(DescribeCosRoleAccessPermissionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCosRoleAccessPermission", DescribeCosRoleAccessPermissionResponse.class);
+    }
+
+    /**
+     *This API is used to obtain the role permission list of a bucket.
+     * @param req DescribeCosRoleAccessPermissionsRequest
+     * @return DescribeCosRoleAccessPermissionsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCosRoleAccessPermissionsResponse DescribeCosRoleAccessPermissions(DescribeCosRoleAccessPermissionsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCosRoleAccessPermissions", DescribeCosRoleAccessPermissionsResponse.class);
+    }
+
+    /**
+     *Source ip list for calls
+     * @param req DescribeCosSourceIpRequest
+     * @return DescribeCosSourceIpResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCosSourceIpResponse DescribeCosSourceIp(DescribeCosSourceIpRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCosSourceIp", DescribeCosSourceIpResponse.class);
     }
 
     /**
@@ -4576,6 +4972,28 @@ Queries the historical execution records of AI scheduled tasks. Supports paginat
     }
 
     /**
+     *Object Storage Anomaly Detection call record information
+     * @param req DescribeIpInvokeRecordRequest
+     * @return DescribeIpInvokeRecordResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeIpInvokeRecordResponse DescribeIpInvokeRecord(DescribeIpInvokeRecordRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeIpInvokeRecord", DescribeIpInvokeRecordResponse.class);
+    }
+
+    /**
+     *ip access list details information
+     * @param req DescribeIpInvokeRecordDetailRequest
+     * @return DescribeIpInvokeRecordDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeIpInvokeRecordDetailResponse DescribeIpInvokeRecordDetail(DescribeIpInvokeRecordDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeIpInvokeRecordDetail", DescribeIpInvokeRecordDetailResponse.class);
+    }
+
+    /**
      *Query the details of a single Windows KB patch based on the user's input KB internal ID, and return the basic KB info, release time, whether restart is required, as well as the list of vulnerabilities associated with the KB.
      * @param req DescribeKBDetailRequest
      * @return DescribeKBDetailResponse
@@ -4939,6 +5357,17 @@ Queries the historical execution records of AI scheduled tasks. Supports paginat
     }
 
     /**
+     *View policy hit details by date
+     * @param req DescribePolicyHitDataRequest
+     * @return DescribePolicyHitDataResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePolicyHitDataResponse DescribePolicyHitData(DescribePolicyHitDataRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribePolicyHitData", DescribePolicyHitDataResponse.class);
+    }
+
+    /**
      *Port detection list
      * @param req DescribePortDetectListRequest
      * @return DescribePortDetectListResponse
@@ -5082,6 +5511,17 @@ Queries the historical execution records of AI scheduled tasks. Supports paginat
     }
 
     /**
+     *View risk-associated bucket info
+     * @param req DescribeRiskBucketListRequest
+     * @return DescribeRiskBucketListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRiskBucketListResponse DescribeRiskBucketList(DescribeRiskBucketListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeRiskBucketList", DescribeRiskBucketListResponse.class);
+    }
+
+    /**
      *This API is used to obtain the risk call record list.
      * @param req DescribeRiskCallRecordRequest
      * @return DescribeRiskCallRecordResponse
@@ -5214,6 +5654,17 @@ Queries the historical execution records of AI scheduled tasks. Supports paginat
     }
 
     /**
+     *Get Risk Item Perspective List
+     * @param req DescribeRiskItemListRequest
+     * @return DescribeRiskItemListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRiskItemListResponse DescribeRiskItemList(DescribeRiskItemListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeRiskItemList", DescribeRiskItemListResponse.class);
+    }
+
+    /**
      *Sample code for querying risk rule details
      * @param req DescribeRiskRuleDetailRequest
      * @return DescribeRiskRuleDetailResponse
@@ -5244,6 +5695,17 @@ Queries the historical execution records of AI scheduled tasks. Supports paginat
     public DescribeRiskScanCronConfigResponse DescribeRiskScanCronConfig(DescribeRiskScanCronConfigRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeRiskScanCronConfig", DescribeRiskScanCronConfigResponse.class);
+    }
+
+    /**
+     *View the risk trend chart.
+     * @param req DescribeRiskTrendDataRequest
+     * @return DescribeRiskTrendDataResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRiskTrendDataResponse DescribeRiskTrendData(DescribeRiskTrendDataRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeRiskTrendData", DescribeRiskTrendDataResponse.class);
     }
 
     /**
@@ -6205,6 +6667,17 @@ Partial update is supported. Only the passed-in optional fields are updated. Whe
     }
 
     /**
+     *Modify or change the handling status.
+     * @param req ModifyAlarmRiskStatusRequest
+     * @return ModifyAlarmRiskStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyAlarmRiskStatusResponse ModifyAlarmRiskStatus(ModifyAlarmRiskStatusRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyAlarmRiskStatus", ModifyAlarmRiskStatusResponse.class);
+    }
+
+    /**
      *Tag an asset as core or not.
      * @param req ModifyAssetCoreAttributeRequest
      * @return ModifyAssetCoreAttributeResponse
@@ -6411,6 +6884,50 @@ Partial update is supported. Only the passed-in optional fields are updated. Whe
     public ModifyCosAuditBucketMonitorStatusResponse ModifyCosAuditBucketMonitorStatus(ModifyCosAuditBucketMonitorStatusRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyCosAuditBucketMonitorStatus", ModifyCosAuditBucketMonitorStatusResponse.class);
+    }
+
+    /**
+     *Modify the cos audit monitoring account.
+     * @param req ModifyCosAuditMonitorAccountRequest
+     * @return ModifyCosAuditMonitorAccountResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyCosAuditMonitorAccountResponse ModifyCosAuditMonitorAccount(ModifyCosAuditMonitorAccountRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyCosAuditMonitorAccount", ModifyCosAuditMonitorAccountResponse.class);
+    }
+
+    /**
+     *Modify the object storage recognition switch
+     * @param req ModifyCosAuditObjectIdentifyStatusRequest
+     * @return ModifyCosAuditObjectIdentifyStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyCosAuditObjectIdentifyStatusResponse ModifyCosAuditObjectIdentifyStatus(ModifyCosAuditObjectIdentifyStatusRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyCosAuditObjectIdentifyStatus", ModifyCosAuditObjectIdentifyStatusResponse.class);
+    }
+
+    /**
+     *Set the sampling rate for object storage scan.
+     * @param req ModifyCosAuditObjectSampleRateRequest
+     * @return ModifyCosAuditObjectSampleRateResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyCosAuditObjectSampleRateResponse ModifyCosAuditObjectSampleRate(ModifyCosAuditObjectSampleRateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyCosAuditObjectSampleRate", ModifyCosAuditObjectSampleRateResponse.class);
+    }
+
+    /**
+     *This API is used to modify the object storage remark.
+     * @param req ModifyCosMarkInfoRequest
+     * @return ModifyCosMarkInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyCosMarkInfoResponse ModifyCosMarkInfo(ModifyCosMarkInfoRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyCosMarkInfo", ModifyCosMarkInfoResponse.class);
     }
 
     /**
@@ -7127,6 +7644,17 @@ Supplemental description:
     }
 
     /**
+     *Modifies policy status
+     * @param req ModifyPolicyStatusRequest
+     * @return ModifyPolicyStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyPolicyStatusResponse ModifyPolicyStatus(ModifyPolicyStatusRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyPolicyStatus", ModifyPolicyStatusResponse.class);
+    }
+
+    /**
      *This API is used to configure protection settings for the major event protection package.
      * @param req ModifyProtectionSettingRequest
      * @return ModifyProtectionSettingResponse
@@ -7369,7 +7897,7 @@ Supplemental description:
     }
 
     /**
-     *This API is used to modify the vulnerability allowlist configuration.
+     *Modifies the vulnerability allowlist configuration.
      * @param req ModifyVulWhitelistConfigRequest
      * @return ModifyVulWhitelistConfigResponse
      * @throws TencentCloudSDKException

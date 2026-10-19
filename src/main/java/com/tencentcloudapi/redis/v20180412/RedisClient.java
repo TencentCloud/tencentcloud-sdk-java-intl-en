@@ -303,6 +303,17 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
+     *This API is used to query information related to backup encryption for an instance, including the enabled status and encryption keys.
+     * @param req DescribeBackupEncryptConfigRequest
+     * @return DescribeBackupEncryptConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBackupEncryptConfigResponse DescribeBackupEncryptConfig(DescribeBackupEncryptConfigRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeBackupEncryptConfig", DescribeBackupEncryptConfigResponse.class);
+    }
+
+    /**
      *This API is used to query the download address of a backup RDB file.
      * @param req DescribeBackupUrlRequest
      * @return DescribeBackupUrlResponse
@@ -553,6 +564,17 @@ public class RedisClient extends AbstractClient{
     public DescribeInstanceParamsResponse DescribeInstanceParams(DescribeInstanceParamsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeInstanceParams", DescribeInstanceParamsResponse.class);
+    }
+
+    /**
+     *This API is used to query the current password complexity configuration of a specified instance.
+     * @param req DescribeInstancePasswordPolicyRequest
+     * @return DescribeInstancePasswordPolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInstancePasswordPolicyResponse DescribeInstancePasswordPolicy(DescribeInstancePasswordPolicyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeInstancePasswordPolicy", DescribeInstancePasswordPolicyResponse.class);
     }
 
     /**
@@ -963,6 +985,17 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
+     *This API is used to turn on or disable backup encryption and modify backup key functionality.
+     * @param req ModifyBackupEncryptRequest
+     * @return ModifyBackupEncryptResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyBackupEncryptResponse ModifyBackupEncrypt(ModifyBackupEncryptRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyBackupEncrypt", ModifyBackupEncryptResponse.class);
+    }
+
+    /**
      *This API is used to modify the connection configuration of an instance, including the bandwidth and maximum number of connections.
      * @param req ModifyConnectionConfigRequest
      * @return ModifyConnectionConfigResponse
@@ -1081,6 +1114,17 @@ public class RedisClient extends AbstractClient{
     public ModifyInstancePasswordResponse ModifyInstancePassword(ModifyInstancePasswordRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyInstancePassword", ModifyInstancePasswordResponse.class);
+    }
+
+    /**
+     *This API is used to modify the password complexity of an instance.
+     * @param req ModifyInstancePasswordPolicyRequest
+     * @return ModifyInstancePasswordPolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyInstancePasswordPolicyResponse ModifyInstancePasswordPolicy(ModifyInstancePasswordPolicyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyInstancePasswordPolicy", ModifyInstancePasswordPolicyResponse.class);
     }
 
     /**
@@ -1290,6 +1334,17 @@ public class RedisClient extends AbstractClient{
     public UpgradeInstanceResponse UpgradeInstance(UpgradeInstanceRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "UpgradeInstance", UpgradeInstanceResponse.class);
+    }
+
+    /**
+     *This API is used to upgrade the instance type from common I to common II.
+     * @param req UpgradeInstanceProductVersionRequest
+     * @return UpgradeInstanceProductVersionResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpgradeInstanceProductVersionResponse UpgradeInstanceProductVersion(UpgradeInstanceProductVersionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpgradeInstanceProductVersion", UpgradeInstanceProductVersionResponse.class);
     }
 
     /**

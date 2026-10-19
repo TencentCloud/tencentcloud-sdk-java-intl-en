@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModifyVulWhitelistConfigRequest extends AbstractModel {
 
     /**
-    * <p>id list</
+    * <p>id list</p>
     */
     @SerializedName("Id")
     @Expose
@@ -45,7 +45,7 @@ public class ModifyVulWhitelistConfigRequest extends AbstractModel {
     private String Remark;
 
     /**
-    * <p>Asset scope</p><p>Enumeration value:</p><ul><li>0: All assets</li><li>1: Custom assets</li><li>2: Select all remove asset</li></ul>
+    * <p>Asset scope</p><p>Enumeration values:</p><ul><li>0: all assets</li><li>1: Custom assets</li><li>2: Select all and remove assets</li></ul>
     */
     @SerializedName("AssetRange")
     @Expose
@@ -59,16 +59,16 @@ public class ModifyVulWhitelistConfigRequest extends AbstractModel {
     private String [] AssetList;
 
     /**
-     * Get <p>id list</ 
-     * @return Id <p>id list</
+     * Get <p>id list</p> 
+     * @return Id <p>id list</p>
      */
     public Long getId() {
         return this.Id;
     }
 
     /**
-     * Set <p>id list</
-     * @param Id <p>id list</
+     * Set <p>id list</p>
+     * @param Id <p>id list</p>
      */
     public void setId(Long Id) {
         this.Id = Id;
@@ -107,16 +107,16 @@ public class ModifyVulWhitelistConfigRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>Asset scope</p><p>Enumeration value:</p><ul><li>0: All assets</li><li>1: Custom assets</li><li>2: Select all remove asset</li></ul> 
-     * @return AssetRange <p>Asset scope</p><p>Enumeration value:</p><ul><li>0: All assets</li><li>1: Custom assets</li><li>2: Select all remove asset</li></ul>
+     * Get <p>Asset scope</p><p>Enumeration values:</p><ul><li>0: all assets</li><li>1: Custom assets</li><li>2: Select all and remove assets</li></ul> 
+     * @return AssetRange <p>Asset scope</p><p>Enumeration values:</p><ul><li>0: all assets</li><li>1: Custom assets</li><li>2: Select all and remove assets</li></ul>
      */
     public Long getAssetRange() {
         return this.AssetRange;
     }
 
     /**
-     * Set <p>Asset scope</p><p>Enumeration value:</p><ul><li>0: All assets</li><li>1: Custom assets</li><li>2: Select all remove asset</li></ul>
-     * @param AssetRange <p>Asset scope</p><p>Enumeration value:</p><ul><li>0: All assets</li><li>1: Custom assets</li><li>2: Select all remove asset</li></ul>
+     * Set <p>Asset scope</p><p>Enumeration values:</p><ul><li>0: all assets</li><li>1: Custom assets</li><li>2: Select all and remove assets</li></ul>
+     * @param AssetRange <p>Asset scope</p><p>Enumeration values:</p><ul><li>0: all assets</li><li>1: Custom assets</li><li>2: Select all and remove assets</li></ul>
      */
     public void setAssetRange(Long AssetRange) {
         this.AssetRange = AssetRange;

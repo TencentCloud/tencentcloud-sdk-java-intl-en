@@ -24,24 +24,21 @@ import java.util.HashMap;
 public class InputParameterForManage extends AbstractModel {
 
     /**
-    * Value type. Integer: Integer, String: String.
-Note: This field may return null, indicating that no valid value is found.
+    * Value type. Valid values: Integer and String.
     */
     @SerializedName("ValueType")
     @Expose
     private String ValueType;
 
     /**
-    * Parameter key
-Note: This field may return null, indicating that no valid value is found.
+    * Parameter key.
     */
     @SerializedName("ParameterKey")
     @Expose
     private String ParameterKey;
 
     /**
-    * Parameter type. Required type: Required, Optional type: Optional.
-Note: This field may return null, indicating that no valid value is found.
+    * Parameter type. Valid values: Require (required) and Optional (optional).
     */
     @SerializedName("Type")
     @Expose
@@ -49,8 +46,6 @@ Note: This field may return null, indicating that no valid value is found.
 
     /**
     * Default value
-
-Note: This field may return null, indicating that no valid value is found.
     */
     @SerializedName("DefaultValue")
     @Expose
@@ -58,80 +53,62 @@ Note: This field may return null, indicating that no valid value is found.
 
     /**
     * Description
-
-Note: This field may return null, indicating that no valid value is found.
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-     * Get Value type. Integer: Integer, String: String.
-Note: This field may return null, indicating that no valid value is found. 
-     * @return ValueType Value type. Integer: Integer, String: String.
-Note: This field may return null, indicating that no valid value is found.
+     * Get Value type. Valid values: Integer and String. 
+     * @return ValueType Value type. Valid values: Integer and String.
      */
     public String getValueType() {
         return this.ValueType;
     }
 
     /**
-     * Set Value type. Integer: Integer, String: String.
-Note: This field may return null, indicating that no valid value is found.
-     * @param ValueType Value type. Integer: Integer, String: String.
-Note: This field may return null, indicating that no valid value is found.
+     * Set Value type. Valid values: Integer and String.
+     * @param ValueType Value type. Valid values: Integer and String.
      */
     public void setValueType(String ValueType) {
         this.ValueType = ValueType;
     }
 
     /**
-     * Get Parameter key
-Note: This field may return null, indicating that no valid value is found. 
-     * @return ParameterKey Parameter key
-Note: This field may return null, indicating that no valid value is found.
+     * Get Parameter key. 
+     * @return ParameterKey Parameter key.
      */
     public String getParameterKey() {
         return this.ParameterKey;
     }
 
     /**
-     * Set Parameter key
-Note: This field may return null, indicating that no valid value is found.
-     * @param ParameterKey Parameter key
-Note: This field may return null, indicating that no valid value is found.
+     * Set Parameter key.
+     * @param ParameterKey Parameter key.
      */
     public void setParameterKey(String ParameterKey) {
         this.ParameterKey = ParameterKey;
     }
 
     /**
-     * Get Parameter type. Required type: Required, Optional type: Optional.
-Note: This field may return null, indicating that no valid value is found. 
-     * @return Type Parameter type. Required type: Required, Optional type: Optional.
-Note: This field may return null, indicating that no valid value is found.
+     * Get Parameter type. Valid values: Require (required) and Optional (optional). 
+     * @return Type Parameter type. Valid values: Require (required) and Optional (optional).
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Parameter type. Required type: Required, Optional type: Optional.
-Note: This field may return null, indicating that no valid value is found.
-     * @param Type Parameter type. Required type: Required, Optional type: Optional.
-Note: This field may return null, indicating that no valid value is found.
+     * Set Parameter type. Valid values: Require (required) and Optional (optional).
+     * @param Type Parameter type. Valid values: Require (required) and Optional (optional).
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get Default value
-
-Note: This field may return null, indicating that no valid value is found. 
+     * Get Default value 
      * @return DefaultValue Default value
-
-Note: This field may return null, indicating that no valid value is found.
      */
     public String getDefaultValue() {
         return this.DefaultValue;
@@ -139,23 +116,15 @@ Note: This field may return null, indicating that no valid value is found.
 
     /**
      * Set Default value
-
-Note: This field may return null, indicating that no valid value is found.
      * @param DefaultValue Default value
-
-Note: This field may return null, indicating that no valid value is found.
      */
     public void setDefaultValue(String DefaultValue) {
         this.DefaultValue = DefaultValue;
     }
 
     /**
-     * Get Description
-
-Note: This field may return null, indicating that no valid value is found. 
+     * Get Description 
      * @return Description Description
-
-Note: This field may return null, indicating that no valid value is found.
      */
     public String getDescription() {
         return this.Description;
@@ -163,11 +132,7 @@ Note: This field may return null, indicating that no valid value is found.
 
     /**
      * Set Description
-
-Note: This field may return null, indicating that no valid value is found.
      * @param Description Description
-
-Note: This field may return null, indicating that no valid value is found.
      */
     public void setDescription(String Description) {
         this.Description = Description;

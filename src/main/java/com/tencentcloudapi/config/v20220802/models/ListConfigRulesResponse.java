@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class ListConfigRulesResponse extends AbstractModel {
 
     /**
-    * Total number
+    * Total number.
     */
     @SerializedName("Total")
     @Expose
     private Long Total;
 
     /**
-    * Details
+    * Details.
     */
     @SerializedName("Items")
     @Expose
@@ -45,32 +45,32 @@ public class ListConfigRulesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Total number 
-     * @return Total Total number
+     * Get Total number. 
+     * @return Total Total number.
      */
     public Long getTotal() {
         return this.Total;
     }
 
     /**
-     * Set Total number
-     * @param Total Total number
+     * Set Total number.
+     * @param Total Total number.
      */
     public void setTotal(Long Total) {
         this.Total = Total;
     }
 
     /**
-     * Get Details 
-     * @return Items Details
+     * Get Details. 
+     * @return Items Details.
      */
     public ConfigRule [] getItems() {
         return this.Items;
     }
 
     /**
-     * Set Details
-     * @param Items Details
+     * Set Details.
+     * @param Items Details.
      */
     public void setItems(ConfigRule [] Items) {
         this.Items = Items;

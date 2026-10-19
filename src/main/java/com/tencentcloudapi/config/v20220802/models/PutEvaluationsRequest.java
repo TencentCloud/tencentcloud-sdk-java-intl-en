@@ -24,7 +24,8 @@ import java.util.HashMap;
 public class PutEvaluationsRequest extends AbstractModel {
 
     /**
-    * Callback token. Obtained from the ResultToken value in the Context of the selected Serverless Cloud Function (SCF) for the custom rule.
+    * Callback token. Get the value of the ResultToken parameter from the input parameters of the selected scf cloud function in the custom rule.
+<a href="https://www.tencentcloud.com/document/product/583/9210?from_cn_redirect=1#.E5.87.BD.E6.95.B0.E5.85.A5.E5.8F.82.3Ca-id.3D.22input.22.3E.3C.2Fa.3E" target="_blank">SCF input parameters</a>
     */
     @SerializedName("ResultToken")
     @Expose
@@ -38,16 +39,20 @@ public class PutEvaluationsRequest extends AbstractModel {
     private Evaluation [] Evaluations;
 
     /**
-     * Get Callback token. Obtained from the ResultToken value in the Context of the selected Serverless Cloud Function (SCF) for the custom rule. 
-     * @return ResultToken Callback token. Obtained from the ResultToken value in the Context of the selected Serverless Cloud Function (SCF) for the custom rule.
+     * Get Callback token. Get the value of the ResultToken parameter from the input parameters of the selected scf cloud function in the custom rule.
+<a href="https://www.tencentcloud.com/document/product/583/9210?from_cn_redirect=1#.E5.87.BD.E6.95.B0.E5.85.A5.E5.8F.82.3Ca-id.3D.22input.22.3E.3C.2Fa.3E" target="_blank">SCF input parameters</a> 
+     * @return ResultToken Callback token. Get the value of the ResultToken parameter from the input parameters of the selected scf cloud function in the custom rule.
+<a href="https://www.tencentcloud.com/document/product/583/9210?from_cn_redirect=1#.E5.87.BD.E6.95.B0.E5.85.A5.E5.8F.82.3Ca-id.3D.22input.22.3E.3C.2Fa.3E" target="_blank">SCF input parameters</a>
      */
     public String getResultToken() {
         return this.ResultToken;
     }
 
     /**
-     * Set Callback token. Obtained from the ResultToken value in the Context of the selected Serverless Cloud Function (SCF) for the custom rule.
-     * @param ResultToken Callback token. Obtained from the ResultToken value in the Context of the selected Serverless Cloud Function (SCF) for the custom rule.
+     * Set Callback token. Get the value of the ResultToken parameter from the input parameters of the selected scf cloud function in the custom rule.
+<a href="https://www.tencentcloud.com/document/product/583/9210?from_cn_redirect=1#.E5.87.BD.E6.95.B0.E5.85.A5.E5.8F.82.3Ca-id.3D.22input.22.3E.3C.2Fa.3E" target="_blank">SCF input parameters</a>
+     * @param ResultToken Callback token. Get the value of the ResultToken parameter from the input parameters of the selected scf cloud function in the custom rule.
+<a href="https://www.tencentcloud.com/document/product/583/9210?from_cn_redirect=1#.E5.87.BD.E6.95.B0.E5.85.A5.E5.8F.82.3Ca-id.3D.22input.22.3E.3C.2Fa.3E" target="_blank">SCF input parameters</a>
      */
     public void setResultToken(String ResultToken) {
         this.ResultToken = ResultToken;

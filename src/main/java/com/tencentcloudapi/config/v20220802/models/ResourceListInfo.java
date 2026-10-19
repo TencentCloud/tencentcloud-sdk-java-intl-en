@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ResourceListInfo extends AbstractModel {
 
     /**
-    * Resource type
+    * Resource type.
     */
     @SerializedName("ResourceType")
     @Expose
@@ -45,26 +45,21 @@ public class ResourceListInfo extends AbstractModel {
     private String ResourceId;
 
     /**
-    * Region
-
-Note: This field may return null, indicating that no valid value is found.
+    * Region.
     */
     @SerializedName("ResourceRegion")
     @Expose
     private String ResourceRegion;
 
     /**
-    * Resource Status
-
-Note: This field may return null, indicating that no valid value is found.
+    * Resource status.
     */
     @SerializedName("ResourceStatus")
     @Expose
     private String ResourceStatus;
 
     /**
-    * 1: Deleted. 2: Not deleted.
-Note: This field may return null, indicating that no valid value is found.
+    * Valid values: 1 (deleted) and 2 (not deleted).
     */
     @SerializedName("ResourceDelete")
     @Expose
@@ -72,50 +67,43 @@ Note: This field may return null, indicating that no valid value is found.
 
     /**
     * Resource creation time
-
-Note: This field may return null, indicating that no valid value is found.
     */
     @SerializedName("ResourceCreateTime")
     @Expose
     private String ResourceCreateTime;
 
     /**
-    * Tag information
-
-Note: This field may return null, indicating that no valid value is found.
+    * Tag information.
     */
     @SerializedName("Tags")
     @Expose
     private Tag [] Tags;
 
     /**
-    * Availability zone
-
-Note: This field may return null, indicating that no valid value is found.
+    * AZ.
     */
     @SerializedName("ResourceZone")
     @Expose
     private String ResourceZone;
 
     /**
-    * Compliance status.
-Note: This field may return null, indicating that no valid value is found.
+    * Compliance status
     */
     @SerializedName("ComplianceResult")
     @Expose
     private String ComplianceResult;
 
     /**
-     * Get Resource type 
-     * @return ResourceType Resource type
+     * Get Resource type. 
+     * @return ResourceType Resource type.
      */
     public String getResourceType() {
         return this.ResourceType;
     }
 
     /**
-     * Set Resource type
-     * @param ResourceType Resource type
+     * Set Resource type.
+     * @param ResourceType Resource type.
      */
     public void setResourceType(String ResourceType) {
         this.ResourceType = ResourceType;
@@ -154,80 +142,56 @@ Note: This field may return null, indicating that no valid value is found.
     }
 
     /**
-     * Get Region
-
-Note: This field may return null, indicating that no valid value is found. 
-     * @return ResourceRegion Region
-
-Note: This field may return null, indicating that no valid value is found.
+     * Get Region. 
+     * @return ResourceRegion Region.
      */
     public String getResourceRegion() {
         return this.ResourceRegion;
     }
 
     /**
-     * Set Region
-
-Note: This field may return null, indicating that no valid value is found.
-     * @param ResourceRegion Region
-
-Note: This field may return null, indicating that no valid value is found.
+     * Set Region.
+     * @param ResourceRegion Region.
      */
     public void setResourceRegion(String ResourceRegion) {
         this.ResourceRegion = ResourceRegion;
     }
 
     /**
-     * Get Resource Status
-
-Note: This field may return null, indicating that no valid value is found. 
-     * @return ResourceStatus Resource Status
-
-Note: This field may return null, indicating that no valid value is found.
+     * Get Resource status. 
+     * @return ResourceStatus Resource status.
      */
     public String getResourceStatus() {
         return this.ResourceStatus;
     }
 
     /**
-     * Set Resource Status
-
-Note: This field may return null, indicating that no valid value is found.
-     * @param ResourceStatus Resource Status
-
-Note: This field may return null, indicating that no valid value is found.
+     * Set Resource status.
+     * @param ResourceStatus Resource status.
      */
     public void setResourceStatus(String ResourceStatus) {
         this.ResourceStatus = ResourceStatus;
     }
 
     /**
-     * Get 1: Deleted. 2: Not deleted.
-Note: This field may return null, indicating that no valid value is found. 
-     * @return ResourceDelete 1: Deleted. 2: Not deleted.
-Note: This field may return null, indicating that no valid value is found.
+     * Get Valid values: 1 (deleted) and 2 (not deleted). 
+     * @return ResourceDelete Valid values: 1 (deleted) and 2 (not deleted).
      */
     public Long getResourceDelete() {
         return this.ResourceDelete;
     }
 
     /**
-     * Set 1: Deleted. 2: Not deleted.
-Note: This field may return null, indicating that no valid value is found.
-     * @param ResourceDelete 1: Deleted. 2: Not deleted.
-Note: This field may return null, indicating that no valid value is found.
+     * Set Valid values: 1 (deleted) and 2 (not deleted).
+     * @param ResourceDelete Valid values: 1 (deleted) and 2 (not deleted).
      */
     public void setResourceDelete(Long ResourceDelete) {
         this.ResourceDelete = ResourceDelete;
     }
 
     /**
-     * Get Resource creation time
-
-Note: This field may return null, indicating that no valid value is found. 
+     * Get Resource creation time 
      * @return ResourceCreateTime Resource creation time
-
-Note: This field may return null, indicating that no valid value is found.
      */
     public String getResourceCreateTime() {
         return this.ResourceCreateTime;
@@ -235,79 +199,55 @@ Note: This field may return null, indicating that no valid value is found.
 
     /**
      * Set Resource creation time
-
-Note: This field may return null, indicating that no valid value is found.
      * @param ResourceCreateTime Resource creation time
-
-Note: This field may return null, indicating that no valid value is found.
      */
     public void setResourceCreateTime(String ResourceCreateTime) {
         this.ResourceCreateTime = ResourceCreateTime;
     }
 
     /**
-     * Get Tag information
-
-Note: This field may return null, indicating that no valid value is found. 
-     * @return Tags Tag information
-
-Note: This field may return null, indicating that no valid value is found.
+     * Get Tag information. 
+     * @return Tags Tag information.
      */
     public Tag [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set Tag information
-
-Note: This field may return null, indicating that no valid value is found.
-     * @param Tags Tag information
-
-Note: This field may return null, indicating that no valid value is found.
+     * Set Tag information.
+     * @param Tags Tag information.
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get Availability zone
-
-Note: This field may return null, indicating that no valid value is found. 
-     * @return ResourceZone Availability zone
-
-Note: This field may return null, indicating that no valid value is found.
+     * Get AZ. 
+     * @return ResourceZone AZ.
      */
     public String getResourceZone() {
         return this.ResourceZone;
     }
 
     /**
-     * Set Availability zone
-
-Note: This field may return null, indicating that no valid value is found.
-     * @param ResourceZone Availability zone
-
-Note: This field may return null, indicating that no valid value is found.
+     * Set AZ.
+     * @param ResourceZone AZ.
      */
     public void setResourceZone(String ResourceZone) {
         this.ResourceZone = ResourceZone;
     }
 
     /**
-     * Get Compliance status.
-Note: This field may return null, indicating that no valid value is found. 
-     * @return ComplianceResult Compliance status.
-Note: This field may return null, indicating that no valid value is found.
+     * Get Compliance status 
+     * @return ComplianceResult Compliance status
      */
     public String getComplianceResult() {
         return this.ComplianceResult;
     }
 
     /**
-     * Set Compliance status.
-Note: This field may return null, indicating that no valid value is found.
-     * @param ComplianceResult Compliance status.
-Note: This field may return null, indicating that no valid value is found.
+     * Set Compliance status
+     * @param ComplianceResult Compliance status
      */
     public void setComplianceResult(String ComplianceResult) {
         this.ComplianceResult = ComplianceResult;

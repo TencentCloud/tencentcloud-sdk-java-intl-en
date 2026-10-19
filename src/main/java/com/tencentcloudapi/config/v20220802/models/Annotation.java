@@ -24,16 +24,14 @@ import java.util.HashMap;
 public class Annotation extends AbstractModel {
 
     /**
-    * Current actual configuration of the resource. It can contain 0 to 256 characters, which is the non-compliant configuration of the resource.
-Note: This field may return null, indicating that no valid value is found.
+    * Current actual resource configuration. A length of 0 to 256 characters indicates non-compliant resource configuration.
     */
     @SerializedName("Configuration")
     @Expose
     private String Configuration;
 
     /**
-    * Desired configuration of the resource. It can contain 0 to 256 characters, which is the compliant configuration of the resource.
-Note: This field may return null, indicating that no valid value is found.
+    * Expected resource configuration. A length of 0 to 256 characters indicates compliant resource configuration.
     */
     @SerializedName("DesiredValue")
     @Expose
@@ -54,40 +52,32 @@ Note: This field may return null, indicating that no valid value is found.
     private String Property;
 
     /**
-     * Get Current actual configuration of the resource. It can contain 0 to 256 characters, which is the non-compliant configuration of the resource.
-Note: This field may return null, indicating that no valid value is found. 
-     * @return Configuration Current actual configuration of the resource. It can contain 0 to 256 characters, which is the non-compliant configuration of the resource.
-Note: This field may return null, indicating that no valid value is found.
+     * Get Current actual resource configuration. A length of 0 to 256 characters indicates non-compliant resource configuration. 
+     * @return Configuration Current actual resource configuration. A length of 0 to 256 characters indicates non-compliant resource configuration.
      */
     public String getConfiguration() {
         return this.Configuration;
     }
 
     /**
-     * Set Current actual configuration of the resource. It can contain 0 to 256 characters, which is the non-compliant configuration of the resource.
-Note: This field may return null, indicating that no valid value is found.
-     * @param Configuration Current actual configuration of the resource. It can contain 0 to 256 characters, which is the non-compliant configuration of the resource.
-Note: This field may return null, indicating that no valid value is found.
+     * Set Current actual resource configuration. A length of 0 to 256 characters indicates non-compliant resource configuration.
+     * @param Configuration Current actual resource configuration. A length of 0 to 256 characters indicates non-compliant resource configuration.
      */
     public void setConfiguration(String Configuration) {
         this.Configuration = Configuration;
     }
 
     /**
-     * Get Desired configuration of the resource. It can contain 0 to 256 characters, which is the compliant configuration of the resource.
-Note: This field may return null, indicating that no valid value is found. 
-     * @return DesiredValue Desired configuration of the resource. It can contain 0 to 256 characters, which is the compliant configuration of the resource.
-Note: This field may return null, indicating that no valid value is found.
+     * Get Expected resource configuration. A length of 0 to 256 characters indicates compliant resource configuration. 
+     * @return DesiredValue Expected resource configuration. A length of 0 to 256 characters indicates compliant resource configuration.
      */
     public String getDesiredValue() {
         return this.DesiredValue;
     }
 
     /**
-     * Set Desired configuration of the resource. It can contain 0 to 256 characters, which is the compliant configuration of the resource.
-Note: This field may return null, indicating that no valid value is found.
-     * @param DesiredValue Desired configuration of the resource. It can contain 0 to 256 characters, which is the compliant configuration of the resource.
-Note: This field may return null, indicating that no valid value is found.
+     * Set Expected resource configuration. A length of 0 to 256 characters indicates compliant resource configuration.
+     * @param DesiredValue Expected resource configuration. A length of 0 to 256 characters indicates compliant resource configuration.
      */
     public void setDesiredValue(String DesiredValue) {
         this.DesiredValue = DesiredValue;

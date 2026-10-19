@@ -82,7 +82,7 @@ Default value: 4
     private Boolean NeedVerifyIdCard;
 
     /**
-    * Whether to forbid the modification of the OCR result by users. Default value: `false` (modification allowed). (Currently, this parameter is not applied.)
+    * Whether to forbid the modification of the OCR result by users. Default value: `false` (modification allowed). 
     */
     @SerializedName("DisableChangeOcrResult")
     @Expose
@@ -90,7 +90,6 @@ Default value: 4
 
     /**
     * Whether to disable the OCR warnings. Default value: `false` (not disable), where OCR warnings are enabled and the OCR result will not be returned if there is a warning.
-This feature applies only to Hong Kong (China) identity cards, Malaysian identity cards, and passports.
     */
     @SerializedName("DisableCheckOcrWarnings")
     @Expose
@@ -98,7 +97,7 @@ This feature applies only to Hong Kong (China) identity cards, Malaysian identit
 
     /**
     * Customize which alarm codes to block. If left blank, all alarm codes will be blocked by default.
-Optional alarm codes are: -9101 (occlusion or incomplete border), -9102 (photocopying), -9103 (screen capture by camera), -9104 (image editing/PS modification), -9107 (glare/reflection), -9108 (blurriness), -9901 (other alarms).
+Optional alarm codes are: -9101 (occlusion or incomplete border), -9102 (photocopying), -9103 (screen capture by camera), -9104 (image editing/PS modification), -9107 (glare/reflection), -9108 (blurriness), -8101 (information format check),-8102(information consistency check).
     */
     @SerializedName("SelectedWarningCodes")
     @Expose
@@ -420,26 +419,24 @@ Default value: 4
     }
 
     /**
-     * Get Whether to forbid the modification of the OCR result by users. Default value: `false` (modification allowed). (Currently, this parameter is not applied.) 
-     * @return DisableChangeOcrResult Whether to forbid the modification of the OCR result by users. Default value: `false` (modification allowed). (Currently, this parameter is not applied.)
+     * Get Whether to forbid the modification of the OCR result by users. Default value: `false` (modification allowed).  
+     * @return DisableChangeOcrResult Whether to forbid the modification of the OCR result by users. Default value: `false` (modification allowed). 
      */
     public Boolean getDisableChangeOcrResult() {
         return this.DisableChangeOcrResult;
     }
 
     /**
-     * Set Whether to forbid the modification of the OCR result by users. Default value: `false` (modification allowed). (Currently, this parameter is not applied.)
-     * @param DisableChangeOcrResult Whether to forbid the modification of the OCR result by users. Default value: `false` (modification allowed). (Currently, this parameter is not applied.)
+     * Set Whether to forbid the modification of the OCR result by users. Default value: `false` (modification allowed). 
+     * @param DisableChangeOcrResult Whether to forbid the modification of the OCR result by users. Default value: `false` (modification allowed). 
      */
     public void setDisableChangeOcrResult(Boolean DisableChangeOcrResult) {
         this.DisableChangeOcrResult = DisableChangeOcrResult;
     }
 
     /**
-     * Get Whether to disable the OCR warnings. Default value: `false` (not disable), where OCR warnings are enabled and the OCR result will not be returned if there is a warning.
-This feature applies only to Hong Kong (China) identity cards, Malaysian identity cards, and passports. 
+     * Get Whether to disable the OCR warnings. Default value: `false` (not disable), where OCR warnings are enabled and the OCR result will not be returned if there is a warning. 
      * @return DisableCheckOcrWarnings Whether to disable the OCR warnings. Default value: `false` (not disable), where OCR warnings are enabled and the OCR result will not be returned if there is a warning.
-This feature applies only to Hong Kong (China) identity cards, Malaysian identity cards, and passports.
      */
     public Boolean getDisableCheckOcrWarnings() {
         return this.DisableCheckOcrWarnings;
@@ -447,9 +444,7 @@ This feature applies only to Hong Kong (China) identity cards, Malaysian identit
 
     /**
      * Set Whether to disable the OCR warnings. Default value: `false` (not disable), where OCR warnings are enabled and the OCR result will not be returned if there is a warning.
-This feature applies only to Hong Kong (China) identity cards, Malaysian identity cards, and passports.
      * @param DisableCheckOcrWarnings Whether to disable the OCR warnings. Default value: `false` (not disable), where OCR warnings are enabled and the OCR result will not be returned if there is a warning.
-This feature applies only to Hong Kong (China) identity cards, Malaysian identity cards, and passports.
      */
     public void setDisableCheckOcrWarnings(Boolean DisableCheckOcrWarnings) {
         this.DisableCheckOcrWarnings = DisableCheckOcrWarnings;
@@ -457,9 +452,9 @@ This feature applies only to Hong Kong (China) identity cards, Malaysian identit
 
     /**
      * Get Customize which alarm codes to block. If left blank, all alarm codes will be blocked by default.
-Optional alarm codes are: -9101 (occlusion or incomplete border), -9102 (photocopying), -9103 (screen capture by camera), -9104 (image editing/PS modification), -9107 (glare/reflection), -9108 (blurriness), -9901 (other alarms). 
+Optional alarm codes are: -9101 (occlusion or incomplete border), -9102 (photocopying), -9103 (screen capture by camera), -9104 (image editing/PS modification), -9107 (glare/reflection), -9108 (blurriness), -8101 (information format check),-8102(information consistency check). 
      * @return SelectedWarningCodes Customize which alarm codes to block. If left blank, all alarm codes will be blocked by default.
-Optional alarm codes are: -9101 (occlusion or incomplete border), -9102 (photocopying), -9103 (screen capture by camera), -9104 (image editing/PS modification), -9107 (glare/reflection), -9108 (blurriness), -9901 (other alarms).
+Optional alarm codes are: -9101 (occlusion or incomplete border), -9102 (photocopying), -9103 (screen capture by camera), -9104 (image editing/PS modification), -9107 (glare/reflection), -9108 (blurriness), -8101 (information format check),-8102(information consistency check).
      */
     public Long [] getSelectedWarningCodes() {
         return this.SelectedWarningCodes;
@@ -467,9 +462,9 @@ Optional alarm codes are: -9101 (occlusion or incomplete border), -9102 (photoco
 
     /**
      * Set Customize which alarm codes to block. If left blank, all alarm codes will be blocked by default.
-Optional alarm codes are: -9101 (occlusion or incomplete border), -9102 (photocopying), -9103 (screen capture by camera), -9104 (image editing/PS modification), -9107 (glare/reflection), -9108 (blurriness), -9901 (other alarms).
+Optional alarm codes are: -9101 (occlusion or incomplete border), -9102 (photocopying), -9103 (screen capture by camera), -9104 (image editing/PS modification), -9107 (glare/reflection), -9108 (blurriness), -8101 (information format check),-8102(information consistency check).
      * @param SelectedWarningCodes Customize which alarm codes to block. If left blank, all alarm codes will be blocked by default.
-Optional alarm codes are: -9101 (occlusion or incomplete border), -9102 (photocopying), -9103 (screen capture by camera), -9104 (image editing/PS modification), -9107 (glare/reflection), -9108 (blurriness), -9901 (other alarms).
+Optional alarm codes are: -9101 (occlusion or incomplete border), -9102 (photocopying), -9103 (screen capture by camera), -9104 (image editing/PS modification), -9107 (glare/reflection), -9108 (blurriness), -8101 (information format check),-8102(information consistency check).
      */
     public void setSelectedWarningCodes(Long [] SelectedWarningCodes) {
         this.SelectedWarningCodes = SelectedWarningCodes;

@@ -185,7 +185,7 @@ public class CreateInstancesRequest extends AbstractModel {
     private Boolean DryRun;
 
     /**
-    * <p>Indicates the instance deployment mode.</p><ul><li>local: traditional architecture, defaults to local.</li><li>cdc: dedicated cluster.</li><li>cloud: cloud native, currently not available for sale.</li></ul>
+    * <p>Instance deployment type.</p><p>Enumeration values:</p><ul><li>local: common type I.</li><li>localv2: common type II.</li><li>cdc: dedicated cluster type.</li><li>cloud: cloud native. Currently not available for sale.</li></ul>
     */
     @SerializedName("ProductVersion")
     @Expose
@@ -609,16 +609,16 @@ public class CreateInstancesRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>Indicates the instance deployment mode.</p><ul><li>local: traditional architecture, defaults to local.</li><li>cdc: dedicated cluster.</li><li>cloud: cloud native, currently not available for sale.</li></ul> 
-     * @return ProductVersion <p>Indicates the instance deployment mode.</p><ul><li>local: traditional architecture, defaults to local.</li><li>cdc: dedicated cluster.</li><li>cloud: cloud native, currently not available for sale.</li></ul>
+     * Get <p>Instance deployment type.</p><p>Enumeration values:</p><ul><li>local: common type I.</li><li>localv2: common type II.</li><li>cdc: dedicated cluster type.</li><li>cloud: cloud native. Currently not available for sale.</li></ul> 
+     * @return ProductVersion <p>Instance deployment type.</p><p>Enumeration values:</p><ul><li>local: common type I.</li><li>localv2: common type II.</li><li>cdc: dedicated cluster type.</li><li>cloud: cloud native. Currently not available for sale.</li></ul>
      */
     public String getProductVersion() {
         return this.ProductVersion;
     }
 
     /**
-     * Set <p>Indicates the instance deployment mode.</p><ul><li>local: traditional architecture, defaults to local.</li><li>cdc: dedicated cluster.</li><li>cloud: cloud native, currently not available for sale.</li></ul>
-     * @param ProductVersion <p>Indicates the instance deployment mode.</p><ul><li>local: traditional architecture, defaults to local.</li><li>cdc: dedicated cluster.</li><li>cloud: cloud native, currently not available for sale.</li></ul>
+     * Set <p>Instance deployment type.</p><p>Enumeration values:</p><ul><li>local: common type I.</li><li>localv2: common type II.</li><li>cdc: dedicated cluster type.</li><li>cloud: cloud native. Currently not available for sale.</li></ul>
+     * @param ProductVersion <p>Instance deployment type.</p><p>Enumeration values:</p><ul><li>local: common type I.</li><li>localv2: common type II.</li><li>cdc: dedicated cluster type.</li><li>cloud: cloud native. Currently not available for sale.</li></ul>
      */
     public void setProductVersion(String ProductVersion) {
         this.ProductVersion = ProductVersion;

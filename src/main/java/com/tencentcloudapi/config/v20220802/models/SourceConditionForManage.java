@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class SourceConditionForManage extends AbstractModel {
 
     /**
-    * Condition is empty, Compliant: COMPLIANT, Non-compliant: NON_COMPLIANT, Not applicable: NOT_APPLICABLE.
-Note: This field may return null, indicating that no valid value is found.
+    * Compliance status when the condition is empty. Valid values: COMPLIANT, NON_COMPLIANT, and NOT_APPLICABLE.
     */
     @SerializedName("EmptyAs")
     @Expose
@@ -33,25 +32,20 @@ Note: This field may return null, indicating that no valid value is found.
 
     /**
     * Configuration path
-
-Note: This field may return null, indicating that no valid value is found.
     */
     @SerializedName("SelectPath")
     @Expose
     private String SelectPath;
 
     /**
-    * Operators
-Note: This field may return null, indicating that no valid value is found.
+    * Operator.
     */
     @SerializedName("Operator")
     @Expose
     private String Operator;
 
     /**
-    * Required or not.
-
-Note: This field may return null, indicating that no valid value is found.
+    * Whether it is mandatory.
     */
     @SerializedName("Required")
     @Expose
@@ -59,39 +53,30 @@ Note: This field may return null, indicating that no valid value is found.
 
     /**
     * Expected value
-Note: This field may return null, indicating that no valid value is found.
     */
     @SerializedName("DesiredValue")
     @Expose
     private String DesiredValue;
 
     /**
-     * Get Condition is empty, Compliant: COMPLIANT, Non-compliant: NON_COMPLIANT, Not applicable: NOT_APPLICABLE.
-Note: This field may return null, indicating that no valid value is found. 
-     * @return EmptyAs Condition is empty, Compliant: COMPLIANT, Non-compliant: NON_COMPLIANT, Not applicable: NOT_APPLICABLE.
-Note: This field may return null, indicating that no valid value is found.
+     * Get Compliance status when the condition is empty. Valid values: COMPLIANT, NON_COMPLIANT, and NOT_APPLICABLE. 
+     * @return EmptyAs Compliance status when the condition is empty. Valid values: COMPLIANT, NON_COMPLIANT, and NOT_APPLICABLE.
      */
     public String getEmptyAs() {
         return this.EmptyAs;
     }
 
     /**
-     * Set Condition is empty, Compliant: COMPLIANT, Non-compliant: NON_COMPLIANT, Not applicable: NOT_APPLICABLE.
-Note: This field may return null, indicating that no valid value is found.
-     * @param EmptyAs Condition is empty, Compliant: COMPLIANT, Non-compliant: NON_COMPLIANT, Not applicable: NOT_APPLICABLE.
-Note: This field may return null, indicating that no valid value is found.
+     * Set Compliance status when the condition is empty. Valid values: COMPLIANT, NON_COMPLIANT, and NOT_APPLICABLE.
+     * @param EmptyAs Compliance status when the condition is empty. Valid values: COMPLIANT, NON_COMPLIANT, and NOT_APPLICABLE.
      */
     public void setEmptyAs(String EmptyAs) {
         this.EmptyAs = EmptyAs;
     }
 
     /**
-     * Get Configuration path
-
-Note: This field may return null, indicating that no valid value is found. 
+     * Get Configuration path 
      * @return SelectPath Configuration path
-
-Note: This field may return null, indicating that no valid value is found.
      */
     public String getSelectPath() {
         return this.SelectPath;
@@ -99,65 +84,47 @@ Note: This field may return null, indicating that no valid value is found.
 
     /**
      * Set Configuration path
-
-Note: This field may return null, indicating that no valid value is found.
      * @param SelectPath Configuration path
-
-Note: This field may return null, indicating that no valid value is found.
      */
     public void setSelectPath(String SelectPath) {
         this.SelectPath = SelectPath;
     }
 
     /**
-     * Get Operators
-Note: This field may return null, indicating that no valid value is found. 
-     * @return Operator Operators
-Note: This field may return null, indicating that no valid value is found.
+     * Get Operator. 
+     * @return Operator Operator.
      */
     public String getOperator() {
         return this.Operator;
     }
 
     /**
-     * Set Operators
-Note: This field may return null, indicating that no valid value is found.
-     * @param Operator Operators
-Note: This field may return null, indicating that no valid value is found.
+     * Set Operator.
+     * @param Operator Operator.
      */
     public void setOperator(String Operator) {
         this.Operator = Operator;
     }
 
     /**
-     * Get Required or not.
-
-Note: This field may return null, indicating that no valid value is found. 
-     * @return Required Required or not.
-
-Note: This field may return null, indicating that no valid value is found.
+     * Get Whether it is mandatory. 
+     * @return Required Whether it is mandatory.
      */
     public Boolean getRequired() {
         return this.Required;
     }
 
     /**
-     * Set Required or not.
-
-Note: This field may return null, indicating that no valid value is found.
-     * @param Required Required or not.
-
-Note: This field may return null, indicating that no valid value is found.
+     * Set Whether it is mandatory.
+     * @param Required Whether it is mandatory.
      */
     public void setRequired(Boolean Required) {
         this.Required = Required;
     }
 
     /**
-     * Get Expected value
-Note: This field may return null, indicating that no valid value is found. 
+     * Get Expected value 
      * @return DesiredValue Expected value
-Note: This field may return null, indicating that no valid value is found.
      */
     public String getDesiredValue() {
         return this.DesiredValue;
@@ -165,9 +132,7 @@ Note: This field may return null, indicating that no valid value is found.
 
     /**
      * Set Expected value
-Note: This field may return null, indicating that no valid value is found.
      * @param DesiredValue Expected value
-Note: This field may return null, indicating that no valid value is found.
      */
     public void setDesiredValue(String DesiredValue) {
         this.DesiredValue = DesiredValue;

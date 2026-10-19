@@ -38,9 +38,7 @@ public class InputParameter extends AbstractModel {
     private String Type;
 
     /**
-    * Parameter value
-
-Note: This field may return null, indicating that no valid value is found.
+    * Parameter value.
     */
     @SerializedName("Value")
     @Expose
@@ -79,24 +77,16 @@ Note: This field may return null, indicating that no valid value is found.
     }
 
     /**
-     * Get Parameter value
-
-Note: This field may return null, indicating that no valid value is found. 
-     * @return Value Parameter value
-
-Note: This field may return null, indicating that no valid value is found.
+     * Get Parameter value. 
+     * @return Value Parameter value.
      */
     public String getValue() {
         return this.Value;
     }
 
     /**
-     * Set Parameter value
-
-Note: This field may return null, indicating that no valid value is found.
-     * @param Value Parameter value
-
-Note: This field may return null, indicating that no valid value is found.
+     * Set Parameter value.
+     * @param Value Parameter value.
      */
     public void setValue(String Value) {
         this.Value = Value;

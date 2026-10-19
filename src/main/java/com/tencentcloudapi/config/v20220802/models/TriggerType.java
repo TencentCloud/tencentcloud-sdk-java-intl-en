@@ -31,8 +31,7 @@ public class TriggerType extends AbstractModel {
     private String MessageType;
 
     /**
-    * Trigger time period
-Note: This field may return null, indicating that no valid value is found.
+    * Triggering time period.
     */
     @SerializedName("MaximumExecutionFrequency")
     @Expose
@@ -55,20 +54,16 @@ Note: This field may return null, indicating that no valid value is found.
     }
 
     /**
-     * Get Trigger time period
-Note: This field may return null, indicating that no valid value is found. 
-     * @return MaximumExecutionFrequency Trigger time period
-Note: This field may return null, indicating that no valid value is found.
+     * Get Triggering time period. 
+     * @return MaximumExecutionFrequency Triggering time period.
      */
     public String getMaximumExecutionFrequency() {
         return this.MaximumExecutionFrequency;
     }
 
     /**
-     * Set Trigger time period
-Note: This field may return null, indicating that no valid value is found.
-     * @param MaximumExecutionFrequency Trigger time period
-Note: This field may return null, indicating that no valid value is found.
+     * Set Triggering time period.
+     * @param MaximumExecutionFrequency Triggering time period.
      */
     public void setMaximumExecutionFrequency(String MaximumExecutionFrequency) {
         this.MaximumExecutionFrequency = MaximumExecutionFrequency;

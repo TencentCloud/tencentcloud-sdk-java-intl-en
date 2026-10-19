@@ -24,138 +24,138 @@ import java.util.HashMap;
 public class ListAggregateDiscoveredResourcesRequest extends AbstractModel {
 
     /**
-    * Items per Page
+    * <p>Number of results displayed per page</p>
     */
     @SerializedName("MaxResults")
     @Expose
     private Long MaxResults;
 
     /**
-    * Account group ID
+    * <p>Account group ID.</p>
     */
     @SerializedName("AccountGroupId")
     @Expose
     private String AccountGroupId;
 
     /**
-    * resourceName: Resource name; resourceId: Resource ID; resourceType: Resource type
+    * <p>resourceName: resource name. resourceId: resource ID. resourceType: resource type.</p>
     */
     @SerializedName("Filters")
     @Expose
     private Filter [] Filters;
 
     /**
-    * <Tag>
+    * <p>Tag.</p>
     */
     @SerializedName("Tags")
     @Expose
     private Tag [] Tags;
 
     /**
-    * Next page token.
+    * <p>Next page token</p>
     */
     @SerializedName("NextToken")
     @Expose
     private String NextToken;
 
     /**
-    * Sorting method asc, desc
+    * <p>Sorting method: asc, desc</p>
     */
     @SerializedName("OrderType")
     @Expose
     private String OrderType;
 
     /**
-     * Get Items per Page 
-     * @return MaxResults Items per Page
+     * Get <p>Number of results displayed per page</p> 
+     * @return MaxResults <p>Number of results displayed per page</p>
      */
     public Long getMaxResults() {
         return this.MaxResults;
     }
 
     /**
-     * Set Items per Page
-     * @param MaxResults Items per Page
+     * Set <p>Number of results displayed per page</p>
+     * @param MaxResults <p>Number of results displayed per page</p>
      */
     public void setMaxResults(Long MaxResults) {
         this.MaxResults = MaxResults;
     }
 
     /**
-     * Get Account group ID 
-     * @return AccountGroupId Account group ID
+     * Get <p>Account group ID.</p> 
+     * @return AccountGroupId <p>Account group ID.</p>
      */
     public String getAccountGroupId() {
         return this.AccountGroupId;
     }
 
     /**
-     * Set Account group ID
-     * @param AccountGroupId Account group ID
+     * Set <p>Account group ID.</p>
+     * @param AccountGroupId <p>Account group ID.</p>
      */
     public void setAccountGroupId(String AccountGroupId) {
         this.AccountGroupId = AccountGroupId;
     }
 
     /**
-     * Get resourceName: Resource name; resourceId: Resource ID; resourceType: Resource type 
-     * @return Filters resourceName: Resource name; resourceId: Resource ID; resourceType: Resource type
+     * Get <p>resourceName: resource name. resourceId: resource ID. resourceType: resource type.</p> 
+     * @return Filters <p>resourceName: resource name. resourceId: resource ID. resourceType: resource type.</p>
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set resourceName: Resource name; resourceId: Resource ID; resourceType: Resource type
-     * @param Filters resourceName: Resource name; resourceId: Resource ID; resourceType: Resource type
+     * Set <p>resourceName: resource name. resourceId: resource ID. resourceType: resource type.</p>
+     * @param Filters <p>resourceName: resource name. resourceId: resource ID. resourceType: resource type.</p>
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;
     }
 
     /**
-     * Get <Tag> 
-     * @return Tags <Tag>
+     * Get <p>Tag.</p> 
+     * @return Tags <p>Tag.</p>
      */
     public Tag [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set <Tag>
-     * @param Tags <Tag>
+     * Set <p>Tag.</p>
+     * @param Tags <p>Tag.</p>
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get Next page token. 
-     * @return NextToken Next page token.
+     * Get <p>Next page token</p> 
+     * @return NextToken <p>Next page token</p>
      */
     public String getNextToken() {
         return this.NextToken;
     }
 
     /**
-     * Set Next page token.
-     * @param NextToken Next page token.
+     * Set <p>Next page token</p>
+     * @param NextToken <p>Next page token</p>
      */
     public void setNextToken(String NextToken) {
         this.NextToken = NextToken;
     }
 
     /**
-     * Get Sorting method asc, desc 
-     * @return OrderType Sorting method asc, desc
+     * Get <p>Sorting method: asc, desc</p> 
+     * @return OrderType <p>Sorting method: asc, desc</p>
      */
     public String getOrderType() {
         return this.OrderType;
     }
 
     /**
-     * Set Sorting method asc, desc
-     * @param OrderType Sorting method asc, desc
+     * Set <p>Sorting method: asc, desc</p>
+     * @param OrderType <p>Sorting method: asc, desc</p>
      */
     public void setOrderType(String OrderType) {
         this.OrderType = OrderType;

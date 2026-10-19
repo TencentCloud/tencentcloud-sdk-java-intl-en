@@ -160,6 +160,17 @@ public class MnaClient extends AbstractClient{
     }
 
     /**
+     *This API is used to query the access point list.
+     * @param req DescribeAccessPointListRequest
+     * @return DescribeAccessPointListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAccessPointListResponse DescribeAccessPointList(DescribeAccessPointListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAccessPointList", DescribeAccessPointListResponse.class);
+    }
+
+    /**
      *Query the access region list.
      * @param req DescribeAccessRegionsRequest
      * @return DescribeAccessRegionsResponse

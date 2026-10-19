@@ -39,17 +39,6 @@ public class CfwClient extends AbstractClient{
     }
 
     /**
-     *This API is used to add edge firewall rules.
-     * @param req AddAcRuleRequest
-     * @return AddAcRuleResponse
-     * @throws TencentCloudSDKException
-     */
-    public AddAcRuleResponse AddAcRule(AddAcRuleRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "AddAcRule", AddAcRuleResponse.class);
-    }
-
-    /**
      *Add one or more Internet Boundary Access Control Rules.
      * @param req AddAclRuleRequest
      * @return AddAclRuleResponse
@@ -138,17 +127,6 @@ public class CfwClient extends AbstractClient{
     }
 
     /**
-     *This API is used to delete all rules.
-     * @param req DeleteAllAccessControlRuleRequest
-     * @return DeleteAllAccessControlRuleResponse
-     * @throws TencentCloudSDKException
-     */
-    public DeleteAllAccessControlRuleResponse DeleteAllAccessControlRule(DeleteAllAccessControlRuleRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DeleteAllAccessControlRule", DeleteAllAccessControlRuleResponse.class);
-    }
-
-    /**
      *This API is used to delete asset groups in Asset Management.
      * @param req DeleteResourceGroupRequest
      * @return DeleteResourceGroupResponse
@@ -168,17 +146,6 @@ public class CfwClient extends AbstractClient{
     public DeleteSecurityGroupRuleResponse DeleteSecurityGroupRule(DeleteSecurityGroupRuleRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteSecurityGroupRule", DeleteSecurityGroupRuleResponse.class);
-    }
-
-    /**
-     *This API is used to delete firewall instance.
-     * @param req DeleteVpcInstanceRequest
-     * @return DeleteVpcInstanceResponse
-     * @throws TencentCloudSDKException
-     */
-    public DeleteVpcInstanceResponse DeleteVpcInstance(DeleteVpcInstanceRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DeleteVpcInstance", DeleteVpcInstanceResponse.class);
     }
 
     /**
@@ -484,6 +451,17 @@ public class CfwClient extends AbstractClient{
     }
 
     /**
+     *This API is used to query the traffic statistics under VPC firewalls at the single IP granularity.
+     * @param req DescribeVpcFwIpStatRequest
+     * @return DescribeVpcFwIpStatResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeVpcFwIpStatResponse DescribeVpcFwIpStat(DescribeVpcFwIpStatRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeVpcFwIpStat", DescribeVpcFwIpStatResponse.class);
+    }
+
+    /**
      *This API is used to increase the firewall bandwidth.
      * @param req ExpandCfwVerticalRequest
      * @return ExpandCfwVerticalResponse
@@ -525,17 +503,6 @@ public class CfwClient extends AbstractClient{
     public ModifyAllRuleStatusResponse ModifyAllRuleStatus(ModifyAllRuleStatusRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyAllRuleStatus", ModifyAllRuleStatusResponse.class);
-    }
-
-    /**
-     *This API is used to enable or disable one or multiple VPC firewalls.
-     * @param req ModifyAllVPCSwitchStatusRequest
-     * @return ModifyAllVPCSwitchStatusResponse
-     * @throws TencentCloudSDKException
-     */
-    public ModifyAllVPCSwitchStatusResponse ModifyAllVPCSwitchStatus(ModifyAllVPCSwitchStatusRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "ModifyAllVPCSwitchStatus", ModifyAllVPCSwitchStatusResponse.class);
     }
 
     /**
@@ -649,17 +616,6 @@ Modify events related with the IPs/domains in the blocked/allowed list
     public ModifyNatSequenceRulesResponse ModifyNatSequenceRules(ModifyNatSequenceRulesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyNatSequenceRules", ModifyNatSequenceRulesResponse.class);
-    }
-
-    /**
-     *This API is used to enable or disable an edge firewall.
-     * @param req ModifyPublicIPSwitchStatusRequest
-     * @return ModifyPublicIPSwitchStatusResponse
-     * @throws TencentCloudSDKException
-     */
-    public ModifyPublicIPSwitchStatusResponse ModifyPublicIPSwitchStatus(ModifyPublicIPSwitchStatusRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "ModifyPublicIPSwitchStatus", ModifyPublicIPSwitchStatusResponse.class);
     }
 
     /**

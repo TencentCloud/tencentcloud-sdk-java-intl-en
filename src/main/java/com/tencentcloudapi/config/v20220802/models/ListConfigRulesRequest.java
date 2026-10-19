@@ -24,7 +24,8 @@ import java.util.HashMap;
 public class ListConfigRulesRequest extends AbstractModel {
 
     /**
-    * Page limit
+    * Number of entries per page.
+Valid values: 1-200
     */
     @SerializedName("Limit")
     @Expose
@@ -32,23 +33,25 @@ public class ListConfigRulesRequest extends AbstractModel {
 
     /**
     * Offset.
+Value range: minimum value is 0
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * Sort type. Descending: desc, Ascending: asc.
+    * Sorting type (rule name).
+- desc: descending order.
+asc: ascending order.
     */
     @SerializedName("OrderType")
     @Expose
     private String OrderType;
 
     /**
-    * Risk level
-
-1: High risk.
-2: Medium risk.
+    * Risk level.
+1: High-risk
+2: Medium-risk,
 3: Low risk.
     */
     @SerializedName("RiskLevel")
@@ -56,45 +59,56 @@ public class ListConfigRulesRequest extends AbstractModel {
     private Long [] RiskLevel;
 
     /**
-    * Rule status
+    * Rule Status.
+ACTIVE: enable
+UN_ACTIVE: Disabled
+
     */
     @SerializedName("State")
     @Expose
     private String State;
 
     /**
-    * Evaluation result
+    * Assessment result.
+COMPLIANT: compliant
+NON_COMPLIANT: non-compliance
     */
     @SerializedName("ComplianceResult")
     @Expose
     private String [] ComplianceResult;
 
     /**
-    * Name of the rule
+    * Rule Name
     */
     @SerializedName("RuleName")
     @Expose
     private String RuleName;
 
     /**
-     * Get Page limit 
-     * @return Limit Page limit
+     * Get Number of entries per page.
+Valid values: 1-200 
+     * @return Limit Number of entries per page.
+Valid values: 1-200
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Page limit
-     * @param Limit Page limit
+     * Set Number of entries per page.
+Valid values: 1-200
+     * @param Limit Number of entries per page.
+Valid values: 1-200
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get Offset. 
+     * Get Offset.
+Value range: minimum value is 0 
      * @return Offset Offset.
+Value range: minimum value is 0
      */
     public Long getOffset() {
         return this.Offset;
@@ -102,38 +116,46 @@ public class ListConfigRulesRequest extends AbstractModel {
 
     /**
      * Set Offset.
+Value range: minimum value is 0
      * @param Offset Offset.
+Value range: minimum value is 0
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get Sort type. Descending: desc, Ascending: asc. 
-     * @return OrderType Sort type. Descending: desc, Ascending: asc.
+     * Get Sorting type (rule name).
+- desc: descending order.
+asc: ascending order. 
+     * @return OrderType Sorting type (rule name).
+- desc: descending order.
+asc: ascending order.
      */
     public String getOrderType() {
         return this.OrderType;
     }
 
     /**
-     * Set Sort type. Descending: desc, Ascending: asc.
-     * @param OrderType Sort type. Descending: desc, Ascending: asc.
+     * Set Sorting type (rule name).
+- desc: descending order.
+asc: ascending order.
+     * @param OrderType Sorting type (rule name).
+- desc: descending order.
+asc: ascending order.
      */
     public void setOrderType(String OrderType) {
         this.OrderType = OrderType;
     }
 
     /**
-     * Get Risk level
-
-1: High risk.
-2: Medium risk.
+     * Get Risk level.
+1: High-risk
+2: Medium-risk,
 3: Low risk. 
-     * @return RiskLevel Risk level
-
-1: High risk.
-2: Medium risk.
+     * @return RiskLevel Risk level.
+1: High-risk
+2: Medium-risk,
 3: Low risk.
      */
     public Long [] getRiskLevel() {
@@ -141,15 +163,13 @@ public class ListConfigRulesRequest extends AbstractModel {
     }
 
     /**
-     * Set Risk level
-
-1: High risk.
-2: Medium risk.
+     * Set Risk level.
+1: High-risk
+2: Medium-risk,
 3: Low risk.
-     * @param RiskLevel Risk level
-
-1: High risk.
-2: Medium risk.
+     * @param RiskLevel Risk level.
+1: High-risk
+2: Medium-risk,
 3: Low risk.
      */
     public void setRiskLevel(Long [] RiskLevel) {
@@ -157,48 +177,68 @@ public class ListConfigRulesRequest extends AbstractModel {
     }
 
     /**
-     * Get Rule status 
-     * @return State Rule status
+     * Get Rule Status.
+ACTIVE: enable
+UN_ACTIVE: Disabled
+ 
+     * @return State Rule Status.
+ACTIVE: enable
+UN_ACTIVE: Disabled
+
      */
     public String getState() {
         return this.State;
     }
 
     /**
-     * Set Rule status
-     * @param State Rule status
+     * Set Rule Status.
+ACTIVE: enable
+UN_ACTIVE: Disabled
+
+     * @param State Rule Status.
+ACTIVE: enable
+UN_ACTIVE: Disabled
+
      */
     public void setState(String State) {
         this.State = State;
     }
 
     /**
-     * Get Evaluation result 
-     * @return ComplianceResult Evaluation result
+     * Get Assessment result.
+COMPLIANT: compliant
+NON_COMPLIANT: non-compliance 
+     * @return ComplianceResult Assessment result.
+COMPLIANT: compliant
+NON_COMPLIANT: non-compliance
      */
     public String [] getComplianceResult() {
         return this.ComplianceResult;
     }
 
     /**
-     * Set Evaluation result
-     * @param ComplianceResult Evaluation result
+     * Set Assessment result.
+COMPLIANT: compliant
+NON_COMPLIANT: non-compliance
+     * @param ComplianceResult Assessment result.
+COMPLIANT: compliant
+NON_COMPLIANT: non-compliance
      */
     public void setComplianceResult(String [] ComplianceResult) {
         this.ComplianceResult = ComplianceResult;
     }
 
     /**
-     * Get Name of the rule 
-     * @return RuleName Name of the rule
+     * Get Rule Name 
+     * @return RuleName Rule Name
      */
     public String getRuleName() {
         return this.RuleName;
     }
 
     /**
-     * Set Name of the rule
-     * @param RuleName Name of the rule
+     * Set Rule Name
+     * @param RuleName Rule Name
      */
     public void setRuleName(String RuleName) {
         this.RuleName = RuleName;

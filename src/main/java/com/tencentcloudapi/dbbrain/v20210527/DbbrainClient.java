@@ -204,6 +204,17 @@ public class DbbrainClient extends AbstractClient{
     }
 
     /**
+     *Queries the audit log details of a specified instance within a time window, support by SQL type, execution time, error code, keyword, and other multi-condition filtering. Currently only support dcdb and mariadb products (cdb and cynosdb have been migrated to the central platform). Note that Filter.MultiSql and Filter.ExcludeMultiSql need to be transmitted as a JSON string in the form of a two-dimensional array, for example, [["a","b"]] means (a OR b), and the server will automatically parse it.
+     * @param req DescribeDBAuditLogsRequest
+     * @return DescribeDBAuditLogsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDBAuditLogsResponse DescribeDBAuditLogs(DescribeDBAuditLogsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDBAuditLogs", DescribeDBAuditLogsResponse.class);
+    }
+
+    /**
      *This API is used to get the details of an instance exception diagnosis event.
      * @param req DescribeDBDiagEventRequest
      * @return DescribeDBDiagEventResponse

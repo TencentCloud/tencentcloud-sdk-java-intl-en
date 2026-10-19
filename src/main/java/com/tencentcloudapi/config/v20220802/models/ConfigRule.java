@@ -24,17 +24,14 @@ import java.util.HashMap;
 public class ConfigRule extends AbstractModel {
 
     /**
-    * Rule identifier
-Note: This field may return null, indicating that no valid value is found.
+    * Rule ID
     */
     @SerializedName("Identifier")
     @Expose
     private String Identifier;
 
     /**
-    * Name of the rule
-
-Note: This field may return null, indicating that no valid value is found.
+    * Rule Name
     */
     @SerializedName("RuleName")
     @Expose
@@ -42,7 +39,6 @@ Note: This field may return null, indicating that no valid value is found.
 
     /**
     * Rule parameters
-Note: This field may return null, indicating that no valid value is found.
     */
     @SerializedName("InputParameter")
     @Expose
@@ -50,53 +46,45 @@ Note: This field may return null, indicating that no valid value is found.
 
     /**
     * Rule trigger condition.
-
-Note: This field may return null, indicating that no valid value is found.
     */
     @SerializedName("SourceCondition")
     @Expose
     private SourceConditionForManage [] SourceCondition;
 
     /**
-    * Resource types supported by rule. The rule only applies to specified resource types.
-Note: This field may return null, indicating that no valid value is found.
+    * Resource types supported by the rule. The rule applies only to resources of the specified resource types.
     */
     @SerializedName("ResourceType")
     @Expose
     private String [] ResourceType;
 
     /**
-    * Rule ownership tag
-Note: This field may return null, indicating that no valid value is found.
+    * Rule tags.
     */
     @SerializedName("Labels")
     @Expose
     private String [] Labels;
 
     /**
-    * Rule risk level
+    * Rule risk level.
 1: Low risk
-2: Medium risk
-3: High risk
-Note: This field may return null, indicating that no valid value is found.
+2: Medium-risk
+3: High-risk
     */
     @SerializedName("RiskLevel")
     @Expose
     private Long RiskLevel;
 
     /**
-    * Function corresponding to rule
-Note: This field may return null, indicating that no valid value is found.
+    * Function corresponding to the rule.
     */
     @SerializedName("ServiceFunction")
     @Expose
     private String ServiceFunction;
 
     /**
-    * Creation time
-
+    * Creation time.
 Format: YYYY-MM-DD h:i:s
-Note: This field may return null, indicating that no valid value is found.
     */
     @SerializedName("CreateTime")
     @Expose
@@ -104,27 +92,23 @@ Note: This field may return null, indicating that no valid value is found.
 
     /**
     * Rule description
-
-Note: This field may return null, indicating that no valid value is found.
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * ACTIVE: Enabled
+    * ACTIVE: enable
 NO_ACTIVE: Disabled
-Note: This field may return null, indicating that no valid value is found.
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * Compliance: 'COMPLIANT'
-'NON_COMPLIANT'
-'NOT_APPLICABLE'
-Note: This field may return null, indicating that no valid value is found.
+    * Compliant: 'COMPLIANT'
+Non-compliance: 'NON_COMPLIANT'
+Unable to apply rule: 'NOT_APPLICABLE'
     */
     @SerializedName("ComplianceResult")
     @Expose
@@ -132,7 +116,6 @@ Note: This field may return null, indicating that no valid value is found.
 
     /**
     * ["",""]
-Note: This field may return null, indicating that no valid value is found.
     */
     @SerializedName("Annotation")
     @Expose
@@ -142,7 +125,6 @@ Note: This field may return null, indicating that no valid value is found.
     * Rule evaluation time
 Format: YYYY-MM-DD h:i:s
 
-Note: This field may return null, indicating that no valid value is found.
     */
     @SerializedName("ConfigRuleInvokedTime")
     @Expose
@@ -150,25 +132,21 @@ Note: This field may return null, indicating that no valid value is found.
 
     /**
     * Rule ID
-
-Note: This field may return null, indicating that no valid value is found.
     */
     @SerializedName("ConfigRuleId")
     @Expose
     private String ConfigRuleId;
 
     /**
-    * CUSTOMIZE
-Managed rule
-Note: This field may return null, indicating that no valid value is found.
+    * CUSTOMIZE: custom rule
+SYSTEM: managed rule
     */
     @SerializedName("IdentifierType")
     @Expose
     private String IdentifierType;
 
     /**
-    * Compliance package ID
-Note: This field may return null, indicating that no valid value is found.
+    * Compliance package ID.
     */
     @SerializedName("CompliancePackId")
     @Expose
@@ -176,10 +154,8 @@ Note: This field may return null, indicating that no valid value is found.
 
     /**
     * Trigger Type
-
-Scheduled trigger
-Triggered by configuration change
-Note: This field may return null, indicating that no valid value is found.
+ScheduledNotification: periodic trigger.
+ConfigurationItemChangeNotification: Triggered by a change
     */
     @SerializedName("TriggerType")
     @Expose
@@ -187,130 +163,104 @@ Note: This field may return null, indicating that no valid value is found.
 
     /**
     * Parameter details
-
-Note: This field may return null, indicating that no valid value is found.
     */
     @SerializedName("ManageInputParameter")
     @Expose
     private InputParameterForManage [] ManageInputParameter;
 
     /**
-    * Rule name
-
-Note: This field may return null, indicating that no valid value is found.
+    * Compliance package name
     */
     @SerializedName("CompliancePackName")
     @Expose
     private String CompliancePackName;
 
     /**
-    * Associated region
-Note: This field may return null, indicating that no valid value is found.
+    * Associated regions.
     */
     @SerializedName("RegionsScope")
     @Expose
     private String [] RegionsScope;
 
     /**
-    * Associate Tag
-
-Note: This field may return null, indicating that no valid value is found.
+    * Associated tag
     */
     @SerializedName("TagsScope")
     @Expose
     private Tag [] TagsScope;
 
     /**
-    *  The rule is invalid for the specified resource ID, meaning it does not evaluate the resource.
-Note: This field may return null, indicating that no valid value is found.
+    *  The rule is invalid for the specified resource ID, meaning that evaluation will not be performed on this resource.
     */
     @SerializedName("ExcludeResourceIdsScope")
     @Expose
     private String [] ExcludeResourceIdsScope;
 
     /**
-    * Account group ID
-
-Note: This field may return null, indicating that no valid value is found.
+    * Account group ID.
     */
     @SerializedName("AccountGroupId")
     @Expose
     private String AccountGroupId;
 
     /**
-    * Account group name
-Note: This field may return null, indicating that no valid value is found.
+    * Account group name.
     */
     @SerializedName("AccountGroupName")
     @Expose
     private String AccountGroupName;
 
     /**
-    * Rule owner user ID
-Note: This field may return null, indicating that no valid value is found.
+    * Rule owner user ID.
     */
     @SerializedName("RuleOwnerId")
     @Expose
     private Long RuleOwnerId;
 
     /**
-    * Trigger methods supported by preset rules
-Scheduled trigger
-Triggered by configuration change
+    * Trigger methods supported by preset rules.
+ScheduledNotification: periodic trigger
+ConfigurationItemChangeNotification: Triggered by a change
     */
     @SerializedName("ManageTriggerType")
     @Expose
     private String [] ManageTriggerType;
 
     /**
-     * Get Rule identifier
-Note: This field may return null, indicating that no valid value is found. 
-     * @return Identifier Rule identifier
-Note: This field may return null, indicating that no valid value is found.
+     * Get Rule ID 
+     * @return Identifier Rule ID
      */
     public String getIdentifier() {
         return this.Identifier;
     }
 
     /**
-     * Set Rule identifier
-Note: This field may return null, indicating that no valid value is found.
-     * @param Identifier Rule identifier
-Note: This field may return null, indicating that no valid value is found.
+     * Set Rule ID
+     * @param Identifier Rule ID
      */
     public void setIdentifier(String Identifier) {
         this.Identifier = Identifier;
     }
 
     /**
-     * Get Name of the rule
-
-Note: This field may return null, indicating that no valid value is found. 
-     * @return RuleName Name of the rule
-
-Note: This field may return null, indicating that no valid value is found.
+     * Get Rule Name 
+     * @return RuleName Rule Name
      */
     public String getRuleName() {
         return this.RuleName;
     }
 
     /**
-     * Set Name of the rule
-
-Note: This field may return null, indicating that no valid value is found.
-     * @param RuleName Name of the rule
-
-Note: This field may return null, indicating that no valid value is found.
+     * Set Rule Name
+     * @param RuleName Rule Name
      */
     public void setRuleName(String RuleName) {
         this.RuleName = RuleName;
     }
 
     /**
-     * Get Rule parameters
-Note: This field may return null, indicating that no valid value is found. 
+     * Get Rule parameters 
      * @return InputParameter Rule parameters
-Note: This field may return null, indicating that no valid value is found.
      */
     public InputParameter [] getInputParameter() {
         return this.InputParameter;
@@ -318,21 +268,15 @@ Note: This field may return null, indicating that no valid value is found.
 
     /**
      * Set Rule parameters
-Note: This field may return null, indicating that no valid value is found.
      * @param InputParameter Rule parameters
-Note: This field may return null, indicating that no valid value is found.
      */
     public void setInputParameter(InputParameter [] InputParameter) {
         this.InputParameter = InputParameter;
     }
 
     /**
-     * Get Rule trigger condition.
-
-Note: This field may return null, indicating that no valid value is found. 
+     * Get Rule trigger condition. 
      * @return SourceCondition Rule trigger condition.
-
-Note: This field may return null, indicating that no valid value is found.
      */
     public SourceConditionForManage [] getSourceCondition() {
         return this.SourceCondition;
@@ -340,143 +284,111 @@ Note: This field may return null, indicating that no valid value is found.
 
     /**
      * Set Rule trigger condition.
-
-Note: This field may return null, indicating that no valid value is found.
      * @param SourceCondition Rule trigger condition.
-
-Note: This field may return null, indicating that no valid value is found.
      */
     public void setSourceCondition(SourceConditionForManage [] SourceCondition) {
         this.SourceCondition = SourceCondition;
     }
 
     /**
-     * Get Resource types supported by rule. The rule only applies to specified resource types.
-Note: This field may return null, indicating that no valid value is found. 
-     * @return ResourceType Resource types supported by rule. The rule only applies to specified resource types.
-Note: This field may return null, indicating that no valid value is found.
+     * Get Resource types supported by the rule. The rule applies only to resources of the specified resource types. 
+     * @return ResourceType Resource types supported by the rule. The rule applies only to resources of the specified resource types.
      */
     public String [] getResourceType() {
         return this.ResourceType;
     }
 
     /**
-     * Set Resource types supported by rule. The rule only applies to specified resource types.
-Note: This field may return null, indicating that no valid value is found.
-     * @param ResourceType Resource types supported by rule. The rule only applies to specified resource types.
-Note: This field may return null, indicating that no valid value is found.
+     * Set Resource types supported by the rule. The rule applies only to resources of the specified resource types.
+     * @param ResourceType Resource types supported by the rule. The rule applies only to resources of the specified resource types.
      */
     public void setResourceType(String [] ResourceType) {
         this.ResourceType = ResourceType;
     }
 
     /**
-     * Get Rule ownership tag
-Note: This field may return null, indicating that no valid value is found. 
-     * @return Labels Rule ownership tag
-Note: This field may return null, indicating that no valid value is found.
+     * Get Rule tags. 
+     * @return Labels Rule tags.
      */
     public String [] getLabels() {
         return this.Labels;
     }
 
     /**
-     * Set Rule ownership tag
-Note: This field may return null, indicating that no valid value is found.
-     * @param Labels Rule ownership tag
-Note: This field may return null, indicating that no valid value is found.
+     * Set Rule tags.
+     * @param Labels Rule tags.
      */
     public void setLabels(String [] Labels) {
         this.Labels = Labels;
     }
 
     /**
-     * Get Rule risk level
+     * Get Rule risk level.
 1: Low risk
-2: Medium risk
-3: High risk
-Note: This field may return null, indicating that no valid value is found. 
-     * @return RiskLevel Rule risk level
+2: Medium-risk
+3: High-risk 
+     * @return RiskLevel Rule risk level.
 1: Low risk
-2: Medium risk
-3: High risk
-Note: This field may return null, indicating that no valid value is found.
+2: Medium-risk
+3: High-risk
      */
     public Long getRiskLevel() {
         return this.RiskLevel;
     }
 
     /**
-     * Set Rule risk level
+     * Set Rule risk level.
 1: Low risk
-2: Medium risk
-3: High risk
-Note: This field may return null, indicating that no valid value is found.
-     * @param RiskLevel Rule risk level
+2: Medium-risk
+3: High-risk
+     * @param RiskLevel Rule risk level.
 1: Low risk
-2: Medium risk
-3: High risk
-Note: This field may return null, indicating that no valid value is found.
+2: Medium-risk
+3: High-risk
      */
     public void setRiskLevel(Long RiskLevel) {
         this.RiskLevel = RiskLevel;
     }
 
     /**
-     * Get Function corresponding to rule
-Note: This field may return null, indicating that no valid value is found. 
-     * @return ServiceFunction Function corresponding to rule
-Note: This field may return null, indicating that no valid value is found.
+     * Get Function corresponding to the rule. 
+     * @return ServiceFunction Function corresponding to the rule.
      */
     public String getServiceFunction() {
         return this.ServiceFunction;
     }
 
     /**
-     * Set Function corresponding to rule
-Note: This field may return null, indicating that no valid value is found.
-     * @param ServiceFunction Function corresponding to rule
-Note: This field may return null, indicating that no valid value is found.
+     * Set Function corresponding to the rule.
+     * @param ServiceFunction Function corresponding to the rule.
      */
     public void setServiceFunction(String ServiceFunction) {
         this.ServiceFunction = ServiceFunction;
     }
 
     /**
-     * Get Creation time
-
+     * Get Creation time.
+Format: YYYY-MM-DD h:i:s 
+     * @return CreateTime Creation time.
 Format: YYYY-MM-DD h:i:s
-Note: This field may return null, indicating that no valid value is found. 
-     * @return CreateTime Creation time
-
-Format: YYYY-MM-DD h:i:s
-Note: This field may return null, indicating that no valid value is found.
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set Creation time
-
+     * Set Creation time.
 Format: YYYY-MM-DD h:i:s
-Note: This field may return null, indicating that no valid value is found.
-     * @param CreateTime Creation time
-
+     * @param CreateTime Creation time.
 Format: YYYY-MM-DD h:i:s
-Note: This field may return null, indicating that no valid value is found.
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get Rule description
-
-Note: This field may return null, indicating that no valid value is found. 
+     * Get Rule description 
      * @return Description Rule description
-
-Note: This field may return null, indicating that no valid value is found.
      */
     public String getDescription() {
         return this.Description;
@@ -484,73 +396,59 @@ Note: This field may return null, indicating that no valid value is found.
 
     /**
      * Set Rule description
-
-Note: This field may return null, indicating that no valid value is found.
      * @param Description Rule description
-
-Note: This field may return null, indicating that no valid value is found.
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get ACTIVE: Enabled
+     * Get ACTIVE: enable
+NO_ACTIVE: Disabled 
+     * @return Status ACTIVE: enable
 NO_ACTIVE: Disabled
-Note: This field may return null, indicating that no valid value is found. 
-     * @return Status ACTIVE: Enabled
-NO_ACTIVE: Disabled
-Note: This field may return null, indicating that no valid value is found.
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set ACTIVE: Enabled
+     * Set ACTIVE: enable
 NO_ACTIVE: Disabled
-Note: This field may return null, indicating that no valid value is found.
-     * @param Status ACTIVE: Enabled
+     * @param Status ACTIVE: enable
 NO_ACTIVE: Disabled
-Note: This field may return null, indicating that no valid value is found.
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Compliance: 'COMPLIANT'
-'NON_COMPLIANT'
-'NOT_APPLICABLE'
-Note: This field may return null, indicating that no valid value is found. 
-     * @return ComplianceResult Compliance: 'COMPLIANT'
-'NON_COMPLIANT'
-'NOT_APPLICABLE'
-Note: This field may return null, indicating that no valid value is found.
+     * Get Compliant: 'COMPLIANT'
+Non-compliance: 'NON_COMPLIANT'
+Unable to apply rule: 'NOT_APPLICABLE' 
+     * @return ComplianceResult Compliant: 'COMPLIANT'
+Non-compliance: 'NON_COMPLIANT'
+Unable to apply rule: 'NOT_APPLICABLE'
      */
     public String getComplianceResult() {
         return this.ComplianceResult;
     }
 
     /**
-     * Set Compliance: 'COMPLIANT'
-'NON_COMPLIANT'
-'NOT_APPLICABLE'
-Note: This field may return null, indicating that no valid value is found.
-     * @param ComplianceResult Compliance: 'COMPLIANT'
-'NON_COMPLIANT'
-'NOT_APPLICABLE'
-Note: This field may return null, indicating that no valid value is found.
+     * Set Compliant: 'COMPLIANT'
+Non-compliance: 'NON_COMPLIANT'
+Unable to apply rule: 'NOT_APPLICABLE'
+     * @param ComplianceResult Compliant: 'COMPLIANT'
+Non-compliance: 'NON_COMPLIANT'
+Unable to apply rule: 'NOT_APPLICABLE'
      */
     public void setComplianceResult(String ComplianceResult) {
         this.ComplianceResult = ComplianceResult;
     }
 
     /**
-     * Get ["",""]
-Note: This field may return null, indicating that no valid value is found. 
+     * Get ["",""] 
      * @return Annotation ["",""]
-Note: This field may return null, indicating that no valid value is found.
      */
     public Annotation getAnnotation() {
         return this.Annotation;
@@ -558,9 +456,7 @@ Note: This field may return null, indicating that no valid value is found.
 
     /**
      * Set ["",""]
-Note: This field may return null, indicating that no valid value is found.
      * @param Annotation ["",""]
-Note: This field may return null, indicating that no valid value is found.
      */
     public void setAnnotation(Annotation Annotation) {
         this.Annotation = Annotation;
@@ -569,12 +465,10 @@ Note: This field may return null, indicating that no valid value is found.
     /**
      * Get Rule evaluation time
 Format: YYYY-MM-DD h:i:s
-
-Note: This field may return null, indicating that no valid value is found. 
+ 
      * @return ConfigRuleInvokedTime Rule evaluation time
 Format: YYYY-MM-DD h:i:s
 
-Note: This field may return null, indicating that no valid value is found.
      */
     public String getConfigRuleInvokedTime() {
         return this.ConfigRuleInvokedTime;
@@ -584,23 +478,17 @@ Note: This field may return null, indicating that no valid value is found.
      * Set Rule evaluation time
 Format: YYYY-MM-DD h:i:s
 
-Note: This field may return null, indicating that no valid value is found.
      * @param ConfigRuleInvokedTime Rule evaluation time
 Format: YYYY-MM-DD h:i:s
 
-Note: This field may return null, indicating that no valid value is found.
      */
     public void setConfigRuleInvokedTime(String ConfigRuleInvokedTime) {
         this.ConfigRuleInvokedTime = ConfigRuleInvokedTime;
     }
 
     /**
-     * Get Rule ID
-
-Note: This field may return null, indicating that no valid value is found. 
+     * Get Rule ID 
      * @return ConfigRuleId Rule ID
-
-Note: This field may return null, indicating that no valid value is found.
      */
     public String getConfigRuleId() {
         return this.ConfigRuleId;
@@ -608,55 +496,43 @@ Note: This field may return null, indicating that no valid value is found.
 
     /**
      * Set Rule ID
-
-Note: This field may return null, indicating that no valid value is found.
      * @param ConfigRuleId Rule ID
-
-Note: This field may return null, indicating that no valid value is found.
      */
     public void setConfigRuleId(String ConfigRuleId) {
         this.ConfigRuleId = ConfigRuleId;
     }
 
     /**
-     * Get CUSTOMIZE
-Managed rule
-Note: This field may return null, indicating that no valid value is found. 
-     * @return IdentifierType CUSTOMIZE
-Managed rule
-Note: This field may return null, indicating that no valid value is found.
+     * Get CUSTOMIZE: custom rule
+SYSTEM: managed rule 
+     * @return IdentifierType CUSTOMIZE: custom rule
+SYSTEM: managed rule
      */
     public String getIdentifierType() {
         return this.IdentifierType;
     }
 
     /**
-     * Set CUSTOMIZE
-Managed rule
-Note: This field may return null, indicating that no valid value is found.
-     * @param IdentifierType CUSTOMIZE
-Managed rule
-Note: This field may return null, indicating that no valid value is found.
+     * Set CUSTOMIZE: custom rule
+SYSTEM: managed rule
+     * @param IdentifierType CUSTOMIZE: custom rule
+SYSTEM: managed rule
      */
     public void setIdentifierType(String IdentifierType) {
         this.IdentifierType = IdentifierType;
     }
 
     /**
-     * Get Compliance package ID
-Note: This field may return null, indicating that no valid value is found. 
-     * @return CompliancePackId Compliance package ID
-Note: This field may return null, indicating that no valid value is found.
+     * Get Compliance package ID. 
+     * @return CompliancePackId Compliance package ID.
      */
     public String getCompliancePackId() {
         return this.CompliancePackId;
     }
 
     /**
-     * Set Compliance package ID
-Note: This field may return null, indicating that no valid value is found.
-     * @param CompliancePackId Compliance package ID
-Note: This field may return null, indicating that no valid value is found.
+     * Set Compliance package ID.
+     * @param CompliancePackId Compliance package ID.
      */
     public void setCompliancePackId(String CompliancePackId) {
         this.CompliancePackId = CompliancePackId;
@@ -664,15 +540,11 @@ Note: This field may return null, indicating that no valid value is found.
 
     /**
      * Get Trigger Type
-
-Scheduled trigger
-Triggered by configuration change
-Note: This field may return null, indicating that no valid value is found. 
+ScheduledNotification: periodic trigger.
+ConfigurationItemChangeNotification: Triggered by a change 
      * @return TriggerType Trigger Type
-
-Scheduled trigger
-Triggered by configuration change
-Note: This field may return null, indicating that no valid value is found.
+ScheduledNotification: periodic trigger.
+ConfigurationItemChangeNotification: Triggered by a change
      */
     public TriggerType [] getTriggerType() {
         return this.TriggerType;
@@ -680,27 +552,19 @@ Note: This field may return null, indicating that no valid value is found.
 
     /**
      * Set Trigger Type
-
-Scheduled trigger
-Triggered by configuration change
-Note: This field may return null, indicating that no valid value is found.
+ScheduledNotification: periodic trigger.
+ConfigurationItemChangeNotification: Triggered by a change
      * @param TriggerType Trigger Type
-
-Scheduled trigger
-Triggered by configuration change
-Note: This field may return null, indicating that no valid value is found.
+ScheduledNotification: periodic trigger.
+ConfigurationItemChangeNotification: Triggered by a change
      */
     public void setTriggerType(TriggerType [] TriggerType) {
         this.TriggerType = TriggerType;
     }
 
     /**
-     * Get Parameter details
-
-Note: This field may return null, indicating that no valid value is found. 
+     * Get Parameter details 
      * @return ManageInputParameter Parameter details
-
-Note: This field may return null, indicating that no valid value is found.
      */
     public InputParameterForManage [] getManageInputParameter() {
         return this.ManageInputParameter;
@@ -708,187 +572,143 @@ Note: This field may return null, indicating that no valid value is found.
 
     /**
      * Set Parameter details
-
-Note: This field may return null, indicating that no valid value is found.
      * @param ManageInputParameter Parameter details
-
-Note: This field may return null, indicating that no valid value is found.
      */
     public void setManageInputParameter(InputParameterForManage [] ManageInputParameter) {
         this.ManageInputParameter = ManageInputParameter;
     }
 
     /**
-     * Get Rule name
-
-Note: This field may return null, indicating that no valid value is found. 
-     * @return CompliancePackName Rule name
-
-Note: This field may return null, indicating that no valid value is found.
+     * Get Compliance package name 
+     * @return CompliancePackName Compliance package name
      */
     public String getCompliancePackName() {
         return this.CompliancePackName;
     }
 
     /**
-     * Set Rule name
-
-Note: This field may return null, indicating that no valid value is found.
-     * @param CompliancePackName Rule name
-
-Note: This field may return null, indicating that no valid value is found.
+     * Set Compliance package name
+     * @param CompliancePackName Compliance package name
      */
     public void setCompliancePackName(String CompliancePackName) {
         this.CompliancePackName = CompliancePackName;
     }
 
     /**
-     * Get Associated region
-Note: This field may return null, indicating that no valid value is found. 
-     * @return RegionsScope Associated region
-Note: This field may return null, indicating that no valid value is found.
+     * Get Associated regions. 
+     * @return RegionsScope Associated regions.
      */
     public String [] getRegionsScope() {
         return this.RegionsScope;
     }
 
     /**
-     * Set Associated region
-Note: This field may return null, indicating that no valid value is found.
-     * @param RegionsScope Associated region
-Note: This field may return null, indicating that no valid value is found.
+     * Set Associated regions.
+     * @param RegionsScope Associated regions.
      */
     public void setRegionsScope(String [] RegionsScope) {
         this.RegionsScope = RegionsScope;
     }
 
     /**
-     * Get Associate Tag
-
-Note: This field may return null, indicating that no valid value is found. 
-     * @return TagsScope Associate Tag
-
-Note: This field may return null, indicating that no valid value is found.
+     * Get Associated tag 
+     * @return TagsScope Associated tag
      */
     public Tag [] getTagsScope() {
         return this.TagsScope;
     }
 
     /**
-     * Set Associate Tag
-
-Note: This field may return null, indicating that no valid value is found.
-     * @param TagsScope Associate Tag
-
-Note: This field may return null, indicating that no valid value is found.
+     * Set Associated tag
+     * @param TagsScope Associated tag
      */
     public void setTagsScope(Tag [] TagsScope) {
         this.TagsScope = TagsScope;
     }
 
     /**
-     * Get  The rule is invalid for the specified resource ID, meaning it does not evaluate the resource.
-Note: This field may return null, indicating that no valid value is found. 
-     * @return ExcludeResourceIdsScope  The rule is invalid for the specified resource ID, meaning it does not evaluate the resource.
-Note: This field may return null, indicating that no valid value is found.
+     * Get  The rule is invalid for the specified resource ID, meaning that evaluation will not be performed on this resource. 
+     * @return ExcludeResourceIdsScope  The rule is invalid for the specified resource ID, meaning that evaluation will not be performed on this resource.
      */
     public String [] getExcludeResourceIdsScope() {
         return this.ExcludeResourceIdsScope;
     }
 
     /**
-     * Set  The rule is invalid for the specified resource ID, meaning it does not evaluate the resource.
-Note: This field may return null, indicating that no valid value is found.
-     * @param ExcludeResourceIdsScope  The rule is invalid for the specified resource ID, meaning it does not evaluate the resource.
-Note: This field may return null, indicating that no valid value is found.
+     * Set  The rule is invalid for the specified resource ID, meaning that evaluation will not be performed on this resource.
+     * @param ExcludeResourceIdsScope  The rule is invalid for the specified resource ID, meaning that evaluation will not be performed on this resource.
      */
     public void setExcludeResourceIdsScope(String [] ExcludeResourceIdsScope) {
         this.ExcludeResourceIdsScope = ExcludeResourceIdsScope;
     }
 
     /**
-     * Get Account group ID
-
-Note: This field may return null, indicating that no valid value is found. 
-     * @return AccountGroupId Account group ID
-
-Note: This field may return null, indicating that no valid value is found.
+     * Get Account group ID. 
+     * @return AccountGroupId Account group ID.
      */
     public String getAccountGroupId() {
         return this.AccountGroupId;
     }
 
     /**
-     * Set Account group ID
-
-Note: This field may return null, indicating that no valid value is found.
-     * @param AccountGroupId Account group ID
-
-Note: This field may return null, indicating that no valid value is found.
+     * Set Account group ID.
+     * @param AccountGroupId Account group ID.
      */
     public void setAccountGroupId(String AccountGroupId) {
         this.AccountGroupId = AccountGroupId;
     }
 
     /**
-     * Get Account group name
-Note: This field may return null, indicating that no valid value is found. 
-     * @return AccountGroupName Account group name
-Note: This field may return null, indicating that no valid value is found.
+     * Get Account group name. 
+     * @return AccountGroupName Account group name.
      */
     public String getAccountGroupName() {
         return this.AccountGroupName;
     }
 
     /**
-     * Set Account group name
-Note: This field may return null, indicating that no valid value is found.
-     * @param AccountGroupName Account group name
-Note: This field may return null, indicating that no valid value is found.
+     * Set Account group name.
+     * @param AccountGroupName Account group name.
      */
     public void setAccountGroupName(String AccountGroupName) {
         this.AccountGroupName = AccountGroupName;
     }
 
     /**
-     * Get Rule owner user ID
-Note: This field may return null, indicating that no valid value is found. 
-     * @return RuleOwnerId Rule owner user ID
-Note: This field may return null, indicating that no valid value is found.
+     * Get Rule owner user ID. 
+     * @return RuleOwnerId Rule owner user ID.
      */
     public Long getRuleOwnerId() {
         return this.RuleOwnerId;
     }
 
     /**
-     * Set Rule owner user ID
-Note: This field may return null, indicating that no valid value is found.
-     * @param RuleOwnerId Rule owner user ID
-Note: This field may return null, indicating that no valid value is found.
+     * Set Rule owner user ID.
+     * @param RuleOwnerId Rule owner user ID.
      */
     public void setRuleOwnerId(Long RuleOwnerId) {
         this.RuleOwnerId = RuleOwnerId;
     }
 
     /**
-     * Get Trigger methods supported by preset rules
-Scheduled trigger
-Triggered by configuration change 
-     * @return ManageTriggerType Trigger methods supported by preset rules
-Scheduled trigger
-Triggered by configuration change
+     * Get Trigger methods supported by preset rules.
+ScheduledNotification: periodic trigger
+ConfigurationItemChangeNotification: Triggered by a change 
+     * @return ManageTriggerType Trigger methods supported by preset rules.
+ScheduledNotification: periodic trigger
+ConfigurationItemChangeNotification: Triggered by a change
      */
     public String [] getManageTriggerType() {
         return this.ManageTriggerType;
     }
 
     /**
-     * Set Trigger methods supported by preset rules
-Scheduled trigger
-Triggered by configuration change
-     * @param ManageTriggerType Trigger methods supported by preset rules
-Scheduled trigger
-Triggered by configuration change
+     * Set Trigger methods supported by preset rules.
+ScheduledNotification: periodic trigger
+ConfigurationItemChangeNotification: Triggered by a change
+     * @param ManageTriggerType Trigger methods supported by preset rules.
+ScheduledNotification: periodic trigger
+ConfigurationItemChangeNotification: Triggered by a change
      */
     public void setManageTriggerType(String [] ManageTriggerType) {
         this.ManageTriggerType = ManageTriggerType;
