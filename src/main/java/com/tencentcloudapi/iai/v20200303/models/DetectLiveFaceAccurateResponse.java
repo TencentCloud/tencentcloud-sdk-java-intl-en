@@ -24,17 +24,14 @@ import java.util.HashMap;
 public class DetectLiveFaceAccurateResponse extends AbstractModel {
 
     /**
-    * Liveness scoring.
--Value range: [0,100].
--Determines whether it is a rephotograph based on the liveness score and threshold range.
--Current threshold can be divided into [5,10,40,70,90]. among them, the recommended threshold is  40.
+    * <p>Liveness authenticity score.</p><ul><li>Value range: [0,100].</li><li>Determine whether it is a rephotograph based on the threshold range corresponding to the liveness score.</li><li>Currently, the threshold can be divided into [5,10,40,70,90], with a recommended threshold of 40.</li><li>The higher the score, the closer to a real person and the lower the rephotograph risk.</li></ul>
     */
     @SerializedName("Score")
     @Expose
     private Float Score;
 
     /**
-    * Algorithm model version used for face recognition.
+    * <p>Algorithm model version used for face recognition.</p>
     */
     @SerializedName("FaceModelVersion")
     @Expose
@@ -48,44 +45,32 @@ public class DetectLiveFaceAccurateResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Liveness scoring.
--Value range: [0,100].
--Determines whether it is a rephotograph based on the liveness score and threshold range.
--Current threshold can be divided into [5,10,40,70,90]. among them, the recommended threshold is  40. 
-     * @return Score Liveness scoring.
--Value range: [0,100].
--Determines whether it is a rephotograph based on the liveness score and threshold range.
--Current threshold can be divided into [5,10,40,70,90]. among them, the recommended threshold is  40.
+     * Get <p>Liveness authenticity score.</p><ul><li>Value range: [0,100].</li><li>Determine whether it is a rephotograph based on the threshold range corresponding to the liveness score.</li><li>Currently, the threshold can be divided into [5,10,40,70,90], with a recommended threshold of 40.</li><li>The higher the score, the closer to a real person and the lower the rephotograph risk.</li></ul> 
+     * @return Score <p>Liveness authenticity score.</p><ul><li>Value range: [0,100].</li><li>Determine whether it is a rephotograph based on the threshold range corresponding to the liveness score.</li><li>Currently, the threshold can be divided into [5,10,40,70,90], with a recommended threshold of 40.</li><li>The higher the score, the closer to a real person and the lower the rephotograph risk.</li></ul>
      */
     public Float getScore() {
         return this.Score;
     }
 
     /**
-     * Set Liveness scoring.
--Value range: [0,100].
--Determines whether it is a rephotograph based on the liveness score and threshold range.
--Current threshold can be divided into [5,10,40,70,90]. among them, the recommended threshold is  40.
-     * @param Score Liveness scoring.
--Value range: [0,100].
--Determines whether it is a rephotograph based on the liveness score and threshold range.
--Current threshold can be divided into [5,10,40,70,90]. among them, the recommended threshold is  40.
+     * Set <p>Liveness authenticity score.</p><ul><li>Value range: [0,100].</li><li>Determine whether it is a rephotograph based on the threshold range corresponding to the liveness score.</li><li>Currently, the threshold can be divided into [5,10,40,70,90], with a recommended threshold of 40.</li><li>The higher the score, the closer to a real person and the lower the rephotograph risk.</li></ul>
+     * @param Score <p>Liveness authenticity score.</p><ul><li>Value range: [0,100].</li><li>Determine whether it is a rephotograph based on the threshold range corresponding to the liveness score.</li><li>Currently, the threshold can be divided into [5,10,40,70,90], with a recommended threshold of 40.</li><li>The higher the score, the closer to a real person and the lower the rephotograph risk.</li></ul>
      */
     public void setScore(Float Score) {
         this.Score = Score;
     }
 
     /**
-     * Get Algorithm model version used for face recognition. 
-     * @return FaceModelVersion Algorithm model version used for face recognition.
+     * Get <p>Algorithm model version used for face recognition.</p> 
+     * @return FaceModelVersion <p>Algorithm model version used for face recognition.</p>
      */
     public String getFaceModelVersion() {
         return this.FaceModelVersion;
     }
 
     /**
-     * Set Algorithm model version used for face recognition.
-     * @param FaceModelVersion Algorithm model version used for face recognition.
+     * Set <p>Algorithm model version used for face recognition.</p>
+     * @param FaceModelVersion <p>Algorithm model version used for face recognition.</p>
      */
     public void setFaceModelVersion(String FaceModelVersion) {
         this.FaceModelVersion = FaceModelVersion;
