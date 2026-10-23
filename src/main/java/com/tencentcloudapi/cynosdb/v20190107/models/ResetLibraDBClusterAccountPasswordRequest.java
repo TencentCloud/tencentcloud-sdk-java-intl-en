@@ -52,7 +52,7 @@ public class ResetLibraDBClusterAccountPasswordRequest extends AbstractModel {
     private String EncryptMethod;
 
     /**
-    * host
+    * Host
     */
     @SerializedName("Host")
     @Expose
@@ -123,16 +123,16 @@ public class ResetLibraDBClusterAccountPasswordRequest extends AbstractModel {
     }
 
     /**
-     * Get host 
-     * @return Host host
+     * Get Host 
+     * @return Host Host
      */
     public String getHost() {
         return this.Host;
     }
 
     /**
-     * Set host
-     * @param Host host
+     * Set Host
+     * @param Host Host
      */
     public void setHost(String Host) {
         this.Host = Host;

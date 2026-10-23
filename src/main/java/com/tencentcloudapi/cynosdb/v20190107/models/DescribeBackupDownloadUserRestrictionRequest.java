@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeBackupDownloadUserRestrictionRequest extends AbstractModel {
 
     /**
-    * Pagination size
+    * Pagination size.
     */
     @SerializedName("Limit")
     @Expose
@@ -38,23 +38,23 @@ public class DescribeBackupDownloadUserRestrictionRequest extends AbstractModel 
     private Long Offset;
 
     /**
-    * Specifies whether to query only user-level download limits. true - yes, false - no.
+    * Whether to query only user-level download limits. true: yes; false: no
     */
     @SerializedName("OnlyUserRestriction")
     @Expose
     private Boolean OnlyUserRestriction;
 
     /**
-     * Get Pagination size 
-     * @return Limit Pagination size
+     * Get Pagination size. 
+     * @return Limit Pagination size.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Pagination size
-     * @param Limit Pagination size
+     * Set Pagination size.
+     * @param Limit Pagination size.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
@@ -77,16 +77,16 @@ public class DescribeBackupDownloadUserRestrictionRequest extends AbstractModel 
     }
 
     /**
-     * Get Specifies whether to query only user-level download limits. true - yes, false - no. 
-     * @return OnlyUserRestriction Specifies whether to query only user-level download limits. true - yes, false - no.
+     * Get Whether to query only user-level download limits. true: yes; false: no 
+     * @return OnlyUserRestriction Whether to query only user-level download limits. true: yes; false: no
      */
     public Boolean getOnlyUserRestriction() {
         return this.OnlyUserRestriction;
     }
 
     /**
-     * Set Specifies whether to query only user-level download limits. true - yes, false - no.
-     * @param OnlyUserRestriction Specifies whether to query only user-level download limits. true - yes, false - no.
+     * Set Whether to query only user-level download limits. true: yes; false: no
+     * @param OnlyUserRestriction Whether to query only user-level download limits. true: yes; false: no
      */
     public void setOnlyUserRestriction(Boolean OnlyUserRestriction) {
         this.OnlyUserRestriction = OnlyUserRestriction;

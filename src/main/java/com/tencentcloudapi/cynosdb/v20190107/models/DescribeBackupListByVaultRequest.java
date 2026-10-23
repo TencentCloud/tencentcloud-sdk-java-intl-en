@@ -24,63 +24,63 @@ import java.util.HashMap;
 public class DescribeBackupListByVaultRequest extends AbstractModel {
 
     /**
-    * Safe ID, length must be greater than 0
+    * Safe ID. Its length must be greater than 0.
     */
     @SerializedName("VaultId")
     @Expose
     private String VaultId;
 
     /**
-    * Backup file ID list for filtering specific backups
+    * List of the backup file IDs for filtering specific backups.
     */
     @SerializedName("BackupIds")
     @Expose
     private Long [] BackupIds;
 
     /**
-    * Cluster ID for filtering backups of a specific cluster
+    * Cluster ID, for filtering backups of a specific cluster
     */
     @SerializedName("ClusterId")
     @Expose
     private String ClusterId;
 
     /**
-    * Backup name list for exact matching filter criteria
+    * List of backup names for exact matching filter criteria
     */
     @SerializedName("BackupNames")
     @Expose
     private String [] BackupNames;
 
     /**
-    * Filename list for exact matching filter
+    * Filename list for exact matching filter criteria
     */
     @SerializedName("FileNames")
     @Expose
     private String [] FileNames;
 
     /**
-    * Number of pages, range (0,100], default 100
+    * Pagination quantity. Value range: (0, 100]. Default value: 100.
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * Pagination offset. Range: [0, INF). Default is 0.
+    * Pagination offset. Value range: [0, INF). Default value: 0.
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * Sorting field. Available values: VaultId, VaultName, BackupSaveSeconds, LockedTime, CreateTime, UpdateTime. Default: createTime.
+    * Sorting field. Available values: VaultId, VaultName, BackupSaveSeconds, LockedTime, CreateTime, UpdateTime. Default value: createTime
     */
     @SerializedName("OrderBy")
     @Expose
     private String OrderBy;
 
     /**
-    * Sorting method, available values: desc, asc, DESC, ASC, default desc
+    * Sorting method. Available values: desc, asc, DESC, ASC. Default value: desc.
     */
     @SerializedName("OrderByType")
     @Expose
@@ -94,144 +94,144 @@ public class DescribeBackupListByVaultRequest extends AbstractModel {
     private String Status;
 
     /**
-     * Get Safe ID, length must be greater than 0 
-     * @return VaultId Safe ID, length must be greater than 0
+     * Get Safe ID. Its length must be greater than 0. 
+     * @return VaultId Safe ID. Its length must be greater than 0.
      */
     public String getVaultId() {
         return this.VaultId;
     }
 
     /**
-     * Set Safe ID, length must be greater than 0
-     * @param VaultId Safe ID, length must be greater than 0
+     * Set Safe ID. Its length must be greater than 0.
+     * @param VaultId Safe ID. Its length must be greater than 0.
      */
     public void setVaultId(String VaultId) {
         this.VaultId = VaultId;
     }
 
     /**
-     * Get Backup file ID list for filtering specific backups 
-     * @return BackupIds Backup file ID list for filtering specific backups
+     * Get List of the backup file IDs for filtering specific backups. 
+     * @return BackupIds List of the backup file IDs for filtering specific backups.
      */
     public Long [] getBackupIds() {
         return this.BackupIds;
     }
 
     /**
-     * Set Backup file ID list for filtering specific backups
-     * @param BackupIds Backup file ID list for filtering specific backups
+     * Set List of the backup file IDs for filtering specific backups.
+     * @param BackupIds List of the backup file IDs for filtering specific backups.
      */
     public void setBackupIds(Long [] BackupIds) {
         this.BackupIds = BackupIds;
     }
 
     /**
-     * Get Cluster ID for filtering backups of a specific cluster 
-     * @return ClusterId Cluster ID for filtering backups of a specific cluster
+     * Get Cluster ID, for filtering backups of a specific cluster 
+     * @return ClusterId Cluster ID, for filtering backups of a specific cluster
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set Cluster ID for filtering backups of a specific cluster
-     * @param ClusterId Cluster ID for filtering backups of a specific cluster
+     * Set Cluster ID, for filtering backups of a specific cluster
+     * @param ClusterId Cluster ID, for filtering backups of a specific cluster
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get Backup name list for exact matching filter criteria 
-     * @return BackupNames Backup name list for exact matching filter criteria
+     * Get List of backup names for exact matching filter criteria 
+     * @return BackupNames List of backup names for exact matching filter criteria
      */
     public String [] getBackupNames() {
         return this.BackupNames;
     }
 
     /**
-     * Set Backup name list for exact matching filter criteria
-     * @param BackupNames Backup name list for exact matching filter criteria
+     * Set List of backup names for exact matching filter criteria
+     * @param BackupNames List of backup names for exact matching filter criteria
      */
     public void setBackupNames(String [] BackupNames) {
         this.BackupNames = BackupNames;
     }
 
     /**
-     * Get Filename list for exact matching filter 
-     * @return FileNames Filename list for exact matching filter
+     * Get Filename list for exact matching filter criteria 
+     * @return FileNames Filename list for exact matching filter criteria
      */
     public String [] getFileNames() {
         return this.FileNames;
     }
 
     /**
-     * Set Filename list for exact matching filter
-     * @param FileNames Filename list for exact matching filter
+     * Set Filename list for exact matching filter criteria
+     * @param FileNames Filename list for exact matching filter criteria
      */
     public void setFileNames(String [] FileNames) {
         this.FileNames = FileNames;
     }
 
     /**
-     * Get Number of pages, range (0,100], default 100 
-     * @return Limit Number of pages, range (0,100], default 100
+     * Get Pagination quantity. Value range: (0, 100]. Default value: 100. 
+     * @return Limit Pagination quantity. Value range: (0, 100]. Default value: 100.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Number of pages, range (0,100], default 100
-     * @param Limit Number of pages, range (0,100], default 100
+     * Set Pagination quantity. Value range: (0, 100]. Default value: 100.
+     * @param Limit Pagination quantity. Value range: (0, 100]. Default value: 100.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get Pagination offset. Range: [0, INF). Default is 0. 
-     * @return Offset Pagination offset. Range: [0, INF). Default is 0.
+     * Get Pagination offset. Value range: [0, INF). Default value: 0. 
+     * @return Offset Pagination offset. Value range: [0, INF). Default value: 0.
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Pagination offset. Range: [0, INF). Default is 0.
-     * @param Offset Pagination offset. Range: [0, INF). Default is 0.
+     * Set Pagination offset. Value range: [0, INF). Default value: 0.
+     * @param Offset Pagination offset. Value range: [0, INF). Default value: 0.
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get Sorting field. Available values: VaultId, VaultName, BackupSaveSeconds, LockedTime, CreateTime, UpdateTime. Default: createTime. 
-     * @return OrderBy Sorting field. Available values: VaultId, VaultName, BackupSaveSeconds, LockedTime, CreateTime, UpdateTime. Default: createTime.
+     * Get Sorting field. Available values: VaultId, VaultName, BackupSaveSeconds, LockedTime, CreateTime, UpdateTime. Default value: createTime 
+     * @return OrderBy Sorting field. Available values: VaultId, VaultName, BackupSaveSeconds, LockedTime, CreateTime, UpdateTime. Default value: createTime
      */
     public String getOrderBy() {
         return this.OrderBy;
     }
 
     /**
-     * Set Sorting field. Available values: VaultId, VaultName, BackupSaveSeconds, LockedTime, CreateTime, UpdateTime. Default: createTime.
-     * @param OrderBy Sorting field. Available values: VaultId, VaultName, BackupSaveSeconds, LockedTime, CreateTime, UpdateTime. Default: createTime.
+     * Set Sorting field. Available values: VaultId, VaultName, BackupSaveSeconds, LockedTime, CreateTime, UpdateTime. Default value: createTime
+     * @param OrderBy Sorting field. Available values: VaultId, VaultName, BackupSaveSeconds, LockedTime, CreateTime, UpdateTime. Default value: createTime
      */
     public void setOrderBy(String OrderBy) {
         this.OrderBy = OrderBy;
     }
 
     /**
-     * Get Sorting method, available values: desc, asc, DESC, ASC, default desc 
-     * @return OrderByType Sorting method, available values: desc, asc, DESC, ASC, default desc
+     * Get Sorting method. Available values: desc, asc, DESC, ASC. Default value: desc. 
+     * @return OrderByType Sorting method. Available values: desc, asc, DESC, ASC. Default value: desc.
      */
     public String getOrderByType() {
         return this.OrderByType;
     }
 
     /**
-     * Set Sorting method, available values: desc, asc, DESC, ASC, default desc
-     * @param OrderByType Sorting method, available values: desc, asc, DESC, ASC, default desc
+     * Set Sorting method. Available values: desc, asc, DESC, ASC. Default value: desc.
+     * @param OrderByType Sorting method. Available values: desc, asc, DESC, ASC. Default value: desc.
      */
     public void setOrderByType(String OrderByType) {
         this.OrderByType = OrderByType;

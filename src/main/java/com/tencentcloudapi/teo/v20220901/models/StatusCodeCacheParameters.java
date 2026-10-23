@@ -24,28 +24,23 @@ import java.util.HashMap;
 public class StatusCodeCacheParameters extends AbstractModel {
 
     /**
-    * Status code cache ttl.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+    * Status code cache TTL.
     */
     @SerializedName("StatusCodeCacheParams")
     @Expose
     private StatusCodeCacheParam [] StatusCodeCacheParams;
 
     /**
-     * Get Status code cache ttl.
-Note: this field may return null, which indicates a failure to obtain a valid value. 
-     * @return StatusCodeCacheParams Status code cache ttl.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * Get Status code cache TTL. 
+     * @return StatusCodeCacheParams Status code cache TTL.
      */
     public StatusCodeCacheParam [] getStatusCodeCacheParams() {
         return this.StatusCodeCacheParams;
     }
 
     /**
-     * Set Status code cache ttl.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-     * @param StatusCodeCacheParams Status code cache ttl.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * Set Status code cache TTL.
+     * @param StatusCodeCacheParams Status code cache TTL.
      */
     public void setStatusCodeCacheParams(StatusCodeCacheParam [] StatusCodeCacheParams) {
         this.StatusCodeCacheParams = StatusCodeCacheParams;

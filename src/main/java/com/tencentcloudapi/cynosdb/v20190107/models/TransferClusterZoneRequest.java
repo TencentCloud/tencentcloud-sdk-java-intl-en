@@ -24,35 +24,35 @@ import java.util.HashMap;
 public class TransferClusterZoneRequest extends AbstractModel {
 
     /**
-    * Source Cluster Id
+    * Source cluster Id
     */
     @SerializedName("ClusterId")
     @Expose
     private String ClusterId;
 
     /**
-    * Target availability zone
+    * Target zone
     */
     @SerializedName("DstZone")
     @Expose
     private String DstZone;
 
     /**
-    * Cross-AZ migration master-slave data delay verification threshold, milliseconds (ms)
+    * Threshold for primary-secondary data latency verification during cross-AZ migration, in milliseconds (ms).
     */
     @SerializedName("MaxLag")
     @Expose
     private Long MaxLag;
 
     /**
-    * Immediate: Immediate execution, InMaintain: Time window execution
+    * Immediate: immediate execution. InMaintain: execute within the time window.
     */
     @SerializedName("TransferType")
     @Expose
     private String TransferType;
 
     /**
-    * Multi-availability zone backup zone
+    * Secondary AZ in a multi-availability zone
     */
     @SerializedName("DstSlaveZone")
     @Expose
@@ -66,80 +66,80 @@ public class TransferClusterZoneRequest extends AbstractModel {
     private ProxyZone [] ProxyZones;
 
     /**
-     * Get Source Cluster Id 
-     * @return ClusterId Source Cluster Id
+     * Get Source cluster Id 
+     * @return ClusterId Source cluster Id
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set Source Cluster Id
-     * @param ClusterId Source Cluster Id
+     * Set Source cluster Id
+     * @param ClusterId Source cluster Id
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get Target availability zone 
-     * @return DstZone Target availability zone
+     * Get Target zone 
+     * @return DstZone Target zone
      */
     public String getDstZone() {
         return this.DstZone;
     }
 
     /**
-     * Set Target availability zone
-     * @param DstZone Target availability zone
+     * Set Target zone
+     * @param DstZone Target zone
      */
     public void setDstZone(String DstZone) {
         this.DstZone = DstZone;
     }
 
     /**
-     * Get Cross-AZ migration master-slave data delay verification threshold, milliseconds (ms) 
-     * @return MaxLag Cross-AZ migration master-slave data delay verification threshold, milliseconds (ms)
+     * Get Threshold for primary-secondary data latency verification during cross-AZ migration, in milliseconds (ms). 
+     * @return MaxLag Threshold for primary-secondary data latency verification during cross-AZ migration, in milliseconds (ms).
      */
     public Long getMaxLag() {
         return this.MaxLag;
     }
 
     /**
-     * Set Cross-AZ migration master-slave data delay verification threshold, milliseconds (ms)
-     * @param MaxLag Cross-AZ migration master-slave data delay verification threshold, milliseconds (ms)
+     * Set Threshold for primary-secondary data latency verification during cross-AZ migration, in milliseconds (ms).
+     * @param MaxLag Threshold for primary-secondary data latency verification during cross-AZ migration, in milliseconds (ms).
      */
     public void setMaxLag(Long MaxLag) {
         this.MaxLag = MaxLag;
     }
 
     /**
-     * Get Immediate: Immediate execution, InMaintain: Time window execution 
-     * @return TransferType Immediate: Immediate execution, InMaintain: Time window execution
+     * Get Immediate: immediate execution. InMaintain: execute within the time window. 
+     * @return TransferType Immediate: immediate execution. InMaintain: execute within the time window.
      */
     public String getTransferType() {
         return this.TransferType;
     }
 
     /**
-     * Set Immediate: Immediate execution, InMaintain: Time window execution
-     * @param TransferType Immediate: Immediate execution, InMaintain: Time window execution
+     * Set Immediate: immediate execution. InMaintain: execute within the time window.
+     * @param TransferType Immediate: immediate execution. InMaintain: execute within the time window.
      */
     public void setTransferType(String TransferType) {
         this.TransferType = TransferType;
     }
 
     /**
-     * Get Multi-availability zone backup zone 
-     * @return DstSlaveZone Multi-availability zone backup zone
+     * Get Secondary AZ in a multi-availability zone 
+     * @return DstSlaveZone Secondary AZ in a multi-availability zone
      */
     public String getDstSlaveZone() {
         return this.DstSlaveZone;
     }
 
     /**
-     * Set Multi-availability zone backup zone
-     * @param DstSlaveZone Multi-availability zone backup zone
+     * Set Secondary AZ in a multi-availability zone
+     * @param DstSlaveZone Secondary AZ in a multi-availability zone
      */
     public void setDstSlaveZone(String DstSlaveZone) {
         this.DstSlaveZone = DstSlaveZone;

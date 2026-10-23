@@ -81,8 +81,7 @@ public class ModifyOriginParameters extends AbstractModel {
     private String PrivateAccess;
 
     /**
-    * Private authentication parameter. this parameter is valid only when origintype = awss3 and privateaccess = on.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+    * Private authentication parameter. This parameter is valid only when OriginType = AWSS3 and PrivateAccess = on.
     */
     @SerializedName("PrivateParameters")
     @Expose
@@ -245,20 +244,16 @@ Note: this field may return null, which indicates a failure to obtain a valid va
     }
 
     /**
-     * Get Private authentication parameter. this parameter is valid only when origintype = awss3 and privateaccess = on.
-Note: this field may return null, which indicates a failure to obtain a valid value. 
-     * @return PrivateParameters Private authentication parameter. this parameter is valid only when origintype = awss3 and privateaccess = on.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * Get Private authentication parameter. This parameter is valid only when OriginType = AWSS3 and PrivateAccess = on. 
+     * @return PrivateParameters Private authentication parameter. This parameter is valid only when OriginType = AWSS3 and PrivateAccess = on.
      */
     public OriginPrivateParameters getPrivateParameters() {
         return this.PrivateParameters;
     }
 
     /**
-     * Set Private authentication parameter. this parameter is valid only when origintype = awss3 and privateaccess = on.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-     * @param PrivateParameters Private authentication parameter. this parameter is valid only when origintype = awss3 and privateaccess = on.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * Set Private authentication parameter. This parameter is valid only when OriginType = AWSS3 and PrivateAccess = on.
+     * @param PrivateParameters Private authentication parameter. This parameter is valid only when OriginType = AWSS3 and PrivateAccess = on.
      */
     public void setPrivateParameters(OriginPrivateParameters PrivateParameters) {
         this.PrivateParameters = PrivateParameters;

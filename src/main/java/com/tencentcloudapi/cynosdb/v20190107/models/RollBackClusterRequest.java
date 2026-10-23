@@ -24,56 +24,58 @@ import java.util.HashMap;
 public class RollBackClusterRequest extends AbstractModel {
 
     /**
-    * Cluster ID.
+    * Cluster ID
     */
     @SerializedName("ClusterId")
     @Expose
     private String ClusterId;
 
     /**
-    * Rollback policy. timeRollback - roll back by time point; snapRollback - roll back by backup file.
+    * Rollback policy. timeRollback: rollback by time point. snapRollback: rollback by backup file.
     */
     @SerializedName("RollbackStrategy")
     @Expose
     private String RollbackStrategy;
 
     /**
-    * Backup file ID. This parameter is required when the rollback policy is rolling back by backup file.
+    * Backup file ID.
+Required when the rollback policy is rollback by backup file.
     */
     @SerializedName("RollbackId")
     @Expose
     private Long RollbackId;
 
     /**
-    * Expected rollback time. This parameter is required when the rollback policy is timeRollback (roll back by time point).
+    * Expected restore time.
+Required if the rollback policy is timeRollback for rollback by time point.
     */
     @SerializedName("ExpectTime")
     @Expose
     private String ExpectTime;
 
     /**
-    * Expected threshold (deprecated).
+    * Expected threshold (abandoned)
     */
     @SerializedName("ExpectTimeThresh")
     @Expose
     private Long ExpectTimeThresh;
 
     /**
-    * List of rollback databases.
+    * Database list for rollback
     */
     @SerializedName("RollbackDatabases")
     @Expose
     private RollbackDatabase [] RollbackDatabases;
 
     /**
-    * List of rollback databases and tables.
+    * List of rollback database tables
     */
     @SerializedName("RollbackTables")
     @Expose
     private RollbackTable [] RollbackTables;
 
     /**
-    * Mode of rolling back by time point. full: normal; db: fast; table: ultra-fast (the default value is normal).
+    * Point-in-Time Restore Mode. full: ordinary; db: quick; table: ultra-fast (ordinary is selected by default)
     */
     @SerializedName("RollbackMode")
     @Expose
@@ -87,128 +89,136 @@ public class RollBackClusterRequest extends AbstractModel {
     private String VaultId;
 
     /**
-     * Get Cluster ID. 
-     * @return ClusterId Cluster ID.
+     * Get Cluster ID 
+     * @return ClusterId Cluster ID
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set Cluster ID.
-     * @param ClusterId Cluster ID.
+     * Set Cluster ID
+     * @param ClusterId Cluster ID
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get Rollback policy. timeRollback - roll back by time point; snapRollback - roll back by backup file. 
-     * @return RollbackStrategy Rollback policy. timeRollback - roll back by time point; snapRollback - roll back by backup file.
+     * Get Rollback policy. timeRollback: rollback by time point. snapRollback: rollback by backup file. 
+     * @return RollbackStrategy Rollback policy. timeRollback: rollback by time point. snapRollback: rollback by backup file.
      */
     public String getRollbackStrategy() {
         return this.RollbackStrategy;
     }
 
     /**
-     * Set Rollback policy. timeRollback - roll back by time point; snapRollback - roll back by backup file.
-     * @param RollbackStrategy Rollback policy. timeRollback - roll back by time point; snapRollback - roll back by backup file.
+     * Set Rollback policy. timeRollback: rollback by time point. snapRollback: rollback by backup file.
+     * @param RollbackStrategy Rollback policy. timeRollback: rollback by time point. snapRollback: rollback by backup file.
      */
     public void setRollbackStrategy(String RollbackStrategy) {
         this.RollbackStrategy = RollbackStrategy;
     }
 
     /**
-     * Get Backup file ID. This parameter is required when the rollback policy is rolling back by backup file. 
-     * @return RollbackId Backup file ID. This parameter is required when the rollback policy is rolling back by backup file.
+     * Get Backup file ID.
+Required when the rollback policy is rollback by backup file. 
+     * @return RollbackId Backup file ID.
+Required when the rollback policy is rollback by backup file.
      */
     public Long getRollbackId() {
         return this.RollbackId;
     }
 
     /**
-     * Set Backup file ID. This parameter is required when the rollback policy is rolling back by backup file.
-     * @param RollbackId Backup file ID. This parameter is required when the rollback policy is rolling back by backup file.
+     * Set Backup file ID.
+Required when the rollback policy is rollback by backup file.
+     * @param RollbackId Backup file ID.
+Required when the rollback policy is rollback by backup file.
      */
     public void setRollbackId(Long RollbackId) {
         this.RollbackId = RollbackId;
     }
 
     /**
-     * Get Expected rollback time. This parameter is required when the rollback policy is timeRollback (roll back by time point). 
-     * @return ExpectTime Expected rollback time. This parameter is required when the rollback policy is timeRollback (roll back by time point).
+     * Get Expected restore time.
+Required if the rollback policy is timeRollback for rollback by time point. 
+     * @return ExpectTime Expected restore time.
+Required if the rollback policy is timeRollback for rollback by time point.
      */
     public String getExpectTime() {
         return this.ExpectTime;
     }
 
     /**
-     * Set Expected rollback time. This parameter is required when the rollback policy is timeRollback (roll back by time point).
-     * @param ExpectTime Expected rollback time. This parameter is required when the rollback policy is timeRollback (roll back by time point).
+     * Set Expected restore time.
+Required if the rollback policy is timeRollback for rollback by time point.
+     * @param ExpectTime Expected restore time.
+Required if the rollback policy is timeRollback for rollback by time point.
      */
     public void setExpectTime(String ExpectTime) {
         this.ExpectTime = ExpectTime;
     }
 
     /**
-     * Get Expected threshold (deprecated). 
-     * @return ExpectTimeThresh Expected threshold (deprecated).
+     * Get Expected threshold (abandoned) 
+     * @return ExpectTimeThresh Expected threshold (abandoned)
      */
     public Long getExpectTimeThresh() {
         return this.ExpectTimeThresh;
     }
 
     /**
-     * Set Expected threshold (deprecated).
-     * @param ExpectTimeThresh Expected threshold (deprecated).
+     * Set Expected threshold (abandoned)
+     * @param ExpectTimeThresh Expected threshold (abandoned)
      */
     public void setExpectTimeThresh(Long ExpectTimeThresh) {
         this.ExpectTimeThresh = ExpectTimeThresh;
     }
 
     /**
-     * Get List of rollback databases. 
-     * @return RollbackDatabases List of rollback databases.
+     * Get Database list for rollback 
+     * @return RollbackDatabases Database list for rollback
      */
     public RollbackDatabase [] getRollbackDatabases() {
         return this.RollbackDatabases;
     }
 
     /**
-     * Set List of rollback databases.
-     * @param RollbackDatabases List of rollback databases.
+     * Set Database list for rollback
+     * @param RollbackDatabases Database list for rollback
      */
     public void setRollbackDatabases(RollbackDatabase [] RollbackDatabases) {
         this.RollbackDatabases = RollbackDatabases;
     }
 
     /**
-     * Get List of rollback databases and tables. 
-     * @return RollbackTables List of rollback databases and tables.
+     * Get List of rollback database tables 
+     * @return RollbackTables List of rollback database tables
      */
     public RollbackTable [] getRollbackTables() {
         return this.RollbackTables;
     }
 
     /**
-     * Set List of rollback databases and tables.
-     * @param RollbackTables List of rollback databases and tables.
+     * Set List of rollback database tables
+     * @param RollbackTables List of rollback database tables
      */
     public void setRollbackTables(RollbackTable [] RollbackTables) {
         this.RollbackTables = RollbackTables;
     }
 
     /**
-     * Get Mode of rolling back by time point. full: normal; db: fast; table: ultra-fast (the default value is normal). 
-     * @return RollbackMode Mode of rolling back by time point. full: normal; db: fast; table: ultra-fast (the default value is normal).
+     * Get Point-in-Time Restore Mode. full: ordinary; db: quick; table: ultra-fast (ordinary is selected by default) 
+     * @return RollbackMode Point-in-Time Restore Mode. full: ordinary; db: quick; table: ultra-fast (ordinary is selected by default)
      */
     public String getRollbackMode() {
         return this.RollbackMode;
     }
 
     /**
-     * Set Mode of rolling back by time point. full: normal; db: fast; table: ultra-fast (the default value is normal).
-     * @param RollbackMode Mode of rolling back by time point. full: normal; db: fast; table: ultra-fast (the default value is normal).
+     * Set Point-in-Time Restore Mode. full: ordinary; db: quick; table: ultra-fast (ordinary is selected by default)
+     * @param RollbackMode Point-in-Time Restore Mode. full: ordinary; db: quick; table: ultra-fast (ordinary is selected by default)
      */
     public void setRollbackMode(String RollbackMode) {
         this.RollbackMode = RollbackMode;

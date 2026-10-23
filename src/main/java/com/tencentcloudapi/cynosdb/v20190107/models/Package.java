@@ -31,7 +31,7 @@ public class Package extends AbstractModel {
     private Long AppId;
 
     /**
-    * The unique ID of the resource package.
+    * Unique ID of the resource package
     */
     @SerializedName("PackageId")
     @Expose
@@ -45,7 +45,7 @@ public class Package extends AbstractModel {
     private String PackageName;
 
     /**
-    * Specifies the resource package type.
+    * Resource package type
 CCU: compute resource package. DISK: storage resource package.
     */
     @SerializedName("PackageType")
@@ -61,70 +61,70 @@ base - basic, common - general, enterprise - business
     private String PackageVersion;
 
     /**
-    * Resource package region of use.
-China - common in the chinese mainland. overseas - universally applicable in hong kong (china), macao (china), taiwan (china), and overseas.
+    * Region of resource package use
+china: common in the Chinese mainland; overseas: common in Hong Kong (China), Macao (China), Taiwan (China), and overseas regions
     */
     @SerializedName("PackageRegion")
     @Expose
     private String PackageRegion;
 
     /**
-    * Specifies the status of the resource package.
-creating - indicates that it is in the process of being created.
-{using} specifies that it is in use.
-expired-expired;.
-normal_finish - specifies that it is used up.
-`Apply_refund`: apply for a refund.
-Specifies that the fee has been refunded.
+    * Resource package status
+creating
+using - in use;
+expired
+normal_finish: used up;
+apply_refund: Refund requested
+refund: refunded.
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * Total resource package quantity.
+    * Total resource package quantity
     */
     @SerializedName("PackageTotalSpec")
     @Expose
     private Float PackageTotalSpec;
 
     /**
-    * Used amount of resource package.
+    * Used amount of the resource package
     */
     @SerializedName("PackageUsedSpec")
     @Expose
     private Float PackageUsedSpec;
 
     /**
-    * Whether there is inventory surplus.
+    * Whether there is still inventory surplus
     */
     @SerializedName("HasQuota")
     @Expose
     private Boolean HasQuota;
 
     /**
-    * Specifies the bound instance information.
+    * Bound instance information
     */
     @SerializedName("BindInstanceInfos")
     @Expose
     private BindInstanceInfo [] BindInstanceInfos;
 
     /**
-    * Specifies the effective time: 2022-07-01 00:00:00.
+    * Effective time: 2022-07-01 00:00:00
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * Specifies the expiration time: 2022-08-01 00:00:00.
+    * Expiration time: 2022-08-01 00:00:00
     */
     @SerializedName("ExpireTime")
     @Expose
     private String ExpireTime;
 
     /**
-    * Information of the instance historically bound (now unbound) to the resource pack.
+    * Resource package historic bound (unbound) instance information
     */
     @SerializedName("HistoryBindResourceInfos")
     @Expose
@@ -147,16 +147,16 @@ Specifies that the fee has been refunded.
     }
 
     /**
-     * Get The unique ID of the resource package. 
-     * @return PackageId The unique ID of the resource package.
+     * Get Unique ID of the resource package 
+     * @return PackageId Unique ID of the resource package
      */
     public String getPackageId() {
         return this.PackageId;
     }
 
     /**
-     * Set The unique ID of the resource package.
-     * @param PackageId The unique ID of the resource package.
+     * Set Unique ID of the resource package
+     * @param PackageId Unique ID of the resource package
      */
     public void setPackageId(String PackageId) {
         this.PackageId = PackageId;
@@ -179,9 +179,9 @@ Specifies that the fee has been refunded.
     }
 
     /**
-     * Get Specifies the resource package type.
+     * Get Resource package type
 CCU: compute resource package. DISK: storage resource package. 
-     * @return PackageType Specifies the resource package type.
+     * @return PackageType Resource package type
 CCU: compute resource package. DISK: storage resource package.
      */
     public String getPackageType() {
@@ -189,9 +189,9 @@ CCU: compute resource package. DISK: storage resource package.
     }
 
     /**
-     * Set Specifies the resource package type.
+     * Set Resource package type
 CCU: compute resource package. DISK: storage resource package.
-     * @param PackageType Specifies the resource package type.
+     * @param PackageType Resource package type
 CCU: compute resource package. DISK: storage resource package.
      */
     public void setPackageType(String PackageType) {
@@ -219,172 +219,172 @@ base - basic, common - general, enterprise - business
     }
 
     /**
-     * Get Resource package region of use.
-China - common in the chinese mainland. overseas - universally applicable in hong kong (china), macao (china), taiwan (china), and overseas. 
-     * @return PackageRegion Resource package region of use.
-China - common in the chinese mainland. overseas - universally applicable in hong kong (china), macao (china), taiwan (china), and overseas.
+     * Get Region of resource package use
+china: common in the Chinese mainland; overseas: common in Hong Kong (China), Macao (China), Taiwan (China), and overseas regions 
+     * @return PackageRegion Region of resource package use
+china: common in the Chinese mainland; overseas: common in Hong Kong (China), Macao (China), Taiwan (China), and overseas regions
      */
     public String getPackageRegion() {
         return this.PackageRegion;
     }
 
     /**
-     * Set Resource package region of use.
-China - common in the chinese mainland. overseas - universally applicable in hong kong (china), macao (china), taiwan (china), and overseas.
-     * @param PackageRegion Resource package region of use.
-China - common in the chinese mainland. overseas - universally applicable in hong kong (china), macao (china), taiwan (china), and overseas.
+     * Set Region of resource package use
+china: common in the Chinese mainland; overseas: common in Hong Kong (China), Macao (China), Taiwan (China), and overseas regions
+     * @param PackageRegion Region of resource package use
+china: common in the Chinese mainland; overseas: common in Hong Kong (China), Macao (China), Taiwan (China), and overseas regions
      */
     public void setPackageRegion(String PackageRegion) {
         this.PackageRegion = PackageRegion;
     }
 
     /**
-     * Get Specifies the status of the resource package.
-creating - indicates that it is in the process of being created.
-{using} specifies that it is in use.
-expired-expired;.
-normal_finish - specifies that it is used up.
-`Apply_refund`: apply for a refund.
-Specifies that the fee has been refunded. 
-     * @return Status Specifies the status of the resource package.
-creating - indicates that it is in the process of being created.
-{using} specifies that it is in use.
-expired-expired;.
-normal_finish - specifies that it is used up.
-`Apply_refund`: apply for a refund.
-Specifies that the fee has been refunded.
+     * Get Resource package status
+creating
+using - in use;
+expired
+normal_finish: used up;
+apply_refund: Refund requested
+refund: refunded. 
+     * @return Status Resource package status
+creating
+using - in use;
+expired
+normal_finish: used up;
+apply_refund: Refund requested
+refund: refunded.
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Specifies the status of the resource package.
-creating - indicates that it is in the process of being created.
-{using} specifies that it is in use.
-expired-expired;.
-normal_finish - specifies that it is used up.
-`Apply_refund`: apply for a refund.
-Specifies that the fee has been refunded.
-     * @param Status Specifies the status of the resource package.
-creating - indicates that it is in the process of being created.
-{using} specifies that it is in use.
-expired-expired;.
-normal_finish - specifies that it is used up.
-`Apply_refund`: apply for a refund.
-Specifies that the fee has been refunded.
+     * Set Resource package status
+creating
+using - in use;
+expired
+normal_finish: used up;
+apply_refund: Refund requested
+refund: refunded.
+     * @param Status Resource package status
+creating
+using - in use;
+expired
+normal_finish: used up;
+apply_refund: Refund requested
+refund: refunded.
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Total resource package quantity. 
-     * @return PackageTotalSpec Total resource package quantity.
+     * Get Total resource package quantity 
+     * @return PackageTotalSpec Total resource package quantity
      */
     public Float getPackageTotalSpec() {
         return this.PackageTotalSpec;
     }
 
     /**
-     * Set Total resource package quantity.
-     * @param PackageTotalSpec Total resource package quantity.
+     * Set Total resource package quantity
+     * @param PackageTotalSpec Total resource package quantity
      */
     public void setPackageTotalSpec(Float PackageTotalSpec) {
         this.PackageTotalSpec = PackageTotalSpec;
     }
 
     /**
-     * Get Used amount of resource package. 
-     * @return PackageUsedSpec Used amount of resource package.
+     * Get Used amount of the resource package 
+     * @return PackageUsedSpec Used amount of the resource package
      */
     public Float getPackageUsedSpec() {
         return this.PackageUsedSpec;
     }
 
     /**
-     * Set Used amount of resource package.
-     * @param PackageUsedSpec Used amount of resource package.
+     * Set Used amount of the resource package
+     * @param PackageUsedSpec Used amount of the resource package
      */
     public void setPackageUsedSpec(Float PackageUsedSpec) {
         this.PackageUsedSpec = PackageUsedSpec;
     }
 
     /**
-     * Get Whether there is inventory surplus. 
-     * @return HasQuota Whether there is inventory surplus.
+     * Get Whether there is still inventory surplus 
+     * @return HasQuota Whether there is still inventory surplus
      */
     public Boolean getHasQuota() {
         return this.HasQuota;
     }
 
     /**
-     * Set Whether there is inventory surplus.
-     * @param HasQuota Whether there is inventory surplus.
+     * Set Whether there is still inventory surplus
+     * @param HasQuota Whether there is still inventory surplus
      */
     public void setHasQuota(Boolean HasQuota) {
         this.HasQuota = HasQuota;
     }
 
     /**
-     * Get Specifies the bound instance information. 
-     * @return BindInstanceInfos Specifies the bound instance information.
+     * Get Bound instance information 
+     * @return BindInstanceInfos Bound instance information
      */
     public BindInstanceInfo [] getBindInstanceInfos() {
         return this.BindInstanceInfos;
     }
 
     /**
-     * Set Specifies the bound instance information.
-     * @param BindInstanceInfos Specifies the bound instance information.
+     * Set Bound instance information
+     * @param BindInstanceInfos Bound instance information
      */
     public void setBindInstanceInfos(BindInstanceInfo [] BindInstanceInfos) {
         this.BindInstanceInfos = BindInstanceInfos;
     }
 
     /**
-     * Get Specifies the effective time: 2022-07-01 00:00:00. 
-     * @return StartTime Specifies the effective time: 2022-07-01 00:00:00.
+     * Get Effective time: 2022-07-01 00:00:00 
+     * @return StartTime Effective time: 2022-07-01 00:00:00
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set Specifies the effective time: 2022-07-01 00:00:00.
-     * @param StartTime Specifies the effective time: 2022-07-01 00:00:00.
+     * Set Effective time: 2022-07-01 00:00:00
+     * @param StartTime Effective time: 2022-07-01 00:00:00
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get Specifies the expiration time: 2022-08-01 00:00:00. 
-     * @return ExpireTime Specifies the expiration time: 2022-08-01 00:00:00.
+     * Get Expiration time: 2022-08-01 00:00:00 
+     * @return ExpireTime Expiration time: 2022-08-01 00:00:00
      */
     public String getExpireTime() {
         return this.ExpireTime;
     }
 
     /**
-     * Set Specifies the expiration time: 2022-08-01 00:00:00.
-     * @param ExpireTime Specifies the expiration time: 2022-08-01 00:00:00.
+     * Set Expiration time: 2022-08-01 00:00:00
+     * @param ExpireTime Expiration time: 2022-08-01 00:00:00
      */
     public void setExpireTime(String ExpireTime) {
         this.ExpireTime = ExpireTime;
     }
 
     /**
-     * Get Information of the instance historically bound (now unbound) to the resource pack. 
-     * @return HistoryBindResourceInfos Information of the instance historically bound (now unbound) to the resource pack.
+     * Get Resource package historic bound (unbound) instance information 
+     * @return HistoryBindResourceInfos Resource package historic bound (unbound) instance information
      */
     public BindInstanceInfo [] getHistoryBindResourceInfos() {
         return this.HistoryBindResourceInfos;
     }
 
     /**
-     * Set Information of the instance historically bound (now unbound) to the resource pack.
-     * @param HistoryBindResourceInfos Information of the instance historically bound (now unbound) to the resource pack.
+     * Set Resource package historic bound (unbound) instance information
+     * @param HistoryBindResourceInfos Resource package historic bound (unbound) instance information
      */
     public void setHistoryBindResourceInfos(BindInstanceInfo [] HistoryBindResourceInfos) {
         this.HistoryBindResourceInfos = HistoryBindResourceInfos;

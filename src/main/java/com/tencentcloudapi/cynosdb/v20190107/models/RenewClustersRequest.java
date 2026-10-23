@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class RenewClustersRequest extends AbstractModel {
 
     /**
-    * Cluster ID.
+    * Cluster ID
     */
     @SerializedName("ClusterId")
     @Expose
     private String ClusterId;
 
     /**
-    * Renewal period.
+    * Renewal duration
     */
     @SerializedName("TimeSpan")
     @Expose
     private Float TimeSpan;
 
     /**
-    * Time unit, such as y, m, d, h, i, and s.
+    * Time unit. y: year. m: month. d: day. h: hour. i: minute. s: second.
     */
     @SerializedName("TimeUnit")
     @Expose
     private String TimeUnit;
 
     /**
-    * "Transaction mode. 	0 - place an order and pay; 1 - place an order."
+    * Transaction mode 0-Place order and pay 1-Place order
     */
     @SerializedName("DealMode")
     @Expose
     private Long DealMode;
 
     /**
-     * Get Cluster ID. 
-     * @return ClusterId Cluster ID.
+     * Get Cluster ID 
+     * @return ClusterId Cluster ID
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set Cluster ID.
-     * @param ClusterId Cluster ID.
+     * Set Cluster ID
+     * @param ClusterId Cluster ID
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get Renewal period. 
-     * @return TimeSpan Renewal period.
+     * Get Renewal duration 
+     * @return TimeSpan Renewal duration
      */
     public Float getTimeSpan() {
         return this.TimeSpan;
     }
 
     /**
-     * Set Renewal period.
-     * @param TimeSpan Renewal period.
+     * Set Renewal duration
+     * @param TimeSpan Renewal duration
      */
     public void setTimeSpan(Float TimeSpan) {
         this.TimeSpan = TimeSpan;
     }
 
     /**
-     * Get Time unit, such as y, m, d, h, i, and s. 
-     * @return TimeUnit Time unit, such as y, m, d, h, i, and s.
+     * Get Time unit. y: year. m: month. d: day. h: hour. i: minute. s: second. 
+     * @return TimeUnit Time unit. y: year. m: month. d: day. h: hour. i: minute. s: second.
      */
     public String getTimeUnit() {
         return this.TimeUnit;
     }
 
     /**
-     * Set Time unit, such as y, m, d, h, i, and s.
-     * @param TimeUnit Time unit, such as y, m, d, h, i, and s.
+     * Set Time unit. y: year. m: month. d: day. h: hour. i: minute. s: second.
+     * @param TimeUnit Time unit. y: year. m: month. d: day. h: hour. i: minute. s: second.
      */
     public void setTimeUnit(String TimeUnit) {
         this.TimeUnit = TimeUnit;
     }
 
     /**
-     * Get "Transaction mode. 	0 - place an order and pay; 1 - place an order." 
-     * @return DealMode "Transaction mode. 	0 - place an order and pay; 1 - place an order."
+     * Get Transaction mode 0-Place order and pay 1-Place order 
+     * @return DealMode Transaction mode 0-Place order and pay 1-Place order
      */
     public Long getDealMode() {
         return this.DealMode;
     }
 
     /**
-     * Set "Transaction mode. 	0 - place an order and pay; 1 - place an order."
-     * @param DealMode "Transaction mode. 	0 - place an order and pay; 1 - place an order."
+     * Set Transaction mode 0-Place order and pay 1-Place order
+     * @param DealMode Transaction mode 0-Place order and pay 1-Place order
      */
     public void setDealMode(Long DealMode) {
         this.DealMode = DealMode;

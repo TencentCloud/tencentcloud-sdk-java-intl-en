@@ -31,14 +31,14 @@ public class DescribeSlaveZonesRequest extends AbstractModel {
     private String Zone;
 
     /**
-    * Cloud frame cluster ID.
+    * Cloud cluster ID
     */
     @SerializedName("OssClusterId")
     @Expose
     private Long OssClusterId;
 
     /**
-    * Storage architecture type. Enumeration value: 1.0/2.0. Default value: 1.0.
+    * Storage architecture type. Enumeration values: 1.0/2.0. Default value: 1.0
     */
     @SerializedName("StorageVersion")
     @Expose
@@ -61,32 +61,32 @@ public class DescribeSlaveZonesRequest extends AbstractModel {
     }
 
     /**
-     * Get Cloud frame cluster ID. 
-     * @return OssClusterId Cloud frame cluster ID.
+     * Get Cloud cluster ID 
+     * @return OssClusterId Cloud cluster ID
      */
     public Long getOssClusterId() {
         return this.OssClusterId;
     }
 
     /**
-     * Set Cloud frame cluster ID.
-     * @param OssClusterId Cloud frame cluster ID.
+     * Set Cloud cluster ID
+     * @param OssClusterId Cloud cluster ID
      */
     public void setOssClusterId(Long OssClusterId) {
         this.OssClusterId = OssClusterId;
     }
 
     /**
-     * Get Storage architecture type. Enumeration value: 1.0/2.0. Default value: 1.0. 
-     * @return StorageVersion Storage architecture type. Enumeration value: 1.0/2.0. Default value: 1.0.
+     * Get Storage architecture type. Enumeration values: 1.0/2.0. Default value: 1.0 
+     * @return StorageVersion Storage architecture type. Enumeration values: 1.0/2.0. Default value: 1.0
      */
     public String getStorageVersion() {
         return this.StorageVersion;
     }
 
     /**
-     * Set Storage architecture type. Enumeration value: 1.0/2.0. Default value: 1.0.
-     * @param StorageVersion Storage architecture type. Enumeration value: 1.0/2.0. Default value: 1.0.
+     * Set Storage architecture type. Enumeration values: 1.0/2.0. Default value: 1.0
+     * @param StorageVersion Storage architecture type. Enumeration values: 1.0/2.0. Default value: 1.0
      */
     public void setStorageVersion(String StorageVersion) {
         this.StorageVersion = StorageVersion;

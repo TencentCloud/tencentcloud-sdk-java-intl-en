@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateConfigGroupVersionResponse extends AbstractModel {
 
     /**
-    * Version ID.
+    * <p>Version ID.</p>
     */
     @SerializedName("VersionId")
     @Expose
@@ -38,16 +38,16 @@ public class CreateConfigGroupVersionResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Version ID. 
-     * @return VersionId Version ID.
+     * Get <p>Version ID.</p> 
+     * @return VersionId <p>Version ID.</p>
      */
     public String getVersionId() {
         return this.VersionId;
     }
 
     /**
-     * Set Version ID.
-     * @param VersionId Version ID.
+     * Set <p>Version ID.</p>
+     * @param VersionId <p>Version ID.</p>
      */
     public void setVersionId(String VersionId) {
         this.VersionId = VersionId;

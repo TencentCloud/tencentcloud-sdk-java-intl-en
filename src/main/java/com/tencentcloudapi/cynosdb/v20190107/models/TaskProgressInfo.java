@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class TaskProgressInfo extends AbstractModel {
 
     /**
-    * Current step.
+    * Details of the current step
     */
     @SerializedName("CurrentStep")
     @Expose
     private String CurrentStep;
 
     /**
-    * Current progress.
+    * Current progress
     */
     @SerializedName("CurrentStepProgress")
     @Expose
@@ -45,32 +45,32 @@ public class TaskProgressInfo extends AbstractModel {
     private String CurrentStepRemainingTime;
 
     /**
-     * Get Current step. 
-     * @return CurrentStep Current step.
+     * Get Details of the current step 
+     * @return CurrentStep Details of the current step
      */
     public String getCurrentStep() {
         return this.CurrentStep;
     }
 
     /**
-     * Set Current step.
-     * @param CurrentStep Current step.
+     * Set Details of the current step
+     * @param CurrentStep Details of the current step
      */
     public void setCurrentStep(String CurrentStep) {
         this.CurrentStep = CurrentStep;
     }
 
     /**
-     * Get Current progress. 
-     * @return CurrentStepProgress Current progress.
+     * Get Current progress 
+     * @return CurrentStepProgress Current progress
      */
     public Long getCurrentStepProgress() {
         return this.CurrentStepProgress;
     }
 
     /**
-     * Set Current progress.
-     * @param CurrentStepProgress Current progress.
+     * Set Current progress
+     * @param CurrentStepProgress Current progress
      */
     public void setCurrentStepProgress(Long CurrentStepProgress) {
         this.CurrentStepProgress = CurrentStepProgress;

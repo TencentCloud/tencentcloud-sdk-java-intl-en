@@ -24,28 +24,28 @@ import java.util.HashMap;
 public class OpenClusterTransparentEncryptRequest extends AbstractModel {
 
     /**
-    * Cluster ID
+    * Cluster ID.
     */
     @SerializedName("ClusterId")
     @Expose
     private String ClusterId;
 
     /**
-    * Key type (cloud, custom).
+    * Key type (cloud, custom)
     */
     @SerializedName("KeyType")
     @Expose
     private String KeyType;
 
     /**
-    * Key Id.
+    * Secret Id
     */
     @SerializedName("KeyId")
     @Expose
     private String KeyId;
 
     /**
-    * Key region.
+    * Key region
     */
     @SerializedName("KeyRegion")
     @Expose
@@ -59,64 +59,64 @@ public class OpenClusterTransparentEncryptRequest extends AbstractModel {
     private Boolean IsOpenGlobalEncryption;
 
     /**
-     * Get Cluster ID 
-     * @return ClusterId Cluster ID
+     * Get Cluster ID. 
+     * @return ClusterId Cluster ID.
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set Cluster ID
-     * @param ClusterId Cluster ID
+     * Set Cluster ID.
+     * @param ClusterId Cluster ID.
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get Key type (cloud, custom). 
-     * @return KeyType Key type (cloud, custom).
+     * Get Key type (cloud, custom) 
+     * @return KeyType Key type (cloud, custom)
      */
     public String getKeyType() {
         return this.KeyType;
     }
 
     /**
-     * Set Key type (cloud, custom).
-     * @param KeyType Key type (cloud, custom).
+     * Set Key type (cloud, custom)
+     * @param KeyType Key type (cloud, custom)
      */
     public void setKeyType(String KeyType) {
         this.KeyType = KeyType;
     }
 
     /**
-     * Get Key Id. 
-     * @return KeyId Key Id.
+     * Get Secret Id 
+     * @return KeyId Secret Id
      */
     public String getKeyId() {
         return this.KeyId;
     }
 
     /**
-     * Set Key Id.
-     * @param KeyId Key Id.
+     * Set Secret Id
+     * @param KeyId Secret Id
      */
     public void setKeyId(String KeyId) {
         this.KeyId = KeyId;
     }
 
     /**
-     * Get Key region. 
-     * @return KeyRegion Key region.
+     * Get Key region 
+     * @return KeyRegion Key region
      */
     public String getKeyRegion() {
         return this.KeyRegion;
     }
 
     /**
-     * Set Key region.
-     * @param KeyRegion Key region.
+     * Set Key region
+     * @param KeyRegion Key region
      */
     public void setKeyRegion(String KeyRegion) {
         this.KeyRegion = KeyRegion;

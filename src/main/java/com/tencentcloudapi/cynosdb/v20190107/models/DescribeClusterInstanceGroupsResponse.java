@@ -31,7 +31,7 @@ public class DescribeClusterInstanceGroupsResponse extends AbstractModel {
     private Long TotalCount;
 
     /**
-    * Instance Group List
+    * Instance group list
     */
     @SerializedName("InstanceGroupInfoList")
     @Expose
@@ -61,16 +61,16 @@ public class DescribeClusterInstanceGroupsResponse extends AbstractModel {
     }
 
     /**
-     * Get Instance Group List 
-     * @return InstanceGroupInfoList Instance Group List
+     * Get Instance group list 
+     * @return InstanceGroupInfoList Instance group list
      */
     public CynosdbInstanceGroup [] getInstanceGroupInfoList() {
         return this.InstanceGroupInfoList;
     }
 
     /**
-     * Set Instance Group List
-     * @param InstanceGroupInfoList Instance Group List
+     * Set Instance group list
+     * @param InstanceGroupInfoList Instance group list
      */
     public void setInstanceGroupInfoList(CynosdbInstanceGroup [] InstanceGroupInfoList) {
         this.InstanceGroupInfoList = InstanceGroupInfoList;

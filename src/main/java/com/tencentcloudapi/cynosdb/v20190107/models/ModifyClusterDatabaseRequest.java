@@ -38,21 +38,21 @@ public class ModifyClusterDatabaseRequest extends AbstractModel {
     private String DbName;
 
     /**
-    * Host permissions of the new authorized user
+    * Host permissions for new authorized users
     */
     @SerializedName("NewUserHostPrivileges")
     @Expose
     private UserHostPrivilege [] NewUserHostPrivileges;
 
     /**
-    * Remarks
+    * Remarks.
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * Host permissions of previously authorized users
+    * Historical authorization of user host permissions
     */
     @SerializedName("OldUserHostPrivileges")
     @Expose
@@ -91,48 +91,48 @@ public class ModifyClusterDatabaseRequest extends AbstractModel {
     }
 
     /**
-     * Get Host permissions of the new authorized user 
-     * @return NewUserHostPrivileges Host permissions of the new authorized user
+     * Get Host permissions for new authorized users 
+     * @return NewUserHostPrivileges Host permissions for new authorized users
      */
     public UserHostPrivilege [] getNewUserHostPrivileges() {
         return this.NewUserHostPrivileges;
     }
 
     /**
-     * Set Host permissions of the new authorized user
-     * @param NewUserHostPrivileges Host permissions of the new authorized user
+     * Set Host permissions for new authorized users
+     * @param NewUserHostPrivileges Host permissions for new authorized users
      */
     public void setNewUserHostPrivileges(UserHostPrivilege [] NewUserHostPrivileges) {
         this.NewUserHostPrivileges = NewUserHostPrivileges;
     }
 
     /**
-     * Get Remarks 
-     * @return Description Remarks
+     * Get Remarks. 
+     * @return Description Remarks.
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set Remarks
-     * @param Description Remarks
+     * Set Remarks.
+     * @param Description Remarks.
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get Host permissions of previously authorized users 
-     * @return OldUserHostPrivileges Host permissions of previously authorized users
+     * Get Historical authorization of user host permissions 
+     * @return OldUserHostPrivileges Historical authorization of user host permissions
      */
     public UserHostPrivilege [] getOldUserHostPrivileges() {
         return this.OldUserHostPrivileges;
     }
 
     /**
-     * Set Host permissions of previously authorized users
-     * @param OldUserHostPrivileges Host permissions of previously authorized users
+     * Set Historical authorization of user host permissions
+     * @param OldUserHostPrivileges Historical authorization of user host permissions
      */
     public void setOldUserHostPrivileges(UserHostPrivilege [] OldUserHostPrivileges) {
         this.OldUserHostPrivileges = OldUserHostPrivileges;

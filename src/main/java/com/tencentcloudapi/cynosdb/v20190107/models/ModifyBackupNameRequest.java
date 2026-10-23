@@ -38,7 +38,7 @@ public class ModifyBackupNameRequest extends AbstractModel {
     private Long BackupId;
 
     /**
-    * Backup name, which can contain up to 60 characters.
+    * Alias name, which cannot exceed 60 characters.
     */
     @SerializedName("BackupName")
     @Expose
@@ -77,16 +77,16 @@ public class ModifyBackupNameRequest extends AbstractModel {
     }
 
     /**
-     * Get Backup name, which can contain up to 60 characters. 
-     * @return BackupName Backup name, which can contain up to 60 characters.
+     * Get Alias name, which cannot exceed 60 characters. 
+     * @return BackupName Alias name, which cannot exceed 60 characters.
      */
     public String getBackupName() {
         return this.BackupName;
     }
 
     /**
-     * Set Backup name, which can contain up to 60 characters.
-     * @param BackupName Backup name, which can contain up to 60 characters.
+     * Set Alias name, which cannot exceed 60 characters.
+     * @param BackupName Alias name, which cannot exceed 60 characters.
      */
     public void setBackupName(String BackupName) {
         this.BackupName = BackupName;

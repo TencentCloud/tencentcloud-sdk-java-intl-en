@@ -31,35 +31,35 @@ public class DescribeClusterPasswordComplexityResponse extends AbstractModel {
     private ParamInfo ValidatePasswordDictionary;
 
     /**
-    * Specifies the password length.
+    * Password length
     */
     @SerializedName("ValidatePasswordLength")
     @Expose
     private ParamInfo ValidatePasswordLength;
 
     /**
-    * Case-Sensitive character count.
+    * Number of case-sensitive characters
     */
     @SerializedName("ValidatePasswordMixedCaseCount")
     @Expose
     private ParamInfo ValidatePasswordMixedCaseCount;
 
     /**
-    * Number of digits.
+    * Number of digits
     */
     @SerializedName("ValidatePasswordNumberCount")
     @Expose
     private ParamInfo ValidatePasswordNumberCount;
 
     /**
-    * Password level.
+    * Password level
     */
     @SerializedName("ValidatePasswordPolicy")
     @Expose
     private ParamInfo ValidatePasswordPolicy;
 
     /**
-    * Number of special characters.
+    * Number of special characters
     */
     @SerializedName("ValidatePasswordSpecialCharCount")
     @Expose
@@ -89,80 +89,80 @@ public class DescribeClusterPasswordComplexityResponse extends AbstractModel {
     }
 
     /**
-     * Get Specifies the password length. 
-     * @return ValidatePasswordLength Specifies the password length.
+     * Get Password length 
+     * @return ValidatePasswordLength Password length
      */
     public ParamInfo getValidatePasswordLength() {
         return this.ValidatePasswordLength;
     }
 
     /**
-     * Set Specifies the password length.
-     * @param ValidatePasswordLength Specifies the password length.
+     * Set Password length
+     * @param ValidatePasswordLength Password length
      */
     public void setValidatePasswordLength(ParamInfo ValidatePasswordLength) {
         this.ValidatePasswordLength = ValidatePasswordLength;
     }
 
     /**
-     * Get Case-Sensitive character count. 
-     * @return ValidatePasswordMixedCaseCount Case-Sensitive character count.
+     * Get Number of case-sensitive characters 
+     * @return ValidatePasswordMixedCaseCount Number of case-sensitive characters
      */
     public ParamInfo getValidatePasswordMixedCaseCount() {
         return this.ValidatePasswordMixedCaseCount;
     }
 
     /**
-     * Set Case-Sensitive character count.
-     * @param ValidatePasswordMixedCaseCount Case-Sensitive character count.
+     * Set Number of case-sensitive characters
+     * @param ValidatePasswordMixedCaseCount Number of case-sensitive characters
      */
     public void setValidatePasswordMixedCaseCount(ParamInfo ValidatePasswordMixedCaseCount) {
         this.ValidatePasswordMixedCaseCount = ValidatePasswordMixedCaseCount;
     }
 
     /**
-     * Get Number of digits. 
-     * @return ValidatePasswordNumberCount Number of digits.
+     * Get Number of digits 
+     * @return ValidatePasswordNumberCount Number of digits
      */
     public ParamInfo getValidatePasswordNumberCount() {
         return this.ValidatePasswordNumberCount;
     }
 
     /**
-     * Set Number of digits.
-     * @param ValidatePasswordNumberCount Number of digits.
+     * Set Number of digits
+     * @param ValidatePasswordNumberCount Number of digits
      */
     public void setValidatePasswordNumberCount(ParamInfo ValidatePasswordNumberCount) {
         this.ValidatePasswordNumberCount = ValidatePasswordNumberCount;
     }
 
     /**
-     * Get Password level. 
-     * @return ValidatePasswordPolicy Password level.
+     * Get Password level 
+     * @return ValidatePasswordPolicy Password level
      */
     public ParamInfo getValidatePasswordPolicy() {
         return this.ValidatePasswordPolicy;
     }
 
     /**
-     * Set Password level.
-     * @param ValidatePasswordPolicy Password level.
+     * Set Password level
+     * @param ValidatePasswordPolicy Password level
      */
     public void setValidatePasswordPolicy(ParamInfo ValidatePasswordPolicy) {
         this.ValidatePasswordPolicy = ValidatePasswordPolicy;
     }
 
     /**
-     * Get Number of special characters. 
-     * @return ValidatePasswordSpecialCharCount Number of special characters.
+     * Get Number of special characters 
+     * @return ValidatePasswordSpecialCharCount Number of special characters
      */
     public ParamInfo getValidatePasswordSpecialCharCount() {
         return this.ValidatePasswordSpecialCharCount;
     }
 
     /**
-     * Set Number of special characters.
-     * @param ValidatePasswordSpecialCharCount Number of special characters.
+     * Set Number of special characters
+     * @param ValidatePasswordSpecialCharCount Number of special characters
      */
     public void setValidatePasswordSpecialCharCount(ParamInfo ValidatePasswordSpecialCharCount) {
         this.ValidatePasswordSpecialCharCount = ValidatePasswordSpecialCharCount;

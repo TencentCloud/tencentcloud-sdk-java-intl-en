@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModifyVipVportResponse extends AbstractModel {
 
     /**
-    * Async task ID
+    * Asynchronous task ID.
     */
     @SerializedName("FlowId")
     @Expose
@@ -38,16 +38,16 @@ public class ModifyVipVportResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Async task ID 
-     * @return FlowId Async task ID
+     * Get Asynchronous task ID. 
+     * @return FlowId Asynchronous task ID.
      */
     public Long getFlowId() {
         return this.FlowId;
     }
 
     /**
-     * Set Async task ID
-     * @param FlowId Async task ID
+     * Set Asynchronous task ID.
+     * @param FlowId Asynchronous task ID.
      */
     public void setFlowId(Long FlowId) {
         this.FlowId = FlowId;

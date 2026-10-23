@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModifyClusterParamResponse extends AbstractModel {
 
     /**
-    * Async request ID used to query the result
+    * Async request Id, used for querying results
     */
     @SerializedName("AsyncRequestId")
     @Expose
@@ -38,16 +38,16 @@ public class ModifyClusterParamResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Async request ID used to query the result 
-     * @return AsyncRequestId Async request ID used to query the result
+     * Get Async request Id, used for querying results 
+     * @return AsyncRequestId Async request Id, used for querying results
      */
     public String getAsyncRequestId() {
         return this.AsyncRequestId;
     }
 
     /**
-     * Set Async request ID used to query the result
-     * @param AsyncRequestId Async request ID used to query the result
+     * Set Async request Id, used for querying results
+     * @param AsyncRequestId Async request Id, used for querying results
      */
     public void setAsyncRequestId(String AsyncRequestId) {
         this.AsyncRequestId = AsyncRequestId;

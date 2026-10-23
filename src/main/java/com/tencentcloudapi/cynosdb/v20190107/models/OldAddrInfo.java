@@ -31,14 +31,14 @@ public class OldAddrInfo extends AbstractModel {
     private String Vip;
 
     /**
-    * Port
+    * Port.
     */
     @SerializedName("Vport")
     @Expose
     private Long Vport;
 
     /**
-    * Expect recycle time.
+    * Expected recycle time
     */
     @SerializedName("ReturnTime")
     @Expose
@@ -61,32 +61,32 @@ public class OldAddrInfo extends AbstractModel {
     }
 
     /**
-     * Get Port 
-     * @return Vport Port
+     * Get Port. 
+     * @return Vport Port.
      */
     public Long getVport() {
         return this.Vport;
     }
 
     /**
-     * Set Port
-     * @param Vport Port
+     * Set Port.
+     * @param Vport Port.
      */
     public void setVport(Long Vport) {
         this.Vport = Vport;
     }
 
     /**
-     * Get Expect recycle time. 
-     * @return ReturnTime Expect recycle time.
+     * Get Expected recycle time 
+     * @return ReturnTime Expected recycle time
      */
     public String getReturnTime() {
         return this.ReturnTime;
     }
 
     /**
-     * Set Expect recycle time.
-     * @param ReturnTime Expect recycle time.
+     * Set Expected recycle time
+     * @param ReturnTime Expected recycle time
      */
     public void setReturnTime(String ReturnTime) {
         this.ReturnTime = ReturnTime;

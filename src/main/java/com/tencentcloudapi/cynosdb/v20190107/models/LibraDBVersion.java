@@ -31,14 +31,14 @@ public class LibraDBVersion extends AbstractModel {
     private String Version;
 
     /**
-    * Version tag
+    * Version tag.
     */
     @SerializedName("Tag")
     @Expose
     private String Tag;
 
     /**
-    * Can be used this version
+    * Whether this version can be used
     */
     @SerializedName("HasPermission")
     @Expose
@@ -61,32 +61,32 @@ public class LibraDBVersion extends AbstractModel {
     }
 
     /**
-     * Get Version tag 
-     * @return Tag Version tag
+     * Get Version tag. 
+     * @return Tag Version tag.
      */
     public String getTag() {
         return this.Tag;
     }
 
     /**
-     * Set Version tag
-     * @param Tag Version tag
+     * Set Version tag.
+     * @param Tag Version tag.
      */
     public void setTag(String Tag) {
         this.Tag = Tag;
     }
 
     /**
-     * Get Can be used this version 
-     * @return HasPermission Can be used this version
+     * Get Whether this version can be used 
+     * @return HasPermission Whether this version can be used
      */
     public Boolean getHasPermission() {
         return this.HasPermission;
     }
 
     /**
-     * Set Can be used this version
-     * @param HasPermission Can be used this version
+     * Set Whether this version can be used
+     * @param HasPermission Whether this version can be used
      */
     public void setHasPermission(Boolean HasPermission) {
         this.HasPermission = HasPermission;

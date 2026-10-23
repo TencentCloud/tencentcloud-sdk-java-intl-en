@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class ModifiableInfo extends AbstractModel {
 
     /**
-    * Whether the parameter can be modified, 1: Yes 0: No.
+    * Whether the parameter can be modified. 1: allowed, 0: not allowed
     */
     @SerializedName("IsModifiable")
     @Expose
     private Long IsModifiable;
 
     /**
-     * Get Whether the parameter can be modified, 1: Yes 0: No. 
-     * @return IsModifiable Whether the parameter can be modified, 1: Yes 0: No.
+     * Get Whether the parameter can be modified. 1: allowed, 0: not allowed 
+     * @return IsModifiable Whether the parameter can be modified. 1: allowed, 0: not allowed
      */
     public Long getIsModifiable() {
         return this.IsModifiable;
     }
 
     /**
-     * Set Whether the parameter can be modified, 1: Yes 0: No.
-     * @param IsModifiable Whether the parameter can be modified, 1: Yes 0: No.
+     * Set Whether the parameter can be modified. 1: allowed, 0: not allowed
+     * @param IsModifiable Whether the parameter can be modified. 1: allowed, 0: not allowed
      */
     public void setIsModifiable(Long IsModifiable) {
         this.IsModifiable = IsModifiable;

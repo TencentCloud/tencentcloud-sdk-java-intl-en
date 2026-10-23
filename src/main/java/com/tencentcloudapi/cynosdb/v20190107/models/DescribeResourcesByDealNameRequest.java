@@ -24,46 +24,56 @@ import java.util.HashMap;
 public class DescribeResourcesByDealNameRequest extends AbstractModel {
 
     /**
-    * Order ID. (If the cluster is not delivered yet, the `DescribeResourcesByDealName` API may return the `InvalidParameterValue.DealNameNotFound` error. Call the API again until it succeeds.)
+    * Billing order ID (if billing has not called back business delivery, the error code InvalidParameterValue.DealNameNotFound may occur. In this case, the business needs to retry the DescribeResourcesByDealName API until it succeeds).
+Enter at least one of DealName and DealNames. If both are entered, DealName takes precedence.
     */
     @SerializedName("DealName")
     @Expose
     private String DealName;
 
     /**
-    * Order ID, which can be used to query the resource information of multiple orders ID (If the cluster is not delivered yet, the `DescribeResourcesByDealName` API may return the `InvalidParameterValue.DealNameNotFound` error. Call the API again until it succeeds.)
+    * List of billing order IDs. You can query the resource information for several order IDs in a single query. If billing has not yet called back the business for delivery, the error code InvalidParameterValue.DealNameNotFound may occur. In this case, retry the DescribeResourcesByDealName API until it succeeds.
+Enter at least one of DealName and DealNames. If both are entered, DealName takes precedence.
     */
     @SerializedName("DealNames")
     @Expose
     private String [] DealNames;
 
     /**
-     * Get Order ID. (If the cluster is not delivered yet, the `DescribeResourcesByDealName` API may return the `InvalidParameterValue.DealNameNotFound` error. Call the API again until it succeeds.) 
-     * @return DealName Order ID. (If the cluster is not delivered yet, the `DescribeResourcesByDealName` API may return the `InvalidParameterValue.DealNameNotFound` error. Call the API again until it succeeds.)
+     * Get Billing order ID (if billing has not called back business delivery, the error code InvalidParameterValue.DealNameNotFound may occur. In this case, the business needs to retry the DescribeResourcesByDealName API until it succeeds).
+Enter at least one of DealName and DealNames. If both are entered, DealName takes precedence. 
+     * @return DealName Billing order ID (if billing has not called back business delivery, the error code InvalidParameterValue.DealNameNotFound may occur. In this case, the business needs to retry the DescribeResourcesByDealName API until it succeeds).
+Enter at least one of DealName and DealNames. If both are entered, DealName takes precedence.
      */
     public String getDealName() {
         return this.DealName;
     }
 
     /**
-     * Set Order ID. (If the cluster is not delivered yet, the `DescribeResourcesByDealName` API may return the `InvalidParameterValue.DealNameNotFound` error. Call the API again until it succeeds.)
-     * @param DealName Order ID. (If the cluster is not delivered yet, the `DescribeResourcesByDealName` API may return the `InvalidParameterValue.DealNameNotFound` error. Call the API again until it succeeds.)
+     * Set Billing order ID (if billing has not called back business delivery, the error code InvalidParameterValue.DealNameNotFound may occur. In this case, the business needs to retry the DescribeResourcesByDealName API until it succeeds).
+Enter at least one of DealName and DealNames. If both are entered, DealName takes precedence.
+     * @param DealName Billing order ID (if billing has not called back business delivery, the error code InvalidParameterValue.DealNameNotFound may occur. In this case, the business needs to retry the DescribeResourcesByDealName API until it succeeds).
+Enter at least one of DealName and DealNames. If both are entered, DealName takes precedence.
      */
     public void setDealName(String DealName) {
         this.DealName = DealName;
     }
 
     /**
-     * Get Order ID, which can be used to query the resource information of multiple orders ID (If the cluster is not delivered yet, the `DescribeResourcesByDealName` API may return the `InvalidParameterValue.DealNameNotFound` error. Call the API again until it succeeds.) 
-     * @return DealNames Order ID, which can be used to query the resource information of multiple orders ID (If the cluster is not delivered yet, the `DescribeResourcesByDealName` API may return the `InvalidParameterValue.DealNameNotFound` error. Call the API again until it succeeds.)
+     * Get List of billing order IDs. You can query the resource information for several order IDs in a single query. If billing has not yet called back the business for delivery, the error code InvalidParameterValue.DealNameNotFound may occur. In this case, retry the DescribeResourcesByDealName API until it succeeds.
+Enter at least one of DealName and DealNames. If both are entered, DealName takes precedence. 
+     * @return DealNames List of billing order IDs. You can query the resource information for several order IDs in a single query. If billing has not yet called back the business for delivery, the error code InvalidParameterValue.DealNameNotFound may occur. In this case, retry the DescribeResourcesByDealName API until it succeeds.
+Enter at least one of DealName and DealNames. If both are entered, DealName takes precedence.
      */
     public String [] getDealNames() {
         return this.DealNames;
     }
 
     /**
-     * Set Order ID, which can be used to query the resource information of multiple orders ID (If the cluster is not delivered yet, the `DescribeResourcesByDealName` API may return the `InvalidParameterValue.DealNameNotFound` error. Call the API again until it succeeds.)
-     * @param DealNames Order ID, which can be used to query the resource information of multiple orders ID (If the cluster is not delivered yet, the `DescribeResourcesByDealName` API may return the `InvalidParameterValue.DealNameNotFound` error. Call the API again until it succeeds.)
+     * Set List of billing order IDs. You can query the resource information for several order IDs in a single query. If billing has not yet called back the business for delivery, the error code InvalidParameterValue.DealNameNotFound may occur. In this case, retry the DescribeResourcesByDealName API until it succeeds.
+Enter at least one of DealName and DealNames. If both are entered, DealName takes precedence.
+     * @param DealNames List of billing order IDs. You can query the resource information for several order IDs in a single query. If billing has not yet called back the business for delivery, the error code InvalidParameterValue.DealNameNotFound may occur. In this case, retry the DescribeResourcesByDealName API until it succeeds.
+Enter at least one of DealName and DealNames. If both are entered, DealName takes precedence.
      */
     public void setDealNames(String [] DealNames) {
         this.DealNames = DealNames;

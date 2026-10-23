@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModifyLibraDBClusterReplicationObjectRequest extends AbstractModel {
 
     /**
-    * Analysis Cluster ID
+    * Analysis cluster ID
     */
     @SerializedName("ClusterId")
     @Expose
@@ -38,14 +38,14 @@ public class ModifyLibraDBClusterReplicationObjectRequest extends AbstractModel 
     private String InstanceId;
 
     /**
-    * Map mode
+    * Mapping mode
     */
     @SerializedName("ForceDefaultMapRule")
     @Expose
     private String ForceDefaultMapRule;
 
     /**
-    * sync object
+    * Synchronization object
     */
     @SerializedName("Objects")
     @Expose
@@ -59,23 +59,23 @@ public class ModifyLibraDBClusterReplicationObjectRequest extends AbstractModel 
     private AutoMapRule [] AutoMapRules;
 
     /**
-    * Whether to refresh existing mapping relationships according to the latest mapping rule
+    * Whether to update existing mapping relationships according to the latest mapping rule
     */
     @SerializedName("RefreshMapping")
     @Expose
     private Boolean RefreshMapping;
 
     /**
-     * Get Analysis Cluster ID 
-     * @return ClusterId Analysis Cluster ID
+     * Get Analysis cluster ID 
+     * @return ClusterId Analysis cluster ID
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set Analysis Cluster ID
-     * @param ClusterId Analysis Cluster ID
+     * Set Analysis cluster ID
+     * @param ClusterId Analysis cluster ID
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
@@ -98,32 +98,32 @@ public class ModifyLibraDBClusterReplicationObjectRequest extends AbstractModel 
     }
 
     /**
-     * Get Map mode 
-     * @return ForceDefaultMapRule Map mode
+     * Get Mapping mode 
+     * @return ForceDefaultMapRule Mapping mode
      */
     public String getForceDefaultMapRule() {
         return this.ForceDefaultMapRule;
     }
 
     /**
-     * Set Map mode
-     * @param ForceDefaultMapRule Map mode
+     * Set Mapping mode
+     * @param ForceDefaultMapRule Mapping mode
      */
     public void setForceDefaultMapRule(String ForceDefaultMapRule) {
         this.ForceDefaultMapRule = ForceDefaultMapRule;
     }
 
     /**
-     * Get sync object 
-     * @return Objects sync object
+     * Get Synchronization object 
+     * @return Objects Synchronization object
      */
     public ReplicationObject [] getObjects() {
         return this.Objects;
     }
 
     /**
-     * Set sync object
-     * @param Objects sync object
+     * Set Synchronization object
+     * @param Objects Synchronization object
      */
     public void setObjects(ReplicationObject [] Objects) {
         this.Objects = Objects;
@@ -146,16 +146,16 @@ public class ModifyLibraDBClusterReplicationObjectRequest extends AbstractModel 
     }
 
     /**
-     * Get Whether to refresh existing mapping relationships according to the latest mapping rule 
-     * @return RefreshMapping Whether to refresh existing mapping relationships according to the latest mapping rule
+     * Get Whether to update existing mapping relationships according to the latest mapping rule 
+     * @return RefreshMapping Whether to update existing mapping relationships according to the latest mapping rule
      */
     public Boolean getRefreshMapping() {
         return this.RefreshMapping;
     }
 
     /**
-     * Set Whether to refresh existing mapping relationships according to the latest mapping rule
-     * @param RefreshMapping Whether to refresh existing mapping relationships according to the latest mapping rule
+     * Set Whether to update existing mapping relationships according to the latest mapping rule
+     * @param RefreshMapping Whether to update existing mapping relationships according to the latest mapping rule
      */
     public void setRefreshMapping(Boolean RefreshMapping) {
         this.RefreshMapping = RefreshMapping;

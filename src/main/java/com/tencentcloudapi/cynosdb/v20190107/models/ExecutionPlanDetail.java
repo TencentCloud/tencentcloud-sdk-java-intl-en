@@ -38,7 +38,7 @@ public class ExecutionPlanDetail extends AbstractModel {
     private String Db;
 
     /**
-    * <p>Original SQL sample</p>
+    * <p>Original SQL sample.</p>
     */
     @SerializedName("SQLSample")
     @Expose
@@ -59,7 +59,7 @@ public class ExecutionPlanDetail extends AbstractModel {
     private ExplainRow [] TablePlanBefore;
 
     /**
-    * <p>Execution plan after optimization - List</p>
+    * <p>Execution plan after optimization - list</p>
     */
     @SerializedName("TablePlanAfter")
     @Expose
@@ -94,7 +94,7 @@ public class ExecutionPlanDetail extends AbstractModel {
     private Float QueryTimeAfter;
 
     /**
-    * <p>Number of scanned rows before optimization</p>
+    * <p>Scanned rows before optimization</p>
     */
     @SerializedName("SQLScanRowsBefore")
     @Expose
@@ -140,16 +140,16 @@ public class ExecutionPlanDetail extends AbstractModel {
     }
 
     /**
-     * Get <p>Original SQL sample</p> 
-     * @return SQLSample <p>Original SQL sample</p>
+     * Get <p>Original SQL sample.</p> 
+     * @return SQLSample <p>Original SQL sample.</p>
      */
     public String getSQLSample() {
         return this.SQLSample;
     }
 
     /**
-     * Set <p>Original SQL sample</p>
-     * @param SQLSample <p>Original SQL sample</p>
+     * Set <p>Original SQL sample.</p>
+     * @param SQLSample <p>Original SQL sample.</p>
      */
     public void setSQLSample(String SQLSample) {
         this.SQLSample = SQLSample;
@@ -188,16 +188,16 @@ public class ExecutionPlanDetail extends AbstractModel {
     }
 
     /**
-     * Get <p>Execution plan after optimization - List</p> 
-     * @return TablePlanAfter <p>Execution plan after optimization - List</p>
+     * Get <p>Execution plan after optimization - list</p> 
+     * @return TablePlanAfter <p>Execution plan after optimization - list</p>
      */
     public ExplainRow [] getTablePlanAfter() {
         return this.TablePlanAfter;
     }
 
     /**
-     * Set <p>Execution plan after optimization - List</p>
-     * @param TablePlanAfter <p>Execution plan after optimization - List</p>
+     * Set <p>Execution plan after optimization - list</p>
+     * @param TablePlanAfter <p>Execution plan after optimization - list</p>
      */
     public void setTablePlanAfter(ExplainRow [] TablePlanAfter) {
         this.TablePlanAfter = TablePlanAfter;
@@ -268,16 +268,16 @@ public class ExecutionPlanDetail extends AbstractModel {
     }
 
     /**
-     * Get <p>Number of scanned rows before optimization</p> 
-     * @return SQLScanRowsBefore <p>Number of scanned rows before optimization</p>
+     * Get <p>Scanned rows before optimization</p> 
+     * @return SQLScanRowsBefore <p>Scanned rows before optimization</p>
      */
     public Long getSQLScanRowsBefore() {
         return this.SQLScanRowsBefore;
     }
 
     /**
-     * Set <p>Number of scanned rows before optimization</p>
-     * @param SQLScanRowsBefore <p>Number of scanned rows before optimization</p>
+     * Set <p>Scanned rows before optimization</p>
+     * @param SQLScanRowsBefore <p>Scanned rows before optimization</p>
      */
     public void setSQLScanRowsBefore(Long SQLScanRowsBefore) {
         this.SQLScanRowsBefore = SQLScanRowsBefore;

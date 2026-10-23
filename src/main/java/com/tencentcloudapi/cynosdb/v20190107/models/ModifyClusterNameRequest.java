@@ -31,7 +31,7 @@ public class ModifyClusterNameRequest extends AbstractModel {
     private String ClusterId;
 
     /**
-    * Cluster name
+    * Cluster name.
     */
     @SerializedName("ClusterName")
     @Expose
@@ -54,16 +54,16 @@ public class ModifyClusterNameRequest extends AbstractModel {
     }
 
     /**
-     * Get Cluster name 
-     * @return ClusterName Cluster name
+     * Get Cluster name. 
+     * @return ClusterName Cluster name.
      */
     public String getClusterName() {
         return this.ClusterName;
     }
 
     /**
-     * Set Cluster name
-     * @param ClusterName Cluster name
+     * Set Cluster name.
+     * @param ClusterName Cluster name.
      */
     public void setClusterName(String ClusterName) {
         this.ClusterName = ClusterName;

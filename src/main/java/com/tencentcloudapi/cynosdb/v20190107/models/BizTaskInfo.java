@@ -31,7 +31,7 @@ public class BizTaskInfo extends AbstractModel {
     private Long ID;
 
     /**
-    * <p>User appid</p>
+    * <p>User AppID.</p>
     */
     @SerializedName("AppId")
     @Expose
@@ -45,7 +45,7 @@ public class BizTaskInfo extends AbstractModel {
     private String ClusterId;
 
     /**
-    * <p>Region</p>
+    * <p>Region.</p>
     */
     @SerializedName("Region")
     @Expose
@@ -87,14 +87,14 @@ public class BizTaskInfo extends AbstractModel {
     private String Input;
 
     /**
-    * <p>Instance group id.</p>
+    * <p>Instance group id</p>
     */
     @SerializedName("InstanceGrpId")
     @Expose
     private String InstanceGrpId;
 
     /**
-    * <p>Instance group id.</p>
+    * <p>Instance group id</p>
     */
     @SerializedName("InstanceGroupId")
     @Expose
@@ -108,14 +108,14 @@ public class BizTaskInfo extends AbstractModel {
     private String InstanceId;
 
     /**
-    * <p>Task operation object id</p>
+    * <p>Task operation object id.</p>
     */
     @SerializedName("ObjectId")
     @Expose
     private String ObjectId;
 
     /**
-    * <p>Task operation object type.</p>
+    * <p>Task operation object type</p>
     */
     @SerializedName("ObjectType")
     @Expose
@@ -136,7 +136,7 @@ public class BizTaskInfo extends AbstractModel {
     private String Output;
 
     /**
-    * <p>Task status</p>
+    * <p>Task status.</p>
     */
     @SerializedName("Status")
     @Expose
@@ -150,7 +150,7 @@ public class BizTaskInfo extends AbstractModel {
     private String TaskType;
 
     /**
-    * <p>Parent task ID that triggers this task</p>
+    * <p>ID of the parent task that triggers this task</p>
     */
     @SerializedName("TriggerTaskId")
     @Expose
@@ -185,14 +185,14 @@ public class BizTaskInfo extends AbstractModel {
     private String ClusterName;
 
     /**
-    * <p>Instance name</p>
+    * <p>Instance name.</p>
     */
     @SerializedName("InstanceName")
     @Expose
     private String InstanceName;
 
     /**
-    * <p>Task progress</p>
+    * <p>Task Progress</p>
     */
     @SerializedName("Process")
     @Expose
@@ -262,7 +262,7 @@ public class BizTaskInfo extends AbstractModel {
     private BizTaskModifyParamsData ModifyInstanceParamsData;
 
     /**
-    * <p>Maintenance time</p>
+    * <p>Maintenance time.</p>
     */
     @SerializedName("TaskMaintainInfo")
     @Expose
@@ -327,16 +327,16 @@ public class BizTaskInfo extends AbstractModel {
     }
 
     /**
-     * Get <p>User appid</p> 
-     * @return AppId <p>User appid</p>
+     * Get <p>User AppID.</p> 
+     * @return AppId <p>User AppID.</p>
      */
     public Long getAppId() {
         return this.AppId;
     }
 
     /**
-     * Set <p>User appid</p>
-     * @param AppId <p>User appid</p>
+     * Set <p>User AppID.</p>
+     * @param AppId <p>User AppID.</p>
      */
     public void setAppId(Long AppId) {
         this.AppId = AppId;
@@ -359,16 +359,16 @@ public class BizTaskInfo extends AbstractModel {
     }
 
     /**
-     * Get <p>Region</p> 
-     * @return Region <p>Region</p>
+     * Get <p>Region.</p> 
+     * @return Region <p>Region.</p>
      */
     public String getRegion() {
         return this.Region;
     }
 
     /**
-     * Set <p>Region</p>
-     * @param Region <p>Region</p>
+     * Set <p>Region.</p>
+     * @param Region <p>Region.</p>
      */
     public void setRegion(String Region) {
         this.Region = Region;
@@ -455,8 +455,8 @@ public class BizTaskInfo extends AbstractModel {
     }
 
     /**
-     * Get <p>Instance group id.</p> 
-     * @return InstanceGrpId <p>Instance group id.</p>
+     * Get <p>Instance group id</p> 
+     * @return InstanceGrpId <p>Instance group id</p>
      * @deprecated
      */
     @Deprecated
@@ -465,8 +465,8 @@ public class BizTaskInfo extends AbstractModel {
     }
 
     /**
-     * Set <p>Instance group id.</p>
-     * @param InstanceGrpId <p>Instance group id.</p>
+     * Set <p>Instance group id</p>
+     * @param InstanceGrpId <p>Instance group id</p>
      * @deprecated
      */
     @Deprecated
@@ -475,16 +475,16 @@ public class BizTaskInfo extends AbstractModel {
     }
 
     /**
-     * Get <p>Instance group id.</p> 
-     * @return InstanceGroupId <p>Instance group id.</p>
+     * Get <p>Instance group id</p> 
+     * @return InstanceGroupId <p>Instance group id</p>
      */
     public String getInstanceGroupId() {
         return this.InstanceGroupId;
     }
 
     /**
-     * Set <p>Instance group id.</p>
-     * @param InstanceGroupId <p>Instance group id.</p>
+     * Set <p>Instance group id</p>
+     * @param InstanceGroupId <p>Instance group id</p>
      */
     public void setInstanceGroupId(String InstanceGroupId) {
         this.InstanceGroupId = InstanceGroupId;
@@ -507,32 +507,32 @@ public class BizTaskInfo extends AbstractModel {
     }
 
     /**
-     * Get <p>Task operation object id</p> 
-     * @return ObjectId <p>Task operation object id</p>
+     * Get <p>Task operation object id.</p> 
+     * @return ObjectId <p>Task operation object id.</p>
      */
     public String getObjectId() {
         return this.ObjectId;
     }
 
     /**
-     * Set <p>Task operation object id</p>
-     * @param ObjectId <p>Task operation object id</p>
+     * Set <p>Task operation object id.</p>
+     * @param ObjectId <p>Task operation object id.</p>
      */
     public void setObjectId(String ObjectId) {
         this.ObjectId = ObjectId;
     }
 
     /**
-     * Get <p>Task operation object type.</p> 
-     * @return ObjectType <p>Task operation object type.</p>
+     * Get <p>Task operation object type</p> 
+     * @return ObjectType <p>Task operation object type</p>
      */
     public String getObjectType() {
         return this.ObjectType;
     }
 
     /**
-     * Set <p>Task operation object type.</p>
-     * @param ObjectType <p>Task operation object type.</p>
+     * Set <p>Task operation object type</p>
+     * @param ObjectType <p>Task operation object type</p>
      */
     public void setObjectType(String ObjectType) {
         this.ObjectType = ObjectType;
@@ -571,16 +571,16 @@ public class BizTaskInfo extends AbstractModel {
     }
 
     /**
-     * Get <p>Task status</p> 
-     * @return Status <p>Task status</p>
+     * Get <p>Task status.</p> 
+     * @return Status <p>Task status.</p>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set <p>Task status</p>
-     * @param Status <p>Task status</p>
+     * Set <p>Task status.</p>
+     * @param Status <p>Task status.</p>
      */
     public void setStatus(String Status) {
         this.Status = Status;
@@ -603,16 +603,16 @@ public class BizTaskInfo extends AbstractModel {
     }
 
     /**
-     * Get <p>Parent task ID that triggers this task</p> 
-     * @return TriggerTaskId <p>Parent task ID that triggers this task</p>
+     * Get <p>ID of the parent task that triggers this task</p> 
+     * @return TriggerTaskId <p>ID of the parent task that triggers this task</p>
      */
     public Long getTriggerTaskId() {
         return this.TriggerTaskId;
     }
 
     /**
-     * Set <p>Parent task ID that triggers this task</p>
-     * @param TriggerTaskId <p>Parent task ID that triggers this task</p>
+     * Set <p>ID of the parent task that triggers this task</p>
+     * @param TriggerTaskId <p>ID of the parent task that triggers this task</p>
      */
     public void setTriggerTaskId(Long TriggerTaskId) {
         this.TriggerTaskId = TriggerTaskId;
@@ -683,32 +683,32 @@ public class BizTaskInfo extends AbstractModel {
     }
 
     /**
-     * Get <p>Instance name</p> 
-     * @return InstanceName <p>Instance name</p>
+     * Get <p>Instance name.</p> 
+     * @return InstanceName <p>Instance name.</p>
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set <p>Instance name</p>
-     * @param InstanceName <p>Instance name</p>
+     * Set <p>Instance name.</p>
+     * @param InstanceName <p>Instance name.</p>
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
     }
 
     /**
-     * Get <p>Task progress</p> 
-     * @return Process <p>Task progress</p>
+     * Get <p>Task Progress</p> 
+     * @return Process <p>Task Progress</p>
      */
     public Long getProcess() {
         return this.Process;
     }
 
     /**
-     * Set <p>Task progress</p>
-     * @param Process <p>Task progress</p>
+     * Set <p>Task Progress</p>
+     * @param Process <p>Task Progress</p>
      */
     public void setProcess(Long Process) {
         this.Process = Process;
@@ -863,16 +863,16 @@ public class BizTaskInfo extends AbstractModel {
     }
 
     /**
-     * Get <p>Maintenance time</p> 
-     * @return TaskMaintainInfo <p>Maintenance time</p>
+     * Get <p>Maintenance time.</p> 
+     * @return TaskMaintainInfo <p>Maintenance time.</p>
      */
     public TaskMaintainInfo getTaskMaintainInfo() {
         return this.TaskMaintainInfo;
     }
 
     /**
-     * Set <p>Maintenance time</p>
-     * @param TaskMaintainInfo <p>Maintenance time</p>
+     * Set <p>Maintenance time.</p>
+     * @param TaskMaintainInfo <p>Maintenance time.</p>
      */
     public void setTaskMaintainInfo(TaskMaintainInfo TaskMaintainInfo) {
         this.TaskMaintainInfo = TaskMaintainInfo;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeBinlogSaveDaysResponse extends AbstractModel {
 
     /**
-    * Binlog retention period in days
+    * Binlog retention days
     */
     @SerializedName("BinlogSaveDays")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeBinlogSaveDaysResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Binlog retention period in days 
-     * @return BinlogSaveDays Binlog retention period in days
+     * Get Binlog retention days 
+     * @return BinlogSaveDays Binlog retention days
      */
     public Long getBinlogSaveDays() {
         return this.BinlogSaveDays;
     }
 
     /**
-     * Set Binlog retention period in days
-     * @param BinlogSaveDays Binlog retention period in days
+     * Set Binlog retention days
+     * @param BinlogSaveDays Binlog retention days
      */
     public void setBinlogSaveDays(Long BinlogSaveDays) {
         this.BinlogSaveDays = BinlogSaveDays;

@@ -31,42 +31,42 @@ public class InquirePriceModifyRequest extends AbstractModel {
     private String ClusterId;
 
     /**
-    * Specifies the number of CPU cores.
+    * Number of CPU cores.
     */
     @SerializedName("Cpu")
     @Expose
     private Long Cpu;
 
     /**
-    * Memory Size
+    * Memory size.
     */
     @SerializedName("Memory")
     @Expose
     private Long Memory;
 
     /**
-    * Storage size, storage resource adjustment: ClusterId, StorageLimit.
+    * Storage size and storage resource configuration change: ClusterId, StorageLimit
     */
     @SerializedName("StorageLimit")
     @Expose
     private Long StorageLimit;
 
     /**
-    * Instance ID. computational resource adjustment requires passing: ClusterId, instance ID, Cpu, Memory.
+    * Instance ID. This parameter is required for compute resource reallocation: ClusterId, InstanceId, Cpu, Memory.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Instance device type.
+    * Instance device type
     */
     @SerializedName("DeviceType")
     @Expose
     private String DeviceType;
 
     /**
-    * Specifies the ccu size of the serverless instance.
+    * ccu size of a serverless instance
     */
     @SerializedName("Ccu")
     @Expose
@@ -89,96 +89,96 @@ public class InquirePriceModifyRequest extends AbstractModel {
     }
 
     /**
-     * Get Specifies the number of CPU cores. 
-     * @return Cpu Specifies the number of CPU cores.
+     * Get Number of CPU cores. 
+     * @return Cpu Number of CPU cores.
      */
     public Long getCpu() {
         return this.Cpu;
     }
 
     /**
-     * Set Specifies the number of CPU cores.
-     * @param Cpu Specifies the number of CPU cores.
+     * Set Number of CPU cores.
+     * @param Cpu Number of CPU cores.
      */
     public void setCpu(Long Cpu) {
         this.Cpu = Cpu;
     }
 
     /**
-     * Get Memory Size 
-     * @return Memory Memory Size
+     * Get Memory size. 
+     * @return Memory Memory size.
      */
     public Long getMemory() {
         return this.Memory;
     }
 
     /**
-     * Set Memory Size
-     * @param Memory Memory Size
+     * Set Memory size.
+     * @param Memory Memory size.
      */
     public void setMemory(Long Memory) {
         this.Memory = Memory;
     }
 
     /**
-     * Get Storage size, storage resource adjustment: ClusterId, StorageLimit. 
-     * @return StorageLimit Storage size, storage resource adjustment: ClusterId, StorageLimit.
+     * Get Storage size and storage resource configuration change: ClusterId, StorageLimit 
+     * @return StorageLimit Storage size and storage resource configuration change: ClusterId, StorageLimit
      */
     public Long getStorageLimit() {
         return this.StorageLimit;
     }
 
     /**
-     * Set Storage size, storage resource adjustment: ClusterId, StorageLimit.
-     * @param StorageLimit Storage size, storage resource adjustment: ClusterId, StorageLimit.
+     * Set Storage size and storage resource configuration change: ClusterId, StorageLimit
+     * @param StorageLimit Storage size and storage resource configuration change: ClusterId, StorageLimit
      */
     public void setStorageLimit(Long StorageLimit) {
         this.StorageLimit = StorageLimit;
     }
 
     /**
-     * Get Instance ID. computational resource adjustment requires passing: ClusterId, instance ID, Cpu, Memory. 
-     * @return InstanceId Instance ID. computational resource adjustment requires passing: ClusterId, instance ID, Cpu, Memory.
+     * Get Instance ID. This parameter is required for compute resource reallocation: ClusterId, InstanceId, Cpu, Memory. 
+     * @return InstanceId Instance ID. This parameter is required for compute resource reallocation: ClusterId, InstanceId, Cpu, Memory.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID. computational resource adjustment requires passing: ClusterId, instance ID, Cpu, Memory.
-     * @param InstanceId Instance ID. computational resource adjustment requires passing: ClusterId, instance ID, Cpu, Memory.
+     * Set Instance ID. This parameter is required for compute resource reallocation: ClusterId, InstanceId, Cpu, Memory.
+     * @param InstanceId Instance ID. This parameter is required for compute resource reallocation: ClusterId, InstanceId, Cpu, Memory.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Instance device type. 
-     * @return DeviceType Instance device type.
+     * Get Instance device type 
+     * @return DeviceType Instance device type
      */
     public String getDeviceType() {
         return this.DeviceType;
     }
 
     /**
-     * Set Instance device type.
-     * @param DeviceType Instance device type.
+     * Set Instance device type
+     * @param DeviceType Instance device type
      */
     public void setDeviceType(String DeviceType) {
         this.DeviceType = DeviceType;
     }
 
     /**
-     * Get Specifies the ccu size of the serverless instance. 
-     * @return Ccu Specifies the ccu size of the serverless instance.
+     * Get ccu size of a serverless instance 
+     * @return Ccu ccu size of a serverless instance
      */
     public Float getCcu() {
         return this.Ccu;
     }
 
     /**
-     * Set Specifies the ccu size of the serverless instance.
-     * @param Ccu Specifies the ccu size of the serverless instance.
+     * Set ccu size of a serverless instance
+     * @param Ccu ccu size of a serverless instance
      */
     public void setCcu(Float Ccu) {
         this.Ccu = Ccu;

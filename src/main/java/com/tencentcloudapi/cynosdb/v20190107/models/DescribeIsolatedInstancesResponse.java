@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeIsolatedInstancesResponse extends AbstractModel {
 
     /**
-    * Number of instances.
+    * Number of instances
     */
     @SerializedName("TotalCount")
     @Expose
@@ -45,16 +45,16 @@ public class DescribeIsolatedInstancesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Number of instances. 
-     * @return TotalCount Number of instances.
+     * Get Number of instances 
+     * @return TotalCount Number of instances
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Number of instances.
-     * @param TotalCount Number of instances.
+     * Set Number of instances
+     * @param TotalCount Number of instances
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

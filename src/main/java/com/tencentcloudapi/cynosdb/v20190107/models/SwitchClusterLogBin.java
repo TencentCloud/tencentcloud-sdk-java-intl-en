@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class SwitchClusterLogBin extends AbstractModel {
 
     /**
-    * Status
+    * Status.
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-     * Get Status 
-     * @return Status Status
+     * Get Status. 
+     * @return Status Status.
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Status
-     * @param Status Status
+     * Set Status.
+     * @param Status Status.
      */
     public void setStatus(String Status) {
         this.Status = Status;

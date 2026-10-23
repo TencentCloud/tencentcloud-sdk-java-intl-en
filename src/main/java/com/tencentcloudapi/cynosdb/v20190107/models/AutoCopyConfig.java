@@ -45,7 +45,7 @@ public class AutoCopyConfig extends AbstractModel {
     private String VaultRegion;
 
     /**
-    * Delivery Type: binlog, redolog, snapshot, logic
+    * Delivery type: binlog, redolog, snapshot, logic
     */
     @SerializedName("CopyType")
     @Expose
@@ -100,16 +100,16 @@ public class AutoCopyConfig extends AbstractModel {
     }
 
     /**
-     * Get Delivery Type: binlog, redolog, snapshot, logic 
-     * @return CopyType Delivery Type: binlog, redolog, snapshot, logic
+     * Get Delivery type: binlog, redolog, snapshot, logic 
+     * @return CopyType Delivery type: binlog, redolog, snapshot, logic
      */
     public String getCopyType() {
         return this.CopyType;
     }
 
     /**
-     * Set Delivery Type: binlog, redolog, snapshot, logic
-     * @param CopyType Delivery Type: binlog, redolog, snapshot, logic
+     * Set Delivery type: binlog, redolog, snapshot, logic
+     * @param CopyType Delivery type: binlog, redolog, snapshot, logic
      */
     public void setCopyType(String CopyType) {
         this.CopyType = CopyType;

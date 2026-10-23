@@ -31,7 +31,7 @@ public class DatabaseTables extends AbstractModel {
     private String Database;
 
     /**
-    * Table name list.
+    * Table Name List
     */
     @SerializedName("Tables")
     @Expose
@@ -54,16 +54,16 @@ public class DatabaseTables extends AbstractModel {
     }
 
     /**
-     * Get Table name list. 
-     * @return Tables Table name list.
+     * Get Table Name List 
+     * @return Tables Table Name List
      */
     public String [] getTables() {
         return this.Tables;
     }
 
     /**
-     * Set Table name list.
-     * @param Tables Table name list.
+     * Set Table Name List
+     * @param Tables Table Name List
      */
     public void setTables(String [] Tables) {
         this.Tables = Tables;

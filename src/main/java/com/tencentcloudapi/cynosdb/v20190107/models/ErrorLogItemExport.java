@@ -31,14 +31,14 @@ public class ErrorLogItemExport extends AbstractModel {
     private String Timestamp;
 
     /**
-    * Specifies the log level. valid values are note, warning, and error.
+    * Log level. Available values: note, warning, error
     */
     @SerializedName("Level")
     @Expose
     private String Level;
 
     /**
-    * Log content.
+    * Log content
     */
     @SerializedName("Content")
     @Expose
@@ -61,32 +61,32 @@ public class ErrorLogItemExport extends AbstractModel {
     }
 
     /**
-     * Get Specifies the log level. valid values are note, warning, and error. 
-     * @return Level Specifies the log level. valid values are note, warning, and error.
+     * Get Log level. Available values: note, warning, error 
+     * @return Level Log level. Available values: note, warning, error
      */
     public String getLevel() {
         return this.Level;
     }
 
     /**
-     * Set Specifies the log level. valid values are note, warning, and error.
-     * @param Level Specifies the log level. valid values are note, warning, and error.
+     * Set Log level. Available values: note, warning, error
+     * @param Level Log level. Available values: note, warning, error
      */
     public void setLevel(String Level) {
         this.Level = Level;
     }
 
     /**
-     * Get Log content. 
-     * @return Content Log content.
+     * Get Log content 
+     * @return Content Log content
      */
     public String getContent() {
         return this.Content;
     }
 
     /**
-     * Set Log content.
-     * @param Content Log content.
+     * Set Log content
+     * @param Content Log content
      */
     public void setContent(String Content) {
         this.Content = Content;

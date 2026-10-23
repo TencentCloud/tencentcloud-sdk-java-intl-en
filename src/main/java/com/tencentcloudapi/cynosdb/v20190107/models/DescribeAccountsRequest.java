@@ -31,7 +31,7 @@ public class DescribeAccountsRequest extends AbstractModel {
     private String ClusterId;
 
     /**
-    * List of accounts to be filtered
+    * Account list to filter
     */
     @SerializedName("AccountNames")
     @Expose
@@ -40,35 +40,35 @@ public class DescribeAccountsRequest extends AbstractModel {
     /**
     * Database type. Valid values: 
 <li> MYSQL </li>
-This parameter has been disused.
+This parameter is no longer in use.
     */
     @SerializedName("DbType")
     @Expose
     private String DbType;
 
     /**
-    * List of accounts to be filtered
+    * Account list to filter
     */
     @SerializedName("Hosts")
     @Expose
     private String [] Hosts;
 
     /**
-    * Maximum entries returned per page
+    * Limit amount
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * Offset
+    * Offset.
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * Keywords for fuzzy search (match `AccountName` and `AccountHost` at the same time), which supports regex. The union results will be returned.
+    * Fuzzy match a keyword (match both AccountName and AccountHost at the same time, return the union of results, and support regular expressions)
     */
     @SerializedName("AccountRegular")
     @Expose
@@ -91,16 +91,16 @@ This parameter has been disused.
     }
 
     /**
-     * Get List of accounts to be filtered 
-     * @return AccountNames List of accounts to be filtered
+     * Get Account list to filter 
+     * @return AccountNames Account list to filter
      */
     public String [] getAccountNames() {
         return this.AccountNames;
     }
 
     /**
-     * Set List of accounts to be filtered
-     * @param AccountNames List of accounts to be filtered
+     * Set Account list to filter
+     * @param AccountNames Account list to filter
      */
     public void setAccountNames(String [] AccountNames) {
         this.AccountNames = AccountNames;
@@ -109,10 +109,10 @@ This parameter has been disused.
     /**
      * Get Database type. Valid values: 
 <li> MYSQL </li>
-This parameter has been disused. 
+This parameter is no longer in use. 
      * @return DbType Database type. Valid values: 
 <li> MYSQL </li>
-This parameter has been disused.
+This parameter is no longer in use.
      */
     public String getDbType() {
         return this.DbType;
@@ -121,74 +121,74 @@ This parameter has been disused.
     /**
      * Set Database type. Valid values: 
 <li> MYSQL </li>
-This parameter has been disused.
+This parameter is no longer in use.
      * @param DbType Database type. Valid values: 
 <li> MYSQL </li>
-This parameter has been disused.
+This parameter is no longer in use.
      */
     public void setDbType(String DbType) {
         this.DbType = DbType;
     }
 
     /**
-     * Get List of accounts to be filtered 
-     * @return Hosts List of accounts to be filtered
+     * Get Account list to filter 
+     * @return Hosts Account list to filter
      */
     public String [] getHosts() {
         return this.Hosts;
     }
 
     /**
-     * Set List of accounts to be filtered
-     * @param Hosts List of accounts to be filtered
+     * Set Account list to filter
+     * @param Hosts Account list to filter
      */
     public void setHosts(String [] Hosts) {
         this.Hosts = Hosts;
     }
 
     /**
-     * Get Maximum entries returned per page 
-     * @return Limit Maximum entries returned per page
+     * Get Limit amount 
+     * @return Limit Limit amount
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Maximum entries returned per page
-     * @param Limit Maximum entries returned per page
+     * Set Limit amount
+     * @param Limit Limit amount
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get Offset 
-     * @return Offset Offset
+     * Get Offset. 
+     * @return Offset Offset.
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Offset
-     * @param Offset Offset
+     * Set Offset.
+     * @param Offset Offset.
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get Keywords for fuzzy search (match `AccountName` and `AccountHost` at the same time), which supports regex. The union results will be returned. 
-     * @return AccountRegular Keywords for fuzzy search (match `AccountName` and `AccountHost` at the same time), which supports regex. The union results will be returned.
+     * Get Fuzzy match a keyword (match both AccountName and AccountHost at the same time, return the union of results, and support regular expressions) 
+     * @return AccountRegular Fuzzy match a keyword (match both AccountName and AccountHost at the same time, return the union of results, and support regular expressions)
      */
     public String getAccountRegular() {
         return this.AccountRegular;
     }
 
     /**
-     * Set Keywords for fuzzy search (match `AccountName` and `AccountHost` at the same time), which supports regex. The union results will be returned.
-     * @param AccountRegular Keywords for fuzzy search (match `AccountName` and `AccountHost` at the same time), which supports regex. The union results will be returned.
+     * Set Fuzzy match a keyword (match both AccountName and AccountHost at the same time, return the union of results, and support regular expressions)
+     * @param AccountRegular Fuzzy match a keyword (match both AccountName and AccountHost at the same time, return the union of results, and support regular expressions)
      */
     public void setAccountRegular(String AccountRegular) {
         this.AccountRegular = AccountRegular;

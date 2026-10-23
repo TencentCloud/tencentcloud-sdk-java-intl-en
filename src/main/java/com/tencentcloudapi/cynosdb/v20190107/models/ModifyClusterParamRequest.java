@@ -31,14 +31,14 @@ public class ModifyClusterParamRequest extends AbstractModel {
     private String ClusterId;
 
     /**
-    * List of the parameters to be modified. Each element in the list is a combination of `ParamName`, `CurrentValue`, and `OldValue`. `ParamName` is the parameter name; `CurrentValue` is the current value; `OldValue` is the old value that doesn’t need to be verified.
+    * List of parameters to modify. Each element is a combination of ParamName, CurrentValue, and OldValue. ParamName is the parameter name, CurrentValue is the current value, and OldValue is the old value and is not validated.
     */
     @SerializedName("ParamList")
     @Expose
     private ParamItem [] ParamList;
 
     /**
-    * Valid values: `yes` (execute during maintenance time), `no` (execute now)
+    * Execute during the maintenance period - yes, immediate execution - no
     */
     @SerializedName("IsInMaintainPeriod")
     @Expose
@@ -61,32 +61,32 @@ public class ModifyClusterParamRequest extends AbstractModel {
     }
 
     /**
-     * Get List of the parameters to be modified. Each element in the list is a combination of `ParamName`, `CurrentValue`, and `OldValue`. `ParamName` is the parameter name; `CurrentValue` is the current value; `OldValue` is the old value that doesn’t need to be verified. 
-     * @return ParamList List of the parameters to be modified. Each element in the list is a combination of `ParamName`, `CurrentValue`, and `OldValue`. `ParamName` is the parameter name; `CurrentValue` is the current value; `OldValue` is the old value that doesn’t need to be verified.
+     * Get List of parameters to modify. Each element is a combination of ParamName, CurrentValue, and OldValue. ParamName is the parameter name, CurrentValue is the current value, and OldValue is the old value and is not validated. 
+     * @return ParamList List of parameters to modify. Each element is a combination of ParamName, CurrentValue, and OldValue. ParamName is the parameter name, CurrentValue is the current value, and OldValue is the old value and is not validated.
      */
     public ParamItem [] getParamList() {
         return this.ParamList;
     }
 
     /**
-     * Set List of the parameters to be modified. Each element in the list is a combination of `ParamName`, `CurrentValue`, and `OldValue`. `ParamName` is the parameter name; `CurrentValue` is the current value; `OldValue` is the old value that doesn’t need to be verified.
-     * @param ParamList List of the parameters to be modified. Each element in the list is a combination of `ParamName`, `CurrentValue`, and `OldValue`. `ParamName` is the parameter name; `CurrentValue` is the current value; `OldValue` is the old value that doesn’t need to be verified.
+     * Set List of parameters to modify. Each element is a combination of ParamName, CurrentValue, and OldValue. ParamName is the parameter name, CurrentValue is the current value, and OldValue is the old value and is not validated.
+     * @param ParamList List of parameters to modify. Each element is a combination of ParamName, CurrentValue, and OldValue. ParamName is the parameter name, CurrentValue is the current value, and OldValue is the old value and is not validated.
      */
     public void setParamList(ParamItem [] ParamList) {
         this.ParamList = ParamList;
     }
 
     /**
-     * Get Valid values: `yes` (execute during maintenance time), `no` (execute now) 
-     * @return IsInMaintainPeriod Valid values: `yes` (execute during maintenance time), `no` (execute now)
+     * Get Execute during the maintenance period - yes, immediate execution - no 
+     * @return IsInMaintainPeriod Execute during the maintenance period - yes, immediate execution - no
      */
     public String getIsInMaintainPeriod() {
         return this.IsInMaintainPeriod;
     }
 
     /**
-     * Set Valid values: `yes` (execute during maintenance time), `no` (execute now)
-     * @param IsInMaintainPeriod Valid values: `yes` (execute during maintenance time), `no` (execute now)
+     * Set Execute during the maintenance period - yes, immediate execution - no
+     * @param IsInMaintainPeriod Execute during the maintenance period - yes, immediate execution - no
      */
     public void setIsInMaintainPeriod(String IsInMaintainPeriod) {
         this.IsInMaintainPeriod = IsInMaintainPeriod;

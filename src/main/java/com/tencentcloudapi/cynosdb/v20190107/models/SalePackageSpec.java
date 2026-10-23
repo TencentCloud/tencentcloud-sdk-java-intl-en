@@ -24,153 +24,153 @@ import java.util.HashMap;
 public class SalePackageSpec extends AbstractModel {
 
     /**
-    * Resource package region of use.
+    * Region of use for the resource package
     */
     @SerializedName("PackageRegion")
     @Expose
     private String PackageRegion;
 
     /**
-    * Specifies the resource package type.
-CCU - compute resource package.
-Storage resource package.
+    * Resource package type
+CCU: compute resource package
+DISK: storage resource package.
     */
     @SerializedName("PackageType")
     @Expose
     private String PackageType;
 
     /**
-    * Resource pack version.
-base - basic version; common - general version; enterprise - enterprise edition.
+    * Resource pack version
+base: basic edition, common: general edition, enterprise: Enterprise Edition
     */
     @SerializedName("PackageVersion")
     @Expose
     private String PackageVersion;
 
     /**
-    * Minimum number of resources in the current version of the resource package. compute resource unit: pieces; storage resource: GB.
+    * Minimum number of resources in the current resource package version. Compute resource unit: count; storage resource: GB.
     */
     @SerializedName("MinPackageSpec")
     @Expose
     private Float MinPackageSpec;
 
     /**
-    * Specifies the maximum number of resources in the current version of the resource package. valid values: compute resource unit: pieces; storage resource: GB.
+    * Maximum number of resources in the current resource package version. Compute resource unit: count; storage resource: GB.
     */
     @SerializedName("MaxPackageSpec")
     @Expose
     private Float MaxPackageSpec;
 
     /**
-    * Specifies the resource pack validity period. the measurement unit is day.
+    * Resource pack validity period. Unit: day.
     */
     @SerializedName("ExpireDay")
     @Expose
     private Long ExpireDay;
 
     /**
-     * Get Resource package region of use. 
-     * @return PackageRegion Resource package region of use.
+     * Get Region of use for the resource package 
+     * @return PackageRegion Region of use for the resource package
      */
     public String getPackageRegion() {
         return this.PackageRegion;
     }
 
     /**
-     * Set Resource package region of use.
-     * @param PackageRegion Resource package region of use.
+     * Set Region of use for the resource package
+     * @param PackageRegion Region of use for the resource package
      */
     public void setPackageRegion(String PackageRegion) {
         this.PackageRegion = PackageRegion;
     }
 
     /**
-     * Get Specifies the resource package type.
-CCU - compute resource package.
-Storage resource package. 
-     * @return PackageType Specifies the resource package type.
-CCU - compute resource package.
-Storage resource package.
+     * Get Resource package type
+CCU: compute resource package
+DISK: storage resource package. 
+     * @return PackageType Resource package type
+CCU: compute resource package
+DISK: storage resource package.
      */
     public String getPackageType() {
         return this.PackageType;
     }
 
     /**
-     * Set Specifies the resource package type.
-CCU - compute resource package.
-Storage resource package.
-     * @param PackageType Specifies the resource package type.
-CCU - compute resource package.
-Storage resource package.
+     * Set Resource package type
+CCU: compute resource package
+DISK: storage resource package.
+     * @param PackageType Resource package type
+CCU: compute resource package
+DISK: storage resource package.
      */
     public void setPackageType(String PackageType) {
         this.PackageType = PackageType;
     }
 
     /**
-     * Get Resource pack version.
-base - basic version; common - general version; enterprise - enterprise edition. 
-     * @return PackageVersion Resource pack version.
-base - basic version; common - general version; enterprise - enterprise edition.
+     * Get Resource pack version
+base: basic edition, common: general edition, enterprise: Enterprise Edition 
+     * @return PackageVersion Resource pack version
+base: basic edition, common: general edition, enterprise: Enterprise Edition
      */
     public String getPackageVersion() {
         return this.PackageVersion;
     }
 
     /**
-     * Set Resource pack version.
-base - basic version; common - general version; enterprise - enterprise edition.
-     * @param PackageVersion Resource pack version.
-base - basic version; common - general version; enterprise - enterprise edition.
+     * Set Resource pack version
+base: basic edition, common: general edition, enterprise: Enterprise Edition
+     * @param PackageVersion Resource pack version
+base: basic edition, common: general edition, enterprise: Enterprise Edition
      */
     public void setPackageVersion(String PackageVersion) {
         this.PackageVersion = PackageVersion;
     }
 
     /**
-     * Get Minimum number of resources in the current version of the resource package. compute resource unit: pieces; storage resource: GB. 
-     * @return MinPackageSpec Minimum number of resources in the current version of the resource package. compute resource unit: pieces; storage resource: GB.
+     * Get Minimum number of resources in the current resource package version. Compute resource unit: count; storage resource: GB. 
+     * @return MinPackageSpec Minimum number of resources in the current resource package version. Compute resource unit: count; storage resource: GB.
      */
     public Float getMinPackageSpec() {
         return this.MinPackageSpec;
     }
 
     /**
-     * Set Minimum number of resources in the current version of the resource package. compute resource unit: pieces; storage resource: GB.
-     * @param MinPackageSpec Minimum number of resources in the current version of the resource package. compute resource unit: pieces; storage resource: GB.
+     * Set Minimum number of resources in the current resource package version. Compute resource unit: count; storage resource: GB.
+     * @param MinPackageSpec Minimum number of resources in the current resource package version. Compute resource unit: count; storage resource: GB.
      */
     public void setMinPackageSpec(Float MinPackageSpec) {
         this.MinPackageSpec = MinPackageSpec;
     }
 
     /**
-     * Get Specifies the maximum number of resources in the current version of the resource package. valid values: compute resource unit: pieces; storage resource: GB. 
-     * @return MaxPackageSpec Specifies the maximum number of resources in the current version of the resource package. valid values: compute resource unit: pieces; storage resource: GB.
+     * Get Maximum number of resources in the current resource package version. Compute resource unit: count; storage resource: GB. 
+     * @return MaxPackageSpec Maximum number of resources in the current resource package version. Compute resource unit: count; storage resource: GB.
      */
     public Float getMaxPackageSpec() {
         return this.MaxPackageSpec;
     }
 
     /**
-     * Set Specifies the maximum number of resources in the current version of the resource package. valid values: compute resource unit: pieces; storage resource: GB.
-     * @param MaxPackageSpec Specifies the maximum number of resources in the current version of the resource package. valid values: compute resource unit: pieces; storage resource: GB.
+     * Set Maximum number of resources in the current resource package version. Compute resource unit: count; storage resource: GB.
+     * @param MaxPackageSpec Maximum number of resources in the current resource package version. Compute resource unit: count; storage resource: GB.
      */
     public void setMaxPackageSpec(Float MaxPackageSpec) {
         this.MaxPackageSpec = MaxPackageSpec;
     }
 
     /**
-     * Get Specifies the resource pack validity period. the measurement unit is day. 
-     * @return ExpireDay Specifies the resource pack validity period. the measurement unit is day.
+     * Get Resource pack validity period. Unit: day. 
+     * @return ExpireDay Resource pack validity period. Unit: day.
      */
     public Long getExpireDay() {
         return this.ExpireDay;
     }
 
     /**
-     * Set Specifies the resource pack validity period. the measurement unit is day.
-     * @param ExpireDay Specifies the resource pack validity period. the measurement unit is day.
+     * Set Resource pack validity period. Unit: day.
+     * @param ExpireDay Resource pack validity period. Unit: day.
      */
     public void setExpireDay(Long ExpireDay) {
         this.ExpireDay = ExpireDay;

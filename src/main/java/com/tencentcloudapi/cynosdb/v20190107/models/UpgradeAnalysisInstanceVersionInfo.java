@@ -38,14 +38,14 @@ public class UpgradeAnalysisInstanceVersionInfo extends AbstractModel {
     private Long Vport;
 
     /**
-    * <p>Version</p>
+    * <p>Version.</p>
     */
     @SerializedName("EngineVersion")
     @Expose
     private String EngineVersion;
 
     /**
-    * <p>Expiry time</p>
+    * <p>Expiration time.</p>
     */
     @SerializedName("ExpiredTime")
     @Expose
@@ -84,32 +84,32 @@ public class UpgradeAnalysisInstanceVersionInfo extends AbstractModel {
     }
 
     /**
-     * Get <p>Version</p> 
-     * @return EngineVersion <p>Version</p>
+     * Get <p>Version.</p> 
+     * @return EngineVersion <p>Version.</p>
      */
     public String getEngineVersion() {
         return this.EngineVersion;
     }
 
     /**
-     * Set <p>Version</p>
-     * @param EngineVersion <p>Version</p>
+     * Set <p>Version.</p>
+     * @param EngineVersion <p>Version.</p>
      */
     public void setEngineVersion(String EngineVersion) {
         this.EngineVersion = EngineVersion;
     }
 
     /**
-     * Get <p>Expiry time</p> 
-     * @return ExpiredTime <p>Expiry time</p>
+     * Get <p>Expiration time.</p> 
+     * @return ExpiredTime <p>Expiration time.</p>
      */
     public Long getExpiredTime() {
         return this.ExpiredTime;
     }
 
     /**
-     * Set <p>Expiry time</p>
-     * @param ExpiredTime <p>Expiry time</p>
+     * Set <p>Expiration time.</p>
+     * @param ExpiredTime <p>Expiration time.</p>
      */
     public void setExpiredTime(Long ExpiredTime) {
         this.ExpiredTime = ExpiredTime;

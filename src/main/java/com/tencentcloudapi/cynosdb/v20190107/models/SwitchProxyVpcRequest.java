@@ -31,28 +31,28 @@ public class SwitchProxyVpcRequest extends AbstractModel {
     private String ClusterId;
 
     /**
-    * VPC ID in string
+    * vpc id
     */
     @SerializedName("UniqVpcId")
     @Expose
     private String UniqVpcId;
 
     /**
-    * Subnet ID in string
+    * String subnet id
     */
     @SerializedName("UniqSubnetId")
     @Expose
     private String UniqSubnetId;
 
     /**
-    * Valid hours of old IP
+    * Old address reclamation time
     */
     @SerializedName("OldIpReserveHours")
     @Expose
     private Long OldIpReserveHours;
 
     /**
-    * Database proxy group ID (required), which can be obtained through the `DescribeProxies` API.
+    * Database Proxy Group Id (required; can be obtained through the DescribeProxies API)
     */
     @SerializedName("ProxyGroupId")
     @Expose
@@ -75,64 +75,64 @@ public class SwitchProxyVpcRequest extends AbstractModel {
     }
 
     /**
-     * Get VPC ID in string 
-     * @return UniqVpcId VPC ID in string
+     * Get vpc id 
+     * @return UniqVpcId vpc id
      */
     public String getUniqVpcId() {
         return this.UniqVpcId;
     }
 
     /**
-     * Set VPC ID in string
-     * @param UniqVpcId VPC ID in string
+     * Set vpc id
+     * @param UniqVpcId vpc id
      */
     public void setUniqVpcId(String UniqVpcId) {
         this.UniqVpcId = UniqVpcId;
     }
 
     /**
-     * Get Subnet ID in string 
-     * @return UniqSubnetId Subnet ID in string
+     * Get String subnet id 
+     * @return UniqSubnetId String subnet id
      */
     public String getUniqSubnetId() {
         return this.UniqSubnetId;
     }
 
     /**
-     * Set Subnet ID in string
-     * @param UniqSubnetId Subnet ID in string
+     * Set String subnet id
+     * @param UniqSubnetId String subnet id
      */
     public void setUniqSubnetId(String UniqSubnetId) {
         this.UniqSubnetId = UniqSubnetId;
     }
 
     /**
-     * Get Valid hours of old IP 
-     * @return OldIpReserveHours Valid hours of old IP
+     * Get Old address reclamation time 
+     * @return OldIpReserveHours Old address reclamation time
      */
     public Long getOldIpReserveHours() {
         return this.OldIpReserveHours;
     }
 
     /**
-     * Set Valid hours of old IP
-     * @param OldIpReserveHours Valid hours of old IP
+     * Set Old address reclamation time
+     * @param OldIpReserveHours Old address reclamation time
      */
     public void setOldIpReserveHours(Long OldIpReserveHours) {
         this.OldIpReserveHours = OldIpReserveHours;
     }
 
     /**
-     * Get Database proxy group ID (required), which can be obtained through the `DescribeProxies` API. 
-     * @return ProxyGroupId Database proxy group ID (required), which can be obtained through the `DescribeProxies` API.
+     * Get Database Proxy Group Id (required; can be obtained through the DescribeProxies API) 
+     * @return ProxyGroupId Database Proxy Group Id (required; can be obtained through the DescribeProxies API)
      */
     public String getProxyGroupId() {
         return this.ProxyGroupId;
     }
 
     /**
-     * Set Database proxy group ID (required), which can be obtained through the `DescribeProxies` API.
-     * @param ProxyGroupId Database proxy group ID (required), which can be obtained through the `DescribeProxies` API.
+     * Set Database Proxy Group Id (required; can be obtained through the DescribeProxies API)
+     * @param ProxyGroupId Database Proxy Group Id (required; can be obtained through the DescribeProxies API)
      */
     public void setProxyGroupId(String ProxyGroupId) {
         this.ProxyGroupId = ProxyGroupId;

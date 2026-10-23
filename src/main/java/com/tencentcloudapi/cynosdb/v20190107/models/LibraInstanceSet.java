@@ -87,7 +87,7 @@ public class LibraInstanceSet extends AbstractModel {
     private String InstancePeriodEndTime;
 
     /**
-    * Instance role
+    * Instance role.
     */
     @SerializedName("InstanceRole")
     @Expose
@@ -164,7 +164,7 @@ public class LibraInstanceSet extends AbstractModel {
     private Long WanPort;
 
     /**
-    * Public network status
+    * Public network status.
     */
     @SerializedName("WanStatus")
     @Expose
@@ -329,16 +329,16 @@ public class LibraInstanceSet extends AbstractModel {
     }
 
     /**
-     * Get Instance role 
-     * @return InstanceRole Instance role
+     * Get Instance role. 
+     * @return InstanceRole Instance role.
      */
     public String getInstanceRole() {
         return this.InstanceRole;
     }
 
     /**
-     * Set Instance role
-     * @param InstanceRole Instance role
+     * Set Instance role.
+     * @param InstanceRole Instance role.
      */
     public void setInstanceRole(String InstanceRole) {
         this.InstanceRole = InstanceRole;
@@ -505,16 +505,16 @@ public class LibraInstanceSet extends AbstractModel {
     }
 
     /**
-     * Get Public network status 
-     * @return WanStatus Public network status
+     * Get Public network status. 
+     * @return WanStatus Public network status.
      */
     public String getWanStatus() {
         return this.WanStatus;
     }
 
     /**
-     * Set Public network status
-     * @param WanStatus Public network status
+     * Set Public network status.
+     * @param WanStatus Public network status.
      */
     public void setWanStatus(String WanStatus) {
         this.WanStatus = WanStatus;

@@ -31,49 +31,49 @@ public class SnapshotBackupConfig extends AbstractModel {
     private Boolean BackupCustomAutoTime;
 
     /**
-    * Indicates the full backup start time. value range: [0-24*3600]. for example, 0:00, 1:00, and 2:00 are 0, 3600, and 7200 respectively.
+    * Indicates the full backup start time. Value range: [0-24*3600]. For example, 0:00, 1:00, and 2:00 correspond to 0, 3600, and 7200 respectively.
     */
     @SerializedName("BackupTimeBeg")
     @Expose
     private Long BackupTimeBeg;
 
     /**
-    * Indicates the full backup end time. value range: [0-24*3600]. for example, 0:00, 1:00, and 2:00 are 0, 3600, and 7200 respectively.
+    * Indicates the full backup end time, [0-24*3600]. For example, 0:00, 1:00, and 2:00 correspond to 0, 3600, and 7200 respectively.
     */
     @SerializedName("BackupTimeEnd")
     @Expose
     private Long BackupTimeEnd;
 
     /**
-    * This parameter currently does not support modification and no need to specify. backup frequency is an array of length 7, corresponding to the backup method from sunday to saturday, full for full backup and increment for incremental backup.
+    * Currently this parameter cannot be modified and is not required. Backup frequency, an array of length 7, corresponds to the backup method from Sunday to Saturday. full: full backup, increment: incremental backup.
     */
     @SerializedName("BackupWeekDays")
     @Expose
     private String [] BackupWeekDays;
 
     /**
-    * Interval.
+    * Interval
     */
     @SerializedName("BackupIntervalTime")
     @Expose
     private Long BackupIntervalTime;
 
     /**
-    * Indicates the backup retention period in seconds. data will be cleaned up longer than this time. 7 days means 3600247=604800. the maximum is 158112000.
+    * Indicates the backup retention period in seconds. Data is cleaned up after this time. Seven days means 3600 × 24 × 7 = 604800. The maximum value is 158112000.
     */
     @SerializedName("ReserveDuration")
     @Expose
     private Long ReserveDuration;
 
     /**
-    * Automatic data backup trigger policy, periodically: automatic periodic backup, frequent: high-frequency backup
+    * Automatic data backup trigger policy. periodically: automatic periodic backup. frequent: high-frequency backup.
     */
     @SerializedName("BackupTriggerStrategy")
     @Expose
     private String BackupTriggerStrategy;
 
     /**
-    * Safe info
+    * Safe information.
     */
     @SerializedName("AutoCopyVaults")
     @Expose
@@ -96,112 +96,112 @@ public class SnapshotBackupConfig extends AbstractModel {
     }
 
     /**
-     * Get Indicates the full backup start time. value range: [0-24*3600]. for example, 0:00, 1:00, and 2:00 are 0, 3600, and 7200 respectively. 
-     * @return BackupTimeBeg Indicates the full backup start time. value range: [0-24*3600]. for example, 0:00, 1:00, and 2:00 are 0, 3600, and 7200 respectively.
+     * Get Indicates the full backup start time. Value range: [0-24*3600]. For example, 0:00, 1:00, and 2:00 correspond to 0, 3600, and 7200 respectively. 
+     * @return BackupTimeBeg Indicates the full backup start time. Value range: [0-24*3600]. For example, 0:00, 1:00, and 2:00 correspond to 0, 3600, and 7200 respectively.
      */
     public Long getBackupTimeBeg() {
         return this.BackupTimeBeg;
     }
 
     /**
-     * Set Indicates the full backup start time. value range: [0-24*3600]. for example, 0:00, 1:00, and 2:00 are 0, 3600, and 7200 respectively.
-     * @param BackupTimeBeg Indicates the full backup start time. value range: [0-24*3600]. for example, 0:00, 1:00, and 2:00 are 0, 3600, and 7200 respectively.
+     * Set Indicates the full backup start time. Value range: [0-24*3600]. For example, 0:00, 1:00, and 2:00 correspond to 0, 3600, and 7200 respectively.
+     * @param BackupTimeBeg Indicates the full backup start time. Value range: [0-24*3600]. For example, 0:00, 1:00, and 2:00 correspond to 0, 3600, and 7200 respectively.
      */
     public void setBackupTimeBeg(Long BackupTimeBeg) {
         this.BackupTimeBeg = BackupTimeBeg;
     }
 
     /**
-     * Get Indicates the full backup end time. value range: [0-24*3600]. for example, 0:00, 1:00, and 2:00 are 0, 3600, and 7200 respectively. 
-     * @return BackupTimeEnd Indicates the full backup end time. value range: [0-24*3600]. for example, 0:00, 1:00, and 2:00 are 0, 3600, and 7200 respectively.
+     * Get Indicates the full backup end time, [0-24*3600]. For example, 0:00, 1:00, and 2:00 correspond to 0, 3600, and 7200 respectively. 
+     * @return BackupTimeEnd Indicates the full backup end time, [0-24*3600]. For example, 0:00, 1:00, and 2:00 correspond to 0, 3600, and 7200 respectively.
      */
     public Long getBackupTimeEnd() {
         return this.BackupTimeEnd;
     }
 
     /**
-     * Set Indicates the full backup end time. value range: [0-24*3600]. for example, 0:00, 1:00, and 2:00 are 0, 3600, and 7200 respectively.
-     * @param BackupTimeEnd Indicates the full backup end time. value range: [0-24*3600]. for example, 0:00, 1:00, and 2:00 are 0, 3600, and 7200 respectively.
+     * Set Indicates the full backup end time, [0-24*3600]. For example, 0:00, 1:00, and 2:00 correspond to 0, 3600, and 7200 respectively.
+     * @param BackupTimeEnd Indicates the full backup end time, [0-24*3600]. For example, 0:00, 1:00, and 2:00 correspond to 0, 3600, and 7200 respectively.
      */
     public void setBackupTimeEnd(Long BackupTimeEnd) {
         this.BackupTimeEnd = BackupTimeEnd;
     }
 
     /**
-     * Get This parameter currently does not support modification and no need to specify. backup frequency is an array of length 7, corresponding to the backup method from sunday to saturday, full for full backup and increment for incremental backup. 
-     * @return BackupWeekDays This parameter currently does not support modification and no need to specify. backup frequency is an array of length 7, corresponding to the backup method from sunday to saturday, full for full backup and increment for incremental backup.
+     * Get Currently this parameter cannot be modified and is not required. Backup frequency, an array of length 7, corresponds to the backup method from Sunday to Saturday. full: full backup, increment: incremental backup. 
+     * @return BackupWeekDays Currently this parameter cannot be modified and is not required. Backup frequency, an array of length 7, corresponds to the backup method from Sunday to Saturday. full: full backup, increment: incremental backup.
      */
     public String [] getBackupWeekDays() {
         return this.BackupWeekDays;
     }
 
     /**
-     * Set This parameter currently does not support modification and no need to specify. backup frequency is an array of length 7, corresponding to the backup method from sunday to saturday, full for full backup and increment for incremental backup.
-     * @param BackupWeekDays This parameter currently does not support modification and no need to specify. backup frequency is an array of length 7, corresponding to the backup method from sunday to saturday, full for full backup and increment for incremental backup.
+     * Set Currently this parameter cannot be modified and is not required. Backup frequency, an array of length 7, corresponds to the backup method from Sunday to Saturday. full: full backup, increment: incremental backup.
+     * @param BackupWeekDays Currently this parameter cannot be modified and is not required. Backup frequency, an array of length 7, corresponds to the backup method from Sunday to Saturday. full: full backup, increment: incremental backup.
      */
     public void setBackupWeekDays(String [] BackupWeekDays) {
         this.BackupWeekDays = BackupWeekDays;
     }
 
     /**
-     * Get Interval. 
-     * @return BackupIntervalTime Interval.
+     * Get Interval 
+     * @return BackupIntervalTime Interval
      */
     public Long getBackupIntervalTime() {
         return this.BackupIntervalTime;
     }
 
     /**
-     * Set Interval.
-     * @param BackupIntervalTime Interval.
+     * Set Interval
+     * @param BackupIntervalTime Interval
      */
     public void setBackupIntervalTime(Long BackupIntervalTime) {
         this.BackupIntervalTime = BackupIntervalTime;
     }
 
     /**
-     * Get Indicates the backup retention period in seconds. data will be cleaned up longer than this time. 7 days means 3600247=604800. the maximum is 158112000. 
-     * @return ReserveDuration Indicates the backup retention period in seconds. data will be cleaned up longer than this time. 7 days means 3600247=604800. the maximum is 158112000.
+     * Get Indicates the backup retention period in seconds. Data is cleaned up after this time. Seven days means 3600 × 24 × 7 = 604800. The maximum value is 158112000. 
+     * @return ReserveDuration Indicates the backup retention period in seconds. Data is cleaned up after this time. Seven days means 3600 × 24 × 7 = 604800. The maximum value is 158112000.
      */
     public Long getReserveDuration() {
         return this.ReserveDuration;
     }
 
     /**
-     * Set Indicates the backup retention period in seconds. data will be cleaned up longer than this time. 7 days means 3600247=604800. the maximum is 158112000.
-     * @param ReserveDuration Indicates the backup retention period in seconds. data will be cleaned up longer than this time. 7 days means 3600247=604800. the maximum is 158112000.
+     * Set Indicates the backup retention period in seconds. Data is cleaned up after this time. Seven days means 3600 × 24 × 7 = 604800. The maximum value is 158112000.
+     * @param ReserveDuration Indicates the backup retention period in seconds. Data is cleaned up after this time. Seven days means 3600 × 24 × 7 = 604800. The maximum value is 158112000.
      */
     public void setReserveDuration(Long ReserveDuration) {
         this.ReserveDuration = ReserveDuration;
     }
 
     /**
-     * Get Automatic data backup trigger policy, periodically: automatic periodic backup, frequent: high-frequency backup 
-     * @return BackupTriggerStrategy Automatic data backup trigger policy, periodically: automatic periodic backup, frequent: high-frequency backup
+     * Get Automatic data backup trigger policy. periodically: automatic periodic backup. frequent: high-frequency backup. 
+     * @return BackupTriggerStrategy Automatic data backup trigger policy. periodically: automatic periodic backup. frequent: high-frequency backup.
      */
     public String getBackupTriggerStrategy() {
         return this.BackupTriggerStrategy;
     }
 
     /**
-     * Set Automatic data backup trigger policy, periodically: automatic periodic backup, frequent: high-frequency backup
-     * @param BackupTriggerStrategy Automatic data backup trigger policy, periodically: automatic periodic backup, frequent: high-frequency backup
+     * Set Automatic data backup trigger policy. periodically: automatic periodic backup. frequent: high-frequency backup.
+     * @param BackupTriggerStrategy Automatic data backup trigger policy. periodically: automatic periodic backup. frequent: high-frequency backup.
      */
     public void setBackupTriggerStrategy(String BackupTriggerStrategy) {
         this.BackupTriggerStrategy = BackupTriggerStrategy;
     }
 
     /**
-     * Get Safe info 
-     * @return AutoCopyVaults Safe info
+     * Get Safe information. 
+     * @return AutoCopyVaults Safe information.
      */
     public CreateBackupVaultItem [] getAutoCopyVaults() {
         return this.AutoCopyVaults;
     }
 
     /**
-     * Set Safe info
-     * @param AutoCopyVaults Safe info
+     * Set Safe information.
+     * @param AutoCopyVaults Safe information.
      */
     public void setAutoCopyVaults(CreateBackupVaultItem [] AutoCopyVaults) {
         this.AutoCopyVaults = AutoCopyVaults;

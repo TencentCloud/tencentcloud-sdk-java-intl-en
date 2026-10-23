@@ -24,56 +24,46 @@ import java.util.HashMap;
 public class UpstreamRequestParameters extends AbstractModel {
 
     /**
-    * Query string configuration. optional. if not provided, it will not be configured.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+    * Query string configuration. Optional configuration, leave blank for no configuration.
     */
     @SerializedName("QueryString")
     @Expose
     private UpstreamRequestQueryString QueryString;
 
     /**
-    * Cookie configuration. optional. if not provided, it will not be configured.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+    * Cookie configuration. Optional configuration. Leave it blank for no configuration.
     */
     @SerializedName("Cookie")
     @Expose
     private UpstreamRequestCookie Cookie;
 
     /**
-     * Get Query string configuration. optional. if not provided, it will not be configured.
-Note: this field may return null, which indicates a failure to obtain a valid value. 
-     * @return QueryString Query string configuration. optional. if not provided, it will not be configured.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * Get Query string configuration. Optional configuration, leave blank for no configuration. 
+     * @return QueryString Query string configuration. Optional configuration, leave blank for no configuration.
      */
     public UpstreamRequestQueryString getQueryString() {
         return this.QueryString;
     }
 
     /**
-     * Set Query string configuration. optional. if not provided, it will not be configured.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-     * @param QueryString Query string configuration. optional. if not provided, it will not be configured.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * Set Query string configuration. Optional configuration, leave blank for no configuration.
+     * @param QueryString Query string configuration. Optional configuration, leave blank for no configuration.
      */
     public void setQueryString(UpstreamRequestQueryString QueryString) {
         this.QueryString = QueryString;
     }
 
     /**
-     * Get Cookie configuration. optional. if not provided, it will not be configured.
-Note: this field may return null, which indicates a failure to obtain a valid value. 
-     * @return Cookie Cookie configuration. optional. if not provided, it will not be configured.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * Get Cookie configuration. Optional configuration. Leave it blank for no configuration. 
+     * @return Cookie Cookie configuration. Optional configuration. Leave it blank for no configuration.
      */
     public UpstreamRequestCookie getCookie() {
         return this.Cookie;
     }
 
     /**
-     * Set Cookie configuration. optional. if not provided, it will not be configured.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-     * @param Cookie Cookie configuration. optional. if not provided, it will not be configured.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * Set Cookie configuration. Optional configuration. Leave it blank for no configuration.
+     * @param Cookie Cookie configuration. Optional configuration. Leave it blank for no configuration.
      */
     public void setCookie(UpstreamRequestCookie Cookie) {
         this.Cookie = Cookie;

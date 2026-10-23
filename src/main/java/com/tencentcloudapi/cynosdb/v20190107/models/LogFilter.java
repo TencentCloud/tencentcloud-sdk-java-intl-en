@@ -31,14 +31,14 @@ public class LogFilter extends AbstractModel {
     private String Type;
 
     /**
-    * Filter criteria. Support the following conditions: WINC-include (segment dimension), WEXC-exclude (segment dimension), INC-include, EXC-exclude, EQS-equal, NEQ-not equal to, RA-range.
+    * Filter criteria. The following conditions are supported: WINC - contains (segment dimension), WEXC - excludes (segment dimension), INC - contains, EXC - excludes, EQS - equals, NEQ - not equals, RA - range.
     */
     @SerializedName("Compare")
     @Expose
     private String Compare;
 
     /**
-    * Filtered value. For reverse query, multiple values have an AND relationship. For forward query, multiple values have an OR relationship.
+    * Filtered value. In reverse query, multiple values have an AND relationship. In forward query, multiple values have an OR relationship.
     */
     @SerializedName("Value")
     @Expose
@@ -61,32 +61,32 @@ public class LogFilter extends AbstractModel {
     }
 
     /**
-     * Get Filter criteria. Support the following conditions: WINC-include (segment dimension), WEXC-exclude (segment dimension), INC-include, EXC-exclude, EQS-equal, NEQ-not equal to, RA-range. 
-     * @return Compare Filter criteria. Support the following conditions: WINC-include (segment dimension), WEXC-exclude (segment dimension), INC-include, EXC-exclude, EQS-equal, NEQ-not equal to, RA-range.
+     * Get Filter criteria. The following conditions are supported: WINC - contains (segment dimension), WEXC - excludes (segment dimension), INC - contains, EXC - excludes, EQS - equals, NEQ - not equals, RA - range. 
+     * @return Compare Filter criteria. The following conditions are supported: WINC - contains (segment dimension), WEXC - excludes (segment dimension), INC - contains, EXC - excludes, EQS - equals, NEQ - not equals, RA - range.
      */
     public String getCompare() {
         return this.Compare;
     }
 
     /**
-     * Set Filter criteria. Support the following conditions: WINC-include (segment dimension), WEXC-exclude (segment dimension), INC-include, EXC-exclude, EQS-equal, NEQ-not equal to, RA-range.
-     * @param Compare Filter criteria. Support the following conditions: WINC-include (segment dimension), WEXC-exclude (segment dimension), INC-include, EXC-exclude, EQS-equal, NEQ-not equal to, RA-range.
+     * Set Filter criteria. The following conditions are supported: WINC - contains (segment dimension), WEXC - excludes (segment dimension), INC - contains, EXC - excludes, EQS - equals, NEQ - not equals, RA - range.
+     * @param Compare Filter criteria. The following conditions are supported: WINC - contains (segment dimension), WEXC - excludes (segment dimension), INC - contains, EXC - excludes, EQS - equals, NEQ - not equals, RA - range.
      */
     public void setCompare(String Compare) {
         this.Compare = Compare;
     }
 
     /**
-     * Get Filtered value. For reverse query, multiple values have an AND relationship. For forward query, multiple values have an OR relationship. 
-     * @return Value Filtered value. For reverse query, multiple values have an AND relationship. For forward query, multiple values have an OR relationship.
+     * Get Filtered value. In reverse query, multiple values have an AND relationship. In forward query, multiple values have an OR relationship. 
+     * @return Value Filtered value. In reverse query, multiple values have an AND relationship. In forward query, multiple values have an OR relationship.
      */
     public String [] getValue() {
         return this.Value;
     }
 
     /**
-     * Set Filtered value. For reverse query, multiple values have an AND relationship. For forward query, multiple values have an OR relationship.
-     * @param Value Filtered value. For reverse query, multiple values have an AND relationship. For forward query, multiple values have an OR relationship.
+     * Set Filtered value. In reverse query, multiple values have an AND relationship. In forward query, multiple values have an OR relationship.
+     * @param Value Filtered value. In reverse query, multiple values have an AND relationship. In forward query, multiple values have an OR relationship.
      */
     public void setValue(String [] Value) {
         this.Value = Value;

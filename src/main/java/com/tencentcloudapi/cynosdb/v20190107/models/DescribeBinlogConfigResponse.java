@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeBinlogConfigResponse extends AbstractModel {
 
     /**
-    * Configuration update time for cross-regional Binlog.
+    * Binlog cross-regional configuration update time
     */
     @SerializedName("BinlogCrossRegionsConfigUpdateTime")
     @Expose
     private String BinlogCrossRegionsConfigUpdateTime;
 
     /**
-    * Specifies the Binlog configuration message.
+    * Binlog configuration message
     */
     @SerializedName("BinlogConfig")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeBinlogConfigResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Configuration update time for cross-regional Binlog. 
-     * @return BinlogCrossRegionsConfigUpdateTime Configuration update time for cross-regional Binlog.
+     * Get Binlog cross-regional configuration update time 
+     * @return BinlogCrossRegionsConfigUpdateTime Binlog cross-regional configuration update time
      */
     public String getBinlogCrossRegionsConfigUpdateTime() {
         return this.BinlogCrossRegionsConfigUpdateTime;
     }
 
     /**
-     * Set Configuration update time for cross-regional Binlog.
-     * @param BinlogCrossRegionsConfigUpdateTime Configuration update time for cross-regional Binlog.
+     * Set Binlog cross-regional configuration update time
+     * @param BinlogCrossRegionsConfigUpdateTime Binlog cross-regional configuration update time
      */
     public void setBinlogCrossRegionsConfigUpdateTime(String BinlogCrossRegionsConfigUpdateTime) {
         this.BinlogCrossRegionsConfigUpdateTime = BinlogCrossRegionsConfigUpdateTime;
     }
 
     /**
-     * Get Specifies the Binlog configuration message. 
-     * @return BinlogConfig Specifies the Binlog configuration message.
+     * Get Binlog configuration message 
+     * @return BinlogConfig Binlog configuration message
      */
     public BinlogConfigInfo getBinlogConfig() {
         return this.BinlogConfig;
     }
 
     /**
-     * Set Specifies the Binlog configuration message.
-     * @param BinlogConfig Specifies the Binlog configuration message.
+     * Set Binlog configuration message
+     * @param BinlogConfig Binlog configuration message
      */
     public void setBinlogConfig(BinlogConfigInfo BinlogConfig) {
         this.BinlogConfig = BinlogConfig;

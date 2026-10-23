@@ -24,35 +24,35 @@ import java.util.HashMap;
 public class DescribeVaultsRequest extends AbstractModel {
 
     /**
-    * Safe ID list for precise filtering
+    * List of safe IDs for precise filtering
     */
     @SerializedName("VaultIds")
     @Expose
     private String [] VaultIds;
 
     /**
-    * Safe name, used for fuzzy filtering
+    * Safe name, used for blurry filtering
     */
     @SerializedName("VaultName")
     @Expose
     private String VaultName;
 
     /**
-    * Status list of safe for filtering
+    * Safe status list for filtering
     */
     @SerializedName("Status")
     @Expose
     private String [] Status;
 
     /**
-    * Number of items per page, range (0,100], default 100
+    * Number of items per page. Value range: (0,100]. Default: 100
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * Offset. Range: [0,+∞). Default is 0
+    * Offset. Value range: [0, +∞). Default: 0
     */
     @SerializedName("Offset")
     @Expose
@@ -66,87 +66,87 @@ public class DescribeVaultsRequest extends AbstractModel {
     private String OrderBy;
 
     /**
-    * Sorting method, available values: desc, asc, DESC, ASC
+    * Sorting method. Available values: `desc`, `asc`, `DESC`, `ASC`.
     */
     @SerializedName("OrderByType")
     @Expose
     private String OrderByType;
 
     /**
-     * Get Safe ID list for precise filtering 
-     * @return VaultIds Safe ID list for precise filtering
+     * Get List of safe IDs for precise filtering 
+     * @return VaultIds List of safe IDs for precise filtering
      */
     public String [] getVaultIds() {
         return this.VaultIds;
     }
 
     /**
-     * Set Safe ID list for precise filtering
-     * @param VaultIds Safe ID list for precise filtering
+     * Set List of safe IDs for precise filtering
+     * @param VaultIds List of safe IDs for precise filtering
      */
     public void setVaultIds(String [] VaultIds) {
         this.VaultIds = VaultIds;
     }
 
     /**
-     * Get Safe name, used for fuzzy filtering 
-     * @return VaultName Safe name, used for fuzzy filtering
+     * Get Safe name, used for blurry filtering 
+     * @return VaultName Safe name, used for blurry filtering
      */
     public String getVaultName() {
         return this.VaultName;
     }
 
     /**
-     * Set Safe name, used for fuzzy filtering
-     * @param VaultName Safe name, used for fuzzy filtering
+     * Set Safe name, used for blurry filtering
+     * @param VaultName Safe name, used for blurry filtering
      */
     public void setVaultName(String VaultName) {
         this.VaultName = VaultName;
     }
 
     /**
-     * Get Status list of safe for filtering 
-     * @return Status Status list of safe for filtering
+     * Get Safe status list for filtering 
+     * @return Status Safe status list for filtering
      */
     public String [] getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Status list of safe for filtering
-     * @param Status Status list of safe for filtering
+     * Set Safe status list for filtering
+     * @param Status Safe status list for filtering
      */
     public void setStatus(String [] Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Number of items per page, range (0,100], default 100 
-     * @return Limit Number of items per page, range (0,100], default 100
+     * Get Number of items per page. Value range: (0,100]. Default: 100 
+     * @return Limit Number of items per page. Value range: (0,100]. Default: 100
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Number of items per page, range (0,100], default 100
-     * @param Limit Number of items per page, range (0,100], default 100
+     * Set Number of items per page. Value range: (0,100]. Default: 100
+     * @param Limit Number of items per page. Value range: (0,100]. Default: 100
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get Offset. Range: [0,+∞). Default is 0 
-     * @return Offset Offset. Range: [0,+∞). Default is 0
+     * Get Offset. Value range: [0, +∞). Default: 0 
+     * @return Offset Offset. Value range: [0, +∞). Default: 0
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Offset. Range: [0,+∞). Default is 0
-     * @param Offset Offset. Range: [0,+∞). Default is 0
+     * Set Offset. Value range: [0, +∞). Default: 0
+     * @param Offset Offset. Value range: [0, +∞). Default: 0
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
@@ -169,16 +169,16 @@ public class DescribeVaultsRequest extends AbstractModel {
     }
 
     /**
-     * Get Sorting method, available values: desc, asc, DESC, ASC 
-     * @return OrderByType Sorting method, available values: desc, asc, DESC, ASC
+     * Get Sorting method. Available values: `desc`, `asc`, `DESC`, `ASC`. 
+     * @return OrderByType Sorting method. Available values: `desc`, `asc`, `DESC`, `ASC`.
      */
     public String getOrderByType() {
         return this.OrderByType;
     }
 
     /**
-     * Set Sorting method, available values: desc, asc, DESC, ASC
-     * @param OrderByType Sorting method, available values: desc, asc, DESC, ASC
+     * Set Sorting method. Available values: `desc`, `asc`, `DESC`, `ASC`.
+     * @param OrderByType Sorting method. Available values: `desc`, `asc`, `DESC`, `ASC`.
      */
     public void setOrderByType(String OrderByType) {
         this.OrderByType = OrderByType;

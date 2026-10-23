@@ -38,21 +38,21 @@ public class SparseBackupConfigInfo extends AbstractModel {
     private String ConfigId;
 
     /**
-    * <p>Policy type: weekly/monthly/yearly</p>
+    * <p>Period policy type: weekly/monthly/yearly</p>
     */
     @SerializedName("SparsePeriodConfig")
     @Expose
     private String SparsePeriodConfig;
 
     /**
-    * <p>Cycle time configuration</p>
+    * <p>Periodic time configuration</p>
     */
     @SerializedName("SparsePeriodTime")
     @Expose
     private SparsePeriodTime SparsePeriodTime;
 
     /**
-    * <p>Retention days (7-7320 days, longest 20 years)</p>
+    * <p>Retention days (7-7320 days, up to 20 years)</p>
     */
     @SerializedName("SparseBackupSaveDays")
     @Expose
@@ -91,48 +91,48 @@ public class SparseBackupConfigInfo extends AbstractModel {
     }
 
     /**
-     * Get <p>Policy type: weekly/monthly/yearly</p> 
-     * @return SparsePeriodConfig <p>Policy type: weekly/monthly/yearly</p>
+     * Get <p>Period policy type: weekly/monthly/yearly</p> 
+     * @return SparsePeriodConfig <p>Period policy type: weekly/monthly/yearly</p>
      */
     public String getSparsePeriodConfig() {
         return this.SparsePeriodConfig;
     }
 
     /**
-     * Set <p>Policy type: weekly/monthly/yearly</p>
-     * @param SparsePeriodConfig <p>Policy type: weekly/monthly/yearly</p>
+     * Set <p>Period policy type: weekly/monthly/yearly</p>
+     * @param SparsePeriodConfig <p>Period policy type: weekly/monthly/yearly</p>
      */
     public void setSparsePeriodConfig(String SparsePeriodConfig) {
         this.SparsePeriodConfig = SparsePeriodConfig;
     }
 
     /**
-     * Get <p>Cycle time configuration</p> 
-     * @return SparsePeriodTime <p>Cycle time configuration</p>
+     * Get <p>Periodic time configuration</p> 
+     * @return SparsePeriodTime <p>Periodic time configuration</p>
      */
     public SparsePeriodTime getSparsePeriodTime() {
         return this.SparsePeriodTime;
     }
 
     /**
-     * Set <p>Cycle time configuration</p>
-     * @param SparsePeriodTime <p>Cycle time configuration</p>
+     * Set <p>Periodic time configuration</p>
+     * @param SparsePeriodTime <p>Periodic time configuration</p>
      */
     public void setSparsePeriodTime(SparsePeriodTime SparsePeriodTime) {
         this.SparsePeriodTime = SparsePeriodTime;
     }
 
     /**
-     * Get <p>Retention days (7-7320 days, longest 20 years)</p> 
-     * @return SparseBackupSaveDays <p>Retention days (7-7320 days, longest 20 years)</p>
+     * Get <p>Retention days (7-7320 days, up to 20 years)</p> 
+     * @return SparseBackupSaveDays <p>Retention days (7-7320 days, up to 20 years)</p>
      */
     public Long getSparseBackupSaveDays() {
         return this.SparseBackupSaveDays;
     }
 
     /**
-     * Set <p>Retention days (7-7320 days, longest 20 years)</p>
-     * @param SparseBackupSaveDays <p>Retention days (7-7320 days, longest 20 years)</p>
+     * Set <p>Retention days (7-7320 days, up to 20 years)</p>
+     * @param SparseBackupSaveDays <p>Retention days (7-7320 days, up to 20 years)</p>
      */
     public void setSparseBackupSaveDays(Long SparseBackupSaveDays) {
         this.SparseBackupSaveDays = SparseBackupSaveDays;

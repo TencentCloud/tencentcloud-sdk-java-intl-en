@@ -31,7 +31,7 @@ public class CreateAccountsRequest extends AbstractModel {
     private String ClusterId;
 
     /**
-    * <p>New account list</p>
+    * <p>New account list.</p>
     */
     @SerializedName("Accounts")
     @Expose
@@ -54,16 +54,16 @@ public class CreateAccountsRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>New account list</p> 
-     * @return Accounts <p>New account list</p>
+     * Get <p>New account list.</p> 
+     * @return Accounts <p>New account list.</p>
      */
     public NewAccount [] getAccounts() {
         return this.Accounts;
     }
 
     /**
-     * Set <p>New account list</p>
-     * @param Accounts <p>New account list</p>
+     * Set <p>New account list.</p>
+     * @param Accounts <p>New account list.</p>
      */
     public void setAccounts(NewAccount [] Accounts) {
         this.Accounts = Accounts;

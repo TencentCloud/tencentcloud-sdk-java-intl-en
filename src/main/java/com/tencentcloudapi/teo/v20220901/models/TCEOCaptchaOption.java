@@ -24,26 +24,49 @@ import java.util.HashMap;
 public class TCEOCaptchaOption extends AbstractModel {
 
     /**
-    * EdgeOne human-machine verification mode. Valid values:<li>Invisible: invisible verification;</li><li>Adaptive: self adaptive interactive verification.</li>
+    * <p>Browser-side WebView human-machine verification interaction mode.</p><p>Enumeration values:</p><ul><li>Invisible: invisible verification</li><li>Adaptive: self adaptive interactive verification</li></ul><p>Default value: Invisible</p>
     */
     @SerializedName("CaptchaMode")
     @Expose
     private String CaptchaMode;
 
     /**
-     * Get EdgeOne human-machine verification mode. Valid values:<li>Invisible: invisible verification;</li><li>Adaptive: self adaptive interactive verification.</li> 
-     * @return CaptchaMode EdgeOne human-machine verification mode. Valid values:<li>Invisible: invisible verification;</li><li>Adaptive: self adaptive interactive verification.</li>
+    * <p>Human-machine verification interaction mode for native apps on mobile terminals.</p><p>Enumeration values:</p><ul><li>Invisible: Invisible verification</li><li>Visible: interactive verification</li></ul><p>Default value: Invisible</p>
+    */
+    @SerializedName("MobileCaptchaMode")
+    @Expose
+    private String MobileCaptchaMode;
+
+    /**
+     * Get <p>Browser-side WebView human-machine verification interaction mode.</p><p>Enumeration values:</p><ul><li>Invisible: invisible verification</li><li>Adaptive: self adaptive interactive verification</li></ul><p>Default value: Invisible</p> 
+     * @return CaptchaMode <p>Browser-side WebView human-machine verification interaction mode.</p><p>Enumeration values:</p><ul><li>Invisible: invisible verification</li><li>Adaptive: self adaptive interactive verification</li></ul><p>Default value: Invisible</p>
      */
     public String getCaptchaMode() {
         return this.CaptchaMode;
     }
 
     /**
-     * Set EdgeOne human-machine verification mode. Valid values:<li>Invisible: invisible verification;</li><li>Adaptive: self adaptive interactive verification.</li>
-     * @param CaptchaMode EdgeOne human-machine verification mode. Valid values:<li>Invisible: invisible verification;</li><li>Adaptive: self adaptive interactive verification.</li>
+     * Set <p>Browser-side WebView human-machine verification interaction mode.</p><p>Enumeration values:</p><ul><li>Invisible: invisible verification</li><li>Adaptive: self adaptive interactive verification</li></ul><p>Default value: Invisible</p>
+     * @param CaptchaMode <p>Browser-side WebView human-machine verification interaction mode.</p><p>Enumeration values:</p><ul><li>Invisible: invisible verification</li><li>Adaptive: self adaptive interactive verification</li></ul><p>Default value: Invisible</p>
      */
     public void setCaptchaMode(String CaptchaMode) {
         this.CaptchaMode = CaptchaMode;
+    }
+
+    /**
+     * Get <p>Human-machine verification interaction mode for native apps on mobile terminals.</p><p>Enumeration values:</p><ul><li>Invisible: Invisible verification</li><li>Visible: interactive verification</li></ul><p>Default value: Invisible</p> 
+     * @return MobileCaptchaMode <p>Human-machine verification interaction mode for native apps on mobile terminals.</p><p>Enumeration values:</p><ul><li>Invisible: Invisible verification</li><li>Visible: interactive verification</li></ul><p>Default value: Invisible</p>
+     */
+    public String getMobileCaptchaMode() {
+        return this.MobileCaptchaMode;
+    }
+
+    /**
+     * Set <p>Human-machine verification interaction mode for native apps on mobile terminals.</p><p>Enumeration values:</p><ul><li>Invisible: Invisible verification</li><li>Visible: interactive verification</li></ul><p>Default value: Invisible</p>
+     * @param MobileCaptchaMode <p>Human-machine verification interaction mode for native apps on mobile terminals.</p><p>Enumeration values:</p><ul><li>Invisible: Invisible verification</li><li>Visible: interactive verification</li></ul><p>Default value: Invisible</p>
+     */
+    public void setMobileCaptchaMode(String MobileCaptchaMode) {
+        this.MobileCaptchaMode = MobileCaptchaMode;
     }
 
     public TCEOCaptchaOption() {
@@ -57,6 +80,9 @@ public class TCEOCaptchaOption extends AbstractModel {
         if (source.CaptchaMode != null) {
             this.CaptchaMode = new String(source.CaptchaMode);
         }
+        if (source.MobileCaptchaMode != null) {
+            this.MobileCaptchaMode = new String(source.MobileCaptchaMode);
+        }
     }
 
 
@@ -65,6 +91,7 @@ public class TCEOCaptchaOption extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "CaptchaMode", this.CaptchaMode);
+        this.setParamSimple(map, prefix + "MobileCaptchaMode", this.MobileCaptchaMode);
 
     }
 }

@@ -24,84 +24,69 @@ import java.util.HashMap;
 public class CacheParameters extends AbstractModel {
 
     /**
-    * Cache follows origin server. if not specified, this configuration is not set. only one of followorigin, nocache, or customtime can have switch set to on.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+    * Cache follows the origin site. Leave unset means this configuration is not set. FollowOrigin, NoCache, and CustomTime can only be configured with one Switch set to on.
     */
     @SerializedName("FollowOrigin")
     @Expose
     private FollowOrigin FollowOrigin;
 
     /**
-    * No cache. if not specified, this configuration is not set. only one of followorigin, nocache, or customtime can have switch set to on.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+    * No cache. Leave unset means not setting this configuration. Only one Switch among FollowOrigin, NoCache, and CustomTime can be configured as on.
     */
     @SerializedName("NoCache")
     @Expose
     private NoCache NoCache;
 
     /**
-    * Custom cache time. if not specified, this configuration is not set. only one of followorigin, nocache, or customtime can have switch set to on.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+    * Custom cache time. Leave unset means this configuration is not set. Only one of FollowOrigin, NoCache, and CustomTime can be configured with the Switch set to on.
     */
     @SerializedName("CustomTime")
     @Expose
     private CustomTime CustomTime;
 
     /**
-     * Get Cache follows origin server. if not specified, this configuration is not set. only one of followorigin, nocache, or customtime can have switch set to on.
-Note: this field may return null, which indicates a failure to obtain a valid value. 
-     * @return FollowOrigin Cache follows origin server. if not specified, this configuration is not set. only one of followorigin, nocache, or customtime can have switch set to on.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * Get Cache follows the origin site. Leave unset means this configuration is not set. FollowOrigin, NoCache, and CustomTime can only be configured with one Switch set to on. 
+     * @return FollowOrigin Cache follows the origin site. Leave unset means this configuration is not set. FollowOrigin, NoCache, and CustomTime can only be configured with one Switch set to on.
      */
     public FollowOrigin getFollowOrigin() {
         return this.FollowOrigin;
     }
 
     /**
-     * Set Cache follows origin server. if not specified, this configuration is not set. only one of followorigin, nocache, or customtime can have switch set to on.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-     * @param FollowOrigin Cache follows origin server. if not specified, this configuration is not set. only one of followorigin, nocache, or customtime can have switch set to on.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * Set Cache follows the origin site. Leave unset means this configuration is not set. FollowOrigin, NoCache, and CustomTime can only be configured with one Switch set to on.
+     * @param FollowOrigin Cache follows the origin site. Leave unset means this configuration is not set. FollowOrigin, NoCache, and CustomTime can only be configured with one Switch set to on.
      */
     public void setFollowOrigin(FollowOrigin FollowOrigin) {
         this.FollowOrigin = FollowOrigin;
     }
 
     /**
-     * Get No cache. if not specified, this configuration is not set. only one of followorigin, nocache, or customtime can have switch set to on.
-Note: this field may return null, which indicates a failure to obtain a valid value. 
-     * @return NoCache No cache. if not specified, this configuration is not set. only one of followorigin, nocache, or customtime can have switch set to on.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * Get No cache. Leave unset means not setting this configuration. Only one Switch among FollowOrigin, NoCache, and CustomTime can be configured as on. 
+     * @return NoCache No cache. Leave unset means not setting this configuration. Only one Switch among FollowOrigin, NoCache, and CustomTime can be configured as on.
      */
     public NoCache getNoCache() {
         return this.NoCache;
     }
 
     /**
-     * Set No cache. if not specified, this configuration is not set. only one of followorigin, nocache, or customtime can have switch set to on.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-     * @param NoCache No cache. if not specified, this configuration is not set. only one of followorigin, nocache, or customtime can have switch set to on.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * Set No cache. Leave unset means not setting this configuration. Only one Switch among FollowOrigin, NoCache, and CustomTime can be configured as on.
+     * @param NoCache No cache. Leave unset means not setting this configuration. Only one Switch among FollowOrigin, NoCache, and CustomTime can be configured as on.
      */
     public void setNoCache(NoCache NoCache) {
         this.NoCache = NoCache;
     }
 
     /**
-     * Get Custom cache time. if not specified, this configuration is not set. only one of followorigin, nocache, or customtime can have switch set to on.
-Note: this field may return null, which indicates a failure to obtain a valid value. 
-     * @return CustomTime Custom cache time. if not specified, this configuration is not set. only one of followorigin, nocache, or customtime can have switch set to on.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * Get Custom cache time. Leave unset means this configuration is not set. Only one of FollowOrigin, NoCache, and CustomTime can be configured with the Switch set to on. 
+     * @return CustomTime Custom cache time. Leave unset means this configuration is not set. Only one of FollowOrigin, NoCache, and CustomTime can be configured with the Switch set to on.
      */
     public CustomTime getCustomTime() {
         return this.CustomTime;
     }
 
     /**
-     * Set Custom cache time. if not specified, this configuration is not set. only one of followorigin, nocache, or customtime can have switch set to on.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-     * @param CustomTime Custom cache time. if not specified, this configuration is not set. only one of followorigin, nocache, or customtime can have switch set to on.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * Set Custom cache time. Leave unset means this configuration is not set. Only one of FollowOrigin, NoCache, and CustomTime can be configured with the Switch set to on.
+     * @param CustomTime Custom cache time. Leave unset means this configuration is not set. Only one of FollowOrigin, NoCache, and CustomTime can be configured with the Switch set to on.
      */
     public void setCustomTime(CustomTime CustomTime) {
         this.CustomTime = CustomTime;

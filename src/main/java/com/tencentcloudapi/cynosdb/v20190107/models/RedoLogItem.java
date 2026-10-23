@@ -24,276 +24,276 @@ import java.util.HashMap;
 public class RedoLogItem extends AbstractModel {
 
     /**
-    * Filename.
+    * <p>File name.</p>
     */
     @SerializedName("FileName")
     @Expose
     private String FileName;
 
     /**
-    * File size
+    * <p>File size</p>
     */
     @SerializedName("FileSize")
     @Expose
     private Long FileSize;
 
     /**
-    * Backup time
+    * <p>Backup time</p>
     */
     @SerializedName("BackupTime")
     @Expose
     private String BackupTime;
 
     /**
-    * redoLogId
+    * <p>redoLogId</p>
     */
     @SerializedName("RedoLogId")
     @Expose
     private Long RedoLogId;
 
     /**
-    * Cross-Region information.
+    * <p>Cross-regional information</p>
     */
     @SerializedName("RedoCrossRegions")
     @Expose
     private BackupRegionAndIds [] RedoCrossRegions;
 
     /**
-    * Status.
+    * <p>Status.</p>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * Start time.
+    * <p>Start time.</p>
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * Completion time.
+    * <p>Completion time</p>
     */
     @SerializedName("FinishTime")
     @Expose
     private String FinishTime;
 
     /**
-    * Safe info
+    * <p>Safe information.</p>
     */
     @SerializedName("VaultInfos")
     @Expose
     private VaultInfo [] VaultInfos;
 
     /**
-    * Backup delivery status
+    * <p>Backup delivery status</p>
     */
     @SerializedName("CopyStatus")
     @Expose
     private String CopyStatus;
 
     /**
-    * Encryption key
+    * <p>Encryption key.</p>
     */
     @SerializedName("EncryptKeyId")
     @Expose
     private String EncryptKeyId;
 
     /**
-    * Key region for encryption
+    * <p>Encryption key region</p>
     */
     @SerializedName("EncryptRegion")
     @Expose
     private String EncryptRegion;
 
     /**
-     * Get Filename. 
-     * @return FileName Filename.
+     * Get <p>File name.</p> 
+     * @return FileName <p>File name.</p>
      */
     public String getFileName() {
         return this.FileName;
     }
 
     /**
-     * Set Filename.
-     * @param FileName Filename.
+     * Set <p>File name.</p>
+     * @param FileName <p>File name.</p>
      */
     public void setFileName(String FileName) {
         this.FileName = FileName;
     }
 
     /**
-     * Get File size 
-     * @return FileSize File size
+     * Get <p>File size</p> 
+     * @return FileSize <p>File size</p>
      */
     public Long getFileSize() {
         return this.FileSize;
     }
 
     /**
-     * Set File size
-     * @param FileSize File size
+     * Set <p>File size</p>
+     * @param FileSize <p>File size</p>
      */
     public void setFileSize(Long FileSize) {
         this.FileSize = FileSize;
     }
 
     /**
-     * Get Backup time 
-     * @return BackupTime Backup time
+     * Get <p>Backup time</p> 
+     * @return BackupTime <p>Backup time</p>
      */
     public String getBackupTime() {
         return this.BackupTime;
     }
 
     /**
-     * Set Backup time
-     * @param BackupTime Backup time
+     * Set <p>Backup time</p>
+     * @param BackupTime <p>Backup time</p>
      */
     public void setBackupTime(String BackupTime) {
         this.BackupTime = BackupTime;
     }
 
     /**
-     * Get redoLogId 
-     * @return RedoLogId redoLogId
+     * Get <p>redoLogId</p> 
+     * @return RedoLogId <p>redoLogId</p>
      */
     public Long getRedoLogId() {
         return this.RedoLogId;
     }
 
     /**
-     * Set redoLogId
-     * @param RedoLogId redoLogId
+     * Set <p>redoLogId</p>
+     * @param RedoLogId <p>redoLogId</p>
      */
     public void setRedoLogId(Long RedoLogId) {
         this.RedoLogId = RedoLogId;
     }
 
     /**
-     * Get Cross-Region information. 
-     * @return RedoCrossRegions Cross-Region information.
+     * Get <p>Cross-regional information</p> 
+     * @return RedoCrossRegions <p>Cross-regional information</p>
      */
     public BackupRegionAndIds [] getRedoCrossRegions() {
         return this.RedoCrossRegions;
     }
 
     /**
-     * Set Cross-Region information.
-     * @param RedoCrossRegions Cross-Region information.
+     * Set <p>Cross-regional information</p>
+     * @param RedoCrossRegions <p>Cross-regional information</p>
      */
     public void setRedoCrossRegions(BackupRegionAndIds [] RedoCrossRegions) {
         this.RedoCrossRegions = RedoCrossRegions;
     }
 
     /**
-     * Get Status. 
-     * @return Status Status.
+     * Get <p>Status.</p> 
+     * @return Status <p>Status.</p>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Status.
-     * @param Status Status.
+     * Set <p>Status.</p>
+     * @param Status <p>Status.</p>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Start time. 
-     * @return StartTime Start time.
+     * Get <p>Start time.</p> 
+     * @return StartTime <p>Start time.</p>
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set Start time.
-     * @param StartTime Start time.
+     * Set <p>Start time.</p>
+     * @param StartTime <p>Start time.</p>
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get Completion time. 
-     * @return FinishTime Completion time.
+     * Get <p>Completion time</p> 
+     * @return FinishTime <p>Completion time</p>
      */
     public String getFinishTime() {
         return this.FinishTime;
     }
 
     /**
-     * Set Completion time.
-     * @param FinishTime Completion time.
+     * Set <p>Completion time</p>
+     * @param FinishTime <p>Completion time</p>
      */
     public void setFinishTime(String FinishTime) {
         this.FinishTime = FinishTime;
     }
 
     /**
-     * Get Safe info 
-     * @return VaultInfos Safe info
+     * Get <p>Safe information.</p> 
+     * @return VaultInfos <p>Safe information.</p>
      */
     public VaultInfo [] getVaultInfos() {
         return this.VaultInfos;
     }
 
     /**
-     * Set Safe info
-     * @param VaultInfos Safe info
+     * Set <p>Safe information.</p>
+     * @param VaultInfos <p>Safe information.</p>
      */
     public void setVaultInfos(VaultInfo [] VaultInfos) {
         this.VaultInfos = VaultInfos;
     }
 
     /**
-     * Get Backup delivery status 
-     * @return CopyStatus Backup delivery status
+     * Get <p>Backup delivery status</p> 
+     * @return CopyStatus <p>Backup delivery status</p>
      */
     public String getCopyStatus() {
         return this.CopyStatus;
     }
 
     /**
-     * Set Backup delivery status
-     * @param CopyStatus Backup delivery status
+     * Set <p>Backup delivery status</p>
+     * @param CopyStatus <p>Backup delivery status</p>
      */
     public void setCopyStatus(String CopyStatus) {
         this.CopyStatus = CopyStatus;
     }
 
     /**
-     * Get Encryption key 
-     * @return EncryptKeyId Encryption key
+     * Get <p>Encryption key.</p> 
+     * @return EncryptKeyId <p>Encryption key.</p>
      */
     public String getEncryptKeyId() {
         return this.EncryptKeyId;
     }
 
     /**
-     * Set Encryption key
-     * @param EncryptKeyId Encryption key
+     * Set <p>Encryption key.</p>
+     * @param EncryptKeyId <p>Encryption key.</p>
      */
     public void setEncryptKeyId(String EncryptKeyId) {
         this.EncryptKeyId = EncryptKeyId;
     }
 
     /**
-     * Get Key region for encryption 
-     * @return EncryptRegion Key region for encryption
+     * Get <p>Encryption key region</p> 
+     * @return EncryptRegion <p>Encryption key region</p>
      */
     public String getEncryptRegion() {
         return this.EncryptRegion;
     }
 
     /**
-     * Set Key region for encryption
-     * @param EncryptRegion Key region for encryption
+     * Set <p>Encryption key region</p>
+     * @param EncryptRegion <p>Encryption key region</p>
      */
     public void setEncryptRegion(String EncryptRegion) {
         this.EncryptRegion = EncryptRegion;

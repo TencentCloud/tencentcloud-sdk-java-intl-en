@@ -31,14 +31,14 @@ public class ModifyClusterReadOnlyRequest extends AbstractModel {
     private String [] ClusterIds;
 
     /**
-    * Cluster read-only switch, valid values: ON, OFF.
+    * Cluster read-only switch. Available values: ON, OFF
     */
     @SerializedName("ReadOnlyOperation")
     @Expose
     private String ReadOnlyOperation;
 
     /**
-    * Valid values: `yes` (modify in maintenance window), `no` (execute now by default).
+    * yes: Modify within the Ops time window. no: Immediately execute (default value)
     */
     @SerializedName("IsInMaintainPeriod")
     @Expose
@@ -61,32 +61,32 @@ public class ModifyClusterReadOnlyRequest extends AbstractModel {
     }
 
     /**
-     * Get Cluster read-only switch, valid values: ON, OFF. 
-     * @return ReadOnlyOperation Cluster read-only switch, valid values: ON, OFF.
+     * Get Cluster read-only switch. Available values: ON, OFF 
+     * @return ReadOnlyOperation Cluster read-only switch. Available values: ON, OFF
      */
     public String getReadOnlyOperation() {
         return this.ReadOnlyOperation;
     }
 
     /**
-     * Set Cluster read-only switch, valid values: ON, OFF.
-     * @param ReadOnlyOperation Cluster read-only switch, valid values: ON, OFF.
+     * Set Cluster read-only switch. Available values: ON, OFF
+     * @param ReadOnlyOperation Cluster read-only switch. Available values: ON, OFF
      */
     public void setReadOnlyOperation(String ReadOnlyOperation) {
         this.ReadOnlyOperation = ReadOnlyOperation;
     }
 
     /**
-     * Get Valid values: `yes` (modify in maintenance window), `no` (execute now by default). 
-     * @return IsInMaintainPeriod Valid values: `yes` (modify in maintenance window), `no` (execute now by default).
+     * Get yes: Modify within the Ops time window. no: Immediately execute (default value) 
+     * @return IsInMaintainPeriod yes: Modify within the Ops time window. no: Immediately execute (default value)
      */
     public String getIsInMaintainPeriod() {
         return this.IsInMaintainPeriod;
     }
 
     /**
-     * Set Valid values: `yes` (modify in maintenance window), `no` (execute now by default).
-     * @param IsInMaintainPeriod Valid values: `yes` (modify in maintenance window), `no` (execute now by default).
+     * Set yes: Modify within the Ops time window. no: Immediately execute (default value)
+     * @param IsInMaintainPeriod yes: Modify within the Ops time window. no: Immediately execute (default value)
      */
     public void setIsInMaintainPeriod(String IsInMaintainPeriod) {
         this.IsInMaintainPeriod = IsInMaintainPeriod;

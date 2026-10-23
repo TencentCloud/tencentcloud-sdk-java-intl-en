@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class AuditInstanceFilters extends AbstractModel {
 
     /**
-    * Filter condition values. Supported values include: InstanceId - Instance ID, InstanceName - Instance name, ProjectId - Project ID, TagKey - Tag key, Tag - Tag (separated by vertical bar, e.g., TagKey|TagValue).
+    * Filter condition value. Supports InstanceId (instance ID), InstanceName (instance name), ProjectId (project ID), TagKey (tag key), and Tag (tag, separated by vertical bars, for example: Tagkey|Tagvalue).
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * True indicates exact match, false indicates fuzzy match.
+    * true indicates exact matching; false indicates fuzzy matching.
     */
     @SerializedName("ExactMatch")
     @Expose
@@ -45,32 +45,32 @@ public class AuditInstanceFilters extends AbstractModel {
     private String [] Values;
 
     /**
-     * Get Filter condition values. Supported values include: InstanceId - Instance ID, InstanceName - Instance name, ProjectId - Project ID, TagKey - Tag key, Tag - Tag (separated by vertical bar, e.g., TagKey|TagValue). 
-     * @return Name Filter condition values. Supported values include: InstanceId - Instance ID, InstanceName - Instance name, ProjectId - Project ID, TagKey - Tag key, Tag - Tag (separated by vertical bar, e.g., TagKey|TagValue).
+     * Get Filter condition value. Supports InstanceId (instance ID), InstanceName (instance name), ProjectId (project ID), TagKey (tag key), and Tag (tag, separated by vertical bars, for example: Tagkey|Tagvalue). 
+     * @return Name Filter condition value. Supports InstanceId (instance ID), InstanceName (instance name), ProjectId (project ID), TagKey (tag key), and Tag (tag, separated by vertical bars, for example: Tagkey|Tagvalue).
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Filter condition values. Supported values include: InstanceId - Instance ID, InstanceName - Instance name, ProjectId - Project ID, TagKey - Tag key, Tag - Tag (separated by vertical bar, e.g., TagKey|TagValue).
-     * @param Name Filter condition values. Supported values include: InstanceId - Instance ID, InstanceName - Instance name, ProjectId - Project ID, TagKey - Tag key, Tag - Tag (separated by vertical bar, e.g., TagKey|TagValue).
+     * Set Filter condition value. Supports InstanceId (instance ID), InstanceName (instance name), ProjectId (project ID), TagKey (tag key), and Tag (tag, separated by vertical bars, for example: Tagkey|Tagvalue).
+     * @param Name Filter condition value. Supports InstanceId (instance ID), InstanceName (instance name), ProjectId (project ID), TagKey (tag key), and Tag (tag, separated by vertical bars, for example: Tagkey|Tagvalue).
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get True indicates exact match, false indicates fuzzy match. 
-     * @return ExactMatch True indicates exact match, false indicates fuzzy match.
+     * Get true indicates exact matching; false indicates fuzzy matching. 
+     * @return ExactMatch true indicates exact matching; false indicates fuzzy matching.
      */
     public Boolean getExactMatch() {
         return this.ExactMatch;
     }
 
     /**
-     * Set True indicates exact match, false indicates fuzzy match.
-     * @param ExactMatch True indicates exact match, false indicates fuzzy match.
+     * Set true indicates exact matching; false indicates fuzzy matching.
+     * @param ExactMatch true indicates exact matching; false indicates fuzzy matching.
      */
     public void setExactMatch(Boolean ExactMatch) {
         this.ExactMatch = ExactMatch;

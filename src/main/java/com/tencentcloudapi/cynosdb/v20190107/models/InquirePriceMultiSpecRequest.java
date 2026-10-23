@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class InquirePriceMultiSpecRequest extends AbstractModel {
 
     /**
-    * Availability zone. specifies the best practice for region provision.
+    * AZ. Best practice provided by each region
     */
     @SerializedName("Zone")
     @Expose
     private String Zone;
 
     /**
-    * Instance purchase type. available values are: PREPAID, POSTPAID, SERVERLESS.
+    * Instance purchase type. Available values are: PREPAID, POSTPAID, SERVERLESS
     */
     @SerializedName("InstancePayMode")
     @Expose
     private String InstancePayMode;
 
     /**
-    * Storage purchase type. available values are: PREPAID, POSTPAID.
+    * Storage purchase type. Available values are: PREPAID, POSTPAID
     */
     @SerializedName("StoragePayMode")
     @Expose
     private String StoragePayMode;
 
     /**
-    * Specifies the product specification.
+    * Product specification
     */
     @SerializedName("GoodsSpecs")
     @Expose
     private GoodsSpec [] GoodsSpecs;
 
     /**
-     * Get Availability zone. specifies the best practice for region provision. 
-     * @return Zone Availability zone. specifies the best practice for region provision.
+     * Get AZ. Best practice provided by each region 
+     * @return Zone AZ. Best practice provided by each region
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * Set Availability zone. specifies the best practice for region provision.
-     * @param Zone Availability zone. specifies the best practice for region provision.
+     * Set AZ. Best practice provided by each region
+     * @param Zone AZ. Best practice provided by each region
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
     }
 
     /**
-     * Get Instance purchase type. available values are: PREPAID, POSTPAID, SERVERLESS. 
-     * @return InstancePayMode Instance purchase type. available values are: PREPAID, POSTPAID, SERVERLESS.
+     * Get Instance purchase type. Available values are: PREPAID, POSTPAID, SERVERLESS 
+     * @return InstancePayMode Instance purchase type. Available values are: PREPAID, POSTPAID, SERVERLESS
      */
     public String getInstancePayMode() {
         return this.InstancePayMode;
     }
 
     /**
-     * Set Instance purchase type. available values are: PREPAID, POSTPAID, SERVERLESS.
-     * @param InstancePayMode Instance purchase type. available values are: PREPAID, POSTPAID, SERVERLESS.
+     * Set Instance purchase type. Available values are: PREPAID, POSTPAID, SERVERLESS
+     * @param InstancePayMode Instance purchase type. Available values are: PREPAID, POSTPAID, SERVERLESS
      */
     public void setInstancePayMode(String InstancePayMode) {
         this.InstancePayMode = InstancePayMode;
     }
 
     /**
-     * Get Storage purchase type. available values are: PREPAID, POSTPAID. 
-     * @return StoragePayMode Storage purchase type. available values are: PREPAID, POSTPAID.
+     * Get Storage purchase type. Available values are: PREPAID, POSTPAID 
+     * @return StoragePayMode Storage purchase type. Available values are: PREPAID, POSTPAID
      */
     public String getStoragePayMode() {
         return this.StoragePayMode;
     }
 
     /**
-     * Set Storage purchase type. available values are: PREPAID, POSTPAID.
-     * @param StoragePayMode Storage purchase type. available values are: PREPAID, POSTPAID.
+     * Set Storage purchase type. Available values are: PREPAID, POSTPAID
+     * @param StoragePayMode Storage purchase type. Available values are: PREPAID, POSTPAID
      */
     public void setStoragePayMode(String StoragePayMode) {
         this.StoragePayMode = StoragePayMode;
     }
 
     /**
-     * Get Specifies the product specification. 
-     * @return GoodsSpecs Specifies the product specification.
+     * Get Product specification 
+     * @return GoodsSpecs Product specification
      */
     public GoodsSpec [] getGoodsSpecs() {
         return this.GoodsSpecs;
     }
 
     /**
-     * Set Specifies the product specification.
-     * @param GoodsSpecs Specifies the product specification.
+     * Set Product specification
+     * @param GoodsSpecs Product specification
      */
     public void setGoodsSpecs(GoodsSpec [] GoodsSpecs) {
         this.GoodsSpecs = GoodsSpecs;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class LibraDBClusterSrcInfo extends AbstractModel {
 
     /**
-    * Source endpoint type
+    * Source type
     */
     @SerializedName("SrcInstanceType")
     @Expose
@@ -80,7 +80,7 @@ public class LibraDBClusterSrcInfo extends AbstractModel {
     private String Password;
 
     /**
-    * Source sql mode
+    * sql_mode of the source
     */
     @SerializedName("SqlMode")
     @Expose
@@ -94,14 +94,14 @@ public class LibraDBClusterSrcInfo extends AbstractModel {
     private Long SrcAppId;
 
     /**
-    * source account
+    * Source account
     */
     @SerializedName("SrcUin")
     @Expose
     private String SrcUin;
 
     /**
-    * sub-account
+    * Source sub-account
     */
     @SerializedName("SrcSubAccountUin")
     @Expose
@@ -122,23 +122,23 @@ public class LibraDBClusterSrcInfo extends AbstractModel {
     private String Region;
 
     /**
-    * Operation of the source instance
+    * Operations on the source instance
     */
     @SerializedName("Operation")
     @Expose
     private String Operation;
 
     /**
-     * Get Source endpoint type 
-     * @return SrcInstanceType Source endpoint type
+     * Get Source type 
+     * @return SrcInstanceType Source type
      */
     public String getSrcInstanceType() {
         return this.SrcInstanceType;
     }
 
     /**
-     * Set Source endpoint type
-     * @param SrcInstanceType Source endpoint type
+     * Set Source type
+     * @param SrcInstanceType Source type
      */
     public void setSrcInstanceType(String SrcInstanceType) {
         this.SrcInstanceType = SrcInstanceType;
@@ -257,16 +257,16 @@ public class LibraDBClusterSrcInfo extends AbstractModel {
     }
 
     /**
-     * Get Source sql mode 
-     * @return SqlMode Source sql mode
+     * Get sql_mode of the source 
+     * @return SqlMode sql_mode of the source
      */
     public String getSqlMode() {
         return this.SqlMode;
     }
 
     /**
-     * Set Source sql mode
-     * @param SqlMode Source sql mode
+     * Set sql_mode of the source
+     * @param SqlMode sql_mode of the source
      */
     public void setSqlMode(String SqlMode) {
         this.SqlMode = SqlMode;
@@ -289,32 +289,32 @@ public class LibraDBClusterSrcInfo extends AbstractModel {
     }
 
     /**
-     * Get source account 
-     * @return SrcUin source account
+     * Get Source account 
+     * @return SrcUin Source account
      */
     public String getSrcUin() {
         return this.SrcUin;
     }
 
     /**
-     * Set source account
-     * @param SrcUin source account
+     * Set Source account
+     * @param SrcUin Source account
      */
     public void setSrcUin(String SrcUin) {
         this.SrcUin = SrcUin;
     }
 
     /**
-     * Get sub-account 
-     * @return SrcSubAccountUin sub-account
+     * Get Source sub-account 
+     * @return SrcSubAccountUin Source sub-account
      */
     public String getSrcSubAccountUin() {
         return this.SrcSubAccountUin;
     }
 
     /**
-     * Set sub-account
-     * @param SrcSubAccountUin sub-account
+     * Set Source sub-account
+     * @param SrcSubAccountUin Source sub-account
      */
     public void setSrcSubAccountUin(String SrcSubAccountUin) {
         this.SrcSubAccountUin = SrcSubAccountUin;
@@ -353,16 +353,16 @@ public class LibraDBClusterSrcInfo extends AbstractModel {
     }
 
     /**
-     * Get Operation of the source instance 
-     * @return Operation Operation of the source instance
+     * Get Operations on the source instance 
+     * @return Operation Operations on the source instance
      */
     public String getOperation() {
         return this.Operation;
     }
 
     /**
-     * Set Operation of the source instance
-     * @param Operation Operation of the source instance
+     * Set Operations on the source instance
+     * @param Operation Operations on the source instance
      */
     public void setOperation(String Operation) {
         this.Operation = Operation;

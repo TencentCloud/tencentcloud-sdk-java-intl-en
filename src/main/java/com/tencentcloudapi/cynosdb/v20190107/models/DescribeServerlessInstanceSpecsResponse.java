@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeServerlessInstanceSpecsResponse extends AbstractModel {
 
     /**
-    * <p>Serverless instance available specifications</p>
+    * <p>Available specifications for Serverless instances</p>
     */
     @SerializedName("Specs")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeServerlessInstanceSpecsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get <p>Serverless instance available specifications</p> 
-     * @return Specs <p>Serverless instance available specifications</p>
+     * Get <p>Available specifications for Serverless instances</p> 
+     * @return Specs <p>Available specifications for Serverless instances</p>
      */
     public ServerlessSpec [] getSpecs() {
         return this.Specs;
     }
 
     /**
-     * Set <p>Serverless instance available specifications</p>
-     * @param Specs <p>Serverless instance available specifications</p>
+     * Set <p>Available specifications for Serverless instances</p>
+     * @param Specs <p>Available specifications for Serverless instances</p>
      */
     public void setSpecs(ServerlessSpec [] Specs) {
         this.Specs = Specs;

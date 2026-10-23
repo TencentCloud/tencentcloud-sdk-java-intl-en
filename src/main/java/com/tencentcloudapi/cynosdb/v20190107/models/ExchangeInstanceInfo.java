@@ -31,7 +31,7 @@ public class ExchangeInstanceInfo extends AbstractModel {
     private RollbackInstanceInfo SrcInstanceInfo;
 
     /**
-    * Target instance information.
+    * Destination instance information.
     */
     @SerializedName("DstInstanceInfo")
     @Expose
@@ -54,16 +54,16 @@ public class ExchangeInstanceInfo extends AbstractModel {
     }
 
     /**
-     * Get Target instance information. 
-     * @return DstInstanceInfo Target instance information.
+     * Get Destination instance information. 
+     * @return DstInstanceInfo Destination instance information.
      */
     public RollbackInstanceInfo getDstInstanceInfo() {
         return this.DstInstanceInfo;
     }
 
     /**
-     * Set Target instance information.
-     * @param DstInstanceInfo Target instance information.
+     * Set Destination instance information.
+     * @param DstInstanceInfo Destination instance information.
      */
     public void setDstInstanceInfo(RollbackInstanceInfo DstInstanceInfo) {
         this.DstInstanceInfo = DstInstanceInfo;

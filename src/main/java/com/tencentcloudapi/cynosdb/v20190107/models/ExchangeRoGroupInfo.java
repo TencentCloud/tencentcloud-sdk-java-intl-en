@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class ExchangeRoGroupInfo extends AbstractModel {
 
     /**
-    * Source RO group information.
+    * Source RO group information
     */
     @SerializedName("SrcRoGroupInfo")
     @Expose
     private RollbackRoGroupInfo SrcRoGroupInfo;
 
     /**
-    * Target RO group information.
+    * Target RO group information
     */
     @SerializedName("DstRoGroupInfo")
     @Expose
     private RollbackRoGroupInfo DstRoGroupInfo;
 
     /**
-     * Get Source RO group information. 
-     * @return SrcRoGroupInfo Source RO group information.
+     * Get Source RO group information 
+     * @return SrcRoGroupInfo Source RO group information
      */
     public RollbackRoGroupInfo getSrcRoGroupInfo() {
         return this.SrcRoGroupInfo;
     }
 
     /**
-     * Set Source RO group information.
-     * @param SrcRoGroupInfo Source RO group information.
+     * Set Source RO group information
+     * @param SrcRoGroupInfo Source RO group information
      */
     public void setSrcRoGroupInfo(RollbackRoGroupInfo SrcRoGroupInfo) {
         this.SrcRoGroupInfo = SrcRoGroupInfo;
     }
 
     /**
-     * Get Target RO group information. 
-     * @return DstRoGroupInfo Target RO group information.
+     * Get Target RO group information 
+     * @return DstRoGroupInfo Target RO group information
      */
     public RollbackRoGroupInfo getDstRoGroupInfo() {
         return this.DstRoGroupInfo;
     }
 
     /**
-     * Set Target RO group information.
-     * @param DstRoGroupInfo Target RO group information.
+     * Set Target RO group information
+     * @param DstRoGroupInfo Target RO group information
      */
     public void setDstRoGroupInfo(RollbackRoGroupInfo DstRoGroupInfo) {
         this.DstRoGroupInfo = DstRoGroupInfo;

@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class SlaveZoneAttrItem extends AbstractModel {
 
     /**
-    * Availability zone.
+    * Availability zone
     */
     @SerializedName("Zone")
     @Expose
     private String Zone;
 
     /**
-    * binlog synchronization mode.
+    * binlog synchronization mode
     */
     @SerializedName("BinlogSyncWay")
     @Expose
     private String BinlogSyncWay;
 
     /**
-    * Semi-Sync timeout period in milliseconds.
+    * Semi-sync timeout period, in milliseconds.
     */
     @SerializedName("SemiSyncTimeout")
     @Expose
     private Long SemiSyncTimeout;
 
     /**
-     * Get Availability zone. 
-     * @return Zone Availability zone.
+     * Get Availability zone 
+     * @return Zone Availability zone
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * Set Availability zone.
-     * @param Zone Availability zone.
+     * Set Availability zone
+     * @param Zone Availability zone
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
     }
 
     /**
-     * Get binlog synchronization mode. 
-     * @return BinlogSyncWay binlog synchronization mode.
+     * Get binlog synchronization mode 
+     * @return BinlogSyncWay binlog synchronization mode
      */
     public String getBinlogSyncWay() {
         return this.BinlogSyncWay;
     }
 
     /**
-     * Set binlog synchronization mode.
-     * @param BinlogSyncWay binlog synchronization mode.
+     * Set binlog synchronization mode
+     * @param BinlogSyncWay binlog synchronization mode
      */
     public void setBinlogSyncWay(String BinlogSyncWay) {
         this.BinlogSyncWay = BinlogSyncWay;
     }
 
     /**
-     * Get Semi-Sync timeout period in milliseconds. 
-     * @return SemiSyncTimeout Semi-Sync timeout period in milliseconds.
+     * Get Semi-sync timeout period, in milliseconds. 
+     * @return SemiSyncTimeout Semi-sync timeout period, in milliseconds.
      */
     public Long getSemiSyncTimeout() {
         return this.SemiSyncTimeout;
     }
 
     /**
-     * Set Semi-Sync timeout period in milliseconds.
-     * @param SemiSyncTimeout Semi-Sync timeout period in milliseconds.
+     * Set Semi-sync timeout period, in milliseconds.
+     * @param SemiSyncTimeout Semi-sync timeout period, in milliseconds.
      */
     public void setSemiSyncTimeout(Long SemiSyncTimeout) {
         this.SemiSyncTimeout = SemiSyncTimeout;

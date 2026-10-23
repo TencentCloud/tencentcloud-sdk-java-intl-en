@@ -24,35 +24,35 @@ import java.util.HashMap;
 public class GdnTaskInfo extends AbstractModel {
 
     /**
-    * Unique ID of the global database
+    * Global database unique ID
     */
     @SerializedName("GdnId")
     @Expose
     private String GdnId;
 
     /**
-    * unique alias of the global database
+    * Unique alias of the global database
     */
     @SerializedName("GdnName")
     @Expose
     private String GdnName;
 
     /**
-    * Primary Cluster ID
+    * Primary cluster ID
     */
     @SerializedName("PrimaryClusterId")
     @Expose
     private String PrimaryClusterId;
 
     /**
-    * Master cluster region
+    * Region of the primary cluster
     */
     @SerializedName("PrimaryClusterRegion")
     @Expose
     private String PrimaryClusterRegion;
 
     /**
-    * from the cluster region
+    * From the cluster region
     */
     @SerializedName("StandbyClusterRegion")
     @Expose
@@ -73,21 +73,21 @@ public class GdnTaskInfo extends AbstractModel {
     private String StandbyClusterName;
 
     /**
-    * Whether forced switchover is performed
+    * Whether a forced switchover has been performed
     */
     @SerializedName("ForceSwitchGdn")
     @Expose
     private String ForceSwitchGdn;
 
     /**
-    * Return code
+    * code
     */
     @SerializedName("Code")
     @Expose
     private Long Code;
 
     /**
-    * prompt message
+    * Prompt message
     */
     @SerializedName("Message")
     @Expose
@@ -101,80 +101,80 @@ public class GdnTaskInfo extends AbstractModel {
     private String IsSupportForce;
 
     /**
-     * Get Unique ID of the global database 
-     * @return GdnId Unique ID of the global database
+     * Get Global database unique ID 
+     * @return GdnId Global database unique ID
      */
     public String getGdnId() {
         return this.GdnId;
     }
 
     /**
-     * Set Unique ID of the global database
-     * @param GdnId Unique ID of the global database
+     * Set Global database unique ID
+     * @param GdnId Global database unique ID
      */
     public void setGdnId(String GdnId) {
         this.GdnId = GdnId;
     }
 
     /**
-     * Get unique alias of the global database 
-     * @return GdnName unique alias of the global database
+     * Get Unique alias of the global database 
+     * @return GdnName Unique alias of the global database
      */
     public String getGdnName() {
         return this.GdnName;
     }
 
     /**
-     * Set unique alias of the global database
-     * @param GdnName unique alias of the global database
+     * Set Unique alias of the global database
+     * @param GdnName Unique alias of the global database
      */
     public void setGdnName(String GdnName) {
         this.GdnName = GdnName;
     }
 
     /**
-     * Get Primary Cluster ID 
-     * @return PrimaryClusterId Primary Cluster ID
+     * Get Primary cluster ID 
+     * @return PrimaryClusterId Primary cluster ID
      */
     public String getPrimaryClusterId() {
         return this.PrimaryClusterId;
     }
 
     /**
-     * Set Primary Cluster ID
-     * @param PrimaryClusterId Primary Cluster ID
+     * Set Primary cluster ID
+     * @param PrimaryClusterId Primary cluster ID
      */
     public void setPrimaryClusterId(String PrimaryClusterId) {
         this.PrimaryClusterId = PrimaryClusterId;
     }
 
     /**
-     * Get Master cluster region 
-     * @return PrimaryClusterRegion Master cluster region
+     * Get Region of the primary cluster 
+     * @return PrimaryClusterRegion Region of the primary cluster
      */
     public String getPrimaryClusterRegion() {
         return this.PrimaryClusterRegion;
     }
 
     /**
-     * Set Master cluster region
-     * @param PrimaryClusterRegion Master cluster region
+     * Set Region of the primary cluster
+     * @param PrimaryClusterRegion Region of the primary cluster
      */
     public void setPrimaryClusterRegion(String PrimaryClusterRegion) {
         this.PrimaryClusterRegion = PrimaryClusterRegion;
     }
 
     /**
-     * Get from the cluster region 
-     * @return StandbyClusterRegion from the cluster region
+     * Get From the cluster region 
+     * @return StandbyClusterRegion From the cluster region
      */
     public String getStandbyClusterRegion() {
         return this.StandbyClusterRegion;
     }
 
     /**
-     * Set from the cluster region
-     * @param StandbyClusterRegion from the cluster region
+     * Set From the cluster region
+     * @param StandbyClusterRegion From the cluster region
      */
     public void setStandbyClusterRegion(String StandbyClusterRegion) {
         this.StandbyClusterRegion = StandbyClusterRegion;
@@ -213,48 +213,48 @@ public class GdnTaskInfo extends AbstractModel {
     }
 
     /**
-     * Get Whether forced switchover is performed 
-     * @return ForceSwitchGdn Whether forced switchover is performed
+     * Get Whether a forced switchover has been performed 
+     * @return ForceSwitchGdn Whether a forced switchover has been performed
      */
     public String getForceSwitchGdn() {
         return this.ForceSwitchGdn;
     }
 
     /**
-     * Set Whether forced switchover is performed
-     * @param ForceSwitchGdn Whether forced switchover is performed
+     * Set Whether a forced switchover has been performed
+     * @param ForceSwitchGdn Whether a forced switchover has been performed
      */
     public void setForceSwitchGdn(String ForceSwitchGdn) {
         this.ForceSwitchGdn = ForceSwitchGdn;
     }
 
     /**
-     * Get Return code 
-     * @return Code Return code
+     * Get code 
+     * @return Code code
      */
     public Long getCode() {
         return this.Code;
     }
 
     /**
-     * Set Return code
-     * @param Code Return code
+     * Set code
+     * @param Code code
      */
     public void setCode(Long Code) {
         this.Code = Code;
     }
 
     /**
-     * Get prompt message 
-     * @return Message prompt message
+     * Get Prompt message 
+     * @return Message Prompt message
      */
     public String getMessage() {
         return this.Message;
     }
 
     /**
-     * Set prompt message
-     * @param Message prompt message
+     * Set Prompt message
+     * @param Message Prompt message
      */
     public void setMessage(String Message) {
         this.Message = Message;

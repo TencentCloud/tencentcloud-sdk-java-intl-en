@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class UpgradeInstanceResponse extends AbstractModel {
 
     /**
-    * Frozen transaction ID.
+    * Frozen transaction ID
     */
     @SerializedName("TranId")
     @Expose
@@ -38,7 +38,7 @@ public class UpgradeInstanceResponse extends AbstractModel {
     private String [] BigDealIds;
 
     /**
-    * Order ID.
+    * Order ID
     */
     @SerializedName("DealNames")
     @Expose
@@ -52,16 +52,16 @@ public class UpgradeInstanceResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Frozen transaction ID. 
-     * @return TranId Frozen transaction ID.
+     * Get Frozen transaction ID 
+     * @return TranId Frozen transaction ID
      */
     public String getTranId() {
         return this.TranId;
     }
 
     /**
-     * Set Frozen transaction ID.
-     * @param TranId Frozen transaction ID.
+     * Set Frozen transaction ID
+     * @param TranId Frozen transaction ID
      */
     public void setTranId(String TranId) {
         this.TranId = TranId;
@@ -84,16 +84,16 @@ public class UpgradeInstanceResponse extends AbstractModel {
     }
 
     /**
-     * Get Order ID. 
-     * @return DealNames Order ID.
+     * Get Order ID 
+     * @return DealNames Order ID
      */
     public String [] getDealNames() {
         return this.DealNames;
     }
 
     /**
-     * Set Order ID.
-     * @param DealNames Order ID.
+     * Set Order ID
+     * @param DealNames Order ID
      */
     public void setDealNames(String [] DealNames) {
         this.DealNames = DealNames;

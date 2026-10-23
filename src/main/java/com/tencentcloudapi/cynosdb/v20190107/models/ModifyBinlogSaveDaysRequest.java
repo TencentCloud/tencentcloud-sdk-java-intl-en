@@ -38,7 +38,7 @@ public class ModifyBinlogSaveDaysRequest extends AbstractModel {
     private Long BinlogSaveDays;
 
     /**
-    * <p>Cross-region backup retention period</p><p>Unit: Day</p>
+    * <p>Cross-region backup retention period</p><p>Unit: day</p>
     */
     @SerializedName("BinlogCrossRegionSaveDays")
     @Expose
@@ -77,16 +77,16 @@ public class ModifyBinlogSaveDaysRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>Cross-region backup retention period</p><p>Unit: Day</p> 
-     * @return BinlogCrossRegionSaveDays <p>Cross-region backup retention period</p><p>Unit: Day</p>
+     * Get <p>Cross-region backup retention period</p><p>Unit: day</p> 
+     * @return BinlogCrossRegionSaveDays <p>Cross-region backup retention period</p><p>Unit: day</p>
      */
     public Long getBinlogCrossRegionSaveDays() {
         return this.BinlogCrossRegionSaveDays;
     }
 
     /**
-     * Set <p>Cross-region backup retention period</p><p>Unit: Day</p>
-     * @param BinlogCrossRegionSaveDays <p>Cross-region backup retention period</p><p>Unit: Day</p>
+     * Set <p>Cross-region backup retention period</p><p>Unit: day</p>
+     * @param BinlogCrossRegionSaveDays <p>Cross-region backup retention period</p><p>Unit: day</p>
      */
     public void setBinlogCrossRegionSaveDays(Long BinlogCrossRegionSaveDays) {
         this.BinlogCrossRegionSaveDays = BinlogCrossRegionSaveDays;

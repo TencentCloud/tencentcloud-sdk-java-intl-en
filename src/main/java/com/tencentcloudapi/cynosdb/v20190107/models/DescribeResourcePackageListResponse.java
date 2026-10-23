@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeResourcePackageListResponse extends AbstractModel {
 
     /**
-    * Total number of resource packs
+    * Total number of resource packages.
     */
     @SerializedName("Total")
     @Expose
     private Long Total;
 
     /**
-    * Resource pack details.
+    * Resource pack details
     */
     @SerializedName("Detail")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeResourcePackageListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Total number of resource packs 
-     * @return Total Total number of resource packs
+     * Get Total number of resource packages. 
+     * @return Total Total number of resource packages.
      */
     public Long getTotal() {
         return this.Total;
     }
 
     /**
-     * Set Total number of resource packs
-     * @param Total Total number of resource packs
+     * Set Total number of resource packages.
+     * @param Total Total number of resource packages.
      */
     public void setTotal(Long Total) {
         this.Total = Total;
     }
 
     /**
-     * Get Resource pack details. 
-     * @return Detail Resource pack details.
+     * Get Resource pack details 
+     * @return Detail Resource pack details
      */
     public Package [] getDetail() {
         return this.Detail;
     }
 
     /**
-     * Set Resource pack details.
-     * @param Detail Resource pack details.
+     * Set Resource pack details
+     * @param Detail Resource pack details
      */
     public void setDetail(Package [] Detail) {
         this.Detail = Detail;

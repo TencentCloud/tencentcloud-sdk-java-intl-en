@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class ProxyVersionInfo extends AbstractModel {
 
     /**
-    * proxy version number.
+    * proxy version number
     */
     @SerializedName("ProxyVersion")
     @Expose
     private String ProxyVersion;
 
     /**
-    * Version description: GA: stable version. BETA: BETA version. DEPRECATED: outdated.
+    * Version description: GA: stable version. BETA: preview version. DEPRECATED: deprecated.
     */
     @SerializedName("ProxyVersionType")
     @Expose
     private String ProxyVersionType;
 
     /**
-     * Get proxy version number. 
-     * @return ProxyVersion proxy version number.
+     * Get proxy version number 
+     * @return ProxyVersion proxy version number
      */
     public String getProxyVersion() {
         return this.ProxyVersion;
     }
 
     /**
-     * Set proxy version number.
-     * @param ProxyVersion proxy version number.
+     * Set proxy version number
+     * @param ProxyVersion proxy version number
      */
     public void setProxyVersion(String ProxyVersion) {
         this.ProxyVersion = ProxyVersion;
     }
 
     /**
-     * Get Version description: GA: stable version. BETA: BETA version. DEPRECATED: outdated. 
-     * @return ProxyVersionType Version description: GA: stable version. BETA: BETA version. DEPRECATED: outdated.
+     * Get Version description: GA: stable version. BETA: preview version. DEPRECATED: deprecated. 
+     * @return ProxyVersionType Version description: GA: stable version. BETA: preview version. DEPRECATED: deprecated.
      */
     public String getProxyVersionType() {
         return this.ProxyVersionType;
     }
 
     /**
-     * Set Version description: GA: stable version. BETA: BETA version. DEPRECATED: outdated.
-     * @param ProxyVersionType Version description: GA: stable version. BETA: BETA version. DEPRECATED: outdated.
+     * Set Version description: GA: stable version. BETA: preview version. DEPRECATED: deprecated.
+     * @param ProxyVersionType Version description: GA: stable version. BETA: preview version. DEPRECATED: deprecated.
      */
     public void setProxyVersionType(String ProxyVersionType) {
         this.ProxyVersionType = ProxyVersionType;

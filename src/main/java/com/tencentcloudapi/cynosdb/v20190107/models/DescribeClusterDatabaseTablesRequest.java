@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeClusterDatabaseTablesRequest extends AbstractModel {
 
     /**
-    * Cluster ID
+    * Cluster ID.
     */
     @SerializedName("ClusterId")
     @Expose
@@ -52,24 +52,24 @@ public class DescribeClusterDatabaseTablesRequest extends AbstractModel {
     private Long Limit;
 
     /**
-    * Specifies the table type.
-Specifies that "view" only returns the view, "base_table" only returns the basic table, and "all" returns both the view and the table. the default value is all.
+    * Table type.
+"view" means only return views, "base_table" means only return basic tables, and "all" means return both views and tables. Default value: all.
     */
     @SerializedName("TableType")
     @Expose
     private String TableType;
 
     /**
-     * Get Cluster ID 
-     * @return ClusterId Cluster ID
+     * Get Cluster ID. 
+     * @return ClusterId Cluster ID.
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set Cluster ID
-     * @param ClusterId Cluster ID
+     * Set Cluster ID.
+     * @param ClusterId Cluster ID.
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
@@ -124,20 +124,20 @@ Specifies that "view" only returns the view, "base_table" only returns the basic
     }
 
     /**
-     * Get Specifies the table type.
-Specifies that "view" only returns the view, "base_table" only returns the basic table, and "all" returns both the view and the table. the default value is all. 
-     * @return TableType Specifies the table type.
-Specifies that "view" only returns the view, "base_table" only returns the basic table, and "all" returns both the view and the table. the default value is all.
+     * Get Table type.
+"view" means only return views, "base_table" means only return basic tables, and "all" means return both views and tables. Default value: all. 
+     * @return TableType Table type.
+"view" means only return views, "base_table" means only return basic tables, and "all" means return both views and tables. Default value: all.
      */
     public String getTableType() {
         return this.TableType;
     }
 
     /**
-     * Set Specifies the table type.
-Specifies that "view" only returns the view, "base_table" only returns the basic table, and "all" returns both the view and the table. the default value is all.
-     * @param TableType Specifies the table type.
-Specifies that "view" only returns the view, "base_table" only returns the basic table, and "all" returns both the view and the table. the default value is all.
+     * Set Table type.
+"view" means only return views, "base_table" means only return basic tables, and "all" means return both views and tables. Default value: all.
+     * @param TableType Table type.
+"view" means only return views, "base_table" means only return basic tables, and "all" means return both views and tables. Default value: all.
      */
     public void setTableType(String TableType) {
         this.TableType = TableType;

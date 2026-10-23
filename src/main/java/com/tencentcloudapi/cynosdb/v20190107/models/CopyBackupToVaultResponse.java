@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CopyBackupToVaultResponse extends AbstractModel {
 
     /**
-    * <p>Task ID.</p>
+    * <p>Task ID</p>
     */
     @SerializedName("TaskId")
     @Expose
@@ -38,16 +38,16 @@ public class CopyBackupToVaultResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get <p>Task ID.</p> 
-     * @return TaskId <p>Task ID.</p>
+     * Get <p>Task ID</p> 
+     * @return TaskId <p>Task ID</p>
      */
     public Long getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set <p>Task ID.</p>
-     * @param TaskId <p>Task ID.</p>
+     * Set <p>Task ID</p>
+     * @param TaskId <p>Task ID</p>
      */
     public void setTaskId(Long TaskId) {
         this.TaskId = TaskId;

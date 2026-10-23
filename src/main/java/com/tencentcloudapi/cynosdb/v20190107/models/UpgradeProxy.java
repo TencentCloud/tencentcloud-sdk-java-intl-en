@@ -45,7 +45,7 @@ public class UpgradeProxy extends AbstractModel {
     private ProxyZone [] ProxyZones;
 
     /**
-    * Rebalance
+    * Load rebalance
     */
     @SerializedName("ReloadBalance")
     @Expose
@@ -100,16 +100,16 @@ public class UpgradeProxy extends AbstractModel {
     }
 
     /**
-     * Get Rebalance 
-     * @return ReloadBalance Rebalance
+     * Get Load rebalance 
+     * @return ReloadBalance Load rebalance
      */
     public String getReloadBalance() {
         return this.ReloadBalance;
     }
 
     /**
-     * Set Rebalance
-     * @param ReloadBalance Rebalance
+     * Set Load rebalance
+     * @param ReloadBalance Load rebalance
      */
     public void setReloadBalance(String ReloadBalance) {
         this.ReloadBalance = ReloadBalance;

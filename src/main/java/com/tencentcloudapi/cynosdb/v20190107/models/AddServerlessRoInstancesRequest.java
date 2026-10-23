@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class AddServerlessRoInstancesRequest extends AbstractModel {
 
     /**
-    * <p>Cluster Id</p>
+    * <p>Cluster Id.</p>
     */
     @SerializedName("ClusterId")
     @Expose
     private String ClusterId;
 
     /**
-    * <p>Minimum specification of the ro instance</p>
+    * <p>Minimum specification of a read-only instance</p>
     */
     @SerializedName("MinCpu")
     @Expose
     private Float MinCpu;
 
     /**
-    * <p>Maximum specification of ro instance</p>
+    * <p>Maximum specification of a read-only instance</p>
     */
     @SerializedName("MaxCpu")
     @Expose
@@ -80,14 +80,14 @@ public class AddServerlessRoInstancesRequest extends AbstractModel {
     private String [] SecurityGroupIds;
 
     /**
-    * <p>Whether to automatically pause</p><p>Enumeration value:</p><ul><li>yes: Yes</li><li>no: No</li></ul>
+    * <p>Whether to auto pause</p><p>Enumeration values:</p><ul><li>yes: Yes</li><li>no: No</li></ul>
     */
     @SerializedName("AutoPause")
     @Expose
     private String AutoPause;
 
     /**
-    * <p>Auto-pause time</p><p>Unit: s</p>
+    * <p>Auto-pause time</p><p>Unit: seconds</p>
     */
     @SerializedName("AutoPauseDelay")
     @Expose
@@ -115,48 +115,48 @@ public class AddServerlessRoInstancesRequest extends AbstractModel {
     private Long RoCount;
 
     /**
-     * Get <p>Cluster Id</p> 
-     * @return ClusterId <p>Cluster Id</p>
+     * Get <p>Cluster Id.</p> 
+     * @return ClusterId <p>Cluster Id.</p>
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set <p>Cluster Id</p>
-     * @param ClusterId <p>Cluster Id</p>
+     * Set <p>Cluster Id.</p>
+     * @param ClusterId <p>Cluster Id.</p>
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get <p>Minimum specification of the ro instance</p> 
-     * @return MinCpu <p>Minimum specification of the ro instance</p>
+     * Get <p>Minimum specification of a read-only instance</p> 
+     * @return MinCpu <p>Minimum specification of a read-only instance</p>
      */
     public Float getMinCpu() {
         return this.MinCpu;
     }
 
     /**
-     * Set <p>Minimum specification of the ro instance</p>
-     * @param MinCpu <p>Minimum specification of the ro instance</p>
+     * Set <p>Minimum specification of a read-only instance</p>
+     * @param MinCpu <p>Minimum specification of a read-only instance</p>
      */
     public void setMinCpu(Float MinCpu) {
         this.MinCpu = MinCpu;
     }
 
     /**
-     * Get <p>Maximum specification of ro instance</p> 
-     * @return MaxCpu <p>Maximum specification of ro instance</p>
+     * Get <p>Maximum specification of a read-only instance</p> 
+     * @return MaxCpu <p>Maximum specification of a read-only instance</p>
      */
     public Float getMaxCpu() {
         return this.MaxCpu;
     }
 
     /**
-     * Set <p>Maximum specification of ro instance</p>
-     * @param MaxCpu <p>Maximum specification of ro instance</p>
+     * Set <p>Maximum specification of a read-only instance</p>
+     * @param MaxCpu <p>Maximum specification of a read-only instance</p>
      */
     public void setMaxCpu(Float MaxCpu) {
         this.MaxCpu = MaxCpu;
@@ -243,32 +243,32 @@ public class AddServerlessRoInstancesRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>Whether to automatically pause</p><p>Enumeration value:</p><ul><li>yes: Yes</li><li>no: No</li></ul> 
-     * @return AutoPause <p>Whether to automatically pause</p><p>Enumeration value:</p><ul><li>yes: Yes</li><li>no: No</li></ul>
+     * Get <p>Whether to auto pause</p><p>Enumeration values:</p><ul><li>yes: Yes</li><li>no: No</li></ul> 
+     * @return AutoPause <p>Whether to auto pause</p><p>Enumeration values:</p><ul><li>yes: Yes</li><li>no: No</li></ul>
      */
     public String getAutoPause() {
         return this.AutoPause;
     }
 
     /**
-     * Set <p>Whether to automatically pause</p><p>Enumeration value:</p><ul><li>yes: Yes</li><li>no: No</li></ul>
-     * @param AutoPause <p>Whether to automatically pause</p><p>Enumeration value:</p><ul><li>yes: Yes</li><li>no: No</li></ul>
+     * Set <p>Whether to auto pause</p><p>Enumeration values:</p><ul><li>yes: Yes</li><li>no: No</li></ul>
+     * @param AutoPause <p>Whether to auto pause</p><p>Enumeration values:</p><ul><li>yes: Yes</li><li>no: No</li></ul>
      */
     public void setAutoPause(String AutoPause) {
         this.AutoPause = AutoPause;
     }
 
     /**
-     * Get <p>Auto-pause time</p><p>Unit: s</p> 
-     * @return AutoPauseDelay <p>Auto-pause time</p><p>Unit: s</p>
+     * Get <p>Auto-pause time</p><p>Unit: seconds</p> 
+     * @return AutoPauseDelay <p>Auto-pause time</p><p>Unit: seconds</p>
      */
     public Long getAutoPauseDelay() {
         return this.AutoPauseDelay;
     }
 
     /**
-     * Set <p>Auto-pause time</p><p>Unit: s</p>
-     * @param AutoPauseDelay <p>Auto-pause time</p><p>Unit: s</p>
+     * Set <p>Auto-pause time</p><p>Unit: seconds</p>
+     * @param AutoPauseDelay <p>Auto-pause time</p><p>Unit: seconds</p>
      */
     public void setAutoPauseDelay(Long AutoPauseDelay) {
         this.AutoPauseDelay = AutoPauseDelay;

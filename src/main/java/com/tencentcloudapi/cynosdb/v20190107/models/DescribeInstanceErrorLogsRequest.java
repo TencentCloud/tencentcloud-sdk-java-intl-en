@@ -31,14 +31,14 @@ public class DescribeInstanceErrorLogsRequest extends AbstractModel {
     private String InstanceId;
 
     /**
-    * Limit on the number of logs.
+    * Log entry limit
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * Offset of the log number.
+    * Log entry offset
     */
     @SerializedName("Offset")
     @Expose
@@ -59,28 +59,28 @@ public class DescribeInstanceErrorLogsRequest extends AbstractModel {
     private String EndTime;
 
     /**
-    * Sorting field. Valid value: 'Timestamp'.
+    * Sorting field. Valid values: `Timestamp` (enumeration value).
     */
     @SerializedName("OrderBy")
     @Expose
     private String OrderBy;
 
     /**
-    * Sorting order. Valid values: `ASC`, `DESC`.
+    * Sorting type. Valid values: `ASC`, `DESC`.
     */
     @SerializedName("OrderByType")
     @Expose
     private String OrderByType;
 
     /**
-    * Log level, which supports combo search by multiple levels. Valid values: `error`, `warning`, `note`.
+    * Log level. Valid values: error, warning, note. You can search multiple levels at the same time.
     */
     @SerializedName("LogLevels")
     @Expose
     private String [] LogLevels;
 
     /**
-    * Keywords, supports fuzzy search.
+    * Keyword. Fuzzy search is supported.
     */
     @SerializedName("KeyWords")
     @Expose
@@ -103,32 +103,32 @@ public class DescribeInstanceErrorLogsRequest extends AbstractModel {
     }
 
     /**
-     * Get Limit on the number of logs. 
-     * @return Limit Limit on the number of logs.
+     * Get Log entry limit 
+     * @return Limit Log entry limit
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Limit on the number of logs.
-     * @param Limit Limit on the number of logs.
+     * Set Log entry limit
+     * @param Limit Log entry limit
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get Offset of the log number. 
-     * @return Offset Offset of the log number.
+     * Get Log entry offset 
+     * @return Offset Log entry offset
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Offset of the log number.
-     * @param Offset Offset of the log number.
+     * Set Log entry offset
+     * @param Offset Log entry offset
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
@@ -167,64 +167,64 @@ public class DescribeInstanceErrorLogsRequest extends AbstractModel {
     }
 
     /**
-     * Get Sorting field. Valid value: 'Timestamp'. 
-     * @return OrderBy Sorting field. Valid value: 'Timestamp'.
+     * Get Sorting field. Valid values: `Timestamp` (enumeration value). 
+     * @return OrderBy Sorting field. Valid values: `Timestamp` (enumeration value).
      */
     public String getOrderBy() {
         return this.OrderBy;
     }
 
     /**
-     * Set Sorting field. Valid value: 'Timestamp'.
-     * @param OrderBy Sorting field. Valid value: 'Timestamp'.
+     * Set Sorting field. Valid values: `Timestamp` (enumeration value).
+     * @param OrderBy Sorting field. Valid values: `Timestamp` (enumeration value).
      */
     public void setOrderBy(String OrderBy) {
         this.OrderBy = OrderBy;
     }
 
     /**
-     * Get Sorting order. Valid values: `ASC`, `DESC`. 
-     * @return OrderByType Sorting order. Valid values: `ASC`, `DESC`.
+     * Get Sorting type. Valid values: `ASC`, `DESC`. 
+     * @return OrderByType Sorting type. Valid values: `ASC`, `DESC`.
      */
     public String getOrderByType() {
         return this.OrderByType;
     }
 
     /**
-     * Set Sorting order. Valid values: `ASC`, `DESC`.
-     * @param OrderByType Sorting order. Valid values: `ASC`, `DESC`.
+     * Set Sorting type. Valid values: `ASC`, `DESC`.
+     * @param OrderByType Sorting type. Valid values: `ASC`, `DESC`.
      */
     public void setOrderByType(String OrderByType) {
         this.OrderByType = OrderByType;
     }
 
     /**
-     * Get Log level, which supports combo search by multiple levels. Valid values: `error`, `warning`, `note`. 
-     * @return LogLevels Log level, which supports combo search by multiple levels. Valid values: `error`, `warning`, `note`.
+     * Get Log level. Valid values: error, warning, note. You can search multiple levels at the same time. 
+     * @return LogLevels Log level. Valid values: error, warning, note. You can search multiple levels at the same time.
      */
     public String [] getLogLevels() {
         return this.LogLevels;
     }
 
     /**
-     * Set Log level, which supports combo search by multiple levels. Valid values: `error`, `warning`, `note`.
-     * @param LogLevels Log level, which supports combo search by multiple levels. Valid values: `error`, `warning`, `note`.
+     * Set Log level. Valid values: error, warning, note. You can search multiple levels at the same time.
+     * @param LogLevels Log level. Valid values: error, warning, note. You can search multiple levels at the same time.
      */
     public void setLogLevels(String [] LogLevels) {
         this.LogLevels = LogLevels;
     }
 
     /**
-     * Get Keywords, supports fuzzy search. 
-     * @return KeyWords Keywords, supports fuzzy search.
+     * Get Keyword. Fuzzy search is supported. 
+     * @return KeyWords Keyword. Fuzzy search is supported.
      */
     public String [] getKeyWords() {
         return this.KeyWords;
     }
 
     /**
-     * Set Keywords, supports fuzzy search.
-     * @param KeyWords Keywords, supports fuzzy search.
+     * Set Keyword. Fuzzy search is supported.
+     * @param KeyWords Keyword. Fuzzy search is supported.
      */
     public void setKeyWords(String [] KeyWords) {
         this.KeyWords = KeyWords;

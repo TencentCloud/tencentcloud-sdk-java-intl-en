@@ -31,7 +31,7 @@ public class AddInstancesRequest extends AbstractModel {
     private String ClusterId;
 
     /**
-    * <p>Cpu cores</p>
+    * <p>Number of Cpu cores.</p>
     */
     @SerializedName("Cpu")
     @Expose
@@ -52,7 +52,7 @@ public class AddInstancesRequest extends AbstractModel {
     private Long ReadOnlyCount;
 
     /**
-    * <p>Instance Machine Type. Supported values are as follows:</p><ul><li>common: indicates universal type</li><li>exclusive: indicates exclusive</li></ul>
+    * <p>Instance Machine Type. Supported values are as follows:</p><ul><li>common: universal type</li><li>exclusive: dedicated</li></ul>
     */
     @SerializedName("DeviceType")
     @Expose
@@ -66,7 +66,7 @@ public class AddInstancesRequest extends AbstractModel {
     private String InstanceGrpId;
 
     /**
-    * <p>ID of the associated VPC network.</p>
+    * <p>ID of the VPC network it belongs to.</p>
     */
     @SerializedName("VpcId")
     @Expose
@@ -101,7 +101,7 @@ public class AddInstancesRequest extends AbstractModel {
     private Long AutoVoucher;
 
     /**
-    * <p>Database type, value ranges from...to...: </p><li> MYSQL </li>
+    * <p>Database type. Value range: </p><li> MYSQL </li>
     */
     @SerializedName("DbType")
     @Expose
@@ -115,14 +115,14 @@ public class AddInstancesRequest extends AbstractModel {
     private String OrderSource;
 
     /**
-    * <p>Transaction mode. 0: place order and pay; 1: place order</p>
+    * <p>Transaction mode 0-Place order and pay 1-Place order</p>
     */
     @SerializedName("DealMode")
     @Expose
     private Long DealMode;
 
     /**
-    * <p>Parameter template ID</p>
+    * <p>Parameter template ID.</p>
     */
     @SerializedName("ParamTemplateId")
     @Expose
@@ -143,7 +143,7 @@ public class AddInstancesRequest extends AbstractModel {
     private String [] SecurityGroupIds;
 
     /**
-    * <p>proxy sync upgrade</p>
+    * <p>Upgrade proxy synchronously</p>
     */
     @SerializedName("UpgradeProxy")
     @Expose
@@ -166,16 +166,16 @@ public class AddInstancesRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>Cpu cores</p> 
-     * @return Cpu <p>Cpu cores</p>
+     * Get <p>Number of Cpu cores.</p> 
+     * @return Cpu <p>Number of Cpu cores.</p>
      */
     public Long getCpu() {
         return this.Cpu;
     }
 
     /**
-     * Set <p>Cpu cores</p>
-     * @param Cpu <p>Cpu cores</p>
+     * Set <p>Number of Cpu cores.</p>
+     * @param Cpu <p>Number of Cpu cores.</p>
      */
     public void setCpu(Long Cpu) {
         this.Cpu = Cpu;
@@ -214,16 +214,16 @@ public class AddInstancesRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>Instance Machine Type. Supported values are as follows:</p><ul><li>common: indicates universal type</li><li>exclusive: indicates exclusive</li></ul> 
-     * @return DeviceType <p>Instance Machine Type. Supported values are as follows:</p><ul><li>common: indicates universal type</li><li>exclusive: indicates exclusive</li></ul>
+     * Get <p>Instance Machine Type. Supported values are as follows:</p><ul><li>common: universal type</li><li>exclusive: dedicated</li></ul> 
+     * @return DeviceType <p>Instance Machine Type. Supported values are as follows:</p><ul><li>common: universal type</li><li>exclusive: dedicated</li></ul>
      */
     public String getDeviceType() {
         return this.DeviceType;
     }
 
     /**
-     * Set <p>Instance Machine Type. Supported values are as follows:</p><ul><li>common: indicates universal type</li><li>exclusive: indicates exclusive</li></ul>
-     * @param DeviceType <p>Instance Machine Type. Supported values are as follows:</p><ul><li>common: indicates universal type</li><li>exclusive: indicates exclusive</li></ul>
+     * Set <p>Instance Machine Type. Supported values are as follows:</p><ul><li>common: universal type</li><li>exclusive: dedicated</li></ul>
+     * @param DeviceType <p>Instance Machine Type. Supported values are as follows:</p><ul><li>common: universal type</li><li>exclusive: dedicated</li></ul>
      */
     public void setDeviceType(String DeviceType) {
         this.DeviceType = DeviceType;
@@ -250,16 +250,16 @@ public class AddInstancesRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>ID of the associated VPC network.</p> 
-     * @return VpcId <p>ID of the associated VPC network.</p>
+     * Get <p>ID of the VPC network it belongs to.</p> 
+     * @return VpcId <p>ID of the VPC network it belongs to.</p>
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set <p>ID of the associated VPC network.</p>
-     * @param VpcId <p>ID of the associated VPC network.</p>
+     * Set <p>ID of the VPC network it belongs to.</p>
+     * @param VpcId <p>ID of the VPC network it belongs to.</p>
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
@@ -330,16 +330,16 @@ public class AddInstancesRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>Database type, value ranges from...to...: </p><li> MYSQL </li> 
-     * @return DbType <p>Database type, value ranges from...to...: </p><li> MYSQL </li>
+     * Get <p>Database type. Value range: </p><li> MYSQL </li> 
+     * @return DbType <p>Database type. Value range: </p><li> MYSQL </li>
      */
     public String getDbType() {
         return this.DbType;
     }
 
     /**
-     * Set <p>Database type, value ranges from...to...: </p><li> MYSQL </li>
-     * @param DbType <p>Database type, value ranges from...to...: </p><li> MYSQL </li>
+     * Set <p>Database type. Value range: </p><li> MYSQL </li>
+     * @param DbType <p>Database type. Value range: </p><li> MYSQL </li>
      */
     public void setDbType(String DbType) {
         this.DbType = DbType;
@@ -362,32 +362,32 @@ public class AddInstancesRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>Transaction mode. 0: place order and pay; 1: place order</p> 
-     * @return DealMode <p>Transaction mode. 0: place order and pay; 1: place order</p>
+     * Get <p>Transaction mode 0-Place order and pay 1-Place order</p> 
+     * @return DealMode <p>Transaction mode 0-Place order and pay 1-Place order</p>
      */
     public Long getDealMode() {
         return this.DealMode;
     }
 
     /**
-     * Set <p>Transaction mode. 0: place order and pay; 1: place order</p>
-     * @param DealMode <p>Transaction mode. 0: place order and pay; 1: place order</p>
+     * Set <p>Transaction mode 0-Place order and pay 1-Place order</p>
+     * @param DealMode <p>Transaction mode 0-Place order and pay 1-Place order</p>
      */
     public void setDealMode(Long DealMode) {
         this.DealMode = DealMode;
     }
 
     /**
-     * Get <p>Parameter template ID</p> 
-     * @return ParamTemplateId <p>Parameter template ID</p>
+     * Get <p>Parameter template ID.</p> 
+     * @return ParamTemplateId <p>Parameter template ID.</p>
      */
     public Long getParamTemplateId() {
         return this.ParamTemplateId;
     }
 
     /**
-     * Set <p>Parameter template ID</p>
-     * @param ParamTemplateId <p>Parameter template ID</p>
+     * Set <p>Parameter template ID.</p>
+     * @param ParamTemplateId <p>Parameter template ID.</p>
      */
     public void setParamTemplateId(Long ParamTemplateId) {
         this.ParamTemplateId = ParamTemplateId;
@@ -426,16 +426,16 @@ public class AddInstancesRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>proxy sync upgrade</p> 
-     * @return UpgradeProxy <p>proxy sync upgrade</p>
+     * Get <p>Upgrade proxy synchronously</p> 
+     * @return UpgradeProxy <p>Upgrade proxy synchronously</p>
      */
     public UpgradeProxy getUpgradeProxy() {
         return this.UpgradeProxy;
     }
 
     /**
-     * Set <p>proxy sync upgrade</p>
-     * @param UpgradeProxy <p>proxy sync upgrade</p>
+     * Set <p>Upgrade proxy synchronously</p>
+     * @param UpgradeProxy <p>Upgrade proxy synchronously</p>
      */
     public void setUpgradeProxy(UpgradeProxy UpgradeProxy) {
         this.UpgradeProxy = UpgradeProxy;

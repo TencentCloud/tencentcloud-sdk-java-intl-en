@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class IsolateClusterResponse extends AbstractModel {
 
     /**
-    * Task flow ID (returned for pay-as-you-go or serverless resources. if necessary to sync task status, please use the DescribeFlow api).
+    * Task flow ID (returned for postpaid or serverless resources; to sync task status if necessary, please use the DescribeFlow API)
     */
     @SerializedName("FlowId")
     @Expose
@@ -45,16 +45,16 @@ public class IsolateClusterResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Task flow ID (returned for pay-as-you-go or serverless resources. if necessary to sync task status, please use the DescribeFlow api). 
-     * @return FlowId Task flow ID (returned for pay-as-you-go or serverless resources. if necessary to sync task status, please use the DescribeFlow api).
+     * Get Task flow ID (returned for postpaid or serverless resources; to sync task status if necessary, please use the DescribeFlow API) 
+     * @return FlowId Task flow ID (returned for postpaid or serverless resources; to sync task status if necessary, please use the DescribeFlow API)
      */
     public Long getFlowId() {
         return this.FlowId;
     }
 
     /**
-     * Set Task flow ID (returned for pay-as-you-go or serverless resources. if necessary to sync task status, please use the DescribeFlow api).
-     * @param FlowId Task flow ID (returned for pay-as-you-go or serverless resources. if necessary to sync task status, please use the DescribeFlow api).
+     * Set Task flow ID (returned for postpaid or serverless resources; to sync task status if necessary, please use the DescribeFlow API)
+     * @param FlowId Task flow ID (returned for postpaid or serverless resources; to sync task status if necessary, please use the DescribeFlow API)
      */
     public void setFlowId(Long FlowId) {
         this.FlowId = FlowId;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class OpenClusterReadOnlyInstanceGroupAccessResponse extends AbstractModel {
 
     /**
-    * Initiate process ID.
+    * Process ID for initiation
     */
     @SerializedName("FlowId")
     @Expose
@@ -38,16 +38,16 @@ public class OpenClusterReadOnlyInstanceGroupAccessResponse extends AbstractMode
     private String RequestId;
 
     /**
-     * Get Initiate process ID. 
-     * @return FlowId Initiate process ID.
+     * Get Process ID for initiation 
+     * @return FlowId Process ID for initiation
      */
     public Long getFlowId() {
         return this.FlowId;
     }
 
     /**
-     * Set Initiate process ID.
-     * @param FlowId Initiate process ID.
+     * Set Process ID for initiation
+     * @param FlowId Process ID for initiation
      */
     public void setFlowId(Long FlowId) {
         this.FlowId = FlowId;

@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class InquirePriceModifyResponse extends AbstractModel {
 
     /**
-    * Instance price.
+    * Instance price
     */
     @SerializedName("InstancePrice")
     @Expose
     private TradePrice InstancePrice;
 
     /**
-    * Specifies the storage price.
+    * Storage price
     */
     @SerializedName("StoragePrice")
     @Expose
@@ -45,32 +45,32 @@ public class InquirePriceModifyResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Instance price. 
-     * @return InstancePrice Instance price.
+     * Get Instance price 
+     * @return InstancePrice Instance price
      */
     public TradePrice getInstancePrice() {
         return this.InstancePrice;
     }
 
     /**
-     * Set Instance price.
-     * @param InstancePrice Instance price.
+     * Set Instance price
+     * @param InstancePrice Instance price
      */
     public void setInstancePrice(TradePrice InstancePrice) {
         this.InstancePrice = InstancePrice;
     }
 
     /**
-     * Get Specifies the storage price. 
-     * @return StoragePrice Specifies the storage price.
+     * Get Storage price 
+     * @return StoragePrice Storage price
      */
     public TradePrice getStoragePrice() {
         return this.StoragePrice;
     }
 
     /**
-     * Set Specifies the storage price.
-     * @param StoragePrice Specifies the storage price.
+     * Set Storage price
+     * @param StoragePrice Storage price
      */
     public void setStoragePrice(TradePrice StoragePrice) {
         this.StoragePrice = StoragePrice;

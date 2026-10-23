@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModifyLibraDBClusterProjectRequest extends AbstractModel {
 
     /**
-    * Analysis Cluster ID List
+    * Analytical cluster ID list
     */
     @SerializedName("ClusterIdSet")
     @Expose
@@ -38,16 +38,16 @@ public class ModifyLibraDBClusterProjectRequest extends AbstractModel {
     private Long ProjectId;
 
     /**
-     * Get Analysis Cluster ID List 
-     * @return ClusterIdSet Analysis Cluster ID List
+     * Get Analytical cluster ID list 
+     * @return ClusterIdSet Analytical cluster ID list
      */
     public String [] getClusterIdSet() {
         return this.ClusterIdSet;
     }
 
     /**
-     * Set Analysis Cluster ID List
-     * @param ClusterIdSet Analysis Cluster ID List
+     * Set Analytical cluster ID list
+     * @param ClusterIdSet Analytical cluster ID list
      */
     public void setClusterIdSet(String [] ClusterIdSet) {
         this.ClusterIdSet = ClusterIdSet;

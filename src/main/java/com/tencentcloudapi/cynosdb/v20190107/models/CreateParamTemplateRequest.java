@@ -31,7 +31,7 @@ public class CreateParamTemplateRequest extends AbstractModel {
     private String TemplateName;
 
     /**
-    * MySQL version number
+    * mysql version number
     */
     @SerializedName("EngineVersion")
     @Expose
@@ -45,21 +45,21 @@ public class CreateParamTemplateRequest extends AbstractModel {
     private String TemplateDescription;
 
     /**
-    * ID of the template to be copied
+    * Optional parameter. ID of the template to replicate.
     */
     @SerializedName("TemplateId")
     @Expose
     private Long TemplateId;
 
     /**
-    * Database type. Valid values:  `NORMAL` (default), `SERVERLESS`.
+    * Database type. Available values: NORMAL (default), SERVERLESS
     */
     @SerializedName("DbMode")
     @Expose
     private String DbMode;
 
     /**
-    * List of the parameters
+    * Parameter list
     */
     @SerializedName("ParamList")
     @Expose
@@ -82,16 +82,16 @@ public class CreateParamTemplateRequest extends AbstractModel {
     }
 
     /**
-     * Get MySQL version number 
-     * @return EngineVersion MySQL version number
+     * Get mysql version number 
+     * @return EngineVersion mysql version number
      */
     public String getEngineVersion() {
         return this.EngineVersion;
     }
 
     /**
-     * Set MySQL version number
-     * @param EngineVersion MySQL version number
+     * Set mysql version number
+     * @param EngineVersion mysql version number
      */
     public void setEngineVersion(String EngineVersion) {
         this.EngineVersion = EngineVersion;
@@ -114,48 +114,48 @@ public class CreateParamTemplateRequest extends AbstractModel {
     }
 
     /**
-     * Get ID of the template to be copied 
-     * @return TemplateId ID of the template to be copied
+     * Get Optional parameter. ID of the template to replicate. 
+     * @return TemplateId Optional parameter. ID of the template to replicate.
      */
     public Long getTemplateId() {
         return this.TemplateId;
     }
 
     /**
-     * Set ID of the template to be copied
-     * @param TemplateId ID of the template to be copied
+     * Set Optional parameter. ID of the template to replicate.
+     * @param TemplateId Optional parameter. ID of the template to replicate.
      */
     public void setTemplateId(Long TemplateId) {
         this.TemplateId = TemplateId;
     }
 
     /**
-     * Get Database type. Valid values:  `NORMAL` (default), `SERVERLESS`. 
-     * @return DbMode Database type. Valid values:  `NORMAL` (default), `SERVERLESS`.
+     * Get Database type. Available values: NORMAL (default), SERVERLESS 
+     * @return DbMode Database type. Available values: NORMAL (default), SERVERLESS
      */
     public String getDbMode() {
         return this.DbMode;
     }
 
     /**
-     * Set Database type. Valid values:  `NORMAL` (default), `SERVERLESS`.
-     * @param DbMode Database type. Valid values:  `NORMAL` (default), `SERVERLESS`.
+     * Set Database type. Available values: NORMAL (default), SERVERLESS
+     * @param DbMode Database type. Available values: NORMAL (default), SERVERLESS
      */
     public void setDbMode(String DbMode) {
         this.DbMode = DbMode;
     }
 
     /**
-     * Get List of the parameters 
-     * @return ParamList List of the parameters
+     * Get Parameter list 
+     * @return ParamList Parameter list
      */
     public ParamItem [] getParamList() {
         return this.ParamList;
     }
 
     /**
-     * Set List of the parameters
-     * @param ParamList List of the parameters
+     * Set Parameter list
+     * @param ParamList Parameter list
      */
     public void setParamList(ParamItem [] ParamList) {
         this.ParamList = ParamList;

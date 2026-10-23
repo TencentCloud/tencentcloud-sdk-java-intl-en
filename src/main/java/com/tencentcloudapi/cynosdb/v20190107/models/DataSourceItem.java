@@ -52,7 +52,7 @@ public class DataSourceItem extends AbstractModel {
     private String IP;
 
     /**
-    * Source database port
+    * Source database port.
     */
     @SerializedName("Port")
     @Expose
@@ -66,14 +66,14 @@ public class DataSourceItem extends AbstractModel {
     private String Region;
 
     /**
-    * Source instance availability zone
+    * Source instance AZ
     */
     @SerializedName("Zone")
     @Expose
     private String Zone;
 
     /**
-    * Source main account uin
+    * Source root account uin
     */
     @SerializedName("SrcUin")
     @Expose
@@ -87,7 +87,7 @@ public class DataSourceItem extends AbstractModel {
     private String AccountMode;
 
     /**
-    * sync task status
+    * Sync task status
     */
     @SerializedName("ReplicationJobStatus")
     @Expose
@@ -158,16 +158,16 @@ public class DataSourceItem extends AbstractModel {
     }
 
     /**
-     * Get Source database port 
-     * @return Port Source database port
+     * Get Source database port. 
+     * @return Port Source database port.
      */
     public Long getPort() {
         return this.Port;
     }
 
     /**
-     * Set Source database port
-     * @param Port Source database port
+     * Set Source database port.
+     * @param Port Source database port.
      */
     public void setPort(Long Port) {
         this.Port = Port;
@@ -190,32 +190,32 @@ public class DataSourceItem extends AbstractModel {
     }
 
     /**
-     * Get Source instance availability zone 
-     * @return Zone Source instance availability zone
+     * Get Source instance AZ 
+     * @return Zone Source instance AZ
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * Set Source instance availability zone
-     * @param Zone Source instance availability zone
+     * Set Source instance AZ
+     * @param Zone Source instance AZ
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
     }
 
     /**
-     * Get Source main account uin 
-     * @return SrcUin Source main account uin
+     * Get Source root account uin 
+     * @return SrcUin Source root account uin
      */
     public String getSrcUin() {
         return this.SrcUin;
     }
 
     /**
-     * Set Source main account uin
-     * @param SrcUin Source main account uin
+     * Set Source root account uin
+     * @param SrcUin Source root account uin
      */
     public void setSrcUin(String SrcUin) {
         this.SrcUin = SrcUin;
@@ -238,16 +238,16 @@ public class DataSourceItem extends AbstractModel {
     }
 
     /**
-     * Get sync task status 
-     * @return ReplicationJobStatus sync task status
+     * Get Sync task status 
+     * @return ReplicationJobStatus Sync task status
      */
     public String getReplicationJobStatus() {
         return this.ReplicationJobStatus;
     }
 
     /**
-     * Set sync task status
-     * @param ReplicationJobStatus sync task status
+     * Set Sync task status
+     * @param ReplicationJobStatus Sync task status
      */
     public void setReplicationJobStatus(String ReplicationJobStatus) {
         this.ReplicationJobStatus = ReplicationJobStatus;

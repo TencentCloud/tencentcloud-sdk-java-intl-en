@@ -31,7 +31,7 @@ public class ModifyClusterBinlogRedoLogAutoCopyVaultRequest extends AbstractMode
     private String ClusterId;
 
     /**
-    * Automatically copy the safe configuration list
+    * Automatically copy the configuration list of the safe
     */
     @SerializedName("AutoCopyVaults")
     @Expose
@@ -54,16 +54,16 @@ public class ModifyClusterBinlogRedoLogAutoCopyVaultRequest extends AbstractMode
     }
 
     /**
-     * Get Automatically copy the safe configuration list 
-     * @return AutoCopyVaults Automatically copy the safe configuration list
+     * Get Automatically copy the configuration list of the safe 
+     * @return AutoCopyVaults Automatically copy the configuration list of the safe
      */
     public CreateBackupVaultItem [] getAutoCopyVaults() {
         return this.AutoCopyVaults;
     }
 
     /**
-     * Set Automatically copy the safe configuration list
-     * @param AutoCopyVaults Automatically copy the safe configuration list
+     * Set Automatically copy the configuration list of the safe
+     * @param AutoCopyVaults Automatically copy the configuration list of the safe
      */
     public void setAutoCopyVaults(CreateBackupVaultItem [] AutoCopyVaults) {
         this.AutoCopyVaults = AutoCopyVaults;

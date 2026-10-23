@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeAccountPrivilegesRequest extends AbstractModel {
 
     /**
-    * Cluster ID
+    * Cluster ID.
     */
     @SerializedName("ClusterId")
     @Expose
@@ -66,16 +66,16 @@ public class DescribeAccountPrivilegesRequest extends AbstractModel {
     private String TableName;
 
     /**
-     * Get Cluster ID 
-     * @return ClusterId Cluster ID
+     * Get Cluster ID. 
+     * @return ClusterId Cluster ID.
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set Cluster ID
-     * @param ClusterId Cluster ID
+     * Set Cluster ID.
+     * @param ClusterId Cluster ID.
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;

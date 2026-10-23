@@ -31,35 +31,35 @@ public class ModifyBackupDownloadRestrictionRequest extends AbstractModel {
     private String [] ClusterIds;
 
     /**
-    * Download limit type. valid values: NoLimit (unlimited), LimitOnlyIntranet (limited to private network), Customize (custom).
+    * Download limit type. NoLimit: unlimited. LimitOnlyIntranet: restricted to private network. Customize: custom.
     */
     @SerializedName("LimitType")
     @Expose
     private String LimitType;
 
     /**
-    * This parameter only supports In, which indicates that the vpc specified by LimitVpc can be downloaded. the default is In.
+    * This parameter only supports In, which means the vpc specified by LimitVpc can be downloaded. The default is In.
     */
     @SerializedName("VpcComparisonSymbol")
     @Expose
     private String VpcComparisonSymbol;
 
     /**
-    * Specified ips can download; specified ips are not allowed to download.
+    * In: Download is allowed from the specified ip; NotIn: Download is not allowed from the specified ip
     */
     @SerializedName("IpComparisonSymbol")
     @Expose
     private String IpComparisonSymbol;
 
     /**
-    * Limit the vpc settings for downloads.
+    * vpc settings with download restricted
     */
     @SerializedName("LimitVpcs")
     @Expose
     private BackupLimitVpcItem [] LimitVpcs;
 
     /**
-    * Specifies the ip settings for limiting downloads.
+    * ip settings for download restriction
     */
     @SerializedName("LimitIps")
     @Expose
@@ -82,80 +82,80 @@ public class ModifyBackupDownloadRestrictionRequest extends AbstractModel {
     }
 
     /**
-     * Get Download limit type. valid values: NoLimit (unlimited), LimitOnlyIntranet (limited to private network), Customize (custom). 
-     * @return LimitType Download limit type. valid values: NoLimit (unlimited), LimitOnlyIntranet (limited to private network), Customize (custom).
+     * Get Download limit type. NoLimit: unlimited. LimitOnlyIntranet: restricted to private network. Customize: custom. 
+     * @return LimitType Download limit type. NoLimit: unlimited. LimitOnlyIntranet: restricted to private network. Customize: custom.
      */
     public String getLimitType() {
         return this.LimitType;
     }
 
     /**
-     * Set Download limit type. valid values: NoLimit (unlimited), LimitOnlyIntranet (limited to private network), Customize (custom).
-     * @param LimitType Download limit type. valid values: NoLimit (unlimited), LimitOnlyIntranet (limited to private network), Customize (custom).
+     * Set Download limit type. NoLimit: unlimited. LimitOnlyIntranet: restricted to private network. Customize: custom.
+     * @param LimitType Download limit type. NoLimit: unlimited. LimitOnlyIntranet: restricted to private network. Customize: custom.
      */
     public void setLimitType(String LimitType) {
         this.LimitType = LimitType;
     }
 
     /**
-     * Get This parameter only supports In, which indicates that the vpc specified by LimitVpc can be downloaded. the default is In. 
-     * @return VpcComparisonSymbol This parameter only supports In, which indicates that the vpc specified by LimitVpc can be downloaded. the default is In.
+     * Get This parameter only supports In, which means the vpc specified by LimitVpc can be downloaded. The default is In. 
+     * @return VpcComparisonSymbol This parameter only supports In, which means the vpc specified by LimitVpc can be downloaded. The default is In.
      */
     public String getVpcComparisonSymbol() {
         return this.VpcComparisonSymbol;
     }
 
     /**
-     * Set This parameter only supports In, which indicates that the vpc specified by LimitVpc can be downloaded. the default is In.
-     * @param VpcComparisonSymbol This parameter only supports In, which indicates that the vpc specified by LimitVpc can be downloaded. the default is In.
+     * Set This parameter only supports In, which means the vpc specified by LimitVpc can be downloaded. The default is In.
+     * @param VpcComparisonSymbol This parameter only supports In, which means the vpc specified by LimitVpc can be downloaded. The default is In.
      */
     public void setVpcComparisonSymbol(String VpcComparisonSymbol) {
         this.VpcComparisonSymbol = VpcComparisonSymbol;
     }
 
     /**
-     * Get Specified ips can download; specified ips are not allowed to download. 
-     * @return IpComparisonSymbol Specified ips can download; specified ips are not allowed to download.
+     * Get In: Download is allowed from the specified ip; NotIn: Download is not allowed from the specified ip 
+     * @return IpComparisonSymbol In: Download is allowed from the specified ip; NotIn: Download is not allowed from the specified ip
      */
     public String getIpComparisonSymbol() {
         return this.IpComparisonSymbol;
     }
 
     /**
-     * Set Specified ips can download; specified ips are not allowed to download.
-     * @param IpComparisonSymbol Specified ips can download; specified ips are not allowed to download.
+     * Set In: Download is allowed from the specified ip; NotIn: Download is not allowed from the specified ip
+     * @param IpComparisonSymbol In: Download is allowed from the specified ip; NotIn: Download is not allowed from the specified ip
      */
     public void setIpComparisonSymbol(String IpComparisonSymbol) {
         this.IpComparisonSymbol = IpComparisonSymbol;
     }
 
     /**
-     * Get Limit the vpc settings for downloads. 
-     * @return LimitVpcs Limit the vpc settings for downloads.
+     * Get vpc settings with download restricted 
+     * @return LimitVpcs vpc settings with download restricted
      */
     public BackupLimitVpcItem [] getLimitVpcs() {
         return this.LimitVpcs;
     }
 
     /**
-     * Set Limit the vpc settings for downloads.
-     * @param LimitVpcs Limit the vpc settings for downloads.
+     * Set vpc settings with download restricted
+     * @param LimitVpcs vpc settings with download restricted
      */
     public void setLimitVpcs(BackupLimitVpcItem [] LimitVpcs) {
         this.LimitVpcs = LimitVpcs;
     }
 
     /**
-     * Get Specifies the ip settings for limiting downloads. 
-     * @return LimitIps Specifies the ip settings for limiting downloads.
+     * Get ip settings for download restriction 
+     * @return LimitIps ip settings for download restriction
      */
     public String [] getLimitIps() {
         return this.LimitIps;
     }
 
     /**
-     * Set Specifies the ip settings for limiting downloads.
-     * @param LimitIps Specifies the ip settings for limiting downloads.
+     * Set ip settings for download restriction
+     * @param LimitIps ip settings for download restriction
      */
     public void setLimitIps(String [] LimitIps) {
         this.LimitIps = LimitIps;

@@ -123,7 +123,7 @@ public class LibraDBClusterSet extends AbstractModel {
     private String Region;
 
     /**
-    * Auto-renewal flag. 1: Automatic renewal. 0: Non-renewal upon expiration.
+    * Auto-renewal flag. 1: automatic renewal. 0: non-renewal upon expiration.
     */
     @SerializedName("RenewFlag")
     @Expose
@@ -144,7 +144,7 @@ public class LibraDBClusterSet extends AbstractModel {
     private String StatusDesc;
 
     /**
-    * Storage size in GB
+    * Storage size in GB.
     */
     @SerializedName("Storage")
     @Expose
@@ -186,14 +186,14 @@ public class LibraDBClusterSet extends AbstractModel {
     private String VpcId;
 
     /**
-    * vport port
+    * vport.
     */
     @SerializedName("Vport")
     @Expose
     private Long Vport;
 
     /**
-    * Update time
+    * Update time.
     */
     @SerializedName("UpdateTime")
     @Expose
@@ -207,7 +207,7 @@ public class LibraDBClusterSet extends AbstractModel {
     private String MasterZone;
 
     /**
-    * physical AZ
+    * Physical AZ
     */
     @SerializedName("PhysicalZone")
     @Expose
@@ -449,16 +449,16 @@ public class LibraDBClusterSet extends AbstractModel {
     }
 
     /**
-     * Get Auto-renewal flag. 1: Automatic renewal. 0: Non-renewal upon expiration. 
-     * @return RenewFlag Auto-renewal flag. 1: Automatic renewal. 0: Non-renewal upon expiration.
+     * Get Auto-renewal flag. 1: automatic renewal. 0: non-renewal upon expiration. 
+     * @return RenewFlag Auto-renewal flag. 1: automatic renewal. 0: non-renewal upon expiration.
      */
     public Long getRenewFlag() {
         return this.RenewFlag;
     }
 
     /**
-     * Set Auto-renewal flag. 1: Automatic renewal. 0: Non-renewal upon expiration.
-     * @param RenewFlag Auto-renewal flag. 1: Automatic renewal. 0: Non-renewal upon expiration.
+     * Set Auto-renewal flag. 1: automatic renewal. 0: non-renewal upon expiration.
+     * @param RenewFlag Auto-renewal flag. 1: automatic renewal. 0: non-renewal upon expiration.
      */
     public void setRenewFlag(Long RenewFlag) {
         this.RenewFlag = RenewFlag;
@@ -497,16 +497,16 @@ public class LibraDBClusterSet extends AbstractModel {
     }
 
     /**
-     * Get Storage size in GB 
-     * @return Storage Storage size in GB
+     * Get Storage size in GB. 
+     * @return Storage Storage size in GB.
      */
     public Long getStorage() {
         return this.Storage;
     }
 
     /**
-     * Set Storage size in GB
-     * @param Storage Storage size in GB
+     * Set Storage size in GB.
+     * @param Storage Storage size in GB.
      */
     public void setStorage(Long Storage) {
         this.Storage = Storage;
@@ -593,32 +593,32 @@ public class LibraDBClusterSet extends AbstractModel {
     }
 
     /**
-     * Get vport port 
-     * @return Vport vport port
+     * Get vport. 
+     * @return Vport vport.
      */
     public Long getVport() {
         return this.Vport;
     }
 
     /**
-     * Set vport port
-     * @param Vport vport port
+     * Set vport.
+     * @param Vport vport.
      */
     public void setVport(Long Vport) {
         this.Vport = Vport;
     }
 
     /**
-     * Get Update time 
-     * @return UpdateTime Update time
+     * Get Update time. 
+     * @return UpdateTime Update time.
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set Update time
-     * @param UpdateTime Update time
+     * Set Update time.
+     * @param UpdateTime Update time.
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
@@ -641,16 +641,16 @@ public class LibraDBClusterSet extends AbstractModel {
     }
 
     /**
-     * Get physical AZ 
-     * @return PhysicalZone physical AZ
+     * Get Physical AZ 
+     * @return PhysicalZone Physical AZ
      */
     public String getPhysicalZone() {
         return this.PhysicalZone;
     }
 
     /**
-     * Set physical AZ
-     * @param PhysicalZone physical AZ
+     * Set Physical AZ
+     * @param PhysicalZone Physical AZ
      */
     public void setPhysicalZone(String PhysicalZone) {
         this.PhysicalZone = PhysicalZone;

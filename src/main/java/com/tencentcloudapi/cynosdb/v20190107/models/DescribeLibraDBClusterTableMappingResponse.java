@@ -31,7 +31,7 @@ public class DescribeLibraDBClusterTableMappingResponse extends AbstractModel {
     private Long TotalCnt;
 
     /**
-    * Database mapping info
+    * Database mapping information
     */
     @SerializedName("TableMappings")
     @Expose
@@ -61,16 +61,16 @@ public class DescribeLibraDBClusterTableMappingResponse extends AbstractModel {
     }
 
     /**
-     * Get Database mapping info 
-     * @return TableMappings Database mapping info
+     * Get Database mapping information 
+     * @return TableMappings Database mapping information
      */
     public TableMappingObject [] getTableMappings() {
         return this.TableMappings;
     }
 
     /**
-     * Set Database mapping info
-     * @param TableMappings Database mapping info
+     * Set Database mapping information
+     * @param TableMappings Database mapping information
      */
     public void setTableMappings(TableMappingObject [] TableMappings) {
         this.TableMappings = TableMappings;

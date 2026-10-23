@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class RollbackRoGroupInfo extends AbstractModel {
 
     /**
-    * Instance group ID.
+    * Instance group ID
     */
     @SerializedName("InstanceGroupId")
     @Expose
     private String InstanceGroupId;
 
     /**
-    * VPC information.
+    * VPC information
     */
     @SerializedName("UniqVpcId")
     @Expose
@@ -45,46 +45,46 @@ public class RollbackRoGroupInfo extends AbstractModel {
     private String UniqSubnetId;
 
     /**
-    * vip information.
+    * VIP information.
     */
     @SerializedName("Vip")
     @Expose
     private String Vip;
 
     /**
-    * Specifies the vport information.
+    * Virtual port information.
     */
     @SerializedName("Vport")
     @Expose
     private Long Vport;
 
     /**
-     * Get Instance group ID. 
-     * @return InstanceGroupId Instance group ID.
+     * Get Instance group ID 
+     * @return InstanceGroupId Instance group ID
      */
     public String getInstanceGroupId() {
         return this.InstanceGroupId;
     }
 
     /**
-     * Set Instance group ID.
-     * @param InstanceGroupId Instance group ID.
+     * Set Instance group ID
+     * @param InstanceGroupId Instance group ID
      */
     public void setInstanceGroupId(String InstanceGroupId) {
         this.InstanceGroupId = InstanceGroupId;
     }
 
     /**
-     * Get VPC information. 
-     * @return UniqVpcId VPC information.
+     * Get VPC information 
+     * @return UniqVpcId VPC information
      */
     public String getUniqVpcId() {
         return this.UniqVpcId;
     }
 
     /**
-     * Set VPC information.
-     * @param UniqVpcId VPC information.
+     * Set VPC information
+     * @param UniqVpcId VPC information
      */
     public void setUniqVpcId(String UniqVpcId) {
         this.UniqVpcId = UniqVpcId;
@@ -107,32 +107,32 @@ public class RollbackRoGroupInfo extends AbstractModel {
     }
 
     /**
-     * Get vip information. 
-     * @return Vip vip information.
+     * Get VIP information. 
+     * @return Vip VIP information.
      */
     public String getVip() {
         return this.Vip;
     }
 
     /**
-     * Set vip information.
-     * @param Vip vip information.
+     * Set VIP information.
+     * @param Vip VIP information.
      */
     public void setVip(String Vip) {
         this.Vip = Vip;
     }
 
     /**
-     * Get Specifies the vport information. 
-     * @return Vport Specifies the vport information.
+     * Get Virtual port information. 
+     * @return Vport Virtual port information.
      */
     public Long getVport() {
         return this.Vport;
     }
 
     /**
-     * Set Specifies the vport information.
-     * @param Vport Specifies the vport information.
+     * Set Virtual port information.
+     * @param Vport Virtual port information.
      */
     public void setVport(Long Vport) {
         this.Vport = Vport;

@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class ModifyResourcePackageClustersRequest extends AbstractModel {
 
     /**
-    * The unique ID of a resource pack
+    * Unique ID of the resource package
     */
     @SerializedName("PackageId")
     @Expose
     private String PackageId;
 
     /**
-    * ID of the cluster to be bound
+    * Cluster ID for which a binding relationship needs to be established.
     */
     @SerializedName("BindClusterIds")
     @Expose
     private String [] BindClusterIds;
 
     /**
-    * ID of the cluster to be unbound
+    * Cluster ID for which the binding relationship needs to be unbound.
     */
     @SerializedName("UnbindClusterIds")
     @Expose
     private String [] UnbindClusterIds;
 
     /**
-     * Get The unique ID of a resource pack 
-     * @return PackageId The unique ID of a resource pack
+     * Get Unique ID of the resource package 
+     * @return PackageId Unique ID of the resource package
      */
     public String getPackageId() {
         return this.PackageId;
     }
 
     /**
-     * Set The unique ID of a resource pack
-     * @param PackageId The unique ID of a resource pack
+     * Set Unique ID of the resource package
+     * @param PackageId Unique ID of the resource package
      */
     public void setPackageId(String PackageId) {
         this.PackageId = PackageId;
     }
 
     /**
-     * Get ID of the cluster to be bound 
-     * @return BindClusterIds ID of the cluster to be bound
+     * Get Cluster ID for which a binding relationship needs to be established. 
+     * @return BindClusterIds Cluster ID for which a binding relationship needs to be established.
      */
     public String [] getBindClusterIds() {
         return this.BindClusterIds;
     }
 
     /**
-     * Set ID of the cluster to be bound
-     * @param BindClusterIds ID of the cluster to be bound
+     * Set Cluster ID for which a binding relationship needs to be established.
+     * @param BindClusterIds Cluster ID for which a binding relationship needs to be established.
      */
     public void setBindClusterIds(String [] BindClusterIds) {
         this.BindClusterIds = BindClusterIds;
     }
 
     /**
-     * Get ID of the cluster to be unbound 
-     * @return UnbindClusterIds ID of the cluster to be unbound
+     * Get Cluster ID for which the binding relationship needs to be unbound. 
+     * @return UnbindClusterIds Cluster ID for which the binding relationship needs to be unbound.
      */
     public String [] getUnbindClusterIds() {
         return this.UnbindClusterIds;
     }
 
     /**
-     * Set ID of the cluster to be unbound
-     * @param UnbindClusterIds ID of the cluster to be unbound
+     * Set Cluster ID for which the binding relationship needs to be unbound.
+     * @param UnbindClusterIds Cluster ID for which the binding relationship needs to be unbound.
      */
     public void setUnbindClusterIds(String [] UnbindClusterIds) {
         this.UnbindClusterIds = UnbindClusterIds;

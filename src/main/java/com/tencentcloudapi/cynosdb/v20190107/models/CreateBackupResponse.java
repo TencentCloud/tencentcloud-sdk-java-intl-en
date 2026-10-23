@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateBackupResponse extends AbstractModel {
 
     /**
-    * Async task flow ID
+    * Asynchronous task flow ID
     */
     @SerializedName("FlowId")
     @Expose
@@ -38,16 +38,16 @@ public class CreateBackupResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Async task flow ID 
-     * @return FlowId Async task flow ID
+     * Get Asynchronous task flow ID 
+     * @return FlowId Asynchronous task flow ID
      */
     public Long getFlowId() {
         return this.FlowId;
     }
 
     /**
-     * Set Async task flow ID
-     * @param FlowId Async task flow ID
+     * Set Asynchronous task flow ID
+     * @param FlowId Asynchronous task flow ID
      */
     public void setFlowId(Long FlowId) {
         this.FlowId = FlowId;

@@ -24,42 +24,42 @@ import java.util.HashMap;
 public class ExportInstanceSlowQueriesRequest extends AbstractModel {
 
     /**
-    * Instance ID
+    * Instance ID.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Transaction start time
+    * Earliest transaction start time.
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * Transaction end time
+    * Latest transaction start time.
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-    * Maximum number
+    * Limit of Items
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * Offset
+    * Offset.
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * Username
+    * Username.
     */
     @SerializedName("Username")
     @Expose
@@ -80,117 +80,117 @@ public class ExportInstanceSlowQueriesRequest extends AbstractModel {
     private String Database;
 
     /**
-    * File type. Valid values: csv, original.
+    * File type. Available values: csv, original
     */
     @SerializedName("FileType")
     @Expose
     private String FileType;
 
     /**
-    * Sorting field. Valid values: `QueryTime`, `LockTime`, `RowsExamined`, and `RowsSent`.
+    * Sorting field. Available values: QueryTime, LockTime, RowsExamined, RowsSent
     */
     @SerializedName("OrderBy")
     @Expose
     private String OrderBy;
 
     /**
-    * Sorting order. Valid values: `asc`, `desc`.
+    * Sorting type. Valid values: asc and desc.
     */
     @SerializedName("OrderByType")
     @Expose
     private String OrderByType;
 
     /**
-     * Get Instance ID 
-     * @return InstanceId Instance ID
+     * Get Instance ID. 
+     * @return InstanceId Instance ID.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID
-     * @param InstanceId Instance ID
+     * Set Instance ID.
+     * @param InstanceId Instance ID.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Transaction start time 
-     * @return StartTime Transaction start time
+     * Get Earliest transaction start time. 
+     * @return StartTime Earliest transaction start time.
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set Transaction start time
-     * @param StartTime Transaction start time
+     * Set Earliest transaction start time.
+     * @param StartTime Earliest transaction start time.
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get Transaction end time 
-     * @return EndTime Transaction end time
+     * Get Latest transaction start time. 
+     * @return EndTime Latest transaction start time.
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set Transaction end time
-     * @param EndTime Transaction end time
+     * Set Latest transaction start time.
+     * @param EndTime Latest transaction start time.
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get Maximum number 
-     * @return Limit Maximum number
+     * Get Limit of Items 
+     * @return Limit Limit of Items
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Maximum number
-     * @param Limit Maximum number
+     * Set Limit of Items
+     * @param Limit Limit of Items
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get Offset 
-     * @return Offset Offset
+     * Get Offset. 
+     * @return Offset Offset.
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Offset
-     * @param Offset Offset
+     * Set Offset.
+     * @param Offset Offset.
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get Username 
-     * @return Username Username
+     * Get Username. 
+     * @return Username Username.
      */
     public String getUsername() {
         return this.Username;
     }
 
     /**
-     * Set Username
-     * @param Username Username
+     * Set Username.
+     * @param Username Username.
      */
     public void setUsername(String Username) {
         this.Username = Username;
@@ -229,48 +229,48 @@ public class ExportInstanceSlowQueriesRequest extends AbstractModel {
     }
 
     /**
-     * Get File type. Valid values: csv, original. 
-     * @return FileType File type. Valid values: csv, original.
+     * Get File type. Available values: csv, original 
+     * @return FileType File type. Available values: csv, original
      */
     public String getFileType() {
         return this.FileType;
     }
 
     /**
-     * Set File type. Valid values: csv, original.
-     * @param FileType File type. Valid values: csv, original.
+     * Set File type. Available values: csv, original
+     * @param FileType File type. Available values: csv, original
      */
     public void setFileType(String FileType) {
         this.FileType = FileType;
     }
 
     /**
-     * Get Sorting field. Valid values: `QueryTime`, `LockTime`, `RowsExamined`, and `RowsSent`. 
-     * @return OrderBy Sorting field. Valid values: `QueryTime`, `LockTime`, `RowsExamined`, and `RowsSent`.
+     * Get Sorting field. Available values: QueryTime, LockTime, RowsExamined, RowsSent 
+     * @return OrderBy Sorting field. Available values: QueryTime, LockTime, RowsExamined, RowsSent
      */
     public String getOrderBy() {
         return this.OrderBy;
     }
 
     /**
-     * Set Sorting field. Valid values: `QueryTime`, `LockTime`, `RowsExamined`, and `RowsSent`.
-     * @param OrderBy Sorting field. Valid values: `QueryTime`, `LockTime`, `RowsExamined`, and `RowsSent`.
+     * Set Sorting field. Available values: QueryTime, LockTime, RowsExamined, RowsSent
+     * @param OrderBy Sorting field. Available values: QueryTime, LockTime, RowsExamined, RowsSent
      */
     public void setOrderBy(String OrderBy) {
         this.OrderBy = OrderBy;
     }
 
     /**
-     * Get Sorting order. Valid values: `asc`, `desc`. 
-     * @return OrderByType Sorting order. Valid values: `asc`, `desc`.
+     * Get Sorting type. Valid values: asc and desc. 
+     * @return OrderByType Sorting type. Valid values: asc and desc.
      */
     public String getOrderByType() {
         return this.OrderByType;
     }
 
     /**
-     * Set Sorting order. Valid values: `asc`, `desc`.
-     * @param OrderByType Sorting order. Valid values: `asc`, `desc`.
+     * Set Sorting type. Valid values: asc and desc.
+     * @param OrderByType Sorting type. Valid values: asc and desc.
      */
     public void setOrderByType(String OrderByType) {
         this.OrderByType = OrderByType;

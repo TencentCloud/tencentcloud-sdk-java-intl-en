@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class SwitchClusterZoneRequest extends AbstractModel {
 
     /**
-    * <p>Cluster Id</p>
+    * <p>Cluster Id.</p>
     */
     @SerializedName("ClusterId")
     @Expose
@@ -45,23 +45,23 @@ public class SwitchClusterZoneRequest extends AbstractModel {
     private String NewZone;
 
     /**
-    * <p>Execute during maintenance period - yes, immediately execute - no</p>
+    * <p>Execute during the maintenance period - yes, immediate execution - no</p>
     */
     @SerializedName("IsInMaintainPeriod")
     @Expose
     private String IsInMaintainPeriod;
 
     /**
-     * Get <p>Cluster Id</p> 
-     * @return ClusterId <p>Cluster Id</p>
+     * Get <p>Cluster Id.</p> 
+     * @return ClusterId <p>Cluster Id.</p>
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set <p>Cluster Id</p>
-     * @param ClusterId <p>Cluster Id</p>
+     * Set <p>Cluster Id.</p>
+     * @param ClusterId <p>Cluster Id.</p>
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
@@ -100,16 +100,16 @@ public class SwitchClusterZoneRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>Execute during maintenance period - yes, immediately execute - no</p> 
-     * @return IsInMaintainPeriod <p>Execute during maintenance period - yes, immediately execute - no</p>
+     * Get <p>Execute during the maintenance period - yes, immediate execution - no</p> 
+     * @return IsInMaintainPeriod <p>Execute during the maintenance period - yes, immediate execution - no</p>
      */
     public String getIsInMaintainPeriod() {
         return this.IsInMaintainPeriod;
     }
 
     /**
-     * Set <p>Execute during maintenance period - yes, immediately execute - no</p>
-     * @param IsInMaintainPeriod <p>Execute during maintenance period - yes, immediately execute - no</p>
+     * Set <p>Execute during the maintenance period - yes, immediate execution - no</p>
+     * @param IsInMaintainPeriod <p>Execute during the maintenance period - yes, immediate execution - no</p>
      */
     public void setIsInMaintainPeriod(String IsInMaintainPeriod) {
         this.IsInMaintainPeriod = IsInMaintainPeriod;

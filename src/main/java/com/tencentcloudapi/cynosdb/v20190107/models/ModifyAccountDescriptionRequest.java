@@ -31,7 +31,7 @@ public class ModifyAccountDescriptionRequest extends AbstractModel {
     private String AccountName;
 
     /**
-    * Database account description
+    * Database account description information
     */
     @SerializedName("Description")
     @Expose
@@ -45,7 +45,7 @@ public class ModifyAccountDescriptionRequest extends AbstractModel {
     private String ClusterId;
 
     /**
-    * Host. Default value: `%`
+    * Host. Default value: %.
     */
     @SerializedName("Host")
     @Expose
@@ -68,16 +68,16 @@ public class ModifyAccountDescriptionRequest extends AbstractModel {
     }
 
     /**
-     * Get Database account description 
-     * @return Description Database account description
+     * Get Database account description information 
+     * @return Description Database account description information
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set Database account description
-     * @param Description Database account description
+     * Set Database account description information
+     * @param Description Database account description information
      */
     public void setDescription(String Description) {
         this.Description = Description;
@@ -100,16 +100,16 @@ public class ModifyAccountDescriptionRequest extends AbstractModel {
     }
 
     /**
-     * Get Host. Default value: `%` 
-     * @return Host Host. Default value: `%`
+     * Get Host. Default value: %. 
+     * @return Host Host. Default value: %.
      */
     public String getHost() {
         return this.Host;
     }
 
     /**
-     * Set Host. Default value: `%`
-     * @param Host Host. Default value: `%`
+     * Set Host. Default value: %.
+     * @param Host Host. Default value: %.
      */
     public void setHost(String Host) {
         this.Host = Host;

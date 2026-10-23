@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DescribeFlowRequest extends AbstractModel {
 
     /**
-    * Task flow ID
+    * Task flow ID.
     */
     @SerializedName("FlowId")
     @Expose
     private Long FlowId;
 
     /**
-     * Get Task flow ID 
-     * @return FlowId Task flow ID
+     * Get Task flow ID. 
+     * @return FlowId Task flow ID.
      */
     public Long getFlowId() {
         return this.FlowId;
     }
 
     /**
-     * Set Task flow ID
-     * @param FlowId Task flow ID
+     * Set Task flow ID.
+     * @param FlowId Task flow ID.
      */
     public void setFlowId(Long FlowId) {
         this.FlowId = FlowId;

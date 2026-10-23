@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeParamTemplateDetailResponse extends AbstractModel {
 
     /**
-    * Parameter template ID
+    * Parameter template ID.
     */
     @SerializedName("TemplateId")
     @Expose
@@ -52,21 +52,21 @@ public class DescribeParamTemplateDetailResponse extends AbstractModel {
     private String EngineVersion;
 
     /**
-    * Total number of parameters
+    * Total number of parameters.
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * List of parameters
+    * Parameter list
     */
     @SerializedName("Items")
     @Expose
     private ParamDetail [] Items;
 
     /**
-    * Database type. Valid values:  `NORMAL`, `SERVERLESS`.
+    * Database type. Available values: NORMAL, SERVERLESS
     */
     @SerializedName("DbMode")
     @Expose
@@ -80,16 +80,16 @@ public class DescribeParamTemplateDetailResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Parameter template ID 
-     * @return TemplateId Parameter template ID
+     * Get Parameter template ID. 
+     * @return TemplateId Parameter template ID.
      */
     public Long getTemplateId() {
         return this.TemplateId;
     }
 
     /**
-     * Set Parameter template ID
-     * @param TemplateId Parameter template ID
+     * Set Parameter template ID.
+     * @param TemplateId Parameter template ID.
      */
     public void setTemplateId(Long TemplateId) {
         this.TemplateId = TemplateId;
@@ -144,48 +144,48 @@ public class DescribeParamTemplateDetailResponse extends AbstractModel {
     }
 
     /**
-     * Get Total number of parameters 
-     * @return TotalCount Total number of parameters
+     * Get Total number of parameters. 
+     * @return TotalCount Total number of parameters.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Total number of parameters
-     * @param TotalCount Total number of parameters
+     * Set Total number of parameters.
+     * @param TotalCount Total number of parameters.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get List of parameters 
-     * @return Items List of parameters
+     * Get Parameter list 
+     * @return Items Parameter list
      */
     public ParamDetail [] getItems() {
         return this.Items;
     }
 
     /**
-     * Set List of parameters
-     * @param Items List of parameters
+     * Set Parameter list
+     * @param Items Parameter list
      */
     public void setItems(ParamDetail [] Items) {
         this.Items = Items;
     }
 
     /**
-     * Get Database type. Valid values:  `NORMAL`, `SERVERLESS`. 
-     * @return DbMode Database type. Valid values:  `NORMAL`, `SERVERLESS`.
+     * Get Database type. Available values: NORMAL, SERVERLESS 
+     * @return DbMode Database type. Available values: NORMAL, SERVERLESS
      */
     public String getDbMode() {
         return this.DbMode;
     }
 
     /**
-     * Set Database type. Valid values:  `NORMAL`, `SERVERLESS`.
-     * @param DbMode Database type. Valid values:  `NORMAL`, `SERVERLESS`.
+     * Set Database type. Available values: NORMAL, SERVERLESS
+     * @param DbMode Database type. Available values: NORMAL, SERVERLESS
      */
     public void setDbMode(String DbMode) {
         this.DbMode = DbMode;

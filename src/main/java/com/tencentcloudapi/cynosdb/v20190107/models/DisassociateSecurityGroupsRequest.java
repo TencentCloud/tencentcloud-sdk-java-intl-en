@@ -24,15 +24,15 @@ import java.util.HashMap;
 public class DisassociateSecurityGroupsRequest extends AbstractModel {
 
     /**
-    * Array of instance group IDs, starting with the prefix cynosdbmysql-grp- or cluster ID.
-Description: To get the instance group ID of a cluster, perform [query cluster instance group](https://www.tencentcloud.com/document/product/1003/103934?from_cn_redirect=1).
+    * Array of instance group IDs, starting with the cynosdbmysql-grp- prefix or cluster ID.
+Description: To get the instance group ID of a cluster, perform [Query Cluster Instance Group](https://www.tencentcloud.com/document/product/1003/103934?from_cn_redirect=1).
     */
     @SerializedName("InstanceIds")
     @Expose
     private String [] InstanceIds;
 
     /**
-    * Security group ID list to modify. An array of one or more security group IDs.
+    * Security group ID list to modify, which is an array of one or more security group IDs.
     */
     @SerializedName("SecurityGroupIds")
     @Expose
@@ -40,43 +40,43 @@ Description: To get the instance group ID of a cluster, perform [query cluster i
 
     /**
     * Availability zone.
-Description: Please enter the primary AZ of the cluster location correctly. If you enter a non-primary AZ of the cluster location, the call may display success but the actual execution will fail.
+Description: Please enter correctly the primary AZ of the cluster location. If the input is not the primary AZ of the cluster location, the call may succeed, but the actual execution will fail.
     */
     @SerializedName("Zone")
     @Expose
     private String Zone;
 
     /**
-     * Get Array of instance group IDs, starting with the prefix cynosdbmysql-grp- or cluster ID.
-Description: To get the instance group ID of a cluster, perform [query cluster instance group](https://www.tencentcloud.com/document/product/1003/103934?from_cn_redirect=1). 
-     * @return InstanceIds Array of instance group IDs, starting with the prefix cynosdbmysql-grp- or cluster ID.
-Description: To get the instance group ID of a cluster, perform [query cluster instance group](https://www.tencentcloud.com/document/product/1003/103934?from_cn_redirect=1).
+     * Get Array of instance group IDs, starting with the cynosdbmysql-grp- prefix or cluster ID.
+Description: To get the instance group ID of a cluster, perform [Query Cluster Instance Group](https://www.tencentcloud.com/document/product/1003/103934?from_cn_redirect=1). 
+     * @return InstanceIds Array of instance group IDs, starting with the cynosdbmysql-grp- prefix or cluster ID.
+Description: To get the instance group ID of a cluster, perform [Query Cluster Instance Group](https://www.tencentcloud.com/document/product/1003/103934?from_cn_redirect=1).
      */
     public String [] getInstanceIds() {
         return this.InstanceIds;
     }
 
     /**
-     * Set Array of instance group IDs, starting with the prefix cynosdbmysql-grp- or cluster ID.
-Description: To get the instance group ID of a cluster, perform [query cluster instance group](https://www.tencentcloud.com/document/product/1003/103934?from_cn_redirect=1).
-     * @param InstanceIds Array of instance group IDs, starting with the prefix cynosdbmysql-grp- or cluster ID.
-Description: To get the instance group ID of a cluster, perform [query cluster instance group](https://www.tencentcloud.com/document/product/1003/103934?from_cn_redirect=1).
+     * Set Array of instance group IDs, starting with the cynosdbmysql-grp- prefix or cluster ID.
+Description: To get the instance group ID of a cluster, perform [Query Cluster Instance Group](https://www.tencentcloud.com/document/product/1003/103934?from_cn_redirect=1).
+     * @param InstanceIds Array of instance group IDs, starting with the cynosdbmysql-grp- prefix or cluster ID.
+Description: To get the instance group ID of a cluster, perform [Query Cluster Instance Group](https://www.tencentcloud.com/document/product/1003/103934?from_cn_redirect=1).
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;
     }
 
     /**
-     * Get Security group ID list to modify. An array of one or more security group IDs. 
-     * @return SecurityGroupIds Security group ID list to modify. An array of one or more security group IDs.
+     * Get Security group ID list to modify, which is an array of one or more security group IDs. 
+     * @return SecurityGroupIds Security group ID list to modify, which is an array of one or more security group IDs.
      */
     public String [] getSecurityGroupIds() {
         return this.SecurityGroupIds;
     }
 
     /**
-     * Set Security group ID list to modify. An array of one or more security group IDs.
-     * @param SecurityGroupIds Security group ID list to modify. An array of one or more security group IDs.
+     * Set Security group ID list to modify, which is an array of one or more security group IDs.
+     * @param SecurityGroupIds Security group ID list to modify, which is an array of one or more security group IDs.
      */
     public void setSecurityGroupIds(String [] SecurityGroupIds) {
         this.SecurityGroupIds = SecurityGroupIds;
@@ -84,9 +84,9 @@ Description: To get the instance group ID of a cluster, perform [query cluster i
 
     /**
      * Get Availability zone.
-Description: Please enter the primary AZ of the cluster location correctly. If you enter a non-primary AZ of the cluster location, the call may display success but the actual execution will fail. 
+Description: Please enter correctly the primary AZ of the cluster location. If the input is not the primary AZ of the cluster location, the call may succeed, but the actual execution will fail. 
      * @return Zone Availability zone.
-Description: Please enter the primary AZ of the cluster location correctly. If you enter a non-primary AZ of the cluster location, the call may display success but the actual execution will fail.
+Description: Please enter correctly the primary AZ of the cluster location. If the input is not the primary AZ of the cluster location, the call may succeed, but the actual execution will fail.
      * @deprecated
      */
     @Deprecated
@@ -96,9 +96,9 @@ Description: Please enter the primary AZ of the cluster location correctly. If y
 
     /**
      * Set Availability zone.
-Description: Please enter the primary AZ of the cluster location correctly. If you enter a non-primary AZ of the cluster location, the call may display success but the actual execution will fail.
+Description: Please enter correctly the primary AZ of the cluster location. If the input is not the primary AZ of the cluster location, the call may succeed, but the actual execution will fail.
      * @param Zone Availability zone.
-Description: Please enter the primary AZ of the cluster location correctly. If you enter a non-primary AZ of the cluster location, the call may display success but the actual execution will fail.
+Description: Please enter correctly the primary AZ of the cluster location. If the input is not the primary AZ of the cluster location, the call may succeed, but the actual execution will fail.
      * @deprecated
      */
     @Deprecated

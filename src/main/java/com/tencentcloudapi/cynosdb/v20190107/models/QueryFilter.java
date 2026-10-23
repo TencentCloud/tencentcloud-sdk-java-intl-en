@@ -24,28 +24,28 @@ import java.util.HashMap;
 public class QueryFilter extends AbstractModel {
 
     /**
-    * Field value list, in one-to-one correspondence with Names. InstanceId/ClusterId uses exact matching, and InstanceName uses fuzzy matching by default.
+    * Field value list, one-to-one with Names. InstanceId/ClusterId use exact match, and InstanceName uses fuzzy match by default.
     */
     @SerializedName("Values")
     @Expose
     private String [] Values;
 
     /**
-    * Search field name list, support the following 3 fields (case-insensitive, multiple values are OR relationship): ClusterId (filter by cluster ID, exact match), InstanceId (reverse-check cluster by instance ID), InstanceName (reverse-check cluster by instance name, default LIKE fuzzy matching, exact match when ExactMatch=true). Take the intersection when InstanceId and InstanceName are input at the same time (AND semantics).
+    * List of search field names. Only the following 3 fields are supported (case-insensitive, multiple values use OR relationship): ClusterId (filter by cluster ID, exact match), InstanceId (reverse-check the cluster by instance ID), InstanceName (reverse-check the cluster by instance name, default LIKE fuzzy matching, exact match when ExactMatch=true). When InstanceId and InstanceName are both imported, take the intersection (AND semantics).
     */
     @SerializedName("Names")
     @Expose
     private String [] Names;
 
     /**
-    * Exact match. Only applicable to InstanceName: true for exact matching, false (default) for LIKE fuzzy matching.
+    * Exact match. Only applicable to InstanceName: true for exact match, false (default) for LIKE fuzzy matching.
     */
     @SerializedName("ExactMatch")
     @Expose
     private Boolean ExactMatch;
 
     /**
-    * Search field name (single field mode, choose between this and Names). ClusterId, InstanceId, and InstanceName are supported.
+    * Search field name (single field mode; either this parameter or Names). Supported: ClusterId, InstanceId, InstanceName.
     */
     @SerializedName("Name")
     @Expose
@@ -59,64 +59,64 @@ public class QueryFilter extends AbstractModel {
     private String Operator;
 
     /**
-     * Get Field value list, in one-to-one correspondence with Names. InstanceId/ClusterId uses exact matching, and InstanceName uses fuzzy matching by default. 
-     * @return Values Field value list, in one-to-one correspondence with Names. InstanceId/ClusterId uses exact matching, and InstanceName uses fuzzy matching by default.
+     * Get Field value list, one-to-one with Names. InstanceId/ClusterId use exact match, and InstanceName uses fuzzy match by default. 
+     * @return Values Field value list, one-to-one with Names. InstanceId/ClusterId use exact match, and InstanceName uses fuzzy match by default.
      */
     public String [] getValues() {
         return this.Values;
     }
 
     /**
-     * Set Field value list, in one-to-one correspondence with Names. InstanceId/ClusterId uses exact matching, and InstanceName uses fuzzy matching by default.
-     * @param Values Field value list, in one-to-one correspondence with Names. InstanceId/ClusterId uses exact matching, and InstanceName uses fuzzy matching by default.
+     * Set Field value list, one-to-one with Names. InstanceId/ClusterId use exact match, and InstanceName uses fuzzy match by default.
+     * @param Values Field value list, one-to-one with Names. InstanceId/ClusterId use exact match, and InstanceName uses fuzzy match by default.
      */
     public void setValues(String [] Values) {
         this.Values = Values;
     }
 
     /**
-     * Get Search field name list, support the following 3 fields (case-insensitive, multiple values are OR relationship): ClusterId (filter by cluster ID, exact match), InstanceId (reverse-check cluster by instance ID), InstanceName (reverse-check cluster by instance name, default LIKE fuzzy matching, exact match when ExactMatch=true). Take the intersection when InstanceId and InstanceName are input at the same time (AND semantics). 
-     * @return Names Search field name list, support the following 3 fields (case-insensitive, multiple values are OR relationship): ClusterId (filter by cluster ID, exact match), InstanceId (reverse-check cluster by instance ID), InstanceName (reverse-check cluster by instance name, default LIKE fuzzy matching, exact match when ExactMatch=true). Take the intersection when InstanceId and InstanceName are input at the same time (AND semantics).
+     * Get List of search field names. Only the following 3 fields are supported (case-insensitive, multiple values use OR relationship): ClusterId (filter by cluster ID, exact match), InstanceId (reverse-check the cluster by instance ID), InstanceName (reverse-check the cluster by instance name, default LIKE fuzzy matching, exact match when ExactMatch=true). When InstanceId and InstanceName are both imported, take the intersection (AND semantics). 
+     * @return Names List of search field names. Only the following 3 fields are supported (case-insensitive, multiple values use OR relationship): ClusterId (filter by cluster ID, exact match), InstanceId (reverse-check the cluster by instance ID), InstanceName (reverse-check the cluster by instance name, default LIKE fuzzy matching, exact match when ExactMatch=true). When InstanceId and InstanceName are both imported, take the intersection (AND semantics).
      */
     public String [] getNames() {
         return this.Names;
     }
 
     /**
-     * Set Search field name list, support the following 3 fields (case-insensitive, multiple values are OR relationship): ClusterId (filter by cluster ID, exact match), InstanceId (reverse-check cluster by instance ID), InstanceName (reverse-check cluster by instance name, default LIKE fuzzy matching, exact match when ExactMatch=true). Take the intersection when InstanceId and InstanceName are input at the same time (AND semantics).
-     * @param Names Search field name list, support the following 3 fields (case-insensitive, multiple values are OR relationship): ClusterId (filter by cluster ID, exact match), InstanceId (reverse-check cluster by instance ID), InstanceName (reverse-check cluster by instance name, default LIKE fuzzy matching, exact match when ExactMatch=true). Take the intersection when InstanceId and InstanceName are input at the same time (AND semantics).
+     * Set List of search field names. Only the following 3 fields are supported (case-insensitive, multiple values use OR relationship): ClusterId (filter by cluster ID, exact match), InstanceId (reverse-check the cluster by instance ID), InstanceName (reverse-check the cluster by instance name, default LIKE fuzzy matching, exact match when ExactMatch=true). When InstanceId and InstanceName are both imported, take the intersection (AND semantics).
+     * @param Names List of search field names. Only the following 3 fields are supported (case-insensitive, multiple values use OR relationship): ClusterId (filter by cluster ID, exact match), InstanceId (reverse-check the cluster by instance ID), InstanceName (reverse-check the cluster by instance name, default LIKE fuzzy matching, exact match when ExactMatch=true). When InstanceId and InstanceName are both imported, take the intersection (AND semantics).
      */
     public void setNames(String [] Names) {
         this.Names = Names;
     }
 
     /**
-     * Get Exact match. Only applicable to InstanceName: true for exact matching, false (default) for LIKE fuzzy matching. 
-     * @return ExactMatch Exact match. Only applicable to InstanceName: true for exact matching, false (default) for LIKE fuzzy matching.
+     * Get Exact match. Only applicable to InstanceName: true for exact match, false (default) for LIKE fuzzy matching. 
+     * @return ExactMatch Exact match. Only applicable to InstanceName: true for exact match, false (default) for LIKE fuzzy matching.
      */
     public Boolean getExactMatch() {
         return this.ExactMatch;
     }
 
     /**
-     * Set Exact match. Only applicable to InstanceName: true for exact matching, false (default) for LIKE fuzzy matching.
-     * @param ExactMatch Exact match. Only applicable to InstanceName: true for exact matching, false (default) for LIKE fuzzy matching.
+     * Set Exact match. Only applicable to InstanceName: true for exact match, false (default) for LIKE fuzzy matching.
+     * @param ExactMatch Exact match. Only applicable to InstanceName: true for exact match, false (default) for LIKE fuzzy matching.
      */
     public void setExactMatch(Boolean ExactMatch) {
         this.ExactMatch = ExactMatch;
     }
 
     /**
-     * Get Search field name (single field mode, choose between this and Names). ClusterId, InstanceId, and InstanceName are supported. 
-     * @return Name Search field name (single field mode, choose between this and Names). ClusterId, InstanceId, and InstanceName are supported.
+     * Get Search field name (single field mode; either this parameter or Names). Supported: ClusterId, InstanceId, InstanceName. 
+     * @return Name Search field name (single field mode; either this parameter or Names). Supported: ClusterId, InstanceId, InstanceName.
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Search field name (single field mode, choose between this and Names). ClusterId, InstanceId, and InstanceName are supported.
-     * @param Name Search field name (single field mode, choose between this and Names). ClusterId, InstanceId, and InstanceName are supported.
+     * Set Search field name (single field mode; either this parameter or Names). Supported: ClusterId, InstanceId, InstanceName.
+     * @param Name Search field name (single field mode; either this parameter or Names). Supported: ClusterId, InstanceId, InstanceName.
      */
     public void setName(String Name) {
         this.Name = Name;

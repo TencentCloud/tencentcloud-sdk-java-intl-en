@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class BackupFileInfo extends AbstractModel {
 
     /**
-    * <p>Snapshot file ID, abandoned, please use BackupId</p>
+    * <p>Snapshot file ID. This field is abandoned. Please use BackupId.</p>
     */
     @SerializedName("SnapshotId")
     @Expose
@@ -45,14 +45,14 @@ public class BackupFileInfo extends AbstractModel {
     private Long FileSize;
 
     /**
-    * <p>Backup start time.</p>
+    * <p>Backup start time</p>
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * <p>Backup completion time.</p>
+    * <p>Backup completion time</p>
     */
     @SerializedName("FinishTime")
     @Expose
@@ -73,7 +73,7 @@ public class BackupFileInfo extends AbstractModel {
     private String BackupMethod;
 
     /**
-    * <p>Backup file status: success: backup successful; fail: backup failed; creating: backup file being created; deleting: backup file deleting</p>
+    * <p>Backup file status: success: backup successful; fail: backup failed; creating: backup file being created; deleting: backup file being deleted</p>
     */
     @SerializedName("BackupStatus")
     @Expose
@@ -94,14 +94,14 @@ public class BackupFileInfo extends AbstractModel {
     private Long BackupId;
 
     /**
-    * <p>Snapshot type. Value range: full, full; increment, incremental</p>
+    * <p>Snapshot type. Available values: full (full); increment (incremental)</p>
     */
     @SerializedName("SnapShotType")
     @Expose
     private String SnapShotType;
 
     /**
-    * <p>Backup file remark</p>
+    * <p>Backup file remarks</p>
     */
     @SerializedName("BackupName")
     @Expose
@@ -122,7 +122,7 @@ public class BackupFileInfo extends AbstractModel {
     private String CopyStatus;
 
     /**
-    * <p>Key id</p>
+    * <p>Secret key id.</p>
     */
     @SerializedName("EncryptKeyId")
     @Expose
@@ -136,30 +136,30 @@ public class BackupFileInfo extends AbstractModel {
     private String EncryptRegion;
 
     /**
-    * <p>Safe info</p>
+    * <p>Safe information.</p>
     */
     @SerializedName("VaultInfos")
     @Expose
     private VaultInfo [] VaultInfos;
 
     /**
-    * <p>Backup cycle policy</p>
+    * <p>Backup periodic policy</p>
     */
     @SerializedName("BackupPeriodStrategy")
     @Expose
     private String BackupPeriodStrategy;
 
     /**
-     * Get <p>Snapshot file ID, abandoned, please use BackupId</p> 
-     * @return SnapshotId <p>Snapshot file ID, abandoned, please use BackupId</p>
+     * Get <p>Snapshot file ID. This field is abandoned. Please use BackupId.</p> 
+     * @return SnapshotId <p>Snapshot file ID. This field is abandoned. Please use BackupId.</p>
      */
     public Long getSnapshotId() {
         return this.SnapshotId;
     }
 
     /**
-     * Set <p>Snapshot file ID, abandoned, please use BackupId</p>
-     * @param SnapshotId <p>Snapshot file ID, abandoned, please use BackupId</p>
+     * Set <p>Snapshot file ID. This field is abandoned. Please use BackupId.</p>
+     * @param SnapshotId <p>Snapshot file ID. This field is abandoned. Please use BackupId.</p>
      */
     public void setSnapshotId(Long SnapshotId) {
         this.SnapshotId = SnapshotId;
@@ -198,32 +198,32 @@ public class BackupFileInfo extends AbstractModel {
     }
 
     /**
-     * Get <p>Backup start time.</p> 
-     * @return StartTime <p>Backup start time.</p>
+     * Get <p>Backup start time</p> 
+     * @return StartTime <p>Backup start time</p>
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set <p>Backup start time.</p>
-     * @param StartTime <p>Backup start time.</p>
+     * Set <p>Backup start time</p>
+     * @param StartTime <p>Backup start time</p>
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get <p>Backup completion time.</p> 
-     * @return FinishTime <p>Backup completion time.</p>
+     * Get <p>Backup completion time</p> 
+     * @return FinishTime <p>Backup completion time</p>
      */
     public String getFinishTime() {
         return this.FinishTime;
     }
 
     /**
-     * Set <p>Backup completion time.</p>
-     * @param FinishTime <p>Backup completion time.</p>
+     * Set <p>Backup completion time</p>
+     * @param FinishTime <p>Backup completion time</p>
      */
     public void setFinishTime(String FinishTime) {
         this.FinishTime = FinishTime;
@@ -262,16 +262,16 @@ public class BackupFileInfo extends AbstractModel {
     }
 
     /**
-     * Get <p>Backup file status: success: backup successful; fail: backup failed; creating: backup file being created; deleting: backup file deleting</p> 
-     * @return BackupStatus <p>Backup file status: success: backup successful; fail: backup failed; creating: backup file being created; deleting: backup file deleting</p>
+     * Get <p>Backup file status: success: backup successful; fail: backup failed; creating: backup file being created; deleting: backup file being deleted</p> 
+     * @return BackupStatus <p>Backup file status: success: backup successful; fail: backup failed; creating: backup file being created; deleting: backup file being deleted</p>
      */
     public String getBackupStatus() {
         return this.BackupStatus;
     }
 
     /**
-     * Set <p>Backup file status: success: backup successful; fail: backup failed; creating: backup file being created; deleting: backup file deleting</p>
-     * @param BackupStatus <p>Backup file status: success: backup successful; fail: backup failed; creating: backup file being created; deleting: backup file deleting</p>
+     * Set <p>Backup file status: success: backup successful; fail: backup failed; creating: backup file being created; deleting: backup file being deleted</p>
+     * @param BackupStatus <p>Backup file status: success: backup successful; fail: backup failed; creating: backup file being created; deleting: backup file being deleted</p>
      */
     public void setBackupStatus(String BackupStatus) {
         this.BackupStatus = BackupStatus;
@@ -310,32 +310,32 @@ public class BackupFileInfo extends AbstractModel {
     }
 
     /**
-     * Get <p>Snapshot type. Value range: full, full; increment, incremental</p> 
-     * @return SnapShotType <p>Snapshot type. Value range: full, full; increment, incremental</p>
+     * Get <p>Snapshot type. Available values: full (full); increment (incremental)</p> 
+     * @return SnapShotType <p>Snapshot type. Available values: full (full); increment (incremental)</p>
      */
     public String getSnapShotType() {
         return this.SnapShotType;
     }
 
     /**
-     * Set <p>Snapshot type. Value range: full, full; increment, incremental</p>
-     * @param SnapShotType <p>Snapshot type. Value range: full, full; increment, incremental</p>
+     * Set <p>Snapshot type. Available values: full (full); increment (incremental)</p>
+     * @param SnapShotType <p>Snapshot type. Available values: full (full); increment (incremental)</p>
      */
     public void setSnapShotType(String SnapShotType) {
         this.SnapShotType = SnapShotType;
     }
 
     /**
-     * Get <p>Backup file remark</p> 
-     * @return BackupName <p>Backup file remark</p>
+     * Get <p>Backup file remarks</p> 
+     * @return BackupName <p>Backup file remarks</p>
      */
     public String getBackupName() {
         return this.BackupName;
     }
 
     /**
-     * Set <p>Backup file remark</p>
-     * @param BackupName <p>Backup file remark</p>
+     * Set <p>Backup file remarks</p>
+     * @param BackupName <p>Backup file remarks</p>
      */
     public void setBackupName(String BackupName) {
         this.BackupName = BackupName;
@@ -374,16 +374,16 @@ public class BackupFileInfo extends AbstractModel {
     }
 
     /**
-     * Get <p>Key id</p> 
-     * @return EncryptKeyId <p>Key id</p>
+     * Get <p>Secret key id.</p> 
+     * @return EncryptKeyId <p>Secret key id.</p>
      */
     public String getEncryptKeyId() {
         return this.EncryptKeyId;
     }
 
     /**
-     * Set <p>Key id</p>
-     * @param EncryptKeyId <p>Key id</p>
+     * Set <p>Secret key id.</p>
+     * @param EncryptKeyId <p>Secret key id.</p>
      */
     public void setEncryptKeyId(String EncryptKeyId) {
         this.EncryptKeyId = EncryptKeyId;
@@ -406,32 +406,32 @@ public class BackupFileInfo extends AbstractModel {
     }
 
     /**
-     * Get <p>Safe info</p> 
-     * @return VaultInfos <p>Safe info</p>
+     * Get <p>Safe information.</p> 
+     * @return VaultInfos <p>Safe information.</p>
      */
     public VaultInfo [] getVaultInfos() {
         return this.VaultInfos;
     }
 
     /**
-     * Set <p>Safe info</p>
-     * @param VaultInfos <p>Safe info</p>
+     * Set <p>Safe information.</p>
+     * @param VaultInfos <p>Safe information.</p>
      */
     public void setVaultInfos(VaultInfo [] VaultInfos) {
         this.VaultInfos = VaultInfos;
     }
 
     /**
-     * Get <p>Backup cycle policy</p> 
-     * @return BackupPeriodStrategy <p>Backup cycle policy</p>
+     * Get <p>Backup periodic policy</p> 
+     * @return BackupPeriodStrategy <p>Backup periodic policy</p>
      */
     public String getBackupPeriodStrategy() {
         return this.BackupPeriodStrategy;
     }
 
     /**
-     * Set <p>Backup cycle policy</p>
-     * @param BackupPeriodStrategy <p>Backup cycle policy</p>
+     * Set <p>Backup periodic policy</p>
+     * @param BackupPeriodStrategy <p>Backup periodic policy</p>
      */
     public void setBackupPeriodStrategy(String BackupPeriodStrategy) {
         this.BackupPeriodStrategy = BackupPeriodStrategy;

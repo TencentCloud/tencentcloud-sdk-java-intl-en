@@ -32,22 +32,22 @@ public class DescribeInstanceSpecsByOperationTypeRequest extends AbstractModel {
 
     /**
     * Operation type.
-Add new RO instance
-modifyInstance: Modify configuration
+addROInstance: Add an RO instance
+modifyInstance: adjust the configuration
     */
     @SerializedName("OperationType")
     @Expose
     private String OperationType;
 
     /**
-    * Instance ID, required when querying configuration modification specifications
+    * Instance ID. Required when querying configuration modification specifications.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Instance Machine Type
+    * Instance machine type.
     */
     @SerializedName("DeviceType")
     @Expose
@@ -71,11 +71,11 @@ modifyInstance: Modify configuration
 
     /**
      * Get Operation type.
-Add new RO instance
-modifyInstance: Modify configuration 
+addROInstance: Add an RO instance
+modifyInstance: adjust the configuration 
      * @return OperationType Operation type.
-Add new RO instance
-modifyInstance: Modify configuration
+addROInstance: Add an RO instance
+modifyInstance: adjust the configuration
      */
     public String getOperationType() {
         return this.OperationType;
@@ -83,43 +83,43 @@ modifyInstance: Modify configuration
 
     /**
      * Set Operation type.
-Add new RO instance
-modifyInstance: Modify configuration
+addROInstance: Add an RO instance
+modifyInstance: adjust the configuration
      * @param OperationType Operation type.
-Add new RO instance
-modifyInstance: Modify configuration
+addROInstance: Add an RO instance
+modifyInstance: adjust the configuration
      */
     public void setOperationType(String OperationType) {
         this.OperationType = OperationType;
     }
 
     /**
-     * Get Instance ID, required when querying configuration modification specifications 
-     * @return InstanceId Instance ID, required when querying configuration modification specifications
+     * Get Instance ID. Required when querying configuration modification specifications. 
+     * @return InstanceId Instance ID. Required when querying configuration modification specifications.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID, required when querying configuration modification specifications
-     * @param InstanceId Instance ID, required when querying configuration modification specifications
+     * Set Instance ID. Required when querying configuration modification specifications.
+     * @param InstanceId Instance ID. Required when querying configuration modification specifications.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Instance Machine Type 
-     * @return DeviceType Instance Machine Type
+     * Get Instance machine type. 
+     * @return DeviceType Instance machine type.
      */
     public String getDeviceType() {
         return this.DeviceType;
     }
 
     /**
-     * Set Instance Machine Type
-     * @param DeviceType Instance Machine Type
+     * Set Instance machine type.
+     * @param DeviceType Instance machine type.
      */
     public void setDeviceType(String DeviceType) {
         this.DeviceType = DeviceType;

@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class InstanceParamItem extends AbstractModel {
 
     /**
-    * Instance ID
+    * Instance ID.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * List of instance parameters
+    * Instance parameter list
     */
     @SerializedName("ParamsItems")
     @Expose
     private ParamItemDetail [] ParamsItems;
 
     /**
-     * Get Instance ID 
-     * @return InstanceId Instance ID
+     * Get Instance ID. 
+     * @return InstanceId Instance ID.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID
-     * @param InstanceId Instance ID
+     * Set Instance ID.
+     * @param InstanceId Instance ID.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get List of instance parameters 
-     * @return ParamsItems List of instance parameters
+     * Get Instance parameter list 
+     * @return ParamsItems Instance parameter list
      */
     public ParamItemDetail [] getParamsItems() {
         return this.ParamsItems;
     }
 
     /**
-     * Set List of instance parameters
-     * @param ParamsItems List of instance parameters
+     * Set Instance parameter list
+     * @param ParamsItems Instance parameter list
      */
     public void setParamsItems(ParamItemDetail [] ParamsItems) {
         this.ParamsItems = ParamsItems;

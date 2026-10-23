@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeProxyNodesRequest extends AbstractModel {
 
     /**
-    * Number of returned results. Default value: `20`. Maximum value: `100`,
+    * Returned quantity. Default value: 20. Maximum value: 100.
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * Record offset. Default value: `0`.
+    * Record offset. Default value: 0.
     */
     @SerializedName("Offset")
     @Expose
@@ -39,7 +39,7 @@ public class DescribeProxyNodesRequest extends AbstractModel {
 
     /**
     * Sorting field. Valid values:
-<li> CREATETIME: Creation time</li>
+<li> CREATETIME: creation time</li>
 <li> PERIODENDTIME: Expiration time</li>
     */
     @SerializedName("OrderBy")
@@ -47,48 +47,48 @@ public class DescribeProxyNodesRequest extends AbstractModel {
     private String OrderBy;
 
     /**
-    * Sorting order. Valid values:
-<li> `ASC`: Ascending.</li>
-<li> `DESC`: Descending</li>
+    * Sorting type. Valid values:
+<li> ASC: ascending sort </li>
+<li> DESC: sort in descending order </li>
     */
     @SerializedName("OrderByType")
     @Expose
     private String OrderByType;
 
     /**
-    * Search criteria. When multiple filters exist, the relationship between filters is logical AND. Currently supported search fields: Status, ProxyNodeId, ClusterId, OssProxyNodeName.
+    * Search criteria. When multiple filters exist, the relationship between filters is logical AND. Currently supports the following search fields: Status, ProxyNodeId, ClusterId, OssProxyNodeName.
     */
     @SerializedName("Filters")
     @Expose
     private QueryFilter [] Filters;
 
     /**
-     * Get Number of returned results. Default value: `20`. Maximum value: `100`, 
-     * @return Limit Number of returned results. Default value: `20`. Maximum value: `100`,
+     * Get Returned quantity. Default value: 20. Maximum value: 100. 
+     * @return Limit Returned quantity. Default value: 20. Maximum value: 100.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Number of returned results. Default value: `20`. Maximum value: `100`,
-     * @param Limit Number of returned results. Default value: `20`. Maximum value: `100`,
+     * Set Returned quantity. Default value: 20. Maximum value: 100.
+     * @param Limit Returned quantity. Default value: 20. Maximum value: 100.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get Record offset. Default value: `0`. 
-     * @return Offset Record offset. Default value: `0`.
+     * Get Record offset. Default value: 0. 
+     * @return Offset Record offset. Default value: 0.
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Record offset. Default value: `0`.
-     * @param Offset Record offset. Default value: `0`.
+     * Set Record offset. Default value: 0.
+     * @param Offset Record offset. Default value: 0.
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
@@ -96,10 +96,10 @@ public class DescribeProxyNodesRequest extends AbstractModel {
 
     /**
      * Get Sorting field. Valid values:
-<li> CREATETIME: Creation time</li>
+<li> CREATETIME: creation time</li>
 <li> PERIODENDTIME: Expiration time</li> 
      * @return OrderBy Sorting field. Valid values:
-<li> CREATETIME: Creation time</li>
+<li> CREATETIME: creation time</li>
 <li> PERIODENDTIME: Expiration time</li>
      */
     public String getOrderBy() {
@@ -108,10 +108,10 @@ public class DescribeProxyNodesRequest extends AbstractModel {
 
     /**
      * Set Sorting field. Valid values:
-<li> CREATETIME: Creation time</li>
+<li> CREATETIME: creation time</li>
 <li> PERIODENDTIME: Expiration time</li>
      * @param OrderBy Sorting field. Valid values:
-<li> CREATETIME: Creation time</li>
+<li> CREATETIME: creation time</li>
 <li> PERIODENDTIME: Expiration time</li>
      */
     public void setOrderBy(String OrderBy) {
@@ -119,40 +119,40 @@ public class DescribeProxyNodesRequest extends AbstractModel {
     }
 
     /**
-     * Get Sorting order. Valid values:
-<li> `ASC`: Ascending.</li>
-<li> `DESC`: Descending</li> 
-     * @return OrderByType Sorting order. Valid values:
-<li> `ASC`: Ascending.</li>
-<li> `DESC`: Descending</li>
+     * Get Sorting type. Valid values:
+<li> ASC: ascending sort </li>
+<li> DESC: sort in descending order </li> 
+     * @return OrderByType Sorting type. Valid values:
+<li> ASC: ascending sort </li>
+<li> DESC: sort in descending order </li>
      */
     public String getOrderByType() {
         return this.OrderByType;
     }
 
     /**
-     * Set Sorting order. Valid values:
-<li> `ASC`: Ascending.</li>
-<li> `DESC`: Descending</li>
-     * @param OrderByType Sorting order. Valid values:
-<li> `ASC`: Ascending.</li>
-<li> `DESC`: Descending</li>
+     * Set Sorting type. Valid values:
+<li> ASC: ascending sort </li>
+<li> DESC: sort in descending order </li>
+     * @param OrderByType Sorting type. Valid values:
+<li> ASC: ascending sort </li>
+<li> DESC: sort in descending order </li>
      */
     public void setOrderByType(String OrderByType) {
         this.OrderByType = OrderByType;
     }
 
     /**
-     * Get Search criteria. When multiple filters exist, the relationship between filters is logical AND. Currently supported search fields: Status, ProxyNodeId, ClusterId, OssProxyNodeName. 
-     * @return Filters Search criteria. When multiple filters exist, the relationship between filters is logical AND. Currently supported search fields: Status, ProxyNodeId, ClusterId, OssProxyNodeName.
+     * Get Search criteria. When multiple filters exist, the relationship between filters is logical AND. Currently supports the following search fields: Status, ProxyNodeId, ClusterId, OssProxyNodeName. 
+     * @return Filters Search criteria. When multiple filters exist, the relationship between filters is logical AND. Currently supports the following search fields: Status, ProxyNodeId, ClusterId, OssProxyNodeName.
      */
     public QueryFilter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set Search criteria. When multiple filters exist, the relationship between filters is logical AND. Currently supported search fields: Status, ProxyNodeId, ClusterId, OssProxyNodeName.
-     * @param Filters Search criteria. When multiple filters exist, the relationship between filters is logical AND. Currently supported search fields: Status, ProxyNodeId, ClusterId, OssProxyNodeName.
+     * Set Search criteria. When multiple filters exist, the relationship between filters is logical AND. Currently supports the following search fields: Status, ProxyNodeId, ClusterId, OssProxyNodeName.
+     * @param Filters Search criteria. When multiple filters exist, the relationship between filters is logical AND. Currently supports the following search fields: Status, ProxyNodeId, ClusterId, OssProxyNodeName.
      */
     public void setFilters(QueryFilter [] Filters) {
         this.Filters = Filters;

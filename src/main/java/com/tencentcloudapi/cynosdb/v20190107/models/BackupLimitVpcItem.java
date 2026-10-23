@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class BackupLimitVpcItem extends AbstractModel {
 
     /**
-    * Specifies the region for limiting download sources. currently only supports the current region.
+    * Limit the region of the download source. Currently only support the current region.
     */
     @SerializedName("Region")
     @Expose
     private String Region;
 
     /**
-    * Limit the vpc list for downloads.
+    * vpc list with download restrictions
     */
     @SerializedName("VpcList")
     @Expose
     private String [] VpcList;
 
     /**
-     * Get Specifies the region for limiting download sources. currently only supports the current region. 
-     * @return Region Specifies the region for limiting download sources. currently only supports the current region.
+     * Get Limit the region of the download source. Currently only support the current region. 
+     * @return Region Limit the region of the download source. Currently only support the current region.
      */
     public String getRegion() {
         return this.Region;
     }
 
     /**
-     * Set Specifies the region for limiting download sources. currently only supports the current region.
-     * @param Region Specifies the region for limiting download sources. currently only supports the current region.
+     * Set Limit the region of the download source. Currently only support the current region.
+     * @param Region Limit the region of the download source. Currently only support the current region.
      */
     public void setRegion(String Region) {
         this.Region = Region;
     }
 
     /**
-     * Get Limit the vpc list for downloads. 
-     * @return VpcList Limit the vpc list for downloads.
+     * Get vpc list with download restrictions 
+     * @return VpcList vpc list with download restrictions
      */
     public String [] getVpcList() {
         return this.VpcList;
     }
 
     /**
-     * Set Limit the vpc list for downloads.
-     * @param VpcList Limit the vpc list for downloads.
+     * Set vpc list with download restrictions
+     * @param VpcList vpc list with download restrictions
      */
     public void setVpcList(String [] VpcList) {
         this.VpcList = VpcList;

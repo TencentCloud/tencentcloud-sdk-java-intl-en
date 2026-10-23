@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class ModifyResourcePackagesDeductionPriorityRequest extends AbstractModel {
 
     /**
-    * Specifies the resource package type whose priority needs to be modified. CCU: compute resource package. DISK: storage resource package.
+    * Resource package type whose priority needs to be modified. CCU: compute resource package. DISK: storage resource package.
     */
     @SerializedName("PackageType")
     @Expose
     private String PackageType;
 
     /**
-    * The modified deduction priority takes effect for which cynos resource.
+    * Which cynos resource does the modified deduction priority take effect for?
     */
     @SerializedName("ClusterId")
     @Expose
     private String ClusterId;
 
     /**
-    * Resource package deduction priority.
+    * Resource package deduction priority
     */
     @SerializedName("DeductionPriorities")
     @Expose
     private PackagePriority [] DeductionPriorities;
 
     /**
-     * Get Specifies the resource package type whose priority needs to be modified. CCU: compute resource package. DISK: storage resource package. 
-     * @return PackageType Specifies the resource package type whose priority needs to be modified. CCU: compute resource package. DISK: storage resource package.
+     * Get Resource package type whose priority needs to be modified. CCU: compute resource package. DISK: storage resource package. 
+     * @return PackageType Resource package type whose priority needs to be modified. CCU: compute resource package. DISK: storage resource package.
      */
     public String getPackageType() {
         return this.PackageType;
     }
 
     /**
-     * Set Specifies the resource package type whose priority needs to be modified. CCU: compute resource package. DISK: storage resource package.
-     * @param PackageType Specifies the resource package type whose priority needs to be modified. CCU: compute resource package. DISK: storage resource package.
+     * Set Resource package type whose priority needs to be modified. CCU: compute resource package. DISK: storage resource package.
+     * @param PackageType Resource package type whose priority needs to be modified. CCU: compute resource package. DISK: storage resource package.
      */
     public void setPackageType(String PackageType) {
         this.PackageType = PackageType;
     }
 
     /**
-     * Get The modified deduction priority takes effect for which cynos resource. 
-     * @return ClusterId The modified deduction priority takes effect for which cynos resource.
+     * Get Which cynos resource does the modified deduction priority take effect for? 
+     * @return ClusterId Which cynos resource does the modified deduction priority take effect for?
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set The modified deduction priority takes effect for which cynos resource.
-     * @param ClusterId The modified deduction priority takes effect for which cynos resource.
+     * Set Which cynos resource does the modified deduction priority take effect for?
+     * @param ClusterId Which cynos resource does the modified deduction priority take effect for?
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get Resource package deduction priority. 
-     * @return DeductionPriorities Resource package deduction priority.
+     * Get Resource package deduction priority 
+     * @return DeductionPriorities Resource package deduction priority
      */
     public PackagePriority [] getDeductionPriorities() {
         return this.DeductionPriorities;
     }
 
     /**
-     * Set Resource package deduction priority.
-     * @param DeductionPriorities Resource package deduction priority.
+     * Set Resource package deduction priority
+     * @param DeductionPriorities Resource package deduction priority
      */
     public void setDeductionPriorities(PackagePriority [] DeductionPriorities) {
         this.DeductionPriorities = DeductionPriorities;

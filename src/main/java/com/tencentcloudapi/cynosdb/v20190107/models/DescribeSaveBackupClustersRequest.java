@@ -38,7 +38,7 @@ public class DescribeSaveBackupClustersRequest extends AbstractModel {
     private Long Offset;
 
     /**
-    * Retrieval criteria.
+    * Retrieval criteria
     */
     @SerializedName("Filters")
     @Expose
@@ -77,16 +77,16 @@ public class DescribeSaveBackupClustersRequest extends AbstractModel {
     }
 
     /**
-     * Get Retrieval criteria. 
-     * @return Filters Retrieval criteria.
+     * Get Retrieval criteria 
+     * @return Filters Retrieval criteria
      */
     public QuerySimpleFilter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set Retrieval criteria.
-     * @param Filters Retrieval criteria.
+     * Set Retrieval criteria
+     * @param Filters Retrieval criteria
      */
     public void setFilters(QuerySimpleFilter [] Filters) {
         this.Filters = Filters;

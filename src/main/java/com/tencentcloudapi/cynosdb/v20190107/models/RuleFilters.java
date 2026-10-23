@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class RuleFilters extends AbstractModel {
 
     /**
-    * Filter parameter name of the audit rule. Valid values: `host` (client IP), `user` (database account), `dbName` (database name), `sqlType` (SQL type), `sql` (SQL statement).
+    * Parameter name for the audit rule filter criteria. Available values: host – client IP; user – database account; dbName – database name; sqlType – SQL type; sql – SQL statement; affectRows – number of affected rows; sentRows – number of returned rows; checkRows – number of scanned rows; execTime – execution time.
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * Filter match type of the audit rule. Valid values: `INC` (including), `EXC` (excluding), `EQS` (equal to), `NEQ` (not equal to).
+    * Match type of the audit rule filter criteria. Available values: INC – include; EXC – exclude; EQS – equal; NEQ – not equal; REG – regular; GT – greater than; LT – less than.
     */
     @SerializedName("Compare")
     @Expose
     private String Compare;
 
     /**
-    * Filter match value of the audit rule
+    * Matching value of the filter criteria for the audit rule.
     */
     @SerializedName("Value")
     @Expose
     private String [] Value;
 
     /**
-     * Get Filter parameter name of the audit rule. Valid values: `host` (client IP), `user` (database account), `dbName` (database name), `sqlType` (SQL type), `sql` (SQL statement). 
-     * @return Type Filter parameter name of the audit rule. Valid values: `host` (client IP), `user` (database account), `dbName` (database name), `sqlType` (SQL type), `sql` (SQL statement).
+     * Get Parameter name for the audit rule filter criteria. Available values: host – client IP; user – database account; dbName – database name; sqlType – SQL type; sql – SQL statement; affectRows – number of affected rows; sentRows – number of returned rows; checkRows – number of scanned rows; execTime – execution time. 
+     * @return Type Parameter name for the audit rule filter criteria. Available values: host – client IP; user – database account; dbName – database name; sqlType – SQL type; sql – SQL statement; affectRows – number of affected rows; sentRows – number of returned rows; checkRows – number of scanned rows; execTime – execution time.
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Filter parameter name of the audit rule. Valid values: `host` (client IP), `user` (database account), `dbName` (database name), `sqlType` (SQL type), `sql` (SQL statement).
-     * @param Type Filter parameter name of the audit rule. Valid values: `host` (client IP), `user` (database account), `dbName` (database name), `sqlType` (SQL type), `sql` (SQL statement).
+     * Set Parameter name for the audit rule filter criteria. Available values: host – client IP; user – database account; dbName – database name; sqlType – SQL type; sql – SQL statement; affectRows – number of affected rows; sentRows – number of returned rows; checkRows – number of scanned rows; execTime – execution time.
+     * @param Type Parameter name for the audit rule filter criteria. Available values: host – client IP; user – database account; dbName – database name; sqlType – SQL type; sql – SQL statement; affectRows – number of affected rows; sentRows – number of returned rows; checkRows – number of scanned rows; execTime – execution time.
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get Filter match type of the audit rule. Valid values: `INC` (including), `EXC` (excluding), `EQS` (equal to), `NEQ` (not equal to). 
-     * @return Compare Filter match type of the audit rule. Valid values: `INC` (including), `EXC` (excluding), `EQS` (equal to), `NEQ` (not equal to).
+     * Get Match type of the audit rule filter criteria. Available values: INC – include; EXC – exclude; EQS – equal; NEQ – not equal; REG – regular; GT – greater than; LT – less than. 
+     * @return Compare Match type of the audit rule filter criteria. Available values: INC – include; EXC – exclude; EQS – equal; NEQ – not equal; REG – regular; GT – greater than; LT – less than.
      */
     public String getCompare() {
         return this.Compare;
     }
 
     /**
-     * Set Filter match type of the audit rule. Valid values: `INC` (including), `EXC` (excluding), `EQS` (equal to), `NEQ` (not equal to).
-     * @param Compare Filter match type of the audit rule. Valid values: `INC` (including), `EXC` (excluding), `EQS` (equal to), `NEQ` (not equal to).
+     * Set Match type of the audit rule filter criteria. Available values: INC – include; EXC – exclude; EQS – equal; NEQ – not equal; REG – regular; GT – greater than; LT – less than.
+     * @param Compare Match type of the audit rule filter criteria. Available values: INC – include; EXC – exclude; EQS – equal; NEQ – not equal; REG – regular; GT – greater than; LT – less than.
      */
     public void setCompare(String Compare) {
         this.Compare = Compare;
     }
 
     /**
-     * Get Filter match value of the audit rule 
-     * @return Value Filter match value of the audit rule
+     * Get Matching value of the filter criteria for the audit rule. 
+     * @return Value Matching value of the filter criteria for the audit rule.
      */
     public String [] getValue() {
         return this.Value;
     }
 
     /**
-     * Set Filter match value of the audit rule
-     * @param Value Filter match value of the audit rule
+     * Set Matching value of the filter criteria for the audit rule.
+     * @param Value Matching value of the filter criteria for the audit rule.
      */
     public void setValue(String [] Value) {
         this.Value = Value;

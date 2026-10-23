@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModifyAccountHostRequest extends AbstractModel {
 
     /**
-    * Cluster ID
+    * Cluster ID.
     */
     @SerializedName("ClusterId")
     @Expose
@@ -38,23 +38,23 @@ public class ModifyAccountHostRequest extends AbstractModel {
     private String NewHost;
 
     /**
-    * Account infomation
+    * Account information
     */
     @SerializedName("Account")
     @Expose
     private InputAccount Account;
 
     /**
-     * Get Cluster ID 
-     * @return ClusterId Cluster ID
+     * Get Cluster ID. 
+     * @return ClusterId Cluster ID.
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set Cluster ID
-     * @param ClusterId Cluster ID
+     * Set Cluster ID.
+     * @param ClusterId Cluster ID.
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
@@ -77,16 +77,16 @@ public class ModifyAccountHostRequest extends AbstractModel {
     }
 
     /**
-     * Get Account infomation 
-     * @return Account Account infomation
+     * Get Account information 
+     * @return Account Account information
      */
     public InputAccount getAccount() {
         return this.Account;
     }
 
     /**
-     * Set Account infomation
-     * @param Account Account infomation
+     * Set Account information
+     * @param Account Account information
      */
     public void setAccount(InputAccount Account) {
         this.Account = Account;

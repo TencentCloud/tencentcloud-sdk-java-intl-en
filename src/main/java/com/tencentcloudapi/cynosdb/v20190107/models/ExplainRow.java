@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class ExplainRow extends AbstractModel {
 
     /**
-    * <p>Serial number of the query</p>
+    * <p>Serial number for querying</p>
     */
     @SerializedName("Id")
     @Expose
     private Long Id;
 
     /**
-    * <p>Query type. Common values: SIMPLE (simple query, excluding subqueries or UNION), PRIMARY (outermost query), SUBQUERY (first SELECT in a subquery), DERIVED (derivative table/subquery in FROM clause), UNION (second and subsequent SELECTs in UNION), UNION RESULT (result set of UNION).</p>
+    * <p>Query type. Common values: SIMPLE (simple query, excluding subqueries or UNION), PRIMARY (outermost query), SUBQUERY (first SELECT in a subquery), DERIVED (derived table/subquery in the FROM clause), UNION (second or later SELECT in a UNION), UNION RESULT (result set of a UNION).</p>
     */
     @SerializedName("SelectType")
     @Expose
@@ -52,14 +52,14 @@ public class ExplainRow extends AbstractModel {
     private String Partitions;
 
     /**
-    * <p>Access type (very important, a key metric for measuring query efficiency), ranked from best to worst: system &gt; const &gt; eq_ref &gt; ref &gt; fulltext &gt; ref_or_null &gt; index_merge &gt; unique_subquery &gt; index_subquery &gt; range &gt; index &gt; ALL. Common value descriptions: • system: The table has only one row (system table). • const: Matches one row through primary key or unique index, commonly seen in WHERE pk = 1. • eq_ref: Uses primary key or unique index when connecting, each index value matches only one row. • ref: Uses non-unique index to search, may match multiple rows. • range: Index range scan, such as BETWEEN, &gt;, &lt;, IN. • index: Full index scan (traversal of the entire index tree). • ALL: Full-table scan (worst, requires optimization).</p>
+    * <p>Access type (very important, a key metric for query efficiency), arranged from best to worst: system &gt; const &gt; eq_ref &gt; ref &gt; fulltext &gt; ref_or_null &gt; index_merge &gt; unique_subquery &gt; index_subquery &gt; range &gt; index &gt; ALL. Common value descriptions: • system: The table has only one row (system table) • const: Matches one row through the primary key or unique index, commonly used in WHERE pk = 1 • eq_ref: Uses the primary key or unique index when connecting, and each index value matches only one row • ref: Uses a non-unique index search, which may match multiple rows • range: Index range scan, such as BETWEEN, &gt;, &lt;, IN • index: Full index scan (traverses the entire index tree) • ALL: Full-table scan (worst, needs optimization)</p>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * <p>Indexes that may be used in querying. NULL means no available index.</p>
+    * <p>Indexes that may be used in querying. NULL means no index is available.</p>
     */
     @SerializedName("PossibleKeys")
     @Expose
@@ -73,28 +73,28 @@ public class ExplainRow extends AbstractModel {
     private String Key;
 
     /**
-    * <p>The length of the actual used index (number of bytes). It can be used to determine which columns are actually used in the composite index. A shorter value indicates fewer index columns are used.</p>
+    * <p>Actual used index length (number of bytes). It can be used to determine which columns in a composite index are actually used. A shorter value indicates fewer index columns used.</p>
     */
     @SerializedName("KeyLen")
     @Expose
     private String KeyLen;
 
     /**
-    * <p>Display which columns or constants are compared with indexes in the key column. Common values: const (constant), certain column name, func (function result).</p>
+    * <p>Display which columns or constants to compare with the indexes in the key column. Common values: const, a column name, func (function result).</p>
     */
     @SerializedName("Ref")
     @Expose
     private String Ref;
 
     /**
-    * <p>Estimate the number of rows to scan</p>
+    * <p>Estimated Number of Rows to Scan</p>
     */
     @SerializedName("Rows")
     @Expose
     private Long Rows;
 
     /**
-    * <p>Indicates the estimation of the percentage of rows remaining after table conditional filtering. 100% means no additional filtering. The higher the value, the better.</p>
+    * <p>Refers to the estimated percentage of rows remaining after table condition filtering. 100% means no additional filtering, and higher values are better.</p>
     */
     @SerializedName("Filtered")
     @Expose
@@ -108,32 +108,32 @@ public class ExplainRow extends AbstractModel {
     private String Extra;
 
     /**
-     * Get <p>Serial number of the query</p> 
-     * @return Id <p>Serial number of the query</p>
+     * Get <p>Serial number for querying</p> 
+     * @return Id <p>Serial number for querying</p>
      */
     public Long getId() {
         return this.Id;
     }
 
     /**
-     * Set <p>Serial number of the query</p>
-     * @param Id <p>Serial number of the query</p>
+     * Set <p>Serial number for querying</p>
+     * @param Id <p>Serial number for querying</p>
      */
     public void setId(Long Id) {
         this.Id = Id;
     }
 
     /**
-     * Get <p>Query type. Common values: SIMPLE (simple query, excluding subqueries or UNION), PRIMARY (outermost query), SUBQUERY (first SELECT in a subquery), DERIVED (derivative table/subquery in FROM clause), UNION (second and subsequent SELECTs in UNION), UNION RESULT (result set of UNION).</p> 
-     * @return SelectType <p>Query type. Common values: SIMPLE (simple query, excluding subqueries or UNION), PRIMARY (outermost query), SUBQUERY (first SELECT in a subquery), DERIVED (derivative table/subquery in FROM clause), UNION (second and subsequent SELECTs in UNION), UNION RESULT (result set of UNION).</p>
+     * Get <p>Query type. Common values: SIMPLE (simple query, excluding subqueries or UNION), PRIMARY (outermost query), SUBQUERY (first SELECT in a subquery), DERIVED (derived table/subquery in the FROM clause), UNION (second or later SELECT in a UNION), UNION RESULT (result set of a UNION).</p> 
+     * @return SelectType <p>Query type. Common values: SIMPLE (simple query, excluding subqueries or UNION), PRIMARY (outermost query), SUBQUERY (first SELECT in a subquery), DERIVED (derived table/subquery in the FROM clause), UNION (second or later SELECT in a UNION), UNION RESULT (result set of a UNION).</p>
      */
     public String getSelectType() {
         return this.SelectType;
     }
 
     /**
-     * Set <p>Query type. Common values: SIMPLE (simple query, excluding subqueries or UNION), PRIMARY (outermost query), SUBQUERY (first SELECT in a subquery), DERIVED (derivative table/subquery in FROM clause), UNION (second and subsequent SELECTs in UNION), UNION RESULT (result set of UNION).</p>
-     * @param SelectType <p>Query type. Common values: SIMPLE (simple query, excluding subqueries or UNION), PRIMARY (outermost query), SUBQUERY (first SELECT in a subquery), DERIVED (derivative table/subquery in FROM clause), UNION (second and subsequent SELECTs in UNION), UNION RESULT (result set of UNION).</p>
+     * Set <p>Query type. Common values: SIMPLE (simple query, excluding subqueries or UNION), PRIMARY (outermost query), SUBQUERY (first SELECT in a subquery), DERIVED (derived table/subquery in the FROM clause), UNION (second or later SELECT in a UNION), UNION RESULT (result set of a UNION).</p>
+     * @param SelectType <p>Query type. Common values: SIMPLE (simple query, excluding subqueries or UNION), PRIMARY (outermost query), SUBQUERY (first SELECT in a subquery), DERIVED (derived table/subquery in the FROM clause), UNION (second or later SELECT in a UNION), UNION RESULT (result set of a UNION).</p>
      */
     public void setSelectType(String SelectType) {
         this.SelectType = SelectType;
@@ -172,32 +172,32 @@ public class ExplainRow extends AbstractModel {
     }
 
     /**
-     * Get <p>Access type (very important, a key metric for measuring query efficiency), ranked from best to worst: system &gt; const &gt; eq_ref &gt; ref &gt; fulltext &gt; ref_or_null &gt; index_merge &gt; unique_subquery &gt; index_subquery &gt; range &gt; index &gt; ALL. Common value descriptions: • system: The table has only one row (system table). • const: Matches one row through primary key or unique index, commonly seen in WHERE pk = 1. • eq_ref: Uses primary key or unique index when connecting, each index value matches only one row. • ref: Uses non-unique index to search, may match multiple rows. • range: Index range scan, such as BETWEEN, &gt;, &lt;, IN. • index: Full index scan (traversal of the entire index tree). • ALL: Full-table scan (worst, requires optimization).</p> 
-     * @return Type <p>Access type (very important, a key metric for measuring query efficiency), ranked from best to worst: system &gt; const &gt; eq_ref &gt; ref &gt; fulltext &gt; ref_or_null &gt; index_merge &gt; unique_subquery &gt; index_subquery &gt; range &gt; index &gt; ALL. Common value descriptions: • system: The table has only one row (system table). • const: Matches one row through primary key or unique index, commonly seen in WHERE pk = 1. • eq_ref: Uses primary key or unique index when connecting, each index value matches only one row. • ref: Uses non-unique index to search, may match multiple rows. • range: Index range scan, such as BETWEEN, &gt;, &lt;, IN. • index: Full index scan (traversal of the entire index tree). • ALL: Full-table scan (worst, requires optimization).</p>
+     * Get <p>Access type (very important, a key metric for query efficiency), arranged from best to worst: system &gt; const &gt; eq_ref &gt; ref &gt; fulltext &gt; ref_or_null &gt; index_merge &gt; unique_subquery &gt; index_subquery &gt; range &gt; index &gt; ALL. Common value descriptions: • system: The table has only one row (system table) • const: Matches one row through the primary key or unique index, commonly used in WHERE pk = 1 • eq_ref: Uses the primary key or unique index when connecting, and each index value matches only one row • ref: Uses a non-unique index search, which may match multiple rows • range: Index range scan, such as BETWEEN, &gt;, &lt;, IN • index: Full index scan (traverses the entire index tree) • ALL: Full-table scan (worst, needs optimization)</p> 
+     * @return Type <p>Access type (very important, a key metric for query efficiency), arranged from best to worst: system &gt; const &gt; eq_ref &gt; ref &gt; fulltext &gt; ref_or_null &gt; index_merge &gt; unique_subquery &gt; index_subquery &gt; range &gt; index &gt; ALL. Common value descriptions: • system: The table has only one row (system table) • const: Matches one row through the primary key or unique index, commonly used in WHERE pk = 1 • eq_ref: Uses the primary key or unique index when connecting, and each index value matches only one row • ref: Uses a non-unique index search, which may match multiple rows • range: Index range scan, such as BETWEEN, &gt;, &lt;, IN • index: Full index scan (traverses the entire index tree) • ALL: Full-table scan (worst, needs optimization)</p>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set <p>Access type (very important, a key metric for measuring query efficiency), ranked from best to worst: system &gt; const &gt; eq_ref &gt; ref &gt; fulltext &gt; ref_or_null &gt; index_merge &gt; unique_subquery &gt; index_subquery &gt; range &gt; index &gt; ALL. Common value descriptions: • system: The table has only one row (system table). • const: Matches one row through primary key or unique index, commonly seen in WHERE pk = 1. • eq_ref: Uses primary key or unique index when connecting, each index value matches only one row. • ref: Uses non-unique index to search, may match multiple rows. • range: Index range scan, such as BETWEEN, &gt;, &lt;, IN. • index: Full index scan (traversal of the entire index tree). • ALL: Full-table scan (worst, requires optimization).</p>
-     * @param Type <p>Access type (very important, a key metric for measuring query efficiency), ranked from best to worst: system &gt; const &gt; eq_ref &gt; ref &gt; fulltext &gt; ref_or_null &gt; index_merge &gt; unique_subquery &gt; index_subquery &gt; range &gt; index &gt; ALL. Common value descriptions: • system: The table has only one row (system table). • const: Matches one row through primary key or unique index, commonly seen in WHERE pk = 1. • eq_ref: Uses primary key or unique index when connecting, each index value matches only one row. • ref: Uses non-unique index to search, may match multiple rows. • range: Index range scan, such as BETWEEN, &gt;, &lt;, IN. • index: Full index scan (traversal of the entire index tree). • ALL: Full-table scan (worst, requires optimization).</p>
+     * Set <p>Access type (very important, a key metric for query efficiency), arranged from best to worst: system &gt; const &gt; eq_ref &gt; ref &gt; fulltext &gt; ref_or_null &gt; index_merge &gt; unique_subquery &gt; index_subquery &gt; range &gt; index &gt; ALL. Common value descriptions: • system: The table has only one row (system table) • const: Matches one row through the primary key or unique index, commonly used in WHERE pk = 1 • eq_ref: Uses the primary key or unique index when connecting, and each index value matches only one row • ref: Uses a non-unique index search, which may match multiple rows • range: Index range scan, such as BETWEEN, &gt;, &lt;, IN • index: Full index scan (traverses the entire index tree) • ALL: Full-table scan (worst, needs optimization)</p>
+     * @param Type <p>Access type (very important, a key metric for query efficiency), arranged from best to worst: system &gt; const &gt; eq_ref &gt; ref &gt; fulltext &gt; ref_or_null &gt; index_merge &gt; unique_subquery &gt; index_subquery &gt; range &gt; index &gt; ALL. Common value descriptions: • system: The table has only one row (system table) • const: Matches one row through the primary key or unique index, commonly used in WHERE pk = 1 • eq_ref: Uses the primary key or unique index when connecting, and each index value matches only one row • ref: Uses a non-unique index search, which may match multiple rows • range: Index range scan, such as BETWEEN, &gt;, &lt;, IN • index: Full index scan (traverses the entire index tree) • ALL: Full-table scan (worst, needs optimization)</p>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get <p>Indexes that may be used in querying. NULL means no available index.</p> 
-     * @return PossibleKeys <p>Indexes that may be used in querying. NULL means no available index.</p>
+     * Get <p>Indexes that may be used in querying. NULL means no index is available.</p> 
+     * @return PossibleKeys <p>Indexes that may be used in querying. NULL means no index is available.</p>
      */
     public String getPossibleKeys() {
         return this.PossibleKeys;
     }
 
     /**
-     * Set <p>Indexes that may be used in querying. NULL means no available index.</p>
-     * @param PossibleKeys <p>Indexes that may be used in querying. NULL means no available index.</p>
+     * Set <p>Indexes that may be used in querying. NULL means no index is available.</p>
+     * @param PossibleKeys <p>Indexes that may be used in querying. NULL means no index is available.</p>
      */
     public void setPossibleKeys(String PossibleKeys) {
         this.PossibleKeys = PossibleKeys;
@@ -220,64 +220,64 @@ public class ExplainRow extends AbstractModel {
     }
 
     /**
-     * Get <p>The length of the actual used index (number of bytes). It can be used to determine which columns are actually used in the composite index. A shorter value indicates fewer index columns are used.</p> 
-     * @return KeyLen <p>The length of the actual used index (number of bytes). It can be used to determine which columns are actually used in the composite index. A shorter value indicates fewer index columns are used.</p>
+     * Get <p>Actual used index length (number of bytes). It can be used to determine which columns in a composite index are actually used. A shorter value indicates fewer index columns used.</p> 
+     * @return KeyLen <p>Actual used index length (number of bytes). It can be used to determine which columns in a composite index are actually used. A shorter value indicates fewer index columns used.</p>
      */
     public String getKeyLen() {
         return this.KeyLen;
     }
 
     /**
-     * Set <p>The length of the actual used index (number of bytes). It can be used to determine which columns are actually used in the composite index. A shorter value indicates fewer index columns are used.</p>
-     * @param KeyLen <p>The length of the actual used index (number of bytes). It can be used to determine which columns are actually used in the composite index. A shorter value indicates fewer index columns are used.</p>
+     * Set <p>Actual used index length (number of bytes). It can be used to determine which columns in a composite index are actually used. A shorter value indicates fewer index columns used.</p>
+     * @param KeyLen <p>Actual used index length (number of bytes). It can be used to determine which columns in a composite index are actually used. A shorter value indicates fewer index columns used.</p>
      */
     public void setKeyLen(String KeyLen) {
         this.KeyLen = KeyLen;
     }
 
     /**
-     * Get <p>Display which columns or constants are compared with indexes in the key column. Common values: const (constant), certain column name, func (function result).</p> 
-     * @return Ref <p>Display which columns or constants are compared with indexes in the key column. Common values: const (constant), certain column name, func (function result).</p>
+     * Get <p>Display which columns or constants to compare with the indexes in the key column. Common values: const, a column name, func (function result).</p> 
+     * @return Ref <p>Display which columns or constants to compare with the indexes in the key column. Common values: const, a column name, func (function result).</p>
      */
     public String getRef() {
         return this.Ref;
     }
 
     /**
-     * Set <p>Display which columns or constants are compared with indexes in the key column. Common values: const (constant), certain column name, func (function result).</p>
-     * @param Ref <p>Display which columns or constants are compared with indexes in the key column. Common values: const (constant), certain column name, func (function result).</p>
+     * Set <p>Display which columns or constants to compare with the indexes in the key column. Common values: const, a column name, func (function result).</p>
+     * @param Ref <p>Display which columns or constants to compare with the indexes in the key column. Common values: const, a column name, func (function result).</p>
      */
     public void setRef(String Ref) {
         this.Ref = Ref;
     }
 
     /**
-     * Get <p>Estimate the number of rows to scan</p> 
-     * @return Rows <p>Estimate the number of rows to scan</p>
+     * Get <p>Estimated Number of Rows to Scan</p> 
+     * @return Rows <p>Estimated Number of Rows to Scan</p>
      */
     public Long getRows() {
         return this.Rows;
     }
 
     /**
-     * Set <p>Estimate the number of rows to scan</p>
-     * @param Rows <p>Estimate the number of rows to scan</p>
+     * Set <p>Estimated Number of Rows to Scan</p>
+     * @param Rows <p>Estimated Number of Rows to Scan</p>
      */
     public void setRows(Long Rows) {
         this.Rows = Rows;
     }
 
     /**
-     * Get <p>Indicates the estimation of the percentage of rows remaining after table conditional filtering. 100% means no additional filtering. The higher the value, the better.</p> 
-     * @return Filtered <p>Indicates the estimation of the percentage of rows remaining after table conditional filtering. 100% means no additional filtering. The higher the value, the better.</p>
+     * Get <p>Refers to the estimated percentage of rows remaining after table condition filtering. 100% means no additional filtering, and higher values are better.</p> 
+     * @return Filtered <p>Refers to the estimated percentage of rows remaining after table condition filtering. 100% means no additional filtering, and higher values are better.</p>
      */
     public Float getFiltered() {
         return this.Filtered;
     }
 
     /**
-     * Set <p>Indicates the estimation of the percentage of rows remaining after table conditional filtering. 100% means no additional filtering. The higher the value, the better.</p>
-     * @param Filtered <p>Indicates the estimation of the percentage of rows remaining after table conditional filtering. 100% means no additional filtering. The higher the value, the better.</p>
+     * Set <p>Refers to the estimated percentage of rows remaining after table condition filtering. 100% means no additional filtering, and higher values are better.</p>
+     * @param Filtered <p>Refers to the estimated percentage of rows remaining after table condition filtering. 100% means no additional filtering, and higher values are better.</p>
      */
     public void setFiltered(Float Filtered) {
         this.Filtered = Filtered;

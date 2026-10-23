@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeTasksResponse extends AbstractModel {
 
     /**
-    * Total number of entries in the task list.
+    * Total number of items in the task list
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * Task list.
+    * Task list
     */
     @SerializedName("TaskList")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeTasksResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Total number of entries in the task list. 
-     * @return TotalCount Total number of entries in the task list.
+     * Get Total number of items in the task list 
+     * @return TotalCount Total number of items in the task list
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Total number of entries in the task list.
-     * @param TotalCount Total number of entries in the task list.
+     * Set Total number of items in the task list
+     * @param TotalCount Total number of items in the task list
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get Task list. 
-     * @return TaskList Task list.
+     * Get Task list 
+     * @return TaskList Task list
      */
     public BizTaskInfo [] getTaskList() {
         return this.TaskList;
     }
 
     /**
-     * Set Task list.
-     * @param TaskList Task list.
+     * Set Task list
+     * @param TaskList Task list
      */
     public void setTaskList(BizTaskInfo [] TaskList) {
         this.TaskList = TaskList;

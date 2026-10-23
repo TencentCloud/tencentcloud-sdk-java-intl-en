@@ -31,14 +31,14 @@ public class InstanceAuditRule extends AbstractModel {
     private String InstanceId;
 
     /**
-    * Specifies whether it is a rule-based audit. true - rule-based audit; false - comprehensive audit.
+    * Whether it is rule audit. true - Rule audit, false - Full audit.
     */
     @SerializedName("AuditRule")
     @Expose
     private Boolean AuditRule;
 
     /**
-    * Specifies the audit rule details. valid when AuditRule=true.
+    * Audit rule details. Valid only when AuditRule=true.
     */
     @SerializedName("AuditRuleFilters")
     @Expose
@@ -52,7 +52,7 @@ public class InstanceAuditRule extends AbstractModel {
     private Boolean OldRule;
 
     /**
-    * The rule template details of the instance application.
+    * Description of the rule template applied to the instance.
     */
     @SerializedName("RuleTemplates")
     @Expose
@@ -75,32 +75,32 @@ public class InstanceAuditRule extends AbstractModel {
     }
 
     /**
-     * Get Specifies whether it is a rule-based audit. true - rule-based audit; false - comprehensive audit. 
-     * @return AuditRule Specifies whether it is a rule-based audit. true - rule-based audit; false - comprehensive audit.
+     * Get Whether it is rule audit. true - Rule audit, false - Full audit. 
+     * @return AuditRule Whether it is rule audit. true - Rule audit, false - Full audit.
      */
     public Boolean getAuditRule() {
         return this.AuditRule;
     }
 
     /**
-     * Set Specifies whether it is a rule-based audit. true - rule-based audit; false - comprehensive audit.
-     * @param AuditRule Specifies whether it is a rule-based audit. true - rule-based audit; false - comprehensive audit.
+     * Set Whether it is rule audit. true - Rule audit, false - Full audit.
+     * @param AuditRule Whether it is rule audit. true - Rule audit, false - Full audit.
      */
     public void setAuditRule(Boolean AuditRule) {
         this.AuditRule = AuditRule;
     }
 
     /**
-     * Get Specifies the audit rule details. valid when AuditRule=true. 
-     * @return AuditRuleFilters Specifies the audit rule details. valid when AuditRule=true.
+     * Get Audit rule details. Valid only when AuditRule=true. 
+     * @return AuditRuleFilters Audit rule details. Valid only when AuditRule=true.
      */
     public AuditRuleFilters [] getAuditRuleFilters() {
         return this.AuditRuleFilters;
     }
 
     /**
-     * Set Specifies the audit rule details. valid when AuditRule=true.
-     * @param AuditRuleFilters Specifies the audit rule details. valid when AuditRule=true.
+     * Set Audit rule details. Valid only when AuditRule=true.
+     * @param AuditRuleFilters Audit rule details. Valid only when AuditRule=true.
      */
     public void setAuditRuleFilters(AuditRuleFilters [] AuditRuleFilters) {
         this.AuditRuleFilters = AuditRuleFilters;
@@ -123,16 +123,16 @@ public class InstanceAuditRule extends AbstractModel {
     }
 
     /**
-     * Get The rule template details of the instance application. 
-     * @return RuleTemplates The rule template details of the instance application.
+     * Get Description of the rule template applied to the instance. 
+     * @return RuleTemplates Description of the rule template applied to the instance.
      */
     public RuleTemplateInfo [] getRuleTemplates() {
         return this.RuleTemplates;
     }
 
     /**
-     * Set The rule template details of the instance application.
-     * @param RuleTemplates The rule template details of the instance application.
+     * Set Description of the rule template applied to the instance.
+     * @param RuleTemplates Description of the rule template applied to the instance.
      */
     public void setRuleTemplates(RuleTemplateInfo [] RuleTemplates) {
         this.RuleTemplates = RuleTemplates;

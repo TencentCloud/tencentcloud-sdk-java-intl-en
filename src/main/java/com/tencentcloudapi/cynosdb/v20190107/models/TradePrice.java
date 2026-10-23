@@ -24,56 +24,56 @@ import java.util.HashMap;
 public class TradePrice extends AbstractModel {
 
     /**
-    * Resource total price under prepaid mode, excluding discounts. unit: microCent. 1 US dollar equals 1e8 microCents.
+    * Resource total price under prepaid mode, excluding discounts. Unit: cent.
     */
     @SerializedName("TotalPrice")
     @Expose
     private Long TotalPrice;
 
     /**
-    * Total discount. `100` means no discount.
+    * Total discount. 100 means 100% no discount.
     */
     @SerializedName("Discount")
     @Expose
     private Float Discount;
 
     /**
-    * Discounted total price under prepaid mode, unit: cent. 1 US dollar equals 1e8 microCents. for example, the user enjoys a Discount = TotalPrice * Discount.
+    * Discounted total price under prepaid mode, unit: cent. For example, if a user enjoys a discount, it is TotalPrice × Discount.
     */
     @SerializedName("TotalPriceDiscount")
     @Expose
     private Long TotalPriceDiscount;
 
     /**
-    * Unit resource price in postpaid mode, excluding discounts. unit: cent. 1 US dollar equals 1e2 cents
+    * Unit resource price in postpaid mode, excluding discounts. Unit: cent
     */
     @SerializedName("UnitPrice")
     @Expose
     private Long UnitPrice;
 
     /**
-    * Unit resource price in postpaid mode after Discount, unit: cent. 1 US dollar equals 1e2 cents. for example, the user enjoys a Discount = unitprice * Discount.
+    * Unit resource price under postpaid mode after Discount, unit: cent. For example, if a user enjoys a Discount, it is UnitPrice × Discount.
     */
     @SerializedName("UnitPriceDiscount")
     @Expose
     private Long UnitPriceDiscount;
 
     /**
-    * Price unit
+    * Billing price unit
     */
     @SerializedName("ChargeUnit")
     @Expose
     private String ChargeUnit;
 
     /**
-    * Excludes discounted rates under high precision.
+    * High-precision price excluding discounts
     */
     @SerializedName("UnitPriceHighPrecision")
     @Expose
     private String UnitPriceHighPrecision;
 
     /**
-    * Discounted price under high precision.
+    * Discounted price at high precision
     */
     @SerializedName("UnitPriceDiscountHighPrecision")
     @Expose
@@ -87,128 +87,128 @@ public class TradePrice extends AbstractModel {
     private String AmountUnit;
 
     /**
-     * Get Resource total price under prepaid mode, excluding discounts. unit: microCent. 1 US dollar equals 1e8 microCents. 
-     * @return TotalPrice Resource total price under prepaid mode, excluding discounts. unit: microCent. 1 US dollar equals 1e8 microCents.
+     * Get Resource total price under prepaid mode, excluding discounts. Unit: cent. 
+     * @return TotalPrice Resource total price under prepaid mode, excluding discounts. Unit: cent.
      */
     public Long getTotalPrice() {
         return this.TotalPrice;
     }
 
     /**
-     * Set Resource total price under prepaid mode, excluding discounts. unit: microCent. 1 US dollar equals 1e8 microCents.
-     * @param TotalPrice Resource total price under prepaid mode, excluding discounts. unit: microCent. 1 US dollar equals 1e8 microCents.
+     * Set Resource total price under prepaid mode, excluding discounts. Unit: cent.
+     * @param TotalPrice Resource total price under prepaid mode, excluding discounts. Unit: cent.
      */
     public void setTotalPrice(Long TotalPrice) {
         this.TotalPrice = TotalPrice;
     }
 
     /**
-     * Get Total discount. `100` means no discount. 
-     * @return Discount Total discount. `100` means no discount.
+     * Get Total discount. 100 means 100% no discount. 
+     * @return Discount Total discount. 100 means 100% no discount.
      */
     public Float getDiscount() {
         return this.Discount;
     }
 
     /**
-     * Set Total discount. `100` means no discount.
-     * @param Discount Total discount. `100` means no discount.
+     * Set Total discount. 100 means 100% no discount.
+     * @param Discount Total discount. 100 means 100% no discount.
      */
     public void setDiscount(Float Discount) {
         this.Discount = Discount;
     }
 
     /**
-     * Get Discounted total price under prepaid mode, unit: cent. 1 US dollar equals 1e8 microCents. for example, the user enjoys a Discount = TotalPrice * Discount. 
-     * @return TotalPriceDiscount Discounted total price under prepaid mode, unit: cent. 1 US dollar equals 1e8 microCents. for example, the user enjoys a Discount = TotalPrice * Discount.
+     * Get Discounted total price under prepaid mode, unit: cent. For example, if a user enjoys a discount, it is TotalPrice × Discount. 
+     * @return TotalPriceDiscount Discounted total price under prepaid mode, unit: cent. For example, if a user enjoys a discount, it is TotalPrice × Discount.
      */
     public Long getTotalPriceDiscount() {
         return this.TotalPriceDiscount;
     }
 
     /**
-     * Set Discounted total price under prepaid mode, unit: cent. 1 US dollar equals 1e8 microCents. for example, the user enjoys a Discount = TotalPrice * Discount.
-     * @param TotalPriceDiscount Discounted total price under prepaid mode, unit: cent. 1 US dollar equals 1e8 microCents. for example, the user enjoys a Discount = TotalPrice * Discount.
+     * Set Discounted total price under prepaid mode, unit: cent. For example, if a user enjoys a discount, it is TotalPrice × Discount.
+     * @param TotalPriceDiscount Discounted total price under prepaid mode, unit: cent. For example, if a user enjoys a discount, it is TotalPrice × Discount.
      */
     public void setTotalPriceDiscount(Long TotalPriceDiscount) {
         this.TotalPriceDiscount = TotalPriceDiscount;
     }
 
     /**
-     * Get Unit resource price in postpaid mode, excluding discounts. unit: cent. 1 US dollar equals 1e2 cents 
-     * @return UnitPrice Unit resource price in postpaid mode, excluding discounts. unit: cent. 1 US dollar equals 1e2 cents
+     * Get Unit resource price in postpaid mode, excluding discounts. Unit: cent 
+     * @return UnitPrice Unit resource price in postpaid mode, excluding discounts. Unit: cent
      */
     public Long getUnitPrice() {
         return this.UnitPrice;
     }
 
     /**
-     * Set Unit resource price in postpaid mode, excluding discounts. unit: cent. 1 US dollar equals 1e2 cents
-     * @param UnitPrice Unit resource price in postpaid mode, excluding discounts. unit: cent. 1 US dollar equals 1e2 cents
+     * Set Unit resource price in postpaid mode, excluding discounts. Unit: cent
+     * @param UnitPrice Unit resource price in postpaid mode, excluding discounts. Unit: cent
      */
     public void setUnitPrice(Long UnitPrice) {
         this.UnitPrice = UnitPrice;
     }
 
     /**
-     * Get Unit resource price in postpaid mode after Discount, unit: cent. 1 US dollar equals 1e2 cents. for example, the user enjoys a Discount = unitprice * Discount. 
-     * @return UnitPriceDiscount Unit resource price in postpaid mode after Discount, unit: cent. 1 US dollar equals 1e2 cents. for example, the user enjoys a Discount = unitprice * Discount.
+     * Get Unit resource price under postpaid mode after Discount, unit: cent. For example, if a user enjoys a Discount, it is UnitPrice × Discount. 
+     * @return UnitPriceDiscount Unit resource price under postpaid mode after Discount, unit: cent. For example, if a user enjoys a Discount, it is UnitPrice × Discount.
      */
     public Long getUnitPriceDiscount() {
         return this.UnitPriceDiscount;
     }
 
     /**
-     * Set Unit resource price in postpaid mode after Discount, unit: cent. 1 US dollar equals 1e2 cents. for example, the user enjoys a Discount = unitprice * Discount.
-     * @param UnitPriceDiscount Unit resource price in postpaid mode after Discount, unit: cent. 1 US dollar equals 1e2 cents. for example, the user enjoys a Discount = unitprice * Discount.
+     * Set Unit resource price under postpaid mode after Discount, unit: cent. For example, if a user enjoys a Discount, it is UnitPrice × Discount.
+     * @param UnitPriceDiscount Unit resource price under postpaid mode after Discount, unit: cent. For example, if a user enjoys a Discount, it is UnitPrice × Discount.
      */
     public void setUnitPriceDiscount(Long UnitPriceDiscount) {
         this.UnitPriceDiscount = UnitPriceDiscount;
     }
 
     /**
-     * Get Price unit 
-     * @return ChargeUnit Price unit
+     * Get Billing price unit 
+     * @return ChargeUnit Billing price unit
      */
     public String getChargeUnit() {
         return this.ChargeUnit;
     }
 
     /**
-     * Set Price unit
-     * @param ChargeUnit Price unit
+     * Set Billing price unit
+     * @param ChargeUnit Billing price unit
      */
     public void setChargeUnit(String ChargeUnit) {
         this.ChargeUnit = ChargeUnit;
     }
 
     /**
-     * Get Excludes discounted rates under high precision. 
-     * @return UnitPriceHighPrecision Excludes discounted rates under high precision.
+     * Get High-precision price excluding discounts 
+     * @return UnitPriceHighPrecision High-precision price excluding discounts
      */
     public String getUnitPriceHighPrecision() {
         return this.UnitPriceHighPrecision;
     }
 
     /**
-     * Set Excludes discounted rates under high precision.
-     * @param UnitPriceHighPrecision Excludes discounted rates under high precision.
+     * Set High-precision price excluding discounts
+     * @param UnitPriceHighPrecision High-precision price excluding discounts
      */
     public void setUnitPriceHighPrecision(String UnitPriceHighPrecision) {
         this.UnitPriceHighPrecision = UnitPriceHighPrecision;
     }
 
     /**
-     * Get Discounted price under high precision. 
-     * @return UnitPriceDiscountHighPrecision Discounted price under high precision.
+     * Get Discounted price at high precision 
+     * @return UnitPriceDiscountHighPrecision Discounted price at high precision
      */
     public String getUnitPriceDiscountHighPrecision() {
         return this.UnitPriceDiscountHighPrecision;
     }
 
     /**
-     * Set Discounted price under high precision.
-     * @param UnitPriceDiscountHighPrecision Discounted price under high precision.
+     * Set Discounted price at high precision
+     * @param UnitPriceDiscountHighPrecision Discounted price at high precision
      */
     public void setUnitPriceDiscountHighPrecision(String UnitPriceDiscountHighPrecision) {
         this.UnitPriceDiscountHighPrecision = UnitPriceDiscountHighPrecision;

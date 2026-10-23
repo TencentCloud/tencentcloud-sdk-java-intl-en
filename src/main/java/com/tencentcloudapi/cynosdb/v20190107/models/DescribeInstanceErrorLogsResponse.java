@@ -31,7 +31,7 @@ public class DescribeInstanceErrorLogsResponse extends AbstractModel {
     private Long TotalCount;
 
     /**
-    * Error log list.
+    * Error log list
     */
     @SerializedName("ErrorLogs")
     @Expose
@@ -61,16 +61,16 @@ public class DescribeInstanceErrorLogsResponse extends AbstractModel {
     }
 
     /**
-     * Get Error log list. 
-     * @return ErrorLogs Error log list.
+     * Get Error log list 
+     * @return ErrorLogs Error log list
      */
     public CynosdbErrorLogItem [] getErrorLogs() {
         return this.ErrorLogs;
     }
 
     /**
-     * Set Error log list.
-     * @param ErrorLogs Error log list.
+     * Set Error log list
+     * @param ErrorLogs Error log list
      */
     public void setErrorLogs(CynosdbErrorLogItem [] ErrorLogs) {
         this.ErrorLogs = ErrorLogs;

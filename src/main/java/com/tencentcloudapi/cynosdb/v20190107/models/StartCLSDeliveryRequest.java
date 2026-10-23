@@ -31,21 +31,21 @@ public class StartCLSDeliveryRequest extends AbstractModel {
     private String InstanceId;
 
     /**
-    * Enabled log topic ID.
+    * id of the enabled log topic
     */
     @SerializedName("CLSTopicIds")
     @Expose
     private String [] CLSTopicIds;
 
     /**
-    * Log type.
+    * Log type
     */
     @SerializedName("LogType")
     @Expose
     private String LogType;
 
     /**
-    * Whether the maintenance time is in operation.
+    * Whether it is running during the maintenance time
     */
     @SerializedName("IsInMaintainPeriod")
     @Expose
@@ -68,48 +68,48 @@ public class StartCLSDeliveryRequest extends AbstractModel {
     }
 
     /**
-     * Get Enabled log topic ID. 
-     * @return CLSTopicIds Enabled log topic ID.
+     * Get id of the enabled log topic 
+     * @return CLSTopicIds id of the enabled log topic
      */
     public String [] getCLSTopicIds() {
         return this.CLSTopicIds;
     }
 
     /**
-     * Set Enabled log topic ID.
-     * @param CLSTopicIds Enabled log topic ID.
+     * Set id of the enabled log topic
+     * @param CLSTopicIds id of the enabled log topic
      */
     public void setCLSTopicIds(String [] CLSTopicIds) {
         this.CLSTopicIds = CLSTopicIds;
     }
 
     /**
-     * Get Log type. 
-     * @return LogType Log type.
+     * Get Log type 
+     * @return LogType Log type
      */
     public String getLogType() {
         return this.LogType;
     }
 
     /**
-     * Set Log type.
-     * @param LogType Log type.
+     * Set Log type
+     * @param LogType Log type
      */
     public void setLogType(String LogType) {
         this.LogType = LogType;
     }
 
     /**
-     * Get Whether the maintenance time is in operation. 
-     * @return IsInMaintainPeriod Whether the maintenance time is in operation.
+     * Get Whether it is running during the maintenance time 
+     * @return IsInMaintainPeriod Whether it is running during the maintenance time
      */
     public String getIsInMaintainPeriod() {
         return this.IsInMaintainPeriod;
     }
 
     /**
-     * Set Whether the maintenance time is in operation.
-     * @param IsInMaintainPeriod Whether the maintenance time is in operation.
+     * Set Whether it is running during the maintenance time
+     * @param IsInMaintainPeriod Whether it is running during the maintenance time
      */
     public void setIsInMaintainPeriod(String IsInMaintainPeriod) {
         this.IsInMaintainPeriod = IsInMaintainPeriod;

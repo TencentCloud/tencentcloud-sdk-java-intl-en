@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DeleteVaultsResponse extends AbstractModel {
 
     /**
-    * Delete task list. Each safe corresponds to a task.
+    * Task deletion list. Each safe corresponds to a task.
     */
     @SerializedName("VaultTask")
     @Expose
@@ -38,16 +38,16 @@ public class DeleteVaultsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Delete task list. Each safe corresponds to a task. 
-     * @return VaultTask Delete task list. Each safe corresponds to a task.
+     * Get Task deletion list. Each safe corresponds to a task. 
+     * @return VaultTask Task deletion list. Each safe corresponds to a task.
      */
     public DeleteVaultTask [] getVaultTask() {
         return this.VaultTask;
     }
 
     /**
-     * Set Delete task list. Each safe corresponds to a task.
-     * @param VaultTask Delete task list. Each safe corresponds to a task.
+     * Set Task deletion list. Each safe corresponds to a task.
+     * @param VaultTask Task deletion list. Each safe corresponds to a task.
      */
     public void setVaultTask(DeleteVaultTask [] VaultTask) {
         this.VaultTask = VaultTask;

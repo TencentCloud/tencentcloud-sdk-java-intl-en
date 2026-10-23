@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class ProxyNodeInfo extends AbstractModel {
 
     /**
-    * <p>Database Proxy Node ID</p>
+    * <p>Database proxy node ID</p>
     */
     @SerializedName("ProxyNodeId")
     @Expose
     private String ProxyNodeId;
 
     /**
-    * <p>Current connection number of nodes. This field value does not return in the DescribeProxyNodes API.</p>
+    * <p>Current connection number of nodes. This field is not returned by the DescribeProxyNodes API.</p>
     */
     @SerializedName("ProxyNodeConnections")
     @Expose
@@ -52,7 +52,7 @@ public class ProxyNodeInfo extends AbstractModel {
     private Long Mem;
 
     /**
-    * <p>Database Proxy Node Status</p>
+    * <p>Database proxy node status</p>
     */
     @SerializedName("Status")
     @Expose
@@ -73,7 +73,7 @@ public class ProxyNodeInfo extends AbstractModel {
     private String ClusterId;
 
     /**
-    * <p>User AppID</p>
+    * <p>User AppID.</p>
     */
     @SerializedName("AppId")
     @Expose
@@ -94,7 +94,7 @@ public class ProxyNodeInfo extends AbstractModel {
     private String Zone;
 
     /**
-    * <p>Database Proxy Node Name</p>
+    * <p>Database proxy node name</p>
     */
     @SerializedName("OssProxyNodeName")
     @Expose
@@ -115,32 +115,32 @@ public class ProxyNodeInfo extends AbstractModel {
     private String UpdateTime;
 
     /**
-     * Get <p>Database Proxy Node ID</p> 
-     * @return ProxyNodeId <p>Database Proxy Node ID</p>
+     * Get <p>Database proxy node ID</p> 
+     * @return ProxyNodeId <p>Database proxy node ID</p>
      */
     public String getProxyNodeId() {
         return this.ProxyNodeId;
     }
 
     /**
-     * Set <p>Database Proxy Node ID</p>
-     * @param ProxyNodeId <p>Database Proxy Node ID</p>
+     * Set <p>Database proxy node ID</p>
+     * @param ProxyNodeId <p>Database proxy node ID</p>
      */
     public void setProxyNodeId(String ProxyNodeId) {
         this.ProxyNodeId = ProxyNodeId;
     }
 
     /**
-     * Get <p>Current connection number of nodes. This field value does not return in the DescribeProxyNodes API.</p> 
-     * @return ProxyNodeConnections <p>Current connection number of nodes. This field value does not return in the DescribeProxyNodes API.</p>
+     * Get <p>Current connection number of nodes. This field is not returned by the DescribeProxyNodes API.</p> 
+     * @return ProxyNodeConnections <p>Current connection number of nodes. This field is not returned by the DescribeProxyNodes API.</p>
      */
     public Long getProxyNodeConnections() {
         return this.ProxyNodeConnections;
     }
 
     /**
-     * Set <p>Current connection number of nodes. This field value does not return in the DescribeProxyNodes API.</p>
-     * @param ProxyNodeConnections <p>Current connection number of nodes. This field value does not return in the DescribeProxyNodes API.</p>
+     * Set <p>Current connection number of nodes. This field is not returned by the DescribeProxyNodes API.</p>
+     * @param ProxyNodeConnections <p>Current connection number of nodes. This field is not returned by the DescribeProxyNodes API.</p>
      */
     public void setProxyNodeConnections(Long ProxyNodeConnections) {
         this.ProxyNodeConnections = ProxyNodeConnections;
@@ -179,16 +179,16 @@ public class ProxyNodeInfo extends AbstractModel {
     }
 
     /**
-     * Get <p>Database Proxy Node Status</p> 
-     * @return Status <p>Database Proxy Node Status</p>
+     * Get <p>Database proxy node status</p> 
+     * @return Status <p>Database proxy node status</p>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set <p>Database Proxy Node Status</p>
-     * @param Status <p>Database Proxy Node Status</p>
+     * Set <p>Database proxy node status</p>
+     * @param Status <p>Database proxy node status</p>
      */
     public void setStatus(String Status) {
         this.Status = Status;
@@ -227,16 +227,16 @@ public class ProxyNodeInfo extends AbstractModel {
     }
 
     /**
-     * Get <p>User AppID</p> 
-     * @return AppId <p>User AppID</p>
+     * Get <p>User AppID.</p> 
+     * @return AppId <p>User AppID.</p>
      */
     public Long getAppId() {
         return this.AppId;
     }
 
     /**
-     * Set <p>User AppID</p>
-     * @param AppId <p>User AppID</p>
+     * Set <p>User AppID.</p>
+     * @param AppId <p>User AppID.</p>
      */
     public void setAppId(Long AppId) {
         this.AppId = AppId;
@@ -275,16 +275,16 @@ public class ProxyNodeInfo extends AbstractModel {
     }
 
     /**
-     * Get <p>Database Proxy Node Name</p> 
-     * @return OssProxyNodeName <p>Database Proxy Node Name</p>
+     * Get <p>Database proxy node name</p> 
+     * @return OssProxyNodeName <p>Database proxy node name</p>
      */
     public String getOssProxyNodeName() {
         return this.OssProxyNodeName;
     }
 
     /**
-     * Set <p>Database Proxy Node Name</p>
-     * @param OssProxyNodeName <p>Database Proxy Node Name</p>
+     * Set <p>Database proxy node name</p>
+     * @param OssProxyNodeName <p>Database proxy node name</p>
      */
     public void setOssProxyNodeName(String OssProxyNodeName) {
         this.OssProxyNodeName = OssProxyNodeName;

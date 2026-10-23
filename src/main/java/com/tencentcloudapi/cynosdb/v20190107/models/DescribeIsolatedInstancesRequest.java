@@ -24,158 +24,158 @@ import java.util.HashMap;
 public class DescribeIsolatedInstancesRequest extends AbstractModel {
 
     /**
-    * Number of returned results. the default value is 20. the maximum value is 100.
+    * Returned quantity. Default value: 20. Maximum value: 100.
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * Record offset. default value: 0.
+    * Record offset. Default value: 0
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * Sorting field. valid values:.
-<Li>CREATETIME: creation time</li>.
-<li> PERIODENDTIME: expiration time</li>.
+    * Sorting field. Valid values:
+<li> CREATETIME: creation time</li>
+<li> PERIODENDTIME: Expiration time</li>
     */
     @SerializedName("OrderBy")
     @Expose
     private String OrderBy;
 
     /**
-    * Sorting type. value range:.
-<Li>ASC: specifies ascending sort.</li>.
-<li> DESC: sorts in descending order. </li>.
+    * Sorting type. Valid values:
+<li> ASC: ascending order </li>
+<li> DESC: sort in descending order </li>
     */
     @SerializedName("OrderByType")
     @Expose
     private String OrderByType;
 
     /**
-    * Search criteria. when multiple filters exist, the relationship between filters is logical AND.
+    * Search criteria. When multiple filters exist, the relationship between filters is logical AND.
     */
     @SerializedName("Filters")
     @Expose
     private QueryFilter [] Filters;
 
     /**
-    * Engine type: currently supports "MYSQL", "POSTGRESQL".
+    * Engine type: Currently supports "MYSQL" and "POSTGRESQL"
     */
     @SerializedName("DbType")
     @Expose
     private String DbType;
 
     /**
-     * Get Number of returned results. the default value is 20. the maximum value is 100. 
-     * @return Limit Number of returned results. the default value is 20. the maximum value is 100.
+     * Get Returned quantity. Default value: 20. Maximum value: 100. 
+     * @return Limit Returned quantity. Default value: 20. Maximum value: 100.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Number of returned results. the default value is 20. the maximum value is 100.
-     * @param Limit Number of returned results. the default value is 20. the maximum value is 100.
+     * Set Returned quantity. Default value: 20. Maximum value: 100.
+     * @param Limit Returned quantity. Default value: 20. Maximum value: 100.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get Record offset. default value: 0. 
-     * @return Offset Record offset. default value: 0.
+     * Get Record offset. Default value: 0 
+     * @return Offset Record offset. Default value: 0
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Record offset. default value: 0.
-     * @param Offset Record offset. default value: 0.
+     * Set Record offset. Default value: 0
+     * @param Offset Record offset. Default value: 0
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get Sorting field. valid values:.
-<Li>CREATETIME: creation time</li>.
-<li> PERIODENDTIME: expiration time</li>. 
-     * @return OrderBy Sorting field. valid values:.
-<Li>CREATETIME: creation time</li>.
-<li> PERIODENDTIME: expiration time</li>.
+     * Get Sorting field. Valid values:
+<li> CREATETIME: creation time</li>
+<li> PERIODENDTIME: Expiration time</li> 
+     * @return OrderBy Sorting field. Valid values:
+<li> CREATETIME: creation time</li>
+<li> PERIODENDTIME: Expiration time</li>
      */
     public String getOrderBy() {
         return this.OrderBy;
     }
 
     /**
-     * Set Sorting field. valid values:.
-<Li>CREATETIME: creation time</li>.
-<li> PERIODENDTIME: expiration time</li>.
-     * @param OrderBy Sorting field. valid values:.
-<Li>CREATETIME: creation time</li>.
-<li> PERIODENDTIME: expiration time</li>.
+     * Set Sorting field. Valid values:
+<li> CREATETIME: creation time</li>
+<li> PERIODENDTIME: Expiration time</li>
+     * @param OrderBy Sorting field. Valid values:
+<li> CREATETIME: creation time</li>
+<li> PERIODENDTIME: Expiration time</li>
      */
     public void setOrderBy(String OrderBy) {
         this.OrderBy = OrderBy;
     }
 
     /**
-     * Get Sorting type. value range:.
-<Li>ASC: specifies ascending sort.</li>.
-<li> DESC: sorts in descending order. </li>. 
-     * @return OrderByType Sorting type. value range:.
-<Li>ASC: specifies ascending sort.</li>.
-<li> DESC: sorts in descending order. </li>.
+     * Get Sorting type. Valid values:
+<li> ASC: ascending order </li>
+<li> DESC: sort in descending order </li> 
+     * @return OrderByType Sorting type. Valid values:
+<li> ASC: ascending order </li>
+<li> DESC: sort in descending order </li>
      */
     public String getOrderByType() {
         return this.OrderByType;
     }
 
     /**
-     * Set Sorting type. value range:.
-<Li>ASC: specifies ascending sort.</li>.
-<li> DESC: sorts in descending order. </li>.
-     * @param OrderByType Sorting type. value range:.
-<Li>ASC: specifies ascending sort.</li>.
-<li> DESC: sorts in descending order. </li>.
+     * Set Sorting type. Valid values:
+<li> ASC: ascending order </li>
+<li> DESC: sort in descending order </li>
+     * @param OrderByType Sorting type. Valid values:
+<li> ASC: ascending order </li>
+<li> DESC: sort in descending order </li>
      */
     public void setOrderByType(String OrderByType) {
         this.OrderByType = OrderByType;
     }
 
     /**
-     * Get Search criteria. when multiple filters exist, the relationship between filters is logical AND. 
-     * @return Filters Search criteria. when multiple filters exist, the relationship between filters is logical AND.
+     * Get Search criteria. When multiple filters exist, the relationship between filters is logical AND. 
+     * @return Filters Search criteria. When multiple filters exist, the relationship between filters is logical AND.
      */
     public QueryFilter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set Search criteria. when multiple filters exist, the relationship between filters is logical AND.
-     * @param Filters Search criteria. when multiple filters exist, the relationship between filters is logical AND.
+     * Set Search criteria. When multiple filters exist, the relationship between filters is logical AND.
+     * @param Filters Search criteria. When multiple filters exist, the relationship between filters is logical AND.
      */
     public void setFilters(QueryFilter [] Filters) {
         this.Filters = Filters;
     }
 
     /**
-     * Get Engine type: currently supports "MYSQL", "POSTGRESQL". 
-     * @return DbType Engine type: currently supports "MYSQL", "POSTGRESQL".
+     * Get Engine type: Currently supports "MYSQL" and "POSTGRESQL" 
+     * @return DbType Engine type: Currently supports "MYSQL" and "POSTGRESQL"
      */
     public String getDbType() {
         return this.DbType;
     }
 
     /**
-     * Set Engine type: currently supports "MYSQL", "POSTGRESQL".
-     * @param DbType Engine type: currently supports "MYSQL", "POSTGRESQL".
+     * Set Engine type: Currently supports "MYSQL" and "POSTGRESQL"
+     * @param DbType Engine type: Currently supports "MYSQL" and "POSTGRESQL"
      */
     public void setDbType(String DbType) {
         this.DbType = DbType;

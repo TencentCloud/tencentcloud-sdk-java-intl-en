@@ -99,6 +99,9 @@ public enum TeoErrorCode {
      /* The real-time log authentication failed. */
      FAILEDOPERATION_REALTIMELOGAUTHFAILURE("FailedOperation.RealtimeLogAuthFailure"),
      
+     /* Currently, creation of real-time log push tasks for EdgeOne log analytics is not supported. */
+     FAILEDOPERATION_REALTIMELOGLOGANALYSISNOTSUPPORT("FailedOperation.RealtimeLogLogAnalysisNotSupport"),
+     
      /* The real-time log push task does not exist. */
      FAILEDOPERATION_REALTIMELOGNOTFOUND("FailedOperation.RealtimeLogNotFound"),
      
@@ -165,19 +168,19 @@ public enum TeoErrorCode {
      /* Too many attempts. Please try again later. */
      INVALIDPARAMETER_ACTIONINPROGRESS("InvalidParameter.ActionInProgress"),
      
-     /*  */
+     /* The current domain name does not support enabling advanced origin optimization and network optimization in the Chinese mainland (international acceleration) simultaneously. */
      INVALIDPARAMETER_ADVANCEDORIGINROUTINGNOTSUPPORTACCELERATEMAINLAND("InvalidParameter.AdvancedOriginRoutingNotSupportAccelerateMainland"),
      
-     /*  */
+     /* The previous domain name source IP allowlist package does not support advanced origin optimization. */
      INVALIDPARAMETER_ADVANCEDORIGINROUTINGNOTSUPPORTCURRENTPLANORIGINWHITELIST("InvalidParameter.AdvancedOriginRoutingNotSupportCurrentPlanOriginWhitelist"),
      
-     /*  */
+     /* The current domain name does not support enabling advanced origin optimization and multi-layer architecture simultaneously. */
      INVALIDPARAMETER_ADVANCEDORIGINROUTINGNOTSUPPORTMULTIPLYLAYER("InvalidParameter.AdvancedOriginRoutingNotSupportMultiplyLayer"),
      
-     /*  */
+     /* The current domain name does not support enabling advanced origin optimization and OC switching between simultaneously. */
      INVALIDPARAMETER_ADVANCEDORIGINROUTINGNOTSUPPORTOCDIRECTORIGIN("InvalidParameter.AdvancedOriginRoutingNotSupportOCDirectOrigin"),
      
-     /*  */
+     /* Advanced origin optimization and racing platform cannot be enabled simultaneously. */
      INVALIDPARAMETER_ADVANCEDORIGINROUTINGNOTSUPPORTRACINGPLATFORM("InvalidParameter.AdvancedOriginRoutingNotSupportRacingPlatform"),
      
      /* Alias domain names do not support configuring a keyless certificate. */
@@ -363,7 +366,7 @@ public enum TeoErrorCode {
      /* Parameter error. */
      INVALIDPARAMETER_INVALIDACCELERATETYPE("InvalidParameter.InvalidAccelerateType"),
      
-     /*  */
+     /* The set match condition does not support advanced origin optimization. Delete the configuration item. */
      INVALIDPARAMETER_INVALIDADVANCEDORIGINROUTINGUNSUPPORTED("InvalidParameter.InvalidAdvancedOriginRoutingUnsupported"),
      
      /* Invalid token authentication. */
@@ -488,6 +491,9 @@ public enum TeoErrorCode {
      
      /* Invalid IPv6 settings. */
      INVALIDPARAMETER_INVALIDIPV6SWITCH("InvalidParameter.InvalidIpv6Switch"),
+     
+     /* Invalid log analysis match condition. Query statement parsing failed. */
+     INVALIDPARAMETER_INVALIDLOGANALYSISCONDITION("InvalidParameter.InvalidLogAnalysisCondition"),
      
      /* The field separator in the log output format is incorrect. */
      INVALIDPARAMETER_INVALIDLOGFORMATFIELDDELIMITER("InvalidParameter.InvalidLogFormatFieldDelimiter"),
@@ -1143,7 +1149,7 @@ public enum TeoErrorCode {
      /* An L7 DNS service referencing the origin group is being deployed. Please edit later. */
      OPERATIONDENIED_ACCELERATIONDOMAINSTATUSNOTINONLINE("OperationDenied.AccelerationDomainStatusNotInOnline"),
      
-     /*  */
+     /* The current domain name does not support enabling advanced origin optimization and cross-border direct connect simultaneously. */
      OPERATIONDENIED_ADVANCEDORIGINROUTINGCONFLICTWITHDCIOVERSEALAN("OperationDenied.AdvancedOriginRoutingConflictWithDciOverseaLan"),
      
      /* This operation is not supported for alias domain names. */
@@ -1224,7 +1230,7 @@ public enum TeoErrorCode {
      /* The acceleration regions of the site must be in the Chinese mainland when you enable the DDoS Protection. */
      OPERATIONDENIED_INVALIDADVANCEDDEFENSEZONEAREA("OperationDenied.InvalidAdvancedDefenseZoneArea"),
      
-     /*  */
+     /* The package does not support advanced origin optimization configuration. */
      OPERATIONDENIED_INVALIDADVANCEDORIGINROUTINGBILLING("OperationDenied.InvalidAdvancedOriginRoutingBilling"),
      
      /* Exclusive DDoS protection conflicts with IPv6. They cannot be configured at the same time. */
@@ -1296,7 +1302,10 @@ public enum TeoErrorCode {
      /* You can only switch a site connected without a domain name to connecting via the CNAME. Other operations are not allowed. */
      OPERATIONDENIED_NODOMAINACCESSZONEONLYSUPPORTMODIFYTYPE("OperationDenied.NoDomainAccessZoneOnlySupportModifyType"),
      
-     /*  */
+     /* The current site has a domain name associated with an exclusive accelerated IP. To disable "network optimization in the Chinese mainland", unbind the exclusive IP first and try again after. */
+     OPERATIONDENIED_NOTALLOWCLOSEACCELERATEMAINLANDWHENDOMAINBOUNDEXCLUSIVEIP("OperationDenied.NotAllowCloseAccelerateMainlandWhenDomainBoundExclusiveIP"),
+     
+     /* The current advanced origin optimization feature is only available to allowlist users. */
      OPERATIONDENIED_NOTINADVANCEDORIGINROUTINGWHITELIST("OperationDenied.NotInAdvancedOriginRoutingWhiteList"),
      
      /* Currently, the keyless certificate feature is available only to users in the allowlist. */

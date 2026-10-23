@@ -31,7 +31,7 @@ public class ClusterReadOnlyValue extends AbstractModel {
     private String ClusterId;
 
     /**
-    * Specifies the value of the read-only switch.
+    * Read-only switch value
     */
     @SerializedName("ReadOnlyValue")
     @Expose
@@ -54,16 +54,16 @@ public class ClusterReadOnlyValue extends AbstractModel {
     }
 
     /**
-     * Get Specifies the value of the read-only switch. 
-     * @return ReadOnlyValue Specifies the value of the read-only switch.
+     * Get Read-only switch value 
+     * @return ReadOnlyValue Read-only switch value
      */
     public String getReadOnlyValue() {
         return this.ReadOnlyValue;
     }
 
     /**
-     * Set Specifies the value of the read-only switch.
-     * @param ReadOnlyValue Specifies the value of the read-only switch.
+     * Set Read-only switch value
+     * @param ReadOnlyValue Read-only switch value
      */
     public void setReadOnlyValue(String ReadOnlyValue) {
         this.ReadOnlyValue = ReadOnlyValue;

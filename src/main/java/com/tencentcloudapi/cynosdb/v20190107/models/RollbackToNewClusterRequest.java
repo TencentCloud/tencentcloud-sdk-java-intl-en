@@ -31,35 +31,35 @@ public class RollbackToNewClusterRequest extends AbstractModel {
     private String Zone;
 
     /**
-    * <p>During rollback, input the source cluster ID to search for the source poolId</p>
+    * <p>During rollback, import the source cluster ID to search for the source poolId</p>
     */
     @SerializedName("OriginalClusterId")
     @Expose
     private String OriginalClusterId;
 
     /**
-    * <p>VPC network ID</p>
+    * <p>ID of the VPC network it belongs to</p>
     */
     @SerializedName("UniqVpcId")
     @Expose
     private String UniqVpcId;
 
     /**
-    * <p>Subnet ID</p>
+    * <p>Subnet ID.</p>
     */
     @SerializedName("UniqSubnetId")
     @Expose
     private String UniqSubnetId;
 
     /**
-    * <p>Cluster name, length less than 64 characters. Each character value ranges from uppercase/lowercase letters, digits, to special symbols ('-', '_', '.').</p>
+    * <p>Cluster name, length less than 64 characters. Each character value range: uppercase/lowercase letters, digits, special symbols (&#39;-&#39;,&#39;_&#39;,&#39;.&#39;)</p>
     */
     @SerializedName("ClusterName")
     @Expose
     private String ClusterName;
 
     /**
-    * <p>Snapshot rollback means snapshotId; point-in-time rollback means queryId. A value of 0 indicates requirement to judge whether the time point is valid.</p>
+    * <p>Snapshot rollback refers to snapshotId; point-in-time rollback refers to queryId. A value of 0 indicates the need to determine whether the time point is valid.</p>
     */
     @SerializedName("RollbackId")
     @Expose
@@ -80,7 +80,7 @@ public class RollbackToNewClusterRequest extends AbstractModel {
     private Long AutoVoucher;
 
     /**
-    * <p>tag Array information that should be bound for cluster creation</p>
+    * <p>tag Array information that need to be bound for cluster creation</p>
     */
     @SerializedName("ResourceTags")
     @Expose
@@ -94,14 +94,14 @@ public class RollbackToNewClusterRequest extends AbstractModel {
     private String DbMode;
 
     /**
-    * <p>Required when DbMode is SEVERLESS<br>Minimum value of cpu. For optional range, see API response of DescribeServerlessInstanceSpecs</p>
+    * <p>Required when DbMode is SEVERLESS<br>Minimum cpu value. For the optional range, see the API response of DescribeServerlessInstanceSpecs</p>
     */
     @SerializedName("MinCpu")
     @Expose
     private Float MinCpu;
 
     /**
-    * <p>Required when DbMode is SEVERLESS:<br>Maximum value of cpu. For the optional range, see the API response of DescribeServerlessInstanceSpecs.</p>
+    * <p>Required when DbMode is SEVERLESS:<br>maximum value of cpu. For the optional range, see the API response of DescribeServerlessInstanceSpecs</p>
     */
     @SerializedName("MaxCpu")
     @Expose
@@ -115,7 +115,7 @@ public class RollbackToNewClusterRequest extends AbstractModel {
     private String AutoPause;
 
     /**
-    * <p>When DbMode is SEVERLESS, specify the delay for Cluster Auto-Pause in seconds, optional range [600,691200]<br>Default value: 600</p>
+    * <p>When DbMode is SEVERLESS, specify the delay for Cluster Auto-Pause, in seconds, optional range [600,691200]<br>Default value: 600</p>
     */
     @SerializedName("AutoPauseDelay")
     @Expose
@@ -136,35 +136,35 @@ public class RollbackToNewClusterRequest extends AbstractModel {
     private String [] AlarmPolicyIds;
 
     /**
-    * <p>Parameter array, temporarily supports character_set_server (utf8|latin1|gbk|utf8mb4), lower_case_table_names, 1-case-insensitive, 0-case-sensitive.</p>
+    * <p>Parameter array. Currently supports character_set_server (utf8 | latin1 | gbk | utf8mb4) and lower_case_table_names. 1: case-insensitive, 0: case-sensitive</p>
     */
     @SerializedName("ClusterParams")
     @Expose
     private ParamItem [] ClusterParams;
 
     /**
-    * <p>Parameter template ID. The parameter template ID can be obtained through querying parameter template information DescribeParamTemplates.</p>
+    * <p>Parameter template ID, which can be obtained by querying parameter template information through DescribeParamTemplates</p>
     */
     @SerializedName("ParamTemplateId")
     @Expose
     private Long ParamTemplateId;
 
     /**
-    * <p>Instance initialization configuration information is mainly used to select different specification instances during cluster purchase.</p>
+    * <p>Instance initialization configuration information, mainly used for selecting different specification instances during cluster purchase</p>
     */
     @SerializedName("InstanceInitInfos")
     @Expose
     private InstanceInitInfo [] InstanceInitInfos;
 
     /**
-    * <p>0-Place order and pay 1-Placing order</p>
+    * <p>0-Place order and pay 1-Place order</p>
     */
     @SerializedName("DealMode")
     @Expose
     private Long DealMode;
 
     /**
-    * <p>Pay-per-compute-node model: 0-Pay-As-You-Go, 1-Prepayment</p>
+    * <p>Pay-per-compute-node model. Valid values: 0 (pay-as-you-go) and 1 (prepaid).</p>
     */
     @SerializedName("PayMode")
     @Expose
@@ -185,21 +185,21 @@ public class RollbackToNewClusterRequest extends AbstractModel {
     private String TimeUnit;
 
     /**
-    * <p>Rollback database info</p>
+    * <p>Rollback database information</p>
     */
     @SerializedName("RollbackDatabases")
     @Expose
     private RollbackDatabase [] RollbackDatabases;
 
     /**
-    * <p>Roll back table information</p>
+    * <p>Rollback table information</p>
     */
     @SerializedName("RollbackTables")
     @Expose
     private RollbackTable [] RollbackTables;
 
     /**
-    * <p>Original ro instance information</p>
+    * <p>Information of the source read-only instance</p>
     */
     @SerializedName("OriginalROInstanceList")
     @Expose
@@ -213,14 +213,14 @@ public class RollbackToNewClusterRequest extends AbstractModel {
     private Long ProjectId;
 
     /**
-    * <p>Whether to enable archive. Optional range <li>yes</li><li>no</li> Default value: yes</p>
+    * <p>Whether archive is enabled. Optional range: <li>yes</li><li>no</li>. Default value: yes</p>
     */
     @SerializedName("AutoArchive")
     @Expose
     private String AutoArchive;
 
     /**
-    * <p>Whether to restore from the saved backup</p>
+    * <p>Whether to restore from a saved backup</p>
     */
     @SerializedName("FromSaveBackup")
     @Expose
@@ -234,14 +234,14 @@ public class RollbackToNewClusterRequest extends AbstractModel {
     private String SyncWay;
 
     /**
-    * <p>Semi-synchronous timeout period, in milliseconds. To ensure business stability, semi-synchronous replication has a degradation logic. When the primary availability zone cluster waits for the secondary availability zone cluster to confirm a transaction, if the timeout period is exceeded, the replication method will degrade to asynchronous replication.</p><p>Value ranges from 1000 to 4294967295.</p><p>Unit: ms</p><p>Default value: 10000</p>
+    * <p>Semi-sync timeout in milliseconds. To ensure business stability, semi-sync replication has a degradation logic. If the primary availability zone cluster exceeds this timeout period while waiting for the standby availability zone cluster to confirm a transaction, the replication method will degrade to asynchronous replication.</p><p>Value range: [1000, 4294967295]</p><p>Unit: ms</p><p>Default value: 10000</p>
     */
     @SerializedName("SemiSyncTimeout")
     @Expose
     private Long SemiSyncTimeout;
 
     /**
-    * <p>Standby availability zone</p>
+    * <p>Secondary AZ</p>
     */
     @SerializedName("SlaveZone")
     @Expose
@@ -264,80 +264,80 @@ public class RollbackToNewClusterRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>During rollback, input the source cluster ID to search for the source poolId</p> 
-     * @return OriginalClusterId <p>During rollback, input the source cluster ID to search for the source poolId</p>
+     * Get <p>During rollback, import the source cluster ID to search for the source poolId</p> 
+     * @return OriginalClusterId <p>During rollback, import the source cluster ID to search for the source poolId</p>
      */
     public String getOriginalClusterId() {
         return this.OriginalClusterId;
     }
 
     /**
-     * Set <p>During rollback, input the source cluster ID to search for the source poolId</p>
-     * @param OriginalClusterId <p>During rollback, input the source cluster ID to search for the source poolId</p>
+     * Set <p>During rollback, import the source cluster ID to search for the source poolId</p>
+     * @param OriginalClusterId <p>During rollback, import the source cluster ID to search for the source poolId</p>
      */
     public void setOriginalClusterId(String OriginalClusterId) {
         this.OriginalClusterId = OriginalClusterId;
     }
 
     /**
-     * Get <p>VPC network ID</p> 
-     * @return UniqVpcId <p>VPC network ID</p>
+     * Get <p>ID of the VPC network it belongs to</p> 
+     * @return UniqVpcId <p>ID of the VPC network it belongs to</p>
      */
     public String getUniqVpcId() {
         return this.UniqVpcId;
     }
 
     /**
-     * Set <p>VPC network ID</p>
-     * @param UniqVpcId <p>VPC network ID</p>
+     * Set <p>ID of the VPC network it belongs to</p>
+     * @param UniqVpcId <p>ID of the VPC network it belongs to</p>
      */
     public void setUniqVpcId(String UniqVpcId) {
         this.UniqVpcId = UniqVpcId;
     }
 
     /**
-     * Get <p>Subnet ID</p> 
-     * @return UniqSubnetId <p>Subnet ID</p>
+     * Get <p>Subnet ID.</p> 
+     * @return UniqSubnetId <p>Subnet ID.</p>
      */
     public String getUniqSubnetId() {
         return this.UniqSubnetId;
     }
 
     /**
-     * Set <p>Subnet ID</p>
-     * @param UniqSubnetId <p>Subnet ID</p>
+     * Set <p>Subnet ID.</p>
+     * @param UniqSubnetId <p>Subnet ID.</p>
      */
     public void setUniqSubnetId(String UniqSubnetId) {
         this.UniqSubnetId = UniqSubnetId;
     }
 
     /**
-     * Get <p>Cluster name, length less than 64 characters. Each character value ranges from uppercase/lowercase letters, digits, to special symbols ('-', '_', '.').</p> 
-     * @return ClusterName <p>Cluster name, length less than 64 characters. Each character value ranges from uppercase/lowercase letters, digits, to special symbols ('-', '_', '.').</p>
+     * Get <p>Cluster name, length less than 64 characters. Each character value range: uppercase/lowercase letters, digits, special symbols (&#39;-&#39;,&#39;_&#39;,&#39;.&#39;)</p> 
+     * @return ClusterName <p>Cluster name, length less than 64 characters. Each character value range: uppercase/lowercase letters, digits, special symbols (&#39;-&#39;,&#39;_&#39;,&#39;.&#39;)</p>
      */
     public String getClusterName() {
         return this.ClusterName;
     }
 
     /**
-     * Set <p>Cluster name, length less than 64 characters. Each character value ranges from uppercase/lowercase letters, digits, to special symbols ('-', '_', '.').</p>
-     * @param ClusterName <p>Cluster name, length less than 64 characters. Each character value ranges from uppercase/lowercase letters, digits, to special symbols ('-', '_', '.').</p>
+     * Set <p>Cluster name, length less than 64 characters. Each character value range: uppercase/lowercase letters, digits, special symbols (&#39;-&#39;,&#39;_&#39;,&#39;.&#39;)</p>
+     * @param ClusterName <p>Cluster name, length less than 64 characters. Each character value range: uppercase/lowercase letters, digits, special symbols (&#39;-&#39;,&#39;_&#39;,&#39;.&#39;)</p>
      */
     public void setClusterName(String ClusterName) {
         this.ClusterName = ClusterName;
     }
 
     /**
-     * Get <p>Snapshot rollback means snapshotId; point-in-time rollback means queryId. A value of 0 indicates requirement to judge whether the time point is valid.</p> 
-     * @return RollbackId <p>Snapshot rollback means snapshotId; point-in-time rollback means queryId. A value of 0 indicates requirement to judge whether the time point is valid.</p>
+     * Get <p>Snapshot rollback refers to snapshotId; point-in-time rollback refers to queryId. A value of 0 indicates the need to determine whether the time point is valid.</p> 
+     * @return RollbackId <p>Snapshot rollback refers to snapshotId; point-in-time rollback refers to queryId. A value of 0 indicates the need to determine whether the time point is valid.</p>
      */
     public Long getRollbackId() {
         return this.RollbackId;
     }
 
     /**
-     * Set <p>Snapshot rollback means snapshotId; point-in-time rollback means queryId. A value of 0 indicates requirement to judge whether the time point is valid.</p>
-     * @param RollbackId <p>Snapshot rollback means snapshotId; point-in-time rollback means queryId. A value of 0 indicates requirement to judge whether the time point is valid.</p>
+     * Set <p>Snapshot rollback refers to snapshotId; point-in-time rollback refers to queryId. A value of 0 indicates the need to determine whether the time point is valid.</p>
+     * @param RollbackId <p>Snapshot rollback refers to snapshotId; point-in-time rollback refers to queryId. A value of 0 indicates the need to determine whether the time point is valid.</p>
      */
     public void setRollbackId(Long RollbackId) {
         this.RollbackId = RollbackId;
@@ -376,16 +376,16 @@ public class RollbackToNewClusterRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>tag Array information that should be bound for cluster creation</p> 
-     * @return ResourceTags <p>tag Array information that should be bound for cluster creation</p>
+     * Get <p>tag Array information that need to be bound for cluster creation</p> 
+     * @return ResourceTags <p>tag Array information that need to be bound for cluster creation</p>
      */
     public Tag [] getResourceTags() {
         return this.ResourceTags;
     }
 
     /**
-     * Set <p>tag Array information that should be bound for cluster creation</p>
-     * @param ResourceTags <p>tag Array information that should be bound for cluster creation</p>
+     * Set <p>tag Array information that need to be bound for cluster creation</p>
+     * @param ResourceTags <p>tag Array information that need to be bound for cluster creation</p>
      */
     public void setResourceTags(Tag [] ResourceTags) {
         this.ResourceTags = ResourceTags;
@@ -408,32 +408,32 @@ public class RollbackToNewClusterRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>Required when DbMode is SEVERLESS<br>Minimum value of cpu. For optional range, see API response of DescribeServerlessInstanceSpecs</p> 
-     * @return MinCpu <p>Required when DbMode is SEVERLESS<br>Minimum value of cpu. For optional range, see API response of DescribeServerlessInstanceSpecs</p>
+     * Get <p>Required when DbMode is SEVERLESS<br>Minimum cpu value. For the optional range, see the API response of DescribeServerlessInstanceSpecs</p> 
+     * @return MinCpu <p>Required when DbMode is SEVERLESS<br>Minimum cpu value. For the optional range, see the API response of DescribeServerlessInstanceSpecs</p>
      */
     public Float getMinCpu() {
         return this.MinCpu;
     }
 
     /**
-     * Set <p>Required when DbMode is SEVERLESS<br>Minimum value of cpu. For optional range, see API response of DescribeServerlessInstanceSpecs</p>
-     * @param MinCpu <p>Required when DbMode is SEVERLESS<br>Minimum value of cpu. For optional range, see API response of DescribeServerlessInstanceSpecs</p>
+     * Set <p>Required when DbMode is SEVERLESS<br>Minimum cpu value. For the optional range, see the API response of DescribeServerlessInstanceSpecs</p>
+     * @param MinCpu <p>Required when DbMode is SEVERLESS<br>Minimum cpu value. For the optional range, see the API response of DescribeServerlessInstanceSpecs</p>
      */
     public void setMinCpu(Float MinCpu) {
         this.MinCpu = MinCpu;
     }
 
     /**
-     * Get <p>Required when DbMode is SEVERLESS:<br>Maximum value of cpu. For the optional range, see the API response of DescribeServerlessInstanceSpecs.</p> 
-     * @return MaxCpu <p>Required when DbMode is SEVERLESS:<br>Maximum value of cpu. For the optional range, see the API response of DescribeServerlessInstanceSpecs.</p>
+     * Get <p>Required when DbMode is SEVERLESS:<br>maximum value of cpu. For the optional range, see the API response of DescribeServerlessInstanceSpecs</p> 
+     * @return MaxCpu <p>Required when DbMode is SEVERLESS:<br>maximum value of cpu. For the optional range, see the API response of DescribeServerlessInstanceSpecs</p>
      */
     public Float getMaxCpu() {
         return this.MaxCpu;
     }
 
     /**
-     * Set <p>Required when DbMode is SEVERLESS:<br>Maximum value of cpu. For the optional range, see the API response of DescribeServerlessInstanceSpecs.</p>
-     * @param MaxCpu <p>Required when DbMode is SEVERLESS:<br>Maximum value of cpu. For the optional range, see the API response of DescribeServerlessInstanceSpecs.</p>
+     * Set <p>Required when DbMode is SEVERLESS:<br>maximum value of cpu. For the optional range, see the API response of DescribeServerlessInstanceSpecs</p>
+     * @param MaxCpu <p>Required when DbMode is SEVERLESS:<br>maximum value of cpu. For the optional range, see the API response of DescribeServerlessInstanceSpecs</p>
      */
     public void setMaxCpu(Float MaxCpu) {
         this.MaxCpu = MaxCpu;
@@ -456,16 +456,16 @@ public class RollbackToNewClusterRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>When DbMode is SEVERLESS, specify the delay for Cluster Auto-Pause in seconds, optional range [600,691200]<br>Default value: 600</p> 
-     * @return AutoPauseDelay <p>When DbMode is SEVERLESS, specify the delay for Cluster Auto-Pause in seconds, optional range [600,691200]<br>Default value: 600</p>
+     * Get <p>When DbMode is SEVERLESS, specify the delay for Cluster Auto-Pause, in seconds, optional range [600,691200]<br>Default value: 600</p> 
+     * @return AutoPauseDelay <p>When DbMode is SEVERLESS, specify the delay for Cluster Auto-Pause, in seconds, optional range [600,691200]<br>Default value: 600</p>
      */
     public Long getAutoPauseDelay() {
         return this.AutoPauseDelay;
     }
 
     /**
-     * Set <p>When DbMode is SEVERLESS, specify the delay for Cluster Auto-Pause in seconds, optional range [600,691200]<br>Default value: 600</p>
-     * @param AutoPauseDelay <p>When DbMode is SEVERLESS, specify the delay for Cluster Auto-Pause in seconds, optional range [600,691200]<br>Default value: 600</p>
+     * Set <p>When DbMode is SEVERLESS, specify the delay for Cluster Auto-Pause, in seconds, optional range [600,691200]<br>Default value: 600</p>
+     * @param AutoPauseDelay <p>When DbMode is SEVERLESS, specify the delay for Cluster Auto-Pause, in seconds, optional range [600,691200]<br>Default value: 600</p>
      */
     public void setAutoPauseDelay(Long AutoPauseDelay) {
         this.AutoPauseDelay = AutoPauseDelay;
@@ -504,80 +504,80 @@ public class RollbackToNewClusterRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>Parameter array, temporarily supports character_set_server (utf8|latin1|gbk|utf8mb4), lower_case_table_names, 1-case-insensitive, 0-case-sensitive.</p> 
-     * @return ClusterParams <p>Parameter array, temporarily supports character_set_server (utf8|latin1|gbk|utf8mb4), lower_case_table_names, 1-case-insensitive, 0-case-sensitive.</p>
+     * Get <p>Parameter array. Currently supports character_set_server (utf8 | latin1 | gbk | utf8mb4) and lower_case_table_names. 1: case-insensitive, 0: case-sensitive</p> 
+     * @return ClusterParams <p>Parameter array. Currently supports character_set_server (utf8 | latin1 | gbk | utf8mb4) and lower_case_table_names. 1: case-insensitive, 0: case-sensitive</p>
      */
     public ParamItem [] getClusterParams() {
         return this.ClusterParams;
     }
 
     /**
-     * Set <p>Parameter array, temporarily supports character_set_server (utf8|latin1|gbk|utf8mb4), lower_case_table_names, 1-case-insensitive, 0-case-sensitive.</p>
-     * @param ClusterParams <p>Parameter array, temporarily supports character_set_server (utf8|latin1|gbk|utf8mb4), lower_case_table_names, 1-case-insensitive, 0-case-sensitive.</p>
+     * Set <p>Parameter array. Currently supports character_set_server (utf8 | latin1 | gbk | utf8mb4) and lower_case_table_names. 1: case-insensitive, 0: case-sensitive</p>
+     * @param ClusterParams <p>Parameter array. Currently supports character_set_server (utf8 | latin1 | gbk | utf8mb4) and lower_case_table_names. 1: case-insensitive, 0: case-sensitive</p>
      */
     public void setClusterParams(ParamItem [] ClusterParams) {
         this.ClusterParams = ClusterParams;
     }
 
     /**
-     * Get <p>Parameter template ID. The parameter template ID can be obtained through querying parameter template information DescribeParamTemplates.</p> 
-     * @return ParamTemplateId <p>Parameter template ID. The parameter template ID can be obtained through querying parameter template information DescribeParamTemplates.</p>
+     * Get <p>Parameter template ID, which can be obtained by querying parameter template information through DescribeParamTemplates</p> 
+     * @return ParamTemplateId <p>Parameter template ID, which can be obtained by querying parameter template information through DescribeParamTemplates</p>
      */
     public Long getParamTemplateId() {
         return this.ParamTemplateId;
     }
 
     /**
-     * Set <p>Parameter template ID. The parameter template ID can be obtained through querying parameter template information DescribeParamTemplates.</p>
-     * @param ParamTemplateId <p>Parameter template ID. The parameter template ID can be obtained through querying parameter template information DescribeParamTemplates.</p>
+     * Set <p>Parameter template ID, which can be obtained by querying parameter template information through DescribeParamTemplates</p>
+     * @param ParamTemplateId <p>Parameter template ID, which can be obtained by querying parameter template information through DescribeParamTemplates</p>
      */
     public void setParamTemplateId(Long ParamTemplateId) {
         this.ParamTemplateId = ParamTemplateId;
     }
 
     /**
-     * Get <p>Instance initialization configuration information is mainly used to select different specification instances during cluster purchase.</p> 
-     * @return InstanceInitInfos <p>Instance initialization configuration information is mainly used to select different specification instances during cluster purchase.</p>
+     * Get <p>Instance initialization configuration information, mainly used for selecting different specification instances during cluster purchase</p> 
+     * @return InstanceInitInfos <p>Instance initialization configuration information, mainly used for selecting different specification instances during cluster purchase</p>
      */
     public InstanceInitInfo [] getInstanceInitInfos() {
         return this.InstanceInitInfos;
     }
 
     /**
-     * Set <p>Instance initialization configuration information is mainly used to select different specification instances during cluster purchase.</p>
-     * @param InstanceInitInfos <p>Instance initialization configuration information is mainly used to select different specification instances during cluster purchase.</p>
+     * Set <p>Instance initialization configuration information, mainly used for selecting different specification instances during cluster purchase</p>
+     * @param InstanceInitInfos <p>Instance initialization configuration information, mainly used for selecting different specification instances during cluster purchase</p>
      */
     public void setInstanceInitInfos(InstanceInitInfo [] InstanceInitInfos) {
         this.InstanceInitInfos = InstanceInitInfos;
     }
 
     /**
-     * Get <p>0-Place order and pay 1-Placing order</p> 
-     * @return DealMode <p>0-Place order and pay 1-Placing order</p>
+     * Get <p>0-Place order and pay 1-Place order</p> 
+     * @return DealMode <p>0-Place order and pay 1-Place order</p>
      */
     public Long getDealMode() {
         return this.DealMode;
     }
 
     /**
-     * Set <p>0-Place order and pay 1-Placing order</p>
-     * @param DealMode <p>0-Place order and pay 1-Placing order</p>
+     * Set <p>0-Place order and pay 1-Place order</p>
+     * @param DealMode <p>0-Place order and pay 1-Place order</p>
      */
     public void setDealMode(Long DealMode) {
         this.DealMode = DealMode;
     }
 
     /**
-     * Get <p>Pay-per-compute-node model: 0-Pay-As-You-Go, 1-Prepayment</p> 
-     * @return PayMode <p>Pay-per-compute-node model: 0-Pay-As-You-Go, 1-Prepayment</p>
+     * Get <p>Pay-per-compute-node model. Valid values: 0 (pay-as-you-go) and 1 (prepaid).</p> 
+     * @return PayMode <p>Pay-per-compute-node model. Valid values: 0 (pay-as-you-go) and 1 (prepaid).</p>
      */
     public Long getPayMode() {
         return this.PayMode;
     }
 
     /**
-     * Set <p>Pay-per-compute-node model: 0-Pay-As-You-Go, 1-Prepayment</p>
-     * @param PayMode <p>Pay-per-compute-node model: 0-Pay-As-You-Go, 1-Prepayment</p>
+     * Set <p>Pay-per-compute-node model. Valid values: 0 (pay-as-you-go) and 1 (prepaid).</p>
+     * @param PayMode <p>Pay-per-compute-node model. Valid values: 0 (pay-as-you-go) and 1 (prepaid).</p>
      */
     public void setPayMode(Long PayMode) {
         this.PayMode = PayMode;
@@ -616,48 +616,48 @@ public class RollbackToNewClusterRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>Rollback database info</p> 
-     * @return RollbackDatabases <p>Rollback database info</p>
+     * Get <p>Rollback database information</p> 
+     * @return RollbackDatabases <p>Rollback database information</p>
      */
     public RollbackDatabase [] getRollbackDatabases() {
         return this.RollbackDatabases;
     }
 
     /**
-     * Set <p>Rollback database info</p>
-     * @param RollbackDatabases <p>Rollback database info</p>
+     * Set <p>Rollback database information</p>
+     * @param RollbackDatabases <p>Rollback database information</p>
      */
     public void setRollbackDatabases(RollbackDatabase [] RollbackDatabases) {
         this.RollbackDatabases = RollbackDatabases;
     }
 
     /**
-     * Get <p>Roll back table information</p> 
-     * @return RollbackTables <p>Roll back table information</p>
+     * Get <p>Rollback table information</p> 
+     * @return RollbackTables <p>Rollback table information</p>
      */
     public RollbackTable [] getRollbackTables() {
         return this.RollbackTables;
     }
 
     /**
-     * Set <p>Roll back table information</p>
-     * @param RollbackTables <p>Roll back table information</p>
+     * Set <p>Rollback table information</p>
+     * @param RollbackTables <p>Rollback table information</p>
      */
     public void setRollbackTables(RollbackTable [] RollbackTables) {
         this.RollbackTables = RollbackTables;
     }
 
     /**
-     * Get <p>Original ro instance information</p> 
-     * @return OriginalROInstanceList <p>Original ro instance information</p>
+     * Get <p>Information of the source read-only instance</p> 
+     * @return OriginalROInstanceList <p>Information of the source read-only instance</p>
      */
     public String [] getOriginalROInstanceList() {
         return this.OriginalROInstanceList;
     }
 
     /**
-     * Set <p>Original ro instance information</p>
-     * @param OriginalROInstanceList <p>Original ro instance information</p>
+     * Set <p>Information of the source read-only instance</p>
+     * @param OriginalROInstanceList <p>Information of the source read-only instance</p>
      */
     public void setOriginalROInstanceList(String [] OriginalROInstanceList) {
         this.OriginalROInstanceList = OriginalROInstanceList;
@@ -680,32 +680,32 @@ public class RollbackToNewClusterRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>Whether to enable archive. Optional range <li>yes</li><li>no</li> Default value: yes</p> 
-     * @return AutoArchive <p>Whether to enable archive. Optional range <li>yes</li><li>no</li> Default value: yes</p>
+     * Get <p>Whether archive is enabled. Optional range: <li>yes</li><li>no</li>. Default value: yes</p> 
+     * @return AutoArchive <p>Whether archive is enabled. Optional range: <li>yes</li><li>no</li>. Default value: yes</p>
      */
     public String getAutoArchive() {
         return this.AutoArchive;
     }
 
     /**
-     * Set <p>Whether to enable archive. Optional range <li>yes</li><li>no</li> Default value: yes</p>
-     * @param AutoArchive <p>Whether to enable archive. Optional range <li>yes</li><li>no</li> Default value: yes</p>
+     * Set <p>Whether archive is enabled. Optional range: <li>yes</li><li>no</li>. Default value: yes</p>
+     * @param AutoArchive <p>Whether archive is enabled. Optional range: <li>yes</li><li>no</li>. Default value: yes</p>
      */
     public void setAutoArchive(String AutoArchive) {
         this.AutoArchive = AutoArchive;
     }
 
     /**
-     * Get <p>Whether to restore from the saved backup</p> 
-     * @return FromSaveBackup <p>Whether to restore from the saved backup</p>
+     * Get <p>Whether to restore from a saved backup</p> 
+     * @return FromSaveBackup <p>Whether to restore from a saved backup</p>
      */
     public Boolean getFromSaveBackup() {
         return this.FromSaveBackup;
     }
 
     /**
-     * Set <p>Whether to restore from the saved backup</p>
-     * @param FromSaveBackup <p>Whether to restore from the saved backup</p>
+     * Set <p>Whether to restore from a saved backup</p>
+     * @param FromSaveBackup <p>Whether to restore from a saved backup</p>
      */
     public void setFromSaveBackup(Boolean FromSaveBackup) {
         this.FromSaveBackup = FromSaveBackup;
@@ -728,32 +728,32 @@ public class RollbackToNewClusterRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>Semi-synchronous timeout period, in milliseconds. To ensure business stability, semi-synchronous replication has a degradation logic. When the primary availability zone cluster waits for the secondary availability zone cluster to confirm a transaction, if the timeout period is exceeded, the replication method will degrade to asynchronous replication.</p><p>Value ranges from 1000 to 4294967295.</p><p>Unit: ms</p><p>Default value: 10000</p> 
-     * @return SemiSyncTimeout <p>Semi-synchronous timeout period, in milliseconds. To ensure business stability, semi-synchronous replication has a degradation logic. When the primary availability zone cluster waits for the secondary availability zone cluster to confirm a transaction, if the timeout period is exceeded, the replication method will degrade to asynchronous replication.</p><p>Value ranges from 1000 to 4294967295.</p><p>Unit: ms</p><p>Default value: 10000</p>
+     * Get <p>Semi-sync timeout in milliseconds. To ensure business stability, semi-sync replication has a degradation logic. If the primary availability zone cluster exceeds this timeout period while waiting for the standby availability zone cluster to confirm a transaction, the replication method will degrade to asynchronous replication.</p><p>Value range: [1000, 4294967295]</p><p>Unit: ms</p><p>Default value: 10000</p> 
+     * @return SemiSyncTimeout <p>Semi-sync timeout in milliseconds. To ensure business stability, semi-sync replication has a degradation logic. If the primary availability zone cluster exceeds this timeout period while waiting for the standby availability zone cluster to confirm a transaction, the replication method will degrade to asynchronous replication.</p><p>Value range: [1000, 4294967295]</p><p>Unit: ms</p><p>Default value: 10000</p>
      */
     public Long getSemiSyncTimeout() {
         return this.SemiSyncTimeout;
     }
 
     /**
-     * Set <p>Semi-synchronous timeout period, in milliseconds. To ensure business stability, semi-synchronous replication has a degradation logic. When the primary availability zone cluster waits for the secondary availability zone cluster to confirm a transaction, if the timeout period is exceeded, the replication method will degrade to asynchronous replication.</p><p>Value ranges from 1000 to 4294967295.</p><p>Unit: ms</p><p>Default value: 10000</p>
-     * @param SemiSyncTimeout <p>Semi-synchronous timeout period, in milliseconds. To ensure business stability, semi-synchronous replication has a degradation logic. When the primary availability zone cluster waits for the secondary availability zone cluster to confirm a transaction, if the timeout period is exceeded, the replication method will degrade to asynchronous replication.</p><p>Value ranges from 1000 to 4294967295.</p><p>Unit: ms</p><p>Default value: 10000</p>
+     * Set <p>Semi-sync timeout in milliseconds. To ensure business stability, semi-sync replication has a degradation logic. If the primary availability zone cluster exceeds this timeout period while waiting for the standby availability zone cluster to confirm a transaction, the replication method will degrade to asynchronous replication.</p><p>Value range: [1000, 4294967295]</p><p>Unit: ms</p><p>Default value: 10000</p>
+     * @param SemiSyncTimeout <p>Semi-sync timeout in milliseconds. To ensure business stability, semi-sync replication has a degradation logic. If the primary availability zone cluster exceeds this timeout period while waiting for the standby availability zone cluster to confirm a transaction, the replication method will degrade to asynchronous replication.</p><p>Value range: [1000, 4294967295]</p><p>Unit: ms</p><p>Default value: 10000</p>
      */
     public void setSemiSyncTimeout(Long SemiSyncTimeout) {
         this.SemiSyncTimeout = SemiSyncTimeout;
     }
 
     /**
-     * Get <p>Standby availability zone</p> 
-     * @return SlaveZone <p>Standby availability zone</p>
+     * Get <p>Secondary AZ</p> 
+     * @return SlaveZone <p>Secondary AZ</p>
      */
     public String getSlaveZone() {
         return this.SlaveZone;
     }
 
     /**
-     * Set <p>Standby availability zone</p>
-     * @param SlaveZone <p>Standby availability zone</p>
+     * Set <p>Secondary AZ</p>
+     * @param SlaveZone <p>Secondary AZ</p>
      */
     public void setSlaveZone(String SlaveZone) {
         this.SlaveZone = SlaveZone;

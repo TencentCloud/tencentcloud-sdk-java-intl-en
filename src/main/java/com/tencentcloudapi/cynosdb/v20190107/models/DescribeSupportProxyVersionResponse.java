@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class DescribeSupportProxyVersionResponse extends AbstractModel {
 
     /**
-    * Supported database proxy version collections.
+    * Collection of supported database proxy versions
     */
     @SerializedName("SupportProxyVersions")
     @Expose
     private String [] SupportProxyVersions;
 
     /**
-    * The current proxy version number.
+    * Current proxy version number
     */
     @SerializedName("CurrentProxyVersion")
     @Expose
     private String CurrentProxyVersion;
 
     /**
-    * Specifies the proxy version details.
+    * Proxy version details
     */
     @SerializedName("SupportProxyVersionDetail")
     @Expose
@@ -52,48 +52,48 @@ public class DescribeSupportProxyVersionResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Supported database proxy version collections. 
-     * @return SupportProxyVersions Supported database proxy version collections.
+     * Get Collection of supported database proxy versions 
+     * @return SupportProxyVersions Collection of supported database proxy versions
      */
     public String [] getSupportProxyVersions() {
         return this.SupportProxyVersions;
     }
 
     /**
-     * Set Supported database proxy version collections.
-     * @param SupportProxyVersions Supported database proxy version collections.
+     * Set Collection of supported database proxy versions
+     * @param SupportProxyVersions Collection of supported database proxy versions
      */
     public void setSupportProxyVersions(String [] SupportProxyVersions) {
         this.SupportProxyVersions = SupportProxyVersions;
     }
 
     /**
-     * Get The current proxy version number. 
-     * @return CurrentProxyVersion The current proxy version number.
+     * Get Current proxy version number 
+     * @return CurrentProxyVersion Current proxy version number
      */
     public String getCurrentProxyVersion() {
         return this.CurrentProxyVersion;
     }
 
     /**
-     * Set The current proxy version number.
-     * @param CurrentProxyVersion The current proxy version number.
+     * Set Current proxy version number
+     * @param CurrentProxyVersion Current proxy version number
      */
     public void setCurrentProxyVersion(String CurrentProxyVersion) {
         this.CurrentProxyVersion = CurrentProxyVersion;
     }
 
     /**
-     * Get Specifies the proxy version details. 
-     * @return SupportProxyVersionDetail Specifies the proxy version details.
+     * Get Proxy version details 
+     * @return SupportProxyVersionDetail Proxy version details
      */
     public ProxyVersionInfo [] getSupportProxyVersionDetail() {
         return this.SupportProxyVersionDetail;
     }
 
     /**
-     * Set Specifies the proxy version details.
-     * @param SupportProxyVersionDetail Specifies the proxy version details.
+     * Set Proxy version details
+     * @param SupportProxyVersionDetail Proxy version details
      */
     public void setSupportProxyVersionDetail(ProxyVersionInfo [] SupportProxyVersionDetail) {
         this.SupportProxyVersionDetail = SupportProxyVersionDetail;

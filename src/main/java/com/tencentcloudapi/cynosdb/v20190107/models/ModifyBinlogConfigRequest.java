@@ -31,7 +31,7 @@ public class ModifyBinlogConfigRequest extends AbstractModel {
     private String ClusterId;
 
     /**
-    * Specifies the Binlog configuration message.
+    * Binlog configuration message
     */
     @SerializedName("BinlogConfig")
     @Expose
@@ -54,16 +54,16 @@ public class ModifyBinlogConfigRequest extends AbstractModel {
     }
 
     /**
-     * Get Specifies the Binlog configuration message. 
-     * @return BinlogConfig Specifies the Binlog configuration message.
+     * Get Binlog configuration message 
+     * @return BinlogConfig Binlog configuration message
      */
     public BinlogConfigInfo getBinlogConfig() {
         return this.BinlogConfig;
     }
 
     /**
-     * Set Specifies the Binlog configuration message.
-     * @param BinlogConfig Specifies the Binlog configuration message.
+     * Set Binlog configuration message
+     * @param BinlogConfig Binlog configuration message
      */
     public void setBinlogConfig(BinlogConfigInfo BinlogConfig) {
         this.BinlogConfig = BinlogConfig;

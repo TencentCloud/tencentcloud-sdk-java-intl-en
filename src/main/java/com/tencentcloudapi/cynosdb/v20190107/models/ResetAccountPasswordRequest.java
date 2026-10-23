@@ -45,7 +45,7 @@ public class ResetAccountPasswordRequest extends AbstractModel {
     private String ClusterId;
 
     /**
-    * Host. Default value: `%`
+    * Host. Default value: %.
     */
     @SerializedName("Host")
     @Expose
@@ -100,16 +100,16 @@ public class ResetAccountPasswordRequest extends AbstractModel {
     }
 
     /**
-     * Get Host. Default value: `%` 
-     * @return Host Host. Default value: `%`
+     * Get Host. Default value: %. 
+     * @return Host Host. Default value: %.
      */
     public String getHost() {
         return this.Host;
     }
 
     /**
-     * Set Host. Default value: `%`
-     * @param Host Host. Default value: `%`
+     * Set Host. Default value: %.
+     * @param Host Host. Default value: %.
      */
     public void setHost(String Host) {
         this.Host = Host;

@@ -38,7 +38,7 @@ public class DescribeVaultsItem extends AbstractModel {
     private String VaultName;
 
     /**
-    * Safe description
+    * Safe description.
     */
     @SerializedName("VaultDescribe")
     @Expose
@@ -52,7 +52,7 @@ public class DescribeVaultsItem extends AbstractModel {
     private String KeyId;
 
     /**
-    * Key region
+    * Region of the key
     */
     @SerializedName("KeyRegion")
     @Expose
@@ -87,7 +87,7 @@ public class DescribeVaultsItem extends AbstractModel {
     private Long BinlogFileCount;
 
     /**
-    * Total size of the Binlog file (byte)
+    * Total size of Binlog files (byte)
     */
     @SerializedName("BinlogFileSize")
     @Expose
@@ -115,35 +115,35 @@ public class DescribeVaultsItem extends AbstractModel {
     private String Status;
 
     /**
-    * Backup retention period (seconds)
+    * Backup retention period in seconds.
     */
     @SerializedName("BackupSaveSeconds")
     @Expose
     private Long BackupSaveSeconds;
 
     /**
-    * lock time
+    * Locking time
     */
     @SerializedName("LockedTime")
     @Expose
     private String LockedTime;
 
     /**
-    * Associated task list
+    * Associated task list.
     */
     @SerializedName("Tasks")
     @Expose
     private ObjectTask [] Tasks;
 
     /**
-    * Safe region
+    * Region of the safe
     */
     @SerializedName("VaultRegion")
     @Expose
     private String VaultRegion;
 
     /**
-    * Automatically deliver relationship
+    * Automatically deliver relationships
     */
     @SerializedName("AutoCopyConfigs")
     @Expose
@@ -182,16 +182,16 @@ public class DescribeVaultsItem extends AbstractModel {
     }
 
     /**
-     * Get Safe description 
-     * @return VaultDescribe Safe description
+     * Get Safe description. 
+     * @return VaultDescribe Safe description.
      */
     public String getVaultDescribe() {
         return this.VaultDescribe;
     }
 
     /**
-     * Set Safe description
-     * @param VaultDescribe Safe description
+     * Set Safe description.
+     * @param VaultDescribe Safe description.
      */
     public void setVaultDescribe(String VaultDescribe) {
         this.VaultDescribe = VaultDescribe;
@@ -214,16 +214,16 @@ public class DescribeVaultsItem extends AbstractModel {
     }
 
     /**
-     * Get Key region 
-     * @return KeyRegion Key region
+     * Get Region of the key 
+     * @return KeyRegion Region of the key
      */
     public String getKeyRegion() {
         return this.KeyRegion;
     }
 
     /**
-     * Set Key region
-     * @param KeyRegion Key region
+     * Set Region of the key
+     * @param KeyRegion Region of the key
      */
     public void setKeyRegion(String KeyRegion) {
         this.KeyRegion = KeyRegion;
@@ -294,16 +294,16 @@ public class DescribeVaultsItem extends AbstractModel {
     }
 
     /**
-     * Get Total size of the Binlog file (byte) 
-     * @return BinlogFileSize Total size of the Binlog file (byte)
+     * Get Total size of Binlog files (byte) 
+     * @return BinlogFileSize Total size of Binlog files (byte)
      */
     public Long getBinlogFileSize() {
         return this.BinlogFileSize;
     }
 
     /**
-     * Set Total size of the Binlog file (byte)
-     * @param BinlogFileSize Total size of the Binlog file (byte)
+     * Set Total size of Binlog files (byte)
+     * @param BinlogFileSize Total size of Binlog files (byte)
      */
     public void setBinlogFileSize(Long BinlogFileSize) {
         this.BinlogFileSize = BinlogFileSize;
@@ -358,80 +358,80 @@ public class DescribeVaultsItem extends AbstractModel {
     }
 
     /**
-     * Get Backup retention period (seconds) 
-     * @return BackupSaveSeconds Backup retention period (seconds)
+     * Get Backup retention period in seconds. 
+     * @return BackupSaveSeconds Backup retention period in seconds.
      */
     public Long getBackupSaveSeconds() {
         return this.BackupSaveSeconds;
     }
 
     /**
-     * Set Backup retention period (seconds)
-     * @param BackupSaveSeconds Backup retention period (seconds)
+     * Set Backup retention period in seconds.
+     * @param BackupSaveSeconds Backup retention period in seconds.
      */
     public void setBackupSaveSeconds(Long BackupSaveSeconds) {
         this.BackupSaveSeconds = BackupSaveSeconds;
     }
 
     /**
-     * Get lock time 
-     * @return LockedTime lock time
+     * Get Locking time 
+     * @return LockedTime Locking time
      */
     public String getLockedTime() {
         return this.LockedTime;
     }
 
     /**
-     * Set lock time
-     * @param LockedTime lock time
+     * Set Locking time
+     * @param LockedTime Locking time
      */
     public void setLockedTime(String LockedTime) {
         this.LockedTime = LockedTime;
     }
 
     /**
-     * Get Associated task list 
-     * @return Tasks Associated task list
+     * Get Associated task list. 
+     * @return Tasks Associated task list.
      */
     public ObjectTask [] getTasks() {
         return this.Tasks;
     }
 
     /**
-     * Set Associated task list
-     * @param Tasks Associated task list
+     * Set Associated task list.
+     * @param Tasks Associated task list.
      */
     public void setTasks(ObjectTask [] Tasks) {
         this.Tasks = Tasks;
     }
 
     /**
-     * Get Safe region 
-     * @return VaultRegion Safe region
+     * Get Region of the safe 
+     * @return VaultRegion Region of the safe
      */
     public String getVaultRegion() {
         return this.VaultRegion;
     }
 
     /**
-     * Set Safe region
-     * @param VaultRegion Safe region
+     * Set Region of the safe
+     * @param VaultRegion Region of the safe
      */
     public void setVaultRegion(String VaultRegion) {
         this.VaultRegion = VaultRegion;
     }
 
     /**
-     * Get Automatically deliver relationship 
-     * @return AutoCopyConfigs Automatically deliver relationship
+     * Get Automatically deliver relationships 
+     * @return AutoCopyConfigs Automatically deliver relationships
      */
     public AutoCopyConfig [] getAutoCopyConfigs() {
         return this.AutoCopyConfigs;
     }
 
     /**
-     * Set Automatically deliver relationship
-     * @param AutoCopyConfigs Automatically deliver relationship
+     * Set Automatically deliver relationships
+     * @param AutoCopyConfigs Automatically deliver relationships
      */
     public void setAutoCopyConfigs(AutoCopyConfig [] AutoCopyConfigs) {
         this.AutoCopyConfigs = AutoCopyConfigs;

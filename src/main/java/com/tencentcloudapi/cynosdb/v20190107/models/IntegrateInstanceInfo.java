@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class IntegrateInstanceInfo extends AbstractModel {
 
     /**
-    * Specifies the cpu of the instance.
+    * Instance cpu
     */
     @SerializedName("Cpu")
     @Expose
     private Long Cpu;
 
     /**
-    * Specifies the instance memory.
+    * Instance memory
     */
     @SerializedName("Memory")
     @Expose
     private Long Memory;
 
     /**
-    * Instance type (rw/ro).
+    * Instance type. Valid values: `rw` (primary), `ro` (read-only).
     */
     @SerializedName("InstanceType")
     @Expose
     private String InstanceType;
 
     /**
-    * Number of instances. value range: [1,15].
+    * Number of instances. Value range: 1-15.
     */
     @SerializedName("InstanceCount")
     @Expose
     private Long InstanceCount;
 
     /**
-    * Instance machine type. valid values: universal type (common), exclusive type.
+    * Instance machine type. common: universal type; exclusive: dedicated type
     */
     @SerializedName("DeviceType")
     @Expose
     private String DeviceType;
 
     /**
-     * Get Specifies the cpu of the instance. 
-     * @return Cpu Specifies the cpu of the instance.
+     * Get Instance cpu 
+     * @return Cpu Instance cpu
      */
     public Long getCpu() {
         return this.Cpu;
     }
 
     /**
-     * Set Specifies the cpu of the instance.
-     * @param Cpu Specifies the cpu of the instance.
+     * Set Instance cpu
+     * @param Cpu Instance cpu
      */
     public void setCpu(Long Cpu) {
         this.Cpu = Cpu;
     }
 
     /**
-     * Get Specifies the instance memory. 
-     * @return Memory Specifies the instance memory.
+     * Get Instance memory 
+     * @return Memory Instance memory
      */
     public Long getMemory() {
         return this.Memory;
     }
 
     /**
-     * Set Specifies the instance memory.
-     * @param Memory Specifies the instance memory.
+     * Set Instance memory
+     * @param Memory Instance memory
      */
     public void setMemory(Long Memory) {
         this.Memory = Memory;
     }
 
     /**
-     * Get Instance type (rw/ro). 
-     * @return InstanceType Instance type (rw/ro).
+     * Get Instance type. Valid values: `rw` (primary), `ro` (read-only). 
+     * @return InstanceType Instance type. Valid values: `rw` (primary), `ro` (read-only).
      */
     public String getInstanceType() {
         return this.InstanceType;
     }
 
     /**
-     * Set Instance type (rw/ro).
-     * @param InstanceType Instance type (rw/ro).
+     * Set Instance type. Valid values: `rw` (primary), `ro` (read-only).
+     * @param InstanceType Instance type. Valid values: `rw` (primary), `ro` (read-only).
      */
     public void setInstanceType(String InstanceType) {
         this.InstanceType = InstanceType;
     }
 
     /**
-     * Get Number of instances. value range: [1,15]. 
-     * @return InstanceCount Number of instances. value range: [1,15].
+     * Get Number of instances. Value range: 1-15. 
+     * @return InstanceCount Number of instances. Value range: 1-15.
      */
     public Long getInstanceCount() {
         return this.InstanceCount;
     }
 
     /**
-     * Set Number of instances. value range: [1,15].
-     * @param InstanceCount Number of instances. value range: [1,15].
+     * Set Number of instances. Value range: 1-15.
+     * @param InstanceCount Number of instances. Value range: 1-15.
      */
     public void setInstanceCount(Long InstanceCount) {
         this.InstanceCount = InstanceCount;
     }
 
     /**
-     * Get Instance machine type. valid values: universal type (common), exclusive type. 
-     * @return DeviceType Instance machine type. valid values: universal type (common), exclusive type.
+     * Get Instance machine type. common: universal type; exclusive: dedicated type 
+     * @return DeviceType Instance machine type. common: universal type; exclusive: dedicated type
      */
     public String getDeviceType() {
         return this.DeviceType;
     }
 
     /**
-     * Set Instance machine type. valid values: universal type (common), exclusive type.
-     * @param DeviceType Instance machine type. valid values: universal type (common), exclusive type.
+     * Set Instance machine type. common: universal type; exclusive: dedicated type
+     * @param DeviceType Instance machine type. common: universal type; exclusive: dedicated type
      */
     public void setDeviceType(String DeviceType) {
         this.DeviceType = DeviceType;

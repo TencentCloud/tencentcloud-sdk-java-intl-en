@@ -31,7 +31,7 @@ public class UnbindClusterResourcePackagesRequest extends AbstractModel {
     private String ClusterId;
 
     /**
-    * The unique ID of a resource pack. If this parameter is left empty, all resource packs of the instance will be unbound.
+    * Unique ID of the resource package. If not provided, unbind all resource packages associated with the instance.
     */
     @SerializedName("PackageIds")
     @Expose
@@ -54,16 +54,16 @@ public class UnbindClusterResourcePackagesRequest extends AbstractModel {
     }
 
     /**
-     * Get The unique ID of a resource pack. If this parameter is left empty, all resource packs of the instance will be unbound. 
-     * @return PackageIds The unique ID of a resource pack. If this parameter is left empty, all resource packs of the instance will be unbound.
+     * Get Unique ID of the resource package. If not provided, unbind all resource packages associated with the instance. 
+     * @return PackageIds Unique ID of the resource package. If not provided, unbind all resource packages associated with the instance.
      */
     public String [] getPackageIds() {
         return this.PackageIds;
     }
 
     /**
-     * Set The unique ID of a resource pack. If this parameter is left empty, all resource packs of the instance will be unbound.
-     * @param PackageIds The unique ID of a resource pack. If this parameter is left empty, all resource packs of the instance will be unbound.
+     * Set Unique ID of the resource package. If not provided, unbind all resource packages associated with the instance.
+     * @param PackageIds Unique ID of the resource package. If not provided, unbind all resource packages associated with the instance.
      */
     public void setPackageIds(String [] PackageIds) {
         this.PackageIds = PackageIds;

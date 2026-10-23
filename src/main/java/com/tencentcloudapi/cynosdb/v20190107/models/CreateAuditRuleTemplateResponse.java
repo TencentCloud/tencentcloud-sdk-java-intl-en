@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateAuditRuleTemplateResponse extends AbstractModel {
 
     /**
-    * The generated rule template ID.
+    * Generated rule template ID.
     */
     @SerializedName("RuleTemplateId")
     @Expose
@@ -38,16 +38,16 @@ public class CreateAuditRuleTemplateResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get The generated rule template ID. 
-     * @return RuleTemplateId The generated rule template ID.
+     * Get Generated rule template ID. 
+     * @return RuleTemplateId Generated rule template ID.
      */
     public String getRuleTemplateId() {
         return this.RuleTemplateId;
     }
 
     /**
-     * Set The generated rule template ID.
-     * @param RuleTemplateId The generated rule template ID.
+     * Set Generated rule template ID.
+     * @param RuleTemplateId Generated rule template ID.
      */
     public void setRuleTemplateId(String RuleTemplateId) {
         this.RuleTemplateId = RuleTemplateId;

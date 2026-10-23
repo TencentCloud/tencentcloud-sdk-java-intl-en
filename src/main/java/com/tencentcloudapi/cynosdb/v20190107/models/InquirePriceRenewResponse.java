@@ -31,28 +31,28 @@ public class InquirePriceRenewResponse extends AbstractModel {
     private String ClusterId;
 
     /**
-    * Instance ID list
+    * Instance ID list.
     */
     @SerializedName("InstanceIds")
     @Expose
     private String [] InstanceIds;
 
     /**
-    * Price of instance specification in array
+    * Corresponding inquiry result array.
     */
     @SerializedName("Prices")
     @Expose
     private TradePrice [] Prices;
 
     /**
-    * Total renewal price of compute node
+    * Total price for renewing the computing node
     */
     @SerializedName("InstanceRealTotalPrice")
     @Expose
     private Long InstanceRealTotalPrice;
 
     /**
-    * Total renewal price of storage node
+    * Total price for renewing the storage node
     */
     @SerializedName("StorageRealTotalPrice")
     @Expose
@@ -82,64 +82,64 @@ public class InquirePriceRenewResponse extends AbstractModel {
     }
 
     /**
-     * Get Instance ID list 
-     * @return InstanceIds Instance ID list
+     * Get Instance ID list. 
+     * @return InstanceIds Instance ID list.
      */
     public String [] getInstanceIds() {
         return this.InstanceIds;
     }
 
     /**
-     * Set Instance ID list
-     * @param InstanceIds Instance ID list
+     * Set Instance ID list.
+     * @param InstanceIds Instance ID list.
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;
     }
 
     /**
-     * Get Price of instance specification in array 
-     * @return Prices Price of instance specification in array
+     * Get Corresponding inquiry result array. 
+     * @return Prices Corresponding inquiry result array.
      */
     public TradePrice [] getPrices() {
         return this.Prices;
     }
 
     /**
-     * Set Price of instance specification in array
-     * @param Prices Price of instance specification in array
+     * Set Corresponding inquiry result array.
+     * @param Prices Corresponding inquiry result array.
      */
     public void setPrices(TradePrice [] Prices) {
         this.Prices = Prices;
     }
 
     /**
-     * Get Total renewal price of compute node 
-     * @return InstanceRealTotalPrice Total renewal price of compute node
+     * Get Total price for renewing the computing node 
+     * @return InstanceRealTotalPrice Total price for renewing the computing node
      */
     public Long getInstanceRealTotalPrice() {
         return this.InstanceRealTotalPrice;
     }
 
     /**
-     * Set Total renewal price of compute node
-     * @param InstanceRealTotalPrice Total renewal price of compute node
+     * Set Total price for renewing the computing node
+     * @param InstanceRealTotalPrice Total price for renewing the computing node
      */
     public void setInstanceRealTotalPrice(Long InstanceRealTotalPrice) {
         this.InstanceRealTotalPrice = InstanceRealTotalPrice;
     }
 
     /**
-     * Get Total renewal price of storage node 
-     * @return StorageRealTotalPrice Total renewal price of storage node
+     * Get Total price for renewing the storage node 
+     * @return StorageRealTotalPrice Total price for renewing the storage node
      */
     public Long getStorageRealTotalPrice() {
         return this.StorageRealTotalPrice;
     }
 
     /**
-     * Set Total renewal price of storage node
-     * @param StorageRealTotalPrice Total renewal price of storage node
+     * Set Total price for renewing the storage node
+     * @param StorageRealTotalPrice Total price for renewing the storage node
      */
     public void setStorageRealTotalPrice(Long StorageRealTotalPrice) {
         this.StorageRealTotalPrice = StorageRealTotalPrice;

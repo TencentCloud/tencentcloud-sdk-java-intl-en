@@ -1,0 +1,131 @@
+/*
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+package com.tencentcloudapi.teo.v20220901.models;
+
+import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.annotations.Expose;
+import java.util.HashMap;
+
+public class CustomVariableOperationRuleBranch extends AbstractModel {
+
+    /**
+    * <p><a href="https://www.tencentcloud.com/document/product/1552/90438?from_cn_redirect=1#33f65828-c6c6-4b66-a011-25a20b548d5d">Match condition</a>.</p>
+    */
+    @SerializedName("Condition")
+    @Expose
+    private String Condition;
+
+    /**
+    * <p><a href="https://www.tencentcloud.com/document/product/1552/90438?from_cn_redirect=1#c7bd7e02-9247-4a72-b0e4-11c27cadb198">Operate</a>.<br>Note: Actions and SubRules cannot be empty at the same time.</p>
+    */
+    @SerializedName("Actions")
+    @Expose
+    private CustomVariableOperationRuleAction [] Actions;
+
+    /**
+    * <p>Sub-rule list. If there are multiple rules in the list, they are executed in order from top to bottom.<br>Note: SubRules and Actions cannot be empty at the same time. Currently only support filling one level of SubRules.</p>
+    */
+    @SerializedName("SubRules")
+    @Expose
+    private CustomVariableOperationSubRule [] SubRules;
+
+    /**
+     * Get <p><a href="https://www.tencentcloud.com/document/product/1552/90438?from_cn_redirect=1#33f65828-c6c6-4b66-a011-25a20b548d5d">Match condition</a>.</p> 
+     * @return Condition <p><a href="https://www.tencentcloud.com/document/product/1552/90438?from_cn_redirect=1#33f65828-c6c6-4b66-a011-25a20b548d5d">Match condition</a>.</p>
+     */
+    public String getCondition() {
+        return this.Condition;
+    }
+
+    /**
+     * Set <p><a href="https://www.tencentcloud.com/document/product/1552/90438?from_cn_redirect=1#33f65828-c6c6-4b66-a011-25a20b548d5d">Match condition</a>.</p>
+     * @param Condition <p><a href="https://www.tencentcloud.com/document/product/1552/90438?from_cn_redirect=1#33f65828-c6c6-4b66-a011-25a20b548d5d">Match condition</a>.</p>
+     */
+    public void setCondition(String Condition) {
+        this.Condition = Condition;
+    }
+
+    /**
+     * Get <p><a href="https://www.tencentcloud.com/document/product/1552/90438?from_cn_redirect=1#c7bd7e02-9247-4a72-b0e4-11c27cadb198">Operate</a>.<br>Note: Actions and SubRules cannot be empty at the same time.</p> 
+     * @return Actions <p><a href="https://www.tencentcloud.com/document/product/1552/90438?from_cn_redirect=1#c7bd7e02-9247-4a72-b0e4-11c27cadb198">Operate</a>.<br>Note: Actions and SubRules cannot be empty at the same time.</p>
+     */
+    public CustomVariableOperationRuleAction [] getActions() {
+        return this.Actions;
+    }
+
+    /**
+     * Set <p><a href="https://www.tencentcloud.com/document/product/1552/90438?from_cn_redirect=1#c7bd7e02-9247-4a72-b0e4-11c27cadb198">Operate</a>.<br>Note: Actions and SubRules cannot be empty at the same time.</p>
+     * @param Actions <p><a href="https://www.tencentcloud.com/document/product/1552/90438?from_cn_redirect=1#c7bd7e02-9247-4a72-b0e4-11c27cadb198">Operate</a>.<br>Note: Actions and SubRules cannot be empty at the same time.</p>
+     */
+    public void setActions(CustomVariableOperationRuleAction [] Actions) {
+        this.Actions = Actions;
+    }
+
+    /**
+     * Get <p>Sub-rule list. If there are multiple rules in the list, they are executed in order from top to bottom.<br>Note: SubRules and Actions cannot be empty at the same time. Currently only support filling one level of SubRules.</p> 
+     * @return SubRules <p>Sub-rule list. If there are multiple rules in the list, they are executed in order from top to bottom.<br>Note: SubRules and Actions cannot be empty at the same time. Currently only support filling one level of SubRules.</p>
+     */
+    public CustomVariableOperationSubRule [] getSubRules() {
+        return this.SubRules;
+    }
+
+    /**
+     * Set <p>Sub-rule list. If there are multiple rules in the list, they are executed in order from top to bottom.<br>Note: SubRules and Actions cannot be empty at the same time. Currently only support filling one level of SubRules.</p>
+     * @param SubRules <p>Sub-rule list. If there are multiple rules in the list, they are executed in order from top to bottom.<br>Note: SubRules and Actions cannot be empty at the same time. Currently only support filling one level of SubRules.</p>
+     */
+    public void setSubRules(CustomVariableOperationSubRule [] SubRules) {
+        this.SubRules = SubRules;
+    }
+
+    public CustomVariableOperationRuleBranch() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CustomVariableOperationRuleBranch(CustomVariableOperationRuleBranch source) {
+        if (source.Condition != null) {
+            this.Condition = new String(source.Condition);
+        }
+        if (source.Actions != null) {
+            this.Actions = new CustomVariableOperationRuleAction[source.Actions.length];
+            for (int i = 0; i < source.Actions.length; i++) {
+                this.Actions[i] = new CustomVariableOperationRuleAction(source.Actions[i]);
+            }
+        }
+        if (source.SubRules != null) {
+            this.SubRules = new CustomVariableOperationSubRule[source.SubRules.length];
+            for (int i = 0; i < source.SubRules.length; i++) {
+                this.SubRules[i] = new CustomVariableOperationSubRule(source.SubRules[i]);
+            }
+        }
+    }
+
+
+    /**
+     * Internal implementation, normal users should not use it.
+     */
+    public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "Condition", this.Condition);
+        this.setParamArrayObj(map, prefix + "Actions.", this.Actions);
+        this.setParamArrayObj(map, prefix + "SubRules.", this.SubRules);
+
+    }
+}
+

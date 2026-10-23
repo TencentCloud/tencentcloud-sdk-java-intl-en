@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class OpenClusterPasswordComplexityRequest extends AbstractModel {
 
     /**
-    * Cluster ID
+    * Cluster ID.
     */
     @SerializedName("ClusterId")
     @Expose
@@ -38,14 +38,14 @@ public class OpenClusterPasswordComplexityRequest extends AbstractModel {
     private Long ValidatePasswordLength;
 
     /**
-    * Number of letters
+    * Number of uppercase/lowercase characters
     */
     @SerializedName("ValidatePasswordMixedCaseCount")
     @Expose
     private Long ValidatePasswordMixedCaseCount;
 
     /**
-    * Number of symbols
+    * Number of special characters
     */
     @SerializedName("ValidatePasswordSpecialCharCount")
     @Expose
@@ -59,7 +59,7 @@ public class OpenClusterPasswordComplexityRequest extends AbstractModel {
     private Long ValidatePasswordNumberCount;
 
     /**
-    * Password strength. Valid values: `MEDIUM`, `STRONG`.
+    * Password strength ("MEDIUM", "STRONG")
     */
     @SerializedName("ValidatePasswordPolicy")
     @Expose
@@ -73,16 +73,16 @@ public class OpenClusterPasswordComplexityRequest extends AbstractModel {
     private String [] ValidatePasswordDictionary;
 
     /**
-     * Get Cluster ID 
-     * @return ClusterId Cluster ID
+     * Get Cluster ID. 
+     * @return ClusterId Cluster ID.
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set Cluster ID
-     * @param ClusterId Cluster ID
+     * Set Cluster ID.
+     * @param ClusterId Cluster ID.
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
@@ -105,32 +105,32 @@ public class OpenClusterPasswordComplexityRequest extends AbstractModel {
     }
 
     /**
-     * Get Number of letters 
-     * @return ValidatePasswordMixedCaseCount Number of letters
+     * Get Number of uppercase/lowercase characters 
+     * @return ValidatePasswordMixedCaseCount Number of uppercase/lowercase characters
      */
     public Long getValidatePasswordMixedCaseCount() {
         return this.ValidatePasswordMixedCaseCount;
     }
 
     /**
-     * Set Number of letters
-     * @param ValidatePasswordMixedCaseCount Number of letters
+     * Set Number of uppercase/lowercase characters
+     * @param ValidatePasswordMixedCaseCount Number of uppercase/lowercase characters
      */
     public void setValidatePasswordMixedCaseCount(Long ValidatePasswordMixedCaseCount) {
         this.ValidatePasswordMixedCaseCount = ValidatePasswordMixedCaseCount;
     }
 
     /**
-     * Get Number of symbols 
-     * @return ValidatePasswordSpecialCharCount Number of symbols
+     * Get Number of special characters 
+     * @return ValidatePasswordSpecialCharCount Number of special characters
      */
     public Long getValidatePasswordSpecialCharCount() {
         return this.ValidatePasswordSpecialCharCount;
     }
 
     /**
-     * Set Number of symbols
-     * @param ValidatePasswordSpecialCharCount Number of symbols
+     * Set Number of special characters
+     * @param ValidatePasswordSpecialCharCount Number of special characters
      */
     public void setValidatePasswordSpecialCharCount(Long ValidatePasswordSpecialCharCount) {
         this.ValidatePasswordSpecialCharCount = ValidatePasswordSpecialCharCount;
@@ -153,16 +153,16 @@ public class OpenClusterPasswordComplexityRequest extends AbstractModel {
     }
 
     /**
-     * Get Password strength. Valid values: `MEDIUM`, `STRONG`. 
-     * @return ValidatePasswordPolicy Password strength. Valid values: `MEDIUM`, `STRONG`.
+     * Get Password strength ("MEDIUM", "STRONG") 
+     * @return ValidatePasswordPolicy Password strength ("MEDIUM", "STRONG")
      */
     public String getValidatePasswordPolicy() {
         return this.ValidatePasswordPolicy;
     }
 
     /**
-     * Set Password strength. Valid values: `MEDIUM`, `STRONG`.
-     * @param ValidatePasswordPolicy Password strength. Valid values: `MEDIUM`, `STRONG`.
+     * Set Password strength ("MEDIUM", "STRONG")
+     * @param ValidatePasswordPolicy Password strength ("MEDIUM", "STRONG")
      */
     public void setValidatePasswordPolicy(String ValidatePasswordPolicy) {
         this.ValidatePasswordPolicy = ValidatePasswordPolicy;

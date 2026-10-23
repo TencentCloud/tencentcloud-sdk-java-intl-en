@@ -24,39 +24,39 @@ import java.util.HashMap;
 public class SaleZone extends AbstractModel {
 
     /**
-    * AZ name
+    * Availability zone name
     */
     @SerializedName("Zone")
     @Expose
     private String Zone;
 
     /**
-    * Numeric ID of an AZ
+    * Availability zone numeric ID
     */
     @SerializedName("ZoneId")
     @Expose
     private Long ZoneId;
 
     /**
-    * AZ name
+    * AZ Chinese name
     */
     @SerializedName("ZoneZh")
     @Expose
     private String ZoneZh;
 
     /**
-    * Whether serverless cluster is supported. Valid values: <br>
-`0`: No<br>
-`1`: Yes
+    * Whether serverless cluster is supported<br>
+0: not supported
+1: Support
     */
     @SerializedName("IsSupportServerless")
     @Expose
     private Long IsSupportServerless;
 
     /**
-    * Whether standard cluster is supported. Valid values: <br>
-`0`: No<br>
-`1`: Yes
+    * Whether a general cluster is supported
+0: not supported
+1: Support
     */
     @SerializedName("IsSupportNormal")
     @Expose
@@ -70,117 +70,117 @@ public class SaleZone extends AbstractModel {
     private String PhysicalZone;
 
     /**
-    * Whether the user has AZ permission.
+    * Whether the user has AZ permissions
     */
     @SerializedName("HasPermission")
     @Expose
     private Boolean HasPermission;
 
     /**
-    * Whether it is a full-linkage RDMA AZ.
+    * Whether it is an all-link RDMA availability zone
     */
     @SerializedName("IsWholeRdmaZone")
     @Expose
     private String IsWholeRdmaZone;
 
     /**
-    * Specifies whether a newly purchased cluster is allowed in the current availability zone. valid values: 1 (allowed), 0 (not allowed).
+    * Whether new cluster purchase is allowed in the current AZ. 1: allowed, 0: not allowed
     */
     @SerializedName("IsSupportCreateCluster")
     @Expose
     private Long IsSupportCreateCluster;
 
     /**
-     * Get AZ name 
-     * @return Zone AZ name
+     * Get Availability zone name 
+     * @return Zone Availability zone name
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * Set AZ name
-     * @param Zone AZ name
+     * Set Availability zone name
+     * @param Zone Availability zone name
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
     }
 
     /**
-     * Get Numeric ID of an AZ 
-     * @return ZoneId Numeric ID of an AZ
+     * Get Availability zone numeric ID 
+     * @return ZoneId Availability zone numeric ID
      */
     public Long getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set Numeric ID of an AZ
-     * @param ZoneId Numeric ID of an AZ
+     * Set Availability zone numeric ID
+     * @param ZoneId Availability zone numeric ID
      */
     public void setZoneId(Long ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get AZ name 
-     * @return ZoneZh AZ name
+     * Get AZ Chinese name 
+     * @return ZoneZh AZ Chinese name
      */
     public String getZoneZh() {
         return this.ZoneZh;
     }
 
     /**
-     * Set AZ name
-     * @param ZoneZh AZ name
+     * Set AZ Chinese name
+     * @param ZoneZh AZ Chinese name
      */
     public void setZoneZh(String ZoneZh) {
         this.ZoneZh = ZoneZh;
     }
 
     /**
-     * Get Whether serverless cluster is supported. Valid values: <br>
-`0`: No<br>
-`1`: Yes 
-     * @return IsSupportServerless Whether serverless cluster is supported. Valid values: <br>
-`0`: No<br>
-`1`: Yes
+     * Get Whether serverless cluster is supported<br>
+0: not supported
+1: Support 
+     * @return IsSupportServerless Whether serverless cluster is supported<br>
+0: not supported
+1: Support
      */
     public Long getIsSupportServerless() {
         return this.IsSupportServerless;
     }
 
     /**
-     * Set Whether serverless cluster is supported. Valid values: <br>
-`0`: No<br>
-`1`: Yes
-     * @param IsSupportServerless Whether serverless cluster is supported. Valid values: <br>
-`0`: No<br>
-`1`: Yes
+     * Set Whether serverless cluster is supported<br>
+0: not supported
+1: Support
+     * @param IsSupportServerless Whether serverless cluster is supported<br>
+0: not supported
+1: Support
      */
     public void setIsSupportServerless(Long IsSupportServerless) {
         this.IsSupportServerless = IsSupportServerless;
     }
 
     /**
-     * Get Whether standard cluster is supported. Valid values: <br>
-`0`: No<br>
-`1`: Yes 
-     * @return IsSupportNormal Whether standard cluster is supported. Valid values: <br>
-`0`: No<br>
-`1`: Yes
+     * Get Whether a general cluster is supported
+0: not supported
+1: Support 
+     * @return IsSupportNormal Whether a general cluster is supported
+0: not supported
+1: Support
      */
     public Long getIsSupportNormal() {
         return this.IsSupportNormal;
     }
 
     /**
-     * Set Whether standard cluster is supported. Valid values: <br>
-`0`: No<br>
-`1`: Yes
-     * @param IsSupportNormal Whether standard cluster is supported. Valid values: <br>
-`0`: No<br>
-`1`: Yes
+     * Set Whether a general cluster is supported
+0: not supported
+1: Support
+     * @param IsSupportNormal Whether a general cluster is supported
+0: not supported
+1: Support
      */
     public void setIsSupportNormal(Long IsSupportNormal) {
         this.IsSupportNormal = IsSupportNormal;
@@ -203,48 +203,48 @@ public class SaleZone extends AbstractModel {
     }
 
     /**
-     * Get Whether the user has AZ permission. 
-     * @return HasPermission Whether the user has AZ permission.
+     * Get Whether the user has AZ permissions 
+     * @return HasPermission Whether the user has AZ permissions
      */
     public Boolean getHasPermission() {
         return this.HasPermission;
     }
 
     /**
-     * Set Whether the user has AZ permission.
-     * @param HasPermission Whether the user has AZ permission.
+     * Set Whether the user has AZ permissions
+     * @param HasPermission Whether the user has AZ permissions
      */
     public void setHasPermission(Boolean HasPermission) {
         this.HasPermission = HasPermission;
     }
 
     /**
-     * Get Whether it is a full-linkage RDMA AZ. 
-     * @return IsWholeRdmaZone Whether it is a full-linkage RDMA AZ.
+     * Get Whether it is an all-link RDMA availability zone 
+     * @return IsWholeRdmaZone Whether it is an all-link RDMA availability zone
      */
     public String getIsWholeRdmaZone() {
         return this.IsWholeRdmaZone;
     }
 
     /**
-     * Set Whether it is a full-linkage RDMA AZ.
-     * @param IsWholeRdmaZone Whether it is a full-linkage RDMA AZ.
+     * Set Whether it is an all-link RDMA availability zone
+     * @param IsWholeRdmaZone Whether it is an all-link RDMA availability zone
      */
     public void setIsWholeRdmaZone(String IsWholeRdmaZone) {
         this.IsWholeRdmaZone = IsWholeRdmaZone;
     }
 
     /**
-     * Get Specifies whether a newly purchased cluster is allowed in the current availability zone. valid values: 1 (allowed), 0 (not allowed). 
-     * @return IsSupportCreateCluster Specifies whether a newly purchased cluster is allowed in the current availability zone. valid values: 1 (allowed), 0 (not allowed).
+     * Get Whether new cluster purchase is allowed in the current AZ. 1: allowed, 0: not allowed 
+     * @return IsSupportCreateCluster Whether new cluster purchase is allowed in the current AZ. 1: allowed, 0: not allowed
      */
     public Long getIsSupportCreateCluster() {
         return this.IsSupportCreateCluster;
     }
 
     /**
-     * Set Specifies whether a newly purchased cluster is allowed in the current availability zone. valid values: 1 (allowed), 0 (not allowed).
-     * @param IsSupportCreateCluster Specifies whether a newly purchased cluster is allowed in the current availability zone. valid values: 1 (allowed), 0 (not allowed).
+     * Set Whether new cluster purchase is allowed in the current AZ. 1: allowed, 0: not allowed
+     * @param IsSupportCreateCluster Whether new cluster purchase is allowed in the current AZ. 1: allowed, 0: not allowed
      */
     public void setIsSupportCreateCluster(Long IsSupportCreateCluster) {
         this.IsSupportCreateCluster = IsSupportCreateCluster;

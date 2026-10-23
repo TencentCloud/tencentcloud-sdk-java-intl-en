@@ -24,74 +24,69 @@ import java.util.HashMap;
 public class ChallengeActionParameters extends AbstractModel {
 
     /**
-    * Safe execution challenge actions. valid values: <li> InterstitialChallenge: interstitial challenge;</li> <li> InlineChallenge: embedded challenge;</li> <li> JSChallenge: JavaScript challenge;</li> <li> ManagedChallenge: managed challenge.</li>.
+    * <p>Specific challenge action for safe execution.</p><p>Enumeration values:</p><ul><li>InterstitialChallenge: interstitial challenge;</li><li>InlineChallenge: embedded challenge (SDK challenge);</li><li>ManagedChallenge: managed challenge. Applicable only to HTML web pages directly accessed by users through a browser. Verification cannot be completed in scenarios such as API interfaces, XHR/AJAX async requests within web pages, mobile apps, and command line tools. Do not configure it;</li><li>JSChallenge: JavaScript challenge. Applicable only to HTML web pages directly accessed by users through a browser. Verification cannot be completed in scenarios such as API interfaces, XHR/AJAX async requests within web pages, mobile apps, and command line tools. Do not configure it.</li></ul>
     */
     @SerializedName("ChallengeOption")
     @Expose
     private String ChallengeOption;
 
     /**
-    * Specifies the time interval for challenge repetition. this field is required when Name is InterstitialChallenge/InlineChallenge. default value is 300s. supported units: <li>s: second, value ranges from 1 to 60;</li><li>m: minute, value ranges from 1 to 60;</li><li>h: hour, value ranges from 1 to 24.</li>.
-
+    * <p>Time interval for repeating the challenge. This field is required when ChallengeOption is InterstitialChallenge/InlineChallenge. Default value: 300s. Supported units: <li>s: second, value ranges from 1 to 60;</li><li>m: minute, value ranges from 1 to 60;</li><li>h: hour, value ranges from 1 to 24.</li></p>
     */
     @SerializedName("Interval")
     @Expose
     private String Interval;
 
     /**
-    * Client authentication method ID. this field is required when Name is InterstitialChallenge/InlineChallenge.
+    * <p>Client authentication method ID. This field is required when Name is InterstitialChallenge/InlineChallenge.</p>
     */
     @SerializedName("AttesterId")
     @Expose
     private String AttesterId;
 
     /**
-     * Get Safe execution challenge actions. valid values: <li> InterstitialChallenge: interstitial challenge;</li> <li> InlineChallenge: embedded challenge;</li> <li> JSChallenge: JavaScript challenge;</li> <li> ManagedChallenge: managed challenge.</li>. 
-     * @return ChallengeOption Safe execution challenge actions. valid values: <li> InterstitialChallenge: interstitial challenge;</li> <li> InlineChallenge: embedded challenge;</li> <li> JSChallenge: JavaScript challenge;</li> <li> ManagedChallenge: managed challenge.</li>.
+     * Get <p>Specific challenge action for safe execution.</p><p>Enumeration values:</p><ul><li>InterstitialChallenge: interstitial challenge;</li><li>InlineChallenge: embedded challenge (SDK challenge);</li><li>ManagedChallenge: managed challenge. Applicable only to HTML web pages directly accessed by users through a browser. Verification cannot be completed in scenarios such as API interfaces, XHR/AJAX async requests within web pages, mobile apps, and command line tools. Do not configure it;</li><li>JSChallenge: JavaScript challenge. Applicable only to HTML web pages directly accessed by users through a browser. Verification cannot be completed in scenarios such as API interfaces, XHR/AJAX async requests within web pages, mobile apps, and command line tools. Do not configure it.</li></ul> 
+     * @return ChallengeOption <p>Specific challenge action for safe execution.</p><p>Enumeration values:</p><ul><li>InterstitialChallenge: interstitial challenge;</li><li>InlineChallenge: embedded challenge (SDK challenge);</li><li>ManagedChallenge: managed challenge. Applicable only to HTML web pages directly accessed by users through a browser. Verification cannot be completed in scenarios such as API interfaces, XHR/AJAX async requests within web pages, mobile apps, and command line tools. Do not configure it;</li><li>JSChallenge: JavaScript challenge. Applicable only to HTML web pages directly accessed by users through a browser. Verification cannot be completed in scenarios such as API interfaces, XHR/AJAX async requests within web pages, mobile apps, and command line tools. Do not configure it.</li></ul>
      */
     public String getChallengeOption() {
         return this.ChallengeOption;
     }
 
     /**
-     * Set Safe execution challenge actions. valid values: <li> InterstitialChallenge: interstitial challenge;</li> <li> InlineChallenge: embedded challenge;</li> <li> JSChallenge: JavaScript challenge;</li> <li> ManagedChallenge: managed challenge.</li>.
-     * @param ChallengeOption Safe execution challenge actions. valid values: <li> InterstitialChallenge: interstitial challenge;</li> <li> InlineChallenge: embedded challenge;</li> <li> JSChallenge: JavaScript challenge;</li> <li> ManagedChallenge: managed challenge.</li>.
+     * Set <p>Specific challenge action for safe execution.</p><p>Enumeration values:</p><ul><li>InterstitialChallenge: interstitial challenge;</li><li>InlineChallenge: embedded challenge (SDK challenge);</li><li>ManagedChallenge: managed challenge. Applicable only to HTML web pages directly accessed by users through a browser. Verification cannot be completed in scenarios such as API interfaces, XHR/AJAX async requests within web pages, mobile apps, and command line tools. Do not configure it;</li><li>JSChallenge: JavaScript challenge. Applicable only to HTML web pages directly accessed by users through a browser. Verification cannot be completed in scenarios such as API interfaces, XHR/AJAX async requests within web pages, mobile apps, and command line tools. Do not configure it.</li></ul>
+     * @param ChallengeOption <p>Specific challenge action for safe execution.</p><p>Enumeration values:</p><ul><li>InterstitialChallenge: interstitial challenge;</li><li>InlineChallenge: embedded challenge (SDK challenge);</li><li>ManagedChallenge: managed challenge. Applicable only to HTML web pages directly accessed by users through a browser. Verification cannot be completed in scenarios such as API interfaces, XHR/AJAX async requests within web pages, mobile apps, and command line tools. Do not configure it;</li><li>JSChallenge: JavaScript challenge. Applicable only to HTML web pages directly accessed by users through a browser. Verification cannot be completed in scenarios such as API interfaces, XHR/AJAX async requests within web pages, mobile apps, and command line tools. Do not configure it.</li></ul>
      */
     public void setChallengeOption(String ChallengeOption) {
         this.ChallengeOption = ChallengeOption;
     }
 
     /**
-     * Get Specifies the time interval for challenge repetition. this field is required when Name is InterstitialChallenge/InlineChallenge. default value is 300s. supported units: <li>s: second, value ranges from 1 to 60;</li><li>m: minute, value ranges from 1 to 60;</li><li>h: hour, value ranges from 1 to 24.</li>.
- 
-     * @return Interval Specifies the time interval for challenge repetition. this field is required when Name is InterstitialChallenge/InlineChallenge. default value is 300s. supported units: <li>s: second, value ranges from 1 to 60;</li><li>m: minute, value ranges from 1 to 60;</li><li>h: hour, value ranges from 1 to 24.</li>.
-
+     * Get <p>Time interval for repeating the challenge. This field is required when ChallengeOption is InterstitialChallenge/InlineChallenge. Default value: 300s. Supported units: <li>s: second, value ranges from 1 to 60;</li><li>m: minute, value ranges from 1 to 60;</li><li>h: hour, value ranges from 1 to 24.</li></p> 
+     * @return Interval <p>Time interval for repeating the challenge. This field is required when ChallengeOption is InterstitialChallenge/InlineChallenge. Default value: 300s. Supported units: <li>s: second, value ranges from 1 to 60;</li><li>m: minute, value ranges from 1 to 60;</li><li>h: hour, value ranges from 1 to 24.</li></p>
      */
     public String getInterval() {
         return this.Interval;
     }
 
     /**
-     * Set Specifies the time interval for challenge repetition. this field is required when Name is InterstitialChallenge/InlineChallenge. default value is 300s. supported units: <li>s: second, value ranges from 1 to 60;</li><li>m: minute, value ranges from 1 to 60;</li><li>h: hour, value ranges from 1 to 24.</li>.
-
-     * @param Interval Specifies the time interval for challenge repetition. this field is required when Name is InterstitialChallenge/InlineChallenge. default value is 300s. supported units: <li>s: second, value ranges from 1 to 60;</li><li>m: minute, value ranges from 1 to 60;</li><li>h: hour, value ranges from 1 to 24.</li>.
-
+     * Set <p>Time interval for repeating the challenge. This field is required when ChallengeOption is InterstitialChallenge/InlineChallenge. Default value: 300s. Supported units: <li>s: second, value ranges from 1 to 60;</li><li>m: minute, value ranges from 1 to 60;</li><li>h: hour, value ranges from 1 to 24.</li></p>
+     * @param Interval <p>Time interval for repeating the challenge. This field is required when ChallengeOption is InterstitialChallenge/InlineChallenge. Default value: 300s. Supported units: <li>s: second, value ranges from 1 to 60;</li><li>m: minute, value ranges from 1 to 60;</li><li>h: hour, value ranges from 1 to 24.</li></p>
      */
     public void setInterval(String Interval) {
         this.Interval = Interval;
     }
 
     /**
-     * Get Client authentication method ID. this field is required when Name is InterstitialChallenge/InlineChallenge. 
-     * @return AttesterId Client authentication method ID. this field is required when Name is InterstitialChallenge/InlineChallenge.
+     * Get <p>Client authentication method ID. This field is required when Name is InterstitialChallenge/InlineChallenge.</p> 
+     * @return AttesterId <p>Client authentication method ID. This field is required when Name is InterstitialChallenge/InlineChallenge.</p>
      */
     public String getAttesterId() {
         return this.AttesterId;
     }
 
     /**
-     * Set Client authentication method ID. this field is required when Name is InterstitialChallenge/InlineChallenge.
-     * @param AttesterId Client authentication method ID. this field is required when Name is InterstitialChallenge/InlineChallenge.
+     * Set <p>Client authentication method ID. This field is required when Name is InterstitialChallenge/InlineChallenge.</p>
+     * @param AttesterId <p>Client authentication method ID. This field is required when Name is InterstitialChallenge/InlineChallenge.</p>
      */
     public void setAttesterId(String AttesterId) {
         this.AttesterId = AttesterId;

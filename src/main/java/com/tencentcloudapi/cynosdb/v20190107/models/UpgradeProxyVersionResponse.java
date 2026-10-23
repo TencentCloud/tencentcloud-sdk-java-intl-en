@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class UpgradeProxyVersionResponse extends AbstractModel {
 
     /**
-    * Async flow ID
+    * Asynchronous process ID
     */
     @SerializedName("FlowId")
     @Expose
     private Long FlowId;
 
     /**
-    * Async task ID
+    * Asynchronous task ID.
     */
     @SerializedName("TaskId")
     @Expose
@@ -45,32 +45,32 @@ public class UpgradeProxyVersionResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Async flow ID 
-     * @return FlowId Async flow ID
+     * Get Asynchronous process ID 
+     * @return FlowId Asynchronous process ID
      */
     public Long getFlowId() {
         return this.FlowId;
     }
 
     /**
-     * Set Async flow ID
-     * @param FlowId Async flow ID
+     * Set Asynchronous process ID
+     * @param FlowId Asynchronous process ID
      */
     public void setFlowId(Long FlowId) {
         this.FlowId = FlowId;
     }
 
     /**
-     * Get Async task ID 
-     * @return TaskId Async task ID
+     * Get Asynchronous task ID. 
+     * @return TaskId Asynchronous task ID.
      */
     public Long getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set Async task ID
-     * @param TaskId Async task ID
+     * Set Asynchronous task ID.
+     * @param TaskId Asynchronous task ID.
      */
     public void setTaskId(Long TaskId) {
         this.TaskId = TaskId;

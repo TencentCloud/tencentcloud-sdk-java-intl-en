@@ -31,7 +31,7 @@ public class BizTaskModifyInstanceParam extends AbstractModel {
     private String InstanceId;
 
     /**
-    * Details of instance parameter modification task.
+    * Instance parameter modification task details
     */
     @SerializedName("ModifyInstanceParamList")
     @Expose
@@ -54,16 +54,16 @@ public class BizTaskModifyInstanceParam extends AbstractModel {
     }
 
     /**
-     * Get Details of instance parameter modification task. 
-     * @return ModifyInstanceParamList Details of instance parameter modification task.
+     * Get Instance parameter modification task details 
+     * @return ModifyInstanceParamList Instance parameter modification task details
      */
     public ModifyParamItem [] getModifyInstanceParamList() {
         return this.ModifyInstanceParamList;
     }
 
     /**
-     * Set Details of instance parameter modification task.
-     * @param ModifyInstanceParamList Details of instance parameter modification task.
+     * Set Instance parameter modification task details
+     * @param ModifyInstanceParamList Instance parameter modification task details
      */
     public void setModifyInstanceParamList(ModifyParamItem [] ModifyInstanceParamList) {
         this.ModifyInstanceParamList = ModifyInstanceParamList;

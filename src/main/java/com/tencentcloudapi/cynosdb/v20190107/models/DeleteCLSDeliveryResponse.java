@@ -25,6 +25,7 @@ public class DeleteCLSDeliveryResponse extends AbstractModel {
 
     /**
     * Asynchronous task ID.
+
     */
     @SerializedName("TaskId")
     @Expose
@@ -38,8 +39,10 @@ public class DeleteCLSDeliveryResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Asynchronous task ID. 
+     * Get Asynchronous task ID.
+ 
      * @return TaskId Asynchronous task ID.
+
      */
     public Long getTaskId() {
         return this.TaskId;
@@ -47,7 +50,9 @@ public class DeleteCLSDeliveryResponse extends AbstractModel {
 
     /**
      * Set Asynchronous task ID.
+
      * @param TaskId Asynchronous task ID.
+
      */
     public void setTaskId(Long TaskId) {
         this.TaskId = TaskId;

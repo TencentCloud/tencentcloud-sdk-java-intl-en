@@ -31,7 +31,7 @@ public class SparseBackupConfig extends AbstractModel {
     private String SparseBackupSwitch;
 
     /**
-    * Sparse backup policy list (1-3)
+    * List of sparse backup policies (1-3)
     */
     @SerializedName("SparseBackupConfigInfos")
     @Expose
@@ -54,16 +54,16 @@ public class SparseBackupConfig extends AbstractModel {
     }
 
     /**
-     * Get Sparse backup policy list (1-3) 
-     * @return SparseBackupConfigInfos Sparse backup policy list (1-3)
+     * Get List of sparse backup policies (1-3) 
+     * @return SparseBackupConfigInfos List of sparse backup policies (1-3)
      */
     public SparseBackupConfigInfo [] getSparseBackupConfigInfos() {
         return this.SparseBackupConfigInfos;
     }
 
     /**
-     * Set Sparse backup policy list (1-3)
-     * @param SparseBackupConfigInfos Sparse backup policy list (1-3)
+     * Set List of sparse backup policies (1-3)
+     * @param SparseBackupConfigInfos List of sparse backup policies (1-3)
      */
     public void setSparseBackupConfigInfos(SparseBackupConfigInfo [] SparseBackupConfigInfos) {
         this.SparseBackupConfigInfos = SparseBackupConfigInfos;

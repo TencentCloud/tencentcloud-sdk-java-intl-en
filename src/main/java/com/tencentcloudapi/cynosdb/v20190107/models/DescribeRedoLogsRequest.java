@@ -59,7 +59,7 @@ public class DescribeRedoLogsRequest extends AbstractModel {
     private String EndTime;
 
     /**
-    * Log file name.
+    * redolog file name
     */
     @SerializedName("FileNames")
     @Expose
@@ -146,16 +146,16 @@ public class DescribeRedoLogsRequest extends AbstractModel {
     }
 
     /**
-     * Get Log file name. 
-     * @return FileNames Log file name.
+     * Get redolog file name 
+     * @return FileNames redolog file name
      */
     public String [] getFileNames() {
         return this.FileNames;
     }
 
     /**
-     * Set Log file name.
-     * @param FileNames Log file name.
+     * Set redolog file name
+     * @param FileNames redolog file name
      */
     public void setFileNames(String [] FileNames) {
         this.FileNames = FileNames;

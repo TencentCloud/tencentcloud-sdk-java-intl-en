@@ -38,98 +38,98 @@ public class ParamInfo extends AbstractModel {
     private String Default;
 
     /**
-    * If the parameter is of type enum/string/bool, the available options list.
+    * Available option list when the parameter is enum, string, or bool.
     */
     @SerializedName("EnumValue")
     @Expose
     private String [] EnumValue;
 
     /**
-    * Maximum value when parameter type is `float` or `integer`.
+    * Maximum value when the parameter type is float/integer.
     */
     @SerializedName("Max")
     @Expose
     private String Max;
 
     /**
-    * Minimum value when parameter type is `float` or `integer`.
+    * Minimum value when the parameter type is float/integer
     */
     @SerializedName("Min")
     @Expose
     private String Min;
 
     /**
-    * Parameter name
+    * Parameter name.
     */
     @SerializedName("ParamName")
     @Expose
     private String ParamName;
 
     /**
-    * Whether to restart the instance for the modified parameters to take effect.
+    * Whether a restart is required.
     */
     @SerializedName("NeedReboot")
     @Expose
     private Long NeedReboot;
 
     /**
-    * Parameter type: `integer`, `float`, `string`, `enum`, `bool`.
+    * Parameter type: integer, float, string, enum, or bool.
     */
     @SerializedName("ParamType")
     @Expose
     private String ParamType;
 
     /**
-    * Match type. Regex can be used when parameter type is `string`. Valid value: `multiVal`.
+    * Match type. multiVal and regex are used when the parameter type is string.
     */
     @SerializedName("MatchType")
     @Expose
     private String MatchType;
 
     /**
-    * Match values, which will be separated by semicolon when match type is `multiVal`.
+    * Match the target value. For multiVal, separate each key with a semicolon (;).
     */
     @SerializedName("MatchValue")
     @Expose
     private String MatchValue;
 
     /**
-    * Parameter description
+    * Parameter description.
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * Whether it is a global parameter.
+    * Whether it is a global parameter
     */
     @SerializedName("IsGlobal")
     @Expose
     private Long IsGlobal;
 
     /**
-    * Whether the parameter is modifiable.
+    * Whether the parameter is modifiable
     */
     @SerializedName("ModifiableInfo")
     @Expose
     private ModifiableInfo ModifiableInfo;
 
     /**
-    * Whether it is a function.
+    * Whether it is a function
     */
     @SerializedName("IsFunc")
     @Expose
     private Boolean IsFunc;
 
     /**
-    * Function.
+    * Function
     */
     @SerializedName("Func")
     @Expose
     private String Func;
 
     /**
-    * The default formula style of parameters that support formulas.
+    * Default formula style for parameters that support formulas
     */
     @SerializedName("FuncPattern")
     @Expose
@@ -168,224 +168,224 @@ public class ParamInfo extends AbstractModel {
     }
 
     /**
-     * Get If the parameter is of type enum/string/bool, the available options list. 
-     * @return EnumValue If the parameter is of type enum/string/bool, the available options list.
+     * Get Available option list when the parameter is enum, string, or bool. 
+     * @return EnumValue Available option list when the parameter is enum, string, or bool.
      */
     public String [] getEnumValue() {
         return this.EnumValue;
     }
 
     /**
-     * Set If the parameter is of type enum/string/bool, the available options list.
-     * @param EnumValue If the parameter is of type enum/string/bool, the available options list.
+     * Set Available option list when the parameter is enum, string, or bool.
+     * @param EnumValue Available option list when the parameter is enum, string, or bool.
      */
     public void setEnumValue(String [] EnumValue) {
         this.EnumValue = EnumValue;
     }
 
     /**
-     * Get Maximum value when parameter type is `float` or `integer`. 
-     * @return Max Maximum value when parameter type is `float` or `integer`.
+     * Get Maximum value when the parameter type is float/integer. 
+     * @return Max Maximum value when the parameter type is float/integer.
      */
     public String getMax() {
         return this.Max;
     }
 
     /**
-     * Set Maximum value when parameter type is `float` or `integer`.
-     * @param Max Maximum value when parameter type is `float` or `integer`.
+     * Set Maximum value when the parameter type is float/integer.
+     * @param Max Maximum value when the parameter type is float/integer.
      */
     public void setMax(String Max) {
         this.Max = Max;
     }
 
     /**
-     * Get Minimum value when parameter type is `float` or `integer`. 
-     * @return Min Minimum value when parameter type is `float` or `integer`.
+     * Get Minimum value when the parameter type is float/integer 
+     * @return Min Minimum value when the parameter type is float/integer
      */
     public String getMin() {
         return this.Min;
     }
 
     /**
-     * Set Minimum value when parameter type is `float` or `integer`.
-     * @param Min Minimum value when parameter type is `float` or `integer`.
+     * Set Minimum value when the parameter type is float/integer
+     * @param Min Minimum value when the parameter type is float/integer
      */
     public void setMin(String Min) {
         this.Min = Min;
     }
 
     /**
-     * Get Parameter name 
-     * @return ParamName Parameter name
+     * Get Parameter name. 
+     * @return ParamName Parameter name.
      */
     public String getParamName() {
         return this.ParamName;
     }
 
     /**
-     * Set Parameter name
-     * @param ParamName Parameter name
+     * Set Parameter name.
+     * @param ParamName Parameter name.
      */
     public void setParamName(String ParamName) {
         this.ParamName = ParamName;
     }
 
     /**
-     * Get Whether to restart the instance for the modified parameters to take effect. 
-     * @return NeedReboot Whether to restart the instance for the modified parameters to take effect.
+     * Get Whether a restart is required. 
+     * @return NeedReboot Whether a restart is required.
      */
     public Long getNeedReboot() {
         return this.NeedReboot;
     }
 
     /**
-     * Set Whether to restart the instance for the modified parameters to take effect.
-     * @param NeedReboot Whether to restart the instance for the modified parameters to take effect.
+     * Set Whether a restart is required.
+     * @param NeedReboot Whether a restart is required.
      */
     public void setNeedReboot(Long NeedReboot) {
         this.NeedReboot = NeedReboot;
     }
 
     /**
-     * Get Parameter type: `integer`, `float`, `string`, `enum`, `bool`. 
-     * @return ParamType Parameter type: `integer`, `float`, `string`, `enum`, `bool`.
+     * Get Parameter type: integer, float, string, enum, or bool. 
+     * @return ParamType Parameter type: integer, float, string, enum, or bool.
      */
     public String getParamType() {
         return this.ParamType;
     }
 
     /**
-     * Set Parameter type: `integer`, `float`, `string`, `enum`, `bool`.
-     * @param ParamType Parameter type: `integer`, `float`, `string`, `enum`, `bool`.
+     * Set Parameter type: integer, float, string, enum, or bool.
+     * @param ParamType Parameter type: integer, float, string, enum, or bool.
      */
     public void setParamType(String ParamType) {
         this.ParamType = ParamType;
     }
 
     /**
-     * Get Match type. Regex can be used when parameter type is `string`. Valid value: `multiVal`. 
-     * @return MatchType Match type. Regex can be used when parameter type is `string`. Valid value: `multiVal`.
+     * Get Match type. multiVal and regex are used when the parameter type is string. 
+     * @return MatchType Match type. multiVal and regex are used when the parameter type is string.
      */
     public String getMatchType() {
         return this.MatchType;
     }
 
     /**
-     * Set Match type. Regex can be used when parameter type is `string`. Valid value: `multiVal`.
-     * @param MatchType Match type. Regex can be used when parameter type is `string`. Valid value: `multiVal`.
+     * Set Match type. multiVal and regex are used when the parameter type is string.
+     * @param MatchType Match type. multiVal and regex are used when the parameter type is string.
      */
     public void setMatchType(String MatchType) {
         this.MatchType = MatchType;
     }
 
     /**
-     * Get Match values, which will be separated by semicolon when match type is `multiVal`. 
-     * @return MatchValue Match values, which will be separated by semicolon when match type is `multiVal`.
+     * Get Match the target value. For multiVal, separate each key with a semicolon (;). 
+     * @return MatchValue Match the target value. For multiVal, separate each key with a semicolon (;).
      */
     public String getMatchValue() {
         return this.MatchValue;
     }
 
     /**
-     * Set Match values, which will be separated by semicolon when match type is `multiVal`.
-     * @param MatchValue Match values, which will be separated by semicolon when match type is `multiVal`.
+     * Set Match the target value. For multiVal, separate each key with a semicolon (;).
+     * @param MatchValue Match the target value. For multiVal, separate each key with a semicolon (;).
      */
     public void setMatchValue(String MatchValue) {
         this.MatchValue = MatchValue;
     }
 
     /**
-     * Get Parameter description 
-     * @return Description Parameter description
+     * Get Parameter description. 
+     * @return Description Parameter description.
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set Parameter description
-     * @param Description Parameter description
+     * Set Parameter description.
+     * @param Description Parameter description.
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get Whether it is a global parameter. 
-     * @return IsGlobal Whether it is a global parameter.
+     * Get Whether it is a global parameter 
+     * @return IsGlobal Whether it is a global parameter
      */
     public Long getIsGlobal() {
         return this.IsGlobal;
     }
 
     /**
-     * Set Whether it is a global parameter.
-     * @param IsGlobal Whether it is a global parameter.
+     * Set Whether it is a global parameter
+     * @param IsGlobal Whether it is a global parameter
      */
     public void setIsGlobal(Long IsGlobal) {
         this.IsGlobal = IsGlobal;
     }
 
     /**
-     * Get Whether the parameter is modifiable. 
-     * @return ModifiableInfo Whether the parameter is modifiable.
+     * Get Whether the parameter is modifiable 
+     * @return ModifiableInfo Whether the parameter is modifiable
      */
     public ModifiableInfo getModifiableInfo() {
         return this.ModifiableInfo;
     }
 
     /**
-     * Set Whether the parameter is modifiable.
-     * @param ModifiableInfo Whether the parameter is modifiable.
+     * Set Whether the parameter is modifiable
+     * @param ModifiableInfo Whether the parameter is modifiable
      */
     public void setModifiableInfo(ModifiableInfo ModifiableInfo) {
         this.ModifiableInfo = ModifiableInfo;
     }
 
     /**
-     * Get Whether it is a function. 
-     * @return IsFunc Whether it is a function.
+     * Get Whether it is a function 
+     * @return IsFunc Whether it is a function
      */
     public Boolean getIsFunc() {
         return this.IsFunc;
     }
 
     /**
-     * Set Whether it is a function.
-     * @param IsFunc Whether it is a function.
+     * Set Whether it is a function
+     * @param IsFunc Whether it is a function
      */
     public void setIsFunc(Boolean IsFunc) {
         this.IsFunc = IsFunc;
     }
 
     /**
-     * Get Function. 
-     * @return Func Function.
+     * Get Function 
+     * @return Func Function
      */
     public String getFunc() {
         return this.Func;
     }
 
     /**
-     * Set Function.
-     * @param Func Function.
+     * Set Function
+     * @param Func Function
      */
     public void setFunc(String Func) {
         this.Func = Func;
     }
 
     /**
-     * Get The default formula style of parameters that support formulas. 
-     * @return FuncPattern The default formula style of parameters that support formulas.
+     * Get Default formula style for parameters that support formulas 
+     * @return FuncPattern Default formula style for parameters that support formulas
      */
     public String getFuncPattern() {
         return this.FuncPattern;
     }
 
     /**
-     * Set The default formula style of parameters that support formulas.
-     * @param FuncPattern The default formula style of parameters that support formulas.
+     * Set Default formula style for parameters that support formulas
+     * @param FuncPattern Default formula style for parameters that support formulas
      */
     public void setFuncPattern(String FuncPattern) {
         this.FuncPattern = FuncPattern;

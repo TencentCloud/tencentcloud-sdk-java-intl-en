@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class UpgradeInstanceRequest extends AbstractModel {
 
     /**
-    * Instance ID
+    * Instance ID.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Database CPU.
+    * Database CPU
     */
     @SerializedName("Cpu")
     @Expose
@@ -45,90 +45,90 @@ public class UpgradeInstanceRequest extends AbstractModel {
     private Long Memory;
 
     /**
-    * Upgrade type. Valid values: upgradeImmediate, upgradeInMaintain.
+    * Upgrade type: upgradeImmediate, upgradeInMaintain
     */
     @SerializedName("UpgradeType")
     @Expose
     private String UpgradeType;
 
     /**
-    * Instance Machine Type
-1. common: general.
-2. exclusive, dedicated.
+    * Instance machine type
+1. common: universal type.
+2. exclusive: dedicated.
     */
     @SerializedName("DeviceType")
     @Expose
     private String DeviceType;
 
     /**
-    * This parameter has been disused.
+    * This parameter has been deprecated.
     */
     @SerializedName("StorageLimit")
     @Expose
     private Long StorageLimit;
 
     /**
-    * Whether to automatically select a voucher. 1: yes; 0: no. Default value: 0.
+    * Whether to automatically select a voucher. 1: Yes; 0: No. Default is 0.
     */
     @SerializedName("AutoVoucher")
     @Expose
     private Long AutoVoucher;
 
     /**
-    * This parameter has been disused.
+    * This parameter has been deprecated.
     */
     @SerializedName("DbType")
     @Expose
     private String DbType;
 
     /**
-    * Transaction mode. Valid values: `0` (place and pay for an order), `1` (place an order).
+    * Transaction mode 0-Place order and pay 1-Place order
     */
     @SerializedName("DealMode")
     @Expose
     private Long DealMode;
 
     /**
-    * Valid values: `NormalUpgrade` (Normal mode), `FastUpgrade` (QuickChange). If the system detects that the configuration modification process will cause a momentary disconnection, the process will be terminated.
+    * NormalUpgrade: adjust. FastUpgrade: rapid configuration change. If the configuration adjustment is judged to cause a transient disconnection, the configuration adjustment process will be terminated.
     */
     @SerializedName("UpgradeMode")
     @Expose
     private String UpgradeMode;
 
     /**
-    * Proxy synchronous upgrade.
+    * Synchronously upgrade proxy
     */
     @SerializedName("UpgradeProxy")
     @Expose
     private UpgradeProxy UpgradeProxy;
 
     /**
-     * Get Instance ID 
-     * @return InstanceId Instance ID
+     * Get Instance ID. 
+     * @return InstanceId Instance ID.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID
-     * @param InstanceId Instance ID
+     * Set Instance ID.
+     * @param InstanceId Instance ID.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Database CPU. 
-     * @return Cpu Database CPU.
+     * Get Database CPU 
+     * @return Cpu Database CPU
      */
     public Long getCpu() {
         return this.Cpu;
     }
 
     /**
-     * Set Database CPU.
-     * @param Cpu Database CPU.
+     * Set Database CPU
+     * @param Cpu Database CPU
      */
     public void setCpu(Long Cpu) {
         this.Cpu = Cpu;
@@ -151,136 +151,136 @@ public class UpgradeInstanceRequest extends AbstractModel {
     }
 
     /**
-     * Get Upgrade type. Valid values: upgradeImmediate, upgradeInMaintain. 
-     * @return UpgradeType Upgrade type. Valid values: upgradeImmediate, upgradeInMaintain.
+     * Get Upgrade type: upgradeImmediate, upgradeInMaintain 
+     * @return UpgradeType Upgrade type: upgradeImmediate, upgradeInMaintain
      */
     public String getUpgradeType() {
         return this.UpgradeType;
     }
 
     /**
-     * Set Upgrade type. Valid values: upgradeImmediate, upgradeInMaintain.
-     * @param UpgradeType Upgrade type. Valid values: upgradeImmediate, upgradeInMaintain.
+     * Set Upgrade type: upgradeImmediate, upgradeInMaintain
+     * @param UpgradeType Upgrade type: upgradeImmediate, upgradeInMaintain
      */
     public void setUpgradeType(String UpgradeType) {
         this.UpgradeType = UpgradeType;
     }
 
     /**
-     * Get Instance Machine Type
-1. common: general.
-2. exclusive, dedicated. 
-     * @return DeviceType Instance Machine Type
-1. common: general.
-2. exclusive, dedicated.
+     * Get Instance machine type
+1. common: universal type.
+2. exclusive: dedicated. 
+     * @return DeviceType Instance machine type
+1. common: universal type.
+2. exclusive: dedicated.
      */
     public String getDeviceType() {
         return this.DeviceType;
     }
 
     /**
-     * Set Instance Machine Type
-1. common: general.
-2. exclusive, dedicated.
-     * @param DeviceType Instance Machine Type
-1. common: general.
-2. exclusive, dedicated.
+     * Set Instance machine type
+1. common: universal type.
+2. exclusive: dedicated.
+     * @param DeviceType Instance machine type
+1. common: universal type.
+2. exclusive: dedicated.
      */
     public void setDeviceType(String DeviceType) {
         this.DeviceType = DeviceType;
     }
 
     /**
-     * Get This parameter has been disused. 
-     * @return StorageLimit This parameter has been disused.
+     * Get This parameter has been deprecated. 
+     * @return StorageLimit This parameter has been deprecated.
      */
     public Long getStorageLimit() {
         return this.StorageLimit;
     }
 
     /**
-     * Set This parameter has been disused.
-     * @param StorageLimit This parameter has been disused.
+     * Set This parameter has been deprecated.
+     * @param StorageLimit This parameter has been deprecated.
      */
     public void setStorageLimit(Long StorageLimit) {
         this.StorageLimit = StorageLimit;
     }
 
     /**
-     * Get Whether to automatically select a voucher. 1: yes; 0: no. Default value: 0. 
-     * @return AutoVoucher Whether to automatically select a voucher. 1: yes; 0: no. Default value: 0.
+     * Get Whether to automatically select a voucher. 1: Yes; 0: No. Default is 0. 
+     * @return AutoVoucher Whether to automatically select a voucher. 1: Yes; 0: No. Default is 0.
      */
     public Long getAutoVoucher() {
         return this.AutoVoucher;
     }
 
     /**
-     * Set Whether to automatically select a voucher. 1: yes; 0: no. Default value: 0.
-     * @param AutoVoucher Whether to automatically select a voucher. 1: yes; 0: no. Default value: 0.
+     * Set Whether to automatically select a voucher. 1: Yes; 0: No. Default is 0.
+     * @param AutoVoucher Whether to automatically select a voucher. 1: Yes; 0: No. Default is 0.
      */
     public void setAutoVoucher(Long AutoVoucher) {
         this.AutoVoucher = AutoVoucher;
     }
 
     /**
-     * Get This parameter has been disused. 
-     * @return DbType This parameter has been disused.
+     * Get This parameter has been deprecated. 
+     * @return DbType This parameter has been deprecated.
      */
     public String getDbType() {
         return this.DbType;
     }
 
     /**
-     * Set This parameter has been disused.
-     * @param DbType This parameter has been disused.
+     * Set This parameter has been deprecated.
+     * @param DbType This parameter has been deprecated.
      */
     public void setDbType(String DbType) {
         this.DbType = DbType;
     }
 
     /**
-     * Get Transaction mode. Valid values: `0` (place and pay for an order), `1` (place an order). 
-     * @return DealMode Transaction mode. Valid values: `0` (place and pay for an order), `1` (place an order).
+     * Get Transaction mode 0-Place order and pay 1-Place order 
+     * @return DealMode Transaction mode 0-Place order and pay 1-Place order
      */
     public Long getDealMode() {
         return this.DealMode;
     }
 
     /**
-     * Set Transaction mode. Valid values: `0` (place and pay for an order), `1` (place an order).
-     * @param DealMode Transaction mode. Valid values: `0` (place and pay for an order), `1` (place an order).
+     * Set Transaction mode 0-Place order and pay 1-Place order
+     * @param DealMode Transaction mode 0-Place order and pay 1-Place order
      */
     public void setDealMode(Long DealMode) {
         this.DealMode = DealMode;
     }
 
     /**
-     * Get Valid values: `NormalUpgrade` (Normal mode), `FastUpgrade` (QuickChange). If the system detects that the configuration modification process will cause a momentary disconnection, the process will be terminated. 
-     * @return UpgradeMode Valid values: `NormalUpgrade` (Normal mode), `FastUpgrade` (QuickChange). If the system detects that the configuration modification process will cause a momentary disconnection, the process will be terminated.
+     * Get NormalUpgrade: adjust. FastUpgrade: rapid configuration change. If the configuration adjustment is judged to cause a transient disconnection, the configuration adjustment process will be terminated. 
+     * @return UpgradeMode NormalUpgrade: adjust. FastUpgrade: rapid configuration change. If the configuration adjustment is judged to cause a transient disconnection, the configuration adjustment process will be terminated.
      */
     public String getUpgradeMode() {
         return this.UpgradeMode;
     }
 
     /**
-     * Set Valid values: `NormalUpgrade` (Normal mode), `FastUpgrade` (QuickChange). If the system detects that the configuration modification process will cause a momentary disconnection, the process will be terminated.
-     * @param UpgradeMode Valid values: `NormalUpgrade` (Normal mode), `FastUpgrade` (QuickChange). If the system detects that the configuration modification process will cause a momentary disconnection, the process will be terminated.
+     * Set NormalUpgrade: adjust. FastUpgrade: rapid configuration change. If the configuration adjustment is judged to cause a transient disconnection, the configuration adjustment process will be terminated.
+     * @param UpgradeMode NormalUpgrade: adjust. FastUpgrade: rapid configuration change. If the configuration adjustment is judged to cause a transient disconnection, the configuration adjustment process will be terminated.
      */
     public void setUpgradeMode(String UpgradeMode) {
         this.UpgradeMode = UpgradeMode;
     }
 
     /**
-     * Get Proxy synchronous upgrade. 
-     * @return UpgradeProxy Proxy synchronous upgrade.
+     * Get Synchronously upgrade proxy 
+     * @return UpgradeProxy Synchronously upgrade proxy
      */
     public UpgradeProxy getUpgradeProxy() {
         return this.UpgradeProxy;
     }
 
     /**
-     * Set Proxy synchronous upgrade.
-     * @param UpgradeProxy Proxy synchronous upgrade.
+     * Set Synchronously upgrade proxy
+     * @param UpgradeProxy Synchronously upgrade proxy
      */
     public void setUpgradeProxy(UpgradeProxy UpgradeProxy) {
         this.UpgradeProxy = UpgradeProxy;

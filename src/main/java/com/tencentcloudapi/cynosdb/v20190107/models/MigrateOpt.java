@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class MigrateOpt extends AbstractModel {
 
     /**
-    * Database table information
+    * Contains database table information
     */
     @SerializedName("DatabaseTables")
     @Expose
     private MigrateObject DatabaseTables;
 
     /**
-     * Get Database table information 
-     * @return DatabaseTables Database table information
+     * Get Contains database table information 
+     * @return DatabaseTables Contains database table information
      */
     public MigrateObject getDatabaseTables() {
         return this.DatabaseTables;
     }
 
     /**
-     * Set Database table information
-     * @param DatabaseTables Database table information
+     * Set Contains database table information
+     * @param DatabaseTables Contains database table information
      */
     public void setDatabaseTables(MigrateObject DatabaseTables) {
         this.DatabaseTables = DatabaseTables;

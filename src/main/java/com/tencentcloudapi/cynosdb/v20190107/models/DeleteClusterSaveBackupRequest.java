@@ -31,7 +31,7 @@ public class DeleteClusterSaveBackupRequest extends AbstractModel {
     private String ClusterId;
 
     /**
-    * Reserved backup file ID. recommended.
+    * Backup file ID to be reserved. Recommended for use.
     */
     @SerializedName("SaveBackupId")
     @Expose
@@ -54,16 +54,16 @@ public class DeleteClusterSaveBackupRequest extends AbstractModel {
     }
 
     /**
-     * Get Reserved backup file ID. recommended. 
-     * @return SaveBackupId Reserved backup file ID. recommended.
+     * Get Backup file ID to be reserved. Recommended for use. 
+     * @return SaveBackupId Backup file ID to be reserved. Recommended for use.
      */
     public Long getSaveBackupId() {
         return this.SaveBackupId;
     }
 
     /**
-     * Set Reserved backup file ID. recommended.
-     * @param SaveBackupId Reserved backup file ID. recommended.
+     * Set Backup file ID to be reserved. Recommended for use.
+     * @param SaveBackupId Backup file ID to be reserved. Recommended for use.
      */
     public void setSaveBackupId(Long SaveBackupId) {
         this.SaveBackupId = SaveBackupId;

@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class SlaveZoneStockInfo extends AbstractModel {
 
     /**
-    * Replica AZ.
+    * Secondary AZ
     */
     @SerializedName("SlaveZone")
     @Expose
     private String SlaveZone;
 
     /**
-    * Inventory quantity in spare availability zone.	
+    * Inventory quantity in spare availability zone	
     */
     @SerializedName("StockCount")
     @Expose
     private Long StockCount;
 
     /**
-    * Whether there is inventory in the spare availability zone.	
+    * Whether there is inventory in the spare AZ	
     */
     @SerializedName("HasStock")
     @Expose
     private Boolean HasStock;
 
     /**
-     * Get Replica AZ. 
-     * @return SlaveZone Replica AZ.
+     * Get Secondary AZ 
+     * @return SlaveZone Secondary AZ
      */
     public String getSlaveZone() {
         return this.SlaveZone;
     }
 
     /**
-     * Set Replica AZ.
-     * @param SlaveZone Replica AZ.
+     * Set Secondary AZ
+     * @param SlaveZone Secondary AZ
      */
     public void setSlaveZone(String SlaveZone) {
         this.SlaveZone = SlaveZone;
     }
 
     /**
-     * Get Inventory quantity in spare availability zone.	 
-     * @return StockCount Inventory quantity in spare availability zone.	
+     * Get Inventory quantity in spare availability zone	 
+     * @return StockCount Inventory quantity in spare availability zone	
      */
     public Long getStockCount() {
         return this.StockCount;
     }
 
     /**
-     * Set Inventory quantity in spare availability zone.	
-     * @param StockCount Inventory quantity in spare availability zone.	
+     * Set Inventory quantity in spare availability zone	
+     * @param StockCount Inventory quantity in spare availability zone	
      */
     public void setStockCount(Long StockCount) {
         this.StockCount = StockCount;
     }
 
     /**
-     * Get Whether there is inventory in the spare availability zone.	 
-     * @return HasStock Whether there is inventory in the spare availability zone.	
+     * Get Whether there is inventory in the spare AZ	 
+     * @return HasStock Whether there is inventory in the spare AZ	
      */
     public Boolean getHasStock() {
         return this.HasStock;
     }
 
     /**
-     * Set Whether there is inventory in the spare availability zone.	
-     * @param HasStock Whether there is inventory in the spare availability zone.	
+     * Set Whether there is inventory in the spare AZ	
+     * @param HasStock Whether there is inventory in the spare AZ	
      */
     public void setHasStock(Boolean HasStock) {
         this.HasStock = HasStock;

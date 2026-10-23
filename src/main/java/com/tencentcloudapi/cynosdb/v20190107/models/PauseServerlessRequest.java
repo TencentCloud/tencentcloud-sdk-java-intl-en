@@ -31,7 +31,7 @@ public class PauseServerlessRequest extends AbstractModel {
     private String ClusterId;
 
     /**
-    * Whether to pause forcibly and ignore the current user connections. Valid values: `0` (no), `1` (yes). Default value: `1`
+    * Whether to forcibly pause and ignore current user connections. 0: not mandatory. 1: mandatory. Default value: 1
     */
     @SerializedName("ForcePause")
     @Expose
@@ -54,16 +54,16 @@ public class PauseServerlessRequest extends AbstractModel {
     }
 
     /**
-     * Get Whether to pause forcibly and ignore the current user connections. Valid values: `0` (no), `1` (yes). Default value: `1` 
-     * @return ForcePause Whether to pause forcibly and ignore the current user connections. Valid values: `0` (no), `1` (yes). Default value: `1`
+     * Get Whether to forcibly pause and ignore current user connections. 0: not mandatory. 1: mandatory. Default value: 1 
+     * @return ForcePause Whether to forcibly pause and ignore current user connections. 0: not mandatory. 1: mandatory. Default value: 1
      */
     public Long getForcePause() {
         return this.ForcePause;
     }
 
     /**
-     * Set Whether to pause forcibly and ignore the current user connections. Valid values: `0` (no), `1` (yes). Default value: `1`
-     * @param ForcePause Whether to pause forcibly and ignore the current user connections. Valid values: `0` (no), `1` (yes). Default value: `1`
+     * Set Whether to forcibly pause and ignore current user connections. 0: not mandatory. 1: mandatory. Default value: 1
+     * @param ForcePause Whether to forcibly pause and ignore current user connections. 0: not mandatory. 1: mandatory. Default value: 1
      */
     public void setForcePause(Long ForcePause) {
         this.ForcePause = ForcePause;

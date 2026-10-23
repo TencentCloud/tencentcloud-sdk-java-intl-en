@@ -24,57 +24,66 @@ import java.util.HashMap;
 public class DescribeResourcePackageListRequest extends AbstractModel {
 
     /**
-    * The unique ID of a resource pack
+    * Unique ID of the resource package
     */
     @SerializedName("PackageId")
     @Expose
     private String [] PackageId;
 
     /**
-    * Resource pack name
+    * Resource package name.
     */
     @SerializedName("PackageName")
     @Expose
     private String [] PackageName;
 
     /**
-    * Resource pack type. Valid values: `CCU` (compute resource pack), `DISK` (storage resource pack).
+    * Resource package type
+CCU: compute resource package. DISK: storage resource package.
     */
     @SerializedName("PackageType")
     @Expose
     private String [] PackageType;
 
     /**
-    * Region of the resource pack. Valid values: `China` (Chinese mainland), `overseas` (outside Chinese mainland).
+    * Region of use for the resource package
+china: common in the Chinese mainland; overseas: common in Hong Kong (China), Macao (China), Taiwan (China), and overseas regions
     */
     @SerializedName("PackageRegion")
     @Expose
     private String [] PackageRegion;
 
     /**
-    * Resource pack status. Valid values: `using`, `expired`, `normal_finish` (used up), `apply_refund` (requesting a refund), `refund` (refunded).
+    * Resource pack status
+creating
+using: in use;
+expired
+normal_finish: used up;
+apply_refund: refund requested.
+refund: refunded.
     */
     @SerializedName("Status")
     @Expose
     private String [] Status;
 
     /**
-    * Sorting conditions. Valid values: `startTime` (effective time), `expireTime` (expiration date), `packageUsedSpec` (used capacity), `packageTotalSpec` (total storage capacity). 
-Sorting by array order
+    * Sort condition. Supported sort condition: startTime - effective time.
+expireTime: expiration time, packageUsedSpec: used capacity, packageTotalSpec: total storage capacity.
+Sequential arrangement by array.
     */
     @SerializedName("OrderBy")
     @Expose
     private String [] OrderBy;
 
     /**
-    * Sorting order. Valid values: `ASC` (ascending), `DESC` (descending).
+    * Sorting method. `DESC`: descending order. `ASC`: ascending order.
     */
     @SerializedName("OrderDirection")
     @Expose
     private String OrderDirection;
 
     /**
-    * Offset
+    * Offset.
     */
     @SerializedName("Offset")
     @Expose
@@ -88,132 +97,168 @@ Sorting by array order
     private Long Limit;
 
     /**
-     * Get The unique ID of a resource pack 
-     * @return PackageId The unique ID of a resource pack
+     * Get Unique ID of the resource package 
+     * @return PackageId Unique ID of the resource package
      */
     public String [] getPackageId() {
         return this.PackageId;
     }
 
     /**
-     * Set The unique ID of a resource pack
-     * @param PackageId The unique ID of a resource pack
+     * Set Unique ID of the resource package
+     * @param PackageId Unique ID of the resource package
      */
     public void setPackageId(String [] PackageId) {
         this.PackageId = PackageId;
     }
 
     /**
-     * Get Resource pack name 
-     * @return PackageName Resource pack name
+     * Get Resource package name. 
+     * @return PackageName Resource package name.
      */
     public String [] getPackageName() {
         return this.PackageName;
     }
 
     /**
-     * Set Resource pack name
-     * @param PackageName Resource pack name
+     * Set Resource package name.
+     * @param PackageName Resource package name.
      */
     public void setPackageName(String [] PackageName) {
         this.PackageName = PackageName;
     }
 
     /**
-     * Get Resource pack type. Valid values: `CCU` (compute resource pack), `DISK` (storage resource pack). 
-     * @return PackageType Resource pack type. Valid values: `CCU` (compute resource pack), `DISK` (storage resource pack).
+     * Get Resource package type
+CCU: compute resource package. DISK: storage resource package. 
+     * @return PackageType Resource package type
+CCU: compute resource package. DISK: storage resource package.
      */
     public String [] getPackageType() {
         return this.PackageType;
     }
 
     /**
-     * Set Resource pack type. Valid values: `CCU` (compute resource pack), `DISK` (storage resource pack).
-     * @param PackageType Resource pack type. Valid values: `CCU` (compute resource pack), `DISK` (storage resource pack).
+     * Set Resource package type
+CCU: compute resource package. DISK: storage resource package.
+     * @param PackageType Resource package type
+CCU: compute resource package. DISK: storage resource package.
      */
     public void setPackageType(String [] PackageType) {
         this.PackageType = PackageType;
     }
 
     /**
-     * Get Region of the resource pack. Valid values: `China` (Chinese mainland), `overseas` (outside Chinese mainland). 
-     * @return PackageRegion Region of the resource pack. Valid values: `China` (Chinese mainland), `overseas` (outside Chinese mainland).
+     * Get Region of use for the resource package
+china: common in the Chinese mainland; overseas: common in Hong Kong (China), Macao (China), Taiwan (China), and overseas regions 
+     * @return PackageRegion Region of use for the resource package
+china: common in the Chinese mainland; overseas: common in Hong Kong (China), Macao (China), Taiwan (China), and overseas regions
      */
     public String [] getPackageRegion() {
         return this.PackageRegion;
     }
 
     /**
-     * Set Region of the resource pack. Valid values: `China` (Chinese mainland), `overseas` (outside Chinese mainland).
-     * @param PackageRegion Region of the resource pack. Valid values: `China` (Chinese mainland), `overseas` (outside Chinese mainland).
+     * Set Region of use for the resource package
+china: common in the Chinese mainland; overseas: common in Hong Kong (China), Macao (China), Taiwan (China), and overseas regions
+     * @param PackageRegion Region of use for the resource package
+china: common in the Chinese mainland; overseas: common in Hong Kong (China), Macao (China), Taiwan (China), and overseas regions
      */
     public void setPackageRegion(String [] PackageRegion) {
         this.PackageRegion = PackageRegion;
     }
 
     /**
-     * Get Resource pack status. Valid values: `using`, `expired`, `normal_finish` (used up), `apply_refund` (requesting a refund), `refund` (refunded). 
-     * @return Status Resource pack status. Valid values: `using`, `expired`, `normal_finish` (used up), `apply_refund` (requesting a refund), `refund` (refunded).
+     * Get Resource pack status
+creating
+using: in use;
+expired
+normal_finish: used up;
+apply_refund: refund requested.
+refund: refunded. 
+     * @return Status Resource pack status
+creating
+using: in use;
+expired
+normal_finish: used up;
+apply_refund: refund requested.
+refund: refunded.
      */
     public String [] getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Resource pack status. Valid values: `using`, `expired`, `normal_finish` (used up), `apply_refund` (requesting a refund), `refund` (refunded).
-     * @param Status Resource pack status. Valid values: `using`, `expired`, `normal_finish` (used up), `apply_refund` (requesting a refund), `refund` (refunded).
+     * Set Resource pack status
+creating
+using: in use;
+expired
+normal_finish: used up;
+apply_refund: refund requested.
+refund: refunded.
+     * @param Status Resource pack status
+creating
+using: in use;
+expired
+normal_finish: used up;
+apply_refund: refund requested.
+refund: refunded.
      */
     public void setStatus(String [] Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Sorting conditions. Valid values: `startTime` (effective time), `expireTime` (expiration date), `packageUsedSpec` (used capacity), `packageTotalSpec` (total storage capacity). 
-Sorting by array order 
-     * @return OrderBy Sorting conditions. Valid values: `startTime` (effective time), `expireTime` (expiration date), `packageUsedSpec` (used capacity), `packageTotalSpec` (total storage capacity). 
-Sorting by array order
+     * Get Sort condition. Supported sort condition: startTime - effective time.
+expireTime: expiration time, packageUsedSpec: used capacity, packageTotalSpec: total storage capacity.
+Sequential arrangement by array. 
+     * @return OrderBy Sort condition. Supported sort condition: startTime - effective time.
+expireTime: expiration time, packageUsedSpec: used capacity, packageTotalSpec: total storage capacity.
+Sequential arrangement by array.
      */
     public String [] getOrderBy() {
         return this.OrderBy;
     }
 
     /**
-     * Set Sorting conditions. Valid values: `startTime` (effective time), `expireTime` (expiration date), `packageUsedSpec` (used capacity), `packageTotalSpec` (total storage capacity). 
-Sorting by array order
-     * @param OrderBy Sorting conditions. Valid values: `startTime` (effective time), `expireTime` (expiration date), `packageUsedSpec` (used capacity), `packageTotalSpec` (total storage capacity). 
-Sorting by array order
+     * Set Sort condition. Supported sort condition: startTime - effective time.
+expireTime: expiration time, packageUsedSpec: used capacity, packageTotalSpec: total storage capacity.
+Sequential arrangement by array.
+     * @param OrderBy Sort condition. Supported sort condition: startTime - effective time.
+expireTime: expiration time, packageUsedSpec: used capacity, packageTotalSpec: total storage capacity.
+Sequential arrangement by array.
      */
     public void setOrderBy(String [] OrderBy) {
         this.OrderBy = OrderBy;
     }
 
     /**
-     * Get Sorting order. Valid values: `ASC` (ascending), `DESC` (descending). 
-     * @return OrderDirection Sorting order. Valid values: `ASC` (ascending), `DESC` (descending).
+     * Get Sorting method. `DESC`: descending order. `ASC`: ascending order. 
+     * @return OrderDirection Sorting method. `DESC`: descending order. `ASC`: ascending order.
      */
     public String getOrderDirection() {
         return this.OrderDirection;
     }
 
     /**
-     * Set Sorting order. Valid values: `ASC` (ascending), `DESC` (descending).
-     * @param OrderDirection Sorting order. Valid values: `ASC` (ascending), `DESC` (descending).
+     * Set Sorting method. `DESC`: descending order. `ASC`: ascending order.
+     * @param OrderDirection Sorting method. `DESC`: descending order. `ASC`: ascending order.
      */
     public void setOrderDirection(String OrderDirection) {
         this.OrderDirection = OrderDirection;
     }
 
     /**
-     * Get Offset 
-     * @return Offset Offset
+     * Get Offset. 
+     * @return Offset Offset.
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Offset
-     * @param Offset Offset
+     * Set Offset.
+     * @param Offset Offset.
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;

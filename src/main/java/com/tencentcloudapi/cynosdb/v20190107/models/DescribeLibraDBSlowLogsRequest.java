@@ -45,21 +45,21 @@ public class DescribeLibraDBSlowLogsRequest extends AbstractModel {
     private Long EndTime;
 
     /**
-    * Log items per page limit: 0-200.
+    * Limit on number of log entries per page: 0-200.
     */
     @SerializedName("Limit")
     @Expose
     private String Limit;
 
     /**
-    * Log paginate, more than 0.
+    * Log pagination. The value must be greater than 0.
     */
     @SerializedName("Offset")
     @Expose
     private String Offset;
 
     /**
-    * Log sorting method, DESC - descending order, ASC - ascending order.
+    * Log sorting method. `DESC`: descending order. `ASC`: ascending order.
     */
     @SerializedName("Order")
     @Expose
@@ -128,48 +128,48 @@ public class DescribeLibraDBSlowLogsRequest extends AbstractModel {
     }
 
     /**
-     * Get Log items per page limit: 0-200. 
-     * @return Limit Log items per page limit: 0-200.
+     * Get Limit on number of log entries per page: 0-200. 
+     * @return Limit Limit on number of log entries per page: 0-200.
      */
     public String getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Log items per page limit: 0-200.
-     * @param Limit Log items per page limit: 0-200.
+     * Set Limit on number of log entries per page: 0-200.
+     * @param Limit Limit on number of log entries per page: 0-200.
      */
     public void setLimit(String Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get Log paginate, more than 0. 
-     * @return Offset Log paginate, more than 0.
+     * Get Log pagination. The value must be greater than 0. 
+     * @return Offset Log pagination. The value must be greater than 0.
      */
     public String getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Log paginate, more than 0.
-     * @param Offset Log paginate, more than 0.
+     * Set Log pagination. The value must be greater than 0.
+     * @param Offset Log pagination. The value must be greater than 0.
      */
     public void setOffset(String Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get Log sorting method, DESC - descending order, ASC - ascending order. 
-     * @return Order Log sorting method, DESC - descending order, ASC - ascending order.
+     * Get Log sorting method. `DESC`: descending order. `ASC`: ascending order. 
+     * @return Order Log sorting method. `DESC`: descending order. `ASC`: ascending order.
      */
     public String getOrder() {
         return this.Order;
     }
 
     /**
-     * Set Log sorting method, DESC - descending order, ASC - ascending order.
-     * @param Order Log sorting method, DESC - descending order, ASC - ascending order.
+     * Set Log sorting method. `DESC`: descending order. `ASC`: ascending order.
+     * @param Order Log sorting method. `DESC`: descending order. `ASC`: ascending order.
      */
     public void setOrder(String Order) {
         this.Order = Order;

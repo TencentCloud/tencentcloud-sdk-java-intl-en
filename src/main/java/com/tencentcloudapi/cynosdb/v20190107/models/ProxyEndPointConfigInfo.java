@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ProxyEndPointConfigInfo extends AbstractModel {
 
     /**
-    * Specifies the ID of the VPC network it belongs to.
+    * VPC network ID
     */
     @SerializedName("UniqueVpcId")
     @Expose
@@ -38,51 +38,51 @@ public class ProxyEndPointConfigInfo extends AbstractModel {
     private String UniqueSubnetId;
 
     /**
-    * Security group id array.
+    * Security group id array
     */
     @SerializedName("SecurityGroupIds")
     @Expose
     private String [] SecurityGroupIds;
 
     /**
-    * Weight mode: system-system allocation, custom-custom.
+    * Weight mode: system: system-assigned, custom: customization
     */
     @SerializedName("WeightMode")
     @Expose
     private String WeightMode;
 
     /**
-    * Specifies whether to automatically add a read-only instance. valid values: yes, no.
+    * Whether to automatically add a read-only instance. yes: add automatically; no: do not add automatically
     */
     @SerializedName("AutoAddRo")
     @Expose
     private String AutoAddRo;
 
     /**
-    * Read-Write attribute. valid values: READWRITE, READONLY.
+    * Read-write attribute. Available values: READWRITE, READONLY
     */
     @SerializedName("RwType")
     @Expose
     private String RwType;
 
     /**
-    * Weight information.
+    * Weight information
     */
     @SerializedName("InstanceNameWeights")
     @Expose
     private InstanceNameWeight [] InstanceNameWeights;
 
     /**
-     * Get Specifies the ID of the VPC network it belongs to. 
-     * @return UniqueVpcId Specifies the ID of the VPC network it belongs to.
+     * Get VPC network ID 
+     * @return UniqueVpcId VPC network ID
      */
     public String getUniqueVpcId() {
         return this.UniqueVpcId;
     }
 
     /**
-     * Set Specifies the ID of the VPC network it belongs to.
-     * @param UniqueVpcId Specifies the ID of the VPC network it belongs to.
+     * Set VPC network ID
+     * @param UniqueVpcId VPC network ID
      */
     public void setUniqueVpcId(String UniqueVpcId) {
         this.UniqueVpcId = UniqueVpcId;
@@ -105,80 +105,80 @@ public class ProxyEndPointConfigInfo extends AbstractModel {
     }
 
     /**
-     * Get Security group id array. 
-     * @return SecurityGroupIds Security group id array.
+     * Get Security group id array 
+     * @return SecurityGroupIds Security group id array
      */
     public String [] getSecurityGroupIds() {
         return this.SecurityGroupIds;
     }
 
     /**
-     * Set Security group id array.
-     * @param SecurityGroupIds Security group id array.
+     * Set Security group id array
+     * @param SecurityGroupIds Security group id array
      */
     public void setSecurityGroupIds(String [] SecurityGroupIds) {
         this.SecurityGroupIds = SecurityGroupIds;
     }
 
     /**
-     * Get Weight mode: system-system allocation, custom-custom. 
-     * @return WeightMode Weight mode: system-system allocation, custom-custom.
+     * Get Weight mode: system: system-assigned, custom: customization 
+     * @return WeightMode Weight mode: system: system-assigned, custom: customization
      */
     public String getWeightMode() {
         return this.WeightMode;
     }
 
     /**
-     * Set Weight mode: system-system allocation, custom-custom.
-     * @param WeightMode Weight mode: system-system allocation, custom-custom.
+     * Set Weight mode: system: system-assigned, custom: customization
+     * @param WeightMode Weight mode: system: system-assigned, custom: customization
      */
     public void setWeightMode(String WeightMode) {
         this.WeightMode = WeightMode;
     }
 
     /**
-     * Get Specifies whether to automatically add a read-only instance. valid values: yes, no. 
-     * @return AutoAddRo Specifies whether to automatically add a read-only instance. valid values: yes, no.
+     * Get Whether to automatically add a read-only instance. yes: add automatically; no: do not add automatically 
+     * @return AutoAddRo Whether to automatically add a read-only instance. yes: add automatically; no: do not add automatically
      */
     public String getAutoAddRo() {
         return this.AutoAddRo;
     }
 
     /**
-     * Set Specifies whether to automatically add a read-only instance. valid values: yes, no.
-     * @param AutoAddRo Specifies whether to automatically add a read-only instance. valid values: yes, no.
+     * Set Whether to automatically add a read-only instance. yes: add automatically; no: do not add automatically
+     * @param AutoAddRo Whether to automatically add a read-only instance. yes: add automatically; no: do not add automatically
      */
     public void setAutoAddRo(String AutoAddRo) {
         this.AutoAddRo = AutoAddRo;
     }
 
     /**
-     * Get Read-Write attribute. valid values: READWRITE, READONLY. 
-     * @return RwType Read-Write attribute. valid values: READWRITE, READONLY.
+     * Get Read-write attribute. Available values: READWRITE, READONLY 
+     * @return RwType Read-write attribute. Available values: READWRITE, READONLY
      */
     public String getRwType() {
         return this.RwType;
     }
 
     /**
-     * Set Read-Write attribute. valid values: READWRITE, READONLY.
-     * @param RwType Read-Write attribute. valid values: READWRITE, READONLY.
+     * Set Read-write attribute. Available values: READWRITE, READONLY
+     * @param RwType Read-write attribute. Available values: READWRITE, READONLY
      */
     public void setRwType(String RwType) {
         this.RwType = RwType;
     }
 
     /**
-     * Get Weight information. 
-     * @return InstanceNameWeights Weight information.
+     * Get Weight information 
+     * @return InstanceNameWeights Weight information
      */
     public InstanceNameWeight [] getInstanceNameWeights() {
         return this.InstanceNameWeights;
     }
 
     /**
-     * Set Weight information.
-     * @param InstanceNameWeights Weight information.
+     * Set Weight information
+     * @param InstanceNameWeights Weight information
      */
     public void setInstanceNameWeights(InstanceNameWeight [] InstanceNameWeights) {
         this.InstanceNameWeights = InstanceNameWeights;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModifyServerlessStrategyResponse extends AbstractModel {
 
     /**
-    * <p>Async process id</p>
+    * <p>Asynchronous flow ID.</p>
     */
     @SerializedName("FlowId")
     @Expose
@@ -45,8 +45,8 @@ public class ModifyServerlessStrategyResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get <p>Async process id</p> 
-     * @return FlowId <p>Async process id</p>
+     * Get <p>Asynchronous flow ID.</p> 
+     * @return FlowId <p>Asynchronous flow ID.</p>
      * @deprecated
      */
     @Deprecated
@@ -55,8 +55,8 @@ public class ModifyServerlessStrategyResponse extends AbstractModel {
     }
 
     /**
-     * Set <p>Async process id</p>
-     * @param FlowId <p>Async process id</p>
+     * Set <p>Asynchronous flow ID.</p>
+     * @param FlowId <p>Asynchronous flow ID.</p>
      * @deprecated
      */
     @Deprecated

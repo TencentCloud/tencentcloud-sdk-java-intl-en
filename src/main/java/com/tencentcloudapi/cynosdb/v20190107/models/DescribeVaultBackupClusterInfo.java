@@ -38,14 +38,14 @@ public class DescribeVaultBackupClusterInfo extends AbstractModel {
     private String ClusterName;
 
     /**
-    * Cluster status
+    * Cluster status.
     */
     @SerializedName("ClusterStatus")
     @Expose
     private String ClusterStatus;
 
     /**
-    * cluster region
+    * Region of the cluster
     */
     @SerializedName("ClusterRegion")
     @Expose
@@ -91,32 +91,32 @@ public class DescribeVaultBackupClusterInfo extends AbstractModel {
     }
 
     /**
-     * Get Cluster status 
-     * @return ClusterStatus Cluster status
+     * Get Cluster status. 
+     * @return ClusterStatus Cluster status.
      */
     public String getClusterStatus() {
         return this.ClusterStatus;
     }
 
     /**
-     * Set Cluster status
-     * @param ClusterStatus Cluster status
+     * Set Cluster status.
+     * @param ClusterStatus Cluster status.
      */
     public void setClusterStatus(String ClusterStatus) {
         this.ClusterStatus = ClusterStatus;
     }
 
     /**
-     * Get cluster region 
-     * @return ClusterRegion cluster region
+     * Get Region of the cluster 
+     * @return ClusterRegion Region of the cluster
      */
     public String getClusterRegion() {
         return this.ClusterRegion;
     }
 
     /**
-     * Set cluster region
-     * @param ClusterRegion cluster region
+     * Set Region of the cluster
+     * @param ClusterRegion Region of the cluster
      */
     public void setClusterRegion(String ClusterRegion) {
         this.ClusterRegion = ClusterRegion;

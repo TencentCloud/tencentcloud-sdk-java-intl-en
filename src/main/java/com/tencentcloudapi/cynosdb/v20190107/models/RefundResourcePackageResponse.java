@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class RefundResourcePackageResponse extends AbstractModel {
 
     /**
-    * Each item has only one `dealName`, through which you can ensure the idempotency of the delivery API.
+    * Each item corresponds to a dealName. The business needs to ensure the delivery API idempotency based on the dealName.
     */
     @SerializedName("DealNames")
     @Expose
@@ -38,16 +38,16 @@ public class RefundResourcePackageResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Each item has only one `dealName`, through which you can ensure the idempotency of the delivery API. 
-     * @return DealNames Each item has only one `dealName`, through which you can ensure the idempotency of the delivery API.
+     * Get Each item corresponds to a dealName. The business needs to ensure the delivery API idempotency based on the dealName. 
+     * @return DealNames Each item corresponds to a dealName. The business needs to ensure the delivery API idempotency based on the dealName.
      */
     public String [] getDealNames() {
         return this.DealNames;
     }
 
     /**
-     * Set Each item has only one `dealName`, through which you can ensure the idempotency of the delivery API.
-     * @param DealNames Each item has only one `dealName`, through which you can ensure the idempotency of the delivery API.
+     * Set Each item corresponds to a dealName. The business needs to ensure the delivery API idempotency based on the dealName.
+     * @param DealNames Each item corresponds to a dealName. The business needs to ensure the delivery API idempotency based on the dealName.
      */
     public void setDealNames(String [] DealNames) {
         this.DealNames = DealNames;

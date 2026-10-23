@@ -24,35 +24,35 @@ import java.util.HashMap;
 public class DescribeBackupConfigResponse extends AbstractModel {
 
     /**
-    * <p>Indicates the full backup start time, [0-24*3600]. For example, 0:00, 1:00, and 2:00 are 0, 3600, and 7200 respectively.</p>
+    * <p>Refers to the full backup start time, [0-24*3600], for example, 0:00, 1:00, 2:00 correspond to 0, 3600, 7200 respectively</p>
     */
     @SerializedName("BackupTimeBeg")
     @Expose
     private Long BackupTimeBeg;
 
     /**
-    * <p>Indicates the full backup start time, [0-24*3600]. For example, 0:00, 1:00, and 2:00 are 0, 3600, and 7200 respectively.</p>
+    * <p>Indicates the full backup start time, [0-24*3600], for example, 0:00, 1:00, 2:00 are 0, 3600, 7200 respectively</p>
     */
     @SerializedName("BackupTimeEnd")
     @Expose
     private Long BackupTimeEnd;
 
     /**
-    * <p>Indicates the backup retention period in seconds. Backups longer than this time will be cleaned up. 7 days is represented as 3600<em>24</em>7=604800.</p>
+    * <p>Indicates the backup retention period, in seconds. Data older than this period will be cleaned up. Seven days is represented as 3600<em>24</em>7=604800.</p>
     */
     @SerializedName("ReserveDuration")
     @Expose
     private Long ReserveDuration;
 
     /**
-    * <p>Backup frequency, an array of length 7, corresponding to Monday to Sunday backup method, full-full backup, increment-incremental backup</p>
+    * <p>Backup frequency, an array of length 7, corresponding to Monday to Sunday backup methods, full-full backup, increment-incremental backup</p>
     */
     @SerializedName("BackupFreq")
     @Expose
     private String [] BackupFreq;
 
     /**
-    * <p>Backup method, logic-logical backup, snapshot-snapshot backup</p>
+    * <p>Backup method. logic: logical backup; snapshot: snapshot backup</p>
     */
     @SerializedName("BackupType")
     @Expose
@@ -94,80 +94,80 @@ public class DescribeBackupConfigResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get <p>Indicates the full backup start time, [0-24*3600]. For example, 0:00, 1:00, and 2:00 are 0, 3600, and 7200 respectively.</p> 
-     * @return BackupTimeBeg <p>Indicates the full backup start time, [0-24*3600]. For example, 0:00, 1:00, and 2:00 are 0, 3600, and 7200 respectively.</p>
+     * Get <p>Refers to the full backup start time, [0-24*3600], for example, 0:00, 1:00, 2:00 correspond to 0, 3600, 7200 respectively</p> 
+     * @return BackupTimeBeg <p>Refers to the full backup start time, [0-24*3600], for example, 0:00, 1:00, 2:00 correspond to 0, 3600, 7200 respectively</p>
      */
     public Long getBackupTimeBeg() {
         return this.BackupTimeBeg;
     }
 
     /**
-     * Set <p>Indicates the full backup start time, [0-24*3600]. For example, 0:00, 1:00, and 2:00 are 0, 3600, and 7200 respectively.</p>
-     * @param BackupTimeBeg <p>Indicates the full backup start time, [0-24*3600]. For example, 0:00, 1:00, and 2:00 are 0, 3600, and 7200 respectively.</p>
+     * Set <p>Refers to the full backup start time, [0-24*3600], for example, 0:00, 1:00, 2:00 correspond to 0, 3600, 7200 respectively</p>
+     * @param BackupTimeBeg <p>Refers to the full backup start time, [0-24*3600], for example, 0:00, 1:00, 2:00 correspond to 0, 3600, 7200 respectively</p>
      */
     public void setBackupTimeBeg(Long BackupTimeBeg) {
         this.BackupTimeBeg = BackupTimeBeg;
     }
 
     /**
-     * Get <p>Indicates the full backup start time, [0-24*3600]. For example, 0:00, 1:00, and 2:00 are 0, 3600, and 7200 respectively.</p> 
-     * @return BackupTimeEnd <p>Indicates the full backup start time, [0-24*3600]. For example, 0:00, 1:00, and 2:00 are 0, 3600, and 7200 respectively.</p>
+     * Get <p>Indicates the full backup start time, [0-24*3600], for example, 0:00, 1:00, 2:00 are 0, 3600, 7200 respectively</p> 
+     * @return BackupTimeEnd <p>Indicates the full backup start time, [0-24*3600], for example, 0:00, 1:00, 2:00 are 0, 3600, 7200 respectively</p>
      */
     public Long getBackupTimeEnd() {
         return this.BackupTimeEnd;
     }
 
     /**
-     * Set <p>Indicates the full backup start time, [0-24*3600]. For example, 0:00, 1:00, and 2:00 are 0, 3600, and 7200 respectively.</p>
-     * @param BackupTimeEnd <p>Indicates the full backup start time, [0-24*3600]. For example, 0:00, 1:00, and 2:00 are 0, 3600, and 7200 respectively.</p>
+     * Set <p>Indicates the full backup start time, [0-24*3600], for example, 0:00, 1:00, 2:00 are 0, 3600, 7200 respectively</p>
+     * @param BackupTimeEnd <p>Indicates the full backup start time, [0-24*3600], for example, 0:00, 1:00, 2:00 are 0, 3600, 7200 respectively</p>
      */
     public void setBackupTimeEnd(Long BackupTimeEnd) {
         this.BackupTimeEnd = BackupTimeEnd;
     }
 
     /**
-     * Get <p>Indicates the backup retention period in seconds. Backups longer than this time will be cleaned up. 7 days is represented as 3600<em>24</em>7=604800.</p> 
-     * @return ReserveDuration <p>Indicates the backup retention period in seconds. Backups longer than this time will be cleaned up. 7 days is represented as 3600<em>24</em>7=604800.</p>
+     * Get <p>Indicates the backup retention period, in seconds. Data older than this period will be cleaned up. Seven days is represented as 3600<em>24</em>7=604800.</p> 
+     * @return ReserveDuration <p>Indicates the backup retention period, in seconds. Data older than this period will be cleaned up. Seven days is represented as 3600<em>24</em>7=604800.</p>
      */
     public Long getReserveDuration() {
         return this.ReserveDuration;
     }
 
     /**
-     * Set <p>Indicates the backup retention period in seconds. Backups longer than this time will be cleaned up. 7 days is represented as 3600<em>24</em>7=604800.</p>
-     * @param ReserveDuration <p>Indicates the backup retention period in seconds. Backups longer than this time will be cleaned up. 7 days is represented as 3600<em>24</em>7=604800.</p>
+     * Set <p>Indicates the backup retention period, in seconds. Data older than this period will be cleaned up. Seven days is represented as 3600<em>24</em>7=604800.</p>
+     * @param ReserveDuration <p>Indicates the backup retention period, in seconds. Data older than this period will be cleaned up. Seven days is represented as 3600<em>24</em>7=604800.</p>
      */
     public void setReserveDuration(Long ReserveDuration) {
         this.ReserveDuration = ReserveDuration;
     }
 
     /**
-     * Get <p>Backup frequency, an array of length 7, corresponding to Monday to Sunday backup method, full-full backup, increment-incremental backup</p> 
-     * @return BackupFreq <p>Backup frequency, an array of length 7, corresponding to Monday to Sunday backup method, full-full backup, increment-incremental backup</p>
+     * Get <p>Backup frequency, an array of length 7, corresponding to Monday to Sunday backup methods, full-full backup, increment-incremental backup</p> 
+     * @return BackupFreq <p>Backup frequency, an array of length 7, corresponding to Monday to Sunday backup methods, full-full backup, increment-incremental backup</p>
      */
     public String [] getBackupFreq() {
         return this.BackupFreq;
     }
 
     /**
-     * Set <p>Backup frequency, an array of length 7, corresponding to Monday to Sunday backup method, full-full backup, increment-incremental backup</p>
-     * @param BackupFreq <p>Backup frequency, an array of length 7, corresponding to Monday to Sunday backup method, full-full backup, increment-incremental backup</p>
+     * Set <p>Backup frequency, an array of length 7, corresponding to Monday to Sunday backup methods, full-full backup, increment-incremental backup</p>
+     * @param BackupFreq <p>Backup frequency, an array of length 7, corresponding to Monday to Sunday backup methods, full-full backup, increment-incremental backup</p>
      */
     public void setBackupFreq(String [] BackupFreq) {
         this.BackupFreq = BackupFreq;
     }
 
     /**
-     * Get <p>Backup method, logic-logical backup, snapshot-snapshot backup</p> 
-     * @return BackupType <p>Backup method, logic-logical backup, snapshot-snapshot backup</p>
+     * Get <p>Backup method. logic: logical backup; snapshot: snapshot backup</p> 
+     * @return BackupType <p>Backup method. logic: logical backup; snapshot: snapshot backup</p>
      */
     public String getBackupType() {
         return this.BackupType;
     }
 
     /**
-     * Set <p>Backup method, logic-logical backup, snapshot-snapshot backup</p>
-     * @param BackupType <p>Backup method, logic-logical backup, snapshot-snapshot backup</p>
+     * Set <p>Backup method. logic: logical backup; snapshot: snapshot backup</p>
+     * @param BackupType <p>Backup method. logic: logical backup; snapshot: snapshot backup</p>
      */
     public void setBackupType(String BackupType) {
         this.BackupType = BackupType;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CynosdbCluster extends AbstractModel {
 
     /**
-    * <p>Cluster status. Valid values include:<br>creating: Creating<br>running: Running<br>isolating: Isolation<br>isolated: Isolated<br>activating: De-isolating<br>offlining: Offline<br>offlined: Offline<br>deleting: Deleting<br>deleted: Deleted</p>
+    * <p>Cluster status. Valid values include:<br>creating: Creating<br>running: Running<br>isolating: Isolating<br>isolated: Isolated<br>activating: De-isolating<br>offlining: Offlining<br>offlined: Offline<br>deleting: Deleting<br>deleted: Deleted</p>
     */
     @SerializedName("Status")
     @Expose
@@ -52,14 +52,14 @@ public class CynosdbCluster extends AbstractModel {
     private String ClusterName;
 
     /**
-    * <p>Region</p>
+    * <p>Region.</p>
     */
     @SerializedName("Region")
     @Expose
     private String Region;
 
     /**
-    * <p>Database version</p>
+    * <p>Database version.</p>
     */
     @SerializedName("DbVersion")
     @Expose
@@ -94,7 +94,7 @@ public class CynosdbCluster extends AbstractModel {
     private String DbType;
 
     /**
-    * <p>User appid</p>
+    * <p>User AppID.</p>
     */
     @SerializedName("AppId")
     @Expose
@@ -108,14 +108,14 @@ public class CynosdbCluster extends AbstractModel {
     private String StatusDesc;
 
     /**
-    * <p>Cluster creation time</p>
+    * <p>Cluster creation time.</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * <p>Payment mode. 0: pay-as-you-go; 1: monthly subscription</p>
+    * <p>Payment mode. Valid values: 0 (pay-as-you-go) and 1 (yearly/monthly subscription).</p>
     */
     @SerializedName("PayMode")
     @Expose
@@ -164,35 +164,35 @@ public class CynosdbCluster extends AbstractModel {
     private String SubnetId;
 
     /**
-    * <p>cynos kernel version</p>
+    * <p>cynos kernel version.</p>
     */
     @SerializedName("CynosVersion")
     @Expose
     private String CynosVersion;
 
     /**
-    * <p>cynos version tag</p>
+    * <p>cynos version tag.</p>
     */
     @SerializedName("CynosVersionTag")
     @Expose
     private String CynosVersionTag;
 
     /**
-    * <p>Storage capacity</p>
+    * <p>Storage capacity.</p>
     */
     @SerializedName("StorageLimit")
     @Expose
     private Long StorageLimit;
 
     /**
-    * <p>Renewal flag</p>
+    * <p>Renewal flag.</p>
     */
     @SerializedName("RenewFlag")
     @Expose
     private Long RenewFlag;
 
     /**
-    * <p>Currently processing task</p>
+    * <p>Currently Processing Tasks</p>
     */
     @SerializedName("ProcessingTask")
     @Expose
@@ -206,7 +206,7 @@ public class CynosdbCluster extends AbstractModel {
     private ObjectTask [] Tasks;
 
     /**
-    * <p>tag Array of cluster binding</p>
+    * <p>tag Array bound to the cluster</p>
     */
     @SerializedName("ResourceTags")
     @Expose
@@ -220,42 +220,42 @@ public class CynosdbCluster extends AbstractModel {
     private String DbMode;
 
     /**
-    * <p>When the Db type is SERVERLESS, the SERVERLESS cluster status. Available values:<br>resume<br>pause</p>
+    * <p>When the Db type is SERVERLESS, the status of the SERVERLESS cluster. Available values: <br>resume<br>pause</p>
     */
     @SerializedName("ServerlessStatus")
     @Expose
     private String ServerlessStatus;
 
     /**
-    * <p>Cluster Prepaid storage size</p>
+    * <p>Cluster prepaid storage size.</p>
     */
     @SerializedName("Storage")
     @Expose
     private Long Storage;
 
     /**
-    * <p>Storage ID of cluster storage in prepayment, used for prepaid storage configuration change</p>
+    * <p>Storage ID when cluster storage is prepaid, used for prepaid storage configuration changes</p>
     */
     @SerializedName("StorageId")
     @Expose
     private String StorageId;
 
     /**
-    * <p>Cluster storage payment mode. 0: pay-as-you-go; 1: monthly subscription</p>
+    * <p>Cluster storage payment mode. Valid values: 0 (pay-as-you-go) and 1 (yearly/monthly subscription).</p>
     */
     @SerializedName("StoragePayMode")
     @Expose
     private Long StoragePayMode;
 
     /**
-    * <p>Minimum storage of the cluster compute specification</p>
+    * <p>Minimum storage corresponding to the cluster compute specification.</p>
     */
     @SerializedName("MinStorageSize")
     @Expose
     private Long MinStorageSize;
 
     /**
-    * <p>Maximum storage value of the cluster compute specification</p>
+    * <p>Maximum storage value corresponding to the cluster compute specification</p>
     */
     @SerializedName("MaxStorageSize")
     @Expose
@@ -304,7 +304,7 @@ public class CynosdbCluster extends AbstractModel {
     private String BusinessType;
 
     /**
-    * <p>Freeze or not</p>
+    * <p>Whether to freeze</p>
     */
     @SerializedName("IsFreeze")
     @Expose
@@ -325,7 +325,7 @@ public class CynosdbCluster extends AbstractModel {
     private Ability Ability;
 
     /**
-    * <p>Instance bind resource package info (here only return storage resource package, for example packageType=DISK)</p>
+    * <p>Instance-bound resource package information (only storage resource packages are returned here, that is, packageType=DISK)</p>
     */
     @SerializedName("ResourcePackages")
     @Expose
@@ -339,23 +339,23 @@ public class CynosdbCluster extends AbstractModel {
     private String GdnId;
 
     /**
-    * <p>Cluster role. Primary cluster - primary, slave cluster - standby. If GdnId is empty, the field is invalid.</p>
+    * <p>Cluster role. Primary cluster - primary, slave cluster - standby. If GdnId is empty, this field is invalid.</p>
     */
     @SerializedName("GdnRole")
     @Expose
     private String GdnRole;
 
     /**
-     * Get <p>Cluster status. Valid values include:<br>creating: Creating<br>running: Running<br>isolating: Isolation<br>isolated: Isolated<br>activating: De-isolating<br>offlining: Offline<br>offlined: Offline<br>deleting: Deleting<br>deleted: Deleted</p> 
-     * @return Status <p>Cluster status. Valid values include:<br>creating: Creating<br>running: Running<br>isolating: Isolation<br>isolated: Isolated<br>activating: De-isolating<br>offlining: Offline<br>offlined: Offline<br>deleting: Deleting<br>deleted: Deleted</p>
+     * Get <p>Cluster status. Valid values include:<br>creating: Creating<br>running: Running<br>isolating: Isolating<br>isolated: Isolated<br>activating: De-isolating<br>offlining: Offlining<br>offlined: Offline<br>deleting: Deleting<br>deleted: Deleted</p> 
+     * @return Status <p>Cluster status. Valid values include:<br>creating: Creating<br>running: Running<br>isolating: Isolating<br>isolated: Isolated<br>activating: De-isolating<br>offlining: Offlining<br>offlined: Offline<br>deleting: Deleting<br>deleted: Deleted</p>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set <p>Cluster status. Valid values include:<br>creating: Creating<br>running: Running<br>isolating: Isolation<br>isolated: Isolated<br>activating: De-isolating<br>offlining: Offline<br>offlined: Offline<br>deleting: Deleting<br>deleted: Deleted</p>
-     * @param Status <p>Cluster status. Valid values include:<br>creating: Creating<br>running: Running<br>isolating: Isolation<br>isolated: Isolated<br>activating: De-isolating<br>offlining: Offline<br>offlined: Offline<br>deleting: Deleting<br>deleted: Deleted</p>
+     * Set <p>Cluster status. Valid values include:<br>creating: Creating<br>running: Running<br>isolating: Isolating<br>isolated: Isolated<br>activating: De-isolating<br>offlining: Offlining<br>offlined: Offline<br>deleting: Deleting<br>deleted: Deleted</p>
+     * @param Status <p>Cluster status. Valid values include:<br>creating: Creating<br>running: Running<br>isolating: Isolating<br>isolated: Isolated<br>activating: De-isolating<br>offlining: Offlining<br>offlined: Offline<br>deleting: Deleting<br>deleted: Deleted</p>
      */
     public void setStatus(String Status) {
         this.Status = Status;
@@ -410,32 +410,32 @@ public class CynosdbCluster extends AbstractModel {
     }
 
     /**
-     * Get <p>Region</p> 
-     * @return Region <p>Region</p>
+     * Get <p>Region.</p> 
+     * @return Region <p>Region.</p>
      */
     public String getRegion() {
         return this.Region;
     }
 
     /**
-     * Set <p>Region</p>
-     * @param Region <p>Region</p>
+     * Set <p>Region.</p>
+     * @param Region <p>Region.</p>
      */
     public void setRegion(String Region) {
         this.Region = Region;
     }
 
     /**
-     * Get <p>Database version</p> 
-     * @return DbVersion <p>Database version</p>
+     * Get <p>Database version.</p> 
+     * @return DbVersion <p>Database version.</p>
      */
     public String getDbVersion() {
         return this.DbVersion;
     }
 
     /**
-     * Set <p>Database version</p>
-     * @param DbVersion <p>Database version</p>
+     * Set <p>Database version.</p>
+     * @param DbVersion <p>Database version.</p>
      */
     public void setDbVersion(String DbVersion) {
         this.DbVersion = DbVersion;
@@ -506,16 +506,16 @@ public class CynosdbCluster extends AbstractModel {
     }
 
     /**
-     * Get <p>User appid</p> 
-     * @return AppId <p>User appid</p>
+     * Get <p>User AppID.</p> 
+     * @return AppId <p>User AppID.</p>
      */
     public Long getAppId() {
         return this.AppId;
     }
 
     /**
-     * Set <p>User appid</p>
-     * @param AppId <p>User appid</p>
+     * Set <p>User AppID.</p>
+     * @param AppId <p>User AppID.</p>
      */
     public void setAppId(Long AppId) {
         this.AppId = AppId;
@@ -538,32 +538,32 @@ public class CynosdbCluster extends AbstractModel {
     }
 
     /**
-     * Get <p>Cluster creation time</p> 
-     * @return CreateTime <p>Cluster creation time</p>
+     * Get <p>Cluster creation time.</p> 
+     * @return CreateTime <p>Cluster creation time.</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set <p>Cluster creation time</p>
-     * @param CreateTime <p>Cluster creation time</p>
+     * Set <p>Cluster creation time.</p>
+     * @param CreateTime <p>Cluster creation time.</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get <p>Payment mode. 0: pay-as-you-go; 1: monthly subscription</p> 
-     * @return PayMode <p>Payment mode. 0: pay-as-you-go; 1: monthly subscription</p>
+     * Get <p>Payment mode. Valid values: 0 (pay-as-you-go) and 1 (yearly/monthly subscription).</p> 
+     * @return PayMode <p>Payment mode. Valid values: 0 (pay-as-you-go) and 1 (yearly/monthly subscription).</p>
      */
     public Long getPayMode() {
         return this.PayMode;
     }
 
     /**
-     * Set <p>Payment mode. 0: pay-as-you-go; 1: monthly subscription</p>
-     * @param PayMode <p>Payment mode. 0: pay-as-you-go; 1: monthly subscription</p>
+     * Set <p>Payment mode. Valid values: 0 (pay-as-you-go) and 1 (yearly/monthly subscription).</p>
+     * @param PayMode <p>Payment mode. Valid values: 0 (pay-as-you-go) and 1 (yearly/monthly subscription).</p>
      */
     public void setPayMode(Long PayMode) {
         this.PayMode = PayMode;
@@ -666,80 +666,80 @@ public class CynosdbCluster extends AbstractModel {
     }
 
     /**
-     * Get <p>cynos kernel version</p> 
-     * @return CynosVersion <p>cynos kernel version</p>
+     * Get <p>cynos kernel version.</p> 
+     * @return CynosVersion <p>cynos kernel version.</p>
      */
     public String getCynosVersion() {
         return this.CynosVersion;
     }
 
     /**
-     * Set <p>cynos kernel version</p>
-     * @param CynosVersion <p>cynos kernel version</p>
+     * Set <p>cynos kernel version.</p>
+     * @param CynosVersion <p>cynos kernel version.</p>
      */
     public void setCynosVersion(String CynosVersion) {
         this.CynosVersion = CynosVersion;
     }
 
     /**
-     * Get <p>cynos version tag</p> 
-     * @return CynosVersionTag <p>cynos version tag</p>
+     * Get <p>cynos version tag.</p> 
+     * @return CynosVersionTag <p>cynos version tag.</p>
      */
     public String getCynosVersionTag() {
         return this.CynosVersionTag;
     }
 
     /**
-     * Set <p>cynos version tag</p>
-     * @param CynosVersionTag <p>cynos version tag</p>
+     * Set <p>cynos version tag.</p>
+     * @param CynosVersionTag <p>cynos version tag.</p>
      */
     public void setCynosVersionTag(String CynosVersionTag) {
         this.CynosVersionTag = CynosVersionTag;
     }
 
     /**
-     * Get <p>Storage capacity</p> 
-     * @return StorageLimit <p>Storage capacity</p>
+     * Get <p>Storage capacity.</p> 
+     * @return StorageLimit <p>Storage capacity.</p>
      */
     public Long getStorageLimit() {
         return this.StorageLimit;
     }
 
     /**
-     * Set <p>Storage capacity</p>
-     * @param StorageLimit <p>Storage capacity</p>
+     * Set <p>Storage capacity.</p>
+     * @param StorageLimit <p>Storage capacity.</p>
      */
     public void setStorageLimit(Long StorageLimit) {
         this.StorageLimit = StorageLimit;
     }
 
     /**
-     * Get <p>Renewal flag</p> 
-     * @return RenewFlag <p>Renewal flag</p>
+     * Get <p>Renewal flag.</p> 
+     * @return RenewFlag <p>Renewal flag.</p>
      */
     public Long getRenewFlag() {
         return this.RenewFlag;
     }
 
     /**
-     * Set <p>Renewal flag</p>
-     * @param RenewFlag <p>Renewal flag</p>
+     * Set <p>Renewal flag.</p>
+     * @param RenewFlag <p>Renewal flag.</p>
      */
     public void setRenewFlag(Long RenewFlag) {
         this.RenewFlag = RenewFlag;
     }
 
     /**
-     * Get <p>Currently processing task</p> 
-     * @return ProcessingTask <p>Currently processing task</p>
+     * Get <p>Currently Processing Tasks</p> 
+     * @return ProcessingTask <p>Currently Processing Tasks</p>
      */
     public String getProcessingTask() {
         return this.ProcessingTask;
     }
 
     /**
-     * Set <p>Currently processing task</p>
-     * @param ProcessingTask <p>Currently processing task</p>
+     * Set <p>Currently Processing Tasks</p>
+     * @param ProcessingTask <p>Currently Processing Tasks</p>
      */
     public void setProcessingTask(String ProcessingTask) {
         this.ProcessingTask = ProcessingTask;
@@ -762,16 +762,16 @@ public class CynosdbCluster extends AbstractModel {
     }
 
     /**
-     * Get <p>tag Array of cluster binding</p> 
-     * @return ResourceTags <p>tag Array of cluster binding</p>
+     * Get <p>tag Array bound to the cluster</p> 
+     * @return ResourceTags <p>tag Array bound to the cluster</p>
      */
     public Tag [] getResourceTags() {
         return this.ResourceTags;
     }
 
     /**
-     * Set <p>tag Array of cluster binding</p>
-     * @param ResourceTags <p>tag Array of cluster binding</p>
+     * Set <p>tag Array bound to the cluster</p>
+     * @param ResourceTags <p>tag Array bound to the cluster</p>
      */
     public void setResourceTags(Tag [] ResourceTags) {
         this.ResourceTags = ResourceTags;
@@ -794,96 +794,96 @@ public class CynosdbCluster extends AbstractModel {
     }
 
     /**
-     * Get <p>When the Db type is SERVERLESS, the SERVERLESS cluster status. Available values:<br>resume<br>pause</p> 
-     * @return ServerlessStatus <p>When the Db type is SERVERLESS, the SERVERLESS cluster status. Available values:<br>resume<br>pause</p>
+     * Get <p>When the Db type is SERVERLESS, the status of the SERVERLESS cluster. Available values: <br>resume<br>pause</p> 
+     * @return ServerlessStatus <p>When the Db type is SERVERLESS, the status of the SERVERLESS cluster. Available values: <br>resume<br>pause</p>
      */
     public String getServerlessStatus() {
         return this.ServerlessStatus;
     }
 
     /**
-     * Set <p>When the Db type is SERVERLESS, the SERVERLESS cluster status. Available values:<br>resume<br>pause</p>
-     * @param ServerlessStatus <p>When the Db type is SERVERLESS, the SERVERLESS cluster status. Available values:<br>resume<br>pause</p>
+     * Set <p>When the Db type is SERVERLESS, the status of the SERVERLESS cluster. Available values: <br>resume<br>pause</p>
+     * @param ServerlessStatus <p>When the Db type is SERVERLESS, the status of the SERVERLESS cluster. Available values: <br>resume<br>pause</p>
      */
     public void setServerlessStatus(String ServerlessStatus) {
         this.ServerlessStatus = ServerlessStatus;
     }
 
     /**
-     * Get <p>Cluster Prepaid storage size</p> 
-     * @return Storage <p>Cluster Prepaid storage size</p>
+     * Get <p>Cluster prepaid storage size.</p> 
+     * @return Storage <p>Cluster prepaid storage size.</p>
      */
     public Long getStorage() {
         return this.Storage;
     }
 
     /**
-     * Set <p>Cluster Prepaid storage size</p>
-     * @param Storage <p>Cluster Prepaid storage size</p>
+     * Set <p>Cluster prepaid storage size.</p>
+     * @param Storage <p>Cluster prepaid storage size.</p>
      */
     public void setStorage(Long Storage) {
         this.Storage = Storage;
     }
 
     /**
-     * Get <p>Storage ID of cluster storage in prepayment, used for prepaid storage configuration change</p> 
-     * @return StorageId <p>Storage ID of cluster storage in prepayment, used for prepaid storage configuration change</p>
+     * Get <p>Storage ID when cluster storage is prepaid, used for prepaid storage configuration changes</p> 
+     * @return StorageId <p>Storage ID when cluster storage is prepaid, used for prepaid storage configuration changes</p>
      */
     public String getStorageId() {
         return this.StorageId;
     }
 
     /**
-     * Set <p>Storage ID of cluster storage in prepayment, used for prepaid storage configuration change</p>
-     * @param StorageId <p>Storage ID of cluster storage in prepayment, used for prepaid storage configuration change</p>
+     * Set <p>Storage ID when cluster storage is prepaid, used for prepaid storage configuration changes</p>
+     * @param StorageId <p>Storage ID when cluster storage is prepaid, used for prepaid storage configuration changes</p>
      */
     public void setStorageId(String StorageId) {
         this.StorageId = StorageId;
     }
 
     /**
-     * Get <p>Cluster storage payment mode. 0: pay-as-you-go; 1: monthly subscription</p> 
-     * @return StoragePayMode <p>Cluster storage payment mode. 0: pay-as-you-go; 1: monthly subscription</p>
+     * Get <p>Cluster storage payment mode. Valid values: 0 (pay-as-you-go) and 1 (yearly/monthly subscription).</p> 
+     * @return StoragePayMode <p>Cluster storage payment mode. Valid values: 0 (pay-as-you-go) and 1 (yearly/monthly subscription).</p>
      */
     public Long getStoragePayMode() {
         return this.StoragePayMode;
     }
 
     /**
-     * Set <p>Cluster storage payment mode. 0: pay-as-you-go; 1: monthly subscription</p>
-     * @param StoragePayMode <p>Cluster storage payment mode. 0: pay-as-you-go; 1: monthly subscription</p>
+     * Set <p>Cluster storage payment mode. Valid values: 0 (pay-as-you-go) and 1 (yearly/monthly subscription).</p>
+     * @param StoragePayMode <p>Cluster storage payment mode. Valid values: 0 (pay-as-you-go) and 1 (yearly/monthly subscription).</p>
      */
     public void setStoragePayMode(Long StoragePayMode) {
         this.StoragePayMode = StoragePayMode;
     }
 
     /**
-     * Get <p>Minimum storage of the cluster compute specification</p> 
-     * @return MinStorageSize <p>Minimum storage of the cluster compute specification</p>
+     * Get <p>Minimum storage corresponding to the cluster compute specification.</p> 
+     * @return MinStorageSize <p>Minimum storage corresponding to the cluster compute specification.</p>
      */
     public Long getMinStorageSize() {
         return this.MinStorageSize;
     }
 
     /**
-     * Set <p>Minimum storage of the cluster compute specification</p>
-     * @param MinStorageSize <p>Minimum storage of the cluster compute specification</p>
+     * Set <p>Minimum storage corresponding to the cluster compute specification.</p>
+     * @param MinStorageSize <p>Minimum storage corresponding to the cluster compute specification.</p>
      */
     public void setMinStorageSize(Long MinStorageSize) {
         this.MinStorageSize = MinStorageSize;
     }
 
     /**
-     * Get <p>Maximum storage value of the cluster compute specification</p> 
-     * @return MaxStorageSize <p>Maximum storage value of the cluster compute specification</p>
+     * Get <p>Maximum storage value corresponding to the cluster compute specification</p> 
+     * @return MaxStorageSize <p>Maximum storage value corresponding to the cluster compute specification</p>
      */
     public Long getMaxStorageSize() {
         return this.MaxStorageSize;
     }
 
     /**
-     * Set <p>Maximum storage value of the cluster compute specification</p>
-     * @param MaxStorageSize <p>Maximum storage value of the cluster compute specification</p>
+     * Set <p>Maximum storage value corresponding to the cluster compute specification</p>
+     * @param MaxStorageSize <p>Maximum storage value corresponding to the cluster compute specification</p>
      */
     public void setMaxStorageSize(Long MaxStorageSize) {
         this.MaxStorageSize = MaxStorageSize;
@@ -986,16 +986,16 @@ public class CynosdbCluster extends AbstractModel {
     }
 
     /**
-     * Get <p>Freeze or not</p> 
-     * @return IsFreeze <p>Freeze or not</p>
+     * Get <p>Whether to freeze</p> 
+     * @return IsFreeze <p>Whether to freeze</p>
      */
     public String getIsFreeze() {
         return this.IsFreeze;
     }
 
     /**
-     * Set <p>Freeze or not</p>
-     * @param IsFreeze <p>Freeze or not</p>
+     * Set <p>Whether to freeze</p>
+     * @param IsFreeze <p>Whether to freeze</p>
      */
     public void setIsFreeze(String IsFreeze) {
         this.IsFreeze = IsFreeze;
@@ -1034,16 +1034,16 @@ public class CynosdbCluster extends AbstractModel {
     }
 
     /**
-     * Get <p>Instance bind resource package info (here only return storage resource package, for example packageType=DISK)</p> 
-     * @return ResourcePackages <p>Instance bind resource package info (here only return storage resource package, for example packageType=DISK)</p>
+     * Get <p>Instance-bound resource package information (only storage resource packages are returned here, that is, packageType=DISK)</p> 
+     * @return ResourcePackages <p>Instance-bound resource package information (only storage resource packages are returned here, that is, packageType=DISK)</p>
      */
     public ResourcePackage [] getResourcePackages() {
         return this.ResourcePackages;
     }
 
     /**
-     * Set <p>Instance bind resource package info (here only return storage resource package, for example packageType=DISK)</p>
-     * @param ResourcePackages <p>Instance bind resource package info (here only return storage resource package, for example packageType=DISK)</p>
+     * Set <p>Instance-bound resource package information (only storage resource packages are returned here, that is, packageType=DISK)</p>
+     * @param ResourcePackages <p>Instance-bound resource package information (only storage resource packages are returned here, that is, packageType=DISK)</p>
      */
     public void setResourcePackages(ResourcePackage [] ResourcePackages) {
         this.ResourcePackages = ResourcePackages;
@@ -1066,16 +1066,16 @@ public class CynosdbCluster extends AbstractModel {
     }
 
     /**
-     * Get <p>Cluster role. Primary cluster - primary, slave cluster - standby. If GdnId is empty, the field is invalid.</p> 
-     * @return GdnRole <p>Cluster role. Primary cluster - primary, slave cluster - standby. If GdnId is empty, the field is invalid.</p>
+     * Get <p>Cluster role. Primary cluster - primary, slave cluster - standby. If GdnId is empty, this field is invalid.</p> 
+     * @return GdnRole <p>Cluster role. Primary cluster - primary, slave cluster - standby. If GdnId is empty, this field is invalid.</p>
      */
     public String getGdnRole() {
         return this.GdnRole;
     }
 
     /**
-     * Set <p>Cluster role. Primary cluster - primary, slave cluster - standby. If GdnId is empty, the field is invalid.</p>
-     * @param GdnRole <p>Cluster role. Primary cluster - primary, slave cluster - standby. If GdnId is empty, the field is invalid.</p>
+     * Set <p>Cluster role. Primary cluster - primary, slave cluster - standby. If GdnId is empty, this field is invalid.</p>
+     * @param GdnRole <p>Cluster role. Primary cluster - primary, slave cluster - standby. If GdnId is empty, this field is invalid.</p>
      */
     public void setGdnRole(String GdnRole) {
         this.GdnRole = GdnRole;

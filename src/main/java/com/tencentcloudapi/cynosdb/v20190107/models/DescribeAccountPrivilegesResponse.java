@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeAccountPrivilegesResponse extends AbstractModel {
 
     /**
-    * The list of permissions, such as  ["select","update","delete","create","drop","references","index","alter","show_db","create_tmp_table","lock_tables","execute","create_view","show_view","create_routine","alter_routine","event","trigger"]
+    * Permission list. Example value: ["","select","update","delete","create","drop","references","index","alter","show_db","create_tmp_table","lock_tables","execute","create_view","show_view","create_routine","alter_routine","event","trigger"]
     */
     @SerializedName("Privileges")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeAccountPrivilegesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get The list of permissions, such as  ["select","update","delete","create","drop","references","index","alter","show_db","create_tmp_table","lock_tables","execute","create_view","show_view","create_routine","alter_routine","event","trigger"] 
-     * @return Privileges The list of permissions, such as  ["select","update","delete","create","drop","references","index","alter","show_db","create_tmp_table","lock_tables","execute","create_view","show_view","create_routine","alter_routine","event","trigger"]
+     * Get Permission list. Example value: ["","select","update","delete","create","drop","references","index","alter","show_db","create_tmp_table","lock_tables","execute","create_view","show_view","create_routine","alter_routine","event","trigger"] 
+     * @return Privileges Permission list. Example value: ["","select","update","delete","create","drop","references","index","alter","show_db","create_tmp_table","lock_tables","execute","create_view","show_view","create_routine","alter_routine","event","trigger"]
      */
     public String [] getPrivileges() {
         return this.Privileges;
     }
 
     /**
-     * Set The list of permissions, such as  ["select","update","delete","create","drop","references","index","alter","show_db","create_tmp_table","lock_tables","execute","create_view","show_view","create_routine","alter_routine","event","trigger"]
-     * @param Privileges The list of permissions, such as  ["select","update","delete","create","drop","references","index","alter","show_db","create_tmp_table","lock_tables","execute","create_view","show_view","create_routine","alter_routine","event","trigger"]
+     * Set Permission list. Example value: ["","select","update","delete","create","drop","references","index","alter","show_db","create_tmp_table","lock_tables","execute","create_view","show_view","create_routine","alter_routine","event","trigger"]
+     * @param Privileges Permission list. Example value: ["","select","update","delete","create","drop","references","index","alter","show_db","create_tmp_table","lock_tables","execute","create_view","show_view","create_routine","alter_routine","event","trigger"]
      */
     public void setPrivileges(String [] Privileges) {
         this.Privileges = Privileges;

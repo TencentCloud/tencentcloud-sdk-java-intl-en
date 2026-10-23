@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class CopyBackupToVaultRequest extends AbstractModel {
 
     /**
-    * <p>Target safe ID. The backup file will be copied to this safe.</p>
+    * <p>Target safe ID. The backup file will be copied to this safe</p>
     */
     @SerializedName("VaultId")
     @Expose
     private String VaultId;
 
     /**
-    * <p>List of backup file IDs. Supports batch operations to copy multiple backup files.</p>
+    * <p>Backup file ID list. Supports batch replication of multiple backup files</p>
     */
     @SerializedName("BackupIds")
     @Expose
     private Long [] BackupIds;
 
     /**
-     * Get <p>Target safe ID. The backup file will be copied to this safe.</p> 
-     * @return VaultId <p>Target safe ID. The backup file will be copied to this safe.</p>
+     * Get <p>Target safe ID. The backup file will be copied to this safe</p> 
+     * @return VaultId <p>Target safe ID. The backup file will be copied to this safe</p>
      */
     public String getVaultId() {
         return this.VaultId;
     }
 
     /**
-     * Set <p>Target safe ID. The backup file will be copied to this safe.</p>
-     * @param VaultId <p>Target safe ID. The backup file will be copied to this safe.</p>
+     * Set <p>Target safe ID. The backup file will be copied to this safe</p>
+     * @param VaultId <p>Target safe ID. The backup file will be copied to this safe</p>
      */
     public void setVaultId(String VaultId) {
         this.VaultId = VaultId;
     }
 
     /**
-     * Get <p>List of backup file IDs. Supports batch operations to copy multiple backup files.</p> 
-     * @return BackupIds <p>List of backup file IDs. Supports batch operations to copy multiple backup files.</p>
+     * Get <p>Backup file ID list. Supports batch replication of multiple backup files</p> 
+     * @return BackupIds <p>Backup file ID list. Supports batch replication of multiple backup files</p>
      */
     public Long [] getBackupIds() {
         return this.BackupIds;
     }
 
     /**
-     * Set <p>List of backup file IDs. Supports batch operations to copy multiple backup files.</p>
-     * @param BackupIds <p>List of backup file IDs. Supports batch operations to copy multiple backup files.</p>
+     * Set <p>Backup file ID list. Supports batch replication of multiple backup files</p>
+     * @param BackupIds <p>Backup file ID list. Supports batch replication of multiple backup files</p>
      */
     public void setBackupIds(Long [] BackupIds) {
         this.BackupIds = BackupIds;

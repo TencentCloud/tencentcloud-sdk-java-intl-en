@@ -31,7 +31,7 @@ public class RollbackTable extends AbstractModel {
     private String Database;
 
     /**
-    * Database table.
+    * Database table
     */
     @SerializedName("Tables")
     @Expose
@@ -54,16 +54,16 @@ public class RollbackTable extends AbstractModel {
     }
 
     /**
-     * Get Database table. 
-     * @return Tables Database table.
+     * Get Database table 
+     * @return Tables Database table
      */
     public RollbackTableInfo [] getTables() {
         return this.Tables;
     }
 
     /**
-     * Set Database table.
-     * @param Tables Database table.
+     * Set Database table
+     * @param Tables Database table
      */
     public void setTables(RollbackTableInfo [] Tables) {
         this.Tables = Tables;

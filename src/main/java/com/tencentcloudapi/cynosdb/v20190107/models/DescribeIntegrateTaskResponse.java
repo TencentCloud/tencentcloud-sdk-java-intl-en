@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class DescribeIntegrateTaskResponse extends AbstractModel {
 
     /**
-    * Current step.
+    * Details of the current step
     */
     @SerializedName("CurrentStep")
     @Expose
     private String CurrentStep;
 
     /**
-    * Current progress.
+    * Current progress
     */
     @SerializedName("CurrentProgress")
     @Expose
     private String CurrentProgress;
 
     /**
-    * Indicates the task status.
+    * Task status.
     */
     @SerializedName("TaskStatus")
     @Expose
@@ -52,48 +52,48 @@ public class DescribeIntegrateTaskResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Current step. 
-     * @return CurrentStep Current step.
+     * Get Details of the current step 
+     * @return CurrentStep Details of the current step
      */
     public String getCurrentStep() {
         return this.CurrentStep;
     }
 
     /**
-     * Set Current step.
-     * @param CurrentStep Current step.
+     * Set Details of the current step
+     * @param CurrentStep Details of the current step
      */
     public void setCurrentStep(String CurrentStep) {
         this.CurrentStep = CurrentStep;
     }
 
     /**
-     * Get Current progress. 
-     * @return CurrentProgress Current progress.
+     * Get Current progress 
+     * @return CurrentProgress Current progress
      */
     public String getCurrentProgress() {
         return this.CurrentProgress;
     }
 
     /**
-     * Set Current progress.
-     * @param CurrentProgress Current progress.
+     * Set Current progress
+     * @param CurrentProgress Current progress
      */
     public void setCurrentProgress(String CurrentProgress) {
         this.CurrentProgress = CurrentProgress;
     }
 
     /**
-     * Get Indicates the task status. 
-     * @return TaskStatus Indicates the task status.
+     * Get Task status. 
+     * @return TaskStatus Task status.
      */
     public String getTaskStatus() {
         return this.TaskStatus;
     }
 
     /**
-     * Set Indicates the task status.
-     * @param TaskStatus Indicates the task status.
+     * Set Task status.
+     * @param TaskStatus Task status.
      */
     public void setTaskStatus(String TaskStatus) {
         this.TaskStatus = TaskStatus;

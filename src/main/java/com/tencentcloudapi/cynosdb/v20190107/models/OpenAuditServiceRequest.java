@@ -38,7 +38,7 @@ public class OpenAuditServiceRequest extends AbstractModel {
     private Long LogExpireDay;
 
     /**
-    * Frequent log retention period.
+    * High frequency log retention period.
     */
     @SerializedName("HighLogExpireDay")
     @Expose
@@ -52,14 +52,14 @@ public class OpenAuditServiceRequest extends AbstractModel {
     private AuditRuleFilters [] AuditRuleFilters;
 
     /**
-    * Rule template ID. If both this parameter and `AuditRuleFilters` are left empty, full audit will be applied.
+    * Rule template ID. If both this parameter and AuditRuleFilters are left empty, full audit is enabled.
     */
     @SerializedName("RuleTemplateIds")
     @Expose
     private String [] RuleTemplateIds;
 
     /**
-    * Audit type. true - Full audit; default false - Rule-based audit.
+    * Audit type. true: full audit; default false: rule audit.
     */
     @SerializedName("AuditAll")
     @Expose
@@ -98,16 +98,16 @@ public class OpenAuditServiceRequest extends AbstractModel {
     }
 
     /**
-     * Get Frequent log retention period. 
-     * @return HighLogExpireDay Frequent log retention period.
+     * Get High frequency log retention period. 
+     * @return HighLogExpireDay High frequency log retention period.
      */
     public Long getHighLogExpireDay() {
         return this.HighLogExpireDay;
     }
 
     /**
-     * Set Frequent log retention period.
-     * @param HighLogExpireDay Frequent log retention period.
+     * Set High frequency log retention period.
+     * @param HighLogExpireDay High frequency log retention period.
      */
     public void setHighLogExpireDay(Long HighLogExpireDay) {
         this.HighLogExpireDay = HighLogExpireDay;
@@ -134,32 +134,32 @@ public class OpenAuditServiceRequest extends AbstractModel {
     }
 
     /**
-     * Get Rule template ID. If both this parameter and `AuditRuleFilters` are left empty, full audit will be applied. 
-     * @return RuleTemplateIds Rule template ID. If both this parameter and `AuditRuleFilters` are left empty, full audit will be applied.
+     * Get Rule template ID. If both this parameter and AuditRuleFilters are left empty, full audit is enabled. 
+     * @return RuleTemplateIds Rule template ID. If both this parameter and AuditRuleFilters are left empty, full audit is enabled.
      */
     public String [] getRuleTemplateIds() {
         return this.RuleTemplateIds;
     }
 
     /**
-     * Set Rule template ID. If both this parameter and `AuditRuleFilters` are left empty, full audit will be applied.
-     * @param RuleTemplateIds Rule template ID. If both this parameter and `AuditRuleFilters` are left empty, full audit will be applied.
+     * Set Rule template ID. If both this parameter and AuditRuleFilters are left empty, full audit is enabled.
+     * @param RuleTemplateIds Rule template ID. If both this parameter and AuditRuleFilters are left empty, full audit is enabled.
      */
     public void setRuleTemplateIds(String [] RuleTemplateIds) {
         this.RuleTemplateIds = RuleTemplateIds;
     }
 
     /**
-     * Get Audit type. true - Full audit; default false - Rule-based audit. 
-     * @return AuditAll Audit type. true - Full audit; default false - Rule-based audit.
+     * Get Audit type. true: full audit; default false: rule audit. 
+     * @return AuditAll Audit type. true: full audit; default false: rule audit.
      */
     public Boolean getAuditAll() {
         return this.AuditAll;
     }
 
     /**
-     * Set Audit type. true - Full audit; default false - Rule-based audit.
-     * @param AuditAll Audit type. true - Full audit; default false - Rule-based audit.
+     * Set Audit type. true: full audit; default false: rule audit.
+     * @param AuditAll Audit type. true: full audit; default false: rule audit.
      */
     public void setAuditAll(Boolean AuditAll) {
         this.AuditAll = AuditAll;

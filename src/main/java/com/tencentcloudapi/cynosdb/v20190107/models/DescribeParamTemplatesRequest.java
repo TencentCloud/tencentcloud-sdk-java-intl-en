@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeParamTemplatesRequest extends AbstractModel {
 
     /**
-    * Database engine version number
+    * Database engine version
     */
     @SerializedName("EngineVersions")
     @Expose
@@ -38,35 +38,35 @@ public class DescribeParamTemplatesRequest extends AbstractModel {
     private String [] TemplateNames;
 
     /**
-    * Template ID
+    * Template ID.
     */
     @SerializedName("TemplateIds")
     @Expose
     private Long [] TemplateIds;
 
     /**
-    * Database Type. Valid values: `NORMAL`, `SERVERLESS`.
+    * Database type. Available values: NORMAL, SERVERLESS
     */
     @SerializedName("DbModes")
     @Expose
     private String [] DbModes;
 
     /**
-    * Offset for query
+    * Query offset
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * Limit on queries
+    * Query limit count
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * Product type of the queried template
+    * Product type corresponding to the queried template.
     */
     @SerializedName("Products")
     @Expose
@@ -87,30 +87,30 @@ public class DescribeParamTemplatesRequest extends AbstractModel {
     private String [] EngineTypes;
 
     /**
-    * The sorting order of the returned results
+    * Sorting field of returned results
     */
     @SerializedName("OrderBy")
     @Expose
     private String OrderBy;
 
     /**
-    * Sorting order. Valid values: `desc`, `asc `.
+    * Sorting method (asc, desc)
     */
     @SerializedName("OrderDirection")
     @Expose
     private String OrderDirection;
 
     /**
-     * Get Database engine version number 
-     * @return EngineVersions Database engine version number
+     * Get Database engine version 
+     * @return EngineVersions Database engine version
      */
     public String [] getEngineVersions() {
         return this.EngineVersions;
     }
 
     /**
-     * Set Database engine version number
-     * @param EngineVersions Database engine version number
+     * Set Database engine version
+     * @param EngineVersions Database engine version
      */
     public void setEngineVersions(String [] EngineVersions) {
         this.EngineVersions = EngineVersions;
@@ -133,80 +133,80 @@ public class DescribeParamTemplatesRequest extends AbstractModel {
     }
 
     /**
-     * Get Template ID 
-     * @return TemplateIds Template ID
+     * Get Template ID. 
+     * @return TemplateIds Template ID.
      */
     public Long [] getTemplateIds() {
         return this.TemplateIds;
     }
 
     /**
-     * Set Template ID
-     * @param TemplateIds Template ID
+     * Set Template ID.
+     * @param TemplateIds Template ID.
      */
     public void setTemplateIds(Long [] TemplateIds) {
         this.TemplateIds = TemplateIds;
     }
 
     /**
-     * Get Database Type. Valid values: `NORMAL`, `SERVERLESS`. 
-     * @return DbModes Database Type. Valid values: `NORMAL`, `SERVERLESS`.
+     * Get Database type. Available values: NORMAL, SERVERLESS 
+     * @return DbModes Database type. Available values: NORMAL, SERVERLESS
      */
     public String [] getDbModes() {
         return this.DbModes;
     }
 
     /**
-     * Set Database Type. Valid values: `NORMAL`, `SERVERLESS`.
-     * @param DbModes Database Type. Valid values: `NORMAL`, `SERVERLESS`.
+     * Set Database type. Available values: NORMAL, SERVERLESS
+     * @param DbModes Database type. Available values: NORMAL, SERVERLESS
      */
     public void setDbModes(String [] DbModes) {
         this.DbModes = DbModes;
     }
 
     /**
-     * Get Offset for query 
-     * @return Offset Offset for query
+     * Get Query offset 
+     * @return Offset Query offset
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Offset for query
-     * @param Offset Offset for query
+     * Set Query offset
+     * @param Offset Query offset
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get Limit on queries 
-     * @return Limit Limit on queries
+     * Get Query limit count 
+     * @return Limit Query limit count
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Limit on queries
-     * @param Limit Limit on queries
+     * Set Query limit count
+     * @param Limit Query limit count
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get Product type of the queried template 
-     * @return Products Product type of the queried template
+     * Get Product type corresponding to the queried template. 
+     * @return Products Product type corresponding to the queried template.
      */
     public String [] getProducts() {
         return this.Products;
     }
 
     /**
-     * Set Product type of the queried template
-     * @param Products Product type of the queried template
+     * Set Product type corresponding to the queried template.
+     * @param Products Product type corresponding to the queried template.
      */
     public void setProducts(String [] Products) {
         this.Products = Products;
@@ -245,32 +245,32 @@ public class DescribeParamTemplatesRequest extends AbstractModel {
     }
 
     /**
-     * Get The sorting order of the returned results 
-     * @return OrderBy The sorting order of the returned results
+     * Get Sorting field of returned results 
+     * @return OrderBy Sorting field of returned results
      */
     public String getOrderBy() {
         return this.OrderBy;
     }
 
     /**
-     * Set The sorting order of the returned results
-     * @param OrderBy The sorting order of the returned results
+     * Set Sorting field of returned results
+     * @param OrderBy Sorting field of returned results
      */
     public void setOrderBy(String OrderBy) {
         this.OrderBy = OrderBy;
     }
 
     /**
-     * Get Sorting order. Valid values: `desc`, `asc `. 
-     * @return OrderDirection Sorting order. Valid values: `desc`, `asc `.
+     * Get Sorting method (asc, desc) 
+     * @return OrderDirection Sorting method (asc, desc)
      */
     public String getOrderDirection() {
         return this.OrderDirection;
     }
 
     /**
-     * Set Sorting order. Valid values: `desc`, `asc `.
-     * @param OrderDirection Sorting order. Valid values: `desc`, `asc `.
+     * Set Sorting method (asc, desc)
+     * @param OrderDirection Sorting method (asc, desc)
      */
     public void setOrderDirection(String OrderDirection) {
         this.OrderDirection = OrderDirection;

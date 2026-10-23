@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class ProxyZone extends AbstractModel {
 
     /**
-    * AZ of the proxy node
+    * proxy node availability zone
     */
     @SerializedName("ProxyNodeZone")
     @Expose
     private String ProxyNodeZone;
 
     /**
-    * The number of proxy nodes
+    * Number of proxy nodes.
     */
     @SerializedName("ProxyNodeCount")
     @Expose
     private Long ProxyNodeCount;
 
     /**
-     * Get AZ of the proxy node 
-     * @return ProxyNodeZone AZ of the proxy node
+     * Get proxy node availability zone 
+     * @return ProxyNodeZone proxy node availability zone
      */
     public String getProxyNodeZone() {
         return this.ProxyNodeZone;
     }
 
     /**
-     * Set AZ of the proxy node
-     * @param ProxyNodeZone AZ of the proxy node
+     * Set proxy node availability zone
+     * @param ProxyNodeZone proxy node availability zone
      */
     public void setProxyNodeZone(String ProxyNodeZone) {
         this.ProxyNodeZone = ProxyNodeZone;
     }
 
     /**
-     * Get The number of proxy nodes 
-     * @return ProxyNodeCount The number of proxy nodes
+     * Get Number of proxy nodes. 
+     * @return ProxyNodeCount Number of proxy nodes.
      */
     public Long getProxyNodeCount() {
         return this.ProxyNodeCount;
     }
 
     /**
-     * Set The number of proxy nodes
-     * @param ProxyNodeCount The number of proxy nodes
+     * Set Number of proxy nodes.
+     * @param ProxyNodeCount Number of proxy nodes.
      */
     public void setProxyNodeCount(Long ProxyNodeCount) {
         this.ProxyNodeCount = ProxyNodeCount;

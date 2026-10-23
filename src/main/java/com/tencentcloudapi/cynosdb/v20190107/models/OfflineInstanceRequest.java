@@ -31,7 +31,7 @@ public class OfflineInstanceRequest extends AbstractModel {
     private String ClusterId;
 
     /**
-    * Instance ID array
+    * Instance ID array.
     */
     @SerializedName("InstanceIdList")
     @Expose
@@ -54,16 +54,16 @@ public class OfflineInstanceRequest extends AbstractModel {
     }
 
     /**
-     * Get Instance ID array 
-     * @return InstanceIdList Instance ID array
+     * Get Instance ID array. 
+     * @return InstanceIdList Instance ID array.
      */
     public String [] getInstanceIdList() {
         return this.InstanceIdList;
     }
 
     /**
-     * Set Instance ID array
-     * @param InstanceIdList Instance ID array
+     * Set Instance ID array.
+     * @param InstanceIdList Instance ID array.
      */
     public void setInstanceIdList(String [] InstanceIdList) {
         this.InstanceIdList = InstanceIdList;

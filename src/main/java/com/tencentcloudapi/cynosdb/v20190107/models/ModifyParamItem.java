@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModifyParamItem extends AbstractModel {
 
     /**
-    * Parameter name
+    * Parameter name.
     */
     @SerializedName("ParamName")
     @Expose
@@ -38,30 +38,30 @@ public class ModifyParamItem extends AbstractModel {
     private String CurrentValue;
 
     /**
-    * Old parameter value (useful only in output parameters).
+    * Old parameter value (only useful for output parameters)
     */
     @SerializedName("OldValue")
     @Expose
     private String OldValue;
 
     /**
-    * libra component type.
+    * libra component type
     */
     @SerializedName("Component")
     @Expose
     private String Component;
 
     /**
-     * Get Parameter name 
-     * @return ParamName Parameter name
+     * Get Parameter name. 
+     * @return ParamName Parameter name.
      */
     public String getParamName() {
         return this.ParamName;
     }
 
     /**
-     * Set Parameter name
-     * @param ParamName Parameter name
+     * Set Parameter name.
+     * @param ParamName Parameter name.
      */
     public void setParamName(String ParamName) {
         this.ParamName = ParamName;
@@ -84,32 +84,32 @@ public class ModifyParamItem extends AbstractModel {
     }
 
     /**
-     * Get Old parameter value (useful only in output parameters). 
-     * @return OldValue Old parameter value (useful only in output parameters).
+     * Get Old parameter value (only useful for output parameters) 
+     * @return OldValue Old parameter value (only useful for output parameters)
      */
     public String getOldValue() {
         return this.OldValue;
     }
 
     /**
-     * Set Old parameter value (useful only in output parameters).
-     * @param OldValue Old parameter value (useful only in output parameters).
+     * Set Old parameter value (only useful for output parameters)
+     * @param OldValue Old parameter value (only useful for output parameters)
      */
     public void setOldValue(String OldValue) {
         this.OldValue = OldValue;
     }
 
     /**
-     * Get libra component type. 
-     * @return Component libra component type.
+     * Get libra component type 
+     * @return Component libra component type
      */
     public String getComponent() {
         return this.Component;
     }
 
     /**
-     * Set libra component type.
-     * @param Component libra component type.
+     * Set libra component type
+     * @param Component libra component type
      */
     public void setComponent(String Component) {
         this.Component = Component;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeBackupListByVaultResponse extends AbstractModel {
 
     /**
-    * Total files of backup that meets the conditions
+    * Total number of backup files that meet the conditions
     */
     @SerializedName("TotalCount")
     @Expose
@@ -45,16 +45,16 @@ public class DescribeBackupListByVaultResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Total files of backup that meets the conditions 
-     * @return TotalCount Total files of backup that meets the conditions
+     * Get Total number of backup files that meet the conditions 
+     * @return TotalCount Total number of backup files that meet the conditions
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Total files of backup that meets the conditions
-     * @param TotalCount Total files of backup that meets the conditions
+     * Set Total number of backup files that meet the conditions
+     * @param TotalCount Total number of backup files that meet the conditions
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

@@ -115,14 +115,14 @@ public class InstanceSet extends AbstractModel {
     private Long MaintainDuration;
 
     /**
-    * Execution start time (seconds from 00:00)
+    * Execution start time (seconds from 00:00:00)
     */
     @SerializedName("MaintainStartTime")
     @Expose
     private Long MaintainStartTime;
 
     /**
-    * The time when it can be executed. Enumeration value: ["Mon","Tue","Wed","Thu","Fri", "Sat", "Sun"].
+    * The time when it can be executed. Enumeration values: ["Mon","Tue","Wed","Thu","Fri", "Sat", "Sun"]
     */
     @SerializedName("MaintainWeekDays")
     @Expose
@@ -351,32 +351,32 @@ public class InstanceSet extends AbstractModel {
     }
 
     /**
-     * Get Execution start time (seconds from 00:00) 
-     * @return MaintainStartTime Execution start time (seconds from 00:00)
+     * Get Execution start time (seconds from 00:00:00) 
+     * @return MaintainStartTime Execution start time (seconds from 00:00:00)
      */
     public Long getMaintainStartTime() {
         return this.MaintainStartTime;
     }
 
     /**
-     * Set Execution start time (seconds from 00:00)
-     * @param MaintainStartTime Execution start time (seconds from 00:00)
+     * Set Execution start time (seconds from 00:00:00)
+     * @param MaintainStartTime Execution start time (seconds from 00:00:00)
      */
     public void setMaintainStartTime(Long MaintainStartTime) {
         this.MaintainStartTime = MaintainStartTime;
     }
 
     /**
-     * Get The time when it can be executed. Enumeration value: ["Mon","Tue","Wed","Thu","Fri", "Sat", "Sun"]. 
-     * @return MaintainWeekDays The time when it can be executed. Enumeration value: ["Mon","Tue","Wed","Thu","Fri", "Sat", "Sun"].
+     * Get The time when it can be executed. Enumeration values: ["Mon","Tue","Wed","Thu","Fri", "Sat", "Sun"] 
+     * @return MaintainWeekDays The time when it can be executed. Enumeration values: ["Mon","Tue","Wed","Thu","Fri", "Sat", "Sun"]
      */
     public String [] getMaintainWeekDays() {
         return this.MaintainWeekDays;
     }
 
     /**
-     * Set The time when it can be executed. Enumeration value: ["Mon","Tue","Wed","Thu","Fri", "Sat", "Sun"].
-     * @param MaintainWeekDays The time when it can be executed. Enumeration value: ["Mon","Tue","Wed","Thu","Fri", "Sat", "Sun"].
+     * Set The time when it can be executed. Enumeration values: ["Mon","Tue","Wed","Thu","Fri", "Sat", "Sun"]
+     * @param MaintainWeekDays The time when it can be executed. Enumeration values: ["Mon","Tue","Wed","Thu","Fri", "Sat", "Sun"]
      */
     public void setMaintainWeekDays(String [] MaintainWeekDays) {
         this.MaintainWeekDays = MaintainWeekDays;

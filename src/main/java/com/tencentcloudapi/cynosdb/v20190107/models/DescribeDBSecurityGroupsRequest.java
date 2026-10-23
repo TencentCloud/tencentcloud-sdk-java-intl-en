@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeDBSecurityGroupsRequest extends AbstractModel {
 
     /**
-    * Specifies that the instance ID must be provided by selecting either InstanceId or InstanceGroupId.
+    * Instance ID (you must import either InstanceId or InstanceGroupId)
     */
     @SerializedName("InstanceId")
     @Expose
@@ -38,8 +38,8 @@ public class DescribeDBSecurityGroupsRequest extends AbstractModel {
     private String InstanceGroupId;
 
     /**
-     * Get Specifies that the instance ID must be provided by selecting either InstanceId or InstanceGroupId. 
-     * @return InstanceId Specifies that the instance ID must be provided by selecting either InstanceId or InstanceGroupId.
+     * Get Instance ID (you must import either InstanceId or InstanceGroupId) 
+     * @return InstanceId Instance ID (you must import either InstanceId or InstanceGroupId)
      * @deprecated
      */
     @Deprecated
@@ -48,8 +48,8 @@ public class DescribeDBSecurityGroupsRequest extends AbstractModel {
     }
 
     /**
-     * Set Specifies that the instance ID must be provided by selecting either InstanceId or InstanceGroupId.
-     * @param InstanceId Specifies that the instance ID must be provided by selecting either InstanceId or InstanceGroupId.
+     * Set Instance ID (you must import either InstanceId or InstanceGroupId)
+     * @param InstanceId Instance ID (you must import either InstanceId or InstanceGroupId)
      * @deprecated
      */
     @Deprecated

@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class ReloadBalanceProxyNodeResponse extends AbstractModel {
 
     /**
-    * Async flow ID
+    * Async process ID
     */
     @SerializedName("FlowId")
     @Expose
     private Long FlowId;
 
     /**
-    * Async task ID
+    * Asynchronous Task ID
     */
     @SerializedName("TaskId")
     @Expose
@@ -45,32 +45,32 @@ public class ReloadBalanceProxyNodeResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Async flow ID 
-     * @return FlowId Async flow ID
+     * Get Async process ID 
+     * @return FlowId Async process ID
      */
     public Long getFlowId() {
         return this.FlowId;
     }
 
     /**
-     * Set Async flow ID
-     * @param FlowId Async flow ID
+     * Set Async process ID
+     * @param FlowId Async process ID
      */
     public void setFlowId(Long FlowId) {
         this.FlowId = FlowId;
     }
 
     /**
-     * Get Async task ID 
-     * @return TaskId Async task ID
+     * Get Asynchronous Task ID 
+     * @return TaskId Asynchronous Task ID
      */
     public Long getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set Async task ID
-     * @param TaskId Async task ID
+     * Set Asynchronous Task ID
+     * @param TaskId Asynchronous Task ID
      */
     public void setTaskId(Long TaskId) {
         this.TaskId = TaskId;

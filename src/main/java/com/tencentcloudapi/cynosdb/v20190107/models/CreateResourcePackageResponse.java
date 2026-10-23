@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class CreateResourcePackageResponse extends AbstractModel {
 
     /**
-    * Big order number
+    * Total Payment Order Number
     */
     @SerializedName("BigDealIds")
     @Expose
     private String [] BigDealIds;
 
     /**
-    * Each item has only one `dealName`, through which you need to ensure the idempotency of the delivery API.
+    * Each item corresponds to a dealName. The business needs to ensure the delivery API idempotency based on the dealName.
     */
     @SerializedName("DealNames")
     @Expose
@@ -45,32 +45,32 @@ public class CreateResourcePackageResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Big order number 
-     * @return BigDealIds Big order number
+     * Get Total Payment Order Number 
+     * @return BigDealIds Total Payment Order Number
      */
     public String [] getBigDealIds() {
         return this.BigDealIds;
     }
 
     /**
-     * Set Big order number
-     * @param BigDealIds Big order number
+     * Set Total Payment Order Number
+     * @param BigDealIds Total Payment Order Number
      */
     public void setBigDealIds(String [] BigDealIds) {
         this.BigDealIds = BigDealIds;
     }
 
     /**
-     * Get Each item has only one `dealName`, through which you need to ensure the idempotency of the delivery API. 
-     * @return DealNames Each item has only one `dealName`, through which you need to ensure the idempotency of the delivery API.
+     * Get Each item corresponds to a dealName. The business needs to ensure the delivery API idempotency based on the dealName. 
+     * @return DealNames Each item corresponds to a dealName. The business needs to ensure the delivery API idempotency based on the dealName.
      */
     public String [] getDealNames() {
         return this.DealNames;
     }
 
     /**
-     * Set Each item has only one `dealName`, through which you need to ensure the idempotency of the delivery API.
-     * @param DealNames Each item has only one `dealName`, through which you need to ensure the idempotency of the delivery API.
+     * Set Each item corresponds to a dealName. The business needs to ensure the delivery API idempotency based on the dealName.
+     * @param DealNames Each item corresponds to a dealName. The business needs to ensure the delivery API idempotency based on the dealName.
      */
     public void setDealNames(String [] DealNames) {
         this.DealNames = DealNames;

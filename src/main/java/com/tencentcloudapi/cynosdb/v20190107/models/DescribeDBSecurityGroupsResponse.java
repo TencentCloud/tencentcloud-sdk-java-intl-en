@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeDBSecurityGroupsResponse extends AbstractModel {
 
     /**
-    * Security group information
+    * Security Group Information
     */
     @SerializedName("Groups")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeDBSecurityGroupsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Security group information 
-     * @return Groups Security group information
+     * Get Security Group Information 
+     * @return Groups Security Group Information
      */
     public SecurityGroup [] getGroups() {
         return this.Groups;
     }
 
     /**
-     * Set Security group information
-     * @param Groups Security group information
+     * Set Security Group Information
+     * @param Groups Security Group Information
      */
     public void setGroups(SecurityGroup [] Groups) {
         this.Groups = Groups;

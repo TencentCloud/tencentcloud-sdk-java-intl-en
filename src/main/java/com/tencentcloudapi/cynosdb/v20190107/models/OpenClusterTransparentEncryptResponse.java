@@ -26,7 +26,6 @@ public class OpenClusterTransparentEncryptResponse extends AbstractModel {
     /**
     * Asynchronous task ID.
 
-
     */
     @SerializedName("TaskId")
     @Expose
@@ -41,10 +40,8 @@ public class OpenClusterTransparentEncryptResponse extends AbstractModel {
 
     /**
      * Get Asynchronous task ID.
-
  
      * @return TaskId Asynchronous task ID.
-
 
      */
     public Long getTaskId() {
@@ -54,9 +51,7 @@ public class OpenClusterTransparentEncryptResponse extends AbstractModel {
     /**
      * Set Asynchronous task ID.
 
-
      * @param TaskId Asynchronous task ID.
-
 
      */
     public void setTaskId(Long TaskId) {

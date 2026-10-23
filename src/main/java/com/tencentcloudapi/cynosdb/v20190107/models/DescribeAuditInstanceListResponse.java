@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeAuditInstanceListResponse extends AbstractModel {
 
     /**
-    * Total number of instances meeting the query conditions.
+    * Total number of eligible instances.
     */
     @SerializedName("TotalCount")
     @Expose
@@ -45,16 +45,16 @@ public class DescribeAuditInstanceListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Total number of instances meeting the query conditions. 
-     * @return TotalCount Total number of instances meeting the query conditions.
+     * Get Total number of eligible instances. 
+     * @return TotalCount Total number of eligible instances.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Total number of instances meeting the query conditions.
-     * @param TotalCount Total number of instances meeting the query conditions.
+     * Set Total number of eligible instances.
+     * @param TotalCount Total number of eligible instances.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

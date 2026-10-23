@@ -31,21 +31,21 @@ public class RollbackToNewClusterResponse extends AbstractModel {
     private String TranId;
 
     /**
-    * <p>Order ID</p>
+    * <p>Order ID.</p>
     */
     @SerializedName("DealNames")
     @Expose
     private String [] DealNames;
 
     /**
-    * <p>Resource ID list (This field is no longer maintained. Please use the dealNames field to query the API DescribeResourcesByDealName to obtain resource IDs.)</p>
+    * <p>Resource ID list (this field is no longer maintained. To obtain resource IDs, please use the dealNames field to query the DescribeResourcesByDealName API)</p>
     */
     @SerializedName("ResourceIds")
     @Expose
     private String [] ResourceIds;
 
     /**
-    * <p>Cluster ID list (This field is no longer maintained. Please use the dealNames field to query the API DescribeResourcesByDealName to obtain cluster IDs.)</p>
+    * <p>Cluster ID list (this field is no longer maintained; please use the dealNames field to query the DescribeResourcesByDealName API to get the cluster ID)</p>
     */
     @SerializedName("ClusterIds")
     @Expose
@@ -82,48 +82,48 @@ public class RollbackToNewClusterResponse extends AbstractModel {
     }
 
     /**
-     * Get <p>Order ID</p> 
-     * @return DealNames <p>Order ID</p>
+     * Get <p>Order ID.</p> 
+     * @return DealNames <p>Order ID.</p>
      */
     public String [] getDealNames() {
         return this.DealNames;
     }
 
     /**
-     * Set <p>Order ID</p>
-     * @param DealNames <p>Order ID</p>
+     * Set <p>Order ID.</p>
+     * @param DealNames <p>Order ID.</p>
      */
     public void setDealNames(String [] DealNames) {
         this.DealNames = DealNames;
     }
 
     /**
-     * Get <p>Resource ID list (This field is no longer maintained. Please use the dealNames field to query the API DescribeResourcesByDealName to obtain resource IDs.)</p> 
-     * @return ResourceIds <p>Resource ID list (This field is no longer maintained. Please use the dealNames field to query the API DescribeResourcesByDealName to obtain resource IDs.)</p>
+     * Get <p>Resource ID list (this field is no longer maintained. To obtain resource IDs, please use the dealNames field to query the DescribeResourcesByDealName API)</p> 
+     * @return ResourceIds <p>Resource ID list (this field is no longer maintained. To obtain resource IDs, please use the dealNames field to query the DescribeResourcesByDealName API)</p>
      */
     public String [] getResourceIds() {
         return this.ResourceIds;
     }
 
     /**
-     * Set <p>Resource ID list (This field is no longer maintained. Please use the dealNames field to query the API DescribeResourcesByDealName to obtain resource IDs.)</p>
-     * @param ResourceIds <p>Resource ID list (This field is no longer maintained. Please use the dealNames field to query the API DescribeResourcesByDealName to obtain resource IDs.)</p>
+     * Set <p>Resource ID list (this field is no longer maintained. To obtain resource IDs, please use the dealNames field to query the DescribeResourcesByDealName API)</p>
+     * @param ResourceIds <p>Resource ID list (this field is no longer maintained. To obtain resource IDs, please use the dealNames field to query the DescribeResourcesByDealName API)</p>
      */
     public void setResourceIds(String [] ResourceIds) {
         this.ResourceIds = ResourceIds;
     }
 
     /**
-     * Get <p>Cluster ID list (This field is no longer maintained. Please use the dealNames field to query the API DescribeResourcesByDealName to obtain cluster IDs.)</p> 
-     * @return ClusterIds <p>Cluster ID list (This field is no longer maintained. Please use the dealNames field to query the API DescribeResourcesByDealName to obtain cluster IDs.)</p>
+     * Get <p>Cluster ID list (this field is no longer maintained; please use the dealNames field to query the DescribeResourcesByDealName API to get the cluster ID)</p> 
+     * @return ClusterIds <p>Cluster ID list (this field is no longer maintained; please use the dealNames field to query the DescribeResourcesByDealName API to get the cluster ID)</p>
      */
     public String [] getClusterIds() {
         return this.ClusterIds;
     }
 
     /**
-     * Set <p>Cluster ID list (This field is no longer maintained. Please use the dealNames field to query the API DescribeResourcesByDealName to obtain cluster IDs.)</p>
-     * @param ClusterIds <p>Cluster ID list (This field is no longer maintained. Please use the dealNames field to query the API DescribeResourcesByDealName to obtain cluster IDs.)</p>
+     * Set <p>Cluster ID list (this field is no longer maintained; please use the dealNames field to query the DescribeResourcesByDealName API to get the cluster ID)</p>
+     * @param ClusterIds <p>Cluster ID list (this field is no longer maintained; please use the dealNames field to query the DescribeResourcesByDealName API to get the cluster ID)</p>
      */
     public void setClusterIds(String [] ClusterIds) {
         this.ClusterIds = ClusterIds;

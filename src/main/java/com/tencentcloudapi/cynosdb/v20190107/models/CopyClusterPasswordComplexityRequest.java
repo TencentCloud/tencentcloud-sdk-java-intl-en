@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class CopyClusterPasswordComplexityRequest extends AbstractModel {
 
     /**
-    * A parameter used to replicate the array of cluster IDs
+    * Copy the cluster ID array, for example ["cynosdbmysql-bzxxrmtq","cynosdbmysql-qwer"]
     */
     @SerializedName("ClusterIds")
     @Expose
     private String [] ClusterIds;
 
     /**
-    * Cluster ID
+    * Cluster id, for example, cynosdbmysql-bzxxrmtq
     */
     @SerializedName("SourceClusterId")
     @Expose
     private String SourceClusterId;
 
     /**
-     * Get A parameter used to replicate the array of cluster IDs 
-     * @return ClusterIds A parameter used to replicate the array of cluster IDs
+     * Get Copy the cluster ID array, for example ["cynosdbmysql-bzxxrmtq","cynosdbmysql-qwer"] 
+     * @return ClusterIds Copy the cluster ID array, for example ["cynosdbmysql-bzxxrmtq","cynosdbmysql-qwer"]
      */
     public String [] getClusterIds() {
         return this.ClusterIds;
     }
 
     /**
-     * Set A parameter used to replicate the array of cluster IDs
-     * @param ClusterIds A parameter used to replicate the array of cluster IDs
+     * Set Copy the cluster ID array, for example ["cynosdbmysql-bzxxrmtq","cynosdbmysql-qwer"]
+     * @param ClusterIds Copy the cluster ID array, for example ["cynosdbmysql-bzxxrmtq","cynosdbmysql-qwer"]
      */
     public void setClusterIds(String [] ClusterIds) {
         this.ClusterIds = ClusterIds;
     }
 
     /**
-     * Get Cluster ID 
-     * @return SourceClusterId Cluster ID
+     * Get Cluster id, for example, cynosdbmysql-bzxxrmtq 
+     * @return SourceClusterId Cluster id, for example, cynosdbmysql-bzxxrmtq
      */
     public String getSourceClusterId() {
         return this.SourceClusterId;
     }
 
     /**
-     * Set Cluster ID
-     * @param SourceClusterId Cluster ID
+     * Set Cluster id, for example, cynosdbmysql-bzxxrmtq
+     * @param SourceClusterId Cluster id, for example, cynosdbmysql-bzxxrmtq
      */
     public void setSourceClusterId(String SourceClusterId) {
         this.SourceClusterId = SourceClusterId;

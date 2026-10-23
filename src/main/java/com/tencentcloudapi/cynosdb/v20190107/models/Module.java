@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class Module extends AbstractModel {
 
     /**
-    * Whether it is supported. Valid values: `yes`, `no`.
+    * Whether it is supported. Available values: yes, no
     */
     @SerializedName("IsDisable")
     @Expose
     private String IsDisable;
 
     /**
-    * Module name
+    * Module Name
     */
     @SerializedName("ModuleName")
     @Expose
     private String ModuleName;
 
     /**
-     * Get Whether it is supported. Valid values: `yes`, `no`. 
-     * @return IsDisable Whether it is supported. Valid values: `yes`, `no`.
+     * Get Whether it is supported. Available values: yes, no 
+     * @return IsDisable Whether it is supported. Available values: yes, no
      */
     public String getIsDisable() {
         return this.IsDisable;
     }
 
     /**
-     * Set Whether it is supported. Valid values: `yes`, `no`.
-     * @param IsDisable Whether it is supported. Valid values: `yes`, `no`.
+     * Set Whether it is supported. Available values: yes, no
+     * @param IsDisable Whether it is supported. Available values: yes, no
      */
     public void setIsDisable(String IsDisable) {
         this.IsDisable = IsDisable;
     }
 
     /**
-     * Get Module name 
-     * @return ModuleName Module name
+     * Get Module Name 
+     * @return ModuleName Module Name
      */
     public String getModuleName() {
         return this.ModuleName;
     }
 
     /**
-     * Set Module name
-     * @param ModuleName Module name
+     * Set Module Name
+     * @param ModuleName Module Name
      */
     public void setModuleName(String ModuleName) {
         this.ModuleName = ModuleName;

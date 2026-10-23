@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class ModifyResourcePackageNameRequest extends AbstractModel {
 
     /**
-    * The unique ID of a resource pack
+    * Unique ID of the resource package
     */
     @SerializedName("PackageId")
     @Expose
     private String PackageId;
 
     /**
-    * Custom resource pack name, which can contains up to 120 characters.
+    * Custom resource package name, supporting up to 120 characters.
     */
     @SerializedName("PackageName")
     @Expose
     private String PackageName;
 
     /**
-     * Get The unique ID of a resource pack 
-     * @return PackageId The unique ID of a resource pack
+     * Get Unique ID of the resource package 
+     * @return PackageId Unique ID of the resource package
      */
     public String getPackageId() {
         return this.PackageId;
     }
 
     /**
-     * Set The unique ID of a resource pack
-     * @param PackageId The unique ID of a resource pack
+     * Set Unique ID of the resource package
+     * @param PackageId Unique ID of the resource package
      */
     public void setPackageId(String PackageId) {
         this.PackageId = PackageId;
     }
 
     /**
-     * Get Custom resource pack name, which can contains up to 120 characters. 
-     * @return PackageName Custom resource pack name, which can contains up to 120 characters.
+     * Get Custom resource package name, supporting up to 120 characters. 
+     * @return PackageName Custom resource package name, supporting up to 120 characters.
      */
     public String getPackageName() {
         return this.PackageName;
     }
 
     /**
-     * Set Custom resource pack name, which can contains up to 120 characters.
-     * @param PackageName Custom resource pack name, which can contains up to 120 characters.
+     * Set Custom resource package name, supporting up to 120 characters.
+     * @param PackageName Custom resource package name, supporting up to 120 characters.
      */
     public void setPackageName(String PackageName) {
         this.PackageName = PackageName;

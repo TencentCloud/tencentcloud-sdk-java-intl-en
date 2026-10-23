@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeResourcesByDealNameResponse extends AbstractModel {
 
     /**
-    * Billable resource ID information array
+    * Billing resource id information array
     */
     @SerializedName("BillingResourceInfos")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeResourcesByDealNameResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Billable resource ID information array 
-     * @return BillingResourceInfos Billable resource ID information array
+     * Get Billing resource id information array 
+     * @return BillingResourceInfos Billing resource id information array
      */
     public BillingResourceInfo [] getBillingResourceInfos() {
         return this.BillingResourceInfos;
     }
 
     /**
-     * Set Billable resource ID information array
-     * @param BillingResourceInfos Billable resource ID information array
+     * Set Billing resource id information array
+     * @param BillingResourceInfos Billing resource id information array
      */
     public void setBillingResourceInfos(BillingResourceInfo [] BillingResourceInfos) {
         this.BillingResourceInfos = BillingResourceInfos;

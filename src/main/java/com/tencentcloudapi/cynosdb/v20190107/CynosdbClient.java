@@ -39,7 +39,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *This interface (ActivateInstance) restores access to isolated instances.
+     *This API is used to restore access to isolated instances.
      * @param req ActivateInstanceRequest
      * @return ActivateInstanceResponse
      * @throws TencentCloudSDKException
@@ -72,7 +72,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *This interface (AddClusterSlaveZone) is used to enable multi-az deployment for a cluster.
+     *This API is used to enable multi-AZ deployment for a cluster.
      * @param req AddClusterSlaveZoneRequest
      * @return AddClusterSlaveZoneResponse
      * @throws TencentCloudSDKException
@@ -105,7 +105,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *Add a read-only instance to the serverless cluster
+     *Add a read-only instance to a serverless cluster
      * @param req AddServerlessRoInstancesRequest
      * @return AddServerlessRoInstancesResponse
      * @throws TencentCloudSDKException
@@ -138,7 +138,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *Calculate the backup file list that will expire and be deleted after modifying the backup retention period
+     *Calculate the backup file list that will expire and be deleted after the backup retention period is modified.
      * @param req CalculateBackupSaveSecExpiresRequest
      * @return CalculateBackupSaveSecExpiresResponse
      * @throws TencentCloudSDKException
@@ -146,6 +146,17 @@ public class CynosdbClient extends AbstractClient{
     public CalculateBackupSaveSecExpiresResponse CalculateBackupSaveSecExpires(CalculateBackupSaveSecExpiresRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CalculateBackupSaveSecExpires", CalculateBackupSaveSecExpiresResponse.class);
+    }
+
+    /**
+     *Cancel to be executed tasks
+     * @param req CancelTaskRequest
+     * @return CancelTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public CancelTaskResponse CancelTask(CancelTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CancelTask", CancelTaskResponse.class);
     }
 
     /**
@@ -160,7 +171,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *This API is used to check if it is possible to trigger cross-AZ migration.
+     *This API is used to check whether cross-AZ migration can be initiated.
      * @param req CheckTransferClusterZoneRequest
      * @return CheckTransferClusterZoneResponse
      * @throws TencentCloudSDKException
@@ -171,7 +182,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *This API is used to close the database audit service for TDSQL-C MySQL instances.
+     *This API is used to close the database audit service for a TDSQL-C MySQL instance.
      * @param req CloseAuditServiceRequest
      * @return CloseAuditServiceResponse
      * @throws TencentCloudSDKException
@@ -182,7 +193,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *This API is used to close cluster password complexity.
+     *This API is used to disable password complexity for a cluster.
      * @param req CloseClusterPasswordComplexityRequest
      * @return CloseClusterPasswordComplexityResponse
      * @throws TencentCloudSDKException
@@ -193,7 +204,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *This API is used to close the database proxy service of a cluster.
+     *This API is used to shut down the database proxy service of a cluster.
      * @param req CloseProxyRequest
      * @return CloseProxyResponse
      * @throws TencentCloudSDKException
@@ -215,7 +226,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *This API is used to disable SSL encryption.
+     *Disable SSL encryption
      * @param req CloseSSLRequest
      * @return CloseSSLResponse
      * @throws TencentCloudSDKException
@@ -226,7 +237,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *This interface (CloseWan) is used to disable public network.
+     *This API is used to disable public network.
      * @param req CloseWanRequest
      * @return CloseWanResponse
      * @throws TencentCloudSDKException
@@ -237,7 +248,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *Copy backup files to the designated safe
+     *Copy the backup file to the designated backup safe.
      * @param req CopyBackupToVaultRequest
      * @return CopyBackupToVaultResponse
      * @throws TencentCloudSDKException
@@ -270,7 +281,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *This API is used to create audit rule templates.
+     *This API is used to create an audit rule template.
      * @param req CreateAuditRuleTemplateRequest
      * @return CreateAuditRuleTemplateResponse
      * @throws TencentCloudSDKException
@@ -314,7 +325,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *This API is used to purchase new clusters.
+     *This API is used to create a cluster.
      * @param req CreateClustersRequest
      * @return CreateClustersResponse
      * @throws TencentCloudSDKException
@@ -325,7 +336,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *This API is used to create a newly purchased cluster.
+     *This API is used to purchase a new cluster.
      * @param req CreateIntegrateClusterRequest
      * @return CreateIntegrateClusterResponse
      * @throws TencentCloudSDKException
@@ -358,7 +369,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *This API is used to create parameter templates.
+     *This API is used to create a parameter template.
      * @param req CreateParamTemplateRequest
      * @return CreateParamTemplateResponse
      * @throws TencentCloudSDKException
@@ -369,7 +380,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *This API is used to enable the database proxy of a cluster.
+     *This API is used to enable the database proxy for a cluster.
      * @param req CreateProxyRequest
      * @return CreateProxyResponse
      * @throws TencentCloudSDKException
@@ -391,7 +402,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *This API is used to purchase new resource packets.
+     *This API is used to create a resource package.
      * @param req CreateResourcePackageRequest
      * @return CreateResourcePackageResponse
      * @throws TencentCloudSDKException
@@ -402,7 +413,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *Create a backup safe
+     *This API is used to create a backup vault.
      * @param req CreateVaultRequest
      * @return CreateVaultResponse
      * @throws TencentCloudSDKException
@@ -435,7 +446,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *This API is used to delete manual backups for a cluster. Automatic backups cannot be deleted.
+     *This API is used to delete a manual backup for a cluster. Auto-backups cannot be deleted.
      * @param req DeleteBackupRequest
      * @return DeleteBackupResponse
      * @throws TencentCloudSDKException
@@ -446,7 +457,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *Delete specified backup files from the safe
+     *Delete the specified backup file from the backup safe.
      * @param req DeleteBackupVaultRequest
      * @return DeleteBackupVaultResponse
      * @throws TencentCloudSDKException
@@ -468,7 +479,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *This interface is used to delete a database.
+     *This API is used to delete a database.
      * @param req DeleteClusterDatabaseRequest
      * @return DeleteClusterDatabaseResponse
      * @throws TencentCloudSDKException
@@ -479,7 +490,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *This API is used to delete residual backups for cluster deletion.
+     *This API is used to delete residual backups for a cluster.
      * @param req DeleteClusterSaveBackupRequest
      * @return DeleteClusterSaveBackupResponse
      * @throws TencentCloudSDKException
@@ -512,7 +523,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *This API is used to delete a parameter template.
+     *This API is used to delete a user-created parameter template.
      * @param req DeleteParamTemplateRequest
      * @return DeleteParamTemplateResponse
      * @throws TencentCloudSDKException
@@ -534,7 +545,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *This API is used to query account privileges.
+     *This API is used to query the permissions of an account.
      * @param req DescribeAccountPrivilegesRequest
      * @return DescribeAccountPrivilegesResponse
      * @throws TencentCloudSDKException
@@ -578,7 +589,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *This API is used to query audit rule template information.
+     *This API is used to query the information of audit rule templates.
      * @param req DescribeAuditRuleTemplatesRequest
      * @return DescribeAuditRuleTemplatesResponse
      * @throws TencentCloudSDKException
@@ -589,7 +600,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *This API is used to obtain the audit rules of the instance.
+     *This API is used to obtain audit rules of the instance.
      * @param req DescribeAuditRuleWithInstanceIdsRequest
      * @return DescribeAuditRuleWithInstanceIdsResponse
      * @throws TencentCloudSDKException
@@ -600,7 +611,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *This API is used to obtain the backup configuration information of a specified cluster, including the full backup time period and the backup file retention time.
+     *This API is used to obtain the backup configuration information of a specified cluster, including the full backup time period and backup file retention time.
      * @param req DescribeBackupConfigRequest
      * @return DescribeBackupConfigResponse
      * @throws TencentCloudSDKException
@@ -611,7 +622,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *This API is used to query the download source limit of the default backup configured by the user in the current region.
+     *This API is used to query the default backup download access restrictions configured by the user in the current region.
      * @param req DescribeBackupDownloadRestrictionRequest
      * @return DescribeBackupDownloadRestrictionResponse
      * @throws TencentCloudSDKException
@@ -622,7 +633,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *This API is used to query the download link of cluster backup files.
+     *This API is used to query the download URL of cluster backup files.
      * @param req DescribeBackupDownloadUrlRequest
      * @return DescribeBackupDownloadUrlResponse
      * @throws TencentCloudSDKException
@@ -633,7 +644,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *This API is used to query the default backup download access restrictions of user-level settings in the current region.
+     *This API is used to query the default backup download access restrictions for user-level settings in the current region.
      * @param req DescribeBackupDownloadUserRestrictionRequest
      * @return DescribeBackupDownloadUserRestrictionResponse
      * @throws TencentCloudSDKException
@@ -677,7 +688,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *This API is used to query binlog configurations.
+     *This API is used to query the binlog configuration.
      * @param req DescribeBinlogConfigRequest
      * @return DescribeBinlogConfigResponse
      * @throws TencentCloudSDKException
@@ -688,7 +699,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *This API is used to query the download address of Binlog.
+     *This API is used to query the download URL of a Binlog.
      * @param req DescribeBinlogDownloadUrlRequest
      * @return DescribeBinlogDownloadUrlResponse
      * @throws TencentCloudSDKException
@@ -699,7 +710,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *Query binlog backups in the insurance box
+     *Queries binlog backups in a vault
      * @param req DescribeBinlogListByVaultRequest
      * @return DescribeBinlogListByVaultResponse
      * @throws TencentCloudSDKException
@@ -710,7 +721,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *This API is used to query the binlog retention period of a cluster in days.
+     *This API is used to query the Binlog retention days of a cluster.
      * @param req DescribeBinlogSaveDaysRequest
      * @return DescribeBinlogSaveDaysResponse
      * @throws TencentCloudSDKException
@@ -721,7 +732,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *This interface (DescribeBinlogs) queries the cluster binlog list.
+     *This API is used to query the Binlog list of a cluster.
      * @param req DescribeBinlogsRequest
      * @return DescribeBinlogsResponse
      * @throws TencentCloudSDKException
@@ -732,7 +743,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *this interface is used for querying parameter comparison after specification adjustment.
+     *This API is used to query the parameter comparison for scaling.
      * @param req DescribeChangedParamsAfterUpgradeRequest
      * @return DescribeChangedParamsAfterUpgradeResponse
      * @throws TencentCloudSDKException
@@ -743,7 +754,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *This API is used to access the table list.
+     *Access the table list.
      * @param req DescribeClusterDatabaseTablesRequest
      * @return DescribeClusterDatabaseTablesResponse
      * @throws TencentCloudSDKException
@@ -754,7 +765,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *This API is used to obtain cluster database list.
+     *This API is used to obtain the cluster database list.
      * @param req DescribeClusterDatabasesRequest
      * @return DescribeClusterDatabasesResponse
      * @throws TencentCloudSDKException
@@ -776,7 +787,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *This API is used to query database list.
+     *This API is used to query the database list.
      * @param req DescribeClusterDetailDatabasesRequest
      * @return DescribeClusterDetailDatabasesResponse
      * @throws TencentCloudSDKException
@@ -787,7 +798,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *This API is used to query instance group info.
+     *This API is used to query instance group information.
      * @param req DescribeClusterInstanceGroupsRequest
      * @return DescribeClusterInstanceGroupsResponse
      * @throws TencentCloudSDKException
@@ -798,7 +809,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *This API is used to query instance groups.
+     *This API is used to query instance group information. This API is deprecated. DescribeClusterInstanceGroups is recommended.
      * @param req DescribeClusterInstanceGrpsRequest
      * @return DescribeClusterInstanceGrpsResponse
      * @throws TencentCloudSDKException
@@ -820,7 +831,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *This API is used to view the cluster password complexity details.
+     *This API is used to view the password complexity details of a cluster.
      * @param req DescribeClusterPasswordComplexityRequest
      * @return DescribeClusterPasswordComplexityResponse
      * @throws TencentCloudSDKException
@@ -853,7 +864,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *This API is used to query cluster transparent encryption information.
+     *Queries cluster transparent encryption information
      * @param req DescribeClusterTransparentEncryptInfoRequest
      * @return DescribeClusterTransparentEncryptInfoResponse
      * @throws TencentCloudSDKException
@@ -952,7 +963,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *This interface (DescribeInstanceSpecs) is used to query the instance specifications available for purchase on the query purchase page.
+     *This API is used to query the instance specifications available for purchase on the purchase page.
      * @param req DescribeInstanceSpecsRequest
      * @return DescribeInstanceSpecsResponse
      * @throws TencentCloudSDKException
@@ -963,7 +974,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *Query instance specifications based on operation type
+     *Query instance specifications according to the operation type.
      * @param req DescribeInstanceSpecsByOperationTypeRequest
      * @return DescribeInstanceSpecsByOperationTypeResponse
      * @throws TencentCloudSDKException
@@ -974,7 +985,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *This API is used to query the list of instances.
+     *This API is used to query the instance list.
      * @param req DescribeInstancesRequest
      * @return DescribeInstancesResponse
      * @throws TencentCloudSDKException
@@ -1007,7 +1018,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *This interface is used for querying the recycle bin instance list.
+     *This API is used to query the recycle bin instance list.
      * @param req DescribeIsolatedInstancesRequest
      * @return DescribeIsolatedInstancesResponse
      * @throws TencentCloudSDKException
@@ -1051,7 +1062,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *This API is used to view the advanced mapping rule of the analysis cluster.
+     *This API is used to view advanced mapping rules for an analysis cluster.
      * @param req DescribeLibraDBClusterAutoMapRuleRequest
      * @return DescribeLibraDBClusterAutoMapRuleResponse
      * @throws TencentCloudSDKException
@@ -1062,7 +1073,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *Query TDSQL-C analysis cluster information
+     *Queries TDSQL-C analysis cluster information
      * @param req DescribeLibraDBClusterDetailRequest
      * @return DescribeLibraDBClusterDetailResponse
      * @throws TencentCloudSDKException
@@ -1073,7 +1084,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *This API is used to view the database/table mapping relationship of an analysis cluster.
+     *This API is used to view the mapping relationship between databases and tables in an analysis cluster.
      * @param req DescribeLibraDBClusterTableMappingRequest
      * @return DescribeLibraDBClusterTableMappingResponse
      * @throws TencentCloudSDKException
@@ -1084,7 +1095,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *Query the analysis cluster list
+     *This API is used to query the list of analysis clusters.
      * @param req DescribeLibraDBClustersRequest
      * @return DescribeLibraDBClustersResponse
      * @throws TencentCloudSDKException
@@ -1095,7 +1106,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *This API is used to query the source instance information of an analysis cluster.
+     *This API is used to query source instance information of the analysis cluster.
      * @param req DescribeLibraDBDataSourceRequest
      * @return DescribeLibraDBDataSourceResponse
      * @throws TencentCloudSDKException
@@ -1106,7 +1117,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *This API is used to query the analysis engine forwarding parameters.
+     *This API is used to query the forwarding parameters of the analysis engine.
      * @param req DescribeLibraDBForwardConfigRequest
      * @return DescribeLibraDBForwardConfigResponse
      * @throws TencentCloudSDKException
@@ -1128,7 +1139,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *This API is used to query the specification list of the read-only analysis engine supported in the region.
+     *This API is used to query the specification information list supported for read-only analysis engines in the region.
      * @param req DescribeLibraDBInstanceSpecsRequest
      * @return DescribeLibraDBInstanceSpecsResponse
      * @throws TencentCloudSDKException
@@ -1139,7 +1150,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *This API is used to query slow SQL details in the read-only analysis engine.
+     *This API is used to query slow SQL details of the read-only analysis engine.
      * @param req DescribeLibraDBSlowLogsRequest
      * @return DescribeLibraDBSlowLogsResponse
      * @throws TencentCloudSDKException
@@ -1150,7 +1161,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *Query the list of supported versions for the read-only analysis engine
+     *This API is used to query the list of supported versions for the read-only analysis engine.
      * @param req DescribeLibraDBVersionRequest
      * @return DescribeLibraDBVersionResponse
      * @throws TencentCloudSDKException
@@ -1161,7 +1172,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *This interface (DescribeMaintainPeriod) is used to query the instance maintenance window.
+     *This API is used to query instance maintenance window.
      * @param req DescribeMaintainPeriodRequest
      * @return DescribeMaintainPeriodResponse
      * @throws TencentCloudSDKException
@@ -1183,7 +1194,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *This API is used to query all parameter template information under the user-specified product.
+     *This API is used to query all parameter template information under a user-specified product.
      * @param req DescribeParamTemplatesRequest
      * @return DescribeParamTemplatesResponse
      * @throws TencentCloudSDKException
@@ -1205,7 +1216,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *This API is used to query agent list.
+     *This API is used to query the database proxy list.
      * @param req DescribeProxiesRequest
      * @return DescribeProxiesResponse
      * @throws TencentCloudSDKException
@@ -1216,7 +1227,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *This API is used to query the list of proxy nodes.
+     *This API is used to query the proxy node list.
      * @param req DescribeProxyNodesRequest
      * @return DescribeProxyNodesResponse
      * @throws TencentCloudSDKException
@@ -1235,6 +1246,17 @@ public class CynosdbClient extends AbstractClient{
     public DescribeProxySpecsResponse DescribeProxySpecs(DescribeProxySpecsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeProxySpecs", DescribeProxySpecsResponse.class);
+    }
+
+    /**
+     *This API is used to query regional inventory for database proxy.
+     * @param req DescribeProxyZoneStocksRequest
+     * @return DescribeProxyZoneStocksResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeProxyZoneStocksResponse DescribeProxyZoneStocks(DescribeProxyZoneStocksRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeProxyZoneStocks", DescribeProxyZoneStocksResponse.class);
     }
 
     /**
@@ -1271,7 +1293,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *This API is used to query resource package list.
+     *This API is used to query the resource package list.
      * @param req DescribeResourcePackageListRequest
      * @return DescribeResourcePackageListResponse
      * @throws TencentCloudSDKException
@@ -1293,7 +1315,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *This interface (DescribeResourcesByDealName) is used to query order-associated instances.
+     *This API is used to query order associated instances.
      * @param req DescribeResourcesByDealNameRequest
      * @return DescribeResourcesByDealNameResponse
      * @throws TencentCloudSDKException
@@ -1315,7 +1337,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *This API is used to query the execution plan details.
+     *This API is used to query the details of a query execution plan.
      * @param req DescribeSQLExecutionPlanRequest
      * @return DescribeSQLExecutionPlanResponse
      * @throws TencentCloudSDKException
@@ -1337,7 +1359,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *This API is used to query available specifications of Serverless instances.
+     *Query the available specifications of a Serverless instance
      * @param req DescribeServerlessInstanceSpecsRequest
      * @return DescribeServerlessInstanceSpecsResponse
      * @throws TencentCloudSDKException
@@ -1348,7 +1370,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *This API is used to query serverless policies.
+     *Queries a serverless policy.
      * @param req DescribeServerlessStrategyRequest
      * @return DescribeServerlessStrategyResponse
      * @throws TencentCloudSDKException
@@ -1359,7 +1381,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *This API is used to query from availability zones.
+     *Query the secondary AZ
      * @param req DescribeSlaveZonesRequest
      * @return DescribeSlaveZonesResponse
      * @throws TencentCloudSDKException
@@ -1381,7 +1403,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *This API is used to query task lists.
+     *This API is used to query the task list.
      * @param req DescribeTasksRequest
      * @return DescribeTasksResponse
      * @throws TencentCloudSDKException
@@ -1392,7 +1414,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *Query the cluster information list associated with the backup safe
+     *This API is used to query the cluster information list associated with a backup safe.
      * @param req DescribeVaultBackupClusterInfoRequest
      * @return DescribeVaultBackupClusterInfoResponse
      * @throws TencentCloudSDKException
@@ -1403,7 +1425,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *Query backup safe list, support page, filter and sort.
+     *Queries the backup vault list, supporting pagination, filtering, and sorting.
      * @param req DescribeVaultsRequest
      * @return DescribeVaultsResponse
      * @throws TencentCloudSDKException
@@ -1414,7 +1436,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *This API is used to query marketable regional availability zone information.
+     *This API is used to query the information of marketable regional availability zones.
      * @param req DescribeZonesRequest
      * @return DescribeZonesResponse
      * @throws TencentCloudSDKException
@@ -1447,7 +1469,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *This API is used to export the error logs of an instance.
+     *This API is used to export instance error logs.
      * @param req ExportInstanceErrorLogsRequest
      * @return ExportInstanceErrorLogsResponse
      * @throws TencentCloudSDKException
@@ -1458,7 +1480,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *This API is used to export instance slow logs.
+     *This API is used to export slow logs of an instance.
      * @param req ExportInstanceSlowQueriesRequest
      * @return ExportInstanceSlowQueriesResponse
      * @throws TencentCloudSDKException
@@ -1469,7 +1491,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *This API is used to export the usage details of a resource package.
+     *Export resource package usage details
      * @param req ExportResourcePackageDeductDetailsRequest
      * @return ExportResourcePackageDeductDetailsResponse
      * @throws TencentCloudSDKException
@@ -1480,7 +1502,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *This API is used to grant permissions to authorized accounts in batch.
+     *This API is used to grant account permissions in batches.
      * @param req GrantAccountPrivilegesRequest
      * @return GrantAccountPrivilegesResponse
      * @throws TencentCloudSDKException
@@ -1491,7 +1513,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *This interface (InquirePriceCreate) is used for price inquiry of newly purchased clusters.
+     *This API is used to query the price of a newly purchased cluster.
      * @param req InquirePriceCreateRequest
      * @return InquirePriceCreateResponse
      * @throws TencentCloudSDKException
@@ -1502,7 +1524,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *This API is used to query the price for modifying the specifications of a prepaid cluster.
+     *Inquires about the price of changing the configuration of a prepaid cluster
      * @param req InquirePriceModifyRequest
      * @return InquirePriceModifyResponse
      * @throws TencentCloudSDKException
@@ -1513,7 +1535,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *This API is used to inquire prices in batch.
+     *This API is used to batch inquire prices.
      * @param req InquirePriceMultiSpecRequest
      * @return InquirePriceMultiSpecResponse
      * @throws TencentCloudSDKException
@@ -1535,7 +1557,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *This interface (IsolateCluster) is used to isolate a cluster.
+     *This API is used to isolate a cluster.
      * @param req IsolateClusterRequest
      * @return IsolateClusterResponse
      * @throws TencentCloudSDKException
@@ -1557,7 +1579,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *Isolating a TDSQL-C Analysis Cluster
+     *Isolate a TDSQL-C analysis cluster
      * @param req IsolateLibraDBClusterRequest
      * @return IsolateLibraDBClusterResponse
      * @throws TencentCloudSDKException
@@ -1568,7 +1590,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *This API is used to isolate read-only analysis engine instances.
+     *This API is used to isolate a read-only analysis engine instance.
      * @param req IsolateLibraDBInstanceRequest
      * @return IsolateLibraDBInstanceResponse
      * @throws TencentCloudSDKException
@@ -1579,7 +1601,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *This API is used to modify the descriptions of a database account.
+     *This API is used to modify database account description information.
      * @param req ModifyAccountDescriptionRequest
      * @return ModifyAccountDescriptionResponse
      * @throws TencentCloudSDKException
@@ -1590,7 +1612,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *This API is used to modify account hosts.
+     *This API is used to modify the account host.
      * @param req ModifyAccountHostRequest
      * @return ModifyAccountHostResponse
      * @throws TencentCloudSDKException
@@ -1601,7 +1623,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *This API is used to modify account database and table permissions.
+     *This API is used to modify account database/table permissions.
      * @param req ModifyAccountPrivilegesRequest
      * @return ModifyAccountPrivilegesResponse
      * @throws TencentCloudSDKException
@@ -1612,7 +1634,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *This API is used to modify audit rule templates.
+     *This API is used to modify an audit rule template.
      * @param req ModifyAuditRuleTemplatesRequest
      * @return ModifyAuditRuleTemplatesResponse
      * @throws TencentCloudSDKException
@@ -1623,7 +1645,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *This API is used to modify the audit configurations of an instance, such as audit log retention period and audit rule.
+     *This API is used to modify the audit log retention period, audit rules, and other service settings of CDB.
      * @param req ModifyAuditServiceRequest
      * @return ModifyAuditServiceResponse
      * @throws TencentCloudSDKException
@@ -1645,7 +1667,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *This API is used to modify the download source limit of the backup file for the user in the current region. It can be configured to allow downloads from both private and public networks, only the private network, or a designated vpc or ip within the private network.
+     *This API is used to modify the backup file download access restrictions for users in the current region. It can be set to allow downloads from both private and public networks, only private networks, or designated VPCs and IPs within the private network.
      * @param req ModifyBackupDownloadRestrictionRequest
      * @return ModifyBackupDownloadRestrictionResponse
      * @throws TencentCloudSDKException
@@ -1656,7 +1678,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *This API is used to modify the download source restrictions for backup files in the user's current region. It can be configured to allow downloads from both private and public networks, only from a private network, or from a designated vpc or ip within the private network.
+     *This API is used to modify the download source limits for backup files of a user in the current region. It can be set to allow downloads from both private and public networks, only from a private network, or from designated VPCs and IPs within a private network.
      * @param req ModifyBackupDownloadUserRestrictionRequest
      * @return ModifyBackupDownloadUserRestrictionResponse
      * @throws TencentCloudSDKException
@@ -1667,7 +1689,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *This API is used to rename a backup file.
+     *This API is used to modify the backup file remark name.
      * @param req ModifyBackupNameRequest
      * @return ModifyBackupNameResponse
      * @throws TencentCloudSDKException
@@ -1678,7 +1700,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *This API is used to modify Binlog configuration.
+     *This API is used to modify the Binlog configuration.
      * @param req ModifyBinlogConfigRequest
      * @return ModifyBinlogConfigResponse
      * @throws TencentCloudSDKException
@@ -1689,7 +1711,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *This API is used to modify the binlog retention period in days.
+     *This API is used to modify the retention days of cluster binlogs.
      * @param req ModifyBinlogSaveDaysRequest
      * @return ModifyBinlogSaveDaysResponse
      * @throws TencentCloudSDKException
@@ -1700,7 +1722,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *This API is used to modify cluster configuration to automatically copy Binlog and RedoLog to safe.
+     *Modify the configuration for automatically copying cluster Binlog and RedoLog to the safe.
      * @param req ModifyClusterBinlogRedoLogAutoCopyVaultRequest
      * @return ModifyClusterBinlogRedoLogAutoCopyVaultResponse
      * @throws TencentCloudSDKException
@@ -1711,7 +1733,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *This API is used to modify account authorization of a database.
+     *This API is used to modify account authorization for a database.
      * @param req ModifyClusterDatabaseRequest
      * @return ModifyClusterDatabaseResponse
      * @throws TencentCloudSDKException
@@ -1722,7 +1744,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *Enable global encryption
+     *Toggle global encryption
      * @param req ModifyClusterGlobalEncryptionRequest
      * @return ModifyClusterGlobalEncryptionResponse
      * @throws TencentCloudSDKException
@@ -1788,7 +1810,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *This API is used to modify the slave availability zone of a cluster.
+     *This API is used to modify the replica AZ of a cluster.
      * @param req ModifyClusterSlaveZoneRequest
      * @return ModifyClusterSlaveZoneResponse
      * @throws TencentCloudSDKException
@@ -1821,7 +1843,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *This API is used to modify the instance parameters.
+     *This API is used to modify instance parameters.
      * @param req ModifyInstanceParamRequest
      * @return ModifyInstanceParamResponse
      * @throws TencentCloudSDKException
@@ -1832,7 +1854,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *This API is used to modify the time limit for upgrading the kernel minor version of an instance.
+     *This API is used to modify the upgrade time limit for the kernel minor version of an instance.
      * @param req ModifyInstanceUpgradeLimitDaysRequest
      * @return ModifyInstanceUpgradeLimitDaysResponse
      * @throws TencentCloudSDKException
@@ -1843,7 +1865,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *This API is used to modify the description of a cluster account.
+     *This API is used to modify the account description of an analysis cluster.
      * @param req ModifyLibraDBClusterAccountDescriptionRequest
      * @return ModifyLibraDBClusterAccountDescriptionResponse
      * @throws TencentCloudSDKException
@@ -1854,7 +1876,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *This API is used to modify the log in to the host information of a cluster account.
+     *This API is used to modify the login host info of an analysis cluster account.
      * @param req ModifyLibraDBClusterAccountHostRequest
      * @return ModifyLibraDBClusterAccountHostResponse
      * @throws TencentCloudSDKException
@@ -1865,7 +1887,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *This API is used to modify the permission of a cluster account for analytics.
+     *This API is used to modify account permissions of an analysis cluster.
      * @param req ModifyLibraDBClusterAccountPrivilegeRequest
      * @return ModifyLibraDBClusterAccountPrivilegeResponse
      * @throws TencentCloudSDKException
@@ -1876,7 +1898,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *This API is used to modify the TDSQL-C analytical cluster data source.
+     *This API is used to modify the data source of a TDSQL-C analytical cluster.
      * @param req ModifyLibraDBClusterDataSourceRequest
      * @return ModifyLibraDBClusterDataSourceResponse
      * @throws TencentCloudSDKException
@@ -1887,7 +1909,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *This API is used to modify the name of an analysis cluster.
+     *Modify the analytical cluster name
      * @param req ModifyLibraDBClusterNameRequest
      * @return ModifyLibraDBClusterNameResponse
      * @throws TencentCloudSDKException
@@ -1898,7 +1920,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *This API is used to modify the project ID of an analysis cluster.
+     *Modifies the project ID of an analysis cluster
      * @param req ModifyLibraDBClusterProjectRequest
      * @return ModifyLibraDBClusterProjectResponse
      * @throws TencentCloudSDKException
@@ -1909,7 +1931,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *This API is used to modify the sync object of an analysis cluster.
+     *This API is used to modify the sync objects of an analysis cluster.
      * @param req ModifyLibraDBClusterReplicationObjectRequest
      * @return ModifyLibraDBClusterReplicationObjectResponse
      * @throws TencentCloudSDKException
@@ -1920,7 +1942,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *This API is used to modify the automatic forwarding parameter of a read-only analysis instance.
+     *This API is used to modify the automatic forwarding parameters of a read-only analysis instance.
      * @param req ModifyLibraDBForwardConfigRequest
      * @return ModifyLibraDBForwardConfigResponse
      * @throws TencentCloudSDKException
@@ -1931,7 +1953,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *This API is used to modify maintenance time configuration.
+     *This API is used to modify the maintenance time configuration.
      * @param req ModifyMaintainPeriodConfigRequest
      * @return ModifyMaintainPeriodConfigResponse
      * @throws TencentCloudSDKException
@@ -1942,7 +1964,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *This API is used to modify a parameter template.
+     *This API is used to modify user parameter templates.
      * @param req ModifyParamTemplateRequest
      * @return ModifyParamTemplateResponse
      * @throws TencentCloudSDKException
@@ -1975,7 +1997,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *This API is used to modify the binding relationship between resource packages and clusters.
+     *This API is used to modify the binding relationship between a resource package and clusters.
      * @param req ModifyResourcePackageClustersRequest
      * @return ModifyResourcePackageClustersResponse
      * @throws TencentCloudSDKException
@@ -1997,7 +2019,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *This API is used to modify the deduction priority of the bound resource package.
+     *Modify the deduction priority of bound resource packages.
      * @param req ModifyResourcePackagesDeductionPriorityRequest
      * @return ModifyResourcePackagesDeductionPriorityResponse
      * @throws TencentCloudSDKException
@@ -2008,7 +2030,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *This API is used to modify the serverless policy.
+     *Modify a serverless policy
      * @param req ModifyServerlessStrategyRequest
      * @return ModifyServerlessStrategyResponse
      * @throws TencentCloudSDKException
@@ -2019,7 +2041,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *This API is used to modify the snapshot backup cross-region configuration of a specified cluster.
+     *This API is used to modify the cross-region configuration for snapshot backup of a specified cluster.
      * @param req ModifySnapBackupCrossRegionConfigRequest
      * @return ModifySnapBackupCrossRegionConfigResponse
      * @throws TencentCloudSDKException
@@ -2030,7 +2052,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *Modify backup safe configuration, including the name, description, retention duration, encryption key, lock time.
+     *Modify the configuration of a backup safe, including the name, description, retention duration, encryption key, and lock time.
      * @param req ModifyVaultRequest
      * @return ModifyVaultResponse
      * @throws TencentCloudSDKException
@@ -2052,7 +2074,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *This interface (OfflineCluster) is used to terminate clusters.
+     *This API is used to terminate clusters.
      * @param req OfflineClusterRequest
      * @return OfflineClusterResponse
      * @throws TencentCloudSDKException
@@ -2063,7 +2085,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *This interface (OfflineInstance) is used to terminate an instance.
+     *This API is used to destroy an instance.
      * @param req OfflineInstanceRequest
      * @return OfflineInstanceResponse
      * @throws TencentCloudSDKException
@@ -2074,7 +2096,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *Decommission an analysis cluster
+     *This API is used to decommission an analysis cluster.
      * @param req OfflineLibraDBClusterRequest
      * @return OfflineLibraDBClusterResponse
      * @throws TencentCloudSDKException
@@ -2096,7 +2118,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *This API is used to start the optimizer switch of an instance.
+     *This API is used to enable the AI optimizer switch for an instance.
      * @param req OpenAIOptimizerRequest
      * @return OpenAIOptimizerResponse
      * @throws TencentCloudSDKException
@@ -2107,7 +2129,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *This API is used to enable database audit service for an instance.
+     *This API is used to enable the database audit service for an instance.
      * @param req OpenAuditServiceRequest
      * @return OpenAuditServiceResponse
      * @throws TencentCloudSDKException
@@ -2140,7 +2162,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *Enable transparent data encryption for the cluster.
+     *Enable transparent encryption for the cluster.
      * @param req OpenClusterTransparentEncryptRequest
      * @return OpenClusterTransparentEncryptResponse
      * @throws TencentCloudSDKException
@@ -2151,7 +2173,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *This interface (OpenReadOnlyInstanceExclusiveAccess) is used to enable the dedicated access access group for a read-only instance.
+     *This API is used to enable dedicated access groups for read-only instances.
      * @param req OpenReadOnlyInstanceExclusiveAccessRequest
      * @return OpenReadOnlyInstanceExclusiveAccessResponse
      * @throws TencentCloudSDKException
@@ -2162,7 +2184,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *This interface (OpenWan) is used to enable external network.
+     *This API is used to enable public network access.
      * @param req OpenWanRequest
      * @return OpenWanResponse
      * @throws TencentCloudSDKException
@@ -2195,7 +2217,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *This API is used to reload the database proxy of Cloud Load Balancer.
+     *This API is used to load balance database proxy.
      * @param req ReloadBalanceProxyNodeRequest
      * @return ReloadBalanceProxyNodeResponse
      * @throws TencentCloudSDKException
@@ -2217,7 +2239,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *This API is used to renew the cluster.
+     *Renew a cluster
      * @param req RenewClustersRequest
      * @return RenewClustersResponse
      * @throws TencentCloudSDKException
@@ -2228,7 +2250,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *Renew an analysis cluster
+     *Renews an analysis cluster
      * @param req RenewLibraDBClustersRequest
      * @return RenewLibraDBClustersResponse
      * @throws TencentCloudSDKException
@@ -2239,7 +2261,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *This API is used to replay instance audit logs.
+     *Replay instance audit logs
      * @param req ReplayInstanceAuditLogRequest
      * @return ReplayInstanceAuditLogResponse
      * @throws TencentCloudSDKException
@@ -2250,7 +2272,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *This API is used to modify the database account password.
+     *This API is used to modify database account passwords.
      * @param req ResetAccountPasswordRequest
      * @return ResetAccountPasswordResponse
      * @throws TencentCloudSDKException
@@ -2261,7 +2283,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *Modify the cluster account password for analytics
+     *Modifies the account password of an analysis cluster
      * @param req ResetLibraDBClusterAccountPasswordRequest
      * @return ResetLibraDBClusterAccountPasswordResponse
      * @throws TencentCloudSDKException
@@ -2294,7 +2316,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *This API is used to restore a serverless cluster.
+     *This API is used to resume a serverless cluster.
      * @param req ResumeServerlessRequest
      * @return ResumeServerlessResponse
      * @throws TencentCloudSDKException
@@ -2305,7 +2327,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *This API is used to perform cluster rollback.
+     *This API is used to roll back a cluster.
      * @param req RollBackClusterRequest
      * @return RollBackClusterResponse
      * @throws TencentCloudSDKException
@@ -2327,7 +2349,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *This API is used to search cluster database lists.
+     *This API is used to search the cluster database list.
      * @param req SearchClusterDatabasesRequest
      * @return SearchClusterDatabasesResponse
      * @throws TencentCloudSDKException
@@ -2338,7 +2360,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *This API is used to search cluster data table lists.
+     *This API is used to search the cluster data table list.
      * @param req SearchClusterTablesRequest
      * @return SearchClusterTablesResponse
      * @throws TencentCloudSDKException
@@ -2349,7 +2371,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *Set whether to renew the TDSQL-C analysis cluster
+     *Set whether to renew a TDSQL-C analysis cluster
      * @param req SetLibraDBClusterRenewFlagRequest
      * @return SetLibraDBClusterRenewFlagResponse
      * @throws TencentCloudSDKException
@@ -2371,7 +2393,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *This interface (StartCLSDelivery) is used to enable log delivery functionality.
+     *This API is used to enable log delivery.
      * @param req StartCLSDeliveryRequest
      * @return StartCLSDeliveryResponse
      * @throws TencentCloudSDKException
@@ -2382,7 +2404,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *This API is used to stop the log delivery feature.
+     *This API is used to disable the log delivery feature.
      * @param req StopCLSDeliveryRequest
      * @return StopCLSDeliveryResponse
      * @throws TencentCloudSDKException
@@ -2415,7 +2437,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *This API is used to replace the vpc of the database proxy.
+     *This API is used to replace the vpc of a database proxy.
      * @param req SwitchProxyVpcRequest
      * @return SwitchProxyVpcResponse
      * @throws TencentCloudSDKException
@@ -2426,7 +2448,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *This API is used to convert a Prepaid Cluster to a postpaid cluster.
+     *This API is used to convert a prepaid cluster to a postpaid cluster.
      * @param req TransferClusterPrepayToPostpayRequest
      * @return TransferClusterPrepayToPostpayResponse
      * @throws TencentCloudSDKException
@@ -2437,7 +2459,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *This API is used to trigger cross-AZ migration.
+     *This API is used to initiate cross-AZ migration.
      * @param req TransferClusterZoneRequest
      * @return TransferClusterZoneResponse
      * @throws TencentCloudSDKException
@@ -2470,7 +2492,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *This interface (UpgradeClusterVersion) is used to update the kernel minor version.
+     *This API is used to update the kernel minor version.
      * @param req UpgradeClusterVersionRequest
      * @return UpgradeClusterVersionResponse
      * @throws TencentCloudSDKException
@@ -2481,7 +2503,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *This interface (UpgradeInstance) is used to upgrade instances.
+     *This API is used to upgrade or downgrade the configuration of an instance.
      * @param req UpgradeInstanceRequest
      * @return UpgradeInstanceResponse
      * @throws TencentCloudSDKException
@@ -2492,7 +2514,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *This API is used to upgrade database proxy configuration.
+     *This API is used to upgrade the database proxy configuration.
      * @param req UpgradeProxyRequest
      * @return UpgradeProxyResponse
      * @throws TencentCloudSDKException

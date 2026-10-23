@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ExportInstanceSlowQueriesResponse extends AbstractModel {
 
     /**
-    * Slow query export content
+    * Exported content of slow query
     */
     @SerializedName("FileContent")
     @Expose
@@ -38,16 +38,16 @@ public class ExportInstanceSlowQueriesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Slow query export content 
-     * @return FileContent Slow query export content
+     * Get Exported content of slow query 
+     * @return FileContent Exported content of slow query
      */
     public String getFileContent() {
         return this.FileContent;
     }
 
     /**
-     * Set Slow query export content
-     * @param FileContent Slow query export content
+     * Set Exported content of slow query
+     * @param FileContent Exported content of slow query
      */
     public void setFileContent(String FileContent) {
         this.FileContent = FileContent;

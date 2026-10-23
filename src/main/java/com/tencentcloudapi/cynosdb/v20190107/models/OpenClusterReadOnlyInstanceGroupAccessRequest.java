@@ -31,14 +31,14 @@ public class OpenClusterReadOnlyInstanceGroupAccessRequest extends AbstractModel
     private String ClusterId;
 
     /**
-    * Port
+    * Port.
     */
     @SerializedName("Port")
     @Expose
     private String Port;
 
     /**
-    * Security group ID.
+    * Security group ID
     */
     @SerializedName("SecurityGroupIds")
     @Expose
@@ -61,32 +61,32 @@ public class OpenClusterReadOnlyInstanceGroupAccessRequest extends AbstractModel
     }
 
     /**
-     * Get Port 
-     * @return Port Port
+     * Get Port. 
+     * @return Port Port.
      */
     public String getPort() {
         return this.Port;
     }
 
     /**
-     * Set Port
-     * @param Port Port
+     * Set Port.
+     * @param Port Port.
      */
     public void setPort(String Port) {
         this.Port = Port;
     }
 
     /**
-     * Get Security group ID. 
-     * @return SecurityGroupIds Security group ID.
+     * Get Security group ID 
+     * @return SecurityGroupIds Security group ID
      */
     public String [] getSecurityGroupIds() {
         return this.SecurityGroupIds;
     }
 
     /**
-     * Set Security group ID.
-     * @param SecurityGroupIds Security group ID.
+     * Set Security group ID
+     * @param SecurityGroupIds Security group ID
      */
     public void setSecurityGroupIds(String [] SecurityGroupIds) {
         this.SecurityGroupIds = SecurityGroupIds;

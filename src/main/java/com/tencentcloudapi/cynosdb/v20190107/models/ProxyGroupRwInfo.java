@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ProxyGroupRwInfo extends AbstractModel {
 
     /**
-    * <p>Consistency Type eventual-final consistency,global-global consistency,session-session consistency</p>
+    * <p>Consistency type: eventual - final consistency, global - global consistency, session - session consistency</p>
     */
     @SerializedName("ConsistencyType")
     @Expose
@@ -38,7 +38,7 @@ public class ProxyGroupRwInfo extends AbstractModel {
     private Long ConsistencyTimeOut;
 
     /**
-    * <p>Weight mode system-system-assigned, custom-custom</p>
+    * <p>Weight mode: system - system-assigned, custom - custom</p>
     */
     @SerializedName("WeightMode")
     @Expose
@@ -52,7 +52,7 @@ public class ProxyGroupRwInfo extends AbstractModel {
     private String FailOver;
 
     /**
-    * <p>Automatically add read-only instance, yes-yes, no-no</p>
+    * <p>Whether to automatically add a read-only instance. yes: add automatically; no: do not add automatically</p>
     */
     @SerializedName("AutoAddRo")
     @Expose
@@ -66,14 +66,14 @@ public class ProxyGroupRwInfo extends AbstractModel {
     private ProxyInstanceWeight [] InstanceWeights;
 
     /**
-    * <p>Whether to enable the read-write node, yes - enable, no - disable</p>
+    * <p>Whether to enable read-write node. yes: enable, no: disable</p>
     */
     @SerializedName("OpenRw")
     @Expose
     private String OpenRw;
 
     /**
-    * <p>Read-write attribute, value range: READWRITE, READONLY</p>
+    * <p>Read-write attribute. Available values: READWRITE, READONLY</p>
     */
     @SerializedName("RwType")
     @Expose
@@ -87,7 +87,7 @@ public class ProxyGroupRwInfo extends AbstractModel {
     private Boolean TransSplit;
 
     /**
-    * <p>Connection mode, available values: balance, nearby</p>
+    * <p>Connection mode. Available values: balance, nearby</p>
     */
     @SerializedName("AccessMode")
     @Expose
@@ -108,23 +108,30 @@ public class ProxyGroupRwInfo extends AbstractModel {
     private Boolean ApQueryToOtherNode;
 
     /**
-    * <p>Auto load</p><p>Enumeration value:</p><ul><li>static: Static load</li><li>dynamic: Dynamic load</li></ul>
+    * <p>Auto load</p><p>Enumeration values:</p><ul><li>static: Static load</li><li>dynamic: Dynamic load</li></ul>
     */
     @SerializedName("LoadBalanceMode")
     @Expose
     private String LoadBalanceMode;
 
     /**
-     * Get <p>Consistency Type eventual-final consistency,global-global consistency,session-session consistency</p> 
-     * @return ConsistencyType <p>Consistency Type eventual-final consistency,global-global consistency,session-session consistency</p>
+    * <p>Whether to enable full transaction split. In a transaction, split the reads before and after the transaction write to different instances for execution.</p>
+    */
+    @SerializedName("TransAllSplit")
+    @Expose
+    private Boolean TransAllSplit;
+
+    /**
+     * Get <p>Consistency type: eventual - final consistency, global - global consistency, session - session consistency</p> 
+     * @return ConsistencyType <p>Consistency type: eventual - final consistency, global - global consistency, session - session consistency</p>
      */
     public String getConsistencyType() {
         return this.ConsistencyType;
     }
 
     /**
-     * Set <p>Consistency Type eventual-final consistency,global-global consistency,session-session consistency</p>
-     * @param ConsistencyType <p>Consistency Type eventual-final consistency,global-global consistency,session-session consistency</p>
+     * Set <p>Consistency type: eventual - final consistency, global - global consistency, session - session consistency</p>
+     * @param ConsistencyType <p>Consistency type: eventual - final consistency, global - global consistency, session - session consistency</p>
      */
     public void setConsistencyType(String ConsistencyType) {
         this.ConsistencyType = ConsistencyType;
@@ -147,16 +154,16 @@ public class ProxyGroupRwInfo extends AbstractModel {
     }
 
     /**
-     * Get <p>Weight mode system-system-assigned, custom-custom</p> 
-     * @return WeightMode <p>Weight mode system-system-assigned, custom-custom</p>
+     * Get <p>Weight mode: system - system-assigned, custom - custom</p> 
+     * @return WeightMode <p>Weight mode: system - system-assigned, custom - custom</p>
      */
     public String getWeightMode() {
         return this.WeightMode;
     }
 
     /**
-     * Set <p>Weight mode system-system-assigned, custom-custom</p>
-     * @param WeightMode <p>Weight mode system-system-assigned, custom-custom</p>
+     * Set <p>Weight mode: system - system-assigned, custom - custom</p>
+     * @param WeightMode <p>Weight mode: system - system-assigned, custom - custom</p>
      */
     public void setWeightMode(String WeightMode) {
         this.WeightMode = WeightMode;
@@ -179,16 +186,16 @@ public class ProxyGroupRwInfo extends AbstractModel {
     }
 
     /**
-     * Get <p>Automatically add read-only instance, yes-yes, no-no</p> 
-     * @return AutoAddRo <p>Automatically add read-only instance, yes-yes, no-no</p>
+     * Get <p>Whether to automatically add a read-only instance. yes: add automatically; no: do not add automatically</p> 
+     * @return AutoAddRo <p>Whether to automatically add a read-only instance. yes: add automatically; no: do not add automatically</p>
      */
     public String getAutoAddRo() {
         return this.AutoAddRo;
     }
 
     /**
-     * Set <p>Automatically add read-only instance, yes-yes, no-no</p>
-     * @param AutoAddRo <p>Automatically add read-only instance, yes-yes, no-no</p>
+     * Set <p>Whether to automatically add a read-only instance. yes: add automatically; no: do not add automatically</p>
+     * @param AutoAddRo <p>Whether to automatically add a read-only instance. yes: add automatically; no: do not add automatically</p>
      */
     public void setAutoAddRo(String AutoAddRo) {
         this.AutoAddRo = AutoAddRo;
@@ -211,32 +218,32 @@ public class ProxyGroupRwInfo extends AbstractModel {
     }
 
     /**
-     * Get <p>Whether to enable the read-write node, yes - enable, no - disable</p> 
-     * @return OpenRw <p>Whether to enable the read-write node, yes - enable, no - disable</p>
+     * Get <p>Whether to enable read-write node. yes: enable, no: disable</p> 
+     * @return OpenRw <p>Whether to enable read-write node. yes: enable, no: disable</p>
      */
     public String getOpenRw() {
         return this.OpenRw;
     }
 
     /**
-     * Set <p>Whether to enable the read-write node, yes - enable, no - disable</p>
-     * @param OpenRw <p>Whether to enable the read-write node, yes - enable, no - disable</p>
+     * Set <p>Whether to enable read-write node. yes: enable, no: disable</p>
+     * @param OpenRw <p>Whether to enable read-write node. yes: enable, no: disable</p>
      */
     public void setOpenRw(String OpenRw) {
         this.OpenRw = OpenRw;
     }
 
     /**
-     * Get <p>Read-write attribute, value range: READWRITE, READONLY</p> 
-     * @return RwType <p>Read-write attribute, value range: READWRITE, READONLY</p>
+     * Get <p>Read-write attribute. Available values: READWRITE, READONLY</p> 
+     * @return RwType <p>Read-write attribute. Available values: READWRITE, READONLY</p>
      */
     public String getRwType() {
         return this.RwType;
     }
 
     /**
-     * Set <p>Read-write attribute, value range: READWRITE, READONLY</p>
-     * @param RwType <p>Read-write attribute, value range: READWRITE, READONLY</p>
+     * Set <p>Read-write attribute. Available values: READWRITE, READONLY</p>
+     * @param RwType <p>Read-write attribute. Available values: READWRITE, READONLY</p>
      */
     public void setRwType(String RwType) {
         this.RwType = RwType;
@@ -259,16 +266,16 @@ public class ProxyGroupRwInfo extends AbstractModel {
     }
 
     /**
-     * Get <p>Connection mode, available values: balance, nearby</p> 
-     * @return AccessMode <p>Connection mode, available values: balance, nearby</p>
+     * Get <p>Connection mode. Available values: balance, nearby</p> 
+     * @return AccessMode <p>Connection mode. Available values: balance, nearby</p>
      */
     public String getAccessMode() {
         return this.AccessMode;
     }
 
     /**
-     * Set <p>Connection mode, available values: balance, nearby</p>
-     * @param AccessMode <p>Connection mode, available values: balance, nearby</p>
+     * Set <p>Connection mode. Available values: balance, nearby</p>
+     * @param AccessMode <p>Connection mode. Available values: balance, nearby</p>
      */
     public void setAccessMode(String AccessMode) {
         this.AccessMode = AccessMode;
@@ -307,19 +314,35 @@ public class ProxyGroupRwInfo extends AbstractModel {
     }
 
     /**
-     * Get <p>Auto load</p><p>Enumeration value:</p><ul><li>static: Static load</li><li>dynamic: Dynamic load</li></ul> 
-     * @return LoadBalanceMode <p>Auto load</p><p>Enumeration value:</p><ul><li>static: Static load</li><li>dynamic: Dynamic load</li></ul>
+     * Get <p>Auto load</p><p>Enumeration values:</p><ul><li>static: Static load</li><li>dynamic: Dynamic load</li></ul> 
+     * @return LoadBalanceMode <p>Auto load</p><p>Enumeration values:</p><ul><li>static: Static load</li><li>dynamic: Dynamic load</li></ul>
      */
     public String getLoadBalanceMode() {
         return this.LoadBalanceMode;
     }
 
     /**
-     * Set <p>Auto load</p><p>Enumeration value:</p><ul><li>static: Static load</li><li>dynamic: Dynamic load</li></ul>
-     * @param LoadBalanceMode <p>Auto load</p><p>Enumeration value:</p><ul><li>static: Static load</li><li>dynamic: Dynamic load</li></ul>
+     * Set <p>Auto load</p><p>Enumeration values:</p><ul><li>static: Static load</li><li>dynamic: Dynamic load</li></ul>
+     * @param LoadBalanceMode <p>Auto load</p><p>Enumeration values:</p><ul><li>static: Static load</li><li>dynamic: Dynamic load</li></ul>
      */
     public void setLoadBalanceMode(String LoadBalanceMode) {
         this.LoadBalanceMode = LoadBalanceMode;
+    }
+
+    /**
+     * Get <p>Whether to enable full transaction split. In a transaction, split the reads before and after the transaction write to different instances for execution.</p> 
+     * @return TransAllSplit <p>Whether to enable full transaction split. In a transaction, split the reads before and after the transaction write to different instances for execution.</p>
+     */
+    public Boolean getTransAllSplit() {
+        return this.TransAllSplit;
+    }
+
+    /**
+     * Set <p>Whether to enable full transaction split. In a transaction, split the reads before and after the transaction write to different instances for execution.</p>
+     * @param TransAllSplit <p>Whether to enable full transaction split. In a transaction, split the reads before and after the transaction write to different instances for execution.</p>
+     */
+    public void setTransAllSplit(Boolean TransAllSplit) {
+        this.TransAllSplit = TransAllSplit;
     }
 
     public ProxyGroupRwInfo() {
@@ -372,6 +395,9 @@ public class ProxyGroupRwInfo extends AbstractModel {
         if (source.LoadBalanceMode != null) {
             this.LoadBalanceMode = new String(source.LoadBalanceMode);
         }
+        if (source.TransAllSplit != null) {
+            this.TransAllSplit = new Boolean(source.TransAllSplit);
+        }
     }
 
 
@@ -392,6 +418,7 @@ public class ProxyGroupRwInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "ApNodeAsRoNode", this.ApNodeAsRoNode);
         this.setParamSimple(map, prefix + "ApQueryToOtherNode", this.ApQueryToOtherNode);
         this.setParamSimple(map, prefix + "LoadBalanceMode", this.LoadBalanceMode);
+        this.setParamSimple(map, prefix + "TransAllSplit", this.TransAllSplit);
 
     }
 }

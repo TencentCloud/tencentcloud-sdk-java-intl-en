@@ -31,7 +31,7 @@ public class DescribeClustersResponse extends AbstractModel {
     private Long TotalCount;
 
     /**
-    * Cluster list
+    * This example shows you how to obtain the cluster list.
     */
     @SerializedName("ClusterSet")
     @Expose
@@ -61,16 +61,16 @@ public class DescribeClustersResponse extends AbstractModel {
     }
 
     /**
-     * Get Cluster list 
-     * @return ClusterSet Cluster list
+     * Get This example shows you how to obtain the cluster list. 
+     * @return ClusterSet This example shows you how to obtain the cluster list.
      */
     public CynosdbCluster [] getClusterSet() {
         return this.ClusterSet;
     }
 
     /**
-     * Set Cluster list
-     * @param ClusterSet Cluster list
+     * Set This example shows you how to obtain the cluster list.
+     * @param ClusterSet This example shows you how to obtain the cluster list.
      */
     public void setClusterSet(CynosdbCluster [] ClusterSet) {
         this.ClusterSet = ClusterSet;

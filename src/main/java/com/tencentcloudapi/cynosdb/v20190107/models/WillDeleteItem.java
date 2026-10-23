@@ -31,7 +31,7 @@ public class WillDeleteItem extends AbstractModel {
     private Long BackupId;
 
     /**
-    * Backup file name
+    * Backup file name.
     */
     @SerializedName("BackupName")
     @Expose
@@ -54,16 +54,16 @@ public class WillDeleteItem extends AbstractModel {
     }
 
     /**
-     * Get Backup file name 
-     * @return BackupName Backup file name
+     * Get Backup file name. 
+     * @return BackupName Backup file name.
      */
     public String getBackupName() {
         return this.BackupName;
     }
 
     /**
-     * Set Backup file name
-     * @param BackupName Backup file name
+     * Set Backup file name.
+     * @param BackupName Backup file name.
      */
     public void setBackupName(String BackupName) {
         this.BackupName = BackupName;

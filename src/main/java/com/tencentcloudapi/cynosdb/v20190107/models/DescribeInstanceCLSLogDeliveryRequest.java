@@ -31,7 +31,7 @@ public class DescribeInstanceCLSLogDeliveryRequest extends AbstractModel {
     private String InstanceId;
 
     /**
-    * Log type.
+    * Log type
     */
     @SerializedName("LogType")
     @Expose
@@ -54,16 +54,16 @@ public class DescribeInstanceCLSLogDeliveryRequest extends AbstractModel {
     }
 
     /**
-     * Get Log type. 
-     * @return LogType Log type.
+     * Get Log type 
+     * @return LogType Log type
      */
     public String getLogType() {
         return this.LogType;
     }
 
     /**
-     * Set Log type.
-     * @param LogType Log type.
+     * Set Log type
+     * @param LogType Log type
      */
     public void setLogType(String LogType) {
         this.LogType = LogType;

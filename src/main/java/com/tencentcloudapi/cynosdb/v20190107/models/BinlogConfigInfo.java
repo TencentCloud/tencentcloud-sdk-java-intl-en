@@ -31,7 +31,7 @@ public class BinlogConfigInfo extends AbstractModel {
     private Long BinlogSaveDays;
 
     /**
-    * <p>Whether cross-region backup of binlog is enabled</p>
+    * <p>Whether binlog cross-region backup is enabled</p>
     */
     @SerializedName("BinlogCrossRegionsEnable")
     @Expose
@@ -45,14 +45,14 @@ public class BinlogConfigInfo extends AbstractModel {
     private String [] BinlogCrossRegions;
 
     /**
-    * <p>Cross-region backup retention period</p><p>Unit: Day</p>
+    * <p>Cross-region backup retention period</p><p>Unit: day</p>
     */
     @SerializedName("BinlogCrossRegionSaveDays")
     @Expose
     private Long BinlogCrossRegionSaveDays;
 
     /**
-    * <p>Safe info</p>
+    * <p>Safe information</p>
     */
     @SerializedName("AutoCopyVaults")
     @Expose
@@ -75,16 +75,16 @@ public class BinlogConfigInfo extends AbstractModel {
     }
 
     /**
-     * Get <p>Whether cross-region backup of binlog is enabled</p> 
-     * @return BinlogCrossRegionsEnable <p>Whether cross-region backup of binlog is enabled</p>
+     * Get <p>Whether binlog cross-region backup is enabled</p> 
+     * @return BinlogCrossRegionsEnable <p>Whether binlog cross-region backup is enabled</p>
      */
     public String getBinlogCrossRegionsEnable() {
         return this.BinlogCrossRegionsEnable;
     }
 
     /**
-     * Set <p>Whether cross-region backup of binlog is enabled</p>
-     * @param BinlogCrossRegionsEnable <p>Whether cross-region backup of binlog is enabled</p>
+     * Set <p>Whether binlog cross-region backup is enabled</p>
+     * @param BinlogCrossRegionsEnable <p>Whether binlog cross-region backup is enabled</p>
      */
     public void setBinlogCrossRegionsEnable(String BinlogCrossRegionsEnable) {
         this.BinlogCrossRegionsEnable = BinlogCrossRegionsEnable;
@@ -107,32 +107,32 @@ public class BinlogConfigInfo extends AbstractModel {
     }
 
     /**
-     * Get <p>Cross-region backup retention period</p><p>Unit: Day</p> 
-     * @return BinlogCrossRegionSaveDays <p>Cross-region backup retention period</p><p>Unit: Day</p>
+     * Get <p>Cross-region backup retention period</p><p>Unit: day</p> 
+     * @return BinlogCrossRegionSaveDays <p>Cross-region backup retention period</p><p>Unit: day</p>
      */
     public Long getBinlogCrossRegionSaveDays() {
         return this.BinlogCrossRegionSaveDays;
     }
 
     /**
-     * Set <p>Cross-region backup retention period</p><p>Unit: Day</p>
-     * @param BinlogCrossRegionSaveDays <p>Cross-region backup retention period</p><p>Unit: Day</p>
+     * Set <p>Cross-region backup retention period</p><p>Unit: day</p>
+     * @param BinlogCrossRegionSaveDays <p>Cross-region backup retention period</p><p>Unit: day</p>
      */
     public void setBinlogCrossRegionSaveDays(Long BinlogCrossRegionSaveDays) {
         this.BinlogCrossRegionSaveDays = BinlogCrossRegionSaveDays;
     }
 
     /**
-     * Get <p>Safe info</p> 
-     * @return AutoCopyVaults <p>Safe info</p>
+     * Get <p>Safe information</p> 
+     * @return AutoCopyVaults <p>Safe information</p>
      */
     public CreateBackupVaultItem [] getAutoCopyVaults() {
         return this.AutoCopyVaults;
     }
 
     /**
-     * Set <p>Safe info</p>
-     * @param AutoCopyVaults <p>Safe info</p>
+     * Set <p>Safe information</p>
+     * @param AutoCopyVaults <p>Safe information</p>
      */
     public void setAutoCopyVaults(CreateBackupVaultItem [] AutoCopyVaults) {
         this.AutoCopyVaults = AutoCopyVaults;

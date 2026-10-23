@@ -31,7 +31,7 @@ public class ModifyProxyDescRequest extends AbstractModel {
     private String ClusterId;
 
     /**
-    * Database proxy group ID
+    * Database Proxy Group ID
     */
     @SerializedName("ProxyGroupId")
     @Expose
@@ -61,16 +61,16 @@ public class ModifyProxyDescRequest extends AbstractModel {
     }
 
     /**
-     * Get Database proxy group ID 
-     * @return ProxyGroupId Database proxy group ID
+     * Get Database Proxy Group ID 
+     * @return ProxyGroupId Database Proxy Group ID
      */
     public String getProxyGroupId() {
         return this.ProxyGroupId;
     }
 
     /**
-     * Set Database proxy group ID
-     * @param ProxyGroupId Database proxy group ID
+     * Set Database Proxy Group ID
+     * @param ProxyGroupId Database Proxy Group ID
      */
     public void setProxyGroupId(String ProxyGroupId) {
         this.ProxyGroupId = ProxyGroupId;

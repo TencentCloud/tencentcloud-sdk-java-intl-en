@@ -38,14 +38,14 @@ public class LibraDBClusterDetail extends AbstractModel {
     private String ClusterName;
 
     /**
-    * <p>Region</p>
+    * <p>Region.</p>
     */
     @SerializedName("Region")
     @Expose
     private String Region;
 
     /**
-    * <p>Status</p>
+    * <p>Status.</p>
     */
     @SerializedName("Status")
     @Expose
@@ -66,7 +66,7 @@ public class LibraDBClusterDetail extends AbstractModel {
     private Long Storage;
 
     /**
-    * <p>VPC name</p>
+    * <p>VPC name.</p>
     */
     @SerializedName("VpcName")
     @Expose
@@ -101,7 +101,7 @@ public class LibraDBClusterDetail extends AbstractModel {
     private String CreateTime;
 
     /**
-    * <p>Database version</p>
+    * <p>Database version.</p>
     */
     @SerializedName("DbVersion")
     @Expose
@@ -136,14 +136,14 @@ public class LibraDBClusterDetail extends AbstractModel {
     private RoAddr [] RoAddr;
 
     /**
-    * <p>cynos version</p>
+    * <p>cynos version.</p>
     */
     @SerializedName("CynosVersion")
     @Expose
     private String CynosVersion;
 
     /**
-    * <p>Freeze or not</p>
+    * <p>Whether to freeze</p>
     */
     @SerializedName("IsFreeze")
     @Expose
@@ -178,7 +178,7 @@ public class LibraDBClusterDetail extends AbstractModel {
     private Long PayMode;
 
     /**
-    * <p>Expiry time</p>
+    * <p>Expiration time</p>
     */
     @SerializedName("PeriodEndTime")
     @Expose
@@ -199,14 +199,14 @@ public class LibraDBClusterDetail extends AbstractModel {
     private Long RenewFlag;
 
     /**
-    * <p>Version tag</p>
+    * <p>Version tag.</p>
     */
     @SerializedName("CynosVersionTag")
     @Expose
     private String CynosVersionTag;
 
     /**
-    * <p>Additions are not supported when ro is yes. Additions are supported when ro is no/null/&quot;&quot;.</p>
+    * <p>Additions are not supported for ro yes - additions are not supported for ro, no/null/&quot;&quot; support adding ro</p>
     */
     @SerializedName("NoSupportAddRo")
     @Expose
@@ -266,32 +266,32 @@ public class LibraDBClusterDetail extends AbstractModel {
     }
 
     /**
-     * Get <p>Region</p> 
-     * @return Region <p>Region</p>
+     * Get <p>Region.</p> 
+     * @return Region <p>Region.</p>
      */
     public String getRegion() {
         return this.Region;
     }
 
     /**
-     * Set <p>Region</p>
-     * @param Region <p>Region</p>
+     * Set <p>Region.</p>
+     * @param Region <p>Region.</p>
      */
     public void setRegion(String Region) {
         this.Region = Region;
     }
 
     /**
-     * Get <p>Status</p> 
-     * @return Status <p>Status</p>
+     * Get <p>Status.</p> 
+     * @return Status <p>Status.</p>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set <p>Status</p>
-     * @param Status <p>Status</p>
+     * Set <p>Status.</p>
+     * @param Status <p>Status.</p>
      */
     public void setStatus(String Status) {
         this.Status = Status;
@@ -330,16 +330,16 @@ public class LibraDBClusterDetail extends AbstractModel {
     }
 
     /**
-     * Get <p>VPC name</p> 
-     * @return VpcName <p>VPC name</p>
+     * Get <p>VPC name.</p> 
+     * @return VpcName <p>VPC name.</p>
      */
     public String getVpcName() {
         return this.VpcName;
     }
 
     /**
-     * Set <p>VPC name</p>
-     * @param VpcName <p>VPC name</p>
+     * Set <p>VPC name.</p>
+     * @param VpcName <p>VPC name.</p>
      */
     public void setVpcName(String VpcName) {
         this.VpcName = VpcName;
@@ -410,16 +410,16 @@ public class LibraDBClusterDetail extends AbstractModel {
     }
 
     /**
-     * Get <p>Database version</p> 
-     * @return DbVersion <p>Database version</p>
+     * Get <p>Database version.</p> 
+     * @return DbVersion <p>Database version.</p>
      */
     public String getDbVersion() {
         return this.DbVersion;
     }
 
     /**
-     * Set <p>Database version</p>
-     * @param DbVersion <p>Database version</p>
+     * Set <p>Database version.</p>
+     * @param DbVersion <p>Database version.</p>
      */
     public void setDbVersion(String DbVersion) {
         this.DbVersion = DbVersion;
@@ -490,32 +490,32 @@ public class LibraDBClusterDetail extends AbstractModel {
     }
 
     /**
-     * Get <p>cynos version</p> 
-     * @return CynosVersion <p>cynos version</p>
+     * Get <p>cynos version.</p> 
+     * @return CynosVersion <p>cynos version.</p>
      */
     public String getCynosVersion() {
         return this.CynosVersion;
     }
 
     /**
-     * Set <p>cynos version</p>
-     * @param CynosVersion <p>cynos version</p>
+     * Set <p>cynos version.</p>
+     * @param CynosVersion <p>cynos version.</p>
      */
     public void setCynosVersion(String CynosVersion) {
         this.CynosVersion = CynosVersion;
     }
 
     /**
-     * Get <p>Freeze or not</p> 
-     * @return IsFreeze <p>Freeze or not</p>
+     * Get <p>Whether to freeze</p> 
+     * @return IsFreeze <p>Whether to freeze</p>
      */
     public String getIsFreeze() {
         return this.IsFreeze;
     }
 
     /**
-     * Set <p>Freeze or not</p>
-     * @param IsFreeze <p>Freeze or not</p>
+     * Set <p>Whether to freeze</p>
+     * @param IsFreeze <p>Whether to freeze</p>
      */
     public void setIsFreeze(String IsFreeze) {
         this.IsFreeze = IsFreeze;
@@ -586,16 +586,16 @@ public class LibraDBClusterDetail extends AbstractModel {
     }
 
     /**
-     * Get <p>Expiry time</p> 
-     * @return PeriodEndTime <p>Expiry time</p>
+     * Get <p>Expiration time</p> 
+     * @return PeriodEndTime <p>Expiration time</p>
      */
     public String getPeriodEndTime() {
         return this.PeriodEndTime;
     }
 
     /**
-     * Set <p>Expiry time</p>
-     * @param PeriodEndTime <p>Expiry time</p>
+     * Set <p>Expiration time</p>
+     * @param PeriodEndTime <p>Expiration time</p>
      */
     public void setPeriodEndTime(String PeriodEndTime) {
         this.PeriodEndTime = PeriodEndTime;
@@ -634,32 +634,32 @@ public class LibraDBClusterDetail extends AbstractModel {
     }
 
     /**
-     * Get <p>Version tag</p> 
-     * @return CynosVersionTag <p>Version tag</p>
+     * Get <p>Version tag.</p> 
+     * @return CynosVersionTag <p>Version tag.</p>
      */
     public String getCynosVersionTag() {
         return this.CynosVersionTag;
     }
 
     /**
-     * Set <p>Version tag</p>
-     * @param CynosVersionTag <p>Version tag</p>
+     * Set <p>Version tag.</p>
+     * @param CynosVersionTag <p>Version tag.</p>
      */
     public void setCynosVersionTag(String CynosVersionTag) {
         this.CynosVersionTag = CynosVersionTag;
     }
 
     /**
-     * Get <p>Additions are not supported when ro is yes. Additions are supported when ro is no/null/&quot;&quot;.</p> 
-     * @return NoSupportAddRo <p>Additions are not supported when ro is yes. Additions are supported when ro is no/null/&quot;&quot;.</p>
+     * Get <p>Additions are not supported for ro yes - additions are not supported for ro, no/null/&quot;&quot; support adding ro</p> 
+     * @return NoSupportAddRo <p>Additions are not supported for ro yes - additions are not supported for ro, no/null/&quot;&quot; support adding ro</p>
      */
     public String getNoSupportAddRo() {
         return this.NoSupportAddRo;
     }
 
     /**
-     * Set <p>Additions are not supported when ro is yes. Additions are supported when ro is no/null/&quot;&quot;.</p>
-     * @param NoSupportAddRo <p>Additions are not supported when ro is yes. Additions are supported when ro is no/null/&quot;&quot;.</p>
+     * Set <p>Additions are not supported for ro yes - additions are not supported for ro, no/null/&quot;&quot; support adding ro</p>
+     * @param NoSupportAddRo <p>Additions are not supported for ro yes - additions are not supported for ro, no/null/&quot;&quot; support adding ro</p>
      */
     public void setNoSupportAddRo(String NoSupportAddRo) {
         this.NoSupportAddRo = NoSupportAddRo;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class IsolateInstanceResponse extends AbstractModel {
 
     /**
-    * Task flow ID
+    * Task flow id.
     */
     @SerializedName("FlowId")
     @Expose
@@ -45,16 +45,16 @@ public class IsolateInstanceResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Task flow ID 
-     * @return FlowId Task flow ID
+     * Get Task flow id. 
+     * @return FlowId Task flow id.
      */
     public Long getFlowId() {
         return this.FlowId;
     }
 
     /**
-     * Set Task flow ID
-     * @param FlowId Task flow ID
+     * Set Task flow id.
+     * @param FlowId Task flow id.
      */
     public void setFlowId(Long FlowId) {
         this.FlowId = FlowId;

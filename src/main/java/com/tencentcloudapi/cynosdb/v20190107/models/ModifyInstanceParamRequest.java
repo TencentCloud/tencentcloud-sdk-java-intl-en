@@ -31,28 +31,28 @@ public class ModifyInstanceParamRequest extends AbstractModel {
     private String ClusterId;
 
     /**
-    * Instance ID
+    * Instance ID.
     */
     @SerializedName("InstanceIds")
     @Expose
     private String [] InstanceIds;
 
     /**
-    * List of cluster parameters
+    * Cluster parameter list, for example, [{           "CurrentValue":"2",        "ParamName":"auto_increment_increment"}]
     */
     @SerializedName("ClusterParamList")
     @Expose
     private ModifyParamItem [] ClusterParamList;
 
     /**
-    * List of the instance parameters
+    * Instance parameter list, for example, [{           "CurrentValue":"2",        "ParamName":"innodb_stats_transient_sample_pages"}]
     */
     @SerializedName("InstanceParamList")
     @Expose
     private ModifyParamItem [] InstanceParamList;
 
     /**
-    * Valid values: `yes` (modify in maintenance window),  `no`  (execute now by default).
+    * yes: modify within the Ops time window. no: immediately execute (default value).
     */
     @SerializedName("IsInMaintainPeriod")
     @Expose
@@ -75,64 +75,64 @@ public class ModifyInstanceParamRequest extends AbstractModel {
     }
 
     /**
-     * Get Instance ID 
-     * @return InstanceIds Instance ID
+     * Get Instance ID. 
+     * @return InstanceIds Instance ID.
      */
     public String [] getInstanceIds() {
         return this.InstanceIds;
     }
 
     /**
-     * Set Instance ID
-     * @param InstanceIds Instance ID
+     * Set Instance ID.
+     * @param InstanceIds Instance ID.
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;
     }
 
     /**
-     * Get List of cluster parameters 
-     * @return ClusterParamList List of cluster parameters
+     * Get Cluster parameter list, for example, [{           "CurrentValue":"2",        "ParamName":"auto_increment_increment"}] 
+     * @return ClusterParamList Cluster parameter list, for example, [{           "CurrentValue":"2",        "ParamName":"auto_increment_increment"}]
      */
     public ModifyParamItem [] getClusterParamList() {
         return this.ClusterParamList;
     }
 
     /**
-     * Set List of cluster parameters
-     * @param ClusterParamList List of cluster parameters
+     * Set Cluster parameter list, for example, [{           "CurrentValue":"2",        "ParamName":"auto_increment_increment"}]
+     * @param ClusterParamList Cluster parameter list, for example, [{           "CurrentValue":"2",        "ParamName":"auto_increment_increment"}]
      */
     public void setClusterParamList(ModifyParamItem [] ClusterParamList) {
         this.ClusterParamList = ClusterParamList;
     }
 
     /**
-     * Get List of the instance parameters 
-     * @return InstanceParamList List of the instance parameters
+     * Get Instance parameter list, for example, [{           "CurrentValue":"2",        "ParamName":"innodb_stats_transient_sample_pages"}] 
+     * @return InstanceParamList Instance parameter list, for example, [{           "CurrentValue":"2",        "ParamName":"innodb_stats_transient_sample_pages"}]
      */
     public ModifyParamItem [] getInstanceParamList() {
         return this.InstanceParamList;
     }
 
     /**
-     * Set List of the instance parameters
-     * @param InstanceParamList List of the instance parameters
+     * Set Instance parameter list, for example, [{           "CurrentValue":"2",        "ParamName":"innodb_stats_transient_sample_pages"}]
+     * @param InstanceParamList Instance parameter list, for example, [{           "CurrentValue":"2",        "ParamName":"innodb_stats_transient_sample_pages"}]
      */
     public void setInstanceParamList(ModifyParamItem [] InstanceParamList) {
         this.InstanceParamList = InstanceParamList;
     }
 
     /**
-     * Get Valid values: `yes` (modify in maintenance window),  `no`  (execute now by default). 
-     * @return IsInMaintainPeriod Valid values: `yes` (modify in maintenance window),  `no`  (execute now by default).
+     * Get yes: modify within the Ops time window. no: immediately execute (default value). 
+     * @return IsInMaintainPeriod yes: modify within the Ops time window. no: immediately execute (default value).
      */
     public String getIsInMaintainPeriod() {
         return this.IsInMaintainPeriod;
     }
 
     /**
-     * Set Valid values: `yes` (modify in maintenance window),  `no`  (execute now by default).
-     * @param IsInMaintainPeriod Valid values: `yes` (modify in maintenance window),  `no`  (execute now by default).
+     * Set yes: modify within the Ops time window. no: immediately execute (default value).
+     * @param IsInMaintainPeriod yes: modify within the Ops time window. no: immediately execute (default value).
      */
     public void setIsInMaintainPeriod(String IsInMaintainPeriod) {
         this.IsInMaintainPeriod = IsInMaintainPeriod;

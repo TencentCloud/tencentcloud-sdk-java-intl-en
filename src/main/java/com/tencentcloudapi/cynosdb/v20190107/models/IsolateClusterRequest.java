@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class IsolateClusterRequest extends AbstractModel {
 
     /**
-    * Cluster ID.
+    * Cluster ID
     */
     @SerializedName("ClusterId")
     @Expose
     private String ClusterId;
 
     /**
-    * This parameter has been disused.
+    * This parameter has been deprecated.
     */
     @SerializedName("DbType")
     @Expose
     private String DbType;
 
     /**
-    * Instance return reason type.
+    * Reason type for instance return
     */
     @SerializedName("IsolateReasonTypes")
     @Expose
     private Long [] IsolateReasonTypes;
 
     /**
-    * Instance return reason supplement.
+    * Supplementary reason for instance return
     */
     @SerializedName("IsolateReason")
     @Expose
     private String IsolateReason;
 
     /**
-    * Retain backup, true - Retained (incur fees).
+    * Retain backup. true: retain (fees will be incurred)
     */
     @SerializedName("SaveBackup")
     @Expose
     private Boolean SaveBackup;
 
     /**
-     * Get Cluster ID. 
-     * @return ClusterId Cluster ID.
+     * Get Cluster ID 
+     * @return ClusterId Cluster ID
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set Cluster ID.
-     * @param ClusterId Cluster ID.
+     * Set Cluster ID
+     * @param ClusterId Cluster ID
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get This parameter has been disused. 
-     * @return DbType This parameter has been disused.
+     * Get This parameter has been deprecated. 
+     * @return DbType This parameter has been deprecated.
      */
     public String getDbType() {
         return this.DbType;
     }
 
     /**
-     * Set This parameter has been disused.
-     * @param DbType This parameter has been disused.
+     * Set This parameter has been deprecated.
+     * @param DbType This parameter has been deprecated.
      */
     public void setDbType(String DbType) {
         this.DbType = DbType;
     }
 
     /**
-     * Get Instance return reason type. 
-     * @return IsolateReasonTypes Instance return reason type.
+     * Get Reason type for instance return 
+     * @return IsolateReasonTypes Reason type for instance return
      */
     public Long [] getIsolateReasonTypes() {
         return this.IsolateReasonTypes;
     }
 
     /**
-     * Set Instance return reason type.
-     * @param IsolateReasonTypes Instance return reason type.
+     * Set Reason type for instance return
+     * @param IsolateReasonTypes Reason type for instance return
      */
     public void setIsolateReasonTypes(Long [] IsolateReasonTypes) {
         this.IsolateReasonTypes = IsolateReasonTypes;
     }
 
     /**
-     * Get Instance return reason supplement. 
-     * @return IsolateReason Instance return reason supplement.
+     * Get Supplementary reason for instance return 
+     * @return IsolateReason Supplementary reason for instance return
      */
     public String getIsolateReason() {
         return this.IsolateReason;
     }
 
     /**
-     * Set Instance return reason supplement.
-     * @param IsolateReason Instance return reason supplement.
+     * Set Supplementary reason for instance return
+     * @param IsolateReason Supplementary reason for instance return
      */
     public void setIsolateReason(String IsolateReason) {
         this.IsolateReason = IsolateReason;
     }
 
     /**
-     * Get Retain backup, true - Retained (incur fees). 
-     * @return SaveBackup Retain backup, true - Retained (incur fees).
+     * Get Retain backup. true: retain (fees will be incurred) 
+     * @return SaveBackup Retain backup. true: retain (fees will be incurred)
      */
     public Boolean getSaveBackup() {
         return this.SaveBackup;
     }
 
     /**
-     * Set Retain backup, true - Retained (incur fees).
-     * @param SaveBackup Retain backup, true - Retained (incur fees).
+     * Set Retain backup. true: retain (fees will be incurred)
+     * @param SaveBackup Retain backup. true: retain (fees will be incurred)
      */
     public void setSaveBackup(Boolean SaveBackup) {
         this.SaveBackup = SaveBackup;

@@ -38,7 +38,7 @@ public class GrantAccountPrivilegesRequest extends AbstractModel {
     private InputAccount Account;
 
     /**
-    * Array of table permission codes
+    * Array of database table permission codes
     */
     @SerializedName("DbTablePrivileges")
     @Expose
@@ -84,16 +84,16 @@ public class GrantAccountPrivilegesRequest extends AbstractModel {
     }
 
     /**
-     * Get Array of table permission codes 
-     * @return DbTablePrivileges Array of table permission codes
+     * Get Array of database table permission codes 
+     * @return DbTablePrivileges Array of database table permission codes
      */
     public String [] getDbTablePrivileges() {
         return this.DbTablePrivileges;
     }
 
     /**
-     * Set Array of table permission codes
-     * @param DbTablePrivileges Array of table permission codes
+     * Set Array of database table permission codes
+     * @param DbTablePrivileges Array of database table permission codes
      */
     public void setDbTablePrivileges(String [] DbTablePrivileges) {
         this.DbTablePrivileges = DbTablePrivileges;

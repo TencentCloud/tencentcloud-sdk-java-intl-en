@@ -25,17 +25,14 @@ public class ErrorPageParameters extends AbstractModel {
 
     /**
     * Custom error page configuration list.
-Note: this field may return null, which indicates a failure to obtain a valid value.
     */
     @SerializedName("ErrorPageParams")
     @Expose
     private ErrorPage [] ErrorPageParams;
 
     /**
-     * Get Custom error page configuration list.
-Note: this field may return null, which indicates a failure to obtain a valid value. 
+     * Get Custom error page configuration list. 
      * @return ErrorPageParams Custom error page configuration list.
-Note: this field may return null, which indicates a failure to obtain a valid value.
      */
     public ErrorPage [] getErrorPageParams() {
         return this.ErrorPageParams;
@@ -43,9 +40,7 @@ Note: this field may return null, which indicates a failure to obtain a valid va
 
     /**
      * Set Custom error page configuration list.
-Note: this field may return null, which indicates a failure to obtain a valid value.
      * @param ErrorPageParams Custom error page configuration list.
-Note: this field may return null, which indicates a failure to obtain a valid value.
      */
     public void setErrorPageParams(ErrorPage [] ErrorPageParams) {
         this.ErrorPageParams = ErrorPageParams;

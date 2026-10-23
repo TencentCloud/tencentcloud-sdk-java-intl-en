@@ -45,7 +45,7 @@ public class DescribeBackupOverviewResponse extends AbstractModel {
     private Float BackupLogicVolume;
 
     /**
-    * Total Log Capacity
+    * Total log capacity
     */
     @SerializedName("LogTotalVolume")
     @Expose
@@ -59,21 +59,21 @@ public class DescribeBackupOverviewResponse extends AbstractModel {
     private Float LogBinlogVolume;
 
     /**
-    * Redo log capacity
+    * redolog capacity
     */
     @SerializedName("LogRedoLogVolume")
     @Expose
     private Float LogRedoLogVolume;
 
     /**
-    * Total Cross-Region Backup Capacity
+    * Total cross-region backup capacity
     */
     @SerializedName("CrossTotalVolume")
     @Expose
     private Float CrossTotalVolume;
 
     /**
-    * Cross-Region Backup Capacity
+    * Cross-region backup capacity.
     */
     @SerializedName("CrossRegionBackupVolume")
     @Expose
@@ -163,16 +163,16 @@ public class DescribeBackupOverviewResponse extends AbstractModel {
     }
 
     /**
-     * Get Total Log Capacity 
-     * @return LogTotalVolume Total Log Capacity
+     * Get Total log capacity 
+     * @return LogTotalVolume Total log capacity
      */
     public Float getLogTotalVolume() {
         return this.LogTotalVolume;
     }
 
     /**
-     * Set Total Log Capacity
-     * @param LogTotalVolume Total Log Capacity
+     * Set Total log capacity
+     * @param LogTotalVolume Total log capacity
      */
     public void setLogTotalVolume(Float LogTotalVolume) {
         this.LogTotalVolume = LogTotalVolume;
@@ -195,48 +195,48 @@ public class DescribeBackupOverviewResponse extends AbstractModel {
     }
 
     /**
-     * Get Redo log capacity 
-     * @return LogRedoLogVolume Redo log capacity
+     * Get redolog capacity 
+     * @return LogRedoLogVolume redolog capacity
      */
     public Float getLogRedoLogVolume() {
         return this.LogRedoLogVolume;
     }
 
     /**
-     * Set Redo log capacity
-     * @param LogRedoLogVolume Redo log capacity
+     * Set redolog capacity
+     * @param LogRedoLogVolume redolog capacity
      */
     public void setLogRedoLogVolume(Float LogRedoLogVolume) {
         this.LogRedoLogVolume = LogRedoLogVolume;
     }
 
     /**
-     * Get Total Cross-Region Backup Capacity 
-     * @return CrossTotalVolume Total Cross-Region Backup Capacity
+     * Get Total cross-region backup capacity 
+     * @return CrossTotalVolume Total cross-region backup capacity
      */
     public Float getCrossTotalVolume() {
         return this.CrossTotalVolume;
     }
 
     /**
-     * Set Total Cross-Region Backup Capacity
-     * @param CrossTotalVolume Total Cross-Region Backup Capacity
+     * Set Total cross-region backup capacity
+     * @param CrossTotalVolume Total cross-region backup capacity
      */
     public void setCrossTotalVolume(Float CrossTotalVolume) {
         this.CrossTotalVolume = CrossTotalVolume;
     }
 
     /**
-     * Get Cross-Region Backup Capacity 
-     * @return CrossRegionBackupVolume Cross-Region Backup Capacity
+     * Get Cross-region backup capacity. 
+     * @return CrossRegionBackupVolume Cross-region backup capacity.
      */
     public Float getCrossRegionBackupVolume() {
         return this.CrossRegionBackupVolume;
     }
 
     /**
-     * Set Cross-Region Backup Capacity
-     * @param CrossRegionBackupVolume Cross-Region Backup Capacity
+     * Set Cross-region backup capacity.
+     * @param CrossRegionBackupVolume Cross-region backup capacity.
      */
     public void setCrossRegionBackupVolume(Float CrossRegionBackupVolume) {
         this.CrossRegionBackupVolume = CrossRegionBackupVolume;

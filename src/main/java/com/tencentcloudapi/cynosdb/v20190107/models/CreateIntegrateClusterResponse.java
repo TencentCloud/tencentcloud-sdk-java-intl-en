@@ -24,28 +24,28 @@ import java.util.HashMap;
 public class CreateIntegrateClusterResponse extends AbstractModel {
 
     /**
-    * Frozen transaction ID.
+    * Frozen transaction ID
     */
     @SerializedName("TranId")
     @Expose
     private String TranId;
 
     /**
-    * Order ID.
+    * Order ID
     */
     @SerializedName("DealNames")
     @Expose
     private String [] DealNames;
 
     /**
-    * Resource ID list (this field is no longer maintained. please use the dealNames field and the query API DescribeResourcesByDealName to obtain resource ids).
+    * Resource ID list (this field is no longer maintained. To obtain resource IDs, please use the dealNames field to query the DescribeResourcesByDealName API.)
     */
     @SerializedName("ResourceIds")
     @Expose
     private String [] ResourceIds;
 
     /**
-    * Cluster ID list (this field is no longer maintained. please use the dealNames field to get cluster ids via the DescribeResourcesByDealName api.).
+    * Cluster ID list (this field is no longer maintained. To get the cluster ID, please use the dealNames field to query the DescribeResourcesByDealName API)
     */
     @SerializedName("ClusterIds")
     @Expose
@@ -66,64 +66,64 @@ public class CreateIntegrateClusterResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Frozen transaction ID. 
-     * @return TranId Frozen transaction ID.
+     * Get Frozen transaction ID 
+     * @return TranId Frozen transaction ID
      */
     public String getTranId() {
         return this.TranId;
     }
 
     /**
-     * Set Frozen transaction ID.
-     * @param TranId Frozen transaction ID.
+     * Set Frozen transaction ID
+     * @param TranId Frozen transaction ID
      */
     public void setTranId(String TranId) {
         this.TranId = TranId;
     }
 
     /**
-     * Get Order ID. 
-     * @return DealNames Order ID.
+     * Get Order ID 
+     * @return DealNames Order ID
      */
     public String [] getDealNames() {
         return this.DealNames;
     }
 
     /**
-     * Set Order ID.
-     * @param DealNames Order ID.
+     * Set Order ID
+     * @param DealNames Order ID
      */
     public void setDealNames(String [] DealNames) {
         this.DealNames = DealNames;
     }
 
     /**
-     * Get Resource ID list (this field is no longer maintained. please use the dealNames field and the query API DescribeResourcesByDealName to obtain resource ids). 
-     * @return ResourceIds Resource ID list (this field is no longer maintained. please use the dealNames field and the query API DescribeResourcesByDealName to obtain resource ids).
+     * Get Resource ID list (this field is no longer maintained. To obtain resource IDs, please use the dealNames field to query the DescribeResourcesByDealName API.) 
+     * @return ResourceIds Resource ID list (this field is no longer maintained. To obtain resource IDs, please use the dealNames field to query the DescribeResourcesByDealName API.)
      */
     public String [] getResourceIds() {
         return this.ResourceIds;
     }
 
     /**
-     * Set Resource ID list (this field is no longer maintained. please use the dealNames field and the query API DescribeResourcesByDealName to obtain resource ids).
-     * @param ResourceIds Resource ID list (this field is no longer maintained. please use the dealNames field and the query API DescribeResourcesByDealName to obtain resource ids).
+     * Set Resource ID list (this field is no longer maintained. To obtain resource IDs, please use the dealNames field to query the DescribeResourcesByDealName API.)
+     * @param ResourceIds Resource ID list (this field is no longer maintained. To obtain resource IDs, please use the dealNames field to query the DescribeResourcesByDealName API.)
      */
     public void setResourceIds(String [] ResourceIds) {
         this.ResourceIds = ResourceIds;
     }
 
     /**
-     * Get Cluster ID list (this field is no longer maintained. please use the dealNames field to get cluster ids via the DescribeResourcesByDealName api.). 
-     * @return ClusterIds Cluster ID list (this field is no longer maintained. please use the dealNames field to get cluster ids via the DescribeResourcesByDealName api.).
+     * Get Cluster ID list (this field is no longer maintained. To get the cluster ID, please use the dealNames field to query the DescribeResourcesByDealName API) 
+     * @return ClusterIds Cluster ID list (this field is no longer maintained. To get the cluster ID, please use the dealNames field to query the DescribeResourcesByDealName API)
      */
     public String [] getClusterIds() {
         return this.ClusterIds;
     }
 
     /**
-     * Set Cluster ID list (this field is no longer maintained. please use the dealNames field to get cluster ids via the DescribeResourcesByDealName api.).
-     * @param ClusterIds Cluster ID list (this field is no longer maintained. please use the dealNames field to get cluster ids via the DescribeResourcesByDealName api.).
+     * Set Cluster ID list (this field is no longer maintained. To get the cluster ID, please use the dealNames field to query the DescribeResourcesByDealName API)
+     * @param ClusterIds Cluster ID list (this field is no longer maintained. To get the cluster ID, please use the dealNames field to query the DescribeResourcesByDealName API)
      */
     public void setClusterIds(String [] ClusterIds) {
         this.ClusterIds = ClusterIds;

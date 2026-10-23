@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeIntegrateTaskRequest extends AbstractModel {
 
     /**
-    * Large order id. must choose between large order id and sub-order id.
+    * Large order id. Either the large order id or the sub-order id must be selected.
     */
     @SerializedName("BigDealId")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeIntegrateTaskRequest extends AbstractModel {
     private String [] DealNames;
 
     /**
-     * Get Large order id. must choose between large order id and sub-order id. 
-     * @return BigDealId Large order id. must choose between large order id and sub-order id.
+     * Get Large order id. Either the large order id or the sub-order id must be selected. 
+     * @return BigDealId Large order id. Either the large order id or the sub-order id must be selected.
      */
     public String getBigDealId() {
         return this.BigDealId;
     }
 
     /**
-     * Set Large order id. must choose between large order id and sub-order id.
-     * @param BigDealId Large order id. must choose between large order id and sub-order id.
+     * Set Large order id. Either the large order id or the sub-order id must be selected.
+     * @param BigDealId Large order id. Either the large order id or the sub-order id must be selected.
      */
     public void setBigDealId(String BigDealId) {
         this.BigDealId = BigDealId;

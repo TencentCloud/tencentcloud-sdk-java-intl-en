@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class SwitchClusterVpcResponse extends AbstractModel {
 
     /**
-    * Async task ID
+    * Async task id.
     */
     @SerializedName("FlowId")
     @Expose
@@ -38,16 +38,16 @@ public class SwitchClusterVpcResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Async task ID 
-     * @return FlowId Async task ID
+     * Get Async task id. 
+     * @return FlowId Async task id.
      */
     public Long getFlowId() {
         return this.FlowId;
     }
 
     /**
-     * Set Async task ID
-     * @param FlowId Async task ID
+     * Set Async task id.
+     * @param FlowId Async task id.
      */
     public void setFlowId(Long FlowId) {
         this.FlowId = FlowId;

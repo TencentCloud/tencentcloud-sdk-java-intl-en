@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class ModifyDBInstanceSecurityGroupsRequest extends AbstractModel {
 
     /**
-    * <p>Network Group id (cynosdbmysql-grp- prefix at the beginning) or Cluster id (such as cynosdbmysql-xxxxxxxx prefix). When configuring security group with instance IP address triplet (UniqVpcId, Vip, Vport), this field must be set to Cluster id (such as cynosdbmysql-xxxxxxxx prefix).</p>
+    * <p>Network Group id (starting with cynosdbmysql-grp- prefix) or Cluster id (for example, starting with cynosdbmysql-xxxxxxxx prefix). When configuring a security group using the instance IP address 3-tuple (UniqVpcId, Vip, Vport), this field must be set to the Cluster id (for example, starting with cynosdbmysql-xxxxxxxx prefix).</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * <p>List of security group IDs to modify, an array of one or more security group IDs.<br>Note: This input will perform a full replacement of the existing collection, not an incremental update. The modification requires the expected full collection.</p>
+    * <p>List of security group IDs to modify, an array of one or more security group IDs.<br>Note: This input parameter will fully replace the existing collection, not incrementally update. For modification, import the expected full collection.</p>
     */
     @SerializedName("SecurityGroupIds")
     @Expose
@@ -45,53 +45,53 @@ public class ModifyDBInstanceSecurityGroupsRequest extends AbstractModel {
     private String Zone;
 
     /**
-    * <p>ID of the VPC network for instance ownership. (UniqVpcId, Vip, and Vport must be specified simultaneously to uniquely identify the network instance)</p>
+    * <p>VPC network ID of the instance (UniqVpcId, Vip, and Vport must be specified simultaneously to uniquely identify the network instance)</p>
     */
     @SerializedName("UniqVpcId")
     @Expose
     private String UniqVpcId;
 
     /**
-    * <p>Instance IP address, instance IP address triplet (UniqVpcId, Vip, and Vport). These three parameters must be specified simultaneously for unique identification of network instances.</p>
+    * <p>Instance IP address. The 3-tuple of instance IP address (UniqVpcId, Vip, and Vport) must be specified simultaneously to uniquely identify the network instance</p>
     */
     @SerializedName("Vip")
     @Expose
     private String Vip;
 
     /**
-    * <p>Instance port, instance IP address triplet (UniqVpcId, Vip, and Vport). These three parameters must be specified simultaneously for unique identification of network instances.</p>
+    * <p>Instance port, instance IP address 3-tuple (UniqVpcId, Vip, and Vport) must be specified simultaneously to uniquely identify a network instance</p>
     */
     @SerializedName("Vport")
     @Expose
     private Long Vport;
 
     /**
-     * Get <p>Network Group id (cynosdbmysql-grp- prefix at the beginning) or Cluster id (such as cynosdbmysql-xxxxxxxx prefix). When configuring security group with instance IP address triplet (UniqVpcId, Vip, Vport), this field must be set to Cluster id (such as cynosdbmysql-xxxxxxxx prefix).</p> 
-     * @return InstanceId <p>Network Group id (cynosdbmysql-grp- prefix at the beginning) or Cluster id (such as cynosdbmysql-xxxxxxxx prefix). When configuring security group with instance IP address triplet (UniqVpcId, Vip, Vport), this field must be set to Cluster id (such as cynosdbmysql-xxxxxxxx prefix).</p>
+     * Get <p>Network Group id (starting with cynosdbmysql-grp- prefix) or Cluster id (for example, starting with cynosdbmysql-xxxxxxxx prefix). When configuring a security group using the instance IP address 3-tuple (UniqVpcId, Vip, Vport), this field must be set to the Cluster id (for example, starting with cynosdbmysql-xxxxxxxx prefix).</p> 
+     * @return InstanceId <p>Network Group id (starting with cynosdbmysql-grp- prefix) or Cluster id (for example, starting with cynosdbmysql-xxxxxxxx prefix). When configuring a security group using the instance IP address 3-tuple (UniqVpcId, Vip, Vport), this field must be set to the Cluster id (for example, starting with cynosdbmysql-xxxxxxxx prefix).</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set <p>Network Group id (cynosdbmysql-grp- prefix at the beginning) or Cluster id (such as cynosdbmysql-xxxxxxxx prefix). When configuring security group with instance IP address triplet (UniqVpcId, Vip, Vport), this field must be set to Cluster id (such as cynosdbmysql-xxxxxxxx prefix).</p>
-     * @param InstanceId <p>Network Group id (cynosdbmysql-grp- prefix at the beginning) or Cluster id (such as cynosdbmysql-xxxxxxxx prefix). When configuring security group with instance IP address triplet (UniqVpcId, Vip, Vport), this field must be set to Cluster id (such as cynosdbmysql-xxxxxxxx prefix).</p>
+     * Set <p>Network Group id (starting with cynosdbmysql-grp- prefix) or Cluster id (for example, starting with cynosdbmysql-xxxxxxxx prefix). When configuring a security group using the instance IP address 3-tuple (UniqVpcId, Vip, Vport), this field must be set to the Cluster id (for example, starting with cynosdbmysql-xxxxxxxx prefix).</p>
+     * @param InstanceId <p>Network Group id (starting with cynosdbmysql-grp- prefix) or Cluster id (for example, starting with cynosdbmysql-xxxxxxxx prefix). When configuring a security group using the instance IP address 3-tuple (UniqVpcId, Vip, Vport), this field must be set to the Cluster id (for example, starting with cynosdbmysql-xxxxxxxx prefix).</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get <p>List of security group IDs to modify, an array of one or more security group IDs.<br>Note: This input will perform a full replacement of the existing collection, not an incremental update. The modification requires the expected full collection.</p> 
-     * @return SecurityGroupIds <p>List of security group IDs to modify, an array of one or more security group IDs.<br>Note: This input will perform a full replacement of the existing collection, not an incremental update. The modification requires the expected full collection.</p>
+     * Get <p>List of security group IDs to modify, an array of one or more security group IDs.<br>Note: This input parameter will fully replace the existing collection, not incrementally update. For modification, import the expected full collection.</p> 
+     * @return SecurityGroupIds <p>List of security group IDs to modify, an array of one or more security group IDs.<br>Note: This input parameter will fully replace the existing collection, not incrementally update. For modification, import the expected full collection.</p>
      */
     public String [] getSecurityGroupIds() {
         return this.SecurityGroupIds;
     }
 
     /**
-     * Set <p>List of security group IDs to modify, an array of one or more security group IDs.<br>Note: This input will perform a full replacement of the existing collection, not an incremental update. The modification requires the expected full collection.</p>
-     * @param SecurityGroupIds <p>List of security group IDs to modify, an array of one or more security group IDs.<br>Note: This input will perform a full replacement of the existing collection, not an incremental update. The modification requires the expected full collection.</p>
+     * Set <p>List of security group IDs to modify, an array of one or more security group IDs.<br>Note: This input parameter will fully replace the existing collection, not incrementally update. For modification, import the expected full collection.</p>
+     * @param SecurityGroupIds <p>List of security group IDs to modify, an array of one or more security group IDs.<br>Note: This input parameter will fully replace the existing collection, not incrementally update. For modification, import the expected full collection.</p>
      */
     public void setSecurityGroupIds(String [] SecurityGroupIds) {
         this.SecurityGroupIds = SecurityGroupIds;
@@ -114,48 +114,48 @@ public class ModifyDBInstanceSecurityGroupsRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>ID of the VPC network for instance ownership. (UniqVpcId, Vip, and Vport must be specified simultaneously to uniquely identify the network instance)</p> 
-     * @return UniqVpcId <p>ID of the VPC network for instance ownership. (UniqVpcId, Vip, and Vport must be specified simultaneously to uniquely identify the network instance)</p>
+     * Get <p>VPC network ID of the instance (UniqVpcId, Vip, and Vport must be specified simultaneously to uniquely identify the network instance)</p> 
+     * @return UniqVpcId <p>VPC network ID of the instance (UniqVpcId, Vip, and Vport must be specified simultaneously to uniquely identify the network instance)</p>
      */
     public String getUniqVpcId() {
         return this.UniqVpcId;
     }
 
     /**
-     * Set <p>ID of the VPC network for instance ownership. (UniqVpcId, Vip, and Vport must be specified simultaneously to uniquely identify the network instance)</p>
-     * @param UniqVpcId <p>ID of the VPC network for instance ownership. (UniqVpcId, Vip, and Vport must be specified simultaneously to uniquely identify the network instance)</p>
+     * Set <p>VPC network ID of the instance (UniqVpcId, Vip, and Vport must be specified simultaneously to uniquely identify the network instance)</p>
+     * @param UniqVpcId <p>VPC network ID of the instance (UniqVpcId, Vip, and Vport must be specified simultaneously to uniquely identify the network instance)</p>
      */
     public void setUniqVpcId(String UniqVpcId) {
         this.UniqVpcId = UniqVpcId;
     }
 
     /**
-     * Get <p>Instance IP address, instance IP address triplet (UniqVpcId, Vip, and Vport). These three parameters must be specified simultaneously for unique identification of network instances.</p> 
-     * @return Vip <p>Instance IP address, instance IP address triplet (UniqVpcId, Vip, and Vport). These three parameters must be specified simultaneously for unique identification of network instances.</p>
+     * Get <p>Instance IP address. The 3-tuple of instance IP address (UniqVpcId, Vip, and Vport) must be specified simultaneously to uniquely identify the network instance</p> 
+     * @return Vip <p>Instance IP address. The 3-tuple of instance IP address (UniqVpcId, Vip, and Vport) must be specified simultaneously to uniquely identify the network instance</p>
      */
     public String getVip() {
         return this.Vip;
     }
 
     /**
-     * Set <p>Instance IP address, instance IP address triplet (UniqVpcId, Vip, and Vport). These three parameters must be specified simultaneously for unique identification of network instances.</p>
-     * @param Vip <p>Instance IP address, instance IP address triplet (UniqVpcId, Vip, and Vport). These three parameters must be specified simultaneously for unique identification of network instances.</p>
+     * Set <p>Instance IP address. The 3-tuple of instance IP address (UniqVpcId, Vip, and Vport) must be specified simultaneously to uniquely identify the network instance</p>
+     * @param Vip <p>Instance IP address. The 3-tuple of instance IP address (UniqVpcId, Vip, and Vport) must be specified simultaneously to uniquely identify the network instance</p>
      */
     public void setVip(String Vip) {
         this.Vip = Vip;
     }
 
     /**
-     * Get <p>Instance port, instance IP address triplet (UniqVpcId, Vip, and Vport). These three parameters must be specified simultaneously for unique identification of network instances.</p> 
-     * @return Vport <p>Instance port, instance IP address triplet (UniqVpcId, Vip, and Vport). These three parameters must be specified simultaneously for unique identification of network instances.</p>
+     * Get <p>Instance port, instance IP address 3-tuple (UniqVpcId, Vip, and Vport) must be specified simultaneously to uniquely identify a network instance</p> 
+     * @return Vport <p>Instance port, instance IP address 3-tuple (UniqVpcId, Vip, and Vport) must be specified simultaneously to uniquely identify a network instance</p>
      */
     public Long getVport() {
         return this.Vport;
     }
 
     /**
-     * Set <p>Instance port, instance IP address triplet (UniqVpcId, Vip, and Vport). These three parameters must be specified simultaneously for unique identification of network instances.</p>
-     * @param Vport <p>Instance port, instance IP address triplet (UniqVpcId, Vip, and Vport). These three parameters must be specified simultaneously for unique identification of network instances.</p>
+     * Set <p>Instance port, instance IP address 3-tuple (UniqVpcId, Vip, and Vport) must be specified simultaneously to uniquely identify a network instance</p>
+     * @param Vport <p>Instance port, instance IP address 3-tuple (UniqVpcId, Vip, and Vport) must be specified simultaneously to uniquely identify a network instance</p>
      */
     public void setVport(Long Vport) {
         this.Vport = Vport;

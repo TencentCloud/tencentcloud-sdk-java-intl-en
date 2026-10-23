@@ -38,7 +38,7 @@ public class IsolateLibraDBClusterRequest extends AbstractModel {
     private Long [] IsolateReasonTypes;
 
     /**
-    * Cause of isolation
+    * Isolation reason
     */
     @SerializedName("IsolateReason")
     @Expose
@@ -77,16 +77,16 @@ public class IsolateLibraDBClusterRequest extends AbstractModel {
     }
 
     /**
-     * Get Cause of isolation 
-     * @return IsolateReason Cause of isolation
+     * Get Isolation reason 
+     * @return IsolateReason Isolation reason
      */
     public String getIsolateReason() {
         return this.IsolateReason;
     }
 
     /**
-     * Set Cause of isolation
-     * @param IsolateReason Cause of isolation
+     * Set Isolation reason
+     * @param IsolateReason Isolation reason
      */
     public void setIsolateReason(String IsolateReason) {
         this.IsolateReason = IsolateReason;

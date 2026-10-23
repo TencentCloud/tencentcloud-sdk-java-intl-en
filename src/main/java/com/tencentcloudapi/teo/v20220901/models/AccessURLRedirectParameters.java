@@ -24,145 +24,115 @@ import java.util.HashMap;
 public class AccessURLRedirectParameters extends AbstractModel {
 
     /**
-    * Status code. valid values: 301, 302, 303, 307, 308.
+    * <p>Status code, value is one of 301, 302, 303, 307, 308.</p>
     */
     @SerializedName("StatusCode")
     @Expose
     private Long StatusCode;
 
     /**
-    * Target request protocol. valid values:.
-<Li>Http: target request protocol http;</li>.
-<Li>Https: target request protocol https;</li>.
-<Li>Follow: follow the request.</li>.
+    * <p>Target request protocol.</p><p>Enumeration values:</p><ul><li>http: The target request protocol is HTTP.</li><li>https: The target request protocol is HTTPS.</li><li>follow: Follow request.</li></ul>
     */
     @SerializedName("Protocol")
     @Expose
     private String Protocol;
 
     /**
-    * Target hostname.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+    * <p>Target HostName.</p>
     */
     @SerializedName("HostName")
     @Expose
     private HostName HostName;
 
     /**
-    * Target path.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+    * <p>Target path.</p>
     */
     @SerializedName("URLPath")
     @Expose
     private URLPath URLPath;
 
     /**
-    * Carry query parameters.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+    * <p>Query string.</p>
     */
     @SerializedName("QueryString")
     @Expose
     private AccessURLRedirectQueryString QueryString;
 
     /**
-     * Get Status code. valid values: 301, 302, 303, 307, 308. 
-     * @return StatusCode Status code. valid values: 301, 302, 303, 307, 308.
+     * Get <p>Status code, value is one of 301, 302, 303, 307, 308.</p> 
+     * @return StatusCode <p>Status code, value is one of 301, 302, 303, 307, 308.</p>
      */
     public Long getStatusCode() {
         return this.StatusCode;
     }
 
     /**
-     * Set Status code. valid values: 301, 302, 303, 307, 308.
-     * @param StatusCode Status code. valid values: 301, 302, 303, 307, 308.
+     * Set <p>Status code, value is one of 301, 302, 303, 307, 308.</p>
+     * @param StatusCode <p>Status code, value is one of 301, 302, 303, 307, 308.</p>
      */
     public void setStatusCode(Long StatusCode) {
         this.StatusCode = StatusCode;
     }
 
     /**
-     * Get Target request protocol. valid values:.
-<Li>Http: target request protocol http;</li>.
-<Li>Https: target request protocol https;</li>.
-<Li>Follow: follow the request.</li>. 
-     * @return Protocol Target request protocol. valid values:.
-<Li>Http: target request protocol http;</li>.
-<Li>Https: target request protocol https;</li>.
-<Li>Follow: follow the request.</li>.
+     * Get <p>Target request protocol.</p><p>Enumeration values:</p><ul><li>http: The target request protocol is HTTP.</li><li>https: The target request protocol is HTTPS.</li><li>follow: Follow request.</li></ul> 
+     * @return Protocol <p>Target request protocol.</p><p>Enumeration values:</p><ul><li>http: The target request protocol is HTTP.</li><li>https: The target request protocol is HTTPS.</li><li>follow: Follow request.</li></ul>
      */
     public String getProtocol() {
         return this.Protocol;
     }
 
     /**
-     * Set Target request protocol. valid values:.
-<Li>Http: target request protocol http;</li>.
-<Li>Https: target request protocol https;</li>.
-<Li>Follow: follow the request.</li>.
-     * @param Protocol Target request protocol. valid values:.
-<Li>Http: target request protocol http;</li>.
-<Li>Https: target request protocol https;</li>.
-<Li>Follow: follow the request.</li>.
+     * Set <p>Target request protocol.</p><p>Enumeration values:</p><ul><li>http: The target request protocol is HTTP.</li><li>https: The target request protocol is HTTPS.</li><li>follow: Follow request.</li></ul>
+     * @param Protocol <p>Target request protocol.</p><p>Enumeration values:</p><ul><li>http: The target request protocol is HTTP.</li><li>https: The target request protocol is HTTPS.</li><li>follow: Follow request.</li></ul>
      */
     public void setProtocol(String Protocol) {
         this.Protocol = Protocol;
     }
 
     /**
-     * Get Target hostname.
-Note: this field may return null, which indicates a failure to obtain a valid value. 
-     * @return HostName Target hostname.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * Get <p>Target HostName.</p> 
+     * @return HostName <p>Target HostName.</p>
      */
     public HostName getHostName() {
         return this.HostName;
     }
 
     /**
-     * Set Target hostname.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-     * @param HostName Target hostname.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * Set <p>Target HostName.</p>
+     * @param HostName <p>Target HostName.</p>
      */
     public void setHostName(HostName HostName) {
         this.HostName = HostName;
     }
 
     /**
-     * Get Target path.
-Note: this field may return null, which indicates a failure to obtain a valid value. 
-     * @return URLPath Target path.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * Get <p>Target path.</p> 
+     * @return URLPath <p>Target path.</p>
      */
     public URLPath getURLPath() {
         return this.URLPath;
     }
 
     /**
-     * Set Target path.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-     * @param URLPath Target path.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * Set <p>Target path.</p>
+     * @param URLPath <p>Target path.</p>
      */
     public void setURLPath(URLPath URLPath) {
         this.URLPath = URLPath;
     }
 
     /**
-     * Get Carry query parameters.
-Note: this field may return null, which indicates a failure to obtain a valid value. 
-     * @return QueryString Carry query parameters.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * Get <p>Query string.</p> 
+     * @return QueryString <p>Query string.</p>
      */
     public AccessURLRedirectQueryString getQueryString() {
         return this.QueryString;
     }
 
     /**
-     * Set Carry query parameters.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-     * @param QueryString Carry query parameters.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * Set <p>Query string.</p>
+     * @param QueryString <p>Query string.</p>
      */
     public void setQueryString(AccessURLRedirectQueryString QueryString) {
         this.QueryString = QueryString;

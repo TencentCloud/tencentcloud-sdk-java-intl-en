@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class DescribeChangedParamsAfterUpgradeRequest extends AbstractModel {
 
     /**
-    * Cluster ID.
+    * Cluster ID
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * CPU after specification adjustment.
+    * CPU after configuration change
     */
     @SerializedName("DstCpu")
     @Expose
     private Long DstCpu;
 
     /**
-    * Memory after specification adjustment, in GB.
+    * MEM after specification modification, in GB
     */
     @SerializedName("DstMem")
     @Expose
     private Long DstMem;
 
     /**
-     * Get Cluster ID. 
-     * @return InstanceId Cluster ID.
+     * Get Cluster ID 
+     * @return InstanceId Cluster ID
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Cluster ID.
-     * @param InstanceId Cluster ID.
+     * Set Cluster ID
+     * @param InstanceId Cluster ID
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get CPU after specification adjustment. 
-     * @return DstCpu CPU after specification adjustment.
+     * Get CPU after configuration change 
+     * @return DstCpu CPU after configuration change
      */
     public Long getDstCpu() {
         return this.DstCpu;
     }
 
     /**
-     * Set CPU after specification adjustment.
-     * @param DstCpu CPU after specification adjustment.
+     * Set CPU after configuration change
+     * @param DstCpu CPU after configuration change
      */
     public void setDstCpu(Long DstCpu) {
         this.DstCpu = DstCpu;
     }
 
     /**
-     * Get Memory after specification adjustment, in GB. 
-     * @return DstMem Memory after specification adjustment, in GB.
+     * Get MEM after specification modification, in GB 
+     * @return DstMem MEM after specification modification, in GB
      */
     public Long getDstMem() {
         return this.DstMem;
     }
 
     /**
-     * Set Memory after specification adjustment, in GB.
-     * @param DstMem Memory after specification adjustment, in GB.
+     * Set MEM after specification modification, in GB
+     * @param DstMem MEM after specification modification, in GB
      */
     public void setDstMem(Long DstMem) {
         this.DstMem = DstMem;

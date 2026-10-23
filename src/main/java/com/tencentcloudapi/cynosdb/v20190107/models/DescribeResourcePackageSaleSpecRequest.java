@@ -31,21 +31,24 @@ public class DescribeResourcePackageSaleSpecRequest extends AbstractModel {
     private String InstanceType;
 
     /**
-    * Region of the resource pack. Valid values: `China` (Chinese mainland), `overseas` (outside Chinese mainland).
+    * Region of resource pack usage
+china: universally applicable in the Chinese mainland; overseas: universally applicable in Hong Kong (China), Macao (China), Taiwan (China), and overseas regions.
     */
     @SerializedName("PackageRegion")
     @Expose
     private String PackageRegion;
 
     /**
-    * Resource pack type. Valid values: `CCU` (compute resource pack, `DISK` (storage resource pack).
+    * Resource package type
+CCU - compute resource package
+DISK - storage resource package
     */
     @SerializedName("PackageType")
     @Expose
     private String PackageType;
 
     /**
-    * Offset
+    * Offset.
     */
     @SerializedName("Offset")
     @Expose
@@ -75,48 +78,60 @@ public class DescribeResourcePackageSaleSpecRequest extends AbstractModel {
     }
 
     /**
-     * Get Region of the resource pack. Valid values: `China` (Chinese mainland), `overseas` (outside Chinese mainland). 
-     * @return PackageRegion Region of the resource pack. Valid values: `China` (Chinese mainland), `overseas` (outside Chinese mainland).
+     * Get Region of resource pack usage
+china: universally applicable in the Chinese mainland; overseas: universally applicable in Hong Kong (China), Macao (China), Taiwan (China), and overseas regions. 
+     * @return PackageRegion Region of resource pack usage
+china: universally applicable in the Chinese mainland; overseas: universally applicable in Hong Kong (China), Macao (China), Taiwan (China), and overseas regions.
      */
     public String getPackageRegion() {
         return this.PackageRegion;
     }
 
     /**
-     * Set Region of the resource pack. Valid values: `China` (Chinese mainland), `overseas` (outside Chinese mainland).
-     * @param PackageRegion Region of the resource pack. Valid values: `China` (Chinese mainland), `overseas` (outside Chinese mainland).
+     * Set Region of resource pack usage
+china: universally applicable in the Chinese mainland; overseas: universally applicable in Hong Kong (China), Macao (China), Taiwan (China), and overseas regions.
+     * @param PackageRegion Region of resource pack usage
+china: universally applicable in the Chinese mainland; overseas: universally applicable in Hong Kong (China), Macao (China), Taiwan (China), and overseas regions.
      */
     public void setPackageRegion(String PackageRegion) {
         this.PackageRegion = PackageRegion;
     }
 
     /**
-     * Get Resource pack type. Valid values: `CCU` (compute resource pack, `DISK` (storage resource pack). 
-     * @return PackageType Resource pack type. Valid values: `CCU` (compute resource pack, `DISK` (storage resource pack).
+     * Get Resource package type
+CCU - compute resource package
+DISK - storage resource package 
+     * @return PackageType Resource package type
+CCU - compute resource package
+DISK - storage resource package
      */
     public String getPackageType() {
         return this.PackageType;
     }
 
     /**
-     * Set Resource pack type. Valid values: `CCU` (compute resource pack, `DISK` (storage resource pack).
-     * @param PackageType Resource pack type. Valid values: `CCU` (compute resource pack, `DISK` (storage resource pack).
+     * Set Resource package type
+CCU - compute resource package
+DISK - storage resource package
+     * @param PackageType Resource package type
+CCU - compute resource package
+DISK - storage resource package
      */
     public void setPackageType(String PackageType) {
         this.PackageType = PackageType;
     }
 
     /**
-     * Get Offset 
-     * @return Offset Offset
+     * Get Offset. 
+     * @return Offset Offset.
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Offset
-     * @param Offset Offset
+     * Set Offset.
+     * @param Offset Offset.
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;

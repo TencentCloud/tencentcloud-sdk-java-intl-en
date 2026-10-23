@@ -24,161 +24,161 @@ import java.util.HashMap;
 public class CreateVaultRequest extends AbstractModel {
 
     /**
-    * Safe name, length must be greater than 0
+    * Safe name. The length must be greater than 0.
     */
     @SerializedName("VaultName")
     @Expose
     private String VaultName;
 
     /**
-    * Backup retention period (seconds). Must be greater than 0.
+    * Backup retention period in seconds. It must be greater than 0.
     */
     @SerializedName("BackupSaveSeconds")
     @Expose
     private Long BackupSaveSeconds;
 
     /**
-    * Safe description
+    * Description of the safe
     */
     @SerializedName("VaultDescribe")
     @Expose
     private String VaultDescribe;
 
     /**
-    * KMS key ID, length 0-36 characters
+    * KMS key ID, 0-36 characters in length
     */
     @SerializedName("KeyId")
     @Expose
     private String KeyId;
 
     /**
-    * Key type, available values: cloud (KMS managed keys), custom (custom key)
+    * Key type. Available values: cloud (cloud-managed key), custom (custom key)
     */
     @SerializedName("KeyType")
     @Expose
     private String KeyType;
 
     /**
-    * Key region, length 0-32 characters
+    * Region of the key, 0–32 characters in length
     */
     @SerializedName("KeyRegion")
     @Expose
     private String KeyRegion;
 
     /**
-    * Lock time, format: YYYY-MM-DD HH:mm:ss
+    * Lock time. Format: YYYY-MM-DD HH:mm:ss
     */
     @SerializedName("LockedTime")
     @Expose
     private String LockedTime;
 
     /**
-     * Get Safe name, length must be greater than 0 
-     * @return VaultName Safe name, length must be greater than 0
+     * Get Safe name. The length must be greater than 0. 
+     * @return VaultName Safe name. The length must be greater than 0.
      */
     public String getVaultName() {
         return this.VaultName;
     }
 
     /**
-     * Set Safe name, length must be greater than 0
-     * @param VaultName Safe name, length must be greater than 0
+     * Set Safe name. The length must be greater than 0.
+     * @param VaultName Safe name. The length must be greater than 0.
      */
     public void setVaultName(String VaultName) {
         this.VaultName = VaultName;
     }
 
     /**
-     * Get Backup retention period (seconds). Must be greater than 0. 
-     * @return BackupSaveSeconds Backup retention period (seconds). Must be greater than 0.
+     * Get Backup retention period in seconds. It must be greater than 0. 
+     * @return BackupSaveSeconds Backup retention period in seconds. It must be greater than 0.
      */
     public Long getBackupSaveSeconds() {
         return this.BackupSaveSeconds;
     }
 
     /**
-     * Set Backup retention period (seconds). Must be greater than 0.
-     * @param BackupSaveSeconds Backup retention period (seconds). Must be greater than 0.
+     * Set Backup retention period in seconds. It must be greater than 0.
+     * @param BackupSaveSeconds Backup retention period in seconds. It must be greater than 0.
      */
     public void setBackupSaveSeconds(Long BackupSaveSeconds) {
         this.BackupSaveSeconds = BackupSaveSeconds;
     }
 
     /**
-     * Get Safe description 
-     * @return VaultDescribe Safe description
+     * Get Description of the safe 
+     * @return VaultDescribe Description of the safe
      */
     public String getVaultDescribe() {
         return this.VaultDescribe;
     }
 
     /**
-     * Set Safe description
-     * @param VaultDescribe Safe description
+     * Set Description of the safe
+     * @param VaultDescribe Description of the safe
      */
     public void setVaultDescribe(String VaultDescribe) {
         this.VaultDescribe = VaultDescribe;
     }
 
     /**
-     * Get KMS key ID, length 0-36 characters 
-     * @return KeyId KMS key ID, length 0-36 characters
+     * Get KMS key ID, 0-36 characters in length 
+     * @return KeyId KMS key ID, 0-36 characters in length
      */
     public String getKeyId() {
         return this.KeyId;
     }
 
     /**
-     * Set KMS key ID, length 0-36 characters
-     * @param KeyId KMS key ID, length 0-36 characters
+     * Set KMS key ID, 0-36 characters in length
+     * @param KeyId KMS key ID, 0-36 characters in length
      */
     public void setKeyId(String KeyId) {
         this.KeyId = KeyId;
     }
 
     /**
-     * Get Key type, available values: cloud (KMS managed keys), custom (custom key) 
-     * @return KeyType Key type, available values: cloud (KMS managed keys), custom (custom key)
+     * Get Key type. Available values: cloud (cloud-managed key), custom (custom key) 
+     * @return KeyType Key type. Available values: cloud (cloud-managed key), custom (custom key)
      */
     public String getKeyType() {
         return this.KeyType;
     }
 
     /**
-     * Set Key type, available values: cloud (KMS managed keys), custom (custom key)
-     * @param KeyType Key type, available values: cloud (KMS managed keys), custom (custom key)
+     * Set Key type. Available values: cloud (cloud-managed key), custom (custom key)
+     * @param KeyType Key type. Available values: cloud (cloud-managed key), custom (custom key)
      */
     public void setKeyType(String KeyType) {
         this.KeyType = KeyType;
     }
 
     /**
-     * Get Key region, length 0-32 characters 
-     * @return KeyRegion Key region, length 0-32 characters
+     * Get Region of the key, 0–32 characters in length 
+     * @return KeyRegion Region of the key, 0–32 characters in length
      */
     public String getKeyRegion() {
         return this.KeyRegion;
     }
 
     /**
-     * Set Key region, length 0-32 characters
-     * @param KeyRegion Key region, length 0-32 characters
+     * Set Region of the key, 0–32 characters in length
+     * @param KeyRegion Region of the key, 0–32 characters in length
      */
     public void setKeyRegion(String KeyRegion) {
         this.KeyRegion = KeyRegion;
     }
 
     /**
-     * Get Lock time, format: YYYY-MM-DD HH:mm:ss 
-     * @return LockedTime Lock time, format: YYYY-MM-DD HH:mm:ss
+     * Get Lock time. Format: YYYY-MM-DD HH:mm:ss 
+     * @return LockedTime Lock time. Format: YYYY-MM-DD HH:mm:ss
      */
     public String getLockedTime() {
         return this.LockedTime;
     }
 
     /**
-     * Set Lock time, format: YYYY-MM-DD HH:mm:ss
-     * @param LockedTime Lock time, format: YYYY-MM-DD HH:mm:ss
+     * Set Lock time. Format: YYYY-MM-DD HH:mm:ss
+     * @param LockedTime Lock time. Format: YYYY-MM-DD HH:mm:ss
      */
     public void setLockedTime(String LockedTime) {
         this.LockedTime = LockedTime;

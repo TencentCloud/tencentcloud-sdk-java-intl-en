@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ExportResourcePackageDeductDetailsResponse extends AbstractModel {
 
     /**
-    * File detail.
+    * File detail
     */
     @SerializedName("FileContent")
     @Expose
@@ -38,16 +38,16 @@ public class ExportResourcePackageDeductDetailsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get File detail. 
-     * @return FileContent File detail.
+     * Get File detail 
+     * @return FileContent File detail
      */
     public String getFileContent() {
         return this.FileContent;
     }
 
     /**
-     * Set File detail.
-     * @param FileContent File detail.
+     * Set File detail
+     * @param FileContent File detail
      */
     public void setFileContent(String FileContent) {
         this.FileContent = FileContent;

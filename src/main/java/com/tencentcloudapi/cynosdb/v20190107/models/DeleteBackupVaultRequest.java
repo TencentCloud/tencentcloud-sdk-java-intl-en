@@ -31,7 +31,7 @@ public class DeleteBackupVaultRequest extends AbstractModel {
     private String VaultId;
 
     /**
-    * Backup file ID list to be deleted, cannot be empty
+    * List of backup file IDs to be deleted. Values cannot be empty.
     */
     @SerializedName("BackupIds")
     @Expose
@@ -54,16 +54,16 @@ public class DeleteBackupVaultRequest extends AbstractModel {
     }
 
     /**
-     * Get Backup file ID list to be deleted, cannot be empty 
-     * @return BackupIds Backup file ID list to be deleted, cannot be empty
+     * Get List of backup file IDs to be deleted. Values cannot be empty. 
+     * @return BackupIds List of backup file IDs to be deleted. Values cannot be empty.
      */
     public Long [] getBackupIds() {
         return this.BackupIds;
     }
 
     /**
-     * Set Backup file ID list to be deleted, cannot be empty
-     * @param BackupIds Backup file ID list to be deleted, cannot be empty
+     * Set List of backup file IDs to be deleted. Values cannot be empty.
+     * @param BackupIds List of backup file IDs to be deleted. Values cannot be empty.
      */
     public void setBackupIds(Long [] BackupIds) {
         this.BackupIds = BackupIds;

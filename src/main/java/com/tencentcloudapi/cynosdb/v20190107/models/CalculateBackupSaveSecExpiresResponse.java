@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CalculateBackupSaveSecExpiresResponse extends AbstractModel {
 
     /**
-    * Total number of backup files that will be deleted
+    * Total number of backup files to be deleted
     */
     @SerializedName("WillDeleteBackupFileCount")
     @Expose
@@ -38,28 +38,28 @@ public class CalculateBackupSaveSecExpiresResponse extends AbstractModel {
     private WillDeleteItem [] WillDeleteBackupFiles;
 
     /**
-    * Total files of binlogs that will be deleted
+    * Total number of Binlog files to be deleted
     */
     @SerializedName("WillDeleteBinlogFileCount")
     @Expose
     private Long WillDeleteBinlogFileCount;
 
     /**
-    * Binlog file list to be deleted
+    * List of Binlog files to be deleted
     */
     @SerializedName("WillDeleteBinlogFiles")
     @Expose
     private WillDeleteItem [] WillDeleteBinlogFiles;
 
     /**
-    * Total Redolog files to be deleted
+    * Total number of Redolog files to be deleted
     */
     @SerializedName("WillDeleteRedoLogFileCount")
     @Expose
     private Long WillDeleteRedoLogFileCount;
 
     /**
-    * List of Redolog files that will be deleted
+    * List of Redolog files to be deleted
     */
     @SerializedName("WillDeleteRedoLogFiles")
     @Expose
@@ -73,16 +73,16 @@ public class CalculateBackupSaveSecExpiresResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Total number of backup files that will be deleted 
-     * @return WillDeleteBackupFileCount Total number of backup files that will be deleted
+     * Get Total number of backup files to be deleted 
+     * @return WillDeleteBackupFileCount Total number of backup files to be deleted
      */
     public Long getWillDeleteBackupFileCount() {
         return this.WillDeleteBackupFileCount;
     }
 
     /**
-     * Set Total number of backup files that will be deleted
-     * @param WillDeleteBackupFileCount Total number of backup files that will be deleted
+     * Set Total number of backup files to be deleted
+     * @param WillDeleteBackupFileCount Total number of backup files to be deleted
      */
     public void setWillDeleteBackupFileCount(Long WillDeleteBackupFileCount) {
         this.WillDeleteBackupFileCount = WillDeleteBackupFileCount;
@@ -105,64 +105,64 @@ public class CalculateBackupSaveSecExpiresResponse extends AbstractModel {
     }
 
     /**
-     * Get Total files of binlogs that will be deleted 
-     * @return WillDeleteBinlogFileCount Total files of binlogs that will be deleted
+     * Get Total number of Binlog files to be deleted 
+     * @return WillDeleteBinlogFileCount Total number of Binlog files to be deleted
      */
     public Long getWillDeleteBinlogFileCount() {
         return this.WillDeleteBinlogFileCount;
     }
 
     /**
-     * Set Total files of binlogs that will be deleted
-     * @param WillDeleteBinlogFileCount Total files of binlogs that will be deleted
+     * Set Total number of Binlog files to be deleted
+     * @param WillDeleteBinlogFileCount Total number of Binlog files to be deleted
      */
     public void setWillDeleteBinlogFileCount(Long WillDeleteBinlogFileCount) {
         this.WillDeleteBinlogFileCount = WillDeleteBinlogFileCount;
     }
 
     /**
-     * Get Binlog file list to be deleted 
-     * @return WillDeleteBinlogFiles Binlog file list to be deleted
+     * Get List of Binlog files to be deleted 
+     * @return WillDeleteBinlogFiles List of Binlog files to be deleted
      */
     public WillDeleteItem [] getWillDeleteBinlogFiles() {
         return this.WillDeleteBinlogFiles;
     }
 
     /**
-     * Set Binlog file list to be deleted
-     * @param WillDeleteBinlogFiles Binlog file list to be deleted
+     * Set List of Binlog files to be deleted
+     * @param WillDeleteBinlogFiles List of Binlog files to be deleted
      */
     public void setWillDeleteBinlogFiles(WillDeleteItem [] WillDeleteBinlogFiles) {
         this.WillDeleteBinlogFiles = WillDeleteBinlogFiles;
     }
 
     /**
-     * Get Total Redolog files to be deleted 
-     * @return WillDeleteRedoLogFileCount Total Redolog files to be deleted
+     * Get Total number of Redolog files to be deleted 
+     * @return WillDeleteRedoLogFileCount Total number of Redolog files to be deleted
      */
     public Long getWillDeleteRedoLogFileCount() {
         return this.WillDeleteRedoLogFileCount;
     }
 
     /**
-     * Set Total Redolog files to be deleted
-     * @param WillDeleteRedoLogFileCount Total Redolog files to be deleted
+     * Set Total number of Redolog files to be deleted
+     * @param WillDeleteRedoLogFileCount Total number of Redolog files to be deleted
      */
     public void setWillDeleteRedoLogFileCount(Long WillDeleteRedoLogFileCount) {
         this.WillDeleteRedoLogFileCount = WillDeleteRedoLogFileCount;
     }
 
     /**
-     * Get List of Redolog files that will be deleted 
-     * @return WillDeleteRedoLogFiles List of Redolog files that will be deleted
+     * Get List of Redolog files to be deleted 
+     * @return WillDeleteRedoLogFiles List of Redolog files to be deleted
      */
     public WillDeleteItem [] getWillDeleteRedoLogFiles() {
         return this.WillDeleteRedoLogFiles;
     }
 
     /**
-     * Set List of Redolog files that will be deleted
-     * @param WillDeleteRedoLogFiles List of Redolog files that will be deleted
+     * Set List of Redolog files to be deleted
+     * @param WillDeleteRedoLogFiles List of Redolog files to be deleted
      */
     public void setWillDeleteRedoLogFiles(WillDeleteItem [] WillDeleteRedoLogFiles) {
         this.WillDeleteRedoLogFiles = WillDeleteRedoLogFiles;

@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class SetLibraDBClusterRenewFlagRequest extends AbstractModel {
 
     /**
-    * Analysis Cluster ID List
+    * Analytical cluster ID list
     */
     @SerializedName("ResourceIds")
     @Expose
     private String [] ResourceIds;
 
     /**
-    * Auto-renewal flag 0: Normal renewal 1: Automatic renewal 2: Non-renewal upon expiration
+    * Auto-renewal flag. 0: normal renewal. 1: automatic renewal. 2: non-renewal upon expiration.
     */
     @SerializedName("AutoRenewFlag")
     @Expose
     private Long AutoRenewFlag;
 
     /**
-     * Get Analysis Cluster ID List 
-     * @return ResourceIds Analysis Cluster ID List
+     * Get Analytical cluster ID list 
+     * @return ResourceIds Analytical cluster ID list
      */
     public String [] getResourceIds() {
         return this.ResourceIds;
     }
 
     /**
-     * Set Analysis Cluster ID List
-     * @param ResourceIds Analysis Cluster ID List
+     * Set Analytical cluster ID list
+     * @param ResourceIds Analytical cluster ID list
      */
     public void setResourceIds(String [] ResourceIds) {
         this.ResourceIds = ResourceIds;
     }
 
     /**
-     * Get Auto-renewal flag 0: Normal renewal 1: Automatic renewal 2: Non-renewal upon expiration 
-     * @return AutoRenewFlag Auto-renewal flag 0: Normal renewal 1: Automatic renewal 2: Non-renewal upon expiration
+     * Get Auto-renewal flag. 0: normal renewal. 1: automatic renewal. 2: non-renewal upon expiration. 
+     * @return AutoRenewFlag Auto-renewal flag. 0: normal renewal. 1: automatic renewal. 2: non-renewal upon expiration.
      */
     public Long getAutoRenewFlag() {
         return this.AutoRenewFlag;
     }
 
     /**
-     * Set Auto-renewal flag 0: Normal renewal 1: Automatic renewal 2: Non-renewal upon expiration
-     * @param AutoRenewFlag Auto-renewal flag 0: Normal renewal 1: Automatic renewal 2: Non-renewal upon expiration
+     * Set Auto-renewal flag. 0: normal renewal. 1: automatic renewal. 2: non-renewal upon expiration.
+     * @param AutoRenewFlag Auto-renewal flag. 0: normal renewal. 1: automatic renewal. 2: non-renewal upon expiration.
      */
     public void setAutoRenewFlag(Long AutoRenewFlag) {
         this.AutoRenewFlag = AutoRenewFlag;

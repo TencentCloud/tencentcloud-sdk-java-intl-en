@@ -45,7 +45,7 @@ public class TableMappingObject extends AbstractModel {
     private String TableName;
 
     /**
-    * Map database name
+    * Map database names
     */
     @SerializedName("MapDatabaseName")
     @Expose
@@ -94,7 +94,7 @@ public class TableMappingObject extends AbstractModel {
     private Boolean IsPrimary;
 
     /**
-    * Virtual column padding value
+    * Fill value of the virtual column
     */
     @SerializedName("VirtualColValue")
     @Expose
@@ -149,16 +149,16 @@ public class TableMappingObject extends AbstractModel {
     }
 
     /**
-     * Get Map database name 
-     * @return MapDatabaseName Map database name
+     * Get Map database names 
+     * @return MapDatabaseName Map database names
      */
     public String getMapDatabaseName() {
         return this.MapDatabaseName;
     }
 
     /**
-     * Set Map database name
-     * @param MapDatabaseName Map database name
+     * Set Map database names
+     * @param MapDatabaseName Map database names
      */
     public void setMapDatabaseName(String MapDatabaseName) {
         this.MapDatabaseName = MapDatabaseName;
@@ -261,16 +261,16 @@ public class TableMappingObject extends AbstractModel {
     }
 
     /**
-     * Get Virtual column padding value 
-     * @return VirtualColValue Virtual column padding value
+     * Get Fill value of the virtual column 
+     * @return VirtualColValue Fill value of the virtual column
      */
     public String getVirtualColValue() {
         return this.VirtualColValue;
     }
 
     /**
-     * Set Virtual column padding value
-     * @param VirtualColValue Virtual column padding value
+     * Set Fill value of the virtual column
+     * @param VirtualColValue Fill value of the virtual column
      */
     public void setVirtualColValue(String VirtualColValue) {
         this.VirtualColValue = VirtualColValue;

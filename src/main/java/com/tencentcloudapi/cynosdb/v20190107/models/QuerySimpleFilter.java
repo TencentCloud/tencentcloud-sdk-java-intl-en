@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class QuerySimpleFilter extends AbstractModel {
 
     /**
-    * Field name
+    * Field name.
     */
     @SerializedName("Names")
     @Expose
     private String [] Names;
 
     /**
-    * Field value.
+    * Field value
     */
     @SerializedName("Values")
     @Expose
     private String [] Values;
 
     /**
-    * Fuzzy matching. valid values: true (yes), false (no).
+    * Fuzzy matching. true: yes; false: no
     */
     @SerializedName("ExactMatch")
     @Expose
     private Boolean ExactMatch;
 
     /**
-     * Get Field name 
-     * @return Names Field name
+     * Get Field name. 
+     * @return Names Field name.
      */
     public String [] getNames() {
         return this.Names;
     }
 
     /**
-     * Set Field name
-     * @param Names Field name
+     * Set Field name.
+     * @param Names Field name.
      */
     public void setNames(String [] Names) {
         this.Names = Names;
     }
 
     /**
-     * Get Field value. 
-     * @return Values Field value.
+     * Get Field value 
+     * @return Values Field value
      */
     public String [] getValues() {
         return this.Values;
     }
 
     /**
-     * Set Field value.
-     * @param Values Field value.
+     * Set Field value
+     * @param Values Field value
      */
     public void setValues(String [] Values) {
         this.Values = Values;
     }
 
     /**
-     * Get Fuzzy matching. valid values: true (yes), false (no). 
-     * @return ExactMatch Fuzzy matching. valid values: true (yes), false (no).
+     * Get Fuzzy matching. true: yes; false: no 
+     * @return ExactMatch Fuzzy matching. true: yes; false: no
      */
     public Boolean getExactMatch() {
         return this.ExactMatch;
     }
 
     /**
-     * Set Fuzzy matching. valid values: true (yes), false (no).
-     * @param ExactMatch Fuzzy matching. valid values: true (yes), false (no).
+     * Set Fuzzy matching. true: yes; false: no
+     * @param ExactMatch Fuzzy matching. true: yes; false: no
      */
     public void setExactMatch(Boolean ExactMatch) {
         this.ExactMatch = ExactMatch;

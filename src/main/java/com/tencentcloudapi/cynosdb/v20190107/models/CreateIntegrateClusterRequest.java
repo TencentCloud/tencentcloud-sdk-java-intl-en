@@ -24,123 +24,123 @@ import java.util.HashMap;
 public class CreateIntegrateClusterRequest extends AbstractModel {
 
     /**
-    * Availability zone.
+    * Availability zone
     */
     @SerializedName("Zone")
     @Expose
     private String Zone;
 
     /**
-    * Specifies the ID of the VPC network it belongs to.
+    * VPC network ID
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * Subnet ID.
+    * Subnet ID
     */
     @SerializedName("SubnetId")
     @Expose
     private String SubnetId;
 
     /**
-    * Database version. valid values:. 
-<li>Specifies the available values for MYSQL: 5.7, 8.0.</li>.
+    * Database version. Valid values: 
+<li> MYSQL available values: 5.7, 8.0 </li>
     */
     @SerializedName("DbVersion")
     @Expose
     private String DbVersion;
 
     /**
-    * Project ID.
+    * Project ID
     */
     @SerializedName("ProjectId")
     @Expose
     private Long ProjectId;
 
     /**
-    * Cluster name, length less than 64 characters. each character value ranges from uppercase/lowercase letters, digits, special symbols ('-','_','.').
+    * Cluster name. The length must be less than 64 characters. Each character can be an uppercase or lowercase letter, digit, or special symbol (-, _, .).
     */
     @SerializedName("ClusterName")
     @Expose
     private String ClusterName;
 
     /**
-    * Account password (8-64 characters, a combination of uppercase and lowercase letters, digits and symbols ~!@#$%^&*_-+=|\(){}[]:;'<>,.?/ with any three types).
+    * Account (8-64 characters, containing any three of the following: uppercase and lowercase letters, digits, and symbols ~!@#$%^&*_-+=`|\(){}[]:;'<>,.?/)
     */
     @SerializedName("AdminPassword")
     @Expose
     private String AdminPassword;
 
     /**
-    * Port, default 3306, in the range of [0, 65535).
+    * Port. Default value: 3306. Value range: [0, 65535).
     */
     @SerializedName("Port")
     @Expose
     private Long Port;
 
     /**
-    * Billing mode. 0: pay-as-you-go; 1: monthly subscription. default is pay-as-you-go.
+    * Billing mode. Pay-as-you-go: 0; monthly subscription: 1. Default: pay-as-you-go.
     */
     @SerializedName("PayMode")
     @Expose
     private Long PayMode;
 
     /**
-    * Number of clusters to purchase. value range: [1,3]. default is 1.
+    * Number of clusters to purchase. Range of optional values: [1,3]. Default value: 1
     */
     @SerializedName("Count")
     @Expose
     private Long Count;
 
     /**
-    * Maximum storage limit of a regular instance, in GB.
-When DbType is MYSQL and the storage billing mode is prepaid, this parameter should not exceed the maximum storage specification corresponding to cpu and memory.
+    * Storage limit of a regular instance in GB
+When `DbType` is `MYSQL` and the storage billing mode is prepaid, this parameter cannot exceed the maximum storage specification corresponding to the cpu and memory.
     */
     @SerializedName("StorageLimit")
     @Expose
     private Long StorageLimit;
 
     /**
-    * Specifies the annual and monthly subscription duration.
+    * Annual and monthly subscription duration.
     */
     @SerializedName("TimeSpan")
     @Expose
     private Long TimeSpan;
 
     /**
-    * Specifies the measurement unit for annual and monthly subscription duration. valid values: 's', 'd', 'm', 'y'.
+    * Unit of the annual and monthly subscription duration. Valid values: s, d, m, y.
     */
     @SerializedName("TimeUnit")
     @Expose
     private String TimeUnit;
 
     /**
-    * Whether annual/monthly subscription is auto-renewed. default value is 0.
-0 identifies the default renewal method, 1 means auto-renew, 2 indicates no auto-renewal.
+    * Whether Annual/Monthly Subscription is auto-renewed. Default value: 0.
+0: default renewal method. 1: auto-renew. 2: no auto-renewal.
     */
     @SerializedName("AutoRenewFlag")
     @Expose
     private Long AutoRenewFlag;
 
     /**
-    * Whether to automatically select a voucher. 1: yes; 0: no. default value: 0.
+    * Whether to automatically select a voucher. 1: Yes; 0: No. Default is 0.
     */
     @SerializedName("AutoVoucher")
     @Expose
     private Long AutoVoucher;
 
     /**
-    * Specifies the tag array information that needs to be bound during cluster creation.
+    * tag array information that needs to be bound for cluster creation
     */
     @SerializedName("ResourceTags")
     @Expose
     private Tag [] ResourceTags;
 
     /**
-    * Specifies the cluster storage billing mode. 0: pay-as-you-go; 1: monthly subscription. default is pay-as-you-go.
-When DbType is MYSQL and the cluster billing mode for computing is postpaid (including DbMode as SERVERLESS), the storage billing mode can only be pay-as-you-go.
+    * Cluster storage billing mode. Pay-as-you-go: 0. Monthly subscription: 1. Default: pay-as-you-go.
+When `DbType` is `MYSQL` and the cluster compute billing mode is pay-as-you-go (including when `DbMode` is `SERVERLESS`), the storage billing mode can only be pay-as-you-go.
 Rollback and clone do not support monthly subscription storage.
     */
     @SerializedName("StoragePayMode")
@@ -148,377 +148,377 @@ Rollback and clone do not support monthly subscription storage.
     private Long StoragePayMode;
 
     /**
-    * Security group id array.
+    * Security group id array
     */
     @SerializedName("SecurityGroupIds")
     @Expose
     private String [] SecurityGroupIds;
 
     /**
-    * Specifies the Alarm policy Id array.
+    * Alarm policy Id array
     */
     @SerializedName("AlarmPolicyIds")
     @Expose
     private String [] AlarmPolicyIds;
 
     /**
-    * Parameter array, temporarily supports character_set_server (utf8|latin1|gbk|utf8mb4), lower_case_table_names. valid values: 1 (case-insensitive), 0 (case-sensitive).
+    * Parameter array. It temporarily supports `character_set_server` (utf8 | latin1 | gbk | utf8mb4) and `lower_case_table_names`. 1: not case-sensitive; 0: case-sensitive.
     */
     @SerializedName("ClusterParams")
     @Expose
     private ParamItem [] ClusterParams;
 
     /**
-    * Transaction mode. valid values: 0 (place order and pay), 1 (place order).
+    * Transaction mode. 0: Place order and pay. 1: Place order
     */
     @SerializedName("DealMode")
     @Expose
     private Long DealMode;
 
     /**
-    * Parameter template ID. can be obtained through querying parameter template information DescribeParamTemplates.
+    * Parameter template ID, which can be obtained by querying parameter template information through DescribeParamTemplates.
     */
     @SerializedName("ParamTemplateId")
     @Expose
     private Long ParamTemplateId;
 
     /**
-    * Multi-AZ address.
+    * Multi-az address
     */
     @SerializedName("SlaveZone")
     @Expose
     private String SlaveZone;
 
     /**
-    * Initializes configuration information, mainly used to purchase clusters with different specification instances.
+    * Instance initialization configuration information, primarily used for selecting different specification instances during cluster purchase.
     */
     @SerializedName("InstanceInitInfos")
     @Expose
     private IntegrateInstanceInfo [] InstanceInitInfos;
 
     /**
-    * Global database unique identifier.
+    * Global database unique ID
     */
     @SerializedName("GdnId")
     @Expose
     private String GdnId;
 
     /**
-    * Database proxy configuration.
+    * Database proxy configuration
     */
     @SerializedName("ProxyConfig")
     @Expose
     private ProxyConfigInfo ProxyConfig;
 
     /**
-    * Specifies whether to automatically archive.
+    * Whether to automatically archive
     */
     @SerializedName("AutoArchive")
     @Expose
     private String AutoArchive;
 
     /**
-    * Processing time after pausing.
+    * Archiving processing time after pausing
     */
     @SerializedName("AutoArchiveDelayHours")
     @Expose
     private Long AutoArchiveDelayHours;
 
     /**
-    * Encryption method (consists of encryption algorithm and key pair version).
+    * Encryption method (consists of the encryption algorithm and key pair version)
     */
     @SerializedName("EncryptMethod")
     @Expose
     private String EncryptMethod;
 
     /**
-    * Describes the cluster configuration information.
+    * Integrated cluster configuration information
     */
     @SerializedName("IntegrateCreateClusterConfig")
     @Expose
     private IntegrateCreateClusterConfig IntegrateCreateClusterConfig;
 
     /**
-    * Storage architecture type. valid values: 1.0/2.0. default value: 1.0.
+    * Storage architecture type. Enumeration values: 1.0/2.0. Default value: 1.0
     */
     @SerializedName("StorageVersion")
     @Expose
     private String StorageVersion;
 
     /**
-     * Get Availability zone. 
-     * @return Zone Availability zone.
+     * Get Availability zone 
+     * @return Zone Availability zone
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * Set Availability zone.
-     * @param Zone Availability zone.
+     * Set Availability zone
+     * @param Zone Availability zone
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
     }
 
     /**
-     * Get Specifies the ID of the VPC network it belongs to. 
-     * @return VpcId Specifies the ID of the VPC network it belongs to.
+     * Get VPC network ID 
+     * @return VpcId VPC network ID
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set Specifies the ID of the VPC network it belongs to.
-     * @param VpcId Specifies the ID of the VPC network it belongs to.
+     * Set VPC network ID
+     * @param VpcId VPC network ID
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get Subnet ID. 
-     * @return SubnetId Subnet ID.
+     * Get Subnet ID 
+     * @return SubnetId Subnet ID
      */
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set Subnet ID.
-     * @param SubnetId Subnet ID.
+     * Set Subnet ID
+     * @param SubnetId Subnet ID
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
     }
 
     /**
-     * Get Database version. valid values:. 
-<li>Specifies the available values for MYSQL: 5.7, 8.0.</li>. 
-     * @return DbVersion Database version. valid values:. 
-<li>Specifies the available values for MYSQL: 5.7, 8.0.</li>.
+     * Get Database version. Valid values: 
+<li> MYSQL available values: 5.7, 8.0 </li> 
+     * @return DbVersion Database version. Valid values: 
+<li> MYSQL available values: 5.7, 8.0 </li>
      */
     public String getDbVersion() {
         return this.DbVersion;
     }
 
     /**
-     * Set Database version. valid values:. 
-<li>Specifies the available values for MYSQL: 5.7, 8.0.</li>.
-     * @param DbVersion Database version. valid values:. 
-<li>Specifies the available values for MYSQL: 5.7, 8.0.</li>.
+     * Set Database version. Valid values: 
+<li> MYSQL available values: 5.7, 8.0 </li>
+     * @param DbVersion Database version. Valid values: 
+<li> MYSQL available values: 5.7, 8.0 </li>
      */
     public void setDbVersion(String DbVersion) {
         this.DbVersion = DbVersion;
     }
 
     /**
-     * Get Project ID. 
-     * @return ProjectId Project ID.
+     * Get Project ID 
+     * @return ProjectId Project ID
      */
     public Long getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set Project ID.
-     * @param ProjectId Project ID.
+     * Set Project ID
+     * @param ProjectId Project ID
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
     }
 
     /**
-     * Get Cluster name, length less than 64 characters. each character value ranges from uppercase/lowercase letters, digits, special symbols ('-','_','.'). 
-     * @return ClusterName Cluster name, length less than 64 characters. each character value ranges from uppercase/lowercase letters, digits, special symbols ('-','_','.').
+     * Get Cluster name. The length must be less than 64 characters. Each character can be an uppercase or lowercase letter, digit, or special symbol (-, _, .). 
+     * @return ClusterName Cluster name. The length must be less than 64 characters. Each character can be an uppercase or lowercase letter, digit, or special symbol (-, _, .).
      */
     public String getClusterName() {
         return this.ClusterName;
     }
 
     /**
-     * Set Cluster name, length less than 64 characters. each character value ranges from uppercase/lowercase letters, digits, special symbols ('-','_','.').
-     * @param ClusterName Cluster name, length less than 64 characters. each character value ranges from uppercase/lowercase letters, digits, special symbols ('-','_','.').
+     * Set Cluster name. The length must be less than 64 characters. Each character can be an uppercase or lowercase letter, digit, or special symbol (-, _, .).
+     * @param ClusterName Cluster name. The length must be less than 64 characters. Each character can be an uppercase or lowercase letter, digit, or special symbol (-, _, .).
      */
     public void setClusterName(String ClusterName) {
         this.ClusterName = ClusterName;
     }
 
     /**
-     * Get Account password (8-64 characters, a combination of uppercase and lowercase letters, digits and symbols ~!@#$%^&*_-+=|\(){}[]:;'<>,.?/ with any three types). 
-     * @return AdminPassword Account password (8-64 characters, a combination of uppercase and lowercase letters, digits and symbols ~!@#$%^&*_-+=|\(){}[]:;'<>,.?/ with any three types).
+     * Get Account (8-64 characters, containing any three of the following: uppercase and lowercase letters, digits, and symbols ~!@#$%^&*_-+=`|\(){}[]:;'<>,.?/) 
+     * @return AdminPassword Account (8-64 characters, containing any three of the following: uppercase and lowercase letters, digits, and symbols ~!@#$%^&*_-+=`|\(){}[]:;'<>,.?/)
      */
     public String getAdminPassword() {
         return this.AdminPassword;
     }
 
     /**
-     * Set Account password (8-64 characters, a combination of uppercase and lowercase letters, digits and symbols ~!@#$%^&*_-+=|\(){}[]:;'<>,.?/ with any three types).
-     * @param AdminPassword Account password (8-64 characters, a combination of uppercase and lowercase letters, digits and symbols ~!@#$%^&*_-+=|\(){}[]:;'<>,.?/ with any three types).
+     * Set Account (8-64 characters, containing any three of the following: uppercase and lowercase letters, digits, and symbols ~!@#$%^&*_-+=`|\(){}[]:;'<>,.?/)
+     * @param AdminPassword Account (8-64 characters, containing any three of the following: uppercase and lowercase letters, digits, and symbols ~!@#$%^&*_-+=`|\(){}[]:;'<>,.?/)
      */
     public void setAdminPassword(String AdminPassword) {
         this.AdminPassword = AdminPassword;
     }
 
     /**
-     * Get Port, default 3306, in the range of [0, 65535). 
-     * @return Port Port, default 3306, in the range of [0, 65535).
+     * Get Port. Default value: 3306. Value range: [0, 65535). 
+     * @return Port Port. Default value: 3306. Value range: [0, 65535).
      */
     public Long getPort() {
         return this.Port;
     }
 
     /**
-     * Set Port, default 3306, in the range of [0, 65535).
-     * @param Port Port, default 3306, in the range of [0, 65535).
+     * Set Port. Default value: 3306. Value range: [0, 65535).
+     * @param Port Port. Default value: 3306. Value range: [0, 65535).
      */
     public void setPort(Long Port) {
         this.Port = Port;
     }
 
     /**
-     * Get Billing mode. 0: pay-as-you-go; 1: monthly subscription. default is pay-as-you-go. 
-     * @return PayMode Billing mode. 0: pay-as-you-go; 1: monthly subscription. default is pay-as-you-go.
+     * Get Billing mode. Pay-as-you-go: 0; monthly subscription: 1. Default: pay-as-you-go. 
+     * @return PayMode Billing mode. Pay-as-you-go: 0; monthly subscription: 1. Default: pay-as-you-go.
      */
     public Long getPayMode() {
         return this.PayMode;
     }
 
     /**
-     * Set Billing mode. 0: pay-as-you-go; 1: monthly subscription. default is pay-as-you-go.
-     * @param PayMode Billing mode. 0: pay-as-you-go; 1: monthly subscription. default is pay-as-you-go.
+     * Set Billing mode. Pay-as-you-go: 0; monthly subscription: 1. Default: pay-as-you-go.
+     * @param PayMode Billing mode. Pay-as-you-go: 0; monthly subscription: 1. Default: pay-as-you-go.
      */
     public void setPayMode(Long PayMode) {
         this.PayMode = PayMode;
     }
 
     /**
-     * Get Number of clusters to purchase. value range: [1,3]. default is 1. 
-     * @return Count Number of clusters to purchase. value range: [1,3]. default is 1.
+     * Get Number of clusters to purchase. Range of optional values: [1,3]. Default value: 1 
+     * @return Count Number of clusters to purchase. Range of optional values: [1,3]. Default value: 1
      */
     public Long getCount() {
         return this.Count;
     }
 
     /**
-     * Set Number of clusters to purchase. value range: [1,3]. default is 1.
-     * @param Count Number of clusters to purchase. value range: [1,3]. default is 1.
+     * Set Number of clusters to purchase. Range of optional values: [1,3]. Default value: 1
+     * @param Count Number of clusters to purchase. Range of optional values: [1,3]. Default value: 1
      */
     public void setCount(Long Count) {
         this.Count = Count;
     }
 
     /**
-     * Get Maximum storage limit of a regular instance, in GB.
-When DbType is MYSQL and the storage billing mode is prepaid, this parameter should not exceed the maximum storage specification corresponding to cpu and memory. 
-     * @return StorageLimit Maximum storage limit of a regular instance, in GB.
-When DbType is MYSQL and the storage billing mode is prepaid, this parameter should not exceed the maximum storage specification corresponding to cpu and memory.
+     * Get Storage limit of a regular instance in GB
+When `DbType` is `MYSQL` and the storage billing mode is prepaid, this parameter cannot exceed the maximum storage specification corresponding to the cpu and memory. 
+     * @return StorageLimit Storage limit of a regular instance in GB
+When `DbType` is `MYSQL` and the storage billing mode is prepaid, this parameter cannot exceed the maximum storage specification corresponding to the cpu and memory.
      */
     public Long getStorageLimit() {
         return this.StorageLimit;
     }
 
     /**
-     * Set Maximum storage limit of a regular instance, in GB.
-When DbType is MYSQL and the storage billing mode is prepaid, this parameter should not exceed the maximum storage specification corresponding to cpu and memory.
-     * @param StorageLimit Maximum storage limit of a regular instance, in GB.
-When DbType is MYSQL and the storage billing mode is prepaid, this parameter should not exceed the maximum storage specification corresponding to cpu and memory.
+     * Set Storage limit of a regular instance in GB
+When `DbType` is `MYSQL` and the storage billing mode is prepaid, this parameter cannot exceed the maximum storage specification corresponding to the cpu and memory.
+     * @param StorageLimit Storage limit of a regular instance in GB
+When `DbType` is `MYSQL` and the storage billing mode is prepaid, this parameter cannot exceed the maximum storage specification corresponding to the cpu and memory.
      */
     public void setStorageLimit(Long StorageLimit) {
         this.StorageLimit = StorageLimit;
     }
 
     /**
-     * Get Specifies the annual and monthly subscription duration. 
-     * @return TimeSpan Specifies the annual and monthly subscription duration.
+     * Get Annual and monthly subscription duration. 
+     * @return TimeSpan Annual and monthly subscription duration.
      */
     public Long getTimeSpan() {
         return this.TimeSpan;
     }
 
     /**
-     * Set Specifies the annual and monthly subscription duration.
-     * @param TimeSpan Specifies the annual and monthly subscription duration.
+     * Set Annual and monthly subscription duration.
+     * @param TimeSpan Annual and monthly subscription duration.
      */
     public void setTimeSpan(Long TimeSpan) {
         this.TimeSpan = TimeSpan;
     }
 
     /**
-     * Get Specifies the measurement unit for annual and monthly subscription duration. valid values: 's', 'd', 'm', 'y'. 
-     * @return TimeUnit Specifies the measurement unit for annual and monthly subscription duration. valid values: 's', 'd', 'm', 'y'.
+     * Get Unit of the annual and monthly subscription duration. Valid values: s, d, m, y. 
+     * @return TimeUnit Unit of the annual and monthly subscription duration. Valid values: s, d, m, y.
      */
     public String getTimeUnit() {
         return this.TimeUnit;
     }
 
     /**
-     * Set Specifies the measurement unit for annual and monthly subscription duration. valid values: 's', 'd', 'm', 'y'.
-     * @param TimeUnit Specifies the measurement unit for annual and monthly subscription duration. valid values: 's', 'd', 'm', 'y'.
+     * Set Unit of the annual and monthly subscription duration. Valid values: s, d, m, y.
+     * @param TimeUnit Unit of the annual and monthly subscription duration. Valid values: s, d, m, y.
      */
     public void setTimeUnit(String TimeUnit) {
         this.TimeUnit = TimeUnit;
     }
 
     /**
-     * Get Whether annual/monthly subscription is auto-renewed. default value is 0.
-0 identifies the default renewal method, 1 means auto-renew, 2 indicates no auto-renewal. 
-     * @return AutoRenewFlag Whether annual/monthly subscription is auto-renewed. default value is 0.
-0 identifies the default renewal method, 1 means auto-renew, 2 indicates no auto-renewal.
+     * Get Whether Annual/Monthly Subscription is auto-renewed. Default value: 0.
+0: default renewal method. 1: auto-renew. 2: no auto-renewal. 
+     * @return AutoRenewFlag Whether Annual/Monthly Subscription is auto-renewed. Default value: 0.
+0: default renewal method. 1: auto-renew. 2: no auto-renewal.
      */
     public Long getAutoRenewFlag() {
         return this.AutoRenewFlag;
     }
 
     /**
-     * Set Whether annual/monthly subscription is auto-renewed. default value is 0.
-0 identifies the default renewal method, 1 means auto-renew, 2 indicates no auto-renewal.
-     * @param AutoRenewFlag Whether annual/monthly subscription is auto-renewed. default value is 0.
-0 identifies the default renewal method, 1 means auto-renew, 2 indicates no auto-renewal.
+     * Set Whether Annual/Monthly Subscription is auto-renewed. Default value: 0.
+0: default renewal method. 1: auto-renew. 2: no auto-renewal.
+     * @param AutoRenewFlag Whether Annual/Monthly Subscription is auto-renewed. Default value: 0.
+0: default renewal method. 1: auto-renew. 2: no auto-renewal.
      */
     public void setAutoRenewFlag(Long AutoRenewFlag) {
         this.AutoRenewFlag = AutoRenewFlag;
     }
 
     /**
-     * Get Whether to automatically select a voucher. 1: yes; 0: no. default value: 0. 
-     * @return AutoVoucher Whether to automatically select a voucher. 1: yes; 0: no. default value: 0.
+     * Get Whether to automatically select a voucher. 1: Yes; 0: No. Default is 0. 
+     * @return AutoVoucher Whether to automatically select a voucher. 1: Yes; 0: No. Default is 0.
      */
     public Long getAutoVoucher() {
         return this.AutoVoucher;
     }
 
     /**
-     * Set Whether to automatically select a voucher. 1: yes; 0: no. default value: 0.
-     * @param AutoVoucher Whether to automatically select a voucher. 1: yes; 0: no. default value: 0.
+     * Set Whether to automatically select a voucher. 1: Yes; 0: No. Default is 0.
+     * @param AutoVoucher Whether to automatically select a voucher. 1: Yes; 0: No. Default is 0.
      */
     public void setAutoVoucher(Long AutoVoucher) {
         this.AutoVoucher = AutoVoucher;
     }
 
     /**
-     * Get Specifies the tag array information that needs to be bound during cluster creation. 
-     * @return ResourceTags Specifies the tag array information that needs to be bound during cluster creation.
+     * Get tag array information that needs to be bound for cluster creation 
+     * @return ResourceTags tag array information that needs to be bound for cluster creation
      */
     public Tag [] getResourceTags() {
         return this.ResourceTags;
     }
 
     /**
-     * Set Specifies the tag array information that needs to be bound during cluster creation.
-     * @param ResourceTags Specifies the tag array information that needs to be bound during cluster creation.
+     * Set tag array information that needs to be bound for cluster creation
+     * @param ResourceTags tag array information that needs to be bound for cluster creation
      */
     public void setResourceTags(Tag [] ResourceTags) {
         this.ResourceTags = ResourceTags;
     }
 
     /**
-     * Get Specifies the cluster storage billing mode. 0: pay-as-you-go; 1: monthly subscription. default is pay-as-you-go.
-When DbType is MYSQL and the cluster billing mode for computing is postpaid (including DbMode as SERVERLESS), the storage billing mode can only be pay-as-you-go.
+     * Get Cluster storage billing mode. Pay-as-you-go: 0. Monthly subscription: 1. Default: pay-as-you-go.
+When `DbType` is `MYSQL` and the cluster compute billing mode is pay-as-you-go (including when `DbMode` is `SERVERLESS`), the storage billing mode can only be pay-as-you-go.
 Rollback and clone do not support monthly subscription storage. 
-     * @return StoragePayMode Specifies the cluster storage billing mode. 0: pay-as-you-go; 1: monthly subscription. default is pay-as-you-go.
-When DbType is MYSQL and the cluster billing mode for computing is postpaid (including DbMode as SERVERLESS), the storage billing mode can only be pay-as-you-go.
+     * @return StoragePayMode Cluster storage billing mode. Pay-as-you-go: 0. Monthly subscription: 1. Default: pay-as-you-go.
+When `DbType` is `MYSQL` and the cluster compute billing mode is pay-as-you-go (including when `DbMode` is `SERVERLESS`), the storage billing mode can only be pay-as-you-go.
 Rollback and clone do not support monthly subscription storage.
      */
     public Long getStoragePayMode() {
@@ -526,11 +526,11 @@ Rollback and clone do not support monthly subscription storage.
     }
 
     /**
-     * Set Specifies the cluster storage billing mode. 0: pay-as-you-go; 1: monthly subscription. default is pay-as-you-go.
-When DbType is MYSQL and the cluster billing mode for computing is postpaid (including DbMode as SERVERLESS), the storage billing mode can only be pay-as-you-go.
+     * Set Cluster storage billing mode. Pay-as-you-go: 0. Monthly subscription: 1. Default: pay-as-you-go.
+When `DbType` is `MYSQL` and the cluster compute billing mode is pay-as-you-go (including when `DbMode` is `SERVERLESS`), the storage billing mode can only be pay-as-you-go.
 Rollback and clone do not support monthly subscription storage.
-     * @param StoragePayMode Specifies the cluster storage billing mode. 0: pay-as-you-go; 1: monthly subscription. default is pay-as-you-go.
-When DbType is MYSQL and the cluster billing mode for computing is postpaid (including DbMode as SERVERLESS), the storage billing mode can only be pay-as-you-go.
+     * @param StoragePayMode Cluster storage billing mode. Pay-as-you-go: 0. Monthly subscription: 1. Default: pay-as-you-go.
+When `DbType` is `MYSQL` and the cluster compute billing mode is pay-as-you-go (including when `DbMode` is `SERVERLESS`), the storage billing mode can only be pay-as-you-go.
 Rollback and clone do not support monthly subscription storage.
      */
     public void setStoragePayMode(Long StoragePayMode) {
@@ -538,224 +538,224 @@ Rollback and clone do not support monthly subscription storage.
     }
 
     /**
-     * Get Security group id array. 
-     * @return SecurityGroupIds Security group id array.
+     * Get Security group id array 
+     * @return SecurityGroupIds Security group id array
      */
     public String [] getSecurityGroupIds() {
         return this.SecurityGroupIds;
     }
 
     /**
-     * Set Security group id array.
-     * @param SecurityGroupIds Security group id array.
+     * Set Security group id array
+     * @param SecurityGroupIds Security group id array
      */
     public void setSecurityGroupIds(String [] SecurityGroupIds) {
         this.SecurityGroupIds = SecurityGroupIds;
     }
 
     /**
-     * Get Specifies the Alarm policy Id array. 
-     * @return AlarmPolicyIds Specifies the Alarm policy Id array.
+     * Get Alarm policy Id array 
+     * @return AlarmPolicyIds Alarm policy Id array
      */
     public String [] getAlarmPolicyIds() {
         return this.AlarmPolicyIds;
     }
 
     /**
-     * Set Specifies the Alarm policy Id array.
-     * @param AlarmPolicyIds Specifies the Alarm policy Id array.
+     * Set Alarm policy Id array
+     * @param AlarmPolicyIds Alarm policy Id array
      */
     public void setAlarmPolicyIds(String [] AlarmPolicyIds) {
         this.AlarmPolicyIds = AlarmPolicyIds;
     }
 
     /**
-     * Get Parameter array, temporarily supports character_set_server (utf8|latin1|gbk|utf8mb4), lower_case_table_names. valid values: 1 (case-insensitive), 0 (case-sensitive). 
-     * @return ClusterParams Parameter array, temporarily supports character_set_server (utf8|latin1|gbk|utf8mb4), lower_case_table_names. valid values: 1 (case-insensitive), 0 (case-sensitive).
+     * Get Parameter array. It temporarily supports `character_set_server` (utf8 | latin1 | gbk | utf8mb4) and `lower_case_table_names`. 1: not case-sensitive; 0: case-sensitive. 
+     * @return ClusterParams Parameter array. It temporarily supports `character_set_server` (utf8 | latin1 | gbk | utf8mb4) and `lower_case_table_names`. 1: not case-sensitive; 0: case-sensitive.
      */
     public ParamItem [] getClusterParams() {
         return this.ClusterParams;
     }
 
     /**
-     * Set Parameter array, temporarily supports character_set_server (utf8|latin1|gbk|utf8mb4), lower_case_table_names. valid values: 1 (case-insensitive), 0 (case-sensitive).
-     * @param ClusterParams Parameter array, temporarily supports character_set_server (utf8|latin1|gbk|utf8mb4), lower_case_table_names. valid values: 1 (case-insensitive), 0 (case-sensitive).
+     * Set Parameter array. It temporarily supports `character_set_server` (utf8 | latin1 | gbk | utf8mb4) and `lower_case_table_names`. 1: not case-sensitive; 0: case-sensitive.
+     * @param ClusterParams Parameter array. It temporarily supports `character_set_server` (utf8 | latin1 | gbk | utf8mb4) and `lower_case_table_names`. 1: not case-sensitive; 0: case-sensitive.
      */
     public void setClusterParams(ParamItem [] ClusterParams) {
         this.ClusterParams = ClusterParams;
     }
 
     /**
-     * Get Transaction mode. valid values: 0 (place order and pay), 1 (place order). 
-     * @return DealMode Transaction mode. valid values: 0 (place order and pay), 1 (place order).
+     * Get Transaction mode. 0: Place order and pay. 1: Place order 
+     * @return DealMode Transaction mode. 0: Place order and pay. 1: Place order
      */
     public Long getDealMode() {
         return this.DealMode;
     }
 
     /**
-     * Set Transaction mode. valid values: 0 (place order and pay), 1 (place order).
-     * @param DealMode Transaction mode. valid values: 0 (place order and pay), 1 (place order).
+     * Set Transaction mode. 0: Place order and pay. 1: Place order
+     * @param DealMode Transaction mode. 0: Place order and pay. 1: Place order
      */
     public void setDealMode(Long DealMode) {
         this.DealMode = DealMode;
     }
 
     /**
-     * Get Parameter template ID. can be obtained through querying parameter template information DescribeParamTemplates. 
-     * @return ParamTemplateId Parameter template ID. can be obtained through querying parameter template information DescribeParamTemplates.
+     * Get Parameter template ID, which can be obtained by querying parameter template information through DescribeParamTemplates. 
+     * @return ParamTemplateId Parameter template ID, which can be obtained by querying parameter template information through DescribeParamTemplates.
      */
     public Long getParamTemplateId() {
         return this.ParamTemplateId;
     }
 
     /**
-     * Set Parameter template ID. can be obtained through querying parameter template information DescribeParamTemplates.
-     * @param ParamTemplateId Parameter template ID. can be obtained through querying parameter template information DescribeParamTemplates.
+     * Set Parameter template ID, which can be obtained by querying parameter template information through DescribeParamTemplates.
+     * @param ParamTemplateId Parameter template ID, which can be obtained by querying parameter template information through DescribeParamTemplates.
      */
     public void setParamTemplateId(Long ParamTemplateId) {
         this.ParamTemplateId = ParamTemplateId;
     }
 
     /**
-     * Get Multi-AZ address. 
-     * @return SlaveZone Multi-AZ address.
+     * Get Multi-az address 
+     * @return SlaveZone Multi-az address
      */
     public String getSlaveZone() {
         return this.SlaveZone;
     }
 
     /**
-     * Set Multi-AZ address.
-     * @param SlaveZone Multi-AZ address.
+     * Set Multi-az address
+     * @param SlaveZone Multi-az address
      */
     public void setSlaveZone(String SlaveZone) {
         this.SlaveZone = SlaveZone;
     }
 
     /**
-     * Get Initializes configuration information, mainly used to purchase clusters with different specification instances. 
-     * @return InstanceInitInfos Initializes configuration information, mainly used to purchase clusters with different specification instances.
+     * Get Instance initialization configuration information, primarily used for selecting different specification instances during cluster purchase. 
+     * @return InstanceInitInfos Instance initialization configuration information, primarily used for selecting different specification instances during cluster purchase.
      */
     public IntegrateInstanceInfo [] getInstanceInitInfos() {
         return this.InstanceInitInfos;
     }
 
     /**
-     * Set Initializes configuration information, mainly used to purchase clusters with different specification instances.
-     * @param InstanceInitInfos Initializes configuration information, mainly used to purchase clusters with different specification instances.
+     * Set Instance initialization configuration information, primarily used for selecting different specification instances during cluster purchase.
+     * @param InstanceInitInfos Instance initialization configuration information, primarily used for selecting different specification instances during cluster purchase.
      */
     public void setInstanceInitInfos(IntegrateInstanceInfo [] InstanceInitInfos) {
         this.InstanceInitInfos = InstanceInitInfos;
     }
 
     /**
-     * Get Global database unique identifier. 
-     * @return GdnId Global database unique identifier.
+     * Get Global database unique ID 
+     * @return GdnId Global database unique ID
      */
     public String getGdnId() {
         return this.GdnId;
     }
 
     /**
-     * Set Global database unique identifier.
-     * @param GdnId Global database unique identifier.
+     * Set Global database unique ID
+     * @param GdnId Global database unique ID
      */
     public void setGdnId(String GdnId) {
         this.GdnId = GdnId;
     }
 
     /**
-     * Get Database proxy configuration. 
-     * @return ProxyConfig Database proxy configuration.
+     * Get Database proxy configuration 
+     * @return ProxyConfig Database proxy configuration
      */
     public ProxyConfigInfo getProxyConfig() {
         return this.ProxyConfig;
     }
 
     /**
-     * Set Database proxy configuration.
-     * @param ProxyConfig Database proxy configuration.
+     * Set Database proxy configuration
+     * @param ProxyConfig Database proxy configuration
      */
     public void setProxyConfig(ProxyConfigInfo ProxyConfig) {
         this.ProxyConfig = ProxyConfig;
     }
 
     /**
-     * Get Specifies whether to automatically archive. 
-     * @return AutoArchive Specifies whether to automatically archive.
+     * Get Whether to automatically archive 
+     * @return AutoArchive Whether to automatically archive
      */
     public String getAutoArchive() {
         return this.AutoArchive;
     }
 
     /**
-     * Set Specifies whether to automatically archive.
-     * @param AutoArchive Specifies whether to automatically archive.
+     * Set Whether to automatically archive
+     * @param AutoArchive Whether to automatically archive
      */
     public void setAutoArchive(String AutoArchive) {
         this.AutoArchive = AutoArchive;
     }
 
     /**
-     * Get Processing time after pausing. 
-     * @return AutoArchiveDelayHours Processing time after pausing.
+     * Get Archiving processing time after pausing 
+     * @return AutoArchiveDelayHours Archiving processing time after pausing
      */
     public Long getAutoArchiveDelayHours() {
         return this.AutoArchiveDelayHours;
     }
 
     /**
-     * Set Processing time after pausing.
-     * @param AutoArchiveDelayHours Processing time after pausing.
+     * Set Archiving processing time after pausing
+     * @param AutoArchiveDelayHours Archiving processing time after pausing
      */
     public void setAutoArchiveDelayHours(Long AutoArchiveDelayHours) {
         this.AutoArchiveDelayHours = AutoArchiveDelayHours;
     }
 
     /**
-     * Get Encryption method (consists of encryption algorithm and key pair version). 
-     * @return EncryptMethod Encryption method (consists of encryption algorithm and key pair version).
+     * Get Encryption method (consists of the encryption algorithm and key pair version) 
+     * @return EncryptMethod Encryption method (consists of the encryption algorithm and key pair version)
      */
     public String getEncryptMethod() {
         return this.EncryptMethod;
     }
 
     /**
-     * Set Encryption method (consists of encryption algorithm and key pair version).
-     * @param EncryptMethod Encryption method (consists of encryption algorithm and key pair version).
+     * Set Encryption method (consists of the encryption algorithm and key pair version)
+     * @param EncryptMethod Encryption method (consists of the encryption algorithm and key pair version)
      */
     public void setEncryptMethod(String EncryptMethod) {
         this.EncryptMethod = EncryptMethod;
     }
 
     /**
-     * Get Describes the cluster configuration information. 
-     * @return IntegrateCreateClusterConfig Describes the cluster configuration information.
+     * Get Integrated cluster configuration information 
+     * @return IntegrateCreateClusterConfig Integrated cluster configuration information
      */
     public IntegrateCreateClusterConfig getIntegrateCreateClusterConfig() {
         return this.IntegrateCreateClusterConfig;
     }
 
     /**
-     * Set Describes the cluster configuration information.
-     * @param IntegrateCreateClusterConfig Describes the cluster configuration information.
+     * Set Integrated cluster configuration information
+     * @param IntegrateCreateClusterConfig Integrated cluster configuration information
      */
     public void setIntegrateCreateClusterConfig(IntegrateCreateClusterConfig IntegrateCreateClusterConfig) {
         this.IntegrateCreateClusterConfig = IntegrateCreateClusterConfig;
     }
 
     /**
-     * Get Storage architecture type. valid values: 1.0/2.0. default value: 1.0. 
-     * @return StorageVersion Storage architecture type. valid values: 1.0/2.0. default value: 1.0.
+     * Get Storage architecture type. Enumeration values: 1.0/2.0. Default value: 1.0 
+     * @return StorageVersion Storage architecture type. Enumeration values: 1.0/2.0. Default value: 1.0
      */
     public String getStorageVersion() {
         return this.StorageVersion;
     }
 
     /**
-     * Set Storage architecture type. valid values: 1.0/2.0. default value: 1.0.
-     * @param StorageVersion Storage architecture type. valid values: 1.0/2.0. default value: 1.0.
+     * Set Storage architecture type. Enumeration values: 1.0/2.0. Default value: 1.0
+     * @param StorageVersion Storage architecture type. Enumeration values: 1.0/2.0. Default value: 1.0
      */
     public void setStorageVersion(String StorageVersion) {
         this.StorageVersion = StorageVersion;

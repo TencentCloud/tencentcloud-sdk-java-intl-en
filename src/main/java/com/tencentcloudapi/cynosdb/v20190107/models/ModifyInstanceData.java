@@ -24,273 +24,273 @@ import java.util.HashMap;
 public class ModifyInstanceData extends AbstractModel {
 
     /**
-    * CPU after resizing.
+    * CPU after configuration change
     */
     @SerializedName("Cpu")
     @Expose
     private Long Cpu;
 
     /**
-    * Memory after resizing.
+    * Memory after configuration change
     */
     @SerializedName("Memory")
     @Expose
     private Long Memory;
 
     /**
-    * Storage upper limit after resizing.
+    * Storage limit after configuration change
     */
     @SerializedName("StorageLimit")
     @Expose
     private Long StorageLimit;
 
     /**
-    * CPU before resizing.
+    * CPU before specification adjustment
     */
     @SerializedName("OldCpu")
     @Expose
     private Long OldCpu;
 
     /**
-    * Memory before resizing.
+    * Memory before specification modification
     */
     @SerializedName("OldMemory")
     @Expose
     private Long OldMemory;
 
     /**
-    * Storage upper limit before resizing.
+    * Storage limit before configuration change
     */
     @SerializedName("OldStorageLimit")
     @Expose
     private Long OldStorageLimit;
 
     /**
-    * Instance Machine Type Before Scaling
-1. common, universal type.
-2. exclusive, dedicated.
+    * Instance machine type before scaling
+1. common: universal type.
+2. exclusive: dedicated.
     */
     @SerializedName("OldDeviceType")
     @Expose
     private String OldDeviceType;
 
     /**
-    * Instance Machine Type After Scaling
-1. common, universal type.
-2. exclusive, dedicated.
+    * Instance machine type after scaling
+1. common: universal type.
+2. exclusive: dedicated.
     */
     @SerializedName("DeviceType")
     @Expose
     private String DeviceType;
 
     /**
-    * Upgrade method. Switch after upgrade completes or switch within maintenance window.
+    * Upgrade method. Switch after the upgrade is completed or switch during the maintenance window.
     */
     @SerializedName("UpgradeType")
     @Expose
     private String UpgradeType;
 
     /**
-    * Specifies the quantity of libra nodes.
+    * Number of libra nodes
     */
     @SerializedName("LibraNodeCount")
     @Expose
     private Long LibraNodeCount;
 
     /**
-    * Specifies the original quantity of libra nodes.
+    * Original libra node count
     */
     @SerializedName("OldLibraNodeCount")
     @Expose
     private Long OldLibraNodeCount;
 
     /**
-     * Get CPU after resizing. 
-     * @return Cpu CPU after resizing.
+     * Get CPU after configuration change 
+     * @return Cpu CPU after configuration change
      */
     public Long getCpu() {
         return this.Cpu;
     }
 
     /**
-     * Set CPU after resizing.
-     * @param Cpu CPU after resizing.
+     * Set CPU after configuration change
+     * @param Cpu CPU after configuration change
      */
     public void setCpu(Long Cpu) {
         this.Cpu = Cpu;
     }
 
     /**
-     * Get Memory after resizing. 
-     * @return Memory Memory after resizing.
+     * Get Memory after configuration change 
+     * @return Memory Memory after configuration change
      */
     public Long getMemory() {
         return this.Memory;
     }
 
     /**
-     * Set Memory after resizing.
-     * @param Memory Memory after resizing.
+     * Set Memory after configuration change
+     * @param Memory Memory after configuration change
      */
     public void setMemory(Long Memory) {
         this.Memory = Memory;
     }
 
     /**
-     * Get Storage upper limit after resizing. 
-     * @return StorageLimit Storage upper limit after resizing.
+     * Get Storage limit after configuration change 
+     * @return StorageLimit Storage limit after configuration change
      */
     public Long getStorageLimit() {
         return this.StorageLimit;
     }
 
     /**
-     * Set Storage upper limit after resizing.
-     * @param StorageLimit Storage upper limit after resizing.
+     * Set Storage limit after configuration change
+     * @param StorageLimit Storage limit after configuration change
      */
     public void setStorageLimit(Long StorageLimit) {
         this.StorageLimit = StorageLimit;
     }
 
     /**
-     * Get CPU before resizing. 
-     * @return OldCpu CPU before resizing.
+     * Get CPU before specification adjustment 
+     * @return OldCpu CPU before specification adjustment
      */
     public Long getOldCpu() {
         return this.OldCpu;
     }
 
     /**
-     * Set CPU before resizing.
-     * @param OldCpu CPU before resizing.
+     * Set CPU before specification adjustment
+     * @param OldCpu CPU before specification adjustment
      */
     public void setOldCpu(Long OldCpu) {
         this.OldCpu = OldCpu;
     }
 
     /**
-     * Get Memory before resizing. 
-     * @return OldMemory Memory before resizing.
+     * Get Memory before specification modification 
+     * @return OldMemory Memory before specification modification
      */
     public Long getOldMemory() {
         return this.OldMemory;
     }
 
     /**
-     * Set Memory before resizing.
-     * @param OldMemory Memory before resizing.
+     * Set Memory before specification modification
+     * @param OldMemory Memory before specification modification
      */
     public void setOldMemory(Long OldMemory) {
         this.OldMemory = OldMemory;
     }
 
     /**
-     * Get Storage upper limit before resizing. 
-     * @return OldStorageLimit Storage upper limit before resizing.
+     * Get Storage limit before configuration change 
+     * @return OldStorageLimit Storage limit before configuration change
      */
     public Long getOldStorageLimit() {
         return this.OldStorageLimit;
     }
 
     /**
-     * Set Storage upper limit before resizing.
-     * @param OldStorageLimit Storage upper limit before resizing.
+     * Set Storage limit before configuration change
+     * @param OldStorageLimit Storage limit before configuration change
      */
     public void setOldStorageLimit(Long OldStorageLimit) {
         this.OldStorageLimit = OldStorageLimit;
     }
 
     /**
-     * Get Instance Machine Type Before Scaling
-1. common, universal type.
-2. exclusive, dedicated. 
-     * @return OldDeviceType Instance Machine Type Before Scaling
-1. common, universal type.
-2. exclusive, dedicated.
+     * Get Instance machine type before scaling
+1. common: universal type.
+2. exclusive: dedicated. 
+     * @return OldDeviceType Instance machine type before scaling
+1. common: universal type.
+2. exclusive: dedicated.
      */
     public String getOldDeviceType() {
         return this.OldDeviceType;
     }
 
     /**
-     * Set Instance Machine Type Before Scaling
-1. common, universal type.
-2. exclusive, dedicated.
-     * @param OldDeviceType Instance Machine Type Before Scaling
-1. common, universal type.
-2. exclusive, dedicated.
+     * Set Instance machine type before scaling
+1. common: universal type.
+2. exclusive: dedicated.
+     * @param OldDeviceType Instance machine type before scaling
+1. common: universal type.
+2. exclusive: dedicated.
      */
     public void setOldDeviceType(String OldDeviceType) {
         this.OldDeviceType = OldDeviceType;
     }
 
     /**
-     * Get Instance Machine Type After Scaling
-1. common, universal type.
-2. exclusive, dedicated. 
-     * @return DeviceType Instance Machine Type After Scaling
-1. common, universal type.
-2. exclusive, dedicated.
+     * Get Instance machine type after scaling
+1. common: universal type.
+2. exclusive: dedicated. 
+     * @return DeviceType Instance machine type after scaling
+1. common: universal type.
+2. exclusive: dedicated.
      */
     public String getDeviceType() {
         return this.DeviceType;
     }
 
     /**
-     * Set Instance Machine Type After Scaling
-1. common, universal type.
-2. exclusive, dedicated.
-     * @param DeviceType Instance Machine Type After Scaling
-1. common, universal type.
-2. exclusive, dedicated.
+     * Set Instance machine type after scaling
+1. common: universal type.
+2. exclusive: dedicated.
+     * @param DeviceType Instance machine type after scaling
+1. common: universal type.
+2. exclusive: dedicated.
      */
     public void setDeviceType(String DeviceType) {
         this.DeviceType = DeviceType;
     }
 
     /**
-     * Get Upgrade method. Switch after upgrade completes or switch within maintenance window. 
-     * @return UpgradeType Upgrade method. Switch after upgrade completes or switch within maintenance window.
+     * Get Upgrade method. Switch after the upgrade is completed or switch during the maintenance window. 
+     * @return UpgradeType Upgrade method. Switch after the upgrade is completed or switch during the maintenance window.
      */
     public String getUpgradeType() {
         return this.UpgradeType;
     }
 
     /**
-     * Set Upgrade method. Switch after upgrade completes or switch within maintenance window.
-     * @param UpgradeType Upgrade method. Switch after upgrade completes or switch within maintenance window.
+     * Set Upgrade method. Switch after the upgrade is completed or switch during the maintenance window.
+     * @param UpgradeType Upgrade method. Switch after the upgrade is completed or switch during the maintenance window.
      */
     public void setUpgradeType(String UpgradeType) {
         this.UpgradeType = UpgradeType;
     }
 
     /**
-     * Get Specifies the quantity of libra nodes. 
-     * @return LibraNodeCount Specifies the quantity of libra nodes.
+     * Get Number of libra nodes 
+     * @return LibraNodeCount Number of libra nodes
      */
     public Long getLibraNodeCount() {
         return this.LibraNodeCount;
     }
 
     /**
-     * Set Specifies the quantity of libra nodes.
-     * @param LibraNodeCount Specifies the quantity of libra nodes.
+     * Set Number of libra nodes
+     * @param LibraNodeCount Number of libra nodes
      */
     public void setLibraNodeCount(Long LibraNodeCount) {
         this.LibraNodeCount = LibraNodeCount;
     }
 
     /**
-     * Get Specifies the original quantity of libra nodes. 
-     * @return OldLibraNodeCount Specifies the original quantity of libra nodes.
+     * Get Original libra node count 
+     * @return OldLibraNodeCount Original libra node count
      */
     public Long getOldLibraNodeCount() {
         return this.OldLibraNodeCount;
     }
 
     /**
-     * Set Specifies the original quantity of libra nodes.
-     * @param OldLibraNodeCount Specifies the original quantity of libra nodes.
+     * Set Original libra node count
+     * @param OldLibraNodeCount Original libra node count
      */
     public void setOldLibraNodeCount(Long OldLibraNodeCount) {
         this.OldLibraNodeCount = OldLibraNodeCount;

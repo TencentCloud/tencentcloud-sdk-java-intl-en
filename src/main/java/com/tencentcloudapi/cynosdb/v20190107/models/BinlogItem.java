@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class BinlogItem extends AbstractModel {
 
     /**
-    * <p>Binlog filename</p>
+    * <p>Binlog file name</p>
     */
     @SerializedName("FileName")
     @Expose
     private String FileName;
 
     /**
-    * <p>File size, measurement unit: byte</p>
+    * <p>File size, unit: byte</p>
     */
     @SerializedName("FileSize")
     @Expose
@@ -59,7 +59,7 @@ public class BinlogItem extends AbstractModel {
     private Long BinlogId;
 
     /**
-    * <p>Cross-regional binlog</p>
+    * <p>Cross-region of binlog</p>
     */
     @SerializedName("CrossRegions")
     @Expose
@@ -73,7 +73,7 @@ public class BinlogItem extends AbstractModel {
     private String CopyStatus;
 
     /**
-    * <p>Safe information</p>
+    * <p>Safe information.</p>
     */
     @SerializedName("VaultInfos")
     @Expose
@@ -94,39 +94,39 @@ public class BinlogItem extends AbstractModel {
     private String EncryptRegion;
 
     /**
-    * <p>Geographical distribution of backups</p>
+    * <p>Geographical distribution information of backups</p>
     */
     @SerializedName("ExistRegions")
     @Expose
     private BinlogRegionInfo [] ExistRegions;
 
     /**
-     * Get <p>Binlog filename</p> 
-     * @return FileName <p>Binlog filename</p>
+     * Get <p>Binlog file name</p> 
+     * @return FileName <p>Binlog file name</p>
      */
     public String getFileName() {
         return this.FileName;
     }
 
     /**
-     * Set <p>Binlog filename</p>
-     * @param FileName <p>Binlog filename</p>
+     * Set <p>Binlog file name</p>
+     * @param FileName <p>Binlog file name</p>
      */
     public void setFileName(String FileName) {
         this.FileName = FileName;
     }
 
     /**
-     * Get <p>File size, measurement unit: byte</p> 
-     * @return FileSize <p>File size, measurement unit: byte</p>
+     * Get <p>File size, unit: byte</p> 
+     * @return FileSize <p>File size, unit: byte</p>
      */
     public Long getFileSize() {
         return this.FileSize;
     }
 
     /**
-     * Set <p>File size, measurement unit: byte</p>
-     * @param FileSize <p>File size, measurement unit: byte</p>
+     * Set <p>File size, unit: byte</p>
+     * @param FileSize <p>File size, unit: byte</p>
      */
     public void setFileSize(Long FileSize) {
         this.FileSize = FileSize;
@@ -181,16 +181,16 @@ public class BinlogItem extends AbstractModel {
     }
 
     /**
-     * Get <p>Cross-regional binlog</p> 
-     * @return CrossRegions <p>Cross-regional binlog</p>
+     * Get <p>Cross-region of binlog</p> 
+     * @return CrossRegions <p>Cross-region of binlog</p>
      */
     public String [] getCrossRegions() {
         return this.CrossRegions;
     }
 
     /**
-     * Set <p>Cross-regional binlog</p>
-     * @param CrossRegions <p>Cross-regional binlog</p>
+     * Set <p>Cross-region of binlog</p>
+     * @param CrossRegions <p>Cross-region of binlog</p>
      */
     public void setCrossRegions(String [] CrossRegions) {
         this.CrossRegions = CrossRegions;
@@ -213,16 +213,16 @@ public class BinlogItem extends AbstractModel {
     }
 
     /**
-     * Get <p>Safe information</p> 
-     * @return VaultInfos <p>Safe information</p>
+     * Get <p>Safe information.</p> 
+     * @return VaultInfos <p>Safe information.</p>
      */
     public VaultInfo [] getVaultInfos() {
         return this.VaultInfos;
     }
 
     /**
-     * Set <p>Safe information</p>
-     * @param VaultInfos <p>Safe information</p>
+     * Set <p>Safe information.</p>
+     * @param VaultInfos <p>Safe information.</p>
      */
     public void setVaultInfos(VaultInfo [] VaultInfos) {
         this.VaultInfos = VaultInfos;
@@ -261,16 +261,16 @@ public class BinlogItem extends AbstractModel {
     }
 
     /**
-     * Get <p>Geographical distribution of backups</p> 
-     * @return ExistRegions <p>Geographical distribution of backups</p>
+     * Get <p>Geographical distribution information of backups</p> 
+     * @return ExistRegions <p>Geographical distribution information of backups</p>
      */
     public BinlogRegionInfo [] getExistRegions() {
         return this.ExistRegions;
     }
 
     /**
-     * Set <p>Geographical distribution of backups</p>
-     * @param ExistRegions <p>Geographical distribution of backups</p>
+     * Set <p>Geographical distribution information of backups</p>
+     * @param ExistRegions <p>Geographical distribution information of backups</p>
      */
     public void setExistRegions(BinlogRegionInfo [] ExistRegions) {
         this.ExistRegions = ExistRegions;

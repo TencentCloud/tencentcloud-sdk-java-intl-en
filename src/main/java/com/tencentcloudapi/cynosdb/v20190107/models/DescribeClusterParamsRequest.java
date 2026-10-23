@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeClusterParamsRequest extends AbstractModel {
 
     /**
-    * Cluster ID.
+    * Cluster ID
     */
     @SerializedName("ClusterId")
     @Expose
@@ -38,23 +38,23 @@ public class DescribeClusterParamsRequest extends AbstractModel {
     private String ParamName;
 
     /**
-    * Whether it is a global parameter.
+    * Whether it is a global parameter
     */
     @SerializedName("IsGlobal")
     @Expose
     private String IsGlobal;
 
     /**
-     * Get Cluster ID. 
-     * @return ClusterId Cluster ID.
+     * Get Cluster ID 
+     * @return ClusterId Cluster ID
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set Cluster ID.
-     * @param ClusterId Cluster ID.
+     * Set Cluster ID
+     * @param ClusterId Cluster ID
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
@@ -77,16 +77,16 @@ public class DescribeClusterParamsRequest extends AbstractModel {
     }
 
     /**
-     * Get Whether it is a global parameter. 
-     * @return IsGlobal Whether it is a global parameter.
+     * Get Whether it is a global parameter 
+     * @return IsGlobal Whether it is a global parameter
      */
     public String getIsGlobal() {
         return this.IsGlobal;
     }
 
     /**
-     * Set Whether it is a global parameter.
-     * @param IsGlobal Whether it is a global parameter.
+     * Set Whether it is a global parameter
+     * @param IsGlobal Whether it is a global parameter
      */
     public void setIsGlobal(String IsGlobal) {
         this.IsGlobal = IsGlobal;

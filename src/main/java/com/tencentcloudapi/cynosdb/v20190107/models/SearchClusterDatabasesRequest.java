@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class SearchClusterDatabasesRequest extends AbstractModel {
 
     /**
-    * The cluster ID
+    * Cluster ID.
     */
     @SerializedName("ClusterId")
     @Expose
@@ -38,25 +38,25 @@ public class SearchClusterDatabasesRequest extends AbstractModel {
     private String Database;
 
     /**
-    * Whether to search exactly
+    * Whether to perform an exact search.
 Valid values: `0` (fuzzy search), `1` (exact search). 
-Default value: `0`.
+The default is 0.
     */
     @SerializedName("MatchType")
     @Expose
     private Long MatchType;
 
     /**
-     * Get The cluster ID 
-     * @return ClusterId The cluster ID
+     * Get Cluster ID. 
+     * @return ClusterId Cluster ID.
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set The cluster ID
-     * @param ClusterId The cluster ID
+     * Set Cluster ID.
+     * @param ClusterId Cluster ID.
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
@@ -79,24 +79,24 @@ Default value: `0`.
     }
 
     /**
-     * Get Whether to search exactly
+     * Get Whether to perform an exact search.
 Valid values: `0` (fuzzy search), `1` (exact search). 
-Default value: `0`. 
-     * @return MatchType Whether to search exactly
+The default is 0. 
+     * @return MatchType Whether to perform an exact search.
 Valid values: `0` (fuzzy search), `1` (exact search). 
-Default value: `0`.
+The default is 0.
      */
     public Long getMatchType() {
         return this.MatchType;
     }
 
     /**
-     * Set Whether to search exactly
+     * Set Whether to perform an exact search.
 Valid values: `0` (fuzzy search), `1` (exact search). 
-Default value: `0`.
-     * @param MatchType Whether to search exactly
+The default is 0.
+     * @param MatchType Whether to perform an exact search.
 Valid values: `0` (fuzzy search), `1` (exact search). 
-Default value: `0`.
+The default is 0.
      */
     public void setMatchType(Long MatchType) {
         this.MatchType = MatchType;

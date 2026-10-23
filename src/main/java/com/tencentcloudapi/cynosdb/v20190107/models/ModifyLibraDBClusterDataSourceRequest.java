@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModifyLibraDBClusterDataSourceRequest extends AbstractModel {
 
     /**
-    * Analysis Cluster ID
+    * Analysis cluster ID
     */
     @SerializedName("ClusterId")
     @Expose
@@ -45,16 +45,16 @@ public class ModifyLibraDBClusterDataSourceRequest extends AbstractModel {
     private LibraDBClusterSrcInfo [] SrcInfo;
 
     /**
-     * Get Analysis Cluster ID 
-     * @return ClusterId Analysis Cluster ID
+     * Get Analysis cluster ID 
+     * @return ClusterId Analysis cluster ID
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set Analysis Cluster ID
-     * @param ClusterId Analysis Cluster ID
+     * Set Analysis cluster ID
+     * @param ClusterId Analysis cluster ID
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;

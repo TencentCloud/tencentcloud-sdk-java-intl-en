@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class BackupLimitRestriction extends AbstractModel {
 
     /**
-    * Restriction type.
+    * Restriction type
     */
     @SerializedName("LimitType")
     @Expose
     private String LimitType;
 
     /**
-    * This parameter only supports In, which indicates that the vpc specified by LimitVpc can be downloaded. the default is In.
+    * This parameter only supports In, which means the vpc specified by LimitVpc can be downloaded. The default is In.
     */
     @SerializedName("VpcComparisonSymbol")
     @Expose
     private String VpcComparisonSymbol;
 
     /**
-    * Specified ips can download; specified ips are not allowed to download.
+    * In: Download is allowed from the specified ip; NotIn: Download is not allowed from the specified ip
     */
     @SerializedName("IpComparisonSymbol")
     @Expose
@@ -59,48 +59,48 @@ public class BackupLimitRestriction extends AbstractModel {
     private String [] LimitIps;
 
     /**
-     * Get Restriction type. 
-     * @return LimitType Restriction type.
+     * Get Restriction type 
+     * @return LimitType Restriction type
      */
     public String getLimitType() {
         return this.LimitType;
     }
 
     /**
-     * Set Restriction type.
-     * @param LimitType Restriction type.
+     * Set Restriction type
+     * @param LimitType Restriction type
      */
     public void setLimitType(String LimitType) {
         this.LimitType = LimitType;
     }
 
     /**
-     * Get This parameter only supports In, which indicates that the vpc specified by LimitVpc can be downloaded. the default is In. 
-     * @return VpcComparisonSymbol This parameter only supports In, which indicates that the vpc specified by LimitVpc can be downloaded. the default is In.
+     * Get This parameter only supports In, which means the vpc specified by LimitVpc can be downloaded. The default is In. 
+     * @return VpcComparisonSymbol This parameter only supports In, which means the vpc specified by LimitVpc can be downloaded. The default is In.
      */
     public String getVpcComparisonSymbol() {
         return this.VpcComparisonSymbol;
     }
 
     /**
-     * Set This parameter only supports In, which indicates that the vpc specified by LimitVpc can be downloaded. the default is In.
-     * @param VpcComparisonSymbol This parameter only supports In, which indicates that the vpc specified by LimitVpc can be downloaded. the default is In.
+     * Set This parameter only supports In, which means the vpc specified by LimitVpc can be downloaded. The default is In.
+     * @param VpcComparisonSymbol This parameter only supports In, which means the vpc specified by LimitVpc can be downloaded. The default is In.
      */
     public void setVpcComparisonSymbol(String VpcComparisonSymbol) {
         this.VpcComparisonSymbol = VpcComparisonSymbol;
     }
 
     /**
-     * Get Specified ips can download; specified ips are not allowed to download. 
-     * @return IpComparisonSymbol Specified ips can download; specified ips are not allowed to download.
+     * Get In: Download is allowed from the specified ip; NotIn: Download is not allowed from the specified ip 
+     * @return IpComparisonSymbol In: Download is allowed from the specified ip; NotIn: Download is not allowed from the specified ip
      */
     public String getIpComparisonSymbol() {
         return this.IpComparisonSymbol;
     }
 
     /**
-     * Set Specified ips can download; specified ips are not allowed to download.
-     * @param IpComparisonSymbol Specified ips can download; specified ips are not allowed to download.
+     * Set In: Download is allowed from the specified ip; NotIn: Download is not allowed from the specified ip
+     * @param IpComparisonSymbol In: Download is allowed from the specified ip; NotIn: Download is not allowed from the specified ip
      */
     public void setIpComparisonSymbol(String IpComparisonSymbol) {
         this.IpComparisonSymbol = IpComparisonSymbol;

@@ -31,14 +31,14 @@ public class BackupConfigInfo extends AbstractModel {
     private Boolean BackupCustomAutoTime;
 
     /**
-    * <p>Indicates the full backup start time, [0-24*3600]. For example, 0:00, 1:00, and 2:00 are 0, 3600, and 7200 respectively.</p>
+    * <p>Refers to the full backup start time, [0-24*3600], for example, 0:00, 1:00, 2:00 are 0, 3600, 7200 respectively</p>
     */
     @SerializedName("BackupTimeBeg")
     @Expose
     private Long BackupTimeBeg;
 
     /**
-    * <p>Indicates the full backup end time, [0-24*3600]. For example, 0:00, 1:00, and 2:00 are 0, 3600, and 7200 respectively.</p>
+    * <p>Indicates the full backup end time, [0-24*3600], for example, 0:00, 1:00, 2:00 are 0, 3600, 7200 respectively</p>
     */
     @SerializedName("BackupTimeEnd")
     @Expose
@@ -59,14 +59,14 @@ public class BackupConfigInfo extends AbstractModel {
     private Long BackupIntervalTime;
 
     /**
-    * <p>Indicates the backup retention period in seconds. Backups will be cleaned up longer than this time. 7 days means 3600*24*7=604800. The maximum value is 158112000.</p>
+    * <p>Indicates the backup retention period in seconds. Data will be cleaned up after this time. Seven days is represented as 3600*24*7=604800, with a maximum of 158112000.</p>
     */
     @SerializedName("ReserveDuration")
     @Expose
     private Long ReserveDuration;
 
     /**
-    * <p>Cross-region backup enabled<br>yes-Enable<br>no-Disable</p>
+    * <p>Cross-region backup enabled<br>yes-enabled<br>no-disabled</p>
     */
     @SerializedName("CrossRegionsEnable")
     @Expose
@@ -80,7 +80,7 @@ public class BackupConfigInfo extends AbstractModel {
     private String [] CrossRegions;
 
     /**
-    * <p>Cross-region backup retention period</p><p>Unit: Day</p>
+    * <p>Cross-region backup retention period</p><p>Unit: day</p>
     */
     @SerializedName("CrossRegionSaveDays")
     @Expose
@@ -117,32 +117,32 @@ public class BackupConfigInfo extends AbstractModel {
     }
 
     /**
-     * Get <p>Indicates the full backup start time, [0-24*3600]. For example, 0:00, 1:00, and 2:00 are 0, 3600, and 7200 respectively.</p> 
-     * @return BackupTimeBeg <p>Indicates the full backup start time, [0-24*3600]. For example, 0:00, 1:00, and 2:00 are 0, 3600, and 7200 respectively.</p>
+     * Get <p>Refers to the full backup start time, [0-24*3600], for example, 0:00, 1:00, 2:00 are 0, 3600, 7200 respectively</p> 
+     * @return BackupTimeBeg <p>Refers to the full backup start time, [0-24*3600], for example, 0:00, 1:00, 2:00 are 0, 3600, 7200 respectively</p>
      */
     public Long getBackupTimeBeg() {
         return this.BackupTimeBeg;
     }
 
     /**
-     * Set <p>Indicates the full backup start time, [0-24*3600]. For example, 0:00, 1:00, and 2:00 are 0, 3600, and 7200 respectively.</p>
-     * @param BackupTimeBeg <p>Indicates the full backup start time, [0-24*3600]. For example, 0:00, 1:00, and 2:00 are 0, 3600, and 7200 respectively.</p>
+     * Set <p>Refers to the full backup start time, [0-24*3600], for example, 0:00, 1:00, 2:00 are 0, 3600, 7200 respectively</p>
+     * @param BackupTimeBeg <p>Refers to the full backup start time, [0-24*3600], for example, 0:00, 1:00, 2:00 are 0, 3600, 7200 respectively</p>
      */
     public void setBackupTimeBeg(Long BackupTimeBeg) {
         this.BackupTimeBeg = BackupTimeBeg;
     }
 
     /**
-     * Get <p>Indicates the full backup end time, [0-24*3600]. For example, 0:00, 1:00, and 2:00 are 0, 3600, and 7200 respectively.</p> 
-     * @return BackupTimeEnd <p>Indicates the full backup end time, [0-24*3600]. For example, 0:00, 1:00, and 2:00 are 0, 3600, and 7200 respectively.</p>
+     * Get <p>Indicates the full backup end time, [0-24*3600], for example, 0:00, 1:00, 2:00 are 0, 3600, 7200 respectively</p> 
+     * @return BackupTimeEnd <p>Indicates the full backup end time, [0-24*3600], for example, 0:00, 1:00, 2:00 are 0, 3600, 7200 respectively</p>
      */
     public Long getBackupTimeEnd() {
         return this.BackupTimeEnd;
     }
 
     /**
-     * Set <p>Indicates the full backup end time, [0-24*3600]. For example, 0:00, 1:00, and 2:00 are 0, 3600, and 7200 respectively.</p>
-     * @param BackupTimeEnd <p>Indicates the full backup end time, [0-24*3600]. For example, 0:00, 1:00, and 2:00 are 0, 3600, and 7200 respectively.</p>
+     * Set <p>Indicates the full backup end time, [0-24*3600], for example, 0:00, 1:00, 2:00 are 0, 3600, 7200 respectively</p>
+     * @param BackupTimeEnd <p>Indicates the full backup end time, [0-24*3600], for example, 0:00, 1:00, 2:00 are 0, 3600, 7200 respectively</p>
      */
     public void setBackupTimeEnd(Long BackupTimeEnd) {
         this.BackupTimeEnd = BackupTimeEnd;
@@ -181,32 +181,32 @@ public class BackupConfigInfo extends AbstractModel {
     }
 
     /**
-     * Get <p>Indicates the backup retention period in seconds. Backups will be cleaned up longer than this time. 7 days means 3600*24*7=604800. The maximum value is 158112000.</p> 
-     * @return ReserveDuration <p>Indicates the backup retention period in seconds. Backups will be cleaned up longer than this time. 7 days means 3600*24*7=604800. The maximum value is 158112000.</p>
+     * Get <p>Indicates the backup retention period in seconds. Data will be cleaned up after this time. Seven days is represented as 3600*24*7=604800, with a maximum of 158112000.</p> 
+     * @return ReserveDuration <p>Indicates the backup retention period in seconds. Data will be cleaned up after this time. Seven days is represented as 3600*24*7=604800, with a maximum of 158112000.</p>
      */
     public Long getReserveDuration() {
         return this.ReserveDuration;
     }
 
     /**
-     * Set <p>Indicates the backup retention period in seconds. Backups will be cleaned up longer than this time. 7 days means 3600*24*7=604800. The maximum value is 158112000.</p>
-     * @param ReserveDuration <p>Indicates the backup retention period in seconds. Backups will be cleaned up longer than this time. 7 days means 3600*24*7=604800. The maximum value is 158112000.</p>
+     * Set <p>Indicates the backup retention period in seconds. Data will be cleaned up after this time. Seven days is represented as 3600*24*7=604800, with a maximum of 158112000.</p>
+     * @param ReserveDuration <p>Indicates the backup retention period in seconds. Data will be cleaned up after this time. Seven days is represented as 3600*24*7=604800, with a maximum of 158112000.</p>
      */
     public void setReserveDuration(Long ReserveDuration) {
         this.ReserveDuration = ReserveDuration;
     }
 
     /**
-     * Get <p>Cross-region backup enabled<br>yes-Enable<br>no-Disable</p> 
-     * @return CrossRegionsEnable <p>Cross-region backup enabled<br>yes-Enable<br>no-Disable</p>
+     * Get <p>Cross-region backup enabled<br>yes-enabled<br>no-disabled</p> 
+     * @return CrossRegionsEnable <p>Cross-region backup enabled<br>yes-enabled<br>no-disabled</p>
      */
     public String getCrossRegionsEnable() {
         return this.CrossRegionsEnable;
     }
 
     /**
-     * Set <p>Cross-region backup enabled<br>yes-Enable<br>no-Disable</p>
-     * @param CrossRegionsEnable <p>Cross-region backup enabled<br>yes-Enable<br>no-Disable</p>
+     * Set <p>Cross-region backup enabled<br>yes-enabled<br>no-disabled</p>
+     * @param CrossRegionsEnable <p>Cross-region backup enabled<br>yes-enabled<br>no-disabled</p>
      */
     public void setCrossRegionsEnable(String CrossRegionsEnable) {
         this.CrossRegionsEnable = CrossRegionsEnable;
@@ -229,16 +229,16 @@ public class BackupConfigInfo extends AbstractModel {
     }
 
     /**
-     * Get <p>Cross-region backup retention period</p><p>Unit: Day</p> 
-     * @return CrossRegionSaveDays <p>Cross-region backup retention period</p><p>Unit: Day</p>
+     * Get <p>Cross-region backup retention period</p><p>Unit: day</p> 
+     * @return CrossRegionSaveDays <p>Cross-region backup retention period</p><p>Unit: day</p>
      */
     public Long getCrossRegionSaveDays() {
         return this.CrossRegionSaveDays;
     }
 
     /**
-     * Set <p>Cross-region backup retention period</p><p>Unit: Day</p>
-     * @param CrossRegionSaveDays <p>Cross-region backup retention period</p><p>Unit: Day</p>
+     * Set <p>Cross-region backup retention period</p><p>Unit: day</p>
+     * @param CrossRegionSaveDays <p>Cross-region backup retention period</p><p>Unit: day</p>
      */
     public void setCrossRegionSaveDays(Long CrossRegionSaveDays) {
         this.CrossRegionSaveDays = CrossRegionSaveDays;

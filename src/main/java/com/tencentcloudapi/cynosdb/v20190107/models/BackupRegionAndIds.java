@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class BackupRegionAndIds extends AbstractModel {
 
     /**
-    * Backup region.
+    * Backup region
     */
     @SerializedName("BackupRegion")
     @Expose
     private String BackupRegion;
 
     /**
-    * Backup ID.
+    * Backup ID
     */
     @SerializedName("BackupId")
     @Expose
     private Long BackupId;
 
     /**
-     * Get Backup region. 
-     * @return BackupRegion Backup region.
+     * Get Backup region 
+     * @return BackupRegion Backup region
      */
     public String getBackupRegion() {
         return this.BackupRegion;
     }
 
     /**
-     * Set Backup region.
-     * @param BackupRegion Backup region.
+     * Set Backup region
+     * @param BackupRegion Backup region
      */
     public void setBackupRegion(String BackupRegion) {
         this.BackupRegion = BackupRegion;
     }
 
     /**
-     * Get Backup ID. 
-     * @return BackupId Backup ID.
+     * Get Backup ID 
+     * @return BackupId Backup ID
      */
     public Long getBackupId() {
         return this.BackupId;
     }
 
     /**
-     * Set Backup ID.
-     * @param BackupId Backup ID.
+     * Set Backup ID
+     * @param BackupId Backup ID
      */
     public void setBackupId(Long BackupId) {
         this.BackupId = BackupId;

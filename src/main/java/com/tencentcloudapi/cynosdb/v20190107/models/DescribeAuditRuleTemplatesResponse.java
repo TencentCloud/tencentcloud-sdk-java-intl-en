@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeAuditRuleTemplatesResponse extends AbstractModel {
 
     /**
-    * Number of eligible instances
+    * Total number of eligible instances.
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * Rule template detail list.
+    * List of rule template details.
     */
     @SerializedName("Items")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeAuditRuleTemplatesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Number of eligible instances 
-     * @return TotalCount Number of eligible instances
+     * Get Total number of eligible instances. 
+     * @return TotalCount Total number of eligible instances.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Number of eligible instances
-     * @param TotalCount Number of eligible instances
+     * Set Total number of eligible instances.
+     * @param TotalCount Total number of eligible instances.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get Rule template detail list. 
-     * @return Items Rule template detail list.
+     * Get List of rule template details. 
+     * @return Items List of rule template details.
      */
     public AuditRuleTemplateInfo [] getItems() {
         return this.Items;
     }
 
     /**
-     * Set Rule template detail list.
-     * @param Items Rule template detail list.
+     * Set List of rule template details.
+     * @param Items List of rule template details.
      */
     public void setItems(AuditRuleTemplateInfo [] Items) {
         this.Items = Items;

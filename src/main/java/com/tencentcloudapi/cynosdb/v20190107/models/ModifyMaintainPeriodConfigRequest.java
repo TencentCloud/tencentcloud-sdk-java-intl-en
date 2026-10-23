@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class ModifyMaintainPeriodConfigRequest extends AbstractModel {
 
     /**
-    * Instance ID
+    * Instance ID.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Maintenance start time in seconds. For example, 03:00 AM is represented by 10800
+    * Maintenance start time in seconds. For example, 3:00 is 10800.
     */
     @SerializedName("MaintainStartTime")
     @Expose
     private Long MaintainStartTime;
 
     /**
-    * Maintenance duration in seconds. For example, one hour is represented by 3600
+    * Maintenance duration in seconds. For example, 1 hour is 3600.
     */
     @SerializedName("MaintainDuration")
     @Expose
     private Long MaintainDuration;
 
     /**
-    * Maintenance days of the week. Valid values: [Mon, Tue, Wed, Thu, Fri, Sat, Sun].
+    * Weekly maintenance date. Value range: [Mon, Tue, Wed, Thu, Fri, Sat, Sun]
     */
     @SerializedName("MaintainWeekDays")
     @Expose
     private String [] MaintainWeekDays;
 
     /**
-     * Get Instance ID 
-     * @return InstanceId Instance ID
+     * Get Instance ID. 
+     * @return InstanceId Instance ID.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID
-     * @param InstanceId Instance ID
+     * Set Instance ID.
+     * @param InstanceId Instance ID.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Maintenance start time in seconds. For example, 03:00 AM is represented by 10800 
-     * @return MaintainStartTime Maintenance start time in seconds. For example, 03:00 AM is represented by 10800
+     * Get Maintenance start time in seconds. For example, 3:00 is 10800. 
+     * @return MaintainStartTime Maintenance start time in seconds. For example, 3:00 is 10800.
      */
     public Long getMaintainStartTime() {
         return this.MaintainStartTime;
     }
 
     /**
-     * Set Maintenance start time in seconds. For example, 03:00 AM is represented by 10800
-     * @param MaintainStartTime Maintenance start time in seconds. For example, 03:00 AM is represented by 10800
+     * Set Maintenance start time in seconds. For example, 3:00 is 10800.
+     * @param MaintainStartTime Maintenance start time in seconds. For example, 3:00 is 10800.
      */
     public void setMaintainStartTime(Long MaintainStartTime) {
         this.MaintainStartTime = MaintainStartTime;
     }
 
     /**
-     * Get Maintenance duration in seconds. For example, one hour is represented by 3600 
-     * @return MaintainDuration Maintenance duration in seconds. For example, one hour is represented by 3600
+     * Get Maintenance duration in seconds. For example, 1 hour is 3600. 
+     * @return MaintainDuration Maintenance duration in seconds. For example, 1 hour is 3600.
      */
     public Long getMaintainDuration() {
         return this.MaintainDuration;
     }
 
     /**
-     * Set Maintenance duration in seconds. For example, one hour is represented by 3600
-     * @param MaintainDuration Maintenance duration in seconds. For example, one hour is represented by 3600
+     * Set Maintenance duration in seconds. For example, 1 hour is 3600.
+     * @param MaintainDuration Maintenance duration in seconds. For example, 1 hour is 3600.
      */
     public void setMaintainDuration(Long MaintainDuration) {
         this.MaintainDuration = MaintainDuration;
     }
 
     /**
-     * Get Maintenance days of the week. Valid values: [Mon, Tue, Wed, Thu, Fri, Sat, Sun]. 
-     * @return MaintainWeekDays Maintenance days of the week. Valid values: [Mon, Tue, Wed, Thu, Fri, Sat, Sun].
+     * Get Weekly maintenance date. Value range: [Mon, Tue, Wed, Thu, Fri, Sat, Sun] 
+     * @return MaintainWeekDays Weekly maintenance date. Value range: [Mon, Tue, Wed, Thu, Fri, Sat, Sun]
      */
     public String [] getMaintainWeekDays() {
         return this.MaintainWeekDays;
     }
 
     /**
-     * Set Maintenance days of the week. Valid values: [Mon, Tue, Wed, Thu, Fri, Sat, Sun].
-     * @param MaintainWeekDays Maintenance days of the week. Valid values: [Mon, Tue, Wed, Thu, Fri, Sat, Sun].
+     * Set Weekly maintenance date. Value range: [Mon, Tue, Wed, Thu, Fri, Sat, Sun]
+     * @param MaintainWeekDays Weekly maintenance date. Value range: [Mon, Tue, Wed, Thu, Fri, Sat, Sun]
      */
     public void setMaintainWeekDays(String [] MaintainWeekDays) {
         this.MaintainWeekDays = MaintainWeekDays;

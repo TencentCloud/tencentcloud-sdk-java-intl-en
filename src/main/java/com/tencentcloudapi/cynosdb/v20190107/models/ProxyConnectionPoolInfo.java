@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class ProxyConnectionPoolInfo extends AbstractModel {
 
     /**
-    * Specifies the persistence threshold of the connection pool. the unit is seconds.
+    * Connection pool persistence threshold: measurement unit (seconds)
     */
     @SerializedName("ConnectionPoolTimeOut")
     @Expose
     private Long ConnectionPoolTimeOut;
 
     /**
-    * Whether the connection pool is enabled.
+    * Whether the connection pool is enabled
     */
     @SerializedName("OpenConnectionPool")
     @Expose
     private String OpenConnectionPool;
 
     /**
-    * Specifies the connection pool type. valid values: SessionConnectionPool (session-level connection pool).
+    * Connection pool type: SessionConnectionPool (session-level connection pool)
     */
     @SerializedName("ConnectionPoolType")
     @Expose
     private String ConnectionPoolType;
 
     /**
-     * Get Specifies the persistence threshold of the connection pool. the unit is seconds. 
-     * @return ConnectionPoolTimeOut Specifies the persistence threshold of the connection pool. the unit is seconds.
+     * Get Connection pool persistence threshold: measurement unit (seconds) 
+     * @return ConnectionPoolTimeOut Connection pool persistence threshold: measurement unit (seconds)
      */
     public Long getConnectionPoolTimeOut() {
         return this.ConnectionPoolTimeOut;
     }
 
     /**
-     * Set Specifies the persistence threshold of the connection pool. the unit is seconds.
-     * @param ConnectionPoolTimeOut Specifies the persistence threshold of the connection pool. the unit is seconds.
+     * Set Connection pool persistence threshold: measurement unit (seconds)
+     * @param ConnectionPoolTimeOut Connection pool persistence threshold: measurement unit (seconds)
      */
     public void setConnectionPoolTimeOut(Long ConnectionPoolTimeOut) {
         this.ConnectionPoolTimeOut = ConnectionPoolTimeOut;
     }
 
     /**
-     * Get Whether the connection pool is enabled. 
-     * @return OpenConnectionPool Whether the connection pool is enabled.
+     * Get Whether the connection pool is enabled 
+     * @return OpenConnectionPool Whether the connection pool is enabled
      */
     public String getOpenConnectionPool() {
         return this.OpenConnectionPool;
     }
 
     /**
-     * Set Whether the connection pool is enabled.
-     * @param OpenConnectionPool Whether the connection pool is enabled.
+     * Set Whether the connection pool is enabled
+     * @param OpenConnectionPool Whether the connection pool is enabled
      */
     public void setOpenConnectionPool(String OpenConnectionPool) {
         this.OpenConnectionPool = OpenConnectionPool;
     }
 
     /**
-     * Get Specifies the connection pool type. valid values: SessionConnectionPool (session-level connection pool). 
-     * @return ConnectionPoolType Specifies the connection pool type. valid values: SessionConnectionPool (session-level connection pool).
+     * Get Connection pool type: SessionConnectionPool (session-level connection pool) 
+     * @return ConnectionPoolType Connection pool type: SessionConnectionPool (session-level connection pool)
      */
     public String getConnectionPoolType() {
         return this.ConnectionPoolType;
     }
 
     /**
-     * Set Specifies the connection pool type. valid values: SessionConnectionPool (session-level connection pool).
-     * @param ConnectionPoolType Specifies the connection pool type. valid values: SessionConnectionPool (session-level connection pool).
+     * Set Connection pool type: SessionConnectionPool (session-level connection pool)
+     * @param ConnectionPoolType Connection pool type: SessionConnectionPool (session-level connection pool)
      */
     public void setConnectionPoolType(String ConnectionPoolType) {
         this.ConnectionPoolType = ConnectionPoolType;

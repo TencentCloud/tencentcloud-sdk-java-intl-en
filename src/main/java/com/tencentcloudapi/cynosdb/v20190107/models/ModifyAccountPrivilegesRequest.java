@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class ModifyAccountPrivilegesRequest extends AbstractModel {
 
     /**
-    * Cluster ID
+    * Cluster ID.
     */
     @SerializedName("ClusterId")
     @Expose
     private String ClusterId;
 
     /**
-    * Account infomation
+    * Account information
     */
     @SerializedName("Account")
     @Expose
     private InputAccount Account;
 
     /**
-    * Array of global permissions
+    * Global permission array
     */
     @SerializedName("GlobalPrivileges")
     @Expose
@@ -52,55 +52,55 @@ public class ModifyAccountPrivilegesRequest extends AbstractModel {
     private DatabasePrivileges [] DatabasePrivileges;
 
     /**
-    * Array of table permissions
+    * Table permission array
     */
     @SerializedName("TablePrivileges")
     @Expose
     private TablePrivileges [] TablePrivileges;
 
     /**
-     * Get Cluster ID 
-     * @return ClusterId Cluster ID
+     * Get Cluster ID. 
+     * @return ClusterId Cluster ID.
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set Cluster ID
-     * @param ClusterId Cluster ID
+     * Set Cluster ID.
+     * @param ClusterId Cluster ID.
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get Account infomation 
-     * @return Account Account infomation
+     * Get Account information 
+     * @return Account Account information
      */
     public InputAccount getAccount() {
         return this.Account;
     }
 
     /**
-     * Set Account infomation
-     * @param Account Account infomation
+     * Set Account information
+     * @param Account Account information
      */
     public void setAccount(InputAccount Account) {
         this.Account = Account;
     }
 
     /**
-     * Get Array of global permissions 
-     * @return GlobalPrivileges Array of global permissions
+     * Get Global permission array 
+     * @return GlobalPrivileges Global permission array
      */
     public String [] getGlobalPrivileges() {
         return this.GlobalPrivileges;
     }
 
     /**
-     * Set Array of global permissions
-     * @param GlobalPrivileges Array of global permissions
+     * Set Global permission array
+     * @param GlobalPrivileges Global permission array
      */
     public void setGlobalPrivileges(String [] GlobalPrivileges) {
         this.GlobalPrivileges = GlobalPrivileges;
@@ -123,16 +123,16 @@ public class ModifyAccountPrivilegesRequest extends AbstractModel {
     }
 
     /**
-     * Get Array of table permissions 
-     * @return TablePrivileges Array of table permissions
+     * Get Table permission array 
+     * @return TablePrivileges Table permission array
      */
     public TablePrivileges [] getTablePrivileges() {
         return this.TablePrivileges;
     }
 
     /**
-     * Set Array of table permissions
-     * @param TablePrivileges Array of table permissions
+     * Set Table permission array
+     * @param TablePrivileges Table permission array
      */
     public void setTablePrivileges(TablePrivileges [] TablePrivileges) {
         this.TablePrivileges = TablePrivileges;

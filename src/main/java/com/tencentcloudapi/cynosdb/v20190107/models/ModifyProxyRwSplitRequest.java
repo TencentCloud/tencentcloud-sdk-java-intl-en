@@ -31,49 +31,49 @@ public class ModifyProxyRwSplitRequest extends AbstractModel {
     private String ClusterId;
 
     /**
-    * <p>Database Proxy Group ID, such as cynosdbmysql-proxy-qwe123</p>
+    * <p>Database Proxy Group ID, for example, cynosdbmysql-proxy-qwe123</p>
     */
     @SerializedName("ProxyGroupId")
     @Expose
     private String ProxyGroupId;
 
     /**
-    * <p>Consistency Type "eventual"-final consistency, "session"-session consistency, "global"-global consistency</p>
+    * <p>Consistency type; "eventual"-final consistency, "session"-session consistency, "global"-global consistency</p>
     */
     @SerializedName("ConsistencyType")
     @Expose
     private String ConsistencyType;
 
     /**
-    * <p>Consistency timeout.<br>Value ranges from 0 to 1000000 (microseconds). When set to 0, it means the request will wait if the read-only instance fails to satisfy the consistency policy due to delay.</p>
+    * <p>Consistency timeout.<br>Value range: 0–1000000 (µs). Setting it to 0 means that if a read-only instance has a delay, causing the consistency policy to fail, the request will wait indefinitely.</p>
     */
     @SerializedName("ConsistencyTimeOut")
     @Expose
     private String ConsistencyTimeOut;
 
     /**
-    * <p>Read-write weight allocation mode; system Auto-Assignment: "system", custom: "custom"</p>
+    * <p>Read-write weight allocation mode; system auto-assignment: "system", custom: "custom"</p>
     */
     @SerializedName("WeightMode")
     @Expose
     private String WeightMode;
 
     /**
-    * <p>Instance read-only weight.</p>
+    * <p>Instance Read-Only Weight.</p>
     */
     @SerializedName("InstanceWeights")
     @Expose
     private ProxyInstanceWeight [] InstanceWeights;
 
     /**
-    * <p>Whether fault migration is enabled. After a failure occurs, the connection address will be routed to primary instance. Value: "yes", "no"</p>
+    * <p>Whether failover is enabled. After a fault occurs on the proxy, the connection address will be routed to the primary instance. Value: "yes", "no"</p>
     */
     @SerializedName("FailOver")
     @Expose
     private String FailOver;
 
     /**
-    * <p>Automatically add read-only instance, value: "yes", "no"</p>
+    * <p>Whether to automatically add read-only instance. Parameter Value: "yes", "no"</p>
     */
     @SerializedName("AutoAddRo")
     @Expose
@@ -87,42 +87,42 @@ public class ModifyProxyRwSplitRequest extends AbstractModel {
     private String OpenRw;
 
     /**
-    * <p>Read-write type:<br>READWRITE, READONLY</p>
+    * <p>Read-write type:<br>READWRITE,READONLY</p>
     */
     @SerializedName("RwType")
     @Expose
     private String RwType;
 
     /**
-    * <p>Transaction split.<br>Read and write operations in a transaction are split and executed on different instances.</p>
+    * <p>Transaction split.<br>Split reads and writes in a transaction to different instances for execution.</p>
     */
     @SerializedName("TransSplit")
     @Expose
     private Boolean TransSplit;
 
     /**
-    * <p>Connection mode:<br>nearby, balance</p>
+    * <p>Connection mode: <br>nearby, balance</p>
     */
     @SerializedName("AccessMode")
     @Expose
     private String AccessMode;
 
     /**
-    * <p>Whether to enable the connection pool:<br>yes, no</p>
+    * <p>Whether to enable connection pool: <br>yes,no</p>
     */
     @SerializedName("OpenConnectionPool")
     @Expose
     private String OpenConnectionPool;
 
     /**
-    * <p>Connection pool Type:<br>SessionConnectionPool</p>
+    * <p>Connection pool type: <br>SessionConnectionPool</p>
     */
     @SerializedName("ConnectionPoolType")
     @Expose
     private String ConnectionPoolType;
 
     /**
-    * <p>Connection pool time.<br>Optional range: 0-300 (seconds).</p>
+    * <p>Connection pool time.<br>Optional range: 0–300 (seconds)</p>
     */
     @SerializedName("ConnectionPoolTimeOut")
     @Expose
@@ -143,11 +143,18 @@ public class ModifyProxyRwSplitRequest extends AbstractModel {
     private Boolean ApQueryToOtherNode;
 
     /**
-    * <p>Load balancing mode</p><p>Enumeration value:</p><ul><li>static: Static load</li><li>dynamic: Dynamic load</li></ul>
+    * <p>Load balancing mode</p><p>Enumeration values:</p><ul><li>static: Static load</li><li>dynamic: Dynamic load</li></ul>
     */
     @SerializedName("LoadBalanceMode")
     @Expose
     private String LoadBalanceMode;
+
+    /**
+    * <p>Whether to enable full transactional split. In a transaction, split the reads before and after the write to different instances for execution.</p>
+    */
+    @SerializedName("TransAllSplit")
+    @Expose
+    private Boolean TransAllSplit;
 
     /**
      * Get <p>Cluster ID, for example, cynosdbmysql-asd123</p> 
@@ -166,112 +173,112 @@ public class ModifyProxyRwSplitRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>Database Proxy Group ID, such as cynosdbmysql-proxy-qwe123</p> 
-     * @return ProxyGroupId <p>Database Proxy Group ID, such as cynosdbmysql-proxy-qwe123</p>
+     * Get <p>Database Proxy Group ID, for example, cynosdbmysql-proxy-qwe123</p> 
+     * @return ProxyGroupId <p>Database Proxy Group ID, for example, cynosdbmysql-proxy-qwe123</p>
      */
     public String getProxyGroupId() {
         return this.ProxyGroupId;
     }
 
     /**
-     * Set <p>Database Proxy Group ID, such as cynosdbmysql-proxy-qwe123</p>
-     * @param ProxyGroupId <p>Database Proxy Group ID, such as cynosdbmysql-proxy-qwe123</p>
+     * Set <p>Database Proxy Group ID, for example, cynosdbmysql-proxy-qwe123</p>
+     * @param ProxyGroupId <p>Database Proxy Group ID, for example, cynosdbmysql-proxy-qwe123</p>
      */
     public void setProxyGroupId(String ProxyGroupId) {
         this.ProxyGroupId = ProxyGroupId;
     }
 
     /**
-     * Get <p>Consistency Type "eventual"-final consistency, "session"-session consistency, "global"-global consistency</p> 
-     * @return ConsistencyType <p>Consistency Type "eventual"-final consistency, "session"-session consistency, "global"-global consistency</p>
+     * Get <p>Consistency type; "eventual"-final consistency, "session"-session consistency, "global"-global consistency</p> 
+     * @return ConsistencyType <p>Consistency type; "eventual"-final consistency, "session"-session consistency, "global"-global consistency</p>
      */
     public String getConsistencyType() {
         return this.ConsistencyType;
     }
 
     /**
-     * Set <p>Consistency Type "eventual"-final consistency, "session"-session consistency, "global"-global consistency</p>
-     * @param ConsistencyType <p>Consistency Type "eventual"-final consistency, "session"-session consistency, "global"-global consistency</p>
+     * Set <p>Consistency type; "eventual"-final consistency, "session"-session consistency, "global"-global consistency</p>
+     * @param ConsistencyType <p>Consistency type; "eventual"-final consistency, "session"-session consistency, "global"-global consistency</p>
      */
     public void setConsistencyType(String ConsistencyType) {
         this.ConsistencyType = ConsistencyType;
     }
 
     /**
-     * Get <p>Consistency timeout.<br>Value ranges from 0 to 1000000 (microseconds). When set to 0, it means the request will wait if the read-only instance fails to satisfy the consistency policy due to delay.</p> 
-     * @return ConsistencyTimeOut <p>Consistency timeout.<br>Value ranges from 0 to 1000000 (microseconds). When set to 0, it means the request will wait if the read-only instance fails to satisfy the consistency policy due to delay.</p>
+     * Get <p>Consistency timeout.<br>Value range: 0–1000000 (µs). Setting it to 0 means that if a read-only instance has a delay, causing the consistency policy to fail, the request will wait indefinitely.</p> 
+     * @return ConsistencyTimeOut <p>Consistency timeout.<br>Value range: 0–1000000 (µs). Setting it to 0 means that if a read-only instance has a delay, causing the consistency policy to fail, the request will wait indefinitely.</p>
      */
     public String getConsistencyTimeOut() {
         return this.ConsistencyTimeOut;
     }
 
     /**
-     * Set <p>Consistency timeout.<br>Value ranges from 0 to 1000000 (microseconds). When set to 0, it means the request will wait if the read-only instance fails to satisfy the consistency policy due to delay.</p>
-     * @param ConsistencyTimeOut <p>Consistency timeout.<br>Value ranges from 0 to 1000000 (microseconds). When set to 0, it means the request will wait if the read-only instance fails to satisfy the consistency policy due to delay.</p>
+     * Set <p>Consistency timeout.<br>Value range: 0–1000000 (µs). Setting it to 0 means that if a read-only instance has a delay, causing the consistency policy to fail, the request will wait indefinitely.</p>
+     * @param ConsistencyTimeOut <p>Consistency timeout.<br>Value range: 0–1000000 (µs). Setting it to 0 means that if a read-only instance has a delay, causing the consistency policy to fail, the request will wait indefinitely.</p>
      */
     public void setConsistencyTimeOut(String ConsistencyTimeOut) {
         this.ConsistencyTimeOut = ConsistencyTimeOut;
     }
 
     /**
-     * Get <p>Read-write weight allocation mode; system Auto-Assignment: "system", custom: "custom"</p> 
-     * @return WeightMode <p>Read-write weight allocation mode; system Auto-Assignment: "system", custom: "custom"</p>
+     * Get <p>Read-write weight allocation mode; system auto-assignment: "system", custom: "custom"</p> 
+     * @return WeightMode <p>Read-write weight allocation mode; system auto-assignment: "system", custom: "custom"</p>
      */
     public String getWeightMode() {
         return this.WeightMode;
     }
 
     /**
-     * Set <p>Read-write weight allocation mode; system Auto-Assignment: "system", custom: "custom"</p>
-     * @param WeightMode <p>Read-write weight allocation mode; system Auto-Assignment: "system", custom: "custom"</p>
+     * Set <p>Read-write weight allocation mode; system auto-assignment: "system", custom: "custom"</p>
+     * @param WeightMode <p>Read-write weight allocation mode; system auto-assignment: "system", custom: "custom"</p>
      */
     public void setWeightMode(String WeightMode) {
         this.WeightMode = WeightMode;
     }
 
     /**
-     * Get <p>Instance read-only weight.</p> 
-     * @return InstanceWeights <p>Instance read-only weight.</p>
+     * Get <p>Instance Read-Only Weight.</p> 
+     * @return InstanceWeights <p>Instance Read-Only Weight.</p>
      */
     public ProxyInstanceWeight [] getInstanceWeights() {
         return this.InstanceWeights;
     }
 
     /**
-     * Set <p>Instance read-only weight.</p>
-     * @param InstanceWeights <p>Instance read-only weight.</p>
+     * Set <p>Instance Read-Only Weight.</p>
+     * @param InstanceWeights <p>Instance Read-Only Weight.</p>
      */
     public void setInstanceWeights(ProxyInstanceWeight [] InstanceWeights) {
         this.InstanceWeights = InstanceWeights;
     }
 
     /**
-     * Get <p>Whether fault migration is enabled. After a failure occurs, the connection address will be routed to primary instance. Value: "yes", "no"</p> 
-     * @return FailOver <p>Whether fault migration is enabled. After a failure occurs, the connection address will be routed to primary instance. Value: "yes", "no"</p>
+     * Get <p>Whether failover is enabled. After a fault occurs on the proxy, the connection address will be routed to the primary instance. Value: "yes", "no"</p> 
+     * @return FailOver <p>Whether failover is enabled. After a fault occurs on the proxy, the connection address will be routed to the primary instance. Value: "yes", "no"</p>
      */
     public String getFailOver() {
         return this.FailOver;
     }
 
     /**
-     * Set <p>Whether fault migration is enabled. After a failure occurs, the connection address will be routed to primary instance. Value: "yes", "no"</p>
-     * @param FailOver <p>Whether fault migration is enabled. After a failure occurs, the connection address will be routed to primary instance. Value: "yes", "no"</p>
+     * Set <p>Whether failover is enabled. After a fault occurs on the proxy, the connection address will be routed to the primary instance. Value: "yes", "no"</p>
+     * @param FailOver <p>Whether failover is enabled. After a fault occurs on the proxy, the connection address will be routed to the primary instance. Value: "yes", "no"</p>
      */
     public void setFailOver(String FailOver) {
         this.FailOver = FailOver;
     }
 
     /**
-     * Get <p>Automatically add read-only instance, value: "yes", "no"</p> 
-     * @return AutoAddRo <p>Automatically add read-only instance, value: "yes", "no"</p>
+     * Get <p>Whether to automatically add read-only instance. Parameter Value: "yes", "no"</p> 
+     * @return AutoAddRo <p>Whether to automatically add read-only instance. Parameter Value: "yes", "no"</p>
      */
     public String getAutoAddRo() {
         return this.AutoAddRo;
     }
 
     /**
-     * Set <p>Automatically add read-only instance, value: "yes", "no"</p>
-     * @param AutoAddRo <p>Automatically add read-only instance, value: "yes", "no"</p>
+     * Set <p>Whether to automatically add read-only instance. Parameter Value: "yes", "no"</p>
+     * @param AutoAddRo <p>Whether to automatically add read-only instance. Parameter Value: "yes", "no"</p>
      */
     public void setAutoAddRo(String AutoAddRo) {
         this.AutoAddRo = AutoAddRo;
@@ -294,96 +301,96 @@ public class ModifyProxyRwSplitRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>Read-write type:<br>READWRITE, READONLY</p> 
-     * @return RwType <p>Read-write type:<br>READWRITE, READONLY</p>
+     * Get <p>Read-write type:<br>READWRITE,READONLY</p> 
+     * @return RwType <p>Read-write type:<br>READWRITE,READONLY</p>
      */
     public String getRwType() {
         return this.RwType;
     }
 
     /**
-     * Set <p>Read-write type:<br>READWRITE, READONLY</p>
-     * @param RwType <p>Read-write type:<br>READWRITE, READONLY</p>
+     * Set <p>Read-write type:<br>READWRITE,READONLY</p>
+     * @param RwType <p>Read-write type:<br>READWRITE,READONLY</p>
      */
     public void setRwType(String RwType) {
         this.RwType = RwType;
     }
 
     /**
-     * Get <p>Transaction split.<br>Read and write operations in a transaction are split and executed on different instances.</p> 
-     * @return TransSplit <p>Transaction split.<br>Read and write operations in a transaction are split and executed on different instances.</p>
+     * Get <p>Transaction split.<br>Split reads and writes in a transaction to different instances for execution.</p> 
+     * @return TransSplit <p>Transaction split.<br>Split reads and writes in a transaction to different instances for execution.</p>
      */
     public Boolean getTransSplit() {
         return this.TransSplit;
     }
 
     /**
-     * Set <p>Transaction split.<br>Read and write operations in a transaction are split and executed on different instances.</p>
-     * @param TransSplit <p>Transaction split.<br>Read and write operations in a transaction are split and executed on different instances.</p>
+     * Set <p>Transaction split.<br>Split reads and writes in a transaction to different instances for execution.</p>
+     * @param TransSplit <p>Transaction split.<br>Split reads and writes in a transaction to different instances for execution.</p>
      */
     public void setTransSplit(Boolean TransSplit) {
         this.TransSplit = TransSplit;
     }
 
     /**
-     * Get <p>Connection mode:<br>nearby, balance</p> 
-     * @return AccessMode <p>Connection mode:<br>nearby, balance</p>
+     * Get <p>Connection mode: <br>nearby, balance</p> 
+     * @return AccessMode <p>Connection mode: <br>nearby, balance</p>
      */
     public String getAccessMode() {
         return this.AccessMode;
     }
 
     /**
-     * Set <p>Connection mode:<br>nearby, balance</p>
-     * @param AccessMode <p>Connection mode:<br>nearby, balance</p>
+     * Set <p>Connection mode: <br>nearby, balance</p>
+     * @param AccessMode <p>Connection mode: <br>nearby, balance</p>
      */
     public void setAccessMode(String AccessMode) {
         this.AccessMode = AccessMode;
     }
 
     /**
-     * Get <p>Whether to enable the connection pool:<br>yes, no</p> 
-     * @return OpenConnectionPool <p>Whether to enable the connection pool:<br>yes, no</p>
+     * Get <p>Whether to enable connection pool: <br>yes,no</p> 
+     * @return OpenConnectionPool <p>Whether to enable connection pool: <br>yes,no</p>
      */
     public String getOpenConnectionPool() {
         return this.OpenConnectionPool;
     }
 
     /**
-     * Set <p>Whether to enable the connection pool:<br>yes, no</p>
-     * @param OpenConnectionPool <p>Whether to enable the connection pool:<br>yes, no</p>
+     * Set <p>Whether to enable connection pool: <br>yes,no</p>
+     * @param OpenConnectionPool <p>Whether to enable connection pool: <br>yes,no</p>
      */
     public void setOpenConnectionPool(String OpenConnectionPool) {
         this.OpenConnectionPool = OpenConnectionPool;
     }
 
     /**
-     * Get <p>Connection pool Type:<br>SessionConnectionPool</p> 
-     * @return ConnectionPoolType <p>Connection pool Type:<br>SessionConnectionPool</p>
+     * Get <p>Connection pool type: <br>SessionConnectionPool</p> 
+     * @return ConnectionPoolType <p>Connection pool type: <br>SessionConnectionPool</p>
      */
     public String getConnectionPoolType() {
         return this.ConnectionPoolType;
     }
 
     /**
-     * Set <p>Connection pool Type:<br>SessionConnectionPool</p>
-     * @param ConnectionPoolType <p>Connection pool Type:<br>SessionConnectionPool</p>
+     * Set <p>Connection pool type: <br>SessionConnectionPool</p>
+     * @param ConnectionPoolType <p>Connection pool type: <br>SessionConnectionPool</p>
      */
     public void setConnectionPoolType(String ConnectionPoolType) {
         this.ConnectionPoolType = ConnectionPoolType;
     }
 
     /**
-     * Get <p>Connection pool time.<br>Optional range: 0-300 (seconds).</p> 
-     * @return ConnectionPoolTimeOut <p>Connection pool time.<br>Optional range: 0-300 (seconds).</p>
+     * Get <p>Connection pool time.<br>Optional range: 0–300 (seconds)</p> 
+     * @return ConnectionPoolTimeOut <p>Connection pool time.<br>Optional range: 0–300 (seconds)</p>
      */
     public Long getConnectionPoolTimeOut() {
         return this.ConnectionPoolTimeOut;
     }
 
     /**
-     * Set <p>Connection pool time.<br>Optional range: 0-300 (seconds).</p>
-     * @param ConnectionPoolTimeOut <p>Connection pool time.<br>Optional range: 0-300 (seconds).</p>
+     * Set <p>Connection pool time.<br>Optional range: 0–300 (seconds)</p>
+     * @param ConnectionPoolTimeOut <p>Connection pool time.<br>Optional range: 0–300 (seconds)</p>
      */
     public void setConnectionPoolTimeOut(Long ConnectionPoolTimeOut) {
         this.ConnectionPoolTimeOut = ConnectionPoolTimeOut;
@@ -422,19 +429,35 @@ public class ModifyProxyRwSplitRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>Load balancing mode</p><p>Enumeration value:</p><ul><li>static: Static load</li><li>dynamic: Dynamic load</li></ul> 
-     * @return LoadBalanceMode <p>Load balancing mode</p><p>Enumeration value:</p><ul><li>static: Static load</li><li>dynamic: Dynamic load</li></ul>
+     * Get <p>Load balancing mode</p><p>Enumeration values:</p><ul><li>static: Static load</li><li>dynamic: Dynamic load</li></ul> 
+     * @return LoadBalanceMode <p>Load balancing mode</p><p>Enumeration values:</p><ul><li>static: Static load</li><li>dynamic: Dynamic load</li></ul>
      */
     public String getLoadBalanceMode() {
         return this.LoadBalanceMode;
     }
 
     /**
-     * Set <p>Load balancing mode</p><p>Enumeration value:</p><ul><li>static: Static load</li><li>dynamic: Dynamic load</li></ul>
-     * @param LoadBalanceMode <p>Load balancing mode</p><p>Enumeration value:</p><ul><li>static: Static load</li><li>dynamic: Dynamic load</li></ul>
+     * Set <p>Load balancing mode</p><p>Enumeration values:</p><ul><li>static: Static load</li><li>dynamic: Dynamic load</li></ul>
+     * @param LoadBalanceMode <p>Load balancing mode</p><p>Enumeration values:</p><ul><li>static: Static load</li><li>dynamic: Dynamic load</li></ul>
      */
     public void setLoadBalanceMode(String LoadBalanceMode) {
         this.LoadBalanceMode = LoadBalanceMode;
+    }
+
+    /**
+     * Get <p>Whether to enable full transactional split. In a transaction, split the reads before and after the write to different instances for execution.</p> 
+     * @return TransAllSplit <p>Whether to enable full transactional split. In a transaction, split the reads before and after the write to different instances for execution.</p>
+     */
+    public Boolean getTransAllSplit() {
+        return this.TransAllSplit;
+    }
+
+    /**
+     * Set <p>Whether to enable full transactional split. In a transaction, split the reads before and after the write to different instances for execution.</p>
+     * @param TransAllSplit <p>Whether to enable full transactional split. In a transaction, split the reads before and after the write to different instances for execution.</p>
+     */
+    public void setTransAllSplit(Boolean TransAllSplit) {
+        this.TransAllSplit = TransAllSplit;
     }
 
     public ModifyProxyRwSplitRequest() {
@@ -502,6 +525,9 @@ public class ModifyProxyRwSplitRequest extends AbstractModel {
         if (source.LoadBalanceMode != null) {
             this.LoadBalanceMode = new String(source.LoadBalanceMode);
         }
+        if (source.TransAllSplit != null) {
+            this.TransAllSplit = new Boolean(source.TransAllSplit);
+        }
     }
 
 
@@ -527,6 +553,7 @@ public class ModifyProxyRwSplitRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ApNodeAsRoNode", this.ApNodeAsRoNode);
         this.setParamSimple(map, prefix + "ApQueryToOtherNode", this.ApQueryToOtherNode);
         this.setParamSimple(map, prefix + "LoadBalanceMode", this.LoadBalanceMode);
+        this.setParamSimple(map, prefix + "TransAllSplit", this.TransAllSplit);
 
     }
 }

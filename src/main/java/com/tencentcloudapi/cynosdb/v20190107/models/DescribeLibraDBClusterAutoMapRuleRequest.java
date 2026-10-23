@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class DescribeLibraDBClusterAutoMapRuleRequest extends AbstractModel {
 
     /**
-    * Analysis Cluster ID
+    * Analysis cluster ID
     */
     @SerializedName("ClusterId")
     @Expose
     private String ClusterId;
 
     /**
-    * Analyze instance ID
+    * Analysis instance ID
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-     * Get Analysis Cluster ID 
-     * @return ClusterId Analysis Cluster ID
+     * Get Analysis cluster ID 
+     * @return ClusterId Analysis cluster ID
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set Analysis Cluster ID
-     * @param ClusterId Analysis Cluster ID
+     * Set Analysis cluster ID
+     * @param ClusterId Analysis cluster ID
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get Analyze instance ID 
-     * @return InstanceId Analyze instance ID
+     * Get Analysis instance ID 
+     * @return InstanceId Analysis instance ID
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Analyze instance ID
-     * @param InstanceId Analyze instance ID
+     * Set Analysis instance ID
+     * @param InstanceId Analysis instance ID
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;

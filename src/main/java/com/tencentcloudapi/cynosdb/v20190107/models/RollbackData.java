@@ -24,70 +24,70 @@ import java.util.HashMap;
 public class RollbackData extends AbstractModel {
 
     /**
-    * Instance CPU.
+    * Instance CPU
     */
     @SerializedName("Cpu")
     @Expose
     private Long Cpu;
 
     /**
-    * Instance memory.
+    * Instance memory
     */
     @SerializedName("Memory")
     @Expose
     private Long Memory;
 
     /**
-    * Cluster storage upper limit.
+    * Cluster storage limit
     */
     @SerializedName("StorageLimit")
     @Expose
     private Long StorageLimit;
 
     /**
-    * Original cluster ID.
+    * Source cluster id
     */
     @SerializedName("OriginalClusterId")
     @Expose
     private String OriginalClusterId;
 
     /**
-    * Original cluster name.
+    * Source cluster name
     */
     @SerializedName("OriginalClusterName")
     @Expose
     private String OriginalClusterName;
 
     /**
-    * Rollback method.
+    * Rollback mode
     */
     @SerializedName("RollbackStrategy")
     @Expose
     private String RollbackStrategy;
 
     /**
-    * Snapshot time.
+    * Snapshot time
     */
     @SerializedName("SnapshotTime")
     @Expose
     private String SnapshotTime;
 
     /**
-    * Roll back to the Serverless cluster with minimum CPU.
+    * Minimum CPU for rollback to a Serverless cluster
     */
     @SerializedName("MinCpu")
     @Expose
     private Long MinCpu;
 
     /**
-    * Roll back to the Serverless cluster with maximum CPU.
+    * Maximum CPU when rolling back to a Serverless cluster
     */
     @SerializedName("MaxCpu")
     @Expose
     private Long MaxCpu;
 
     /**
-    * Snapshot ID.
+    * Snapshot ID
     */
     @SerializedName("SnapShotId")
     @Expose
@@ -108,174 +108,174 @@ public class RollbackData extends AbstractModel {
     private RollbackTable [] RollbackTables;
 
     /**
-    * Specifies the backup file name.
+    * Backup file name
     */
     @SerializedName("BackupFileName")
     @Expose
     private String BackupFileName;
 
     /**
-    * Rollback process.
+    * Rollback process
     */
     @SerializedName("RollbackProcess")
     @Expose
     private RollbackProcessInfo RollbackProcess;
 
     /**
-     * Get Instance CPU. 
-     * @return Cpu Instance CPU.
+     * Get Instance CPU 
+     * @return Cpu Instance CPU
      */
     public Long getCpu() {
         return this.Cpu;
     }
 
     /**
-     * Set Instance CPU.
-     * @param Cpu Instance CPU.
+     * Set Instance CPU
+     * @param Cpu Instance CPU
      */
     public void setCpu(Long Cpu) {
         this.Cpu = Cpu;
     }
 
     /**
-     * Get Instance memory. 
-     * @return Memory Instance memory.
+     * Get Instance memory 
+     * @return Memory Instance memory
      */
     public Long getMemory() {
         return this.Memory;
     }
 
     /**
-     * Set Instance memory.
-     * @param Memory Instance memory.
+     * Set Instance memory
+     * @param Memory Instance memory
      */
     public void setMemory(Long Memory) {
         this.Memory = Memory;
     }
 
     /**
-     * Get Cluster storage upper limit. 
-     * @return StorageLimit Cluster storage upper limit.
+     * Get Cluster storage limit 
+     * @return StorageLimit Cluster storage limit
      */
     public Long getStorageLimit() {
         return this.StorageLimit;
     }
 
     /**
-     * Set Cluster storage upper limit.
-     * @param StorageLimit Cluster storage upper limit.
+     * Set Cluster storage limit
+     * @param StorageLimit Cluster storage limit
      */
     public void setStorageLimit(Long StorageLimit) {
         this.StorageLimit = StorageLimit;
     }
 
     /**
-     * Get Original cluster ID. 
-     * @return OriginalClusterId Original cluster ID.
+     * Get Source cluster id 
+     * @return OriginalClusterId Source cluster id
      */
     public String getOriginalClusterId() {
         return this.OriginalClusterId;
     }
 
     /**
-     * Set Original cluster ID.
-     * @param OriginalClusterId Original cluster ID.
+     * Set Source cluster id
+     * @param OriginalClusterId Source cluster id
      */
     public void setOriginalClusterId(String OriginalClusterId) {
         this.OriginalClusterId = OriginalClusterId;
     }
 
     /**
-     * Get Original cluster name. 
-     * @return OriginalClusterName Original cluster name.
+     * Get Source cluster name 
+     * @return OriginalClusterName Source cluster name
      */
     public String getOriginalClusterName() {
         return this.OriginalClusterName;
     }
 
     /**
-     * Set Original cluster name.
-     * @param OriginalClusterName Original cluster name.
+     * Set Source cluster name
+     * @param OriginalClusterName Source cluster name
      */
     public void setOriginalClusterName(String OriginalClusterName) {
         this.OriginalClusterName = OriginalClusterName;
     }
 
     /**
-     * Get Rollback method. 
-     * @return RollbackStrategy Rollback method.
+     * Get Rollback mode 
+     * @return RollbackStrategy Rollback mode
      */
     public String getRollbackStrategy() {
         return this.RollbackStrategy;
     }
 
     /**
-     * Set Rollback method.
-     * @param RollbackStrategy Rollback method.
+     * Set Rollback mode
+     * @param RollbackStrategy Rollback mode
      */
     public void setRollbackStrategy(String RollbackStrategy) {
         this.RollbackStrategy = RollbackStrategy;
     }
 
     /**
-     * Get Snapshot time. 
-     * @return SnapshotTime Snapshot time.
+     * Get Snapshot time 
+     * @return SnapshotTime Snapshot time
      */
     public String getSnapshotTime() {
         return this.SnapshotTime;
     }
 
     /**
-     * Set Snapshot time.
-     * @param SnapshotTime Snapshot time.
+     * Set Snapshot time
+     * @param SnapshotTime Snapshot time
      */
     public void setSnapshotTime(String SnapshotTime) {
         this.SnapshotTime = SnapshotTime;
     }
 
     /**
-     * Get Roll back to the Serverless cluster with minimum CPU. 
-     * @return MinCpu Roll back to the Serverless cluster with minimum CPU.
+     * Get Minimum CPU for rollback to a Serverless cluster 
+     * @return MinCpu Minimum CPU for rollback to a Serverless cluster
      */
     public Long getMinCpu() {
         return this.MinCpu;
     }
 
     /**
-     * Set Roll back to the Serverless cluster with minimum CPU.
-     * @param MinCpu Roll back to the Serverless cluster with minimum CPU.
+     * Set Minimum CPU for rollback to a Serverless cluster
+     * @param MinCpu Minimum CPU for rollback to a Serverless cluster
      */
     public void setMinCpu(Long MinCpu) {
         this.MinCpu = MinCpu;
     }
 
     /**
-     * Get Roll back to the Serverless cluster with maximum CPU. 
-     * @return MaxCpu Roll back to the Serverless cluster with maximum CPU.
+     * Get Maximum CPU when rolling back to a Serverless cluster 
+     * @return MaxCpu Maximum CPU when rolling back to a Serverless cluster
      */
     public Long getMaxCpu() {
         return this.MaxCpu;
     }
 
     /**
-     * Set Roll back to the Serverless cluster with maximum CPU.
-     * @param MaxCpu Roll back to the Serverless cluster with maximum CPU.
+     * Set Maximum CPU when rolling back to a Serverless cluster
+     * @param MaxCpu Maximum CPU when rolling back to a Serverless cluster
      */
     public void setMaxCpu(Long MaxCpu) {
         this.MaxCpu = MaxCpu;
     }
 
     /**
-     * Get Snapshot ID. 
-     * @return SnapShotId Snapshot ID.
+     * Get Snapshot ID 
+     * @return SnapShotId Snapshot ID
      */
     public Long getSnapShotId() {
         return this.SnapShotId;
     }
 
     /**
-     * Set Snapshot ID.
-     * @param SnapShotId Snapshot ID.
+     * Set Snapshot ID
+     * @param SnapShotId Snapshot ID
      */
     public void setSnapShotId(Long SnapShotId) {
         this.SnapShotId = SnapShotId;
@@ -314,32 +314,32 @@ public class RollbackData extends AbstractModel {
     }
 
     /**
-     * Get Specifies the backup file name. 
-     * @return BackupFileName Specifies the backup file name.
+     * Get Backup file name 
+     * @return BackupFileName Backup file name
      */
     public String getBackupFileName() {
         return this.BackupFileName;
     }
 
     /**
-     * Set Specifies the backup file name.
-     * @param BackupFileName Specifies the backup file name.
+     * Set Backup file name
+     * @param BackupFileName Backup file name
      */
     public void setBackupFileName(String BackupFileName) {
         this.BackupFileName = BackupFileName;
     }
 
     /**
-     * Get Rollback process. 
-     * @return RollbackProcess Rollback process.
+     * Get Rollback process 
+     * @return RollbackProcess Rollback process
      */
     public RollbackProcessInfo getRollbackProcess() {
         return this.RollbackProcess;
     }
 
     /**
-     * Set Rollback process.
-     * @param RollbackProcess Rollback process.
+     * Set Rollback process
+     * @param RollbackProcess Rollback process
      */
     public void setRollbackProcess(RollbackProcessInfo RollbackProcess) {
         this.RollbackProcess = RollbackProcess;

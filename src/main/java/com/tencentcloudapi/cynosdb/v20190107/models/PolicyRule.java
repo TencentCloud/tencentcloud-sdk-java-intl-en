@@ -24,28 +24,28 @@ import java.util.HashMap;
 public class PolicyRule extends AbstractModel {
 
     /**
-    * Policy, which can be `ACCEPT` or `DROP`
+    * Policy. Valid values: ACCEPT and DROP.
     */
     @SerializedName("Action")
     @Expose
     private String Action;
 
     /**
-    * Source IP or source IP range, such as 192.168.0.0/16
+    * Source Ip or Ip range, for example, 192.168.0.0/16
     */
     @SerializedName("CidrIp")
     @Expose
     private String CidrIp;
 
     /**
-    * Port
+    * Port.
     */
     @SerializedName("PortRange")
     @Expose
     private String PortRange;
 
     /**
-    * Network protocol, such as UDP and TCP
+    * Network protocol. Supports udp and tcp.
     */
     @SerializedName("IpProtocol")
     @Expose
@@ -59,7 +59,7 @@ public class PolicyRule extends AbstractModel {
     private String ServiceModule;
 
     /**
-    * IP address ID or IP address group ID.
+    * IP address ID or IP address group ID
     */
     @SerializedName("AddressModule")
     @Expose
@@ -80,64 +80,64 @@ public class PolicyRule extends AbstractModel {
     private String Desc;
 
     /**
-     * Get Policy, which can be `ACCEPT` or `DROP` 
-     * @return Action Policy, which can be `ACCEPT` or `DROP`
+     * Get Policy. Valid values: ACCEPT and DROP. 
+     * @return Action Policy. Valid values: ACCEPT and DROP.
      */
     public String getAction() {
         return this.Action;
     }
 
     /**
-     * Set Policy, which can be `ACCEPT` or `DROP`
-     * @param Action Policy, which can be `ACCEPT` or `DROP`
+     * Set Policy. Valid values: ACCEPT and DROP.
+     * @param Action Policy. Valid values: ACCEPT and DROP.
      */
     public void setAction(String Action) {
         this.Action = Action;
     }
 
     /**
-     * Get Source IP or source IP range, such as 192.168.0.0/16 
-     * @return CidrIp Source IP or source IP range, such as 192.168.0.0/16
+     * Get Source Ip or Ip range, for example, 192.168.0.0/16 
+     * @return CidrIp Source Ip or Ip range, for example, 192.168.0.0/16
      */
     public String getCidrIp() {
         return this.CidrIp;
     }
 
     /**
-     * Set Source IP or source IP range, such as 192.168.0.0/16
-     * @param CidrIp Source IP or source IP range, such as 192.168.0.0/16
+     * Set Source Ip or Ip range, for example, 192.168.0.0/16
+     * @param CidrIp Source Ip or Ip range, for example, 192.168.0.0/16
      */
     public void setCidrIp(String CidrIp) {
         this.CidrIp = CidrIp;
     }
 
     /**
-     * Get Port 
-     * @return PortRange Port
+     * Get Port. 
+     * @return PortRange Port.
      */
     public String getPortRange() {
         return this.PortRange;
     }
 
     /**
-     * Set Port
-     * @param PortRange Port
+     * Set Port.
+     * @param PortRange Port.
      */
     public void setPortRange(String PortRange) {
         this.PortRange = PortRange;
     }
 
     /**
-     * Get Network protocol, such as UDP and TCP 
-     * @return IpProtocol Network protocol, such as UDP and TCP
+     * Get Network protocol. Supports udp and tcp. 
+     * @return IpProtocol Network protocol. Supports udp and tcp.
      */
     public String getIpProtocol() {
         return this.IpProtocol;
     }
 
     /**
-     * Set Network protocol, such as UDP and TCP
-     * @param IpProtocol Network protocol, such as UDP and TCP
+     * Set Network protocol. Supports udp and tcp.
+     * @param IpProtocol Network protocol. Supports udp and tcp.
      */
     public void setIpProtocol(String IpProtocol) {
         this.IpProtocol = IpProtocol;
@@ -160,16 +160,16 @@ public class PolicyRule extends AbstractModel {
     }
 
     /**
-     * Get IP address ID or IP address group ID. 
-     * @return AddressModule IP address ID or IP address group ID.
+     * Get IP address ID or IP address group ID 
+     * @return AddressModule IP address ID or IP address group ID
      */
     public String getAddressModule() {
         return this.AddressModule;
     }
 
     /**
-     * Set IP address ID or IP address group ID.
-     * @param AddressModule IP address ID or IP address group ID.
+     * Set IP address ID or IP address group ID
+     * @param AddressModule IP address ID or IP address group ID
      */
     public void setAddressModule(String AddressModule) {
         this.AddressModule = AddressModule;

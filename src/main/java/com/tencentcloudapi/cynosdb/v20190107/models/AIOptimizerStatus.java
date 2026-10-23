@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class AIOptimizerStatus extends AbstractModel {
 
     /**
-    * <p>Status. closing-Closing, closed-Closed, opening-Opening, training-Training, trained-Trained, train_failed-Training failed.</p>
+    * <p>Status. closing: turning off, closed: closed, opening: enabling, training: training, trained: training completed, train_failed: training failed.</p>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * <p>Start time.</p>
+    * <p>Activation time.</p>
     */
     @SerializedName("OpenTime")
     @Expose
@@ -45,32 +45,32 @@ public class AIOptimizerStatus extends AbstractModel {
     private Long TrainingProgress;
 
     /**
-     * Get <p>Status. closing-Closing, closed-Closed, opening-Opening, training-Training, trained-Trained, train_failed-Training failed.</p> 
-     * @return Status <p>Status. closing-Closing, closed-Closed, opening-Opening, training-Training, trained-Trained, train_failed-Training failed.</p>
+     * Get <p>Status. closing: turning off, closed: closed, opening: enabling, training: training, trained: training completed, train_failed: training failed.</p> 
+     * @return Status <p>Status. closing: turning off, closed: closed, opening: enabling, training: training, trained: training completed, train_failed: training failed.</p>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set <p>Status. closing-Closing, closed-Closed, opening-Opening, training-Training, trained-Trained, train_failed-Training failed.</p>
-     * @param Status <p>Status. closing-Closing, closed-Closed, opening-Opening, training-Training, trained-Trained, train_failed-Training failed.</p>
+     * Set <p>Status. closing: turning off, closed: closed, opening: enabling, training: training, trained: training completed, train_failed: training failed.</p>
+     * @param Status <p>Status. closing: turning off, closed: closed, opening: enabling, training: training, trained: training completed, train_failed: training failed.</p>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get <p>Start time.</p> 
-     * @return OpenTime <p>Start time.</p>
+     * Get <p>Activation time.</p> 
+     * @return OpenTime <p>Activation time.</p>
      */
     public String getOpenTime() {
         return this.OpenTime;
     }
 
     /**
-     * Set <p>Start time.</p>
-     * @param OpenTime <p>Start time.</p>
+     * Set <p>Activation time.</p>
+     * @param OpenTime <p>Activation time.</p>
      */
     public void setOpenTime(String OpenTime) {
         this.OpenTime = OpenTime;

@@ -31,7 +31,7 @@ public class IsolateLibraDBClusterResponse extends AbstractModel {
     private Long FlowId;
 
     /**
-    * Return order ID
+    * Return the order number.
     */
     @SerializedName("DealNames")
     @Expose
@@ -61,16 +61,16 @@ public class IsolateLibraDBClusterResponse extends AbstractModel {
     }
 
     /**
-     * Get Return order ID 
-     * @return DealNames Return order ID
+     * Get Return the order number. 
+     * @return DealNames Return the order number.
      */
     public String [] getDealNames() {
         return this.DealNames;
     }
 
     /**
-     * Set Return order ID
-     * @param DealNames Return order ID
+     * Set Return the order number.
+     * @param DealNames Return the order number.
      */
     public void setDealNames(String [] DealNames) {
         this.DealNames = DealNames;

@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class PackagePriority extends AbstractModel {
 
     /**
-    * The resource pack whose deduction priority needs to be customized.
+    * Resource pack with a custom deduction priority
     */
     @SerializedName("PackageId")
     @Expose
     private String PackageId;
 
     /**
-    * Custom deduction priority.
+    * Custom deduction priority
     */
     @SerializedName("DeductionPriority")
     @Expose
     private Long DeductionPriority;
 
     /**
-     * Get The resource pack whose deduction priority needs to be customized. 
-     * @return PackageId The resource pack whose deduction priority needs to be customized.
+     * Get Resource pack with a custom deduction priority 
+     * @return PackageId Resource pack with a custom deduction priority
      */
     public String getPackageId() {
         return this.PackageId;
     }
 
     /**
-     * Set The resource pack whose deduction priority needs to be customized.
-     * @param PackageId The resource pack whose deduction priority needs to be customized.
+     * Set Resource pack with a custom deduction priority
+     * @param PackageId Resource pack with a custom deduction priority
      */
     public void setPackageId(String PackageId) {
         this.PackageId = PackageId;
     }
 
     /**
-     * Get Custom deduction priority. 
-     * @return DeductionPriority Custom deduction priority.
+     * Get Custom deduction priority 
+     * @return DeductionPriority Custom deduction priority
      */
     public Long getDeductionPriority() {
         return this.DeductionPriority;
     }
 
     /**
-     * Set Custom deduction priority.
-     * @param DeductionPriority Custom deduction priority.
+     * Set Custom deduction priority
+     * @param DeductionPriority Custom deduction priority
      */
     public void setDeductionPriority(Long DeductionPriority) {
         this.DeductionPriority = DeductionPriority;

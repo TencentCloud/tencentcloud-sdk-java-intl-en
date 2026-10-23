@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class SaveBackupClusterInfo extends AbstractModel {
 
     /**
-    * Backup id of the deceased.
+    * Backup id
     */
     @SerializedName("BackupId")
     @Expose
@@ -73,7 +73,7 @@ public class SaveBackupClusterInfo extends AbstractModel {
     private String DbVersion;
 
     /**
-    * Db type (NORMAL, SERVERLESS).
+    * Db type. Available values: NORMAL, SERVERLESS
     */
     @SerializedName("DbMode")
     @Expose
@@ -87,23 +87,23 @@ public class SaveBackupClusterInfo extends AbstractModel {
     private String ClusterStatus;
 
     /**
-    * Task list.
+    * Task list
     */
     @SerializedName("Tasks")
     @Expose
     private ObjectTask [] Tasks;
 
     /**
-     * Get Backup id of the deceased. 
-     * @return BackupId Backup id of the deceased.
+     * Get Backup id 
+     * @return BackupId Backup id
      */
     public Long getBackupId() {
         return this.BackupId;
     }
 
     /**
-     * Set Backup id of the deceased.
-     * @param BackupId Backup id of the deceased.
+     * Set Backup id
+     * @param BackupId Backup id
      */
     public void setBackupId(Long BackupId) {
         this.BackupId = BackupId;
@@ -206,16 +206,16 @@ public class SaveBackupClusterInfo extends AbstractModel {
     }
 
     /**
-     * Get Db type (NORMAL, SERVERLESS). 
-     * @return DbMode Db type (NORMAL, SERVERLESS).
+     * Get Db type. Available values: NORMAL, SERVERLESS 
+     * @return DbMode Db type. Available values: NORMAL, SERVERLESS
      */
     public String getDbMode() {
         return this.DbMode;
     }
 
     /**
-     * Set Db type (NORMAL, SERVERLESS).
-     * @param DbMode Db type (NORMAL, SERVERLESS).
+     * Set Db type. Available values: NORMAL, SERVERLESS
+     * @param DbMode Db type. Available values: NORMAL, SERVERLESS
      */
     public void setDbMode(String DbMode) {
         this.DbMode = DbMode;
@@ -238,16 +238,16 @@ public class SaveBackupClusterInfo extends AbstractModel {
     }
 
     /**
-     * Get Task list. 
-     * @return Tasks Task list.
+     * Get Task list 
+     * @return Tasks Task list
      */
     public ObjectTask [] getTasks() {
         return this.Tasks;
     }
 
     /**
-     * Set Task list.
-     * @param Tasks Task list.
+     * Set Task list
+     * @param Tasks Task list
      */
     public void setTasks(ObjectTask [] Tasks) {
         this.Tasks = Tasks;

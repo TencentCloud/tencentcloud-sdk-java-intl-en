@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeClusterReadOnlyResponse extends AbstractModel {
 
     /**
-    * List of cluster read-only switches.
+    * List of cluster read-only switches
     */
     @SerializedName("ClusterReadOnlyValues")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeClusterReadOnlyResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get List of cluster read-only switches. 
-     * @return ClusterReadOnlyValues List of cluster read-only switches.
+     * Get List of cluster read-only switches 
+     * @return ClusterReadOnlyValues List of cluster read-only switches
      */
     public ClusterReadOnlyValue [] getClusterReadOnlyValues() {
         return this.ClusterReadOnlyValues;
     }
 
     /**
-     * Set List of cluster read-only switches.
-     * @param ClusterReadOnlyValues List of cluster read-only switches.
+     * Set List of cluster read-only switches
+     * @param ClusterReadOnlyValues List of cluster read-only switches
      */
     public void setClusterReadOnlyValues(ClusterReadOnlyValue [] ClusterReadOnlyValues) {
         this.ClusterReadOnlyValues = ClusterReadOnlyValues;

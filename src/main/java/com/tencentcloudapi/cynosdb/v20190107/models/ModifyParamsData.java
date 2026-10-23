@@ -31,14 +31,14 @@ public class ModifyParamsData extends AbstractModel {
     private String Name;
 
     /**
-    * Parameter value before modification.
+    * Parameter value before modification
     */
     @SerializedName("OldValue")
     @Expose
     private String OldValue;
 
     /**
-    * Parameter value after modification.
+    * New Value
     */
     @SerializedName("CurValue")
     @Expose
@@ -61,32 +61,32 @@ public class ModifyParamsData extends AbstractModel {
     }
 
     /**
-     * Get Parameter value before modification. 
-     * @return OldValue Parameter value before modification.
+     * Get Parameter value before modification 
+     * @return OldValue Parameter value before modification
      */
     public String getOldValue() {
         return this.OldValue;
     }
 
     /**
-     * Set Parameter value before modification.
-     * @param OldValue Parameter value before modification.
+     * Set Parameter value before modification
+     * @param OldValue Parameter value before modification
      */
     public void setOldValue(String OldValue) {
         this.OldValue = OldValue;
     }
 
     /**
-     * Get Parameter value after modification. 
-     * @return CurValue Parameter value after modification.
+     * Get New Value 
+     * @return CurValue New Value
      */
     public String getCurValue() {
         return this.CurValue;
     }
 
     /**
-     * Set Parameter value after modification.
-     * @param CurValue Parameter value after modification.
+     * Set New Value
+     * @param CurValue New Value
      */
     public void setCurValue(String CurValue) {
         this.CurValue = CurValue;

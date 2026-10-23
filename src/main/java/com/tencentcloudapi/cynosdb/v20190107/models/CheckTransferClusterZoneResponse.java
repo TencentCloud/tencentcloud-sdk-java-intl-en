@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CheckTransferClusterZoneResponse extends AbstractModel {
 
     /**
-    * Whether the check is successful
+    * Whether the check succeeds
     */
     @SerializedName("CheckStatus")
     @Expose
@@ -45,16 +45,16 @@ public class CheckTransferClusterZoneResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Whether the check is successful 
-     * @return CheckStatus Whether the check is successful
+     * Get Whether the check succeeds 
+     * @return CheckStatus Whether the check succeeds
      */
     public Boolean getCheckStatus() {
         return this.CheckStatus;
     }
 
     /**
-     * Set Whether the check is successful
-     * @param CheckStatus Whether the check is successful
+     * Set Whether the check succeeds
+     * @param CheckStatus Whether the check succeeds
      */
     public void setCheckStatus(Boolean CheckStatus) {
         this.CheckStatus = CheckStatus;

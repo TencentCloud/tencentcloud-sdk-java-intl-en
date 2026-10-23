@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeAuditRuleTemplatesRequest extends AbstractModel {
 
     /**
-    * Rule template ID
+    * Rule template ID.
     */
     @SerializedName("RuleTemplateIds")
     @Expose
@@ -38,30 +38,44 @@ public class DescribeAuditRuleTemplatesRequest extends AbstractModel {
     private String [] RuleTemplateNames;
 
     /**
-    * Number of results returned per request. Default value: `20`.
+    * Number of items returned per request. Default value: 20.
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * Offset. Default value: `0`.
+    * Offset. Default value: 0.
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-     * Get Rule template ID 
-     * @return RuleTemplateIds Rule template ID
+    * Alarm level. Valid values: 1 - Low risk, 2 - Medium risk, 3 - High risk.
+    */
+    @SerializedName("AlarmLevel")
+    @Expose
+    private Long AlarmLevel;
+
+    /**
+    * Alarm policy. Valid values: 0 - Alarm disabled, 1 - Alarm enabled.
+    */
+    @SerializedName("AlarmPolicy")
+    @Expose
+    private Long AlarmPolicy;
+
+    /**
+     * Get Rule template ID. 
+     * @return RuleTemplateIds Rule template ID.
      */
     public String [] getRuleTemplateIds() {
         return this.RuleTemplateIds;
     }
 
     /**
-     * Set Rule template ID
-     * @param RuleTemplateIds Rule template ID
+     * Set Rule template ID.
+     * @param RuleTemplateIds Rule template ID.
      */
     public void setRuleTemplateIds(String [] RuleTemplateIds) {
         this.RuleTemplateIds = RuleTemplateIds;
@@ -84,35 +98,67 @@ public class DescribeAuditRuleTemplatesRequest extends AbstractModel {
     }
 
     /**
-     * Get Number of results returned per request. Default value: `20`. 
-     * @return Limit Number of results returned per request. Default value: `20`.
+     * Get Number of items returned per request. Default value: 20. 
+     * @return Limit Number of items returned per request. Default value: 20.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Number of results returned per request. Default value: `20`.
-     * @param Limit Number of results returned per request. Default value: `20`.
+     * Set Number of items returned per request. Default value: 20.
+     * @param Limit Number of items returned per request. Default value: 20.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get Offset. Default value: `0`. 
-     * @return Offset Offset. Default value: `0`.
+     * Get Offset. Default value: 0. 
+     * @return Offset Offset. Default value: 0.
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Offset. Default value: `0`.
-     * @param Offset Offset. Default value: `0`.
+     * Set Offset. Default value: 0.
+     * @param Offset Offset. Default value: 0.
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
+    }
+
+    /**
+     * Get Alarm level. Valid values: 1 - Low risk, 2 - Medium risk, 3 - High risk. 
+     * @return AlarmLevel Alarm level. Valid values: 1 - Low risk, 2 - Medium risk, 3 - High risk.
+     */
+    public Long getAlarmLevel() {
+        return this.AlarmLevel;
+    }
+
+    /**
+     * Set Alarm level. Valid values: 1 - Low risk, 2 - Medium risk, 3 - High risk.
+     * @param AlarmLevel Alarm level. Valid values: 1 - Low risk, 2 - Medium risk, 3 - High risk.
+     */
+    public void setAlarmLevel(Long AlarmLevel) {
+        this.AlarmLevel = AlarmLevel;
+    }
+
+    /**
+     * Get Alarm policy. Valid values: 0 - Alarm disabled, 1 - Alarm enabled. 
+     * @return AlarmPolicy Alarm policy. Valid values: 0 - Alarm disabled, 1 - Alarm enabled.
+     */
+    public Long getAlarmPolicy() {
+        return this.AlarmPolicy;
+    }
+
+    /**
+     * Set Alarm policy. Valid values: 0 - Alarm disabled, 1 - Alarm enabled.
+     * @param AlarmPolicy Alarm policy. Valid values: 0 - Alarm disabled, 1 - Alarm enabled.
+     */
+    public void setAlarmPolicy(Long AlarmPolicy) {
+        this.AlarmPolicy = AlarmPolicy;
     }
 
     public DescribeAuditRuleTemplatesRequest() {
@@ -141,6 +187,12 @@ public class DescribeAuditRuleTemplatesRequest extends AbstractModel {
         if (source.Offset != null) {
             this.Offset = new Long(source.Offset);
         }
+        if (source.AlarmLevel != null) {
+            this.AlarmLevel = new Long(source.AlarmLevel);
+        }
+        if (source.AlarmPolicy != null) {
+            this.AlarmPolicy = new Long(source.AlarmPolicy);
+        }
     }
 
 
@@ -152,6 +204,8 @@ public class DescribeAuditRuleTemplatesRequest extends AbstractModel {
         this.setParamArraySimple(map, prefix + "RuleTemplateNames.", this.RuleTemplateNames);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
+        this.setParamSimple(map, prefix + "AlarmLevel", this.AlarmLevel);
+        this.setParamSimple(map, prefix + "AlarmPolicy", this.AlarmPolicy);
 
     }
 }

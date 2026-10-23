@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ParamTemplateListInfo extends AbstractModel {
 
     /**
-    * Parameter template ID
+    * Parameter template ID.
     */
     @SerializedName("Id")
     @Expose
@@ -52,7 +52,7 @@ public class ParamTemplateListInfo extends AbstractModel {
     private String EngineVersion;
 
     /**
-    * Database Type. Valid values: `NORMAL`, `SERVERLESS`.
+    * Database type. Available values: NORMAL, SERVERLESS
     */
     @SerializedName("DbMode")
     @Expose
@@ -66,16 +66,16 @@ public class ParamTemplateListInfo extends AbstractModel {
     private TemplateParamInfo [] ParamInfoSet;
 
     /**
-     * Get Parameter template ID 
-     * @return Id Parameter template ID
+     * Get Parameter template ID. 
+     * @return Id Parameter template ID.
      */
     public Long getId() {
         return this.Id;
     }
 
     /**
-     * Set Parameter template ID
-     * @param Id Parameter template ID
+     * Set Parameter template ID.
+     * @param Id Parameter template ID.
      */
     public void setId(Long Id) {
         this.Id = Id;
@@ -130,16 +130,16 @@ public class ParamTemplateListInfo extends AbstractModel {
     }
 
     /**
-     * Get Database Type. Valid values: `NORMAL`, `SERVERLESS`. 
-     * @return DbMode Database Type. Valid values: `NORMAL`, `SERVERLESS`.
+     * Get Database type. Available values: NORMAL, SERVERLESS 
+     * @return DbMode Database type. Available values: NORMAL, SERVERLESS
      */
     public String getDbMode() {
         return this.DbMode;
     }
 
     /**
-     * Set Database Type. Valid values: `NORMAL`, `SERVERLESS`.
-     * @param DbMode Database Type. Valid values: `NORMAL`, `SERVERLESS`.
+     * Set Database type. Available values: NORMAL, SERVERLESS
+     * @param DbMode Database type. Available values: NORMAL, SERVERLESS
      */
     public void setDbMode(String DbMode) {
         this.DbMode = DbMode;

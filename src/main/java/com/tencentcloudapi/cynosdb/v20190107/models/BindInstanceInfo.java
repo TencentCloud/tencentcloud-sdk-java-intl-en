@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class BindInstanceInfo extends AbstractModel {
 
     /**
-    * ID of the bound cluster.
+    * Bound cluster ID.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * The region where the bound instance is located.
+    * Region of the bound instance
     */
     @SerializedName("InstanceRegion")
     @Expose
     private String InstanceRegion;
 
     /**
-    * Type of the bound instance.
+    * Bound instance type
     */
     @SerializedName("InstanceType")
     @Expose
     private String InstanceType;
 
     /**
-    * The instance ID under the bound cluster.
+    * Instance ID under the bound cluster
     */
     @SerializedName("ExtendIds")
     @Expose
     private String [] ExtendIds;
 
     /**
-     * Get ID of the bound cluster. 
-     * @return InstanceId ID of the bound cluster.
+     * Get Bound cluster ID. 
+     * @return InstanceId Bound cluster ID.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set ID of the bound cluster.
-     * @param InstanceId ID of the bound cluster.
+     * Set Bound cluster ID.
+     * @param InstanceId Bound cluster ID.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get The region where the bound instance is located. 
-     * @return InstanceRegion The region where the bound instance is located.
+     * Get Region of the bound instance 
+     * @return InstanceRegion Region of the bound instance
      */
     public String getInstanceRegion() {
         return this.InstanceRegion;
     }
 
     /**
-     * Set The region where the bound instance is located.
-     * @param InstanceRegion The region where the bound instance is located.
+     * Set Region of the bound instance
+     * @param InstanceRegion Region of the bound instance
      */
     public void setInstanceRegion(String InstanceRegion) {
         this.InstanceRegion = InstanceRegion;
     }
 
     /**
-     * Get Type of the bound instance. 
-     * @return InstanceType Type of the bound instance.
+     * Get Bound instance type 
+     * @return InstanceType Bound instance type
      */
     public String getInstanceType() {
         return this.InstanceType;
     }
 
     /**
-     * Set Type of the bound instance.
-     * @param InstanceType Type of the bound instance.
+     * Set Bound instance type
+     * @param InstanceType Bound instance type
      */
     public void setInstanceType(String InstanceType) {
         this.InstanceType = InstanceType;
     }
 
     /**
-     * Get The instance ID under the bound cluster. 
-     * @return ExtendIds The instance ID under the bound cluster.
+     * Get Instance ID under the bound cluster 
+     * @return ExtendIds Instance ID under the bound cluster
      */
     public String [] getExtendIds() {
         return this.ExtendIds;
     }
 
     /**
-     * Set The instance ID under the bound cluster.
-     * @param ExtendIds The instance ID under the bound cluster.
+     * Set Instance ID under the bound cluster
+     * @param ExtendIds Instance ID under the bound cluster
      */
     public void setExtendIds(String [] ExtendIds) {
         this.ExtendIds = ExtendIds;

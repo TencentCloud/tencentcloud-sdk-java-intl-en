@@ -24,39 +24,39 @@ import java.util.HashMap;
 public class DescribeInstancesRequest extends AbstractModel {
 
     /**
-    * Number of returned results. Default value: 20. Maximum value: 100
+    * Number of returns. Default value: 20. Value range: (0, 100].
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * Record offset. Default value: 0
+    * Record offset. Default value: 0.
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * Sort by field. Valid values:
+    * Sorting field. Valid values:
 <li> CREATETIME: creation time</li>
-<li> PERIODENDTIME: expiration time</li>
+<li> PERIODENDTIME: Expiration time</li>
     */
     @SerializedName("OrderBy")
     @Expose
     private String OrderBy;
 
     /**
-    * Sorting order. Valid values:
-<li> ASC: ascending</li>
-<li> DESC: descending</li>
+    * Sorting type. Valid values:
+<li> ASC: ascending order </li>
+<li> DESC: sort in descending order </li>
     */
     @SerializedName("OrderByType")
     @Expose
     private String OrderByType;
 
     /**
-    * Filter. If more than one filter exists, the logical relationship between these filters is `AND`.
+    * Search criteria. When multiple filters exist, the relationship between filters is logical AND.
     */
     @SerializedName("Filters")
     @Expose
@@ -70,14 +70,14 @@ public class DescribeInstancesRequest extends AbstractModel {
     private String DbType;
 
     /**
-    * Instance status. Valid values:
+    * Instance status. Available values:
 creating
 running
 isolating
 isolated
-activating: Removing the instance from isolation
-offlining: Eliminating the instance
-offlined: Instance eliminated
+Recovering
+offlining
+offlined
     */
     @SerializedName("Status")
     @Expose
@@ -91,103 +91,103 @@ offlined: Instance eliminated
     private String [] InstanceIds;
 
     /**
-    * Cluster type, value ranges from <li>CYNOSDB: transactional cluster</li><li>LIBRADB: analysis cluster</li><li>ALL: all</li>, default to ALL.
+    * Cluster type. Value range: <li> CYNOSDB: transactional cluster </li><li> LIBRADB: analysis cluster </li><li> ALL: all </li>. Defaults to ALL.
     */
     @SerializedName("ClusterType")
     @Expose
     private String ClusterType;
 
     /**
-     * Get Number of returned results. Default value: 20. Maximum value: 100 
-     * @return Limit Number of returned results. Default value: 20. Maximum value: 100
+     * Get Number of returns. Default value: 20. Value range: (0, 100]. 
+     * @return Limit Number of returns. Default value: 20. Value range: (0, 100].
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Number of returned results. Default value: 20. Maximum value: 100
-     * @param Limit Number of returned results. Default value: 20. Maximum value: 100
+     * Set Number of returns. Default value: 20. Value range: (0, 100].
+     * @param Limit Number of returns. Default value: 20. Value range: (0, 100].
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get Record offset. Default value: 0 
-     * @return Offset Record offset. Default value: 0
+     * Get Record offset. Default value: 0. 
+     * @return Offset Record offset. Default value: 0.
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Record offset. Default value: 0
-     * @param Offset Record offset. Default value: 0
+     * Set Record offset. Default value: 0.
+     * @param Offset Record offset. Default value: 0.
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get Sort by field. Valid values:
+     * Get Sorting field. Valid values:
 <li> CREATETIME: creation time</li>
-<li> PERIODENDTIME: expiration time</li> 
-     * @return OrderBy Sort by field. Valid values:
+<li> PERIODENDTIME: Expiration time</li> 
+     * @return OrderBy Sorting field. Valid values:
 <li> CREATETIME: creation time</li>
-<li> PERIODENDTIME: expiration time</li>
+<li> PERIODENDTIME: Expiration time</li>
      */
     public String getOrderBy() {
         return this.OrderBy;
     }
 
     /**
-     * Set Sort by field. Valid values:
+     * Set Sorting field. Valid values:
 <li> CREATETIME: creation time</li>
-<li> PERIODENDTIME: expiration time</li>
-     * @param OrderBy Sort by field. Valid values:
+<li> PERIODENDTIME: Expiration time</li>
+     * @param OrderBy Sorting field. Valid values:
 <li> CREATETIME: creation time</li>
-<li> PERIODENDTIME: expiration time</li>
+<li> PERIODENDTIME: Expiration time</li>
      */
     public void setOrderBy(String OrderBy) {
         this.OrderBy = OrderBy;
     }
 
     /**
-     * Get Sorting order. Valid values:
-<li> ASC: ascending</li>
-<li> DESC: descending</li> 
-     * @return OrderByType Sorting order. Valid values:
-<li> ASC: ascending</li>
-<li> DESC: descending</li>
+     * Get Sorting type. Valid values:
+<li> ASC: ascending order </li>
+<li> DESC: sort in descending order </li> 
+     * @return OrderByType Sorting type. Valid values:
+<li> ASC: ascending order </li>
+<li> DESC: sort in descending order </li>
      */
     public String getOrderByType() {
         return this.OrderByType;
     }
 
     /**
-     * Set Sorting order. Valid values:
-<li> ASC: ascending</li>
-<li> DESC: descending</li>
-     * @param OrderByType Sorting order. Valid values:
-<li> ASC: ascending</li>
-<li> DESC: descending</li>
+     * Set Sorting type. Valid values:
+<li> ASC: ascending order </li>
+<li> DESC: sort in descending order </li>
+     * @param OrderByType Sorting type. Valid values:
+<li> ASC: ascending order </li>
+<li> DESC: sort in descending order </li>
      */
     public void setOrderByType(String OrderByType) {
         this.OrderByType = OrderByType;
     }
 
     /**
-     * Get Filter. If more than one filter exists, the logical relationship between these filters is `AND`. 
-     * @return Filters Filter. If more than one filter exists, the logical relationship between these filters is `AND`.
+     * Get Search criteria. When multiple filters exist, the relationship between filters is logical AND. 
+     * @return Filters Search criteria. When multiple filters exist, the relationship between filters is logical AND.
      */
     public QueryFilter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set Filter. If more than one filter exists, the logical relationship between these filters is `AND`.
-     * @param Filters Filter. If more than one filter exists, the logical relationship between these filters is `AND`.
+     * Set Search criteria. When multiple filters exist, the relationship between filters is logical AND.
+     * @param Filters Search criteria. When multiple filters exist, the relationship between filters is logical AND.
      */
     public void setFilters(QueryFilter [] Filters) {
         this.Filters = Filters;
@@ -210,44 +210,44 @@ offlined: Instance eliminated
     }
 
     /**
-     * Get Instance status. Valid values:
+     * Get Instance status. Available values:
 creating
 running
 isolating
 isolated
-activating: Removing the instance from isolation
-offlining: Eliminating the instance
-offlined: Instance eliminated 
-     * @return Status Instance status. Valid values:
+Recovering
+offlining
+offlined 
+     * @return Status Instance status. Available values:
 creating
 running
 isolating
 isolated
-activating: Removing the instance from isolation
-offlining: Eliminating the instance
-offlined: Instance eliminated
+Recovering
+offlining
+offlined
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Instance status. Valid values:
+     * Set Instance status. Available values:
 creating
 running
 isolating
 isolated
-activating: Removing the instance from isolation
-offlining: Eliminating the instance
-offlined: Instance eliminated
-     * @param Status Instance status. Valid values:
+Recovering
+offlining
+offlined
+     * @param Status Instance status. Available values:
 creating
 running
 isolating
 isolated
-activating: Removing the instance from isolation
-offlining: Eliminating the instance
-offlined: Instance eliminated
+Recovering
+offlining
+offlined
      */
     public void setStatus(String Status) {
         this.Status = Status;
@@ -270,16 +270,16 @@ offlined: Instance eliminated
     }
 
     /**
-     * Get Cluster type, value ranges from <li>CYNOSDB: transactional cluster</li><li>LIBRADB: analysis cluster</li><li>ALL: all</li>, default to ALL. 
-     * @return ClusterType Cluster type, value ranges from <li>CYNOSDB: transactional cluster</li><li>LIBRADB: analysis cluster</li><li>ALL: all</li>, default to ALL.
+     * Get Cluster type. Value range: <li> CYNOSDB: transactional cluster </li><li> LIBRADB: analysis cluster </li><li> ALL: all </li>. Defaults to ALL. 
+     * @return ClusterType Cluster type. Value range: <li> CYNOSDB: transactional cluster </li><li> LIBRADB: analysis cluster </li><li> ALL: all </li>. Defaults to ALL.
      */
     public String getClusterType() {
         return this.ClusterType;
     }
 
     /**
-     * Set Cluster type, value ranges from <li>CYNOSDB: transactional cluster</li><li>LIBRADB: analysis cluster</li><li>ALL: all</li>, default to ALL.
-     * @param ClusterType Cluster type, value ranges from <li>CYNOSDB: transactional cluster</li><li>LIBRADB: analysis cluster</li><li>ALL: all</li>, default to ALL.
+     * Set Cluster type. Value range: <li> CYNOSDB: transactional cluster </li><li> LIBRADB: analysis cluster </li><li> ALL: all </li>. Defaults to ALL.
+     * @param ClusterType Cluster type. Value range: <li> CYNOSDB: transactional cluster </li><li> LIBRADB: analysis cluster </li><li> ALL: all </li>. Defaults to ALL.
      */
     public void setClusterType(String ClusterType) {
         this.ClusterType = ClusterType;

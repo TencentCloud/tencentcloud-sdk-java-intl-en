@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DeleteVaultsRequest extends AbstractModel {
 
     /**
-    * List of backup safe IDs to be deleted, cannot be empty. The safe must have all files cleared.
+    * List of backup safe IDs to be deleted. It cannot be empty. All files in the safe must be cleared.
     */
     @SerializedName("VaultIds")
     @Expose
     private String [] VaultIds;
 
     /**
-     * Get List of backup safe IDs to be deleted, cannot be empty. The safe must have all files cleared. 
-     * @return VaultIds List of backup safe IDs to be deleted, cannot be empty. The safe must have all files cleared.
+     * Get List of backup safe IDs to be deleted. It cannot be empty. All files in the safe must be cleared. 
+     * @return VaultIds List of backup safe IDs to be deleted. It cannot be empty. All files in the safe must be cleared.
      */
     public String [] getVaultIds() {
         return this.VaultIds;
     }
 
     /**
-     * Set List of backup safe IDs to be deleted, cannot be empty. The safe must have all files cleared.
-     * @param VaultIds List of backup safe IDs to be deleted, cannot be empty. The safe must have all files cleared.
+     * Set List of backup safe IDs to be deleted. It cannot be empty. All files in the safe must be cleared.
+     * @param VaultIds List of backup safe IDs to be deleted. It cannot be empty. All files in the safe must be cleared.
      */
     public void setVaultIds(String [] VaultIds) {
         this.VaultIds = VaultIds;

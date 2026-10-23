@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeResourcePackageDetailRequest extends AbstractModel {
 
     /**
-    * The unique ID of a resource pack
+    * Unique ID of the resource package
     */
     @SerializedName("PackageId")
     @Expose
@@ -38,21 +38,21 @@ public class DescribeResourcePackageDetailRequest extends AbstractModel {
     private String [] ClusterIds;
 
     /**
-    * Start time
+    * Start time.
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * End time
+    * End time.
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-    * Offset
+    * Offset.
     */
     @SerializedName("Offset")
     @Expose
@@ -73,16 +73,16 @@ public class DescribeResourcePackageDetailRequest extends AbstractModel {
     private String [] InstanceIds;
 
     /**
-     * Get The unique ID of a resource pack 
-     * @return PackageId The unique ID of a resource pack
+     * Get Unique ID of the resource package 
+     * @return PackageId Unique ID of the resource package
      */
     public String getPackageId() {
         return this.PackageId;
     }
 
     /**
-     * Set The unique ID of a resource pack
-     * @param PackageId The unique ID of a resource pack
+     * Set Unique ID of the resource package
+     * @param PackageId Unique ID of the resource package
      */
     public void setPackageId(String PackageId) {
         this.PackageId = PackageId;
@@ -105,48 +105,48 @@ public class DescribeResourcePackageDetailRequest extends AbstractModel {
     }
 
     /**
-     * Get Start time 
-     * @return StartTime Start time
+     * Get Start time. 
+     * @return StartTime Start time.
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set Start time
-     * @param StartTime Start time
+     * Set Start time.
+     * @param StartTime Start time.
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get End time 
-     * @return EndTime End time
+     * Get End time. 
+     * @return EndTime End time.
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set End time
-     * @param EndTime End time
+     * Set End time.
+     * @param EndTime End time.
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get Offset 
-     * @return Offset Offset
+     * Get Offset. 
+     * @return Offset Offset.
      */
     public String getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Offset
-     * @param Offset Offset
+     * Set Offset.
+     * @param Offset Offset.
      */
     public void setOffset(String Offset) {
         this.Offset = Offset;

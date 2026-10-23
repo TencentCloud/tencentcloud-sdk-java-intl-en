@@ -38,14 +38,14 @@ public class ParamItemDetail extends AbstractModel {
     private String Default;
 
     /**
-    * <p>Optional enumerated value of the parameter. If it is a non-enumerated value, it is empty.</p>
+    * <p>Optional enumerated values of the parameter. If it is a non-enumerated value, this parameter is empty</p>
     */
     @SerializedName("EnumValue")
     @Expose
     private String [] EnumValue;
 
     /**
-    * <p>1: Global parameter, 0: Non-global parameter</p>
+    * <p>1: global parameter, 0: non-global parameter</p>
     */
     @SerializedName("IsGlobal")
     @Expose
@@ -66,7 +66,7 @@ public class ParamItemDetail extends AbstractModel {
     private String Min;
 
     /**
-    * <p>After modifying parameters, whether database restart is required to take effect. 0-no restart required, 1-restart required.</p>
+    * <p>Whether database restart is required after modifying parameters to take effect. 0: no restart required; 1: restart required.</p>
     */
     @SerializedName("NeedReboot")
     @Expose
@@ -101,7 +101,7 @@ public class ParamItemDetail extends AbstractModel {
     private String Description;
 
     /**
-    * <p>Whether the type is formula</p>
+    * <p>Whether the type is a formula</p>
     */
     @SerializedName("IsFunc")
     @Expose
@@ -154,32 +154,32 @@ public class ParamItemDetail extends AbstractModel {
     }
 
     /**
-     * Get <p>Optional enumerated value of the parameter. If it is a non-enumerated value, it is empty.</p> 
-     * @return EnumValue <p>Optional enumerated value of the parameter. If it is a non-enumerated value, it is empty.</p>
+     * Get <p>Optional enumerated values of the parameter. If it is a non-enumerated value, this parameter is empty</p> 
+     * @return EnumValue <p>Optional enumerated values of the parameter. If it is a non-enumerated value, this parameter is empty</p>
      */
     public String [] getEnumValue() {
         return this.EnumValue;
     }
 
     /**
-     * Set <p>Optional enumerated value of the parameter. If it is a non-enumerated value, it is empty.</p>
-     * @param EnumValue <p>Optional enumerated value of the parameter. If it is a non-enumerated value, it is empty.</p>
+     * Set <p>Optional enumerated values of the parameter. If it is a non-enumerated value, this parameter is empty</p>
+     * @param EnumValue <p>Optional enumerated values of the parameter. If it is a non-enumerated value, this parameter is empty</p>
      */
     public void setEnumValue(String [] EnumValue) {
         this.EnumValue = EnumValue;
     }
 
     /**
-     * Get <p>1: Global parameter, 0: Non-global parameter</p> 
-     * @return IsGlobal <p>1: Global parameter, 0: Non-global parameter</p>
+     * Get <p>1: global parameter, 0: non-global parameter</p> 
+     * @return IsGlobal <p>1: global parameter, 0: non-global parameter</p>
      */
     public Long getIsGlobal() {
         return this.IsGlobal;
     }
 
     /**
-     * Set <p>1: Global parameter, 0: Non-global parameter</p>
-     * @param IsGlobal <p>1: Global parameter, 0: Non-global parameter</p>
+     * Set <p>1: global parameter, 0: non-global parameter</p>
+     * @param IsGlobal <p>1: global parameter, 0: non-global parameter</p>
      */
     public void setIsGlobal(Long IsGlobal) {
         this.IsGlobal = IsGlobal;
@@ -218,16 +218,16 @@ public class ParamItemDetail extends AbstractModel {
     }
 
     /**
-     * Get <p>After modifying parameters, whether database restart is required to take effect. 0-no restart required, 1-restart required.</p> 
-     * @return NeedReboot <p>After modifying parameters, whether database restart is required to take effect. 0-no restart required, 1-restart required.</p>
+     * Get <p>Whether database restart is required after modifying parameters to take effect. 0: no restart required; 1: restart required.</p> 
+     * @return NeedReboot <p>Whether database restart is required after modifying parameters to take effect. 0: no restart required; 1: restart required.</p>
      */
     public Long getNeedReboot() {
         return this.NeedReboot;
     }
 
     /**
-     * Set <p>After modifying parameters, whether database restart is required to take effect. 0-no restart required, 1-restart required.</p>
-     * @param NeedReboot <p>After modifying parameters, whether database restart is required to take effect. 0-no restart required, 1-restart required.</p>
+     * Set <p>Whether database restart is required after modifying parameters to take effect. 0: no restart required; 1: restart required.</p>
+     * @param NeedReboot <p>Whether database restart is required after modifying parameters to take effect. 0: no restart required; 1: restart required.</p>
      */
     public void setNeedReboot(Long NeedReboot) {
         this.NeedReboot = NeedReboot;
@@ -298,16 +298,16 @@ public class ParamItemDetail extends AbstractModel {
     }
 
     /**
-     * Get <p>Whether the type is formula</p> 
-     * @return IsFunc <p>Whether the type is formula</p>
+     * Get <p>Whether the type is a formula</p> 
+     * @return IsFunc <p>Whether the type is a formula</p>
      */
     public Boolean getIsFunc() {
         return this.IsFunc;
     }
 
     /**
-     * Set <p>Whether the type is formula</p>
-     * @param IsFunc <p>Whether the type is formula</p>
+     * Set <p>Whether the type is a formula</p>
+     * @param IsFunc <p>Whether the type is a formula</p>
      */
     public void setIsFunc(Boolean IsFunc) {
         this.IsFunc = IsFunc;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModifyInstanceParamResponse extends AbstractModel {
 
     /**
-    * Task ID
+    * Task ID.
     */
     @SerializedName("FlowId")
     @Expose
@@ -38,16 +38,16 @@ public class ModifyInstanceParamResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Task ID 
-     * @return FlowId Task ID
+     * Get Task ID. 
+     * @return FlowId Task ID.
      */
     public Long getFlowId() {
         return this.FlowId;
     }
 
     /**
-     * Set Task ID
-     * @param FlowId Task ID
+     * Set Task ID.
+     * @param FlowId Task ID.
      */
     public void setFlowId(Long FlowId) {
         this.FlowId = FlowId;

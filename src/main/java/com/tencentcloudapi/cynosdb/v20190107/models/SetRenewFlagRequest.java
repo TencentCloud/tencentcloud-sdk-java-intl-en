@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class SetRenewFlagRequest extends AbstractModel {
 
     /**
-    * ID of the instance to be manipulated
+    * Cluster ID to operate on
     */
     @SerializedName("ResourceIds")
     @Expose
     private String [] ResourceIds;
 
     /**
-    * Auto-renewal flag. 0: normal renewal, 1: auto-renewal, 2: no renewal.
+    * Auto-renewal flag. `0`: normal renewal. `1`: automatic renewal. `2`: non-renewal upon expiration.
     */
     @SerializedName("AutoRenewFlag")
     @Expose
     private Long AutoRenewFlag;
 
     /**
-     * Get ID of the instance to be manipulated 
-     * @return ResourceIds ID of the instance to be manipulated
+     * Get Cluster ID to operate on 
+     * @return ResourceIds Cluster ID to operate on
      */
     public String [] getResourceIds() {
         return this.ResourceIds;
     }
 
     /**
-     * Set ID of the instance to be manipulated
-     * @param ResourceIds ID of the instance to be manipulated
+     * Set Cluster ID to operate on
+     * @param ResourceIds Cluster ID to operate on
      */
     public void setResourceIds(String [] ResourceIds) {
         this.ResourceIds = ResourceIds;
     }
 
     /**
-     * Get Auto-renewal flag. 0: normal renewal, 1: auto-renewal, 2: no renewal. 
-     * @return AutoRenewFlag Auto-renewal flag. 0: normal renewal, 1: auto-renewal, 2: no renewal.
+     * Get Auto-renewal flag. `0`: normal renewal. `1`: automatic renewal. `2`: non-renewal upon expiration. 
+     * @return AutoRenewFlag Auto-renewal flag. `0`: normal renewal. `1`: automatic renewal. `2`: non-renewal upon expiration.
      */
     public Long getAutoRenewFlag() {
         return this.AutoRenewFlag;
     }
 
     /**
-     * Set Auto-renewal flag. 0: normal renewal, 1: auto-renewal, 2: no renewal.
-     * @param AutoRenewFlag Auto-renewal flag. 0: normal renewal, 1: auto-renewal, 2: no renewal.
+     * Set Auto-renewal flag. `0`: normal renewal. `1`: automatic renewal. `2`: non-renewal upon expiration.
+     * @param AutoRenewFlag Auto-renewal flag. `0`: normal renewal. `1`: automatic renewal. `2`: non-renewal upon expiration.
      */
     public void setAutoRenewFlag(Long AutoRenewFlag) {
         this.AutoRenewFlag = AutoRenewFlag;

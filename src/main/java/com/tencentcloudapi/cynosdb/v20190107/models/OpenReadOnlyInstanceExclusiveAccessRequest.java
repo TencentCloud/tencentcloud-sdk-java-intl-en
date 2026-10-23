@@ -24,138 +24,138 @@ import java.util.HashMap;
 public class OpenReadOnlyInstanceExclusiveAccessRequest extends AbstractModel {
 
     /**
-    * Please use the [cluster information description](https://www.tencentcloud.com/document/product/1098/40752) to obtain the clusterId.
+    * Please use [cluster information description](https://www.tencentcloud.com/document/api/1003/48086?from_cn_redirect=1) to get the clusterId.
     */
     @SerializedName("ClusterId")
     @Expose
     private String ClusterId;
 
     /**
-    * Please use the [cluster information description](https://www.tencentcloud.com/document/product/1098/40752) to obtain the instanceId.
+    * Please use [Cluster information description](https://www.tencentcloud.com/document/api/1003/48086?from_cn_redirect=1) to get the instanceId.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Specifies the designated vpc ID. please use the [query vpc list](https://www.tencentcloud.com/document/product/215/15778) to obtain the vpc ID.
+    * Specified vpc ID. Please use [query the vpc list](https://www.tencentcloud.com/document/api/215/15778?from_cn_redirect=1) to get the vpc ID.
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * Specified subnet ID. if vpc ID is set, SubnetId is required. please use [query subnet list](https://intl.cloud.tencent.com/document/api/215/15784?from_cn_redirect=1) to get SubnetId.
+    * Designated subnet ID. If vpc ID is set up, SubnetId is required. Please use [query subnet list](https://www.tencentcloud.com/document/api/215/15784?from_cn_redirect=1) to get SubnetId.
     */
     @SerializedName("SubnetId")
     @Expose
     private String SubnetId;
 
     /**
-    * User-Defined port.
+    * User-defined port.
     */
     @SerializedName("Port")
     @Expose
     private Long Port;
 
     /**
-    * Security group ID. use [view security group](https://intl.cloud.tencent.com/document/api/215/15808?from_cn_redirect=1) to obtain the SecurityGroupId.
+    * Security group ID. Please use [View Security Group](https://www.tencentcloud.com/document/api/215/15808?from_cn_redirect=1) to get the SecurityGroupId.
     */
     @SerializedName("SecurityGroupIds")
     @Expose
     private String [] SecurityGroupIds;
 
     /**
-     * Get Please use the [cluster information description](https://www.tencentcloud.com/document/product/1098/40752) to obtain the clusterId. 
-     * @return ClusterId Please use the [cluster information description](https://www.tencentcloud.com/document/product/1098/40752) to obtain the clusterId.
+     * Get Please use [cluster information description](https://www.tencentcloud.com/document/api/1003/48086?from_cn_redirect=1) to get the clusterId. 
+     * @return ClusterId Please use [cluster information description](https://www.tencentcloud.com/document/api/1003/48086?from_cn_redirect=1) to get the clusterId.
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set Please use the [cluster information description](https://www.tencentcloud.com/document/product/1098/40752) to obtain the clusterId.
-     * @param ClusterId Please use the [cluster information description](https://www.tencentcloud.com/document/product/1098/40752) to obtain the clusterId.
+     * Set Please use [cluster information description](https://www.tencentcloud.com/document/api/1003/48086?from_cn_redirect=1) to get the clusterId.
+     * @param ClusterId Please use [cluster information description](https://www.tencentcloud.com/document/api/1003/48086?from_cn_redirect=1) to get the clusterId.
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get Please use the [cluster information description](https://www.tencentcloud.com/document/product/1098/40752) to obtain the instanceId. 
-     * @return InstanceId Please use the [cluster information description](https://www.tencentcloud.com/document/product/1098/40752) to obtain the instanceId.
+     * Get Please use [Cluster information description](https://www.tencentcloud.com/document/api/1003/48086?from_cn_redirect=1) to get the instanceId. 
+     * @return InstanceId Please use [Cluster information description](https://www.tencentcloud.com/document/api/1003/48086?from_cn_redirect=1) to get the instanceId.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Please use the [cluster information description](https://www.tencentcloud.com/document/product/1098/40752) to obtain the instanceId.
-     * @param InstanceId Please use the [cluster information description](https://www.tencentcloud.com/document/product/1098/40752) to obtain the instanceId.
+     * Set Please use [Cluster information description](https://www.tencentcloud.com/document/api/1003/48086?from_cn_redirect=1) to get the instanceId.
+     * @param InstanceId Please use [Cluster information description](https://www.tencentcloud.com/document/api/1003/48086?from_cn_redirect=1) to get the instanceId.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Specifies the designated vpc ID. please use the [query vpc list](https://www.tencentcloud.com/document/product/215/15778) to obtain the vpc ID. 
-     * @return VpcId Specifies the designated vpc ID. please use the [query vpc list](https://www.tencentcloud.com/document/product/215/15778) to obtain the vpc ID.
+     * Get Specified vpc ID. Please use [query the vpc list](https://www.tencentcloud.com/document/api/215/15778?from_cn_redirect=1) to get the vpc ID. 
+     * @return VpcId Specified vpc ID. Please use [query the vpc list](https://www.tencentcloud.com/document/api/215/15778?from_cn_redirect=1) to get the vpc ID.
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set Specifies the designated vpc ID. please use the [query vpc list](https://www.tencentcloud.com/document/product/215/15778) to obtain the vpc ID.
-     * @param VpcId Specifies the designated vpc ID. please use the [query vpc list](https://www.tencentcloud.com/document/product/215/15778) to obtain the vpc ID.
+     * Set Specified vpc ID. Please use [query the vpc list](https://www.tencentcloud.com/document/api/215/15778?from_cn_redirect=1) to get the vpc ID.
+     * @param VpcId Specified vpc ID. Please use [query the vpc list](https://www.tencentcloud.com/document/api/215/15778?from_cn_redirect=1) to get the vpc ID.
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get Specified subnet ID. if vpc ID is set, SubnetId is required. please use [query subnet list](https://intl.cloud.tencent.com/document/api/215/15784?from_cn_redirect=1) to get SubnetId. 
-     * @return SubnetId Specified subnet ID. if vpc ID is set, SubnetId is required. please use [query subnet list](https://intl.cloud.tencent.com/document/api/215/15784?from_cn_redirect=1) to get SubnetId.
+     * Get Designated subnet ID. If vpc ID is set up, SubnetId is required. Please use [query subnet list](https://www.tencentcloud.com/document/api/215/15784?from_cn_redirect=1) to get SubnetId. 
+     * @return SubnetId Designated subnet ID. If vpc ID is set up, SubnetId is required. Please use [query subnet list](https://www.tencentcloud.com/document/api/215/15784?from_cn_redirect=1) to get SubnetId.
      */
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set Specified subnet ID. if vpc ID is set, SubnetId is required. please use [query subnet list](https://intl.cloud.tencent.com/document/api/215/15784?from_cn_redirect=1) to get SubnetId.
-     * @param SubnetId Specified subnet ID. if vpc ID is set, SubnetId is required. please use [query subnet list](https://intl.cloud.tencent.com/document/api/215/15784?from_cn_redirect=1) to get SubnetId.
+     * Set Designated subnet ID. If vpc ID is set up, SubnetId is required. Please use [query subnet list](https://www.tencentcloud.com/document/api/215/15784?from_cn_redirect=1) to get SubnetId.
+     * @param SubnetId Designated subnet ID. If vpc ID is set up, SubnetId is required. Please use [query subnet list](https://www.tencentcloud.com/document/api/215/15784?from_cn_redirect=1) to get SubnetId.
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
     }
 
     /**
-     * Get User-Defined port. 
-     * @return Port User-Defined port.
+     * Get User-defined port. 
+     * @return Port User-defined port.
      */
     public Long getPort() {
         return this.Port;
     }
 
     /**
-     * Set User-Defined port.
-     * @param Port User-Defined port.
+     * Set User-defined port.
+     * @param Port User-defined port.
      */
     public void setPort(Long Port) {
         this.Port = Port;
     }
 
     /**
-     * Get Security group ID. use [view security group](https://intl.cloud.tencent.com/document/api/215/15808?from_cn_redirect=1) to obtain the SecurityGroupId. 
-     * @return SecurityGroupIds Security group ID. use [view security group](https://intl.cloud.tencent.com/document/api/215/15808?from_cn_redirect=1) to obtain the SecurityGroupId.
+     * Get Security group ID. Please use [View Security Group](https://www.tencentcloud.com/document/api/215/15808?from_cn_redirect=1) to get the SecurityGroupId. 
+     * @return SecurityGroupIds Security group ID. Please use [View Security Group](https://www.tencentcloud.com/document/api/215/15808?from_cn_redirect=1) to get the SecurityGroupId.
      */
     public String [] getSecurityGroupIds() {
         return this.SecurityGroupIds;
     }
 
     /**
-     * Set Security group ID. use [view security group](https://intl.cloud.tencent.com/document/api/215/15808?from_cn_redirect=1) to obtain the SecurityGroupId.
-     * @param SecurityGroupIds Security group ID. use [view security group](https://intl.cloud.tencent.com/document/api/215/15808?from_cn_redirect=1) to obtain the SecurityGroupId.
+     * Set Security group ID. Please use [View Security Group](https://www.tencentcloud.com/document/api/215/15808?from_cn_redirect=1) to get the SecurityGroupId.
+     * @param SecurityGroupIds Security group ID. Please use [View Security Group](https://www.tencentcloud.com/document/api/215/15808?from_cn_redirect=1) to get the SecurityGroupId.
      */
     public void setSecurityGroupIds(String [] SecurityGroupIds) {
         this.SecurityGroupIds = SecurityGroupIds;

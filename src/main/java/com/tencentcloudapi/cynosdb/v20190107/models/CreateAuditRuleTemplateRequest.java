@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class CreateAuditRuleTemplateRequest extends AbstractModel {
 
     /**
-    * Audit rule
+    * Audit rule.
     */
     @SerializedName("RuleFilters")
     @Expose
     private RuleFilters [] RuleFilters;
 
     /**
-    * Rule template name
+    * Rule template name.
     */
     @SerializedName("RuleTemplateName")
     @Expose
@@ -45,32 +45,46 @@ public class CreateAuditRuleTemplateRequest extends AbstractModel {
     private String Description;
 
     /**
-     * Get Audit rule 
-     * @return RuleFilters Audit rule
+    * Alarm level. Valid values: 1 - Low risk, 2 - Medium risk, 3 - High risk.
+    */
+    @SerializedName("AlarmLevel")
+    @Expose
+    private Long AlarmLevel;
+
+    /**
+    * Alarm policy. Valid values: 0 - Alarm disabled, 1 - Alarm enabled.
+    */
+    @SerializedName("AlarmPolicy")
+    @Expose
+    private Long AlarmPolicy;
+
+    /**
+     * Get Audit rule. 
+     * @return RuleFilters Audit rule.
      */
     public RuleFilters [] getRuleFilters() {
         return this.RuleFilters;
     }
 
     /**
-     * Set Audit rule
-     * @param RuleFilters Audit rule
+     * Set Audit rule.
+     * @param RuleFilters Audit rule.
      */
     public void setRuleFilters(RuleFilters [] RuleFilters) {
         this.RuleFilters = RuleFilters;
     }
 
     /**
-     * Get Rule template name 
-     * @return RuleTemplateName Rule template name
+     * Get Rule template name. 
+     * @return RuleTemplateName Rule template name.
      */
     public String getRuleTemplateName() {
         return this.RuleTemplateName;
     }
 
     /**
-     * Set Rule template name
-     * @param RuleTemplateName Rule template name
+     * Set Rule template name.
+     * @param RuleTemplateName Rule template name.
      */
     public void setRuleTemplateName(String RuleTemplateName) {
         this.RuleTemplateName = RuleTemplateName;
@@ -90,6 +104,38 @@ public class CreateAuditRuleTemplateRequest extends AbstractModel {
      */
     public void setDescription(String Description) {
         this.Description = Description;
+    }
+
+    /**
+     * Get Alarm level. Valid values: 1 - Low risk, 2 - Medium risk, 3 - High risk. 
+     * @return AlarmLevel Alarm level. Valid values: 1 - Low risk, 2 - Medium risk, 3 - High risk.
+     */
+    public Long getAlarmLevel() {
+        return this.AlarmLevel;
+    }
+
+    /**
+     * Set Alarm level. Valid values: 1 - Low risk, 2 - Medium risk, 3 - High risk.
+     * @param AlarmLevel Alarm level. Valid values: 1 - Low risk, 2 - Medium risk, 3 - High risk.
+     */
+    public void setAlarmLevel(Long AlarmLevel) {
+        this.AlarmLevel = AlarmLevel;
+    }
+
+    /**
+     * Get Alarm policy. Valid values: 0 - Alarm disabled, 1 - Alarm enabled. 
+     * @return AlarmPolicy Alarm policy. Valid values: 0 - Alarm disabled, 1 - Alarm enabled.
+     */
+    public Long getAlarmPolicy() {
+        return this.AlarmPolicy;
+    }
+
+    /**
+     * Set Alarm policy. Valid values: 0 - Alarm disabled, 1 - Alarm enabled.
+     * @param AlarmPolicy Alarm policy. Valid values: 0 - Alarm disabled, 1 - Alarm enabled.
+     */
+    public void setAlarmPolicy(Long AlarmPolicy) {
+        this.AlarmPolicy = AlarmPolicy;
     }
 
     public CreateAuditRuleTemplateRequest() {
@@ -112,6 +158,12 @@ public class CreateAuditRuleTemplateRequest extends AbstractModel {
         if (source.Description != null) {
             this.Description = new String(source.Description);
         }
+        if (source.AlarmLevel != null) {
+            this.AlarmLevel = new Long(source.AlarmLevel);
+        }
+        if (source.AlarmPolicy != null) {
+            this.AlarmPolicy = new Long(source.AlarmPolicy);
+        }
     }
 
 
@@ -122,6 +174,8 @@ public class CreateAuditRuleTemplateRequest extends AbstractModel {
         this.setParamArrayObj(map, prefix + "RuleFilters.", this.RuleFilters);
         this.setParamSimple(map, prefix + "RuleTemplateName", this.RuleTemplateName);
         this.setParamSimple(map, prefix + "Description", this.Description);
+        this.setParamSimple(map, prefix + "AlarmLevel", this.AlarmLevel);
+        this.setParamSimple(map, prefix + "AlarmPolicy", this.AlarmPolicy);
 
     }
 }

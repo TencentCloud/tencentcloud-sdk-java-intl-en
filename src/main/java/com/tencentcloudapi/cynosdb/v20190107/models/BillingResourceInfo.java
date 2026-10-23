@@ -31,7 +31,7 @@ public class BillingResourceInfo extends AbstractModel {
     private String ClusterId;
 
     /**
-    * Instance ID list
+    * Instance ID list.
     */
     @SerializedName("InstanceIds")
     @Expose
@@ -61,16 +61,16 @@ public class BillingResourceInfo extends AbstractModel {
     }
 
     /**
-     * Get Instance ID list 
-     * @return InstanceIds Instance ID list
+     * Get Instance ID list. 
+     * @return InstanceIds Instance ID list.
      */
     public String [] getInstanceIds() {
         return this.InstanceIds;
     }
 
     /**
-     * Set Instance ID list
-     * @param InstanceIds Instance ID list
+     * Set Instance ID list.
+     * @param InstanceIds Instance ID list.
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;

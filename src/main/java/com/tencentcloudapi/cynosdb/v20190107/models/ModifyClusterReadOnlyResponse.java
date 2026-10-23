@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModifyClusterReadOnlyResponse extends AbstractModel {
 
     /**
-    * List of cluster task ids.
+    * Cluster task ID list
     */
     @SerializedName("ClusterTaskIds")
     @Expose
@@ -38,16 +38,16 @@ public class ModifyClusterReadOnlyResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get List of cluster task ids. 
-     * @return ClusterTaskIds List of cluster task ids.
+     * Get Cluster task ID list 
+     * @return ClusterTaskIds Cluster task ID list
      */
     public ClusterTaskId [] getClusterTaskIds() {
         return this.ClusterTaskIds;
     }
 
     /**
-     * Set List of cluster task ids.
-     * @param ClusterTaskIds List of cluster task ids.
+     * Set Cluster task ID list
+     * @param ClusterTaskIds Cluster task ID list
      */
     public void setClusterTaskIds(ClusterTaskId [] ClusterTaskIds) {
         this.ClusterTaskIds = ClusterTaskIds;

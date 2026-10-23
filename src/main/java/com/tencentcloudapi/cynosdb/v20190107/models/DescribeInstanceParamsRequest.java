@@ -31,18 +31,25 @@ public class DescribeInstanceParamsRequest extends AbstractModel {
     private String ClusterId;
 
     /**
-    * Instance ID, which supports batch query.
+    * Instance ID. Support batch querying.
     */
     @SerializedName("InstanceIds")
     @Expose
     private String [] InstanceIds;
 
     /**
-    * Search condition for a parameter name, which supports fuzzy search.
+    * Parameter name search criteria. Fuzzy matching is supported.
     */
     @SerializedName("ParamKeyword")
     @Expose
     private String ParamKeyword;
+
+    /**
+    * Whether it is a global parameter
+    */
+    @SerializedName("IsGlobal")
+    @Expose
+    private String IsGlobal;
 
     /**
      * Get Cluster ID 
@@ -61,35 +68,51 @@ public class DescribeInstanceParamsRequest extends AbstractModel {
     }
 
     /**
-     * Get Instance ID, which supports batch query. 
-     * @return InstanceIds Instance ID, which supports batch query.
+     * Get Instance ID. Support batch querying. 
+     * @return InstanceIds Instance ID. Support batch querying.
      */
     public String [] getInstanceIds() {
         return this.InstanceIds;
     }
 
     /**
-     * Set Instance ID, which supports batch query.
-     * @param InstanceIds Instance ID, which supports batch query.
+     * Set Instance ID. Support batch querying.
+     * @param InstanceIds Instance ID. Support batch querying.
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;
     }
 
     /**
-     * Get Search condition for a parameter name, which supports fuzzy search. 
-     * @return ParamKeyword Search condition for a parameter name, which supports fuzzy search.
+     * Get Parameter name search criteria. Fuzzy matching is supported. 
+     * @return ParamKeyword Parameter name search criteria. Fuzzy matching is supported.
      */
     public String getParamKeyword() {
         return this.ParamKeyword;
     }
 
     /**
-     * Set Search condition for a parameter name, which supports fuzzy search.
-     * @param ParamKeyword Search condition for a parameter name, which supports fuzzy search.
+     * Set Parameter name search criteria. Fuzzy matching is supported.
+     * @param ParamKeyword Parameter name search criteria. Fuzzy matching is supported.
      */
     public void setParamKeyword(String ParamKeyword) {
         this.ParamKeyword = ParamKeyword;
+    }
+
+    /**
+     * Get Whether it is a global parameter 
+     * @return IsGlobal Whether it is a global parameter
+     */
+    public String getIsGlobal() {
+        return this.IsGlobal;
+    }
+
+    /**
+     * Set Whether it is a global parameter
+     * @param IsGlobal Whether it is a global parameter
+     */
+    public void setIsGlobal(String IsGlobal) {
+        this.IsGlobal = IsGlobal;
     }
 
     public DescribeInstanceParamsRequest() {
@@ -112,6 +135,9 @@ public class DescribeInstanceParamsRequest extends AbstractModel {
         if (source.ParamKeyword != null) {
             this.ParamKeyword = new String(source.ParamKeyword);
         }
+        if (source.IsGlobal != null) {
+            this.IsGlobal = new String(source.IsGlobal);
+        }
     }
 
 
@@ -122,6 +148,7 @@ public class DescribeInstanceParamsRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
         this.setParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
         this.setParamSimple(map, prefix + "ParamKeyword", this.ParamKeyword);
+        this.setParamSimple(map, prefix + "IsGlobal", this.IsGlobal);
 
     }
 }

@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeRedoLogsResponse extends AbstractModel {
 
     /**
-    * Total number of entries
+    * Total number of entries.
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * redo log information.
+    * redo log information
     */
     @SerializedName("RedoLogs")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeRedoLogsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Total number of entries 
-     * @return TotalCount Total number of entries
+     * Get Total number of entries. 
+     * @return TotalCount Total number of entries.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Total number of entries
-     * @param TotalCount Total number of entries
+     * Set Total number of entries.
+     * @param TotalCount Total number of entries.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get redo log information. 
-     * @return RedoLogs redo log information.
+     * Get redo log information 
+     * @return RedoLogs redo log information
      */
     public RedoLogItem [] getRedoLogs() {
         return this.RedoLogs;
     }
 
     /**
-     * Set redo log information.
-     * @param RedoLogs redo log information.
+     * Set redo log information
+     * @param RedoLogs redo log information
      */
     public void setRedoLogs(RedoLogItem [] RedoLogs) {
         this.RedoLogs = RedoLogs;

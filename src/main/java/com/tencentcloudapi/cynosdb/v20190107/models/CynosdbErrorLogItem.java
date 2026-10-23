@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CynosdbErrorLogItem extends AbstractModel {
 
     /**
-    * Log timestamp.
+    * Log timestamp
     */
     @SerializedName("Timestamp")
     @Expose
@@ -38,23 +38,23 @@ public class CynosdbErrorLogItem extends AbstractModel {
     private String Level;
 
     /**
-    * Log content.
+    * Log content
     */
     @SerializedName("Content")
     @Expose
     private String Content;
 
     /**
-     * Get Log timestamp. 
-     * @return Timestamp Log timestamp.
+     * Get Log timestamp 
+     * @return Timestamp Log timestamp
      */
     public Long getTimestamp() {
         return this.Timestamp;
     }
 
     /**
-     * Set Log timestamp.
-     * @param Timestamp Log timestamp.
+     * Set Log timestamp
+     * @param Timestamp Log timestamp
      */
     public void setTimestamp(Long Timestamp) {
         this.Timestamp = Timestamp;
@@ -77,16 +77,16 @@ public class CynosdbErrorLogItem extends AbstractModel {
     }
 
     /**
-     * Get Log content. 
-     * @return Content Log content.
+     * Get Log content 
+     * @return Content Log content
      */
     public String getContent() {
         return this.Content;
     }
 
     /**
-     * Set Log content.
-     * @param Content Log content.
+     * Set Log content
+     * @param Content Log content
      */
     public void setContent(String Content) {
         this.Content = Content;

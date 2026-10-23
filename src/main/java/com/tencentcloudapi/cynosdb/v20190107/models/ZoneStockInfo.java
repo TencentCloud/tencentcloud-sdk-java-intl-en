@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class ZoneStockInfo extends AbstractModel {
 
     /**
-    * AZ
+    * Availability zone
     */
     @SerializedName("Zone")
     @Expose
     private String Zone;
 
     /**
-    * Whether there is an inventory.
+    * Whether there is inventory
     */
     @SerializedName("HasStock")
     @Expose
     private Boolean HasStock;
 
     /**
-    * Quantity in stock
+    * Inventory quantity
     */
     @SerializedName("StockCount")
     @Expose
     private Long StockCount;
 
     /**
-    * Available zone inventory information.
+    * AZ inventory information
     */
     @SerializedName("SlaveZoneStockInfos")
     @Expose
     private SlaveZoneStockInfo [] SlaveZoneStockInfos;
 
     /**
-     * Get AZ 
-     * @return Zone AZ
+     * Get Availability zone 
+     * @return Zone Availability zone
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * Set AZ
-     * @param Zone AZ
+     * Set Availability zone
+     * @param Zone Availability zone
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
     }
 
     /**
-     * Get Whether there is an inventory. 
-     * @return HasStock Whether there is an inventory.
+     * Get Whether there is inventory 
+     * @return HasStock Whether there is inventory
      */
     public Boolean getHasStock() {
         return this.HasStock;
     }
 
     /**
-     * Set Whether there is an inventory.
-     * @param HasStock Whether there is an inventory.
+     * Set Whether there is inventory
+     * @param HasStock Whether there is inventory
      */
     public void setHasStock(Boolean HasStock) {
         this.HasStock = HasStock;
     }
 
     /**
-     * Get Quantity in stock 
-     * @return StockCount Quantity in stock
+     * Get Inventory quantity 
+     * @return StockCount Inventory quantity
      */
     public Long getStockCount() {
         return this.StockCount;
     }
 
     /**
-     * Set Quantity in stock
-     * @param StockCount Quantity in stock
+     * Set Inventory quantity
+     * @param StockCount Inventory quantity
      */
     public void setStockCount(Long StockCount) {
         this.StockCount = StockCount;
     }
 
     /**
-     * Get Available zone inventory information. 
-     * @return SlaveZoneStockInfos Available zone inventory information.
+     * Get AZ inventory information 
+     * @return SlaveZoneStockInfos AZ inventory information
      */
     public SlaveZoneStockInfo [] getSlaveZoneStockInfos() {
         return this.SlaveZoneStockInfos;
     }
 
     /**
-     * Set Available zone inventory information.
-     * @param SlaveZoneStockInfos Available zone inventory information.
+     * Set AZ inventory information
+     * @param SlaveZoneStockInfos AZ inventory information
      */
     public void setSlaveZoneStockInfos(SlaveZoneStockInfo [] SlaveZoneStockInfos) {
         this.SlaveZoneStockInfos = SlaveZoneStockInfos;

@@ -31,7 +31,7 @@ public class DescribeClusterDatabasesResponse extends AbstractModel {
     private Long TotalCount;
 
     /**
-    * Pagination offset.
+    * Pagination Offset
     */
     @SerializedName("Offset")
     @Expose
@@ -45,7 +45,7 @@ public class DescribeClusterDatabasesResponse extends AbstractModel {
     private String [] Databases;
 
     /**
-    * Pagination number limit.
+    * Pagination limit
     */
     @SerializedName("Limit")
     @Expose
@@ -75,16 +75,16 @@ public class DescribeClusterDatabasesResponse extends AbstractModel {
     }
 
     /**
-     * Get Pagination offset. 
-     * @return Offset Pagination offset.
+     * Get Pagination Offset 
+     * @return Offset Pagination Offset
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Pagination offset.
-     * @param Offset Pagination offset.
+     * Set Pagination Offset
+     * @param Offset Pagination Offset
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
@@ -107,16 +107,16 @@ public class DescribeClusterDatabasesResponse extends AbstractModel {
     }
 
     /**
-     * Get Pagination number limit. 
-     * @return Limit Pagination number limit.
+     * Get Pagination limit 
+     * @return Limit Pagination limit
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Pagination number limit.
-     * @param Limit Pagination number limit.
+     * Set Pagination limit
+     * @param Limit Pagination limit
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

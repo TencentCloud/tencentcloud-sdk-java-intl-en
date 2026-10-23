@@ -24,138 +24,138 @@ import java.util.HashMap;
 public class SaleRegion extends AbstractModel {
 
     /**
-    * Region name
+    * English name of the region
     */
     @SerializedName("Region")
     @Expose
     private String Region;
 
     /**
-    * Numeric ID of a region
+    * Region numeric ID.
     */
     @SerializedName("RegionId")
     @Expose
     private Long RegionId;
 
     /**
-    * Region name
+    * Region Name in Chinese
     */
     @SerializedName("RegionZh")
     @Expose
     private String RegionZh;
 
     /**
-    * List of purchasable AZs
+    * List of available saleable zones
     */
     @SerializedName("ZoneSet")
     @Expose
     private SaleZone [] ZoneSet;
 
     /**
-    * Engine type
+    * Engine type.
     */
     @SerializedName("DbType")
     @Expose
     private String DbType;
 
     /**
-    * Supported modules in a region
+    * Region module support status
     */
     @SerializedName("Modules")
     @Expose
     private Module [] Modules;
 
     /**
-     * Get Region name 
-     * @return Region Region name
+     * Get English name of the region 
+     * @return Region English name of the region
      */
     public String getRegion() {
         return this.Region;
     }
 
     /**
-     * Set Region name
-     * @param Region Region name
+     * Set English name of the region
+     * @param Region English name of the region
      */
     public void setRegion(String Region) {
         this.Region = Region;
     }
 
     /**
-     * Get Numeric ID of a region 
-     * @return RegionId Numeric ID of a region
+     * Get Region numeric ID. 
+     * @return RegionId Region numeric ID.
      */
     public Long getRegionId() {
         return this.RegionId;
     }
 
     /**
-     * Set Numeric ID of a region
-     * @param RegionId Numeric ID of a region
+     * Set Region numeric ID.
+     * @param RegionId Region numeric ID.
      */
     public void setRegionId(Long RegionId) {
         this.RegionId = RegionId;
     }
 
     /**
-     * Get Region name 
-     * @return RegionZh Region name
+     * Get Region Name in Chinese 
+     * @return RegionZh Region Name in Chinese
      */
     public String getRegionZh() {
         return this.RegionZh;
     }
 
     /**
-     * Set Region name
-     * @param RegionZh Region name
+     * Set Region Name in Chinese
+     * @param RegionZh Region Name in Chinese
      */
     public void setRegionZh(String RegionZh) {
         this.RegionZh = RegionZh;
     }
 
     /**
-     * Get List of purchasable AZs 
-     * @return ZoneSet List of purchasable AZs
+     * Get List of available saleable zones 
+     * @return ZoneSet List of available saleable zones
      */
     public SaleZone [] getZoneSet() {
         return this.ZoneSet;
     }
 
     /**
-     * Set List of purchasable AZs
-     * @param ZoneSet List of purchasable AZs
+     * Set List of available saleable zones
+     * @param ZoneSet List of available saleable zones
      */
     public void setZoneSet(SaleZone [] ZoneSet) {
         this.ZoneSet = ZoneSet;
     }
 
     /**
-     * Get Engine type 
-     * @return DbType Engine type
+     * Get Engine type. 
+     * @return DbType Engine type.
      */
     public String getDbType() {
         return this.DbType;
     }
 
     /**
-     * Set Engine type
-     * @param DbType Engine type
+     * Set Engine type.
+     * @param DbType Engine type.
      */
     public void setDbType(String DbType) {
         this.DbType = DbType;
     }
 
     /**
-     * Get Supported modules in a region 
-     * @return Modules Supported modules in a region
+     * Get Region module support status 
+     * @return Modules Region module support status
      */
     public Module [] getModules() {
         return this.Modules;
     }
 
     /**
-     * Set Supported modules in a region
-     * @param Modules Supported modules in a region
+     * Set Region module support status
+     * @param Modules Region module support status
      */
     public void setModules(Module [] Modules) {
         this.Modules = Modules;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CloseProxyEndPointResponse extends AbstractModel {
 
     /**
-    * Async process ID.
+    * Async process ID
     */
     @SerializedName("FlowId")
     @Expose
@@ -45,16 +45,16 @@ public class CloseProxyEndPointResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Async process ID. 
-     * @return FlowId Async process ID.
+     * Get Async process ID 
+     * @return FlowId Async process ID
      */
     public Long getFlowId() {
         return this.FlowId;
     }
 
     /**
-     * Set Async process ID.
-     * @param FlowId Async process ID.
+     * Set Async process ID
+     * @param FlowId Async process ID
      */
     public void setFlowId(Long FlowId) {
         this.FlowId = FlowId;

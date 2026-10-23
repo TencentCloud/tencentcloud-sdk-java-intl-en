@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class NewAccount extends AbstractModel {
 
     /**
-    * <p>Account name, containing letters, digits, and underscores, starting with a letter, ending with a letter or digit, length 1-30</p>
+    * <p>Account name, contains letters, digits, and underscores, starts with a letter, ending with a letter or digit, length 1-30</p>
     */
     @SerializedName("AccountName")
     @Expose
     private String AccountName;
 
     /**
-    * <p>host (% or ipv4 address)</p>
+    * <p>Host (% or ipv4 address)</p>
     */
     @SerializedName("Host")
     @Expose
     private String Host;
 
     /**
-    * <p>Password. The length range is 8 to 64 characters.</p>
+    * <p>Password. The password length range is 8 to 64 characters.</p>
     */
     @SerializedName("AccountPassword")
     @Expose
@@ -59,55 +59,55 @@ public class NewAccount extends AbstractModel {
     private String Description;
 
     /**
-    * <p>Maximum user connections cannot be greater than 10240</p>
+    * <p>Maximum user connections, cannot be greater than 10240</p>
     */
     @SerializedName("MaxUserConnections")
     @Expose
     private Long MaxUserConnections;
 
     /**
-     * Get <p>Account name, containing letters, digits, and underscores, starting with a letter, ending with a letter or digit, length 1-30</p> 
-     * @return AccountName <p>Account name, containing letters, digits, and underscores, starting with a letter, ending with a letter or digit, length 1-30</p>
+     * Get <p>Account name, contains letters, digits, and underscores, starts with a letter, ending with a letter or digit, length 1-30</p> 
+     * @return AccountName <p>Account name, contains letters, digits, and underscores, starts with a letter, ending with a letter or digit, length 1-30</p>
      */
     public String getAccountName() {
         return this.AccountName;
     }
 
     /**
-     * Set <p>Account name, containing letters, digits, and underscores, starting with a letter, ending with a letter or digit, length 1-30</p>
-     * @param AccountName <p>Account name, containing letters, digits, and underscores, starting with a letter, ending with a letter or digit, length 1-30</p>
+     * Set <p>Account name, contains letters, digits, and underscores, starts with a letter, ending with a letter or digit, length 1-30</p>
+     * @param AccountName <p>Account name, contains letters, digits, and underscores, starts with a letter, ending with a letter or digit, length 1-30</p>
      */
     public void setAccountName(String AccountName) {
         this.AccountName = AccountName;
     }
 
     /**
-     * Get <p>host (% or ipv4 address)</p> 
-     * @return Host <p>host (% or ipv4 address)</p>
+     * Get <p>Host (% or ipv4 address)</p> 
+     * @return Host <p>Host (% or ipv4 address)</p>
      */
     public String getHost() {
         return this.Host;
     }
 
     /**
-     * Set <p>host (% or ipv4 address)</p>
-     * @param Host <p>host (% or ipv4 address)</p>
+     * Set <p>Host (% or ipv4 address)</p>
+     * @param Host <p>Host (% or ipv4 address)</p>
      */
     public void setHost(String Host) {
         this.Host = Host;
     }
 
     /**
-     * Get <p>Password. The length range is 8 to 64 characters.</p> 
-     * @return AccountPassword <p>Password. The length range is 8 to 64 characters.</p>
+     * Get <p>Password. The password length range is 8 to 64 characters.</p> 
+     * @return AccountPassword <p>Password. The password length range is 8 to 64 characters.</p>
      */
     public String getAccountPassword() {
         return this.AccountPassword;
     }
 
     /**
-     * Set <p>Password. The length range is 8 to 64 characters.</p>
-     * @param AccountPassword <p>Password. The length range is 8 to 64 characters.</p>
+     * Set <p>Password. The password length range is 8 to 64 characters.</p>
+     * @param AccountPassword <p>Password. The password length range is 8 to 64 characters.</p>
      */
     public void setAccountPassword(String AccountPassword) {
         this.AccountPassword = AccountPassword;
@@ -146,16 +146,16 @@ public class NewAccount extends AbstractModel {
     }
 
     /**
-     * Get <p>Maximum user connections cannot be greater than 10240</p> 
-     * @return MaxUserConnections <p>Maximum user connections cannot be greater than 10240</p>
+     * Get <p>Maximum user connections, cannot be greater than 10240</p> 
+     * @return MaxUserConnections <p>Maximum user connections, cannot be greater than 10240</p>
      */
     public Long getMaxUserConnections() {
         return this.MaxUserConnections;
     }
 
     /**
-     * Set <p>Maximum user connections cannot be greater than 10240</p>
-     * @param MaxUserConnections <p>Maximum user connections cannot be greater than 10240</p>
+     * Set <p>Maximum user connections, cannot be greater than 10240</p>
+     * @param MaxUserConnections <p>Maximum user connections, cannot be greater than 10240</p>
      */
     public void setMaxUserConnections(Long MaxUserConnections) {
         this.MaxUserConnections = MaxUserConnections;

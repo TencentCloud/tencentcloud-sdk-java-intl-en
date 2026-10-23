@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class InstanceAbility extends AbstractModel {
 
     /**
-    * Specifies whether the instance supports forced reboot. valid values: yes (supported), no (unsupported).
+    * Whether the instance supports forced reboot. Available values: yes: support, no: no support
     */
     @SerializedName("IsSupportForceRestart")
     @Expose
     private String IsSupportForceRestart;
 
     /**
-    * Specifies the causes for not supporting forced reboot.
+    * The causes for not supporting forced reboot
     */
     @SerializedName("NonsupportForceRestartReason")
     @Expose
     private String NonsupportForceRestartReason;
 
     /**
-     * Get Specifies whether the instance supports forced reboot. valid values: yes (supported), no (unsupported). 
-     * @return IsSupportForceRestart Specifies whether the instance supports forced reboot. valid values: yes (supported), no (unsupported).
+     * Get Whether the instance supports forced reboot. Available values: yes: support, no: no support 
+     * @return IsSupportForceRestart Whether the instance supports forced reboot. Available values: yes: support, no: no support
      */
     public String getIsSupportForceRestart() {
         return this.IsSupportForceRestart;
     }
 
     /**
-     * Set Specifies whether the instance supports forced reboot. valid values: yes (supported), no (unsupported).
-     * @param IsSupportForceRestart Specifies whether the instance supports forced reboot. valid values: yes (supported), no (unsupported).
+     * Set Whether the instance supports forced reboot. Available values: yes: support, no: no support
+     * @param IsSupportForceRestart Whether the instance supports forced reboot. Available values: yes: support, no: no support
      */
     public void setIsSupportForceRestart(String IsSupportForceRestart) {
         this.IsSupportForceRestart = IsSupportForceRestart;
     }
 
     /**
-     * Get Specifies the causes for not supporting forced reboot. 
-     * @return NonsupportForceRestartReason Specifies the causes for not supporting forced reboot.
+     * Get The causes for not supporting forced reboot 
+     * @return NonsupportForceRestartReason The causes for not supporting forced reboot
      */
     public String getNonsupportForceRestartReason() {
         return this.NonsupportForceRestartReason;
     }
 
     /**
-     * Set Specifies the causes for not supporting forced reboot.
-     * @param NonsupportForceRestartReason Specifies the causes for not supporting forced reboot.
+     * Set The causes for not supporting forced reboot
+     * @param NonsupportForceRestartReason The causes for not supporting forced reboot
      */
     public void setNonsupportForceRestartReason(String NonsupportForceRestartReason) {
         this.NonsupportForceRestartReason = NonsupportForceRestartReason;

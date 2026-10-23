@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class InstanceNameWeight extends AbstractModel {
 
     /**
-    * Instance name. specifies the name defined by InstanceInitInfo.InstanceName in cluster creation.
+    * Instance name, which is the name specified by InstanceInitInfo.InstanceName during cluster creation
     */
     @SerializedName("InstanceName")
     @Expose
@@ -38,16 +38,16 @@ public class InstanceNameWeight extends AbstractModel {
     private Long Weight;
 
     /**
-     * Get Instance name. specifies the name defined by InstanceInitInfo.InstanceName in cluster creation. 
-     * @return InstanceName Instance name. specifies the name defined by InstanceInitInfo.InstanceName in cluster creation.
+     * Get Instance name, which is the name specified by InstanceInitInfo.InstanceName during cluster creation 
+     * @return InstanceName Instance name, which is the name specified by InstanceInitInfo.InstanceName during cluster creation
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set Instance name. specifies the name defined by InstanceInitInfo.InstanceName in cluster creation.
-     * @param InstanceName Instance name. specifies the name defined by InstanceInitInfo.InstanceName in cluster creation.
+     * Set Instance name, which is the name specified by InstanceInitInfo.InstanceName during cluster creation
+     * @param InstanceName Instance name, which is the name specified by InstanceInitInfo.InstanceName during cluster creation
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;

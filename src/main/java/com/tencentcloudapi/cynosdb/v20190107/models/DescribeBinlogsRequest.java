@@ -31,28 +31,28 @@ public class DescribeBinlogsRequest extends AbstractModel {
     private String ClusterId;
 
     /**
-    * Start time
+    * Start time.
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * End time
+    * End time.
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-    * Offset
+    * Offset.
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * Limit on the number of records. The default value is 20.
+    * Limit entries. Default value: 20.
     */
     @SerializedName("Limit")
     @Expose
@@ -75,64 +75,64 @@ public class DescribeBinlogsRequest extends AbstractModel {
     }
 
     /**
-     * Get Start time 
-     * @return StartTime Start time
+     * Get Start time. 
+     * @return StartTime Start time.
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set Start time
-     * @param StartTime Start time
+     * Set Start time.
+     * @param StartTime Start time.
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get End time 
-     * @return EndTime End time
+     * Get End time. 
+     * @return EndTime End time.
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set End time
-     * @param EndTime End time
+     * Set End time.
+     * @param EndTime End time.
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get Offset 
-     * @return Offset Offset
+     * Get Offset. 
+     * @return Offset Offset.
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Offset
-     * @param Offset Offset
+     * Set Offset.
+     * @param Offset Offset.
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get Limit on the number of records. The default value is 20. 
-     * @return Limit Limit on the number of records. The default value is 20.
+     * Get Limit entries. Default value: 20. 
+     * @return Limit Limit entries. Default value: 20.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Limit on the number of records. The default value is 20.
-     * @param Limit Limit on the number of records. The default value is 20.
+     * Set Limit entries. Default value: 20.
+     * @param Limit Limit entries. Default value: 20.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

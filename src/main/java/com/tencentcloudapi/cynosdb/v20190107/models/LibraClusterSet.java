@@ -59,7 +59,7 @@ public class LibraClusterSet extends AbstractModel {
     private String DbVersion;
 
     /**
-    * instance information
+    * Instance information
     */
     @SerializedName("InstanceSet")
     @Expose
@@ -94,7 +94,7 @@ public class LibraClusterSet extends AbstractModel {
     private String Region;
 
     /**
-    * Auto-renewal flag. 1: Automatic renewal. 0: Non-renewal upon expiration.
+    * Auto-renewal flag. `1`: renew automatically. `0`: do not renew upon expiration.
     */
     @SerializedName("RenewFlag")
     @Expose
@@ -122,7 +122,7 @@ public class LibraClusterSet extends AbstractModel {
     private Long Storage;
 
     /**
-    * Used Capacity
+    * Used capacity
     */
     @SerializedName("UsedStorage")
     @Expose
@@ -136,7 +136,7 @@ public class LibraClusterSet extends AbstractModel {
     private String Vip;
 
     /**
-    * vport port
+    * vport
     */
     @SerializedName("Vport")
     @Expose
@@ -223,16 +223,16 @@ public class LibraClusterSet extends AbstractModel {
     }
 
     /**
-     * Get instance information 
-     * @return InstanceSet instance information
+     * Get Instance information 
+     * @return InstanceSet Instance information
      */
     public LibraInstanceSet [] getInstanceSet() {
         return this.InstanceSet;
     }
 
     /**
-     * Set instance information
-     * @param InstanceSet instance information
+     * Set Instance information
+     * @param InstanceSet Instance information
      */
     public void setInstanceSet(LibraInstanceSet [] InstanceSet) {
         this.InstanceSet = InstanceSet;
@@ -303,16 +303,16 @@ public class LibraClusterSet extends AbstractModel {
     }
 
     /**
-     * Get Auto-renewal flag. 1: Automatic renewal. 0: Non-renewal upon expiration. 
-     * @return RenewFlag Auto-renewal flag. 1: Automatic renewal. 0: Non-renewal upon expiration.
+     * Get Auto-renewal flag. `1`: renew automatically. `0`: do not renew upon expiration. 
+     * @return RenewFlag Auto-renewal flag. `1`: renew automatically. `0`: do not renew upon expiration.
      */
     public Long getRenewFlag() {
         return this.RenewFlag;
     }
 
     /**
-     * Set Auto-renewal flag. 1: Automatic renewal. 0: Non-renewal upon expiration.
-     * @param RenewFlag Auto-renewal flag. 1: Automatic renewal. 0: Non-renewal upon expiration.
+     * Set Auto-renewal flag. `1`: renew automatically. `0`: do not renew upon expiration.
+     * @param RenewFlag Auto-renewal flag. `1`: renew automatically. `0`: do not renew upon expiration.
      */
     public void setRenewFlag(Long RenewFlag) {
         this.RenewFlag = RenewFlag;
@@ -367,16 +367,16 @@ public class LibraClusterSet extends AbstractModel {
     }
 
     /**
-     * Get Used Capacity 
-     * @return UsedStorage Used Capacity
+     * Get Used capacity 
+     * @return UsedStorage Used capacity
      */
     public Long getUsedStorage() {
         return this.UsedStorage;
     }
 
     /**
-     * Set Used Capacity
-     * @param UsedStorage Used Capacity
+     * Set Used capacity
+     * @param UsedStorage Used capacity
      */
     public void setUsedStorage(Long UsedStorage) {
         this.UsedStorage = UsedStorage;
@@ -399,16 +399,16 @@ public class LibraClusterSet extends AbstractModel {
     }
 
     /**
-     * Get vport port 
-     * @return Vport vport port
+     * Get vport 
+     * @return Vport vport
      */
     public Long getVport() {
         return this.Vport;
     }
 
     /**
-     * Set vport port
-     * @param Vport vport port
+     * Set vport
+     * @param Vport vport
      */
     public void setVport(Long Vport) {
         this.Vport = Vport;

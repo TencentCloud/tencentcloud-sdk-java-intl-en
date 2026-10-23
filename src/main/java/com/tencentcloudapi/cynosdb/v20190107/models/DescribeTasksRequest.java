@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class DescribeTasksRequest extends AbstractModel {
 
     /**
-    * Starting value of the task start time.
+    * Starting value of task start time
     */
     @SerializedName("StartTimeBegin")
     @Expose
     private String StartTimeBegin;
 
     /**
-    * End value of the task start time.
+    * End value of the task start time
     */
     @SerializedName("StartTimeEnd")
     @Expose
     private String StartTimeEnd;
 
     /**
-    * Filtering Conditions. Supported search fields: "ClusterId", "ClusterName", "InstanceId", "InstanceName", "Status", "TaskId", "TaskType".
+    * Filter criteria. Supported search fields: "ClusterId", "ClusterName", "InstanceId", "InstanceName", "Status", "TaskId", "TaskType"
     */
     @SerializedName("Filters")
     @Expose
     private QueryFilter [] Filters;
 
     /**
-    * Length of the list to be queried.
+    * Query the list length
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * Offset of the list to be queried.
+    * List offset for queries
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-     * Get Starting value of the task start time. 
-     * @return StartTimeBegin Starting value of the task start time.
+     * Get Starting value of task start time 
+     * @return StartTimeBegin Starting value of task start time
      */
     public String getStartTimeBegin() {
         return this.StartTimeBegin;
     }
 
     /**
-     * Set Starting value of the task start time.
-     * @param StartTimeBegin Starting value of the task start time.
+     * Set Starting value of task start time
+     * @param StartTimeBegin Starting value of task start time
      */
     public void setStartTimeBegin(String StartTimeBegin) {
         this.StartTimeBegin = StartTimeBegin;
     }
 
     /**
-     * Get End value of the task start time. 
-     * @return StartTimeEnd End value of the task start time.
+     * Get End value of the task start time 
+     * @return StartTimeEnd End value of the task start time
      */
     public String getStartTimeEnd() {
         return this.StartTimeEnd;
     }
 
     /**
-     * Set End value of the task start time.
-     * @param StartTimeEnd End value of the task start time.
+     * Set End value of the task start time
+     * @param StartTimeEnd End value of the task start time
      */
     public void setStartTimeEnd(String StartTimeEnd) {
         this.StartTimeEnd = StartTimeEnd;
     }
 
     /**
-     * Get Filtering Conditions. Supported search fields: "ClusterId", "ClusterName", "InstanceId", "InstanceName", "Status", "TaskId", "TaskType". 
-     * @return Filters Filtering Conditions. Supported search fields: "ClusterId", "ClusterName", "InstanceId", "InstanceName", "Status", "TaskId", "TaskType".
+     * Get Filter criteria. Supported search fields: "ClusterId", "ClusterName", "InstanceId", "InstanceName", "Status", "TaskId", "TaskType" 
+     * @return Filters Filter criteria. Supported search fields: "ClusterId", "ClusterName", "InstanceId", "InstanceName", "Status", "TaskId", "TaskType"
      */
     public QueryFilter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set Filtering Conditions. Supported search fields: "ClusterId", "ClusterName", "InstanceId", "InstanceName", "Status", "TaskId", "TaskType".
-     * @param Filters Filtering Conditions. Supported search fields: "ClusterId", "ClusterName", "InstanceId", "InstanceName", "Status", "TaskId", "TaskType".
+     * Set Filter criteria. Supported search fields: "ClusterId", "ClusterName", "InstanceId", "InstanceName", "Status", "TaskId", "TaskType"
+     * @param Filters Filter criteria. Supported search fields: "ClusterId", "ClusterName", "InstanceId", "InstanceName", "Status", "TaskId", "TaskType"
      */
     public void setFilters(QueryFilter [] Filters) {
         this.Filters = Filters;
     }
 
     /**
-     * Get Length of the list to be queried. 
-     * @return Limit Length of the list to be queried.
+     * Get Query the list length 
+     * @return Limit Query the list length
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Length of the list to be queried.
-     * @param Limit Length of the list to be queried.
+     * Set Query the list length
+     * @param Limit Query the list length
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get Offset of the list to be queried. 
-     * @return Offset Offset of the list to be queried.
+     * Get List offset for queries 
+     * @return Offset List offset for queries
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Offset of the list to be queried.
-     * @param Offset Offset of the list to be queried.
+     * Set List offset for queries
+     * @param Offset List offset for queries
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;

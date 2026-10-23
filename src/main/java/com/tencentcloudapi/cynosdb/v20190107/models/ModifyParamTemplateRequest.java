@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModifyParamTemplateRequest extends AbstractModel {
 
     /**
-    * Template ID
+    * Template ID.
     */
     @SerializedName("TemplateId")
     @Expose
@@ -52,16 +52,16 @@ public class ModifyParamTemplateRequest extends AbstractModel {
     private ModifyParamItem [] ParamList;
 
     /**
-     * Get Template ID 
-     * @return TemplateId Template ID
+     * Get Template ID. 
+     * @return TemplateId Template ID.
      */
     public Long getTemplateId() {
         return this.TemplateId;
     }
 
     /**
-     * Set Template ID
-     * @param TemplateId Template ID
+     * Set Template ID.
+     * @param TemplateId Template ID.
      */
     public void setTemplateId(Long TemplateId) {
         this.TemplateId = TemplateId;

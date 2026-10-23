@@ -34,8 +34,7 @@ public class CacheKeyParameters extends AbstractModel {
     private String FullURLCache;
 
     /**
-    * Configuration parameter for retaining the query string. this field and fullurlcache must be set simultaneously, but cannot both be on.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+    * Query string retention configuration parameter. This field and FullURLCache must be set both at the same time, but cannot both be on.
     */
     @SerializedName("QueryString")
     @Expose
@@ -52,8 +51,7 @@ Note: this field may return null, which indicates a failure to obtain a valid va
     private String IgnoreCase;
 
     /**
-    * HTTP request header configuration parameters. at least one of the following configurations must be set: fullurlcache, ignorecase, header, scheme, cookie.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+    * HTTP request header configuration parameter. Set at least one configuration among FullURLCache, IgnoreCase, Header, Scheme, and Cookie.
     */
     @SerializedName("Header")
     @Expose
@@ -70,8 +68,7 @@ Note: this field may return null, which indicates a failure to obtain a valid va
     private String Scheme;
 
     /**
-    * Cookie configuration parameters. at least one of the following configurations must be set: fullurlcache, ignorecase, header, scheme, cookie.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+    * Cookie configuration parameters. Set at least one configuration among FullURLCache, IgnoreCase, Header, Scheme, and Cookie.
     */
     @SerializedName("Cookie")
     @Expose
@@ -106,20 +103,16 @@ Note: this field may return null, which indicates a failure to obtain a valid va
     }
 
     /**
-     * Get Configuration parameter for retaining the query string. this field and fullurlcache must be set simultaneously, but cannot both be on.
-Note: this field may return null, which indicates a failure to obtain a valid value. 
-     * @return QueryString Configuration parameter for retaining the query string. this field and fullurlcache must be set simultaneously, but cannot both be on.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * Get Query string retention configuration parameter. This field and FullURLCache must be set both at the same time, but cannot both be on. 
+     * @return QueryString Query string retention configuration parameter. This field and FullURLCache must be set both at the same time, but cannot both be on.
      */
     public CacheKeyQueryString getQueryString() {
         return this.QueryString;
     }
 
     /**
-     * Set Configuration parameter for retaining the query string. this field and fullurlcache must be set simultaneously, but cannot both be on.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-     * @param QueryString Configuration parameter for retaining the query string. this field and fullurlcache must be set simultaneously, but cannot both be on.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * Set Query string retention configuration parameter. This field and FullURLCache must be set both at the same time, but cannot both be on.
+     * @param QueryString Query string retention configuration parameter. This field and FullURLCache must be set both at the same time, but cannot both be on.
      */
     public void setQueryString(CacheKeyQueryString QueryString) {
         this.QueryString = QueryString;
@@ -154,20 +147,16 @@ Note: this field may return null, which indicates a failure to obtain a valid va
     }
 
     /**
-     * Get HTTP request header configuration parameters. at least one of the following configurations must be set: fullurlcache, ignorecase, header, scheme, cookie.
-Note: this field may return null, which indicates a failure to obtain a valid value. 
-     * @return Header HTTP request header configuration parameters. at least one of the following configurations must be set: fullurlcache, ignorecase, header, scheme, cookie.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * Get HTTP request header configuration parameter. Set at least one configuration among FullURLCache, IgnoreCase, Header, Scheme, and Cookie. 
+     * @return Header HTTP request header configuration parameter. Set at least one configuration among FullURLCache, IgnoreCase, Header, Scheme, and Cookie.
      */
     public CacheKeyHeader getHeader() {
         return this.Header;
     }
 
     /**
-     * Set HTTP request header configuration parameters. at least one of the following configurations must be set: fullurlcache, ignorecase, header, scheme, cookie.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-     * @param Header HTTP request header configuration parameters. at least one of the following configurations must be set: fullurlcache, ignorecase, header, scheme, cookie.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * Set HTTP request header configuration parameter. Set at least one configuration among FullURLCache, IgnoreCase, Header, Scheme, and Cookie.
+     * @param Header HTTP request header configuration parameter. Set at least one configuration among FullURLCache, IgnoreCase, Header, Scheme, and Cookie.
      */
     public void setHeader(CacheKeyHeader Header) {
         this.Header = Header;
@@ -202,20 +191,16 @@ Note: this field may return null, which indicates a failure to obtain a valid va
     }
 
     /**
-     * Get Cookie configuration parameters. at least one of the following configurations must be set: fullurlcache, ignorecase, header, scheme, cookie.
-Note: this field may return null, which indicates a failure to obtain a valid value. 
-     * @return Cookie Cookie configuration parameters. at least one of the following configurations must be set: fullurlcache, ignorecase, header, scheme, cookie.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * Get Cookie configuration parameters. Set at least one configuration among FullURLCache, IgnoreCase, Header, Scheme, and Cookie. 
+     * @return Cookie Cookie configuration parameters. Set at least one configuration among FullURLCache, IgnoreCase, Header, Scheme, and Cookie.
      */
     public CacheKeyCookie getCookie() {
         return this.Cookie;
     }
 
     /**
-     * Set Cookie configuration parameters. at least one of the following configurations must be set: fullurlcache, ignorecase, header, scheme, cookie.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-     * @param Cookie Cookie configuration parameters. at least one of the following configurations must be set: fullurlcache, ignorecase, header, scheme, cookie.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * Set Cookie configuration parameters. Set at least one configuration among FullURLCache, IgnoreCase, Header, Scheme, and Cookie.
+     * @param Cookie Cookie configuration parameters. Set at least one configuration among FullURLCache, IgnoreCase, Header, Scheme, and Cookie.
      */
     public void setCookie(CacheKeyCookie Cookie) {
         this.Cookie = Cookie;

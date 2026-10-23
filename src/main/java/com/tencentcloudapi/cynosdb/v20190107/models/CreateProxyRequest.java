@@ -38,70 +38,70 @@ public class CreateProxyRequest extends AbstractModel {
     private Long Cpu;
 
     /**
-    * Memory
+    * memory
     */
     @SerializedName("Mem")
     @Expose
     private Long Mem;
 
     /**
-    * VPC ID, which is the same as that of the cluster by default.
+    * VPC ID. Default value: the VPC ID of the cluster.
     */
     @SerializedName("UniqueVpcId")
     @Expose
     private String UniqueVpcId;
 
     /**
-    * VPC subnet ID, which is the same as that of the cluster by default.
+    * VPC subnet ID. Default value: the cluster subnet ID.
     */
     @SerializedName("UniqueSubnetId")
     @Expose
     private String UniqueSubnetId;
 
     /**
-    * Number of nodes in the proxy group
+    * Number of database proxy group nodes (this parameter is no longer recommended. Use ProxyZones instead)
     */
     @SerializedName("ProxyCount")
     @Expose
     private Long ProxyCount;
 
     /**
-    * Connection pool type. Valid value: `SessionConnectionPool` (session-level connection pool)
+    * Connection pool type: SessionConnectionPool (session-level connection pool)
     */
     @SerializedName("ConnectionPoolType")
     @Expose
     private String ConnectionPoolType;
 
     /**
-    * Whether to enable connection pool. Valid value: `yes` (enable), `no` (disable).
+    * Whether connection pool is enabled. yes: enabled; no: not enabled
     */
     @SerializedName("OpenConnectionPool")
     @Expose
     private String OpenConnectionPool;
 
     /**
-    * Connection pool threshold in seconds
+    * Connection pool threshold. Unit: second
     */
     @SerializedName("ConnectionPoolTimeOut")
     @Expose
     private Long ConnectionPoolTimeOut;
 
     /**
-    * Array of security group IDs
+    * Security group ID array
     */
     @SerializedName("SecurityGroupIds")
     @Expose
     private String [] SecurityGroupIds;
 
     /**
-    * Description
+    * Description.
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * Database node information
+    * Database node information (either this parameter or ProxyCount is required)
     */
     @SerializedName("ProxyZones")
     @Expose
@@ -140,160 +140,160 @@ public class CreateProxyRequest extends AbstractModel {
     }
 
     /**
-     * Get Memory 
-     * @return Mem Memory
+     * Get memory 
+     * @return Mem memory
      */
     public Long getMem() {
         return this.Mem;
     }
 
     /**
-     * Set Memory
-     * @param Mem Memory
+     * Set memory
+     * @param Mem memory
      */
     public void setMem(Long Mem) {
         this.Mem = Mem;
     }
 
     /**
-     * Get VPC ID, which is the same as that of the cluster by default. 
-     * @return UniqueVpcId VPC ID, which is the same as that of the cluster by default.
+     * Get VPC ID. Default value: the VPC ID of the cluster. 
+     * @return UniqueVpcId VPC ID. Default value: the VPC ID of the cluster.
      */
     public String getUniqueVpcId() {
         return this.UniqueVpcId;
     }
 
     /**
-     * Set VPC ID, which is the same as that of the cluster by default.
-     * @param UniqueVpcId VPC ID, which is the same as that of the cluster by default.
+     * Set VPC ID. Default value: the VPC ID of the cluster.
+     * @param UniqueVpcId VPC ID. Default value: the VPC ID of the cluster.
      */
     public void setUniqueVpcId(String UniqueVpcId) {
         this.UniqueVpcId = UniqueVpcId;
     }
 
     /**
-     * Get VPC subnet ID, which is the same as that of the cluster by default. 
-     * @return UniqueSubnetId VPC subnet ID, which is the same as that of the cluster by default.
+     * Get VPC subnet ID. Default value: the cluster subnet ID. 
+     * @return UniqueSubnetId VPC subnet ID. Default value: the cluster subnet ID.
      */
     public String getUniqueSubnetId() {
         return this.UniqueSubnetId;
     }
 
     /**
-     * Set VPC subnet ID, which is the same as that of the cluster by default.
-     * @param UniqueSubnetId VPC subnet ID, which is the same as that of the cluster by default.
+     * Set VPC subnet ID. Default value: the cluster subnet ID.
+     * @param UniqueSubnetId VPC subnet ID. Default value: the cluster subnet ID.
      */
     public void setUniqueSubnetId(String UniqueSubnetId) {
         this.UniqueSubnetId = UniqueSubnetId;
     }
 
     /**
-     * Get Number of nodes in the proxy group 
-     * @return ProxyCount Number of nodes in the proxy group
+     * Get Number of database proxy group nodes (this parameter is no longer recommended. Use ProxyZones instead) 
+     * @return ProxyCount Number of database proxy group nodes (this parameter is no longer recommended. Use ProxyZones instead)
      */
     public Long getProxyCount() {
         return this.ProxyCount;
     }
 
     /**
-     * Set Number of nodes in the proxy group
-     * @param ProxyCount Number of nodes in the proxy group
+     * Set Number of database proxy group nodes (this parameter is no longer recommended. Use ProxyZones instead)
+     * @param ProxyCount Number of database proxy group nodes (this parameter is no longer recommended. Use ProxyZones instead)
      */
     public void setProxyCount(Long ProxyCount) {
         this.ProxyCount = ProxyCount;
     }
 
     /**
-     * Get Connection pool type. Valid value: `SessionConnectionPool` (session-level connection pool) 
-     * @return ConnectionPoolType Connection pool type. Valid value: `SessionConnectionPool` (session-level connection pool)
+     * Get Connection pool type: SessionConnectionPool (session-level connection pool) 
+     * @return ConnectionPoolType Connection pool type: SessionConnectionPool (session-level connection pool)
      */
     public String getConnectionPoolType() {
         return this.ConnectionPoolType;
     }
 
     /**
-     * Set Connection pool type. Valid value: `SessionConnectionPool` (session-level connection pool)
-     * @param ConnectionPoolType Connection pool type. Valid value: `SessionConnectionPool` (session-level connection pool)
+     * Set Connection pool type: SessionConnectionPool (session-level connection pool)
+     * @param ConnectionPoolType Connection pool type: SessionConnectionPool (session-level connection pool)
      */
     public void setConnectionPoolType(String ConnectionPoolType) {
         this.ConnectionPoolType = ConnectionPoolType;
     }
 
     /**
-     * Get Whether to enable connection pool. Valid value: `yes` (enable), `no` (disable). 
-     * @return OpenConnectionPool Whether to enable connection pool. Valid value: `yes` (enable), `no` (disable).
+     * Get Whether connection pool is enabled. yes: enabled; no: not enabled 
+     * @return OpenConnectionPool Whether connection pool is enabled. yes: enabled; no: not enabled
      */
     public String getOpenConnectionPool() {
         return this.OpenConnectionPool;
     }
 
     /**
-     * Set Whether to enable connection pool. Valid value: `yes` (enable), `no` (disable).
-     * @param OpenConnectionPool Whether to enable connection pool. Valid value: `yes` (enable), `no` (disable).
+     * Set Whether connection pool is enabled. yes: enabled; no: not enabled
+     * @param OpenConnectionPool Whether connection pool is enabled. yes: enabled; no: not enabled
      */
     public void setOpenConnectionPool(String OpenConnectionPool) {
         this.OpenConnectionPool = OpenConnectionPool;
     }
 
     /**
-     * Get Connection pool threshold in seconds 
-     * @return ConnectionPoolTimeOut Connection pool threshold in seconds
+     * Get Connection pool threshold. Unit: second 
+     * @return ConnectionPoolTimeOut Connection pool threshold. Unit: second
      */
     public Long getConnectionPoolTimeOut() {
         return this.ConnectionPoolTimeOut;
     }
 
     /**
-     * Set Connection pool threshold in seconds
-     * @param ConnectionPoolTimeOut Connection pool threshold in seconds
+     * Set Connection pool threshold. Unit: second
+     * @param ConnectionPoolTimeOut Connection pool threshold. Unit: second
      */
     public void setConnectionPoolTimeOut(Long ConnectionPoolTimeOut) {
         this.ConnectionPoolTimeOut = ConnectionPoolTimeOut;
     }
 
     /**
-     * Get Array of security group IDs 
-     * @return SecurityGroupIds Array of security group IDs
+     * Get Security group ID array 
+     * @return SecurityGroupIds Security group ID array
      */
     public String [] getSecurityGroupIds() {
         return this.SecurityGroupIds;
     }
 
     /**
-     * Set Array of security group IDs
-     * @param SecurityGroupIds Array of security group IDs
+     * Set Security group ID array
+     * @param SecurityGroupIds Security group ID array
      */
     public void setSecurityGroupIds(String [] SecurityGroupIds) {
         this.SecurityGroupIds = SecurityGroupIds;
     }
 
     /**
-     * Get Description 
-     * @return Description Description
+     * Get Description. 
+     * @return Description Description.
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set Description
-     * @param Description Description
+     * Set Description.
+     * @param Description Description.
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get Database node information 
-     * @return ProxyZones Database node information
+     * Get Database node information (either this parameter or ProxyCount is required) 
+     * @return ProxyZones Database node information (either this parameter or ProxyCount is required)
      */
     public ProxyZone [] getProxyZones() {
         return this.ProxyZones;
     }
 
     /**
-     * Set Database node information
-     * @param ProxyZones Database node information
+     * Set Database node information (either this parameter or ProxyCount is required)
+     * @param ProxyZones Database node information (either this parameter or ProxyCount is required)
      */
     public void setProxyZones(ProxyZone [] ProxyZones) {
         this.ProxyZones = ProxyZones;

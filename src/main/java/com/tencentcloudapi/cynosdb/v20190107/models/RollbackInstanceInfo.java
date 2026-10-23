@@ -52,14 +52,14 @@ public class RollbackInstanceInfo extends AbstractModel {
     private String UniqSubnetId;
 
     /**
-    * vip information.
+    * VIP information.
     */
     @SerializedName("Vip")
     @Expose
     private String Vip;
 
     /**
-    * Specifies the vport information.
+    * Virtual port information.
     */
     @SerializedName("Vport")
     @Expose
@@ -87,21 +87,21 @@ public class RollbackInstanceInfo extends AbstractModel {
     private String Status;
 
     /**
-    * CPU Size.
+    * CPU Size
     */
     @SerializedName("Cpu")
     @Expose
     private Long Cpu;
 
     /**
-    * Memory Size.
+    * Memory size.
     */
     @SerializedName("Mem")
     @Expose
     private Long Mem;
 
     /**
-    * Storage size.
+    * Storage size
     */
     @SerializedName("StorageLimit")
     @Expose
@@ -172,32 +172,32 @@ public class RollbackInstanceInfo extends AbstractModel {
     }
 
     /**
-     * Get vip information. 
-     * @return Vip vip information.
+     * Get VIP information. 
+     * @return Vip VIP information.
      */
     public String getVip() {
         return this.Vip;
     }
 
     /**
-     * Set vip information.
-     * @param Vip vip information.
+     * Set VIP information.
+     * @param Vip VIP information.
      */
     public void setVip(String Vip) {
         this.Vip = Vip;
     }
 
     /**
-     * Get Specifies the vport information. 
-     * @return Vport Specifies the vport information.
+     * Get Virtual port information. 
+     * @return Vport Virtual port information.
      */
     public Long getVport() {
         return this.Vport;
     }
 
     /**
-     * Set Specifies the vport information.
-     * @param Vport Specifies the vport information.
+     * Set Virtual port information.
+     * @param Vport Virtual port information.
      */
     public void setVport(Long Vport) {
         this.Vport = Vport;
@@ -252,48 +252,48 @@ public class RollbackInstanceInfo extends AbstractModel {
     }
 
     /**
-     * Get CPU Size. 
-     * @return Cpu CPU Size.
+     * Get CPU Size 
+     * @return Cpu CPU Size
      */
     public Long getCpu() {
         return this.Cpu;
     }
 
     /**
-     * Set CPU Size.
-     * @param Cpu CPU Size.
+     * Set CPU Size
+     * @param Cpu CPU Size
      */
     public void setCpu(Long Cpu) {
         this.Cpu = Cpu;
     }
 
     /**
-     * Get Memory Size. 
-     * @return Mem Memory Size.
+     * Get Memory size. 
+     * @return Mem Memory size.
      */
     public Long getMem() {
         return this.Mem;
     }
 
     /**
-     * Set Memory Size.
-     * @param Mem Memory Size.
+     * Set Memory size.
+     * @param Mem Memory size.
      */
     public void setMem(Long Mem) {
         this.Mem = Mem;
     }
 
     /**
-     * Get Storage size. 
-     * @return StorageLimit Storage size.
+     * Get Storage size 
+     * @return StorageLimit Storage size
      */
     public Long getStorageLimit() {
         return this.StorageLimit;
     }
 
     /**
-     * Set Storage size.
-     * @param StorageLimit Storage size.
+     * Set Storage size
+     * @param StorageLimit Storage size
      */
     public void setStorageLimit(Long StorageLimit) {
         this.StorageLimit = StorageLimit;

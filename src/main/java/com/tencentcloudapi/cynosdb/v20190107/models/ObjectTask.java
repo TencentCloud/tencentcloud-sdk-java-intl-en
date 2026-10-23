@@ -38,14 +38,14 @@ public class ObjectTask extends AbstractModel {
     private String TaskType;
 
     /**
-    * Status of tasks.
+    * Task status.
     */
     @SerializedName("TaskStatus")
     @Expose
     private String TaskStatus;
 
     /**
-    * Task ID (cluster ID | instance group ID | instance ID).
+    * Task ID (Cluster ID | instance group ID | instance ID)
     */
     @SerializedName("ObjectId")
     @Expose
@@ -91,32 +91,32 @@ public class ObjectTask extends AbstractModel {
     }
 
     /**
-     * Get Status of tasks. 
-     * @return TaskStatus Status of tasks.
+     * Get Task status. 
+     * @return TaskStatus Task status.
      */
     public String getTaskStatus() {
         return this.TaskStatus;
     }
 
     /**
-     * Set Status of tasks.
-     * @param TaskStatus Status of tasks.
+     * Set Task status.
+     * @param TaskStatus Task status.
      */
     public void setTaskStatus(String TaskStatus) {
         this.TaskStatus = TaskStatus;
     }
 
     /**
-     * Get Task ID (cluster ID | instance group ID | instance ID). 
-     * @return ObjectId Task ID (cluster ID | instance group ID | instance ID).
+     * Get Task ID (Cluster ID | instance group ID | instance ID) 
+     * @return ObjectId Task ID (Cluster ID | instance group ID | instance ID)
      */
     public String getObjectId() {
         return this.ObjectId;
     }
 
     /**
-     * Set Task ID (cluster ID | instance group ID | instance ID).
-     * @param ObjectId Task ID (cluster ID | instance group ID | instance ID).
+     * Set Task ID (Cluster ID | instance group ID | instance ID)
+     * @param ObjectId Task ID (Cluster ID | instance group ID | instance ID)
      */
     public void setObjectId(String ObjectId) {
         this.ObjectId = ObjectId;

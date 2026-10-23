@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class DescribeRollbackTimeRangeResponse extends AbstractModel {
 
     /**
-    * Valid regression time range start time point (abandoned).
+    * Start of the valid regression time range (abandoned)
     */
     @SerializedName("TimeRangeStart")
     @Expose
     private String TimeRangeStart;
 
     /**
-    * Valid regression time range end time point (abandoned).
+    * End time point of the valid regression time range (abandoned)
     */
     @SerializedName("TimeRangeEnd")
     @Expose
     private String TimeRangeEnd;
 
     /**
-    * Time range available for rollback
+    * Available rollback time range
     */
     @SerializedName("RollbackTimeRanges")
     @Expose
@@ -52,48 +52,48 @@ public class DescribeRollbackTimeRangeResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Valid regression time range start time point (abandoned). 
-     * @return TimeRangeStart Valid regression time range start time point (abandoned).
+     * Get Start of the valid regression time range (abandoned) 
+     * @return TimeRangeStart Start of the valid regression time range (abandoned)
      */
     public String getTimeRangeStart() {
         return this.TimeRangeStart;
     }
 
     /**
-     * Set Valid regression time range start time point (abandoned).
-     * @param TimeRangeStart Valid regression time range start time point (abandoned).
+     * Set Start of the valid regression time range (abandoned)
+     * @param TimeRangeStart Start of the valid regression time range (abandoned)
      */
     public void setTimeRangeStart(String TimeRangeStart) {
         this.TimeRangeStart = TimeRangeStart;
     }
 
     /**
-     * Get Valid regression time range end time point (abandoned). 
-     * @return TimeRangeEnd Valid regression time range end time point (abandoned).
+     * Get End time point of the valid regression time range (abandoned) 
+     * @return TimeRangeEnd End time point of the valid regression time range (abandoned)
      */
     public String getTimeRangeEnd() {
         return this.TimeRangeEnd;
     }
 
     /**
-     * Set Valid regression time range end time point (abandoned).
-     * @param TimeRangeEnd Valid regression time range end time point (abandoned).
+     * Set End time point of the valid regression time range (abandoned)
+     * @param TimeRangeEnd End time point of the valid regression time range (abandoned)
      */
     public void setTimeRangeEnd(String TimeRangeEnd) {
         this.TimeRangeEnd = TimeRangeEnd;
     }
 
     /**
-     * Get Time range available for rollback 
-     * @return RollbackTimeRanges Time range available for rollback
+     * Get Available rollback time range 
+     * @return RollbackTimeRanges Available rollback time range
      */
     public RollbackTimeRange [] getRollbackTimeRanges() {
         return this.RollbackTimeRanges;
     }
 
     /**
-     * Set Time range available for rollback
-     * @param RollbackTimeRanges Time range available for rollback
+     * Set Available rollback time range
+     * @param RollbackTimeRanges Available rollback time range
      */
     public void setRollbackTimeRanges(RollbackTimeRange [] RollbackTimeRanges) {
         this.RollbackTimeRanges = RollbackTimeRanges;

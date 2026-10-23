@@ -38,28 +38,28 @@ public class CreateClusterDatabaseRequest extends AbstractModel {
     private String DbName;
 
     /**
-    * Character set
+    * Character set type.
     */
     @SerializedName("CharacterSet")
     @Expose
     private String CharacterSet;
 
     /**
-    * Collation
+    * Sorting rule
     */
     @SerializedName("CollateRule")
     @Expose
     private String CollateRule;
 
     /**
-    * Host permissions of the authorized user
+    * Authorize user host permission
     */
     @SerializedName("UserHostPrivileges")
     @Expose
     private UserHostPrivilege [] UserHostPrivileges;
 
     /**
-    * Remarks
+    * Remarks.
     */
     @SerializedName("Description")
     @Expose
@@ -98,64 +98,64 @@ public class CreateClusterDatabaseRequest extends AbstractModel {
     }
 
     /**
-     * Get Character set 
-     * @return CharacterSet Character set
+     * Get Character set type. 
+     * @return CharacterSet Character set type.
      */
     public String getCharacterSet() {
         return this.CharacterSet;
     }
 
     /**
-     * Set Character set
-     * @param CharacterSet Character set
+     * Set Character set type.
+     * @param CharacterSet Character set type.
      */
     public void setCharacterSet(String CharacterSet) {
         this.CharacterSet = CharacterSet;
     }
 
     /**
-     * Get Collation 
-     * @return CollateRule Collation
+     * Get Sorting rule 
+     * @return CollateRule Sorting rule
      */
     public String getCollateRule() {
         return this.CollateRule;
     }
 
     /**
-     * Set Collation
-     * @param CollateRule Collation
+     * Set Sorting rule
+     * @param CollateRule Sorting rule
      */
     public void setCollateRule(String CollateRule) {
         this.CollateRule = CollateRule;
     }
 
     /**
-     * Get Host permissions of the authorized user 
-     * @return UserHostPrivileges Host permissions of the authorized user
+     * Get Authorize user host permission 
+     * @return UserHostPrivileges Authorize user host permission
      */
     public UserHostPrivilege [] getUserHostPrivileges() {
         return this.UserHostPrivileges;
     }
 
     /**
-     * Set Host permissions of the authorized user
-     * @param UserHostPrivileges Host permissions of the authorized user
+     * Set Authorize user host permission
+     * @param UserHostPrivileges Authorize user host permission
      */
     public void setUserHostPrivileges(UserHostPrivilege [] UserHostPrivileges) {
         this.UserHostPrivileges = UserHostPrivileges;
     }
 
     /**
-     * Get Remarks 
-     * @return Description Remarks
+     * Get Remarks. 
+     * @return Description Remarks.
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set Remarks
-     * @param Description Remarks
+     * Set Remarks.
+     * @param Description Remarks.
      */
     public void setDescription(String Description) {
         this.Description = Description;

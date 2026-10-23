@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class ManualBackupData extends AbstractModel {
 
     /**
-    * Backup type. snapshot - Snapshot backup.
+    * Backup type. snapshot: snapshot backup.
     */
     @SerializedName("BackupType")
     @Expose
     private String BackupType;
 
     /**
-    * Backup method. auto - Automatic backup, manual - Manual backup.
+    * Backup method. auto: automatic backup, manual: manual
     */
     @SerializedName("BackupMethod")
     @Expose
     private String BackupMethod;
 
     /**
-    * Backup time.
+    * Backup time
     */
     @SerializedName("SnapshotTime")
     @Expose
@@ -52,48 +52,48 @@ public class ManualBackupData extends AbstractModel {
     private CrossRegionBackupItem [] CrossRegionBackupInfos;
 
     /**
-     * Get Backup type. snapshot - Snapshot backup. 
-     * @return BackupType Backup type. snapshot - Snapshot backup.
+     * Get Backup type. snapshot: snapshot backup. 
+     * @return BackupType Backup type. snapshot: snapshot backup.
      */
     public String getBackupType() {
         return this.BackupType;
     }
 
     /**
-     * Set Backup type. snapshot - Snapshot backup.
-     * @param BackupType Backup type. snapshot - Snapshot backup.
+     * Set Backup type. snapshot: snapshot backup.
+     * @param BackupType Backup type. snapshot: snapshot backup.
      */
     public void setBackupType(String BackupType) {
         this.BackupType = BackupType;
     }
 
     /**
-     * Get Backup method. auto - Automatic backup, manual - Manual backup. 
-     * @return BackupMethod Backup method. auto - Automatic backup, manual - Manual backup.
+     * Get Backup method. auto: automatic backup, manual: manual 
+     * @return BackupMethod Backup method. auto: automatic backup, manual: manual
      */
     public String getBackupMethod() {
         return this.BackupMethod;
     }
 
     /**
-     * Set Backup method. auto - Automatic backup, manual - Manual backup.
-     * @param BackupMethod Backup method. auto - Automatic backup, manual - Manual backup.
+     * Set Backup method. auto: automatic backup, manual: manual
+     * @param BackupMethod Backup method. auto: automatic backup, manual: manual
      */
     public void setBackupMethod(String BackupMethod) {
         this.BackupMethod = BackupMethod;
     }
 
     /**
-     * Get Backup time. 
-     * @return SnapshotTime Backup time.
+     * Get Backup time 
+     * @return SnapshotTime Backup time
      */
     public String getSnapshotTime() {
         return this.SnapshotTime;
     }
 
     /**
-     * Set Backup time.
-     * @param SnapshotTime Backup time.
+     * Set Backup time
+     * @param SnapshotTime Backup time
      */
     public void setSnapshotTime(String SnapshotTime) {
         this.SnapshotTime = SnapshotTime;

@@ -24,138 +24,138 @@ import java.util.HashMap;
 public class ModifyAuditServiceRequest extends AbstractModel {
 
     /**
-    * Instance ID
+    * Instance ID.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Log retention period
+    * Log retention period.
     */
     @SerializedName("LogExpireDay")
     @Expose
     private Long LogExpireDay;
 
     /**
-    * Frequent log retention period
+    * High frequency log retention period.
     */
     @SerializedName("HighLogExpireDay")
     @Expose
     private Long HighLogExpireDay;
 
     /**
-    * The parameter used to change the audit rule of the instance to full audit
+    * Modifies the instance audit rule to Full audit.
     */
     @SerializedName("AuditAll")
     @Expose
     private Boolean AuditAll;
 
     /**
-    * Rule audit
+    * Rule audit.
     */
     @SerializedName("AuditRuleFilters")
     @Expose
     private AuditRuleFilters [] AuditRuleFilters;
 
     /**
-    * Rule template ID
+    * Rule template ID.
     */
     @SerializedName("RuleTemplateIds")
     @Expose
     private String [] RuleTemplateIds;
 
     /**
-     * Get Instance ID 
-     * @return InstanceId Instance ID
+     * Get Instance ID. 
+     * @return InstanceId Instance ID.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID
-     * @param InstanceId Instance ID
+     * Set Instance ID.
+     * @param InstanceId Instance ID.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Log retention period 
-     * @return LogExpireDay Log retention period
+     * Get Log retention period. 
+     * @return LogExpireDay Log retention period.
      */
     public Long getLogExpireDay() {
         return this.LogExpireDay;
     }
 
     /**
-     * Set Log retention period
-     * @param LogExpireDay Log retention period
+     * Set Log retention period.
+     * @param LogExpireDay Log retention period.
      */
     public void setLogExpireDay(Long LogExpireDay) {
         this.LogExpireDay = LogExpireDay;
     }
 
     /**
-     * Get Frequent log retention period 
-     * @return HighLogExpireDay Frequent log retention period
+     * Get High frequency log retention period. 
+     * @return HighLogExpireDay High frequency log retention period.
      */
     public Long getHighLogExpireDay() {
         return this.HighLogExpireDay;
     }
 
     /**
-     * Set Frequent log retention period
-     * @param HighLogExpireDay Frequent log retention period
+     * Set High frequency log retention period.
+     * @param HighLogExpireDay High frequency log retention period.
      */
     public void setHighLogExpireDay(Long HighLogExpireDay) {
         this.HighLogExpireDay = HighLogExpireDay;
     }
 
     /**
-     * Get The parameter used to change the audit rule of the instance to full audit 
-     * @return AuditAll The parameter used to change the audit rule of the instance to full audit
+     * Get Modifies the instance audit rule to Full audit. 
+     * @return AuditAll Modifies the instance audit rule to Full audit.
      */
     public Boolean getAuditAll() {
         return this.AuditAll;
     }
 
     /**
-     * Set The parameter used to change the audit rule of the instance to full audit
-     * @param AuditAll The parameter used to change the audit rule of the instance to full audit
+     * Set Modifies the instance audit rule to Full audit.
+     * @param AuditAll Modifies the instance audit rule to Full audit.
      */
     public void setAuditAll(Boolean AuditAll) {
         this.AuditAll = AuditAll;
     }
 
     /**
-     * Get Rule audit 
-     * @return AuditRuleFilters Rule audit
+     * Get Rule audit. 
+     * @return AuditRuleFilters Rule audit.
      */
     public AuditRuleFilters [] getAuditRuleFilters() {
         return this.AuditRuleFilters;
     }
 
     /**
-     * Set Rule audit
-     * @param AuditRuleFilters Rule audit
+     * Set Rule audit.
+     * @param AuditRuleFilters Rule audit.
      */
     public void setAuditRuleFilters(AuditRuleFilters [] AuditRuleFilters) {
         this.AuditRuleFilters = AuditRuleFilters;
     }
 
     /**
-     * Get Rule template ID 
-     * @return RuleTemplateIds Rule template ID
+     * Get Rule template ID. 
+     * @return RuleTemplateIds Rule template ID.
      */
     public String [] getRuleTemplateIds() {
         return this.RuleTemplateIds;
     }
 
     /**
-     * Set Rule template ID
-     * @param RuleTemplateIds Rule template ID
+     * Set Rule template ID.
+     * @param RuleTemplateIds Rule template ID.
      */
     public void setRuleTemplateIds(String [] RuleTemplateIds) {
         this.RuleTemplateIds = RuleTemplateIds;

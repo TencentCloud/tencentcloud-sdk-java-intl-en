@@ -197,7 +197,7 @@ The feature is only supported by the enterprise plan and is currently in closed 
     }
 
     /**
-     *This API is used to create a new version for the specified configuration group in version management mode. The version management feature is currently undergoing beta testing and is accessible only to users on the whitelist.
+     *In version management mode, this API is used to create a new version of the specified configuration group.
      * @param req CreateConfigGroupVersionRequest
      * @return CreateConfigGroupVersionResponse
      * @throws TencentCloudSDKException
@@ -965,6 +965,17 @@ The feature is only supported in the enterprise plan and is currently in closed 
     }
 
     /**
+     *This API is used to query the list of available custom configurations for rule engine operations on a site.
+     * @param req DescribeAvailableCustomActionsForRuleEngineRequest
+     * @return DescribeAvailableCustomActionsForRuleEngineResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAvailableCustomActionsForRuleEngineResponse DescribeAvailableCustomActionsForRuleEngine(DescribeAvailableCustomActionsForRuleEngineRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAvailableCustomActionsForRuleEngine", DescribeAvailableCustomActionsForRuleEngineResponse.class);
+    }
+
+    /**
      *This API is used to query plan options available for purchase.
      * @param req DescribeAvailablePlansRequest
      * @return DescribeAvailablePlansResponse
@@ -1369,6 +1380,28 @@ The feature is only supported in the enterprise plan and is currently in closed 
     public DescribeLoadBalancerListResponse DescribeLoadBalancerList(DescribeLoadBalancerListRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeLoadBalancerList", DescribeLoadBalancerListResponse.class);
+    }
+
+    /**
+     *This API is used to query the log analysis details. The data comes from the log data of the real-time log push task with the destination "log_analysis" under the site.
+     * @param req DescribeLogAnalysisDetailRequest
+     * @return DescribeLogAnalysisDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLogAnalysisDetailResponse DescribeLogAnalysisDetail(DescribeLogAnalysisDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeLogAnalysisDetail", DescribeLogAnalysisDetailResponse.class);
+    }
+
+    /**
+     *This API is used to query the log download task list for log analysis. Note: Only download task records from the last three days are retained.
+     * @param req DescribeLogAnalysisDownloadTasksRequest
+     * @return DescribeLogAnalysisDownloadTasksResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLogAnalysisDownloadTasksResponse DescribeLogAnalysisDownloadTasks(DescribeLogAnalysisDownloadTasksRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeLogAnalysisDownloadTasks", DescribeLogAnalysisDownloadTasksResponse.class);
     }
 
     /**
@@ -1789,6 +1822,19 @@ This API is used to return post-protection traffic request data by default. User
     public DescribeZoneConfigImportResultResponse DescribeZoneConfigImportResult(DescribeZoneConfigImportResultRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeZoneConfigImportResult", DescribeZoneConfigImportResultResponse.class);
+    }
+
+    /**
+     *This API is used to query site-level custom variable configurations, including variable definitions and variable operations. If not configured, both variable definitions and variable operations return empty lists.
+
+If needed, call the DescribeL7AccRules API to query rule-level custom variables.
+     * @param req DescribeZoneCustomVariablesRequest
+     * @return DescribeZoneCustomVariablesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeZoneCustomVariablesResponse DescribeZoneCustomVariables(DescribeZoneCustomVariablesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeZoneCustomVariables", DescribeZoneCustomVariablesResponse.class);
     }
 
     /**
@@ -2513,6 +2559,19 @@ This API is used to create, modify and delete preheating origin speed limit rest
     public ModifyZoneResponse ModifyZone(ModifyZoneRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyZone", ModifyZoneResponse.class);
+    }
+
+    /**
+     *This API is used to manage site-level custom variables, supporting the creation, modification, and deletion of variable definitions and variable operations. The submitted list will override the corresponding existing configuration. To clear the configuration, pass in an empty list. Configuration items not passed in remain unchanged. The default values for variable definitions and variable operations are both empty.
+
+For operations related to rule-level custom variables, call the CreateL7AccRules or ModifyL7AccRule API.
+     * @param req ModifyZoneCustomVariablesRequest
+     * @return ModifyZoneCustomVariablesResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyZoneCustomVariablesResponse ModifyZoneCustomVariables(ModifyZoneCustomVariablesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyZoneCustomVariables", ModifyZoneCustomVariablesResponse.class);
     }
 
     /**

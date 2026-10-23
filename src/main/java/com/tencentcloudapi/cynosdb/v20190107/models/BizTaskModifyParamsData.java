@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class BizTaskModifyParamsData extends AbstractModel {
 
     /**
-    * Cluster ID.
+    * Cluster ID
     */
     @SerializedName("ClusterId")
     @Expose
     private String ClusterId;
 
     /**
-    * Cluster parameter modification data.
+    * Cluster parameter modification data
     */
     @SerializedName("ClusterParamList")
     @Expose
     private ModifyParamItem [] ClusterParamList;
 
     /**
-    * Instance parameter modification data.
+    * Instance parameter modification data
     */
     @SerializedName("ModifyInstanceParams")
     @Expose
     private BizTaskModifyInstanceParam [] ModifyInstanceParams;
 
     /**
-     * Get Cluster ID. 
-     * @return ClusterId Cluster ID.
+     * Get Cluster ID 
+     * @return ClusterId Cluster ID
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set Cluster ID.
-     * @param ClusterId Cluster ID.
+     * Set Cluster ID
+     * @param ClusterId Cluster ID
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get Cluster parameter modification data. 
-     * @return ClusterParamList Cluster parameter modification data.
+     * Get Cluster parameter modification data 
+     * @return ClusterParamList Cluster parameter modification data
      */
     public ModifyParamItem [] getClusterParamList() {
         return this.ClusterParamList;
     }
 
     /**
-     * Set Cluster parameter modification data.
-     * @param ClusterParamList Cluster parameter modification data.
+     * Set Cluster parameter modification data
+     * @param ClusterParamList Cluster parameter modification data
      */
     public void setClusterParamList(ModifyParamItem [] ClusterParamList) {
         this.ClusterParamList = ClusterParamList;
     }
 
     /**
-     * Get Instance parameter modification data. 
-     * @return ModifyInstanceParams Instance parameter modification data.
+     * Get Instance parameter modification data 
+     * @return ModifyInstanceParams Instance parameter modification data
      */
     public BizTaskModifyInstanceParam [] getModifyInstanceParams() {
         return this.ModifyInstanceParams;
     }
 
     /**
-     * Set Instance parameter modification data.
-     * @param ModifyInstanceParams Instance parameter modification data.
+     * Set Instance parameter modification data
+     * @param ModifyInstanceParams Instance parameter modification data
      */
     public void setModifyInstanceParams(BizTaskModifyInstanceParam [] ModifyInstanceParams) {
         this.ModifyInstanceParams = ModifyInstanceParams;

@@ -24,35 +24,35 @@ import java.util.HashMap;
 public class InstanceSpec extends AbstractModel {
 
     /**
-    * Number of instance CPU cores
+    * Instance CPU. Measurement unit: core
     */
     @SerializedName("Cpu")
     @Expose
     private Long Cpu;
 
     /**
-    * Instance memory in GB
+    * Instance memory. Unit: GB.
     */
     @SerializedName("Memory")
     @Expose
     private Long Memory;
 
     /**
-    * Maximum instance storage capacity GB
+    * Maximum available storage of an instance, unit: GB
     */
     @SerializedName("MaxStorageSize")
     @Expose
     private Long MaxStorageSize;
 
     /**
-    * Minimum instance storage capacity GB
+    * Minimum available storage of an instance, unit: GB
     */
     @SerializedName("MinStorageSize")
     @Expose
     private Long MinStorageSize;
 
     /**
-    * Whether there is an inventory.
+    * Whether there is inventory
     */
     @SerializedName("HasStock")
     @Expose
@@ -73,21 +73,21 @@ public class InstanceSpec extends AbstractModel {
     private Long MaxIops;
 
     /**
-    * Maximum bandwidth
+    * Maximum IO bandwidth
     */
     @SerializedName("MaxIoBandWidth")
     @Expose
     private Long MaxIoBandWidth;
 
     /**
-    * Regional inventory information.
+    * Regional inventory information
     */
     @SerializedName("ZoneStockInfos")
     @Expose
     private ZoneStockInfo [] ZoneStockInfos;
 
     /**
-    * Inventory quantity.
+    * Inventory quantity
     */
     @SerializedName("StockCount")
     @Expose
@@ -108,80 +108,80 @@ public class InstanceSpec extends AbstractModel {
     private Float MinCpu;
 
     /**
-     * Get Number of instance CPU cores 
-     * @return Cpu Number of instance CPU cores
+     * Get Instance CPU. Measurement unit: core 
+     * @return Cpu Instance CPU. Measurement unit: core
      */
     public Long getCpu() {
         return this.Cpu;
     }
 
     /**
-     * Set Number of instance CPU cores
-     * @param Cpu Number of instance CPU cores
+     * Set Instance CPU. Measurement unit: core
+     * @param Cpu Instance CPU. Measurement unit: core
      */
     public void setCpu(Long Cpu) {
         this.Cpu = Cpu;
     }
 
     /**
-     * Get Instance memory in GB 
-     * @return Memory Instance memory in GB
+     * Get Instance memory. Unit: GB. 
+     * @return Memory Instance memory. Unit: GB.
      */
     public Long getMemory() {
         return this.Memory;
     }
 
     /**
-     * Set Instance memory in GB
-     * @param Memory Instance memory in GB
+     * Set Instance memory. Unit: GB.
+     * @param Memory Instance memory. Unit: GB.
      */
     public void setMemory(Long Memory) {
         this.Memory = Memory;
     }
 
     /**
-     * Get Maximum instance storage capacity GB 
-     * @return MaxStorageSize Maximum instance storage capacity GB
+     * Get Maximum available storage of an instance, unit: GB 
+     * @return MaxStorageSize Maximum available storage of an instance, unit: GB
      */
     public Long getMaxStorageSize() {
         return this.MaxStorageSize;
     }
 
     /**
-     * Set Maximum instance storage capacity GB
-     * @param MaxStorageSize Maximum instance storage capacity GB
+     * Set Maximum available storage of an instance, unit: GB
+     * @param MaxStorageSize Maximum available storage of an instance, unit: GB
      */
     public void setMaxStorageSize(Long MaxStorageSize) {
         this.MaxStorageSize = MaxStorageSize;
     }
 
     /**
-     * Get Minimum instance storage capacity GB 
-     * @return MinStorageSize Minimum instance storage capacity GB
+     * Get Minimum available storage of an instance, unit: GB 
+     * @return MinStorageSize Minimum available storage of an instance, unit: GB
      */
     public Long getMinStorageSize() {
         return this.MinStorageSize;
     }
 
     /**
-     * Set Minimum instance storage capacity GB
-     * @param MinStorageSize Minimum instance storage capacity GB
+     * Set Minimum available storage of an instance, unit: GB
+     * @param MinStorageSize Minimum available storage of an instance, unit: GB
      */
     public void setMinStorageSize(Long MinStorageSize) {
         this.MinStorageSize = MinStorageSize;
     }
 
     /**
-     * Get Whether there is an inventory. 
-     * @return HasStock Whether there is an inventory.
+     * Get Whether there is inventory 
+     * @return HasStock Whether there is inventory
      */
     public Boolean getHasStock() {
         return this.HasStock;
     }
 
     /**
-     * Set Whether there is an inventory.
-     * @param HasStock Whether there is an inventory.
+     * Set Whether there is inventory
+     * @param HasStock Whether there is inventory
      */
     public void setHasStock(Boolean HasStock) {
         this.HasStock = HasStock;
@@ -220,48 +220,48 @@ public class InstanceSpec extends AbstractModel {
     }
 
     /**
-     * Get Maximum bandwidth 
-     * @return MaxIoBandWidth Maximum bandwidth
+     * Get Maximum IO bandwidth 
+     * @return MaxIoBandWidth Maximum IO bandwidth
      */
     public Long getMaxIoBandWidth() {
         return this.MaxIoBandWidth;
     }
 
     /**
-     * Set Maximum bandwidth
-     * @param MaxIoBandWidth Maximum bandwidth
+     * Set Maximum IO bandwidth
+     * @param MaxIoBandWidth Maximum IO bandwidth
      */
     public void setMaxIoBandWidth(Long MaxIoBandWidth) {
         this.MaxIoBandWidth = MaxIoBandWidth;
     }
 
     /**
-     * Get Regional inventory information. 
-     * @return ZoneStockInfos Regional inventory information.
+     * Get Regional inventory information 
+     * @return ZoneStockInfos Regional inventory information
      */
     public ZoneStockInfo [] getZoneStockInfos() {
         return this.ZoneStockInfos;
     }
 
     /**
-     * Set Regional inventory information.
-     * @param ZoneStockInfos Regional inventory information.
+     * Set Regional inventory information
+     * @param ZoneStockInfos Regional inventory information
      */
     public void setZoneStockInfos(ZoneStockInfo [] ZoneStockInfos) {
         this.ZoneStockInfos = ZoneStockInfos;
     }
 
     /**
-     * Get Inventory quantity. 
-     * @return StockCount Inventory quantity.
+     * Get Inventory quantity 
+     * @return StockCount Inventory quantity
      */
     public Long getStockCount() {
         return this.StockCount;
     }
 
     /**
-     * Set Inventory quantity.
-     * @param StockCount Inventory quantity.
+     * Set Inventory quantity
+     * @param StockCount Inventory quantity
      */
     public void setStockCount(Long StockCount) {
         this.StockCount = StockCount;

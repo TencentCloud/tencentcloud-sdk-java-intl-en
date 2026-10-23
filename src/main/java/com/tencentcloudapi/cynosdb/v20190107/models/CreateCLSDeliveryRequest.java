@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class CreateCLSDeliveryRequest extends AbstractModel {
 
     /**
-    * Intance ID.
+    * Instance ID.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Log shipping configuration.
+    * Log delivery configuration
     */
     @SerializedName("CLSInfoList")
     @Expose
     private CLSInfo [] CLSInfoList;
 
     /**
-    * Log type.
+    * Log type
     */
     @SerializedName("LogType")
     @Expose
     private String LogType;
 
     /**
-    * Whether the maintenance time is in operation.
+    * Whether it is running during the maintenance time
     */
     @SerializedName("IsInMaintainPeriod")
     @Expose
     private String IsInMaintainPeriod;
 
     /**
-     * Get Intance ID. 
-     * @return InstanceId Intance ID.
+     * Get Instance ID. 
+     * @return InstanceId Instance ID.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Intance ID.
-     * @param InstanceId Intance ID.
+     * Set Instance ID.
+     * @param InstanceId Instance ID.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Log shipping configuration. 
-     * @return CLSInfoList Log shipping configuration.
+     * Get Log delivery configuration 
+     * @return CLSInfoList Log delivery configuration
      */
     public CLSInfo [] getCLSInfoList() {
         return this.CLSInfoList;
     }
 
     /**
-     * Set Log shipping configuration.
-     * @param CLSInfoList Log shipping configuration.
+     * Set Log delivery configuration
+     * @param CLSInfoList Log delivery configuration
      */
     public void setCLSInfoList(CLSInfo [] CLSInfoList) {
         this.CLSInfoList = CLSInfoList;
     }
 
     /**
-     * Get Log type. 
-     * @return LogType Log type.
+     * Get Log type 
+     * @return LogType Log type
      */
     public String getLogType() {
         return this.LogType;
     }
 
     /**
-     * Set Log type.
-     * @param LogType Log type.
+     * Set Log type
+     * @param LogType Log type
      */
     public void setLogType(String LogType) {
         this.LogType = LogType;
     }
 
     /**
-     * Get Whether the maintenance time is in operation. 
-     * @return IsInMaintainPeriod Whether the maintenance time is in operation.
+     * Get Whether it is running during the maintenance time 
+     * @return IsInMaintainPeriod Whether it is running during the maintenance time
      */
     public String getIsInMaintainPeriod() {
         return this.IsInMaintainPeriod;
     }
 
     /**
-     * Set Whether the maintenance time is in operation.
-     * @param IsInMaintainPeriod Whether the maintenance time is in operation.
+     * Set Whether it is running during the maintenance time
+     * @param IsInMaintainPeriod Whether it is running during the maintenance time
      */
     public void setIsInMaintainPeriod(String IsInMaintainPeriod) {
         this.IsInMaintainPeriod = IsInMaintainPeriod;

@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class TaskMaintainInfo extends AbstractModel {
 
     /**
-    * Execution start time (seconds from 0 o'clock).
+    * Execution start time (seconds from 00:00:00)
     */
     @SerializedName("MaintainStartTime")
     @Expose
     private Long MaintainStartTime;
 
     /**
-    * Specifies the continuous time. the unit is second.
+    * Continuous time (unit: second)
     */
     @SerializedName("MaintainDuration")
     @Expose
     private Long MaintainDuration;
 
     /**
-    * Specifies the time when it can be executed. valid values: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"].
+    * The time when it can be executed. Enumeration values: ["Mon","Tue","Wed","Thu","Fri", "Sat", "Sun"]
     */
     @SerializedName("MaintainWeekDays")
     @Expose
     private String [] MaintainWeekDays;
 
     /**
-     * Get Execution start time (seconds from 0 o'clock). 
-     * @return MaintainStartTime Execution start time (seconds from 0 o'clock).
+     * Get Execution start time (seconds from 00:00:00) 
+     * @return MaintainStartTime Execution start time (seconds from 00:00:00)
      */
     public Long getMaintainStartTime() {
         return this.MaintainStartTime;
     }
 
     /**
-     * Set Execution start time (seconds from 0 o'clock).
-     * @param MaintainStartTime Execution start time (seconds from 0 o'clock).
+     * Set Execution start time (seconds from 00:00:00)
+     * @param MaintainStartTime Execution start time (seconds from 00:00:00)
      */
     public void setMaintainStartTime(Long MaintainStartTime) {
         this.MaintainStartTime = MaintainStartTime;
     }
 
     /**
-     * Get Specifies the continuous time. the unit is second. 
-     * @return MaintainDuration Specifies the continuous time. the unit is second.
+     * Get Continuous time (unit: second) 
+     * @return MaintainDuration Continuous time (unit: second)
      */
     public Long getMaintainDuration() {
         return this.MaintainDuration;
     }
 
     /**
-     * Set Specifies the continuous time. the unit is second.
-     * @param MaintainDuration Specifies the continuous time. the unit is second.
+     * Set Continuous time (unit: second)
+     * @param MaintainDuration Continuous time (unit: second)
      */
     public void setMaintainDuration(Long MaintainDuration) {
         this.MaintainDuration = MaintainDuration;
     }
 
     /**
-     * Get Specifies the time when it can be executed. valid values: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]. 
-     * @return MaintainWeekDays Specifies the time when it can be executed. valid values: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"].
+     * Get The time when it can be executed. Enumeration values: ["Mon","Tue","Wed","Thu","Fri", "Sat", "Sun"] 
+     * @return MaintainWeekDays The time when it can be executed. Enumeration values: ["Mon","Tue","Wed","Thu","Fri", "Sat", "Sun"]
      */
     public String [] getMaintainWeekDays() {
         return this.MaintainWeekDays;
     }
 
     /**
-     * Set Specifies the time when it can be executed. valid values: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"].
-     * @param MaintainWeekDays Specifies the time when it can be executed. valid values: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"].
+     * Set The time when it can be executed. Enumeration values: ["Mon","Tue","Wed","Thu","Fri", "Sat", "Sun"]
+     * @param MaintainWeekDays The time when it can be executed. Enumeration values: ["Mon","Tue","Wed","Thu","Fri", "Sat", "Sun"]
      */
     public void setMaintainWeekDays(String [] MaintainWeekDays) {
         this.MaintainWeekDays = MaintainWeekDays;

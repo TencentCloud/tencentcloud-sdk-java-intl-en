@@ -31,7 +31,7 @@ public class DescribeParamTemplatesResponse extends AbstractModel {
     private Long TotalCount;
 
     /**
-    * Parameter template information
+    * Parameter template information.
     */
     @SerializedName("Items")
     @Expose
@@ -61,16 +61,16 @@ public class DescribeParamTemplatesResponse extends AbstractModel {
     }
 
     /**
-     * Get Parameter template information 
-     * @return Items Parameter template information
+     * Get Parameter template information. 
+     * @return Items Parameter template information.
      */
     public ParamTemplateListInfo [] getItems() {
         return this.Items;
     }
 
     /**
-     * Set Parameter template information
-     * @param Items Parameter template information
+     * Set Parameter template information.
+     * @param Items Parameter template information.
      */
     public void setItems(ParamTemplateListInfo [] Items) {
         this.Items = Items;

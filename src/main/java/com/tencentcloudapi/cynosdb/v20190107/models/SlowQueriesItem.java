@@ -31,14 +31,14 @@ public class SlowQueriesItem extends AbstractModel {
     private Long Timestamp;
 
     /**
-    * Execution duration in seconds
+    * Execution duration in seconds.
     */
     @SerializedName("QueryTime")
     @Expose
     private Float QueryTime;
 
     /**
-    * SQL statement
+    * sql statement
     */
     @SerializedName("SqlText")
     @Expose
@@ -52,7 +52,7 @@ public class SlowQueriesItem extends AbstractModel {
     private String UserHost;
 
     /**
-    * Username
+    * Username.
     */
     @SerializedName("UserName")
     @Expose
@@ -66,75 +66,75 @@ public class SlowQueriesItem extends AbstractModel {
     private String Database;
 
     /**
-    * Lock duration in seconds
+    * Lock duration in seconds.
     */
     @SerializedName("LockTime")
     @Expose
     private Float LockTime;
 
     /**
-    * Number of scanned rows
+    * Number of scanned rows.
     */
     @SerializedName("RowsExamined")
     @Expose
     private Long RowsExamined;
 
     /**
-    * Number of returned rows
+    * Rows returned
     */
     @SerializedName("RowsSent")
     @Expose
     private Long RowsSent;
 
     /**
-    * SQL template
+    * sql template
     */
     @SerializedName("SqlTemplate")
     @Expose
     private String SqlTemplate;
 
     /**
-    * MD5 value of the SQL statement
+    * md5 of the sql statement
     */
     @SerializedName("SqlMd5")
     @Expose
     private String SqlMd5;
 
     /**
-    * Remote reading count.
-Specifies that the database kernel version is larger than 3.1.12.
+    * Remote reading count
+Database kernel version above 3.1.12
     */
     @SerializedName("SyncReadCountRemote")
     @Expose
     private Long SyncReadCountRemote;
 
     /**
-    * Number of remote read bytes.
-Specifies that the database kernel version is larger than 3.1.12.
+    * Number of remote read bytes
+Database kernel version above 3.1.12
     */
     @SerializedName("SyncReadBytesRemote")
     @Expose
     private Long SyncReadBytesRemote;
 
     /**
-    * Time spent on remote reads (µs).
-Specifies that the database kernel version is larger than 3.1.12.
+    * Time spent on remote reads (µs)
+Database kernel version above 3.1.12
     */
     @SerializedName("SyncReadTimeRemote")
     @Expose
     private Long SyncReadTimeRemote;
 
     /**
-    * Remote write count.
-Specifies that the database kernel version is larger than 3.1.12.
+    * Remote write count
+Database kernel version above 3.1.12
     */
     @SerializedName("SyncWriteCountRemote")
     @Expose
     private Long SyncWriteCountRemote;
 
     /**
-    * Specifies the number of remote written bytes.
-Specifies that the database kernel version is larger than 3.1.12.
+    * Number of remote written bytes.
+Database kernel version above 3.1.12
     */
     @SerializedName("SyncWriteBytesRemote")
     @Expose
@@ -142,15 +142,15 @@ Specifies that the database kernel version is larger than 3.1.12.
 
     /**
     * Time spent on remote writing (µs).
-Specifies that the database kernel version is larger than 3.1.12.
+Database kernel version above 3.1.12
     */
     @SerializedName("SyncWriteTimeRemote")
     @Expose
     private Long SyncWriteTimeRemote;
 
     /**
-    * Transaction submission delay (µs).
-Specifies that the database kernel version is larger than 3.1.12.
+    * Transaction submission delay (µs)
+Database kernel version above 3.1.12
     */
     @SerializedName("TrxCommitDelay")
     @Expose
@@ -173,32 +173,32 @@ Specifies that the database kernel version is larger than 3.1.12.
     }
 
     /**
-     * Get Execution duration in seconds 
-     * @return QueryTime Execution duration in seconds
+     * Get Execution duration in seconds. 
+     * @return QueryTime Execution duration in seconds.
      */
     public Float getQueryTime() {
         return this.QueryTime;
     }
 
     /**
-     * Set Execution duration in seconds
-     * @param QueryTime Execution duration in seconds
+     * Set Execution duration in seconds.
+     * @param QueryTime Execution duration in seconds.
      */
     public void setQueryTime(Float QueryTime) {
         this.QueryTime = QueryTime;
     }
 
     /**
-     * Get SQL statement 
-     * @return SqlText SQL statement
+     * Get sql statement 
+     * @return SqlText sql statement
      */
     public String getSqlText() {
         return this.SqlText;
     }
 
     /**
-     * Set SQL statement
-     * @param SqlText SQL statement
+     * Set sql statement
+     * @param SqlText sql statement
      */
     public void setSqlText(String SqlText) {
         this.SqlText = SqlText;
@@ -221,16 +221,16 @@ Specifies that the database kernel version is larger than 3.1.12.
     }
 
     /**
-     * Get Username 
-     * @return UserName Username
+     * Get Username. 
+     * @return UserName Username.
      */
     public String getUserName() {
         return this.UserName;
     }
 
     /**
-     * Set Username
-     * @param UserName Username
+     * Set Username.
+     * @param UserName Username.
      */
     public void setUserName(String UserName) {
         this.UserName = UserName;
@@ -253,180 +253,180 @@ Specifies that the database kernel version is larger than 3.1.12.
     }
 
     /**
-     * Get Lock duration in seconds 
-     * @return LockTime Lock duration in seconds
+     * Get Lock duration in seconds. 
+     * @return LockTime Lock duration in seconds.
      */
     public Float getLockTime() {
         return this.LockTime;
     }
 
     /**
-     * Set Lock duration in seconds
-     * @param LockTime Lock duration in seconds
+     * Set Lock duration in seconds.
+     * @param LockTime Lock duration in seconds.
      */
     public void setLockTime(Float LockTime) {
         this.LockTime = LockTime;
     }
 
     /**
-     * Get Number of scanned rows 
-     * @return RowsExamined Number of scanned rows
+     * Get Number of scanned rows. 
+     * @return RowsExamined Number of scanned rows.
      */
     public Long getRowsExamined() {
         return this.RowsExamined;
     }
 
     /**
-     * Set Number of scanned rows
-     * @param RowsExamined Number of scanned rows
+     * Set Number of scanned rows.
+     * @param RowsExamined Number of scanned rows.
      */
     public void setRowsExamined(Long RowsExamined) {
         this.RowsExamined = RowsExamined;
     }
 
     /**
-     * Get Number of returned rows 
-     * @return RowsSent Number of returned rows
+     * Get Rows returned 
+     * @return RowsSent Rows returned
      */
     public Long getRowsSent() {
         return this.RowsSent;
     }
 
     /**
-     * Set Number of returned rows
-     * @param RowsSent Number of returned rows
+     * Set Rows returned
+     * @param RowsSent Rows returned
      */
     public void setRowsSent(Long RowsSent) {
         this.RowsSent = RowsSent;
     }
 
     /**
-     * Get SQL template 
-     * @return SqlTemplate SQL template
+     * Get sql template 
+     * @return SqlTemplate sql template
      */
     public String getSqlTemplate() {
         return this.SqlTemplate;
     }
 
     /**
-     * Set SQL template
-     * @param SqlTemplate SQL template
+     * Set sql template
+     * @param SqlTemplate sql template
      */
     public void setSqlTemplate(String SqlTemplate) {
         this.SqlTemplate = SqlTemplate;
     }
 
     /**
-     * Get MD5 value of the SQL statement 
-     * @return SqlMd5 MD5 value of the SQL statement
+     * Get md5 of the sql statement 
+     * @return SqlMd5 md5 of the sql statement
      */
     public String getSqlMd5() {
         return this.SqlMd5;
     }
 
     /**
-     * Set MD5 value of the SQL statement
-     * @param SqlMd5 MD5 value of the SQL statement
+     * Set md5 of the sql statement
+     * @param SqlMd5 md5 of the sql statement
      */
     public void setSqlMd5(String SqlMd5) {
         this.SqlMd5 = SqlMd5;
     }
 
     /**
-     * Get Remote reading count.
-Specifies that the database kernel version is larger than 3.1.12. 
-     * @return SyncReadCountRemote Remote reading count.
-Specifies that the database kernel version is larger than 3.1.12.
+     * Get Remote reading count
+Database kernel version above 3.1.12 
+     * @return SyncReadCountRemote Remote reading count
+Database kernel version above 3.1.12
      */
     public Long getSyncReadCountRemote() {
         return this.SyncReadCountRemote;
     }
 
     /**
-     * Set Remote reading count.
-Specifies that the database kernel version is larger than 3.1.12.
-     * @param SyncReadCountRemote Remote reading count.
-Specifies that the database kernel version is larger than 3.1.12.
+     * Set Remote reading count
+Database kernel version above 3.1.12
+     * @param SyncReadCountRemote Remote reading count
+Database kernel version above 3.1.12
      */
     public void setSyncReadCountRemote(Long SyncReadCountRemote) {
         this.SyncReadCountRemote = SyncReadCountRemote;
     }
 
     /**
-     * Get Number of remote read bytes.
-Specifies that the database kernel version is larger than 3.1.12. 
-     * @return SyncReadBytesRemote Number of remote read bytes.
-Specifies that the database kernel version is larger than 3.1.12.
+     * Get Number of remote read bytes
+Database kernel version above 3.1.12 
+     * @return SyncReadBytesRemote Number of remote read bytes
+Database kernel version above 3.1.12
      */
     public Long getSyncReadBytesRemote() {
         return this.SyncReadBytesRemote;
     }
 
     /**
-     * Set Number of remote read bytes.
-Specifies that the database kernel version is larger than 3.1.12.
-     * @param SyncReadBytesRemote Number of remote read bytes.
-Specifies that the database kernel version is larger than 3.1.12.
+     * Set Number of remote read bytes
+Database kernel version above 3.1.12
+     * @param SyncReadBytesRemote Number of remote read bytes
+Database kernel version above 3.1.12
      */
     public void setSyncReadBytesRemote(Long SyncReadBytesRemote) {
         this.SyncReadBytesRemote = SyncReadBytesRemote;
     }
 
     /**
-     * Get Time spent on remote reads (µs).
-Specifies that the database kernel version is larger than 3.1.12. 
-     * @return SyncReadTimeRemote Time spent on remote reads (µs).
-Specifies that the database kernel version is larger than 3.1.12.
+     * Get Time spent on remote reads (µs)
+Database kernel version above 3.1.12 
+     * @return SyncReadTimeRemote Time spent on remote reads (µs)
+Database kernel version above 3.1.12
      */
     public Long getSyncReadTimeRemote() {
         return this.SyncReadTimeRemote;
     }
 
     /**
-     * Set Time spent on remote reads (µs).
-Specifies that the database kernel version is larger than 3.1.12.
-     * @param SyncReadTimeRemote Time spent on remote reads (µs).
-Specifies that the database kernel version is larger than 3.1.12.
+     * Set Time spent on remote reads (µs)
+Database kernel version above 3.1.12
+     * @param SyncReadTimeRemote Time spent on remote reads (µs)
+Database kernel version above 3.1.12
      */
     public void setSyncReadTimeRemote(Long SyncReadTimeRemote) {
         this.SyncReadTimeRemote = SyncReadTimeRemote;
     }
 
     /**
-     * Get Remote write count.
-Specifies that the database kernel version is larger than 3.1.12. 
-     * @return SyncWriteCountRemote Remote write count.
-Specifies that the database kernel version is larger than 3.1.12.
+     * Get Remote write count
+Database kernel version above 3.1.12 
+     * @return SyncWriteCountRemote Remote write count
+Database kernel version above 3.1.12
      */
     public Long getSyncWriteCountRemote() {
         return this.SyncWriteCountRemote;
     }
 
     /**
-     * Set Remote write count.
-Specifies that the database kernel version is larger than 3.1.12.
-     * @param SyncWriteCountRemote Remote write count.
-Specifies that the database kernel version is larger than 3.1.12.
+     * Set Remote write count
+Database kernel version above 3.1.12
+     * @param SyncWriteCountRemote Remote write count
+Database kernel version above 3.1.12
      */
     public void setSyncWriteCountRemote(Long SyncWriteCountRemote) {
         this.SyncWriteCountRemote = SyncWriteCountRemote;
     }
 
     /**
-     * Get Specifies the number of remote written bytes.
-Specifies that the database kernel version is larger than 3.1.12. 
-     * @return SyncWriteBytesRemote Specifies the number of remote written bytes.
-Specifies that the database kernel version is larger than 3.1.12.
+     * Get Number of remote written bytes.
+Database kernel version above 3.1.12 
+     * @return SyncWriteBytesRemote Number of remote written bytes.
+Database kernel version above 3.1.12
      */
     public Long getSyncWriteBytesRemote() {
         return this.SyncWriteBytesRemote;
     }
 
     /**
-     * Set Specifies the number of remote written bytes.
-Specifies that the database kernel version is larger than 3.1.12.
-     * @param SyncWriteBytesRemote Specifies the number of remote written bytes.
-Specifies that the database kernel version is larger than 3.1.12.
+     * Set Number of remote written bytes.
+Database kernel version above 3.1.12
+     * @param SyncWriteBytesRemote Number of remote written bytes.
+Database kernel version above 3.1.12
      */
     public void setSyncWriteBytesRemote(Long SyncWriteBytesRemote) {
         this.SyncWriteBytesRemote = SyncWriteBytesRemote;
@@ -434,9 +434,9 @@ Specifies that the database kernel version is larger than 3.1.12.
 
     /**
      * Get Time spent on remote writing (µs).
-Specifies that the database kernel version is larger than 3.1.12. 
+Database kernel version above 3.1.12 
      * @return SyncWriteTimeRemote Time spent on remote writing (µs).
-Specifies that the database kernel version is larger than 3.1.12.
+Database kernel version above 3.1.12
      */
     public Long getSyncWriteTimeRemote() {
         return this.SyncWriteTimeRemote;
@@ -444,29 +444,29 @@ Specifies that the database kernel version is larger than 3.1.12.
 
     /**
      * Set Time spent on remote writing (µs).
-Specifies that the database kernel version is larger than 3.1.12.
+Database kernel version above 3.1.12
      * @param SyncWriteTimeRemote Time spent on remote writing (µs).
-Specifies that the database kernel version is larger than 3.1.12.
+Database kernel version above 3.1.12
      */
     public void setSyncWriteTimeRemote(Long SyncWriteTimeRemote) {
         this.SyncWriteTimeRemote = SyncWriteTimeRemote;
     }
 
     /**
-     * Get Transaction submission delay (µs).
-Specifies that the database kernel version is larger than 3.1.12. 
-     * @return TrxCommitDelay Transaction submission delay (µs).
-Specifies that the database kernel version is larger than 3.1.12.
+     * Get Transaction submission delay (µs)
+Database kernel version above 3.1.12 
+     * @return TrxCommitDelay Transaction submission delay (µs)
+Database kernel version above 3.1.12
      */
     public Long getTrxCommitDelay() {
         return this.TrxCommitDelay;
     }
 
     /**
-     * Set Transaction submission delay (µs).
-Specifies that the database kernel version is larger than 3.1.12.
-     * @param TrxCommitDelay Transaction submission delay (µs).
-Specifies that the database kernel version is larger than 3.1.12.
+     * Set Transaction submission delay (µs)
+Database kernel version above 3.1.12
+     * @param TrxCommitDelay Transaction submission delay (µs)
+Database kernel version above 3.1.12
      */
     public void setTrxCommitDelay(Long TrxCommitDelay) {
         this.TrxCommitDelay = TrxCommitDelay;

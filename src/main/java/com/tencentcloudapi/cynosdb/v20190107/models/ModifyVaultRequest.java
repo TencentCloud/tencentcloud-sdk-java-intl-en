@@ -31,63 +31,63 @@ public class ModifyVaultRequest extends AbstractModel {
     private String VaultId;
 
     /**
-    * Safe name, maximum 255 characters
+    * Safe name. Maximum length: 255 characters.
     */
     @SerializedName("VaultName")
     @Expose
     private String VaultName;
 
     /**
-    * Safe description, maximum 1024 characters
+    * Safe description. Maximum length: 1024 characters.
     */
     @SerializedName("VaultDescribe")
     @Expose
     private String VaultDescribe;
 
     /**
-    * Backup retention period (seconds). Range: (0, 632448000].
+    * Backup retention period in seconds. Value range: (0, 632448000]
     */
     @SerializedName("BackupSaveSeconds")
     @Expose
     private Long BackupSaveSeconds;
 
     /**
-    * Encryption key ID, maximum 36 characters
+    * Encryption key ID. Maximum length: 36 characters.
     */
     @SerializedName("KeyId")
     @Expose
     private String KeyId;
 
     /**
-    * Key type, available values: cloud, custom
+    * Key type. Available values: cloud, custom
     */
     @SerializedName("KeyType")
     @Expose
     private String KeyType;
 
     /**
-    * Key region, maximum 32 characters
+    * Region of the key. Maximum length: 32 characters.
     */
     @SerializedName("KeyRegion")
     @Expose
     private String KeyRegion;
 
     /**
-    * Is the safe locked
+    * Whether the safe is locked
     */
     @SerializedName("IsLock")
     @Expose
     private Boolean IsLock;
 
     /**
-    * Lock expiry time, format: 2006-01-02 15:04:05, lock time current maximum 15 days
+    * Lock expiration time. Format: 2006-01-02 15:04:05. The lock time can be up to 15 days from now.
     */
     @SerializedName("LockedTime")
     @Expose
     private String LockedTime;
 
     /**
-    * Whether it is encrypted
+    * Encrypted or not
     */
     @SerializedName("IsEncryption")
     @Expose
@@ -110,144 +110,144 @@ public class ModifyVaultRequest extends AbstractModel {
     }
 
     /**
-     * Get Safe name, maximum 255 characters 
-     * @return VaultName Safe name, maximum 255 characters
+     * Get Safe name. Maximum length: 255 characters. 
+     * @return VaultName Safe name. Maximum length: 255 characters.
      */
     public String getVaultName() {
         return this.VaultName;
     }
 
     /**
-     * Set Safe name, maximum 255 characters
-     * @param VaultName Safe name, maximum 255 characters
+     * Set Safe name. Maximum length: 255 characters.
+     * @param VaultName Safe name. Maximum length: 255 characters.
      */
     public void setVaultName(String VaultName) {
         this.VaultName = VaultName;
     }
 
     /**
-     * Get Safe description, maximum 1024 characters 
-     * @return VaultDescribe Safe description, maximum 1024 characters
+     * Get Safe description. Maximum length: 1024 characters. 
+     * @return VaultDescribe Safe description. Maximum length: 1024 characters.
      */
     public String getVaultDescribe() {
         return this.VaultDescribe;
     }
 
     /**
-     * Set Safe description, maximum 1024 characters
-     * @param VaultDescribe Safe description, maximum 1024 characters
+     * Set Safe description. Maximum length: 1024 characters.
+     * @param VaultDescribe Safe description. Maximum length: 1024 characters.
      */
     public void setVaultDescribe(String VaultDescribe) {
         this.VaultDescribe = VaultDescribe;
     }
 
     /**
-     * Get Backup retention period (seconds). Range: (0, 632448000]. 
-     * @return BackupSaveSeconds Backup retention period (seconds). Range: (0, 632448000].
+     * Get Backup retention period in seconds. Value range: (0, 632448000] 
+     * @return BackupSaveSeconds Backup retention period in seconds. Value range: (0, 632448000]
      */
     public Long getBackupSaveSeconds() {
         return this.BackupSaveSeconds;
     }
 
     /**
-     * Set Backup retention period (seconds). Range: (0, 632448000].
-     * @param BackupSaveSeconds Backup retention period (seconds). Range: (0, 632448000].
+     * Set Backup retention period in seconds. Value range: (0, 632448000]
+     * @param BackupSaveSeconds Backup retention period in seconds. Value range: (0, 632448000]
      */
     public void setBackupSaveSeconds(Long BackupSaveSeconds) {
         this.BackupSaveSeconds = BackupSaveSeconds;
     }
 
     /**
-     * Get Encryption key ID, maximum 36 characters 
-     * @return KeyId Encryption key ID, maximum 36 characters
+     * Get Encryption key ID. Maximum length: 36 characters. 
+     * @return KeyId Encryption key ID. Maximum length: 36 characters.
      */
     public String getKeyId() {
         return this.KeyId;
     }
 
     /**
-     * Set Encryption key ID, maximum 36 characters
-     * @param KeyId Encryption key ID, maximum 36 characters
+     * Set Encryption key ID. Maximum length: 36 characters.
+     * @param KeyId Encryption key ID. Maximum length: 36 characters.
      */
     public void setKeyId(String KeyId) {
         this.KeyId = KeyId;
     }
 
     /**
-     * Get Key type, available values: cloud, custom 
-     * @return KeyType Key type, available values: cloud, custom
+     * Get Key type. Available values: cloud, custom 
+     * @return KeyType Key type. Available values: cloud, custom
      */
     public String getKeyType() {
         return this.KeyType;
     }
 
     /**
-     * Set Key type, available values: cloud, custom
-     * @param KeyType Key type, available values: cloud, custom
+     * Set Key type. Available values: cloud, custom
+     * @param KeyType Key type. Available values: cloud, custom
      */
     public void setKeyType(String KeyType) {
         this.KeyType = KeyType;
     }
 
     /**
-     * Get Key region, maximum 32 characters 
-     * @return KeyRegion Key region, maximum 32 characters
+     * Get Region of the key. Maximum length: 32 characters. 
+     * @return KeyRegion Region of the key. Maximum length: 32 characters.
      */
     public String getKeyRegion() {
         return this.KeyRegion;
     }
 
     /**
-     * Set Key region, maximum 32 characters
-     * @param KeyRegion Key region, maximum 32 characters
+     * Set Region of the key. Maximum length: 32 characters.
+     * @param KeyRegion Region of the key. Maximum length: 32 characters.
      */
     public void setKeyRegion(String KeyRegion) {
         this.KeyRegion = KeyRegion;
     }
 
     /**
-     * Get Is the safe locked 
-     * @return IsLock Is the safe locked
+     * Get Whether the safe is locked 
+     * @return IsLock Whether the safe is locked
      */
     public Boolean getIsLock() {
         return this.IsLock;
     }
 
     /**
-     * Set Is the safe locked
-     * @param IsLock Is the safe locked
+     * Set Whether the safe is locked
+     * @param IsLock Whether the safe is locked
      */
     public void setIsLock(Boolean IsLock) {
         this.IsLock = IsLock;
     }
 
     /**
-     * Get Lock expiry time, format: 2006-01-02 15:04:05, lock time current maximum 15 days 
-     * @return LockedTime Lock expiry time, format: 2006-01-02 15:04:05, lock time current maximum 15 days
+     * Get Lock expiration time. Format: 2006-01-02 15:04:05. The lock time can be up to 15 days from now. 
+     * @return LockedTime Lock expiration time. Format: 2006-01-02 15:04:05. The lock time can be up to 15 days from now.
      */
     public String getLockedTime() {
         return this.LockedTime;
     }
 
     /**
-     * Set Lock expiry time, format: 2006-01-02 15:04:05, lock time current maximum 15 days
-     * @param LockedTime Lock expiry time, format: 2006-01-02 15:04:05, lock time current maximum 15 days
+     * Set Lock expiration time. Format: 2006-01-02 15:04:05. The lock time can be up to 15 days from now.
+     * @param LockedTime Lock expiration time. Format: 2006-01-02 15:04:05. The lock time can be up to 15 days from now.
      */
     public void setLockedTime(String LockedTime) {
         this.LockedTime = LockedTime;
     }
 
     /**
-     * Get Whether it is encrypted 
-     * @return IsEncryption Whether it is encrypted
+     * Get Encrypted or not 
+     * @return IsEncryption Encrypted or not
      */
     public Boolean getIsEncryption() {
         return this.IsEncryption;
     }
 
     /**
-     * Set Whether it is encrypted
-     * @param IsEncryption Whether it is encrypted
+     * Set Encrypted or not
+     * @param IsEncryption Encrypted or not
      */
     public void setIsEncryption(Boolean IsEncryption) {
         this.IsEncryption = IsEncryption;

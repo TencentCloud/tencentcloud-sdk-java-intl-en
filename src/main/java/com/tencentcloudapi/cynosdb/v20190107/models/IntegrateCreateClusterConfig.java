@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class IntegrateCreateClusterConfig extends AbstractModel {
 
     /**
-    * Retention days of binlog. value range: 7-1830.
+    * binlog retention days [7,1830]
     */
     @SerializedName("BinlogSaveDays")
     @Expose
     private Long BinlogSaveDays;
 
     /**
-    * Specifies the backup retention days. value range: 7-1830.
+    * Backup retention days [7,1830]
     */
     @SerializedName("BackupSaveDays")
     @Expose
     private Long BackupSaveDays;
 
     /**
-    * Specifies the semi-sync timeout period. value range: [1000,4294967295].
+    * Semi-sync timeout period [1000,4294967295]
     */
     @SerializedName("SemiSyncTimeout")
     @Expose
     private Long SemiSyncTimeout;
 
     /**
-    * proxy connection address configuration message.
+    * proxy connection address configuration message
     */
     @SerializedName("ProxyEndPointConfigs")
     @Expose
     private ProxyEndPointConfigInfo [] ProxyEndPointConfigs;
 
     /**
-     * Get Retention days of binlog. value range: 7-1830. 
-     * @return BinlogSaveDays Retention days of binlog. value range: 7-1830.
+     * Get binlog retention days [7,1830] 
+     * @return BinlogSaveDays binlog retention days [7,1830]
      */
     public Long getBinlogSaveDays() {
         return this.BinlogSaveDays;
     }
 
     /**
-     * Set Retention days of binlog. value range: 7-1830.
-     * @param BinlogSaveDays Retention days of binlog. value range: 7-1830.
+     * Set binlog retention days [7,1830]
+     * @param BinlogSaveDays binlog retention days [7,1830]
      */
     public void setBinlogSaveDays(Long BinlogSaveDays) {
         this.BinlogSaveDays = BinlogSaveDays;
     }
 
     /**
-     * Get Specifies the backup retention days. value range: 7-1830. 
-     * @return BackupSaveDays Specifies the backup retention days. value range: 7-1830.
+     * Get Backup retention days [7,1830] 
+     * @return BackupSaveDays Backup retention days [7,1830]
      */
     public Long getBackupSaveDays() {
         return this.BackupSaveDays;
     }
 
     /**
-     * Set Specifies the backup retention days. value range: 7-1830.
-     * @param BackupSaveDays Specifies the backup retention days. value range: 7-1830.
+     * Set Backup retention days [7,1830]
+     * @param BackupSaveDays Backup retention days [7,1830]
      */
     public void setBackupSaveDays(Long BackupSaveDays) {
         this.BackupSaveDays = BackupSaveDays;
     }
 
     /**
-     * Get Specifies the semi-sync timeout period. value range: [1000,4294967295]. 
-     * @return SemiSyncTimeout Specifies the semi-sync timeout period. value range: [1000,4294967295].
+     * Get Semi-sync timeout period [1000,4294967295] 
+     * @return SemiSyncTimeout Semi-sync timeout period [1000,4294967295]
      */
     public Long getSemiSyncTimeout() {
         return this.SemiSyncTimeout;
     }
 
     /**
-     * Set Specifies the semi-sync timeout period. value range: [1000,4294967295].
-     * @param SemiSyncTimeout Specifies the semi-sync timeout period. value range: [1000,4294967295].
+     * Set Semi-sync timeout period [1000,4294967295]
+     * @param SemiSyncTimeout Semi-sync timeout period [1000,4294967295]
      */
     public void setSemiSyncTimeout(Long SemiSyncTimeout) {
         this.SemiSyncTimeout = SemiSyncTimeout;
     }
 
     /**
-     * Get proxy connection address configuration message. 
-     * @return ProxyEndPointConfigs proxy connection address configuration message.
+     * Get proxy connection address configuration message 
+     * @return ProxyEndPointConfigs proxy connection address configuration message
      */
     public ProxyEndPointConfigInfo [] getProxyEndPointConfigs() {
         return this.ProxyEndPointConfigs;
     }
 
     /**
-     * Set proxy connection address configuration message.
-     * @param ProxyEndPointConfigs proxy connection address configuration message.
+     * Set proxy connection address configuration message
+     * @param ProxyEndPointConfigs proxy connection address configuration message
      */
     public void setProxyEndPointConfigs(ProxyEndPointConfigInfo [] ProxyEndPointConfigs) {
         this.ProxyEndPointConfigs = ProxyEndPointConfigs;

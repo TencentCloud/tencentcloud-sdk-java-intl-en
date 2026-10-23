@@ -31,14 +31,14 @@ public class DescribeClusterDatabasesRequest extends AbstractModel {
     private String ClusterId;
 
     /**
-    * Pagination offset.
+    * Pagination Offset
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * Pagination number limit.
+    * Page limit
     */
     @SerializedName("Limit")
     @Expose
@@ -61,32 +61,32 @@ public class DescribeClusterDatabasesRequest extends AbstractModel {
     }
 
     /**
-     * Get Pagination offset. 
-     * @return Offset Pagination offset.
+     * Get Pagination Offset 
+     * @return Offset Pagination Offset
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Pagination offset.
-     * @param Offset Pagination offset.
+     * Set Pagination Offset
+     * @param Offset Pagination Offset
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get Pagination number limit. 
-     * @return Limit Pagination number limit.
+     * Get Page limit 
+     * @return Limit Page limit
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Pagination number limit.
-     * @param Limit Pagination number limit.
+     * Set Page limit
+     * @param Limit Page limit
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

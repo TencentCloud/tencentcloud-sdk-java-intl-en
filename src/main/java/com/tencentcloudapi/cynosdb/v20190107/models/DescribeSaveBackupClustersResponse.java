@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeSaveBackupClustersResponse extends AbstractModel {
 
     /**
-    * Total number of entries
+    * Total number of entries.
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * Legacy backup information.
+    * Legacy backup information
     */
     @SerializedName("SaveBackupClusterInfos")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeSaveBackupClustersResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Total number of entries 
-     * @return TotalCount Total number of entries
+     * Get Total number of entries. 
+     * @return TotalCount Total number of entries.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Total number of entries
-     * @param TotalCount Total number of entries
+     * Set Total number of entries.
+     * @param TotalCount Total number of entries.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get Legacy backup information. 
-     * @return SaveBackupClusterInfos Legacy backup information.
+     * Get Legacy backup information 
+     * @return SaveBackupClusterInfos Legacy backup information
      */
     public SaveBackupClusterInfo [] getSaveBackupClusterInfos() {
         return this.SaveBackupClusterInfos;
     }
 
     /**
-     * Set Legacy backup information.
-     * @param SaveBackupClusterInfos Legacy backup information.
+     * Set Legacy backup information
+     * @param SaveBackupClusterInfos Legacy backup information
      */
     public void setSaveBackupClusterInfos(SaveBackupClusterInfo [] SaveBackupClusterInfos) {
         this.SaveBackupClusterInfos = SaveBackupClusterInfos;

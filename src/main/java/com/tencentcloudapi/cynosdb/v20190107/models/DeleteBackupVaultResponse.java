@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DeleteBackupVaultResponse extends AbstractModel {
 
     /**
-    * task ID, for querying task execution status
+    * Task ID, used to query task execution status
     */
     @SerializedName("TaskId")
     @Expose
@@ -38,16 +38,16 @@ public class DeleteBackupVaultResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get task ID, for querying task execution status 
-     * @return TaskId task ID, for querying task execution status
+     * Get Task ID, used to query task execution status 
+     * @return TaskId Task ID, used to query task execution status
      */
     public Long getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set task ID, for querying task execution status
-     * @param TaskId task ID, for querying task execution status
+     * Set Task ID, used to query task execution status
+     * @param TaskId Task ID, used to query task execution status
      */
     public void setTaskId(Long TaskId) {
         this.TaskId = TaskId;

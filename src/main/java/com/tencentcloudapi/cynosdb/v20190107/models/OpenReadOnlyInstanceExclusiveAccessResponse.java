@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class OpenReadOnlyInstanceExclusiveAccessResponse extends AbstractModel {
 
     /**
-    * Activation process ID.
+    * SDK activation process ID
     */
     @SerializedName("FlowId")
     @Expose
@@ -38,16 +38,16 @@ public class OpenReadOnlyInstanceExclusiveAccessResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Activation process ID. 
-     * @return FlowId Activation process ID.
+     * Get SDK activation process ID 
+     * @return FlowId SDK activation process ID
      */
     public Long getFlowId() {
         return this.FlowId;
     }
 
     /**
-     * Set Activation process ID.
-     * @param FlowId Activation process ID.
+     * Set SDK activation process ID
+     * @param FlowId SDK activation process ID
      */
     public void setFlowId(Long FlowId) {
         this.FlowId = FlowId;

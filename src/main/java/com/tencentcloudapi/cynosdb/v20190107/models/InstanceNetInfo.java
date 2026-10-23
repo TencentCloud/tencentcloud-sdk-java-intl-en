@@ -38,28 +38,28 @@ public class InstanceNetInfo extends AbstractModel {
     private String InstanceGroupId;
 
     /**
-    * Specifies the virtual private cloud ID.
+    * VPC ID
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * Specifies the subnet ID.
+    * Subnet ID.
     */
     @SerializedName("SubnetId")
     @Expose
     private String SubnetId;
 
     /**
-    * Network type. valid values: 0 (basic network), 1 (vpc network), 2 (blackstone network).
+    * Network type. 0: basic network; 1: vpc network; 2: Blackstone Network
     */
     @SerializedName("NetType")
     @Expose
     private Long NetType;
 
     /**
-    * VPC IP.
+    * VPC IP
     */
     @SerializedName("Vip")
     @Expose
@@ -73,7 +73,7 @@ public class InstanceNetInfo extends AbstractModel {
     private Long Vport;
 
     /**
-    * Specifies the public network domain name.
+    * Public network domain name.
     */
     @SerializedName("WanDomain")
     @Expose
@@ -87,14 +87,14 @@ public class InstanceNetInfo extends AbstractModel {
     private String WanIP;
 
     /**
-    * Public network port.
+    * External port
     */
     @SerializedName("WanPort")
     @Expose
     private Long WanPort;
 
     /**
-    * Public network enabled status.
+    * Public network status
     */
     @SerializedName("WanStatus")
     @Expose
@@ -133,64 +133,64 @@ public class InstanceNetInfo extends AbstractModel {
     }
 
     /**
-     * Get Specifies the virtual private cloud ID. 
-     * @return VpcId Specifies the virtual private cloud ID.
+     * Get VPC ID 
+     * @return VpcId VPC ID
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set Specifies the virtual private cloud ID.
-     * @param VpcId Specifies the virtual private cloud ID.
+     * Set VPC ID
+     * @param VpcId VPC ID
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get Specifies the subnet ID. 
-     * @return SubnetId Specifies the subnet ID.
+     * Get Subnet ID. 
+     * @return SubnetId Subnet ID.
      */
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set Specifies the subnet ID.
-     * @param SubnetId Specifies the subnet ID.
+     * Set Subnet ID.
+     * @param SubnetId Subnet ID.
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
     }
 
     /**
-     * Get Network type. valid values: 0 (basic network), 1 (vpc network), 2 (blackstone network). 
-     * @return NetType Network type. valid values: 0 (basic network), 1 (vpc network), 2 (blackstone network).
+     * Get Network type. 0: basic network; 1: vpc network; 2: Blackstone Network 
+     * @return NetType Network type. 0: basic network; 1: vpc network; 2: Blackstone Network
      */
     public Long getNetType() {
         return this.NetType;
     }
 
     /**
-     * Set Network type. valid values: 0 (basic network), 1 (vpc network), 2 (blackstone network).
-     * @param NetType Network type. valid values: 0 (basic network), 1 (vpc network), 2 (blackstone network).
+     * Set Network type. 0: basic network; 1: vpc network; 2: Blackstone Network
+     * @param NetType Network type. 0: basic network; 1: vpc network; 2: Blackstone Network
      */
     public void setNetType(Long NetType) {
         this.NetType = NetType;
     }
 
     /**
-     * Get VPC IP. 
-     * @return Vip VPC IP.
+     * Get VPC IP 
+     * @return Vip VPC IP
      */
     public String getVip() {
         return this.Vip;
     }
 
     /**
-     * Set VPC IP.
-     * @param Vip VPC IP.
+     * Set VPC IP
+     * @param Vip VPC IP
      */
     public void setVip(String Vip) {
         this.Vip = Vip;
@@ -213,16 +213,16 @@ public class InstanceNetInfo extends AbstractModel {
     }
 
     /**
-     * Get Specifies the public network domain name. 
-     * @return WanDomain Specifies the public network domain name.
+     * Get Public network domain name. 
+     * @return WanDomain Public network domain name.
      */
     public String getWanDomain() {
         return this.WanDomain;
     }
 
     /**
-     * Set Specifies the public network domain name.
-     * @param WanDomain Specifies the public network domain name.
+     * Set Public network domain name.
+     * @param WanDomain Public network domain name.
      */
     public void setWanDomain(String WanDomain) {
         this.WanDomain = WanDomain;
@@ -245,32 +245,32 @@ public class InstanceNetInfo extends AbstractModel {
     }
 
     /**
-     * Get Public network port. 
-     * @return WanPort Public network port.
+     * Get External port 
+     * @return WanPort External port
      */
     public Long getWanPort() {
         return this.WanPort;
     }
 
     /**
-     * Set Public network port.
-     * @param WanPort Public network port.
+     * Set External port
+     * @param WanPort External port
      */
     public void setWanPort(Long WanPort) {
         this.WanPort = WanPort;
     }
 
     /**
-     * Get Public network enabled status. 
-     * @return WanStatus Public network enabled status.
+     * Get Public network status 
+     * @return WanStatus Public network status
      */
     public String getWanStatus() {
         return this.WanStatus;
     }
 
     /**
-     * Set Public network enabled status.
-     * @param WanStatus Public network enabled status.
+     * Set Public network status
+     * @param WanStatus Public network status
      */
     public void setWanStatus(String WanStatus) {
         this.WanStatus = WanStatus;

@@ -45,7 +45,7 @@ public class DownloadLibraDBClusterListRequest extends AbstractModel {
     private String OrderBy;
 
     /**
-    * Sorting method, desc, asc, DESC, ASC
+    * Sorting method. Valid values: `desc`, `asc`, `DESC`, `ASC`.
     */
     @SerializedName("OrderByType")
     @Expose
@@ -107,16 +107,16 @@ public class DownloadLibraDBClusterListRequest extends AbstractModel {
     }
 
     /**
-     * Get Sorting method, desc, asc, DESC, ASC 
-     * @return OrderByType Sorting method, desc, asc, DESC, ASC
+     * Get Sorting method. Valid values: `desc`, `asc`, `DESC`, `ASC`. 
+     * @return OrderByType Sorting method. Valid values: `desc`, `asc`, `DESC`, `ASC`.
      */
     public String getOrderByType() {
         return this.OrderByType;
     }
 
     /**
-     * Set Sorting method, desc, asc, DESC, ASC
-     * @param OrderByType Sorting method, desc, asc, DESC, ASC
+     * Set Sorting method. Valid values: `desc`, `asc`, `DESC`, `ASC`.
+     * @param OrderByType Sorting method. Valid values: `desc`, `asc`, `DESC`, `ASC`.
      */
     public void setOrderByType(String OrderByType) {
         this.OrderByType = OrderByType;

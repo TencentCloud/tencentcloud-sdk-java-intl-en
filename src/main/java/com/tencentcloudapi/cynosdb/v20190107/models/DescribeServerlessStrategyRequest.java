@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DescribeServerlessStrategyRequest extends AbstractModel {
 
     /**
-    * Specifies the serverless cluster id.
+    * serverless cluster id
     */
     @SerializedName("ClusterId")
     @Expose
     private String ClusterId;
 
     /**
-     * Get Specifies the serverless cluster id. 
-     * @return ClusterId Specifies the serverless cluster id.
+     * Get serverless cluster id 
+     * @return ClusterId serverless cluster id
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set Specifies the serverless cluster id.
-     * @param ClusterId Specifies the serverless cluster id.
+     * Set serverless cluster id
+     * @param ClusterId serverless cluster id
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;

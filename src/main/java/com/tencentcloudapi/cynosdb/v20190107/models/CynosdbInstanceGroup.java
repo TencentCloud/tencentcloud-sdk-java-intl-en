@@ -24,105 +24,105 @@ import java.util.HashMap;
 public class CynosdbInstanceGroup extends AbstractModel {
 
     /**
-    * 
+    * User AppID
     */
     @SerializedName("AppId")
     @Expose
     private Long AppId;
 
     /**
-    * 
+    * Cluster ID
     */
     @SerializedName("ClusterId")
     @Expose
     private String ClusterId;
 
     /**
-    * 
+    * Creation time.
     */
     @SerializedName("CreatedTime")
     @Expose
     private String CreatedTime;
 
     /**
-    * 
+    * Deletion time.
     */
     @SerializedName("DeletedTime")
     @Expose
     private String DeletedTime;
 
     /**
-    * 
+    * Instance group ID
     */
     @SerializedName("InstanceGroupId")
     @Expose
     private String InstanceGroupId;
 
     /**
-    * 
+    * Status.
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * Type of the instance group (network). ha-ha group; ro - read-only group; proxy - proxy; singleRo - read-only instance exclusive.
+    * Instance group (network) type. ha-ha: HA group; ro: read-only group; proxy: proxy; singleRo: exclusive read-only instance.
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * 
+    * Update time.
     */
     @SerializedName("UpdatedTime")
     @Expose
     private String UpdatedTime;
 
     /**
-    * 
+    * Private IP address
     */
     @SerializedName("Vip")
     @Expose
     private String Vip;
 
     /**
-    * 
+    * Private network port.
     */
     @SerializedName("Vport")
     @Expose
     private Long Vport;
 
     /**
-    * 
+    * Public network domain name.
     */
     @SerializedName("WanDomain")
     @Expose
     private String WanDomain;
 
     /**
-    * 
+    * Public IP address
     */
     @SerializedName("WanIP")
     @Expose
     private String WanIP;
 
     /**
-    * 
+    * External port
     */
     @SerializedName("WanPort")
     @Expose
     private Long WanPort;
 
     /**
-    * 
+    * Public network status.
     */
     @SerializedName("WanStatus")
     @Expose
     private String WanStatus;
 
     /**
-    * 
+    * Instance group information including instances
     */
     @SerializedName("InstanceSet")
     @Expose
@@ -136,275 +136,275 @@ public class CynosdbInstanceGroup extends AbstractModel {
     private String UniqVpcId;
 
     /**
-    * Specifies the subnet ID.
+    * Subnet ID.
     */
     @SerializedName("UniqSubnetId")
     @Expose
     private String UniqSubnetId;
 
     /**
-    * Recycling IP information.
+    * Recycling IP information
     */
     @SerializedName("OldAddrInfo")
     @Expose
     private OldAddrInfo OldAddrInfo;
 
     /**
-    * 
+    * Ongoing task
     */
     @SerializedName("ProcessingTasks")
     @Expose
     private String [] ProcessingTasks;
 
     /**
-    * 
+    * Task list
     */
     @SerializedName("Tasks")
     @Expose
     private ObjectTask [] Tasks;
 
     /**
-    * 
+    * id of the biz_net_service table
     */
     @SerializedName("NetServiceId")
     @Expose
     private Long NetServiceId;
 
     /**
-     * Get  
-     * @return AppId 
+     * Get User AppID 
+     * @return AppId User AppID
      */
     public Long getAppId() {
         return this.AppId;
     }
 
     /**
-     * Set 
-     * @param AppId 
+     * Set User AppID
+     * @param AppId User AppID
      */
     public void setAppId(Long AppId) {
         this.AppId = AppId;
     }
 
     /**
-     * Get  
-     * @return ClusterId 
+     * Get Cluster ID 
+     * @return ClusterId Cluster ID
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set 
-     * @param ClusterId 
+     * Set Cluster ID
+     * @param ClusterId Cluster ID
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get  
-     * @return CreatedTime 
+     * Get Creation time. 
+     * @return CreatedTime Creation time.
      */
     public String getCreatedTime() {
         return this.CreatedTime;
     }
 
     /**
-     * Set 
-     * @param CreatedTime 
+     * Set Creation time.
+     * @param CreatedTime Creation time.
      */
     public void setCreatedTime(String CreatedTime) {
         this.CreatedTime = CreatedTime;
     }
 
     /**
-     * Get  
-     * @return DeletedTime 
+     * Get Deletion time. 
+     * @return DeletedTime Deletion time.
      */
     public String getDeletedTime() {
         return this.DeletedTime;
     }
 
     /**
-     * Set 
-     * @param DeletedTime 
+     * Set Deletion time.
+     * @param DeletedTime Deletion time.
      */
     public void setDeletedTime(String DeletedTime) {
         this.DeletedTime = DeletedTime;
     }
 
     /**
-     * Get  
-     * @return InstanceGroupId 
+     * Get Instance group ID 
+     * @return InstanceGroupId Instance group ID
      */
     public String getInstanceGroupId() {
         return this.InstanceGroupId;
     }
 
     /**
-     * Set 
-     * @param InstanceGroupId 
+     * Set Instance group ID
+     * @param InstanceGroupId Instance group ID
      */
     public void setInstanceGroupId(String InstanceGroupId) {
         this.InstanceGroupId = InstanceGroupId;
     }
 
     /**
-     * Get  
-     * @return Status 
+     * Get Status. 
+     * @return Status Status.
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 
-     * @param Status 
+     * Set Status.
+     * @param Status Status.
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Type of the instance group (network). ha-ha group; ro - read-only group; proxy - proxy; singleRo - read-only instance exclusive. 
-     * @return Type Type of the instance group (network). ha-ha group; ro - read-only group; proxy - proxy; singleRo - read-only instance exclusive.
+     * Get Instance group (network) type. ha-ha: HA group; ro: read-only group; proxy: proxy; singleRo: exclusive read-only instance. 
+     * @return Type Instance group (network) type. ha-ha: HA group; ro: read-only group; proxy: proxy; singleRo: exclusive read-only instance.
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Type of the instance group (network). ha-ha group; ro - read-only group; proxy - proxy; singleRo - read-only instance exclusive.
-     * @param Type Type of the instance group (network). ha-ha group; ro - read-only group; proxy - proxy; singleRo - read-only instance exclusive.
+     * Set Instance group (network) type. ha-ha: HA group; ro: read-only group; proxy: proxy; singleRo: exclusive read-only instance.
+     * @param Type Instance group (network) type. ha-ha: HA group; ro: read-only group; proxy: proxy; singleRo: exclusive read-only instance.
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get  
-     * @return UpdatedTime 
+     * Get Update time. 
+     * @return UpdatedTime Update time.
      */
     public String getUpdatedTime() {
         return this.UpdatedTime;
     }
 
     /**
-     * Set 
-     * @param UpdatedTime 
+     * Set Update time.
+     * @param UpdatedTime Update time.
      */
     public void setUpdatedTime(String UpdatedTime) {
         this.UpdatedTime = UpdatedTime;
     }
 
     /**
-     * Get  
-     * @return Vip 
+     * Get Private IP address 
+     * @return Vip Private IP address
      */
     public String getVip() {
         return this.Vip;
     }
 
     /**
-     * Set 
-     * @param Vip 
+     * Set Private IP address
+     * @param Vip Private IP address
      */
     public void setVip(String Vip) {
         this.Vip = Vip;
     }
 
     /**
-     * Get  
-     * @return Vport 
+     * Get Private network port. 
+     * @return Vport Private network port.
      */
     public Long getVport() {
         return this.Vport;
     }
 
     /**
-     * Set 
-     * @param Vport 
+     * Set Private network port.
+     * @param Vport Private network port.
      */
     public void setVport(Long Vport) {
         this.Vport = Vport;
     }
 
     /**
-     * Get  
-     * @return WanDomain 
+     * Get Public network domain name. 
+     * @return WanDomain Public network domain name.
      */
     public String getWanDomain() {
         return this.WanDomain;
     }
 
     /**
-     * Set 
-     * @param WanDomain 
+     * Set Public network domain name.
+     * @param WanDomain Public network domain name.
      */
     public void setWanDomain(String WanDomain) {
         this.WanDomain = WanDomain;
     }
 
     /**
-     * Get  
-     * @return WanIP 
+     * Get Public IP address 
+     * @return WanIP Public IP address
      */
     public String getWanIP() {
         return this.WanIP;
     }
 
     /**
-     * Set 
-     * @param WanIP 
+     * Set Public IP address
+     * @param WanIP Public IP address
      */
     public void setWanIP(String WanIP) {
         this.WanIP = WanIP;
     }
 
     /**
-     * Get  
-     * @return WanPort 
+     * Get External port 
+     * @return WanPort External port
      */
     public Long getWanPort() {
         return this.WanPort;
     }
 
     /**
-     * Set 
-     * @param WanPort 
+     * Set External port
+     * @param WanPort External port
      */
     public void setWanPort(Long WanPort) {
         this.WanPort = WanPort;
     }
 
     /**
-     * Get  
-     * @return WanStatus 
+     * Get Public network status. 
+     * @return WanStatus Public network status.
      */
     public String getWanStatus() {
         return this.WanStatus;
     }
 
     /**
-     * Set 
-     * @param WanStatus 
+     * Set Public network status.
+     * @param WanStatus Public network status.
      */
     public void setWanStatus(String WanStatus) {
         this.WanStatus = WanStatus;
     }
 
     /**
-     * Get  
-     * @return InstanceSet 
+     * Get Instance group information including instances 
+     * @return InstanceSet Instance group information including instances
      */
     public CynosdbInstance [] getInstanceSet() {
         return this.InstanceSet;
     }
 
     /**
-     * Set 
-     * @param InstanceSet 
+     * Set Instance group information including instances
+     * @param InstanceSet Instance group information including instances
      */
     public void setInstanceSet(CynosdbInstance [] InstanceSet) {
         this.InstanceSet = InstanceSet;
@@ -427,80 +427,80 @@ public class CynosdbInstanceGroup extends AbstractModel {
     }
 
     /**
-     * Get Specifies the subnet ID. 
-     * @return UniqSubnetId Specifies the subnet ID.
+     * Get Subnet ID. 
+     * @return UniqSubnetId Subnet ID.
      */
     public String getUniqSubnetId() {
         return this.UniqSubnetId;
     }
 
     /**
-     * Set Specifies the subnet ID.
-     * @param UniqSubnetId Specifies the subnet ID.
+     * Set Subnet ID.
+     * @param UniqSubnetId Subnet ID.
      */
     public void setUniqSubnetId(String UniqSubnetId) {
         this.UniqSubnetId = UniqSubnetId;
     }
 
     /**
-     * Get Recycling IP information. 
-     * @return OldAddrInfo Recycling IP information.
+     * Get Recycling IP information 
+     * @return OldAddrInfo Recycling IP information
      */
     public OldAddrInfo getOldAddrInfo() {
         return this.OldAddrInfo;
     }
 
     /**
-     * Set Recycling IP information.
-     * @param OldAddrInfo Recycling IP information.
+     * Set Recycling IP information
+     * @param OldAddrInfo Recycling IP information
      */
     public void setOldAddrInfo(OldAddrInfo OldAddrInfo) {
         this.OldAddrInfo = OldAddrInfo;
     }
 
     /**
-     * Get  
-     * @return ProcessingTasks 
+     * Get Ongoing task 
+     * @return ProcessingTasks Ongoing task
      */
     public String [] getProcessingTasks() {
         return this.ProcessingTasks;
     }
 
     /**
-     * Set 
-     * @param ProcessingTasks 
+     * Set Ongoing task
+     * @param ProcessingTasks Ongoing task
      */
     public void setProcessingTasks(String [] ProcessingTasks) {
         this.ProcessingTasks = ProcessingTasks;
     }
 
     /**
-     * Get  
-     * @return Tasks 
+     * Get Task list 
+     * @return Tasks Task list
      */
     public ObjectTask [] getTasks() {
         return this.Tasks;
     }
 
     /**
-     * Set 
-     * @param Tasks 
+     * Set Task list
+     * @param Tasks Task list
      */
     public void setTasks(ObjectTask [] Tasks) {
         this.Tasks = Tasks;
     }
 
     /**
-     * Get  
-     * @return NetServiceId 
+     * Get id of the biz_net_service table 
+     * @return NetServiceId id of the biz_net_service table
      */
     public Long getNetServiceId() {
         return this.NetServiceId;
     }
 
     /**
-     * Set 
-     * @param NetServiceId 
+     * Set id of the biz_net_service table
+     * @param NetServiceId id of the biz_net_service table
      */
     public void setNetServiceId(Long NetServiceId) {
         this.NetServiceId = NetServiceId;

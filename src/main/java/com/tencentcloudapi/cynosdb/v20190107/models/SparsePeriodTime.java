@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class SparsePeriodTime extends AbstractModel {
 
     /**
-    * Weekly: List of days of the week, 1-7, 1=Monday, 7=Sunday (Only used for weekly cycle, up to 7).
+    * By week: list of days of the week, 1-7, 1=Monday, 7=Sunday (only for weekly period, up to 7)
     */
     @SerializedName("WeekDays")
     @Expose
     private Long [] WeekDays;
 
     /**
-    * By month: Date list, 1-31 (for monthly cycle only, up to 7)
+    * Monthly: date list, 1-31 (only for monthly cycle, up to 7)
     */
     @SerializedName("Days")
     @Expose
     private Long [] Days;
 
     /**
-    * Yearly: Month-day composite column (Only for yearly cycle, up to 7)
+    * Yearly: list of month-day combinations (only for yearly cycle, up to 7)
     */
     @SerializedName("MonthDays")
     @Expose
     private MonthDay [] MonthDays;
 
     /**
-     * Get Weekly: List of days of the week, 1-7, 1=Monday, 7=Sunday (Only used for weekly cycle, up to 7). 
-     * @return WeekDays Weekly: List of days of the week, 1-7, 1=Monday, 7=Sunday (Only used for weekly cycle, up to 7).
+     * Get By week: list of days of the week, 1-7, 1=Monday, 7=Sunday (only for weekly period, up to 7) 
+     * @return WeekDays By week: list of days of the week, 1-7, 1=Monday, 7=Sunday (only for weekly period, up to 7)
      */
     public Long [] getWeekDays() {
         return this.WeekDays;
     }
 
     /**
-     * Set Weekly: List of days of the week, 1-7, 1=Monday, 7=Sunday (Only used for weekly cycle, up to 7).
-     * @param WeekDays Weekly: List of days of the week, 1-7, 1=Monday, 7=Sunday (Only used for weekly cycle, up to 7).
+     * Set By week: list of days of the week, 1-7, 1=Monday, 7=Sunday (only for weekly period, up to 7)
+     * @param WeekDays By week: list of days of the week, 1-7, 1=Monday, 7=Sunday (only for weekly period, up to 7)
      */
     public void setWeekDays(Long [] WeekDays) {
         this.WeekDays = WeekDays;
     }
 
     /**
-     * Get By month: Date list, 1-31 (for monthly cycle only, up to 7) 
-     * @return Days By month: Date list, 1-31 (for monthly cycle only, up to 7)
+     * Get Monthly: date list, 1-31 (only for monthly cycle, up to 7) 
+     * @return Days Monthly: date list, 1-31 (only for monthly cycle, up to 7)
      */
     public Long [] getDays() {
         return this.Days;
     }
 
     /**
-     * Set By month: Date list, 1-31 (for monthly cycle only, up to 7)
-     * @param Days By month: Date list, 1-31 (for monthly cycle only, up to 7)
+     * Set Monthly: date list, 1-31 (only for monthly cycle, up to 7)
+     * @param Days Monthly: date list, 1-31 (only for monthly cycle, up to 7)
      */
     public void setDays(Long [] Days) {
         this.Days = Days;
     }
 
     /**
-     * Get Yearly: Month-day composite column (Only for yearly cycle, up to 7) 
-     * @return MonthDays Yearly: Month-day composite column (Only for yearly cycle, up to 7)
+     * Get Yearly: list of month-day combinations (only for yearly cycle, up to 7) 
+     * @return MonthDays Yearly: list of month-day combinations (only for yearly cycle, up to 7)
      */
     public MonthDay [] getMonthDays() {
         return this.MonthDays;
     }
 
     /**
-     * Set Yearly: Month-day composite column (Only for yearly cycle, up to 7)
-     * @param MonthDays Yearly: Month-day composite column (Only for yearly cycle, up to 7)
+     * Set Yearly: list of month-day combinations (only for yearly cycle, up to 7)
+     * @param MonthDays Yearly: list of month-day combinations (only for yearly cycle, up to 7)
      */
     public void setMonthDays(MonthDay [] MonthDays) {
         this.MonthDays = MonthDays;

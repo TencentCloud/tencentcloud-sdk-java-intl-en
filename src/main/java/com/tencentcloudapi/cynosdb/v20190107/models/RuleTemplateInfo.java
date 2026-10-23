@@ -38,21 +38,21 @@ public class RuleTemplateInfo extends AbstractModel {
     private String RuleTemplateName;
 
     /**
-    * The rule content.
+    * Rule content.
     */
     @SerializedName("RuleFilters")
     @Expose
     private RuleFilters [] RuleFilters;
 
     /**
-    * Alarm level. valid values: 1 (low risk), 2 (medium risk), 3 (high risk).
+    * Alarm level. Valid values: 1 - Low risk, 2 - Medium risk, 3 - High risk.
     */
     @SerializedName("AlarmLevel")
     @Expose
     private Long AlarmLevel;
 
     /**
-    * Alarm policy. 0 - no alert, 1 - alert.
+    * Alarm policy. Valid values: 0 - Alarm disabled, 1 - Alarm enabled.
     */
     @SerializedName("AlarmPolicy")
     @Expose
@@ -98,48 +98,48 @@ public class RuleTemplateInfo extends AbstractModel {
     }
 
     /**
-     * Get The rule content. 
-     * @return RuleFilters The rule content.
+     * Get Rule content. 
+     * @return RuleFilters Rule content.
      */
     public RuleFilters [] getRuleFilters() {
         return this.RuleFilters;
     }
 
     /**
-     * Set The rule content.
-     * @param RuleFilters The rule content.
+     * Set Rule content.
+     * @param RuleFilters Rule content.
      */
     public void setRuleFilters(RuleFilters [] RuleFilters) {
         this.RuleFilters = RuleFilters;
     }
 
     /**
-     * Get Alarm level. valid values: 1 (low risk), 2 (medium risk), 3 (high risk). 
-     * @return AlarmLevel Alarm level. valid values: 1 (low risk), 2 (medium risk), 3 (high risk).
+     * Get Alarm level. Valid values: 1 - Low risk, 2 - Medium risk, 3 - High risk. 
+     * @return AlarmLevel Alarm level. Valid values: 1 - Low risk, 2 - Medium risk, 3 - High risk.
      */
     public Long getAlarmLevel() {
         return this.AlarmLevel;
     }
 
     /**
-     * Set Alarm level. valid values: 1 (low risk), 2 (medium risk), 3 (high risk).
-     * @param AlarmLevel Alarm level. valid values: 1 (low risk), 2 (medium risk), 3 (high risk).
+     * Set Alarm level. Valid values: 1 - Low risk, 2 - Medium risk, 3 - High risk.
+     * @param AlarmLevel Alarm level. Valid values: 1 - Low risk, 2 - Medium risk, 3 - High risk.
      */
     public void setAlarmLevel(Long AlarmLevel) {
         this.AlarmLevel = AlarmLevel;
     }
 
     /**
-     * Get Alarm policy. 0 - no alert, 1 - alert. 
-     * @return AlarmPolicy Alarm policy. 0 - no alert, 1 - alert.
+     * Get Alarm policy. Valid values: 0 - Alarm disabled, 1 - Alarm enabled. 
+     * @return AlarmPolicy Alarm policy. Valid values: 0 - Alarm disabled, 1 - Alarm enabled.
      */
     public Long getAlarmPolicy() {
         return this.AlarmPolicy;
     }
 
     /**
-     * Set Alarm policy. 0 - no alert, 1 - alert.
-     * @param AlarmPolicy Alarm policy. 0 - no alert, 1 - alert.
+     * Set Alarm policy. Valid values: 0 - Alarm disabled, 1 - Alarm enabled.
+     * @param AlarmPolicy Alarm policy. Valid values: 0 - Alarm disabled, 1 - Alarm enabled.
      */
     public void setAlarmPolicy(Long AlarmPolicy) {
         this.AlarmPolicy = AlarmPolicy;

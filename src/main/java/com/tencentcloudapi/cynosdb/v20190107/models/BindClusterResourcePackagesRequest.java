@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class BindClusterResourcePackagesRequest extends AbstractModel {
 
     /**
-    * The unique ID of a resource pack
+    * Unique ID of the resource package
     */
     @SerializedName("PackageIds")
     @Expose
@@ -38,16 +38,16 @@ public class BindClusterResourcePackagesRequest extends AbstractModel {
     private String ClusterId;
 
     /**
-     * Get The unique ID of a resource pack 
-     * @return PackageIds The unique ID of a resource pack
+     * Get Unique ID of the resource package 
+     * @return PackageIds Unique ID of the resource package
      */
     public String [] getPackageIds() {
         return this.PackageIds;
     }
 
     /**
-     * Set The unique ID of a resource pack
-     * @param PackageIds The unique ID of a resource pack
+     * Set Unique ID of the resource package
+     * @param PackageIds Unique ID of the resource package
      */
     public void setPackageIds(String [] PackageIds) {
         this.PackageIds = PackageIds;

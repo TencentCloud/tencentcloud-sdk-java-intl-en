@@ -31,7 +31,7 @@ public class InstanceCLSDeliveryInfo extends AbstractModel {
     private String InstanceId;
 
     /**
-    * Instance name.
+    * Instance name
 
     */
     @SerializedName("InstanceName")
@@ -39,7 +39,7 @@ public class InstanceCLSDeliveryInfo extends AbstractModel {
     private String InstanceName;
 
     /**
-    * Log topic id.
+    * Log topic id
 
     */
     @SerializedName("TopicId")
@@ -47,14 +47,15 @@ public class InstanceCLSDeliveryInfo extends AbstractModel {
     private String TopicId;
 
     /**
-    * Log topic name.
+    * Log topic name
     */
     @SerializedName("TopicName")
     @Expose
     private String TopicName;
 
     /**
-    * Log set id.
+    * Logset id
+
     */
     @SerializedName("GroupId")
     @Expose
@@ -69,21 +70,23 @@ public class InstanceCLSDeliveryInfo extends AbstractModel {
     private String GroupName;
 
     /**
-    * Log delivery region.
+    * Log delivery region
+
     */
     @SerializedName("Region")
     @Expose
     private String Region;
 
     /**
-    * Delivery status: creating, running, offlining, offlined.
+    * Delivery status. Valid values: `creating`, `running`, `offlining`, `offlined`.
+
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * Log type.
+    * Log type
     */
     @SerializedName("LogType")
     @Expose
@@ -106,9 +109,9 @@ public class InstanceCLSDeliveryInfo extends AbstractModel {
     }
 
     /**
-     * Get Instance name.
+     * Get Instance name
  
-     * @return InstanceName Instance name.
+     * @return InstanceName Instance name
 
      */
     public String getInstanceName() {
@@ -116,9 +119,9 @@ public class InstanceCLSDeliveryInfo extends AbstractModel {
     }
 
     /**
-     * Set Instance name.
+     * Set Instance name
 
-     * @param InstanceName Instance name.
+     * @param InstanceName Instance name
 
      */
     public void setInstanceName(String InstanceName) {
@@ -126,9 +129,9 @@ public class InstanceCLSDeliveryInfo extends AbstractModel {
     }
 
     /**
-     * Get Log topic id.
+     * Get Log topic id
  
-     * @return TopicId Log topic id.
+     * @return TopicId Log topic id
 
      */
     public String getTopicId() {
@@ -136,9 +139,9 @@ public class InstanceCLSDeliveryInfo extends AbstractModel {
     }
 
     /**
-     * Set Log topic id.
+     * Set Log topic id
 
-     * @param TopicId Log topic id.
+     * @param TopicId Log topic id
 
      */
     public void setTopicId(String TopicId) {
@@ -146,32 +149,36 @@ public class InstanceCLSDeliveryInfo extends AbstractModel {
     }
 
     /**
-     * Get Log topic name. 
-     * @return TopicName Log topic name.
+     * Get Log topic name 
+     * @return TopicName Log topic name
      */
     public String getTopicName() {
         return this.TopicName;
     }
 
     /**
-     * Set Log topic name.
-     * @param TopicName Log topic name.
+     * Set Log topic name
+     * @param TopicName Log topic name
      */
     public void setTopicName(String TopicName) {
         this.TopicName = TopicName;
     }
 
     /**
-     * Get Log set id. 
-     * @return GroupId Log set id.
+     * Get Logset id
+ 
+     * @return GroupId Logset id
+
      */
     public String getGroupId() {
         return this.GroupId;
     }
 
     /**
-     * Set Log set id.
-     * @param GroupId Log set id.
+     * Set Logset id
+
+     * @param GroupId Logset id
+
      */
     public void setGroupId(String GroupId) {
         this.GroupId = GroupId;
@@ -198,48 +205,56 @@ public class InstanceCLSDeliveryInfo extends AbstractModel {
     }
 
     /**
-     * Get Log delivery region. 
-     * @return Region Log delivery region.
+     * Get Log delivery region
+ 
+     * @return Region Log delivery region
+
      */
     public String getRegion() {
         return this.Region;
     }
 
     /**
-     * Set Log delivery region.
-     * @param Region Log delivery region.
+     * Set Log delivery region
+
+     * @param Region Log delivery region
+
      */
     public void setRegion(String Region) {
         this.Region = Region;
     }
 
     /**
-     * Get Delivery status: creating, running, offlining, offlined. 
-     * @return Status Delivery status: creating, running, offlining, offlined.
+     * Get Delivery status. Valid values: `creating`, `running`, `offlining`, `offlined`.
+ 
+     * @return Status Delivery status. Valid values: `creating`, `running`, `offlining`, `offlined`.
+
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Delivery status: creating, running, offlining, offlined.
-     * @param Status Delivery status: creating, running, offlining, offlined.
+     * Set Delivery status. Valid values: `creating`, `running`, `offlining`, `offlined`.
+
+     * @param Status Delivery status. Valid values: `creating`, `running`, `offlining`, `offlined`.
+
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Log type. 
-     * @return LogType Log type.
+     * Get Log type 
+     * @return LogType Log type
      */
     public String getLogType() {
         return this.LogType;
     }
 
     /**
-     * Set Log type.
-     * @param LogType Log type.
+     * Set Log type
+     * @param LogType Log type
      */
     public void setLogType(String LogType) {
         this.LogType = LogType;

@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class ModifyInstanceNameRequest extends AbstractModel {
 
     /**
-    * Instance ID
+    * Instance ID.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Instance name
+    * Instance name.
     */
     @SerializedName("InstanceName")
     @Expose
     private String InstanceName;
 
     /**
-     * Get Instance ID 
-     * @return InstanceId Instance ID
+     * Get Instance ID. 
+     * @return InstanceId Instance ID.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID
-     * @param InstanceId Instance ID
+     * Set Instance ID.
+     * @param InstanceId Instance ID.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Instance name 
-     * @return InstanceName Instance name
+     * Get Instance name. 
+     * @return InstanceName Instance name.
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set Instance name
-     * @param InstanceName Instance name
+     * Set Instance name.
+     * @param InstanceName Instance name.
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;

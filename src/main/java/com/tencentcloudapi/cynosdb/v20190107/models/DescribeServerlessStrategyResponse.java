@@ -24,28 +24,28 @@ import java.util.HashMap;
 public class DescribeServerlessStrategyResponse extends AbstractModel {
 
     /**
-    * Specifies how long (in seconds) the auto-pause is triggered when the cpu load is 0.
+    * cpu load duration (seconds) at 0 before auto pause
     */
     @SerializedName("AutoPauseDelay")
     @Expose
     private Long AutoPauseDelay;
 
     /**
-    * Specifies how long (in seconds) the auto-scaling is triggered when the cpu load exceeds the number of cores in the current specifications.
+    * cpu load exceeds the current specification cores. How long (in seconds) does it last before auto-scaling is triggered?
     */
     @SerializedName("AutoScaleUpDelay")
     @Expose
     private Long AutoScaleUpDelay;
 
     /**
-    * Specifies how long (in seconds) the system will wait for the cpu load to be lower than the number of cores in the lower specification before triggering automatic scaling down.
+    * Duration (in seconds) of low cpu load before automatic scaling in is triggered when the load is lower than the core count of the next lower specification.
     */
     @SerializedName("AutoScaleDownDelay")
     @Expose
     private Long AutoScaleDownDelay;
 
     /**
-    * Whether to automatically pause. valid values:.
+    * Whether to auto pause. Possible values:
 yes
 no
     */
@@ -54,21 +54,21 @@ no
     private String AutoPause;
 
     /**
-    * Specifies whether the cluster allows upward scaling. valid values: <li>yes</li><li>no</li>.
+    * Whether the cluster is allowed to scale upward. Optional range: <li>yes</li><li>no</li>
     */
     @SerializedName("AutoScaleUp")
     @Expose
     private String AutoScaleUp;
 
     /**
-    * Whether the cluster is allowed to scale down. valid values: <li>yes</li><li>no</li>.
+    * Whether scale-in is allowed for the cluster. Optional range: <li>yes</li><li>no</li>
     */
     @SerializedName("AutoScaleDown")
     @Expose
     private String AutoScaleDown;
 
     /**
-    * Whether archiving is enabled. Optional range</p><li>yes</li><li>no</li>Default value: yes</p>
+    * Whether archive is enabled. Optional range: <li>yes</li><li>no</li>. Default value: yes
     */
     @SerializedName("AutoArchive")
     @Expose
@@ -82,58 +82,58 @@ no
     private String RequestId;
 
     /**
-     * Get Specifies how long (in seconds) the auto-pause is triggered when the cpu load is 0. 
-     * @return AutoPauseDelay Specifies how long (in seconds) the auto-pause is triggered when the cpu load is 0.
+     * Get cpu load duration (seconds) at 0 before auto pause 
+     * @return AutoPauseDelay cpu load duration (seconds) at 0 before auto pause
      */
     public Long getAutoPauseDelay() {
         return this.AutoPauseDelay;
     }
 
     /**
-     * Set Specifies how long (in seconds) the auto-pause is triggered when the cpu load is 0.
-     * @param AutoPauseDelay Specifies how long (in seconds) the auto-pause is triggered when the cpu load is 0.
+     * Set cpu load duration (seconds) at 0 before auto pause
+     * @param AutoPauseDelay cpu load duration (seconds) at 0 before auto pause
      */
     public void setAutoPauseDelay(Long AutoPauseDelay) {
         this.AutoPauseDelay = AutoPauseDelay;
     }
 
     /**
-     * Get Specifies how long (in seconds) the auto-scaling is triggered when the cpu load exceeds the number of cores in the current specifications. 
-     * @return AutoScaleUpDelay Specifies how long (in seconds) the auto-scaling is triggered when the cpu load exceeds the number of cores in the current specifications.
+     * Get cpu load exceeds the current specification cores. How long (in seconds) does it last before auto-scaling is triggered? 
+     * @return AutoScaleUpDelay cpu load exceeds the current specification cores. How long (in seconds) does it last before auto-scaling is triggered?
      */
     public Long getAutoScaleUpDelay() {
         return this.AutoScaleUpDelay;
     }
 
     /**
-     * Set Specifies how long (in seconds) the auto-scaling is triggered when the cpu load exceeds the number of cores in the current specifications.
-     * @param AutoScaleUpDelay Specifies how long (in seconds) the auto-scaling is triggered when the cpu load exceeds the number of cores in the current specifications.
+     * Set cpu load exceeds the current specification cores. How long (in seconds) does it last before auto-scaling is triggered?
+     * @param AutoScaleUpDelay cpu load exceeds the current specification cores. How long (in seconds) does it last before auto-scaling is triggered?
      */
     public void setAutoScaleUpDelay(Long AutoScaleUpDelay) {
         this.AutoScaleUpDelay = AutoScaleUpDelay;
     }
 
     /**
-     * Get Specifies how long (in seconds) the system will wait for the cpu load to be lower than the number of cores in the lower specification before triggering automatic scaling down. 
-     * @return AutoScaleDownDelay Specifies how long (in seconds) the system will wait for the cpu load to be lower than the number of cores in the lower specification before triggering automatic scaling down.
+     * Get Duration (in seconds) of low cpu load before automatic scaling in is triggered when the load is lower than the core count of the next lower specification. 
+     * @return AutoScaleDownDelay Duration (in seconds) of low cpu load before automatic scaling in is triggered when the load is lower than the core count of the next lower specification.
      */
     public Long getAutoScaleDownDelay() {
         return this.AutoScaleDownDelay;
     }
 
     /**
-     * Set Specifies how long (in seconds) the system will wait for the cpu load to be lower than the number of cores in the lower specification before triggering automatic scaling down.
-     * @param AutoScaleDownDelay Specifies how long (in seconds) the system will wait for the cpu load to be lower than the number of cores in the lower specification before triggering automatic scaling down.
+     * Set Duration (in seconds) of low cpu load before automatic scaling in is triggered when the load is lower than the core count of the next lower specification.
+     * @param AutoScaleDownDelay Duration (in seconds) of low cpu load before automatic scaling in is triggered when the load is lower than the core count of the next lower specification.
      */
     public void setAutoScaleDownDelay(Long AutoScaleDownDelay) {
         this.AutoScaleDownDelay = AutoScaleDownDelay;
     }
 
     /**
-     * Get Whether to automatically pause. valid values:.
+     * Get Whether to auto pause. Possible values:
 yes
 no 
-     * @return AutoPause Whether to automatically pause. valid values:.
+     * @return AutoPause Whether to auto pause. Possible values:
 yes
 no
      */
@@ -142,10 +142,10 @@ no
     }
 
     /**
-     * Set Whether to automatically pause. valid values:.
+     * Set Whether to auto pause. Possible values:
 yes
 no
-     * @param AutoPause Whether to automatically pause. valid values:.
+     * @param AutoPause Whether to auto pause. Possible values:
 yes
 no
      */
@@ -154,48 +154,48 @@ no
     }
 
     /**
-     * Get Specifies whether the cluster allows upward scaling. valid values: <li>yes</li><li>no</li>. 
-     * @return AutoScaleUp Specifies whether the cluster allows upward scaling. valid values: <li>yes</li><li>no</li>.
+     * Get Whether the cluster is allowed to scale upward. Optional range: <li>yes</li><li>no</li> 
+     * @return AutoScaleUp Whether the cluster is allowed to scale upward. Optional range: <li>yes</li><li>no</li>
      */
     public String getAutoScaleUp() {
         return this.AutoScaleUp;
     }
 
     /**
-     * Set Specifies whether the cluster allows upward scaling. valid values: <li>yes</li><li>no</li>.
-     * @param AutoScaleUp Specifies whether the cluster allows upward scaling. valid values: <li>yes</li><li>no</li>.
+     * Set Whether the cluster is allowed to scale upward. Optional range: <li>yes</li><li>no</li>
+     * @param AutoScaleUp Whether the cluster is allowed to scale upward. Optional range: <li>yes</li><li>no</li>
      */
     public void setAutoScaleUp(String AutoScaleUp) {
         this.AutoScaleUp = AutoScaleUp;
     }
 
     /**
-     * Get Whether the cluster is allowed to scale down. valid values: <li>yes</li><li>no</li>. 
-     * @return AutoScaleDown Whether the cluster is allowed to scale down. valid values: <li>yes</li><li>no</li>.
+     * Get Whether scale-in is allowed for the cluster. Optional range: <li>yes</li><li>no</li> 
+     * @return AutoScaleDown Whether scale-in is allowed for the cluster. Optional range: <li>yes</li><li>no</li>
      */
     public String getAutoScaleDown() {
         return this.AutoScaleDown;
     }
 
     /**
-     * Set Whether the cluster is allowed to scale down. valid values: <li>yes</li><li>no</li>.
-     * @param AutoScaleDown Whether the cluster is allowed to scale down. valid values: <li>yes</li><li>no</li>.
+     * Set Whether scale-in is allowed for the cluster. Optional range: <li>yes</li><li>no</li>
+     * @param AutoScaleDown Whether scale-in is allowed for the cluster. Optional range: <li>yes</li><li>no</li>
      */
     public void setAutoScaleDown(String AutoScaleDown) {
         this.AutoScaleDown = AutoScaleDown;
     }
 
     /**
-     * Get Whether archiving is enabled. Optional range</p><li>yes</li><li>no</li>Default value: yes</p> 
-     * @return AutoArchive Whether archiving is enabled. Optional range</p><li>yes</li><li>no</li>Default value: yes</p>
+     * Get Whether archive is enabled. Optional range: <li>yes</li><li>no</li>. Default value: yes 
+     * @return AutoArchive Whether archive is enabled. Optional range: <li>yes</li><li>no</li>. Default value: yes
      */
     public String getAutoArchive() {
         return this.AutoArchive;
     }
 
     /**
-     * Set Whether archiving is enabled. Optional range</p><li>yes</li><li>no</li>Default value: yes</p>
-     * @param AutoArchive Whether archiving is enabled. Optional range</p><li>yes</li><li>no</li>Default value: yes</p>
+     * Set Whether archive is enabled. Optional range: <li>yes</li><li>no</li>. Default value: yes
+     * @param AutoArchive Whether archive is enabled. Optional range: <li>yes</li><li>no</li>. Default value: yes
      */
     public void setAutoArchive(String AutoArchive) {
         this.AutoArchive = AutoArchive;

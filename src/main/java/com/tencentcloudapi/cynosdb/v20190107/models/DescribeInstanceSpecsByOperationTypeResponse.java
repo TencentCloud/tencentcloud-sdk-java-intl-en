@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeInstanceSpecsByOperationTypeResponse extends AbstractModel {
 
     /**
-    * instance specifications
+    * Instance specification information
     */
     @SerializedName("InstanceSpecSet")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeInstanceSpecsByOperationTypeResponse extends AbstractModel 
     private String RequestId;
 
     /**
-     * Get instance specifications 
-     * @return InstanceSpecSet instance specifications
+     * Get Instance specification information 
+     * @return InstanceSpecSet Instance specification information
      */
     public InstanceSpec [] getInstanceSpecSet() {
         return this.InstanceSpecSet;
     }
 
     /**
-     * Set instance specifications
-     * @param InstanceSpecSet instance specifications
+     * Set Instance specification information
+     * @param InstanceSpecSet Instance specification information
      */
     public void setInstanceSpecSet(InstanceSpec [] InstanceSpecSet) {
         this.InstanceSpecSet = InstanceSpecSet;

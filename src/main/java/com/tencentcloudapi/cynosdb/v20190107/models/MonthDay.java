@@ -31,7 +31,7 @@ public class MonthDay extends AbstractModel {
     private Long Month;
 
     /**
-    * date info
+    * Date information
     */
     @SerializedName("Day")
     @Expose
@@ -54,16 +54,16 @@ public class MonthDay extends AbstractModel {
     }
 
     /**
-     * Get date info 
-     * @return Day date info
+     * Get Date information 
+     * @return Day Date information
      */
     public Long getDay() {
         return this.Day;
     }
 
     /**
-     * Set date info
-     * @param Day date info
+     * Set Date information
+     * @param Day Date information
      */
     public void setDay(Long Day) {
         this.Day = Day;

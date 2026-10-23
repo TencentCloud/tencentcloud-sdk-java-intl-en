@@ -24,28 +24,23 @@ import java.util.HashMap;
 public class ModifyRequestHeaderParameters extends AbstractModel {
 
     /**
-    * List of http header setting rules.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+    * HTTP header setting rule list.
     */
     @SerializedName("HeaderActions")
     @Expose
     private HeaderAction [] HeaderActions;
 
     /**
-     * Get List of http header setting rules.
-Note: this field may return null, which indicates a failure to obtain a valid value. 
-     * @return HeaderActions List of http header setting rules.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * Get HTTP header setting rule list. 
+     * @return HeaderActions HTTP header setting rule list.
      */
     public HeaderAction [] getHeaderActions() {
         return this.HeaderActions;
     }
 
     /**
-     * Set List of http header setting rules.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-     * @param HeaderActions List of http header setting rules.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * Set HTTP header setting rule list.
+     * @param HeaderActions HTTP header setting rule list.
      */
     public void setHeaderActions(HeaderAction [] HeaderActions) {
         this.HeaderActions = HeaderActions;

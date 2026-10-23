@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeInstanceParamsResponse extends AbstractModel {
 
     /**
-    * List of instance parameters
+    * Instance parameter list
     */
     @SerializedName("Items")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeInstanceParamsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get List of instance parameters 
-     * @return Items List of instance parameters
+     * Get Instance parameter list 
+     * @return Items Instance parameter list
      */
     public InstanceParamItem [] getItems() {
         return this.Items;
     }
 
     /**
-     * Set List of instance parameters
-     * @param Items List of instance parameters
+     * Set Instance parameter list
+     * @param Items Instance parameter list
      */
     public void setItems(InstanceParamItem [] Items) {
         this.Items = Items;

@@ -38,7 +38,7 @@ public class IsolateLibraDBInstanceRequest extends AbstractModel {
     private String [] InstanceIdList;
 
     /**
-    * Whether to force isolation
+    * Whether to forcibly isolate
     */
     @SerializedName("ForceIsolate")
     @Expose
@@ -52,7 +52,7 @@ public class IsolateLibraDBInstanceRequest extends AbstractModel {
     private Long [] IsolateReasonTypes;
 
     /**
-    * Cause of isolation
+    * Isolation reason
     */
     @SerializedName("IsolateReason")
     @Expose
@@ -91,16 +91,16 @@ public class IsolateLibraDBInstanceRequest extends AbstractModel {
     }
 
     /**
-     * Get Whether to force isolation 
-     * @return ForceIsolate Whether to force isolation
+     * Get Whether to forcibly isolate 
+     * @return ForceIsolate Whether to forcibly isolate
      */
     public Boolean getForceIsolate() {
         return this.ForceIsolate;
     }
 
     /**
-     * Set Whether to force isolation
-     * @param ForceIsolate Whether to force isolation
+     * Set Whether to forcibly isolate
+     * @param ForceIsolate Whether to forcibly isolate
      */
     public void setForceIsolate(Boolean ForceIsolate) {
         this.ForceIsolate = ForceIsolate;
@@ -123,16 +123,16 @@ public class IsolateLibraDBInstanceRequest extends AbstractModel {
     }
 
     /**
-     * Get Cause of isolation 
-     * @return IsolateReason Cause of isolation
+     * Get Isolation reason 
+     * @return IsolateReason Isolation reason
      */
     public String getIsolateReason() {
         return this.IsolateReason;
     }
 
     /**
-     * Set Cause of isolation
-     * @param IsolateReason Cause of isolation
+     * Set Isolation reason
+     * @param IsolateReason Isolation reason
      */
     public void setIsolateReason(String IsolateReason) {
         this.IsolateReason = IsolateReason;

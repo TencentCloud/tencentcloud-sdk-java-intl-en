@@ -24,191 +24,191 @@ import java.util.HashMap;
 public class CLSInfo extends AbstractModel {
 
     /**
-    * Log topic operation: Options are create, reuse. 
-create: Create a new log topic, using TopicName to create the log topic.
-reuse: Use an existing log topic, using TopicId to specify the log topic.
-The combination of using an existing log topic while creating a new logset is not allowed.
+    * Log topic operation. Options: create, reuse.
+Create: Add a log topic. Use TopicName to create a log topic.
+reuse: Use an existing log topic and specify it by TopicId.
+It is not allowed to use a combination of an existing log topic and a new log set.
     */
     @SerializedName("TopicOperation")
     @Expose
     private String TopicOperation;
 
     /**
-    * Logset operation: Options are create, reuse.
-create: Create a new logset, using GroupName to create the logset.
-reuse: Use an existing logset, using GroupId to specify the logset.
-The combination of using an existing log topic while creating a new logset is not allowed.
+    * Logset operation. Options: create, reuse.
+create: add a new log set using GroupName.
+reuse: utilize an existing logset and specify the logset by GroupId.
+It is not allowed to use a combination of an existing log topic and a new log set.
     */
     @SerializedName("GroupOperation")
     @Expose
     private String GroupOperation;
 
     /**
-    * Log delivery region.
+    * Log delivery region
     */
     @SerializedName("Region")
     @Expose
     private String Region;
 
     /**
-    * Log topic ID.
+    * Log topic id
     */
     @SerializedName("TopicId")
     @Expose
     private String TopicId;
 
     /**
-    * Log topic name.
+    * Log topic name
     */
     @SerializedName("TopicName")
     @Expose
     private String TopicName;
 
     /**
-    * Logset ID.
+    * Logset id
     */
     @SerializedName("GroupId")
     @Expose
     private String GroupId;
 
     /**
-    * Logset name.
+    * Log set name.
     */
     @SerializedName("GroupName")
     @Expose
     private String GroupName;
 
     /**
-     * Get Log topic operation: Options are create, reuse. 
-create: Create a new log topic, using TopicName to create the log topic.
-reuse: Use an existing log topic, using TopicId to specify the log topic.
-The combination of using an existing log topic while creating a new logset is not allowed. 
-     * @return TopicOperation Log topic operation: Options are create, reuse. 
-create: Create a new log topic, using TopicName to create the log topic.
-reuse: Use an existing log topic, using TopicId to specify the log topic.
-The combination of using an existing log topic while creating a new logset is not allowed.
+     * Get Log topic operation. Options: create, reuse.
+Create: Add a log topic. Use TopicName to create a log topic.
+reuse: Use an existing log topic and specify it by TopicId.
+It is not allowed to use a combination of an existing log topic and a new log set. 
+     * @return TopicOperation Log topic operation. Options: create, reuse.
+Create: Add a log topic. Use TopicName to create a log topic.
+reuse: Use an existing log topic and specify it by TopicId.
+It is not allowed to use a combination of an existing log topic and a new log set.
      */
     public String getTopicOperation() {
         return this.TopicOperation;
     }
 
     /**
-     * Set Log topic operation: Options are create, reuse. 
-create: Create a new log topic, using TopicName to create the log topic.
-reuse: Use an existing log topic, using TopicId to specify the log topic.
-The combination of using an existing log topic while creating a new logset is not allowed.
-     * @param TopicOperation Log topic operation: Options are create, reuse. 
-create: Create a new log topic, using TopicName to create the log topic.
-reuse: Use an existing log topic, using TopicId to specify the log topic.
-The combination of using an existing log topic while creating a new logset is not allowed.
+     * Set Log topic operation. Options: create, reuse.
+Create: Add a log topic. Use TopicName to create a log topic.
+reuse: Use an existing log topic and specify it by TopicId.
+It is not allowed to use a combination of an existing log topic and a new log set.
+     * @param TopicOperation Log topic operation. Options: create, reuse.
+Create: Add a log topic. Use TopicName to create a log topic.
+reuse: Use an existing log topic and specify it by TopicId.
+It is not allowed to use a combination of an existing log topic and a new log set.
      */
     public void setTopicOperation(String TopicOperation) {
         this.TopicOperation = TopicOperation;
     }
 
     /**
-     * Get Logset operation: Options are create, reuse.
-create: Create a new logset, using GroupName to create the logset.
-reuse: Use an existing logset, using GroupId to specify the logset.
-The combination of using an existing log topic while creating a new logset is not allowed. 
-     * @return GroupOperation Logset operation: Options are create, reuse.
-create: Create a new logset, using GroupName to create the logset.
-reuse: Use an existing logset, using GroupId to specify the logset.
-The combination of using an existing log topic while creating a new logset is not allowed.
+     * Get Logset operation. Options: create, reuse.
+create: add a new log set using GroupName.
+reuse: utilize an existing logset and specify the logset by GroupId.
+It is not allowed to use a combination of an existing log topic and a new log set. 
+     * @return GroupOperation Logset operation. Options: create, reuse.
+create: add a new log set using GroupName.
+reuse: utilize an existing logset and specify the logset by GroupId.
+It is not allowed to use a combination of an existing log topic and a new log set.
      */
     public String getGroupOperation() {
         return this.GroupOperation;
     }
 
     /**
-     * Set Logset operation: Options are create, reuse.
-create: Create a new logset, using GroupName to create the logset.
-reuse: Use an existing logset, using GroupId to specify the logset.
-The combination of using an existing log topic while creating a new logset is not allowed.
-     * @param GroupOperation Logset operation: Options are create, reuse.
-create: Create a new logset, using GroupName to create the logset.
-reuse: Use an existing logset, using GroupId to specify the logset.
-The combination of using an existing log topic while creating a new logset is not allowed.
+     * Set Logset operation. Options: create, reuse.
+create: add a new log set using GroupName.
+reuse: utilize an existing logset and specify the logset by GroupId.
+It is not allowed to use a combination of an existing log topic and a new log set.
+     * @param GroupOperation Logset operation. Options: create, reuse.
+create: add a new log set using GroupName.
+reuse: utilize an existing logset and specify the logset by GroupId.
+It is not allowed to use a combination of an existing log topic and a new log set.
      */
     public void setGroupOperation(String GroupOperation) {
         this.GroupOperation = GroupOperation;
     }
 
     /**
-     * Get Log delivery region. 
-     * @return Region Log delivery region.
+     * Get Log delivery region 
+     * @return Region Log delivery region
      */
     public String getRegion() {
         return this.Region;
     }
 
     /**
-     * Set Log delivery region.
-     * @param Region Log delivery region.
+     * Set Log delivery region
+     * @param Region Log delivery region
      */
     public void setRegion(String Region) {
         this.Region = Region;
     }
 
     /**
-     * Get Log topic ID. 
-     * @return TopicId Log topic ID.
+     * Get Log topic id 
+     * @return TopicId Log topic id
      */
     public String getTopicId() {
         return this.TopicId;
     }
 
     /**
-     * Set Log topic ID.
-     * @param TopicId Log topic ID.
+     * Set Log topic id
+     * @param TopicId Log topic id
      */
     public void setTopicId(String TopicId) {
         this.TopicId = TopicId;
     }
 
     /**
-     * Get Log topic name. 
-     * @return TopicName Log topic name.
+     * Get Log topic name 
+     * @return TopicName Log topic name
      */
     public String getTopicName() {
         return this.TopicName;
     }
 
     /**
-     * Set Log topic name.
-     * @param TopicName Log topic name.
+     * Set Log topic name
+     * @param TopicName Log topic name
      */
     public void setTopicName(String TopicName) {
         this.TopicName = TopicName;
     }
 
     /**
-     * Get Logset ID. 
-     * @return GroupId Logset ID.
+     * Get Logset id 
+     * @return GroupId Logset id
      */
     public String getGroupId() {
         return this.GroupId;
     }
 
     /**
-     * Set Logset ID.
-     * @param GroupId Logset ID.
+     * Set Logset id
+     * @param GroupId Logset id
      */
     public void setGroupId(String GroupId) {
         this.GroupId = GroupId;
     }
 
     /**
-     * Get Logset name. 
-     * @return GroupName Logset name.
+     * Get Log set name. 
+     * @return GroupName Log set name.
      */
     public String getGroupName() {
         return this.GroupName;
     }
 
     /**
-     * Set Logset name.
-     * @param GroupName Logset name.
+     * Set Log set name.
+     * @param GroupName Log set name.
      */
     public void setGroupName(String GroupName) {
         this.GroupName = GroupName;

@@ -24,184 +24,189 @@ import java.util.HashMap;
 public class CreateResourcePackageRequest extends AbstractModel {
 
     /**
-    * Instance type. currently fixed to cynosdb-serverless.
+    * Instance type. Currently fixed to cynosdb-serverless.
     */
     @SerializedName("InstanceType")
     @Expose
     private String InstanceType;
 
     /**
-    * Resource package region of use: chineseMainland - common in the chinese mainland. overseas - universally applicable in hong kong (china), macao (china), taiwan (china), and overseas.
+    * Region of resource package use. chineseMainland: common in the Chinese mainland; overseas: common in Hong Kong (China), Macao (China), Taiwan (China), and overseas regions.
     */
     @SerializedName("PackageRegion")
     @Expose
     private String PackageRegion;
 
     /**
-    * Resource pack type. Valid values: `CCU` (compute resource pack), `DISK` (storage resource pack).
+    * Resource package type. CCU: compute resource package. DISK: storage resource package.
     */
     @SerializedName("PackageType")
     @Expose
     private String PackageType;
 
     /**
-    * Resource pack edition. Valid values: `base` (basic edition), `common` (general edition), `enterprise` (enterprise edition).
+    * Resource pack version
+base: basic version, common: general version, enterprise: Enterprise Edition
     */
     @SerializedName("PackageVersion")
     @Expose
     private String PackageVersion;
 
     /**
-    * Resource package size. Compute resource unit: unit; storage resource: GB.
+    * Package size. Compute resource unit: count. Storage resource: GB.
     */
     @SerializedName("PackageSpec")
     @Expose
     private Float PackageSpec;
 
     /**
-    * Validity period of a resource pack in days
+    * Resource pack validity period. Unit: day.
     */
     @SerializedName("ExpireDay")
     @Expose
     private Long ExpireDay;
 
     /**
-    * Number of the resource packs to be purchased
+    * Number of resource packages to purchase
     */
     @SerializedName("PackageCount")
     @Expose
     private Long PackageCount;
 
     /**
-    * Resource pack name
+    * Resource package name.
     */
     @SerializedName("PackageName")
     @Expose
     private String PackageName;
 
     /**
-     * Get Instance type. currently fixed to cynosdb-serverless. 
-     * @return InstanceType Instance type. currently fixed to cynosdb-serverless.
+     * Get Instance type. Currently fixed to cynosdb-serverless. 
+     * @return InstanceType Instance type. Currently fixed to cynosdb-serverless.
      */
     public String getInstanceType() {
         return this.InstanceType;
     }
 
     /**
-     * Set Instance type. currently fixed to cynosdb-serverless.
-     * @param InstanceType Instance type. currently fixed to cynosdb-serverless.
+     * Set Instance type. Currently fixed to cynosdb-serverless.
+     * @param InstanceType Instance type. Currently fixed to cynosdb-serverless.
      */
     public void setInstanceType(String InstanceType) {
         this.InstanceType = InstanceType;
     }
 
     /**
-     * Get Resource package region of use: chineseMainland - common in the chinese mainland. overseas - universally applicable in hong kong (china), macao (china), taiwan (china), and overseas. 
-     * @return PackageRegion Resource package region of use: chineseMainland - common in the chinese mainland. overseas - universally applicable in hong kong (china), macao (china), taiwan (china), and overseas.
+     * Get Region of resource package use. chineseMainland: common in the Chinese mainland; overseas: common in Hong Kong (China), Macao (China), Taiwan (China), and overseas regions. 
+     * @return PackageRegion Region of resource package use. chineseMainland: common in the Chinese mainland; overseas: common in Hong Kong (China), Macao (China), Taiwan (China), and overseas regions.
      */
     public String getPackageRegion() {
         return this.PackageRegion;
     }
 
     /**
-     * Set Resource package region of use: chineseMainland - common in the chinese mainland. overseas - universally applicable in hong kong (china), macao (china), taiwan (china), and overseas.
-     * @param PackageRegion Resource package region of use: chineseMainland - common in the chinese mainland. overseas - universally applicable in hong kong (china), macao (china), taiwan (china), and overseas.
+     * Set Region of resource package use. chineseMainland: common in the Chinese mainland; overseas: common in Hong Kong (China), Macao (China), Taiwan (China), and overseas regions.
+     * @param PackageRegion Region of resource package use. chineseMainland: common in the Chinese mainland; overseas: common in Hong Kong (China), Macao (China), Taiwan (China), and overseas regions.
      */
     public void setPackageRegion(String PackageRegion) {
         this.PackageRegion = PackageRegion;
     }
 
     /**
-     * Get Resource pack type. Valid values: `CCU` (compute resource pack), `DISK` (storage resource pack). 
-     * @return PackageType Resource pack type. Valid values: `CCU` (compute resource pack), `DISK` (storage resource pack).
+     * Get Resource package type. CCU: compute resource package. DISK: storage resource package. 
+     * @return PackageType Resource package type. CCU: compute resource package. DISK: storage resource package.
      */
     public String getPackageType() {
         return this.PackageType;
     }
 
     /**
-     * Set Resource pack type. Valid values: `CCU` (compute resource pack), `DISK` (storage resource pack).
-     * @param PackageType Resource pack type. Valid values: `CCU` (compute resource pack), `DISK` (storage resource pack).
+     * Set Resource package type. CCU: compute resource package. DISK: storage resource package.
+     * @param PackageType Resource package type. CCU: compute resource package. DISK: storage resource package.
      */
     public void setPackageType(String PackageType) {
         this.PackageType = PackageType;
     }
 
     /**
-     * Get Resource pack edition. Valid values: `base` (basic edition), `common` (general edition), `enterprise` (enterprise edition). 
-     * @return PackageVersion Resource pack edition. Valid values: `base` (basic edition), `common` (general edition), `enterprise` (enterprise edition).
+     * Get Resource pack version
+base: basic version, common: general version, enterprise: Enterprise Edition 
+     * @return PackageVersion Resource pack version
+base: basic version, common: general version, enterprise: Enterprise Edition
      */
     public String getPackageVersion() {
         return this.PackageVersion;
     }
 
     /**
-     * Set Resource pack edition. Valid values: `base` (basic edition), `common` (general edition), `enterprise` (enterprise edition).
-     * @param PackageVersion Resource pack edition. Valid values: `base` (basic edition), `common` (general edition), `enterprise` (enterprise edition).
+     * Set Resource pack version
+base: basic version, common: general version, enterprise: Enterprise Edition
+     * @param PackageVersion Resource pack version
+base: basic version, common: general version, enterprise: Enterprise Edition
      */
     public void setPackageVersion(String PackageVersion) {
         this.PackageVersion = PackageVersion;
     }
 
     /**
-     * Get Resource package size. Compute resource unit: unit; storage resource: GB. 
-     * @return PackageSpec Resource package size. Compute resource unit: unit; storage resource: GB.
+     * Get Package size. Compute resource unit: count. Storage resource: GB. 
+     * @return PackageSpec Package size. Compute resource unit: count. Storage resource: GB.
      */
     public Float getPackageSpec() {
         return this.PackageSpec;
     }
 
     /**
-     * Set Resource package size. Compute resource unit: unit; storage resource: GB.
-     * @param PackageSpec Resource package size. Compute resource unit: unit; storage resource: GB.
+     * Set Package size. Compute resource unit: count. Storage resource: GB.
+     * @param PackageSpec Package size. Compute resource unit: count. Storage resource: GB.
      */
     public void setPackageSpec(Float PackageSpec) {
         this.PackageSpec = PackageSpec;
     }
 
     /**
-     * Get Validity period of a resource pack in days 
-     * @return ExpireDay Validity period of a resource pack in days
+     * Get Resource pack validity period. Unit: day. 
+     * @return ExpireDay Resource pack validity period. Unit: day.
      */
     public Long getExpireDay() {
         return this.ExpireDay;
     }
 
     /**
-     * Set Validity period of a resource pack in days
-     * @param ExpireDay Validity period of a resource pack in days
+     * Set Resource pack validity period. Unit: day.
+     * @param ExpireDay Resource pack validity period. Unit: day.
      */
     public void setExpireDay(Long ExpireDay) {
         this.ExpireDay = ExpireDay;
     }
 
     /**
-     * Get Number of the resource packs to be purchased 
-     * @return PackageCount Number of the resource packs to be purchased
+     * Get Number of resource packages to purchase 
+     * @return PackageCount Number of resource packages to purchase
      */
     public Long getPackageCount() {
         return this.PackageCount;
     }
 
     /**
-     * Set Number of the resource packs to be purchased
-     * @param PackageCount Number of the resource packs to be purchased
+     * Set Number of resource packages to purchase
+     * @param PackageCount Number of resource packages to purchase
      */
     public void setPackageCount(Long PackageCount) {
         this.PackageCount = PackageCount;
     }
 
     /**
-     * Get Resource pack name 
-     * @return PackageName Resource pack name
+     * Get Resource package name. 
+     * @return PackageName Resource package name.
      */
     public String getPackageName() {
         return this.PackageName;
     }
 
     /**
-     * Set Resource pack name
-     * @param PackageName Resource pack name
+     * Set Resource package name.
+     * @param PackageName Resource package name.
      */
     public void setPackageName(String PackageName) {
         this.PackageName = PackageName;

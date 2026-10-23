@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class RollbackProcessInfo extends AbstractModel {
 
     /**
-    * Is it possible to switch vip.
+    * Is it possible to switch vip
     */
     @SerializedName("IsVipSwitchable")
     @Expose
     private Boolean IsVipSwitchable;
 
     /**
-    * The exchangeable time of vip.
+    * vip exchangeable time
     */
     @SerializedName("VipSwitchableTime")
     @Expose
@@ -52,7 +52,7 @@ public class RollbackProcessInfo extends AbstractModel {
     private ExchangeRoGroupInfo [] ExchangeRoGroupInfoList;
 
     /**
-    * Current step.
+    * Details of the current step
     */
     @SerializedName("CurrentStep")
     @Expose
@@ -66,39 +66,39 @@ public class RollbackProcessInfo extends AbstractModel {
     private Long CurrentStepProgress;
 
     /**
-    * Remaining time of the current step.
+    * Remaining time of the current step
     */
     @SerializedName("CurrentStepRemainingTime")
     @Expose
     private String CurrentStepRemainingTime;
 
     /**
-     * Get Is it possible to switch vip. 
-     * @return IsVipSwitchable Is it possible to switch vip.
+     * Get Is it possible to switch vip 
+     * @return IsVipSwitchable Is it possible to switch vip
      */
     public Boolean getIsVipSwitchable() {
         return this.IsVipSwitchable;
     }
 
     /**
-     * Set Is it possible to switch vip.
-     * @param IsVipSwitchable Is it possible to switch vip.
+     * Set Is it possible to switch vip
+     * @param IsVipSwitchable Is it possible to switch vip
      */
     public void setIsVipSwitchable(Boolean IsVipSwitchable) {
         this.IsVipSwitchable = IsVipSwitchable;
     }
 
     /**
-     * Get The exchangeable time of vip. 
-     * @return VipSwitchableTime The exchangeable time of vip.
+     * Get vip exchangeable time 
+     * @return VipSwitchableTime vip exchangeable time
      */
     public String getVipSwitchableTime() {
         return this.VipSwitchableTime;
     }
 
     /**
-     * Set The exchangeable time of vip.
-     * @param VipSwitchableTime The exchangeable time of vip.
+     * Set vip exchangeable time
+     * @param VipSwitchableTime vip exchangeable time
      */
     public void setVipSwitchableTime(String VipSwitchableTime) {
         this.VipSwitchableTime = VipSwitchableTime;
@@ -137,16 +137,16 @@ public class RollbackProcessInfo extends AbstractModel {
     }
 
     /**
-     * Get Current step. 
-     * @return CurrentStep Current step.
+     * Get Details of the current step 
+     * @return CurrentStep Details of the current step
      */
     public String getCurrentStep() {
         return this.CurrentStep;
     }
 
     /**
-     * Set Current step.
-     * @param CurrentStep Current step.
+     * Set Details of the current step
+     * @param CurrentStep Details of the current step
      */
     public void setCurrentStep(String CurrentStep) {
         this.CurrentStep = CurrentStep;
@@ -169,16 +169,16 @@ public class RollbackProcessInfo extends AbstractModel {
     }
 
     /**
-     * Get Remaining time of the current step. 
-     * @return CurrentStepRemainingTime Remaining time of the current step.
+     * Get Remaining time of the current step 
+     * @return CurrentStepRemainingTime Remaining time of the current step
      */
     public String getCurrentStepRemainingTime() {
         return this.CurrentStepRemainingTime;
     }
 
     /**
-     * Set Remaining time of the current step.
-     * @param CurrentStepRemainingTime Remaining time of the current step.
+     * Set Remaining time of the current step
+     * @param CurrentStepRemainingTime Remaining time of the current step
      */
     public void setCurrentStepRemainingTime(String CurrentStepRemainingTime) {
         this.CurrentStepRemainingTime = CurrentStepRemainingTime;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeLibraDBClusterTableMappingRequest extends AbstractModel {
 
     /**
-    * Analysis Cluster ID
+    * Analysis cluster ID
     */
     @SerializedName("ClusterId")
     @Expose
@@ -38,7 +38,7 @@ public class DescribeLibraDBClusterTableMappingRequest extends AbstractModel {
     private String InstanceId;
 
     /**
-    * Node ID
+    * Node ID.
     */
     @SerializedName("NodeId")
     @Expose
@@ -52,7 +52,7 @@ public class DescribeLibraDBClusterTableMappingRequest extends AbstractModel {
     private Long Offset;
 
     /**
-    * Page history limit
+    * Page record limit
     */
     @SerializedName("Limit")
     @Expose
@@ -80,7 +80,7 @@ public class DescribeLibraDBClusterTableMappingRequest extends AbstractModel {
     private String [] StatusList;
 
     /**
-    * Map database name
+    * Map database names
     */
     @SerializedName("MapSchemas")
     @Expose
@@ -94,30 +94,30 @@ public class DescribeLibraDBClusterTableMappingRequest extends AbstractModel {
     private String [] MapTableName;
 
     /**
-    * Query records where the database name is not null
+    * Whether to query records where the mapping database name is not empty
     */
     @SerializedName("MapSchemaNotEmpty")
     @Expose
     private Boolean MapSchemaNotEmpty;
 
     /**
-    * Query records where the mapping table name is not null
+    * Whether to query records where the mapping table name is not empty
     */
     @SerializedName("MapTableNameNotEmpty")
     @Expose
     private Boolean MapTableNameNotEmpty;
 
     /**
-     * Get Analysis Cluster ID 
-     * @return ClusterId Analysis Cluster ID
+     * Get Analysis cluster ID 
+     * @return ClusterId Analysis cluster ID
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set Analysis Cluster ID
-     * @param ClusterId Analysis Cluster ID
+     * Set Analysis cluster ID
+     * @param ClusterId Analysis cluster ID
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
@@ -140,16 +140,16 @@ public class DescribeLibraDBClusterTableMappingRequest extends AbstractModel {
     }
 
     /**
-     * Get Node ID 
-     * @return NodeId Node ID
+     * Get Node ID. 
+     * @return NodeId Node ID.
      */
     public String getNodeId() {
         return this.NodeId;
     }
 
     /**
-     * Set Node ID
-     * @param NodeId Node ID
+     * Set Node ID.
+     * @param NodeId Node ID.
      */
     public void setNodeId(String NodeId) {
         this.NodeId = NodeId;
@@ -172,16 +172,16 @@ public class DescribeLibraDBClusterTableMappingRequest extends AbstractModel {
     }
 
     /**
-     * Get Page history limit 
-     * @return Limit Page history limit
+     * Get Page record limit 
+     * @return Limit Page record limit
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Page history limit
-     * @param Limit Page history limit
+     * Set Page record limit
+     * @param Limit Page record limit
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
@@ -236,16 +236,16 @@ public class DescribeLibraDBClusterTableMappingRequest extends AbstractModel {
     }
 
     /**
-     * Get Map database name 
-     * @return MapSchemas Map database name
+     * Get Map database names 
+     * @return MapSchemas Map database names
      */
     public String [] getMapSchemas() {
         return this.MapSchemas;
     }
 
     /**
-     * Set Map database name
-     * @param MapSchemas Map database name
+     * Set Map database names
+     * @param MapSchemas Map database names
      */
     public void setMapSchemas(String [] MapSchemas) {
         this.MapSchemas = MapSchemas;
@@ -268,32 +268,32 @@ public class DescribeLibraDBClusterTableMappingRequest extends AbstractModel {
     }
 
     /**
-     * Get Query records where the database name is not null 
-     * @return MapSchemaNotEmpty Query records where the database name is not null
+     * Get Whether to query records where the mapping database name is not empty 
+     * @return MapSchemaNotEmpty Whether to query records where the mapping database name is not empty
      */
     public Boolean getMapSchemaNotEmpty() {
         return this.MapSchemaNotEmpty;
     }
 
     /**
-     * Set Query records where the database name is not null
-     * @param MapSchemaNotEmpty Query records where the database name is not null
+     * Set Whether to query records where the mapping database name is not empty
+     * @param MapSchemaNotEmpty Whether to query records where the mapping database name is not empty
      */
     public void setMapSchemaNotEmpty(Boolean MapSchemaNotEmpty) {
         this.MapSchemaNotEmpty = MapSchemaNotEmpty;
     }
 
     /**
-     * Get Query records where the mapping table name is not null 
-     * @return MapTableNameNotEmpty Query records where the mapping table name is not null
+     * Get Whether to query records where the mapping table name is not empty 
+     * @return MapTableNameNotEmpty Whether to query records where the mapping table name is not empty
      */
     public Boolean getMapTableNameNotEmpty() {
         return this.MapTableNameNotEmpty;
     }
 
     /**
-     * Set Query records where the mapping table name is not null
-     * @param MapTableNameNotEmpty Query records where the mapping table name is not null
+     * Set Whether to query records where the mapping table name is not empty
+     * @param MapTableNameNotEmpty Whether to query records where the mapping table name is not empty
      */
     public void setMapTableNameNotEmpty(Boolean MapTableNameNotEmpty) {
         this.MapTableNameNotEmpty = MapTableNameNotEmpty;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeSlaveZonesResponse extends AbstractModel {
 
     /**
-    * Secondary AZ.
+    * Secondary AZ
     */
     @SerializedName("SlaveZones")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeSlaveZonesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Secondary AZ. 
-     * @return SlaveZones Secondary AZ.
+     * Get Secondary AZ 
+     * @return SlaveZones Secondary AZ
      */
     public String [] getSlaveZones() {
         return this.SlaveZones;
     }
 
     /**
-     * Set Secondary AZ.
-     * @param SlaveZones Secondary AZ.
+     * Set Secondary AZ
+     * @param SlaveZones Secondary AZ
      */
     public void setSlaveZones(String [] SlaveZones) {
         this.SlaveZones = SlaveZones;

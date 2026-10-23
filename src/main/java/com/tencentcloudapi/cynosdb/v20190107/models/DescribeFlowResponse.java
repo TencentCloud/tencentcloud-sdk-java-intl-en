@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeFlowResponse extends AbstractModel {
 
     /**
-    * Task flow status. Valid values: `0` (succeeded), `1` (failed), `2` (Processing).
+    * Task flow status. 0: successful, 1: failed, 2: processing
     */
     @SerializedName("Status")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeFlowResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Task flow status. Valid values: `0` (succeeded), `1` (failed), `2` (Processing). 
-     * @return Status Task flow status. Valid values: `0` (succeeded), `1` (failed), `2` (Processing).
+     * Get Task flow status. 0: successful, 1: failed, 2: processing 
+     * @return Status Task flow status. 0: successful, 1: failed, 2: processing
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Task flow status. Valid values: `0` (succeeded), `1` (failed), `2` (Processing).
-     * @param Status Task flow status. Valid values: `0` (succeeded), `1` (failed), `2` (Processing).
+     * Set Task flow status. 0: successful, 1: failed, 2: processing
+     * @param Status Task flow status. 0: successful, 1: failed, 2: processing
      */
     public void setStatus(Long Status) {
         this.Status = Status;

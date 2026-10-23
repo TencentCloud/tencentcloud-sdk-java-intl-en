@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class BinlogRegionInfo extends AbstractModel {
 
     /**
-    * <p>Backup region</p>
+    * <p>Backup region.</p>
     */
     @SerializedName("BackupRegion")
     @Expose
@@ -38,16 +38,16 @@ public class BinlogRegionInfo extends AbstractModel {
     private Long BackupId;
 
     /**
-     * Get <p>Backup region</p> 
-     * @return BackupRegion <p>Backup region</p>
+     * Get <p>Backup region.</p> 
+     * @return BackupRegion <p>Backup region.</p>
      */
     public String getBackupRegion() {
         return this.BackupRegion;
     }
 
     /**
-     * Set <p>Backup region</p>
-     * @param BackupRegion <p>Backup region</p>
+     * Set <p>Backup region.</p>
+     * @param BackupRegion <p>Backup region.</p>
      */
     public void setBackupRegion(String BackupRegion) {
         this.BackupRegion = BackupRegion;

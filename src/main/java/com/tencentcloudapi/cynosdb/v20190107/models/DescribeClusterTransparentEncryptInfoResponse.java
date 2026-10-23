@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeClusterTransparentEncryptInfoResponse extends AbstractModel {
 
     /**
-    * Encryption key id.
+    * Encryption key id
     */
     @SerializedName("KeyId")
     @Expose
     private String KeyId;
 
     /**
-    * Encryption key region.
+    * Encryption key region
 
     */
     @SerializedName("KeyRegion")
@@ -46,7 +46,7 @@ public class DescribeClusterTransparentEncryptInfoResponse extends AbstractModel
     private String KeyType;
 
     /**
-    * To be enabled global encryption
+    * Whether global encryption is enabled
     */
     @SerializedName("IsOpenGlobalEncryption")
     @Expose
@@ -60,25 +60,25 @@ public class DescribeClusterTransparentEncryptInfoResponse extends AbstractModel
     private String RequestId;
 
     /**
-     * Get Encryption key id. 
-     * @return KeyId Encryption key id.
+     * Get Encryption key id 
+     * @return KeyId Encryption key id
      */
     public String getKeyId() {
         return this.KeyId;
     }
 
     /**
-     * Set Encryption key id.
-     * @param KeyId Encryption key id.
+     * Set Encryption key id
+     * @param KeyId Encryption key id
      */
     public void setKeyId(String KeyId) {
         this.KeyId = KeyId;
     }
 
     /**
-     * Get Encryption key region.
+     * Get Encryption key region
  
-     * @return KeyRegion Encryption key region.
+     * @return KeyRegion Encryption key region
 
      */
     public String getKeyRegion() {
@@ -86,9 +86,9 @@ public class DescribeClusterTransparentEncryptInfoResponse extends AbstractModel
     }
 
     /**
-     * Set Encryption key region.
+     * Set Encryption key region
 
-     * @param KeyRegion Encryption key region.
+     * @param KeyRegion Encryption key region
 
      */
     public void setKeyRegion(String KeyRegion) {
@@ -112,16 +112,16 @@ public class DescribeClusterTransparentEncryptInfoResponse extends AbstractModel
     }
 
     /**
-     * Get To be enabled global encryption 
-     * @return IsOpenGlobalEncryption To be enabled global encryption
+     * Get Whether global encryption is enabled 
+     * @return IsOpenGlobalEncryption Whether global encryption is enabled
      */
     public Boolean getIsOpenGlobalEncryption() {
         return this.IsOpenGlobalEncryption;
     }
 
     /**
-     * Set To be enabled global encryption
-     * @param IsOpenGlobalEncryption To be enabled global encryption
+     * Set Whether global encryption is enabled
+     * @param IsOpenGlobalEncryption Whether global encryption is enabled
      */
     public void setIsOpenGlobalEncryption(Boolean IsOpenGlobalEncryption) {
         this.IsOpenGlobalEncryption = IsOpenGlobalEncryption;

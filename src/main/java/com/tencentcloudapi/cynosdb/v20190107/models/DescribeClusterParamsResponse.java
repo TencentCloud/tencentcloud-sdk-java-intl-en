@@ -31,7 +31,7 @@ public class DescribeClusterParamsResponse extends AbstractModel {
     private Long TotalCount;
 
     /**
-    * Instance parameter list.
+    * Instance parameter list
     */
     @SerializedName("Items")
     @Expose
@@ -61,16 +61,16 @@ public class DescribeClusterParamsResponse extends AbstractModel {
     }
 
     /**
-     * Get Instance parameter list. 
-     * @return Items Instance parameter list.
+     * Get Instance parameter list 
+     * @return Items Instance parameter list
      */
     public ParamInfo [] getItems() {
         return this.Items;
     }
 
     /**
-     * Set Instance parameter list.
-     * @param Items Instance parameter list.
+     * Set Instance parameter list
+     * @param Items Instance parameter list
      */
     public void setItems(ParamInfo [] Items) {
         this.Items = Items;

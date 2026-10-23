@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeProxySpecsResponse extends AbstractModel {
 
     /**
-    * List of database proxyspecifications
+    * List of database proxy specifications
     */
     @SerializedName("ProxySpecs")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeProxySpecsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get List of database proxyspecifications 
-     * @return ProxySpecs List of database proxyspecifications
+     * Get List of database proxy specifications 
+     * @return ProxySpecs List of database proxy specifications
      */
     public ProxySpec [] getProxySpecs() {
         return this.ProxySpecs;
     }
 
     /**
-     * Set List of database proxyspecifications
-     * @param ProxySpecs List of database proxyspecifications
+     * Set List of database proxy specifications
+     * @param ProxySpecs List of database proxy specifications
      */
     public void setProxySpecs(ProxySpec [] ProxySpecs) {
         this.ProxySpecs = ProxySpecs;

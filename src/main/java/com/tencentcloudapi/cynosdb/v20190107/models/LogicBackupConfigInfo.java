@@ -31,21 +31,21 @@ public class LogicBackupConfigInfo extends AbstractModel {
     private String LogicBackupEnable;
 
     /**
-    * <p>Automatic logic backup start time</p>
+    * <p>Start time of automatic logical backup</p>
     */
     @SerializedName("LogicBackupTimeBeg")
     @Expose
     private Long LogicBackupTimeBeg;
 
     /**
-    * <p>Automated logic backup end time</p>
+    * <p>Auto logic backup end time</p>
     */
     @SerializedName("LogicBackupTimeEnd")
     @Expose
     private Long LogicBackupTimeEnd;
 
     /**
-    * <p>Automatic logical backup retention time<br>Unit: second</p>
+    * <p>Automated logic backup retention time<br>Unit: seconds</p>
     */
     @SerializedName("LogicReserveDuration")
     @Expose
@@ -73,7 +73,7 @@ public class LogicBackupConfigInfo extends AbstractModel {
     private CreateBackupVaultItem [] AutoCopyVaults;
 
     /**
-    * <p>Day</p><p>Unit: Cross-regional logical backup retention time</p>
+    * <p>Day</p><p>Unit: cross-regional logical backup retention time</p>
     */
     @SerializedName("LogicCrossRegionSaveDays")
     @Expose
@@ -96,48 +96,48 @@ public class LogicBackupConfigInfo extends AbstractModel {
     }
 
     /**
-     * Get <p>Automatic logic backup start time</p> 
-     * @return LogicBackupTimeBeg <p>Automatic logic backup start time</p>
+     * Get <p>Start time of automatic logical backup</p> 
+     * @return LogicBackupTimeBeg <p>Start time of automatic logical backup</p>
      */
     public Long getLogicBackupTimeBeg() {
         return this.LogicBackupTimeBeg;
     }
 
     /**
-     * Set <p>Automatic logic backup start time</p>
-     * @param LogicBackupTimeBeg <p>Automatic logic backup start time</p>
+     * Set <p>Start time of automatic logical backup</p>
+     * @param LogicBackupTimeBeg <p>Start time of automatic logical backup</p>
      */
     public void setLogicBackupTimeBeg(Long LogicBackupTimeBeg) {
         this.LogicBackupTimeBeg = LogicBackupTimeBeg;
     }
 
     /**
-     * Get <p>Automated logic backup end time</p> 
-     * @return LogicBackupTimeEnd <p>Automated logic backup end time</p>
+     * Get <p>Auto logic backup end time</p> 
+     * @return LogicBackupTimeEnd <p>Auto logic backup end time</p>
      */
     public Long getLogicBackupTimeEnd() {
         return this.LogicBackupTimeEnd;
     }
 
     /**
-     * Set <p>Automated logic backup end time</p>
-     * @param LogicBackupTimeEnd <p>Automated logic backup end time</p>
+     * Set <p>Auto logic backup end time</p>
+     * @param LogicBackupTimeEnd <p>Auto logic backup end time</p>
      */
     public void setLogicBackupTimeEnd(Long LogicBackupTimeEnd) {
         this.LogicBackupTimeEnd = LogicBackupTimeEnd;
     }
 
     /**
-     * Get <p>Automatic logical backup retention time<br>Unit: second</p> 
-     * @return LogicReserveDuration <p>Automatic logical backup retention time<br>Unit: second</p>
+     * Get <p>Automated logic backup retention time<br>Unit: seconds</p> 
+     * @return LogicReserveDuration <p>Automated logic backup retention time<br>Unit: seconds</p>
      */
     public Long getLogicReserveDuration() {
         return this.LogicReserveDuration;
     }
 
     /**
-     * Set <p>Automatic logical backup retention time<br>Unit: second</p>
-     * @param LogicReserveDuration <p>Automatic logical backup retention time<br>Unit: second</p>
+     * Set <p>Automated logic backup retention time<br>Unit: seconds</p>
+     * @param LogicReserveDuration <p>Automated logic backup retention time<br>Unit: seconds</p>
      */
     public void setLogicReserveDuration(Long LogicReserveDuration) {
         this.LogicReserveDuration = LogicReserveDuration;
@@ -192,16 +192,16 @@ public class LogicBackupConfigInfo extends AbstractModel {
     }
 
     /**
-     * Get <p>Day</p><p>Unit: Cross-regional logical backup retention time</p> 
-     * @return LogicCrossRegionSaveDays <p>Day</p><p>Unit: Cross-regional logical backup retention time</p>
+     * Get <p>Day</p><p>Unit: cross-regional logical backup retention time</p> 
+     * @return LogicCrossRegionSaveDays <p>Day</p><p>Unit: cross-regional logical backup retention time</p>
      */
     public Long getLogicCrossRegionSaveDays() {
         return this.LogicCrossRegionSaveDays;
     }
 
     /**
-     * Set <p>Day</p><p>Unit: Cross-regional logical backup retention time</p>
-     * @param LogicCrossRegionSaveDays <p>Day</p><p>Unit: Cross-regional logical backup retention time</p>
+     * Set <p>Day</p><p>Unit: cross-regional logical backup retention time</p>
+     * @param LogicCrossRegionSaveDays <p>Day</p><p>Unit: cross-regional logical backup retention time</p>
      */
     public void setLogicCrossRegionSaveDays(Long LogicCrossRegionSaveDays) {
         this.LogicCrossRegionSaveDays = LogicCrossRegionSaveDays;

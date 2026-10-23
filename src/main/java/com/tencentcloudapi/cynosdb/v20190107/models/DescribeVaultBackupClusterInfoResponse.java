@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeVaultBackupClusterInfoResponse extends AbstractModel {
 
     /**
-    * Safe info
+    * Vault information
     */
     @SerializedName("ClusterInfos")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeVaultBackupClusterInfoResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Safe info 
-     * @return ClusterInfos Safe info
+     * Get Vault information 
+     * @return ClusterInfos Vault information
      */
     public DescribeVaultBackupClusterInfo [] getClusterInfos() {
         return this.ClusterInfos;
     }
 
     /**
-     * Set Safe info
-     * @param ClusterInfos Safe info
+     * Set Vault information
+     * @param ClusterInfos Vault information
      */
     public void setClusterInfos(DescribeVaultBackupClusterInfo [] ClusterInfos) {
         this.ClusterInfos = ClusterInfos;

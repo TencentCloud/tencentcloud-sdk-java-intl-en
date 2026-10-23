@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class SearchClusterTablesResponse extends AbstractModel {
 
     /**
-    * Data table list.
+    * Data table list
     */
     @SerializedName("Tables")
     @Expose
@@ -38,16 +38,16 @@ public class SearchClusterTablesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Data table list. 
-     * @return Tables Data table list.
+     * Get Data table list 
+     * @return Tables Data table list
      */
     public DatabaseTables [] getTables() {
         return this.Tables;
     }
 
     /**
-     * Set Data table list.
-     * @param Tables Data table list.
+     * Set Data table list
+     * @param Tables Data table list
      */
     public void setTables(DatabaseTables [] Tables) {
         this.Tables = Tables;

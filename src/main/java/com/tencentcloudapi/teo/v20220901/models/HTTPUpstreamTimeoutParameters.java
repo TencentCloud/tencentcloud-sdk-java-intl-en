@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class HTTPUpstreamTimeoutParameters extends AbstractModel {
 
     /**
-    * HTTP response timeout in seconds. value range: 5–600.
+    * <p>HTTP response timeout.</p><p>Value range: [5, 600]</p><p>Unit: seconds</p><p>Default value: 15</p>
     */
     @SerializedName("ResponseTimeout")
     @Expose
     private Long ResponseTimeout;
 
     /**
-     * Get HTTP response timeout in seconds. value range: 5–600. 
-     * @return ResponseTimeout HTTP response timeout in seconds. value range: 5–600.
+     * Get <p>HTTP response timeout.</p><p>Value range: [5, 600]</p><p>Unit: seconds</p><p>Default value: 15</p> 
+     * @return ResponseTimeout <p>HTTP response timeout.</p><p>Value range: [5, 600]</p><p>Unit: seconds</p><p>Default value: 15</p>
      */
     public Long getResponseTimeout() {
         return this.ResponseTimeout;
     }
 
     /**
-     * Set HTTP response timeout in seconds. value range: 5–600.
-     * @param ResponseTimeout HTTP response timeout in seconds. value range: 5–600.
+     * Set <p>HTTP response timeout.</p><p>Value range: [5, 600]</p><p>Unit: seconds</p><p>Default value: 15</p>
+     * @param ResponseTimeout <p>HTTP response timeout.</p><p>Value range: [5, 600]</p><p>Unit: seconds</p><p>Default value: 15</p>
      */
     public void setResponseTimeout(Long ResponseTimeout) {
         this.ResponseTimeout = ResponseTimeout;

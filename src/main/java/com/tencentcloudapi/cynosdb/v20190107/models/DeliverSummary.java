@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class DeliverSummary extends AbstractModel {
 
     /**
-    * Select the delivery type, storage class, message channel.
+    * Delivery type. Valid values: `store` (storage class), `mq` (message channel).
     */
     @SerializedName("DeliverType")
     @Expose
     private String DeliverType;
 
     /**
-    * Specifies the delivery subtype: cls, ckafka.
+    * Delivery subtype: cls, ckafka.
     */
     @SerializedName("DeliverSubType")
     @Expose
     private String DeliverSubType;
 
     /**
-    * Sender.
+    * Submitter
     */
     @SerializedName("DeliverConsumer")
     @Expose
     private String DeliverConsumer;
 
     /**
-    * Specifies the name of the sender.
+    * Submitter name
     */
     @SerializedName("DeliverConsumerName")
     @Expose
     private String DeliverConsumerName;
 
     /**
-    * Exception error in delivery
+    * Submission exception error
     */
     @SerializedName("DeliverError")
     @Expose
     private String DeliverError;
 
     /**
-     * Get Select the delivery type, storage class, message channel. 
-     * @return DeliverType Select the delivery type, storage class, message channel.
+     * Get Delivery type. Valid values: `store` (storage class), `mq` (message channel). 
+     * @return DeliverType Delivery type. Valid values: `store` (storage class), `mq` (message channel).
      */
     public String getDeliverType() {
         return this.DeliverType;
     }
 
     /**
-     * Set Select the delivery type, storage class, message channel.
-     * @param DeliverType Select the delivery type, storage class, message channel.
+     * Set Delivery type. Valid values: `store` (storage class), `mq` (message channel).
+     * @param DeliverType Delivery type. Valid values: `store` (storage class), `mq` (message channel).
      */
     public void setDeliverType(String DeliverType) {
         this.DeliverType = DeliverType;
     }
 
     /**
-     * Get Specifies the delivery subtype: cls, ckafka. 
-     * @return DeliverSubType Specifies the delivery subtype: cls, ckafka.
+     * Get Delivery subtype: cls, ckafka. 
+     * @return DeliverSubType Delivery subtype: cls, ckafka.
      */
     public String getDeliverSubType() {
         return this.DeliverSubType;
     }
 
     /**
-     * Set Specifies the delivery subtype: cls, ckafka.
-     * @param DeliverSubType Specifies the delivery subtype: cls, ckafka.
+     * Set Delivery subtype: cls, ckafka.
+     * @param DeliverSubType Delivery subtype: cls, ckafka.
      */
     public void setDeliverSubType(String DeliverSubType) {
         this.DeliverSubType = DeliverSubType;
     }
 
     /**
-     * Get Sender. 
-     * @return DeliverConsumer Sender.
+     * Get Submitter 
+     * @return DeliverConsumer Submitter
      */
     public String getDeliverConsumer() {
         return this.DeliverConsumer;
     }
 
     /**
-     * Set Sender.
-     * @param DeliverConsumer Sender.
+     * Set Submitter
+     * @param DeliverConsumer Submitter
      */
     public void setDeliverConsumer(String DeliverConsumer) {
         this.DeliverConsumer = DeliverConsumer;
     }
 
     /**
-     * Get Specifies the name of the sender. 
-     * @return DeliverConsumerName Specifies the name of the sender.
+     * Get Submitter name 
+     * @return DeliverConsumerName Submitter name
      */
     public String getDeliverConsumerName() {
         return this.DeliverConsumerName;
     }
 
     /**
-     * Set Specifies the name of the sender.
-     * @param DeliverConsumerName Specifies the name of the sender.
+     * Set Submitter name
+     * @param DeliverConsumerName Submitter name
      */
     public void setDeliverConsumerName(String DeliverConsumerName) {
         this.DeliverConsumerName = DeliverConsumerName;
     }
 
     /**
-     * Get Exception error in delivery 
-     * @return DeliverError Exception error in delivery
+     * Get Submission exception error 
+     * @return DeliverError Submission exception error
      */
     public String getDeliverError() {
         return this.DeliverError;
     }
 
     /**
-     * Set Exception error in delivery
-     * @param DeliverError Exception error in delivery
+     * Set Submission exception error
+     * @param DeliverError Submission exception error
      */
     public void setDeliverError(String DeliverError) {
         this.DeliverError = DeliverError;

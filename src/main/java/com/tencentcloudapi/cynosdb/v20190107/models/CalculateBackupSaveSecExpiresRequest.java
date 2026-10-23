@@ -31,35 +31,35 @@ public class CalculateBackupSaveSecExpiresRequest extends AbstractModel {
     private String VaultId;
 
     /**
-    * Backup retention period (seconds). Must be greater than 0.
+    * Backup retention period (in seconds). Must be greater than 0.
     */
     @SerializedName("BackupSaveSeconds")
     @Expose
     private Long BackupSaveSeconds;
 
     /**
-    * Number of items per page, range (0,100], default 10
+    * Number of items per page. Value range: (0,100]. Default: 10.
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * Offset. Range: [0,INF). Default is 0
+    * Offset. Value range: [0, INF). Default value: 0.
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * Sorting field. Available values: VaultId, VaultName, BackupSaveSeconds, LockedTime, CreateTime, UpdateTime. Default: endTime.
+    * Sorting field. Available values: VaultId, VaultName, BackupSaveSeconds, LockedTime, CreateTime, UpdateTime. Default value: endTime.
     */
     @SerializedName("OrderBy")
     @Expose
     private String OrderBy;
 
     /**
-    * Sorting method, available values: desc, asc, DESC, ASC, default desc
+    * Sorting method. Available values: desc, asc, DESC, ASC. Default value: desc.
     */
     @SerializedName("OrderByType")
     @Expose
@@ -82,80 +82,80 @@ public class CalculateBackupSaveSecExpiresRequest extends AbstractModel {
     }
 
     /**
-     * Get Backup retention period (seconds). Must be greater than 0. 
-     * @return BackupSaveSeconds Backup retention period (seconds). Must be greater than 0.
+     * Get Backup retention period (in seconds). Must be greater than 0. 
+     * @return BackupSaveSeconds Backup retention period (in seconds). Must be greater than 0.
      */
     public Long getBackupSaveSeconds() {
         return this.BackupSaveSeconds;
     }
 
     /**
-     * Set Backup retention period (seconds). Must be greater than 0.
-     * @param BackupSaveSeconds Backup retention period (seconds). Must be greater than 0.
+     * Set Backup retention period (in seconds). Must be greater than 0.
+     * @param BackupSaveSeconds Backup retention period (in seconds). Must be greater than 0.
      */
     public void setBackupSaveSeconds(Long BackupSaveSeconds) {
         this.BackupSaveSeconds = BackupSaveSeconds;
     }
 
     /**
-     * Get Number of items per page, range (0,100], default 10 
-     * @return Limit Number of items per page, range (0,100], default 10
+     * Get Number of items per page. Value range: (0,100]. Default: 10. 
+     * @return Limit Number of items per page. Value range: (0,100]. Default: 10.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Number of items per page, range (0,100], default 10
-     * @param Limit Number of items per page, range (0,100], default 10
+     * Set Number of items per page. Value range: (0,100]. Default: 10.
+     * @param Limit Number of items per page. Value range: (0,100]. Default: 10.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get Offset. Range: [0,INF). Default is 0 
-     * @return Offset Offset. Range: [0,INF). Default is 0
+     * Get Offset. Value range: [0, INF). Default value: 0. 
+     * @return Offset Offset. Value range: [0, INF). Default value: 0.
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Offset. Range: [0,INF). Default is 0
-     * @param Offset Offset. Range: [0,INF). Default is 0
+     * Set Offset. Value range: [0, INF). Default value: 0.
+     * @param Offset Offset. Value range: [0, INF). Default value: 0.
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get Sorting field. Available values: VaultId, VaultName, BackupSaveSeconds, LockedTime, CreateTime, UpdateTime. Default: endTime. 
-     * @return OrderBy Sorting field. Available values: VaultId, VaultName, BackupSaveSeconds, LockedTime, CreateTime, UpdateTime. Default: endTime.
+     * Get Sorting field. Available values: VaultId, VaultName, BackupSaveSeconds, LockedTime, CreateTime, UpdateTime. Default value: endTime. 
+     * @return OrderBy Sorting field. Available values: VaultId, VaultName, BackupSaveSeconds, LockedTime, CreateTime, UpdateTime. Default value: endTime.
      */
     public String getOrderBy() {
         return this.OrderBy;
     }
 
     /**
-     * Set Sorting field. Available values: VaultId, VaultName, BackupSaveSeconds, LockedTime, CreateTime, UpdateTime. Default: endTime.
-     * @param OrderBy Sorting field. Available values: VaultId, VaultName, BackupSaveSeconds, LockedTime, CreateTime, UpdateTime. Default: endTime.
+     * Set Sorting field. Available values: VaultId, VaultName, BackupSaveSeconds, LockedTime, CreateTime, UpdateTime. Default value: endTime.
+     * @param OrderBy Sorting field. Available values: VaultId, VaultName, BackupSaveSeconds, LockedTime, CreateTime, UpdateTime. Default value: endTime.
      */
     public void setOrderBy(String OrderBy) {
         this.OrderBy = OrderBy;
     }
 
     /**
-     * Get Sorting method, available values: desc, asc, DESC, ASC, default desc 
-     * @return OrderByType Sorting method, available values: desc, asc, DESC, ASC, default desc
+     * Get Sorting method. Available values: desc, asc, DESC, ASC. Default value: desc. 
+     * @return OrderByType Sorting method. Available values: desc, asc, DESC, ASC. Default value: desc.
      */
     public String getOrderByType() {
         return this.OrderByType;
     }
 
     /**
-     * Set Sorting method, available values: desc, asc, DESC, ASC, default desc
-     * @param OrderByType Sorting method, available values: desc, asc, DESC, ASC, default desc
+     * Set Sorting method. Available values: desc, asc, DESC, ASC. Default value: desc.
+     * @param OrderByType Sorting method. Available values: desc, asc, DESC, ASC. Default value: desc.
      */
     public void setOrderByType(String OrderByType) {
         this.OrderByType = OrderByType;

@@ -45,35 +45,35 @@ public class InstanceInitInfo extends AbstractModel {
     private String InstanceType;
 
     /**
-    * <p>Number of instances, range [1,15]</p>
+    * <p>Number of instances. Value range: [1,15]</p>
     */
     @SerializedName("InstanceCount")
     @Expose
     private Long InstanceCount;
 
     /**
-    * <p>Minimum count of Serverless instance, range [1,15]</p>
+    * <p>Minimum number of Serverless instances. Value range: [1,15]</p>
     */
     @SerializedName("MinRoCount")
     @Expose
     private Long MinRoCount;
 
     /**
-    * <p>Maximum count of Serverless instances, range [1,15]</p>
+    * <p>Maximum count of Serverless instances, ranging from 1 to 15</p>
     */
     @SerializedName("MaxRoCount")
     @Expose
     private Long MaxRoCount;
 
     /**
-    * <p>Minimum specification of Serverless instance</p>
+    * <p>Minimum specification of a Serverless instance</p>
     */
     @SerializedName("MinRoCpu")
     @Expose
     private Float MinRoCpu;
 
     /**
-    * <p>Maximum specification of Serverless instance</p>
+    * <p>Maximum specification of a Serverless instance</p>
     */
     @SerializedName("MaxRoCpu")
     @Expose
@@ -135,80 +135,80 @@ public class InstanceInitInfo extends AbstractModel {
     }
 
     /**
-     * Get <p>Number of instances, range [1,15]</p> 
-     * @return InstanceCount <p>Number of instances, range [1,15]</p>
+     * Get <p>Number of instances. Value range: [1,15]</p> 
+     * @return InstanceCount <p>Number of instances. Value range: [1,15]</p>
      */
     public Long getInstanceCount() {
         return this.InstanceCount;
     }
 
     /**
-     * Set <p>Number of instances, range [1,15]</p>
-     * @param InstanceCount <p>Number of instances, range [1,15]</p>
+     * Set <p>Number of instances. Value range: [1,15]</p>
+     * @param InstanceCount <p>Number of instances. Value range: [1,15]</p>
      */
     public void setInstanceCount(Long InstanceCount) {
         this.InstanceCount = InstanceCount;
     }
 
     /**
-     * Get <p>Minimum count of Serverless instance, range [1,15]</p> 
-     * @return MinRoCount <p>Minimum count of Serverless instance, range [1,15]</p>
+     * Get <p>Minimum number of Serverless instances. Value range: [1,15]</p> 
+     * @return MinRoCount <p>Minimum number of Serverless instances. Value range: [1,15]</p>
      */
     public Long getMinRoCount() {
         return this.MinRoCount;
     }
 
     /**
-     * Set <p>Minimum count of Serverless instance, range [1,15]</p>
-     * @param MinRoCount <p>Minimum count of Serverless instance, range [1,15]</p>
+     * Set <p>Minimum number of Serverless instances. Value range: [1,15]</p>
+     * @param MinRoCount <p>Minimum number of Serverless instances. Value range: [1,15]</p>
      */
     public void setMinRoCount(Long MinRoCount) {
         this.MinRoCount = MinRoCount;
     }
 
     /**
-     * Get <p>Maximum count of Serverless instances, range [1,15]</p> 
-     * @return MaxRoCount <p>Maximum count of Serverless instances, range [1,15]</p>
+     * Get <p>Maximum count of Serverless instances, ranging from 1 to 15</p> 
+     * @return MaxRoCount <p>Maximum count of Serverless instances, ranging from 1 to 15</p>
      */
     public Long getMaxRoCount() {
         return this.MaxRoCount;
     }
 
     /**
-     * Set <p>Maximum count of Serverless instances, range [1,15]</p>
-     * @param MaxRoCount <p>Maximum count of Serverless instances, range [1,15]</p>
+     * Set <p>Maximum count of Serverless instances, ranging from 1 to 15</p>
+     * @param MaxRoCount <p>Maximum count of Serverless instances, ranging from 1 to 15</p>
      */
     public void setMaxRoCount(Long MaxRoCount) {
         this.MaxRoCount = MaxRoCount;
     }
 
     /**
-     * Get <p>Minimum specification of Serverless instance</p> 
-     * @return MinRoCpu <p>Minimum specification of Serverless instance</p>
+     * Get <p>Minimum specification of a Serverless instance</p> 
+     * @return MinRoCpu <p>Minimum specification of a Serverless instance</p>
      */
     public Float getMinRoCpu() {
         return this.MinRoCpu;
     }
 
     /**
-     * Set <p>Minimum specification of Serverless instance</p>
-     * @param MinRoCpu <p>Minimum specification of Serverless instance</p>
+     * Set <p>Minimum specification of a Serverless instance</p>
+     * @param MinRoCpu <p>Minimum specification of a Serverless instance</p>
      */
     public void setMinRoCpu(Float MinRoCpu) {
         this.MinRoCpu = MinRoCpu;
     }
 
     /**
-     * Get <p>Maximum specification of Serverless instance</p> 
-     * @return MaxRoCpu <p>Maximum specification of Serverless instance</p>
+     * Get <p>Maximum specification of a Serverless instance</p> 
+     * @return MaxRoCpu <p>Maximum specification of a Serverless instance</p>
      */
     public Float getMaxRoCpu() {
         return this.MaxRoCpu;
     }
 
     /**
-     * Set <p>Maximum specification of Serverless instance</p>
-     * @param MaxRoCpu <p>Maximum specification of Serverless instance</p>
+     * Set <p>Maximum specification of a Serverless instance</p>
+     * @param MaxRoCpu <p>Maximum specification of a Serverless instance</p>
      */
     public void setMaxRoCpu(Float MaxRoCpu) {
         this.MaxRoCpu = MaxRoCpu;

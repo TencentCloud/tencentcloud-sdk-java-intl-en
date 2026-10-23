@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class RoAddr extends AbstractModel {
 
     /**
-    * IP address
+    * IP address.
     */
     @SerializedName("IP")
     @Expose
@@ -38,16 +38,16 @@ public class RoAddr extends AbstractModel {
     private Long Port;
 
     /**
-     * Get IP address 
-     * @return IP IP address
+     * Get IP address. 
+     * @return IP IP address.
      */
     public String getIP() {
         return this.IP;
     }
 
     /**
-     * Set IP address
-     * @param IP IP address
+     * Set IP address.
+     * @param IP IP address.
      */
     public void setIP(String IP) {
         this.IP = IP;

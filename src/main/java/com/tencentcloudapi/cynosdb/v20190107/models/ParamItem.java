@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class ParamItem extends AbstractModel {
 
     /**
-    * Parameter name
+    * Parameter name.
     */
     @SerializedName("ParamName")
     @Expose
     private String ParamName;
 
     /**
-    * New value
+    * Current value
     */
     @SerializedName("CurrentValue")
     @Expose
@@ -45,32 +45,32 @@ public class ParamItem extends AbstractModel {
     private String OldValue;
 
     /**
-     * Get Parameter name 
-     * @return ParamName Parameter name
+     * Get Parameter name. 
+     * @return ParamName Parameter name.
      */
     public String getParamName() {
         return this.ParamName;
     }
 
     /**
-     * Set Parameter name
-     * @param ParamName Parameter name
+     * Set Parameter name.
+     * @param ParamName Parameter name.
      */
     public void setParamName(String ParamName) {
         this.ParamName = ParamName;
     }
 
     /**
-     * Get New value 
-     * @return CurrentValue New value
+     * Get Current value 
+     * @return CurrentValue Current value
      */
     public String getCurrentValue() {
         return this.CurrentValue;
     }
 
     /**
-     * Set New value
-     * @param CurrentValue New value
+     * Set Current value
+     * @param CurrentValue Current value
      */
     public void setCurrentValue(String CurrentValue) {
         this.CurrentValue = CurrentValue;

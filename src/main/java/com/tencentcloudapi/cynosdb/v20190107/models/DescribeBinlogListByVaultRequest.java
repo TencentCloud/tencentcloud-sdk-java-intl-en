@@ -45,42 +45,42 @@ public class DescribeBinlogListByVaultRequest extends AbstractModel {
     private Long [] BackupIds;
 
     /**
-    * Backup name list
+    * List of backup names
     */
     @SerializedName("BackupNames")
     @Expose
     private String [] BackupNames;
 
     /**
-    * Filename list
+    * File name list
     */
     @SerializedName("FileNames")
     @Expose
     private String [] FileNames;
 
     /**
-    * Number of returned results, range (0,100], default 100
+    * Number of returned results. Value range: (0, 100]. Default value: 100.
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * Offset. Range: [0, INF). Default is 0
+    * Offset. Value range: [0, INF). Default value: 0.
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * Sorting field. Available values: VaultId, VaultName, BackupSaveSeconds, LockedTime, CreateTime, UpdateTime. Default: createTime.
+    * Sorting field. Available values: VaultId, VaultName, BackupSaveSeconds, LockedTime, CreateTime, UpdateTime. Default value: createTime
     */
     @SerializedName("OrderBy")
     @Expose
     private String OrderBy;
 
     /**
-    * Sorting method, available values: desc, asc, DESC, ASC, default desc
+    * Sorting method. Available values: desc, asc, DESC, ASC. Default value: desc.
     */
     @SerializedName("OrderByType")
     @Expose
@@ -142,96 +142,96 @@ public class DescribeBinlogListByVaultRequest extends AbstractModel {
     }
 
     /**
-     * Get Backup name list 
-     * @return BackupNames Backup name list
+     * Get List of backup names 
+     * @return BackupNames List of backup names
      */
     public String [] getBackupNames() {
         return this.BackupNames;
     }
 
     /**
-     * Set Backup name list
-     * @param BackupNames Backup name list
+     * Set List of backup names
+     * @param BackupNames List of backup names
      */
     public void setBackupNames(String [] BackupNames) {
         this.BackupNames = BackupNames;
     }
 
     /**
-     * Get Filename list 
-     * @return FileNames Filename list
+     * Get File name list 
+     * @return FileNames File name list
      */
     public String [] getFileNames() {
         return this.FileNames;
     }
 
     /**
-     * Set Filename list
-     * @param FileNames Filename list
+     * Set File name list
+     * @param FileNames File name list
      */
     public void setFileNames(String [] FileNames) {
         this.FileNames = FileNames;
     }
 
     /**
-     * Get Number of returned results, range (0,100], default 100 
-     * @return Limit Number of returned results, range (0,100], default 100
+     * Get Number of returned results. Value range: (0, 100]. Default value: 100. 
+     * @return Limit Number of returned results. Value range: (0, 100]. Default value: 100.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Number of returned results, range (0,100], default 100
-     * @param Limit Number of returned results, range (0,100], default 100
+     * Set Number of returned results. Value range: (0, 100]. Default value: 100.
+     * @param Limit Number of returned results. Value range: (0, 100]. Default value: 100.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get Offset. Range: [0, INF). Default is 0 
-     * @return Offset Offset. Range: [0, INF). Default is 0
+     * Get Offset. Value range: [0, INF). Default value: 0. 
+     * @return Offset Offset. Value range: [0, INF). Default value: 0.
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Offset. Range: [0, INF). Default is 0
-     * @param Offset Offset. Range: [0, INF). Default is 0
+     * Set Offset. Value range: [0, INF). Default value: 0.
+     * @param Offset Offset. Value range: [0, INF). Default value: 0.
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get Sorting field. Available values: VaultId, VaultName, BackupSaveSeconds, LockedTime, CreateTime, UpdateTime. Default: createTime. 
-     * @return OrderBy Sorting field. Available values: VaultId, VaultName, BackupSaveSeconds, LockedTime, CreateTime, UpdateTime. Default: createTime.
+     * Get Sorting field. Available values: VaultId, VaultName, BackupSaveSeconds, LockedTime, CreateTime, UpdateTime. Default value: createTime 
+     * @return OrderBy Sorting field. Available values: VaultId, VaultName, BackupSaveSeconds, LockedTime, CreateTime, UpdateTime. Default value: createTime
      */
     public String getOrderBy() {
         return this.OrderBy;
     }
 
     /**
-     * Set Sorting field. Available values: VaultId, VaultName, BackupSaveSeconds, LockedTime, CreateTime, UpdateTime. Default: createTime.
-     * @param OrderBy Sorting field. Available values: VaultId, VaultName, BackupSaveSeconds, LockedTime, CreateTime, UpdateTime. Default: createTime.
+     * Set Sorting field. Available values: VaultId, VaultName, BackupSaveSeconds, LockedTime, CreateTime, UpdateTime. Default value: createTime
+     * @param OrderBy Sorting field. Available values: VaultId, VaultName, BackupSaveSeconds, LockedTime, CreateTime, UpdateTime. Default value: createTime
      */
     public void setOrderBy(String OrderBy) {
         this.OrderBy = OrderBy;
     }
 
     /**
-     * Get Sorting method, available values: desc, asc, DESC, ASC, default desc 
-     * @return OrderByType Sorting method, available values: desc, asc, DESC, ASC, default desc
+     * Get Sorting method. Available values: desc, asc, DESC, ASC. Default value: desc. 
+     * @return OrderByType Sorting method. Available values: desc, asc, DESC, ASC. Default value: desc.
      */
     public String getOrderByType() {
         return this.OrderByType;
     }
 
     /**
-     * Set Sorting method, available values: desc, asc, DESC, ASC, default desc
-     * @param OrderByType Sorting method, available values: desc, asc, DESC, ASC, default desc
+     * Set Sorting method. Available values: desc, asc, DESC, ASC. Default value: desc.
+     * @param OrderByType Sorting method. Available values: desc, asc, DESC, ASC. Default value: desc.
      */
     public void setOrderByType(String OrderByType) {
         this.OrderByType = OrderByType;

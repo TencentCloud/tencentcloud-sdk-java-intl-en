@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeResourcePackageDetailResponse extends AbstractModel {
 
     /**
-    * Total number of deducted resource packs
+    * Total number of resource package deductions.
     */
     @SerializedName("Total")
     @Expose
@@ -45,16 +45,16 @@ public class DescribeResourcePackageDetailResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Total number of deducted resource packs 
-     * @return Total Total number of deducted resource packs
+     * Get Total number of resource package deductions. 
+     * @return Total Total number of resource package deductions.
      */
     public Long getTotal() {
         return this.Total;
     }
 
     /**
-     * Set Total number of deducted resource packs
-     * @param Total Total number of deducted resource packs
+     * Set Total number of resource package deductions.
+     * @param Total Total number of resource package deductions.
      */
     public void setTotal(Long Total) {
         this.Total = Total;

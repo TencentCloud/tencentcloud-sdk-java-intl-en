@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class SecurityGroup extends AbstractModel {
 
     /**
-    * Project ID
+    * Project ID.
     */
     @SerializedName("ProjectId")
     @Expose
     private Long ProjectId;
 
     /**
-    * Creation time in the format of yyyy-mm-dd hh:mm:ss
+    * Creation time. Time format: yyyy-mm-dd hh:mm:ss
     */
     @SerializedName("CreateTime")
     @Expose
@@ -59,7 +59,7 @@ public class SecurityGroup extends AbstractModel {
     private String SecurityGroupId;
 
     /**
-    * Security group name
+    * Security group name.
     */
     @SerializedName("SecurityGroupName")
     @Expose
@@ -73,32 +73,32 @@ public class SecurityGroup extends AbstractModel {
     private String SecurityGroupRemark;
 
     /**
-     * Get Project ID 
-     * @return ProjectId Project ID
+     * Get Project ID. 
+     * @return ProjectId Project ID.
      */
     public Long getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set Project ID
-     * @param ProjectId Project ID
+     * Set Project ID.
+     * @param ProjectId Project ID.
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
     }
 
     /**
-     * Get Creation time in the format of yyyy-mm-dd hh:mm:ss 
-     * @return CreateTime Creation time in the format of yyyy-mm-dd hh:mm:ss
+     * Get Creation time. Time format: yyyy-mm-dd hh:mm:ss 
+     * @return CreateTime Creation time. Time format: yyyy-mm-dd hh:mm:ss
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set Creation time in the format of yyyy-mm-dd hh:mm:ss
-     * @param CreateTime Creation time in the format of yyyy-mm-dd hh:mm:ss
+     * Set Creation time. Time format: yyyy-mm-dd hh:mm:ss
+     * @param CreateTime Creation time. Time format: yyyy-mm-dd hh:mm:ss
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
@@ -153,16 +153,16 @@ public class SecurityGroup extends AbstractModel {
     }
 
     /**
-     * Get Security group name 
-     * @return SecurityGroupName Security group name
+     * Get Security group name. 
+     * @return SecurityGroupName Security group name.
      */
     public String getSecurityGroupName() {
         return this.SecurityGroupName;
     }
 
     /**
-     * Set Security group name
-     * @param SecurityGroupName Security group name
+     * Set Security group name.
+     * @param SecurityGroupName Security group name.
      */
     public void setSecurityGroupName(String SecurityGroupName) {
         this.SecurityGroupName = SecurityGroupName;

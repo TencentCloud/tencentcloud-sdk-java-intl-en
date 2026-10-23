@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class RollbackTableInfo extends AbstractModel {
 
     /**
-    * Old table name.
+    * Old table name
     */
     @SerializedName("OldTable")
     @Expose
     private String OldTable;
 
     /**
-    * New table name.
+    * New table name
     */
     @SerializedName("NewTable")
     @Expose
     private String NewTable;
 
     /**
-     * Get Old table name. 
-     * @return OldTable Old table name.
+     * Get Old table name 
+     * @return OldTable Old table name
      */
     public String getOldTable() {
         return this.OldTable;
     }
 
     /**
-     * Set Old table name.
-     * @param OldTable Old table name.
+     * Set Old table name
+     * @param OldTable Old table name
      */
     public void setOldTable(String OldTable) {
         this.OldTable = OldTable;
     }
 
     /**
-     * Get New table name. 
-     * @return NewTable New table name.
+     * Get New table name 
+     * @return NewTable New table name
      */
     public String getNewTable() {
         return this.NewTable;
     }
 
     /**
-     * Set New table name.
-     * @param NewTable New table name.
+     * Set New table name
+     * @param NewTable New table name
      */
     public void setNewTable(String NewTable) {
         this.NewTable = NewTable;

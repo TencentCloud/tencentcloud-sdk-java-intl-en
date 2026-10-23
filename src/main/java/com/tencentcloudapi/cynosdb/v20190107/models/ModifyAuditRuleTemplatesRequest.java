@@ -24,138 +24,138 @@ import java.util.HashMap;
 public class ModifyAuditRuleTemplatesRequest extends AbstractModel {
 
     /**
-    * Audit rule template ID
+    * Audit rule template ID.
     */
     @SerializedName("RuleTemplateIds")
     @Expose
     private String [] RuleTemplateIds;
 
     /**
-    * Audit rule after modification
+    * Modified audit rule.
     */
     @SerializedName("RuleFilters")
     @Expose
     private RuleFilters [] RuleFilters;
 
     /**
-    * New name of the rule template
+    * Modified rule template name.
     */
     @SerializedName("RuleTemplateName")
     @Expose
     private String RuleTemplateName;
 
     /**
-    * New description of the rule template
+    * Modified rule template description.
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * Alert Levels. 1 - Low Risk, 2 - Medium Risk, 3 - High Risk.
+    * Alarm level. Valid values: 1 - Low risk, 2 - Medium risk, 3 - High risk.
     */
     @SerializedName("AlarmLevel")
     @Expose
     private Long AlarmLevel;
 
     /**
-    * Alert policy. 0 - No alert, 1 - Alert.
+    * Alarm policy. Valid values: 0 - Alarm disabled, 1 - Alarm enabled.
     */
     @SerializedName("AlarmPolicy")
     @Expose
     private Long AlarmPolicy;
 
     /**
-     * Get Audit rule template ID 
-     * @return RuleTemplateIds Audit rule template ID
+     * Get Audit rule template ID. 
+     * @return RuleTemplateIds Audit rule template ID.
      */
     public String [] getRuleTemplateIds() {
         return this.RuleTemplateIds;
     }
 
     /**
-     * Set Audit rule template ID
-     * @param RuleTemplateIds Audit rule template ID
+     * Set Audit rule template ID.
+     * @param RuleTemplateIds Audit rule template ID.
      */
     public void setRuleTemplateIds(String [] RuleTemplateIds) {
         this.RuleTemplateIds = RuleTemplateIds;
     }
 
     /**
-     * Get Audit rule after modification 
-     * @return RuleFilters Audit rule after modification
+     * Get Modified audit rule. 
+     * @return RuleFilters Modified audit rule.
      */
     public RuleFilters [] getRuleFilters() {
         return this.RuleFilters;
     }
 
     /**
-     * Set Audit rule after modification
-     * @param RuleFilters Audit rule after modification
+     * Set Modified audit rule.
+     * @param RuleFilters Modified audit rule.
      */
     public void setRuleFilters(RuleFilters [] RuleFilters) {
         this.RuleFilters = RuleFilters;
     }
 
     /**
-     * Get New name of the rule template 
-     * @return RuleTemplateName New name of the rule template
+     * Get Modified rule template name. 
+     * @return RuleTemplateName Modified rule template name.
      */
     public String getRuleTemplateName() {
         return this.RuleTemplateName;
     }
 
     /**
-     * Set New name of the rule template
-     * @param RuleTemplateName New name of the rule template
+     * Set Modified rule template name.
+     * @param RuleTemplateName Modified rule template name.
      */
     public void setRuleTemplateName(String RuleTemplateName) {
         this.RuleTemplateName = RuleTemplateName;
     }
 
     /**
-     * Get New description of the rule template 
-     * @return Description New description of the rule template
+     * Get Modified rule template description. 
+     * @return Description Modified rule template description.
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set New description of the rule template
-     * @param Description New description of the rule template
+     * Set Modified rule template description.
+     * @param Description Modified rule template description.
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get Alert Levels. 1 - Low Risk, 2 - Medium Risk, 3 - High Risk. 
-     * @return AlarmLevel Alert Levels. 1 - Low Risk, 2 - Medium Risk, 3 - High Risk.
+     * Get Alarm level. Valid values: 1 - Low risk, 2 - Medium risk, 3 - High risk. 
+     * @return AlarmLevel Alarm level. Valid values: 1 - Low risk, 2 - Medium risk, 3 - High risk.
      */
     public Long getAlarmLevel() {
         return this.AlarmLevel;
     }
 
     /**
-     * Set Alert Levels. 1 - Low Risk, 2 - Medium Risk, 3 - High Risk.
-     * @param AlarmLevel Alert Levels. 1 - Low Risk, 2 - Medium Risk, 3 - High Risk.
+     * Set Alarm level. Valid values: 1 - Low risk, 2 - Medium risk, 3 - High risk.
+     * @param AlarmLevel Alarm level. Valid values: 1 - Low risk, 2 - Medium risk, 3 - High risk.
      */
     public void setAlarmLevel(Long AlarmLevel) {
         this.AlarmLevel = AlarmLevel;
     }
 
     /**
-     * Get Alert policy. 0 - No alert, 1 - Alert. 
-     * @return AlarmPolicy Alert policy. 0 - No alert, 1 - Alert.
+     * Get Alarm policy. Valid values: 0 - Alarm disabled, 1 - Alarm enabled. 
+     * @return AlarmPolicy Alarm policy. Valid values: 0 - Alarm disabled, 1 - Alarm enabled.
      */
     public Long getAlarmPolicy() {
         return this.AlarmPolicy;
     }
 
     /**
-     * Set Alert policy. 0 - No alert, 1 - Alert.
-     * @param AlarmPolicy Alert policy. 0 - No alert, 1 - Alert.
+     * Set Alarm policy. Valid values: 0 - Alarm disabled, 1 - Alarm enabled.
+     * @param AlarmPolicy Alarm policy. Valid values: 0 - Alarm disabled, 1 - Alarm enabled.
      */
     public void setAlarmPolicy(Long AlarmPolicy) {
         this.AlarmPolicy = AlarmPolicy;

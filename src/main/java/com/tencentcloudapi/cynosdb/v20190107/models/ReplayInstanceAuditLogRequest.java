@@ -24,36 +24,36 @@ import java.util.HashMap;
 public class ReplayInstanceAuditLogRequest extends AbstractModel {
 
     /**
-    * Source cluster id.
+    * Source cluster id
     */
     @SerializedName("SourceClusterId")
     @Expose
     private String SourceClusterId;
 
     /**
-    * Source instance id.
+    * Source instance ID.
     */
     @SerializedName("SourceInstanceId")
     @Expose
     private String SourceInstanceId;
 
     /**
-    * Target cluster id.
-Specifies the target cluster must be a cluster cloned from the original cluster within three days.
+    * Target cluster ID.
+The target cluster must be a cluster cloned from the original cluster within three days.
     */
     @SerializedName("TargetClusterId")
     @Expose
     private String TargetClusterId;
 
     /**
-    * Target instance id.
+    * Target instance ID.
     */
     @SerializedName("TargetInstanceId")
     @Expose
     private String TargetInstanceId;
 
     /**
-    * Username. host must be % username.
+    * userName. A userName with the host as % is required.
     */
     @SerializedName("TargetUserName")
     @Expose
@@ -67,98 +67,98 @@ Specifies the target cluster must be a cluster cloned from the original cluster 
     private String TargetPassword;
 
     /**
-    * Start time. time format: yyyy-DD-mm hh:mm:ss.
+    * Start time. Time format: yyyy-DD-mm hh:mm:ss
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * Specifies the end time in the time format yyyy-DD-mm hh:mm:ss.
+    * End time. Time format: yyyy-DD-mm hh:mm:ss
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-     * Get Source cluster id. 
-     * @return SourceClusterId Source cluster id.
+     * Get Source cluster id 
+     * @return SourceClusterId Source cluster id
      */
     public String getSourceClusterId() {
         return this.SourceClusterId;
     }
 
     /**
-     * Set Source cluster id.
-     * @param SourceClusterId Source cluster id.
+     * Set Source cluster id
+     * @param SourceClusterId Source cluster id
      */
     public void setSourceClusterId(String SourceClusterId) {
         this.SourceClusterId = SourceClusterId;
     }
 
     /**
-     * Get Source instance id. 
-     * @return SourceInstanceId Source instance id.
+     * Get Source instance ID. 
+     * @return SourceInstanceId Source instance ID.
      */
     public String getSourceInstanceId() {
         return this.SourceInstanceId;
     }
 
     /**
-     * Set Source instance id.
-     * @param SourceInstanceId Source instance id.
+     * Set Source instance ID.
+     * @param SourceInstanceId Source instance ID.
      */
     public void setSourceInstanceId(String SourceInstanceId) {
         this.SourceInstanceId = SourceInstanceId;
     }
 
     /**
-     * Get Target cluster id.
-Specifies the target cluster must be a cluster cloned from the original cluster within three days. 
-     * @return TargetClusterId Target cluster id.
-Specifies the target cluster must be a cluster cloned from the original cluster within three days.
+     * Get Target cluster ID.
+The target cluster must be a cluster cloned from the original cluster within three days. 
+     * @return TargetClusterId Target cluster ID.
+The target cluster must be a cluster cloned from the original cluster within three days.
      */
     public String getTargetClusterId() {
         return this.TargetClusterId;
     }
 
     /**
-     * Set Target cluster id.
-Specifies the target cluster must be a cluster cloned from the original cluster within three days.
-     * @param TargetClusterId Target cluster id.
-Specifies the target cluster must be a cluster cloned from the original cluster within three days.
+     * Set Target cluster ID.
+The target cluster must be a cluster cloned from the original cluster within three days.
+     * @param TargetClusterId Target cluster ID.
+The target cluster must be a cluster cloned from the original cluster within three days.
      */
     public void setTargetClusterId(String TargetClusterId) {
         this.TargetClusterId = TargetClusterId;
     }
 
     /**
-     * Get Target instance id. 
-     * @return TargetInstanceId Target instance id.
+     * Get Target instance ID. 
+     * @return TargetInstanceId Target instance ID.
      */
     public String getTargetInstanceId() {
         return this.TargetInstanceId;
     }
 
     /**
-     * Set Target instance id.
-     * @param TargetInstanceId Target instance id.
+     * Set Target instance ID.
+     * @param TargetInstanceId Target instance ID.
      */
     public void setTargetInstanceId(String TargetInstanceId) {
         this.TargetInstanceId = TargetInstanceId;
     }
 
     /**
-     * Get Username. host must be % username. 
-     * @return TargetUserName Username. host must be % username.
+     * Get userName. A userName with the host as % is required. 
+     * @return TargetUserName userName. A userName with the host as % is required.
      */
     public String getTargetUserName() {
         return this.TargetUserName;
     }
 
     /**
-     * Set Username. host must be % username.
-     * @param TargetUserName Username. host must be % username.
+     * Set userName. A userName with the host as % is required.
+     * @param TargetUserName userName. A userName with the host as % is required.
      */
     public void setTargetUserName(String TargetUserName) {
         this.TargetUserName = TargetUserName;
@@ -181,32 +181,32 @@ Specifies the target cluster must be a cluster cloned from the original cluster 
     }
 
     /**
-     * Get Start time. time format: yyyy-DD-mm hh:mm:ss. 
-     * @return StartTime Start time. time format: yyyy-DD-mm hh:mm:ss.
+     * Get Start time. Time format: yyyy-DD-mm hh:mm:ss 
+     * @return StartTime Start time. Time format: yyyy-DD-mm hh:mm:ss
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set Start time. time format: yyyy-DD-mm hh:mm:ss.
-     * @param StartTime Start time. time format: yyyy-DD-mm hh:mm:ss.
+     * Set Start time. Time format: yyyy-DD-mm hh:mm:ss
+     * @param StartTime Start time. Time format: yyyy-DD-mm hh:mm:ss
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get Specifies the end time in the time format yyyy-DD-mm hh:mm:ss. 
-     * @return EndTime Specifies the end time in the time format yyyy-DD-mm hh:mm:ss.
+     * Get End time. Time format: yyyy-DD-mm hh:mm:ss 
+     * @return EndTime End time. Time format: yyyy-DD-mm hh:mm:ss
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set Specifies the end time in the time format yyyy-DD-mm hh:mm:ss.
-     * @param EndTime Specifies the end time in the time format yyyy-DD-mm hh:mm:ss.
+     * Set End time. Time format: yyyy-DD-mm hh:mm:ss
+     * @param EndTime End time. Time format: yyyy-DD-mm hh:mm:ss
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;

@@ -24,15 +24,29 @@ import java.util.HashMap;
 public class CloseWanRequest extends AbstractModel {
 
     /**
-    * Instance group ID
+    * Instance Group ID
     */
     @SerializedName("InstanceGrpId")
     @Expose
     private String InstanceGrpId;
 
     /**
-     * Get Instance group ID 
-     * @return InstanceGrpId Instance group ID
+    * Instance Group ID
+    */
+    @SerializedName("InstanceGroupId")
+    @Expose
+    private String InstanceGroupId;
+
+    /**
+    * Instance ID.
+    */
+    @SerializedName("InstanceId")
+    @Expose
+    private String InstanceId;
+
+    /**
+     * Get Instance Group ID 
+     * @return InstanceGrpId Instance Group ID
      * @deprecated
      */
     @Deprecated
@@ -41,13 +55,45 @@ public class CloseWanRequest extends AbstractModel {
     }
 
     /**
-     * Set Instance group ID
-     * @param InstanceGrpId Instance group ID
+     * Set Instance Group ID
+     * @param InstanceGrpId Instance Group ID
      * @deprecated
      */
     @Deprecated
     public void setInstanceGrpId(String InstanceGrpId) {
         this.InstanceGrpId = InstanceGrpId;
+    }
+
+    /**
+     * Get Instance Group ID 
+     * @return InstanceGroupId Instance Group ID
+     */
+    public String getInstanceGroupId() {
+        return this.InstanceGroupId;
+    }
+
+    /**
+     * Set Instance Group ID
+     * @param InstanceGroupId Instance Group ID
+     */
+    public void setInstanceGroupId(String InstanceGroupId) {
+        this.InstanceGroupId = InstanceGroupId;
+    }
+
+    /**
+     * Get Instance ID. 
+     * @return InstanceId Instance ID.
+     */
+    public String getInstanceId() {
+        return this.InstanceId;
+    }
+
+    /**
+     * Set Instance ID.
+     * @param InstanceId Instance ID.
+     */
+    public void setInstanceId(String InstanceId) {
+        this.InstanceId = InstanceId;
     }
 
     public CloseWanRequest() {
@@ -61,6 +107,12 @@ public class CloseWanRequest extends AbstractModel {
         if (source.InstanceGrpId != null) {
             this.InstanceGrpId = new String(source.InstanceGrpId);
         }
+        if (source.InstanceGroupId != null) {
+            this.InstanceGroupId = new String(source.InstanceGroupId);
+        }
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
     }
 
 
@@ -69,6 +121,8 @@ public class CloseWanRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceGrpId", this.InstanceGrpId);
+        this.setParamSimple(map, prefix + "InstanceGroupId", this.InstanceGroupId);
+        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
 
     }
 }

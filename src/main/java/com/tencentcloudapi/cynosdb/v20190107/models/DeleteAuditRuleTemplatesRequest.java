@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DeleteAuditRuleTemplatesRequest extends AbstractModel {
 
     /**
-    * Audit rule template ID
+    * Audit rule template ID.
     */
     @SerializedName("RuleTemplateIds")
     @Expose
     private String [] RuleTemplateIds;
 
     /**
-     * Get Audit rule template ID 
-     * @return RuleTemplateIds Audit rule template ID
+     * Get Audit rule template ID. 
+     * @return RuleTemplateIds Audit rule template ID.
      */
     public String [] getRuleTemplateIds() {
         return this.RuleTemplateIds;
     }
 
     /**
-     * Set Audit rule template ID
-     * @param RuleTemplateIds Audit rule template ID
+     * Set Audit rule template ID.
+     * @param RuleTemplateIds Audit rule template ID.
      */
     public void setRuleTemplateIds(String [] RuleTemplateIds) {
         this.RuleTemplateIds = RuleTemplateIds;

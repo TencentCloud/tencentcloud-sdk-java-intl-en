@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ProxySpec extends AbstractModel {
 
     /**
-    * Number of database proxy CPU cores
+    * Number of cpu cores for the database proxy
     */
     @SerializedName("Cpu")
     @Expose
@@ -38,16 +38,16 @@ public class ProxySpec extends AbstractModel {
     private Long Mem;
 
     /**
-     * Get Number of database proxy CPU cores 
-     * @return Cpu Number of database proxy CPU cores
+     * Get Number of cpu cores for the database proxy 
+     * @return Cpu Number of cpu cores for the database proxy
      */
     public Long getCpu() {
         return this.Cpu;
     }
 
     /**
-     * Set Number of database proxy CPU cores
-     * @param Cpu Number of database proxy CPU cores
+     * Set Number of cpu cores for the database proxy
+     * @param Cpu Number of cpu cores for the database proxy
      */
     public void setCpu(Long Cpu) {
         this.Cpu = Cpu;

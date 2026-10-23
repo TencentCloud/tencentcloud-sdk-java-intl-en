@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class SetRenewFlagResponse extends AbstractModel {
 
     /**
-    * Number of successfully manipulated instances
+    * Number of successfully operated instances
     */
     @SerializedName("Count")
     @Expose
@@ -38,16 +38,16 @@ public class SetRenewFlagResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Number of successfully manipulated instances 
-     * @return Count Number of successfully manipulated instances
+     * Get Number of successfully operated instances 
+     * @return Count Number of successfully operated instances
      */
     public Long getCount() {
         return this.Count;
     }
 
     /**
-     * Set Number of successfully manipulated instances
-     * @param Count Number of successfully manipulated instances
+     * Set Number of successfully operated instances
+     * @param Count Number of successfully operated instances
      */
     public void setCount(Long Count) {
         this.Count = Count;

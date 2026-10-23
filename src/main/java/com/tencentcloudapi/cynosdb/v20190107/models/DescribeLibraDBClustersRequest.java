@@ -31,7 +31,7 @@ public class DescribeLibraDBClustersRequest extends AbstractModel {
     private Long Limit;
 
     /**
-    * Offset
+    * Bias
     */
     @SerializedName("Offset")
     @Expose
@@ -75,16 +75,16 @@ public class DescribeLibraDBClustersRequest extends AbstractModel {
     }
 
     /**
-     * Get Offset 
-     * @return Offset Offset
+     * Get Bias 
+     * @return Offset Bias
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Offset
-     * @param Offset Offset
+     * Set Bias
+     * @param Offset Bias
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;

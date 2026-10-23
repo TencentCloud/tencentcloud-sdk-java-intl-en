@@ -31,91 +31,91 @@ public class InstanceAuditStatus extends AbstractModel {
     private String InstanceId;
 
     /**
-    * Audit status. ON - Indicates audit is enabled, OFF - Indicates audit is disabled.
+    * Audit status. ON - Audit is enabled, OFF - Audit is disabled.
     */
     @SerializedName("AuditStatus")
     @Expose
     private String AuditStatus;
 
     /**
-    * Specifies the log retention period.
+    * Log retention period.
     */
     @SerializedName("LogExpireDay")
     @Expose
     private Long LogExpireDay;
 
     /**
-    * High-Frequency storage duration.
+    * High-frequency storage duration.
     */
     @SerializedName("HighLogExpireDay")
     @Expose
     private Long HighLogExpireDay;
 
     /**
-    * Specifies the duration of low-frequency storage.
+    * Low-frequency storage duration.
     */
     @SerializedName("LowLogExpireDay")
     @Expose
     private Long LowLogExpireDay;
 
     /**
-    * Specifies the log storage volume.
+    * Log storage volume.
     */
     @SerializedName("BillingAmount")
     @Expose
     private Float BillingAmount;
 
     /**
-    * Specifies the high-frequency storage volume.
+    * High-frequency storage volume.
     */
     @SerializedName("HighRealStorage")
     @Expose
     private Float HighRealStorage;
 
     /**
-    * Specifies the infrequent access storage size.
+    * Infrequent access storage size.
     */
     @SerializedName("LowRealStorage")
     @Expose
     private Float LowRealStorage;
 
     /**
-    * Specifies whether it is a full audit. true - indicates a full audit.
+    * Whether full audit is enabled. true - Full audit.
     */
     @SerializedName("AuditAll")
     @Expose
     private Boolean AuditAll;
 
     /**
-    * Specifies the audit activation time.
+    * Time when the audit service was activated.
     */
     @SerializedName("CreateAt")
     @Expose
     private String CreateAt;
 
     /**
-    * Instance-Related information.
+    * Instance-related information.
     */
     @SerializedName("InstanceInfo")
     @Expose
     private AuditInstanceInfo InstanceInfo;
 
     /**
-    * Specifies the total storage capacity.
+    * Total storage.
     */
     @SerializedName("RealStorage")
     @Expose
     private Float RealStorage;
 
     /**
-    * The rule template applied to the instance.
+    * Rule template applied to the instance.
     */
     @SerializedName("RuleTemplateIds")
     @Expose
     private String [] RuleTemplateIds;
 
     /**
-    * Specifies whether to enable log delivery: ON, OFF.
+    * Whether to enable log delivery: ON, OFF
     */
     @SerializedName("Deliver")
     @Expose
@@ -145,208 +145,208 @@ public class InstanceAuditStatus extends AbstractModel {
     }
 
     /**
-     * Get Audit status. ON - Indicates audit is enabled, OFF - Indicates audit is disabled. 
-     * @return AuditStatus Audit status. ON - Indicates audit is enabled, OFF - Indicates audit is disabled.
+     * Get Audit status. ON - Audit is enabled, OFF - Audit is disabled. 
+     * @return AuditStatus Audit status. ON - Audit is enabled, OFF - Audit is disabled.
      */
     public String getAuditStatus() {
         return this.AuditStatus;
     }
 
     /**
-     * Set Audit status. ON - Indicates audit is enabled, OFF - Indicates audit is disabled.
-     * @param AuditStatus Audit status. ON - Indicates audit is enabled, OFF - Indicates audit is disabled.
+     * Set Audit status. ON - Audit is enabled, OFF - Audit is disabled.
+     * @param AuditStatus Audit status. ON - Audit is enabled, OFF - Audit is disabled.
      */
     public void setAuditStatus(String AuditStatus) {
         this.AuditStatus = AuditStatus;
     }
 
     /**
-     * Get Specifies the log retention period. 
-     * @return LogExpireDay Specifies the log retention period.
+     * Get Log retention period. 
+     * @return LogExpireDay Log retention period.
      */
     public Long getLogExpireDay() {
         return this.LogExpireDay;
     }
 
     /**
-     * Set Specifies the log retention period.
-     * @param LogExpireDay Specifies the log retention period.
+     * Set Log retention period.
+     * @param LogExpireDay Log retention period.
      */
     public void setLogExpireDay(Long LogExpireDay) {
         this.LogExpireDay = LogExpireDay;
     }
 
     /**
-     * Get High-Frequency storage duration. 
-     * @return HighLogExpireDay High-Frequency storage duration.
+     * Get High-frequency storage duration. 
+     * @return HighLogExpireDay High-frequency storage duration.
      */
     public Long getHighLogExpireDay() {
         return this.HighLogExpireDay;
     }
 
     /**
-     * Set High-Frequency storage duration.
-     * @param HighLogExpireDay High-Frequency storage duration.
+     * Set High-frequency storage duration.
+     * @param HighLogExpireDay High-frequency storage duration.
      */
     public void setHighLogExpireDay(Long HighLogExpireDay) {
         this.HighLogExpireDay = HighLogExpireDay;
     }
 
     /**
-     * Get Specifies the duration of low-frequency storage. 
-     * @return LowLogExpireDay Specifies the duration of low-frequency storage.
+     * Get Low-frequency storage duration. 
+     * @return LowLogExpireDay Low-frequency storage duration.
      */
     public Long getLowLogExpireDay() {
         return this.LowLogExpireDay;
     }
 
     /**
-     * Set Specifies the duration of low-frequency storage.
-     * @param LowLogExpireDay Specifies the duration of low-frequency storage.
+     * Set Low-frequency storage duration.
+     * @param LowLogExpireDay Low-frequency storage duration.
      */
     public void setLowLogExpireDay(Long LowLogExpireDay) {
         this.LowLogExpireDay = LowLogExpireDay;
     }
 
     /**
-     * Get Specifies the log storage volume. 
-     * @return BillingAmount Specifies the log storage volume.
+     * Get Log storage volume. 
+     * @return BillingAmount Log storage volume.
      */
     public Float getBillingAmount() {
         return this.BillingAmount;
     }
 
     /**
-     * Set Specifies the log storage volume.
-     * @param BillingAmount Specifies the log storage volume.
+     * Set Log storage volume.
+     * @param BillingAmount Log storage volume.
      */
     public void setBillingAmount(Float BillingAmount) {
         this.BillingAmount = BillingAmount;
     }
 
     /**
-     * Get Specifies the high-frequency storage volume. 
-     * @return HighRealStorage Specifies the high-frequency storage volume.
+     * Get High-frequency storage volume. 
+     * @return HighRealStorage High-frequency storage volume.
      */
     public Float getHighRealStorage() {
         return this.HighRealStorage;
     }
 
     /**
-     * Set Specifies the high-frequency storage volume.
-     * @param HighRealStorage Specifies the high-frequency storage volume.
+     * Set High-frequency storage volume.
+     * @param HighRealStorage High-frequency storage volume.
      */
     public void setHighRealStorage(Float HighRealStorage) {
         this.HighRealStorage = HighRealStorage;
     }
 
     /**
-     * Get Specifies the infrequent access storage size. 
-     * @return LowRealStorage Specifies the infrequent access storage size.
+     * Get Infrequent access storage size. 
+     * @return LowRealStorage Infrequent access storage size.
      */
     public Float getLowRealStorage() {
         return this.LowRealStorage;
     }
 
     /**
-     * Set Specifies the infrequent access storage size.
-     * @param LowRealStorage Specifies the infrequent access storage size.
+     * Set Infrequent access storage size.
+     * @param LowRealStorage Infrequent access storage size.
      */
     public void setLowRealStorage(Float LowRealStorage) {
         this.LowRealStorage = LowRealStorage;
     }
 
     /**
-     * Get Specifies whether it is a full audit. true - indicates a full audit. 
-     * @return AuditAll Specifies whether it is a full audit. true - indicates a full audit.
+     * Get Whether full audit is enabled. true - Full audit. 
+     * @return AuditAll Whether full audit is enabled. true - Full audit.
      */
     public Boolean getAuditAll() {
         return this.AuditAll;
     }
 
     /**
-     * Set Specifies whether it is a full audit. true - indicates a full audit.
-     * @param AuditAll Specifies whether it is a full audit. true - indicates a full audit.
+     * Set Whether full audit is enabled. true - Full audit.
+     * @param AuditAll Whether full audit is enabled. true - Full audit.
      */
     public void setAuditAll(Boolean AuditAll) {
         this.AuditAll = AuditAll;
     }
 
     /**
-     * Get Specifies the audit activation time. 
-     * @return CreateAt Specifies the audit activation time.
+     * Get Time when the audit service was activated. 
+     * @return CreateAt Time when the audit service was activated.
      */
     public String getCreateAt() {
         return this.CreateAt;
     }
 
     /**
-     * Set Specifies the audit activation time.
-     * @param CreateAt Specifies the audit activation time.
+     * Set Time when the audit service was activated.
+     * @param CreateAt Time when the audit service was activated.
      */
     public void setCreateAt(String CreateAt) {
         this.CreateAt = CreateAt;
     }
 
     /**
-     * Get Instance-Related information. 
-     * @return InstanceInfo Instance-Related information.
+     * Get Instance-related information. 
+     * @return InstanceInfo Instance-related information.
      */
     public AuditInstanceInfo getInstanceInfo() {
         return this.InstanceInfo;
     }
 
     /**
-     * Set Instance-Related information.
-     * @param InstanceInfo Instance-Related information.
+     * Set Instance-related information.
+     * @param InstanceInfo Instance-related information.
      */
     public void setInstanceInfo(AuditInstanceInfo InstanceInfo) {
         this.InstanceInfo = InstanceInfo;
     }
 
     /**
-     * Get Specifies the total storage capacity. 
-     * @return RealStorage Specifies the total storage capacity.
+     * Get Total storage. 
+     * @return RealStorage Total storage.
      */
     public Float getRealStorage() {
         return this.RealStorage;
     }
 
     /**
-     * Set Specifies the total storage capacity.
-     * @param RealStorage Specifies the total storage capacity.
+     * Set Total storage.
+     * @param RealStorage Total storage.
      */
     public void setRealStorage(Float RealStorage) {
         this.RealStorage = RealStorage;
     }
 
     /**
-     * Get The rule template applied to the instance. 
-     * @return RuleTemplateIds The rule template applied to the instance.
+     * Get Rule template applied to the instance. 
+     * @return RuleTemplateIds Rule template applied to the instance.
      */
     public String [] getRuleTemplateIds() {
         return this.RuleTemplateIds;
     }
 
     /**
-     * Set The rule template applied to the instance.
-     * @param RuleTemplateIds The rule template applied to the instance.
+     * Set Rule template applied to the instance.
+     * @param RuleTemplateIds Rule template applied to the instance.
      */
     public void setRuleTemplateIds(String [] RuleTemplateIds) {
         this.RuleTemplateIds = RuleTemplateIds;
     }
 
     /**
-     * Get Specifies whether to enable log delivery: ON, OFF. 
-     * @return Deliver Specifies whether to enable log delivery: ON, OFF.
+     * Get Whether to enable log delivery: ON, OFF 
+     * @return Deliver Whether to enable log delivery: ON, OFF
      */
     public String getDeliver() {
         return this.Deliver;
     }
 
     /**
-     * Set Specifies whether to enable log delivery: ON, OFF.
-     * @param Deliver Specifies whether to enable log delivery: ON, OFF.
+     * Set Whether to enable log delivery: ON, OFF
+     * @param Deliver Whether to enable log delivery: ON, OFF
      */
     public void setDeliver(String Deliver) {
         this.Deliver = Deliver;

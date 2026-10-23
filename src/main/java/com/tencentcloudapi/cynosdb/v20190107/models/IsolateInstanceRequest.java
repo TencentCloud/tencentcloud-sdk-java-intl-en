@@ -31,35 +31,35 @@ public class IsolateInstanceRequest extends AbstractModel {
     private String ClusterId;
 
     /**
-    * Instance ID array
+    * Instance ID array, for example, ["cynosdbbmysql-ins-asd","cynosdbmysql-ins-zxc"]
     */
     @SerializedName("InstanceIdList")
     @Expose
     private String [] InstanceIdList;
 
     /**
-    * This parameter has been disused.
+    * This parameter has been deprecated.
     */
     @SerializedName("DbType")
     @Expose
     private String DbType;
 
     /**
-    * Instance Refund Reason Types
+    * Refund reason type of the instance
     */
     @SerializedName("IsolateReasonTypes")
     @Expose
     private Long [] IsolateReasonTypes;
 
     /**
-    * Instance Refund Reason Supplement
+    * Supplementary reason for instance return
     */
     @SerializedName("IsolateReason")
     @Expose
     private String IsolateReason;
 
     /**
-    * Backup retention
+    * Retain backups
     */
     @SerializedName("SaveBackup")
     @Expose
@@ -82,80 +82,80 @@ public class IsolateInstanceRequest extends AbstractModel {
     }
 
     /**
-     * Get Instance ID array 
-     * @return InstanceIdList Instance ID array
+     * Get Instance ID array, for example, ["cynosdbbmysql-ins-asd","cynosdbmysql-ins-zxc"] 
+     * @return InstanceIdList Instance ID array, for example, ["cynosdbbmysql-ins-asd","cynosdbmysql-ins-zxc"]
      */
     public String [] getInstanceIdList() {
         return this.InstanceIdList;
     }
 
     /**
-     * Set Instance ID array
-     * @param InstanceIdList Instance ID array
+     * Set Instance ID array, for example, ["cynosdbbmysql-ins-asd","cynosdbmysql-ins-zxc"]
+     * @param InstanceIdList Instance ID array, for example, ["cynosdbbmysql-ins-asd","cynosdbmysql-ins-zxc"]
      */
     public void setInstanceIdList(String [] InstanceIdList) {
         this.InstanceIdList = InstanceIdList;
     }
 
     /**
-     * Get This parameter has been disused. 
-     * @return DbType This parameter has been disused.
+     * Get This parameter has been deprecated. 
+     * @return DbType This parameter has been deprecated.
      */
     public String getDbType() {
         return this.DbType;
     }
 
     /**
-     * Set This parameter has been disused.
-     * @param DbType This parameter has been disused.
+     * Set This parameter has been deprecated.
+     * @param DbType This parameter has been deprecated.
      */
     public void setDbType(String DbType) {
         this.DbType = DbType;
     }
 
     /**
-     * Get Instance Refund Reason Types 
-     * @return IsolateReasonTypes Instance Refund Reason Types
+     * Get Refund reason type of the instance 
+     * @return IsolateReasonTypes Refund reason type of the instance
      */
     public Long [] getIsolateReasonTypes() {
         return this.IsolateReasonTypes;
     }
 
     /**
-     * Set Instance Refund Reason Types
-     * @param IsolateReasonTypes Instance Refund Reason Types
+     * Set Refund reason type of the instance
+     * @param IsolateReasonTypes Refund reason type of the instance
      */
     public void setIsolateReasonTypes(Long [] IsolateReasonTypes) {
         this.IsolateReasonTypes = IsolateReasonTypes;
     }
 
     /**
-     * Get Instance Refund Reason Supplement 
-     * @return IsolateReason Instance Refund Reason Supplement
+     * Get Supplementary reason for instance return 
+     * @return IsolateReason Supplementary reason for instance return
      */
     public String getIsolateReason() {
         return this.IsolateReason;
     }
 
     /**
-     * Set Instance Refund Reason Supplement
-     * @param IsolateReason Instance Refund Reason Supplement
+     * Set Supplementary reason for instance return
+     * @param IsolateReason Supplementary reason for instance return
      */
     public void setIsolateReason(String IsolateReason) {
         this.IsolateReason = IsolateReason;
     }
 
     /**
-     * Get Backup retention 
-     * @return SaveBackup Backup retention
+     * Get Retain backups 
+     * @return SaveBackup Retain backups
      */
     public Boolean getSaveBackup() {
         return this.SaveBackup;
     }
 
     /**
-     * Set Backup retention
-     * @param SaveBackup Backup retention
+     * Set Retain backups
+     * @param SaveBackup Retain backups
      */
     public void setSaveBackup(Boolean SaveBackup) {
         this.SaveBackup = SaveBackup;

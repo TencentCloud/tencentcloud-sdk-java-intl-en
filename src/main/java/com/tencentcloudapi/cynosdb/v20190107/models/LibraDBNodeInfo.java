@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class LibraDBNodeInfo extends AbstractModel {
 
     /**
-    * LibraDB Node ID
+    * LibraDB node ID
     */
     @SerializedName("NodeId")
     @Expose
@@ -38,7 +38,7 @@ public class LibraDBNodeInfo extends AbstractModel {
     private String Status;
 
     /**
-    * syncing data
+    * Syncing data
     */
     @SerializedName("DataStatus")
     @Expose
@@ -73,16 +73,16 @@ public class LibraDBNodeInfo extends AbstractModel {
     private String Message;
 
     /**
-     * Get LibraDB Node ID 
-     * @return NodeId LibraDB Node ID
+     * Get LibraDB node ID 
+     * @return NodeId LibraDB node ID
      */
     public String getNodeId() {
         return this.NodeId;
     }
 
     /**
-     * Set LibraDB Node ID
-     * @param NodeId LibraDB Node ID
+     * Set LibraDB node ID
+     * @param NodeId LibraDB node ID
      */
     public void setNodeId(String NodeId) {
         this.NodeId = NodeId;
@@ -105,16 +105,16 @@ public class LibraDBNodeInfo extends AbstractModel {
     }
 
     /**
-     * Get syncing data 
-     * @return DataStatus syncing data
+     * Get Syncing data 
+     * @return DataStatus Syncing data
      */
     public String getDataStatus() {
         return this.DataStatus;
     }
 
     /**
-     * Set syncing data
-     * @param DataStatus syncing data
+     * Set Syncing data
+     * @param DataStatus Syncing data
      */
     public void setDataStatus(String DataStatus) {
         this.DataStatus = DataStatus;

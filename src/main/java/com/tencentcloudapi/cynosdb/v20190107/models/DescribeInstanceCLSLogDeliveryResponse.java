@@ -25,13 +25,15 @@ public class DescribeInstanceCLSLogDeliveryResponse extends AbstractModel {
 
     /**
     * Total number.
+
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * Instance shipping information.
+    * Instance Delivery Information
+
     */
     @SerializedName("InstanceCLSDeliveryInfos")
     @Expose
@@ -45,8 +47,10 @@ public class DescribeInstanceCLSLogDeliveryResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Total number. 
+     * Get Total number.
+ 
      * @return TotalCount Total number.
+
      */
     public Long getTotalCount() {
         return this.TotalCount;
@@ -54,23 +58,29 @@ public class DescribeInstanceCLSLogDeliveryResponse extends AbstractModel {
 
     /**
      * Set Total number.
+
      * @param TotalCount Total number.
+
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get Instance shipping information. 
-     * @return InstanceCLSDeliveryInfos Instance shipping information.
+     * Get Instance Delivery Information
+ 
+     * @return InstanceCLSDeliveryInfos Instance Delivery Information
+
      */
     public InstanceCLSDeliveryInfo [] getInstanceCLSDeliveryInfos() {
         return this.InstanceCLSDeliveryInfos;
     }
 
     /**
-     * Set Instance shipping information.
-     * @param InstanceCLSDeliveryInfos Instance shipping information.
+     * Set Instance Delivery Information
+
+     * @param InstanceCLSDeliveryInfos Instance Delivery Information
+
      */
     public void setInstanceCLSDeliveryInfos(InstanceCLSDeliveryInfo [] InstanceCLSDeliveryInfos) {
         this.InstanceCLSDeliveryInfos = InstanceCLSDeliveryInfos;

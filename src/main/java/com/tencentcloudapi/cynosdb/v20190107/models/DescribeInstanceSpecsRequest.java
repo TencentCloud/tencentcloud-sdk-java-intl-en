@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class DescribeInstanceSpecsRequest extends AbstractModel {
 
     /**
-    * <p>Database type, value ranges from...to... </p><li> MYSQL </li>
+    * <p>Database type. Value range: </p><li> MYSQL </li>
     */
     @SerializedName("DbType")
     @Expose
     private String DbType;
 
     /**
-    * <p>Whether required to return AZ information</p>
+    * <p>Whether to return AZ information</p>
     */
     @SerializedName("IncludeZoneStocks")
     @Expose
     private Boolean IncludeZoneStocks;
 
     /**
-    * <p>Instance machine type.</p>
+    * <p>Instance Machine Type</p>
     */
     @SerializedName("DeviceType")
     @Expose
@@ -59,48 +59,48 @@ public class DescribeInstanceSpecsRequest extends AbstractModel {
     private String Zone;
 
     /**
-     * Get <p>Database type, value ranges from...to... </p><li> MYSQL </li> 
-     * @return DbType <p>Database type, value ranges from...to... </p><li> MYSQL </li>
+     * Get <p>Database type. Value range: </p><li> MYSQL </li> 
+     * @return DbType <p>Database type. Value range: </p><li> MYSQL </li>
      */
     public String getDbType() {
         return this.DbType;
     }
 
     /**
-     * Set <p>Database type, value ranges from...to... </p><li> MYSQL </li>
-     * @param DbType <p>Database type, value ranges from...to... </p><li> MYSQL </li>
+     * Set <p>Database type. Value range: </p><li> MYSQL </li>
+     * @param DbType <p>Database type. Value range: </p><li> MYSQL </li>
      */
     public void setDbType(String DbType) {
         this.DbType = DbType;
     }
 
     /**
-     * Get <p>Whether required to return AZ information</p> 
-     * @return IncludeZoneStocks <p>Whether required to return AZ information</p>
+     * Get <p>Whether to return AZ information</p> 
+     * @return IncludeZoneStocks <p>Whether to return AZ information</p>
      */
     public Boolean getIncludeZoneStocks() {
         return this.IncludeZoneStocks;
     }
 
     /**
-     * Set <p>Whether required to return AZ information</p>
-     * @param IncludeZoneStocks <p>Whether required to return AZ information</p>
+     * Set <p>Whether to return AZ information</p>
+     * @param IncludeZoneStocks <p>Whether to return AZ information</p>
      */
     public void setIncludeZoneStocks(Boolean IncludeZoneStocks) {
         this.IncludeZoneStocks = IncludeZoneStocks;
     }
 
     /**
-     * Get <p>Instance machine type.</p> 
-     * @return DeviceType <p>Instance machine type.</p>
+     * Get <p>Instance Machine Type</p> 
+     * @return DeviceType <p>Instance Machine Type</p>
      */
     public String getDeviceType() {
         return this.DeviceType;
     }
 
     /**
-     * Set <p>Instance machine type.</p>
-     * @param DeviceType <p>Instance machine type.</p>
+     * Set <p>Instance Machine Type</p>
+     * @param DeviceType <p>Instance Machine Type</p>
      */
     public void setDeviceType(String DeviceType) {
         this.DeviceType = DeviceType;

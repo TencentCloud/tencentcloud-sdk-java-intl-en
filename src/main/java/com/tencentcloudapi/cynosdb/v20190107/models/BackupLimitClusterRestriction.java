@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class BackupLimitClusterRestriction extends AbstractModel {
 
     /**
-    * Cluster ID
+    * Cluster ID.
     */
     @SerializedName("ClusterId")
     @Expose
     private String ClusterId;
 
     /**
-    * Download limit configuration.
+    * Download limit configuration
     */
     @SerializedName("BackupLimitRestriction")
     @Expose
     private BackupLimitRestriction BackupLimitRestriction;
 
     /**
-     * Get Cluster ID 
-     * @return ClusterId Cluster ID
+     * Get Cluster ID. 
+     * @return ClusterId Cluster ID.
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set Cluster ID
-     * @param ClusterId Cluster ID
+     * Set Cluster ID.
+     * @param ClusterId Cluster ID.
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get Download limit configuration. 
-     * @return BackupLimitRestriction Download limit configuration.
+     * Get Download limit configuration 
+     * @return BackupLimitRestriction Download limit configuration
      */
     public BackupLimitRestriction getBackupLimitRestriction() {
         return this.BackupLimitRestriction;
     }
 
     /**
-     * Set Download limit configuration.
-     * @param BackupLimitRestriction Download limit configuration.
+     * Set Download limit configuration
+     * @param BackupLimitRestriction Download limit configuration
      */
     public void setBackupLimitRestriction(BackupLimitRestriction BackupLimitRestriction) {
         this.BackupLimitRestriction = BackupLimitRestriction;

@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class ParamDetail extends AbstractModel {
 
     /**
-    * Parameter name
+    * Parameter name.
     */
     @SerializedName("ParamName")
     @Expose
     private String ParamName;
 
     /**
-    * Parameter type. Valid values:  `integer`, `enum`, `float`, `string`, `func`.
+    * Parameter type: integer, enum, float, string, func
     */
     @SerializedName("ParamType")
     @Expose
     private String ParamType;
 
     /**
-    * Whether `func` is supported. Valid values: `true` (supported), `false` (not supported).
+    * true: supports "func"; false: no formula support
     */
     @SerializedName("SupportFunc")
     @Expose
@@ -59,132 +59,132 @@ public class ParamDetail extends AbstractModel {
     private String Description;
 
     /**
-    * Current value of the parameter
+    * Current parameter value
     */
     @SerializedName("CurrentValue")
     @Expose
     private String CurrentValue;
 
     /**
-    * Whether to restart the database for the modified parameters to take effect. Valid values:  `0` (no), `1` (yes).
+    * Whether database restart is required after modifying parameters to take effect. 0: no restart required; 1: restart required.
     */
     @SerializedName("NeedReboot")
     @Expose
     private Long NeedReboot;
 
     /**
-    * Maximum value of the parameter
+    * Maximum value allowed for the parameter
     */
     @SerializedName("Max")
     @Expose
     private String Max;
 
     /**
-    * Minimum value of the parameter
+    * Minimum allowed parameter value
     */
     @SerializedName("Min")
     @Expose
     private String Min;
 
     /**
-    * Optional enumerated values of the parameter. if it is a non-enumerated value, it is empty.
+    * Optional enumerated values of the parameter. If it is a non-enumerated value, this parameter is empty
     */
     @SerializedName("EnumValue")
     @Expose
     private String [] EnumValue;
 
     /**
-    * Valid values: `1` (global parameter),  `0`  (non-global parameter).
+    * 1: global parameter, 0: non-global parameter
     */
     @SerializedName("IsGlobal")
     @Expose
     private Long IsGlobal;
 
     /**
-    * The match type. Valid value: `multiVal`.
+    * Match type. multiVal
     */
     @SerializedName("MatchType")
     @Expose
     private String MatchType;
 
     /**
-    * Match values, which will be separated by comma when `MatchType` is `multiVal`.
+    * Match target value. If multiVal is set, separate each key with a comma.
     */
     @SerializedName("MatchValue")
     @Expose
     private String MatchValue;
 
     /**
-    * true - indicates a formula. false - indicates it is not a formula.
+    * true: formula; false: non-formula
     */
     @SerializedName("IsFunc")
     @Expose
     private Boolean IsFunc;
 
     /**
-    * Specifies that when the parameter is set as a formula, Func returns the set formula content.
+    * When the parameter is set to a formula, Func returns the set formula content.
     */
     @SerializedName("Func")
     @Expose
     private String Func;
 
     /**
-    * Whether the parameter is modifiable.
+    * Whether the parameter is modifiable
     */
     @SerializedName("ModifiableInfo")
     @Expose
     private ModifiableInfo ModifiableInfo;
 
     /**
-    * The default formula style of parameters that support formulas.
+    * Default formula style for parameters that support formulas
     */
     @SerializedName("FuncPattern")
     @Expose
     private String FuncPattern;
 
     /**
-     * Get Parameter name 
-     * @return ParamName Parameter name
+     * Get Parameter name. 
+     * @return ParamName Parameter name.
      */
     public String getParamName() {
         return this.ParamName;
     }
 
     /**
-     * Set Parameter name
-     * @param ParamName Parameter name
+     * Set Parameter name.
+     * @param ParamName Parameter name.
      */
     public void setParamName(String ParamName) {
         this.ParamName = ParamName;
     }
 
     /**
-     * Get Parameter type. Valid values:  `integer`, `enum`, `float`, `string`, `func`. 
-     * @return ParamType Parameter type. Valid values:  `integer`, `enum`, `float`, `string`, `func`.
+     * Get Parameter type: integer, enum, float, string, func 
+     * @return ParamType Parameter type: integer, enum, float, string, func
      */
     public String getParamType() {
         return this.ParamType;
     }
 
     /**
-     * Set Parameter type. Valid values:  `integer`, `enum`, `float`, `string`, `func`.
-     * @param ParamType Parameter type. Valid values:  `integer`, `enum`, `float`, `string`, `func`.
+     * Set Parameter type: integer, enum, float, string, func
+     * @param ParamType Parameter type: integer, enum, float, string, func
      */
     public void setParamType(String ParamType) {
         this.ParamType = ParamType;
     }
 
     /**
-     * Get Whether `func` is supported. Valid values: `true` (supported), `false` (not supported). 
-     * @return SupportFunc Whether `func` is supported. Valid values: `true` (supported), `false` (not supported).
+     * Get true: supports "func"; false: no formula support 
+     * @return SupportFunc true: supports "func"; false: no formula support
      */
     public Boolean getSupportFunc() {
         return this.SupportFunc;
     }
 
     /**
-     * Set Whether `func` is supported. Valid values: `true` (supported), `false` (not supported).
-     * @param SupportFunc Whether `func` is supported. Valid values: `true` (supported), `false` (not supported).
+     * Set true: supports "func"; false: no formula support
+     * @param SupportFunc true: supports "func"; false: no formula support
      */
     public void setSupportFunc(Boolean SupportFunc) {
         this.SupportFunc = SupportFunc;
@@ -223,192 +223,192 @@ public class ParamDetail extends AbstractModel {
     }
 
     /**
-     * Get Current value of the parameter 
-     * @return CurrentValue Current value of the parameter
+     * Get Current parameter value 
+     * @return CurrentValue Current parameter value
      */
     public String getCurrentValue() {
         return this.CurrentValue;
     }
 
     /**
-     * Set Current value of the parameter
-     * @param CurrentValue Current value of the parameter
+     * Set Current parameter value
+     * @param CurrentValue Current parameter value
      */
     public void setCurrentValue(String CurrentValue) {
         this.CurrentValue = CurrentValue;
     }
 
     /**
-     * Get Whether to restart the database for the modified parameters to take effect. Valid values:  `0` (no), `1` (yes). 
-     * @return NeedReboot Whether to restart the database for the modified parameters to take effect. Valid values:  `0` (no), `1` (yes).
+     * Get Whether database restart is required after modifying parameters to take effect. 0: no restart required; 1: restart required. 
+     * @return NeedReboot Whether database restart is required after modifying parameters to take effect. 0: no restart required; 1: restart required.
      */
     public Long getNeedReboot() {
         return this.NeedReboot;
     }
 
     /**
-     * Set Whether to restart the database for the modified parameters to take effect. Valid values:  `0` (no), `1` (yes).
-     * @param NeedReboot Whether to restart the database for the modified parameters to take effect. Valid values:  `0` (no), `1` (yes).
+     * Set Whether database restart is required after modifying parameters to take effect. 0: no restart required; 1: restart required.
+     * @param NeedReboot Whether database restart is required after modifying parameters to take effect. 0: no restart required; 1: restart required.
      */
     public void setNeedReboot(Long NeedReboot) {
         this.NeedReboot = NeedReboot;
     }
 
     /**
-     * Get Maximum value of the parameter 
-     * @return Max Maximum value of the parameter
+     * Get Maximum value allowed for the parameter 
+     * @return Max Maximum value allowed for the parameter
      */
     public String getMax() {
         return this.Max;
     }
 
     /**
-     * Set Maximum value of the parameter
-     * @param Max Maximum value of the parameter
+     * Set Maximum value allowed for the parameter
+     * @param Max Maximum value allowed for the parameter
      */
     public void setMax(String Max) {
         this.Max = Max;
     }
 
     /**
-     * Get Minimum value of the parameter 
-     * @return Min Minimum value of the parameter
+     * Get Minimum allowed parameter value 
+     * @return Min Minimum allowed parameter value
      */
     public String getMin() {
         return this.Min;
     }
 
     /**
-     * Set Minimum value of the parameter
-     * @param Min Minimum value of the parameter
+     * Set Minimum allowed parameter value
+     * @param Min Minimum allowed parameter value
      */
     public void setMin(String Min) {
         this.Min = Min;
     }
 
     /**
-     * Get Optional enumerated values of the parameter. if it is a non-enumerated value, it is empty. 
-     * @return EnumValue Optional enumerated values of the parameter. if it is a non-enumerated value, it is empty.
+     * Get Optional enumerated values of the parameter. If it is a non-enumerated value, this parameter is empty 
+     * @return EnumValue Optional enumerated values of the parameter. If it is a non-enumerated value, this parameter is empty
      */
     public String [] getEnumValue() {
         return this.EnumValue;
     }
 
     /**
-     * Set Optional enumerated values of the parameter. if it is a non-enumerated value, it is empty.
-     * @param EnumValue Optional enumerated values of the parameter. if it is a non-enumerated value, it is empty.
+     * Set Optional enumerated values of the parameter. If it is a non-enumerated value, this parameter is empty
+     * @param EnumValue Optional enumerated values of the parameter. If it is a non-enumerated value, this parameter is empty
      */
     public void setEnumValue(String [] EnumValue) {
         this.EnumValue = EnumValue;
     }
 
     /**
-     * Get Valid values: `1` (global parameter),  `0`  (non-global parameter). 
-     * @return IsGlobal Valid values: `1` (global parameter),  `0`  (non-global parameter).
+     * Get 1: global parameter, 0: non-global parameter 
+     * @return IsGlobal 1: global parameter, 0: non-global parameter
      */
     public Long getIsGlobal() {
         return this.IsGlobal;
     }
 
     /**
-     * Set Valid values: `1` (global parameter),  `0`  (non-global parameter).
-     * @param IsGlobal Valid values: `1` (global parameter),  `0`  (non-global parameter).
+     * Set 1: global parameter, 0: non-global parameter
+     * @param IsGlobal 1: global parameter, 0: non-global parameter
      */
     public void setIsGlobal(Long IsGlobal) {
         this.IsGlobal = IsGlobal;
     }
 
     /**
-     * Get The match type. Valid value: `multiVal`. 
-     * @return MatchType The match type. Valid value: `multiVal`.
+     * Get Match type. multiVal 
+     * @return MatchType Match type. multiVal
      */
     public String getMatchType() {
         return this.MatchType;
     }
 
     /**
-     * Set The match type. Valid value: `multiVal`.
-     * @param MatchType The match type. Valid value: `multiVal`.
+     * Set Match type. multiVal
+     * @param MatchType Match type. multiVal
      */
     public void setMatchType(String MatchType) {
         this.MatchType = MatchType;
     }
 
     /**
-     * Get Match values, which will be separated by comma when `MatchType` is `multiVal`. 
-     * @return MatchValue Match values, which will be separated by comma when `MatchType` is `multiVal`.
+     * Get Match target value. If multiVal is set, separate each key with a comma. 
+     * @return MatchValue Match target value. If multiVal is set, separate each key with a comma.
      */
     public String getMatchValue() {
         return this.MatchValue;
     }
 
     /**
-     * Set Match values, which will be separated by comma when `MatchType` is `multiVal`.
-     * @param MatchValue Match values, which will be separated by comma when `MatchType` is `multiVal`.
+     * Set Match target value. If multiVal is set, separate each key with a comma.
+     * @param MatchValue Match target value. If multiVal is set, separate each key with a comma.
      */
     public void setMatchValue(String MatchValue) {
         this.MatchValue = MatchValue;
     }
 
     /**
-     * Get true - indicates a formula. false - indicates it is not a formula. 
-     * @return IsFunc true - indicates a formula. false - indicates it is not a formula.
+     * Get true: formula; false: non-formula 
+     * @return IsFunc true: formula; false: non-formula
      */
     public Boolean getIsFunc() {
         return this.IsFunc;
     }
 
     /**
-     * Set true - indicates a formula. false - indicates it is not a formula.
-     * @param IsFunc true - indicates a formula. false - indicates it is not a formula.
+     * Set true: formula; false: non-formula
+     * @param IsFunc true: formula; false: non-formula
      */
     public void setIsFunc(Boolean IsFunc) {
         this.IsFunc = IsFunc;
     }
 
     /**
-     * Get Specifies that when the parameter is set as a formula, Func returns the set formula content. 
-     * @return Func Specifies that when the parameter is set as a formula, Func returns the set formula content.
+     * Get When the parameter is set to a formula, Func returns the set formula content. 
+     * @return Func When the parameter is set to a formula, Func returns the set formula content.
      */
     public String getFunc() {
         return this.Func;
     }
 
     /**
-     * Set Specifies that when the parameter is set as a formula, Func returns the set formula content.
-     * @param Func Specifies that when the parameter is set as a formula, Func returns the set formula content.
+     * Set When the parameter is set to a formula, Func returns the set formula content.
+     * @param Func When the parameter is set to a formula, Func returns the set formula content.
      */
     public void setFunc(String Func) {
         this.Func = Func;
     }
 
     /**
-     * Get Whether the parameter is modifiable. 
-     * @return ModifiableInfo Whether the parameter is modifiable.
+     * Get Whether the parameter is modifiable 
+     * @return ModifiableInfo Whether the parameter is modifiable
      */
     public ModifiableInfo getModifiableInfo() {
         return this.ModifiableInfo;
     }
 
     /**
-     * Set Whether the parameter is modifiable.
-     * @param ModifiableInfo Whether the parameter is modifiable.
+     * Set Whether the parameter is modifiable
+     * @param ModifiableInfo Whether the parameter is modifiable
      */
     public void setModifiableInfo(ModifiableInfo ModifiableInfo) {
         this.ModifiableInfo = ModifiableInfo;
     }
 
     /**
-     * Get The default formula style of parameters that support formulas. 
-     * @return FuncPattern The default formula style of parameters that support formulas.
+     * Get Default formula style for parameters that support formulas 
+     * @return FuncPattern Default formula style for parameters that support formulas
      */
     public String getFuncPattern() {
         return this.FuncPattern;
     }
 
     /**
-     * Set The default formula style of parameters that support formulas.
-     * @param FuncPattern The default formula style of parameters that support formulas.
+     * Set Default formula style for parameters that support formulas
+     * @param FuncPattern Default formula style for parameters that support formulas
      */
     public void setFuncPattern(String FuncPattern) {
         this.FuncPattern = FuncPattern;

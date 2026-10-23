@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModifyInstanceUpgradeLimitDaysRequest extends AbstractModel {
 
     /**
-    * Cluster ID.
+    * Cluster ID
     */
     @SerializedName("ClusterId")
     @Expose
@@ -38,23 +38,23 @@ public class ModifyInstanceUpgradeLimitDaysRequest extends AbstractModel {
     private String InstanceId;
 
     /**
-    * Upgrade time limit.
+    * Upgrade time limit
     */
     @SerializedName("UpgradeLimitDays")
     @Expose
     private Long UpgradeLimitDays;
 
     /**
-     * Get Cluster ID. 
-     * @return ClusterId Cluster ID.
+     * Get Cluster ID 
+     * @return ClusterId Cluster ID
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set Cluster ID.
-     * @param ClusterId Cluster ID.
+     * Set Cluster ID
+     * @param ClusterId Cluster ID
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
@@ -77,16 +77,16 @@ public class ModifyInstanceUpgradeLimitDaysRequest extends AbstractModel {
     }
 
     /**
-     * Get Upgrade time limit. 
-     * @return UpgradeLimitDays Upgrade time limit.
+     * Get Upgrade time limit 
+     * @return UpgradeLimitDays Upgrade time limit
      */
     public Long getUpgradeLimitDays() {
         return this.UpgradeLimitDays;
     }
 
     /**
-     * Set Upgrade time limit.
-     * @param UpgradeLimitDays Upgrade time limit.
+     * Set Upgrade time limit
+     * @param UpgradeLimitDays Upgrade time limit
      */
     public void setUpgradeLimitDays(Long UpgradeLimitDays) {
         this.UpgradeLimitDays = UpgradeLimitDays;

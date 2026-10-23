@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class SearchClusterTablesRequest extends AbstractModel {
 
     /**
-    * Cluster ID
+    * Cluster ID.
     */
     @SerializedName("ClusterId")
     @Expose
@@ -45,26 +45,26 @@ public class SearchClusterTablesRequest extends AbstractModel {
     private String Table;
 
     /**
-    * Data table type. Valid values:
-`view`: Only return to view,
-`base_table`: Only return to basic table,
-`all`: Return to view and table.
+    * Table type:
+View: only return view
+base_table: only return basic tables
+all: return views and tables.
     */
     @SerializedName("TableType")
     @Expose
     private String TableType;
 
     /**
-     * Get Cluster ID 
-     * @return ClusterId Cluster ID
+     * Get Cluster ID. 
+     * @return ClusterId Cluster ID.
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set Cluster ID
-     * @param ClusterId Cluster ID
+     * Set Cluster ID.
+     * @param ClusterId Cluster ID.
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
@@ -103,28 +103,28 @@ public class SearchClusterTablesRequest extends AbstractModel {
     }
 
     /**
-     * Get Data table type. Valid values:
-`view`: Only return to view,
-`base_table`: Only return to basic table,
-`all`: Return to view and table. 
-     * @return TableType Data table type. Valid values:
-`view`: Only return to view,
-`base_table`: Only return to basic table,
-`all`: Return to view and table.
+     * Get Table type:
+View: only return view
+base_table: only return basic tables
+all: return views and tables. 
+     * @return TableType Table type:
+View: only return view
+base_table: only return basic tables
+all: return views and tables.
      */
     public String getTableType() {
         return this.TableType;
     }
 
     /**
-     * Set Data table type. Valid values:
-`view`: Only return to view,
-`base_table`: Only return to basic table,
-`all`: Return to view and table.
-     * @param TableType Data table type. Valid values:
-`view`: Only return to view,
-`base_table`: Only return to basic table,
-`all`: Return to view and table.
+     * Set Table type:
+View: only return view
+base_table: only return basic tables
+all: return views and tables.
+     * @param TableType Table type:
+View: only return view
+base_table: only return basic tables
+all: return views and tables.
      */
     public void setTableType(String TableType) {
         this.TableType = TableType;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CynosdbInstance extends AbstractModel {
 
     /**
-    * <p>User Uin</p>
+    * <p>User Uin.</p>
     */
     @SerializedName("Uin")
     @Expose
@@ -59,7 +59,7 @@ public class CynosdbInstance extends AbstractModel {
     private String InstanceId;
 
     /**
-    * <p>Instance name</p>
+    * <p>Instance name.</p>
     */
     @SerializedName("InstanceName")
     @Expose
@@ -73,7 +73,7 @@ public class CynosdbInstance extends AbstractModel {
     private Long ProjectId;
 
     /**
-    * <p>Region</p>
+    * <p>Region.</p>
     */
     @SerializedName("Region")
     @Expose
@@ -94,7 +94,7 @@ public class CynosdbInstance extends AbstractModel {
     private String Status;
 
     /**
-    * <p>Instance status description in Chinese</p>
+    * <p>Status description in Chinese of the instance.</p>
     */
     @SerializedName("StatusDesc")
     @Expose
@@ -129,7 +129,7 @@ public class CynosdbInstance extends AbstractModel {
     private Long Cpu;
 
     /**
-    * <p>Memory, unit: GB</p>
+    * <p>Memory in GB</p>
     */
     @SerializedName("Memory")
     @Expose
@@ -143,14 +143,14 @@ public class CynosdbInstance extends AbstractModel {
     private Long Storage;
 
     /**
-    * <p>Instance type</p><p>Enumeration value:</p><ul><li>rw: Read-write instance</li><li>ro: Read-only instance</li></ul>
+    * <p>Instance type</p><p>Enumeration values:</p><ul><li>rw: read-write instance</li><li>ro: read-only instance</li></ul>
     */
     @SerializedName("InstanceType")
     @Expose
     private String InstanceType;
 
     /**
-    * <p>Current instance role</p>
+    * <p>Current role of the instance</p>
     */
     @SerializedName("InstanceRole")
     @Expose
@@ -220,7 +220,7 @@ public class CynosdbInstance extends AbstractModel {
     private String DestroyDeadlineText;
 
     /**
-    * <p>Isolation time</p>
+    * <p>Isolation time.</p>
     */
     @SerializedName("IsolateTime")
     @Expose
@@ -234,7 +234,7 @@ public class CynosdbInstance extends AbstractModel {
     private Long NetType;
 
     /**
-    * <p>Public network domain name</p>
+    * <p>Public network domain</p>
     */
     @SerializedName("WanDomain")
     @Expose
@@ -248,7 +248,7 @@ public class CynosdbInstance extends AbstractModel {
     private String WanIP;
 
     /**
-    * <p>Public network port</p>
+    * <p>External port</p>
     */
     @SerializedName("WanPort")
     @Expose
@@ -269,42 +269,42 @@ public class CynosdbInstance extends AbstractModel {
     private String DestroyTime;
 
     /**
-    * <p>Cynos kernel version</p>
+    * <p>Cynos kernel version.</p>
     */
     @SerializedName("CynosVersion")
     @Expose
     private String CynosVersion;
 
     /**
-    * <p>Currently processing task</p>
+    * <p>Currently Processing Task</p>
     */
     @SerializedName("ProcessingTask")
     @Expose
     private String ProcessingTask;
 
     /**
-    * <p>Renewal flag</p>
+    * <p>Renewal flag.</p>
     */
     @SerializedName("RenewFlag")
     @Expose
     private Long RenewFlag;
 
     /**
-    * <p>serverless instance cpu minimum</p>
+    * <p>serverless instance cpu lower limit</p>
     */
     @SerializedName("MinCpu")
     @Expose
     private Float MinCpu;
 
     /**
-    * <p>cpu cap of the serverless instance</p>
+    * <p>cpu upper limit of a serverless instance</p>
     */
     @SerializedName("MaxCpu")
     @Expose
     private Float MaxCpu;
 
     /**
-    * <p>serverless instance status, available values:<br>resume<br>pause</p>
+    * <p>serverless instance status. Available values: <br>resume<br>pause</p>
     */
     @SerializedName("ServerlessStatus")
     @Expose
@@ -374,7 +374,7 @@ public class CynosdbInstance extends AbstractModel {
     private String [] SlaveZones;
 
     /**
-    * <p>Instance network info</p>
+    * <p>Instance network information</p>
     */
     @SerializedName("InstanceNetInfo")
     @Expose
@@ -388,7 +388,7 @@ public class CynosdbInstance extends AbstractModel {
     private ResourcePackage [] ResourcePackages;
 
     /**
-    * <p>Instance index form, available values [mixedRowColumn (hybrid row-column storage), onlyRowIndex (row storage only)]</p>
+    * <p>Instance index form. Available values: [mixedRowColumn (hybrid row-column storage), onlyRowIndex (row storage only)]</p>
     */
     @SerializedName("InstanceIndexMode")
     @Expose
@@ -416,7 +416,7 @@ public class CynosdbInstance extends AbstractModel {
     private String InstanceStorageType;
 
     /**
-    * <p>Unknown field</p>
+    * <p>Unknown field.</p>
     */
     @SerializedName("CynosVersionTag")
     @Expose
@@ -430,7 +430,7 @@ public class CynosdbInstance extends AbstractModel {
     private String [] NodeList;
 
     /**
-    * <p>Unique ID of the global database</p>
+    * <p>Global database unique ID</p>
     */
     @SerializedName("GdnId")
     @Expose
@@ -444,16 +444,16 @@ public class CynosdbInstance extends AbstractModel {
     private String RealZone;
 
     /**
-     * Get <p>User Uin</p> 
-     * @return Uin <p>User Uin</p>
+     * Get <p>User Uin.</p> 
+     * @return Uin <p>User Uin.</p>
      */
     public String getUin() {
         return this.Uin;
     }
 
     /**
-     * Set <p>User Uin</p>
-     * @param Uin <p>User Uin</p>
+     * Set <p>User Uin.</p>
+     * @param Uin <p>User Uin.</p>
      */
     public void setUin(String Uin) {
         this.Uin = Uin;
@@ -524,16 +524,16 @@ public class CynosdbInstance extends AbstractModel {
     }
 
     /**
-     * Get <p>Instance name</p> 
-     * @return InstanceName <p>Instance name</p>
+     * Get <p>Instance name.</p> 
+     * @return InstanceName <p>Instance name.</p>
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set <p>Instance name</p>
-     * @param InstanceName <p>Instance name</p>
+     * Set <p>Instance name.</p>
+     * @param InstanceName <p>Instance name.</p>
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
@@ -556,16 +556,16 @@ public class CynosdbInstance extends AbstractModel {
     }
 
     /**
-     * Get <p>Region</p> 
-     * @return Region <p>Region</p>
+     * Get <p>Region.</p> 
+     * @return Region <p>Region.</p>
      */
     public String getRegion() {
         return this.Region;
     }
 
     /**
-     * Set <p>Region</p>
-     * @param Region <p>Region</p>
+     * Set <p>Region.</p>
+     * @param Region <p>Region.</p>
      */
     public void setRegion(String Region) {
         this.Region = Region;
@@ -604,16 +604,16 @@ public class CynosdbInstance extends AbstractModel {
     }
 
     /**
-     * Get <p>Instance status description in Chinese</p> 
-     * @return StatusDesc <p>Instance status description in Chinese</p>
+     * Get <p>Status description in Chinese of the instance.</p> 
+     * @return StatusDesc <p>Status description in Chinese of the instance.</p>
      */
     public String getStatusDesc() {
         return this.StatusDesc;
     }
 
     /**
-     * Set <p>Instance status description in Chinese</p>
-     * @param StatusDesc <p>Instance status description in Chinese</p>
+     * Set <p>Status description in Chinese of the instance.</p>
+     * @param StatusDesc <p>Status description in Chinese of the instance.</p>
      */
     public void setStatusDesc(String StatusDesc) {
         this.StatusDesc = StatusDesc;
@@ -684,16 +684,16 @@ public class CynosdbInstance extends AbstractModel {
     }
 
     /**
-     * Get <p>Memory, unit: GB</p> 
-     * @return Memory <p>Memory, unit: GB</p>
+     * Get <p>Memory in GB</p> 
+     * @return Memory <p>Memory in GB</p>
      */
     public Long getMemory() {
         return this.Memory;
     }
 
     /**
-     * Set <p>Memory, unit: GB</p>
-     * @param Memory <p>Memory, unit: GB</p>
+     * Set <p>Memory in GB</p>
+     * @param Memory <p>Memory in GB</p>
      */
     public void setMemory(Long Memory) {
         this.Memory = Memory;
@@ -716,32 +716,32 @@ public class CynosdbInstance extends AbstractModel {
     }
 
     /**
-     * Get <p>Instance type</p><p>Enumeration value:</p><ul><li>rw: Read-write instance</li><li>ro: Read-only instance</li></ul> 
-     * @return InstanceType <p>Instance type</p><p>Enumeration value:</p><ul><li>rw: Read-write instance</li><li>ro: Read-only instance</li></ul>
+     * Get <p>Instance type</p><p>Enumeration values:</p><ul><li>rw: read-write instance</li><li>ro: read-only instance</li></ul> 
+     * @return InstanceType <p>Instance type</p><p>Enumeration values:</p><ul><li>rw: read-write instance</li><li>ro: read-only instance</li></ul>
      */
     public String getInstanceType() {
         return this.InstanceType;
     }
 
     /**
-     * Set <p>Instance type</p><p>Enumeration value:</p><ul><li>rw: Read-write instance</li><li>ro: Read-only instance</li></ul>
-     * @param InstanceType <p>Instance type</p><p>Enumeration value:</p><ul><li>rw: Read-write instance</li><li>ro: Read-only instance</li></ul>
+     * Set <p>Instance type</p><p>Enumeration values:</p><ul><li>rw: read-write instance</li><li>ro: read-only instance</li></ul>
+     * @param InstanceType <p>Instance type</p><p>Enumeration values:</p><ul><li>rw: read-write instance</li><li>ro: read-only instance</li></ul>
      */
     public void setInstanceType(String InstanceType) {
         this.InstanceType = InstanceType;
     }
 
     /**
-     * Get <p>Current instance role</p> 
-     * @return InstanceRole <p>Current instance role</p>
+     * Get <p>Current role of the instance</p> 
+     * @return InstanceRole <p>Current role of the instance</p>
      */
     public String getInstanceRole() {
         return this.InstanceRole;
     }
 
     /**
-     * Set <p>Current instance role</p>
-     * @param InstanceRole <p>Current instance role</p>
+     * Set <p>Current role of the instance</p>
+     * @param InstanceRole <p>Current role of the instance</p>
      */
     public void setInstanceRole(String InstanceRole) {
         this.InstanceRole = InstanceRole;
@@ -892,16 +892,16 @@ public class CynosdbInstance extends AbstractModel {
     }
 
     /**
-     * Get <p>Isolation time</p> 
-     * @return IsolateTime <p>Isolation time</p>
+     * Get <p>Isolation time.</p> 
+     * @return IsolateTime <p>Isolation time.</p>
      */
     public String getIsolateTime() {
         return this.IsolateTime;
     }
 
     /**
-     * Set <p>Isolation time</p>
-     * @param IsolateTime <p>Isolation time</p>
+     * Set <p>Isolation time.</p>
+     * @param IsolateTime <p>Isolation time.</p>
      */
     public void setIsolateTime(String IsolateTime) {
         this.IsolateTime = IsolateTime;
@@ -924,16 +924,16 @@ public class CynosdbInstance extends AbstractModel {
     }
 
     /**
-     * Get <p>Public network domain name</p> 
-     * @return WanDomain <p>Public network domain name</p>
+     * Get <p>Public network domain</p> 
+     * @return WanDomain <p>Public network domain</p>
      */
     public String getWanDomain() {
         return this.WanDomain;
     }
 
     /**
-     * Set <p>Public network domain name</p>
-     * @param WanDomain <p>Public network domain name</p>
+     * Set <p>Public network domain</p>
+     * @param WanDomain <p>Public network domain</p>
      */
     public void setWanDomain(String WanDomain) {
         this.WanDomain = WanDomain;
@@ -956,16 +956,16 @@ public class CynosdbInstance extends AbstractModel {
     }
 
     /**
-     * Get <p>Public network port</p> 
-     * @return WanPort <p>Public network port</p>
+     * Get <p>External port</p> 
+     * @return WanPort <p>External port</p>
      */
     public Long getWanPort() {
         return this.WanPort;
     }
 
     /**
-     * Set <p>Public network port</p>
-     * @param WanPort <p>Public network port</p>
+     * Set <p>External port</p>
+     * @param WanPort <p>External port</p>
      */
     public void setWanPort(Long WanPort) {
         this.WanPort = WanPort;
@@ -1004,96 +1004,96 @@ public class CynosdbInstance extends AbstractModel {
     }
 
     /**
-     * Get <p>Cynos kernel version</p> 
-     * @return CynosVersion <p>Cynos kernel version</p>
+     * Get <p>Cynos kernel version.</p> 
+     * @return CynosVersion <p>Cynos kernel version.</p>
      */
     public String getCynosVersion() {
         return this.CynosVersion;
     }
 
     /**
-     * Set <p>Cynos kernel version</p>
-     * @param CynosVersion <p>Cynos kernel version</p>
+     * Set <p>Cynos kernel version.</p>
+     * @param CynosVersion <p>Cynos kernel version.</p>
      */
     public void setCynosVersion(String CynosVersion) {
         this.CynosVersion = CynosVersion;
     }
 
     /**
-     * Get <p>Currently processing task</p> 
-     * @return ProcessingTask <p>Currently processing task</p>
+     * Get <p>Currently Processing Task</p> 
+     * @return ProcessingTask <p>Currently Processing Task</p>
      */
     public String getProcessingTask() {
         return this.ProcessingTask;
     }
 
     /**
-     * Set <p>Currently processing task</p>
-     * @param ProcessingTask <p>Currently processing task</p>
+     * Set <p>Currently Processing Task</p>
+     * @param ProcessingTask <p>Currently Processing Task</p>
      */
     public void setProcessingTask(String ProcessingTask) {
         this.ProcessingTask = ProcessingTask;
     }
 
     /**
-     * Get <p>Renewal flag</p> 
-     * @return RenewFlag <p>Renewal flag</p>
+     * Get <p>Renewal flag.</p> 
+     * @return RenewFlag <p>Renewal flag.</p>
      */
     public Long getRenewFlag() {
         return this.RenewFlag;
     }
 
     /**
-     * Set <p>Renewal flag</p>
-     * @param RenewFlag <p>Renewal flag</p>
+     * Set <p>Renewal flag.</p>
+     * @param RenewFlag <p>Renewal flag.</p>
      */
     public void setRenewFlag(Long RenewFlag) {
         this.RenewFlag = RenewFlag;
     }
 
     /**
-     * Get <p>serverless instance cpu minimum</p> 
-     * @return MinCpu <p>serverless instance cpu minimum</p>
+     * Get <p>serverless instance cpu lower limit</p> 
+     * @return MinCpu <p>serverless instance cpu lower limit</p>
      */
     public Float getMinCpu() {
         return this.MinCpu;
     }
 
     /**
-     * Set <p>serverless instance cpu minimum</p>
-     * @param MinCpu <p>serverless instance cpu minimum</p>
+     * Set <p>serverless instance cpu lower limit</p>
+     * @param MinCpu <p>serverless instance cpu lower limit</p>
      */
     public void setMinCpu(Float MinCpu) {
         this.MinCpu = MinCpu;
     }
 
     /**
-     * Get <p>cpu cap of the serverless instance</p> 
-     * @return MaxCpu <p>cpu cap of the serverless instance</p>
+     * Get <p>cpu upper limit of a serverless instance</p> 
+     * @return MaxCpu <p>cpu upper limit of a serverless instance</p>
      */
     public Float getMaxCpu() {
         return this.MaxCpu;
     }
 
     /**
-     * Set <p>cpu cap of the serverless instance</p>
-     * @param MaxCpu <p>cpu cap of the serverless instance</p>
+     * Set <p>cpu upper limit of a serverless instance</p>
+     * @param MaxCpu <p>cpu upper limit of a serverless instance</p>
      */
     public void setMaxCpu(Float MaxCpu) {
         this.MaxCpu = MaxCpu;
     }
 
     /**
-     * Get <p>serverless instance status, available values:<br>resume<br>pause</p> 
-     * @return ServerlessStatus <p>serverless instance status, available values:<br>resume<br>pause</p>
+     * Get <p>serverless instance status. Available values: <br>resume<br>pause</p> 
+     * @return ServerlessStatus <p>serverless instance status. Available values: <br>resume<br>pause</p>
      */
     public String getServerlessStatus() {
         return this.ServerlessStatus;
     }
 
     /**
-     * Set <p>serverless instance status, available values:<br>resume<br>pause</p>
-     * @param ServerlessStatus <p>serverless instance status, available values:<br>resume<br>pause</p>
+     * Set <p>serverless instance status. Available values: <br>resume<br>pause</p>
+     * @param ServerlessStatus <p>serverless instance status. Available values: <br>resume<br>pause</p>
      */
     public void setServerlessStatus(String ServerlessStatus) {
         this.ServerlessStatus = ServerlessStatus;
@@ -1244,16 +1244,16 @@ public class CynosdbInstance extends AbstractModel {
     }
 
     /**
-     * Get <p>Instance network info</p> 
-     * @return InstanceNetInfo <p>Instance network info</p>
+     * Get <p>Instance network information</p> 
+     * @return InstanceNetInfo <p>Instance network information</p>
      */
     public InstanceNetInfo [] getInstanceNetInfo() {
         return this.InstanceNetInfo;
     }
 
     /**
-     * Set <p>Instance network info</p>
-     * @param InstanceNetInfo <p>Instance network info</p>
+     * Set <p>Instance network information</p>
+     * @param InstanceNetInfo <p>Instance network information</p>
      */
     public void setInstanceNetInfo(InstanceNetInfo [] InstanceNetInfo) {
         this.InstanceNetInfo = InstanceNetInfo;
@@ -1276,16 +1276,16 @@ public class CynosdbInstance extends AbstractModel {
     }
 
     /**
-     * Get <p>Instance index form, available values [mixedRowColumn (hybrid row-column storage), onlyRowIndex (row storage only)]</p> 
-     * @return InstanceIndexMode <p>Instance index form, available values [mixedRowColumn (hybrid row-column storage), onlyRowIndex (row storage only)]</p>
+     * Get <p>Instance index form. Available values: [mixedRowColumn (hybrid row-column storage), onlyRowIndex (row storage only)]</p> 
+     * @return InstanceIndexMode <p>Instance index form. Available values: [mixedRowColumn (hybrid row-column storage), onlyRowIndex (row storage only)]</p>
      */
     public String getInstanceIndexMode() {
         return this.InstanceIndexMode;
     }
 
     /**
-     * Set <p>Instance index form, available values [mixedRowColumn (hybrid row-column storage), onlyRowIndex (row storage only)]</p>
-     * @param InstanceIndexMode <p>Instance index form, available values [mixedRowColumn (hybrid row-column storage), onlyRowIndex (row storage only)]</p>
+     * Set <p>Instance index form. Available values: [mixedRowColumn (hybrid row-column storage), onlyRowIndex (row storage only)]</p>
+     * @param InstanceIndexMode <p>Instance index form. Available values: [mixedRowColumn (hybrid row-column storage), onlyRowIndex (row storage only)]</p>
      */
     public void setInstanceIndexMode(String InstanceIndexMode) {
         this.InstanceIndexMode = InstanceIndexMode;
@@ -1340,16 +1340,16 @@ public class CynosdbInstance extends AbstractModel {
     }
 
     /**
-     * Get <p>Unknown field</p> 
-     * @return CynosVersionTag <p>Unknown field</p>
+     * Get <p>Unknown field.</p> 
+     * @return CynosVersionTag <p>Unknown field.</p>
      */
     public String getCynosVersionTag() {
         return this.CynosVersionTag;
     }
 
     /**
-     * Set <p>Unknown field</p>
-     * @param CynosVersionTag <p>Unknown field</p>
+     * Set <p>Unknown field.</p>
+     * @param CynosVersionTag <p>Unknown field.</p>
      */
     public void setCynosVersionTag(String CynosVersionTag) {
         this.CynosVersionTag = CynosVersionTag;
@@ -1372,16 +1372,16 @@ public class CynosdbInstance extends AbstractModel {
     }
 
     /**
-     * Get <p>Unique ID of the global database</p> 
-     * @return GdnId <p>Unique ID of the global database</p>
+     * Get <p>Global database unique ID</p> 
+     * @return GdnId <p>Global database unique ID</p>
      */
     public String getGdnId() {
         return this.GdnId;
     }
 
     /**
-     * Set <p>Unique ID of the global database</p>
-     * @param GdnId <p>Unique ID of the global database</p>
+     * Set <p>Global database unique ID</p>
+     * @param GdnId <p>Global database unique ID</p>
      */
     public void setGdnId(String GdnId) {
         this.GdnId = GdnId;

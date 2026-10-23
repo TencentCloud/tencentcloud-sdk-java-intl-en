@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class AuditRuleTemplateInfo extends AbstractModel {
 
     /**
-    * Rule template ID
+    * Rule template ID.
     */
     @SerializedName("RuleTemplateId")
     @Expose
     private String RuleTemplateId;
 
     /**
-    * Rule template name
+    * Rule template name.
     */
     @SerializedName("RuleTemplateName")
     @Expose
     private String RuleTemplateName;
 
     /**
-    * Filter of the rule template
+    * Filter criteria of the rule template
     */
     @SerializedName("RuleFilters")
     @Expose
@@ -52,7 +52,7 @@ public class AuditRuleTemplateInfo extends AbstractModel {
     private String Description;
 
     /**
-    * Creation time of a rule template
+    * Rule template creation time.
     */
     @SerializedName("CreateAt")
     @Expose
@@ -66,76 +66,76 @@ public class AuditRuleTemplateInfo extends AbstractModel {
     private String UpdateAt;
 
     /**
-    * Alarm level. valid values: 1 (low risk), 2 (medium risk), 3 (high risk).
+    * Alarm level. Valid values: 1 - Low risk, 2 - Medium risk, 3 - High risk.
     */
     @SerializedName("AlarmLevel")
     @Expose
     private Long AlarmLevel;
 
     /**
-    * Alarm policy. 0 - no alert, 1 - alert.
+    * Alarm policy. Valid values: 0 - Alarm disabled, 1 - Alarm enabled.
     */
     @SerializedName("AlarmPolicy")
     @Expose
     private Long AlarmPolicy;
 
     /**
-    * Template status. 0 - no task, 1 - modifying.
+    * Template status. Valid values: 0 - No task, 1 - modifying.
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * Template application is used in which instances.
+    * Instances to which this rule template is applied.
     */
     @SerializedName("AffectedInstances")
     @Expose
     private String [] AffectedInstances;
 
     /**
-     * Get Rule template ID 
-     * @return RuleTemplateId Rule template ID
+     * Get Rule template ID. 
+     * @return RuleTemplateId Rule template ID.
      */
     public String getRuleTemplateId() {
         return this.RuleTemplateId;
     }
 
     /**
-     * Set Rule template ID
-     * @param RuleTemplateId Rule template ID
+     * Set Rule template ID.
+     * @param RuleTemplateId Rule template ID.
      */
     public void setRuleTemplateId(String RuleTemplateId) {
         this.RuleTemplateId = RuleTemplateId;
     }
 
     /**
-     * Get Rule template name 
-     * @return RuleTemplateName Rule template name
+     * Get Rule template name. 
+     * @return RuleTemplateName Rule template name.
      */
     public String getRuleTemplateName() {
         return this.RuleTemplateName;
     }
 
     /**
-     * Set Rule template name
-     * @param RuleTemplateName Rule template name
+     * Set Rule template name.
+     * @param RuleTemplateName Rule template name.
      */
     public void setRuleTemplateName(String RuleTemplateName) {
         this.RuleTemplateName = RuleTemplateName;
     }
 
     /**
-     * Get Filter of the rule template 
-     * @return RuleFilters Filter of the rule template
+     * Get Filter criteria of the rule template 
+     * @return RuleFilters Filter criteria of the rule template
      */
     public RuleFilters [] getRuleFilters() {
         return this.RuleFilters;
     }
 
     /**
-     * Set Filter of the rule template
-     * @param RuleFilters Filter of the rule template
+     * Set Filter criteria of the rule template
+     * @param RuleFilters Filter criteria of the rule template
      */
     public void setRuleFilters(RuleFilters [] RuleFilters) {
         this.RuleFilters = RuleFilters;
@@ -158,16 +158,16 @@ public class AuditRuleTemplateInfo extends AbstractModel {
     }
 
     /**
-     * Get Creation time of a rule template 
-     * @return CreateAt Creation time of a rule template
+     * Get Rule template creation time. 
+     * @return CreateAt Rule template creation time.
      */
     public String getCreateAt() {
         return this.CreateAt;
     }
 
     /**
-     * Set Creation time of a rule template
-     * @param CreateAt Creation time of a rule template
+     * Set Rule template creation time.
+     * @param CreateAt Rule template creation time.
      */
     public void setCreateAt(String CreateAt) {
         this.CreateAt = CreateAt;
@@ -190,64 +190,64 @@ public class AuditRuleTemplateInfo extends AbstractModel {
     }
 
     /**
-     * Get Alarm level. valid values: 1 (low risk), 2 (medium risk), 3 (high risk). 
-     * @return AlarmLevel Alarm level. valid values: 1 (low risk), 2 (medium risk), 3 (high risk).
+     * Get Alarm level. Valid values: 1 - Low risk, 2 - Medium risk, 3 - High risk. 
+     * @return AlarmLevel Alarm level. Valid values: 1 - Low risk, 2 - Medium risk, 3 - High risk.
      */
     public Long getAlarmLevel() {
         return this.AlarmLevel;
     }
 
     /**
-     * Set Alarm level. valid values: 1 (low risk), 2 (medium risk), 3 (high risk).
-     * @param AlarmLevel Alarm level. valid values: 1 (low risk), 2 (medium risk), 3 (high risk).
+     * Set Alarm level. Valid values: 1 - Low risk, 2 - Medium risk, 3 - High risk.
+     * @param AlarmLevel Alarm level. Valid values: 1 - Low risk, 2 - Medium risk, 3 - High risk.
      */
     public void setAlarmLevel(Long AlarmLevel) {
         this.AlarmLevel = AlarmLevel;
     }
 
     /**
-     * Get Alarm policy. 0 - no alert, 1 - alert. 
-     * @return AlarmPolicy Alarm policy. 0 - no alert, 1 - alert.
+     * Get Alarm policy. Valid values: 0 - Alarm disabled, 1 - Alarm enabled. 
+     * @return AlarmPolicy Alarm policy. Valid values: 0 - Alarm disabled, 1 - Alarm enabled.
      */
     public Long getAlarmPolicy() {
         return this.AlarmPolicy;
     }
 
     /**
-     * Set Alarm policy. 0 - no alert, 1 - alert.
-     * @param AlarmPolicy Alarm policy. 0 - no alert, 1 - alert.
+     * Set Alarm policy. Valid values: 0 - Alarm disabled, 1 - Alarm enabled.
+     * @param AlarmPolicy Alarm policy. Valid values: 0 - Alarm disabled, 1 - Alarm enabled.
      */
     public void setAlarmPolicy(Long AlarmPolicy) {
         this.AlarmPolicy = AlarmPolicy;
     }
 
     /**
-     * Get Template status. 0 - no task, 1 - modifying. 
-     * @return Status Template status. 0 - no task, 1 - modifying.
+     * Get Template status. Valid values: 0 - No task, 1 - modifying. 
+     * @return Status Template status. Valid values: 0 - No task, 1 - modifying.
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Template status. 0 - no task, 1 - modifying.
-     * @param Status Template status. 0 - no task, 1 - modifying.
+     * Set Template status. Valid values: 0 - No task, 1 - modifying.
+     * @param Status Template status. Valid values: 0 - No task, 1 - modifying.
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Template application is used in which instances. 
-     * @return AffectedInstances Template application is used in which instances.
+     * Get Instances to which this rule template is applied. 
+     * @return AffectedInstances Instances to which this rule template is applied.
      */
     public String [] getAffectedInstances() {
         return this.AffectedInstances;
     }
 
     /**
-     * Set Template application is used in which instances.
-     * @param AffectedInstances Template application is used in which instances.
+     * Set Instances to which this rule template is applied.
+     * @param AffectedInstances Instances to which this rule template is applied.
      */
     public void setAffectedInstances(String [] AffectedInstances) {
         this.AffectedInstances = AffectedInstances;

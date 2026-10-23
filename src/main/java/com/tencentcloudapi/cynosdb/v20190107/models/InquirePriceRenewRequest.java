@@ -31,14 +31,14 @@ public class InquirePriceRenewRequest extends AbstractModel {
     private String ClusterId;
 
     /**
-    * Validity period, which needs to be used together with `TimeUnit`.
+    * Purchase period, combined with TimeUnit for the changes to take effect
     */
     @SerializedName("TimeSpan")
     @Expose
     private Long TimeSpan;
 
     /**
-    * Unit of validity period, which needs to be used together with `TimeSpan`. Valid values: `d` (day), `m` (month).
+    * Duration unit, takes effect when combined with TimeSpan. Options: day:d, month:m
     */
     @SerializedName("TimeUnit")
     @Expose
@@ -61,32 +61,32 @@ public class InquirePriceRenewRequest extends AbstractModel {
     }
 
     /**
-     * Get Validity period, which needs to be used together with `TimeUnit`. 
-     * @return TimeSpan Validity period, which needs to be used together with `TimeUnit`.
+     * Get Purchase period, combined with TimeUnit for the changes to take effect 
+     * @return TimeSpan Purchase period, combined with TimeUnit for the changes to take effect
      */
     public Long getTimeSpan() {
         return this.TimeSpan;
     }
 
     /**
-     * Set Validity period, which needs to be used together with `TimeUnit`.
-     * @param TimeSpan Validity period, which needs to be used together with `TimeUnit`.
+     * Set Purchase period, combined with TimeUnit for the changes to take effect
+     * @param TimeSpan Purchase period, combined with TimeUnit for the changes to take effect
      */
     public void setTimeSpan(Long TimeSpan) {
         this.TimeSpan = TimeSpan;
     }
 
     /**
-     * Get Unit of validity period, which needs to be used together with `TimeSpan`. Valid values: `d` (day), `m` (month). 
-     * @return TimeUnit Unit of validity period, which needs to be used together with `TimeSpan`. Valid values: `d` (day), `m` (month).
+     * Get Duration unit, takes effect when combined with TimeSpan. Options: day:d, month:m 
+     * @return TimeUnit Duration unit, takes effect when combined with TimeSpan. Options: day:d, month:m
      */
     public String getTimeUnit() {
         return this.TimeUnit;
     }
 
     /**
-     * Set Unit of validity period, which needs to be used together with `TimeSpan`. Valid values: `d` (day), `m` (month).
-     * @param TimeUnit Unit of validity period, which needs to be used together with `TimeSpan`. Valid values: `d` (day), `m` (month).
+     * Set Duration unit, takes effect when combined with TimeSpan. Options: day:d, month:m
+     * @param TimeUnit Duration unit, takes effect when combined with TimeSpan. Options: day:d, month:m
      */
     public void setTimeUnit(String TimeUnit) {
         this.TimeUnit = TimeUnit;

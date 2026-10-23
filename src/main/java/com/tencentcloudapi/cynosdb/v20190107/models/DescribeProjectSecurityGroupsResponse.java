@@ -31,7 +31,7 @@ public class DescribeProjectSecurityGroupsResponse extends AbstractModel {
     private SecurityGroup [] Groups;
 
     /**
-    * The total number of groups
+    * Total number.
     */
     @SerializedName("Total")
     @Expose
@@ -61,16 +61,16 @@ public class DescribeProjectSecurityGroupsResponse extends AbstractModel {
     }
 
     /**
-     * Get The total number of groups 
-     * @return Total The total number of groups
+     * Get Total number. 
+     * @return Total Total number.
      */
     public Long getTotal() {
         return this.Total;
     }
 
     /**
-     * Set The total number of groups
-     * @param Total The total number of groups
+     * Set Total number.
+     * @param Total Total number.
      */
     public void setTotal(Long Total) {
         this.Total = Total;

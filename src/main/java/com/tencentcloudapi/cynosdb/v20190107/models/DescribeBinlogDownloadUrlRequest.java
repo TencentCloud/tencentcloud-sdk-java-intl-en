@@ -38,7 +38,7 @@ public class DescribeBinlogDownloadUrlRequest extends AbstractModel {
     private Long BinlogId;
 
     /**
-    * Backup download source restriction condition.
+    * Backup download source limit
     */
     @SerializedName("DownloadRestriction")
     @Expose
@@ -77,16 +77,16 @@ public class DescribeBinlogDownloadUrlRequest extends AbstractModel {
     }
 
     /**
-     * Get Backup download source restriction condition. 
-     * @return DownloadRestriction Backup download source restriction condition.
+     * Get Backup download source limit 
+     * @return DownloadRestriction Backup download source limit
      */
     public BackupLimitRestriction getDownloadRestriction() {
         return this.DownloadRestriction;
     }
 
     /**
-     * Set Backup download source restriction condition.
-     * @param DownloadRestriction Backup download source restriction condition.
+     * Set Backup download source limit
+     * @param DownloadRestriction Backup download source limit
      */
     public void setDownloadRestriction(BackupLimitRestriction DownloadRestriction) {
         this.DownloadRestriction = DownloadRestriction;

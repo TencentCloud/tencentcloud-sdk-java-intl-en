@@ -31,28 +31,28 @@ public class UpgradeProxyVersionRequest extends AbstractModel {
     private String ClusterId;
 
     /**
-    * Current version of database proxy
+    * Current version of the database proxy.
     */
     @SerializedName("SrcProxyVersion")
     @Expose
     private String SrcProxyVersion;
 
     /**
-    * Target version of database proxy
+    * Database proxy upgrade version
     */
     @SerializedName("DstProxyVersion")
     @Expose
     private String DstProxyVersion;
 
     /**
-    * Database proxy group ID
+    * Database Proxy Group ID
     */
     @SerializedName("ProxyGroupId")
     @Expose
     private String ProxyGroupId;
 
     /**
-    * Upgrade time. Valid values: `no` (upon upgrade completion), `yes` (upgrade during instance maintenance time)
+    * Upgrade time: no (upon upgrade completion); yes (instance maintenance time)
     */
     @SerializedName("IsInMaintainPeriod")
     @Expose
@@ -75,64 +75,64 @@ public class UpgradeProxyVersionRequest extends AbstractModel {
     }
 
     /**
-     * Get Current version of database proxy 
-     * @return SrcProxyVersion Current version of database proxy
+     * Get Current version of the database proxy. 
+     * @return SrcProxyVersion Current version of the database proxy.
      */
     public String getSrcProxyVersion() {
         return this.SrcProxyVersion;
     }
 
     /**
-     * Set Current version of database proxy
-     * @param SrcProxyVersion Current version of database proxy
+     * Set Current version of the database proxy.
+     * @param SrcProxyVersion Current version of the database proxy.
      */
     public void setSrcProxyVersion(String SrcProxyVersion) {
         this.SrcProxyVersion = SrcProxyVersion;
     }
 
     /**
-     * Get Target version of database proxy 
-     * @return DstProxyVersion Target version of database proxy
+     * Get Database proxy upgrade version 
+     * @return DstProxyVersion Database proxy upgrade version
      */
     public String getDstProxyVersion() {
         return this.DstProxyVersion;
     }
 
     /**
-     * Set Target version of database proxy
-     * @param DstProxyVersion Target version of database proxy
+     * Set Database proxy upgrade version
+     * @param DstProxyVersion Database proxy upgrade version
      */
     public void setDstProxyVersion(String DstProxyVersion) {
         this.DstProxyVersion = DstProxyVersion;
     }
 
     /**
-     * Get Database proxy group ID 
-     * @return ProxyGroupId Database proxy group ID
+     * Get Database Proxy Group ID 
+     * @return ProxyGroupId Database Proxy Group ID
      */
     public String getProxyGroupId() {
         return this.ProxyGroupId;
     }
 
     /**
-     * Set Database proxy group ID
-     * @param ProxyGroupId Database proxy group ID
+     * Set Database Proxy Group ID
+     * @param ProxyGroupId Database Proxy Group ID
      */
     public void setProxyGroupId(String ProxyGroupId) {
         this.ProxyGroupId = ProxyGroupId;
     }
 
     /**
-     * Get Upgrade time. Valid values: `no` (upon upgrade completion), `yes` (upgrade during instance maintenance time) 
-     * @return IsInMaintainPeriod Upgrade time. Valid values: `no` (upon upgrade completion), `yes` (upgrade during instance maintenance time)
+     * Get Upgrade time: no (upon upgrade completion); yes (instance maintenance time) 
+     * @return IsInMaintainPeriod Upgrade time: no (upon upgrade completion); yes (instance maintenance time)
      */
     public String getIsInMaintainPeriod() {
         return this.IsInMaintainPeriod;
     }
 
     /**
-     * Set Upgrade time. Valid values: `no` (upon upgrade completion), `yes` (upgrade during instance maintenance time)
-     * @param IsInMaintainPeriod Upgrade time. Valid values: `no` (upon upgrade completion), `yes` (upgrade during instance maintenance time)
+     * Set Upgrade time: no (upon upgrade completion); yes (instance maintenance time)
+     * @param IsInMaintainPeriod Upgrade time: no (upon upgrade completion); yes (instance maintenance time)
      */
     public void setIsInMaintainPeriod(String IsInMaintainPeriod) {
         this.IsInMaintainPeriod = IsInMaintainPeriod;

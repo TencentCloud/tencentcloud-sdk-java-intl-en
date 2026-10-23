@@ -31,14 +31,14 @@ public class CloseProxyRequest extends AbstractModel {
     private String ClusterId;
 
     /**
-    * Database proxy group ID
+    * Database Proxy Group ID
     */
     @SerializedName("ProxyGroupId")
     @Expose
     private String ProxyGroupId;
 
     /**
-    * Whether only to disable read/write separation. Valid values: `true`, `false`.
+    * Whether to only disable read-write separation. Value: true or false
     */
     @SerializedName("OnlyCloseRW")
     @Expose
@@ -61,32 +61,32 @@ public class CloseProxyRequest extends AbstractModel {
     }
 
     /**
-     * Get Database proxy group ID 
-     * @return ProxyGroupId Database proxy group ID
+     * Get Database Proxy Group ID 
+     * @return ProxyGroupId Database Proxy Group ID
      */
     public String getProxyGroupId() {
         return this.ProxyGroupId;
     }
 
     /**
-     * Set Database proxy group ID
-     * @param ProxyGroupId Database proxy group ID
+     * Set Database Proxy Group ID
+     * @param ProxyGroupId Database Proxy Group ID
      */
     public void setProxyGroupId(String ProxyGroupId) {
         this.ProxyGroupId = ProxyGroupId;
     }
 
     /**
-     * Get Whether only to disable read/write separation. Valid values: `true`, `false`. 
-     * @return OnlyCloseRW Whether only to disable read/write separation. Valid values: `true`, `false`.
+     * Get Whether to only disable read-write separation. Value: true or false 
+     * @return OnlyCloseRW Whether to only disable read-write separation. Value: true or false
      */
     public Boolean getOnlyCloseRW() {
         return this.OnlyCloseRW;
     }
 
     /**
-     * Set Whether only to disable read/write separation. Valid values: `true`, `false`.
-     * @param OnlyCloseRW Whether only to disable read/write separation. Valid values: `true`, `false`.
+     * Set Whether to only disable read-write separation. Value: true or false
+     * @param OnlyCloseRW Whether to only disable read-write separation. Value: true or false
      */
     public void setOnlyCloseRW(Boolean OnlyCloseRW) {
         this.OnlyCloseRW = OnlyCloseRW;

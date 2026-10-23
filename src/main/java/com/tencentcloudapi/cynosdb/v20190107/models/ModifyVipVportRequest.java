@@ -24,28 +24,35 @@ import java.util.HashMap;
 public class ModifyVipVportRequest extends AbstractModel {
 
     /**
-    * Cluster ID
+    * Cluster ID.
     */
     @SerializedName("ClusterId")
     @Expose
     private String ClusterId;
 
     /**
-    * Instance group ID
+    * Instance Group ID
     */
     @SerializedName("InstanceGrpId")
     @Expose
     private String InstanceGrpId;
 
     /**
-    * Target IP to be modified
+    * Instance Group ID
+    */
+    @SerializedName("InstanceGroupId")
+    @Expose
+    private String InstanceGroupId;
+
+    /**
+    * Destination ip that needs to be modified
     */
     @SerializedName("Vip")
     @Expose
     private String Vip;
 
     /**
-    * Target port to be modified
+    * Destination port that needs to be modified
     */
     @SerializedName("Vport")
     @Expose
@@ -60,31 +67,31 @@ public class ModifyVipVportRequest extends AbstractModel {
     private String DbType;
 
     /**
-    * Valid hours of old IPs. If it is set to `0` hours, the IPs will be released immediately.
+    * Retention time of the old ip before recycling. Unit: hour. 0 means reclaim immediately.
     */
     @SerializedName("OldIpReserveHours")
     @Expose
     private Long OldIpReserveHours;
 
     /**
-     * Get Cluster ID 
-     * @return ClusterId Cluster ID
+     * Get Cluster ID. 
+     * @return ClusterId Cluster ID.
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set Cluster ID
-     * @param ClusterId Cluster ID
+     * Set Cluster ID.
+     * @param ClusterId Cluster ID.
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get Instance group ID 
-     * @return InstanceGrpId Instance group ID
+     * Get Instance Group ID 
+     * @return InstanceGrpId Instance Group ID
      * @deprecated
      */
     @Deprecated
@@ -93,8 +100,8 @@ public class ModifyVipVportRequest extends AbstractModel {
     }
 
     /**
-     * Set Instance group ID
-     * @param InstanceGrpId Instance group ID
+     * Set Instance Group ID
+     * @param InstanceGrpId Instance Group ID
      * @deprecated
      */
     @Deprecated
@@ -103,32 +110,48 @@ public class ModifyVipVportRequest extends AbstractModel {
     }
 
     /**
-     * Get Target IP to be modified 
-     * @return Vip Target IP to be modified
+     * Get Instance Group ID 
+     * @return InstanceGroupId Instance Group ID
+     */
+    public String getInstanceGroupId() {
+        return this.InstanceGroupId;
+    }
+
+    /**
+     * Set Instance Group ID
+     * @param InstanceGroupId Instance Group ID
+     */
+    public void setInstanceGroupId(String InstanceGroupId) {
+        this.InstanceGroupId = InstanceGroupId;
+    }
+
+    /**
+     * Get Destination ip that needs to be modified 
+     * @return Vip Destination ip that needs to be modified
      */
     public String getVip() {
         return this.Vip;
     }
 
     /**
-     * Set Target IP to be modified
-     * @param Vip Target IP to be modified
+     * Set Destination ip that needs to be modified
+     * @param Vip Destination ip that needs to be modified
      */
     public void setVip(String Vip) {
         this.Vip = Vip;
     }
 
     /**
-     * Get Target port to be modified 
-     * @return Vport Target port to be modified
+     * Get Destination port that needs to be modified 
+     * @return Vport Destination port that needs to be modified
      */
     public Long getVport() {
         return this.Vport;
     }
 
     /**
-     * Set Target port to be modified
-     * @param Vport Target port to be modified
+     * Set Destination port that needs to be modified
+     * @param Vport Destination port that needs to be modified
      */
     public void setVport(Long Vport) {
         this.Vport = Vport;
@@ -155,16 +178,16 @@ public class ModifyVipVportRequest extends AbstractModel {
     }
 
     /**
-     * Get Valid hours of old IPs. If it is set to `0` hours, the IPs will be released immediately. 
-     * @return OldIpReserveHours Valid hours of old IPs. If it is set to `0` hours, the IPs will be released immediately.
+     * Get Retention time of the old ip before recycling. Unit: hour. 0 means reclaim immediately. 
+     * @return OldIpReserveHours Retention time of the old ip before recycling. Unit: hour. 0 means reclaim immediately.
      */
     public Long getOldIpReserveHours() {
         return this.OldIpReserveHours;
     }
 
     /**
-     * Set Valid hours of old IPs. If it is set to `0` hours, the IPs will be released immediately.
-     * @param OldIpReserveHours Valid hours of old IPs. If it is set to `0` hours, the IPs will be released immediately.
+     * Set Retention time of the old ip before recycling. Unit: hour. 0 means reclaim immediately.
+     * @param OldIpReserveHours Retention time of the old ip before recycling. Unit: hour. 0 means reclaim immediately.
      */
     public void setOldIpReserveHours(Long OldIpReserveHours) {
         this.OldIpReserveHours = OldIpReserveHours;
@@ -183,6 +206,9 @@ public class ModifyVipVportRequest extends AbstractModel {
         }
         if (source.InstanceGrpId != null) {
             this.InstanceGrpId = new String(source.InstanceGrpId);
+        }
+        if (source.InstanceGroupId != null) {
+            this.InstanceGroupId = new String(source.InstanceGroupId);
         }
         if (source.Vip != null) {
             this.Vip = new String(source.Vip);
@@ -205,6 +231,7 @@ public class ModifyVipVportRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
         this.setParamSimple(map, prefix + "InstanceGrpId", this.InstanceGrpId);
+        this.setParamSimple(map, prefix + "InstanceGroupId", this.InstanceGroupId);
         this.setParamSimple(map, prefix + "Vip", this.Vip);
         this.setParamSimple(map, prefix + "Vport", this.Vport);
         this.setParamSimple(map, prefix + "DbType", this.DbType);

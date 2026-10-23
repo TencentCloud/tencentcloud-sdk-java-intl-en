@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class InquirePriceMultiSpecResponse extends AbstractModel {
 
     /**
-    * Specifies the product price.
+    * Item price
     */
     @SerializedName("GoodsPrice")
     @Expose
@@ -38,16 +38,16 @@ public class InquirePriceMultiSpecResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Specifies the product price. 
-     * @return GoodsPrice Specifies the product price.
+     * Get Item price 
+     * @return GoodsPrice Item price
      */
     public GoodsPrice [] getGoodsPrice() {
         return this.GoodsPrice;
     }
 
     /**
-     * Set Specifies the product price.
-     * @param GoodsPrice Specifies the product price.
+     * Set Item price
+     * @param GoodsPrice Item price
      */
     public void setGoodsPrice(GoodsPrice [] GoodsPrice) {
         this.GoodsPrice = GoodsPrice;

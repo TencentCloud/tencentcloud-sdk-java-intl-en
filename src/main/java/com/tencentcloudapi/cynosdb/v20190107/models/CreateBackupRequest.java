@@ -31,35 +31,35 @@ public class CreateBackupRequest extends AbstractModel {
     private String ClusterId;
 
     /**
-    * Backup type. Valid values: `logic` (logic backup), `snapshot` (physical backup)
+    * Backup type. Available values: logic (logical backup); snapshot (physical backup).
     */
     @SerializedName("BackupType")
     @Expose
     private String BackupType;
 
     /**
-    * Backup database, which is valid when `BackupType` is `logic`.
+    * Database to be backed up. This parameter is valid only when BackupType is logic.
     */
     @SerializedName("BackupDatabases")
     @Expose
     private String [] BackupDatabases;
 
     /**
-    * Backup table, which is valid when `BackupType` is `logic`.
+    * Tables to be backed up. This parameter is valid only when BackupType is logic.
     */
     @SerializedName("BackupTables")
     @Expose
     private DatabaseTables [] BackupTables;
 
     /**
-    * Backup name
+    * Alias name
     */
     @SerializedName("BackupName")
     @Expose
     private String BackupName;
 
     /**
-    * 	Message sent to safe
+    * 	Information sent to the safe
     */
     @SerializedName("Vaults")
     @Expose
@@ -82,80 +82,80 @@ public class CreateBackupRequest extends AbstractModel {
     }
 
     /**
-     * Get Backup type. Valid values: `logic` (logic backup), `snapshot` (physical backup) 
-     * @return BackupType Backup type. Valid values: `logic` (logic backup), `snapshot` (physical backup)
+     * Get Backup type. Available values: logic (logical backup); snapshot (physical backup). 
+     * @return BackupType Backup type. Available values: logic (logical backup); snapshot (physical backup).
      */
     public String getBackupType() {
         return this.BackupType;
     }
 
     /**
-     * Set Backup type. Valid values: `logic` (logic backup), `snapshot` (physical backup)
-     * @param BackupType Backup type. Valid values: `logic` (logic backup), `snapshot` (physical backup)
+     * Set Backup type. Available values: logic (logical backup); snapshot (physical backup).
+     * @param BackupType Backup type. Available values: logic (logical backup); snapshot (physical backup).
      */
     public void setBackupType(String BackupType) {
         this.BackupType = BackupType;
     }
 
     /**
-     * Get Backup database, which is valid when `BackupType` is `logic`. 
-     * @return BackupDatabases Backup database, which is valid when `BackupType` is `logic`.
+     * Get Database to be backed up. This parameter is valid only when BackupType is logic. 
+     * @return BackupDatabases Database to be backed up. This parameter is valid only when BackupType is logic.
      */
     public String [] getBackupDatabases() {
         return this.BackupDatabases;
     }
 
     /**
-     * Set Backup database, which is valid when `BackupType` is `logic`.
-     * @param BackupDatabases Backup database, which is valid when `BackupType` is `logic`.
+     * Set Database to be backed up. This parameter is valid only when BackupType is logic.
+     * @param BackupDatabases Database to be backed up. This parameter is valid only when BackupType is logic.
      */
     public void setBackupDatabases(String [] BackupDatabases) {
         this.BackupDatabases = BackupDatabases;
     }
 
     /**
-     * Get Backup table, which is valid when `BackupType` is `logic`. 
-     * @return BackupTables Backup table, which is valid when `BackupType` is `logic`.
+     * Get Tables to be backed up. This parameter is valid only when BackupType is logic. 
+     * @return BackupTables Tables to be backed up. This parameter is valid only when BackupType is logic.
      */
     public DatabaseTables [] getBackupTables() {
         return this.BackupTables;
     }
 
     /**
-     * Set Backup table, which is valid when `BackupType` is `logic`.
-     * @param BackupTables Backup table, which is valid when `BackupType` is `logic`.
+     * Set Tables to be backed up. This parameter is valid only when BackupType is logic.
+     * @param BackupTables Tables to be backed up. This parameter is valid only when BackupType is logic.
      */
     public void setBackupTables(DatabaseTables [] BackupTables) {
         this.BackupTables = BackupTables;
     }
 
     /**
-     * Get Backup name 
-     * @return BackupName Backup name
+     * Get Alias name 
+     * @return BackupName Alias name
      */
     public String getBackupName() {
         return this.BackupName;
     }
 
     /**
-     * Set Backup name
-     * @param BackupName Backup name
+     * Set Alias name
+     * @param BackupName Alias name
      */
     public void setBackupName(String BackupName) {
         this.BackupName = BackupName;
     }
 
     /**
-     * Get 	Message sent to safe 
-     * @return Vaults 	Message sent to safe
+     * Get 	Information sent to the safe 
+     * @return Vaults 	Information sent to the safe
      */
     public CreateBackupVaultItem [] getVaults() {
         return this.Vaults;
     }
 
     /**
-     * Set 	Message sent to safe
-     * @param Vaults 	Message sent to safe
+     * Set 	Information sent to the safe
+     * @param Vaults 	Information sent to the safe
      */
     public void setVaults(CreateBackupVaultItem [] Vaults) {
         this.Vaults = Vaults;

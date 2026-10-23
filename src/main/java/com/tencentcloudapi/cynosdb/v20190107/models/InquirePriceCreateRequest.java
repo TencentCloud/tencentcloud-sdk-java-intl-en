@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class InquirePriceCreateRequest extends AbstractModel {
 
     /**
-    * <p>Availability zone, each region provision best practice</p>
+    * <p>AZ. Best practice provided by each region</p>
     */
     @SerializedName("Zone")
     @Expose
@@ -38,21 +38,21 @@ public class InquirePriceCreateRequest extends AbstractModel {
     private Long GoodsNum;
 
     /**
-    * <p>Instance purchase type, optional values: PREPAID, POSTPAID, SERVERLESS</p>
+    * <p>Instance purchase type. Available values are: PREPAID, POSTPAID, SERVERLESS</p>
     */
     @SerializedName("InstancePayMode")
     @Expose
     private String InstancePayMode;
 
     /**
-    * <p>Storage purchase type, optional values: PREPAID, POSTPAID</p>
+    * <p>Storage purchase type. Available values are: PREPAID, POSTPAID</p>
     */
     @SerializedName("StoragePayMode")
     @Expose
     private String StoragePayMode;
 
     /**
-    * <p>Instance device type. Supported values are as follows:</p><ul><li>common: refers to universal type</li><li>exclusive: refers to dedicated type</li></ul>
+    * <p>Instance device type. Supported values are as follows:</p><ul><li>common: universal type</li><li>exclusive: dedicated</li></ul>
     */
     @SerializedName("DeviceType")
     @Expose
@@ -73,58 +73,58 @@ public class InquirePriceCreateRequest extends AbstractModel {
     private Long Memory;
 
     /**
-    * <p>Ccu size. Required for the serverless type.</p>
+    * <p>Ccu size, required for serverless type</p>
     */
     @SerializedName("Ccu")
     @Expose
     private Float Ccu;
 
     /**
-    * <p>Storage size. Required for PREPAID storage type</p>
+    * <p>Storage size. Required for PREPAID storage type.</p>
     */
     @SerializedName("StorageLimit")
     @Expose
     private Long StorageLimit;
 
     /**
-    * <p>Purchase period, required for PREPAID purchase type</p>
+    * <p>Purchase period. Required when the purchase type is PREPAID.</p>
     */
     @SerializedName("TimeSpan")
     @Expose
     private Long TimeSpan;
 
     /**
-    * <p>Duration unit. Optional values: m, d. Required for PREPAID purchase type.</p>
+    * <p>Duration unit. Available values are: m, d. Required for PREPAID purchase type</p>
     */
     @SerializedName("TimeUnit")
     @Expose
     private String TimeUnit;
 
     /**
-    * <p>Storage architecture type. Enumeration value: 1.0/2.0 Default value: 1.0</p>
+    * <p>Storage architecture type. Enumeration values: 1.0/2.0 Default value: 1.0</p>
     */
     @SerializedName("StorageVersion")
     @Expose
     private String StorageVersion;
 
     /**
-    * <p>Whether storage spans AZs. Valid for storage architecture 2.0</p>
+    * <p>Whether the storage is cross-AZ. Valid for storage architecture 2.0.</p>
     */
     @SerializedName("IsMultiAz")
     @Expose
     private Boolean IsMultiAz;
 
     /**
-     * Get <p>Availability zone, each region provision best practice</p> 
-     * @return Zone <p>Availability zone, each region provision best practice</p>
+     * Get <p>AZ. Best practice provided by each region</p> 
+     * @return Zone <p>AZ. Best practice provided by each region</p>
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * Set <p>Availability zone, each region provision best practice</p>
-     * @param Zone <p>Availability zone, each region provision best practice</p>
+     * Set <p>AZ. Best practice provided by each region</p>
+     * @param Zone <p>AZ. Best practice provided by each region</p>
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
@@ -147,48 +147,48 @@ public class InquirePriceCreateRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>Instance purchase type, optional values: PREPAID, POSTPAID, SERVERLESS</p> 
-     * @return InstancePayMode <p>Instance purchase type, optional values: PREPAID, POSTPAID, SERVERLESS</p>
+     * Get <p>Instance purchase type. Available values are: PREPAID, POSTPAID, SERVERLESS</p> 
+     * @return InstancePayMode <p>Instance purchase type. Available values are: PREPAID, POSTPAID, SERVERLESS</p>
      */
     public String getInstancePayMode() {
         return this.InstancePayMode;
     }
 
     /**
-     * Set <p>Instance purchase type, optional values: PREPAID, POSTPAID, SERVERLESS</p>
-     * @param InstancePayMode <p>Instance purchase type, optional values: PREPAID, POSTPAID, SERVERLESS</p>
+     * Set <p>Instance purchase type. Available values are: PREPAID, POSTPAID, SERVERLESS</p>
+     * @param InstancePayMode <p>Instance purchase type. Available values are: PREPAID, POSTPAID, SERVERLESS</p>
      */
     public void setInstancePayMode(String InstancePayMode) {
         this.InstancePayMode = InstancePayMode;
     }
 
     /**
-     * Get <p>Storage purchase type, optional values: PREPAID, POSTPAID</p> 
-     * @return StoragePayMode <p>Storage purchase type, optional values: PREPAID, POSTPAID</p>
+     * Get <p>Storage purchase type. Available values are: PREPAID, POSTPAID</p> 
+     * @return StoragePayMode <p>Storage purchase type. Available values are: PREPAID, POSTPAID</p>
      */
     public String getStoragePayMode() {
         return this.StoragePayMode;
     }
 
     /**
-     * Set <p>Storage purchase type, optional values: PREPAID, POSTPAID</p>
-     * @param StoragePayMode <p>Storage purchase type, optional values: PREPAID, POSTPAID</p>
+     * Set <p>Storage purchase type. Available values are: PREPAID, POSTPAID</p>
+     * @param StoragePayMode <p>Storage purchase type. Available values are: PREPAID, POSTPAID</p>
      */
     public void setStoragePayMode(String StoragePayMode) {
         this.StoragePayMode = StoragePayMode;
     }
 
     /**
-     * Get <p>Instance device type. Supported values are as follows:</p><ul><li>common: refers to universal type</li><li>exclusive: refers to dedicated type</li></ul> 
-     * @return DeviceType <p>Instance device type. Supported values are as follows:</p><ul><li>common: refers to universal type</li><li>exclusive: refers to dedicated type</li></ul>
+     * Get <p>Instance device type. Supported values are as follows:</p><ul><li>common: universal type</li><li>exclusive: dedicated</li></ul> 
+     * @return DeviceType <p>Instance device type. Supported values are as follows:</p><ul><li>common: universal type</li><li>exclusive: dedicated</li></ul>
      */
     public String getDeviceType() {
         return this.DeviceType;
     }
 
     /**
-     * Set <p>Instance device type. Supported values are as follows:</p><ul><li>common: refers to universal type</li><li>exclusive: refers to dedicated type</li></ul>
-     * @param DeviceType <p>Instance device type. Supported values are as follows:</p><ul><li>common: refers to universal type</li><li>exclusive: refers to dedicated type</li></ul>
+     * Set <p>Instance device type. Supported values are as follows:</p><ul><li>common: universal type</li><li>exclusive: dedicated</li></ul>
+     * @param DeviceType <p>Instance device type. Supported values are as follows:</p><ul><li>common: universal type</li><li>exclusive: dedicated</li></ul>
      */
     public void setDeviceType(String DeviceType) {
         this.DeviceType = DeviceType;
@@ -227,96 +227,96 @@ public class InquirePriceCreateRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>Ccu size. Required for the serverless type.</p> 
-     * @return Ccu <p>Ccu size. Required for the serverless type.</p>
+     * Get <p>Ccu size, required for serverless type</p> 
+     * @return Ccu <p>Ccu size, required for serverless type</p>
      */
     public Float getCcu() {
         return this.Ccu;
     }
 
     /**
-     * Set <p>Ccu size. Required for the serverless type.</p>
-     * @param Ccu <p>Ccu size. Required for the serverless type.</p>
+     * Set <p>Ccu size, required for serverless type</p>
+     * @param Ccu <p>Ccu size, required for serverless type</p>
      */
     public void setCcu(Float Ccu) {
         this.Ccu = Ccu;
     }
 
     /**
-     * Get <p>Storage size. Required for PREPAID storage type</p> 
-     * @return StorageLimit <p>Storage size. Required for PREPAID storage type</p>
+     * Get <p>Storage size. Required for PREPAID storage type.</p> 
+     * @return StorageLimit <p>Storage size. Required for PREPAID storage type.</p>
      */
     public Long getStorageLimit() {
         return this.StorageLimit;
     }
 
     /**
-     * Set <p>Storage size. Required for PREPAID storage type</p>
-     * @param StorageLimit <p>Storage size. Required for PREPAID storage type</p>
+     * Set <p>Storage size. Required for PREPAID storage type.</p>
+     * @param StorageLimit <p>Storage size. Required for PREPAID storage type.</p>
      */
     public void setStorageLimit(Long StorageLimit) {
         this.StorageLimit = StorageLimit;
     }
 
     /**
-     * Get <p>Purchase period, required for PREPAID purchase type</p> 
-     * @return TimeSpan <p>Purchase period, required for PREPAID purchase type</p>
+     * Get <p>Purchase period. Required when the purchase type is PREPAID.</p> 
+     * @return TimeSpan <p>Purchase period. Required when the purchase type is PREPAID.</p>
      */
     public Long getTimeSpan() {
         return this.TimeSpan;
     }
 
     /**
-     * Set <p>Purchase period, required for PREPAID purchase type</p>
-     * @param TimeSpan <p>Purchase period, required for PREPAID purchase type</p>
+     * Set <p>Purchase period. Required when the purchase type is PREPAID.</p>
+     * @param TimeSpan <p>Purchase period. Required when the purchase type is PREPAID.</p>
      */
     public void setTimeSpan(Long TimeSpan) {
         this.TimeSpan = TimeSpan;
     }
 
     /**
-     * Get <p>Duration unit. Optional values: m, d. Required for PREPAID purchase type.</p> 
-     * @return TimeUnit <p>Duration unit. Optional values: m, d. Required for PREPAID purchase type.</p>
+     * Get <p>Duration unit. Available values are: m, d. Required for PREPAID purchase type</p> 
+     * @return TimeUnit <p>Duration unit. Available values are: m, d. Required for PREPAID purchase type</p>
      */
     public String getTimeUnit() {
         return this.TimeUnit;
     }
 
     /**
-     * Set <p>Duration unit. Optional values: m, d. Required for PREPAID purchase type.</p>
-     * @param TimeUnit <p>Duration unit. Optional values: m, d. Required for PREPAID purchase type.</p>
+     * Set <p>Duration unit. Available values are: m, d. Required for PREPAID purchase type</p>
+     * @param TimeUnit <p>Duration unit. Available values are: m, d. Required for PREPAID purchase type</p>
      */
     public void setTimeUnit(String TimeUnit) {
         this.TimeUnit = TimeUnit;
     }
 
     /**
-     * Get <p>Storage architecture type. Enumeration value: 1.0/2.0 Default value: 1.0</p> 
-     * @return StorageVersion <p>Storage architecture type. Enumeration value: 1.0/2.0 Default value: 1.0</p>
+     * Get <p>Storage architecture type. Enumeration values: 1.0/2.0 Default value: 1.0</p> 
+     * @return StorageVersion <p>Storage architecture type. Enumeration values: 1.0/2.0 Default value: 1.0</p>
      */
     public String getStorageVersion() {
         return this.StorageVersion;
     }
 
     /**
-     * Set <p>Storage architecture type. Enumeration value: 1.0/2.0 Default value: 1.0</p>
-     * @param StorageVersion <p>Storage architecture type. Enumeration value: 1.0/2.0 Default value: 1.0</p>
+     * Set <p>Storage architecture type. Enumeration values: 1.0/2.0 Default value: 1.0</p>
+     * @param StorageVersion <p>Storage architecture type. Enumeration values: 1.0/2.0 Default value: 1.0</p>
      */
     public void setStorageVersion(String StorageVersion) {
         this.StorageVersion = StorageVersion;
     }
 
     /**
-     * Get <p>Whether storage spans AZs. Valid for storage architecture 2.0</p> 
-     * @return IsMultiAz <p>Whether storage spans AZs. Valid for storage architecture 2.0</p>
+     * Get <p>Whether the storage is cross-AZ. Valid for storage architecture 2.0.</p> 
+     * @return IsMultiAz <p>Whether the storage is cross-AZ. Valid for storage architecture 2.0.</p>
      */
     public Boolean getIsMultiAz() {
         return this.IsMultiAz;
     }
 
     /**
-     * Set <p>Whether storage spans AZs. Valid for storage architecture 2.0</p>
-     * @param IsMultiAz <p>Whether storage spans AZs. Valid for storage architecture 2.0</p>
+     * Set <p>Whether the storage is cross-AZ. Valid for storage architecture 2.0.</p>
+     * @param IsMultiAz <p>Whether the storage is cross-AZ. Valid for storage architecture 2.0.</p>
      */
     public void setIsMultiAz(Boolean IsMultiAz) {
         this.IsMultiAz = IsMultiAz;

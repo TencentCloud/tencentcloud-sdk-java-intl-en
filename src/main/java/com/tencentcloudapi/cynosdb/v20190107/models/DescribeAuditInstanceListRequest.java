@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class DescribeAuditInstanceListRequest extends AbstractModel {
 
     /**
-    * Enabling status of instance audit. 1 - enabled; 0 - not enabled.
+    * Whether audit is enabled for the instance. Valid values: 1 - Enabled; 0 - Disabled.
     */
     @SerializedName("AuditSwitch")
     @Expose
     private Long AuditSwitch;
 
     /**
-    * Filtering conditions for querying the instance list.
+    * Filter conditions for querying the instance list.
     */
     @SerializedName("Filters")
     @Expose
     private AuditInstanceFilters [] Filters;
 
     /**
-    * Instance audit rule mode. 1 - rule-based audit; 0 - full audit.
+    * Audit rule mode for the instance. Valid values: 1 - Rule-based audit; 0 - Full audit.
     */
     @SerializedName("AuditMode")
     @Expose
     private Long AuditMode;
 
     /**
-    * Number of entries returned per request. The default value is 30, and the maximum value is 100.
+    * Number of entries to return per request. Default value: 30. Maximum value: 100.
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * Offset. The default value is 0.
+    * Offset. Default value: 0.
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-     * Get Enabling status of instance audit. 1 - enabled; 0 - not enabled. 
-     * @return AuditSwitch Enabling status of instance audit. 1 - enabled; 0 - not enabled.
+     * Get Whether audit is enabled for the instance. Valid values: 1 - Enabled; 0 - Disabled. 
+     * @return AuditSwitch Whether audit is enabled for the instance. Valid values: 1 - Enabled; 0 - Disabled.
      */
     public Long getAuditSwitch() {
         return this.AuditSwitch;
     }
 
     /**
-     * Set Enabling status of instance audit. 1 - enabled; 0 - not enabled.
-     * @param AuditSwitch Enabling status of instance audit. 1 - enabled; 0 - not enabled.
+     * Set Whether audit is enabled for the instance. Valid values: 1 - Enabled; 0 - Disabled.
+     * @param AuditSwitch Whether audit is enabled for the instance. Valid values: 1 - Enabled; 0 - Disabled.
      */
     public void setAuditSwitch(Long AuditSwitch) {
         this.AuditSwitch = AuditSwitch;
     }
 
     /**
-     * Get Filtering conditions for querying the instance list. 
-     * @return Filters Filtering conditions for querying the instance list.
+     * Get Filter conditions for querying the instance list. 
+     * @return Filters Filter conditions for querying the instance list.
      */
     public AuditInstanceFilters [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set Filtering conditions for querying the instance list.
-     * @param Filters Filtering conditions for querying the instance list.
+     * Set Filter conditions for querying the instance list.
+     * @param Filters Filter conditions for querying the instance list.
      */
     public void setFilters(AuditInstanceFilters [] Filters) {
         this.Filters = Filters;
     }
 
     /**
-     * Get Instance audit rule mode. 1 - rule-based audit; 0 - full audit. 
-     * @return AuditMode Instance audit rule mode. 1 - rule-based audit; 0 - full audit.
+     * Get Audit rule mode for the instance. Valid values: 1 - Rule-based audit; 0 - Full audit. 
+     * @return AuditMode Audit rule mode for the instance. Valid values: 1 - Rule-based audit; 0 - Full audit.
      */
     public Long getAuditMode() {
         return this.AuditMode;
     }
 
     /**
-     * Set Instance audit rule mode. 1 - rule-based audit; 0 - full audit.
-     * @param AuditMode Instance audit rule mode. 1 - rule-based audit; 0 - full audit.
+     * Set Audit rule mode for the instance. Valid values: 1 - Rule-based audit; 0 - Full audit.
+     * @param AuditMode Audit rule mode for the instance. Valid values: 1 - Rule-based audit; 0 - Full audit.
      */
     public void setAuditMode(Long AuditMode) {
         this.AuditMode = AuditMode;
     }
 
     /**
-     * Get Number of entries returned per request. The default value is 30, and the maximum value is 100. 
-     * @return Limit Number of entries returned per request. The default value is 30, and the maximum value is 100.
+     * Get Number of entries to return per request. Default value: 30. Maximum value: 100. 
+     * @return Limit Number of entries to return per request. Default value: 30. Maximum value: 100.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Number of entries returned per request. The default value is 30, and the maximum value is 100.
-     * @param Limit Number of entries returned per request. The default value is 30, and the maximum value is 100.
+     * Set Number of entries to return per request. Default value: 30. Maximum value: 100.
+     * @param Limit Number of entries to return per request. Default value: 30. Maximum value: 100.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get Offset. The default value is 0. 
-     * @return Offset Offset. The default value is 0.
+     * Get Offset. Default value: 0. 
+     * @return Offset Offset. Default value: 0.
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Offset. The default value is 0.
-     * @param Offset Offset. The default value is 0.
+     * Set Offset. Default value: 0.
+     * @param Offset Offset. Default value: 0.
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;

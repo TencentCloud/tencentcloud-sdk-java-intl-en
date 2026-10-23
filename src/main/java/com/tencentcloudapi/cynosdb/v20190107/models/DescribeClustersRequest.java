@@ -31,39 +31,39 @@ public class DescribeClustersRequest extends AbstractModel {
     private String DbType;
 
     /**
-    * Number of returned results. Default value: 20. Maximum value: 100
+    * Returned quantity. Default value: 20. Maximum value: 100.
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * Record offset. Default value: 0
+    * Record offset. Default value: 0.
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * Sort by field. Valid values:
+    * Sorting field. Valid values:
 <li> CREATETIME: creation time</li>
-<li> PERIODENDTIME: expiration time</li>
+<li> PERIODENDTIME: Expiration time</li>
     */
     @SerializedName("OrderBy")
     @Expose
     private String OrderBy;
 
     /**
-    * Sorting order. Valid values:
-<li> ASC: ascending</li>
-<li> DESC: descending</li>
+    * Sorting type. Valid values:
+<li> ASC: ascending order </li>
+<li> DESC: sort in descending order </li>
     */
     @SerializedName("OrderByType")
     @Expose
     private String OrderByType;
 
     /**
-    * Filter. If more than one filter exists, the logical relationship between these filters is `AND`.
+    * Search criteria. When multiple filters exist, the relationship between filters is logical AND.
     */
     @SerializedName("Filters")
     @Expose
@@ -86,96 +86,96 @@ public class DescribeClustersRequest extends AbstractModel {
     }
 
     /**
-     * Get Number of returned results. Default value: 20. Maximum value: 100 
-     * @return Limit Number of returned results. Default value: 20. Maximum value: 100
+     * Get Returned quantity. Default value: 20. Maximum value: 100. 
+     * @return Limit Returned quantity. Default value: 20. Maximum value: 100.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Number of returned results. Default value: 20. Maximum value: 100
-     * @param Limit Number of returned results. Default value: 20. Maximum value: 100
+     * Set Returned quantity. Default value: 20. Maximum value: 100.
+     * @param Limit Returned quantity. Default value: 20. Maximum value: 100.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get Record offset. Default value: 0 
-     * @return Offset Record offset. Default value: 0
+     * Get Record offset. Default value: 0. 
+     * @return Offset Record offset. Default value: 0.
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Record offset. Default value: 0
-     * @param Offset Record offset. Default value: 0
+     * Set Record offset. Default value: 0.
+     * @param Offset Record offset. Default value: 0.
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get Sort by field. Valid values:
+     * Get Sorting field. Valid values:
 <li> CREATETIME: creation time</li>
-<li> PERIODENDTIME: expiration time</li> 
-     * @return OrderBy Sort by field. Valid values:
+<li> PERIODENDTIME: Expiration time</li> 
+     * @return OrderBy Sorting field. Valid values:
 <li> CREATETIME: creation time</li>
-<li> PERIODENDTIME: expiration time</li>
+<li> PERIODENDTIME: Expiration time</li>
      */
     public String getOrderBy() {
         return this.OrderBy;
     }
 
     /**
-     * Set Sort by field. Valid values:
+     * Set Sorting field. Valid values:
 <li> CREATETIME: creation time</li>
-<li> PERIODENDTIME: expiration time</li>
-     * @param OrderBy Sort by field. Valid values:
+<li> PERIODENDTIME: Expiration time</li>
+     * @param OrderBy Sorting field. Valid values:
 <li> CREATETIME: creation time</li>
-<li> PERIODENDTIME: expiration time</li>
+<li> PERIODENDTIME: Expiration time</li>
      */
     public void setOrderBy(String OrderBy) {
         this.OrderBy = OrderBy;
     }
 
     /**
-     * Get Sorting order. Valid values:
-<li> ASC: ascending</li>
-<li> DESC: descending</li> 
-     * @return OrderByType Sorting order. Valid values:
-<li> ASC: ascending</li>
-<li> DESC: descending</li>
+     * Get Sorting type. Valid values:
+<li> ASC: ascending order </li>
+<li> DESC: sort in descending order </li> 
+     * @return OrderByType Sorting type. Valid values:
+<li> ASC: ascending order </li>
+<li> DESC: sort in descending order </li>
      */
     public String getOrderByType() {
         return this.OrderByType;
     }
 
     /**
-     * Set Sorting order. Valid values:
-<li> ASC: ascending</li>
-<li> DESC: descending</li>
-     * @param OrderByType Sorting order. Valid values:
-<li> ASC: ascending</li>
-<li> DESC: descending</li>
+     * Set Sorting type. Valid values:
+<li> ASC: ascending order </li>
+<li> DESC: sort in descending order </li>
+     * @param OrderByType Sorting type. Valid values:
+<li> ASC: ascending order </li>
+<li> DESC: sort in descending order </li>
      */
     public void setOrderByType(String OrderByType) {
         this.OrderByType = OrderByType;
     }
 
     /**
-     * Get Filter. If more than one filter exists, the logical relationship between these filters is `AND`. 
-     * @return Filters Filter. If more than one filter exists, the logical relationship between these filters is `AND`.
+     * Get Search criteria. When multiple filters exist, the relationship between filters is logical AND. 
+     * @return Filters Search criteria. When multiple filters exist, the relationship between filters is logical AND.
      */
     public QueryFilter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set Filter. If more than one filter exists, the logical relationship between these filters is `AND`.
-     * @param Filters Filter. If more than one filter exists, the logical relationship between these filters is `AND`.
+     * Set Search criteria. When multiple filters exist, the relationship between filters is logical AND.
+     * @param Filters Search criteria. When multiple filters exist, the relationship between filters is logical AND.
      */
     public void setFilters(QueryFilter [] Filters) {
         this.Filters = Filters;

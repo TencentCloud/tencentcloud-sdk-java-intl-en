@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateVaultResponse extends AbstractModel {
 
     /**
-    * Task ID, used for query task execution status
+    * Task ID, used to query the task execution status.
     */
     @SerializedName("TaskId")
     @Expose
@@ -38,16 +38,16 @@ public class CreateVaultResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Task ID, used for query task execution status 
-     * @return TaskId Task ID, used for query task execution status
+     * Get Task ID, used to query the task execution status. 
+     * @return TaskId Task ID, used to query the task execution status.
      */
     public Long getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set Task ID, used for query task execution status
-     * @param TaskId Task ID, used for query task execution status
+     * Set Task ID, used to query the task execution status.
+     * @param TaskId Task ID, used to query the task execution status.
      */
     public void setTaskId(Long TaskId) {
         this.TaskId = TaskId;

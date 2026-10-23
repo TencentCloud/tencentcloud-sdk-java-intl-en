@@ -31,14 +31,14 @@ public class DeleteBackupRequest extends AbstractModel {
     private String ClusterId;
 
     /**
-    * Backup file ID. This field is used by legacy versions and thus not recommended.
+    * Backup file ID. Field used in earlier versions. This is not recommended.
     */
     @SerializedName("SnapshotIdList")
     @Expose
     private Long [] SnapshotIdList;
 
     /**
-    * Backup file ID. This field is recommended.
+    * Backup file ID. Recommended for use.
     */
     @SerializedName("BackupIds")
     @Expose
@@ -61,32 +61,32 @@ public class DeleteBackupRequest extends AbstractModel {
     }
 
     /**
-     * Get Backup file ID. This field is used by legacy versions and thus not recommended. 
-     * @return SnapshotIdList Backup file ID. This field is used by legacy versions and thus not recommended.
+     * Get Backup file ID. Field used in earlier versions. This is not recommended. 
+     * @return SnapshotIdList Backup file ID. Field used in earlier versions. This is not recommended.
      */
     public Long [] getSnapshotIdList() {
         return this.SnapshotIdList;
     }
 
     /**
-     * Set Backup file ID. This field is used by legacy versions and thus not recommended.
-     * @param SnapshotIdList Backup file ID. This field is used by legacy versions and thus not recommended.
+     * Set Backup file ID. Field used in earlier versions. This is not recommended.
+     * @param SnapshotIdList Backup file ID. Field used in earlier versions. This is not recommended.
      */
     public void setSnapshotIdList(Long [] SnapshotIdList) {
         this.SnapshotIdList = SnapshotIdList;
     }
 
     /**
-     * Get Backup file ID. This field is recommended. 
-     * @return BackupIds Backup file ID. This field is recommended.
+     * Get Backup file ID. Recommended for use. 
+     * @return BackupIds Backup file ID. Recommended for use.
      */
     public Long [] getBackupIds() {
         return this.BackupIds;
     }
 
     /**
-     * Set Backup file ID. This field is recommended.
-     * @param BackupIds Backup file ID. This field is recommended.
+     * Set Backup file ID. Recommended for use.
+     * @param BackupIds Backup file ID. Recommended for use.
      */
     public void setBackupIds(Long [] BackupIds) {
         this.BackupIds = BackupIds;

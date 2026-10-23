@@ -24,1336 +24,992 @@ import java.util.HashMap;
 public class RuleEngineAction extends AbstractModel {
 
     /**
-    * Operation name. The name must correspond to the parameter structure. For example, if Name=Cache, CacheParameters is required.
-<li>Cache: Node caching TTL;</li>
-<li>CacheKey: custom Cache Key;</li>
-<li>CachePrefresh: cache pre-refresh;</li>
-<li>AccessURLRedirect: URL redirection;</li>
-<li>UpstreamURLRewrite: origin-pull URL rewrite;</li>
-<li>QUIC:QUIC;</li>
-<li>WebSocket:WebSocket;</li>
-<li>Authentication: Token authentication;</li>
-<li>MaxAge: Browser cache TTL;</li>
-<li>StatusCodeCache: Status code cache TTL;</li>
-<li>OfflineCache: Offline cache;</li>
-<li>SmartRouting: Smart acceleration;</li>
-<li>RangeOriginPull: Range-based origin pull;</li>
-<li>UpstreamHTTP2: HTTP/2 origin pull;</li>
-<li>HostHeader: Host header rewrite;</li>
-<li>ForceRedirectHTTPS: Forced HTTPS redirect configuration for access protocol.</li>
-<li>HTTPS origin pull (OriginPullProtocol);</li>
-<li>Compression: Intelligent compression configuration;</li>
-<li>HSTS:HSTS;</li>
-<li>ClientIPHeader: Header information configuration that stores the client request IP.</li>
-<li>OCSPStapling: OCSP stapling;</li>
-<li>HTTP2: HTTP/2 integration;</li>
-<li>PostMaxSize: Maximum limit for file streaming transmission in POST requests.</li>
-<li>ClientIPCountry: Carry regional information of the client IP during origin pull.</li>
-<li>UpstreamFollowRedirect: Parameter configuration for redirection during origin pull;</li>
-<li>UpstreamRequest: Origin-pull request parameter;</li>
-<li>Shield: Origin server uninstallation.</li>
-<li>TLSConfig: SSL/TLS security;</li>
-<li>ModifyOrigin: Modify origin server;</li>
-<li>SiteFailover: origin server failure failover;</li>
-<li>HTTPUpstreamTimeout: Layer-7 origin-pull timeout configuration.</li>
-<li>HTTP response: HTTP response;</li>
-<li>ErrorPage: Custom error page;</li>
-<li>ModifyResponseHeader: Modify the HTTP node response header;</li>
-<li>ModifyRequestHeader: Modify the request header of an HTTP node;</li>
-<li>ResponseSpeedLimit: Download speed limit for a single connection;</li>
-<li>SetContentIdentifier: Set the content identifier.</li>
-<li>Vary: Vary feature configuration;</li>
-<li>ContentCompression: Content compression configuration;</li>
-<li>OriginAuthentication: Origin authentication configuration.</li>
+    * <p>Operation name. The name must correspond to the parameters structure. For example, if Name=Cache, then CacheParameters is required.<li>Cache: Node cache TTL;</li><li>CacheKey: Custom Cache Key;</li><li>CachePrefresh: Cache pre-refresh;</li><li>AccessURLRedirect: Access URL redirection;</li><li>UpstreamURLRewrite: Origin-pull URL rewrite;</li><li>QUIC: QUIC;</li><li>WebSocket: WebSocket;</li><li>Authentication: Token authentication;</li><li>MaxAge: Browser cache TTL;</li><li>StatusCodeCache: Status code cache TTL;</li><li>OfflineCache: Offline cache;</li><li>SmartRouting: Smart acceleration;</li><li>AdvancedOriginRouting: Advanced origin optimization;</li><li>RangeOriginPull: Range-based origin pull;</li><li>UpstreamHTTP2: HTTP2 origin-pull;</li><li>HostHeader: Host header rewrite;</li><li>ForceRedirectHTTPS: Forced HTTPS redirect configuration;</li><li>OriginPullProtocol: Origin-pull HTTPS;</li><li>Compression: Intelligent compression configuration;</li><li>HSTS: HSTS;</li><li>ClientIPHeader: Configuration for storing client IP address in the header;</li><li>OCSPStapling: OCSP stapling;</li><li>HTTP2: HTTP2 integration;</li><li>PostMaxSize: Maximum limit configuration for POST request upload file streaming transmission;</li><li>ClientIPCountry: Carrying regional information of the client IP during origin-pull;</li><li>UpstreamFollowRedirect: Upstream follow redirect parameter configuration;</li><li>UpstreamRequest: Origin-pull request parameters;</li><li>Shield: Origin server uninstallation configuration;</li><li>TLSConfig: SSL/TLS security;</li><li>ModifyOrigin: Modify origin server;</li><li>SiteFailover: Origin server fault migration;</li><li>HTTPUpstreamTimeout: Layer-7 origin-pull timeout configuration;</li><li>HttpResponse: HTTP response;</li><li>ErrorPage: Custom error page;</li><li>ModifyResponseHeader: Modify HTTP node response header;</li><li>ModifyRequestHeader: Modify HTTP node request header;</li><li>ResponseSpeedLimit: Single connection download speed limit;</li><li>SetContentIdentifier: Set content identifier;</li><li>Vary: Vary feature configuration;</li><li>ContentCompression: Content compression configuration;</li><li>OriginAuthentication: Origin-pull authentication configuration;</li><li>CustomAction: Custom configuration.</li></p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * Node cache ttl configuration parameter. when name is cache, this parameter is required.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+    * <p>Node cache TTL configuration parameter. This parameter is required when the Name value is Cache.</p>
     */
     @SerializedName("CacheParameters")
     @Expose
     private CacheParameters CacheParameters;
 
     /**
-    * Custom cache key configuration parameter. when name is cachekey, this parameter is required.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+    * <p>Custom Cache Key configuration parameter. When Name value is CacheKey, this parameter is required.
     */
     @SerializedName("CacheKeyParameters")
     @Expose
     private CacheKeyParameters CacheKeyParameters;
 
     /**
-    * The cache prefresh configuration parameter. this parameter is required when `name` is `cacheprefresh`.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+    * <p>Cache pre-refresh configuration parameter. This parameter is required when the Name value is CachePrefresh.</p>
     */
     @SerializedName("CachePrefreshParameters")
     @Expose
     private CachePrefreshParameters CachePrefreshParameters;
 
     /**
-    * The access url redirection configuration parameter. this parameter is required when `name` is `accessurlredirect`.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+    * <p>Access URL redirection configuration parameter. This parameter is required when the Name value is AccessURLRedirect.</p>
     */
     @SerializedName("AccessURLRedirectParameters")
     @Expose
     private AccessURLRedirectParameters AccessURLRedirectParameters;
 
     /**
-    * The origin-pull url rewrite configuration parameter. this parameter is required when `name` is `upstreamurlrewrite`.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+    * <p>Origin-pull URL rewrite configuration parameter. This parameter is required when the value of Name is UpstreamURLRewrite.</p>
     */
     @SerializedName("UpstreamURLRewriteParameters")
     @Expose
     private UpstreamURLRewriteParameters UpstreamURLRewriteParameters;
 
     /**
-    * The quic configuration parameter. this parameter is required when `name` is `quic`.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+    * <p>QUIC configuration parameter. This parameter is required when the Name value is QUIC.</p>
     */
     @SerializedName("QUICParameters")
     @Expose
     private QUICParameters QUICParameters;
 
     /**
-    * The websocket configuration parameter. this parameter is required when `name` is `websocket`.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+    * <p>WebSocket configuration parameter. This parameter is required when the Name value is WebSocket.</p>
     */
     @SerializedName("WebSocketParameters")
     @Expose
     private WebSocketParameters WebSocketParameters;
 
     /**
-    * Token authentication configuration parameter. this parameter is required when `name` is `authentication`.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+    * <p>Token authentication configuration parameter. This parameter is required when the Name value is Authentication.</p>
     */
     @SerializedName("AuthenticationParameters")
     @Expose
     private AuthenticationParameters AuthenticationParameters;
 
     /**
-    * Browser cache ttl configuration parameter. this parameter is required when `name` is `maxage`.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+    * <p>Browser cache TTL configuration parameter. This parameter is required when the value of Name is MaxAge.</p>
     */
     @SerializedName("MaxAgeParameters")
     @Expose
     private MaxAgeParameters MaxAgeParameters;
 
     /**
-    * Status code cache ttl configuration parameter. this parameter is required when `name` is `statuscodecache`.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+    * <p>Status code cache TTL configuration parameter. This parameter is required when the Name value is StatusCodeCache.</p>
     */
     @SerializedName("StatusCodeCacheParameters")
     @Expose
     private StatusCodeCacheParameters StatusCodeCacheParameters;
 
     /**
-    * Offline cache configuration parameter. this parameter is required when `name` is `offlinecache`.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+    * <p>Offline cache configuration parameter. This parameter is required when the Name value is OfflineCache.</p>
     */
     @SerializedName("OfflineCacheParameters")
     @Expose
     private OfflineCacheParameters OfflineCacheParameters;
 
     /**
-    * Smart acceleration configuration parameter. this parameter is required when `name` is `smartrouting`.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+    * <p>Smart acceleration configuration parameter. This parameter is required when the Name value is SmartRouting.</p>
     */
     @SerializedName("SmartRoutingParameters")
     @Expose
     private SmartRoutingParameters SmartRoutingParameters;
 
     /**
-    * Shard source retrieval configuration parameter. this parameter is required when name is set to rangeoriginpull.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+    * <p>Advanced origin optimization configuration parameter. This parameter is required when the Name value is AdvancedOriginRouting.</p>
+    */
+    @SerializedName("AdvancedOriginRoutingParameters")
+    @Expose
+    private AdvancedOriginRoutingParameters AdvancedOriginRoutingParameters;
+
+    /**
+    * <p>Configuration parameter for range-based origin pull. This parameter is required when the value of Name is RangeOriginPull.</p>
     */
     @SerializedName("RangeOriginPullParameters")
     @Expose
     private RangeOriginPullParameters RangeOriginPullParameters;
 
     /**
-    * HTTP2 origin-pull configuration parameter. this parameter is required when name is set to upstreamhttp2.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+    * <p>HTTP2 origin configuration parameter. This parameter is required when the Name value is UpstreamHTTP2.</p>
     */
     @SerializedName("UpstreamHTTP2Parameters")
     @Expose
     private UpstreamHTTP2Parameters UpstreamHTTP2Parameters;
 
     /**
-    * Host header rewrite configuration parameter. this parameter is required when name is set to hostheader.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+    * <p>Host header rewrite configuration parameter. When the Name value is HostHeader, this parameter is required.</p>
     */
     @SerializedName("HostHeaderParameters")
     @Expose
     private HostHeaderParameters HostHeaderParameters;
 
     /**
-    * Force https redirect configuration parameter. this parameter is required when the name is set to forceredirecthttps.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+    * <p>Forced HTTPS redirect configuration for the access protocol. This parameter is required when the Name value is ForceRedirectHTTPS.</p>
     */
     @SerializedName("ForceRedirectHTTPSParameters")
     @Expose
     private ForceRedirectHTTPSParameters ForceRedirectHTTPSParameters;
 
     /**
-    * HTTPS configuration for origin-pull. this parameter is required when the Name value is OriginPullProtocol.
-Note: This field may return null, which indicates a failure to obtain a valid value.
+    * <p>Origin HTTPS configuration parameter. This parameter is required when the Name value is OriginPullProtocol.</p>
     */
     @SerializedName("OriginPullProtocolParameters")
     @Expose
     private OriginPullProtocolParameters OriginPullProtocolParameters;
 
     /**
-    * Intelligent compression configuration. this parameter is required when name is set to compression.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+    * <p>Intelligent compression configuration. This parameter is required when the Name value is Compression.</p>
     */
     @SerializedName("CompressionParameters")
     @Expose
     private CompressionParameters CompressionParameters;
 
     /**
-    * HSTS configuration parameter. this parameter is required when name is hsts.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+    * <p>HSTS configuration parameter. When the Name value is HSTS, this parameter is required.</p>
     */
     @SerializedName("HSTSParameters")
     @Expose
     private HSTSParameters HSTSParameters;
 
     /**
-    * Client ip header configuration for storing client request ip information. this parameter is required when name is clientipheader.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+    * <p>Configuration header information for storing client request IP. When the Name value is ClientIPHeader, this parameter is required.</p>
     */
     @SerializedName("ClientIPHeaderParameters")
     @Expose
     private ClientIPHeaderParameters ClientIPHeaderParameters;
 
     /**
-    * OCSP stapling configuration parameter. this parameter is required when the name is set to ocspstapling.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+    * <p>OCSP stapling configuration parameter. This parameter is required when Name value is OCSPStapling.</p>
     */
     @SerializedName("OCSPStaplingParameters")
     @Expose
     private OCSPStaplingParameters OCSPStaplingParameters;
 
     /**
-    * HTTP2 access configuration parameter. this parameter is required when name is http2.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+    * <p>HTTP2 integration configuration parameter. This parameter is required when the Name value is HTTP2.</p>
     */
     @SerializedName("HTTP2Parameters")
     @Expose
     private HTTP2Parameters HTTP2Parameters;
 
     /**
-    * Maximum size configuration for file streaming upload via a post request. this parameter is required when name is postmaxsize.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+    * <p>Maximum limit configuration for file streaming transmission in POST request upload. When the Name value is PostMaxSize, this parameter is required.</p>
     */
     @SerializedName("PostMaxSizeParameters")
     @Expose
     private PostMaxSizeParameters PostMaxSizeParameters;
 
     /**
-    * Configuration parameter for carrying the region information of the client ip during origin-pull. this parameter is required when the name is set to clientipcountry.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+    * <p>Configuration parameter for carrying client IP regional information during origin pull. When the Name value is ClientIPCountry, this parameter is required.</p>
     */
     @SerializedName("ClientIPCountryParameters")
     @Expose
     private ClientIPCountryParameters ClientIPCountryParameters;
 
     /**
-    * Configuration parameter for following redirects during origin-pull. this parameter is required when the name is set to upstreamfollowredirect.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+    * <p>Origin-pull follow redirect parameter configuration. This parameter is required when the Name value is UpstreamFollowRedirect.</p>
     */
     @SerializedName("UpstreamFollowRedirectParameters")
     @Expose
     private UpstreamFollowRedirectParameters UpstreamFollowRedirectParameters;
 
     /**
-    * Configuration parameter for origin-pull request. this parameter is required when the name is set to upstreamrequest.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+    * <p>Origin-pull request parameter configuration parameter. This parameter is required when the Name value is UpstreamRequest.</p>
     */
     @SerializedName("UpstreamRequestParameters")
     @Expose
     private UpstreamRequestParameters UpstreamRequestParameters;
 
     /**
-    * Origin server uninstallation config. When the Name value is Shield, this parameter is required.
-Note: This field may return null, which indicates a failure to obtain a valid value.
+    * <p>Origin server uninstallation configuration parameter. This parameter is required when the Name value is Shield.</p>
     */
     @SerializedName("ShieldParameters")
     @Expose
     private ShieldParameters ShieldParameters;
 
     /**
-    * SSL/TLS security configuration parameter. this parameter is required when the name is set to tlsconfig.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+    * <p>SSL/TLS security configuration parameter. This parameter is required when the Name value is TLSConfig.</p>
     */
     @SerializedName("TLSConfigParameters")
     @Expose
     private TLSConfigParameters TLSConfigParameters;
 
     /**
-    * Configuration parameter for modifying the origin server. this parameter is required when the name is set to modifyorigin.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+    * <p>Modify origin server configuration parameter. When the Name value is ModifyOrigin, this parameter is required.</p>
     */
     @SerializedName("ModifyOriginParameters")
     @Expose
     private ModifyOriginParameters ModifyOriginParameters;
 
     /**
-    * Origin server failure failover configuration parameter. This parameter is required when the Name value is SiteFailover.
-Note: This field may return null, which indicates a failure to obtain a valid value.
+    * <p>Source site fault migration config. When the Name value is SiteFailover, this parameter is required.</p>
     */
     @SerializedName("SiteFailoverParameters")
     @Expose
     private SiteFailoverParameters SiteFailoverParameters;
 
     /**
-    * Configuration of layer 7 origin timeout. this parameter is required when name is httpupstreamtimeout.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+    * <p>Layer 7 origin pull timeout configuration. This parameter is required when the Name value is HTTPUpstreamTimeout.</p>
     */
     @SerializedName("HTTPUpstreamTimeoutParameters")
     @Expose
     private HTTPUpstreamTimeoutParameters HTTPUpstreamTimeoutParameters;
 
     /**
-    * HTTP response configuration parameters. this parameter is required when name is httpresponse.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+    * <p>HTTP response configuration parameter. This parameter is required when the Name value is HttpResponse.</p>
     */
     @SerializedName("HttpResponseParameters")
     @Expose
     private HTTPResponseParameters HttpResponseParameters;
 
     /**
-    * Custom error page configuration parameters. this parameter is required when name is errorpage.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+    * <p>Custom error page configuration parameter. This parameter is required when the value of Name is ErrorPage.</p>
     */
     @SerializedName("ErrorPageParameters")
     @Expose
     private ErrorPageParameters ErrorPageParameters;
 
     /**
-    * Modify http node response header configuration parameters. this parameter is required when name is modifyresponseheader.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+    * <p>Modify the HTTP node response header configuration parameter. This parameter is required when the Name value is ModifyResponseHeader.</p>
     */
     @SerializedName("ModifyResponseHeaderParameters")
     @Expose
     private ModifyResponseHeaderParameters ModifyResponseHeaderParameters;
 
     /**
-    * Modify http node request header configuration parameters. this parameter is required when name is modifyrequestheader.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+    * <p>Modify the request header configuration parameter of the HTTP node. This parameter is required when the Name value is ModifyRequestHeader.</p>
     */
     @SerializedName("ModifyRequestHeaderParameters")
     @Expose
     private ModifyRequestHeaderParameters ModifyRequestHeaderParameters;
 
     /**
-    * Single connection download speed limit configuration parameter. this parameter is required when name is responsespeedlimit.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+    * <p>Single connection download speed limit configuration parameter. This parameter is required when the Name value is ResponseSpeedLimit.</p>
     */
     @SerializedName("ResponseSpeedLimitParameters")
     @Expose
     private ResponseSpeedLimitParameters ResponseSpeedLimitParameters;
 
     /**
-    * Specifies the content identification configuration parameter. this parameter is required when the Name value is SetContentIdentifier.
-
-Note: This field may return null, which indicates a failure to obtain a valid value.
+    * <p>Content identification configuration parameter. This parameter is required when the Name value is SetContentIdentifier.</p>
     */
     @SerializedName("SetContentIdentifierParameters")
     @Expose
     private SetContentIdentifierParameters SetContentIdentifierParameters;
 
     /**
-    * Vary feature configuration parameter. when Name value is Vary, this parameter is required.
+    * <p>Vary feature configuration parameter. This parameter is required when the Name value is Vary.</p>
     */
     @SerializedName("VaryParameters")
     @Expose
     private VaryParameters VaryParameters;
 
     /**
-    * The content compression configuration parameter is required when Name value is ContentCompression. this parameter is an allowlist feature. if needed, contact tencent cloud engineers.
+    * <p>Content compression configuration parameter. When the Name value is ContentCompression, this parameter is required. This parameter is an allowlist feature. If needed, contact Tencent Cloud Engineers.</p>
     */
     @SerializedName("ContentCompressionParameters")
     @Expose
     private ContentCompressionParameters ContentCompressionParameters;
 
     /**
-    * The origin authentication configuration parameter. this parameter is required when the Name value is OriginAuthentication. this parameter is the allowlist feature. if needed, contact tencent cloud engineers.
+    * <p>Origin authentication configuration parameter. This parameter is required when Name value is OriginAuthentication. This parameter is an allowlist feature. If needed, contact Tencent Cloud Engineers.</p>
     */
     @SerializedName("OriginAuthenticationParameters")
     @Expose
     private OriginAuthenticationParameters OriginAuthenticationParameters;
 
     /**
-     * Get Operation name. The name must correspond to the parameter structure. For example, if Name=Cache, CacheParameters is required.
-<li>Cache: Node caching TTL;</li>
-<li>CacheKey: custom Cache Key;</li>
-<li>CachePrefresh: cache pre-refresh;</li>
-<li>AccessURLRedirect: URL redirection;</li>
-<li>UpstreamURLRewrite: origin-pull URL rewrite;</li>
-<li>QUIC:QUIC;</li>
-<li>WebSocket:WebSocket;</li>
-<li>Authentication: Token authentication;</li>
-<li>MaxAge: Browser cache TTL;</li>
-<li>StatusCodeCache: Status code cache TTL;</li>
-<li>OfflineCache: Offline cache;</li>
-<li>SmartRouting: Smart acceleration;</li>
-<li>RangeOriginPull: Range-based origin pull;</li>
-<li>UpstreamHTTP2: HTTP/2 origin pull;</li>
-<li>HostHeader: Host header rewrite;</li>
-<li>ForceRedirectHTTPS: Forced HTTPS redirect configuration for access protocol.</li>
-<li>HTTPS origin pull (OriginPullProtocol);</li>
-<li>Compression: Intelligent compression configuration;</li>
-<li>HSTS:HSTS;</li>
-<li>ClientIPHeader: Header information configuration that stores the client request IP.</li>
-<li>OCSPStapling: OCSP stapling;</li>
-<li>HTTP2: HTTP/2 integration;</li>
-<li>PostMaxSize: Maximum limit for file streaming transmission in POST requests.</li>
-<li>ClientIPCountry: Carry regional information of the client IP during origin pull.</li>
-<li>UpstreamFollowRedirect: Parameter configuration for redirection during origin pull;</li>
-<li>UpstreamRequest: Origin-pull request parameter;</li>
-<li>Shield: Origin server uninstallation.</li>
-<li>TLSConfig: SSL/TLS security;</li>
-<li>ModifyOrigin: Modify origin server;</li>
-<li>SiteFailover: origin server failure failover;</li>
-<li>HTTPUpstreamTimeout: Layer-7 origin-pull timeout configuration.</li>
-<li>HTTP response: HTTP response;</li>
-<li>ErrorPage: Custom error page;</li>
-<li>ModifyResponseHeader: Modify the HTTP node response header;</li>
-<li>ModifyRequestHeader: Modify the request header of an HTTP node;</li>
-<li>ResponseSpeedLimit: Download speed limit for a single connection;</li>
-<li>SetContentIdentifier: Set the content identifier.</li>
-<li>Vary: Vary feature configuration;</li>
-<li>ContentCompression: Content compression configuration;</li>
-<li>OriginAuthentication: Origin authentication configuration.</li> 
-     * @return Name Operation name. The name must correspond to the parameter structure. For example, if Name=Cache, CacheParameters is required.
-<li>Cache: Node caching TTL;</li>
-<li>CacheKey: custom Cache Key;</li>
-<li>CachePrefresh: cache pre-refresh;</li>
-<li>AccessURLRedirect: URL redirection;</li>
-<li>UpstreamURLRewrite: origin-pull URL rewrite;</li>
-<li>QUIC:QUIC;</li>
-<li>WebSocket:WebSocket;</li>
-<li>Authentication: Token authentication;</li>
-<li>MaxAge: Browser cache TTL;</li>
-<li>StatusCodeCache: Status code cache TTL;</li>
-<li>OfflineCache: Offline cache;</li>
-<li>SmartRouting: Smart acceleration;</li>
-<li>RangeOriginPull: Range-based origin pull;</li>
-<li>UpstreamHTTP2: HTTP/2 origin pull;</li>
-<li>HostHeader: Host header rewrite;</li>
-<li>ForceRedirectHTTPS: Forced HTTPS redirect configuration for access protocol.</li>
-<li>HTTPS origin pull (OriginPullProtocol);</li>
-<li>Compression: Intelligent compression configuration;</li>
-<li>HSTS:HSTS;</li>
-<li>ClientIPHeader: Header information configuration that stores the client request IP.</li>
-<li>OCSPStapling: OCSP stapling;</li>
-<li>HTTP2: HTTP/2 integration;</li>
-<li>PostMaxSize: Maximum limit for file streaming transmission in POST requests.</li>
-<li>ClientIPCountry: Carry regional information of the client IP during origin pull.</li>
-<li>UpstreamFollowRedirect: Parameter configuration for redirection during origin pull;</li>
-<li>UpstreamRequest: Origin-pull request parameter;</li>
-<li>Shield: Origin server uninstallation.</li>
-<li>TLSConfig: SSL/TLS security;</li>
-<li>ModifyOrigin: Modify origin server;</li>
-<li>SiteFailover: origin server failure failover;</li>
-<li>HTTPUpstreamTimeout: Layer-7 origin-pull timeout configuration.</li>
-<li>HTTP response: HTTP response;</li>
-<li>ErrorPage: Custom error page;</li>
-<li>ModifyResponseHeader: Modify the HTTP node response header;</li>
-<li>ModifyRequestHeader: Modify the request header of an HTTP node;</li>
-<li>ResponseSpeedLimit: Download speed limit for a single connection;</li>
-<li>SetContentIdentifier: Set the content identifier.</li>
-<li>Vary: Vary feature configuration;</li>
-<li>ContentCompression: Content compression configuration;</li>
-<li>OriginAuthentication: Origin authentication configuration.</li>
+    * <p>Custom configuration operation parameter. This parameter is required when the Name value is CustomAction.</p><p>You can obtain the list of currently supported custom configuration items through the CustomActionSet returned value of the DescribeAvailableCustomActionsForRuleEngine API.</p>
+    */
+    @SerializedName("CustomActionParameters")
+    @Expose
+    private CustomActionParameters CustomActionParameters;
+
+    /**
+     * Get <p>Operation name. The name must correspond to the parameters structure. For example, if Name=Cache, then CacheParameters is required.<li>Cache: Node cache TTL;</li><li>CacheKey: Custom Cache Key;</li><li>CachePrefresh: Cache pre-refresh;</li><li>AccessURLRedirect: Access URL redirection;</li><li>UpstreamURLRewrite: Origin-pull URL rewrite;</li><li>QUIC: QUIC;</li><li>WebSocket: WebSocket;</li><li>Authentication: Token authentication;</li><li>MaxAge: Browser cache TTL;</li><li>StatusCodeCache: Status code cache TTL;</li><li>OfflineCache: Offline cache;</li><li>SmartRouting: Smart acceleration;</li><li>AdvancedOriginRouting: Advanced origin optimization;</li><li>RangeOriginPull: Range-based origin pull;</li><li>UpstreamHTTP2: HTTP2 origin-pull;</li><li>HostHeader: Host header rewrite;</li><li>ForceRedirectHTTPS: Forced HTTPS redirect configuration;</li><li>OriginPullProtocol: Origin-pull HTTPS;</li><li>Compression: Intelligent compression configuration;</li><li>HSTS: HSTS;</li><li>ClientIPHeader: Configuration for storing client IP address in the header;</li><li>OCSPStapling: OCSP stapling;</li><li>HTTP2: HTTP2 integration;</li><li>PostMaxSize: Maximum limit configuration for POST request upload file streaming transmission;</li><li>ClientIPCountry: Carrying regional information of the client IP during origin-pull;</li><li>UpstreamFollowRedirect: Upstream follow redirect parameter configuration;</li><li>UpstreamRequest: Origin-pull request parameters;</li><li>Shield: Origin server uninstallation configuration;</li><li>TLSConfig: SSL/TLS security;</li><li>ModifyOrigin: Modify origin server;</li><li>SiteFailover: Origin server fault migration;</li><li>HTTPUpstreamTimeout: Layer-7 origin-pull timeout configuration;</li><li>HttpResponse: HTTP response;</li><li>ErrorPage: Custom error page;</li><li>ModifyResponseHeader: Modify HTTP node response header;</li><li>ModifyRequestHeader: Modify HTTP node request header;</li><li>ResponseSpeedLimit: Single connection download speed limit;</li><li>SetContentIdentifier: Set content identifier;</li><li>Vary: Vary feature configuration;</li><li>ContentCompression: Content compression configuration;</li><li>OriginAuthentication: Origin-pull authentication configuration;</li><li>CustomAction: Custom configuration.</li></p> 
+     * @return Name <p>Operation name. The name must correspond to the parameters structure. For example, if Name=Cache, then CacheParameters is required.<li>Cache: Node cache TTL;</li><li>CacheKey: Custom Cache Key;</li><li>CachePrefresh: Cache pre-refresh;</li><li>AccessURLRedirect: Access URL redirection;</li><li>UpstreamURLRewrite: Origin-pull URL rewrite;</li><li>QUIC: QUIC;</li><li>WebSocket: WebSocket;</li><li>Authentication: Token authentication;</li><li>MaxAge: Browser cache TTL;</li><li>StatusCodeCache: Status code cache TTL;</li><li>OfflineCache: Offline cache;</li><li>SmartRouting: Smart acceleration;</li><li>AdvancedOriginRouting: Advanced origin optimization;</li><li>RangeOriginPull: Range-based origin pull;</li><li>UpstreamHTTP2: HTTP2 origin-pull;</li><li>HostHeader: Host header rewrite;</li><li>ForceRedirectHTTPS: Forced HTTPS redirect configuration;</li><li>OriginPullProtocol: Origin-pull HTTPS;</li><li>Compression: Intelligent compression configuration;</li><li>HSTS: HSTS;</li><li>ClientIPHeader: Configuration for storing client IP address in the header;</li><li>OCSPStapling: OCSP stapling;</li><li>HTTP2: HTTP2 integration;</li><li>PostMaxSize: Maximum limit configuration for POST request upload file streaming transmission;</li><li>ClientIPCountry: Carrying regional information of the client IP during origin-pull;</li><li>UpstreamFollowRedirect: Upstream follow redirect parameter configuration;</li><li>UpstreamRequest: Origin-pull request parameters;</li><li>Shield: Origin server uninstallation configuration;</li><li>TLSConfig: SSL/TLS security;</li><li>ModifyOrigin: Modify origin server;</li><li>SiteFailover: Origin server fault migration;</li><li>HTTPUpstreamTimeout: Layer-7 origin-pull timeout configuration;</li><li>HttpResponse: HTTP response;</li><li>ErrorPage: Custom error page;</li><li>ModifyResponseHeader: Modify HTTP node response header;</li><li>ModifyRequestHeader: Modify HTTP node request header;</li><li>ResponseSpeedLimit: Single connection download speed limit;</li><li>SetContentIdentifier: Set content identifier;</li><li>Vary: Vary feature configuration;</li><li>ContentCompression: Content compression configuration;</li><li>OriginAuthentication: Origin-pull authentication configuration;</li><li>CustomAction: Custom configuration.</li></p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Operation name. The name must correspond to the parameter structure. For example, if Name=Cache, CacheParameters is required.
-<li>Cache: Node caching TTL;</li>
-<li>CacheKey: custom Cache Key;</li>
-<li>CachePrefresh: cache pre-refresh;</li>
-<li>AccessURLRedirect: URL redirection;</li>
-<li>UpstreamURLRewrite: origin-pull URL rewrite;</li>
-<li>QUIC:QUIC;</li>
-<li>WebSocket:WebSocket;</li>
-<li>Authentication: Token authentication;</li>
-<li>MaxAge: Browser cache TTL;</li>
-<li>StatusCodeCache: Status code cache TTL;</li>
-<li>OfflineCache: Offline cache;</li>
-<li>SmartRouting: Smart acceleration;</li>
-<li>RangeOriginPull: Range-based origin pull;</li>
-<li>UpstreamHTTP2: HTTP/2 origin pull;</li>
-<li>HostHeader: Host header rewrite;</li>
-<li>ForceRedirectHTTPS: Forced HTTPS redirect configuration for access protocol.</li>
-<li>HTTPS origin pull (OriginPullProtocol);</li>
-<li>Compression: Intelligent compression configuration;</li>
-<li>HSTS:HSTS;</li>
-<li>ClientIPHeader: Header information configuration that stores the client request IP.</li>
-<li>OCSPStapling: OCSP stapling;</li>
-<li>HTTP2: HTTP/2 integration;</li>
-<li>PostMaxSize: Maximum limit for file streaming transmission in POST requests.</li>
-<li>ClientIPCountry: Carry regional information of the client IP during origin pull.</li>
-<li>UpstreamFollowRedirect: Parameter configuration for redirection during origin pull;</li>
-<li>UpstreamRequest: Origin-pull request parameter;</li>
-<li>Shield: Origin server uninstallation.</li>
-<li>TLSConfig: SSL/TLS security;</li>
-<li>ModifyOrigin: Modify origin server;</li>
-<li>SiteFailover: origin server failure failover;</li>
-<li>HTTPUpstreamTimeout: Layer-7 origin-pull timeout configuration.</li>
-<li>HTTP response: HTTP response;</li>
-<li>ErrorPage: Custom error page;</li>
-<li>ModifyResponseHeader: Modify the HTTP node response header;</li>
-<li>ModifyRequestHeader: Modify the request header of an HTTP node;</li>
-<li>ResponseSpeedLimit: Download speed limit for a single connection;</li>
-<li>SetContentIdentifier: Set the content identifier.</li>
-<li>Vary: Vary feature configuration;</li>
-<li>ContentCompression: Content compression configuration;</li>
-<li>OriginAuthentication: Origin authentication configuration.</li>
-     * @param Name Operation name. The name must correspond to the parameter structure. For example, if Name=Cache, CacheParameters is required.
-<li>Cache: Node caching TTL;</li>
-<li>CacheKey: custom Cache Key;</li>
-<li>CachePrefresh: cache pre-refresh;</li>
-<li>AccessURLRedirect: URL redirection;</li>
-<li>UpstreamURLRewrite: origin-pull URL rewrite;</li>
-<li>QUIC:QUIC;</li>
-<li>WebSocket:WebSocket;</li>
-<li>Authentication: Token authentication;</li>
-<li>MaxAge: Browser cache TTL;</li>
-<li>StatusCodeCache: Status code cache TTL;</li>
-<li>OfflineCache: Offline cache;</li>
-<li>SmartRouting: Smart acceleration;</li>
-<li>RangeOriginPull: Range-based origin pull;</li>
-<li>UpstreamHTTP2: HTTP/2 origin pull;</li>
-<li>HostHeader: Host header rewrite;</li>
-<li>ForceRedirectHTTPS: Forced HTTPS redirect configuration for access protocol.</li>
-<li>HTTPS origin pull (OriginPullProtocol);</li>
-<li>Compression: Intelligent compression configuration;</li>
-<li>HSTS:HSTS;</li>
-<li>ClientIPHeader: Header information configuration that stores the client request IP.</li>
-<li>OCSPStapling: OCSP stapling;</li>
-<li>HTTP2: HTTP/2 integration;</li>
-<li>PostMaxSize: Maximum limit for file streaming transmission in POST requests.</li>
-<li>ClientIPCountry: Carry regional information of the client IP during origin pull.</li>
-<li>UpstreamFollowRedirect: Parameter configuration for redirection during origin pull;</li>
-<li>UpstreamRequest: Origin-pull request parameter;</li>
-<li>Shield: Origin server uninstallation.</li>
-<li>TLSConfig: SSL/TLS security;</li>
-<li>ModifyOrigin: Modify origin server;</li>
-<li>SiteFailover: origin server failure failover;</li>
-<li>HTTPUpstreamTimeout: Layer-7 origin-pull timeout configuration.</li>
-<li>HTTP response: HTTP response;</li>
-<li>ErrorPage: Custom error page;</li>
-<li>ModifyResponseHeader: Modify the HTTP node response header;</li>
-<li>ModifyRequestHeader: Modify the request header of an HTTP node;</li>
-<li>ResponseSpeedLimit: Download speed limit for a single connection;</li>
-<li>SetContentIdentifier: Set the content identifier.</li>
-<li>Vary: Vary feature configuration;</li>
-<li>ContentCompression: Content compression configuration;</li>
-<li>OriginAuthentication: Origin authentication configuration.</li>
+     * Set <p>Operation name. The name must correspond to the parameters structure. For example, if Name=Cache, then CacheParameters is required.<li>Cache: Node cache TTL;</li><li>CacheKey: Custom Cache Key;</li><li>CachePrefresh: Cache pre-refresh;</li><li>AccessURLRedirect: Access URL redirection;</li><li>UpstreamURLRewrite: Origin-pull URL rewrite;</li><li>QUIC: QUIC;</li><li>WebSocket: WebSocket;</li><li>Authentication: Token authentication;</li><li>MaxAge: Browser cache TTL;</li><li>StatusCodeCache: Status code cache TTL;</li><li>OfflineCache: Offline cache;</li><li>SmartRouting: Smart acceleration;</li><li>AdvancedOriginRouting: Advanced origin optimization;</li><li>RangeOriginPull: Range-based origin pull;</li><li>UpstreamHTTP2: HTTP2 origin-pull;</li><li>HostHeader: Host header rewrite;</li><li>ForceRedirectHTTPS: Forced HTTPS redirect configuration;</li><li>OriginPullProtocol: Origin-pull HTTPS;</li><li>Compression: Intelligent compression configuration;</li><li>HSTS: HSTS;</li><li>ClientIPHeader: Configuration for storing client IP address in the header;</li><li>OCSPStapling: OCSP stapling;</li><li>HTTP2: HTTP2 integration;</li><li>PostMaxSize: Maximum limit configuration for POST request upload file streaming transmission;</li><li>ClientIPCountry: Carrying regional information of the client IP during origin-pull;</li><li>UpstreamFollowRedirect: Upstream follow redirect parameter configuration;</li><li>UpstreamRequest: Origin-pull request parameters;</li><li>Shield: Origin server uninstallation configuration;</li><li>TLSConfig: SSL/TLS security;</li><li>ModifyOrigin: Modify origin server;</li><li>SiteFailover: Origin server fault migration;</li><li>HTTPUpstreamTimeout: Layer-7 origin-pull timeout configuration;</li><li>HttpResponse: HTTP response;</li><li>ErrorPage: Custom error page;</li><li>ModifyResponseHeader: Modify HTTP node response header;</li><li>ModifyRequestHeader: Modify HTTP node request header;</li><li>ResponseSpeedLimit: Single connection download speed limit;</li><li>SetContentIdentifier: Set content identifier;</li><li>Vary: Vary feature configuration;</li><li>ContentCompression: Content compression configuration;</li><li>OriginAuthentication: Origin-pull authentication configuration;</li><li>CustomAction: Custom configuration.</li></p>
+     * @param Name <p>Operation name. The name must correspond to the parameters structure. For example, if Name=Cache, then CacheParameters is required.<li>Cache: Node cache TTL;</li><li>CacheKey: Custom Cache Key;</li><li>CachePrefresh: Cache pre-refresh;</li><li>AccessURLRedirect: Access URL redirection;</li><li>UpstreamURLRewrite: Origin-pull URL rewrite;</li><li>QUIC: QUIC;</li><li>WebSocket: WebSocket;</li><li>Authentication: Token authentication;</li><li>MaxAge: Browser cache TTL;</li><li>StatusCodeCache: Status code cache TTL;</li><li>OfflineCache: Offline cache;</li><li>SmartRouting: Smart acceleration;</li><li>AdvancedOriginRouting: Advanced origin optimization;</li><li>RangeOriginPull: Range-based origin pull;</li><li>UpstreamHTTP2: HTTP2 origin-pull;</li><li>HostHeader: Host header rewrite;</li><li>ForceRedirectHTTPS: Forced HTTPS redirect configuration;</li><li>OriginPullProtocol: Origin-pull HTTPS;</li><li>Compression: Intelligent compression configuration;</li><li>HSTS: HSTS;</li><li>ClientIPHeader: Configuration for storing client IP address in the header;</li><li>OCSPStapling: OCSP stapling;</li><li>HTTP2: HTTP2 integration;</li><li>PostMaxSize: Maximum limit configuration for POST request upload file streaming transmission;</li><li>ClientIPCountry: Carrying regional information of the client IP during origin-pull;</li><li>UpstreamFollowRedirect: Upstream follow redirect parameter configuration;</li><li>UpstreamRequest: Origin-pull request parameters;</li><li>Shield: Origin server uninstallation configuration;</li><li>TLSConfig: SSL/TLS security;</li><li>ModifyOrigin: Modify origin server;</li><li>SiteFailover: Origin server fault migration;</li><li>HTTPUpstreamTimeout: Layer-7 origin-pull timeout configuration;</li><li>HttpResponse: HTTP response;</li><li>ErrorPage: Custom error page;</li><li>ModifyResponseHeader: Modify HTTP node response header;</li><li>ModifyRequestHeader: Modify HTTP node request header;</li><li>ResponseSpeedLimit: Single connection download speed limit;</li><li>SetContentIdentifier: Set content identifier;</li><li>Vary: Vary feature configuration;</li><li>ContentCompression: Content compression configuration;</li><li>OriginAuthentication: Origin-pull authentication configuration;</li><li>CustomAction: Custom configuration.</li></p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Node cache ttl configuration parameter. when name is cache, this parameter is required.
-Note: this field may return null, which indicates a failure to obtain a valid value. 
-     * @return CacheParameters Node cache ttl configuration parameter. when name is cache, this parameter is required.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * Get <p>Node cache TTL configuration parameter. This parameter is required when the Name value is Cache.</p> 
+     * @return CacheParameters <p>Node cache TTL configuration parameter. This parameter is required when the Name value is Cache.</p>
      */
     public CacheParameters getCacheParameters() {
         return this.CacheParameters;
     }
 
     /**
-     * Set Node cache ttl configuration parameter. when name is cache, this parameter is required.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-     * @param CacheParameters Node cache ttl configuration parameter. when name is cache, this parameter is required.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * Set <p>Node cache TTL configuration parameter. This parameter is required when the Name value is Cache.</p>
+     * @param CacheParameters <p>Node cache TTL configuration parameter. This parameter is required when the Name value is Cache.</p>
      */
     public void setCacheParameters(CacheParameters CacheParameters) {
         this.CacheParameters = CacheParameters;
     }
 
     /**
-     * Get Custom cache key configuration parameter. when name is cachekey, this parameter is required.
-Note: this field may return null, which indicates a failure to obtain a valid value. 
-     * @return CacheKeyParameters Custom cache key configuration parameter. when name is cachekey, this parameter is required.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * Get <p>Custom Cache Key configuration parameter. When Name value is CacheKey, this parameter is required. 
+     * @return CacheKeyParameters <p>Custom Cache Key configuration parameter. When Name value is CacheKey, this parameter is required.
      */
     public CacheKeyParameters getCacheKeyParameters() {
         return this.CacheKeyParameters;
     }
 
     /**
-     * Set Custom cache key configuration parameter. when name is cachekey, this parameter is required.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-     * @param CacheKeyParameters Custom cache key configuration parameter. when name is cachekey, this parameter is required.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * Set <p>Custom Cache Key configuration parameter. When Name value is CacheKey, this parameter is required.
+     * @param CacheKeyParameters <p>Custom Cache Key configuration parameter. When Name value is CacheKey, this parameter is required.
      */
     public void setCacheKeyParameters(CacheKeyParameters CacheKeyParameters) {
         this.CacheKeyParameters = CacheKeyParameters;
     }
 
     /**
-     * Get The cache prefresh configuration parameter. this parameter is required when `name` is `cacheprefresh`.
-Note: this field may return null, which indicates a failure to obtain a valid value. 
-     * @return CachePrefreshParameters The cache prefresh configuration parameter. this parameter is required when `name` is `cacheprefresh`.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * Get <p>Cache pre-refresh configuration parameter. This parameter is required when the Name value is CachePrefresh.</p> 
+     * @return CachePrefreshParameters <p>Cache pre-refresh configuration parameter. This parameter is required when the Name value is CachePrefresh.</p>
      */
     public CachePrefreshParameters getCachePrefreshParameters() {
         return this.CachePrefreshParameters;
     }
 
     /**
-     * Set The cache prefresh configuration parameter. this parameter is required when `name` is `cacheprefresh`.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-     * @param CachePrefreshParameters The cache prefresh configuration parameter. this parameter is required when `name` is `cacheprefresh`.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * Set <p>Cache pre-refresh configuration parameter. This parameter is required when the Name value is CachePrefresh.</p>
+     * @param CachePrefreshParameters <p>Cache pre-refresh configuration parameter. This parameter is required when the Name value is CachePrefresh.</p>
      */
     public void setCachePrefreshParameters(CachePrefreshParameters CachePrefreshParameters) {
         this.CachePrefreshParameters = CachePrefreshParameters;
     }
 
     /**
-     * Get The access url redirection configuration parameter. this parameter is required when `name` is `accessurlredirect`.
-Note: this field may return null, which indicates a failure to obtain a valid value. 
-     * @return AccessURLRedirectParameters The access url redirection configuration parameter. this parameter is required when `name` is `accessurlredirect`.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * Get <p>Access URL redirection configuration parameter. This parameter is required when the Name value is AccessURLRedirect.</p> 
+     * @return AccessURLRedirectParameters <p>Access URL redirection configuration parameter. This parameter is required when the Name value is AccessURLRedirect.</p>
      */
     public AccessURLRedirectParameters getAccessURLRedirectParameters() {
         return this.AccessURLRedirectParameters;
     }
 
     /**
-     * Set The access url redirection configuration parameter. this parameter is required when `name` is `accessurlredirect`.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-     * @param AccessURLRedirectParameters The access url redirection configuration parameter. this parameter is required when `name` is `accessurlredirect`.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * Set <p>Access URL redirection configuration parameter. This parameter is required when the Name value is AccessURLRedirect.</p>
+     * @param AccessURLRedirectParameters <p>Access URL redirection configuration parameter. This parameter is required when the Name value is AccessURLRedirect.</p>
      */
     public void setAccessURLRedirectParameters(AccessURLRedirectParameters AccessURLRedirectParameters) {
         this.AccessURLRedirectParameters = AccessURLRedirectParameters;
     }
 
     /**
-     * Get The origin-pull url rewrite configuration parameter. this parameter is required when `name` is `upstreamurlrewrite`.
-Note: this field may return null, which indicates a failure to obtain a valid value. 
-     * @return UpstreamURLRewriteParameters The origin-pull url rewrite configuration parameter. this parameter is required when `name` is `upstreamurlrewrite`.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * Get <p>Origin-pull URL rewrite configuration parameter. This parameter is required when the value of Name is UpstreamURLRewrite.</p> 
+     * @return UpstreamURLRewriteParameters <p>Origin-pull URL rewrite configuration parameter. This parameter is required when the value of Name is UpstreamURLRewrite.</p>
      */
     public UpstreamURLRewriteParameters getUpstreamURLRewriteParameters() {
         return this.UpstreamURLRewriteParameters;
     }
 
     /**
-     * Set The origin-pull url rewrite configuration parameter. this parameter is required when `name` is `upstreamurlrewrite`.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-     * @param UpstreamURLRewriteParameters The origin-pull url rewrite configuration parameter. this parameter is required when `name` is `upstreamurlrewrite`.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * Set <p>Origin-pull URL rewrite configuration parameter. This parameter is required when the value of Name is UpstreamURLRewrite.</p>
+     * @param UpstreamURLRewriteParameters <p>Origin-pull URL rewrite configuration parameter. This parameter is required when the value of Name is UpstreamURLRewrite.</p>
      */
     public void setUpstreamURLRewriteParameters(UpstreamURLRewriteParameters UpstreamURLRewriteParameters) {
         this.UpstreamURLRewriteParameters = UpstreamURLRewriteParameters;
     }
 
     /**
-     * Get The quic configuration parameter. this parameter is required when `name` is `quic`.
-Note: this field may return null, which indicates a failure to obtain a valid value. 
-     * @return QUICParameters The quic configuration parameter. this parameter is required when `name` is `quic`.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * Get <p>QUIC configuration parameter. This parameter is required when the Name value is QUIC.</p> 
+     * @return QUICParameters <p>QUIC configuration parameter. This parameter is required when the Name value is QUIC.</p>
      */
     public QUICParameters getQUICParameters() {
         return this.QUICParameters;
     }
 
     /**
-     * Set The quic configuration parameter. this parameter is required when `name` is `quic`.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-     * @param QUICParameters The quic configuration parameter. this parameter is required when `name` is `quic`.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * Set <p>QUIC configuration parameter. This parameter is required when the Name value is QUIC.</p>
+     * @param QUICParameters <p>QUIC configuration parameter. This parameter is required when the Name value is QUIC.</p>
      */
     public void setQUICParameters(QUICParameters QUICParameters) {
         this.QUICParameters = QUICParameters;
     }
 
     /**
-     * Get The websocket configuration parameter. this parameter is required when `name` is `websocket`.
-Note: this field may return null, which indicates a failure to obtain a valid value. 
-     * @return WebSocketParameters The websocket configuration parameter. this parameter is required when `name` is `websocket`.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * Get <p>WebSocket configuration parameter. This parameter is required when the Name value is WebSocket.</p> 
+     * @return WebSocketParameters <p>WebSocket configuration parameter. This parameter is required when the Name value is WebSocket.</p>
      */
     public WebSocketParameters getWebSocketParameters() {
         return this.WebSocketParameters;
     }
 
     /**
-     * Set The websocket configuration parameter. this parameter is required when `name` is `websocket`.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-     * @param WebSocketParameters The websocket configuration parameter. this parameter is required when `name` is `websocket`.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * Set <p>WebSocket configuration parameter. This parameter is required when the Name value is WebSocket.</p>
+     * @param WebSocketParameters <p>WebSocket configuration parameter. This parameter is required when the Name value is WebSocket.</p>
      */
     public void setWebSocketParameters(WebSocketParameters WebSocketParameters) {
         this.WebSocketParameters = WebSocketParameters;
     }
 
     /**
-     * Get Token authentication configuration parameter. this parameter is required when `name` is `authentication`.
-Note: this field may return null, which indicates a failure to obtain a valid value. 
-     * @return AuthenticationParameters Token authentication configuration parameter. this parameter is required when `name` is `authentication`.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * Get <p>Token authentication configuration parameter. This parameter is required when the Name value is Authentication.</p> 
+     * @return AuthenticationParameters <p>Token authentication configuration parameter. This parameter is required when the Name value is Authentication.</p>
      */
     public AuthenticationParameters getAuthenticationParameters() {
         return this.AuthenticationParameters;
     }
 
     /**
-     * Set Token authentication configuration parameter. this parameter is required when `name` is `authentication`.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-     * @param AuthenticationParameters Token authentication configuration parameter. this parameter is required when `name` is `authentication`.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * Set <p>Token authentication configuration parameter. This parameter is required when the Name value is Authentication.</p>
+     * @param AuthenticationParameters <p>Token authentication configuration parameter. This parameter is required when the Name value is Authentication.</p>
      */
     public void setAuthenticationParameters(AuthenticationParameters AuthenticationParameters) {
         this.AuthenticationParameters = AuthenticationParameters;
     }
 
     /**
-     * Get Browser cache ttl configuration parameter. this parameter is required when `name` is `maxage`.
-Note: this field may return null, which indicates a failure to obtain a valid value. 
-     * @return MaxAgeParameters Browser cache ttl configuration parameter. this parameter is required when `name` is `maxage`.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * Get <p>Browser cache TTL configuration parameter. This parameter is required when the value of Name is MaxAge.</p> 
+     * @return MaxAgeParameters <p>Browser cache TTL configuration parameter. This parameter is required when the value of Name is MaxAge.</p>
      */
     public MaxAgeParameters getMaxAgeParameters() {
         return this.MaxAgeParameters;
     }
 
     /**
-     * Set Browser cache ttl configuration parameter. this parameter is required when `name` is `maxage`.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-     * @param MaxAgeParameters Browser cache ttl configuration parameter. this parameter is required when `name` is `maxage`.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * Set <p>Browser cache TTL configuration parameter. This parameter is required when the value of Name is MaxAge.</p>
+     * @param MaxAgeParameters <p>Browser cache TTL configuration parameter. This parameter is required when the value of Name is MaxAge.</p>
      */
     public void setMaxAgeParameters(MaxAgeParameters MaxAgeParameters) {
         this.MaxAgeParameters = MaxAgeParameters;
     }
 
     /**
-     * Get Status code cache ttl configuration parameter. this parameter is required when `name` is `statuscodecache`.
-Note: this field may return null, which indicates a failure to obtain a valid value. 
-     * @return StatusCodeCacheParameters Status code cache ttl configuration parameter. this parameter is required when `name` is `statuscodecache`.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * Get <p>Status code cache TTL configuration parameter. This parameter is required when the Name value is StatusCodeCache.</p> 
+     * @return StatusCodeCacheParameters <p>Status code cache TTL configuration parameter. This parameter is required when the Name value is StatusCodeCache.</p>
      */
     public StatusCodeCacheParameters getStatusCodeCacheParameters() {
         return this.StatusCodeCacheParameters;
     }
 
     /**
-     * Set Status code cache ttl configuration parameter. this parameter is required when `name` is `statuscodecache`.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-     * @param StatusCodeCacheParameters Status code cache ttl configuration parameter. this parameter is required when `name` is `statuscodecache`.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * Set <p>Status code cache TTL configuration parameter. This parameter is required when the Name value is StatusCodeCache.</p>
+     * @param StatusCodeCacheParameters <p>Status code cache TTL configuration parameter. This parameter is required when the Name value is StatusCodeCache.</p>
      */
     public void setStatusCodeCacheParameters(StatusCodeCacheParameters StatusCodeCacheParameters) {
         this.StatusCodeCacheParameters = StatusCodeCacheParameters;
     }
 
     /**
-     * Get Offline cache configuration parameter. this parameter is required when `name` is `offlinecache`.
-Note: this field may return null, which indicates a failure to obtain a valid value. 
-     * @return OfflineCacheParameters Offline cache configuration parameter. this parameter is required when `name` is `offlinecache`.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * Get <p>Offline cache configuration parameter. This parameter is required when the Name value is OfflineCache.</p> 
+     * @return OfflineCacheParameters <p>Offline cache configuration parameter. This parameter is required when the Name value is OfflineCache.</p>
      */
     public OfflineCacheParameters getOfflineCacheParameters() {
         return this.OfflineCacheParameters;
     }
 
     /**
-     * Set Offline cache configuration parameter. this parameter is required when `name` is `offlinecache`.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-     * @param OfflineCacheParameters Offline cache configuration parameter. this parameter is required when `name` is `offlinecache`.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * Set <p>Offline cache configuration parameter. This parameter is required when the Name value is OfflineCache.</p>
+     * @param OfflineCacheParameters <p>Offline cache configuration parameter. This parameter is required when the Name value is OfflineCache.</p>
      */
     public void setOfflineCacheParameters(OfflineCacheParameters OfflineCacheParameters) {
         this.OfflineCacheParameters = OfflineCacheParameters;
     }
 
     /**
-     * Get Smart acceleration configuration parameter. this parameter is required when `name` is `smartrouting`.
-Note: this field may return null, which indicates a failure to obtain a valid value. 
-     * @return SmartRoutingParameters Smart acceleration configuration parameter. this parameter is required when `name` is `smartrouting`.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * Get <p>Smart acceleration configuration parameter. This parameter is required when the Name value is SmartRouting.</p> 
+     * @return SmartRoutingParameters <p>Smart acceleration configuration parameter. This parameter is required when the Name value is SmartRouting.</p>
      */
     public SmartRoutingParameters getSmartRoutingParameters() {
         return this.SmartRoutingParameters;
     }
 
     /**
-     * Set Smart acceleration configuration parameter. this parameter is required when `name` is `smartrouting`.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-     * @param SmartRoutingParameters Smart acceleration configuration parameter. this parameter is required when `name` is `smartrouting`.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * Set <p>Smart acceleration configuration parameter. This parameter is required when the Name value is SmartRouting.</p>
+     * @param SmartRoutingParameters <p>Smart acceleration configuration parameter. This parameter is required when the Name value is SmartRouting.</p>
      */
     public void setSmartRoutingParameters(SmartRoutingParameters SmartRoutingParameters) {
         this.SmartRoutingParameters = SmartRoutingParameters;
     }
 
     /**
-     * Get Shard source retrieval configuration parameter. this parameter is required when name is set to rangeoriginpull.
-Note: this field may return null, which indicates a failure to obtain a valid value. 
-     * @return RangeOriginPullParameters Shard source retrieval configuration parameter. this parameter is required when name is set to rangeoriginpull.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * Get <p>Advanced origin optimization configuration parameter. This parameter is required when the Name value is AdvancedOriginRouting.</p> 
+     * @return AdvancedOriginRoutingParameters <p>Advanced origin optimization configuration parameter. This parameter is required when the Name value is AdvancedOriginRouting.</p>
+     */
+    public AdvancedOriginRoutingParameters getAdvancedOriginRoutingParameters() {
+        return this.AdvancedOriginRoutingParameters;
+    }
+
+    /**
+     * Set <p>Advanced origin optimization configuration parameter. This parameter is required when the Name value is AdvancedOriginRouting.</p>
+     * @param AdvancedOriginRoutingParameters <p>Advanced origin optimization configuration parameter. This parameter is required when the Name value is AdvancedOriginRouting.</p>
+     */
+    public void setAdvancedOriginRoutingParameters(AdvancedOriginRoutingParameters AdvancedOriginRoutingParameters) {
+        this.AdvancedOriginRoutingParameters = AdvancedOriginRoutingParameters;
+    }
+
+    /**
+     * Get <p>Configuration parameter for range-based origin pull. This parameter is required when the value of Name is RangeOriginPull.</p> 
+     * @return RangeOriginPullParameters <p>Configuration parameter for range-based origin pull. This parameter is required when the value of Name is RangeOriginPull.</p>
      */
     public RangeOriginPullParameters getRangeOriginPullParameters() {
         return this.RangeOriginPullParameters;
     }
 
     /**
-     * Set Shard source retrieval configuration parameter. this parameter is required when name is set to rangeoriginpull.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-     * @param RangeOriginPullParameters Shard source retrieval configuration parameter. this parameter is required when name is set to rangeoriginpull.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * Set <p>Configuration parameter for range-based origin pull. This parameter is required when the value of Name is RangeOriginPull.</p>
+     * @param RangeOriginPullParameters <p>Configuration parameter for range-based origin pull. This parameter is required when the value of Name is RangeOriginPull.</p>
      */
     public void setRangeOriginPullParameters(RangeOriginPullParameters RangeOriginPullParameters) {
         this.RangeOriginPullParameters = RangeOriginPullParameters;
     }
 
     /**
-     * Get HTTP2 origin-pull configuration parameter. this parameter is required when name is set to upstreamhttp2.
-Note: this field may return null, which indicates a failure to obtain a valid value. 
-     * @return UpstreamHTTP2Parameters HTTP2 origin-pull configuration parameter. this parameter is required when name is set to upstreamhttp2.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * Get <p>HTTP2 origin configuration parameter. This parameter is required when the Name value is UpstreamHTTP2.</p> 
+     * @return UpstreamHTTP2Parameters <p>HTTP2 origin configuration parameter. This parameter is required when the Name value is UpstreamHTTP2.</p>
      */
     public UpstreamHTTP2Parameters getUpstreamHTTP2Parameters() {
         return this.UpstreamHTTP2Parameters;
     }
 
     /**
-     * Set HTTP2 origin-pull configuration parameter. this parameter is required when name is set to upstreamhttp2.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-     * @param UpstreamHTTP2Parameters HTTP2 origin-pull configuration parameter. this parameter is required when name is set to upstreamhttp2.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * Set <p>HTTP2 origin configuration parameter. This parameter is required when the Name value is UpstreamHTTP2.</p>
+     * @param UpstreamHTTP2Parameters <p>HTTP2 origin configuration parameter. This parameter is required when the Name value is UpstreamHTTP2.</p>
      */
     public void setUpstreamHTTP2Parameters(UpstreamHTTP2Parameters UpstreamHTTP2Parameters) {
         this.UpstreamHTTP2Parameters = UpstreamHTTP2Parameters;
     }
 
     /**
-     * Get Host header rewrite configuration parameter. this parameter is required when name is set to hostheader.
-Note: this field may return null, which indicates a failure to obtain a valid value. 
-     * @return HostHeaderParameters Host header rewrite configuration parameter. this parameter is required when name is set to hostheader.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * Get <p>Host header rewrite configuration parameter. When the Name value is HostHeader, this parameter is required.</p> 
+     * @return HostHeaderParameters <p>Host header rewrite configuration parameter. When the Name value is HostHeader, this parameter is required.</p>
      */
     public HostHeaderParameters getHostHeaderParameters() {
         return this.HostHeaderParameters;
     }
 
     /**
-     * Set Host header rewrite configuration parameter. this parameter is required when name is set to hostheader.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-     * @param HostHeaderParameters Host header rewrite configuration parameter. this parameter is required when name is set to hostheader.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * Set <p>Host header rewrite configuration parameter. When the Name value is HostHeader, this parameter is required.</p>
+     * @param HostHeaderParameters <p>Host header rewrite configuration parameter. When the Name value is HostHeader, this parameter is required.</p>
      */
     public void setHostHeaderParameters(HostHeaderParameters HostHeaderParameters) {
         this.HostHeaderParameters = HostHeaderParameters;
     }
 
     /**
-     * Get Force https redirect configuration parameter. this parameter is required when the name is set to forceredirecthttps.
-Note: this field may return null, which indicates a failure to obtain a valid value. 
-     * @return ForceRedirectHTTPSParameters Force https redirect configuration parameter. this parameter is required when the name is set to forceredirecthttps.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * Get <p>Forced HTTPS redirect configuration for the access protocol. This parameter is required when the Name value is ForceRedirectHTTPS.</p> 
+     * @return ForceRedirectHTTPSParameters <p>Forced HTTPS redirect configuration for the access protocol. This parameter is required when the Name value is ForceRedirectHTTPS.</p>
      */
     public ForceRedirectHTTPSParameters getForceRedirectHTTPSParameters() {
         return this.ForceRedirectHTTPSParameters;
     }
 
     /**
-     * Set Force https redirect configuration parameter. this parameter is required when the name is set to forceredirecthttps.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-     * @param ForceRedirectHTTPSParameters Force https redirect configuration parameter. this parameter is required when the name is set to forceredirecthttps.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * Set <p>Forced HTTPS redirect configuration for the access protocol. This parameter is required when the Name value is ForceRedirectHTTPS.</p>
+     * @param ForceRedirectHTTPSParameters <p>Forced HTTPS redirect configuration for the access protocol. This parameter is required when the Name value is ForceRedirectHTTPS.</p>
      */
     public void setForceRedirectHTTPSParameters(ForceRedirectHTTPSParameters ForceRedirectHTTPSParameters) {
         this.ForceRedirectHTTPSParameters = ForceRedirectHTTPSParameters;
     }
 
     /**
-     * Get HTTPS configuration for origin-pull. this parameter is required when the Name value is OriginPullProtocol.
-Note: This field may return null, which indicates a failure to obtain a valid value. 
-     * @return OriginPullProtocolParameters HTTPS configuration for origin-pull. this parameter is required when the Name value is OriginPullProtocol.
-Note: This field may return null, which indicates a failure to obtain a valid value.
+     * Get <p>Origin HTTPS configuration parameter. This parameter is required when the Name value is OriginPullProtocol.</p> 
+     * @return OriginPullProtocolParameters <p>Origin HTTPS configuration parameter. This parameter is required when the Name value is OriginPullProtocol.</p>
      */
     public OriginPullProtocolParameters getOriginPullProtocolParameters() {
         return this.OriginPullProtocolParameters;
     }
 
     /**
-     * Set HTTPS configuration for origin-pull. this parameter is required when the Name value is OriginPullProtocol.
-Note: This field may return null, which indicates a failure to obtain a valid value.
-     * @param OriginPullProtocolParameters HTTPS configuration for origin-pull. this parameter is required when the Name value is OriginPullProtocol.
-Note: This field may return null, which indicates a failure to obtain a valid value.
+     * Set <p>Origin HTTPS configuration parameter. This parameter is required when the Name value is OriginPullProtocol.</p>
+     * @param OriginPullProtocolParameters <p>Origin HTTPS configuration parameter. This parameter is required when the Name value is OriginPullProtocol.</p>
      */
     public void setOriginPullProtocolParameters(OriginPullProtocolParameters OriginPullProtocolParameters) {
         this.OriginPullProtocolParameters = OriginPullProtocolParameters;
     }
 
     /**
-     * Get Intelligent compression configuration. this parameter is required when name is set to compression.
-Note: this field may return null, which indicates a failure to obtain a valid value. 
-     * @return CompressionParameters Intelligent compression configuration. this parameter is required when name is set to compression.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * Get <p>Intelligent compression configuration. This parameter is required when the Name value is Compression.</p> 
+     * @return CompressionParameters <p>Intelligent compression configuration. This parameter is required when the Name value is Compression.</p>
      */
     public CompressionParameters getCompressionParameters() {
         return this.CompressionParameters;
     }
 
     /**
-     * Set Intelligent compression configuration. this parameter is required when name is set to compression.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-     * @param CompressionParameters Intelligent compression configuration. this parameter is required when name is set to compression.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * Set <p>Intelligent compression configuration. This parameter is required when the Name value is Compression.</p>
+     * @param CompressionParameters <p>Intelligent compression configuration. This parameter is required when the Name value is Compression.</p>
      */
     public void setCompressionParameters(CompressionParameters CompressionParameters) {
         this.CompressionParameters = CompressionParameters;
     }
 
     /**
-     * Get HSTS configuration parameter. this parameter is required when name is hsts.
-Note: this field may return null, which indicates a failure to obtain a valid value. 
-     * @return HSTSParameters HSTS configuration parameter. this parameter is required when name is hsts.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * Get <p>HSTS configuration parameter. When the Name value is HSTS, this parameter is required.</p> 
+     * @return HSTSParameters <p>HSTS configuration parameter. When the Name value is HSTS, this parameter is required.</p>
      */
     public HSTSParameters getHSTSParameters() {
         return this.HSTSParameters;
     }
 
     /**
-     * Set HSTS configuration parameter. this parameter is required when name is hsts.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-     * @param HSTSParameters HSTS configuration parameter. this parameter is required when name is hsts.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * Set <p>HSTS configuration parameter. When the Name value is HSTS, this parameter is required.</p>
+     * @param HSTSParameters <p>HSTS configuration parameter. When the Name value is HSTS, this parameter is required.</p>
      */
     public void setHSTSParameters(HSTSParameters HSTSParameters) {
         this.HSTSParameters = HSTSParameters;
     }
 
     /**
-     * Get Client ip header configuration for storing client request ip information. this parameter is required when name is clientipheader.
-Note: this field may return null, which indicates a failure to obtain a valid value. 
-     * @return ClientIPHeaderParameters Client ip header configuration for storing client request ip information. this parameter is required when name is clientipheader.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * Get <p>Configuration header information for storing client request IP. When the Name value is ClientIPHeader, this parameter is required.</p> 
+     * @return ClientIPHeaderParameters <p>Configuration header information for storing client request IP. When the Name value is ClientIPHeader, this parameter is required.</p>
      */
     public ClientIPHeaderParameters getClientIPHeaderParameters() {
         return this.ClientIPHeaderParameters;
     }
 
     /**
-     * Set Client ip header configuration for storing client request ip information. this parameter is required when name is clientipheader.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-     * @param ClientIPHeaderParameters Client ip header configuration for storing client request ip information. this parameter is required when name is clientipheader.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * Set <p>Configuration header information for storing client request IP. When the Name value is ClientIPHeader, this parameter is required.</p>
+     * @param ClientIPHeaderParameters <p>Configuration header information for storing client request IP. When the Name value is ClientIPHeader, this parameter is required.</p>
      */
     public void setClientIPHeaderParameters(ClientIPHeaderParameters ClientIPHeaderParameters) {
         this.ClientIPHeaderParameters = ClientIPHeaderParameters;
     }
 
     /**
-     * Get OCSP stapling configuration parameter. this parameter is required when the name is set to ocspstapling.
-Note: this field may return null, which indicates a failure to obtain a valid value. 
-     * @return OCSPStaplingParameters OCSP stapling configuration parameter. this parameter is required when the name is set to ocspstapling.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * Get <p>OCSP stapling configuration parameter. This parameter is required when Name value is OCSPStapling.</p> 
+     * @return OCSPStaplingParameters <p>OCSP stapling configuration parameter. This parameter is required when Name value is OCSPStapling.</p>
      */
     public OCSPStaplingParameters getOCSPStaplingParameters() {
         return this.OCSPStaplingParameters;
     }
 
     /**
-     * Set OCSP stapling configuration parameter. this parameter is required when the name is set to ocspstapling.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-     * @param OCSPStaplingParameters OCSP stapling configuration parameter. this parameter is required when the name is set to ocspstapling.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * Set <p>OCSP stapling configuration parameter. This parameter is required when Name value is OCSPStapling.</p>
+     * @param OCSPStaplingParameters <p>OCSP stapling configuration parameter. This parameter is required when Name value is OCSPStapling.</p>
      */
     public void setOCSPStaplingParameters(OCSPStaplingParameters OCSPStaplingParameters) {
         this.OCSPStaplingParameters = OCSPStaplingParameters;
     }
 
     /**
-     * Get HTTP2 access configuration parameter. this parameter is required when name is http2.
-Note: this field may return null, which indicates a failure to obtain a valid value. 
-     * @return HTTP2Parameters HTTP2 access configuration parameter. this parameter is required when name is http2.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * Get <p>HTTP2 integration configuration parameter. This parameter is required when the Name value is HTTP2.</p> 
+     * @return HTTP2Parameters <p>HTTP2 integration configuration parameter. This parameter is required when the Name value is HTTP2.</p>
      */
     public HTTP2Parameters getHTTP2Parameters() {
         return this.HTTP2Parameters;
     }
 
     /**
-     * Set HTTP2 access configuration parameter. this parameter is required when name is http2.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-     * @param HTTP2Parameters HTTP2 access configuration parameter. this parameter is required when name is http2.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * Set <p>HTTP2 integration configuration parameter. This parameter is required when the Name value is HTTP2.</p>
+     * @param HTTP2Parameters <p>HTTP2 integration configuration parameter. This parameter is required when the Name value is HTTP2.</p>
      */
     public void setHTTP2Parameters(HTTP2Parameters HTTP2Parameters) {
         this.HTTP2Parameters = HTTP2Parameters;
     }
 
     /**
-     * Get Maximum size configuration for file streaming upload via a post request. this parameter is required when name is postmaxsize.
-Note: this field may return null, which indicates a failure to obtain a valid value. 
-     * @return PostMaxSizeParameters Maximum size configuration for file streaming upload via a post request. this parameter is required when name is postmaxsize.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * Get <p>Maximum limit configuration for file streaming transmission in POST request upload. When the Name value is PostMaxSize, this parameter is required.</p> 
+     * @return PostMaxSizeParameters <p>Maximum limit configuration for file streaming transmission in POST request upload. When the Name value is PostMaxSize, this parameter is required.</p>
      */
     public PostMaxSizeParameters getPostMaxSizeParameters() {
         return this.PostMaxSizeParameters;
     }
 
     /**
-     * Set Maximum size configuration for file streaming upload via a post request. this parameter is required when name is postmaxsize.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-     * @param PostMaxSizeParameters Maximum size configuration for file streaming upload via a post request. this parameter is required when name is postmaxsize.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * Set <p>Maximum limit configuration for file streaming transmission in POST request upload. When the Name value is PostMaxSize, this parameter is required.</p>
+     * @param PostMaxSizeParameters <p>Maximum limit configuration for file streaming transmission in POST request upload. When the Name value is PostMaxSize, this parameter is required.</p>
      */
     public void setPostMaxSizeParameters(PostMaxSizeParameters PostMaxSizeParameters) {
         this.PostMaxSizeParameters = PostMaxSizeParameters;
     }
 
     /**
-     * Get Configuration parameter for carrying the region information of the client ip during origin-pull. this parameter is required when the name is set to clientipcountry.
-Note: this field may return null, which indicates a failure to obtain a valid value. 
-     * @return ClientIPCountryParameters Configuration parameter for carrying the region information of the client ip during origin-pull. this parameter is required when the name is set to clientipcountry.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * Get <p>Configuration parameter for carrying client IP regional information during origin pull. When the Name value is ClientIPCountry, this parameter is required.</p> 
+     * @return ClientIPCountryParameters <p>Configuration parameter for carrying client IP regional information during origin pull. When the Name value is ClientIPCountry, this parameter is required.</p>
      */
     public ClientIPCountryParameters getClientIPCountryParameters() {
         return this.ClientIPCountryParameters;
     }
 
     /**
-     * Set Configuration parameter for carrying the region information of the client ip during origin-pull. this parameter is required when the name is set to clientipcountry.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-     * @param ClientIPCountryParameters Configuration parameter for carrying the region information of the client ip during origin-pull. this parameter is required when the name is set to clientipcountry.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * Set <p>Configuration parameter for carrying client IP regional information during origin pull. When the Name value is ClientIPCountry, this parameter is required.</p>
+     * @param ClientIPCountryParameters <p>Configuration parameter for carrying client IP regional information during origin pull. When the Name value is ClientIPCountry, this parameter is required.</p>
      */
     public void setClientIPCountryParameters(ClientIPCountryParameters ClientIPCountryParameters) {
         this.ClientIPCountryParameters = ClientIPCountryParameters;
     }
 
     /**
-     * Get Configuration parameter for following redirects during origin-pull. this parameter is required when the name is set to upstreamfollowredirect.
-Note: this field may return null, which indicates a failure to obtain a valid value. 
-     * @return UpstreamFollowRedirectParameters Configuration parameter for following redirects during origin-pull. this parameter is required when the name is set to upstreamfollowredirect.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * Get <p>Origin-pull follow redirect parameter configuration. This parameter is required when the Name value is UpstreamFollowRedirect.</p> 
+     * @return UpstreamFollowRedirectParameters <p>Origin-pull follow redirect parameter configuration. This parameter is required when the Name value is UpstreamFollowRedirect.</p>
      */
     public UpstreamFollowRedirectParameters getUpstreamFollowRedirectParameters() {
         return this.UpstreamFollowRedirectParameters;
     }
 
     /**
-     * Set Configuration parameter for following redirects during origin-pull. this parameter is required when the name is set to upstreamfollowredirect.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-     * @param UpstreamFollowRedirectParameters Configuration parameter for following redirects during origin-pull. this parameter is required when the name is set to upstreamfollowredirect.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * Set <p>Origin-pull follow redirect parameter configuration. This parameter is required when the Name value is UpstreamFollowRedirect.</p>
+     * @param UpstreamFollowRedirectParameters <p>Origin-pull follow redirect parameter configuration. This parameter is required when the Name value is UpstreamFollowRedirect.</p>
      */
     public void setUpstreamFollowRedirectParameters(UpstreamFollowRedirectParameters UpstreamFollowRedirectParameters) {
         this.UpstreamFollowRedirectParameters = UpstreamFollowRedirectParameters;
     }
 
     /**
-     * Get Configuration parameter for origin-pull request. this parameter is required when the name is set to upstreamrequest.
-Note: this field may return null, which indicates a failure to obtain a valid value. 
-     * @return UpstreamRequestParameters Configuration parameter for origin-pull request. this parameter is required when the name is set to upstreamrequest.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * Get <p>Origin-pull request parameter configuration parameter. This parameter is required when the Name value is UpstreamRequest.</p> 
+     * @return UpstreamRequestParameters <p>Origin-pull request parameter configuration parameter. This parameter is required when the Name value is UpstreamRequest.</p>
      */
     public UpstreamRequestParameters getUpstreamRequestParameters() {
         return this.UpstreamRequestParameters;
     }
 
     /**
-     * Set Configuration parameter for origin-pull request. this parameter is required when the name is set to upstreamrequest.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-     * @param UpstreamRequestParameters Configuration parameter for origin-pull request. this parameter is required when the name is set to upstreamrequest.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * Set <p>Origin-pull request parameter configuration parameter. This parameter is required when the Name value is UpstreamRequest.</p>
+     * @param UpstreamRequestParameters <p>Origin-pull request parameter configuration parameter. This parameter is required when the Name value is UpstreamRequest.</p>
      */
     public void setUpstreamRequestParameters(UpstreamRequestParameters UpstreamRequestParameters) {
         this.UpstreamRequestParameters = UpstreamRequestParameters;
     }
 
     /**
-     * Get Origin server uninstallation config. When the Name value is Shield, this parameter is required.
-Note: This field may return null, which indicates a failure to obtain a valid value. 
-     * @return ShieldParameters Origin server uninstallation config. When the Name value is Shield, this parameter is required.
-Note: This field may return null, which indicates a failure to obtain a valid value.
+     * Get <p>Origin server uninstallation configuration parameter. This parameter is required when the Name value is Shield.</p> 
+     * @return ShieldParameters <p>Origin server uninstallation configuration parameter. This parameter is required when the Name value is Shield.</p>
      */
     public ShieldParameters getShieldParameters() {
         return this.ShieldParameters;
     }
 
     /**
-     * Set Origin server uninstallation config. When the Name value is Shield, this parameter is required.
-Note: This field may return null, which indicates a failure to obtain a valid value.
-     * @param ShieldParameters Origin server uninstallation config. When the Name value is Shield, this parameter is required.
-Note: This field may return null, which indicates a failure to obtain a valid value.
+     * Set <p>Origin server uninstallation configuration parameter. This parameter is required when the Name value is Shield.</p>
+     * @param ShieldParameters <p>Origin server uninstallation configuration parameter. This parameter is required when the Name value is Shield.</p>
      */
     public void setShieldParameters(ShieldParameters ShieldParameters) {
         this.ShieldParameters = ShieldParameters;
     }
 
     /**
-     * Get SSL/TLS security configuration parameter. this parameter is required when the name is set to tlsconfig.
-Note: this field may return null, which indicates a failure to obtain a valid value. 
-     * @return TLSConfigParameters SSL/TLS security configuration parameter. this parameter is required when the name is set to tlsconfig.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * Get <p>SSL/TLS security configuration parameter. This parameter is required when the Name value is TLSConfig.</p> 
+     * @return TLSConfigParameters <p>SSL/TLS security configuration parameter. This parameter is required when the Name value is TLSConfig.</p>
      */
     public TLSConfigParameters getTLSConfigParameters() {
         return this.TLSConfigParameters;
     }
 
     /**
-     * Set SSL/TLS security configuration parameter. this parameter is required when the name is set to tlsconfig.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-     * @param TLSConfigParameters SSL/TLS security configuration parameter. this parameter is required when the name is set to tlsconfig.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * Set <p>SSL/TLS security configuration parameter. This parameter is required when the Name value is TLSConfig.</p>
+     * @param TLSConfigParameters <p>SSL/TLS security configuration parameter. This parameter is required when the Name value is TLSConfig.</p>
      */
     public void setTLSConfigParameters(TLSConfigParameters TLSConfigParameters) {
         this.TLSConfigParameters = TLSConfigParameters;
     }
 
     /**
-     * Get Configuration parameter for modifying the origin server. this parameter is required when the name is set to modifyorigin.
-Note: this field may return null, which indicates a failure to obtain a valid value. 
-     * @return ModifyOriginParameters Configuration parameter for modifying the origin server. this parameter is required when the name is set to modifyorigin.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * Get <p>Modify origin server configuration parameter. When the Name value is ModifyOrigin, this parameter is required.</p> 
+     * @return ModifyOriginParameters <p>Modify origin server configuration parameter. When the Name value is ModifyOrigin, this parameter is required.</p>
      */
     public ModifyOriginParameters getModifyOriginParameters() {
         return this.ModifyOriginParameters;
     }
 
     /**
-     * Set Configuration parameter for modifying the origin server. this parameter is required when the name is set to modifyorigin.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-     * @param ModifyOriginParameters Configuration parameter for modifying the origin server. this parameter is required when the name is set to modifyorigin.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * Set <p>Modify origin server configuration parameter. When the Name value is ModifyOrigin, this parameter is required.</p>
+     * @param ModifyOriginParameters <p>Modify origin server configuration parameter. When the Name value is ModifyOrigin, this parameter is required.</p>
      */
     public void setModifyOriginParameters(ModifyOriginParameters ModifyOriginParameters) {
         this.ModifyOriginParameters = ModifyOriginParameters;
     }
 
     /**
-     * Get Origin server failure failover configuration parameter. This parameter is required when the Name value is SiteFailover.
-Note: This field may return null, which indicates a failure to obtain a valid value. 
-     * @return SiteFailoverParameters Origin server failure failover configuration parameter. This parameter is required when the Name value is SiteFailover.
-Note: This field may return null, which indicates a failure to obtain a valid value.
+     * Get <p>Source site fault migration config. When the Name value is SiteFailover, this parameter is required.</p> 
+     * @return SiteFailoverParameters <p>Source site fault migration config. When the Name value is SiteFailover, this parameter is required.</p>
      */
     public SiteFailoverParameters getSiteFailoverParameters() {
         return this.SiteFailoverParameters;
     }
 
     /**
-     * Set Origin server failure failover configuration parameter. This parameter is required when the Name value is SiteFailover.
-Note: This field may return null, which indicates a failure to obtain a valid value.
-     * @param SiteFailoverParameters Origin server failure failover configuration parameter. This parameter is required when the Name value is SiteFailover.
-Note: This field may return null, which indicates a failure to obtain a valid value.
+     * Set <p>Source site fault migration config. When the Name value is SiteFailover, this parameter is required.</p>
+     * @param SiteFailoverParameters <p>Source site fault migration config. When the Name value is SiteFailover, this parameter is required.</p>
      */
     public void setSiteFailoverParameters(SiteFailoverParameters SiteFailoverParameters) {
         this.SiteFailoverParameters = SiteFailoverParameters;
     }
 
     /**
-     * Get Configuration of layer 7 origin timeout. this parameter is required when name is httpupstreamtimeout.
-Note: this field may return null, which indicates a failure to obtain a valid value. 
-     * @return HTTPUpstreamTimeoutParameters Configuration of layer 7 origin timeout. this parameter is required when name is httpupstreamtimeout.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * Get <p>Layer 7 origin pull timeout configuration. This parameter is required when the Name value is HTTPUpstreamTimeout.</p> 
+     * @return HTTPUpstreamTimeoutParameters <p>Layer 7 origin pull timeout configuration. This parameter is required when the Name value is HTTPUpstreamTimeout.</p>
      */
     public HTTPUpstreamTimeoutParameters getHTTPUpstreamTimeoutParameters() {
         return this.HTTPUpstreamTimeoutParameters;
     }
 
     /**
-     * Set Configuration of layer 7 origin timeout. this parameter is required when name is httpupstreamtimeout.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-     * @param HTTPUpstreamTimeoutParameters Configuration of layer 7 origin timeout. this parameter is required when name is httpupstreamtimeout.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * Set <p>Layer 7 origin pull timeout configuration. This parameter is required when the Name value is HTTPUpstreamTimeout.</p>
+     * @param HTTPUpstreamTimeoutParameters <p>Layer 7 origin pull timeout configuration. This parameter is required when the Name value is HTTPUpstreamTimeout.</p>
      */
     public void setHTTPUpstreamTimeoutParameters(HTTPUpstreamTimeoutParameters HTTPUpstreamTimeoutParameters) {
         this.HTTPUpstreamTimeoutParameters = HTTPUpstreamTimeoutParameters;
     }
 
     /**
-     * Get HTTP response configuration parameters. this parameter is required when name is httpresponse.
-Note: this field may return null, which indicates a failure to obtain a valid value. 
-     * @return HttpResponseParameters HTTP response configuration parameters. this parameter is required when name is httpresponse.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * Get <p>HTTP response configuration parameter. This parameter is required when the Name value is HttpResponse.</p> 
+     * @return HttpResponseParameters <p>HTTP response configuration parameter. This parameter is required when the Name value is HttpResponse.</p>
      */
     public HTTPResponseParameters getHttpResponseParameters() {
         return this.HttpResponseParameters;
     }
 
     /**
-     * Set HTTP response configuration parameters. this parameter is required when name is httpresponse.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-     * @param HttpResponseParameters HTTP response configuration parameters. this parameter is required when name is httpresponse.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * Set <p>HTTP response configuration parameter. This parameter is required when the Name value is HttpResponse.</p>
+     * @param HttpResponseParameters <p>HTTP response configuration parameter. This parameter is required when the Name value is HttpResponse.</p>
      */
     public void setHttpResponseParameters(HTTPResponseParameters HttpResponseParameters) {
         this.HttpResponseParameters = HttpResponseParameters;
     }
 
     /**
-     * Get Custom error page configuration parameters. this parameter is required when name is errorpage.
-Note: this field may return null, which indicates a failure to obtain a valid value. 
-     * @return ErrorPageParameters Custom error page configuration parameters. this parameter is required when name is errorpage.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * Get <p>Custom error page configuration parameter. This parameter is required when the value of Name is ErrorPage.</p> 
+     * @return ErrorPageParameters <p>Custom error page configuration parameter. This parameter is required when the value of Name is ErrorPage.</p>
      */
     public ErrorPageParameters getErrorPageParameters() {
         return this.ErrorPageParameters;
     }
 
     /**
-     * Set Custom error page configuration parameters. this parameter is required when name is errorpage.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-     * @param ErrorPageParameters Custom error page configuration parameters. this parameter is required when name is errorpage.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * Set <p>Custom error page configuration parameter. This parameter is required when the value of Name is ErrorPage.</p>
+     * @param ErrorPageParameters <p>Custom error page configuration parameter. This parameter is required when the value of Name is ErrorPage.</p>
      */
     public void setErrorPageParameters(ErrorPageParameters ErrorPageParameters) {
         this.ErrorPageParameters = ErrorPageParameters;
     }
 
     /**
-     * Get Modify http node response header configuration parameters. this parameter is required when name is modifyresponseheader.
-Note: this field may return null, which indicates a failure to obtain a valid value. 
-     * @return ModifyResponseHeaderParameters Modify http node response header configuration parameters. this parameter is required when name is modifyresponseheader.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * Get <p>Modify the HTTP node response header configuration parameter. This parameter is required when the Name value is ModifyResponseHeader.</p> 
+     * @return ModifyResponseHeaderParameters <p>Modify the HTTP node response header configuration parameter. This parameter is required when the Name value is ModifyResponseHeader.</p>
      */
     public ModifyResponseHeaderParameters getModifyResponseHeaderParameters() {
         return this.ModifyResponseHeaderParameters;
     }
 
     /**
-     * Set Modify http node response header configuration parameters. this parameter is required when name is modifyresponseheader.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-     * @param ModifyResponseHeaderParameters Modify http node response header configuration parameters. this parameter is required when name is modifyresponseheader.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * Set <p>Modify the HTTP node response header configuration parameter. This parameter is required when the Name value is ModifyResponseHeader.</p>
+     * @param ModifyResponseHeaderParameters <p>Modify the HTTP node response header configuration parameter. This parameter is required when the Name value is ModifyResponseHeader.</p>
      */
     public void setModifyResponseHeaderParameters(ModifyResponseHeaderParameters ModifyResponseHeaderParameters) {
         this.ModifyResponseHeaderParameters = ModifyResponseHeaderParameters;
     }
 
     /**
-     * Get Modify http node request header configuration parameters. this parameter is required when name is modifyrequestheader.
-Note: this field may return null, which indicates a failure to obtain a valid value. 
-     * @return ModifyRequestHeaderParameters Modify http node request header configuration parameters. this parameter is required when name is modifyrequestheader.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * Get <p>Modify the request header configuration parameter of the HTTP node. This parameter is required when the Name value is ModifyRequestHeader.</p> 
+     * @return ModifyRequestHeaderParameters <p>Modify the request header configuration parameter of the HTTP node. This parameter is required when the Name value is ModifyRequestHeader.</p>
      */
     public ModifyRequestHeaderParameters getModifyRequestHeaderParameters() {
         return this.ModifyRequestHeaderParameters;
     }
 
     /**
-     * Set Modify http node request header configuration parameters. this parameter is required when name is modifyrequestheader.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-     * @param ModifyRequestHeaderParameters Modify http node request header configuration parameters. this parameter is required when name is modifyrequestheader.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * Set <p>Modify the request header configuration parameter of the HTTP node. This parameter is required when the Name value is ModifyRequestHeader.</p>
+     * @param ModifyRequestHeaderParameters <p>Modify the request header configuration parameter of the HTTP node. This parameter is required when the Name value is ModifyRequestHeader.</p>
      */
     public void setModifyRequestHeaderParameters(ModifyRequestHeaderParameters ModifyRequestHeaderParameters) {
         this.ModifyRequestHeaderParameters = ModifyRequestHeaderParameters;
     }
 
     /**
-     * Get Single connection download speed limit configuration parameter. this parameter is required when name is responsespeedlimit.
-Note: this field may return null, which indicates a failure to obtain a valid value. 
-     * @return ResponseSpeedLimitParameters Single connection download speed limit configuration parameter. this parameter is required when name is responsespeedlimit.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * Get <p>Single connection download speed limit configuration parameter. This parameter is required when the Name value is ResponseSpeedLimit.</p> 
+     * @return ResponseSpeedLimitParameters <p>Single connection download speed limit configuration parameter. This parameter is required when the Name value is ResponseSpeedLimit.</p>
      */
     public ResponseSpeedLimitParameters getResponseSpeedLimitParameters() {
         return this.ResponseSpeedLimitParameters;
     }
 
     /**
-     * Set Single connection download speed limit configuration parameter. this parameter is required when name is responsespeedlimit.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-     * @param ResponseSpeedLimitParameters Single connection download speed limit configuration parameter. this parameter is required when name is responsespeedlimit.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * Set <p>Single connection download speed limit configuration parameter. This parameter is required when the Name value is ResponseSpeedLimit.</p>
+     * @param ResponseSpeedLimitParameters <p>Single connection download speed limit configuration parameter. This parameter is required when the Name value is ResponseSpeedLimit.</p>
      */
     public void setResponseSpeedLimitParameters(ResponseSpeedLimitParameters ResponseSpeedLimitParameters) {
         this.ResponseSpeedLimitParameters = ResponseSpeedLimitParameters;
     }
 
     /**
-     * Get Specifies the content identification configuration parameter. this parameter is required when the Name value is SetContentIdentifier.
-
-Note: This field may return null, which indicates a failure to obtain a valid value. 
-     * @return SetContentIdentifierParameters Specifies the content identification configuration parameter. this parameter is required when the Name value is SetContentIdentifier.
-
-Note: This field may return null, which indicates a failure to obtain a valid value.
+     * Get <p>Content identification configuration parameter. This parameter is required when the Name value is SetContentIdentifier.</p> 
+     * @return SetContentIdentifierParameters <p>Content identification configuration parameter. This parameter is required when the Name value is SetContentIdentifier.</p>
      */
     public SetContentIdentifierParameters getSetContentIdentifierParameters() {
         return this.SetContentIdentifierParameters;
     }
 
     /**
-     * Set Specifies the content identification configuration parameter. this parameter is required when the Name value is SetContentIdentifier.
-
-Note: This field may return null, which indicates a failure to obtain a valid value.
-     * @param SetContentIdentifierParameters Specifies the content identification configuration parameter. this parameter is required when the Name value is SetContentIdentifier.
-
-Note: This field may return null, which indicates a failure to obtain a valid value.
+     * Set <p>Content identification configuration parameter. This parameter is required when the Name value is SetContentIdentifier.</p>
+     * @param SetContentIdentifierParameters <p>Content identification configuration parameter. This parameter is required when the Name value is SetContentIdentifier.</p>
      */
     public void setSetContentIdentifierParameters(SetContentIdentifierParameters SetContentIdentifierParameters) {
         this.SetContentIdentifierParameters = SetContentIdentifierParameters;
     }
 
     /**
-     * Get Vary feature configuration parameter. when Name value is Vary, this parameter is required. 
-     * @return VaryParameters Vary feature configuration parameter. when Name value is Vary, this parameter is required.
+     * Get <p>Vary feature configuration parameter. This parameter is required when the Name value is Vary.</p> 
+     * @return VaryParameters <p>Vary feature configuration parameter. This parameter is required when the Name value is Vary.</p>
      */
     public VaryParameters getVaryParameters() {
         return this.VaryParameters;
     }
 
     /**
-     * Set Vary feature configuration parameter. when Name value is Vary, this parameter is required.
-     * @param VaryParameters Vary feature configuration parameter. when Name value is Vary, this parameter is required.
+     * Set <p>Vary feature configuration parameter. This parameter is required when the Name value is Vary.</p>
+     * @param VaryParameters <p>Vary feature configuration parameter. This parameter is required when the Name value is Vary.</p>
      */
     public void setVaryParameters(VaryParameters VaryParameters) {
         this.VaryParameters = VaryParameters;
     }
 
     /**
-     * Get The content compression configuration parameter is required when Name value is ContentCompression. this parameter is an allowlist feature. if needed, contact tencent cloud engineers. 
-     * @return ContentCompressionParameters The content compression configuration parameter is required when Name value is ContentCompression. this parameter is an allowlist feature. if needed, contact tencent cloud engineers.
+     * Get <p>Content compression configuration parameter. When the Name value is ContentCompression, this parameter is required. This parameter is an allowlist feature. If needed, contact Tencent Cloud Engineers.</p> 
+     * @return ContentCompressionParameters <p>Content compression configuration parameter. When the Name value is ContentCompression, this parameter is required. This parameter is an allowlist feature. If needed, contact Tencent Cloud Engineers.</p>
      */
     public ContentCompressionParameters getContentCompressionParameters() {
         return this.ContentCompressionParameters;
     }
 
     /**
-     * Set The content compression configuration parameter is required when Name value is ContentCompression. this parameter is an allowlist feature. if needed, contact tencent cloud engineers.
-     * @param ContentCompressionParameters The content compression configuration parameter is required when Name value is ContentCompression. this parameter is an allowlist feature. if needed, contact tencent cloud engineers.
+     * Set <p>Content compression configuration parameter. When the Name value is ContentCompression, this parameter is required. This parameter is an allowlist feature. If needed, contact Tencent Cloud Engineers.</p>
+     * @param ContentCompressionParameters <p>Content compression configuration parameter. When the Name value is ContentCompression, this parameter is required. This parameter is an allowlist feature. If needed, contact Tencent Cloud Engineers.</p>
      */
     public void setContentCompressionParameters(ContentCompressionParameters ContentCompressionParameters) {
         this.ContentCompressionParameters = ContentCompressionParameters;
     }
 
     /**
-     * Get The origin authentication configuration parameter. this parameter is required when the Name value is OriginAuthentication. this parameter is the allowlist feature. if needed, contact tencent cloud engineers. 
-     * @return OriginAuthenticationParameters The origin authentication configuration parameter. this parameter is required when the Name value is OriginAuthentication. this parameter is the allowlist feature. if needed, contact tencent cloud engineers.
+     * Get <p>Origin authentication configuration parameter. This parameter is required when Name value is OriginAuthentication. This parameter is an allowlist feature. If needed, contact Tencent Cloud Engineers.</p> 
+     * @return OriginAuthenticationParameters <p>Origin authentication configuration parameter. This parameter is required when Name value is OriginAuthentication. This parameter is an allowlist feature. If needed, contact Tencent Cloud Engineers.</p>
      */
     public OriginAuthenticationParameters getOriginAuthenticationParameters() {
         return this.OriginAuthenticationParameters;
     }
 
     /**
-     * Set The origin authentication configuration parameter. this parameter is required when the Name value is OriginAuthentication. this parameter is the allowlist feature. if needed, contact tencent cloud engineers.
-     * @param OriginAuthenticationParameters The origin authentication configuration parameter. this parameter is required when the Name value is OriginAuthentication. this parameter is the allowlist feature. if needed, contact tencent cloud engineers.
+     * Set <p>Origin authentication configuration parameter. This parameter is required when Name value is OriginAuthentication. This parameter is an allowlist feature. If needed, contact Tencent Cloud Engineers.</p>
+     * @param OriginAuthenticationParameters <p>Origin authentication configuration parameter. This parameter is required when Name value is OriginAuthentication. This parameter is an allowlist feature. If needed, contact Tencent Cloud Engineers.</p>
      */
     public void setOriginAuthenticationParameters(OriginAuthenticationParameters OriginAuthenticationParameters) {
         this.OriginAuthenticationParameters = OriginAuthenticationParameters;
+    }
+
+    /**
+     * Get <p>Custom configuration operation parameter. This parameter is required when the Name value is CustomAction.</p><p>You can obtain the list of currently supported custom configuration items through the CustomActionSet returned value of the DescribeAvailableCustomActionsForRuleEngine API.</p> 
+     * @return CustomActionParameters <p>Custom configuration operation parameter. This parameter is required when the Name value is CustomAction.</p><p>You can obtain the list of currently supported custom configuration items through the CustomActionSet returned value of the DescribeAvailableCustomActionsForRuleEngine API.</p>
+     */
+    public CustomActionParameters getCustomActionParameters() {
+        return this.CustomActionParameters;
+    }
+
+    /**
+     * Set <p>Custom configuration operation parameter. This parameter is required when the Name value is CustomAction.</p><p>You can obtain the list of currently supported custom configuration items through the CustomActionSet returned value of the DescribeAvailableCustomActionsForRuleEngine API.</p>
+     * @param CustomActionParameters <p>Custom configuration operation parameter. This parameter is required when the Name value is CustomAction.</p><p>You can obtain the list of currently supported custom configuration items through the CustomActionSet returned value of the DescribeAvailableCustomActionsForRuleEngine API.</p>
+     */
+    public void setCustomActionParameters(CustomActionParameters CustomActionParameters) {
+        this.CustomActionParameters = CustomActionParameters;
     }
 
     public RuleEngineAction() {
@@ -1402,6 +1058,9 @@ Note: This field may return null, which indicates a failure to obtain a valid va
         }
         if (source.SmartRoutingParameters != null) {
             this.SmartRoutingParameters = new SmartRoutingParameters(source.SmartRoutingParameters);
+        }
+        if (source.AdvancedOriginRoutingParameters != null) {
+            this.AdvancedOriginRoutingParameters = new AdvancedOriginRoutingParameters(source.AdvancedOriginRoutingParameters);
         }
         if (source.RangeOriginPullParameters != null) {
             this.RangeOriginPullParameters = new RangeOriginPullParameters(source.RangeOriginPullParameters);
@@ -1487,6 +1146,9 @@ Note: This field may return null, which indicates a failure to obtain a valid va
         if (source.OriginAuthenticationParameters != null) {
             this.OriginAuthenticationParameters = new OriginAuthenticationParameters(source.OriginAuthenticationParameters);
         }
+        if (source.CustomActionParameters != null) {
+            this.CustomActionParameters = new CustomActionParameters(source.CustomActionParameters);
+        }
     }
 
 
@@ -1507,6 +1169,7 @@ Note: This field may return null, which indicates a failure to obtain a valid va
         this.setParamObj(map, prefix + "StatusCodeCacheParameters.", this.StatusCodeCacheParameters);
         this.setParamObj(map, prefix + "OfflineCacheParameters.", this.OfflineCacheParameters);
         this.setParamObj(map, prefix + "SmartRoutingParameters.", this.SmartRoutingParameters);
+        this.setParamObj(map, prefix + "AdvancedOriginRoutingParameters.", this.AdvancedOriginRoutingParameters);
         this.setParamObj(map, prefix + "RangeOriginPullParameters.", this.RangeOriginPullParameters);
         this.setParamObj(map, prefix + "UpstreamHTTP2Parameters.", this.UpstreamHTTP2Parameters);
         this.setParamObj(map, prefix + "HostHeaderParameters.", this.HostHeaderParameters);
@@ -1535,6 +1198,7 @@ Note: This field may return null, which indicates a failure to obtain a valid va
         this.setParamObj(map, prefix + "VaryParameters.", this.VaryParameters);
         this.setParamObj(map, prefix + "ContentCompressionParameters.", this.ContentCompressionParameters);
         this.setParamObj(map, prefix + "OriginAuthenticationParameters.", this.OriginAuthenticationParameters);
+        this.setParamObj(map, prefix + "CustomActionParameters.", this.CustomActionParameters);
 
     }
 }

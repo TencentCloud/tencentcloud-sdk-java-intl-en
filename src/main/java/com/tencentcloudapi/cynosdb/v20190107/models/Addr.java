@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class Addr extends AbstractModel {
 
     /**
-    * IP address
+    * IP address.
     */
     @SerializedName("IP")
     @Expose
     private String IP;
 
     /**
-    * Port
+    * Port.
     */
     @SerializedName("Port")
     @Expose
     private Long Port;
 
     /**
-     * Get IP address 
-     * @return IP IP address
+     * Get IP address. 
+     * @return IP IP address.
      */
     public String getIP() {
         return this.IP;
     }
 
     /**
-     * Set IP address
-     * @param IP IP address
+     * Set IP address.
+     * @param IP IP address.
      */
     public void setIP(String IP) {
         this.IP = IP;
     }
 
     /**
-     * Get Port 
-     * @return Port Port
+     * Get Port. 
+     * @return Port Port.
      */
     public Long getPort() {
         return this.Port;
     }
 
     /**
-     * Set Port
-     * @param Port Port
+     * Set Port.
+     * @param Port Port.
      */
     public void setPort(Long Port) {
         this.Port = Port;

@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class ExportInstanceErrorLogsResponse extends AbstractModel {
 
     /**
-    * Exported error log content.
+    * Exported content of the error log
     */
     @SerializedName("ErrorLogItems")
     @Expose
     private ErrorLogItemExport [] ErrorLogItems;
 
     /**
-    * Error log string.
+    * Error log string
     */
     @SerializedName("FileContent")
     @Expose
@@ -45,32 +45,32 @@ public class ExportInstanceErrorLogsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Exported error log content. 
-     * @return ErrorLogItems Exported error log content.
+     * Get Exported content of the error log 
+     * @return ErrorLogItems Exported content of the error log
      */
     public ErrorLogItemExport [] getErrorLogItems() {
         return this.ErrorLogItems;
     }
 
     /**
-     * Set Exported error log content.
-     * @param ErrorLogItems Exported error log content.
+     * Set Exported content of the error log
+     * @param ErrorLogItems Exported content of the error log
      */
     public void setErrorLogItems(ErrorLogItemExport [] ErrorLogItems) {
         this.ErrorLogItems = ErrorLogItems;
     }
 
     /**
-     * Get Error log string. 
-     * @return FileContent Error log string.
+     * Get Error log string 
+     * @return FileContent Error log string
      */
     public String getFileContent() {
         return this.FileContent;
     }
 
     /**
-     * Set Error log string.
-     * @param FileContent Error log string.
+     * Set Error log string
+     * @param FileContent Error log string
      */
     public void setFileContent(String FileContent) {
         this.FileContent = FileContent;

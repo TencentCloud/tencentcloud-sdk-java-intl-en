@@ -47,7 +47,7 @@ public class ParamItemInfo extends AbstractModel {
     private String OldValue;
 
     /**
-    * Parameter formula.
+    * Parameter formula
 
     */
     @SerializedName("ValueFunction")
@@ -111,9 +111,9 @@ public class ParamItemInfo extends AbstractModel {
     }
 
     /**
-     * Get Parameter formula.
+     * Get Parameter formula
  
-     * @return ValueFunction Parameter formula.
+     * @return ValueFunction Parameter formula
 
      */
     public String getValueFunction() {
@@ -121,9 +121,9 @@ public class ParamItemInfo extends AbstractModel {
     }
 
     /**
-     * Set Parameter formula.
+     * Set Parameter formula
 
-     * @param ValueFunction Parameter formula.
+     * @param ValueFunction Parameter formula
 
      */
     public void setValueFunction(String ValueFunction) {

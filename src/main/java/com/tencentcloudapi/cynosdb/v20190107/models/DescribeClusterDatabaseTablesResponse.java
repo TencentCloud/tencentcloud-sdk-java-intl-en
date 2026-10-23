@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeClusterDatabaseTablesResponse extends AbstractModel {
 
     /**
-    * Total number of entries
+    * Total number of entries.
     */
     @SerializedName("TotalCount")
     @Expose
@@ -38,14 +38,14 @@ public class DescribeClusterDatabaseTablesResponse extends AbstractModel {
     private Long Offset;
 
     /**
-    * Pagination limit.
+    * Pagination limit
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * Database table list.
+    * List of database tables
     */
     @SerializedName("Tables")
     @Expose
@@ -59,16 +59,16 @@ public class DescribeClusterDatabaseTablesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Total number of entries 
-     * @return TotalCount Total number of entries
+     * Get Total number of entries. 
+     * @return TotalCount Total number of entries.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Total number of entries
-     * @param TotalCount Total number of entries
+     * Set Total number of entries.
+     * @param TotalCount Total number of entries.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
@@ -91,32 +91,32 @@ public class DescribeClusterDatabaseTablesResponse extends AbstractModel {
     }
 
     /**
-     * Get Pagination limit. 
-     * @return Limit Pagination limit.
+     * Get Pagination limit 
+     * @return Limit Pagination limit
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Pagination limit.
-     * @param Limit Pagination limit.
+     * Set Pagination limit
+     * @param Limit Pagination limit
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get Database table list. 
-     * @return Tables Database table list.
+     * Get List of database tables 
+     * @return Tables List of database tables
      */
     public String [] getTables() {
         return this.Tables;
     }
 
     /**
-     * Set Database table list.
-     * @param Tables Database table list.
+     * Set List of database tables
+     * @param Tables List of database tables
      */
     public void setTables(String [] Tables) {
         this.Tables = Tables;

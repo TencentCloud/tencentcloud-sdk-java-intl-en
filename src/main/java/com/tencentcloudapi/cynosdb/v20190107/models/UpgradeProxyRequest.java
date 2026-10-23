@@ -38,56 +38,56 @@ public class UpgradeProxyRequest extends AbstractModel {
     private Long Cpu;
 
     /**
-    * Memory
+    * memory
     */
     @SerializedName("Mem")
     @Expose
     private Long Mem;
 
     /**
-    * Number of nodes in the proxy group
+    * Number of database proxy group nodes
     */
     @SerializedName("ProxyCount")
     @Expose
     private Long ProxyCount;
 
     /**
-    * ID of the database proxy group (disused)
+    * Database Proxy Group ID (abandoned)
     */
     @SerializedName("ProxyGroupId")
     @Expose
     private String ProxyGroupId;
 
     /**
-    * Load rebalance mode. Valid values: `auto`, `manual`
+    * Load rebalance: auto (automatic), manual
     */
     @SerializedName("ReloadBalance")
     @Expose
     private String ReloadBalance;
 
     /**
-    * Upgrade time. Valid values: `no` (upon upgrade completion), `timeWindow` (upgrade during instance maintenance time)
+    * Upgrade time: no (upon upgrade completion); yes (instance maintenance time)
     */
     @SerializedName("IsInMaintainPeriod")
     @Expose
     private String IsInMaintainPeriod;
 
     /**
-    * Node information of the atabase proxy
+    * Database proxy node information
     */
     @SerializedName("ProxyZones")
     @Expose
     private ProxyZone [] ProxyZones;
 
     /**
-    * whether rolling upgrade
+    * Whether to perform a rolling upgrade
     */
     @SerializedName("IsRollUpgrade")
     @Expose
     private String IsRollUpgrade;
 
     /**
-    * Rolling upgrade waiting time, unit: second
+    * In-place rolling upgrade waiting time. Unit: seconds
     */
     @SerializedName("RollUpgradeWaitingTime")
     @Expose
@@ -126,128 +126,128 @@ public class UpgradeProxyRequest extends AbstractModel {
     }
 
     /**
-     * Get Memory 
-     * @return Mem Memory
+     * Get memory 
+     * @return Mem memory
      */
     public Long getMem() {
         return this.Mem;
     }
 
     /**
-     * Set Memory
-     * @param Mem Memory
+     * Set memory
+     * @param Mem memory
      */
     public void setMem(Long Mem) {
         this.Mem = Mem;
     }
 
     /**
-     * Get Number of nodes in the proxy group 
-     * @return ProxyCount Number of nodes in the proxy group
+     * Get Number of database proxy group nodes 
+     * @return ProxyCount Number of database proxy group nodes
      */
     public Long getProxyCount() {
         return this.ProxyCount;
     }
 
     /**
-     * Set Number of nodes in the proxy group
-     * @param ProxyCount Number of nodes in the proxy group
+     * Set Number of database proxy group nodes
+     * @param ProxyCount Number of database proxy group nodes
      */
     public void setProxyCount(Long ProxyCount) {
         this.ProxyCount = ProxyCount;
     }
 
     /**
-     * Get ID of the database proxy group (disused) 
-     * @return ProxyGroupId ID of the database proxy group (disused)
+     * Get Database Proxy Group ID (abandoned) 
+     * @return ProxyGroupId Database Proxy Group ID (abandoned)
      */
     public String getProxyGroupId() {
         return this.ProxyGroupId;
     }
 
     /**
-     * Set ID of the database proxy group (disused)
-     * @param ProxyGroupId ID of the database proxy group (disused)
+     * Set Database Proxy Group ID (abandoned)
+     * @param ProxyGroupId Database Proxy Group ID (abandoned)
      */
     public void setProxyGroupId(String ProxyGroupId) {
         this.ProxyGroupId = ProxyGroupId;
     }
 
     /**
-     * Get Load rebalance mode. Valid values: `auto`, `manual` 
-     * @return ReloadBalance Load rebalance mode. Valid values: `auto`, `manual`
+     * Get Load rebalance: auto (automatic), manual 
+     * @return ReloadBalance Load rebalance: auto (automatic), manual
      */
     public String getReloadBalance() {
         return this.ReloadBalance;
     }
 
     /**
-     * Set Load rebalance mode. Valid values: `auto`, `manual`
-     * @param ReloadBalance Load rebalance mode. Valid values: `auto`, `manual`
+     * Set Load rebalance: auto (automatic), manual
+     * @param ReloadBalance Load rebalance: auto (automatic), manual
      */
     public void setReloadBalance(String ReloadBalance) {
         this.ReloadBalance = ReloadBalance;
     }
 
     /**
-     * Get Upgrade time. Valid values: `no` (upon upgrade completion), `timeWindow` (upgrade during instance maintenance time) 
-     * @return IsInMaintainPeriod Upgrade time. Valid values: `no` (upon upgrade completion), `timeWindow` (upgrade during instance maintenance time)
+     * Get Upgrade time: no (upon upgrade completion); yes (instance maintenance time) 
+     * @return IsInMaintainPeriod Upgrade time: no (upon upgrade completion); yes (instance maintenance time)
      */
     public String getIsInMaintainPeriod() {
         return this.IsInMaintainPeriod;
     }
 
     /**
-     * Set Upgrade time. Valid values: `no` (upon upgrade completion), `timeWindow` (upgrade during instance maintenance time)
-     * @param IsInMaintainPeriod Upgrade time. Valid values: `no` (upon upgrade completion), `timeWindow` (upgrade during instance maintenance time)
+     * Set Upgrade time: no (upon upgrade completion); yes (instance maintenance time)
+     * @param IsInMaintainPeriod Upgrade time: no (upon upgrade completion); yes (instance maintenance time)
      */
     public void setIsInMaintainPeriod(String IsInMaintainPeriod) {
         this.IsInMaintainPeriod = IsInMaintainPeriod;
     }
 
     /**
-     * Get Node information of the atabase proxy 
-     * @return ProxyZones Node information of the atabase proxy
+     * Get Database proxy node information 
+     * @return ProxyZones Database proxy node information
      */
     public ProxyZone [] getProxyZones() {
         return this.ProxyZones;
     }
 
     /**
-     * Set Node information of the atabase proxy
-     * @param ProxyZones Node information of the atabase proxy
+     * Set Database proxy node information
+     * @param ProxyZones Database proxy node information
      */
     public void setProxyZones(ProxyZone [] ProxyZones) {
         this.ProxyZones = ProxyZones;
     }
 
     /**
-     * Get whether rolling upgrade 
-     * @return IsRollUpgrade whether rolling upgrade
+     * Get Whether to perform a rolling upgrade 
+     * @return IsRollUpgrade Whether to perform a rolling upgrade
      */
     public String getIsRollUpgrade() {
         return this.IsRollUpgrade;
     }
 
     /**
-     * Set whether rolling upgrade
-     * @param IsRollUpgrade whether rolling upgrade
+     * Set Whether to perform a rolling upgrade
+     * @param IsRollUpgrade Whether to perform a rolling upgrade
      */
     public void setIsRollUpgrade(String IsRollUpgrade) {
         this.IsRollUpgrade = IsRollUpgrade;
     }
 
     /**
-     * Get Rolling upgrade waiting time, unit: second 
-     * @return RollUpgradeWaitingTime Rolling upgrade waiting time, unit: second
+     * Get In-place rolling upgrade waiting time. Unit: seconds 
+     * @return RollUpgradeWaitingTime In-place rolling upgrade waiting time. Unit: seconds
      */
     public Long getRollUpgradeWaitingTime() {
         return this.RollUpgradeWaitingTime;
     }
 
     /**
-     * Set Rolling upgrade waiting time, unit: second
-     * @param RollUpgradeWaitingTime Rolling upgrade waiting time, unit: second
+     * Set In-place rolling upgrade waiting time. Unit: seconds
+     * @param RollUpgradeWaitingTime In-place rolling upgrade waiting time. Unit: seconds
      */
     public void setRollUpgradeWaitingTime(Long RollUpgradeWaitingTime) {
         this.RollUpgradeWaitingTime = RollUpgradeWaitingTime;

@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class ProxyGroupInfo extends AbstractModel {
 
     /**
-    * Database proxy group.
+    * Database Proxy Group
     */
     @SerializedName("ProxyGroup")
     @Expose
     private ProxyGroup ProxyGroup;
 
     /**
-    * Database proxy group read-write separation information.
+    * Read-write separation info of the Database Proxy Group
     */
     @SerializedName("ProxyGroupRwInfo")
     @Expose
@@ -45,7 +45,7 @@ public class ProxyGroupInfo extends AbstractModel {
     private ProxyNodeInfo [] ProxyNodes;
 
     /**
-    * Database proxy connection pool information.
+    * Database proxy connection pool information
     */
     @SerializedName("ConnectionPool")
     @Expose
@@ -59,39 +59,39 @@ public class ProxyGroupInfo extends AbstractModel {
     private NetAddr [] NetAddrInfos;
 
     /**
-    * Database proxy task set.
+    * Task set of the database proxy
     */
     @SerializedName("Tasks")
     @Expose
     private ObjectTask [] Tasks;
 
     /**
-     * Get Database proxy group. 
-     * @return ProxyGroup Database proxy group.
+     * Get Database Proxy Group 
+     * @return ProxyGroup Database Proxy Group
      */
     public ProxyGroup getProxyGroup() {
         return this.ProxyGroup;
     }
 
     /**
-     * Set Database proxy group.
-     * @param ProxyGroup Database proxy group.
+     * Set Database Proxy Group
+     * @param ProxyGroup Database Proxy Group
      */
     public void setProxyGroup(ProxyGroup ProxyGroup) {
         this.ProxyGroup = ProxyGroup;
     }
 
     /**
-     * Get Database proxy group read-write separation information. 
-     * @return ProxyGroupRwInfo Database proxy group read-write separation information.
+     * Get Read-write separation info of the Database Proxy Group 
+     * @return ProxyGroupRwInfo Read-write separation info of the Database Proxy Group
      */
     public ProxyGroupRwInfo getProxyGroupRwInfo() {
         return this.ProxyGroupRwInfo;
     }
 
     /**
-     * Set Database proxy group read-write separation information.
-     * @param ProxyGroupRwInfo Database proxy group read-write separation information.
+     * Set Read-write separation info of the Database Proxy Group
+     * @param ProxyGroupRwInfo Read-write separation info of the Database Proxy Group
      */
     public void setProxyGroupRwInfo(ProxyGroupRwInfo ProxyGroupRwInfo) {
         this.ProxyGroupRwInfo = ProxyGroupRwInfo;
@@ -114,16 +114,16 @@ public class ProxyGroupInfo extends AbstractModel {
     }
 
     /**
-     * Get Database proxy connection pool information. 
-     * @return ConnectionPool Database proxy connection pool information.
+     * Get Database proxy connection pool information 
+     * @return ConnectionPool Database proxy connection pool information
      */
     public ProxyConnectionPoolInfo getConnectionPool() {
         return this.ConnectionPool;
     }
 
     /**
-     * Set Database proxy connection pool information.
-     * @param ConnectionPool Database proxy connection pool information.
+     * Set Database proxy connection pool information
+     * @param ConnectionPool Database proxy connection pool information
      */
     public void setConnectionPool(ProxyConnectionPoolInfo ConnectionPool) {
         this.ConnectionPool = ConnectionPool;
@@ -146,16 +146,16 @@ public class ProxyGroupInfo extends AbstractModel {
     }
 
     /**
-     * Get Database proxy task set. 
-     * @return Tasks Database proxy task set.
+     * Get Task set of the database proxy 
+     * @return Tasks Task set of the database proxy
      */
     public ObjectTask [] getTasks() {
         return this.Tasks;
     }
 
     /**
-     * Set Database proxy task set.
-     * @param Tasks Database proxy task set.
+     * Set Task set of the database proxy
+     * @param Tasks Task set of the database proxy
      */
     public void setTasks(ObjectTask [] Tasks) {
         this.Tasks = Tasks;

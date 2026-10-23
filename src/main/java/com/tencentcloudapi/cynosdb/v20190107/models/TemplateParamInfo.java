@@ -38,35 +38,35 @@ public class TemplateParamInfo extends AbstractModel {
     private String Default;
 
     /**
-    * The collection of optional value types when the parameter type is `enum`.
+    * Value type collection that is optional when the parameter type is enum
     */
     @SerializedName("EnumValue")
     @Expose
     private String [] EnumValue;
 
     /**
-    * The maximum value when the parameter type is float/integer.
+    * Maximum value when the parameter type is float/integer.
     */
     @SerializedName("Max")
     @Expose
     private String Max;
 
     /**
-    * Minimum value when the parameter type is float/integer.
+    * Minimum value when the parameter type is float/integer
     */
     @SerializedName("Min")
     @Expose
     private String Min;
 
     /**
-    * Parameter name
+    * Parameter name.
     */
     @SerializedName("ParamName")
     @Expose
     private String ParamName;
 
     /**
-    * Whether to restart the instance for the parameter to take effect
+    * Whether restart is required
     */
     @SerializedName("NeedReboot")
     @Expose
@@ -80,7 +80,7 @@ public class TemplateParamInfo extends AbstractModel {
     private String Description;
 
     /**
-    * Parameter type. Valid value: `integer`, `float`, `string`, `enum`.
+    * Parameter type. Valid values: integer, float, string, enum.
     */
     @SerializedName("ParamType")
     @Expose
@@ -119,80 +119,80 @@ public class TemplateParamInfo extends AbstractModel {
     }
 
     /**
-     * Get The collection of optional value types when the parameter type is `enum`. 
-     * @return EnumValue The collection of optional value types when the parameter type is `enum`.
+     * Get Value type collection that is optional when the parameter type is enum 
+     * @return EnumValue Value type collection that is optional when the parameter type is enum
      */
     public String [] getEnumValue() {
         return this.EnumValue;
     }
 
     /**
-     * Set The collection of optional value types when the parameter type is `enum`.
-     * @param EnumValue The collection of optional value types when the parameter type is `enum`.
+     * Set Value type collection that is optional when the parameter type is enum
+     * @param EnumValue Value type collection that is optional when the parameter type is enum
      */
     public void setEnumValue(String [] EnumValue) {
         this.EnumValue = EnumValue;
     }
 
     /**
-     * Get The maximum value when the parameter type is float/integer. 
-     * @return Max The maximum value when the parameter type is float/integer.
+     * Get Maximum value when the parameter type is float/integer. 
+     * @return Max Maximum value when the parameter type is float/integer.
      */
     public String getMax() {
         return this.Max;
     }
 
     /**
-     * Set The maximum value when the parameter type is float/integer.
-     * @param Max The maximum value when the parameter type is float/integer.
+     * Set Maximum value when the parameter type is float/integer.
+     * @param Max Maximum value when the parameter type is float/integer.
      */
     public void setMax(String Max) {
         this.Max = Max;
     }
 
     /**
-     * Get Minimum value when the parameter type is float/integer. 
-     * @return Min Minimum value when the parameter type is float/integer.
+     * Get Minimum value when the parameter type is float/integer 
+     * @return Min Minimum value when the parameter type is float/integer
      */
     public String getMin() {
         return this.Min;
     }
 
     /**
-     * Set Minimum value when the parameter type is float/integer.
-     * @param Min Minimum value when the parameter type is float/integer.
+     * Set Minimum value when the parameter type is float/integer
+     * @param Min Minimum value when the parameter type is float/integer
      */
     public void setMin(String Min) {
         this.Min = Min;
     }
 
     /**
-     * Get Parameter name 
-     * @return ParamName Parameter name
+     * Get Parameter name. 
+     * @return ParamName Parameter name.
      */
     public String getParamName() {
         return this.ParamName;
     }
 
     /**
-     * Set Parameter name
-     * @param ParamName Parameter name
+     * Set Parameter name.
+     * @param ParamName Parameter name.
      */
     public void setParamName(String ParamName) {
         this.ParamName = ParamName;
     }
 
     /**
-     * Get Whether to restart the instance for the parameter to take effect 
-     * @return NeedReboot Whether to restart the instance for the parameter to take effect
+     * Get Whether restart is required 
+     * @return NeedReboot Whether restart is required
      */
     public Long getNeedReboot() {
         return this.NeedReboot;
     }
 
     /**
-     * Set Whether to restart the instance for the parameter to take effect
-     * @param NeedReboot Whether to restart the instance for the parameter to take effect
+     * Set Whether restart is required
+     * @param NeedReboot Whether restart is required
      */
     public void setNeedReboot(Long NeedReboot) {
         this.NeedReboot = NeedReboot;
@@ -215,16 +215,16 @@ public class TemplateParamInfo extends AbstractModel {
     }
 
     /**
-     * Get Parameter type. Valid value: `integer`, `float`, `string`, `enum`. 
-     * @return ParamType Parameter type. Valid value: `integer`, `float`, `string`, `enum`.
+     * Get Parameter type. Valid values: integer, float, string, enum. 
+     * @return ParamType Parameter type. Valid values: integer, float, string, enum.
      */
     public String getParamType() {
         return this.ParamType;
     }
 
     /**
-     * Set Parameter type. Valid value: `integer`, `float`, `string`, `enum`.
-     * @param ParamType Parameter type. Valid value: `integer`, `float`, `string`, `enum`.
+     * Set Parameter type. Valid values: integer, float, string, enum.
+     * @param ParamType Parameter type. Valid values: integer, float, string, enum.
      */
     public void setParamType(String ParamType) {
         this.ParamType = ParamType;

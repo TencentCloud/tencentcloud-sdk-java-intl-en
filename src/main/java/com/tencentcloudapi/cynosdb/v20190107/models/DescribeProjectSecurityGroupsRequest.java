@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class DescribeProjectSecurityGroupsRequest extends AbstractModel {
 
     /**
-    * Project ID
+    * Project ID.
     */
     @SerializedName("ProjectId")
     @Expose
     private Long ProjectId;
 
     /**
-    * Maximum entries returned per page
+    * Limit amount
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * Offset
+    * Offset.
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * Search by keyword
+    * Search Keywords
     */
     @SerializedName("SearchKey")
     @Expose
     private String SearchKey;
 
     /**
-     * Get Project ID 
-     * @return ProjectId Project ID
+     * Get Project ID. 
+     * @return ProjectId Project ID.
      */
     public Long getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set Project ID
-     * @param ProjectId Project ID
+     * Set Project ID.
+     * @param ProjectId Project ID.
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
     }
 
     /**
-     * Get Maximum entries returned per page 
-     * @return Limit Maximum entries returned per page
+     * Get Limit amount 
+     * @return Limit Limit amount
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Maximum entries returned per page
-     * @param Limit Maximum entries returned per page
+     * Set Limit amount
+     * @param Limit Limit amount
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get Offset 
-     * @return Offset Offset
+     * Get Offset. 
+     * @return Offset Offset.
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Offset
-     * @param Offset Offset
+     * Set Offset.
+     * @param Offset Offset.
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get Search by keyword 
-     * @return SearchKey Search by keyword
+     * Get Search Keywords 
+     * @return SearchKey Search Keywords
      */
     public String getSearchKey() {
         return this.SearchKey;
     }
 
     /**
-     * Set Search by keyword
-     * @param SearchKey Search by keyword
+     * Set Search Keywords
+     * @param SearchKey Search Keywords
      */
     public void setSearchKey(String SearchKey) {
         this.SearchKey = SearchKey;

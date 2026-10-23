@@ -24,74 +24,74 @@ import java.util.HashMap;
 public class ResourcePackage extends AbstractModel {
 
     /**
-    * The unique ID of the resource package.
+    * Unique ID of the resource package
     */
     @SerializedName("PackageId")
     @Expose
     private String PackageId;
 
     /**
-    * Resource package type: CCU: compute resource package.
-DISK: storage resource package.
+    * Resource package type. CCU: compute resource package.
+DISK: storage resource package
     */
     @SerializedName("PackageType")
     @Expose
     private String PackageType;
 
     /**
-    * Deduction priority of the current resource package bound to the current instance.
+    * Deduction priority of the current resource pack bound to the current instance
     */
     @SerializedName("DeductionPriority")
     @Expose
     private Long DeductionPriority;
 
     /**
-     * Get The unique ID of the resource package. 
-     * @return PackageId The unique ID of the resource package.
+     * Get Unique ID of the resource package 
+     * @return PackageId Unique ID of the resource package
      */
     public String getPackageId() {
         return this.PackageId;
     }
 
     /**
-     * Set The unique ID of the resource package.
-     * @param PackageId The unique ID of the resource package.
+     * Set Unique ID of the resource package
+     * @param PackageId Unique ID of the resource package
      */
     public void setPackageId(String PackageId) {
         this.PackageId = PackageId;
     }
 
     /**
-     * Get Resource package type: CCU: compute resource package.
-DISK: storage resource package. 
-     * @return PackageType Resource package type: CCU: compute resource package.
-DISK: storage resource package.
+     * Get Resource package type. CCU: compute resource package.
+DISK: storage resource package 
+     * @return PackageType Resource package type. CCU: compute resource package.
+DISK: storage resource package
      */
     public String getPackageType() {
         return this.PackageType;
     }
 
     /**
-     * Set Resource package type: CCU: compute resource package.
-DISK: storage resource package.
-     * @param PackageType Resource package type: CCU: compute resource package.
-DISK: storage resource package.
+     * Set Resource package type. CCU: compute resource package.
+DISK: storage resource package
+     * @param PackageType Resource package type. CCU: compute resource package.
+DISK: storage resource package
      */
     public void setPackageType(String PackageType) {
         this.PackageType = PackageType;
     }
 
     /**
-     * Get Deduction priority of the current resource package bound to the current instance. 
-     * @return DeductionPriority Deduction priority of the current resource package bound to the current instance.
+     * Get Deduction priority of the current resource pack bound to the current instance 
+     * @return DeductionPriority Deduction priority of the current resource pack bound to the current instance
      */
     public Long getDeductionPriority() {
         return this.DeductionPriority;
     }
 
     /**
-     * Set Deduction priority of the current resource package bound to the current instance.
-     * @param DeductionPriority Deduction priority of the current resource package bound to the current instance.
+     * Set Deduction priority of the current resource pack bound to the current instance
+     * @param DeductionPriority Deduction priority of the current resource pack bound to the current instance
      */
     public void setDeductionPriority(Long DeductionPriority) {
         this.DeductionPriority = DeductionPriority;

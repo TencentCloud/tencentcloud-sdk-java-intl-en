@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class DescribeBackupListRequest extends AbstractModel {
 
     /**
-    * Cluster ID.
+    * Cluster ID
     */
     @SerializedName("ClusterId")
     @Expose
     private String ClusterId;
 
     /**
-    * The number of results to be returned. Value range: (0,100].
+    * Number of returned results. Value range: (0, 100].
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * Record offset. Value range: [0,INF).
+    * Record offset. Value range: [0, INF).
     */
     @SerializedName("Offset")
     @Expose
@@ -53,28 +53,28 @@ public class DescribeBackupListRequest extends AbstractModel {
     private String DbType;
 
     /**
-    * Backup ID.
+    * Backup ID
     */
     @SerializedName("BackupIds")
     @Expose
     private Long [] BackupIds;
 
     /**
-    * Backup type. Valid values: `snapshot` (snapshot backup), `logic` (logic backup).
+    * Backup type. Available values: snapshot (snapshot backup); logic (logical backup).
     */
     @SerializedName("BackupType")
     @Expose
     private String BackupType;
 
     /**
-    * Back mode. Valid values: `auto` (automatic backup), `manual` (manual backup)
+    * Backup method. Available values: auto (automatic backup); manual (manual backup).
     */
     @SerializedName("BackupMethod")
     @Expose
     private String BackupMethod;
 
     /**
-    * Snapshot type. Optional values: full - Full snapshot; increment - Incremental snapshot.
+    * Snapshot type. Available values: full (full snapshot); increment (incremental snapshot)
     */
     @SerializedName("SnapShotType")
     @Expose
@@ -95,90 +95,90 @@ public class DescribeBackupListRequest extends AbstractModel {
     private String EndTime;
 
     /**
-    * Backup file name, fuzzy search.
+    * Backup file name for fuzzy query
     */
     @SerializedName("FileNames")
     @Expose
     private String [] FileNames;
 
     /**
-    * Backup alias, which supports fuzzy query.
+    * Backup notes name. Fuzzy query.
     */
     @SerializedName("BackupNames")
     @Expose
     private String [] BackupNames;
 
     /**
-    * ID list of the snapshot backup.
+    * Snapshot backup Id list
     */
     @SerializedName("SnapshotIdList")
     @Expose
     private Long [] SnapshotIdList;
 
     /**
-    * Backup region.
+    * Backup region
     */
     @SerializedName("BackupRegion")
     @Expose
     private String BackupRegion;
 
     /**
-    * Whether cross-region backup.
+    * Whether to perform cross-region backup
     */
     @SerializedName("IsCrossRegionsBackup")
     @Expose
     private String IsCrossRegionsBackup;
 
     /**
-    * Status you want to query.
+    * Status to query.
     */
     @SerializedName("BackupStatus")
     @Expose
     private String [] BackupStatus;
 
     /**
-     * Get Cluster ID. 
-     * @return ClusterId Cluster ID.
+     * Get Cluster ID 
+     * @return ClusterId Cluster ID
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set Cluster ID.
-     * @param ClusterId Cluster ID.
+     * Set Cluster ID
+     * @param ClusterId Cluster ID
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get The number of results to be returned. Value range: (0,100]. 
-     * @return Limit The number of results to be returned. Value range: (0,100].
+     * Get Number of returned results. Value range: (0, 100]. 
+     * @return Limit Number of returned results. Value range: (0, 100].
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set The number of results to be returned. Value range: (0,100].
-     * @param Limit The number of results to be returned. Value range: (0,100].
+     * Set Number of returned results. Value range: (0, 100].
+     * @param Limit Number of returned results. Value range: (0, 100].
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get Record offset. Value range: [0,INF). 
-     * @return Offset Record offset. Value range: [0,INF).
+     * Get Record offset. Value range: [0, INF). 
+     * @return Offset Record offset. Value range: [0, INF).
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Record offset. Value range: [0,INF).
-     * @param Offset Record offset. Value range: [0,INF).
+     * Set Record offset. Value range: [0, INF).
+     * @param Offset Record offset. Value range: [0, INF).
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
@@ -205,64 +205,64 @@ public class DescribeBackupListRequest extends AbstractModel {
     }
 
     /**
-     * Get Backup ID. 
-     * @return BackupIds Backup ID.
+     * Get Backup ID 
+     * @return BackupIds Backup ID
      */
     public Long [] getBackupIds() {
         return this.BackupIds;
     }
 
     /**
-     * Set Backup ID.
-     * @param BackupIds Backup ID.
+     * Set Backup ID
+     * @param BackupIds Backup ID
      */
     public void setBackupIds(Long [] BackupIds) {
         this.BackupIds = BackupIds;
     }
 
     /**
-     * Get Backup type. Valid values: `snapshot` (snapshot backup), `logic` (logic backup). 
-     * @return BackupType Backup type. Valid values: `snapshot` (snapshot backup), `logic` (logic backup).
+     * Get Backup type. Available values: snapshot (snapshot backup); logic (logical backup). 
+     * @return BackupType Backup type. Available values: snapshot (snapshot backup); logic (logical backup).
      */
     public String getBackupType() {
         return this.BackupType;
     }
 
     /**
-     * Set Backup type. Valid values: `snapshot` (snapshot backup), `logic` (logic backup).
-     * @param BackupType Backup type. Valid values: `snapshot` (snapshot backup), `logic` (logic backup).
+     * Set Backup type. Available values: snapshot (snapshot backup); logic (logical backup).
+     * @param BackupType Backup type. Available values: snapshot (snapshot backup); logic (logical backup).
      */
     public void setBackupType(String BackupType) {
         this.BackupType = BackupType;
     }
 
     /**
-     * Get Back mode. Valid values: `auto` (automatic backup), `manual` (manual backup) 
-     * @return BackupMethod Back mode. Valid values: `auto` (automatic backup), `manual` (manual backup)
+     * Get Backup method. Available values: auto (automatic backup); manual (manual backup). 
+     * @return BackupMethod Backup method. Available values: auto (automatic backup); manual (manual backup).
      */
     public String getBackupMethod() {
         return this.BackupMethod;
     }
 
     /**
-     * Set Back mode. Valid values: `auto` (automatic backup), `manual` (manual backup)
-     * @param BackupMethod Back mode. Valid values: `auto` (automatic backup), `manual` (manual backup)
+     * Set Backup method. Available values: auto (automatic backup); manual (manual backup).
+     * @param BackupMethod Backup method. Available values: auto (automatic backup); manual (manual backup).
      */
     public void setBackupMethod(String BackupMethod) {
         this.BackupMethod = BackupMethod;
     }
 
     /**
-     * Get Snapshot type. Optional values: full - Full snapshot; increment - Incremental snapshot. 
-     * @return SnapShotType Snapshot type. Optional values: full - Full snapshot; increment - Incremental snapshot.
+     * Get Snapshot type. Available values: full (full snapshot); increment (incremental snapshot) 
+     * @return SnapShotType Snapshot type. Available values: full (full snapshot); increment (incremental snapshot)
      */
     public String getSnapShotType() {
         return this.SnapShotType;
     }
 
     /**
-     * Set Snapshot type. Optional values: full - Full snapshot; increment - Incremental snapshot.
-     * @param SnapShotType Snapshot type. Optional values: full - Full snapshot; increment - Incremental snapshot.
+     * Set Snapshot type. Available values: full (full snapshot); increment (incremental snapshot)
+     * @param SnapShotType Snapshot type. Available values: full (full snapshot); increment (incremental snapshot)
      */
     public void setSnapShotType(String SnapShotType) {
         this.SnapShotType = SnapShotType;
@@ -301,96 +301,96 @@ public class DescribeBackupListRequest extends AbstractModel {
     }
 
     /**
-     * Get Backup file name, fuzzy search. 
-     * @return FileNames Backup file name, fuzzy search.
+     * Get Backup file name for fuzzy query 
+     * @return FileNames Backup file name for fuzzy query
      */
     public String [] getFileNames() {
         return this.FileNames;
     }
 
     /**
-     * Set Backup file name, fuzzy search.
-     * @param FileNames Backup file name, fuzzy search.
+     * Set Backup file name for fuzzy query
+     * @param FileNames Backup file name for fuzzy query
      */
     public void setFileNames(String [] FileNames) {
         this.FileNames = FileNames;
     }
 
     /**
-     * Get Backup alias, which supports fuzzy query. 
-     * @return BackupNames Backup alias, which supports fuzzy query.
+     * Get Backup notes name. Fuzzy query. 
+     * @return BackupNames Backup notes name. Fuzzy query.
      */
     public String [] getBackupNames() {
         return this.BackupNames;
     }
 
     /**
-     * Set Backup alias, which supports fuzzy query.
-     * @param BackupNames Backup alias, which supports fuzzy query.
+     * Set Backup notes name. Fuzzy query.
+     * @param BackupNames Backup notes name. Fuzzy query.
      */
     public void setBackupNames(String [] BackupNames) {
         this.BackupNames = BackupNames;
     }
 
     /**
-     * Get ID list of the snapshot backup. 
-     * @return SnapshotIdList ID list of the snapshot backup.
+     * Get Snapshot backup Id list 
+     * @return SnapshotIdList Snapshot backup Id list
      */
     public Long [] getSnapshotIdList() {
         return this.SnapshotIdList;
     }
 
     /**
-     * Set ID list of the snapshot backup.
-     * @param SnapshotIdList ID list of the snapshot backup.
+     * Set Snapshot backup Id list
+     * @param SnapshotIdList Snapshot backup Id list
      */
     public void setSnapshotIdList(Long [] SnapshotIdList) {
         this.SnapshotIdList = SnapshotIdList;
     }
 
     /**
-     * Get Backup region. 
-     * @return BackupRegion Backup region.
+     * Get Backup region 
+     * @return BackupRegion Backup region
      */
     public String getBackupRegion() {
         return this.BackupRegion;
     }
 
     /**
-     * Set Backup region.
-     * @param BackupRegion Backup region.
+     * Set Backup region
+     * @param BackupRegion Backup region
      */
     public void setBackupRegion(String BackupRegion) {
         this.BackupRegion = BackupRegion;
     }
 
     /**
-     * Get Whether cross-region backup. 
-     * @return IsCrossRegionsBackup Whether cross-region backup.
+     * Get Whether to perform cross-region backup 
+     * @return IsCrossRegionsBackup Whether to perform cross-region backup
      */
     public String getIsCrossRegionsBackup() {
         return this.IsCrossRegionsBackup;
     }
 
     /**
-     * Set Whether cross-region backup.
-     * @param IsCrossRegionsBackup Whether cross-region backup.
+     * Set Whether to perform cross-region backup
+     * @param IsCrossRegionsBackup Whether to perform cross-region backup
      */
     public void setIsCrossRegionsBackup(String IsCrossRegionsBackup) {
         this.IsCrossRegionsBackup = IsCrossRegionsBackup;
     }
 
     /**
-     * Get Status you want to query. 
-     * @return BackupStatus Status you want to query.
+     * Get Status to query. 
+     * @return BackupStatus Status to query.
      */
     public String [] getBackupStatus() {
         return this.BackupStatus;
     }
 
     /**
-     * Set Status you want to query.
-     * @param BackupStatus Status you want to query.
+     * Set Status to query.
+     * @param BackupStatus Status to query.
      */
     public void setBackupStatus(String [] BackupStatus) {
         this.BackupStatus = BackupStatus;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class RenewClustersResponse extends AbstractModel {
 
     /**
-    * Prepaid total order number.
+    * Prepaid Total Order Number
     */
     @SerializedName("BigDealIds")
     @Expose
@@ -45,14 +45,14 @@ public class RenewClustersResponse extends AbstractModel {
     private String TranId;
 
     /**
-    * Delivery resource id list corresponding to each order number.
+    * Delivery resource id list corresponding to each order number
     */
     @SerializedName("ResourceIds")
     @Expose
     private String [] ResourceIds;
 
     /**
-    * List of Cluster IDs
+    * List of cluster IDs.
     */
     @SerializedName("ClusterIds")
     @Expose
@@ -66,16 +66,16 @@ public class RenewClustersResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Prepaid total order number. 
-     * @return BigDealIds Prepaid total order number.
+     * Get Prepaid Total Order Number 
+     * @return BigDealIds Prepaid Total Order Number
      */
     public String [] getBigDealIds() {
         return this.BigDealIds;
     }
 
     /**
-     * Set Prepaid total order number.
-     * @param BigDealIds Prepaid total order number.
+     * Set Prepaid Total Order Number
+     * @param BigDealIds Prepaid Total Order Number
      */
     public void setBigDealIds(String [] BigDealIds) {
         this.BigDealIds = BigDealIds;
@@ -114,32 +114,32 @@ public class RenewClustersResponse extends AbstractModel {
     }
 
     /**
-     * Get Delivery resource id list corresponding to each order number. 
-     * @return ResourceIds Delivery resource id list corresponding to each order number.
+     * Get Delivery resource id list corresponding to each order number 
+     * @return ResourceIds Delivery resource id list corresponding to each order number
      */
     public String [] getResourceIds() {
         return this.ResourceIds;
     }
 
     /**
-     * Set Delivery resource id list corresponding to each order number.
-     * @param ResourceIds Delivery resource id list corresponding to each order number.
+     * Set Delivery resource id list corresponding to each order number
+     * @param ResourceIds Delivery resource id list corresponding to each order number
      */
     public void setResourceIds(String [] ResourceIds) {
         this.ResourceIds = ResourceIds;
     }
 
     /**
-     * Get List of Cluster IDs 
-     * @return ClusterIds List of Cluster IDs
+     * Get List of cluster IDs. 
+     * @return ClusterIds List of cluster IDs.
      */
     public String [] getClusterIds() {
         return this.ClusterIds;
     }
 
     /**
-     * Set List of Cluster IDs
-     * @param ClusterIds List of Cluster IDs
+     * Set List of cluster IDs.
+     * @param ClusterIds List of cluster IDs.
      */
     public void setClusterIds(String [] ClusterIds) {
         this.ClusterIds = ClusterIds;

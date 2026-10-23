@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ProxyConfigInfo extends AbstractModel {
 
     /**
-    * Number of database proxy group nodes. this parameter is no longer recommended. recommend using ProxyZones.
+    * Number of database proxy group nodes. This parameter is no longer recommended. Use ProxyZones instead.
     */
     @SerializedName("ProxyCount")
     @Expose
@@ -38,7 +38,7 @@ public class ProxyConfigInfo extends AbstractModel {
     private Long Cpu;
 
     /**
-    * Specifies the memory.
+    * memory
     */
     @SerializedName("Mem")
     @Expose
@@ -52,23 +52,23 @@ public class ProxyConfigInfo extends AbstractModel {
     private String Description;
 
     /**
-    * Database node information (this parameter is used in combination with ProxyCount, either one must be manually input).
+    * Database node information (either this parameter or ProxyCount is required)
     */
     @SerializedName("ProxyZones")
     @Expose
     private ProxyZone [] ProxyZones;
 
     /**
-     * Get Number of database proxy group nodes. this parameter is no longer recommended. recommend using ProxyZones. 
-     * @return ProxyCount Number of database proxy group nodes. this parameter is no longer recommended. recommend using ProxyZones.
+     * Get Number of database proxy group nodes. This parameter is no longer recommended. Use ProxyZones instead. 
+     * @return ProxyCount Number of database proxy group nodes. This parameter is no longer recommended. Use ProxyZones instead.
      */
     public Long getProxyCount() {
         return this.ProxyCount;
     }
 
     /**
-     * Set Number of database proxy group nodes. this parameter is no longer recommended. recommend using ProxyZones.
-     * @param ProxyCount Number of database proxy group nodes. this parameter is no longer recommended. recommend using ProxyZones.
+     * Set Number of database proxy group nodes. This parameter is no longer recommended. Use ProxyZones instead.
+     * @param ProxyCount Number of database proxy group nodes. This parameter is no longer recommended. Use ProxyZones instead.
      */
     public void setProxyCount(Long ProxyCount) {
         this.ProxyCount = ProxyCount;
@@ -91,16 +91,16 @@ public class ProxyConfigInfo extends AbstractModel {
     }
 
     /**
-     * Get Specifies the memory. 
-     * @return Mem Specifies the memory.
+     * Get memory 
+     * @return Mem memory
      */
     public Long getMem() {
         return this.Mem;
     }
 
     /**
-     * Set Specifies the memory.
-     * @param Mem Specifies the memory.
+     * Set memory
+     * @param Mem memory
      */
     public void setMem(Long Mem) {
         this.Mem = Mem;
@@ -123,16 +123,16 @@ public class ProxyConfigInfo extends AbstractModel {
     }
 
     /**
-     * Get Database node information (this parameter is used in combination with ProxyCount, either one must be manually input). 
-     * @return ProxyZones Database node information (this parameter is used in combination with ProxyCount, either one must be manually input).
+     * Get Database node information (either this parameter or ProxyCount is required) 
+     * @return ProxyZones Database node information (either this parameter or ProxyCount is required)
      */
     public ProxyZone [] getProxyZones() {
         return this.ProxyZones;
     }
 
     /**
-     * Set Database node information (this parameter is used in combination with ProxyCount, either one must be manually input).
-     * @param ProxyZones Database node information (this parameter is used in combination with ProxyCount, either one must be manually input).
+     * Set Database node information (either this parameter or ProxyCount is required)
+     * @param ProxyZones Database node information (either this parameter or ProxyCount is required)
      */
     public void setProxyZones(ProxyZone [] ProxyZones) {
         this.ProxyZones = ProxyZones;

@@ -38,7 +38,7 @@ public class BackupVolumeInfo extends AbstractModel {
     private String BackupType;
 
     /**
-    * Backup method
+    * Backup method.
     */
     @SerializedName("BackupMethod")
     @Expose
@@ -77,16 +77,16 @@ public class BackupVolumeInfo extends AbstractModel {
     }
 
     /**
-     * Get Backup method 
-     * @return BackupMethod Backup method
+     * Get Backup method. 
+     * @return BackupMethod Backup method.
      */
     public String getBackupMethod() {
         return this.BackupMethod;
     }
 
     /**
-     * Set Backup method
-     * @param BackupMethod Backup method
+     * Set Backup method.
+     * @param BackupMethod Backup method.
      */
     public void setBackupMethod(String BackupMethod) {
         this.BackupMethod = BackupMethod;

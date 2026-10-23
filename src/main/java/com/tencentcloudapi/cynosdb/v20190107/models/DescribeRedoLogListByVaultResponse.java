@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeRedoLogListByVaultResponse extends AbstractModel {
 
     /**
-    * Total eligible redo log files
+    * Total eligible RedoLog files
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * Redo log file list
+    * RedoLog file list
     */
     @SerializedName("RedoLogList")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeRedoLogListByVaultResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Total eligible redo log files 
-     * @return TotalCount Total eligible redo log files
+     * Get Total eligible RedoLog files 
+     * @return TotalCount Total eligible RedoLog files
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Total eligible redo log files
-     * @param TotalCount Total eligible redo log files
+     * Set Total eligible RedoLog files
+     * @param TotalCount Total eligible RedoLog files
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get Redo log file list 
-     * @return RedoLogList Redo log file list
+     * Get RedoLog file list 
+     * @return RedoLogList RedoLog file list
      */
     public DescribeRedoLogListByVaultItem [] getRedoLogList() {
         return this.RedoLogList;
     }
 
     /**
-     * Set Redo log file list
-     * @param RedoLogList Redo log file list
+     * Set RedoLog file list
+     * @param RedoLogList RedoLog file list
      */
     public void setRedoLogList(DescribeRedoLogListByVaultItem [] RedoLogList) {
         this.RedoLogList = RedoLogList;

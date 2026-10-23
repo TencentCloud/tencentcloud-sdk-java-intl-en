@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DescribeAuditRuleWithInstanceIdsRequest extends AbstractModel {
 
     /**
-    * Instance ID. Currently, only one single instance can be queried.
+    * Instance ID. Currently only support querying a single instance.
     */
     @SerializedName("InstanceIds")
     @Expose
     private String [] InstanceIds;
 
     /**
-     * Get Instance ID. Currently, only one single instance can be queried. 
-     * @return InstanceIds Instance ID. Currently, only one single instance can be queried.
+     * Get Instance ID. Currently only support querying a single instance. 
+     * @return InstanceIds Instance ID. Currently only support querying a single instance.
      */
     public String [] getInstanceIds() {
         return this.InstanceIds;
     }
 
     /**
-     * Set Instance ID. Currently, only one single instance can be queried.
-     * @param InstanceIds Instance ID. Currently, only one single instance can be queried.
+     * Set Instance ID. Currently only support querying a single instance.
+     * @param InstanceIds Instance ID. Currently only support querying a single instance.
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;

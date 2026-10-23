@@ -31,14 +31,14 @@ public class Account extends AbstractModel {
     private String AccountName;
 
     /**
-    * <p>host</p>
+    * <p>Host</p>
     */
     @SerializedName("Host")
     @Expose
     private String Host;
 
     /**
-    * <p>Database account description.</p>
+    * <p>Database account description</p>
     */
     @SerializedName("Description")
     @Expose
@@ -89,32 +89,32 @@ public class Account extends AbstractModel {
     }
 
     /**
-     * Get <p>host</p> 
-     * @return Host <p>host</p>
+     * Get <p>Host</p> 
+     * @return Host <p>Host</p>
      */
     public String getHost() {
         return this.Host;
     }
 
     /**
-     * Set <p>host</p>
-     * @param Host <p>host</p>
+     * Set <p>Host</p>
+     * @param Host <p>Host</p>
      */
     public void setHost(String Host) {
         this.Host = Host;
     }
 
     /**
-     * Get <p>Database account description.</p> 
-     * @return Description <p>Database account description.</p>
+     * Get <p>Database account description</p> 
+     * @return Description <p>Database account description</p>
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set <p>Database account description.</p>
-     * @param Description <p>Database account description.</p>
+     * Set <p>Database account description</p>
+     * @param Description <p>Database account description</p>
      */
     public void setDescription(String Description) {
         this.Description = Description;

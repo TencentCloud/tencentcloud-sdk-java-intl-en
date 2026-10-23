@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ProxyGroup extends AbstractModel {
 
     /**
-    * <p>Database Proxy Group ID.</p>
+    * <p>Database Proxy Group ID</p>
     */
     @SerializedName("ProxyGroupId")
     @Expose
@@ -80,7 +80,7 @@ public class ProxyGroup extends AbstractModel {
     private Long AppId;
 
     /**
-    * <p>Activate database proxy for RWNode</p>
+    * <p>Activate database proxy on the read-write node</p>
     */
     @SerializedName("OpenRw")
     @Expose
@@ -101,16 +101,16 @@ public class ProxyGroup extends AbstractModel {
     private String UpdateTime;
 
     /**
-     * Get <p>Database Proxy Group ID.</p> 
-     * @return ProxyGroupId <p>Database Proxy Group ID.</p>
+     * Get <p>Database Proxy Group ID</p> 
+     * @return ProxyGroupId <p>Database Proxy Group ID</p>
      */
     public String getProxyGroupId() {
         return this.ProxyGroupId;
     }
 
     /**
-     * Set <p>Database Proxy Group ID.</p>
-     * @param ProxyGroupId <p>Database Proxy Group ID.</p>
+     * Set <p>Database Proxy Group ID</p>
+     * @param ProxyGroupId <p>Database Proxy Group ID</p>
      */
     public void setProxyGroupId(String ProxyGroupId) {
         this.ProxyGroupId = ProxyGroupId;
@@ -229,16 +229,16 @@ public class ProxyGroup extends AbstractModel {
     }
 
     /**
-     * Get <p>Activate database proxy for RWNode</p> 
-     * @return OpenRw <p>Activate database proxy for RWNode</p>
+     * Get <p>Activate database proxy on the read-write node</p> 
+     * @return OpenRw <p>Activate database proxy on the read-write node</p>
      */
     public String getOpenRw() {
         return this.OpenRw;
     }
 
     /**
-     * Set <p>Activate database proxy for RWNode</p>
-     * @param OpenRw <p>Activate database proxy for RWNode</p>
+     * Set <p>Activate database proxy on the read-write node</p>
+     * @param OpenRw <p>Activate database proxy on the read-write node</p>
      */
     public void setOpenRw(String OpenRw) {
         this.OpenRw = OpenRw;

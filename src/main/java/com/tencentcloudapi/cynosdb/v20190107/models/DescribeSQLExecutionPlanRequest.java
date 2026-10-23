@@ -45,7 +45,7 @@ public class DescribeSQLExecutionPlanRequest extends AbstractModel {
     private String TemplateID;
 
     /**
-    * <p>Plan details serial number</p>
+    * <p>Plan detail serial number.</p>
     */
     @SerializedName("PlanDetailId")
     @Expose
@@ -100,16 +100,16 @@ public class DescribeSQLExecutionPlanRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>Plan details serial number</p> 
-     * @return PlanDetailId <p>Plan details serial number</p>
+     * Get <p>Plan detail serial number.</p> 
+     * @return PlanDetailId <p>Plan detail serial number.</p>
      */
     public Long getPlanDetailId() {
         return this.PlanDetailId;
     }
 
     /**
-     * Set <p>Plan details serial number</p>
-     * @param PlanDetailId <p>Plan details serial number</p>
+     * Set <p>Plan detail serial number.</p>
+     * @param PlanDetailId <p>Plan detail serial number.</p>
      */
     public void setPlanDetailId(Long PlanDetailId) {
         this.PlanDetailId = PlanDetailId;

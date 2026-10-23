@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ServerlessSpec extends AbstractModel {
 
     /**
-    * <p>cpu minimum value</p>
+    * <p>Minimum cpu value</p>
     */
     @SerializedName("MinCpu")
     @Expose
@@ -38,14 +38,14 @@ public class ServerlessSpec extends AbstractModel {
     private Float MaxCpu;
 
     /**
-    * <p>Maximum storage space</p>
+    * <p>maximum storage space</p>
     */
     @SerializedName("MaxStorageSize")
     @Expose
     private Long MaxStorageSize;
 
     /**
-    * <p>Is the default specification</p>
+    * <p>Whether it is the default specification.</p>
     */
     @SerializedName("IsDefault")
     @Expose
@@ -73,16 +73,16 @@ public class ServerlessSpec extends AbstractModel {
     private ServerlessZoneStockInfo [] ZoneStockInfos;
 
     /**
-     * Get <p>cpu minimum value</p> 
-     * @return MinCpu <p>cpu minimum value</p>
+     * Get <p>Minimum cpu value</p> 
+     * @return MinCpu <p>Minimum cpu value</p>
      */
     public Float getMinCpu() {
         return this.MinCpu;
     }
 
     /**
-     * Set <p>cpu minimum value</p>
-     * @param MinCpu <p>cpu minimum value</p>
+     * Set <p>Minimum cpu value</p>
+     * @param MinCpu <p>Minimum cpu value</p>
      */
     public void setMinCpu(Float MinCpu) {
         this.MinCpu = MinCpu;
@@ -105,32 +105,32 @@ public class ServerlessSpec extends AbstractModel {
     }
 
     /**
-     * Get <p>Maximum storage space</p> 
-     * @return MaxStorageSize <p>Maximum storage space</p>
+     * Get <p>maximum storage space</p> 
+     * @return MaxStorageSize <p>maximum storage space</p>
      */
     public Long getMaxStorageSize() {
         return this.MaxStorageSize;
     }
 
     /**
-     * Set <p>Maximum storage space</p>
-     * @param MaxStorageSize <p>Maximum storage space</p>
+     * Set <p>maximum storage space</p>
+     * @param MaxStorageSize <p>maximum storage space</p>
      */
     public void setMaxStorageSize(Long MaxStorageSize) {
         this.MaxStorageSize = MaxStorageSize;
     }
 
     /**
-     * Get <p>Is the default specification</p> 
-     * @return IsDefault <p>Is the default specification</p>
+     * Get <p>Whether it is the default specification.</p> 
+     * @return IsDefault <p>Whether it is the default specification.</p>
      */
     public Long getIsDefault() {
         return this.IsDefault;
     }
 
     /**
-     * Set <p>Is the default specification</p>
-     * @param IsDefault <p>Is the default specification</p>
+     * Set <p>Whether it is the default specification.</p>
+     * @param IsDefault <p>Whether it is the default specification.</p>
      */
     public void setIsDefault(Long IsDefault) {
         this.IsDefault = IsDefault;

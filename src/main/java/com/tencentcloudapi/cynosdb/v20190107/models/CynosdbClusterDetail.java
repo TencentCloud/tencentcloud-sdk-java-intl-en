@@ -38,7 +38,7 @@ public class CynosdbClusterDetail extends AbstractModel {
     private String ClusterName;
 
     /**
-    * <p>Region</p>
+    * <p>Region.</p>
     */
     @SerializedName("Region")
     @Expose
@@ -59,21 +59,21 @@ public class CynosdbClusterDetail extends AbstractModel {
     private String PhysicalZone;
 
     /**
-    * <p>Status. Supported values are as follows:</p><ul><li>creating: Creating</li><li>running: Running</li><li>isolating: Isolation</li><li>isolated: Isolated</li><li>activating: Restore from recycle bin</li><li>offlining: Offline</li><li>offlined: Offline</li><li>deleting: Deleting</li><li>deleted: Deleted</li></ul>
+    * <p>Status. Supported values are as follows:</p><ul><li>creating: Creating</li><li>running: Running</li><li>isolating: Isolating</li><li>isolated: Isolated</li><li>activating: Restoring from recycle bin</li><li>offlining: Offlining</li><li>offlined: Offline</li><li>deleting: Deleting</li><li>deleted: Deleted</li></ul>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * <p>Status description</p>
+    * <p>Status description.</p>
     */
     @SerializedName("StatusDesc")
     @Expose
     private String StatusDesc;
 
     /**
-    * <p>When the Db type is SERVERLESS, the SERVERLESS cluster status. Available values:<br>resume<br>resuming<br>pause<br>pausing</p>
+    * <p>When the Db type is SERVERLESS, the status of the SERVERLESS cluster. Available values:<br>resume<br>resuming<br>pause<br>pausing</p>
     */
     @SerializedName("ServerlessStatus")
     @Expose
@@ -87,7 +87,7 @@ public class CynosdbClusterDetail extends AbstractModel {
     private String StorageId;
 
     /**
-    * <p>Storage size in GB</p>
+    * <p>Storage size, in GB.</p>
     */
     @SerializedName("Storage")
     @Expose
@@ -101,21 +101,21 @@ public class CynosdbClusterDetail extends AbstractModel {
     private Long MaxStorageSize;
 
     /**
-    * <p>Minimum storage specification, in GB</p>
+    * <p>Minimum storage specification, in GB.</p>
     */
     @SerializedName("MinStorageSize")
     @Expose
     private Long MinStorageSize;
 
     /**
-    * <p>Storage billing type. Valid values: 1 (yearly/monthly subscription); 0 (pay-as-you-go).</p>
+    * <p>Storage billing type. Valid values: 1 (yearly/monthly subscription) and 0 (pay-as-you-go).</p>
     */
     @SerializedName("StoragePayMode")
     @Expose
     private Long StoragePayMode;
 
     /**
-    * <p>VPC name</p>
+    * <p>VPC name.</p>
     */
     @SerializedName("VpcName")
     @Expose
@@ -143,7 +143,7 @@ public class CynosdbClusterDetail extends AbstractModel {
     private String SubnetId;
 
     /**
-    * <p>Character set.</p>
+    * <p>Character set</p>
     */
     @SerializedName("Charset")
     @Expose
@@ -171,14 +171,14 @@ public class CynosdbClusterDetail extends AbstractModel {
     private String DbMode;
 
     /**
-    * <p>Database version</p>
+    * <p>Database version.</p>
     */
     @SerializedName("DbVersion")
     @Expose
     private String DbVersion;
 
     /**
-    * <p>Storage space limit</p>
+    * <p>Maximum storage space</p>
     */
     @SerializedName("StorageLimit")
     @Expose
@@ -199,7 +199,7 @@ public class CynosdbClusterDetail extends AbstractModel {
     private String Vip;
 
     /**
-    * <p>vport port</p>
+    * <p>vport</p>
     */
     @SerializedName("Vport")
     @Expose
@@ -220,7 +220,7 @@ public class CynosdbClusterDetail extends AbstractModel {
     private Ability Ability;
 
     /**
-    * <p>cynos version</p>
+    * <p>cynos version.</p>
     */
     @SerializedName("CynosVersion")
     @Expose
@@ -241,7 +241,7 @@ public class CynosdbClusterDetail extends AbstractModel {
     private String HasSlaveZone;
 
     /**
-    * <p>Freeze or not</p>
+    * <p>Whether to freeze</p>
     */
     @SerializedName("IsFreeze")
     @Expose
@@ -262,7 +262,7 @@ public class CynosdbClusterDetail extends AbstractModel {
     private String MasterZone;
 
     /**
-    * <p>From the AZ list</p>
+    * <p>From the availability zone list</p>
     */
     @SerializedName("SlaveZones")
     @Expose
@@ -283,7 +283,7 @@ public class CynosdbClusterDetail extends AbstractModel {
     private Long PayMode;
 
     /**
-    * <p>Expiry time.</p>
+    * <p>Expiration time.</p>
     */
     @SerializedName("PeriodEndTime")
     @Expose
@@ -297,42 +297,42 @@ public class CynosdbClusterDetail extends AbstractModel {
     private Long ProjectID;
 
     /**
-    * <p>tag Array information for instance binding</p>
+    * <p>tag Array information bound to the instance</p>
     */
     @SerializedName("ResourceTags")
     @Expose
     private Tag [] ResourceTags;
 
     /**
-    * <p>Proxy status</p>
+    * <p>Proxy status.</p>
     */
     @SerializedName("ProxyStatus")
     @Expose
     private String ProxyStatus;
 
     /**
-    * <p>binlog switch, available values: ON, OFF</p>
+    * <p>binlog switch. Available values: ON, OFF</p>
     */
     @SerializedName("LogBin")
     @Expose
     private String LogBin;
 
     /**
-    * <p>Skip transaction or not</p>
+    * <p>Whether to skip transaction</p>
     */
     @SerializedName("IsSkipTrade")
     @Expose
     private String IsSkipTrade;
 
     /**
-    * <p>PITR type, available values: normal, redo_pitr</p>
+    * <p>PITR type. Available values: normal, redo_pitr</p>
     */
     @SerializedName("PitrType")
     @Expose
     private String PitrType;
 
     /**
-    * <p>Whether to toggle on password complexity</p>
+    * <p>Whether to enable password complexity</p>
     */
     @SerializedName("IsOpenPasswordComplexity")
     @Expose
@@ -346,14 +346,14 @@ public class CynosdbClusterDetail extends AbstractModel {
     private String NetworkStatus;
 
     /**
-    * <p>Package info of the bound resource for the cluster</p>
+    * <p>Resource package information bound to the cluster</p>
     */
     @SerializedName("ResourcePackages")
     @Expose
     private ResourcePackage [] ResourcePackages;
 
     /**
-    * <p>Auto-renewal flag. 1 means auto-renewal, 0 means non-renewal upon expiration.</p>
+    * <p>Auto-renewal flag. Valid values: 1 (auto-renewal) and 0 (non-renewal upon expiration).</p>
     */
     @SerializedName("RenewFlag")
     @Expose
@@ -367,42 +367,42 @@ public class CynosdbClusterDetail extends AbstractModel {
     private String NetworkType;
 
     /**
-    * <p>Secondary availability zone property</p>
+    * <p>Secondary AZ property</p>
     */
     @SerializedName("SlaveZoneAttr")
     @Expose
     private SlaveZoneAttrItem [] SlaveZoneAttr;
 
     /**
-    * <p>Version tag</p>
+    * <p>Version tag.</p>
     */
     @SerializedName("CynosVersionTag")
     @Expose
     private String CynosVersionTag;
 
     /**
-    * <p>Unique ID of the global database network</p>
+    * <p>Global database network unique ID</p>
     */
     @SerializedName("GdnId")
     @Expose
     private String GdnId;
 
     /**
-    * <p>Role of the cluster in the global data network.<br>Primary cluster - primary<br>Slave cluster - standby<br>If empty, the field is invalid.</p>
+    * <p>Role of the cluster in the global data network.<br>Primary cluster - primary<br>Slave cluster - standby<br>If empty, this field is invalid</p>
     */
     @SerializedName("GdnRole")
     @Expose
     private String GdnRole;
 
     /**
-    * <p>Second-level storage usage in GB</p>
+    * <p>Level-2 storage usage, in GB.</p>
     */
     @SerializedName("UsedArchiveStorage")
     @Expose
     private Long UsedArchiveStorage;
 
     /**
-    * <p>Archiving status. Enumeration value <li>normal: Normal</li><li>archiving: Archiving</li><li>resuming: Recovering</li><li>archived: Archived</li></p>
+    * <p>Archiving status. Enumeration values: <li>normal: Normal</li><li>archiving: Archiving</li><li>resuming: Recovering</li><li>archived: Archived</li></p>
     */
     @SerializedName("ArchiveStatus")
     @Expose
@@ -416,14 +416,14 @@ public class CynosdbClusterDetail extends AbstractModel {
     private Long ArchiveProgress;
 
     /**
-    * <p>Cluster level. For example P0, P1</p>
+    * <p>Cluster level. For example, P0, P1</p>
     */
     @SerializedName("ClusterLevel")
     @Expose
     private String ClusterLevel;
 
     /**
-    * <p>Whether to enable transparent data encryption</p>
+    * <p>Whether to enable transparent encryption</p>
     */
     @SerializedName("IsOpenTDE")
     @Expose
@@ -483,16 +483,16 @@ public class CynosdbClusterDetail extends AbstractModel {
     }
 
     /**
-     * Get <p>Region</p> 
-     * @return Region <p>Region</p>
+     * Get <p>Region.</p> 
+     * @return Region <p>Region.</p>
      */
     public String getRegion() {
         return this.Region;
     }
 
     /**
-     * Set <p>Region</p>
-     * @param Region <p>Region</p>
+     * Set <p>Region.</p>
+     * @param Region <p>Region.</p>
      */
     public void setRegion(String Region) {
         this.Region = Region;
@@ -531,48 +531,48 @@ public class CynosdbClusterDetail extends AbstractModel {
     }
 
     /**
-     * Get <p>Status. Supported values are as follows:</p><ul><li>creating: Creating</li><li>running: Running</li><li>isolating: Isolation</li><li>isolated: Isolated</li><li>activating: Restore from recycle bin</li><li>offlining: Offline</li><li>offlined: Offline</li><li>deleting: Deleting</li><li>deleted: Deleted</li></ul> 
-     * @return Status <p>Status. Supported values are as follows:</p><ul><li>creating: Creating</li><li>running: Running</li><li>isolating: Isolation</li><li>isolated: Isolated</li><li>activating: Restore from recycle bin</li><li>offlining: Offline</li><li>offlined: Offline</li><li>deleting: Deleting</li><li>deleted: Deleted</li></ul>
+     * Get <p>Status. Supported values are as follows:</p><ul><li>creating: Creating</li><li>running: Running</li><li>isolating: Isolating</li><li>isolated: Isolated</li><li>activating: Restoring from recycle bin</li><li>offlining: Offlining</li><li>offlined: Offline</li><li>deleting: Deleting</li><li>deleted: Deleted</li></ul> 
+     * @return Status <p>Status. Supported values are as follows:</p><ul><li>creating: Creating</li><li>running: Running</li><li>isolating: Isolating</li><li>isolated: Isolated</li><li>activating: Restoring from recycle bin</li><li>offlining: Offlining</li><li>offlined: Offline</li><li>deleting: Deleting</li><li>deleted: Deleted</li></ul>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set <p>Status. Supported values are as follows:</p><ul><li>creating: Creating</li><li>running: Running</li><li>isolating: Isolation</li><li>isolated: Isolated</li><li>activating: Restore from recycle bin</li><li>offlining: Offline</li><li>offlined: Offline</li><li>deleting: Deleting</li><li>deleted: Deleted</li></ul>
-     * @param Status <p>Status. Supported values are as follows:</p><ul><li>creating: Creating</li><li>running: Running</li><li>isolating: Isolation</li><li>isolated: Isolated</li><li>activating: Restore from recycle bin</li><li>offlining: Offline</li><li>offlined: Offline</li><li>deleting: Deleting</li><li>deleted: Deleted</li></ul>
+     * Set <p>Status. Supported values are as follows:</p><ul><li>creating: Creating</li><li>running: Running</li><li>isolating: Isolating</li><li>isolated: Isolated</li><li>activating: Restoring from recycle bin</li><li>offlining: Offlining</li><li>offlined: Offline</li><li>deleting: Deleting</li><li>deleted: Deleted</li></ul>
+     * @param Status <p>Status. Supported values are as follows:</p><ul><li>creating: Creating</li><li>running: Running</li><li>isolating: Isolating</li><li>isolated: Isolated</li><li>activating: Restoring from recycle bin</li><li>offlining: Offlining</li><li>offlined: Offline</li><li>deleting: Deleting</li><li>deleted: Deleted</li></ul>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get <p>Status description</p> 
-     * @return StatusDesc <p>Status description</p>
+     * Get <p>Status description.</p> 
+     * @return StatusDesc <p>Status description.</p>
      */
     public String getStatusDesc() {
         return this.StatusDesc;
     }
 
     /**
-     * Set <p>Status description</p>
-     * @param StatusDesc <p>Status description</p>
+     * Set <p>Status description.</p>
+     * @param StatusDesc <p>Status description.</p>
      */
     public void setStatusDesc(String StatusDesc) {
         this.StatusDesc = StatusDesc;
     }
 
     /**
-     * Get <p>When the Db type is SERVERLESS, the SERVERLESS cluster status. Available values:<br>resume<br>resuming<br>pause<br>pausing</p> 
-     * @return ServerlessStatus <p>When the Db type is SERVERLESS, the SERVERLESS cluster status. Available values:<br>resume<br>resuming<br>pause<br>pausing</p>
+     * Get <p>When the Db type is SERVERLESS, the status of the SERVERLESS cluster. Available values:<br>resume<br>resuming<br>pause<br>pausing</p> 
+     * @return ServerlessStatus <p>When the Db type is SERVERLESS, the status of the SERVERLESS cluster. Available values:<br>resume<br>resuming<br>pause<br>pausing</p>
      */
     public String getServerlessStatus() {
         return this.ServerlessStatus;
     }
 
     /**
-     * Set <p>When the Db type is SERVERLESS, the SERVERLESS cluster status. Available values:<br>resume<br>resuming<br>pause<br>pausing</p>
-     * @param ServerlessStatus <p>When the Db type is SERVERLESS, the SERVERLESS cluster status. Available values:<br>resume<br>resuming<br>pause<br>pausing</p>
+     * Set <p>When the Db type is SERVERLESS, the status of the SERVERLESS cluster. Available values:<br>resume<br>resuming<br>pause<br>pausing</p>
+     * @param ServerlessStatus <p>When the Db type is SERVERLESS, the status of the SERVERLESS cluster. Available values:<br>resume<br>resuming<br>pause<br>pausing</p>
      */
     public void setServerlessStatus(String ServerlessStatus) {
         this.ServerlessStatus = ServerlessStatus;
@@ -595,16 +595,16 @@ public class CynosdbClusterDetail extends AbstractModel {
     }
 
     /**
-     * Get <p>Storage size in GB</p> 
-     * @return Storage <p>Storage size in GB</p>
+     * Get <p>Storage size, in GB.</p> 
+     * @return Storage <p>Storage size, in GB.</p>
      */
     public Long getStorage() {
         return this.Storage;
     }
 
     /**
-     * Set <p>Storage size in GB</p>
-     * @param Storage <p>Storage size in GB</p>
+     * Set <p>Storage size, in GB.</p>
+     * @param Storage <p>Storage size, in GB.</p>
      */
     public void setStorage(Long Storage) {
         this.Storage = Storage;
@@ -627,48 +627,48 @@ public class CynosdbClusterDetail extends AbstractModel {
     }
 
     /**
-     * Get <p>Minimum storage specification, in GB</p> 
-     * @return MinStorageSize <p>Minimum storage specification, in GB</p>
+     * Get <p>Minimum storage specification, in GB.</p> 
+     * @return MinStorageSize <p>Minimum storage specification, in GB.</p>
      */
     public Long getMinStorageSize() {
         return this.MinStorageSize;
     }
 
     /**
-     * Set <p>Minimum storage specification, in GB</p>
-     * @param MinStorageSize <p>Minimum storage specification, in GB</p>
+     * Set <p>Minimum storage specification, in GB.</p>
+     * @param MinStorageSize <p>Minimum storage specification, in GB.</p>
      */
     public void setMinStorageSize(Long MinStorageSize) {
         this.MinStorageSize = MinStorageSize;
     }
 
     /**
-     * Get <p>Storage billing type. Valid values: 1 (yearly/monthly subscription); 0 (pay-as-you-go).</p> 
-     * @return StoragePayMode <p>Storage billing type. Valid values: 1 (yearly/monthly subscription); 0 (pay-as-you-go).</p>
+     * Get <p>Storage billing type. Valid values: 1 (yearly/monthly subscription) and 0 (pay-as-you-go).</p> 
+     * @return StoragePayMode <p>Storage billing type. Valid values: 1 (yearly/monthly subscription) and 0 (pay-as-you-go).</p>
      */
     public Long getStoragePayMode() {
         return this.StoragePayMode;
     }
 
     /**
-     * Set <p>Storage billing type. Valid values: 1 (yearly/monthly subscription); 0 (pay-as-you-go).</p>
-     * @param StoragePayMode <p>Storage billing type. Valid values: 1 (yearly/monthly subscription); 0 (pay-as-you-go).</p>
+     * Set <p>Storage billing type. Valid values: 1 (yearly/monthly subscription) and 0 (pay-as-you-go).</p>
+     * @param StoragePayMode <p>Storage billing type. Valid values: 1 (yearly/monthly subscription) and 0 (pay-as-you-go).</p>
      */
     public void setStoragePayMode(Long StoragePayMode) {
         this.StoragePayMode = StoragePayMode;
     }
 
     /**
-     * Get <p>VPC name</p> 
-     * @return VpcName <p>VPC name</p>
+     * Get <p>VPC name.</p> 
+     * @return VpcName <p>VPC name.</p>
      */
     public String getVpcName() {
         return this.VpcName;
     }
 
     /**
-     * Set <p>VPC name</p>
-     * @param VpcName <p>VPC name</p>
+     * Set <p>VPC name.</p>
+     * @param VpcName <p>VPC name.</p>
      */
     public void setVpcName(String VpcName) {
         this.VpcName = VpcName;
@@ -723,16 +723,16 @@ public class CynosdbClusterDetail extends AbstractModel {
     }
 
     /**
-     * Get <p>Character set.</p> 
-     * @return Charset <p>Character set.</p>
+     * Get <p>Character set</p> 
+     * @return Charset <p>Character set</p>
      */
     public String getCharset() {
         return this.Charset;
     }
 
     /**
-     * Set <p>Character set.</p>
-     * @param Charset <p>Character set.</p>
+     * Set <p>Character set</p>
+     * @param Charset <p>Character set</p>
      */
     public void setCharset(String Charset) {
         this.Charset = Charset;
@@ -787,32 +787,32 @@ public class CynosdbClusterDetail extends AbstractModel {
     }
 
     /**
-     * Get <p>Database version</p> 
-     * @return DbVersion <p>Database version</p>
+     * Get <p>Database version.</p> 
+     * @return DbVersion <p>Database version.</p>
      */
     public String getDbVersion() {
         return this.DbVersion;
     }
 
     /**
-     * Set <p>Database version</p>
-     * @param DbVersion <p>Database version</p>
+     * Set <p>Database version.</p>
+     * @param DbVersion <p>Database version.</p>
      */
     public void setDbVersion(String DbVersion) {
         this.DbVersion = DbVersion;
     }
 
     /**
-     * Get <p>Storage space limit</p> 
-     * @return StorageLimit <p>Storage space limit</p>
+     * Get <p>Maximum storage space</p> 
+     * @return StorageLimit <p>Maximum storage space</p>
      */
     public Long getStorageLimit() {
         return this.StorageLimit;
     }
 
     /**
-     * Set <p>Storage space limit</p>
-     * @param StorageLimit <p>Storage space limit</p>
+     * Set <p>Maximum storage space</p>
+     * @param StorageLimit <p>Maximum storage space</p>
      */
     public void setStorageLimit(Long StorageLimit) {
         this.StorageLimit = StorageLimit;
@@ -851,16 +851,16 @@ public class CynosdbClusterDetail extends AbstractModel {
     }
 
     /**
-     * Get <p>vport port</p> 
-     * @return Vport <p>vport port</p>
+     * Get <p>vport</p> 
+     * @return Vport <p>vport</p>
      */
     public Long getVport() {
         return this.Vport;
     }
 
     /**
-     * Set <p>vport port</p>
-     * @param Vport <p>vport port</p>
+     * Set <p>vport</p>
+     * @param Vport <p>vport</p>
      */
     public void setVport(Long Vport) {
         this.Vport = Vport;
@@ -899,16 +899,16 @@ public class CynosdbClusterDetail extends AbstractModel {
     }
 
     /**
-     * Get <p>cynos version</p> 
-     * @return CynosVersion <p>cynos version</p>
+     * Get <p>cynos version.</p> 
+     * @return CynosVersion <p>cynos version.</p>
      */
     public String getCynosVersion() {
         return this.CynosVersion;
     }
 
     /**
-     * Set <p>cynos version</p>
-     * @param CynosVersion <p>cynos version</p>
+     * Set <p>cynos version.</p>
+     * @param CynosVersion <p>cynos version.</p>
      */
     public void setCynosVersion(String CynosVersion) {
         this.CynosVersion = CynosVersion;
@@ -947,16 +947,16 @@ public class CynosdbClusterDetail extends AbstractModel {
     }
 
     /**
-     * Get <p>Freeze or not</p> 
-     * @return IsFreeze <p>Freeze or not</p>
+     * Get <p>Whether to freeze</p> 
+     * @return IsFreeze <p>Whether to freeze</p>
      */
     public String getIsFreeze() {
         return this.IsFreeze;
     }
 
     /**
-     * Set <p>Freeze or not</p>
-     * @param IsFreeze <p>Freeze or not</p>
+     * Set <p>Whether to freeze</p>
+     * @param IsFreeze <p>Whether to freeze</p>
      */
     public void setIsFreeze(String IsFreeze) {
         this.IsFreeze = IsFreeze;
@@ -995,16 +995,16 @@ public class CynosdbClusterDetail extends AbstractModel {
     }
 
     /**
-     * Get <p>From the AZ list</p> 
-     * @return SlaveZones <p>From the AZ list</p>
+     * Get <p>From the availability zone list</p> 
+     * @return SlaveZones <p>From the availability zone list</p>
      */
     public String [] getSlaveZones() {
         return this.SlaveZones;
     }
 
     /**
-     * Set <p>From the AZ list</p>
-     * @param SlaveZones <p>From the AZ list</p>
+     * Set <p>From the availability zone list</p>
+     * @param SlaveZones <p>From the availability zone list</p>
      */
     public void setSlaveZones(String [] SlaveZones) {
         this.SlaveZones = SlaveZones;
@@ -1043,16 +1043,16 @@ public class CynosdbClusterDetail extends AbstractModel {
     }
 
     /**
-     * Get <p>Expiry time.</p> 
-     * @return PeriodEndTime <p>Expiry time.</p>
+     * Get <p>Expiration time.</p> 
+     * @return PeriodEndTime <p>Expiration time.</p>
      */
     public String getPeriodEndTime() {
         return this.PeriodEndTime;
     }
 
     /**
-     * Set <p>Expiry time.</p>
-     * @param PeriodEndTime <p>Expiry time.</p>
+     * Set <p>Expiration time.</p>
+     * @param PeriodEndTime <p>Expiration time.</p>
      */
     public void setPeriodEndTime(String PeriodEndTime) {
         this.PeriodEndTime = PeriodEndTime;
@@ -1075,96 +1075,96 @@ public class CynosdbClusterDetail extends AbstractModel {
     }
 
     /**
-     * Get <p>tag Array information for instance binding</p> 
-     * @return ResourceTags <p>tag Array information for instance binding</p>
+     * Get <p>tag Array information bound to the instance</p> 
+     * @return ResourceTags <p>tag Array information bound to the instance</p>
      */
     public Tag [] getResourceTags() {
         return this.ResourceTags;
     }
 
     /**
-     * Set <p>tag Array information for instance binding</p>
-     * @param ResourceTags <p>tag Array information for instance binding</p>
+     * Set <p>tag Array information bound to the instance</p>
+     * @param ResourceTags <p>tag Array information bound to the instance</p>
      */
     public void setResourceTags(Tag [] ResourceTags) {
         this.ResourceTags = ResourceTags;
     }
 
     /**
-     * Get <p>Proxy status</p> 
-     * @return ProxyStatus <p>Proxy status</p>
+     * Get <p>Proxy status.</p> 
+     * @return ProxyStatus <p>Proxy status.</p>
      */
     public String getProxyStatus() {
         return this.ProxyStatus;
     }
 
     /**
-     * Set <p>Proxy status</p>
-     * @param ProxyStatus <p>Proxy status</p>
+     * Set <p>Proxy status.</p>
+     * @param ProxyStatus <p>Proxy status.</p>
      */
     public void setProxyStatus(String ProxyStatus) {
         this.ProxyStatus = ProxyStatus;
     }
 
     /**
-     * Get <p>binlog switch, available values: ON, OFF</p> 
-     * @return LogBin <p>binlog switch, available values: ON, OFF</p>
+     * Get <p>binlog switch. Available values: ON, OFF</p> 
+     * @return LogBin <p>binlog switch. Available values: ON, OFF</p>
      */
     public String getLogBin() {
         return this.LogBin;
     }
 
     /**
-     * Set <p>binlog switch, available values: ON, OFF</p>
-     * @param LogBin <p>binlog switch, available values: ON, OFF</p>
+     * Set <p>binlog switch. Available values: ON, OFF</p>
+     * @param LogBin <p>binlog switch. Available values: ON, OFF</p>
      */
     public void setLogBin(String LogBin) {
         this.LogBin = LogBin;
     }
 
     /**
-     * Get <p>Skip transaction or not</p> 
-     * @return IsSkipTrade <p>Skip transaction or not</p>
+     * Get <p>Whether to skip transaction</p> 
+     * @return IsSkipTrade <p>Whether to skip transaction</p>
      */
     public String getIsSkipTrade() {
         return this.IsSkipTrade;
     }
 
     /**
-     * Set <p>Skip transaction or not</p>
-     * @param IsSkipTrade <p>Skip transaction or not</p>
+     * Set <p>Whether to skip transaction</p>
+     * @param IsSkipTrade <p>Whether to skip transaction</p>
      */
     public void setIsSkipTrade(String IsSkipTrade) {
         this.IsSkipTrade = IsSkipTrade;
     }
 
     /**
-     * Get <p>PITR type, available values: normal, redo_pitr</p> 
-     * @return PitrType <p>PITR type, available values: normal, redo_pitr</p>
+     * Get <p>PITR type. Available values: normal, redo_pitr</p> 
+     * @return PitrType <p>PITR type. Available values: normal, redo_pitr</p>
      */
     public String getPitrType() {
         return this.PitrType;
     }
 
     /**
-     * Set <p>PITR type, available values: normal, redo_pitr</p>
-     * @param PitrType <p>PITR type, available values: normal, redo_pitr</p>
+     * Set <p>PITR type. Available values: normal, redo_pitr</p>
+     * @param PitrType <p>PITR type. Available values: normal, redo_pitr</p>
      */
     public void setPitrType(String PitrType) {
         this.PitrType = PitrType;
     }
 
     /**
-     * Get <p>Whether to toggle on password complexity</p> 
-     * @return IsOpenPasswordComplexity <p>Whether to toggle on password complexity</p>
+     * Get <p>Whether to enable password complexity</p> 
+     * @return IsOpenPasswordComplexity <p>Whether to enable password complexity</p>
      */
     public String getIsOpenPasswordComplexity() {
         return this.IsOpenPasswordComplexity;
     }
 
     /**
-     * Set <p>Whether to toggle on password complexity</p>
-     * @param IsOpenPasswordComplexity <p>Whether to toggle on password complexity</p>
+     * Set <p>Whether to enable password complexity</p>
+     * @param IsOpenPasswordComplexity <p>Whether to enable password complexity</p>
      */
     public void setIsOpenPasswordComplexity(String IsOpenPasswordComplexity) {
         this.IsOpenPasswordComplexity = IsOpenPasswordComplexity;
@@ -1187,32 +1187,32 @@ public class CynosdbClusterDetail extends AbstractModel {
     }
 
     /**
-     * Get <p>Package info of the bound resource for the cluster</p> 
-     * @return ResourcePackages <p>Package info of the bound resource for the cluster</p>
+     * Get <p>Resource package information bound to the cluster</p> 
+     * @return ResourcePackages <p>Resource package information bound to the cluster</p>
      */
     public ResourcePackage [] getResourcePackages() {
         return this.ResourcePackages;
     }
 
     /**
-     * Set <p>Package info of the bound resource for the cluster</p>
-     * @param ResourcePackages <p>Package info of the bound resource for the cluster</p>
+     * Set <p>Resource package information bound to the cluster</p>
+     * @param ResourcePackages <p>Resource package information bound to the cluster</p>
      */
     public void setResourcePackages(ResourcePackage [] ResourcePackages) {
         this.ResourcePackages = ResourcePackages;
     }
 
     /**
-     * Get <p>Auto-renewal flag. 1 means auto-renewal, 0 means non-renewal upon expiration.</p> 
-     * @return RenewFlag <p>Auto-renewal flag. 1 means auto-renewal, 0 means non-renewal upon expiration.</p>
+     * Get <p>Auto-renewal flag. Valid values: 1 (auto-renewal) and 0 (non-renewal upon expiration).</p> 
+     * @return RenewFlag <p>Auto-renewal flag. Valid values: 1 (auto-renewal) and 0 (non-renewal upon expiration).</p>
      */
     public Long getRenewFlag() {
         return this.RenewFlag;
     }
 
     /**
-     * Set <p>Auto-renewal flag. 1 means auto-renewal, 0 means non-renewal upon expiration.</p>
-     * @param RenewFlag <p>Auto-renewal flag. 1 means auto-renewal, 0 means non-renewal upon expiration.</p>
+     * Set <p>Auto-renewal flag. Valid values: 1 (auto-renewal) and 0 (non-renewal upon expiration).</p>
+     * @param RenewFlag <p>Auto-renewal flag. Valid values: 1 (auto-renewal) and 0 (non-renewal upon expiration).</p>
      */
     public void setRenewFlag(Long RenewFlag) {
         this.RenewFlag = RenewFlag;
@@ -1235,96 +1235,96 @@ public class CynosdbClusterDetail extends AbstractModel {
     }
 
     /**
-     * Get <p>Secondary availability zone property</p> 
-     * @return SlaveZoneAttr <p>Secondary availability zone property</p>
+     * Get <p>Secondary AZ property</p> 
+     * @return SlaveZoneAttr <p>Secondary AZ property</p>
      */
     public SlaveZoneAttrItem [] getSlaveZoneAttr() {
         return this.SlaveZoneAttr;
     }
 
     /**
-     * Set <p>Secondary availability zone property</p>
-     * @param SlaveZoneAttr <p>Secondary availability zone property</p>
+     * Set <p>Secondary AZ property</p>
+     * @param SlaveZoneAttr <p>Secondary AZ property</p>
      */
     public void setSlaveZoneAttr(SlaveZoneAttrItem [] SlaveZoneAttr) {
         this.SlaveZoneAttr = SlaveZoneAttr;
     }
 
     /**
-     * Get <p>Version tag</p> 
-     * @return CynosVersionTag <p>Version tag</p>
+     * Get <p>Version tag.</p> 
+     * @return CynosVersionTag <p>Version tag.</p>
      */
     public String getCynosVersionTag() {
         return this.CynosVersionTag;
     }
 
     /**
-     * Set <p>Version tag</p>
-     * @param CynosVersionTag <p>Version tag</p>
+     * Set <p>Version tag.</p>
+     * @param CynosVersionTag <p>Version tag.</p>
      */
     public void setCynosVersionTag(String CynosVersionTag) {
         this.CynosVersionTag = CynosVersionTag;
     }
 
     /**
-     * Get <p>Unique ID of the global database network</p> 
-     * @return GdnId <p>Unique ID of the global database network</p>
+     * Get <p>Global database network unique ID</p> 
+     * @return GdnId <p>Global database network unique ID</p>
      */
     public String getGdnId() {
         return this.GdnId;
     }
 
     /**
-     * Set <p>Unique ID of the global database network</p>
-     * @param GdnId <p>Unique ID of the global database network</p>
+     * Set <p>Global database network unique ID</p>
+     * @param GdnId <p>Global database network unique ID</p>
      */
     public void setGdnId(String GdnId) {
         this.GdnId = GdnId;
     }
 
     /**
-     * Get <p>Role of the cluster in the global data network.<br>Primary cluster - primary<br>Slave cluster - standby<br>If empty, the field is invalid.</p> 
-     * @return GdnRole <p>Role of the cluster in the global data network.<br>Primary cluster - primary<br>Slave cluster - standby<br>If empty, the field is invalid.</p>
+     * Get <p>Role of the cluster in the global data network.<br>Primary cluster - primary<br>Slave cluster - standby<br>If empty, this field is invalid</p> 
+     * @return GdnRole <p>Role of the cluster in the global data network.<br>Primary cluster - primary<br>Slave cluster - standby<br>If empty, this field is invalid</p>
      */
     public String getGdnRole() {
         return this.GdnRole;
     }
 
     /**
-     * Set <p>Role of the cluster in the global data network.<br>Primary cluster - primary<br>Slave cluster - standby<br>If empty, the field is invalid.</p>
-     * @param GdnRole <p>Role of the cluster in the global data network.<br>Primary cluster - primary<br>Slave cluster - standby<br>If empty, the field is invalid.</p>
+     * Set <p>Role of the cluster in the global data network.<br>Primary cluster - primary<br>Slave cluster - standby<br>If empty, this field is invalid</p>
+     * @param GdnRole <p>Role of the cluster in the global data network.<br>Primary cluster - primary<br>Slave cluster - standby<br>If empty, this field is invalid</p>
      */
     public void setGdnRole(String GdnRole) {
         this.GdnRole = GdnRole;
     }
 
     /**
-     * Get <p>Second-level storage usage in GB</p> 
-     * @return UsedArchiveStorage <p>Second-level storage usage in GB</p>
+     * Get <p>Level-2 storage usage, in GB.</p> 
+     * @return UsedArchiveStorage <p>Level-2 storage usage, in GB.</p>
      */
     public Long getUsedArchiveStorage() {
         return this.UsedArchiveStorage;
     }
 
     /**
-     * Set <p>Second-level storage usage in GB</p>
-     * @param UsedArchiveStorage <p>Second-level storage usage in GB</p>
+     * Set <p>Level-2 storage usage, in GB.</p>
+     * @param UsedArchiveStorage <p>Level-2 storage usage, in GB.</p>
      */
     public void setUsedArchiveStorage(Long UsedArchiveStorage) {
         this.UsedArchiveStorage = UsedArchiveStorage;
     }
 
     /**
-     * Get <p>Archiving status. Enumeration value <li>normal: Normal</li><li>archiving: Archiving</li><li>resuming: Recovering</li><li>archived: Archived</li></p> 
-     * @return ArchiveStatus <p>Archiving status. Enumeration value <li>normal: Normal</li><li>archiving: Archiving</li><li>resuming: Recovering</li><li>archived: Archived</li></p>
+     * Get <p>Archiving status. Enumeration values: <li>normal: Normal</li><li>archiving: Archiving</li><li>resuming: Recovering</li><li>archived: Archived</li></p> 
+     * @return ArchiveStatus <p>Archiving status. Enumeration values: <li>normal: Normal</li><li>archiving: Archiving</li><li>resuming: Recovering</li><li>archived: Archived</li></p>
      */
     public String getArchiveStatus() {
         return this.ArchiveStatus;
     }
 
     /**
-     * Set <p>Archiving status. Enumeration value <li>normal: Normal</li><li>archiving: Archiving</li><li>resuming: Recovering</li><li>archived: Archived</li></p>
-     * @param ArchiveStatus <p>Archiving status. Enumeration value <li>normal: Normal</li><li>archiving: Archiving</li><li>resuming: Recovering</li><li>archived: Archived</li></p>
+     * Set <p>Archiving status. Enumeration values: <li>normal: Normal</li><li>archiving: Archiving</li><li>resuming: Recovering</li><li>archived: Archived</li></p>
+     * @param ArchiveStatus <p>Archiving status. Enumeration values: <li>normal: Normal</li><li>archiving: Archiving</li><li>resuming: Recovering</li><li>archived: Archived</li></p>
      */
     public void setArchiveStatus(String ArchiveStatus) {
         this.ArchiveStatus = ArchiveStatus;
@@ -1347,32 +1347,32 @@ public class CynosdbClusterDetail extends AbstractModel {
     }
 
     /**
-     * Get <p>Cluster level. For example P0, P1</p> 
-     * @return ClusterLevel <p>Cluster level. For example P0, P1</p>
+     * Get <p>Cluster level. For example, P0, P1</p> 
+     * @return ClusterLevel <p>Cluster level. For example, P0, P1</p>
      */
     public String getClusterLevel() {
         return this.ClusterLevel;
     }
 
     /**
-     * Set <p>Cluster level. For example P0, P1</p>
-     * @param ClusterLevel <p>Cluster level. For example P0, P1</p>
+     * Set <p>Cluster level. For example, P0, P1</p>
+     * @param ClusterLevel <p>Cluster level. For example, P0, P1</p>
      */
     public void setClusterLevel(String ClusterLevel) {
         this.ClusterLevel = ClusterLevel;
     }
 
     /**
-     * Get <p>Whether to enable transparent data encryption</p> 
-     * @return IsOpenTDE <p>Whether to enable transparent data encryption</p>
+     * Get <p>Whether to enable transparent encryption</p> 
+     * @return IsOpenTDE <p>Whether to enable transparent encryption</p>
      */
     public Boolean getIsOpenTDE() {
         return this.IsOpenTDE;
     }
 
     /**
-     * Set <p>Whether to enable transparent data encryption</p>
-     * @param IsOpenTDE <p>Whether to enable transparent data encryption</p>
+     * Set <p>Whether to enable transparent encryption</p>
+     * @param IsOpenTDE <p>Whether to enable transparent encryption</p>
      */
     public void setIsOpenTDE(Boolean IsOpenTDE) {
         this.IsOpenTDE = IsOpenTDE;

@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class RefundResourcePackageRequest extends AbstractModel {
 
     /**
-    * The unique ID of a resource pack
+    * Unique ID of the resource package
     */
     @SerializedName("PackageId")
     @Expose
     private String PackageId;
 
     /**
-     * Get The unique ID of a resource pack 
-     * @return PackageId The unique ID of a resource pack
+     * Get Unique ID of the resource package 
+     * @return PackageId Unique ID of the resource package
      */
     public String getPackageId() {
         return this.PackageId;
     }
 
     /**
-     * Set The unique ID of a resource pack
-     * @param PackageId The unique ID of a resource pack
+     * Set Unique ID of the resource package
+     * @param PackageId Unique ID of the resource package
      */
     public void setPackageId(String PackageId) {
         this.PackageId = PackageId;

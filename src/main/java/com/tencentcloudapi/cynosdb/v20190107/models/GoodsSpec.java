@@ -74,8 +74,8 @@ public class GoodsSpec extends AbstractModel {
 
     /**
     * Instance machine type
-1. common, universal type.
-2. exclusive, dedicated.
+1. common: universal type.
+2. exclusive: dedicated.
     */
     @SerializedName("DeviceType")
     @Expose
@@ -195,11 +195,11 @@ public class GoodsSpec extends AbstractModel {
 
     /**
      * Get Instance machine type
-1. common, universal type.
-2. exclusive, dedicated. 
+1. common: universal type.
+2. exclusive: dedicated. 
      * @return DeviceType Instance machine type
-1. common, universal type.
-2. exclusive, dedicated.
+1. common: universal type.
+2. exclusive: dedicated.
      */
     public String getDeviceType() {
         return this.DeviceType;
@@ -207,11 +207,11 @@ public class GoodsSpec extends AbstractModel {
 
     /**
      * Set Instance machine type
-1. common, universal type.
-2. exclusive, dedicated.
+1. common: universal type.
+2. exclusive: dedicated.
      * @param DeviceType Instance machine type
-1. common, universal type.
-2. exclusive, dedicated.
+1. common: universal type.
+2. exclusive: dedicated.
      */
     public void setDeviceType(String DeviceType) {
         this.DeviceType = DeviceType;

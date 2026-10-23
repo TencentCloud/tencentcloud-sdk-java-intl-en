@@ -31,7 +31,7 @@ public class DescribeLibraDBClusterDetailRequest extends AbstractModel {
     private String ClusterId;
 
     /**
-    * Whether to get more server information, available values yes no
+    * Whether to get more server information. Available values: yes, no
     */
     @SerializedName("GetServerInfo")
     @Expose
@@ -54,16 +54,16 @@ public class DescribeLibraDBClusterDetailRequest extends AbstractModel {
     }
 
     /**
-     * Get Whether to get more server information, available values yes no 
-     * @return GetServerInfo Whether to get more server information, available values yes no
+     * Get Whether to get more server information. Available values: yes, no 
+     * @return GetServerInfo Whether to get more server information. Available values: yes, no
      */
     public String getGetServerInfo() {
         return this.GetServerInfo;
     }
 
     /**
-     * Set Whether to get more server information, available values yes no
-     * @param GetServerInfo Whether to get more server information, available values yes no
+     * Set Whether to get more server information. Available values: yes, no
+     * @param GetServerInfo Whether to get more server information. Available values: yes, no
      */
     public void setGetServerInfo(String GetServerInfo) {
         this.GetServerInfo = GetServerInfo;

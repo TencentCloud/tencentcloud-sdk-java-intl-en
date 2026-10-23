@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeMaintainPeriodResponse extends AbstractModel {
 
     /**
-    * Maintenance days of the week
+    * Maintain week days
     */
     @SerializedName("MaintainWeekDays")
     @Expose
@@ -52,16 +52,16 @@ public class DescribeMaintainPeriodResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Maintenance days of the week 
-     * @return MaintainWeekDays Maintenance days of the week
+     * Get Maintain week days 
+     * @return MaintainWeekDays Maintain week days
      */
     public String [] getMaintainWeekDays() {
         return this.MaintainWeekDays;
     }
 
     /**
-     * Set Maintenance days of the week
-     * @param MaintainWeekDays Maintenance days of the week
+     * Set Maintain week days
+     * @param MaintainWeekDays Maintain week days
      */
     public void setMaintainWeekDays(String [] MaintainWeekDays) {
         this.MaintainWeekDays = MaintainWeekDays;

@@ -31,42 +31,42 @@ public class NetAddr extends AbstractModel {
     private String Vip;
 
     /**
-    * Specifies the private network port number.
+    * Private network port number
     */
     @SerializedName("Vport")
     @Expose
     private Long Vport;
 
     /**
-    * Specifies the public network domain name.
+    * Public network domain name.
     */
     @SerializedName("WanDomain")
     @Expose
     private String WanDomain;
 
     /**
-    * Specifies the public network port number.
+    * Public network port number.
     */
     @SerializedName("WanPort")
     @Expose
     private Long WanPort;
 
     /**
-    * Network type (ro - read-only, rw/ha - read-write).
+    * Network type (ro: read-only, rw/ha: read-write)
     */
     @SerializedName("NetType")
     @Expose
     private String NetType;
 
     /**
-    * Specifies the subnet ID.
+    * Subnet ID.
     */
     @SerializedName("UniqSubnetId")
     @Expose
     private String UniqSubnetId;
 
     /**
-    * Specifies the virtual private cloud ID.
+    * VPC ID
     */
     @SerializedName("UniqVpcId")
     @Expose
@@ -87,7 +87,7 @@ public class NetAddr extends AbstractModel {
     private String WanIP;
 
     /**
-    * Specifies the public network status.
+    * Public network status.
     */
     @SerializedName("WanStatus")
     @Expose
@@ -117,96 +117,96 @@ public class NetAddr extends AbstractModel {
     }
 
     /**
-     * Get Specifies the private network port number. 
-     * @return Vport Specifies the private network port number.
+     * Get Private network port number 
+     * @return Vport Private network port number
      */
     public Long getVport() {
         return this.Vport;
     }
 
     /**
-     * Set Specifies the private network port number.
-     * @param Vport Specifies the private network port number.
+     * Set Private network port number
+     * @param Vport Private network port number
      */
     public void setVport(Long Vport) {
         this.Vport = Vport;
     }
 
     /**
-     * Get Specifies the public network domain name. 
-     * @return WanDomain Specifies the public network domain name.
+     * Get Public network domain name. 
+     * @return WanDomain Public network domain name.
      */
     public String getWanDomain() {
         return this.WanDomain;
     }
 
     /**
-     * Set Specifies the public network domain name.
-     * @param WanDomain Specifies the public network domain name.
+     * Set Public network domain name.
+     * @param WanDomain Public network domain name.
      */
     public void setWanDomain(String WanDomain) {
         this.WanDomain = WanDomain;
     }
 
     /**
-     * Get Specifies the public network port number. 
-     * @return WanPort Specifies the public network port number.
+     * Get Public network port number. 
+     * @return WanPort Public network port number.
      */
     public Long getWanPort() {
         return this.WanPort;
     }
 
     /**
-     * Set Specifies the public network port number.
-     * @param WanPort Specifies the public network port number.
+     * Set Public network port number.
+     * @param WanPort Public network port number.
      */
     public void setWanPort(Long WanPort) {
         this.WanPort = WanPort;
     }
 
     /**
-     * Get Network type (ro - read-only, rw/ha - read-write). 
-     * @return NetType Network type (ro - read-only, rw/ha - read-write).
+     * Get Network type (ro: read-only, rw/ha: read-write) 
+     * @return NetType Network type (ro: read-only, rw/ha: read-write)
      */
     public String getNetType() {
         return this.NetType;
     }
 
     /**
-     * Set Network type (ro - read-only, rw/ha - read-write).
-     * @param NetType Network type (ro - read-only, rw/ha - read-write).
+     * Set Network type (ro: read-only, rw/ha: read-write)
+     * @param NetType Network type (ro: read-only, rw/ha: read-write)
      */
     public void setNetType(String NetType) {
         this.NetType = NetType;
     }
 
     /**
-     * Get Specifies the subnet ID. 
-     * @return UniqSubnetId Specifies the subnet ID.
+     * Get Subnet ID. 
+     * @return UniqSubnetId Subnet ID.
      */
     public String getUniqSubnetId() {
         return this.UniqSubnetId;
     }
 
     /**
-     * Set Specifies the subnet ID.
-     * @param UniqSubnetId Specifies the subnet ID.
+     * Set Subnet ID.
+     * @param UniqSubnetId Subnet ID.
      */
     public void setUniqSubnetId(String UniqSubnetId) {
         this.UniqSubnetId = UniqSubnetId;
     }
 
     /**
-     * Get Specifies the virtual private cloud ID. 
-     * @return UniqVpcId Specifies the virtual private cloud ID.
+     * Get VPC ID 
+     * @return UniqVpcId VPC ID
      */
     public String getUniqVpcId() {
         return this.UniqVpcId;
     }
 
     /**
-     * Set Specifies the virtual private cloud ID.
-     * @param UniqVpcId Specifies the virtual private cloud ID.
+     * Set VPC ID
+     * @param UniqVpcId VPC ID
      */
     public void setUniqVpcId(String UniqVpcId) {
         this.UniqVpcId = UniqVpcId;
@@ -245,16 +245,16 @@ public class NetAddr extends AbstractModel {
     }
 
     /**
-     * Get Specifies the public network status. 
-     * @return WanStatus Specifies the public network status.
+     * Get Public network status. 
+     * @return WanStatus Public network status.
      */
     public String getWanStatus() {
         return this.WanStatus;
     }
 
     /**
-     * Set Specifies the public network status.
-     * @param WanStatus Specifies the public network status.
+     * Set Public network status.
+     * @param WanStatus Public network status.
      */
     public void setWanStatus(String WanStatus) {
         this.WanStatus = WanStatus;

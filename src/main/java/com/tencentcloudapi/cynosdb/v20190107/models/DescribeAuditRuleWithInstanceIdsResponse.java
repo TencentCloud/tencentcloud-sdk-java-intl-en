@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeAuditRuleWithInstanceIdsResponse extends AbstractModel {
 
     /**
-    * None
+    * None.
     */
     @SerializedName("TotalCount")
     @Expose
@@ -45,16 +45,16 @@ public class DescribeAuditRuleWithInstanceIdsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get None 
-     * @return TotalCount None
+     * Get None. 
+     * @return TotalCount None.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set None
-     * @param TotalCount None
+     * Set None.
+     * @param TotalCount None.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

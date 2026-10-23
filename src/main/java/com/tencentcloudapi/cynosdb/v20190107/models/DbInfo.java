@@ -24,35 +24,35 @@ import java.util.HashMap;
 public class DbInfo extends AbstractModel {
 
     /**
-    * Database name
+    * Database name.
     */
     @SerializedName("DbName")
     @Expose
     private String DbName;
 
     /**
-    * Character set
+    * Character set type
     */
     @SerializedName("CharacterSet")
     @Expose
     private String CharacterSet;
 
     /**
-    * Database status
+    * Database status.
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * Collation
+    * Sorting rule
     */
     @SerializedName("CollateRule")
     @Expose
     private String CollateRule;
 
     /**
-    * Specifies the remark of the database.
+    * Database remarks.
     */
     @SerializedName("Description")
     @Expose
@@ -66,14 +66,14 @@ public class DbInfo extends AbstractModel {
     private UserHostPrivilege [] UserHostPrivileges;
 
     /**
-    * Database ID
+    * Database ID.
     */
     @SerializedName("DbId")
     @Expose
     private Long DbId;
 
     /**
-    * Creation time
+    * Creation time.
     */
     @SerializedName("CreateTime")
     @Expose
@@ -108,80 +108,80 @@ public class DbInfo extends AbstractModel {
     private String ClusterId;
 
     /**
-     * Get Database name 
-     * @return DbName Database name
+     * Get Database name. 
+     * @return DbName Database name.
      */
     public String getDbName() {
         return this.DbName;
     }
 
     /**
-     * Set Database name
-     * @param DbName Database name
+     * Set Database name.
+     * @param DbName Database name.
      */
     public void setDbName(String DbName) {
         this.DbName = DbName;
     }
 
     /**
-     * Get Character set 
-     * @return CharacterSet Character set
+     * Get Character set type 
+     * @return CharacterSet Character set type
      */
     public String getCharacterSet() {
         return this.CharacterSet;
     }
 
     /**
-     * Set Character set
-     * @param CharacterSet Character set
+     * Set Character set type
+     * @param CharacterSet Character set type
      */
     public void setCharacterSet(String CharacterSet) {
         this.CharacterSet = CharacterSet;
     }
 
     /**
-     * Get Database status 
-     * @return Status Database status
+     * Get Database status. 
+     * @return Status Database status.
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Database status
-     * @param Status Database status
+     * Set Database status.
+     * @param Status Database status.
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Collation 
-     * @return CollateRule Collation
+     * Get Sorting rule 
+     * @return CollateRule Sorting rule
      */
     public String getCollateRule() {
         return this.CollateRule;
     }
 
     /**
-     * Set Collation
-     * @param CollateRule Collation
+     * Set Sorting rule
+     * @param CollateRule Sorting rule
      */
     public void setCollateRule(String CollateRule) {
         this.CollateRule = CollateRule;
     }
 
     /**
-     * Get Specifies the remark of the database. 
-     * @return Description Specifies the remark of the database.
+     * Get Database remarks. 
+     * @return Description Database remarks.
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set Specifies the remark of the database.
-     * @param Description Specifies the remark of the database.
+     * Set Database remarks.
+     * @param Description Database remarks.
      */
     public void setDescription(String Description) {
         this.Description = Description;
@@ -204,32 +204,32 @@ public class DbInfo extends AbstractModel {
     }
 
     /**
-     * Get Database ID 
-     * @return DbId Database ID
+     * Get Database ID. 
+     * @return DbId Database ID.
      */
     public Long getDbId() {
         return this.DbId;
     }
 
     /**
-     * Set Database ID
-     * @param DbId Database ID
+     * Set Database ID.
+     * @param DbId Database ID.
      */
     public void setDbId(Long DbId) {
         this.DbId = DbId;
     }
 
     /**
-     * Get Creation time 
-     * @return CreateTime Creation time
+     * Get Creation time. 
+     * @return CreateTime Creation time.
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set Creation time
-     * @param CreateTime Creation time
+     * Set Creation time.
+     * @param CreateTime Creation time.
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;

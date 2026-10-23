@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeProxyNodesResponse extends AbstractModel {
 
     /**
-    * Number of the database proxy nodes
+    * Total number of database proxy nodes
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * List of the database proxy nodes
+    * List of database proxy nodes
     */
     @SerializedName("ProxyNodeInfos")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeProxyNodesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Number of the database proxy nodes 
-     * @return TotalCount Number of the database proxy nodes
+     * Get Total number of database proxy nodes 
+     * @return TotalCount Total number of database proxy nodes
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Number of the database proxy nodes
-     * @param TotalCount Number of the database proxy nodes
+     * Set Total number of database proxy nodes
+     * @param TotalCount Total number of database proxy nodes
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get List of the database proxy nodes 
-     * @return ProxyNodeInfos List of the database proxy nodes
+     * Get List of database proxy nodes 
+     * @return ProxyNodeInfos List of database proxy nodes
      */
     public ProxyNodeInfo [] getProxyNodeInfos() {
         return this.ProxyNodeInfos;
     }
 
     /**
-     * Set List of the database proxy nodes
-     * @param ProxyNodeInfos List of the database proxy nodes
+     * Set List of database proxy nodes
+     * @param ProxyNodeInfos List of database proxy nodes
      */
     public void setProxyNodeInfos(ProxyNodeInfo [] ProxyNodeInfos) {
         this.ProxyNodeInfos = ProxyNodeInfos;

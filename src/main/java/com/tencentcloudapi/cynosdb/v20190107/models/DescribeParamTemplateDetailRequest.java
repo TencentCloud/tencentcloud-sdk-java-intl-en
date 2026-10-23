@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DescribeParamTemplateDetailRequest extends AbstractModel {
 
     /**
-    * Parameter template ID
+    * Parameter template ID.
     */
     @SerializedName("TemplateId")
     @Expose
     private Long TemplateId;
 
     /**
-     * Get Parameter template ID 
-     * @return TemplateId Parameter template ID
+     * Get Parameter template ID. 
+     * @return TemplateId Parameter template ID.
      */
     public Long getTemplateId() {
         return this.TemplateId;
     }
 
     /**
-     * Set Parameter template ID
-     * @param TemplateId Parameter template ID
+     * Set Parameter template ID.
+     * @param TemplateId Parameter template ID.
      */
     public void setTemplateId(Long TemplateId) {
         this.TemplateId = TemplateId;

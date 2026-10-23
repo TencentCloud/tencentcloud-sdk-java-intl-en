@@ -31,21 +31,21 @@ public class ExportInstanceErrorLogsRequest extends AbstractModel {
     private String InstanceId;
 
     /**
-    * Log start time.
+    * Earliest log time
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * Log end time.
+    * Latest log time
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-    * The max number of returned results.
+    * Limit of Items
     */
     @SerializedName("Limit")
     @Expose
@@ -66,28 +66,28 @@ public class ExportInstanceErrorLogsRequest extends AbstractModel {
     private String [] LogLevels;
 
     /**
-    * KeyWords.
+    * Keyword.
     */
     @SerializedName("KeyWords")
     @Expose
     private String [] KeyWords;
 
     /**
-    * The template type. Valid values: `csv`, `original`.
+    * File type. Available values: csv, original
     */
     @SerializedName("FileType")
     @Expose
     private String FileType;
 
     /**
-    * Valid value: `Timestamp`.
+    * Available values: Timestamp
     */
     @SerializedName("OrderBy")
     @Expose
     private String OrderBy;
 
     /**
-    * Sorting type. valid values: ASC or DESC.
+    * Sorting type. ASC or DESC.
     */
     @SerializedName("OrderByType")
     @Expose
@@ -110,48 +110,48 @@ public class ExportInstanceErrorLogsRequest extends AbstractModel {
     }
 
     /**
-     * Get Log start time. 
-     * @return StartTime Log start time.
+     * Get Earliest log time 
+     * @return StartTime Earliest log time
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set Log start time.
-     * @param StartTime Log start time.
+     * Set Earliest log time
+     * @param StartTime Earliest log time
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get Log end time. 
-     * @return EndTime Log end time.
+     * Get Latest log time 
+     * @return EndTime Latest log time
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set Log end time.
-     * @param EndTime Log end time.
+     * Set Latest log time
+     * @param EndTime Latest log time
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get The max number of returned results. 
-     * @return Limit The max number of returned results.
+     * Get Limit of Items 
+     * @return Limit Limit of Items
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set The max number of returned results.
-     * @param Limit The max number of returned results.
+     * Set Limit of Items
+     * @param Limit Limit of Items
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
@@ -190,64 +190,64 @@ public class ExportInstanceErrorLogsRequest extends AbstractModel {
     }
 
     /**
-     * Get KeyWords. 
-     * @return KeyWords KeyWords.
+     * Get Keyword. 
+     * @return KeyWords Keyword.
      */
     public String [] getKeyWords() {
         return this.KeyWords;
     }
 
     /**
-     * Set KeyWords.
-     * @param KeyWords KeyWords.
+     * Set Keyword.
+     * @param KeyWords Keyword.
      */
     public void setKeyWords(String [] KeyWords) {
         this.KeyWords = KeyWords;
     }
 
     /**
-     * Get The template type. Valid values: `csv`, `original`. 
-     * @return FileType The template type. Valid values: `csv`, `original`.
+     * Get File type. Available values: csv, original 
+     * @return FileType File type. Available values: csv, original
      */
     public String getFileType() {
         return this.FileType;
     }
 
     /**
-     * Set The template type. Valid values: `csv`, `original`.
-     * @param FileType The template type. Valid values: `csv`, `original`.
+     * Set File type. Available values: csv, original
+     * @param FileType File type. Available values: csv, original
      */
     public void setFileType(String FileType) {
         this.FileType = FileType;
     }
 
     /**
-     * Get Valid value: `Timestamp`. 
-     * @return OrderBy Valid value: `Timestamp`.
+     * Get Available values: Timestamp 
+     * @return OrderBy Available values: Timestamp
      */
     public String getOrderBy() {
         return this.OrderBy;
     }
 
     /**
-     * Set Valid value: `Timestamp`.
-     * @param OrderBy Valid value: `Timestamp`.
+     * Set Available values: Timestamp
+     * @param OrderBy Available values: Timestamp
      */
     public void setOrderBy(String OrderBy) {
         this.OrderBy = OrderBy;
     }
 
     /**
-     * Get Sorting type. valid values: ASC or DESC. 
-     * @return OrderByType Sorting type. valid values: ASC or DESC.
+     * Get Sorting type. ASC or DESC. 
+     * @return OrderByType Sorting type. ASC or DESC.
      */
     public String getOrderByType() {
         return this.OrderByType;
     }
 
     /**
-     * Set Sorting type. valid values: ASC or DESC.
-     * @param OrderByType Sorting type. valid values: ASC or DESC.
+     * Set Sorting type. ASC or DESC.
+     * @param OrderByType Sorting type. ASC or DESC.
      */
     public void setOrderByType(String OrderByType) {
         this.OrderByType = OrderByType;

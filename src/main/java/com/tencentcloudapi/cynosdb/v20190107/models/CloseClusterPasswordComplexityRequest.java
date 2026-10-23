@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class CloseClusterPasswordComplexityRequest extends AbstractModel {
 
     /**
-    * Cluster IDs in array
+    * Cluster ID array.
     */
     @SerializedName("ClusterIds")
     @Expose
     private String [] ClusterIds;
 
     /**
-     * Get Cluster IDs in array 
-     * @return ClusterIds Cluster IDs in array
+     * Get Cluster ID array. 
+     * @return ClusterIds Cluster ID array.
      */
     public String [] getClusterIds() {
         return this.ClusterIds;
     }
 
     /**
-     * Set Cluster IDs in array
-     * @param ClusterIds Cluster IDs in array
+     * Set Cluster ID array.
+     * @param ClusterIds Cluster ID array.
      */
     public void setClusterIds(String [] ClusterIds) {
         this.ClusterIds = ClusterIds;

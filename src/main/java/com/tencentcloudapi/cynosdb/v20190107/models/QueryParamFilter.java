@@ -31,14 +31,14 @@ public class QueryParamFilter extends AbstractModel {
     private String [] Names;
 
     /**
-    * Search string
+    * String for search.
     */
     @SerializedName("Values")
     @Expose
     private String [] Values;
 
     /**
-    * Whether to use exact match
+    * Whether to match exactly.
     */
     @SerializedName("ExactMatch")
     @Expose
@@ -61,32 +61,32 @@ public class QueryParamFilter extends AbstractModel {
     }
 
     /**
-     * Get Search string 
-     * @return Values Search string
+     * Get String for search. 
+     * @return Values String for search.
      */
     public String [] getValues() {
         return this.Values;
     }
 
     /**
-     * Set Search string
-     * @param Values Search string
+     * Set String for search.
+     * @param Values String for search.
      */
     public void setValues(String [] Values) {
         this.Values = Values;
     }
 
     /**
-     * Get Whether to use exact match 
-     * @return ExactMatch Whether to use exact match
+     * Get Whether to match exactly. 
+     * @return ExactMatch Whether to match exactly.
      */
     public Boolean getExactMatch() {
         return this.ExactMatch;
     }
 
     /**
-     * Set Whether to use exact match
-     * @param ExactMatch Whether to use exact match
+     * Set Whether to match exactly.
+     * @param ExactMatch Whether to match exactly.
      */
     public void setExactMatch(Boolean ExactMatch) {
         this.ExactMatch = ExactMatch;

@@ -31,21 +31,21 @@ public class ServerlessZoneStockInfo extends AbstractModel {
     private String Zone;
 
     /**
-    * Specifies the stored amount.
+    * Stored amount
     */
     @SerializedName("StockCount")
     @Expose
     private Long StockCount;
 
     /**
-    * Whether it contains inventory.
+    * Whether inventory is included
     */
     @SerializedName("HasStock")
     @Expose
     private Boolean HasStock;
 
     /**
-    * Inventory information from availability zone.
+    * Secondary AZ inventory information
     */
     @SerializedName("SlaveZoneStockInfos")
     @Expose
@@ -68,48 +68,48 @@ public class ServerlessZoneStockInfo extends AbstractModel {
     }
 
     /**
-     * Get Specifies the stored amount. 
-     * @return StockCount Specifies the stored amount.
+     * Get Stored amount 
+     * @return StockCount Stored amount
      */
     public Long getStockCount() {
         return this.StockCount;
     }
 
     /**
-     * Set Specifies the stored amount.
-     * @param StockCount Specifies the stored amount.
+     * Set Stored amount
+     * @param StockCount Stored amount
      */
     public void setStockCount(Long StockCount) {
         this.StockCount = StockCount;
     }
 
     /**
-     * Get Whether it contains inventory. 
-     * @return HasStock Whether it contains inventory.
+     * Get Whether inventory is included 
+     * @return HasStock Whether inventory is included
      */
     public Boolean getHasStock() {
         return this.HasStock;
     }
 
     /**
-     * Set Whether it contains inventory.
-     * @param HasStock Whether it contains inventory.
+     * Set Whether inventory is included
+     * @param HasStock Whether inventory is included
      */
     public void setHasStock(Boolean HasStock) {
         this.HasStock = HasStock;
     }
 
     /**
-     * Get Inventory information from availability zone. 
-     * @return SlaveZoneStockInfos Inventory information from availability zone.
+     * Get Secondary AZ inventory information 
+     * @return SlaveZoneStockInfos Secondary AZ inventory information
      */
     public SlaveZoneStockInfo [] getSlaveZoneStockInfos() {
         return this.SlaveZoneStockInfos;
     }
 
     /**
-     * Set Inventory information from availability zone.
-     * @param SlaveZoneStockInfos Inventory information from availability zone.
+     * Set Secondary AZ inventory information
+     * @param SlaveZoneStockInfos Secondary AZ inventory information
      */
     public void setSlaveZoneStockInfos(SlaveZoneStockInfo [] SlaveZoneStockInfos) {
         this.SlaveZoneStockInfos = SlaveZoneStockInfos;

@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class CrossRegionBackupItem extends AbstractModel {
 
     /**
-    * Target region for backup.
+    * Target region for backup
     */
     @SerializedName("CrossRegion")
     @Expose
     private String CrossRegion;
 
     /**
-    * Target region's backup task ID.
+    * Backup task ID in the target region
     */
     @SerializedName("BackupId")
     @Expose
     private Long BackupId;
 
     /**
-    * Backup status in the target region.
+    * Backup status in the target region
     */
     @SerializedName("BackupStatus")
     @Expose
     private String BackupStatus;
 
     /**
-     * Get Target region for backup. 
-     * @return CrossRegion Target region for backup.
+     * Get Target region for backup 
+     * @return CrossRegion Target region for backup
      */
     public String getCrossRegion() {
         return this.CrossRegion;
     }
 
     /**
-     * Set Target region for backup.
-     * @param CrossRegion Target region for backup.
+     * Set Target region for backup
+     * @param CrossRegion Target region for backup
      */
     public void setCrossRegion(String CrossRegion) {
         this.CrossRegion = CrossRegion;
     }
 
     /**
-     * Get Target region's backup task ID. 
-     * @return BackupId Target region's backup task ID.
+     * Get Backup task ID in the target region 
+     * @return BackupId Backup task ID in the target region
      */
     public Long getBackupId() {
         return this.BackupId;
     }
 
     /**
-     * Set Target region's backup task ID.
-     * @param BackupId Target region's backup task ID.
+     * Set Backup task ID in the target region
+     * @param BackupId Backup task ID in the target region
      */
     public void setBackupId(Long BackupId) {
         this.BackupId = BackupId;
     }
 
     /**
-     * Get Backup status in the target region. 
-     * @return BackupStatus Backup status in the target region.
+     * Get Backup status in the target region 
+     * @return BackupStatus Backup status in the target region
      */
     public String getBackupStatus() {
         return this.BackupStatus;
     }
 
     /**
-     * Set Backup status in the target region.
-     * @param BackupStatus Backup status in the target region.
+     * Set Backup status in the target region
+     * @param BackupStatus Backup status in the target region
      */
     public void setBackupStatus(String BackupStatus) {
         this.BackupStatus = BackupStatus;

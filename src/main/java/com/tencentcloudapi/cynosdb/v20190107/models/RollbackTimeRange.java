@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class RollbackTimeRange extends AbstractModel {
 
     /**
-    * Start time
+    * Start time.
     */
     @SerializedName("TimeRangeStart")
     @Expose
     private String TimeRangeStart;
 
     /**
-    * End time
+    * End time.
     */
     @SerializedName("TimeRangeEnd")
     @Expose
     private String TimeRangeEnd;
 
     /**
-     * Get Start time 
-     * @return TimeRangeStart Start time
+     * Get Start time. 
+     * @return TimeRangeStart Start time.
      */
     public String getTimeRangeStart() {
         return this.TimeRangeStart;
     }
 
     /**
-     * Set Start time
-     * @param TimeRangeStart Start time
+     * Set Start time.
+     * @param TimeRangeStart Start time.
      */
     public void setTimeRangeStart(String TimeRangeStart) {
         this.TimeRangeStart = TimeRangeStart;
     }
 
     /**
-     * Get End time 
-     * @return TimeRangeEnd End time
+     * Get End time. 
+     * @return TimeRangeEnd End time.
      */
     public String getTimeRangeEnd() {
         return this.TimeRangeEnd;
     }
 
     /**
-     * Set End time
-     * @param TimeRangeEnd End time
+     * Set End time.
+     * @param TimeRangeEnd End time.
      */
     public void setTimeRangeEnd(String TimeRangeEnd) {
         this.TimeRangeEnd = TimeRangeEnd;

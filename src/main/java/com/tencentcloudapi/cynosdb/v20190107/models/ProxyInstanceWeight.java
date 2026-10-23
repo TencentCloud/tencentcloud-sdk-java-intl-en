@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ProxyInstanceWeight extends AbstractModel {
 
     /**
-    * InstanID
+    * Instance ID.
     */
     @SerializedName("InstanceId")
     @Expose
@@ -38,16 +38,16 @@ public class ProxyInstanceWeight extends AbstractModel {
     private Long Weight;
 
     /**
-     * Get InstanID 
-     * @return InstanceId InstanID
+     * Get Instance ID. 
+     * @return InstanceId Instance ID.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set InstanID
-     * @param InstanceId InstanID
+     * Set Instance ID.
+     * @param InstanceId Instance ID.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;

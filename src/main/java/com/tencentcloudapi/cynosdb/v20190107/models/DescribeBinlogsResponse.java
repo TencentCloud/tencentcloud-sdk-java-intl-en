@@ -31,7 +31,7 @@ public class DescribeBinlogsResponse extends AbstractModel {
     private Long TotalCount;
 
     /**
-    * Binlog list.
+    * Binlog list
     */
     @SerializedName("Binlogs")
     @Expose
@@ -61,16 +61,16 @@ public class DescribeBinlogsResponse extends AbstractModel {
     }
 
     /**
-     * Get Binlog list. 
-     * @return Binlogs Binlog list.
+     * Get Binlog list 
+     * @return Binlogs Binlog list
      */
     public BinlogItem [] getBinlogs() {
         return this.Binlogs;
     }
 
     /**
-     * Set Binlog list.
-     * @param Binlogs Binlog list.
+     * Set Binlog list
+     * @param Binlogs Binlog list
      */
     public void setBinlogs(BinlogItem [] Binlogs) {
         this.Binlogs = Binlogs;
