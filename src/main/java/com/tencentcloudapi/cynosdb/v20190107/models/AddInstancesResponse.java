@@ -31,7 +31,7 @@ public class AddInstancesResponse extends AbstractModel {
     private String TranId;
 
     /**
-    * <p>Order number of the payment. Description: We recommend you use the <a href="https://www.tencentcloud.com/document/product/1003/52131?from_cn_redirect=1">DescribeResourcesByDealName</a> API to query order associated instances.</p>
+    * <p>Order number of the payment. Description: We recommend you use the <a href="https://www.tencentcloud.com/document/product/1003/52131?from_cn_redirect=1">DescribeResourcesByDealName</a> API to query the instances associated with the order.</p>
     */
     @SerializedName("DealNames")
     @Expose
@@ -75,16 +75,16 @@ public class AddInstancesResponse extends AbstractModel {
     }
 
     /**
-     * Get <p>Order number of the payment. Description: We recommend you use the <a href="https://www.tencentcloud.com/document/product/1003/52131?from_cn_redirect=1">DescribeResourcesByDealName</a> API to query order associated instances.</p> 
-     * @return DealNames <p>Order number of the payment. Description: We recommend you use the <a href="https://www.tencentcloud.com/document/product/1003/52131?from_cn_redirect=1">DescribeResourcesByDealName</a> API to query order associated instances.</p>
+     * Get <p>Order number of the payment. Description: We recommend you use the <a href="https://www.tencentcloud.com/document/product/1003/52131?from_cn_redirect=1">DescribeResourcesByDealName</a> API to query the instances associated with the order.</p> 
+     * @return DealNames <p>Order number of the payment. Description: We recommend you use the <a href="https://www.tencentcloud.com/document/product/1003/52131?from_cn_redirect=1">DescribeResourcesByDealName</a> API to query the instances associated with the order.</p>
      */
     public String [] getDealNames() {
         return this.DealNames;
     }
 
     /**
-     * Set <p>Order number of the payment. Description: We recommend you use the <a href="https://www.tencentcloud.com/document/product/1003/52131?from_cn_redirect=1">DescribeResourcesByDealName</a> API to query order associated instances.</p>
-     * @param DealNames <p>Order number of the payment. Description: We recommend you use the <a href="https://www.tencentcloud.com/document/product/1003/52131?from_cn_redirect=1">DescribeResourcesByDealName</a> API to query order associated instances.</p>
+     * Set <p>Order number of the payment. Description: We recommend you use the <a href="https://www.tencentcloud.com/document/product/1003/52131?from_cn_redirect=1">DescribeResourcesByDealName</a> API to query the instances associated with the order.</p>
+     * @param DealNames <p>Order number of the payment. Description: We recommend you use the <a href="https://www.tencentcloud.com/document/product/1003/52131?from_cn_redirect=1">DescribeResourcesByDealName</a> API to query the instances associated with the order.</p>
      */
     public void setDealNames(String [] DealNames) {
         this.DealNames = DealNames;

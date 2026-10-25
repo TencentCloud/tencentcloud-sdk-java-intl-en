@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class CLSTopic extends AbstractModel {
 
     /**
-    * The ID of the Tencent Cloud CLS log set.
+    * Tencent Cloud CLS log set ID.	
     */
     @SerializedName("LogSetId")
     @Expose
     private String LogSetId;
 
     /**
-    * The ID of the Tencent Cloud CLS log topic.
+    * Tencent Cloud CLS log topic ID.
     */
     @SerializedName("TopicId")
     @Expose
     private String TopicId;
 
     /**
-    * The region of the Tencent Cloud CLS log set.
+    * Region of the Tencent Cloud CLS log set.
     */
     @SerializedName("LogSetRegion")
     @Expose
     private String LogSetRegion;
 
     /**
-     * Get The ID of the Tencent Cloud CLS log set. 
-     * @return LogSetId The ID of the Tencent Cloud CLS log set.
+     * Get Tencent Cloud CLS log set ID.	 
+     * @return LogSetId Tencent Cloud CLS log set ID.	
      */
     public String getLogSetId() {
         return this.LogSetId;
     }
 
     /**
-     * Set The ID of the Tencent Cloud CLS log set.
-     * @param LogSetId The ID of the Tencent Cloud CLS log set.
+     * Set Tencent Cloud CLS log set ID.	
+     * @param LogSetId Tencent Cloud CLS log set ID.	
      */
     public void setLogSetId(String LogSetId) {
         this.LogSetId = LogSetId;
     }
 
     /**
-     * Get The ID of the Tencent Cloud CLS log topic. 
-     * @return TopicId The ID of the Tencent Cloud CLS log topic.
+     * Get Tencent Cloud CLS log topic ID. 
+     * @return TopicId Tencent Cloud CLS log topic ID.
      */
     public String getTopicId() {
         return this.TopicId;
     }
 
     /**
-     * Set The ID of the Tencent Cloud CLS log topic.
-     * @param TopicId The ID of the Tencent Cloud CLS log topic.
+     * Set Tencent Cloud CLS log topic ID.
+     * @param TopicId Tencent Cloud CLS log topic ID.
      */
     public void setTopicId(String TopicId) {
         this.TopicId = TopicId;
     }
 
     /**
-     * Get The region of the Tencent Cloud CLS log set. 
-     * @return LogSetRegion The region of the Tencent Cloud CLS log set.
+     * Get Region of the Tencent Cloud CLS log set. 
+     * @return LogSetRegion Region of the Tencent Cloud CLS log set.
      */
     public String getLogSetRegion() {
         return this.LogSetRegion;
     }
 
     /**
-     * Set The region of the Tencent Cloud CLS log set.
-     * @param LogSetRegion The region of the Tencent Cloud CLS log set.
+     * Set Region of the Tencent Cloud CLS log set.
+     * @param LogSetRegion Region of the Tencent Cloud CLS log set.
      */
     public void setLogSetRegion(String LogSetRegion) {
         this.LogSetRegion = LogSetRegion;

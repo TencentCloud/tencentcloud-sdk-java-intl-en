@@ -24,299 +24,325 @@ import java.util.HashMap;
 public class ModifyRealtimeLogDeliveryTaskRequest extends AbstractModel {
 
     /**
-    * Zone ID.
+    * <p>Site ID.</p>
     */
     @SerializedName("ZoneId")
     @Expose
     private String ZoneId;
 
     /**
-    * The ID of the real-time log delivery task.
+    * <p>ID of the real-time log delivery task.</p>
     */
     @SerializedName("TaskId")
     @Expose
     private String TaskId;
 
     /**
-    * The name of the real-time log delivery task, which is a combination of numbers, English letters, - and _, containing up to 200 characters. If this field is not filled in, the original configuration will be retained.
+    * <p>Name of the real-time log delivery task. It can contain digits, letters, hyphens (-), and underscores (_), with a maximum of 200 characters. If left empty, the original configuration applies.</p>
     */
     @SerializedName("TaskName")
     @Expose
     private String TaskName;
 
     /**
-    * The status of the real-time log delivery task. Valid values:
-<li>enabled: Enabled;</li>
-<li>disabled: Disabled.</li>If this field is not filled in, the original configuration will be retained.
+    * <p>Status of the real-time log delivery task. Valid values:</p><ul><li>`enabled`: enabled;</li><li>`disabled`: disabled.</li></ul>If left empty, the original configuration applies.
     */
     @SerializedName("DeliveryStatus")
     @Expose
     private String DeliveryStatus;
 
     /**
-    * The list of entities (Layer 7 domains or Layer 4 proxy instances) corresponding to the real-time log delivery task. Valid value examples:
-<li>Layer 7 domain: domain.example.com;</li>
-<li>Layer 4 proxy instance: sid-2s69eb5wcms7.</li>If this field is not filled in, the original configuration will be retained.
+    * <p>List of entities that the real-time log delivery task applies to (Layer 7 domain names or Layer 4 proxy instances). Examples:</p><ul><li>Layer 7 domain name: `domain.example.com`;</li><li>Layer 4 proxy instance: `sid-2s69eb5wcms7`.</li></ul>If left empty, the original configuration applies. For valid values, see <a href="https://www.tencentcloud.com/document/product/1145/59024">DescribeL4Proxy</a>.
     */
     @SerializedName("EntityList")
     @Expose
     private String [] EntityList;
 
     /**
-    * The list of predefined fields for delivery. If this field is not filled in, the original configuration will be retained.
+    * <p>List of preset fields to deliver. If left empty, the original configuration applies. For valid values, see `DescribeLogFields`.</p>
     */
     @SerializedName("Fields")
     @Expose
     private String [] Fields;
 
     /**
-    * The list of custom fields for shipping, which supports extracting specified content from HTTP request headers, response headers, cookies, and request bodies. If this parameter is not filled in, the original configuration will be retained. The name of each custom field should be unique and the maximum number of fields is 200. Up to 5 custom fields of the request body type can be added for a single real-time log push task. Currently, adding custom fields is supported only for site acceleration logs (LogType=domain).
+    * <p>List of custom fields to deliver. You can extract specified content from HTTP request headers, response headers, cookies, and request bodies.</p><p>Custom field names must be unique. Custom fields can be added only for Layer 7 access logs (`LogType` = `l7-access-logs` or `domain`).</p><p>The number of custom fields you can configure is subject to a quota. If the quota is insufficient, <a href="https://www.tencentcloud.com/contact-us">contact us</a>.</p>
     */
     @SerializedName("CustomFields")
     @Expose
     private CustomField [] CustomFields;
 
     /**
-    * Log delivery filter conditions. If this field is not filled in, all logs will be delivered.
+    * <p>List of custom expression fields to deliver. By defining the field name and value expression for log delivery, you can deliver personalized real-time log content. For details, see <a href="https://www.tencentcloud.com/document/product/1145/61302">Custom Log Field Expressions</a>.</p><p>Custom fields can be added only for Layer 7 access logs (`LogType` = `l7-access-logs` or `domain`).</p><p>The number of custom fields you can configure is subject to a quota. If the quota is insufficient, <a href="https://www.tencentcloud.com/contact-us">contact us</a>.</p><p><strong>Note</strong>: If a field in `CustomExpressionFields` has the same name as a field in `Fields` or `CustomFields`, the value in `CustomExpressionFields` takes precedence.</p>
+    */
+    @SerializedName("CustomExpressionFields")
+    @Expose
+    private CustomExpressionField [] CustomExpressionFields;
+
+    /**
+    * <p>Filter conditions for log delivery. If left empty, all logs are delivered.</p>
     */
     @SerializedName("DeliveryConditions")
     @Expose
     private DeliveryCondition [] DeliveryConditions;
 
     /**
-    * The sampling ratio in permille. Value range: 1 to 1000. For example, 605 represents a sampling ratio of 60.5%. If this field is not filled in, the original configuration will be retained.
+    * <p>Sampling ratio, in per mille. Value range: 1-1000. For example, 605 means a sampling ratio of 60.5%. If left empty, the original configuration applies.</p>
     */
     @SerializedName("Sample")
     @Expose
     private Long Sample;
 
     /**
-    * Output format for log delivery. If this field is not specified, the original configuration will be retained. Specifically, when TaskType is cls, the value of LogFormat.FormatType can only be json, and other parameters in LogFormat will be ignored. It is recommended not to input LogFormat.
+    * <p>Output format for log delivery. For usage details, see <a href="https://www.tencentcloud.com/document/product/1145/64485">Custom Log Output Format</a>. If left blank, the default format applies. The default format logic is as follows:</p><ul><li>When `TaskType` is `custom_endpoint`, the default format is an array of JSON objects, each JSON object represents a log entry;</li><li>When `TaskType` is `s3`, the default format is JSON Lines;</li></ul><p>Particularly, when `TaskType` is `cls` or `log_analysis`, the only allowed value for `LogFormat.FormatType` is `json`, and other parameters in `LogFormat` will be ignored. It is recommended not to transfer `LogFormat`.</p>
     */
     @SerializedName("LogFormat")
     @Expose
     private LogFormat LogFormat;
 
     /**
-    * The configuration information of the custom HTTP service. If this field is not filled in, the original configuration will be retained.
+    * <p>Configuration of the custom HTTP service. If left empty, the original configuration applies.</p>
     */
     @SerializedName("CustomEndpoint")
     @Expose
     private CustomEndpoint CustomEndpoint;
 
     /**
-    * The configuration information of the AWS S3-compatible bucket. If this field is not filled in, the original configuration will be retained.
+    * <p>Configuration of the S3-compatible (SigV4 authentication algorithm compatible) object storage. If left empty, the original configuration applies.</p>
     */
     @SerializedName("S3")
     @Expose
     private S3 S3;
 
     /**
-     * Get Zone ID. 
-     * @return ZoneId Zone ID.
+    * <p>Configuration of the AWS S3 object storage. If left empty, the original configuration applies.</p>
+    */
+    @SerializedName("AWSS3")
+    @Expose
+    private AWSS3 AWSS3;
+
+    /**
+     * Get <p>Site ID.</p> 
+     * @return ZoneId <p>Site ID.</p>
      */
     public String getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set Zone ID.
-     * @param ZoneId Zone ID.
+     * Set <p>Site ID.</p>
+     * @param ZoneId <p>Site ID.</p>
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get The ID of the real-time log delivery task. 
-     * @return TaskId The ID of the real-time log delivery task.
+     * Get <p>ID of the real-time log delivery task.</p> 
+     * @return TaskId <p>ID of the real-time log delivery task.</p>
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set The ID of the real-time log delivery task.
-     * @param TaskId The ID of the real-time log delivery task.
+     * Set <p>ID of the real-time log delivery task.</p>
+     * @param TaskId <p>ID of the real-time log delivery task.</p>
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * Get The name of the real-time log delivery task, which is a combination of numbers, English letters, - and _, containing up to 200 characters. If this field is not filled in, the original configuration will be retained. 
-     * @return TaskName The name of the real-time log delivery task, which is a combination of numbers, English letters, - and _, containing up to 200 characters. If this field is not filled in, the original configuration will be retained.
+     * Get <p>Name of the real-time log delivery task. It can contain digits, letters, hyphens (-), and underscores (_), with a maximum of 200 characters. If left empty, the original configuration applies.</p> 
+     * @return TaskName <p>Name of the real-time log delivery task. It can contain digits, letters, hyphens (-), and underscores (_), with a maximum of 200 characters. If left empty, the original configuration applies.</p>
      */
     public String getTaskName() {
         return this.TaskName;
     }
 
     /**
-     * Set The name of the real-time log delivery task, which is a combination of numbers, English letters, - and _, containing up to 200 characters. If this field is not filled in, the original configuration will be retained.
-     * @param TaskName The name of the real-time log delivery task, which is a combination of numbers, English letters, - and _, containing up to 200 characters. If this field is not filled in, the original configuration will be retained.
+     * Set <p>Name of the real-time log delivery task. It can contain digits, letters, hyphens (-), and underscores (_), with a maximum of 200 characters. If left empty, the original configuration applies.</p>
+     * @param TaskName <p>Name of the real-time log delivery task. It can contain digits, letters, hyphens (-), and underscores (_), with a maximum of 200 characters. If left empty, the original configuration applies.</p>
      */
     public void setTaskName(String TaskName) {
         this.TaskName = TaskName;
     }
 
     /**
-     * Get The status of the real-time log delivery task. Valid values:
-<li>enabled: Enabled;</li>
-<li>disabled: Disabled.</li>If this field is not filled in, the original configuration will be retained. 
-     * @return DeliveryStatus The status of the real-time log delivery task. Valid values:
-<li>enabled: Enabled;</li>
-<li>disabled: Disabled.</li>If this field is not filled in, the original configuration will be retained.
+     * Get <p>Status of the real-time log delivery task. Valid values:</p><ul><li>`enabled`: enabled;</li><li>`disabled`: disabled.</li></ul>If left empty, the original configuration applies. 
+     * @return DeliveryStatus <p>Status of the real-time log delivery task. Valid values:</p><ul><li>`enabled`: enabled;</li><li>`disabled`: disabled.</li></ul>If left empty, the original configuration applies.
      */
     public String getDeliveryStatus() {
         return this.DeliveryStatus;
     }
 
     /**
-     * Set The status of the real-time log delivery task. Valid values:
-<li>enabled: Enabled;</li>
-<li>disabled: Disabled.</li>If this field is not filled in, the original configuration will be retained.
-     * @param DeliveryStatus The status of the real-time log delivery task. Valid values:
-<li>enabled: Enabled;</li>
-<li>disabled: Disabled.</li>If this field is not filled in, the original configuration will be retained.
+     * Set <p>Status of the real-time log delivery task. Valid values:</p><ul><li>`enabled`: enabled;</li><li>`disabled`: disabled.</li></ul>If left empty, the original configuration applies.
+     * @param DeliveryStatus <p>Status of the real-time log delivery task. Valid values:</p><ul><li>`enabled`: enabled;</li><li>`disabled`: disabled.</li></ul>If left empty, the original configuration applies.
      */
     public void setDeliveryStatus(String DeliveryStatus) {
         this.DeliveryStatus = DeliveryStatus;
     }
 
     /**
-     * Get The list of entities (Layer 7 domains or Layer 4 proxy instances) corresponding to the real-time log delivery task. Valid value examples:
-<li>Layer 7 domain: domain.example.com;</li>
-<li>Layer 4 proxy instance: sid-2s69eb5wcms7.</li>If this field is not filled in, the original configuration will be retained. 
-     * @return EntityList The list of entities (Layer 7 domains or Layer 4 proxy instances) corresponding to the real-time log delivery task. Valid value examples:
-<li>Layer 7 domain: domain.example.com;</li>
-<li>Layer 4 proxy instance: sid-2s69eb5wcms7.</li>If this field is not filled in, the original configuration will be retained.
+     * Get <p>List of entities that the real-time log delivery task applies to (Layer 7 domain names or Layer 4 proxy instances). Examples:</p><ul><li>Layer 7 domain name: `domain.example.com`;</li><li>Layer 4 proxy instance: `sid-2s69eb5wcms7`.</li></ul>If left empty, the original configuration applies. For valid values, see <a href="https://www.tencentcloud.com/document/product/1145/59024">DescribeL4Proxy</a>. 
+     * @return EntityList <p>List of entities that the real-time log delivery task applies to (Layer 7 domain names or Layer 4 proxy instances). Examples:</p><ul><li>Layer 7 domain name: `domain.example.com`;</li><li>Layer 4 proxy instance: `sid-2s69eb5wcms7`.</li></ul>If left empty, the original configuration applies. For valid values, see <a href="https://www.tencentcloud.com/document/product/1145/59024">DescribeL4Proxy</a>.
      */
     public String [] getEntityList() {
         return this.EntityList;
     }
 
     /**
-     * Set The list of entities (Layer 7 domains or Layer 4 proxy instances) corresponding to the real-time log delivery task. Valid value examples:
-<li>Layer 7 domain: domain.example.com;</li>
-<li>Layer 4 proxy instance: sid-2s69eb5wcms7.</li>If this field is not filled in, the original configuration will be retained.
-     * @param EntityList The list of entities (Layer 7 domains or Layer 4 proxy instances) corresponding to the real-time log delivery task. Valid value examples:
-<li>Layer 7 domain: domain.example.com;</li>
-<li>Layer 4 proxy instance: sid-2s69eb5wcms7.</li>If this field is not filled in, the original configuration will be retained.
+     * Set <p>List of entities that the real-time log delivery task applies to (Layer 7 domain names or Layer 4 proxy instances). Examples:</p><ul><li>Layer 7 domain name: `domain.example.com`;</li><li>Layer 4 proxy instance: `sid-2s69eb5wcms7`.</li></ul>If left empty, the original configuration applies. For valid values, see <a href="https://www.tencentcloud.com/document/product/1145/59024">DescribeL4Proxy</a>.
+     * @param EntityList <p>List of entities that the real-time log delivery task applies to (Layer 7 domain names or Layer 4 proxy instances). Examples:</p><ul><li>Layer 7 domain name: `domain.example.com`;</li><li>Layer 4 proxy instance: `sid-2s69eb5wcms7`.</li></ul>If left empty, the original configuration applies. For valid values, see <a href="https://www.tencentcloud.com/document/product/1145/59024">DescribeL4Proxy</a>.
      */
     public void setEntityList(String [] EntityList) {
         this.EntityList = EntityList;
     }
 
     /**
-     * Get The list of predefined fields for delivery. If this field is not filled in, the original configuration will be retained. 
-     * @return Fields The list of predefined fields for delivery. If this field is not filled in, the original configuration will be retained.
+     * Get <p>List of preset fields to deliver. If left empty, the original configuration applies. For valid values, see `DescribeLogFields`.</p> 
+     * @return Fields <p>List of preset fields to deliver. If left empty, the original configuration applies. For valid values, see `DescribeLogFields`.</p>
      */
     public String [] getFields() {
         return this.Fields;
     }
 
     /**
-     * Set The list of predefined fields for delivery. If this field is not filled in, the original configuration will be retained.
-     * @param Fields The list of predefined fields for delivery. If this field is not filled in, the original configuration will be retained.
+     * Set <p>List of preset fields to deliver. If left empty, the original configuration applies. For valid values, see `DescribeLogFields`.</p>
+     * @param Fields <p>List of preset fields to deliver. If left empty, the original configuration applies. For valid values, see `DescribeLogFields`.</p>
      */
     public void setFields(String [] Fields) {
         this.Fields = Fields;
     }
 
     /**
-     * Get The list of custom fields for shipping, which supports extracting specified content from HTTP request headers, response headers, cookies, and request bodies. If this parameter is not filled in, the original configuration will be retained. The name of each custom field should be unique and the maximum number of fields is 200. Up to 5 custom fields of the request body type can be added for a single real-time log push task. Currently, adding custom fields is supported only for site acceleration logs (LogType=domain). 
-     * @return CustomFields The list of custom fields for shipping, which supports extracting specified content from HTTP request headers, response headers, cookies, and request bodies. If this parameter is not filled in, the original configuration will be retained. The name of each custom field should be unique and the maximum number of fields is 200. Up to 5 custom fields of the request body type can be added for a single real-time log push task. Currently, adding custom fields is supported only for site acceleration logs (LogType=domain).
+     * Get <p>List of custom fields to deliver. You can extract specified content from HTTP request headers, response headers, cookies, and request bodies.</p><p>Custom field names must be unique. Custom fields can be added only for Layer 7 access logs (`LogType` = `l7-access-logs` or `domain`).</p><p>The number of custom fields you can configure is subject to a quota. If the quota is insufficient, <a href="https://www.tencentcloud.com/contact-us">contact us</a>.</p> 
+     * @return CustomFields <p>List of custom fields to deliver. You can extract specified content from HTTP request headers, response headers, cookies, and request bodies.</p><p>Custom field names must be unique. Custom fields can be added only for Layer 7 access logs (`LogType` = `l7-access-logs` or `domain`).</p><p>The number of custom fields you can configure is subject to a quota. If the quota is insufficient, <a href="https://www.tencentcloud.com/contact-us">contact us</a>.</p>
      */
     public CustomField [] getCustomFields() {
         return this.CustomFields;
     }
 
     /**
-     * Set The list of custom fields for shipping, which supports extracting specified content from HTTP request headers, response headers, cookies, and request bodies. If this parameter is not filled in, the original configuration will be retained. The name of each custom field should be unique and the maximum number of fields is 200. Up to 5 custom fields of the request body type can be added for a single real-time log push task. Currently, adding custom fields is supported only for site acceleration logs (LogType=domain).
-     * @param CustomFields The list of custom fields for shipping, which supports extracting specified content from HTTP request headers, response headers, cookies, and request bodies. If this parameter is not filled in, the original configuration will be retained. The name of each custom field should be unique and the maximum number of fields is 200. Up to 5 custom fields of the request body type can be added for a single real-time log push task. Currently, adding custom fields is supported only for site acceleration logs (LogType=domain).
+     * Set <p>List of custom fields to deliver. You can extract specified content from HTTP request headers, response headers, cookies, and request bodies.</p><p>Custom field names must be unique. Custom fields can be added only for Layer 7 access logs (`LogType` = `l7-access-logs` or `domain`).</p><p>The number of custom fields you can configure is subject to a quota. If the quota is insufficient, <a href="https://www.tencentcloud.com/contact-us">contact us</a>.</p>
+     * @param CustomFields <p>List of custom fields to deliver. You can extract specified content from HTTP request headers, response headers, cookies, and request bodies.</p><p>Custom field names must be unique. Custom fields can be added only for Layer 7 access logs (`LogType` = `l7-access-logs` or `domain`).</p><p>The number of custom fields you can configure is subject to a quota. If the quota is insufficient, <a href="https://www.tencentcloud.com/contact-us">contact us</a>.</p>
      */
     public void setCustomFields(CustomField [] CustomFields) {
         this.CustomFields = CustomFields;
     }
 
     /**
-     * Get Log delivery filter conditions. If this field is not filled in, all logs will be delivered. 
-     * @return DeliveryConditions Log delivery filter conditions. If this field is not filled in, all logs will be delivered.
+     * Get <p>List of custom expression fields to deliver. By defining the field name and value expression for log delivery, you can deliver personalized real-time log content. For details, see <a href="https://www.tencentcloud.com/document/product/1145/61302">Custom Log Field Expressions</a>.</p><p>Custom fields can be added only for Layer 7 access logs (`LogType` = `l7-access-logs` or `domain`).</p><p>The number of custom fields you can configure is subject to a quota. If the quota is insufficient, <a href="https://www.tencentcloud.com/contact-us">contact us</a>.</p><p><strong>Note</strong>: If a field in `CustomExpressionFields` has the same name as a field in `Fields` or `CustomFields`, the value in `CustomExpressionFields` takes precedence.</p> 
+     * @return CustomExpressionFields <p>List of custom expression fields to deliver. By defining the field name and value expression for log delivery, you can deliver personalized real-time log content. For details, see <a href="https://www.tencentcloud.com/document/product/1145/61302">Custom Log Field Expressions</a>.</p><p>Custom fields can be added only for Layer 7 access logs (`LogType` = `l7-access-logs` or `domain`).</p><p>The number of custom fields you can configure is subject to a quota. If the quota is insufficient, <a href="https://www.tencentcloud.com/contact-us">contact us</a>.</p><p><strong>Note</strong>: If a field in `CustomExpressionFields` has the same name as a field in `Fields` or `CustomFields`, the value in `CustomExpressionFields` takes precedence.</p>
+     */
+    public CustomExpressionField [] getCustomExpressionFields() {
+        return this.CustomExpressionFields;
+    }
+
+    /**
+     * Set <p>List of custom expression fields to deliver. By defining the field name and value expression for log delivery, you can deliver personalized real-time log content. For details, see <a href="https://www.tencentcloud.com/document/product/1145/61302">Custom Log Field Expressions</a>.</p><p>Custom fields can be added only for Layer 7 access logs (`LogType` = `l7-access-logs` or `domain`).</p><p>The number of custom fields you can configure is subject to a quota. If the quota is insufficient, <a href="https://www.tencentcloud.com/contact-us">contact us</a>.</p><p><strong>Note</strong>: If a field in `CustomExpressionFields` has the same name as a field in `Fields` or `CustomFields`, the value in `CustomExpressionFields` takes precedence.</p>
+     * @param CustomExpressionFields <p>List of custom expression fields to deliver. By defining the field name and value expression for log delivery, you can deliver personalized real-time log content. For details, see <a href="https://www.tencentcloud.com/document/product/1145/61302">Custom Log Field Expressions</a>.</p><p>Custom fields can be added only for Layer 7 access logs (`LogType` = `l7-access-logs` or `domain`).</p><p>The number of custom fields you can configure is subject to a quota. If the quota is insufficient, <a href="https://www.tencentcloud.com/contact-us">contact us</a>.</p><p><strong>Note</strong>: If a field in `CustomExpressionFields` has the same name as a field in `Fields` or `CustomFields`, the value in `CustomExpressionFields` takes precedence.</p>
+     */
+    public void setCustomExpressionFields(CustomExpressionField [] CustomExpressionFields) {
+        this.CustomExpressionFields = CustomExpressionFields;
+    }
+
+    /**
+     * Get <p>Filter conditions for log delivery. If left empty, all logs are delivered.</p> 
+     * @return DeliveryConditions <p>Filter conditions for log delivery. If left empty, all logs are delivered.</p>
      */
     public DeliveryCondition [] getDeliveryConditions() {
         return this.DeliveryConditions;
     }
 
     /**
-     * Set Log delivery filter conditions. If this field is not filled in, all logs will be delivered.
-     * @param DeliveryConditions Log delivery filter conditions. If this field is not filled in, all logs will be delivered.
+     * Set <p>Filter conditions for log delivery. If left empty, all logs are delivered.</p>
+     * @param DeliveryConditions <p>Filter conditions for log delivery. If left empty, all logs are delivered.</p>
      */
     public void setDeliveryConditions(DeliveryCondition [] DeliveryConditions) {
         this.DeliveryConditions = DeliveryConditions;
     }
 
     /**
-     * Get The sampling ratio in permille. Value range: 1 to 1000. For example, 605 represents a sampling ratio of 60.5%. If this field is not filled in, the original configuration will be retained. 
-     * @return Sample The sampling ratio in permille. Value range: 1 to 1000. For example, 605 represents a sampling ratio of 60.5%. If this field is not filled in, the original configuration will be retained.
+     * Get <p>Sampling ratio, in per mille. Value range: 1-1000. For example, 605 means a sampling ratio of 60.5%. If left empty, the original configuration applies.</p> 
+     * @return Sample <p>Sampling ratio, in per mille. Value range: 1-1000. For example, 605 means a sampling ratio of 60.5%. If left empty, the original configuration applies.</p>
      */
     public Long getSample() {
         return this.Sample;
     }
 
     /**
-     * Set The sampling ratio in permille. Value range: 1 to 1000. For example, 605 represents a sampling ratio of 60.5%. If this field is not filled in, the original configuration will be retained.
-     * @param Sample The sampling ratio in permille. Value range: 1 to 1000. For example, 605 represents a sampling ratio of 60.5%. If this field is not filled in, the original configuration will be retained.
+     * Set <p>Sampling ratio, in per mille. Value range: 1-1000. For example, 605 means a sampling ratio of 60.5%. If left empty, the original configuration applies.</p>
+     * @param Sample <p>Sampling ratio, in per mille. Value range: 1-1000. For example, 605 means a sampling ratio of 60.5%. If left empty, the original configuration applies.</p>
      */
     public void setSample(Long Sample) {
         this.Sample = Sample;
     }
 
     /**
-     * Get Output format for log delivery. If this field is not specified, the original configuration will be retained. Specifically, when TaskType is cls, the value of LogFormat.FormatType can only be json, and other parameters in LogFormat will be ignored. It is recommended not to input LogFormat. 
-     * @return LogFormat Output format for log delivery. If this field is not specified, the original configuration will be retained. Specifically, when TaskType is cls, the value of LogFormat.FormatType can only be json, and other parameters in LogFormat will be ignored. It is recommended not to input LogFormat.
+     * Get <p>Output format for log delivery. For usage details, see <a href="https://www.tencentcloud.com/document/product/1145/64485">Custom Log Output Format</a>. If left blank, the default format applies. The default format logic is as follows:</p><ul><li>When `TaskType` is `custom_endpoint`, the default format is an array of JSON objects, each JSON object represents a log entry;</li><li>When `TaskType` is `s3`, the default format is JSON Lines;</li></ul><p>Particularly, when `TaskType` is `cls` or `log_analysis`, the only allowed value for `LogFormat.FormatType` is `json`, and other parameters in `LogFormat` will be ignored. It is recommended not to transfer `LogFormat`.</p> 
+     * @return LogFormat <p>Output format for log delivery. For usage details, see <a href="https://www.tencentcloud.com/document/product/1145/64485">Custom Log Output Format</a>. If left blank, the default format applies. The default format logic is as follows:</p><ul><li>When `TaskType` is `custom_endpoint`, the default format is an array of JSON objects, each JSON object represents a log entry;</li><li>When `TaskType` is `s3`, the default format is JSON Lines;</li></ul><p>Particularly, when `TaskType` is `cls` or `log_analysis`, the only allowed value for `LogFormat.FormatType` is `json`, and other parameters in `LogFormat` will be ignored. It is recommended not to transfer `LogFormat`.</p>
      */
     public LogFormat getLogFormat() {
         return this.LogFormat;
     }
 
     /**
-     * Set Output format for log delivery. If this field is not specified, the original configuration will be retained. Specifically, when TaskType is cls, the value of LogFormat.FormatType can only be json, and other parameters in LogFormat will be ignored. It is recommended not to input LogFormat.
-     * @param LogFormat Output format for log delivery. If this field is not specified, the original configuration will be retained. Specifically, when TaskType is cls, the value of LogFormat.FormatType can only be json, and other parameters in LogFormat will be ignored. It is recommended not to input LogFormat.
+     * Set <p>Output format for log delivery. For usage details, see <a href="https://www.tencentcloud.com/document/product/1145/64485">Custom Log Output Format</a>. If left blank, the default format applies. The default format logic is as follows:</p><ul><li>When `TaskType` is `custom_endpoint`, the default format is an array of JSON objects, each JSON object represents a log entry;</li><li>When `TaskType` is `s3`, the default format is JSON Lines;</li></ul><p>Particularly, when `TaskType` is `cls` or `log_analysis`, the only allowed value for `LogFormat.FormatType` is `json`, and other parameters in `LogFormat` will be ignored. It is recommended not to transfer `LogFormat`.</p>
+     * @param LogFormat <p>Output format for log delivery. For usage details, see <a href="https://www.tencentcloud.com/document/product/1145/64485">Custom Log Output Format</a>. If left blank, the default format applies. The default format logic is as follows:</p><ul><li>When `TaskType` is `custom_endpoint`, the default format is an array of JSON objects, each JSON object represents a log entry;</li><li>When `TaskType` is `s3`, the default format is JSON Lines;</li></ul><p>Particularly, when `TaskType` is `cls` or `log_analysis`, the only allowed value for `LogFormat.FormatType` is `json`, and other parameters in `LogFormat` will be ignored. It is recommended not to transfer `LogFormat`.</p>
      */
     public void setLogFormat(LogFormat LogFormat) {
         this.LogFormat = LogFormat;
     }
 
     /**
-     * Get The configuration information of the custom HTTP service. If this field is not filled in, the original configuration will be retained. 
-     * @return CustomEndpoint The configuration information of the custom HTTP service. If this field is not filled in, the original configuration will be retained.
+     * Get <p>Configuration of the custom HTTP service. If left empty, the original configuration applies.</p> 
+     * @return CustomEndpoint <p>Configuration of the custom HTTP service. If left empty, the original configuration applies.</p>
      */
     public CustomEndpoint getCustomEndpoint() {
         return this.CustomEndpoint;
     }
 
     /**
-     * Set The configuration information of the custom HTTP service. If this field is not filled in, the original configuration will be retained.
-     * @param CustomEndpoint The configuration information of the custom HTTP service. If this field is not filled in, the original configuration will be retained.
+     * Set <p>Configuration of the custom HTTP service. If left empty, the original configuration applies.</p>
+     * @param CustomEndpoint <p>Configuration of the custom HTTP service. If left empty, the original configuration applies.</p>
      */
     public void setCustomEndpoint(CustomEndpoint CustomEndpoint) {
         this.CustomEndpoint = CustomEndpoint;
     }
 
     /**
-     * Get The configuration information of the AWS S3-compatible bucket. If this field is not filled in, the original configuration will be retained. 
-     * @return S3 The configuration information of the AWS S3-compatible bucket. If this field is not filled in, the original configuration will be retained.
+     * Get <p>Configuration of the S3-compatible (SigV4 authentication algorithm compatible) object storage. If left empty, the original configuration applies.</p> 
+     * @return S3 <p>Configuration of the S3-compatible (SigV4 authentication algorithm compatible) object storage. If left empty, the original configuration applies.</p>
      */
     public S3 getS3() {
         return this.S3;
     }
 
     /**
-     * Set The configuration information of the AWS S3-compatible bucket. If this field is not filled in, the original configuration will be retained.
-     * @param S3 The configuration information of the AWS S3-compatible bucket. If this field is not filled in, the original configuration will be retained.
+     * Set <p>Configuration of the S3-compatible (SigV4 authentication algorithm compatible) object storage. If left empty, the original configuration applies.</p>
+     * @param S3 <p>Configuration of the S3-compatible (SigV4 authentication algorithm compatible) object storage. If left empty, the original configuration applies.</p>
      */
     public void setS3(S3 S3) {
         this.S3 = S3;
+    }
+
+    /**
+     * Get <p>Configuration of the AWS S3 object storage. If left empty, the original configuration applies.</p> 
+     * @return AWSS3 <p>Configuration of the AWS S3 object storage. If left empty, the original configuration applies.</p>
+     */
+    public AWSS3 getAWSS3() {
+        return this.AWSS3;
+    }
+
+    /**
+     * Set <p>Configuration of the AWS S3 object storage. If left empty, the original configuration applies.</p>
+     * @param AWSS3 <p>Configuration of the AWS S3 object storage. If left empty, the original configuration applies.</p>
+     */
+    public void setAWSS3(AWSS3 AWSS3) {
+        this.AWSS3 = AWSS3;
     }
 
     public ModifyRealtimeLogDeliveryTaskRequest() {
@@ -357,6 +383,12 @@ public class ModifyRealtimeLogDeliveryTaskRequest extends AbstractModel {
                 this.CustomFields[i] = new CustomField(source.CustomFields[i]);
             }
         }
+        if (source.CustomExpressionFields != null) {
+            this.CustomExpressionFields = new CustomExpressionField[source.CustomExpressionFields.length];
+            for (int i = 0; i < source.CustomExpressionFields.length; i++) {
+                this.CustomExpressionFields[i] = new CustomExpressionField(source.CustomExpressionFields[i]);
+            }
+        }
         if (source.DeliveryConditions != null) {
             this.DeliveryConditions = new DeliveryCondition[source.DeliveryConditions.length];
             for (int i = 0; i < source.DeliveryConditions.length; i++) {
@@ -375,6 +407,9 @@ public class ModifyRealtimeLogDeliveryTaskRequest extends AbstractModel {
         if (source.S3 != null) {
             this.S3 = new S3(source.S3);
         }
+        if (source.AWSS3 != null) {
+            this.AWSS3 = new AWSS3(source.AWSS3);
+        }
     }
 
 
@@ -389,11 +424,13 @@ public class ModifyRealtimeLogDeliveryTaskRequest extends AbstractModel {
         this.setParamArraySimple(map, prefix + "EntityList.", this.EntityList);
         this.setParamArraySimple(map, prefix + "Fields.", this.Fields);
         this.setParamArrayObj(map, prefix + "CustomFields.", this.CustomFields);
+        this.setParamArrayObj(map, prefix + "CustomExpressionFields.", this.CustomExpressionFields);
         this.setParamArrayObj(map, prefix + "DeliveryConditions.", this.DeliveryConditions);
         this.setParamSimple(map, prefix + "Sample", this.Sample);
         this.setParamObj(map, prefix + "LogFormat.", this.LogFormat);
         this.setParamObj(map, prefix + "CustomEndpoint.", this.CustomEndpoint);
         this.setParamObj(map, prefix + "S3.", this.S3);
+        this.setParamObj(map, prefix + "AWSS3.", this.AWSS3);
 
     }
 }

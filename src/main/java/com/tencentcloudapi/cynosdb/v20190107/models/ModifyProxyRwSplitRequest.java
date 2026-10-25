@@ -45,7 +45,7 @@ public class ModifyProxyRwSplitRequest extends AbstractModel {
     private String ConsistencyType;
 
     /**
-    * <p>Consistency timeout.<br>Value range: 0–1000000 (µs). Setting it to 0 means that if a read-only instance has a delay, causing the consistency policy to fail, the request will wait indefinitely.</p>
+    * <p>Consistency timeout. Value range: 0–1000000 (ms). If set to 0, requests will wait indefinitely when a read-only instance has a delay that causes the consistency policy to fail.</p>
     */
     @SerializedName("ConsistencyTimeOut")
     @Expose
@@ -205,16 +205,16 @@ public class ModifyProxyRwSplitRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>Consistency timeout.<br>Value range: 0–1000000 (µs). Setting it to 0 means that if a read-only instance has a delay, causing the consistency policy to fail, the request will wait indefinitely.</p> 
-     * @return ConsistencyTimeOut <p>Consistency timeout.<br>Value range: 0–1000000 (µs). Setting it to 0 means that if a read-only instance has a delay, causing the consistency policy to fail, the request will wait indefinitely.</p>
+     * Get <p>Consistency timeout. Value range: 0–1000000 (ms). If set to 0, requests will wait indefinitely when a read-only instance has a delay that causes the consistency policy to fail.</p> 
+     * @return ConsistencyTimeOut <p>Consistency timeout. Value range: 0–1000000 (ms). If set to 0, requests will wait indefinitely when a read-only instance has a delay that causes the consistency policy to fail.</p>
      */
     public String getConsistencyTimeOut() {
         return this.ConsistencyTimeOut;
     }
 
     /**
-     * Set <p>Consistency timeout.<br>Value range: 0–1000000 (µs). Setting it to 0 means that if a read-only instance has a delay, causing the consistency policy to fail, the request will wait indefinitely.</p>
-     * @param ConsistencyTimeOut <p>Consistency timeout.<br>Value range: 0–1000000 (µs). Setting it to 0 means that if a read-only instance has a delay, causing the consistency policy to fail, the request will wait indefinitely.</p>
+     * Set <p>Consistency timeout. Value range: 0–1000000 (ms). If set to 0, requests will wait indefinitely when a read-only instance has a delay that causes the consistency policy to fail.</p>
+     * @param ConsistencyTimeOut <p>Consistency timeout. Value range: 0–1000000 (ms). If set to 0, requests will wait indefinitely when a read-only instance has a delay that causes the consistency policy to fail.</p>
      */
     public void setConsistencyTimeOut(String ConsistencyTimeOut) {
         this.ConsistencyTimeOut = ConsistencyTimeOut;

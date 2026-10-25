@@ -25,7 +25,7 @@ public class DisassociateSecurityGroupsRequest extends AbstractModel {
 
     /**
     * Array of instance group IDs, starting with the cynosdbmysql-grp- prefix or cluster ID.
-Description: To get the instance group ID of a cluster, perform [Query Cluster Instance Group](https://www.tencentcloud.com/document/product/1003/103934?from_cn_redirect=1).
+Description: To get the instance group ID of a cluster, perform [Query cluster instance group](https://www.tencentcloud.com/document/product/1003/103934?from_cn_redirect=1).
     */
     @SerializedName("InstanceIds")
     @Expose
@@ -48,9 +48,9 @@ Description: Please enter correctly the primary AZ of the cluster location. If t
 
     /**
      * Get Array of instance group IDs, starting with the cynosdbmysql-grp- prefix or cluster ID.
-Description: To get the instance group ID of a cluster, perform [Query Cluster Instance Group](https://www.tencentcloud.com/document/product/1003/103934?from_cn_redirect=1). 
+Description: To get the instance group ID of a cluster, perform [Query cluster instance group](https://www.tencentcloud.com/document/product/1003/103934?from_cn_redirect=1). 
      * @return InstanceIds Array of instance group IDs, starting with the cynosdbmysql-grp- prefix or cluster ID.
-Description: To get the instance group ID of a cluster, perform [Query Cluster Instance Group](https://www.tencentcloud.com/document/product/1003/103934?from_cn_redirect=1).
+Description: To get the instance group ID of a cluster, perform [Query cluster instance group](https://www.tencentcloud.com/document/product/1003/103934?from_cn_redirect=1).
      */
     public String [] getInstanceIds() {
         return this.InstanceIds;
@@ -58,9 +58,9 @@ Description: To get the instance group ID of a cluster, perform [Query Cluster I
 
     /**
      * Set Array of instance group IDs, starting with the cynosdbmysql-grp- prefix or cluster ID.
-Description: To get the instance group ID of a cluster, perform [Query Cluster Instance Group](https://www.tencentcloud.com/document/product/1003/103934?from_cn_redirect=1).
+Description: To get the instance group ID of a cluster, perform [Query cluster instance group](https://www.tencentcloud.com/document/product/1003/103934?from_cn_redirect=1).
      * @param InstanceIds Array of instance group IDs, starting with the cynosdbmysql-grp- prefix or cluster ID.
-Description: To get the instance group ID of a cluster, perform [Query Cluster Instance Group](https://www.tencentcloud.com/document/product/1003/103934?from_cn_redirect=1).
+Description: To get the instance group ID of a cluster, perform [Query cluster instance group](https://www.tencentcloud.com/document/product/1003/103934?from_cn_redirect=1).
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;

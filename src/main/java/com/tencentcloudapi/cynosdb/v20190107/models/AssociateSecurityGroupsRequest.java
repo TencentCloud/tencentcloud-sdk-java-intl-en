@@ -24,8 +24,8 @@ import java.util.HashMap;
 public class AssociateSecurityGroupsRequest extends AbstractModel {
 
     /**
-    * Array of instance group IDs, starting with the cynosdbmysql-grp- prefix or the TKE cluster ID.
-Description: To get the instance group ID of a cluster, perform [Query cluster instance group](https://www.tencentcloud.com/document/product/1003/103934?from_cn_redirect=1).
+    * Array of instance group IDs, starting with the cynosdbmysql-grp- prefix or cluster ID.
+Description: To get the instance group ID of a cluster, call [Query cluster instance group](https://www.tencentcloud.com/document/product/1003/103934?from_cn_redirect=1).
     */
     @SerializedName("InstanceIds")
     @Expose
@@ -46,20 +46,20 @@ Description: To get the instance group ID of a cluster, perform [Query cluster i
     private String Zone;
 
     /**
-     * Get Array of instance group IDs, starting with the cynosdbmysql-grp- prefix or the TKE cluster ID.
-Description: To get the instance group ID of a cluster, perform [Query cluster instance group](https://www.tencentcloud.com/document/product/1003/103934?from_cn_redirect=1). 
-     * @return InstanceIds Array of instance group IDs, starting with the cynosdbmysql-grp- prefix or the TKE cluster ID.
-Description: To get the instance group ID of a cluster, perform [Query cluster instance group](https://www.tencentcloud.com/document/product/1003/103934?from_cn_redirect=1).
+     * Get Array of instance group IDs, starting with the cynosdbmysql-grp- prefix or cluster ID.
+Description: To get the instance group ID of a cluster, call [Query cluster instance group](https://www.tencentcloud.com/document/product/1003/103934?from_cn_redirect=1). 
+     * @return InstanceIds Array of instance group IDs, starting with the cynosdbmysql-grp- prefix or cluster ID.
+Description: To get the instance group ID of a cluster, call [Query cluster instance group](https://www.tencentcloud.com/document/product/1003/103934?from_cn_redirect=1).
      */
     public String [] getInstanceIds() {
         return this.InstanceIds;
     }
 
     /**
-     * Set Array of instance group IDs, starting with the cynosdbmysql-grp- prefix or the TKE cluster ID.
-Description: To get the instance group ID of a cluster, perform [Query cluster instance group](https://www.tencentcloud.com/document/product/1003/103934?from_cn_redirect=1).
-     * @param InstanceIds Array of instance group IDs, starting with the cynosdbmysql-grp- prefix or the TKE cluster ID.
-Description: To get the instance group ID of a cluster, perform [Query cluster instance group](https://www.tencentcloud.com/document/product/1003/103934?from_cn_redirect=1).
+     * Set Array of instance group IDs, starting with the cynosdbmysql-grp- prefix or cluster ID.
+Description: To get the instance group ID of a cluster, call [Query cluster instance group](https://www.tencentcloud.com/document/product/1003/103934?from_cn_redirect=1).
+     * @param InstanceIds Array of instance group IDs, starting with the cynosdbmysql-grp- prefix or cluster ID.
+Description: To get the instance group ID of a cluster, call [Query cluster instance group](https://www.tencentcloud.com/document/product/1003/103934?from_cn_redirect=1).
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;

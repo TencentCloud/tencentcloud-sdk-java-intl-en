@@ -31,7 +31,7 @@ public class CustomExpressionField extends AbstractModel {
     private String Name;
 
     /**
-    * <p>The value expression of a custom log field. The maximum length of the expression is 4KB. For syntax explanation, see <a href="">Custom Log Field Expression</a>.</p>
+    * <p>The value expression of a custom log field. The maximum length of the expression is 4KB. For syntax details, see <a href="https://www.tencentcloud.com/document/product/1145/61302">Custom Log Field Expression</a>.</p>
     */
     @SerializedName("Expression")
     @Expose
@@ -61,16 +61,16 @@ public class CustomExpressionField extends AbstractModel {
     }
 
     /**
-     * Get <p>The value expression of a custom log field. The maximum length of the expression is 4KB. For syntax explanation, see <a href="">Custom Log Field Expression</a>.</p> 
-     * @return Expression <p>The value expression of a custom log field. The maximum length of the expression is 4KB. For syntax explanation, see <a href="">Custom Log Field Expression</a>.</p>
+     * Get <p>The value expression of a custom log field. The maximum length of the expression is 4KB. For syntax details, see <a href="https://www.tencentcloud.com/document/product/1145/61302">Custom Log Field Expression</a>.</p> 
+     * @return Expression <p>The value expression of a custom log field. The maximum length of the expression is 4KB. For syntax details, see <a href="https://www.tencentcloud.com/document/product/1145/61302">Custom Log Field Expression</a>.</p>
      */
     public String getExpression() {
         return this.Expression;
     }
 
     /**
-     * Set <p>The value expression of a custom log field. The maximum length of the expression is 4KB. For syntax explanation, see <a href="">Custom Log Field Expression</a>.</p>
-     * @param Expression <p>The value expression of a custom log field. The maximum length of the expression is 4KB. For syntax explanation, see <a href="">Custom Log Field Expression</a>.</p>
+     * Set <p>The value expression of a custom log field. The maximum length of the expression is 4KB. For syntax details, see <a href="https://www.tencentcloud.com/document/product/1145/61302">Custom Log Field Expression</a>.</p>
+     * @param Expression <p>The value expression of a custom log field. The maximum length of the expression is 4KB. For syntax details, see <a href="https://www.tencentcloud.com/document/product/1145/61302">Custom Log Field Expression</a>.</p>
      */
     public void setExpression(String Expression) {
         this.Expression = Expression;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class OpenReadOnlyInstanceExclusiveAccessRequest extends AbstractModel {
 
     /**
-    * Please use [cluster information description](https://www.tencentcloud.com/document/api/1003/48086?from_cn_redirect=1) to get the clusterId.
+    * Please use [Cluster information description](https://www.tencentcloud.com/document/api/1003/48086?from_cn_redirect=1) to get the clusterId.
     */
     @SerializedName("ClusterId")
     @Expose
@@ -38,14 +38,14 @@ public class OpenReadOnlyInstanceExclusiveAccessRequest extends AbstractModel {
     private String InstanceId;
 
     /**
-    * Specified vpc ID. Please use [query the vpc list](https://www.tencentcloud.com/document/api/215/15778?from_cn_redirect=1) to get the vpc ID.
+    * Designated vpc ID. Please use [query the vpc list](https://www.tencentcloud.com/document/api/215/15778?from_cn_redirect=1) to get the vpc ID.
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * Designated subnet ID. If vpc ID is set up, SubnetId is required. Please use [query subnet list](https://www.tencentcloud.com/document/api/215/15784?from_cn_redirect=1) to get SubnetId.
+    * Designated subnet ID. If vpc ID is set up, SubnetId is required. Please use query subnet list (https://www.tencentcloud.com/document/api/215/15784?from_cn_redirect=1) to get SubnetId.
     */
     @SerializedName("SubnetId")
     @Expose
@@ -66,16 +66,16 @@ public class OpenReadOnlyInstanceExclusiveAccessRequest extends AbstractModel {
     private String [] SecurityGroupIds;
 
     /**
-     * Get Please use [cluster information description](https://www.tencentcloud.com/document/api/1003/48086?from_cn_redirect=1) to get the clusterId. 
-     * @return ClusterId Please use [cluster information description](https://www.tencentcloud.com/document/api/1003/48086?from_cn_redirect=1) to get the clusterId.
+     * Get Please use [Cluster information description](https://www.tencentcloud.com/document/api/1003/48086?from_cn_redirect=1) to get the clusterId. 
+     * @return ClusterId Please use [Cluster information description](https://www.tencentcloud.com/document/api/1003/48086?from_cn_redirect=1) to get the clusterId.
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set Please use [cluster information description](https://www.tencentcloud.com/document/api/1003/48086?from_cn_redirect=1) to get the clusterId.
-     * @param ClusterId Please use [cluster information description](https://www.tencentcloud.com/document/api/1003/48086?from_cn_redirect=1) to get the clusterId.
+     * Set Please use [Cluster information description](https://www.tencentcloud.com/document/api/1003/48086?from_cn_redirect=1) to get the clusterId.
+     * @param ClusterId Please use [Cluster information description](https://www.tencentcloud.com/document/api/1003/48086?from_cn_redirect=1) to get the clusterId.
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
@@ -98,32 +98,32 @@ public class OpenReadOnlyInstanceExclusiveAccessRequest extends AbstractModel {
     }
 
     /**
-     * Get Specified vpc ID. Please use [query the vpc list](https://www.tencentcloud.com/document/api/215/15778?from_cn_redirect=1) to get the vpc ID. 
-     * @return VpcId Specified vpc ID. Please use [query the vpc list](https://www.tencentcloud.com/document/api/215/15778?from_cn_redirect=1) to get the vpc ID.
+     * Get Designated vpc ID. Please use [query the vpc list](https://www.tencentcloud.com/document/api/215/15778?from_cn_redirect=1) to get the vpc ID. 
+     * @return VpcId Designated vpc ID. Please use [query the vpc list](https://www.tencentcloud.com/document/api/215/15778?from_cn_redirect=1) to get the vpc ID.
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set Specified vpc ID. Please use [query the vpc list](https://www.tencentcloud.com/document/api/215/15778?from_cn_redirect=1) to get the vpc ID.
-     * @param VpcId Specified vpc ID. Please use [query the vpc list](https://www.tencentcloud.com/document/api/215/15778?from_cn_redirect=1) to get the vpc ID.
+     * Set Designated vpc ID. Please use [query the vpc list](https://www.tencentcloud.com/document/api/215/15778?from_cn_redirect=1) to get the vpc ID.
+     * @param VpcId Designated vpc ID. Please use [query the vpc list](https://www.tencentcloud.com/document/api/215/15778?from_cn_redirect=1) to get the vpc ID.
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get Designated subnet ID. If vpc ID is set up, SubnetId is required. Please use [query subnet list](https://www.tencentcloud.com/document/api/215/15784?from_cn_redirect=1) to get SubnetId. 
-     * @return SubnetId Designated subnet ID. If vpc ID is set up, SubnetId is required. Please use [query subnet list](https://www.tencentcloud.com/document/api/215/15784?from_cn_redirect=1) to get SubnetId.
+     * Get Designated subnet ID. If vpc ID is set up, SubnetId is required. Please use query subnet list (https://www.tencentcloud.com/document/api/215/15784?from_cn_redirect=1) to get SubnetId. 
+     * @return SubnetId Designated subnet ID. If vpc ID is set up, SubnetId is required. Please use query subnet list (https://www.tencentcloud.com/document/api/215/15784?from_cn_redirect=1) to get SubnetId.
      */
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set Designated subnet ID. If vpc ID is set up, SubnetId is required. Please use [query subnet list](https://www.tencentcloud.com/document/api/215/15784?from_cn_redirect=1) to get SubnetId.
-     * @param SubnetId Designated subnet ID. If vpc ID is set up, SubnetId is required. Please use [query subnet list](https://www.tencentcloud.com/document/api/215/15784?from_cn_redirect=1) to get SubnetId.
+     * Set Designated subnet ID. If vpc ID is set up, SubnetId is required. Please use query subnet list (https://www.tencentcloud.com/document/api/215/15784?from_cn_redirect=1) to get SubnetId.
+     * @param SubnetId Designated subnet ID. If vpc ID is set up, SubnetId is required. Please use query subnet list (https://www.tencentcloud.com/document/api/215/15784?from_cn_redirect=1) to get SubnetId.
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
