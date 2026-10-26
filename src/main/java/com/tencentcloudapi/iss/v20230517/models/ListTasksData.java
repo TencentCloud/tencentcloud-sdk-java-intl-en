@@ -1,0 +1,101 @@
+/*
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+package com.tencentcloudapi.iss.v20230517.models;
+
+import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.annotations.Expose;
+import java.util.HashMap;
+
+public class ListTasksData extends AbstractModel {
+
+    /**
+    * Task list
+    */
+    @SerializedName("List")
+    @Expose
+    private TaskData [] List;
+
+    /**
+    * Number of Tasks
+    */
+    @SerializedName("TotalCount")
+    @Expose
+    private Long TotalCount;
+
+    /**
+     * Get Task list 
+     * @return List Task list
+     */
+    public TaskData [] getList() {
+        return this.List;
+    }
+
+    /**
+     * Set Task list
+     * @param List Task list
+     */
+    public void setList(TaskData [] List) {
+        this.List = List;
+    }
+
+    /**
+     * Get Number of Tasks 
+     * @return TotalCount Number of Tasks
+     */
+    public Long getTotalCount() {
+        return this.TotalCount;
+    }
+
+    /**
+     * Set Number of Tasks
+     * @param TotalCount Number of Tasks
+     */
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
+    }
+
+    public ListTasksData() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ListTasksData(ListTasksData source) {
+        if (source.List != null) {
+            this.List = new TaskData[source.List.length];
+            for (int i = 0; i < source.List.length; i++) {
+                this.List[i] = new TaskData(source.List[i]);
+            }
+        }
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+    }
+
+
+    /**
+     * Internal implementation, normal users should not use it.
+     */
+    public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArrayObj(map, prefix + "List.", this.List);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+
+    }
+}
+

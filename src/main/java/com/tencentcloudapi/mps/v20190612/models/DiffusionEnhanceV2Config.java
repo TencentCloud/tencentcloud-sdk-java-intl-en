@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class DiffusionEnhanceV2Config extends AbstractModel {
 
     /**
-    * <p>Capability configuration switch</p><p>Enumeration values: </p><ul><li>ON: Enable</li><li>OFF: Disable</li></ul><p>Default value: OFF</p>
+    * <p>Capability configuration switch</p><p>Enumeration values:</p><ul><li>ON: Enable</li><li>OFF: Disable</li></ul><p>Default value: OFF</p>
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * <p>Strength type</p><p>Enumeration values: </p><ul><li>weak: Weak</li><li>normal: Medium</li><li>strong: Strong</li></ul>
+    * <p>Strength type</p><p>Enumeration values:</p><ul><li>weak: Weak</li><li>normal: Medium</li><li>strong: Strong</li></ul>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-     * Get <p>Capability configuration switch</p><p>Enumeration values: </p><ul><li>ON: Enable</li><li>OFF: Disable</li></ul><p>Default value: OFF</p> 
-     * @return Switch <p>Capability configuration switch</p><p>Enumeration values: </p><ul><li>ON: Enable</li><li>OFF: Disable</li></ul><p>Default value: OFF</p>
+     * Get <p>Capability configuration switch</p><p>Enumeration values:</p><ul><li>ON: Enable</li><li>OFF: Disable</li></ul><p>Default value: OFF</p> 
+     * @return Switch <p>Capability configuration switch</p><p>Enumeration values:</p><ul><li>ON: Enable</li><li>OFF: Disable</li></ul><p>Default value: OFF</p>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set <p>Capability configuration switch</p><p>Enumeration values: </p><ul><li>ON: Enable</li><li>OFF: Disable</li></ul><p>Default value: OFF</p>
-     * @param Switch <p>Capability configuration switch</p><p>Enumeration values: </p><ul><li>ON: Enable</li><li>OFF: Disable</li></ul><p>Default value: OFF</p>
+     * Set <p>Capability configuration switch</p><p>Enumeration values:</p><ul><li>ON: Enable</li><li>OFF: Disable</li></ul><p>Default value: OFF</p>
+     * @param Switch <p>Capability configuration switch</p><p>Enumeration values:</p><ul><li>ON: Enable</li><li>OFF: Disable</li></ul><p>Default value: OFF</p>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get <p>Strength type</p><p>Enumeration values: </p><ul><li>weak: Weak</li><li>normal: Medium</li><li>strong: Strong</li></ul> 
-     * @return Type <p>Strength type</p><p>Enumeration values: </p><ul><li>weak: Weak</li><li>normal: Medium</li><li>strong: Strong</li></ul>
+     * Get <p>Strength type</p><p>Enumeration values:</p><ul><li>weak: Weak</li><li>normal: Medium</li><li>strong: Strong</li></ul> 
+     * @return Type <p>Strength type</p><p>Enumeration values:</p><ul><li>weak: Weak</li><li>normal: Medium</li><li>strong: Strong</li></ul>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set <p>Strength type</p><p>Enumeration values: </p><ul><li>weak: Weak</li><li>normal: Medium</li><li>strong: Strong</li></ul>
-     * @param Type <p>Strength type</p><p>Enumeration values: </p><ul><li>weak: Weak</li><li>normal: Medium</li><li>strong: Strong</li></ul>
+     * Set <p>Strength type</p><p>Enumeration values:</p><ul><li>weak: Weak</li><li>normal: Medium</li><li>strong: Strong</li></ul>
+     * @param Type <p>Strength type</p><p>Enumeration values:</p><ul><li>weak: Weak</li><li>normal: Medium</li><li>strong: Strong</li></ul>
      */
     public void setType(String Type) {
         this.Type = Type;

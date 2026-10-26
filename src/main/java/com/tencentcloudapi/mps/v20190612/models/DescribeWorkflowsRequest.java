@@ -24,107 +24,92 @@ import java.util.HashMap;
 public class DescribeWorkflowsRequest extends AbstractModel {
 
     /**
-    * Workflow ID filter. Array length limit: 100.
+    * <p>Workflow ID filter condition, with an array length limit of 100.</p>
     */
     @SerializedName("WorkflowIds")
     @Expose
     private Long [] WorkflowIds;
 
     /**
-    * Workflow status. Valid values:
-<li>Enabled: Enabled,</li>
-<li>Disabled: Disabled.</li>
-If this parameter is left empty, the workflow status will not be distinguished.
+    * <p>Workflow status. Value range:</p><li>Enabled: on,</li><li>Disabled: off.</li>If this parameter is not specified, workflow status is not distinguished.
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * Paging offset. Default value: 0.
+    * <p>Paging offset. Default value: 0.</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * Number of returned entries. Default value: 10. Maximum value: 100.
+    * <p>Number of returned entries. Default value: 10. Maximum value: 100.</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-     * Get Workflow ID filter. Array length limit: 100. 
-     * @return WorkflowIds Workflow ID filter. Array length limit: 100.
+     * Get <p>Workflow ID filter condition, with an array length limit of 100.</p> 
+     * @return WorkflowIds <p>Workflow ID filter condition, with an array length limit of 100.</p>
      */
     public Long [] getWorkflowIds() {
         return this.WorkflowIds;
     }
 
     /**
-     * Set Workflow ID filter. Array length limit: 100.
-     * @param WorkflowIds Workflow ID filter. Array length limit: 100.
+     * Set <p>Workflow ID filter condition, with an array length limit of 100.</p>
+     * @param WorkflowIds <p>Workflow ID filter condition, with an array length limit of 100.</p>
      */
     public void setWorkflowIds(Long [] WorkflowIds) {
         this.WorkflowIds = WorkflowIds;
     }
 
     /**
-     * Get Workflow status. Valid values:
-<li>Enabled: Enabled,</li>
-<li>Disabled: Disabled.</li>
-If this parameter is left empty, the workflow status will not be distinguished. 
-     * @return Status Workflow status. Valid values:
-<li>Enabled: Enabled,</li>
-<li>Disabled: Disabled.</li>
-If this parameter is left empty, the workflow status will not be distinguished.
+     * Get <p>Workflow status. Value range:</p><li>Enabled: on,</li><li>Disabled: off.</li>If this parameter is not specified, workflow status is not distinguished. 
+     * @return Status <p>Workflow status. Value range:</p><li>Enabled: on,</li><li>Disabled: off.</li>If this parameter is not specified, workflow status is not distinguished.
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Workflow status. Valid values:
-<li>Enabled: Enabled,</li>
-<li>Disabled: Disabled.</li>
-If this parameter is left empty, the workflow status will not be distinguished.
-     * @param Status Workflow status. Valid values:
-<li>Enabled: Enabled,</li>
-<li>Disabled: Disabled.</li>
-If this parameter is left empty, the workflow status will not be distinguished.
+     * Set <p>Workflow status. Value range:</p><li>Enabled: on,</li><li>Disabled: off.</li>If this parameter is not specified, workflow status is not distinguished.
+     * @param Status <p>Workflow status. Value range:</p><li>Enabled: on,</li><li>Disabled: off.</li>If this parameter is not specified, workflow status is not distinguished.
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Paging offset. Default value: 0. 
-     * @return Offset Paging offset. Default value: 0.
+     * Get <p>Paging offset. Default value: 0.</p> 
+     * @return Offset <p>Paging offset. Default value: 0.</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Paging offset. Default value: 0.
-     * @param Offset Paging offset. Default value: 0.
+     * Set <p>Paging offset. Default value: 0.</p>
+     * @param Offset <p>Paging offset. Default value: 0.</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get Number of returned entries. Default value: 10. Maximum value: 100. 
-     * @return Limit Number of returned entries. Default value: 10. Maximum value: 100.
+     * Get <p>Number of returned entries. Default value: 10. Maximum value: 100.</p> 
+     * @return Limit <p>Number of returned entries. Default value: 10. Maximum value: 100.</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Number of returned entries. Default value: 10. Maximum value: 100.
-     * @param Limit Number of returned entries. Default value: 10. Maximum value: 100.
+     * Set <p>Number of returned entries. Default value: 10. Maximum value: 100.</p>
+     * @param Limit <p>Number of returned entries. Default value: 10. Maximum value: 100.</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

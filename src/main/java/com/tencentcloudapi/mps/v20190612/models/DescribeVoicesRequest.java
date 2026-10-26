@@ -87,6 +87,20 @@ public class DescribeVoicesRequest extends AbstractModel {
     private String [] Scenes;
 
     /**
+    * <p>Pagination query page number. Value range: starts from 1. Default value: 1.</p>
+    */
+    @SerializedName("PageNum")
+    @Expose
+    private Long PageNum;
+
+    /**
+    * <p>Page size. If left blank, all data meeting conditions will be returned by default.</p>
+    */
+    @SerializedName("PageSize")
+    @Expose
+    private Long PageSize;
+
+    /**
     * <p>Extended parameters in the format of a JSON string. </p><p>Other filter criteria:
 voiceName (String): Voice name, fuzzy matching. labels (Array of String): Tags. Matches voices that contain these tags.</p>
     */
@@ -239,6 +253,38 @@ voiceName (String): Voice name, fuzzy matching. labels (Array of String): Tags. 
     }
 
     /**
+     * Get <p>Pagination query page number. Value range: starts from 1. Default value: 1.</p> 
+     * @return PageNum <p>Pagination query page number. Value range: starts from 1. Default value: 1.</p>
+     */
+    public Long getPageNum() {
+        return this.PageNum;
+    }
+
+    /**
+     * Set <p>Pagination query page number. Value range: starts from 1. Default value: 1.</p>
+     * @param PageNum <p>Pagination query page number. Value range: starts from 1. Default value: 1.</p>
+     */
+    public void setPageNum(Long PageNum) {
+        this.PageNum = PageNum;
+    }
+
+    /**
+     * Get <p>Page size. If left blank, all data meeting conditions will be returned by default.</p> 
+     * @return PageSize <p>Page size. If left blank, all data meeting conditions will be returned by default.</p>
+     */
+    public Long getPageSize() {
+        return this.PageSize;
+    }
+
+    /**
+     * Set <p>Page size. If left blank, all data meeting conditions will be returned by default.</p>
+     * @param PageSize <p>Page size. If left blank, all data meeting conditions will be returned by default.</p>
+     */
+    public void setPageSize(Long PageSize) {
+        this.PageSize = PageSize;
+    }
+
+    /**
      * Get <p>Extended parameters in the format of a JSON string. </p><p>Other filter criteria:
 voiceName (String): Voice name, fuzzy matching. labels (Array of String): Tags. Matches voices that contain these tags.</p> 
      * @return ExtParam <p>Extended parameters in the format of a JSON string. </p><p>Other filter criteria:
@@ -302,6 +348,12 @@ voiceName (String): Voice name, fuzzy matching. labels (Array of String): Tags. 
                 this.Scenes[i] = new String(source.Scenes[i]);
             }
         }
+        if (source.PageNum != null) {
+            this.PageNum = new Long(source.PageNum);
+        }
+        if (source.PageSize != null) {
+            this.PageSize = new Long(source.PageSize);
+        }
         if (source.ExtParam != null) {
             this.ExtParam = new String(source.ExtParam);
         }
@@ -321,6 +373,8 @@ voiceName (String): Voice name, fuzzy matching. labels (Array of String): Tags. 
         this.setParamArraySimple(map, prefix + "Languages.", this.Languages);
         this.setParamArraySimple(map, prefix + "Labels.", this.Labels);
         this.setParamArraySimple(map, prefix + "Scenes.", this.Scenes);
+        this.setParamSimple(map, prefix + "PageNum", this.PageNum);
+        this.setParamSimple(map, prefix + "PageSize", this.PageSize);
         this.setParamSimple(map, prefix + "ExtParam", this.ExtParam);
 
     }

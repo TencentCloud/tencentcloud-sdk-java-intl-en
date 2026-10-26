@@ -66,6 +66,9 @@ public enum MpsErrorCode {
      /* Invalid parameters. The model is not supported. */
      INVALIDPARAMETER_MODELNOTSUPPORTED("InvalidParameter.ModelNotSupported"),
      
+     /* Input type not specified. */
+     INVALIDPARAMETER_NOINPUTSPECIFIED("InvalidParameter.NoInputSpecified"),
+     
      /* InvalidParameter.NotFound */
      INVALIDPARAMETER_NOTFOUND("InvalidParameter.NotFound"),
      
@@ -474,7 +477,7 @@ public enum MpsErrorCode {
      /* The task does not exist */
      RESOURCENOTFOUND_TASKNOTFOUND("ResourceNotFound.TaskNotFound"),
      
-     /* The resource does not exist: the template does not exist. */
+     /* The resource does not exist: The template does not exist. */
      RESOURCENOTFOUND_TEMPLATENOTEXIST("ResourceNotFound.TemplateNotExist"),
      
      /* The user is not registered. */

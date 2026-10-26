@@ -45,7 +45,7 @@ public class AudioEnhanceConfig extends AbstractModel {
     private VolumeBalanceConfig VolumeBalance;
 
     /**
-    * <p>Audio beautification configurations.</p>
+    * <p>Audio improvement configuration.</p>
     */
     @SerializedName("Beautify")
     @Expose
@@ -107,16 +107,16 @@ public class AudioEnhanceConfig extends AbstractModel {
     }
 
     /**
-     * Get <p>Audio beautification configurations.</p> 
-     * @return Beautify <p>Audio beautification configurations.</p>
+     * Get <p>Audio improvement configuration.</p> 
+     * @return Beautify <p>Audio improvement configuration.</p>
      */
     public AudioBeautifyConfig getBeautify() {
         return this.Beautify;
     }
 
     /**
-     * Set <p>Audio beautification configurations.</p>
-     * @param Beautify <p>Audio beautification configurations.</p>
+     * Set <p>Audio improvement configuration.</p>
+     * @param Beautify <p>Audio improvement configuration.</p>
      */
     public void setBeautify(AudioBeautifyConfig Beautify) {
         this.Beautify = Beautify;

@@ -39,7 +39,7 @@ public class WorkflowInfo extends AbstractModel {
 
     /**
     * Workflow status. Valid values:
-<li>Enabled: Enabled,</li>
+<li>Enabled: on</li>
 <li>Disabled: Disabled.</li>
     */
     @SerializedName("Status")
@@ -47,82 +47,77 @@ public class WorkflowInfo extends AbstractModel {
     private String Status;
 
     /**
-    * Input rule bound to a workflow. If an uploaded video hits the rule for the object, the workflow will be triggered.
+    * The input rule bound to the workflow triggers the workflow when an uploaded video hits the rule for the object.
     */
     @SerializedName("Trigger")
     @Expose
     private WorkflowTrigger Trigger;
 
     /**
-    * The location to save the media processing output file.
-Note: This field may return null, indicating that no valid value can be obtained.
+    * 
     */
     @SerializedName("OutputStorage")
     @Expose
     private TaskOutputStorage OutputStorage;
 
     /**
-    * The media processing parameters to use.
-Note: This field may return null, indicating that no valid value can be obtained.
+    * 
     */
     @SerializedName("MediaProcessTask")
     @Expose
     private MediaProcessTaskInput MediaProcessTask;
 
     /**
-    * Type parameter of a video content audit task.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("AiContentReviewTask")
     @Expose
     private AiContentReviewTaskInput AiContentReviewTask;
 
     /**
-    * Video content analysis task parameter.
+    * 
     */
     @SerializedName("AiAnalysisTask")
     @Expose
     private AiAnalysisTaskInput AiAnalysisTask;
 
     /**
-    * Type parameter of a video content recognition task.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("AiRecognitionTask")
     @Expose
     private AiRecognitionTaskInput AiRecognitionTask;
 
     /**
-    * Event notification information of a task. If this parameter is left empty, no event notifications will be obtained.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("TaskNotifyConfig")
     @Expose
     private TaskNotifyConfig TaskNotifyConfig;
 
     /**
-    * Task flow priority. The higher the value, the higher the priority. Value range: [-10, 10]. If this parameter is left empty, 0 will be used.
+    * Priority of the task flow. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.
     */
     @SerializedName("TaskPriority")
     @Expose
     private Long TaskPriority;
 
     /**
-    * The directory to save the media processing output file, such as `/movie/201907/`.
+    * Storage directory for the output file, such as `/movie/201907/`.
     */
     @SerializedName("OutputDir")
     @Expose
     private String OutputDir;
 
     /**
-    * Creation time of a workflow in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
+    * Workflow creation time, using the ISO date format (https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * Last modified time of a workflow in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
+    * Last modification time of the workflow, using the ISO date format (https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
     */
     @SerializedName("UpdateTime")
     @Expose
@@ -162,10 +157,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Workflow status. Valid values:
-<li>Enabled: Enabled,</li>
+<li>Enabled: on</li>
 <li>Disabled: Disabled.</li> 
      * @return Status Workflow status. Valid values:
-<li>Enabled: Enabled,</li>
+<li>Enabled: on</li>
 <li>Disabled: Disabled.</li>
      */
     public String getStatus() {
@@ -174,10 +169,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Workflow status. Valid values:
-<li>Enabled: Enabled,</li>
+<li>Enabled: on</li>
 <li>Disabled: Disabled.</li>
      * @param Status Workflow status. Valid values:
-<li>Enabled: Enabled,</li>
+<li>Enabled: on</li>
 <li>Disabled: Disabled.</li>
      */
     public void setStatus(String Status) {
@@ -185,196 +180,176 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Input rule bound to a workflow. If an uploaded video hits the rule for the object, the workflow will be triggered. 
-     * @return Trigger Input rule bound to a workflow. If an uploaded video hits the rule for the object, the workflow will be triggered.
+     * Get The input rule bound to the workflow triggers the workflow when an uploaded video hits the rule for the object. 
+     * @return Trigger The input rule bound to the workflow triggers the workflow when an uploaded video hits the rule for the object.
      */
     public WorkflowTrigger getTrigger() {
         return this.Trigger;
     }
 
     /**
-     * Set Input rule bound to a workflow. If an uploaded video hits the rule for the object, the workflow will be triggered.
-     * @param Trigger Input rule bound to a workflow. If an uploaded video hits the rule for the object, the workflow will be triggered.
+     * Set The input rule bound to the workflow triggers the workflow when an uploaded video hits the rule for the object.
+     * @param Trigger The input rule bound to the workflow triggers the workflow when an uploaded video hits the rule for the object.
      */
     public void setTrigger(WorkflowTrigger Trigger) {
         this.Trigger = Trigger;
     }
 
     /**
-     * Get The location to save the media processing output file.
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return OutputStorage The location to save the media processing output file.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get  
+     * @return OutputStorage 
      */
     public TaskOutputStorage getOutputStorage() {
         return this.OutputStorage;
     }
 
     /**
-     * Set The location to save the media processing output file.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param OutputStorage The location to save the media processing output file.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set 
+     * @param OutputStorage 
      */
     public void setOutputStorage(TaskOutputStorage OutputStorage) {
         this.OutputStorage = OutputStorage;
     }
 
     /**
-     * Get The media processing parameters to use.
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return MediaProcessTask The media processing parameters to use.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get  
+     * @return MediaProcessTask 
      */
     public MediaProcessTaskInput getMediaProcessTask() {
         return this.MediaProcessTask;
     }
 
     /**
-     * Set The media processing parameters to use.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param MediaProcessTask The media processing parameters to use.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set 
+     * @param MediaProcessTask 
      */
     public void setMediaProcessTask(MediaProcessTaskInput MediaProcessTask) {
         this.MediaProcessTask = MediaProcessTask;
     }
 
     /**
-     * Get Type parameter of a video content audit task.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return AiContentReviewTask Type parameter of a video content audit task.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return AiContentReviewTask 
      */
     public AiContentReviewTaskInput getAiContentReviewTask() {
         return this.AiContentReviewTask;
     }
 
     /**
-     * Set Type parameter of a video content audit task.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param AiContentReviewTask Type parameter of a video content audit task.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param AiContentReviewTask 
      */
     public void setAiContentReviewTask(AiContentReviewTaskInput AiContentReviewTask) {
         this.AiContentReviewTask = AiContentReviewTask;
     }
 
     /**
-     * Get Video content analysis task parameter. 
-     * @return AiAnalysisTask Video content analysis task parameter.
+     * Get  
+     * @return AiAnalysisTask 
      */
     public AiAnalysisTaskInput getAiAnalysisTask() {
         return this.AiAnalysisTask;
     }
 
     /**
-     * Set Video content analysis task parameter.
-     * @param AiAnalysisTask Video content analysis task parameter.
+     * Set 
+     * @param AiAnalysisTask 
      */
     public void setAiAnalysisTask(AiAnalysisTaskInput AiAnalysisTask) {
         this.AiAnalysisTask = AiAnalysisTask;
     }
 
     /**
-     * Get Type parameter of a video content recognition task.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return AiRecognitionTask Type parameter of a video content recognition task.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return AiRecognitionTask 
      */
     public AiRecognitionTaskInput getAiRecognitionTask() {
         return this.AiRecognitionTask;
     }
 
     /**
-     * Set Type parameter of a video content recognition task.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param AiRecognitionTask Type parameter of a video content recognition task.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param AiRecognitionTask 
      */
     public void setAiRecognitionTask(AiRecognitionTaskInput AiRecognitionTask) {
         this.AiRecognitionTask = AiRecognitionTask;
     }
 
     /**
-     * Get Event notification information of a task. If this parameter is left empty, no event notifications will be obtained.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TaskNotifyConfig Event notification information of a task. If this parameter is left empty, no event notifications will be obtained.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return TaskNotifyConfig 
      */
     public TaskNotifyConfig getTaskNotifyConfig() {
         return this.TaskNotifyConfig;
     }
 
     /**
-     * Set Event notification information of a task. If this parameter is left empty, no event notifications will be obtained.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TaskNotifyConfig Event notification information of a task. If this parameter is left empty, no event notifications will be obtained.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param TaskNotifyConfig 
      */
     public void setTaskNotifyConfig(TaskNotifyConfig TaskNotifyConfig) {
         this.TaskNotifyConfig = TaskNotifyConfig;
     }
 
     /**
-     * Get Task flow priority. The higher the value, the higher the priority. Value range: [-10, 10]. If this parameter is left empty, 0 will be used. 
-     * @return TaskPriority Task flow priority. The higher the value, the higher the priority. Value range: [-10, 10]. If this parameter is left empty, 0 will be used.
+     * Get Priority of the task flow. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0. 
+     * @return TaskPriority Priority of the task flow. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.
      */
     public Long getTaskPriority() {
         return this.TaskPriority;
     }
 
     /**
-     * Set Task flow priority. The higher the value, the higher the priority. Value range: [-10, 10]. If this parameter is left empty, 0 will be used.
-     * @param TaskPriority Task flow priority. The higher the value, the higher the priority. Value range: [-10, 10]. If this parameter is left empty, 0 will be used.
+     * Set Priority of the task flow. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.
+     * @param TaskPriority Priority of the task flow. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.
      */
     public void setTaskPriority(Long TaskPriority) {
         this.TaskPriority = TaskPriority;
     }
 
     /**
-     * Get The directory to save the media processing output file, such as `/movie/201907/`. 
-     * @return OutputDir The directory to save the media processing output file, such as `/movie/201907/`.
+     * Get Storage directory for the output file, such as `/movie/201907/`. 
+     * @return OutputDir Storage directory for the output file, such as `/movie/201907/`.
      */
     public String getOutputDir() {
         return this.OutputDir;
     }
 
     /**
-     * Set The directory to save the media processing output file, such as `/movie/201907/`.
-     * @param OutputDir The directory to save the media processing output file, such as `/movie/201907/`.
+     * Set Storage directory for the output file, such as `/movie/201907/`.
+     * @param OutputDir Storage directory for the output file, such as `/movie/201907/`.
      */
     public void setOutputDir(String OutputDir) {
         this.OutputDir = OutputDir;
     }
 
     /**
-     * Get Creation time of a workflow in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F). 
-     * @return CreateTime Creation time of a workflow in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
+     * Get Workflow creation time, using the ISO date format (https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52). 
+     * @return CreateTime Workflow creation time, using the ISO date format (https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set Creation time of a workflow in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
-     * @param CreateTime Creation time of a workflow in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
+     * Set Workflow creation time, using the ISO date format (https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
+     * @param CreateTime Workflow creation time, using the ISO date format (https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get Last modified time of a workflow in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F). 
-     * @return UpdateTime Last modified time of a workflow in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
+     * Get Last modification time of the workflow, using the ISO date format (https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52). 
+     * @return UpdateTime Last modification time of the workflow, using the ISO date format (https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set Last modified time of a workflow in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
-     * @param UpdateTime Last modified time of a workflow in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
+     * Set Last modification time of the workflow, using the ISO date format (https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
+     * @param UpdateTime Last modification time of the workflow, using the ISO date format (https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;

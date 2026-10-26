@@ -31,7 +31,8 @@ public class AwsS3FileUploadTrigger extends AbstractModel {
     private String S3Bucket;
 
     /**
-    * The region of the AWS S3 bucket.
+    * The region of the AWS S3 bucket.  us-east-1  
+eu-west-3
     */
     @SerializedName("S3Region")
     @Expose
@@ -90,16 +91,20 @@ Note: The queue and bucket need to be in the same region.
     }
 
     /**
-     * Get The region of the AWS S3 bucket. 
-     * @return S3Region The region of the AWS S3 bucket.
+     * Get The region of the AWS S3 bucket.  us-east-1  
+eu-west-3 
+     * @return S3Region The region of the AWS S3 bucket.  us-east-1  
+eu-west-3
      */
     public String getS3Region() {
         return this.S3Region;
     }
 
     /**
-     * Set The region of the AWS S3 bucket.
-     * @param S3Region The region of the AWS S3 bucket.
+     * Set The region of the AWS S3 bucket.  us-east-1  
+eu-west-3
+     * @param S3Region The region of the AWS S3 bucket.  us-east-1  
+eu-west-3
      */
     public void setS3Region(String S3Region) {
         this.S3Region = S3Region;

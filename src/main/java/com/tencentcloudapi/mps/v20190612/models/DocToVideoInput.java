@@ -38,18 +38,18 @@ public class DocToVideoInput extends AbstractModel {
     private String Prompt;
 
     /**
-    * <p>Document-to-video model name</p><p>Default value: Wand</p>
-    */
-    @SerializedName("ModelName")
-    @Expose
-    private String ModelName;
-
-    /**
-    * <p>Document-to-video model version number</p><p>Default value: 1.0</p>
+    * <p>Document-to-video model version number</p><p>Enumeration values:</p><ul><li>1.0: 1.0</li><li>1.0-lite: 1.0-lite</li></ul><p>Default value: 1.0</p>
     */
     @SerializedName("ModelVersion")
     @Expose
     private String ModelVersion;
+
+    /**
+    * <p>Documentation generation video model name</p><p>Enumeration values:</p><ul><li>WAND: WAND</li></ul><p>Default value: WAND</p>
+    */
+    @SerializedName("ModelName")
+    @Expose
+    private String ModelName;
 
     /**
     * <p>Aspect ratio of the generated video.</p><p>Enumeration values: </p><ul><li>16:9: 16:9</li><li>9:16: 9:16</li><li>1:1: 1:1</li></ul><p>Default value: 16:9</p>
@@ -154,35 +154,35 @@ public class DocToVideoInput extends AbstractModel {
     }
 
     /**
-     * Get <p>Document-to-video model name</p><p>Default value: Wand</p> 
-     * @return ModelName <p>Document-to-video model name</p><p>Default value: Wand</p>
-     */
-    public String getModelName() {
-        return this.ModelName;
-    }
-
-    /**
-     * Set <p>Document-to-video model name</p><p>Default value: Wand</p>
-     * @param ModelName <p>Document-to-video model name</p><p>Default value: Wand</p>
-     */
-    public void setModelName(String ModelName) {
-        this.ModelName = ModelName;
-    }
-
-    /**
-     * Get <p>Document-to-video model version number</p><p>Default value: 1.0</p> 
-     * @return ModelVersion <p>Document-to-video model version number</p><p>Default value: 1.0</p>
+     * Get <p>Document-to-video model version number</p><p>Enumeration values:</p><ul><li>1.0: 1.0</li><li>1.0-lite: 1.0-lite</li></ul><p>Default value: 1.0</p> 
+     * @return ModelVersion <p>Document-to-video model version number</p><p>Enumeration values:</p><ul><li>1.0: 1.0</li><li>1.0-lite: 1.0-lite</li></ul><p>Default value: 1.0</p>
      */
     public String getModelVersion() {
         return this.ModelVersion;
     }
 
     /**
-     * Set <p>Document-to-video model version number</p><p>Default value: 1.0</p>
-     * @param ModelVersion <p>Document-to-video model version number</p><p>Default value: 1.0</p>
+     * Set <p>Document-to-video model version number</p><p>Enumeration values:</p><ul><li>1.0: 1.0</li><li>1.0-lite: 1.0-lite</li></ul><p>Default value: 1.0</p>
+     * @param ModelVersion <p>Document-to-video model version number</p><p>Enumeration values:</p><ul><li>1.0: 1.0</li><li>1.0-lite: 1.0-lite</li></ul><p>Default value: 1.0</p>
      */
     public void setModelVersion(String ModelVersion) {
         this.ModelVersion = ModelVersion;
+    }
+
+    /**
+     * Get <p>Documentation generation video model name</p><p>Enumeration values:</p><ul><li>WAND: WAND</li></ul><p>Default value: WAND</p> 
+     * @return ModelName <p>Documentation generation video model name</p><p>Enumeration values:</p><ul><li>WAND: WAND</li></ul><p>Default value: WAND</p>
+     */
+    public String getModelName() {
+        return this.ModelName;
+    }
+
+    /**
+     * Set <p>Documentation generation video model name</p><p>Enumeration values:</p><ul><li>WAND: WAND</li></ul><p>Default value: WAND</p>
+     * @param ModelName <p>Documentation generation video model name</p><p>Enumeration values:</p><ul><li>WAND: WAND</li></ul><p>Default value: WAND</p>
+     */
+    public void setModelName(String ModelName) {
+        this.ModelName = ModelName;
     }
 
     /**
@@ -362,11 +362,11 @@ public class DocToVideoInput extends AbstractModel {
         if (source.Prompt != null) {
             this.Prompt = new String(source.Prompt);
         }
-        if (source.ModelName != null) {
-            this.ModelName = new String(source.ModelName);
-        }
         if (source.ModelVersion != null) {
             this.ModelVersion = new String(source.ModelVersion);
+        }
+        if (source.ModelName != null) {
+            this.ModelName = new String(source.ModelName);
         }
         if (source.Ratio != null) {
             this.Ratio = new String(source.Ratio);
@@ -407,8 +407,8 @@ public class DocToVideoInput extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "FileUrl.", this.FileUrl);
         this.setParamSimple(map, prefix + "Prompt", this.Prompt);
-        this.setParamSimple(map, prefix + "ModelName", this.ModelName);
         this.setParamSimple(map, prefix + "ModelVersion", this.ModelVersion);
+        this.setParamSimple(map, prefix + "ModelName", this.ModelName);
         this.setParamSimple(map, prefix + "Ratio", this.Ratio);
         this.setParamSimple(map, prefix + "Language", this.Language);
         this.setParamSimple(map, prefix + "ReferenceDuration", this.ReferenceDuration);

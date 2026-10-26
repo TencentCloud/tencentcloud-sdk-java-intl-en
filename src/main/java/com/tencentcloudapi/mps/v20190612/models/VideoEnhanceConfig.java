@@ -115,7 +115,7 @@ public class VideoEnhanceConfig extends AbstractModel {
     private AiRestorationConfig AiRestoration;
 
     /**
-    * <p>Configuration of the large model enhancement pro edition. Note that at most one of the large model, comprehensive enhancement, and artifacts removal can be configured. It cannot intersect with super resolution and noise reduction.</p>
+    * <p>LLM enhancement professional edition configuration. Note that only one of the three items, LLM enhancement, comprehensive enhancement, and artifacts removal, can be configured. It cannot be enabled simultaneously with super-resolution and noise reduction.</p>
     */
     @SerializedName("DiffusionEnhanceV2")
     @Expose
@@ -330,16 +330,16 @@ public class VideoEnhanceConfig extends AbstractModel {
     }
 
     /**
-     * Get <p>Configuration of the large model enhancement pro edition. Note that at most one of the large model, comprehensive enhancement, and artifacts removal can be configured. It cannot intersect with super resolution and noise reduction.</p> 
-     * @return DiffusionEnhanceV2 <p>Configuration of the large model enhancement pro edition. Note that at most one of the large model, comprehensive enhancement, and artifacts removal can be configured. It cannot intersect with super resolution and noise reduction.</p>
+     * Get <p>LLM enhancement professional edition configuration. Note that only one of the three items, LLM enhancement, comprehensive enhancement, and artifacts removal, can be configured. It cannot be enabled simultaneously with super-resolution and noise reduction.</p> 
+     * @return DiffusionEnhanceV2 <p>LLM enhancement professional edition configuration. Note that only one of the three items, LLM enhancement, comprehensive enhancement, and artifacts removal, can be configured. It cannot be enabled simultaneously with super-resolution and noise reduction.</p>
      */
     public DiffusionEnhanceV2Config getDiffusionEnhanceV2() {
         return this.DiffusionEnhanceV2;
     }
 
     /**
-     * Set <p>Configuration of the large model enhancement pro edition. Note that at most one of the large model, comprehensive enhancement, and artifacts removal can be configured. It cannot intersect with super resolution and noise reduction.</p>
-     * @param DiffusionEnhanceV2 <p>Configuration of the large model enhancement pro edition. Note that at most one of the large model, comprehensive enhancement, and artifacts removal can be configured. It cannot intersect with super resolution and noise reduction.</p>
+     * Set <p>LLM enhancement professional edition configuration. Note that only one of the three items, LLM enhancement, comprehensive enhancement, and artifacts removal, can be configured. It cannot be enabled simultaneously with super-resolution and noise reduction.</p>
+     * @param DiffusionEnhanceV2 <p>LLM enhancement professional edition configuration. Note that only one of the three items, LLM enhancement, comprehensive enhancement, and artifacts removal, can be configured. It cannot be enabled simultaneously with super-resolution and noise reduction.</p>
      */
     public void setDiffusionEnhanceV2(DiffusionEnhanceV2Config DiffusionEnhanceV2) {
         this.DiffusionEnhanceV2 = DiffusionEnhanceV2;

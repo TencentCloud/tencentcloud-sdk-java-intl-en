@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class AudioEnhanceEditConfig extends AbstractModel {
 
     /**
-    * <p>Capability configuration switch</p><p>Enumeration values: </p><ul><li>ON: Enable</li><li>OFF: Disable</li></ul><p>Default value: OFF</p>
+    * <p>Capability configuration switch</p><p>Enumeration values:</p><ul><li>ON: Enable</li><li>OFF: Disable</li></ul><p>Default value: OFF</p>
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * <p>Audio editing type</p><p>Enumeration values:</p><ul><li>restore: Repair</li></ul><p>When enabled, you must explicitly specify the enumeration value</p>
+    * <p>Types of audio editing</p><p>Enumeration values:</p><ul><li>restore: Repair</li></ul><p>When enabled, you must explicitly specify an enumeration value</p>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-     * Get <p>Capability configuration switch</p><p>Enumeration values: </p><ul><li>ON: Enable</li><li>OFF: Disable</li></ul><p>Default value: OFF</p> 
-     * @return Switch <p>Capability configuration switch</p><p>Enumeration values: </p><ul><li>ON: Enable</li><li>OFF: Disable</li></ul><p>Default value: OFF</p>
+     * Get <p>Capability configuration switch</p><p>Enumeration values:</p><ul><li>ON: Enable</li><li>OFF: Disable</li></ul><p>Default value: OFF</p> 
+     * @return Switch <p>Capability configuration switch</p><p>Enumeration values:</p><ul><li>ON: Enable</li><li>OFF: Disable</li></ul><p>Default value: OFF</p>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set <p>Capability configuration switch</p><p>Enumeration values: </p><ul><li>ON: Enable</li><li>OFF: Disable</li></ul><p>Default value: OFF</p>
-     * @param Switch <p>Capability configuration switch</p><p>Enumeration values: </p><ul><li>ON: Enable</li><li>OFF: Disable</li></ul><p>Default value: OFF</p>
+     * Set <p>Capability configuration switch</p><p>Enumeration values:</p><ul><li>ON: Enable</li><li>OFF: Disable</li></ul><p>Default value: OFF</p>
+     * @param Switch <p>Capability configuration switch</p><p>Enumeration values:</p><ul><li>ON: Enable</li><li>OFF: Disable</li></ul><p>Default value: OFF</p>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get <p>Audio editing type</p><p>Enumeration values:</p><ul><li>restore: Repair</li></ul><p>When enabled, you must explicitly specify the enumeration value</p> 
-     * @return Type <p>Audio editing type</p><p>Enumeration values:</p><ul><li>restore: Repair</li></ul><p>When enabled, you must explicitly specify the enumeration value</p>
+     * Get <p>Types of audio editing</p><p>Enumeration values:</p><ul><li>restore: Repair</li></ul><p>When enabled, you must explicitly specify an enumeration value</p> 
+     * @return Type <p>Types of audio editing</p><p>Enumeration values:</p><ul><li>restore: Repair</li></ul><p>When enabled, you must explicitly specify an enumeration value</p>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set <p>Audio editing type</p><p>Enumeration values:</p><ul><li>restore: Repair</li></ul><p>When enabled, you must explicitly specify the enumeration value</p>
-     * @param Type <p>Audio editing type</p><p>Enumeration values:</p><ul><li>restore: Repair</li></ul><p>When enabled, you must explicitly specify the enumeration value</p>
+     * Set <p>Types of audio editing</p><p>Enumeration values:</p><ul><li>restore: Repair</li></ul><p>When enabled, you must explicitly specify an enumeration value</p>
+     * @param Type <p>Types of audio editing</p><p>Enumeration values:</p><ul><li>restore: Repair</li></ul><p>When enabled, you must explicitly specify an enumeration value</p>
      */
     public void setType(String Type) {
         this.Type = Type;

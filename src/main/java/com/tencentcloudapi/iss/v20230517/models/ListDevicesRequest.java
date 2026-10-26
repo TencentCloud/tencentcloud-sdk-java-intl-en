@@ -1,0 +1,341 @@
+/*
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+package com.tencentcloudapi.iss.v20230517.models;
+
+import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.annotations.Expose;
+import java.util.HashMap;
+
+public class ListDevicesRequest extends AbstractModel {
+
+    /**
+    * Organization ID
+    */
+    @SerializedName("OrganizationId")
+    @Expose
+    private String OrganizationId;
+
+    /**
+    * Whether to obtain the device list of the current level and sub-levels. Default value: false.
+    */
+    @SerializedName("IsContainSubLevel")
+    @Expose
+    private Boolean IsContainSubLevel;
+
+    /**
+    * Whether the devices already associated with the current user are included. Default value: false.
+    */
+    @SerializedName("IsContainUser")
+    @Expose
+    private Boolean IsContainUser;
+
+    /**
+    * Device access protocol. 1: RTMP, 2: GB, 3: GW, 4: IVCP (private protocol)
+    */
+    @SerializedName("AccessProtocol")
+    @Expose
+    private Long AccessProtocol;
+
+    /**
+    * Device type. 1: IPC, 2: NVR
+    */
+    @SerializedName("Type")
+    @Expose
+    private Long Type;
+
+    /**
+    * Device status. 0: unregistered; 1: online; 2: offline; 3: disabled.	
+    */
+    @SerializedName("Status")
+    @Expose
+    private Long Status;
+
+    /**
+    * Service node ID
+    */
+    @SerializedName("ClusterId")
+    @Expose
+    private String ClusterId;
+
+    /**
+    * Keyword for fuzzy search of devices
+    */
+    @SerializedName("Keyword")
+    @Expose
+    private String Keyword;
+
+    /**
+    * Uin of the current user
+    */
+    @SerializedName("CurrentUin")
+    @Expose
+    private Long CurrentUin;
+
+    /**
+    * Page number. Default value: 1.
+    */
+    @SerializedName("PageNumber")
+    @Expose
+    private Long PageNumber;
+
+    /**
+    * Number of items per page. Default value: 20. Maximum: 10000 per page.
+    */
+    @SerializedName("PageSize")
+    @Expose
+    private Long PageSize;
+
+    /**
+     * Get Organization ID 
+     * @return OrganizationId Organization ID
+     */
+    public String getOrganizationId() {
+        return this.OrganizationId;
+    }
+
+    /**
+     * Set Organization ID
+     * @param OrganizationId Organization ID
+     */
+    public void setOrganizationId(String OrganizationId) {
+        this.OrganizationId = OrganizationId;
+    }
+
+    /**
+     * Get Whether to obtain the device list of the current level and sub-levels. Default value: false. 
+     * @return IsContainSubLevel Whether to obtain the device list of the current level and sub-levels. Default value: false.
+     */
+    public Boolean getIsContainSubLevel() {
+        return this.IsContainSubLevel;
+    }
+
+    /**
+     * Set Whether to obtain the device list of the current level and sub-levels. Default value: false.
+     * @param IsContainSubLevel Whether to obtain the device list of the current level and sub-levels. Default value: false.
+     */
+    public void setIsContainSubLevel(Boolean IsContainSubLevel) {
+        this.IsContainSubLevel = IsContainSubLevel;
+    }
+
+    /**
+     * Get Whether the devices already associated with the current user are included. Default value: false. 
+     * @return IsContainUser Whether the devices already associated with the current user are included. Default value: false.
+     */
+    public Boolean getIsContainUser() {
+        return this.IsContainUser;
+    }
+
+    /**
+     * Set Whether the devices already associated with the current user are included. Default value: false.
+     * @param IsContainUser Whether the devices already associated with the current user are included. Default value: false.
+     */
+    public void setIsContainUser(Boolean IsContainUser) {
+        this.IsContainUser = IsContainUser;
+    }
+
+    /**
+     * Get Device access protocol. 1: RTMP, 2: GB, 3: GW, 4: IVCP (private protocol) 
+     * @return AccessProtocol Device access protocol. 1: RTMP, 2: GB, 3: GW, 4: IVCP (private protocol)
+     */
+    public Long getAccessProtocol() {
+        return this.AccessProtocol;
+    }
+
+    /**
+     * Set Device access protocol. 1: RTMP, 2: GB, 3: GW, 4: IVCP (private protocol)
+     * @param AccessProtocol Device access protocol. 1: RTMP, 2: GB, 3: GW, 4: IVCP (private protocol)
+     */
+    public void setAccessProtocol(Long AccessProtocol) {
+        this.AccessProtocol = AccessProtocol;
+    }
+
+    /**
+     * Get Device type. 1: IPC, 2: NVR 
+     * @return Type Device type. 1: IPC, 2: NVR
+     */
+    public Long getType() {
+        return this.Type;
+    }
+
+    /**
+     * Set Device type. 1: IPC, 2: NVR
+     * @param Type Device type. 1: IPC, 2: NVR
+     */
+    public void setType(Long Type) {
+        this.Type = Type;
+    }
+
+    /**
+     * Get Device status. 0: unregistered; 1: online; 2: offline; 3: disabled.	 
+     * @return Status Device status. 0: unregistered; 1: online; 2: offline; 3: disabled.	
+     */
+    public Long getStatus() {
+        return this.Status;
+    }
+
+    /**
+     * Set Device status. 0: unregistered; 1: online; 2: offline; 3: disabled.	
+     * @param Status Device status. 0: unregistered; 1: online; 2: offline; 3: disabled.	
+     */
+    public void setStatus(Long Status) {
+        this.Status = Status;
+    }
+
+    /**
+     * Get Service node ID 
+     * @return ClusterId Service node ID
+     */
+    public String getClusterId() {
+        return this.ClusterId;
+    }
+
+    /**
+     * Set Service node ID
+     * @param ClusterId Service node ID
+     */
+    public void setClusterId(String ClusterId) {
+        this.ClusterId = ClusterId;
+    }
+
+    /**
+     * Get Keyword for fuzzy search of devices 
+     * @return Keyword Keyword for fuzzy search of devices
+     */
+    public String getKeyword() {
+        return this.Keyword;
+    }
+
+    /**
+     * Set Keyword for fuzzy search of devices
+     * @param Keyword Keyword for fuzzy search of devices
+     */
+    public void setKeyword(String Keyword) {
+        this.Keyword = Keyword;
+    }
+
+    /**
+     * Get Uin of the current user 
+     * @return CurrentUin Uin of the current user
+     */
+    public Long getCurrentUin() {
+        return this.CurrentUin;
+    }
+
+    /**
+     * Set Uin of the current user
+     * @param CurrentUin Uin of the current user
+     */
+    public void setCurrentUin(Long CurrentUin) {
+        this.CurrentUin = CurrentUin;
+    }
+
+    /**
+     * Get Page number. Default value: 1. 
+     * @return PageNumber Page number. Default value: 1.
+     */
+    public Long getPageNumber() {
+        return this.PageNumber;
+    }
+
+    /**
+     * Set Page number. Default value: 1.
+     * @param PageNumber Page number. Default value: 1.
+     */
+    public void setPageNumber(Long PageNumber) {
+        this.PageNumber = PageNumber;
+    }
+
+    /**
+     * Get Number of items per page. Default value: 20. Maximum: 10000 per page. 
+     * @return PageSize Number of items per page. Default value: 20. Maximum: 10000 per page.
+     */
+    public Long getPageSize() {
+        return this.PageSize;
+    }
+
+    /**
+     * Set Number of items per page. Default value: 20. Maximum: 10000 per page.
+     * @param PageSize Number of items per page. Default value: 20. Maximum: 10000 per page.
+     */
+    public void setPageSize(Long PageSize) {
+        this.PageSize = PageSize;
+    }
+
+    public ListDevicesRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ListDevicesRequest(ListDevicesRequest source) {
+        if (source.OrganizationId != null) {
+            this.OrganizationId = new String(source.OrganizationId);
+        }
+        if (source.IsContainSubLevel != null) {
+            this.IsContainSubLevel = new Boolean(source.IsContainSubLevel);
+        }
+        if (source.IsContainUser != null) {
+            this.IsContainUser = new Boolean(source.IsContainUser);
+        }
+        if (source.AccessProtocol != null) {
+            this.AccessProtocol = new Long(source.AccessProtocol);
+        }
+        if (source.Type != null) {
+            this.Type = new Long(source.Type);
+        }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
+        if (source.ClusterId != null) {
+            this.ClusterId = new String(source.ClusterId);
+        }
+        if (source.Keyword != null) {
+            this.Keyword = new String(source.Keyword);
+        }
+        if (source.CurrentUin != null) {
+            this.CurrentUin = new Long(source.CurrentUin);
+        }
+        if (source.PageNumber != null) {
+            this.PageNumber = new Long(source.PageNumber);
+        }
+        if (source.PageSize != null) {
+            this.PageSize = new Long(source.PageSize);
+        }
+    }
+
+
+    /**
+     * Internal implementation, normal users should not use it.
+     */
+    public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "OrganizationId", this.OrganizationId);
+        this.setParamSimple(map, prefix + "IsContainSubLevel", this.IsContainSubLevel);
+        this.setParamSimple(map, prefix + "IsContainUser", this.IsContainUser);
+        this.setParamSimple(map, prefix + "AccessProtocol", this.AccessProtocol);
+        this.setParamSimple(map, prefix + "Type", this.Type);
+        this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
+        this.setParamSimple(map, prefix + "Keyword", this.Keyword);
+        this.setParamSimple(map, prefix + "CurrentUin", this.CurrentUin);
+        this.setParamSimple(map, prefix + "PageNumber", this.PageNumber);
+        this.setParamSimple(map, prefix + "PageSize", this.PageSize);
+
+    }
+}
+

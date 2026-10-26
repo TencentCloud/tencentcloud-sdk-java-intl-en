@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeWorkflowsResponse extends AbstractModel {
 
     /**
-    * Number of eligible entries.
+    * <p>Total number of records that meet filter conditions.</p>
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * Workflow information array.
+    * <p>Workflow information array.</p>
     */
     @SerializedName("WorkflowInfoSet")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeWorkflowsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Number of eligible entries. 
-     * @return TotalCount Number of eligible entries.
+     * Get <p>Total number of records that meet filter conditions.</p> 
+     * @return TotalCount <p>Total number of records that meet filter conditions.</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Number of eligible entries.
-     * @param TotalCount Number of eligible entries.
+     * Set <p>Total number of records that meet filter conditions.</p>
+     * @param TotalCount <p>Total number of records that meet filter conditions.</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get Workflow information array. 
-     * @return WorkflowInfoSet Workflow information array.
+     * Get <p>Workflow information array.</p> 
+     * @return WorkflowInfoSet <p>Workflow information array.</p>
      */
     public WorkflowInfo [] getWorkflowInfoSet() {
         return this.WorkflowInfoSet;
     }
 
     /**
-     * Set Workflow information array.
-     * @param WorkflowInfoSet Workflow information array.
+     * Set <p>Workflow information array.</p>
+     * @param WorkflowInfoSet <p>Workflow information array.</p>
      */
     public void setWorkflowInfoSet(WorkflowInfo [] WorkflowInfoSet) {
         this.WorkflowInfoSet = WorkflowInfoSet;

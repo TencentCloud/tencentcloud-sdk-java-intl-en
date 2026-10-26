@@ -101,6 +101,13 @@ public class SubmitHunyuan3DTaskRequest extends AbstractModel {
     private String Style;
 
     /**
+    * <p>COS bucket that the customer applies to create</p>
+    */
+    @SerializedName("StoreCosParam")
+    @Expose
+    private AigcStoreCosParam StoreCosParam;
+
+    /**
      * Get <p>Prompt for text-to-3D</p><p>Input limit: up to 1024 utf-8 characters</p> 
      * @return Prompt <p>Prompt for text-to-3D</p><p>Input limit: up to 1024 utf-8 characters</p>
      */
@@ -276,6 +283,22 @@ public class SubmitHunyuan3DTaskRequest extends AbstractModel {
         this.Style = Style;
     }
 
+    /**
+     * Get <p>COS bucket that the customer applies to create</p> 
+     * @return StoreCosParam <p>COS bucket that the customer applies to create</p>
+     */
+    public AigcStoreCosParam getStoreCosParam() {
+        return this.StoreCosParam;
+    }
+
+    /**
+     * Set <p>COS bucket that the customer applies to create</p>
+     * @param StoreCosParam <p>COS bucket that the customer applies to create</p>
+     */
+    public void setStoreCosParam(AigcStoreCosParam StoreCosParam) {
+        this.StoreCosParam = StoreCosParam;
+    }
+
     public SubmitHunyuan3DTaskRequest() {
     }
 
@@ -320,6 +343,9 @@ public class SubmitHunyuan3DTaskRequest extends AbstractModel {
         if (source.Style != null) {
             this.Style = new String(source.Style);
         }
+        if (source.StoreCosParam != null) {
+            this.StoreCosParam = new AigcStoreCosParam(source.StoreCosParam);
+        }
     }
 
 
@@ -338,6 +364,7 @@ public class SubmitHunyuan3DTaskRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ResultFormat", this.ResultFormat);
         this.setParamSimple(map, prefix + "Seed", this.Seed);
         this.setParamSimple(map, prefix + "Style", this.Style);
+        this.setParamObj(map, prefix + "StoreCosParam.", this.StoreCosParam);
 
     }
 }

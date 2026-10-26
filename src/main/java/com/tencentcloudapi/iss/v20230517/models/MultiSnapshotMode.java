@@ -1,0 +1,125 @@
+/*
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+package com.tencentcloudapi.iss.v20230517.models;
+
+import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.annotations.Expose;
+import java.util.HashMap;
+
+public class MultiSnapshotMode extends AbstractModel {
+
+    /**
+    * <p>Whether to enable multiple image mode</p><p>When set to false, single image mode is used, and the Interval and Total parameters are ignored</p><p>Default value: false</p>
+    */
+    @SerializedName("Enable")
+    @Expose
+    private Boolean Enable;
+
+    /**
+    * <p>Frame interception interval</p><p>Value range: [10, 600]</p><p>Unit: second</p>
+    */
+    @SerializedName("Interval")
+    @Expose
+    private Long Interval;
+
+    /**
+    * <p>Number of captured frames</p><p>Value range: [1, 10]</p>
+    */
+    @SerializedName("Total")
+    @Expose
+    private Long Total;
+
+    /**
+     * Get <p>Whether to enable multiple image mode</p><p>When set to false, single image mode is used, and the Interval and Total parameters are ignored</p><p>Default value: false</p> 
+     * @return Enable <p>Whether to enable multiple image mode</p><p>When set to false, single image mode is used, and the Interval and Total parameters are ignored</p><p>Default value: false</p>
+     */
+    public Boolean getEnable() {
+        return this.Enable;
+    }
+
+    /**
+     * Set <p>Whether to enable multiple image mode</p><p>When set to false, single image mode is used, and the Interval and Total parameters are ignored</p><p>Default value: false</p>
+     * @param Enable <p>Whether to enable multiple image mode</p><p>When set to false, single image mode is used, and the Interval and Total parameters are ignored</p><p>Default value: false</p>
+     */
+    public void setEnable(Boolean Enable) {
+        this.Enable = Enable;
+    }
+
+    /**
+     * Get <p>Frame interception interval</p><p>Value range: [10, 600]</p><p>Unit: second</p> 
+     * @return Interval <p>Frame interception interval</p><p>Value range: [10, 600]</p><p>Unit: second</p>
+     */
+    public Long getInterval() {
+        return this.Interval;
+    }
+
+    /**
+     * Set <p>Frame interception interval</p><p>Value range: [10, 600]</p><p>Unit: second</p>
+     * @param Interval <p>Frame interception interval</p><p>Value range: [10, 600]</p><p>Unit: second</p>
+     */
+    public void setInterval(Long Interval) {
+        this.Interval = Interval;
+    }
+
+    /**
+     * Get <p>Number of captured frames</p><p>Value range: [1, 10]</p> 
+     * @return Total <p>Number of captured frames</p><p>Value range: [1, 10]</p>
+     */
+    public Long getTotal() {
+        return this.Total;
+    }
+
+    /**
+     * Set <p>Number of captured frames</p><p>Value range: [1, 10]</p>
+     * @param Total <p>Number of captured frames</p><p>Value range: [1, 10]</p>
+     */
+    public void setTotal(Long Total) {
+        this.Total = Total;
+    }
+
+    public MultiSnapshotMode() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public MultiSnapshotMode(MultiSnapshotMode source) {
+        if (source.Enable != null) {
+            this.Enable = new Boolean(source.Enable);
+        }
+        if (source.Interval != null) {
+            this.Interval = new Long(source.Interval);
+        }
+        if (source.Total != null) {
+            this.Total = new Long(source.Total);
+        }
+    }
+
+
+    /**
+     * Internal implementation, normal users should not use it.
+     */
+    public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "Enable", this.Enable);
+        this.setParamSimple(map, prefix + "Interval", this.Interval);
+        this.setParamSimple(map, prefix + "Total", this.Total);
+
+    }
+}
+
