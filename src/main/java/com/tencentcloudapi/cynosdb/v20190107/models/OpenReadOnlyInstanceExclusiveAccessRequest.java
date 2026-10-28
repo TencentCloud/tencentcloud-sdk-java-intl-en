@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class OpenReadOnlyInstanceExclusiveAccessRequest extends AbstractModel {
 
     /**
-    * Please use [Cluster information description](https://www.tencentcloud.com/document/api/1003/48086?from_cn_redirect=1) to get the clusterId.
+    * Please use [Cluster information description](https://www.tencentcloud.com/document/api/1098/40752) to get the clusterId.
     */
     @SerializedName("ClusterId")
     @Expose
     private String ClusterId;
 
     /**
-    * Please use [Cluster information description](https://www.tencentcloud.com/document/api/1003/48086?from_cn_redirect=1) to get the instanceId.
+    * Please use [Cluster information description](https://www.tencentcloud.com/document/api/1098/40752) to get the instanceId.
     */
     @SerializedName("InstanceId")
     @Expose
@@ -66,32 +66,32 @@ public class OpenReadOnlyInstanceExclusiveAccessRequest extends AbstractModel {
     private String [] SecurityGroupIds;
 
     /**
-     * Get Please use [Cluster information description](https://www.tencentcloud.com/document/api/1003/48086?from_cn_redirect=1) to get the clusterId. 
-     * @return ClusterId Please use [Cluster information description](https://www.tencentcloud.com/document/api/1003/48086?from_cn_redirect=1) to get the clusterId.
+     * Get Please use [Cluster information description](https://www.tencentcloud.com/document/api/1098/40752) to get the clusterId. 
+     * @return ClusterId Please use [Cluster information description](https://www.tencentcloud.com/document/api/1098/40752) to get the clusterId.
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set Please use [Cluster information description](https://www.tencentcloud.com/document/api/1003/48086?from_cn_redirect=1) to get the clusterId.
-     * @param ClusterId Please use [Cluster information description](https://www.tencentcloud.com/document/api/1003/48086?from_cn_redirect=1) to get the clusterId.
+     * Set Please use [Cluster information description](https://www.tencentcloud.com/document/api/1098/40752) to get the clusterId.
+     * @param ClusterId Please use [Cluster information description](https://www.tencentcloud.com/document/api/1098/40752) to get the clusterId.
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get Please use [Cluster information description](https://www.tencentcloud.com/document/api/1003/48086?from_cn_redirect=1) to get the instanceId. 
-     * @return InstanceId Please use [Cluster information description](https://www.tencentcloud.com/document/api/1003/48086?from_cn_redirect=1) to get the instanceId.
+     * Get Please use [Cluster information description](https://www.tencentcloud.com/document/api/1098/40752) to get the instanceId. 
+     * @return InstanceId Please use [Cluster information description](https://www.tencentcloud.com/document/api/1098/40752) to get the instanceId.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Please use [Cluster information description](https://www.tencentcloud.com/document/api/1003/48086?from_cn_redirect=1) to get the instanceId.
-     * @param InstanceId Please use [Cluster information description](https://www.tencentcloud.com/document/api/1003/48086?from_cn_redirect=1) to get the instanceId.
+     * Set Please use [Cluster information description](https://www.tencentcloud.com/document/api/1098/40752) to get the instanceId.
+     * @param InstanceId Please use [Cluster information description](https://www.tencentcloud.com/document/api/1098/40752) to get the instanceId.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;

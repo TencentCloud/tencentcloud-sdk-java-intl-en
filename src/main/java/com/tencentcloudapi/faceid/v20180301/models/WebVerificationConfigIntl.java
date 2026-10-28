@@ -45,7 +45,7 @@ public class WebVerificationConfigIntl extends AbstractModel {
     private Long CheckMode;
 
     /**
-    * <p>Identity document type used for authentication. Currently supported:<br>1.HKIDCard: Hong Kong (China) identity card<br>2.MLIDCard: Malaysian identity card<br>3.IndonesiaIDCard: Indonesian Identity Card<br>4.PhilippinesVoteID: Philippines voter card<br>5.PhilippinesDrivingLicense: Philippines driving license<br>6.PhilippinesTinID: Philippines TinID<br>7.PhilippinesSSSID: Philippines SSSID<br>8.PhilippinesUMID: Philippines UMID<br>9.InternationalIDPassport: Passport for Hong Kong (China), Macao (China), and Taiwan (China) as well as overseas passport<br>10.ThailandIDCard: Thai Identity Card<br>11.SingaporeIDCard: Singapore ID card<br>12.MainlandIDCard: Mainland ID card</p>
+    * <p>Identity document type used for authentication. Currently supported:<br>1.HKIDCard: Hong Kong (China) identity card<br>2.MLIDCard: Malaysian identity card<br>3.IndonesiaIDCard: Indonesian Identity Card<br>4.PhilippinesVoteID: Philippines voter card<br>5.PhilippinesDrivingLicense: Philippines driving license<br>6.PhilippinesTinID: Philippines TinID<br>7.PhilippinesSSSID: Philippines SSSID<br>8.PhilippinesUMID: Philippines UMID<br>9.InternationalIDPassport: Passport for Hong Kong (China), Macao (China), and Taiwan (China) as well as overseas passport<br>10.ThailandIDCard: Thai Identity Card<br>11.SingaporeIDCard: Singapore ID card<br>12.MainlandIDCard: Mainland ID card</p>13.VietnamIDCard: Vietnam ID card</p>
     */
     @SerializedName("IDCardType")
     @Expose
@@ -143,6 +143,24 @@ public class WebVerificationConfigIntl extends AbstractModel {
     private String Version;
 
     /**
+    * When CheckMode = 1, this defines the waiting policy for OCR recognition results.
+Enumeration values:
+required: Wait for OCR result after document capture.
+skip: Wait for OCR result confirmation before entering liveness check.
+Default value: required.
+    */
+    @SerializedName("OcrWaitPolicy")
+    @Expose
+    private String OcrWaitPolicy;
+
+    /**
+    * When CheckMode = 1, verification status callback URL. If configured, the service will actively push notifications to this address upon process completion. Leave it blank to disable callbacks. As callbacks cannot guarantee 100% delivery, it is recommended to use a polling mechanism to retrieve the final status.
+    */
+    @SerializedName("WebhookUrl")
+    @Expose
+    private String WebhookUrl;
+
+    /**
      * Get <p>Whether to skip the start verification webpage when starting verification. If true, directly enter the verification process. Default false. If the degradation policy is triggered, this configuration will not take effect.</p> 
      * @return AutoSkipStartPage <p>Whether to skip the start verification webpage when starting verification. If true, directly enter the verification process. Default false. If the degradation policy is triggered, this configuration will not take effect.</p>
      */
@@ -191,16 +209,16 @@ public class WebVerificationConfigIntl extends AbstractModel {
     }
 
     /**
-     * Get <p>Identity document type used for authentication. Currently supported:<br>1.HKIDCard: Hong Kong (China) identity card<br>2.MLIDCard: Malaysian identity card<br>3.IndonesiaIDCard: Indonesian Identity Card<br>4.PhilippinesVoteID: Philippines voter card<br>5.PhilippinesDrivingLicense: Philippines driving license<br>6.PhilippinesTinID: Philippines TinID<br>7.PhilippinesSSSID: Philippines SSSID<br>8.PhilippinesUMID: Philippines UMID<br>9.InternationalIDPassport: Passport for Hong Kong (China), Macao (China), and Taiwan (China) as well as overseas passport<br>10.ThailandIDCard: Thai Identity Card<br>11.SingaporeIDCard: Singapore ID card<br>12.MainlandIDCard: Mainland ID card</p> 
-     * @return IDCardType <p>Identity document type used for authentication. Currently supported:<br>1.HKIDCard: Hong Kong (China) identity card<br>2.MLIDCard: Malaysian identity card<br>3.IndonesiaIDCard: Indonesian Identity Card<br>4.PhilippinesVoteID: Philippines voter card<br>5.PhilippinesDrivingLicense: Philippines driving license<br>6.PhilippinesTinID: Philippines TinID<br>7.PhilippinesSSSID: Philippines SSSID<br>8.PhilippinesUMID: Philippines UMID<br>9.InternationalIDPassport: Passport for Hong Kong (China), Macao (China), and Taiwan (China) as well as overseas passport<br>10.ThailandIDCard: Thai Identity Card<br>11.SingaporeIDCard: Singapore ID card<br>12.MainlandIDCard: Mainland ID card</p>
+     * Get <p>Identity document type used for authentication. Currently supported:<br>1.HKIDCard: Hong Kong (China) identity card<br>2.MLIDCard: Malaysian identity card<br>3.IndonesiaIDCard: Indonesian Identity Card<br>4.PhilippinesVoteID: Philippines voter card<br>5.PhilippinesDrivingLicense: Philippines driving license<br>6.PhilippinesTinID: Philippines TinID<br>7.PhilippinesSSSID: Philippines SSSID<br>8.PhilippinesUMID: Philippines UMID<br>9.InternationalIDPassport: Passport for Hong Kong (China), Macao (China), and Taiwan (China) as well as overseas passport<br>10.ThailandIDCard: Thai Identity Card<br>11.SingaporeIDCard: Singapore ID card<br>12.MainlandIDCard: Mainland ID card</p>13.VietnamIDCard: Vietnam ID card</p> 
+     * @return IDCardType <p>Identity document type used for authentication. Currently supported:<br>1.HKIDCard: Hong Kong (China) identity card<br>2.MLIDCard: Malaysian identity card<br>3.IndonesiaIDCard: Indonesian Identity Card<br>4.PhilippinesVoteID: Philippines voter card<br>5.PhilippinesDrivingLicense: Philippines driving license<br>6.PhilippinesTinID: Philippines TinID<br>7.PhilippinesSSSID: Philippines SSSID<br>8.PhilippinesUMID: Philippines UMID<br>9.InternationalIDPassport: Passport for Hong Kong (China), Macao (China), and Taiwan (China) as well as overseas passport<br>10.ThailandIDCard: Thai Identity Card<br>11.SingaporeIDCard: Singapore ID card<br>12.MainlandIDCard: Mainland ID card</p>13.VietnamIDCard: Vietnam ID card</p>
      */
     public String getIDCardType() {
         return this.IDCardType;
     }
 
     /**
-     * Set <p>Identity document type used for authentication. Currently supported:<br>1.HKIDCard: Hong Kong (China) identity card<br>2.MLIDCard: Malaysian identity card<br>3.IndonesiaIDCard: Indonesian Identity Card<br>4.PhilippinesVoteID: Philippines voter card<br>5.PhilippinesDrivingLicense: Philippines driving license<br>6.PhilippinesTinID: Philippines TinID<br>7.PhilippinesSSSID: Philippines SSSID<br>8.PhilippinesUMID: Philippines UMID<br>9.InternationalIDPassport: Passport for Hong Kong (China), Macao (China), and Taiwan (China) as well as overseas passport<br>10.ThailandIDCard: Thai Identity Card<br>11.SingaporeIDCard: Singapore ID card<br>12.MainlandIDCard: Mainland ID card</p>
-     * @param IDCardType <p>Identity document type used for authentication. Currently supported:<br>1.HKIDCard: Hong Kong (China) identity card<br>2.MLIDCard: Malaysian identity card<br>3.IndonesiaIDCard: Indonesian Identity Card<br>4.PhilippinesVoteID: Philippines voter card<br>5.PhilippinesDrivingLicense: Philippines driving license<br>6.PhilippinesTinID: Philippines TinID<br>7.PhilippinesSSSID: Philippines SSSID<br>8.PhilippinesUMID: Philippines UMID<br>9.InternationalIDPassport: Passport for Hong Kong (China), Macao (China), and Taiwan (China) as well as overseas passport<br>10.ThailandIDCard: Thai Identity Card<br>11.SingaporeIDCard: Singapore ID card<br>12.MainlandIDCard: Mainland ID card</p>
+     * Set <p>Identity document type used for authentication. Currently supported:<br>1.HKIDCard: Hong Kong (China) identity card<br>2.MLIDCard: Malaysian identity card<br>3.IndonesiaIDCard: Indonesian Identity Card<br>4.PhilippinesVoteID: Philippines voter card<br>5.PhilippinesDrivingLicense: Philippines driving license<br>6.PhilippinesTinID: Philippines TinID<br>7.PhilippinesSSSID: Philippines SSSID<br>8.PhilippinesUMID: Philippines UMID<br>9.InternationalIDPassport: Passport for Hong Kong (China), Macao (China), and Taiwan (China) as well as overseas passport<br>10.ThailandIDCard: Thai Identity Card<br>11.SingaporeIDCard: Singapore ID card<br>12.MainlandIDCard: Mainland ID card</p>13.VietnamIDCard: Vietnam ID card</p>
+     * @param IDCardType <p>Identity document type used for authentication. Currently supported:<br>1.HKIDCard: Hong Kong (China) identity card<br>2.MLIDCard: Malaysian identity card<br>3.IndonesiaIDCard: Indonesian Identity Card<br>4.PhilippinesVoteID: Philippines voter card<br>5.PhilippinesDrivingLicense: Philippines driving license<br>6.PhilippinesTinID: Philippines TinID<br>7.PhilippinesSSSID: Philippines SSSID<br>8.PhilippinesUMID: Philippines UMID<br>9.InternationalIDPassport: Passport for Hong Kong (China), Macao (China), and Taiwan (China) as well as overseas passport<br>10.ThailandIDCard: Thai Identity Card<br>11.SingaporeIDCard: Singapore ID card<br>12.MainlandIDCard: Mainland ID card</p>13.VietnamIDCard: Vietnam ID card</p>
      */
     public void setIDCardType(String IDCardType) {
         this.IDCardType = IDCardType;
@@ -414,6 +432,54 @@ public class WebVerificationConfigIntl extends AbstractModel {
         this.Version = Version;
     }
 
+    /**
+     * Get When CheckMode = 1, this defines the waiting policy for OCR recognition results.
+Enumeration values:
+required: Wait for OCR result after document capture.
+skip: Wait for OCR result confirmation before entering liveness check.
+Default value: required. 
+     * @return OcrWaitPolicy When CheckMode = 1, this defines the waiting policy for OCR recognition results.
+Enumeration values:
+required: Wait for OCR result after document capture.
+skip: Wait for OCR result confirmation before entering liveness check.
+Default value: required.
+     */
+    public String getOcrWaitPolicy() {
+        return this.OcrWaitPolicy;
+    }
+
+    /**
+     * Set When CheckMode = 1, this defines the waiting policy for OCR recognition results.
+Enumeration values:
+required: Wait for OCR result after document capture.
+skip: Wait for OCR result confirmation before entering liveness check.
+Default value: required.
+     * @param OcrWaitPolicy When CheckMode = 1, this defines the waiting policy for OCR recognition results.
+Enumeration values:
+required: Wait for OCR result after document capture.
+skip: Wait for OCR result confirmation before entering liveness check.
+Default value: required.
+     */
+    public void setOcrWaitPolicy(String OcrWaitPolicy) {
+        this.OcrWaitPolicy = OcrWaitPolicy;
+    }
+
+    /**
+     * Get When CheckMode = 1, verification status callback URL. If configured, the service will actively push notifications to this address upon process completion. Leave it blank to disable callbacks. As callbacks cannot guarantee 100% delivery, it is recommended to use a polling mechanism to retrieve the final status. 
+     * @return WebhookUrl When CheckMode = 1, verification status callback URL. If configured, the service will actively push notifications to this address upon process completion. Leave it blank to disable callbacks. As callbacks cannot guarantee 100% delivery, it is recommended to use a polling mechanism to retrieve the final status.
+     */
+    public String getWebhookUrl() {
+        return this.WebhookUrl;
+    }
+
+    /**
+     * Set When CheckMode = 1, verification status callback URL. If configured, the service will actively push notifications to this address upon process completion. Leave it blank to disable callbacks. As callbacks cannot guarantee 100% delivery, it is recommended to use a polling mechanism to retrieve the final status.
+     * @param WebhookUrl When CheckMode = 1, verification status callback URL. If configured, the service will actively push notifications to this address upon process completion. Leave it blank to disable callbacks. As callbacks cannot guarantee 100% delivery, it is recommended to use a polling mechanism to retrieve the final status.
+     */
+    public void setWebhookUrl(String WebhookUrl) {
+        this.WebhookUrl = WebhookUrl;
+    }
+
     public WebVerificationConfigIntl() {
     }
 
@@ -473,6 +539,12 @@ public class WebVerificationConfigIntl extends AbstractModel {
         if (source.Version != null) {
             this.Version = new String(source.Version);
         }
+        if (source.OcrWaitPolicy != null) {
+            this.OcrWaitPolicy = new String(source.OcrWaitPolicy);
+        }
+        if (source.WebhookUrl != null) {
+            this.WebhookUrl = new String(source.WebhookUrl);
+        }
     }
 
 
@@ -497,6 +569,8 @@ public class WebVerificationConfigIntl extends AbstractModel {
         this.setParamSimple(map, prefix + "SelectedWarningCodes", this.SelectedWarningCodes);
         this.setParamSimple(map, prefix + "AllowExpiredDocument", this.AllowExpiredDocument);
         this.setParamSimple(map, prefix + "Version", this.Version);
+        this.setParamSimple(map, prefix + "OcrWaitPolicy", this.OcrWaitPolicy);
+        this.setParamSimple(map, prefix + "WebhookUrl", this.WebhookUrl);
 
     }
 }

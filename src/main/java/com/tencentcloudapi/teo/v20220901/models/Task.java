@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class Task extends AbstractModel {
 
     /**
-    * ID of the task.
+    * Task ID.
     */
     @SerializedName("JobId")
     @Expose
@@ -38,77 +38,77 @@ public class Task extends AbstractModel {
     private String Target;
 
     /**
-    * Type of the task.
+    * Task type.
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * Node cache purge method. valid values:.
-<li>invalidate: marks as expired. a back-to-origin validation is triggered upon user request, sending an HTTP conditional request with If-None-Match and If-Modified-Since headers. If the origin server responds with 200, the node will fetch new resources from the origin and update the cache; If the origin server responds with 304, the cache will not be updated;</li>.
-<Li>Delete: directly deletes the node's cache, triggering a resource fetch from the origin upon user request.</li>.
+    * Node cache purge method, with values:
+<li>invalidate: Marks as expired. A back-to-origin validation is triggered upon user request, sending an HTTP conditional request with If-None-Match and If-Modified-Since headers. If the origin server responds with 200, the node will fetch new resources from the origin and update the cache; if the origin server responds with 304, the cache will not be updated;</li>
+<li>delete: Directly deletes the node's cache, triggering a resource fetch from the origin upon user request.</li>
     */
     @SerializedName("Method")
     @Expose
     private String Method;
 
     /**
-    * Status. valid values:.
-<li>processing: indicates the operation is in progress.</li>.
-<Li>Success: specifies the success status.</li>.
-<li>failed: indicates a failure.</li>.
-<Li>Timeout: specifies the timeout period.</li>.
-<Li>Canceled: canceled.</li>.
+    * Status. Valid values:
+<li>processing: Processing;</li>
+<li>success: Succeeded;</li>
+<li>failed: Failed;</li>
+<li>timeout: Timed out;</li>
+<li>canceled: Canceled.</li>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * Creation time of the task.
+    * Task creation time.
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * Completion time of the task.
+    * Task completion time.
     */
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
 
     /**
-    * Refresh and preheat failure type. valid values:.
-<li>taskFailed: specifies the task failure.</li>.
-<li>quotaExceeded: specifies the quota exceeded status.</li>.
-<li>downloadManifestFailed: specifies the file failed to download.</li>.
-<li>accessDenied: specifies access denied.</li>.
-<li>originPullFailed: specifies the origin-pull failure.</li>.
+    * Failure type of update and preheating. Valid values:
+<li>taskFailed: Task failure;</li>
+<li>quotaExceeded: quota exceeded;</li>
+<li>downloadManifestFailed: Failed to download the description file;</li>
+<li>accessDenied: access denied.</li>
+<li>originPullFailed: origin-pull failure.</li>
     */
     @SerializedName("FailType")
     @Expose
     private String FailType;
 
     /**
-    * Description of the reason for cache purge or warm cache failure.
+    * Failure reason description for cache purge and cache pre-warming.
     */
     @SerializedName("FailMessage")
     @Expose
     private String FailMessage;
 
     /**
-     * Get ID of the task. 
-     * @return JobId ID of the task.
+     * Get Task ID. 
+     * @return JobId Task ID.
      */
     public String getJobId() {
         return this.JobId;
     }
 
     /**
-     * Set ID of the task.
-     * @param JobId ID of the task.
+     * Set Task ID.
+     * @param JobId Task ID.
      */
     public void setJobId(String JobId) {
         this.JobId = JobId;
@@ -131,160 +131,160 @@ public class Task extends AbstractModel {
     }
 
     /**
-     * Get Type of the task. 
-     * @return Type Type of the task.
+     * Get Task type. 
+     * @return Type Task type.
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Type of the task.
-     * @param Type Type of the task.
+     * Set Task type.
+     * @param Type Task type.
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get Node cache purge method. valid values:.
-<li>invalidate: marks as expired. a back-to-origin validation is triggered upon user request, sending an HTTP conditional request with If-None-Match and If-Modified-Since headers. If the origin server responds with 200, the node will fetch new resources from the origin and update the cache; If the origin server responds with 304, the cache will not be updated;</li>.
-<Li>Delete: directly deletes the node's cache, triggering a resource fetch from the origin upon user request.</li>. 
-     * @return Method Node cache purge method. valid values:.
-<li>invalidate: marks as expired. a back-to-origin validation is triggered upon user request, sending an HTTP conditional request with If-None-Match and If-Modified-Since headers. If the origin server responds with 200, the node will fetch new resources from the origin and update the cache; If the origin server responds with 304, the cache will not be updated;</li>.
-<Li>Delete: directly deletes the node's cache, triggering a resource fetch from the origin upon user request.</li>.
+     * Get Node cache purge method, with values:
+<li>invalidate: Marks as expired. A back-to-origin validation is triggered upon user request, sending an HTTP conditional request with If-None-Match and If-Modified-Since headers. If the origin server responds with 200, the node will fetch new resources from the origin and update the cache; if the origin server responds with 304, the cache will not be updated;</li>
+<li>delete: Directly deletes the node's cache, triggering a resource fetch from the origin upon user request.</li> 
+     * @return Method Node cache purge method, with values:
+<li>invalidate: Marks as expired. A back-to-origin validation is triggered upon user request, sending an HTTP conditional request with If-None-Match and If-Modified-Since headers. If the origin server responds with 200, the node will fetch new resources from the origin and update the cache; if the origin server responds with 304, the cache will not be updated;</li>
+<li>delete: Directly deletes the node's cache, triggering a resource fetch from the origin upon user request.</li>
      */
     public String getMethod() {
         return this.Method;
     }
 
     /**
-     * Set Node cache purge method. valid values:.
-<li>invalidate: marks as expired. a back-to-origin validation is triggered upon user request, sending an HTTP conditional request with If-None-Match and If-Modified-Since headers. If the origin server responds with 200, the node will fetch new resources from the origin and update the cache; If the origin server responds with 304, the cache will not be updated;</li>.
-<Li>Delete: directly deletes the node's cache, triggering a resource fetch from the origin upon user request.</li>.
-     * @param Method Node cache purge method. valid values:.
-<li>invalidate: marks as expired. a back-to-origin validation is triggered upon user request, sending an HTTP conditional request with If-None-Match and If-Modified-Since headers. If the origin server responds with 200, the node will fetch new resources from the origin and update the cache; If the origin server responds with 304, the cache will not be updated;</li>.
-<Li>Delete: directly deletes the node's cache, triggering a resource fetch from the origin upon user request.</li>.
+     * Set Node cache purge method, with values:
+<li>invalidate: Marks as expired. A back-to-origin validation is triggered upon user request, sending an HTTP conditional request with If-None-Match and If-Modified-Since headers. If the origin server responds with 200, the node will fetch new resources from the origin and update the cache; if the origin server responds with 304, the cache will not be updated;</li>
+<li>delete: Directly deletes the node's cache, triggering a resource fetch from the origin upon user request.</li>
+     * @param Method Node cache purge method, with values:
+<li>invalidate: Marks as expired. A back-to-origin validation is triggered upon user request, sending an HTTP conditional request with If-None-Match and If-Modified-Since headers. If the origin server responds with 200, the node will fetch new resources from the origin and update the cache; if the origin server responds with 304, the cache will not be updated;</li>
+<li>delete: Directly deletes the node's cache, triggering a resource fetch from the origin upon user request.</li>
      */
     public void setMethod(String Method) {
         this.Method = Method;
     }
 
     /**
-     * Get Status. valid values:.
-<li>processing: indicates the operation is in progress.</li>.
-<Li>Success: specifies the success status.</li>.
-<li>failed: indicates a failure.</li>.
-<Li>Timeout: specifies the timeout period.</li>.
-<Li>Canceled: canceled.</li>. 
-     * @return Status Status. valid values:.
-<li>processing: indicates the operation is in progress.</li>.
-<Li>Success: specifies the success status.</li>.
-<li>failed: indicates a failure.</li>.
-<Li>Timeout: specifies the timeout period.</li>.
-<Li>Canceled: canceled.</li>.
+     * Get Status. Valid values:
+<li>processing: Processing;</li>
+<li>success: Succeeded;</li>
+<li>failed: Failed;</li>
+<li>timeout: Timed out;</li>
+<li>canceled: Canceled.</li> 
+     * @return Status Status. Valid values:
+<li>processing: Processing;</li>
+<li>success: Succeeded;</li>
+<li>failed: Failed;</li>
+<li>timeout: Timed out;</li>
+<li>canceled: Canceled.</li>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Status. valid values:.
-<li>processing: indicates the operation is in progress.</li>.
-<Li>Success: specifies the success status.</li>.
-<li>failed: indicates a failure.</li>.
-<Li>Timeout: specifies the timeout period.</li>.
-<Li>Canceled: canceled.</li>.
-     * @param Status Status. valid values:.
-<li>processing: indicates the operation is in progress.</li>.
-<Li>Success: specifies the success status.</li>.
-<li>failed: indicates a failure.</li>.
-<Li>Timeout: specifies the timeout period.</li>.
-<Li>Canceled: canceled.</li>.
+     * Set Status. Valid values:
+<li>processing: Processing;</li>
+<li>success: Succeeded;</li>
+<li>failed: Failed;</li>
+<li>timeout: Timed out;</li>
+<li>canceled: Canceled.</li>
+     * @param Status Status. Valid values:
+<li>processing: Processing;</li>
+<li>success: Succeeded;</li>
+<li>failed: Failed;</li>
+<li>timeout: Timed out;</li>
+<li>canceled: Canceled.</li>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Creation time of the task. 
-     * @return CreateTime Creation time of the task.
+     * Get Task creation time. 
+     * @return CreateTime Task creation time.
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set Creation time of the task.
-     * @param CreateTime Creation time of the task.
+     * Set Task creation time.
+     * @param CreateTime Task creation time.
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get Completion time of the task. 
-     * @return UpdateTime Completion time of the task.
+     * Get Task completion time. 
+     * @return UpdateTime Task completion time.
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set Completion time of the task.
-     * @param UpdateTime Completion time of the task.
+     * Set Task completion time.
+     * @param UpdateTime Task completion time.
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
     }
 
     /**
-     * Get Refresh and preheat failure type. valid values:.
-<li>taskFailed: specifies the task failure.</li>.
-<li>quotaExceeded: specifies the quota exceeded status.</li>.
-<li>downloadManifestFailed: specifies the file failed to download.</li>.
-<li>accessDenied: specifies access denied.</li>.
-<li>originPullFailed: specifies the origin-pull failure.</li>. 
-     * @return FailType Refresh and preheat failure type. valid values:.
-<li>taskFailed: specifies the task failure.</li>.
-<li>quotaExceeded: specifies the quota exceeded status.</li>.
-<li>downloadManifestFailed: specifies the file failed to download.</li>.
-<li>accessDenied: specifies access denied.</li>.
-<li>originPullFailed: specifies the origin-pull failure.</li>.
+     * Get Failure type of update and preheating. Valid values:
+<li>taskFailed: Task failure;</li>
+<li>quotaExceeded: quota exceeded;</li>
+<li>downloadManifestFailed: Failed to download the description file;</li>
+<li>accessDenied: access denied.</li>
+<li>originPullFailed: origin-pull failure.</li> 
+     * @return FailType Failure type of update and preheating. Valid values:
+<li>taskFailed: Task failure;</li>
+<li>quotaExceeded: quota exceeded;</li>
+<li>downloadManifestFailed: Failed to download the description file;</li>
+<li>accessDenied: access denied.</li>
+<li>originPullFailed: origin-pull failure.</li>
      */
     public String getFailType() {
         return this.FailType;
     }
 
     /**
-     * Set Refresh and preheat failure type. valid values:.
-<li>taskFailed: specifies the task failure.</li>.
-<li>quotaExceeded: specifies the quota exceeded status.</li>.
-<li>downloadManifestFailed: specifies the file failed to download.</li>.
-<li>accessDenied: specifies access denied.</li>.
-<li>originPullFailed: specifies the origin-pull failure.</li>.
-     * @param FailType Refresh and preheat failure type. valid values:.
-<li>taskFailed: specifies the task failure.</li>.
-<li>quotaExceeded: specifies the quota exceeded status.</li>.
-<li>downloadManifestFailed: specifies the file failed to download.</li>.
-<li>accessDenied: specifies access denied.</li>.
-<li>originPullFailed: specifies the origin-pull failure.</li>.
+     * Set Failure type of update and preheating. Valid values:
+<li>taskFailed: Task failure;</li>
+<li>quotaExceeded: quota exceeded;</li>
+<li>downloadManifestFailed: Failed to download the description file;</li>
+<li>accessDenied: access denied.</li>
+<li>originPullFailed: origin-pull failure.</li>
+     * @param FailType Failure type of update and preheating. Valid values:
+<li>taskFailed: Task failure;</li>
+<li>quotaExceeded: quota exceeded;</li>
+<li>downloadManifestFailed: Failed to download the description file;</li>
+<li>accessDenied: access denied.</li>
+<li>originPullFailed: origin-pull failure.</li>
      */
     public void setFailType(String FailType) {
         this.FailType = FailType;
     }
 
     /**
-     * Get Description of the reason for cache purge or warm cache failure. 
-     * @return FailMessage Description of the reason for cache purge or warm cache failure.
+     * Get Failure reason description for cache purge and cache pre-warming. 
+     * @return FailMessage Failure reason description for cache purge and cache pre-warming.
      */
     public String getFailMessage() {
         return this.FailMessage;
     }
 
     /**
-     * Set Description of the reason for cache purge or warm cache failure.
-     * @param FailMessage Description of the reason for cache purge or warm cache failure.
+     * Set Failure reason description for cache purge and cache pre-warming.
+     * @param FailMessage Failure reason description for cache purge and cache pre-warming.
      */
     public void setFailMessage(String FailMessage) {
         this.FailMessage = FailMessage;
