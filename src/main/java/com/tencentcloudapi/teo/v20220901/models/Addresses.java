@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class Addresses extends AbstractModel {
 
     /**
-    * IPv4 subnet.
+    * IPv4 IP range list.
     */
     @SerializedName("IPv4")
     @Expose
     private String [] IPv4;
 
     /**
-    * IPv6 subnet.
+    * IPv6 IP range list.
     */
     @SerializedName("IPv6")
     @Expose
     private String [] IPv6;
 
     /**
-     * Get IPv4 subnet. 
-     * @return IPv4 IPv4 subnet.
+     * Get IPv4 IP range list. 
+     * @return IPv4 IPv4 IP range list.
      */
     public String [] getIPv4() {
         return this.IPv4;
     }
 
     /**
-     * Set IPv4 subnet.
-     * @param IPv4 IPv4 subnet.
+     * Set IPv4 IP range list.
+     * @param IPv4 IPv4 IP range list.
      */
     public void setIPv4(String [] IPv4) {
         this.IPv4 = IPv4;
     }
 
     /**
-     * Get IPv6 subnet. 
-     * @return IPv6 IPv6 subnet.
+     * Get IPv6 IP range list. 
+     * @return IPv6 IPv6 IP range list.
      */
     public String [] getIPv6() {
         return this.IPv6;
     }
 
     /**
-     * Set IPv6 subnet.
-     * @param IPv6 IPv6 subnet.
+     * Set IPv6 IP range list.
+     * @param IPv6 IPv6 IP range list.
      */
     public void setIPv6(String [] IPv6) {
         this.IPv6 = IPv6;

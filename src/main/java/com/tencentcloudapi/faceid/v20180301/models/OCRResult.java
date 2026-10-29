@@ -101,6 +101,16 @@ public class OCRResult extends AbstractModel {
     private String CardBackImageBase64;
 
     /**
+    * Card verification status:
+PROCESSING: Verification is in progress.
+COMPLETED: Verification completed with no alerts.
+ABNORMAL: Verification completed with alerts raised.
+    */
+    @SerializedName("CardResultStatus")
+    @Expose
+    private String CardResultStatus;
+
+    /**
      * Get <p>Whether the identity authentication or OCR process is successful.</p> 
      * @return IsPass <p>Whether the identity authentication or OCR process is successful.</p>
      */
@@ -280,6 +290,34 @@ public class OCRResult extends AbstractModel {
         this.CardBackImageBase64 = CardBackImageBase64;
     }
 
+    /**
+     * Get Card verification status:
+PROCESSING: Verification is in progress.
+COMPLETED: Verification completed with no alerts.
+ABNORMAL: Verification completed with alerts raised. 
+     * @return CardResultStatus Card verification status:
+PROCESSING: Verification is in progress.
+COMPLETED: Verification completed with no alerts.
+ABNORMAL: Verification completed with alerts raised.
+     */
+    public String getCardResultStatus() {
+        return this.CardResultStatus;
+    }
+
+    /**
+     * Set Card verification status:
+PROCESSING: Verification is in progress.
+COMPLETED: Verification completed with no alerts.
+ABNORMAL: Verification completed with alerts raised.
+     * @param CardResultStatus Card verification status:
+PROCESSING: Verification is in progress.
+COMPLETED: Verification completed with no alerts.
+ABNORMAL: Verification completed with alerts raised.
+     */
+    public void setCardResultStatus(String CardResultStatus) {
+        this.CardResultStatus = CardResultStatus;
+    }
+
     public OCRResult() {
     }
 
@@ -324,6 +362,9 @@ public class OCRResult extends AbstractModel {
         if (source.CardBackImageBase64 != null) {
             this.CardBackImageBase64 = new String(source.CardBackImageBase64);
         }
+        if (source.CardResultStatus != null) {
+            this.CardResultStatus = new String(source.CardResultStatus);
+        }
     }
 
 
@@ -342,6 +383,7 @@ public class OCRResult extends AbstractModel {
         this.setParamSimple(map, prefix + "OriginalCardInfo", this.OriginalCardInfo);
         this.setParamSimple(map, prefix + "HeadImageBase64", this.HeadImageBase64);
         this.setParamSimple(map, prefix + "CardBackImageBase64", this.CardBackImageBase64);
+        this.setParamSimple(map, prefix + "CardResultStatus", this.CardResultStatus);
 
     }
 }
