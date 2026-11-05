@@ -4081,7 +4081,7 @@ Queries the historical execution records of AI scheduled tasks. Supports paginat
     }
 
     /**
-     *This API is used to query verification results of dspm data identification data items.
+     *Queries the verification result of a dspm data identification data item
      * @param req DescribeDspmIdentifyRuleTestResultRequest
      * @return DescribeDspmIdentifyRuleTestResultResponse
      * @throws TencentCloudSDKException

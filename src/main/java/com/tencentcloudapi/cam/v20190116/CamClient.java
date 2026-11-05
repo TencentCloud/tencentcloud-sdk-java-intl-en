@@ -601,6 +601,17 @@ Calling this API is a high-risk operation because the key cannot be recovered on
     }
 
     /**
+     *Query all account lists.
+     * @param req ListAccountsRequest
+     * @return ListAccountsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListAccountsResponse ListAccounts(ListAccountsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListAccounts", ListAccountsResponse.class);
+    }
+
+    /**
      *This API (ListAttachedGroupPolicies) is used to query the list of policies associated with a user group.
      * @param req ListAttachedGroupPoliciesRequest
      * @return ListAttachedGroupPoliciesResponse

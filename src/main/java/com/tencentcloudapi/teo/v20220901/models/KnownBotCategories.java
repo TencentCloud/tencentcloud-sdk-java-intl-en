@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class KnownBotCategories extends AbstractModel {
 
     /**
-    * Handling method for access requests from known commercial tools or open-source tools. specifies the Name parameter value of SecurityAction: <li>Deny: block;</li> <li>Monitor: observe;</li> <li>Disabled: not enabled, disable specified rule;</li> <li>Challenge: Challenge, where ChallengeOption in ChallengeActionParameters supports JSChallenge and ManagedChallenge;</li> <li>Allow: pass (to be deprecated).</li>.
+    * Handling method for access requests from known commercial or open-source tools. Supported values of SecurityAction Name: <li>Deny: Block;</li><li>Monitor: Observe;</li><li>Disabled: Not enabled, disable the specified rule;</li><li>Challenge: Challenge. Among them, ChallengeOption in ChallengeActionParameters supports JSChallenge and ManagedChallenge;</li><li>Allow: Release (to be deprecated).</li>
     */
     @SerializedName("BaseAction")
     @Expose
     private SecurityAction BaseAction;
 
     /**
-    * Specifies the handling method for access requests from known commercial tools or open-source tools.
+    * Specify the handling method for access requests from known commercial or open-source tools.
     */
     @SerializedName("BotManagementActionOverrides")
     @Expose
     private BotManagementActionOverrides [] BotManagementActionOverrides;
 
     /**
-     * Get Handling method for access requests from known commercial tools or open-source tools. specifies the Name parameter value of SecurityAction: <li>Deny: block;</li> <li>Monitor: observe;</li> <li>Disabled: not enabled, disable specified rule;</li> <li>Challenge: Challenge, where ChallengeOption in ChallengeActionParameters supports JSChallenge and ManagedChallenge;</li> <li>Allow: pass (to be deprecated).</li>. 
-     * @return BaseAction Handling method for access requests from known commercial tools or open-source tools. specifies the Name parameter value of SecurityAction: <li>Deny: block;</li> <li>Monitor: observe;</li> <li>Disabled: not enabled, disable specified rule;</li> <li>Challenge: Challenge, where ChallengeOption in ChallengeActionParameters supports JSChallenge and ManagedChallenge;</li> <li>Allow: pass (to be deprecated).</li>.
+     * Get Handling method for access requests from known commercial or open-source tools. Supported values of SecurityAction Name: <li>Deny: Block;</li><li>Monitor: Observe;</li><li>Disabled: Not enabled, disable the specified rule;</li><li>Challenge: Challenge. Among them, ChallengeOption in ChallengeActionParameters supports JSChallenge and ManagedChallenge;</li><li>Allow: Release (to be deprecated).</li> 
+     * @return BaseAction Handling method for access requests from known commercial or open-source tools. Supported values of SecurityAction Name: <li>Deny: Block;</li><li>Monitor: Observe;</li><li>Disabled: Not enabled, disable the specified rule;</li><li>Challenge: Challenge. Among them, ChallengeOption in ChallengeActionParameters supports JSChallenge and ManagedChallenge;</li><li>Allow: Release (to be deprecated).</li>
      */
     public SecurityAction getBaseAction() {
         return this.BaseAction;
     }
 
     /**
-     * Set Handling method for access requests from known commercial tools or open-source tools. specifies the Name parameter value of SecurityAction: <li>Deny: block;</li> <li>Monitor: observe;</li> <li>Disabled: not enabled, disable specified rule;</li> <li>Challenge: Challenge, where ChallengeOption in ChallengeActionParameters supports JSChallenge and ManagedChallenge;</li> <li>Allow: pass (to be deprecated).</li>.
-     * @param BaseAction Handling method for access requests from known commercial tools or open-source tools. specifies the Name parameter value of SecurityAction: <li>Deny: block;</li> <li>Monitor: observe;</li> <li>Disabled: not enabled, disable specified rule;</li> <li>Challenge: Challenge, where ChallengeOption in ChallengeActionParameters supports JSChallenge and ManagedChallenge;</li> <li>Allow: pass (to be deprecated).</li>.
+     * Set Handling method for access requests from known commercial or open-source tools. Supported values of SecurityAction Name: <li>Deny: Block;</li><li>Monitor: Observe;</li><li>Disabled: Not enabled, disable the specified rule;</li><li>Challenge: Challenge. Among them, ChallengeOption in ChallengeActionParameters supports JSChallenge and ManagedChallenge;</li><li>Allow: Release (to be deprecated).</li>
+     * @param BaseAction Handling method for access requests from known commercial or open-source tools. Supported values of SecurityAction Name: <li>Deny: Block;</li><li>Monitor: Observe;</li><li>Disabled: Not enabled, disable the specified rule;</li><li>Challenge: Challenge. Among them, ChallengeOption in ChallengeActionParameters supports JSChallenge and ManagedChallenge;</li><li>Allow: Release (to be deprecated).</li>
      */
     public void setBaseAction(SecurityAction BaseAction) {
         this.BaseAction = BaseAction;
     }
 
     /**
-     * Get Specifies the handling method for access requests from known commercial tools or open-source tools. 
-     * @return BotManagementActionOverrides Specifies the handling method for access requests from known commercial tools or open-source tools.
+     * Get Specify the handling method for access requests from known commercial or open-source tools. 
+     * @return BotManagementActionOverrides Specify the handling method for access requests from known commercial or open-source tools.
      */
     public BotManagementActionOverrides [] getBotManagementActionOverrides() {
         return this.BotManagementActionOverrides;
     }
 
     /**
-     * Set Specifies the handling method for access requests from known commercial tools or open-source tools.
-     * @param BotManagementActionOverrides Specifies the handling method for access requests from known commercial tools or open-source tools.
+     * Set Specify the handling method for access requests from known commercial or open-source tools.
+     * @param BotManagementActionOverrides Specify the handling method for access requests from known commercial or open-source tools.
      */
     public void setBotManagementActionOverrides(BotManagementActionOverrides [] BotManagementActionOverrides) {
         this.BotManagementActionOverrides = BotManagementActionOverrides;

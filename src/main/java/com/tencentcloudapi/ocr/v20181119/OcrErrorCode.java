@@ -6,10 +6,10 @@ public enum OcrErrorCode {
      /* The CardSide type of the ID card is incorrect. */
      FAILEDOPERATION_CARDSIDEERROR("FailedOperation.CardSideError"),
      
-     /* File download failed. */
+     /* Failed to download the file. */
      FAILEDOPERATION_DOWNLOADERROR("FailedOperation.DownLoadError"),
      
-     /* Image content is empty. */
+     /* The image is empty. */
      FAILEDOPERATION_EMPTYIMAGEERROR("FailedOperation.EmptyImageError"),
      
      /* Recognition by the engine timed out. */
@@ -30,7 +30,7 @@ public enum OcrErrorCode {
      /* The image is blurry. */
      FAILEDOPERATION_IMAGEBLUR("FailedOperation.ImageBlur"),
      
-     /* Image decoding failed. */
+     /* Failed to decode the image. */
      FAILEDOPERATION_IMAGEDECODEFAILED("FailedOperation.ImageDecodeFailed"),
      
      /* No second-generation resident identity card or temporary ID card is detected in the image. */
@@ -39,7 +39,7 @@ public enum OcrErrorCode {
      /* Image is not of the specified card category. */
      FAILEDOPERATION_IMAGENOSPECIFIEDCARD("FailedOperation.ImageNoSpecifiedCard"),
      
-     /* No text detected in the image. */
+     /* No text is detected in the image. */
      FAILEDOPERATION_IMAGENOTEXT("FailedOperation.ImageNoText"),
      
      /* The image size exceeds the limit. Refer to the image size constraints in the input parameter description. */
@@ -72,7 +72,7 @@ public enum OcrErrorCode {
      /* Not the specified document. */
      FAILEDOPERATION_NOTAPPOINTCARD("FailedOperation.NotAppointCard"),
      
-     /* OCR recognition failed. */
+     /* OCR recognition failed. This error may be caused by unstable network connections, service anomalies, or other issues. */
      FAILEDOPERATION_OCRFAILED("FailedOperation.OcrFailed"),
      
      /* Failed to parse the PDF file. The file may be corrupted, encrypted or contains unsupported content. */
@@ -105,7 +105,7 @@ public enum OcrErrorCode {
      /* Unsupported identity document type */
      INVALIDPARAMETERVALUE_UNSUPPORTEDCARD("InvalidParameterValue.UnsupportedCard"),
      
-     /* File content too large. */
+     /* The file size exceeds the limit. */
      LIMITEXCEEDED_TOOLARGEFILEERROR("LimitExceeded.TooLargeFileError"),
      
      /* Image file download failed. */

@@ -1,0 +1,128 @@
+/*
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+package com.tencentcloudapi.adp.v20260520.models;
+
+import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.annotations.Expose;
+import java.util.HashMap;
+
+public class AccessKeyAuthConfig extends AbstractModel {
+
+    /**
+    * <p>Access Key field configuration</p>
+    */
+    @SerializedName("ParamList")
+    @Expose
+    private AccessKeyParamConfig [] ParamList;
+
+    /**
+    * <p>Access Key passthrough configuration</p>
+    */
+    @SerializedName("PassThroughConfig")
+    @Expose
+    private AccessKeyPassThroughConfig PassThroughConfig;
+
+    /**
+    * <p>Access Key usage mode</p><p>Enumeration values:</p><ul><li>1: Access Key pass-through</li></ul>
+    */
+    @SerializedName("UsageMode")
+    @Expose
+    private Long UsageMode;
+
+    /**
+     * Get <p>Access Key field configuration</p> 
+     * @return ParamList <p>Access Key field configuration</p>
+     */
+    public AccessKeyParamConfig [] getParamList() {
+        return this.ParamList;
+    }
+
+    /**
+     * Set <p>Access Key field configuration</p>
+     * @param ParamList <p>Access Key field configuration</p>
+     */
+    public void setParamList(AccessKeyParamConfig [] ParamList) {
+        this.ParamList = ParamList;
+    }
+
+    /**
+     * Get <p>Access Key passthrough configuration</p> 
+     * @return PassThroughConfig <p>Access Key passthrough configuration</p>
+     */
+    public AccessKeyPassThroughConfig getPassThroughConfig() {
+        return this.PassThroughConfig;
+    }
+
+    /**
+     * Set <p>Access Key passthrough configuration</p>
+     * @param PassThroughConfig <p>Access Key passthrough configuration</p>
+     */
+    public void setPassThroughConfig(AccessKeyPassThroughConfig PassThroughConfig) {
+        this.PassThroughConfig = PassThroughConfig;
+    }
+
+    /**
+     * Get <p>Access Key usage mode</p><p>Enumeration values:</p><ul><li>1: Access Key pass-through</li></ul> 
+     * @return UsageMode <p>Access Key usage mode</p><p>Enumeration values:</p><ul><li>1: Access Key pass-through</li></ul>
+     */
+    public Long getUsageMode() {
+        return this.UsageMode;
+    }
+
+    /**
+     * Set <p>Access Key usage mode</p><p>Enumeration values:</p><ul><li>1: Access Key pass-through</li></ul>
+     * @param UsageMode <p>Access Key usage mode</p><p>Enumeration values:</p><ul><li>1: Access Key pass-through</li></ul>
+     */
+    public void setUsageMode(Long UsageMode) {
+        this.UsageMode = UsageMode;
+    }
+
+    public AccessKeyAuthConfig() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AccessKeyAuthConfig(AccessKeyAuthConfig source) {
+        if (source.ParamList != null) {
+            this.ParamList = new AccessKeyParamConfig[source.ParamList.length];
+            for (int i = 0; i < source.ParamList.length; i++) {
+                this.ParamList[i] = new AccessKeyParamConfig(source.ParamList[i]);
+            }
+        }
+        if (source.PassThroughConfig != null) {
+            this.PassThroughConfig = new AccessKeyPassThroughConfig(source.PassThroughConfig);
+        }
+        if (source.UsageMode != null) {
+            this.UsageMode = new Long(source.UsageMode);
+        }
+    }
+
+
+    /**
+     * Internal implementation, normal users should not use it.
+     */
+    public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArrayObj(map, prefix + "ParamList.", this.ParamList);
+        this.setParamObj(map, prefix + "PassThroughConfig.", this.PassThroughConfig);
+        this.setParamSimple(map, prefix + "UsageMode", this.UsageMode);
+
+    }
+}
+

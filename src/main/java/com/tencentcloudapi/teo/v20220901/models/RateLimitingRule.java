@@ -24,253 +24,253 @@ import java.util.HashMap;
 public class RateLimitingRule extends AbstractModel {
 
     /**
-    * The ID of precise rate limiting. rule ID supports different rule configuration operations: <li><b>add</b> a new rule: leave the ID empty or do not specify the ID parameter.</li> <li><b>modify</b> an existing rule: specify the rule ID that needs to be updated/modified.</li> <li><b>delete</b> an existing rule: existing Rules not included in the Rules list under the RateLimitingRules parameter will be deleted.</li>.
+    * <p>ID of the precise rate limiting rule.<br>Different rule configuration operations can be performed by rule ID:<br> <li> <b>Add</b> a new rule: leave ID empty or unspecified;</li><li><b>Modify</b> an existing rule: specify the rule ID that needs to be updated/modified;</li><li><b>Delete</b> an existing rule: existing rules not included in the Rules list in the RateLimitingRules parameter will be deleted.</li></p>
     */
     @SerializedName("Id")
     @Expose
     private String Id;
 
     /**
-    * Specifies the name of the precise rate limit.
+    * <p>Name of the precise rate limit.</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * The specific content of precise rate limiting must comply with expression grammar. for detailed requirements, please refer to [the product document](https://www.tencentcloud.com/document/product/1552/125343?from_cn_redirect=1) .
+    * <p>The specific content of precise rate limiting must comply with expression syntax. For detailed specifications, see <a href="https://www.tencentcloud.com/document/product/1552/125343?from_cn_redirect=1">product document</a>.</p>
     */
     @SerializedName("Condition")
     @Expose
     private String Condition;
 
     /**
-    * Speed limit mode. Within the statistical time window CountingPeriod, the following speed limit modes can be configured for requests that meet the feature CountBy:<li>Block: Block access source. When the count exceeds the threshold MaxRequestThreshold, execute Action disposal for ALL subsequent requests that meet the feature within the ActionDuration. </li><li>Throttle: Only dispose excess requests. When the count exceeds the threshold MaxRequestThreshold, only execute Action disposal for requests that exceed the threshold, and stop disposal when the window ends. At this point, the ActionDuration parameter will be ignored.</li><br />Default value is Block.
+    * <p>Bandwidth limit mode. Within the statistical time window CountingPeriod, for requests that meet the CountBy feature, the following bandwidth limit modes can be configured: <li>Block: Block the access source. When the count exceeds the MaxRequestThreshold, execute the Action on all subsequent requests that meet the feature within the ActionDuration;</li><li>Throttle: Only handle excess requests. When the count exceeds the MaxRequestThreshold, execute the Action only on requests that exceed the threshold, and stop when the window ends. At this point, the ActionDuration parameter will be ignored.</li><br>Default value: Block.</p>
     */
     @SerializedName("Mode")
     @Expose
     private String Mode;
 
     /**
-    * The match mode of the rate threshold request feature. this field is required when Enabled is on.<br /><br />when there are multiple conditions, composite conditions are used to collect statistics. the maximum number of conditions cannot exceed 5. valid values:<br/><li><b>http.request.ip</b>: client ip;</li><li><b>http.request.xff_header_ip</b>: client ip (priority match xff header);</li><li><b>http.request.uri.path</b>: access path of the request;</li><li><b>http.request.cookies['session']</b>: Cookie named session, where session can be replaced with your own parameter;</li><li><b>http.request.headers['user-agent']</b>: http header named user-agent, where user-agent can be replaced with your own parameter;</li><li><b>http.request.ja3</b>: ja3 fingerprint of the request;</li><li><b>http.request.ja4</b>: ja4 fingerprint of the request;</li><li><b>http.request.uri.query['test']</b>: URL query parameter named test, where test can be replaced with your own parameter.</li>.
+    * <p>Match mode of the rate threshold request feature. Required when Enabled is on.<br><br>When there are multiple conditions, they will be combined for statistics and calculation. A maximum of 5 conditions is allowed. Valid values:<br><li><b>http.request.ip</b>: client IP;</li><li><b>http.request.xff_header_ip</b>: client IP (priority match XFF header);</li><li><b>http.request.uri.path</b>: access path of the request;</li><li><b>http.request.cookies[&#39;session&#39;]</b>: Cookie named session, where session can be replaced with your own parameter;</li><li><b>http.request.headers[&#39;user-agent&#39;]</b>: HTTP header named user-agent, where user-agent can be replaced with your own parameter;</li><li><b>http.request.ja3</b>: JA3 fingerprint of the request;</li><li><b>http.request.ja4</b>: JA4 fingerprint of the request;</li><li><b>http.request.uri.query[&#39;test&#39;]</b>: URL query parameter named test, where test can be replaced with your own parameter.</li></p>
     */
     @SerializedName("CountBy")
     @Expose
     private String [] CountBy;
 
     /**
-    * Precision rate limiting specifies the cumulative number of interceptions within the time range. value ranges from 1 to 100000.
+    * <p>Cumulative number of interceptions by precise rate limiting within the time range, with a value range of 1 to 100000.</p>
     */
     @SerializedName("MaxRequestThreshold")
     @Expose
     private Long MaxRequestThreshold;
 
     /**
-    * Specifies the time window for statistics. valid values: <li>1s: 1 second;</li><li>5s: 5 seconds;</li><li>10s: 10 seconds;</li><li>20s: 20 seconds;</li><li>30s: 30 seconds;</li><li>40s: 40 seconds;</li><li>50s: 50 seconds;</li><li>1m: 1 minute;</li><li>2m: 2 minutes;</li><li>5m: 5 minutes;</li><li>10m: 10 minutes;</li><li>1h: 1 hour.</li>.
+    * <p>Time window for statistics. Valid values: <li>1s: 1 second;</li><li>5s: 5 seconds;</li><li>10s: 10 seconds;</li><li>20s: 20 seconds;</li><li>30s: 30 seconds;</li><li>40s: 40 seconds;</li><li>50s: 50 seconds;</li><li>1m: 1 minute;</li><li>2m: 2 minutes;</li><li>5m: 5 minutes;</li><li>10m: 10 minutes;</li><li>1h: 1 hour.</li></p>
     */
     @SerializedName("CountingPeriod")
     @Expose
     private String CountingPeriod;
 
     /**
-    * Duration of the Action. Only the following units are supported: <li>s: second, value range 1-120;</li><li>m: minute, value range 1-120;</li><li>h: hour, value range 1-48;</li><li>d: day, value range 1-30.</li><br />This parameter will be ignored and will not take effect when Mode is Throttle.
+    * <p>Duration of the Action. Supported units: <li>s: seconds, value range: 1-120;</li><li>m: minutes, value range: 1-120;</li><li>h: hours, value range: 1-48;</li><li>d: days, value range: 1-30.</li><br>When Mode is Throttle, this parameter will be ignored and will not take effect.</p>
     */
     @SerializedName("ActionDuration")
     @Expose
     private String ActionDuration;
 
     /**
-    * Precision rate limiting handling methods. valid values: <li>Monitor: Monitor;</li> <li>Deny: block, where DenyActionParameters.Name supports Deny and ReturnCustomPage;</li> <li>Challenge: Challenge, where ChallengeActionParameters.Name supports JSChallenge and ManagedChallenge;</li> <li>Redirect: Redirect to URL;</li>.
+    * <p>Handling method for precise rate limiting. SecurityAction.Name value range is as follows:</p><ul><li>Allow: allow, where AllowActionParameters supports MinDelayTime and MaxDelayTime configuration;</li><li>Deny: block, where DenyActionParameters supports ReturnCustomPage and Stall configuration;</li><li>Monitor: observe;</li><li>Challenge: challenge, where ChallengeActionParameters.ChallengeOption supports JSChallenge and ManagedChallenge;</li><li>Redirect: redirect to a URL.</li></ul>
     */
     @SerializedName("Action")
     @Expose
     private SecurityAction Action;
 
     /**
-    * Precision rate limiting specifies the priority. value range is 0 to 100. default is 0.
+    * <p>Priority of precise rate limiting, ranging from 0 to 100, with a default value of 0.</p>
     */
     @SerializedName("Priority")
     @Expose
     private Long Priority;
 
     /**
-    * Whether the precise rate limiting rule is enabled. valid values: <li>on: enabled;</li> <li>off: disabled.</li>.
+    * <p>Whether the precise rate limiting rule is enabled. Valid values: <li>on: enabled;</li><li>off: disabled.</li></p>
     */
     @SerializedName("Enabled")
     @Expose
     private String Enabled;
 
     /**
-     * Get The ID of precise rate limiting. rule ID supports different rule configuration operations: <li><b>add</b> a new rule: leave the ID empty or do not specify the ID parameter.</li> <li><b>modify</b> an existing rule: specify the rule ID that needs to be updated/modified.</li> <li><b>delete</b> an existing rule: existing Rules not included in the Rules list under the RateLimitingRules parameter will be deleted.</li>. 
-     * @return Id The ID of precise rate limiting. rule ID supports different rule configuration operations: <li><b>add</b> a new rule: leave the ID empty or do not specify the ID parameter.</li> <li><b>modify</b> an existing rule: specify the rule ID that needs to be updated/modified.</li> <li><b>delete</b> an existing rule: existing Rules not included in the Rules list under the RateLimitingRules parameter will be deleted.</li>.
+     * Get <p>ID of the precise rate limiting rule.<br>Different rule configuration operations can be performed by rule ID:<br> <li> <b>Add</b> a new rule: leave ID empty or unspecified;</li><li><b>Modify</b> an existing rule: specify the rule ID that needs to be updated/modified;</li><li><b>Delete</b> an existing rule: existing rules not included in the Rules list in the RateLimitingRules parameter will be deleted.</li></p> 
+     * @return Id <p>ID of the precise rate limiting rule.<br>Different rule configuration operations can be performed by rule ID:<br> <li> <b>Add</b> a new rule: leave ID empty or unspecified;</li><li><b>Modify</b> an existing rule: specify the rule ID that needs to be updated/modified;</li><li><b>Delete</b> an existing rule: existing rules not included in the Rules list in the RateLimitingRules parameter will be deleted.</li></p>
      */
     public String getId() {
         return this.Id;
     }
 
     /**
-     * Set The ID of precise rate limiting. rule ID supports different rule configuration operations: <li><b>add</b> a new rule: leave the ID empty or do not specify the ID parameter.</li> <li><b>modify</b> an existing rule: specify the rule ID that needs to be updated/modified.</li> <li><b>delete</b> an existing rule: existing Rules not included in the Rules list under the RateLimitingRules parameter will be deleted.</li>.
-     * @param Id The ID of precise rate limiting. rule ID supports different rule configuration operations: <li><b>add</b> a new rule: leave the ID empty or do not specify the ID parameter.</li> <li><b>modify</b> an existing rule: specify the rule ID that needs to be updated/modified.</li> <li><b>delete</b> an existing rule: existing Rules not included in the Rules list under the RateLimitingRules parameter will be deleted.</li>.
+     * Set <p>ID of the precise rate limiting rule.<br>Different rule configuration operations can be performed by rule ID:<br> <li> <b>Add</b> a new rule: leave ID empty or unspecified;</li><li><b>Modify</b> an existing rule: specify the rule ID that needs to be updated/modified;</li><li><b>Delete</b> an existing rule: existing rules not included in the Rules list in the RateLimitingRules parameter will be deleted.</li></p>
+     * @param Id <p>ID of the precise rate limiting rule.<br>Different rule configuration operations can be performed by rule ID:<br> <li> <b>Add</b> a new rule: leave ID empty or unspecified;</li><li><b>Modify</b> an existing rule: specify the rule ID that needs to be updated/modified;</li><li><b>Delete</b> an existing rule: existing rules not included in the Rules list in the RateLimitingRules parameter will be deleted.</li></p>
      */
     public void setId(String Id) {
         this.Id = Id;
     }
 
     /**
-     * Get Specifies the name of the precise rate limit. 
-     * @return Name Specifies the name of the precise rate limit.
+     * Get <p>Name of the precise rate limit.</p> 
+     * @return Name <p>Name of the precise rate limit.</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Specifies the name of the precise rate limit.
-     * @param Name Specifies the name of the precise rate limit.
+     * Set <p>Name of the precise rate limit.</p>
+     * @param Name <p>Name of the precise rate limit.</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get The specific content of precise rate limiting must comply with expression grammar. for detailed requirements, please refer to [the product document](https://www.tencentcloud.com/document/product/1552/125343?from_cn_redirect=1) . 
-     * @return Condition The specific content of precise rate limiting must comply with expression grammar. for detailed requirements, please refer to [the product document](https://www.tencentcloud.com/document/product/1552/125343?from_cn_redirect=1) .
+     * Get <p>The specific content of precise rate limiting must comply with expression syntax. For detailed specifications, see <a href="https://www.tencentcloud.com/document/product/1552/125343?from_cn_redirect=1">product document</a>.</p> 
+     * @return Condition <p>The specific content of precise rate limiting must comply with expression syntax. For detailed specifications, see <a href="https://www.tencentcloud.com/document/product/1552/125343?from_cn_redirect=1">product document</a>.</p>
      */
     public String getCondition() {
         return this.Condition;
     }
 
     /**
-     * Set The specific content of precise rate limiting must comply with expression grammar. for detailed requirements, please refer to [the product document](https://www.tencentcloud.com/document/product/1552/125343?from_cn_redirect=1) .
-     * @param Condition The specific content of precise rate limiting must comply with expression grammar. for detailed requirements, please refer to [the product document](https://www.tencentcloud.com/document/product/1552/125343?from_cn_redirect=1) .
+     * Set <p>The specific content of precise rate limiting must comply with expression syntax. For detailed specifications, see <a href="https://www.tencentcloud.com/document/product/1552/125343?from_cn_redirect=1">product document</a>.</p>
+     * @param Condition <p>The specific content of precise rate limiting must comply with expression syntax. For detailed specifications, see <a href="https://www.tencentcloud.com/document/product/1552/125343?from_cn_redirect=1">product document</a>.</p>
      */
     public void setCondition(String Condition) {
         this.Condition = Condition;
     }
 
     /**
-     * Get Speed limit mode. Within the statistical time window CountingPeriod, the following speed limit modes can be configured for requests that meet the feature CountBy:<li>Block: Block access source. When the count exceeds the threshold MaxRequestThreshold, execute Action disposal for ALL subsequent requests that meet the feature within the ActionDuration. </li><li>Throttle: Only dispose excess requests. When the count exceeds the threshold MaxRequestThreshold, only execute Action disposal for requests that exceed the threshold, and stop disposal when the window ends. At this point, the ActionDuration parameter will be ignored.</li><br />Default value is Block. 
-     * @return Mode Speed limit mode. Within the statistical time window CountingPeriod, the following speed limit modes can be configured for requests that meet the feature CountBy:<li>Block: Block access source. When the count exceeds the threshold MaxRequestThreshold, execute Action disposal for ALL subsequent requests that meet the feature within the ActionDuration. </li><li>Throttle: Only dispose excess requests. When the count exceeds the threshold MaxRequestThreshold, only execute Action disposal for requests that exceed the threshold, and stop disposal when the window ends. At this point, the ActionDuration parameter will be ignored.</li><br />Default value is Block.
+     * Get <p>Bandwidth limit mode. Within the statistical time window CountingPeriod, for requests that meet the CountBy feature, the following bandwidth limit modes can be configured: <li>Block: Block the access source. When the count exceeds the MaxRequestThreshold, execute the Action on all subsequent requests that meet the feature within the ActionDuration;</li><li>Throttle: Only handle excess requests. When the count exceeds the MaxRequestThreshold, execute the Action only on requests that exceed the threshold, and stop when the window ends. At this point, the ActionDuration parameter will be ignored.</li><br>Default value: Block.</p> 
+     * @return Mode <p>Bandwidth limit mode. Within the statistical time window CountingPeriod, for requests that meet the CountBy feature, the following bandwidth limit modes can be configured: <li>Block: Block the access source. When the count exceeds the MaxRequestThreshold, execute the Action on all subsequent requests that meet the feature within the ActionDuration;</li><li>Throttle: Only handle excess requests. When the count exceeds the MaxRequestThreshold, execute the Action only on requests that exceed the threshold, and stop when the window ends. At this point, the ActionDuration parameter will be ignored.</li><br>Default value: Block.</p>
      */
     public String getMode() {
         return this.Mode;
     }
 
     /**
-     * Set Speed limit mode. Within the statistical time window CountingPeriod, the following speed limit modes can be configured for requests that meet the feature CountBy:<li>Block: Block access source. When the count exceeds the threshold MaxRequestThreshold, execute Action disposal for ALL subsequent requests that meet the feature within the ActionDuration. </li><li>Throttle: Only dispose excess requests. When the count exceeds the threshold MaxRequestThreshold, only execute Action disposal for requests that exceed the threshold, and stop disposal when the window ends. At this point, the ActionDuration parameter will be ignored.</li><br />Default value is Block.
-     * @param Mode Speed limit mode. Within the statistical time window CountingPeriod, the following speed limit modes can be configured for requests that meet the feature CountBy:<li>Block: Block access source. When the count exceeds the threshold MaxRequestThreshold, execute Action disposal for ALL subsequent requests that meet the feature within the ActionDuration. </li><li>Throttle: Only dispose excess requests. When the count exceeds the threshold MaxRequestThreshold, only execute Action disposal for requests that exceed the threshold, and stop disposal when the window ends. At this point, the ActionDuration parameter will be ignored.</li><br />Default value is Block.
+     * Set <p>Bandwidth limit mode. Within the statistical time window CountingPeriod, for requests that meet the CountBy feature, the following bandwidth limit modes can be configured: <li>Block: Block the access source. When the count exceeds the MaxRequestThreshold, execute the Action on all subsequent requests that meet the feature within the ActionDuration;</li><li>Throttle: Only handle excess requests. When the count exceeds the MaxRequestThreshold, execute the Action only on requests that exceed the threshold, and stop when the window ends. At this point, the ActionDuration parameter will be ignored.</li><br>Default value: Block.</p>
+     * @param Mode <p>Bandwidth limit mode. Within the statistical time window CountingPeriod, for requests that meet the CountBy feature, the following bandwidth limit modes can be configured: <li>Block: Block the access source. When the count exceeds the MaxRequestThreshold, execute the Action on all subsequent requests that meet the feature within the ActionDuration;</li><li>Throttle: Only handle excess requests. When the count exceeds the MaxRequestThreshold, execute the Action only on requests that exceed the threshold, and stop when the window ends. At this point, the ActionDuration parameter will be ignored.</li><br>Default value: Block.</p>
      */
     public void setMode(String Mode) {
         this.Mode = Mode;
     }
 
     /**
-     * Get The match mode of the rate threshold request feature. this field is required when Enabled is on.<br /><br />when there are multiple conditions, composite conditions are used to collect statistics. the maximum number of conditions cannot exceed 5. valid values:<br/><li><b>http.request.ip</b>: client ip;</li><li><b>http.request.xff_header_ip</b>: client ip (priority match xff header);</li><li><b>http.request.uri.path</b>: access path of the request;</li><li><b>http.request.cookies['session']</b>: Cookie named session, where session can be replaced with your own parameter;</li><li><b>http.request.headers['user-agent']</b>: http header named user-agent, where user-agent can be replaced with your own parameter;</li><li><b>http.request.ja3</b>: ja3 fingerprint of the request;</li><li><b>http.request.ja4</b>: ja4 fingerprint of the request;</li><li><b>http.request.uri.query['test']</b>: URL query parameter named test, where test can be replaced with your own parameter.</li>. 
-     * @return CountBy The match mode of the rate threshold request feature. this field is required when Enabled is on.<br /><br />when there are multiple conditions, composite conditions are used to collect statistics. the maximum number of conditions cannot exceed 5. valid values:<br/><li><b>http.request.ip</b>: client ip;</li><li><b>http.request.xff_header_ip</b>: client ip (priority match xff header);</li><li><b>http.request.uri.path</b>: access path of the request;</li><li><b>http.request.cookies['session']</b>: Cookie named session, where session can be replaced with your own parameter;</li><li><b>http.request.headers['user-agent']</b>: http header named user-agent, where user-agent can be replaced with your own parameter;</li><li><b>http.request.ja3</b>: ja3 fingerprint of the request;</li><li><b>http.request.ja4</b>: ja4 fingerprint of the request;</li><li><b>http.request.uri.query['test']</b>: URL query parameter named test, where test can be replaced with your own parameter.</li>.
+     * Get <p>Match mode of the rate threshold request feature. Required when Enabled is on.<br><br>When there are multiple conditions, they will be combined for statistics and calculation. A maximum of 5 conditions is allowed. Valid values:<br><li><b>http.request.ip</b>: client IP;</li><li><b>http.request.xff_header_ip</b>: client IP (priority match XFF header);</li><li><b>http.request.uri.path</b>: access path of the request;</li><li><b>http.request.cookies[&#39;session&#39;]</b>: Cookie named session, where session can be replaced with your own parameter;</li><li><b>http.request.headers[&#39;user-agent&#39;]</b>: HTTP header named user-agent, where user-agent can be replaced with your own parameter;</li><li><b>http.request.ja3</b>: JA3 fingerprint of the request;</li><li><b>http.request.ja4</b>: JA4 fingerprint of the request;</li><li><b>http.request.uri.query[&#39;test&#39;]</b>: URL query parameter named test, where test can be replaced with your own parameter.</li></p> 
+     * @return CountBy <p>Match mode of the rate threshold request feature. Required when Enabled is on.<br><br>When there are multiple conditions, they will be combined for statistics and calculation. A maximum of 5 conditions is allowed. Valid values:<br><li><b>http.request.ip</b>: client IP;</li><li><b>http.request.xff_header_ip</b>: client IP (priority match XFF header);</li><li><b>http.request.uri.path</b>: access path of the request;</li><li><b>http.request.cookies[&#39;session&#39;]</b>: Cookie named session, where session can be replaced with your own parameter;</li><li><b>http.request.headers[&#39;user-agent&#39;]</b>: HTTP header named user-agent, where user-agent can be replaced with your own parameter;</li><li><b>http.request.ja3</b>: JA3 fingerprint of the request;</li><li><b>http.request.ja4</b>: JA4 fingerprint of the request;</li><li><b>http.request.uri.query[&#39;test&#39;]</b>: URL query parameter named test, where test can be replaced with your own parameter.</li></p>
      */
     public String [] getCountBy() {
         return this.CountBy;
     }
 
     /**
-     * Set The match mode of the rate threshold request feature. this field is required when Enabled is on.<br /><br />when there are multiple conditions, composite conditions are used to collect statistics. the maximum number of conditions cannot exceed 5. valid values:<br/><li><b>http.request.ip</b>: client ip;</li><li><b>http.request.xff_header_ip</b>: client ip (priority match xff header);</li><li><b>http.request.uri.path</b>: access path of the request;</li><li><b>http.request.cookies['session']</b>: Cookie named session, where session can be replaced with your own parameter;</li><li><b>http.request.headers['user-agent']</b>: http header named user-agent, where user-agent can be replaced with your own parameter;</li><li><b>http.request.ja3</b>: ja3 fingerprint of the request;</li><li><b>http.request.ja4</b>: ja4 fingerprint of the request;</li><li><b>http.request.uri.query['test']</b>: URL query parameter named test, where test can be replaced with your own parameter.</li>.
-     * @param CountBy The match mode of the rate threshold request feature. this field is required when Enabled is on.<br /><br />when there are multiple conditions, composite conditions are used to collect statistics. the maximum number of conditions cannot exceed 5. valid values:<br/><li><b>http.request.ip</b>: client ip;</li><li><b>http.request.xff_header_ip</b>: client ip (priority match xff header);</li><li><b>http.request.uri.path</b>: access path of the request;</li><li><b>http.request.cookies['session']</b>: Cookie named session, where session can be replaced with your own parameter;</li><li><b>http.request.headers['user-agent']</b>: http header named user-agent, where user-agent can be replaced with your own parameter;</li><li><b>http.request.ja3</b>: ja3 fingerprint of the request;</li><li><b>http.request.ja4</b>: ja4 fingerprint of the request;</li><li><b>http.request.uri.query['test']</b>: URL query parameter named test, where test can be replaced with your own parameter.</li>.
+     * Set <p>Match mode of the rate threshold request feature. Required when Enabled is on.<br><br>When there are multiple conditions, they will be combined for statistics and calculation. A maximum of 5 conditions is allowed. Valid values:<br><li><b>http.request.ip</b>: client IP;</li><li><b>http.request.xff_header_ip</b>: client IP (priority match XFF header);</li><li><b>http.request.uri.path</b>: access path of the request;</li><li><b>http.request.cookies[&#39;session&#39;]</b>: Cookie named session, where session can be replaced with your own parameter;</li><li><b>http.request.headers[&#39;user-agent&#39;]</b>: HTTP header named user-agent, where user-agent can be replaced with your own parameter;</li><li><b>http.request.ja3</b>: JA3 fingerprint of the request;</li><li><b>http.request.ja4</b>: JA4 fingerprint of the request;</li><li><b>http.request.uri.query[&#39;test&#39;]</b>: URL query parameter named test, where test can be replaced with your own parameter.</li></p>
+     * @param CountBy <p>Match mode of the rate threshold request feature. Required when Enabled is on.<br><br>When there are multiple conditions, they will be combined for statistics and calculation. A maximum of 5 conditions is allowed. Valid values:<br><li><b>http.request.ip</b>: client IP;</li><li><b>http.request.xff_header_ip</b>: client IP (priority match XFF header);</li><li><b>http.request.uri.path</b>: access path of the request;</li><li><b>http.request.cookies[&#39;session&#39;]</b>: Cookie named session, where session can be replaced with your own parameter;</li><li><b>http.request.headers[&#39;user-agent&#39;]</b>: HTTP header named user-agent, where user-agent can be replaced with your own parameter;</li><li><b>http.request.ja3</b>: JA3 fingerprint of the request;</li><li><b>http.request.ja4</b>: JA4 fingerprint of the request;</li><li><b>http.request.uri.query[&#39;test&#39;]</b>: URL query parameter named test, where test can be replaced with your own parameter.</li></p>
      */
     public void setCountBy(String [] CountBy) {
         this.CountBy = CountBy;
     }
 
     /**
-     * Get Precision rate limiting specifies the cumulative number of interceptions within the time range. value ranges from 1 to 100000. 
-     * @return MaxRequestThreshold Precision rate limiting specifies the cumulative number of interceptions within the time range. value ranges from 1 to 100000.
+     * Get <p>Cumulative number of interceptions by precise rate limiting within the time range, with a value range of 1 to 100000.</p> 
+     * @return MaxRequestThreshold <p>Cumulative number of interceptions by precise rate limiting within the time range, with a value range of 1 to 100000.</p>
      */
     public Long getMaxRequestThreshold() {
         return this.MaxRequestThreshold;
     }
 
     /**
-     * Set Precision rate limiting specifies the cumulative number of interceptions within the time range. value ranges from 1 to 100000.
-     * @param MaxRequestThreshold Precision rate limiting specifies the cumulative number of interceptions within the time range. value ranges from 1 to 100000.
+     * Set <p>Cumulative number of interceptions by precise rate limiting within the time range, with a value range of 1 to 100000.</p>
+     * @param MaxRequestThreshold <p>Cumulative number of interceptions by precise rate limiting within the time range, with a value range of 1 to 100000.</p>
      */
     public void setMaxRequestThreshold(Long MaxRequestThreshold) {
         this.MaxRequestThreshold = MaxRequestThreshold;
     }
 
     /**
-     * Get Specifies the time window for statistics. valid values: <li>1s: 1 second;</li><li>5s: 5 seconds;</li><li>10s: 10 seconds;</li><li>20s: 20 seconds;</li><li>30s: 30 seconds;</li><li>40s: 40 seconds;</li><li>50s: 50 seconds;</li><li>1m: 1 minute;</li><li>2m: 2 minutes;</li><li>5m: 5 minutes;</li><li>10m: 10 minutes;</li><li>1h: 1 hour.</li>. 
-     * @return CountingPeriod Specifies the time window for statistics. valid values: <li>1s: 1 second;</li><li>5s: 5 seconds;</li><li>10s: 10 seconds;</li><li>20s: 20 seconds;</li><li>30s: 30 seconds;</li><li>40s: 40 seconds;</li><li>50s: 50 seconds;</li><li>1m: 1 minute;</li><li>2m: 2 minutes;</li><li>5m: 5 minutes;</li><li>10m: 10 minutes;</li><li>1h: 1 hour.</li>.
+     * Get <p>Time window for statistics. Valid values: <li>1s: 1 second;</li><li>5s: 5 seconds;</li><li>10s: 10 seconds;</li><li>20s: 20 seconds;</li><li>30s: 30 seconds;</li><li>40s: 40 seconds;</li><li>50s: 50 seconds;</li><li>1m: 1 minute;</li><li>2m: 2 minutes;</li><li>5m: 5 minutes;</li><li>10m: 10 minutes;</li><li>1h: 1 hour.</li></p> 
+     * @return CountingPeriod <p>Time window for statistics. Valid values: <li>1s: 1 second;</li><li>5s: 5 seconds;</li><li>10s: 10 seconds;</li><li>20s: 20 seconds;</li><li>30s: 30 seconds;</li><li>40s: 40 seconds;</li><li>50s: 50 seconds;</li><li>1m: 1 minute;</li><li>2m: 2 minutes;</li><li>5m: 5 minutes;</li><li>10m: 10 minutes;</li><li>1h: 1 hour.</li></p>
      */
     public String getCountingPeriod() {
         return this.CountingPeriod;
     }
 
     /**
-     * Set Specifies the time window for statistics. valid values: <li>1s: 1 second;</li><li>5s: 5 seconds;</li><li>10s: 10 seconds;</li><li>20s: 20 seconds;</li><li>30s: 30 seconds;</li><li>40s: 40 seconds;</li><li>50s: 50 seconds;</li><li>1m: 1 minute;</li><li>2m: 2 minutes;</li><li>5m: 5 minutes;</li><li>10m: 10 minutes;</li><li>1h: 1 hour.</li>.
-     * @param CountingPeriod Specifies the time window for statistics. valid values: <li>1s: 1 second;</li><li>5s: 5 seconds;</li><li>10s: 10 seconds;</li><li>20s: 20 seconds;</li><li>30s: 30 seconds;</li><li>40s: 40 seconds;</li><li>50s: 50 seconds;</li><li>1m: 1 minute;</li><li>2m: 2 minutes;</li><li>5m: 5 minutes;</li><li>10m: 10 minutes;</li><li>1h: 1 hour.</li>.
+     * Set <p>Time window for statistics. Valid values: <li>1s: 1 second;</li><li>5s: 5 seconds;</li><li>10s: 10 seconds;</li><li>20s: 20 seconds;</li><li>30s: 30 seconds;</li><li>40s: 40 seconds;</li><li>50s: 50 seconds;</li><li>1m: 1 minute;</li><li>2m: 2 minutes;</li><li>5m: 5 minutes;</li><li>10m: 10 minutes;</li><li>1h: 1 hour.</li></p>
+     * @param CountingPeriod <p>Time window for statistics. Valid values: <li>1s: 1 second;</li><li>5s: 5 seconds;</li><li>10s: 10 seconds;</li><li>20s: 20 seconds;</li><li>30s: 30 seconds;</li><li>40s: 40 seconds;</li><li>50s: 50 seconds;</li><li>1m: 1 minute;</li><li>2m: 2 minutes;</li><li>5m: 5 minutes;</li><li>10m: 10 minutes;</li><li>1h: 1 hour.</li></p>
      */
     public void setCountingPeriod(String CountingPeriod) {
         this.CountingPeriod = CountingPeriod;
     }
 
     /**
-     * Get Duration of the Action. Only the following units are supported: <li>s: second, value range 1-120;</li><li>m: minute, value range 1-120;</li><li>h: hour, value range 1-48;</li><li>d: day, value range 1-30.</li><br />This parameter will be ignored and will not take effect when Mode is Throttle. 
-     * @return ActionDuration Duration of the Action. Only the following units are supported: <li>s: second, value range 1-120;</li><li>m: minute, value range 1-120;</li><li>h: hour, value range 1-48;</li><li>d: day, value range 1-30.</li><br />This parameter will be ignored and will not take effect when Mode is Throttle.
+     * Get <p>Duration of the Action. Supported units: <li>s: seconds, value range: 1-120;</li><li>m: minutes, value range: 1-120;</li><li>h: hours, value range: 1-48;</li><li>d: days, value range: 1-30.</li><br>When Mode is Throttle, this parameter will be ignored and will not take effect.</p> 
+     * @return ActionDuration <p>Duration of the Action. Supported units: <li>s: seconds, value range: 1-120;</li><li>m: minutes, value range: 1-120;</li><li>h: hours, value range: 1-48;</li><li>d: days, value range: 1-30.</li><br>When Mode is Throttle, this parameter will be ignored and will not take effect.</p>
      */
     public String getActionDuration() {
         return this.ActionDuration;
     }
 
     /**
-     * Set Duration of the Action. Only the following units are supported: <li>s: second, value range 1-120;</li><li>m: minute, value range 1-120;</li><li>h: hour, value range 1-48;</li><li>d: day, value range 1-30.</li><br />This parameter will be ignored and will not take effect when Mode is Throttle.
-     * @param ActionDuration Duration of the Action. Only the following units are supported: <li>s: second, value range 1-120;</li><li>m: minute, value range 1-120;</li><li>h: hour, value range 1-48;</li><li>d: day, value range 1-30.</li><br />This parameter will be ignored and will not take effect when Mode is Throttle.
+     * Set <p>Duration of the Action. Supported units: <li>s: seconds, value range: 1-120;</li><li>m: minutes, value range: 1-120;</li><li>h: hours, value range: 1-48;</li><li>d: days, value range: 1-30.</li><br>When Mode is Throttle, this parameter will be ignored and will not take effect.</p>
+     * @param ActionDuration <p>Duration of the Action. Supported units: <li>s: seconds, value range: 1-120;</li><li>m: minutes, value range: 1-120;</li><li>h: hours, value range: 1-48;</li><li>d: days, value range: 1-30.</li><br>When Mode is Throttle, this parameter will be ignored and will not take effect.</p>
      */
     public void setActionDuration(String ActionDuration) {
         this.ActionDuration = ActionDuration;
     }
 
     /**
-     * Get Precision rate limiting handling methods. valid values: <li>Monitor: Monitor;</li> <li>Deny: block, where DenyActionParameters.Name supports Deny and ReturnCustomPage;</li> <li>Challenge: Challenge, where ChallengeActionParameters.Name supports JSChallenge and ManagedChallenge;</li> <li>Redirect: Redirect to URL;</li>. 
-     * @return Action Precision rate limiting handling methods. valid values: <li>Monitor: Monitor;</li> <li>Deny: block, where DenyActionParameters.Name supports Deny and ReturnCustomPage;</li> <li>Challenge: Challenge, where ChallengeActionParameters.Name supports JSChallenge and ManagedChallenge;</li> <li>Redirect: Redirect to URL;</li>.
+     * Get <p>Handling method for precise rate limiting. SecurityAction.Name value range is as follows:</p><ul><li>Allow: allow, where AllowActionParameters supports MinDelayTime and MaxDelayTime configuration;</li><li>Deny: block, where DenyActionParameters supports ReturnCustomPage and Stall configuration;</li><li>Monitor: observe;</li><li>Challenge: challenge, where ChallengeActionParameters.ChallengeOption supports JSChallenge and ManagedChallenge;</li><li>Redirect: redirect to a URL.</li></ul> 
+     * @return Action <p>Handling method for precise rate limiting. SecurityAction.Name value range is as follows:</p><ul><li>Allow: allow, where AllowActionParameters supports MinDelayTime and MaxDelayTime configuration;</li><li>Deny: block, where DenyActionParameters supports ReturnCustomPage and Stall configuration;</li><li>Monitor: observe;</li><li>Challenge: challenge, where ChallengeActionParameters.ChallengeOption supports JSChallenge and ManagedChallenge;</li><li>Redirect: redirect to a URL.</li></ul>
      */
     public SecurityAction getAction() {
         return this.Action;
     }
 
     /**
-     * Set Precision rate limiting handling methods. valid values: <li>Monitor: Monitor;</li> <li>Deny: block, where DenyActionParameters.Name supports Deny and ReturnCustomPage;</li> <li>Challenge: Challenge, where ChallengeActionParameters.Name supports JSChallenge and ManagedChallenge;</li> <li>Redirect: Redirect to URL;</li>.
-     * @param Action Precision rate limiting handling methods. valid values: <li>Monitor: Monitor;</li> <li>Deny: block, where DenyActionParameters.Name supports Deny and ReturnCustomPage;</li> <li>Challenge: Challenge, where ChallengeActionParameters.Name supports JSChallenge and ManagedChallenge;</li> <li>Redirect: Redirect to URL;</li>.
+     * Set <p>Handling method for precise rate limiting. SecurityAction.Name value range is as follows:</p><ul><li>Allow: allow, where AllowActionParameters supports MinDelayTime and MaxDelayTime configuration;</li><li>Deny: block, where DenyActionParameters supports ReturnCustomPage and Stall configuration;</li><li>Monitor: observe;</li><li>Challenge: challenge, where ChallengeActionParameters.ChallengeOption supports JSChallenge and ManagedChallenge;</li><li>Redirect: redirect to a URL.</li></ul>
+     * @param Action <p>Handling method for precise rate limiting. SecurityAction.Name value range is as follows:</p><ul><li>Allow: allow, where AllowActionParameters supports MinDelayTime and MaxDelayTime configuration;</li><li>Deny: block, where DenyActionParameters supports ReturnCustomPage and Stall configuration;</li><li>Monitor: observe;</li><li>Challenge: challenge, where ChallengeActionParameters.ChallengeOption supports JSChallenge and ManagedChallenge;</li><li>Redirect: redirect to a URL.</li></ul>
      */
     public void setAction(SecurityAction Action) {
         this.Action = Action;
     }
 
     /**
-     * Get Precision rate limiting specifies the priority. value range is 0 to 100. default is 0. 
-     * @return Priority Precision rate limiting specifies the priority. value range is 0 to 100. default is 0.
+     * Get <p>Priority of precise rate limiting, ranging from 0 to 100, with a default value of 0.</p> 
+     * @return Priority <p>Priority of precise rate limiting, ranging from 0 to 100, with a default value of 0.</p>
      */
     public Long getPriority() {
         return this.Priority;
     }
 
     /**
-     * Set Precision rate limiting specifies the priority. value range is 0 to 100. default is 0.
-     * @param Priority Precision rate limiting specifies the priority. value range is 0 to 100. default is 0.
+     * Set <p>Priority of precise rate limiting, ranging from 0 to 100, with a default value of 0.</p>
+     * @param Priority <p>Priority of precise rate limiting, ranging from 0 to 100, with a default value of 0.</p>
      */
     public void setPriority(Long Priority) {
         this.Priority = Priority;
     }
 
     /**
-     * Get Whether the precise rate limiting rule is enabled. valid values: <li>on: enabled;</li> <li>off: disabled.</li>. 
-     * @return Enabled Whether the precise rate limiting rule is enabled. valid values: <li>on: enabled;</li> <li>off: disabled.</li>.
+     * Get <p>Whether the precise rate limiting rule is enabled. Valid values: <li>on: enabled;</li><li>off: disabled.</li></p> 
+     * @return Enabled <p>Whether the precise rate limiting rule is enabled. Valid values: <li>on: enabled;</li><li>off: disabled.</li></p>
      */
     public String getEnabled() {
         return this.Enabled;
     }
 
     /**
-     * Set Whether the precise rate limiting rule is enabled. valid values: <li>on: enabled;</li> <li>off: disabled.</li>.
-     * @param Enabled Whether the precise rate limiting rule is enabled. valid values: <li>on: enabled;</li> <li>off: disabled.</li>.
+     * Set <p>Whether the precise rate limiting rule is enabled. Valid values: <li>on: enabled;</li><li>off: disabled.</li></p>
+     * @param Enabled <p>Whether the precise rate limiting rule is enabled. Valid values: <li>on: enabled;</li><li>off: disabled.</li></p>
      */
     public void setEnabled(String Enabled) {
         this.Enabled = Enabled;

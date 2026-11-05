@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class SourceIDC extends AbstractModel {
 
     /**
-    * Handling method for requests from the specified IDC. valid values for SecurityAction Name: <li>Deny: block;</li> <li>Monitor: observe;</li> <li>Disabled: not enabled, disable specified rule;</li> <li>Challenge: Challenge, where ChallengeOption in ChallengeActionParameters supports JSChallenge and ManagedChallenge;</li> <li>Allow: pass (to be deprecated).</li>.
+    * Handling method for requests from a specified IDC. Supported values of the Name parameter of SecurityAction: <li>Deny: block;</li><li>Monitor: observe;</li><li>Disabled: not enabled, which disables the specified rule;</li><li>Challenge: challenge, where ChallengeOption in ChallengeActionParameters supports JSChallenge and ManagedChallenge;</li><li>Allow: allow (to be deprecated).</li>
     */
     @SerializedName("BaseAction")
     @Expose
     private SecurityAction BaseAction;
 
     /**
-    * Specifies the handling method for the specified id request.
+    * Handling method for the request from the specified IDC.
     */
     @SerializedName("BotManagementActionOverrides")
     @Expose
     private BotManagementActionOverrides [] BotManagementActionOverrides;
 
     /**
-     * Get Handling method for requests from the specified IDC. valid values for SecurityAction Name: <li>Deny: block;</li> <li>Monitor: observe;</li> <li>Disabled: not enabled, disable specified rule;</li> <li>Challenge: Challenge, where ChallengeOption in ChallengeActionParameters supports JSChallenge and ManagedChallenge;</li> <li>Allow: pass (to be deprecated).</li>. 
-     * @return BaseAction Handling method for requests from the specified IDC. valid values for SecurityAction Name: <li>Deny: block;</li> <li>Monitor: observe;</li> <li>Disabled: not enabled, disable specified rule;</li> <li>Challenge: Challenge, where ChallengeOption in ChallengeActionParameters supports JSChallenge and ManagedChallenge;</li> <li>Allow: pass (to be deprecated).</li>.
+     * Get Handling method for requests from a specified IDC. Supported values of the Name parameter of SecurityAction: <li>Deny: block;</li><li>Monitor: observe;</li><li>Disabled: not enabled, which disables the specified rule;</li><li>Challenge: challenge, where ChallengeOption in ChallengeActionParameters supports JSChallenge and ManagedChallenge;</li><li>Allow: allow (to be deprecated).</li> 
+     * @return BaseAction Handling method for requests from a specified IDC. Supported values of the Name parameter of SecurityAction: <li>Deny: block;</li><li>Monitor: observe;</li><li>Disabled: not enabled, which disables the specified rule;</li><li>Challenge: challenge, where ChallengeOption in ChallengeActionParameters supports JSChallenge and ManagedChallenge;</li><li>Allow: allow (to be deprecated).</li>
      */
     public SecurityAction getBaseAction() {
         return this.BaseAction;
     }
 
     /**
-     * Set Handling method for requests from the specified IDC. valid values for SecurityAction Name: <li>Deny: block;</li> <li>Monitor: observe;</li> <li>Disabled: not enabled, disable specified rule;</li> <li>Challenge: Challenge, where ChallengeOption in ChallengeActionParameters supports JSChallenge and ManagedChallenge;</li> <li>Allow: pass (to be deprecated).</li>.
-     * @param BaseAction Handling method for requests from the specified IDC. valid values for SecurityAction Name: <li>Deny: block;</li> <li>Monitor: observe;</li> <li>Disabled: not enabled, disable specified rule;</li> <li>Challenge: Challenge, where ChallengeOption in ChallengeActionParameters supports JSChallenge and ManagedChallenge;</li> <li>Allow: pass (to be deprecated).</li>.
+     * Set Handling method for requests from a specified IDC. Supported values of the Name parameter of SecurityAction: <li>Deny: block;</li><li>Monitor: observe;</li><li>Disabled: not enabled, which disables the specified rule;</li><li>Challenge: challenge, where ChallengeOption in ChallengeActionParameters supports JSChallenge and ManagedChallenge;</li><li>Allow: allow (to be deprecated).</li>
+     * @param BaseAction Handling method for requests from a specified IDC. Supported values of the Name parameter of SecurityAction: <li>Deny: block;</li><li>Monitor: observe;</li><li>Disabled: not enabled, which disables the specified rule;</li><li>Challenge: challenge, where ChallengeOption in ChallengeActionParameters supports JSChallenge and ManagedChallenge;</li><li>Allow: allow (to be deprecated).</li>
      */
     public void setBaseAction(SecurityAction BaseAction) {
         this.BaseAction = BaseAction;
     }
 
     /**
-     * Get Specifies the handling method for the specified id request. 
-     * @return BotManagementActionOverrides Specifies the handling method for the specified id request.
+     * Get Handling method for the request from the specified IDC. 
+     * @return BotManagementActionOverrides Handling method for the request from the specified IDC.
      */
     public BotManagementActionOverrides [] getBotManagementActionOverrides() {
         return this.BotManagementActionOverrides;
     }
 
     /**
-     * Set Specifies the handling method for the specified id request.
-     * @param BotManagementActionOverrides Specifies the handling method for the specified id request.
+     * Set Handling method for the request from the specified IDC.
+     * @param BotManagementActionOverrides Handling method for the request from the specified IDC.
      */
     public void setBotManagementActionOverrides(BotManagementActionOverrides [] BotManagementActionOverrides) {
         this.BotManagementActionOverrides = BotManagementActionOverrides;

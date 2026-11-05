@@ -24,35 +24,35 @@ import java.util.HashMap;
 public class CustomRule extends AbstractModel {
 
     /**
-    * <p>Custom rule name.</p>
+    * <p>Name of the custom rule.</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * <p>The specific content of a custom rule must comply with the expression syntax. For detailed specifications, refer to the <a href="https://www.tencentcloud.com/document/product/1552/125343?from_cn_redirect=1">product document</a>.</p>
+    * <p>The specific content of the custom rule must comply with the expression grammar. For detailed specifications, see the <a href="https://www.tencentcloud.com/document/product/1552/125343?from_cn_redirect=1">product document</a>.</p>
     */
     @SerializedName("Condition")
     @Expose
     private String Condition;
 
     /**
-    * <p>Handling action of the custom rule. SecurityAction.Name value range is as follows:</p><ul><li>Allow: allow, where AllowActionParameters supports MinDelayTime and MaxDelayTime configuration;</li><li>Deny: block, where DenyActionParameters supports BlockIp, ReturnCustomPage, and Stall configuration;</li><li>Monitor: observe;</li><li>Challenge: challenge, where ChallengeActionParameters.ChallengeOption supports JSChallenge and ManagedChallenge;</li><li>Redirect: redirect to a URL.</li></ul>
+    * <p>Handling action of the custom rule. SecurityAction.Name values are as follows:</p><ul><li>Allow: allow, where AllowActionParameters supports MinDelayTime and MaxDelayTime configuration;</li><li>Deny: block, where DenyActionParameters supports BlockIp, ReturnCustomPage, and Stall configuration;</li><li>Monitor: observe;</li><li>Challenge: challenge, where ChallengeActionParameters.ChallengeOption supports JSChallenge and ManagedChallenge;</li><li>Redirect: redirect to a URL.</li></ul>
     */
     @SerializedName("Action")
     @Expose
     private SecurityAction Action;
 
     /**
-    * <p>Whether the custom rule is enabled. Valid values: <ul><li>on: enabled;</li><li>off: disabled.</li></ul></p>
+    * <p>Whether the custom rule is enabled. Valid values: <ul><li>on: Enable;</li><li>off: Disable.</li></ul></p>
     */
     @SerializedName("Enabled")
     @Expose
     private String Enabled;
 
     /**
-    * <p>ID of the custom rule. The rule ID supports different rule configuration operations: <ul><li>Add a new rule: leave the ID empty or do not specify the ID parameter;</li><li>Modify an existing rule: specify the rule ID that needs to be updated/modified;</li><li>Delete an existing rule: existing rules not included in the Rules list in the CustomRules parameter will be deleted.</li></ul></p>
+    * <p>ID of the custom rule. You can perform different rule configuration operations by rule ID: <ul><li>Add a new rule: leave the ID empty or do not specify the ID parameter;</li><li>Modify an existing rule: specify the rule ID that needs to be updated/modified;</li><li>Delete an existing rule: existing rules not included in the Rules list in the CustomRules parameter will be deleted.</li></ul></p>
     */
     @SerializedName("Id")
     @Expose
@@ -66,87 +66,87 @@ public class CustomRule extends AbstractModel {
     private String RuleType;
 
     /**
-    * <p>Priority of custom rules. Value range: 0-100. Default value: 0. Only exact matching rules (<code>PreciseMatchRule</code>) are supported.</p>
+    * <p>Priority of custom rules, ranging from 0 to 100, with a default value of 0. Only exact matching rules (<code>PreciseMatchRule</code>) are supported.</p>
     */
     @SerializedName("Priority")
     @Expose
     private Long Priority;
 
     /**
-     * Get <p>Custom rule name.</p> 
-     * @return Name <p>Custom rule name.</p>
+     * Get <p>Name of the custom rule.</p> 
+     * @return Name <p>Name of the custom rule.</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set <p>Custom rule name.</p>
-     * @param Name <p>Custom rule name.</p>
+     * Set <p>Name of the custom rule.</p>
+     * @param Name <p>Name of the custom rule.</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get <p>The specific content of a custom rule must comply with the expression syntax. For detailed specifications, refer to the <a href="https://www.tencentcloud.com/document/product/1552/125343?from_cn_redirect=1">product document</a>.</p> 
-     * @return Condition <p>The specific content of a custom rule must comply with the expression syntax. For detailed specifications, refer to the <a href="https://www.tencentcloud.com/document/product/1552/125343?from_cn_redirect=1">product document</a>.</p>
+     * Get <p>The specific content of the custom rule must comply with the expression grammar. For detailed specifications, see the <a href="https://www.tencentcloud.com/document/product/1552/125343?from_cn_redirect=1">product document</a>.</p> 
+     * @return Condition <p>The specific content of the custom rule must comply with the expression grammar. For detailed specifications, see the <a href="https://www.tencentcloud.com/document/product/1552/125343?from_cn_redirect=1">product document</a>.</p>
      */
     public String getCondition() {
         return this.Condition;
     }
 
     /**
-     * Set <p>The specific content of a custom rule must comply with the expression syntax. For detailed specifications, refer to the <a href="https://www.tencentcloud.com/document/product/1552/125343?from_cn_redirect=1">product document</a>.</p>
-     * @param Condition <p>The specific content of a custom rule must comply with the expression syntax. For detailed specifications, refer to the <a href="https://www.tencentcloud.com/document/product/1552/125343?from_cn_redirect=1">product document</a>.</p>
+     * Set <p>The specific content of the custom rule must comply with the expression grammar. For detailed specifications, see the <a href="https://www.tencentcloud.com/document/product/1552/125343?from_cn_redirect=1">product document</a>.</p>
+     * @param Condition <p>The specific content of the custom rule must comply with the expression grammar. For detailed specifications, see the <a href="https://www.tencentcloud.com/document/product/1552/125343?from_cn_redirect=1">product document</a>.</p>
      */
     public void setCondition(String Condition) {
         this.Condition = Condition;
     }
 
     /**
-     * Get <p>Handling action of the custom rule. SecurityAction.Name value range is as follows:</p><ul><li>Allow: allow, where AllowActionParameters supports MinDelayTime and MaxDelayTime configuration;</li><li>Deny: block, where DenyActionParameters supports BlockIp, ReturnCustomPage, and Stall configuration;</li><li>Monitor: observe;</li><li>Challenge: challenge, where ChallengeActionParameters.ChallengeOption supports JSChallenge and ManagedChallenge;</li><li>Redirect: redirect to a URL.</li></ul> 
-     * @return Action <p>Handling action of the custom rule. SecurityAction.Name value range is as follows:</p><ul><li>Allow: allow, where AllowActionParameters supports MinDelayTime and MaxDelayTime configuration;</li><li>Deny: block, where DenyActionParameters supports BlockIp, ReturnCustomPage, and Stall configuration;</li><li>Monitor: observe;</li><li>Challenge: challenge, where ChallengeActionParameters.ChallengeOption supports JSChallenge and ManagedChallenge;</li><li>Redirect: redirect to a URL.</li></ul>
+     * Get <p>Handling action of the custom rule. SecurityAction.Name values are as follows:</p><ul><li>Allow: allow, where AllowActionParameters supports MinDelayTime and MaxDelayTime configuration;</li><li>Deny: block, where DenyActionParameters supports BlockIp, ReturnCustomPage, and Stall configuration;</li><li>Monitor: observe;</li><li>Challenge: challenge, where ChallengeActionParameters.ChallengeOption supports JSChallenge and ManagedChallenge;</li><li>Redirect: redirect to a URL.</li></ul> 
+     * @return Action <p>Handling action of the custom rule. SecurityAction.Name values are as follows:</p><ul><li>Allow: allow, where AllowActionParameters supports MinDelayTime and MaxDelayTime configuration;</li><li>Deny: block, where DenyActionParameters supports BlockIp, ReturnCustomPage, and Stall configuration;</li><li>Monitor: observe;</li><li>Challenge: challenge, where ChallengeActionParameters.ChallengeOption supports JSChallenge and ManagedChallenge;</li><li>Redirect: redirect to a URL.</li></ul>
      */
     public SecurityAction getAction() {
         return this.Action;
     }
 
     /**
-     * Set <p>Handling action of the custom rule. SecurityAction.Name value range is as follows:</p><ul><li>Allow: allow, where AllowActionParameters supports MinDelayTime and MaxDelayTime configuration;</li><li>Deny: block, where DenyActionParameters supports BlockIp, ReturnCustomPage, and Stall configuration;</li><li>Monitor: observe;</li><li>Challenge: challenge, where ChallengeActionParameters.ChallengeOption supports JSChallenge and ManagedChallenge;</li><li>Redirect: redirect to a URL.</li></ul>
-     * @param Action <p>Handling action of the custom rule. SecurityAction.Name value range is as follows:</p><ul><li>Allow: allow, where AllowActionParameters supports MinDelayTime and MaxDelayTime configuration;</li><li>Deny: block, where DenyActionParameters supports BlockIp, ReturnCustomPage, and Stall configuration;</li><li>Monitor: observe;</li><li>Challenge: challenge, where ChallengeActionParameters.ChallengeOption supports JSChallenge and ManagedChallenge;</li><li>Redirect: redirect to a URL.</li></ul>
+     * Set <p>Handling action of the custom rule. SecurityAction.Name values are as follows:</p><ul><li>Allow: allow, where AllowActionParameters supports MinDelayTime and MaxDelayTime configuration;</li><li>Deny: block, where DenyActionParameters supports BlockIp, ReturnCustomPage, and Stall configuration;</li><li>Monitor: observe;</li><li>Challenge: challenge, where ChallengeActionParameters.ChallengeOption supports JSChallenge and ManagedChallenge;</li><li>Redirect: redirect to a URL.</li></ul>
+     * @param Action <p>Handling action of the custom rule. SecurityAction.Name values are as follows:</p><ul><li>Allow: allow, where AllowActionParameters supports MinDelayTime and MaxDelayTime configuration;</li><li>Deny: block, where DenyActionParameters supports BlockIp, ReturnCustomPage, and Stall configuration;</li><li>Monitor: observe;</li><li>Challenge: challenge, where ChallengeActionParameters.ChallengeOption supports JSChallenge and ManagedChallenge;</li><li>Redirect: redirect to a URL.</li></ul>
      */
     public void setAction(SecurityAction Action) {
         this.Action = Action;
     }
 
     /**
-     * Get <p>Whether the custom rule is enabled. Valid values: <ul><li>on: enabled;</li><li>off: disabled.</li></ul></p> 
-     * @return Enabled <p>Whether the custom rule is enabled. Valid values: <ul><li>on: enabled;</li><li>off: disabled.</li></ul></p>
+     * Get <p>Whether the custom rule is enabled. Valid values: <ul><li>on: Enable;</li><li>off: Disable.</li></ul></p> 
+     * @return Enabled <p>Whether the custom rule is enabled. Valid values: <ul><li>on: Enable;</li><li>off: Disable.</li></ul></p>
      */
     public String getEnabled() {
         return this.Enabled;
     }
 
     /**
-     * Set <p>Whether the custom rule is enabled. Valid values: <ul><li>on: enabled;</li><li>off: disabled.</li></ul></p>
-     * @param Enabled <p>Whether the custom rule is enabled. Valid values: <ul><li>on: enabled;</li><li>off: disabled.</li></ul></p>
+     * Set <p>Whether the custom rule is enabled. Valid values: <ul><li>on: Enable;</li><li>off: Disable.</li></ul></p>
+     * @param Enabled <p>Whether the custom rule is enabled. Valid values: <ul><li>on: Enable;</li><li>off: Disable.</li></ul></p>
      */
     public void setEnabled(String Enabled) {
         this.Enabled = Enabled;
     }
 
     /**
-     * Get <p>ID of the custom rule. The rule ID supports different rule configuration operations: <ul><li>Add a new rule: leave the ID empty or do not specify the ID parameter;</li><li>Modify an existing rule: specify the rule ID that needs to be updated/modified;</li><li>Delete an existing rule: existing rules not included in the Rules list in the CustomRules parameter will be deleted.</li></ul></p> 
-     * @return Id <p>ID of the custom rule. The rule ID supports different rule configuration operations: <ul><li>Add a new rule: leave the ID empty or do not specify the ID parameter;</li><li>Modify an existing rule: specify the rule ID that needs to be updated/modified;</li><li>Delete an existing rule: existing rules not included in the Rules list in the CustomRules parameter will be deleted.</li></ul></p>
+     * Get <p>ID of the custom rule. You can perform different rule configuration operations by rule ID: <ul><li>Add a new rule: leave the ID empty or do not specify the ID parameter;</li><li>Modify an existing rule: specify the rule ID that needs to be updated/modified;</li><li>Delete an existing rule: existing rules not included in the Rules list in the CustomRules parameter will be deleted.</li></ul></p> 
+     * @return Id <p>ID of the custom rule. You can perform different rule configuration operations by rule ID: <ul><li>Add a new rule: leave the ID empty or do not specify the ID parameter;</li><li>Modify an existing rule: specify the rule ID that needs to be updated/modified;</li><li>Delete an existing rule: existing rules not included in the Rules list in the CustomRules parameter will be deleted.</li></ul></p>
      */
     public String getId() {
         return this.Id;
     }
 
     /**
-     * Set <p>ID of the custom rule. The rule ID supports different rule configuration operations: <ul><li>Add a new rule: leave the ID empty or do not specify the ID parameter;</li><li>Modify an existing rule: specify the rule ID that needs to be updated/modified;</li><li>Delete an existing rule: existing rules not included in the Rules list in the CustomRules parameter will be deleted.</li></ul></p>
-     * @param Id <p>ID of the custom rule. The rule ID supports different rule configuration operations: <ul><li>Add a new rule: leave the ID empty or do not specify the ID parameter;</li><li>Modify an existing rule: specify the rule ID that needs to be updated/modified;</li><li>Delete an existing rule: existing rules not included in the Rules list in the CustomRules parameter will be deleted.</li></ul></p>
+     * Set <p>ID of the custom rule. You can perform different rule configuration operations by rule ID: <ul><li>Add a new rule: leave the ID empty or do not specify the ID parameter;</li><li>Modify an existing rule: specify the rule ID that needs to be updated/modified;</li><li>Delete an existing rule: existing rules not included in the Rules list in the CustomRules parameter will be deleted.</li></ul></p>
+     * @param Id <p>ID of the custom rule. You can perform different rule configuration operations by rule ID: <ul><li>Add a new rule: leave the ID empty or do not specify the ID parameter;</li><li>Modify an existing rule: specify the rule ID that needs to be updated/modified;</li><li>Delete an existing rule: existing rules not included in the Rules list in the CustomRules parameter will be deleted.</li></ul></p>
      */
     public void setId(String Id) {
         this.Id = Id;
@@ -169,16 +169,16 @@ public class CustomRule extends AbstractModel {
     }
 
     /**
-     * Get <p>Priority of custom rules. Value range: 0-100. Default value: 0. Only exact matching rules (<code>PreciseMatchRule</code>) are supported.</p> 
-     * @return Priority <p>Priority of custom rules. Value range: 0-100. Default value: 0. Only exact matching rules (<code>PreciseMatchRule</code>) are supported.</p>
+     * Get <p>Priority of custom rules, ranging from 0 to 100, with a default value of 0. Only exact matching rules (<code>PreciseMatchRule</code>) are supported.</p> 
+     * @return Priority <p>Priority of custom rules, ranging from 0 to 100, with a default value of 0. Only exact matching rules (<code>PreciseMatchRule</code>) are supported.</p>
      */
     public Long getPriority() {
         return this.Priority;
     }
 
     /**
-     * Set <p>Priority of custom rules. Value range: 0-100. Default value: 0. Only exact matching rules (<code>PreciseMatchRule</code>) are supported.</p>
-     * @param Priority <p>Priority of custom rules. Value range: 0-100. Default value: 0. Only exact matching rules (<code>PreciseMatchRule</code>) are supported.</p>
+     * Set <p>Priority of custom rules, ranging from 0 to 100, with a default value of 0. Only exact matching rules (<code>PreciseMatchRule</code>) are supported.</p>
+     * @param Priority <p>Priority of custom rules, ranging from 0 to 100, with a default value of 0. Only exact matching rules (<code>PreciseMatchRule</code>) are supported.</p>
      */
     public void setPriority(Long Priority) {
         this.Priority = Priority;

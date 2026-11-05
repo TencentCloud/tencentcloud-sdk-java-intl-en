@@ -24,197 +24,210 @@ import java.util.HashMap;
 public class SecurityPolicy extends AbstractModel {
 
     /**
-    * Custom rules. If the parameter is null or not filled, the configuration last set will be used by default.
-Note: This field may return null, indicating that no valid value can be obtained.
+    * <p>Custom rule configuration.</p>
     */
     @SerializedName("CustomRules")
     @Expose
     private CustomRules CustomRules;
 
     /**
-    * Managed. If the parameter is null or not filled, the configuration last set will be used by default.
-Note: This field may return null, indicating that no valid value can be obtained.
+    * <p>Managed rule configuration.</p>
     */
     @SerializedName("ManagedRules")
     @Expose
     private ManagedRules ManagedRules;
 
     /**
-    * HTTP DDOS protection configuration.
+    * <p>HTTP DDoS protection configuration.</p>
     */
     @SerializedName("HttpDDoSProtection")
     @Expose
     private HttpDDoSProtection HttpDDoSProtection;
 
     /**
-    * Configures the rate limiting rule.
+    * <p>Rate limiting rule configuration.</p>
     */
     @SerializedName("RateLimitingRules")
     @Expose
     private RateLimitingRules RateLimitingRules;
 
     /**
-    * Exception rule configuration.
+    * <p>Exception rule configuration.</p>
     */
     @SerializedName("ExceptionRules")
     @Expose
     private ExceptionRules ExceptionRules;
 
     /**
-    * Bot management configuration.
+    * <p>Bot management configuration.</p>
     */
     @SerializedName("BotManagement")
     @Expose
     private BotManagement BotManagement;
 
     /**
-    * Basic Bot management configuration.
+    * <p>Basic Bot management configuration.</p>
     */
     @SerializedName("BotManagementLite")
     @Expose
     private BotManagementLite BotManagementLite;
 
     /**
-    * Default intercept action configuration.
+    * <p>Default block action configuration.</p>
     */
     @SerializedName("DefaultDenySecurityActionParameters")
     @Expose
     private DefaultDenySecurityActionParameters DefaultDenySecurityActionParameters;
 
     /**
-     * Get Custom rules. If the parameter is null or not filled, the configuration last set will be used by default.
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return CustomRules Custom rules. If the parameter is null or not filled, the configuration last set will be used by default.
-Note: This field may return null, indicating that no valid value can be obtained.
+    * <p>Security headers to include in requests to the origin. After the configuration takes effect, request headers with the corresponding `keyname` will be sent to the origin.</p>
+    */
+    @SerializedName("SecurityHeadersToOrigin")
+    @Expose
+    private SecurityHeadersToOrigin SecurityHeadersToOrigin;
+
+    /**
+     * Get <p>Custom rule configuration.</p> 
+     * @return CustomRules <p>Custom rule configuration.</p>
      */
     public CustomRules getCustomRules() {
         return this.CustomRules;
     }
 
     /**
-     * Set Custom rules. If the parameter is null or not filled, the configuration last set will be used by default.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param CustomRules Custom rules. If the parameter is null or not filled, the configuration last set will be used by default.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set <p>Custom rule configuration.</p>
+     * @param CustomRules <p>Custom rule configuration.</p>
      */
     public void setCustomRules(CustomRules CustomRules) {
         this.CustomRules = CustomRules;
     }
 
     /**
-     * Get Managed. If the parameter is null or not filled, the configuration last set will be used by default.
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return ManagedRules Managed. If the parameter is null or not filled, the configuration last set will be used by default.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get <p>Managed rule configuration.</p> 
+     * @return ManagedRules <p>Managed rule configuration.</p>
      */
     public ManagedRules getManagedRules() {
         return this.ManagedRules;
     }
 
     /**
-     * Set Managed. If the parameter is null or not filled, the configuration last set will be used by default.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param ManagedRules Managed. If the parameter is null or not filled, the configuration last set will be used by default.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set <p>Managed rule configuration.</p>
+     * @param ManagedRules <p>Managed rule configuration.</p>
      */
     public void setManagedRules(ManagedRules ManagedRules) {
         this.ManagedRules = ManagedRules;
     }
 
     /**
-     * Get HTTP DDOS protection configuration. 
-     * @return HttpDDoSProtection HTTP DDOS protection configuration.
+     * Get <p>HTTP DDoS protection configuration.</p> 
+     * @return HttpDDoSProtection <p>HTTP DDoS protection configuration.</p>
      */
     public HttpDDoSProtection getHttpDDoSProtection() {
         return this.HttpDDoSProtection;
     }
 
     /**
-     * Set HTTP DDOS protection configuration.
-     * @param HttpDDoSProtection HTTP DDOS protection configuration.
+     * Set <p>HTTP DDoS protection configuration.</p>
+     * @param HttpDDoSProtection <p>HTTP DDoS protection configuration.</p>
      */
     public void setHttpDDoSProtection(HttpDDoSProtection HttpDDoSProtection) {
         this.HttpDDoSProtection = HttpDDoSProtection;
     }
 
     /**
-     * Get Configures the rate limiting rule. 
-     * @return RateLimitingRules Configures the rate limiting rule.
+     * Get <p>Rate limiting rule configuration.</p> 
+     * @return RateLimitingRules <p>Rate limiting rule configuration.</p>
      */
     public RateLimitingRules getRateLimitingRules() {
         return this.RateLimitingRules;
     }
 
     /**
-     * Set Configures the rate limiting rule.
-     * @param RateLimitingRules Configures the rate limiting rule.
+     * Set <p>Rate limiting rule configuration.</p>
+     * @param RateLimitingRules <p>Rate limiting rule configuration.</p>
      */
     public void setRateLimitingRules(RateLimitingRules RateLimitingRules) {
         this.RateLimitingRules = RateLimitingRules;
     }
 
     /**
-     * Get Exception rule configuration. 
-     * @return ExceptionRules Exception rule configuration.
+     * Get <p>Exception rule configuration.</p> 
+     * @return ExceptionRules <p>Exception rule configuration.</p>
      */
     public ExceptionRules getExceptionRules() {
         return this.ExceptionRules;
     }
 
     /**
-     * Set Exception rule configuration.
-     * @param ExceptionRules Exception rule configuration.
+     * Set <p>Exception rule configuration.</p>
+     * @param ExceptionRules <p>Exception rule configuration.</p>
      */
     public void setExceptionRules(ExceptionRules ExceptionRules) {
         this.ExceptionRules = ExceptionRules;
     }
 
     /**
-     * Get Bot management configuration. 
-     * @return BotManagement Bot management configuration.
+     * Get <p>Bot management configuration.</p> 
+     * @return BotManagement <p>Bot management configuration.</p>
      */
     public BotManagement getBotManagement() {
         return this.BotManagement;
     }
 
     /**
-     * Set Bot management configuration.
-     * @param BotManagement Bot management configuration.
+     * Set <p>Bot management configuration.</p>
+     * @param BotManagement <p>Bot management configuration.</p>
      */
     public void setBotManagement(BotManagement BotManagement) {
         this.BotManagement = BotManagement;
     }
 
     /**
-     * Get Basic Bot management configuration. 
-     * @return BotManagementLite Basic Bot management configuration.
+     * Get <p>Basic Bot management configuration.</p> 
+     * @return BotManagementLite <p>Basic Bot management configuration.</p>
      */
     public BotManagementLite getBotManagementLite() {
         return this.BotManagementLite;
     }
 
     /**
-     * Set Basic Bot management configuration.
-     * @param BotManagementLite Basic Bot management configuration.
+     * Set <p>Basic Bot management configuration.</p>
+     * @param BotManagementLite <p>Basic Bot management configuration.</p>
      */
     public void setBotManagementLite(BotManagementLite BotManagementLite) {
         this.BotManagementLite = BotManagementLite;
     }
 
     /**
-     * Get Default intercept action configuration. 
-     * @return DefaultDenySecurityActionParameters Default intercept action configuration.
+     * Get <p>Default block action configuration.</p> 
+     * @return DefaultDenySecurityActionParameters <p>Default block action configuration.</p>
      */
     public DefaultDenySecurityActionParameters getDefaultDenySecurityActionParameters() {
         return this.DefaultDenySecurityActionParameters;
     }
 
     /**
-     * Set Default intercept action configuration.
-     * @param DefaultDenySecurityActionParameters Default intercept action configuration.
+     * Set <p>Default block action configuration.</p>
+     * @param DefaultDenySecurityActionParameters <p>Default block action configuration.</p>
      */
     public void setDefaultDenySecurityActionParameters(DefaultDenySecurityActionParameters DefaultDenySecurityActionParameters) {
         this.DefaultDenySecurityActionParameters = DefaultDenySecurityActionParameters;
+    }
+
+    /**
+     * Get <p>Security headers to include in requests to the origin. After the configuration takes effect, request headers with the corresponding `keyname` will be sent to the origin.</p> 
+     * @return SecurityHeadersToOrigin <p>Security headers to include in requests to the origin. After the configuration takes effect, request headers with the corresponding `keyname` will be sent to the origin.</p>
+     */
+    public SecurityHeadersToOrigin getSecurityHeadersToOrigin() {
+        return this.SecurityHeadersToOrigin;
+    }
+
+    /**
+     * Set <p>Security headers to include in requests to the origin. After the configuration takes effect, request headers with the corresponding `keyname` will be sent to the origin.</p>
+     * @param SecurityHeadersToOrigin <p>Security headers to include in requests to the origin. After the configuration takes effect, request headers with the corresponding `keyname` will be sent to the origin.</p>
+     */
+    public void setSecurityHeadersToOrigin(SecurityHeadersToOrigin SecurityHeadersToOrigin) {
+        this.SecurityHeadersToOrigin = SecurityHeadersToOrigin;
     }
 
     public SecurityPolicy() {
@@ -249,6 +262,9 @@ Note: This field may return null, indicating that no valid value can be obtained
         if (source.DefaultDenySecurityActionParameters != null) {
             this.DefaultDenySecurityActionParameters = new DefaultDenySecurityActionParameters(source.DefaultDenySecurityActionParameters);
         }
+        if (source.SecurityHeadersToOrigin != null) {
+            this.SecurityHeadersToOrigin = new SecurityHeadersToOrigin(source.SecurityHeadersToOrigin);
+        }
     }
 
 
@@ -264,6 +280,7 @@ Note: This field may return null, indicating that no valid value can be obtained
         this.setParamObj(map, prefix + "BotManagement.", this.BotManagement);
         this.setParamObj(map, prefix + "BotManagementLite.", this.BotManagementLite);
         this.setParamObj(map, prefix + "DefaultDenySecurityActionParameters.", this.DefaultDenySecurityActionParameters);
+        this.setParamObj(map, prefix + "SecurityHeadersToOrigin.", this.SecurityHeadersToOrigin);
 
     }
 }

@@ -24,187 +24,210 @@ import java.util.HashMap;
 public class ClientAttestationRule extends AbstractModel {
 
     /**
-    * Client authentication rule ID. supported rule configuration operations by rule ID: <li> <b>add</b> a new rule: leave the ID empty or do not specify the ID parameter.</li> <li> <b>modify</b> an existing rule: specify the rule ID that needs to be updated/modified.</li> <li> <b>delete</b> an existing rule: existing rules not included in the ClientAttestationRule list under BotManagement parameters will be deleted.</li>.
+    * <p>ID of the client authentication rule.<br>Different rule configuration operations are supported by rule ID:<br> <li> <b>Add</b> a new rule: leave ID empty or do not specify the ID parameter;</li><li> <b>Modify</b> an existing rule: specify the rule ID to be updated/modified;</li><li> <b>Delete</b> an existing rule: existing rules not included in the ClientAttestationRule list in the BotManagement parameter will be deleted.</li></p>
     */
     @SerializedName("Id")
     @Expose
     private String Id;
 
     /**
-    * Specifies the name of the client authentication rule.
+    * <p>Name of the client authentication rule.</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * Whether the rule is enabled. valid values: <li>`on`: enable</li> <li>`off`: disable</li>.
+    * <p>Whether the rule is enabled. Valid values: <li>on: enabled;</li><li>off: disabled.</li></p>
     */
     @SerializedName("Enabled")
     @Expose
     private String Enabled;
 
     /**
-    * Priority of rules. a smaller value indicates higher priority execution. value range: 0-100. default value: 0.
+    * <p>Priority of rules. A smaller value indicates higher priority. Value range: 0-100. Default value: 0.</p>
     */
     @SerializedName("Priority")
     @Expose
     private Long Priority;
 
     /**
-    * The rule content must comply with expression grammar. for details, see the product document.
+    * <p>The specific content of the rule must comply with the expression syntax. For detailed specifications, see the product document.</p>
     */
     @SerializedName("Condition")
     @Expose
     private String Condition;
 
     /**
-    * Specifies the client authentication option ID.
+    * <p>Client authentication option ID.</p>
     */
     @SerializedName("AttesterId")
     @Expose
     private String AttesterId;
 
     /**
-    * Client device configuration. if the DeviceProfiles parameter value is not specified in the ClientAttestationRules parameter, keep the existing client device configuration and do not modify it.
-    */
-    @SerializedName("DeviceProfiles")
-    @Expose
-    private DeviceProfile [] DeviceProfiles;
-
-    /**
-    * Handling method for failed client authentication. valid values for SecurityAction Name: <li>Deny: block;</li> <li>Monitor: observation;</li> <li>Redirect: redirection;</li> <li>Challenge: Challenge.</li> default value: Monitor.
+    * <p>Handling method when client authentication fails. SecurityAction.Name values are as follows:</p><ul><li>Allow: allow, where AllowActionParameters supports MinDelayTime and MaxDelayTime configuration;</li><li>Deny: block, where DenyActionParameters supports BlockIp, ReturnCustomPage, and Stall configuration;</li><li>Monitor: observe;</li><li>Challenge: challenge, where ChallengeActionParameters.ChallengeOption supports JSChallenge, ManagedChallenge, InterstitialChallenge, and InlineChallenge;</li><li>Redirect: redirect to a URL.</li></ul>
     */
     @SerializedName("InvalidAttestationAction")
     @Expose
     private SecurityAction InvalidAttestationAction;
 
     /**
-     * Get Client authentication rule ID. supported rule configuration operations by rule ID: <li> <b>add</b> a new rule: leave the ID empty or do not specify the ID parameter.</li> <li> <b>modify</b> an existing rule: specify the rule ID that needs to be updated/modified.</li> <li> <b>delete</b> an existing rule: existing rules not included in the ClientAttestationRule list under BotManagement parameters will be deleted.</li>. 
-     * @return Id Client authentication rule ID. supported rule configuration operations by rule ID: <li> <b>add</b> a new rule: leave the ID empty or do not specify the ID parameter.</li> <li> <b>modify</b> an existing rule: specify the rule ID that needs to be updated/modified.</li> <li> <b>delete</b> an existing rule: existing rules not included in the ClientAttestationRule list under BotManagement parameters will be deleted.</li>.
+    * <p>Client device configuration. If the DeviceProfiles parameter value is not specified in the ClientAttestationRules parameter: keep the existing client device configuration without modification.</p>
+    */
+    @SerializedName("DeviceProfiles")
+    @Expose
+    private DeviceProfile [] DeviceProfiles;
+
+    /**
+    * <p>Account protection configuration.</p>
+    */
+    @SerializedName("AccountProtectionSettings")
+    @Expose
+    private AccountProtectionSettings AccountProtectionSettings;
+
+    /**
+     * Get <p>ID of the client authentication rule.<br>Different rule configuration operations are supported by rule ID:<br> <li> <b>Add</b> a new rule: leave ID empty or do not specify the ID parameter;</li><li> <b>Modify</b> an existing rule: specify the rule ID to be updated/modified;</li><li> <b>Delete</b> an existing rule: existing rules not included in the ClientAttestationRule list in the BotManagement parameter will be deleted.</li></p> 
+     * @return Id <p>ID of the client authentication rule.<br>Different rule configuration operations are supported by rule ID:<br> <li> <b>Add</b> a new rule: leave ID empty or do not specify the ID parameter;</li><li> <b>Modify</b> an existing rule: specify the rule ID to be updated/modified;</li><li> <b>Delete</b> an existing rule: existing rules not included in the ClientAttestationRule list in the BotManagement parameter will be deleted.</li></p>
      */
     public String getId() {
         return this.Id;
     }
 
     /**
-     * Set Client authentication rule ID. supported rule configuration operations by rule ID: <li> <b>add</b> a new rule: leave the ID empty or do not specify the ID parameter.</li> <li> <b>modify</b> an existing rule: specify the rule ID that needs to be updated/modified.</li> <li> <b>delete</b> an existing rule: existing rules not included in the ClientAttestationRule list under BotManagement parameters will be deleted.</li>.
-     * @param Id Client authentication rule ID. supported rule configuration operations by rule ID: <li> <b>add</b> a new rule: leave the ID empty or do not specify the ID parameter.</li> <li> <b>modify</b> an existing rule: specify the rule ID that needs to be updated/modified.</li> <li> <b>delete</b> an existing rule: existing rules not included in the ClientAttestationRule list under BotManagement parameters will be deleted.</li>.
+     * Set <p>ID of the client authentication rule.<br>Different rule configuration operations are supported by rule ID:<br> <li> <b>Add</b> a new rule: leave ID empty or do not specify the ID parameter;</li><li> <b>Modify</b> an existing rule: specify the rule ID to be updated/modified;</li><li> <b>Delete</b> an existing rule: existing rules not included in the ClientAttestationRule list in the BotManagement parameter will be deleted.</li></p>
+     * @param Id <p>ID of the client authentication rule.<br>Different rule configuration operations are supported by rule ID:<br> <li> <b>Add</b> a new rule: leave ID empty or do not specify the ID parameter;</li><li> <b>Modify</b> an existing rule: specify the rule ID to be updated/modified;</li><li> <b>Delete</b> an existing rule: existing rules not included in the ClientAttestationRule list in the BotManagement parameter will be deleted.</li></p>
      */
     public void setId(String Id) {
         this.Id = Id;
     }
 
     /**
-     * Get Specifies the name of the client authentication rule. 
-     * @return Name Specifies the name of the client authentication rule.
+     * Get <p>Name of the client authentication rule.</p> 
+     * @return Name <p>Name of the client authentication rule.</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Specifies the name of the client authentication rule.
-     * @param Name Specifies the name of the client authentication rule.
+     * Set <p>Name of the client authentication rule.</p>
+     * @param Name <p>Name of the client authentication rule.</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Whether the rule is enabled. valid values: <li>`on`: enable</li> <li>`off`: disable</li>. 
-     * @return Enabled Whether the rule is enabled. valid values: <li>`on`: enable</li> <li>`off`: disable</li>.
+     * Get <p>Whether the rule is enabled. Valid values: <li>on: enabled;</li><li>off: disabled.</li></p> 
+     * @return Enabled <p>Whether the rule is enabled. Valid values: <li>on: enabled;</li><li>off: disabled.</li></p>
      */
     public String getEnabled() {
         return this.Enabled;
     }
 
     /**
-     * Set Whether the rule is enabled. valid values: <li>`on`: enable</li> <li>`off`: disable</li>.
-     * @param Enabled Whether the rule is enabled. valid values: <li>`on`: enable</li> <li>`off`: disable</li>.
+     * Set <p>Whether the rule is enabled. Valid values: <li>on: enabled;</li><li>off: disabled.</li></p>
+     * @param Enabled <p>Whether the rule is enabled. Valid values: <li>on: enabled;</li><li>off: disabled.</li></p>
      */
     public void setEnabled(String Enabled) {
         this.Enabled = Enabled;
     }
 
     /**
-     * Get Priority of rules. a smaller value indicates higher priority execution. value range: 0-100. default value: 0. 
-     * @return Priority Priority of rules. a smaller value indicates higher priority execution. value range: 0-100. default value: 0.
+     * Get <p>Priority of rules. A smaller value indicates higher priority. Value range: 0-100. Default value: 0.</p> 
+     * @return Priority <p>Priority of rules. A smaller value indicates higher priority. Value range: 0-100. Default value: 0.</p>
      */
     public Long getPriority() {
         return this.Priority;
     }
 
     /**
-     * Set Priority of rules. a smaller value indicates higher priority execution. value range: 0-100. default value: 0.
-     * @param Priority Priority of rules. a smaller value indicates higher priority execution. value range: 0-100. default value: 0.
+     * Set <p>Priority of rules. A smaller value indicates higher priority. Value range: 0-100. Default value: 0.</p>
+     * @param Priority <p>Priority of rules. A smaller value indicates higher priority. Value range: 0-100. Default value: 0.</p>
      */
     public void setPriority(Long Priority) {
         this.Priority = Priority;
     }
 
     /**
-     * Get The rule content must comply with expression grammar. for details, see the product document. 
-     * @return Condition The rule content must comply with expression grammar. for details, see the product document.
+     * Get <p>The specific content of the rule must comply with the expression syntax. For detailed specifications, see the product document.</p> 
+     * @return Condition <p>The specific content of the rule must comply with the expression syntax. For detailed specifications, see the product document.</p>
      */
     public String getCondition() {
         return this.Condition;
     }
 
     /**
-     * Set The rule content must comply with expression grammar. for details, see the product document.
-     * @param Condition The rule content must comply with expression grammar. for details, see the product document.
+     * Set <p>The specific content of the rule must comply with the expression syntax. For detailed specifications, see the product document.</p>
+     * @param Condition <p>The specific content of the rule must comply with the expression syntax. For detailed specifications, see the product document.</p>
      */
     public void setCondition(String Condition) {
         this.Condition = Condition;
     }
 
     /**
-     * Get Specifies the client authentication option ID. 
-     * @return AttesterId Specifies the client authentication option ID.
+     * Get <p>Client authentication option ID.</p> 
+     * @return AttesterId <p>Client authentication option ID.</p>
      */
     public String getAttesterId() {
         return this.AttesterId;
     }
 
     /**
-     * Set Specifies the client authentication option ID.
-     * @param AttesterId Specifies the client authentication option ID.
+     * Set <p>Client authentication option ID.</p>
+     * @param AttesterId <p>Client authentication option ID.</p>
      */
     public void setAttesterId(String AttesterId) {
         this.AttesterId = AttesterId;
     }
 
     /**
-     * Get Client device configuration. if the DeviceProfiles parameter value is not specified in the ClientAttestationRules parameter, keep the existing client device configuration and do not modify it. 
-     * @return DeviceProfiles Client device configuration. if the DeviceProfiles parameter value is not specified in the ClientAttestationRules parameter, keep the existing client device configuration and do not modify it.
-     */
-    public DeviceProfile [] getDeviceProfiles() {
-        return this.DeviceProfiles;
-    }
-
-    /**
-     * Set Client device configuration. if the DeviceProfiles parameter value is not specified in the ClientAttestationRules parameter, keep the existing client device configuration and do not modify it.
-     * @param DeviceProfiles Client device configuration. if the DeviceProfiles parameter value is not specified in the ClientAttestationRules parameter, keep the existing client device configuration and do not modify it.
-     */
-    public void setDeviceProfiles(DeviceProfile [] DeviceProfiles) {
-        this.DeviceProfiles = DeviceProfiles;
-    }
-
-    /**
-     * Get Handling method for failed client authentication. valid values for SecurityAction Name: <li>Deny: block;</li> <li>Monitor: observation;</li> <li>Redirect: redirection;</li> <li>Challenge: Challenge.</li> default value: Monitor. 
-     * @return InvalidAttestationAction Handling method for failed client authentication. valid values for SecurityAction Name: <li>Deny: block;</li> <li>Monitor: observation;</li> <li>Redirect: redirection;</li> <li>Challenge: Challenge.</li> default value: Monitor.
+     * Get <p>Handling method when client authentication fails. SecurityAction.Name values are as follows:</p><ul><li>Allow: allow, where AllowActionParameters supports MinDelayTime and MaxDelayTime configuration;</li><li>Deny: block, where DenyActionParameters supports BlockIp, ReturnCustomPage, and Stall configuration;</li><li>Monitor: observe;</li><li>Challenge: challenge, where ChallengeActionParameters.ChallengeOption supports JSChallenge, ManagedChallenge, InterstitialChallenge, and InlineChallenge;</li><li>Redirect: redirect to a URL.</li></ul> 
+     * @return InvalidAttestationAction <p>Handling method when client authentication fails. SecurityAction.Name values are as follows:</p><ul><li>Allow: allow, where AllowActionParameters supports MinDelayTime and MaxDelayTime configuration;</li><li>Deny: block, where DenyActionParameters supports BlockIp, ReturnCustomPage, and Stall configuration;</li><li>Monitor: observe;</li><li>Challenge: challenge, where ChallengeActionParameters.ChallengeOption supports JSChallenge, ManagedChallenge, InterstitialChallenge, and InlineChallenge;</li><li>Redirect: redirect to a URL.</li></ul>
      */
     public SecurityAction getInvalidAttestationAction() {
         return this.InvalidAttestationAction;
     }
 
     /**
-     * Set Handling method for failed client authentication. valid values for SecurityAction Name: <li>Deny: block;</li> <li>Monitor: observation;</li> <li>Redirect: redirection;</li> <li>Challenge: Challenge.</li> default value: Monitor.
-     * @param InvalidAttestationAction Handling method for failed client authentication. valid values for SecurityAction Name: <li>Deny: block;</li> <li>Monitor: observation;</li> <li>Redirect: redirection;</li> <li>Challenge: Challenge.</li> default value: Monitor.
+     * Set <p>Handling method when client authentication fails. SecurityAction.Name values are as follows:</p><ul><li>Allow: allow, where AllowActionParameters supports MinDelayTime and MaxDelayTime configuration;</li><li>Deny: block, where DenyActionParameters supports BlockIp, ReturnCustomPage, and Stall configuration;</li><li>Monitor: observe;</li><li>Challenge: challenge, where ChallengeActionParameters.ChallengeOption supports JSChallenge, ManagedChallenge, InterstitialChallenge, and InlineChallenge;</li><li>Redirect: redirect to a URL.</li></ul>
+     * @param InvalidAttestationAction <p>Handling method when client authentication fails. SecurityAction.Name values are as follows:</p><ul><li>Allow: allow, where AllowActionParameters supports MinDelayTime and MaxDelayTime configuration;</li><li>Deny: block, where DenyActionParameters supports BlockIp, ReturnCustomPage, and Stall configuration;</li><li>Monitor: observe;</li><li>Challenge: challenge, where ChallengeActionParameters.ChallengeOption supports JSChallenge, ManagedChallenge, InterstitialChallenge, and InlineChallenge;</li><li>Redirect: redirect to a URL.</li></ul>
      */
     public void setInvalidAttestationAction(SecurityAction InvalidAttestationAction) {
         this.InvalidAttestationAction = InvalidAttestationAction;
+    }
+
+    /**
+     * Get <p>Client device configuration. If the DeviceProfiles parameter value is not specified in the ClientAttestationRules parameter: keep the existing client device configuration without modification.</p> 
+     * @return DeviceProfiles <p>Client device configuration. If the DeviceProfiles parameter value is not specified in the ClientAttestationRules parameter: keep the existing client device configuration without modification.</p>
+     */
+    public DeviceProfile [] getDeviceProfiles() {
+        return this.DeviceProfiles;
+    }
+
+    /**
+     * Set <p>Client device configuration. If the DeviceProfiles parameter value is not specified in the ClientAttestationRules parameter: keep the existing client device configuration without modification.</p>
+     * @param DeviceProfiles <p>Client device configuration. If the DeviceProfiles parameter value is not specified in the ClientAttestationRules parameter: keep the existing client device configuration without modification.</p>
+     */
+    public void setDeviceProfiles(DeviceProfile [] DeviceProfiles) {
+        this.DeviceProfiles = DeviceProfiles;
+    }
+
+    /**
+     * Get <p>Account protection configuration.</p> 
+     * @return AccountProtectionSettings <p>Account protection configuration.</p>
+     */
+    public AccountProtectionSettings getAccountProtectionSettings() {
+        return this.AccountProtectionSettings;
+    }
+
+    /**
+     * Set <p>Account protection configuration.</p>
+     * @param AccountProtectionSettings <p>Account protection configuration.</p>
+     */
+    public void setAccountProtectionSettings(AccountProtectionSettings AccountProtectionSettings) {
+        this.AccountProtectionSettings = AccountProtectionSettings;
     }
 
     public ClientAttestationRule() {
@@ -233,14 +256,17 @@ public class ClientAttestationRule extends AbstractModel {
         if (source.AttesterId != null) {
             this.AttesterId = new String(source.AttesterId);
         }
+        if (source.InvalidAttestationAction != null) {
+            this.InvalidAttestationAction = new SecurityAction(source.InvalidAttestationAction);
+        }
         if (source.DeviceProfiles != null) {
             this.DeviceProfiles = new DeviceProfile[source.DeviceProfiles.length];
             for (int i = 0; i < source.DeviceProfiles.length; i++) {
                 this.DeviceProfiles[i] = new DeviceProfile(source.DeviceProfiles[i]);
             }
         }
-        if (source.InvalidAttestationAction != null) {
-            this.InvalidAttestationAction = new SecurityAction(source.InvalidAttestationAction);
+        if (source.AccountProtectionSettings != null) {
+            this.AccountProtectionSettings = new AccountProtectionSettings(source.AccountProtectionSettings);
         }
     }
 
@@ -255,8 +281,9 @@ public class ClientAttestationRule extends AbstractModel {
         this.setParamSimple(map, prefix + "Priority", this.Priority);
         this.setParamSimple(map, prefix + "Condition", this.Condition);
         this.setParamSimple(map, prefix + "AttesterId", this.AttesterId);
-        this.setParamArrayObj(map, prefix + "DeviceProfiles.", this.DeviceProfiles);
         this.setParamObj(map, prefix + "InvalidAttestationAction.", this.InvalidAttestationAction);
+        this.setParamArrayObj(map, prefix + "DeviceProfiles.", this.DeviceProfiles);
+        this.setParamObj(map, prefix + "AccountProtectionSettings.", this.AccountProtectionSettings);
 
     }
 }

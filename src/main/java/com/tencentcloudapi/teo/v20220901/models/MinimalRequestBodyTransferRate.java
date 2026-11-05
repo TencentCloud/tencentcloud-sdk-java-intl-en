@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class MinimalRequestBodyTransferRate extends AbstractModel {
 
     /**
-    * Minimum body transfer rate threshold, the measurement unit is only supported in bps.
+    * Minimum body transfer rate threshold. The measurement unit only supports bps.
     */
     @SerializedName("MinimalAvgTransferRateThreshold")
     @Expose
     private String MinimalAvgTransferRateThreshold;
 
     /**
-    * Minimum body transfer rate statistical time range, valid values: <li>10s: 10 seconds;</li> <li>30s: 30 seconds;</li> <li>60s: 60 seconds;</li> <li>120s: 120 seconds.</li>.
+    * Statistical time range for minimum body transfer rate. Valid values: <li>10s: 10 seconds;</li><li>30s: 30 seconds;</li><li>60s: 60 seconds;</li><li>120s: 120 seconds.</li>
     */
     @SerializedName("CountingPeriod")
     @Expose
     private String CountingPeriod;
 
     /**
-    * Specifies whether the minimum body transfer rate threshold is enabled. valid values: <li>on: enable;</li> <li>off: disable.</li>.
+    * Whether the minimum body transfer rate threshold is enabled. Valid values: <li>on: enabled;</li><li>off: disabled.</li>
     */
     @SerializedName("Enabled")
     @Expose
     private String Enabled;
 
     /**
-     * Get Minimum body transfer rate threshold, the measurement unit is only supported in bps. 
-     * @return MinimalAvgTransferRateThreshold Minimum body transfer rate threshold, the measurement unit is only supported in bps.
+     * Get Minimum body transfer rate threshold. The measurement unit only supports bps. 
+     * @return MinimalAvgTransferRateThreshold Minimum body transfer rate threshold. The measurement unit only supports bps.
      */
     public String getMinimalAvgTransferRateThreshold() {
         return this.MinimalAvgTransferRateThreshold;
     }
 
     /**
-     * Set Minimum body transfer rate threshold, the measurement unit is only supported in bps.
-     * @param MinimalAvgTransferRateThreshold Minimum body transfer rate threshold, the measurement unit is only supported in bps.
+     * Set Minimum body transfer rate threshold. The measurement unit only supports bps.
+     * @param MinimalAvgTransferRateThreshold Minimum body transfer rate threshold. The measurement unit only supports bps.
      */
     public void setMinimalAvgTransferRateThreshold(String MinimalAvgTransferRateThreshold) {
         this.MinimalAvgTransferRateThreshold = MinimalAvgTransferRateThreshold;
     }
 
     /**
-     * Get Minimum body transfer rate statistical time range, valid values: <li>10s: 10 seconds;</li> <li>30s: 30 seconds;</li> <li>60s: 60 seconds;</li> <li>120s: 120 seconds.</li>. 
-     * @return CountingPeriod Minimum body transfer rate statistical time range, valid values: <li>10s: 10 seconds;</li> <li>30s: 30 seconds;</li> <li>60s: 60 seconds;</li> <li>120s: 120 seconds.</li>.
+     * Get Statistical time range for minimum body transfer rate. Valid values: <li>10s: 10 seconds;</li><li>30s: 30 seconds;</li><li>60s: 60 seconds;</li><li>120s: 120 seconds.</li> 
+     * @return CountingPeriod Statistical time range for minimum body transfer rate. Valid values: <li>10s: 10 seconds;</li><li>30s: 30 seconds;</li><li>60s: 60 seconds;</li><li>120s: 120 seconds.</li>
      */
     public String getCountingPeriod() {
         return this.CountingPeriod;
     }
 
     /**
-     * Set Minimum body transfer rate statistical time range, valid values: <li>10s: 10 seconds;</li> <li>30s: 30 seconds;</li> <li>60s: 60 seconds;</li> <li>120s: 120 seconds.</li>.
-     * @param CountingPeriod Minimum body transfer rate statistical time range, valid values: <li>10s: 10 seconds;</li> <li>30s: 30 seconds;</li> <li>60s: 60 seconds;</li> <li>120s: 120 seconds.</li>.
+     * Set Statistical time range for minimum body transfer rate. Valid values: <li>10s: 10 seconds;</li><li>30s: 30 seconds;</li><li>60s: 60 seconds;</li><li>120s: 120 seconds.</li>
+     * @param CountingPeriod Statistical time range for minimum body transfer rate. Valid values: <li>10s: 10 seconds;</li><li>30s: 30 seconds;</li><li>60s: 60 seconds;</li><li>120s: 120 seconds.</li>
      */
     public void setCountingPeriod(String CountingPeriod) {
         this.CountingPeriod = CountingPeriod;
     }
 
     /**
-     * Get Specifies whether the minimum body transfer rate threshold is enabled. valid values: <li>on: enable;</li> <li>off: disable.</li>. 
-     * @return Enabled Specifies whether the minimum body transfer rate threshold is enabled. valid values: <li>on: enable;</li> <li>off: disable.</li>.
+     * Get Whether the minimum body transfer rate threshold is enabled. Valid values: <li>on: enabled;</li><li>off: disabled.</li> 
+     * @return Enabled Whether the minimum body transfer rate threshold is enabled. Valid values: <li>on: enabled;</li><li>off: disabled.</li>
      */
     public String getEnabled() {
         return this.Enabled;
     }
 
     /**
-     * Set Specifies whether the minimum body transfer rate threshold is enabled. valid values: <li>on: enable;</li> <li>off: disable.</li>.
-     * @param Enabled Specifies whether the minimum body transfer rate threshold is enabled. valid values: <li>on: enable;</li> <li>off: disable.</li>.
+     * Set Whether the minimum body transfer rate threshold is enabled. Valid values: <li>on: enabled;</li><li>off: disabled.</li>
+     * @param Enabled Whether the minimum body transfer rate threshold is enabled. Valid values: <li>on: enabled;</li><li>off: disabled.</li>
      */
     public void setEnabled(String Enabled) {
         this.Enabled = Enabled;

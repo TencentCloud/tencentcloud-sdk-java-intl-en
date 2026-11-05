@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class AllowActionParameters extends AbstractModel {
 
     /**
-    * Minimum latency response time. when configured as 0s, it means no delay for direct response. supported units: <li>s: seconds, value ranges from 0 to 5.</li>.
+    * Minimum delayed response time. When configured as 0s, it means no delay and direct response. Supported units: <li>s: second, value ranges from 0 to 5.</li>
     */
     @SerializedName("MinDelayTime")
     @Expose
     private String MinDelayTime;
 
     /**
-    * Maximum delayed response time. supported units: <li>s: seconds, value ranges from 5 to 10.</li>.
+    * Maximum delayed response time. Supported units: <li>s: seconds, value range: 5–10.</li>
     */
     @SerializedName("MaxDelayTime")
     @Expose
     private String MaxDelayTime;
 
     /**
-     * Get Minimum latency response time. when configured as 0s, it means no delay for direct response. supported units: <li>s: seconds, value ranges from 0 to 5.</li>. 
-     * @return MinDelayTime Minimum latency response time. when configured as 0s, it means no delay for direct response. supported units: <li>s: seconds, value ranges from 0 to 5.</li>.
+     * Get Minimum delayed response time. When configured as 0s, it means no delay and direct response. Supported units: <li>s: second, value ranges from 0 to 5.</li> 
+     * @return MinDelayTime Minimum delayed response time. When configured as 0s, it means no delay and direct response. Supported units: <li>s: second, value ranges from 0 to 5.</li>
      */
     public String getMinDelayTime() {
         return this.MinDelayTime;
     }
 
     /**
-     * Set Minimum latency response time. when configured as 0s, it means no delay for direct response. supported units: <li>s: seconds, value ranges from 0 to 5.</li>.
-     * @param MinDelayTime Minimum latency response time. when configured as 0s, it means no delay for direct response. supported units: <li>s: seconds, value ranges from 0 to 5.</li>.
+     * Set Minimum delayed response time. When configured as 0s, it means no delay and direct response. Supported units: <li>s: second, value ranges from 0 to 5.</li>
+     * @param MinDelayTime Minimum delayed response time. When configured as 0s, it means no delay and direct response. Supported units: <li>s: second, value ranges from 0 to 5.</li>
      */
     public void setMinDelayTime(String MinDelayTime) {
         this.MinDelayTime = MinDelayTime;
     }
 
     /**
-     * Get Maximum delayed response time. supported units: <li>s: seconds, value ranges from 5 to 10.</li>. 
-     * @return MaxDelayTime Maximum delayed response time. supported units: <li>s: seconds, value ranges from 5 to 10.</li>.
+     * Get Maximum delayed response time. Supported units: <li>s: seconds, value range: 5–10.</li> 
+     * @return MaxDelayTime Maximum delayed response time. Supported units: <li>s: seconds, value range: 5–10.</li>
      */
     public String getMaxDelayTime() {
         return this.MaxDelayTime;
     }
 
     /**
-     * Set Maximum delayed response time. supported units: <li>s: seconds, value ranges from 5 to 10.</li>.
-     * @param MaxDelayTime Maximum delayed response time. supported units: <li>s: seconds, value ranges from 5 to 10.</li>.
+     * Set Maximum delayed response time. Supported units: <li>s: seconds, value range: 5–10.</li>
+     * @param MaxDelayTime Maximum delayed response time. Supported units: <li>s: seconds, value range: 5–10.</li>
      */
     public void setMaxDelayTime(String MaxDelayTime) {
         this.MaxDelayTime = MaxDelayTime;

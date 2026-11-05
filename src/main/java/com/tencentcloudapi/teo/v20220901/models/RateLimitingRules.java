@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class RateLimitingRules extends AbstractModel {
 
     /**
-    * Definition list of precise rate limiting. when using ModifySecurityPolicy to modify the Web protection configuration: <br> <li> if the Rules parameter is not specified or its length is zero: clear all precision rate limiting configurations.</li> <li> if the RateLimitingRules parameter value is unspecified in the SecurityPolicy parameter: retain the existing custom rule configuration without modification.</li>.
+    * Definition list of precise rate limiting. When using ModifySecurityPolicy to modify Web protection configuration: <br> <li> If the Rules parameter is not specified or its length is zero: clear all precise rate limiting configurations.</li> <li> If the RateLimitingRules parameter value is not specified in the SecurityPolicy parameter: keep the existing custom rule configuration without modification.</li>
     */
     @SerializedName("Rules")
     @Expose
     private RateLimitingRule [] Rules;
 
     /**
-     * Get Definition list of precise rate limiting. when using ModifySecurityPolicy to modify the Web protection configuration: <br> <li> if the Rules parameter is not specified or its length is zero: clear all precision rate limiting configurations.</li> <li> if the RateLimitingRules parameter value is unspecified in the SecurityPolicy parameter: retain the existing custom rule configuration without modification.</li>. 
-     * @return Rules Definition list of precise rate limiting. when using ModifySecurityPolicy to modify the Web protection configuration: <br> <li> if the Rules parameter is not specified or its length is zero: clear all precision rate limiting configurations.</li> <li> if the RateLimitingRules parameter value is unspecified in the SecurityPolicy parameter: retain the existing custom rule configuration without modification.</li>.
+     * Get Definition list of precise rate limiting. When using ModifySecurityPolicy to modify Web protection configuration: <br> <li> If the Rules parameter is not specified or its length is zero: clear all precise rate limiting configurations.</li> <li> If the RateLimitingRules parameter value is not specified in the SecurityPolicy parameter: keep the existing custom rule configuration without modification.</li> 
+     * @return Rules Definition list of precise rate limiting. When using ModifySecurityPolicy to modify Web protection configuration: <br> <li> If the Rules parameter is not specified or its length is zero: clear all precise rate limiting configurations.</li> <li> If the RateLimitingRules parameter value is not specified in the SecurityPolicy parameter: keep the existing custom rule configuration without modification.</li>
      */
     public RateLimitingRule [] getRules() {
         return this.Rules;
     }
 
     /**
-     * Set Definition list of precise rate limiting. when using ModifySecurityPolicy to modify the Web protection configuration: <br> <li> if the Rules parameter is not specified or its length is zero: clear all precision rate limiting configurations.</li> <li> if the RateLimitingRules parameter value is unspecified in the SecurityPolicy parameter: retain the existing custom rule configuration without modification.</li>.
-     * @param Rules Definition list of precise rate limiting. when using ModifySecurityPolicy to modify the Web protection configuration: <br> <li> if the Rules parameter is not specified or its length is zero: clear all precision rate limiting configurations.</li> <li> if the RateLimitingRules parameter value is unspecified in the SecurityPolicy parameter: retain the existing custom rule configuration without modification.</li>.
+     * Set Definition list of precise rate limiting. When using ModifySecurityPolicy to modify Web protection configuration: <br> <li> If the Rules parameter is not specified or its length is zero: clear all precise rate limiting configurations.</li> <li> If the RateLimitingRules parameter value is not specified in the SecurityPolicy parameter: keep the existing custom rule configuration without modification.</li>
+     * @param Rules Definition list of precise rate limiting. When using ModifySecurityPolicy to modify Web protection configuration: <br> <li> If the Rules parameter is not specified or its length is zero: clear all precise rate limiting configurations.</li> <li> If the RateLimitingRules parameter value is not specified in the SecurityPolicy parameter: keep the existing custom rule configuration without modification.</li>
      */
     public void setRules(RateLimitingRule [] Rules) {
         this.Rules = Rules;

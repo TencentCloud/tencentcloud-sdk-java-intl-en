@@ -24,7 +24,7 @@ public enum MnaErrorCode {
      /* Monitor data request error. */
      INTERNALERROR_MONITORDATAREQUESTERROR("InternalError.MonitorDataRequestError"),
      
-     /* Zhiyan traffic data request error. */
+     /* Zhizhi traffic data request error. */
      INTERNALERROR_NETWORKINFOREQUESTERROR("InternalError.NetworkInfoRequestError"),
      
      /* Preset key not created. */

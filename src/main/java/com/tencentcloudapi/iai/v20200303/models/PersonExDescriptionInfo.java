@@ -24,51 +24,46 @@ import java.util.HashMap;
 public class PersonExDescriptionInfo extends AbstractModel {
 
     /**
-    * Person description field index, whose value starts from 0.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Person description field Index, starts from 0.
     */
     @SerializedName("PersonExDescriptionIndex")
     @Expose
     private Long PersonExDescriptionIndex;
 
     /**
-    * Content of the person description field to be updated
+    * Person description field content that needs to be updated.
     */
     @SerializedName("PersonExDescription")
     @Expose
     private String PersonExDescription;
 
     /**
-     * Get Person description field index, whose value starts from 0.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return PersonExDescriptionIndex Person description field index, whose value starts from 0.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Person description field Index, starts from 0. 
+     * @return PersonExDescriptionIndex Person description field Index, starts from 0.
      */
     public Long getPersonExDescriptionIndex() {
         return this.PersonExDescriptionIndex;
     }
 
     /**
-     * Set Person description field index, whose value starts from 0.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param PersonExDescriptionIndex Person description field index, whose value starts from 0.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Person description field Index, starts from 0.
+     * @param PersonExDescriptionIndex Person description field Index, starts from 0.
      */
     public void setPersonExDescriptionIndex(Long PersonExDescriptionIndex) {
         this.PersonExDescriptionIndex = PersonExDescriptionIndex;
     }
 
     /**
-     * Get Content of the person description field to be updated 
-     * @return PersonExDescription Content of the person description field to be updated
+     * Get Person description field content that needs to be updated. 
+     * @return PersonExDescription Person description field content that needs to be updated.
      */
     public String getPersonExDescription() {
         return this.PersonExDescription;
     }
 
     /**
-     * Set Content of the person description field to be updated
-     * @param PersonExDescription Content of the person description field to be updated
+     * Set Person description field content that needs to be updated.
+     * @param PersonExDescription Person description field content that needs to be updated.
      */
     public void setPersonExDescription(String PersonExDescription) {
         this.PersonExDescription = PersonExDescription;

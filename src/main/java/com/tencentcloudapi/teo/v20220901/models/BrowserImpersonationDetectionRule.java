@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class BrowserImpersonationDetectionRule extends AbstractModel {
 
     /**
-    * Browser spoofing identification rule ID. rule ID supports different rule configuration operations: <li> <b>add</b> a new rule: ID is empty or without specifying the ID parameter;</li> <li> <b>modify</b> an existing rule: specify the rule ID that needs to be updated/modified;</li> <li> <b>delete</b> an existing rule: existing Rules not included in the Rules list of the BrowserImpersonationDetection parameter will be deleted.</li>.
+    * ID of the browser spoofing identification rule.<br>You can perform different rule configuration operations by rule ID:<br> <li> <b>Add</b> a new rule: leave the ID empty or unspecified;</li><li><b>Modify</b> an existing rule: specify the rule ID that needs to be updated/modified;</li><li><b>Delete</b> an existing rule: existing rules not included in the Rules list in the BrowserImpersonationDetection parameter will be deleted.</li>
     */
     @SerializedName("Id")
     @Expose
     private String Id;
 
     /**
-    * Specifies the name of the browser spoofing identification rule.
+    * Name of the browser spoofing identification rule.
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * Whether browser spoofing detection is enabled. valid values: <li>on: enabled;</li><li>off: disabled.</li>.
+    * Whether to enable the browser forgery identification rule. Valid values: <li>on: enable;</li><li>off: disable.</li>
     */
     @SerializedName("Enabled")
     @Expose
     private String Enabled;
 
     /**
-    * Specifies the specific content of browser spoofing identification rules, which only support configuration of request Method (Method), request Path (Path), and request URL, and must comply with expression grammar. for detailed specifications, please refer to the product document.
+    * Specific content of the browser spoofing identification rule. It only supports the configuration of request Method, request Path, and request URL, which must comply with expression syntax. For detailed specifications, see the product document.
     */
     @SerializedName("Condition")
     @Expose
     private String Condition;
 
     /**
-    * Describes the handling method for browser spoofing identification rules, including Cookie verification, session tracking configuration, and client behavior validation configuration.
+    * Handling method for browser spoofing identification rules, including Cookie verification, session tracking configuration, and client behavior validation configuration.
     */
     @SerializedName("Action")
     @Expose
     private BrowserImpersonationDetectionAction Action;
 
     /**
-     * Get Browser spoofing identification rule ID. rule ID supports different rule configuration operations: <li> <b>add</b> a new rule: ID is empty or without specifying the ID parameter;</li> <li> <b>modify</b> an existing rule: specify the rule ID that needs to be updated/modified;</li> <li> <b>delete</b> an existing rule: existing Rules not included in the Rules list of the BrowserImpersonationDetection parameter will be deleted.</li>. 
-     * @return Id Browser spoofing identification rule ID. rule ID supports different rule configuration operations: <li> <b>add</b> a new rule: ID is empty or without specifying the ID parameter;</li> <li> <b>modify</b> an existing rule: specify the rule ID that needs to be updated/modified;</li> <li> <b>delete</b> an existing rule: existing Rules not included in the Rules list of the BrowserImpersonationDetection parameter will be deleted.</li>.
+     * Get ID of the browser spoofing identification rule.<br>You can perform different rule configuration operations by rule ID:<br> <li> <b>Add</b> a new rule: leave the ID empty or unspecified;</li><li><b>Modify</b> an existing rule: specify the rule ID that needs to be updated/modified;</li><li><b>Delete</b> an existing rule: existing rules not included in the Rules list in the BrowserImpersonationDetection parameter will be deleted.</li> 
+     * @return Id ID of the browser spoofing identification rule.<br>You can perform different rule configuration operations by rule ID:<br> <li> <b>Add</b> a new rule: leave the ID empty or unspecified;</li><li><b>Modify</b> an existing rule: specify the rule ID that needs to be updated/modified;</li><li><b>Delete</b> an existing rule: existing rules not included in the Rules list in the BrowserImpersonationDetection parameter will be deleted.</li>
      */
     public String getId() {
         return this.Id;
     }
 
     /**
-     * Set Browser spoofing identification rule ID. rule ID supports different rule configuration operations: <li> <b>add</b> a new rule: ID is empty or without specifying the ID parameter;</li> <li> <b>modify</b> an existing rule: specify the rule ID that needs to be updated/modified;</li> <li> <b>delete</b> an existing rule: existing Rules not included in the Rules list of the BrowserImpersonationDetection parameter will be deleted.</li>.
-     * @param Id Browser spoofing identification rule ID. rule ID supports different rule configuration operations: <li> <b>add</b> a new rule: ID is empty or without specifying the ID parameter;</li> <li> <b>modify</b> an existing rule: specify the rule ID that needs to be updated/modified;</li> <li> <b>delete</b> an existing rule: existing Rules not included in the Rules list of the BrowserImpersonationDetection parameter will be deleted.</li>.
+     * Set ID of the browser spoofing identification rule.<br>You can perform different rule configuration operations by rule ID:<br> <li> <b>Add</b> a new rule: leave the ID empty or unspecified;</li><li><b>Modify</b> an existing rule: specify the rule ID that needs to be updated/modified;</li><li><b>Delete</b> an existing rule: existing rules not included in the Rules list in the BrowserImpersonationDetection parameter will be deleted.</li>
+     * @param Id ID of the browser spoofing identification rule.<br>You can perform different rule configuration operations by rule ID:<br> <li> <b>Add</b> a new rule: leave the ID empty or unspecified;</li><li><b>Modify</b> an existing rule: specify the rule ID that needs to be updated/modified;</li><li><b>Delete</b> an existing rule: existing rules not included in the Rules list in the BrowserImpersonationDetection parameter will be deleted.</li>
      */
     public void setId(String Id) {
         this.Id = Id;
     }
 
     /**
-     * Get Specifies the name of the browser spoofing identification rule. 
-     * @return Name Specifies the name of the browser spoofing identification rule.
+     * Get Name of the browser spoofing identification rule. 
+     * @return Name Name of the browser spoofing identification rule.
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Specifies the name of the browser spoofing identification rule.
-     * @param Name Specifies the name of the browser spoofing identification rule.
+     * Set Name of the browser spoofing identification rule.
+     * @param Name Name of the browser spoofing identification rule.
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Whether browser spoofing detection is enabled. valid values: <li>on: enabled;</li><li>off: disabled.</li>. 
-     * @return Enabled Whether browser spoofing detection is enabled. valid values: <li>on: enabled;</li><li>off: disabled.</li>.
+     * Get Whether to enable the browser forgery identification rule. Valid values: <li>on: enable;</li><li>off: disable.</li> 
+     * @return Enabled Whether to enable the browser forgery identification rule. Valid values: <li>on: enable;</li><li>off: disable.</li>
      */
     public String getEnabled() {
         return this.Enabled;
     }
 
     /**
-     * Set Whether browser spoofing detection is enabled. valid values: <li>on: enabled;</li><li>off: disabled.</li>.
-     * @param Enabled Whether browser spoofing detection is enabled. valid values: <li>on: enabled;</li><li>off: disabled.</li>.
+     * Set Whether to enable the browser forgery identification rule. Valid values: <li>on: enable;</li><li>off: disable.</li>
+     * @param Enabled Whether to enable the browser forgery identification rule. Valid values: <li>on: enable;</li><li>off: disable.</li>
      */
     public void setEnabled(String Enabled) {
         this.Enabled = Enabled;
     }
 
     /**
-     * Get Specifies the specific content of browser spoofing identification rules, which only support configuration of request Method (Method), request Path (Path), and request URL, and must comply with expression grammar. for detailed specifications, please refer to the product document. 
-     * @return Condition Specifies the specific content of browser spoofing identification rules, which only support configuration of request Method (Method), request Path (Path), and request URL, and must comply with expression grammar. for detailed specifications, please refer to the product document.
+     * Get Specific content of the browser spoofing identification rule. It only supports the configuration of request Method, request Path, and request URL, which must comply with expression syntax. For detailed specifications, see the product document. 
+     * @return Condition Specific content of the browser spoofing identification rule. It only supports the configuration of request Method, request Path, and request URL, which must comply with expression syntax. For detailed specifications, see the product document.
      */
     public String getCondition() {
         return this.Condition;
     }
 
     /**
-     * Set Specifies the specific content of browser spoofing identification rules, which only support configuration of request Method (Method), request Path (Path), and request URL, and must comply with expression grammar. for detailed specifications, please refer to the product document.
-     * @param Condition Specifies the specific content of browser spoofing identification rules, which only support configuration of request Method (Method), request Path (Path), and request URL, and must comply with expression grammar. for detailed specifications, please refer to the product document.
+     * Set Specific content of the browser spoofing identification rule. It only supports the configuration of request Method, request Path, and request URL, which must comply with expression syntax. For detailed specifications, see the product document.
+     * @param Condition Specific content of the browser spoofing identification rule. It only supports the configuration of request Method, request Path, and request URL, which must comply with expression syntax. For detailed specifications, see the product document.
      */
     public void setCondition(String Condition) {
         this.Condition = Condition;
     }
 
     /**
-     * Get Describes the handling method for browser spoofing identification rules, including Cookie verification, session tracking configuration, and client behavior validation configuration. 
-     * @return Action Describes the handling method for browser spoofing identification rules, including Cookie verification, session tracking configuration, and client behavior validation configuration.
+     * Get Handling method for browser spoofing identification rules, including Cookie verification, session tracking configuration, and client behavior validation configuration. 
+     * @return Action Handling method for browser spoofing identification rules, including Cookie verification, session tracking configuration, and client behavior validation configuration.
      */
     public BrowserImpersonationDetectionAction getAction() {
         return this.Action;
     }
 
     /**
-     * Set Describes the handling method for browser spoofing identification rules, including Cookie verification, session tracking configuration, and client behavior validation configuration.
-     * @param Action Describes the handling method for browser spoofing identification rules, including Cookie verification, session tracking configuration, and client behavior validation configuration.
+     * Set Handling method for browser spoofing identification rules, including Cookie verification, session tracking configuration, and client behavior validation configuration.
+     * @param Action Handling method for browser spoofing identification rules, including Cookie verification, session tracking configuration, and client behavior validation configuration.
      */
     public void setAction(BrowserImpersonationDetectionAction Action) {
         this.Action = Action;

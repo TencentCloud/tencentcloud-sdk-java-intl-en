@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DescribeMultiPathGatewaySecretKeyRequest extends AbstractModel {
 
     /**
-    * Zone ID.
+    * <p>Site ID.</p>
     */
     @SerializedName("ZoneId")
     @Expose
     private String ZoneId;
 
     /**
-     * Get Zone ID. 
-     * @return ZoneId Zone ID.
+     * Get <p>Site ID.</p> 
+     * @return ZoneId <p>Site ID.</p>
      */
     public String getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set Zone ID.
-     * @param ZoneId Zone ID.
+     * Set <p>Site ID.</p>
+     * @param ZoneId <p>Site ID.</p>
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;

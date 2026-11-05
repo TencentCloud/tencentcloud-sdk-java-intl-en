@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class BasicBotSettings extends AbstractModel {
 
     /**
-    * Client IP source IDC configuration, used for handling access requests from client ips in idcs (data centers). such source requests are not directly accessed by mobile terminals or browser-side.
+    * Source IDC configuration of the client IP, used for handling access requests from client IPs in IDCs (data centers). This type of source request is not directly accessed from a mobile terminal or browser side.
     */
     @SerializedName("SourceIDC")
     @Expose
     private SourceIDC SourceIDC;
 
     /**
-    * Search engine crawler configuration, used to handle requests from search engine crawlers. the IP, User-Agent, or rDNS results of such requests match known search engine crawlers.
+    * Search engine crawler configuration, used for handling requests from search engine crawlers. The IP, User-Agent, or rDNS results of such requests match known search engine crawlers.
     */
     @SerializedName("SearchEngineBots")
     @Expose
     private SearchEngineBots SearchEngineBots;
 
     /**
-    * Commercial or open-source tool UA feature configuration (original UA feature rule), used to handle access requests from known commercial or open-source tools. the User-Agent header of such requests complies with known commercial or open-source tool features.
+    * UA feature configuration for commercial or open-source tools (formerly UA feature rules), used for handling access requests from known commercial or open-source tools. The User-Agent header of such requests matches the features of known commercial or open-source tools.
     */
     @SerializedName("KnownBotCategories")
     @Expose
     private KnownBotCategories KnownBotCategories;
 
     /**
-    * Threat intelligence database (originally client profile analysis) configuration, used for handling client ips with specific risk characteristics in recent access behavior.
+    * IP threat intelligence database (formerly client profile analysis) configuration, used for handling client IP addresses with specific risk characteristics in recent access behavior.
     */
     @SerializedName("IPReputation")
     @Expose
     private IPReputation IPReputation;
 
     /**
-    * Specifies the configuration for Bot intelligent analysis.
+    * Specific configuration for Bot intelligent analysis.
     */
     @SerializedName("BotIntelligence")
     @Expose
     private BotIntelligence BotIntelligence;
 
     /**
-     * Get Client IP source IDC configuration, used for handling access requests from client ips in idcs (data centers). such source requests are not directly accessed by mobile terminals or browser-side. 
-     * @return SourceIDC Client IP source IDC configuration, used for handling access requests from client ips in idcs (data centers). such source requests are not directly accessed by mobile terminals or browser-side.
+     * Get Source IDC configuration of the client IP, used for handling access requests from client IPs in IDCs (data centers). This type of source request is not directly accessed from a mobile terminal or browser side. 
+     * @return SourceIDC Source IDC configuration of the client IP, used for handling access requests from client IPs in IDCs (data centers). This type of source request is not directly accessed from a mobile terminal or browser side.
      */
     public SourceIDC getSourceIDC() {
         return this.SourceIDC;
     }
 
     /**
-     * Set Client IP source IDC configuration, used for handling access requests from client ips in idcs (data centers). such source requests are not directly accessed by mobile terminals or browser-side.
-     * @param SourceIDC Client IP source IDC configuration, used for handling access requests from client ips in idcs (data centers). such source requests are not directly accessed by mobile terminals or browser-side.
+     * Set Source IDC configuration of the client IP, used for handling access requests from client IPs in IDCs (data centers). This type of source request is not directly accessed from a mobile terminal or browser side.
+     * @param SourceIDC Source IDC configuration of the client IP, used for handling access requests from client IPs in IDCs (data centers). This type of source request is not directly accessed from a mobile terminal or browser side.
      */
     public void setSourceIDC(SourceIDC SourceIDC) {
         this.SourceIDC = SourceIDC;
     }
 
     /**
-     * Get Search engine crawler configuration, used to handle requests from search engine crawlers. the IP, User-Agent, or rDNS results of such requests match known search engine crawlers. 
-     * @return SearchEngineBots Search engine crawler configuration, used to handle requests from search engine crawlers. the IP, User-Agent, or rDNS results of such requests match known search engine crawlers.
+     * Get Search engine crawler configuration, used for handling requests from search engine crawlers. The IP, User-Agent, or rDNS results of such requests match known search engine crawlers. 
+     * @return SearchEngineBots Search engine crawler configuration, used for handling requests from search engine crawlers. The IP, User-Agent, or rDNS results of such requests match known search engine crawlers.
      */
     public SearchEngineBots getSearchEngineBots() {
         return this.SearchEngineBots;
     }
 
     /**
-     * Set Search engine crawler configuration, used to handle requests from search engine crawlers. the IP, User-Agent, or rDNS results of such requests match known search engine crawlers.
-     * @param SearchEngineBots Search engine crawler configuration, used to handle requests from search engine crawlers. the IP, User-Agent, or rDNS results of such requests match known search engine crawlers.
+     * Set Search engine crawler configuration, used for handling requests from search engine crawlers. The IP, User-Agent, or rDNS results of such requests match known search engine crawlers.
+     * @param SearchEngineBots Search engine crawler configuration, used for handling requests from search engine crawlers. The IP, User-Agent, or rDNS results of such requests match known search engine crawlers.
      */
     public void setSearchEngineBots(SearchEngineBots SearchEngineBots) {
         this.SearchEngineBots = SearchEngineBots;
     }
 
     /**
-     * Get Commercial or open-source tool UA feature configuration (original UA feature rule), used to handle access requests from known commercial or open-source tools. the User-Agent header of such requests complies with known commercial or open-source tool features. 
-     * @return KnownBotCategories Commercial or open-source tool UA feature configuration (original UA feature rule), used to handle access requests from known commercial or open-source tools. the User-Agent header of such requests complies with known commercial or open-source tool features.
+     * Get UA feature configuration for commercial or open-source tools (formerly UA feature rules), used for handling access requests from known commercial or open-source tools. The User-Agent header of such requests matches the features of known commercial or open-source tools. 
+     * @return KnownBotCategories UA feature configuration for commercial or open-source tools (formerly UA feature rules), used for handling access requests from known commercial or open-source tools. The User-Agent header of such requests matches the features of known commercial or open-source tools.
      */
     public KnownBotCategories getKnownBotCategories() {
         return this.KnownBotCategories;
     }
 
     /**
-     * Set Commercial or open-source tool UA feature configuration (original UA feature rule), used to handle access requests from known commercial or open-source tools. the User-Agent header of such requests complies with known commercial or open-source tool features.
-     * @param KnownBotCategories Commercial or open-source tool UA feature configuration (original UA feature rule), used to handle access requests from known commercial or open-source tools. the User-Agent header of such requests complies with known commercial or open-source tool features.
+     * Set UA feature configuration for commercial or open-source tools (formerly UA feature rules), used for handling access requests from known commercial or open-source tools. The User-Agent header of such requests matches the features of known commercial or open-source tools.
+     * @param KnownBotCategories UA feature configuration for commercial or open-source tools (formerly UA feature rules), used for handling access requests from known commercial or open-source tools. The User-Agent header of such requests matches the features of known commercial or open-source tools.
      */
     public void setKnownBotCategories(KnownBotCategories KnownBotCategories) {
         this.KnownBotCategories = KnownBotCategories;
     }
 
     /**
-     * Get Threat intelligence database (originally client profile analysis) configuration, used for handling client ips with specific risk characteristics in recent access behavior. 
-     * @return IPReputation Threat intelligence database (originally client profile analysis) configuration, used for handling client ips with specific risk characteristics in recent access behavior.
+     * Get IP threat intelligence database (formerly client profile analysis) configuration, used for handling client IP addresses with specific risk characteristics in recent access behavior. 
+     * @return IPReputation IP threat intelligence database (formerly client profile analysis) configuration, used for handling client IP addresses with specific risk characteristics in recent access behavior.
      */
     public IPReputation getIPReputation() {
         return this.IPReputation;
     }
 
     /**
-     * Set Threat intelligence database (originally client profile analysis) configuration, used for handling client ips with specific risk characteristics in recent access behavior.
-     * @param IPReputation Threat intelligence database (originally client profile analysis) configuration, used for handling client ips with specific risk characteristics in recent access behavior.
+     * Set IP threat intelligence database (formerly client profile analysis) configuration, used for handling client IP addresses with specific risk characteristics in recent access behavior.
+     * @param IPReputation IP threat intelligence database (formerly client profile analysis) configuration, used for handling client IP addresses with specific risk characteristics in recent access behavior.
      */
     public void setIPReputation(IPReputation IPReputation) {
         this.IPReputation = IPReputation;
     }
 
     /**
-     * Get Specifies the configuration for Bot intelligent analysis. 
-     * @return BotIntelligence Specifies the configuration for Bot intelligent analysis.
+     * Get Specific configuration for Bot intelligent analysis. 
+     * @return BotIntelligence Specific configuration for Bot intelligent analysis.
      */
     public BotIntelligence getBotIntelligence() {
         return this.BotIntelligence;
     }
 
     /**
-     * Set Specifies the configuration for Bot intelligent analysis.
-     * @param BotIntelligence Specifies the configuration for Bot intelligent analysis.
+     * Set Specific configuration for Bot intelligent analysis.
+     * @param BotIntelligence Specific configuration for Bot intelligent analysis.
      */
     public void setBotIntelligence(BotIntelligence BotIntelligence) {
         this.BotIntelligence = BotIntelligence;

@@ -145,8 +145,8 @@ public class WebVerificationConfigIntl extends AbstractModel {
     /**
     * When CheckMode = 1, this defines the waiting policy for OCR recognition results.
 Enumeration values:
-required: Wait for OCR result after document capture.
-skip: Wait for OCR result confirmation before entering liveness check.
+required: Proceed to liveness check only after OCR result confirmation.
+skip: Enter liveness check immediately after card photo submission.
 Default value: required.
     */
     @SerializedName("OcrWaitPolicy")
@@ -435,13 +435,13 @@ Default value: required.
     /**
      * Get When CheckMode = 1, this defines the waiting policy for OCR recognition results.
 Enumeration values:
-required: Wait for OCR result after document capture.
-skip: Wait for OCR result confirmation before entering liveness check.
+required: Proceed to liveness check only after OCR result confirmation.
+skip: Enter liveness check immediately after card photo submission.
 Default value: required. 
      * @return OcrWaitPolicy When CheckMode = 1, this defines the waiting policy for OCR recognition results.
 Enumeration values:
-required: Wait for OCR result after document capture.
-skip: Wait for OCR result confirmation before entering liveness check.
+required: Proceed to liveness check only after OCR result confirmation.
+skip: Enter liveness check immediately after card photo submission.
 Default value: required.
      */
     public String getOcrWaitPolicy() {
@@ -451,13 +451,13 @@ Default value: required.
     /**
      * Set When CheckMode = 1, this defines the waiting policy for OCR recognition results.
 Enumeration values:
-required: Wait for OCR result after document capture.
-skip: Wait for OCR result confirmation before entering liveness check.
+required: Proceed to liveness check only after OCR result confirmation.
+skip: Enter liveness check immediately after card photo submission.
 Default value: required.
      * @param OcrWaitPolicy When CheckMode = 1, this defines the waiting policy for OCR recognition results.
 Enumeration values:
-required: Wait for OCR result after document capture.
-skip: Wait for OCR result confirmation before entering liveness check.
+required: Proceed to liveness check only after OCR result confirmation.
+skip: Enter liveness check immediately after card photo submission.
 Default value: required.
      */
     public void setOcrWaitPolicy(String OcrWaitPolicy) {

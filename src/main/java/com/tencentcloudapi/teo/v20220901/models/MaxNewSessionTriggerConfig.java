@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class MaxNewSessionTriggerConfig extends AbstractModel {
 
     /**
-    * Time window for trigger threshold statistics. valid values: <li>5s: within 5 seconds;</li><li>10s: within 10 seconds;</li><li>15s: within 15 seconds;</li><li>30s: within 30 seconds;</li><li>60s: within 60 seconds;</li><li>5m: within 5 minutes;</li><li>10m: within 10 minutes;</li><li>30m: within 30 minutes;</li><li>60m: within 60 minutes.</li>.
+    * Time window for trigger threshold statistics. Valid values: <li>5s: within 5 seconds;</li><li>10s: within 10 seconds;</li><li>15s: within 15 seconds;</li><li>30s: within 30 seconds;</li><li>60s: within 60 seconds;</li><li>5m: within 5 minutes;</li><li>10m: within 10 minutes;</li><li>30m: within 30 minutes;</li><li>60m: within 60 minutes.</li>
     */
     @SerializedName("MaxNewSessionCountInterval")
     @Expose
     private String MaxNewSessionCountInterval;
 
     /**
-    * Trigger threshold cumulative count. value range: 1-100000000.
+    * Cumulative count of trigger threshold statistics. Value range: 1-100000000.
     */
     @SerializedName("MaxNewSessionCountThreshold")
     @Expose
     private Long MaxNewSessionCountThreshold;
 
     /**
-     * Get Time window for trigger threshold statistics. valid values: <li>5s: within 5 seconds;</li><li>10s: within 10 seconds;</li><li>15s: within 15 seconds;</li><li>30s: within 30 seconds;</li><li>60s: within 60 seconds;</li><li>5m: within 5 minutes;</li><li>10m: within 10 minutes;</li><li>30m: within 30 minutes;</li><li>60m: within 60 minutes.</li>. 
-     * @return MaxNewSessionCountInterval Time window for trigger threshold statistics. valid values: <li>5s: within 5 seconds;</li><li>10s: within 10 seconds;</li><li>15s: within 15 seconds;</li><li>30s: within 30 seconds;</li><li>60s: within 60 seconds;</li><li>5m: within 5 minutes;</li><li>10m: within 10 minutes;</li><li>30m: within 30 minutes;</li><li>60m: within 60 minutes.</li>.
+     * Get Time window for trigger threshold statistics. Valid values: <li>5s: within 5 seconds;</li><li>10s: within 10 seconds;</li><li>15s: within 15 seconds;</li><li>30s: within 30 seconds;</li><li>60s: within 60 seconds;</li><li>5m: within 5 minutes;</li><li>10m: within 10 minutes;</li><li>30m: within 30 minutes;</li><li>60m: within 60 minutes.</li> 
+     * @return MaxNewSessionCountInterval Time window for trigger threshold statistics. Valid values: <li>5s: within 5 seconds;</li><li>10s: within 10 seconds;</li><li>15s: within 15 seconds;</li><li>30s: within 30 seconds;</li><li>60s: within 60 seconds;</li><li>5m: within 5 minutes;</li><li>10m: within 10 minutes;</li><li>30m: within 30 minutes;</li><li>60m: within 60 minutes.</li>
      */
     public String getMaxNewSessionCountInterval() {
         return this.MaxNewSessionCountInterval;
     }
 
     /**
-     * Set Time window for trigger threshold statistics. valid values: <li>5s: within 5 seconds;</li><li>10s: within 10 seconds;</li><li>15s: within 15 seconds;</li><li>30s: within 30 seconds;</li><li>60s: within 60 seconds;</li><li>5m: within 5 minutes;</li><li>10m: within 10 minutes;</li><li>30m: within 30 minutes;</li><li>60m: within 60 minutes.</li>.
-     * @param MaxNewSessionCountInterval Time window for trigger threshold statistics. valid values: <li>5s: within 5 seconds;</li><li>10s: within 10 seconds;</li><li>15s: within 15 seconds;</li><li>30s: within 30 seconds;</li><li>60s: within 60 seconds;</li><li>5m: within 5 minutes;</li><li>10m: within 10 minutes;</li><li>30m: within 30 minutes;</li><li>60m: within 60 minutes.</li>.
+     * Set Time window for trigger threshold statistics. Valid values: <li>5s: within 5 seconds;</li><li>10s: within 10 seconds;</li><li>15s: within 15 seconds;</li><li>30s: within 30 seconds;</li><li>60s: within 60 seconds;</li><li>5m: within 5 minutes;</li><li>10m: within 10 minutes;</li><li>30m: within 30 minutes;</li><li>60m: within 60 minutes.</li>
+     * @param MaxNewSessionCountInterval Time window for trigger threshold statistics. Valid values: <li>5s: within 5 seconds;</li><li>10s: within 10 seconds;</li><li>15s: within 15 seconds;</li><li>30s: within 30 seconds;</li><li>60s: within 60 seconds;</li><li>5m: within 5 minutes;</li><li>10m: within 10 minutes;</li><li>30m: within 30 minutes;</li><li>60m: within 60 minutes.</li>
      */
     public void setMaxNewSessionCountInterval(String MaxNewSessionCountInterval) {
         this.MaxNewSessionCountInterval = MaxNewSessionCountInterval;
     }
 
     /**
-     * Get Trigger threshold cumulative count. value range: 1-100000000. 
-     * @return MaxNewSessionCountThreshold Trigger threshold cumulative count. value range: 1-100000000.
+     * Get Cumulative count of trigger threshold statistics. Value range: 1-100000000. 
+     * @return MaxNewSessionCountThreshold Cumulative count of trigger threshold statistics. Value range: 1-100000000.
      */
     public Long getMaxNewSessionCountThreshold() {
         return this.MaxNewSessionCountThreshold;
     }
 
     /**
-     * Set Trigger threshold cumulative count. value range: 1-100000000.
-     * @param MaxNewSessionCountThreshold Trigger threshold cumulative count. value range: 1-100000000.
+     * Set Cumulative count of trigger threshold statistics. Value range: 1-100000000.
+     * @param MaxNewSessionCountThreshold Cumulative count of trigger threshold statistics. Value range: 1-100000000.
      */
     public void setMaxNewSessionCountThreshold(Long MaxNewSessionCountThreshold) {
         this.MaxNewSessionCountThreshold = MaxNewSessionCountThreshold;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModelDetailInfo extends AbstractModel {
 
     /**
-    * Model alias.
+    * Model alias
     */
     @SerializedName("Alias")
     @Expose
@@ -52,16 +52,16 @@ public class ModelDetailInfo extends AbstractModel {
     private ModelParams ModelParams;
 
     /**
-     * Get Model alias. 
-     * @return Alias Model alias.
+     * Get Model alias 
+     * @return Alias Model alias
      */
     public String getAlias() {
         return this.Alias;
     }
 
     /**
-     * Set Model alias.
-     * @param Alias Model alias.
+     * Set Model alias
+     * @param Alias Model alias
      */
     public void setAlias(String Alias) {
         this.Alias = Alias;

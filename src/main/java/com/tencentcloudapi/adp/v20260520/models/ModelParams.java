@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModelParams extends AbstractModel {
 
     /**
-    * <p>Whether deep thinking is enabled</p>
+    * <p>Whether to enable deep thinking</p>
     */
     @SerializedName("DeepThinking")
     @Expose
@@ -108,16 +108,16 @@ public class ModelParams extends AbstractModel {
     private Long TopK;
 
     /**
-     * Get <p>Whether deep thinking is enabled</p> 
-     * @return DeepThinking <p>Whether deep thinking is enabled</p>
+     * Get <p>Whether to enable deep thinking</p> 
+     * @return DeepThinking <p>Whether to enable deep thinking</p>
      */
     public String getDeepThinking() {
         return this.DeepThinking;
     }
 
     /**
-     * Set <p>Whether deep thinking is enabled</p>
-     * @param DeepThinking <p>Whether deep thinking is enabled</p>
+     * Set <p>Whether to enable deep thinking</p>
+     * @param DeepThinking <p>Whether to enable deep thinking</p>
      */
     public void setDeepThinking(String DeepThinking) {
         this.DeepThinking = DeepThinking;

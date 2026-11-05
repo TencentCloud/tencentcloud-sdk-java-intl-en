@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class SearchEngineBots extends AbstractModel {
 
     /**
-    * Specifies the action for requests from search engine crawlers. valid values for SecurityAction Name: <li>Deny: block;</li> <li>Monitor: observe;</li> <li>Disabled: not enabled, disable specified rule;</li> <li>Challenge: Challenge, where ChallengeOption in ChallengeActionParameters supports JSChallenge and ManagedChallenge;</li> <li>Allow: pass (to be deprecated).</li>.
+    * Execution action for requests from search engine crawlers. Supported values of SecurityAction Name: <li>Deny: block;</li><li>Monitor: observe;</li><li>Disabled: not enabled, disable the specified rule;</li><li>Challenge: challenge. ChallengeOption in ChallengeActionParameters supports JSChallenge and ManagedChallenge;</li><li>Allow: allow (to be deprecated).</li>
     */
     @SerializedName("BaseAction")
     @Expose
     private SecurityAction BaseAction;
 
     /**
-    * Specifies the handling method for search engine crawler requests.
+    * Specify the handling method for search engine crawler requests.
     */
     @SerializedName("BotManagementActionOverrides")
     @Expose
     private BotManagementActionOverrides [] BotManagementActionOverrides;
 
     /**
-     * Get Specifies the action for requests from search engine crawlers. valid values for SecurityAction Name: <li>Deny: block;</li> <li>Monitor: observe;</li> <li>Disabled: not enabled, disable specified rule;</li> <li>Challenge: Challenge, where ChallengeOption in ChallengeActionParameters supports JSChallenge and ManagedChallenge;</li> <li>Allow: pass (to be deprecated).</li>. 
-     * @return BaseAction Specifies the action for requests from search engine crawlers. valid values for SecurityAction Name: <li>Deny: block;</li> <li>Monitor: observe;</li> <li>Disabled: not enabled, disable specified rule;</li> <li>Challenge: Challenge, where ChallengeOption in ChallengeActionParameters supports JSChallenge and ManagedChallenge;</li> <li>Allow: pass (to be deprecated).</li>.
+     * Get Execution action for requests from search engine crawlers. Supported values of SecurityAction Name: <li>Deny: block;</li><li>Monitor: observe;</li><li>Disabled: not enabled, disable the specified rule;</li><li>Challenge: challenge. ChallengeOption in ChallengeActionParameters supports JSChallenge and ManagedChallenge;</li><li>Allow: allow (to be deprecated).</li> 
+     * @return BaseAction Execution action for requests from search engine crawlers. Supported values of SecurityAction Name: <li>Deny: block;</li><li>Monitor: observe;</li><li>Disabled: not enabled, disable the specified rule;</li><li>Challenge: challenge. ChallengeOption in ChallengeActionParameters supports JSChallenge and ManagedChallenge;</li><li>Allow: allow (to be deprecated).</li>
      */
     public SecurityAction getBaseAction() {
         return this.BaseAction;
     }
 
     /**
-     * Set Specifies the action for requests from search engine crawlers. valid values for SecurityAction Name: <li>Deny: block;</li> <li>Monitor: observe;</li> <li>Disabled: not enabled, disable specified rule;</li> <li>Challenge: Challenge, where ChallengeOption in ChallengeActionParameters supports JSChallenge and ManagedChallenge;</li> <li>Allow: pass (to be deprecated).</li>.
-     * @param BaseAction Specifies the action for requests from search engine crawlers. valid values for SecurityAction Name: <li>Deny: block;</li> <li>Monitor: observe;</li> <li>Disabled: not enabled, disable specified rule;</li> <li>Challenge: Challenge, where ChallengeOption in ChallengeActionParameters supports JSChallenge and ManagedChallenge;</li> <li>Allow: pass (to be deprecated).</li>.
+     * Set Execution action for requests from search engine crawlers. Supported values of SecurityAction Name: <li>Deny: block;</li><li>Monitor: observe;</li><li>Disabled: not enabled, disable the specified rule;</li><li>Challenge: challenge. ChallengeOption in ChallengeActionParameters supports JSChallenge and ManagedChallenge;</li><li>Allow: allow (to be deprecated).</li>
+     * @param BaseAction Execution action for requests from search engine crawlers. Supported values of SecurityAction Name: <li>Deny: block;</li><li>Monitor: observe;</li><li>Disabled: not enabled, disable the specified rule;</li><li>Challenge: challenge. ChallengeOption in ChallengeActionParameters supports JSChallenge and ManagedChallenge;</li><li>Allow: allow (to be deprecated).</li>
      */
     public void setBaseAction(SecurityAction BaseAction) {
         this.BaseAction = BaseAction;
     }
 
     /**
-     * Get Specifies the handling method for search engine crawler requests. 
-     * @return BotManagementActionOverrides Specifies the handling method for search engine crawler requests.
+     * Get Specify the handling method for search engine crawler requests. 
+     * @return BotManagementActionOverrides Specify the handling method for search engine crawler requests.
      */
     public BotManagementActionOverrides [] getBotManagementActionOverrides() {
         return this.BotManagementActionOverrides;
     }
 
     /**
-     * Set Specifies the handling method for search engine crawler requests.
-     * @param BotManagementActionOverrides Specifies the handling method for search engine crawler requests.
+     * Set Specify the handling method for search engine crawler requests.
+     * @param BotManagementActionOverrides Specify the handling method for search engine crawler requests.
      */
     public void setBotManagementActionOverrides(BotManagementActionOverrides [] BotManagementActionOverrides) {
         this.BotManagementActionOverrides = BotManagementActionOverrides;

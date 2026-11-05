@@ -120,4 +120,15 @@ This API is used to implement best practices.
         return this.internalRequest(req, "GetFederationToken", GetFederationTokenResponse.class);
     }
 
+    /**
+     *Obtain the MFA temporary certificate.
+     * @param req GetSessionTokenRequest
+     * @return GetSessionTokenResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetSessionTokenResponse GetSessionToken(GetSessionTokenRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetSessionToken", GetSessionTokenResponse.class);
+    }
+
 }

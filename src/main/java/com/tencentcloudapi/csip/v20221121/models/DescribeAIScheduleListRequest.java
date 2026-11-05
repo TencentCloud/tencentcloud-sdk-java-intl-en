@@ -45,7 +45,7 @@ public class DescribeAIScheduleListRequest extends AbstractModel {
     private Long Status;
 
     /**
-    * <p>Scheduled task ID, optional. If empty, a full query is performed.</p>
+    * <p>Scheduled task ID. It is optional. If it is empty, a full query is performed.</p>
     */
     @SerializedName("ScheduleId")
     @Expose
@@ -100,16 +100,16 @@ public class DescribeAIScheduleListRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>Scheduled task ID, optional. If empty, a full query is performed.</p> 
-     * @return ScheduleId <p>Scheduled task ID, optional. If empty, a full query is performed.</p>
+     * Get <p>Scheduled task ID. It is optional. If it is empty, a full query is performed.</p> 
+     * @return ScheduleId <p>Scheduled task ID. It is optional. If it is empty, a full query is performed.</p>
      */
     public String getScheduleId() {
         return this.ScheduleId;
     }
 
     /**
-     * Set <p>Scheduled task ID, optional. If empty, a full query is performed.</p>
-     * @param ScheduleId <p>Scheduled task ID, optional. If empty, a full query is performed.</p>
+     * Set <p>Scheduled task ID. It is optional. If it is empty, a full query is performed.</p>
+     * @param ScheduleId <p>Scheduled task ID. It is optional. If it is empty, a full query is performed.</p>
      */
     public void setScheduleId(String ScheduleId) {
         this.ScheduleId = ScheduleId;

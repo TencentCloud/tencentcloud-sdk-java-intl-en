@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class ManagedRuleGroupMeta extends AbstractModel {
 
     /**
-    * ManagedRuleGroup detailed information, output parameter only.
+    * Managed rule group description. For output usage only.
     */
     @SerializedName("GroupDetail")
     @Expose
     private String GroupDetail;
 
     /**
-    * ManagedRuleGroup name, output parameter only.
+    * Managed rule group name. Output parameter only.
     */
     @SerializedName("GroupName")
     @Expose
     private String GroupName;
 
     /**
-    * All sub-rules information under current ManagedRuleGroup, output parameter only.
+    * Rule information of all sub-rules in the current managed rule group. Output parameter only.
     */
     @SerializedName("RuleDetails")
     @Expose
     private ManagedRuleDetail [] RuleDetails;
 
     /**
-     * Get ManagedRuleGroup detailed information, output parameter only. 
-     * @return GroupDetail ManagedRuleGroup detailed information, output parameter only.
+     * Get Managed rule group description. For output usage only. 
+     * @return GroupDetail Managed rule group description. For output usage only.
      */
     public String getGroupDetail() {
         return this.GroupDetail;
     }
 
     /**
-     * Set ManagedRuleGroup detailed information, output parameter only.
-     * @param GroupDetail ManagedRuleGroup detailed information, output parameter only.
+     * Set Managed rule group description. For output usage only.
+     * @param GroupDetail Managed rule group description. For output usage only.
      */
     public void setGroupDetail(String GroupDetail) {
         this.GroupDetail = GroupDetail;
     }
 
     /**
-     * Get ManagedRuleGroup name, output parameter only. 
-     * @return GroupName ManagedRuleGroup name, output parameter only.
+     * Get Managed rule group name. Output parameter only. 
+     * @return GroupName Managed rule group name. Output parameter only.
      */
     public String getGroupName() {
         return this.GroupName;
     }
 
     /**
-     * Set ManagedRuleGroup name, output parameter only.
-     * @param GroupName ManagedRuleGroup name, output parameter only.
+     * Set Managed rule group name. Output parameter only.
+     * @param GroupName Managed rule group name. Output parameter only.
      */
     public void setGroupName(String GroupName) {
         this.GroupName = GroupName;
     }
 
     /**
-     * Get All sub-rules information under current ManagedRuleGroup, output parameter only. 
-     * @return RuleDetails All sub-rules information under current ManagedRuleGroup, output parameter only.
+     * Get Rule information of all sub-rules in the current managed rule group. Output parameter only. 
+     * @return RuleDetails Rule information of all sub-rules in the current managed rule group. Output parameter only.
      */
     public ManagedRuleDetail [] getRuleDetails() {
         return this.RuleDetails;
     }
 
     /**
-     * Set All sub-rules information under current ManagedRuleGroup, output parameter only.
-     * @param RuleDetails All sub-rules information under current ManagedRuleGroup, output parameter only.
+     * Set Rule information of all sub-rules in the current managed rule group. Output parameter only.
+     * @param RuleDetails Rule information of all sub-rules in the current managed rule group. Output parameter only.
      */
     public void setRuleDetails(ManagedRuleDetail [] RuleDetails) {
         this.RuleDetails = RuleDetails;

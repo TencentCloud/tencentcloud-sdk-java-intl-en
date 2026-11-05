@@ -128,6 +128,28 @@ public class MongodbClient extends AbstractClient{
     }
 
     /**
+     *Create a database role
+     * @param req CreateInstanceRoleRequest
+     * @return CreateInstanceRoleResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateInstanceRoleResponse CreateInstanceRole(CreateInstanceRoleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateInstanceRole", CreateInstanceRoleResponse.class);
+    }
+
+    /**
+     *Create a database account
+     * @param req CreateInstanceUserRequest
+     * @return CreateInstanceUserResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateInstanceUserResponse CreateInstanceUser(CreateInstanceUserRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateInstanceUser", CreateInstanceUserResponse.class);
+    }
+
+    /**
      *This API is used to create a log download task.
      * @param req CreateLogDownloadTaskRequest
      * @return CreateLogDownloadTaskResponse
@@ -158,6 +180,28 @@ public class MongodbClient extends AbstractClient{
     public DeleteDBBackupsResponse DeleteDBBackups(DeleteDBBackupsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteDBBackups", DeleteDBBackupsResponse.class);
+    }
+
+    /**
+     *Delete role
+     * @param req DeleteInstanceRoleRequest
+     * @return DeleteInstanceRoleResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteInstanceRoleResponse DeleteInstanceRole(DeleteInstanceRoleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteInstanceRole", DeleteInstanceRoleResponse.class);
+    }
+
+    /**
+     *This API is used to delete a database account.
+     * @param req DeleteInstanceUserRequest
+     * @return DeleteInstanceUserResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteInstanceUserResponse DeleteInstanceUser(DeleteInstanceUserRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteInstanceUser", DeleteInstanceUserResponse.class);
     }
 
     /**
@@ -372,6 +416,17 @@ public class MongodbClient extends AbstractClient{
     }
 
     /**
+     *Obtains the list of roles
+     * @param req DescribeInstanceRolesRequest
+     * @return DescribeInstanceRolesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInstanceRolesResponse DescribeInstanceRoles(DescribeInstanceRolesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeInstanceRoles", DescribeInstanceRolesResponse.class);
+    }
+
+    /**
      *This API is used to view the enabling status of Secure Sockets Layer (SSL) for an instance.
      * @param req DescribeInstanceSSLRequest
      * @return DescribeInstanceSSLResponse
@@ -380,6 +435,17 @@ public class MongodbClient extends AbstractClient{
     public DescribeInstanceSSLResponse DescribeInstanceSSL(DescribeInstanceSSLRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeInstanceSSL", DescribeInstanceSSLResponse.class);
+    }
+
+    /**
+     *This API is used to obtain the list of accounts.
+     * @param req DescribeInstanceUsersRequest
+     * @return DescribeInstanceUsersResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInstanceUsersResponse DescribeInstanceUsers(DescribeInstanceUsersRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeInstanceUsers", DescribeInstanceUsersResponse.class);
     }
 
     /**
@@ -776,6 +842,28 @@ public class MongodbClient extends AbstractClient{
     public TerminateDBInstancesResponse TerminateDBInstances(TerminateDBInstancesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "TerminateDBInstances", TerminateDBInstancesResponse.class);
+    }
+
+    /**
+     *This API is used to update a database role.
+     * @param req UpdateInstanceRoleRequest
+     * @return UpdateInstanceRoleResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateInstanceRoleResponse UpdateInstanceRole(UpdateInstanceRoleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateInstanceRole", UpdateInstanceRoleResponse.class);
+    }
+
+    /**
+     *Update database account
+     * @param req UpdateInstanceUserRequest
+     * @return UpdateInstanceUserResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateInstanceUserResponse UpdateInstanceUser(UpdateInstanceUserRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateInstanceUser", UpdateInstanceUserResponse.class);
     }
 
     /**

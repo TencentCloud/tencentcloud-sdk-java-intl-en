@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class HttpDDoSProtection extends AbstractModel {
 
     /**
-    * Specifies the specific configuration of adaptive frequency control.
+    * Specific configuration of adaptive frequency control.
     */
     @SerializedName("AdaptiveFrequencyControl")
     @Expose
     private AdaptiveFrequencyControl AdaptiveFrequencyControl;
 
     /**
-    * Specifies the intelligent client filter configuration.
+    * Specific configuration for intelligent client filtering.
     */
     @SerializedName("ClientFiltering")
     @Expose
     private ClientFiltering ClientFiltering;
 
     /**
-    * Specifies the specific configuration for bandwidth abuse protection.
+    * Bandwidth abuse protection configuration.
     */
     @SerializedName("BandwidthAbuseDefense")
     @Expose
     private BandwidthAbuseDefense BandwidthAbuseDefense;
 
     /**
-    * Specifies the configuration of slow attack protection.
+    * Specific configuration of slow attack protection.
     */
     @SerializedName("SlowAttackDefense")
     @Expose
     private SlowAttackDefense SlowAttackDefense;
 
     /**
-     * Get Specifies the specific configuration of adaptive frequency control. 
-     * @return AdaptiveFrequencyControl Specifies the specific configuration of adaptive frequency control.
+     * Get Specific configuration of adaptive frequency control. 
+     * @return AdaptiveFrequencyControl Specific configuration of adaptive frequency control.
      */
     public AdaptiveFrequencyControl getAdaptiveFrequencyControl() {
         return this.AdaptiveFrequencyControl;
     }
 
     /**
-     * Set Specifies the specific configuration of adaptive frequency control.
-     * @param AdaptiveFrequencyControl Specifies the specific configuration of adaptive frequency control.
+     * Set Specific configuration of adaptive frequency control.
+     * @param AdaptiveFrequencyControl Specific configuration of adaptive frequency control.
      */
     public void setAdaptiveFrequencyControl(AdaptiveFrequencyControl AdaptiveFrequencyControl) {
         this.AdaptiveFrequencyControl = AdaptiveFrequencyControl;
     }
 
     /**
-     * Get Specifies the intelligent client filter configuration. 
-     * @return ClientFiltering Specifies the intelligent client filter configuration.
+     * Get Specific configuration for intelligent client filtering. 
+     * @return ClientFiltering Specific configuration for intelligent client filtering.
      */
     public ClientFiltering getClientFiltering() {
         return this.ClientFiltering;
     }
 
     /**
-     * Set Specifies the intelligent client filter configuration.
-     * @param ClientFiltering Specifies the intelligent client filter configuration.
+     * Set Specific configuration for intelligent client filtering.
+     * @param ClientFiltering Specific configuration for intelligent client filtering.
      */
     public void setClientFiltering(ClientFiltering ClientFiltering) {
         this.ClientFiltering = ClientFiltering;
     }
 
     /**
-     * Get Specifies the specific configuration for bandwidth abuse protection. 
-     * @return BandwidthAbuseDefense Specifies the specific configuration for bandwidth abuse protection.
+     * Get Bandwidth abuse protection configuration. 
+     * @return BandwidthAbuseDefense Bandwidth abuse protection configuration.
      */
     public BandwidthAbuseDefense getBandwidthAbuseDefense() {
         return this.BandwidthAbuseDefense;
     }
 
     /**
-     * Set Specifies the specific configuration for bandwidth abuse protection.
-     * @param BandwidthAbuseDefense Specifies the specific configuration for bandwidth abuse protection.
+     * Set Bandwidth abuse protection configuration.
+     * @param BandwidthAbuseDefense Bandwidth abuse protection configuration.
      */
     public void setBandwidthAbuseDefense(BandwidthAbuseDefense BandwidthAbuseDefense) {
         this.BandwidthAbuseDefense = BandwidthAbuseDefense;
     }
 
     /**
-     * Get Specifies the configuration of slow attack protection. 
-     * @return SlowAttackDefense Specifies the configuration of slow attack protection.
+     * Get Specific configuration of slow attack protection. 
+     * @return SlowAttackDefense Specific configuration of slow attack protection.
      */
     public SlowAttackDefense getSlowAttackDefense() {
         return this.SlowAttackDefense;
     }
 
     /**
-     * Set Specifies the configuration of slow attack protection.
-     * @param SlowAttackDefense Specifies the configuration of slow attack protection.
+     * Set Specific configuration of slow attack protection.
+     * @param SlowAttackDefense Specific configuration of slow attack protection.
      */
     public void setSlowAttackDefense(SlowAttackDefense SlowAttackDefense) {
         this.SlowAttackDefense = SlowAttackDefense;

@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class ExceptionRules extends AbstractModel {
 
     /**
-    * Definition list of exception Rules. when using ModifySecurityPolicy to modify Web protection configuration: <li>if the Rules parameter is not specified or the parameter length is zero: clear all exception rule configurations.</li><li>if the ExceptionRules parameter value is not specified in SecurityPolicy: keep existing exception rule configurations without modification.</li>.
+    * Definition list of exception Rules. When using ModifySecurityPolicy to modify Web protection configuration: <li>If the Rules parameter is not specified or its length is zero: clear all exception rule configurations.</li><li>If the ExceptionRules parameter value is not specified in the SecurityPolicy parameter: keep existing exception rule configurations without modification.</li>
     */
     @SerializedName("Rules")
     @Expose
     private ExceptionRule [] Rules;
 
     /**
-     * Get Definition list of exception Rules. when using ModifySecurityPolicy to modify Web protection configuration: <li>if the Rules parameter is not specified or the parameter length is zero: clear all exception rule configurations.</li><li>if the ExceptionRules parameter value is not specified in SecurityPolicy: keep existing exception rule configurations without modification.</li>. 
-     * @return Rules Definition list of exception Rules. when using ModifySecurityPolicy to modify Web protection configuration: <li>if the Rules parameter is not specified or the parameter length is zero: clear all exception rule configurations.</li><li>if the ExceptionRules parameter value is not specified in SecurityPolicy: keep existing exception rule configurations without modification.</li>.
+     * Get Definition list of exception Rules. When using ModifySecurityPolicy to modify Web protection configuration: <li>If the Rules parameter is not specified or its length is zero: clear all exception rule configurations.</li><li>If the ExceptionRules parameter value is not specified in the SecurityPolicy parameter: keep existing exception rule configurations without modification.</li> 
+     * @return Rules Definition list of exception Rules. When using ModifySecurityPolicy to modify Web protection configuration: <li>If the Rules parameter is not specified or its length is zero: clear all exception rule configurations.</li><li>If the ExceptionRules parameter value is not specified in the SecurityPolicy parameter: keep existing exception rule configurations without modification.</li>
      */
     public ExceptionRule [] getRules() {
         return this.Rules;
     }
 
     /**
-     * Set Definition list of exception Rules. when using ModifySecurityPolicy to modify Web protection configuration: <li>if the Rules parameter is not specified or the parameter length is zero: clear all exception rule configurations.</li><li>if the ExceptionRules parameter value is not specified in SecurityPolicy: keep existing exception rule configurations without modification.</li>.
-     * @param Rules Definition list of exception Rules. when using ModifySecurityPolicy to modify Web protection configuration: <li>if the Rules parameter is not specified or the parameter length is zero: clear all exception rule configurations.</li><li>if the ExceptionRules parameter value is not specified in SecurityPolicy: keep existing exception rule configurations without modification.</li>.
+     * Set Definition list of exception Rules. When using ModifySecurityPolicy to modify Web protection configuration: <li>If the Rules parameter is not specified or its length is zero: clear all exception rule configurations.</li><li>If the ExceptionRules parameter value is not specified in the SecurityPolicy parameter: keep existing exception rule configurations without modification.</li>
+     * @param Rules Definition list of exception Rules. When using ModifySecurityPolicy to modify Web protection configuration: <li>If the Rules parameter is not specified or its length is zero: clear all exception rule configurations.</li><li>If the ExceptionRules parameter value is not specified in the SecurityPolicy parameter: keep existing exception rule configurations without modification.</li>
      */
     public void setRules(ExceptionRule [] Rules) {
         this.Rules = Rules;

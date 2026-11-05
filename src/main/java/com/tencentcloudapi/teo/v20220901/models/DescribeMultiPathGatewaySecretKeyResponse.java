@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeMultiPathGatewaySecretKeyResponse extends AbstractModel {
 
     /**
-    * Access key.
+    * <p>Access key.</p>
     */
     @SerializedName("SecretKey")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeMultiPathGatewaySecretKeyResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Access key. 
-     * @return SecretKey Access key.
+     * Get <p>Access key.</p> 
+     * @return SecretKey <p>Access key.</p>
      */
     public String getSecretKey() {
         return this.SecretKey;
     }
 
     /**
-     * Set Access key.
-     * @param SecretKey Access key.
+     * Set <p>Access key.</p>
+     * @param SecretKey <p>Access key.</p>
      */
     public void setSecretKey(String SecretKey) {
         this.SecretKey = SecretKey;

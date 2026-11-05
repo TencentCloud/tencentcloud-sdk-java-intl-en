@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class ReturnCustomPageActionParameters extends AbstractModel {
 
     /**
-    * Response custom status code.
+    * status code.
     */
     @SerializedName("ResponseCode")
     @Expose
     private String ResponseCode;
 
     /**
-    * Response custom page ID.
+    * ID of the custom page in the response.
     */
     @SerializedName("ErrorPageId")
     @Expose
     private String ErrorPageId;
 
     /**
-     * Get Response custom status code. 
-     * @return ResponseCode Response custom status code.
+     * Get status code. 
+     * @return ResponseCode status code.
      */
     public String getResponseCode() {
         return this.ResponseCode;
     }
 
     /**
-     * Set Response custom status code.
-     * @param ResponseCode Response custom status code.
+     * Set status code.
+     * @param ResponseCode status code.
      */
     public void setResponseCode(String ResponseCode) {
         this.ResponseCode = ResponseCode;
     }
 
     /**
-     * Get Response custom page ID. 
-     * @return ErrorPageId Response custom page ID.
+     * Get ID of the custom page in the response. 
+     * @return ErrorPageId ID of the custom page in the response.
      */
     public String getErrorPageId() {
         return this.ErrorPageId;
     }
 
     /**
-     * Set Response custom page ID.
-     * @param ErrorPageId Response custom page ID.
+     * Set ID of the custom page in the response.
+     * @param ErrorPageId ID of the custom page in the response.
      */
     public void setErrorPageId(String ErrorPageId) {
         this.ErrorPageId = ErrorPageId;

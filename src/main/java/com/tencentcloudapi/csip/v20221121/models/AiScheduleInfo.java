@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class AiScheduleInfo extends AbstractModel {
 
     /**
-    * <p>ID of the AI scheduled task.</p>
+    * <p>AI scheduled task ID.</p>
     */
     @SerializedName("ScheduleId")
     @Expose
@@ -45,7 +45,7 @@ public class AiScheduleInfo extends AbstractModel {
     private String Prompts;
 
     /**
-    * <p>Status. Parameter Value: 1 (enabled), 2 (disabled).</p>
+    * <p>Status. Value: 1 (enabled), 2 (disabled).</p>
     */
     @SerializedName("Status")
     @Expose
@@ -108,16 +108,16 @@ public class AiScheduleInfo extends AbstractModel {
     private AIScheduleUserIdentity Identity;
 
     /**
-     * Get <p>ID of the AI scheduled task.</p> 
-     * @return ScheduleId <p>ID of the AI scheduled task.</p>
+     * Get <p>AI scheduled task ID.</p> 
+     * @return ScheduleId <p>AI scheduled task ID.</p>
      */
     public String getScheduleId() {
         return this.ScheduleId;
     }
 
     /**
-     * Set <p>ID of the AI scheduled task.</p>
-     * @param ScheduleId <p>ID of the AI scheduled task.</p>
+     * Set <p>AI scheduled task ID.</p>
+     * @param ScheduleId <p>AI scheduled task ID.</p>
      */
     public void setScheduleId(String ScheduleId) {
         this.ScheduleId = ScheduleId;
@@ -156,16 +156,16 @@ public class AiScheduleInfo extends AbstractModel {
     }
 
     /**
-     * Get <p>Status. Parameter Value: 1 (enabled), 2 (disabled).</p> 
-     * @return Status <p>Status. Parameter Value: 1 (enabled), 2 (disabled).</p>
+     * Get <p>Status. Value: 1 (enabled), 2 (disabled).</p> 
+     * @return Status <p>Status. Value: 1 (enabled), 2 (disabled).</p>
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set <p>Status. Parameter Value: 1 (enabled), 2 (disabled).</p>
-     * @param Status <p>Status. Parameter Value: 1 (enabled), 2 (disabled).</p>
+     * Set <p>Status. Value: 1 (enabled), 2 (disabled).</p>
+     * @param Status <p>Status. Value: 1 (enabled), 2 (disabled).</p>
      */
     public void setStatus(Long Status) {
         this.Status = Status;

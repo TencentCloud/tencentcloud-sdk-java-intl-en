@@ -1,0 +1,125 @@
+/*
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+package com.tencentcloudapi.adp.v20260520.models;
+
+import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.annotations.Expose;
+import java.util.HashMap;
+
+public class SimilarQuestion extends AbstractModel {
+
+    /**
+    * <p>Similar question content</p>
+    */
+    @SerializedName("Content")
+    @Expose
+    private String Content;
+
+    /**
+    * <p>Whether AI-generated</p>
+    */
+    @SerializedName("IsAiGenerated")
+    @Expose
+    private Boolean IsAiGenerated;
+
+    /**
+    * <p>Similar question ID</p>
+    */
+    @SerializedName("SimilarQuestionId")
+    @Expose
+    private String SimilarQuestionId;
+
+    /**
+     * Get <p>Similar question content</p> 
+     * @return Content <p>Similar question content</p>
+     */
+    public String getContent() {
+        return this.Content;
+    }
+
+    /**
+     * Set <p>Similar question content</p>
+     * @param Content <p>Similar question content</p>
+     */
+    public void setContent(String Content) {
+        this.Content = Content;
+    }
+
+    /**
+     * Get <p>Whether AI-generated</p> 
+     * @return IsAiGenerated <p>Whether AI-generated</p>
+     */
+    public Boolean getIsAiGenerated() {
+        return this.IsAiGenerated;
+    }
+
+    /**
+     * Set <p>Whether AI-generated</p>
+     * @param IsAiGenerated <p>Whether AI-generated</p>
+     */
+    public void setIsAiGenerated(Boolean IsAiGenerated) {
+        this.IsAiGenerated = IsAiGenerated;
+    }
+
+    /**
+     * Get <p>Similar question ID</p> 
+     * @return SimilarQuestionId <p>Similar question ID</p>
+     */
+    public String getSimilarQuestionId() {
+        return this.SimilarQuestionId;
+    }
+
+    /**
+     * Set <p>Similar question ID</p>
+     * @param SimilarQuestionId <p>Similar question ID</p>
+     */
+    public void setSimilarQuestionId(String SimilarQuestionId) {
+        this.SimilarQuestionId = SimilarQuestionId;
+    }
+
+    public SimilarQuestion() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SimilarQuestion(SimilarQuestion source) {
+        if (source.Content != null) {
+            this.Content = new String(source.Content);
+        }
+        if (source.IsAiGenerated != null) {
+            this.IsAiGenerated = new Boolean(source.IsAiGenerated);
+        }
+        if (source.SimilarQuestionId != null) {
+            this.SimilarQuestionId = new String(source.SimilarQuestionId);
+        }
+    }
+
+
+    /**
+     * Internal implementation, normal users should not use it.
+     */
+    public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "Content", this.Content);
+        this.setParamSimple(map, prefix + "IsAiGenerated", this.IsAiGenerated);
+        this.setParamSimple(map, prefix + "SimilarQuestionId", this.SimilarQuestionId);
+
+    }
+}
+

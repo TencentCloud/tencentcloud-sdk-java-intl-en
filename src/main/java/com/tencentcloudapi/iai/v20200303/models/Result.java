@@ -24,69 +24,79 @@ import java.util.HashMap;
 public class Result extends AbstractModel {
 
     /**
-    * Most matching candidate recognized
+    * The most similar candidate identified.
     */
     @SerializedName("Candidates")
     @Expose
     private Candidate [] Candidates;
 
     /**
-    * Position of detected face frame
+    * Face bounding box position detected.
     */
     @SerializedName("FaceRect")
     @Expose
     private FaceRect FaceRect;
 
     /**
-    * The status return code for the face image detected. Valid values: `0` - normal; `-1601` - the image does not meet the quality requirements, in which case `Candidate` is empty; `-1604` - the face similarity is not higher than `FaceMatchThreshold`.
+    * Status return code of the detected face image.
+- 0 indicates normal. 
+-1601 indicates the image quality control requirement is not met. At this point, the Candidate content is empty.
     */
     @SerializedName("RetCode")
     @Expose
     private Long RetCode;
 
     /**
-     * Get Most matching candidate recognized 
-     * @return Candidates Most matching candidate recognized
+     * Get The most similar candidate identified. 
+     * @return Candidates The most similar candidate identified.
      */
     public Candidate [] getCandidates() {
         return this.Candidates;
     }
 
     /**
-     * Set Most matching candidate recognized
-     * @param Candidates Most matching candidate recognized
+     * Set The most similar candidate identified.
+     * @param Candidates The most similar candidate identified.
      */
     public void setCandidates(Candidate [] Candidates) {
         this.Candidates = Candidates;
     }
 
     /**
-     * Get Position of detected face frame 
-     * @return FaceRect Position of detected face frame
+     * Get Face bounding box position detected. 
+     * @return FaceRect Face bounding box position detected.
      */
     public FaceRect getFaceRect() {
         return this.FaceRect;
     }
 
     /**
-     * Set Position of detected face frame
-     * @param FaceRect Position of detected face frame
+     * Set Face bounding box position detected.
+     * @param FaceRect Face bounding box position detected.
      */
     public void setFaceRect(FaceRect FaceRect) {
         this.FaceRect = FaceRect;
     }
 
     /**
-     * Get The status return code for the face image detected. Valid values: `0` - normal; `-1601` - the image does not meet the quality requirements, in which case `Candidate` is empty; `-1604` - the face similarity is not higher than `FaceMatchThreshold`. 
-     * @return RetCode The status return code for the face image detected. Valid values: `0` - normal; `-1601` - the image does not meet the quality requirements, in which case `Candidate` is empty; `-1604` - the face similarity is not higher than `FaceMatchThreshold`.
+     * Get Status return code of the detected face image.
+- 0 indicates normal. 
+-1601 indicates the image quality control requirement is not met. At this point, the Candidate content is empty. 
+     * @return RetCode Status return code of the detected face image.
+- 0 indicates normal. 
+-1601 indicates the image quality control requirement is not met. At this point, the Candidate content is empty.
      */
     public Long getRetCode() {
         return this.RetCode;
     }
 
     /**
-     * Set The status return code for the face image detected. Valid values: `0` - normal; `-1601` - the image does not meet the quality requirements, in which case `Candidate` is empty; `-1604` - the face similarity is not higher than `FaceMatchThreshold`.
-     * @param RetCode The status return code for the face image detected. Valid values: `0` - normal; `-1601` - the image does not meet the quality requirements, in which case `Candidate` is empty; `-1604` - the face similarity is not higher than `FaceMatchThreshold`.
+     * Set Status return code of the detected face image.
+- 0 indicates normal. 
+-1601 indicates the image quality control requirement is not met. At this point, the Candidate content is empty.
+     * @param RetCode Status return code of the detected face image.
+- 0 indicates normal. 
+-1601 indicates the image quality control requirement is not met. At this point, the Candidate content is empty.
      */
     public void setRetCode(Long RetCode) {
         this.RetCode = RetCode;

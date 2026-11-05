@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class SlowAttackDefense extends AbstractModel {
 
     /**
-    * Whether slow attack protection is enabled. valid values: <li>on: enabled;</li> <li>off: disabled.</li>.
+    * Whether slow attack protection is enabled. Valid values: <li>on: enabled;</li><li>off: disabled.</li>
     */
     @SerializedName("Enabled")
     @Expose
     private String Enabled;
 
     /**
-    * Rule ID of slow attack protection, returned as an output parameter.
+    * Rule ID of slow attack protection, returned only as an output parameter.
     */
     @SerializedName("Id")
     @Expose
     private String Id;
 
     /**
-    * Slow attack protection handling method. required when Enabled is on. valid values for SecurityAction Name: <li>Monitor: observation;</li> <li>Deny: block;</li>.
+    * Handling method for slow attack protection. This field is required when Enabled is on. Supported values for SecurityAction Name: <li>Monitor: observe;</li><li>Deny: block;</li>
     */
     @SerializedName("Action")
     @Expose
     private SecurityAction Action;
 
     /**
-    * The specific configuration of the minimum body transfer rate threshold is required when Enabled is on.
+    * Specific configuration of the minimum body transfer rate threshold. Required when Enabled is on.
     */
     @SerializedName("MinimalRequestBodyTransferRate")
     @Expose
     private MinimalRequestBodyTransferRate MinimalRequestBodyTransferRate;
 
     /**
-    * Specifies the specific configuration of body transfer timeout duration. required when Enabled is on.
+    * Specific configuration of the body transfer timeout duration. Required if Enabled is on.
     */
     @SerializedName("RequestBodyTransferTimeout")
     @Expose
     private RequestBodyTransferTimeout RequestBodyTransferTimeout;
 
     /**
-     * Get Whether slow attack protection is enabled. valid values: <li>on: enabled;</li> <li>off: disabled.</li>. 
-     * @return Enabled Whether slow attack protection is enabled. valid values: <li>on: enabled;</li> <li>off: disabled.</li>.
+     * Get Whether slow attack protection is enabled. Valid values: <li>on: enabled;</li><li>off: disabled.</li> 
+     * @return Enabled Whether slow attack protection is enabled. Valid values: <li>on: enabled;</li><li>off: disabled.</li>
      */
     public String getEnabled() {
         return this.Enabled;
     }
 
     /**
-     * Set Whether slow attack protection is enabled. valid values: <li>on: enabled;</li> <li>off: disabled.</li>.
-     * @param Enabled Whether slow attack protection is enabled. valid values: <li>on: enabled;</li> <li>off: disabled.</li>.
+     * Set Whether slow attack protection is enabled. Valid values: <li>on: enabled;</li><li>off: disabled.</li>
+     * @param Enabled Whether slow attack protection is enabled. Valid values: <li>on: enabled;</li><li>off: disabled.</li>
      */
     public void setEnabled(String Enabled) {
         this.Enabled = Enabled;
     }
 
     /**
-     * Get Rule ID of slow attack protection, returned as an output parameter. 
-     * @return Id Rule ID of slow attack protection, returned as an output parameter.
+     * Get Rule ID of slow attack protection, returned only as an output parameter. 
+     * @return Id Rule ID of slow attack protection, returned only as an output parameter.
      */
     public String getId() {
         return this.Id;
     }
 
     /**
-     * Set Rule ID of slow attack protection, returned as an output parameter.
-     * @param Id Rule ID of slow attack protection, returned as an output parameter.
+     * Set Rule ID of slow attack protection, returned only as an output parameter.
+     * @param Id Rule ID of slow attack protection, returned only as an output parameter.
      */
     public void setId(String Id) {
         this.Id = Id;
     }
 
     /**
-     * Get Slow attack protection handling method. required when Enabled is on. valid values for SecurityAction Name: <li>Monitor: observation;</li> <li>Deny: block;</li>. 
-     * @return Action Slow attack protection handling method. required when Enabled is on. valid values for SecurityAction Name: <li>Monitor: observation;</li> <li>Deny: block;</li>.
+     * Get Handling method for slow attack protection. This field is required when Enabled is on. Supported values for SecurityAction Name: <li>Monitor: observe;</li><li>Deny: block;</li> 
+     * @return Action Handling method for slow attack protection. This field is required when Enabled is on. Supported values for SecurityAction Name: <li>Monitor: observe;</li><li>Deny: block;</li>
      */
     public SecurityAction getAction() {
         return this.Action;
     }
 
     /**
-     * Set Slow attack protection handling method. required when Enabled is on. valid values for SecurityAction Name: <li>Monitor: observation;</li> <li>Deny: block;</li>.
-     * @param Action Slow attack protection handling method. required when Enabled is on. valid values for SecurityAction Name: <li>Monitor: observation;</li> <li>Deny: block;</li>.
+     * Set Handling method for slow attack protection. This field is required when Enabled is on. Supported values for SecurityAction Name: <li>Monitor: observe;</li><li>Deny: block;</li>
+     * @param Action Handling method for slow attack protection. This field is required when Enabled is on. Supported values for SecurityAction Name: <li>Monitor: observe;</li><li>Deny: block;</li>
      */
     public void setAction(SecurityAction Action) {
         this.Action = Action;
     }
 
     /**
-     * Get The specific configuration of the minimum body transfer rate threshold is required when Enabled is on. 
-     * @return MinimalRequestBodyTransferRate The specific configuration of the minimum body transfer rate threshold is required when Enabled is on.
+     * Get Specific configuration of the minimum body transfer rate threshold. Required when Enabled is on. 
+     * @return MinimalRequestBodyTransferRate Specific configuration of the minimum body transfer rate threshold. Required when Enabled is on.
      */
     public MinimalRequestBodyTransferRate getMinimalRequestBodyTransferRate() {
         return this.MinimalRequestBodyTransferRate;
     }
 
     /**
-     * Set The specific configuration of the minimum body transfer rate threshold is required when Enabled is on.
-     * @param MinimalRequestBodyTransferRate The specific configuration of the minimum body transfer rate threshold is required when Enabled is on.
+     * Set Specific configuration of the minimum body transfer rate threshold. Required when Enabled is on.
+     * @param MinimalRequestBodyTransferRate Specific configuration of the minimum body transfer rate threshold. Required when Enabled is on.
      */
     public void setMinimalRequestBodyTransferRate(MinimalRequestBodyTransferRate MinimalRequestBodyTransferRate) {
         this.MinimalRequestBodyTransferRate = MinimalRequestBodyTransferRate;
     }
 
     /**
-     * Get Specifies the specific configuration of body transfer timeout duration. required when Enabled is on. 
-     * @return RequestBodyTransferTimeout Specifies the specific configuration of body transfer timeout duration. required when Enabled is on.
+     * Get Specific configuration of the body transfer timeout duration. Required if Enabled is on. 
+     * @return RequestBodyTransferTimeout Specific configuration of the body transfer timeout duration. Required if Enabled is on.
      */
     public RequestBodyTransferTimeout getRequestBodyTransferTimeout() {
         return this.RequestBodyTransferTimeout;
     }
 
     /**
-     * Set Specifies the specific configuration of body transfer timeout duration. required when Enabled is on.
-     * @param RequestBodyTransferTimeout Specifies the specific configuration of body transfer timeout duration. required when Enabled is on.
+     * Set Specific configuration of the body transfer timeout duration. Required if Enabled is on.
+     * @param RequestBodyTransferTimeout Specific configuration of the body transfer timeout duration. Required if Enabled is on.
      */
     public void setRequestBodyTransferTimeout(RequestBodyTransferTimeout RequestBodyTransferTimeout) {
         this.RequestBodyTransferTimeout = RequestBodyTransferTimeout;

@@ -24,84 +24,84 @@ import java.util.HashMap;
 public class BotIntelligence extends AbstractModel {
 
     /**
-    * Specifies the switch for Bot intelligent analysis configuration. valid values:.
+    * Specific configuration switch for Bot intelligent analysis. Valid values:
 
-on: enabled.
-off: disabled.
+on: enable;
+off: Disable.
     */
     @SerializedName("Enabled")
     @Expose
     private String Enabled;
 
     /**
-    * Rule ID of Bot intelligent analysis, returned as an output parameter.
+    * Rule ID of Bot intelligent analysis, returned only as an output parameter.
     */
     @SerializedName("Id")
     @Expose
     private String Id;
 
     /**
-    * Based on client and request features, divides request sources into human requests, legitimate Bot requests, suspected Bot requests, and high-risk Bot requests, and provides request handling options.
+    * Based on the client and request features, divide the request source into human requests, valid Bot requests, suspected Bot requests, and high-risk Bot requests, and provide request handling options.
     */
     @SerializedName("BotRatings")
     @Expose
     private BotRatings BotRatings;
 
     /**
-     * Get Specifies the switch for Bot intelligent analysis configuration. valid values:.
+     * Get Specific configuration switch for Bot intelligent analysis. Valid values:
 
-on: enabled.
-off: disabled. 
-     * @return Enabled Specifies the switch for Bot intelligent analysis configuration. valid values:.
+on: enable;
+off: Disable. 
+     * @return Enabled Specific configuration switch for Bot intelligent analysis. Valid values:
 
-on: enabled.
-off: disabled.
+on: enable;
+off: Disable.
      */
     public String getEnabled() {
         return this.Enabled;
     }
 
     /**
-     * Set Specifies the switch for Bot intelligent analysis configuration. valid values:.
+     * Set Specific configuration switch for Bot intelligent analysis. Valid values:
 
-on: enabled.
-off: disabled.
-     * @param Enabled Specifies the switch for Bot intelligent analysis configuration. valid values:.
+on: enable;
+off: Disable.
+     * @param Enabled Specific configuration switch for Bot intelligent analysis. Valid values:
 
-on: enabled.
-off: disabled.
+on: enable;
+off: Disable.
      */
     public void setEnabled(String Enabled) {
         this.Enabled = Enabled;
     }
 
     /**
-     * Get Rule ID of Bot intelligent analysis, returned as an output parameter. 
-     * @return Id Rule ID of Bot intelligent analysis, returned as an output parameter.
+     * Get Rule ID of Bot intelligent analysis, returned only as an output parameter. 
+     * @return Id Rule ID of Bot intelligent analysis, returned only as an output parameter.
      */
     public String getId() {
         return this.Id;
     }
 
     /**
-     * Set Rule ID of Bot intelligent analysis, returned as an output parameter.
-     * @param Id Rule ID of Bot intelligent analysis, returned as an output parameter.
+     * Set Rule ID of Bot intelligent analysis, returned only as an output parameter.
+     * @param Id Rule ID of Bot intelligent analysis, returned only as an output parameter.
      */
     public void setId(String Id) {
         this.Id = Id;
     }
 
     /**
-     * Get Based on client and request features, divides request sources into human requests, legitimate Bot requests, suspected Bot requests, and high-risk Bot requests, and provides request handling options. 
-     * @return BotRatings Based on client and request features, divides request sources into human requests, legitimate Bot requests, suspected Bot requests, and high-risk Bot requests, and provides request handling options.
+     * Get Based on the client and request features, divide the request source into human requests, valid Bot requests, suspected Bot requests, and high-risk Bot requests, and provide request handling options. 
+     * @return BotRatings Based on the client and request features, divide the request source into human requests, valid Bot requests, suspected Bot requests, and high-risk Bot requests, and provide request handling options.
      */
     public BotRatings getBotRatings() {
         return this.BotRatings;
     }
 
     /**
-     * Set Based on client and request features, divides request sources into human requests, legitimate Bot requests, suspected Bot requests, and high-risk Bot requests, and provides request handling options.
-     * @param BotRatings Based on client and request features, divides request sources into human requests, legitimate Bot requests, suspected Bot requests, and high-risk Bot requests, and provides request handling options.
+     * Set Based on the client and request features, divide the request source into human requests, valid Bot requests, suspected Bot requests, and high-risk Bot requests, and provide request handling options.
+     * @param BotRatings Based on the client and request features, divide the request source into human requests, valid Bot requests, suspected Bot requests, and high-risk Bot requests, and provide request handling options.
      */
     public void setBotRatings(BotRatings BotRatings) {
         this.BotRatings = BotRatings;

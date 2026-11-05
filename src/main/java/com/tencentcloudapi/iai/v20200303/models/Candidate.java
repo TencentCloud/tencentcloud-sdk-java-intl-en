@@ -24,183 +24,168 @@ import java.util.HashMap;
 public class Candidate extends AbstractModel {
 
     /**
-    * Person ID
+    * Person ID.
     */
     @SerializedName("PersonId")
     @Expose
     private String PersonId;
 
     /**
-    * Face ID, which is valid only when returned by the `SearchFaces` or `SearchFacesReturnsByGroup` API. User search APIs use facial feature fusion to search for users, for which this field is meaningless.
+    * Face ID.
+-Valid only in the API response of SearchFaces/SearchFacesReturnsByGroup.
+-Person search class interfaces use the fusion feature method for retrieval. This field is meaningless.
     */
     @SerializedName("FaceId")
     @Expose
     private String FaceId;
 
     /**
-    * Match score of candidate. 
-
-In a face base library containing 10,000 faces, the 1%, 0.1%, and 0.01% FARs correspond to scores of 70, 80, and 90, respectively;
-In a face base library containing 100,000 faces, the 1%, 0.1%, and 0.01% FARs correspond to scores of 80, 90, and 100, respectively;
-In a face base library containing 300,000 faces, the 1% and 0.1% FARs correspond to scores of 85 and 95, respectively.
-
-Generally, the score of 80 is suitable for most scenarios. We recommend choosing an appropriate score based on the actual situation, preferably no more than 90.
+    * Match score of the candidate. 
+-In a face base library of 10,000 faces, a false acceptance rate of 1% corresponds to a score of 70 points, 0.1% corresponds to 80 points, and 0.01% corresponds to 90 points.
+-For a face base library of 100,000, a false acceptance rate of 1% corresponds to a score of 80 points, 0.1% corresponds to 90 points, and 0.01% corresponds to 100 points.
+-With a face base library of 300,000, a false acceptance rate of 1% corresponds to a score of 85, and a false acceptance rate of 0.1% corresponds to a score of 95.
+-Generally, a score of around 80 applies to most scenarios. It is advisable not to exceed 90. You can choose a suitable score according to the actual situation.
     */
     @SerializedName("Score")
     @Expose
     private Float Score;
 
     /**
-    * Person name
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Person name.
     */
     @SerializedName("PersonName")
     @Expose
     private String PersonName;
 
     /**
-    * Person gender
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Gender of personnel.
     */
     @SerializedName("Gender")
     @Expose
     private Long Gender;
 
     /**
-    * List of groups containing this person and their description fields
-Note: this field may return null, indicating that no valid values can be obtained.
+    * List of person libraries containing this person and the content of the description field.
     */
     @SerializedName("PersonGroupInfos")
     @Expose
     private PersonGroupInfo [] PersonGroupInfos;
 
     /**
-     * Get Person ID 
-     * @return PersonId Person ID
+     * Get Person ID. 
+     * @return PersonId Person ID.
      */
     public String getPersonId() {
         return this.PersonId;
     }
 
     /**
-     * Set Person ID
-     * @param PersonId Person ID
+     * Set Person ID.
+     * @param PersonId Person ID.
      */
     public void setPersonId(String PersonId) {
         this.PersonId = PersonId;
     }
 
     /**
-     * Get Face ID, which is valid only when returned by the `SearchFaces` or `SearchFacesReturnsByGroup` API. User search APIs use facial feature fusion to search for users, for which this field is meaningless. 
-     * @return FaceId Face ID, which is valid only when returned by the `SearchFaces` or `SearchFacesReturnsByGroup` API. User search APIs use facial feature fusion to search for users, for which this field is meaningless.
+     * Get Face ID.
+-Valid only in the API response of SearchFaces/SearchFacesReturnsByGroup.
+-Person search class interfaces use the fusion feature method for retrieval. This field is meaningless. 
+     * @return FaceId Face ID.
+-Valid only in the API response of SearchFaces/SearchFacesReturnsByGroup.
+-Person search class interfaces use the fusion feature method for retrieval. This field is meaningless.
      */
     public String getFaceId() {
         return this.FaceId;
     }
 
     /**
-     * Set Face ID, which is valid only when returned by the `SearchFaces` or `SearchFacesReturnsByGroup` API. User search APIs use facial feature fusion to search for users, for which this field is meaningless.
-     * @param FaceId Face ID, which is valid only when returned by the `SearchFaces` or `SearchFacesReturnsByGroup` API. User search APIs use facial feature fusion to search for users, for which this field is meaningless.
+     * Set Face ID.
+-Valid only in the API response of SearchFaces/SearchFacesReturnsByGroup.
+-Person search class interfaces use the fusion feature method for retrieval. This field is meaningless.
+     * @param FaceId Face ID.
+-Valid only in the API response of SearchFaces/SearchFacesReturnsByGroup.
+-Person search class interfaces use the fusion feature method for retrieval. This field is meaningless.
      */
     public void setFaceId(String FaceId) {
         this.FaceId = FaceId;
     }
 
     /**
-     * Get Match score of candidate. 
-
-In a face base library containing 10,000 faces, the 1%, 0.1%, and 0.01% FARs correspond to scores of 70, 80, and 90, respectively;
-In a face base library containing 100,000 faces, the 1%, 0.1%, and 0.01% FARs correspond to scores of 80, 90, and 100, respectively;
-In a face base library containing 300,000 faces, the 1% and 0.1% FARs correspond to scores of 85 and 95, respectively.
-
-Generally, the score of 80 is suitable for most scenarios. We recommend choosing an appropriate score based on the actual situation, preferably no more than 90. 
-     * @return Score Match score of candidate. 
-
-In a face base library containing 10,000 faces, the 1%, 0.1%, and 0.01% FARs correspond to scores of 70, 80, and 90, respectively;
-In a face base library containing 100,000 faces, the 1%, 0.1%, and 0.01% FARs correspond to scores of 80, 90, and 100, respectively;
-In a face base library containing 300,000 faces, the 1% and 0.1% FARs correspond to scores of 85 and 95, respectively.
-
-Generally, the score of 80 is suitable for most scenarios. We recommend choosing an appropriate score based on the actual situation, preferably no more than 90.
+     * Get Match score of the candidate. 
+-In a face base library of 10,000 faces, a false acceptance rate of 1% corresponds to a score of 70 points, 0.1% corresponds to 80 points, and 0.01% corresponds to 90 points.
+-For a face base library of 100,000, a false acceptance rate of 1% corresponds to a score of 80 points, 0.1% corresponds to 90 points, and 0.01% corresponds to 100 points.
+-With a face base library of 300,000, a false acceptance rate of 1% corresponds to a score of 85, and a false acceptance rate of 0.1% corresponds to a score of 95.
+-Generally, a score of around 80 applies to most scenarios. It is advisable not to exceed 90. You can choose a suitable score according to the actual situation. 
+     * @return Score Match score of the candidate. 
+-In a face base library of 10,000 faces, a false acceptance rate of 1% corresponds to a score of 70 points, 0.1% corresponds to 80 points, and 0.01% corresponds to 90 points.
+-For a face base library of 100,000, a false acceptance rate of 1% corresponds to a score of 80 points, 0.1% corresponds to 90 points, and 0.01% corresponds to 100 points.
+-With a face base library of 300,000, a false acceptance rate of 1% corresponds to a score of 85, and a false acceptance rate of 0.1% corresponds to a score of 95.
+-Generally, a score of around 80 applies to most scenarios. It is advisable not to exceed 90. You can choose a suitable score according to the actual situation.
      */
     public Float getScore() {
         return this.Score;
     }
 
     /**
-     * Set Match score of candidate. 
-
-In a face base library containing 10,000 faces, the 1%, 0.1%, and 0.01% FARs correspond to scores of 70, 80, and 90, respectively;
-In a face base library containing 100,000 faces, the 1%, 0.1%, and 0.01% FARs correspond to scores of 80, 90, and 100, respectively;
-In a face base library containing 300,000 faces, the 1% and 0.1% FARs correspond to scores of 85 and 95, respectively.
-
-Generally, the score of 80 is suitable for most scenarios. We recommend choosing an appropriate score based on the actual situation, preferably no more than 90.
-     * @param Score Match score of candidate. 
-
-In a face base library containing 10,000 faces, the 1%, 0.1%, and 0.01% FARs correspond to scores of 70, 80, and 90, respectively;
-In a face base library containing 100,000 faces, the 1%, 0.1%, and 0.01% FARs correspond to scores of 80, 90, and 100, respectively;
-In a face base library containing 300,000 faces, the 1% and 0.1% FARs correspond to scores of 85 and 95, respectively.
-
-Generally, the score of 80 is suitable for most scenarios. We recommend choosing an appropriate score based on the actual situation, preferably no more than 90.
+     * Set Match score of the candidate. 
+-In a face base library of 10,000 faces, a false acceptance rate of 1% corresponds to a score of 70 points, 0.1% corresponds to 80 points, and 0.01% corresponds to 90 points.
+-For a face base library of 100,000, a false acceptance rate of 1% corresponds to a score of 80 points, 0.1% corresponds to 90 points, and 0.01% corresponds to 100 points.
+-With a face base library of 300,000, a false acceptance rate of 1% corresponds to a score of 85, and a false acceptance rate of 0.1% corresponds to a score of 95.
+-Generally, a score of around 80 applies to most scenarios. It is advisable not to exceed 90. You can choose a suitable score according to the actual situation.
+     * @param Score Match score of the candidate. 
+-In a face base library of 10,000 faces, a false acceptance rate of 1% corresponds to a score of 70 points, 0.1% corresponds to 80 points, and 0.01% corresponds to 90 points.
+-For a face base library of 100,000, a false acceptance rate of 1% corresponds to a score of 80 points, 0.1% corresponds to 90 points, and 0.01% corresponds to 100 points.
+-With a face base library of 300,000, a false acceptance rate of 1% corresponds to a score of 85, and a false acceptance rate of 0.1% corresponds to a score of 95.
+-Generally, a score of around 80 applies to most scenarios. It is advisable not to exceed 90. You can choose a suitable score according to the actual situation.
      */
     public void setScore(Float Score) {
         this.Score = Score;
     }
 
     /**
-     * Get Person name
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return PersonName Person name
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Person name. 
+     * @return PersonName Person name.
      */
     public String getPersonName() {
         return this.PersonName;
     }
 
     /**
-     * Set Person name
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param PersonName Person name
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Person name.
+     * @param PersonName Person name.
      */
     public void setPersonName(String PersonName) {
         this.PersonName = PersonName;
     }
 
     /**
-     * Get Person gender
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Gender Person gender
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Gender of personnel. 
+     * @return Gender Gender of personnel.
      */
     public Long getGender() {
         return this.Gender;
     }
 
     /**
-     * Set Person gender
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Gender Person gender
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Gender of personnel.
+     * @param Gender Gender of personnel.
      */
     public void setGender(Long Gender) {
         this.Gender = Gender;
     }
 
     /**
-     * Get List of groups containing this person and their description fields
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return PersonGroupInfos List of groups containing this person and their description fields
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get List of person libraries containing this person and the content of the description field. 
+     * @return PersonGroupInfos List of person libraries containing this person and the content of the description field.
      */
     public PersonGroupInfo [] getPersonGroupInfos() {
         return this.PersonGroupInfos;
     }
 
     /**
-     * Set List of groups containing this person and their description fields
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param PersonGroupInfos List of groups containing this person and their description fields
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set List of person libraries containing this person and the content of the description field.
+     * @param PersonGroupInfos List of person libraries containing this person and the content of the description field.
      */
     public void setPersonGroupInfos(PersonGroupInfo [] PersonGroupInfos) {
         this.PersonGroupInfos = PersonGroupInfos;

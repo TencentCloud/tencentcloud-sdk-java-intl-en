@@ -1,0 +1,182 @@
+/*
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+package com.tencentcloudapi.adp.v20260520.models;
+
+import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.annotations.Expose;
+import java.util.HashMap;
+
+public class DescribeConsumptionDetailListRequest extends AbstractModel {
+
+    /**
+    * <p>Query time range (Unix seconds)</p>
+    */
+    @SerializedName("TimeRange")
+    @Expose
+    private TimeRange TimeRange;
+
+    /**
+    * <p>View scope: business view / space view</p>
+    */
+    @SerializedName("ViewScope")
+    @Expose
+    private ViewScope ViewScope;
+
+    /**
+    * <p>Extended filtering. Filter combination rule: multiple conditions use AND, values within the same condition use OR. Supported Name: metric_source_type (metric_source_type_* OR integer), source_ids (multi-option source ID), resource_ID/source_ID (select one source ID, this parameter is valid only when source_ids is not passed), space_ID, user_ID</p>
+    */
+    @SerializedName("FilterList")
+    @Expose
+    private Filter [] FilterList;
+
+    /**
+    * <p>Page number, starting from 0</p>
+    */
+    @SerializedName("PageNumber")
+    @Expose
+    private Long PageNumber;
+
+    /**
+    * <p>Number of items per page. Maximum: 100.</p>
+    */
+    @SerializedName("PageSize")
+    @Expose
+    private Long PageSize;
+
+    /**
+     * Get <p>Query time range (Unix seconds)</p> 
+     * @return TimeRange <p>Query time range (Unix seconds)</p>
+     */
+    public TimeRange getTimeRange() {
+        return this.TimeRange;
+    }
+
+    /**
+     * Set <p>Query time range (Unix seconds)</p>
+     * @param TimeRange <p>Query time range (Unix seconds)</p>
+     */
+    public void setTimeRange(TimeRange TimeRange) {
+        this.TimeRange = TimeRange;
+    }
+
+    /**
+     * Get <p>View scope: business view / space view</p> 
+     * @return ViewScope <p>View scope: business view / space view</p>
+     */
+    public ViewScope getViewScope() {
+        return this.ViewScope;
+    }
+
+    /**
+     * Set <p>View scope: business view / space view</p>
+     * @param ViewScope <p>View scope: business view / space view</p>
+     */
+    public void setViewScope(ViewScope ViewScope) {
+        this.ViewScope = ViewScope;
+    }
+
+    /**
+     * Get <p>Extended filtering. Filter combination rule: multiple conditions use AND, values within the same condition use OR. Supported Name: metric_source_type (metric_source_type_* OR integer), source_ids (multi-option source ID), resource_ID/source_ID (select one source ID, this parameter is valid only when source_ids is not passed), space_ID, user_ID</p> 
+     * @return FilterList <p>Extended filtering. Filter combination rule: multiple conditions use AND, values within the same condition use OR. Supported Name: metric_source_type (metric_source_type_* OR integer), source_ids (multi-option source ID), resource_ID/source_ID (select one source ID, this parameter is valid only when source_ids is not passed), space_ID, user_ID</p>
+     */
+    public Filter [] getFilterList() {
+        return this.FilterList;
+    }
+
+    /**
+     * Set <p>Extended filtering. Filter combination rule: multiple conditions use AND, values within the same condition use OR. Supported Name: metric_source_type (metric_source_type_* OR integer), source_ids (multi-option source ID), resource_ID/source_ID (select one source ID, this parameter is valid only when source_ids is not passed), space_ID, user_ID</p>
+     * @param FilterList <p>Extended filtering. Filter combination rule: multiple conditions use AND, values within the same condition use OR. Supported Name: metric_source_type (metric_source_type_* OR integer), source_ids (multi-option source ID), resource_ID/source_ID (select one source ID, this parameter is valid only when source_ids is not passed), space_ID, user_ID</p>
+     */
+    public void setFilterList(Filter [] FilterList) {
+        this.FilterList = FilterList;
+    }
+
+    /**
+     * Get <p>Page number, starting from 0</p> 
+     * @return PageNumber <p>Page number, starting from 0</p>
+     */
+    public Long getPageNumber() {
+        return this.PageNumber;
+    }
+
+    /**
+     * Set <p>Page number, starting from 0</p>
+     * @param PageNumber <p>Page number, starting from 0</p>
+     */
+    public void setPageNumber(Long PageNumber) {
+        this.PageNumber = PageNumber;
+    }
+
+    /**
+     * Get <p>Number of items per page. Maximum: 100.</p> 
+     * @return PageSize <p>Number of items per page. Maximum: 100.</p>
+     */
+    public Long getPageSize() {
+        return this.PageSize;
+    }
+
+    /**
+     * Set <p>Number of items per page. Maximum: 100.</p>
+     * @param PageSize <p>Number of items per page. Maximum: 100.</p>
+     */
+    public void setPageSize(Long PageSize) {
+        this.PageSize = PageSize;
+    }
+
+    public DescribeConsumptionDetailListRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeConsumptionDetailListRequest(DescribeConsumptionDetailListRequest source) {
+        if (source.TimeRange != null) {
+            this.TimeRange = new TimeRange(source.TimeRange);
+        }
+        if (source.ViewScope != null) {
+            this.ViewScope = new ViewScope(source.ViewScope);
+        }
+        if (source.FilterList != null) {
+            this.FilterList = new Filter[source.FilterList.length];
+            for (int i = 0; i < source.FilterList.length; i++) {
+                this.FilterList[i] = new Filter(source.FilterList[i]);
+            }
+        }
+        if (source.PageNumber != null) {
+            this.PageNumber = new Long(source.PageNumber);
+        }
+        if (source.PageSize != null) {
+            this.PageSize = new Long(source.PageSize);
+        }
+    }
+
+
+    /**
+     * Internal implementation, normal users should not use it.
+     */
+    public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamObj(map, prefix + "TimeRange.", this.TimeRange);
+        this.setParamObj(map, prefix + "ViewScope.", this.ViewScope);
+        this.setParamArrayObj(map, prefix + "FilterList.", this.FilterList);
+        this.setParamSimple(map, prefix + "PageNumber", this.PageNumber);
+        this.setParamSimple(map, prefix + "PageSize", this.PageSize);
+
+    }
+}
+

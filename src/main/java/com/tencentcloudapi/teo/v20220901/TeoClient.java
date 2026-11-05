@@ -1486,7 +1486,7 @@ Abbreviation description:
     }
 
     /**
-     *This API is used to query keys for integrating multi-channel security acceleration gateways. Customers access multi-channel security acceleration gateways based on key signature.
+     *This API is used to query the key for integrating a multi-channel security acceleration gateway. Customers sign with the integration key to access the multi-channel security acceleration gateway.
      * @param req DescribeMultiPathGatewaySecretKeyRequest
      * @return DescribeMultiPathGatewaySecretKeyResponse
      * @throws TencentCloudSDKException

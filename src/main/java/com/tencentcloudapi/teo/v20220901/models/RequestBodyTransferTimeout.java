@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class RequestBodyTransferTimeout extends AbstractModel {
 
     /**
-    * Body transfer timeout duration. valid values: 5-120. measurement unit: seconds (s) only.
+    * Body transfer timeout duration. Value range: 5–120. Unit: seconds (s) only.
     */
     @SerializedName("IdleTimeout")
     @Expose
     private String IdleTimeout;
 
     /**
-    * Whether body transfer timeout is enabled. valid values: <li>`on`: enable</li> <li>`off`: disable</li>.
+    * Whether body transfer timeout duration is enabled. Valid values: <li>on: enabled;</li><li>off: disabled.</li>
     */
     @SerializedName("Enabled")
     @Expose
     private String Enabled;
 
     /**
-     * Get Body transfer timeout duration. valid values: 5-120. measurement unit: seconds (s) only. 
-     * @return IdleTimeout Body transfer timeout duration. valid values: 5-120. measurement unit: seconds (s) only.
+     * Get Body transfer timeout duration. Value range: 5–120. Unit: seconds (s) only. 
+     * @return IdleTimeout Body transfer timeout duration. Value range: 5–120. Unit: seconds (s) only.
      */
     public String getIdleTimeout() {
         return this.IdleTimeout;
     }
 
     /**
-     * Set Body transfer timeout duration. valid values: 5-120. measurement unit: seconds (s) only.
-     * @param IdleTimeout Body transfer timeout duration. valid values: 5-120. measurement unit: seconds (s) only.
+     * Set Body transfer timeout duration. Value range: 5–120. Unit: seconds (s) only.
+     * @param IdleTimeout Body transfer timeout duration. Value range: 5–120. Unit: seconds (s) only.
      */
     public void setIdleTimeout(String IdleTimeout) {
         this.IdleTimeout = IdleTimeout;
     }
 
     /**
-     * Get Whether body transfer timeout is enabled. valid values: <li>`on`: enable</li> <li>`off`: disable</li>. 
-     * @return Enabled Whether body transfer timeout is enabled. valid values: <li>`on`: enable</li> <li>`off`: disable</li>.
+     * Get Whether body transfer timeout duration is enabled. Valid values: <li>on: enabled;</li><li>off: disabled.</li> 
+     * @return Enabled Whether body transfer timeout duration is enabled. Valid values: <li>on: enabled;</li><li>off: disabled.</li>
      */
     public String getEnabled() {
         return this.Enabled;
     }
 
     /**
-     * Set Whether body transfer timeout is enabled. valid values: <li>`on`: enable</li> <li>`off`: disable</li>.
-     * @param Enabled Whether body transfer timeout is enabled. valid values: <li>`on`: enable</li> <li>`off`: disable</li>.
+     * Set Whether body transfer timeout duration is enabled. Valid values: <li>on: enabled;</li><li>off: disabled.</li>
+     * @param Enabled Whether body transfer timeout duration is enabled. Valid values: <li>on: enabled;</li><li>off: disabled.</li>
      */
     public void setEnabled(String Enabled) {
         this.Enabled = Enabled;

@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class ClientFiltering extends AbstractModel {
 
     /**
-    * Whether intelligent client filtering is enabled. valid values: <li>on: enable;</li> <li>off: disable.</li>.
+    * Whether intelligent client filtering is enabled. Valid values: <li>on: Enable;</li><li>off: Disable.</li>
     */
     @SerializedName("Enabled")
     @Expose
     private String Enabled;
 
     /**
-    * Rule ID of intelligent client filtering, returned as an output parameter.
+    * Rule ID of intelligent client filtering. Output only.
     */
     @SerializedName("Id")
     @Expose
     private String Id;
 
     /**
-    * The handling method of intelligent client filtering. when Enabled is on, this field is required. the Name parameter of SecurityAction supports: <li>Monitor: observation;</li> <li>Deny: block;</li> <li>Challenge: Challenge, where ChallengeActionParameters.Name only supports JSChallenge.</li>.
+    * Handling method for intelligent client filtering. This field is required when Enabled is on. Supported values for SecurityAction Name: <li>Monitor: observe;</li><li>Deny: block;</li><li>Challenge: challenge, where ChallengeActionParameters.Name only supports JSChallenge.</li>
     */
     @SerializedName("Action")
     @Expose
     private SecurityAction Action;
 
     /**
-     * Get Whether intelligent client filtering is enabled. valid values: <li>on: enable;</li> <li>off: disable.</li>. 
-     * @return Enabled Whether intelligent client filtering is enabled. valid values: <li>on: enable;</li> <li>off: disable.</li>.
+     * Get Whether intelligent client filtering is enabled. Valid values: <li>on: Enable;</li><li>off: Disable.</li> 
+     * @return Enabled Whether intelligent client filtering is enabled. Valid values: <li>on: Enable;</li><li>off: Disable.</li>
      */
     public String getEnabled() {
         return this.Enabled;
     }
 
     /**
-     * Set Whether intelligent client filtering is enabled. valid values: <li>on: enable;</li> <li>off: disable.</li>.
-     * @param Enabled Whether intelligent client filtering is enabled. valid values: <li>on: enable;</li> <li>off: disable.</li>.
+     * Set Whether intelligent client filtering is enabled. Valid values: <li>on: Enable;</li><li>off: Disable.</li>
+     * @param Enabled Whether intelligent client filtering is enabled. Valid values: <li>on: Enable;</li><li>off: Disable.</li>
      */
     public void setEnabled(String Enabled) {
         this.Enabled = Enabled;
     }
 
     /**
-     * Get Rule ID of intelligent client filtering, returned as an output parameter. 
-     * @return Id Rule ID of intelligent client filtering, returned as an output parameter.
+     * Get Rule ID of intelligent client filtering. Output only. 
+     * @return Id Rule ID of intelligent client filtering. Output only.
      */
     public String getId() {
         return this.Id;
     }
 
     /**
-     * Set Rule ID of intelligent client filtering, returned as an output parameter.
-     * @param Id Rule ID of intelligent client filtering, returned as an output parameter.
+     * Set Rule ID of intelligent client filtering. Output only.
+     * @param Id Rule ID of intelligent client filtering. Output only.
      */
     public void setId(String Id) {
         this.Id = Id;
     }
 
     /**
-     * Get The handling method of intelligent client filtering. when Enabled is on, this field is required. the Name parameter of SecurityAction supports: <li>Monitor: observation;</li> <li>Deny: block;</li> <li>Challenge: Challenge, where ChallengeActionParameters.Name only supports JSChallenge.</li>. 
-     * @return Action The handling method of intelligent client filtering. when Enabled is on, this field is required. the Name parameter of SecurityAction supports: <li>Monitor: observation;</li> <li>Deny: block;</li> <li>Challenge: Challenge, where ChallengeActionParameters.Name only supports JSChallenge.</li>.
+     * Get Handling method for intelligent client filtering. This field is required when Enabled is on. Supported values for SecurityAction Name: <li>Monitor: observe;</li><li>Deny: block;</li><li>Challenge: challenge, where ChallengeActionParameters.Name only supports JSChallenge.</li> 
+     * @return Action Handling method for intelligent client filtering. This field is required when Enabled is on. Supported values for SecurityAction Name: <li>Monitor: observe;</li><li>Deny: block;</li><li>Challenge: challenge, where ChallengeActionParameters.Name only supports JSChallenge.</li>
      */
     public SecurityAction getAction() {
         return this.Action;
     }
 
     /**
-     * Set The handling method of intelligent client filtering. when Enabled is on, this field is required. the Name parameter of SecurityAction supports: <li>Monitor: observation;</li> <li>Deny: block;</li> <li>Challenge: Challenge, where ChallengeActionParameters.Name only supports JSChallenge.</li>.
-     * @param Action The handling method of intelligent client filtering. when Enabled is on, this field is required. the Name parameter of SecurityAction supports: <li>Monitor: observation;</li> <li>Deny: block;</li> <li>Challenge: Challenge, where ChallengeActionParameters.Name only supports JSChallenge.</li>.
+     * Set Handling method for intelligent client filtering. This field is required when Enabled is on. Supported values for SecurityAction Name: <li>Monitor: observe;</li><li>Deny: block;</li><li>Challenge: challenge, where ChallengeActionParameters.Name only supports JSChallenge.</li>
+     * @param Action Handling method for intelligent client filtering. This field is required when Enabled is on. Supported values for SecurityAction Name: <li>Monitor: observe;</li><li>Deny: block;</li><li>Challenge: challenge, where ChallengeActionParameters.Name only supports JSChallenge.</li>
      */
     public void setAction(SecurityAction Action) {
         this.Action = Action;

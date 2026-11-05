@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class BrowserImpersonationDetectionAction extends AbstractModel {
 
     /**
-    * Configures Cookie verification and session tracking.
+    * Cookie verification and session tracking configuration.
     */
     @SerializedName("BotSessionValidation")
     @Expose
     private BotSessionValidation BotSessionValidation;
 
     /**
-    * Configures client behavior validation.
+    * Client behavior validation configuration.
     */
     @SerializedName("ClientBehaviorDetection")
     @Expose
     private ClientBehaviorDetection ClientBehaviorDetection;
 
     /**
-     * Get Configures Cookie verification and session tracking. 
-     * @return BotSessionValidation Configures Cookie verification and session tracking.
+     * Get Cookie verification and session tracking configuration. 
+     * @return BotSessionValidation Cookie verification and session tracking configuration.
      */
     public BotSessionValidation getBotSessionValidation() {
         return this.BotSessionValidation;
     }
 
     /**
-     * Set Configures Cookie verification and session tracking.
-     * @param BotSessionValidation Configures Cookie verification and session tracking.
+     * Set Cookie verification and session tracking configuration.
+     * @param BotSessionValidation Cookie verification and session tracking configuration.
      */
     public void setBotSessionValidation(BotSessionValidation BotSessionValidation) {
         this.BotSessionValidation = BotSessionValidation;
     }
 
     /**
-     * Get Configures client behavior validation. 
-     * @return ClientBehaviorDetection Configures client behavior validation.
+     * Get Client behavior validation configuration. 
+     * @return ClientBehaviorDetection Client behavior validation configuration.
      */
     public ClientBehaviorDetection getClientBehaviorDetection() {
         return this.ClientBehaviorDetection;
     }
 
     /**
-     * Set Configures client behavior validation.
-     * @param ClientBehaviorDetection Configures client behavior validation.
+     * Set Client behavior validation configuration.
+     * @param ClientBehaviorDetection Client behavior validation configuration.
      */
     public void setClientBehaviorDetection(ClientBehaviorDetection ClientBehaviorDetection) {
         this.ClientBehaviorDetection = ClientBehaviorDetection;

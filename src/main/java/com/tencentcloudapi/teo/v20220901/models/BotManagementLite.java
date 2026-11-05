@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class BotManagementLite extends AbstractModel {
 
     /**
-    * Configuration of the human-machine verification page.
+    * Configuration of the CAPTCHA page.
     */
     @SerializedName("CAPTCHAPageChallenge")
     @Expose
     private CAPTCHAPageChallenge CAPTCHAPageChallenge;
 
     /**
-    * AI crawler detection configuration.
+    * Specific configuration for AI crawler detection.
     */
     @SerializedName("AICrawlerDetection")
     @Expose
     private AICrawlerDetection AICrawlerDetection;
 
     /**
-     * Get Configuration of the human-machine verification page. 
-     * @return CAPTCHAPageChallenge Configuration of the human-machine verification page.
+     * Get Configuration of the CAPTCHA page. 
+     * @return CAPTCHAPageChallenge Configuration of the CAPTCHA page.
      */
     public CAPTCHAPageChallenge getCAPTCHAPageChallenge() {
         return this.CAPTCHAPageChallenge;
     }
 
     /**
-     * Set Configuration of the human-machine verification page.
-     * @param CAPTCHAPageChallenge Configuration of the human-machine verification page.
+     * Set Configuration of the CAPTCHA page.
+     * @param CAPTCHAPageChallenge Configuration of the CAPTCHA page.
      */
     public void setCAPTCHAPageChallenge(CAPTCHAPageChallenge CAPTCHAPageChallenge) {
         this.CAPTCHAPageChallenge = CAPTCHAPageChallenge;
     }
 
     /**
-     * Get AI crawler detection configuration. 
-     * @return AICrawlerDetection AI crawler detection configuration.
+     * Get Specific configuration for AI crawler detection. 
+     * @return AICrawlerDetection Specific configuration for AI crawler detection.
      */
     public AICrawlerDetection getAICrawlerDetection() {
         return this.AICrawlerDetection;
     }
 
     /**
-     * Set AI crawler detection configuration.
-     * @param AICrawlerDetection AI crawler detection configuration.
+     * Set Specific configuration for AI crawler detection.
+     * @param AICrawlerDetection Specific configuration for AI crawler detection.
      */
     public void setAICrawlerDetection(AICrawlerDetection AICrawlerDetection) {
         this.AICrawlerDetection = AICrawlerDetection;

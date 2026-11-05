@@ -24,138 +24,138 @@ import java.util.HashMap;
 public class BotManagementCustomRule extends AbstractModel {
 
     /**
-    * The ID of a Bot custom rule. different rule configuration operations are supported by rule ID: <li><b>add</b> a new rule: leave the ID empty or do not specify the ID parameter.</li> <li><b>modify</b> an existing rule: specify the rule ID that needs to be updated/modified.</li> <li><b>delete</b> an existing rule: existing Rules not included in the Rules list under the BotManagementCustomRules parameter will be deleted.</li>.
+    * <p>ID of the bot custom rule.<br>Different rule configuration operations are supported via the rule ID:<br> <li> <b>Add</b> a new rule: leave the ID empty or do not specify the ID parameter;</li><li><b>Modify</b> an existing rule: specify the rule ID that needs to be updated/modified;</li><li><b>Delete</b> an existing rule: existing rules not included in the Rules list in the BotManagementCustomRules parameter will be deleted.</li></p>
     */
     @SerializedName("Id")
     @Expose
     private String Id;
 
     /**
-    * Specifies the name of the Bot custom rule.
+    * <p>Name of the Bot custom rule.</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * Whether the custom Bot rule is enabled. valid values: <li>on: enabled;</li><li>off: disabled.</li>.
+    * <p>Whether the custom Bot rule is enabled. Valid values: <li>on: enable;</li><li>off: disable.</li></p>
     */
     @SerializedName("Enabled")
     @Expose
     private String Enabled;
 
     /**
-    * Priority of custom Bot rules. value range: 1–100. default value is 50.
+    * <p>Priority of Bot custom rules, ranging from 1 to 100, with a default value of 50.</p>
     */
     @SerializedName("Priority")
     @Expose
     private Long Priority;
 
     /**
-    * Specifies the specific content of the Bot custom rule, which must comply with expression grammar. for detailed specifications, refer to the product document.
+    * <p>For specific content of the Bot custom rule, it must comply with the expression grammar. For detailed specifications, see the product document.</p>
     */
     @SerializedName("Condition")
     @Expose
     private String Condition;
 
     /**
-    * The handling method for Bot custom rules. valid values: <li>Monitor: observation;</li><li>Deny: block, where DenyActionParameters.Name supports Deny and ReturnCustomPage;</li><li>Challenge: Challenge, where ChallengeActionParameters.Name supports JSChallenge and ManagedChallenge;</li><li>Redirect: Redirect to URL.</li>.
+    * <p>List of safe execution actions by weight assignment.</p>
     */
     @SerializedName("Action")
     @Expose
     private SecurityWeightedAction [] Action;
 
     /**
-     * Get The ID of a Bot custom rule. different rule configuration operations are supported by rule ID: <li><b>add</b> a new rule: leave the ID empty or do not specify the ID parameter.</li> <li><b>modify</b> an existing rule: specify the rule ID that needs to be updated/modified.</li> <li><b>delete</b> an existing rule: existing Rules not included in the Rules list under the BotManagementCustomRules parameter will be deleted.</li>. 
-     * @return Id The ID of a Bot custom rule. different rule configuration operations are supported by rule ID: <li><b>add</b> a new rule: leave the ID empty or do not specify the ID parameter.</li> <li><b>modify</b> an existing rule: specify the rule ID that needs to be updated/modified.</li> <li><b>delete</b> an existing rule: existing Rules not included in the Rules list under the BotManagementCustomRules parameter will be deleted.</li>.
+     * Get <p>ID of the bot custom rule.<br>Different rule configuration operations are supported via the rule ID:<br> <li> <b>Add</b> a new rule: leave the ID empty or do not specify the ID parameter;</li><li><b>Modify</b> an existing rule: specify the rule ID that needs to be updated/modified;</li><li><b>Delete</b> an existing rule: existing rules not included in the Rules list in the BotManagementCustomRules parameter will be deleted.</li></p> 
+     * @return Id <p>ID of the bot custom rule.<br>Different rule configuration operations are supported via the rule ID:<br> <li> <b>Add</b> a new rule: leave the ID empty or do not specify the ID parameter;</li><li><b>Modify</b> an existing rule: specify the rule ID that needs to be updated/modified;</li><li><b>Delete</b> an existing rule: existing rules not included in the Rules list in the BotManagementCustomRules parameter will be deleted.</li></p>
      */
     public String getId() {
         return this.Id;
     }
 
     /**
-     * Set The ID of a Bot custom rule. different rule configuration operations are supported by rule ID: <li><b>add</b> a new rule: leave the ID empty or do not specify the ID parameter.</li> <li><b>modify</b> an existing rule: specify the rule ID that needs to be updated/modified.</li> <li><b>delete</b> an existing rule: existing Rules not included in the Rules list under the BotManagementCustomRules parameter will be deleted.</li>.
-     * @param Id The ID of a Bot custom rule. different rule configuration operations are supported by rule ID: <li><b>add</b> a new rule: leave the ID empty or do not specify the ID parameter.</li> <li><b>modify</b> an existing rule: specify the rule ID that needs to be updated/modified.</li> <li><b>delete</b> an existing rule: existing Rules not included in the Rules list under the BotManagementCustomRules parameter will be deleted.</li>.
+     * Set <p>ID of the bot custom rule.<br>Different rule configuration operations are supported via the rule ID:<br> <li> <b>Add</b> a new rule: leave the ID empty or do not specify the ID parameter;</li><li><b>Modify</b> an existing rule: specify the rule ID that needs to be updated/modified;</li><li><b>Delete</b> an existing rule: existing rules not included in the Rules list in the BotManagementCustomRules parameter will be deleted.</li></p>
+     * @param Id <p>ID of the bot custom rule.<br>Different rule configuration operations are supported via the rule ID:<br> <li> <b>Add</b> a new rule: leave the ID empty or do not specify the ID parameter;</li><li><b>Modify</b> an existing rule: specify the rule ID that needs to be updated/modified;</li><li><b>Delete</b> an existing rule: existing rules not included in the Rules list in the BotManagementCustomRules parameter will be deleted.</li></p>
      */
     public void setId(String Id) {
         this.Id = Id;
     }
 
     /**
-     * Get Specifies the name of the Bot custom rule. 
-     * @return Name Specifies the name of the Bot custom rule.
+     * Get <p>Name of the Bot custom rule.</p> 
+     * @return Name <p>Name of the Bot custom rule.</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Specifies the name of the Bot custom rule.
-     * @param Name Specifies the name of the Bot custom rule.
+     * Set <p>Name of the Bot custom rule.</p>
+     * @param Name <p>Name of the Bot custom rule.</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Whether the custom Bot rule is enabled. valid values: <li>on: enabled;</li><li>off: disabled.</li>. 
-     * @return Enabled Whether the custom Bot rule is enabled. valid values: <li>on: enabled;</li><li>off: disabled.</li>.
+     * Get <p>Whether the custom Bot rule is enabled. Valid values: <li>on: enable;</li><li>off: disable.</li></p> 
+     * @return Enabled <p>Whether the custom Bot rule is enabled. Valid values: <li>on: enable;</li><li>off: disable.</li></p>
      */
     public String getEnabled() {
         return this.Enabled;
     }
 
     /**
-     * Set Whether the custom Bot rule is enabled. valid values: <li>on: enabled;</li><li>off: disabled.</li>.
-     * @param Enabled Whether the custom Bot rule is enabled. valid values: <li>on: enabled;</li><li>off: disabled.</li>.
+     * Set <p>Whether the custom Bot rule is enabled. Valid values: <li>on: enable;</li><li>off: disable.</li></p>
+     * @param Enabled <p>Whether the custom Bot rule is enabled. Valid values: <li>on: enable;</li><li>off: disable.</li></p>
      */
     public void setEnabled(String Enabled) {
         this.Enabled = Enabled;
     }
 
     /**
-     * Get Priority of custom Bot rules. value range: 1–100. default value is 50. 
-     * @return Priority Priority of custom Bot rules. value range: 1–100. default value is 50.
+     * Get <p>Priority of Bot custom rules, ranging from 1 to 100, with a default value of 50.</p> 
+     * @return Priority <p>Priority of Bot custom rules, ranging from 1 to 100, with a default value of 50.</p>
      */
     public Long getPriority() {
         return this.Priority;
     }
 
     /**
-     * Set Priority of custom Bot rules. value range: 1–100. default value is 50.
-     * @param Priority Priority of custom Bot rules. value range: 1–100. default value is 50.
+     * Set <p>Priority of Bot custom rules, ranging from 1 to 100, with a default value of 50.</p>
+     * @param Priority <p>Priority of Bot custom rules, ranging from 1 to 100, with a default value of 50.</p>
      */
     public void setPriority(Long Priority) {
         this.Priority = Priority;
     }
 
     /**
-     * Get Specifies the specific content of the Bot custom rule, which must comply with expression grammar. for detailed specifications, refer to the product document. 
-     * @return Condition Specifies the specific content of the Bot custom rule, which must comply with expression grammar. for detailed specifications, refer to the product document.
+     * Get <p>For specific content of the Bot custom rule, it must comply with the expression grammar. For detailed specifications, see the product document.</p> 
+     * @return Condition <p>For specific content of the Bot custom rule, it must comply with the expression grammar. For detailed specifications, see the product document.</p>
      */
     public String getCondition() {
         return this.Condition;
     }
 
     /**
-     * Set Specifies the specific content of the Bot custom rule, which must comply with expression grammar. for detailed specifications, refer to the product document.
-     * @param Condition Specifies the specific content of the Bot custom rule, which must comply with expression grammar. for detailed specifications, refer to the product document.
+     * Set <p>For specific content of the Bot custom rule, it must comply with the expression grammar. For detailed specifications, see the product document.</p>
+     * @param Condition <p>For specific content of the Bot custom rule, it must comply with the expression grammar. For detailed specifications, see the product document.</p>
      */
     public void setCondition(String Condition) {
         this.Condition = Condition;
     }
 
     /**
-     * Get The handling method for Bot custom rules. valid values: <li>Monitor: observation;</li><li>Deny: block, where DenyActionParameters.Name supports Deny and ReturnCustomPage;</li><li>Challenge: Challenge, where ChallengeActionParameters.Name supports JSChallenge and ManagedChallenge;</li><li>Redirect: Redirect to URL.</li>. 
-     * @return Action The handling method for Bot custom rules. valid values: <li>Monitor: observation;</li><li>Deny: block, where DenyActionParameters.Name supports Deny and ReturnCustomPage;</li><li>Challenge: Challenge, where ChallengeActionParameters.Name supports JSChallenge and ManagedChallenge;</li><li>Redirect: Redirect to URL.</li>.
+     * Get <p>List of safe execution actions by weight assignment.</p> 
+     * @return Action <p>List of safe execution actions by weight assignment.</p>
      */
     public SecurityWeightedAction [] getAction() {
         return this.Action;
     }
 
     /**
-     * Set The handling method for Bot custom rules. valid values: <li>Monitor: observation;</li><li>Deny: block, where DenyActionParameters.Name supports Deny and ReturnCustomPage;</li><li>Challenge: Challenge, where ChallengeActionParameters.Name supports JSChallenge and ManagedChallenge;</li><li>Redirect: Redirect to URL.</li>.
-     * @param Action The handling method for Bot custom rules. valid values: <li>Monitor: observation;</li><li>Deny: block, where DenyActionParameters.Name supports Deny and ReturnCustomPage;</li><li>Challenge: Challenge, where ChallengeActionParameters.Name supports JSChallenge and ManagedChallenge;</li><li>Redirect: Redirect to URL.</li>.
+     * Set <p>List of safe execution actions by weight assignment.</p>
+     * @param Action <p>List of safe execution actions by weight assignment.</p>
      */
     public void setAction(SecurityWeightedAction [] Action) {
         this.Action = Action;

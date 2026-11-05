@@ -28,7 +28,6 @@ public class Auth extends AbstractModel {
 - 0: no permissions.
 - 1: read-only.
 - 3: read-write.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Mask")
     @Expose
@@ -38,7 +37,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
     * Specifies the name of the database that has the current account permissions.
 - \*: indicates all databases.
 - db.name: indicates the database with a specific name.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("NameSpace")
     @Expose
@@ -48,13 +46,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * Get Permission information of the current account.
 - 0: no permissions.
 - 1: read-only.
-- 3: read-write.
-Note: This field may return null, indicating that no valid values can be obtained. 
+- 3: read-write. 
      * @return Mask Permission information of the current account.
 - 0: no permissions.
 - 1: read-only.
 - 3: read-write.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getMask() {
         return this.Mask;
@@ -65,12 +61,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 - 0: no permissions.
 - 1: read-only.
 - 3: read-write.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Mask Permission information of the current account.
 - 0: no permissions.
 - 1: read-only.
 - 3: read-write.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setMask(Long Mask) {
         this.Mask = Mask;
@@ -79,12 +73,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
     /**
      * Get Specifies the name of the database that has the current account permissions.
 - \*: indicates all databases.
-- db.name: indicates the database with a specific name.
-Note: This field may return null, indicating that no valid values can be obtained. 
+- db.name: indicates the database with a specific name. 
      * @return NameSpace Specifies the name of the database that has the current account permissions.
 - \*: indicates all databases.
 - db.name: indicates the database with a specific name.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getNameSpace() {
         return this.NameSpace;
@@ -94,11 +86,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * Set Specifies the name of the database that has the current account permissions.
 - \*: indicates all databases.
 - db.name: indicates the database with a specific name.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param NameSpace Specifies the name of the database that has the current account permissions.
 - \*: indicates all databases.
 - db.name: indicates the database with a specific name.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setNameSpace(String NameSpace) {
         this.NameSpace = NameSpace;

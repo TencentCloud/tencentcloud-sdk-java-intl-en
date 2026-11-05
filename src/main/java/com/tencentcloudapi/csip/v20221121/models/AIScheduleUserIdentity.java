@@ -31,7 +31,7 @@ public class AIScheduleUserIdentity extends AbstractModel {
     private Long AppId;
 
     /**
-    * <p>Account Uin</p>
+    * <p>Account UIN.</p>
     */
     @SerializedName("Uin")
     @Expose
@@ -66,7 +66,7 @@ public class AIScheduleUserIdentity extends AbstractModel {
     private String ChatId;
 
     /**
-    * <p>Channel identifier, for example, wecom / qq / wx / feishu / dingtalk / cloud</p>
+    * <p>Channel identifier, such as wecom / qq / wx / feishu / dingtalk / cloud</p>
     */
     @SerializedName("Channel")
     @Expose
@@ -89,16 +89,16 @@ public class AIScheduleUserIdentity extends AbstractModel {
     }
 
     /**
-     * Get <p>Account Uin</p> 
-     * @return Uin <p>Account Uin</p>
+     * Get <p>Account UIN.</p> 
+     * @return Uin <p>Account UIN.</p>
      */
     public String getUin() {
         return this.Uin;
     }
 
     /**
-     * Set <p>Account Uin</p>
-     * @param Uin <p>Account Uin</p>
+     * Set <p>Account UIN.</p>
+     * @param Uin <p>Account UIN.</p>
      */
     public void setUin(String Uin) {
         this.Uin = Uin;
@@ -169,16 +169,16 @@ public class AIScheduleUserIdentity extends AbstractModel {
     }
 
     /**
-     * Get <p>Channel identifier, for example, wecom / qq / wx / feishu / dingtalk / cloud</p> 
-     * @return Channel <p>Channel identifier, for example, wecom / qq / wx / feishu / dingtalk / cloud</p>
+     * Get <p>Channel identifier, such as wecom / qq / wx / feishu / dingtalk / cloud</p> 
+     * @return Channel <p>Channel identifier, such as wecom / qq / wx / feishu / dingtalk / cloud</p>
      */
     public String getChannel() {
         return this.Channel;
     }
 
     /**
-     * Set <p>Channel identifier, for example, wecom / qq / wx / feishu / dingtalk / cloud</p>
-     * @param Channel <p>Channel identifier, for example, wecom / qq / wx / feishu / dingtalk / cloud</p>
+     * Set <p>Channel identifier, such as wecom / qq / wx / feishu / dingtalk / cloud</p>
+     * @param Channel <p>Channel identifier, such as wecom / qq / wx / feishu / dingtalk / cloud</p>
      */
     public void setChannel(String Channel) {
         this.Channel = Channel;

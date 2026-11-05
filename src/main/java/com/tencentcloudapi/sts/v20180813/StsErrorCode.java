@@ -3,11 +3,14 @@ public enum StsErrorCode {
      /* Invalid key. */
      AUTHFAILURE_ACCESSKEYILLEGAL("AuthFailure.AccessKeyIllegal"),
      
-     /*  */
+     /* MFA validation failed */
      FAILEDOPERATION_CHECKMFAERROR("FailedOperation.CheckMFAError"),
      
-     /*  */
+     /* MFA type not supported */
      FAILEDOPERATION_MFATYPENOTSUPPORTED("FailedOperation.MFATypeNotSupported"),
+     
+     /* This API does not support temporary key calls. */
+     FAILEDOPERATION_TEMPKEYNOTALLOWED("FailedOperation.TempKeyNotAllowed"),
      
      /* Database error. */
      INTERNALERROR_DBERROR("InternalError.DbError"),

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeDspmIdentifyRuleTestResultResponse extends AbstractModel {
 
     /**
-    * <p>Whether matched successfully</p><p>Enumeration values:</p><ul><li>true: match successful</li><li>false: fail to match</li></ul>
+    * <p>Whether the match is successful</p><p>Enumeration values:</p><ul><li>true: match successful</li><li>false: fail to match</li></ul>
     */
     @SerializedName("IsMatch")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeDspmIdentifyRuleTestResultResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get <p>Whether matched successfully</p><p>Enumeration values:</p><ul><li>true: match successful</li><li>false: fail to match</li></ul> 
-     * @return IsMatch <p>Whether matched successfully</p><p>Enumeration values:</p><ul><li>true: match successful</li><li>false: fail to match</li></ul>
+     * Get <p>Whether the match is successful</p><p>Enumeration values:</p><ul><li>true: match successful</li><li>false: fail to match</li></ul> 
+     * @return IsMatch <p>Whether the match is successful</p><p>Enumeration values:</p><ul><li>true: match successful</li><li>false: fail to match</li></ul>
      */
     public Boolean getIsMatch() {
         return this.IsMatch;
     }
 
     /**
-     * Set <p>Whether matched successfully</p><p>Enumeration values:</p><ul><li>true: match successful</li><li>false: fail to match</li></ul>
-     * @param IsMatch <p>Whether matched successfully</p><p>Enumeration values:</p><ul><li>true: match successful</li><li>false: fail to match</li></ul>
+     * Set <p>Whether the match is successful</p><p>Enumeration values:</p><ul><li>true: match successful</li><li>false: fail to match</li></ul>
+     * @param IsMatch <p>Whether the match is successful</p><p>Enumeration values:</p><ul><li>true: match successful</li><li>false: fail to match</li></ul>
      */
     public void setIsMatch(Boolean IsMatch) {
         this.IsMatch = IsMatch;

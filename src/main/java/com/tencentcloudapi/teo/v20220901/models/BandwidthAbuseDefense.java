@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class BandwidthAbuseDefense extends AbstractModel {
 
     /**
-    * Whether bandwidth abuse protection (applicable to chinese mainland only) is enabled. valid values: <li>on: enabled;</li> <li>off: disabled.</li>.
+    * Whether bandwidth abuse protection (only applicable to the Chinese mainland) is enabled. Valid values: <li>on: enabled;</li><li>off: disabled.</li>
     */
     @SerializedName("Enabled")
     @Expose
     private String Enabled;
 
     /**
-    * Rule ID of traffic anti-fraud, returned as an output parameter.
+    * Rule ID for bandwidth abuse protection. Returned as an output parameter only.
     */
     @SerializedName("Id")
     @Expose
     private String Id;
 
     /**
-    * Bandwidth abuse protection (applicable to chinese mainland) handling method. required when Enabled is on. valid values for SecurityAction Name: <li>Monitor: observe;</li> <li>Deny: block;</li> <li>Challenge: Challenge, where ChallengeActionParameters.Name only supports JSChallenge.</li>.
+    * Handling method for bandwidth abuse protection (applicable to Chinese mainland only). This field is required when Enabled is on. Supported values for SecurityAction Name: <li>Monitor: monitor;</li><li>Deny: block;</li><li>Challenge: challenge. ChallengeActionParameters.Name only supports JSChallenge.</li>
     */
     @SerializedName("Action")
     @Expose
     private SecurityAction Action;
 
     /**
-     * Get Whether bandwidth abuse protection (applicable to chinese mainland only) is enabled. valid values: <li>on: enabled;</li> <li>off: disabled.</li>. 
-     * @return Enabled Whether bandwidth abuse protection (applicable to chinese mainland only) is enabled. valid values: <li>on: enabled;</li> <li>off: disabled.</li>.
+     * Get Whether bandwidth abuse protection (only applicable to the Chinese mainland) is enabled. Valid values: <li>on: enabled;</li><li>off: disabled.</li> 
+     * @return Enabled Whether bandwidth abuse protection (only applicable to the Chinese mainland) is enabled. Valid values: <li>on: enabled;</li><li>off: disabled.</li>
      */
     public String getEnabled() {
         return this.Enabled;
     }
 
     /**
-     * Set Whether bandwidth abuse protection (applicable to chinese mainland only) is enabled. valid values: <li>on: enabled;</li> <li>off: disabled.</li>.
-     * @param Enabled Whether bandwidth abuse protection (applicable to chinese mainland only) is enabled. valid values: <li>on: enabled;</li> <li>off: disabled.</li>.
+     * Set Whether bandwidth abuse protection (only applicable to the Chinese mainland) is enabled. Valid values: <li>on: enabled;</li><li>off: disabled.</li>
+     * @param Enabled Whether bandwidth abuse protection (only applicable to the Chinese mainland) is enabled. Valid values: <li>on: enabled;</li><li>off: disabled.</li>
      */
     public void setEnabled(String Enabled) {
         this.Enabled = Enabled;
     }
 
     /**
-     * Get Rule ID of traffic anti-fraud, returned as an output parameter. 
-     * @return Id Rule ID of traffic anti-fraud, returned as an output parameter.
+     * Get Rule ID for bandwidth abuse protection. Returned as an output parameter only. 
+     * @return Id Rule ID for bandwidth abuse protection. Returned as an output parameter only.
      */
     public String getId() {
         return this.Id;
     }
 
     /**
-     * Set Rule ID of traffic anti-fraud, returned as an output parameter.
-     * @param Id Rule ID of traffic anti-fraud, returned as an output parameter.
+     * Set Rule ID for bandwidth abuse protection. Returned as an output parameter only.
+     * @param Id Rule ID for bandwidth abuse protection. Returned as an output parameter only.
      */
     public void setId(String Id) {
         this.Id = Id;
     }
 
     /**
-     * Get Bandwidth abuse protection (applicable to chinese mainland) handling method. required when Enabled is on. valid values for SecurityAction Name: <li>Monitor: observe;</li> <li>Deny: block;</li> <li>Challenge: Challenge, where ChallengeActionParameters.Name only supports JSChallenge.</li>. 
-     * @return Action Bandwidth abuse protection (applicable to chinese mainland) handling method. required when Enabled is on. valid values for SecurityAction Name: <li>Monitor: observe;</li> <li>Deny: block;</li> <li>Challenge: Challenge, where ChallengeActionParameters.Name only supports JSChallenge.</li>.
+     * Get Handling method for bandwidth abuse protection (applicable to Chinese mainland only). This field is required when Enabled is on. Supported values for SecurityAction Name: <li>Monitor: monitor;</li><li>Deny: block;</li><li>Challenge: challenge. ChallengeActionParameters.Name only supports JSChallenge.</li> 
+     * @return Action Handling method for bandwidth abuse protection (applicable to Chinese mainland only). This field is required when Enabled is on. Supported values for SecurityAction Name: <li>Monitor: monitor;</li><li>Deny: block;</li><li>Challenge: challenge. ChallengeActionParameters.Name only supports JSChallenge.</li>
      */
     public SecurityAction getAction() {
         return this.Action;
     }
 
     /**
-     * Set Bandwidth abuse protection (applicable to chinese mainland) handling method. required when Enabled is on. valid values for SecurityAction Name: <li>Monitor: observe;</li> <li>Deny: block;</li> <li>Challenge: Challenge, where ChallengeActionParameters.Name only supports JSChallenge.</li>.
-     * @param Action Bandwidth abuse protection (applicable to chinese mainland) handling method. required when Enabled is on. valid values for SecurityAction Name: <li>Monitor: observe;</li> <li>Deny: block;</li> <li>Challenge: Challenge, where ChallengeActionParameters.Name only supports JSChallenge.</li>.
+     * Set Handling method for bandwidth abuse protection (applicable to Chinese mainland only). This field is required when Enabled is on. Supported values for SecurityAction Name: <li>Monitor: monitor;</li><li>Deny: block;</li><li>Challenge: challenge. ChallengeActionParameters.Name only supports JSChallenge.</li>
+     * @param Action Handling method for bandwidth abuse protection (applicable to Chinese mainland only). This field is required when Enabled is on. Supported values for SecurityAction Name: <li>Monitor: monitor;</li><li>Deny: block;</li><li>Challenge: challenge. ChallengeActionParameters.Name only supports JSChallenge.</li>
      */
     public void setAction(SecurityAction Action) {
         this.Action = Action;

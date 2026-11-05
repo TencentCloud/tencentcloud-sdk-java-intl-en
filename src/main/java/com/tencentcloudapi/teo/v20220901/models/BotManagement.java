@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class BotManagement extends AbstractModel {
 
     /**
-    * Whether Bot management is enabled. valid values: <li>on: enabled;</li><li>off: disabled.</li>.
+    * Whether Bot management is enabled. Valid values: <li>on: enabled;</li><li>off: disabled.</li>
     */
     @SerializedName("Enabled")
     @Expose
     private String Enabled;
 
     /**
-    * Bot management custom rule combines various crawlers and request behavior characteristics to accurately define bots and configure customized handling methods.
+    * Custom rule for Bot management combines various types of crawlers and request behavior characteristics to precisely define bots and configure customized handling methods.
     */
     @SerializedName("CustomRules")
     @Expose
     private BotManagementCustomRules CustomRules;
 
     /**
-    * Bot management basic configuration. takes effect on all domains associated with the policy. can be customized through CustomRules.
+    * Basic configuration of Bot management, which takes effect on all domains associated with the policy. It can be customized through CustomRules.
     */
     @SerializedName("BasicBotSettings")
     @Expose
     private BasicBotSettings BasicBotSettings;
 
     /**
-    * Definition list of client authentication rules. this feature is in beta test. submit a ticket if you need to use it.
+    * Definition list of client authentication rules. This feature is in beta test. If needed, submit a ticket.
     */
     @SerializedName("ClientAttestationRules")
     @Expose
     private ClientAttestationRules ClientAttestationRules;
 
     /**
-    * Configures browser spoofing identification rules (formerly active feature detection rule). sets the response page range for JavaScript injection, browser check options, and handling method for non-browser clients.
+    * Configure browser spoofing identification rules (formerly active feature detection rules). Set the response page range for JavaScript injection, browser check options, and handling method for non-browser clients.
     */
     @SerializedName("BrowserImpersonationDetection")
     @Expose
     private BrowserImpersonationDetection BrowserImpersonationDetection;
 
     /**
-     * Get Whether Bot management is enabled. valid values: <li>on: enabled;</li><li>off: disabled.</li>. 
-     * @return Enabled Whether Bot management is enabled. valid values: <li>on: enabled;</li><li>off: disabled.</li>.
+     * Get Whether Bot management is enabled. Valid values: <li>on: enabled;</li><li>off: disabled.</li> 
+     * @return Enabled Whether Bot management is enabled. Valid values: <li>on: enabled;</li><li>off: disabled.</li>
      */
     public String getEnabled() {
         return this.Enabled;
     }
 
     /**
-     * Set Whether Bot management is enabled. valid values: <li>on: enabled;</li><li>off: disabled.</li>.
-     * @param Enabled Whether Bot management is enabled. valid values: <li>on: enabled;</li><li>off: disabled.</li>.
+     * Set Whether Bot management is enabled. Valid values: <li>on: enabled;</li><li>off: disabled.</li>
+     * @param Enabled Whether Bot management is enabled. Valid values: <li>on: enabled;</li><li>off: disabled.</li>
      */
     public void setEnabled(String Enabled) {
         this.Enabled = Enabled;
     }
 
     /**
-     * Get Bot management custom rule combines various crawlers and request behavior characteristics to accurately define bots and configure customized handling methods. 
-     * @return CustomRules Bot management custom rule combines various crawlers and request behavior characteristics to accurately define bots and configure customized handling methods.
+     * Get Custom rule for Bot management combines various types of crawlers and request behavior characteristics to precisely define bots and configure customized handling methods. 
+     * @return CustomRules Custom rule for Bot management combines various types of crawlers and request behavior characteristics to precisely define bots and configure customized handling methods.
      */
     public BotManagementCustomRules getCustomRules() {
         return this.CustomRules;
     }
 
     /**
-     * Set Bot management custom rule combines various crawlers and request behavior characteristics to accurately define bots and configure customized handling methods.
-     * @param CustomRules Bot management custom rule combines various crawlers and request behavior characteristics to accurately define bots and configure customized handling methods.
+     * Set Custom rule for Bot management combines various types of crawlers and request behavior characteristics to precisely define bots and configure customized handling methods.
+     * @param CustomRules Custom rule for Bot management combines various types of crawlers and request behavior characteristics to precisely define bots and configure customized handling methods.
      */
     public void setCustomRules(BotManagementCustomRules CustomRules) {
         this.CustomRules = CustomRules;
     }
 
     /**
-     * Get Bot management basic configuration. takes effect on all domains associated with the policy. can be customized through CustomRules. 
-     * @return BasicBotSettings Bot management basic configuration. takes effect on all domains associated with the policy. can be customized through CustomRules.
+     * Get Basic configuration of Bot management, which takes effect on all domains associated with the policy. It can be customized through CustomRules. 
+     * @return BasicBotSettings Basic configuration of Bot management, which takes effect on all domains associated with the policy. It can be customized through CustomRules.
      */
     public BasicBotSettings getBasicBotSettings() {
         return this.BasicBotSettings;
     }
 
     /**
-     * Set Bot management basic configuration. takes effect on all domains associated with the policy. can be customized through CustomRules.
-     * @param BasicBotSettings Bot management basic configuration. takes effect on all domains associated with the policy. can be customized through CustomRules.
+     * Set Basic configuration of Bot management, which takes effect on all domains associated with the policy. It can be customized through CustomRules.
+     * @param BasicBotSettings Basic configuration of Bot management, which takes effect on all domains associated with the policy. It can be customized through CustomRules.
      */
     public void setBasicBotSettings(BasicBotSettings BasicBotSettings) {
         this.BasicBotSettings = BasicBotSettings;
     }
 
     /**
-     * Get Definition list of client authentication rules. this feature is in beta test. submit a ticket if you need to use it. 
-     * @return ClientAttestationRules Definition list of client authentication rules. this feature is in beta test. submit a ticket if you need to use it.
+     * Get Definition list of client authentication rules. This feature is in beta test. If needed, submit a ticket. 
+     * @return ClientAttestationRules Definition list of client authentication rules. This feature is in beta test. If needed, submit a ticket.
      */
     public ClientAttestationRules getClientAttestationRules() {
         return this.ClientAttestationRules;
     }
 
     /**
-     * Set Definition list of client authentication rules. this feature is in beta test. submit a ticket if you need to use it.
-     * @param ClientAttestationRules Definition list of client authentication rules. this feature is in beta test. submit a ticket if you need to use it.
+     * Set Definition list of client authentication rules. This feature is in beta test. If needed, submit a ticket.
+     * @param ClientAttestationRules Definition list of client authentication rules. This feature is in beta test. If needed, submit a ticket.
      */
     public void setClientAttestationRules(ClientAttestationRules ClientAttestationRules) {
         this.ClientAttestationRules = ClientAttestationRules;
     }
 
     /**
-     * Get Configures browser spoofing identification rules (formerly active feature detection rule). sets the response page range for JavaScript injection, browser check options, and handling method for non-browser clients. 
-     * @return BrowserImpersonationDetection Configures browser spoofing identification rules (formerly active feature detection rule). sets the response page range for JavaScript injection, browser check options, and handling method for non-browser clients.
+     * Get Configure browser spoofing identification rules (formerly active feature detection rules). Set the response page range for JavaScript injection, browser check options, and handling method for non-browser clients. 
+     * @return BrowserImpersonationDetection Configure browser spoofing identification rules (formerly active feature detection rules). Set the response page range for JavaScript injection, browser check options, and handling method for non-browser clients.
      */
     public BrowserImpersonationDetection getBrowserImpersonationDetection() {
         return this.BrowserImpersonationDetection;
     }
 
     /**
-     * Set Configures browser spoofing identification rules (formerly active feature detection rule). sets the response page range for JavaScript injection, browser check options, and handling method for non-browser clients.
-     * @param BrowserImpersonationDetection Configures browser spoofing identification rules (formerly active feature detection rule). sets the response page range for JavaScript injection, browser check options, and handling method for non-browser clients.
+     * Set Configure browser spoofing identification rules (formerly active feature detection rules). Set the response page range for JavaScript injection, browser check options, and handling method for non-browser clients.
+     * @param BrowserImpersonationDetection Configure browser spoofing identification rules (formerly active feature detection rules). Set the response page range for JavaScript injection, browser check options, and handling method for non-browser clients.
      */
     public void setBrowserImpersonationDetection(BrowserImpersonationDetection BrowserImpersonationDetection) {
         this.BrowserImpersonationDetection = BrowserImpersonationDetection;

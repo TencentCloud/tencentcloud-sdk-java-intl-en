@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class BlockIPActionParameters extends AbstractModel {
 
     /**
-    * Penalty duration for `BlockIP`. Units: <li>`s`: second, value range 1-120;</li> <li>`m`: minute, value range 1-120;</li> <li>`h`: hour, value range 1-48.</li>.
+    * Penalty duration for blocked IPs. Supported units: <li>s: second, value ranges from 1 to 120;</li><li>m: minute, value ranges from 1 to 120;</li><li>h: hour, value ranges from 1 to 48.</li>
     */
     @SerializedName("Duration")
     @Expose
     private String Duration;
 
     /**
-     * Get Penalty duration for `BlockIP`. Units: <li>`s`: second, value range 1-120;</li> <li>`m`: minute, value range 1-120;</li> <li>`h`: hour, value range 1-48.</li>. 
-     * @return Duration Penalty duration for `BlockIP`. Units: <li>`s`: second, value range 1-120;</li> <li>`m`: minute, value range 1-120;</li> <li>`h`: hour, value range 1-48.</li>.
+     * Get Penalty duration for blocked IPs. Supported units: <li>s: second, value ranges from 1 to 120;</li><li>m: minute, value ranges from 1 to 120;</li><li>h: hour, value ranges from 1 to 48.</li> 
+     * @return Duration Penalty duration for blocked IPs. Supported units: <li>s: second, value ranges from 1 to 120;</li><li>m: minute, value ranges from 1 to 120;</li><li>h: hour, value ranges from 1 to 48.</li>
      */
     public String getDuration() {
         return this.Duration;
     }
 
     /**
-     * Set Penalty duration for `BlockIP`. Units: <li>`s`: second, value range 1-120;</li> <li>`m`: minute, value range 1-120;</li> <li>`h`: hour, value range 1-48.</li>.
-     * @param Duration Penalty duration for `BlockIP`. Units: <li>`s`: second, value range 1-120;</li> <li>`m`: minute, value range 1-120;</li> <li>`h`: hour, value range 1-48.</li>.
+     * Set Penalty duration for blocked IPs. Supported units: <li>s: second, value ranges from 1 to 120;</li><li>m: minute, value ranges from 1 to 120;</li><li>h: hour, value ranges from 1 to 48.</li>
+     * @param Duration Penalty duration for blocked IPs. Supported units: <li>s: second, value ranges from 1 to 120;</li><li>m: minute, value ranges from 1 to 120;</li><li>h: hour, value ranges from 1 to 48.</li>
      */
     public void setDuration(String Duration) {
         this.Duration = Duration;

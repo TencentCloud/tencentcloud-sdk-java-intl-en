@@ -52,7 +52,8 @@ public class GeneralBasicOCRResponse extends AbstractModel {
     private Long PdfPageSize;
 
     /**
-    * 
+    * Rotation angle of the image, measured in degrees. The horizontal direction of the text is 0; clockwise is positive, counterclockwise is negative.
+Example value: 6.5 
     */
     @SerializedName("Angle")
     @Expose
@@ -134,16 +135,20 @@ public class GeneralBasicOCRResponse extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return Angle 
+     * Get Rotation angle of the image, measured in degrees. The horizontal direction of the text is 0; clockwise is positive, counterclockwise is negative.
+Example value: 6.5  
+     * @return Angle Rotation angle of the image, measured in degrees. The horizontal direction of the text is 0; clockwise is positive, counterclockwise is negative.
+Example value: 6.5 
      */
     public Float getAngle() {
         return this.Angle;
     }
 
     /**
-     * Set 
-     * @param Angle 
+     * Set Rotation angle of the image, measured in degrees. The horizontal direction of the text is 0; clockwise is positive, counterclockwise is negative.
+Example value: 6.5 
+     * @param Angle Rotation angle of the image, measured in degrees. The horizontal direction of the text is 0; clockwise is positive, counterclockwise is negative.
+Example value: 6.5 
      */
     public void setAngle(Float Angle) {
         this.Angle = Angle;

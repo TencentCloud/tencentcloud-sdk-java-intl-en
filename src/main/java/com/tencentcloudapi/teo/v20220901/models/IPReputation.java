@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class IPReputation extends AbstractModel {
 
     /**
-    * IP intelligence library (formerly client profile analysis). valid values: <li>on: enable;</li> <li>off: disable.</li>.
+    * IP Intelligence Library (formerly client profile analysis). Valid values: <li>on: enable;</li><li>off: disable.</li>
     */
     @SerializedName("Enabled")
     @Expose
     private String Enabled;
 
     /**
-    * IP intelligence library (formerly client profile analysis) configuration content.
+    * Specific configuration content of the IP Intelligence Library (formerly client profile analysis).
     */
     @SerializedName("IPReputationGroup")
     @Expose
     private IPReputationGroup IPReputationGroup;
 
     /**
-     * Get IP intelligence library (formerly client profile analysis). valid values: <li>on: enable;</li> <li>off: disable.</li>. 
-     * @return Enabled IP intelligence library (formerly client profile analysis). valid values: <li>on: enable;</li> <li>off: disable.</li>.
+     * Get IP Intelligence Library (formerly client profile analysis). Valid values: <li>on: enable;</li><li>off: disable.</li> 
+     * @return Enabled IP Intelligence Library (formerly client profile analysis). Valid values: <li>on: enable;</li><li>off: disable.</li>
      */
     public String getEnabled() {
         return this.Enabled;
     }
 
     /**
-     * Set IP intelligence library (formerly client profile analysis). valid values: <li>on: enable;</li> <li>off: disable.</li>.
-     * @param Enabled IP intelligence library (formerly client profile analysis). valid values: <li>on: enable;</li> <li>off: disable.</li>.
+     * Set IP Intelligence Library (formerly client profile analysis). Valid values: <li>on: enable;</li><li>off: disable.</li>
+     * @param Enabled IP Intelligence Library (formerly client profile analysis). Valid values: <li>on: enable;</li><li>off: disable.</li>
      */
     public void setEnabled(String Enabled) {
         this.Enabled = Enabled;
     }
 
     /**
-     * Get IP intelligence library (formerly client profile analysis) configuration content. 
-     * @return IPReputationGroup IP intelligence library (formerly client profile analysis) configuration content.
+     * Get Specific configuration content of the IP Intelligence Library (formerly client profile analysis). 
+     * @return IPReputationGroup Specific configuration content of the IP Intelligence Library (formerly client profile analysis).
      */
     public IPReputationGroup getIPReputationGroup() {
         return this.IPReputationGroup;
     }
 
     /**
-     * Set IP intelligence library (formerly client profile analysis) configuration content.
-     * @param IPReputationGroup IP intelligence library (formerly client profile analysis) configuration content.
+     * Set Specific configuration content of the IP Intelligence Library (formerly client profile analysis).
+     * @param IPReputationGroup Specific configuration content of the IP Intelligence Library (formerly client profile analysis).
      */
     public void setIPReputationGroup(IPReputationGroup IPReputationGroup) {
         this.IPReputationGroup = IPReputationGroup;

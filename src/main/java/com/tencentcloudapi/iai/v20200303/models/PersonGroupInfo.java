@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class PersonGroupInfo extends AbstractModel {
 
     /**
-    * ID of the group that contains this person
+    * Personnel database ID that contains this person.
     */
     @SerializedName("GroupId")
     @Expose
     private String GroupId;
 
     /**
-    * Content of person description field
+    * Person description field content.
     */
     @SerializedName("PersonExDescriptions")
     @Expose
     private String [] PersonExDescriptions;
 
     /**
-     * Get ID of the group that contains this person 
-     * @return GroupId ID of the group that contains this person
+     * Get Personnel database ID that contains this person. 
+     * @return GroupId Personnel database ID that contains this person.
      */
     public String getGroupId() {
         return this.GroupId;
     }
 
     /**
-     * Set ID of the group that contains this person
-     * @param GroupId ID of the group that contains this person
+     * Set Personnel database ID that contains this person.
+     * @param GroupId Personnel database ID that contains this person.
      */
     public void setGroupId(String GroupId) {
         this.GroupId = GroupId;
     }
 
     /**
-     * Get Content of person description field 
-     * @return PersonExDescriptions Content of person description field
+     * Get Person description field content. 
+     * @return PersonExDescriptions Person description field content.
      */
     public String [] getPersonExDescriptions() {
         return this.PersonExDescriptions;
     }
 
     /**
-     * Set Content of person description field
-     * @param PersonExDescriptions Content of person description field
+     * Set Person description field content.
+     * @param PersonExDescriptions Person description field content.
      */
     public void setPersonExDescriptions(String [] PersonExDescriptions) {
         this.PersonExDescriptions = PersonExDescriptions;

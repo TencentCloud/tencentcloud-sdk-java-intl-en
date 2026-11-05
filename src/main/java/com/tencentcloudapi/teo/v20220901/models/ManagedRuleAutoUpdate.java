@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class ManagedRuleAutoUpdate extends AbstractModel {
 
     /**
-    * Enable automatic update to the latest version or not. Values: <li>`on`: enabled</li> <li>`off`: disabled</li>.
+    * Whether automatic update to the latest version is enabled. Valid values: <li>on: enabled</li><li>off: disabled</li>
     */
     @SerializedName("AutoUpdateToLatestVersion")
     @Expose
     private String AutoUpdateToLatestVersion;
 
     /**
-    * Current version, compliant with ISO 8601 standard format, such as 2023-12-21T12:00:32Z, empty by default, output parameter only.
+    * Currently used version in ISO 8601 format, for example, 2023-12-21T12:00:32Z. Empty by default. Output only.
     */
     @SerializedName("RulesetVersion")
     @Expose
     private String RulesetVersion;
 
     /**
-     * Get Enable automatic update to the latest version or not. Values: <li>`on`: enabled</li> <li>`off`: disabled</li>. 
-     * @return AutoUpdateToLatestVersion Enable automatic update to the latest version or not. Values: <li>`on`: enabled</li> <li>`off`: disabled</li>.
+     * Get Whether automatic update to the latest version is enabled. Valid values: <li>on: enabled</li><li>off: disabled</li> 
+     * @return AutoUpdateToLatestVersion Whether automatic update to the latest version is enabled. Valid values: <li>on: enabled</li><li>off: disabled</li>
      */
     public String getAutoUpdateToLatestVersion() {
         return this.AutoUpdateToLatestVersion;
     }
 
     /**
-     * Set Enable automatic update to the latest version or not. Values: <li>`on`: enabled</li> <li>`off`: disabled</li>.
-     * @param AutoUpdateToLatestVersion Enable automatic update to the latest version or not. Values: <li>`on`: enabled</li> <li>`off`: disabled</li>.
+     * Set Whether automatic update to the latest version is enabled. Valid values: <li>on: enabled</li><li>off: disabled</li>
+     * @param AutoUpdateToLatestVersion Whether automatic update to the latest version is enabled. Valid values: <li>on: enabled</li><li>off: disabled</li>
      */
     public void setAutoUpdateToLatestVersion(String AutoUpdateToLatestVersion) {
         this.AutoUpdateToLatestVersion = AutoUpdateToLatestVersion;
     }
 
     /**
-     * Get Current version, compliant with ISO 8601 standard format, such as 2023-12-21T12:00:32Z, empty by default, output parameter only. 
-     * @return RulesetVersion Current version, compliant with ISO 8601 standard format, such as 2023-12-21T12:00:32Z, empty by default, output parameter only.
+     * Get Currently used version in ISO 8601 format, for example, 2023-12-21T12:00:32Z. Empty by default. Output only. 
+     * @return RulesetVersion Currently used version in ISO 8601 format, for example, 2023-12-21T12:00:32Z. Empty by default. Output only.
      */
     public String getRulesetVersion() {
         return this.RulesetVersion;
     }
 
     /**
-     * Set Current version, compliant with ISO 8601 standard format, such as 2023-12-21T12:00:32Z, empty by default, output parameter only.
-     * @param RulesetVersion Current version, compliant with ISO 8601 standard format, such as 2023-12-21T12:00:32Z, empty by default, output parameter only.
+     * Set Currently used version in ISO 8601 format, for example, 2023-12-21T12:00:32Z. Empty by default. Output only.
+     * @param RulesetVersion Currently used version in ISO 8601 format, for example, 2023-12-21T12:00:32Z. Empty by default. Output only.
      */
     public void setRulesetVersion(String RulesetVersion) {
         this.RulesetVersion = RulesetVersion;

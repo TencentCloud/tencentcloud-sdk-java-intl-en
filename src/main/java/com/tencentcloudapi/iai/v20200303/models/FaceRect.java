@@ -24,112 +24,112 @@ import java.util.HashMap;
 public class FaceRect extends AbstractModel {
 
     /**
-    * Horizontal coordinate of the top-left vertex of face frame. 
-The face frame encompasses the facial features and is extended accordingly. If it is larger than the image, the coordinates will be negative. 
-If you want to capture a complete face, you can set the negative coordinates to 0 if the completeness score meets the requirement.
+    * Top-left X-axis coordinate of the face box 
+-The face frame contains the facial feature locations and is expanded on this basis. If the face frame exceeds the image range, it can cause negative coordinate values. 
+-If you need to capture a complete face, you can set negative coordinates to 0 when the completeness meets the requirements.
     */
     @SerializedName("X")
     @Expose
     private Long X;
 
     /**
-    * Vertical coordinate of the top-left vertex of face frame. 
-The face frame encompasses the facial features and is extended accordingly. If it is larger than the image, the coordinates will be negative. 
-If you want to capture a complete face, you can set the negative coordinates to 0 if the completeness score meets the requirement.
+    * Top-left Y-axis coordinate of the face box 
+-The face frame contains the facial feature locations and is expanded on this basis. If the face frame exceeds the image range, it can cause negative coordinate values. 
+-If you need to capture a complete face, you can set negative coordinates to 0 when the completeness meets the requirements.
     */
     @SerializedName("Y")
     @Expose
     private Long Y;
 
     /**
-    * Face width
+    * Face width.
     */
     @SerializedName("Width")
     @Expose
     private Long Width;
 
     /**
-    * Face height
+    * Face height.
     */
     @SerializedName("Height")
     @Expose
     private Long Height;
 
     /**
-     * Get Horizontal coordinate of the top-left vertex of face frame. 
-The face frame encompasses the facial features and is extended accordingly. If it is larger than the image, the coordinates will be negative. 
-If you want to capture a complete face, you can set the negative coordinates to 0 if the completeness score meets the requirement. 
-     * @return X Horizontal coordinate of the top-left vertex of face frame. 
-The face frame encompasses the facial features and is extended accordingly. If it is larger than the image, the coordinates will be negative. 
-If you want to capture a complete face, you can set the negative coordinates to 0 if the completeness score meets the requirement.
+     * Get Top-left X-axis coordinate of the face box 
+-The face frame contains the facial feature locations and is expanded on this basis. If the face frame exceeds the image range, it can cause negative coordinate values. 
+-If you need to capture a complete face, you can set negative coordinates to 0 when the completeness meets the requirements. 
+     * @return X Top-left X-axis coordinate of the face box 
+-The face frame contains the facial feature locations and is expanded on this basis. If the face frame exceeds the image range, it can cause negative coordinate values. 
+-If you need to capture a complete face, you can set negative coordinates to 0 when the completeness meets the requirements.
      */
     public Long getX() {
         return this.X;
     }
 
     /**
-     * Set Horizontal coordinate of the top-left vertex of face frame. 
-The face frame encompasses the facial features and is extended accordingly. If it is larger than the image, the coordinates will be negative. 
-If you want to capture a complete face, you can set the negative coordinates to 0 if the completeness score meets the requirement.
-     * @param X Horizontal coordinate of the top-left vertex of face frame. 
-The face frame encompasses the facial features and is extended accordingly. If it is larger than the image, the coordinates will be negative. 
-If you want to capture a complete face, you can set the negative coordinates to 0 if the completeness score meets the requirement.
+     * Set Top-left X-axis coordinate of the face box 
+-The face frame contains the facial feature locations and is expanded on this basis. If the face frame exceeds the image range, it can cause negative coordinate values. 
+-If you need to capture a complete face, you can set negative coordinates to 0 when the completeness meets the requirements.
+     * @param X Top-left X-axis coordinate of the face box 
+-The face frame contains the facial feature locations and is expanded on this basis. If the face frame exceeds the image range, it can cause negative coordinate values. 
+-If you need to capture a complete face, you can set negative coordinates to 0 when the completeness meets the requirements.
      */
     public void setX(Long X) {
         this.X = X;
     }
 
     /**
-     * Get Vertical coordinate of the top-left vertex of face frame. 
-The face frame encompasses the facial features and is extended accordingly. If it is larger than the image, the coordinates will be negative. 
-If you want to capture a complete face, you can set the negative coordinates to 0 if the completeness score meets the requirement. 
-     * @return Y Vertical coordinate of the top-left vertex of face frame. 
-The face frame encompasses the facial features and is extended accordingly. If it is larger than the image, the coordinates will be negative. 
-If you want to capture a complete face, you can set the negative coordinates to 0 if the completeness score meets the requirement.
+     * Get Top-left Y-axis coordinate of the face box 
+-The face frame contains the facial feature locations and is expanded on this basis. If the face frame exceeds the image range, it can cause negative coordinate values. 
+-If you need to capture a complete face, you can set negative coordinates to 0 when the completeness meets the requirements. 
+     * @return Y Top-left Y-axis coordinate of the face box 
+-The face frame contains the facial feature locations and is expanded on this basis. If the face frame exceeds the image range, it can cause negative coordinate values. 
+-If you need to capture a complete face, you can set negative coordinates to 0 when the completeness meets the requirements.
      */
     public Long getY() {
         return this.Y;
     }
 
     /**
-     * Set Vertical coordinate of the top-left vertex of face frame. 
-The face frame encompasses the facial features and is extended accordingly. If it is larger than the image, the coordinates will be negative. 
-If you want to capture a complete face, you can set the negative coordinates to 0 if the completeness score meets the requirement.
-     * @param Y Vertical coordinate of the top-left vertex of face frame. 
-The face frame encompasses the facial features and is extended accordingly. If it is larger than the image, the coordinates will be negative. 
-If you want to capture a complete face, you can set the negative coordinates to 0 if the completeness score meets the requirement.
+     * Set Top-left Y-axis coordinate of the face box 
+-The face frame contains the facial feature locations and is expanded on this basis. If the face frame exceeds the image range, it can cause negative coordinate values. 
+-If you need to capture a complete face, you can set negative coordinates to 0 when the completeness meets the requirements.
+     * @param Y Top-left Y-axis coordinate of the face box 
+-The face frame contains the facial feature locations and is expanded on this basis. If the face frame exceeds the image range, it can cause negative coordinate values. 
+-If you need to capture a complete face, you can set negative coordinates to 0 when the completeness meets the requirements.
      */
     public void setY(Long Y) {
         this.Y = Y;
     }
 
     /**
-     * Get Face width 
-     * @return Width Face width
+     * Get Face width. 
+     * @return Width Face width.
      */
     public Long getWidth() {
         return this.Width;
     }
 
     /**
-     * Set Face width
-     * @param Width Face width
+     * Set Face width.
+     * @param Width Face width.
      */
     public void setWidth(Long Width) {
         this.Width = Width;
     }
 
     /**
-     * Get Face height 
-     * @return Height Face height
+     * Get Face height. 
+     * @return Height Face height.
      */
     public Long getHeight() {
         return this.Height;
     }
 
     /**
-     * Set Face height
-     * @param Height Face height
+     * Set Face height.
+     * @param Height Face height.
      */
     public void setHeight(Long Height) {
         this.Height = Height;

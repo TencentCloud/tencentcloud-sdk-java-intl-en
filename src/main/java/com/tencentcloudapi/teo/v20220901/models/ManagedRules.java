@@ -24,138 +24,161 @@ import java.util.HashMap;
 public class ManagedRules extends AbstractModel {
 
     /**
-    * The managed rule status. Values: <li>`on`: enabled, all managed rules take effect as configured;</li> <li>`off`: disabled, all managed rules do not take effect.</li>.
+    * <p>Whether managed rules are enabled. Valid values: <li>on: enabled. All managed rules take effect as configured.</li><li>off: disabled. No managed rules take effect.</li></p>
     */
     @SerializedName("Enabled")
     @Expose
     private String Enabled;
 
     /**
-    * Evaluation mode is enabled or not, it is valid only when the `Enabled` parameter is set to `on`. Values: <li>`on`: enabled, all managed rules take effect in `observe` mode.</li> <li>off: disabled, all managed rules take effect according to the specified configuration.</li>.
+    * <p>Whether evaluation mode is enabled. This parameter is valid only when the `Enabled` parameter is set to `on`. Valid values: <li>on: enabled. All managed rules take effect in observation mode.</li><li>off: disabled. All managed rules take effect as configured.</li></p>
     */
     @SerializedName("DetectionOnly")
     @Expose
     private String DetectionOnly;
 
     /**
-    * Managed rule semantic analysis is enabled or not, it is valid only when the `Enabled` parameter is `on`. Values: <li>`on`: enabled, perform semantic analysis  before processing requests;</li> <li>`off`: disabled, process requests directly without semantic analysis.</li> <br/>The default value is `off`.
+    * <p>Whether the deep analysis option for managed rules is enabled. This parameter is valid only when the `Enabled` parameter is set to `on`. Valid values: <li>on: enabled. Requests are processed after deep analysis.</li><li>off: disabled. Requests are processed directly without deep analysis.</li> <br>This parameter is to be deprecated. The switch for deep analysis rules is migrated to the `SemanticAnalysisRules.Enabled` parameter.</p>
     */
     @SerializedName("SemanticAnalysis")
     @Expose
     private String SemanticAnalysis;
 
     /**
-    * Managed rule automatic update option.
+    * <p>Deep analysis configuration option. Identifies malicious behaviors in requests (such as SQL injection and XSS attacks), and logs and blocks malicious requests.</p>
+    */
+    @SerializedName("SemanticAnalysisRules")
+    @Expose
+    private SemanticAnalysisRules SemanticAnalysisRules;
+
+    /**
+    * <p>Auto-update option for managed rules.</p>
     */
     @SerializedName("AutoUpdate")
     @Expose
     private ManagedRuleAutoUpdate AutoUpdate;
 
     /**
-    * Configuration of the managed rule group. If this structure is passed as an empty array or the GroupId is not included in the array, it will be processed based by default.
+    * <p>Configuration of managed rule groups. If an empty array is passed for this structure or `GroupId` is not included in the list, the default processing method is used.</p>
     */
     @SerializedName("ManagedRuleGroups")
     @Expose
     private ManagedRuleGroup [] ManagedRuleGroups;
 
     /**
-    * High-Frequency scan protection configuration option. when a visitor's frequent requests hit the managed rule configured as block within a period of time, all requests from that visitor are blocked.
+    * <p>High-frequency scan protection configuration option. When a visitor's requests frequently trigger managed rules configured as block, all requests from this visitor are blocked for a period of time.</p>
     */
     @SerializedName("FrequentScanningProtection")
     @Expose
     private FrequentScanningProtection FrequentScanningProtection;
 
     /**
-     * Get The managed rule status. Values: <li>`on`: enabled, all managed rules take effect as configured;</li> <li>`off`: disabled, all managed rules do not take effect.</li>. 
-     * @return Enabled The managed rule status. Values: <li>`on`: enabled, all managed rules take effect as configured;</li> <li>`off`: disabled, all managed rules do not take effect.</li>.
+     * Get <p>Whether managed rules are enabled. Valid values: <li>on: enabled. All managed rules take effect as configured.</li><li>off: disabled. No managed rules take effect.</li></p> 
+     * @return Enabled <p>Whether managed rules are enabled. Valid values: <li>on: enabled. All managed rules take effect as configured.</li><li>off: disabled. No managed rules take effect.</li></p>
      */
     public String getEnabled() {
         return this.Enabled;
     }
 
     /**
-     * Set The managed rule status. Values: <li>`on`: enabled, all managed rules take effect as configured;</li> <li>`off`: disabled, all managed rules do not take effect.</li>.
-     * @param Enabled The managed rule status. Values: <li>`on`: enabled, all managed rules take effect as configured;</li> <li>`off`: disabled, all managed rules do not take effect.</li>.
+     * Set <p>Whether managed rules are enabled. Valid values: <li>on: enabled. All managed rules take effect as configured.</li><li>off: disabled. No managed rules take effect.</li></p>
+     * @param Enabled <p>Whether managed rules are enabled. Valid values: <li>on: enabled. All managed rules take effect as configured.</li><li>off: disabled. No managed rules take effect.</li></p>
      */
     public void setEnabled(String Enabled) {
         this.Enabled = Enabled;
     }
 
     /**
-     * Get Evaluation mode is enabled or not, it is valid only when the `Enabled` parameter is set to `on`. Values: <li>`on`: enabled, all managed rules take effect in `observe` mode.</li> <li>off: disabled, all managed rules take effect according to the specified configuration.</li>. 
-     * @return DetectionOnly Evaluation mode is enabled or not, it is valid only when the `Enabled` parameter is set to `on`. Values: <li>`on`: enabled, all managed rules take effect in `observe` mode.</li> <li>off: disabled, all managed rules take effect according to the specified configuration.</li>.
+     * Get <p>Whether evaluation mode is enabled. This parameter is valid only when the `Enabled` parameter is set to `on`. Valid values: <li>on: enabled. All managed rules take effect in observation mode.</li><li>off: disabled. All managed rules take effect as configured.</li></p> 
+     * @return DetectionOnly <p>Whether evaluation mode is enabled. This parameter is valid only when the `Enabled` parameter is set to `on`. Valid values: <li>on: enabled. All managed rules take effect in observation mode.</li><li>off: disabled. All managed rules take effect as configured.</li></p>
      */
     public String getDetectionOnly() {
         return this.DetectionOnly;
     }
 
     /**
-     * Set Evaluation mode is enabled or not, it is valid only when the `Enabled` parameter is set to `on`. Values: <li>`on`: enabled, all managed rules take effect in `observe` mode.</li> <li>off: disabled, all managed rules take effect according to the specified configuration.</li>.
-     * @param DetectionOnly Evaluation mode is enabled or not, it is valid only when the `Enabled` parameter is set to `on`. Values: <li>`on`: enabled, all managed rules take effect in `observe` mode.</li> <li>off: disabled, all managed rules take effect according to the specified configuration.</li>.
+     * Set <p>Whether evaluation mode is enabled. This parameter is valid only when the `Enabled` parameter is set to `on`. Valid values: <li>on: enabled. All managed rules take effect in observation mode.</li><li>off: disabled. All managed rules take effect as configured.</li></p>
+     * @param DetectionOnly <p>Whether evaluation mode is enabled. This parameter is valid only when the `Enabled` parameter is set to `on`. Valid values: <li>on: enabled. All managed rules take effect in observation mode.</li><li>off: disabled. All managed rules take effect as configured.</li></p>
      */
     public void setDetectionOnly(String DetectionOnly) {
         this.DetectionOnly = DetectionOnly;
     }
 
     /**
-     * Get Managed rule semantic analysis is enabled or not, it is valid only when the `Enabled` parameter is `on`. Values: <li>`on`: enabled, perform semantic analysis  before processing requests;</li> <li>`off`: disabled, process requests directly without semantic analysis.</li> <br/>The default value is `off`. 
-     * @return SemanticAnalysis Managed rule semantic analysis is enabled or not, it is valid only when the `Enabled` parameter is `on`. Values: <li>`on`: enabled, perform semantic analysis  before processing requests;</li> <li>`off`: disabled, process requests directly without semantic analysis.</li> <br/>The default value is `off`.
+     * Get <p>Whether the deep analysis option for managed rules is enabled. This parameter is valid only when the `Enabled` parameter is set to `on`. Valid values: <li>on: enabled. Requests are processed after deep analysis.</li><li>off: disabled. Requests are processed directly without deep analysis.</li> <br>This parameter is to be deprecated. The switch for deep analysis rules is migrated to the `SemanticAnalysisRules.Enabled` parameter.</p> 
+     * @return SemanticAnalysis <p>Whether the deep analysis option for managed rules is enabled. This parameter is valid only when the `Enabled` parameter is set to `on`. Valid values: <li>on: enabled. Requests are processed after deep analysis.</li><li>off: disabled. Requests are processed directly without deep analysis.</li> <br>This parameter is to be deprecated. The switch for deep analysis rules is migrated to the `SemanticAnalysisRules.Enabled` parameter.</p>
      */
     public String getSemanticAnalysis() {
         return this.SemanticAnalysis;
     }
 
     /**
-     * Set Managed rule semantic analysis is enabled or not, it is valid only when the `Enabled` parameter is `on`. Values: <li>`on`: enabled, perform semantic analysis  before processing requests;</li> <li>`off`: disabled, process requests directly without semantic analysis.</li> <br/>The default value is `off`.
-     * @param SemanticAnalysis Managed rule semantic analysis is enabled or not, it is valid only when the `Enabled` parameter is `on`. Values: <li>`on`: enabled, perform semantic analysis  before processing requests;</li> <li>`off`: disabled, process requests directly without semantic analysis.</li> <br/>The default value is `off`.
+     * Set <p>Whether the deep analysis option for managed rules is enabled. This parameter is valid only when the `Enabled` parameter is set to `on`. Valid values: <li>on: enabled. Requests are processed after deep analysis.</li><li>off: disabled. Requests are processed directly without deep analysis.</li> <br>This parameter is to be deprecated. The switch for deep analysis rules is migrated to the `SemanticAnalysisRules.Enabled` parameter.</p>
+     * @param SemanticAnalysis <p>Whether the deep analysis option for managed rules is enabled. This parameter is valid only when the `Enabled` parameter is set to `on`. Valid values: <li>on: enabled. Requests are processed after deep analysis.</li><li>off: disabled. Requests are processed directly without deep analysis.</li> <br>This parameter is to be deprecated. The switch for deep analysis rules is migrated to the `SemanticAnalysisRules.Enabled` parameter.</p>
      */
     public void setSemanticAnalysis(String SemanticAnalysis) {
         this.SemanticAnalysis = SemanticAnalysis;
     }
 
     /**
-     * Get Managed rule automatic update option. 
-     * @return AutoUpdate Managed rule automatic update option.
+     * Get <p>Deep analysis configuration option. Identifies malicious behaviors in requests (such as SQL injection and XSS attacks), and logs and blocks malicious requests.</p> 
+     * @return SemanticAnalysisRules <p>Deep analysis configuration option. Identifies malicious behaviors in requests (such as SQL injection and XSS attacks), and logs and blocks malicious requests.</p>
+     */
+    public SemanticAnalysisRules getSemanticAnalysisRules() {
+        return this.SemanticAnalysisRules;
+    }
+
+    /**
+     * Set <p>Deep analysis configuration option. Identifies malicious behaviors in requests (such as SQL injection and XSS attacks), and logs and blocks malicious requests.</p>
+     * @param SemanticAnalysisRules <p>Deep analysis configuration option. Identifies malicious behaviors in requests (such as SQL injection and XSS attacks), and logs and blocks malicious requests.</p>
+     */
+    public void setSemanticAnalysisRules(SemanticAnalysisRules SemanticAnalysisRules) {
+        this.SemanticAnalysisRules = SemanticAnalysisRules;
+    }
+
+    /**
+     * Get <p>Auto-update option for managed rules.</p> 
+     * @return AutoUpdate <p>Auto-update option for managed rules.</p>
      */
     public ManagedRuleAutoUpdate getAutoUpdate() {
         return this.AutoUpdate;
     }
 
     /**
-     * Set Managed rule automatic update option.
-     * @param AutoUpdate Managed rule automatic update option.
+     * Set <p>Auto-update option for managed rules.</p>
+     * @param AutoUpdate <p>Auto-update option for managed rules.</p>
      */
     public void setAutoUpdate(ManagedRuleAutoUpdate AutoUpdate) {
         this.AutoUpdate = AutoUpdate;
     }
 
     /**
-     * Get Configuration of the managed rule group. If this structure is passed as an empty array or the GroupId is not included in the array, it will be processed based by default. 
-     * @return ManagedRuleGroups Configuration of the managed rule group. If this structure is passed as an empty array or the GroupId is not included in the array, it will be processed based by default.
+     * Get <p>Configuration of managed rule groups. If an empty array is passed for this structure or `GroupId` is not included in the list, the default processing method is used.</p> 
+     * @return ManagedRuleGroups <p>Configuration of managed rule groups. If an empty array is passed for this structure or `GroupId` is not included in the list, the default processing method is used.</p>
      */
     public ManagedRuleGroup [] getManagedRuleGroups() {
         return this.ManagedRuleGroups;
     }
 
     /**
-     * Set Configuration of the managed rule group. If this structure is passed as an empty array or the GroupId is not included in the array, it will be processed based by default.
-     * @param ManagedRuleGroups Configuration of the managed rule group. If this structure is passed as an empty array or the GroupId is not included in the array, it will be processed based by default.
+     * Set <p>Configuration of managed rule groups. If an empty array is passed for this structure or `GroupId` is not included in the list, the default processing method is used.</p>
+     * @param ManagedRuleGroups <p>Configuration of managed rule groups. If an empty array is passed for this structure or `GroupId` is not included in the list, the default processing method is used.</p>
      */
     public void setManagedRuleGroups(ManagedRuleGroup [] ManagedRuleGroups) {
         this.ManagedRuleGroups = ManagedRuleGroups;
     }
 
     /**
-     * Get High-Frequency scan protection configuration option. when a visitor's frequent requests hit the managed rule configured as block within a period of time, all requests from that visitor are blocked. 
-     * @return FrequentScanningProtection High-Frequency scan protection configuration option. when a visitor's frequent requests hit the managed rule configured as block within a period of time, all requests from that visitor are blocked.
+     * Get <p>High-frequency scan protection configuration option. When a visitor's requests frequently trigger managed rules configured as block, all requests from this visitor are blocked for a period of time.</p> 
+     * @return FrequentScanningProtection <p>High-frequency scan protection configuration option. When a visitor's requests frequently trigger managed rules configured as block, all requests from this visitor are blocked for a period of time.</p>
      */
     public FrequentScanningProtection getFrequentScanningProtection() {
         return this.FrequentScanningProtection;
     }
 
     /**
-     * Set High-Frequency scan protection configuration option. when a visitor's frequent requests hit the managed rule configured as block within a period of time, all requests from that visitor are blocked.
-     * @param FrequentScanningProtection High-Frequency scan protection configuration option. when a visitor's frequent requests hit the managed rule configured as block within a period of time, all requests from that visitor are blocked.
+     * Set <p>High-frequency scan protection configuration option. When a visitor's requests frequently trigger managed rules configured as block, all requests from this visitor are blocked for a period of time.</p>
+     * @param FrequentScanningProtection <p>High-frequency scan protection configuration option. When a visitor's requests frequently trigger managed rules configured as block, all requests from this visitor are blocked for a period of time.</p>
      */
     public void setFrequentScanningProtection(FrequentScanningProtection FrequentScanningProtection) {
         this.FrequentScanningProtection = FrequentScanningProtection;
@@ -177,6 +200,9 @@ public class ManagedRules extends AbstractModel {
         }
         if (source.SemanticAnalysis != null) {
             this.SemanticAnalysis = new String(source.SemanticAnalysis);
+        }
+        if (source.SemanticAnalysisRules != null) {
+            this.SemanticAnalysisRules = new SemanticAnalysisRules(source.SemanticAnalysisRules);
         }
         if (source.AutoUpdate != null) {
             this.AutoUpdate = new ManagedRuleAutoUpdate(source.AutoUpdate);
@@ -200,6 +226,7 @@ public class ManagedRules extends AbstractModel {
         this.setParamSimple(map, prefix + "Enabled", this.Enabled);
         this.setParamSimple(map, prefix + "DetectionOnly", this.DetectionOnly);
         this.setParamSimple(map, prefix + "SemanticAnalysis", this.SemanticAnalysis);
+        this.setParamObj(map, prefix + "SemanticAnalysisRules.", this.SemanticAnalysisRules);
         this.setParamObj(map, prefix + "AutoUpdate.", this.AutoUpdate);
         this.setParamArrayObj(map, prefix + "ManagedRuleGroups.", this.ManagedRuleGroups);
         this.setParamObj(map, prefix + "FrequentScanningProtection.", this.FrequentScanningProtection);

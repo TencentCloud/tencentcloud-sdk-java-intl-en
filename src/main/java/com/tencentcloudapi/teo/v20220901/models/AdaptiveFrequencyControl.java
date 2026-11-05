@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class AdaptiveFrequencyControl extends AbstractModel {
 
     /**
-    * Whether adaptive frequency control is enabled. valid values: <li>on: enable;</li> <li>off: disable.</li>.
+    * Whether adaptive frequency control is enabled. Valid values: <li>on: enabled;</li><li>off: disabled.</li>
     */
     @SerializedName("Enabled")
     @Expose
     private String Enabled;
 
     /**
-    * Rule ID of adaptive frequency control, returned as an output parameter.
+    * Rule ID of adaptive frequency control, returned only as an output parameter.
     */
     @SerializedName("Id")
     @Expose
     private String Id;
 
     /**
-    * The restriction level of adaptive frequency control. required when Enabled is on. valid values: <li>Loose: Loose</li><li>Moderate: Moderate</li><li>Strict: Strict</li>.
+    * The limitation level of adaptive frequency control. This field is required when Enabled is on. Valid values: <li>Loose: loose;</li><li>Moderate: moderate;</li><li>Strict: strict.</li>
     */
     @SerializedName("Sensitivity")
     @Expose
     private String Sensitivity;
 
     /**
-    * The handling method of adaptive frequency control. this field is required when Enabled is on. valid values for SecurityAction Name: <li>Monitor: observation;</li> <li>Deny: block;</li> <li>Challenge: Challenge, where ChallengeActionParameters.Name only supports JSChallenge.</li>.
+    * Handling method of adaptive frequency control. This field is required when Enabled is on. Supported values for SecurityAction Name: <li>Monitor: monitor;</li><li>Deny: block;</li><li>Challenge: challenge. ChallengeActionParameters.Name only supports JSChallenge.</li>
     */
     @SerializedName("Action")
     @Expose
     private SecurityAction Action;
 
     /**
-     * Get Whether adaptive frequency control is enabled. valid values: <li>on: enable;</li> <li>off: disable.</li>. 
-     * @return Enabled Whether adaptive frequency control is enabled. valid values: <li>on: enable;</li> <li>off: disable.</li>.
+     * Get Whether adaptive frequency control is enabled. Valid values: <li>on: enabled;</li><li>off: disabled.</li> 
+     * @return Enabled Whether adaptive frequency control is enabled. Valid values: <li>on: enabled;</li><li>off: disabled.</li>
      */
     public String getEnabled() {
         return this.Enabled;
     }
 
     /**
-     * Set Whether adaptive frequency control is enabled. valid values: <li>on: enable;</li> <li>off: disable.</li>.
-     * @param Enabled Whether adaptive frequency control is enabled. valid values: <li>on: enable;</li> <li>off: disable.</li>.
+     * Set Whether adaptive frequency control is enabled. Valid values: <li>on: enabled;</li><li>off: disabled.</li>
+     * @param Enabled Whether adaptive frequency control is enabled. Valid values: <li>on: enabled;</li><li>off: disabled.</li>
      */
     public void setEnabled(String Enabled) {
         this.Enabled = Enabled;
     }
 
     /**
-     * Get Rule ID of adaptive frequency control, returned as an output parameter. 
-     * @return Id Rule ID of adaptive frequency control, returned as an output parameter.
+     * Get Rule ID of adaptive frequency control, returned only as an output parameter. 
+     * @return Id Rule ID of adaptive frequency control, returned only as an output parameter.
      */
     public String getId() {
         return this.Id;
     }
 
     /**
-     * Set Rule ID of adaptive frequency control, returned as an output parameter.
-     * @param Id Rule ID of adaptive frequency control, returned as an output parameter.
+     * Set Rule ID of adaptive frequency control, returned only as an output parameter.
+     * @param Id Rule ID of adaptive frequency control, returned only as an output parameter.
      */
     public void setId(String Id) {
         this.Id = Id;
     }
 
     /**
-     * Get The restriction level of adaptive frequency control. required when Enabled is on. valid values: <li>Loose: Loose</li><li>Moderate: Moderate</li><li>Strict: Strict</li>. 
-     * @return Sensitivity The restriction level of adaptive frequency control. required when Enabled is on. valid values: <li>Loose: Loose</li><li>Moderate: Moderate</li><li>Strict: Strict</li>.
+     * Get The limitation level of adaptive frequency control. This field is required when Enabled is on. Valid values: <li>Loose: loose;</li><li>Moderate: moderate;</li><li>Strict: strict.</li> 
+     * @return Sensitivity The limitation level of adaptive frequency control. This field is required when Enabled is on. Valid values: <li>Loose: loose;</li><li>Moderate: moderate;</li><li>Strict: strict.</li>
      */
     public String getSensitivity() {
         return this.Sensitivity;
     }
 
     /**
-     * Set The restriction level of adaptive frequency control. required when Enabled is on. valid values: <li>Loose: Loose</li><li>Moderate: Moderate</li><li>Strict: Strict</li>.
-     * @param Sensitivity The restriction level of adaptive frequency control. required when Enabled is on. valid values: <li>Loose: Loose</li><li>Moderate: Moderate</li><li>Strict: Strict</li>.
+     * Set The limitation level of adaptive frequency control. This field is required when Enabled is on. Valid values: <li>Loose: loose;</li><li>Moderate: moderate;</li><li>Strict: strict.</li>
+     * @param Sensitivity The limitation level of adaptive frequency control. This field is required when Enabled is on. Valid values: <li>Loose: loose;</li><li>Moderate: moderate;</li><li>Strict: strict.</li>
      */
     public void setSensitivity(String Sensitivity) {
         this.Sensitivity = Sensitivity;
     }
 
     /**
-     * Get The handling method of adaptive frequency control. this field is required when Enabled is on. valid values for SecurityAction Name: <li>Monitor: observation;</li> <li>Deny: block;</li> <li>Challenge: Challenge, where ChallengeActionParameters.Name only supports JSChallenge.</li>. 
-     * @return Action The handling method of adaptive frequency control. this field is required when Enabled is on. valid values for SecurityAction Name: <li>Monitor: observation;</li> <li>Deny: block;</li> <li>Challenge: Challenge, where ChallengeActionParameters.Name only supports JSChallenge.</li>.
+     * Get Handling method of adaptive frequency control. This field is required when Enabled is on. Supported values for SecurityAction Name: <li>Monitor: monitor;</li><li>Deny: block;</li><li>Challenge: challenge. ChallengeActionParameters.Name only supports JSChallenge.</li> 
+     * @return Action Handling method of adaptive frequency control. This field is required when Enabled is on. Supported values for SecurityAction Name: <li>Monitor: monitor;</li><li>Deny: block;</li><li>Challenge: challenge. ChallengeActionParameters.Name only supports JSChallenge.</li>
      */
     public SecurityAction getAction() {
         return this.Action;
     }
 
     /**
-     * Set The handling method of adaptive frequency control. this field is required when Enabled is on. valid values for SecurityAction Name: <li>Monitor: observation;</li> <li>Deny: block;</li> <li>Challenge: Challenge, where ChallengeActionParameters.Name only supports JSChallenge.</li>.
-     * @param Action The handling method of adaptive frequency control. this field is required when Enabled is on. valid values for SecurityAction Name: <li>Monitor: observation;</li> <li>Deny: block;</li> <li>Challenge: Challenge, where ChallengeActionParameters.Name only supports JSChallenge.</li>.
+     * Set Handling method of adaptive frequency control. This field is required when Enabled is on. Supported values for SecurityAction Name: <li>Monitor: monitor;</li><li>Deny: block;</li><li>Challenge: challenge. ChallengeActionParameters.Name only supports JSChallenge.</li>
+     * @param Action Handling method of adaptive frequency control. This field is required when Enabled is on. Supported values for SecurityAction Name: <li>Monitor: monitor;</li><li>Deny: block;</li><li>Challenge: challenge. ChallengeActionParameters.Name only supports JSChallenge.</li>
      */
     public void setAction(SecurityAction Action) {
         this.Action = Action;
