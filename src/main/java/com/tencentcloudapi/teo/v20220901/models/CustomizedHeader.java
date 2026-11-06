@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class CustomizedHeader extends AbstractModel {
 
     /**
-    * Specifies the custom header Key.
+    * Custom header Key.
     */
     @SerializedName("Key")
     @Expose
     private String Key;
 
     /**
-    * Set custom headers Value.
+    * Value of the custom header.
     */
     @SerializedName("Value")
     @Expose
     private String Value;
 
     /**
-     * Get Specifies the custom header Key. 
-     * @return Key Specifies the custom header Key.
+     * Get Custom header Key. 
+     * @return Key Custom header Key.
      */
     public String getKey() {
         return this.Key;
     }
 
     /**
-     * Set Specifies the custom header Key.
-     * @param Key Specifies the custom header Key.
+     * Set Custom header Key.
+     * @param Key Custom header Key.
      */
     public void setKey(String Key) {
         this.Key = Key;
     }
 
     /**
-     * Get Set custom headers Value. 
-     * @return Value Set custom headers Value.
+     * Get Value of the custom header. 
+     * @return Value Value of the custom header.
      */
     public String getValue() {
         return this.Value;
     }
 
     /**
-     * Set Set custom headers Value.
-     * @param Value Set custom headers Value.
+     * Set Value of the custom header.
+     * @param Value Value of the custom header.
      */
     public void setValue(String Value) {
         this.Value = Value;

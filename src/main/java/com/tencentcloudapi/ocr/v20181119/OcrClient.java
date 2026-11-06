@@ -241,7 +241,7 @@ This API is used to set the default request rate limit to 5 requests/second.
     }
 
     /**
-     *This interface supports identification of the front and back of Brazilian ID license. The identification fields include name, driver's license category, number, validity period, etc.
+     *This interface supports recognition of both the front and back sides of Brazilian ID cards. Default API request rate limit: 5 requests per second.
      * @param req RecognizeBrazilIDCardOCRRequest
      * @return RecognizeBrazilIDCardOCRResponse
      * @throws TencentCloudSDKException
