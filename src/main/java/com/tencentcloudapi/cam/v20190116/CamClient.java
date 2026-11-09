@@ -458,6 +458,17 @@ Calling this API is a high-risk operation because the key cannot be recovered on
     }
 
     /**
+     *Generate an OIDC access token. This feature is in grayscale stage. Contact Tencent Cloud if needed.
+     * @param req GenerateOIDCAccessTokenRequest
+     * @return GenerateOIDCAccessTokenResponse
+     * @throws TencentCloudSDKException
+     */
+    public GenerateOIDCAccessTokenResponse GenerateOIDCAccessToken(GenerateOIDCAccessTokenRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GenerateOIDCAccessToken", GenerateOIDCAccessTokenResponse.class);
+    }
+
+    /**
      *This API is used to query account summary. 
      * @param req GetAccountSummaryRequest
      * @return GetAccountSummaryResponse

@@ -24,13 +24,6 @@ import java.util.HashMap;
 public class UpdateAigcApiTokenRequest extends AbstractModel {
 
     /**
-    * <p><b>Video-on-demand <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be filled in as the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
-    */
-    @SerializedName("SubAppId")
-    @Expose
-    private Long SubAppId;
-
-    /**
     * <p>To update the Api Key</p>
     */
     @SerializedName("ApiToken")
@@ -38,34 +31,25 @@ public class UpdateAigcApiTokenRequest extends AbstractModel {
     private String ApiToken;
 
     /**
-    * <p>Merge (default, merge the ExtInfo JSON by top-level key), Overwrite (direct overwrite)</p>
+    * <p><b>On-demand <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
+    */
+    @SerializedName("SubAppId")
+    @Expose
+    private Long SubAppId;
+
+    /**
+    * <p>Merge (default, merge ExtInfo JSON by top-level key), Overwrite (direct overwrite)</p>
     */
     @SerializedName("ActionType")
     @Expose
     private String ActionType;
 
     /**
-    * <p>Extended information of the token</p>
+    * <p>The ip allowlist and model allowlist are stored in ExtInfo in json format, with the following fields:</p><p>(1) ip allowlist<br>&quot;ip&quot;: {&quot;127.0.0.1&quot;:true}<br>Not enabled: &quot;ip&quot;: {}<br>Multiple groups: {&quot;&#39;11.12.112.90&quot;:true,&quot;15.12.112.90&quot;:true}</p><p>(2) model allowlist<br>&quot;model&quot;: {&quot;deepseek-v4-pro&quot;:true}<br>Not enabled: &quot;model&quot;: {}</p><p>(3) name<br>&quot;name&quot;: &quot;test&quot;</p>
     */
     @SerializedName("ExtInfo")
     @Expose
     private String ExtInfo;
-
-    /**
-     * Get <p><b>Video-on-demand <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be filled in as the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p> 
-     * @return SubAppId <p><b>Video-on-demand <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be filled in as the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
-     */
-    public Long getSubAppId() {
-        return this.SubAppId;
-    }
-
-    /**
-     * Set <p><b>Video-on-demand <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be filled in as the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
-     * @param SubAppId <p><b>Video-on-demand <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be filled in as the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
-     */
-    public void setSubAppId(Long SubAppId) {
-        this.SubAppId = SubAppId;
-    }
 
     /**
      * Get <p>To update the Api Key</p> 
@@ -84,32 +68,48 @@ public class UpdateAigcApiTokenRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>Merge (default, merge the ExtInfo JSON by top-level key), Overwrite (direct overwrite)</p> 
-     * @return ActionType <p>Merge (default, merge the ExtInfo JSON by top-level key), Overwrite (direct overwrite)</p>
+     * Get <p><b>On-demand <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p> 
+     * @return SubAppId <p><b>On-demand <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
+     */
+    public Long getSubAppId() {
+        return this.SubAppId;
+    }
+
+    /**
+     * Set <p><b>On-demand <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
+     * @param SubAppId <p><b>On-demand <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
+     */
+    public void setSubAppId(Long SubAppId) {
+        this.SubAppId = SubAppId;
+    }
+
+    /**
+     * Get <p>Merge (default, merge ExtInfo JSON by top-level key), Overwrite (direct overwrite)</p> 
+     * @return ActionType <p>Merge (default, merge ExtInfo JSON by top-level key), Overwrite (direct overwrite)</p>
      */
     public String getActionType() {
         return this.ActionType;
     }
 
     /**
-     * Set <p>Merge (default, merge the ExtInfo JSON by top-level key), Overwrite (direct overwrite)</p>
-     * @param ActionType <p>Merge (default, merge the ExtInfo JSON by top-level key), Overwrite (direct overwrite)</p>
+     * Set <p>Merge (default, merge ExtInfo JSON by top-level key), Overwrite (direct overwrite)</p>
+     * @param ActionType <p>Merge (default, merge ExtInfo JSON by top-level key), Overwrite (direct overwrite)</p>
      */
     public void setActionType(String ActionType) {
         this.ActionType = ActionType;
     }
 
     /**
-     * Get <p>Extended information of the token</p> 
-     * @return ExtInfo <p>Extended information of the token</p>
+     * Get <p>The ip allowlist and model allowlist are stored in ExtInfo in json format, with the following fields:</p><p>(1) ip allowlist<br>&quot;ip&quot;: {&quot;127.0.0.1&quot;:true}<br>Not enabled: &quot;ip&quot;: {}<br>Multiple groups: {&quot;&#39;11.12.112.90&quot;:true,&quot;15.12.112.90&quot;:true}</p><p>(2) model allowlist<br>&quot;model&quot;: {&quot;deepseek-v4-pro&quot;:true}<br>Not enabled: &quot;model&quot;: {}</p><p>(3) name<br>&quot;name&quot;: &quot;test&quot;</p> 
+     * @return ExtInfo <p>The ip allowlist and model allowlist are stored in ExtInfo in json format, with the following fields:</p><p>(1) ip allowlist<br>&quot;ip&quot;: {&quot;127.0.0.1&quot;:true}<br>Not enabled: &quot;ip&quot;: {}<br>Multiple groups: {&quot;&#39;11.12.112.90&quot;:true,&quot;15.12.112.90&quot;:true}</p><p>(2) model allowlist<br>&quot;model&quot;: {&quot;deepseek-v4-pro&quot;:true}<br>Not enabled: &quot;model&quot;: {}</p><p>(3) name<br>&quot;name&quot;: &quot;test&quot;</p>
      */
     public String getExtInfo() {
         return this.ExtInfo;
     }
 
     /**
-     * Set <p>Extended information of the token</p>
-     * @param ExtInfo <p>Extended information of the token</p>
+     * Set <p>The ip allowlist and model allowlist are stored in ExtInfo in json format, with the following fields:</p><p>(1) ip allowlist<br>&quot;ip&quot;: {&quot;127.0.0.1&quot;:true}<br>Not enabled: &quot;ip&quot;: {}<br>Multiple groups: {&quot;&#39;11.12.112.90&quot;:true,&quot;15.12.112.90&quot;:true}</p><p>(2) model allowlist<br>&quot;model&quot;: {&quot;deepseek-v4-pro&quot;:true}<br>Not enabled: &quot;model&quot;: {}</p><p>(3) name<br>&quot;name&quot;: &quot;test&quot;</p>
+     * @param ExtInfo <p>The ip allowlist and model allowlist are stored in ExtInfo in json format, with the following fields:</p><p>(1) ip allowlist<br>&quot;ip&quot;: {&quot;127.0.0.1&quot;:true}<br>Not enabled: &quot;ip&quot;: {}<br>Multiple groups: {&quot;&#39;11.12.112.90&quot;:true,&quot;15.12.112.90&quot;:true}</p><p>(2) model allowlist<br>&quot;model&quot;: {&quot;deepseek-v4-pro&quot;:true}<br>Not enabled: &quot;model&quot;: {}</p><p>(3) name<br>&quot;name&quot;: &quot;test&quot;</p>
      */
     public void setExtInfo(String ExtInfo) {
         this.ExtInfo = ExtInfo;
@@ -123,11 +123,11 @@ public class UpdateAigcApiTokenRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public UpdateAigcApiTokenRequest(UpdateAigcApiTokenRequest source) {
-        if (source.SubAppId != null) {
-            this.SubAppId = new Long(source.SubAppId);
-        }
         if (source.ApiToken != null) {
             this.ApiToken = new String(source.ApiToken);
+        }
+        if (source.SubAppId != null) {
+            this.SubAppId = new Long(source.SubAppId);
         }
         if (source.ActionType != null) {
             this.ActionType = new String(source.ActionType);
@@ -142,8 +142,8 @@ public class UpdateAigcApiTokenRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
         this.setParamSimple(map, prefix + "ApiToken", this.ApiToken);
+        this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
         this.setParamSimple(map, prefix + "ActionType", this.ActionType);
         this.setParamSimple(map, prefix + "ExtInfo", this.ExtInfo);
 
