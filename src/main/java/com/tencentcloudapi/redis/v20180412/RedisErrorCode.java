@@ -78,6 +78,9 @@ public enum RedisErrorCode {
      /* Internal error. */
      INTERNALERROR_INTERNALERROR("InternalError.InternalError"),
      
+     /* Query request failed */
+     INTERNALERROR_INTERNALHTTPSERVERERROR("InternalError.InternalHttpServerError"),
+     
      /* An error occurred while obtaining the list of instances. Try again later. */
      INTERNALERROR_LISTINSTANCESERROR("InternalError.ListInstancesError"),
      

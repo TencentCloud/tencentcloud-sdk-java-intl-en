@@ -24,28 +24,28 @@ import java.util.HashMap;
 public class ModifyAutoBackupConfigResponse extends AbstractModel {
 
     /**
-    * Automatic backup type.  Valid value:  `1` (scheduled backup).
+    * <p>Automatic backup type. Currently, it can only be configured as: 1, scheduled backup.</p>
     */
     @SerializedName("AutoBackupType")
     @Expose
     private Long AutoBackupType;
 
     /**
-    * Automatic backup cycle. Valid values: `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday`, `Saturday`, `Sunday`.
+    * <p>Automatic backup cycle. Value: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday.</p>
     */
     @SerializedName("WeekDays")
     @Expose
     private String [] WeekDays;
 
     /**
-    * Time period for automatic scheduled backup  in the format of  “00:00-01:00, 01:00-02:00...... 23:00-00:00”.
+    * <p>Automatic scheduled backup time period. Format: 00:00-01:00, 01:00-02:00...... 23:00-00:00.</p>
     */
     @SerializedName("TimePeriod")
     @Expose
     private String TimePeriod;
 
     /**
-    * Retention time of full backup files in days
+    * <p>Number of days to save full backup files, in days.</p>
     */
     @SerializedName("BackupStorageDays")
     @Expose
@@ -59,64 +59,64 @@ public class ModifyAutoBackupConfigResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Automatic backup type.  Valid value:  `1` (scheduled backup). 
-     * @return AutoBackupType Automatic backup type.  Valid value:  `1` (scheduled backup).
+     * Get <p>Automatic backup type. Currently, it can only be configured as: 1, scheduled backup.</p> 
+     * @return AutoBackupType <p>Automatic backup type. Currently, it can only be configured as: 1, scheduled backup.</p>
      */
     public Long getAutoBackupType() {
         return this.AutoBackupType;
     }
 
     /**
-     * Set Automatic backup type.  Valid value:  `1` (scheduled backup).
-     * @param AutoBackupType Automatic backup type.  Valid value:  `1` (scheduled backup).
+     * Set <p>Automatic backup type. Currently, it can only be configured as: 1, scheduled backup.</p>
+     * @param AutoBackupType <p>Automatic backup type. Currently, it can only be configured as: 1, scheduled backup.</p>
      */
     public void setAutoBackupType(Long AutoBackupType) {
         this.AutoBackupType = AutoBackupType;
     }
 
     /**
-     * Get Automatic backup cycle. Valid values: `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday`, `Saturday`, `Sunday`. 
-     * @return WeekDays Automatic backup cycle. Valid values: `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday`, `Saturday`, `Sunday`.
+     * Get <p>Automatic backup cycle. Value: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday.</p> 
+     * @return WeekDays <p>Automatic backup cycle. Value: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday.</p>
      */
     public String [] getWeekDays() {
         return this.WeekDays;
     }
 
     /**
-     * Set Automatic backup cycle. Valid values: `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday`, `Saturday`, `Sunday`.
-     * @param WeekDays Automatic backup cycle. Valid values: `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday`, `Saturday`, `Sunday`.
+     * Set <p>Automatic backup cycle. Value: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday.</p>
+     * @param WeekDays <p>Automatic backup cycle. Value: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday.</p>
      */
     public void setWeekDays(String [] WeekDays) {
         this.WeekDays = WeekDays;
     }
 
     /**
-     * Get Time period for automatic scheduled backup  in the format of  “00:00-01:00, 01:00-02:00...... 23:00-00:00”. 
-     * @return TimePeriod Time period for automatic scheduled backup  in the format of  “00:00-01:00, 01:00-02:00...... 23:00-00:00”.
+     * Get <p>Automatic scheduled backup time period. Format: 00:00-01:00, 01:00-02:00...... 23:00-00:00.</p> 
+     * @return TimePeriod <p>Automatic scheduled backup time period. Format: 00:00-01:00, 01:00-02:00...... 23:00-00:00.</p>
      */
     public String getTimePeriod() {
         return this.TimePeriod;
     }
 
     /**
-     * Set Time period for automatic scheduled backup  in the format of  “00:00-01:00, 01:00-02:00...... 23:00-00:00”.
-     * @param TimePeriod Time period for automatic scheduled backup  in the format of  “00:00-01:00, 01:00-02:00...... 23:00-00:00”.
+     * Set <p>Automatic scheduled backup time period. Format: 00:00-01:00, 01:00-02:00...... 23:00-00:00.</p>
+     * @param TimePeriod <p>Automatic scheduled backup time period. Format: 00:00-01:00, 01:00-02:00...... 23:00-00:00.</p>
      */
     public void setTimePeriod(String TimePeriod) {
         this.TimePeriod = TimePeriod;
     }
 
     /**
-     * Get Retention time of full backup files in days 
-     * @return BackupStorageDays Retention time of full backup files in days
+     * Get <p>Number of days to save full backup files, in days.</p> 
+     * @return BackupStorageDays <p>Number of days to save full backup files, in days.</p>
      */
     public Long getBackupStorageDays() {
         return this.BackupStorageDays;
     }
 
     /**
-     * Set Retention time of full backup files in days
-     * @param BackupStorageDays Retention time of full backup files in days
+     * Set <p>Number of days to save full backup files, in days.</p>
+     * @param BackupStorageDays <p>Number of days to save full backup files, in days.</p>
      */
     public void setBackupStorageDays(Long BackupStorageDays) {
         this.BackupStorageDays = BackupStorageDays;

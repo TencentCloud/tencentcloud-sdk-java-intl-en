@@ -127,6 +127,17 @@ public class KmsClient extends AbstractClient{
     }
 
     /**
+     *This API is used to purchase and activate the KMS service.
+     * @param req CreateKmsInstanceRequest
+     * @return CreateKmsInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateKmsInstanceResponse CreateKmsInstance(CreateKmsInstanceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateKmsInstance", CreateKmsInstanceResponse.class);
+    }
+
+    /**
      *This API is used to create a white-box key. Up to 50 ones can be created.
      * @param req CreateWhiteBoxKeyRequest
      * @return CreateWhiteBoxKeyResponse

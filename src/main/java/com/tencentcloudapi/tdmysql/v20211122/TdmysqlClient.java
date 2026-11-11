@@ -468,6 +468,17 @@ public class TdmysqlClient extends AbstractClient{
     }
 
     /**
+     *This API is used to modify instance configurations. It combines the ability to vertically and horizontally modify instances, and supports composite modifications of CPU, memory, disk, number of nodes, availability zone, and storage type. It supports DryRun precheck mode, allowing you to obtain the modification plan without actual execution.
+     * @param req ModifyDBInstanceRequest
+     * @return ModifyDBInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDBInstanceResponse ModifyDBInstance(ModifyDBInstanceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyDBInstance", ModifyDBInstanceResponse.class);
+    }
+
+    /**
      *This API is used to modify cloud database security groups.
      * @param req ModifyDBInstanceSecurityGroupsRequest
      * @return ModifyDBInstanceSecurityGroupsResponse

@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class SignByAsymmetricKeyRequest extends AbstractModel {
 
     /**
-    * Signature algorithm. The valid values include `SM2DSA`, `ECC_P256_R1`, `RSA_PSS_SHA_256`, and `RSA_PKCS1_SHA_256`, etc. You can get a full list of supported algorithms using the ListAlgorithms API.
+    * <p>Signature algorithm. Supported algorithms: SM2DSA, ECC_P256_R1, ECDSA384_SHA384, RSA_PSS_SHA_256, RSA_PKCS1_SHA_256, RSA_PSS_SHA_384, RSA_PKCS1_SHA_384, RSA_PSS_SHA_512, RSA_PKCS1_SHA_512, etc. For more supported algorithms, query them through the ListAlgorithms API.</p>
     */
     @SerializedName("Algorithm")
     @Expose
     private String Algorithm;
 
     /**
-    * Full message or message abstract. Before Base64 encoding, an original message can contain up to 4,096 bytes while a message abstract must be 32 bytes.
+    * <p>Message original text or message digest. If the message original text is provided, its length (before Base64 encoding) cannot exceed 4096 bytes. If the message digest is provided, its length (before Base64 encoding) must be 32 bytes.</p>
     */
     @SerializedName("Message")
     @Expose
     private String Message;
 
     /**
-    * Unique ID of a key
+    * <p>Unique identifier of the key</p>
     */
     @SerializedName("KeyId")
     @Expose
     private String KeyId;
 
     /**
-    * Message type. Valid values: `RAW` (indicating an original message; used by default if the parameter is not passed in) and `DIGEST`.
+    * <p>Message type: RAW or DIGEST. If not specified, RAW is used by default, indicating the message original text.</p>
     */
     @SerializedName("MessageType")
     @Expose
     private String MessageType;
 
     /**
-     * Get Signature algorithm. The valid values include `SM2DSA`, `ECC_P256_R1`, `RSA_PSS_SHA_256`, and `RSA_PKCS1_SHA_256`, etc. You can get a full list of supported algorithms using the ListAlgorithms API. 
-     * @return Algorithm Signature algorithm. The valid values include `SM2DSA`, `ECC_P256_R1`, `RSA_PSS_SHA_256`, and `RSA_PKCS1_SHA_256`, etc. You can get a full list of supported algorithms using the ListAlgorithms API.
+     * Get <p>Signature algorithm. Supported algorithms: SM2DSA, ECC_P256_R1, ECDSA384_SHA384, RSA_PSS_SHA_256, RSA_PKCS1_SHA_256, RSA_PSS_SHA_384, RSA_PKCS1_SHA_384, RSA_PSS_SHA_512, RSA_PKCS1_SHA_512, etc. For more supported algorithms, query them through the ListAlgorithms API.</p> 
+     * @return Algorithm <p>Signature algorithm. Supported algorithms: SM2DSA, ECC_P256_R1, ECDSA384_SHA384, RSA_PSS_SHA_256, RSA_PKCS1_SHA_256, RSA_PSS_SHA_384, RSA_PKCS1_SHA_384, RSA_PSS_SHA_512, RSA_PKCS1_SHA_512, etc. For more supported algorithms, query them through the ListAlgorithms API.</p>
      */
     public String getAlgorithm() {
         return this.Algorithm;
     }
 
     /**
-     * Set Signature algorithm. The valid values include `SM2DSA`, `ECC_P256_R1`, `RSA_PSS_SHA_256`, and `RSA_PKCS1_SHA_256`, etc. You can get a full list of supported algorithms using the ListAlgorithms API.
-     * @param Algorithm Signature algorithm. The valid values include `SM2DSA`, `ECC_P256_R1`, `RSA_PSS_SHA_256`, and `RSA_PKCS1_SHA_256`, etc. You can get a full list of supported algorithms using the ListAlgorithms API.
+     * Set <p>Signature algorithm. Supported algorithms: SM2DSA, ECC_P256_R1, ECDSA384_SHA384, RSA_PSS_SHA_256, RSA_PKCS1_SHA_256, RSA_PSS_SHA_384, RSA_PKCS1_SHA_384, RSA_PSS_SHA_512, RSA_PKCS1_SHA_512, etc. For more supported algorithms, query them through the ListAlgorithms API.</p>
+     * @param Algorithm <p>Signature algorithm. Supported algorithms: SM2DSA, ECC_P256_R1, ECDSA384_SHA384, RSA_PSS_SHA_256, RSA_PKCS1_SHA_256, RSA_PSS_SHA_384, RSA_PKCS1_SHA_384, RSA_PSS_SHA_512, RSA_PKCS1_SHA_512, etc. For more supported algorithms, query them through the ListAlgorithms API.</p>
      */
     public void setAlgorithm(String Algorithm) {
         this.Algorithm = Algorithm;
     }
 
     /**
-     * Get Full message or message abstract. Before Base64 encoding, an original message can contain up to 4,096 bytes while a message abstract must be 32 bytes. 
-     * @return Message Full message or message abstract. Before Base64 encoding, an original message can contain up to 4,096 bytes while a message abstract must be 32 bytes.
+     * Get <p>Message original text or message digest. If the message original text is provided, its length (before Base64 encoding) cannot exceed 4096 bytes. If the message digest is provided, its length (before Base64 encoding) must be 32 bytes.</p> 
+     * @return Message <p>Message original text or message digest. If the message original text is provided, its length (before Base64 encoding) cannot exceed 4096 bytes. If the message digest is provided, its length (before Base64 encoding) must be 32 bytes.</p>
      */
     public String getMessage() {
         return this.Message;
     }
 
     /**
-     * Set Full message or message abstract. Before Base64 encoding, an original message can contain up to 4,096 bytes while a message abstract must be 32 bytes.
-     * @param Message Full message or message abstract. Before Base64 encoding, an original message can contain up to 4,096 bytes while a message abstract must be 32 bytes.
+     * Set <p>Message original text or message digest. If the message original text is provided, its length (before Base64 encoding) cannot exceed 4096 bytes. If the message digest is provided, its length (before Base64 encoding) must be 32 bytes.</p>
+     * @param Message <p>Message original text or message digest. If the message original text is provided, its length (before Base64 encoding) cannot exceed 4096 bytes. If the message digest is provided, its length (before Base64 encoding) must be 32 bytes.</p>
      */
     public void setMessage(String Message) {
         this.Message = Message;
     }
 
     /**
-     * Get Unique ID of a key 
-     * @return KeyId Unique ID of a key
+     * Get <p>Unique identifier of the key</p> 
+     * @return KeyId <p>Unique identifier of the key</p>
      */
     public String getKeyId() {
         return this.KeyId;
     }
 
     /**
-     * Set Unique ID of a key
-     * @param KeyId Unique ID of a key
+     * Set <p>Unique identifier of the key</p>
+     * @param KeyId <p>Unique identifier of the key</p>
      */
     public void setKeyId(String KeyId) {
         this.KeyId = KeyId;
     }
 
     /**
-     * Get Message type. Valid values: `RAW` (indicating an original message; used by default if the parameter is not passed in) and `DIGEST`. 
-     * @return MessageType Message type. Valid values: `RAW` (indicating an original message; used by default if the parameter is not passed in) and `DIGEST`.
+     * Get <p>Message type: RAW or DIGEST. If not specified, RAW is used by default, indicating the message original text.</p> 
+     * @return MessageType <p>Message type: RAW or DIGEST. If not specified, RAW is used by default, indicating the message original text.</p>
      */
     public String getMessageType() {
         return this.MessageType;
     }
 
     /**
-     * Set Message type. Valid values: `RAW` (indicating an original message; used by default if the parameter is not passed in) and `DIGEST`.
-     * @param MessageType Message type. Valid values: `RAW` (indicating an original message; used by default if the parameter is not passed in) and `DIGEST`.
+     * Set <p>Message type: RAW or DIGEST. If not specified, RAW is used by default, indicating the message original text.</p>
+     * @param MessageType <p>Message type: RAW or DIGEST. If not specified, RAW is used by default, indicating the message original text.</p>
      */
     public void setMessageType(String MessageType) {
         this.MessageType = MessageType;

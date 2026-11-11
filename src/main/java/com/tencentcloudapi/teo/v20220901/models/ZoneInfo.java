@@ -38,8 +38,8 @@ public class ZoneInfo extends AbstractModel {
     private String ZoneName;
 
     /**
-    * Whether to disable the site. valid values: <li>false: not disabled;</li>.
-<li>true: disabled.</li>.
+    * Whether to disable the site. Valid values: <li>false: not disabled;</li>
+<li>true: Disable.</li>
     */
     @SerializedName("Paused")
     @Expose
@@ -78,20 +78,20 @@ public class ZoneInfo extends AbstractModel {
     }
 
     /**
-     * Get Whether to disable the site. valid values: <li>false: not disabled;</li>.
-<li>true: disabled.</li>. 
-     * @return Paused Whether to disable the site. valid values: <li>false: not disabled;</li>.
-<li>true: disabled.</li>.
+     * Get Whether to disable the site. Valid values: <li>false: not disabled;</li>
+<li>true: Disable.</li> 
+     * @return Paused Whether to disable the site. Valid values: <li>false: not disabled;</li>
+<li>true: Disable.</li>
      */
     public Boolean getPaused() {
         return this.Paused;
     }
 
     /**
-     * Set Whether to disable the site. valid values: <li>false: not disabled;</li>.
-<li>true: disabled.</li>.
-     * @param Paused Whether to disable the site. valid values: <li>false: not disabled;</li>.
-<li>true: disabled.</li>.
+     * Set Whether to disable the site. Valid values: <li>false: not disabled;</li>
+<li>true: Disable.</li>
+     * @param Paused Whether to disable the site. Valid values: <li>false: not disabled;</li>
+<li>true: Disable.</li>
      */
     public void setPaused(Boolean Paused) {
         this.Paused = Paused;

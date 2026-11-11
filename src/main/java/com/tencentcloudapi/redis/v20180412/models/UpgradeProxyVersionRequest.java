@@ -31,7 +31,7 @@ public class UpgradeProxyVersionRequest extends AbstractModel {
     private String InstanceId;
 
     /**
-    * Current proxy version. Call the [DescribeInstances](https://www.tencentcloud.com/document/product/239/20018?from_cn_redirect=1) API to obtain the current proxy version for the instance.
+    * Current Proxy version. Get the current Proxy version of an instance through the [DescribeInstances](https://www.tencentcloud.com/document/product/239/20018?from_cn_redirect=1) API.
     */
     @SerializedName("CurrentProxyVersion")
     @Expose
@@ -70,16 +70,16 @@ public class UpgradeProxyVersionRequest extends AbstractModel {
     }
 
     /**
-     * Get Current proxy version. Call the [DescribeInstances](https://www.tencentcloud.com/document/product/239/20018?from_cn_redirect=1) API to obtain the current proxy version for the instance. 
-     * @return CurrentProxyVersion Current proxy version. Call the [DescribeInstances](https://www.tencentcloud.com/document/product/239/20018?from_cn_redirect=1) API to obtain the current proxy version for the instance.
+     * Get Current Proxy version. Get the current Proxy version of an instance through the [DescribeInstances](https://www.tencentcloud.com/document/product/239/20018?from_cn_redirect=1) API. 
+     * @return CurrentProxyVersion Current Proxy version. Get the current Proxy version of an instance through the [DescribeInstances](https://www.tencentcloud.com/document/product/239/20018?from_cn_redirect=1) API.
      */
     public String getCurrentProxyVersion() {
         return this.CurrentProxyVersion;
     }
 
     /**
-     * Set Current proxy version. Call the [DescribeInstances](https://www.tencentcloud.com/document/product/239/20018?from_cn_redirect=1) API to obtain the current proxy version for the instance.
-     * @param CurrentProxyVersion Current proxy version. Call the [DescribeInstances](https://www.tencentcloud.com/document/product/239/20018?from_cn_redirect=1) API to obtain the current proxy version for the instance.
+     * Set Current Proxy version. Get the current Proxy version of an instance through the [DescribeInstances](https://www.tencentcloud.com/document/product/239/20018?from_cn_redirect=1) API.
+     * @param CurrentProxyVersion Current Proxy version. Get the current Proxy version of an instance through the [DescribeInstances](https://www.tencentcloud.com/document/product/239/20018?from_cn_redirect=1) API.
      */
     public void setCurrentProxyVersion(String CurrentProxyVersion) {
         this.CurrentProxyVersion = CurrentProxyVersion;

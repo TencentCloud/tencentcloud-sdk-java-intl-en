@@ -32,7 +32,7 @@ public class CoverBySnapshotTaskInput extends AbstractModel {
 
     /**
     * Screenshot type. Valid values:
-<li>Time: time point screencapturing</li>
+<li>Time: screenshot by time point</li>
 <li>Percent: screenshot by percentage</li>
     */
     @SerializedName("PositionType")
@@ -41,8 +41,8 @@ public class CoverBySnapshotTaskInput extends AbstractModel {
 
     /**
     * Screenshot position:
-<li>For time point screenshot taking, this value indicates the second of the specified video to use as the cover</li>
-<li>For percentage-based screenshots, this value indicates the percentage of the video used as the cover.</li>
+<li>For time point screenshots, this value indicates the second of the specified video to use as the cover</li>
+<li>For screenshot by percentage, this value indicates the percentage of the video used as the cover.</li>
     */
     @SerializedName("PositionValue")
     @Expose
@@ -73,10 +73,10 @@ public class CoverBySnapshotTaskInput extends AbstractModel {
 
     /**
      * Get Screenshot type. Valid values:
-<li>Time: time point screencapturing</li>
+<li>Time: screenshot by time point</li>
 <li>Percent: screenshot by percentage</li> 
      * @return PositionType Screenshot type. Valid values:
-<li>Time: time point screencapturing</li>
+<li>Time: screenshot by time point</li>
 <li>Percent: screenshot by percentage</li>
      */
     public String getPositionType() {
@@ -85,10 +85,10 @@ public class CoverBySnapshotTaskInput extends AbstractModel {
 
     /**
      * Set Screenshot type. Valid values:
-<li>Time: time point screencapturing</li>
+<li>Time: screenshot by time point</li>
 <li>Percent: screenshot by percentage</li>
      * @param PositionType Screenshot type. Valid values:
-<li>Time: time point screencapturing</li>
+<li>Time: screenshot by time point</li>
 <li>Percent: screenshot by percentage</li>
      */
     public void setPositionType(String PositionType) {
@@ -97,11 +97,11 @@ public class CoverBySnapshotTaskInput extends AbstractModel {
 
     /**
      * Get Screenshot position:
-<li>For time point screenshot taking, this value indicates the second of the specified video to use as the cover</li>
-<li>For percentage-based screenshots, this value indicates the percentage of the video used as the cover.</li> 
+<li>For time point screenshots, this value indicates the second of the specified video to use as the cover</li>
+<li>For screenshot by percentage, this value indicates the percentage of the video used as the cover.</li> 
      * @return PositionValue Screenshot position:
-<li>For time point screenshot taking, this value indicates the second of the specified video to use as the cover</li>
-<li>For percentage-based screenshots, this value indicates the percentage of the video used as the cover.</li>
+<li>For time point screenshots, this value indicates the second of the specified video to use as the cover</li>
+<li>For screenshot by percentage, this value indicates the percentage of the video used as the cover.</li>
      */
     public Float getPositionValue() {
         return this.PositionValue;
@@ -109,11 +109,11 @@ public class CoverBySnapshotTaskInput extends AbstractModel {
 
     /**
      * Set Screenshot position:
-<li>For time point screenshot taking, this value indicates the second of the specified video to use as the cover</li>
-<li>For percentage-based screenshots, this value indicates the percentage of the video used as the cover.</li>
+<li>For time point screenshots, this value indicates the second of the specified video to use as the cover</li>
+<li>For screenshot by percentage, this value indicates the percentage of the video used as the cover.</li>
      * @param PositionValue Screenshot position:
-<li>For time point screenshot taking, this value indicates the second of the specified video to use as the cover</li>
-<li>For percentage-based screenshots, this value indicates the percentage of the video used as the cover.</li>
+<li>For time point screenshots, this value indicates the second of the specified video to use as the cover</li>
+<li>For screenshot by percentage, this value indicates the percentage of the video used as the cover.</li>
      */
     public void setPositionValue(Float PositionValue) {
         this.PositionValue = PositionValue;

@@ -31,7 +31,7 @@ public class DeleteInstanceAccountRequest extends AbstractModel {
     private String InstanceId;
 
     /**
-    * Sub-account name. Log in to the [Redis console](https://console.tencentcloud.com/redis) and switch to the **Account Management** page to obtain it. For details, see [Managing Account](https://www.tencentcloud.com/document/product/239/34590).
+    * Sub-account name. Log in to the [Redis console](https://console.cloud.tencent.com/redis), switch to the **Account Management** page to get it. For details, see [Managing Accounts](https://www.tencentcloud.com/document/product/239/36710?from_cn_redirect=1).
     */
     @SerializedName("AccountName")
     @Expose
@@ -54,16 +54,16 @@ public class DeleteInstanceAccountRequest extends AbstractModel {
     }
 
     /**
-     * Get Sub-account name. Log in to the [Redis console](https://console.tencentcloud.com/redis) and switch to the **Account Management** page to obtain it. For details, see [Managing Account](https://www.tencentcloud.com/document/product/239/34590). 
-     * @return AccountName Sub-account name. Log in to the [Redis console](https://console.tencentcloud.com/redis) and switch to the **Account Management** page to obtain it. For details, see [Managing Account](https://www.tencentcloud.com/document/product/239/34590).
+     * Get Sub-account name. Log in to the [Redis console](https://console.cloud.tencent.com/redis), switch to the **Account Management** page to get it. For details, see [Managing Accounts](https://www.tencentcloud.com/document/product/239/36710?from_cn_redirect=1). 
+     * @return AccountName Sub-account name. Log in to the [Redis console](https://console.cloud.tencent.com/redis), switch to the **Account Management** page to get it. For details, see [Managing Accounts](https://www.tencentcloud.com/document/product/239/36710?from_cn_redirect=1).
      */
     public String getAccountName() {
         return this.AccountName;
     }
 
     /**
-     * Set Sub-account name. Log in to the [Redis console](https://console.tencentcloud.com/redis) and switch to the **Account Management** page to obtain it. For details, see [Managing Account](https://www.tencentcloud.com/document/product/239/34590).
-     * @param AccountName Sub-account name. Log in to the [Redis console](https://console.tencentcloud.com/redis) and switch to the **Account Management** page to obtain it. For details, see [Managing Account](https://www.tencentcloud.com/document/product/239/34590).
+     * Set Sub-account name. Log in to the [Redis console](https://console.cloud.tencent.com/redis), switch to the **Account Management** page to get it. For details, see [Managing Accounts](https://www.tencentcloud.com/document/product/239/36710?from_cn_redirect=1).
+     * @param AccountName Sub-account name. Log in to the [Redis console](https://console.cloud.tencent.com/redis), switch to the **Account Management** page to get it. For details, see [Managing Accounts](https://www.tencentcloud.com/document/product/239/36710?from_cn_redirect=1).
      */
     public void setAccountName(String AccountName) {
         this.AccountName = AccountName;

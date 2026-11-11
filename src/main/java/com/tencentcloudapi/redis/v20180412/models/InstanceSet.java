@@ -339,7 +339,7 @@ public class InstanceSet extends AbstractModel {
     private Long DiskSize;
 
     /**
-    * <p>Monitoring version.<ul><li>1m: 1-minute granularity monitoring. This monitoring granularity is deprecated. For details, please see <a href="https://www.tencentcloud.com/document/product/239/80653?from_cn_redirect=1">TencentDB for Redis 1-minute granularity deprecation notice</a>.</li><li>5s: 5-second granularity monitoring.</li></ul></p>
+    * <p>Monitoring version.<ul><li>1m: 1-minute granularity monitoring. This monitoring granularity has been deprecated. For details, see <a href="https://www.tencentcloud.com/document/product/239/80653?from_cn_redirect=1">TencentDB for Redis 1-Minute Granularity Deprecation Notice</a>.</li><li>5s: 5-second granularity monitoring.</li></ul></p>
     */
     @SerializedName("MonitorVersion")
     @Expose
@@ -1175,16 +1175,16 @@ public class InstanceSet extends AbstractModel {
     }
 
     /**
-     * Get <p>Monitoring version.<ul><li>1m: 1-minute granularity monitoring. This monitoring granularity is deprecated. For details, please see <a href="https://www.tencentcloud.com/document/product/239/80653?from_cn_redirect=1">TencentDB for Redis 1-minute granularity deprecation notice</a>.</li><li>5s: 5-second granularity monitoring.</li></ul></p> 
-     * @return MonitorVersion <p>Monitoring version.<ul><li>1m: 1-minute granularity monitoring. This monitoring granularity is deprecated. For details, please see <a href="https://www.tencentcloud.com/document/product/239/80653?from_cn_redirect=1">TencentDB for Redis 1-minute granularity deprecation notice</a>.</li><li>5s: 5-second granularity monitoring.</li></ul></p>
+     * Get <p>Monitoring version.<ul><li>1m: 1-minute granularity monitoring. This monitoring granularity has been deprecated. For details, see <a href="https://www.tencentcloud.com/document/product/239/80653?from_cn_redirect=1">TencentDB for Redis 1-Minute Granularity Deprecation Notice</a>.</li><li>5s: 5-second granularity monitoring.</li></ul></p> 
+     * @return MonitorVersion <p>Monitoring version.<ul><li>1m: 1-minute granularity monitoring. This monitoring granularity has been deprecated. For details, see <a href="https://www.tencentcloud.com/document/product/239/80653?from_cn_redirect=1">TencentDB for Redis 1-Minute Granularity Deprecation Notice</a>.</li><li>5s: 5-second granularity monitoring.</li></ul></p>
      */
     public String getMonitorVersion() {
         return this.MonitorVersion;
     }
 
     /**
-     * Set <p>Monitoring version.<ul><li>1m: 1-minute granularity monitoring. This monitoring granularity is deprecated. For details, please see <a href="https://www.tencentcloud.com/document/product/239/80653?from_cn_redirect=1">TencentDB for Redis 1-minute granularity deprecation notice</a>.</li><li>5s: 5-second granularity monitoring.</li></ul></p>
-     * @param MonitorVersion <p>Monitoring version.<ul><li>1m: 1-minute granularity monitoring. This monitoring granularity is deprecated. For details, please see <a href="https://www.tencentcloud.com/document/product/239/80653?from_cn_redirect=1">TencentDB for Redis 1-minute granularity deprecation notice</a>.</li><li>5s: 5-second granularity monitoring.</li></ul></p>
+     * Set <p>Monitoring version.<ul><li>1m: 1-minute granularity monitoring. This monitoring granularity has been deprecated. For details, see <a href="https://www.tencentcloud.com/document/product/239/80653?from_cn_redirect=1">TencentDB for Redis 1-Minute Granularity Deprecation Notice</a>.</li><li>5s: 5-second granularity monitoring.</li></ul></p>
+     * @param MonitorVersion <p>Monitoring version.<ul><li>1m: 1-minute granularity monitoring. This monitoring granularity has been deprecated. For details, see <a href="https://www.tencentcloud.com/document/product/239/80653?from_cn_redirect=1">TencentDB for Redis 1-Minute Granularity Deprecation Notice</a>.</li><li>5s: 5-second granularity monitoring.</li></ul></p>
      */
     public void setMonitorVersion(String MonitorVersion) {
         this.MonitorVersion = MonitorVersion;

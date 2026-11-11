@@ -31,14 +31,14 @@ public class MediaProcessTaskInput extends AbstractModel {
     private TranscodeTaskInput [] TranscodeTaskSet;
 
     /**
-    * List of video-to-GIF tasks.
+    * List of video-to-animated-image tasks.
     */
     @SerializedName("AnimatedGraphicTaskSet")
     @Expose
     private AnimatedGraphicTaskInput [] AnimatedGraphicTaskSet;
 
     /**
-    * List of time point screenshot tasks for videos.
+    * List of time point screencapturing tasks for videos.
     */
     @SerializedName("SnapshotByTimeOffsetTaskSet")
     @Expose
@@ -59,7 +59,7 @@ public class MediaProcessTaskInput extends AbstractModel {
     private ImageSpriteTaskInput [] ImageSpriteTaskSet;
 
     /**
-    * Task list of screencapturing for cover images from videos.
+    * Task list of screencapturing for cover images of videos.
     */
     @SerializedName("CoverBySnapshotTaskSet")
     @Expose
@@ -89,32 +89,32 @@ public class MediaProcessTaskInput extends AbstractModel {
     }
 
     /**
-     * Get List of video-to-GIF tasks. 
-     * @return AnimatedGraphicTaskSet List of video-to-GIF tasks.
+     * Get List of video-to-animated-image tasks. 
+     * @return AnimatedGraphicTaskSet List of video-to-animated-image tasks.
      */
     public AnimatedGraphicTaskInput [] getAnimatedGraphicTaskSet() {
         return this.AnimatedGraphicTaskSet;
     }
 
     /**
-     * Set List of video-to-GIF tasks.
-     * @param AnimatedGraphicTaskSet List of video-to-GIF tasks.
+     * Set List of video-to-animated-image tasks.
+     * @param AnimatedGraphicTaskSet List of video-to-animated-image tasks.
      */
     public void setAnimatedGraphicTaskSet(AnimatedGraphicTaskInput [] AnimatedGraphicTaskSet) {
         this.AnimatedGraphicTaskSet = AnimatedGraphicTaskSet;
     }
 
     /**
-     * Get List of time point screenshot tasks for videos. 
-     * @return SnapshotByTimeOffsetTaskSet List of time point screenshot tasks for videos.
+     * Get List of time point screencapturing tasks for videos. 
+     * @return SnapshotByTimeOffsetTaskSet List of time point screencapturing tasks for videos.
      */
     public SnapshotByTimeOffsetTaskInput [] getSnapshotByTimeOffsetTaskSet() {
         return this.SnapshotByTimeOffsetTaskSet;
     }
 
     /**
-     * Set List of time point screenshot tasks for videos.
-     * @param SnapshotByTimeOffsetTaskSet List of time point screenshot tasks for videos.
+     * Set List of time point screencapturing tasks for videos.
+     * @param SnapshotByTimeOffsetTaskSet List of time point screencapturing tasks for videos.
      */
     public void setSnapshotByTimeOffsetTaskSet(SnapshotByTimeOffsetTaskInput [] SnapshotByTimeOffsetTaskSet) {
         this.SnapshotByTimeOffsetTaskSet = SnapshotByTimeOffsetTaskSet;
@@ -153,16 +153,16 @@ public class MediaProcessTaskInput extends AbstractModel {
     }
 
     /**
-     * Get Task list of screencapturing for cover images from videos. 
-     * @return CoverBySnapshotTaskSet Task list of screencapturing for cover images from videos.
+     * Get Task list of screencapturing for cover images of videos. 
+     * @return CoverBySnapshotTaskSet Task list of screencapturing for cover images of videos.
      */
     public CoverBySnapshotTaskInput [] getCoverBySnapshotTaskSet() {
         return this.CoverBySnapshotTaskSet;
     }
 
     /**
-     * Set Task list of screencapturing for cover images from videos.
-     * @param CoverBySnapshotTaskSet Task list of screencapturing for cover images from videos.
+     * Set Task list of screencapturing for cover images of videos.
+     * @param CoverBySnapshotTaskSet Task list of screencapturing for cover images of videos.
      */
     public void setCoverBySnapshotTaskSet(CoverBySnapshotTaskInput [] CoverBySnapshotTaskSet) {
         this.CoverBySnapshotTaskSet = CoverBySnapshotTaskSet;

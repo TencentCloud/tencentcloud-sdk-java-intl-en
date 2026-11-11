@@ -52,21 +52,21 @@ public class EDRRuleTagItem extends AbstractModel {
     private String TagValue;
 
     /**
-    * <p>Tag value in English.</p>
+    * <p>Tag value in English</p>
     */
     @SerializedName("TagValueEn")
     @Expose
     private String TagValueEn;
 
     /**
-    * <p>Tag description</p>
+    * <p>Tag description.</p>
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * <p>Tag color</p>
+    * <p>Tag color.</p>
     */
     @SerializedName("Color")
     @Expose
@@ -137,48 +137,48 @@ public class EDRRuleTagItem extends AbstractModel {
     }
 
     /**
-     * Get <p>Tag value in English.</p> 
-     * @return TagValueEn <p>Tag value in English.</p>
+     * Get <p>Tag value in English</p> 
+     * @return TagValueEn <p>Tag value in English</p>
      */
     public String getTagValueEn() {
         return this.TagValueEn;
     }
 
     /**
-     * Set <p>Tag value in English.</p>
-     * @param TagValueEn <p>Tag value in English.</p>
+     * Set <p>Tag value in English</p>
+     * @param TagValueEn <p>Tag value in English</p>
      */
     public void setTagValueEn(String TagValueEn) {
         this.TagValueEn = TagValueEn;
     }
 
     /**
-     * Get <p>Tag description</p> 
-     * @return Description <p>Tag description</p>
+     * Get <p>Tag description.</p> 
+     * @return Description <p>Tag description.</p>
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set <p>Tag description</p>
-     * @param Description <p>Tag description</p>
+     * Set <p>Tag description.</p>
+     * @param Description <p>Tag description.</p>
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get <p>Tag color</p> 
-     * @return Color <p>Tag color</p>
+     * Get <p>Tag color.</p> 
+     * @return Color <p>Tag color.</p>
      */
     public String getColor() {
         return this.Color;
     }
 
     /**
-     * Set <p>Tag color</p>
-     * @param Color <p>Tag color</p>
+     * Set <p>Tag color.</p>
+     * @param Color <p>Tag color.</p>
      */
     public void setColor(String Color) {
         this.Color = Color;

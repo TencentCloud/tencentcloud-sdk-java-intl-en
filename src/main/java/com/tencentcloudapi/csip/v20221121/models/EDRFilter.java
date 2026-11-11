@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class EDRFilter extends AbstractModel {
 
     /**
-    * <p>Name of filter key</p>
+    * <p>Name of filter key.</p>
     */
     @SerializedName("Name")
     @Expose
@@ -45,16 +45,16 @@ public class EDRFilter extends AbstractModel {
     private Boolean ExactMatch;
 
     /**
-     * Get <p>Name of filter key</p> 
-     * @return Name <p>Name of filter key</p>
+     * Get <p>Name of filter key.</p> 
+     * @return Name <p>Name of filter key.</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set <p>Name of filter key</p>
-     * @param Name <p>Name of filter key</p>
+     * Set <p>Name of filter key.</p>
+     * @param Name <p>Name of filter key.</p>
      */
     public void setName(String Name) {
         this.Name = Name;

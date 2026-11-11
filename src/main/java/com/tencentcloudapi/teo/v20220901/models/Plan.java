@@ -24,565 +24,483 @@ import java.util.HashMap;
 public class Plan extends AbstractModel {
 
     /**
-    * Package type. valid values:.
-<Li>`Plan-Trial`: trial plan</li>.
-<Li>`Plan-Personal`: personal plan</li>.
-<Li>`Plan-Basic`: basic plan</li>.
-<Li>`Plan-Standard`: standard edition plan</li>.
-<li>plan-enterprise-v2: enterprise plan;</li>.
-<li>plan-enterprise-model-a: enterprise edition model a package.</li>.
-<Li>Plan-Enterprise: legacy enterprise plan.</li>.
+    * <p>Plan type. Valid values:</p><li>plan-trial: Trial Edition plan;</li><li>plan-personal: Personal Edition plan;</li><li>plan-basic: Basic Edition plan;</li><li>plan-standard: Standard Edition plan;</li><li>plan-enterprise-v2: Enterprise Edition plan;</li><li>plan-enterprise-model-a: Enterprise Edition Model A plan;</li><li>plan-enterprise: Legacy Enterprise Edition plan;</li><li>plan-makers-pro: Makers Pro Edition plan;</li><li>plan-makers-business: Makers Business Edition plan;</li><p>Valid values:</p><ul><li>plan-trial: Trial Edition plan</li><li>plan-personal: Personal Edition plan</li><li>plan-basic: Basic Edition plan</li><li>plan-standard: Standard Edition plan</li><li>plan-enterprise-v2: Enterprise Edition plan</li><li>plan-enterprise-model-a: Enterprise Edition Model A plan</li><li>plan-enterprise: Legacy Enterprise Edition plan</li><li>plan-makers-pro: Makers Pro Edition plan</li><li>plan-makers-business: Makers Business Edition plan</li></ul>
     */
     @SerializedName("PlanType")
     @Expose
     private String PlanType;
 
     /**
-    * Package ID. such as edgeone-2y041pblwaxe.
+    * <p>Plan ID, in the format of edgeone-2y041pblwaxe.</p>
     */
     @SerializedName("PlanId")
     @Expose
     private String PlanId;
 
     /**
-    * Service area. valid values:.
-<Li>`Mainland`: chinese mainland</li>.
-<li>`overseas`: global (chinese mainland not included)</li>.
-<Li>`Global`: global (chinese mainland included)</li>.
+    * <p>Service region. Valid values:</p><li>mainland: Chinese mainland;</li><li>overseas: Global (excluding the Chinese mainland);</li><li>global: Global (including the Chinese mainland).</li>
     */
     @SerializedName("Area")
     @Expose
     private String Area;
 
     /**
-    * Auto-Renew switch. valid values:.
-<li>true: automatic renewal is enabled.</li>.
-<li>false: automatic renewal is not enabled.</li>.
+    * <p>Auto-renewal switch. Valid values:</p><li>true: Auto-renewal enabled;</li><li>false: Auto-renewal disabled.</li>
     */
     @SerializedName("AutoRenewal")
     @Expose
     private Boolean AutoRenewal;
 
     /**
-    * Package status. valid values:.
-<Li>Normal: indicates the normal status.</li>.
-<li>`expiring-soon`: will expire soon;</li>.
-<li>`expired`: expiration status;</li>.
-<Li>`Isolated`: isolated state</li>.
-<li>`overdue-isolated`: arrears isolated state.</li>.
+    * <p>Plan status. Valid values:</p><li>normal: Normal;</li><li>expiring-soon: Expiring soon;</li><li>expired: Expired;</li><li>isolated: Isolated;</li><li>overdue-isolated: Isolated due to overdue payment.</li>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * Payment type. valid values:.
-<Li>0: postpaid;</li>.
-<Li>1: prepaid.</li>.
+    * <p>Billing type. Valid values:</p><li>0: Postpaid;</li><li>1: Prepaid.</li>
     */
     @SerializedName("PayMode")
     @Expose
     private Long PayMode;
 
     /**
-    * Describes the site information bound to the package, including the site id, site name, and site status.
+    * <p>Information of the sites bound to the plan, including site id, site name, and site status.</p>
     */
     @SerializedName("ZonesInfo")
     @Expose
     private ZoneInfo [] ZonesInfo;
 
     /**
-    * Smart acceleration request quantity in the package, unit: times.
+    * <p>Quota of smart acceleration requests in the plan, in the unit of requests.</p>
     */
     @SerializedName("SmartRequestCapacity")
     @Expose
     private Long SmartRequestCapacity;
 
     /**
-    * Specifies the VAU specification in the package. measurement unit: unit.
+    * <p>VAU quota in the plan, in the unit of VAUs.</p>
     */
     @SerializedName("VAUCapacity")
     @Expose
     private Long VAUCapacity;
 
     /**
-    * Specifies the content acceleration traffic specification in the package, measurement unit: byte.
+    * <p>Quota of content acceleration traffic in the plan, in the unit of bytes.</p>
     */
     @SerializedName("AccTrafficCapacity")
     @Expose
     private Long AccTrafficCapacity;
 
     /**
-    * Specifies the smart acceleration traffic specification in the package. measurement unit: byte.
+    * <p>Quota of client authentication traffic in the plan, in the unit of bytes.</p>
+    */
+    @SerializedName("ClientAuthTrafficCapacity")
+    @Expose
+    private Long ClientAuthTrafficCapacity;
+
+    /**
+    * <p>Quota of smart acceleration traffic in the plan, in the unit of bytes.</p>
     */
     @SerializedName("SmartTrafficCapacity")
     @Expose
     private Long SmartTrafficCapacity;
 
     /**
-    * Specifies the DDoS protection traffic specification in the package, measurement unit: byte.
+    * <p>Quota of DDoS protection traffic in the plan, in the unit of bytes.</p>
     */
     @SerializedName("DDoSTrafficCapacity")
     @Expose
     private Long DDoSTrafficCapacity;
 
     /**
-    * Security traffic specification in the package. measurement unit: byte.
+    * <p>Quota of security traffic in the plan, in the unit of bytes.</p>
     */
     @SerializedName("SecTrafficCapacity")
     @Expose
     private Long SecTrafficCapacity;
 
     /**
-    * Security requests in the package, unit: times.
+    * <p>Quota of security requests in the plan, in the unit of requests.</p>
     */
     @SerializedName("SecRequestCapacity")
     @Expose
     private Long SecRequestCapacity;
 
     /**
-    * Specifies the layer 4 acceleration traffic specification in the package, measurement unit: byte.
+    * <p>Quota of L4 acceleration traffic in the plan, in the unit of bytes.</p>
     */
     @SerializedName("L4TrafficCapacity")
     @Expose
     private Long L4TrafficCapacity;
 
     /**
-    * Specifies the network optimization traffic specification in the package for the chinese mainland, measurement unit: byte.
+    * <p>Quota of network optimization traffic for the Chinese mainland in the plan, in the unit of bytes.</p>
     */
     @SerializedName("CrossMLCTrafficCapacity")
     @Expose
     private Long CrossMLCTrafficCapacity;
 
     /**
-    * Specifies whether the package allows binding to new sites. valid values:.
-<li>true: allows binding a new site.</li>.
-<li>`false`: cannot bind new sites.</li>.
+    * <p>Whether the plan allows binding new sites. Valid values:</p><li>true: Allows binding new sites;</li><li>false: Does not allow binding new sites.</li>
     */
     @SerializedName("Bindable")
     @Expose
     private String Bindable;
 
     /**
-    * Package activation time.
+    * <p>Time when the plan takes effect.</p>
     */
     @SerializedName("EnabledTime")
     @Expose
     private String EnabledTime;
 
     /**
-    * Plan expiration time.
+    * <p>Expiration time of the plan.</p>
     */
     @SerializedName("ExpiredTime")
     @Expose
     private String ExpiredTime;
 
     /**
-    * Supported features of the package include: <li>ContentAcceleration: content acceleration feature;</li> <li>SmartAcceleration: intelligent acceleration feature;</li> <li>L4: L4 acceleration feature;</li> <li>Waf: advanced Web protection;</li> <li>QUIC: QUIC feature;</li> <li>CrossMLC: network optimization in the chinese mainland;</li> <li>ProcessMedia: media processing feature;</li> <li>L4DDoS: L4 DDoS protection feature;</li> L7DDoS feature will only appear in one of the following specifications: <li>L7DDoS.CM30G; layer-7 DDoS protection feature - 30G guaranteed minimum bandwidth specification in the chinese mainland;</li> <li>L7DDoS.CM60G; layer-7 DDoS protection feature - 60G guaranteed minimum bandwidth specification in the chinese mainland;</li> <li>L7DDoS.CM100G; layer-7 DDoS protection feature - 100G guaranteed minimum bandwidth specification in the chinese mainland;</li> <li>L7DDoS.Anycast300G; layer-7 DDoS protection feature - 300G guaranteed minimum bandwidth specification outside the chinese mainland with Anycast;</li> <li>L7DDoS.AnycastUnlimited; layer-7 DDoS protection feature - unlimited Anycast full protection outside the chinese mainland;</li> <li>L7DDoS.CM30G_Anycast300G; layer-7 DDoS protection feature - 30G guaranteed minimum bandwidth specification in the chinese mainland and 300G guaranteed minimum bandwidth specification outside the chinese mainland with Anycast;</li> <li>L7DDoS.CM60G_Anycast300G; layer-7 DDoS protection feature - 60G guaranteed minimum bandwidth specification in the chinese mainland and 300G guaranteed minimum bandwidth specification outside the chinese mainland with Anycast;</li> <li>L7DDoS.CM100G_Anycast300G; layer-7 DDoS protection feature - 100G guaranteed minimum bandwidth specification in the chinese mainland and 300G guaranteed minimum bandwidth specification outside the chinese mainland with Anycast;</li> <li>L7DDoS.CM30G_AnycastUnlimited; layer-7 DDoS protection feature - 30G guaranteed minimum bandwidth specification in the chinese mainland and unlimited Anycast full protection outside the chinese mainland;</li> <li>L7DDoS.CM60G_AnycastUnlimited; layer-7 DDoS protection feature - 60G guaranteed minimum bandwidth specification in the chinese mainland and unlimited Anycast full protection outside the chinese mainland;</li> <li>L7DDoS.CM100G_AnycastUnlimited; layer-7 DDoS protection feature - 100G guaranteed minimum bandwidth specification in the chinese mainland and unlimited Anycast full protection outside the chinese mainland;</li>.
+    * <p>Features supported by the plan. Valid values: <li>ContentAcceleration: content acceleration;</li><li>SmartAcceleration: smart acceleration;</li><li>L4: L4 acceleration;</li><li>Waf: advanced Web protection;</li><li>QUIC: QUIC;</li><li>CrossMLC: network optimization for the Chinese mainland;</li><li>ProcessMedia: media processing;</li><li>L4DDoS: L4 DDoS protection.</li>Only one of the following L7DDoS specifications can appear: <li>L7DDoS.CM30G: L7 DDoS protection - 30 Gbps guaranteed bandwidth in the Chinese mainland;</li><li>L7DDoS.CM60G: L7 DDoS protection - 60 Gbps guaranteed bandwidth in the Chinese mainland;</li><li>L7DDoS.CM100G: L7 DDoS protection - 100 Gbps guaranteed bandwidth in the Chinese mainland;</li><li>L7DDoS.Anycast300G: L7 DDoS protection - 300 Gbps Anycast guaranteed bandwidth outside the Chinese mainland;</li><li>L7DDoS.AnycastUnlimited: L7 DDoS protection - unlimited Anycast full protection outside the Chinese mainland;</li><li>L7DDoS.CM30G_Anycast300G: L7 DDoS protection - 30 Gbps guaranteed bandwidth in the Chinese mainland and 300 Gbps Anycast guaranteed bandwidth outside the Chinese mainland;</li><li>L7DDoS.CM60G_Anycast300G: L7 DDoS protection - 60 Gbps guaranteed bandwidth in the Chinese mainland and 300 Gbps Anycast guaranteed bandwidth outside the Chinese mainland;</li><li>L7DDoS.CM100G_Anycast300G: L7 DDoS protection - 100 Gbps guaranteed bandwidth in the Chinese mainland and 300 Gbps Anycast guaranteed bandwidth outside the Chinese mainland;</li><li>L7DDoS.CM30G_AnycastUnlimited: L7 DDoS protection - 30 Gbps guaranteed bandwidth in the Chinese mainland and unlimited Anycast full protection outside the Chinese mainland;</li><li>L7DDoS.CM60G_AnycastUnlimited: L7 DDoS protection - 60 Gbps guaranteed bandwidth in the Chinese mainland and unlimited Anycast full protection outside the Chinese mainland;</li><li>L7DDoS.CM100G_AnycastUnlimited: L7 DDoS protection - 100 Gbps guaranteed bandwidth in the Chinese mainland and unlimited Anycast full protection outside the Chinese mainland.</li></p>
     */
     @SerializedName("Features")
     @Expose
     private String [] Features;
 
     /**
-     * Get Package type. valid values:.
-<Li>`Plan-Trial`: trial plan</li>.
-<Li>`Plan-Personal`: personal plan</li>.
-<Li>`Plan-Basic`: basic plan</li>.
-<Li>`Plan-Standard`: standard edition plan</li>.
-<li>plan-enterprise-v2: enterprise plan;</li>.
-<li>plan-enterprise-model-a: enterprise edition model a package.</li>.
-<Li>Plan-Enterprise: legacy enterprise plan.</li>. 
-     * @return PlanType Package type. valid values:.
-<Li>`Plan-Trial`: trial plan</li>.
-<Li>`Plan-Personal`: personal plan</li>.
-<Li>`Plan-Basic`: basic plan</li>.
-<Li>`Plan-Standard`: standard edition plan</li>.
-<li>plan-enterprise-v2: enterprise plan;</li>.
-<li>plan-enterprise-model-a: enterprise edition model a package.</li>.
-<Li>Plan-Enterprise: legacy enterprise plan.</li>.
+     * Get <p>Plan type. Valid values:</p><li>plan-trial: Trial Edition plan;</li><li>plan-personal: Personal Edition plan;</li><li>plan-basic: Basic Edition plan;</li><li>plan-standard: Standard Edition plan;</li><li>plan-enterprise-v2: Enterprise Edition plan;</li><li>plan-enterprise-model-a: Enterprise Edition Model A plan;</li><li>plan-enterprise: Legacy Enterprise Edition plan;</li><li>plan-makers-pro: Makers Pro Edition plan;</li><li>plan-makers-business: Makers Business Edition plan;</li><p>Valid values:</p><ul><li>plan-trial: Trial Edition plan</li><li>plan-personal: Personal Edition plan</li><li>plan-basic: Basic Edition plan</li><li>plan-standard: Standard Edition plan</li><li>plan-enterprise-v2: Enterprise Edition plan</li><li>plan-enterprise-model-a: Enterprise Edition Model A plan</li><li>plan-enterprise: Legacy Enterprise Edition plan</li><li>plan-makers-pro: Makers Pro Edition plan</li><li>plan-makers-business: Makers Business Edition plan</li></ul> 
+     * @return PlanType <p>Plan type. Valid values:</p><li>plan-trial: Trial Edition plan;</li><li>plan-personal: Personal Edition plan;</li><li>plan-basic: Basic Edition plan;</li><li>plan-standard: Standard Edition plan;</li><li>plan-enterprise-v2: Enterprise Edition plan;</li><li>plan-enterprise-model-a: Enterprise Edition Model A plan;</li><li>plan-enterprise: Legacy Enterprise Edition plan;</li><li>plan-makers-pro: Makers Pro Edition plan;</li><li>plan-makers-business: Makers Business Edition plan;</li><p>Valid values:</p><ul><li>plan-trial: Trial Edition plan</li><li>plan-personal: Personal Edition plan</li><li>plan-basic: Basic Edition plan</li><li>plan-standard: Standard Edition plan</li><li>plan-enterprise-v2: Enterprise Edition plan</li><li>plan-enterprise-model-a: Enterprise Edition Model A plan</li><li>plan-enterprise: Legacy Enterprise Edition plan</li><li>plan-makers-pro: Makers Pro Edition plan</li><li>plan-makers-business: Makers Business Edition plan</li></ul>
      */
     public String getPlanType() {
         return this.PlanType;
     }
 
     /**
-     * Set Package type. valid values:.
-<Li>`Plan-Trial`: trial plan</li>.
-<Li>`Plan-Personal`: personal plan</li>.
-<Li>`Plan-Basic`: basic plan</li>.
-<Li>`Plan-Standard`: standard edition plan</li>.
-<li>plan-enterprise-v2: enterprise plan;</li>.
-<li>plan-enterprise-model-a: enterprise edition model a package.</li>.
-<Li>Plan-Enterprise: legacy enterprise plan.</li>.
-     * @param PlanType Package type. valid values:.
-<Li>`Plan-Trial`: trial plan</li>.
-<Li>`Plan-Personal`: personal plan</li>.
-<Li>`Plan-Basic`: basic plan</li>.
-<Li>`Plan-Standard`: standard edition plan</li>.
-<li>plan-enterprise-v2: enterprise plan;</li>.
-<li>plan-enterprise-model-a: enterprise edition model a package.</li>.
-<Li>Plan-Enterprise: legacy enterprise plan.</li>.
+     * Set <p>Plan type. Valid values:</p><li>plan-trial: Trial Edition plan;</li><li>plan-personal: Personal Edition plan;</li><li>plan-basic: Basic Edition plan;</li><li>plan-standard: Standard Edition plan;</li><li>plan-enterprise-v2: Enterprise Edition plan;</li><li>plan-enterprise-model-a: Enterprise Edition Model A plan;</li><li>plan-enterprise: Legacy Enterprise Edition plan;</li><li>plan-makers-pro: Makers Pro Edition plan;</li><li>plan-makers-business: Makers Business Edition plan;</li><p>Valid values:</p><ul><li>plan-trial: Trial Edition plan</li><li>plan-personal: Personal Edition plan</li><li>plan-basic: Basic Edition plan</li><li>plan-standard: Standard Edition plan</li><li>plan-enterprise-v2: Enterprise Edition plan</li><li>plan-enterprise-model-a: Enterprise Edition Model A plan</li><li>plan-enterprise: Legacy Enterprise Edition plan</li><li>plan-makers-pro: Makers Pro Edition plan</li><li>plan-makers-business: Makers Business Edition plan</li></ul>
+     * @param PlanType <p>Plan type. Valid values:</p><li>plan-trial: Trial Edition plan;</li><li>plan-personal: Personal Edition plan;</li><li>plan-basic: Basic Edition plan;</li><li>plan-standard: Standard Edition plan;</li><li>plan-enterprise-v2: Enterprise Edition plan;</li><li>plan-enterprise-model-a: Enterprise Edition Model A plan;</li><li>plan-enterprise: Legacy Enterprise Edition plan;</li><li>plan-makers-pro: Makers Pro Edition plan;</li><li>plan-makers-business: Makers Business Edition plan;</li><p>Valid values:</p><ul><li>plan-trial: Trial Edition plan</li><li>plan-personal: Personal Edition plan</li><li>plan-basic: Basic Edition plan</li><li>plan-standard: Standard Edition plan</li><li>plan-enterprise-v2: Enterprise Edition plan</li><li>plan-enterprise-model-a: Enterprise Edition Model A plan</li><li>plan-enterprise: Legacy Enterprise Edition plan</li><li>plan-makers-pro: Makers Pro Edition plan</li><li>plan-makers-business: Makers Business Edition plan</li></ul>
      */
     public void setPlanType(String PlanType) {
         this.PlanType = PlanType;
     }
 
     /**
-     * Get Package ID. such as edgeone-2y041pblwaxe. 
-     * @return PlanId Package ID. such as edgeone-2y041pblwaxe.
+     * Get <p>Plan ID, in the format of edgeone-2y041pblwaxe.</p> 
+     * @return PlanId <p>Plan ID, in the format of edgeone-2y041pblwaxe.</p>
      */
     public String getPlanId() {
         return this.PlanId;
     }
 
     /**
-     * Set Package ID. such as edgeone-2y041pblwaxe.
-     * @param PlanId Package ID. such as edgeone-2y041pblwaxe.
+     * Set <p>Plan ID, in the format of edgeone-2y041pblwaxe.</p>
+     * @param PlanId <p>Plan ID, in the format of edgeone-2y041pblwaxe.</p>
      */
     public void setPlanId(String PlanId) {
         this.PlanId = PlanId;
     }
 
     /**
-     * Get Service area. valid values:.
-<Li>`Mainland`: chinese mainland</li>.
-<li>`overseas`: global (chinese mainland not included)</li>.
-<Li>`Global`: global (chinese mainland included)</li>. 
-     * @return Area Service area. valid values:.
-<Li>`Mainland`: chinese mainland</li>.
-<li>`overseas`: global (chinese mainland not included)</li>.
-<Li>`Global`: global (chinese mainland included)</li>.
+     * Get <p>Service region. Valid values:</p><li>mainland: Chinese mainland;</li><li>overseas: Global (excluding the Chinese mainland);</li><li>global: Global (including the Chinese mainland).</li> 
+     * @return Area <p>Service region. Valid values:</p><li>mainland: Chinese mainland;</li><li>overseas: Global (excluding the Chinese mainland);</li><li>global: Global (including the Chinese mainland).</li>
      */
     public String getArea() {
         return this.Area;
     }
 
     /**
-     * Set Service area. valid values:.
-<Li>`Mainland`: chinese mainland</li>.
-<li>`overseas`: global (chinese mainland not included)</li>.
-<Li>`Global`: global (chinese mainland included)</li>.
-     * @param Area Service area. valid values:.
-<Li>`Mainland`: chinese mainland</li>.
-<li>`overseas`: global (chinese mainland not included)</li>.
-<Li>`Global`: global (chinese mainland included)</li>.
+     * Set <p>Service region. Valid values:</p><li>mainland: Chinese mainland;</li><li>overseas: Global (excluding the Chinese mainland);</li><li>global: Global (including the Chinese mainland).</li>
+     * @param Area <p>Service region. Valid values:</p><li>mainland: Chinese mainland;</li><li>overseas: Global (excluding the Chinese mainland);</li><li>global: Global (including the Chinese mainland).</li>
      */
     public void setArea(String Area) {
         this.Area = Area;
     }
 
     /**
-     * Get Auto-Renew switch. valid values:.
-<li>true: automatic renewal is enabled.</li>.
-<li>false: automatic renewal is not enabled.</li>. 
-     * @return AutoRenewal Auto-Renew switch. valid values:.
-<li>true: automatic renewal is enabled.</li>.
-<li>false: automatic renewal is not enabled.</li>.
+     * Get <p>Auto-renewal switch. Valid values:</p><li>true: Auto-renewal enabled;</li><li>false: Auto-renewal disabled.</li> 
+     * @return AutoRenewal <p>Auto-renewal switch. Valid values:</p><li>true: Auto-renewal enabled;</li><li>false: Auto-renewal disabled.</li>
      */
     public Boolean getAutoRenewal() {
         return this.AutoRenewal;
     }
 
     /**
-     * Set Auto-Renew switch. valid values:.
-<li>true: automatic renewal is enabled.</li>.
-<li>false: automatic renewal is not enabled.</li>.
-     * @param AutoRenewal Auto-Renew switch. valid values:.
-<li>true: automatic renewal is enabled.</li>.
-<li>false: automatic renewal is not enabled.</li>.
+     * Set <p>Auto-renewal switch. Valid values:</p><li>true: Auto-renewal enabled;</li><li>false: Auto-renewal disabled.</li>
+     * @param AutoRenewal <p>Auto-renewal switch. Valid values:</p><li>true: Auto-renewal enabled;</li><li>false: Auto-renewal disabled.</li>
      */
     public void setAutoRenewal(Boolean AutoRenewal) {
         this.AutoRenewal = AutoRenewal;
     }
 
     /**
-     * Get Package status. valid values:.
-<Li>Normal: indicates the normal status.</li>.
-<li>`expiring-soon`: will expire soon;</li>.
-<li>`expired`: expiration status;</li>.
-<Li>`Isolated`: isolated state</li>.
-<li>`overdue-isolated`: arrears isolated state.</li>. 
-     * @return Status Package status. valid values:.
-<Li>Normal: indicates the normal status.</li>.
-<li>`expiring-soon`: will expire soon;</li>.
-<li>`expired`: expiration status;</li>.
-<Li>`Isolated`: isolated state</li>.
-<li>`overdue-isolated`: arrears isolated state.</li>.
+     * Get <p>Plan status. Valid values:</p><li>normal: Normal;</li><li>expiring-soon: Expiring soon;</li><li>expired: Expired;</li><li>isolated: Isolated;</li><li>overdue-isolated: Isolated due to overdue payment.</li> 
+     * @return Status <p>Plan status. Valid values:</p><li>normal: Normal;</li><li>expiring-soon: Expiring soon;</li><li>expired: Expired;</li><li>isolated: Isolated;</li><li>overdue-isolated: Isolated due to overdue payment.</li>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Package status. valid values:.
-<Li>Normal: indicates the normal status.</li>.
-<li>`expiring-soon`: will expire soon;</li>.
-<li>`expired`: expiration status;</li>.
-<Li>`Isolated`: isolated state</li>.
-<li>`overdue-isolated`: arrears isolated state.</li>.
-     * @param Status Package status. valid values:.
-<Li>Normal: indicates the normal status.</li>.
-<li>`expiring-soon`: will expire soon;</li>.
-<li>`expired`: expiration status;</li>.
-<Li>`Isolated`: isolated state</li>.
-<li>`overdue-isolated`: arrears isolated state.</li>.
+     * Set <p>Plan status. Valid values:</p><li>normal: Normal;</li><li>expiring-soon: Expiring soon;</li><li>expired: Expired;</li><li>isolated: Isolated;</li><li>overdue-isolated: Isolated due to overdue payment.</li>
+     * @param Status <p>Plan status. Valid values:</p><li>normal: Normal;</li><li>expiring-soon: Expiring soon;</li><li>expired: Expired;</li><li>isolated: Isolated;</li><li>overdue-isolated: Isolated due to overdue payment.</li>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Payment type. valid values:.
-<Li>0: postpaid;</li>.
-<Li>1: prepaid.</li>. 
-     * @return PayMode Payment type. valid values:.
-<Li>0: postpaid;</li>.
-<Li>1: prepaid.</li>.
+     * Get <p>Billing type. Valid values:</p><li>0: Postpaid;</li><li>1: Prepaid.</li> 
+     * @return PayMode <p>Billing type. Valid values:</p><li>0: Postpaid;</li><li>1: Prepaid.</li>
      */
     public Long getPayMode() {
         return this.PayMode;
     }
 
     /**
-     * Set Payment type. valid values:.
-<Li>0: postpaid;</li>.
-<Li>1: prepaid.</li>.
-     * @param PayMode Payment type. valid values:.
-<Li>0: postpaid;</li>.
-<Li>1: prepaid.</li>.
+     * Set <p>Billing type. Valid values:</p><li>0: Postpaid;</li><li>1: Prepaid.</li>
+     * @param PayMode <p>Billing type. Valid values:</p><li>0: Postpaid;</li><li>1: Prepaid.</li>
      */
     public void setPayMode(Long PayMode) {
         this.PayMode = PayMode;
     }
 
     /**
-     * Get Describes the site information bound to the package, including the site id, site name, and site status. 
-     * @return ZonesInfo Describes the site information bound to the package, including the site id, site name, and site status.
+     * Get <p>Information of the sites bound to the plan, including site id, site name, and site status.</p> 
+     * @return ZonesInfo <p>Information of the sites bound to the plan, including site id, site name, and site status.</p>
      */
     public ZoneInfo [] getZonesInfo() {
         return this.ZonesInfo;
     }
 
     /**
-     * Set Describes the site information bound to the package, including the site id, site name, and site status.
-     * @param ZonesInfo Describes the site information bound to the package, including the site id, site name, and site status.
+     * Set <p>Information of the sites bound to the plan, including site id, site name, and site status.</p>
+     * @param ZonesInfo <p>Information of the sites bound to the plan, including site id, site name, and site status.</p>
      */
     public void setZonesInfo(ZoneInfo [] ZonesInfo) {
         this.ZonesInfo = ZonesInfo;
     }
 
     /**
-     * Get Smart acceleration request quantity in the package, unit: times. 
-     * @return SmartRequestCapacity Smart acceleration request quantity in the package, unit: times.
+     * Get <p>Quota of smart acceleration requests in the plan, in the unit of requests.</p> 
+     * @return SmartRequestCapacity <p>Quota of smart acceleration requests in the plan, in the unit of requests.</p>
      */
     public Long getSmartRequestCapacity() {
         return this.SmartRequestCapacity;
     }
 
     /**
-     * Set Smart acceleration request quantity in the package, unit: times.
-     * @param SmartRequestCapacity Smart acceleration request quantity in the package, unit: times.
+     * Set <p>Quota of smart acceleration requests in the plan, in the unit of requests.</p>
+     * @param SmartRequestCapacity <p>Quota of smart acceleration requests in the plan, in the unit of requests.</p>
      */
     public void setSmartRequestCapacity(Long SmartRequestCapacity) {
         this.SmartRequestCapacity = SmartRequestCapacity;
     }
 
     /**
-     * Get Specifies the VAU specification in the package. measurement unit: unit. 
-     * @return VAUCapacity Specifies the VAU specification in the package. measurement unit: unit.
+     * Get <p>VAU quota in the plan, in the unit of VAUs.</p> 
+     * @return VAUCapacity <p>VAU quota in the plan, in the unit of VAUs.</p>
      */
     public Long getVAUCapacity() {
         return this.VAUCapacity;
     }
 
     /**
-     * Set Specifies the VAU specification in the package. measurement unit: unit.
-     * @param VAUCapacity Specifies the VAU specification in the package. measurement unit: unit.
+     * Set <p>VAU quota in the plan, in the unit of VAUs.</p>
+     * @param VAUCapacity <p>VAU quota in the plan, in the unit of VAUs.</p>
      */
     public void setVAUCapacity(Long VAUCapacity) {
         this.VAUCapacity = VAUCapacity;
     }
 
     /**
-     * Get Specifies the content acceleration traffic specification in the package, measurement unit: byte. 
-     * @return AccTrafficCapacity Specifies the content acceleration traffic specification in the package, measurement unit: byte.
+     * Get <p>Quota of content acceleration traffic in the plan, in the unit of bytes.</p> 
+     * @return AccTrafficCapacity <p>Quota of content acceleration traffic in the plan, in the unit of bytes.</p>
      */
     public Long getAccTrafficCapacity() {
         return this.AccTrafficCapacity;
     }
 
     /**
-     * Set Specifies the content acceleration traffic specification in the package, measurement unit: byte.
-     * @param AccTrafficCapacity Specifies the content acceleration traffic specification in the package, measurement unit: byte.
+     * Set <p>Quota of content acceleration traffic in the plan, in the unit of bytes.</p>
+     * @param AccTrafficCapacity <p>Quota of content acceleration traffic in the plan, in the unit of bytes.</p>
      */
     public void setAccTrafficCapacity(Long AccTrafficCapacity) {
         this.AccTrafficCapacity = AccTrafficCapacity;
     }
 
     /**
-     * Get Specifies the smart acceleration traffic specification in the package. measurement unit: byte. 
-     * @return SmartTrafficCapacity Specifies the smart acceleration traffic specification in the package. measurement unit: byte.
+     * Get <p>Quota of client authentication traffic in the plan, in the unit of bytes.</p> 
+     * @return ClientAuthTrafficCapacity <p>Quota of client authentication traffic in the plan, in the unit of bytes.</p>
+     */
+    public Long getClientAuthTrafficCapacity() {
+        return this.ClientAuthTrafficCapacity;
+    }
+
+    /**
+     * Set <p>Quota of client authentication traffic in the plan, in the unit of bytes.</p>
+     * @param ClientAuthTrafficCapacity <p>Quota of client authentication traffic in the plan, in the unit of bytes.</p>
+     */
+    public void setClientAuthTrafficCapacity(Long ClientAuthTrafficCapacity) {
+        this.ClientAuthTrafficCapacity = ClientAuthTrafficCapacity;
+    }
+
+    /**
+     * Get <p>Quota of smart acceleration traffic in the plan, in the unit of bytes.</p> 
+     * @return SmartTrafficCapacity <p>Quota of smart acceleration traffic in the plan, in the unit of bytes.</p>
      */
     public Long getSmartTrafficCapacity() {
         return this.SmartTrafficCapacity;
     }
 
     /**
-     * Set Specifies the smart acceleration traffic specification in the package. measurement unit: byte.
-     * @param SmartTrafficCapacity Specifies the smart acceleration traffic specification in the package. measurement unit: byte.
+     * Set <p>Quota of smart acceleration traffic in the plan, in the unit of bytes.</p>
+     * @param SmartTrafficCapacity <p>Quota of smart acceleration traffic in the plan, in the unit of bytes.</p>
      */
     public void setSmartTrafficCapacity(Long SmartTrafficCapacity) {
         this.SmartTrafficCapacity = SmartTrafficCapacity;
     }
 
     /**
-     * Get Specifies the DDoS protection traffic specification in the package, measurement unit: byte. 
-     * @return DDoSTrafficCapacity Specifies the DDoS protection traffic specification in the package, measurement unit: byte.
+     * Get <p>Quota of DDoS protection traffic in the plan, in the unit of bytes.</p> 
+     * @return DDoSTrafficCapacity <p>Quota of DDoS protection traffic in the plan, in the unit of bytes.</p>
      */
     public Long getDDoSTrafficCapacity() {
         return this.DDoSTrafficCapacity;
     }
 
     /**
-     * Set Specifies the DDoS protection traffic specification in the package, measurement unit: byte.
-     * @param DDoSTrafficCapacity Specifies the DDoS protection traffic specification in the package, measurement unit: byte.
+     * Set <p>Quota of DDoS protection traffic in the plan, in the unit of bytes.</p>
+     * @param DDoSTrafficCapacity <p>Quota of DDoS protection traffic in the plan, in the unit of bytes.</p>
      */
     public void setDDoSTrafficCapacity(Long DDoSTrafficCapacity) {
         this.DDoSTrafficCapacity = DDoSTrafficCapacity;
     }
 
     /**
-     * Get Security traffic specification in the package. measurement unit: byte. 
-     * @return SecTrafficCapacity Security traffic specification in the package. measurement unit: byte.
+     * Get <p>Quota of security traffic in the plan, in the unit of bytes.</p> 
+     * @return SecTrafficCapacity <p>Quota of security traffic in the plan, in the unit of bytes.</p>
      */
     public Long getSecTrafficCapacity() {
         return this.SecTrafficCapacity;
     }
 
     /**
-     * Set Security traffic specification in the package. measurement unit: byte.
-     * @param SecTrafficCapacity Security traffic specification in the package. measurement unit: byte.
+     * Set <p>Quota of security traffic in the plan, in the unit of bytes.</p>
+     * @param SecTrafficCapacity <p>Quota of security traffic in the plan, in the unit of bytes.</p>
      */
     public void setSecTrafficCapacity(Long SecTrafficCapacity) {
         this.SecTrafficCapacity = SecTrafficCapacity;
     }
 
     /**
-     * Get Security requests in the package, unit: times. 
-     * @return SecRequestCapacity Security requests in the package, unit: times.
+     * Get <p>Quota of security requests in the plan, in the unit of requests.</p> 
+     * @return SecRequestCapacity <p>Quota of security requests in the plan, in the unit of requests.</p>
      */
     public Long getSecRequestCapacity() {
         return this.SecRequestCapacity;
     }
 
     /**
-     * Set Security requests in the package, unit: times.
-     * @param SecRequestCapacity Security requests in the package, unit: times.
+     * Set <p>Quota of security requests in the plan, in the unit of requests.</p>
+     * @param SecRequestCapacity <p>Quota of security requests in the plan, in the unit of requests.</p>
      */
     public void setSecRequestCapacity(Long SecRequestCapacity) {
         this.SecRequestCapacity = SecRequestCapacity;
     }
 
     /**
-     * Get Specifies the layer 4 acceleration traffic specification in the package, measurement unit: byte. 
-     * @return L4TrafficCapacity Specifies the layer 4 acceleration traffic specification in the package, measurement unit: byte.
+     * Get <p>Quota of L4 acceleration traffic in the plan, in the unit of bytes.</p> 
+     * @return L4TrafficCapacity <p>Quota of L4 acceleration traffic in the plan, in the unit of bytes.</p>
      */
     public Long getL4TrafficCapacity() {
         return this.L4TrafficCapacity;
     }
 
     /**
-     * Set Specifies the layer 4 acceleration traffic specification in the package, measurement unit: byte.
-     * @param L4TrafficCapacity Specifies the layer 4 acceleration traffic specification in the package, measurement unit: byte.
+     * Set <p>Quota of L4 acceleration traffic in the plan, in the unit of bytes.</p>
+     * @param L4TrafficCapacity <p>Quota of L4 acceleration traffic in the plan, in the unit of bytes.</p>
      */
     public void setL4TrafficCapacity(Long L4TrafficCapacity) {
         this.L4TrafficCapacity = L4TrafficCapacity;
     }
 
     /**
-     * Get Specifies the network optimization traffic specification in the package for the chinese mainland, measurement unit: byte. 
-     * @return CrossMLCTrafficCapacity Specifies the network optimization traffic specification in the package for the chinese mainland, measurement unit: byte.
+     * Get <p>Quota of network optimization traffic for the Chinese mainland in the plan, in the unit of bytes.</p> 
+     * @return CrossMLCTrafficCapacity <p>Quota of network optimization traffic for the Chinese mainland in the plan, in the unit of bytes.</p>
      */
     public Long getCrossMLCTrafficCapacity() {
         return this.CrossMLCTrafficCapacity;
     }
 
     /**
-     * Set Specifies the network optimization traffic specification in the package for the chinese mainland, measurement unit: byte.
-     * @param CrossMLCTrafficCapacity Specifies the network optimization traffic specification in the package for the chinese mainland, measurement unit: byte.
+     * Set <p>Quota of network optimization traffic for the Chinese mainland in the plan, in the unit of bytes.</p>
+     * @param CrossMLCTrafficCapacity <p>Quota of network optimization traffic for the Chinese mainland in the plan, in the unit of bytes.</p>
      */
     public void setCrossMLCTrafficCapacity(Long CrossMLCTrafficCapacity) {
         this.CrossMLCTrafficCapacity = CrossMLCTrafficCapacity;
     }
 
     /**
-     * Get Specifies whether the package allows binding to new sites. valid values:.
-<li>true: allows binding a new site.</li>.
-<li>`false`: cannot bind new sites.</li>. 
-     * @return Bindable Specifies whether the package allows binding to new sites. valid values:.
-<li>true: allows binding a new site.</li>.
-<li>`false`: cannot bind new sites.</li>.
+     * Get <p>Whether the plan allows binding new sites. Valid values:</p><li>true: Allows binding new sites;</li><li>false: Does not allow binding new sites.</li> 
+     * @return Bindable <p>Whether the plan allows binding new sites. Valid values:</p><li>true: Allows binding new sites;</li><li>false: Does not allow binding new sites.</li>
      */
     public String getBindable() {
         return this.Bindable;
     }
 
     /**
-     * Set Specifies whether the package allows binding to new sites. valid values:.
-<li>true: allows binding a new site.</li>.
-<li>`false`: cannot bind new sites.</li>.
-     * @param Bindable Specifies whether the package allows binding to new sites. valid values:.
-<li>true: allows binding a new site.</li>.
-<li>`false`: cannot bind new sites.</li>.
+     * Set <p>Whether the plan allows binding new sites. Valid values:</p><li>true: Allows binding new sites;</li><li>false: Does not allow binding new sites.</li>
+     * @param Bindable <p>Whether the plan allows binding new sites. Valid values:</p><li>true: Allows binding new sites;</li><li>false: Does not allow binding new sites.</li>
      */
     public void setBindable(String Bindable) {
         this.Bindable = Bindable;
     }
 
     /**
-     * Get Package activation time. 
-     * @return EnabledTime Package activation time.
+     * Get <p>Time when the plan takes effect.</p> 
+     * @return EnabledTime <p>Time when the plan takes effect.</p>
      */
     public String getEnabledTime() {
         return this.EnabledTime;
     }
 
     /**
-     * Set Package activation time.
-     * @param EnabledTime Package activation time.
+     * Set <p>Time when the plan takes effect.</p>
+     * @param EnabledTime <p>Time when the plan takes effect.</p>
      */
     public void setEnabledTime(String EnabledTime) {
         this.EnabledTime = EnabledTime;
     }
 
     /**
-     * Get Plan expiration time. 
-     * @return ExpiredTime Plan expiration time.
+     * Get <p>Expiration time of the plan.</p> 
+     * @return ExpiredTime <p>Expiration time of the plan.</p>
      */
     public String getExpiredTime() {
         return this.ExpiredTime;
     }
 
     /**
-     * Set Plan expiration time.
-     * @param ExpiredTime Plan expiration time.
+     * Set <p>Expiration time of the plan.</p>
+     * @param ExpiredTime <p>Expiration time of the plan.</p>
      */
     public void setExpiredTime(String ExpiredTime) {
         this.ExpiredTime = ExpiredTime;
     }
 
     /**
-     * Get Supported features of the package include: <li>ContentAcceleration: content acceleration feature;</li> <li>SmartAcceleration: intelligent acceleration feature;</li> <li>L4: L4 acceleration feature;</li> <li>Waf: advanced Web protection;</li> <li>QUIC: QUIC feature;</li> <li>CrossMLC: network optimization in the chinese mainland;</li> <li>ProcessMedia: media processing feature;</li> <li>L4DDoS: L4 DDoS protection feature;</li> L7DDoS feature will only appear in one of the following specifications: <li>L7DDoS.CM30G; layer-7 DDoS protection feature - 30G guaranteed minimum bandwidth specification in the chinese mainland;</li> <li>L7DDoS.CM60G; layer-7 DDoS protection feature - 60G guaranteed minimum bandwidth specification in the chinese mainland;</li> <li>L7DDoS.CM100G; layer-7 DDoS protection feature - 100G guaranteed minimum bandwidth specification in the chinese mainland;</li> <li>L7DDoS.Anycast300G; layer-7 DDoS protection feature - 300G guaranteed minimum bandwidth specification outside the chinese mainland with Anycast;</li> <li>L7DDoS.AnycastUnlimited; layer-7 DDoS protection feature - unlimited Anycast full protection outside the chinese mainland;</li> <li>L7DDoS.CM30G_Anycast300G; layer-7 DDoS protection feature - 30G guaranteed minimum bandwidth specification in the chinese mainland and 300G guaranteed minimum bandwidth specification outside the chinese mainland with Anycast;</li> <li>L7DDoS.CM60G_Anycast300G; layer-7 DDoS protection feature - 60G guaranteed minimum bandwidth specification in the chinese mainland and 300G guaranteed minimum bandwidth specification outside the chinese mainland with Anycast;</li> <li>L7DDoS.CM100G_Anycast300G; layer-7 DDoS protection feature - 100G guaranteed minimum bandwidth specification in the chinese mainland and 300G guaranteed minimum bandwidth specification outside the chinese mainland with Anycast;</li> <li>L7DDoS.CM30G_AnycastUnlimited; layer-7 DDoS protection feature - 30G guaranteed minimum bandwidth specification in the chinese mainland and unlimited Anycast full protection outside the chinese mainland;</li> <li>L7DDoS.CM60G_AnycastUnlimited; layer-7 DDoS protection feature - 60G guaranteed minimum bandwidth specification in the chinese mainland and unlimited Anycast full protection outside the chinese mainland;</li> <li>L7DDoS.CM100G_AnycastUnlimited; layer-7 DDoS protection feature - 100G guaranteed minimum bandwidth specification in the chinese mainland and unlimited Anycast full protection outside the chinese mainland;</li>. 
-     * @return Features Supported features of the package include: <li>ContentAcceleration: content acceleration feature;</li> <li>SmartAcceleration: intelligent acceleration feature;</li> <li>L4: L4 acceleration feature;</li> <li>Waf: advanced Web protection;</li> <li>QUIC: QUIC feature;</li> <li>CrossMLC: network optimization in the chinese mainland;</li> <li>ProcessMedia: media processing feature;</li> <li>L4DDoS: L4 DDoS protection feature;</li> L7DDoS feature will only appear in one of the following specifications: <li>L7DDoS.CM30G; layer-7 DDoS protection feature - 30G guaranteed minimum bandwidth specification in the chinese mainland;</li> <li>L7DDoS.CM60G; layer-7 DDoS protection feature - 60G guaranteed minimum bandwidth specification in the chinese mainland;</li> <li>L7DDoS.CM100G; layer-7 DDoS protection feature - 100G guaranteed minimum bandwidth specification in the chinese mainland;</li> <li>L7DDoS.Anycast300G; layer-7 DDoS protection feature - 300G guaranteed minimum bandwidth specification outside the chinese mainland with Anycast;</li> <li>L7DDoS.AnycastUnlimited; layer-7 DDoS protection feature - unlimited Anycast full protection outside the chinese mainland;</li> <li>L7DDoS.CM30G_Anycast300G; layer-7 DDoS protection feature - 30G guaranteed minimum bandwidth specification in the chinese mainland and 300G guaranteed minimum bandwidth specification outside the chinese mainland with Anycast;</li> <li>L7DDoS.CM60G_Anycast300G; layer-7 DDoS protection feature - 60G guaranteed minimum bandwidth specification in the chinese mainland and 300G guaranteed minimum bandwidth specification outside the chinese mainland with Anycast;</li> <li>L7DDoS.CM100G_Anycast300G; layer-7 DDoS protection feature - 100G guaranteed minimum bandwidth specification in the chinese mainland and 300G guaranteed minimum bandwidth specification outside the chinese mainland with Anycast;</li> <li>L7DDoS.CM30G_AnycastUnlimited; layer-7 DDoS protection feature - 30G guaranteed minimum bandwidth specification in the chinese mainland and unlimited Anycast full protection outside the chinese mainland;</li> <li>L7DDoS.CM60G_AnycastUnlimited; layer-7 DDoS protection feature - 60G guaranteed minimum bandwidth specification in the chinese mainland and unlimited Anycast full protection outside the chinese mainland;</li> <li>L7DDoS.CM100G_AnycastUnlimited; layer-7 DDoS protection feature - 100G guaranteed minimum bandwidth specification in the chinese mainland and unlimited Anycast full protection outside the chinese mainland;</li>.
+     * Get <p>Features supported by the plan. Valid values: <li>ContentAcceleration: content acceleration;</li><li>SmartAcceleration: smart acceleration;</li><li>L4: L4 acceleration;</li><li>Waf: advanced Web protection;</li><li>QUIC: QUIC;</li><li>CrossMLC: network optimization for the Chinese mainland;</li><li>ProcessMedia: media processing;</li><li>L4DDoS: L4 DDoS protection.</li>Only one of the following L7DDoS specifications can appear: <li>L7DDoS.CM30G: L7 DDoS protection - 30 Gbps guaranteed bandwidth in the Chinese mainland;</li><li>L7DDoS.CM60G: L7 DDoS protection - 60 Gbps guaranteed bandwidth in the Chinese mainland;</li><li>L7DDoS.CM100G: L7 DDoS protection - 100 Gbps guaranteed bandwidth in the Chinese mainland;</li><li>L7DDoS.Anycast300G: L7 DDoS protection - 300 Gbps Anycast guaranteed bandwidth outside the Chinese mainland;</li><li>L7DDoS.AnycastUnlimited: L7 DDoS protection - unlimited Anycast full protection outside the Chinese mainland;</li><li>L7DDoS.CM30G_Anycast300G: L7 DDoS protection - 30 Gbps guaranteed bandwidth in the Chinese mainland and 300 Gbps Anycast guaranteed bandwidth outside the Chinese mainland;</li><li>L7DDoS.CM60G_Anycast300G: L7 DDoS protection - 60 Gbps guaranteed bandwidth in the Chinese mainland and 300 Gbps Anycast guaranteed bandwidth outside the Chinese mainland;</li><li>L7DDoS.CM100G_Anycast300G: L7 DDoS protection - 100 Gbps guaranteed bandwidth in the Chinese mainland and 300 Gbps Anycast guaranteed bandwidth outside the Chinese mainland;</li><li>L7DDoS.CM30G_AnycastUnlimited: L7 DDoS protection - 30 Gbps guaranteed bandwidth in the Chinese mainland and unlimited Anycast full protection outside the Chinese mainland;</li><li>L7DDoS.CM60G_AnycastUnlimited: L7 DDoS protection - 60 Gbps guaranteed bandwidth in the Chinese mainland and unlimited Anycast full protection outside the Chinese mainland;</li><li>L7DDoS.CM100G_AnycastUnlimited: L7 DDoS protection - 100 Gbps guaranteed bandwidth in the Chinese mainland and unlimited Anycast full protection outside the Chinese mainland.</li></p> 
+     * @return Features <p>Features supported by the plan. Valid values: <li>ContentAcceleration: content acceleration;</li><li>SmartAcceleration: smart acceleration;</li><li>L4: L4 acceleration;</li><li>Waf: advanced Web protection;</li><li>QUIC: QUIC;</li><li>CrossMLC: network optimization for the Chinese mainland;</li><li>ProcessMedia: media processing;</li><li>L4DDoS: L4 DDoS protection.</li>Only one of the following L7DDoS specifications can appear: <li>L7DDoS.CM30G: L7 DDoS protection - 30 Gbps guaranteed bandwidth in the Chinese mainland;</li><li>L7DDoS.CM60G: L7 DDoS protection - 60 Gbps guaranteed bandwidth in the Chinese mainland;</li><li>L7DDoS.CM100G: L7 DDoS protection - 100 Gbps guaranteed bandwidth in the Chinese mainland;</li><li>L7DDoS.Anycast300G: L7 DDoS protection - 300 Gbps Anycast guaranteed bandwidth outside the Chinese mainland;</li><li>L7DDoS.AnycastUnlimited: L7 DDoS protection - unlimited Anycast full protection outside the Chinese mainland;</li><li>L7DDoS.CM30G_Anycast300G: L7 DDoS protection - 30 Gbps guaranteed bandwidth in the Chinese mainland and 300 Gbps Anycast guaranteed bandwidth outside the Chinese mainland;</li><li>L7DDoS.CM60G_Anycast300G: L7 DDoS protection - 60 Gbps guaranteed bandwidth in the Chinese mainland and 300 Gbps Anycast guaranteed bandwidth outside the Chinese mainland;</li><li>L7DDoS.CM100G_Anycast300G: L7 DDoS protection - 100 Gbps guaranteed bandwidth in the Chinese mainland and 300 Gbps Anycast guaranteed bandwidth outside the Chinese mainland;</li><li>L7DDoS.CM30G_AnycastUnlimited: L7 DDoS protection - 30 Gbps guaranteed bandwidth in the Chinese mainland and unlimited Anycast full protection outside the Chinese mainland;</li><li>L7DDoS.CM60G_AnycastUnlimited: L7 DDoS protection - 60 Gbps guaranteed bandwidth in the Chinese mainland and unlimited Anycast full protection outside the Chinese mainland;</li><li>L7DDoS.CM100G_AnycastUnlimited: L7 DDoS protection - 100 Gbps guaranteed bandwidth in the Chinese mainland and unlimited Anycast full protection outside the Chinese mainland.</li></p>
      */
     public String [] getFeatures() {
         return this.Features;
     }
 
     /**
-     * Set Supported features of the package include: <li>ContentAcceleration: content acceleration feature;</li> <li>SmartAcceleration: intelligent acceleration feature;</li> <li>L4: L4 acceleration feature;</li> <li>Waf: advanced Web protection;</li> <li>QUIC: QUIC feature;</li> <li>CrossMLC: network optimization in the chinese mainland;</li> <li>ProcessMedia: media processing feature;</li> <li>L4DDoS: L4 DDoS protection feature;</li> L7DDoS feature will only appear in one of the following specifications: <li>L7DDoS.CM30G; layer-7 DDoS protection feature - 30G guaranteed minimum bandwidth specification in the chinese mainland;</li> <li>L7DDoS.CM60G; layer-7 DDoS protection feature - 60G guaranteed minimum bandwidth specification in the chinese mainland;</li> <li>L7DDoS.CM100G; layer-7 DDoS protection feature - 100G guaranteed minimum bandwidth specification in the chinese mainland;</li> <li>L7DDoS.Anycast300G; layer-7 DDoS protection feature - 300G guaranteed minimum bandwidth specification outside the chinese mainland with Anycast;</li> <li>L7DDoS.AnycastUnlimited; layer-7 DDoS protection feature - unlimited Anycast full protection outside the chinese mainland;</li> <li>L7DDoS.CM30G_Anycast300G; layer-7 DDoS protection feature - 30G guaranteed minimum bandwidth specification in the chinese mainland and 300G guaranteed minimum bandwidth specification outside the chinese mainland with Anycast;</li> <li>L7DDoS.CM60G_Anycast300G; layer-7 DDoS protection feature - 60G guaranteed minimum bandwidth specification in the chinese mainland and 300G guaranteed minimum bandwidth specification outside the chinese mainland with Anycast;</li> <li>L7DDoS.CM100G_Anycast300G; layer-7 DDoS protection feature - 100G guaranteed minimum bandwidth specification in the chinese mainland and 300G guaranteed minimum bandwidth specification outside the chinese mainland with Anycast;</li> <li>L7DDoS.CM30G_AnycastUnlimited; layer-7 DDoS protection feature - 30G guaranteed minimum bandwidth specification in the chinese mainland and unlimited Anycast full protection outside the chinese mainland;</li> <li>L7DDoS.CM60G_AnycastUnlimited; layer-7 DDoS protection feature - 60G guaranteed minimum bandwidth specification in the chinese mainland and unlimited Anycast full protection outside the chinese mainland;</li> <li>L7DDoS.CM100G_AnycastUnlimited; layer-7 DDoS protection feature - 100G guaranteed minimum bandwidth specification in the chinese mainland and unlimited Anycast full protection outside the chinese mainland;</li>.
-     * @param Features Supported features of the package include: <li>ContentAcceleration: content acceleration feature;</li> <li>SmartAcceleration: intelligent acceleration feature;</li> <li>L4: L4 acceleration feature;</li> <li>Waf: advanced Web protection;</li> <li>QUIC: QUIC feature;</li> <li>CrossMLC: network optimization in the chinese mainland;</li> <li>ProcessMedia: media processing feature;</li> <li>L4DDoS: L4 DDoS protection feature;</li> L7DDoS feature will only appear in one of the following specifications: <li>L7DDoS.CM30G; layer-7 DDoS protection feature - 30G guaranteed minimum bandwidth specification in the chinese mainland;</li> <li>L7DDoS.CM60G; layer-7 DDoS protection feature - 60G guaranteed minimum bandwidth specification in the chinese mainland;</li> <li>L7DDoS.CM100G; layer-7 DDoS protection feature - 100G guaranteed minimum bandwidth specification in the chinese mainland;</li> <li>L7DDoS.Anycast300G; layer-7 DDoS protection feature - 300G guaranteed minimum bandwidth specification outside the chinese mainland with Anycast;</li> <li>L7DDoS.AnycastUnlimited; layer-7 DDoS protection feature - unlimited Anycast full protection outside the chinese mainland;</li> <li>L7DDoS.CM30G_Anycast300G; layer-7 DDoS protection feature - 30G guaranteed minimum bandwidth specification in the chinese mainland and 300G guaranteed minimum bandwidth specification outside the chinese mainland with Anycast;</li> <li>L7DDoS.CM60G_Anycast300G; layer-7 DDoS protection feature - 60G guaranteed minimum bandwidth specification in the chinese mainland and 300G guaranteed minimum bandwidth specification outside the chinese mainland with Anycast;</li> <li>L7DDoS.CM100G_Anycast300G; layer-7 DDoS protection feature - 100G guaranteed minimum bandwidth specification in the chinese mainland and 300G guaranteed minimum bandwidth specification outside the chinese mainland with Anycast;</li> <li>L7DDoS.CM30G_AnycastUnlimited; layer-7 DDoS protection feature - 30G guaranteed minimum bandwidth specification in the chinese mainland and unlimited Anycast full protection outside the chinese mainland;</li> <li>L7DDoS.CM60G_AnycastUnlimited; layer-7 DDoS protection feature - 60G guaranteed minimum bandwidth specification in the chinese mainland and unlimited Anycast full protection outside the chinese mainland;</li> <li>L7DDoS.CM100G_AnycastUnlimited; layer-7 DDoS protection feature - 100G guaranteed minimum bandwidth specification in the chinese mainland and unlimited Anycast full protection outside the chinese mainland;</li>.
+     * Set <p>Features supported by the plan. Valid values: <li>ContentAcceleration: content acceleration;</li><li>SmartAcceleration: smart acceleration;</li><li>L4: L4 acceleration;</li><li>Waf: advanced Web protection;</li><li>QUIC: QUIC;</li><li>CrossMLC: network optimization for the Chinese mainland;</li><li>ProcessMedia: media processing;</li><li>L4DDoS: L4 DDoS protection.</li>Only one of the following L7DDoS specifications can appear: <li>L7DDoS.CM30G: L7 DDoS protection - 30 Gbps guaranteed bandwidth in the Chinese mainland;</li><li>L7DDoS.CM60G: L7 DDoS protection - 60 Gbps guaranteed bandwidth in the Chinese mainland;</li><li>L7DDoS.CM100G: L7 DDoS protection - 100 Gbps guaranteed bandwidth in the Chinese mainland;</li><li>L7DDoS.Anycast300G: L7 DDoS protection - 300 Gbps Anycast guaranteed bandwidth outside the Chinese mainland;</li><li>L7DDoS.AnycastUnlimited: L7 DDoS protection - unlimited Anycast full protection outside the Chinese mainland;</li><li>L7DDoS.CM30G_Anycast300G: L7 DDoS protection - 30 Gbps guaranteed bandwidth in the Chinese mainland and 300 Gbps Anycast guaranteed bandwidth outside the Chinese mainland;</li><li>L7DDoS.CM60G_Anycast300G: L7 DDoS protection - 60 Gbps guaranteed bandwidth in the Chinese mainland and 300 Gbps Anycast guaranteed bandwidth outside the Chinese mainland;</li><li>L7DDoS.CM100G_Anycast300G: L7 DDoS protection - 100 Gbps guaranteed bandwidth in the Chinese mainland and 300 Gbps Anycast guaranteed bandwidth outside the Chinese mainland;</li><li>L7DDoS.CM30G_AnycastUnlimited: L7 DDoS protection - 30 Gbps guaranteed bandwidth in the Chinese mainland and unlimited Anycast full protection outside the Chinese mainland;</li><li>L7DDoS.CM60G_AnycastUnlimited: L7 DDoS protection - 60 Gbps guaranteed bandwidth in the Chinese mainland and unlimited Anycast full protection outside the Chinese mainland;</li><li>L7DDoS.CM100G_AnycastUnlimited: L7 DDoS protection - 100 Gbps guaranteed bandwidth in the Chinese mainland and unlimited Anycast full protection outside the Chinese mainland.</li></p>
+     * @param Features <p>Features supported by the plan. Valid values: <li>ContentAcceleration: content acceleration;</li><li>SmartAcceleration: smart acceleration;</li><li>L4: L4 acceleration;</li><li>Waf: advanced Web protection;</li><li>QUIC: QUIC;</li><li>CrossMLC: network optimization for the Chinese mainland;</li><li>ProcessMedia: media processing;</li><li>L4DDoS: L4 DDoS protection.</li>Only one of the following L7DDoS specifications can appear: <li>L7DDoS.CM30G: L7 DDoS protection - 30 Gbps guaranteed bandwidth in the Chinese mainland;</li><li>L7DDoS.CM60G: L7 DDoS protection - 60 Gbps guaranteed bandwidth in the Chinese mainland;</li><li>L7DDoS.CM100G: L7 DDoS protection - 100 Gbps guaranteed bandwidth in the Chinese mainland;</li><li>L7DDoS.Anycast300G: L7 DDoS protection - 300 Gbps Anycast guaranteed bandwidth outside the Chinese mainland;</li><li>L7DDoS.AnycastUnlimited: L7 DDoS protection - unlimited Anycast full protection outside the Chinese mainland;</li><li>L7DDoS.CM30G_Anycast300G: L7 DDoS protection - 30 Gbps guaranteed bandwidth in the Chinese mainland and 300 Gbps Anycast guaranteed bandwidth outside the Chinese mainland;</li><li>L7DDoS.CM60G_Anycast300G: L7 DDoS protection - 60 Gbps guaranteed bandwidth in the Chinese mainland and 300 Gbps Anycast guaranteed bandwidth outside the Chinese mainland;</li><li>L7DDoS.CM100G_Anycast300G: L7 DDoS protection - 100 Gbps guaranteed bandwidth in the Chinese mainland and 300 Gbps Anycast guaranteed bandwidth outside the Chinese mainland;</li><li>L7DDoS.CM30G_AnycastUnlimited: L7 DDoS protection - 30 Gbps guaranteed bandwidth in the Chinese mainland and unlimited Anycast full protection outside the Chinese mainland;</li><li>L7DDoS.CM60G_AnycastUnlimited: L7 DDoS protection - 60 Gbps guaranteed bandwidth in the Chinese mainland and unlimited Anycast full protection outside the Chinese mainland;</li><li>L7DDoS.CM100G_AnycastUnlimited: L7 DDoS protection - 100 Gbps guaranteed bandwidth in the Chinese mainland and unlimited Anycast full protection outside the Chinese mainland.</li></p>
      */
     public void setFeatures(String [] Features) {
         this.Features = Features;
@@ -628,6 +546,9 @@ public class Plan extends AbstractModel {
         }
         if (source.AccTrafficCapacity != null) {
             this.AccTrafficCapacity = new Long(source.AccTrafficCapacity);
+        }
+        if (source.ClientAuthTrafficCapacity != null) {
+            this.ClientAuthTrafficCapacity = new Long(source.ClientAuthTrafficCapacity);
         }
         if (source.SmartTrafficCapacity != null) {
             this.SmartTrafficCapacity = new Long(source.SmartTrafficCapacity);
@@ -679,6 +600,7 @@ public class Plan extends AbstractModel {
         this.setParamSimple(map, prefix + "SmartRequestCapacity", this.SmartRequestCapacity);
         this.setParamSimple(map, prefix + "VAUCapacity", this.VAUCapacity);
         this.setParamSimple(map, prefix + "AccTrafficCapacity", this.AccTrafficCapacity);
+        this.setParamSimple(map, prefix + "ClientAuthTrafficCapacity", this.ClientAuthTrafficCapacity);
         this.setParamSimple(map, prefix + "SmartTrafficCapacity", this.SmartTrafficCapacity);
         this.setParamSimple(map, prefix + "DDoSTrafficCapacity", this.DDoSTrafficCapacity);
         this.setParamSimple(map, prefix + "SecTrafficCapacity", this.SecTrafficCapacity);

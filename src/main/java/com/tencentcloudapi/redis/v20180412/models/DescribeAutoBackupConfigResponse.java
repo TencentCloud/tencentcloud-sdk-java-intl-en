@@ -24,35 +24,35 @@ import java.util.HashMap;
 public class DescribeAutoBackupConfigResponse extends AbstractModel {
 
     /**
-    * This parameter is retained due to compatibility and can be ignored.
+    * <p>This parameter is temporarily reserved due to compatibility issues. Ignore it.</p>
     */
     @SerializedName("AutoBackupType")
     @Expose
     private Long AutoBackupType;
 
     /**
-    * Backup cycle, which will be daily by default. Valid values: `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday`, `Saturday`, `Sunday`.
+    * <p>Backup cycle. Automatic backup is performed every day by default: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday.</p>
     */
     @SerializedName("WeekDays")
     @Expose
     private String [] WeekDays;
 
     /**
-    * Time period for backup task initialization
+    * <p>Backup task initiation time range.</p>
     */
     @SerializedName("TimePeriod")
     @Expose
     private String TimePeriod;
 
     /**
-    * Retention time of full backup files in days.  Default value: `7`.  To retain the files for more days, [submit a ticket](https://console.cloud.tencent.com/workorder/category) for application.
+    * <p>Number of days to save full backup files. Default value: 7 days. To save for more days, please <a href="https://console.cloud.tencent.com/workorder/category">submit a ticket</a> to apply.</p>
     */
     @SerializedName("BackupStorageDays")
     @Expose
     private Long BackupStorageDays;
 
     /**
-    * This parameter has been disused.
+    * <p>This parameter is no longer in use. Ignore it.</p>
     */
     @SerializedName("BinlogStorageDays")
     @Expose
@@ -66,80 +66,80 @@ public class DescribeAutoBackupConfigResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get This parameter is retained due to compatibility and can be ignored. 
-     * @return AutoBackupType This parameter is retained due to compatibility and can be ignored.
+     * Get <p>This parameter is temporarily reserved due to compatibility issues. Ignore it.</p> 
+     * @return AutoBackupType <p>This parameter is temporarily reserved due to compatibility issues. Ignore it.</p>
      */
     public Long getAutoBackupType() {
         return this.AutoBackupType;
     }
 
     /**
-     * Set This parameter is retained due to compatibility and can be ignored.
-     * @param AutoBackupType This parameter is retained due to compatibility and can be ignored.
+     * Set <p>This parameter is temporarily reserved due to compatibility issues. Ignore it.</p>
+     * @param AutoBackupType <p>This parameter is temporarily reserved due to compatibility issues. Ignore it.</p>
      */
     public void setAutoBackupType(Long AutoBackupType) {
         this.AutoBackupType = AutoBackupType;
     }
 
     /**
-     * Get Backup cycle, which will be daily by default. Valid values: `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday`, `Saturday`, `Sunday`. 
-     * @return WeekDays Backup cycle, which will be daily by default. Valid values: `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday`, `Saturday`, `Sunday`.
+     * Get <p>Backup cycle. Automatic backup is performed every day by default: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday.</p> 
+     * @return WeekDays <p>Backup cycle. Automatic backup is performed every day by default: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday.</p>
      */
     public String [] getWeekDays() {
         return this.WeekDays;
     }
 
     /**
-     * Set Backup cycle, which will be daily by default. Valid values: `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday`, `Saturday`, `Sunday`.
-     * @param WeekDays Backup cycle, which will be daily by default. Valid values: `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday`, `Saturday`, `Sunday`.
+     * Set <p>Backup cycle. Automatic backup is performed every day by default: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday.</p>
+     * @param WeekDays <p>Backup cycle. Automatic backup is performed every day by default: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday.</p>
      */
     public void setWeekDays(String [] WeekDays) {
         this.WeekDays = WeekDays;
     }
 
     /**
-     * Get Time period for backup task initialization 
-     * @return TimePeriod Time period for backup task initialization
+     * Get <p>Backup task initiation time range.</p> 
+     * @return TimePeriod <p>Backup task initiation time range.</p>
      */
     public String getTimePeriod() {
         return this.TimePeriod;
     }
 
     /**
-     * Set Time period for backup task initialization
-     * @param TimePeriod Time period for backup task initialization
+     * Set <p>Backup task initiation time range.</p>
+     * @param TimePeriod <p>Backup task initiation time range.</p>
      */
     public void setTimePeriod(String TimePeriod) {
         this.TimePeriod = TimePeriod;
     }
 
     /**
-     * Get Retention time of full backup files in days.  Default value: `7`.  To retain the files for more days, [submit a ticket](https://console.cloud.tencent.com/workorder/category) for application. 
-     * @return BackupStorageDays Retention time of full backup files in days.  Default value: `7`.  To retain the files for more days, [submit a ticket](https://console.cloud.tencent.com/workorder/category) for application.
+     * Get <p>Number of days to save full backup files. Default value: 7 days. To save for more days, please <a href="https://console.cloud.tencent.com/workorder/category">submit a ticket</a> to apply.</p> 
+     * @return BackupStorageDays <p>Number of days to save full backup files. Default value: 7 days. To save for more days, please <a href="https://console.cloud.tencent.com/workorder/category">submit a ticket</a> to apply.</p>
      */
     public Long getBackupStorageDays() {
         return this.BackupStorageDays;
     }
 
     /**
-     * Set Retention time of full backup files in days.  Default value: `7`.  To retain the files for more days, [submit a ticket](https://console.cloud.tencent.com/workorder/category) for application.
-     * @param BackupStorageDays Retention time of full backup files in days.  Default value: `7`.  To retain the files for more days, [submit a ticket](https://console.cloud.tencent.com/workorder/category) for application.
+     * Set <p>Number of days to save full backup files. Default value: 7 days. To save for more days, please <a href="https://console.cloud.tencent.com/workorder/category">submit a ticket</a> to apply.</p>
+     * @param BackupStorageDays <p>Number of days to save full backup files. Default value: 7 days. To save for more days, please <a href="https://console.cloud.tencent.com/workorder/category">submit a ticket</a> to apply.</p>
      */
     public void setBackupStorageDays(Long BackupStorageDays) {
         this.BackupStorageDays = BackupStorageDays;
     }
 
     /**
-     * Get This parameter has been disused. 
-     * @return BinlogStorageDays This parameter has been disused.
+     * Get <p>This parameter is no longer in use. Ignore it.</p> 
+     * @return BinlogStorageDays <p>This parameter is no longer in use. Ignore it.</p>
      */
     public Long getBinlogStorageDays() {
         return this.BinlogStorageDays;
     }
 
     /**
-     * Set This parameter has been disused.
-     * @param BinlogStorageDays This parameter has been disused.
+     * Set <p>This parameter is no longer in use. Ignore it.</p>
+     * @param BinlogStorageDays <p>This parameter is no longer in use. Ignore it.</p>
      */
     public void setBinlogStorageDays(Long BinlogStorageDays) {
         this.BinlogStorageDays = BinlogStorageDays;

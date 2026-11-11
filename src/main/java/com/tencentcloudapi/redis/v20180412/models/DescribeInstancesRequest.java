@@ -24,796 +24,621 @@ import java.util.HashMap;
 public class DescribeInstancesRequest extends AbstractModel {
 
     /**
-    * Number of instances returned per page. Default value: `20`. Maximum value: `1000`.
+    * <p>Number of instances output per page. Default parameter value: 20. Maximum value: 1000.</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * Pagination offset, which is an integral multiple of `Limit`. Calculation formula:  `offset` = `limit` * (page number - 1).
+    * <p>Pagination offset, which is an integer multiple of Limit. Calculation formula: offset=limit*(page number-1).</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * ID of a specified instance,  such as  "crs-xjhsdj****" Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
-
-
+    * <p>Specifies the instance ID. Example: crs-xjhsdj****. Log in to the <a href="https://console.cloud.tencent.com/redis">Redis console</a> and copy the instance ID from the instance list.</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * The instance list is sorted according to the following enumeration valid values:
-- projectId: By project ID.- createtime: By the creation time of instances.- instancename: By the name of instances.- type: By the type of instances.- curDeadline: By the expiration time of instances.
+    * <p>Instance list sorting criteria. Enumeration values are as follows:</p><ul><li>projectId: by project ID.</li><li>createtime: sort by instance creation time.</li><li>instancename: by instance name sorting.</li><li>type: by instance type.</li><li>curDeadline: by instance expiration time.</li></ul>
     */
     @SerializedName("OrderBy")
     @Expose
     private String OrderBy;
 
     /**
-    * For instance sorting order, the default is descending order.
-- 1: Descending order.
-- 0: Ascending order.
+    * <p>Instance sorting order, with a default value of reverse sorting.</p><ul><li>1: Reverse order.</li><li>0: Sequential order.</li></ul>
     */
     @SerializedName("OrderType")
     @Expose
     private Long OrderType;
 
     /**
-    * Array of VPC IDs such as 47525. If this parameter is not passed in or the array is empty, the classic network will be selected by default. This parameter is retained and can be ignored. It is set based on `UniqVpcIds` parameter format.
+    * <p>VPC ID array. If this parameter is not configured or the array is empty, the basic network is selected by default. For example: 47525. This parameter is temporarily reserved and can be ignored. Set the VPC ID array according to the format of the UniqVpcIds parameter.</p>
     */
     @SerializedName("VpcIds")
     @Expose
     private String [] VpcIds;
 
     /**
-    * Array of VPC subnet IDs such as 56854. This parameter is retained and can be ignored. It is set based on `UniqSubnetIds` parameter format.
+    * <p>Array of subnet IDs belonging to the private network, for example: 56854. This parameter is temporarily reserved and can be ignored. Set the private network subnet ID array according to the format of the UniqSubnetIds parameter.</p>
     */
     @SerializedName("SubnetIds")
     @Expose
     private String [] SubnetIds;
 
     /**
-    * Setting keywords field for fuzzy query, only instance names support fuzzy query.
+    * <p>Set the key field for fuzzy query. Only instance names support fuzzy query.</p>
     */
     @SerializedName("SearchKey")
     @Expose
     private String SearchKey;
 
     /**
-    * Array of project IDs
+    * <p>Array of project IDs.</p>
     */
     @SerializedName("ProjectIds")
     @Expose
     private Long [] ProjectIds;
 
     /**
-    * Instance name
+    * <p>Instance name.</p>
     */
     @SerializedName("InstanceName")
     @Expose
     private String InstanceName;
 
     /**
-    * Array of VPC IDs such as vpc-sad23jfdfk. If this parameter is not passed in or or the array is empty, the classic network will be selected by default.
+    * <p>VPC ID array. If this parameter is not configured or the array is empty, the basic network is selected by default, for example: vpc-sad23jfdfk.</p>
     */
     @SerializedName("UniqVpcIds")
     @Expose
     private String [] UniqVpcIds;
 
     /**
-    * Array of VPC subnet IDs such as subnet-fdj24n34j2
+    * <p>Subnet ID array belonging to the private network, for example: subnet-fdj24n34j2.</p>
     */
     @SerializedName("UniqSubnetIds")
     @Expose
     private String [] UniqSubnetIds;
 
     /**
-    * Array of region IDs (disused). The corresponding region can be queried through the common parameter `Region`.
+    * <p>Region ID array. This parameter has been deprecated. Use the common parameter Region to query the corresponding region.</p>
     */
     @SerializedName("RegionIds")
     @Expose
     private Long [] RegionIds;
 
     /**
-    * Instance status.
-- 0: To be initialized.
-- 1: In process.
-- 2: Running.
-- -2: Isolated.
-- -3: Pending Delete.
+    * <p>Instance status.</p><ul><li>0: pending initialization.</li><li>1: in process.</li><li>2: running.</li><li>-2: isolated.</li><li>-3: pending deletion.</li></ul>
     */
     @SerializedName("Status")
     @Expose
     private Long [] Status;
 
     /**
-    * Instance architecture version.
-- 1: Single-node edition.
-- 2: Master-replica edition.- 3: Cluster edition.
+    * <p>Instance architecture version.</p><ul><li>1: standalone edition.</li><li>2: primary/secondary edition.</li><li>3: cluster version.</li></ul>
     */
     @SerializedName("TypeVersion")
     @Expose
     private Long TypeVersion;
 
     /**
-    * Storage engine information. Valid values: `Redis-2.8`, `Redis-4.0`, `Redis-5.0`, `Redis-6.0` or `CKV`.
+    * <p>Storage engine info. It can be set to Redis-2.8, Redis-4.0, Redis-5.0, Redis-6.0, or CKV.</p>
     */
     @SerializedName("EngineName")
     @Expose
     private String EngineName;
 
     /**
-    * Renewal pattern.
-- 0: Manual renewal.
-- 1: Automatic renewal.
-- 2: No renewal after expiry.
+    * <p>Renewal mode.</p><ul><li>0: Manual renewal.</li><li>1: Automatic renewal.</li><li>2: No renewal after expiry.</li></ul>
     */
     @SerializedName("AutoRenew")
     @Expose
     private Long [] AutoRenew;
 
     /**
-    * Billing mode.
-- postpaid: pay-as-you-go.
-- prepaid: monthly subscription.
+    * <p>Billing mode.</p><ul><li>postpaid: pay-as-you-go billing.</li><li>prepaid: annual/monthly subscription.</li></ul>
     */
     @SerializedName("BillingMode")
     @Expose
     private String BillingMode;
 
     /**
-    * Instance type.
-
-- 2: Redis 2.8 memory edition (standard architecture).
-- 3: CKV 3.2 memory edition (standard architecture).
-- 4: CKV 3.2 memory edition (cluster architecture).
-- 5: Redis 2.8 memory edition (standalone).
-- 6: Redis 4.0 memory edition (standard architecture).
-- 7: Redis 4.0 memory edition (cluster architecture).
-- 8: Redis 5.0 memory edition (standard architecture).
-- 9: Redis 5.0 memory edition (cluster architecture).
-- 15: Redis 6.2 memory edition (standard architecture).
-- 16: Redis 6.2 memory edition (cluster architecture).
-- 17: Redis 7.0 memory edition (standard architecture).
-- 18: Redis 7.0 memory edition (cluster architecture).
-- 200: Memcached 1.6 memory edition (cluster architecture).
+    * <p>Instance type.</p><ul><li>2: Redis 2.8 memory edition (standard architecture).</li><li>3: CKV 3.2 memory edition (standard architecture).</li><li>4: CKV 3.2 memory edition (cluster architecture).</li><li>5: Redis 2.8 memory edition (standalone).</li><li>6: Redis 4.0 memory edition (standard architecture).</li><li>7: Redis 4.0 memory edition (cluster architecture).</li><li>8: Redis 5.0 memory edition (standard architecture).</li><li>9: Redis 5.0 memory edition (cluster architecture).</li><li>15: Redis 6.2 memory edition (standard architecture).</li><li>16: Redis 6.2 memory edition (cluster architecture).</li><li>17: Redis 7.0 memory edition (standard architecture).</li><li>18: Redis 7.0 memory edition (cluster architecture).</li><li>200: Memcached 1.6 memory edition (cluster architecture).</li></ul>
     */
     @SerializedName("Type")
     @Expose
     private Long Type;
 
     /**
-    * This parameter is of array type and supports the configuration of instance names, instance IDs, and IP addresses. Among these, the instance name is fuzzy matching while the instance ID and IP address are precise matching.
-- Each element in the array is used for a union-based matching query.- When both **InstanceId** and **SearchKeys** are configured simultaneously, their intersection will be used for the matching query.
+    * <p>This parameter is an array type and supports configuring instance name, instance ID, and IP address. Among them, instance name uses fuzzy matching, while instance ID and IP address use exact matching.</p><ul><li>Each element in the array uses union for match query.</li><li>If <strong>InstanceId</strong> and <strong>SearchKeys</strong> are configured concurrently, their intersection is used for matching query.</li></ul>
     */
     @SerializedName("SearchKeys")
     @Expose
     private String [] SearchKeys;
 
     /**
-    * Internal parameter, which can be ignored.
+    * <p>Internal parameter, which can be ignored.</p>
     */
     @SerializedName("TypeList")
     @Expose
     private Long [] TypeList;
 
     /**
-    * Internal parameter, which can be ignored.
+    * <p>Internal parameter, which can be ignored.</p>
     */
     @SerializedName("MonitorVersion")
     @Expose
     private String MonitorVersion;
 
     /**
-    * Resources filter by tag key and value. If this parameter is not specified or is an empty array, resources will not be filtered.
+    * <p>Filter resources by tag Key and Value. If this parameter is not configured or the array is set to empty, no tag-based filtering is applied.</p>
     */
     @SerializedName("InstanceTags")
     @Expose
     private InstanceTagInfo [] InstanceTags;
 
     /**
-    * Resources filter by tag key. If this parameter is not specified or is an empty array, resources will not be filtered.
+    * <p>Filter resources by tag Key. If this parameter is not configured or the array is set to empty, no filtering by tag Key is performed.</p>
     */
     @SerializedName("TagKeys")
     @Expose
     private String [] TagKeys;
 
     /**
-    * The product version of the instance. If this parameter is not configured or the array is set to empty, instances will not be filtered based on this parameter by default.
-- local: local Disk Edition.- cdc: Cluster dedicated edition.
-
+    * <p>Deployment type of the instance. If this parameter is not configured or the array is set to empty, instances will not be filtered based on this parameter by default.</p><p>Enumeration values:</p><ul><li>local: Common I.</li><li>localv2: Common II.</li><li>cdc: Dedicated cluster.</li></ul>
     */
     @SerializedName("ProductVersions")
     @Expose
     private String [] ProductVersions;
 
     /**
-    * Batch query of the specified instances ID. The number of results returned is based on `Limit`.
+    * <p>Batch query the specified instance IDs. The returned results are mainly limited by Limit.</p>
     */
     @SerializedName("InstanceIds")
     @Expose
     private String [] InstanceIds;
 
     /**
-    * Availability zone mode.
-- singleaz: Single availability zone.- multiaz: Multiple availability zones.
+    * <p>Availability zone mode.</p><ul><li>singleaz: single availability zone.</li><li>multiaz: multi-availability zone.</li></ul>
     */
     @SerializedName("AzMode")
     @Expose
     private String AzMode;
 
     /**
-     * Get Number of instances returned per page. Default value: `20`. Maximum value: `1000`. 
-     * @return Limit Number of instances returned per page. Default value: `20`. Maximum value: `1000`.
+     * Get <p>Number of instances output per page. Default parameter value: 20. Maximum value: 1000.</p> 
+     * @return Limit <p>Number of instances output per page. Default parameter value: 20. Maximum value: 1000.</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Number of instances returned per page. Default value: `20`. Maximum value: `1000`.
-     * @param Limit Number of instances returned per page. Default value: `20`. Maximum value: `1000`.
+     * Set <p>Number of instances output per page. Default parameter value: 20. Maximum value: 1000.</p>
+     * @param Limit <p>Number of instances output per page. Default parameter value: 20. Maximum value: 1000.</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get Pagination offset, which is an integral multiple of `Limit`. Calculation formula:  `offset` = `limit` * (page number - 1). 
-     * @return Offset Pagination offset, which is an integral multiple of `Limit`. Calculation formula:  `offset` = `limit` * (page number - 1).
+     * Get <p>Pagination offset, which is an integer multiple of Limit. Calculation formula: offset=limit*(page number-1).</p> 
+     * @return Offset <p>Pagination offset, which is an integer multiple of Limit. Calculation formula: offset=limit*(page number-1).</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Pagination offset, which is an integral multiple of `Limit`. Calculation formula:  `offset` = `limit` * (page number - 1).
-     * @param Offset Pagination offset, which is an integral multiple of `Limit`. Calculation formula:  `offset` = `limit` * (page number - 1).
+     * Set <p>Pagination offset, which is an integer multiple of Limit. Calculation formula: offset=limit*(page number-1).</p>
+     * @param Offset <p>Pagination offset, which is an integer multiple of Limit. Calculation formula: offset=limit*(page number-1).</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get ID of a specified instance,  such as  "crs-xjhsdj****" Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
-
- 
-     * @return InstanceId ID of a specified instance,  such as  "crs-xjhsdj****" Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
-
-
+     * Get <p>Specifies the instance ID. Example: crs-xjhsdj****. Log in to the <a href="https://console.cloud.tencent.com/redis">Redis console</a> and copy the instance ID from the instance list.</p> 
+     * @return InstanceId <p>Specifies the instance ID. Example: crs-xjhsdj****. Log in to the <a href="https://console.cloud.tencent.com/redis">Redis console</a> and copy the instance ID from the instance list.</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set ID of a specified instance,  such as  "crs-xjhsdj****" Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
-
-
-     * @param InstanceId ID of a specified instance,  such as  "crs-xjhsdj****" Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
-
-
+     * Set <p>Specifies the instance ID. Example: crs-xjhsdj****. Log in to the <a href="https://console.cloud.tencent.com/redis">Redis console</a> and copy the instance ID from the instance list.</p>
+     * @param InstanceId <p>Specifies the instance ID. Example: crs-xjhsdj****. Log in to the <a href="https://console.cloud.tencent.com/redis">Redis console</a> and copy the instance ID from the instance list.</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get The instance list is sorted according to the following enumeration valid values:
-- projectId: By project ID.- createtime: By the creation time of instances.- instancename: By the name of instances.- type: By the type of instances.- curDeadline: By the expiration time of instances. 
-     * @return OrderBy The instance list is sorted according to the following enumeration valid values:
-- projectId: By project ID.- createtime: By the creation time of instances.- instancename: By the name of instances.- type: By the type of instances.- curDeadline: By the expiration time of instances.
+     * Get <p>Instance list sorting criteria. Enumeration values are as follows:</p><ul><li>projectId: by project ID.</li><li>createtime: sort by instance creation time.</li><li>instancename: by instance name sorting.</li><li>type: by instance type.</li><li>curDeadline: by instance expiration time.</li></ul> 
+     * @return OrderBy <p>Instance list sorting criteria. Enumeration values are as follows:</p><ul><li>projectId: by project ID.</li><li>createtime: sort by instance creation time.</li><li>instancename: by instance name sorting.</li><li>type: by instance type.</li><li>curDeadline: by instance expiration time.</li></ul>
      */
     public String getOrderBy() {
         return this.OrderBy;
     }
 
     /**
-     * Set The instance list is sorted according to the following enumeration valid values:
-- projectId: By project ID.- createtime: By the creation time of instances.- instancename: By the name of instances.- type: By the type of instances.- curDeadline: By the expiration time of instances.
-     * @param OrderBy The instance list is sorted according to the following enumeration valid values:
-- projectId: By project ID.- createtime: By the creation time of instances.- instancename: By the name of instances.- type: By the type of instances.- curDeadline: By the expiration time of instances.
+     * Set <p>Instance list sorting criteria. Enumeration values are as follows:</p><ul><li>projectId: by project ID.</li><li>createtime: sort by instance creation time.</li><li>instancename: by instance name sorting.</li><li>type: by instance type.</li><li>curDeadline: by instance expiration time.</li></ul>
+     * @param OrderBy <p>Instance list sorting criteria. Enumeration values are as follows:</p><ul><li>projectId: by project ID.</li><li>createtime: sort by instance creation time.</li><li>instancename: by instance name sorting.</li><li>type: by instance type.</li><li>curDeadline: by instance expiration time.</li></ul>
      */
     public void setOrderBy(String OrderBy) {
         this.OrderBy = OrderBy;
     }
 
     /**
-     * Get For instance sorting order, the default is descending order.
-- 1: Descending order.
-- 0: Ascending order. 
-     * @return OrderType For instance sorting order, the default is descending order.
-- 1: Descending order.
-- 0: Ascending order.
+     * Get <p>Instance sorting order, with a default value of reverse sorting.</p><ul><li>1: Reverse order.</li><li>0: Sequential order.</li></ul> 
+     * @return OrderType <p>Instance sorting order, with a default value of reverse sorting.</p><ul><li>1: Reverse order.</li><li>0: Sequential order.</li></ul>
      */
     public Long getOrderType() {
         return this.OrderType;
     }
 
     /**
-     * Set For instance sorting order, the default is descending order.
-- 1: Descending order.
-- 0: Ascending order.
-     * @param OrderType For instance sorting order, the default is descending order.
-- 1: Descending order.
-- 0: Ascending order.
+     * Set <p>Instance sorting order, with a default value of reverse sorting.</p><ul><li>1: Reverse order.</li><li>0: Sequential order.</li></ul>
+     * @param OrderType <p>Instance sorting order, with a default value of reverse sorting.</p><ul><li>1: Reverse order.</li><li>0: Sequential order.</li></ul>
      */
     public void setOrderType(Long OrderType) {
         this.OrderType = OrderType;
     }
 
     /**
-     * Get Array of VPC IDs such as 47525. If this parameter is not passed in or the array is empty, the classic network will be selected by default. This parameter is retained and can be ignored. It is set based on `UniqVpcIds` parameter format. 
-     * @return VpcIds Array of VPC IDs such as 47525. If this parameter is not passed in or the array is empty, the classic network will be selected by default. This parameter is retained and can be ignored. It is set based on `UniqVpcIds` parameter format.
+     * Get <p>VPC ID array. If this parameter is not configured or the array is empty, the basic network is selected by default. For example: 47525. This parameter is temporarily reserved and can be ignored. Set the VPC ID array according to the format of the UniqVpcIds parameter.</p> 
+     * @return VpcIds <p>VPC ID array. If this parameter is not configured or the array is empty, the basic network is selected by default. For example: 47525. This parameter is temporarily reserved and can be ignored. Set the VPC ID array according to the format of the UniqVpcIds parameter.</p>
      */
     public String [] getVpcIds() {
         return this.VpcIds;
     }
 
     /**
-     * Set Array of VPC IDs such as 47525. If this parameter is not passed in or the array is empty, the classic network will be selected by default. This parameter is retained and can be ignored. It is set based on `UniqVpcIds` parameter format.
-     * @param VpcIds Array of VPC IDs such as 47525. If this parameter is not passed in or the array is empty, the classic network will be selected by default. This parameter is retained and can be ignored. It is set based on `UniqVpcIds` parameter format.
+     * Set <p>VPC ID array. If this parameter is not configured or the array is empty, the basic network is selected by default. For example: 47525. This parameter is temporarily reserved and can be ignored. Set the VPC ID array according to the format of the UniqVpcIds parameter.</p>
+     * @param VpcIds <p>VPC ID array. If this parameter is not configured or the array is empty, the basic network is selected by default. For example: 47525. This parameter is temporarily reserved and can be ignored. Set the VPC ID array according to the format of the UniqVpcIds parameter.</p>
      */
     public void setVpcIds(String [] VpcIds) {
         this.VpcIds = VpcIds;
     }
 
     /**
-     * Get Array of VPC subnet IDs such as 56854. This parameter is retained and can be ignored. It is set based on `UniqSubnetIds` parameter format. 
-     * @return SubnetIds Array of VPC subnet IDs such as 56854. This parameter is retained and can be ignored. It is set based on `UniqSubnetIds` parameter format.
+     * Get <p>Array of subnet IDs belonging to the private network, for example: 56854. This parameter is temporarily reserved and can be ignored. Set the private network subnet ID array according to the format of the UniqSubnetIds parameter.</p> 
+     * @return SubnetIds <p>Array of subnet IDs belonging to the private network, for example: 56854. This parameter is temporarily reserved and can be ignored. Set the private network subnet ID array according to the format of the UniqSubnetIds parameter.</p>
      */
     public String [] getSubnetIds() {
         return this.SubnetIds;
     }
 
     /**
-     * Set Array of VPC subnet IDs such as 56854. This parameter is retained and can be ignored. It is set based on `UniqSubnetIds` parameter format.
-     * @param SubnetIds Array of VPC subnet IDs such as 56854. This parameter is retained and can be ignored. It is set based on `UniqSubnetIds` parameter format.
+     * Set <p>Array of subnet IDs belonging to the private network, for example: 56854. This parameter is temporarily reserved and can be ignored. Set the private network subnet ID array according to the format of the UniqSubnetIds parameter.</p>
+     * @param SubnetIds <p>Array of subnet IDs belonging to the private network, for example: 56854. This parameter is temporarily reserved and can be ignored. Set the private network subnet ID array according to the format of the UniqSubnetIds parameter.</p>
      */
     public void setSubnetIds(String [] SubnetIds) {
         this.SubnetIds = SubnetIds;
     }
 
     /**
-     * Get Setting keywords field for fuzzy query, only instance names support fuzzy query. 
-     * @return SearchKey Setting keywords field for fuzzy query, only instance names support fuzzy query.
+     * Get <p>Set the key field for fuzzy query. Only instance names support fuzzy query.</p> 
+     * @return SearchKey <p>Set the key field for fuzzy query. Only instance names support fuzzy query.</p>
      */
     public String getSearchKey() {
         return this.SearchKey;
     }
 
     /**
-     * Set Setting keywords field for fuzzy query, only instance names support fuzzy query.
-     * @param SearchKey Setting keywords field for fuzzy query, only instance names support fuzzy query.
+     * Set <p>Set the key field for fuzzy query. Only instance names support fuzzy query.</p>
+     * @param SearchKey <p>Set the key field for fuzzy query. Only instance names support fuzzy query.</p>
      */
     public void setSearchKey(String SearchKey) {
         this.SearchKey = SearchKey;
     }
 
     /**
-     * Get Array of project IDs 
-     * @return ProjectIds Array of project IDs
+     * Get <p>Array of project IDs.</p> 
+     * @return ProjectIds <p>Array of project IDs.</p>
      */
     public Long [] getProjectIds() {
         return this.ProjectIds;
     }
 
     /**
-     * Set Array of project IDs
-     * @param ProjectIds Array of project IDs
+     * Set <p>Array of project IDs.</p>
+     * @param ProjectIds <p>Array of project IDs.</p>
      */
     public void setProjectIds(Long [] ProjectIds) {
         this.ProjectIds = ProjectIds;
     }
 
     /**
-     * Get Instance name 
-     * @return InstanceName Instance name
+     * Get <p>Instance name.</p> 
+     * @return InstanceName <p>Instance name.</p>
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set Instance name
-     * @param InstanceName Instance name
+     * Set <p>Instance name.</p>
+     * @param InstanceName <p>Instance name.</p>
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
     }
 
     /**
-     * Get Array of VPC IDs such as vpc-sad23jfdfk. If this parameter is not passed in or or the array is empty, the classic network will be selected by default. 
-     * @return UniqVpcIds Array of VPC IDs such as vpc-sad23jfdfk. If this parameter is not passed in or or the array is empty, the classic network will be selected by default.
+     * Get <p>VPC ID array. If this parameter is not configured or the array is empty, the basic network is selected by default, for example: vpc-sad23jfdfk.</p> 
+     * @return UniqVpcIds <p>VPC ID array. If this parameter is not configured or the array is empty, the basic network is selected by default, for example: vpc-sad23jfdfk.</p>
      */
     public String [] getUniqVpcIds() {
         return this.UniqVpcIds;
     }
 
     /**
-     * Set Array of VPC IDs such as vpc-sad23jfdfk. If this parameter is not passed in or or the array is empty, the classic network will be selected by default.
-     * @param UniqVpcIds Array of VPC IDs such as vpc-sad23jfdfk. If this parameter is not passed in or or the array is empty, the classic network will be selected by default.
+     * Set <p>VPC ID array. If this parameter is not configured or the array is empty, the basic network is selected by default, for example: vpc-sad23jfdfk.</p>
+     * @param UniqVpcIds <p>VPC ID array. If this parameter is not configured or the array is empty, the basic network is selected by default, for example: vpc-sad23jfdfk.</p>
      */
     public void setUniqVpcIds(String [] UniqVpcIds) {
         this.UniqVpcIds = UniqVpcIds;
     }
 
     /**
-     * Get Array of VPC subnet IDs such as subnet-fdj24n34j2 
-     * @return UniqSubnetIds Array of VPC subnet IDs such as subnet-fdj24n34j2
+     * Get <p>Subnet ID array belonging to the private network, for example: subnet-fdj24n34j2.</p> 
+     * @return UniqSubnetIds <p>Subnet ID array belonging to the private network, for example: subnet-fdj24n34j2.</p>
      */
     public String [] getUniqSubnetIds() {
         return this.UniqSubnetIds;
     }
 
     /**
-     * Set Array of VPC subnet IDs such as subnet-fdj24n34j2
-     * @param UniqSubnetIds Array of VPC subnet IDs such as subnet-fdj24n34j2
+     * Set <p>Subnet ID array belonging to the private network, for example: subnet-fdj24n34j2.</p>
+     * @param UniqSubnetIds <p>Subnet ID array belonging to the private network, for example: subnet-fdj24n34j2.</p>
      */
     public void setUniqSubnetIds(String [] UniqSubnetIds) {
         this.UniqSubnetIds = UniqSubnetIds;
     }
 
     /**
-     * Get Array of region IDs (disused). The corresponding region can be queried through the common parameter `Region`. 
-     * @return RegionIds Array of region IDs (disused). The corresponding region can be queried through the common parameter `Region`.
+     * Get <p>Region ID array. This parameter has been deprecated. Use the common parameter Region to query the corresponding region.</p> 
+     * @return RegionIds <p>Region ID array. This parameter has been deprecated. Use the common parameter Region to query the corresponding region.</p>
      */
     public Long [] getRegionIds() {
         return this.RegionIds;
     }
 
     /**
-     * Set Array of region IDs (disused). The corresponding region can be queried through the common parameter `Region`.
-     * @param RegionIds Array of region IDs (disused). The corresponding region can be queried through the common parameter `Region`.
+     * Set <p>Region ID array. This parameter has been deprecated. Use the common parameter Region to query the corresponding region.</p>
+     * @param RegionIds <p>Region ID array. This parameter has been deprecated. Use the common parameter Region to query the corresponding region.</p>
      */
     public void setRegionIds(Long [] RegionIds) {
         this.RegionIds = RegionIds;
     }
 
     /**
-     * Get Instance status.
-- 0: To be initialized.
-- 1: In process.
-- 2: Running.
-- -2: Isolated.
-- -3: Pending Delete. 
-     * @return Status Instance status.
-- 0: To be initialized.
-- 1: In process.
-- 2: Running.
-- -2: Isolated.
-- -3: Pending Delete.
+     * Get <p>Instance status.</p><ul><li>0: pending initialization.</li><li>1: in process.</li><li>2: running.</li><li>-2: isolated.</li><li>-3: pending deletion.</li></ul> 
+     * @return Status <p>Instance status.</p><ul><li>0: pending initialization.</li><li>1: in process.</li><li>2: running.</li><li>-2: isolated.</li><li>-3: pending deletion.</li></ul>
      */
     public Long [] getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Instance status.
-- 0: To be initialized.
-- 1: In process.
-- 2: Running.
-- -2: Isolated.
-- -3: Pending Delete.
-     * @param Status Instance status.
-- 0: To be initialized.
-- 1: In process.
-- 2: Running.
-- -2: Isolated.
-- -3: Pending Delete.
+     * Set <p>Instance status.</p><ul><li>0: pending initialization.</li><li>1: in process.</li><li>2: running.</li><li>-2: isolated.</li><li>-3: pending deletion.</li></ul>
+     * @param Status <p>Instance status.</p><ul><li>0: pending initialization.</li><li>1: in process.</li><li>2: running.</li><li>-2: isolated.</li><li>-3: pending deletion.</li></ul>
      */
     public void setStatus(Long [] Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Instance architecture version.
-- 1: Single-node edition.
-- 2: Master-replica edition.- 3: Cluster edition. 
-     * @return TypeVersion Instance architecture version.
-- 1: Single-node edition.
-- 2: Master-replica edition.- 3: Cluster edition.
+     * Get <p>Instance architecture version.</p><ul><li>1: standalone edition.</li><li>2: primary/secondary edition.</li><li>3: cluster version.</li></ul> 
+     * @return TypeVersion <p>Instance architecture version.</p><ul><li>1: standalone edition.</li><li>2: primary/secondary edition.</li><li>3: cluster version.</li></ul>
      */
     public Long getTypeVersion() {
         return this.TypeVersion;
     }
 
     /**
-     * Set Instance architecture version.
-- 1: Single-node edition.
-- 2: Master-replica edition.- 3: Cluster edition.
-     * @param TypeVersion Instance architecture version.
-- 1: Single-node edition.
-- 2: Master-replica edition.- 3: Cluster edition.
+     * Set <p>Instance architecture version.</p><ul><li>1: standalone edition.</li><li>2: primary/secondary edition.</li><li>3: cluster version.</li></ul>
+     * @param TypeVersion <p>Instance architecture version.</p><ul><li>1: standalone edition.</li><li>2: primary/secondary edition.</li><li>3: cluster version.</li></ul>
      */
     public void setTypeVersion(Long TypeVersion) {
         this.TypeVersion = TypeVersion;
     }
 
     /**
-     * Get Storage engine information. Valid values: `Redis-2.8`, `Redis-4.0`, `Redis-5.0`, `Redis-6.0` or `CKV`. 
-     * @return EngineName Storage engine information. Valid values: `Redis-2.8`, `Redis-4.0`, `Redis-5.0`, `Redis-6.0` or `CKV`.
+     * Get <p>Storage engine info. It can be set to Redis-2.8, Redis-4.0, Redis-5.0, Redis-6.0, or CKV.</p> 
+     * @return EngineName <p>Storage engine info. It can be set to Redis-2.8, Redis-4.0, Redis-5.0, Redis-6.0, or CKV.</p>
      */
     public String getEngineName() {
         return this.EngineName;
     }
 
     /**
-     * Set Storage engine information. Valid values: `Redis-2.8`, `Redis-4.0`, `Redis-5.0`, `Redis-6.0` or `CKV`.
-     * @param EngineName Storage engine information. Valid values: `Redis-2.8`, `Redis-4.0`, `Redis-5.0`, `Redis-6.0` or `CKV`.
+     * Set <p>Storage engine info. It can be set to Redis-2.8, Redis-4.0, Redis-5.0, Redis-6.0, or CKV.</p>
+     * @param EngineName <p>Storage engine info. It can be set to Redis-2.8, Redis-4.0, Redis-5.0, Redis-6.0, or CKV.</p>
      */
     public void setEngineName(String EngineName) {
         this.EngineName = EngineName;
     }
 
     /**
-     * Get Renewal pattern.
-- 0: Manual renewal.
-- 1: Automatic renewal.
-- 2: No renewal after expiry. 
-     * @return AutoRenew Renewal pattern.
-- 0: Manual renewal.
-- 1: Automatic renewal.
-- 2: No renewal after expiry.
+     * Get <p>Renewal mode.</p><ul><li>0: Manual renewal.</li><li>1: Automatic renewal.</li><li>2: No renewal after expiry.</li></ul> 
+     * @return AutoRenew <p>Renewal mode.</p><ul><li>0: Manual renewal.</li><li>1: Automatic renewal.</li><li>2: No renewal after expiry.</li></ul>
      */
     public Long [] getAutoRenew() {
         return this.AutoRenew;
     }
 
     /**
-     * Set Renewal pattern.
-- 0: Manual renewal.
-- 1: Automatic renewal.
-- 2: No renewal after expiry.
-     * @param AutoRenew Renewal pattern.
-- 0: Manual renewal.
-- 1: Automatic renewal.
-- 2: No renewal after expiry.
+     * Set <p>Renewal mode.</p><ul><li>0: Manual renewal.</li><li>1: Automatic renewal.</li><li>2: No renewal after expiry.</li></ul>
+     * @param AutoRenew <p>Renewal mode.</p><ul><li>0: Manual renewal.</li><li>1: Automatic renewal.</li><li>2: No renewal after expiry.</li></ul>
      */
     public void setAutoRenew(Long [] AutoRenew) {
         this.AutoRenew = AutoRenew;
     }
 
     /**
-     * Get Billing mode.
-- postpaid: pay-as-you-go.
-- prepaid: monthly subscription. 
-     * @return BillingMode Billing mode.
-- postpaid: pay-as-you-go.
-- prepaid: monthly subscription.
+     * Get <p>Billing mode.</p><ul><li>postpaid: pay-as-you-go billing.</li><li>prepaid: annual/monthly subscription.</li></ul> 
+     * @return BillingMode <p>Billing mode.</p><ul><li>postpaid: pay-as-you-go billing.</li><li>prepaid: annual/monthly subscription.</li></ul>
      */
     public String getBillingMode() {
         return this.BillingMode;
     }
 
     /**
-     * Set Billing mode.
-- postpaid: pay-as-you-go.
-- prepaid: monthly subscription.
-     * @param BillingMode Billing mode.
-- postpaid: pay-as-you-go.
-- prepaid: monthly subscription.
+     * Set <p>Billing mode.</p><ul><li>postpaid: pay-as-you-go billing.</li><li>prepaid: annual/monthly subscription.</li></ul>
+     * @param BillingMode <p>Billing mode.</p><ul><li>postpaid: pay-as-you-go billing.</li><li>prepaid: annual/monthly subscription.</li></ul>
      */
     public void setBillingMode(String BillingMode) {
         this.BillingMode = BillingMode;
     }
 
     /**
-     * Get Instance type.
-
-- 2: Redis 2.8 memory edition (standard architecture).
-- 3: CKV 3.2 memory edition (standard architecture).
-- 4: CKV 3.2 memory edition (cluster architecture).
-- 5: Redis 2.8 memory edition (standalone).
-- 6: Redis 4.0 memory edition (standard architecture).
-- 7: Redis 4.0 memory edition (cluster architecture).
-- 8: Redis 5.0 memory edition (standard architecture).
-- 9: Redis 5.0 memory edition (cluster architecture).
-- 15: Redis 6.2 memory edition (standard architecture).
-- 16: Redis 6.2 memory edition (cluster architecture).
-- 17: Redis 7.0 memory edition (standard architecture).
-- 18: Redis 7.0 memory edition (cluster architecture).
-- 200: Memcached 1.6 memory edition (cluster architecture). 
-     * @return Type Instance type.
-
-- 2: Redis 2.8 memory edition (standard architecture).
-- 3: CKV 3.2 memory edition (standard architecture).
-- 4: CKV 3.2 memory edition (cluster architecture).
-- 5: Redis 2.8 memory edition (standalone).
-- 6: Redis 4.0 memory edition (standard architecture).
-- 7: Redis 4.0 memory edition (cluster architecture).
-- 8: Redis 5.0 memory edition (standard architecture).
-- 9: Redis 5.0 memory edition (cluster architecture).
-- 15: Redis 6.2 memory edition (standard architecture).
-- 16: Redis 6.2 memory edition (cluster architecture).
-- 17: Redis 7.0 memory edition (standard architecture).
-- 18: Redis 7.0 memory edition (cluster architecture).
-- 200: Memcached 1.6 memory edition (cluster architecture).
+     * Get <p>Instance type.</p><ul><li>2: Redis 2.8 memory edition (standard architecture).</li><li>3: CKV 3.2 memory edition (standard architecture).</li><li>4: CKV 3.2 memory edition (cluster architecture).</li><li>5: Redis 2.8 memory edition (standalone).</li><li>6: Redis 4.0 memory edition (standard architecture).</li><li>7: Redis 4.0 memory edition (cluster architecture).</li><li>8: Redis 5.0 memory edition (standard architecture).</li><li>9: Redis 5.0 memory edition (cluster architecture).</li><li>15: Redis 6.2 memory edition (standard architecture).</li><li>16: Redis 6.2 memory edition (cluster architecture).</li><li>17: Redis 7.0 memory edition (standard architecture).</li><li>18: Redis 7.0 memory edition (cluster architecture).</li><li>200: Memcached 1.6 memory edition (cluster architecture).</li></ul> 
+     * @return Type <p>Instance type.</p><ul><li>2: Redis 2.8 memory edition (standard architecture).</li><li>3: CKV 3.2 memory edition (standard architecture).</li><li>4: CKV 3.2 memory edition (cluster architecture).</li><li>5: Redis 2.8 memory edition (standalone).</li><li>6: Redis 4.0 memory edition (standard architecture).</li><li>7: Redis 4.0 memory edition (cluster architecture).</li><li>8: Redis 5.0 memory edition (standard architecture).</li><li>9: Redis 5.0 memory edition (cluster architecture).</li><li>15: Redis 6.2 memory edition (standard architecture).</li><li>16: Redis 6.2 memory edition (cluster architecture).</li><li>17: Redis 7.0 memory edition (standard architecture).</li><li>18: Redis 7.0 memory edition (cluster architecture).</li><li>200: Memcached 1.6 memory edition (cluster architecture).</li></ul>
      */
     public Long getType() {
         return this.Type;
     }
 
     /**
-     * Set Instance type.
-
-- 2: Redis 2.8 memory edition (standard architecture).
-- 3: CKV 3.2 memory edition (standard architecture).
-- 4: CKV 3.2 memory edition (cluster architecture).
-- 5: Redis 2.8 memory edition (standalone).
-- 6: Redis 4.0 memory edition (standard architecture).
-- 7: Redis 4.0 memory edition (cluster architecture).
-- 8: Redis 5.0 memory edition (standard architecture).
-- 9: Redis 5.0 memory edition (cluster architecture).
-- 15: Redis 6.2 memory edition (standard architecture).
-- 16: Redis 6.2 memory edition (cluster architecture).
-- 17: Redis 7.0 memory edition (standard architecture).
-- 18: Redis 7.0 memory edition (cluster architecture).
-- 200: Memcached 1.6 memory edition (cluster architecture).
-     * @param Type Instance type.
-
-- 2: Redis 2.8 memory edition (standard architecture).
-- 3: CKV 3.2 memory edition (standard architecture).
-- 4: CKV 3.2 memory edition (cluster architecture).
-- 5: Redis 2.8 memory edition (standalone).
-- 6: Redis 4.0 memory edition (standard architecture).
-- 7: Redis 4.0 memory edition (cluster architecture).
-- 8: Redis 5.0 memory edition (standard architecture).
-- 9: Redis 5.0 memory edition (cluster architecture).
-- 15: Redis 6.2 memory edition (standard architecture).
-- 16: Redis 6.2 memory edition (cluster architecture).
-- 17: Redis 7.0 memory edition (standard architecture).
-- 18: Redis 7.0 memory edition (cluster architecture).
-- 200: Memcached 1.6 memory edition (cluster architecture).
+     * Set <p>Instance type.</p><ul><li>2: Redis 2.8 memory edition (standard architecture).</li><li>3: CKV 3.2 memory edition (standard architecture).</li><li>4: CKV 3.2 memory edition (cluster architecture).</li><li>5: Redis 2.8 memory edition (standalone).</li><li>6: Redis 4.0 memory edition (standard architecture).</li><li>7: Redis 4.0 memory edition (cluster architecture).</li><li>8: Redis 5.0 memory edition (standard architecture).</li><li>9: Redis 5.0 memory edition (cluster architecture).</li><li>15: Redis 6.2 memory edition (standard architecture).</li><li>16: Redis 6.2 memory edition (cluster architecture).</li><li>17: Redis 7.0 memory edition (standard architecture).</li><li>18: Redis 7.0 memory edition (cluster architecture).</li><li>200: Memcached 1.6 memory edition (cluster architecture).</li></ul>
+     * @param Type <p>Instance type.</p><ul><li>2: Redis 2.8 memory edition (standard architecture).</li><li>3: CKV 3.2 memory edition (standard architecture).</li><li>4: CKV 3.2 memory edition (cluster architecture).</li><li>5: Redis 2.8 memory edition (standalone).</li><li>6: Redis 4.0 memory edition (standard architecture).</li><li>7: Redis 4.0 memory edition (cluster architecture).</li><li>8: Redis 5.0 memory edition (standard architecture).</li><li>9: Redis 5.0 memory edition (cluster architecture).</li><li>15: Redis 6.2 memory edition (standard architecture).</li><li>16: Redis 6.2 memory edition (cluster architecture).</li><li>17: Redis 7.0 memory edition (standard architecture).</li><li>18: Redis 7.0 memory edition (cluster architecture).</li><li>200: Memcached 1.6 memory edition (cluster architecture).</li></ul>
      */
     public void setType(Long Type) {
         this.Type = Type;
     }
 
     /**
-     * Get This parameter is of array type and supports the configuration of instance names, instance IDs, and IP addresses. Among these, the instance name is fuzzy matching while the instance ID and IP address are precise matching.
-- Each element in the array is used for a union-based matching query.- When both **InstanceId** and **SearchKeys** are configured simultaneously, their intersection will be used for the matching query. 
-     * @return SearchKeys This parameter is of array type and supports the configuration of instance names, instance IDs, and IP addresses. Among these, the instance name is fuzzy matching while the instance ID and IP address are precise matching.
-- Each element in the array is used for a union-based matching query.- When both **InstanceId** and **SearchKeys** are configured simultaneously, their intersection will be used for the matching query.
+     * Get <p>This parameter is an array type and supports configuring instance name, instance ID, and IP address. Among them, instance name uses fuzzy matching, while instance ID and IP address use exact matching.</p><ul><li>Each element in the array uses union for match query.</li><li>If <strong>InstanceId</strong> and <strong>SearchKeys</strong> are configured concurrently, their intersection is used for matching query.</li></ul> 
+     * @return SearchKeys <p>This parameter is an array type and supports configuring instance name, instance ID, and IP address. Among them, instance name uses fuzzy matching, while instance ID and IP address use exact matching.</p><ul><li>Each element in the array uses union for match query.</li><li>If <strong>InstanceId</strong> and <strong>SearchKeys</strong> are configured concurrently, their intersection is used for matching query.</li></ul>
      */
     public String [] getSearchKeys() {
         return this.SearchKeys;
     }
 
     /**
-     * Set This parameter is of array type and supports the configuration of instance names, instance IDs, and IP addresses. Among these, the instance name is fuzzy matching while the instance ID and IP address are precise matching.
-- Each element in the array is used for a union-based matching query.- When both **InstanceId** and **SearchKeys** are configured simultaneously, their intersection will be used for the matching query.
-     * @param SearchKeys This parameter is of array type and supports the configuration of instance names, instance IDs, and IP addresses. Among these, the instance name is fuzzy matching while the instance ID and IP address are precise matching.
-- Each element in the array is used for a union-based matching query.- When both **InstanceId** and **SearchKeys** are configured simultaneously, their intersection will be used for the matching query.
+     * Set <p>This parameter is an array type and supports configuring instance name, instance ID, and IP address. Among them, instance name uses fuzzy matching, while instance ID and IP address use exact matching.</p><ul><li>Each element in the array uses union for match query.</li><li>If <strong>InstanceId</strong> and <strong>SearchKeys</strong> are configured concurrently, their intersection is used for matching query.</li></ul>
+     * @param SearchKeys <p>This parameter is an array type and supports configuring instance name, instance ID, and IP address. Among them, instance name uses fuzzy matching, while instance ID and IP address use exact matching.</p><ul><li>Each element in the array uses union for match query.</li><li>If <strong>InstanceId</strong> and <strong>SearchKeys</strong> are configured concurrently, their intersection is used for matching query.</li></ul>
      */
     public void setSearchKeys(String [] SearchKeys) {
         this.SearchKeys = SearchKeys;
     }
 
     /**
-     * Get Internal parameter, which can be ignored. 
-     * @return TypeList Internal parameter, which can be ignored.
+     * Get <p>Internal parameter, which can be ignored.</p> 
+     * @return TypeList <p>Internal parameter, which can be ignored.</p>
      */
     public Long [] getTypeList() {
         return this.TypeList;
     }
 
     /**
-     * Set Internal parameter, which can be ignored.
-     * @param TypeList Internal parameter, which can be ignored.
+     * Set <p>Internal parameter, which can be ignored.</p>
+     * @param TypeList <p>Internal parameter, which can be ignored.</p>
      */
     public void setTypeList(Long [] TypeList) {
         this.TypeList = TypeList;
     }
 
     /**
-     * Get Internal parameter, which can be ignored. 
-     * @return MonitorVersion Internal parameter, which can be ignored.
+     * Get <p>Internal parameter, which can be ignored.</p> 
+     * @return MonitorVersion <p>Internal parameter, which can be ignored.</p>
      */
     public String getMonitorVersion() {
         return this.MonitorVersion;
     }
 
     /**
-     * Set Internal parameter, which can be ignored.
-     * @param MonitorVersion Internal parameter, which can be ignored.
+     * Set <p>Internal parameter, which can be ignored.</p>
+     * @param MonitorVersion <p>Internal parameter, which can be ignored.</p>
      */
     public void setMonitorVersion(String MonitorVersion) {
         this.MonitorVersion = MonitorVersion;
     }
 
     /**
-     * Get Resources filter by tag key and value. If this parameter is not specified or is an empty array, resources will not be filtered. 
-     * @return InstanceTags Resources filter by tag key and value. If this parameter is not specified or is an empty array, resources will not be filtered.
+     * Get <p>Filter resources by tag Key and Value. If this parameter is not configured or the array is set to empty, no tag-based filtering is applied.</p> 
+     * @return InstanceTags <p>Filter resources by tag Key and Value. If this parameter is not configured or the array is set to empty, no tag-based filtering is applied.</p>
      */
     public InstanceTagInfo [] getInstanceTags() {
         return this.InstanceTags;
     }
 
     /**
-     * Set Resources filter by tag key and value. If this parameter is not specified or is an empty array, resources will not be filtered.
-     * @param InstanceTags Resources filter by tag key and value. If this parameter is not specified or is an empty array, resources will not be filtered.
+     * Set <p>Filter resources by tag Key and Value. If this parameter is not configured or the array is set to empty, no tag-based filtering is applied.</p>
+     * @param InstanceTags <p>Filter resources by tag Key and Value. If this parameter is not configured or the array is set to empty, no tag-based filtering is applied.</p>
      */
     public void setInstanceTags(InstanceTagInfo [] InstanceTags) {
         this.InstanceTags = InstanceTags;
     }
 
     /**
-     * Get Resources filter by tag key. If this parameter is not specified or is an empty array, resources will not be filtered. 
-     * @return TagKeys Resources filter by tag key. If this parameter is not specified or is an empty array, resources will not be filtered.
+     * Get <p>Filter resources by tag Key. If this parameter is not configured or the array is set to empty, no filtering by tag Key is performed.</p> 
+     * @return TagKeys <p>Filter resources by tag Key. If this parameter is not configured or the array is set to empty, no filtering by tag Key is performed.</p>
      */
     public String [] getTagKeys() {
         return this.TagKeys;
     }
 
     /**
-     * Set Resources filter by tag key. If this parameter is not specified or is an empty array, resources will not be filtered.
-     * @param TagKeys Resources filter by tag key. If this parameter is not specified or is an empty array, resources will not be filtered.
+     * Set <p>Filter resources by tag Key. If this parameter is not configured or the array is set to empty, no filtering by tag Key is performed.</p>
+     * @param TagKeys <p>Filter resources by tag Key. If this parameter is not configured or the array is set to empty, no filtering by tag Key is performed.</p>
      */
     public void setTagKeys(String [] TagKeys) {
         this.TagKeys = TagKeys;
     }
 
     /**
-     * Get The product version of the instance. If this parameter is not configured or the array is set to empty, instances will not be filtered based on this parameter by default.
-- local: local Disk Edition.- cdc: Cluster dedicated edition.
- 
-     * @return ProductVersions The product version of the instance. If this parameter is not configured or the array is set to empty, instances will not be filtered based on this parameter by default.
-- local: local Disk Edition.- cdc: Cluster dedicated edition.
-
+     * Get <p>Deployment type of the instance. If this parameter is not configured or the array is set to empty, instances will not be filtered based on this parameter by default.</p><p>Enumeration values:</p><ul><li>local: Common I.</li><li>localv2: Common II.</li><li>cdc: Dedicated cluster.</li></ul> 
+     * @return ProductVersions <p>Deployment type of the instance. If this parameter is not configured or the array is set to empty, instances will not be filtered based on this parameter by default.</p><p>Enumeration values:</p><ul><li>local: Common I.</li><li>localv2: Common II.</li><li>cdc: Dedicated cluster.</li></ul>
      */
     public String [] getProductVersions() {
         return this.ProductVersions;
     }
 
     /**
-     * Set The product version of the instance. If this parameter is not configured or the array is set to empty, instances will not be filtered based on this parameter by default.
-- local: local Disk Edition.- cdc: Cluster dedicated edition.
-
-     * @param ProductVersions The product version of the instance. If this parameter is not configured or the array is set to empty, instances will not be filtered based on this parameter by default.
-- local: local Disk Edition.- cdc: Cluster dedicated edition.
-
+     * Set <p>Deployment type of the instance. If this parameter is not configured or the array is set to empty, instances will not be filtered based on this parameter by default.</p><p>Enumeration values:</p><ul><li>local: Common I.</li><li>localv2: Common II.</li><li>cdc: Dedicated cluster.</li></ul>
+     * @param ProductVersions <p>Deployment type of the instance. If this parameter is not configured or the array is set to empty, instances will not be filtered based on this parameter by default.</p><p>Enumeration values:</p><ul><li>local: Common I.</li><li>localv2: Common II.</li><li>cdc: Dedicated cluster.</li></ul>
      */
     public void setProductVersions(String [] ProductVersions) {
         this.ProductVersions = ProductVersions;
     }
 
     /**
-     * Get Batch query of the specified instances ID. The number of results returned is based on `Limit`. 
-     * @return InstanceIds Batch query of the specified instances ID. The number of results returned is based on `Limit`.
+     * Get <p>Batch query the specified instance IDs. The returned results are mainly limited by Limit.</p> 
+     * @return InstanceIds <p>Batch query the specified instance IDs. The returned results are mainly limited by Limit.</p>
      */
     public String [] getInstanceIds() {
         return this.InstanceIds;
     }
 
     /**
-     * Set Batch query of the specified instances ID. The number of results returned is based on `Limit`.
-     * @param InstanceIds Batch query of the specified instances ID. The number of results returned is based on `Limit`.
+     * Set <p>Batch query the specified instance IDs. The returned results are mainly limited by Limit.</p>
+     * @param InstanceIds <p>Batch query the specified instance IDs. The returned results are mainly limited by Limit.</p>
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;
     }
 
     /**
-     * Get Availability zone mode.
-- singleaz: Single availability zone.- multiaz: Multiple availability zones. 
-     * @return AzMode Availability zone mode.
-- singleaz: Single availability zone.- multiaz: Multiple availability zones.
+     * Get <p>Availability zone mode.</p><ul><li>singleaz: single availability zone.</li><li>multiaz: multi-availability zone.</li></ul> 
+     * @return AzMode <p>Availability zone mode.</p><ul><li>singleaz: single availability zone.</li><li>multiaz: multi-availability zone.</li></ul>
      */
     public String getAzMode() {
         return this.AzMode;
     }
 
     /**
-     * Set Availability zone mode.
-- singleaz: Single availability zone.- multiaz: Multiple availability zones.
-     * @param AzMode Availability zone mode.
-- singleaz: Single availability zone.- multiaz: Multiple availability zones.
+     * Set <p>Availability zone mode.</p><ul><li>singleaz: single availability zone.</li><li>multiaz: multi-availability zone.</li></ul>
+     * @param AzMode <p>Availability zone mode.</p><ul><li>singleaz: single availability zone.</li><li>multiaz: multi-availability zone.</li></ul>
      */
     public void setAzMode(String AzMode) {
         this.AzMode = AzMode;

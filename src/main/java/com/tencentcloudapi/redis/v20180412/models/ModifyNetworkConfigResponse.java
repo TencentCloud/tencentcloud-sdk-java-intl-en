@@ -52,7 +52,7 @@ public class ModifyNetworkConfigResponse extends AbstractModel {
     private String Vip;
 
     /**
-    * Task ID. Obtain **taskId** and query the task execution status through the API [DescribeTaskInfo](https://intl.cloud.tencent.com/document/product/239/30601?from_cn_redirect=1).
+    * Task ID. Obtain **taskId** and query the task execution status through the API [DescribeTaskInfo](https://www.tencentcloud.com/document/product/239/30601?from_cn_redirect=1).
     */
     @SerializedName("TaskId")
     @Expose
@@ -130,16 +130,16 @@ public class ModifyNetworkConfigResponse extends AbstractModel {
     }
 
     /**
-     * Get Task ID. Obtain **taskId** and query the task execution status through the API [DescribeTaskInfo](https://intl.cloud.tencent.com/document/product/239/30601?from_cn_redirect=1). 
-     * @return TaskId Task ID. Obtain **taskId** and query the task execution status through the API [DescribeTaskInfo](https://intl.cloud.tencent.com/document/product/239/30601?from_cn_redirect=1).
+     * Get Task ID. Obtain **taskId** and query the task execution status through the API [DescribeTaskInfo](https://www.tencentcloud.com/document/product/239/30601?from_cn_redirect=1). 
+     * @return TaskId Task ID. Obtain **taskId** and query the task execution status through the API [DescribeTaskInfo](https://www.tencentcloud.com/document/product/239/30601?from_cn_redirect=1).
      */
     public Long getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set Task ID. Obtain **taskId** and query the task execution status through the API [DescribeTaskInfo](https://intl.cloud.tencent.com/document/product/239/30601?from_cn_redirect=1).
-     * @param TaskId Task ID. Obtain **taskId** and query the task execution status through the API [DescribeTaskInfo](https://intl.cloud.tencent.com/document/product/239/30601?from_cn_redirect=1).
+     * Set Task ID. Obtain **taskId** and query the task execution status through the API [DescribeTaskInfo](https://www.tencentcloud.com/document/product/239/30601?from_cn_redirect=1).
+     * @param TaskId Task ID. Obtain **taskId** and query the task execution status through the API [DescribeTaskInfo](https://www.tencentcloud.com/document/product/239/30601?from_cn_redirect=1).
      */
     public void setTaskId(Long TaskId) {
         this.TaskId = TaskId;

@@ -24,187 +24,302 @@ import java.util.HashMap;
 public class InstanceEnumParam extends AbstractModel {
 
     /**
-    * Parameter name
+    * <p>Parameter name.</p>
     */
     @SerializedName("ParamName")
     @Expose
     private String ParamName;
 
     /**
-    * Parameter type, such as `Enum`.
+    * <p>Parameter type. For example: Enum.</p>
     */
     @SerializedName("ValueType")
     @Expose
     private String ValueType;
 
     /**
-    * Whether to restart the database after modifying the parameters. Valid values: - `true` (required) - `false` (not required)
+    * <p>Whether restart is required after parameter values are modified.</p><ul><li>true: required.</li><li>false: not required.</li></ul>
     */
     @SerializedName("NeedRestart")
     @Expose
     private String NeedRestart;
 
     /**
-    * Default value of the parameter
+    * <p>Default parameter value.</p>
     */
     @SerializedName("DefaultValue")
     @Expose
     private String DefaultValue;
 
     /**
-    * Current value
+    * <p>Current value of the parameter.</p>
     */
     @SerializedName("CurrentValue")
     @Expose
     private String CurrentValue;
 
     /**
-    * Description
+    * <p>Parameter description.</p>
     */
     @SerializedName("Tips")
     @Expose
     private String Tips;
 
     /**
-    * Acceptable values for the parameter
+    * <p>Available values of the parameter.</p>
     */
     @SerializedName("EnumValue")
     @Expose
     private String [] EnumValue;
 
     /**
-    * Parameter modification status. Valid values: - `1` (modifying) - `2` (modified)
+    * <p>Parameter modification status.</p><ul><li>1: Modifying.</li><li>2: Modified.</li></ul>
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-     * Get Parameter name 
-     * @return ParamName Parameter name
+    * <p>Parameter type</p><p>Enumeration values:</p><ul><li>redis: parameters supported by cache nodes</li><li>redis-interface: parameters supported by proxy</li><li>tendis: parameters supported by tendis</li></ul>
+    */
+    @SerializedName("ParamType")
+    @Expose
+    private String ParamType;
+
+    /**
+    * <p>Whether the current instance supports this feature</p>
+    */
+    @SerializedName("FeatureSupported")
+    @Expose
+    private Boolean FeatureSupported;
+
+    /**
+    * <p>New feature launch date</p><p>Parameter format: time format YYYY-MM-DD</p>
+    */
+    @SerializedName("NewFeatureOnlineTime")
+    @Expose
+    private String NewFeatureOnlineTime;
+
+    /**
+    * <p>Regular expression validation rule</p>
+    */
+    @SerializedName("Pattern")
+    @Expose
+    private String Pattern;
+
+    /**
+    * <p>Input format description</p>
+    */
+    @SerializedName("InputDescription")
+    @Expose
+    private String InputDescription;
+
+    /**
+     * Get <p>Parameter name.</p> 
+     * @return ParamName <p>Parameter name.</p>
      */
     public String getParamName() {
         return this.ParamName;
     }
 
     /**
-     * Set Parameter name
-     * @param ParamName Parameter name
+     * Set <p>Parameter name.</p>
+     * @param ParamName <p>Parameter name.</p>
      */
     public void setParamName(String ParamName) {
         this.ParamName = ParamName;
     }
 
     /**
-     * Get Parameter type, such as `Enum`. 
-     * @return ValueType Parameter type, such as `Enum`.
+     * Get <p>Parameter type. For example: Enum.</p> 
+     * @return ValueType <p>Parameter type. For example: Enum.</p>
      */
     public String getValueType() {
         return this.ValueType;
     }
 
     /**
-     * Set Parameter type, such as `Enum`.
-     * @param ValueType Parameter type, such as `Enum`.
+     * Set <p>Parameter type. For example: Enum.</p>
+     * @param ValueType <p>Parameter type. For example: Enum.</p>
      */
     public void setValueType(String ValueType) {
         this.ValueType = ValueType;
     }
 
     /**
-     * Get Whether to restart the database after modifying the parameters. Valid values: - `true` (required) - `false` (not required) 
-     * @return NeedRestart Whether to restart the database after modifying the parameters. Valid values: - `true` (required) - `false` (not required)
+     * Get <p>Whether restart is required after parameter values are modified.</p><ul><li>true: required.</li><li>false: not required.</li></ul> 
+     * @return NeedRestart <p>Whether restart is required after parameter values are modified.</p><ul><li>true: required.</li><li>false: not required.</li></ul>
      */
     public String getNeedRestart() {
         return this.NeedRestart;
     }
 
     /**
-     * Set Whether to restart the database after modifying the parameters. Valid values: - `true` (required) - `false` (not required)
-     * @param NeedRestart Whether to restart the database after modifying the parameters. Valid values: - `true` (required) - `false` (not required)
+     * Set <p>Whether restart is required after parameter values are modified.</p><ul><li>true: required.</li><li>false: not required.</li></ul>
+     * @param NeedRestart <p>Whether restart is required after parameter values are modified.</p><ul><li>true: required.</li><li>false: not required.</li></ul>
      */
     public void setNeedRestart(String NeedRestart) {
         this.NeedRestart = NeedRestart;
     }
 
     /**
-     * Get Default value of the parameter 
-     * @return DefaultValue Default value of the parameter
+     * Get <p>Default parameter value.</p> 
+     * @return DefaultValue <p>Default parameter value.</p>
      */
     public String getDefaultValue() {
         return this.DefaultValue;
     }
 
     /**
-     * Set Default value of the parameter
-     * @param DefaultValue Default value of the parameter
+     * Set <p>Default parameter value.</p>
+     * @param DefaultValue <p>Default parameter value.</p>
      */
     public void setDefaultValue(String DefaultValue) {
         this.DefaultValue = DefaultValue;
     }
 
     /**
-     * Get Current value 
-     * @return CurrentValue Current value
+     * Get <p>Current value of the parameter.</p> 
+     * @return CurrentValue <p>Current value of the parameter.</p>
      */
     public String getCurrentValue() {
         return this.CurrentValue;
     }
 
     /**
-     * Set Current value
-     * @param CurrentValue Current value
+     * Set <p>Current value of the parameter.</p>
+     * @param CurrentValue <p>Current value of the parameter.</p>
      */
     public void setCurrentValue(String CurrentValue) {
         this.CurrentValue = CurrentValue;
     }
 
     /**
-     * Get Description 
-     * @return Tips Description
+     * Get <p>Parameter description.</p> 
+     * @return Tips <p>Parameter description.</p>
      */
     public String getTips() {
         return this.Tips;
     }
 
     /**
-     * Set Description
-     * @param Tips Description
+     * Set <p>Parameter description.</p>
+     * @param Tips <p>Parameter description.</p>
      */
     public void setTips(String Tips) {
         this.Tips = Tips;
     }
 
     /**
-     * Get Acceptable values for the parameter 
-     * @return EnumValue Acceptable values for the parameter
+     * Get <p>Available values of the parameter.</p> 
+     * @return EnumValue <p>Available values of the parameter.</p>
      */
     public String [] getEnumValue() {
         return this.EnumValue;
     }
 
     /**
-     * Set Acceptable values for the parameter
-     * @param EnumValue Acceptable values for the parameter
+     * Set <p>Available values of the parameter.</p>
+     * @param EnumValue <p>Available values of the parameter.</p>
      */
     public void setEnumValue(String [] EnumValue) {
         this.EnumValue = EnumValue;
     }
 
     /**
-     * Get Parameter modification status. Valid values: - `1` (modifying) - `2` (modified) 
-     * @return Status Parameter modification status. Valid values: - `1` (modifying) - `2` (modified)
+     * Get <p>Parameter modification status.</p><ul><li>1: Modifying.</li><li>2: Modified.</li></ul> 
+     * @return Status <p>Parameter modification status.</p><ul><li>1: Modifying.</li><li>2: Modified.</li></ul>
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Parameter modification status. Valid values: - `1` (modifying) - `2` (modified)
-     * @param Status Parameter modification status. Valid values: - `1` (modifying) - `2` (modified)
+     * Set <p>Parameter modification status.</p><ul><li>1: Modifying.</li><li>2: Modified.</li></ul>
+     * @param Status <p>Parameter modification status.</p><ul><li>1: Modifying.</li><li>2: Modified.</li></ul>
      */
     public void setStatus(Long Status) {
         this.Status = Status;
+    }
+
+    /**
+     * Get <p>Parameter type</p><p>Enumeration values:</p><ul><li>redis: parameters supported by cache nodes</li><li>redis-interface: parameters supported by proxy</li><li>tendis: parameters supported by tendis</li></ul> 
+     * @return ParamType <p>Parameter type</p><p>Enumeration values:</p><ul><li>redis: parameters supported by cache nodes</li><li>redis-interface: parameters supported by proxy</li><li>tendis: parameters supported by tendis</li></ul>
+     */
+    public String getParamType() {
+        return this.ParamType;
+    }
+
+    /**
+     * Set <p>Parameter type</p><p>Enumeration values:</p><ul><li>redis: parameters supported by cache nodes</li><li>redis-interface: parameters supported by proxy</li><li>tendis: parameters supported by tendis</li></ul>
+     * @param ParamType <p>Parameter type</p><p>Enumeration values:</p><ul><li>redis: parameters supported by cache nodes</li><li>redis-interface: parameters supported by proxy</li><li>tendis: parameters supported by tendis</li></ul>
+     */
+    public void setParamType(String ParamType) {
+        this.ParamType = ParamType;
+    }
+
+    /**
+     * Get <p>Whether the current instance supports this feature</p> 
+     * @return FeatureSupported <p>Whether the current instance supports this feature</p>
+     */
+    public Boolean getFeatureSupported() {
+        return this.FeatureSupported;
+    }
+
+    /**
+     * Set <p>Whether the current instance supports this feature</p>
+     * @param FeatureSupported <p>Whether the current instance supports this feature</p>
+     */
+    public void setFeatureSupported(Boolean FeatureSupported) {
+        this.FeatureSupported = FeatureSupported;
+    }
+
+    /**
+     * Get <p>New feature launch date</p><p>Parameter format: time format YYYY-MM-DD</p> 
+     * @return NewFeatureOnlineTime <p>New feature launch date</p><p>Parameter format: time format YYYY-MM-DD</p>
+     */
+    public String getNewFeatureOnlineTime() {
+        return this.NewFeatureOnlineTime;
+    }
+
+    /**
+     * Set <p>New feature launch date</p><p>Parameter format: time format YYYY-MM-DD</p>
+     * @param NewFeatureOnlineTime <p>New feature launch date</p><p>Parameter format: time format YYYY-MM-DD</p>
+     */
+    public void setNewFeatureOnlineTime(String NewFeatureOnlineTime) {
+        this.NewFeatureOnlineTime = NewFeatureOnlineTime;
+    }
+
+    /**
+     * Get <p>Regular expression validation rule</p> 
+     * @return Pattern <p>Regular expression validation rule</p>
+     */
+    public String getPattern() {
+        return this.Pattern;
+    }
+
+    /**
+     * Set <p>Regular expression validation rule</p>
+     * @param Pattern <p>Regular expression validation rule</p>
+     */
+    public void setPattern(String Pattern) {
+        this.Pattern = Pattern;
+    }
+
+    /**
+     * Get <p>Input format description</p> 
+     * @return InputDescription <p>Input format description</p>
+     */
+    public String getInputDescription() {
+        return this.InputDescription;
+    }
+
+    /**
+     * Set <p>Input format description</p>
+     * @param InputDescription <p>Input format description</p>
+     */
+    public void setInputDescription(String InputDescription) {
+        this.InputDescription = InputDescription;
     }
 
     public InstanceEnumParam() {
@@ -242,6 +357,21 @@ public class InstanceEnumParam extends AbstractModel {
         if (source.Status != null) {
             this.Status = new Long(source.Status);
         }
+        if (source.ParamType != null) {
+            this.ParamType = new String(source.ParamType);
+        }
+        if (source.FeatureSupported != null) {
+            this.FeatureSupported = new Boolean(source.FeatureSupported);
+        }
+        if (source.NewFeatureOnlineTime != null) {
+            this.NewFeatureOnlineTime = new String(source.NewFeatureOnlineTime);
+        }
+        if (source.Pattern != null) {
+            this.Pattern = new String(source.Pattern);
+        }
+        if (source.InputDescription != null) {
+            this.InputDescription = new String(source.InputDescription);
+        }
     }
 
 
@@ -257,6 +387,11 @@ public class InstanceEnumParam extends AbstractModel {
         this.setParamSimple(map, prefix + "Tips", this.Tips);
         this.setParamArraySimple(map, prefix + "EnumValue.", this.EnumValue);
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "ParamType", this.ParamType);
+        this.setParamSimple(map, prefix + "FeatureSupported", this.FeatureSupported);
+        this.setParamSimple(map, prefix + "NewFeatureOnlineTime", this.NewFeatureOnlineTime);
+        this.setParamSimple(map, prefix + "Pattern", this.Pattern);
+        this.setParamSimple(map, prefix + "InputDescription", this.InputDescription);
 
     }
 }

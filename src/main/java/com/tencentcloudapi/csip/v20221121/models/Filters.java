@@ -31,14 +31,14 @@ public class Filters extends AbstractModel {
     private String Name;
 
     /**
-    * List of filter condition values
+    * Filter condition value list
     */
     @SerializedName("Values")
     @Expose
     private String [] Values;
 
     /**
-    * Exact match: 1 for exact match; fuzzy match by default
+    * Exact match: 1 - exact match; fuzzy match by default
     */
     @SerializedName("ExactMatch")
     @Expose
@@ -61,32 +61,32 @@ public class Filters extends AbstractModel {
     }
 
     /**
-     * Get List of filter condition values 
-     * @return Values List of filter condition values
+     * Get Filter condition value list 
+     * @return Values Filter condition value list
      */
     public String [] getValues() {
         return this.Values;
     }
 
     /**
-     * Set List of filter condition values
-     * @param Values List of filter condition values
+     * Set Filter condition value list
+     * @param Values Filter condition value list
      */
     public void setValues(String [] Values) {
         this.Values = Values;
     }
 
     /**
-     * Get Exact match: 1 for exact match; fuzzy match by default 
-     * @return ExactMatch Exact match: 1 for exact match; fuzzy match by default
+     * Get Exact match: 1 - exact match; fuzzy match by default 
+     * @return ExactMatch Exact match: 1 - exact match; fuzzy match by default
      */
     public String getExactMatch() {
         return this.ExactMatch;
     }
 
     /**
-     * Set Exact match: 1 for exact match; fuzzy match by default
-     * @param ExactMatch Exact match: 1 for exact match; fuzzy match by default
+     * Set Exact match: 1 - exact match; fuzzy match by default
+     * @param ExactMatch Exact match: 1 - exact match; fuzzy match by default
      */
     public void setExactMatch(String ExactMatch) {
         this.ExactMatch = ExactMatch;

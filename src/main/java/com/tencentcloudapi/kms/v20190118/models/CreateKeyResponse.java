@@ -24,63 +24,63 @@ import java.util.HashMap;
 public class CreateKeyResponse extends AbstractModel {
 
     /**
-    * Globally unique CMK ID
+    * <p>Globally unique identifier of the CMK</p>
     */
     @SerializedName("KeyId")
     @Expose
     private String KeyId;
 
     /**
-    * Alias that makes a key more recognizable and understandable
+    * <p>Alias that makes the key easier to identify and understand</p>
     */
     @SerializedName("Alias")
     @Expose
     private String Alias;
 
     /**
-    * Key creation time in UNIX timestamp format
+    * <p>Key creation time, unix timestamp</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private Long CreateTime;
 
     /**
-    * Specifies the description of the CMK.
+    * <p>Description of the CMK</p>
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * CMK status
+    * <p>Status of the CMK</p>
     */
     @SerializedName("KeyState")
     @Expose
     private String KeyState;
 
     /**
-    * CMK usage
+    * <p>Purpose of the CMK</p>
     */
     @SerializedName("KeyUsage")
     @Expose
     private String KeyUsage;
 
     /**
-    * Return code of Tag operation. `0`: success; `1`: cls internal error; `2`: business processing error.
+    * <p>Return code of the tag operation. 0: Success; 1: Internal error; 2: Business processing error</p>
     */
     @SerializedName("TagCode")
     @Expose
     private Long TagCode;
 
     /**
-    * Response information of Tag operation.
+    * <p>Return message of the tag operation</p>
     */
     @SerializedName("TagMsg")
     @Expose
     private String TagMsg;
 
     /**
-    * HSM cluster ID (valid only for exclusive or managed version KMS service instances).
+    * <p>HSM cluster ID (valid only for KMS exclusive/managed service instances)</p>
     */
     @SerializedName("HsmClusterId")
     @Expose
@@ -94,144 +94,144 @@ public class CreateKeyResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Globally unique CMK ID 
-     * @return KeyId Globally unique CMK ID
+     * Get <p>Globally unique identifier of the CMK</p> 
+     * @return KeyId <p>Globally unique identifier of the CMK</p>
      */
     public String getKeyId() {
         return this.KeyId;
     }
 
     /**
-     * Set Globally unique CMK ID
-     * @param KeyId Globally unique CMK ID
+     * Set <p>Globally unique identifier of the CMK</p>
+     * @param KeyId <p>Globally unique identifier of the CMK</p>
      */
     public void setKeyId(String KeyId) {
         this.KeyId = KeyId;
     }
 
     /**
-     * Get Alias that makes a key more recognizable and understandable 
-     * @return Alias Alias that makes a key more recognizable and understandable
+     * Get <p>Alias that makes the key easier to identify and understand</p> 
+     * @return Alias <p>Alias that makes the key easier to identify and understand</p>
      */
     public String getAlias() {
         return this.Alias;
     }
 
     /**
-     * Set Alias that makes a key more recognizable and understandable
-     * @param Alias Alias that makes a key more recognizable and understandable
+     * Set <p>Alias that makes the key easier to identify and understand</p>
+     * @param Alias <p>Alias that makes the key easier to identify and understand</p>
      */
     public void setAlias(String Alias) {
         this.Alias = Alias;
     }
 
     /**
-     * Get Key creation time in UNIX timestamp format 
-     * @return CreateTime Key creation time in UNIX timestamp format
+     * Get <p>Key creation time, unix timestamp</p> 
+     * @return CreateTime <p>Key creation time, unix timestamp</p>
      */
     public Long getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set Key creation time in UNIX timestamp format
-     * @param CreateTime Key creation time in UNIX timestamp format
+     * Set <p>Key creation time, unix timestamp</p>
+     * @param CreateTime <p>Key creation time, unix timestamp</p>
      */
     public void setCreateTime(Long CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get Specifies the description of the CMK. 
-     * @return Description Specifies the description of the CMK.
+     * Get <p>Description of the CMK</p> 
+     * @return Description <p>Description of the CMK</p>
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set Specifies the description of the CMK.
-     * @param Description Specifies the description of the CMK.
+     * Set <p>Description of the CMK</p>
+     * @param Description <p>Description of the CMK</p>
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get CMK status 
-     * @return KeyState CMK status
+     * Get <p>Status of the CMK</p> 
+     * @return KeyState <p>Status of the CMK</p>
      */
     public String getKeyState() {
         return this.KeyState;
     }
 
     /**
-     * Set CMK status
-     * @param KeyState CMK status
+     * Set <p>Status of the CMK</p>
+     * @param KeyState <p>Status of the CMK</p>
      */
     public void setKeyState(String KeyState) {
         this.KeyState = KeyState;
     }
 
     /**
-     * Get CMK usage 
-     * @return KeyUsage CMK usage
+     * Get <p>Purpose of the CMK</p> 
+     * @return KeyUsage <p>Purpose of the CMK</p>
      */
     public String getKeyUsage() {
         return this.KeyUsage;
     }
 
     /**
-     * Set CMK usage
-     * @param KeyUsage CMK usage
+     * Set <p>Purpose of the CMK</p>
+     * @param KeyUsage <p>Purpose of the CMK</p>
      */
     public void setKeyUsage(String KeyUsage) {
         this.KeyUsage = KeyUsage;
     }
 
     /**
-     * Get Return code of Tag operation. `0`: success; `1`: cls internal error; `2`: business processing error. 
-     * @return TagCode Return code of Tag operation. `0`: success; `1`: cls internal error; `2`: business processing error.
+     * Get <p>Return code of the tag operation. 0: Success; 1: Internal error; 2: Business processing error</p> 
+     * @return TagCode <p>Return code of the tag operation. 0: Success; 1: Internal error; 2: Business processing error</p>
      */
     public Long getTagCode() {
         return this.TagCode;
     }
 
     /**
-     * Set Return code of Tag operation. `0`: success; `1`: cls internal error; `2`: business processing error.
-     * @param TagCode Return code of Tag operation. `0`: success; `1`: cls internal error; `2`: business processing error.
+     * Set <p>Return code of the tag operation. 0: Success; 1: Internal error; 2: Business processing error</p>
+     * @param TagCode <p>Return code of the tag operation. 0: Success; 1: Internal error; 2: Business processing error</p>
      */
     public void setTagCode(Long TagCode) {
         this.TagCode = TagCode;
     }
 
     /**
-     * Get Response information of Tag operation. 
-     * @return TagMsg Response information of Tag operation.
+     * Get <p>Return message of the tag operation</p> 
+     * @return TagMsg <p>Return message of the tag operation</p>
      */
     public String getTagMsg() {
         return this.TagMsg;
     }
 
     /**
-     * Set Response information of Tag operation.
-     * @param TagMsg Response information of Tag operation.
+     * Set <p>Return message of the tag operation</p>
+     * @param TagMsg <p>Return message of the tag operation</p>
      */
     public void setTagMsg(String TagMsg) {
         this.TagMsg = TagMsg;
     }
 
     /**
-     * Get HSM cluster ID (valid only for exclusive or managed version KMS service instances). 
-     * @return HsmClusterId HSM cluster ID (valid only for exclusive or managed version KMS service instances).
+     * Get <p>HSM cluster ID (valid only for KMS exclusive/managed service instances)</p> 
+     * @return HsmClusterId <p>HSM cluster ID (valid only for KMS exclusive/managed service instances)</p>
      */
     public String getHsmClusterId() {
         return this.HsmClusterId;
     }
 
     /**
-     * Set HSM cluster ID (valid only for exclusive or managed version KMS service instances).
-     * @param HsmClusterId HSM cluster ID (valid only for exclusive or managed version KMS service instances).
+     * Set <p>HSM cluster ID (valid only for KMS exclusive/managed service instances)</p>
+     * @param HsmClusterId <p>HSM cluster ID (valid only for KMS exclusive/managed service instances)</p>
      */
     public void setHsmClusterId(String HsmClusterId) {
         this.HsmClusterId = HsmClusterId;

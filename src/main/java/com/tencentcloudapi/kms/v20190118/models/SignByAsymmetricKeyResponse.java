@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class SignByAsymmetricKeyResponse extends AbstractModel {
 
     /**
-    * Base64-encoded signature
+    * <p>Signature, Base64-encoded.</p>
     */
     @SerializedName("Signature")
     @Expose
@@ -38,16 +38,16 @@ public class SignByAsymmetricKeyResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Base64-encoded signature 
-     * @return Signature Base64-encoded signature
+     * Get <p>Signature, Base64-encoded.</p> 
+     * @return Signature <p>Signature, Base64-encoded.</p>
      */
     public String getSignature() {
         return this.Signature;
     }
 
     /**
-     * Set Base64-encoded signature
-     * @param Signature Base64-encoded signature
+     * Set <p>Signature, Base64-encoded.</p>
+     * @param Signature <p>Signature, Base64-encoded.</p>
      */
     public void setSignature(String Signature) {
         this.Signature = Signature;

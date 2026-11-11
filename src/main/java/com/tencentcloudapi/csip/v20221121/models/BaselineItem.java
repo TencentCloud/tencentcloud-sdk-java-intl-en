@@ -38,7 +38,7 @@ public class BaselineItem extends AbstractModel {
     private Long RuleID;
 
     /**
-    * <p>Detection object description, such as configuration file path, kernel parameter, and Kubernetes Resources.</p>
+    * <p>Detection target description, such as configuration file path, kernel parameter, Kubernetes Resources.</p>
     */
     @SerializedName("CheckObject")
     @Expose
@@ -66,77 +66,77 @@ public class BaselineItem extends AbstractModel {
     private String Description;
 
     /**
-    * <p>Detection item repair advice (Chinese, including recommended configuration reference values or hardening commands).</p>
+    * <p>Detection item repair advice (in Chinese, including recommended configuration reference values or hardening commands).</p>
     */
     @SerializedName("FixSuggestion")
     @Expose
     private String FixSuggestion;
 
     /**
-    * <p>Reference link list of detection items.</p>
+    * <p>Detection item reference link list.</p>
     */
     @SerializedName("ReferenceLink")
     @Expose
     private String ReferenceLink;
 
     /**
-    * <p>Classification information of the parent category in the associated system.</p>
+    * <p>Parent classification information of the associated system.</p>
     */
     @SerializedName("SystemCategory")
     @Expose
     private BaselineCategory SystemCategory;
 
     /**
-    * <p>Classification information of the subcategory it belongs to.</p>
+    * <p>Belonging subcategory information.</p>
     */
     @SerializedName("Category")
     @Expose
     private BaselineCategory Category;
 
     /**
-    * <p>Whether one-click repair is supported. true: supported, false: unsupported.</p>
+    * <p>Whether one-click repair is supported. true: support, false: no support.</p>
     */
     @SerializedName("SupportFix")
     @Expose
     private Boolean SupportFix;
 
     /**
-    * <p>Whether user-defined judgment values are supported. true: supported; false: not supported.</p>
+    * <p>Whether to support user customization of judgment values. true: support, false: no support.</p>
     */
     @SerializedName("SupportCustomValue")
     @Expose
     private Boolean SupportCustomValue;
 
     /**
-    * <p>Operating system/component version list applicable to this detection item.</p>
+    * <p>Applicable operating system/component version list for this detection item.</p>
     */
     @SerializedName("AffectedVersionList")
     @Expose
     private String [] AffectedVersionList;
 
     /**
-    * <p>Parameter definition when editing a custom judgment value (for example, permissible range, control type).</p>
+    * <p>Parameter definition when editing custom judgment values (such as value range, control type, etc.).</p>
     */
     @SerializedName("WebEditParam")
     @Expose
     private String WebEditParam;
 
     /**
-    * <p>Default detection item judgment value list.</p>
+    * <p>Default judgment value list of the detection item.</p>
     */
     @SerializedName("DefaultValueList")
     @Expose
     private String [] DefaultValueList;
 
     /**
-    * <p>Whether customized by the user. true: customized; false: use default values.</p>
+    * <p>Whether it has been customized by the user. true: customized, false: still use default values.</p>
     */
     @SerializedName("IsCustomConf")
     @Expose
     private Boolean IsCustomConf;
 
     /**
-    * <p>User-customized configuration record ID. The value is 0 if not customized.</p>
+    * <p>User-customized configuration record ID. 0 if not customized.</p>
     */
     @SerializedName("CustomItemID")
     @Expose
@@ -175,16 +175,16 @@ public class BaselineItem extends AbstractModel {
     }
 
     /**
-     * Get <p>Detection object description, such as configuration file path, kernel parameter, and Kubernetes Resources.</p> 
-     * @return CheckObject <p>Detection object description, such as configuration file path, kernel parameter, and Kubernetes Resources.</p>
+     * Get <p>Detection target description, such as configuration file path, kernel parameter, Kubernetes Resources.</p> 
+     * @return CheckObject <p>Detection target description, such as configuration file path, kernel parameter, Kubernetes Resources.</p>
      */
     public String [] getCheckObject() {
         return this.CheckObject;
     }
 
     /**
-     * Set <p>Detection object description, such as configuration file path, kernel parameter, and Kubernetes Resources.</p>
-     * @param CheckObject <p>Detection object description, such as configuration file path, kernel parameter, and Kubernetes Resources.</p>
+     * Set <p>Detection target description, such as configuration file path, kernel parameter, Kubernetes Resources.</p>
+     * @param CheckObject <p>Detection target description, such as configuration file path, kernel parameter, Kubernetes Resources.</p>
      */
     public void setCheckObject(String [] CheckObject) {
         this.CheckObject = CheckObject;
@@ -239,176 +239,176 @@ public class BaselineItem extends AbstractModel {
     }
 
     /**
-     * Get <p>Detection item repair advice (Chinese, including recommended configuration reference values or hardening commands).</p> 
-     * @return FixSuggestion <p>Detection item repair advice (Chinese, including recommended configuration reference values or hardening commands).</p>
+     * Get <p>Detection item repair advice (in Chinese, including recommended configuration reference values or hardening commands).</p> 
+     * @return FixSuggestion <p>Detection item repair advice (in Chinese, including recommended configuration reference values or hardening commands).</p>
      */
     public String getFixSuggestion() {
         return this.FixSuggestion;
     }
 
     /**
-     * Set <p>Detection item repair advice (Chinese, including recommended configuration reference values or hardening commands).</p>
-     * @param FixSuggestion <p>Detection item repair advice (Chinese, including recommended configuration reference values or hardening commands).</p>
+     * Set <p>Detection item repair advice (in Chinese, including recommended configuration reference values or hardening commands).</p>
+     * @param FixSuggestion <p>Detection item repair advice (in Chinese, including recommended configuration reference values or hardening commands).</p>
      */
     public void setFixSuggestion(String FixSuggestion) {
         this.FixSuggestion = FixSuggestion;
     }
 
     /**
-     * Get <p>Reference link list of detection items.</p> 
-     * @return ReferenceLink <p>Reference link list of detection items.</p>
+     * Get <p>Detection item reference link list.</p> 
+     * @return ReferenceLink <p>Detection item reference link list.</p>
      */
     public String getReferenceLink() {
         return this.ReferenceLink;
     }
 
     /**
-     * Set <p>Reference link list of detection items.</p>
-     * @param ReferenceLink <p>Reference link list of detection items.</p>
+     * Set <p>Detection item reference link list.</p>
+     * @param ReferenceLink <p>Detection item reference link list.</p>
      */
     public void setReferenceLink(String ReferenceLink) {
         this.ReferenceLink = ReferenceLink;
     }
 
     /**
-     * Get <p>Classification information of the parent category in the associated system.</p> 
-     * @return SystemCategory <p>Classification information of the parent category in the associated system.</p>
+     * Get <p>Parent classification information of the associated system.</p> 
+     * @return SystemCategory <p>Parent classification information of the associated system.</p>
      */
     public BaselineCategory getSystemCategory() {
         return this.SystemCategory;
     }
 
     /**
-     * Set <p>Classification information of the parent category in the associated system.</p>
-     * @param SystemCategory <p>Classification information of the parent category in the associated system.</p>
+     * Set <p>Parent classification information of the associated system.</p>
+     * @param SystemCategory <p>Parent classification information of the associated system.</p>
      */
     public void setSystemCategory(BaselineCategory SystemCategory) {
         this.SystemCategory = SystemCategory;
     }
 
     /**
-     * Get <p>Classification information of the subcategory it belongs to.</p> 
-     * @return Category <p>Classification information of the subcategory it belongs to.</p>
+     * Get <p>Belonging subcategory information.</p> 
+     * @return Category <p>Belonging subcategory information.</p>
      */
     public BaselineCategory getCategory() {
         return this.Category;
     }
 
     /**
-     * Set <p>Classification information of the subcategory it belongs to.</p>
-     * @param Category <p>Classification information of the subcategory it belongs to.</p>
+     * Set <p>Belonging subcategory information.</p>
+     * @param Category <p>Belonging subcategory information.</p>
      */
     public void setCategory(BaselineCategory Category) {
         this.Category = Category;
     }
 
     /**
-     * Get <p>Whether one-click repair is supported. true: supported, false: unsupported.</p> 
-     * @return SupportFix <p>Whether one-click repair is supported. true: supported, false: unsupported.</p>
+     * Get <p>Whether one-click repair is supported. true: support, false: no support.</p> 
+     * @return SupportFix <p>Whether one-click repair is supported. true: support, false: no support.</p>
      */
     public Boolean getSupportFix() {
         return this.SupportFix;
     }
 
     /**
-     * Set <p>Whether one-click repair is supported. true: supported, false: unsupported.</p>
-     * @param SupportFix <p>Whether one-click repair is supported. true: supported, false: unsupported.</p>
+     * Set <p>Whether one-click repair is supported. true: support, false: no support.</p>
+     * @param SupportFix <p>Whether one-click repair is supported. true: support, false: no support.</p>
      */
     public void setSupportFix(Boolean SupportFix) {
         this.SupportFix = SupportFix;
     }
 
     /**
-     * Get <p>Whether user-defined judgment values are supported. true: supported; false: not supported.</p> 
-     * @return SupportCustomValue <p>Whether user-defined judgment values are supported. true: supported; false: not supported.</p>
+     * Get <p>Whether to support user customization of judgment values. true: support, false: no support.</p> 
+     * @return SupportCustomValue <p>Whether to support user customization of judgment values. true: support, false: no support.</p>
      */
     public Boolean getSupportCustomValue() {
         return this.SupportCustomValue;
     }
 
     /**
-     * Set <p>Whether user-defined judgment values are supported. true: supported; false: not supported.</p>
-     * @param SupportCustomValue <p>Whether user-defined judgment values are supported. true: supported; false: not supported.</p>
+     * Set <p>Whether to support user customization of judgment values. true: support, false: no support.</p>
+     * @param SupportCustomValue <p>Whether to support user customization of judgment values. true: support, false: no support.</p>
      */
     public void setSupportCustomValue(Boolean SupportCustomValue) {
         this.SupportCustomValue = SupportCustomValue;
     }
 
     /**
-     * Get <p>Operating system/component version list applicable to this detection item.</p> 
-     * @return AffectedVersionList <p>Operating system/component version list applicable to this detection item.</p>
+     * Get <p>Applicable operating system/component version list for this detection item.</p> 
+     * @return AffectedVersionList <p>Applicable operating system/component version list for this detection item.</p>
      */
     public String [] getAffectedVersionList() {
         return this.AffectedVersionList;
     }
 
     /**
-     * Set <p>Operating system/component version list applicable to this detection item.</p>
-     * @param AffectedVersionList <p>Operating system/component version list applicable to this detection item.</p>
+     * Set <p>Applicable operating system/component version list for this detection item.</p>
+     * @param AffectedVersionList <p>Applicable operating system/component version list for this detection item.</p>
      */
     public void setAffectedVersionList(String [] AffectedVersionList) {
         this.AffectedVersionList = AffectedVersionList;
     }
 
     /**
-     * Get <p>Parameter definition when editing a custom judgment value (for example, permissible range, control type).</p> 
-     * @return WebEditParam <p>Parameter definition when editing a custom judgment value (for example, permissible range, control type).</p>
+     * Get <p>Parameter definition when editing custom judgment values (such as value range, control type, etc.).</p> 
+     * @return WebEditParam <p>Parameter definition when editing custom judgment values (such as value range, control type, etc.).</p>
      */
     public String getWebEditParam() {
         return this.WebEditParam;
     }
 
     /**
-     * Set <p>Parameter definition when editing a custom judgment value (for example, permissible range, control type).</p>
-     * @param WebEditParam <p>Parameter definition when editing a custom judgment value (for example, permissible range, control type).</p>
+     * Set <p>Parameter definition when editing custom judgment values (such as value range, control type, etc.).</p>
+     * @param WebEditParam <p>Parameter definition when editing custom judgment values (such as value range, control type, etc.).</p>
      */
     public void setWebEditParam(String WebEditParam) {
         this.WebEditParam = WebEditParam;
     }
 
     /**
-     * Get <p>Default detection item judgment value list.</p> 
-     * @return DefaultValueList <p>Default detection item judgment value list.</p>
+     * Get <p>Default judgment value list of the detection item.</p> 
+     * @return DefaultValueList <p>Default judgment value list of the detection item.</p>
      */
     public String [] getDefaultValueList() {
         return this.DefaultValueList;
     }
 
     /**
-     * Set <p>Default detection item judgment value list.</p>
-     * @param DefaultValueList <p>Default detection item judgment value list.</p>
+     * Set <p>Default judgment value list of the detection item.</p>
+     * @param DefaultValueList <p>Default judgment value list of the detection item.</p>
      */
     public void setDefaultValueList(String [] DefaultValueList) {
         this.DefaultValueList = DefaultValueList;
     }
 
     /**
-     * Get <p>Whether customized by the user. true: customized; false: use default values.</p> 
-     * @return IsCustomConf <p>Whether customized by the user. true: customized; false: use default values.</p>
+     * Get <p>Whether it has been customized by the user. true: customized, false: still use default values.</p> 
+     * @return IsCustomConf <p>Whether it has been customized by the user. true: customized, false: still use default values.</p>
      */
     public Boolean getIsCustomConf() {
         return this.IsCustomConf;
     }
 
     /**
-     * Set <p>Whether customized by the user. true: customized; false: use default values.</p>
-     * @param IsCustomConf <p>Whether customized by the user. true: customized; false: use default values.</p>
+     * Set <p>Whether it has been customized by the user. true: customized, false: still use default values.</p>
+     * @param IsCustomConf <p>Whether it has been customized by the user. true: customized, false: still use default values.</p>
      */
     public void setIsCustomConf(Boolean IsCustomConf) {
         this.IsCustomConf = IsCustomConf;
     }
 
     /**
-     * Get <p>User-customized configuration record ID. The value is 0 if not customized.</p> 
-     * @return CustomItemID <p>User-customized configuration record ID. The value is 0 if not customized.</p>
+     * Get <p>User-customized configuration record ID. 0 if not customized.</p> 
+     * @return CustomItemID <p>User-customized configuration record ID. 0 if not customized.</p>
      */
     public Long getCustomItemID() {
         return this.CustomItemID;
     }
 
     /**
-     * Set <p>User-customized configuration record ID. The value is 0 if not customized.</p>
-     * @param CustomItemID <p>User-customized configuration record ID. The value is 0 if not customized.</p>
+     * Set <p>User-customized configuration record ID. 0 if not customized.</p>
+     * @param CustomItemID <p>User-customized configuration record ID. 0 if not customized.</p>
      */
     public void setCustomItemID(Long CustomItemID) {
         this.CustomItemID = CustomItemID;

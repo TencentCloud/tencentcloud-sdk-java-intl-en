@@ -31,7 +31,7 @@ public class RestoreInstanceRequest extends AbstractModel {
     private String InstanceId;
 
     /**
-    * Backup ID, which can be obtained through the response parameter RedisBackupSet of the [DescribeInstanceBackups](https://www.tencentcloud.com/document/product/239/20011?from_cn_redirect=1) API.
+    * Backup ID, which can be obtained through the RedisBackupSet parameter in the API response of [DescribeInstanceBackups](https://www.tencentcloud.com/document/product/239/20011?from_cn_redirect=1).
     */
     @SerializedName("BackupId")
     @Expose
@@ -61,16 +61,16 @@ public class RestoreInstanceRequest extends AbstractModel {
     }
 
     /**
-     * Get Backup ID, which can be obtained through the response parameter RedisBackupSet of the [DescribeInstanceBackups](https://www.tencentcloud.com/document/product/239/20011?from_cn_redirect=1) API. 
-     * @return BackupId Backup ID, which can be obtained through the response parameter RedisBackupSet of the [DescribeInstanceBackups](https://www.tencentcloud.com/document/product/239/20011?from_cn_redirect=1) API.
+     * Get Backup ID, which can be obtained through the RedisBackupSet parameter in the API response of [DescribeInstanceBackups](https://www.tencentcloud.com/document/product/239/20011?from_cn_redirect=1). 
+     * @return BackupId Backup ID, which can be obtained through the RedisBackupSet parameter in the API response of [DescribeInstanceBackups](https://www.tencentcloud.com/document/product/239/20011?from_cn_redirect=1).
      */
     public String getBackupId() {
         return this.BackupId;
     }
 
     /**
-     * Set Backup ID, which can be obtained through the response parameter RedisBackupSet of the [DescribeInstanceBackups](https://www.tencentcloud.com/document/product/239/20011?from_cn_redirect=1) API.
-     * @param BackupId Backup ID, which can be obtained through the response parameter RedisBackupSet of the [DescribeInstanceBackups](https://www.tencentcloud.com/document/product/239/20011?from_cn_redirect=1) API.
+     * Set Backup ID, which can be obtained through the RedisBackupSet parameter in the API response of [DescribeInstanceBackups](https://www.tencentcloud.com/document/product/239/20011?from_cn_redirect=1).
+     * @param BackupId Backup ID, which can be obtained through the RedisBackupSet parameter in the API response of [DescribeInstanceBackups](https://www.tencentcloud.com/document/product/239/20011?from_cn_redirect=1).
      */
     public void setBackupId(String BackupId) {
         this.BackupId = BackupId;

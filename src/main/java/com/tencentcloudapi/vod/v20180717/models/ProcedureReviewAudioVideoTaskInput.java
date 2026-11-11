@@ -34,7 +34,7 @@ public class ProcedureReviewAudioVideoTaskInput extends AbstractModel {
     * Content for review. Available values:
 <li>Media: original audio/video;</li>
 <li>Cover: cover.</li>
-If this parameter is not specified or is set to an empty array, Media is reviewed by default.
+If this parameter is not specified or is set to an empty array, Media is used for review by default.
     */
     @SerializedName("ReviewContents")
     @Expose
@@ -60,11 +60,11 @@ If this parameter is not specified or is set to an empty array, Media is reviewe
      * Get Content for review. Available values:
 <li>Media: original audio/video;</li>
 <li>Cover: cover.</li>
-If this parameter is not specified or is set to an empty array, Media is reviewed by default. 
+If this parameter is not specified or is set to an empty array, Media is used for review by default. 
      * @return ReviewContents Content for review. Available values:
 <li>Media: original audio/video;</li>
 <li>Cover: cover.</li>
-If this parameter is not specified or is set to an empty array, Media is reviewed by default.
+If this parameter is not specified or is set to an empty array, Media is used for review by default.
      */
     public String [] getReviewContents() {
         return this.ReviewContents;
@@ -74,11 +74,11 @@ If this parameter is not specified or is set to an empty array, Media is reviewe
      * Set Content for review. Available values:
 <li>Media: original audio/video;</li>
 <li>Cover: cover.</li>
-If this parameter is not specified or is set to an empty array, Media is reviewed by default.
+If this parameter is not specified or is set to an empty array, Media is used for review by default.
      * @param ReviewContents Content for review. Available values:
 <li>Media: original audio/video;</li>
 <li>Cover: cover.</li>
-If this parameter is not specified or is set to an empty array, Media is reviewed by default.
+If this parameter is not specified or is set to an empty array, Media is used for review by default.
      */
     public void setReviewContents(String [] ReviewContents) {
         this.ReviewContents = ReviewContents;

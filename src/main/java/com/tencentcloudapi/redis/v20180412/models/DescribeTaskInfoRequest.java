@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DescribeTaskInfoRequest extends AbstractModel {
 
     /**
-    * Task ID, which can be obtained through the sub-parameter **TaskId** of the response parameter **Tasks** of the API [DescribeTaskList](https://intl.cloud.tencent.com/document/product/239/39374?from_cn_redirect=1).
+    * Task ID, which can be obtained through the sub-parameter **TaskId** of the response parameter **Tasks** of the API [DescribeTaskList](https://www.tencentcloud.com/document/product/239/39374?from_cn_redirect=1).
     */
     @SerializedName("TaskId")
     @Expose
     private Long TaskId;
 
     /**
-     * Get Task ID, which can be obtained through the sub-parameter **TaskId** of the response parameter **Tasks** of the API [DescribeTaskList](https://intl.cloud.tencent.com/document/product/239/39374?from_cn_redirect=1). 
-     * @return TaskId Task ID, which can be obtained through the sub-parameter **TaskId** of the response parameter **Tasks** of the API [DescribeTaskList](https://intl.cloud.tencent.com/document/product/239/39374?from_cn_redirect=1).
+     * Get Task ID, which can be obtained through the sub-parameter **TaskId** of the response parameter **Tasks** of the API [DescribeTaskList](https://www.tencentcloud.com/document/product/239/39374?from_cn_redirect=1). 
+     * @return TaskId Task ID, which can be obtained through the sub-parameter **TaskId** of the response parameter **Tasks** of the API [DescribeTaskList](https://www.tencentcloud.com/document/product/239/39374?from_cn_redirect=1).
      */
     public Long getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set Task ID, which can be obtained through the sub-parameter **TaskId** of the response parameter **Tasks** of the API [DescribeTaskList](https://intl.cloud.tencent.com/document/product/239/39374?from_cn_redirect=1).
-     * @param TaskId Task ID, which can be obtained through the sub-parameter **TaskId** of the response parameter **Tasks** of the API [DescribeTaskList](https://intl.cloud.tencent.com/document/product/239/39374?from_cn_redirect=1).
+     * Set Task ID, which can be obtained through the sub-parameter **TaskId** of the response parameter **Tasks** of the API [DescribeTaskList](https://www.tencentcloud.com/document/product/239/39374?from_cn_redirect=1).
+     * @param TaskId Task ID, which can be obtained through the sub-parameter **TaskId** of the response parameter **Tasks** of the API [DescribeTaskList](https://www.tencentcloud.com/document/product/239/39374?from_cn_redirect=1).
      */
     public void setTaskId(Long TaskId) {
         this.TaskId = TaskId;

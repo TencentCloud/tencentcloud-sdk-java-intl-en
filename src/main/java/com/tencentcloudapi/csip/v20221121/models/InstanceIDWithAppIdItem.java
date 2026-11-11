@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class InstanceIDWithAppIdItem extends AbstractModel {
 
     /**
-    * AppId of the machine ownership
+    * AppId of the machine
     */
     @SerializedName("AppId")
     @Expose
@@ -38,16 +38,16 @@ public class InstanceIDWithAppIdItem extends AbstractModel {
     private String InstanceID;
 
     /**
-     * Get AppId of the machine ownership 
-     * @return AppId AppId of the machine ownership
+     * Get AppId of the machine 
+     * @return AppId AppId of the machine
      */
     public Long getAppId() {
         return this.AppId;
     }
 
     /**
-     * Set AppId of the machine ownership
-     * @param AppId AppId of the machine ownership
+     * Set AppId of the machine
+     * @param AppId AppId of the machine
      */
     public void setAppId(Long AppId) {
         this.AppId = AppId;

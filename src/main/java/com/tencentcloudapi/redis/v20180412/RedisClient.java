@@ -259,7 +259,7 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
-     *This API is used to remove a replication group member. Note: This API is being deprecated. Use [RemoveReplicationInstance](https://intl.cloud.tencent.com/document/product/239/90099?from_cn_redirect=1) instead.
+     *This API is used to remove replication group members. Note: This API is offline. Please use RemoveReplicationInstance.
      * @param req DeleteReplicationInstanceRequest
      * @return DeleteReplicationInstanceResponse
      * @throws TencentCloudSDKException
@@ -446,7 +446,7 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
-     *The API for querying big keys of a TencentDB for Redis instance was disused on October 31, 2022. For more information, see [API for Querying Instance Big Key Will Be Disused](https://intl.cloud.tencent.com/document/product/239/81005?from_cn_redirect=1).
+     *Tencent Cloud Database Redis decommissioned the API for querying large keys of instances on October 31, 2022. For the specific notice, please refer to the decommissioning announcement of the API for querying large keys of instances.
      * @param req DescribeInstanceMonitorBigKeyRequest
      * @return DescribeInstanceMonitorBigKeyResponse
      * @throws TencentCloudSDKException
@@ -457,7 +457,7 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
-     *The API for querying big keys of a TencentDB for Redis instance was disused on October 31, 2022. For more information, see [API for Querying Instance Big Key Will Be Disused](https://intl.cloud.tencent.com/document/product/239/81005?from_cn_redirect=1).
+     *TencentDB for Redis decommissioned the API for querying large keys in instances on October 31, 2022. For the specific announcement, please refer to the decommissioning announcement of the API for querying large keys in instances.
      * @param req DescribeInstanceMonitorBigKeySizeDistRequest
      * @return DescribeInstanceMonitorBigKeySizeDistResponse
      * @throws TencentCloudSDKException
@@ -468,7 +468,7 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
-     *The API for querying big keys of a TencentDB for Redis instance was disused on October 31, 2022. For more information, see [API for Querying Instance Big Key Will Be Disused](https://intl.cloud.tencent.com/document/product/239/81005?from_cn_redirect=1).
+     *TencentDB for Redis decommissioned the API for querying large keys in instances on October 31, 2022. For the specific announcement, please refer to the decommissioning announcement of the API for querying large keys in instances.
      * @param req DescribeInstanceMonitorBigKeyTypeDistRequest
      * @return DescribeInstanceMonitorBigKeyTypeDistResponse
      * @throws TencentCloudSDKException
@@ -490,7 +490,7 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
-     *This API is no longer used. Please use the TencentDB for DBbrain API [DescribeProxyProcessStatistics](https://intl.cloud.tencent.com/document/product/1130/84544?from_cn_redirect=1) to obtain the instance access source.
+     *This API is no longer used. Please use the TencentDB for DBbrain API [DescribeProxyProcessStatistics](https://www.tencentcloud.com/document/product/1130/84544?from_cn_redirect=1) to obtain the instance access source.
      * @param req DescribeInstanceMonitorSIPRequest
      * @return DescribeInstanceMonitorSIPResponse
      * @throws TencentCloudSDKException
@@ -952,7 +952,7 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
-     *This API is used to change the instance access password. Due to a spelling error in the original API name, it has been corrected to [ModifyInstancePassword](https://intl.cloud.tencent.com/document/product/239/111555?from_cn_redirect=1). It is recommended to use the corrected API.
+     *This API is used to change the instance access password. As the API name contains a spelling error, it has been corrected to [ModifyInstancePassword](https://www.tencentcloud.com/document/product/239/111555?from_cn_redirect=1). The corrected API is recommended for use.
      * @param req ModfiyInstancePasswordRequest
      * @return ModfiyInstancePasswordResponse
      * @throws TencentCloudSDKException
@@ -1194,6 +1194,28 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
+     *This API is used to change the SSL encryption mode.
+     * @param req ModifySSLEncryptionModeRequest
+     * @return ModifySSLEncryptionModeResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifySSLEncryptionModeResponse ModifySSLEncryptionMode(ModifySSLEncryptionModeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifySSLEncryptionMode", ModifySSLEncryptionModeResponse.class);
+    }
+
+    /**
+     *This API is used to modify the enable status of the Valkey instance extension module.
+     * @param req ModifyValkeyModuleRequest
+     * @return ModifyValkeyModuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyValkeyModuleResponse ModifyValkeyModule(ModifyValkeyModuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyValkeyModule", ModifyValkeyModuleResponse.class);
+    }
+
+    /**
      *Enable logging
      * @param req OpenLogRequest
      * @return OpenLogResponse
@@ -1323,6 +1345,17 @@ public class RedisClient extends AbstractClient{
     public SwitchProxyResponse SwitchProxy(SwitchProxyRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "SwitchProxy", SwitchProxyResponse.class);
+    }
+
+    /**
+     *This API is used to update SSL key information.
+     * @param req UpdateSSLCertRequest
+     * @return UpdateSSLCertResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateSSLCertResponse UpdateSSLCert(UpdateSSLCertRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateSSLCert", UpdateSSLCertResponse.class);
     }
 
     /**

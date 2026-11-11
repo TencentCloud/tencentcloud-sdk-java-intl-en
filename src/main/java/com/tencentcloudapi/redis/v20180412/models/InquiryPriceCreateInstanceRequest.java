@@ -31,7 +31,7 @@ public class InquiryPriceCreateInstanceRequest extends AbstractModel {
     private Long TypeId;
 
     /**
-    * <p>Memory capacity, measured in MB, must be a multiple of 1024. For specific specifications, refer to the specifications returned by <a href="https://www.tencentcloud.com/document/api/239/30600?from_cn_redirect=1">query product sales specifications</a>. When TypeId is standard architecture, MemSize is the total memory capacity of the instance. When TypeId is cluster architecture, MemSize is the sharded memory capacity.</p>
+    * <p>Memory capacity, measured in MB. The value must be a multiple of 1024. The specific specifications are subject to those returned by <a href="https://www.tencentcloud.com/document/api/239/30600?from_cn_redirect=1">Query Product Sales Specifications</a>. When TypeId is standard architecture, MemSize is the total memory capacity of the instance; when TypeId is cluster architecture, MemSize is the memory capacity of a single shard.</p>
     */
     @SerializedName("MemSize")
     @Expose
@@ -59,7 +59,7 @@ public class InquiryPriceCreateInstanceRequest extends AbstractModel {
     private Long BillingMode;
 
     /**
-    * <p>ID of the AZ to which the instance belongs. See <a href="https://www.tencentcloud.com/document/product/239/4106?from_cn_redirect=1">Regions and AZs</a>.<strong>Note</strong>: Please specify at least one parameter in <strong>ZoneId</strong> and <strong>ZoneName</strong>.</p>
+    * <p>ID of the AZ to which the instance belongs. See <a href="https://www.tencentcloud.com/document/product/239/4106?from_cn_redirect=1">Regions and AZs</a>. <strong>Description</strong>: Please specify at least one of <strong>ZoneId</strong> and <strong>ZoneName</strong>.</p>
     */
     @SerializedName("ZoneId")
     @Expose
@@ -87,7 +87,7 @@ public class InquiryPriceCreateInstanceRequest extends AbstractModel {
     private Boolean ReplicasReadonly;
 
     /**
-    * <p>Name of the availability zone to which the instance belongs. See <a href="https://www.tencentcloud.com/document/product/239/4106?from_cn_redirect=1">Regions and Availability Zones</a>. <strong>Description</strong>: Please specify at least one parameter in <strong>ZoneId</strong> and <strong>ZoneName</strong>.</p>
+    * <p>Name of the AZ to which the instance belongs. See <a href="https://www.tencentcloud.com/document/product/239/4106?from_cn_redirect=1">Regions and AZs</a>. <strong>Description</strong>: Please specify at least one of <strong>ZoneId</strong> and <strong>ZoneName</strong>.</p>
     */
     @SerializedName("ZoneName")
     @Expose
@@ -117,16 +117,16 @@ public class InquiryPriceCreateInstanceRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>Memory capacity, measured in MB, must be a multiple of 1024. For specific specifications, refer to the specifications returned by <a href="https://www.tencentcloud.com/document/api/239/30600?from_cn_redirect=1">query product sales specifications</a>. When TypeId is standard architecture, MemSize is the total memory capacity of the instance. When TypeId is cluster architecture, MemSize is the sharded memory capacity.</p> 
-     * @return MemSize <p>Memory capacity, measured in MB, must be a multiple of 1024. For specific specifications, refer to the specifications returned by <a href="https://www.tencentcloud.com/document/api/239/30600?from_cn_redirect=1">query product sales specifications</a>. When TypeId is standard architecture, MemSize is the total memory capacity of the instance. When TypeId is cluster architecture, MemSize is the sharded memory capacity.</p>
+     * Get <p>Memory capacity, measured in MB. The value must be a multiple of 1024. The specific specifications are subject to those returned by <a href="https://www.tencentcloud.com/document/api/239/30600?from_cn_redirect=1">Query Product Sales Specifications</a>. When TypeId is standard architecture, MemSize is the total memory capacity of the instance; when TypeId is cluster architecture, MemSize is the memory capacity of a single shard.</p> 
+     * @return MemSize <p>Memory capacity, measured in MB. The value must be a multiple of 1024. The specific specifications are subject to those returned by <a href="https://www.tencentcloud.com/document/api/239/30600?from_cn_redirect=1">Query Product Sales Specifications</a>. When TypeId is standard architecture, MemSize is the total memory capacity of the instance; when TypeId is cluster architecture, MemSize is the memory capacity of a single shard.</p>
      */
     public Long getMemSize() {
         return this.MemSize;
     }
 
     /**
-     * Set <p>Memory capacity, measured in MB, must be a multiple of 1024. For specific specifications, refer to the specifications returned by <a href="https://www.tencentcloud.com/document/api/239/30600?from_cn_redirect=1">query product sales specifications</a>. When TypeId is standard architecture, MemSize is the total memory capacity of the instance. When TypeId is cluster architecture, MemSize is the sharded memory capacity.</p>
-     * @param MemSize <p>Memory capacity, measured in MB, must be a multiple of 1024. For specific specifications, refer to the specifications returned by <a href="https://www.tencentcloud.com/document/api/239/30600?from_cn_redirect=1">query product sales specifications</a>. When TypeId is standard architecture, MemSize is the total memory capacity of the instance. When TypeId is cluster architecture, MemSize is the sharded memory capacity.</p>
+     * Set <p>Memory capacity, measured in MB. The value must be a multiple of 1024. The specific specifications are subject to those returned by <a href="https://www.tencentcloud.com/document/api/239/30600?from_cn_redirect=1">Query Product Sales Specifications</a>. When TypeId is standard architecture, MemSize is the total memory capacity of the instance; when TypeId is cluster architecture, MemSize is the memory capacity of a single shard.</p>
+     * @param MemSize <p>Memory capacity, measured in MB. The value must be a multiple of 1024. The specific specifications are subject to those returned by <a href="https://www.tencentcloud.com/document/api/239/30600?from_cn_redirect=1">Query Product Sales Specifications</a>. When TypeId is standard architecture, MemSize is the total memory capacity of the instance; when TypeId is cluster architecture, MemSize is the memory capacity of a single shard.</p>
      */
     public void setMemSize(Long MemSize) {
         this.MemSize = MemSize;
@@ -181,16 +181,16 @@ public class InquiryPriceCreateInstanceRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>ID of the AZ to which the instance belongs. See <a href="https://www.tencentcloud.com/document/product/239/4106?from_cn_redirect=1">Regions and AZs</a>.<strong>Note</strong>: Please specify at least one parameter in <strong>ZoneId</strong> and <strong>ZoneName</strong>.</p> 
-     * @return ZoneId <p>ID of the AZ to which the instance belongs. See <a href="https://www.tencentcloud.com/document/product/239/4106?from_cn_redirect=1">Regions and AZs</a>.<strong>Note</strong>: Please specify at least one parameter in <strong>ZoneId</strong> and <strong>ZoneName</strong>.</p>
+     * Get <p>ID of the AZ to which the instance belongs. See <a href="https://www.tencentcloud.com/document/product/239/4106?from_cn_redirect=1">Regions and AZs</a>. <strong>Description</strong>: Please specify at least one of <strong>ZoneId</strong> and <strong>ZoneName</strong>.</p> 
+     * @return ZoneId <p>ID of the AZ to which the instance belongs. See <a href="https://www.tencentcloud.com/document/product/239/4106?from_cn_redirect=1">Regions and AZs</a>. <strong>Description</strong>: Please specify at least one of <strong>ZoneId</strong> and <strong>ZoneName</strong>.</p>
      */
     public Long getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set <p>ID of the AZ to which the instance belongs. See <a href="https://www.tencentcloud.com/document/product/239/4106?from_cn_redirect=1">Regions and AZs</a>.<strong>Note</strong>: Please specify at least one parameter in <strong>ZoneId</strong> and <strong>ZoneName</strong>.</p>
-     * @param ZoneId <p>ID of the AZ to which the instance belongs. See <a href="https://www.tencentcloud.com/document/product/239/4106?from_cn_redirect=1">Regions and AZs</a>.<strong>Note</strong>: Please specify at least one parameter in <strong>ZoneId</strong> and <strong>ZoneName</strong>.</p>
+     * Set <p>ID of the AZ to which the instance belongs. See <a href="https://www.tencentcloud.com/document/product/239/4106?from_cn_redirect=1">Regions and AZs</a>. <strong>Description</strong>: Please specify at least one of <strong>ZoneId</strong> and <strong>ZoneName</strong>.</p>
+     * @param ZoneId <p>ID of the AZ to which the instance belongs. See <a href="https://www.tencentcloud.com/document/product/239/4106?from_cn_redirect=1">Regions and AZs</a>. <strong>Description</strong>: Please specify at least one of <strong>ZoneId</strong> and <strong>ZoneName</strong>.</p>
      */
     public void setZoneId(Long ZoneId) {
         this.ZoneId = ZoneId;
@@ -245,16 +245,16 @@ public class InquiryPriceCreateInstanceRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>Name of the availability zone to which the instance belongs. See <a href="https://www.tencentcloud.com/document/product/239/4106?from_cn_redirect=1">Regions and Availability Zones</a>. <strong>Description</strong>: Please specify at least one parameter in <strong>ZoneId</strong> and <strong>ZoneName</strong>.</p> 
-     * @return ZoneName <p>Name of the availability zone to which the instance belongs. See <a href="https://www.tencentcloud.com/document/product/239/4106?from_cn_redirect=1">Regions and Availability Zones</a>. <strong>Description</strong>: Please specify at least one parameter in <strong>ZoneId</strong> and <strong>ZoneName</strong>.</p>
+     * Get <p>Name of the AZ to which the instance belongs. See <a href="https://www.tencentcloud.com/document/product/239/4106?from_cn_redirect=1">Regions and AZs</a>. <strong>Description</strong>: Please specify at least one of <strong>ZoneId</strong> and <strong>ZoneName</strong>.</p> 
+     * @return ZoneName <p>Name of the AZ to which the instance belongs. See <a href="https://www.tencentcloud.com/document/product/239/4106?from_cn_redirect=1">Regions and AZs</a>. <strong>Description</strong>: Please specify at least one of <strong>ZoneId</strong> and <strong>ZoneName</strong>.</p>
      */
     public String getZoneName() {
         return this.ZoneName;
     }
 
     /**
-     * Set <p>Name of the availability zone to which the instance belongs. See <a href="https://www.tencentcloud.com/document/product/239/4106?from_cn_redirect=1">Regions and Availability Zones</a>. <strong>Description</strong>: Please specify at least one parameter in <strong>ZoneId</strong> and <strong>ZoneName</strong>.</p>
-     * @param ZoneName <p>Name of the availability zone to which the instance belongs. See <a href="https://www.tencentcloud.com/document/product/239/4106?from_cn_redirect=1">Regions and Availability Zones</a>. <strong>Description</strong>: Please specify at least one parameter in <strong>ZoneId</strong> and <strong>ZoneName</strong>.</p>
+     * Set <p>Name of the AZ to which the instance belongs. See <a href="https://www.tencentcloud.com/document/product/239/4106?from_cn_redirect=1">Regions and AZs</a>. <strong>Description</strong>: Please specify at least one of <strong>ZoneId</strong> and <strong>ZoneName</strong>.</p>
+     * @param ZoneName <p>Name of the AZ to which the instance belongs. See <a href="https://www.tencentcloud.com/document/product/239/4106?from_cn_redirect=1">Regions and AZs</a>. <strong>Description</strong>: Please specify at least one of <strong>ZoneId</strong> and <strong>ZoneName</strong>.</p>
      */
     public void setZoneName(String ZoneName) {
         this.ZoneName = ZoneName;

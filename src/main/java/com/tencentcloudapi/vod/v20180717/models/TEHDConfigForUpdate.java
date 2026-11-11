@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class TEHDConfigForUpdate extends AbstractModel {
 
     /**
-    * Top speed Codec type. Available values: <li>TEHD-100: top speed Codec-100;</li> <li>OFF: disables top speed Codec.</li> If not specified, no modification is made.
+    * Top speed Codec type. Available values: <li>TEHD-100 means top speed Codec-100;</li> <li>OFF means disabling top speed Codec.</li> If not specified, no modification is made.
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * Maximum video bitrate. If not specified, no modification is made.
+    * Maximum video bitrate. If this parameter is not specified, no modification is made.
     */
     @SerializedName("MaxVideoBitrate")
     @Expose
     private Long MaxVideoBitrate;
 
     /**
-     * Get Top speed Codec type. Available values: <li>TEHD-100: top speed Codec-100;</li> <li>OFF: disables top speed Codec.</li> If not specified, no modification is made. 
-     * @return Type Top speed Codec type. Available values: <li>TEHD-100: top speed Codec-100;</li> <li>OFF: disables top speed Codec.</li> If not specified, no modification is made.
+     * Get Top speed Codec type. Available values: <li>TEHD-100 means top speed Codec-100;</li> <li>OFF means disabling top speed Codec.</li> If not specified, no modification is made. 
+     * @return Type Top speed Codec type. Available values: <li>TEHD-100 means top speed Codec-100;</li> <li>OFF means disabling top speed Codec.</li> If not specified, no modification is made.
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Top speed Codec type. Available values: <li>TEHD-100: top speed Codec-100;</li> <li>OFF: disables top speed Codec.</li> If not specified, no modification is made.
-     * @param Type Top speed Codec type. Available values: <li>TEHD-100: top speed Codec-100;</li> <li>OFF: disables top speed Codec.</li> If not specified, no modification is made.
+     * Set Top speed Codec type. Available values: <li>TEHD-100 means top speed Codec-100;</li> <li>OFF means disabling top speed Codec.</li> If not specified, no modification is made.
+     * @param Type Top speed Codec type. Available values: <li>TEHD-100 means top speed Codec-100;</li> <li>OFF means disabling top speed Codec.</li> If not specified, no modification is made.
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get Maximum video bitrate. If not specified, no modification is made. 
-     * @return MaxVideoBitrate Maximum video bitrate. If not specified, no modification is made.
+     * Get Maximum video bitrate. If this parameter is not specified, no modification is made. 
+     * @return MaxVideoBitrate Maximum video bitrate. If this parameter is not specified, no modification is made.
      */
     public Long getMaxVideoBitrate() {
         return this.MaxVideoBitrate;
     }
 
     /**
-     * Set Maximum video bitrate. If not specified, no modification is made.
-     * @param MaxVideoBitrate Maximum video bitrate. If not specified, no modification is made.
+     * Set Maximum video bitrate. If this parameter is not specified, no modification is made.
+     * @param MaxVideoBitrate Maximum video bitrate. If this parameter is not specified, no modification is made.
      */
     public void setMaxVideoBitrate(Long MaxVideoBitrate) {
         this.MaxVideoBitrate = MaxVideoBitrate;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class VerifyByAsymmetricKeyResponse extends AbstractModel {
 
     /**
-    * Whether the signature is valid. `true`: the signature is valid; `false`: the signature is invalid.
+    * <p>Whether the signature is valid. true: valid; false: invalid.</p>
     */
     @SerializedName("SignatureValid")
     @Expose
@@ -38,16 +38,16 @@ public class VerifyByAsymmetricKeyResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Whether the signature is valid. `true`: the signature is valid; `false`: the signature is invalid. 
-     * @return SignatureValid Whether the signature is valid. `true`: the signature is valid; `false`: the signature is invalid.
+     * Get <p>Whether the signature is valid. true: valid; false: invalid.</p> 
+     * @return SignatureValid <p>Whether the signature is valid. true: valid; false: invalid.</p>
      */
     public Boolean getSignatureValid() {
         return this.SignatureValid;
     }
 
     /**
-     * Set Whether the signature is valid. `true`: the signature is valid; `false`: the signature is invalid.
-     * @param SignatureValid Whether the signature is valid. `true`: the signature is valid; `false`: the signature is invalid.
+     * Set <p>Whether the signature is valid. true: valid; false: invalid.</p>
+     * @param SignatureValid <p>Whether the signature is valid. true: valid; false: invalid.</p>
      */
     public void setSignatureValid(Boolean SignatureValid) {
         this.SignatureValid = SignatureValid;

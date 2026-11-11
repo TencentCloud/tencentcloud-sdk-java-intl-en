@@ -31,7 +31,7 @@ public class AudioTemplateInfoForUpdate extends AbstractModel {
     private String Codec;
 
     /**
-    * <p>Audio stream bitrate, in kbps. Value range: 0 and [26, 256]. When the value is 0, it means VOD automatically sets the bitrate.</p>
+    * <p>Audio stream bitrate. Value range: 0 and [26, 256]. Unit: kbps. When the value is 0, it means VOD automatically sets the bitrate.</p>
     */
     @SerializedName("Bitrate")
     @Expose
@@ -45,14 +45,14 @@ public class AudioTemplateInfoForUpdate extends AbstractModel {
     private Long SampleRate;
 
     /**
-    * <p>Audio channel. Available values:</p><li>1: single channel</li><li>2: dual-channel</li><li>6: stereo</li><li>0: the number of audio channels remains consistent with the original audio</li>When the media encapsulation format is an audio format (flac, ogg, mp3, m4a), the number of sound channels cannot be set to stereo.
+    * <p>Audio channel. Valid values:</p><li>1: Single channel</li><li>2: Two channels</li><li>6: Stereo</li><li>0: The number of audio channels remains the same as the original audio.</li>When the media encapsulation format is an audio format (flac, ogg, mp3, m4a), the number of audio channels cannot be set to stereo.
     */
     @SerializedName("AudioChannel")
     @Expose
     private Long AudioChannel;
 
     /**
-    * <p>Specifies the retained audio tracks for output. All source tracks are retained by default.</p><p>This parameter is valid only when specified in OverrideParameter. In other cases, it does not take effect.</p>
+    * <p>Specifies the retained audio tracks for output. All source tracks are retained by default.</p><p>This parameter is valid only when specified in the OverrideParameter parameter. In other cases, it does not take effect.</p>
     */
     @SerializedName("StreamSelects")
     @Expose
@@ -75,16 +75,16 @@ public class AudioTemplateInfoForUpdate extends AbstractModel {
     }
 
     /**
-     * Get <p>Audio stream bitrate, in kbps. Value range: 0 and [26, 256]. When the value is 0, it means VOD automatically sets the bitrate.</p> 
-     * @return Bitrate <p>Audio stream bitrate, in kbps. Value range: 0 and [26, 256]. When the value is 0, it means VOD automatically sets the bitrate.</p>
+     * Get <p>Audio stream bitrate. Value range: 0 and [26, 256]. Unit: kbps. When the value is 0, it means VOD automatically sets the bitrate.</p> 
+     * @return Bitrate <p>Audio stream bitrate. Value range: 0 and [26, 256]. Unit: kbps. When the value is 0, it means VOD automatically sets the bitrate.</p>
      */
     public Long getBitrate() {
         return this.Bitrate;
     }
 
     /**
-     * Set <p>Audio stream bitrate, in kbps. Value range: 0 and [26, 256]. When the value is 0, it means VOD automatically sets the bitrate.</p>
-     * @param Bitrate <p>Audio stream bitrate, in kbps. Value range: 0 and [26, 256]. When the value is 0, it means VOD automatically sets the bitrate.</p>
+     * Set <p>Audio stream bitrate. Value range: 0 and [26, 256]. Unit: kbps. When the value is 0, it means VOD automatically sets the bitrate.</p>
+     * @param Bitrate <p>Audio stream bitrate. Value range: 0 and [26, 256]. Unit: kbps. When the value is 0, it means VOD automatically sets the bitrate.</p>
      */
     public void setBitrate(Long Bitrate) {
         this.Bitrate = Bitrate;
@@ -107,32 +107,32 @@ public class AudioTemplateInfoForUpdate extends AbstractModel {
     }
 
     /**
-     * Get <p>Audio channel. Available values:</p><li>1: single channel</li><li>2: dual-channel</li><li>6: stereo</li><li>0: the number of audio channels remains consistent with the original audio</li>When the media encapsulation format is an audio format (flac, ogg, mp3, m4a), the number of sound channels cannot be set to stereo. 
-     * @return AudioChannel <p>Audio channel. Available values:</p><li>1: single channel</li><li>2: dual-channel</li><li>6: stereo</li><li>0: the number of audio channels remains consistent with the original audio</li>When the media encapsulation format is an audio format (flac, ogg, mp3, m4a), the number of sound channels cannot be set to stereo.
+     * Get <p>Audio channel. Valid values:</p><li>1: Single channel</li><li>2: Two channels</li><li>6: Stereo</li><li>0: The number of audio channels remains the same as the original audio.</li>When the media encapsulation format is an audio format (flac, ogg, mp3, m4a), the number of audio channels cannot be set to stereo. 
+     * @return AudioChannel <p>Audio channel. Valid values:</p><li>1: Single channel</li><li>2: Two channels</li><li>6: Stereo</li><li>0: The number of audio channels remains the same as the original audio.</li>When the media encapsulation format is an audio format (flac, ogg, mp3, m4a), the number of audio channels cannot be set to stereo.
      */
     public Long getAudioChannel() {
         return this.AudioChannel;
     }
 
     /**
-     * Set <p>Audio channel. Available values:</p><li>1: single channel</li><li>2: dual-channel</li><li>6: stereo</li><li>0: the number of audio channels remains consistent with the original audio</li>When the media encapsulation format is an audio format (flac, ogg, mp3, m4a), the number of sound channels cannot be set to stereo.
-     * @param AudioChannel <p>Audio channel. Available values:</p><li>1: single channel</li><li>2: dual-channel</li><li>6: stereo</li><li>0: the number of audio channels remains consistent with the original audio</li>When the media encapsulation format is an audio format (flac, ogg, mp3, m4a), the number of sound channels cannot be set to stereo.
+     * Set <p>Audio channel. Valid values:</p><li>1: Single channel</li><li>2: Two channels</li><li>6: Stereo</li><li>0: The number of audio channels remains the same as the original audio.</li>When the media encapsulation format is an audio format (flac, ogg, mp3, m4a), the number of audio channels cannot be set to stereo.
+     * @param AudioChannel <p>Audio channel. Valid values:</p><li>1: Single channel</li><li>2: Two channels</li><li>6: Stereo</li><li>0: The number of audio channels remains the same as the original audio.</li>When the media encapsulation format is an audio format (flac, ogg, mp3, m4a), the number of audio channels cannot be set to stereo.
      */
     public void setAudioChannel(Long AudioChannel) {
         this.AudioChannel = AudioChannel;
     }
 
     /**
-     * Get <p>Specifies the retained audio tracks for output. All source tracks are retained by default.</p><p>This parameter is valid only when specified in OverrideParameter. In other cases, it does not take effect.</p> 
-     * @return StreamSelects <p>Specifies the retained audio tracks for output. All source tracks are retained by default.</p><p>This parameter is valid only when specified in OverrideParameter. In other cases, it does not take effect.</p>
+     * Get <p>Specifies the retained audio tracks for output. All source tracks are retained by default.</p><p>This parameter is valid only when specified in the OverrideParameter parameter. In other cases, it does not take effect.</p> 
+     * @return StreamSelects <p>Specifies the retained audio tracks for output. All source tracks are retained by default.</p><p>This parameter is valid only when specified in the OverrideParameter parameter. In other cases, it does not take effect.</p>
      */
     public Long [] getStreamSelects() {
         return this.StreamSelects;
     }
 
     /**
-     * Set <p>Specifies the retained audio tracks for output. All source tracks are retained by default.</p><p>This parameter is valid only when specified in OverrideParameter. In other cases, it does not take effect.</p>
-     * @param StreamSelects <p>Specifies the retained audio tracks for output. All source tracks are retained by default.</p><p>This parameter is valid only when specified in OverrideParameter. In other cases, it does not take effect.</p>
+     * Set <p>Specifies the retained audio tracks for output. All source tracks are retained by default.</p><p>This parameter is valid only when specified in the OverrideParameter parameter. In other cases, it does not take effect.</p>
+     * @param StreamSelects <p>Specifies the retained audio tracks for output. All source tracks are retained by default.</p><p>This parameter is valid only when specified in the OverrideParameter parameter. In other cases, it does not take effect.</p>
      */
     public void setStreamSelects(Long [] StreamSelects) {
         this.StreamSelects = StreamSelects;

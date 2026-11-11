@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DescribeParamTemplateInfoRequest extends AbstractModel {
 
     /**
-    * The parameter template ID for query. Get parameter template list information through the [DescribeParamTemplates](https://intl.cloud.tencent.com/document/product/239/58750?from_cn_redirect=1) API.
+    * Parameter template ID specified for query. Get the parameter template list through the API [DescribeParamTemplates](https://www.tencentcloud.com/document/product/239/58750?from_cn_redirect=1).
     */
     @SerializedName("TemplateId")
     @Expose
     private String TemplateId;
 
     /**
-     * Get The parameter template ID for query. Get parameter template list information through the [DescribeParamTemplates](https://intl.cloud.tencent.com/document/product/239/58750?from_cn_redirect=1) API. 
-     * @return TemplateId The parameter template ID for query. Get parameter template list information through the [DescribeParamTemplates](https://intl.cloud.tencent.com/document/product/239/58750?from_cn_redirect=1) API.
+     * Get Parameter template ID specified for query. Get the parameter template list through the API [DescribeParamTemplates](https://www.tencentcloud.com/document/product/239/58750?from_cn_redirect=1). 
+     * @return TemplateId Parameter template ID specified for query. Get the parameter template list through the API [DescribeParamTemplates](https://www.tencentcloud.com/document/product/239/58750?from_cn_redirect=1).
      */
     public String getTemplateId() {
         return this.TemplateId;
     }
 
     /**
-     * Set The parameter template ID for query. Get parameter template list information through the [DescribeParamTemplates](https://intl.cloud.tencent.com/document/product/239/58750?from_cn_redirect=1) API.
-     * @param TemplateId The parameter template ID for query. Get parameter template list information through the [DescribeParamTemplates](https://intl.cloud.tencent.com/document/product/239/58750?from_cn_redirect=1) API.
+     * Set Parameter template ID specified for query. Get the parameter template list through the API [DescribeParamTemplates](https://www.tencentcloud.com/document/product/239/58750?from_cn_redirect=1).
+     * @param TemplateId Parameter template ID specified for query. Get the parameter template list through the API [DescribeParamTemplates](https://www.tencentcloud.com/document/product/239/58750?from_cn_redirect=1).
      */
     public void setTemplateId(String TemplateId) {
         this.TemplateId = TemplateId;

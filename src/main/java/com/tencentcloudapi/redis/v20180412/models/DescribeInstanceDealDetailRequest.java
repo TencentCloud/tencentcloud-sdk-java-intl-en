@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeInstanceDealDetailRequest extends AbstractModel {
 
     /**
-    * Order number, which is the output parameter DealId of [CreateInstances](https://www.tencentcloud.com/document/api/239/20026?from_cn_redirect=1), with the maximum array length of 10.
+    * Order ID, which is the output parameter DealId of [CreateInstances](https://www.tencentcloud.com/document/api/239/20026?from_cn_redirect=1), with the maximum array length of 10.
     */
     @SerializedName("DealIds")
     @Expose
@@ -38,8 +38,8 @@ public class DescribeInstanceDealDetailRequest extends AbstractModel {
     private String DealName;
 
     /**
-     * Get Order number, which is the output parameter DealId of [CreateInstances](https://www.tencentcloud.com/document/api/239/20026?from_cn_redirect=1), with the maximum array length of 10. 
-     * @return DealIds Order number, which is the output parameter DealId of [CreateInstances](https://www.tencentcloud.com/document/api/239/20026?from_cn_redirect=1), with the maximum array length of 10.
+     * Get Order ID, which is the output parameter DealId of [CreateInstances](https://www.tencentcloud.com/document/api/239/20026?from_cn_redirect=1), with the maximum array length of 10. 
+     * @return DealIds Order ID, which is the output parameter DealId of [CreateInstances](https://www.tencentcloud.com/document/api/239/20026?from_cn_redirect=1), with the maximum array length of 10.
      * @deprecated
      */
     @Deprecated
@@ -48,8 +48,8 @@ public class DescribeInstanceDealDetailRequest extends AbstractModel {
     }
 
     /**
-     * Set Order number, which is the output parameter DealId of [CreateInstances](https://www.tencentcloud.com/document/api/239/20026?from_cn_redirect=1), with the maximum array length of 10.
-     * @param DealIds Order number, which is the output parameter DealId of [CreateInstances](https://www.tencentcloud.com/document/api/239/20026?from_cn_redirect=1), with the maximum array length of 10.
+     * Set Order ID, which is the output parameter DealId of [CreateInstances](https://www.tencentcloud.com/document/api/239/20026?from_cn_redirect=1), with the maximum array length of 10.
+     * @param DealIds Order ID, which is the output parameter DealId of [CreateInstances](https://www.tencentcloud.com/document/api/239/20026?from_cn_redirect=1), with the maximum array length of 10.
      * @deprecated
      */
     @Deprecated

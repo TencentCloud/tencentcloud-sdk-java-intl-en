@@ -32,8 +32,8 @@ public class AnimatedGraphicTaskInput extends AbstractModel {
 
     /**
     * Start time offset of the GIF in the video, in seconds.
-<li>If not set or set to 0, it starts from the starting position of the video.</li>
-<li>When the value is greater than 0 (assume it is n), it means starting from the nth second of the video;</li>
+<li>If not set or set to 0, it starts from the beginning of the video.</li>
+<li>When the value is greater than 0 (assuming n), it means starting from the nth second of the video;</li>
 <li>When the value is less than 0 (assuming -n), it means starting from the position n seconds before the video ends.</li>
     */
     @SerializedName("StartTimeOffset")
@@ -41,10 +41,10 @@ public class AnimatedGraphicTaskInput extends AbstractModel {
     private Float StartTimeOffset;
 
     /**
-    * End time offset of an animated image in the video, in seconds.
+    * End time offset of the GIF in the video, in seconds.
 <li>If not set or set to 0, it will last until the end of a video.</li>
-<li>When the value is greater than 0 (assuming n), it means it will last until the nth second of the video and then terminate;</li>
-<li>When the value is less than 0 (assuming -n), it means the video will terminate n seconds before the end.</li>
+<li>When the value is greater than 0 (assuming n), it means the video ends at the nth second.</li>
+<li>When the value is less than 0 (assuming -n), it means termination n seconds before the video ends.</li>
     */
     @SerializedName("EndTimeOffset")
     @Expose
@@ -68,12 +68,12 @@ public class AnimatedGraphicTaskInput extends AbstractModel {
 
     /**
      * Get Start time offset of the GIF in the video, in seconds.
-<li>If not set or set to 0, it starts from the starting position of the video.</li>
-<li>When the value is greater than 0 (assume it is n), it means starting from the nth second of the video;</li>
+<li>If not set or set to 0, it starts from the beginning of the video.</li>
+<li>When the value is greater than 0 (assuming n), it means starting from the nth second of the video;</li>
 <li>When the value is less than 0 (assuming -n), it means starting from the position n seconds before the video ends.</li> 
      * @return StartTimeOffset Start time offset of the GIF in the video, in seconds.
-<li>If not set or set to 0, it starts from the starting position of the video.</li>
-<li>When the value is greater than 0 (assume it is n), it means starting from the nth second of the video;</li>
+<li>If not set or set to 0, it starts from the beginning of the video.</li>
+<li>When the value is greater than 0 (assuming n), it means starting from the nth second of the video;</li>
 <li>When the value is less than 0 (assuming -n), it means starting from the position n seconds before the video ends.</li>
      */
     public Float getStartTimeOffset() {
@@ -82,12 +82,12 @@ public class AnimatedGraphicTaskInput extends AbstractModel {
 
     /**
      * Set Start time offset of the GIF in the video, in seconds.
-<li>If not set or set to 0, it starts from the starting position of the video.</li>
-<li>When the value is greater than 0 (assume it is n), it means starting from the nth second of the video;</li>
+<li>If not set or set to 0, it starts from the beginning of the video.</li>
+<li>When the value is greater than 0 (assuming n), it means starting from the nth second of the video;</li>
 <li>When the value is less than 0 (assuming -n), it means starting from the position n seconds before the video ends.</li>
      * @param StartTimeOffset Start time offset of the GIF in the video, in seconds.
-<li>If not set or set to 0, it starts from the starting position of the video.</li>
-<li>When the value is greater than 0 (assume it is n), it means starting from the nth second of the video;</li>
+<li>If not set or set to 0, it starts from the beginning of the video.</li>
+<li>When the value is greater than 0 (assuming n), it means starting from the nth second of the video;</li>
 <li>When the value is less than 0 (assuming -n), it means starting from the position n seconds before the video ends.</li>
      */
     public void setStartTimeOffset(Float StartTimeOffset) {
@@ -95,28 +95,28 @@ public class AnimatedGraphicTaskInput extends AbstractModel {
     }
 
     /**
-     * Get End time offset of an animated image in the video, in seconds.
+     * Get End time offset of the GIF in the video, in seconds.
 <li>If not set or set to 0, it will last until the end of a video.</li>
-<li>When the value is greater than 0 (assuming n), it means it will last until the nth second of the video and then terminate;</li>
-<li>When the value is less than 0 (assuming -n), it means the video will terminate n seconds before the end.</li> 
-     * @return EndTimeOffset End time offset of an animated image in the video, in seconds.
+<li>When the value is greater than 0 (assuming n), it means the video ends at the nth second.</li>
+<li>When the value is less than 0 (assuming -n), it means termination n seconds before the video ends.</li> 
+     * @return EndTimeOffset End time offset of the GIF in the video, in seconds.
 <li>If not set or set to 0, it will last until the end of a video.</li>
-<li>When the value is greater than 0 (assuming n), it means it will last until the nth second of the video and then terminate;</li>
-<li>When the value is less than 0 (assuming -n), it means the video will terminate n seconds before the end.</li>
+<li>When the value is greater than 0 (assuming n), it means the video ends at the nth second.</li>
+<li>When the value is less than 0 (assuming -n), it means termination n seconds before the video ends.</li>
      */
     public Float getEndTimeOffset() {
         return this.EndTimeOffset;
     }
 
     /**
-     * Set End time offset of an animated image in the video, in seconds.
+     * Set End time offset of the GIF in the video, in seconds.
 <li>If not set or set to 0, it will last until the end of a video.</li>
-<li>When the value is greater than 0 (assuming n), it means it will last until the nth second of the video and then terminate;</li>
-<li>When the value is less than 0 (assuming -n), it means the video will terminate n seconds before the end.</li>
-     * @param EndTimeOffset End time offset of an animated image in the video, in seconds.
+<li>When the value is greater than 0 (assuming n), it means the video ends at the nth second.</li>
+<li>When the value is less than 0 (assuming -n), it means termination n seconds before the video ends.</li>
+     * @param EndTimeOffset End time offset of the GIF in the video, in seconds.
 <li>If not set or set to 0, it will last until the end of a video.</li>
-<li>When the value is greater than 0 (assuming n), it means it will last until the nth second of the video and then terminate;</li>
-<li>When the value is less than 0 (assuming -n), it means the video will terminate n seconds before the end.</li>
+<li>When the value is greater than 0 (assuming n), it means the video ends at the nth second.</li>
+<li>When the value is less than 0 (assuming -n), it means termination n seconds before the video ends.</li>
      */
     public void setEndTimeOffset(Float EndTimeOffset) {
         this.EndTimeOffset = EndTimeOffset;

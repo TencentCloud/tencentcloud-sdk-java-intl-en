@@ -66,14 +66,14 @@ public class TranscodeTaskInput extends AbstractModel {
     private MosaicInput [] MosaicSet;
 
     /**
-    * <p>Opening and ending content list. Up to 10 opening and ending contents are supported.</p>
+    * <p>Opening and ending content list. Up to 10 supported.</p>
     */
     @SerializedName("HeadTailSet")
     @Expose
     private HeadTailTaskInput [] HeadTailSet;
 
     /**
-    * <p>Start time offset of the transcoded video, in seconds.</p><li>If not specified or set to 0, the transcoded video starts from the start position of the original video;</li><li>If the value is greater than 0 (assuming n), the transcoded video starts from the position at the nth second of the original video;</li><li>If the value is less than 0 (assuming -n), the transcoded video starts from the position n seconds before the end of the original video.</li>
+    * <p>Start time offset of the transcoded video, in seconds.</p><li>If not specified or set to 0, the transcoded video starts from the start position of the original video;</li><li>If the value is greater than 0 (assuming n), the transcoded video starts from the nth second of the original video;</li><li>If the value is less than 0 (assuming -n), the transcoded video starts from the position n seconds before the end of the original video.</li>
     */
     @SerializedName("StartTimeOffset")
     @Expose
@@ -94,7 +94,7 @@ public class TranscodeTaskInput extends AbstractModel {
     private OverrideTranscodeParameter OverrideParameter;
 
     /**
-    * <p>Subtitle suppression information list. Up to 2 are supported.</p>
+    * <p>Subtitle suppression information list. Up to 2 supported.</p>
     */
     @SerializedName("SubtitleInfoSet")
     @Expose
@@ -197,32 +197,32 @@ public class TranscodeTaskInput extends AbstractModel {
     }
 
     /**
-     * Get <p>Opening and ending content list. Up to 10 opening and ending contents are supported.</p> 
-     * @return HeadTailSet <p>Opening and ending content list. Up to 10 opening and ending contents are supported.</p>
+     * Get <p>Opening and ending content list. Up to 10 supported.</p> 
+     * @return HeadTailSet <p>Opening and ending content list. Up to 10 supported.</p>
      */
     public HeadTailTaskInput [] getHeadTailSet() {
         return this.HeadTailSet;
     }
 
     /**
-     * Set <p>Opening and ending content list. Up to 10 opening and ending contents are supported.</p>
-     * @param HeadTailSet <p>Opening and ending content list. Up to 10 opening and ending contents are supported.</p>
+     * Set <p>Opening and ending content list. Up to 10 supported.</p>
+     * @param HeadTailSet <p>Opening and ending content list. Up to 10 supported.</p>
      */
     public void setHeadTailSet(HeadTailTaskInput [] HeadTailSet) {
         this.HeadTailSet = HeadTailSet;
     }
 
     /**
-     * Get <p>Start time offset of the transcoded video, in seconds.</p><li>If not specified or set to 0, the transcoded video starts from the start position of the original video;</li><li>If the value is greater than 0 (assuming n), the transcoded video starts from the position at the nth second of the original video;</li><li>If the value is less than 0 (assuming -n), the transcoded video starts from the position n seconds before the end of the original video.</li> 
-     * @return StartTimeOffset <p>Start time offset of the transcoded video, in seconds.</p><li>If not specified or set to 0, the transcoded video starts from the start position of the original video;</li><li>If the value is greater than 0 (assuming n), the transcoded video starts from the position at the nth second of the original video;</li><li>If the value is less than 0 (assuming -n), the transcoded video starts from the position n seconds before the end of the original video.</li>
+     * Get <p>Start time offset of the transcoded video, in seconds.</p><li>If not specified or set to 0, the transcoded video starts from the start position of the original video;</li><li>If the value is greater than 0 (assuming n), the transcoded video starts from the nth second of the original video;</li><li>If the value is less than 0 (assuming -n), the transcoded video starts from the position n seconds before the end of the original video.</li> 
+     * @return StartTimeOffset <p>Start time offset of the transcoded video, in seconds.</p><li>If not specified or set to 0, the transcoded video starts from the start position of the original video;</li><li>If the value is greater than 0 (assuming n), the transcoded video starts from the nth second of the original video;</li><li>If the value is less than 0 (assuming -n), the transcoded video starts from the position n seconds before the end of the original video.</li>
      */
     public Float getStartTimeOffset() {
         return this.StartTimeOffset;
     }
 
     /**
-     * Set <p>Start time offset of the transcoded video, in seconds.</p><li>If not specified or set to 0, the transcoded video starts from the start position of the original video;</li><li>If the value is greater than 0 (assuming n), the transcoded video starts from the position at the nth second of the original video;</li><li>If the value is less than 0 (assuming -n), the transcoded video starts from the position n seconds before the end of the original video.</li>
-     * @param StartTimeOffset <p>Start time offset of the transcoded video, in seconds.</p><li>If not specified or set to 0, the transcoded video starts from the start position of the original video;</li><li>If the value is greater than 0 (assuming n), the transcoded video starts from the position at the nth second of the original video;</li><li>If the value is less than 0 (assuming -n), the transcoded video starts from the position n seconds before the end of the original video.</li>
+     * Set <p>Start time offset of the transcoded video, in seconds.</p><li>If not specified or set to 0, the transcoded video starts from the start position of the original video;</li><li>If the value is greater than 0 (assuming n), the transcoded video starts from the nth second of the original video;</li><li>If the value is less than 0 (assuming -n), the transcoded video starts from the position n seconds before the end of the original video.</li>
+     * @param StartTimeOffset <p>Start time offset of the transcoded video, in seconds.</p><li>If not specified or set to 0, the transcoded video starts from the start position of the original video;</li><li>If the value is greater than 0 (assuming n), the transcoded video starts from the nth second of the original video;</li><li>If the value is less than 0 (assuming -n), the transcoded video starts from the position n seconds before the end of the original video.</li>
      */
     public void setStartTimeOffset(Float StartTimeOffset) {
         this.StartTimeOffset = StartTimeOffset;
@@ -261,16 +261,16 @@ public class TranscodeTaskInput extends AbstractModel {
     }
 
     /**
-     * Get <p>Subtitle suppression information list. Up to 2 are supported.</p> 
-     * @return SubtitleInfoSet <p>Subtitle suppression information list. Up to 2 are supported.</p>
+     * Get <p>Subtitle suppression information list. Up to 2 supported.</p> 
+     * @return SubtitleInfoSet <p>Subtitle suppression information list. Up to 2 supported.</p>
      */
     public SubtitleInfoInput [] getSubtitleInfoSet() {
         return this.SubtitleInfoSet;
     }
 
     /**
-     * Set <p>Subtitle suppression information list. Up to 2 are supported.</p>
-     * @param SubtitleInfoSet <p>Subtitle suppression information list. Up to 2 are supported.</p>
+     * Set <p>Subtitle suppression information list. Up to 2 supported.</p>
+     * @param SubtitleInfoSet <p>Subtitle suppression information list. Up to 2 supported.</p>
      */
     public void setSubtitleInfoSet(SubtitleInfoInput [] SubtitleInfoSet) {
         this.SubtitleInfoSet = SubtitleInfoSet;

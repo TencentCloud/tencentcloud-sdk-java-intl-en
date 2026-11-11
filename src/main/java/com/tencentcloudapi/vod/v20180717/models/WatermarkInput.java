@@ -31,7 +31,7 @@ public class WatermarkInput extends AbstractModel {
     private Long Definition;
 
     /**
-    * Text content, up to 100 characters. This field is required only when the watermark type is text.
+    * Text content, up to 100 characters. Fill in only when the watermark type is text watermark.
 Text watermarks do not support watermarking screenshots.
     */
     @SerializedName("TextContent")
@@ -40,7 +40,7 @@ Text watermarks do not support watermarking screenshots.
 
     /**
     * SVG content. Length not exceeding 2,000,000 characters. Fill in only when the watermark type is SVG watermark.
-SVG watermark does not support watermarking screenshots.
+SVG watermark does not support screenshot watermarking.
     */
     @SerializedName("SvgContent")
     @Expose
@@ -60,7 +60,7 @@ SVG watermark does not support watermarking screenshots.
     * End time offset of a watermark, in seconds.
 <li>If not set or set to 0, a watermark will last until the end of a video.</li>
 <li>If the value is greater than 0 (for example, n), a watermark will disappear at second n.</li>
-<li>When the value is less than 0 (assuming -n), the watermark persists until n seconds before the end of the video.</li>
+<li>When the value is less than 0 (assuming -n), the watermark persists until n seconds before the end of a video.</li>
     */
     @SerializedName("EndTimeOffset")
     @Expose
@@ -83,9 +83,9 @@ SVG watermark does not support watermarking screenshots.
     }
 
     /**
-     * Get Text content, up to 100 characters. This field is required only when the watermark type is text.
+     * Get Text content, up to 100 characters. Fill in only when the watermark type is text watermark.
 Text watermarks do not support watermarking screenshots. 
-     * @return TextContent Text content, up to 100 characters. This field is required only when the watermark type is text.
+     * @return TextContent Text content, up to 100 characters. Fill in only when the watermark type is text watermark.
 Text watermarks do not support watermarking screenshots.
      */
     public String getTextContent() {
@@ -93,9 +93,9 @@ Text watermarks do not support watermarking screenshots.
     }
 
     /**
-     * Set Text content, up to 100 characters. This field is required only when the watermark type is text.
+     * Set Text content, up to 100 characters. Fill in only when the watermark type is text watermark.
 Text watermarks do not support watermarking screenshots.
-     * @param TextContent Text content, up to 100 characters. This field is required only when the watermark type is text.
+     * @param TextContent Text content, up to 100 characters. Fill in only when the watermark type is text watermark.
 Text watermarks do not support watermarking screenshots.
      */
     public void setTextContent(String TextContent) {
@@ -104,9 +104,9 @@ Text watermarks do not support watermarking screenshots.
 
     /**
      * Get SVG content. Length not exceeding 2,000,000 characters. Fill in only when the watermark type is SVG watermark.
-SVG watermark does not support watermarking screenshots. 
+SVG watermark does not support screenshot watermarking. 
      * @return SvgContent SVG content. Length not exceeding 2,000,000 characters. Fill in only when the watermark type is SVG watermark.
-SVG watermark does not support watermarking screenshots.
+SVG watermark does not support screenshot watermarking.
      */
     public String getSvgContent() {
         return this.SvgContent;
@@ -114,9 +114,9 @@ SVG watermark does not support watermarking screenshots.
 
     /**
      * Set SVG content. Length not exceeding 2,000,000 characters. Fill in only when the watermark type is SVG watermark.
-SVG watermark does not support watermarking screenshots.
+SVG watermark does not support screenshot watermarking.
      * @param SvgContent SVG content. Length not exceeding 2,000,000 characters. Fill in only when the watermark type is SVG watermark.
-SVG watermark does not support watermarking screenshots.
+SVG watermark does not support screenshot watermarking.
      */
     public void setSvgContent(String SvgContent) {
         this.SvgContent = SvgContent;
@@ -154,11 +154,11 @@ SVG watermark does not support watermarking screenshots.
      * Get End time offset of a watermark, in seconds.
 <li>If not set or set to 0, a watermark will last until the end of a video.</li>
 <li>If the value is greater than 0 (for example, n), a watermark will disappear at second n.</li>
-<li>When the value is less than 0 (assuming -n), the watermark persists until n seconds before the end of the video.</li> 
+<li>When the value is less than 0 (assuming -n), the watermark persists until n seconds before the end of a video.</li> 
      * @return EndTimeOffset End time offset of a watermark, in seconds.
 <li>If not set or set to 0, a watermark will last until the end of a video.</li>
 <li>If the value is greater than 0 (for example, n), a watermark will disappear at second n.</li>
-<li>When the value is less than 0 (assuming -n), the watermark persists until n seconds before the end of the video.</li>
+<li>When the value is less than 0 (assuming -n), the watermark persists until n seconds before the end of a video.</li>
      */
     public Float getEndTimeOffset() {
         return this.EndTimeOffset;
@@ -168,11 +168,11 @@ SVG watermark does not support watermarking screenshots.
      * Set End time offset of a watermark, in seconds.
 <li>If not set or set to 0, a watermark will last until the end of a video.</li>
 <li>If the value is greater than 0 (for example, n), a watermark will disappear at second n.</li>
-<li>When the value is less than 0 (assuming -n), the watermark persists until n seconds before the end of the video.</li>
+<li>When the value is less than 0 (assuming -n), the watermark persists until n seconds before the end of a video.</li>
      * @param EndTimeOffset End time offset of a watermark, in seconds.
 <li>If not set or set to 0, a watermark will last until the end of a video.</li>
 <li>If the value is greater than 0 (for example, n), a watermark will disappear at second n.</li>
-<li>When the value is less than 0 (assuming -n), the watermark persists until n seconds before the end of the video.</li>
+<li>When the value is less than 0 (assuming -n), the watermark persists until n seconds before the end of a video.</li>
      */
     public void setEndTimeOffset(Float EndTimeOffset) {
         this.EndTimeOffset = EndTimeOffset;

@@ -31,7 +31,7 @@ public class OverrideTranscodeParameter extends AbstractModel {
     private String Container;
 
     /**
-    * <p>Indicates whether to remove video data. Valid values:<br>&lt;li&gt;0: Data is reserved;&lt;\li&gt;<br>&lt;li&gt;1: Data is removed.&lt;\li&gt;</p>
+    * <p>Indicates whether to remove video data. Parameter value:<br>&lt;li&gt;0: Data is reserved;&lt;\li&gt;<br>&lt;li&gt;1: Data is removed.&lt;\li&gt;</p>
     */
     @SerializedName("RemoveVideo")
     @Expose
@@ -59,7 +59,7 @@ public class OverrideTranscodeParameter extends AbstractModel {
     private AudioTemplateInfoForUpdate AudioTemplate;
 
     /**
-    * <p>Top Speed Codec transcoding configuration parameters.</p>
+    * <p>TSC transcoding configuration parameters.</p>
     */
     @SerializedName("TEHDConfig")
     @Expose
@@ -89,16 +89,16 @@ public class OverrideTranscodeParameter extends AbstractModel {
     }
 
     /**
-     * Get <p>Indicates whether to remove video data. Valid values:<br>&lt;li&gt;0: Data is reserved;&lt;\li&gt;<br>&lt;li&gt;1: Data is removed.&lt;\li&gt;</p> 
-     * @return RemoveVideo <p>Indicates whether to remove video data. Valid values:<br>&lt;li&gt;0: Data is reserved;&lt;\li&gt;<br>&lt;li&gt;1: Data is removed.&lt;\li&gt;</p>
+     * Get <p>Indicates whether to remove video data. Parameter value:<br>&lt;li&gt;0: Data is reserved;&lt;\li&gt;<br>&lt;li&gt;1: Data is removed.&lt;\li&gt;</p> 
+     * @return RemoveVideo <p>Indicates whether to remove video data. Parameter value:<br>&lt;li&gt;0: Data is reserved;&lt;\li&gt;<br>&lt;li&gt;1: Data is removed.&lt;\li&gt;</p>
      */
     public Long getRemoveVideo() {
         return this.RemoveVideo;
     }
 
     /**
-     * Set <p>Indicates whether to remove video data. Valid values:<br>&lt;li&gt;0: Data is reserved;&lt;\li&gt;<br>&lt;li&gt;1: Data is removed.&lt;\li&gt;</p>
-     * @param RemoveVideo <p>Indicates whether to remove video data. Valid values:<br>&lt;li&gt;0: Data is reserved;&lt;\li&gt;<br>&lt;li&gt;1: Data is removed.&lt;\li&gt;</p>
+     * Set <p>Indicates whether to remove video data. Parameter value:<br>&lt;li&gt;0: Data is reserved;&lt;\li&gt;<br>&lt;li&gt;1: Data is removed.&lt;\li&gt;</p>
+     * @param RemoveVideo <p>Indicates whether to remove video data. Parameter value:<br>&lt;li&gt;0: Data is reserved;&lt;\li&gt;<br>&lt;li&gt;1: Data is removed.&lt;\li&gt;</p>
      */
     public void setRemoveVideo(Long RemoveVideo) {
         this.RemoveVideo = RemoveVideo;
@@ -153,16 +153,16 @@ public class OverrideTranscodeParameter extends AbstractModel {
     }
 
     /**
-     * Get <p>Top Speed Codec transcoding configuration parameters.</p> 
-     * @return TEHDConfig <p>Top Speed Codec transcoding configuration parameters.</p>
+     * Get <p>TSC transcoding configuration parameters.</p> 
+     * @return TEHDConfig <p>TSC transcoding configuration parameters.</p>
      */
     public TEHDConfigForUpdate getTEHDConfig() {
         return this.TEHDConfig;
     }
 
     /**
-     * Set <p>Top Speed Codec transcoding configuration parameters.</p>
-     * @param TEHDConfig <p>Top Speed Codec transcoding configuration parameters.</p>
+     * Set <p>TSC transcoding configuration parameters.</p>
+     * @param TEHDConfig <p>TSC transcoding configuration parameters.</p>
      */
     public void setTEHDConfig(TEHDConfigForUpdate TEHDConfig) {
         this.TEHDConfig = TEHDConfig;

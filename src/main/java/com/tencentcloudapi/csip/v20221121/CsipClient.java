@@ -272,6 +272,17 @@ Create an AI scheduled task by entering the task name, prompt content, and trigg
     }
 
     /**
+     *This API is used to create an asset baseline risk export task.
+     * @param req CreateAssetBaselineRiskExportJobRequest
+     * @return CreateAssetBaselineRiskExportJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateAssetBaselineRiskExportJobResponse CreateAssetBaselineRiskExportJob(CreateAssetBaselineRiskExportJobRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateAssetBaselineRiskExportJob", CreateAssetBaselineRiskExportJobResponse.class);
+    }
+
+    /**
      *Creates a component list export task for image assets.
      * @param req CreateAssetComponentListExportJobRequest
      * @return CreateAssetComponentListExportJobResponse
@@ -1341,6 +1352,17 @@ This API is used to delete a scheduled task based on the specified AI scheduled 
     }
 
     /**
+     *Delete baseline ignore policy
+     * @param req DeleteBaselineIgnorePolicyRequest
+     * @return DeleteBaselineIgnorePolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteBaselineIgnorePolicyResponse DeleteBaselineIgnorePolicy(DeleteBaselineIgnorePolicyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteBaselineIgnorePolicy", DeleteBaselineIgnorePolicyResponse.class);
+    }
+
+    /**
      *Delete custom baseline policies in batches. Only support deletion of policies with PolicyType=SELF. After deletion, historical risk records are retained, but no new results are generated.
      * @param req DeleteBaselineSelfDefinedPolicyListRequest
      * @return DeleteBaselineSelfDefinedPolicyListResponse
@@ -1723,6 +1745,28 @@ This API is used to delete a scheduled task based on the specified AI scheduled 
     public DeleteImageVulWhitelistResponse DeleteImageVulWhitelist(DeleteImageVulWhitelistRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteImageVulWhitelist", DeleteImageVulWhitelistResponse.class);
+    }
+
+    /**
+     *This API is used to delete CSC abnormal login custom allowlist entries in batches (soft delete, status=2), with support for cross-page select all. Either Ids or SelectAll is required. If both are empty, InvalidParameter is returned. If the total amount of cross-page select all exceeds 100,000 entries, the entire request is denied.
+     * @param req DeleteLoginWhiteCustomEDRRequest
+     * @return DeleteLoginWhiteCustomEDRResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteLoginWhiteCustomEDRResponse DeleteLoginWhiteCustomEDR(DeleteLoginWhiteCustomEDRRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteLoginWhiteCustomEDR", DeleteLoginWhiteCustomEDRResponse.class);
+    }
+
+    /**
+     *Delete CSC abnormal login self-learning allowlist rule groups in batches (soft delete the entire group with enable=0). Import any row ID in a group to locate the entire group. Cross-page select all is supported (cap: 100,000 rule groups). Once deleted, the groups will not be automatically re-learned. You need to toggle self-learning again to update the learning anchor. This interface does not rescan historical alarms.
+     * @param req DeleteLoginWhiteLearnEDRRequest
+     * @return DeleteLoginWhiteLearnEDRResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteLoginWhiteLearnEDRResponse DeleteLoginWhiteLearnEDR(DeleteLoginWhiteLearnEDRRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteLoginWhiteLearnEDR", DeleteLoginWhiteLearnEDRResponse.class);
     }
 
     /**
@@ -2178,6 +2222,17 @@ Queries the historical execution records of AI scheduled tasks. Supports paginat
     }
 
     /**
+     *This API is used to obtain the asset risk list.
+     * @param req DescribeAssetBaselineRiskListRequest
+     * @return DescribeAssetBaselineRiskListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAssetBaselineRiskListResponse DescribeAssetBaselineRiskList(DescribeAssetBaselineRiskListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAssetBaselineRiskList", DescribeAssetBaselineRiskListResponse.class);
+    }
+
+    /**
      *Query the component list in an asset.
      * @param req DescribeAssetComponentListRequest
      * @return DescribeAssetComponentListResponse
@@ -2450,6 +2505,17 @@ Queries the historical execution records of AI scheduled tasks. Supports paginat
     public DescribeBaselineFixRecordListResponse DescribeBaselineFixRecordList(DescribeBaselineFixRecordListRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeBaselineFixRecordList", DescribeBaselineFixRecordListResponse.class);
+    }
+
+    /**
+     *Queries the baseline ignore policy list
+     * @param req DescribeBaselineIgnorePolicyListRequest
+     * @return DescribeBaselineIgnorePolicyListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBaselineIgnorePolicyListResponse DescribeBaselineIgnorePolicyList(DescribeBaselineIgnorePolicyListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeBaselineIgnorePolicyList", DescribeBaselineIgnorePolicyListResponse.class);
     }
 
     /**
@@ -2978,6 +3044,17 @@ Queries the historical execution records of AI scheduled tasks. Supports paginat
     public DescribeClusterAssetsResponse DescribeClusterAssets(DescribeClusterAssetsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeClusterAssets", DescribeClusterAssetsResponse.class);
+    }
+
+    /**
+     *Get the cluster risk policy list.
+     * @param req DescribeClusterBaselineRiskPolicyListRequest
+     * @return DescribeClusterBaselineRiskPolicyListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeClusterBaselineRiskPolicyListResponse DescribeClusterBaselineRiskPolicyList(DescribeClusterBaselineRiskPolicyListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeClusterBaselineRiskPolicyList", DescribeClusterBaselineRiskPolicyListResponse.class);
     }
 
     /**
@@ -4466,6 +4543,17 @@ Queries the historical execution records of AI scheduled tasks. Supports paginat
     }
 
     /**
+     *Locate malicious file alarms by EDR alarm ID and return the download URL of the malicious sample. Only alarms with alert_sub_type=1 (malicious file) can be downloaded. Other sub-types are handled as resource not found. Public cloud returns a COS presigned URL (valid for 1 hour). Non-public cloud returns a base64 DataURL and FileName when the export switch is on. In cross-account scenarios, TargetAppId specifies the account that owns the alarm, and ownership verification is performed (fail-close, InvalidParameter is returned if no permission).
+     * @param req DescribeEdrMalwareFileRequest
+     * @return DescribeEdrMalwareFileResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeEdrMalwareFileResponse DescribeEdrMalwareFile(DescribeEdrMalwareFileRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeEdrMalwareFile", DescribeEdrMalwareFileResponse.class);
+    }
+
+    /**
      *Result download URL of an export task
      * @param req DescribeExportJobDownloadURLRequest
      * @return DescribeExportJobDownloadURLResponse
@@ -4642,6 +4730,17 @@ Queries the historical execution records of AI scheduled tasks. Supports paginat
     }
 
     /**
+     *This API is used to query the host vulnerability risk event list and return basic vulnerability information, instance information, risk status, and latest scan time by risk record dimension.
+     * @param req DescribeHostVulRiskEventListRequest
+     * @return DescribeHostVulRiskEventListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeHostVulRiskEventListResponse DescribeHostVulRiskEventList(DescribeHostVulRiskEventListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeHostVulRiskEventList", DescribeHostVulRiskEventListResponse.class);
+    }
+
+    /**
      *This API is used to retrieve the host vulnerability risk list.
      * @param req DescribeHostVulRiskListRequest
      * @return DescribeHostVulRiskListResponse
@@ -4650,6 +4749,17 @@ Queries the historical execution records of AI scheduled tasks. Supports paginat
     public DescribeHostVulRiskListResponse DescribeHostVulRiskList(DescribeHostVulRiskListRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeHostVulRiskList", DescribeHostVulRiskListResponse.class);
+    }
+
+    /**
+     *Query the host vulnerability scanning status to determine whether vulnerabilities have been scanned, whether the first vulnerability scan failed, and the fixable vulnerability status after the first scan is completed.
+     * @param req DescribeHostVulScanStatusRequest
+     * @return DescribeHostVulScanStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeHostVulScanStatusResponse DescribeHostVulScanStatus(DescribeHostVulScanStatusRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeHostVulScanStatus", DescribeHostVulScanStatusResponse.class);
     }
 
     /**
@@ -5115,6 +5225,17 @@ Queries the historical execution records of AI scheduled tasks. Supports paginat
     }
 
     /**
+     *This API is used to query the CSC abnormal login custom allowlist. In multi-account scenarios, parse out all member AppIds by MemberId and perform an aggregate query only once. Return in pages by ModifyTime DESC. The output slice field is always [] and never null.
+     * @param req DescribeLoginWhiteCustomListEDRRequest
+     * @return DescribeLoginWhiteCustomListEDRResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLoginWhiteCustomListEDRResponse DescribeLoginWhiteCustomListEDR(DescribeLoginWhiteCustomListEDRRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeLoginWhiteCustomListEDR", DescribeLoginWhiteCustomListEDRResponse.class);
+    }
+
+    /**
      *This API is used to query the list of allowlisted machines after merge.
      * @param req DescribeLoginWhiteHostListRequest
      * @return DescribeLoginWhiteHostListResponse
@@ -5123,6 +5244,17 @@ Queries the historical execution records of AI scheduled tasks. Supports paginat
     public DescribeLoginWhiteHostListResponse DescribeLoginWhiteHostList(DescribeLoginWhiteHostListRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeLoginWhiteHostList", DescribeLoginWhiteHostListResponse.class);
+    }
+
+    /**
+     *This API is used to query the CSC abnormal login self-learning allowlist (rule group). Rule groups are aggregated by (AppId, common login location), and the ID is the minimum line ID in the group. The output fields SrcIp, UserName, StartTime, and EndTime are always empty. AutoLearnEnable returns the self-learning switch state for the frontend to determine whether to redirect to enable it based on the empty state.
+     * @param req DescribeLoginWhiteLearnListEDRRequest
+     * @return DescribeLoginWhiteLearnListEDRResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLoginWhiteLearnListEDRResponse DescribeLoginWhiteLearnListEDR(DescribeLoginWhiteLearnListEDRRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeLoginWhiteLearnListEDR", DescribeLoginWhiteLearnListEDRResponse.class);
     }
 
     /**
@@ -6744,6 +6876,17 @@ Partial update is supported. Only the passed-in optional fields are updated. Whe
     }
 
     /**
+     *Modify baseline ignore policy
+     * @param req ModifyBaselineIgnorePolicyRequest
+     * @return ModifyBaselineIgnorePolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyBaselineIgnorePolicyResponse ModifyBaselineIgnorePolicy(ModifyBaselineIgnorePolicyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyBaselineIgnorePolicy", ModifyBaselineIgnorePolicyResponse.class);
+    }
+
+    /**
      *Create or edit a baseline policy. Policy.ID 0 means create, non-zero means edit. Name is required when creating or editing. CheckAssetType and Type must comply with the CheckAssetType and PolicyType enums.
      * @param req ModifyBaselinePolicyRequest
      * @return ModifyBaselinePolicyResponse
@@ -7456,6 +7599,28 @@ Partial update is supported. Only the passed-in optional fields are updated. Whe
     public ModifyImageVulWhitelistResponse ModifyImageVulWhitelist(ModifyImageVulWhitelistRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyImageVulWhitelist", ModifyImageVulWhitelistResponse.class);
+    }
+
+    /**
+     *Modify the CSC abnormal login custom allowlist with full coverage saving (fields not passed are deemed as cleared). This API does not trigger historical alarm rescanning. Exclude itself during deduplication. If the rule does not exist, return ResourceNotFound.
+     * @param req ModifyLoginWhiteCustomEDRRequest
+     * @return ModifyLoginWhiteCustomEDRResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyLoginWhiteCustomEDRResponse ModifyLoginWhiteCustomEDR(ModifyLoginWhiteCustomEDRRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyLoginWhiteCustomEDR", ModifyLoginWhiteCustomEDRResponse.class);
+    }
+
+    /**
+     *This API is used to modify the CSC abnormal login self-learning allowlist rule group, locating the entire group by (AppId, common login location). Constraints: creating is not supported, and taking effect by tag is not supported (TagIDs must be empty). Only Scope=0 direct selection and Scope=1 all assets + removal are supported. Reject when the rule group row count exceeds 5000. In a single transaction, insert first and delete later. It takes effect within one cache cycle (default 120s) after editing. This API does not rescan historical alarms.
+     * @param req ModifyLoginWhiteLearnEDRRequest
+     * @return ModifyLoginWhiteLearnEDRResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyLoginWhiteLearnEDRResponse ModifyLoginWhiteLearnEDR(ModifyLoginWhiteLearnEDRRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyLoginWhiteLearnEDR", ModifyLoginWhiteLearnEDRResponse.class);
     }
 
     /**

@@ -27,6 +27,12 @@ public enum TdmysqlErrorCode {
      /* FailedOperation.AuthNoStrategy */
      FAILEDOPERATION_AUTHNOSTRATEGY("FailedOperation.AuthNoStrategy"),
      
+     /* Billing call error. */
+     FAILEDOPERATION_BILLINGERROR("FailedOperation.BillingError"),
+     
+     /* FailedOperation.CheckSpecError */
+     FAILEDOPERATION_CHECKSPECERROR("FailedOperation.CheckSpecError"),
+     
      /* The current instance version does not support this API. */
      FAILEDOPERATION_CHECKSUPPORTACTIONERROR("FailedOperation.CheckSupportActionError"),
      
@@ -116,6 +122,9 @@ public enum TdmysqlErrorCode {
      
      /* Update permission error. */
      FAILEDOPERATION_UPDATEPRIVILEGESERROR("FailedOperation.UpdatePrivilegesError"),
+     
+     /* Instance vertical scale-out failed. */
+     FAILEDOPERATION_UPGRADEINSTANCEERROR("FailedOperation.UpgradeInstanceError"),
      
      /* FailedOperation.WanStatusAbnormal */
      FAILEDOPERATION_WANSTATUSABNORMAL("FailedOperation.WanStatusAbnormal"),
@@ -284,6 +293,9 @@ public enum TdmysqlErrorCode {
      
      /* Incorrect instance status. */
      OPERATIONDENIED_INSTANCESTATUSERROR("OperationDenied.InstanceStatusError"),
+     
+     /* OperationDenied.InstanceTypeCheckError */
+     OPERATIONDENIED_INSTANCETYPECHECKERROR("OperationDenied.InstanceTypeCheckError"),
      
      /* The quota for performing manual backup on a single instance per day. */
      OPERATIONDENIED_MANUALBACKUPQUOTAPERDAYEXCEEDEDERR("OperationDenied.ManualBackupQuotaPerDayExceededErr"),

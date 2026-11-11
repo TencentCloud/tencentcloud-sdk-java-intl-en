@@ -31,11 +31,10 @@ public class ModifyDBInstanceSecurityGroupsRequest extends AbstractModel {
     private String Product;
 
     /**
-    * Replaces with the new security group ID list, which is an array of one or more security group IDs.
-- To configure a security group for an instance for the first time, call the API [AssociateSecurityGroups](https://www.tencentcloud.com/document/product/239/41260?from_cn_redirect=1) to bind a security group first.
+    * Security group ID list. Replace it with a new one, which is an array of one or more security group IDs.
+- To configure a security group for an instance for the first time, bind the security group through the API [AssociateSecurityGroups](https://www.tencentcloud.com/document/product/239/41260?from_cn_redirect=1) first.
 - To replace the security group, obtain the security group ID on the [security group](https://console.tencentcloud.com/vpc/security-group) page of the console.
-
-**Note:** This input parameter performs a full replacement on all existing collections but not an incremental update. To modify it, import the expected full collections.
+  **Note:** This input parameter performs a full replacement on all existing collections but not an incremental update. To modify it, import the expected full collections.
     */
     @SerializedName("SecurityGroupIds")
     @Expose
@@ -65,32 +64,28 @@ public class ModifyDBInstanceSecurityGroupsRequest extends AbstractModel {
     }
 
     /**
-     * Get Replaces with the new security group ID list, which is an array of one or more security group IDs.
-- To configure a security group for an instance for the first time, call the API [AssociateSecurityGroups](https://www.tencentcloud.com/document/product/239/41260?from_cn_redirect=1) to bind a security group first.
+     * Get Security group ID list. Replace it with a new one, which is an array of one or more security group IDs.
+- To configure a security group for an instance for the first time, bind the security group through the API [AssociateSecurityGroups](https://www.tencentcloud.com/document/product/239/41260?from_cn_redirect=1) first.
 - To replace the security group, obtain the security group ID on the [security group](https://console.tencentcloud.com/vpc/security-group) page of the console.
-
-**Note:** This input parameter performs a full replacement on all existing collections but not an incremental update. To modify it, import the expected full collections. 
-     * @return SecurityGroupIds Replaces with the new security group ID list, which is an array of one or more security group IDs.
-- To configure a security group for an instance for the first time, call the API [AssociateSecurityGroups](https://www.tencentcloud.com/document/product/239/41260?from_cn_redirect=1) to bind a security group first.
+  **Note:** This input parameter performs a full replacement on all existing collections but not an incremental update. To modify it, import the expected full collections. 
+     * @return SecurityGroupIds Security group ID list. Replace it with a new one, which is an array of one or more security group IDs.
+- To configure a security group for an instance for the first time, bind the security group through the API [AssociateSecurityGroups](https://www.tencentcloud.com/document/product/239/41260?from_cn_redirect=1) first.
 - To replace the security group, obtain the security group ID on the [security group](https://console.tencentcloud.com/vpc/security-group) page of the console.
-
-**Note:** This input parameter performs a full replacement on all existing collections but not an incremental update. To modify it, import the expected full collections.
+  **Note:** This input parameter performs a full replacement on all existing collections but not an incremental update. To modify it, import the expected full collections.
      */
     public String [] getSecurityGroupIds() {
         return this.SecurityGroupIds;
     }
 
     /**
-     * Set Replaces with the new security group ID list, which is an array of one or more security group IDs.
-- To configure a security group for an instance for the first time, call the API [AssociateSecurityGroups](https://www.tencentcloud.com/document/product/239/41260?from_cn_redirect=1) to bind a security group first.
+     * Set Security group ID list. Replace it with a new one, which is an array of one or more security group IDs.
+- To configure a security group for an instance for the first time, bind the security group through the API [AssociateSecurityGroups](https://www.tencentcloud.com/document/product/239/41260?from_cn_redirect=1) first.
 - To replace the security group, obtain the security group ID on the [security group](https://console.tencentcloud.com/vpc/security-group) page of the console.
-
-**Note:** This input parameter performs a full replacement on all existing collections but not an incremental update. To modify it, import the expected full collections.
-     * @param SecurityGroupIds Replaces with the new security group ID list, which is an array of one or more security group IDs.
-- To configure a security group for an instance for the first time, call the API [AssociateSecurityGroups](https://www.tencentcloud.com/document/product/239/41260?from_cn_redirect=1) to bind a security group first.
+  **Note:** This input parameter performs a full replacement on all existing collections but not an incremental update. To modify it, import the expected full collections.
+     * @param SecurityGroupIds Security group ID list. Replace it with a new one, which is an array of one or more security group IDs.
+- To configure a security group for an instance for the first time, bind the security group through the API [AssociateSecurityGroups](https://www.tencentcloud.com/document/product/239/41260?from_cn_redirect=1) first.
 - To replace the security group, obtain the security group ID on the [security group](https://console.tencentcloud.com/vpc/security-group) page of the console.
-
-**Note:** This input parameter performs a full replacement on all existing collections but not an incremental update. To modify it, import the expected full collections.
+  **Note:** This input parameter performs a full replacement on all existing collections but not an incremental update. To modify it, import the expected full collections.
      */
     public void setSecurityGroupIds(String [] SecurityGroupIds) {
         this.SecurityGroupIds = SecurityGroupIds;

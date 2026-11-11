@@ -47,14 +47,14 @@ public class ModifyInstanceLogDeliveryRequest extends AbstractModel {
     private Boolean Enabled;
 
     /**
-    * ID of the shipped logset. It can be obtained through the API [DescribeLogsets](https://intl.cloud.tencent.com/document/api/614/58624?from_cn_redirect=1).
+    * ID of the shipped logset. It can be obtained through the API [DescribeLogsets](https://www.tencentcloud.com/document/api/614/58624?from_cn_redirect=1).
     */
     @SerializedName("LogsetId")
     @Expose
     private String LogsetId;
 
     /**
-    * ID of the shipped log topic. It can be obtained through the API [DescribeTopics](https://intl.cloud.tencent.com/document/api/614/56454?from_cn_redirect=1).
+    * ID of the shipped log topic. It can be obtained through the API [DescribeTopics](https://www.tencentcloud.com/document/api/614/56454?from_cn_redirect=1).
     */
     @SerializedName("TopicId")
     @Expose
@@ -152,32 +152,32 @@ public class ModifyInstanceLogDeliveryRequest extends AbstractModel {
     }
 
     /**
-     * Get ID of the shipped logset. It can be obtained through the API [DescribeLogsets](https://intl.cloud.tencent.com/document/api/614/58624?from_cn_redirect=1). 
-     * @return LogsetId ID of the shipped logset. It can be obtained through the API [DescribeLogsets](https://intl.cloud.tencent.com/document/api/614/58624?from_cn_redirect=1).
+     * Get ID of the shipped logset. It can be obtained through the API [DescribeLogsets](https://www.tencentcloud.com/document/api/614/58624?from_cn_redirect=1). 
+     * @return LogsetId ID of the shipped logset. It can be obtained through the API [DescribeLogsets](https://www.tencentcloud.com/document/api/614/58624?from_cn_redirect=1).
      */
     public String getLogsetId() {
         return this.LogsetId;
     }
 
     /**
-     * Set ID of the shipped logset. It can be obtained through the API [DescribeLogsets](https://intl.cloud.tencent.com/document/api/614/58624?from_cn_redirect=1).
-     * @param LogsetId ID of the shipped logset. It can be obtained through the API [DescribeLogsets](https://intl.cloud.tencent.com/document/api/614/58624?from_cn_redirect=1).
+     * Set ID of the shipped logset. It can be obtained through the API [DescribeLogsets](https://www.tencentcloud.com/document/api/614/58624?from_cn_redirect=1).
+     * @param LogsetId ID of the shipped logset. It can be obtained through the API [DescribeLogsets](https://www.tencentcloud.com/document/api/614/58624?from_cn_redirect=1).
      */
     public void setLogsetId(String LogsetId) {
         this.LogsetId = LogsetId;
     }
 
     /**
-     * Get ID of the shipped log topic. It can be obtained through the API [DescribeTopics](https://intl.cloud.tencent.com/document/api/614/56454?from_cn_redirect=1). 
-     * @return TopicId ID of the shipped log topic. It can be obtained through the API [DescribeTopics](https://intl.cloud.tencent.com/document/api/614/56454?from_cn_redirect=1).
+     * Get ID of the shipped log topic. It can be obtained through the API [DescribeTopics](https://www.tencentcloud.com/document/api/614/56454?from_cn_redirect=1). 
+     * @return TopicId ID of the shipped log topic. It can be obtained through the API [DescribeTopics](https://www.tencentcloud.com/document/api/614/56454?from_cn_redirect=1).
      */
     public String getTopicId() {
         return this.TopicId;
     }
 
     /**
-     * Set ID of the shipped log topic. It can be obtained through the API [DescribeTopics](https://intl.cloud.tencent.com/document/api/614/56454?from_cn_redirect=1).
-     * @param TopicId ID of the shipped log topic. It can be obtained through the API [DescribeTopics](https://intl.cloud.tencent.com/document/api/614/56454?from_cn_redirect=1).
+     * Set ID of the shipped log topic. It can be obtained through the API [DescribeTopics](https://www.tencentcloud.com/document/api/614/56454?from_cn_redirect=1).
+     * @param TopicId ID of the shipped log topic. It can be obtained through the API [DescribeTopics](https://www.tencentcloud.com/document/api/614/56454?from_cn_redirect=1).
      */
     public void setTopicId(String TopicId) {
         this.TopicId = TopicId;

@@ -80,6 +80,20 @@ public class ModifyInstanceAccountRequest extends AbstractModel {
     private Boolean EncryptPassword;
 
     /**
+    * <p>Disabled command configuration at the account level.</p><ul><li>Default value: [] (empty array, meaning no commands are disabled)</li><li>Input parameter limitation: Only the following specified database commands can be configured (multiple selections are supported)<br>flushall, flushdb, keys, hgetall, eval, evalsha, script, scan, psetex, set, hmset, hset, lpush, rpush, sadd, zadd, del, mget, mset, bitop, exists, msetnx, blpop, brpop, rpoplpush, brpoplpush, smove, sunion, sinter, sdiff, sunionstore, sinterstore, sdiffstore, zunionstore, zinterstore, pfmerge, pfcount, pfadd.</li></ul><p>Default value: ""</p>
+    */
+    @SerializedName("DisableCommands")
+    @Expose
+    private String [] DisableCommands;
+
+    /**
+    * <p>Whether to modify the command disablement configuration at the account level. Pass in only when the command list needs to be updated.</p><ul><li>true: Modify (an overwrite update will be performed based on the new command list passed in).</li><li>false: Do not modify (default value).</li></ul>
+    */
+    @SerializedName("ModifyDisableCommands")
+    @Expose
+    private Boolean ModifyDisableCommands;
+
+    /**
      * Get <p>Instance ID. Log in to the <a href="https://console.cloud.tencent.com/redis/instance/list">Redis console</a> and copy the instance ID from the instance list.</p> 
      * @return InstanceId <p>Instance ID. Log in to the <a href="https://console.cloud.tencent.com/redis/instance/list">Redis console</a> and copy the instance ID from the instance list.</p>
      */
@@ -207,6 +221,38 @@ public class ModifyInstanceAccountRequest extends AbstractModel {
         this.EncryptPassword = EncryptPassword;
     }
 
+    /**
+     * Get <p>Disabled command configuration at the account level.</p><ul><li>Default value: [] (empty array, meaning no commands are disabled)</li><li>Input parameter limitation: Only the following specified database commands can be configured (multiple selections are supported)<br>flushall, flushdb, keys, hgetall, eval, evalsha, script, scan, psetex, set, hmset, hset, lpush, rpush, sadd, zadd, del, mget, mset, bitop, exists, msetnx, blpop, brpop, rpoplpush, brpoplpush, smove, sunion, sinter, sdiff, sunionstore, sinterstore, sdiffstore, zunionstore, zinterstore, pfmerge, pfcount, pfadd.</li></ul><p>Default value: ""</p> 
+     * @return DisableCommands <p>Disabled command configuration at the account level.</p><ul><li>Default value: [] (empty array, meaning no commands are disabled)</li><li>Input parameter limitation: Only the following specified database commands can be configured (multiple selections are supported)<br>flushall, flushdb, keys, hgetall, eval, evalsha, script, scan, psetex, set, hmset, hset, lpush, rpush, sadd, zadd, del, mget, mset, bitop, exists, msetnx, blpop, brpop, rpoplpush, brpoplpush, smove, sunion, sinter, sdiff, sunionstore, sinterstore, sdiffstore, zunionstore, zinterstore, pfmerge, pfcount, pfadd.</li></ul><p>Default value: ""</p>
+     */
+    public String [] getDisableCommands() {
+        return this.DisableCommands;
+    }
+
+    /**
+     * Set <p>Disabled command configuration at the account level.</p><ul><li>Default value: [] (empty array, meaning no commands are disabled)</li><li>Input parameter limitation: Only the following specified database commands can be configured (multiple selections are supported)<br>flushall, flushdb, keys, hgetall, eval, evalsha, script, scan, psetex, set, hmset, hset, lpush, rpush, sadd, zadd, del, mget, mset, bitop, exists, msetnx, blpop, brpop, rpoplpush, brpoplpush, smove, sunion, sinter, sdiff, sunionstore, sinterstore, sdiffstore, zunionstore, zinterstore, pfmerge, pfcount, pfadd.</li></ul><p>Default value: ""</p>
+     * @param DisableCommands <p>Disabled command configuration at the account level.</p><ul><li>Default value: [] (empty array, meaning no commands are disabled)</li><li>Input parameter limitation: Only the following specified database commands can be configured (multiple selections are supported)<br>flushall, flushdb, keys, hgetall, eval, evalsha, script, scan, psetex, set, hmset, hset, lpush, rpush, sadd, zadd, del, mget, mset, bitop, exists, msetnx, blpop, brpop, rpoplpush, brpoplpush, smove, sunion, sinter, sdiff, sunionstore, sinterstore, sdiffstore, zunionstore, zinterstore, pfmerge, pfcount, pfadd.</li></ul><p>Default value: ""</p>
+     */
+    public void setDisableCommands(String [] DisableCommands) {
+        this.DisableCommands = DisableCommands;
+    }
+
+    /**
+     * Get <p>Whether to modify the command disablement configuration at the account level. Pass in only when the command list needs to be updated.</p><ul><li>true: Modify (an overwrite update will be performed based on the new command list passed in).</li><li>false: Do not modify (default value).</li></ul> 
+     * @return ModifyDisableCommands <p>Whether to modify the command disablement configuration at the account level. Pass in only when the command list needs to be updated.</p><ul><li>true: Modify (an overwrite update will be performed based on the new command list passed in).</li><li>false: Do not modify (default value).</li></ul>
+     */
+    public Boolean getModifyDisableCommands() {
+        return this.ModifyDisableCommands;
+    }
+
+    /**
+     * Set <p>Whether to modify the command disablement configuration at the account level. Pass in only when the command list needs to be updated.</p><ul><li>true: Modify (an overwrite update will be performed based on the new command list passed in).</li><li>false: Do not modify (default value).</li></ul>
+     * @param ModifyDisableCommands <p>Whether to modify the command disablement configuration at the account level. Pass in only when the command list needs to be updated.</p><ul><li>true: Modify (an overwrite update will be performed based on the new command list passed in).</li><li>false: Do not modify (default value).</li></ul>
+     */
+    public void setModifyDisableCommands(Boolean ModifyDisableCommands) {
+        this.ModifyDisableCommands = ModifyDisableCommands;
+    }
+
     public ModifyInstanceAccountRequest() {
     }
 
@@ -242,6 +288,15 @@ public class ModifyInstanceAccountRequest extends AbstractModel {
         if (source.EncryptPassword != null) {
             this.EncryptPassword = new Boolean(source.EncryptPassword);
         }
+        if (source.DisableCommands != null) {
+            this.DisableCommands = new String[source.DisableCommands.length];
+            for (int i = 0; i < source.DisableCommands.length; i++) {
+                this.DisableCommands[i] = new String(source.DisableCommands[i]);
+            }
+        }
+        if (source.ModifyDisableCommands != null) {
+            this.ModifyDisableCommands = new Boolean(source.ModifyDisableCommands);
+        }
     }
 
 
@@ -257,6 +312,8 @@ public class ModifyInstanceAccountRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Privilege", this.Privilege);
         this.setParamSimple(map, prefix + "NoAuth", this.NoAuth);
         this.setParamSimple(map, prefix + "EncryptPassword", this.EncryptPassword);
+        this.setParamArraySimple(map, prefix + "DisableCommands.", this.DisableCommands);
+        this.setParamSimple(map, prefix + "ModifyDisableCommands", this.ModifyDisableCommands);
 
     }
 }
