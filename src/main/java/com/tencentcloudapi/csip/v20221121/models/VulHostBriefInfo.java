@@ -38,7 +38,7 @@ public class VulHostBriefInfo extends AbstractModel {
     private String Name;
 
     /**
-    * <p>Public network IP address</p>
+    * <p>Public IP address</p>
     */
     @SerializedName("PublicIP")
     @Expose
@@ -52,35 +52,35 @@ public class VulHostBriefInfo extends AbstractModel {
     private String PrivateIP;
 
     /**
-    * <p>Protection edition<br>Enumeration value:<br>NONE: No protection<br>BASIC: Basic version<br>PRO: Pro edition<br>ULTIMATE: Flagship edition<br>PRO_LH: Lightweight edition</p>
+    * <p>Protection edition<br>Enumeration values:<br>NONE: no protection<br>BASIC: basic version<br>PRO: pro edition<br>ULTIMATE: flagship edition<br>PRO_LH: lightweight edition</p>
     */
     @SerializedName("DefendVersion")
     @Expose
     private String DefendVersion;
 
     /**
-    * <p>Vulnerability defense status<br>Enumeration value:<br>ENABLED: Enabled<br>NOT_SUPPORTED: Unsupported<br>NOT_ENABLED: Not enabled</p>
+    * <p>Vulnerability defense status<br>Enumeration values:<br>ENABLED: enabled<br>NOT_SUPPORTED: unsupported<br>NOT_ENABLED: not enabled</p>
     */
     @SerializedName("DefendStatus")
     @Expose
     private String DefendStatus;
 
     /**
-    * <p>Associated account information</p>
+    * <p>Account information belonging to</p>
     */
     @SerializedName("Account")
     @Expose
     private AccountBriefInfo Account;
 
     /**
-    * <p>Cloud host instance status<br>Enumeration value:<br>RUNNING: running<br>STOPPED: stopped<br>UNKNOWN: unknown</p>
+    * <p>CVM instance status<br>Enumeration value:<br>RUNNING: running<br>STOPPED: stopped<br>UNKNOWN: unknown</p>
     */
     @SerializedName("InstanceStatus")
     @Expose
     private String InstanceStatus;
 
     /**
-    * <p>Remediation status enumeration values.</p><p>Enumeration values: </p><ul><li>PENDING: To be fixed, </li><li>SCANNING: Scan in progress, </li><li>FIXED: Fixed, </li><li>IGNORED: Ignored, </li><li>FIXING: In remediation, </li><li>FIX_FAILED: Fix failure, </li><li>NEED_REBOOT: Pending restart.</li></ul>
+    * <p>Remediation status enumeration values.</p><p>Enumeration values: </p><ul><li>PENDING: To be fixed, </li><li>SCANNING: Scanning, </li><li>FIXED: Fixed, </li><li>IGNORED: Ignored, </li><li>FIXING: In remediation, </li><li>FIX_FAILED: Fix failure, </li><li>NEED_REBOOT: Pending restart.</li></ul>
     */
     @SerializedName("RiskStatus")
     @Expose
@@ -94,14 +94,14 @@ public class VulHostBriefInfo extends AbstractModel {
     private VPRRatingInfo VPRRating;
 
     /**
-    * <p>CWP Agent status<br>Enumeration value:<br>ONLINE: Online<br>OFFLINE: Offline<br>UNINSTALLED: Not installed</p>
+    * <p>CWP Agent status<br>Enumeration values:<br>ONLINE: ONLINE<br>OFFLINE: OFFLINE<br>UNINSTALLED: not installed</p>
     */
     @SerializedName("AgentStatus")
     @Expose
     private String AgentStatus;
 
     /**
-    * <p>Asset tag list (CSIP internal asset tag)</p>
+    * <p>Asset tag list (CSIP internal asset tags)</p>
     */
     @SerializedName("TagItem")
     @Expose
@@ -147,16 +147,16 @@ public class VulHostBriefInfo extends AbstractModel {
     }
 
     /**
-     * Get <p>Public network IP address</p> 
-     * @return PublicIP <p>Public network IP address</p>
+     * Get <p>Public IP address</p> 
+     * @return PublicIP <p>Public IP address</p>
      */
     public String getPublicIP() {
         return this.PublicIP;
     }
 
     /**
-     * Set <p>Public network IP address</p>
-     * @param PublicIP <p>Public network IP address</p>
+     * Set <p>Public IP address</p>
+     * @param PublicIP <p>Public IP address</p>
      */
     public void setPublicIP(String PublicIP) {
         this.PublicIP = PublicIP;
@@ -179,80 +179,80 @@ public class VulHostBriefInfo extends AbstractModel {
     }
 
     /**
-     * Get <p>Protection edition<br>Enumeration value:<br>NONE: No protection<br>BASIC: Basic version<br>PRO: Pro edition<br>ULTIMATE: Flagship edition<br>PRO_LH: Lightweight edition</p> 
-     * @return DefendVersion <p>Protection edition<br>Enumeration value:<br>NONE: No protection<br>BASIC: Basic version<br>PRO: Pro edition<br>ULTIMATE: Flagship edition<br>PRO_LH: Lightweight edition</p>
+     * Get <p>Protection edition<br>Enumeration values:<br>NONE: no protection<br>BASIC: basic version<br>PRO: pro edition<br>ULTIMATE: flagship edition<br>PRO_LH: lightweight edition</p> 
+     * @return DefendVersion <p>Protection edition<br>Enumeration values:<br>NONE: no protection<br>BASIC: basic version<br>PRO: pro edition<br>ULTIMATE: flagship edition<br>PRO_LH: lightweight edition</p>
      */
     public String getDefendVersion() {
         return this.DefendVersion;
     }
 
     /**
-     * Set <p>Protection edition<br>Enumeration value:<br>NONE: No protection<br>BASIC: Basic version<br>PRO: Pro edition<br>ULTIMATE: Flagship edition<br>PRO_LH: Lightweight edition</p>
-     * @param DefendVersion <p>Protection edition<br>Enumeration value:<br>NONE: No protection<br>BASIC: Basic version<br>PRO: Pro edition<br>ULTIMATE: Flagship edition<br>PRO_LH: Lightweight edition</p>
+     * Set <p>Protection edition<br>Enumeration values:<br>NONE: no protection<br>BASIC: basic version<br>PRO: pro edition<br>ULTIMATE: flagship edition<br>PRO_LH: lightweight edition</p>
+     * @param DefendVersion <p>Protection edition<br>Enumeration values:<br>NONE: no protection<br>BASIC: basic version<br>PRO: pro edition<br>ULTIMATE: flagship edition<br>PRO_LH: lightweight edition</p>
      */
     public void setDefendVersion(String DefendVersion) {
         this.DefendVersion = DefendVersion;
     }
 
     /**
-     * Get <p>Vulnerability defense status<br>Enumeration value:<br>ENABLED: Enabled<br>NOT_SUPPORTED: Unsupported<br>NOT_ENABLED: Not enabled</p> 
-     * @return DefendStatus <p>Vulnerability defense status<br>Enumeration value:<br>ENABLED: Enabled<br>NOT_SUPPORTED: Unsupported<br>NOT_ENABLED: Not enabled</p>
+     * Get <p>Vulnerability defense status<br>Enumeration values:<br>ENABLED: enabled<br>NOT_SUPPORTED: unsupported<br>NOT_ENABLED: not enabled</p> 
+     * @return DefendStatus <p>Vulnerability defense status<br>Enumeration values:<br>ENABLED: enabled<br>NOT_SUPPORTED: unsupported<br>NOT_ENABLED: not enabled</p>
      */
     public String getDefendStatus() {
         return this.DefendStatus;
     }
 
     /**
-     * Set <p>Vulnerability defense status<br>Enumeration value:<br>ENABLED: Enabled<br>NOT_SUPPORTED: Unsupported<br>NOT_ENABLED: Not enabled</p>
-     * @param DefendStatus <p>Vulnerability defense status<br>Enumeration value:<br>ENABLED: Enabled<br>NOT_SUPPORTED: Unsupported<br>NOT_ENABLED: Not enabled</p>
+     * Set <p>Vulnerability defense status<br>Enumeration values:<br>ENABLED: enabled<br>NOT_SUPPORTED: unsupported<br>NOT_ENABLED: not enabled</p>
+     * @param DefendStatus <p>Vulnerability defense status<br>Enumeration values:<br>ENABLED: enabled<br>NOT_SUPPORTED: unsupported<br>NOT_ENABLED: not enabled</p>
      */
     public void setDefendStatus(String DefendStatus) {
         this.DefendStatus = DefendStatus;
     }
 
     /**
-     * Get <p>Associated account information</p> 
-     * @return Account <p>Associated account information</p>
+     * Get <p>Account information belonging to</p> 
+     * @return Account <p>Account information belonging to</p>
      */
     public AccountBriefInfo getAccount() {
         return this.Account;
     }
 
     /**
-     * Set <p>Associated account information</p>
-     * @param Account <p>Associated account information</p>
+     * Set <p>Account information belonging to</p>
+     * @param Account <p>Account information belonging to</p>
      */
     public void setAccount(AccountBriefInfo Account) {
         this.Account = Account;
     }
 
     /**
-     * Get <p>Cloud host instance status<br>Enumeration value:<br>RUNNING: running<br>STOPPED: stopped<br>UNKNOWN: unknown</p> 
-     * @return InstanceStatus <p>Cloud host instance status<br>Enumeration value:<br>RUNNING: running<br>STOPPED: stopped<br>UNKNOWN: unknown</p>
+     * Get <p>CVM instance status<br>Enumeration value:<br>RUNNING: running<br>STOPPED: stopped<br>UNKNOWN: unknown</p> 
+     * @return InstanceStatus <p>CVM instance status<br>Enumeration value:<br>RUNNING: running<br>STOPPED: stopped<br>UNKNOWN: unknown</p>
      */
     public String getInstanceStatus() {
         return this.InstanceStatus;
     }
 
     /**
-     * Set <p>Cloud host instance status<br>Enumeration value:<br>RUNNING: running<br>STOPPED: stopped<br>UNKNOWN: unknown</p>
-     * @param InstanceStatus <p>Cloud host instance status<br>Enumeration value:<br>RUNNING: running<br>STOPPED: stopped<br>UNKNOWN: unknown</p>
+     * Set <p>CVM instance status<br>Enumeration value:<br>RUNNING: running<br>STOPPED: stopped<br>UNKNOWN: unknown</p>
+     * @param InstanceStatus <p>CVM instance status<br>Enumeration value:<br>RUNNING: running<br>STOPPED: stopped<br>UNKNOWN: unknown</p>
      */
     public void setInstanceStatus(String InstanceStatus) {
         this.InstanceStatus = InstanceStatus;
     }
 
     /**
-     * Get <p>Remediation status enumeration values.</p><p>Enumeration values: </p><ul><li>PENDING: To be fixed, </li><li>SCANNING: Scan in progress, </li><li>FIXED: Fixed, </li><li>IGNORED: Ignored, </li><li>FIXING: In remediation, </li><li>FIX_FAILED: Fix failure, </li><li>NEED_REBOOT: Pending restart.</li></ul> 
-     * @return RiskStatus <p>Remediation status enumeration values.</p><p>Enumeration values: </p><ul><li>PENDING: To be fixed, </li><li>SCANNING: Scan in progress, </li><li>FIXED: Fixed, </li><li>IGNORED: Ignored, </li><li>FIXING: In remediation, </li><li>FIX_FAILED: Fix failure, </li><li>NEED_REBOOT: Pending restart.</li></ul>
+     * Get <p>Remediation status enumeration values.</p><p>Enumeration values: </p><ul><li>PENDING: To be fixed, </li><li>SCANNING: Scanning, </li><li>FIXED: Fixed, </li><li>IGNORED: Ignored, </li><li>FIXING: In remediation, </li><li>FIX_FAILED: Fix failure, </li><li>NEED_REBOOT: Pending restart.</li></ul> 
+     * @return RiskStatus <p>Remediation status enumeration values.</p><p>Enumeration values: </p><ul><li>PENDING: To be fixed, </li><li>SCANNING: Scanning, </li><li>FIXED: Fixed, </li><li>IGNORED: Ignored, </li><li>FIXING: In remediation, </li><li>FIX_FAILED: Fix failure, </li><li>NEED_REBOOT: Pending restart.</li></ul>
      */
     public String getRiskStatus() {
         return this.RiskStatus;
     }
 
     /**
-     * Set <p>Remediation status enumeration values.</p><p>Enumeration values: </p><ul><li>PENDING: To be fixed, </li><li>SCANNING: Scan in progress, </li><li>FIXED: Fixed, </li><li>IGNORED: Ignored, </li><li>FIXING: In remediation, </li><li>FIX_FAILED: Fix failure, </li><li>NEED_REBOOT: Pending restart.</li></ul>
-     * @param RiskStatus <p>Remediation status enumeration values.</p><p>Enumeration values: </p><ul><li>PENDING: To be fixed, </li><li>SCANNING: Scan in progress, </li><li>FIXED: Fixed, </li><li>IGNORED: Ignored, </li><li>FIXING: In remediation, </li><li>FIX_FAILED: Fix failure, </li><li>NEED_REBOOT: Pending restart.</li></ul>
+     * Set <p>Remediation status enumeration values.</p><p>Enumeration values: </p><ul><li>PENDING: To be fixed, </li><li>SCANNING: Scanning, </li><li>FIXED: Fixed, </li><li>IGNORED: Ignored, </li><li>FIXING: In remediation, </li><li>FIX_FAILED: Fix failure, </li><li>NEED_REBOOT: Pending restart.</li></ul>
+     * @param RiskStatus <p>Remediation status enumeration values.</p><p>Enumeration values: </p><ul><li>PENDING: To be fixed, </li><li>SCANNING: Scanning, </li><li>FIXED: Fixed, </li><li>IGNORED: Ignored, </li><li>FIXING: In remediation, </li><li>FIX_FAILED: Fix failure, </li><li>NEED_REBOOT: Pending restart.</li></ul>
      */
     public void setRiskStatus(String RiskStatus) {
         this.RiskStatus = RiskStatus;
@@ -275,32 +275,32 @@ public class VulHostBriefInfo extends AbstractModel {
     }
 
     /**
-     * Get <p>CWP Agent status<br>Enumeration value:<br>ONLINE: Online<br>OFFLINE: Offline<br>UNINSTALLED: Not installed</p> 
-     * @return AgentStatus <p>CWP Agent status<br>Enumeration value:<br>ONLINE: Online<br>OFFLINE: Offline<br>UNINSTALLED: Not installed</p>
+     * Get <p>CWP Agent status<br>Enumeration values:<br>ONLINE: ONLINE<br>OFFLINE: OFFLINE<br>UNINSTALLED: not installed</p> 
+     * @return AgentStatus <p>CWP Agent status<br>Enumeration values:<br>ONLINE: ONLINE<br>OFFLINE: OFFLINE<br>UNINSTALLED: not installed</p>
      */
     public String getAgentStatus() {
         return this.AgentStatus;
     }
 
     /**
-     * Set <p>CWP Agent status<br>Enumeration value:<br>ONLINE: Online<br>OFFLINE: Offline<br>UNINSTALLED: Not installed</p>
-     * @param AgentStatus <p>CWP Agent status<br>Enumeration value:<br>ONLINE: Online<br>OFFLINE: Offline<br>UNINSTALLED: Not installed</p>
+     * Set <p>CWP Agent status<br>Enumeration values:<br>ONLINE: ONLINE<br>OFFLINE: OFFLINE<br>UNINSTALLED: not installed</p>
+     * @param AgentStatus <p>CWP Agent status<br>Enumeration values:<br>ONLINE: ONLINE<br>OFFLINE: OFFLINE<br>UNINSTALLED: not installed</p>
      */
     public void setAgentStatus(String AgentStatus) {
         this.AgentStatus = AgentStatus;
     }
 
     /**
-     * Get <p>Asset tag list (CSIP internal asset tag)</p> 
-     * @return TagItem <p>Asset tag list (CSIP internal asset tag)</p>
+     * Get <p>Asset tag list (CSIP internal asset tags)</p> 
+     * @return TagItem <p>Asset tag list (CSIP internal asset tags)</p>
      */
     public MiniTagItem [] getTagItem() {
         return this.TagItem;
     }
 
     /**
-     * Set <p>Asset tag list (CSIP internal asset tag)</p>
-     * @param TagItem <p>Asset tag list (CSIP internal asset tag)</p>
+     * Set <p>Asset tag list (CSIP internal asset tags)</p>
+     * @param TagItem <p>Asset tag list (CSIP internal asset tags)</p>
      */
     public void setTagItem(MiniTagItem [] TagItem) {
         this.TagItem = TagItem;

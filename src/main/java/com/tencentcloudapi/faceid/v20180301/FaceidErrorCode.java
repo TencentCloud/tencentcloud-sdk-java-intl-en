@@ -63,7 +63,7 @@ public enum FaceidErrorCode {
      /* The video compression failed. Please try again or reduce the size of the input video. */
      FAILEDOPERATION_COMPRESSVIDEOERROR("FailedOperation.CompressVideoError"),
      
-     /* The face in the picture is blocked, please upload a picture without any blockage */
+     /* The face in the image is occluded. Upload an image with an unobstructed face. */
      FAILEDOPERATION_COVEREDFACE("FailedOperation.CoveredFace"),
      
      /* Customer not found. Please check the UniqueCustomerID or call RunAMLNameScreening first. */
@@ -72,7 +72,7 @@ public enum FaceidErrorCode {
      /* Decryption failed. */
      FAILEDOPERATION_DECRYPTSYSTEMERROR("FailedOperation.DecryptSystemError"),
      
-     /* The service engine call failed, please try again */
+     /* Service engine call failed. Try again. */
      FAILEDOPERATION_DETECTENGINESYSTEMERROR("FailedOperation.DetectEngineSystemError"),
      
      /* File download failed. */
@@ -126,7 +126,7 @@ public enum FaceidErrorCode {
      /* The image size is too large. */
      FAILEDOPERATION_IMAGESIZETOOLARGE("FailedOperation.ImageSizeTooLarge"),
      
-     /* No complete face was detected. Please enter a complete face image. */
+     /* Full face not detected. Upload an image with a full face. */
      FAILEDOPERATION_INCOMPLETEFACE("FailedOperation.IncompleteFace"),
      
      /* Token not found */
@@ -195,7 +195,7 @@ public enum FaceidErrorCode {
      /* Ocr recognition failed. */
      FAILEDOPERATION_OCRFAILED("FailedOperation.OcrFailed"),
      
-     /* The image quality is too poor, please check the image quality */
+     /* The image quality is too poor. Check the image quality. */
      FAILEDOPERATION_POORIMAGEQUALITY("FailedOperation.PoorImageQuality"),
      
      /* The number of calls exceeded the limit. */
@@ -234,13 +234,13 @@ public enum FaceidErrorCode {
      /* STS unauthorized. */
      FAILEDOPERATION_STSUNAUTHERRERROR("FailedOperation.StsUnAuthErrError"),
      
-     /* Unknown internal error. */
+     /* Internal unknown error. */
      FAILEDOPERATION_UNKNOWN("FailedOperation.UnKnown"),
      
-     /* Video decoding abnormality */
+     /* Video decoding error. */
      FAILEDOPERATION_VIDEODECODEFAILED("FailedOperation.VideoDecodeFailed"),
      
-     /* The video duration is too long. The maximum video duration supported by the current interface is 20s. */
+     /* The video duration is too long. The maximum supported video duration for this API is 20 seconds. */
      FAILEDOPERATION_VIDEODURATIONEXCEEDED("FailedOperation.VideoDurationExceeded"),
      
      /* Internal error. */
@@ -270,13 +270,13 @@ public enum FaceidErrorCode {
      /* Internal unknown error. */
      INTERNALERROR_UNKNOWN("InternalError.UnKnown"),
      
-     /* Invalid parameter. */
+     /* Parameter error. */
      INVALIDPARAMETER("InvalidParameter"),
      
      /* Unencrypted fields exist. Refer to the documentation to modify. */
      INVALIDPARAMETER_UNSUPPORTENCRYPTFIELD("InvalidParameter.UnsupportEncryptField"),
      
-     /* Incorrect parameter value. */
+     /* Parameter value error. */
      INVALIDPARAMETERVALUE("InvalidParameterValue"),
      
      /* Field validation failed */
@@ -336,7 +336,7 @@ public enum FaceidErrorCode {
      /* Operation denied. */
      OPERATIONDENIED("OperationDenied"),
      
-     /* Number of requests exceeds the frequency limit. */
+     /* The number of requests exceeds the frequency limit. */
      REQUESTLIMITEXCEEDED("RequestLimitExceeded"),
      
      /* Webhook configuration not found. */
@@ -363,7 +363,7 @@ public enum FaceidErrorCode {
      /* Identity verification has not been completed for the account. */
      UNAUTHORIZEDOPERATION_NONAUTHORIZE("UnauthorizedOperation.NonAuthorize"),
      
-     /* The service has not been activated. */
+     /* The service is not activated. */
      UNAUTHORIZEDOPERATION_NONACTIVATED("UnauthorizedOperation.Nonactivated"),
      
      /* Unsupported operation. */

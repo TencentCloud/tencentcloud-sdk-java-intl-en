@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class FiltersItemNew extends AbstractModel {
 
     /**
-    * Field name, used for filtering
+    * Field name; Filter
 Filter the sub-order number (value) by DealName.
     */
     @SerializedName("Name")
@@ -46,9 +46,9 @@ Filter the sub-order number (value) by DealName.
     private Boolean ExactMatch;
 
     /**
-     * Get Field name, used for filtering
+     * Get Field name; Filter
 Filter the sub-order number (value) by DealName. 
-     * @return Name Field name, used for filtering
+     * @return Name Field name; Filter
 Filter the sub-order number (value) by DealName.
      */
     public String getName() {
@@ -56,9 +56,9 @@ Filter the sub-order number (value) by DealName.
     }
 
     /**
-     * Set Field name, used for filtering
+     * Set Field name; Filter
 Filter the sub-order number (value) by DealName.
-     * @param Name Field name, used for filtering
+     * @param Name Field name; Filter
 Filter the sub-order number (value) by DealName.
      */
     public void setName(String Name) {

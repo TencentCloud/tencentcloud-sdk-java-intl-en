@@ -24,35 +24,35 @@ import java.util.HashMap;
 public class CreateVulFixTaskRequest extends AbstractModel {
 
     /**
-    * <p>Repair item list, each item specifies a vulnerability/KB patch and its hosts requiring fixing<br>Input parameter limit: No more than 100 items, total number of instances not more than 5000</p>
+    * <p>Repair item list. Each item specifies a vulnerability/KB patch and its hosts requiring fixing<br>Input limit: up to 100 items, and the total number of instances cannot exceed 5000</p>
     */
     @SerializedName("FixItems")
     @Expose
     private VulFixItem [] FixItems;
 
     /**
-    * <p>Maximum repair time<br>Measurement unit: second<br>Default value: 3600</p>
+    * <p>Maximum repair time<br>Unit: second<br>Default value: 3600</p>
     */
     @SerializedName("Timeout")
     @Expose
     private Long Timeout;
 
     /**
-    * <p>Whether to create a disk snapshot before repair<br>Default value: false</p>
+    * <p>Create a disk snapshot before repair<br>Default value: false</p>
     */
     @SerializedName("CreateSnapshot")
     @Expose
     private Boolean CreateSnapshot;
 
     /**
-    * <p>Snapshot name. Valid when CreateSnapshot is true.<br>Input parameter limit: Up to 128 characters.</p>
+    * <p>Snapshot name. Valid when CreateSnapshot is true. Input limits: up to 60 characters, with automatic truncation for overly long ones.</p>
     */
     @SerializedName("SnapshotName")
     @Expose
     private String SnapshotName;
 
     /**
-    * <p>Snapshot retention days. Valid when CreateSnapshot is true.</p>
+    * <p>Snapshot retention days. Valid when CreateSnapshot is true</p>
     */
     @SerializedName("SaveDays")
     @Expose
@@ -66,80 +66,80 @@ public class CreateVulFixTaskRequest extends AbstractModel {
     private String [] MemberId;
 
     /**
-     * Get <p>Repair item list, each item specifies a vulnerability/KB patch and its hosts requiring fixing<br>Input parameter limit: No more than 100 items, total number of instances not more than 5000</p> 
-     * @return FixItems <p>Repair item list, each item specifies a vulnerability/KB patch and its hosts requiring fixing<br>Input parameter limit: No more than 100 items, total number of instances not more than 5000</p>
+     * Get <p>Repair item list. Each item specifies a vulnerability/KB patch and its hosts requiring fixing<br>Input limit: up to 100 items, and the total number of instances cannot exceed 5000</p> 
+     * @return FixItems <p>Repair item list. Each item specifies a vulnerability/KB patch and its hosts requiring fixing<br>Input limit: up to 100 items, and the total number of instances cannot exceed 5000</p>
      */
     public VulFixItem [] getFixItems() {
         return this.FixItems;
     }
 
     /**
-     * Set <p>Repair item list, each item specifies a vulnerability/KB patch and its hosts requiring fixing<br>Input parameter limit: No more than 100 items, total number of instances not more than 5000</p>
-     * @param FixItems <p>Repair item list, each item specifies a vulnerability/KB patch and its hosts requiring fixing<br>Input parameter limit: No more than 100 items, total number of instances not more than 5000</p>
+     * Set <p>Repair item list. Each item specifies a vulnerability/KB patch and its hosts requiring fixing<br>Input limit: up to 100 items, and the total number of instances cannot exceed 5000</p>
+     * @param FixItems <p>Repair item list. Each item specifies a vulnerability/KB patch and its hosts requiring fixing<br>Input limit: up to 100 items, and the total number of instances cannot exceed 5000</p>
      */
     public void setFixItems(VulFixItem [] FixItems) {
         this.FixItems = FixItems;
     }
 
     /**
-     * Get <p>Maximum repair time<br>Measurement unit: second<br>Default value: 3600</p> 
-     * @return Timeout <p>Maximum repair time<br>Measurement unit: second<br>Default value: 3600</p>
+     * Get <p>Maximum repair time<br>Unit: second<br>Default value: 3600</p> 
+     * @return Timeout <p>Maximum repair time<br>Unit: second<br>Default value: 3600</p>
      */
     public Long getTimeout() {
         return this.Timeout;
     }
 
     /**
-     * Set <p>Maximum repair time<br>Measurement unit: second<br>Default value: 3600</p>
-     * @param Timeout <p>Maximum repair time<br>Measurement unit: second<br>Default value: 3600</p>
+     * Set <p>Maximum repair time<br>Unit: second<br>Default value: 3600</p>
+     * @param Timeout <p>Maximum repair time<br>Unit: second<br>Default value: 3600</p>
      */
     public void setTimeout(Long Timeout) {
         this.Timeout = Timeout;
     }
 
     /**
-     * Get <p>Whether to create a disk snapshot before repair<br>Default value: false</p> 
-     * @return CreateSnapshot <p>Whether to create a disk snapshot before repair<br>Default value: false</p>
+     * Get <p>Create a disk snapshot before repair<br>Default value: false</p> 
+     * @return CreateSnapshot <p>Create a disk snapshot before repair<br>Default value: false</p>
      */
     public Boolean getCreateSnapshot() {
         return this.CreateSnapshot;
     }
 
     /**
-     * Set <p>Whether to create a disk snapshot before repair<br>Default value: false</p>
-     * @param CreateSnapshot <p>Whether to create a disk snapshot before repair<br>Default value: false</p>
+     * Set <p>Create a disk snapshot before repair<br>Default value: false</p>
+     * @param CreateSnapshot <p>Create a disk snapshot before repair<br>Default value: false</p>
      */
     public void setCreateSnapshot(Boolean CreateSnapshot) {
         this.CreateSnapshot = CreateSnapshot;
     }
 
     /**
-     * Get <p>Snapshot name. Valid when CreateSnapshot is true.<br>Input parameter limit: Up to 128 characters.</p> 
-     * @return SnapshotName <p>Snapshot name. Valid when CreateSnapshot is true.<br>Input parameter limit: Up to 128 characters.</p>
+     * Get <p>Snapshot name. Valid when CreateSnapshot is true. Input limits: up to 60 characters, with automatic truncation for overly long ones.</p> 
+     * @return SnapshotName <p>Snapshot name. Valid when CreateSnapshot is true. Input limits: up to 60 characters, with automatic truncation for overly long ones.</p>
      */
     public String getSnapshotName() {
         return this.SnapshotName;
     }
 
     /**
-     * Set <p>Snapshot name. Valid when CreateSnapshot is true.<br>Input parameter limit: Up to 128 characters.</p>
-     * @param SnapshotName <p>Snapshot name. Valid when CreateSnapshot is true.<br>Input parameter limit: Up to 128 characters.</p>
+     * Set <p>Snapshot name. Valid when CreateSnapshot is true. Input limits: up to 60 characters, with automatic truncation for overly long ones.</p>
+     * @param SnapshotName <p>Snapshot name. Valid when CreateSnapshot is true. Input limits: up to 60 characters, with automatic truncation for overly long ones.</p>
      */
     public void setSnapshotName(String SnapshotName) {
         this.SnapshotName = SnapshotName;
     }
 
     /**
-     * Get <p>Snapshot retention days. Valid when CreateSnapshot is true.</p> 
-     * @return SaveDays <p>Snapshot retention days. Valid when CreateSnapshot is true.</p>
+     * Get <p>Snapshot retention days. Valid when CreateSnapshot is true</p> 
+     * @return SaveDays <p>Snapshot retention days. Valid when CreateSnapshot is true</p>
      */
     public Long getSaveDays() {
         return this.SaveDays;
     }
 
     /**
-     * Set <p>Snapshot retention days. Valid when CreateSnapshot is true.</p>
-     * @param SaveDays <p>Snapshot retention days. Valid when CreateSnapshot is true.</p>
+     * Set <p>Snapshot retention days. Valid when CreateSnapshot is true</p>
+     * @param SaveDays <p>Snapshot retention days. Valid when CreateSnapshot is true</p>
      */
     public void setSaveDays(Long SaveDays) {
         this.SaveDays = SaveDays;

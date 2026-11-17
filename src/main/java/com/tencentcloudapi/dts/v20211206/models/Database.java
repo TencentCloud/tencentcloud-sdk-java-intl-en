@@ -24,504 +24,414 @@ import java.util.HashMap;
 public class Database extends AbstractModel {
 
     /**
-    * Name of the database to be migrated or synced, which is required if `ObjectMode` is `Partial`.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Database name for migration or synchronization. This item is required when ObjectMode is Partial.</p>
     */
     @SerializedName("DbName")
     @Expose
     private String DbName;
 
     /**
-    * Name of the database after migration or sync, which is the same as the source database name by default.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>The name of the migrated or synchronized database is identical to that of the source database by default.</p>
     */
     @SerializedName("NewDbName")
     @Expose
     private String NewDbName;
 
     /**
-    * Database selection mode, which is required if `Mode` is `Partial`. Valid values: `All`, `Partial`. Note that the sync of advanced objects does not depend on this parameter. To sync an entire database, set this parameter to `All`.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>DB selection mode: All (for all objects under the current object), Partial (partial objects). This item is required when Mode is Partial. Note that synchronization of advanced objects is independent of this value. If you sync entire database, it should be All here.</p>
     */
     @SerializedName("DbMode")
     @Expose
     private String DbMode;
 
     /**
-    * The schema to be migrated or synced
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>schema for migration or synchronization</p>
     */
     @SerializedName("SchemaName")
     @Expose
     private String SchemaName;
 
     /**
-    * Name of the schema after migration or sync
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>schema name after migration or synchronization</p>
     */
     @SerializedName("NewSchemaName")
     @Expose
     private String NewSchemaName;
 
     /**
-    * Table selection mode, which is required if `DBMode` is `Partial` for postgresql or sqlserver. Valid values: `All`, `Partial`. To sync an entire schema, set this parameter to `All`.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>schema Selection Mode, pg and sqlserver require the use of</p><p>Enumeration value:</p><ul><li>All: All objects under the current object</li><li>Partial: Partial objects</li></ul>
     */
     @SerializedName("SchemaMode")
     @Expose
     private String SchemaMode;
 
     /**
-    * Table selection mode, which is required if `DBMode` is `Partial`. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Schema selection mode: All (for all objects under the current object), Partial (partial objects). This item is required when DBMode is Partial. If you sync entire database, it should be All here.</p>
     */
     @SerializedName("TableMode")
     @Expose
     private String TableMode;
 
     /**
-    * The set of table objects, which is required if `TableMode` is `Partial`.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Table diagram object set. This item needs to be filled in when TableMode is Partial.</p>
     */
     @SerializedName("Tables")
     @Expose
     private Table [] Tables;
 
     /**
-    * View selection mode. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>View selection mode: All indicates all view objects under the current object, Partial indicates partial view objects. If you sync entire database, it should be All here.</p>
     */
     @SerializedName("ViewMode")
     @Expose
     private String ViewMode;
 
     /**
-    * The set of view objects, which is required if `ViewMode` is `Partial`.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>View object set. When ViewMode is Partial, this item requires filling in.</p>
     */
     @SerializedName("Views")
     @Expose
     private View [] Views;
 
     /**
-    * Sync mode. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Select the sync mode. Partial means part, and All means the entire database. If you want to sync entire database, select All here.</p>
     */
     @SerializedName("FunctionMode")
     @Expose
     private String FunctionMode;
 
     /**
-    * This parameter is required if `FunctionMode` is `Partial`.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>This item needs to be filled in when FunctionMode value is Partial.</p>
     */
     @SerializedName("Functions")
     @Expose
     private String [] Functions;
 
     /**
-    * Sync mode. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Select the sync mode. Partial means part, and All means the entire database. If you want to sync entire database, select All here.</p>
     */
     @SerializedName("ProcedureMode")
     @Expose
     private String ProcedureMode;
 
     /**
-    * This parameter is required if `ProcedureMode` is `Partial`.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>This item needs to be filled in when the ProcedureMode value is Partial.</p>
     */
     @SerializedName("Procedures")
     @Expose
     private String [] Procedures;
 
     /**
-    * Trigger sync mode. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`. Currently, the advanced object "trigger" is not supported for data sync.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Trigger migration mode, All (all objects under the current object), Partial (partial objects). If syncing the entire database, it should be All here. Data sync does not currently support this advanced object.</p>
     */
     @SerializedName("TriggerMode")
     @Expose
     private String TriggerMode;
 
     /**
-    * This parameter is used to specify the names of the triggers to be migrated when the value of `TriggerMode` is `partial`.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>When TriggerMode is partial, specify the trigger name to migrate.</p>
     */
     @SerializedName("Triggers")
     @Expose
     private String [] Triggers;
 
     /**
-    * Event sync mode. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`. Currently, the advanced object "event" is not supported for data sync.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Event migration mode: All (all objects under the current object), Partial (partial objects). If syncing the entire database, it should be All here. This advanced object is not currently supported for data sync.</p>
     */
     @SerializedName("EventMode")
     @Expose
     private String EventMode;
 
     /**
-    * This parameter is used to specify the names of the events to be migrated when the value of `EventMode` is `partial`.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>When EventMode is partial, specify the event name to migrate.</p>
     */
     @SerializedName("Events")
     @Expose
     private String [] Events;
 
     /**
-     * Get Name of the database to be migrated or synced, which is required if `ObjectMode` is `Partial`.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return DbName Name of the database to be migrated or synced, which is required if `ObjectMode` is `Partial`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Database name for migration or synchronization. This item is required when ObjectMode is Partial.</p> 
+     * @return DbName <p>Database name for migration or synchronization. This item is required when ObjectMode is Partial.</p>
      */
     public String getDbName() {
         return this.DbName;
     }
 
     /**
-     * Set Name of the database to be migrated or synced, which is required if `ObjectMode` is `Partial`.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param DbName Name of the database to be migrated or synced, which is required if `ObjectMode` is `Partial`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Database name for migration or synchronization. This item is required when ObjectMode is Partial.</p>
+     * @param DbName <p>Database name for migration or synchronization. This item is required when ObjectMode is Partial.</p>
      */
     public void setDbName(String DbName) {
         this.DbName = DbName;
     }
 
     /**
-     * Get Name of the database after migration or sync, which is the same as the source database name by default.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return NewDbName Name of the database after migration or sync, which is the same as the source database name by default.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>The name of the migrated or synchronized database is identical to that of the source database by default.</p> 
+     * @return NewDbName <p>The name of the migrated or synchronized database is identical to that of the source database by default.</p>
      */
     public String getNewDbName() {
         return this.NewDbName;
     }
 
     /**
-     * Set Name of the database after migration or sync, which is the same as the source database name by default.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param NewDbName Name of the database after migration or sync, which is the same as the source database name by default.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>The name of the migrated or synchronized database is identical to that of the source database by default.</p>
+     * @param NewDbName <p>The name of the migrated or synchronized database is identical to that of the source database by default.</p>
      */
     public void setNewDbName(String NewDbName) {
         this.NewDbName = NewDbName;
     }
 
     /**
-     * Get Database selection mode, which is required if `Mode` is `Partial`. Valid values: `All`, `Partial`. Note that the sync of advanced objects does not depend on this parameter. To sync an entire database, set this parameter to `All`.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return DbMode Database selection mode, which is required if `Mode` is `Partial`. Valid values: `All`, `Partial`. Note that the sync of advanced objects does not depend on this parameter. To sync an entire database, set this parameter to `All`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>DB selection mode: All (for all objects under the current object), Partial (partial objects). This item is required when Mode is Partial. Note that synchronization of advanced objects is independent of this value. If you sync entire database, it should be All here.</p> 
+     * @return DbMode <p>DB selection mode: All (for all objects under the current object), Partial (partial objects). This item is required when Mode is Partial. Note that synchronization of advanced objects is independent of this value. If you sync entire database, it should be All here.</p>
      */
     public String getDbMode() {
         return this.DbMode;
     }
 
     /**
-     * Set Database selection mode, which is required if `Mode` is `Partial`. Valid values: `All`, `Partial`. Note that the sync of advanced objects does not depend on this parameter. To sync an entire database, set this parameter to `All`.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param DbMode Database selection mode, which is required if `Mode` is `Partial`. Valid values: `All`, `Partial`. Note that the sync of advanced objects does not depend on this parameter. To sync an entire database, set this parameter to `All`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>DB selection mode: All (for all objects under the current object), Partial (partial objects). This item is required when Mode is Partial. Note that synchronization of advanced objects is independent of this value. If you sync entire database, it should be All here.</p>
+     * @param DbMode <p>DB selection mode: All (for all objects under the current object), Partial (partial objects). This item is required when Mode is Partial. Note that synchronization of advanced objects is independent of this value. If you sync entire database, it should be All here.</p>
      */
     public void setDbMode(String DbMode) {
         this.DbMode = DbMode;
     }
 
     /**
-     * Get The schema to be migrated or synced
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return SchemaName The schema to be migrated or synced
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>schema for migration or synchronization</p> 
+     * @return SchemaName <p>schema for migration or synchronization</p>
      */
     public String getSchemaName() {
         return this.SchemaName;
     }
 
     /**
-     * Set The schema to be migrated or synced
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param SchemaName The schema to be migrated or synced
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>schema for migration or synchronization</p>
+     * @param SchemaName <p>schema for migration or synchronization</p>
      */
     public void setSchemaName(String SchemaName) {
         this.SchemaName = SchemaName;
     }
 
     /**
-     * Get Name of the schema after migration or sync
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return NewSchemaName Name of the schema after migration or sync
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>schema name after migration or synchronization</p> 
+     * @return NewSchemaName <p>schema name after migration or synchronization</p>
      */
     public String getNewSchemaName() {
         return this.NewSchemaName;
     }
 
     /**
-     * Set Name of the schema after migration or sync
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param NewSchemaName Name of the schema after migration or sync
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>schema name after migration or synchronization</p>
+     * @param NewSchemaName <p>schema name after migration or synchronization</p>
      */
     public void setNewSchemaName(String NewSchemaName) {
         this.NewSchemaName = NewSchemaName;
     }
 
     /**
-     * Get Table selection mode, which is required if `DBMode` is `Partial` for postgresql or sqlserver. Valid values: `All`, `Partial`. To sync an entire schema, set this parameter to `All`.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return SchemaMode Table selection mode, which is required if `DBMode` is `Partial` for postgresql or sqlserver. Valid values: `All`, `Partial`. To sync an entire schema, set this parameter to `All`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>schema Selection Mode, pg and sqlserver require the use of</p><p>Enumeration value:</p><ul><li>All: All objects under the current object</li><li>Partial: Partial objects</li></ul> 
+     * @return SchemaMode <p>schema Selection Mode, pg and sqlserver require the use of</p><p>Enumeration value:</p><ul><li>All: All objects under the current object</li><li>Partial: Partial objects</li></ul>
      */
     public String getSchemaMode() {
         return this.SchemaMode;
     }
 
     /**
-     * Set Table selection mode, which is required if `DBMode` is `Partial` for postgresql or sqlserver. Valid values: `All`, `Partial`. To sync an entire schema, set this parameter to `All`.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param SchemaMode Table selection mode, which is required if `DBMode` is `Partial` for postgresql or sqlserver. Valid values: `All`, `Partial`. To sync an entire schema, set this parameter to `All`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>schema Selection Mode, pg and sqlserver require the use of</p><p>Enumeration value:</p><ul><li>All: All objects under the current object</li><li>Partial: Partial objects</li></ul>
+     * @param SchemaMode <p>schema Selection Mode, pg and sqlserver require the use of</p><p>Enumeration value:</p><ul><li>All: All objects under the current object</li><li>Partial: Partial objects</li></ul>
      */
     public void setSchemaMode(String SchemaMode) {
         this.SchemaMode = SchemaMode;
     }
 
     /**
-     * Get Table selection mode, which is required if `DBMode` is `Partial`. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TableMode Table selection mode, which is required if `DBMode` is `Partial`. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Schema selection mode: All (for all objects under the current object), Partial (partial objects). This item is required when DBMode is Partial. If you sync entire database, it should be All here.</p> 
+     * @return TableMode <p>Schema selection mode: All (for all objects under the current object), Partial (partial objects). This item is required when DBMode is Partial. If you sync entire database, it should be All here.</p>
      */
     public String getTableMode() {
         return this.TableMode;
     }
 
     /**
-     * Set Table selection mode, which is required if `DBMode` is `Partial`. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TableMode Table selection mode, which is required if `DBMode` is `Partial`. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Schema selection mode: All (for all objects under the current object), Partial (partial objects). This item is required when DBMode is Partial. If you sync entire database, it should be All here.</p>
+     * @param TableMode <p>Schema selection mode: All (for all objects under the current object), Partial (partial objects). This item is required when DBMode is Partial. If you sync entire database, it should be All here.</p>
      */
     public void setTableMode(String TableMode) {
         this.TableMode = TableMode;
     }
 
     /**
-     * Get The set of table objects, which is required if `TableMode` is `Partial`.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Tables The set of table objects, which is required if `TableMode` is `Partial`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Table diagram object set. This item needs to be filled in when TableMode is Partial.</p> 
+     * @return Tables <p>Table diagram object set. This item needs to be filled in when TableMode is Partial.</p>
      */
     public Table [] getTables() {
         return this.Tables;
     }
 
     /**
-     * Set The set of table objects, which is required if `TableMode` is `Partial`.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Tables The set of table objects, which is required if `TableMode` is `Partial`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Table diagram object set. This item needs to be filled in when TableMode is Partial.</p>
+     * @param Tables <p>Table diagram object set. This item needs to be filled in when TableMode is Partial.</p>
      */
     public void setTables(Table [] Tables) {
         this.Tables = Tables;
     }
 
     /**
-     * Get View selection mode. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ViewMode View selection mode. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>View selection mode: All indicates all view objects under the current object, Partial indicates partial view objects. If you sync entire database, it should be All here.</p> 
+     * @return ViewMode <p>View selection mode: All indicates all view objects under the current object, Partial indicates partial view objects. If you sync entire database, it should be All here.</p>
      */
     public String getViewMode() {
         return this.ViewMode;
     }
 
     /**
-     * Set View selection mode. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ViewMode View selection mode. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>View selection mode: All indicates all view objects under the current object, Partial indicates partial view objects. If you sync entire database, it should be All here.</p>
+     * @param ViewMode <p>View selection mode: All indicates all view objects under the current object, Partial indicates partial view objects. If you sync entire database, it should be All here.</p>
      */
     public void setViewMode(String ViewMode) {
         this.ViewMode = ViewMode;
     }
 
     /**
-     * Get The set of view objects, which is required if `ViewMode` is `Partial`.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Views The set of view objects, which is required if `ViewMode` is `Partial`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>View object set. When ViewMode is Partial, this item requires filling in.</p> 
+     * @return Views <p>View object set. When ViewMode is Partial, this item requires filling in.</p>
      */
     public View [] getViews() {
         return this.Views;
     }
 
     /**
-     * Set The set of view objects, which is required if `ViewMode` is `Partial`.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Views The set of view objects, which is required if `ViewMode` is `Partial`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>View object set. When ViewMode is Partial, this item requires filling in.</p>
+     * @param Views <p>View object set. When ViewMode is Partial, this item requires filling in.</p>
      */
     public void setViews(View [] Views) {
         this.Views = Views;
     }
 
     /**
-     * Get Sync mode. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return FunctionMode Sync mode. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Select the sync mode. Partial means part, and All means the entire database. If you want to sync entire database, select All here.</p> 
+     * @return FunctionMode <p>Select the sync mode. Partial means part, and All means the entire database. If you want to sync entire database, select All here.</p>
      */
     public String getFunctionMode() {
         return this.FunctionMode;
     }
 
     /**
-     * Set Sync mode. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param FunctionMode Sync mode. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Select the sync mode. Partial means part, and All means the entire database. If you want to sync entire database, select All here.</p>
+     * @param FunctionMode <p>Select the sync mode. Partial means part, and All means the entire database. If you want to sync entire database, select All here.</p>
      */
     public void setFunctionMode(String FunctionMode) {
         this.FunctionMode = FunctionMode;
     }
 
     /**
-     * Get This parameter is required if `FunctionMode` is `Partial`.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Functions This parameter is required if `FunctionMode` is `Partial`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>This item needs to be filled in when FunctionMode value is Partial.</p> 
+     * @return Functions <p>This item needs to be filled in when FunctionMode value is Partial.</p>
      */
     public String [] getFunctions() {
         return this.Functions;
     }
 
     /**
-     * Set This parameter is required if `FunctionMode` is `Partial`.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Functions This parameter is required if `FunctionMode` is `Partial`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>This item needs to be filled in when FunctionMode value is Partial.</p>
+     * @param Functions <p>This item needs to be filled in when FunctionMode value is Partial.</p>
      */
     public void setFunctions(String [] Functions) {
         this.Functions = Functions;
     }
 
     /**
-     * Get Sync mode. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ProcedureMode Sync mode. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Select the sync mode. Partial means part, and All means the entire database. If you want to sync entire database, select All here.</p> 
+     * @return ProcedureMode <p>Select the sync mode. Partial means part, and All means the entire database. If you want to sync entire database, select All here.</p>
      */
     public String getProcedureMode() {
         return this.ProcedureMode;
     }
 
     /**
-     * Set Sync mode. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ProcedureMode Sync mode. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Select the sync mode. Partial means part, and All means the entire database. If you want to sync entire database, select All here.</p>
+     * @param ProcedureMode <p>Select the sync mode. Partial means part, and All means the entire database. If you want to sync entire database, select All here.</p>
      */
     public void setProcedureMode(String ProcedureMode) {
         this.ProcedureMode = ProcedureMode;
     }
 
     /**
-     * Get This parameter is required if `ProcedureMode` is `Partial`.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Procedures This parameter is required if `ProcedureMode` is `Partial`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>This item needs to be filled in when the ProcedureMode value is Partial.</p> 
+     * @return Procedures <p>This item needs to be filled in when the ProcedureMode value is Partial.</p>
      */
     public String [] getProcedures() {
         return this.Procedures;
     }
 
     /**
-     * Set This parameter is required if `ProcedureMode` is `Partial`.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Procedures This parameter is required if `ProcedureMode` is `Partial`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>This item needs to be filled in when the ProcedureMode value is Partial.</p>
+     * @param Procedures <p>This item needs to be filled in when the ProcedureMode value is Partial.</p>
      */
     public void setProcedures(String [] Procedures) {
         this.Procedures = Procedures;
     }
 
     /**
-     * Get Trigger sync mode. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`. Currently, the advanced object "trigger" is not supported for data sync.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TriggerMode Trigger sync mode. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`. Currently, the advanced object "trigger" is not supported for data sync.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Trigger migration mode, All (all objects under the current object), Partial (partial objects). If syncing the entire database, it should be All here. Data sync does not currently support this advanced object.</p> 
+     * @return TriggerMode <p>Trigger migration mode, All (all objects under the current object), Partial (partial objects). If syncing the entire database, it should be All here. Data sync does not currently support this advanced object.</p>
      */
     public String getTriggerMode() {
         return this.TriggerMode;
     }
 
     /**
-     * Set Trigger sync mode. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`. Currently, the advanced object "trigger" is not supported for data sync.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TriggerMode Trigger sync mode. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`. Currently, the advanced object "trigger" is not supported for data sync.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Trigger migration mode, All (all objects under the current object), Partial (partial objects). If syncing the entire database, it should be All here. Data sync does not currently support this advanced object.</p>
+     * @param TriggerMode <p>Trigger migration mode, All (all objects under the current object), Partial (partial objects). If syncing the entire database, it should be All here. Data sync does not currently support this advanced object.</p>
      */
     public void setTriggerMode(String TriggerMode) {
         this.TriggerMode = TriggerMode;
     }
 
     /**
-     * Get This parameter is used to specify the names of the triggers to be migrated when the value of `TriggerMode` is `partial`.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Triggers This parameter is used to specify the names of the triggers to be migrated when the value of `TriggerMode` is `partial`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>When TriggerMode is partial, specify the trigger name to migrate.</p> 
+     * @return Triggers <p>When TriggerMode is partial, specify the trigger name to migrate.</p>
      */
     public String [] getTriggers() {
         return this.Triggers;
     }
 
     /**
-     * Set This parameter is used to specify the names of the triggers to be migrated when the value of `TriggerMode` is `partial`.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Triggers This parameter is used to specify the names of the triggers to be migrated when the value of `TriggerMode` is `partial`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>When TriggerMode is partial, specify the trigger name to migrate.</p>
+     * @param Triggers <p>When TriggerMode is partial, specify the trigger name to migrate.</p>
      */
     public void setTriggers(String [] Triggers) {
         this.Triggers = Triggers;
     }
 
     /**
-     * Get Event sync mode. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`. Currently, the advanced object "event" is not supported for data sync.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return EventMode Event sync mode. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`. Currently, the advanced object "event" is not supported for data sync.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Event migration mode: All (all objects under the current object), Partial (partial objects). If syncing the entire database, it should be All here. This advanced object is not currently supported for data sync.</p> 
+     * @return EventMode <p>Event migration mode: All (all objects under the current object), Partial (partial objects). If syncing the entire database, it should be All here. This advanced object is not currently supported for data sync.</p>
      */
     public String getEventMode() {
         return this.EventMode;
     }
 
     /**
-     * Set Event sync mode. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`. Currently, the advanced object "event" is not supported for data sync.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param EventMode Event sync mode. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`. Currently, the advanced object "event" is not supported for data sync.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Event migration mode: All (all objects under the current object), Partial (partial objects). If syncing the entire database, it should be All here. This advanced object is not currently supported for data sync.</p>
+     * @param EventMode <p>Event migration mode: All (all objects under the current object), Partial (partial objects). If syncing the entire database, it should be All here. This advanced object is not currently supported for data sync.</p>
      */
     public void setEventMode(String EventMode) {
         this.EventMode = EventMode;
     }
 
     /**
-     * Get This parameter is used to specify the names of the events to be migrated when the value of `EventMode` is `partial`.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Events This parameter is used to specify the names of the events to be migrated when the value of `EventMode` is `partial`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>When EventMode is partial, specify the event name to migrate.</p> 
+     * @return Events <p>When EventMode is partial, specify the event name to migrate.</p>
      */
     public String [] getEvents() {
         return this.Events;
     }
 
     /**
-     * Set This parameter is used to specify the names of the events to be migrated when the value of `EventMode` is `partial`.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Events This parameter is used to specify the names of the events to be migrated when the value of `EventMode` is `partial`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>When EventMode is partial, specify the event name to migrate.</p>
+     * @param Events <p>When EventMode is partial, specify the event name to migrate.</p>
      */
     public void setEvents(String [] Events) {
         this.Events = Events;

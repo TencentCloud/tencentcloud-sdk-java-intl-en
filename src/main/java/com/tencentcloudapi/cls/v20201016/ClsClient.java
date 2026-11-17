@@ -1220,7 +1220,7 @@ Note:
     }
 
     /**
-     *This API is used to access Kafka protocol consumption information.
+     *Accesses Kafka protocol consumption information
      * @param req DescribeKafkaConsumerRequest
      * @return DescribeKafkaConsumerResponse
      * @throws TencentCloudSDKException

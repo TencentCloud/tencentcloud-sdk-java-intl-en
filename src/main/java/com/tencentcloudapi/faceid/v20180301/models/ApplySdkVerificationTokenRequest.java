@@ -28,6 +28,7 @@ public class ApplySdkVerificationTokenRequest extends AbstractModel {
 1: OCR + liveness detection + face comparison
 2: Liveness detection + face comparison
 3: Liveness detection
+4: OCR
 Default value: 1
     */
     @SerializedName("CheckMode")
@@ -247,11 +248,13 @@ Default Value: OCR_DETECT_AUTO_MANUAL
 1: OCR + liveness detection + face comparison
 2: Liveness detection + face comparison
 3: Liveness detection
+4: OCR
 Default value: 1 
      * @return CheckMode The verification mode. Valid values:
 1: OCR + liveness detection + face comparison
 2: Liveness detection + face comparison
 3: Liveness detection
+4: OCR
 Default value: 1
      */
     public Long getCheckMode() {
@@ -263,11 +266,13 @@ Default value: 1
 1: OCR + liveness detection + face comparison
 2: Liveness detection + face comparison
 3: Liveness detection
+4: OCR
 Default value: 1
      * @param CheckMode The verification mode. Valid values:
 1: OCR + liveness detection + face comparison
 2: Liveness detection + face comparison
 3: Liveness detection
+4: OCR
 Default value: 1
      */
     public void setCheckMode(Long CheckMode) {

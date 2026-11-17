@@ -1248,6 +1248,17 @@ Note: Newly designed or cloned voice types cannot be deleted before activation (
     }
 
     /**
+     *This API is used to query AIGC allowlist settings.
+     * @param req DescribeAigcWhitelistRequest
+     * @return DescribeAigcWhitelistResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAigcWhitelistResponse DescribeAigcWhitelist(DescribeAigcWhitelistRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAigcWhitelist", DescribeAigcWhitelistResponse.class);
+    }
+
+    /**
      ** Obtain all classification information of the user.
      * @param req DescribeAllClassRequest
      * @return DescribeAllClassResponse
@@ -2896,6 +2907,17 @@ If event notification is used, its type is [audio/video moderation completed](ht
     public SearchMediaBySemanticsResponse SearchMediaBySemantics(SearchMediaBySemanticsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "SearchMediaBySemantics", SearchMediaBySemanticsResponse.class);
+    }
+
+    /**
+     *This API is used to modify AIGC allowlist settings.
+     * @param req SetAigcWhitelistRequest
+     * @return SetAigcWhitelistResponse
+     * @throws TencentCloudSDKException
+     */
+    public SetAigcWhitelistResponse SetAigcWhitelist(SetAigcWhitelistRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "SetAigcWhitelist", SetAigcWhitelistResponse.class);
     }
 
     /**

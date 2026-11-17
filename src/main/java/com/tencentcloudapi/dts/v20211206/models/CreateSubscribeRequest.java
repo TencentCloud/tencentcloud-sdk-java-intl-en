@@ -31,21 +31,21 @@ public class CreateSubscribeRequest extends AbstractModel {
     private String Product;
 
     /**
-    * Payment method. Valid values: 0 (monthly subscription); 1 (pay-as-you-go).
+    * Payment method. Valid values: 0 (yearly/monthly subscription); 1 (pay-as-you-go).
     */
     @SerializedName("PayType")
     @Expose
     private Long PayType;
 
     /**
-    * Purchase duration. This field needs to be filled in when the payType is monthly subscription. The unit is month. Value range: 1-120. Default value: 1.
+    * Purchase duration. This field needs to be filled in when the payType is yearly/monthly subscription. The unit is month. Value range: 1-120. Default value: 1.
     */
     @SerializedName("Duration")
     @Expose
     private Long Duration;
 
     /**
-    * Whether to renew automatically. This field needs to be filled in when the payType is monthly subscription. Valid values: 0 (auto-renewal disabled); 1 (auto-renewal enabled). Automatic renewal is not performed by default. This flag is invalid for pay-as-you-go.
+    * Whether to renew automatically. This field needs to be filled in when the payType is yearly/monthly subscription. Valid values: 0 (auto-renewal disabled); 1 (auto-renewal enabled). Automatic renewal is not performed by default. This flag is invalid for pay-as-you-go.
     */
     @SerializedName("AutoRenew")
     @Expose
@@ -73,7 +73,14 @@ public class CreateSubscribeRequest extends AbstractModel {
     private String Name;
 
     /**
-    * 
+    * For the data subscription version, Kafka and KafkaPro (Professional Edition) are currently supported; if left blank, it defaults to KafkaPro.
+    */
+    @SerializedName("SubscribeVersion")
+    @Expose
+    private String SubscribeVersion;
+
+    /**
+    * For subscription instance specifications, only 'small', 'medium', and 'large' are currently supported.
     */
     @SerializedName("InstanceClass")
     @Expose
@@ -96,48 +103,48 @@ public class CreateSubscribeRequest extends AbstractModel {
     }
 
     /**
-     * Get Payment method. Valid values: 0 (monthly subscription); 1 (pay-as-you-go). 
-     * @return PayType Payment method. Valid values: 0 (monthly subscription); 1 (pay-as-you-go).
+     * Get Payment method. Valid values: 0 (yearly/monthly subscription); 1 (pay-as-you-go). 
+     * @return PayType Payment method. Valid values: 0 (yearly/monthly subscription); 1 (pay-as-you-go).
      */
     public Long getPayType() {
         return this.PayType;
     }
 
     /**
-     * Set Payment method. Valid values: 0 (monthly subscription); 1 (pay-as-you-go).
-     * @param PayType Payment method. Valid values: 0 (monthly subscription); 1 (pay-as-you-go).
+     * Set Payment method. Valid values: 0 (yearly/monthly subscription); 1 (pay-as-you-go).
+     * @param PayType Payment method. Valid values: 0 (yearly/monthly subscription); 1 (pay-as-you-go).
      */
     public void setPayType(Long PayType) {
         this.PayType = PayType;
     }
 
     /**
-     * Get Purchase duration. This field needs to be filled in when the payType is monthly subscription. The unit is month. Value range: 1-120. Default value: 1. 
-     * @return Duration Purchase duration. This field needs to be filled in when the payType is monthly subscription. The unit is month. Value range: 1-120. Default value: 1.
+     * Get Purchase duration. This field needs to be filled in when the payType is yearly/monthly subscription. The unit is month. Value range: 1-120. Default value: 1. 
+     * @return Duration Purchase duration. This field needs to be filled in when the payType is yearly/monthly subscription. The unit is month. Value range: 1-120. Default value: 1.
      */
     public Long getDuration() {
         return this.Duration;
     }
 
     /**
-     * Set Purchase duration. This field needs to be filled in when the payType is monthly subscription. The unit is month. Value range: 1-120. Default value: 1.
-     * @param Duration Purchase duration. This field needs to be filled in when the payType is monthly subscription. The unit is month. Value range: 1-120. Default value: 1.
+     * Set Purchase duration. This field needs to be filled in when the payType is yearly/monthly subscription. The unit is month. Value range: 1-120. Default value: 1.
+     * @param Duration Purchase duration. This field needs to be filled in when the payType is yearly/monthly subscription. The unit is month. Value range: 1-120. Default value: 1.
      */
     public void setDuration(Long Duration) {
         this.Duration = Duration;
     }
 
     /**
-     * Get Whether to renew automatically. This field needs to be filled in when the payType is monthly subscription. Valid values: 0 (auto-renewal disabled); 1 (auto-renewal enabled). Automatic renewal is not performed by default. This flag is invalid for pay-as-you-go. 
-     * @return AutoRenew Whether to renew automatically. This field needs to be filled in when the payType is monthly subscription. Valid values: 0 (auto-renewal disabled); 1 (auto-renewal enabled). Automatic renewal is not performed by default. This flag is invalid for pay-as-you-go.
+     * Get Whether to renew automatically. This field needs to be filled in when the payType is yearly/monthly subscription. Valid values: 0 (auto-renewal disabled); 1 (auto-renewal enabled). Automatic renewal is not performed by default. This flag is invalid for pay-as-you-go. 
+     * @return AutoRenew Whether to renew automatically. This field needs to be filled in when the payType is yearly/monthly subscription. Valid values: 0 (auto-renewal disabled); 1 (auto-renewal enabled). Automatic renewal is not performed by default. This flag is invalid for pay-as-you-go.
      */
     public Long getAutoRenew() {
         return this.AutoRenew;
     }
 
     /**
-     * Set Whether to renew automatically. This field needs to be filled in when the payType is monthly subscription. Valid values: 0 (auto-renewal disabled); 1 (auto-renewal enabled). Automatic renewal is not performed by default. This flag is invalid for pay-as-you-go.
-     * @param AutoRenew Whether to renew automatically. This field needs to be filled in when the payType is monthly subscription. Valid values: 0 (auto-renewal disabled); 1 (auto-renewal enabled). Automatic renewal is not performed by default. This flag is invalid for pay-as-you-go.
+     * Set Whether to renew automatically. This field needs to be filled in when the payType is yearly/monthly subscription. Valid values: 0 (auto-renewal disabled); 1 (auto-renewal enabled). Automatic renewal is not performed by default. This flag is invalid for pay-as-you-go.
+     * @param AutoRenew Whether to renew automatically. This field needs to be filled in when the payType is yearly/monthly subscription. Valid values: 0 (auto-renewal disabled); 1 (auto-renewal enabled). Automatic renewal is not performed by default. This flag is invalid for pay-as-you-go.
      */
     public void setAutoRenew(Long AutoRenew) {
         this.AutoRenew = AutoRenew;
@@ -192,16 +199,32 @@ public class CreateSubscribeRequest extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return InstanceClass 
+     * Get For the data subscription version, Kafka and KafkaPro (Professional Edition) are currently supported; if left blank, it defaults to KafkaPro. 
+     * @return SubscribeVersion For the data subscription version, Kafka and KafkaPro (Professional Edition) are currently supported; if left blank, it defaults to KafkaPro.
+     */
+    public String getSubscribeVersion() {
+        return this.SubscribeVersion;
+    }
+
+    /**
+     * Set For the data subscription version, Kafka and KafkaPro (Professional Edition) are currently supported; if left blank, it defaults to KafkaPro.
+     * @param SubscribeVersion For the data subscription version, Kafka and KafkaPro (Professional Edition) are currently supported; if left blank, it defaults to KafkaPro.
+     */
+    public void setSubscribeVersion(String SubscribeVersion) {
+        this.SubscribeVersion = SubscribeVersion;
+    }
+
+    /**
+     * Get For subscription instance specifications, only 'small', 'medium', and 'large' are currently supported. 
+     * @return InstanceClass For subscription instance specifications, only 'small', 'medium', and 'large' are currently supported.
      */
     public String getInstanceClass() {
         return this.InstanceClass;
     }
 
     /**
-     * Set 
-     * @param InstanceClass 
+     * Set For subscription instance specifications, only 'small', 'medium', and 'large' are currently supported.
+     * @param InstanceClass For subscription instance specifications, only 'small', 'medium', and 'large' are currently supported.
      */
     public void setInstanceClass(String InstanceClass) {
         this.InstanceClass = InstanceClass;
@@ -239,6 +262,9 @@ public class CreateSubscribeRequest extends AbstractModel {
         if (source.Name != null) {
             this.Name = new String(source.Name);
         }
+        if (source.SubscribeVersion != null) {
+            this.SubscribeVersion = new String(source.SubscribeVersion);
+        }
         if (source.InstanceClass != null) {
             this.InstanceClass = new String(source.InstanceClass);
         }
@@ -256,6 +282,7 @@ public class CreateSubscribeRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Count", this.Count);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "Name", this.Name);
+        this.setParamSimple(map, prefix + "SubscribeVersion", this.SubscribeVersion);
         this.setParamSimple(map, prefix + "InstanceClass", this.InstanceClass);
 
     }

@@ -24,141 +24,164 @@ import java.util.HashMap;
 public class TopicRule extends AbstractModel {
 
     /**
-    * Topic name
+    * Topic name. For single-topic scenarios, all TopicNames should be the same.
     */
     @SerializedName("TopicName")
     @Expose
     private String TopicName;
 
     /**
-    * Topic partitioning policy. If the topic sync policy is delivering data to multiple custom topics (`TopicType` = `Multi`), the value of this parameter is `Random` (deliver to a random partition). If the topic sync policy is delivering all data to a single topic (`TopicType` = `Single`), this parameter has three valid values: `AllInPartitionZero` (deliver all data to partition0), `PartitionByTable` (partition by table name), `PartitionByTableAndKey` (partition by table name and primary key).
+    * Topic partition policy. When a topic is customized, the valid value is Random (random shipping); when centralizing shipping to a single topic is adopted, the valid values are AllInPartitionZero (ship all to partition 0), PartitionByTable (partition by table name), PartitionByTableAndKey (partition by table name and primary key), and PartitionByCols (partition by column).
     */
     @SerializedName("PartitionType")
     @Expose
     private String PartitionType;
 
     /**
-    * Database name matching rule. This parameter takes effect only when `TopicType` is `Multi`. Valid values: `Regular` (match by regex), `Default` (default rule for the remaining databases that cannot be matched by regex). The default rule must be included in the array of matching rules.
+    * Database name matching rule. For example: Regular (regular expression matching) and Default (remaining databases that do not meet any rule). The last item in the array should be Default.
     */
     @SerializedName("DbMatchMode")
     @Expose
     private String DbMatchMode;
 
     /**
-    * Database name, which can only be matched by regex when `TopicType` is `Multi` and `DbMatchMode` is `Regular`.
+    * Database name. It is valid when DbMatchMode=Regular.
     */
     @SerializedName("DbName")
     @Expose
     private String DbName;
 
     /**
-    * Table name matching rule. This parameter takes effect only when `TopicType` is `Multi`. Valid values: `Regular` (match by regex), `Default` (default rule for the remaining databases that cannot be matched by regex). The default rule must be included in the array of matching rules.
+    * Table name matching rule. For example: Regular (regular expression matching) and Default (remaining tables that do not meet any rule). The last item in the array should be Default.
     */
     @SerializedName("TableMatchMode")
     @Expose
     private String TableMatchMode;
 
     /**
-    * Table name, which can only be matched by regex when `TopicType` is `Multi` and `DbMatchMode` is `Regular`.
+    * Table name. It is valid when TableMatchMode is Regular.
     */
     @SerializedName("TableName")
     @Expose
     private String TableName;
 
     /**
-     * Get Topic name 
-     * @return TopicName Topic name
+    * When partitioning by column, you need to select and configure column names. Multi-column selection is supported.
+    */
+    @SerializedName("Columns")
+    @Expose
+    private String [] Columns;
+
+    /**
+     * Get Topic name. For single-topic scenarios, all TopicNames should be the same. 
+     * @return TopicName Topic name. For single-topic scenarios, all TopicNames should be the same.
      */
     public String getTopicName() {
         return this.TopicName;
     }
 
     /**
-     * Set Topic name
-     * @param TopicName Topic name
+     * Set Topic name. For single-topic scenarios, all TopicNames should be the same.
+     * @param TopicName Topic name. For single-topic scenarios, all TopicNames should be the same.
      */
     public void setTopicName(String TopicName) {
         this.TopicName = TopicName;
     }
 
     /**
-     * Get Topic partitioning policy. If the topic sync policy is delivering data to multiple custom topics (`TopicType` = `Multi`), the value of this parameter is `Random` (deliver to a random partition). If the topic sync policy is delivering all data to a single topic (`TopicType` = `Single`), this parameter has three valid values: `AllInPartitionZero` (deliver all data to partition0), `PartitionByTable` (partition by table name), `PartitionByTableAndKey` (partition by table name and primary key). 
-     * @return PartitionType Topic partitioning policy. If the topic sync policy is delivering data to multiple custom topics (`TopicType` = `Multi`), the value of this parameter is `Random` (deliver to a random partition). If the topic sync policy is delivering all data to a single topic (`TopicType` = `Single`), this parameter has three valid values: `AllInPartitionZero` (deliver all data to partition0), `PartitionByTable` (partition by table name), `PartitionByTableAndKey` (partition by table name and primary key).
+     * Get Topic partition policy. When a topic is customized, the valid value is Random (random shipping); when centralizing shipping to a single topic is adopted, the valid values are AllInPartitionZero (ship all to partition 0), PartitionByTable (partition by table name), PartitionByTableAndKey (partition by table name and primary key), and PartitionByCols (partition by column). 
+     * @return PartitionType Topic partition policy. When a topic is customized, the valid value is Random (random shipping); when centralizing shipping to a single topic is adopted, the valid values are AllInPartitionZero (ship all to partition 0), PartitionByTable (partition by table name), PartitionByTableAndKey (partition by table name and primary key), and PartitionByCols (partition by column).
      */
     public String getPartitionType() {
         return this.PartitionType;
     }
 
     /**
-     * Set Topic partitioning policy. If the topic sync policy is delivering data to multiple custom topics (`TopicType` = `Multi`), the value of this parameter is `Random` (deliver to a random partition). If the topic sync policy is delivering all data to a single topic (`TopicType` = `Single`), this parameter has three valid values: `AllInPartitionZero` (deliver all data to partition0), `PartitionByTable` (partition by table name), `PartitionByTableAndKey` (partition by table name and primary key).
-     * @param PartitionType Topic partitioning policy. If the topic sync policy is delivering data to multiple custom topics (`TopicType` = `Multi`), the value of this parameter is `Random` (deliver to a random partition). If the topic sync policy is delivering all data to a single topic (`TopicType` = `Single`), this parameter has three valid values: `AllInPartitionZero` (deliver all data to partition0), `PartitionByTable` (partition by table name), `PartitionByTableAndKey` (partition by table name and primary key).
+     * Set Topic partition policy. When a topic is customized, the valid value is Random (random shipping); when centralizing shipping to a single topic is adopted, the valid values are AllInPartitionZero (ship all to partition 0), PartitionByTable (partition by table name), PartitionByTableAndKey (partition by table name and primary key), and PartitionByCols (partition by column).
+     * @param PartitionType Topic partition policy. When a topic is customized, the valid value is Random (random shipping); when centralizing shipping to a single topic is adopted, the valid values are AllInPartitionZero (ship all to partition 0), PartitionByTable (partition by table name), PartitionByTableAndKey (partition by table name and primary key), and PartitionByCols (partition by column).
      */
     public void setPartitionType(String PartitionType) {
         this.PartitionType = PartitionType;
     }
 
     /**
-     * Get Database name matching rule. This parameter takes effect only when `TopicType` is `Multi`. Valid values: `Regular` (match by regex), `Default` (default rule for the remaining databases that cannot be matched by regex). The default rule must be included in the array of matching rules. 
-     * @return DbMatchMode Database name matching rule. This parameter takes effect only when `TopicType` is `Multi`. Valid values: `Regular` (match by regex), `Default` (default rule for the remaining databases that cannot be matched by regex). The default rule must be included in the array of matching rules.
+     * Get Database name matching rule. For example: Regular (regular expression matching) and Default (remaining databases that do not meet any rule). The last item in the array should be Default. 
+     * @return DbMatchMode Database name matching rule. For example: Regular (regular expression matching) and Default (remaining databases that do not meet any rule). The last item in the array should be Default.
      */
     public String getDbMatchMode() {
         return this.DbMatchMode;
     }
 
     /**
-     * Set Database name matching rule. This parameter takes effect only when `TopicType` is `Multi`. Valid values: `Regular` (match by regex), `Default` (default rule for the remaining databases that cannot be matched by regex). The default rule must be included in the array of matching rules.
-     * @param DbMatchMode Database name matching rule. This parameter takes effect only when `TopicType` is `Multi`. Valid values: `Regular` (match by regex), `Default` (default rule for the remaining databases that cannot be matched by regex). The default rule must be included in the array of matching rules.
+     * Set Database name matching rule. For example: Regular (regular expression matching) and Default (remaining databases that do not meet any rule). The last item in the array should be Default.
+     * @param DbMatchMode Database name matching rule. For example: Regular (regular expression matching) and Default (remaining databases that do not meet any rule). The last item in the array should be Default.
      */
     public void setDbMatchMode(String DbMatchMode) {
         this.DbMatchMode = DbMatchMode;
     }
 
     /**
-     * Get Database name, which can only be matched by regex when `TopicType` is `Multi` and `DbMatchMode` is `Regular`. 
-     * @return DbName Database name, which can only be matched by regex when `TopicType` is `Multi` and `DbMatchMode` is `Regular`.
+     * Get Database name. It is valid when DbMatchMode=Regular. 
+     * @return DbName Database name. It is valid when DbMatchMode=Regular.
      */
     public String getDbName() {
         return this.DbName;
     }
 
     /**
-     * Set Database name, which can only be matched by regex when `TopicType` is `Multi` and `DbMatchMode` is `Regular`.
-     * @param DbName Database name, which can only be matched by regex when `TopicType` is `Multi` and `DbMatchMode` is `Regular`.
+     * Set Database name. It is valid when DbMatchMode=Regular.
+     * @param DbName Database name. It is valid when DbMatchMode=Regular.
      */
     public void setDbName(String DbName) {
         this.DbName = DbName;
     }
 
     /**
-     * Get Table name matching rule. This parameter takes effect only when `TopicType` is `Multi`. Valid values: `Regular` (match by regex), `Default` (default rule for the remaining databases that cannot be matched by regex). The default rule must be included in the array of matching rules. 
-     * @return TableMatchMode Table name matching rule. This parameter takes effect only when `TopicType` is `Multi`. Valid values: `Regular` (match by regex), `Default` (default rule for the remaining databases that cannot be matched by regex). The default rule must be included in the array of matching rules.
+     * Get Table name matching rule. For example: Regular (regular expression matching) and Default (remaining tables that do not meet any rule). The last item in the array should be Default. 
+     * @return TableMatchMode Table name matching rule. For example: Regular (regular expression matching) and Default (remaining tables that do not meet any rule). The last item in the array should be Default.
      */
     public String getTableMatchMode() {
         return this.TableMatchMode;
     }
 
     /**
-     * Set Table name matching rule. This parameter takes effect only when `TopicType` is `Multi`. Valid values: `Regular` (match by regex), `Default` (default rule for the remaining databases that cannot be matched by regex). The default rule must be included in the array of matching rules.
-     * @param TableMatchMode Table name matching rule. This parameter takes effect only when `TopicType` is `Multi`. Valid values: `Regular` (match by regex), `Default` (default rule for the remaining databases that cannot be matched by regex). The default rule must be included in the array of matching rules.
+     * Set Table name matching rule. For example: Regular (regular expression matching) and Default (remaining tables that do not meet any rule). The last item in the array should be Default.
+     * @param TableMatchMode Table name matching rule. For example: Regular (regular expression matching) and Default (remaining tables that do not meet any rule). The last item in the array should be Default.
      */
     public void setTableMatchMode(String TableMatchMode) {
         this.TableMatchMode = TableMatchMode;
     }
 
     /**
-     * Get Table name, which can only be matched by regex when `TopicType` is `Multi` and `DbMatchMode` is `Regular`. 
-     * @return TableName Table name, which can only be matched by regex when `TopicType` is `Multi` and `DbMatchMode` is `Regular`.
+     * Get Table name. It is valid when TableMatchMode is Regular. 
+     * @return TableName Table name. It is valid when TableMatchMode is Regular.
      */
     public String getTableName() {
         return this.TableName;
     }
 
     /**
-     * Set Table name, which can only be matched by regex when `TopicType` is `Multi` and `DbMatchMode` is `Regular`.
-     * @param TableName Table name, which can only be matched by regex when `TopicType` is `Multi` and `DbMatchMode` is `Regular`.
+     * Set Table name. It is valid when TableMatchMode is Regular.
+     * @param TableName Table name. It is valid when TableMatchMode is Regular.
      */
     public void setTableName(String TableName) {
         this.TableName = TableName;
+    }
+
+    /**
+     * Get When partitioning by column, you need to select and configure column names. Multi-column selection is supported. 
+     * @return Columns When partitioning by column, you need to select and configure column names. Multi-column selection is supported.
+     */
+    public String [] getColumns() {
+        return this.Columns;
+    }
+
+    /**
+     * Set When partitioning by column, you need to select and configure column names. Multi-column selection is supported.
+     * @param Columns When partitioning by column, you need to select and configure column names. Multi-column selection is supported.
+     */
+    public void setColumns(String [] Columns) {
+        this.Columns = Columns;
     }
 
     public TopicRule() {
@@ -187,6 +210,12 @@ public class TopicRule extends AbstractModel {
         if (source.TableName != null) {
             this.TableName = new String(source.TableName);
         }
+        if (source.Columns != null) {
+            this.Columns = new String[source.Columns.length];
+            for (int i = 0; i < source.Columns.length; i++) {
+                this.Columns[i] = new String(source.Columns[i]);
+            }
+        }
     }
 
 
@@ -200,6 +229,7 @@ public class TopicRule extends AbstractModel {
         this.setParamSimple(map, prefix + "DbName", this.DbName);
         this.setParamSimple(map, prefix + "TableMatchMode", this.TableMatchMode);
         this.setParamSimple(map, prefix + "TableName", this.TableName);
+        this.setParamArraySimple(map, prefix + "Columns.", this.Columns);
 
     }
 }

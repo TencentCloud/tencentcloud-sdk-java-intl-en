@@ -27,7 +27,7 @@ public class CompareFaceLivenessResponse extends AbstractModel {
     * Business Error Codes.
 -When the return value is "Success", it indicates that liveness detection and face comparison passed. Determined to be the same person.
 -When the return value is "FailedOperation.CompareLowSimilarity", it indicates that liveness detection passed, but face comparison similarity is below 70. Determined not to be the same person.
--For other error cases, please refer to [Liveness Face Comparison (API only) Error Codes](https://www.tencentcloud.com/zh/document/product/1061/55390?lang=zh&pg=#97df7537-87fe-4266-87e9-02c816d41ee2)
+-For other error cases, please refer to [Selfie Verification (Pure API) Error Codes](https://www.tencentcloud.com/document/product/1061/55390?lang=en&pg=#97df7537-87fe-4266-87e9-02c816d41ee2)
     */
     @SerializedName("Result")
     @Expose
@@ -70,11 +70,11 @@ Example values: "/9j/4AAQSk... (total length:142036)s97n//2Q=="
      * Get Business Error Codes.
 -When the return value is "Success", it indicates that liveness detection and face comparison passed. Determined to be the same person.
 -When the return value is "FailedOperation.CompareLowSimilarity", it indicates that liveness detection passed, but face comparison similarity is below 70. Determined not to be the same person.
--For other error cases, please refer to [Liveness Face Comparison (API only) Error Codes](https://www.tencentcloud.com/zh/document/product/1061/55390?lang=zh&pg=#97df7537-87fe-4266-87e9-02c816d41ee2) 
+-For other error cases, please refer to [Selfie Verification (Pure API) Error Codes](https://www.tencentcloud.com/document/product/1061/55390?lang=en&pg=#97df7537-87fe-4266-87e9-02c816d41ee2) 
      * @return Result Business Error Codes.
 -When the return value is "Success", it indicates that liveness detection and face comparison passed. Determined to be the same person.
 -When the return value is "FailedOperation.CompareLowSimilarity", it indicates that liveness detection passed, but face comparison similarity is below 70. Determined not to be the same person.
--For other error cases, please refer to [Liveness Face Comparison (API only) Error Codes](https://www.tencentcloud.com/zh/document/product/1061/55390?lang=zh&pg=#97df7537-87fe-4266-87e9-02c816d41ee2)
+-For other error cases, please refer to [Selfie Verification (Pure API) Error Codes](https://www.tencentcloud.com/document/product/1061/55390?lang=en&pg=#97df7537-87fe-4266-87e9-02c816d41ee2)
      */
     public String getResult() {
         return this.Result;
@@ -84,11 +84,11 @@ Example values: "/9j/4AAQSk... (total length:142036)s97n//2Q=="
      * Set Business Error Codes.
 -When the return value is "Success", it indicates that liveness detection and face comparison passed. Determined to be the same person.
 -When the return value is "FailedOperation.CompareLowSimilarity", it indicates that liveness detection passed, but face comparison similarity is below 70. Determined not to be the same person.
--For other error cases, please refer to [Liveness Face Comparison (API only) Error Codes](https://www.tencentcloud.com/zh/document/product/1061/55390?lang=zh&pg=#97df7537-87fe-4266-87e9-02c816d41ee2)
+-For other error cases, please refer to [Selfie Verification (Pure API) Error Codes](https://www.tencentcloud.com/document/product/1061/55390?lang=en&pg=#97df7537-87fe-4266-87e9-02c816d41ee2)
      * @param Result Business Error Codes.
 -When the return value is "Success", it indicates that liveness detection and face comparison passed. Determined to be the same person.
 -When the return value is "FailedOperation.CompareLowSimilarity", it indicates that liveness detection passed, but face comparison similarity is below 70. Determined not to be the same person.
--For other error cases, please refer to [Liveness Face Comparison (API only) Error Codes](https://www.tencentcloud.com/zh/document/product/1061/55390?lang=zh&pg=#97df7537-87fe-4266-87e9-02c816d41ee2)
+-For other error cases, please refer to [Selfie Verification (Pure API) Error Codes](https://www.tencentcloud.com/document/product/1061/55390?lang=en&pg=#97df7537-87fe-4266-87e9-02c816d41ee2)
      */
     public void setResult(String Result) {
         this.Result = Result;

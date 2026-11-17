@@ -24,107 +24,92 @@ import java.util.HashMap;
 public class SyncDBEndpointInfos extends AbstractModel {
 
     /**
-    * Region of the database
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Database region
     */
     @SerializedName("Region")
     @Expose
     private String Region;
 
     /**
-    * Instance network access type. Valid values: `extranet` (public network); `ipv6` (public IPv6); `cvm` (self-build on CVM); `dcg` (Direct Connect); `vpncloud` (VPN access); `cdb` (database); `ccn` (CCN); `intranet` (intranet); `vpc` (VPC). Note that the valid values are subject to the current link.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Instance network access type. For example: extranet (public network), ipv6 (public network ipv6), cvm (self-built CVM), dcg (DC), vpncloud (instance accessed via VPN), cdb (cloud database), ccn (CCN), intranet (self-developed cloud migration), and vpc (VPC). Note that the specific valid values depend on the current linkage.
     */
     @SerializedName("AccessType")
     @Expose
     private String AccessType;
 
     /**
-    * Database type, such as `mysql`, `redis`, `mongodb`, `postgresql`, `mariadb`, and `percona`.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Instance database type. For example: mysql, redis, mongodb, postgresql, mariadb, and percona.
     */
     @SerializedName("DatabaseType")
     @Expose
     private String DatabaseType;
 
     /**
-    * Database information. Note: If the data type is tdsqlmysql, the order of this Endpoint array should correspond to the set order, and the first shard (shardkey range starting from 0) must be entered first.Note: This field may return null, indicating that no valid values can be obtained.
+    * Database information. Note: If the database type is tdsqlmysql, the order of the Endpoint array should follow the following rule: proxy nodes are placed before set nodes. If SrcConnectType selects proxy access, only the proxy node needs to be filled. If set access is selected, the first set node in the array should be the shard with a shardkey range starting from 0.
     */
     @SerializedName("Info")
     @Expose
     private Endpoint [] Info;
 
     /**
-     * Get Region of the database
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Region Region of the database
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Database region 
+     * @return Region Database region
      */
     public String getRegion() {
         return this.Region;
     }
 
     /**
-     * Set Region of the database
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Region Region of the database
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Database region
+     * @param Region Database region
      */
     public void setRegion(String Region) {
         this.Region = Region;
     }
 
     /**
-     * Get Instance network access type. Valid values: `extranet` (public network); `ipv6` (public IPv6); `cvm` (self-build on CVM); `dcg` (Direct Connect); `vpncloud` (VPN access); `cdb` (database); `ccn` (CCN); `intranet` (intranet); `vpc` (VPC). Note that the valid values are subject to the current link.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return AccessType Instance network access type. Valid values: `extranet` (public network); `ipv6` (public IPv6); `cvm` (self-build on CVM); `dcg` (Direct Connect); `vpncloud` (VPN access); `cdb` (database); `ccn` (CCN); `intranet` (intranet); `vpc` (VPC). Note that the valid values are subject to the current link.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Instance network access type. For example: extranet (public network), ipv6 (public network ipv6), cvm (self-built CVM), dcg (DC), vpncloud (instance accessed via VPN), cdb (cloud database), ccn (CCN), intranet (self-developed cloud migration), and vpc (VPC). Note that the specific valid values depend on the current linkage. 
+     * @return AccessType Instance network access type. For example: extranet (public network), ipv6 (public network ipv6), cvm (self-built CVM), dcg (DC), vpncloud (instance accessed via VPN), cdb (cloud database), ccn (CCN), intranet (self-developed cloud migration), and vpc (VPC). Note that the specific valid values depend on the current linkage.
      */
     public String getAccessType() {
         return this.AccessType;
     }
 
     /**
-     * Set Instance network access type. Valid values: `extranet` (public network); `ipv6` (public IPv6); `cvm` (self-build on CVM); `dcg` (Direct Connect); `vpncloud` (VPN access); `cdb` (database); `ccn` (CCN); `intranet` (intranet); `vpc` (VPC). Note that the valid values are subject to the current link.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param AccessType Instance network access type. Valid values: `extranet` (public network); `ipv6` (public IPv6); `cvm` (self-build on CVM); `dcg` (Direct Connect); `vpncloud` (VPN access); `cdb` (database); `ccn` (CCN); `intranet` (intranet); `vpc` (VPC). Note that the valid values are subject to the current link.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Instance network access type. For example: extranet (public network), ipv6 (public network ipv6), cvm (self-built CVM), dcg (DC), vpncloud (instance accessed via VPN), cdb (cloud database), ccn (CCN), intranet (self-developed cloud migration), and vpc (VPC). Note that the specific valid values depend on the current linkage.
+     * @param AccessType Instance network access type. For example: extranet (public network), ipv6 (public network ipv6), cvm (self-built CVM), dcg (DC), vpncloud (instance accessed via VPN), cdb (cloud database), ccn (CCN), intranet (self-developed cloud migration), and vpc (VPC). Note that the specific valid values depend on the current linkage.
      */
     public void setAccessType(String AccessType) {
         this.AccessType = AccessType;
     }
 
     /**
-     * Get Database type, such as `mysql`, `redis`, `mongodb`, `postgresql`, `mariadb`, and `percona`.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return DatabaseType Database type, such as `mysql`, `redis`, `mongodb`, `postgresql`, `mariadb`, and `percona`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Instance database type. For example: mysql, redis, mongodb, postgresql, mariadb, and percona. 
+     * @return DatabaseType Instance database type. For example: mysql, redis, mongodb, postgresql, mariadb, and percona.
      */
     public String getDatabaseType() {
         return this.DatabaseType;
     }
 
     /**
-     * Set Database type, such as `mysql`, `redis`, `mongodb`, `postgresql`, `mariadb`, and `percona`.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param DatabaseType Database type, such as `mysql`, `redis`, `mongodb`, `postgresql`, `mariadb`, and `percona`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Instance database type. For example: mysql, redis, mongodb, postgresql, mariadb, and percona.
+     * @param DatabaseType Instance database type. For example: mysql, redis, mongodb, postgresql, mariadb, and percona.
      */
     public void setDatabaseType(String DatabaseType) {
         this.DatabaseType = DatabaseType;
     }
 
     /**
-     * Get Database information. Note: If the data type is tdsqlmysql, the order of this Endpoint array should correspond to the set order, and the first shard (shardkey range starting from 0) must be entered first.Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Info Database information. Note: If the data type is tdsqlmysql, the order of this Endpoint array should correspond to the set order, and the first shard (shardkey range starting from 0) must be entered first.Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Database information. Note: If the database type is tdsqlmysql, the order of the Endpoint array should follow the following rule: proxy nodes are placed before set nodes. If SrcConnectType selects proxy access, only the proxy node needs to be filled. If set access is selected, the first set node in the array should be the shard with a shardkey range starting from 0. 
+     * @return Info Database information. Note: If the database type is tdsqlmysql, the order of the Endpoint array should follow the following rule: proxy nodes are placed before set nodes. If SrcConnectType selects proxy access, only the proxy node needs to be filled. If set access is selected, the first set node in the array should be the shard with a shardkey range starting from 0.
      */
     public Endpoint [] getInfo() {
         return this.Info;
     }
 
     /**
-     * Set Database information. Note: If the data type is tdsqlmysql, the order of this Endpoint array should correspond to the set order, and the first shard (shardkey range starting from 0) must be entered first.Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Info Database information. Note: If the data type is tdsqlmysql, the order of this Endpoint array should correspond to the set order, and the first shard (shardkey range starting from 0) must be entered first.Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Database information. Note: If the database type is tdsqlmysql, the order of the Endpoint array should follow the following rule: proxy nodes are placed before set nodes. If SrcConnectType selects proxy access, only the proxy node needs to be filled. If set access is selected, the first set node in the array should be the shard with a shardkey range starting from 0.
+     * @param Info Database information. Note: If the database type is tdsqlmysql, the order of the Endpoint array should follow the following rule: proxy nodes are placed before set nodes. If SrcConnectType selects proxy access, only the proxy node needs to be filled. If set access is selected, the first set node in the array should be the shard with a shardkey range starting from 0.
      */
     public void setInfo(Endpoint [] Info) {
         this.Info = Info;

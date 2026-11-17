@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class VulFixableMachineItem extends AbstractModel {
 
     /**
-    * <p>Vulnerability ID list, grouped by SupportAutoFix dimension: repairable vulnerability IDs when SupportAutoFix=1, non-repairable vulnerability IDs when SupportAutoFix=0</p>
+    * <p>Vulnerability ID list, grouped by the SupportAutoFix dimension: When SupportAutoFix=1, it is a repairable vulnerability ID; when SupportAutoFix=0, it is a non-repairable vulnerability ID</p>
     */
     @SerializedName("VulIds")
     @Expose
@@ -52,21 +52,21 @@ public class VulFixableMachineItem extends AbstractModel {
     private String MachineIp;
 
     /**
-    * <p>public IP address</p>
+    * <p>Public IP Address</p>
     */
     @SerializedName("PublicIp")
     @Expose
     private String PublicIp;
 
     /**
-    * <p>OS type<br>Enumeration value:<br>linux: Linux operating system<br>windows: Windows operating system</p>
+    * <p>Operating system type<br>Enumeration values:<br>linux: Linux operating system<br>windows: Windows operating system</p>
     */
     @SerializedName("OsType")
     @Expose
     private String OsType;
 
     /**
-    * <p>Operating system name.</p>
+    * <p>OS name</p>
     */
     @SerializedName("OsName")
     @Expose
@@ -80,14 +80,14 @@ public class VulFixableMachineItem extends AbstractModel {
     private String MachineStatus;
 
     /**
-    * <p>Is auto-repair supported<br>Enumeration value:<br>0: No support<br>1: Support</p>
+    * <p>Is auto-repair supported<br>Enumeration values:<br>0: No support<br>1: Support</p>
     */
     @SerializedName("SupportAutoFix")
     @Expose
     private Long SupportAutoFix;
 
     /**
-    * <p>Current remediation status<br>Enumeration value:<br>0: Unfixed<br>1: In remediation<br>2: Fix failure<br>3: Repair successful<br>4: Timeout</p>
+    * <p>Current remediation status<br>Enumeration values:<br>0: unfixed<br>1: in remediation<br>2: fix failed<br>3: successful fix<br>4: remediation timeout</p>
     */
     @SerializedName("FixStatus")
     @Expose
@@ -108,7 +108,7 @@ public class VulFixableMachineItem extends AbstractModel {
     private String NotFixableReason;
 
     /**
-    * <p>Fix command list, returned when SupportAutoFix is 1</p>
+    * <p>List of fix commands. Returned when SupportAutoFix is 1</p>
     */
     @SerializedName("FixCommands")
     @Expose
@@ -129,30 +129,30 @@ public class VulFixableMachineItem extends AbstractModel {
     private MiniTagItem [] TagItems;
 
     /**
-    * <p>Account AppId</p>
+    * <p>Associated account AppId</p>
     */
     @SerializedName("AppId")
     @Expose
     private Long AppId;
 
     /**
-    * <p>Paid edition info<br>Enumeration value:<br>BASIC: Basic version<br>PRO: Pro edition<br>ULTIMATE: Flagship edition</p>
+    * <p>Paid edition info<br>Enumeration values:<br>BASIC: Basic version<br>PRO: Pro edition<br>ULTIMATE: Flagship edition</p>
     */
     @SerializedName("PayVersion")
     @Expose
     private String PayVersion;
 
     /**
-     * Get <p>Vulnerability ID list, grouped by SupportAutoFix dimension: repairable vulnerability IDs when SupportAutoFix=1, non-repairable vulnerability IDs when SupportAutoFix=0</p> 
-     * @return VulIds <p>Vulnerability ID list, grouped by SupportAutoFix dimension: repairable vulnerability IDs when SupportAutoFix=1, non-repairable vulnerability IDs when SupportAutoFix=0</p>
+     * Get <p>Vulnerability ID list, grouped by the SupportAutoFix dimension: When SupportAutoFix=1, it is a repairable vulnerability ID; when SupportAutoFix=0, it is a non-repairable vulnerability ID</p> 
+     * @return VulIds <p>Vulnerability ID list, grouped by the SupportAutoFix dimension: When SupportAutoFix=1, it is a repairable vulnerability ID; when SupportAutoFix=0, it is a non-repairable vulnerability ID</p>
      */
     public Long [] getVulIds() {
         return this.VulIds;
     }
 
     /**
-     * Set <p>Vulnerability ID list, grouped by SupportAutoFix dimension: repairable vulnerability IDs when SupportAutoFix=1, non-repairable vulnerability IDs when SupportAutoFix=0</p>
-     * @param VulIds <p>Vulnerability ID list, grouped by SupportAutoFix dimension: repairable vulnerability IDs when SupportAutoFix=1, non-repairable vulnerability IDs when SupportAutoFix=0</p>
+     * Set <p>Vulnerability ID list, grouped by the SupportAutoFix dimension: When SupportAutoFix=1, it is a repairable vulnerability ID; when SupportAutoFix=0, it is a non-repairable vulnerability ID</p>
+     * @param VulIds <p>Vulnerability ID list, grouped by the SupportAutoFix dimension: When SupportAutoFix=1, it is a repairable vulnerability ID; when SupportAutoFix=0, it is a non-repairable vulnerability ID</p>
      */
     public void setVulIds(Long [] VulIds) {
         this.VulIds = VulIds;
@@ -207,48 +207,48 @@ public class VulFixableMachineItem extends AbstractModel {
     }
 
     /**
-     * Get <p>public IP address</p> 
-     * @return PublicIp <p>public IP address</p>
+     * Get <p>Public IP Address</p> 
+     * @return PublicIp <p>Public IP Address</p>
      */
     public String getPublicIp() {
         return this.PublicIp;
     }
 
     /**
-     * Set <p>public IP address</p>
-     * @param PublicIp <p>public IP address</p>
+     * Set <p>Public IP Address</p>
+     * @param PublicIp <p>Public IP Address</p>
      */
     public void setPublicIp(String PublicIp) {
         this.PublicIp = PublicIp;
     }
 
     /**
-     * Get <p>OS type<br>Enumeration value:<br>linux: Linux operating system<br>windows: Windows operating system</p> 
-     * @return OsType <p>OS type<br>Enumeration value:<br>linux: Linux operating system<br>windows: Windows operating system</p>
+     * Get <p>Operating system type<br>Enumeration values:<br>linux: Linux operating system<br>windows: Windows operating system</p> 
+     * @return OsType <p>Operating system type<br>Enumeration values:<br>linux: Linux operating system<br>windows: Windows operating system</p>
      */
     public String getOsType() {
         return this.OsType;
     }
 
     /**
-     * Set <p>OS type<br>Enumeration value:<br>linux: Linux operating system<br>windows: Windows operating system</p>
-     * @param OsType <p>OS type<br>Enumeration value:<br>linux: Linux operating system<br>windows: Windows operating system</p>
+     * Set <p>Operating system type<br>Enumeration values:<br>linux: Linux operating system<br>windows: Windows operating system</p>
+     * @param OsType <p>Operating system type<br>Enumeration values:<br>linux: Linux operating system<br>windows: Windows operating system</p>
      */
     public void setOsType(String OsType) {
         this.OsType = OsType;
     }
 
     /**
-     * Get <p>Operating system name.</p> 
-     * @return OsName <p>Operating system name.</p>
+     * Get <p>OS name</p> 
+     * @return OsName <p>OS name</p>
      */
     public String getOsName() {
         return this.OsName;
     }
 
     /**
-     * Set <p>Operating system name.</p>
-     * @param OsName <p>Operating system name.</p>
+     * Set <p>OS name</p>
+     * @param OsName <p>OS name</p>
      */
     public void setOsName(String OsName) {
         this.OsName = OsName;
@@ -271,32 +271,32 @@ public class VulFixableMachineItem extends AbstractModel {
     }
 
     /**
-     * Get <p>Is auto-repair supported<br>Enumeration value:<br>0: No support<br>1: Support</p> 
-     * @return SupportAutoFix <p>Is auto-repair supported<br>Enumeration value:<br>0: No support<br>1: Support</p>
+     * Get <p>Is auto-repair supported<br>Enumeration values:<br>0: No support<br>1: Support</p> 
+     * @return SupportAutoFix <p>Is auto-repair supported<br>Enumeration values:<br>0: No support<br>1: Support</p>
      */
     public Long getSupportAutoFix() {
         return this.SupportAutoFix;
     }
 
     /**
-     * Set <p>Is auto-repair supported<br>Enumeration value:<br>0: No support<br>1: Support</p>
-     * @param SupportAutoFix <p>Is auto-repair supported<br>Enumeration value:<br>0: No support<br>1: Support</p>
+     * Set <p>Is auto-repair supported<br>Enumeration values:<br>0: No support<br>1: Support</p>
+     * @param SupportAutoFix <p>Is auto-repair supported<br>Enumeration values:<br>0: No support<br>1: Support</p>
      */
     public void setSupportAutoFix(Long SupportAutoFix) {
         this.SupportAutoFix = SupportAutoFix;
     }
 
     /**
-     * Get <p>Current remediation status<br>Enumeration value:<br>0: Unfixed<br>1: In remediation<br>2: Fix failure<br>3: Repair successful<br>4: Timeout</p> 
-     * @return FixStatus <p>Current remediation status<br>Enumeration value:<br>0: Unfixed<br>1: In remediation<br>2: Fix failure<br>3: Repair successful<br>4: Timeout</p>
+     * Get <p>Current remediation status<br>Enumeration values:<br>0: unfixed<br>1: in remediation<br>2: fix failed<br>3: successful fix<br>4: remediation timeout</p> 
+     * @return FixStatus <p>Current remediation status<br>Enumeration values:<br>0: unfixed<br>1: in remediation<br>2: fix failed<br>3: successful fix<br>4: remediation timeout</p>
      */
     public Long getFixStatus() {
         return this.FixStatus;
     }
 
     /**
-     * Set <p>Current remediation status<br>Enumeration value:<br>0: Unfixed<br>1: In remediation<br>2: Fix failure<br>3: Repair successful<br>4: Timeout</p>
-     * @param FixStatus <p>Current remediation status<br>Enumeration value:<br>0: Unfixed<br>1: In remediation<br>2: Fix failure<br>3: Repair successful<br>4: Timeout</p>
+     * Set <p>Current remediation status<br>Enumeration values:<br>0: unfixed<br>1: in remediation<br>2: fix failed<br>3: successful fix<br>4: remediation timeout</p>
+     * @param FixStatus <p>Current remediation status<br>Enumeration values:<br>0: unfixed<br>1: in remediation<br>2: fix failed<br>3: successful fix<br>4: remediation timeout</p>
      */
     public void setFixStatus(Long FixStatus) {
         this.FixStatus = FixStatus;
@@ -335,16 +335,16 @@ public class VulFixableMachineItem extends AbstractModel {
     }
 
     /**
-     * Get <p>Fix command list, returned when SupportAutoFix is 1</p> 
-     * @return FixCommands <p>Fix command list, returned when SupportAutoFix is 1</p>
+     * Get <p>List of fix commands. Returned when SupportAutoFix is 1</p> 
+     * @return FixCommands <p>List of fix commands. Returned when SupportAutoFix is 1</p>
      */
     public String [] getFixCommands() {
         return this.FixCommands;
     }
 
     /**
-     * Set <p>Fix command list, returned when SupportAutoFix is 1</p>
-     * @param FixCommands <p>Fix command list, returned when SupportAutoFix is 1</p>
+     * Set <p>List of fix commands. Returned when SupportAutoFix is 1</p>
+     * @param FixCommands <p>List of fix commands. Returned when SupportAutoFix is 1</p>
      */
     public void setFixCommands(String [] FixCommands) {
         this.FixCommands = FixCommands;
@@ -383,32 +383,32 @@ public class VulFixableMachineItem extends AbstractModel {
     }
 
     /**
-     * Get <p>Account AppId</p> 
-     * @return AppId <p>Account AppId</p>
+     * Get <p>Associated account AppId</p> 
+     * @return AppId <p>Associated account AppId</p>
      */
     public Long getAppId() {
         return this.AppId;
     }
 
     /**
-     * Set <p>Account AppId</p>
-     * @param AppId <p>Account AppId</p>
+     * Set <p>Associated account AppId</p>
+     * @param AppId <p>Associated account AppId</p>
      */
     public void setAppId(Long AppId) {
         this.AppId = AppId;
     }
 
     /**
-     * Get <p>Paid edition info<br>Enumeration value:<br>BASIC: Basic version<br>PRO: Pro edition<br>ULTIMATE: Flagship edition</p> 
-     * @return PayVersion <p>Paid edition info<br>Enumeration value:<br>BASIC: Basic version<br>PRO: Pro edition<br>ULTIMATE: Flagship edition</p>
+     * Get <p>Paid edition info<br>Enumeration values:<br>BASIC: Basic version<br>PRO: Pro edition<br>ULTIMATE: Flagship edition</p> 
+     * @return PayVersion <p>Paid edition info<br>Enumeration values:<br>BASIC: Basic version<br>PRO: Pro edition<br>ULTIMATE: Flagship edition</p>
      */
     public String getPayVersion() {
         return this.PayVersion;
     }
 
     /**
-     * Set <p>Paid edition info<br>Enumeration value:<br>BASIC: Basic version<br>PRO: Pro edition<br>ULTIMATE: Flagship edition</p>
-     * @param PayVersion <p>Paid edition info<br>Enumeration value:<br>BASIC: Basic version<br>PRO: Pro edition<br>ULTIMATE: Flagship edition</p>
+     * Set <p>Paid edition info<br>Enumeration values:<br>BASIC: Basic version<br>PRO: Pro edition<br>ULTIMATE: Flagship edition</p>
+     * @param PayVersion <p>Paid edition info<br>Enumeration values:<br>BASIC: Basic version<br>PRO: Pro edition<br>ULTIMATE: Flagship edition</p>
      */
     public void setPayVersion(String PayVersion) {
         this.PayVersion = PayVersion;

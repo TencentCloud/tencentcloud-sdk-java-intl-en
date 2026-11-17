@@ -24,208 +24,141 @@ import java.util.HashMap;
 public class KafkaConsumerContent extends AbstractModel {
 
     /**
-    * Consumption data format. Valid values: 0 (original content) and 1 (JSON).
+    * <p>Consumption data format. 0: Raw content; 1: JSON.</p>
     */
     @SerializedName("Format")
     @Expose
     private Long Format;
 
     /**
-    * Whether to ship tag information
-This parameter does not need to be set when `Format` is set to `0`.
+    * <p>Whether to deliver TAG information<br>When Format is 0, this field does not need to be assigned a value</p>
     */
     @SerializedName("EnableTag")
     @Expose
     private Boolean EnableTag;
 
     /**
-    * Metadata information list. Valid values: \_\_SOURCE\_\_, \_\_FILENAME\_\_,
-\_\_TIMESTAMP\_\_, \_\_HOSTNAME\_\_, and \_\_PKGID\_\_.
-This parameter does not need to be set when `Format` is set to `0`.
+    * <p>Metadata information list. Valid values: __SOURCE__, __FILENAME__<br>, __TIMESTAMP__, __HOSTNAME__, __PKGID__<br>When Format is 0, this field does not need to be assigned a value</p>
     */
     @SerializedName("MetaFields")
     @Expose
     private String [] MetaFields;
 
     /**
-    * tag data processing method: 1: Not Tiled (default value); 2: Tile.
-
-Untiled example:
-TAG information: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
-No tiling: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
-
-Tiled example:
-TAG information: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
-Tiled: `{"__TAG__.fieldA":200,"__TAG__.fieldB":"text"}`
+    * <p>Tag data processing method. 1: Not flattened (default); 2: Flattened.</p><p>Not flattened example:<br>TAG information: <code>{&quot;__TAG__&quot;:{&quot;fieldA&quot;:200,&quot;fieldB&quot;:&quot;text&quot;}}</code><br>Not flattened: <code>{&quot;__TAG__&quot;:{&quot;fieldA&quot;:200,&quot;fieldB&quot;:&quot;text&quot;}}</code></p><p>Flattened example:<br>TAG information: <code>{&quot;__TAG__&quot;:{&quot;fieldA&quot;:200,&quot;fieldB&quot;:&quot;text&quot;}}</code><br>Flattened: <code>{&quot;__TAG__.fieldA&quot;:200,&quot;__TAG__.fieldB&quot;:&quot;text&quot;}</code></p>
     */
     @SerializedName("TagTransaction")
     @Expose
     private Long TagTransaction;
 
     /**
-    * JSON data format:
-1: Not escaped (default format)
-2: Escaped
-
-Deliver in JSON format.JsonType is 1: Consistent with the original log, not escaped. Example:
-Original log: `{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`
-Deliver to CKafka: `{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`JsonType is 2: escaped. Example:Original log: `{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`
-Deliver to CKafka: `{"a":"aa","b":"{\"b1\":\"b1b1\", \"c1\":\"c1c1\"}"}`
+    * <p>Consumption data Json format:<br>1: Not escaped (default format)<br>2: Escaped</p><p>Delivery Json format.<br>When JsonType is 1: Consistent with the original log, not escaped. Example:<br>Original log: <code>{&quot;a&quot;:&quot;aa&quot;, &quot;b&quot;:{&quot;b1&quot;:&quot;b1b1&quot;, &quot;c1&quot;:&quot;c1c1&quot;}}</code><br>Delivered to Ckafka: <code>{&quot;a&quot;:&quot;aa&quot;, &quot;b&quot;:{&quot;b1&quot;:&quot;b1b1&quot;, &quot;c1&quot;:&quot;c1c1&quot;}}</code></p><p>When JsonType is 2: Escaped. Example:<br>Original log: <code>{&quot;a&quot;:&quot;aa&quot;, &quot;b&quot;:{&quot;b1&quot;:&quot;b1b1&quot;, &quot;c1&quot;:&quot;c1c1&quot;}}</code><br>Delivered to Ckafka: <code>{&quot;a&quot;:&quot;aa&quot;,&quot;b&quot;:&quot;{\&quot;b1\&quot;:\&quot;b1b1\&quot;, \&quot;c1\&quot;:\&quot;c1c1\&quot;}&quot;}</code></p>
     */
     @SerializedName("JsonType")
     @Expose
     private Long JsonType;
 
     /**
-     * Get Consumption data format. Valid values: 0 (original content) and 1 (JSON). 
-     * @return Format Consumption data format. Valid values: 0 (original content) and 1 (JSON).
+    * <p>Switch for automatic conversion of numeric types</p><p>Valid values:</p><ul><li>true: Numeric strings (such as &quot;123&quot;) in the first-level values of the JSON structure are automatically converted to numeric types (int/float).</li><li>false: Numeric strings (such as &quot;123&quot;) in the first-level values of the JSON structure remain strings.</li></ul><p>Default value: false</p>
+    */
+    @SerializedName("AutoConvertNumber")
+    @Expose
+    private Boolean AutoConvertNumber;
+
+    /**
+     * Get <p>Consumption data format. 0: Raw content; 1: JSON.</p> 
+     * @return Format <p>Consumption data format. 0: Raw content; 1: JSON.</p>
      */
     public Long getFormat() {
         return this.Format;
     }
 
     /**
-     * Set Consumption data format. Valid values: 0 (original content) and 1 (JSON).
-     * @param Format Consumption data format. Valid values: 0 (original content) and 1 (JSON).
+     * Set <p>Consumption data format. 0: Raw content; 1: JSON.</p>
+     * @param Format <p>Consumption data format. 0: Raw content; 1: JSON.</p>
      */
     public void setFormat(Long Format) {
         this.Format = Format;
     }
 
     /**
-     * Get Whether to ship tag information
-This parameter does not need to be set when `Format` is set to `0`. 
-     * @return EnableTag Whether to ship tag information
-This parameter does not need to be set when `Format` is set to `0`.
+     * Get <p>Whether to deliver TAG information<br>When Format is 0, this field does not need to be assigned a value</p> 
+     * @return EnableTag <p>Whether to deliver TAG information<br>When Format is 0, this field does not need to be assigned a value</p>
      */
     public Boolean getEnableTag() {
         return this.EnableTag;
     }
 
     /**
-     * Set Whether to ship tag information
-This parameter does not need to be set when `Format` is set to `0`.
-     * @param EnableTag Whether to ship tag information
-This parameter does not need to be set when `Format` is set to `0`.
+     * Set <p>Whether to deliver TAG information<br>When Format is 0, this field does not need to be assigned a value</p>
+     * @param EnableTag <p>Whether to deliver TAG information<br>When Format is 0, this field does not need to be assigned a value</p>
      */
     public void setEnableTag(Boolean EnableTag) {
         this.EnableTag = EnableTag;
     }
 
     /**
-     * Get Metadata information list. Valid values: \_\_SOURCE\_\_, \_\_FILENAME\_\_,
-\_\_TIMESTAMP\_\_, \_\_HOSTNAME\_\_, and \_\_PKGID\_\_.
-This parameter does not need to be set when `Format` is set to `0`. 
-     * @return MetaFields Metadata information list. Valid values: \_\_SOURCE\_\_, \_\_FILENAME\_\_,
-\_\_TIMESTAMP\_\_, \_\_HOSTNAME\_\_, and \_\_PKGID\_\_.
-This parameter does not need to be set when `Format` is set to `0`.
+     * Get <p>Metadata information list. Valid values: __SOURCE__, __FILENAME__<br>, __TIMESTAMP__, __HOSTNAME__, __PKGID__<br>When Format is 0, this field does not need to be assigned a value</p> 
+     * @return MetaFields <p>Metadata information list. Valid values: __SOURCE__, __FILENAME__<br>, __TIMESTAMP__, __HOSTNAME__, __PKGID__<br>When Format is 0, this field does not need to be assigned a value</p>
      */
     public String [] getMetaFields() {
         return this.MetaFields;
     }
 
     /**
-     * Set Metadata information list. Valid values: \_\_SOURCE\_\_, \_\_FILENAME\_\_,
-\_\_TIMESTAMP\_\_, \_\_HOSTNAME\_\_, and \_\_PKGID\_\_.
-This parameter does not need to be set when `Format` is set to `0`.
-     * @param MetaFields Metadata information list. Valid values: \_\_SOURCE\_\_, \_\_FILENAME\_\_,
-\_\_TIMESTAMP\_\_, \_\_HOSTNAME\_\_, and \_\_PKGID\_\_.
-This parameter does not need to be set when `Format` is set to `0`.
+     * Set <p>Metadata information list. Valid values: __SOURCE__, __FILENAME__<br>, __TIMESTAMP__, __HOSTNAME__, __PKGID__<br>When Format is 0, this field does not need to be assigned a value</p>
+     * @param MetaFields <p>Metadata information list. Valid values: __SOURCE__, __FILENAME__<br>, __TIMESTAMP__, __HOSTNAME__, __PKGID__<br>When Format is 0, this field does not need to be assigned a value</p>
      */
     public void setMetaFields(String [] MetaFields) {
         this.MetaFields = MetaFields;
     }
 
     /**
-     * Get tag data processing method: 1: Not Tiled (default value); 2: Tile.
-
-Untiled example:
-TAG information: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
-No tiling: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
-
-Tiled example:
-TAG information: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
-Tiled: `{"__TAG__.fieldA":200,"__TAG__.fieldB":"text"}` 
-     * @return TagTransaction tag data processing method: 1: Not Tiled (default value); 2: Tile.
-
-Untiled example:
-TAG information: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
-No tiling: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
-
-Tiled example:
-TAG information: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
-Tiled: `{"__TAG__.fieldA":200,"__TAG__.fieldB":"text"}`
+     * Get <p>Tag data processing method. 1: Not flattened (default); 2: Flattened.</p><p>Not flattened example:<br>TAG information: <code>{&quot;__TAG__&quot;:{&quot;fieldA&quot;:200,&quot;fieldB&quot;:&quot;text&quot;}}</code><br>Not flattened: <code>{&quot;__TAG__&quot;:{&quot;fieldA&quot;:200,&quot;fieldB&quot;:&quot;text&quot;}}</code></p><p>Flattened example:<br>TAG information: <code>{&quot;__TAG__&quot;:{&quot;fieldA&quot;:200,&quot;fieldB&quot;:&quot;text&quot;}}</code><br>Flattened: <code>{&quot;__TAG__.fieldA&quot;:200,&quot;__TAG__.fieldB&quot;:&quot;text&quot;}</code></p> 
+     * @return TagTransaction <p>Tag data processing method. 1: Not flattened (default); 2: Flattened.</p><p>Not flattened example:<br>TAG information: <code>{&quot;__TAG__&quot;:{&quot;fieldA&quot;:200,&quot;fieldB&quot;:&quot;text&quot;}}</code><br>Not flattened: <code>{&quot;__TAG__&quot;:{&quot;fieldA&quot;:200,&quot;fieldB&quot;:&quot;text&quot;}}</code></p><p>Flattened example:<br>TAG information: <code>{&quot;__TAG__&quot;:{&quot;fieldA&quot;:200,&quot;fieldB&quot;:&quot;text&quot;}}</code><br>Flattened: <code>{&quot;__TAG__.fieldA&quot;:200,&quot;__TAG__.fieldB&quot;:&quot;text&quot;}</code></p>
      */
     public Long getTagTransaction() {
         return this.TagTransaction;
     }
 
     /**
-     * Set tag data processing method: 1: Not Tiled (default value); 2: Tile.
-
-Untiled example:
-TAG information: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
-No tiling: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
-
-Tiled example:
-TAG information: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
-Tiled: `{"__TAG__.fieldA":200,"__TAG__.fieldB":"text"}`
-     * @param TagTransaction tag data processing method: 1: Not Tiled (default value); 2: Tile.
-
-Untiled example:
-TAG information: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
-No tiling: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
-
-Tiled example:
-TAG information: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
-Tiled: `{"__TAG__.fieldA":200,"__TAG__.fieldB":"text"}`
+     * Set <p>Tag data processing method. 1: Not flattened (default); 2: Flattened.</p><p>Not flattened example:<br>TAG information: <code>{&quot;__TAG__&quot;:{&quot;fieldA&quot;:200,&quot;fieldB&quot;:&quot;text&quot;}}</code><br>Not flattened: <code>{&quot;__TAG__&quot;:{&quot;fieldA&quot;:200,&quot;fieldB&quot;:&quot;text&quot;}}</code></p><p>Flattened example:<br>TAG information: <code>{&quot;__TAG__&quot;:{&quot;fieldA&quot;:200,&quot;fieldB&quot;:&quot;text&quot;}}</code><br>Flattened: <code>{&quot;__TAG__.fieldA&quot;:200,&quot;__TAG__.fieldB&quot;:&quot;text&quot;}</code></p>
+     * @param TagTransaction <p>Tag data processing method. 1: Not flattened (default); 2: Flattened.</p><p>Not flattened example:<br>TAG information: <code>{&quot;__TAG__&quot;:{&quot;fieldA&quot;:200,&quot;fieldB&quot;:&quot;text&quot;}}</code><br>Not flattened: <code>{&quot;__TAG__&quot;:{&quot;fieldA&quot;:200,&quot;fieldB&quot;:&quot;text&quot;}}</code></p><p>Flattened example:<br>TAG information: <code>{&quot;__TAG__&quot;:{&quot;fieldA&quot;:200,&quot;fieldB&quot;:&quot;text&quot;}}</code><br>Flattened: <code>{&quot;__TAG__.fieldA&quot;:200,&quot;__TAG__.fieldB&quot;:&quot;text&quot;}</code></p>
      */
     public void setTagTransaction(Long TagTransaction) {
         this.TagTransaction = TagTransaction;
     }
 
     /**
-     * Get JSON data format:
-1: Not escaped (default format)
-2: Escaped
-
-Deliver in JSON format.JsonType is 1: Consistent with the original log, not escaped. Example:
-Original log: `{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`
-Deliver to CKafka: `{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`JsonType is 2: escaped. Example:Original log: `{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`
-Deliver to CKafka: `{"a":"aa","b":"{\"b1\":\"b1b1\", \"c1\":\"c1c1\"}"}` 
-     * @return JsonType JSON data format:
-1: Not escaped (default format)
-2: Escaped
-
-Deliver in JSON format.JsonType is 1: Consistent with the original log, not escaped. Example:
-Original log: `{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`
-Deliver to CKafka: `{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`JsonType is 2: escaped. Example:Original log: `{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`
-Deliver to CKafka: `{"a":"aa","b":"{\"b1\":\"b1b1\", \"c1\":\"c1c1\"}"}`
+     * Get <p>Consumption data Json format:<br>1: Not escaped (default format)<br>2: Escaped</p><p>Delivery Json format.<br>When JsonType is 1: Consistent with the original log, not escaped. Example:<br>Original log: <code>{&quot;a&quot;:&quot;aa&quot;, &quot;b&quot;:{&quot;b1&quot;:&quot;b1b1&quot;, &quot;c1&quot;:&quot;c1c1&quot;}}</code><br>Delivered to Ckafka: <code>{&quot;a&quot;:&quot;aa&quot;, &quot;b&quot;:{&quot;b1&quot;:&quot;b1b1&quot;, &quot;c1&quot;:&quot;c1c1&quot;}}</code></p><p>When JsonType is 2: Escaped. Example:<br>Original log: <code>{&quot;a&quot;:&quot;aa&quot;, &quot;b&quot;:{&quot;b1&quot;:&quot;b1b1&quot;, &quot;c1&quot;:&quot;c1c1&quot;}}</code><br>Delivered to Ckafka: <code>{&quot;a&quot;:&quot;aa&quot;,&quot;b&quot;:&quot;{\&quot;b1\&quot;:\&quot;b1b1\&quot;, \&quot;c1\&quot;:\&quot;c1c1\&quot;}&quot;}</code></p> 
+     * @return JsonType <p>Consumption data Json format:<br>1: Not escaped (default format)<br>2: Escaped</p><p>Delivery Json format.<br>When JsonType is 1: Consistent with the original log, not escaped. Example:<br>Original log: <code>{&quot;a&quot;:&quot;aa&quot;, &quot;b&quot;:{&quot;b1&quot;:&quot;b1b1&quot;, &quot;c1&quot;:&quot;c1c1&quot;}}</code><br>Delivered to Ckafka: <code>{&quot;a&quot;:&quot;aa&quot;, &quot;b&quot;:{&quot;b1&quot;:&quot;b1b1&quot;, &quot;c1&quot;:&quot;c1c1&quot;}}</code></p><p>When JsonType is 2: Escaped. Example:<br>Original log: <code>{&quot;a&quot;:&quot;aa&quot;, &quot;b&quot;:{&quot;b1&quot;:&quot;b1b1&quot;, &quot;c1&quot;:&quot;c1c1&quot;}}</code><br>Delivered to Ckafka: <code>{&quot;a&quot;:&quot;aa&quot;,&quot;b&quot;:&quot;{\&quot;b1\&quot;:\&quot;b1b1\&quot;, \&quot;c1\&quot;:\&quot;c1c1\&quot;}&quot;}</code></p>
      */
     public Long getJsonType() {
         return this.JsonType;
     }
 
     /**
-     * Set JSON data format:
-1: Not escaped (default format)
-2: Escaped
-
-Deliver in JSON format.JsonType is 1: Consistent with the original log, not escaped. Example:
-Original log: `{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`
-Deliver to CKafka: `{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`JsonType is 2: escaped. Example:Original log: `{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`
-Deliver to CKafka: `{"a":"aa","b":"{\"b1\":\"b1b1\", \"c1\":\"c1c1\"}"}`
-     * @param JsonType JSON data format:
-1: Not escaped (default format)
-2: Escaped
-
-Deliver in JSON format.JsonType is 1: Consistent with the original log, not escaped. Example:
-Original log: `{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`
-Deliver to CKafka: `{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`JsonType is 2: escaped. Example:Original log: `{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`
-Deliver to CKafka: `{"a":"aa","b":"{\"b1\":\"b1b1\", \"c1\":\"c1c1\"}"}`
+     * Set <p>Consumption data Json format:<br>1: Not escaped (default format)<br>2: Escaped</p><p>Delivery Json format.<br>When JsonType is 1: Consistent with the original log, not escaped. Example:<br>Original log: <code>{&quot;a&quot;:&quot;aa&quot;, &quot;b&quot;:{&quot;b1&quot;:&quot;b1b1&quot;, &quot;c1&quot;:&quot;c1c1&quot;}}</code><br>Delivered to Ckafka: <code>{&quot;a&quot;:&quot;aa&quot;, &quot;b&quot;:{&quot;b1&quot;:&quot;b1b1&quot;, &quot;c1&quot;:&quot;c1c1&quot;}}</code></p><p>When JsonType is 2: Escaped. Example:<br>Original log: <code>{&quot;a&quot;:&quot;aa&quot;, &quot;b&quot;:{&quot;b1&quot;:&quot;b1b1&quot;, &quot;c1&quot;:&quot;c1c1&quot;}}</code><br>Delivered to Ckafka: <code>{&quot;a&quot;:&quot;aa&quot;,&quot;b&quot;:&quot;{\&quot;b1\&quot;:\&quot;b1b1\&quot;, \&quot;c1\&quot;:\&quot;c1c1\&quot;}&quot;}</code></p>
+     * @param JsonType <p>Consumption data Json format:<br>1: Not escaped (default format)<br>2: Escaped</p><p>Delivery Json format.<br>When JsonType is 1: Consistent with the original log, not escaped. Example:<br>Original log: <code>{&quot;a&quot;:&quot;aa&quot;, &quot;b&quot;:{&quot;b1&quot;:&quot;b1b1&quot;, &quot;c1&quot;:&quot;c1c1&quot;}}</code><br>Delivered to Ckafka: <code>{&quot;a&quot;:&quot;aa&quot;, &quot;b&quot;:{&quot;b1&quot;:&quot;b1b1&quot;, &quot;c1&quot;:&quot;c1c1&quot;}}</code></p><p>When JsonType is 2: Escaped. Example:<br>Original log: <code>{&quot;a&quot;:&quot;aa&quot;, &quot;b&quot;:{&quot;b1&quot;:&quot;b1b1&quot;, &quot;c1&quot;:&quot;c1c1&quot;}}</code><br>Delivered to Ckafka: <code>{&quot;a&quot;:&quot;aa&quot;,&quot;b&quot;:&quot;{\&quot;b1\&quot;:\&quot;b1b1\&quot;, \&quot;c1\&quot;:\&quot;c1c1\&quot;}&quot;}</code></p>
      */
     public void setJsonType(Long JsonType) {
         this.JsonType = JsonType;
+    }
+
+    /**
+     * Get <p>Switch for automatic conversion of numeric types</p><p>Valid values:</p><ul><li>true: Numeric strings (such as &quot;123&quot;) in the first-level values of the JSON structure are automatically converted to numeric types (int/float).</li><li>false: Numeric strings (such as &quot;123&quot;) in the first-level values of the JSON structure remain strings.</li></ul><p>Default value: false</p> 
+     * @return AutoConvertNumber <p>Switch for automatic conversion of numeric types</p><p>Valid values:</p><ul><li>true: Numeric strings (such as &quot;123&quot;) in the first-level values of the JSON structure are automatically converted to numeric types (int/float).</li><li>false: Numeric strings (such as &quot;123&quot;) in the first-level values of the JSON structure remain strings.</li></ul><p>Default value: false</p>
+     */
+    public Boolean getAutoConvertNumber() {
+        return this.AutoConvertNumber;
+    }
+
+    /**
+     * Set <p>Switch for automatic conversion of numeric types</p><p>Valid values:</p><ul><li>true: Numeric strings (such as &quot;123&quot;) in the first-level values of the JSON structure are automatically converted to numeric types (int/float).</li><li>false: Numeric strings (such as &quot;123&quot;) in the first-level values of the JSON structure remain strings.</li></ul><p>Default value: false</p>
+     * @param AutoConvertNumber <p>Switch for automatic conversion of numeric types</p><p>Valid values:</p><ul><li>true: Numeric strings (such as &quot;123&quot;) in the first-level values of the JSON structure are automatically converted to numeric types (int/float).</li><li>false: Numeric strings (such as &quot;123&quot;) in the first-level values of the JSON structure remain strings.</li></ul><p>Default value: false</p>
+     */
+    public void setAutoConvertNumber(Boolean AutoConvertNumber) {
+        this.AutoConvertNumber = AutoConvertNumber;
     }
 
     public KafkaConsumerContent() {
@@ -254,6 +187,9 @@ Deliver to CKafka: `{"a":"aa","b":"{\"b1\":\"b1b1\", \"c1\":\"c1c1\"}"}`
         if (source.JsonType != null) {
             this.JsonType = new Long(source.JsonType);
         }
+        if (source.AutoConvertNumber != null) {
+            this.AutoConvertNumber = new Boolean(source.AutoConvertNumber);
+        }
     }
 
 
@@ -266,6 +202,7 @@ Deliver to CKafka: `{"a":"aa","b":"{\"b1\":\"b1b1\", \"c1\":\"c1c1\"}"}`
         this.setParamArraySimple(map, prefix + "MetaFields.", this.MetaFields);
         this.setParamSimple(map, prefix + "TagTransaction", this.TagTransaction);
         this.setParamSimple(map, prefix + "JsonType", this.JsonType);
+        this.setParamSimple(map, prefix + "AutoConvertNumber", this.AutoConvertNumber);
 
     }
 }

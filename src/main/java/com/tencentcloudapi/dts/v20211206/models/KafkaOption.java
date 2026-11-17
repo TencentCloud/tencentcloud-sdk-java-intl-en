@@ -24,95 +24,118 @@ import java.util.HashMap;
 public class KafkaOption extends AbstractModel {
 
     /**
-    * Data type delivered to Kafka, such as Avro, Json, canal-pb, canal-json
+    * <p>Data type delivered to kafka, such as Avro, Json, canal-pb, canal-Json, debezium</p>
     */
     @SerializedName("DataType")
     @Expose
     private String DataType;
 
     /**
-    * Topic sync policy, such as `Single` (deliver all data to a single topic), `Multi` (deliver data to multiple custom topics).
+    * <p>Synchronize topic policies, for example, Single (Deliver to a single topic), Multi (Custom topic name)</p>
     */
     @SerializedName("TopicType")
     @Expose
     private String TopicType;
 
     /**
-    * Topic for DDL storage
+    * <p>topic used to store ddl</p>
     */
     @SerializedName("DDLTopicName")
     @Expose
     private String DDLTopicName;
 
     /**
-    * Topic description
+    * <p>Description of single topic and custom topic</p>
     */
     @SerializedName("TopicRules")
     @Expose
     private TopicRule [] TopicRules;
 
     /**
-     * Get Data type delivered to Kafka, such as Avro, Json, canal-pb, canal-json 
-     * @return DataType Data type delivered to Kafka, such as Avro, Json, canal-pb, canal-json
+    * <p>Additional information, for specific data types, additional parameters can be set. For example, for Canal-compatible feature support: "canalOfficialFormat":"on" means to enable the Canal-compatible feature, not included by default. For large message skipping feature support: "skipLargeMessage":"on" means to enable skipping large messages, not included by default; when enabled, "maxMessageSizeMB" must be simultaneously set to a positive integer string from 1 to 100, representing the max message size threshold (MB), messages exceeding this size will be skipped, not included by default.</p>
+    */
+    @SerializedName("DataOption")
+    @Expose
+    private KeyValuePairOption [] DataOption;
+
+    /**
+     * Get <p>Data type delivered to kafka, such as Avro, Json, canal-pb, canal-Json, debezium</p> 
+     * @return DataType <p>Data type delivered to kafka, such as Avro, Json, canal-pb, canal-Json, debezium</p>
      */
     public String getDataType() {
         return this.DataType;
     }
 
     /**
-     * Set Data type delivered to Kafka, such as Avro, Json, canal-pb, canal-json
-     * @param DataType Data type delivered to Kafka, such as Avro, Json, canal-pb, canal-json
+     * Set <p>Data type delivered to kafka, such as Avro, Json, canal-pb, canal-Json, debezium</p>
+     * @param DataType <p>Data type delivered to kafka, such as Avro, Json, canal-pb, canal-Json, debezium</p>
      */
     public void setDataType(String DataType) {
         this.DataType = DataType;
     }
 
     /**
-     * Get Topic sync policy, such as `Single` (deliver all data to a single topic), `Multi` (deliver data to multiple custom topics). 
-     * @return TopicType Topic sync policy, such as `Single` (deliver all data to a single topic), `Multi` (deliver data to multiple custom topics).
+     * Get <p>Synchronize topic policies, for example, Single (Deliver to a single topic), Multi (Custom topic name)</p> 
+     * @return TopicType <p>Synchronize topic policies, for example, Single (Deliver to a single topic), Multi (Custom topic name)</p>
      */
     public String getTopicType() {
         return this.TopicType;
     }
 
     /**
-     * Set Topic sync policy, such as `Single` (deliver all data to a single topic), `Multi` (deliver data to multiple custom topics).
-     * @param TopicType Topic sync policy, such as `Single` (deliver all data to a single topic), `Multi` (deliver data to multiple custom topics).
+     * Set <p>Synchronize topic policies, for example, Single (Deliver to a single topic), Multi (Custom topic name)</p>
+     * @param TopicType <p>Synchronize topic policies, for example, Single (Deliver to a single topic), Multi (Custom topic name)</p>
      */
     public void setTopicType(String TopicType) {
         this.TopicType = TopicType;
     }
 
     /**
-     * Get Topic for DDL storage 
-     * @return DDLTopicName Topic for DDL storage
+     * Get <p>topic used to store ddl</p> 
+     * @return DDLTopicName <p>topic used to store ddl</p>
      */
     public String getDDLTopicName() {
         return this.DDLTopicName;
     }
 
     /**
-     * Set Topic for DDL storage
-     * @param DDLTopicName Topic for DDL storage
+     * Set <p>topic used to store ddl</p>
+     * @param DDLTopicName <p>topic used to store ddl</p>
      */
     public void setDDLTopicName(String DDLTopicName) {
         this.DDLTopicName = DDLTopicName;
     }
 
     /**
-     * Get Topic description 
-     * @return TopicRules Topic description
+     * Get <p>Description of single topic and custom topic</p> 
+     * @return TopicRules <p>Description of single topic and custom topic</p>
      */
     public TopicRule [] getTopicRules() {
         return this.TopicRules;
     }
 
     /**
-     * Set Topic description
-     * @param TopicRules Topic description
+     * Set <p>Description of single topic and custom topic</p>
+     * @param TopicRules <p>Description of single topic and custom topic</p>
      */
     public void setTopicRules(TopicRule [] TopicRules) {
         this.TopicRules = TopicRules;
+    }
+
+    /**
+     * Get <p>Additional information, for specific data types, additional parameters can be set. For example, for Canal-compatible feature support: "canalOfficialFormat":"on" means to enable the Canal-compatible feature, not included by default. For large message skipping feature support: "skipLargeMessage":"on" means to enable skipping large messages, not included by default; when enabled, "maxMessageSizeMB" must be simultaneously set to a positive integer string from 1 to 100, representing the max message size threshold (MB), messages exceeding this size will be skipped, not included by default.</p> 
+     * @return DataOption <p>Additional information, for specific data types, additional parameters can be set. For example, for Canal-compatible feature support: "canalOfficialFormat":"on" means to enable the Canal-compatible feature, not included by default. For large message skipping feature support: "skipLargeMessage":"on" means to enable skipping large messages, not included by default; when enabled, "maxMessageSizeMB" must be simultaneously set to a positive integer string from 1 to 100, representing the max message size threshold (MB), messages exceeding this size will be skipped, not included by default.</p>
+     */
+    public KeyValuePairOption [] getDataOption() {
+        return this.DataOption;
+    }
+
+    /**
+     * Set <p>Additional information, for specific data types, additional parameters can be set. For example, for Canal-compatible feature support: "canalOfficialFormat":"on" means to enable the Canal-compatible feature, not included by default. For large message skipping feature support: "skipLargeMessage":"on" means to enable skipping large messages, not included by default; when enabled, "maxMessageSizeMB" must be simultaneously set to a positive integer string from 1 to 100, representing the max message size threshold (MB), messages exceeding this size will be skipped, not included by default.</p>
+     * @param DataOption <p>Additional information, for specific data types, additional parameters can be set. For example, for Canal-compatible feature support: "canalOfficialFormat":"on" means to enable the Canal-compatible feature, not included by default. For large message skipping feature support: "skipLargeMessage":"on" means to enable skipping large messages, not included by default; when enabled, "maxMessageSizeMB" must be simultaneously set to a positive integer string from 1 to 100, representing the max message size threshold (MB), messages exceeding this size will be skipped, not included by default.</p>
+     */
+    public void setDataOption(KeyValuePairOption [] DataOption) {
+        this.DataOption = DataOption;
     }
 
     public KafkaOption() {
@@ -138,6 +161,12 @@ public class KafkaOption extends AbstractModel {
                 this.TopicRules[i] = new TopicRule(source.TopicRules[i]);
             }
         }
+        if (source.DataOption != null) {
+            this.DataOption = new KeyValuePairOption[source.DataOption.length];
+            for (int i = 0; i < source.DataOption.length; i++) {
+                this.DataOption[i] = new KeyValuePairOption(source.DataOption[i]);
+            }
+        }
     }
 
 
@@ -149,6 +178,7 @@ public class KafkaOption extends AbstractModel {
         this.setParamSimple(map, prefix + "TopicType", this.TopicType);
         this.setParamSimple(map, prefix + "DDLTopicName", this.DDLTopicName);
         this.setParamArrayObj(map, prefix + "TopicRules.", this.TopicRules);
+        this.setParamArrayObj(map, prefix + "DataOption.", this.DataOption);
 
     }
 }

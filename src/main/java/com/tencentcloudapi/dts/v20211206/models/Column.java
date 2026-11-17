@@ -24,51 +24,46 @@ import java.util.HashMap;
 public class Column extends AbstractModel {
 
     /**
-    * Column nameNote: This field may return null, indicating that no valid values can be obtained.
+    * Column name
     */
     @SerializedName("ColumnName")
     @Expose
     private String ColumnName;
 
     /**
-    * New column name
-Note: This field may return null, indicating that no valid values can be obtained.
+    * New column name.
     */
     @SerializedName("NewColumnName")
     @Expose
     private String NewColumnName;
 
     /**
-     * Get Column nameNote: This field may return null, indicating that no valid values can be obtained. 
-     * @return ColumnName Column nameNote: This field may return null, indicating that no valid values can be obtained.
+     * Get Column name 
+     * @return ColumnName Column name
      */
     public String getColumnName() {
         return this.ColumnName;
     }
 
     /**
-     * Set Column nameNote: This field may return null, indicating that no valid values can be obtained.
-     * @param ColumnName Column nameNote: This field may return null, indicating that no valid values can be obtained.
+     * Set Column name
+     * @param ColumnName Column name
      */
     public void setColumnName(String ColumnName) {
         this.ColumnName = ColumnName;
     }
 
     /**
-     * Get New column name
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return NewColumnName New column name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get New column name. 
+     * @return NewColumnName New column name.
      */
     public String getNewColumnName() {
         return this.NewColumnName;
     }
 
     /**
-     * Set New column name
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param NewColumnName New column name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set New column name.
+     * @param NewColumnName New column name.
      */
     public void setNewColumnName(String NewColumnName) {
         this.NewColumnName = NewColumnName;

@@ -67,7 +67,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String InstanceStatus;
 
     /**
-    * Data subscription lifecycle status. Valid values: normal (normal), isolating (isolating), isolated (isolated), offlining (offlining), post2PrePayIng (changing from pay-as-you-go to monthly subscription).
+    * Data subscription lifecycle status. Valid values: normal (normal), isolating (isolating), isolated (isolated), offlining (offlining), post2PrePayIng (changing from pay-as-you-go to yearly/monthly subscription).
     */
     @SerializedName("Status")
     @Expose
@@ -102,7 +102,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String IsolateTime;
 
     /**
-    * Expiration time for monthly subscription tasks, the format is: Y-m-d h:m:s. Default time: 0000-00-00 00:00:00.Note: This field may return null, indicating that no valid values can be obtained.
+    * Expiration time for yearly/monthly subscription tasks, the format is: Y-m-d h:m:s. Default time: 0000-00-00 00:00:00.Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ExpireTime")
     @Expose
@@ -171,6 +171,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
     @SerializedName("Errors")
     @Expose
     private SubsErr [] Errors;
+
+    /**
+    * Subscribe to instance specifications
+    */
+    @SerializedName("InstanceClass")
+    @Expose
+    private String InstanceClass;
+
+    /**
+    * Routing Phase for the New Version of Subscription Consumption
+    */
+    @SerializedName("ConsumerRoutePhase")
+    @Expose
+    private String ConsumerRoutePhase;
 
     /**
      * Get Data subscription instance ID 
@@ -273,16 +287,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Data subscription lifecycle status. Valid values: normal (normal), isolating (isolating), isolated (isolated), offlining (offlining), post2PrePayIng (changing from pay-as-you-go to monthly subscription). 
-     * @return Status Data subscription lifecycle status. Valid values: normal (normal), isolating (isolating), isolated (isolated), offlining (offlining), post2PrePayIng (changing from pay-as-you-go to monthly subscription).
+     * Get Data subscription lifecycle status. Valid values: normal (normal), isolating (isolating), isolated (isolated), offlining (offlining), post2PrePayIng (changing from pay-as-you-go to yearly/monthly subscription). 
+     * @return Status Data subscription lifecycle status. Valid values: normal (normal), isolating (isolating), isolated (isolated), offlining (offlining), post2PrePayIng (changing from pay-as-you-go to yearly/monthly subscription).
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Data subscription lifecycle status. Valid values: normal (normal), isolating (isolating), isolated (isolated), offlining (offlining), post2PrePayIng (changing from pay-as-you-go to monthly subscription).
-     * @param Status Data subscription lifecycle status. Valid values: normal (normal), isolating (isolating), isolated (isolated), offlining (offlining), post2PrePayIng (changing from pay-as-you-go to monthly subscription).
+     * Set Data subscription lifecycle status. Valid values: normal (normal), isolating (isolating), isolated (isolated), offlining (offlining), post2PrePayIng (changing from pay-as-you-go to yearly/monthly subscription).
+     * @param Status Data subscription lifecycle status. Valid values: normal (normal), isolating (isolating), isolated (isolated), offlining (offlining), post2PrePayIng (changing from pay-as-you-go to yearly/monthly subscription).
      */
     public void setStatus(String Status) {
         this.Status = Status;
@@ -353,16 +367,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Expiration time for monthly subscription tasks, the format is: Y-m-d h:m:s. Default time: 0000-00-00 00:00:00.Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ExpireTime Expiration time for monthly subscription tasks, the format is: Y-m-d h:m:s. Default time: 0000-00-00 00:00:00.Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Expiration time for yearly/monthly subscription tasks, the format is: Y-m-d h:m:s. Default time: 0000-00-00 00:00:00.Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ExpireTime Expiration time for yearly/monthly subscription tasks, the format is: Y-m-d h:m:s. Default time: 0000-00-00 00:00:00.Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getExpireTime() {
         return this.ExpireTime;
     }
 
     /**
-     * Set Expiration time for monthly subscription tasks, the format is: Y-m-d h:m:s. Default time: 0000-00-00 00:00:00.Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ExpireTime Expiration time for monthly subscription tasks, the format is: Y-m-d h:m:s. Default time: 0000-00-00 00:00:00.Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Expiration time for yearly/monthly subscription tasks, the format is: Y-m-d h:m:s. Default time: 0000-00-00 00:00:00.Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ExpireTime Expiration time for yearly/monthly subscription tasks, the format is: Y-m-d h:m:s. Default time: 0000-00-00 00:00:00.Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setExpireTime(String ExpireTime) {
         this.ExpireTime = ExpireTime;
@@ -516,6 +530,38 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.Errors = Errors;
     }
 
+    /**
+     * Get Subscribe to instance specifications 
+     * @return InstanceClass Subscribe to instance specifications
+     */
+    public String getInstanceClass() {
+        return this.InstanceClass;
+    }
+
+    /**
+     * Set Subscribe to instance specifications
+     * @param InstanceClass Subscribe to instance specifications
+     */
+    public void setInstanceClass(String InstanceClass) {
+        this.InstanceClass = InstanceClass;
+    }
+
+    /**
+     * Get Routing Phase for the New Version of Subscription Consumption 
+     * @return ConsumerRoutePhase Routing Phase for the New Version of Subscription Consumption
+     */
+    public String getConsumerRoutePhase() {
+        return this.ConsumerRoutePhase;
+    }
+
+    /**
+     * Set Routing Phase for the New Version of Subscription Consumption
+     * @param ConsumerRoutePhase Routing Phase for the New Version of Subscription Consumption
+     */
+    public void setConsumerRoutePhase(String ConsumerRoutePhase) {
+        this.ConsumerRoutePhase = ConsumerRoutePhase;
+    }
+
     public SubscribeInfo() {
     }
 
@@ -596,6 +642,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 this.Errors[i] = new SubsErr(source.Errors[i]);
             }
         }
+        if (source.InstanceClass != null) {
+            this.InstanceClass = new String(source.InstanceClass);
+        }
+        if (source.ConsumerRoutePhase != null) {
+            this.ConsumerRoutePhase = new String(source.ConsumerRoutePhase);
+        }
     }
 
 
@@ -624,6 +676,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "SubscribeVersion", this.SubscribeVersion);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamArrayObj(map, prefix + "Errors.", this.Errors);
+        this.setParamSimple(map, prefix + "InstanceClass", this.InstanceClass);
+        this.setParamSimple(map, prefix + "ConsumerRoutePhase", this.ConsumerRoutePhase);
 
     }
 }

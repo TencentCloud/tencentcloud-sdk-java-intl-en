@@ -24,56 +24,46 @@ import java.util.HashMap;
 public class KeyValuePairOption extends AbstractModel {
 
     /**
-    * Option key
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Option key.
     */
     @SerializedName("Key")
     @Expose
     private String Key;
 
     /**
-    * Option value
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Option value.
     */
     @SerializedName("Value")
     @Expose
     private String Value;
 
     /**
-     * Get Option key
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Key Option key
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Option key. 
+     * @return Key Option key.
      */
     public String getKey() {
         return this.Key;
     }
 
     /**
-     * Set Option key
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Key Option key
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Option key.
+     * @param Key Option key.
      */
     public void setKey(String Key) {
         this.Key = Key;
     }
 
     /**
-     * Get Option value
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Value Option value
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Option value. 
+     * @return Value Option value.
      */
     public String getValue() {
         return this.Value;
     }
 
     /**
-     * Set Option value
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Value Option value
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Option value.
+     * @param Value Option value.
      */
     public void setValue(String Value) {
         this.Value = Value;

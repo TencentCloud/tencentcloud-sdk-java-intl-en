@@ -94,7 +94,7 @@ public class DescribeSubscribeDetailResponse extends AbstractModel {
     private String IsolateTime;
 
     /**
-    * Expiration time for monthly subscription tasks, the format is: Y-m-d h:m:s. Default time: 0000-00-00 00:00:00.Note: This field may return null, indicating that no valid values can be obtained.
+    * Expiration time for yearly/monthly subscription tasks, the format is: Y-m-d h:m:s. Default time: 0000-00-00 00:00:00.Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ExpireTime")
     @Expose
@@ -108,7 +108,7 @@ public class DescribeSubscribeDetailResponse extends AbstractModel {
     private String OfflineTime;
 
     /**
-    * Payment method. Valid values: 0 (monthly subscription); 1 (pay-as-you-go).
+    * Payment method. Valid values: 0 (yearly/monthly subscription); 1 (pay-as-you-go).
     */
     @SerializedName("PayType")
     @Expose
@@ -173,7 +173,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private SubscribeKafkaConfig KafkaConfig;
 
     /**
-    * 
+    * Subscribe to version information for the built-in Kafka
     */
     @SerializedName("KafkaVersion")
     @Expose
@@ -225,28 +225,28 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private KeyValuePairOption [] ExtraAttr;
 
     /**
-    * 
+    * Data subscription version; currently supports Kafka and KafkaPro (Professional Edition).
     */
     @SerializedName("SubscribeVersion")
     @Expose
     private String SubscribeVersion;
 
     /**
-    * 
+    * VPC where the consumer-side address is located
     */
     @SerializedName("ConsumerVpcId")
     @Expose
     private String ConsumerVpcId;
 
     /**
-    * 
+    * Subnet where the consumer-side address is located
     */
     @SerializedName("ConsumerSubnetId")
     @Expose
     private String ConsumerSubnetId;
 
     /**
-    * 
+    * Subscribe to instance specifications
     */
     @SerializedName("InstanceClass")
     @Expose
@@ -420,16 +420,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Expiration time for monthly subscription tasks, the format is: Y-m-d h:m:s. Default time: 0000-00-00 00:00:00.Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ExpireTime Expiration time for monthly subscription tasks, the format is: Y-m-d h:m:s. Default time: 0000-00-00 00:00:00.Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Expiration time for yearly/monthly subscription tasks, the format is: Y-m-d h:m:s. Default time: 0000-00-00 00:00:00.Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ExpireTime Expiration time for yearly/monthly subscription tasks, the format is: Y-m-d h:m:s. Default time: 0000-00-00 00:00:00.Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getExpireTime() {
         return this.ExpireTime;
     }
 
     /**
-     * Set Expiration time for monthly subscription tasks, the format is: Y-m-d h:m:s. Default time: 0000-00-00 00:00:00.Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ExpireTime Expiration time for monthly subscription tasks, the format is: Y-m-d h:m:s. Default time: 0000-00-00 00:00:00.Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Expiration time for yearly/monthly subscription tasks, the format is: Y-m-d h:m:s. Default time: 0000-00-00 00:00:00.Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ExpireTime Expiration time for yearly/monthly subscription tasks, the format is: Y-m-d h:m:s. Default time: 0000-00-00 00:00:00.Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setExpireTime(String ExpireTime) {
         this.ExpireTime = ExpireTime;
@@ -452,16 +452,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Payment method. Valid values: 0 (monthly subscription); 1 (pay-as-you-go). 
-     * @return PayType Payment method. Valid values: 0 (monthly subscription); 1 (pay-as-you-go).
+     * Get Payment method. Valid values: 0 (yearly/monthly subscription); 1 (pay-as-you-go). 
+     * @return PayType Payment method. Valid values: 0 (yearly/monthly subscription); 1 (pay-as-you-go).
      */
     public Long getPayType() {
         return this.PayType;
     }
 
     /**
-     * Set Payment method. Valid values: 0 (monthly subscription); 1 (pay-as-you-go).
-     * @param PayType Payment method. Valid values: 0 (monthly subscription); 1 (pay-as-you-go).
+     * Set Payment method. Valid values: 0 (yearly/monthly subscription); 1 (pay-as-you-go).
+     * @param PayType Payment method. Valid values: 0 (yearly/monthly subscription); 1 (pay-as-you-go).
      */
     public void setPayType(Long PayType) {
         this.PayType = PayType;
@@ -604,16 +604,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get  
-     * @return KafkaVersion 
+     * Get Subscribe to version information for the built-in Kafka 
+     * @return KafkaVersion Subscribe to version information for the built-in Kafka
      */
     public String getKafkaVersion() {
         return this.KafkaVersion;
     }
 
     /**
-     * Set 
-     * @param KafkaVersion 
+     * Set Subscribe to version information for the built-in Kafka
+     * @param KafkaVersion Subscribe to version information for the built-in Kafka
      */
     public void setKafkaVersion(String KafkaVersion) {
         this.KafkaVersion = KafkaVersion;
@@ -728,64 +728,64 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get  
-     * @return SubscribeVersion 
+     * Get Data subscription version; currently supports Kafka and KafkaPro (Professional Edition). 
+     * @return SubscribeVersion Data subscription version; currently supports Kafka and KafkaPro (Professional Edition).
      */
     public String getSubscribeVersion() {
         return this.SubscribeVersion;
     }
 
     /**
-     * Set 
-     * @param SubscribeVersion 
+     * Set Data subscription version; currently supports Kafka and KafkaPro (Professional Edition).
+     * @param SubscribeVersion Data subscription version; currently supports Kafka and KafkaPro (Professional Edition).
      */
     public void setSubscribeVersion(String SubscribeVersion) {
         this.SubscribeVersion = SubscribeVersion;
     }
 
     /**
-     * Get  
-     * @return ConsumerVpcId 
+     * Get VPC where the consumer-side address is located 
+     * @return ConsumerVpcId VPC where the consumer-side address is located
      */
     public String getConsumerVpcId() {
         return this.ConsumerVpcId;
     }
 
     /**
-     * Set 
-     * @param ConsumerVpcId 
+     * Set VPC where the consumer-side address is located
+     * @param ConsumerVpcId VPC where the consumer-side address is located
      */
     public void setConsumerVpcId(String ConsumerVpcId) {
         this.ConsumerVpcId = ConsumerVpcId;
     }
 
     /**
-     * Get  
-     * @return ConsumerSubnetId 
+     * Get Subnet where the consumer-side address is located 
+     * @return ConsumerSubnetId Subnet where the consumer-side address is located
      */
     public String getConsumerSubnetId() {
         return this.ConsumerSubnetId;
     }
 
     /**
-     * Set 
-     * @param ConsumerSubnetId 
+     * Set Subnet where the consumer-side address is located
+     * @param ConsumerSubnetId Subnet where the consumer-side address is located
      */
     public void setConsumerSubnetId(String ConsumerSubnetId) {
         this.ConsumerSubnetId = ConsumerSubnetId;
     }
 
     /**
-     * Get  
-     * @return InstanceClass 
+     * Get Subscribe to instance specifications 
+     * @return InstanceClass Subscribe to instance specifications
      */
     public String getInstanceClass() {
         return this.InstanceClass;
     }
 
     /**
-     * Set 
-     * @param InstanceClass 
+     * Set Subscribe to instance specifications
+     * @param InstanceClass Subscribe to instance specifications
      */
     public void setInstanceClass(String InstanceClass) {
         this.InstanceClass = InstanceClass;

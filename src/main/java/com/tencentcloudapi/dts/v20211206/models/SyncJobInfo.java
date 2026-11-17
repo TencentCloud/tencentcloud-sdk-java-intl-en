@@ -40,7 +40,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String JobName;
 
     /**
-    * Billing mode. Valid values: `PostPay` (pay-as-you-go); `PrePay` (monthly subscription).
+    * Billing mode. Valid values: `PostPay` (pay-as-you-go); `PrePay` (yearly/monthly subscription).
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("PayMode")
@@ -288,7 +288,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String OfflineTime;
 
     /**
-    * 
+    * Dynamically modify objects, such as changing the status of a task.
     */
     @SerializedName("OptObjStatus")
     @Expose
@@ -351,9 +351,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Billing mode. Valid values: `PostPay` (pay-as-you-go); `PrePay` (monthly subscription).
+     * Get Billing mode. Valid values: `PostPay` (pay-as-you-go); `PrePay` (yearly/monthly subscription).
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return PayMode Billing mode. Valid values: `PostPay` (pay-as-you-go); `PrePay` (monthly subscription).
+     * @return PayMode Billing mode. Valid values: `PostPay` (pay-as-you-go); `PrePay` (yearly/monthly subscription).
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getPayMode() {
@@ -361,9 +361,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Billing mode. Valid values: `PostPay` (pay-as-you-go); `PrePay` (monthly subscription).
+     * Set Billing mode. Valid values: `PostPay` (pay-as-you-go); `PrePay` (yearly/monthly subscription).
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param PayMode Billing mode. Valid values: `PostPay` (pay-as-you-go); `PrePay` (monthly subscription).
+     * @param PayMode Billing mode. Valid values: `PostPay` (pay-as-you-go); `PrePay` (yearly/monthly subscription).
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setPayMode(String PayMode) {
@@ -971,16 +971,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get  
-     * @return OptObjStatus 
+     * Get Dynamically modify objects, such as changing the status of a task. 
+     * @return OptObjStatus Dynamically modify objects, such as changing the status of a task.
      */
     public String getOptObjStatus() {
         return this.OptObjStatus;
     }
 
     /**
-     * Set 
-     * @param OptObjStatus 
+     * Set Dynamically modify objects, such as changing the status of a task.
+     * @param OptObjStatus Dynamically modify objects, such as changing the status of a task.
      */
     public void setOptObjStatus(String OptObjStatus) {
         this.OptObjStatus = OptObjStatus;

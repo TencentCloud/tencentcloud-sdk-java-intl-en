@@ -31,7 +31,7 @@ public class TimingDataItem extends AbstractModel {
     private Long Timestamp;
 
     /**
-    * The value.
+    * Specific values.
     */
     @SerializedName("Value")
     @Expose
@@ -54,16 +54,16 @@ public class TimingDataItem extends AbstractModel {
     }
 
     /**
-     * Get The value. 
-     * @return Value The value.
+     * Get Specific values. 
+     * @return Value Specific values.
      */
     public Long getValue() {
         return this.Value;
     }
 
     /**
-     * Set The value.
-     * @param Value The value.
+     * Set Specific values.
+     * @param Value Specific values.
      */
     public void setValue(Long Value) {
         this.Value = Value;

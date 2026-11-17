@@ -24,810 +24,690 @@ import java.util.HashMap;
 public class Endpoint extends AbstractModel {
 
     /**
-    * Region name, such as `ap-guangzhou`.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Region English name, for example: ap-guangzhou</p>
     */
     @SerializedName("Region")
     @Expose
     private String Region;
 
     /**
-    * Node type of TDSQL for MySQL. Enumerated values: `proxy`, `set`.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Node type. proxy means the node type is host, set means the node type is node. proxy type must be the first item in the array. Source/target configuration for tdsqlmysql type is required.</p>
     */
     @SerializedName("Role")
     @Expose
     private String Role;
 
     /**
-    * Database kernel type, which is used to distinguish between different kernels in TDSQL. Valid values: `percona`, `mariadb`, `mysql`.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Database kernel type, used in tdsql to differentiate between different kernels: percona, mariadb, mysql. Note that tdsql-C mysql and tdsql PostgreSQL do not need to fill in this field.</p>
     */
     @SerializedName("DbKernel")
     @Expose
     private String DbKernel;
 
     /**
-    * Database instance ID in the format of `cdb-powiqx8q`
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Database instance ID, in the format of: cdb-powiqx8q</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Instance IP address, which is required if the access type is not `cdb`.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>IP address of the instance. This item is required when the access type is not cdb.</p>
     */
     @SerializedName("Ip")
     @Expose
     private String Ip;
 
     /**
-    * Instance port, which is required if the access type is not `cdb`.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Instance port. This item is required when the access type is not cdb.</p>
     */
     @SerializedName("Port")
     @Expose
     private Long Port;
 
     /**
-    * Username, which is required for an instance authenticated by username and password.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>User name, required for accessing instances that need username and password authentication.</p>
     */
     @SerializedName("User")
     @Expose
     private String User;
 
     /**
-    * Password, which is required for an instance authenticated by username and password.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Password is required for accessing instances that need username and password authentication.</p>
     */
     @SerializedName("Password")
     @Expose
     private String Password;
 
     /**
-    * Database name, which is required if the database type is `cdwpg`.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Database name, required when the database is cdwpg</p>
     */
     @SerializedName("DbName")
     @Expose
     private String DbName;
 
     /**
-    * VPC ID in the format of `vpc-92jblxto`, which is required if the access type is `vpc`, `dcg`, or `vpncloud`.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Private network ID. This item is required for private network, Direct Connect, and VPN access methods, in the format of vpc-92jblxto.</p>
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * ID of the subnet in the VPC in the format of `subnet-3paxmkdz`, which is required if the access type is `vpc`, `dcg`, or `vpncloud`.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Subnet ID under the private network. This item is required for private network, Direct Connect, and VPN access methods, in the format of subnet-3paxmkdz.</p>
     */
     @SerializedName("SubnetId")
     @Expose
     private String SubnetId;
 
     /**
-    * Short CVM instance ID in the format of `ins-olgl39y8`, which is required if the access type is `cvm`. It is the same as the instance ID displayed in the CVM console.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>CVM instance short ID, in the format of: ins-olgl39y8, is identical to the instance ID displayed on the cloud server console page. If it is a CVM self-created instance, this field is required.</p>
     */
     @SerializedName("CvmInstanceId")
     @Expose
     private String CvmInstanceId;
 
     /**
-    * Direct Connect gateway ID in the format of `dcg-0rxtqqxb`, which is required if the access type is `dcg`.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Direct Connect gateway ID. This item is required for dedicated access type, in the format of: dcg-0rxtqqxb</p>
     */
     @SerializedName("UniqDcgId")
     @Expose
     private String UniqDcgId;
 
     /**
-    * VPN gateway ID in the format of `vpngw-9ghexg7q`, which is required if the access type is `vpncloud`.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>VPN Gateway ID. This item is required for VPN access type, in the format of vpngw-9ghexg7q.</p>
     */
     @SerializedName("UniqVpnGwId")
     @Expose
     private String UniqVpnGwId;
 
     /**
-    * CCN instance ID in the format of `ccn-afp6kltc`, which is required if the access type is `ccn`.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Cloud Connect Network ID. This item is required for the CCN access type, for example: ccn-afp6kltc</p>
     */
     @SerializedName("CcnId")
     @Expose
     private String CcnId;
 
     /**
-    * Cloud vendor type. For Alibaba Cloud ApsaraDB for RDS instances, enter `aliyun`; otherwise, enter `others`. Default value: `others`.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Cloud vendor type. For RDS instances, fill in aliyun. In other cases, fill in others. Default is others.</p>
     */
     @SerializedName("Supplier")
     @Expose
     private String Supplier;
 
     /**
-    * Database version in the format of `5.6` or `5.7`, which takes effect only if the instance is an RDS instance. Default value: `5.6`.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Database version. Valid only for RDS instances, ignored for other instances, in the format of 5.6 or 5.7, defaults to 5.6.</p>
     */
     @SerializedName("EngineVersion")
     @Expose
     private String EngineVersion;
 
     /**
-    * Instance account, which is required if the operation is performed across accounts.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Account of the instance. This item is required if it is a cross-account instance.</p>
     */
     @SerializedName("Account")
     @Expose
     private String Account;
 
     /**
-    * The account to which the resource belongs. Valid values: empty or `self` (the current account); `other` (another account).
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Associated account is empty, self (means resources within this account), or other (means cross-account resources).</p>
     */
     @SerializedName("AccountMode")
     @Expose
     private String AccountMode;
 
     /**
-    * The role used for cross-account sync, which can contain [a-zA-Z0-9\-\_]+ and is required if the operation is performed across accounts.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Role for cross-account sync, only allow [a-zA-Z0-9-_]+. This item is required if it is a cross-account instance.</p>
     */
     @SerializedName("AccountRole")
     @Expose
     private String AccountRole;
 
     /**
-    * External role ID
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>External role id</p>
     */
     @SerializedName("RoleExternalId")
     @Expose
     private String RoleExternalId;
 
     /**
-    * Temporary SecretId, you can obtain the temporary key by [GetFederationToken](https://intl.cloud.tencent.com/document/product/1312/48195?from_cn_redirect=1). This field is required if it is a cross-account instance.Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Temporary key Id can be obtained by applying for role assumption temporary access credentials https://www.tencentcloud.com/document/product/1312/48197.?from_cn_redirect=1 Among them, the definition of the role resource RoleArn can be found in the DTS cross-account sync document (https://www.tencentcloud.com/document/product/571/68729?from_cn_redirect=1) Section 4 about role-based definition.</p>
     */
     @SerializedName("TmpSecretId")
     @Expose
     private String TmpSecretId;
 
     /**
-    * Temporary SecretKey, you can obtain the temporary key by [GetFederationToken](https://intl.cloud.tencent.com/document/product/1312/48195?from_cn_redirect=1). This field is required if it is a cross-account instance.Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Temporary key Id can be obtained by applying for role assumption temporary access credentials at https://www.tencentcloud.com/document/product/1312/48197.?from_cn_redirect=1 Among them, the definition of the role resource RoleArn can be found in the DTS cross-account sync document (https://www.tencentcloud.com/document/product/571/68729?from_cn_redirect=1) Section 4 about role definition.</p>
     */
     @SerializedName("TmpSecretKey")
     @Expose
     private String TmpSecretKey;
 
     /**
-    * Temporary token, you can obtain the temporary key by [GetFederationToken](https://intl.cloud.tencent.com/document/product/1312/48195?from_cn_redirect=1). This field is required if it is a cross-account instance. Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Temporary key Id can be obtained by applying for role assumption temporary access credentials https://www.tencentcloud.com/document/product/1312/48197.?from_cn_redirect=1 Among them, the definition of the role resource RoleArn can be found in the DTS cross-account sync document (https://www.tencentcloud.com/document/product/571/68729?from_cn_redirect=1) Section 4 about role-based definition.</p>
     */
     @SerializedName("TmpToken")
     @Expose
     private String TmpToken;
 
     /**
-    * Whether to enable encrypted transfer (`UnEncrypted`: No; `Encrypted`: Yes). Default value: `UnEncrypted`.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Whether to use encrypted transmission. UnEncrypted means no encrypted transmission, Encrypted means encrypted transmission. Default: UnEncrypted</p>
     */
     @SerializedName("EncryptConn")
     @Expose
     private String EncryptConn;
 
     /**
-    * Network environment of the database. This parameter is required when `AccessType` is `ccn`. Valid values: `UserIDC` (user IDC), `TencentVPC` (Tencent Cloud VPC).
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Network environment of the database. Required when AccessType is Cloud Connect Network (ccn). UserIDC refers to User IDC, and TencentVPC refers to Tencent Cloud VPC.</p>
     */
     @SerializedName("DatabaseNetEnv")
     @Expose
     private String DatabaseNetEnv;
 
     /**
-    * The root account of CCN in the scenario where the database is connected to CCN under another Tencent Cloud account
-Note: This field may return `null`, indicating that no valid values can be obtained.
+    * <p>When the database is an instance of cross-account cloud networking, it refers to the main account to which the CCN belongs.</p>
     */
     @SerializedName("CcnOwnerUin")
     @Expose
     private String CcnOwnerUin;
 
     /**
-    * 
+    * <p>When the database is cynos and it is a sub-database instance within the cynos cluster, this parameter is the ID of the sub-instance.</p>
     */
     @SerializedName("ChildInstanceId")
     @Expose
     private String ChildInstanceId;
 
     /**
-    * 
+    * <p>When the database is cynos and it is a sub-database instance within the cynos cluster, this parameter is the type of the sub-instance, for example: pass ro for a read-only instance, pass rw for a read-write instance.</p>
     */
     @SerializedName("ChildInstanceType")
     @Expose
     private String ChildInstanceType;
 
     /**
-    * 
+    * <p>Shard id of tdsql. Required if the node type is set.</p>
     */
     @SerializedName("SetId")
     @Expose
     private String SetId;
 
     /**
-     * Get Region name, such as `ap-guangzhou`.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Region Region name, such as `ap-guangzhou`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Region English name, for example: ap-guangzhou</p> 
+     * @return Region <p>Region English name, for example: ap-guangzhou</p>
      */
     public String getRegion() {
         return this.Region;
     }
 
     /**
-     * Set Region name, such as `ap-guangzhou`.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Region Region name, such as `ap-guangzhou`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Region English name, for example: ap-guangzhou</p>
+     * @param Region <p>Region English name, for example: ap-guangzhou</p>
      */
     public void setRegion(String Region) {
         this.Region = Region;
     }
 
     /**
-     * Get Node type of TDSQL for MySQL. Enumerated values: `proxy`, `set`.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Role Node type of TDSQL for MySQL. Enumerated values: `proxy`, `set`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Node type. proxy means the node type is host, set means the node type is node. proxy type must be the first item in the array. Source/target configuration for tdsqlmysql type is required.</p> 
+     * @return Role <p>Node type. proxy means the node type is host, set means the node type is node. proxy type must be the first item in the array. Source/target configuration for tdsqlmysql type is required.</p>
      */
     public String getRole() {
         return this.Role;
     }
 
     /**
-     * Set Node type of TDSQL for MySQL. Enumerated values: `proxy`, `set`.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Role Node type of TDSQL for MySQL. Enumerated values: `proxy`, `set`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Node type. proxy means the node type is host, set means the node type is node. proxy type must be the first item in the array. Source/target configuration for tdsqlmysql type is required.</p>
+     * @param Role <p>Node type. proxy means the node type is host, set means the node type is node. proxy type must be the first item in the array. Source/target configuration for tdsqlmysql type is required.</p>
      */
     public void setRole(String Role) {
         this.Role = Role;
     }
 
     /**
-     * Get Database kernel type, which is used to distinguish between different kernels in TDSQL. Valid values: `percona`, `mariadb`, `mysql`.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return DbKernel Database kernel type, which is used to distinguish between different kernels in TDSQL. Valid values: `percona`, `mariadb`, `mysql`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Database kernel type, used in tdsql to differentiate between different kernels: percona, mariadb, mysql. Note that tdsql-C mysql and tdsql PostgreSQL do not need to fill in this field.</p> 
+     * @return DbKernel <p>Database kernel type, used in tdsql to differentiate between different kernels: percona, mariadb, mysql. Note that tdsql-C mysql and tdsql PostgreSQL do not need to fill in this field.</p>
      */
     public String getDbKernel() {
         return this.DbKernel;
     }
 
     /**
-     * Set Database kernel type, which is used to distinguish between different kernels in TDSQL. Valid values: `percona`, `mariadb`, `mysql`.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param DbKernel Database kernel type, which is used to distinguish between different kernels in TDSQL. Valid values: `percona`, `mariadb`, `mysql`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Database kernel type, used in tdsql to differentiate between different kernels: percona, mariadb, mysql. Note that tdsql-C mysql and tdsql PostgreSQL do not need to fill in this field.</p>
+     * @param DbKernel <p>Database kernel type, used in tdsql to differentiate between different kernels: percona, mariadb, mysql. Note that tdsql-C mysql and tdsql PostgreSQL do not need to fill in this field.</p>
      */
     public void setDbKernel(String DbKernel) {
         this.DbKernel = DbKernel;
     }
 
     /**
-     * Get Database instance ID in the format of `cdb-powiqx8q`
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return InstanceId Database instance ID in the format of `cdb-powiqx8q`
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Database instance ID, in the format of: cdb-powiqx8q</p> 
+     * @return InstanceId <p>Database instance ID, in the format of: cdb-powiqx8q</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Database instance ID in the format of `cdb-powiqx8q`
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param InstanceId Database instance ID in the format of `cdb-powiqx8q`
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Database instance ID, in the format of: cdb-powiqx8q</p>
+     * @param InstanceId <p>Database instance ID, in the format of: cdb-powiqx8q</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Instance IP address, which is required if the access type is not `cdb`.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Ip Instance IP address, which is required if the access type is not `cdb`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>IP address of the instance. This item is required when the access type is not cdb.</p> 
+     * @return Ip <p>IP address of the instance. This item is required when the access type is not cdb.</p>
      */
     public String getIp() {
         return this.Ip;
     }
 
     /**
-     * Set Instance IP address, which is required if the access type is not `cdb`.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Ip Instance IP address, which is required if the access type is not `cdb`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>IP address of the instance. This item is required when the access type is not cdb.</p>
+     * @param Ip <p>IP address of the instance. This item is required when the access type is not cdb.</p>
      */
     public void setIp(String Ip) {
         this.Ip = Ip;
     }
 
     /**
-     * Get Instance port, which is required if the access type is not `cdb`.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Port Instance port, which is required if the access type is not `cdb`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Instance port. This item is required when the access type is not cdb.</p> 
+     * @return Port <p>Instance port. This item is required when the access type is not cdb.</p>
      */
     public Long getPort() {
         return this.Port;
     }
 
     /**
-     * Set Instance port, which is required if the access type is not `cdb`.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Port Instance port, which is required if the access type is not `cdb`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Instance port. This item is required when the access type is not cdb.</p>
+     * @param Port <p>Instance port. This item is required when the access type is not cdb.</p>
      */
     public void setPort(Long Port) {
         this.Port = Port;
     }
 
     /**
-     * Get Username, which is required for an instance authenticated by username and password.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return User Username, which is required for an instance authenticated by username and password.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>User name, required for accessing instances that need username and password authentication.</p> 
+     * @return User <p>User name, required for accessing instances that need username and password authentication.</p>
      */
     public String getUser() {
         return this.User;
     }
 
     /**
-     * Set Username, which is required for an instance authenticated by username and password.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param User Username, which is required for an instance authenticated by username and password.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>User name, required for accessing instances that need username and password authentication.</p>
+     * @param User <p>User name, required for accessing instances that need username and password authentication.</p>
      */
     public void setUser(String User) {
         this.User = User;
     }
 
     /**
-     * Get Password, which is required for an instance authenticated by username and password.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Password Password, which is required for an instance authenticated by username and password.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Password is required for accessing instances that need username and password authentication.</p> 
+     * @return Password <p>Password is required for accessing instances that need username and password authentication.</p>
      */
     public String getPassword() {
         return this.Password;
     }
 
     /**
-     * Set Password, which is required for an instance authenticated by username and password.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Password Password, which is required for an instance authenticated by username and password.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Password is required for accessing instances that need username and password authentication.</p>
+     * @param Password <p>Password is required for accessing instances that need username and password authentication.</p>
      */
     public void setPassword(String Password) {
         this.Password = Password;
     }
 
     /**
-     * Get Database name, which is required if the database type is `cdwpg`.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return DbName Database name, which is required if the database type is `cdwpg`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Database name, required when the database is cdwpg</p> 
+     * @return DbName <p>Database name, required when the database is cdwpg</p>
      */
     public String getDbName() {
         return this.DbName;
     }
 
     /**
-     * Set Database name, which is required if the database type is `cdwpg`.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param DbName Database name, which is required if the database type is `cdwpg`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Database name, required when the database is cdwpg</p>
+     * @param DbName <p>Database name, required when the database is cdwpg</p>
      */
     public void setDbName(String DbName) {
         this.DbName = DbName;
     }
 
     /**
-     * Get VPC ID in the format of `vpc-92jblxto`, which is required if the access type is `vpc`, `dcg`, or `vpncloud`.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return VpcId VPC ID in the format of `vpc-92jblxto`, which is required if the access type is `vpc`, `dcg`, or `vpncloud`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Private network ID. This item is required for private network, Direct Connect, and VPN access methods, in the format of vpc-92jblxto.</p> 
+     * @return VpcId <p>Private network ID. This item is required for private network, Direct Connect, and VPN access methods, in the format of vpc-92jblxto.</p>
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set VPC ID in the format of `vpc-92jblxto`, which is required if the access type is `vpc`, `dcg`, or `vpncloud`.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param VpcId VPC ID in the format of `vpc-92jblxto`, which is required if the access type is `vpc`, `dcg`, or `vpncloud`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Private network ID. This item is required for private network, Direct Connect, and VPN access methods, in the format of vpc-92jblxto.</p>
+     * @param VpcId <p>Private network ID. This item is required for private network, Direct Connect, and VPN access methods, in the format of vpc-92jblxto.</p>
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get ID of the subnet in the VPC in the format of `subnet-3paxmkdz`, which is required if the access type is `vpc`, `dcg`, or `vpncloud`.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return SubnetId ID of the subnet in the VPC in the format of `subnet-3paxmkdz`, which is required if the access type is `vpc`, `dcg`, or `vpncloud`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Subnet ID under the private network. This item is required for private network, Direct Connect, and VPN access methods, in the format of subnet-3paxmkdz.</p> 
+     * @return SubnetId <p>Subnet ID under the private network. This item is required for private network, Direct Connect, and VPN access methods, in the format of subnet-3paxmkdz.</p>
      */
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set ID of the subnet in the VPC in the format of `subnet-3paxmkdz`, which is required if the access type is `vpc`, `dcg`, or `vpncloud`.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param SubnetId ID of the subnet in the VPC in the format of `subnet-3paxmkdz`, which is required if the access type is `vpc`, `dcg`, or `vpncloud`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Subnet ID under the private network. This item is required for private network, Direct Connect, and VPN access methods, in the format of subnet-3paxmkdz.</p>
+     * @param SubnetId <p>Subnet ID under the private network. This item is required for private network, Direct Connect, and VPN access methods, in the format of subnet-3paxmkdz.</p>
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
     }
 
     /**
-     * Get Short CVM instance ID in the format of `ins-olgl39y8`, which is required if the access type is `cvm`. It is the same as the instance ID displayed in the CVM console.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return CvmInstanceId Short CVM instance ID in the format of `ins-olgl39y8`, which is required if the access type is `cvm`. It is the same as the instance ID displayed in the CVM console.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>CVM instance short ID, in the format of: ins-olgl39y8, is identical to the instance ID displayed on the cloud server console page. If it is a CVM self-created instance, this field is required.</p> 
+     * @return CvmInstanceId <p>CVM instance short ID, in the format of: ins-olgl39y8, is identical to the instance ID displayed on the cloud server console page. If it is a CVM self-created instance, this field is required.</p>
      */
     public String getCvmInstanceId() {
         return this.CvmInstanceId;
     }
 
     /**
-     * Set Short CVM instance ID in the format of `ins-olgl39y8`, which is required if the access type is `cvm`. It is the same as the instance ID displayed in the CVM console.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param CvmInstanceId Short CVM instance ID in the format of `ins-olgl39y8`, which is required if the access type is `cvm`. It is the same as the instance ID displayed in the CVM console.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>CVM instance short ID, in the format of: ins-olgl39y8, is identical to the instance ID displayed on the cloud server console page. If it is a CVM self-created instance, this field is required.</p>
+     * @param CvmInstanceId <p>CVM instance short ID, in the format of: ins-olgl39y8, is identical to the instance ID displayed on the cloud server console page. If it is a CVM self-created instance, this field is required.</p>
      */
     public void setCvmInstanceId(String CvmInstanceId) {
         this.CvmInstanceId = CvmInstanceId;
     }
 
     /**
-     * Get Direct Connect gateway ID in the format of `dcg-0rxtqqxb`, which is required if the access type is `dcg`.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return UniqDcgId Direct Connect gateway ID in the format of `dcg-0rxtqqxb`, which is required if the access type is `dcg`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Direct Connect gateway ID. This item is required for dedicated access type, in the format of: dcg-0rxtqqxb</p> 
+     * @return UniqDcgId <p>Direct Connect gateway ID. This item is required for dedicated access type, in the format of: dcg-0rxtqqxb</p>
      */
     public String getUniqDcgId() {
         return this.UniqDcgId;
     }
 
     /**
-     * Set Direct Connect gateway ID in the format of `dcg-0rxtqqxb`, which is required if the access type is `dcg`.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param UniqDcgId Direct Connect gateway ID in the format of `dcg-0rxtqqxb`, which is required if the access type is `dcg`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Direct Connect gateway ID. This item is required for dedicated access type, in the format of: dcg-0rxtqqxb</p>
+     * @param UniqDcgId <p>Direct Connect gateway ID. This item is required for dedicated access type, in the format of: dcg-0rxtqqxb</p>
      */
     public void setUniqDcgId(String UniqDcgId) {
         this.UniqDcgId = UniqDcgId;
     }
 
     /**
-     * Get VPN gateway ID in the format of `vpngw-9ghexg7q`, which is required if the access type is `vpncloud`.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return UniqVpnGwId VPN gateway ID in the format of `vpngw-9ghexg7q`, which is required if the access type is `vpncloud`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>VPN Gateway ID. This item is required for VPN access type, in the format of vpngw-9ghexg7q.</p> 
+     * @return UniqVpnGwId <p>VPN Gateway ID. This item is required for VPN access type, in the format of vpngw-9ghexg7q.</p>
      */
     public String getUniqVpnGwId() {
         return this.UniqVpnGwId;
     }
 
     /**
-     * Set VPN gateway ID in the format of `vpngw-9ghexg7q`, which is required if the access type is `vpncloud`.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param UniqVpnGwId VPN gateway ID in the format of `vpngw-9ghexg7q`, which is required if the access type is `vpncloud`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>VPN Gateway ID. This item is required for VPN access type, in the format of vpngw-9ghexg7q.</p>
+     * @param UniqVpnGwId <p>VPN Gateway ID. This item is required for VPN access type, in the format of vpngw-9ghexg7q.</p>
      */
     public void setUniqVpnGwId(String UniqVpnGwId) {
         this.UniqVpnGwId = UniqVpnGwId;
     }
 
     /**
-     * Get CCN instance ID in the format of `ccn-afp6kltc`, which is required if the access type is `ccn`.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return CcnId CCN instance ID in the format of `ccn-afp6kltc`, which is required if the access type is `ccn`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Cloud Connect Network ID. This item is required for the CCN access type, for example: ccn-afp6kltc</p> 
+     * @return CcnId <p>Cloud Connect Network ID. This item is required for the CCN access type, for example: ccn-afp6kltc</p>
      */
     public String getCcnId() {
         return this.CcnId;
     }
 
     /**
-     * Set CCN instance ID in the format of `ccn-afp6kltc`, which is required if the access type is `ccn`.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param CcnId CCN instance ID in the format of `ccn-afp6kltc`, which is required if the access type is `ccn`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Cloud Connect Network ID. This item is required for the CCN access type, for example: ccn-afp6kltc</p>
+     * @param CcnId <p>Cloud Connect Network ID. This item is required for the CCN access type, for example: ccn-afp6kltc</p>
      */
     public void setCcnId(String CcnId) {
         this.CcnId = CcnId;
     }
 
     /**
-     * Get Cloud vendor type. For Alibaba Cloud ApsaraDB for RDS instances, enter `aliyun`; otherwise, enter `others`. Default value: `others`.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Supplier Cloud vendor type. For Alibaba Cloud ApsaraDB for RDS instances, enter `aliyun`; otherwise, enter `others`. Default value: `others`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Cloud vendor type. For RDS instances, fill in aliyun. In other cases, fill in others. Default is others.</p> 
+     * @return Supplier <p>Cloud vendor type. For RDS instances, fill in aliyun. In other cases, fill in others. Default is others.</p>
      */
     public String getSupplier() {
         return this.Supplier;
     }
 
     /**
-     * Set Cloud vendor type. For Alibaba Cloud ApsaraDB for RDS instances, enter `aliyun`; otherwise, enter `others`. Default value: `others`.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Supplier Cloud vendor type. For Alibaba Cloud ApsaraDB for RDS instances, enter `aliyun`; otherwise, enter `others`. Default value: `others`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Cloud vendor type. For RDS instances, fill in aliyun. In other cases, fill in others. Default is others.</p>
+     * @param Supplier <p>Cloud vendor type. For RDS instances, fill in aliyun. In other cases, fill in others. Default is others.</p>
      */
     public void setSupplier(String Supplier) {
         this.Supplier = Supplier;
     }
 
     /**
-     * Get Database version in the format of `5.6` or `5.7`, which takes effect only if the instance is an RDS instance. Default value: `5.6`.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return EngineVersion Database version in the format of `5.6` or `5.7`, which takes effect only if the instance is an RDS instance. Default value: `5.6`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Database version. Valid only for RDS instances, ignored for other instances, in the format of 5.6 or 5.7, defaults to 5.6.</p> 
+     * @return EngineVersion <p>Database version. Valid only for RDS instances, ignored for other instances, in the format of 5.6 or 5.7, defaults to 5.6.</p>
      */
     public String getEngineVersion() {
         return this.EngineVersion;
     }
 
     /**
-     * Set Database version in the format of `5.6` or `5.7`, which takes effect only if the instance is an RDS instance. Default value: `5.6`.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param EngineVersion Database version in the format of `5.6` or `5.7`, which takes effect only if the instance is an RDS instance. Default value: `5.6`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Database version. Valid only for RDS instances, ignored for other instances, in the format of 5.6 or 5.7, defaults to 5.6.</p>
+     * @param EngineVersion <p>Database version. Valid only for RDS instances, ignored for other instances, in the format of 5.6 or 5.7, defaults to 5.6.</p>
      */
     public void setEngineVersion(String EngineVersion) {
         this.EngineVersion = EngineVersion;
     }
 
     /**
-     * Get Instance account, which is required if the operation is performed across accounts.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Account Instance account, which is required if the operation is performed across accounts.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Account of the instance. This item is required if it is a cross-account instance.</p> 
+     * @return Account <p>Account of the instance. This item is required if it is a cross-account instance.</p>
      */
     public String getAccount() {
         return this.Account;
     }
 
     /**
-     * Set Instance account, which is required if the operation is performed across accounts.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Account Instance account, which is required if the operation is performed across accounts.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Account of the instance. This item is required if it is a cross-account instance.</p>
+     * @param Account <p>Account of the instance. This item is required if it is a cross-account instance.</p>
      */
     public void setAccount(String Account) {
         this.Account = Account;
     }
 
     /**
-     * Get The account to which the resource belongs. Valid values: empty or `self` (the current account); `other` (another account).
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return AccountMode The account to which the resource belongs. Valid values: empty or `self` (the current account); `other` (another account).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Associated account is empty, self (means resources within this account), or other (means cross-account resources).</p> 
+     * @return AccountMode <p>Associated account is empty, self (means resources within this account), or other (means cross-account resources).</p>
      */
     public String getAccountMode() {
         return this.AccountMode;
     }
 
     /**
-     * Set The account to which the resource belongs. Valid values: empty or `self` (the current account); `other` (another account).
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param AccountMode The account to which the resource belongs. Valid values: empty or `self` (the current account); `other` (another account).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Associated account is empty, self (means resources within this account), or other (means cross-account resources).</p>
+     * @param AccountMode <p>Associated account is empty, self (means resources within this account), or other (means cross-account resources).</p>
      */
     public void setAccountMode(String AccountMode) {
         this.AccountMode = AccountMode;
     }
 
     /**
-     * Get The role used for cross-account sync, which can contain [a-zA-Z0-9\-\_]+ and is required if the operation is performed across accounts.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return AccountRole The role used for cross-account sync, which can contain [a-zA-Z0-9\-\_]+ and is required if the operation is performed across accounts.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Role for cross-account sync, only allow [a-zA-Z0-9-_]+. This item is required if it is a cross-account instance.</p> 
+     * @return AccountRole <p>Role for cross-account sync, only allow [a-zA-Z0-9-_]+. This item is required if it is a cross-account instance.</p>
      */
     public String getAccountRole() {
         return this.AccountRole;
     }
 
     /**
-     * Set The role used for cross-account sync, which can contain [a-zA-Z0-9\-\_]+ and is required if the operation is performed across accounts.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param AccountRole The role used for cross-account sync, which can contain [a-zA-Z0-9\-\_]+ and is required if the operation is performed across accounts.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Role for cross-account sync, only allow [a-zA-Z0-9-_]+. This item is required if it is a cross-account instance.</p>
+     * @param AccountRole <p>Role for cross-account sync, only allow [a-zA-Z0-9-_]+. This item is required if it is a cross-account instance.</p>
      */
     public void setAccountRole(String AccountRole) {
         this.AccountRole = AccountRole;
     }
 
     /**
-     * Get External role ID
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return RoleExternalId External role ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>External role id</p> 
+     * @return RoleExternalId <p>External role id</p>
      */
     public String getRoleExternalId() {
         return this.RoleExternalId;
     }
 
     /**
-     * Set External role ID
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param RoleExternalId External role ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>External role id</p>
+     * @param RoleExternalId <p>External role id</p>
      */
     public void setRoleExternalId(String RoleExternalId) {
         this.RoleExternalId = RoleExternalId;
     }
 
     /**
-     * Get Temporary SecretId, you can obtain the temporary key by [GetFederationToken](https://intl.cloud.tencent.com/document/product/1312/48195?from_cn_redirect=1). This field is required if it is a cross-account instance.Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TmpSecretId Temporary SecretId, you can obtain the temporary key by [GetFederationToken](https://intl.cloud.tencent.com/document/product/1312/48195?from_cn_redirect=1). This field is required if it is a cross-account instance.Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Temporary key Id can be obtained by applying for role assumption temporary access credentials https://www.tencentcloud.com/document/product/1312/48197.?from_cn_redirect=1 Among them, the definition of the role resource RoleArn can be found in the DTS cross-account sync document (https://www.tencentcloud.com/document/product/571/68729?from_cn_redirect=1) Section 4 about role-based definition.</p> 
+     * @return TmpSecretId <p>Temporary key Id can be obtained by applying for role assumption temporary access credentials https://www.tencentcloud.com/document/product/1312/48197.?from_cn_redirect=1 Among them, the definition of the role resource RoleArn can be found in the DTS cross-account sync document (https://www.tencentcloud.com/document/product/571/68729?from_cn_redirect=1) Section 4 about role-based definition.</p>
      */
     public String getTmpSecretId() {
         return this.TmpSecretId;
     }
 
     /**
-     * Set Temporary SecretId, you can obtain the temporary key by [GetFederationToken](https://intl.cloud.tencent.com/document/product/1312/48195?from_cn_redirect=1). This field is required if it is a cross-account instance.Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TmpSecretId Temporary SecretId, you can obtain the temporary key by [GetFederationToken](https://intl.cloud.tencent.com/document/product/1312/48195?from_cn_redirect=1). This field is required if it is a cross-account instance.Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Temporary key Id can be obtained by applying for role assumption temporary access credentials https://www.tencentcloud.com/document/product/1312/48197.?from_cn_redirect=1 Among them, the definition of the role resource RoleArn can be found in the DTS cross-account sync document (https://www.tencentcloud.com/document/product/571/68729?from_cn_redirect=1) Section 4 about role-based definition.</p>
+     * @param TmpSecretId <p>Temporary key Id can be obtained by applying for role assumption temporary access credentials https://www.tencentcloud.com/document/product/1312/48197.?from_cn_redirect=1 Among them, the definition of the role resource RoleArn can be found in the DTS cross-account sync document (https://www.tencentcloud.com/document/product/571/68729?from_cn_redirect=1) Section 4 about role-based definition.</p>
      */
     public void setTmpSecretId(String TmpSecretId) {
         this.TmpSecretId = TmpSecretId;
     }
 
     /**
-     * Get Temporary SecretKey, you can obtain the temporary key by [GetFederationToken](https://intl.cloud.tencent.com/document/product/1312/48195?from_cn_redirect=1). This field is required if it is a cross-account instance.Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TmpSecretKey Temporary SecretKey, you can obtain the temporary key by [GetFederationToken](https://intl.cloud.tencent.com/document/product/1312/48195?from_cn_redirect=1). This field is required if it is a cross-account instance.Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Temporary key Id can be obtained by applying for role assumption temporary access credentials at https://www.tencentcloud.com/document/product/1312/48197.?from_cn_redirect=1 Among them, the definition of the role resource RoleArn can be found in the DTS cross-account sync document (https://www.tencentcloud.com/document/product/571/68729?from_cn_redirect=1) Section 4 about role definition.</p> 
+     * @return TmpSecretKey <p>Temporary key Id can be obtained by applying for role assumption temporary access credentials at https://www.tencentcloud.com/document/product/1312/48197.?from_cn_redirect=1 Among them, the definition of the role resource RoleArn can be found in the DTS cross-account sync document (https://www.tencentcloud.com/document/product/571/68729?from_cn_redirect=1) Section 4 about role definition.</p>
      */
     public String getTmpSecretKey() {
         return this.TmpSecretKey;
     }
 
     /**
-     * Set Temporary SecretKey, you can obtain the temporary key by [GetFederationToken](https://intl.cloud.tencent.com/document/product/1312/48195?from_cn_redirect=1). This field is required if it is a cross-account instance.Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TmpSecretKey Temporary SecretKey, you can obtain the temporary key by [GetFederationToken](https://intl.cloud.tencent.com/document/product/1312/48195?from_cn_redirect=1). This field is required if it is a cross-account instance.Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Temporary key Id can be obtained by applying for role assumption temporary access credentials at https://www.tencentcloud.com/document/product/1312/48197.?from_cn_redirect=1 Among them, the definition of the role resource RoleArn can be found in the DTS cross-account sync document (https://www.tencentcloud.com/document/product/571/68729?from_cn_redirect=1) Section 4 about role definition.</p>
+     * @param TmpSecretKey <p>Temporary key Id can be obtained by applying for role assumption temporary access credentials at https://www.tencentcloud.com/document/product/1312/48197.?from_cn_redirect=1 Among them, the definition of the role resource RoleArn can be found in the DTS cross-account sync document (https://www.tencentcloud.com/document/product/571/68729?from_cn_redirect=1) Section 4 about role definition.</p>
      */
     public void setTmpSecretKey(String TmpSecretKey) {
         this.TmpSecretKey = TmpSecretKey;
     }
 
     /**
-     * Get Temporary token, you can obtain the temporary key by [GetFederationToken](https://intl.cloud.tencent.com/document/product/1312/48195?from_cn_redirect=1). This field is required if it is a cross-account instance. Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TmpToken Temporary token, you can obtain the temporary key by [GetFederationToken](https://intl.cloud.tencent.com/document/product/1312/48195?from_cn_redirect=1). This field is required if it is a cross-account instance. Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Temporary key Id can be obtained by applying for role assumption temporary access credentials https://www.tencentcloud.com/document/product/1312/48197.?from_cn_redirect=1 Among them, the definition of the role resource RoleArn can be found in the DTS cross-account sync document (https://www.tencentcloud.com/document/product/571/68729?from_cn_redirect=1) Section 4 about role-based definition.</p> 
+     * @return TmpToken <p>Temporary key Id can be obtained by applying for role assumption temporary access credentials https://www.tencentcloud.com/document/product/1312/48197.?from_cn_redirect=1 Among them, the definition of the role resource RoleArn can be found in the DTS cross-account sync document (https://www.tencentcloud.com/document/product/571/68729?from_cn_redirect=1) Section 4 about role-based definition.</p>
      */
     public String getTmpToken() {
         return this.TmpToken;
     }
 
     /**
-     * Set Temporary token, you can obtain the temporary key by [GetFederationToken](https://intl.cloud.tencent.com/document/product/1312/48195?from_cn_redirect=1). This field is required if it is a cross-account instance. Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TmpToken Temporary token, you can obtain the temporary key by [GetFederationToken](https://intl.cloud.tencent.com/document/product/1312/48195?from_cn_redirect=1). This field is required if it is a cross-account instance. Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Temporary key Id can be obtained by applying for role assumption temporary access credentials https://www.tencentcloud.com/document/product/1312/48197.?from_cn_redirect=1 Among them, the definition of the role resource RoleArn can be found in the DTS cross-account sync document (https://www.tencentcloud.com/document/product/571/68729?from_cn_redirect=1) Section 4 about role-based definition.</p>
+     * @param TmpToken <p>Temporary key Id can be obtained by applying for role assumption temporary access credentials https://www.tencentcloud.com/document/product/1312/48197.?from_cn_redirect=1 Among them, the definition of the role resource RoleArn can be found in the DTS cross-account sync document (https://www.tencentcloud.com/document/product/571/68729?from_cn_redirect=1) Section 4 about role-based definition.</p>
      */
     public void setTmpToken(String TmpToken) {
         this.TmpToken = TmpToken;
     }
 
     /**
-     * Get Whether to enable encrypted transfer (`UnEncrypted`: No; `Encrypted`: Yes). Default value: `UnEncrypted`.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return EncryptConn Whether to enable encrypted transfer (`UnEncrypted`: No; `Encrypted`: Yes). Default value: `UnEncrypted`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Whether to use encrypted transmission. UnEncrypted means no encrypted transmission, Encrypted means encrypted transmission. Default: UnEncrypted</p> 
+     * @return EncryptConn <p>Whether to use encrypted transmission. UnEncrypted means no encrypted transmission, Encrypted means encrypted transmission. Default: UnEncrypted</p>
      */
     public String getEncryptConn() {
         return this.EncryptConn;
     }
 
     /**
-     * Set Whether to enable encrypted transfer (`UnEncrypted`: No; `Encrypted`: Yes). Default value: `UnEncrypted`.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param EncryptConn Whether to enable encrypted transfer (`UnEncrypted`: No; `Encrypted`: Yes). Default value: `UnEncrypted`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Whether to use encrypted transmission. UnEncrypted means no encrypted transmission, Encrypted means encrypted transmission. Default: UnEncrypted</p>
+     * @param EncryptConn <p>Whether to use encrypted transmission. UnEncrypted means no encrypted transmission, Encrypted means encrypted transmission. Default: UnEncrypted</p>
      */
     public void setEncryptConn(String EncryptConn) {
         this.EncryptConn = EncryptConn;
     }
 
     /**
-     * Get Network environment of the database. This parameter is required when `AccessType` is `ccn`. Valid values: `UserIDC` (user IDC), `TencentVPC` (Tencent Cloud VPC).
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return DatabaseNetEnv Network environment of the database. This parameter is required when `AccessType` is `ccn`. Valid values: `UserIDC` (user IDC), `TencentVPC` (Tencent Cloud VPC).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Network environment of the database. Required when AccessType is Cloud Connect Network (ccn). UserIDC refers to User IDC, and TencentVPC refers to Tencent Cloud VPC.</p> 
+     * @return DatabaseNetEnv <p>Network environment of the database. Required when AccessType is Cloud Connect Network (ccn). UserIDC refers to User IDC, and TencentVPC refers to Tencent Cloud VPC.</p>
      */
     public String getDatabaseNetEnv() {
         return this.DatabaseNetEnv;
     }
 
     /**
-     * Set Network environment of the database. This parameter is required when `AccessType` is `ccn`. Valid values: `UserIDC` (user IDC), `TencentVPC` (Tencent Cloud VPC).
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param DatabaseNetEnv Network environment of the database. This parameter is required when `AccessType` is `ccn`. Valid values: `UserIDC` (user IDC), `TencentVPC` (Tencent Cloud VPC).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Network environment of the database. Required when AccessType is Cloud Connect Network (ccn). UserIDC refers to User IDC, and TencentVPC refers to Tencent Cloud VPC.</p>
+     * @param DatabaseNetEnv <p>Network environment of the database. Required when AccessType is Cloud Connect Network (ccn). UserIDC refers to User IDC, and TencentVPC refers to Tencent Cloud VPC.</p>
      */
     public void setDatabaseNetEnv(String DatabaseNetEnv) {
         this.DatabaseNetEnv = DatabaseNetEnv;
     }
 
     /**
-     * Get The root account of CCN in the scenario where the database is connected to CCN under another Tencent Cloud account
-Note: This field may return `null`, indicating that no valid values can be obtained. 
-     * @return CcnOwnerUin The root account of CCN in the scenario where the database is connected to CCN under another Tencent Cloud account
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * Get <p>When the database is an instance of cross-account cloud networking, it refers to the main account to which the CCN belongs.</p> 
+     * @return CcnOwnerUin <p>When the database is an instance of cross-account cloud networking, it refers to the main account to which the CCN belongs.</p>
      */
     public String getCcnOwnerUin() {
         return this.CcnOwnerUin;
     }
 
     /**
-     * Set The root account of CCN in the scenario where the database is connected to CCN under another Tencent Cloud account
-Note: This field may return `null`, indicating that no valid values can be obtained.
-     * @param CcnOwnerUin The root account of CCN in the scenario where the database is connected to CCN under another Tencent Cloud account
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * Set <p>When the database is an instance of cross-account cloud networking, it refers to the main account to which the CCN belongs.</p>
+     * @param CcnOwnerUin <p>When the database is an instance of cross-account cloud networking, it refers to the main account to which the CCN belongs.</p>
      */
     public void setCcnOwnerUin(String CcnOwnerUin) {
         this.CcnOwnerUin = CcnOwnerUin;
     }
 
     /**
-     * Get  
-     * @return ChildInstanceId 
+     * Get <p>When the database is cynos and it is a sub-database instance within the cynos cluster, this parameter is the ID of the sub-instance.</p> 
+     * @return ChildInstanceId <p>When the database is cynos and it is a sub-database instance within the cynos cluster, this parameter is the ID of the sub-instance.</p>
      */
     public String getChildInstanceId() {
         return this.ChildInstanceId;
     }
 
     /**
-     * Set 
-     * @param ChildInstanceId 
+     * Set <p>When the database is cynos and it is a sub-database instance within the cynos cluster, this parameter is the ID of the sub-instance.</p>
+     * @param ChildInstanceId <p>When the database is cynos and it is a sub-database instance within the cynos cluster, this parameter is the ID of the sub-instance.</p>
      */
     public void setChildInstanceId(String ChildInstanceId) {
         this.ChildInstanceId = ChildInstanceId;
     }
 
     /**
-     * Get  
-     * @return ChildInstanceType 
+     * Get <p>When the database is cynos and it is a sub-database instance within the cynos cluster, this parameter is the type of the sub-instance, for example: pass ro for a read-only instance, pass rw for a read-write instance.</p> 
+     * @return ChildInstanceType <p>When the database is cynos and it is a sub-database instance within the cynos cluster, this parameter is the type of the sub-instance, for example: pass ro for a read-only instance, pass rw for a read-write instance.</p>
      */
     public String getChildInstanceType() {
         return this.ChildInstanceType;
     }
 
     /**
-     * Set 
-     * @param ChildInstanceType 
+     * Set <p>When the database is cynos and it is a sub-database instance within the cynos cluster, this parameter is the type of the sub-instance, for example: pass ro for a read-only instance, pass rw for a read-write instance.</p>
+     * @param ChildInstanceType <p>When the database is cynos and it is a sub-database instance within the cynos cluster, this parameter is the type of the sub-instance, for example: pass ro for a read-only instance, pass rw for a read-write instance.</p>
      */
     public void setChildInstanceType(String ChildInstanceType) {
         this.ChildInstanceType = ChildInstanceType;
     }
 
     /**
-     * Get  
-     * @return SetId 
+     * Get <p>Shard id of tdsql. Required if the node type is set.</p> 
+     * @return SetId <p>Shard id of tdsql. Required if the node type is set.</p>
      */
     public String getSetId() {
         return this.SetId;
     }
 
     /**
-     * Set 
-     * @param SetId 
+     * Set <p>Shard id of tdsql. Required if the node type is set.</p>
+     * @param SetId <p>Shard id of tdsql. Required if the node type is set.</p>
      */
     public void setSetId(String SetId) {
         this.SetId = SetId;

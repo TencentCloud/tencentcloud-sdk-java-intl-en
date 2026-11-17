@@ -24,28 +24,23 @@ import java.util.HashMap;
 public class OnlineDDL extends AbstractModel {
 
     /**
-    * Status
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Status. Valid values: ON (enable) and OFF (disable).
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-     * Get Status
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Status Status
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Status. Valid values: ON (enable) and OFF (disable). 
+     * @return Status Status. Valid values: ON (enable) and OFF (disable).
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Status
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Status Status
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Status. Valid values: ON (enable) and OFF (disable).
+     * @param Status Status. Valid values: ON (enable) and OFF (disable).
      */
     public void setStatus(String Status) {
         this.Status = Status;

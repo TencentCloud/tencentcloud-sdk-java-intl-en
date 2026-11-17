@@ -31,7 +31,7 @@ public class ComponentDetailItem extends AbstractModel {
     private String Name;
 
     /**
-    * cache hit version
+    * Hit version
     */
     @SerializedName("Version")
     @Expose
@@ -68,16 +68,16 @@ public class ComponentDetailItem extends AbstractModel {
     }
 
     /**
-     * Get cache hit version 
-     * @return Version cache hit version
+     * Get Hit version 
+     * @return Version Hit version
      */
     public String getVersion() {
         return this.Version;
     }
 
     /**
-     * Set cache hit version
-     * @param Version cache hit version
+     * Set Hit version
+     * @param Version Hit version
      */
     public void setVersion(String Version) {
         this.Version = Version;

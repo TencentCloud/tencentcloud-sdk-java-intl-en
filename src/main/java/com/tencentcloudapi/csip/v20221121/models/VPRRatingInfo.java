@@ -26,8 +26,8 @@ public class VPRRatingInfo extends AbstractModel {
     /**
     * VPR rating result
 Enumeration value:
-URGENT: Immediate repair
-SUGGESTED: Suggested repairs
+URGENT: immediate repair
+SUGGESTED repairs
 DEFERRABLE: Deferrable repair
     */
     @SerializedName("Result")
@@ -42,7 +42,7 @@ DEFERRABLE: Deferrable repair
     private String Remark;
 
     /**
-    * List of stage rating details
+    * List of phased rating details
     */
     @SerializedName("Stage")
     @Expose
@@ -51,13 +51,13 @@ DEFERRABLE: Deferrable repair
     /**
      * Get VPR rating result
 Enumeration value:
-URGENT: Immediate repair
-SUGGESTED: Suggested repairs
+URGENT: immediate repair
+SUGGESTED repairs
 DEFERRABLE: Deferrable repair 
      * @return Result VPR rating result
 Enumeration value:
-URGENT: Immediate repair
-SUGGESTED: Suggested repairs
+URGENT: immediate repair
+SUGGESTED repairs
 DEFERRABLE: Deferrable repair
      */
     public String getResult() {
@@ -67,13 +67,13 @@ DEFERRABLE: Deferrable repair
     /**
      * Set VPR rating result
 Enumeration value:
-URGENT: Immediate repair
-SUGGESTED: Suggested repairs
+URGENT: immediate repair
+SUGGESTED repairs
 DEFERRABLE: Deferrable repair
      * @param Result VPR rating result
 Enumeration value:
-URGENT: Immediate repair
-SUGGESTED: Suggested repairs
+URGENT: immediate repair
+SUGGESTED repairs
 DEFERRABLE: Deferrable repair
      */
     public void setResult(String Result) {
@@ -97,16 +97,16 @@ DEFERRABLE: Deferrable repair
     }
 
     /**
-     * Get List of stage rating details 
-     * @return Stage List of stage rating details
+     * Get List of phased rating details 
+     * @return Stage List of phased rating details
      */
     public VPRRatingStage [] getStage() {
         return this.Stage;
     }
 
     /**
-     * Set List of stage rating details
-     * @param Stage List of stage rating details
+     * Set List of phased rating details
+     * @param Stage List of phased rating details
      */
     public void setStage(VPRRatingStage [] Stage) {
         this.Stage = Stage;

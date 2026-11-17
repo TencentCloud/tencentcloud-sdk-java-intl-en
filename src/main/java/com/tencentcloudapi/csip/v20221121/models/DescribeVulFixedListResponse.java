@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeVulFixedListResponse extends AbstractModel {
 
     /**
-    * <p>List of fixed vulnerabilities</p>
+    * <p>Fixed vulnerability list</p>
     */
     @SerializedName("Data")
     @Expose
@@ -45,16 +45,16 @@ public class DescribeVulFixedListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get <p>List of fixed vulnerabilities</p> 
-     * @return Data <p>List of fixed vulnerabilities</p>
+     * Get <p>Fixed vulnerability list</p> 
+     * @return Data <p>Fixed vulnerability list</p>
      */
     public VulFixedItem [] getData() {
         return this.Data;
     }
 
     /**
-     * Set <p>List of fixed vulnerabilities</p>
-     * @param Data <p>List of fixed vulnerabilities</p>
+     * Set <p>Fixed vulnerability list</p>
+     * @param Data <p>Fixed vulnerability list</p>
      */
     public void setData(VulFixedItem [] Data) {
         this.Data = Data;

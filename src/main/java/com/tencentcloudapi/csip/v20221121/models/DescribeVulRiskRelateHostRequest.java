@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeVulRiskRelateHostRequest extends AbstractModel {
 
     /**
-    * <p>p>KB patch internal ID (kb_info.id)</p>
+    * <p>KB patch internal ID (kb_info.id)</p>
     */
     @SerializedName("KBID")
     @Expose
@@ -45,51 +45,51 @@ public class DescribeVulRiskRelateHostRequest extends AbstractModel {
     private String [] MemberId;
 
     /**
-    * <p>Filter conditions array. Multi-condition with each other is AND relationship<br>Supported Filter.Name:<br>Keyword: Keyword fuzzy search (fuzzy matching for host name/IP/InstanceID)<br>CloudTag: Cloud tag<br>Tag: Security center tag</p>
+    * <p>Criteria array, multi-condition uses AND relationship with each other<br>Supported Filter.Name:<br>Keyword: Keyword fuzzy search (fuzzy matching for host name/IP/InstanceID)<br>CloudTag: Cloud tag<br>Tag: Security center tag</p>
     */
     @SerializedName("Filters")
     @Expose
     private Filters [] Filters;
 
     /**
-    * <p>Number of results per page<br>Value ranges from 1 to 100<br>Default value: 10</p>
+    * <p>Number of results per page<br>Value range: [1, 100]<br>Default value: 10</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * <p>Paging offset<br>Value ranges from 0 to +∞<br>Default value: 0</p>
+    * <p>Paging offset<br>Value range: [0, positive infinity)<br>Default value: 0</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * <p>Sorting order<br>Enumeration value:<br>ASC: Ascending<br>DESC: Descending order<br>Default value: DESC</p>
+    * <p>Sorting order<br>Enumeration values:<br>ASC: ascending<br>DESC: descending<br>Default value: DESC</p>
     */
     @SerializedName("Order")
     @Expose
     private String Order;
 
     /**
-    * <p>Sorting field<br>Enumeration value:<br>LatestScanTime: Latest scan time<br>VPRLevel: VPR rating<br>RiskStatus: Remediation status<br>Default value: LatestScanTime</p>
+    * <p>Sorting field<br>Enumeration values:<br>LatestScanTime: Latest scan time<br>VPRLevel: VPR rating<br>RiskStatus: Remediation status<br>Default value: LatestScanTime</p>
     */
     @SerializedName("By")
     @Expose
     private String By;
 
     /**
-     * Get <p>p>KB patch internal ID (kb_info.id)</p> 
-     * @return KBID <p>p>KB patch internal ID (kb_info.id)</p>
+     * Get <p>KB patch internal ID (kb_info.id)</p> 
+     * @return KBID <p>KB patch internal ID (kb_info.id)</p>
      */
     public Long getKBID() {
         return this.KBID;
     }
 
     /**
-     * Set <p>p>KB patch internal ID (kb_info.id)</p>
-     * @param KBID <p>p>KB patch internal ID (kb_info.id)</p>
+     * Set <p>KB patch internal ID (kb_info.id)</p>
+     * @param KBID <p>KB patch internal ID (kb_info.id)</p>
      */
     public void setKBID(Long KBID) {
         this.KBID = KBID;
@@ -128,80 +128,80 @@ public class DescribeVulRiskRelateHostRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>Filter conditions array. Multi-condition with each other is AND relationship<br>Supported Filter.Name:<br>Keyword: Keyword fuzzy search (fuzzy matching for host name/IP/InstanceID)<br>CloudTag: Cloud tag<br>Tag: Security center tag</p> 
-     * @return Filters <p>Filter conditions array. Multi-condition with each other is AND relationship<br>Supported Filter.Name:<br>Keyword: Keyword fuzzy search (fuzzy matching for host name/IP/InstanceID)<br>CloudTag: Cloud tag<br>Tag: Security center tag</p>
+     * Get <p>Criteria array, multi-condition uses AND relationship with each other<br>Supported Filter.Name:<br>Keyword: Keyword fuzzy search (fuzzy matching for host name/IP/InstanceID)<br>CloudTag: Cloud tag<br>Tag: Security center tag</p> 
+     * @return Filters <p>Criteria array, multi-condition uses AND relationship with each other<br>Supported Filter.Name:<br>Keyword: Keyword fuzzy search (fuzzy matching for host name/IP/InstanceID)<br>CloudTag: Cloud tag<br>Tag: Security center tag</p>
      */
     public Filters [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set <p>Filter conditions array. Multi-condition with each other is AND relationship<br>Supported Filter.Name:<br>Keyword: Keyword fuzzy search (fuzzy matching for host name/IP/InstanceID)<br>CloudTag: Cloud tag<br>Tag: Security center tag</p>
-     * @param Filters <p>Filter conditions array. Multi-condition with each other is AND relationship<br>Supported Filter.Name:<br>Keyword: Keyword fuzzy search (fuzzy matching for host name/IP/InstanceID)<br>CloudTag: Cloud tag<br>Tag: Security center tag</p>
+     * Set <p>Criteria array, multi-condition uses AND relationship with each other<br>Supported Filter.Name:<br>Keyword: Keyword fuzzy search (fuzzy matching for host name/IP/InstanceID)<br>CloudTag: Cloud tag<br>Tag: Security center tag</p>
+     * @param Filters <p>Criteria array, multi-condition uses AND relationship with each other<br>Supported Filter.Name:<br>Keyword: Keyword fuzzy search (fuzzy matching for host name/IP/InstanceID)<br>CloudTag: Cloud tag<br>Tag: Security center tag</p>
      */
     public void setFilters(Filters [] Filters) {
         this.Filters = Filters;
     }
 
     /**
-     * Get <p>Number of results per page<br>Value ranges from 1 to 100<br>Default value: 10</p> 
-     * @return Limit <p>Number of results per page<br>Value ranges from 1 to 100<br>Default value: 10</p>
+     * Get <p>Number of results per page<br>Value range: [1, 100]<br>Default value: 10</p> 
+     * @return Limit <p>Number of results per page<br>Value range: [1, 100]<br>Default value: 10</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set <p>Number of results per page<br>Value ranges from 1 to 100<br>Default value: 10</p>
-     * @param Limit <p>Number of results per page<br>Value ranges from 1 to 100<br>Default value: 10</p>
+     * Set <p>Number of results per page<br>Value range: [1, 100]<br>Default value: 10</p>
+     * @param Limit <p>Number of results per page<br>Value range: [1, 100]<br>Default value: 10</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get <p>Paging offset<br>Value ranges from 0 to +∞<br>Default value: 0</p> 
-     * @return Offset <p>Paging offset<br>Value ranges from 0 to +∞<br>Default value: 0</p>
+     * Get <p>Paging offset<br>Value range: [0, positive infinity)<br>Default value: 0</p> 
+     * @return Offset <p>Paging offset<br>Value range: [0, positive infinity)<br>Default value: 0</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set <p>Paging offset<br>Value ranges from 0 to +∞<br>Default value: 0</p>
-     * @param Offset <p>Paging offset<br>Value ranges from 0 to +∞<br>Default value: 0</p>
+     * Set <p>Paging offset<br>Value range: [0, positive infinity)<br>Default value: 0</p>
+     * @param Offset <p>Paging offset<br>Value range: [0, positive infinity)<br>Default value: 0</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get <p>Sorting order<br>Enumeration value:<br>ASC: Ascending<br>DESC: Descending order<br>Default value: DESC</p> 
-     * @return Order <p>Sorting order<br>Enumeration value:<br>ASC: Ascending<br>DESC: Descending order<br>Default value: DESC</p>
+     * Get <p>Sorting order<br>Enumeration values:<br>ASC: ascending<br>DESC: descending<br>Default value: DESC</p> 
+     * @return Order <p>Sorting order<br>Enumeration values:<br>ASC: ascending<br>DESC: descending<br>Default value: DESC</p>
      */
     public String getOrder() {
         return this.Order;
     }
 
     /**
-     * Set <p>Sorting order<br>Enumeration value:<br>ASC: Ascending<br>DESC: Descending order<br>Default value: DESC</p>
-     * @param Order <p>Sorting order<br>Enumeration value:<br>ASC: Ascending<br>DESC: Descending order<br>Default value: DESC</p>
+     * Set <p>Sorting order<br>Enumeration values:<br>ASC: ascending<br>DESC: descending<br>Default value: DESC</p>
+     * @param Order <p>Sorting order<br>Enumeration values:<br>ASC: ascending<br>DESC: descending<br>Default value: DESC</p>
      */
     public void setOrder(String Order) {
         this.Order = Order;
     }
 
     /**
-     * Get <p>Sorting field<br>Enumeration value:<br>LatestScanTime: Latest scan time<br>VPRLevel: VPR rating<br>RiskStatus: Remediation status<br>Default value: LatestScanTime</p> 
-     * @return By <p>Sorting field<br>Enumeration value:<br>LatestScanTime: Latest scan time<br>VPRLevel: VPR rating<br>RiskStatus: Remediation status<br>Default value: LatestScanTime</p>
+     * Get <p>Sorting field<br>Enumeration values:<br>LatestScanTime: Latest scan time<br>VPRLevel: VPR rating<br>RiskStatus: Remediation status<br>Default value: LatestScanTime</p> 
+     * @return By <p>Sorting field<br>Enumeration values:<br>LatestScanTime: Latest scan time<br>VPRLevel: VPR rating<br>RiskStatus: Remediation status<br>Default value: LatestScanTime</p>
      */
     public String getBy() {
         return this.By;
     }
 
     /**
-     * Set <p>Sorting field<br>Enumeration value:<br>LatestScanTime: Latest scan time<br>VPRLevel: VPR rating<br>RiskStatus: Remediation status<br>Default value: LatestScanTime</p>
-     * @param By <p>Sorting field<br>Enumeration value:<br>LatestScanTime: Latest scan time<br>VPRLevel: VPR rating<br>RiskStatus: Remediation status<br>Default value: LatestScanTime</p>
+     * Set <p>Sorting field<br>Enumeration values:<br>LatestScanTime: Latest scan time<br>VPRLevel: VPR rating<br>RiskStatus: Remediation status<br>Default value: LatestScanTime</p>
+     * @param By <p>Sorting field<br>Enumeration values:<br>LatestScanTime: Latest scan time<br>VPRLevel: VPR rating<br>RiskStatus: Remediation status<br>Default value: LatestScanTime</p>
      */
     public void setBy(String By) {
         this.By = By;

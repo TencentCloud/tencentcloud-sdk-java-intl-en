@@ -66,6 +66,13 @@ public class DescribeEDRRuleListRequest extends AbstractModel {
     private String By;
 
     /**
+    * File operation rule, populated when ContentType=file_operation (file path regex AND any selected action)
+    */
+    @SerializedName("FileOperationRules")
+    @Expose
+    private RuleContentFileOperation FileOperationRules;
+
+    /**
      * Get <p>Group account member id</p> 
      * @return MemberId <p>Group account member id</p>
      */
@@ -161,6 +168,22 @@ public class DescribeEDRRuleListRequest extends AbstractModel {
         this.By = By;
     }
 
+    /**
+     * Get File operation rule, populated when ContentType=file_operation (file path regex AND any selected action) 
+     * @return FileOperationRules File operation rule, populated when ContentType=file_operation (file path regex AND any selected action)
+     */
+    public RuleContentFileOperation getFileOperationRules() {
+        return this.FileOperationRules;
+    }
+
+    /**
+     * Set File operation rule, populated when ContentType=file_operation (file path regex AND any selected action)
+     * @param FileOperationRules File operation rule, populated when ContentType=file_operation (file path regex AND any selected action)
+     */
+    public void setFileOperationRules(RuleContentFileOperation FileOperationRules) {
+        this.FileOperationRules = FileOperationRules;
+    }
+
     public DescribeEDRRuleListRequest() {
     }
 
@@ -193,6 +216,9 @@ public class DescribeEDRRuleListRequest extends AbstractModel {
         if (source.By != null) {
             this.By = new String(source.By);
         }
+        if (source.FileOperationRules != null) {
+            this.FileOperationRules = new RuleContentFileOperation(source.FileOperationRules);
+        }
     }
 
 
@@ -206,6 +232,7 @@ public class DescribeEDRRuleListRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Order", this.Order);
         this.setParamSimple(map, prefix + "By", this.By);
+        this.setParamObj(map, prefix + "FileOperationRules.", this.FileOperationRules);
 
     }
 }

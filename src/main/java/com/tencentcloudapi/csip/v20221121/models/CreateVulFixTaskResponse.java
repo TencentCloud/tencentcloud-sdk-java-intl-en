@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateVulFixTaskResponse extends AbstractModel {
 
     /**
-    * <p>Repair task ID, used for subsequent query task status</p>
+    * <p>Repair task ID, used for subsequent query of task status</p>
     */
     @SerializedName("TaskId")
     @Expose
@@ -38,16 +38,16 @@ public class CreateVulFixTaskResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get <p>Repair task ID, used for subsequent query task status</p> 
-     * @return TaskId <p>Repair task ID, used for subsequent query task status</p>
+     * Get <p>Repair task ID, used for subsequent query of task status</p> 
+     * @return TaskId <p>Repair task ID, used for subsequent query of task status</p>
      */
     public Long getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set <p>Repair task ID, used for subsequent query task status</p>
-     * @param TaskId <p>Repair task ID, used for subsequent query task status</p>
+     * Set <p>Repair task ID, used for subsequent query of task status</p>
+     * @param TaskId <p>Repair task ID, used for subsequent query of task status</p>
      */
     public void setTaskId(Long TaskId) {
         this.TaskId = TaskId;

@@ -24,115 +24,161 @@ import java.util.HashMap;
 public class ModifyKafkaConsumerRequest extends AbstractModel {
 
     /**
-    * <p>log topic id</p><ul><li>Obtain the log topic Id through <a href="https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1">Get Log Topic List</a>.</li><li>Obtain the log topic Id through <a href="https://www.tencentcloud.com/document/product/614/56456?from_cn_redirect=1">Create Log Topic</a>.</li></ul>
+    * <p>Log topic Id.</p><ul><li>Get the log topic Id through <a href="https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1">getting the log topic list</a>.</li><li>Get the log topic Id through <a href="https://www.tencentcloud.com/document/product/614/56456?from_cn_redirect=1">creating a log topic</a>.</li></ul>
     */
     @SerializedName("FromTopicId")
     @Expose
     private String FromTopicId;
 
     /**
-    * <p>Compression mode. 0: No compression; 2: Use Snappy compression; 3: Use LZ4 compression</p>
+    * <p>Compression method. 0: No compression; 2: Snappy compression; 3: LZ4 compression</p>
     */
     @SerializedName("Compression")
     @Expose
     private Long Compression;
 
     /**
-    * <p>kafka protocol consumption data format</p>
+    * <p>kafka consumption data format</p>
     */
     @SerializedName("ConsumerContent")
     @Expose
     private KafkaConsumerContent ConsumerContent;
 
     /**
-    * <p>Whether to enable the delivery service log. 1: Disabled, 2: Enabled.</p>
+    * <p>Whether to enable delivery service logs. 1: Disable, 2: Enable.</p>
     */
     @SerializedName("HasServicesLog")
     @Expose
     private Long HasServicesLog;
 
     /**
-    * <p>Range type of consumption, 0: latest, 1: history + latest</p>
+    * <p>Public network consumption switch.</p>
+    */
+    @SerializedName("EnableInternetConsume")
+    @Expose
+    private Boolean EnableInternetConsume;
+
+    /**
+    * <p>Private network consumption switch.</p>
+    */
+    @SerializedName("EnableIntranetConsume")
+    @Expose
+    private Boolean EnableIntranetConsume;
+
+    /**
+    * <p>Consumption scope type. 0: Latest, 1: Historical + latest</p>
     */
     @SerializedName("ScopeType")
     @Expose
     private Long ScopeType;
 
     /**
-     * Get <p>log topic id</p><ul><li>Obtain the log topic Id through <a href="https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1">Get Log Topic List</a>.</li><li>Obtain the log topic Id through <a href="https://www.tencentcloud.com/document/product/614/56456?from_cn_redirect=1">Create Log Topic</a>.</li></ul> 
-     * @return FromTopicId <p>log topic id</p><ul><li>Obtain the log topic Id through <a href="https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1">Get Log Topic List</a>.</li><li>Obtain the log topic Id through <a href="https://www.tencentcloud.com/document/product/614/56456?from_cn_redirect=1">Create Log Topic</a>.</li></ul>
+     * Get <p>Log topic Id.</p><ul><li>Get the log topic Id through <a href="https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1">getting the log topic list</a>.</li><li>Get the log topic Id through <a href="https://www.tencentcloud.com/document/product/614/56456?from_cn_redirect=1">creating a log topic</a>.</li></ul> 
+     * @return FromTopicId <p>Log topic Id.</p><ul><li>Get the log topic Id through <a href="https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1">getting the log topic list</a>.</li><li>Get the log topic Id through <a href="https://www.tencentcloud.com/document/product/614/56456?from_cn_redirect=1">creating a log topic</a>.</li></ul>
      */
     public String getFromTopicId() {
         return this.FromTopicId;
     }
 
     /**
-     * Set <p>log topic id</p><ul><li>Obtain the log topic Id through <a href="https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1">Get Log Topic List</a>.</li><li>Obtain the log topic Id through <a href="https://www.tencentcloud.com/document/product/614/56456?from_cn_redirect=1">Create Log Topic</a>.</li></ul>
-     * @param FromTopicId <p>log topic id</p><ul><li>Obtain the log topic Id through <a href="https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1">Get Log Topic List</a>.</li><li>Obtain the log topic Id through <a href="https://www.tencentcloud.com/document/product/614/56456?from_cn_redirect=1">Create Log Topic</a>.</li></ul>
+     * Set <p>Log topic Id.</p><ul><li>Get the log topic Id through <a href="https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1">getting the log topic list</a>.</li><li>Get the log topic Id through <a href="https://www.tencentcloud.com/document/product/614/56456?from_cn_redirect=1">creating a log topic</a>.</li></ul>
+     * @param FromTopicId <p>Log topic Id.</p><ul><li>Get the log topic Id through <a href="https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1">getting the log topic list</a>.</li><li>Get the log topic Id through <a href="https://www.tencentcloud.com/document/product/614/56456?from_cn_redirect=1">creating a log topic</a>.</li></ul>
      */
     public void setFromTopicId(String FromTopicId) {
         this.FromTopicId = FromTopicId;
     }
 
     /**
-     * Get <p>Compression mode. 0: No compression; 2: Use Snappy compression; 3: Use LZ4 compression</p> 
-     * @return Compression <p>Compression mode. 0: No compression; 2: Use Snappy compression; 3: Use LZ4 compression</p>
+     * Get <p>Compression method. 0: No compression; 2: Snappy compression; 3: LZ4 compression</p> 
+     * @return Compression <p>Compression method. 0: No compression; 2: Snappy compression; 3: LZ4 compression</p>
      */
     public Long getCompression() {
         return this.Compression;
     }
 
     /**
-     * Set <p>Compression mode. 0: No compression; 2: Use Snappy compression; 3: Use LZ4 compression</p>
-     * @param Compression <p>Compression mode. 0: No compression; 2: Use Snappy compression; 3: Use LZ4 compression</p>
+     * Set <p>Compression method. 0: No compression; 2: Snappy compression; 3: LZ4 compression</p>
+     * @param Compression <p>Compression method. 0: No compression; 2: Snappy compression; 3: LZ4 compression</p>
      */
     public void setCompression(Long Compression) {
         this.Compression = Compression;
     }
 
     /**
-     * Get <p>kafka protocol consumption data format</p> 
-     * @return ConsumerContent <p>kafka protocol consumption data format</p>
+     * Get <p>kafka consumption data format</p> 
+     * @return ConsumerContent <p>kafka consumption data format</p>
      */
     public KafkaConsumerContent getConsumerContent() {
         return this.ConsumerContent;
     }
 
     /**
-     * Set <p>kafka protocol consumption data format</p>
-     * @param ConsumerContent <p>kafka protocol consumption data format</p>
+     * Set <p>kafka consumption data format</p>
+     * @param ConsumerContent <p>kafka consumption data format</p>
      */
     public void setConsumerContent(KafkaConsumerContent ConsumerContent) {
         this.ConsumerContent = ConsumerContent;
     }
 
     /**
-     * Get <p>Whether to enable the delivery service log. 1: Disabled, 2: Enabled.</p> 
-     * @return HasServicesLog <p>Whether to enable the delivery service log. 1: Disabled, 2: Enabled.</p>
+     * Get <p>Whether to enable delivery service logs. 1: Disable, 2: Enable.</p> 
+     * @return HasServicesLog <p>Whether to enable delivery service logs. 1: Disable, 2: Enable.</p>
      */
     public Long getHasServicesLog() {
         return this.HasServicesLog;
     }
 
     /**
-     * Set <p>Whether to enable the delivery service log. 1: Disabled, 2: Enabled.</p>
-     * @param HasServicesLog <p>Whether to enable the delivery service log. 1: Disabled, 2: Enabled.</p>
+     * Set <p>Whether to enable delivery service logs. 1: Disable, 2: Enable.</p>
+     * @param HasServicesLog <p>Whether to enable delivery service logs. 1: Disable, 2: Enable.</p>
      */
     public void setHasServicesLog(Long HasServicesLog) {
         this.HasServicesLog = HasServicesLog;
     }
 
     /**
-     * Get <p>Range type of consumption, 0: latest, 1: history + latest</p> 
-     * @return ScopeType <p>Range type of consumption, 0: latest, 1: history + latest</p>
+     * Get <p>Public network consumption switch.</p> 
+     * @return EnableInternetConsume <p>Public network consumption switch.</p>
+     */
+    public Boolean getEnableInternetConsume() {
+        return this.EnableInternetConsume;
+    }
+
+    /**
+     * Set <p>Public network consumption switch.</p>
+     * @param EnableInternetConsume <p>Public network consumption switch.</p>
+     */
+    public void setEnableInternetConsume(Boolean EnableInternetConsume) {
+        this.EnableInternetConsume = EnableInternetConsume;
+    }
+
+    /**
+     * Get <p>Private network consumption switch.</p> 
+     * @return EnableIntranetConsume <p>Private network consumption switch.</p>
+     */
+    public Boolean getEnableIntranetConsume() {
+        return this.EnableIntranetConsume;
+    }
+
+    /**
+     * Set <p>Private network consumption switch.</p>
+     * @param EnableIntranetConsume <p>Private network consumption switch.</p>
+     */
+    public void setEnableIntranetConsume(Boolean EnableIntranetConsume) {
+        this.EnableIntranetConsume = EnableIntranetConsume;
+    }
+
+    /**
+     * Get <p>Consumption scope type. 0: Latest, 1: Historical + latest</p> 
+     * @return ScopeType <p>Consumption scope type. 0: Latest, 1: Historical + latest</p>
      */
     public Long getScopeType() {
         return this.ScopeType;
     }
 
     /**
-     * Set <p>Range type of consumption, 0: latest, 1: history + latest</p>
-     * @param ScopeType <p>Range type of consumption, 0: latest, 1: history + latest</p>
+     * Set <p>Consumption scope type. 0: Latest, 1: Historical + latest</p>
+     * @param ScopeType <p>Consumption scope type. 0: Latest, 1: Historical + latest</p>
      */
     public void setScopeType(Long ScopeType) {
         this.ScopeType = ScopeType;
@@ -158,6 +204,12 @@ public class ModifyKafkaConsumerRequest extends AbstractModel {
         if (source.HasServicesLog != null) {
             this.HasServicesLog = new Long(source.HasServicesLog);
         }
+        if (source.EnableInternetConsume != null) {
+            this.EnableInternetConsume = new Boolean(source.EnableInternetConsume);
+        }
+        if (source.EnableIntranetConsume != null) {
+            this.EnableIntranetConsume = new Boolean(source.EnableIntranetConsume);
+        }
         if (source.ScopeType != null) {
             this.ScopeType = new Long(source.ScopeType);
         }
@@ -172,6 +224,8 @@ public class ModifyKafkaConsumerRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Compression", this.Compression);
         this.setParamObj(map, prefix + "ConsumerContent.", this.ConsumerContent);
         this.setParamSimple(map, prefix + "HasServicesLog", this.HasServicesLog);
+        this.setParamSimple(map, prefix + "EnableInternetConsume", this.EnableInternetConsume);
+        this.setParamSimple(map, prefix + "EnableIntranetConsume", this.EnableIntranetConsume);
         this.setParamSimple(map, prefix + "ScopeType", this.ScopeType);
 
     }

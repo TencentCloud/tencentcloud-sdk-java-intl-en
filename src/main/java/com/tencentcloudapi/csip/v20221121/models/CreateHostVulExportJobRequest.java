@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateHostVulExportJobRequest extends AbstractModel {
 
     /**
-    * <p>Exported action</p><p>Enumeration value:</p><ul><li>LinuxHostVulRiskList: linux vulnerability risk list</li><li>WebCmsHostVulRiskList: WebCms vulnerability risk list</li><li>AppHostVulRiskList: App vulnerability risk list</li><li>EmergencyHostVulRiskList: Emergency vulnerability risk list</li><li>KBRiskList: Windows kb risk list</li><li>RelateHostList: Associated host list</li><li>WhiteList: Vulnerability allowlist</li></ul>
+    * <p>Export action</p><p>Enumeration values:</p><ul><li>LinuxHostVulRiskList: linux vulnerability risk list</li><li>WebCmsHostVulRiskList: WebCms vulnerability risk list</li><li>AppHostVulRiskList: App vulnerability risk list</li><li>EmergencyHostVulRiskList: Emergency vulnerability risk list</li><li>KBRiskList: Windows kb risk list</li><li>RelateHostList: Associated host list</li><li>WhiteList: Vulnerability allowlist</li></ul>
     */
     @SerializedName("BusinessAction")
     @Expose
@@ -38,23 +38,23 @@ public class CreateHostVulExportJobRequest extends AbstractModel {
     private String [] MemberId;
 
     /**
-    * <p>Filter conditions array, multi-condition with each other is AND relationship<br>Supported Filter.Name:<br>KbID: KB risk associated server in the current situation needs to add KB Risk ID<br>VulID: Vulnerability risk associated server in the current situation needs to add vul Risk ID</p>
+    * <p>Criteria array, multi-condition uses AND relationship with each other<br>Supported Filter.Name:<br>KbID: KB risk associated host requires adding KB Risk ID as needed<br>VulID: Vulnerability risk associated host requires adding vul Risk ID as needed</p>
     */
     @SerializedName("Filters")
     @Expose
     private Filters [] Filters;
 
     /**
-     * Get <p>Exported action</p><p>Enumeration value:</p><ul><li>LinuxHostVulRiskList: linux vulnerability risk list</li><li>WebCmsHostVulRiskList: WebCms vulnerability risk list</li><li>AppHostVulRiskList: App vulnerability risk list</li><li>EmergencyHostVulRiskList: Emergency vulnerability risk list</li><li>KBRiskList: Windows kb risk list</li><li>RelateHostList: Associated host list</li><li>WhiteList: Vulnerability allowlist</li></ul> 
-     * @return BusinessAction <p>Exported action</p><p>Enumeration value:</p><ul><li>LinuxHostVulRiskList: linux vulnerability risk list</li><li>WebCmsHostVulRiskList: WebCms vulnerability risk list</li><li>AppHostVulRiskList: App vulnerability risk list</li><li>EmergencyHostVulRiskList: Emergency vulnerability risk list</li><li>KBRiskList: Windows kb risk list</li><li>RelateHostList: Associated host list</li><li>WhiteList: Vulnerability allowlist</li></ul>
+     * Get <p>Export action</p><p>Enumeration values:</p><ul><li>LinuxHostVulRiskList: linux vulnerability risk list</li><li>WebCmsHostVulRiskList: WebCms vulnerability risk list</li><li>AppHostVulRiskList: App vulnerability risk list</li><li>EmergencyHostVulRiskList: Emergency vulnerability risk list</li><li>KBRiskList: Windows kb risk list</li><li>RelateHostList: Associated host list</li><li>WhiteList: Vulnerability allowlist</li></ul> 
+     * @return BusinessAction <p>Export action</p><p>Enumeration values:</p><ul><li>LinuxHostVulRiskList: linux vulnerability risk list</li><li>WebCmsHostVulRiskList: WebCms vulnerability risk list</li><li>AppHostVulRiskList: App vulnerability risk list</li><li>EmergencyHostVulRiskList: Emergency vulnerability risk list</li><li>KBRiskList: Windows kb risk list</li><li>RelateHostList: Associated host list</li><li>WhiteList: Vulnerability allowlist</li></ul>
      */
     public String getBusinessAction() {
         return this.BusinessAction;
     }
 
     /**
-     * Set <p>Exported action</p><p>Enumeration value:</p><ul><li>LinuxHostVulRiskList: linux vulnerability risk list</li><li>WebCmsHostVulRiskList: WebCms vulnerability risk list</li><li>AppHostVulRiskList: App vulnerability risk list</li><li>EmergencyHostVulRiskList: Emergency vulnerability risk list</li><li>KBRiskList: Windows kb risk list</li><li>RelateHostList: Associated host list</li><li>WhiteList: Vulnerability allowlist</li></ul>
-     * @param BusinessAction <p>Exported action</p><p>Enumeration value:</p><ul><li>LinuxHostVulRiskList: linux vulnerability risk list</li><li>WebCmsHostVulRiskList: WebCms vulnerability risk list</li><li>AppHostVulRiskList: App vulnerability risk list</li><li>EmergencyHostVulRiskList: Emergency vulnerability risk list</li><li>KBRiskList: Windows kb risk list</li><li>RelateHostList: Associated host list</li><li>WhiteList: Vulnerability allowlist</li></ul>
+     * Set <p>Export action</p><p>Enumeration values:</p><ul><li>LinuxHostVulRiskList: linux vulnerability risk list</li><li>WebCmsHostVulRiskList: WebCms vulnerability risk list</li><li>AppHostVulRiskList: App vulnerability risk list</li><li>EmergencyHostVulRiskList: Emergency vulnerability risk list</li><li>KBRiskList: Windows kb risk list</li><li>RelateHostList: Associated host list</li><li>WhiteList: Vulnerability allowlist</li></ul>
+     * @param BusinessAction <p>Export action</p><p>Enumeration values:</p><ul><li>LinuxHostVulRiskList: linux vulnerability risk list</li><li>WebCmsHostVulRiskList: WebCms vulnerability risk list</li><li>AppHostVulRiskList: App vulnerability risk list</li><li>EmergencyHostVulRiskList: Emergency vulnerability risk list</li><li>KBRiskList: Windows kb risk list</li><li>RelateHostList: Associated host list</li><li>WhiteList: Vulnerability allowlist</li></ul>
      */
     public void setBusinessAction(String BusinessAction) {
         this.BusinessAction = BusinessAction;
@@ -77,16 +77,16 @@ public class CreateHostVulExportJobRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>Filter conditions array, multi-condition with each other is AND relationship<br>Supported Filter.Name:<br>KbID: KB risk associated server in the current situation needs to add KB Risk ID<br>VulID: Vulnerability risk associated server in the current situation needs to add vul Risk ID</p> 
-     * @return Filters <p>Filter conditions array, multi-condition with each other is AND relationship<br>Supported Filter.Name:<br>KbID: KB risk associated server in the current situation needs to add KB Risk ID<br>VulID: Vulnerability risk associated server in the current situation needs to add vul Risk ID</p>
+     * Get <p>Criteria array, multi-condition uses AND relationship with each other<br>Supported Filter.Name:<br>KbID: KB risk associated host requires adding KB Risk ID as needed<br>VulID: Vulnerability risk associated host requires adding vul Risk ID as needed</p> 
+     * @return Filters <p>Criteria array, multi-condition uses AND relationship with each other<br>Supported Filter.Name:<br>KbID: KB risk associated host requires adding KB Risk ID as needed<br>VulID: Vulnerability risk associated host requires adding vul Risk ID as needed</p>
      */
     public Filters [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set <p>Filter conditions array, multi-condition with each other is AND relationship<br>Supported Filter.Name:<br>KbID: KB risk associated server in the current situation needs to add KB Risk ID<br>VulID: Vulnerability risk associated server in the current situation needs to add vul Risk ID</p>
-     * @param Filters <p>Filter conditions array, multi-condition with each other is AND relationship<br>Supported Filter.Name:<br>KbID: KB risk associated server in the current situation needs to add KB Risk ID<br>VulID: Vulnerability risk associated server in the current situation needs to add vul Risk ID</p>
+     * Set <p>Criteria array, multi-condition uses AND relationship with each other<br>Supported Filter.Name:<br>KbID: KB risk associated host requires adding KB Risk ID as needed<br>VulID: Vulnerability risk associated host requires adding vul Risk ID as needed</p>
+     * @param Filters <p>Criteria array, multi-condition uses AND relationship with each other<br>Supported Filter.Name:<br>KbID: KB risk associated host requires adding KB Risk ID as needed<br>VulID: Vulnerability risk associated host requires adding vul Risk ID as needed</p>
      */
     public void setFilters(Filters [] Filters) {
         this.Filters = Filters;

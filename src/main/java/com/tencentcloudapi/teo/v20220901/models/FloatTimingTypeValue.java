@@ -38,7 +38,7 @@ public class FloatTimingTypeValue extends AbstractModel {
     private Float Max;
 
     /**
-    * Average.
+    * Mean.
     */
     @SerializedName("Avg")
     @Expose
@@ -91,16 +91,16 @@ public class FloatTimingTypeValue extends AbstractModel {
     }
 
     /**
-     * Get Average. 
-     * @return Avg Average.
+     * Get Mean. 
+     * @return Avg Mean.
      */
     public Float getAvg() {
         return this.Avg;
     }
 
     /**
-     * Set Average.
-     * @param Avg Average.
+     * Set Mean.
+     * @param Avg Mean.
      */
     public void setAvg(Float Avg) {
         this.Avg = Avg;

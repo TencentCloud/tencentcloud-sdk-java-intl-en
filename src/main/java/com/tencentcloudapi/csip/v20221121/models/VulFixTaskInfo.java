@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class VulFixTaskInfo extends AbstractModel {
 
     /**
-    * Primary key ID of the fix task
+    * Repair task primary key ID
     */
     @SerializedName("Id")
     @Expose
@@ -43,7 +43,7 @@ Enumeration values:
 0: initialization
 1: In remediation
 2: Repair successful
-3: Partially fix failed
+3: Partially fixed
 4: All fix failures
 5: Stop repair
     */
@@ -52,7 +52,7 @@ Enumeration values:
     private Long FixStatus;
 
     /**
-    * Repair total number of assets
+    * Total number of repaired assets
     */
     @SerializedName("AssetCount")
     @Expose
@@ -66,7 +66,7 @@ Enumeration values:
     private Long SuccessCount;
 
     /**
-    * FIX_FAILURE count
+    * Number of failed fixes
     */
     @SerializedName("FailCount")
     @Expose
@@ -87,16 +87,16 @@ Enumeration values:
     private Long QueueCount;
 
     /**
-    * Progress percentage of the repair
+    * Repair progress percentage
 Value range: [0, 100].
-Supplemental description: Calculation method is (SuccessCount+FailCount)/AssetCount×100.
+Supplemental description: Calculation method: (SuccessCount+FailCount)/AssetCount×100
     */
     @SerializedName("Progress")
     @Expose
     private Long Progress;
 
     /**
-    * Number of successfully fixed vulnerabilities
+    * Number of vulnerabilities with successful fixes
     */
     @SerializedName("SuccessVulCount")
     @Expose
@@ -110,46 +110,46 @@ Supplemental description: Calculation method is (SuccessCount+FailCount)/AssetCo
     private Long FailVulCount;
 
     /**
-    * List of vulnerability names to be fixed
+    * List of fixed vulnerability names
     */
     @SerializedName("VulNames")
     @Expose
     private String [] VulNames;
 
     /**
-    * Fix startup time
-Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
+    * Startup time for repair
+Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * Fixing end time
-Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
+    * Repair end time
+Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-    * List of vulnerability dimensional remediation status, status details of each vulnerability
+    * List of vulnerability dimensional remediation statuses, with status details for each vulnerability
     */
     @SerializedName("VulFixStatusList")
     @Expose
     private VulFixStatusItem [] VulFixStatusList;
 
     /**
-     * Get Primary key ID of the fix task 
-     * @return Id Primary key ID of the fix task
+     * Get Repair task primary key ID 
+     * @return Id Repair task primary key ID
      */
     public Long getId() {
         return this.Id;
     }
 
     /**
-     * Set Primary key ID of the fix task
-     * @param Id Primary key ID of the fix task
+     * Set Repair task primary key ID
+     * @param Id Repair task primary key ID
      */
     public void setId(Long Id) {
         this.Id = Id;
@@ -177,7 +177,7 @@ Enumeration values:
 0: initialization
 1: In remediation
 2: Repair successful
-3: Partially fix failed
+3: Partially fixed
 4: All fix failures
 5: Stop repair 
      * @return FixStatus Remediation status
@@ -185,7 +185,7 @@ Enumeration values:
 0: initialization
 1: In remediation
 2: Repair successful
-3: Partially fix failed
+3: Partially fixed
 4: All fix failures
 5: Stop repair
      */
@@ -199,7 +199,7 @@ Enumeration values:
 0: initialization
 1: In remediation
 2: Repair successful
-3: Partially fix failed
+3: Partially fixed
 4: All fix failures
 5: Stop repair
      * @param FixStatus Remediation status
@@ -207,7 +207,7 @@ Enumeration values:
 0: initialization
 1: In remediation
 2: Repair successful
-3: Partially fix failed
+3: Partially fixed
 4: All fix failures
 5: Stop repair
      */
@@ -216,16 +216,16 @@ Enumeration values:
     }
 
     /**
-     * Get Repair total number of assets 
-     * @return AssetCount Repair total number of assets
+     * Get Total number of repaired assets 
+     * @return AssetCount Total number of repaired assets
      */
     public Long getAssetCount() {
         return this.AssetCount;
     }
 
     /**
-     * Set Repair total number of assets
-     * @param AssetCount Repair total number of assets
+     * Set Total number of repaired assets
+     * @param AssetCount Total number of repaired assets
      */
     public void setAssetCount(Long AssetCount) {
         this.AssetCount = AssetCount;
@@ -248,16 +248,16 @@ Enumeration values:
     }
 
     /**
-     * Get FIX_FAILURE count 
-     * @return FailCount FIX_FAILURE count
+     * Get Number of failed fixes 
+     * @return FailCount Number of failed fixes
      */
     public Long getFailCount() {
         return this.FailCount;
     }
 
     /**
-     * Set FIX_FAILURE count
-     * @param FailCount FIX_FAILURE count
+     * Set Number of failed fixes
+     * @param FailCount Number of failed fixes
      */
     public void setFailCount(Long FailCount) {
         this.FailCount = FailCount;
@@ -296,40 +296,40 @@ Enumeration values:
     }
 
     /**
-     * Get Progress percentage of the repair
+     * Get Repair progress percentage
 Value range: [0, 100].
-Supplemental description: Calculation method is (SuccessCount+FailCount)/AssetCount×100. 
-     * @return Progress Progress percentage of the repair
+Supplemental description: Calculation method: (SuccessCount+FailCount)/AssetCount×100 
+     * @return Progress Repair progress percentage
 Value range: [0, 100].
-Supplemental description: Calculation method is (SuccessCount+FailCount)/AssetCount×100.
+Supplemental description: Calculation method: (SuccessCount+FailCount)/AssetCount×100
      */
     public Long getProgress() {
         return this.Progress;
     }
 
     /**
-     * Set Progress percentage of the repair
+     * Set Repair progress percentage
 Value range: [0, 100].
-Supplemental description: Calculation method is (SuccessCount+FailCount)/AssetCount×100.
-     * @param Progress Progress percentage of the repair
+Supplemental description: Calculation method: (SuccessCount+FailCount)/AssetCount×100
+     * @param Progress Repair progress percentage
 Value range: [0, 100].
-Supplemental description: Calculation method is (SuccessCount+FailCount)/AssetCount×100.
+Supplemental description: Calculation method: (SuccessCount+FailCount)/AssetCount×100
      */
     public void setProgress(Long Progress) {
         this.Progress = Progress;
     }
 
     /**
-     * Get Number of successfully fixed vulnerabilities 
-     * @return SuccessVulCount Number of successfully fixed vulnerabilities
+     * Get Number of vulnerabilities with successful fixes 
+     * @return SuccessVulCount Number of vulnerabilities with successful fixes
      */
     public Long getSuccessVulCount() {
         return this.SuccessVulCount;
     }
 
     /**
-     * Set Number of successfully fixed vulnerabilities
-     * @param SuccessVulCount Number of successfully fixed vulnerabilities
+     * Set Number of vulnerabilities with successful fixes
+     * @param SuccessVulCount Number of vulnerabilities with successful fixes
      */
     public void setSuccessVulCount(Long SuccessVulCount) {
         this.SuccessVulCount = SuccessVulCount;
@@ -352,72 +352,72 @@ Supplemental description: Calculation method is (SuccessCount+FailCount)/AssetCo
     }
 
     /**
-     * Get List of vulnerability names to be fixed 
-     * @return VulNames List of vulnerability names to be fixed
+     * Get List of fixed vulnerability names 
+     * @return VulNames List of fixed vulnerability names
      */
     public String [] getVulNames() {
         return this.VulNames;
     }
 
     /**
-     * Set List of vulnerability names to be fixed
-     * @param VulNames List of vulnerability names to be fixed
+     * Set List of fixed vulnerability names
+     * @param VulNames List of fixed vulnerability names
      */
     public void setVulNames(String [] VulNames) {
         this.VulNames = VulNames;
     }
 
     /**
-     * Get Fix startup time
-Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format). 
-     * @return StartTime Fix startup time
-Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
+     * Get Startup time for repair
+Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format) 
+     * @return StartTime Startup time for repair
+Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set Fix startup time
-Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
-     * @param StartTime Fix startup time
-Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
+     * Set Startup time for repair
+Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)
+     * @param StartTime Startup time for repair
+Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get Fixing end time
-Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format). 
-     * @return EndTime Fixing end time
-Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
+     * Get Repair end time
+Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format) 
+     * @return EndTime Repair end time
+Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set Fixing end time
-Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
-     * @param EndTime Fixing end time
-Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
+     * Set Repair end time
+Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)
+     * @param EndTime Repair end time
+Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get List of vulnerability dimensional remediation status, status details of each vulnerability 
-     * @return VulFixStatusList List of vulnerability dimensional remediation status, status details of each vulnerability
+     * Get List of vulnerability dimensional remediation statuses, with status details for each vulnerability 
+     * @return VulFixStatusList List of vulnerability dimensional remediation statuses, with status details for each vulnerability
      */
     public VulFixStatusItem [] getVulFixStatusList() {
         return this.VulFixStatusList;
     }
 
     /**
-     * Set List of vulnerability dimensional remediation status, status details of each vulnerability
-     * @param VulFixStatusList List of vulnerability dimensional remediation status, status details of each vulnerability
+     * Set List of vulnerability dimensional remediation statuses, with status details for each vulnerability
+     * @param VulFixStatusList List of vulnerability dimensional remediation statuses, with status details for each vulnerability
      */
     public void setVulFixStatusList(VulFixStatusItem [] VulFixStatusList) {
         this.VulFixStatusList = VulFixStatusList;

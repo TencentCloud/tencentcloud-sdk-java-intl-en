@@ -24,35 +24,35 @@ import java.util.HashMap;
 public class DescribeVulFixedListRequest extends AbstractModel {
 
     /**
-    * <p>Paging offset<br>Value ranges from 0 to +∞<br>Default value: 0</p>
+    * <p>Paging offset<br>Value range: [0, +∞)<br>Default value: 0</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * <p>Number of results per page<br>Value ranges from 1 to 100<br>Default value: 10</p>
+    * <p>Number of results per page<br>Value range: [1, 100]<br>Default value: 10</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * <p>Filtering Conditions<br>Supported Filter.Name:<br>Keyword - Fuzzy matching, search by keyword (vulnerability name/CVE ID/host name/instance ID)<br>VulName - Fuzzy matching, vulnerability name search<br>Level - Exact match, filter by vulnerability level: LOW-Low risk MEDIUM-Medium risk HIGH-High risk CRITICAL-Critical<br>VprLevel - Exact match, filter by VPR rating: 1-Low 2-Medium 3-High 4-Critical<br>VulCategory - Exact match, type filter: LINUX-Linux software vulnerability WINDOWS-Windows system patch vulnerability WEB_CMS-Web-CMS vulnerability APPLICATION-Application vulnerability EMERGENCY-Emergency vulnerability<br>MachineName - Fuzzy matching, search by host name<br>InstanceId - Fuzzy matching, id search by instance<br>FixTime - Range matching, repair time range, input two values to indicate start and end time</p>
+    * <p>Filter criteria<br>Supported Filter.Name:<br>Keyword - fuzzy matching, search by keyword (vulnerability name/CVE ID/host name/instance ID)<br>VulName - fuzzy matching, search by vulnerability name<br>Level - exact matching, filter by vulnerability level: LOW - low risk, MEDIUM - medium risk, HIGH - high risk, CRITICAL - critical<br>VprLevel - exact matching, filter by VPR rating: 1 - Low, 2 - Medium, 3 - High, 4 - Critical<br>VulCategory - exact matching, filter by vulnerability type: LINUX - Linux software vulnerability, WINDOWS - Windows system patch vulnerability, WEB_CMS - Web-CMS vulnerability, APPLICATION - application vulnerability, EMERGENCY - urgent vulnerability<br>MachineName - fuzzy matching, search by host name<br>InstanceId - fuzzy matching, search by instance ID<br>FixTime - range matching, repair time range. Input two values to indicate the start and end time</p>
     */
     @SerializedName("Filters")
     @Expose
     private Filters [] Filters;
 
     /**
-    * <p>Sorting field<br>Enumeration value:<br>FixTime: Sort by repair time<br>VulName: Sort by vulnerability name</p>
+    * <p>Sorting field<br>Enumeration values:<br>FixTime: sort by fix time<br>VulName: sort by vulnerability name</p>
     */
     @SerializedName("Order")
     @Expose
     private String Order;
 
     /**
-    * <p>Sorting method<br>Enumeration value:<br>asc: Ascending<br>desc: Descending order<br>Default value: desc</p>
+    * <p>Sorting method<br>Enumeration values:<br>asc: Ascending<br>desc: Descending<br>Default value: desc</p>
     */
     @SerializedName("By")
     @Expose
@@ -66,80 +66,80 @@ public class DescribeVulFixedListRequest extends AbstractModel {
     private String [] MemberId;
 
     /**
-     * Get <p>Paging offset<br>Value ranges from 0 to +∞<br>Default value: 0</p> 
-     * @return Offset <p>Paging offset<br>Value ranges from 0 to +∞<br>Default value: 0</p>
+     * Get <p>Paging offset<br>Value range: [0, +∞)<br>Default value: 0</p> 
+     * @return Offset <p>Paging offset<br>Value range: [0, +∞)<br>Default value: 0</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set <p>Paging offset<br>Value ranges from 0 to +∞<br>Default value: 0</p>
-     * @param Offset <p>Paging offset<br>Value ranges from 0 to +∞<br>Default value: 0</p>
+     * Set <p>Paging offset<br>Value range: [0, +∞)<br>Default value: 0</p>
+     * @param Offset <p>Paging offset<br>Value range: [0, +∞)<br>Default value: 0</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get <p>Number of results per page<br>Value ranges from 1 to 100<br>Default value: 10</p> 
-     * @return Limit <p>Number of results per page<br>Value ranges from 1 to 100<br>Default value: 10</p>
+     * Get <p>Number of results per page<br>Value range: [1, 100]<br>Default value: 10</p> 
+     * @return Limit <p>Number of results per page<br>Value range: [1, 100]<br>Default value: 10</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set <p>Number of results per page<br>Value ranges from 1 to 100<br>Default value: 10</p>
-     * @param Limit <p>Number of results per page<br>Value ranges from 1 to 100<br>Default value: 10</p>
+     * Set <p>Number of results per page<br>Value range: [1, 100]<br>Default value: 10</p>
+     * @param Limit <p>Number of results per page<br>Value range: [1, 100]<br>Default value: 10</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get <p>Filtering Conditions<br>Supported Filter.Name:<br>Keyword - Fuzzy matching, search by keyword (vulnerability name/CVE ID/host name/instance ID)<br>VulName - Fuzzy matching, vulnerability name search<br>Level - Exact match, filter by vulnerability level: LOW-Low risk MEDIUM-Medium risk HIGH-High risk CRITICAL-Critical<br>VprLevel - Exact match, filter by VPR rating: 1-Low 2-Medium 3-High 4-Critical<br>VulCategory - Exact match, type filter: LINUX-Linux software vulnerability WINDOWS-Windows system patch vulnerability WEB_CMS-Web-CMS vulnerability APPLICATION-Application vulnerability EMERGENCY-Emergency vulnerability<br>MachineName - Fuzzy matching, search by host name<br>InstanceId - Fuzzy matching, id search by instance<br>FixTime - Range matching, repair time range, input two values to indicate start and end time</p> 
-     * @return Filters <p>Filtering Conditions<br>Supported Filter.Name:<br>Keyword - Fuzzy matching, search by keyword (vulnerability name/CVE ID/host name/instance ID)<br>VulName - Fuzzy matching, vulnerability name search<br>Level - Exact match, filter by vulnerability level: LOW-Low risk MEDIUM-Medium risk HIGH-High risk CRITICAL-Critical<br>VprLevel - Exact match, filter by VPR rating: 1-Low 2-Medium 3-High 4-Critical<br>VulCategory - Exact match, type filter: LINUX-Linux software vulnerability WINDOWS-Windows system patch vulnerability WEB_CMS-Web-CMS vulnerability APPLICATION-Application vulnerability EMERGENCY-Emergency vulnerability<br>MachineName - Fuzzy matching, search by host name<br>InstanceId - Fuzzy matching, id search by instance<br>FixTime - Range matching, repair time range, input two values to indicate start and end time</p>
+     * Get <p>Filter criteria<br>Supported Filter.Name:<br>Keyword - fuzzy matching, search by keyword (vulnerability name/CVE ID/host name/instance ID)<br>VulName - fuzzy matching, search by vulnerability name<br>Level - exact matching, filter by vulnerability level: LOW - low risk, MEDIUM - medium risk, HIGH - high risk, CRITICAL - critical<br>VprLevel - exact matching, filter by VPR rating: 1 - Low, 2 - Medium, 3 - High, 4 - Critical<br>VulCategory - exact matching, filter by vulnerability type: LINUX - Linux software vulnerability, WINDOWS - Windows system patch vulnerability, WEB_CMS - Web-CMS vulnerability, APPLICATION - application vulnerability, EMERGENCY - urgent vulnerability<br>MachineName - fuzzy matching, search by host name<br>InstanceId - fuzzy matching, search by instance ID<br>FixTime - range matching, repair time range. Input two values to indicate the start and end time</p> 
+     * @return Filters <p>Filter criteria<br>Supported Filter.Name:<br>Keyword - fuzzy matching, search by keyword (vulnerability name/CVE ID/host name/instance ID)<br>VulName - fuzzy matching, search by vulnerability name<br>Level - exact matching, filter by vulnerability level: LOW - low risk, MEDIUM - medium risk, HIGH - high risk, CRITICAL - critical<br>VprLevel - exact matching, filter by VPR rating: 1 - Low, 2 - Medium, 3 - High, 4 - Critical<br>VulCategory - exact matching, filter by vulnerability type: LINUX - Linux software vulnerability, WINDOWS - Windows system patch vulnerability, WEB_CMS - Web-CMS vulnerability, APPLICATION - application vulnerability, EMERGENCY - urgent vulnerability<br>MachineName - fuzzy matching, search by host name<br>InstanceId - fuzzy matching, search by instance ID<br>FixTime - range matching, repair time range. Input two values to indicate the start and end time</p>
      */
     public Filters [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set <p>Filtering Conditions<br>Supported Filter.Name:<br>Keyword - Fuzzy matching, search by keyword (vulnerability name/CVE ID/host name/instance ID)<br>VulName - Fuzzy matching, vulnerability name search<br>Level - Exact match, filter by vulnerability level: LOW-Low risk MEDIUM-Medium risk HIGH-High risk CRITICAL-Critical<br>VprLevel - Exact match, filter by VPR rating: 1-Low 2-Medium 3-High 4-Critical<br>VulCategory - Exact match, type filter: LINUX-Linux software vulnerability WINDOWS-Windows system patch vulnerability WEB_CMS-Web-CMS vulnerability APPLICATION-Application vulnerability EMERGENCY-Emergency vulnerability<br>MachineName - Fuzzy matching, search by host name<br>InstanceId - Fuzzy matching, id search by instance<br>FixTime - Range matching, repair time range, input two values to indicate start and end time</p>
-     * @param Filters <p>Filtering Conditions<br>Supported Filter.Name:<br>Keyword - Fuzzy matching, search by keyword (vulnerability name/CVE ID/host name/instance ID)<br>VulName - Fuzzy matching, vulnerability name search<br>Level - Exact match, filter by vulnerability level: LOW-Low risk MEDIUM-Medium risk HIGH-High risk CRITICAL-Critical<br>VprLevel - Exact match, filter by VPR rating: 1-Low 2-Medium 3-High 4-Critical<br>VulCategory - Exact match, type filter: LINUX-Linux software vulnerability WINDOWS-Windows system patch vulnerability WEB_CMS-Web-CMS vulnerability APPLICATION-Application vulnerability EMERGENCY-Emergency vulnerability<br>MachineName - Fuzzy matching, search by host name<br>InstanceId - Fuzzy matching, id search by instance<br>FixTime - Range matching, repair time range, input two values to indicate start and end time</p>
+     * Set <p>Filter criteria<br>Supported Filter.Name:<br>Keyword - fuzzy matching, search by keyword (vulnerability name/CVE ID/host name/instance ID)<br>VulName - fuzzy matching, search by vulnerability name<br>Level - exact matching, filter by vulnerability level: LOW - low risk, MEDIUM - medium risk, HIGH - high risk, CRITICAL - critical<br>VprLevel - exact matching, filter by VPR rating: 1 - Low, 2 - Medium, 3 - High, 4 - Critical<br>VulCategory - exact matching, filter by vulnerability type: LINUX - Linux software vulnerability, WINDOWS - Windows system patch vulnerability, WEB_CMS - Web-CMS vulnerability, APPLICATION - application vulnerability, EMERGENCY - urgent vulnerability<br>MachineName - fuzzy matching, search by host name<br>InstanceId - fuzzy matching, search by instance ID<br>FixTime - range matching, repair time range. Input two values to indicate the start and end time</p>
+     * @param Filters <p>Filter criteria<br>Supported Filter.Name:<br>Keyword - fuzzy matching, search by keyword (vulnerability name/CVE ID/host name/instance ID)<br>VulName - fuzzy matching, search by vulnerability name<br>Level - exact matching, filter by vulnerability level: LOW - low risk, MEDIUM - medium risk, HIGH - high risk, CRITICAL - critical<br>VprLevel - exact matching, filter by VPR rating: 1 - Low, 2 - Medium, 3 - High, 4 - Critical<br>VulCategory - exact matching, filter by vulnerability type: LINUX - Linux software vulnerability, WINDOWS - Windows system patch vulnerability, WEB_CMS - Web-CMS vulnerability, APPLICATION - application vulnerability, EMERGENCY - urgent vulnerability<br>MachineName - fuzzy matching, search by host name<br>InstanceId - fuzzy matching, search by instance ID<br>FixTime - range matching, repair time range. Input two values to indicate the start and end time</p>
      */
     public void setFilters(Filters [] Filters) {
         this.Filters = Filters;
     }
 
     /**
-     * Get <p>Sorting field<br>Enumeration value:<br>FixTime: Sort by repair time<br>VulName: Sort by vulnerability name</p> 
-     * @return Order <p>Sorting field<br>Enumeration value:<br>FixTime: Sort by repair time<br>VulName: Sort by vulnerability name</p>
+     * Get <p>Sorting field<br>Enumeration values:<br>FixTime: sort by fix time<br>VulName: sort by vulnerability name</p> 
+     * @return Order <p>Sorting field<br>Enumeration values:<br>FixTime: sort by fix time<br>VulName: sort by vulnerability name</p>
      */
     public String getOrder() {
         return this.Order;
     }
 
     /**
-     * Set <p>Sorting field<br>Enumeration value:<br>FixTime: Sort by repair time<br>VulName: Sort by vulnerability name</p>
-     * @param Order <p>Sorting field<br>Enumeration value:<br>FixTime: Sort by repair time<br>VulName: Sort by vulnerability name</p>
+     * Set <p>Sorting field<br>Enumeration values:<br>FixTime: sort by fix time<br>VulName: sort by vulnerability name</p>
+     * @param Order <p>Sorting field<br>Enumeration values:<br>FixTime: sort by fix time<br>VulName: sort by vulnerability name</p>
      */
     public void setOrder(String Order) {
         this.Order = Order;
     }
 
     /**
-     * Get <p>Sorting method<br>Enumeration value:<br>asc: Ascending<br>desc: Descending order<br>Default value: desc</p> 
-     * @return By <p>Sorting method<br>Enumeration value:<br>asc: Ascending<br>desc: Descending order<br>Default value: desc</p>
+     * Get <p>Sorting method<br>Enumeration values:<br>asc: Ascending<br>desc: Descending<br>Default value: desc</p> 
+     * @return By <p>Sorting method<br>Enumeration values:<br>asc: Ascending<br>desc: Descending<br>Default value: desc</p>
      */
     public String getBy() {
         return this.By;
     }
 
     /**
-     * Set <p>Sorting method<br>Enumeration value:<br>asc: Ascending<br>desc: Descending order<br>Default value: desc</p>
-     * @param By <p>Sorting method<br>Enumeration value:<br>asc: Ascending<br>desc: Descending order<br>Default value: desc</p>
+     * Set <p>Sorting method<br>Enumeration values:<br>asc: Ascending<br>desc: Descending<br>Default value: desc</p>
+     * @param By <p>Sorting method<br>Enumeration values:<br>asc: Ascending<br>desc: Descending<br>Default value: desc</p>
      */
     public void setBy(String By) {
         this.By = By;

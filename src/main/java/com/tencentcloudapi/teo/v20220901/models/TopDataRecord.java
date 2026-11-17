@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class TopDataRecord extends AbstractModel {
 
     /**
-    * The query dimension value.
+    * Dimension value to query.
     */
     @SerializedName("TypeKey")
     @Expose
     private String TypeKey;
 
     /**
-    * Top data rankings
+    * top data ranking.
     */
     @SerializedName("DetailData")
     @Expose
     private TopDetailData [] DetailData;
 
     /**
-     * Get The query dimension value. 
-     * @return TypeKey The query dimension value.
+     * Get Dimension value to query. 
+     * @return TypeKey Dimension value to query.
      */
     public String getTypeKey() {
         return this.TypeKey;
     }
 
     /**
-     * Set The query dimension value.
-     * @param TypeKey The query dimension value.
+     * Set Dimension value to query.
+     * @param TypeKey Dimension value to query.
      */
     public void setTypeKey(String TypeKey) {
         this.TypeKey = TypeKey;
     }
 
     /**
-     * Get Top data rankings 
-     * @return DetailData Top data rankings
+     * Get top data ranking. 
+     * @return DetailData top data ranking.
      */
     public TopDetailData [] getDetailData() {
         return this.DetailData;
     }
 
     /**
-     * Set Top data rankings
-     * @param DetailData Top data rankings
+     * Set top data ranking.
+     * @param DetailData top data ranking.
      */
     public void setDetailData(TopDetailData [] DetailData) {
         this.DetailData = DetailData;

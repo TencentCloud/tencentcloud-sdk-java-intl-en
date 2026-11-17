@@ -38,14 +38,14 @@ public class DescribeVulFixedHostDetailResponse extends AbstractModel {
     private String CveId;
 
     /**
-    * <p>Vulnerability type<br>Enumeration value:<br>LINUX: Linux software vulnerability<br>WINDOWS: Windows system patch vulnerability<br>WEB_CMS: Web-CMS vulnerability<br>APPLICATION: Application vulnerability</p>
+    * <p>Vulnerability type<br>Enumeration values:<br>LINUX: Linux software vulnerability<br>WINDOWS: Windows system patch vulnerability<br>WEB_CMS: Web-CMS vulnerability<br>APPLICATION: Application vulnerability</p>
     */
     @SerializedName("VulCategory")
     @Expose
     private String VulCategory;
 
     /**
-    * <p>Repair completion time<br>Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)</p>
+    * <p>Repair completed time<br>Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)</p>
     */
     @SerializedName("FixTime")
     @Expose
@@ -66,7 +66,7 @@ public class DescribeVulFixedHostDetailResponse extends AbstractModel {
     private String MachineName;
 
     /**
-    * <p>Public IP of the server</p>
+    * <p>Public IP of the Server</p>
     */
     @SerializedName("PublicIp")
     @Expose
@@ -80,14 +80,14 @@ public class DescribeVulFixedHostDetailResponse extends AbstractModel {
     private String PrivateIp;
 
     /**
-    * <p>Associated component & path detail list</p>
+    * <p>Associated component &amp; path detail list</p>
     */
     @SerializedName("ComponentDetails")
     @Expose
     private ComponentDetailItem [] ComponentDetails;
 
     /**
-    * <p>Total number of associated components & paths</p>
+    * <p>Total number of associated components &amp; paths</p>
     */
     @SerializedName("TotalCount")
     @Expose
@@ -133,32 +133,32 @@ public class DescribeVulFixedHostDetailResponse extends AbstractModel {
     }
 
     /**
-     * Get <p>Vulnerability type<br>Enumeration value:<br>LINUX: Linux software vulnerability<br>WINDOWS: Windows system patch vulnerability<br>WEB_CMS: Web-CMS vulnerability<br>APPLICATION: Application vulnerability</p> 
-     * @return VulCategory <p>Vulnerability type<br>Enumeration value:<br>LINUX: Linux software vulnerability<br>WINDOWS: Windows system patch vulnerability<br>WEB_CMS: Web-CMS vulnerability<br>APPLICATION: Application vulnerability</p>
+     * Get <p>Vulnerability type<br>Enumeration values:<br>LINUX: Linux software vulnerability<br>WINDOWS: Windows system patch vulnerability<br>WEB_CMS: Web-CMS vulnerability<br>APPLICATION: Application vulnerability</p> 
+     * @return VulCategory <p>Vulnerability type<br>Enumeration values:<br>LINUX: Linux software vulnerability<br>WINDOWS: Windows system patch vulnerability<br>WEB_CMS: Web-CMS vulnerability<br>APPLICATION: Application vulnerability</p>
      */
     public String getVulCategory() {
         return this.VulCategory;
     }
 
     /**
-     * Set <p>Vulnerability type<br>Enumeration value:<br>LINUX: Linux software vulnerability<br>WINDOWS: Windows system patch vulnerability<br>WEB_CMS: Web-CMS vulnerability<br>APPLICATION: Application vulnerability</p>
-     * @param VulCategory <p>Vulnerability type<br>Enumeration value:<br>LINUX: Linux software vulnerability<br>WINDOWS: Windows system patch vulnerability<br>WEB_CMS: Web-CMS vulnerability<br>APPLICATION: Application vulnerability</p>
+     * Set <p>Vulnerability type<br>Enumeration values:<br>LINUX: Linux software vulnerability<br>WINDOWS: Windows system patch vulnerability<br>WEB_CMS: Web-CMS vulnerability<br>APPLICATION: Application vulnerability</p>
+     * @param VulCategory <p>Vulnerability type<br>Enumeration values:<br>LINUX: Linux software vulnerability<br>WINDOWS: Windows system patch vulnerability<br>WEB_CMS: Web-CMS vulnerability<br>APPLICATION: Application vulnerability</p>
      */
     public void setVulCategory(String VulCategory) {
         this.VulCategory = VulCategory;
     }
 
     /**
-     * Get <p>Repair completion time<br>Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)</p> 
-     * @return FixTime <p>Repair completion time<br>Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)</p>
+     * Get <p>Repair completed time<br>Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)</p> 
+     * @return FixTime <p>Repair completed time<br>Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)</p>
      */
     public String getFixTime() {
         return this.FixTime;
     }
 
     /**
-     * Set <p>Repair completion time<br>Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)</p>
-     * @param FixTime <p>Repair completion time<br>Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)</p>
+     * Set <p>Repair completed time<br>Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)</p>
+     * @param FixTime <p>Repair completed time<br>Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)</p>
      */
     public void setFixTime(String FixTime) {
         this.FixTime = FixTime;
@@ -197,16 +197,16 @@ public class DescribeVulFixedHostDetailResponse extends AbstractModel {
     }
 
     /**
-     * Get <p>Public IP of the server</p> 
-     * @return PublicIp <p>Public IP of the server</p>
+     * Get <p>Public IP of the Server</p> 
+     * @return PublicIp <p>Public IP of the Server</p>
      */
     public String getPublicIp() {
         return this.PublicIp;
     }
 
     /**
-     * Set <p>Public IP of the server</p>
-     * @param PublicIp <p>Public IP of the server</p>
+     * Set <p>Public IP of the Server</p>
+     * @param PublicIp <p>Public IP of the Server</p>
      */
     public void setPublicIp(String PublicIp) {
         this.PublicIp = PublicIp;
@@ -229,32 +229,32 @@ public class DescribeVulFixedHostDetailResponse extends AbstractModel {
     }
 
     /**
-     * Get <p>Associated component & path detail list</p> 
-     * @return ComponentDetails <p>Associated component & path detail list</p>
+     * Get <p>Associated component &amp; path detail list</p> 
+     * @return ComponentDetails <p>Associated component &amp; path detail list</p>
      */
     public ComponentDetailItem [] getComponentDetails() {
         return this.ComponentDetails;
     }
 
     /**
-     * Set <p>Associated component & path detail list</p>
-     * @param ComponentDetails <p>Associated component & path detail list</p>
+     * Set <p>Associated component &amp; path detail list</p>
+     * @param ComponentDetails <p>Associated component &amp; path detail list</p>
      */
     public void setComponentDetails(ComponentDetailItem [] ComponentDetails) {
         this.ComponentDetails = ComponentDetails;
     }
 
     /**
-     * Get <p>Total number of associated components & paths</p> 
-     * @return TotalCount <p>Total number of associated components & paths</p>
+     * Get <p>Total number of associated components &amp; paths</p> 
+     * @return TotalCount <p>Total number of associated components &amp; paths</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set <p>Total number of associated components & paths</p>
-     * @param TotalCount <p>Total number of associated components & paths</p>
+     * Set <p>Total number of associated components &amp; paths</p>
+     * @param TotalCount <p>Total number of associated components &amp; paths</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

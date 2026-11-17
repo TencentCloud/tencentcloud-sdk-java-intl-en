@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeVulRiskRelateComponentResponse extends AbstractModel {
 
     /**
-    * <p>List of affected components for the vulnerability</p>
+    * <p>List of affected components</p>
     */
     @SerializedName("List")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeVulRiskRelateComponentResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get <p>List of affected components for the vulnerability</p> 
-     * @return List <p>List of affected components for the vulnerability</p>
+     * Get <p>List of affected components</p> 
+     * @return List <p>List of affected components</p>
      */
     public VulComponentSummary [] getList() {
         return this.List;
     }
 
     /**
-     * Set <p>List of affected components for the vulnerability</p>
-     * @param List <p>List of affected components for the vulnerability</p>
+     * Set <p>List of affected components</p>
+     * @param List <p>List of affected components</p>
      */
     public void setList(VulComponentSummary [] List) {
         this.List = List;

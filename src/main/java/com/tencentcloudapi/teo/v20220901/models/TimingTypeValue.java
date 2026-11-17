@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class TimingTypeValue extends AbstractModel {
 
     /**
-    * Sum.
+    * Data and.
     */
     @SerializedName("Sum")
     @Expose
     private Long Sum;
 
     /**
-    * The maximum value.
+    * Maximum value.
     */
     @SerializedName("Max")
     @Expose
     private Long Max;
 
     /**
-    * The average value.
+    * Mean.
     */
     @SerializedName("Avg")
     @Expose
@@ -53,55 +53,54 @@ public class TimingTypeValue extends AbstractModel {
 
     /**
     * Details.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Detail")
     @Expose
     private TimingDataItem [] Detail;
 
     /**
-     * Get Sum. 
-     * @return Sum Sum.
+     * Get Data and. 
+     * @return Sum Data and.
      */
     public Long getSum() {
         return this.Sum;
     }
 
     /**
-     * Set Sum.
-     * @param Sum Sum.
+     * Set Data and.
+     * @param Sum Data and.
      */
     public void setSum(Long Sum) {
         this.Sum = Sum;
     }
 
     /**
-     * Get The maximum value. 
-     * @return Max The maximum value.
+     * Get Maximum value. 
+     * @return Max Maximum value.
      */
     public Long getMax() {
         return this.Max;
     }
 
     /**
-     * Set The maximum value.
-     * @param Max The maximum value.
+     * Set Maximum value.
+     * @param Max Maximum value.
      */
     public void setMax(Long Max) {
         this.Max = Max;
     }
 
     /**
-     * Get The average value. 
-     * @return Avg The average value.
+     * Get Mean. 
+     * @return Avg Mean.
      */
     public Long getAvg() {
         return this.Avg;
     }
 
     /**
-     * Set The average value.
-     * @param Avg The average value.
+     * Set Mean.
+     * @param Avg Mean.
      */
     public void setAvg(Long Avg) {
         this.Avg = Avg;
@@ -124,10 +123,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Details.
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Details. 
      * @return Detail Details.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public TimingDataItem [] getDetail() {
         return this.Detail;
@@ -135,9 +132,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Details.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Detail Details.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setDetail(TimingDataItem [] Detail) {
         this.Detail = Detail;

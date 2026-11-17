@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class VulComponentSummary extends AbstractModel {
 
     /**
-    * <p>Component name.</p>
+    * <p>Component name</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * <p>Associated hosts.</p>
+    * <p>Number of associated hosts</p>
     */
     @SerializedName("RelateHostCount")
     @Expose
     private Long RelateHostCount;
 
     /**
-     * Get <p>Component name.</p> 
-     * @return Name <p>Component name.</p>
+     * Get <p>Component name</p> 
+     * @return Name <p>Component name</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set <p>Component name.</p>
-     * @param Name <p>Component name.</p>
+     * Set <p>Component name</p>
+     * @param Name <p>Component name</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get <p>Associated hosts.</p> 
-     * @return RelateHostCount <p>Associated hosts.</p>
+     * Get <p>Number of associated hosts</p> 
+     * @return RelateHostCount <p>Number of associated hosts</p>
      */
     public Long getRelateHostCount() {
         return this.RelateHostCount;
     }
 
     /**
-     * Set <p>Associated hosts.</p>
-     * @param RelateHostCount <p>Associated hosts.</p>
+     * Set <p>Number of associated hosts</p>
+     * @param RelateHostCount <p>Number of associated hosts</p>
      */
     public void setRelateHostCount(Long RelateHostCount) {
         this.RelateHostCount = RelateHostCount;

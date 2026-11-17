@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class VPRRatingStage extends AbstractModel {
 
     /**
-    * Stage name (for example: threat activity level, exploitability, vulnerability severity)
+    * Stage name (for example, threat activity, exploitability, vulnerability severity)
     */
     @SerializedName("Stage")
     @Expose
     private String Stage;
 
     /**
-    * Rating result of this stage
+    * Rating result of this stage.
     */
     @SerializedName("Result")
     @Expose
     private String Result;
 
     /**
-     * Get Stage name (for example: threat activity level, exploitability, vulnerability severity) 
-     * @return Stage Stage name (for example: threat activity level, exploitability, vulnerability severity)
+     * Get Stage name (for example, threat activity, exploitability, vulnerability severity) 
+     * @return Stage Stage name (for example, threat activity, exploitability, vulnerability severity)
      */
     public String getStage() {
         return this.Stage;
     }
 
     /**
-     * Set Stage name (for example: threat activity level, exploitability, vulnerability severity)
-     * @param Stage Stage name (for example: threat activity level, exploitability, vulnerability severity)
+     * Set Stage name (for example, threat activity, exploitability, vulnerability severity)
+     * @param Stage Stage name (for example, threat activity, exploitability, vulnerability severity)
      */
     public void setStage(String Stage) {
         this.Stage = Stage;
     }
 
     /**
-     * Get Rating result of this stage 
-     * @return Result Rating result of this stage
+     * Get Rating result of this stage. 
+     * @return Result Rating result of this stage.
      */
     public String getResult() {
         return this.Result;
     }
 
     /**
-     * Set Rating result of this stage
-     * @param Result Rating result of this stage
+     * Set Rating result of this stage.
+     * @param Result Rating result of this stage.
      */
     public void setResult(String Result) {
         this.Result = Result;

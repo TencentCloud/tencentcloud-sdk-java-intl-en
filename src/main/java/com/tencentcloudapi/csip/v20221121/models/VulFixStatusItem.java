@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class VulFixStatusItem extends AbstractModel {
 
     /**
-    * Vulnerability ID (empty for KB patch fix tasks)
+    * Vulnerability ID (empty for KB patch repair tasks)
     */
     @SerializedName("VulId")
     @Expose
     private Long VulId;
 
     /**
-    * Patch ID (empty for vulnerability repair tasks)
+    * KB patch ID (empty for vulnerability repair tasks)
     */
     @SerializedName("KBId")
     @Expose
@@ -49,7 +49,7 @@ public class VulFixStatusItem extends AbstractModel {
 Enumeration value:
 0: In remediation
 1: All successful
-2: partially failed
+2: Partially failed
 3: All failed
     */
     @SerializedName("FixStatus")
@@ -57,53 +57,53 @@ Enumeration value:
     private Long FixStatus;
 
     /**
-    * Total hosts associated with the vulnerability/KB patch
+    * Total number of hosts associated with this vulnerability/KB patch
     */
     @SerializedName("HostCount")
     @Expose
     private Long HostCount;
 
     /**
-    * Number of hosts successfully fixed by the vulnerability/KB patch
+    * Number of hosts successfully fixed by this vulnerability/KB patch
     */
     @SerializedName("SuccessHostCount")
     @Expose
     private Long SuccessHostCount;
 
     /**
-    * Number of hosts failed to be fixed for the vulnerability/KB patch
+    * Number of hosts failed to be fixed by this vulnerability/KB patch
     */
     @SerializedName("FailHostCount")
     @Expose
     private Long FailHostCount;
 
     /**
-     * Get Vulnerability ID (empty for KB patch fix tasks) 
-     * @return VulId Vulnerability ID (empty for KB patch fix tasks)
+     * Get Vulnerability ID (empty for KB patch repair tasks) 
+     * @return VulId Vulnerability ID (empty for KB patch repair tasks)
      */
     public Long getVulId() {
         return this.VulId;
     }
 
     /**
-     * Set Vulnerability ID (empty for KB patch fix tasks)
-     * @param VulId Vulnerability ID (empty for KB patch fix tasks)
+     * Set Vulnerability ID (empty for KB patch repair tasks)
+     * @param VulId Vulnerability ID (empty for KB patch repair tasks)
      */
     public void setVulId(Long VulId) {
         this.VulId = VulId;
     }
 
     /**
-     * Get Patch ID (empty for vulnerability repair tasks) 
-     * @return KBId Patch ID (empty for vulnerability repair tasks)
+     * Get KB patch ID (empty for vulnerability repair tasks) 
+     * @return KBId KB patch ID (empty for vulnerability repair tasks)
      */
     public Long getKBId() {
         return this.KBId;
     }
 
     /**
-     * Set Patch ID (empty for vulnerability repair tasks)
-     * @param KBId Patch ID (empty for vulnerability repair tasks)
+     * Set KB patch ID (empty for vulnerability repair tasks)
+     * @param KBId KB patch ID (empty for vulnerability repair tasks)
      */
     public void setKBId(Long KBId) {
         this.KBId = KBId;
@@ -130,13 +130,13 @@ Enumeration value:
 Enumeration value:
 0: In remediation
 1: All successful
-2: partially failed
+2: Partially failed
 3: All failed 
      * @return FixStatus Remediation status of the vulnerability
 Enumeration value:
 0: In remediation
 1: All successful
-2: partially failed
+2: Partially failed
 3: All failed
      */
     public Long getFixStatus() {
@@ -148,13 +148,13 @@ Enumeration value:
 Enumeration value:
 0: In remediation
 1: All successful
-2: partially failed
+2: Partially failed
 3: All failed
      * @param FixStatus Remediation status of the vulnerability
 Enumeration value:
 0: In remediation
 1: All successful
-2: partially failed
+2: Partially failed
 3: All failed
      */
     public void setFixStatus(Long FixStatus) {
@@ -162,48 +162,48 @@ Enumeration value:
     }
 
     /**
-     * Get Total hosts associated with the vulnerability/KB patch 
-     * @return HostCount Total hosts associated with the vulnerability/KB patch
+     * Get Total number of hosts associated with this vulnerability/KB patch 
+     * @return HostCount Total number of hosts associated with this vulnerability/KB patch
      */
     public Long getHostCount() {
         return this.HostCount;
     }
 
     /**
-     * Set Total hosts associated with the vulnerability/KB patch
-     * @param HostCount Total hosts associated with the vulnerability/KB patch
+     * Set Total number of hosts associated with this vulnerability/KB patch
+     * @param HostCount Total number of hosts associated with this vulnerability/KB patch
      */
     public void setHostCount(Long HostCount) {
         this.HostCount = HostCount;
     }
 
     /**
-     * Get Number of hosts successfully fixed by the vulnerability/KB patch 
-     * @return SuccessHostCount Number of hosts successfully fixed by the vulnerability/KB patch
+     * Get Number of hosts successfully fixed by this vulnerability/KB patch 
+     * @return SuccessHostCount Number of hosts successfully fixed by this vulnerability/KB patch
      */
     public Long getSuccessHostCount() {
         return this.SuccessHostCount;
     }
 
     /**
-     * Set Number of hosts successfully fixed by the vulnerability/KB patch
-     * @param SuccessHostCount Number of hosts successfully fixed by the vulnerability/KB patch
+     * Set Number of hosts successfully fixed by this vulnerability/KB patch
+     * @param SuccessHostCount Number of hosts successfully fixed by this vulnerability/KB patch
      */
     public void setSuccessHostCount(Long SuccessHostCount) {
         this.SuccessHostCount = SuccessHostCount;
     }
 
     /**
-     * Get Number of hosts failed to be fixed for the vulnerability/KB patch 
-     * @return FailHostCount Number of hosts failed to be fixed for the vulnerability/KB patch
+     * Get Number of hosts failed to be fixed by this vulnerability/KB patch 
+     * @return FailHostCount Number of hosts failed to be fixed by this vulnerability/KB patch
      */
     public Long getFailHostCount() {
         return this.FailHostCount;
     }
 
     /**
-     * Set Number of hosts failed to be fixed for the vulnerability/KB patch
-     * @param FailHostCount Number of hosts failed to be fixed for the vulnerability/KB patch
+     * Set Number of hosts failed to be fixed by this vulnerability/KB patch
+     * @param FailHostCount Number of hosts failed to be fixed by this vulnerability/KB patch
      */
     public void setFailHostCount(Long FailHostCount) {
         this.FailHostCount = FailHostCount;

@@ -80,7 +80,7 @@ public class GeneralCard extends AbstractModel {
     private String MiddleNameLocal;
 
     /**
-    * <p>Last name</p>
+    * <p>Surname</p>
     */
     @SerializedName("LastName")
     @Expose
@@ -94,7 +94,7 @@ public class GeneralCard extends AbstractModel {
     private String LastNameLocal;
 
     /**
-    * <p>Gender on the document</p><ul><li>M: man</li><li>F: woman</li><li>X: other gender identity</li></ul>
+    * <p>Gender on the document</p><ul><li>M: Man</li><li>F: Woman</li><li>X: Other gender identity</li></ul>
     */
     @SerializedName("Sex")
     @Expose
@@ -129,7 +129,7 @@ public class GeneralCard extends AbstractModel {
     private String IssuedAuthority;
 
     /**
-    * <p>Place where the specified file is issued</p>
+    * <p>Place where the file is issued.</p>
     */
     @SerializedName("IssuedPlace")
     @Expose
@@ -157,7 +157,7 @@ public class GeneralCard extends AbstractModel {
     private String ExpirationDate;
 
     /**
-    * <p>Content of the single-line machine-readable zone (MRZ) on the document. The number represents the order in which the line appears in the MRZ</p>
+    * <p>Content of the single-line machine-readable zone (MRZ) on the document. The number represents the line count in the order of the MRZ</p>
     */
     @SerializedName("MRZLine1")
     @Expose
@@ -178,7 +178,7 @@ public class GeneralCard extends AbstractModel {
     private String Nationality;
 
     /**
-    * <p>Address information on the document</p>
+    * <p>Document address information</p>
     */
     @SerializedName("Address")
     @Expose
@@ -213,7 +213,7 @@ public class GeneralCard extends AbstractModel {
     private String Height;
 
     /**
-    * <p>Weight</p>
+    * <p>Weight.</p>
     */
     @SerializedName("Weight")
     @Expose
@@ -227,14 +227,14 @@ public class GeneralCard extends AbstractModel {
     private String VehicleClass;
 
     /**
-    * <p>Driver's license restriction condition</p>
+    * <p>Driver's license restrictions</p>
     */
     @SerializedName("Restrictions")
     @Expose
     private String Restrictions;
 
     /**
-    * <p>Driver's license extra records</p>
+    * <p>Additional driver's license records</p>
     */
     @SerializedName("Endorsement")
     @Expose
@@ -262,7 +262,7 @@ public class GeneralCard extends AbstractModel {
     private String PassportCodeSecond;
 
     /**
-    * <p>Validity date, in YYYY-MM-DD format</p>
+    * <p>Validity period, in YYYY-MM-DD format</p>
     */
     @SerializedName("DueDate")
     @Expose
@@ -281,6 +281,13 @@ public class GeneralCard extends AbstractModel {
     @SerializedName("RegistrationNumber")
     @Expose
     private String RegistrationNumber;
+
+    /**
+    * <p>Complete enumeration of specific card types confirmed by server-side classification (for example, THA_ID_CARD). Wildcards are not returned.</p>
+    */
+    @SerializedName("DetectedCardType")
+    @Expose
+    private String DetectedCardType;
 
     /**
      * Get <p>ID number</p> 
@@ -411,16 +418,16 @@ public class GeneralCard extends AbstractModel {
     }
 
     /**
-     * Get <p>Last name</p> 
-     * @return LastName <p>Last name</p>
+     * Get <p>Surname</p> 
+     * @return LastName <p>Surname</p>
      */
     public String getLastName() {
         return this.LastName;
     }
 
     /**
-     * Set <p>Last name</p>
-     * @param LastName <p>Last name</p>
+     * Set <p>Surname</p>
+     * @param LastName <p>Surname</p>
      */
     public void setLastName(String LastName) {
         this.LastName = LastName;
@@ -443,16 +450,16 @@ public class GeneralCard extends AbstractModel {
     }
 
     /**
-     * Get <p>Gender on the document</p><ul><li>M: man</li><li>F: woman</li><li>X: other gender identity</li></ul> 
-     * @return Sex <p>Gender on the document</p><ul><li>M: man</li><li>F: woman</li><li>X: other gender identity</li></ul>
+     * Get <p>Gender on the document</p><ul><li>M: Man</li><li>F: Woman</li><li>X: Other gender identity</li></ul> 
+     * @return Sex <p>Gender on the document</p><ul><li>M: Man</li><li>F: Woman</li><li>X: Other gender identity</li></ul>
      */
     public String getSex() {
         return this.Sex;
     }
 
     /**
-     * Set <p>Gender on the document</p><ul><li>M: man</li><li>F: woman</li><li>X: other gender identity</li></ul>
-     * @param Sex <p>Gender on the document</p><ul><li>M: man</li><li>F: woman</li><li>X: other gender identity</li></ul>
+     * Set <p>Gender on the document</p><ul><li>M: Man</li><li>F: Woman</li><li>X: Other gender identity</li></ul>
+     * @param Sex <p>Gender on the document</p><ul><li>M: Man</li><li>F: Woman</li><li>X: Other gender identity</li></ul>
      */
     public void setSex(String Sex) {
         this.Sex = Sex;
@@ -523,16 +530,16 @@ public class GeneralCard extends AbstractModel {
     }
 
     /**
-     * Get <p>Place where the specified file is issued</p> 
-     * @return IssuedPlace <p>Place where the specified file is issued</p>
+     * Get <p>Place where the file is issued.</p> 
+     * @return IssuedPlace <p>Place where the file is issued.</p>
      */
     public String getIssuedPlace() {
         return this.IssuedPlace;
     }
 
     /**
-     * Set <p>Place where the specified file is issued</p>
-     * @param IssuedPlace <p>Place where the specified file is issued</p>
+     * Set <p>Place where the file is issued.</p>
+     * @param IssuedPlace <p>Place where the file is issued.</p>
      */
     public void setIssuedPlace(String IssuedPlace) {
         this.IssuedPlace = IssuedPlace;
@@ -587,16 +594,16 @@ public class GeneralCard extends AbstractModel {
     }
 
     /**
-     * Get <p>Content of the single-line machine-readable zone (MRZ) on the document. The number represents the order in which the line appears in the MRZ</p> 
-     * @return MRZLine1 <p>Content of the single-line machine-readable zone (MRZ) on the document. The number represents the order in which the line appears in the MRZ</p>
+     * Get <p>Content of the single-line machine-readable zone (MRZ) on the document. The number represents the line count in the order of the MRZ</p> 
+     * @return MRZLine1 <p>Content of the single-line machine-readable zone (MRZ) on the document. The number represents the line count in the order of the MRZ</p>
      */
     public String getMRZLine1() {
         return this.MRZLine1;
     }
 
     /**
-     * Set <p>Content of the single-line machine-readable zone (MRZ) on the document. The number represents the order in which the line appears in the MRZ</p>
-     * @param MRZLine1 <p>Content of the single-line machine-readable zone (MRZ) on the document. The number represents the order in which the line appears in the MRZ</p>
+     * Set <p>Content of the single-line machine-readable zone (MRZ) on the document. The number represents the line count in the order of the MRZ</p>
+     * @param MRZLine1 <p>Content of the single-line machine-readable zone (MRZ) on the document. The number represents the line count in the order of the MRZ</p>
      */
     public void setMRZLine1(String MRZLine1) {
         this.MRZLine1 = MRZLine1;
@@ -635,16 +642,16 @@ public class GeneralCard extends AbstractModel {
     }
 
     /**
-     * Get <p>Address information on the document</p> 
-     * @return Address <p>Address information on the document</p>
+     * Get <p>Document address information</p> 
+     * @return Address <p>Document address information</p>
      */
     public AddressInfo getAddress() {
         return this.Address;
     }
 
     /**
-     * Set <p>Address information on the document</p>
-     * @param Address <p>Address information on the document</p>
+     * Set <p>Document address information</p>
+     * @param Address <p>Document address information</p>
      */
     public void setAddress(AddressInfo Address) {
         this.Address = Address;
@@ -715,16 +722,16 @@ public class GeneralCard extends AbstractModel {
     }
 
     /**
-     * Get <p>Weight</p> 
-     * @return Weight <p>Weight</p>
+     * Get <p>Weight.</p> 
+     * @return Weight <p>Weight.</p>
      */
     public String getWeight() {
         return this.Weight;
     }
 
     /**
-     * Set <p>Weight</p>
-     * @param Weight <p>Weight</p>
+     * Set <p>Weight.</p>
+     * @param Weight <p>Weight.</p>
      */
     public void setWeight(String Weight) {
         this.Weight = Weight;
@@ -747,32 +754,32 @@ public class GeneralCard extends AbstractModel {
     }
 
     /**
-     * Get <p>Driver's license restriction condition</p> 
-     * @return Restrictions <p>Driver's license restriction condition</p>
+     * Get <p>Driver's license restrictions</p> 
+     * @return Restrictions <p>Driver's license restrictions</p>
      */
     public String getRestrictions() {
         return this.Restrictions;
     }
 
     /**
-     * Set <p>Driver's license restriction condition</p>
-     * @param Restrictions <p>Driver's license restriction condition</p>
+     * Set <p>Driver's license restrictions</p>
+     * @param Restrictions <p>Driver's license restrictions</p>
      */
     public void setRestrictions(String Restrictions) {
         this.Restrictions = Restrictions;
     }
 
     /**
-     * Get <p>Driver's license extra records</p> 
-     * @return Endorsement <p>Driver's license extra records</p>
+     * Get <p>Additional driver's license records</p> 
+     * @return Endorsement <p>Additional driver's license records</p>
      */
     public String getEndorsement() {
         return this.Endorsement;
     }
 
     /**
-     * Set <p>Driver's license extra records</p>
-     * @param Endorsement <p>Driver's license extra records</p>
+     * Set <p>Additional driver's license records</p>
+     * @param Endorsement <p>Additional driver's license records</p>
      */
     public void setEndorsement(String Endorsement) {
         this.Endorsement = Endorsement;
@@ -835,8 +842,8 @@ public class GeneralCard extends AbstractModel {
     }
 
     /**
-     * Get <p>Validity date, in YYYY-MM-DD format</p> 
-     * @return DueDate <p>Validity date, in YYYY-MM-DD format</p>
+     * Get <p>Validity period, in YYYY-MM-DD format</p> 
+     * @return DueDate <p>Validity period, in YYYY-MM-DD format</p>
      * @deprecated
      */
     @Deprecated
@@ -845,8 +852,8 @@ public class GeneralCard extends AbstractModel {
     }
 
     /**
-     * Set <p>Validity date, in YYYY-MM-DD format</p>
-     * @param DueDate <p>Validity date, in YYYY-MM-DD format</p>
+     * Set <p>Validity period, in YYYY-MM-DD format</p>
+     * @param DueDate <p>Validity period, in YYYY-MM-DD format</p>
      * @deprecated
      */
     @Deprecated
@@ -892,6 +899,22 @@ public class GeneralCard extends AbstractModel {
     @Deprecated
     public void setRegistrationNumber(String RegistrationNumber) {
         this.RegistrationNumber = RegistrationNumber;
+    }
+
+    /**
+     * Get <p>Complete enumeration of specific card types confirmed by server-side classification (for example, THA_ID_CARD). Wildcards are not returned.</p> 
+     * @return DetectedCardType <p>Complete enumeration of specific card types confirmed by server-side classification (for example, THA_ID_CARD). Wildcards are not returned.</p>
+     */
+    public String getDetectedCardType() {
+        return this.DetectedCardType;
+    }
+
+    /**
+     * Set <p>Complete enumeration of specific card types confirmed by server-side classification (for example, THA_ID_CARD). Wildcards are not returned.</p>
+     * @param DetectedCardType <p>Complete enumeration of specific card types confirmed by server-side classification (for example, THA_ID_CARD). Wildcards are not returned.</p>
+     */
+    public void setDetectedCardType(String DetectedCardType) {
+        this.DetectedCardType = DetectedCardType;
     }
 
     public GeneralCard() {
@@ -1013,6 +1036,9 @@ public class GeneralCard extends AbstractModel {
         if (source.RegistrationNumber != null) {
             this.RegistrationNumber = new String(source.RegistrationNumber);
         }
+        if (source.DetectedCardType != null) {
+            this.DetectedCardType = new String(source.DetectedCardType);
+        }
     }
 
 
@@ -1057,6 +1083,7 @@ public class GeneralCard extends AbstractModel {
         this.setParamSimple(map, prefix + "DueDate", this.DueDate);
         this.setParamSimple(map, prefix + "Age", this.Age);
         this.setParamSimple(map, prefix + "RegistrationNumber", this.RegistrationNumber);
+        this.setParamSimple(map, prefix + "DetectedCardType", this.DetectedCardType);
 
     }
 }

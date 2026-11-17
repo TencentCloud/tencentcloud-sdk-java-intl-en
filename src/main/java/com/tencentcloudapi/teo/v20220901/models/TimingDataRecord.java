@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class TimingDataRecord extends AbstractModel {
 
     /**
-    * The query dimension value.
+    * Query the dimension value.
     */
     @SerializedName("TypeKey")
     @Expose
     private String TypeKey;
 
     /**
-    * Detailed time series data of the <code>Integer</code> type. query metrics with the <code>Integer</code> value type will return corresponding time series data through this field.<br> **note**: if the query metric does not specify the value type, this field will return data by default.
+    * Detailed time series data of the <code>Integer</code> type. If the value type of the query metric is <code>Integer</code>, the corresponding time series data will be returned in this field.<br> **Note**: If the value type of the query metric is unclear, data will be returned in this field by default.
     */
     @SerializedName("TypeValue")
     @Expose
     private TimingTypeValue [] TypeValue;
 
     /**
-    * Detailed time series data of <code>Float</code> type. query metrics with <code>Float</code> value type will return corresponding time series data via this field.
+    * Detailed time series data of <code>Float</code> type. For metrics whose query metric value type is <code>Float</code>, the corresponding time series data is returned in this field.
     */
     @SerializedName("FloatTypeValue")
     @Expose
     private FloatTimingTypeValue [] FloatTypeValue;
 
     /**
-     * Get The query dimension value. 
-     * @return TypeKey The query dimension value.
+     * Get Query the dimension value. 
+     * @return TypeKey Query the dimension value.
      */
     public String getTypeKey() {
         return this.TypeKey;
     }
 
     /**
-     * Set The query dimension value.
-     * @param TypeKey The query dimension value.
+     * Set Query the dimension value.
+     * @param TypeKey Query the dimension value.
      */
     public void setTypeKey(String TypeKey) {
         this.TypeKey = TypeKey;
     }
 
     /**
-     * Get Detailed time series data of the <code>Integer</code> type. query metrics with the <code>Integer</code> value type will return corresponding time series data through this field.<br> **note**: if the query metric does not specify the value type, this field will return data by default. 
-     * @return TypeValue Detailed time series data of the <code>Integer</code> type. query metrics with the <code>Integer</code> value type will return corresponding time series data through this field.<br> **note**: if the query metric does not specify the value type, this field will return data by default.
+     * Get Detailed time series data of the <code>Integer</code> type. If the value type of the query metric is <code>Integer</code>, the corresponding time series data will be returned in this field.<br> **Note**: If the value type of the query metric is unclear, data will be returned in this field by default. 
+     * @return TypeValue Detailed time series data of the <code>Integer</code> type. If the value type of the query metric is <code>Integer</code>, the corresponding time series data will be returned in this field.<br> **Note**: If the value type of the query metric is unclear, data will be returned in this field by default.
      */
     public TimingTypeValue [] getTypeValue() {
         return this.TypeValue;
     }
 
     /**
-     * Set Detailed time series data of the <code>Integer</code> type. query metrics with the <code>Integer</code> value type will return corresponding time series data through this field.<br> **note**: if the query metric does not specify the value type, this field will return data by default.
-     * @param TypeValue Detailed time series data of the <code>Integer</code> type. query metrics with the <code>Integer</code> value type will return corresponding time series data through this field.<br> **note**: if the query metric does not specify the value type, this field will return data by default.
+     * Set Detailed time series data of the <code>Integer</code> type. If the value type of the query metric is <code>Integer</code>, the corresponding time series data will be returned in this field.<br> **Note**: If the value type of the query metric is unclear, data will be returned in this field by default.
+     * @param TypeValue Detailed time series data of the <code>Integer</code> type. If the value type of the query metric is <code>Integer</code>, the corresponding time series data will be returned in this field.<br> **Note**: If the value type of the query metric is unclear, data will be returned in this field by default.
      */
     public void setTypeValue(TimingTypeValue [] TypeValue) {
         this.TypeValue = TypeValue;
     }
 
     /**
-     * Get Detailed time series data of <code>Float</code> type. query metrics with <code>Float</code> value type will return corresponding time series data via this field. 
-     * @return FloatTypeValue Detailed time series data of <code>Float</code> type. query metrics with <code>Float</code> value type will return corresponding time series data via this field.
+     * Get Detailed time series data of <code>Float</code> type. For metrics whose query metric value type is <code>Float</code>, the corresponding time series data is returned in this field. 
+     * @return FloatTypeValue Detailed time series data of <code>Float</code> type. For metrics whose query metric value type is <code>Float</code>, the corresponding time series data is returned in this field.
      */
     public FloatTimingTypeValue [] getFloatTypeValue() {
         return this.FloatTypeValue;
     }
 
     /**
-     * Set Detailed time series data of <code>Float</code> type. query metrics with <code>Float</code> value type will return corresponding time series data via this field.
-     * @param FloatTypeValue Detailed time series data of <code>Float</code> type. query metrics with <code>Float</code> value type will return corresponding time series data via this field.
+     * Set Detailed time series data of <code>Float</code> type. For metrics whose query metric value type is <code>Float</code>, the corresponding time series data is returned in this field.
+     * @param FloatTypeValue Detailed time series data of <code>Float</code> type. For metrics whose query metric value type is <code>Float</code>, the corresponding time series data is returned in this field.
      */
     public void setFloatTypeValue(FloatTimingTypeValue [] FloatTypeValue) {
         this.FloatTypeValue = FloatTypeValue;

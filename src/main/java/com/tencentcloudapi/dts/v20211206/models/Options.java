@@ -24,349 +24,299 @@ import java.util.HashMap;
 public class Options extends AbstractModel {
 
     /**
-    * Sync initialization option. Valid values: `data` (full data initialization); `Structure` (structure initialization); `Full` (full data and structure initialization); `None` (incremental data only). Default value: `Full`.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Synchronization initialization options: Data (Full Data initialization), Structure (Structure initialization), Full (Full Data and Structure initialization, default), None (incremental only). The mongodb link supports only Full Data initialization or incremental only.</p>
     */
     @SerializedName("InitType")
     @Expose
     private String InitType;
 
     /**
-    * Processing method for duplicate tables. Valid values: `ReportErrorAfterCheck`, `InitializeAfterDelete`, `ExecuteAfterIgnore`. Default value: `ReportErrorAfterCheck`.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Handling of tables with the same name, ReportErrorAfterCheck (pre-validation and error reporting, default), ExecuteAfterIgnore (ignore and continue execution).</p>
     */
     @SerializedName("DealOfExistSameTable")
     @Expose
     private String DealOfExistSameTable;
 
     /**
-    * Conflict processing option. Valid values: `ReportError` (report an error); `Ignore` (ignore); `Cover` (overwrite); `ConditionCover` (conditionally overwrite). Default value: `ReportError`.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Conflict resolution options: ReportError (report error, default), Ignore, Cover, ConditionCover</p>
     */
     @SerializedName("ConflictHandleType")
     @Expose
     private String ConflictHandleType;
 
     /**
-    * Whether to add the additional column
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Whether to add an additional column</p>
     */
     @SerializedName("AddAdditionalColumn")
     @Expose
     private Boolean AddAdditionalColumn;
 
     /**
-    * DML and DDL options to be synced. Valid values: `Insert` (INSERT operations); `Update` (UPDATE operations); `Delete` (DELETE operations); `DDL` (structure sync); `PartialDDL` (custom option, which is used together with `DdlOptions`). You can also leave this parameter empty.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Options for DML and DDL to be synchronized: Insert, Update, Delete, DDL (structure synchronization), PartialDDL (custom, can be used together with DdlOptions). Note that it must contain at least one DML option.</p>
     */
     @SerializedName("OpTypes")
     @Expose
     private String [] OpTypes;
 
     /**
-    * Detailed option for conflict processing, such as condition rows and operations in conditional overwrite.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Detailed options for conflict resolution, such as condition row and conditional operation in condition coverage</p>
     */
     @SerializedName("ConflictHandleOption")
     @Expose
     private ConflictHandleOption ConflictHandleOption;
 
     /**
-    * DDL statements to be synced
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>DDL synchronization option. Description of which DDLs to synchronize.</p>
     */
     @SerializedName("DdlOptions")
     @Expose
     private DdlOption [] DdlOptions;
 
     /**
-    * Kafka sync options
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>kafka sync options</p>
     */
     @SerializedName("KafkaOption")
     @Expose
     private KafkaOption KafkaOption;
 
     /**
-    * Task speed limit information
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Task speed limit information</p>
     */
     @SerializedName("RateLimitOption")
     @Expose
     private RateLimitOption RateLimitOption;
 
     /**
-    * Settings of the automatic retry time range
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Time window for automatic retry settings</p>
     */
     @SerializedName("AutoRetryTimeRangeMinutes")
     @Expose
     private Long AutoRetryTimeRangeMinutes;
 
     /**
-    * 
+    * <p>Synchronize to the specified checkpoint of the kafka link. Currently only support time format: 2023-12-20T19:24:23+08:00. If not specified, it is empty.</p>
     */
     @SerializedName("StartPosition")
     @Expose
     private String StartPosition;
 
     /**
-    * 
+    * <p>Whether to filter out begin and commit messages when synchronizing to kafka. Currently, only the mysql-to-kafka link supports this.</p>
     */
     @SerializedName("FilterBeginCommit")
     @Expose
     private Boolean FilterBeginCommit;
 
     /**
-    * 
+    * <p>Whether to filter out checkpoint messages when synchronizing to kafka. Currently, only the mysql-to-kafka link supports this.</p>
     */
     @SerializedName("FilterCheckpoint")
     @Expose
     private Boolean FilterCheckpoint;
 
     /**
-     * Get Sync initialization option. Valid values: `data` (full data initialization); `Structure` (structure initialization); `Full` (full data and structure initialization); `None` (incremental data only). Default value: `Full`.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return InitType Sync initialization option. Valid values: `data` (full data initialization); `Structure` (structure initialization); `Full` (full data and structure initialization); `None` (incremental data only). Default value: `Full`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Synchronization initialization options: Data (Full Data initialization), Structure (Structure initialization), Full (Full Data and Structure initialization, default), None (incremental only). The mongodb link supports only Full Data initialization or incremental only.</p> 
+     * @return InitType <p>Synchronization initialization options: Data (Full Data initialization), Structure (Structure initialization), Full (Full Data and Structure initialization, default), None (incremental only). The mongodb link supports only Full Data initialization or incremental only.</p>
      */
     public String getInitType() {
         return this.InitType;
     }
 
     /**
-     * Set Sync initialization option. Valid values: `data` (full data initialization); `Structure` (structure initialization); `Full` (full data and structure initialization); `None` (incremental data only). Default value: `Full`.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param InitType Sync initialization option. Valid values: `data` (full data initialization); `Structure` (structure initialization); `Full` (full data and structure initialization); `None` (incremental data only). Default value: `Full`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Synchronization initialization options: Data (Full Data initialization), Structure (Structure initialization), Full (Full Data and Structure initialization, default), None (incremental only). The mongodb link supports only Full Data initialization or incremental only.</p>
+     * @param InitType <p>Synchronization initialization options: Data (Full Data initialization), Structure (Structure initialization), Full (Full Data and Structure initialization, default), None (incremental only). The mongodb link supports only Full Data initialization or incremental only.</p>
      */
     public void setInitType(String InitType) {
         this.InitType = InitType;
     }
 
     /**
-     * Get Processing method for duplicate tables. Valid values: `ReportErrorAfterCheck`, `InitializeAfterDelete`, `ExecuteAfterIgnore`. Default value: `ReportErrorAfterCheck`.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return DealOfExistSameTable Processing method for duplicate tables. Valid values: `ReportErrorAfterCheck`, `InitializeAfterDelete`, `ExecuteAfterIgnore`. Default value: `ReportErrorAfterCheck`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Handling of tables with the same name, ReportErrorAfterCheck (pre-validation and error reporting, default), ExecuteAfterIgnore (ignore and continue execution).</p> 
+     * @return DealOfExistSameTable <p>Handling of tables with the same name, ReportErrorAfterCheck (pre-validation and error reporting, default), ExecuteAfterIgnore (ignore and continue execution).</p>
      */
     public String getDealOfExistSameTable() {
         return this.DealOfExistSameTable;
     }
 
     /**
-     * Set Processing method for duplicate tables. Valid values: `ReportErrorAfterCheck`, `InitializeAfterDelete`, `ExecuteAfterIgnore`. Default value: `ReportErrorAfterCheck`.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param DealOfExistSameTable Processing method for duplicate tables. Valid values: `ReportErrorAfterCheck`, `InitializeAfterDelete`, `ExecuteAfterIgnore`. Default value: `ReportErrorAfterCheck`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Handling of tables with the same name, ReportErrorAfterCheck (pre-validation and error reporting, default), ExecuteAfterIgnore (ignore and continue execution).</p>
+     * @param DealOfExistSameTable <p>Handling of tables with the same name, ReportErrorAfterCheck (pre-validation and error reporting, default), ExecuteAfterIgnore (ignore and continue execution).</p>
      */
     public void setDealOfExistSameTable(String DealOfExistSameTable) {
         this.DealOfExistSameTable = DealOfExistSameTable;
     }
 
     /**
-     * Get Conflict processing option. Valid values: `ReportError` (report an error); `Ignore` (ignore); `Cover` (overwrite); `ConditionCover` (conditionally overwrite). Default value: `ReportError`.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ConflictHandleType Conflict processing option. Valid values: `ReportError` (report an error); `Ignore` (ignore); `Cover` (overwrite); `ConditionCover` (conditionally overwrite). Default value: `ReportError`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Conflict resolution options: ReportError (report error, default), Ignore, Cover, ConditionCover</p> 
+     * @return ConflictHandleType <p>Conflict resolution options: ReportError (report error, default), Ignore, Cover, ConditionCover</p>
      */
     public String getConflictHandleType() {
         return this.ConflictHandleType;
     }
 
     /**
-     * Set Conflict processing option. Valid values: `ReportError` (report an error); `Ignore` (ignore); `Cover` (overwrite); `ConditionCover` (conditionally overwrite). Default value: `ReportError`.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ConflictHandleType Conflict processing option. Valid values: `ReportError` (report an error); `Ignore` (ignore); `Cover` (overwrite); `ConditionCover` (conditionally overwrite). Default value: `ReportError`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Conflict resolution options: ReportError (report error, default), Ignore, Cover, ConditionCover</p>
+     * @param ConflictHandleType <p>Conflict resolution options: ReportError (report error, default), Ignore, Cover, ConditionCover</p>
      */
     public void setConflictHandleType(String ConflictHandleType) {
         this.ConflictHandleType = ConflictHandleType;
     }
 
     /**
-     * Get Whether to add the additional column
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return AddAdditionalColumn Whether to add the additional column
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Whether to add an additional column</p> 
+     * @return AddAdditionalColumn <p>Whether to add an additional column</p>
      */
     public Boolean getAddAdditionalColumn() {
         return this.AddAdditionalColumn;
     }
 
     /**
-     * Set Whether to add the additional column
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param AddAdditionalColumn Whether to add the additional column
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Whether to add an additional column</p>
+     * @param AddAdditionalColumn <p>Whether to add an additional column</p>
      */
     public void setAddAdditionalColumn(Boolean AddAdditionalColumn) {
         this.AddAdditionalColumn = AddAdditionalColumn;
     }
 
     /**
-     * Get DML and DDL options to be synced. Valid values: `Insert` (INSERT operations); `Update` (UPDATE operations); `Delete` (DELETE operations); `DDL` (structure sync); `PartialDDL` (custom option, which is used together with `DdlOptions`). You can also leave this parameter empty.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return OpTypes DML and DDL options to be synced. Valid values: `Insert` (INSERT operations); `Update` (UPDATE operations); `Delete` (DELETE operations); `DDL` (structure sync); `PartialDDL` (custom option, which is used together with `DdlOptions`). You can also leave this parameter empty.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Options for DML and DDL to be synchronized: Insert, Update, Delete, DDL (structure synchronization), PartialDDL (custom, can be used together with DdlOptions). Note that it must contain at least one DML option.</p> 
+     * @return OpTypes <p>Options for DML and DDL to be synchronized: Insert, Update, Delete, DDL (structure synchronization), PartialDDL (custom, can be used together with DdlOptions). Note that it must contain at least one DML option.</p>
      */
     public String [] getOpTypes() {
         return this.OpTypes;
     }
 
     /**
-     * Set DML and DDL options to be synced. Valid values: `Insert` (INSERT operations); `Update` (UPDATE operations); `Delete` (DELETE operations); `DDL` (structure sync); `PartialDDL` (custom option, which is used together with `DdlOptions`). You can also leave this parameter empty.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param OpTypes DML and DDL options to be synced. Valid values: `Insert` (INSERT operations); `Update` (UPDATE operations); `Delete` (DELETE operations); `DDL` (structure sync); `PartialDDL` (custom option, which is used together with `DdlOptions`). You can also leave this parameter empty.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Options for DML and DDL to be synchronized: Insert, Update, Delete, DDL (structure synchronization), PartialDDL (custom, can be used together with DdlOptions). Note that it must contain at least one DML option.</p>
+     * @param OpTypes <p>Options for DML and DDL to be synchronized: Insert, Update, Delete, DDL (structure synchronization), PartialDDL (custom, can be used together with DdlOptions). Note that it must contain at least one DML option.</p>
      */
     public void setOpTypes(String [] OpTypes) {
         this.OpTypes = OpTypes;
     }
 
     /**
-     * Get Detailed option for conflict processing, such as condition rows and operations in conditional overwrite.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ConflictHandleOption Detailed option for conflict processing, such as condition rows and operations in conditional overwrite.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Detailed options for conflict resolution, such as condition row and conditional operation in condition coverage</p> 
+     * @return ConflictHandleOption <p>Detailed options for conflict resolution, such as condition row and conditional operation in condition coverage</p>
      */
     public ConflictHandleOption getConflictHandleOption() {
         return this.ConflictHandleOption;
     }
 
     /**
-     * Set Detailed option for conflict processing, such as condition rows and operations in conditional overwrite.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ConflictHandleOption Detailed option for conflict processing, such as condition rows and operations in conditional overwrite.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Detailed options for conflict resolution, such as condition row and conditional operation in condition coverage</p>
+     * @param ConflictHandleOption <p>Detailed options for conflict resolution, such as condition row and conditional operation in condition coverage</p>
      */
     public void setConflictHandleOption(ConflictHandleOption ConflictHandleOption) {
         this.ConflictHandleOption = ConflictHandleOption;
     }
 
     /**
-     * Get DDL statements to be synced
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return DdlOptions DDL statements to be synced
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>DDL synchronization option. Description of which DDLs to synchronize.</p> 
+     * @return DdlOptions <p>DDL synchronization option. Description of which DDLs to synchronize.</p>
      */
     public DdlOption [] getDdlOptions() {
         return this.DdlOptions;
     }
 
     /**
-     * Set DDL statements to be synced
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param DdlOptions DDL statements to be synced
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>DDL synchronization option. Description of which DDLs to synchronize.</p>
+     * @param DdlOptions <p>DDL synchronization option. Description of which DDLs to synchronize.</p>
      */
     public void setDdlOptions(DdlOption [] DdlOptions) {
         this.DdlOptions = DdlOptions;
     }
 
     /**
-     * Get Kafka sync options
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return KafkaOption Kafka sync options
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>kafka sync options</p> 
+     * @return KafkaOption <p>kafka sync options</p>
      */
     public KafkaOption getKafkaOption() {
         return this.KafkaOption;
     }
 
     /**
-     * Set Kafka sync options
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param KafkaOption Kafka sync options
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>kafka sync options</p>
+     * @param KafkaOption <p>kafka sync options</p>
      */
     public void setKafkaOption(KafkaOption KafkaOption) {
         this.KafkaOption = KafkaOption;
     }
 
     /**
-     * Get Task speed limit information
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return RateLimitOption Task speed limit information
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Task speed limit information</p> 
+     * @return RateLimitOption <p>Task speed limit information</p>
      */
     public RateLimitOption getRateLimitOption() {
         return this.RateLimitOption;
     }
 
     /**
-     * Set Task speed limit information
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param RateLimitOption Task speed limit information
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Task speed limit information</p>
+     * @param RateLimitOption <p>Task speed limit information</p>
      */
     public void setRateLimitOption(RateLimitOption RateLimitOption) {
         this.RateLimitOption = RateLimitOption;
     }
 
     /**
-     * Get Settings of the automatic retry time range
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return AutoRetryTimeRangeMinutes Settings of the automatic retry time range
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Time window for automatic retry settings</p> 
+     * @return AutoRetryTimeRangeMinutes <p>Time window for automatic retry settings</p>
      */
     public Long getAutoRetryTimeRangeMinutes() {
         return this.AutoRetryTimeRangeMinutes;
     }
 
     /**
-     * Set Settings of the automatic retry time range
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param AutoRetryTimeRangeMinutes Settings of the automatic retry time range
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Time window for automatic retry settings</p>
+     * @param AutoRetryTimeRangeMinutes <p>Time window for automatic retry settings</p>
      */
     public void setAutoRetryTimeRangeMinutes(Long AutoRetryTimeRangeMinutes) {
         this.AutoRetryTimeRangeMinutes = AutoRetryTimeRangeMinutes;
     }
 
     /**
-     * Get  
-     * @return StartPosition 
+     * Get <p>Synchronize to the specified checkpoint of the kafka link. Currently only support time format: 2023-12-20T19:24:23+08:00. If not specified, it is empty.</p> 
+     * @return StartPosition <p>Synchronize to the specified checkpoint of the kafka link. Currently only support time format: 2023-12-20T19:24:23+08:00. If not specified, it is empty.</p>
      */
     public String getStartPosition() {
         return this.StartPosition;
     }
 
     /**
-     * Set 
-     * @param StartPosition 
+     * Set <p>Synchronize to the specified checkpoint of the kafka link. Currently only support time format: 2023-12-20T19:24:23+08:00. If not specified, it is empty.</p>
+     * @param StartPosition <p>Synchronize to the specified checkpoint of the kafka link. Currently only support time format: 2023-12-20T19:24:23+08:00. If not specified, it is empty.</p>
      */
     public void setStartPosition(String StartPosition) {
         this.StartPosition = StartPosition;
     }
 
     /**
-     * Get  
-     * @return FilterBeginCommit 
+     * Get <p>Whether to filter out begin and commit messages when synchronizing to kafka. Currently, only the mysql-to-kafka link supports this.</p> 
+     * @return FilterBeginCommit <p>Whether to filter out begin and commit messages when synchronizing to kafka. Currently, only the mysql-to-kafka link supports this.</p>
      */
     public Boolean getFilterBeginCommit() {
         return this.FilterBeginCommit;
     }
 
     /**
-     * Set 
-     * @param FilterBeginCommit 
+     * Set <p>Whether to filter out begin and commit messages when synchronizing to kafka. Currently, only the mysql-to-kafka link supports this.</p>
+     * @param FilterBeginCommit <p>Whether to filter out begin and commit messages when synchronizing to kafka. Currently, only the mysql-to-kafka link supports this.</p>
      */
     public void setFilterBeginCommit(Boolean FilterBeginCommit) {
         this.FilterBeginCommit = FilterBeginCommit;
     }
 
     /**
-     * Get  
-     * @return FilterCheckpoint 
+     * Get <p>Whether to filter out checkpoint messages when synchronizing to kafka. Currently, only the mysql-to-kafka link supports this.</p> 
+     * @return FilterCheckpoint <p>Whether to filter out checkpoint messages when synchronizing to kafka. Currently, only the mysql-to-kafka link supports this.</p>
      */
     public Boolean getFilterCheckpoint() {
         return this.FilterCheckpoint;
     }
 
     /**
-     * Set 
-     * @param FilterCheckpoint 
+     * Set <p>Whether to filter out checkpoint messages when synchronizing to kafka. Currently, only the mysql-to-kafka link supports this.</p>
+     * @param FilterCheckpoint <p>Whether to filter out checkpoint messages when synchronizing to kafka. Currently, only the mysql-to-kafka link supports this.</p>
      */
     public void setFilterCheckpoint(Boolean FilterCheckpoint) {
         this.FilterCheckpoint = FilterCheckpoint;

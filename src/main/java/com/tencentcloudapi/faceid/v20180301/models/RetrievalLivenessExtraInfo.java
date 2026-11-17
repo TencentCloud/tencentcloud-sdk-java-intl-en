@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class RetrievalLivenessExtraInfo extends AbstractModel {
 
     /**
-    * <p>Hit template type, among them Common-public library; Auto-Auto Clustering Library; Owner-custom template library</p>
+    * <p>Type of the matched template. Common: public library; Auto: automatic clustering library; Owner: custom template library.</p>
     */
     @SerializedName("HitGroup")
     @Expose
     private String HitGroup;
 
     /**
-    * <p>Similarity between the request image and the attack template hit. The similarity value ranges from 0 to 2. The smaller the value, the higher the probability of hitting the attack template. The default threshold is 0.6. When the SimilarityScore is ≥0.6, the judgment is as normal. When the SimilarityScore is <0.6, the judgment is an attack.</p>
+    * <p>Similarity between the request image and the matched attack template. The value range is [0,2]. A smaller value indicates a higher probability of matching an attack template. The default threshold is 0.6. A SimilarityScore ≥ 0.6 indicates normal, and a SimilarityScore &lt; 0.6 indicates an attack.</p>
     */
     @SerializedName("SimilarityScore")
     @Expose
     private Float SimilarityScore;
 
     /**
-    * <p>Template id of the cache hit</p>
+    * <p>id of the matched template</p>
     */
     @SerializedName("HitTemplate")
     @Expose
     private String HitTemplate;
 
     /**
-     * Get <p>Hit template type, among them Common-public library; Auto-Auto Clustering Library; Owner-custom template library</p> 
-     * @return HitGroup <p>Hit template type, among them Common-public library; Auto-Auto Clustering Library; Owner-custom template library</p>
+     * Get <p>Type of the matched template. Common: public library; Auto: automatic clustering library; Owner: custom template library.</p> 
+     * @return HitGroup <p>Type of the matched template. Common: public library; Auto: automatic clustering library; Owner: custom template library.</p>
      */
     public String getHitGroup() {
         return this.HitGroup;
     }
 
     /**
-     * Set <p>Hit template type, among them Common-public library; Auto-Auto Clustering Library; Owner-custom template library</p>
-     * @param HitGroup <p>Hit template type, among them Common-public library; Auto-Auto Clustering Library; Owner-custom template library</p>
+     * Set <p>Type of the matched template. Common: public library; Auto: automatic clustering library; Owner: custom template library.</p>
+     * @param HitGroup <p>Type of the matched template. Common: public library; Auto: automatic clustering library; Owner: custom template library.</p>
      */
     public void setHitGroup(String HitGroup) {
         this.HitGroup = HitGroup;
     }
 
     /**
-     * Get <p>Similarity between the request image and the attack template hit. The similarity value ranges from 0 to 2. The smaller the value, the higher the probability of hitting the attack template. The default threshold is 0.6. When the SimilarityScore is ≥0.6, the judgment is as normal. When the SimilarityScore is <0.6, the judgment is an attack.</p> 
-     * @return SimilarityScore <p>Similarity between the request image and the attack template hit. The similarity value ranges from 0 to 2. The smaller the value, the higher the probability of hitting the attack template. The default threshold is 0.6. When the SimilarityScore is ≥0.6, the judgment is as normal. When the SimilarityScore is <0.6, the judgment is an attack.</p>
+     * Get <p>Similarity between the request image and the matched attack template. The value range is [0,2]. A smaller value indicates a higher probability of matching an attack template. The default threshold is 0.6. A SimilarityScore ≥ 0.6 indicates normal, and a SimilarityScore &lt; 0.6 indicates an attack.</p> 
+     * @return SimilarityScore <p>Similarity between the request image and the matched attack template. The value range is [0,2]. A smaller value indicates a higher probability of matching an attack template. The default threshold is 0.6. A SimilarityScore ≥ 0.6 indicates normal, and a SimilarityScore &lt; 0.6 indicates an attack.</p>
      */
     public Float getSimilarityScore() {
         return this.SimilarityScore;
     }
 
     /**
-     * Set <p>Similarity between the request image and the attack template hit. The similarity value ranges from 0 to 2. The smaller the value, the higher the probability of hitting the attack template. The default threshold is 0.6. When the SimilarityScore is ≥0.6, the judgment is as normal. When the SimilarityScore is <0.6, the judgment is an attack.</p>
-     * @param SimilarityScore <p>Similarity between the request image and the attack template hit. The similarity value ranges from 0 to 2. The smaller the value, the higher the probability of hitting the attack template. The default threshold is 0.6. When the SimilarityScore is ≥0.6, the judgment is as normal. When the SimilarityScore is <0.6, the judgment is an attack.</p>
+     * Set <p>Similarity between the request image and the matched attack template. The value range is [0,2]. A smaller value indicates a higher probability of matching an attack template. The default threshold is 0.6. A SimilarityScore ≥ 0.6 indicates normal, and a SimilarityScore &lt; 0.6 indicates an attack.</p>
+     * @param SimilarityScore <p>Similarity between the request image and the matched attack template. The value range is [0,2]. A smaller value indicates a higher probability of matching an attack template. The default threshold is 0.6. A SimilarityScore ≥ 0.6 indicates normal, and a SimilarityScore &lt; 0.6 indicates an attack.</p>
      */
     public void setSimilarityScore(Float SimilarityScore) {
         this.SimilarityScore = SimilarityScore;
     }
 
     /**
-     * Get <p>Template id of the cache hit</p> 
-     * @return HitTemplate <p>Template id of the cache hit</p>
+     * Get <p>id of the matched template</p> 
+     * @return HitTemplate <p>id of the matched template</p>
      */
     public String getHitTemplate() {
         return this.HitTemplate;
     }
 
     /**
-     * Set <p>Template id of the cache hit</p>
-     * @param HitTemplate <p>Template id of the cache hit</p>
+     * Set <p>id of the matched template</p>
+     * @param HitTemplate <p>id of the matched template</p>
      */
     public void setHitTemplate(String HitTemplate) {
         this.HitTemplate = HitTemplate;

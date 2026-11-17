@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class VulFixItem extends AbstractModel {
 
     /**
-    * <p>Instance ID list of hosts requiring fixing<br>Input parameter limitation: Up to 1,000 instance IDs per single item</p>
+    * <p>Instance ID list of hosts requiring fixing<br>Input limit: up to 1000 instance IDs per single item</p>
     */
     @SerializedName("InstanceIds")
     @Expose
     private String [] InstanceIds;
 
     /**
-    * <p>Vulnerability ID. Choose either VulId or KBId.</p>
+    * <p>Vulnerability ID. Choose either VulId or KBId</p>
     */
     @SerializedName("VulId")
     @Expose
     private Long VulId;
 
     /**
-    * <p>Patch ID. Choose either VulId or KBId.</p>
+    * <p>KB patch ID. Either VulId or KBId is required.</p>
     */
     @SerializedName("KBId")
     @Expose
     private Long KBId;
 
     /**
-     * Get <p>Instance ID list of hosts requiring fixing<br>Input parameter limitation: Up to 1,000 instance IDs per single item</p> 
-     * @return InstanceIds <p>Instance ID list of hosts requiring fixing<br>Input parameter limitation: Up to 1,000 instance IDs per single item</p>
+     * Get <p>Instance ID list of hosts requiring fixing<br>Input limit: up to 1000 instance IDs per single item</p> 
+     * @return InstanceIds <p>Instance ID list of hosts requiring fixing<br>Input limit: up to 1000 instance IDs per single item</p>
      */
     public String [] getInstanceIds() {
         return this.InstanceIds;
     }
 
     /**
-     * Set <p>Instance ID list of hosts requiring fixing<br>Input parameter limitation: Up to 1,000 instance IDs per single item</p>
-     * @param InstanceIds <p>Instance ID list of hosts requiring fixing<br>Input parameter limitation: Up to 1,000 instance IDs per single item</p>
+     * Set <p>Instance ID list of hosts requiring fixing<br>Input limit: up to 1000 instance IDs per single item</p>
+     * @param InstanceIds <p>Instance ID list of hosts requiring fixing<br>Input limit: up to 1000 instance IDs per single item</p>
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;
     }
 
     /**
-     * Get <p>Vulnerability ID. Choose either VulId or KBId.</p> 
-     * @return VulId <p>Vulnerability ID. Choose either VulId or KBId.</p>
+     * Get <p>Vulnerability ID. Choose either VulId or KBId</p> 
+     * @return VulId <p>Vulnerability ID. Choose either VulId or KBId</p>
      */
     public Long getVulId() {
         return this.VulId;
     }
 
     /**
-     * Set <p>Vulnerability ID. Choose either VulId or KBId.</p>
-     * @param VulId <p>Vulnerability ID. Choose either VulId or KBId.</p>
+     * Set <p>Vulnerability ID. Choose either VulId or KBId</p>
+     * @param VulId <p>Vulnerability ID. Choose either VulId or KBId</p>
      */
     public void setVulId(Long VulId) {
         this.VulId = VulId;
     }
 
     /**
-     * Get <p>Patch ID. Choose either VulId or KBId.</p> 
-     * @return KBId <p>Patch ID. Choose either VulId or KBId.</p>
+     * Get <p>KB patch ID. Either VulId or KBId is required.</p> 
+     * @return KBId <p>KB patch ID. Either VulId or KBId is required.</p>
      */
     public Long getKBId() {
         return this.KBId;
     }
 
     /**
-     * Set <p>Patch ID. Choose either VulId or KBId.</p>
-     * @param KBId <p>Patch ID. Choose either VulId or KBId.</p>
+     * Set <p>KB patch ID. Either VulId or KBId is required.</p>
+     * @param KBId <p>KB patch ID. Either VulId or KBId is required.</p>
      */
     public void setKBId(Long KBId) {
         this.KBId = KBId;

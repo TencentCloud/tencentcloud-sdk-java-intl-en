@@ -24,42 +24,56 @@ import java.util.HashMap;
 public class DescribeKafkaConsumerResponse extends AbstractModel {
 
     /**
-    * <p>Whether Kafka Protocol Consumption is enabled</p>
+    * <p>Whether Kafka consumption is enabled</p>
     */
     @SerializedName("Status")
     @Expose
     private Boolean Status;
 
     /**
-    * <p>Topic parameter used by KafkaConsumer during consumption</p>
+    * <p>Topic parameter used by KafkaConsumer for consumption</p>
     */
     @SerializedName("TopicID")
     @Expose
     private String TopicID;
 
     /**
-    * <p>Compression mode [0:NONE;2:SNAPPY;3:LZ4]</p>
+    * <p>Compression method [0: NONE; 2: SNAPPY; 3: LZ4]</p>
     */
     @SerializedName("Compression")
     @Expose
     private Long Compression;
 
     /**
-    * <p>kafka protocol consumption data format</p>
+    * <p>kafka consumption data format</p>
     */
     @SerializedName("ConsumerContent")
     @Expose
     private KafkaConsumerContent ConsumerContent;
 
     /**
-    * <p>Whether to enable the delivery service log. 1: Disabled, 2: Enabled.</p>
+    * <p>Whether to enable delivery service logs. 1: Disable, 2: Enable.</p>
     */
     @SerializedName("HasServicesLog")
     @Expose
     private Long HasServicesLog;
 
     /**
-    * <p>Range type of consumption, 0: latest, 1: history + latest</p>
+    * <p>Public network consumption switch.</p>
+    */
+    @SerializedName("EnableInternetConsume")
+    @Expose
+    private Boolean EnableInternetConsume;
+
+    /**
+    * <p>Private network consumption switch.</p>
+    */
+    @SerializedName("EnableIntranetConsume")
+    @Expose
+    private Boolean EnableIntranetConsume;
+
+    /**
+    * <p>Consumption scope type. 0: Latest, 1: Historical + latest</p>
     */
     @SerializedName("ScopeType")
     @Expose
@@ -73,96 +87,128 @@ public class DescribeKafkaConsumerResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get <p>Whether Kafka Protocol Consumption is enabled</p> 
-     * @return Status <p>Whether Kafka Protocol Consumption is enabled</p>
+     * Get <p>Whether Kafka consumption is enabled</p> 
+     * @return Status <p>Whether Kafka consumption is enabled</p>
      */
     public Boolean getStatus() {
         return this.Status;
     }
 
     /**
-     * Set <p>Whether Kafka Protocol Consumption is enabled</p>
-     * @param Status <p>Whether Kafka Protocol Consumption is enabled</p>
+     * Set <p>Whether Kafka consumption is enabled</p>
+     * @param Status <p>Whether Kafka consumption is enabled</p>
      */
     public void setStatus(Boolean Status) {
         this.Status = Status;
     }
 
     /**
-     * Get <p>Topic parameter used by KafkaConsumer during consumption</p> 
-     * @return TopicID <p>Topic parameter used by KafkaConsumer during consumption</p>
+     * Get <p>Topic parameter used by KafkaConsumer for consumption</p> 
+     * @return TopicID <p>Topic parameter used by KafkaConsumer for consumption</p>
      */
     public String getTopicID() {
         return this.TopicID;
     }
 
     /**
-     * Set <p>Topic parameter used by KafkaConsumer during consumption</p>
-     * @param TopicID <p>Topic parameter used by KafkaConsumer during consumption</p>
+     * Set <p>Topic parameter used by KafkaConsumer for consumption</p>
+     * @param TopicID <p>Topic parameter used by KafkaConsumer for consumption</p>
      */
     public void setTopicID(String TopicID) {
         this.TopicID = TopicID;
     }
 
     /**
-     * Get <p>Compression mode [0:NONE;2:SNAPPY;3:LZ4]</p> 
-     * @return Compression <p>Compression mode [0:NONE;2:SNAPPY;3:LZ4]</p>
+     * Get <p>Compression method [0: NONE; 2: SNAPPY; 3: LZ4]</p> 
+     * @return Compression <p>Compression method [0: NONE; 2: SNAPPY; 3: LZ4]</p>
      */
     public Long getCompression() {
         return this.Compression;
     }
 
     /**
-     * Set <p>Compression mode [0:NONE;2:SNAPPY;3:LZ4]</p>
-     * @param Compression <p>Compression mode [0:NONE;2:SNAPPY;3:LZ4]</p>
+     * Set <p>Compression method [0: NONE; 2: SNAPPY; 3: LZ4]</p>
+     * @param Compression <p>Compression method [0: NONE; 2: SNAPPY; 3: LZ4]</p>
      */
     public void setCompression(Long Compression) {
         this.Compression = Compression;
     }
 
     /**
-     * Get <p>kafka protocol consumption data format</p> 
-     * @return ConsumerContent <p>kafka protocol consumption data format</p>
+     * Get <p>kafka consumption data format</p> 
+     * @return ConsumerContent <p>kafka consumption data format</p>
      */
     public KafkaConsumerContent getConsumerContent() {
         return this.ConsumerContent;
     }
 
     /**
-     * Set <p>kafka protocol consumption data format</p>
-     * @param ConsumerContent <p>kafka protocol consumption data format</p>
+     * Set <p>kafka consumption data format</p>
+     * @param ConsumerContent <p>kafka consumption data format</p>
      */
     public void setConsumerContent(KafkaConsumerContent ConsumerContent) {
         this.ConsumerContent = ConsumerContent;
     }
 
     /**
-     * Get <p>Whether to enable the delivery service log. 1: Disabled, 2: Enabled.</p> 
-     * @return HasServicesLog <p>Whether to enable the delivery service log. 1: Disabled, 2: Enabled.</p>
+     * Get <p>Whether to enable delivery service logs. 1: Disable, 2: Enable.</p> 
+     * @return HasServicesLog <p>Whether to enable delivery service logs. 1: Disable, 2: Enable.</p>
      */
     public Long getHasServicesLog() {
         return this.HasServicesLog;
     }
 
     /**
-     * Set <p>Whether to enable the delivery service log. 1: Disabled, 2: Enabled.</p>
-     * @param HasServicesLog <p>Whether to enable the delivery service log. 1: Disabled, 2: Enabled.</p>
+     * Set <p>Whether to enable delivery service logs. 1: Disable, 2: Enable.</p>
+     * @param HasServicesLog <p>Whether to enable delivery service logs. 1: Disable, 2: Enable.</p>
      */
     public void setHasServicesLog(Long HasServicesLog) {
         this.HasServicesLog = HasServicesLog;
     }
 
     /**
-     * Get <p>Range type of consumption, 0: latest, 1: history + latest</p> 
-     * @return ScopeType <p>Range type of consumption, 0: latest, 1: history + latest</p>
+     * Get <p>Public network consumption switch.</p> 
+     * @return EnableInternetConsume <p>Public network consumption switch.</p>
+     */
+    public Boolean getEnableInternetConsume() {
+        return this.EnableInternetConsume;
+    }
+
+    /**
+     * Set <p>Public network consumption switch.</p>
+     * @param EnableInternetConsume <p>Public network consumption switch.</p>
+     */
+    public void setEnableInternetConsume(Boolean EnableInternetConsume) {
+        this.EnableInternetConsume = EnableInternetConsume;
+    }
+
+    /**
+     * Get <p>Private network consumption switch.</p> 
+     * @return EnableIntranetConsume <p>Private network consumption switch.</p>
+     */
+    public Boolean getEnableIntranetConsume() {
+        return this.EnableIntranetConsume;
+    }
+
+    /**
+     * Set <p>Private network consumption switch.</p>
+     * @param EnableIntranetConsume <p>Private network consumption switch.</p>
+     */
+    public void setEnableIntranetConsume(Boolean EnableIntranetConsume) {
+        this.EnableIntranetConsume = EnableIntranetConsume;
+    }
+
+    /**
+     * Get <p>Consumption scope type. 0: Latest, 1: Historical + latest</p> 
+     * @return ScopeType <p>Consumption scope type. 0: Latest, 1: Historical + latest</p>
      */
     public Long getScopeType() {
         return this.ScopeType;
     }
 
     /**
-     * Set <p>Range type of consumption, 0: latest, 1: history + latest</p>
-     * @param ScopeType <p>Range type of consumption, 0: latest, 1: history + latest</p>
+     * Set <p>Consumption scope type. 0: Latest, 1: Historical + latest</p>
+     * @param ScopeType <p>Consumption scope type. 0: Latest, 1: Historical + latest</p>
      */
     public void setScopeType(Long ScopeType) {
         this.ScopeType = ScopeType;
@@ -207,6 +253,12 @@ public class DescribeKafkaConsumerResponse extends AbstractModel {
         if (source.HasServicesLog != null) {
             this.HasServicesLog = new Long(source.HasServicesLog);
         }
+        if (source.EnableInternetConsume != null) {
+            this.EnableInternetConsume = new Boolean(source.EnableInternetConsume);
+        }
+        if (source.EnableIntranetConsume != null) {
+            this.EnableIntranetConsume = new Boolean(source.EnableIntranetConsume);
+        }
         if (source.ScopeType != null) {
             this.ScopeType = new Long(source.ScopeType);
         }
@@ -225,6 +277,8 @@ public class DescribeKafkaConsumerResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "Compression", this.Compression);
         this.setParamObj(map, prefix + "ConsumerContent.", this.ConsumerContent);
         this.setParamSimple(map, prefix + "HasServicesLog", this.HasServicesLog);
+        this.setParamSimple(map, prefix + "EnableInternetConsume", this.EnableInternetConsume);
+        this.setParamSimple(map, prefix + "EnableIntranetConsume", this.EnableIntranetConsume);
         this.setParamSimple(map, prefix + "ScopeType", this.ScopeType);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 

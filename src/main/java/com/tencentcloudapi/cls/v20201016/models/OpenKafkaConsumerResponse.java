@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class OpenKafkaConsumerResponse extends AbstractModel {
 
     /**
-    * <p>Topic parameter used by KafkaConsumer during consumption</p>
+    * <p>Topic parameter used by KafkaConsumer for consumption</p>
     */
     @SerializedName("TopicID")
     @Expose
@@ -38,16 +38,16 @@ public class OpenKafkaConsumerResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get <p>Topic parameter used by KafkaConsumer during consumption</p> 
-     * @return TopicID <p>Topic parameter used by KafkaConsumer during consumption</p>
+     * Get <p>Topic parameter used by KafkaConsumer for consumption</p> 
+     * @return TopicID <p>Topic parameter used by KafkaConsumer for consumption</p>
      */
     public String getTopicID() {
         return this.TopicID;
     }
 
     /**
-     * Set <p>Topic parameter used by KafkaConsumer during consumption</p>
-     * @param TopicID <p>Topic parameter used by KafkaConsumer during consumption</p>
+     * Set <p>Topic parameter used by KafkaConsumer for consumption</p>
+     * @param TopicID <p>Topic parameter used by KafkaConsumer for consumption</p>
      */
     public void setTopicID(String TopicID) {
         this.TopicID = TopicID;

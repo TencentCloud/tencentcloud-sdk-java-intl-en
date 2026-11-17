@@ -83,6 +83,17 @@ public class WafClient extends AbstractClient{
     }
 
     /**
+     *This API is used to add an access configuration in llmwaf-sdk.
+     * @param req AddLLMSdkAccessRequest
+     * @return AddLLMSdkAccessResponse
+     * @throws TencentCloudSDKException
+     */
+    public AddLLMSdkAccessResponse AddLLMSdkAccess(AddLLMSdkAccessRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "AddLLMSdkAccess", AddLLMSdkAccessResponse.class);
+    }
+
+    /**
      *Add SaaS WAF protection domain
      * @param req AddSpartaProtectionRequest
      * @return AddSpartaProtectionResponse
@@ -212,6 +223,39 @@ public class WafClient extends AbstractClient{
     public DeleteIpAccessControlV2Response DeleteIpAccessControlV2(DeleteIpAccessControlV2Request req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteIpAccessControlV2", DeleteIpAccessControlV2Response.class);
+    }
+
+    /**
+     *This API is used to delete an LLM content protection rule.
+     * @param req DeleteLLMContentRuleRequest
+     * @return DeleteLLMContentRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteLLMContentRuleResponse DeleteLLMContentRule(DeleteLLMContentRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteLLMContentRule", DeleteLLMContentRuleResponse.class);
+    }
+
+    /**
+     *This API is used to delete a thesaurus list.
+     * @param req DeleteLLMKeywordLibraryRequest
+     * @return DeleteLLMKeywordLibraryResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteLLMKeywordLibraryResponse DeleteLLMKeywordLibrary(DeleteLLMKeywordLibraryRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteLLMKeywordLibrary", DeleteLLMKeywordLibraryResponse.class);
+    }
+
+    /**
+     *This API is used to delete the access configuration in llmwaf-sdk.
+     * @param req DeleteLLMSdkAccessRequest
+     * @return DeleteLLMSdkAccessResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteLLMSdkAccessResponse DeleteLLMSdkAccess(DeleteLLMSdkAccessRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteLLMSdkAccess", DeleteLLMSdkAccessResponse.class);
     }
 
     /**
@@ -512,6 +556,94 @@ public class WafClient extends AbstractClient{
     }
 
     /**
+     *This API is used to obtain the LLM content protection rules.
+     * @param req DescribeLLMContentRuleListRequest
+     * @return DescribeLLMContentRuleListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLLMContentRuleListResponse DescribeLLMContentRuleList(DescribeLLMContentRuleListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeLLMContentRuleList", DescribeLLMContentRuleListResponse.class);
+    }
+
+    /**
+     *This API is used to review the request and response content of large models.
+     * @param req DescribeLLMContentSecCheckRequest
+     * @return DescribeLLMContentSecCheckResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLLMContentSecCheckResponse DescribeLLMContentSecCheck(DescribeLLMContentSecCheckRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeLLMContentSecCheck", DescribeLLMContentSecCheckResponse.class);
+    }
+
+    /**
+     *This API is used to query the hourly bill details of a single instance for a single day, including the estimated total bill amount, itemized costs, hourly trends, and hourly details.
+     * @param req DescribeLLMHourBillDetailRequest
+     * @return DescribeLLMHourBillDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLLMHourBillDetailResponse DescribeLLMHourBillDetail(DescribeLLMHourBillDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeLLMHourBillDetail", DescribeLLMHourBillDetailResponse.class);
+    }
+
+    /**
+     *This API is used to query the keyword list.
+     * @param req DescribeLLMKeywordLibraryRequest
+     * @return DescribeLLMKeywordLibraryResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLLMKeywordLibraryResponse DescribeLLMKeywordLibrary(DescribeLLMKeywordLibraryRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeLLMKeywordLibrary", DescribeLLMKeywordLibraryResponse.class);
+    }
+
+    /**
+     *This API is used to query sdk access configurations.
+     * @param req DescribeLLMSdkAccessRequest
+     * @return DescribeLLMSdkAccessResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLLMSdkAccessResponse DescribeLLMSdkAccess(DescribeLLMSdkAccessRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeLLMSdkAccess", DescribeLLMSdkAccessResponse.class);
+    }
+
+    /**
+     *This API is used to query DLP rules.
+     * @param req DescribeLLMWafDLPRulesRequest
+     * @return DescribeLLMWafDLPRulesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLLMWafDLPRulesResponse DescribeLLMWafDLPRules(DescribeLLMWafDLPRulesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeLLMWafDLPRules", DescribeLLMWafDLPRulesResponse.class);
+    }
+
+    /**
+     *This API is used to query LLM rule requests.
+     * @param req DescribeLLMWafProtectRulesRequest
+     * @return DescribeLLMWafProtectRulesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLLMWafProtectRulesResponse DescribeLLMWafProtectRules(DescribeLLMWafProtectRulesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeLLMWafProtectRules", DescribeLLMWafProtectRulesResponse.class);
+    }
+
+    /**
+     *This API is used to query Tool Call rules.
+     * @param req DescribeLLMWafToolCallRulesRequest
+     * @return DescribeLLMWafToolCallRulesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLLMWafToolCallRulesResponse DescribeLLMWafToolCallRules(DescribeLLMWafToolCallRulesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeLLMWafToolCallRules", DescribeLLMWafToolCallRulesResponse.class);
+    }
+
+    /**
      *Query the switch status of each WAF basic security module, check if each module is enabled
      * @param req DescribeModuleStatusRequest
      * @return DescribeModuleStatusResponse
@@ -622,6 +754,17 @@ public class WafClient extends AbstractClient{
     }
 
     /**
+     *This API is used to query Skill security detection results by file Hash.
+     * @param req DescribeSkillSecScanResultRequest
+     * @return DescribeSkillSecScanResultResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSkillSecScanResultResponse DescribeSkillSecScanResult(DescribeSkillSecScanResultRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeSkillSecScanResult", DescribeSkillSecScanResultResponse.class);
+    }
+
+    /**
      *WAF Sparta - Obtain protection domain information
      * @param req DescribeSpartaProtectionInfoRequest
      * @return DescribeSpartaProtectionInfoResponse
@@ -707,6 +850,17 @@ public class WafClient extends AbstractClient{
     public DescribeWebshellStatusResponse DescribeWebshellStatus(DescribeWebshellStatusRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeWebshellStatus", DescribeWebshellStatusResponse.class);
+    }
+
+    /**
+     *This API is used to export lexicon files.
+     * @param req ExportLLMKeywordLibRequest
+     * @return ExportLLMKeywordLibResponse
+     * @throws TencentCloudSDKException
+     */
+    public ExportLLMKeywordLibResponse ExportLLMKeywordLib(ExportLLMKeywordLibRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ExportLLMKeywordLib", ExportLLMKeywordLibResponse.class);
     }
 
     /**
@@ -1019,6 +1173,94 @@ Batch operation is supported.
     }
 
     /**
+     *This API is used to update the LLM content security rule.
+     * @param req ModifyLLMContentRuleRequest
+     * @return ModifyLLMContentRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyLLMContentRuleResponse ModifyLLMContentRule(ModifyLLMContentRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyLLMContentRule", ModifyLLMContentRuleResponse.class);
+    }
+
+    /**
+     *This API is used to enable or disable the switch of protection rules for LLM content.
+     * @param req ModifyLLMContentRuleStatusRequest
+     * @return ModifyLLMContentRuleStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyLLMContentRuleStatusResponse ModifyLLMContentRuleStatus(ModifyLLMContentRuleStatusRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyLLMContentRuleStatus", ModifyLLMContentRuleStatusResponse.class);
+    }
+
+    /**
+     *This API is used to modify a custom lexicon.
+     * @param req ModifyLLMKeywordLibraryRequest
+     * @return ModifyLLMKeywordLibraryResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyLLMKeywordLibraryResponse ModifyLLMKeywordLibrary(ModifyLLMKeywordLibraryRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyLLMKeywordLibrary", ModifyLLMKeywordLibraryResponse.class);
+    }
+
+    /**
+     *This API is used to configure boundary access for llmwaf-sdk.
+     * @param req ModifyLLMSdkAccessRequest
+     * @return ModifyLLMSdkAccessResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyLLMSdkAccessResponse ModifyLLMSdkAccess(ModifyLLMSdkAccessRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyLLMSdkAccess", ModifyLLMSdkAccessResponse.class);
+    }
+
+    /**
+     *This API is used to modify the module switch status of large model protection, supporting independent on/off operations for the master switch and each submodule. Before enabling, ensure that the instance has purchased the large model protection capability. If not purchased, the enable operation returns the AuthFailure.ErrCodeNoPurchased error.
+     * @param req ModifyLLMStatusRequest
+     * @return ModifyLLMStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyLLMStatusResponse ModifyLLMStatus(ModifyLLMStatusRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyLLMStatus", ModifyLLMStatusResponse.class);
+    }
+
+    /**
+     *This API is used to modify llmwaf DLP rules.
+     * @param req ModifyLLMWafDLPRuleRequest
+     * @return ModifyLLMWafDLPRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyLLMWafDLPRuleResponse ModifyLLMWafDLPRule(ModifyLLMWafDLPRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyLLMWafDLPRule", ModifyLLMWafDLPRuleResponse.class);
+    }
+
+    /**
+     *This API is used to modify LLM rules.
+     * @param req ModifyLLMWafProtectRuleRequest
+     * @return ModifyLLMWafProtectRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyLLMWafProtectRuleResponse ModifyLLMWafProtectRule(ModifyLLMWafProtectRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyLLMWafProtectRule", ModifyLLMWafProtectRuleResponse.class);
+    }
+
+    /**
+     *This API is used to modify Tool Call rules.
+     * @param req ModifyLLMWafToolCallRuleRequest
+     * @return ModifyLLMWafToolCallRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyLLMWafToolCallRuleResponse ModifyLLMWafToolCallRule(ModifyLLMWafToolCallRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyLLMWafToolCallRule", ModifyLLMWafToolCallRuleResponse.class);
+    }
+
+    /**
      *Set the switch for the basic security module under a certain domain
      * @param req ModifyModuleStatusRequest
      * @return ModifyModuleStatusResponse
@@ -1192,6 +1434,17 @@ Batch operation is supported.
     public SwitchElasticModeResponse SwitchElasticMode(SwitchElasticModeRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "SwitchElasticMode", SwitchElasticModeResponse.class);
+    }
+
+    /**
+     *This API is used to upload a Skill ZIP file and trigger asynchronous security detection.
+     * @param req UploadSkillSecScanRequest
+     * @return UploadSkillSecScanResponse
+     * @throws TencentCloudSDKException
+     */
+    public UploadSkillSecScanResponse UploadSkillSecScan(UploadSkillSecScanRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UploadSkillSecScan", UploadSkillSecScanResponse.class);
     }
 
     /**

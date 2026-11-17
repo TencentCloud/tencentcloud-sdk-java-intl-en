@@ -24,42 +24,42 @@ import java.util.HashMap;
 public class VulFixTaskItem extends AbstractModel {
 
     /**
-    * Primary key ID of the fix task
+    * Primary key ID of the repair task
     */
     @SerializedName("Id")
     @Expose
     private Long Id;
 
     /**
-    * Task ID, hash flag for interactive
+    * Task ID, a hash flag for interaction.
     */
     @SerializedName("TaskId")
     @Expose
     private Long TaskId;
 
     /**
-    * JobId, corresponding to the Task ID of the task system.
+    * Task JobId, corresponding to the task ID in the task system.
     */
     @SerializedName("JobId")
     @Expose
     private String JobId;
 
     /**
-    * List of vulnerability IDs to be fixed
+    * List of fixed vulnerability IDs
     */
     @SerializedName("VulIds")
     @Expose
     private Long [] VulIds;
 
     /**
-    * List of fixed KB patch IDs
+    * List of repaired KB patch IDs
     */
     @SerializedName("KBIds")
     @Expose
     private Long [] KBIds;
 
     /**
-    * Repair the total number of assets
+    * Total number of repaired assets
     */
     @SerializedName("AssetCount")
     @Expose
@@ -80,16 +80,16 @@ public class VulFixTaskItem extends AbstractModel {
     private Long FailCount;
 
     /**
-    * Progress percentage of the repair
-Valid values: [0, 100]
-Supplemental description: Calculation method is (SuccessCount+FailCount)/AssetCount×100.
+    * Repair progress percentage
+Valid values: [0, 100].
+Supplemental description: Calculation method: (SuccessCount+FailCount)/AssetCount×100
     */
     @SerializedName("Progress")
     @Expose
     private Long Progress;
 
     /**
-    * Number of users in the fix task
+    * Number of users for fix tasks
     */
     @SerializedName("TargetAppIdsCount")
     @Expose
@@ -97,11 +97,11 @@ Supplemental description: Calculation method is (SuccessCount+FailCount)/AssetCo
 
     /**
     * Remediation status
-Enumeration value:
+Enumeration values:
 0: initialization
 1: In remediation
 2: Repair successful
-3: Partially fix failed
+3: Partial fix failure
 4: All fix failures
 5: Stop repair
     */
@@ -118,16 +118,16 @@ Unit: seconds.
     private Long Timeout;
 
     /**
-    * Fix startup time
-Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
+    * Repair startup time
+Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * Fix end time
-Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
+    * Repair end time
+Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)
     */
     @SerializedName("EndTime")
     @Expose
@@ -135,14 +135,14 @@ Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
 
     /**
     * Record creation time.
-Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
+Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * List of vulnerability names to be fixed, making it easy to show directly on the list page
+    * List of names of repaired vulnerabilities, making it easy to show directly on the list page
     */
     @SerializedName("VulNames")
     @Expose
@@ -150,10 +150,10 @@ Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
 
     /**
     * Vulnerability Type List
-Enumeration values:
+Enumeration value:
 LINUX: Linux software vulnerability
-WINDOWS: Windows system patch vulnerability
-WEB_CMS: Web-CMS vulnerabilities
+WINDOWS: WINDOWS system patch vulnerabilities
+WEB_CMS: Web-CMS vulnerability
 APPLICATION: Application vulnerability
 EMERGENCY: Urgent vulnerability
     */
@@ -162,103 +162,103 @@ EMERGENCY: Urgent vulnerability
     private String [] VulCategory;
 
     /**
-    * Creator AppId
+    * Creator `AppId`
     */
     @SerializedName("AppId")
     @Expose
     private Long AppId;
 
     /**
-     * Get Primary key ID of the fix task 
-     * @return Id Primary key ID of the fix task
+     * Get Primary key ID of the repair task 
+     * @return Id Primary key ID of the repair task
      */
     public Long getId() {
         return this.Id;
     }
 
     /**
-     * Set Primary key ID of the fix task
-     * @param Id Primary key ID of the fix task
+     * Set Primary key ID of the repair task
+     * @param Id Primary key ID of the repair task
      */
     public void setId(Long Id) {
         this.Id = Id;
     }
 
     /**
-     * Get Task ID, hash flag for interactive 
-     * @return TaskId Task ID, hash flag for interactive
+     * Get Task ID, a hash flag for interaction. 
+     * @return TaskId Task ID, a hash flag for interaction.
      */
     public Long getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set Task ID, hash flag for interactive
-     * @param TaskId Task ID, hash flag for interactive
+     * Set Task ID, a hash flag for interaction.
+     * @param TaskId Task ID, a hash flag for interaction.
      */
     public void setTaskId(Long TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * Get JobId, corresponding to the Task ID of the task system. 
-     * @return JobId JobId, corresponding to the Task ID of the task system.
+     * Get Task JobId, corresponding to the task ID in the task system. 
+     * @return JobId Task JobId, corresponding to the task ID in the task system.
      */
     public String getJobId() {
         return this.JobId;
     }
 
     /**
-     * Set JobId, corresponding to the Task ID of the task system.
-     * @param JobId JobId, corresponding to the Task ID of the task system.
+     * Set Task JobId, corresponding to the task ID in the task system.
+     * @param JobId Task JobId, corresponding to the task ID in the task system.
      */
     public void setJobId(String JobId) {
         this.JobId = JobId;
     }
 
     /**
-     * Get List of vulnerability IDs to be fixed 
-     * @return VulIds List of vulnerability IDs to be fixed
+     * Get List of fixed vulnerability IDs 
+     * @return VulIds List of fixed vulnerability IDs
      */
     public Long [] getVulIds() {
         return this.VulIds;
     }
 
     /**
-     * Set List of vulnerability IDs to be fixed
-     * @param VulIds List of vulnerability IDs to be fixed
+     * Set List of fixed vulnerability IDs
+     * @param VulIds List of fixed vulnerability IDs
      */
     public void setVulIds(Long [] VulIds) {
         this.VulIds = VulIds;
     }
 
     /**
-     * Get List of fixed KB patch IDs 
-     * @return KBIds List of fixed KB patch IDs
+     * Get List of repaired KB patch IDs 
+     * @return KBIds List of repaired KB patch IDs
      */
     public Long [] getKBIds() {
         return this.KBIds;
     }
 
     /**
-     * Set List of fixed KB patch IDs
-     * @param KBIds List of fixed KB patch IDs
+     * Set List of repaired KB patch IDs
+     * @param KBIds List of repaired KB patch IDs
      */
     public void setKBIds(Long [] KBIds) {
         this.KBIds = KBIds;
     }
 
     /**
-     * Get Repair the total number of assets 
-     * @return AssetCount Repair the total number of assets
+     * Get Total number of repaired assets 
+     * @return AssetCount Total number of repaired assets
      */
     public Long getAssetCount() {
         return this.AssetCount;
     }
 
     /**
-     * Set Repair the total number of assets
-     * @param AssetCount Repair the total number of assets
+     * Set Total number of repaired assets
+     * @param AssetCount Total number of repaired assets
      */
     public void setAssetCount(Long AssetCount) {
         this.AssetCount = AssetCount;
@@ -297,40 +297,40 @@ EMERGENCY: Urgent vulnerability
     }
 
     /**
-     * Get Progress percentage of the repair
-Valid values: [0, 100]
-Supplemental description: Calculation method is (SuccessCount+FailCount)/AssetCount×100. 
-     * @return Progress Progress percentage of the repair
-Valid values: [0, 100]
-Supplemental description: Calculation method is (SuccessCount+FailCount)/AssetCount×100.
+     * Get Repair progress percentage
+Valid values: [0, 100].
+Supplemental description: Calculation method: (SuccessCount+FailCount)/AssetCount×100 
+     * @return Progress Repair progress percentage
+Valid values: [0, 100].
+Supplemental description: Calculation method: (SuccessCount+FailCount)/AssetCount×100
      */
     public Long getProgress() {
         return this.Progress;
     }
 
     /**
-     * Set Progress percentage of the repair
-Valid values: [0, 100]
-Supplemental description: Calculation method is (SuccessCount+FailCount)/AssetCount×100.
-     * @param Progress Progress percentage of the repair
-Valid values: [0, 100]
-Supplemental description: Calculation method is (SuccessCount+FailCount)/AssetCount×100.
+     * Set Repair progress percentage
+Valid values: [0, 100].
+Supplemental description: Calculation method: (SuccessCount+FailCount)/AssetCount×100
+     * @param Progress Repair progress percentage
+Valid values: [0, 100].
+Supplemental description: Calculation method: (SuccessCount+FailCount)/AssetCount×100
      */
     public void setProgress(Long Progress) {
         this.Progress = Progress;
     }
 
     /**
-     * Get Number of users in the fix task 
-     * @return TargetAppIdsCount Number of users in the fix task
+     * Get Number of users for fix tasks 
+     * @return TargetAppIdsCount Number of users for fix tasks
      */
     public Long getTargetAppIdsCount() {
         return this.TargetAppIdsCount;
     }
 
     /**
-     * Set Number of users in the fix task
-     * @param TargetAppIdsCount Number of users in the fix task
+     * Set Number of users for fix tasks
+     * @param TargetAppIdsCount Number of users for fix tasks
      */
     public void setTargetAppIdsCount(Long TargetAppIdsCount) {
         this.TargetAppIdsCount = TargetAppIdsCount;
@@ -338,19 +338,19 @@ Supplemental description: Calculation method is (SuccessCount+FailCount)/AssetCo
 
     /**
      * Get Remediation status
-Enumeration value:
+Enumeration values:
 0: initialization
 1: In remediation
 2: Repair successful
-3: Partially fix failed
+3: Partial fix failure
 4: All fix failures
 5: Stop repair 
      * @return FixStatus Remediation status
-Enumeration value:
+Enumeration values:
 0: initialization
 1: In remediation
 2: Repair successful
-3: Partially fix failed
+3: Partial fix failure
 4: All fix failures
 5: Stop repair
      */
@@ -360,19 +360,19 @@ Enumeration value:
 
     /**
      * Set Remediation status
-Enumeration value:
+Enumeration values:
 0: initialization
 1: In remediation
 2: Repair successful
-3: Partially fix failed
+3: Partial fix failure
 4: All fix failures
 5: Stop repair
      * @param FixStatus Remediation status
-Enumeration value:
+Enumeration values:
 0: initialization
 1: In remediation
 2: Repair successful
-3: Partially fix failed
+3: Partial fix failure
 4: All fix failures
 5: Stop repair
      */
@@ -401,40 +401,40 @@ Unit: seconds.
     }
 
     /**
-     * Get Fix startup time
-Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format). 
-     * @return StartTime Fix startup time
-Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
+     * Get Repair startup time
+Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format) 
+     * @return StartTime Repair startup time
+Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set Fix startup time
-Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
-     * @param StartTime Fix startup time
-Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
+     * Set Repair startup time
+Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)
+     * @param StartTime Repair startup time
+Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get Fix end time
-Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format). 
-     * @return EndTime Fix end time
-Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
+     * Get Repair end time
+Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format) 
+     * @return EndTime Repair end time
+Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set Fix end time
-Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
-     * @param EndTime Fix end time
-Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
+     * Set Repair end time
+Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)
+     * @param EndTime Repair end time
+Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
@@ -442,9 +442,9 @@ Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
 
     /**
      * Get Record creation time.
-Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format). 
+Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format) 
      * @return CreateTime Record creation time.
-Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
+Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)
      */
     public String getCreateTime() {
         return this.CreateTime;
@@ -452,25 +452,25 @@ Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
 
     /**
      * Set Record creation time.
-Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
+Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)
      * @param CreateTime Record creation time.
-Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
+Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get List of vulnerability names to be fixed, making it easy to show directly on the list page 
-     * @return VulNames List of vulnerability names to be fixed, making it easy to show directly on the list page
+     * Get List of names of repaired vulnerabilities, making it easy to show directly on the list page 
+     * @return VulNames List of names of repaired vulnerabilities, making it easy to show directly on the list page
      */
     public String [] getVulNames() {
         return this.VulNames;
     }
 
     /**
-     * Set List of vulnerability names to be fixed, making it easy to show directly on the list page
-     * @param VulNames List of vulnerability names to be fixed, making it easy to show directly on the list page
+     * Set List of names of repaired vulnerabilities, making it easy to show directly on the list page
+     * @param VulNames List of names of repaired vulnerabilities, making it easy to show directly on the list page
      */
     public void setVulNames(String [] VulNames) {
         this.VulNames = VulNames;
@@ -478,17 +478,17 @@ Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
 
     /**
      * Get Vulnerability Type List
-Enumeration values:
+Enumeration value:
 LINUX: Linux software vulnerability
-WINDOWS: Windows system patch vulnerability
-WEB_CMS: Web-CMS vulnerabilities
+WINDOWS: WINDOWS system patch vulnerabilities
+WEB_CMS: Web-CMS vulnerability
 APPLICATION: Application vulnerability
 EMERGENCY: Urgent vulnerability 
      * @return VulCategory Vulnerability Type List
-Enumeration values:
+Enumeration value:
 LINUX: Linux software vulnerability
-WINDOWS: Windows system patch vulnerability
-WEB_CMS: Web-CMS vulnerabilities
+WINDOWS: WINDOWS system patch vulnerabilities
+WEB_CMS: Web-CMS vulnerability
 APPLICATION: Application vulnerability
 EMERGENCY: Urgent vulnerability
      */
@@ -498,17 +498,17 @@ EMERGENCY: Urgent vulnerability
 
     /**
      * Set Vulnerability Type List
-Enumeration values:
+Enumeration value:
 LINUX: Linux software vulnerability
-WINDOWS: Windows system patch vulnerability
-WEB_CMS: Web-CMS vulnerabilities
+WINDOWS: WINDOWS system patch vulnerabilities
+WEB_CMS: Web-CMS vulnerability
 APPLICATION: Application vulnerability
 EMERGENCY: Urgent vulnerability
      * @param VulCategory Vulnerability Type List
-Enumeration values:
+Enumeration value:
 LINUX: Linux software vulnerability
-WINDOWS: Windows system patch vulnerability
-WEB_CMS: Web-CMS vulnerabilities
+WINDOWS: WINDOWS system patch vulnerabilities
+WEB_CMS: Web-CMS vulnerability
 APPLICATION: Application vulnerability
 EMERGENCY: Urgent vulnerability
      */
@@ -517,16 +517,16 @@ EMERGENCY: Urgent vulnerability
     }
 
     /**
-     * Get Creator AppId 
-     * @return AppId Creator AppId
+     * Get Creator `AppId` 
+     * @return AppId Creator `AppId`
      */
     public Long getAppId() {
         return this.AppId;
     }
 
     /**
-     * Set Creator AppId
-     * @param AppId Creator AppId
+     * Set Creator `AppId`
+     * @param AppId Creator `AppId`
      */
     public void setAppId(Long AppId) {
         this.AppId = AppId;

@@ -38,14 +38,14 @@ public class DescribeVulFixedHostDetailRequest extends AbstractModel {
     private String InstanceId;
 
     /**
-    * <p>Paging offset, used for associated component & path list pagination.<br>Value ranges from 0 to +∞.<br>Default value: 0.</p>
+    * <p>Paging offset for associated component &amp; path list pagination<br>Value range: [0, +∞)<br>Default value: 0</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * <p>Number of results per page, used for paginating associated components & path list<br>Value ranges from 1 to 100<br>Default value: 10</p>
+    * <p>Number of results per page, used for list pagination of associated components &amp; paths<br>Value range: [1, 100]<br>Default value: 10</p>
     */
     @SerializedName("Limit")
     @Expose
@@ -91,32 +91,32 @@ public class DescribeVulFixedHostDetailRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>Paging offset, used for associated component & path list pagination.<br>Value ranges from 0 to +∞.<br>Default value: 0.</p> 
-     * @return Offset <p>Paging offset, used for associated component & path list pagination.<br>Value ranges from 0 to +∞.<br>Default value: 0.</p>
+     * Get <p>Paging offset for associated component &amp; path list pagination<br>Value range: [0, +∞)<br>Default value: 0</p> 
+     * @return Offset <p>Paging offset for associated component &amp; path list pagination<br>Value range: [0, +∞)<br>Default value: 0</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set <p>Paging offset, used for associated component & path list pagination.<br>Value ranges from 0 to +∞.<br>Default value: 0.</p>
-     * @param Offset <p>Paging offset, used for associated component & path list pagination.<br>Value ranges from 0 to +∞.<br>Default value: 0.</p>
+     * Set <p>Paging offset for associated component &amp; path list pagination<br>Value range: [0, +∞)<br>Default value: 0</p>
+     * @param Offset <p>Paging offset for associated component &amp; path list pagination<br>Value range: [0, +∞)<br>Default value: 0</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get <p>Number of results per page, used for paginating associated components & path list<br>Value ranges from 1 to 100<br>Default value: 10</p> 
-     * @return Limit <p>Number of results per page, used for paginating associated components & path list<br>Value ranges from 1 to 100<br>Default value: 10</p>
+     * Get <p>Number of results per page, used for list pagination of associated components &amp; paths<br>Value range: [1, 100]<br>Default value: 10</p> 
+     * @return Limit <p>Number of results per page, used for list pagination of associated components &amp; paths<br>Value range: [1, 100]<br>Default value: 10</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set <p>Number of results per page, used for paginating associated components & path list<br>Value ranges from 1 to 100<br>Default value: 10</p>
-     * @param Limit <p>Number of results per page, used for paginating associated components & path list<br>Value ranges from 1 to 100<br>Default value: 10</p>
+     * Set <p>Number of results per page, used for list pagination of associated components &amp; paths<br>Value range: [1, 100]<br>Default value: 10</p>
+     * @param Limit <p>Number of results per page, used for list pagination of associated components &amp; paths<br>Value range: [1, 100]<br>Default value: 10</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

@@ -31,35 +31,35 @@ public class DescribeVulFixTaskDetailRequest extends AbstractModel {
     private Long TaskId;
 
     /**
-    * <p>Paging offset<br>Value ranges from 0 to +∞<br>Default value: 0</p>
+    * <p>Paging offset<br>Value range: [0, +∞)<br>Default value: 0</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * <p>Number of results per page<br>Value ranges from 1 to 100<br>Default value: 10</p>
+    * <p>Number of results per page<br>Value range: [1, 100]<br>Default value: 10</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * <p>Filter criteria<br>Supported Filter.Name:<br>InstanceId - Exact match, filter by host instance ID<br>VulId - Exact match, filter by vulnerability ID, filter out hosts under a certain vulnerability<br>KBId - Exact match, filter by KB Patch ID, filter out hosts under a certain KB patch<br>Status - Exact match, filter by execution status: 0-Initial status 1-Issued 11-Client confirmed 2-Repair completed 3-Client offline 4-Timeout 5-Failure 6-No support 9-Waiting for snapshot creation to complete 10-Snapshot creation failed<br>FixStatus - Exact match, filter by repair result: 0-Initial status 1-Repair successful 2-Fix failure<br>SnapshotStatus - Exact match, filter by snapshot status: -1-No need to create snapshot 0-Not started 1-In progress 2-Completed 3-Creation failure</p>
+    * <p>Filter criteria<br>Supported Filter.Name:<br>InstanceId - Exact match. Filter by host instance ID.<br>VulId - Exact match. Filter by vulnerability ID to filter out hosts under a vulnerability.<br>KBId - Exact match. Filter by KB Patch ID to filter out hosts under a KB patch.<br>Status - Exact match. Filter by execution status: 0-Initial status 1-Issued 11-Confirmed by client 2-Repair completed 3-Client offline 4-Timeout 5-Failed 6-Unsupported 9-Waiting for snapshot creation 10-Snapshot creation failed<br>FixStatus - Exact match. Filter by fix result: 0-Initial status 1-Repair successful 2-Failed to fix<br>SnapshotStatus - Exact match. Filter by snapshot status: -1-No need to create snapshot 0-Not started 1-In progress 2-Completed 3-Creation failed</p>
     */
     @SerializedName("Filters")
     @Expose
     private Filters [] Filters;
 
     /**
-    * <p>Sorting field<br>Enumeration value:<br>StartTime: Sort by repair start time<br>EndTime: Sort by repair end time</p>
+    * <p>Sorting field<br>Enumeration values:<br>StartTime: sort by repair start time<br>EndTime: sort by repair end time</p>
     */
     @SerializedName("Order")
     @Expose
     private String Order;
 
     /**
-    * <p>Sorting method<br>Enumeration value:<br>asc: Ascending<br>desc: Descending<br>Default value: desc</p>
+    * <p>Sorting method<br>Enumeration values:<br>asc: in ascending order<br>desc: in descending order<br>Default value: desc</p>
     */
     @SerializedName("By")
     @Expose
@@ -89,80 +89,80 @@ public class DescribeVulFixTaskDetailRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>Paging offset<br>Value ranges from 0 to +∞<br>Default value: 0</p> 
-     * @return Offset <p>Paging offset<br>Value ranges from 0 to +∞<br>Default value: 0</p>
+     * Get <p>Paging offset<br>Value range: [0, +∞)<br>Default value: 0</p> 
+     * @return Offset <p>Paging offset<br>Value range: [0, +∞)<br>Default value: 0</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set <p>Paging offset<br>Value ranges from 0 to +∞<br>Default value: 0</p>
-     * @param Offset <p>Paging offset<br>Value ranges from 0 to +∞<br>Default value: 0</p>
+     * Set <p>Paging offset<br>Value range: [0, +∞)<br>Default value: 0</p>
+     * @param Offset <p>Paging offset<br>Value range: [0, +∞)<br>Default value: 0</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get <p>Number of results per page<br>Value ranges from 1 to 100<br>Default value: 10</p> 
-     * @return Limit <p>Number of results per page<br>Value ranges from 1 to 100<br>Default value: 10</p>
+     * Get <p>Number of results per page<br>Value range: [1, 100]<br>Default value: 10</p> 
+     * @return Limit <p>Number of results per page<br>Value range: [1, 100]<br>Default value: 10</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set <p>Number of results per page<br>Value ranges from 1 to 100<br>Default value: 10</p>
-     * @param Limit <p>Number of results per page<br>Value ranges from 1 to 100<br>Default value: 10</p>
+     * Set <p>Number of results per page<br>Value range: [1, 100]<br>Default value: 10</p>
+     * @param Limit <p>Number of results per page<br>Value range: [1, 100]<br>Default value: 10</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get <p>Filter criteria<br>Supported Filter.Name:<br>InstanceId - Exact match, filter by host instance ID<br>VulId - Exact match, filter by vulnerability ID, filter out hosts under a certain vulnerability<br>KBId - Exact match, filter by KB Patch ID, filter out hosts under a certain KB patch<br>Status - Exact match, filter by execution status: 0-Initial status 1-Issued 11-Client confirmed 2-Repair completed 3-Client offline 4-Timeout 5-Failure 6-No support 9-Waiting for snapshot creation to complete 10-Snapshot creation failed<br>FixStatus - Exact match, filter by repair result: 0-Initial status 1-Repair successful 2-Fix failure<br>SnapshotStatus - Exact match, filter by snapshot status: -1-No need to create snapshot 0-Not started 1-In progress 2-Completed 3-Creation failure</p> 
-     * @return Filters <p>Filter criteria<br>Supported Filter.Name:<br>InstanceId - Exact match, filter by host instance ID<br>VulId - Exact match, filter by vulnerability ID, filter out hosts under a certain vulnerability<br>KBId - Exact match, filter by KB Patch ID, filter out hosts under a certain KB patch<br>Status - Exact match, filter by execution status: 0-Initial status 1-Issued 11-Client confirmed 2-Repair completed 3-Client offline 4-Timeout 5-Failure 6-No support 9-Waiting for snapshot creation to complete 10-Snapshot creation failed<br>FixStatus - Exact match, filter by repair result: 0-Initial status 1-Repair successful 2-Fix failure<br>SnapshotStatus - Exact match, filter by snapshot status: -1-No need to create snapshot 0-Not started 1-In progress 2-Completed 3-Creation failure</p>
+     * Get <p>Filter criteria<br>Supported Filter.Name:<br>InstanceId - Exact match. Filter by host instance ID.<br>VulId - Exact match. Filter by vulnerability ID to filter out hosts under a vulnerability.<br>KBId - Exact match. Filter by KB Patch ID to filter out hosts under a KB patch.<br>Status - Exact match. Filter by execution status: 0-Initial status 1-Issued 11-Confirmed by client 2-Repair completed 3-Client offline 4-Timeout 5-Failed 6-Unsupported 9-Waiting for snapshot creation 10-Snapshot creation failed<br>FixStatus - Exact match. Filter by fix result: 0-Initial status 1-Repair successful 2-Failed to fix<br>SnapshotStatus - Exact match. Filter by snapshot status: -1-No need to create snapshot 0-Not started 1-In progress 2-Completed 3-Creation failed</p> 
+     * @return Filters <p>Filter criteria<br>Supported Filter.Name:<br>InstanceId - Exact match. Filter by host instance ID.<br>VulId - Exact match. Filter by vulnerability ID to filter out hosts under a vulnerability.<br>KBId - Exact match. Filter by KB Patch ID to filter out hosts under a KB patch.<br>Status - Exact match. Filter by execution status: 0-Initial status 1-Issued 11-Confirmed by client 2-Repair completed 3-Client offline 4-Timeout 5-Failed 6-Unsupported 9-Waiting for snapshot creation 10-Snapshot creation failed<br>FixStatus - Exact match. Filter by fix result: 0-Initial status 1-Repair successful 2-Failed to fix<br>SnapshotStatus - Exact match. Filter by snapshot status: -1-No need to create snapshot 0-Not started 1-In progress 2-Completed 3-Creation failed</p>
      */
     public Filters [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set <p>Filter criteria<br>Supported Filter.Name:<br>InstanceId - Exact match, filter by host instance ID<br>VulId - Exact match, filter by vulnerability ID, filter out hosts under a certain vulnerability<br>KBId - Exact match, filter by KB Patch ID, filter out hosts under a certain KB patch<br>Status - Exact match, filter by execution status: 0-Initial status 1-Issued 11-Client confirmed 2-Repair completed 3-Client offline 4-Timeout 5-Failure 6-No support 9-Waiting for snapshot creation to complete 10-Snapshot creation failed<br>FixStatus - Exact match, filter by repair result: 0-Initial status 1-Repair successful 2-Fix failure<br>SnapshotStatus - Exact match, filter by snapshot status: -1-No need to create snapshot 0-Not started 1-In progress 2-Completed 3-Creation failure</p>
-     * @param Filters <p>Filter criteria<br>Supported Filter.Name:<br>InstanceId - Exact match, filter by host instance ID<br>VulId - Exact match, filter by vulnerability ID, filter out hosts under a certain vulnerability<br>KBId - Exact match, filter by KB Patch ID, filter out hosts under a certain KB patch<br>Status - Exact match, filter by execution status: 0-Initial status 1-Issued 11-Client confirmed 2-Repair completed 3-Client offline 4-Timeout 5-Failure 6-No support 9-Waiting for snapshot creation to complete 10-Snapshot creation failed<br>FixStatus - Exact match, filter by repair result: 0-Initial status 1-Repair successful 2-Fix failure<br>SnapshotStatus - Exact match, filter by snapshot status: -1-No need to create snapshot 0-Not started 1-In progress 2-Completed 3-Creation failure</p>
+     * Set <p>Filter criteria<br>Supported Filter.Name:<br>InstanceId - Exact match. Filter by host instance ID.<br>VulId - Exact match. Filter by vulnerability ID to filter out hosts under a vulnerability.<br>KBId - Exact match. Filter by KB Patch ID to filter out hosts under a KB patch.<br>Status - Exact match. Filter by execution status: 0-Initial status 1-Issued 11-Confirmed by client 2-Repair completed 3-Client offline 4-Timeout 5-Failed 6-Unsupported 9-Waiting for snapshot creation 10-Snapshot creation failed<br>FixStatus - Exact match. Filter by fix result: 0-Initial status 1-Repair successful 2-Failed to fix<br>SnapshotStatus - Exact match. Filter by snapshot status: -1-No need to create snapshot 0-Not started 1-In progress 2-Completed 3-Creation failed</p>
+     * @param Filters <p>Filter criteria<br>Supported Filter.Name:<br>InstanceId - Exact match. Filter by host instance ID.<br>VulId - Exact match. Filter by vulnerability ID to filter out hosts under a vulnerability.<br>KBId - Exact match. Filter by KB Patch ID to filter out hosts under a KB patch.<br>Status - Exact match. Filter by execution status: 0-Initial status 1-Issued 11-Confirmed by client 2-Repair completed 3-Client offline 4-Timeout 5-Failed 6-Unsupported 9-Waiting for snapshot creation 10-Snapshot creation failed<br>FixStatus - Exact match. Filter by fix result: 0-Initial status 1-Repair successful 2-Failed to fix<br>SnapshotStatus - Exact match. Filter by snapshot status: -1-No need to create snapshot 0-Not started 1-In progress 2-Completed 3-Creation failed</p>
      */
     public void setFilters(Filters [] Filters) {
         this.Filters = Filters;
     }
 
     /**
-     * Get <p>Sorting field<br>Enumeration value:<br>StartTime: Sort by repair start time<br>EndTime: Sort by repair end time</p> 
-     * @return Order <p>Sorting field<br>Enumeration value:<br>StartTime: Sort by repair start time<br>EndTime: Sort by repair end time</p>
+     * Get <p>Sorting field<br>Enumeration values:<br>StartTime: sort by repair start time<br>EndTime: sort by repair end time</p> 
+     * @return Order <p>Sorting field<br>Enumeration values:<br>StartTime: sort by repair start time<br>EndTime: sort by repair end time</p>
      */
     public String getOrder() {
         return this.Order;
     }
 
     /**
-     * Set <p>Sorting field<br>Enumeration value:<br>StartTime: Sort by repair start time<br>EndTime: Sort by repair end time</p>
-     * @param Order <p>Sorting field<br>Enumeration value:<br>StartTime: Sort by repair start time<br>EndTime: Sort by repair end time</p>
+     * Set <p>Sorting field<br>Enumeration values:<br>StartTime: sort by repair start time<br>EndTime: sort by repair end time</p>
+     * @param Order <p>Sorting field<br>Enumeration values:<br>StartTime: sort by repair start time<br>EndTime: sort by repair end time</p>
      */
     public void setOrder(String Order) {
         this.Order = Order;
     }
 
     /**
-     * Get <p>Sorting method<br>Enumeration value:<br>asc: Ascending<br>desc: Descending<br>Default value: desc</p> 
-     * @return By <p>Sorting method<br>Enumeration value:<br>asc: Ascending<br>desc: Descending<br>Default value: desc</p>
+     * Get <p>Sorting method<br>Enumeration values:<br>asc: in ascending order<br>desc: in descending order<br>Default value: desc</p> 
+     * @return By <p>Sorting method<br>Enumeration values:<br>asc: in ascending order<br>desc: in descending order<br>Default value: desc</p>
      */
     public String getBy() {
         return this.By;
     }
 
     /**
-     * Set <p>Sorting method<br>Enumeration value:<br>asc: Ascending<br>desc: Descending<br>Default value: desc</p>
-     * @param By <p>Sorting method<br>Enumeration value:<br>asc: Ascending<br>desc: Descending<br>Default value: desc</p>
+     * Set <p>Sorting method<br>Enumeration values:<br>asc: in ascending order<br>desc: in descending order<br>Default value: desc</p>
+     * @param By <p>Sorting method<br>Enumeration values:<br>asc: in ascending order<br>desc: in descending order<br>Default value: desc</p>
      */
     public void setBy(String By) {
         this.By = By;

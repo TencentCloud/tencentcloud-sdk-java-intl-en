@@ -31,7 +31,7 @@ public class DescribeSubscribeJobsRequest extends AbstractModel {
     private String SubscribeId;
 
     /**
-    * 
+    * Filter by subscription ID, exact match
     */
     @SerializedName("SubscribeIds")
     @Expose
@@ -52,14 +52,14 @@ public class DescribeSubscribeJobsRequest extends AbstractModel {
     private String InstanceId;
 
     /**
-    * 
+    * Subscribed topicName
     */
     @SerializedName("Topic")
     @Expose
     private String Topic;
 
     /**
-    * Payment method. Valid values: 0 (monthly subscription); 1 (pay-as-you-go).
+    * Payment method. Valid values: 0 (yearly/monthly subscription); 1 (pay-as-you-go).
     */
     @SerializedName("PayType")
     @Expose
@@ -131,16 +131,16 @@ public class DescribeSubscribeJobsRequest extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return SubscribeIds 
+     * Get Filter by subscription ID, exact match 
+     * @return SubscribeIds Filter by subscription ID, exact match
      */
     public String [] getSubscribeIds() {
         return this.SubscribeIds;
     }
 
     /**
-     * Set 
-     * @param SubscribeIds 
+     * Set Filter by subscription ID, exact match
+     * @param SubscribeIds Filter by subscription ID, exact match
      */
     public void setSubscribeIds(String [] SubscribeIds) {
         this.SubscribeIds = SubscribeIds;
@@ -179,32 +179,32 @@ public class DescribeSubscribeJobsRequest extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return Topic 
+     * Get Subscribed topicName 
+     * @return Topic Subscribed topicName
      */
     public String getTopic() {
         return this.Topic;
     }
 
     /**
-     * Set 
-     * @param Topic 
+     * Set Subscribed topicName
+     * @param Topic Subscribed topicName
      */
     public void setTopic(String Topic) {
         this.Topic = Topic;
     }
 
     /**
-     * Get Payment method. Valid values: 0 (monthly subscription); 1 (pay-as-you-go). 
-     * @return PayType Payment method. Valid values: 0 (monthly subscription); 1 (pay-as-you-go).
+     * Get Payment method. Valid values: 0 (yearly/monthly subscription); 1 (pay-as-you-go). 
+     * @return PayType Payment method. Valid values: 0 (yearly/monthly subscription); 1 (pay-as-you-go).
      */
     public Long getPayType() {
         return this.PayType;
     }
 
     /**
-     * Set Payment method. Valid values: 0 (monthly subscription); 1 (pay-as-you-go).
-     * @param PayType Payment method. Valid values: 0 (monthly subscription); 1 (pay-as-you-go).
+     * Set Payment method. Valid values: 0 (yearly/monthly subscription); 1 (pay-as-you-go).
+     * @param PayType Payment method. Valid values: 0 (yearly/monthly subscription); 1 (pay-as-you-go).
      */
     public void setPayType(Long PayType) {
         this.PayType = PayType;

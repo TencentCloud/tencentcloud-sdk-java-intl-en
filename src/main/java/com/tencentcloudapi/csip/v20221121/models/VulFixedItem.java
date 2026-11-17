@@ -24,316 +24,279 @@ import java.util.HashMap;
 public class VulFixedItem extends AbstractModel {
 
     /**
-    * Vulnerability ID
+    * <p>Vulnerability ID</p>
     */
     @SerializedName("VulId")
     @Expose
     private Long VulId;
 
     /**
-    * Vulnerability name
+    * <p>Vulnerability name</p>
     */
     @SerializedName("VulName")
     @Expose
     private String VulName;
 
     /**
-    * Vulnerability level
-Enumeration values:
-LOW: low-risk
-MEDIUM: Medium risk
-HIGH: High risk
-CRITICAL
+    * <p>Vulnerability level<br>Enumeration values:<br>LOW: Low risk<br>MEDIUM: Medium risk<br>HIGH: High risk<br>CRITICAL: Critical</p>
     */
     @SerializedName("Level")
     @Expose
     private String Level;
 
     /**
-    * VPR rating information (including rating result, description, and phased score), consistent with DescribeHostVulRiskList
+    * <p>VPR rating information (including rating result, description, and staged score), consistent with DescribeHostVulRiskList</p>
     */
     @SerializedName("VRPRatingInfo")
     @Expose
     private VPRRatingInfo VRPRatingInfo;
 
     /**
-    * Vulnerability Type
-Enumeration values:
-LINUX: Linux software vulnerability
-WINDOWS: Windows system patch vulnerability
-WEB_CMS: Web-CMS vulnerabilities
-APPLICATION: Application vulnerability
-EMERGENCY: Urgent vulnerability
+    * <p>Vulnerability type<br>Enumeration values:<br>LINUX: Linux software vulnerability<br>WINDOWS: Windows system patch vulnerability<br>WEB_CMS: Web-CMS vulnerability<br>APPLICATION: Application vulnerability<br>EMERGENCY: Urgent vulnerability</p>
     */
     @SerializedName("VulCategory")
     @Expose
     private String VulCategory;
 
     /**
-    * CVE id
+    * <p>CVE id</p>
     */
     @SerializedName("CveId")
     @Expose
     private String CveId;
 
     /**
-    * Repair the host name
+    * <p>Repair host name</p>
     */
     @SerializedName("MachineName")
     @Expose
     private String MachineName;
 
     /**
-    * Repair the host instance ID
+    * <p>Repair host instance ID</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Associated component & number of paths
+    * <p>Associated component &amp; number of paths</p>
     */
     @SerializedName("ComponentCount")
     @Expose
     private Long ComponentCount;
 
     /**
-    * Associated component & path list
+    * <p>Associated component &amp; path list</p>
     */
     @SerializedName("Components")
     @Expose
     private String [] Components;
 
     /**
-    * Last repair time
-Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
+    * <p>Last repair time<br>Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)</p>
     */
     @SerializedName("LatestFixTime")
     @Expose
     private String LatestFixTime;
 
     /**
-     * Get Vulnerability ID 
-     * @return VulId Vulnerability ID
+    * <p>VPR rating basis</p>
+    */
+    @SerializedName("VPRExplainInfo")
+    @Expose
+    private VPRExplainInfo VPRExplainInfo;
+
+    /**
+     * Get <p>Vulnerability ID</p> 
+     * @return VulId <p>Vulnerability ID</p>
      */
     public Long getVulId() {
         return this.VulId;
     }
 
     /**
-     * Set Vulnerability ID
-     * @param VulId Vulnerability ID
+     * Set <p>Vulnerability ID</p>
+     * @param VulId <p>Vulnerability ID</p>
      */
     public void setVulId(Long VulId) {
         this.VulId = VulId;
     }
 
     /**
-     * Get Vulnerability name 
-     * @return VulName Vulnerability name
+     * Get <p>Vulnerability name</p> 
+     * @return VulName <p>Vulnerability name</p>
      */
     public String getVulName() {
         return this.VulName;
     }
 
     /**
-     * Set Vulnerability name
-     * @param VulName Vulnerability name
+     * Set <p>Vulnerability name</p>
+     * @param VulName <p>Vulnerability name</p>
      */
     public void setVulName(String VulName) {
         this.VulName = VulName;
     }
 
     /**
-     * Get Vulnerability level
-Enumeration values:
-LOW: low-risk
-MEDIUM: Medium risk
-HIGH: High risk
-CRITICAL 
-     * @return Level Vulnerability level
-Enumeration values:
-LOW: low-risk
-MEDIUM: Medium risk
-HIGH: High risk
-CRITICAL
+     * Get <p>Vulnerability level<br>Enumeration values:<br>LOW: Low risk<br>MEDIUM: Medium risk<br>HIGH: High risk<br>CRITICAL: Critical</p> 
+     * @return Level <p>Vulnerability level<br>Enumeration values:<br>LOW: Low risk<br>MEDIUM: Medium risk<br>HIGH: High risk<br>CRITICAL: Critical</p>
      */
     public String getLevel() {
         return this.Level;
     }
 
     /**
-     * Set Vulnerability level
-Enumeration values:
-LOW: low-risk
-MEDIUM: Medium risk
-HIGH: High risk
-CRITICAL
-     * @param Level Vulnerability level
-Enumeration values:
-LOW: low-risk
-MEDIUM: Medium risk
-HIGH: High risk
-CRITICAL
+     * Set <p>Vulnerability level<br>Enumeration values:<br>LOW: Low risk<br>MEDIUM: Medium risk<br>HIGH: High risk<br>CRITICAL: Critical</p>
+     * @param Level <p>Vulnerability level<br>Enumeration values:<br>LOW: Low risk<br>MEDIUM: Medium risk<br>HIGH: High risk<br>CRITICAL: Critical</p>
      */
     public void setLevel(String Level) {
         this.Level = Level;
     }
 
     /**
-     * Get VPR rating information (including rating result, description, and phased score), consistent with DescribeHostVulRiskList 
-     * @return VRPRatingInfo VPR rating information (including rating result, description, and phased score), consistent with DescribeHostVulRiskList
+     * Get <p>VPR rating information (including rating result, description, and staged score), consistent with DescribeHostVulRiskList</p> 
+     * @return VRPRatingInfo <p>VPR rating information (including rating result, description, and staged score), consistent with DescribeHostVulRiskList</p>
      */
     public VPRRatingInfo getVRPRatingInfo() {
         return this.VRPRatingInfo;
     }
 
     /**
-     * Set VPR rating information (including rating result, description, and phased score), consistent with DescribeHostVulRiskList
-     * @param VRPRatingInfo VPR rating information (including rating result, description, and phased score), consistent with DescribeHostVulRiskList
+     * Set <p>VPR rating information (including rating result, description, and staged score), consistent with DescribeHostVulRiskList</p>
+     * @param VRPRatingInfo <p>VPR rating information (including rating result, description, and staged score), consistent with DescribeHostVulRiskList</p>
      */
     public void setVRPRatingInfo(VPRRatingInfo VRPRatingInfo) {
         this.VRPRatingInfo = VRPRatingInfo;
     }
 
     /**
-     * Get Vulnerability Type
-Enumeration values:
-LINUX: Linux software vulnerability
-WINDOWS: Windows system patch vulnerability
-WEB_CMS: Web-CMS vulnerabilities
-APPLICATION: Application vulnerability
-EMERGENCY: Urgent vulnerability 
-     * @return VulCategory Vulnerability Type
-Enumeration values:
-LINUX: Linux software vulnerability
-WINDOWS: Windows system patch vulnerability
-WEB_CMS: Web-CMS vulnerabilities
-APPLICATION: Application vulnerability
-EMERGENCY: Urgent vulnerability
+     * Get <p>Vulnerability type<br>Enumeration values:<br>LINUX: Linux software vulnerability<br>WINDOWS: Windows system patch vulnerability<br>WEB_CMS: Web-CMS vulnerability<br>APPLICATION: Application vulnerability<br>EMERGENCY: Urgent vulnerability</p> 
+     * @return VulCategory <p>Vulnerability type<br>Enumeration values:<br>LINUX: Linux software vulnerability<br>WINDOWS: Windows system patch vulnerability<br>WEB_CMS: Web-CMS vulnerability<br>APPLICATION: Application vulnerability<br>EMERGENCY: Urgent vulnerability</p>
      */
     public String getVulCategory() {
         return this.VulCategory;
     }
 
     /**
-     * Set Vulnerability Type
-Enumeration values:
-LINUX: Linux software vulnerability
-WINDOWS: Windows system patch vulnerability
-WEB_CMS: Web-CMS vulnerabilities
-APPLICATION: Application vulnerability
-EMERGENCY: Urgent vulnerability
-     * @param VulCategory Vulnerability Type
-Enumeration values:
-LINUX: Linux software vulnerability
-WINDOWS: Windows system patch vulnerability
-WEB_CMS: Web-CMS vulnerabilities
-APPLICATION: Application vulnerability
-EMERGENCY: Urgent vulnerability
+     * Set <p>Vulnerability type<br>Enumeration values:<br>LINUX: Linux software vulnerability<br>WINDOWS: Windows system patch vulnerability<br>WEB_CMS: Web-CMS vulnerability<br>APPLICATION: Application vulnerability<br>EMERGENCY: Urgent vulnerability</p>
+     * @param VulCategory <p>Vulnerability type<br>Enumeration values:<br>LINUX: Linux software vulnerability<br>WINDOWS: Windows system patch vulnerability<br>WEB_CMS: Web-CMS vulnerability<br>APPLICATION: Application vulnerability<br>EMERGENCY: Urgent vulnerability</p>
      */
     public void setVulCategory(String VulCategory) {
         this.VulCategory = VulCategory;
     }
 
     /**
-     * Get CVE id 
-     * @return CveId CVE id
+     * Get <p>CVE id</p> 
+     * @return CveId <p>CVE id</p>
      */
     public String getCveId() {
         return this.CveId;
     }
 
     /**
-     * Set CVE id
-     * @param CveId CVE id
+     * Set <p>CVE id</p>
+     * @param CveId <p>CVE id</p>
      */
     public void setCveId(String CveId) {
         this.CveId = CveId;
     }
 
     /**
-     * Get Repair the host name 
-     * @return MachineName Repair the host name
+     * Get <p>Repair host name</p> 
+     * @return MachineName <p>Repair host name</p>
      */
     public String getMachineName() {
         return this.MachineName;
     }
 
     /**
-     * Set Repair the host name
-     * @param MachineName Repair the host name
+     * Set <p>Repair host name</p>
+     * @param MachineName <p>Repair host name</p>
      */
     public void setMachineName(String MachineName) {
         this.MachineName = MachineName;
     }
 
     /**
-     * Get Repair the host instance ID 
-     * @return InstanceId Repair the host instance ID
+     * Get <p>Repair host instance ID</p> 
+     * @return InstanceId <p>Repair host instance ID</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Repair the host instance ID
-     * @param InstanceId Repair the host instance ID
+     * Set <p>Repair host instance ID</p>
+     * @param InstanceId <p>Repair host instance ID</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Associated component & number of paths 
-     * @return ComponentCount Associated component & number of paths
+     * Get <p>Associated component &amp; number of paths</p> 
+     * @return ComponentCount <p>Associated component &amp; number of paths</p>
      */
     public Long getComponentCount() {
         return this.ComponentCount;
     }
 
     /**
-     * Set Associated component & number of paths
-     * @param ComponentCount Associated component & number of paths
+     * Set <p>Associated component &amp; number of paths</p>
+     * @param ComponentCount <p>Associated component &amp; number of paths</p>
      */
     public void setComponentCount(Long ComponentCount) {
         this.ComponentCount = ComponentCount;
     }
 
     /**
-     * Get Associated component & path list 
-     * @return Components Associated component & path list
+     * Get <p>Associated component &amp; path list</p> 
+     * @return Components <p>Associated component &amp; path list</p>
      */
     public String [] getComponents() {
         return this.Components;
     }
 
     /**
-     * Set Associated component & path list
-     * @param Components Associated component & path list
+     * Set <p>Associated component &amp; path list</p>
+     * @param Components <p>Associated component &amp; path list</p>
      */
     public void setComponents(String [] Components) {
         this.Components = Components;
     }
 
     /**
-     * Get Last repair time
-Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format). 
-     * @return LatestFixTime Last repair time
-Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
+     * Get <p>Last repair time<br>Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)</p> 
+     * @return LatestFixTime <p>Last repair time<br>Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)</p>
      */
     public String getLatestFixTime() {
         return this.LatestFixTime;
     }
 
     /**
-     * Set Last repair time
-Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
-     * @param LatestFixTime Last repair time
-Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
+     * Set <p>Last repair time<br>Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)</p>
+     * @param LatestFixTime <p>Last repair time<br>Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)</p>
      */
     public void setLatestFixTime(String LatestFixTime) {
         this.LatestFixTime = LatestFixTime;
+    }
+
+    /**
+     * Get <p>VPR rating basis</p> 
+     * @return VPRExplainInfo <p>VPR rating basis</p>
+     */
+    public VPRExplainInfo getVPRExplainInfo() {
+        return this.VPRExplainInfo;
+    }
+
+    /**
+     * Set <p>VPR rating basis</p>
+     * @param VPRExplainInfo <p>VPR rating basis</p>
+     */
+    public void setVPRExplainInfo(VPRExplainInfo VPRExplainInfo) {
+        this.VPRExplainInfo = VPRExplainInfo;
     }
 
     public VulFixedItem() {
@@ -380,6 +343,9 @@ Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
         if (source.LatestFixTime != null) {
             this.LatestFixTime = new String(source.LatestFixTime);
         }
+        if (source.VPRExplainInfo != null) {
+            this.VPRExplainInfo = new VPRExplainInfo(source.VPRExplainInfo);
+        }
     }
 
 
@@ -398,6 +364,7 @@ Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
         this.setParamSimple(map, prefix + "ComponentCount", this.ComponentCount);
         this.setParamArraySimple(map, prefix + "Components.", this.Components);
         this.setParamSimple(map, prefix + "LatestFixTime", this.LatestFixTime);
+        this.setParamObj(map, prefix + "VPRExplainInfo.", this.VPRExplainInfo);
 
     }
 }

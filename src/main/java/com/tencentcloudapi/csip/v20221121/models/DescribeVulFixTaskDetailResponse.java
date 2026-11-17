@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeVulFixTaskDetailResponse extends AbstractModel {
 
     /**
-    * <p>Task details</p>
+    * <p>Task details list</p>
     */
     @SerializedName("Data")
     @Expose
@@ -52,16 +52,16 @@ public class DescribeVulFixTaskDetailResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get <p>Task details</p> 
-     * @return Data <p>Task details</p>
+     * Get <p>Task details list</p> 
+     * @return Data <p>Task details list</p>
      */
     public VulFixTaskDetailItem [] getData() {
         return this.Data;
     }
 
     /**
-     * Set <p>Task details</p>
-     * @param Data <p>Task details</p>
+     * Set <p>Task details list</p>
+     * @param Data <p>Task details list</p>
      */
     public void setData(VulFixTaskDetailItem [] Data) {
         this.Data = Data;

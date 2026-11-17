@@ -182,8 +182,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
 -9101 Alarm for covered certificate,
 -9102 Alarm for photocopied certificate,
 -9103 Alarm for photographed certificate,
+-9104 Alarm for tamper certificate,
 -9107 Alarm for reflective certificate,
 -9108 Alarm for blurry image,
+-8101 Alarm for document information format verification,
+-8102 Alarm for document information consistency verification,
 -9109 This capability is not enabled.
     */
     @SerializedName("WarnCardInfos")
@@ -196,6 +199,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
     @SerializedName("EditDetails")
     @Expose
     private EditDetail [] EditDetails;
+
+    /**
+    * Detected card type. Returns the corresponding document type combining country or region name and document type. Enums: Passport, IndonesiaIDCard, MalaysiaIDCard, SingaporeIDCard, ThailandIDCard, ThailandPinkCard, VietnamIDCard, MyanmarDriverLicense, HongKongIDCard, MacaoIDCard, TaiwanIDCard, HmtTravelPermit, HmtMainlandTravelPermit, HmtResidencePermit, HmtResidencePermitBack, MainlandIDCard, MainlandIDCardBack, MainlandTempIDCard, MainlandTempIDCardBack, BrazilIDCard, BrazilIDCardBack, BrazilRNM, BrazilRNMBack, BrazilRNE, BrazilDriverLicense, BrazilDriverLicenseBack, MexicoVoterCard, PhilippinesUMID, PhilippinesDriverLicense, PhilippinesVoteID, PhilippinesSSSID, PhilippinesTINID, PhilippinesNationalID, PhilippinesPRCID, PhilippinesPostalID, PhilippinesHealthCard, Other.
+    */
+    @SerializedName("DetectedCardType")
+    @Expose
+    private String DetectedCardType;
 
     /**
      * Get Whether the authentication or OCR process is successful. 
@@ -726,15 +736,21 @@ Note: This field may return null, indicating that no valid values can be obtaine
 -9101 Alarm for covered certificate,
 -9102 Alarm for photocopied certificate,
 -9103 Alarm for photographed certificate,
+-9104 Alarm for tamper certificate,
 -9107 Alarm for reflective certificate,
 -9108 Alarm for blurry image,
+-8101 Alarm for document information format verification,
+-8102 Alarm for document information consistency verification,
 -9109 This capability is not enabled. 
      * @return WarnCardInfos Card warning information
 -9101 Alarm for covered certificate,
 -9102 Alarm for photocopied certificate,
 -9103 Alarm for photographed certificate,
+-9104 Alarm for tamper certificate,
 -9107 Alarm for reflective certificate,
 -9108 Alarm for blurry image,
+-8101 Alarm for document information format verification,
+-8102 Alarm for document information consistency verification,
 -9109 This capability is not enabled.
      */
     public Long [] getWarnCardInfos() {
@@ -746,15 +762,21 @@ Note: This field may return null, indicating that no valid values can be obtaine
 -9101 Alarm for covered certificate,
 -9102 Alarm for photocopied certificate,
 -9103 Alarm for photographed certificate,
+-9104 Alarm for tamper certificate,
 -9107 Alarm for reflective certificate,
 -9108 Alarm for blurry image,
+-8101 Alarm for document information format verification,
+-8102 Alarm for document information consistency verification,
 -9109 This capability is not enabled.
      * @param WarnCardInfos Card warning information
 -9101 Alarm for covered certificate,
 -9102 Alarm for photocopied certificate,
 -9103 Alarm for photographed certificate,
+-9104 Alarm for tamper certificate,
 -9107 Alarm for reflective certificate,
 -9108 Alarm for blurry image,
+-8101 Alarm for document information format verification,
+-8102 Alarm for document information consistency verification,
 -9109 This capability is not enabled.
      */
     public void setWarnCardInfos(Long [] WarnCardInfos) {
@@ -775,6 +797,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
      */
     public void setEditDetails(EditDetail [] EditDetails) {
         this.EditDetails = EditDetails;
+    }
+
+    /**
+     * Get Detected card type. Returns the corresponding document type combining country or region name and document type. Enums: Passport, IndonesiaIDCard, MalaysiaIDCard, SingaporeIDCard, ThailandIDCard, ThailandPinkCard, VietnamIDCard, MyanmarDriverLicense, HongKongIDCard, MacaoIDCard, TaiwanIDCard, HmtTravelPermit, HmtMainlandTravelPermit, HmtResidencePermit, HmtResidencePermitBack, MainlandIDCard, MainlandIDCardBack, MainlandTempIDCard, MainlandTempIDCardBack, BrazilIDCard, BrazilIDCardBack, BrazilRNM, BrazilRNMBack, BrazilRNE, BrazilDriverLicense, BrazilDriverLicenseBack, MexicoVoterCard, PhilippinesUMID, PhilippinesDriverLicense, PhilippinesVoteID, PhilippinesSSSID, PhilippinesTINID, PhilippinesNationalID, PhilippinesPRCID, PhilippinesPostalID, PhilippinesHealthCard, Other. 
+     * @return DetectedCardType Detected card type. Returns the corresponding document type combining country or region name and document type. Enums: Passport, IndonesiaIDCard, MalaysiaIDCard, SingaporeIDCard, ThailandIDCard, ThailandPinkCard, VietnamIDCard, MyanmarDriverLicense, HongKongIDCard, MacaoIDCard, TaiwanIDCard, HmtTravelPermit, HmtMainlandTravelPermit, HmtResidencePermit, HmtResidencePermitBack, MainlandIDCard, MainlandIDCardBack, MainlandTempIDCard, MainlandTempIDCardBack, BrazilIDCard, BrazilIDCardBack, BrazilRNM, BrazilRNMBack, BrazilRNE, BrazilDriverLicense, BrazilDriverLicenseBack, MexicoVoterCard, PhilippinesUMID, PhilippinesDriverLicense, PhilippinesVoteID, PhilippinesSSSID, PhilippinesTINID, PhilippinesNationalID, PhilippinesPRCID, PhilippinesPostalID, PhilippinesHealthCard, Other.
+     */
+    public String getDetectedCardType() {
+        return this.DetectedCardType;
+    }
+
+    /**
+     * Set Detected card type. Returns the corresponding document type combining country or region name and document type. Enums: Passport, IndonesiaIDCard, MalaysiaIDCard, SingaporeIDCard, ThailandIDCard, ThailandPinkCard, VietnamIDCard, MyanmarDriverLicense, HongKongIDCard, MacaoIDCard, TaiwanIDCard, HmtTravelPermit, HmtMainlandTravelPermit, HmtResidencePermit, HmtResidencePermitBack, MainlandIDCard, MainlandIDCardBack, MainlandTempIDCard, MainlandTempIDCardBack, BrazilIDCard, BrazilIDCardBack, BrazilRNM, BrazilRNMBack, BrazilRNE, BrazilDriverLicense, BrazilDriverLicenseBack, MexicoVoterCard, PhilippinesUMID, PhilippinesDriverLicense, PhilippinesVoteID, PhilippinesSSSID, PhilippinesTINID, PhilippinesNationalID, PhilippinesPRCID, PhilippinesPostalID, PhilippinesHealthCard, Other.
+     * @param DetectedCardType Detected card type. Returns the corresponding document type combining country or region name and document type. Enums: Passport, IndonesiaIDCard, MalaysiaIDCard, SingaporeIDCard, ThailandIDCard, ThailandPinkCard, VietnamIDCard, MyanmarDriverLicense, HongKongIDCard, MacaoIDCard, TaiwanIDCard, HmtTravelPermit, HmtMainlandTravelPermit, HmtResidencePermit, HmtResidencePermitBack, MainlandIDCard, MainlandIDCardBack, MainlandTempIDCard, MainlandTempIDCardBack, BrazilIDCard, BrazilIDCardBack, BrazilRNM, BrazilRNMBack, BrazilRNE, BrazilDriverLicense, BrazilDriverLicenseBack, MexicoVoterCard, PhilippinesUMID, PhilippinesDriverLicense, PhilippinesVoteID, PhilippinesSSSID, PhilippinesTINID, PhilippinesNationalID, PhilippinesPRCID, PhilippinesPostalID, PhilippinesHealthCard, Other.
+     */
+    public void setDetectedCardType(String DetectedCardType) {
+        this.DetectedCardType = DetectedCardType;
     }
 
     public CardVerifyResult() {
@@ -821,6 +859,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 this.EditDetails[i] = new EditDetail(source.EditDetails[i]);
             }
         }
+        if (source.DetectedCardType != null) {
+            this.DetectedCardType = new String(source.DetectedCardType);
+        }
     }
 
 
@@ -838,6 +879,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamObj(map, prefix + "NormalCardInfo.", this.NormalCardInfo);
         this.setParamArraySimple(map, prefix + "WarnCardInfos.", this.WarnCardInfos);
         this.setParamArrayObj(map, prefix + "EditDetails.", this.EditDetails);
+        this.setParamSimple(map, prefix + "DetectedCardType", this.DetectedCardType);
 
     }
 }

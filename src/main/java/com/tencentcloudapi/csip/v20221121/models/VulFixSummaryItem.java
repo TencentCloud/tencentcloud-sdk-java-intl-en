@@ -52,14 +52,14 @@ public class VulFixSummaryItem extends AbstractModel {
     private Long AffectedCount;
 
     /**
-    * <p>Whether restart is required after repair</p>
+    * <p>Whether the system needs to be restarted after repair</p>
     */
     @SerializedName("NeedReboot")
     @Expose
     private Boolean NeedReboot;
 
     /**
-    * <p>Whether one-click repair is supported true-supported false-unsupported</p>
+    * <p>Whether one-click repair is supported. true - support; false - not support</p>
     */
     @SerializedName("FixSwitch")
     @Expose
@@ -130,32 +130,32 @@ public class VulFixSummaryItem extends AbstractModel {
     }
 
     /**
-     * Get <p>Whether restart is required after repair</p> 
-     * @return NeedReboot <p>Whether restart is required after repair</p>
+     * Get <p>Whether the system needs to be restarted after repair</p> 
+     * @return NeedReboot <p>Whether the system needs to be restarted after repair</p>
      */
     public Boolean getNeedReboot() {
         return this.NeedReboot;
     }
 
     /**
-     * Set <p>Whether restart is required after repair</p>
-     * @param NeedReboot <p>Whether restart is required after repair</p>
+     * Set <p>Whether the system needs to be restarted after repair</p>
+     * @param NeedReboot <p>Whether the system needs to be restarted after repair</p>
      */
     public void setNeedReboot(Boolean NeedReboot) {
         this.NeedReboot = NeedReboot;
     }
 
     /**
-     * Get <p>Whether one-click repair is supported true-supported false-unsupported</p> 
-     * @return FixSwitch <p>Whether one-click repair is supported true-supported false-unsupported</p>
+     * Get <p>Whether one-click repair is supported. true - support; false - not support</p> 
+     * @return FixSwitch <p>Whether one-click repair is supported. true - support; false - not support</p>
      */
     public Boolean getFixSwitch() {
         return this.FixSwitch;
     }
 
     /**
-     * Set <p>Whether one-click repair is supported true-supported false-unsupported</p>
-     * @param FixSwitch <p>Whether one-click repair is supported true-supported false-unsupported</p>
+     * Set <p>Whether one-click repair is supported. true - support; false - not support</p>
+     * @param FixSwitch <p>Whether one-click repair is supported. true - support; false - not support</p>
      */
     public void setFixSwitch(Boolean FixSwitch) {
         this.FixSwitch = FixSwitch;

@@ -94,14 +94,14 @@ public class AddressInfo extends AbstractModel {
     private String LineThree;
 
     /**
-    * <p>Fourth line of the address bar</p>
+    * <p>Line 4 of the address bar</p>
     */
     @SerializedName("LineFour")
     @Expose
     private String LineFour;
 
     /**
-    * <p>Fifth line of the address bar</p>
+    * <p>Line 5 of the address bar</p>
     */
     @SerializedName("LineFive")
     @Expose
@@ -268,32 +268,32 @@ public class AddressInfo extends AbstractModel {
     }
 
     /**
-     * Get <p>Fourth line of the address bar</p> 
-     * @return LineFour <p>Fourth line of the address bar</p>
+     * Get <p>Line 4 of the address bar</p> 
+     * @return LineFour <p>Line 4 of the address bar</p>
      */
     public String getLineFour() {
         return this.LineFour;
     }
 
     /**
-     * Set <p>Fourth line of the address bar</p>
-     * @param LineFour <p>Fourth line of the address bar</p>
+     * Set <p>Line 4 of the address bar</p>
+     * @param LineFour <p>Line 4 of the address bar</p>
      */
     public void setLineFour(String LineFour) {
         this.LineFour = LineFour;
     }
 
     /**
-     * Get <p>Fifth line of the address bar</p> 
-     * @return LineFive <p>Fifth line of the address bar</p>
+     * Get <p>Line 5 of the address bar</p> 
+     * @return LineFive <p>Line 5 of the address bar</p>
      */
     public String getLineFive() {
         return this.LineFive;
     }
 
     /**
-     * Set <p>Fifth line of the address bar</p>
-     * @param LineFive <p>Fifth line of the address bar</p>
+     * Set <p>Line 5 of the address bar</p>
+     * @param LineFive <p>Line 5 of the address bar</p>
      */
     public void setLineFive(String LineFive) {
         this.LineFive = LineFive;

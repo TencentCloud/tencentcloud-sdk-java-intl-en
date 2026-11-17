@@ -24,105 +24,118 @@ import java.util.HashMap;
 public class Objects extends AbstractModel {
 
     /**
-    * Sync object type. Valid value: `Partial` (Partial objects). Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Sync object type Partial (partial objects)</p>
     */
     @SerializedName("Mode")
     @Expose
     private String Mode;
 
     /**
-    * Sync object, which is required if `Mode` is `Partial`.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Sync object, not empty when Mode is Partial</p>
     */
     @SerializedName("Databases")
     @Expose
     private Database [] Databases;
 
     /**
-    * Advanced object types, such as function and procedure. Note: If you want to migrate and synchronize advanced objects, the corresponding advanced object type should be included in this configuration. When advanced objects need to be synchronized, the initialization type must include the structure initialization type, that is, the Options.InitType value of the task is Structure or Full.Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Advanced object types, such as function and procedure. Note: If you need to migrate and synchronize advanced objects, this configuration should contain the corresponding advanced object type. When synchronization of advanced objects is required, the initialization type must contain the structure initialization type, that is, the field value of task Options.InitType must be Structure or Full.</p>
     */
     @SerializedName("AdvancedObjects")
     @Expose
     private String [] AdvancedObjects;
 
     /**
-    * A redundant field that specifies the online DDL type
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>This field is deprecated. For temporary table synchronization, use Objects.Databases[n].Tables[n].TmpTables to import.</p>
     */
     @SerializedName("OnlineDDL")
     @Expose
     private OnlineDDL OnlineDDL;
 
     /**
-     * Get Sync object type. Valid value: `Partial` (Partial objects). Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Mode Sync object type. Valid value: `Partial` (Partial objects). Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Database/Table/View-level DML/DDL allowlist</p>
+    */
+    @SerializedName("DatabasesOpFilter")
+    @Expose
+    private DBOpFilter [] DatabasesOpFilter;
+
+    /**
+     * Get <p>Sync object type Partial (partial objects)</p> 
+     * @return Mode <p>Sync object type Partial (partial objects)</p>
      */
     public String getMode() {
         return this.Mode;
     }
 
     /**
-     * Set Sync object type. Valid value: `Partial` (Partial objects). Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Mode Sync object type. Valid value: `Partial` (Partial objects). Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Sync object type Partial (partial objects)</p>
+     * @param Mode <p>Sync object type Partial (partial objects)</p>
      */
     public void setMode(String Mode) {
         this.Mode = Mode;
     }
 
     /**
-     * Get Sync object, which is required if `Mode` is `Partial`.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Databases Sync object, which is required if `Mode` is `Partial`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Sync object, not empty when Mode is Partial</p> 
+     * @return Databases <p>Sync object, not empty when Mode is Partial</p>
      */
     public Database [] getDatabases() {
         return this.Databases;
     }
 
     /**
-     * Set Sync object, which is required if `Mode` is `Partial`.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Databases Sync object, which is required if `Mode` is `Partial`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Sync object, not empty when Mode is Partial</p>
+     * @param Databases <p>Sync object, not empty when Mode is Partial</p>
      */
     public void setDatabases(Database [] Databases) {
         this.Databases = Databases;
     }
 
     /**
-     * Get Advanced object types, such as function and procedure. Note: If you want to migrate and synchronize advanced objects, the corresponding advanced object type should be included in this configuration. When advanced objects need to be synchronized, the initialization type must include the structure initialization type, that is, the Options.InitType value of the task is Structure or Full.Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return AdvancedObjects Advanced object types, such as function and procedure. Note: If you want to migrate and synchronize advanced objects, the corresponding advanced object type should be included in this configuration. When advanced objects need to be synchronized, the initialization type must include the structure initialization type, that is, the Options.InitType value of the task is Structure or Full.Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Advanced object types, such as function and procedure. Note: If you need to migrate and synchronize advanced objects, this configuration should contain the corresponding advanced object type. When synchronization of advanced objects is required, the initialization type must contain the structure initialization type, that is, the field value of task Options.InitType must be Structure or Full.</p> 
+     * @return AdvancedObjects <p>Advanced object types, such as function and procedure. Note: If you need to migrate and synchronize advanced objects, this configuration should contain the corresponding advanced object type. When synchronization of advanced objects is required, the initialization type must contain the structure initialization type, that is, the field value of task Options.InitType must be Structure or Full.</p>
      */
     public String [] getAdvancedObjects() {
         return this.AdvancedObjects;
     }
 
     /**
-     * Set Advanced object types, such as function and procedure. Note: If you want to migrate and synchronize advanced objects, the corresponding advanced object type should be included in this configuration. When advanced objects need to be synchronized, the initialization type must include the structure initialization type, that is, the Options.InitType value of the task is Structure or Full.Note: This field may return null, indicating that no valid values can be obtained.
-     * @param AdvancedObjects Advanced object types, such as function and procedure. Note: If you want to migrate and synchronize advanced objects, the corresponding advanced object type should be included in this configuration. When advanced objects need to be synchronized, the initialization type must include the structure initialization type, that is, the Options.InitType value of the task is Structure or Full.Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Advanced object types, such as function and procedure. Note: If you need to migrate and synchronize advanced objects, this configuration should contain the corresponding advanced object type. When synchronization of advanced objects is required, the initialization type must contain the structure initialization type, that is, the field value of task Options.InitType must be Structure or Full.</p>
+     * @param AdvancedObjects <p>Advanced object types, such as function and procedure. Note: If you need to migrate and synchronize advanced objects, this configuration should contain the corresponding advanced object type. When synchronization of advanced objects is required, the initialization type must contain the structure initialization type, that is, the field value of task Options.InitType must be Structure or Full.</p>
      */
     public void setAdvancedObjects(String [] AdvancedObjects) {
         this.AdvancedObjects = AdvancedObjects;
     }
 
     /**
-     * Get A redundant field that specifies the online DDL type
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return OnlineDDL A redundant field that specifies the online DDL type
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>This field is deprecated. For temporary table synchronization, use Objects.Databases[n].Tables[n].TmpTables to import.</p> 
+     * @return OnlineDDL <p>This field is deprecated. For temporary table synchronization, use Objects.Databases[n].Tables[n].TmpTables to import.</p>
      */
     public OnlineDDL getOnlineDDL() {
         return this.OnlineDDL;
     }
 
     /**
-     * Set A redundant field that specifies the online DDL type
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param OnlineDDL A redundant field that specifies the online DDL type
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>This field is deprecated. For temporary table synchronization, use Objects.Databases[n].Tables[n].TmpTables to import.</p>
+     * @param OnlineDDL <p>This field is deprecated. For temporary table synchronization, use Objects.Databases[n].Tables[n].TmpTables to import.</p>
      */
     public void setOnlineDDL(OnlineDDL OnlineDDL) {
         this.OnlineDDL = OnlineDDL;
+    }
+
+    /**
+     * Get <p>Database/Table/View-level DML/DDL allowlist</p> 
+     * @return DatabasesOpFilter <p>Database/Table/View-level DML/DDL allowlist</p>
+     */
+    public DBOpFilter [] getDatabasesOpFilter() {
+        return this.DatabasesOpFilter;
+    }
+
+    /**
+     * Set <p>Database/Table/View-level DML/DDL allowlist</p>
+     * @param DatabasesOpFilter <p>Database/Table/View-level DML/DDL allowlist</p>
+     */
+    public void setDatabasesOpFilter(DBOpFilter [] DatabasesOpFilter) {
+        this.DatabasesOpFilter = DatabasesOpFilter;
     }
 
     public Objects() {
@@ -151,6 +164,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.OnlineDDL != null) {
             this.OnlineDDL = new OnlineDDL(source.OnlineDDL);
         }
+        if (source.DatabasesOpFilter != null) {
+            this.DatabasesOpFilter = new DBOpFilter[source.DatabasesOpFilter.length];
+            for (int i = 0; i < source.DatabasesOpFilter.length; i++) {
+                this.DatabasesOpFilter[i] = new DBOpFilter(source.DatabasesOpFilter[i]);
+            }
+        }
     }
 
 
@@ -162,6 +181,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamArrayObj(map, prefix + "Databases.", this.Databases);
         this.setParamArraySimple(map, prefix + "AdvancedObjects.", this.AdvancedObjects);
         this.setParamObj(map, prefix + "OnlineDDL.", this.OnlineDDL);
+        this.setParamArrayObj(map, prefix + "DatabasesOpFilter.", this.DatabasesOpFilter);
 
     }
 }

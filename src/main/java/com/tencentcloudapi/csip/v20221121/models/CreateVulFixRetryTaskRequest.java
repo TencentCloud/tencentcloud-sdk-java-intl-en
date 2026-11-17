@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class CreateVulFixRetryTaskRequest extends AbstractModel {
 
     /**
-    * <p>Repair task ID that needs to be retried</p>
+    * <p>Repair task ID that needs to retry</p>
     */
     @SerializedName("TaskId")
     @Expose
     private Long TaskId;
 
     /**
-    * <p>Specify the list of host instance IDs that need to retry. If not passed, retry all failed hosts.</p>
+    * <p>Specify the instance ID list of the host that needs to retry. If not passed, retry all failed hosts.</p>
     */
     @SerializedName("InstanceIds")
     @Expose
@@ -45,32 +45,32 @@ public class CreateVulFixRetryTaskRequest extends AbstractModel {
     private String [] MemberId;
 
     /**
-     * Get <p>Repair task ID that needs to be retried</p> 
-     * @return TaskId <p>Repair task ID that needs to be retried</p>
+     * Get <p>Repair task ID that needs to retry</p> 
+     * @return TaskId <p>Repair task ID that needs to retry</p>
      */
     public Long getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set <p>Repair task ID that needs to be retried</p>
-     * @param TaskId <p>Repair task ID that needs to be retried</p>
+     * Set <p>Repair task ID that needs to retry</p>
+     * @param TaskId <p>Repair task ID that needs to retry</p>
      */
     public void setTaskId(Long TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * Get <p>Specify the list of host instance IDs that need to retry. If not passed, retry all failed hosts.</p> 
-     * @return InstanceIds <p>Specify the list of host instance IDs that need to retry. If not passed, retry all failed hosts.</p>
+     * Get <p>Specify the instance ID list of the host that needs to retry. If not passed, retry all failed hosts.</p> 
+     * @return InstanceIds <p>Specify the instance ID list of the host that needs to retry. If not passed, retry all failed hosts.</p>
      */
     public String [] getInstanceIds() {
         return this.InstanceIds;
     }
 
     /**
-     * Set <p>Specify the list of host instance IDs that need to retry. If not passed, retry all failed hosts.</p>
-     * @param InstanceIds <p>Specify the list of host instance IDs that need to retry. If not passed, retry all failed hosts.</p>
+     * Set <p>Specify the instance ID list of the host that needs to retry. If not passed, retry all failed hosts.</p>
+     * @param InstanceIds <p>Specify the instance ID list of the host that needs to retry. If not passed, retry all failed hosts.</p>
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;

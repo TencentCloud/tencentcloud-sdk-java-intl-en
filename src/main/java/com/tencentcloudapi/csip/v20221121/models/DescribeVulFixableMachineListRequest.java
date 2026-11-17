@@ -24,28 +24,28 @@ import java.util.HashMap;
 public class DescribeVulFixableMachineListRequest extends AbstractModel {
 
     /**
-    * <p>Vulnerability ID list, a maximum of 100</p>
+    * <p>List of vulnerability IDs. Supports up to 100.</p>
     */
     @SerializedName("VulIds")
     @Expose
     private Long [] VulIds;
 
     /**
-    * <p>Paging offset<br>Value ranges from 0 to +∞<br>Default value: 0</p>
+    * <p>Paging offset<br>Value range: [0, +∞)<br>Default value: 0</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * <p>Number of results per page<br>Value ranges from 1 to 100<br>Default value: 10</p>
+    * <p>Number of results per page<br>Value range: [1, 100]<br>Default value: 10</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * <p>Filtering Conditions<br>Supported Filter.Name:<br>Keyword - fuzzy matching, search by asset ID, asset name<br>ComponentName - fuzzy matching, search by associated component name<br>InstanceId - exact match, filter by host instance ID<br>MachineName - fuzzy matching, search by host name<br>MachineIp - fuzzy matching, search by host IP<br>OsType - exact match, filter by OS type: linux/windows<br>SupportAutoFix - exact match, filter by whether automatic fixing is supported: 0-unsupported 1-supported<br>Tag - exact match, filter by asset tag<br>AppId - exact match, filter by associated account</p>
+    * <p>Filter criteria<br>Supported Filter.Name:<br>Keyword - Fuzzy matching. Search by asset ID or asset name.<br>ComponentName - Fuzzy matching. Search by associated component name.<br>InstanceId - Exact match. Filter by host instance ID.<br>MachineName - Fuzzy matching. Search by host name.<br>MachineIp - Fuzzy matching. Search by host IP.<br>OsType - Exact match. Filter by OS type: linux/windows<br>SupportAutoFix - Exact match. Filter by whether auto-repair is supported: 0-unsupported 1-supported<br>Tag - Exact match. Filter by asset tag.<br>AppId - Exact match. Filter by associated account.</p>
     */
     @SerializedName("Filters")
     @Expose
@@ -59,64 +59,64 @@ public class DescribeVulFixableMachineListRequest extends AbstractModel {
     private String [] MemberId;
 
     /**
-     * Get <p>Vulnerability ID list, a maximum of 100</p> 
-     * @return VulIds <p>Vulnerability ID list, a maximum of 100</p>
+     * Get <p>List of vulnerability IDs. Supports up to 100.</p> 
+     * @return VulIds <p>List of vulnerability IDs. Supports up to 100.</p>
      */
     public Long [] getVulIds() {
         return this.VulIds;
     }
 
     /**
-     * Set <p>Vulnerability ID list, a maximum of 100</p>
-     * @param VulIds <p>Vulnerability ID list, a maximum of 100</p>
+     * Set <p>List of vulnerability IDs. Supports up to 100.</p>
+     * @param VulIds <p>List of vulnerability IDs. Supports up to 100.</p>
      */
     public void setVulIds(Long [] VulIds) {
         this.VulIds = VulIds;
     }
 
     /**
-     * Get <p>Paging offset<br>Value ranges from 0 to +∞<br>Default value: 0</p> 
-     * @return Offset <p>Paging offset<br>Value ranges from 0 to +∞<br>Default value: 0</p>
+     * Get <p>Paging offset<br>Value range: [0, +∞)<br>Default value: 0</p> 
+     * @return Offset <p>Paging offset<br>Value range: [0, +∞)<br>Default value: 0</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set <p>Paging offset<br>Value ranges from 0 to +∞<br>Default value: 0</p>
-     * @param Offset <p>Paging offset<br>Value ranges from 0 to +∞<br>Default value: 0</p>
+     * Set <p>Paging offset<br>Value range: [0, +∞)<br>Default value: 0</p>
+     * @param Offset <p>Paging offset<br>Value range: [0, +∞)<br>Default value: 0</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get <p>Number of results per page<br>Value ranges from 1 to 100<br>Default value: 10</p> 
-     * @return Limit <p>Number of results per page<br>Value ranges from 1 to 100<br>Default value: 10</p>
+     * Get <p>Number of results per page<br>Value range: [1, 100]<br>Default value: 10</p> 
+     * @return Limit <p>Number of results per page<br>Value range: [1, 100]<br>Default value: 10</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set <p>Number of results per page<br>Value ranges from 1 to 100<br>Default value: 10</p>
-     * @param Limit <p>Number of results per page<br>Value ranges from 1 to 100<br>Default value: 10</p>
+     * Set <p>Number of results per page<br>Value range: [1, 100]<br>Default value: 10</p>
+     * @param Limit <p>Number of results per page<br>Value range: [1, 100]<br>Default value: 10</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get <p>Filtering Conditions<br>Supported Filter.Name:<br>Keyword - fuzzy matching, search by asset ID, asset name<br>ComponentName - fuzzy matching, search by associated component name<br>InstanceId - exact match, filter by host instance ID<br>MachineName - fuzzy matching, search by host name<br>MachineIp - fuzzy matching, search by host IP<br>OsType - exact match, filter by OS type: linux/windows<br>SupportAutoFix - exact match, filter by whether automatic fixing is supported: 0-unsupported 1-supported<br>Tag - exact match, filter by asset tag<br>AppId - exact match, filter by associated account</p> 
-     * @return Filters <p>Filtering Conditions<br>Supported Filter.Name:<br>Keyword - fuzzy matching, search by asset ID, asset name<br>ComponentName - fuzzy matching, search by associated component name<br>InstanceId - exact match, filter by host instance ID<br>MachineName - fuzzy matching, search by host name<br>MachineIp - fuzzy matching, search by host IP<br>OsType - exact match, filter by OS type: linux/windows<br>SupportAutoFix - exact match, filter by whether automatic fixing is supported: 0-unsupported 1-supported<br>Tag - exact match, filter by asset tag<br>AppId - exact match, filter by associated account</p>
+     * Get <p>Filter criteria<br>Supported Filter.Name:<br>Keyword - Fuzzy matching. Search by asset ID or asset name.<br>ComponentName - Fuzzy matching. Search by associated component name.<br>InstanceId - Exact match. Filter by host instance ID.<br>MachineName - Fuzzy matching. Search by host name.<br>MachineIp - Fuzzy matching. Search by host IP.<br>OsType - Exact match. Filter by OS type: linux/windows<br>SupportAutoFix - Exact match. Filter by whether auto-repair is supported: 0-unsupported 1-supported<br>Tag - Exact match. Filter by asset tag.<br>AppId - Exact match. Filter by associated account.</p> 
+     * @return Filters <p>Filter criteria<br>Supported Filter.Name:<br>Keyword - Fuzzy matching. Search by asset ID or asset name.<br>ComponentName - Fuzzy matching. Search by associated component name.<br>InstanceId - Exact match. Filter by host instance ID.<br>MachineName - Fuzzy matching. Search by host name.<br>MachineIp - Fuzzy matching. Search by host IP.<br>OsType - Exact match. Filter by OS type: linux/windows<br>SupportAutoFix - Exact match. Filter by whether auto-repair is supported: 0-unsupported 1-supported<br>Tag - Exact match. Filter by asset tag.<br>AppId - Exact match. Filter by associated account.</p>
      */
     public Filters [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set <p>Filtering Conditions<br>Supported Filter.Name:<br>Keyword - fuzzy matching, search by asset ID, asset name<br>ComponentName - fuzzy matching, search by associated component name<br>InstanceId - exact match, filter by host instance ID<br>MachineName - fuzzy matching, search by host name<br>MachineIp - fuzzy matching, search by host IP<br>OsType - exact match, filter by OS type: linux/windows<br>SupportAutoFix - exact match, filter by whether automatic fixing is supported: 0-unsupported 1-supported<br>Tag - exact match, filter by asset tag<br>AppId - exact match, filter by associated account</p>
-     * @param Filters <p>Filtering Conditions<br>Supported Filter.Name:<br>Keyword - fuzzy matching, search by asset ID, asset name<br>ComponentName - fuzzy matching, search by associated component name<br>InstanceId - exact match, filter by host instance ID<br>MachineName - fuzzy matching, search by host name<br>MachineIp - fuzzy matching, search by host IP<br>OsType - exact match, filter by OS type: linux/windows<br>SupportAutoFix - exact match, filter by whether automatic fixing is supported: 0-unsupported 1-supported<br>Tag - exact match, filter by asset tag<br>AppId - exact match, filter by associated account</p>
+     * Set <p>Filter criteria<br>Supported Filter.Name:<br>Keyword - Fuzzy matching. Search by asset ID or asset name.<br>ComponentName - Fuzzy matching. Search by associated component name.<br>InstanceId - Exact match. Filter by host instance ID.<br>MachineName - Fuzzy matching. Search by host name.<br>MachineIp - Fuzzy matching. Search by host IP.<br>OsType - Exact match. Filter by OS type: linux/windows<br>SupportAutoFix - Exact match. Filter by whether auto-repair is supported: 0-unsupported 1-supported<br>Tag - Exact match. Filter by asset tag.<br>AppId - Exact match. Filter by associated account.</p>
+     * @param Filters <p>Filter criteria<br>Supported Filter.Name:<br>Keyword - Fuzzy matching. Search by asset ID or asset name.<br>ComponentName - Fuzzy matching. Search by associated component name.<br>InstanceId - Exact match. Filter by host instance ID.<br>MachineName - Fuzzy matching. Search by host name.<br>MachineIp - Fuzzy matching. Search by host IP.<br>OsType - Exact match. Filter by OS type: linux/windows<br>SupportAutoFix - Exact match. Filter by whether auto-repair is supported: 0-unsupported 1-supported<br>Tag - Exact match. Filter by asset tag.<br>AppId - Exact match. Filter by associated account.</p>
      */
     public void setFilters(Filters [] Filters) {
         this.Filters = Filters;

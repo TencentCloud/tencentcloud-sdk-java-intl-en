@@ -38,14 +38,14 @@ public class VulFixTaskDetailItem extends AbstractModel {
     private Long TaskId;
 
     /**
-    * <p>Vulnerability ID to be repaired</p>
+    * <p>ID of the repaired vulnerability</p>
     */
     @SerializedName("VulId")
     @Expose
     private Long VulId;
 
     /**
-    * <p>Patch ID of the fixed KB</p>
+    * <p>KB patch ID repaired</p>
     */
     @SerializedName("KBId")
     @Expose
@@ -80,21 +80,21 @@ public class VulFixTaskDetailItem extends AbstractModel {
     private String VulName;
 
     /**
-    * <p>Execution status<br>Enumeration value:<br>0: Initial state<br>1: Task issued<br>11: Client confirmed<br>2: Repair completed<br>3: Client offline<br>4: Timeout<br>5: Failure<br>6: Unsupported<br>9: Waiting for snapshot creation<br>10: Snapshot creation failed</p>
+    * <p>Execution status<br>Enumeration values:<br>0: Initial status<br>1: Task issued<br>11: Confirmed by client<br>2: Repair completed<br>3: Client offline<br>4: Timeout<br>5: Failed<br>6: Not supported<br>9: Waiting for snapshot creation<br>10: Snapshot creation failed</p>
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * <p>Fix result</p><p>Enumeration values:</p><ul><li>0: initial state</li><li>1: repair successful</li><li>2: fix failure</li><li>3: fix</li></ul>
+    * <p>Fix result</p><p>Enumeration values:</p><ul><li>0: initial status</li><li>1: successful fix</li><li>2: fix failure</li><li>3: in remediation</li></ul>
     */
     @SerializedName("FixStatus")
     @Expose
     private Long FixStatus;
 
     /**
-    * <p>Snapshot status<br>Enumeration value:<br>-1: No need to create a snapshot<br>0: Not started<br>1: In progress<br>2: Completed<br>3: Creation failed</p>
+    * <p>Snapshot status<br>Enumeration values:<br>-1: No need to create a snapshot<br>0: Not started<br>1: In progress<br>2: Completed<br>3: Creation failed</p>
     */
     @SerializedName("SnapshotStatus")
     @Expose
@@ -108,7 +108,7 @@ public class VulFixTaskDetailItem extends AbstractModel {
     private String ExceptionMessage;
 
     /**
-    * <p>Repair startup time<br>Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)</p>
+    * <p>Recovery startup time<br>Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)</p>
     */
     @SerializedName("StartTime")
     @Expose
@@ -136,7 +136,7 @@ public class VulFixTaskDetailItem extends AbstractModel {
     private String SnapshotExpireTime;
 
     /**
-    * <p>Snapshot creation failure reason (available when SnapshotStatus=3)</p>
+    * <p>Snapshot creation failure reason (valid when SnapshotStatus=3)</p>
     */
     @SerializedName("SnapshotFailReason")
     @Expose
@@ -175,32 +175,32 @@ public class VulFixTaskDetailItem extends AbstractModel {
     }
 
     /**
-     * Get <p>Vulnerability ID to be repaired</p> 
-     * @return VulId <p>Vulnerability ID to be repaired</p>
+     * Get <p>ID of the repaired vulnerability</p> 
+     * @return VulId <p>ID of the repaired vulnerability</p>
      */
     public Long getVulId() {
         return this.VulId;
     }
 
     /**
-     * Set <p>Vulnerability ID to be repaired</p>
-     * @param VulId <p>Vulnerability ID to be repaired</p>
+     * Set <p>ID of the repaired vulnerability</p>
+     * @param VulId <p>ID of the repaired vulnerability</p>
      */
     public void setVulId(Long VulId) {
         this.VulId = VulId;
     }
 
     /**
-     * Get <p>Patch ID of the fixed KB</p> 
-     * @return KBId <p>Patch ID of the fixed KB</p>
+     * Get <p>KB patch ID repaired</p> 
+     * @return KBId <p>KB patch ID repaired</p>
      */
     public Long getKBId() {
         return this.KBId;
     }
 
     /**
-     * Set <p>Patch ID of the fixed KB</p>
-     * @param KBId <p>Patch ID of the fixed KB</p>
+     * Set <p>KB patch ID repaired</p>
+     * @param KBId <p>KB patch ID repaired</p>
      */
     public void setKBId(Long KBId) {
         this.KBId = KBId;
@@ -271,48 +271,48 @@ public class VulFixTaskDetailItem extends AbstractModel {
     }
 
     /**
-     * Get <p>Execution status<br>Enumeration value:<br>0: Initial state<br>1: Task issued<br>11: Client confirmed<br>2: Repair completed<br>3: Client offline<br>4: Timeout<br>5: Failure<br>6: Unsupported<br>9: Waiting for snapshot creation<br>10: Snapshot creation failed</p> 
-     * @return Status <p>Execution status<br>Enumeration value:<br>0: Initial state<br>1: Task issued<br>11: Client confirmed<br>2: Repair completed<br>3: Client offline<br>4: Timeout<br>5: Failure<br>6: Unsupported<br>9: Waiting for snapshot creation<br>10: Snapshot creation failed</p>
+     * Get <p>Execution status<br>Enumeration values:<br>0: Initial status<br>1: Task issued<br>11: Confirmed by client<br>2: Repair completed<br>3: Client offline<br>4: Timeout<br>5: Failed<br>6: Not supported<br>9: Waiting for snapshot creation<br>10: Snapshot creation failed</p> 
+     * @return Status <p>Execution status<br>Enumeration values:<br>0: Initial status<br>1: Task issued<br>11: Confirmed by client<br>2: Repair completed<br>3: Client offline<br>4: Timeout<br>5: Failed<br>6: Not supported<br>9: Waiting for snapshot creation<br>10: Snapshot creation failed</p>
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set <p>Execution status<br>Enumeration value:<br>0: Initial state<br>1: Task issued<br>11: Client confirmed<br>2: Repair completed<br>3: Client offline<br>4: Timeout<br>5: Failure<br>6: Unsupported<br>9: Waiting for snapshot creation<br>10: Snapshot creation failed</p>
-     * @param Status <p>Execution status<br>Enumeration value:<br>0: Initial state<br>1: Task issued<br>11: Client confirmed<br>2: Repair completed<br>3: Client offline<br>4: Timeout<br>5: Failure<br>6: Unsupported<br>9: Waiting for snapshot creation<br>10: Snapshot creation failed</p>
+     * Set <p>Execution status<br>Enumeration values:<br>0: Initial status<br>1: Task issued<br>11: Confirmed by client<br>2: Repair completed<br>3: Client offline<br>4: Timeout<br>5: Failed<br>6: Not supported<br>9: Waiting for snapshot creation<br>10: Snapshot creation failed</p>
+     * @param Status <p>Execution status<br>Enumeration values:<br>0: Initial status<br>1: Task issued<br>11: Confirmed by client<br>2: Repair completed<br>3: Client offline<br>4: Timeout<br>5: Failed<br>6: Not supported<br>9: Waiting for snapshot creation<br>10: Snapshot creation failed</p>
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get <p>Fix result</p><p>Enumeration values:</p><ul><li>0: initial state</li><li>1: repair successful</li><li>2: fix failure</li><li>3: fix</li></ul> 
-     * @return FixStatus <p>Fix result</p><p>Enumeration values:</p><ul><li>0: initial state</li><li>1: repair successful</li><li>2: fix failure</li><li>3: fix</li></ul>
+     * Get <p>Fix result</p><p>Enumeration values:</p><ul><li>0: initial status</li><li>1: successful fix</li><li>2: fix failure</li><li>3: in remediation</li></ul> 
+     * @return FixStatus <p>Fix result</p><p>Enumeration values:</p><ul><li>0: initial status</li><li>1: successful fix</li><li>2: fix failure</li><li>3: in remediation</li></ul>
      */
     public Long getFixStatus() {
         return this.FixStatus;
     }
 
     /**
-     * Set <p>Fix result</p><p>Enumeration values:</p><ul><li>0: initial state</li><li>1: repair successful</li><li>2: fix failure</li><li>3: fix</li></ul>
-     * @param FixStatus <p>Fix result</p><p>Enumeration values:</p><ul><li>0: initial state</li><li>1: repair successful</li><li>2: fix failure</li><li>3: fix</li></ul>
+     * Set <p>Fix result</p><p>Enumeration values:</p><ul><li>0: initial status</li><li>1: successful fix</li><li>2: fix failure</li><li>3: in remediation</li></ul>
+     * @param FixStatus <p>Fix result</p><p>Enumeration values:</p><ul><li>0: initial status</li><li>1: successful fix</li><li>2: fix failure</li><li>3: in remediation</li></ul>
      */
     public void setFixStatus(Long FixStatus) {
         this.FixStatus = FixStatus;
     }
 
     /**
-     * Get <p>Snapshot status<br>Enumeration value:<br>-1: No need to create a snapshot<br>0: Not started<br>1: In progress<br>2: Completed<br>3: Creation failed</p> 
-     * @return SnapshotStatus <p>Snapshot status<br>Enumeration value:<br>-1: No need to create a snapshot<br>0: Not started<br>1: In progress<br>2: Completed<br>3: Creation failed</p>
+     * Get <p>Snapshot status<br>Enumeration values:<br>-1: No need to create a snapshot<br>0: Not started<br>1: In progress<br>2: Completed<br>3: Creation failed</p> 
+     * @return SnapshotStatus <p>Snapshot status<br>Enumeration values:<br>-1: No need to create a snapshot<br>0: Not started<br>1: In progress<br>2: Completed<br>3: Creation failed</p>
      */
     public Long getSnapshotStatus() {
         return this.SnapshotStatus;
     }
 
     /**
-     * Set <p>Snapshot status<br>Enumeration value:<br>-1: No need to create a snapshot<br>0: Not started<br>1: In progress<br>2: Completed<br>3: Creation failed</p>
-     * @param SnapshotStatus <p>Snapshot status<br>Enumeration value:<br>-1: No need to create a snapshot<br>0: Not started<br>1: In progress<br>2: Completed<br>3: Creation failed</p>
+     * Set <p>Snapshot status<br>Enumeration values:<br>-1: No need to create a snapshot<br>0: Not started<br>1: In progress<br>2: Completed<br>3: Creation failed</p>
+     * @param SnapshotStatus <p>Snapshot status<br>Enumeration values:<br>-1: No need to create a snapshot<br>0: Not started<br>1: In progress<br>2: Completed<br>3: Creation failed</p>
      */
     public void setSnapshotStatus(Long SnapshotStatus) {
         this.SnapshotStatus = SnapshotStatus;
@@ -335,16 +335,16 @@ public class VulFixTaskDetailItem extends AbstractModel {
     }
 
     /**
-     * Get <p>Repair startup time<br>Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)</p> 
-     * @return StartTime <p>Repair startup time<br>Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)</p>
+     * Get <p>Recovery startup time<br>Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)</p> 
+     * @return StartTime <p>Recovery startup time<br>Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)</p>
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set <p>Repair startup time<br>Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)</p>
-     * @param StartTime <p>Repair startup time<br>Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)</p>
+     * Set <p>Recovery startup time<br>Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)</p>
+     * @param StartTime <p>Recovery startup time<br>Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)</p>
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
@@ -399,16 +399,16 @@ public class VulFixTaskDetailItem extends AbstractModel {
     }
 
     /**
-     * Get <p>Snapshot creation failure reason (available when SnapshotStatus=3)</p> 
-     * @return SnapshotFailReason <p>Snapshot creation failure reason (available when SnapshotStatus=3)</p>
+     * Get <p>Snapshot creation failure reason (valid when SnapshotStatus=3)</p> 
+     * @return SnapshotFailReason <p>Snapshot creation failure reason (valid when SnapshotStatus=3)</p>
      */
     public String getSnapshotFailReason() {
         return this.SnapshotFailReason;
     }
 
     /**
-     * Set <p>Snapshot creation failure reason (available when SnapshotStatus=3)</p>
-     * @param SnapshotFailReason <p>Snapshot creation failure reason (available when SnapshotStatus=3)</p>
+     * Set <p>Snapshot creation failure reason (valid when SnapshotStatus=3)</p>
+     * @param SnapshotFailReason <p>Snapshot creation failure reason (valid when SnapshotStatus=3)</p>
      */
     public void setSnapshotFailReason(String SnapshotFailReason) {
         this.SnapshotFailReason = SnapshotFailReason;

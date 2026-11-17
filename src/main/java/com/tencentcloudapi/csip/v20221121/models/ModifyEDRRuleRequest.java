@@ -248,6 +248,20 @@ public class ModifyEDRRuleRequest extends AbstractModel {
     private ConditionMatch [] ConditionMatches;
 
     /**
+    * <p>File operation rules, populated when ContentType=file_operation (file path regex AND any selected action)</p>
+    */
+    @SerializedName("FileOperationRules")
+    @Expose
+    private RuleContentFileOperation FileOperationRules;
+
+    /**
+    * <p>K8s API rule passed when ContentType=k8s_api. Values of all non-empty fields must be Base64-encoded, and k8s_api rules apply only per cluster.</p>
+    */
+    @SerializedName("K8sApiRule")
+    @Expose
+    private RuleContentK8sAPI K8sApiRule;
+
+    /**
      * Get <p>Policy type / Rule Type: 0-System policy/System Rule, 1-Custom policy/Custom Rule</p> 
      * @return RuleType <p>Policy type / Rule Type: 0-System policy/System Rule, 1-Custom policy/Custom Rule</p>
      */
@@ -759,6 +773,38 @@ public class ModifyEDRRuleRequest extends AbstractModel {
         this.ConditionMatches = ConditionMatches;
     }
 
+    /**
+     * Get <p>File operation rules, populated when ContentType=file_operation (file path regex AND any selected action)</p> 
+     * @return FileOperationRules <p>File operation rules, populated when ContentType=file_operation (file path regex AND any selected action)</p>
+     */
+    public RuleContentFileOperation getFileOperationRules() {
+        return this.FileOperationRules;
+    }
+
+    /**
+     * Set <p>File operation rules, populated when ContentType=file_operation (file path regex AND any selected action)</p>
+     * @param FileOperationRules <p>File operation rules, populated when ContentType=file_operation (file path regex AND any selected action)</p>
+     */
+    public void setFileOperationRules(RuleContentFileOperation FileOperationRules) {
+        this.FileOperationRules = FileOperationRules;
+    }
+
+    /**
+     * Get <p>K8s API rule passed when ContentType=k8s_api. Values of all non-empty fields must be Base64-encoded, and k8s_api rules apply only per cluster.</p> 
+     * @return K8sApiRule <p>K8s API rule passed when ContentType=k8s_api. Values of all non-empty fields must be Base64-encoded, and k8s_api rules apply only per cluster.</p>
+     */
+    public RuleContentK8sAPI getK8sApiRule() {
+        return this.K8sApiRule;
+    }
+
+    /**
+     * Set <p>K8s API rule passed when ContentType=k8s_api. Values of all non-empty fields must be Base64-encoded, and k8s_api rules apply only per cluster.</p>
+     * @param K8sApiRule <p>K8s API rule passed when ContentType=k8s_api. Values of all non-empty fields must be Base64-encoded, and k8s_api rules apply only per cluster.</p>
+     */
+    public void setK8sApiRule(RuleContentK8sAPI K8sApiRule) {
+        this.K8sApiRule = K8sApiRule;
+    }
+
     public ModifyEDRRuleRequest() {
     }
 
@@ -911,6 +957,12 @@ public class ModifyEDRRuleRequest extends AbstractModel {
                 this.ConditionMatches[i] = new ConditionMatch(source.ConditionMatches[i]);
             }
         }
+        if (source.FileOperationRules != null) {
+            this.FileOperationRules = new RuleContentFileOperation(source.FileOperationRules);
+        }
+        if (source.K8sApiRule != null) {
+            this.K8sApiRule = new RuleContentK8sAPI(source.K8sApiRule);
+        }
     }
 
 
@@ -950,6 +1002,8 @@ public class ModifyEDRRuleRequest extends AbstractModel {
         this.setParamArrayObj(map, prefix + "ExcludeClusterIDsWithAppId.", this.ExcludeClusterIDsWithAppId);
         this.setParamArrayObj(map, prefix + "ImageIDsWithAppId.", this.ImageIDsWithAppId);
         this.setParamArrayObj(map, prefix + "ConditionMatches.", this.ConditionMatches);
+        this.setParamObj(map, prefix + "FileOperationRules.", this.FileOperationRules);
+        this.setParamObj(map, prefix + "K8sApiRule.", this.K8sApiRule);
 
     }
 }

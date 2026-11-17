@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeVulRiskRelateHostResponse extends AbstractModel {
 
     /**
-    * <p>List of affected hosts for the vulnerability</p>
+    * <p>List of affected hosts</p>
     */
     @SerializedName("List")
     @Expose
     private VulHostBriefInfo [] List;
 
     /**
-    * <p>Total number of qualified instances</p>
+    * <p>Total number of eligible items</p>
     */
     @SerializedName("TotalCount")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeVulRiskRelateHostResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get <p>List of affected hosts for the vulnerability</p> 
-     * @return List <p>List of affected hosts for the vulnerability</p>
+     * Get <p>List of affected hosts</p> 
+     * @return List <p>List of affected hosts</p>
      */
     public VulHostBriefInfo [] getList() {
         return this.List;
     }
 
     /**
-     * Set <p>List of affected hosts for the vulnerability</p>
-     * @param List <p>List of affected hosts for the vulnerability</p>
+     * Set <p>List of affected hosts</p>
+     * @param List <p>List of affected hosts</p>
      */
     public void setList(VulHostBriefInfo [] List) {
         this.List = List;
     }
 
     /**
-     * Get <p>Total number of qualified instances</p> 
-     * @return TotalCount <p>Total number of qualified instances</p>
+     * Get <p>Total number of eligible items</p> 
+     * @return TotalCount <p>Total number of eligible items</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set <p>Total number of qualified instances</p>
-     * @param TotalCount <p>Total number of qualified instances</p>
+     * Set <p>Total number of eligible items</p>
+     * @param TotalCount <p>Total number of eligible items</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

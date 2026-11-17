@@ -24,28 +24,28 @@ import java.util.HashMap;
 public class Encryption extends AbstractModel {
 
     /**
-    * <p>When using the encryption service, fill in the field to be encrypted. This API can auto-fill one or more encrypted fields.</p>
+    * <p>When using the encryption service, enter the fields to be encrypted. In this API, you can enter one or more encrypted fields.</p>
     */
     @SerializedName("EncryptList")
     @Expose
     private String [] EncryptList;
 
     /**
-    * <p>Encrypted symmetric key. For key generation and use, see the <a href="https://www.tencentcloud.com/document/product/1007/47180?from_cn_redirect=1">data encryption</a> document.</p>
+    * <p>Encrypted symmetric key. For key generation and usage, see the <a href="https://www.tencentcloud.com/document/product/1007/47180?from_cn_redirect=1">Data Encryption</a> documentation.</p>
     */
     @SerializedName("CiphertextBlob")
     @Expose
     private String CiphertextBlob;
 
     /**
-    * <p>Users with encryption requirements import the initial vector for CBC encryption (custom string, length 16 characters).</p>
+    * <p>For users with encryption requirements, pass in the CBC encryption initialization vector (a customer-defined string with a length of 16 characters).</p>
     */
     @SerializedName("Iv")
     @Expose
     private String Iv;
 
     /**
-    * <p>Encryption algorithm (supports 'AES-256-CBC', 'SM4-GCM'), defaults to 'AES-256-CBC' if not passed.</p>
+    * <p>Algorithm used for encryption (supports &#39;AES-256-CBC&#39; and &#39;SM4-GCM&#39;). If not passed, the default is &#39;AES-256-CBC&#39;.</p>
     */
     @SerializedName("Algorithm")
     @Expose
@@ -59,64 +59,64 @@ public class Encryption extends AbstractModel {
     private String [] TagList;
 
     /**
-     * Get <p>When using the encryption service, fill in the field to be encrypted. This API can auto-fill one or more encrypted fields.</p> 
-     * @return EncryptList <p>When using the encryption service, fill in the field to be encrypted. This API can auto-fill one or more encrypted fields.</p>
+     * Get <p>When using the encryption service, enter the fields to be encrypted. In this API, you can enter one or more encrypted fields.</p> 
+     * @return EncryptList <p>When using the encryption service, enter the fields to be encrypted. In this API, you can enter one or more encrypted fields.</p>
      */
     public String [] getEncryptList() {
         return this.EncryptList;
     }
 
     /**
-     * Set <p>When using the encryption service, fill in the field to be encrypted. This API can auto-fill one or more encrypted fields.</p>
-     * @param EncryptList <p>When using the encryption service, fill in the field to be encrypted. This API can auto-fill one or more encrypted fields.</p>
+     * Set <p>When using the encryption service, enter the fields to be encrypted. In this API, you can enter one or more encrypted fields.</p>
+     * @param EncryptList <p>When using the encryption service, enter the fields to be encrypted. In this API, you can enter one or more encrypted fields.</p>
      */
     public void setEncryptList(String [] EncryptList) {
         this.EncryptList = EncryptList;
     }
 
     /**
-     * Get <p>Encrypted symmetric key. For key generation and use, see the <a href="https://www.tencentcloud.com/document/product/1007/47180?from_cn_redirect=1">data encryption</a> document.</p> 
-     * @return CiphertextBlob <p>Encrypted symmetric key. For key generation and use, see the <a href="https://www.tencentcloud.com/document/product/1007/47180?from_cn_redirect=1">data encryption</a> document.</p>
+     * Get <p>Encrypted symmetric key. For key generation and usage, see the <a href="https://www.tencentcloud.com/document/product/1007/47180?from_cn_redirect=1">Data Encryption</a> documentation.</p> 
+     * @return CiphertextBlob <p>Encrypted symmetric key. For key generation and usage, see the <a href="https://www.tencentcloud.com/document/product/1007/47180?from_cn_redirect=1">Data Encryption</a> documentation.</p>
      */
     public String getCiphertextBlob() {
         return this.CiphertextBlob;
     }
 
     /**
-     * Set <p>Encrypted symmetric key. For key generation and use, see the <a href="https://www.tencentcloud.com/document/product/1007/47180?from_cn_redirect=1">data encryption</a> document.</p>
-     * @param CiphertextBlob <p>Encrypted symmetric key. For key generation and use, see the <a href="https://www.tencentcloud.com/document/product/1007/47180?from_cn_redirect=1">data encryption</a> document.</p>
+     * Set <p>Encrypted symmetric key. For key generation and usage, see the <a href="https://www.tencentcloud.com/document/product/1007/47180?from_cn_redirect=1">Data Encryption</a> documentation.</p>
+     * @param CiphertextBlob <p>Encrypted symmetric key. For key generation and usage, see the <a href="https://www.tencentcloud.com/document/product/1007/47180?from_cn_redirect=1">Data Encryption</a> documentation.</p>
      */
     public void setCiphertextBlob(String CiphertextBlob) {
         this.CiphertextBlob = CiphertextBlob;
     }
 
     /**
-     * Get <p>Users with encryption requirements import the initial vector for CBC encryption (custom string, length 16 characters).</p> 
-     * @return Iv <p>Users with encryption requirements import the initial vector for CBC encryption (custom string, length 16 characters).</p>
+     * Get <p>For users with encryption requirements, pass in the CBC encryption initialization vector (a customer-defined string with a length of 16 characters).</p> 
+     * @return Iv <p>For users with encryption requirements, pass in the CBC encryption initialization vector (a customer-defined string with a length of 16 characters).</p>
      */
     public String getIv() {
         return this.Iv;
     }
 
     /**
-     * Set <p>Users with encryption requirements import the initial vector for CBC encryption (custom string, length 16 characters).</p>
-     * @param Iv <p>Users with encryption requirements import the initial vector for CBC encryption (custom string, length 16 characters).</p>
+     * Set <p>For users with encryption requirements, pass in the CBC encryption initialization vector (a customer-defined string with a length of 16 characters).</p>
+     * @param Iv <p>For users with encryption requirements, pass in the CBC encryption initialization vector (a customer-defined string with a length of 16 characters).</p>
      */
     public void setIv(String Iv) {
         this.Iv = Iv;
     }
 
     /**
-     * Get <p>Encryption algorithm (supports 'AES-256-CBC', 'SM4-GCM'), defaults to 'AES-256-CBC' if not passed.</p> 
-     * @return Algorithm <p>Encryption algorithm (supports 'AES-256-CBC', 'SM4-GCM'), defaults to 'AES-256-CBC' if not passed.</p>
+     * Get <p>Algorithm used for encryption (supports &#39;AES-256-CBC&#39; and &#39;SM4-GCM&#39;). If not passed, the default is &#39;AES-256-CBC&#39;.</p> 
+     * @return Algorithm <p>Algorithm used for encryption (supports &#39;AES-256-CBC&#39; and &#39;SM4-GCM&#39;). If not passed, the default is &#39;AES-256-CBC&#39;.</p>
      */
     public String getAlgorithm() {
         return this.Algorithm;
     }
 
     /**
-     * Set <p>Encryption algorithm (supports 'AES-256-CBC', 'SM4-GCM'), defaults to 'AES-256-CBC' if not passed.</p>
-     * @param Algorithm <p>Encryption algorithm (supports 'AES-256-CBC', 'SM4-GCM'), defaults to 'AES-256-CBC' if not passed.</p>
+     * Set <p>Algorithm used for encryption (supports &#39;AES-256-CBC&#39; and &#39;SM4-GCM&#39;). If not passed, the default is &#39;AES-256-CBC&#39;.</p>
+     * @param Algorithm <p>Algorithm used for encryption (supports &#39;AES-256-CBC&#39; and &#39;SM4-GCM&#39;). If not passed, the default is &#39;AES-256-CBC&#39;.</p>
      */
     public void setAlgorithm(String Algorithm) {
         this.Algorithm = Algorithm;

@@ -24,56 +24,46 @@ import java.util.HashMap;
 public class DdlOption extends AbstractModel {
 
     /**
-    * DDL type, such as database, table, view, and index.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * DDL type. For example: database, table, view, and index.
     */
     @SerializedName("DdlObject")
     @Expose
     private String DdlObject;
 
     /**
-    * DDL value. Valid values: [Create,Drop,Alter] for database <br>[Create,Drop,Alter,Truncate,Rename] for table <br/>[Create,Drop] for view <br/>[Create,Drop] for index
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Specific values of DDL. For Database, it can be [Create, Drop, Alter];<br>for Table, it can be [Create, Drop, Alter, Truncate, Rename];<br>for View, it can be [Create, Drop];<br>for Index, it can be [Create, Drop].
     */
     @SerializedName("DdlValue")
     @Expose
     private String [] DdlValue;
 
     /**
-     * Get DDL type, such as database, table, view, and index.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return DdlObject DDL type, such as database, table, view, and index.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get DDL type. For example: database, table, view, and index. 
+     * @return DdlObject DDL type. For example: database, table, view, and index.
      */
     public String getDdlObject() {
         return this.DdlObject;
     }
 
     /**
-     * Set DDL type, such as database, table, view, and index.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param DdlObject DDL type, such as database, table, view, and index.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set DDL type. For example: database, table, view, and index.
+     * @param DdlObject DDL type. For example: database, table, view, and index.
      */
     public void setDdlObject(String DdlObject) {
         this.DdlObject = DdlObject;
     }
 
     /**
-     * Get DDL value. Valid values: [Create,Drop,Alter] for database <br>[Create,Drop,Alter,Truncate,Rename] for table <br/>[Create,Drop] for view <br/>[Create,Drop] for index
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return DdlValue DDL value. Valid values: [Create,Drop,Alter] for database <br>[Create,Drop,Alter,Truncate,Rename] for table <br/>[Create,Drop] for view <br/>[Create,Drop] for index
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Specific values of DDL. For Database, it can be [Create, Drop, Alter];<br>for Table, it can be [Create, Drop, Alter, Truncate, Rename];<br>for View, it can be [Create, Drop];<br>for Index, it can be [Create, Drop]. 
+     * @return DdlValue Specific values of DDL. For Database, it can be [Create, Drop, Alter];<br>for Table, it can be [Create, Drop, Alter, Truncate, Rename];<br>for View, it can be [Create, Drop];<br>for Index, it can be [Create, Drop].
      */
     public String [] getDdlValue() {
         return this.DdlValue;
     }
 
     /**
-     * Set DDL value. Valid values: [Create,Drop,Alter] for database <br>[Create,Drop,Alter,Truncate,Rename] for table <br/>[Create,Drop] for view <br/>[Create,Drop] for index
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param DdlValue DDL value. Valid values: [Create,Drop,Alter] for database <br>[Create,Drop,Alter,Truncate,Rename] for table <br/>[Create,Drop] for view <br/>[Create,Drop] for index
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Specific values of DDL. For Database, it can be [Create, Drop, Alter];<br>for Table, it can be [Create, Drop, Alter, Truncate, Rename];<br>for View, it can be [Create, Drop];<br>for Index, it can be [Create, Drop].
+     * @param DdlValue Specific values of DDL. For Database, it can be [Create, Drop, Alter];<br>for Table, it can be [Create, Drop, Alter, Truncate, Rename];<br>for View, it can be [Create, Drop];<br>for Index, it can be [Create, Drop].
      */
     public void setDdlValue(String [] DdlValue) {
         this.DdlValue = DdlValue;

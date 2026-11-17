@@ -32,6 +32,13 @@ Supplemental description: if not passed, host configuration will not be modified
     private HostAutoScaleConfig HostConfig;
 
     /**
+    * <p>Auto-scaling configuration for the container security module; if not passed, it remains unchanged</p>
+    */
+    @SerializedName("ContainerConfig")
+    @Expose
+    private ContainerAutoScaleConfig ContainerConfig;
+
+    /**
      * Get Auto-scaling configuration for the CWP module
 Supplemental description: if not passed, host configuration will not be modified. At least this module is required for the current period. Named module fields like ContainerConfig / AIAgentConfig can be added for subsequent scalability. 
      * @return HostConfig Auto-scaling configuration for the CWP module
@@ -51,6 +58,22 @@ Supplemental description: if not passed, host configuration will not be modified
         this.HostConfig = HostConfig;
     }
 
+    /**
+     * Get <p>Auto-scaling configuration for the container security module; if not passed, it remains unchanged</p> 
+     * @return ContainerConfig <p>Auto-scaling configuration for the container security module; if not passed, it remains unchanged</p>
+     */
+    public ContainerAutoScaleConfig getContainerConfig() {
+        return this.ContainerConfig;
+    }
+
+    /**
+     * Set <p>Auto-scaling configuration for the container security module; if not passed, it remains unchanged</p>
+     * @param ContainerConfig <p>Auto-scaling configuration for the container security module; if not passed, it remains unchanged</p>
+     */
+    public void setContainerConfig(ContainerAutoScaleConfig ContainerConfig) {
+        this.ContainerConfig = ContainerConfig;
+    }
+
     public ModifyPayConfigRequest() {
     }
 
@@ -62,6 +85,9 @@ Supplemental description: if not passed, host configuration will not be modified
         if (source.HostConfig != null) {
             this.HostConfig = new HostAutoScaleConfig(source.HostConfig);
         }
+        if (source.ContainerConfig != null) {
+            this.ContainerConfig = new ContainerAutoScaleConfig(source.ContainerConfig);
+        }
     }
 
 
@@ -70,6 +96,7 @@ Supplemental description: if not passed, host configuration will not be modified
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "HostConfig.", this.HostConfig);
+        this.setParamObj(map, prefix + "ContainerConfig.", this.ContainerConfig);
 
     }
 }

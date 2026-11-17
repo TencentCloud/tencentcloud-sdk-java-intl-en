@@ -1403,6 +1403,17 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
+     *This API is used to rotate a cluster token.
+     * @param req RotateClusterTokenRequest
+     * @return RotateClusterTokenResponse
+     * @throws TencentCloudSDKException
+     */
+    public RotateClusterTokenResponse RotateClusterToken(RotateClusterTokenRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "RotateClusterToken", RotateClusterTokenResponse.class);
+    }
+
+    /**
      *This API is used to enable removal protection for the nodes automatically created by the scaling group in a node pool.
      * @param req SetNodePoolNodeProtectionRequest
      * @return SetNodePoolNodeProtectionResponse

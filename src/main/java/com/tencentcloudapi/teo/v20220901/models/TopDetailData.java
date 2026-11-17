@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class TopDetailData extends AbstractModel {
 
     /**
-    * The field name.
+    * Field name.
     */
     @SerializedName("Key")
     @Expose
     private String Key;
 
     /**
-    * The field value.
+    * Field value.
     */
     @SerializedName("Value")
     @Expose
     private Long Value;
 
     /**
-     * Get The field name. 
-     * @return Key The field name.
+     * Get Field name. 
+     * @return Key Field name.
      */
     public String getKey() {
         return this.Key;
     }
 
     /**
-     * Set The field name.
-     * @param Key The field name.
+     * Set Field name.
+     * @param Key Field name.
      */
     public void setKey(String Key) {
         this.Key = Key;
     }
 
     /**
-     * Get The field value. 
-     * @return Value The field value.
+     * Get Field value. 
+     * @return Value Field value.
      */
     public Long getValue() {
         return this.Value;
     }
 
     /**
-     * Set The field value.
-     * @param Value The field value.
+     * Set Field value.
+     * @param Value Field value.
      */
     public void setValue(Long Value) {
         this.Value = Value;

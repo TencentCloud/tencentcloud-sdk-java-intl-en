@@ -24,51 +24,46 @@ import java.util.HashMap;
 public class View extends AbstractModel {
 
     /**
-    * View name
-Note: This field may return null, indicating that no valid values can be obtained.
+    * View name.
     */
     @SerializedName("ViewName")
     @Expose
     private String ViewName;
 
     /**
-    * Reserved field. Currently, a view cannot be renamed. Note: This field may return null, indicating that no valid values can be obtained.
+    * Reserved field. Currently, view renaming is not supported.
     */
     @SerializedName("NewViewName")
     @Expose
     private String NewViewName;
 
     /**
-     * Get View name
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ViewName View name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get View name. 
+     * @return ViewName View name.
      */
     public String getViewName() {
         return this.ViewName;
     }
 
     /**
-     * Set View name
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ViewName View name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set View name.
+     * @param ViewName View name.
      */
     public void setViewName(String ViewName) {
         this.ViewName = ViewName;
     }
 
     /**
-     * Get Reserved field. Currently, a view cannot be renamed. Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return NewViewName Reserved field. Currently, a view cannot be renamed. Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Reserved field. Currently, view renaming is not supported. 
+     * @return NewViewName Reserved field. Currently, view renaming is not supported.
      */
     public String getNewViewName() {
         return this.NewViewName;
     }
 
     /**
-     * Set Reserved field. Currently, a view cannot be renamed. Note: This field may return null, indicating that no valid values can be obtained.
-     * @param NewViewName Reserved field. Currently, a view cannot be renamed. Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Reserved field. Currently, view renaming is not supported.
+     * @param NewViewName Reserved field. Currently, view renaming is not supported.
      */
     public void setNewViewName(String NewViewName) {
         this.NewViewName = NewViewName;

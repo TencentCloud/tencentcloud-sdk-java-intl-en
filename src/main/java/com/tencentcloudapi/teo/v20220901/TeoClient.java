@@ -1756,6 +1756,17 @@ This API is used to query the configuration information of an IP group, includin
     }
 
     /**
+     *This API is used to query the time series data of edge function analysis. Note that the data queried by this API has a delay of about 10 minutes. It is recommended to pull data from at least 10 minutes before the current time.
+     * @param req DescribeTimingFunctionAnalysisDataRequest
+     * @return DescribeTimingFunctionAnalysisDataResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTimingFunctionAnalysisDataResponse DescribeTimingFunctionAnalysisData(DescribeTimingFunctionAnalysisDataRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeTimingFunctionAnalysisData", DescribeTimingFunctionAnalysisDataResponse.class);
+    }
+
+    /**
      *<p>This API is used to query time series monitoring data for L4 proxy instences.</p>
      * @param req DescribeTimingL4DataRequest
      * @return DescribeTimingL4DataResponse
@@ -1801,6 +1812,17 @@ You can choose to perform grouping queries by specifying the query dimension <co
     public DescribeTimingL7OriginPullDataResponse DescribeTimingL7OriginPullData(DescribeTimingL7OriginPullDataRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeTimingL7OriginPullData", DescribeTimingL7OriginPullDataResponse.class);
+    }
+
+    /**
+     *This API is used to query the topN data of Edge Functions by a specified dimension. Note that the data returned by this API has a delay of about 10 minutes. We recommend that you query the data generated at least 10 minutes before the current time.
+     * @param req DescribeTopFunctionAnalysisDataRequest
+     * @return DescribeTopFunctionAnalysisDataResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTopFunctionAnalysisDataResponse DescribeTopFunctionAnalysisData(DescribeTopFunctionAnalysisDataRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeTopFunctionAnalysisData", DescribeTopFunctionAnalysisDataResponse.class);
     }
 
     /**

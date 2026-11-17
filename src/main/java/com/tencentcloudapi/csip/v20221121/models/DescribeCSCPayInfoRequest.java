@@ -23,6 +23,52 @@ import java.util.HashMap;
 
 public class DescribeCSCPayInfoRequest extends AbstractModel {
 
+    /**
+    * 
+    */
+    @SerializedName("MemberId")
+    @Expose
+    private String [] MemberId;
+
+    /**
+    * 
+    */
+    @SerializedName("NeedQuotaUsed")
+    @Expose
+    private Boolean NeedQuotaUsed;
+
+    /**
+     * Get  
+     * @return MemberId 
+     */
+    public String [] getMemberId() {
+        return this.MemberId;
+    }
+
+    /**
+     * Set 
+     * @param MemberId 
+     */
+    public void setMemberId(String [] MemberId) {
+        this.MemberId = MemberId;
+    }
+
+    /**
+     * Get  
+     * @return NeedQuotaUsed 
+     */
+    public Boolean getNeedQuotaUsed() {
+        return this.NeedQuotaUsed;
+    }
+
+    /**
+     * Set 
+     * @param NeedQuotaUsed 
+     */
+    public void setNeedQuotaUsed(Boolean NeedQuotaUsed) {
+        this.NeedQuotaUsed = NeedQuotaUsed;
+    }
+
     public DescribeCSCPayInfoRequest() {
     }
 
@@ -31,6 +77,15 @@ public class DescribeCSCPayInfoRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeCSCPayInfoRequest(DescribeCSCPayInfoRequest source) {
+        if (source.MemberId != null) {
+            this.MemberId = new String[source.MemberId.length];
+            for (int i = 0; i < source.MemberId.length; i++) {
+                this.MemberId[i] = new String(source.MemberId[i]);
+            }
+        }
+        if (source.NeedQuotaUsed != null) {
+            this.NeedQuotaUsed = new Boolean(source.NeedQuotaUsed);
+        }
     }
 
 
@@ -38,6 +93,8 @@ public class DescribeCSCPayInfoRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArraySimple(map, prefix + "MemberId.", this.MemberId);
+        this.setParamSimple(map, prefix + "NeedQuotaUsed", this.NeedQuotaUsed);
 
     }
 }

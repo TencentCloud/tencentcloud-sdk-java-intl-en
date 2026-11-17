@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeVulFixableMachineListResponse extends AbstractModel {
 
     /**
-    * <p>Repair host list</p>
+    * <p>Repairable host list</p>
     */
     @SerializedName("Data")
     @Expose
@@ -45,14 +45,14 @@ public class DescribeVulFixableMachineListResponse extends AbstractModel {
     private Long FixableCount;
 
     /**
-    * <p>Number of hosts that cannot be one-click repaired</p>
+    * <p>Number of hosts that cannot be repaired with one click</p>
     */
     @SerializedName("NotFixableCount")
     @Expose
     private Long NotFixableCount;
 
     /**
-    * <p>Summary information of vulnerability dimension, showing overview of list of vulnerabilities to be fixed</p>
+    * <p>Vulnerability dimensional summary, showing an overview of the list of repaired vulnerabilities</p>
     */
     @SerializedName("VulSummary")
     @Expose
@@ -66,16 +66,16 @@ public class DescribeVulFixableMachineListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get <p>Repair host list</p> 
-     * @return Data <p>Repair host list</p>
+     * Get <p>Repairable host list</p> 
+     * @return Data <p>Repairable host list</p>
      */
     public VulFixableMachineItem [] getData() {
         return this.Data;
     }
 
     /**
-     * Set <p>Repair host list</p>
-     * @param Data <p>Repair host list</p>
+     * Set <p>Repairable host list</p>
+     * @param Data <p>Repairable host list</p>
      */
     public void setData(VulFixableMachineItem [] Data) {
         this.Data = Data;
@@ -114,32 +114,32 @@ public class DescribeVulFixableMachineListResponse extends AbstractModel {
     }
 
     /**
-     * Get <p>Number of hosts that cannot be one-click repaired</p> 
-     * @return NotFixableCount <p>Number of hosts that cannot be one-click repaired</p>
+     * Get <p>Number of hosts that cannot be repaired with one click</p> 
+     * @return NotFixableCount <p>Number of hosts that cannot be repaired with one click</p>
      */
     public Long getNotFixableCount() {
         return this.NotFixableCount;
     }
 
     /**
-     * Set <p>Number of hosts that cannot be one-click repaired</p>
-     * @param NotFixableCount <p>Number of hosts that cannot be one-click repaired</p>
+     * Set <p>Number of hosts that cannot be repaired with one click</p>
+     * @param NotFixableCount <p>Number of hosts that cannot be repaired with one click</p>
      */
     public void setNotFixableCount(Long NotFixableCount) {
         this.NotFixableCount = NotFixableCount;
     }
 
     /**
-     * Get <p>Summary information of vulnerability dimension, showing overview of list of vulnerabilities to be fixed</p> 
-     * @return VulSummary <p>Summary information of vulnerability dimension, showing overview of list of vulnerabilities to be fixed</p>
+     * Get <p>Vulnerability dimensional summary, showing an overview of the list of repaired vulnerabilities</p> 
+     * @return VulSummary <p>Vulnerability dimensional summary, showing an overview of the list of repaired vulnerabilities</p>
      */
     public VulFixSummaryItem [] getVulSummary() {
         return this.VulSummary;
     }
 
     /**
-     * Set <p>Summary information of vulnerability dimension, showing overview of list of vulnerabilities to be fixed</p>
-     * @param VulSummary <p>Summary information of vulnerability dimension, showing overview of list of vulnerabilities to be fixed</p>
+     * Set <p>Vulnerability dimensional summary, showing an overview of the list of repaired vulnerabilities</p>
+     * @param VulSummary <p>Vulnerability dimensional summary, showing an overview of the list of repaired vulnerabilities</p>
      */
     public void setVulSummary(VulFixSummaryItem [] VulSummary) {
         this.VulSummary = VulSummary;

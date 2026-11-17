@@ -24,84 +24,69 @@ import java.util.HashMap;
 public class ConflictHandleOption extends AbstractModel {
 
     /**
-    * Conditionally overwritten column
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Columns for conditional overwrite.
     */
     @SerializedName("ConditionColumn")
     @Expose
     private String ConditionColumn;
 
     /**
-    * Conditional overwrite operation
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Condition coverage operation. Currently, only > is supported.
     */
     @SerializedName("ConditionOperator")
     @Expose
     private String ConditionOperator;
 
     /**
-    * Conditional overwrite priority configuration
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Condition coverage priority processing. Supported types are >, <, and =.
     */
     @SerializedName("ConditionOrderInSrcAndDst")
     @Expose
     private String ConditionOrderInSrcAndDst;
 
     /**
-     * Get Conditionally overwritten column
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ConditionColumn Conditionally overwritten column
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Columns for conditional overwrite. 
+     * @return ConditionColumn Columns for conditional overwrite.
      */
     public String getConditionColumn() {
         return this.ConditionColumn;
     }
 
     /**
-     * Set Conditionally overwritten column
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ConditionColumn Conditionally overwritten column
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Columns for conditional overwrite.
+     * @param ConditionColumn Columns for conditional overwrite.
      */
     public void setConditionColumn(String ConditionColumn) {
         this.ConditionColumn = ConditionColumn;
     }
 
     /**
-     * Get Conditional overwrite operation
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ConditionOperator Conditional overwrite operation
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Condition coverage operation. Currently, only > is supported. 
+     * @return ConditionOperator Condition coverage operation. Currently, only > is supported.
      */
     public String getConditionOperator() {
         return this.ConditionOperator;
     }
 
     /**
-     * Set Conditional overwrite operation
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ConditionOperator Conditional overwrite operation
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Condition coverage operation. Currently, only > is supported.
+     * @param ConditionOperator Condition coverage operation. Currently, only > is supported.
      */
     public void setConditionOperator(String ConditionOperator) {
         this.ConditionOperator = ConditionOperator;
     }
 
     /**
-     * Get Conditional overwrite priority configuration
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ConditionOrderInSrcAndDst Conditional overwrite priority configuration
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Condition coverage priority processing. Supported types are >, <, and =. 
+     * @return ConditionOrderInSrcAndDst Condition coverage priority processing. Supported types are >, <, and =.
      */
     public String getConditionOrderInSrcAndDst() {
         return this.ConditionOrderInSrcAndDst;
     }
 
     /**
-     * Set Conditional overwrite priority configuration
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ConditionOrderInSrcAndDst Conditional overwrite priority configuration
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Condition coverage priority processing. Supported types are >, <, and =.
+     * @param ConditionOrderInSrcAndDst Condition coverage priority processing. Supported types are >, <, and =.
      */
     public void setConditionOrderInSrcAndDst(String ConditionOrderInSrcAndDst) {
         this.ConditionOrderInSrcAndDst = ConditionOrderInSrcAndDst;

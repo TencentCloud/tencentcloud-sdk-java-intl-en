@@ -38,7 +38,7 @@ public class DescribeVulRiskRelateComponentRequest extends AbstractModel {
     private String [] MemberId;
 
     /**
-    * <p>Filter conditions array, multi-condition with each other in the AND relationship<br>Supported Filter.Name:<br>Keyword: Keyword fuzzy search (fuzzy matching for component name)</p>
+    * <p>Criteria array, multi-condition uses AND relationship with each other<br>Supported Filter.Name:<br>Keyword: keyword fuzzy search (fuzzy matching for component name)</p>
     */
     @SerializedName("Filters")
     @Expose
@@ -77,16 +77,16 @@ public class DescribeVulRiskRelateComponentRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>Filter conditions array, multi-condition with each other in the AND relationship<br>Supported Filter.Name:<br>Keyword: Keyword fuzzy search (fuzzy matching for component name)</p> 
-     * @return Filters <p>Filter conditions array, multi-condition with each other in the AND relationship<br>Supported Filter.Name:<br>Keyword: Keyword fuzzy search (fuzzy matching for component name)</p>
+     * Get <p>Criteria array, multi-condition uses AND relationship with each other<br>Supported Filter.Name:<br>Keyword: keyword fuzzy search (fuzzy matching for component name)</p> 
+     * @return Filters <p>Criteria array, multi-condition uses AND relationship with each other<br>Supported Filter.Name:<br>Keyword: keyword fuzzy search (fuzzy matching for component name)</p>
      */
     public Filters [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set <p>Filter conditions array, multi-condition with each other in the AND relationship<br>Supported Filter.Name:<br>Keyword: Keyword fuzzy search (fuzzy matching for component name)</p>
-     * @param Filters <p>Filter conditions array, multi-condition with each other in the AND relationship<br>Supported Filter.Name:<br>Keyword: Keyword fuzzy search (fuzzy matching for component name)</p>
+     * Set <p>Criteria array, multi-condition uses AND relationship with each other<br>Supported Filter.Name:<br>Keyword: keyword fuzzy search (fuzzy matching for component name)</p>
+     * @param Filters <p>Criteria array, multi-condition uses AND relationship with each other<br>Supported Filter.Name:<br>Keyword: keyword fuzzy search (fuzzy matching for component name)</p>
      */
     public void setFilters(Filters [] Filters) {
         this.Filters = Filters;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateSyncJobRequest extends AbstractModel {
 
     /**
-    * Billing mode. Valid values: `PrePay` (monthly subscription); `PostPay` (pay-as-you-go). Currently, DTS at Tencent Cloud International is free of charge.
+    * Billing mode. Valid values: `PrePay` (yearly/monthly subscription); `PostPay` (pay-as-you-go). Currently, DTS at Tencent Cloud International is free of charge.
     */
     @SerializedName("PayMode")
     @Expose
@@ -66,7 +66,7 @@ public class CreateSyncJobRequest extends AbstractModel {
     private String Specification;
 
     /**
-    * 
+    * Purchase duration (in months); this configuration is applicable only when PayMode is set to 'PrePay'. The default value is 1 month, and the valid range is [1, 100].
     */
     @SerializedName("TimeSpan")
     @Expose
@@ -115,16 +115,16 @@ public class CreateSyncJobRequest extends AbstractModel {
     private String ExistedJobId;
 
     /**
-     * Get Billing mode. Valid values: `PrePay` (monthly subscription); `PostPay` (pay-as-you-go). Currently, DTS at Tencent Cloud International is free of charge. 
-     * @return PayMode Billing mode. Valid values: `PrePay` (monthly subscription); `PostPay` (pay-as-you-go). Currently, DTS at Tencent Cloud International is free of charge.
+     * Get Billing mode. Valid values: `PrePay` (yearly/monthly subscription); `PostPay` (pay-as-you-go). Currently, DTS at Tencent Cloud International is free of charge. 
+     * @return PayMode Billing mode. Valid values: `PrePay` (yearly/monthly subscription); `PostPay` (pay-as-you-go). Currently, DTS at Tencent Cloud International is free of charge.
      */
     public String getPayMode() {
         return this.PayMode;
     }
 
     /**
-     * Set Billing mode. Valid values: `PrePay` (monthly subscription); `PostPay` (pay-as-you-go). Currently, DTS at Tencent Cloud International is free of charge.
-     * @param PayMode Billing mode. Valid values: `PrePay` (monthly subscription); `PostPay` (pay-as-you-go). Currently, DTS at Tencent Cloud International is free of charge.
+     * Set Billing mode. Valid values: `PrePay` (yearly/monthly subscription); `PostPay` (pay-as-you-go). Currently, DTS at Tencent Cloud International is free of charge.
+     * @param PayMode Billing mode. Valid values: `PrePay` (yearly/monthly subscription); `PostPay` (pay-as-you-go). Currently, DTS at Tencent Cloud International is free of charge.
      */
     public void setPayMode(String PayMode) {
         this.PayMode = PayMode;
@@ -211,16 +211,16 @@ public class CreateSyncJobRequest extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return TimeSpan 
+     * Get Purchase duration (in months); this configuration is applicable only when PayMode is set to 'PrePay'. The default value is 1 month, and the valid range is [1, 100]. 
+     * @return TimeSpan Purchase duration (in months); this configuration is applicable only when PayMode is set to 'PrePay'. The default value is 1 month, and the valid range is [1, 100].
      */
     public Long getTimeSpan() {
         return this.TimeSpan;
     }
 
     /**
-     * Set 
-     * @param TimeSpan 
+     * Set Purchase duration (in months); this configuration is applicable only when PayMode is set to 'PrePay'. The default value is 1 month, and the valid range is [1, 100].
+     * @param TimeSpan Purchase duration (in months); this configuration is applicable only when PayMode is set to 'PrePay'. The default value is 1 month, and the valid range is [1, 100].
      */
     public void setTimeSpan(Long TimeSpan) {
         this.TimeSpan = TimeSpan;

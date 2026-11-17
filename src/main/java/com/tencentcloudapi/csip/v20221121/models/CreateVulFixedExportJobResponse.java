@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateVulFixedExportJobResponse extends AbstractModel {
 
     /**
-    * <p>Export task ID<br>Used when: front-end polling the status of tasks for reference</p>
+    * <p>Export task ID<br>Value for reference: used when polling the export task status on the frontend</p>
     */
     @SerializedName("JobID")
     @Expose
@@ -38,16 +38,16 @@ public class CreateVulFixedExportJobResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get <p>Export task ID<br>Used when: front-end polling the status of tasks for reference</p> 
-     * @return JobID <p>Export task ID<br>Used when: front-end polling the status of tasks for reference</p>
+     * Get <p>Export task ID<br>Value for reference: used when polling the export task status on the frontend</p> 
+     * @return JobID <p>Export task ID<br>Value for reference: used when polling the export task status on the frontend</p>
      */
     public String getJobID() {
         return this.JobID;
     }
 
     /**
-     * Set <p>Export task ID<br>Used when: front-end polling the status of tasks for reference</p>
-     * @param JobID <p>Export task ID<br>Used when: front-end polling the status of tasks for reference</p>
+     * Set <p>Export task ID<br>Value for reference: used when polling the export task status on the frontend</p>
+     * @param JobID <p>Export task ID<br>Value for reference: used when polling the export task status on the frontend</p>
      */
     public void setJobID(String JobID) {
         this.JobID = JobID;
