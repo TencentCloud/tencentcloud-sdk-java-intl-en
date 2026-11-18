@@ -45,7 +45,7 @@ public class CreateDisksRequest extends AbstractModel {
     private String DiskType;
 
     /**
-    * Parameters of monthly subscribed cloud disks
+    * Parameters of yearly/monthly subscribed cloud disks
     */
     @SerializedName("DiskChargePrepaid")
     @Expose
@@ -66,7 +66,7 @@ public class CreateDisksRequest extends AbstractModel {
     private Long DiskCount;
 
     /**
-    * Specify the quota of disk backups. No quota if it’s left empty. Only one quota is allowed.
+    * Specify the quota of disk backups. No quota if it's left empty. Only one quota is allowed.
     */
     @SerializedName("DiskBackupQuota")
     @Expose
@@ -85,6 +85,13 @@ public class CreateDisksRequest extends AbstractModel {
     @SerializedName("AutoMountConfiguration")
     @Expose
     private AutoMountConfiguration AutoMountConfiguration;
+
+    /**
+    * Tag key and tag value. If multiple tags are specified, they are created and bound to the specified resources at the same time. A tag key can have only one value on a given resource. If you attempt to add a tag with an existing key, its value is updated to the new value. Tags that do not exist are created automatically. The array supports a maximum of 10 elements.
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
 
     /**
      * Get Availability zone. You can call [DescribeZones](https://intl.cloud.tencent.com/document/product/1207/57513?from_cn_redirect=1) and get the information in the `Zone` parameter re  
@@ -135,16 +142,16 @@ public class CreateDisksRequest extends AbstractModel {
     }
 
     /**
-     * Get Parameters of monthly subscribed cloud disks 
-     * @return DiskChargePrepaid Parameters of monthly subscribed cloud disks
+     * Get Parameters of yearly/monthly subscribed cloud disks 
+     * @return DiskChargePrepaid Parameters of yearly/monthly subscribed cloud disks
      */
     public DiskChargePrepaid getDiskChargePrepaid() {
         return this.DiskChargePrepaid;
     }
 
     /**
-     * Set Parameters of monthly subscribed cloud disks
-     * @param DiskChargePrepaid Parameters of monthly subscribed cloud disks
+     * Set Parameters of yearly/monthly subscribed cloud disks
+     * @param DiskChargePrepaid Parameters of yearly/monthly subscribed cloud disks
      */
     public void setDiskChargePrepaid(DiskChargePrepaid DiskChargePrepaid) {
         this.DiskChargePrepaid = DiskChargePrepaid;
@@ -183,16 +190,16 @@ public class CreateDisksRequest extends AbstractModel {
     }
 
     /**
-     * Get Specify the quota of disk backups. No quota if it’s left empty. Only one quota is allowed. 
-     * @return DiskBackupQuota Specify the quota of disk backups. No quota if it’s left empty. Only one quota is allowed.
+     * Get Specify the quota of disk backups. No quota if it's left empty. Only one quota is allowed. 
+     * @return DiskBackupQuota Specify the quota of disk backups. No quota if it's left empty. Only one quota is allowed.
      */
     public Long getDiskBackupQuota() {
         return this.DiskBackupQuota;
     }
 
     /**
-     * Set Specify the quota of disk backups. No quota if it’s left empty. Only one quota is allowed.
-     * @param DiskBackupQuota Specify the quota of disk backups. No quota if it’s left empty. Only one quota is allowed.
+     * Set Specify the quota of disk backups. No quota if it's left empty. Only one quota is allowed.
+     * @param DiskBackupQuota Specify the quota of disk backups. No quota if it's left empty. Only one quota is allowed.
      */
     public void setDiskBackupQuota(Long DiskBackupQuota) {
         this.DiskBackupQuota = DiskBackupQuota;
@@ -230,6 +237,22 @@ public class CreateDisksRequest extends AbstractModel {
         this.AutoMountConfiguration = AutoMountConfiguration;
     }
 
+    /**
+     * Get Tag key and tag value. If multiple tags are specified, they are created and bound to the specified resources at the same time. A tag key can have only one value on a given resource. If you attempt to add a tag with an existing key, its value is updated to the new value. Tags that do not exist are created automatically. The array supports a maximum of 10 elements. 
+     * @return Tags Tag key and tag value. If multiple tags are specified, they are created and bound to the specified resources at the same time. A tag key can have only one value on a given resource. If you attempt to add a tag with an existing key, its value is updated to the new value. Tags that do not exist are created automatically. The array supports a maximum of 10 elements.
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set Tag key and tag value. If multiple tags are specified, they are created and bound to the specified resources at the same time. A tag key can have only one value on a given resource. If you attempt to add a tag with an existing key, its value is updated to the new value. Tags that do not exist are created automatically. The array supports a maximum of 10 elements.
+     * @param Tags Tag key and tag value. If multiple tags are specified, they are created and bound to the specified resources at the same time. A tag key can have only one value on a given resource. If you attempt to add a tag with an existing key, its value is updated to the new value. Tags that do not exist are created automatically. The array supports a maximum of 10 elements.
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
     public CreateDisksRequest() {
     }
 
@@ -265,6 +288,12 @@ public class CreateDisksRequest extends AbstractModel {
         if (source.AutoMountConfiguration != null) {
             this.AutoMountConfiguration = new AutoMountConfiguration(source.AutoMountConfiguration);
         }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -281,6 +310,7 @@ public class CreateDisksRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "DiskBackupQuota", this.DiskBackupQuota);
         this.setParamSimple(map, prefix + "AutoVoucher", this.AutoVoucher);
         this.setParamObj(map, prefix + "AutoMountConfiguration.", this.AutoMountConfiguration);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

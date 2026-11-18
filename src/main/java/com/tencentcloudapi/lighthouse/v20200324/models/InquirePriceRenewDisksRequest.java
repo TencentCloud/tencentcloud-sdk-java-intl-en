@@ -31,7 +31,7 @@ public class InquirePriceRenewDisksRequest extends AbstractModel {
     private String [] DiskIds;
 
     /**
-    * Parameter settings for renewing the monthly subscribed cloud disk.
+    * Parameter settings for renewing the yearly/monthly subscribed cloud disk.
     */
     @SerializedName("RenewDiskChargePrepaid")
     @Expose
@@ -54,16 +54,16 @@ public class InquirePriceRenewDisksRequest extends AbstractModel {
     }
 
     /**
-     * Get Parameter settings for renewing the monthly subscribed cloud disk. 
-     * @return RenewDiskChargePrepaid Parameter settings for renewing the monthly subscribed cloud disk.
+     * Get Parameter settings for renewing the yearly/monthly subscribed cloud disk. 
+     * @return RenewDiskChargePrepaid Parameter settings for renewing the yearly/monthly subscribed cloud disk.
      */
     public RenewDiskChargePrepaid getRenewDiskChargePrepaid() {
         return this.RenewDiskChargePrepaid;
     }
 
     /**
-     * Set Parameter settings for renewing the monthly subscribed cloud disk.
-     * @param RenewDiskChargePrepaid Parameter settings for renewing the monthly subscribed cloud disk.
+     * Set Parameter settings for renewing the yearly/monthly subscribed cloud disk.
+     * @param RenewDiskChargePrepaid Parameter settings for renewing the yearly/monthly subscribed cloud disk.
      */
     public void setRenewDiskChargePrepaid(RenewDiskChargePrepaid RenewDiskChargePrepaid) {
         this.RenewDiskChargePrepaid = RenewDiskChargePrepaid;

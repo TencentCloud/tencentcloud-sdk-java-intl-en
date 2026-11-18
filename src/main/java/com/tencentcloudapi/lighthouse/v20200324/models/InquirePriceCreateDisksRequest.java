@@ -38,7 +38,7 @@ public class InquirePriceCreateDisksRequest extends AbstractModel {
     private String DiskType;
 
     /**
-    * Parameter settings for purchasing the monthly subscribed cloud disk.
+    * Parameter settings for purchasing the yearly/monthly subscribed cloud disk.
     */
     @SerializedName("DiskChargePrepaid")
     @Expose
@@ -52,7 +52,7 @@ public class InquirePriceCreateDisksRequest extends AbstractModel {
     private Long DiskCount;
 
     /**
-    * Specify the quota of disk backups. No quota if it’s left empty. Only one quota is allowed.
+    * Specify the quota of disk backups. No quota if it's left empty. Only one quota is allowed.
     */
     @SerializedName("DiskBackupQuota")
     @Expose
@@ -91,16 +91,16 @@ public class InquirePriceCreateDisksRequest extends AbstractModel {
     }
 
     /**
-     * Get Parameter settings for purchasing the monthly subscribed cloud disk. 
-     * @return DiskChargePrepaid Parameter settings for purchasing the monthly subscribed cloud disk.
+     * Get Parameter settings for purchasing the yearly/monthly subscribed cloud disk. 
+     * @return DiskChargePrepaid Parameter settings for purchasing the yearly/monthly subscribed cloud disk.
      */
     public DiskChargePrepaid getDiskChargePrepaid() {
         return this.DiskChargePrepaid;
     }
 
     /**
-     * Set Parameter settings for purchasing the monthly subscribed cloud disk.
-     * @param DiskChargePrepaid Parameter settings for purchasing the monthly subscribed cloud disk.
+     * Set Parameter settings for purchasing the yearly/monthly subscribed cloud disk.
+     * @param DiskChargePrepaid Parameter settings for purchasing the yearly/monthly subscribed cloud disk.
      */
     public void setDiskChargePrepaid(DiskChargePrepaid DiskChargePrepaid) {
         this.DiskChargePrepaid = DiskChargePrepaid;
@@ -123,16 +123,16 @@ public class InquirePriceCreateDisksRequest extends AbstractModel {
     }
 
     /**
-     * Get Specify the quota of disk backups. No quota if it’s left empty. Only one quota is allowed. 
-     * @return DiskBackupQuota Specify the quota of disk backups. No quota if it’s left empty. Only one quota is allowed.
+     * Get Specify the quota of disk backups. No quota if it's left empty. Only one quota is allowed. 
+     * @return DiskBackupQuota Specify the quota of disk backups. No quota if it's left empty. Only one quota is allowed.
      */
     public Long getDiskBackupQuota() {
         return this.DiskBackupQuota;
     }
 
     /**
-     * Set Specify the quota of disk backups. No quota if it’s left empty. Only one quota is allowed.
-     * @param DiskBackupQuota Specify the quota of disk backups. No quota if it’s left empty. Only one quota is allowed.
+     * Set Specify the quota of disk backups. No quota if it's left empty. Only one quota is allowed.
+     * @param DiskBackupQuota Specify the quota of disk backups. No quota if it's left empty. Only one quota is allowed.
      */
     public void setDiskBackupQuota(Long DiskBackupQuota) {
         this.DiskBackupQuota = DiskBackupQuota;

@@ -38,7 +38,7 @@ public class CreateInstancesRequest extends AbstractModel {
     private String BlueprintId;
 
     /**
-    * Monthly subscription information for the instance, including the purchase period, setting of auto-renewal, etc.
+    * Yearly/monthly subscription information for the instance, including the purchase period, setting of auto-renewal, etc.
     */
     @SerializedName("InstanceChargePrepaid")
     @Expose
@@ -52,7 +52,7 @@ public class CreateInstancesRequest extends AbstractModel {
     private String InstanceName;
 
     /**
-    * Number of the instances to purchase. For monthly subscribed instances, the value can be 1 to 30. The default value is `1`. Note that this number can not exceed the remaining quota under the current account.
+    * Number of the instances to purchase. For yearly/monthly subscribed instances, the value can be 1 to 30. The default value is `1`. Note that this number can not exceed the remaining quota under the current account.
     */
     @SerializedName("InstanceCount")
     @Expose
@@ -84,7 +84,7 @@ If the dry run succeeds, the RequestId will be returned.
     private String ClientToken;
 
     /**
-    * Login password of the instance. It’s only available for Windows instances. If it’s not specified, it means that the user choose to set the login password after the instance creation.
+    * Login password of the instance. It's only available for Windows instances. If it's not specified, it means that the user choose to set the login password after the instance creation.
     */
     @SerializedName("LoginConfiguration")
     @Expose
@@ -103,6 +103,41 @@ If the dry run succeeds, the RequestId will be returned.
     @SerializedName("AutoVoucher")
     @Expose
     private Boolean AutoVoucher;
+
+    /**
+    * Firewall template ID. If not specified, the default firewall policy is used.
+    */
+    @SerializedName("FirewallTemplateId")
+    @Expose
+    private String FirewallTemplateId;
+
+    /**
+    * Tag key and tag value. If multiple tags are specified, they are created and bound to the specified resources at the same time. A tag key can have only one value on a given resource. If you attempt to add a tag with an existing key, its value is updated to the new value. Tags that do not exist are created automatically. The array supports a maximum of 10 elements.
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
+    * The command to be automatically executed after the instance is created.
+    */
+    @SerializedName("InitCommand")
+    @Expose
+    private Command InitCommand;
+
+    /**
+    * The primary domain. Note: Once a domain is specified, only a single instance can be purchased (`InstanceCount` must be set to 1).
+    */
+    @SerializedName("DomainName")
+    @Expose
+    private String DomainName;
+
+    /**
+    * The subdomain. Note: Once a domain is specified, only a single instance can be purchased (`InstanceCount` must be set to 1).
+    */
+    @SerializedName("Subdomain")
+    @Expose
+    private String Subdomain;
 
     /**
      * Get Bundle ID. You can get it via the [DescribeBundles](https://intl.cloud.tencent.com/document/api/1207/47575?from_cn_redirect=1) API. 
@@ -137,16 +172,16 @@ If the dry run succeeds, the RequestId will be returned.
     }
 
     /**
-     * Get Monthly subscription information for the instance, including the purchase period, setting of auto-renewal, etc. 
-     * @return InstanceChargePrepaid Monthly subscription information for the instance, including the purchase period, setting of auto-renewal, etc.
+     * Get Yearly/monthly subscription information for the instance, including the purchase period, setting of auto-renewal, etc. 
+     * @return InstanceChargePrepaid Yearly/monthly subscription information for the instance, including the purchase period, setting of auto-renewal, etc.
      */
     public InstanceChargePrepaid getInstanceChargePrepaid() {
         return this.InstanceChargePrepaid;
     }
 
     /**
-     * Set Monthly subscription information for the instance, including the purchase period, setting of auto-renewal, etc.
-     * @param InstanceChargePrepaid Monthly subscription information for the instance, including the purchase period, setting of auto-renewal, etc.
+     * Set Yearly/monthly subscription information for the instance, including the purchase period, setting of auto-renewal, etc.
+     * @param InstanceChargePrepaid Yearly/monthly subscription information for the instance, including the purchase period, setting of auto-renewal, etc.
      */
     public void setInstanceChargePrepaid(InstanceChargePrepaid InstanceChargePrepaid) {
         this.InstanceChargePrepaid = InstanceChargePrepaid;
@@ -169,16 +204,16 @@ If the dry run succeeds, the RequestId will be returned.
     }
 
     /**
-     * Get Number of the instances to purchase. For monthly subscribed instances, the value can be 1 to 30. The default value is `1`. Note that this number can not exceed the remaining quota under the current account. 
-     * @return InstanceCount Number of the instances to purchase. For monthly subscribed instances, the value can be 1 to 30. The default value is `1`. Note that this number can not exceed the remaining quota under the current account.
+     * Get Number of the instances to purchase. For yearly/monthly subscribed instances, the value can be 1 to 30. The default value is `1`. Note that this number can not exceed the remaining quota under the current account. 
+     * @return InstanceCount Number of the instances to purchase. For yearly/monthly subscribed instances, the value can be 1 to 30. The default value is `1`. Note that this number can not exceed the remaining quota under the current account.
      */
     public Long getInstanceCount() {
         return this.InstanceCount;
     }
 
     /**
-     * Set Number of the instances to purchase. For monthly subscribed instances, the value can be 1 to 30. The default value is `1`. Note that this number can not exceed the remaining quota under the current account.
-     * @param InstanceCount Number of the instances to purchase. For monthly subscribed instances, the value can be 1 to 30. The default value is `1`. Note that this number can not exceed the remaining quota under the current account.
+     * Set Number of the instances to purchase. For yearly/monthly subscribed instances, the value can be 1 to 30. The default value is `1`. Note that this number can not exceed the remaining quota under the current account.
+     * @param InstanceCount Number of the instances to purchase. For yearly/monthly subscribed instances, the value can be 1 to 30. The default value is `1`. Note that this number can not exceed the remaining quota under the current account.
      */
     public void setInstanceCount(Long InstanceCount) {
         this.InstanceCount = InstanceCount;
@@ -249,16 +284,16 @@ If the dry run succeeds, the RequestId will be returned.
     }
 
     /**
-     * Get Login password of the instance. It’s only available for Windows instances. If it’s not specified, it means that the user choose to set the login password after the instance creation. 
-     * @return LoginConfiguration Login password of the instance. It’s only available for Windows instances. If it’s not specified, it means that the user choose to set the login password after the instance creation.
+     * Get Login password of the instance. It's only available for Windows instances. If it's not specified, it means that the user choose to set the login password after the instance creation. 
+     * @return LoginConfiguration Login password of the instance. It's only available for Windows instances. If it's not specified, it means that the user choose to set the login password after the instance creation.
      */
     public LoginConfiguration getLoginConfiguration() {
         return this.LoginConfiguration;
     }
 
     /**
-     * Set Login password of the instance. It’s only available for Windows instances. If it’s not specified, it means that the user choose to set the login password after the instance creation.
-     * @param LoginConfiguration Login password of the instance. It’s only available for Windows instances. If it’s not specified, it means that the user choose to set the login password after the instance creation.
+     * Set Login password of the instance. It's only available for Windows instances. If it's not specified, it means that the user choose to set the login password after the instance creation.
+     * @param LoginConfiguration Login password of the instance. It's only available for Windows instances. If it's not specified, it means that the user choose to set the login password after the instance creation.
      */
     public void setLoginConfiguration(LoginConfiguration LoginConfiguration) {
         this.LoginConfiguration = LoginConfiguration;
@@ -294,6 +329,86 @@ If the dry run succeeds, the RequestId will be returned.
      */
     public void setAutoVoucher(Boolean AutoVoucher) {
         this.AutoVoucher = AutoVoucher;
+    }
+
+    /**
+     * Get Firewall template ID. If not specified, the default firewall policy is used. 
+     * @return FirewallTemplateId Firewall template ID. If not specified, the default firewall policy is used.
+     */
+    public String getFirewallTemplateId() {
+        return this.FirewallTemplateId;
+    }
+
+    /**
+     * Set Firewall template ID. If not specified, the default firewall policy is used.
+     * @param FirewallTemplateId Firewall template ID. If not specified, the default firewall policy is used.
+     */
+    public void setFirewallTemplateId(String FirewallTemplateId) {
+        this.FirewallTemplateId = FirewallTemplateId;
+    }
+
+    /**
+     * Get Tag key and tag value. If multiple tags are specified, they are created and bound to the specified resources at the same time. A tag key can have only one value on a given resource. If you attempt to add a tag with an existing key, its value is updated to the new value. Tags that do not exist are created automatically. The array supports a maximum of 10 elements. 
+     * @return Tags Tag key and tag value. If multiple tags are specified, they are created and bound to the specified resources at the same time. A tag key can have only one value on a given resource. If you attempt to add a tag with an existing key, its value is updated to the new value. Tags that do not exist are created automatically. The array supports a maximum of 10 elements.
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set Tag key and tag value. If multiple tags are specified, they are created and bound to the specified resources at the same time. A tag key can have only one value on a given resource. If you attempt to add a tag with an existing key, its value is updated to the new value. Tags that do not exist are created automatically. The array supports a maximum of 10 elements.
+     * @param Tags Tag key and tag value. If multiple tags are specified, they are created and bound to the specified resources at the same time. A tag key can have only one value on a given resource. If you attempt to add a tag with an existing key, its value is updated to the new value. Tags that do not exist are created automatically. The array supports a maximum of 10 elements.
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
+    /**
+     * Get The command to be automatically executed after the instance is created. 
+     * @return InitCommand The command to be automatically executed after the instance is created.
+     */
+    public Command getInitCommand() {
+        return this.InitCommand;
+    }
+
+    /**
+     * Set The command to be automatically executed after the instance is created.
+     * @param InitCommand The command to be automatically executed after the instance is created.
+     */
+    public void setInitCommand(Command InitCommand) {
+        this.InitCommand = InitCommand;
+    }
+
+    /**
+     * Get The primary domain. Note: Once a domain is specified, only a single instance can be purchased (`InstanceCount` must be set to 1). 
+     * @return DomainName The primary domain. Note: Once a domain is specified, only a single instance can be purchased (`InstanceCount` must be set to 1).
+     */
+    public String getDomainName() {
+        return this.DomainName;
+    }
+
+    /**
+     * Set The primary domain. Note: Once a domain is specified, only a single instance can be purchased (`InstanceCount` must be set to 1).
+     * @param DomainName The primary domain. Note: Once a domain is specified, only a single instance can be purchased (`InstanceCount` must be set to 1).
+     */
+    public void setDomainName(String DomainName) {
+        this.DomainName = DomainName;
+    }
+
+    /**
+     * Get The subdomain. Note: Once a domain is specified, only a single instance can be purchased (`InstanceCount` must be set to 1). 
+     * @return Subdomain The subdomain. Note: Once a domain is specified, only a single instance can be purchased (`InstanceCount` must be set to 1).
+     */
+    public String getSubdomain() {
+        return this.Subdomain;
+    }
+
+    /**
+     * Set The subdomain. Note: Once a domain is specified, only a single instance can be purchased (`InstanceCount` must be set to 1).
+     * @param Subdomain The subdomain. Note: Once a domain is specified, only a single instance can be purchased (`InstanceCount` must be set to 1).
+     */
+    public void setSubdomain(String Subdomain) {
+        this.Subdomain = Subdomain;
     }
 
     public CreateInstancesRequest() {
@@ -343,6 +458,24 @@ If the dry run succeeds, the RequestId will be returned.
         if (source.AutoVoucher != null) {
             this.AutoVoucher = new Boolean(source.AutoVoucher);
         }
+        if (source.FirewallTemplateId != null) {
+            this.FirewallTemplateId = new String(source.FirewallTemplateId);
+        }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
+        if (source.InitCommand != null) {
+            this.InitCommand = new Command(source.InitCommand);
+        }
+        if (source.DomainName != null) {
+            this.DomainName = new String(source.DomainName);
+        }
+        if (source.Subdomain != null) {
+            this.Subdomain = new String(source.Subdomain);
+        }
     }
 
 
@@ -361,6 +494,11 @@ If the dry run succeeds, the RequestId will be returned.
         this.setParamObj(map, prefix + "LoginConfiguration.", this.LoginConfiguration);
         this.setParamArrayObj(map, prefix + "Containers.", this.Containers);
         this.setParamSimple(map, prefix + "AutoVoucher", this.AutoVoucher);
+        this.setParamSimple(map, prefix + "FirewallTemplateId", this.FirewallTemplateId);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamObj(map, prefix + "InitCommand.", this.InitCommand);
+        this.setParamSimple(map, prefix + "DomainName", this.DomainName);
+        this.setParamSimple(map, prefix + "Subdomain", this.Subdomain);
 
     }
 }
