@@ -210,7 +210,7 @@ public enum LiveErrorCode {
      /* Error obtaining the user account. */
      INTERNALERROR_GETBIZIDERROR("InternalError.GetBizidError"),
      
-     /* Error getting the configuration. */
+     /* Failed to obtain the configuration. */
      INTERNALERROR_GETCONFIGERROR("InternalError.GetConfigError"),
      
      /* Failed to get stream information. */
@@ -489,10 +489,10 @@ public enum LiveErrorCode {
      /* Data is empty. */
      RESOURCENOTFOUND_EMPTYDATA("ResourceNotFound.EmptyData"),
      
-     /* Disabled user. */
+     /* The user is disabled. */
      RESOURCENOTFOUND_FORBIDSERVICE("ResourceNotFound.ForbidService"),
      
-     /* User service is frozen. */
+     /* The user service is frozen. */
      RESOURCENOTFOUND_FREEZESERVICE("ResourceNotFound.FreezeService"),
      
      /* The user does not support this API. */
@@ -504,13 +504,13 @@ public enum LiveErrorCode {
      /* The push domain name does not exist. */
      RESOURCENOTFOUND_PUSHDOMAINNORECORD("ResourceNotFound.PushDomainNoRecord"),
      
-     /* Services for the account has been stopped. Please first top up to enable the service before reoperating. */
+     /* The account is suspended. Reopen the service before performing this operation. */
      RESOURCENOTFOUND_STOPSERVICE("ResourceNotFound.StopService"),
      
      /* The `TaskId` does not exist. */
      RESOURCENOTFOUND_TASKID("ResourceNotFound.TaskId"),
      
-     /* User proactively suspended the service. */
+     /* The user proactively stopped the service. */
      RESOURCENOTFOUND_USERDISABLESERVICE("ResourceNotFound.UserDisableService"),
      
      /* The CSS service has not been activated. */
@@ -537,7 +537,7 @@ public enum LiveErrorCode {
      /* Unknown parameter. */
      UNKNOWNPARAMETER("UnknownParameter"),
      
-     /* Unsupported operation. */
+     /* The operation is not supported. */
      UNSUPPORTEDOPERATION("UnsupportedOperation"),
      
      /* Not a LVB code/new console mode */

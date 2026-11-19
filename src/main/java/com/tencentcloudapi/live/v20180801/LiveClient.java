@@ -1443,6 +1443,17 @@ Referer information is included in HTTP requests. After you enable referer confi
     }
 
     /**
+     *This API is used to terminate a screenshot task in advance. After the task is successfully terminated, it will not be started again.
+     * @param req StopScreenshotTaskRequest
+     * @return StopScreenshotTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public StopScreenshotTaskResponse StopScreenshotTask(StopScreenshotTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "StopScreenshotTask", StopScreenshotTaskResponse.class);
+    }
+
+    /**
      *This API is used to unbind a domain name certificate.
      * @param req UnBindLiveDomainCertRequest
      * @return UnBindLiveDomainCertResponse
