@@ -50,6 +50,17 @@ public class TrtcClient extends AbstractClient{
     }
 
     /**
+     *After a conversation task starts successfully, use this API to control it.
+     * @param req ControlVoiceConversationRequest
+     * @return ControlVoiceConversationResponse
+     * @throws TencentCloudSDKException
+     */
+    public ControlVoiceConversationResponse ControlVoiceConversation(ControlVoiceConversationRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ControlVoiceConversation", ControlVoiceConversationResponse.class);
+    }
+
+    /**
      *API description:
 This API is used to enable the cloud moderation feature to complete audio and video slicing, video frame extraction, and audio stream recording in the room, and submit them to the specified moderation supplier for completing the moderation.
 
@@ -115,6 +126,17 @@ This API is used to achieve the following goals:
     }
 
     /**
+     *This API is used to create an AI conversation task.
+     * @param req CreateVoiceConversationRequest
+     * @return CreateVoiceConversationResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateVoiceConversationResponse CreateVoiceConversation(CreateVoiceConversationRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateVoiceConversation", CreateVoiceConversationResponse.class);
+    }
+
+    /**
      *This API is used to stop submission for moderation after the cloud moderation task is successfully started.
      * @param req DeleteCloudModerationRequest
      * @return DeleteCloudModerationResponse
@@ -156,6 +178,17 @@ This API is used to achieve the following goals:
     public DeleteCloudTranscriptionResponse DeleteCloudTranscription(DeleteCloudTranscriptionRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteCloudTranscription", DeleteCloudTranscriptionResponse.class);
+    }
+
+    /**
+     *After a conversation task starts successfully, use this API to stop it.
+     * @param req DeleteVoiceConversationRequest
+     * @return DeleteVoiceConversationResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteVoiceConversationResponse DeleteVoiceConversation(DeleteVoiceConversationRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteVoiceConversation", DeleteVoiceConversationResponse.class);
     }
 
     /**
@@ -461,6 +494,17 @@ For details about the error events, see https://intl.cloud.tencent.com/document/
     }
 
     /**
+     *After a conversation task starts successfully, use this API to query the conversation status. It can be used only while the conversation task is in progress. Querying after the conversation task exits returns an error.
+     * @param req DescribeVoiceConversationRequest
+     * @return DescribeVoiceConversationResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeVoiceConversationResponse DescribeVoiceConversation(DescribeVoiceConversationRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeVoiceConversation", DescribeVoiceConversationResponse.class);
+    }
+
+    /**
      *Queries the status of a web-page recording task
      * @param req DescribeWebRecordRequest
      * @return DescribeWebRecordResponse
@@ -524,6 +568,17 @@ For details about the error events, see https://intl.cloud.tencent.com/document/
     public ModifyCloudSliceTaskResponse ModifyCloudSliceTask(ModifyCloudSliceTaskRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyCloudSliceTask", ModifyCloudSliceTaskResponse.class);
+    }
+
+    /**
+     *After a conversation task starts successfully, use this API to modify its configuration.
+     * @param req ModifyVoiceConversationRequest
+     * @return ModifyVoiceConversationResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyVoiceConversationResponse ModifyVoiceConversation(ModifyVoiceConversationRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyVoiceConversation", ModifyVoiceConversationResponse.class);
     }
 
     /**

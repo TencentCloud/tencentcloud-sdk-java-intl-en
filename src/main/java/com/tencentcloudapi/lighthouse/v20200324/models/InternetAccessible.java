@@ -24,79 +24,79 @@ import java.util.HashMap;
 public class InternetAccessible extends AbstractModel {
 
     /**
-    * Network billing mode. Valid values:
-<li>Bill by traffic package: TRAFFIC_POSTPAID_BY_HOUR</li>
-<li>Bill by bandwidth: BANDWIDTH_POSTPAID_BY_HOUR</li>
+    * Network billing type. Valid values:
+<li>Pay-as-you-go by traffic: TRAFFIC_POSTPAID_BY_HOUR</li>
+<li>Pay-as-you-go by bandwidth: BANDWIDTH_POSTPAID_BY_HOUR</li>
     */
     @SerializedName("InternetChargeType")
     @Expose
     private String InternetChargeType;
 
     /**
-    * Public network outbound bandwidth cap in Mbps.
+    * Maximum outbound public bandwidth, in the unit of Mbps.
     */
     @SerializedName("InternetMaxBandwidthOut")
     @Expose
     private Long InternetMaxBandwidthOut;
 
     /**
-    * Whether to assign a public IP.
+    * Indicates whether a public IP is assigned.
     */
     @SerializedName("PublicIpAssigned")
     @Expose
     private Boolean PublicIpAssigned;
 
     /**
-     * Get Network billing mode. Valid values:
-<li>Bill by traffic package: TRAFFIC_POSTPAID_BY_HOUR</li>
-<li>Bill by bandwidth: BANDWIDTH_POSTPAID_BY_HOUR</li> 
-     * @return InternetChargeType Network billing mode. Valid values:
-<li>Bill by traffic package: TRAFFIC_POSTPAID_BY_HOUR</li>
-<li>Bill by bandwidth: BANDWIDTH_POSTPAID_BY_HOUR</li>
+     * Get Network billing type. Valid values:
+<li>Pay-as-you-go by traffic: TRAFFIC_POSTPAID_BY_HOUR</li>
+<li>Pay-as-you-go by bandwidth: BANDWIDTH_POSTPAID_BY_HOUR</li> 
+     * @return InternetChargeType Network billing type. Valid values:
+<li>Pay-as-you-go by traffic: TRAFFIC_POSTPAID_BY_HOUR</li>
+<li>Pay-as-you-go by bandwidth: BANDWIDTH_POSTPAID_BY_HOUR</li>
      */
     public String getInternetChargeType() {
         return this.InternetChargeType;
     }
 
     /**
-     * Set Network billing mode. Valid values:
-<li>Bill by traffic package: TRAFFIC_POSTPAID_BY_HOUR</li>
-<li>Bill by bandwidth: BANDWIDTH_POSTPAID_BY_HOUR</li>
-     * @param InternetChargeType Network billing mode. Valid values:
-<li>Bill by traffic package: TRAFFIC_POSTPAID_BY_HOUR</li>
-<li>Bill by bandwidth: BANDWIDTH_POSTPAID_BY_HOUR</li>
+     * Set Network billing type. Valid values:
+<li>Pay-as-you-go by traffic: TRAFFIC_POSTPAID_BY_HOUR</li>
+<li>Pay-as-you-go by bandwidth: BANDWIDTH_POSTPAID_BY_HOUR</li>
+     * @param InternetChargeType Network billing type. Valid values:
+<li>Pay-as-you-go by traffic: TRAFFIC_POSTPAID_BY_HOUR</li>
+<li>Pay-as-you-go by bandwidth: BANDWIDTH_POSTPAID_BY_HOUR</li>
      */
     public void setInternetChargeType(String InternetChargeType) {
         this.InternetChargeType = InternetChargeType;
     }
 
     /**
-     * Get Public network outbound bandwidth cap in Mbps. 
-     * @return InternetMaxBandwidthOut Public network outbound bandwidth cap in Mbps.
+     * Get Maximum outbound public bandwidth, in the unit of Mbps. 
+     * @return InternetMaxBandwidthOut Maximum outbound public bandwidth, in the unit of Mbps.
      */
     public Long getInternetMaxBandwidthOut() {
         return this.InternetMaxBandwidthOut;
     }
 
     /**
-     * Set Public network outbound bandwidth cap in Mbps.
-     * @param InternetMaxBandwidthOut Public network outbound bandwidth cap in Mbps.
+     * Set Maximum outbound public bandwidth, in the unit of Mbps.
+     * @param InternetMaxBandwidthOut Maximum outbound public bandwidth, in the unit of Mbps.
      */
     public void setInternetMaxBandwidthOut(Long InternetMaxBandwidthOut) {
         this.InternetMaxBandwidthOut = InternetMaxBandwidthOut;
     }
 
     /**
-     * Get Whether to assign a public IP. 
-     * @return PublicIpAssigned Whether to assign a public IP.
+     * Get Indicates whether a public IP is assigned. 
+     * @return PublicIpAssigned Indicates whether a public IP is assigned.
      */
     public Boolean getPublicIpAssigned() {
         return this.PublicIpAssigned;
     }
 
     /**
-     * Set Whether to assign a public IP.
-     * @param PublicIpAssigned Whether to assign a public IP.
+     * Set Indicates whether a public IP is assigned.
+     * @param PublicIpAssigned Indicates whether a public IP is assigned.
      */
     public void setPublicIpAssigned(Boolean PublicIpAssigned) {
         this.PublicIpAssigned = PublicIpAssigned;

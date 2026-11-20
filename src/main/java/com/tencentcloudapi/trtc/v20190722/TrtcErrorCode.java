@@ -30,9 +30,6 @@ public enum TrtcErrorCode {
      /* This operation is not allowed. submit a ticket to contact us. */
      FAILEDOPERATION_NOTALLOWED("FailedOperation.NotAllowed"),
      
-     /* RTMP is not enabled. */
-     FAILEDOPERATION_NOTRTMPFUNCTION("FailedOperation.NotRtmpFunction"),
-     
      /* Query task failed */
      FAILEDOPERATION_QUERYTASKINFOFAILED("FailedOperation.QueryTaskInfoFailed"),
      
@@ -132,7 +129,7 @@ public enum TrtcErrorCode {
      /* Invalid tone. */
      INVALIDPARAMETER_PITCH("InvalidParameter.Pitch"),
      
-     /*  */
+     /* Pronunciation correction dictionary entry parameter error */
      INVALIDPARAMETER_PRONUNCIATIONDICT("InvalidParameter.PronunciationDict"),
      
      /* The query period exceeds the limit. */
@@ -165,7 +162,7 @@ public enum TrtcErrorCode {
      /* StrRoomId parameter error. */
      INVALIDPARAMETER_STRROOMID("InvalidParameter.StrRoomId"),
      
-     /* Invalid StreamUrl format */
+     /* Stream url parameter verification failure. */
      INVALIDPARAMETER_STREAMURL("InvalidParameter.StreamUrl"),
      
      /* TaskId parameter error. */

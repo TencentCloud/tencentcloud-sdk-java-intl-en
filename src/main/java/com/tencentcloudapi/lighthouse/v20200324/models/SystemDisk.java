@@ -26,14 +26,14 @@ public class SystemDisk extends AbstractModel {
     /**
     * System disk type.
 Valid values: 
-<li> LOCAL_BASIC: local disk</li><li> LOCAL_SSD: local SSD disk</li><li> CLOUD_BASIC: HDD cloud disk</li><li> CLOUD_SSD: SSD cloud disk</li><li> CLOUD_PREMIUM: Premium Cloud Storage</li>
+<li> LOCAL_BASIC: local disk</li><li> LOCAL_SSD: local SSD disk</li><li> CLOUD_BASIC: basic cloud disk</li><li> CLOUD_SSD: SSD cloud disk</li><li> CLOUD_PREMIUM: premium cloud disk</li>
     */
     @SerializedName("DiskType")
     @Expose
     private String DiskType;
 
     /**
-    * System disk size in GB.
+    * System disk size, in the unit of GB.
     */
     @SerializedName("DiskSize")
     @Expose
@@ -41,7 +41,6 @@ Valid values:
 
     /**
     * System disk ID.
-Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("DiskId")
     @Expose
@@ -50,10 +49,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
     /**
      * Get System disk type.
 Valid values: 
-<li> LOCAL_BASIC: local disk</li><li> LOCAL_SSD: local SSD disk</li><li> CLOUD_BASIC: HDD cloud disk</li><li> CLOUD_SSD: SSD cloud disk</li><li> CLOUD_PREMIUM: Premium Cloud Storage</li> 
+<li> LOCAL_BASIC: local disk</li><li> LOCAL_SSD: local SSD disk</li><li> CLOUD_BASIC: basic cloud disk</li><li> CLOUD_SSD: SSD cloud disk</li><li> CLOUD_PREMIUM: premium cloud disk</li> 
      * @return DiskType System disk type.
 Valid values: 
-<li> LOCAL_BASIC: local disk</li><li> LOCAL_SSD: local SSD disk</li><li> CLOUD_BASIC: HDD cloud disk</li><li> CLOUD_SSD: SSD cloud disk</li><li> CLOUD_PREMIUM: Premium Cloud Storage</li>
+<li> LOCAL_BASIC: local disk</li><li> LOCAL_SSD: local SSD disk</li><li> CLOUD_BASIC: basic cloud disk</li><li> CLOUD_SSD: SSD cloud disk</li><li> CLOUD_PREMIUM: premium cloud disk</li>
      */
     public String getDiskType() {
         return this.DiskType;
@@ -62,36 +61,34 @@ Valid values:
     /**
      * Set System disk type.
 Valid values: 
-<li> LOCAL_BASIC: local disk</li><li> LOCAL_SSD: local SSD disk</li><li> CLOUD_BASIC: HDD cloud disk</li><li> CLOUD_SSD: SSD cloud disk</li><li> CLOUD_PREMIUM: Premium Cloud Storage</li>
+<li> LOCAL_BASIC: local disk</li><li> LOCAL_SSD: local SSD disk</li><li> CLOUD_BASIC: basic cloud disk</li><li> CLOUD_SSD: SSD cloud disk</li><li> CLOUD_PREMIUM: premium cloud disk</li>
      * @param DiskType System disk type.
 Valid values: 
-<li> LOCAL_BASIC: local disk</li><li> LOCAL_SSD: local SSD disk</li><li> CLOUD_BASIC: HDD cloud disk</li><li> CLOUD_SSD: SSD cloud disk</li><li> CLOUD_PREMIUM: Premium Cloud Storage</li>
+<li> LOCAL_BASIC: local disk</li><li> LOCAL_SSD: local SSD disk</li><li> CLOUD_BASIC: basic cloud disk</li><li> CLOUD_SSD: SSD cloud disk</li><li> CLOUD_PREMIUM: premium cloud disk</li>
      */
     public void setDiskType(String DiskType) {
         this.DiskType = DiskType;
     }
 
     /**
-     * Get System disk size in GB. 
-     * @return DiskSize System disk size in GB.
+     * Get System disk size, in the unit of GB. 
+     * @return DiskSize System disk size, in the unit of GB.
      */
     public Long getDiskSize() {
         return this.DiskSize;
     }
 
     /**
-     * Set System disk size in GB.
-     * @param DiskSize System disk size in GB.
+     * Set System disk size, in the unit of GB.
+     * @param DiskSize System disk size, in the unit of GB.
      */
     public void setDiskSize(Long DiskSize) {
         this.DiskSize = DiskSize;
     }
 
     /**
-     * Get System disk ID.
-Note: this field may return null, indicating that no valid values can be obtained. 
+     * Get System disk ID. 
      * @return DiskId System disk ID.
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getDiskId() {
         return this.DiskId;
@@ -99,9 +96,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set System disk ID.
-Note: this field may return null, indicating that no valid values can be obtained.
      * @param DiskId System disk ID.
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setDiskId(String DiskId) {
         this.DiskId = DiskId;

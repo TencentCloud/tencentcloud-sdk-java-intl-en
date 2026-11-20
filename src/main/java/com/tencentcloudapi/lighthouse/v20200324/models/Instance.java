@@ -31,7 +31,7 @@ public class Instance extends AbstractModel {
     private String InstanceId;
 
     /**
-    * Package ID.
+    * Bundle ID.
     */
     @SerializedName("BundleId")
     @Expose
@@ -45,14 +45,14 @@ public class Instance extends AbstractModel {
     private String BlueprintId;
 
     /**
-    * Number of instance CPU cores.
+    * Number of CPU cores for the instance, in cores.
     */
     @SerializedName("CPU")
     @Expose
     private Long CPU;
 
     /**
-    * Instance memory capacity in GB.
+    * Instance memory capacity, in GB.
     */
     @SerializedName("Memory")
     @Expose
@@ -67,7 +67,7 @@ public class Instance extends AbstractModel {
 
     /**
     * Instance billing mode. Valid values: 
-PREPAID: prepaid (i.e., monthly subscription).
+PREPAID: prepaid, that is, monthly or yearly subscription.
     */
     @SerializedName("InstanceChargeType")
     @Expose
@@ -81,16 +81,16 @@ PREPAID: prepaid (i.e., monthly subscription).
     private SystemDisk SystemDisk;
 
     /**
-    * Private IP of instance primary ENI. 
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Private IP of the instance's primary NIC. 
+Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("PrivateAddresses")
     @Expose
     private String [] PrivateAddresses;
 
     /**
-    * Public IP of instance primary ENI. 
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Public IP of the instance's primary NIC. 
+Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("PublicAddresses")
     @Expose
@@ -104,16 +104,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private InternetAccessible InternetAccessible;
 
     /**
-    * Auto-Renewal flag. Valid values: 
-NOTIFY_AND_MANUAL_RENEW: notify upon expiration but do not renew automatically  
-NOTIFY_AND_AUTO_RENEW: notify upon expiration and renew automatically.
+    * Auto-renewal flag. Valid values: 
+NOTIFY_AND_MANUAL_RENEW: Notify when the subscription is about to expire, but do not renew automatically.  
+NOTIFY_AND_AUTO_RENEW: Notify when the subscription is about to expire and renew automatically. DISABLE_NOTIFY_AND_MANUAL_RENEW: Do not renew automatically or send notifications.
     */
     @SerializedName("RenewFlag")
     @Expose
     private String RenewFlag;
 
     /**
-    * Instance login settings.
+    * Instance login setting.
     */
     @SerializedName("LoginSettings")
     @Expose
@@ -121,88 +121,92 @@ NOTIFY_AND_AUTO_RENEW: notify upon expiration and renew automatically.
 
     /**
     * Instance status. Valid values: 
-<li>PENDING: Creating</li><li>LAUNCH_FAILED: Failed to create</li><li>RUNNING: Running</li><li>STOPPED: Shut down</li><li>STARTING: Starting up</li><li>STOPPING: Shutting down</li><li>REBOOTING: Restarting</li><li>SHUTDOWN: Shutdown and to be terminated</li><li>TERMINATING: Terminating</li><li>DELETING: Deleting</li><li>FREEZING: Frozen</li><li>ENTER_RESCUE_MODE: Entering the rescue mode</li><li>RESCUE_MODE: Rescue mode</li><li>EXIT_RESCUE_MODE: Exiting from the rescue mode</li>
+<li>PENDING: Creating</li><li>LAUNCH_FAILED: Failed to create</li><li>RUNNING: Running</li><li>STOPPED: Shut down</li><li>STARTING: Starting up</li><li>STOPPING: Shutting down</li><li>REBOOTING: Restarting</li><li>SHUTDOWN: Shutdown and to be terminated</li><li>TERMINATING: Terminating</li><li>DELETING: Deleting</li><li>FREEZING: Frozen</li><li>ENTER_RESCUE_MODE: Entering the rescue mode</li><li>RESCUE_MODE: Rescue mode</li><li>EXIT_RESCUE_MODE: Exiting the rescue mode</li>
     */
     @SerializedName("InstanceState")
     @Expose
     private String InstanceState;
 
     /**
-    * Globally unique ID of instance.
+    * Globally unique ID of the instance.
     */
     @SerializedName("Uuid")
     @Expose
     private String Uuid;
 
     /**
-    * Last instance operation, such as `StopInstances` and `ResetInstance`. Note: this field may return null, indicating that no valid values can be obtained.
+    * Latest operation on the instance, such as StopInstances and ResetInstance. Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("LatestOperation")
     @Expose
     private String LatestOperation;
 
     /**
-    * Last instance operation status. Valid values: 
-SUCCESS: operation succeeded 
-OPERATING: the operation is being executed 
-FAILED: operation failed 
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Status of the latest operation on the instance. Valid values: 
+SUCCESS: The operation succeeded. 
+OPERATING: The operation is in progress. 
+FAILED: The operation failed. 
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("LatestOperationState")
     @Expose
     private String LatestOperationState;
 
     /**
-    * Unique request ID for the last operation of the instance. 
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Unique request ID of the latest operation on the instance. 
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("LatestOperationRequestId")
     @Expose
     private String LatestOperationRequestId;
 
     /**
-    * Isolation time according to ISO 8601 standard. UTC time is used. 
+    * Start time of the latest operation on the instance.
+    */
+    @SerializedName("LatestOperationStartedTime")
+    @Expose
+    private String LatestOperationStartedTime;
+
+    /**
+    * Isolation time in UTC, formatted according to the ISO 8601 standard. 
 Format: YYYY-MM-DDThh:mm:ssZ.
-Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("IsolatedTime")
     @Expose
     private String IsolatedTime;
 
     /**
-    * Creation time according to ISO 8601 standard. UTC time is used. 
+    * Creation time in UTC, formatted according to the ISO 8601 standard. 
 Format: YYYY-MM-DDThh:mm:ssZ.
-Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("CreatedTime")
     @Expose
     private String CreatedTime;
 
     /**
-    * Expiration time according to ISO 8601 standard. UTC time is used. 
+    * Expiration time in UTC, formatted according to the ISO 8601 standard. 
 Format: YYYY-MM-DDThh:mm:ssZ.
-Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ExpiredTime")
     @Expose
     private String ExpiredTime;
 
     /**
-    * OS type, such as LINUX_UNIX and WINDOWS.
+    * Operating system platform type, such as LINUX_UNIX and WINDOWS.
     */
     @SerializedName("PlatformType")
     @Expose
     private String PlatformType;
 
     /**
-    * OS type.
+    * Operating system platform.
     */
     @SerializedName("Platform")
     @Expose
     private String Platform;
 
     /**
-    * OS name.
+    * Operating system name.
     */
     @SerializedName("OsName")
     @Expose
@@ -216,19 +220,33 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String Zone;
 
     /**
-    * The list of tags associated with the instance
+    * List of tags bound to the instance.
     */
     @SerializedName("Tags")
     @Expose
     private Tag [] Tags;
 
     /**
-    * Obtain instance status
-<li>NORMAL: The instance is normal</li><li>NETWORK_RESTRICT: The instance is blocked from the network.</li>
+    * Instance ban status. Valid values:
+<li>NORMAL: The instance is normal.</li><li>NETWORK_RESTRICT: The instance is banned from network access.</li>
     */
     @SerializedName("InstanceRestrictState")
     @Expose
     private String InstanceRestrictState;
+
+    /**
+    * Invocation ID of the TAT command to be automatically executed after the instance is created.
+    */
+    @SerializedName("InitInvocationId")
+    @Expose
+    private String InitInvocationId;
+
+    /**
+    * Instance violation details.
+    */
+    @SerializedName("InstanceViolationDetail")
+    @Expose
+    private InstanceViolationDetail InstanceViolationDetail;
 
     /**
      * Get Instance ID. 
@@ -247,16 +265,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Package ID. 
-     * @return BundleId Package ID.
+     * Get Bundle ID. 
+     * @return BundleId Bundle ID.
      */
     public String getBundleId() {
         return this.BundleId;
     }
 
     /**
-     * Set Package ID.
-     * @param BundleId Package ID.
+     * Set Bundle ID.
+     * @param BundleId Bundle ID.
      */
     public void setBundleId(String BundleId) {
         this.BundleId = BundleId;
@@ -279,32 +297,32 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Number of instance CPU cores. 
-     * @return CPU Number of instance CPU cores.
+     * Get Number of CPU cores for the instance, in cores. 
+     * @return CPU Number of CPU cores for the instance, in cores.
      */
     public Long getCPU() {
         return this.CPU;
     }
 
     /**
-     * Set Number of instance CPU cores.
-     * @param CPU Number of instance CPU cores.
+     * Set Number of CPU cores for the instance, in cores.
+     * @param CPU Number of CPU cores for the instance, in cores.
      */
     public void setCPU(Long CPU) {
         this.CPU = CPU;
     }
 
     /**
-     * Get Instance memory capacity in GB. 
-     * @return Memory Instance memory capacity in GB.
+     * Get Instance memory capacity, in GB. 
+     * @return Memory Instance memory capacity, in GB.
      */
     public Long getMemory() {
         return this.Memory;
     }
 
     /**
-     * Set Instance memory capacity in GB.
-     * @param Memory Instance memory capacity in GB.
+     * Set Instance memory capacity, in GB.
+     * @param Memory Instance memory capacity, in GB.
      */
     public void setMemory(Long Memory) {
         this.Memory = Memory;
@@ -328,9 +346,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Instance billing mode. Valid values: 
-PREPAID: prepaid (i.e., monthly subscription). 
+PREPAID: prepaid, that is, monthly or yearly subscription. 
      * @return InstanceChargeType Instance billing mode. Valid values: 
-PREPAID: prepaid (i.e., monthly subscription).
+PREPAID: prepaid, that is, monthly or yearly subscription.
      */
     public String getInstanceChargeType() {
         return this.InstanceChargeType;
@@ -338,9 +356,9 @@ PREPAID: prepaid (i.e., monthly subscription).
 
     /**
      * Set Instance billing mode. Valid values: 
-PREPAID: prepaid (i.e., monthly subscription).
+PREPAID: prepaid, that is, monthly or yearly subscription.
      * @param InstanceChargeType Instance billing mode. Valid values: 
-PREPAID: prepaid (i.e., monthly subscription).
+PREPAID: prepaid, that is, monthly or yearly subscription.
      */
     public void setInstanceChargeType(String InstanceChargeType) {
         this.InstanceChargeType = InstanceChargeType;
@@ -363,40 +381,40 @@ PREPAID: prepaid (i.e., monthly subscription).
     }
 
     /**
-     * Get Private IP of instance primary ENI. 
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return PrivateAddresses Private IP of instance primary ENI. 
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Private IP of the instance's primary NIC. 
+Note: This field may return null, indicating that no valid value can be obtained. 
+     * @return PrivateAddresses Private IP of the instance's primary NIC. 
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public String [] getPrivateAddresses() {
         return this.PrivateAddresses;
     }
 
     /**
-     * Set Private IP of instance primary ENI. 
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param PrivateAddresses Private IP of instance primary ENI. 
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Private IP of the instance's primary NIC. 
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param PrivateAddresses Private IP of the instance's primary NIC. 
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setPrivateAddresses(String [] PrivateAddresses) {
         this.PrivateAddresses = PrivateAddresses;
     }
 
     /**
-     * Get Public IP of instance primary ENI. 
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return PublicAddresses Public IP of instance primary ENI. 
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Public IP of the instance's primary NIC. 
+Note: This field may return null, indicating that no valid value can be obtained. 
+     * @return PublicAddresses Public IP of the instance's primary NIC. 
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public String [] getPublicAddresses() {
         return this.PublicAddresses;
     }
 
     /**
-     * Set Public IP of instance primary ENI. 
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param PublicAddresses Public IP of instance primary ENI. 
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Public IP of the instance's primary NIC. 
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param PublicAddresses Public IP of the instance's primary NIC. 
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setPublicAddresses(String [] PublicAddresses) {
         this.PublicAddresses = PublicAddresses;
@@ -419,40 +437,40 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Auto-Renewal flag. Valid values: 
-NOTIFY_AND_MANUAL_RENEW: notify upon expiration but do not renew automatically  
-NOTIFY_AND_AUTO_RENEW: notify upon expiration and renew automatically. 
-     * @return RenewFlag Auto-Renewal flag. Valid values: 
-NOTIFY_AND_MANUAL_RENEW: notify upon expiration but do not renew automatically  
-NOTIFY_AND_AUTO_RENEW: notify upon expiration and renew automatically.
+     * Get Auto-renewal flag. Valid values: 
+NOTIFY_AND_MANUAL_RENEW: Notify when the subscription is about to expire, but do not renew automatically.  
+NOTIFY_AND_AUTO_RENEW: Notify when the subscription is about to expire and renew automatically. DISABLE_NOTIFY_AND_MANUAL_RENEW: Do not renew automatically or send notifications. 
+     * @return RenewFlag Auto-renewal flag. Valid values: 
+NOTIFY_AND_MANUAL_RENEW: Notify when the subscription is about to expire, but do not renew automatically.  
+NOTIFY_AND_AUTO_RENEW: Notify when the subscription is about to expire and renew automatically. DISABLE_NOTIFY_AND_MANUAL_RENEW: Do not renew automatically or send notifications.
      */
     public String getRenewFlag() {
         return this.RenewFlag;
     }
 
     /**
-     * Set Auto-Renewal flag. Valid values: 
-NOTIFY_AND_MANUAL_RENEW: notify upon expiration but do not renew automatically  
-NOTIFY_AND_AUTO_RENEW: notify upon expiration and renew automatically.
-     * @param RenewFlag Auto-Renewal flag. Valid values: 
-NOTIFY_AND_MANUAL_RENEW: notify upon expiration but do not renew automatically  
-NOTIFY_AND_AUTO_RENEW: notify upon expiration and renew automatically.
+     * Set Auto-renewal flag. Valid values: 
+NOTIFY_AND_MANUAL_RENEW: Notify when the subscription is about to expire, but do not renew automatically.  
+NOTIFY_AND_AUTO_RENEW: Notify when the subscription is about to expire and renew automatically. DISABLE_NOTIFY_AND_MANUAL_RENEW: Do not renew automatically or send notifications.
+     * @param RenewFlag Auto-renewal flag. Valid values: 
+NOTIFY_AND_MANUAL_RENEW: Notify when the subscription is about to expire, but do not renew automatically.  
+NOTIFY_AND_AUTO_RENEW: Notify when the subscription is about to expire and renew automatically. DISABLE_NOTIFY_AND_MANUAL_RENEW: Do not renew automatically or send notifications.
      */
     public void setRenewFlag(String RenewFlag) {
         this.RenewFlag = RenewFlag;
     }
 
     /**
-     * Get Instance login settings. 
-     * @return LoginSettings Instance login settings.
+     * Get Instance login setting. 
+     * @return LoginSettings Instance login setting.
      */
     public LoginSettings getLoginSettings() {
         return this.LoginSettings;
     }
 
     /**
-     * Set Instance login settings.
-     * @param LoginSettings Instance login settings.
+     * Set Instance login setting.
+     * @param LoginSettings Instance login setting.
      */
     public void setLoginSettings(LoginSettings LoginSettings) {
         this.LoginSettings = LoginSettings;
@@ -460,9 +478,9 @@ NOTIFY_AND_AUTO_RENEW: notify upon expiration and renew automatically.
 
     /**
      * Get Instance status. Valid values: 
-<li>PENDING: Creating</li><li>LAUNCH_FAILED: Failed to create</li><li>RUNNING: Running</li><li>STOPPED: Shut down</li><li>STARTING: Starting up</li><li>STOPPING: Shutting down</li><li>REBOOTING: Restarting</li><li>SHUTDOWN: Shutdown and to be terminated</li><li>TERMINATING: Terminating</li><li>DELETING: Deleting</li><li>FREEZING: Frozen</li><li>ENTER_RESCUE_MODE: Entering the rescue mode</li><li>RESCUE_MODE: Rescue mode</li><li>EXIT_RESCUE_MODE: Exiting from the rescue mode</li> 
+<li>PENDING: Creating</li><li>LAUNCH_FAILED: Failed to create</li><li>RUNNING: Running</li><li>STOPPED: Shut down</li><li>STARTING: Starting up</li><li>STOPPING: Shutting down</li><li>REBOOTING: Restarting</li><li>SHUTDOWN: Shutdown and to be terminated</li><li>TERMINATING: Terminating</li><li>DELETING: Deleting</li><li>FREEZING: Frozen</li><li>ENTER_RESCUE_MODE: Entering the rescue mode</li><li>RESCUE_MODE: Rescue mode</li><li>EXIT_RESCUE_MODE: Exiting the rescue mode</li> 
      * @return InstanceState Instance status. Valid values: 
-<li>PENDING: Creating</li><li>LAUNCH_FAILED: Failed to create</li><li>RUNNING: Running</li><li>STOPPED: Shut down</li><li>STARTING: Starting up</li><li>STOPPING: Shutting down</li><li>REBOOTING: Restarting</li><li>SHUTDOWN: Shutdown and to be terminated</li><li>TERMINATING: Terminating</li><li>DELETING: Deleting</li><li>FREEZING: Frozen</li><li>ENTER_RESCUE_MODE: Entering the rescue mode</li><li>RESCUE_MODE: Rescue mode</li><li>EXIT_RESCUE_MODE: Exiting from the rescue mode</li>
+<li>PENDING: Creating</li><li>LAUNCH_FAILED: Failed to create</li><li>RUNNING: Running</li><li>STOPPED: Shut down</li><li>STARTING: Starting up</li><li>STOPPING: Shutting down</li><li>REBOOTING: Restarting</li><li>SHUTDOWN: Shutdown and to be terminated</li><li>TERMINATING: Terminating</li><li>DELETING: Deleting</li><li>FREEZING: Frozen</li><li>ENTER_RESCUE_MODE: Entering the rescue mode</li><li>RESCUE_MODE: Rescue mode</li><li>EXIT_RESCUE_MODE: Exiting the rescue mode</li>
      */
     public String getInstanceState() {
         return this.InstanceState;
@@ -470,213 +488,217 @@ NOTIFY_AND_AUTO_RENEW: notify upon expiration and renew automatically.
 
     /**
      * Set Instance status. Valid values: 
-<li>PENDING: Creating</li><li>LAUNCH_FAILED: Failed to create</li><li>RUNNING: Running</li><li>STOPPED: Shut down</li><li>STARTING: Starting up</li><li>STOPPING: Shutting down</li><li>REBOOTING: Restarting</li><li>SHUTDOWN: Shutdown and to be terminated</li><li>TERMINATING: Terminating</li><li>DELETING: Deleting</li><li>FREEZING: Frozen</li><li>ENTER_RESCUE_MODE: Entering the rescue mode</li><li>RESCUE_MODE: Rescue mode</li><li>EXIT_RESCUE_MODE: Exiting from the rescue mode</li>
+<li>PENDING: Creating</li><li>LAUNCH_FAILED: Failed to create</li><li>RUNNING: Running</li><li>STOPPED: Shut down</li><li>STARTING: Starting up</li><li>STOPPING: Shutting down</li><li>REBOOTING: Restarting</li><li>SHUTDOWN: Shutdown and to be terminated</li><li>TERMINATING: Terminating</li><li>DELETING: Deleting</li><li>FREEZING: Frozen</li><li>ENTER_RESCUE_MODE: Entering the rescue mode</li><li>RESCUE_MODE: Rescue mode</li><li>EXIT_RESCUE_MODE: Exiting the rescue mode</li>
      * @param InstanceState Instance status. Valid values: 
-<li>PENDING: Creating</li><li>LAUNCH_FAILED: Failed to create</li><li>RUNNING: Running</li><li>STOPPED: Shut down</li><li>STARTING: Starting up</li><li>STOPPING: Shutting down</li><li>REBOOTING: Restarting</li><li>SHUTDOWN: Shutdown and to be terminated</li><li>TERMINATING: Terminating</li><li>DELETING: Deleting</li><li>FREEZING: Frozen</li><li>ENTER_RESCUE_MODE: Entering the rescue mode</li><li>RESCUE_MODE: Rescue mode</li><li>EXIT_RESCUE_MODE: Exiting from the rescue mode</li>
+<li>PENDING: Creating</li><li>LAUNCH_FAILED: Failed to create</li><li>RUNNING: Running</li><li>STOPPED: Shut down</li><li>STARTING: Starting up</li><li>STOPPING: Shutting down</li><li>REBOOTING: Restarting</li><li>SHUTDOWN: Shutdown and to be terminated</li><li>TERMINATING: Terminating</li><li>DELETING: Deleting</li><li>FREEZING: Frozen</li><li>ENTER_RESCUE_MODE: Entering the rescue mode</li><li>RESCUE_MODE: Rescue mode</li><li>EXIT_RESCUE_MODE: Exiting the rescue mode</li>
      */
     public void setInstanceState(String InstanceState) {
         this.InstanceState = InstanceState;
     }
 
     /**
-     * Get Globally unique ID of instance. 
-     * @return Uuid Globally unique ID of instance.
+     * Get Globally unique ID of the instance. 
+     * @return Uuid Globally unique ID of the instance.
      */
     public String getUuid() {
         return this.Uuid;
     }
 
     /**
-     * Set Globally unique ID of instance.
-     * @param Uuid Globally unique ID of instance.
+     * Set Globally unique ID of the instance.
+     * @param Uuid Globally unique ID of the instance.
      */
     public void setUuid(String Uuid) {
         this.Uuid = Uuid;
     }
 
     /**
-     * Get Last instance operation, such as `StopInstances` and `ResetInstance`. Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return LatestOperation Last instance operation, such as `StopInstances` and `ResetInstance`. Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Latest operation on the instance, such as StopInstances and ResetInstance. Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return LatestOperation Latest operation on the instance, such as StopInstances and ResetInstance. Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getLatestOperation() {
         return this.LatestOperation;
     }
 
     /**
-     * Set Last instance operation, such as `StopInstances` and `ResetInstance`. Note: this field may return null, indicating that no valid values can be obtained.
-     * @param LatestOperation Last instance operation, such as `StopInstances` and `ResetInstance`. Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Latest operation on the instance, such as StopInstances and ResetInstance. Note: This field may return null, indicating that no valid values can be obtained.
+     * @param LatestOperation Latest operation on the instance, such as StopInstances and ResetInstance. Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setLatestOperation(String LatestOperation) {
         this.LatestOperation = LatestOperation;
     }
 
     /**
-     * Get Last instance operation status. Valid values: 
-SUCCESS: operation succeeded 
-OPERATING: the operation is being executed 
-FAILED: operation failed 
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return LatestOperationState Last instance operation status. Valid values: 
-SUCCESS: operation succeeded 
-OPERATING: the operation is being executed 
-FAILED: operation failed 
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Status of the latest operation on the instance. Valid values: 
+SUCCESS: The operation succeeded. 
+OPERATING: The operation is in progress. 
+FAILED: The operation failed. 
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return LatestOperationState Status of the latest operation on the instance. Valid values: 
+SUCCESS: The operation succeeded. 
+OPERATING: The operation is in progress. 
+FAILED: The operation failed. 
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getLatestOperationState() {
         return this.LatestOperationState;
     }
 
     /**
-     * Set Last instance operation status. Valid values: 
-SUCCESS: operation succeeded 
-OPERATING: the operation is being executed 
-FAILED: operation failed 
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param LatestOperationState Last instance operation status. Valid values: 
-SUCCESS: operation succeeded 
-OPERATING: the operation is being executed 
-FAILED: operation failed 
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Status of the latest operation on the instance. Valid values: 
+SUCCESS: The operation succeeded. 
+OPERATING: The operation is in progress. 
+FAILED: The operation failed. 
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param LatestOperationState Status of the latest operation on the instance. Valid values: 
+SUCCESS: The operation succeeded. 
+OPERATING: The operation is in progress. 
+FAILED: The operation failed. 
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setLatestOperationState(String LatestOperationState) {
         this.LatestOperationState = LatestOperationState;
     }
 
     /**
-     * Get Unique request ID for the last operation of the instance. 
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return LatestOperationRequestId Unique request ID for the last operation of the instance. 
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Unique request ID of the latest operation on the instance. 
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return LatestOperationRequestId Unique request ID of the latest operation on the instance. 
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getLatestOperationRequestId() {
         return this.LatestOperationRequestId;
     }
 
     /**
-     * Set Unique request ID for the last operation of the instance. 
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param LatestOperationRequestId Unique request ID for the last operation of the instance. 
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Unique request ID of the latest operation on the instance. 
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param LatestOperationRequestId Unique request ID of the latest operation on the instance. 
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setLatestOperationRequestId(String LatestOperationRequestId) {
         this.LatestOperationRequestId = LatestOperationRequestId;
     }
 
     /**
-     * Get Isolation time according to ISO 8601 standard. UTC time is used. 
+     * Get Start time of the latest operation on the instance. 
+     * @return LatestOperationStartedTime Start time of the latest operation on the instance.
+     */
+    public String getLatestOperationStartedTime() {
+        return this.LatestOperationStartedTime;
+    }
+
+    /**
+     * Set Start time of the latest operation on the instance.
+     * @param LatestOperationStartedTime Start time of the latest operation on the instance.
+     */
+    public void setLatestOperationStartedTime(String LatestOperationStartedTime) {
+        this.LatestOperationStartedTime = LatestOperationStartedTime;
+    }
+
+    /**
+     * Get Isolation time in UTC, formatted according to the ISO 8601 standard. 
+Format: YYYY-MM-DDThh:mm:ssZ. 
+     * @return IsolatedTime Isolation time in UTC, formatted according to the ISO 8601 standard. 
 Format: YYYY-MM-DDThh:mm:ssZ.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return IsolatedTime Isolation time according to ISO 8601 standard. UTC time is used. 
-Format: YYYY-MM-DDThh:mm:ssZ.
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getIsolatedTime() {
         return this.IsolatedTime;
     }
 
     /**
-     * Set Isolation time according to ISO 8601 standard. UTC time is used. 
+     * Set Isolation time in UTC, formatted according to the ISO 8601 standard. 
 Format: YYYY-MM-DDThh:mm:ssZ.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param IsolatedTime Isolation time according to ISO 8601 standard. UTC time is used. 
+     * @param IsolatedTime Isolation time in UTC, formatted according to the ISO 8601 standard. 
 Format: YYYY-MM-DDThh:mm:ssZ.
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setIsolatedTime(String IsolatedTime) {
         this.IsolatedTime = IsolatedTime;
     }
 
     /**
-     * Get Creation time according to ISO 8601 standard. UTC time is used. 
+     * Get Creation time in UTC, formatted according to the ISO 8601 standard. 
+Format: YYYY-MM-DDThh:mm:ssZ. 
+     * @return CreatedTime Creation time in UTC, formatted according to the ISO 8601 standard. 
 Format: YYYY-MM-DDThh:mm:ssZ.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return CreatedTime Creation time according to ISO 8601 standard. UTC time is used. 
-Format: YYYY-MM-DDThh:mm:ssZ.
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getCreatedTime() {
         return this.CreatedTime;
     }
 
     /**
-     * Set Creation time according to ISO 8601 standard. UTC time is used. 
+     * Set Creation time in UTC, formatted according to the ISO 8601 standard. 
 Format: YYYY-MM-DDThh:mm:ssZ.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param CreatedTime Creation time according to ISO 8601 standard. UTC time is used. 
+     * @param CreatedTime Creation time in UTC, formatted according to the ISO 8601 standard. 
 Format: YYYY-MM-DDThh:mm:ssZ.
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setCreatedTime(String CreatedTime) {
         this.CreatedTime = CreatedTime;
     }
 
     /**
-     * Get Expiration time according to ISO 8601 standard. UTC time is used. 
+     * Get Expiration time in UTC, formatted according to the ISO 8601 standard. 
+Format: YYYY-MM-DDThh:mm:ssZ. 
+     * @return ExpiredTime Expiration time in UTC, formatted according to the ISO 8601 standard. 
 Format: YYYY-MM-DDThh:mm:ssZ.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return ExpiredTime Expiration time according to ISO 8601 standard. UTC time is used. 
-Format: YYYY-MM-DDThh:mm:ssZ.
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getExpiredTime() {
         return this.ExpiredTime;
     }
 
     /**
-     * Set Expiration time according to ISO 8601 standard. UTC time is used. 
+     * Set Expiration time in UTC, formatted according to the ISO 8601 standard. 
 Format: YYYY-MM-DDThh:mm:ssZ.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param ExpiredTime Expiration time according to ISO 8601 standard. UTC time is used. 
+     * @param ExpiredTime Expiration time in UTC, formatted according to the ISO 8601 standard. 
 Format: YYYY-MM-DDThh:mm:ssZ.
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setExpiredTime(String ExpiredTime) {
         this.ExpiredTime = ExpiredTime;
     }
 
     /**
-     * Get OS type, such as LINUX_UNIX and WINDOWS. 
-     * @return PlatformType OS type, such as LINUX_UNIX and WINDOWS.
+     * Get Operating system platform type, such as LINUX_UNIX and WINDOWS. 
+     * @return PlatformType Operating system platform type, such as LINUX_UNIX and WINDOWS.
      */
     public String getPlatformType() {
         return this.PlatformType;
     }
 
     /**
-     * Set OS type, such as LINUX_UNIX and WINDOWS.
-     * @param PlatformType OS type, such as LINUX_UNIX and WINDOWS.
+     * Set Operating system platform type, such as LINUX_UNIX and WINDOWS.
+     * @param PlatformType Operating system platform type, such as LINUX_UNIX and WINDOWS.
      */
     public void setPlatformType(String PlatformType) {
         this.PlatformType = PlatformType;
     }
 
     /**
-     * Get OS type. 
-     * @return Platform OS type.
+     * Get Operating system platform. 
+     * @return Platform Operating system platform.
      */
     public String getPlatform() {
         return this.Platform;
     }
 
     /**
-     * Set OS type.
-     * @param Platform OS type.
+     * Set Operating system platform.
+     * @param Platform Operating system platform.
      */
     public void setPlatform(String Platform) {
         this.Platform = Platform;
     }
 
     /**
-     * Get OS name. 
-     * @return OsName OS name.
+     * Get Operating system name. 
+     * @return OsName Operating system name.
      */
     public String getOsName() {
         return this.OsName;
     }
 
     /**
-     * Set OS name.
-     * @param OsName OS name.
+     * Set Operating system name.
+     * @param OsName Operating system name.
      */
     public void setOsName(String OsName) {
         this.OsName = OsName;
@@ -699,39 +721,71 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get The list of tags associated with the instance 
-     * @return Tags The list of tags associated with the instance
+     * Get List of tags bound to the instance. 
+     * @return Tags List of tags bound to the instance.
      */
     public Tag [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set The list of tags associated with the instance
-     * @param Tags The list of tags associated with the instance
+     * Set List of tags bound to the instance.
+     * @param Tags List of tags bound to the instance.
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get Obtain instance status
-<li>NORMAL: The instance is normal</li><li>NETWORK_RESTRICT: The instance is blocked from the network.</li> 
-     * @return InstanceRestrictState Obtain instance status
-<li>NORMAL: The instance is normal</li><li>NETWORK_RESTRICT: The instance is blocked from the network.</li>
+     * Get Instance ban status. Valid values:
+<li>NORMAL: The instance is normal.</li><li>NETWORK_RESTRICT: The instance is banned from network access.</li> 
+     * @return InstanceRestrictState Instance ban status. Valid values:
+<li>NORMAL: The instance is normal.</li><li>NETWORK_RESTRICT: The instance is banned from network access.</li>
      */
     public String getInstanceRestrictState() {
         return this.InstanceRestrictState;
     }
 
     /**
-     * Set Obtain instance status
-<li>NORMAL: The instance is normal</li><li>NETWORK_RESTRICT: The instance is blocked from the network.</li>
-     * @param InstanceRestrictState Obtain instance status
-<li>NORMAL: The instance is normal</li><li>NETWORK_RESTRICT: The instance is blocked from the network.</li>
+     * Set Instance ban status. Valid values:
+<li>NORMAL: The instance is normal.</li><li>NETWORK_RESTRICT: The instance is banned from network access.</li>
+     * @param InstanceRestrictState Instance ban status. Valid values:
+<li>NORMAL: The instance is normal.</li><li>NETWORK_RESTRICT: The instance is banned from network access.</li>
      */
     public void setInstanceRestrictState(String InstanceRestrictState) {
         this.InstanceRestrictState = InstanceRestrictState;
+    }
+
+    /**
+     * Get Invocation ID of the TAT command to be automatically executed after the instance is created. 
+     * @return InitInvocationId Invocation ID of the TAT command to be automatically executed after the instance is created.
+     */
+    public String getInitInvocationId() {
+        return this.InitInvocationId;
+    }
+
+    /**
+     * Set Invocation ID of the TAT command to be automatically executed after the instance is created.
+     * @param InitInvocationId Invocation ID of the TAT command to be automatically executed after the instance is created.
+     */
+    public void setInitInvocationId(String InitInvocationId) {
+        this.InitInvocationId = InitInvocationId;
+    }
+
+    /**
+     * Get Instance violation details. 
+     * @return InstanceViolationDetail Instance violation details.
+     */
+    public InstanceViolationDetail getInstanceViolationDetail() {
+        return this.InstanceViolationDetail;
+    }
+
+    /**
+     * Set Instance violation details.
+     * @param InstanceViolationDetail Instance violation details.
+     */
+    public void setInstanceViolationDetail(InstanceViolationDetail InstanceViolationDetail) {
+        this.InstanceViolationDetail = InstanceViolationDetail;
     }
 
     public Instance() {
@@ -802,6 +856,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
         if (source.LatestOperationRequestId != null) {
             this.LatestOperationRequestId = new String(source.LatestOperationRequestId);
         }
+        if (source.LatestOperationStartedTime != null) {
+            this.LatestOperationStartedTime = new String(source.LatestOperationStartedTime);
+        }
         if (source.IsolatedTime != null) {
             this.IsolatedTime = new String(source.IsolatedTime);
         }
@@ -832,6 +889,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
         if (source.InstanceRestrictState != null) {
             this.InstanceRestrictState = new String(source.InstanceRestrictState);
         }
+        if (source.InitInvocationId != null) {
+            this.InitInvocationId = new String(source.InitInvocationId);
+        }
+        if (source.InstanceViolationDetail != null) {
+            this.InstanceViolationDetail = new InstanceViolationDetail(source.InstanceViolationDetail);
+        }
     }
 
 
@@ -857,6 +920,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "LatestOperation", this.LatestOperation);
         this.setParamSimple(map, prefix + "LatestOperationState", this.LatestOperationState);
         this.setParamSimple(map, prefix + "LatestOperationRequestId", this.LatestOperationRequestId);
+        this.setParamSimple(map, prefix + "LatestOperationStartedTime", this.LatestOperationStartedTime);
         this.setParamSimple(map, prefix + "IsolatedTime", this.IsolatedTime);
         this.setParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
         this.setParamSimple(map, prefix + "ExpiredTime", this.ExpiredTime);
@@ -866,6 +930,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "Zone", this.Zone);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "InstanceRestrictState", this.InstanceRestrictState);
+        this.setParamSimple(map, prefix + "InitInvocationId", this.InitInvocationId);
+        this.setParamObj(map, prefix + "InstanceViolationDetail.", this.InstanceViolationDetail);
 
     }
 }
