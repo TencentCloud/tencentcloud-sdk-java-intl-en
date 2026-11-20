@@ -456,6 +456,17 @@ A maximum of 10 requests can be initiated per second for this API.
     }
 
     /**
+     *This API is used to recognize entry and exit record PDFs and verify electronic signatures, returning structured entry and exit records and signature verification conclusions.
+     * @param req VerifyPdfOcrRequest
+     * @return VerifyPdfOcrResponse
+     * @throws TencentCloudSDKException
+     */
+    public VerifyPdfOcrResponse VerifyPdfOcr(VerifyPdfOcrRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "VerifyPdfOcr", VerifyPdfOcrResponse.class);
+    }
+
+    /**
      *This API is used to recognize the vehicle identification number (VIN) in an image.
      * @param req VinOCRRequest
      * @return VinOCRResponse
