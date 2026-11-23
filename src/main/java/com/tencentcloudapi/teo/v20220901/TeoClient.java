@@ -219,6 +219,17 @@ The feature is only supported by the enterprise plan and is currently in closed 
     }
 
     /**
+     *This API is used to create a custom group. A custom group is used to centrally manage a set of reusable matching entries. For example, you can save multiple JA3/JA4 TLS fingerprints as a TLS fingerprint group and directly reference the group in security rules, avoiding the need to maintain the same fingerprint list in multiple rules.
+     * @param req CreateCustomGroupRequest
+     * @return CreateCustomGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateCustomGroupResponse CreateCustomGroup(CreateCustomGroupRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateCustomGroup", CreateCustomGroupResponse.class);
+    }
+
+    /**
      *This API is used to create a custom response page.
      * @param req CreateCustomizeErrorPageRequest
      * @return CreateCustomizeErrorPageResponse
@@ -666,6 +677,17 @@ The feature is only supported by the enterprise plan and is currently in closed 
     }
 
     /**
+     *This API is used to delete a specified custom group. If the group is referenced by a rule, deletion is not allowed. Remove the reference first.
+     * @param req DeleteCustomGroupRequest
+     * @return DeleteCustomGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteCustomGroupResponse DeleteCustomGroup(DeleteCustomGroupRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteCustomGroup", DeleteCustomGroupResponse.class);
+    }
+
+    /**
      *You can use this API to batch delete DNS records.
      * @param req DeleteDnsRecordsRequest
      * @return DeleteDnsRecordsResponse
@@ -1087,6 +1109,39 @@ Abbreviation description:
     public DescribeCustomErrorPagesResponse DescribeCustomErrorPages(DescribeCustomErrorPagesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeCustomErrorPages", DescribeCustomErrorPagesResponse.class);
+    }
+
+    /**
+     *This API is used to query the detailed information of a custom group, including all entries in the group (returned with pagination via Limit/Offset). The DescribeCustomGroups list API returns up to the first 500 entries for each group. To obtain all entries, use this API. The GroupId can be obtained from the response of CreateCustomGroup or by querying DescribeCustomGroups.
+     * @param req DescribeCustomGroupRequest
+     * @return DescribeCustomGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCustomGroupResponse DescribeCustomGroup(DescribeCustomGroupRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCustomGroup", DescribeCustomGroupResponse.class);
+    }
+
+    /**
+     *This API is used to obtain the security policy configuration that uses a custom group.
+     * @param req DescribeCustomGroupReferencesRequest
+     * @return DescribeCustomGroupReferencesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCustomGroupReferencesResponse DescribeCustomGroupReferences(DescribeCustomGroupReferencesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCustomGroupReferences", DescribeCustomGroupReferencesResponse.class);
+    }
+
+    /**
+     *This API is used to query the list of custom groups under a specified site. This API returns only the first 500 entries of each custom group. To query all entries in a group, use the DescribeSecurityCustomGroup API.
+     * @param req DescribeCustomGroupsRequest
+     * @return DescribeCustomGroupsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCustomGroupsResponse DescribeCustomGroups(DescribeCustomGroupsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCustomGroups", DescribeCustomGroupsResponse.class);
     }
 
     /**
@@ -2197,6 +2252,17 @@ The feature is only supported in the enterprise plan and is currently in closed 
     public ModifyCustomErrorPageResponse ModifyCustomErrorPage(ModifyCustomErrorPageRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyCustomErrorPage", ModifyCustomErrorPageResponse.class);
+    }
+
+    /**
+     *This API is used to modify the content of a custom group. GroupType cannot be modified after creation. When modifying entries in the group, you can specify replacement, append, or removal operations through GroupItemOperation.
+     * @param req ModifyCustomGroupRequest
+     * @return ModifyCustomGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyCustomGroupResponse ModifyCustomGroup(ModifyCustomGroupRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyCustomGroup", ModifyCustomGroupResponse.class);
     }
 
     /**
