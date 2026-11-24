@@ -3,6 +3,9 @@ public enum CarErrorCode {
      /* CAM signature/authentication error. */
      AUTHFAILURE("AuthFailure"),
      
+     /* Request unauthorized. */
+     AUTHFAILURE_UNAUTHORIZEDOPERATION("AuthFailure.UnauthorizedOperation"),
+     
      /* Operation failed. */
      FAILEDOPERATION("FailedOperation"),
      
@@ -42,8 +45,14 @@ public enum CarErrorCode {
      /* Invalid parameter value. */
      INVALIDPARAMETERVALUE("InvalidParameterValue"),
      
+     /* The number of MCP Tokens exceeds the quota limit. */
+     LIMITEXCEEDED_MCPTOKEN("LimitExceeded.MCPToken"),
+     
      /* [Multi-person Interaction] The number of persons corresponding to a role exceeds the limit. */
      LIMITEXCEEDED_ROLE("LimitExceeded.Role"),
+     
+     /* Missing parameter error. */
+     MISSINGPARAMETER("MissingParameter"),
      
      /* Operation denied. */
      OPERATIONDENIED("OperationDenied"),
@@ -57,6 +66,12 @@ public enum CarErrorCode {
      /* The number of versions exceeds the limit. */
      OPERATIONDENIED_VERSIONLIMITEXCEEDED("OperationDenied.VersionLimitExceeded"),
      
+     /* The resource is occupied. */
+     RESOURCEINUSE("ResourceInUse"),
+     
+     /* Resources do not exist. */
+     RESOURCENOTFOUND("ResourceNotFound"),
+     
      /* No available concurrency quota. */
      RESOURCENOTFOUND_NOIDLE("ResourceNotFound.NoIdle"),
      
@@ -68,6 +83,9 @@ public enum CarErrorCode {
      
      /* It is being initialized. */
      RESOURCEUNAVAILABLE_INITIALIZATION("ResourceUnavailable.Initialization"),
+     
+     /* The operation is not supported. */
+     UNSUPPORTEDOPERATION("UnsupportedOperation"),
      
      /* The session is being terminated. */
      UNSUPPORTEDOPERATION_STOPPING("UnsupportedOperation.Stopping");

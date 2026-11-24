@@ -105,6 +105,17 @@ public class CarClient extends AbstractClient{
     }
 
     /**
+     *This API is used to create an MCP token (issue a token).
+     * @param req CreateMCPTokenRequest
+     * @return CreateMCPTokenResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateMCPTokenResponse CreateMCPToken(CreateMCPTokenRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateMCPToken", CreateMCPTokenResponse.class);
+    }
+
+    /**
      *This API is used to create a session. The timeout period of the API is 5 seconds.
      * @param req CreateSessionRequest
      * @return CreateSessionResponse
@@ -270,6 +281,17 @@ public class CarClient extends AbstractClient{
     }
 
     /**
+     *This API is used to query the MCP Token list.
+     * @param req DescribeMCPTokensRequest
+     * @return DescribeMCPTokensResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMCPTokensResponse DescribeMCPTokens(DescribeMCPTokensRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeMCPTokens", DescribeMCPTokensResponse.class);
+    }
+
+    /**
      *This API is used to terminate a session. If cloud-based streaming has been enabled for this session, the cloud-based streaming will end upon session termination.
      * @param req DestroySessionRequest
      * @return DestroySessionResponse
@@ -333,6 +355,17 @@ public class CarClient extends AbstractClient{
     public ModifyMobileApplicationInfoResponse ModifyMobileApplicationInfo(ModifyMobileApplicationInfoRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyMobileApplicationInfo", ModifyMobileApplicationInfoResponse.class);
+    }
+
+    /**
+     *This API is used to renew an MCP Token.
+     * @param req RenewMCPTokenRequest
+     * @return RenewMCPTokenResponse
+     * @throws TencentCloudSDKException
+     */
+    public RenewMCPTokenResponse RenewMCPToken(RenewMCPTokenRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "RenewMCPToken", RenewMCPTokenResponse.class);
     }
 
     /**
