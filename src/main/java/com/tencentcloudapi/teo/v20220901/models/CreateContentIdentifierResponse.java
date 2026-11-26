@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateContentIdentifierResponse extends AbstractModel {
 
     /**
-    * Generated content identifier id. after creation, you can go to the rule engine to "set the content identifier" under certain match conditions.
+    * ID of the generated content. After creation is completed, go to the rule engine to set the content identifier under certain match conditions.
     */
     @SerializedName("ContentId")
     @Expose
@@ -38,16 +38,16 @@ public class CreateContentIdentifierResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Generated content identifier id. after creation, you can go to the rule engine to "set the content identifier" under certain match conditions. 
-     * @return ContentId Generated content identifier id. after creation, you can go to the rule engine to "set the content identifier" under certain match conditions.
+     * Get ID of the generated content. After creation is completed, go to the rule engine to set the content identifier under certain match conditions. 
+     * @return ContentId ID of the generated content. After creation is completed, go to the rule engine to set the content identifier under certain match conditions.
      */
     public String getContentId() {
         return this.ContentId;
     }
 
     /**
-     * Set Generated content identifier id. after creation, you can go to the rule engine to "set the content identifier" under certain match conditions.
-     * @param ContentId Generated content identifier id. after creation, you can go to the rule engine to "set the content identifier" under certain match conditions.
+     * Set ID of the generated content. After creation is completed, go to the rule engine to set the content identifier under certain match conditions.
+     * @param ContentId ID of the generated content. After creation is completed, go to the rule engine to set the content identifier under certain match conditions.
      */
     public void setContentId(String ContentId) {
         this.ContentId = ContentId;

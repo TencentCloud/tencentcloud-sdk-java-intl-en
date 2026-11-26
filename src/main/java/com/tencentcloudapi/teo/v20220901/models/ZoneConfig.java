@@ -24,42 +24,35 @@ import java.util.HashMap;
 public class ZoneConfig extends AbstractModel {
 
     /**
-    * <Intelligent acceleration configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+    * Intelligent acceleration configuration.
     */
     @SerializedName("SmartRouting")
     @Expose
     private SmartRoutingParameters SmartRouting;
 
     /**
-    * Node cache expiration time configuration.
-.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+    * Cache expiration time configuration.
     */
     @SerializedName("Cache")
     @Expose
     private CacheConfigParameters Cache;
 
     /**
-    * Browser cache rule configuration, which is used to set the default value of maxage and is disabled by default.
-.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+    * Browser cache configuration.
     */
     @SerializedName("MaxAge")
     @Expose
     private MaxAgeParameters MaxAge;
 
     /**
-    * The node cache key configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+    * Node cache key configuration.
     */
     @SerializedName("CacheKey")
     @Expose
     private CacheKeyConfigParameters CacheKey;
 
     /**
-    * Cache prefresh configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+    * Cache pre-refresh configuration.
     */
     @SerializedName("CachePrefresh")
     @Expose
@@ -67,25 +60,20 @@ Note: this field may return null, which indicates a failure to obtain a valid va
 
     /**
     * Offline cache configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
     */
     @SerializedName("OfflineCache")
     @Expose
     private OfflineCacheParameters OfflineCache;
 
     /**
-    * Smart compression configuration.
-.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+    * Intelligent compression configuration.
     */
     @SerializedName("Compression")
     @Expose
     private CompressionParameters Compression;
 
     /**
-    * Forced https redirect configuration for access protocols.
-.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+    * Forced HTTPS redirect configuration for access protocols.
     */
     @SerializedName("ForceRedirectHTTPS")
     @Expose
@@ -93,7 +81,6 @@ Note: this field may return null, which indicates a failure to obtain a valid va
 
     /**
     * HSTS configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
     */
     @SerializedName("HSTS")
     @Expose
@@ -101,7 +88,6 @@ Note: this field may return null, which indicates a failure to obtain a valid va
 
     /**
     * TLS configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
     */
     @SerializedName("TLSConfig")
     @Expose
@@ -109,7 +95,6 @@ Note: this field may return null, which indicates a failure to obtain a valid va
 
     /**
     * OCSP stapling configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
     */
     @SerializedName("OCSPStapling")
     @Expose
@@ -117,7 +102,6 @@ Note: this field may return null, which indicates a failure to obtain a valid va
 
     /**
     * HTTP/2 configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
     */
     @SerializedName("HTTP2")
     @Expose
@@ -125,15 +109,13 @@ Note: this field may return null, which indicates a failure to obtain a valid va
 
     /**
     * QUIC access configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
     */
     @SerializedName("QUIC")
     @Expose
     private QUICParameters QUIC;
 
     /**
-    * HTTP2 origin-pull configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+    * HTTP/2 origin-pull configuration.
     */
     @SerializedName("UpstreamHTTP2")
     @Expose
@@ -141,7 +123,6 @@ Note: this field may return null, which indicates a failure to obtain a valid va
 
     /**
     * IPv6 access configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
     */
     @SerializedName("IPv6")
     @Expose
@@ -149,182 +130,143 @@ Note: this field may return null, which indicates a failure to obtain a valid va
 
     /**
     * WebSocket configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
     */
     @SerializedName("WebSocket")
     @Expose
     private WebSocketParameters WebSocket;
 
     /**
-    * POST request transport configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+    * Configuration for POST request transmission.
     */
     @SerializedName("PostMaxSize")
     @Expose
     private PostMaxSizeParameters PostMaxSize;
 
     /**
-    * Client ip origin-pull request header configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+    * Client IP origin-pull request header configuration.
     */
     @SerializedName("ClientIPHeader")
     @Expose
     private ClientIPHeaderParameters ClientIPHeader;
 
     /**
-    * Whether to carry the region information of the client ip during origin-pull.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+    * Configuration of whether to carry the regional information of the client IP during origin-pull.
     */
     @SerializedName("ClientIPCountry")
     @Expose
     private ClientIPCountryParameters ClientIPCountry;
 
     /**
-    * Configuration of grpc support.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+    * The gRPC protocol supports configuration.
     */
     @SerializedName("Grpc")
     @Expose
     private GrpcParameters Grpc;
 
     /**
-    * Network Error Logging configuration.
-Note: This field may return null, which indicates a failure to obtain a valid value.
+    * Network error log configuration.
     */
     @SerializedName("NetworkErrorLogging")
     @Expose
     private NetworkErrorLoggingParameters NetworkErrorLogging;
 
     /**
-    * Accelerate optimization and configuration in mainland china.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+    * Acceleration optimization configuration in the Chinese mainland.
     */
     @SerializedName("AccelerateMainland")
     @Expose
     private AccelerateMainlandParameters AccelerateMainland;
 
     /**
-    * Standard debugging configuration.
-.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+    * Standard Debug configuration.
     */
     @SerializedName("StandardDebug")
     @Expose
     private StandardDebugParameters StandardDebug;
 
     /**
-     * Get <Intelligent acceleration configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value. 
-     * @return SmartRouting <Intelligent acceleration configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * Get Intelligent acceleration configuration. 
+     * @return SmartRouting Intelligent acceleration configuration.
      */
     public SmartRoutingParameters getSmartRouting() {
         return this.SmartRouting;
     }
 
     /**
-     * Set <Intelligent acceleration configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-     * @param SmartRouting <Intelligent acceleration configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * Set Intelligent acceleration configuration.
+     * @param SmartRouting Intelligent acceleration configuration.
      */
     public void setSmartRouting(SmartRoutingParameters SmartRouting) {
         this.SmartRouting = SmartRouting;
     }
 
     /**
-     * Get Node cache expiration time configuration.
-.
-Note: this field may return null, which indicates a failure to obtain a valid value. 
-     * @return Cache Node cache expiration time configuration.
-.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * Get Cache expiration time configuration. 
+     * @return Cache Cache expiration time configuration.
      */
     public CacheConfigParameters getCache() {
         return this.Cache;
     }
 
     /**
-     * Set Node cache expiration time configuration.
-.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-     * @param Cache Node cache expiration time configuration.
-.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * Set Cache expiration time configuration.
+     * @param Cache Cache expiration time configuration.
      */
     public void setCache(CacheConfigParameters Cache) {
         this.Cache = Cache;
     }
 
     /**
-     * Get Browser cache rule configuration, which is used to set the default value of maxage and is disabled by default.
-.
-Note: this field may return null, which indicates a failure to obtain a valid value. 
-     * @return MaxAge Browser cache rule configuration, which is used to set the default value of maxage and is disabled by default.
-.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * Get Browser cache configuration. 
+     * @return MaxAge Browser cache configuration.
      */
     public MaxAgeParameters getMaxAge() {
         return this.MaxAge;
     }
 
     /**
-     * Set Browser cache rule configuration, which is used to set the default value of maxage and is disabled by default.
-.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-     * @param MaxAge Browser cache rule configuration, which is used to set the default value of maxage and is disabled by default.
-.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * Set Browser cache configuration.
+     * @param MaxAge Browser cache configuration.
      */
     public void setMaxAge(MaxAgeParameters MaxAge) {
         this.MaxAge = MaxAge;
     }
 
     /**
-     * Get The node cache key configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value. 
-     * @return CacheKey The node cache key configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * Get Node cache key configuration. 
+     * @return CacheKey Node cache key configuration.
      */
     public CacheKeyConfigParameters getCacheKey() {
         return this.CacheKey;
     }
 
     /**
-     * Set The node cache key configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-     * @param CacheKey The node cache key configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * Set Node cache key configuration.
+     * @param CacheKey Node cache key configuration.
      */
     public void setCacheKey(CacheKeyConfigParameters CacheKey) {
         this.CacheKey = CacheKey;
     }
 
     /**
-     * Get Cache prefresh configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value. 
-     * @return CachePrefresh Cache prefresh configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * Get Cache pre-refresh configuration. 
+     * @return CachePrefresh Cache pre-refresh configuration.
      */
     public CachePrefreshParameters getCachePrefresh() {
         return this.CachePrefresh;
     }
 
     /**
-     * Set Cache prefresh configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-     * @param CachePrefresh Cache prefresh configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * Set Cache pre-refresh configuration.
+     * @param CachePrefresh Cache pre-refresh configuration.
      */
     public void setCachePrefresh(CachePrefreshParameters CachePrefresh) {
         this.CachePrefresh = CachePrefresh;
     }
 
     /**
-     * Get Offline cache configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value. 
+     * Get Offline cache configuration. 
      * @return OfflineCache Offline cache configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
      */
     public OfflineCacheParameters getOfflineCache() {
         return this.OfflineCache;
@@ -332,67 +274,47 @@ Note: this field may return null, which indicates a failure to obtain a valid va
 
     /**
      * Set Offline cache configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
      * @param OfflineCache Offline cache configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
      */
     public void setOfflineCache(OfflineCacheParameters OfflineCache) {
         this.OfflineCache = OfflineCache;
     }
 
     /**
-     * Get Smart compression configuration.
-.
-Note: this field may return null, which indicates a failure to obtain a valid value. 
-     * @return Compression Smart compression configuration.
-.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * Get Intelligent compression configuration. 
+     * @return Compression Intelligent compression configuration.
      */
     public CompressionParameters getCompression() {
         return this.Compression;
     }
 
     /**
-     * Set Smart compression configuration.
-.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-     * @param Compression Smart compression configuration.
-.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * Set Intelligent compression configuration.
+     * @param Compression Intelligent compression configuration.
      */
     public void setCompression(CompressionParameters Compression) {
         this.Compression = Compression;
     }
 
     /**
-     * Get Forced https redirect configuration for access protocols.
-.
-Note: this field may return null, which indicates a failure to obtain a valid value. 
-     * @return ForceRedirectHTTPS Forced https redirect configuration for access protocols.
-.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * Get Forced HTTPS redirect configuration for access protocols. 
+     * @return ForceRedirectHTTPS Forced HTTPS redirect configuration for access protocols.
      */
     public ForceRedirectHTTPSParameters getForceRedirectHTTPS() {
         return this.ForceRedirectHTTPS;
     }
 
     /**
-     * Set Forced https redirect configuration for access protocols.
-.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-     * @param ForceRedirectHTTPS Forced https redirect configuration for access protocols.
-.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * Set Forced HTTPS redirect configuration for access protocols.
+     * @param ForceRedirectHTTPS Forced HTTPS redirect configuration for access protocols.
      */
     public void setForceRedirectHTTPS(ForceRedirectHTTPSParameters ForceRedirectHTTPS) {
         this.ForceRedirectHTTPS = ForceRedirectHTTPS;
     }
 
     /**
-     * Get HSTS configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value. 
+     * Get HSTS configuration. 
      * @return HSTS HSTS configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
      */
     public HSTSParameters getHSTS() {
         return this.HSTS;
@@ -400,19 +322,15 @@ Note: this field may return null, which indicates a failure to obtain a valid va
 
     /**
      * Set HSTS configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
      * @param HSTS HSTS configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
      */
     public void setHSTS(HSTSParameters HSTS) {
         this.HSTS = HSTS;
     }
 
     /**
-     * Get TLS configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value. 
+     * Get TLS configuration. 
      * @return TLSConfig TLS configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
      */
     public TLSConfigParameters getTLSConfig() {
         return this.TLSConfig;
@@ -420,19 +338,15 @@ Note: this field may return null, which indicates a failure to obtain a valid va
 
     /**
      * Set TLS configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
      * @param TLSConfig TLS configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
      */
     public void setTLSConfig(TLSConfigParameters TLSConfig) {
         this.TLSConfig = TLSConfig;
     }
 
     /**
-     * Get OCSP stapling configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value. 
+     * Get OCSP stapling configuration. 
      * @return OCSPStapling OCSP stapling configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
      */
     public OCSPStaplingParameters getOCSPStapling() {
         return this.OCSPStapling;
@@ -440,19 +354,15 @@ Note: this field may return null, which indicates a failure to obtain a valid va
 
     /**
      * Set OCSP stapling configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
      * @param OCSPStapling OCSP stapling configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
      */
     public void setOCSPStapling(OCSPStaplingParameters OCSPStapling) {
         this.OCSPStapling = OCSPStapling;
     }
 
     /**
-     * Get HTTP/2 configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value. 
+     * Get HTTP/2 configuration. 
      * @return HTTP2 HTTP/2 configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
      */
     public HTTP2Parameters getHTTP2() {
         return this.HTTP2;
@@ -460,19 +370,15 @@ Note: this field may return null, which indicates a failure to obtain a valid va
 
     /**
      * Set HTTP/2 configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
      * @param HTTP2 HTTP/2 configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
      */
     public void setHTTP2(HTTP2Parameters HTTP2) {
         this.HTTP2 = HTTP2;
     }
 
     /**
-     * Get QUIC access configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value. 
+     * Get QUIC access configuration. 
      * @return QUIC QUIC access configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
      */
     public QUICParameters getQUIC() {
         return this.QUIC;
@@ -480,39 +386,31 @@ Note: this field may return null, which indicates a failure to obtain a valid va
 
     /**
      * Set QUIC access configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
      * @param QUIC QUIC access configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
      */
     public void setQUIC(QUICParameters QUIC) {
         this.QUIC = QUIC;
     }
 
     /**
-     * Get HTTP2 origin-pull configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value. 
-     * @return UpstreamHTTP2 HTTP2 origin-pull configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * Get HTTP/2 origin-pull configuration. 
+     * @return UpstreamHTTP2 HTTP/2 origin-pull configuration.
      */
     public UpstreamHTTP2Parameters getUpstreamHTTP2() {
         return this.UpstreamHTTP2;
     }
 
     /**
-     * Set HTTP2 origin-pull configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-     * @param UpstreamHTTP2 HTTP2 origin-pull configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * Set HTTP/2 origin-pull configuration.
+     * @param UpstreamHTTP2 HTTP/2 origin-pull configuration.
      */
     public void setUpstreamHTTP2(UpstreamHTTP2Parameters UpstreamHTTP2) {
         this.UpstreamHTTP2 = UpstreamHTTP2;
     }
 
     /**
-     * Get IPv6 access configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value. 
+     * Get IPv6 access configuration. 
      * @return IPv6 IPv6 access configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
      */
     public IPv6Parameters getIPv6() {
         return this.IPv6;
@@ -520,19 +418,15 @@ Note: this field may return null, which indicates a failure to obtain a valid va
 
     /**
      * Set IPv6 access configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
      * @param IPv6 IPv6 access configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
      */
     public void setIPv6(IPv6Parameters IPv6) {
         this.IPv6 = IPv6;
     }
 
     /**
-     * Get WebSocket configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value. 
+     * Get WebSocket configuration. 
      * @return WebSocket WebSocket configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
      */
     public WebSocketParameters getWebSocket() {
         return this.WebSocket;
@@ -540,153 +434,119 @@ Note: this field may return null, which indicates a failure to obtain a valid va
 
     /**
      * Set WebSocket configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
      * @param WebSocket WebSocket configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
      */
     public void setWebSocket(WebSocketParameters WebSocket) {
         this.WebSocket = WebSocket;
     }
 
     /**
-     * Get POST request transport configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value. 
-     * @return PostMaxSize POST request transport configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * Get Configuration for POST request transmission. 
+     * @return PostMaxSize Configuration for POST request transmission.
      */
     public PostMaxSizeParameters getPostMaxSize() {
         return this.PostMaxSize;
     }
 
     /**
-     * Set POST request transport configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-     * @param PostMaxSize POST request transport configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * Set Configuration for POST request transmission.
+     * @param PostMaxSize Configuration for POST request transmission.
      */
     public void setPostMaxSize(PostMaxSizeParameters PostMaxSize) {
         this.PostMaxSize = PostMaxSize;
     }
 
     /**
-     * Get Client ip origin-pull request header configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value. 
-     * @return ClientIPHeader Client ip origin-pull request header configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * Get Client IP origin-pull request header configuration. 
+     * @return ClientIPHeader Client IP origin-pull request header configuration.
      */
     public ClientIPHeaderParameters getClientIPHeader() {
         return this.ClientIPHeader;
     }
 
     /**
-     * Set Client ip origin-pull request header configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-     * @param ClientIPHeader Client ip origin-pull request header configuration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * Set Client IP origin-pull request header configuration.
+     * @param ClientIPHeader Client IP origin-pull request header configuration.
      */
     public void setClientIPHeader(ClientIPHeaderParameters ClientIPHeader) {
         this.ClientIPHeader = ClientIPHeader;
     }
 
     /**
-     * Get Whether to carry the region information of the client ip during origin-pull.
-Note: this field may return null, which indicates a failure to obtain a valid value. 
-     * @return ClientIPCountry Whether to carry the region information of the client ip during origin-pull.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * Get Configuration of whether to carry the regional information of the client IP during origin-pull. 
+     * @return ClientIPCountry Configuration of whether to carry the regional information of the client IP during origin-pull.
      */
     public ClientIPCountryParameters getClientIPCountry() {
         return this.ClientIPCountry;
     }
 
     /**
-     * Set Whether to carry the region information of the client ip during origin-pull.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-     * @param ClientIPCountry Whether to carry the region information of the client ip during origin-pull.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * Set Configuration of whether to carry the regional information of the client IP during origin-pull.
+     * @param ClientIPCountry Configuration of whether to carry the regional information of the client IP during origin-pull.
      */
     public void setClientIPCountry(ClientIPCountryParameters ClientIPCountry) {
         this.ClientIPCountry = ClientIPCountry;
     }
 
     /**
-     * Get Configuration of grpc support.
-Note: this field may return null, which indicates a failure to obtain a valid value. 
-     * @return Grpc Configuration of grpc support.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * Get The gRPC protocol supports configuration. 
+     * @return Grpc The gRPC protocol supports configuration.
      */
     public GrpcParameters getGrpc() {
         return this.Grpc;
     }
 
     /**
-     * Set Configuration of grpc support.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-     * @param Grpc Configuration of grpc support.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * Set The gRPC protocol supports configuration.
+     * @param Grpc The gRPC protocol supports configuration.
      */
     public void setGrpc(GrpcParameters Grpc) {
         this.Grpc = Grpc;
     }
 
     /**
-     * Get Network Error Logging configuration.
-Note: This field may return null, which indicates a failure to obtain a valid value. 
-     * @return NetworkErrorLogging Network Error Logging configuration.
-Note: This field may return null, which indicates a failure to obtain a valid value.
+     * Get Network error log configuration. 
+     * @return NetworkErrorLogging Network error log configuration.
      */
     public NetworkErrorLoggingParameters getNetworkErrorLogging() {
         return this.NetworkErrorLogging;
     }
 
     /**
-     * Set Network Error Logging configuration.
-Note: This field may return null, which indicates a failure to obtain a valid value.
-     * @param NetworkErrorLogging Network Error Logging configuration.
-Note: This field may return null, which indicates a failure to obtain a valid value.
+     * Set Network error log configuration.
+     * @param NetworkErrorLogging Network error log configuration.
      */
     public void setNetworkErrorLogging(NetworkErrorLoggingParameters NetworkErrorLogging) {
         this.NetworkErrorLogging = NetworkErrorLogging;
     }
 
     /**
-     * Get Accelerate optimization and configuration in mainland china.
-Note: this field may return null, which indicates a failure to obtain a valid value. 
-     * @return AccelerateMainland Accelerate optimization and configuration in mainland china.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * Get Acceleration optimization configuration in the Chinese mainland. 
+     * @return AccelerateMainland Acceleration optimization configuration in the Chinese mainland.
      */
     public AccelerateMainlandParameters getAccelerateMainland() {
         return this.AccelerateMainland;
     }
 
     /**
-     * Set Accelerate optimization and configuration in mainland china.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-     * @param AccelerateMainland Accelerate optimization and configuration in mainland china.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * Set Acceleration optimization configuration in the Chinese mainland.
+     * @param AccelerateMainland Acceleration optimization configuration in the Chinese mainland.
      */
     public void setAccelerateMainland(AccelerateMainlandParameters AccelerateMainland) {
         this.AccelerateMainland = AccelerateMainland;
     }
 
     /**
-     * Get Standard debugging configuration.
-.
-Note: this field may return null, which indicates a failure to obtain a valid value. 
-     * @return StandardDebug Standard debugging configuration.
-.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * Get Standard Debug configuration. 
+     * @return StandardDebug Standard Debug configuration.
      */
     public StandardDebugParameters getStandardDebug() {
         return this.StandardDebug;
     }
 
     /**
-     * Set Standard debugging configuration.
-.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-     * @param StandardDebug Standard debugging configuration.
-.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * Set Standard Debug configuration.
+     * @param StandardDebug Standard Debug configuration.
      */
     public void setStandardDebug(StandardDebugParameters StandardDebug) {
         this.StandardDebug = StandardDebug;

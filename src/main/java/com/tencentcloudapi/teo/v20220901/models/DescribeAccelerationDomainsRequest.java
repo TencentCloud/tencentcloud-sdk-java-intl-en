@@ -24,221 +24,161 @@ import java.util.HashMap;
 public class DescribeAccelerationDomainsRequest extends AbstractModel {
 
     /**
-    * ID of the site related with the acceleration domain name.
+    * <p>Zone ID of the acceleration domain name.</p>
     */
     @SerializedName("ZoneId")
     @Expose
     private String ZoneId;
 
     /**
-    * Offset for paginated queries. Default value: 0.
+    * <p>The offset of paginated query. Default value: 0.</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * Limit on paginated queries. Default value: 20. Maximum value: 200.
+    * <p>Paginated query limit. Default value: 20, maximum value: 200.</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * Filter criteria. The maximum number of Filters.Values is 20. If this parameter is not input, all domain name information under the current zone-id will be returned. The detailed filter criteria are as follows:
-<li>domain-name: Filter by acceleration domain name;</li>
-<li>origin-type: Filter by origin server type;</li>
-<li>origin: Filter by primary origin server address;</li>
-<li>backup-origin: Filter by replica origin server address;</li>
-<li>domain-cname: Filter by CNAME;</li>
-<li>share-cname: Filter by shared CNAME.</li>
+    * <p>Filter criteria. The maximum number of Filters.Values is 20. If this parameter is left empty, all domain information under the current zone-id is returned. The detailed filter criteria are as follows:</p><li>domain-name: Filter by acceleration domain name;</li><li>origin-type: Filter by origin server type;</li><li>origin: Filter by primary origin server address;</li><li>backup-origin: Filter by secondary origin server address;</li><li>domain-cname: Filter by CNAME;</li><li>share-cname: Filter by shared CNAME;</li>
     */
     @SerializedName("Filters")
     @Expose
     private AdvancedFilter [] Filters;
 
     /**
-    * Sort the returned results according to this field. Values include:
-<li>`created_on`: Creation time of the acceleration domain name</li>
-<li>`domain-name`: (Default) Acceleration domain name.</li> 
+    * <p>Sort returned results by this field. Valid values:</p><li>created_on: acceleration domain name creation time;</li><li>domain-name: acceleration domain name.</li>If left empty, returned results are sorted by domain-name by default.
     */
     @SerializedName("Order")
     @Expose
     private String Order;
 
     /**
-    * Sort direction. If the field value is number, sort by the numeric value. If the field value is text, sort by the ascill code. Values include:
-<li>`asc`: Ascending order.</li>
-<li>`desc`: Descending order.</li> Default value: `asc`.
+    * <p>Sorting order. If the field value is a number, sort by its size. If the field value is text, sort by ASCII code size. Valid values:</p><li>asc: ascending order;</li><li>desc: descending order.</li>Use default value asc if not specified.
     */
     @SerializedName("Direction")
     @Expose
     private String Direction;
 
     /**
-    * The match mode. Values:
-<li>`all`: Return all matches.</li>
-<li>`any`: Return any match.</li>Default value: `all`.
+    * <p>Match mode. Valid values:</p><li>all: return acceleration domain names that match all query conditions;</li><li>any: return acceleration domain names that match any query condition.</li>If left empty, the default value is all.
     */
     @SerializedName("Match")
     @Expose
     private String Match;
 
     /**
-     * Get ID of the site related with the acceleration domain name. 
-     * @return ZoneId ID of the site related with the acceleration domain name.
+     * Get <p>Zone ID of the acceleration domain name.</p> 
+     * @return ZoneId <p>Zone ID of the acceleration domain name.</p>
      */
     public String getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set ID of the site related with the acceleration domain name.
-     * @param ZoneId ID of the site related with the acceleration domain name.
+     * Set <p>Zone ID of the acceleration domain name.</p>
+     * @param ZoneId <p>Zone ID of the acceleration domain name.</p>
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get Offset for paginated queries. Default value: 0. 
-     * @return Offset Offset for paginated queries. Default value: 0.
+     * Get <p>The offset of paginated query. Default value: 0.</p> 
+     * @return Offset <p>The offset of paginated query. Default value: 0.</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Offset for paginated queries. Default value: 0.
-     * @param Offset Offset for paginated queries. Default value: 0.
+     * Set <p>The offset of paginated query. Default value: 0.</p>
+     * @param Offset <p>The offset of paginated query. Default value: 0.</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get Limit on paginated queries. Default value: 20. Maximum value: 200. 
-     * @return Limit Limit on paginated queries. Default value: 20. Maximum value: 200.
+     * Get <p>Paginated query limit. Default value: 20, maximum value: 200.</p> 
+     * @return Limit <p>Paginated query limit. Default value: 20, maximum value: 200.</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Limit on paginated queries. Default value: 20. Maximum value: 200.
-     * @param Limit Limit on paginated queries. Default value: 20. Maximum value: 200.
+     * Set <p>Paginated query limit. Default value: 20, maximum value: 200.</p>
+     * @param Limit <p>Paginated query limit. Default value: 20, maximum value: 200.</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get Filter criteria. The maximum number of Filters.Values is 20. If this parameter is not input, all domain name information under the current zone-id will be returned. The detailed filter criteria are as follows:
-<li>domain-name: Filter by acceleration domain name;</li>
-<li>origin-type: Filter by origin server type;</li>
-<li>origin: Filter by primary origin server address;</li>
-<li>backup-origin: Filter by replica origin server address;</li>
-<li>domain-cname: Filter by CNAME;</li>
-<li>share-cname: Filter by shared CNAME.</li> 
-     * @return Filters Filter criteria. The maximum number of Filters.Values is 20. If this parameter is not input, all domain name information under the current zone-id will be returned. The detailed filter criteria are as follows:
-<li>domain-name: Filter by acceleration domain name;</li>
-<li>origin-type: Filter by origin server type;</li>
-<li>origin: Filter by primary origin server address;</li>
-<li>backup-origin: Filter by replica origin server address;</li>
-<li>domain-cname: Filter by CNAME;</li>
-<li>share-cname: Filter by shared CNAME.</li>
+     * Get <p>Filter criteria. The maximum number of Filters.Values is 20. If this parameter is left empty, all domain information under the current zone-id is returned. The detailed filter criteria are as follows:</p><li>domain-name: Filter by acceleration domain name;</li><li>origin-type: Filter by origin server type;</li><li>origin: Filter by primary origin server address;</li><li>backup-origin: Filter by secondary origin server address;</li><li>domain-cname: Filter by CNAME;</li><li>share-cname: Filter by shared CNAME;</li> 
+     * @return Filters <p>Filter criteria. The maximum number of Filters.Values is 20. If this parameter is left empty, all domain information under the current zone-id is returned. The detailed filter criteria are as follows:</p><li>domain-name: Filter by acceleration domain name;</li><li>origin-type: Filter by origin server type;</li><li>origin: Filter by primary origin server address;</li><li>backup-origin: Filter by secondary origin server address;</li><li>domain-cname: Filter by CNAME;</li><li>share-cname: Filter by shared CNAME;</li>
      */
     public AdvancedFilter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set Filter criteria. The maximum number of Filters.Values is 20. If this parameter is not input, all domain name information under the current zone-id will be returned. The detailed filter criteria are as follows:
-<li>domain-name: Filter by acceleration domain name;</li>
-<li>origin-type: Filter by origin server type;</li>
-<li>origin: Filter by primary origin server address;</li>
-<li>backup-origin: Filter by replica origin server address;</li>
-<li>domain-cname: Filter by CNAME;</li>
-<li>share-cname: Filter by shared CNAME.</li>
-     * @param Filters Filter criteria. The maximum number of Filters.Values is 20. If this parameter is not input, all domain name information under the current zone-id will be returned. The detailed filter criteria are as follows:
-<li>domain-name: Filter by acceleration domain name;</li>
-<li>origin-type: Filter by origin server type;</li>
-<li>origin: Filter by primary origin server address;</li>
-<li>backup-origin: Filter by replica origin server address;</li>
-<li>domain-cname: Filter by CNAME;</li>
-<li>share-cname: Filter by shared CNAME.</li>
+     * Set <p>Filter criteria. The maximum number of Filters.Values is 20. If this parameter is left empty, all domain information under the current zone-id is returned. The detailed filter criteria are as follows:</p><li>domain-name: Filter by acceleration domain name;</li><li>origin-type: Filter by origin server type;</li><li>origin: Filter by primary origin server address;</li><li>backup-origin: Filter by secondary origin server address;</li><li>domain-cname: Filter by CNAME;</li><li>share-cname: Filter by shared CNAME;</li>
+     * @param Filters <p>Filter criteria. The maximum number of Filters.Values is 20. If this parameter is left empty, all domain information under the current zone-id is returned. The detailed filter criteria are as follows:</p><li>domain-name: Filter by acceleration domain name;</li><li>origin-type: Filter by origin server type;</li><li>origin: Filter by primary origin server address;</li><li>backup-origin: Filter by secondary origin server address;</li><li>domain-cname: Filter by CNAME;</li><li>share-cname: Filter by shared CNAME;</li>
      */
     public void setFilters(AdvancedFilter [] Filters) {
         this.Filters = Filters;
     }
 
     /**
-     * Get Sort the returned results according to this field. Values include:
-<li>`created_on`: Creation time of the acceleration domain name</li>
-<li>`domain-name`: (Default) Acceleration domain name.</li>  
-     * @return Order Sort the returned results according to this field. Values include:
-<li>`created_on`: Creation time of the acceleration domain name</li>
-<li>`domain-name`: (Default) Acceleration domain name.</li> 
+     * Get <p>Sort returned results by this field. Valid values:</p><li>created_on: acceleration domain name creation time;</li><li>domain-name: acceleration domain name.</li>If left empty, returned results are sorted by domain-name by default. 
+     * @return Order <p>Sort returned results by this field. Valid values:</p><li>created_on: acceleration domain name creation time;</li><li>domain-name: acceleration domain name.</li>If left empty, returned results are sorted by domain-name by default.
      */
     public String getOrder() {
         return this.Order;
     }
 
     /**
-     * Set Sort the returned results according to this field. Values include:
-<li>`created_on`: Creation time of the acceleration domain name</li>
-<li>`domain-name`: (Default) Acceleration domain name.</li> 
-     * @param Order Sort the returned results according to this field. Values include:
-<li>`created_on`: Creation time of the acceleration domain name</li>
-<li>`domain-name`: (Default) Acceleration domain name.</li> 
+     * Set <p>Sort returned results by this field. Valid values:</p><li>created_on: acceleration domain name creation time;</li><li>domain-name: acceleration domain name.</li>If left empty, returned results are sorted by domain-name by default.
+     * @param Order <p>Sort returned results by this field. Valid values:</p><li>created_on: acceleration domain name creation time;</li><li>domain-name: acceleration domain name.</li>If left empty, returned results are sorted by domain-name by default.
      */
     public void setOrder(String Order) {
         this.Order = Order;
     }
 
     /**
-     * Get Sort direction. If the field value is number, sort by the numeric value. If the field value is text, sort by the ascill code. Values include:
-<li>`asc`: Ascending order.</li>
-<li>`desc`: Descending order.</li> Default value: `asc`. 
-     * @return Direction Sort direction. If the field value is number, sort by the numeric value. If the field value is text, sort by the ascill code. Values include:
-<li>`asc`: Ascending order.</li>
-<li>`desc`: Descending order.</li> Default value: `asc`.
+     * Get <p>Sorting order. If the field value is a number, sort by its size. If the field value is text, sort by ASCII code size. Valid values:</p><li>asc: ascending order;</li><li>desc: descending order.</li>Use default value asc if not specified. 
+     * @return Direction <p>Sorting order. If the field value is a number, sort by its size. If the field value is text, sort by ASCII code size. Valid values:</p><li>asc: ascending order;</li><li>desc: descending order.</li>Use default value asc if not specified.
      */
     public String getDirection() {
         return this.Direction;
     }
 
     /**
-     * Set Sort direction. If the field value is number, sort by the numeric value. If the field value is text, sort by the ascill code. Values include:
-<li>`asc`: Ascending order.</li>
-<li>`desc`: Descending order.</li> Default value: `asc`.
-     * @param Direction Sort direction. If the field value is number, sort by the numeric value. If the field value is text, sort by the ascill code. Values include:
-<li>`asc`: Ascending order.</li>
-<li>`desc`: Descending order.</li> Default value: `asc`.
+     * Set <p>Sorting order. If the field value is a number, sort by its size. If the field value is text, sort by ASCII code size. Valid values:</p><li>asc: ascending order;</li><li>desc: descending order.</li>Use default value asc if not specified.
+     * @param Direction <p>Sorting order. If the field value is a number, sort by its size. If the field value is text, sort by ASCII code size. Valid values:</p><li>asc: ascending order;</li><li>desc: descending order.</li>Use default value asc if not specified.
      */
     public void setDirection(String Direction) {
         this.Direction = Direction;
     }
 
     /**
-     * Get The match mode. Values:
-<li>`all`: Return all matches.</li>
-<li>`any`: Return any match.</li>Default value: `all`. 
-     * @return Match The match mode. Values:
-<li>`all`: Return all matches.</li>
-<li>`any`: Return any match.</li>Default value: `all`.
+     * Get <p>Match mode. Valid values:</p><li>all: return acceleration domain names that match all query conditions;</li><li>any: return acceleration domain names that match any query condition.</li>If left empty, the default value is all. 
+     * @return Match <p>Match mode. Valid values:</p><li>all: return acceleration domain names that match all query conditions;</li><li>any: return acceleration domain names that match any query condition.</li>If left empty, the default value is all.
      */
     public String getMatch() {
         return this.Match;
     }
 
     /**
-     * Set The match mode. Values:
-<li>`all`: Return all matches.</li>
-<li>`any`: Return any match.</li>Default value: `all`.
-     * @param Match The match mode. Values:
-<li>`all`: Return all matches.</li>
-<li>`any`: Return any match.</li>Default value: `all`.
+     * Set <p>Match mode. Valid values:</p><li>all: return acceleration domain names that match all query conditions;</li><li>any: return acceleration domain names that match any query condition.</li>If left empty, the default value is all.
+     * @param Match <p>Match mode. Valid values:</p><li>all: return acceleration domain names that match all query conditions;</li><li>any: return acceleration domain names that match any query condition.</li>If left empty, the default value is all.
      */
     public void setMatch(String Match) {
         this.Match = Match;

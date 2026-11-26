@@ -24,38 +24,38 @@ import java.util.HashMap;
 public class AiRule extends AbstractModel {
 
     /**
-    * The status of the AI rule engine. Values:
-<li>`smart_status_close`: Disabled</li>
-<li>`smart_status_open`: Block</li>
-<li>`smart_status_observe`: Observe</li>
+    * AI rule engine status. Valid values:
+<li> smart_status_close: off;</li>
+<li> smart_status_open: block;</li>
+<li> smart_status_observe: observation and disposition.</li>
     */
     @SerializedName("Mode")
     @Expose
     private String Mode;
 
     /**
-     * Get The status of the AI rule engine. Values:
-<li>`smart_status_close`: Disabled</li>
-<li>`smart_status_open`: Block</li>
-<li>`smart_status_observe`: Observe</li> 
-     * @return Mode The status of the AI rule engine. Values:
-<li>`smart_status_close`: Disabled</li>
-<li>`smart_status_open`: Block</li>
-<li>`smart_status_observe`: Observe</li>
+     * Get AI rule engine status. Valid values:
+<li> smart_status_close: off;</li>
+<li> smart_status_open: block;</li>
+<li> smart_status_observe: observation and disposition.</li> 
+     * @return Mode AI rule engine status. Valid values:
+<li> smart_status_close: off;</li>
+<li> smart_status_open: block;</li>
+<li> smart_status_observe: observation and disposition.</li>
      */
     public String getMode() {
         return this.Mode;
     }
 
     /**
-     * Set The status of the AI rule engine. Values:
-<li>`smart_status_close`: Disabled</li>
-<li>`smart_status_open`: Block</li>
-<li>`smart_status_observe`: Observe</li>
-     * @param Mode The status of the AI rule engine. Values:
-<li>`smart_status_close`: Disabled</li>
-<li>`smart_status_open`: Block</li>
-<li>`smart_status_observe`: Observe</li>
+     * Set AI rule engine status. Valid values:
+<li> smart_status_close: off;</li>
+<li> smart_status_open: block;</li>
+<li> smart_status_observe: observation and disposition.</li>
+     * @param Mode AI rule engine status. Valid values:
+<li> smart_status_close: off;</li>
+<li> smart_status_open: block;</li>
+<li> smart_status_observe: observation and disposition.</li>
      */
     public void setMode(String Mode) {
         this.Mode = Mode;

@@ -24,382 +24,382 @@ import java.util.HashMap;
 public class AclUserRule extends AbstractModel {
 
     /**
-    * The rule name.
+    * Rule name.
     */
     @SerializedName("RuleName")
     @Expose
     private String RuleName;
 
     /**
-    * The action. Values:
-<li>`trans`: Allow</li>
-<li>`drop`: Block the request</li>
-<li>`monitor`: Observe</li>
-<li>`ban`: Block the IP</li>
-<li>`redirect`: Redirect the request</li>
-<li>`page`: Return the specified page</li>
-<li>`alg`: JavaScript challenge</li>
+    * Penalty action. Valid values:
+<li>trans: pass;</li>
+<li>drop: block;</li>
+<li>monitor: observation;</li>
+<li>ban: IP block;</li>
+<li>redirect: Redirection;</li>
+<li>page: Specified page;</li>
+<li>alg: JavaScript challenge.</li>
     */
     @SerializedName("Action")
     @Expose
     private String Action;
 
     /**
-    * The rule status. Values:
-<li>`on`: Enabled</li>
-<li>`off`: Disabled</li>
+    * Rule status. Valid values:
+<li>`on`: Take effect;</li>
+<li>off: Disable.</li>
     */
     @SerializedName("RuleStatus")
     @Expose
     private String RuleStatus;
 
     /**
-    * The custom rule.
+    * Custom rule.
     */
     @SerializedName("AclConditions")
     @Expose
     private AclCondition [] AclConditions;
 
     /**
-    * The rule priority. Value range: 0-100.
+    * Rule priority. Value range: 0-100.
     */
     @SerializedName("RulePriority")
     @Expose
     private Long RulePriority;
 
     /**
-    * Rule ID, which is only used as an output parameter.
+    * Rule Id. Output only.
     */
     @SerializedName("RuleID")
     @Expose
     private Long RuleID;
 
     /**
-    * The update time, which is only used as an output parameter.
+    * Update time. For output usage only.
     */
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
 
     /**
-    * IP ban duration. Range: 0-2 days. It's required when `Action=ban`. 
+    * Penalty duration for ip blocking. Required when Action is ban. It cannot be empty and the value ranges from 0 to 2 days.
     */
     @SerializedName("PunishTime")
     @Expose
     private Long PunishTime;
 
     /**
-    * The unit of the IP ban duration. Values:
-<li>`second`: Second</li>
-<li>`minutes`: Minute</li>
-<li>`hour`: Hour</li>Default value: `second`.
+    * Penalty time unit for ip blocking. Valid values:
+<li>second: second;</li>
+<li>minutes: minute;</li>
+<li>hour: hour.</li>Default: second.
     */
     @SerializedName("PunishTimeUnit")
     @Expose
     private String PunishTimeUnit;
 
     /**
-    * Name of the custom return page. It's required when `Action=page`.	
+    * Name of the custom return page. Required when Action is page, and cannot be empty.	
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * (Disused) ID of the custom return page. The default value is 0, which means that the system default blocking page is used. 
+    * Instance Id for the custom return page. Default value: 0, which means the system default blocking page is used. This parameter is deprecated.
     */
     @SerializedName("PageId")
     @Expose
     private Long PageId;
 
     /**
-    * ID of custom response. The ID can be obtained via the `DescribeCustomErrorPages` API. It's required when `Action=page`.	
+    * Custom response Id, which can be obtained through the API for querying the custom error page list. The default value is default, which uses the system default page. Required and cannot be empty when Action is page.	
     */
     @SerializedName("CustomResponseId")
     @Expose
     private String CustomResponseId;
 
     /**
-    * The response code to trigger the return page. It's required when `Action=page`. Value: 100-600. 3xx response codes are not supported. Default value: 567.
+    * code of the custom return page. Required when Action is page. The value cannot be empty. Value range: 100-600. 3xx response codes are unsupported. Default value: 567.
     */
     @SerializedName("ResponseCode")
     @Expose
     private Long ResponseCode;
 
     /**
-    * The redirection URL. It's required when `Action=redirect`.	
+    * Address for redirection. Required when Action is `redirect` and cannot be empty.	
     */
     @SerializedName("RedirectUrl")
     @Expose
     private String RedirectUrl;
 
     /**
-     * Get The rule name. 
-     * @return RuleName The rule name.
+     * Get Rule name. 
+     * @return RuleName Rule name.
      */
     public String getRuleName() {
         return this.RuleName;
     }
 
     /**
-     * Set The rule name.
-     * @param RuleName The rule name.
+     * Set Rule name.
+     * @param RuleName Rule name.
      */
     public void setRuleName(String RuleName) {
         this.RuleName = RuleName;
     }
 
     /**
-     * Get The action. Values:
-<li>`trans`: Allow</li>
-<li>`drop`: Block the request</li>
-<li>`monitor`: Observe</li>
-<li>`ban`: Block the IP</li>
-<li>`redirect`: Redirect the request</li>
-<li>`page`: Return the specified page</li>
-<li>`alg`: JavaScript challenge</li> 
-     * @return Action The action. Values:
-<li>`trans`: Allow</li>
-<li>`drop`: Block the request</li>
-<li>`monitor`: Observe</li>
-<li>`ban`: Block the IP</li>
-<li>`redirect`: Redirect the request</li>
-<li>`page`: Return the specified page</li>
-<li>`alg`: JavaScript challenge</li>
+     * Get Penalty action. Valid values:
+<li>trans: pass;</li>
+<li>drop: block;</li>
+<li>monitor: observation;</li>
+<li>ban: IP block;</li>
+<li>redirect: Redirection;</li>
+<li>page: Specified page;</li>
+<li>alg: JavaScript challenge.</li> 
+     * @return Action Penalty action. Valid values:
+<li>trans: pass;</li>
+<li>drop: block;</li>
+<li>monitor: observation;</li>
+<li>ban: IP block;</li>
+<li>redirect: Redirection;</li>
+<li>page: Specified page;</li>
+<li>alg: JavaScript challenge.</li>
      */
     public String getAction() {
         return this.Action;
     }
 
     /**
-     * Set The action. Values:
-<li>`trans`: Allow</li>
-<li>`drop`: Block the request</li>
-<li>`monitor`: Observe</li>
-<li>`ban`: Block the IP</li>
-<li>`redirect`: Redirect the request</li>
-<li>`page`: Return the specified page</li>
-<li>`alg`: JavaScript challenge</li>
-     * @param Action The action. Values:
-<li>`trans`: Allow</li>
-<li>`drop`: Block the request</li>
-<li>`monitor`: Observe</li>
-<li>`ban`: Block the IP</li>
-<li>`redirect`: Redirect the request</li>
-<li>`page`: Return the specified page</li>
-<li>`alg`: JavaScript challenge</li>
+     * Set Penalty action. Valid values:
+<li>trans: pass;</li>
+<li>drop: block;</li>
+<li>monitor: observation;</li>
+<li>ban: IP block;</li>
+<li>redirect: Redirection;</li>
+<li>page: Specified page;</li>
+<li>alg: JavaScript challenge.</li>
+     * @param Action Penalty action. Valid values:
+<li>trans: pass;</li>
+<li>drop: block;</li>
+<li>monitor: observation;</li>
+<li>ban: IP block;</li>
+<li>redirect: Redirection;</li>
+<li>page: Specified page;</li>
+<li>alg: JavaScript challenge.</li>
      */
     public void setAction(String Action) {
         this.Action = Action;
     }
 
     /**
-     * Get The rule status. Values:
-<li>`on`: Enabled</li>
-<li>`off`: Disabled</li> 
-     * @return RuleStatus The rule status. Values:
-<li>`on`: Enabled</li>
-<li>`off`: Disabled</li>
+     * Get Rule status. Valid values:
+<li>`on`: Take effect;</li>
+<li>off: Disable.</li> 
+     * @return RuleStatus Rule status. Valid values:
+<li>`on`: Take effect;</li>
+<li>off: Disable.</li>
      */
     public String getRuleStatus() {
         return this.RuleStatus;
     }
 
     /**
-     * Set The rule status. Values:
-<li>`on`: Enabled</li>
-<li>`off`: Disabled</li>
-     * @param RuleStatus The rule status. Values:
-<li>`on`: Enabled</li>
-<li>`off`: Disabled</li>
+     * Set Rule status. Valid values:
+<li>`on`: Take effect;</li>
+<li>off: Disable.</li>
+     * @param RuleStatus Rule status. Valid values:
+<li>`on`: Take effect;</li>
+<li>off: Disable.</li>
      */
     public void setRuleStatus(String RuleStatus) {
         this.RuleStatus = RuleStatus;
     }
 
     /**
-     * Get The custom rule. 
-     * @return AclConditions The custom rule.
+     * Get Custom rule. 
+     * @return AclConditions Custom rule.
      */
     public AclCondition [] getAclConditions() {
         return this.AclConditions;
     }
 
     /**
-     * Set The custom rule.
-     * @param AclConditions The custom rule.
+     * Set Custom rule.
+     * @param AclConditions Custom rule.
      */
     public void setAclConditions(AclCondition [] AclConditions) {
         this.AclConditions = AclConditions;
     }
 
     /**
-     * Get The rule priority. Value range: 0-100. 
-     * @return RulePriority The rule priority. Value range: 0-100.
+     * Get Rule priority. Value range: 0-100. 
+     * @return RulePriority Rule priority. Value range: 0-100.
      */
     public Long getRulePriority() {
         return this.RulePriority;
     }
 
     /**
-     * Set The rule priority. Value range: 0-100.
-     * @param RulePriority The rule priority. Value range: 0-100.
+     * Set Rule priority. Value range: 0-100.
+     * @param RulePriority Rule priority. Value range: 0-100.
      */
     public void setRulePriority(Long RulePriority) {
         this.RulePriority = RulePriority;
     }
 
     /**
-     * Get Rule ID, which is only used as an output parameter. 
-     * @return RuleID Rule ID, which is only used as an output parameter.
+     * Get Rule Id. Output only. 
+     * @return RuleID Rule Id. Output only.
      */
     public Long getRuleID() {
         return this.RuleID;
     }
 
     /**
-     * Set Rule ID, which is only used as an output parameter.
-     * @param RuleID Rule ID, which is only used as an output parameter.
+     * Set Rule Id. Output only.
+     * @param RuleID Rule Id. Output only.
      */
     public void setRuleID(Long RuleID) {
         this.RuleID = RuleID;
     }
 
     /**
-     * Get The update time, which is only used as an output parameter. 
-     * @return UpdateTime The update time, which is only used as an output parameter.
+     * Get Update time. For output usage only. 
+     * @return UpdateTime Update time. For output usage only.
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set The update time, which is only used as an output parameter.
-     * @param UpdateTime The update time, which is only used as an output parameter.
+     * Set Update time. For output usage only.
+     * @param UpdateTime Update time. For output usage only.
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
     }
 
     /**
-     * Get IP ban duration. Range: 0-2 days. It's required when `Action=ban`.  
-     * @return PunishTime IP ban duration. Range: 0-2 days. It's required when `Action=ban`. 
+     * Get Penalty duration for ip blocking. Required when Action is ban. It cannot be empty and the value ranges from 0 to 2 days. 
+     * @return PunishTime Penalty duration for ip blocking. Required when Action is ban. It cannot be empty and the value ranges from 0 to 2 days.
      */
     public Long getPunishTime() {
         return this.PunishTime;
     }
 
     /**
-     * Set IP ban duration. Range: 0-2 days. It's required when `Action=ban`. 
-     * @param PunishTime IP ban duration. Range: 0-2 days. It's required when `Action=ban`. 
+     * Set Penalty duration for ip blocking. Required when Action is ban. It cannot be empty and the value ranges from 0 to 2 days.
+     * @param PunishTime Penalty duration for ip blocking. Required when Action is ban. It cannot be empty and the value ranges from 0 to 2 days.
      */
     public void setPunishTime(Long PunishTime) {
         this.PunishTime = PunishTime;
     }
 
     /**
-     * Get The unit of the IP ban duration. Values:
-<li>`second`: Second</li>
-<li>`minutes`: Minute</li>
-<li>`hour`: Hour</li>Default value: `second`. 
-     * @return PunishTimeUnit The unit of the IP ban duration. Values:
-<li>`second`: Second</li>
-<li>`minutes`: Minute</li>
-<li>`hour`: Hour</li>Default value: `second`.
+     * Get Penalty time unit for ip blocking. Valid values:
+<li>second: second;</li>
+<li>minutes: minute;</li>
+<li>hour: hour.</li>Default: second. 
+     * @return PunishTimeUnit Penalty time unit for ip blocking. Valid values:
+<li>second: second;</li>
+<li>minutes: minute;</li>
+<li>hour: hour.</li>Default: second.
      */
     public String getPunishTimeUnit() {
         return this.PunishTimeUnit;
     }
 
     /**
-     * Set The unit of the IP ban duration. Values:
-<li>`second`: Second</li>
-<li>`minutes`: Minute</li>
-<li>`hour`: Hour</li>Default value: `second`.
-     * @param PunishTimeUnit The unit of the IP ban duration. Values:
-<li>`second`: Second</li>
-<li>`minutes`: Minute</li>
-<li>`hour`: Hour</li>Default value: `second`.
+     * Set Penalty time unit for ip blocking. Valid values:
+<li>second: second;</li>
+<li>minutes: minute;</li>
+<li>hour: hour.</li>Default: second.
+     * @param PunishTimeUnit Penalty time unit for ip blocking. Valid values:
+<li>second: second;</li>
+<li>minutes: minute;</li>
+<li>hour: hour.</li>Default: second.
      */
     public void setPunishTimeUnit(String PunishTimeUnit) {
         this.PunishTimeUnit = PunishTimeUnit;
     }
 
     /**
-     * Get Name of the custom return page. It's required when `Action=page`.	 
-     * @return Name Name of the custom return page. It's required when `Action=page`.	
+     * Get Name of the custom return page. Required when Action is page, and cannot be empty.	 
+     * @return Name Name of the custom return page. Required when Action is page, and cannot be empty.	
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Name of the custom return page. It's required when `Action=page`.	
-     * @param Name Name of the custom return page. It's required when `Action=page`.	
+     * Set Name of the custom return page. Required when Action is page, and cannot be empty.	
+     * @param Name Name of the custom return page. Required when Action is page, and cannot be empty.	
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get (Disused) ID of the custom return page. The default value is 0, which means that the system default blocking page is used.  
-     * @return PageId (Disused) ID of the custom return page. The default value is 0, which means that the system default blocking page is used. 
+     * Get Instance Id for the custom return page. Default value: 0, which means the system default blocking page is used. This parameter is deprecated. 
+     * @return PageId Instance Id for the custom return page. Default value: 0, which means the system default blocking page is used. This parameter is deprecated.
      */
     public Long getPageId() {
         return this.PageId;
     }
 
     /**
-     * Set (Disused) ID of the custom return page. The default value is 0, which means that the system default blocking page is used. 
-     * @param PageId (Disused) ID of the custom return page. The default value is 0, which means that the system default blocking page is used. 
+     * Set Instance Id for the custom return page. Default value: 0, which means the system default blocking page is used. This parameter is deprecated.
+     * @param PageId Instance Id for the custom return page. Default value: 0, which means the system default blocking page is used. This parameter is deprecated.
      */
     public void setPageId(Long PageId) {
         this.PageId = PageId;
     }
 
     /**
-     * Get ID of custom response. The ID can be obtained via the `DescribeCustomErrorPages` API. It's required when `Action=page`.	 
-     * @return CustomResponseId ID of custom response. The ID can be obtained via the `DescribeCustomErrorPages` API. It's required when `Action=page`.	
+     * Get Custom response Id, which can be obtained through the API for querying the custom error page list. The default value is default, which uses the system default page. Required and cannot be empty when Action is page.	 
+     * @return CustomResponseId Custom response Id, which can be obtained through the API for querying the custom error page list. The default value is default, which uses the system default page. Required and cannot be empty when Action is page.	
      */
     public String getCustomResponseId() {
         return this.CustomResponseId;
     }
 
     /**
-     * Set ID of custom response. The ID can be obtained via the `DescribeCustomErrorPages` API. It's required when `Action=page`.	
-     * @param CustomResponseId ID of custom response. The ID can be obtained via the `DescribeCustomErrorPages` API. It's required when `Action=page`.	
+     * Set Custom response Id, which can be obtained through the API for querying the custom error page list. The default value is default, which uses the system default page. Required and cannot be empty when Action is page.	
+     * @param CustomResponseId Custom response Id, which can be obtained through the API for querying the custom error page list. The default value is default, which uses the system default page. Required and cannot be empty when Action is page.	
      */
     public void setCustomResponseId(String CustomResponseId) {
         this.CustomResponseId = CustomResponseId;
     }
 
     /**
-     * Get The response code to trigger the return page. It's required when `Action=page`. Value: 100-600. 3xx response codes are not supported. Default value: 567. 
-     * @return ResponseCode The response code to trigger the return page. It's required when `Action=page`. Value: 100-600. 3xx response codes are not supported. Default value: 567.
+     * Get code of the custom return page. Required when Action is page. The value cannot be empty. Value range: 100-600. 3xx response codes are unsupported. Default value: 567. 
+     * @return ResponseCode code of the custom return page. Required when Action is page. The value cannot be empty. Value range: 100-600. 3xx response codes are unsupported. Default value: 567.
      */
     public Long getResponseCode() {
         return this.ResponseCode;
     }
 
     /**
-     * Set The response code to trigger the return page. It's required when `Action=page`. Value: 100-600. 3xx response codes are not supported. Default value: 567.
-     * @param ResponseCode The response code to trigger the return page. It's required when `Action=page`. Value: 100-600. 3xx response codes are not supported. Default value: 567.
+     * Set code of the custom return page. Required when Action is page. The value cannot be empty. Value range: 100-600. 3xx response codes are unsupported. Default value: 567.
+     * @param ResponseCode code of the custom return page. Required when Action is page. The value cannot be empty. Value range: 100-600. 3xx response codes are unsupported. Default value: 567.
      */
     public void setResponseCode(Long ResponseCode) {
         this.ResponseCode = ResponseCode;
     }
 
     /**
-     * Get The redirection URL. It's required when `Action=redirect`.	 
-     * @return RedirectUrl The redirection URL. It's required when `Action=redirect`.	
+     * Get Address for redirection. Required when Action is `redirect` and cannot be empty.	 
+     * @return RedirectUrl Address for redirection. Required when Action is `redirect` and cannot be empty.	
      */
     public String getRedirectUrl() {
         return this.RedirectUrl;
     }
 
     /**
-     * Set The redirection URL. It's required when `Action=redirect`.	
-     * @param RedirectUrl The redirection URL. It's required when `Action=redirect`.	
+     * Set Address for redirection. Required when Action is `redirect` and cannot be empty.	
+     * @param RedirectUrl Address for redirection. Required when Action is `redirect` and cannot be empty.	
      */
     public void setRedirectUrl(String RedirectUrl) {
         this.RedirectUrl = RedirectUrl;

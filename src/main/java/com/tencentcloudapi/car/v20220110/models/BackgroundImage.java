@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class BackgroundImage extends AbstractModel {
 
     /**
-    * ID of the COS file.Note: This field may return null, indicating that no valid values can be obtained.
+    * ID of the COS file.
     */
     @SerializedName("COSFileId")
     @Expose
     private String COSFileId;
 
     /**
-    * Download URL.Note: This field may return null, indicating that no valid values can be obtained.
+    * Download URL.
     */
     @SerializedName("URL")
     @Expose
@@ -39,61 +39,53 @@ public class BackgroundImage extends AbstractModel {
 
     /**
     * Name
-
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * Creation time.
-
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Creation Time
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-     * Get ID of the COS file.Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return COSFileId ID of the COS file.Note: This field may return null, indicating that no valid values can be obtained.
+     * Get ID of the COS file. 
+     * @return COSFileId ID of the COS file.
      */
     public String getCOSFileId() {
         return this.COSFileId;
     }
 
     /**
-     * Set ID of the COS file.Note: This field may return null, indicating that no valid values can be obtained.
-     * @param COSFileId ID of the COS file.Note: This field may return null, indicating that no valid values can be obtained.
+     * Set ID of the COS file.
+     * @param COSFileId ID of the COS file.
      */
     public void setCOSFileId(String COSFileId) {
         this.COSFileId = COSFileId;
     }
 
     /**
-     * Get Download URL.Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return URL Download URL.Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Download URL. 
+     * @return URL Download URL.
      */
     public String getURL() {
         return this.URL;
     }
 
     /**
-     * Set Download URL.Note: This field may return null, indicating that no valid values can be obtained.
-     * @param URL Download URL.Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Download URL.
+     * @param URL Download URL.
      */
     public void setURL(String URL) {
         this.URL = URL;
     }
 
     /**
-     * Get Name
-
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Name 
      * @return Name Name
-
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getName() {
         return this.Name;
@@ -101,35 +93,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Name
-
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Name Name
-
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Creation time.
-
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return CreateTime Creation time.
-
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Creation Time 
+     * @return CreateTime Creation Time
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set Creation time.
-
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param CreateTime Creation time.
-
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Creation Time
+     * @param CreateTime Creation Time
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;

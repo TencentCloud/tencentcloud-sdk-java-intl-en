@@ -31,23 +31,23 @@ public class ModifyL4ProxyRulesStatusRequest extends AbstractModel {
     private String ZoneId;
 
     /**
-    * Layer 4 proxy instance ID.
+    * Layer 4 Proxy Instance ID.
     */
     @SerializedName("ProxyId")
     @Expose
     private String ProxyId;
 
     /**
-    * List of forwarding rule IDs. It supports up to 200 forwarding rules at a time.
+    * List of forwarding rule IDs. Supports up to 200 forwarding rules at a time.
     */
     @SerializedName("RuleIds")
     @Expose
     private String [] RuleIds;
 
     /**
-    * Status of forwarding rules. Valid values:
-<li>online: Enabled;</li>
-<li>offline: Disabled.</li>
+    * Forwarding rule status. Valid values:
+<li>`online`: Enable;</li>
+<li>offline: Disable.</li>
     */
     @SerializedName("Status")
     @Expose
@@ -70,56 +70,56 @@ public class ModifyL4ProxyRulesStatusRequest extends AbstractModel {
     }
 
     /**
-     * Get Layer 4 proxy instance ID. 
-     * @return ProxyId Layer 4 proxy instance ID.
+     * Get Layer 4 Proxy Instance ID. 
+     * @return ProxyId Layer 4 Proxy Instance ID.
      */
     public String getProxyId() {
         return this.ProxyId;
     }
 
     /**
-     * Set Layer 4 proxy instance ID.
-     * @param ProxyId Layer 4 proxy instance ID.
+     * Set Layer 4 Proxy Instance ID.
+     * @param ProxyId Layer 4 Proxy Instance ID.
      */
     public void setProxyId(String ProxyId) {
         this.ProxyId = ProxyId;
     }
 
     /**
-     * Get List of forwarding rule IDs. It supports up to 200 forwarding rules at a time. 
-     * @return RuleIds List of forwarding rule IDs. It supports up to 200 forwarding rules at a time.
+     * Get List of forwarding rule IDs. Supports up to 200 forwarding rules at a time. 
+     * @return RuleIds List of forwarding rule IDs. Supports up to 200 forwarding rules at a time.
      */
     public String [] getRuleIds() {
         return this.RuleIds;
     }
 
     /**
-     * Set List of forwarding rule IDs. It supports up to 200 forwarding rules at a time.
-     * @param RuleIds List of forwarding rule IDs. It supports up to 200 forwarding rules at a time.
+     * Set List of forwarding rule IDs. Supports up to 200 forwarding rules at a time.
+     * @param RuleIds List of forwarding rule IDs. Supports up to 200 forwarding rules at a time.
      */
     public void setRuleIds(String [] RuleIds) {
         this.RuleIds = RuleIds;
     }
 
     /**
-     * Get Status of forwarding rules. Valid values:
-<li>online: Enabled;</li>
-<li>offline: Disabled.</li> 
-     * @return Status Status of forwarding rules. Valid values:
-<li>online: Enabled;</li>
-<li>offline: Disabled.</li>
+     * Get Forwarding rule status. Valid values:
+<li>`online`: Enable;</li>
+<li>offline: Disable.</li> 
+     * @return Status Forwarding rule status. Valid values:
+<li>`online`: Enable;</li>
+<li>offline: Disable.</li>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Status of forwarding rules. Valid values:
-<li>online: Enabled;</li>
-<li>offline: Disabled.</li>
-     * @param Status Status of forwarding rules. Valid values:
-<li>online: Enabled;</li>
-<li>offline: Disabled.</li>
+     * Set Forwarding rule status. Valid values:
+<li>`online`: Enable;</li>
+<li>offline: Disable.</li>
+     * @param Status Forwarding rule status. Valid values:
+<li>`online`: Enable;</li>
+<li>offline: Disable.</li>
      */
     public void setStatus(String Status) {
         this.Status = Status;

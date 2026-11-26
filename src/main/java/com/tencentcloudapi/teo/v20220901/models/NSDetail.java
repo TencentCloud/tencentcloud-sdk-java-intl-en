@@ -24,181 +24,181 @@ import java.util.HashMap;
 public class NSDetail extends AbstractModel {
 
     /**
-    * Specifies whether CNAME acceleration is enabled. valid values:.
-<Li>Enabled: specifies whether the feature is enabled.</li>.
-<li>disabled: specifies that the feature is turned off.</li>.
+    * Whether CNAME acceleration is enabled. Valid values:
+<li> enabled: Enable;</li>
+<li> disabled: Disable.</li>
     */
     @SerializedName("CnameSpeedUp")
     @Expose
     private String CnameSpeedUp;
 
     /**
-    * Existence of a site with the same name. valid values:.
-<Li>0: no site with the same name exists.</li>.
-<Li>Specifies the name already exists.</li>.
+    * Existence of a site with the same name. Valid values:
+<li> 0: No site with the same name exists;</li>
+<li> 1: A site with the same name already exists.</li>
     */
     @SerializedName("IsFake")
     @Expose
     private Long IsFake;
 
     /**
-    * Ownership verification information. for sites with NS access type, switching the current NS server to the designated NS server of tencent cloud EdgeOne is deemed as passing the ownership verification. for details, refer to [site/domain ownership verification](https://www.tencentcloud.com/document/product/1552/70789?from_cn_redirect=1).
+    * Ownership verification information. For sites with NS access type, switching the current NS server to the NS server designated by Tencent Cloud EdgeOne is deemed as passing ownership verification. For details, see [Site/Domain Ownership Verification](https://www.tencentcloud.com/document/product/1552/70789?from_cn_redirect=1).
     */
     @SerializedName("OwnershipVerification")
     @Expose
     private OwnershipVerification OwnershipVerification;
 
     /**
-    * Lists the NS servers currently in use by the selected site detected by EdgeOne.
+    * List of NS servers currently in use by the site detected by EdgeOne.
     */
     @SerializedName("OriginalNameServers")
     @Expose
     private String [] OriginalNameServers;
 
     /**
-    * Lists the NS servers allocated by tencent cloud EdgeOne. requires pointing the current site's NS servers to this address for the changes to take effect.
+    * List of NS servers assigned by Tencent Cloud EdgeOne. Point the NS server of the current site to this address for the site to take effect.
     */
     @SerializedName("NameServers")
     @Expose
     private String [] NameServers;
 
     /**
-    * Specifies the user-customized NS server domain name information. if enabled, the NS needs to be pointed to this address in the registered vendor of the domains.
+    * User-customized NS server domain info. If the custom NS service is enabled, the NS need to be pointed to this address at the domain name registered vendor.
     */
     @SerializedName("VanityNameServers")
     @Expose
     private VanityNameServers VanityNameServers;
 
     /**
-    * Describes the IP address information of the user-customized NS server.
+    * IP address information corresponding to the user-customized NS server.
     */
     @SerializedName("VanityNameServersIps")
     @Expose
     private VanityNameServersIps [] VanityNameServersIps;
 
     /**
-     * Get Specifies whether CNAME acceleration is enabled. valid values:.
-<Li>Enabled: specifies whether the feature is enabled.</li>.
-<li>disabled: specifies that the feature is turned off.</li>. 
-     * @return CnameSpeedUp Specifies whether CNAME acceleration is enabled. valid values:.
-<Li>Enabled: specifies whether the feature is enabled.</li>.
-<li>disabled: specifies that the feature is turned off.</li>.
+     * Get Whether CNAME acceleration is enabled. Valid values:
+<li> enabled: Enable;</li>
+<li> disabled: Disable.</li> 
+     * @return CnameSpeedUp Whether CNAME acceleration is enabled. Valid values:
+<li> enabled: Enable;</li>
+<li> disabled: Disable.</li>
      */
     public String getCnameSpeedUp() {
         return this.CnameSpeedUp;
     }
 
     /**
-     * Set Specifies whether CNAME acceleration is enabled. valid values:.
-<Li>Enabled: specifies whether the feature is enabled.</li>.
-<li>disabled: specifies that the feature is turned off.</li>.
-     * @param CnameSpeedUp Specifies whether CNAME acceleration is enabled. valid values:.
-<Li>Enabled: specifies whether the feature is enabled.</li>.
-<li>disabled: specifies that the feature is turned off.</li>.
+     * Set Whether CNAME acceleration is enabled. Valid values:
+<li> enabled: Enable;</li>
+<li> disabled: Disable.</li>
+     * @param CnameSpeedUp Whether CNAME acceleration is enabled. Valid values:
+<li> enabled: Enable;</li>
+<li> disabled: Disable.</li>
      */
     public void setCnameSpeedUp(String CnameSpeedUp) {
         this.CnameSpeedUp = CnameSpeedUp;
     }
 
     /**
-     * Get Existence of a site with the same name. valid values:.
-<Li>0: no site with the same name exists.</li>.
-<Li>Specifies the name already exists.</li>. 
-     * @return IsFake Existence of a site with the same name. valid values:.
-<Li>0: no site with the same name exists.</li>.
-<Li>Specifies the name already exists.</li>.
+     * Get Existence of a site with the same name. Valid values:
+<li> 0: No site with the same name exists;</li>
+<li> 1: A site with the same name already exists.</li> 
+     * @return IsFake Existence of a site with the same name. Valid values:
+<li> 0: No site with the same name exists;</li>
+<li> 1: A site with the same name already exists.</li>
      */
     public Long getIsFake() {
         return this.IsFake;
     }
 
     /**
-     * Set Existence of a site with the same name. valid values:.
-<Li>0: no site with the same name exists.</li>.
-<Li>Specifies the name already exists.</li>.
-     * @param IsFake Existence of a site with the same name. valid values:.
-<Li>0: no site with the same name exists.</li>.
-<Li>Specifies the name already exists.</li>.
+     * Set Existence of a site with the same name. Valid values:
+<li> 0: No site with the same name exists;</li>
+<li> 1: A site with the same name already exists.</li>
+     * @param IsFake Existence of a site with the same name. Valid values:
+<li> 0: No site with the same name exists;</li>
+<li> 1: A site with the same name already exists.</li>
      */
     public void setIsFake(Long IsFake) {
         this.IsFake = IsFake;
     }
 
     /**
-     * Get Ownership verification information. for sites with NS access type, switching the current NS server to the designated NS server of tencent cloud EdgeOne is deemed as passing the ownership verification. for details, refer to [site/domain ownership verification](https://www.tencentcloud.com/document/product/1552/70789?from_cn_redirect=1). 
-     * @return OwnershipVerification Ownership verification information. for sites with NS access type, switching the current NS server to the designated NS server of tencent cloud EdgeOne is deemed as passing the ownership verification. for details, refer to [site/domain ownership verification](https://www.tencentcloud.com/document/product/1552/70789?from_cn_redirect=1).
+     * Get Ownership verification information. For sites with NS access type, switching the current NS server to the NS server designated by Tencent Cloud EdgeOne is deemed as passing ownership verification. For details, see [Site/Domain Ownership Verification](https://www.tencentcloud.com/document/product/1552/70789?from_cn_redirect=1). 
+     * @return OwnershipVerification Ownership verification information. For sites with NS access type, switching the current NS server to the NS server designated by Tencent Cloud EdgeOne is deemed as passing ownership verification. For details, see [Site/Domain Ownership Verification](https://www.tencentcloud.com/document/product/1552/70789?from_cn_redirect=1).
      */
     public OwnershipVerification getOwnershipVerification() {
         return this.OwnershipVerification;
     }
 
     /**
-     * Set Ownership verification information. for sites with NS access type, switching the current NS server to the designated NS server of tencent cloud EdgeOne is deemed as passing the ownership verification. for details, refer to [site/domain ownership verification](https://www.tencentcloud.com/document/product/1552/70789?from_cn_redirect=1).
-     * @param OwnershipVerification Ownership verification information. for sites with NS access type, switching the current NS server to the designated NS server of tencent cloud EdgeOne is deemed as passing the ownership verification. for details, refer to [site/domain ownership verification](https://www.tencentcloud.com/document/product/1552/70789?from_cn_redirect=1).
+     * Set Ownership verification information. For sites with NS access type, switching the current NS server to the NS server designated by Tencent Cloud EdgeOne is deemed as passing ownership verification. For details, see [Site/Domain Ownership Verification](https://www.tencentcloud.com/document/product/1552/70789?from_cn_redirect=1).
+     * @param OwnershipVerification Ownership verification information. For sites with NS access type, switching the current NS server to the NS server designated by Tencent Cloud EdgeOne is deemed as passing ownership verification. For details, see [Site/Domain Ownership Verification](https://www.tencentcloud.com/document/product/1552/70789?from_cn_redirect=1).
      */
     public void setOwnershipVerification(OwnershipVerification OwnershipVerification) {
         this.OwnershipVerification = OwnershipVerification;
     }
 
     /**
-     * Get Lists the NS servers currently in use by the selected site detected by EdgeOne. 
-     * @return OriginalNameServers Lists the NS servers currently in use by the selected site detected by EdgeOne.
+     * Get List of NS servers currently in use by the site detected by EdgeOne. 
+     * @return OriginalNameServers List of NS servers currently in use by the site detected by EdgeOne.
      */
     public String [] getOriginalNameServers() {
         return this.OriginalNameServers;
     }
 
     /**
-     * Set Lists the NS servers currently in use by the selected site detected by EdgeOne.
-     * @param OriginalNameServers Lists the NS servers currently in use by the selected site detected by EdgeOne.
+     * Set List of NS servers currently in use by the site detected by EdgeOne.
+     * @param OriginalNameServers List of NS servers currently in use by the site detected by EdgeOne.
      */
     public void setOriginalNameServers(String [] OriginalNameServers) {
         this.OriginalNameServers = OriginalNameServers;
     }
 
     /**
-     * Get Lists the NS servers allocated by tencent cloud EdgeOne. requires pointing the current site's NS servers to this address for the changes to take effect. 
-     * @return NameServers Lists the NS servers allocated by tencent cloud EdgeOne. requires pointing the current site's NS servers to this address for the changes to take effect.
+     * Get List of NS servers assigned by Tencent Cloud EdgeOne. Point the NS server of the current site to this address for the site to take effect. 
+     * @return NameServers List of NS servers assigned by Tencent Cloud EdgeOne. Point the NS server of the current site to this address for the site to take effect.
      */
     public String [] getNameServers() {
         return this.NameServers;
     }
 
     /**
-     * Set Lists the NS servers allocated by tencent cloud EdgeOne. requires pointing the current site's NS servers to this address for the changes to take effect.
-     * @param NameServers Lists the NS servers allocated by tencent cloud EdgeOne. requires pointing the current site's NS servers to this address for the changes to take effect.
+     * Set List of NS servers assigned by Tencent Cloud EdgeOne. Point the NS server of the current site to this address for the site to take effect.
+     * @param NameServers List of NS servers assigned by Tencent Cloud EdgeOne. Point the NS server of the current site to this address for the site to take effect.
      */
     public void setNameServers(String [] NameServers) {
         this.NameServers = NameServers;
     }
 
     /**
-     * Get Specifies the user-customized NS server domain name information. if enabled, the NS needs to be pointed to this address in the registered vendor of the domains. 
-     * @return VanityNameServers Specifies the user-customized NS server domain name information. if enabled, the NS needs to be pointed to this address in the registered vendor of the domains.
+     * Get User-customized NS server domain info. If the custom NS service is enabled, the NS need to be pointed to this address at the domain name registered vendor. 
+     * @return VanityNameServers User-customized NS server domain info. If the custom NS service is enabled, the NS need to be pointed to this address at the domain name registered vendor.
      */
     public VanityNameServers getVanityNameServers() {
         return this.VanityNameServers;
     }
 
     /**
-     * Set Specifies the user-customized NS server domain name information. if enabled, the NS needs to be pointed to this address in the registered vendor of the domains.
-     * @param VanityNameServers Specifies the user-customized NS server domain name information. if enabled, the NS needs to be pointed to this address in the registered vendor of the domains.
+     * Set User-customized NS server domain info. If the custom NS service is enabled, the NS need to be pointed to this address at the domain name registered vendor.
+     * @param VanityNameServers User-customized NS server domain info. If the custom NS service is enabled, the NS need to be pointed to this address at the domain name registered vendor.
      */
     public void setVanityNameServers(VanityNameServers VanityNameServers) {
         this.VanityNameServers = VanityNameServers;
     }
 
     /**
-     * Get Describes the IP address information of the user-customized NS server. 
-     * @return VanityNameServersIps Describes the IP address information of the user-customized NS server.
+     * Get IP address information corresponding to the user-customized NS server. 
+     * @return VanityNameServersIps IP address information corresponding to the user-customized NS server.
      */
     public VanityNameServersIps [] getVanityNameServersIps() {
         return this.VanityNameServersIps;
     }
 
     /**
-     * Set Describes the IP address information of the user-customized NS server.
-     * @param VanityNameServersIps Describes the IP address information of the user-customized NS server.
+     * Set IP address information corresponding to the user-customized NS server.
+     * @param VanityNameServersIps IP address information corresponding to the user-customized NS server.
      */
     public void setVanityNameServersIps(VanityNameServersIps [] VanityNameServersIps) {
         this.VanityNameServersIps = VanityNameServersIps;

@@ -24,61 +24,56 @@ import java.util.HashMap;
 public class ClientIPCountryParameters extends AbstractModel {
 
     /**
-    * Whether to enable configuration. values:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li>.
+    * Configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * Name of the request header that contains the client ip region. it is valid when `switch=on`. the default value `eo-client-ipcountry` is used when it is not specified.
+    * Request header name for storing the region of the client IP address. Valid when Switch is on. If empty, the default value EO-Client-IPCountry is used.
     */
     @SerializedName("HeaderName")
     @Expose
     private String HeaderName;
 
     /**
-     * Get Whether to enable configuration. values:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li>. 
-     * @return Switch Whether to enable configuration. values:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li>.
+     * Get Configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li> 
+     * @return Switch Configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set Whether to enable configuration. values:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li>.
-     * @param Switch Whether to enable configuration. values:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li>.
+     * Set Configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+     * @param Switch Configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get Name of the request header that contains the client ip region. it is valid when `switch=on`. the default value `eo-client-ipcountry` is used when it is not specified. 
-     * @return HeaderName Name of the request header that contains the client ip region. it is valid when `switch=on`. the default value `eo-client-ipcountry` is used when it is not specified.
+     * Get Request header name for storing the region of the client IP address. Valid when Switch is on. If empty, the default value EO-Client-IPCountry is used. 
+     * @return HeaderName Request header name for storing the region of the client IP address. Valid when Switch is on. If empty, the default value EO-Client-IPCountry is used.
      */
     public String getHeaderName() {
         return this.HeaderName;
     }
 
     /**
-     * Set Name of the request header that contains the client ip region. it is valid when `switch=on`. the default value `eo-client-ipcountry` is used when it is not specified.
-     * @param HeaderName Name of the request header that contains the client ip region. it is valid when `switch=on`. the default value `eo-client-ipcountry` is used when it is not specified.
+     * Set Request header name for storing the region of the client IP address. Valid when Switch is on. If empty, the default value EO-Client-IPCountry is used.
+     * @param HeaderName Request header name for storing the region of the client IP address. Valid when Switch is on. If empty, the default value EO-Client-IPCountry is used.
      */
     public void setHeaderName(String HeaderName) {
         this.HeaderName = HeaderName;

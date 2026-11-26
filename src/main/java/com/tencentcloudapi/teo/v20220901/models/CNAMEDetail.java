@@ -24,9 +24,9 @@ import java.util.HashMap;
 public class CNAMEDetail extends AbstractModel {
 
     /**
-    * Whether it is a fake site, with values:.
-<Li>0: non-fake site.</li>.
-<Li>1: fake site.</li>.
+    * Whether it is a fake site. Valid values:
+<li> 0: non-fake site</li>
+<li> 1: Fake site.</li>
 
     */
     @SerializedName("IsFake")
@@ -34,20 +34,20 @@ public class CNAMEDetail extends AbstractModel {
     private Long IsFake;
 
     /**
-    * Ownership verification information. for details, refer to [site/domain ownership verification](https://www.tencentcloud.com/document/product/1552/70789?from_cn_redirect=1).
+    * Ownership verification information. For details, see [Site/Domain Ownership Verification](https://www.tencentcloud.com/document/product/1552/70789?from_cn_redirect=1).
     */
     @SerializedName("OwnershipVerification")
     @Expose
     private OwnershipVerification OwnershipVerification;
 
     /**
-     * Get Whether it is a fake site, with values:.
-<Li>0: non-fake site.</li>.
-<Li>1: fake site.</li>.
+     * Get Whether it is a fake site. Valid values:
+<li> 0: non-fake site</li>
+<li> 1: Fake site.</li>
  
-     * @return IsFake Whether it is a fake site, with values:.
-<Li>0: non-fake site.</li>.
-<Li>1: fake site.</li>.
+     * @return IsFake Whether it is a fake site. Valid values:
+<li> 0: non-fake site</li>
+<li> 1: Fake site.</li>
 
      */
     public Long getIsFake() {
@@ -55,13 +55,13 @@ public class CNAMEDetail extends AbstractModel {
     }
 
     /**
-     * Set Whether it is a fake site, with values:.
-<Li>0: non-fake site.</li>.
-<Li>1: fake site.</li>.
+     * Set Whether it is a fake site. Valid values:
+<li> 0: non-fake site</li>
+<li> 1: Fake site.</li>
 
-     * @param IsFake Whether it is a fake site, with values:.
-<Li>0: non-fake site.</li>.
-<Li>1: fake site.</li>.
+     * @param IsFake Whether it is a fake site. Valid values:
+<li> 0: non-fake site</li>
+<li> 1: Fake site.</li>
 
      */
     public void setIsFake(Long IsFake) {
@@ -69,16 +69,16 @@ public class CNAMEDetail extends AbstractModel {
     }
 
     /**
-     * Get Ownership verification information. for details, refer to [site/domain ownership verification](https://www.tencentcloud.com/document/product/1552/70789?from_cn_redirect=1). 
-     * @return OwnershipVerification Ownership verification information. for details, refer to [site/domain ownership verification](https://www.tencentcloud.com/document/product/1552/70789?from_cn_redirect=1).
+     * Get Ownership verification information. For details, see [Site/Domain Ownership Verification](https://www.tencentcloud.com/document/product/1552/70789?from_cn_redirect=1). 
+     * @return OwnershipVerification Ownership verification information. For details, see [Site/Domain Ownership Verification](https://www.tencentcloud.com/document/product/1552/70789?from_cn_redirect=1).
      */
     public OwnershipVerification getOwnershipVerification() {
         return this.OwnershipVerification;
     }
 
     /**
-     * Set Ownership verification information. for details, refer to [site/domain ownership verification](https://www.tencentcloud.com/document/product/1552/70789?from_cn_redirect=1).
-     * @param OwnershipVerification Ownership verification information. for details, refer to [site/domain ownership verification](https://www.tencentcloud.com/document/product/1552/70789?from_cn_redirect=1).
+     * Set Ownership verification information. For details, see [Site/Domain Ownership Verification](https://www.tencentcloud.com/document/product/1552/70789?from_cn_redirect=1).
+     * @param OwnershipVerification Ownership verification information. For details, see [Site/Domain Ownership Verification](https://www.tencentcloud.com/document/product/1552/70789?from_cn_redirect=1).
      */
     public void setOwnershipVerification(OwnershipVerification OwnershipVerification) {
         this.OwnershipVerification = OwnershipVerification;

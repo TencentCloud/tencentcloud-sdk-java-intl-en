@@ -24,102 +24,102 @@ import java.util.HashMap;
 public class ModifyApplicationProxyRuleStatusRequest extends AbstractModel {
 
     /**
-    * The site ID.
+    * Site ID.
     */
     @SerializedName("ZoneId")
     @Expose
     private String ZoneId;
 
     /**
-    * The proxy ID.
+    * Proxy ID.
     */
     @SerializedName("ProxyId")
     @Expose
     private String ProxyId;
 
     /**
-    * The rule ID.
+    * Rule ID.
     */
     @SerializedName("RuleId")
     @Expose
     private String RuleId;
 
     /**
-    * The rule status. Values:
-<li>`offline`: Disabled</li>
-<li>`online`: Enabled</li>
+    * Status. Valid values:
+<li>offline: disabled;</li>
+<li>online: enabled.</li>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-     * Get The site ID. 
-     * @return ZoneId The site ID.
+     * Get Site ID. 
+     * @return ZoneId Site ID.
      */
     public String getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set The site ID.
-     * @param ZoneId The site ID.
+     * Set Site ID.
+     * @param ZoneId Site ID.
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get The proxy ID. 
-     * @return ProxyId The proxy ID.
+     * Get Proxy ID. 
+     * @return ProxyId Proxy ID.
      */
     public String getProxyId() {
         return this.ProxyId;
     }
 
     /**
-     * Set The proxy ID.
-     * @param ProxyId The proxy ID.
+     * Set Proxy ID.
+     * @param ProxyId Proxy ID.
      */
     public void setProxyId(String ProxyId) {
         this.ProxyId = ProxyId;
     }
 
     /**
-     * Get The rule ID. 
-     * @return RuleId The rule ID.
+     * Get Rule ID. 
+     * @return RuleId Rule ID.
      */
     public String getRuleId() {
         return this.RuleId;
     }
 
     /**
-     * Set The rule ID.
-     * @param RuleId The rule ID.
+     * Set Rule ID.
+     * @param RuleId Rule ID.
      */
     public void setRuleId(String RuleId) {
         this.RuleId = RuleId;
     }
 
     /**
-     * Get The rule status. Values:
-<li>`offline`: Disabled</li>
-<li>`online`: Enabled</li> 
-     * @return Status The rule status. Values:
-<li>`offline`: Disabled</li>
-<li>`online`: Enabled</li>
+     * Get Status. Valid values:
+<li>offline: disabled;</li>
+<li>online: enabled.</li> 
+     * @return Status Status. Valid values:
+<li>offline: disabled;</li>
+<li>online: enabled.</li>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set The rule status. Values:
-<li>`offline`: Disabled</li>
-<li>`online`: Enabled</li>
-     * @param Status The rule status. Values:
-<li>`offline`: Disabled</li>
-<li>`online`: Enabled</li>
+     * Set Status. Valid values:
+<li>offline: disabled;</li>
+<li>online: enabled.</li>
+     * @param Status Status. Valid values:
+<li>offline: disabled;</li>
+<li>online: enabled.</li>
      */
     public void setStatus(String Status) {
         this.Status = Status;

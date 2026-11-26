@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class MultiPathGatewayOriginACLInfo extends AbstractModel {
 
     /**
-    * Describes the currently effective IP range for origin servers.
+    * Currently effective origin-pull IP range.
     */
     @SerializedName("MultiPathGatewayCurrentOriginACL")
     @Expose
     private MultiPathGatewayCurrentOriginACL MultiPathGatewayCurrentOriginACL;
 
     /**
-    * When the origin IP range is updated, this field will be returned with the next version's effective origin IP range, including a comparison with the current origin IP range. this field is empty if not updated.
+    * When the origin-pull IP range is updated, this field will return the origin-pull IP range that will take effect in the next version, including a contrast with the current origin-pull IP range. If there is no update, this field is empty.
     */
     @SerializedName("MultiPathGatewayNextOriginACL")
     @Expose
     private MultiPathGatewayNextOriginACL MultiPathGatewayNextOriginACL;
 
     /**
-     * Get Describes the currently effective IP range for origin servers. 
-     * @return MultiPathGatewayCurrentOriginACL Describes the currently effective IP range for origin servers.
+     * Get Currently effective origin-pull IP range. 
+     * @return MultiPathGatewayCurrentOriginACL Currently effective origin-pull IP range.
      */
     public MultiPathGatewayCurrentOriginACL getMultiPathGatewayCurrentOriginACL() {
         return this.MultiPathGatewayCurrentOriginACL;
     }
 
     /**
-     * Set Describes the currently effective IP range for origin servers.
-     * @param MultiPathGatewayCurrentOriginACL Describes the currently effective IP range for origin servers.
+     * Set Currently effective origin-pull IP range.
+     * @param MultiPathGatewayCurrentOriginACL Currently effective origin-pull IP range.
      */
     public void setMultiPathGatewayCurrentOriginACL(MultiPathGatewayCurrentOriginACL MultiPathGatewayCurrentOriginACL) {
         this.MultiPathGatewayCurrentOriginACL = MultiPathGatewayCurrentOriginACL;
     }
 
     /**
-     * Get When the origin IP range is updated, this field will be returned with the next version's effective origin IP range, including a comparison with the current origin IP range. this field is empty if not updated. 
-     * @return MultiPathGatewayNextOriginACL When the origin IP range is updated, this field will be returned with the next version's effective origin IP range, including a comparison with the current origin IP range. this field is empty if not updated.
+     * Get When the origin-pull IP range is updated, this field will return the origin-pull IP range that will take effect in the next version, including a contrast with the current origin-pull IP range. If there is no update, this field is empty. 
+     * @return MultiPathGatewayNextOriginACL When the origin-pull IP range is updated, this field will return the origin-pull IP range that will take effect in the next version, including a contrast with the current origin-pull IP range. If there is no update, this field is empty.
      */
     public MultiPathGatewayNextOriginACL getMultiPathGatewayNextOriginACL() {
         return this.MultiPathGatewayNextOriginACL;
     }
 
     /**
-     * Set When the origin IP range is updated, this field will be returned with the next version's effective origin IP range, including a comparison with the current origin IP range. this field is empty if not updated.
-     * @param MultiPathGatewayNextOriginACL When the origin IP range is updated, this field will be returned with the next version's effective origin IP range, including a comparison with the current origin IP range. this field is empty if not updated.
+     * Set When the origin-pull IP range is updated, this field will return the origin-pull IP range that will take effect in the next version, including a contrast with the current origin-pull IP range. If there is no update, this field is empty.
+     * @param MultiPathGatewayNextOriginACL When the origin-pull IP range is updated, this field will return the origin-pull IP range that will take effect in the next version, including a contrast with the current origin-pull IP range. If there is no update, this field is empty.
      */
     public void setMultiPathGatewayNextOriginACL(MultiPathGatewayNextOriginACL MultiPathGatewayNextOriginACL) {
         this.MultiPathGatewayNextOriginACL = MultiPathGatewayNextOriginACL;

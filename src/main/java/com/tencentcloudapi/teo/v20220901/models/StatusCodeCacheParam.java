@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class StatusCodeCacheParam extends AbstractModel {
 
     /**
-    * Status code. valid values: 400, 401, 403, 404, 405, 407, 414, 500, 501, 502, 503, 504, 509, 514.
+    * Status code. Value is one of 400, 401, 403, 404, 405, 407, 414, 500, 501, 502, 503, 504, 509, 514.
     */
     @SerializedName("StatusCode")
     @Expose
     private Long StatusCode;
 
     /**
-    * Cache time value in seconds. value range: 0–31536000.
+    * Cache time value, in seconds. Value range: 0–31536000.
     */
     @SerializedName("CacheTime")
     @Expose
     private Long CacheTime;
 
     /**
-     * Get Status code. valid values: 400, 401, 403, 404, 405, 407, 414, 500, 501, 502, 503, 504, 509, 514. 
-     * @return StatusCode Status code. valid values: 400, 401, 403, 404, 405, 407, 414, 500, 501, 502, 503, 504, 509, 514.
+     * Get Status code. Value is one of 400, 401, 403, 404, 405, 407, 414, 500, 501, 502, 503, 504, 509, 514. 
+     * @return StatusCode Status code. Value is one of 400, 401, 403, 404, 405, 407, 414, 500, 501, 502, 503, 504, 509, 514.
      */
     public Long getStatusCode() {
         return this.StatusCode;
     }
 
     /**
-     * Set Status code. valid values: 400, 401, 403, 404, 405, 407, 414, 500, 501, 502, 503, 504, 509, 514.
-     * @param StatusCode Status code. valid values: 400, 401, 403, 404, 405, 407, 414, 500, 501, 502, 503, 504, 509, 514.
+     * Set Status code. Value is one of 400, 401, 403, 404, 405, 407, 414, 500, 501, 502, 503, 504, 509, 514.
+     * @param StatusCode Status code. Value is one of 400, 401, 403, 404, 405, 407, 414, 500, 501, 502, 503, 504, 509, 514.
      */
     public void setStatusCode(Long StatusCode) {
         this.StatusCode = StatusCode;
     }
 
     /**
-     * Get Cache time value in seconds. value range: 0–31536000. 
-     * @return CacheTime Cache time value in seconds. value range: 0–31536000.
+     * Get Cache time value, in seconds. Value range: 0–31536000. 
+     * @return CacheTime Cache time value, in seconds. Value range: 0–31536000.
      */
     public Long getCacheTime() {
         return this.CacheTime;
     }
 
     /**
-     * Set Cache time value in seconds. value range: 0–31536000.
-     * @param CacheTime Cache time value in seconds. value range: 0–31536000.
+     * Set Cache time value, in seconds. Value range: 0–31536000.
+     * @param CacheTime Cache time value, in seconds. Value range: 0–31536000.
      */
     public void setCacheTime(Long CacheTime) {
         this.CacheTime = CacheTime;

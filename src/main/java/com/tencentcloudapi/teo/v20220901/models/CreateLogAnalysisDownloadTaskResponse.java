@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateLogAnalysisDownloadTaskResponse extends AbstractModel {
 
     /**
-    * <p>Log analysis download task ID.</p>
+    * <p>Log analytics download task ID.</p>
     */
     @SerializedName("TaskId")
     @Expose
@@ -38,16 +38,16 @@ public class CreateLogAnalysisDownloadTaskResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get <p>Log analysis download task ID.</p> 
-     * @return TaskId <p>Log analysis download task ID.</p>
+     * Get <p>Log analytics download task ID.</p> 
+     * @return TaskId <p>Log analytics download task ID.</p>
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set <p>Log analysis download task ID.</p>
-     * @param TaskId <p>Log analysis download task ID.</p>
+     * Set <p>Log analytics download task ID.</p>
+     * @param TaskId <p>Log analytics download task ID.</p>
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;

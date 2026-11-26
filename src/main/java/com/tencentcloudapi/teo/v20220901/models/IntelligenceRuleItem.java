@@ -24,91 +24,91 @@ import java.util.HashMap;
 public class IntelligenceRuleItem extends AbstractModel {
 
     /**
-    * The tag to categorize bots. Values:
-<li>`evil_bot`: Malicious bot</li>
-<li>`suspect_bot`: Suspected bot</li>
-<li>`good_bot`: Good bot</li>
-<li>`normal`: Normal request</li>
+    * Intelligent analysis tag. Valid values:
+<li>evil_bot: malicious bot;</li>
+<li>suspect_bot: suspected bot;</li>
+<li>good_bot: good bot;</li>
+<li>normal: Normal request.</li>
     */
     @SerializedName("Label")
     @Expose
     private String Label;
 
     /**
-    * The action taken on bots. Values
-<li>`drop`: Block</li>
-<li>`trans`: Allow</li>
-<li>`alg`: JavaScript challenge</li>
-<li>`captcha`: Managed challenge</li>
-<li>`monitor`: Observe</li>
+    * Trigger the handling method corresponding to the Intelligent Analysis tag. Valid values:
+<li>drop: block;</li>
+<li>trans: pass;</li>
+<li>alg: Javascript challenge;</li>
+<li>captcha: digit verification code;</li>
+<li>monitor: observation.</li>
     */
     @SerializedName("Action")
     @Expose
     private String Action;
 
     /**
-     * Get The tag to categorize bots. Values:
-<li>`evil_bot`: Malicious bot</li>
-<li>`suspect_bot`: Suspected bot</li>
-<li>`good_bot`: Good bot</li>
-<li>`normal`: Normal request</li> 
-     * @return Label The tag to categorize bots. Values:
-<li>`evil_bot`: Malicious bot</li>
-<li>`suspect_bot`: Suspected bot</li>
-<li>`good_bot`: Good bot</li>
-<li>`normal`: Normal request</li>
+     * Get Intelligent analysis tag. Valid values:
+<li>evil_bot: malicious bot;</li>
+<li>suspect_bot: suspected bot;</li>
+<li>good_bot: good bot;</li>
+<li>normal: Normal request.</li> 
+     * @return Label Intelligent analysis tag. Valid values:
+<li>evil_bot: malicious bot;</li>
+<li>suspect_bot: suspected bot;</li>
+<li>good_bot: good bot;</li>
+<li>normal: Normal request.</li>
      */
     public String getLabel() {
         return this.Label;
     }
 
     /**
-     * Set The tag to categorize bots. Values:
-<li>`evil_bot`: Malicious bot</li>
-<li>`suspect_bot`: Suspected bot</li>
-<li>`good_bot`: Good bot</li>
-<li>`normal`: Normal request</li>
-     * @param Label The tag to categorize bots. Values:
-<li>`evil_bot`: Malicious bot</li>
-<li>`suspect_bot`: Suspected bot</li>
-<li>`good_bot`: Good bot</li>
-<li>`normal`: Normal request</li>
+     * Set Intelligent analysis tag. Valid values:
+<li>evil_bot: malicious bot;</li>
+<li>suspect_bot: suspected bot;</li>
+<li>good_bot: good bot;</li>
+<li>normal: Normal request.</li>
+     * @param Label Intelligent analysis tag. Valid values:
+<li>evil_bot: malicious bot;</li>
+<li>suspect_bot: suspected bot;</li>
+<li>good_bot: good bot;</li>
+<li>normal: Normal request.</li>
      */
     public void setLabel(String Label) {
         this.Label = Label;
     }
 
     /**
-     * Get The action taken on bots. Values
-<li>`drop`: Block</li>
-<li>`trans`: Allow</li>
-<li>`alg`: JavaScript challenge</li>
-<li>`captcha`: Managed challenge</li>
-<li>`monitor`: Observe</li> 
-     * @return Action The action taken on bots. Values
-<li>`drop`: Block</li>
-<li>`trans`: Allow</li>
-<li>`alg`: JavaScript challenge</li>
-<li>`captcha`: Managed challenge</li>
-<li>`monitor`: Observe</li>
+     * Get Trigger the handling method corresponding to the Intelligent Analysis tag. Valid values:
+<li>drop: block;</li>
+<li>trans: pass;</li>
+<li>alg: Javascript challenge;</li>
+<li>captcha: digit verification code;</li>
+<li>monitor: observation.</li> 
+     * @return Action Trigger the handling method corresponding to the Intelligent Analysis tag. Valid values:
+<li>drop: block;</li>
+<li>trans: pass;</li>
+<li>alg: Javascript challenge;</li>
+<li>captcha: digit verification code;</li>
+<li>monitor: observation.</li>
      */
     public String getAction() {
         return this.Action;
     }
 
     /**
-     * Set The action taken on bots. Values
-<li>`drop`: Block</li>
-<li>`trans`: Allow</li>
-<li>`alg`: JavaScript challenge</li>
-<li>`captcha`: Managed challenge</li>
-<li>`monitor`: Observe</li>
-     * @param Action The action taken on bots. Values
-<li>`drop`: Block</li>
-<li>`trans`: Allow</li>
-<li>`alg`: JavaScript challenge</li>
-<li>`captcha`: Managed challenge</li>
-<li>`monitor`: Observe</li>
+     * Set Trigger the handling method corresponding to the Intelligent Analysis tag. Valid values:
+<li>drop: block;</li>
+<li>trans: pass;</li>
+<li>alg: Javascript challenge;</li>
+<li>captcha: digit verification code;</li>
+<li>monitor: observation.</li>
+     * @param Action Trigger the handling method corresponding to the Intelligent Analysis tag. Valid values:
+<li>drop: block;</li>
+<li>trans: pass;</li>
+<li>alg: Javascript challenge;</li>
+<li>captcha: digit verification code;</li>
+<li>monitor: observation.</li>
      */
     public void setAction(String Action) {
         this.Action = Action;

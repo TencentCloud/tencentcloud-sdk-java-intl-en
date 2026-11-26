@@ -31,14 +31,15 @@ public class ModifyL4ProxyRequest extends AbstractModel {
     private String ZoneId;
 
     /**
-    * Application ID.
+    * App ID.
     */
     @SerializedName("ProxyId")
     @Expose
     private String ProxyId;
 
     /**
-    * Specifies whether to enable IPv6 access. If this parameter is not filled, this configuration will not be modified. This configuration can only be enabled in certain acceleration zones and security protection configurations. For details, see [Creating an L4 Proxy Instance] (https://intl.cloud.tencent.com/document/product/1552/90025?from_cn_redirect=1). Valid values:<li>on: Enable;</li> 
+    * Whether IPv6 access is enabled. If this parameter is not specified, do not modify this configuration. This configuration can only be enabled in certain acceleration zones and security protection configurations. For details, see [Creating a New Layer 4 Proxy Instance](https://www.tencentcloud.com/document/product/1552/90025?from_cn_redirect=1). Value:
+<li>`on`: Enable;</li> 
 <li>off: Disable.</li>
 
     */
@@ -47,7 +48,8 @@ public class ModifyL4ProxyRequest extends AbstractModel {
     private String Ipv6;
 
     /**
-    * Specifies whether to enable network optimization in the Chinese mainland. If this parameter is not filled, this configuration will not be modified. This configuration can only be enabled in certain acceleration zones and security protection configurations. For details, see [Creating an L4 Proxy Instance] (https://intl.cloud.tencent.com/document/product/1552/90025?from_cn_redirect=1). Valid values:<li>on: Enable;</li> 
+    * Whether to enable network optimization in the Chinese mainland. If this parameter is not specified, do not modify this configuration. This configuration can only be enabled in certain acceleration zones and security protection configurations. For details, see Creating a New Layer 4 Proxy Instance (https://www.tencentcloud.com/document/product/1552/90025?from_cn_redirect=1). Value:
+<li>`on`: Enable;</li> 
 <li>off: Disable.</li>
     */
     @SerializedName("AccelerateMainland")
@@ -71,26 +73,28 @@ public class ModifyL4ProxyRequest extends AbstractModel {
     }
 
     /**
-     * Get Application ID. 
-     * @return ProxyId Application ID.
+     * Get App ID. 
+     * @return ProxyId App ID.
      */
     public String getProxyId() {
         return this.ProxyId;
     }
 
     /**
-     * Set Application ID.
-     * @param ProxyId Application ID.
+     * Set App ID.
+     * @param ProxyId App ID.
      */
     public void setProxyId(String ProxyId) {
         this.ProxyId = ProxyId;
     }
 
     /**
-     * Get Specifies whether to enable IPv6 access. If this parameter is not filled, this configuration will not be modified. This configuration can only be enabled in certain acceleration zones and security protection configurations. For details, see [Creating an L4 Proxy Instance] (https://intl.cloud.tencent.com/document/product/1552/90025?from_cn_redirect=1). Valid values:<li>on: Enable;</li> 
+     * Get Whether IPv6 access is enabled. If this parameter is not specified, do not modify this configuration. This configuration can only be enabled in certain acceleration zones and security protection configurations. For details, see [Creating a New Layer 4 Proxy Instance](https://www.tencentcloud.com/document/product/1552/90025?from_cn_redirect=1). Value:
+<li>`on`: Enable;</li> 
 <li>off: Disable.</li>
  
-     * @return Ipv6 Specifies whether to enable IPv6 access. If this parameter is not filled, this configuration will not be modified. This configuration can only be enabled in certain acceleration zones and security protection configurations. For details, see [Creating an L4 Proxy Instance] (https://intl.cloud.tencent.com/document/product/1552/90025?from_cn_redirect=1). Valid values:<li>on: Enable;</li> 
+     * @return Ipv6 Whether IPv6 access is enabled. If this parameter is not specified, do not modify this configuration. This configuration can only be enabled in certain acceleration zones and security protection configurations. For details, see [Creating a New Layer 4 Proxy Instance](https://www.tencentcloud.com/document/product/1552/90025?from_cn_redirect=1). Value:
+<li>`on`: Enable;</li> 
 <li>off: Disable.</li>
 
      */
@@ -99,10 +103,12 @@ public class ModifyL4ProxyRequest extends AbstractModel {
     }
 
     /**
-     * Set Specifies whether to enable IPv6 access. If this parameter is not filled, this configuration will not be modified. This configuration can only be enabled in certain acceleration zones and security protection configurations. For details, see [Creating an L4 Proxy Instance] (https://intl.cloud.tencent.com/document/product/1552/90025?from_cn_redirect=1). Valid values:<li>on: Enable;</li> 
+     * Set Whether IPv6 access is enabled. If this parameter is not specified, do not modify this configuration. This configuration can only be enabled in certain acceleration zones and security protection configurations. For details, see [Creating a New Layer 4 Proxy Instance](https://www.tencentcloud.com/document/product/1552/90025?from_cn_redirect=1). Value:
+<li>`on`: Enable;</li> 
 <li>off: Disable.</li>
 
-     * @param Ipv6 Specifies whether to enable IPv6 access. If this parameter is not filled, this configuration will not be modified. This configuration can only be enabled in certain acceleration zones and security protection configurations. For details, see [Creating an L4 Proxy Instance] (https://intl.cloud.tencent.com/document/product/1552/90025?from_cn_redirect=1). Valid values:<li>on: Enable;</li> 
+     * @param Ipv6 Whether IPv6 access is enabled. If this parameter is not specified, do not modify this configuration. This configuration can only be enabled in certain acceleration zones and security protection configurations. For details, see [Creating a New Layer 4 Proxy Instance](https://www.tencentcloud.com/document/product/1552/90025?from_cn_redirect=1). Value:
+<li>`on`: Enable;</li> 
 <li>off: Disable.</li>
 
      */
@@ -111,9 +117,11 @@ public class ModifyL4ProxyRequest extends AbstractModel {
     }
 
     /**
-     * Get Specifies whether to enable network optimization in the Chinese mainland. If this parameter is not filled, this configuration will not be modified. This configuration can only be enabled in certain acceleration zones and security protection configurations. For details, see [Creating an L4 Proxy Instance] (https://intl.cloud.tencent.com/document/product/1552/90025?from_cn_redirect=1). Valid values:<li>on: Enable;</li> 
+     * Get Whether to enable network optimization in the Chinese mainland. If this parameter is not specified, do not modify this configuration. This configuration can only be enabled in certain acceleration zones and security protection configurations. For details, see Creating a New Layer 4 Proxy Instance (https://www.tencentcloud.com/document/product/1552/90025?from_cn_redirect=1). Value:
+<li>`on`: Enable;</li> 
 <li>off: Disable.</li> 
-     * @return AccelerateMainland Specifies whether to enable network optimization in the Chinese mainland. If this parameter is not filled, this configuration will not be modified. This configuration can only be enabled in certain acceleration zones and security protection configurations. For details, see [Creating an L4 Proxy Instance] (https://intl.cloud.tencent.com/document/product/1552/90025?from_cn_redirect=1). Valid values:<li>on: Enable;</li> 
+     * @return AccelerateMainland Whether to enable network optimization in the Chinese mainland. If this parameter is not specified, do not modify this configuration. This configuration can only be enabled in certain acceleration zones and security protection configurations. For details, see Creating a New Layer 4 Proxy Instance (https://www.tencentcloud.com/document/product/1552/90025?from_cn_redirect=1). Value:
+<li>`on`: Enable;</li> 
 <li>off: Disable.</li>
      */
     public String getAccelerateMainland() {
@@ -121,9 +129,11 @@ public class ModifyL4ProxyRequest extends AbstractModel {
     }
 
     /**
-     * Set Specifies whether to enable network optimization in the Chinese mainland. If this parameter is not filled, this configuration will not be modified. This configuration can only be enabled in certain acceleration zones and security protection configurations. For details, see [Creating an L4 Proxy Instance] (https://intl.cloud.tencent.com/document/product/1552/90025?from_cn_redirect=1). Valid values:<li>on: Enable;</li> 
+     * Set Whether to enable network optimization in the Chinese mainland. If this parameter is not specified, do not modify this configuration. This configuration can only be enabled in certain acceleration zones and security protection configurations. For details, see Creating a New Layer 4 Proxy Instance (https://www.tencentcloud.com/document/product/1552/90025?from_cn_redirect=1). Value:
+<li>`on`: Enable;</li> 
 <li>off: Disable.</li>
-     * @param AccelerateMainland Specifies whether to enable network optimization in the Chinese mainland. If this parameter is not filled, this configuration will not be modified. This configuration can only be enabled in certain acceleration zones and security protection configurations. For details, see [Creating an L4 Proxy Instance] (https://intl.cloud.tencent.com/document/product/1552/90025?from_cn_redirect=1). Valid values:<li>on: Enable;</li> 
+     * @param AccelerateMainland Whether to enable network optimization in the Chinese mainland. If this parameter is not specified, do not modify this configuration. This configuration can only be enabled in certain acceleration zones and security protection configurations. For details, see Creating a New Layer 4 Proxy Instance (https://www.tencentcloud.com/document/product/1552/90025?from_cn_redirect=1). Value:
+<li>`on`: Enable;</li> 
 <li>off: Disable.</li>
      */
     public void setAccelerateMainland(String AccelerateMainland) {

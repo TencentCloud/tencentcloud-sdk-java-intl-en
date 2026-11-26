@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class KeyValuePair extends AbstractModel {
 
     /**
-    * Key name. Each key name cannot be empty, with a length of 1-512 characters, and supports valid UTF-8 characters.
+    * Key name. Each key name cannot be empty, with a length of 1-512 characters. Valid UTF-8 characters are supported.
     */
     @SerializedName("Key")
     @Expose
     private String Key;
 
     /**
-    * Key-value. Cannot be empty for input parameters and supports up to 1 MB. Returns an empty string if the key does not exist for output parameters.
+    * Key-value. It cannot be empty as an input parameter and supports up to 1 MB. As an output parameter, if the key does not exist, an empty string is returned.
     */
     @SerializedName("Value")
     @Expose
     private String Value;
 
     /**
-    * Expiration time, following ISO 8601 standard, format YYYY-MM-DDThh:mm:ssZ (UTC time). If it is an empty string in the output, it means the key-value pair will never expire.
+    * Expiration time, following the ISO 8601 standard, formatted as YYYY-MM-DDThh:mm:ssZ (UTC time). In output, an empty string means the key-value pair never expires.
     */
     @SerializedName("Expiration")
     @Expose
     private String Expiration;
 
     /**
-     * Get Key name. Each key name cannot be empty, with a length of 1-512 characters, and supports valid UTF-8 characters. 
-     * @return Key Key name. Each key name cannot be empty, with a length of 1-512 characters, and supports valid UTF-8 characters.
+     * Get Key name. Each key name cannot be empty, with a length of 1-512 characters. Valid UTF-8 characters are supported. 
+     * @return Key Key name. Each key name cannot be empty, with a length of 1-512 characters. Valid UTF-8 characters are supported.
      */
     public String getKey() {
         return this.Key;
     }
 
     /**
-     * Set Key name. Each key name cannot be empty, with a length of 1-512 characters, and supports valid UTF-8 characters.
-     * @param Key Key name. Each key name cannot be empty, with a length of 1-512 characters, and supports valid UTF-8 characters.
+     * Set Key name. Each key name cannot be empty, with a length of 1-512 characters. Valid UTF-8 characters are supported.
+     * @param Key Key name. Each key name cannot be empty, with a length of 1-512 characters. Valid UTF-8 characters are supported.
      */
     public void setKey(String Key) {
         this.Key = Key;
     }
 
     /**
-     * Get Key-value. Cannot be empty for input parameters and supports up to 1 MB. Returns an empty string if the key does not exist for output parameters. 
-     * @return Value Key-value. Cannot be empty for input parameters and supports up to 1 MB. Returns an empty string if the key does not exist for output parameters.
+     * Get Key-value. It cannot be empty as an input parameter and supports up to 1 MB. As an output parameter, if the key does not exist, an empty string is returned. 
+     * @return Value Key-value. It cannot be empty as an input parameter and supports up to 1 MB. As an output parameter, if the key does not exist, an empty string is returned.
      */
     public String getValue() {
         return this.Value;
     }
 
     /**
-     * Set Key-value. Cannot be empty for input parameters and supports up to 1 MB. Returns an empty string if the key does not exist for output parameters.
-     * @param Value Key-value. Cannot be empty for input parameters and supports up to 1 MB. Returns an empty string if the key does not exist for output parameters.
+     * Set Key-value. It cannot be empty as an input parameter and supports up to 1 MB. As an output parameter, if the key does not exist, an empty string is returned.
+     * @param Value Key-value. It cannot be empty as an input parameter and supports up to 1 MB. As an output parameter, if the key does not exist, an empty string is returned.
      */
     public void setValue(String Value) {
         this.Value = Value;
     }
 
     /**
-     * Get Expiration time, following ISO 8601 standard, format YYYY-MM-DDThh:mm:ssZ (UTC time). If it is an empty string in the output, it means the key-value pair will never expire. 
-     * @return Expiration Expiration time, following ISO 8601 standard, format YYYY-MM-DDThh:mm:ssZ (UTC time). If it is an empty string in the output, it means the key-value pair will never expire.
+     * Get Expiration time, following the ISO 8601 standard, formatted as YYYY-MM-DDThh:mm:ssZ (UTC time). In output, an empty string means the key-value pair never expires. 
+     * @return Expiration Expiration time, following the ISO 8601 standard, formatted as YYYY-MM-DDThh:mm:ssZ (UTC time). In output, an empty string means the key-value pair never expires.
      */
     public String getExpiration() {
         return this.Expiration;
     }
 
     /**
-     * Set Expiration time, following ISO 8601 standard, format YYYY-MM-DDThh:mm:ssZ (UTC time). If it is an empty string in the output, it means the key-value pair will never expire.
-     * @param Expiration Expiration time, following ISO 8601 standard, format YYYY-MM-DDThh:mm:ssZ (UTC time). If it is an empty string in the output, it means the key-value pair will never expire.
+     * Set Expiration time, following the ISO 8601 standard, formatted as YYYY-MM-DDThh:mm:ssZ (UTC time). In output, an empty string means the key-value pair never expires.
+     * @param Expiration Expiration time, following the ISO 8601 standard, formatted as YYYY-MM-DDThh:mm:ssZ (UTC time). In output, an empty string means the key-value pair never expires.
      */
     public void setExpiration(String Expiration) {
         this.Expiration = Expiration;

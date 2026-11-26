@@ -24,66 +24,66 @@ import java.util.HashMap;
 public class ForceRedirect extends AbstractModel {
 
     /**
-    * Whether to enable force HTTPS redirect. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+    * Access forced redirect configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * Redirection status code. valid values:.
-<Li>`301`: 301 redirect</li>.
-<Li>`302`: 302 redirect</li>.
+    * Redirection status code. Valid values:
+<li>301: 301 redirect;</li>
+<li>302: 302 redirection.</li>
     */
     @SerializedName("RedirectStatusCode")
     @Expose
     private Long RedirectStatusCode;
 
     /**
-     * Get Whether to enable force HTTPS redirect. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li> 
-     * @return Switch Whether to enable force HTTPS redirect. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+     * Get Access forced redirect configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li> 
+     * @return Switch Access forced redirect configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set Whether to enable force HTTPS redirect. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-     * @param Switch Whether to enable force HTTPS redirect. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+     * Set Access forced redirect configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+     * @param Switch Access forced redirect configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get Redirection status code. valid values:.
-<Li>`301`: 301 redirect</li>.
-<Li>`302`: 302 redirect</li>. 
-     * @return RedirectStatusCode Redirection status code. valid values:.
-<Li>`301`: 301 redirect</li>.
-<Li>`302`: 302 redirect</li>.
+     * Get Redirection status code. Valid values:
+<li>301: 301 redirect;</li>
+<li>302: 302 redirection.</li> 
+     * @return RedirectStatusCode Redirection status code. Valid values:
+<li>301: 301 redirect;</li>
+<li>302: 302 redirection.</li>
      */
     public Long getRedirectStatusCode() {
         return this.RedirectStatusCode;
     }
 
     /**
-     * Set Redirection status code. valid values:.
-<Li>`301`: 301 redirect</li>.
-<Li>`302`: 302 redirect</li>.
-     * @param RedirectStatusCode Redirection status code. valid values:.
-<Li>`301`: 301 redirect</li>.
-<Li>`302`: 302 redirect</li>.
+     * Set Redirection status code. Valid values:
+<li>301: 301 redirect;</li>
+<li>302: 302 redirection.</li>
+     * @param RedirectStatusCode Redirection status code. Valid values:
+<li>301: 301 redirect;</li>
+<li>302: 302 redirection.</li>
      */
     public void setRedirectStatusCode(Long RedirectStatusCode) {
         this.RedirectStatusCode = RedirectStatusCode;

@@ -24,69 +24,74 @@ import java.util.HashMap;
 public class DescribeIdentificationsRequest extends AbstractModel {
 
     /**
-    * Filter conditions. The maximum value for Filters.Values is 20. The detailed conditions are as follows:<li>zone-name: Filter by site name.</li>
+    * Filter criteria. The maximum value of Filters.Values is 20. The detailed filter criteria are as follows:
+<li>zone-name: Filter by site name.</li>
     */
     @SerializedName("Filters")
     @Expose
     private Filter [] Filters;
 
     /**
-    * The page offset. Default value: 0
+    * The offset of paginated query. Default value: 0.
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * The paginated query limit. Default value: 20. Maximum value: 1000.
+    * The limit of paginated query. Default value: 20. Maximum value: 1,000.
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-     * Get Filter conditions. The maximum value for Filters.Values is 20. The detailed conditions are as follows:<li>zone-name: Filter by site name.</li> 
-     * @return Filters Filter conditions. The maximum value for Filters.Values is 20. The detailed conditions are as follows:<li>zone-name: Filter by site name.</li>
+     * Get Filter criteria. The maximum value of Filters.Values is 20. The detailed filter criteria are as follows:
+<li>zone-name: Filter by site name.</li> 
+     * @return Filters Filter criteria. The maximum value of Filters.Values is 20. The detailed filter criteria are as follows:
+<li>zone-name: Filter by site name.</li>
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set Filter conditions. The maximum value for Filters.Values is 20. The detailed conditions are as follows:<li>zone-name: Filter by site name.</li>
-     * @param Filters Filter conditions. The maximum value for Filters.Values is 20. The detailed conditions are as follows:<li>zone-name: Filter by site name.</li>
+     * Set Filter criteria. The maximum value of Filters.Values is 20. The detailed filter criteria are as follows:
+<li>zone-name: Filter by site name.</li>
+     * @param Filters Filter criteria. The maximum value of Filters.Values is 20. The detailed filter criteria are as follows:
+<li>zone-name: Filter by site name.</li>
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;
     }
 
     /**
-     * Get The page offset. Default value: 0 
-     * @return Offset The page offset. Default value: 0
+     * Get The offset of paginated query. Default value: 0. 
+     * @return Offset The offset of paginated query. Default value: 0.
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set The page offset. Default value: 0
-     * @param Offset The page offset. Default value: 0
+     * Set The offset of paginated query. Default value: 0.
+     * @param Offset The offset of paginated query. Default value: 0.
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get The paginated query limit. Default value: 20. Maximum value: 1000. 
-     * @return Limit The paginated query limit. Default value: 20. Maximum value: 1000.
+     * Get The limit of paginated query. Default value: 20. Maximum value: 1,000. 
+     * @return Limit The limit of paginated query. Default value: 20. Maximum value: 1,000.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set The paginated query limit. Default value: 20. Maximum value: 1000.
-     * @param Limit The paginated query limit. Default value: 20. Maximum value: 1000.
+     * Set The limit of paginated query. Default value: 20. Maximum value: 1,000.
+     * @param Limit The limit of paginated query. Default value: 20. Maximum value: 1,000.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

@@ -24,125 +24,125 @@ import java.util.HashMap;
 public class DetectLengthLimitRule extends AbstractModel {
 
     /**
-    * Rule Id, output parameter only.
+    * Rule Id. Output only.
     */
     @SerializedName("RuleId")
     @Expose
     private Long RuleId;
 
     /**
-    * Rule name, output parameter only.
+    * Rule name. Output usage only.
     */
     @SerializedName("RuleName")
     @Expose
     private String RuleName;
 
     /**
-    * Rule description, output parameter only.
+    * Rule description. For output usage only.
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * Rule configuration conditions, output parameter only.
+    * Rule configuration condition. For output usage only.
     */
     @SerializedName("Conditions")
     @Expose
     private DetectLengthLimitCondition [] Conditions;
 
     /**
-    * Handling method. Values:.
-<li>`skip`: when request body data exceeds the detection depth set by `body_depth` in `Conditions` output parameters, skip all request body content detection.</li>.
-<li>`scan`: detect at the detection depth set by `body_depth` in the `Conditions` output parameters only. Truncate the excess part of the request body content directly, the excess part of the request body will not go through security detection.</li> Output paramter only.
+    * Handling method. Valid values:
+<li>skip: When the request body data exceeds the detection depth set by body_depth in the Conditions output parameter, skip testing of all request body content;</li>
+<li>scan: Only detect the detection depth set by body_depth in the Conditions output. Request body content beyond this depth is directly truncated, and the excess request body will not undergo security detection.</li>Output usage only.
     */
     @SerializedName("Action")
     @Expose
     private String Action;
 
     /**
-     * Get Rule Id, output parameter only. 
-     * @return RuleId Rule Id, output parameter only.
+     * Get Rule Id. Output only. 
+     * @return RuleId Rule Id. Output only.
      */
     public Long getRuleId() {
         return this.RuleId;
     }
 
     /**
-     * Set Rule Id, output parameter only.
-     * @param RuleId Rule Id, output parameter only.
+     * Set Rule Id. Output only.
+     * @param RuleId Rule Id. Output only.
      */
     public void setRuleId(Long RuleId) {
         this.RuleId = RuleId;
     }
 
     /**
-     * Get Rule name, output parameter only. 
-     * @return RuleName Rule name, output parameter only.
+     * Get Rule name. Output usage only. 
+     * @return RuleName Rule name. Output usage only.
      */
     public String getRuleName() {
         return this.RuleName;
     }
 
     /**
-     * Set Rule name, output parameter only.
-     * @param RuleName Rule name, output parameter only.
+     * Set Rule name. Output usage only.
+     * @param RuleName Rule name. Output usage only.
      */
     public void setRuleName(String RuleName) {
         this.RuleName = RuleName;
     }
 
     /**
-     * Get Rule description, output parameter only. 
-     * @return Description Rule description, output parameter only.
+     * Get Rule description. For output usage only. 
+     * @return Description Rule description. For output usage only.
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set Rule description, output parameter only.
-     * @param Description Rule description, output parameter only.
+     * Set Rule description. For output usage only.
+     * @param Description Rule description. For output usage only.
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get Rule configuration conditions, output parameter only. 
-     * @return Conditions Rule configuration conditions, output parameter only.
+     * Get Rule configuration condition. For output usage only. 
+     * @return Conditions Rule configuration condition. For output usage only.
      */
     public DetectLengthLimitCondition [] getConditions() {
         return this.Conditions;
     }
 
     /**
-     * Set Rule configuration conditions, output parameter only.
-     * @param Conditions Rule configuration conditions, output parameter only.
+     * Set Rule configuration condition. For output usage only.
+     * @param Conditions Rule configuration condition. For output usage only.
      */
     public void setConditions(DetectLengthLimitCondition [] Conditions) {
         this.Conditions = Conditions;
     }
 
     /**
-     * Get Handling method. Values:.
-<li>`skip`: when request body data exceeds the detection depth set by `body_depth` in `Conditions` output parameters, skip all request body content detection.</li>.
-<li>`scan`: detect at the detection depth set by `body_depth` in the `Conditions` output parameters only. Truncate the excess part of the request body content directly, the excess part of the request body will not go through security detection.</li> Output paramter only. 
-     * @return Action Handling method. Values:.
-<li>`skip`: when request body data exceeds the detection depth set by `body_depth` in `Conditions` output parameters, skip all request body content detection.</li>.
-<li>`scan`: detect at the detection depth set by `body_depth` in the `Conditions` output parameters only. Truncate the excess part of the request body content directly, the excess part of the request body will not go through security detection.</li> Output paramter only.
+     * Get Handling method. Valid values:
+<li>skip: When the request body data exceeds the detection depth set by body_depth in the Conditions output parameter, skip testing of all request body content;</li>
+<li>scan: Only detect the detection depth set by body_depth in the Conditions output. Request body content beyond this depth is directly truncated, and the excess request body will not undergo security detection.</li>Output usage only. 
+     * @return Action Handling method. Valid values:
+<li>skip: When the request body data exceeds the detection depth set by body_depth in the Conditions output parameter, skip testing of all request body content;</li>
+<li>scan: Only detect the detection depth set by body_depth in the Conditions output. Request body content beyond this depth is directly truncated, and the excess request body will not undergo security detection.</li>Output usage only.
      */
     public String getAction() {
         return this.Action;
     }
 
     /**
-     * Set Handling method. Values:.
-<li>`skip`: when request body data exceeds the detection depth set by `body_depth` in `Conditions` output parameters, skip all request body content detection.</li>.
-<li>`scan`: detect at the detection depth set by `body_depth` in the `Conditions` output parameters only. Truncate the excess part of the request body content directly, the excess part of the request body will not go through security detection.</li> Output paramter only.
-     * @param Action Handling method. Values:.
-<li>`skip`: when request body data exceeds the detection depth set by `body_depth` in `Conditions` output parameters, skip all request body content detection.</li>.
-<li>`scan`: detect at the detection depth set by `body_depth` in the `Conditions` output parameters only. Truncate the excess part of the request body content directly, the excess part of the request body will not go through security detection.</li> Output paramter only.
+     * Set Handling method. Valid values:
+<li>skip: When the request body data exceeds the detection depth set by body_depth in the Conditions output parameter, skip testing of all request body content;</li>
+<li>scan: Only detect the detection depth set by body_depth in the Conditions output. Request body content beyond this depth is directly truncated, and the excess request body will not undergo security detection.</li>Output usage only.
+     * @param Action Handling method. Valid values:
+<li>skip: When the request body data exceeds the detection depth set by body_depth in the Conditions output parameter, skip testing of all request body content;</li>
+<li>scan: Only detect the detection depth set by body_depth in the Conditions output. Request body content beyond this depth is directly truncated, and the excess request body will not undergo security detection.</li>Output usage only.
      */
     public void setAction(String Action) {
         this.Action = Action;

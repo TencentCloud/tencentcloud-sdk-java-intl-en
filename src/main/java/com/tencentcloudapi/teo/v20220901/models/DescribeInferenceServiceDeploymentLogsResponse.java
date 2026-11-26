@@ -31,7 +31,7 @@ public class DescribeInferenceServiceDeploymentLogsResponse extends AbstractMode
     private Long TotalCount;
 
     /**
-    * Deploy the log list.
+    * List of deployment logs.
     */
     @SerializedName("DeploymentLogInfoSet")
     @Expose
@@ -61,16 +61,16 @@ public class DescribeInferenceServiceDeploymentLogsResponse extends AbstractMode
     }
 
     /**
-     * Get Deploy the log list. 
-     * @return DeploymentLogInfoSet Deploy the log list.
+     * Get List of deployment logs. 
+     * @return DeploymentLogInfoSet List of deployment logs.
      */
     public InferenceServiceDeploymentLogInfo [] getDeploymentLogInfoSet() {
         return this.DeploymentLogInfoSet;
     }
 
     /**
-     * Set Deploy the log list.
-     * @param DeploymentLogInfoSet Deploy the log list.
+     * Set List of deployment logs.
+     * @param DeploymentLogInfoSet List of deployment logs.
      */
     public void setDeploymentLogInfoSet(InferenceServiceDeploymentLogInfo [] DeploymentLogInfoSet) {
         this.DeploymentLogInfoSet = DeploymentLogInfoSet;

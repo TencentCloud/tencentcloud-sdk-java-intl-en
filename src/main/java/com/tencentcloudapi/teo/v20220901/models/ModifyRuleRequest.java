@@ -24,148 +24,148 @@ import java.util.HashMap;
 public class ModifyRuleRequest extends AbstractModel {
 
     /**
-    * ID of the site
+    * Zone ID.
     */
     @SerializedName("ZoneId")
     @Expose
     private String ZoneId;
 
     /**
-    * The rule name. It is a string that can contain 1–255 characters.
+    * Rule name. The string name can contain 1–255 characters.
     */
     @SerializedName("RuleName")
     @Expose
     private String RuleName;
 
     /**
-    * The rule content.
+    * Rule content.
     */
     @SerializedName("Rules")
     @Expose
     private Rule [] Rules;
 
     /**
-    * The rule ID.
+    * Rule ID.
     */
     @SerializedName("RuleId")
     @Expose
     private String RuleId;
 
     /**
-    * Rule status. Values:
-<li>`enable`: Enabled</li>
-<li>`disable`: Disabled</li>
+    * Rule status. Valid values:
+<li> enable: enable; </li>
+<li> disable: Disabled.</li>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * Tag of the rule.
+    * Rule tag.
     */
     @SerializedName("Tags")
     @Expose
     private String [] Tags;
 
     /**
-     * Get ID of the site 
-     * @return ZoneId ID of the site
+     * Get Zone ID. 
+     * @return ZoneId Zone ID.
      */
     public String getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set ID of the site
-     * @param ZoneId ID of the site
+     * Set Zone ID.
+     * @param ZoneId Zone ID.
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get The rule name. It is a string that can contain 1–255 characters. 
-     * @return RuleName The rule name. It is a string that can contain 1–255 characters.
+     * Get Rule name. The string name can contain 1–255 characters. 
+     * @return RuleName Rule name. The string name can contain 1–255 characters.
      */
     public String getRuleName() {
         return this.RuleName;
     }
 
     /**
-     * Set The rule name. It is a string that can contain 1–255 characters.
-     * @param RuleName The rule name. It is a string that can contain 1–255 characters.
+     * Set Rule name. The string name can contain 1–255 characters.
+     * @param RuleName Rule name. The string name can contain 1–255 characters.
      */
     public void setRuleName(String RuleName) {
         this.RuleName = RuleName;
     }
 
     /**
-     * Get The rule content. 
-     * @return Rules The rule content.
+     * Get Rule content. 
+     * @return Rules Rule content.
      */
     public Rule [] getRules() {
         return this.Rules;
     }
 
     /**
-     * Set The rule content.
-     * @param Rules The rule content.
+     * Set Rule content.
+     * @param Rules Rule content.
      */
     public void setRules(Rule [] Rules) {
         this.Rules = Rules;
     }
 
     /**
-     * Get The rule ID. 
-     * @return RuleId The rule ID.
+     * Get Rule ID. 
+     * @return RuleId Rule ID.
      */
     public String getRuleId() {
         return this.RuleId;
     }
 
     /**
-     * Set The rule ID.
-     * @param RuleId The rule ID.
+     * Set Rule ID.
+     * @param RuleId Rule ID.
      */
     public void setRuleId(String RuleId) {
         this.RuleId = RuleId;
     }
 
     /**
-     * Get Rule status. Values:
-<li>`enable`: Enabled</li>
-<li>`disable`: Disabled</li> 
-     * @return Status Rule status. Values:
-<li>`enable`: Enabled</li>
-<li>`disable`: Disabled</li>
+     * Get Rule status. Valid values:
+<li> enable: enable; </li>
+<li> disable: Disabled.</li> 
+     * @return Status Rule status. Valid values:
+<li> enable: enable; </li>
+<li> disable: Disabled.</li>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Rule status. Values:
-<li>`enable`: Enabled</li>
-<li>`disable`: Disabled</li>
-     * @param Status Rule status. Values:
-<li>`enable`: Enabled</li>
-<li>`disable`: Disabled</li>
+     * Set Rule status. Valid values:
+<li> enable: enable; </li>
+<li> disable: Disabled.</li>
+     * @param Status Rule status. Valid values:
+<li> enable: enable; </li>
+<li> disable: Disabled.</li>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Tag of the rule. 
-     * @return Tags Tag of the rule.
+     * Get Rule tag. 
+     * @return Tags Rule tag.
      */
     public String [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set Tag of the rule.
-     * @param Tags Tag of the rule.
+     * Set Rule tag.
+     * @param Tags Rule tag.
      */
     public void setTags(String [] Tags) {
         this.Tags = Tags;

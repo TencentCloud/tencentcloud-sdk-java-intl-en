@@ -24,16 +24,16 @@ import java.util.HashMap;
 public class DetectLengthLimitCondition extends AbstractModel {
 
     /**
-    * Parameter name of the matched condition. Values:.
-<li>`body_depth`: detection depth of the request body packet part.</li>
+    * Parameter name of the match condition. Valid values:
+<li>body_depth: Detection depth of the request body packet part.</li>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * The parameter value of the match condition. the value is used in pairs with Name.
-When the Name value is body_depth, Values only support passing in a single value. valid Values:.
+    * Parameter value of the match condition. It is used with Name as a pair.
+When the value of Name is body_depth, Values only support passing in a single value. Valid values:
 <li>10KB;</li>
 <li>64KB;</li>
 <li>128KB.</li>
@@ -43,33 +43,33 @@ When the Name value is body_depth, Values only support passing in a single value
     private String [] Values;
 
     /**
-     * Get Parameter name of the matched condition. Values:.
-<li>`body_depth`: detection depth of the request body packet part.</li> 
-     * @return Name Parameter name of the matched condition. Values:.
-<li>`body_depth`: detection depth of the request body packet part.</li>
+     * Get Parameter name of the match condition. Valid values:
+<li>body_depth: Detection depth of the request body packet part.</li> 
+     * @return Name Parameter name of the match condition. Valid values:
+<li>body_depth: Detection depth of the request body packet part.</li>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Parameter name of the matched condition. Values:.
-<li>`body_depth`: detection depth of the request body packet part.</li>
-     * @param Name Parameter name of the matched condition. Values:.
-<li>`body_depth`: detection depth of the request body packet part.</li>
+     * Set Parameter name of the match condition. Valid values:
+<li>body_depth: Detection depth of the request body packet part.</li>
+     * @param Name Parameter name of the match condition. Valid values:
+<li>body_depth: Detection depth of the request body packet part.</li>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get The parameter value of the match condition. the value is used in pairs with Name.
-When the Name value is body_depth, Values only support passing in a single value. valid Values:.
+     * Get Parameter value of the match condition. It is used with Name as a pair.
+When the value of Name is body_depth, Values only support passing in a single value. Valid values:
 <li>10KB;</li>
 <li>64KB;</li>
 <li>128KB.</li> 
-     * @return Values The parameter value of the match condition. the value is used in pairs with Name.
-When the Name value is body_depth, Values only support passing in a single value. valid Values:.
+     * @return Values Parameter value of the match condition. It is used with Name as a pair.
+When the value of Name is body_depth, Values only support passing in a single value. Valid values:
 <li>10KB;</li>
 <li>64KB;</li>
 <li>128KB.</li>
@@ -79,13 +79,13 @@ When the Name value is body_depth, Values only support passing in a single value
     }
 
     /**
-     * Set The parameter value of the match condition. the value is used in pairs with Name.
-When the Name value is body_depth, Values only support passing in a single value. valid Values:.
+     * Set Parameter value of the match condition. It is used with Name as a pair.
+When the value of Name is body_depth, Values only support passing in a single value. Valid values:
 <li>10KB;</li>
 <li>64KB;</li>
 <li>128KB.</li>
-     * @param Values The parameter value of the match condition. the value is used in pairs with Name.
-When the Name value is body_depth, Values only support passing in a single value. valid Values:.
+     * @param Values Parameter value of the match condition. It is used with Name as a pair.
+When the value of Name is body_depth, Values only support passing in a single value. Valid values:
 <li>10KB;</li>
 <li>64KB;</li>
 <li>128KB.</li>

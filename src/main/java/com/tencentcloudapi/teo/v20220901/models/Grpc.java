@@ -24,33 +24,33 @@ import java.util.HashMap;
 public class Grpc extends AbstractModel {
 
     /**
-    * Whether to enable gRPC support. Valid values: 
+    * Whether Grpc configuration is enabled. Valid values:
 <li>`on`: Enable;</li>
-<li>`off`: Disable.</li>
+<li>off: Disable.</li>
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-     * Get Whether to enable gRPC support. Valid values: 
+     * Get Whether Grpc configuration is enabled. Valid values:
 <li>`on`: Enable;</li>
-<li>`off`: Disable.</li> 
-     * @return Switch Whether to enable gRPC support. Valid values: 
+<li>off: Disable.</li> 
+     * @return Switch Whether Grpc configuration is enabled. Valid values:
 <li>`on`: Enable;</li>
-<li>`off`: Disable.</li>
+<li>off: Disable.</li>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set Whether to enable gRPC support. Valid values: 
+     * Set Whether Grpc configuration is enabled. Valid values:
 <li>`on`: Enable;</li>
-<li>`off`: Disable.</li>
-     * @param Switch Whether to enable gRPC support. Valid values: 
+<li>off: Disable.</li>
+     * @param Switch Whether Grpc configuration is enabled. Valid values:
 <li>`on`: Enable;</li>
-<li>`off`: Disable.</li>
+<li>off: Disable.</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;

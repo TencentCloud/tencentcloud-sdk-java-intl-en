@@ -24,31 +24,31 @@ import java.util.HashMap;
 public class DeployRecord extends AbstractModel {
 
     /**
-    * Details about the released version.
+    * Detailed information of the released version.
     */
     @SerializedName("ConfigGroupVersionInfos")
     @Expose
     private ConfigGroupVersionInfo [] ConfigGroupVersionInfos;
 
     /**
-    * Release time. The time format follows the ISO 8601 standard and is represented in Coordinated Universal Time (UTC).
+    * Release time, which adopts Coordinated Universal Time (UTC) and follows the date and time format of the ISO 8601 standard.
     */
     @SerializedName("DeployTime")
     @Expose
     private String DeployTime;
 
     /**
-    * Release status. Valid values: 
-<li>deploying: Being released.</li>
-<li>failure: Release failed.</li>
-<li>success: Released successfully. </li>
+    * Publishing status. Valid values:
+<li> deploying: Releasing;</li>
+<li>failure: release failure;</li>
+<li>success: Published successfully.</li>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * Release result information.
+    * Publish result information.
     */
     @SerializedName("Message")
     @Expose
@@ -69,76 +69,76 @@ public class DeployRecord extends AbstractModel {
     private String Description;
 
     /**
-     * Get Details about the released version. 
-     * @return ConfigGroupVersionInfos Details about the released version.
+     * Get Detailed information of the released version. 
+     * @return ConfigGroupVersionInfos Detailed information of the released version.
      */
     public ConfigGroupVersionInfo [] getConfigGroupVersionInfos() {
         return this.ConfigGroupVersionInfos;
     }
 
     /**
-     * Set Details about the released version.
-     * @param ConfigGroupVersionInfos Details about the released version.
+     * Set Detailed information of the released version.
+     * @param ConfigGroupVersionInfos Detailed information of the released version.
      */
     public void setConfigGroupVersionInfos(ConfigGroupVersionInfo [] ConfigGroupVersionInfos) {
         this.ConfigGroupVersionInfos = ConfigGroupVersionInfos;
     }
 
     /**
-     * Get Release time. The time format follows the ISO 8601 standard and is represented in Coordinated Universal Time (UTC). 
-     * @return DeployTime Release time. The time format follows the ISO 8601 standard and is represented in Coordinated Universal Time (UTC).
+     * Get Release time, which adopts Coordinated Universal Time (UTC) and follows the date and time format of the ISO 8601 standard. 
+     * @return DeployTime Release time, which adopts Coordinated Universal Time (UTC) and follows the date and time format of the ISO 8601 standard.
      */
     public String getDeployTime() {
         return this.DeployTime;
     }
 
     /**
-     * Set Release time. The time format follows the ISO 8601 standard and is represented in Coordinated Universal Time (UTC).
-     * @param DeployTime Release time. The time format follows the ISO 8601 standard and is represented in Coordinated Universal Time (UTC).
+     * Set Release time, which adopts Coordinated Universal Time (UTC) and follows the date and time format of the ISO 8601 standard.
+     * @param DeployTime Release time, which adopts Coordinated Universal Time (UTC) and follows the date and time format of the ISO 8601 standard.
      */
     public void setDeployTime(String DeployTime) {
         this.DeployTime = DeployTime;
     }
 
     /**
-     * Get Release status. Valid values: 
-<li>deploying: Being released.</li>
-<li>failure: Release failed.</li>
-<li>success: Released successfully. </li> 
-     * @return Status Release status. Valid values: 
-<li>deploying: Being released.</li>
-<li>failure: Release failed.</li>
-<li>success: Released successfully. </li>
+     * Get Publishing status. Valid values:
+<li> deploying: Releasing;</li>
+<li>failure: release failure;</li>
+<li>success: Published successfully.</li> 
+     * @return Status Publishing status. Valid values:
+<li> deploying: Releasing;</li>
+<li>failure: release failure;</li>
+<li>success: Published successfully.</li>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Release status. Valid values: 
-<li>deploying: Being released.</li>
-<li>failure: Release failed.</li>
-<li>success: Released successfully. </li>
-     * @param Status Release status. Valid values: 
-<li>deploying: Being released.</li>
-<li>failure: Release failed.</li>
-<li>success: Released successfully. </li>
+     * Set Publishing status. Valid values:
+<li> deploying: Releasing;</li>
+<li>failure: release failure;</li>
+<li>success: Published successfully.</li>
+     * @param Status Publishing status. Valid values:
+<li> deploying: Releasing;</li>
+<li>failure: release failure;</li>
+<li>success: Published successfully.</li>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Release result information. 
-     * @return Message Release result information.
+     * Get Publish result information. 
+     * @return Message Publish result information.
      */
     public String getMessage() {
         return this.Message;
     }
 
     /**
-     * Set Release result information.
-     * @param Message Release result information.
+     * Set Publish result information.
+     * @param Message Publish result information.
      */
     public void setMessage(String Message) {
         this.Message = Message;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeSecurityJSInjectionRuleResponse extends AbstractModel {
 
     /**
-    * Specifies the total rule count for JavaScript injection.
+    * Total rule count for JavaScript injection.
     */
     @SerializedName("TotalCount")
     @Expose
@@ -45,16 +45,16 @@ public class DescribeSecurityJSInjectionRuleResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Specifies the total rule count for JavaScript injection. 
-     * @return TotalCount Specifies the total rule count for JavaScript injection.
+     * Get Total rule count for JavaScript injection. 
+     * @return TotalCount Total rule count for JavaScript injection.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Specifies the total rule count for JavaScript injection.
-     * @param TotalCount Specifies the total rule count for JavaScript injection.
+     * Set Total rule count for JavaScript injection.
+     * @param TotalCount Total rule count for JavaScript injection.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

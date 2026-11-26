@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class DDoSBlockData extends AbstractModel {
 
     /**
-    * The start time recorded in UNIX timestamp.
+    * Start time in unix timestamp.
     */
     @SerializedName("StartTime")
     @Expose
     private Long StartTime;
 
     /**
-    * The end time recorded in UNIX timestamp. `0` indicates the blocking is ongoing.
+    * Termination time in unix timestamp. 0 means the ban is still in effect.
     */
     @SerializedName("EndTime")
     @Expose
     private Long EndTime;
 
     /**
-    * The regions blocked.
+    * Block the affected area.
     */
     @SerializedName("BlockArea")
     @Expose
     private String BlockArea;
 
     /**
-     * Get The start time recorded in UNIX timestamp. 
-     * @return StartTime The start time recorded in UNIX timestamp.
+     * Get Start time in unix timestamp. 
+     * @return StartTime Start time in unix timestamp.
      */
     public Long getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set The start time recorded in UNIX timestamp.
-     * @param StartTime The start time recorded in UNIX timestamp.
+     * Set Start time in unix timestamp.
+     * @param StartTime Start time in unix timestamp.
      */
     public void setStartTime(Long StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get The end time recorded in UNIX timestamp. `0` indicates the blocking is ongoing. 
-     * @return EndTime The end time recorded in UNIX timestamp. `0` indicates the blocking is ongoing.
+     * Get Termination time in unix timestamp. 0 means the ban is still in effect. 
+     * @return EndTime Termination time in unix timestamp. 0 means the ban is still in effect.
      */
     public Long getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set The end time recorded in UNIX timestamp. `0` indicates the blocking is ongoing.
-     * @param EndTime The end time recorded in UNIX timestamp. `0` indicates the blocking is ongoing.
+     * Set Termination time in unix timestamp. 0 means the ban is still in effect.
+     * @param EndTime Termination time in unix timestamp. 0 means the ban is still in effect.
      */
     public void setEndTime(Long EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get The regions blocked. 
-     * @return BlockArea The regions blocked.
+     * Get Block the affected area. 
+     * @return BlockArea Block the affected area.
      */
     public String getBlockArea() {
         return this.BlockArea;
     }
 
     /**
-     * Set The regions blocked.
-     * @param BlockArea The regions blocked.
+     * Set Block the affected area.
+     * @param BlockArea Block the affected area.
      */
     public void setBlockArea(String BlockArea) {
         this.BlockArea = BlockArea;

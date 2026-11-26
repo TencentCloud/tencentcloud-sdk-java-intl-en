@@ -24,127 +24,127 @@ import java.util.HashMap;
 public class ExceptUserRuleScope extends AbstractModel {
 
     /**
-    * Exception mode. Values:
-<li>`complete`: Skip the exception rule for full requests.</li>
-<li>`partial`: Skip the exception rule for partial requests.</li>
+    * Exception rule type. Among them, complete mode represents exceptions for full data, while partial mode represents selecting specified modules and specified fields for exceptions. The field values include:
+<li>complete: skip entirely mode;</li>
+<li>partial: Partially skip mode.</li>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * Effective module. the field value can be:.
-<li>`waf`: tencent cloud-managed rules</li>.
-<Li>`Rate`: rate limit</li>.
-<li>`acl`: custom rule</li>.
-<Li>`Cc`: cc attack defense</li>.
-<Li>`Bot`: bot protection</li>.
+    * Effective module. Valid values:
+<li>waf: managed rules;</li>
+<li>rate: rate limit;</li>
+<li>acl: custom rule;</li>
+<li>cc: CC attack defense;</li>
+<li>bot: bot protection.</li>
     */
     @SerializedName("Modules")
     @Expose
     private String [] Modules;
 
     /**
-    * Skip exception rule details for some rule ids. if null, use the last set configuration by default.
+    * Skip the exception rule details of some rule IDs. If it is null, use the last set configuration by default.
     */
     @SerializedName("PartialModules")
     @Expose
     private PartialModule [] PartialModules;
 
     /**
-    * Details of the exception rule for skipping specific fields. if null, use the last set configuration by default.
+    * Exception rule details for skipping specific fields during scan. If null, use the last set configuration by default.
     */
     @SerializedName("SkipConditions")
     @Expose
     private SkipCondition [] SkipConditions;
 
     /**
-     * Get Exception mode. Values:
-<li>`complete`: Skip the exception rule for full requests.</li>
-<li>`partial`: Skip the exception rule for partial requests.</li> 
-     * @return Type Exception mode. Values:
-<li>`complete`: Skip the exception rule for full requests.</li>
-<li>`partial`: Skip the exception rule for partial requests.</li>
+     * Get Exception rule type. Among them, complete mode represents exceptions for full data, while partial mode represents selecting specified modules and specified fields for exceptions. The field values include:
+<li>complete: skip entirely mode;</li>
+<li>partial: Partially skip mode.</li> 
+     * @return Type Exception rule type. Among them, complete mode represents exceptions for full data, while partial mode represents selecting specified modules and specified fields for exceptions. The field values include:
+<li>complete: skip entirely mode;</li>
+<li>partial: Partially skip mode.</li>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Exception mode. Values:
-<li>`complete`: Skip the exception rule for full requests.</li>
-<li>`partial`: Skip the exception rule for partial requests.</li>
-     * @param Type Exception mode. Values:
-<li>`complete`: Skip the exception rule for full requests.</li>
-<li>`partial`: Skip the exception rule for partial requests.</li>
+     * Set Exception rule type. Among them, complete mode represents exceptions for full data, while partial mode represents selecting specified modules and specified fields for exceptions. The field values include:
+<li>complete: skip entirely mode;</li>
+<li>partial: Partially skip mode.</li>
+     * @param Type Exception rule type. Among them, complete mode represents exceptions for full data, while partial mode represents selecting specified modules and specified fields for exceptions. The field values include:
+<li>complete: skip entirely mode;</li>
+<li>partial: Partially skip mode.</li>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get Effective module. the field value can be:.
-<li>`waf`: tencent cloud-managed rules</li>.
-<Li>`Rate`: rate limit</li>.
-<li>`acl`: custom rule</li>.
-<Li>`Cc`: cc attack defense</li>.
-<Li>`Bot`: bot protection</li>. 
-     * @return Modules Effective module. the field value can be:.
-<li>`waf`: tencent cloud-managed rules</li>.
-<Li>`Rate`: rate limit</li>.
-<li>`acl`: custom rule</li>.
-<Li>`Cc`: cc attack defense</li>.
-<Li>`Bot`: bot protection</li>.
+     * Get Effective module. Valid values:
+<li>waf: managed rules;</li>
+<li>rate: rate limit;</li>
+<li>acl: custom rule;</li>
+<li>cc: CC attack defense;</li>
+<li>bot: bot protection.</li> 
+     * @return Modules Effective module. Valid values:
+<li>waf: managed rules;</li>
+<li>rate: rate limit;</li>
+<li>acl: custom rule;</li>
+<li>cc: CC attack defense;</li>
+<li>bot: bot protection.</li>
      */
     public String [] getModules() {
         return this.Modules;
     }
 
     /**
-     * Set Effective module. the field value can be:.
-<li>`waf`: tencent cloud-managed rules</li>.
-<Li>`Rate`: rate limit</li>.
-<li>`acl`: custom rule</li>.
-<Li>`Cc`: cc attack defense</li>.
-<Li>`Bot`: bot protection</li>.
-     * @param Modules Effective module. the field value can be:.
-<li>`waf`: tencent cloud-managed rules</li>.
-<Li>`Rate`: rate limit</li>.
-<li>`acl`: custom rule</li>.
-<Li>`Cc`: cc attack defense</li>.
-<Li>`Bot`: bot protection</li>.
+     * Set Effective module. Valid values:
+<li>waf: managed rules;</li>
+<li>rate: rate limit;</li>
+<li>acl: custom rule;</li>
+<li>cc: CC attack defense;</li>
+<li>bot: bot protection.</li>
+     * @param Modules Effective module. Valid values:
+<li>waf: managed rules;</li>
+<li>rate: rate limit;</li>
+<li>acl: custom rule;</li>
+<li>cc: CC attack defense;</li>
+<li>bot: bot protection.</li>
      */
     public void setModules(String [] Modules) {
         this.Modules = Modules;
     }
 
     /**
-     * Get Skip exception rule details for some rule ids. if null, use the last set configuration by default. 
-     * @return PartialModules Skip exception rule details for some rule ids. if null, use the last set configuration by default.
+     * Get Skip the exception rule details of some rule IDs. If it is null, use the last set configuration by default. 
+     * @return PartialModules Skip the exception rule details of some rule IDs. If it is null, use the last set configuration by default.
      */
     public PartialModule [] getPartialModules() {
         return this.PartialModules;
     }
 
     /**
-     * Set Skip exception rule details for some rule ids. if null, use the last set configuration by default.
-     * @param PartialModules Skip exception rule details for some rule ids. if null, use the last set configuration by default.
+     * Set Skip the exception rule details of some rule IDs. If it is null, use the last set configuration by default.
+     * @param PartialModules Skip the exception rule details of some rule IDs. If it is null, use the last set configuration by default.
      */
     public void setPartialModules(PartialModule [] PartialModules) {
         this.PartialModules = PartialModules;
     }
 
     /**
-     * Get Details of the exception rule for skipping specific fields. if null, use the last set configuration by default. 
-     * @return SkipConditions Details of the exception rule for skipping specific fields. if null, use the last set configuration by default.
+     * Get Exception rule details for skipping specific fields during scan. If null, use the last set configuration by default. 
+     * @return SkipConditions Exception rule details for skipping specific fields during scan. If null, use the last set configuration by default.
      */
     public SkipCondition [] getSkipConditions() {
         return this.SkipConditions;
     }
 
     /**
-     * Set Details of the exception rule for skipping specific fields. if null, use the last set configuration by default.
-     * @param SkipConditions Details of the exception rule for skipping specific fields. if null, use the last set configuration by default.
+     * Set Exception rule details for skipping specific fields during scan. If null, use the last set configuration by default.
+     * @param SkipConditions Exception rule details for skipping specific fields during scan. If null, use the last set configuration by default.
      */
     public void setSkipConditions(SkipCondition [] SkipConditions) {
         this.SkipConditions = SkipConditions;

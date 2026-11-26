@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeContentIdentifiersResponse extends AbstractModel {
 
     /**
-    * Total number of content identifiers that meet the filter conditions.	
+    * Total number of unique identifiers of content that meet filtering criteria.	
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * Detailed content identifier list.
+    * Content identifier detailed content list.
     */
     @SerializedName("ContentIdentifiers")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeContentIdentifiersResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Total number of content identifiers that meet the filter conditions.	 
-     * @return TotalCount Total number of content identifiers that meet the filter conditions.	
+     * Get Total number of unique identifiers of content that meet filtering criteria.	 
+     * @return TotalCount Total number of unique identifiers of content that meet filtering criteria.	
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Total number of content identifiers that meet the filter conditions.	
-     * @param TotalCount Total number of content identifiers that meet the filter conditions.	
+     * Set Total number of unique identifiers of content that meet filtering criteria.	
+     * @param TotalCount Total number of unique identifiers of content that meet filtering criteria.	
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get Detailed content identifier list. 
-     * @return ContentIdentifiers Detailed content identifier list.
+     * Get Content identifier detailed content list. 
+     * @return ContentIdentifiers Content identifier detailed content list.
      */
     public ContentIdentifier [] getContentIdentifiers() {
         return this.ContentIdentifiers;
     }
 
     /**
-     * Set Detailed content identifier list.
-     * @param ContentIdentifiers Detailed content identifier list.
+     * Set Content identifier detailed content list.
+     * @param ContentIdentifiers Content identifier detailed content list.
      */
     public void setContentIdentifiers(ContentIdentifier [] ContentIdentifiers) {
         this.ContentIdentifiers = ContentIdentifiers;

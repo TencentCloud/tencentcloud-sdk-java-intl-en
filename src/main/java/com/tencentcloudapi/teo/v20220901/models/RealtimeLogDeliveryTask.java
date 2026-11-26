@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class RealtimeLogDeliveryTask extends AbstractModel {
 
     /**
-    * <p>Real-time log delivery task ID.</p>
+    * <p>ID of the real-time log delivery task.</p>
     */
     @SerializedName("TaskId")
     @Expose
@@ -38,63 +38,63 @@ public class RealtimeLogDeliveryTask extends AbstractModel {
     private String TaskName;
 
     /**
-    * <p>Status of a real-time log shipping task. Valid values: <li>enabled: enabled;</li><li>disabled: disabled;</li><li>deleted: deleted abnormally. Check whether the destination log set/log topic of Tencent Cloud CLS has been deleted.</li></p>
+    * <p>Status of the real-time log delivery task. Valid values:</p><ul><li>`enabled`: enabled;</li><li>`disabled`: disabled;</li><li>`deleted`: abnormally deleted. Check whether the destination Tencent Cloud CLS log set or log topic has been deleted.</li></ul>
     */
     @SerializedName("DeliveryStatus")
     @Expose
     private String DeliveryStatus;
 
     /**
-    * <p>Type of a real-time log shipping task. Valid values: <ul><li>cls: push to Tencent Cloud CLS;</li> <li>custom_endpoint: push to a custom HTTP(S) address;</li> <li>s3: push to an S3-compatible (compatible with the SigV4 authentication algorithm) object storage address;</li><li>aws_s3: push to an AWS S3 bucket address;</li><li>log_analysis: push to EdgeOne log analytics.</li></ul></p>
+    * <p>Type of the real-time log delivery task. Valid values:</p><ul><li>`cls`: deliver to Tencent Cloud CLS;</li><li>`custom_endpoint`: deliver to a custom HTTP(S) endpoint;</li><li>`s3`: deliver to an S3-compatible (SigV4 authentication algorithm compatible) object storage endpoint;</li><li>`aws_s3`: deliver to an AWS S3 bucket;</li><li>`log_analysis`: deliver to EdgeOne Log Analysis.</li></ul>
     */
     @SerializedName("TaskType")
     @Expose
     private String TaskType;
 
     /**
-    * <p>List of entities corresponding to the real-time log delivery task (Layer 7 domain or L4 proxy instance). Example values: <li>Layer 7 domain: domain.example.com;</li> <li>L4 proxy instance: sid-2s69eb5wcms7.</li></p>
+    * <p>List of entities that the real-time log delivery task applies to (Layer 7 domain names or Layer 4 proxy instances). Examples:</p><ul><li>Layer 7 domain name: `domain.example.com`;</li><li>Layer 4 proxy instance: `sid-2s69eb5wcms7`.</li></ul>
     */
     @SerializedName("EntityList")
     @Expose
     private String [] EntityList;
 
     /**
-    * <p>Data delivery type. Valid values: <li>l7-access-logs: L7 access log</li><li>application: four-layer proxy logs</li> <li>function: edge function logs</li> <li>web-attack: managed rule log</li> <li>domain: site acceleration log</li> <li>web-rateLiming: rate limit and CC attack defense log</li><li>web-rule: custom rule log</li> <li>web-bot: Bot Management Log.</li></p>
+    * <p>Data delivery type. Valid values:</p><ul><li>`l7-access-logs`: Layer 7 access logs;</li><li>`application`: Layer 4 proxy logs;</li><li>`function`: Edge Function execution logs;</li><li>`web-attack`: managed rule logs;</li><li>`domain`: site acceleration logs;</li><li>`web-rateLiming`: rate limiting and CC attack defense logs;</li><li>`web-rule`: custom rule logs;</li><li>`web-bot`: Bot management logs.</li></ul>
     */
     @SerializedName("LogType")
     @Expose
     private String LogType;
 
     /**
-    * <p>Data shipping area. Valid values:<li>mainland: within the Chinese mainland;</li><li>overseas: global (excluding the Chinese mainland).</li></p>
+    * <p>Data delivery area. Valid values:</p><ul><li>`mainland`: Chinese mainland;</li><li>`overseas`: Global (excluding the Chinese mainland).</li></ul>
     */
     @SerializedName("Area")
     @Expose
     private String Area;
 
     /**
-    * <p>List of predefined fields for delivery.</p>
+    * <p>List of preset fields to deliver.</p>
     */
     @SerializedName("Fields")
     @Expose
     private String [] Fields;
 
     /**
-    * <p>Custom fields for delivery.</p>
+    * <p>List of custom fields to deliver.</p>
     */
     @SerializedName("CustomFields")
     @Expose
     private CustomField [] CustomFields;
 
     /**
-    * <p>List of custom expression fields for shipping.</p>
+    * <p>List of custom expression fields to deliver.</p>
     */
     @SerializedName("CustomExpressionFields")
     @Expose
     private CustomExpressionField [] CustomExpressionFields;
 
     /**
-    * <p>Filter criteria of log shipping.</p>
+    * <p>Filter conditions for log delivery.</p>
     */
     @SerializedName("DeliveryConditions")
     @Expose
@@ -108,35 +108,35 @@ public class RealtimeLogDeliveryTask extends AbstractModel {
     private Long Sample;
 
     /**
-    * <p>Output format for log delivery. When the output parameter is null, the default format is used, which works as follows:</p><li>When TaskType is custom_endpoint, the default format is an array of JSON objects, where each JSON object represents a log entry;</li><li>When TaskType is s3, the default format is JSON Lines.</li>
+    * <p>Output format for log delivery. A null value indicates the default format. The default format logic is as follows:</p><ul><li>When `TaskType` is `custom_endpoint`, the default format is an array of JSON objects, each JSON object represents a log entry;</li><li>When `TaskType` is `s3`, the default format is JSON Lines.</li></ul>
     */
     @SerializedName("LogFormat")
     @Expose
     private LogFormat LogFormat;
 
     /**
-    * <p>Configuration information of the CLS.</p>
+    * <p>Configuration of CLS.</p>
     */
     @SerializedName("CLS")
     @Expose
     private CLSTopic CLS;
 
     /**
-    * <p>Configuration information of the custom HTTP service.</p>
+    * <p>Configuration of the custom HTTP service.</p>
     */
     @SerializedName("CustomEndpoint")
     @Expose
     private CustomEndpoint CustomEndpoint;
 
     /**
-    * <p>Configuration message of S3-compatible (compatible with SigV4 authentication algorithm) object storage.</p>
+    * <p>Configuration of the S3-compatible (SigV4 authentication algorithm compatible) object storage.</p>
     */
     @SerializedName("S3")
     @Expose
     private S3 S3;
 
     /**
-    * <p>Configuration information of the AWS S3 object storage. It uses IAM role authorization, eliminating the need for persistent keys, and is applicable only to AWS native S3.</p>
+    * <p>Configuration of the AWS S3 object storage. It uses IAM role authorization, requires no long-term key, and applies only to AWS native S3.</p>
     */
     @SerializedName("AWSS3")
     @Expose
@@ -157,16 +157,16 @@ public class RealtimeLogDeliveryTask extends AbstractModel {
     private String UpdateTime;
 
     /**
-     * Get <p>Real-time log delivery task ID.</p> 
-     * @return TaskId <p>Real-time log delivery task ID.</p>
+     * Get <p>ID of the real-time log delivery task.</p> 
+     * @return TaskId <p>ID of the real-time log delivery task.</p>
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set <p>Real-time log delivery task ID.</p>
-     * @param TaskId <p>Real-time log delivery task ID.</p>
+     * Set <p>ID of the real-time log delivery task.</p>
+     * @param TaskId <p>ID of the real-time log delivery task.</p>
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
@@ -189,144 +189,144 @@ public class RealtimeLogDeliveryTask extends AbstractModel {
     }
 
     /**
-     * Get <p>Status of a real-time log shipping task. Valid values: <li>enabled: enabled;</li><li>disabled: disabled;</li><li>deleted: deleted abnormally. Check whether the destination log set/log topic of Tencent Cloud CLS has been deleted.</li></p> 
-     * @return DeliveryStatus <p>Status of a real-time log shipping task. Valid values: <li>enabled: enabled;</li><li>disabled: disabled;</li><li>deleted: deleted abnormally. Check whether the destination log set/log topic of Tencent Cloud CLS has been deleted.</li></p>
+     * Get <p>Status of the real-time log delivery task. Valid values:</p><ul><li>`enabled`: enabled;</li><li>`disabled`: disabled;</li><li>`deleted`: abnormally deleted. Check whether the destination Tencent Cloud CLS log set or log topic has been deleted.</li></ul> 
+     * @return DeliveryStatus <p>Status of the real-time log delivery task. Valid values:</p><ul><li>`enabled`: enabled;</li><li>`disabled`: disabled;</li><li>`deleted`: abnormally deleted. Check whether the destination Tencent Cloud CLS log set or log topic has been deleted.</li></ul>
      */
     public String getDeliveryStatus() {
         return this.DeliveryStatus;
     }
 
     /**
-     * Set <p>Status of a real-time log shipping task. Valid values: <li>enabled: enabled;</li><li>disabled: disabled;</li><li>deleted: deleted abnormally. Check whether the destination log set/log topic of Tencent Cloud CLS has been deleted.</li></p>
-     * @param DeliveryStatus <p>Status of a real-time log shipping task. Valid values: <li>enabled: enabled;</li><li>disabled: disabled;</li><li>deleted: deleted abnormally. Check whether the destination log set/log topic of Tencent Cloud CLS has been deleted.</li></p>
+     * Set <p>Status of the real-time log delivery task. Valid values:</p><ul><li>`enabled`: enabled;</li><li>`disabled`: disabled;</li><li>`deleted`: abnormally deleted. Check whether the destination Tencent Cloud CLS log set or log topic has been deleted.</li></ul>
+     * @param DeliveryStatus <p>Status of the real-time log delivery task. Valid values:</p><ul><li>`enabled`: enabled;</li><li>`disabled`: disabled;</li><li>`deleted`: abnormally deleted. Check whether the destination Tencent Cloud CLS log set or log topic has been deleted.</li></ul>
      */
     public void setDeliveryStatus(String DeliveryStatus) {
         this.DeliveryStatus = DeliveryStatus;
     }
 
     /**
-     * Get <p>Type of a real-time log shipping task. Valid values: <ul><li>cls: push to Tencent Cloud CLS;</li> <li>custom_endpoint: push to a custom HTTP(S) address;</li> <li>s3: push to an S3-compatible (compatible with the SigV4 authentication algorithm) object storage address;</li><li>aws_s3: push to an AWS S3 bucket address;</li><li>log_analysis: push to EdgeOne log analytics.</li></ul></p> 
-     * @return TaskType <p>Type of a real-time log shipping task. Valid values: <ul><li>cls: push to Tencent Cloud CLS;</li> <li>custom_endpoint: push to a custom HTTP(S) address;</li> <li>s3: push to an S3-compatible (compatible with the SigV4 authentication algorithm) object storage address;</li><li>aws_s3: push to an AWS S3 bucket address;</li><li>log_analysis: push to EdgeOne log analytics.</li></ul></p>
+     * Get <p>Type of the real-time log delivery task. Valid values:</p><ul><li>`cls`: deliver to Tencent Cloud CLS;</li><li>`custom_endpoint`: deliver to a custom HTTP(S) endpoint;</li><li>`s3`: deliver to an S3-compatible (SigV4 authentication algorithm compatible) object storage endpoint;</li><li>`aws_s3`: deliver to an AWS S3 bucket;</li><li>`log_analysis`: deliver to EdgeOne Log Analysis.</li></ul> 
+     * @return TaskType <p>Type of the real-time log delivery task. Valid values:</p><ul><li>`cls`: deliver to Tencent Cloud CLS;</li><li>`custom_endpoint`: deliver to a custom HTTP(S) endpoint;</li><li>`s3`: deliver to an S3-compatible (SigV4 authentication algorithm compatible) object storage endpoint;</li><li>`aws_s3`: deliver to an AWS S3 bucket;</li><li>`log_analysis`: deliver to EdgeOne Log Analysis.</li></ul>
      */
     public String getTaskType() {
         return this.TaskType;
     }
 
     /**
-     * Set <p>Type of a real-time log shipping task. Valid values: <ul><li>cls: push to Tencent Cloud CLS;</li> <li>custom_endpoint: push to a custom HTTP(S) address;</li> <li>s3: push to an S3-compatible (compatible with the SigV4 authentication algorithm) object storage address;</li><li>aws_s3: push to an AWS S3 bucket address;</li><li>log_analysis: push to EdgeOne log analytics.</li></ul></p>
-     * @param TaskType <p>Type of a real-time log shipping task. Valid values: <ul><li>cls: push to Tencent Cloud CLS;</li> <li>custom_endpoint: push to a custom HTTP(S) address;</li> <li>s3: push to an S3-compatible (compatible with the SigV4 authentication algorithm) object storage address;</li><li>aws_s3: push to an AWS S3 bucket address;</li><li>log_analysis: push to EdgeOne log analytics.</li></ul></p>
+     * Set <p>Type of the real-time log delivery task. Valid values:</p><ul><li>`cls`: deliver to Tencent Cloud CLS;</li><li>`custom_endpoint`: deliver to a custom HTTP(S) endpoint;</li><li>`s3`: deliver to an S3-compatible (SigV4 authentication algorithm compatible) object storage endpoint;</li><li>`aws_s3`: deliver to an AWS S3 bucket;</li><li>`log_analysis`: deliver to EdgeOne Log Analysis.</li></ul>
+     * @param TaskType <p>Type of the real-time log delivery task. Valid values:</p><ul><li>`cls`: deliver to Tencent Cloud CLS;</li><li>`custom_endpoint`: deliver to a custom HTTP(S) endpoint;</li><li>`s3`: deliver to an S3-compatible (SigV4 authentication algorithm compatible) object storage endpoint;</li><li>`aws_s3`: deliver to an AWS S3 bucket;</li><li>`log_analysis`: deliver to EdgeOne Log Analysis.</li></ul>
      */
     public void setTaskType(String TaskType) {
         this.TaskType = TaskType;
     }
 
     /**
-     * Get <p>List of entities corresponding to the real-time log delivery task (Layer 7 domain or L4 proxy instance). Example values: <li>Layer 7 domain: domain.example.com;</li> <li>L4 proxy instance: sid-2s69eb5wcms7.</li></p> 
-     * @return EntityList <p>List of entities corresponding to the real-time log delivery task (Layer 7 domain or L4 proxy instance). Example values: <li>Layer 7 domain: domain.example.com;</li> <li>L4 proxy instance: sid-2s69eb5wcms7.</li></p>
+     * Get <p>List of entities that the real-time log delivery task applies to (Layer 7 domain names or Layer 4 proxy instances). Examples:</p><ul><li>Layer 7 domain name: `domain.example.com`;</li><li>Layer 4 proxy instance: `sid-2s69eb5wcms7`.</li></ul> 
+     * @return EntityList <p>List of entities that the real-time log delivery task applies to (Layer 7 domain names or Layer 4 proxy instances). Examples:</p><ul><li>Layer 7 domain name: `domain.example.com`;</li><li>Layer 4 proxy instance: `sid-2s69eb5wcms7`.</li></ul>
      */
     public String [] getEntityList() {
         return this.EntityList;
     }
 
     /**
-     * Set <p>List of entities corresponding to the real-time log delivery task (Layer 7 domain or L4 proxy instance). Example values: <li>Layer 7 domain: domain.example.com;</li> <li>L4 proxy instance: sid-2s69eb5wcms7.</li></p>
-     * @param EntityList <p>List of entities corresponding to the real-time log delivery task (Layer 7 domain or L4 proxy instance). Example values: <li>Layer 7 domain: domain.example.com;</li> <li>L4 proxy instance: sid-2s69eb5wcms7.</li></p>
+     * Set <p>List of entities that the real-time log delivery task applies to (Layer 7 domain names or Layer 4 proxy instances). Examples:</p><ul><li>Layer 7 domain name: `domain.example.com`;</li><li>Layer 4 proxy instance: `sid-2s69eb5wcms7`.</li></ul>
+     * @param EntityList <p>List of entities that the real-time log delivery task applies to (Layer 7 domain names or Layer 4 proxy instances). Examples:</p><ul><li>Layer 7 domain name: `domain.example.com`;</li><li>Layer 4 proxy instance: `sid-2s69eb5wcms7`.</li></ul>
      */
     public void setEntityList(String [] EntityList) {
         this.EntityList = EntityList;
     }
 
     /**
-     * Get <p>Data delivery type. Valid values: <li>l7-access-logs: L7 access log</li><li>application: four-layer proxy logs</li> <li>function: edge function logs</li> <li>web-attack: managed rule log</li> <li>domain: site acceleration log</li> <li>web-rateLiming: rate limit and CC attack defense log</li><li>web-rule: custom rule log</li> <li>web-bot: Bot Management Log.</li></p> 
-     * @return LogType <p>Data delivery type. Valid values: <li>l7-access-logs: L7 access log</li><li>application: four-layer proxy logs</li> <li>function: edge function logs</li> <li>web-attack: managed rule log</li> <li>domain: site acceleration log</li> <li>web-rateLiming: rate limit and CC attack defense log</li><li>web-rule: custom rule log</li> <li>web-bot: Bot Management Log.</li></p>
+     * Get <p>Data delivery type. Valid values:</p><ul><li>`l7-access-logs`: Layer 7 access logs;</li><li>`application`: Layer 4 proxy logs;</li><li>`function`: Edge Function execution logs;</li><li>`web-attack`: managed rule logs;</li><li>`domain`: site acceleration logs;</li><li>`web-rateLiming`: rate limiting and CC attack defense logs;</li><li>`web-rule`: custom rule logs;</li><li>`web-bot`: Bot management logs.</li></ul> 
+     * @return LogType <p>Data delivery type. Valid values:</p><ul><li>`l7-access-logs`: Layer 7 access logs;</li><li>`application`: Layer 4 proxy logs;</li><li>`function`: Edge Function execution logs;</li><li>`web-attack`: managed rule logs;</li><li>`domain`: site acceleration logs;</li><li>`web-rateLiming`: rate limiting and CC attack defense logs;</li><li>`web-rule`: custom rule logs;</li><li>`web-bot`: Bot management logs.</li></ul>
      */
     public String getLogType() {
         return this.LogType;
     }
 
     /**
-     * Set <p>Data delivery type. Valid values: <li>l7-access-logs: L7 access log</li><li>application: four-layer proxy logs</li> <li>function: edge function logs</li> <li>web-attack: managed rule log</li> <li>domain: site acceleration log</li> <li>web-rateLiming: rate limit and CC attack defense log</li><li>web-rule: custom rule log</li> <li>web-bot: Bot Management Log.</li></p>
-     * @param LogType <p>Data delivery type. Valid values: <li>l7-access-logs: L7 access log</li><li>application: four-layer proxy logs</li> <li>function: edge function logs</li> <li>web-attack: managed rule log</li> <li>domain: site acceleration log</li> <li>web-rateLiming: rate limit and CC attack defense log</li><li>web-rule: custom rule log</li> <li>web-bot: Bot Management Log.</li></p>
+     * Set <p>Data delivery type. Valid values:</p><ul><li>`l7-access-logs`: Layer 7 access logs;</li><li>`application`: Layer 4 proxy logs;</li><li>`function`: Edge Function execution logs;</li><li>`web-attack`: managed rule logs;</li><li>`domain`: site acceleration logs;</li><li>`web-rateLiming`: rate limiting and CC attack defense logs;</li><li>`web-rule`: custom rule logs;</li><li>`web-bot`: Bot management logs.</li></ul>
+     * @param LogType <p>Data delivery type. Valid values:</p><ul><li>`l7-access-logs`: Layer 7 access logs;</li><li>`application`: Layer 4 proxy logs;</li><li>`function`: Edge Function execution logs;</li><li>`web-attack`: managed rule logs;</li><li>`domain`: site acceleration logs;</li><li>`web-rateLiming`: rate limiting and CC attack defense logs;</li><li>`web-rule`: custom rule logs;</li><li>`web-bot`: Bot management logs.</li></ul>
      */
     public void setLogType(String LogType) {
         this.LogType = LogType;
     }
 
     /**
-     * Get <p>Data shipping area. Valid values:<li>mainland: within the Chinese mainland;</li><li>overseas: global (excluding the Chinese mainland).</li></p> 
-     * @return Area <p>Data shipping area. Valid values:<li>mainland: within the Chinese mainland;</li><li>overseas: global (excluding the Chinese mainland).</li></p>
+     * Get <p>Data delivery area. Valid values:</p><ul><li>`mainland`: Chinese mainland;</li><li>`overseas`: Global (excluding the Chinese mainland).</li></ul> 
+     * @return Area <p>Data delivery area. Valid values:</p><ul><li>`mainland`: Chinese mainland;</li><li>`overseas`: Global (excluding the Chinese mainland).</li></ul>
      */
     public String getArea() {
         return this.Area;
     }
 
     /**
-     * Set <p>Data shipping area. Valid values:<li>mainland: within the Chinese mainland;</li><li>overseas: global (excluding the Chinese mainland).</li></p>
-     * @param Area <p>Data shipping area. Valid values:<li>mainland: within the Chinese mainland;</li><li>overseas: global (excluding the Chinese mainland).</li></p>
+     * Set <p>Data delivery area. Valid values:</p><ul><li>`mainland`: Chinese mainland;</li><li>`overseas`: Global (excluding the Chinese mainland).</li></ul>
+     * @param Area <p>Data delivery area. Valid values:</p><ul><li>`mainland`: Chinese mainland;</li><li>`overseas`: Global (excluding the Chinese mainland).</li></ul>
      */
     public void setArea(String Area) {
         this.Area = Area;
     }
 
     /**
-     * Get <p>List of predefined fields for delivery.</p> 
-     * @return Fields <p>List of predefined fields for delivery.</p>
+     * Get <p>List of preset fields to deliver.</p> 
+     * @return Fields <p>List of preset fields to deliver.</p>
      */
     public String [] getFields() {
         return this.Fields;
     }
 
     /**
-     * Set <p>List of predefined fields for delivery.</p>
-     * @param Fields <p>List of predefined fields for delivery.</p>
+     * Set <p>List of preset fields to deliver.</p>
+     * @param Fields <p>List of preset fields to deliver.</p>
      */
     public void setFields(String [] Fields) {
         this.Fields = Fields;
     }
 
     /**
-     * Get <p>Custom fields for delivery.</p> 
-     * @return CustomFields <p>Custom fields for delivery.</p>
+     * Get <p>List of custom fields to deliver.</p> 
+     * @return CustomFields <p>List of custom fields to deliver.</p>
      */
     public CustomField [] getCustomFields() {
         return this.CustomFields;
     }
 
     /**
-     * Set <p>Custom fields for delivery.</p>
-     * @param CustomFields <p>Custom fields for delivery.</p>
+     * Set <p>List of custom fields to deliver.</p>
+     * @param CustomFields <p>List of custom fields to deliver.</p>
      */
     public void setCustomFields(CustomField [] CustomFields) {
         this.CustomFields = CustomFields;
     }
 
     /**
-     * Get <p>List of custom expression fields for shipping.</p> 
-     * @return CustomExpressionFields <p>List of custom expression fields for shipping.</p>
+     * Get <p>List of custom expression fields to deliver.</p> 
+     * @return CustomExpressionFields <p>List of custom expression fields to deliver.</p>
      */
     public CustomExpressionField [] getCustomExpressionFields() {
         return this.CustomExpressionFields;
     }
 
     /**
-     * Set <p>List of custom expression fields for shipping.</p>
-     * @param CustomExpressionFields <p>List of custom expression fields for shipping.</p>
+     * Set <p>List of custom expression fields to deliver.</p>
+     * @param CustomExpressionFields <p>List of custom expression fields to deliver.</p>
      */
     public void setCustomExpressionFields(CustomExpressionField [] CustomExpressionFields) {
         this.CustomExpressionFields = CustomExpressionFields;
     }
 
     /**
-     * Get <p>Filter criteria of log shipping.</p> 
-     * @return DeliveryConditions <p>Filter criteria of log shipping.</p>
+     * Get <p>Filter conditions for log delivery.</p> 
+     * @return DeliveryConditions <p>Filter conditions for log delivery.</p>
      */
     public DeliveryCondition [] getDeliveryConditions() {
         return this.DeliveryConditions;
     }
 
     /**
-     * Set <p>Filter criteria of log shipping.</p>
-     * @param DeliveryConditions <p>Filter criteria of log shipping.</p>
+     * Set <p>Filter conditions for log delivery.</p>
+     * @param DeliveryConditions <p>Filter conditions for log delivery.</p>
      */
     public void setDeliveryConditions(DeliveryCondition [] DeliveryConditions) {
         this.DeliveryConditions = DeliveryConditions;
@@ -349,80 +349,80 @@ public class RealtimeLogDeliveryTask extends AbstractModel {
     }
 
     /**
-     * Get <p>Output format for log delivery. When the output parameter is null, the default format is used, which works as follows:</p><li>When TaskType is custom_endpoint, the default format is an array of JSON objects, where each JSON object represents a log entry;</li><li>When TaskType is s3, the default format is JSON Lines.</li> 
-     * @return LogFormat <p>Output format for log delivery. When the output parameter is null, the default format is used, which works as follows:</p><li>When TaskType is custom_endpoint, the default format is an array of JSON objects, where each JSON object represents a log entry;</li><li>When TaskType is s3, the default format is JSON Lines.</li>
+     * Get <p>Output format for log delivery. A null value indicates the default format. The default format logic is as follows:</p><ul><li>When `TaskType` is `custom_endpoint`, the default format is an array of JSON objects, each JSON object represents a log entry;</li><li>When `TaskType` is `s3`, the default format is JSON Lines.</li></ul> 
+     * @return LogFormat <p>Output format for log delivery. A null value indicates the default format. The default format logic is as follows:</p><ul><li>When `TaskType` is `custom_endpoint`, the default format is an array of JSON objects, each JSON object represents a log entry;</li><li>When `TaskType` is `s3`, the default format is JSON Lines.</li></ul>
      */
     public LogFormat getLogFormat() {
         return this.LogFormat;
     }
 
     /**
-     * Set <p>Output format for log delivery. When the output parameter is null, the default format is used, which works as follows:</p><li>When TaskType is custom_endpoint, the default format is an array of JSON objects, where each JSON object represents a log entry;</li><li>When TaskType is s3, the default format is JSON Lines.</li>
-     * @param LogFormat <p>Output format for log delivery. When the output parameter is null, the default format is used, which works as follows:</p><li>When TaskType is custom_endpoint, the default format is an array of JSON objects, where each JSON object represents a log entry;</li><li>When TaskType is s3, the default format is JSON Lines.</li>
+     * Set <p>Output format for log delivery. A null value indicates the default format. The default format logic is as follows:</p><ul><li>When `TaskType` is `custom_endpoint`, the default format is an array of JSON objects, each JSON object represents a log entry;</li><li>When `TaskType` is `s3`, the default format is JSON Lines.</li></ul>
+     * @param LogFormat <p>Output format for log delivery. A null value indicates the default format. The default format logic is as follows:</p><ul><li>When `TaskType` is `custom_endpoint`, the default format is an array of JSON objects, each JSON object represents a log entry;</li><li>When `TaskType` is `s3`, the default format is JSON Lines.</li></ul>
      */
     public void setLogFormat(LogFormat LogFormat) {
         this.LogFormat = LogFormat;
     }
 
     /**
-     * Get <p>Configuration information of the CLS.</p> 
-     * @return CLS <p>Configuration information of the CLS.</p>
+     * Get <p>Configuration of CLS.</p> 
+     * @return CLS <p>Configuration of CLS.</p>
      */
     public CLSTopic getCLS() {
         return this.CLS;
     }
 
     /**
-     * Set <p>Configuration information of the CLS.</p>
-     * @param CLS <p>Configuration information of the CLS.</p>
+     * Set <p>Configuration of CLS.</p>
+     * @param CLS <p>Configuration of CLS.</p>
      */
     public void setCLS(CLSTopic CLS) {
         this.CLS = CLS;
     }
 
     /**
-     * Get <p>Configuration information of the custom HTTP service.</p> 
-     * @return CustomEndpoint <p>Configuration information of the custom HTTP service.</p>
+     * Get <p>Configuration of the custom HTTP service.</p> 
+     * @return CustomEndpoint <p>Configuration of the custom HTTP service.</p>
      */
     public CustomEndpoint getCustomEndpoint() {
         return this.CustomEndpoint;
     }
 
     /**
-     * Set <p>Configuration information of the custom HTTP service.</p>
-     * @param CustomEndpoint <p>Configuration information of the custom HTTP service.</p>
+     * Set <p>Configuration of the custom HTTP service.</p>
+     * @param CustomEndpoint <p>Configuration of the custom HTTP service.</p>
      */
     public void setCustomEndpoint(CustomEndpoint CustomEndpoint) {
         this.CustomEndpoint = CustomEndpoint;
     }
 
     /**
-     * Get <p>Configuration message of S3-compatible (compatible with SigV4 authentication algorithm) object storage.</p> 
-     * @return S3 <p>Configuration message of S3-compatible (compatible with SigV4 authentication algorithm) object storage.</p>
+     * Get <p>Configuration of the S3-compatible (SigV4 authentication algorithm compatible) object storage.</p> 
+     * @return S3 <p>Configuration of the S3-compatible (SigV4 authentication algorithm compatible) object storage.</p>
      */
     public S3 getS3() {
         return this.S3;
     }
 
     /**
-     * Set <p>Configuration message of S3-compatible (compatible with SigV4 authentication algorithm) object storage.</p>
-     * @param S3 <p>Configuration message of S3-compatible (compatible with SigV4 authentication algorithm) object storage.</p>
+     * Set <p>Configuration of the S3-compatible (SigV4 authentication algorithm compatible) object storage.</p>
+     * @param S3 <p>Configuration of the S3-compatible (SigV4 authentication algorithm compatible) object storage.</p>
      */
     public void setS3(S3 S3) {
         this.S3 = S3;
     }
 
     /**
-     * Get <p>Configuration information of the AWS S3 object storage. It uses IAM role authorization, eliminating the need for persistent keys, and is applicable only to AWS native S3.</p> 
-     * @return AWSS3 <p>Configuration information of the AWS S3 object storage. It uses IAM role authorization, eliminating the need for persistent keys, and is applicable only to AWS native S3.</p>
+     * Get <p>Configuration of the AWS S3 object storage. It uses IAM role authorization, requires no long-term key, and applies only to AWS native S3.</p> 
+     * @return AWSS3 <p>Configuration of the AWS S3 object storage. It uses IAM role authorization, requires no long-term key, and applies only to AWS native S3.</p>
      */
     public AWSS3 getAWSS3() {
         return this.AWSS3;
     }
 
     /**
-     * Set <p>Configuration information of the AWS S3 object storage. It uses IAM role authorization, eliminating the need for persistent keys, and is applicable only to AWS native S3.</p>
-     * @param AWSS3 <p>Configuration information of the AWS S3 object storage. It uses IAM role authorization, eliminating the need for persistent keys, and is applicable only to AWS native S3.</p>
+     * Set <p>Configuration of the AWS S3 object storage. It uses IAM role authorization, requires no long-term key, and applies only to AWS native S3.</p>
+     * @param AWSS3 <p>Configuration of the AWS S3 object storage. It uses IAM role authorization, requires no long-term key, and applies only to AWS native S3.</p>
      */
     public void setAWSS3(AWSS3 AWSS3) {
         this.AWSS3 = AWSS3;

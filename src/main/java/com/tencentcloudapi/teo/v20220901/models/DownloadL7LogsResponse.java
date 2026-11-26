@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DownloadL7LogsResponse extends AbstractModel {
 
     /**
-    * Total number of query results.
+    * Total number of entries in the query result.
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * List of L7 logs.
+    * Data list of layer-7 offline logs.
     */
     @SerializedName("Data")
     @Expose
@@ -45,32 +45,32 @@ public class DownloadL7LogsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Total number of query results. 
-     * @return TotalCount Total number of query results.
+     * Get Total number of entries in the query result. 
+     * @return TotalCount Total number of entries in the query result.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Total number of query results.
-     * @param TotalCount Total number of query results.
+     * Set Total number of entries in the query result.
+     * @param TotalCount Total number of entries in the query result.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get List of L7 logs. 
-     * @return Data List of L7 logs.
+     * Get Data list of layer-7 offline logs. 
+     * @return Data Data list of layer-7 offline logs.
      */
     public L7OfflineLog [] getData() {
         return this.Data;
     }
 
     /**
-     * Set List of L7 logs.
-     * @param Data List of L7 logs.
+     * Set Data list of layer-7 offline logs.
+     * @param Data Data list of layer-7 offline logs.
      */
     public void setData(L7OfflineLog [] Data) {
         this.Data = Data;

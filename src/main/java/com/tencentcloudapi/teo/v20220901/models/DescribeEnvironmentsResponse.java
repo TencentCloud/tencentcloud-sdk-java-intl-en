@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeEnvironmentsResponse extends AbstractModel {
 
     /**
-    * Total environments.
+    * Total number of environments.
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * Environment list.
+    * List of environments.
     */
     @SerializedName("EnvInfos")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeEnvironmentsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Total environments. 
-     * @return TotalCount Total environments.
+     * Get Total number of environments. 
+     * @return TotalCount Total number of environments.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Total environments.
-     * @param TotalCount Total environments.
+     * Set Total number of environments.
+     * @param TotalCount Total number of environments.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get Environment list. 
-     * @return EnvInfos Environment list.
+     * Get List of environments. 
+     * @return EnvInfos List of environments.
      */
     public EnvInfo [] getEnvInfos() {
         return this.EnvInfos;
     }
 
     /**
-     * Set Environment list.
-     * @param EnvInfos Environment list.
+     * Set List of environments.
+     * @param EnvInfos List of environments.
      */
     public void setEnvInfos(EnvInfo [] EnvInfos) {
         this.EnvInfos = EnvInfos;

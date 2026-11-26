@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class ApplyFreeCertificateResponse extends AbstractModel {
 
     /**
-    * Specifies the verification information for free certificate application when VerificationMethod is dns_challenge.
+    * Verification information related to applying for a free certificate for the domain name when VerificationMethod is dns_challenge.
     */
     @SerializedName("DnsVerification")
     @Expose
     private DnsVerification DnsVerification;
 
     /**
-    * Specifies the verification information related to the free certificate application for the domain name when VerificationMethod is http_challenge.
+    * Verification information related to applying for a free certificate for the domain name when VerificationMethod is http_challenge.
     */
     @SerializedName("FileVerification")
     @Expose
@@ -45,32 +45,32 @@ public class ApplyFreeCertificateResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Specifies the verification information for free certificate application when VerificationMethod is dns_challenge. 
-     * @return DnsVerification Specifies the verification information for free certificate application when VerificationMethod is dns_challenge.
+     * Get Verification information related to applying for a free certificate for the domain name when VerificationMethod is dns_challenge. 
+     * @return DnsVerification Verification information related to applying for a free certificate for the domain name when VerificationMethod is dns_challenge.
      */
     public DnsVerification getDnsVerification() {
         return this.DnsVerification;
     }
 
     /**
-     * Set Specifies the verification information for free certificate application when VerificationMethod is dns_challenge.
-     * @param DnsVerification Specifies the verification information for free certificate application when VerificationMethod is dns_challenge.
+     * Set Verification information related to applying for a free certificate for the domain name when VerificationMethod is dns_challenge.
+     * @param DnsVerification Verification information related to applying for a free certificate for the domain name when VerificationMethod is dns_challenge.
      */
     public void setDnsVerification(DnsVerification DnsVerification) {
         this.DnsVerification = DnsVerification;
     }
 
     /**
-     * Get Specifies the verification information related to the free certificate application for the domain name when VerificationMethod is http_challenge. 
-     * @return FileVerification Specifies the verification information related to the free certificate application for the domain name when VerificationMethod is http_challenge.
+     * Get Verification information related to applying for a free certificate for the domain name when VerificationMethod is http_challenge. 
+     * @return FileVerification Verification information related to applying for a free certificate for the domain name when VerificationMethod is http_challenge.
      */
     public FileVerification getFileVerification() {
         return this.FileVerification;
     }
 
     /**
-     * Set Specifies the verification information related to the free certificate application for the domain name when VerificationMethod is http_challenge.
-     * @param FileVerification Specifies the verification information related to the free certificate application for the domain name when VerificationMethod is http_challenge.
+     * Set Verification information related to applying for a free certificate for the domain name when VerificationMethod is http_challenge.
+     * @param FileVerification Verification information related to applying for a free certificate for the domain name when VerificationMethod is http_challenge.
      */
     public void setFileVerification(FileVerification FileVerification) {
         this.FileVerification = FileVerification;

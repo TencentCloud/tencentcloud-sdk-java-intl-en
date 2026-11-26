@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeWebSecurityTemplateResponse extends AbstractModel {
 
     /**
-    * Web Security policy template configuration. Bot management configuration is not currently supported (under development).
+    * Security policy template configuration content. Bot configuration is not currently supported and is under development.
     */
     @SerializedName("SecurityPolicy")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeWebSecurityTemplateResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Web Security policy template configuration. Bot management configuration is not currently supported (under development). 
-     * @return SecurityPolicy Web Security policy template configuration. Bot management configuration is not currently supported (under development).
+     * Get Security policy template configuration content. Bot configuration is not currently supported and is under development. 
+     * @return SecurityPolicy Security policy template configuration content. Bot configuration is not currently supported and is under development.
      */
     public SecurityPolicy getSecurityPolicy() {
         return this.SecurityPolicy;
     }
 
     /**
-     * Set Web Security policy template configuration. Bot management configuration is not currently supported (under development).
-     * @param SecurityPolicy Web Security policy template configuration. Bot management configuration is not currently supported (under development).
+     * Set Security policy template configuration content. Bot configuration is not currently supported and is under development.
+     * @param SecurityPolicy Security policy template configuration content. Bot configuration is not currently supported and is under development.
      */
     public void setSecurityPolicy(SecurityPolicy SecurityPolicy) {
         this.SecurityPolicy = SecurityPolicy;

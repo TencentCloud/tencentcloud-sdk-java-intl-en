@@ -38,21 +38,21 @@ public class ModifyFunctionReplicaRequest extends AbstractModel {
     private String FunctionId;
 
     /**
-    * Edge function copy name that needs to be modified.
+    * Name of the edge function copy that needs to be modified.
     */
     @SerializedName("ReplicaName")
     @Expose
     private String ReplicaName;
 
     /**
-    * Edge function replica content. Currently only supports JavaScript code. Supports a maximum of 5 MB.
+    * Content of the edge function replica, which currently only supports JavaScript code. Its maximum size is 5 MB.
     */
     @SerializedName("Content")
     @Expose
     private String Content;
 
     /**
-    * Edge function replica description. Supports up to 50 characters.
+    * Description of the edge function copy. It can contain up to 50 characters.
     */
     @SerializedName("Remark")
     @Expose
@@ -91,48 +91,48 @@ public class ModifyFunctionReplicaRequest extends AbstractModel {
     }
 
     /**
-     * Get Edge function copy name that needs to be modified. 
-     * @return ReplicaName Edge function copy name that needs to be modified.
+     * Get Name of the edge function copy that needs to be modified. 
+     * @return ReplicaName Name of the edge function copy that needs to be modified.
      */
     public String getReplicaName() {
         return this.ReplicaName;
     }
 
     /**
-     * Set Edge function copy name that needs to be modified.
-     * @param ReplicaName Edge function copy name that needs to be modified.
+     * Set Name of the edge function copy that needs to be modified.
+     * @param ReplicaName Name of the edge function copy that needs to be modified.
      */
     public void setReplicaName(String ReplicaName) {
         this.ReplicaName = ReplicaName;
     }
 
     /**
-     * Get Edge function replica content. Currently only supports JavaScript code. Supports a maximum of 5 MB. 
-     * @return Content Edge function replica content. Currently only supports JavaScript code. Supports a maximum of 5 MB.
+     * Get Content of the edge function replica, which currently only supports JavaScript code. Its maximum size is 5 MB. 
+     * @return Content Content of the edge function replica, which currently only supports JavaScript code. Its maximum size is 5 MB.
      */
     public String getContent() {
         return this.Content;
     }
 
     /**
-     * Set Edge function replica content. Currently only supports JavaScript code. Supports a maximum of 5 MB.
-     * @param Content Edge function replica content. Currently only supports JavaScript code. Supports a maximum of 5 MB.
+     * Set Content of the edge function replica, which currently only supports JavaScript code. Its maximum size is 5 MB.
+     * @param Content Content of the edge function replica, which currently only supports JavaScript code. Its maximum size is 5 MB.
      */
     public void setContent(String Content) {
         this.Content = Content;
     }
 
     /**
-     * Get Edge function replica description. Supports up to 50 characters. 
-     * @return Remark Edge function replica description. Supports up to 50 characters.
+     * Get Description of the edge function copy. It can contain up to 50 characters. 
+     * @return Remark Description of the edge function copy. It can contain up to 50 characters.
      */
     public String getRemark() {
         return this.Remark;
     }
 
     /**
-     * Set Edge function replica description. Supports up to 50 characters.
-     * @param Remark Edge function replica description. Supports up to 50 characters.
+     * Set Description of the edge function copy. It can contain up to 50 characters.
+     * @param Remark Description of the edge function copy. It can contain up to 50 characters.
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;

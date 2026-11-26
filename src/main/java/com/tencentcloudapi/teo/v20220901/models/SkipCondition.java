@@ -24,223 +24,223 @@ import java.util.HashMap;
 public class SkipCondition extends AbstractModel {
 
     /**
-    * The field type. Values:
-<li>`header_fields`: HTTP request header</li>
-<li>`cookie`: HTTP request cookie</li>
-<li>`query_string`: Query string in the HTTP request URL</li>
-<li>`uri`: HTTP request URI</li>
-<li>`body_raw`: HTTP request body</li>
-<li>`body_json`: JSON HTTP request body</li>
+    * Exception skip type. Value:
+<li>header_fields: HTTP request header;</li>
+<li>cookie: HTTP request cookie;</li>
+<li>query_string: The query parameter in the HTTP Request URL;</li>
+<li>uri: HTTP request URI;</li>
+<li>body_raw: HTTP request body;</li>
+<li>body_json: HTTP Body in JSON format.</li>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * The specific field. Values:
-<li>`args`: Query parameter in the URI, such as "?name1=jack&age=12"</li>
-<li>`path`: Partial path in the URI, such as "/path/to/resource.jpg"</li>
-<li>`full`: Full path in the URI, such as "example.com/path/to/resource.jpg?name1=jack&age=12"</li>
-<li>`upload_filename`: File path segment</li>
-<li>`keys`: All keys</li>
-<li>`values`: Values of all keys</li>
-<li>`key_value`: Key and its value</li>
+    * Field to skip. Value:
+<li>args: select query parameter under uri: ?name1=jack&age=12;</li>
+<li>path: Select a path under the uri: /path/to/resource.jpg;</li>
+<li>full: select the full path under uri: example.com/path/to/resource.jpg?name1=jack&age=12;</li>
+<li>upload_filename: Segmented file name, that is, when transferring files in segments;</li>
+<li>keys: all keys;</li>
+<li>values: The value corresponding to the match Key;</li>
+<li>key_value: Match key and match value.</li>
     */
     @SerializedName("Selector")
     @Expose
     private String Selector;
 
     /**
-    * The match method used to match the key. Values:
-<li>`equal`: Exact match</li>
-<li>`wildcard`: Wildcard match (only asterisks)</li>
+    * Match mode used by the match Key. Value:
+<li>equal: exact match, equal to;</li>
+<li>wildcard: wildcard match, supports * wildcard.</li>
     */
     @SerializedName("MatchFromType")
     @Expose
     private String MatchFromType;
 
     /**
-    * Match the Key value.
+    * Value of the match Key.
     */
     @SerializedName("MatchFrom")
     @Expose
     private String [] MatchFrom;
 
     /**
-    * The match method used to match the content.
-<li>`equal`: Exact match</li>
-<li>`wildcard`: Wildcard match (only asterisks)</li>
+    * Match mode used by Content. Value:
+<li>equal: exact match, equal to;</li>
+<li>wildcard: wildcard match, supports * wildcard.</li>
     */
     @SerializedName("MatchContentType")
     @Expose
     private String MatchContentType;
 
     /**
-    * Match the Value.
+    * Value of the match Value.
     */
     @SerializedName("MatchContent")
     @Expose
     private String [] MatchContent;
 
     /**
-     * Get The field type. Values:
-<li>`header_fields`: HTTP request header</li>
-<li>`cookie`: HTTP request cookie</li>
-<li>`query_string`: Query string in the HTTP request URL</li>
-<li>`uri`: HTTP request URI</li>
-<li>`body_raw`: HTTP request body</li>
-<li>`body_json`: JSON HTTP request body</li> 
-     * @return Type The field type. Values:
-<li>`header_fields`: HTTP request header</li>
-<li>`cookie`: HTTP request cookie</li>
-<li>`query_string`: Query string in the HTTP request URL</li>
-<li>`uri`: HTTP request URI</li>
-<li>`body_raw`: HTTP request body</li>
-<li>`body_json`: JSON HTTP request body</li>
+     * Get Exception skip type. Value:
+<li>header_fields: HTTP request header;</li>
+<li>cookie: HTTP request cookie;</li>
+<li>query_string: The query parameter in the HTTP Request URL;</li>
+<li>uri: HTTP request URI;</li>
+<li>body_raw: HTTP request body;</li>
+<li>body_json: HTTP Body in JSON format.</li> 
+     * @return Type Exception skip type. Value:
+<li>header_fields: HTTP request header;</li>
+<li>cookie: HTTP request cookie;</li>
+<li>query_string: The query parameter in the HTTP Request URL;</li>
+<li>uri: HTTP request URI;</li>
+<li>body_raw: HTTP request body;</li>
+<li>body_json: HTTP Body in JSON format.</li>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set The field type. Values:
-<li>`header_fields`: HTTP request header</li>
-<li>`cookie`: HTTP request cookie</li>
-<li>`query_string`: Query string in the HTTP request URL</li>
-<li>`uri`: HTTP request URI</li>
-<li>`body_raw`: HTTP request body</li>
-<li>`body_json`: JSON HTTP request body</li>
-     * @param Type The field type. Values:
-<li>`header_fields`: HTTP request header</li>
-<li>`cookie`: HTTP request cookie</li>
-<li>`query_string`: Query string in the HTTP request URL</li>
-<li>`uri`: HTTP request URI</li>
-<li>`body_raw`: HTTP request body</li>
-<li>`body_json`: JSON HTTP request body</li>
+     * Set Exception skip type. Value:
+<li>header_fields: HTTP request header;</li>
+<li>cookie: HTTP request cookie;</li>
+<li>query_string: The query parameter in the HTTP Request URL;</li>
+<li>uri: HTTP request URI;</li>
+<li>body_raw: HTTP request body;</li>
+<li>body_json: HTTP Body in JSON format.</li>
+     * @param Type Exception skip type. Value:
+<li>header_fields: HTTP request header;</li>
+<li>cookie: HTTP request cookie;</li>
+<li>query_string: The query parameter in the HTTP Request URL;</li>
+<li>uri: HTTP request URI;</li>
+<li>body_raw: HTTP request body;</li>
+<li>body_json: HTTP Body in JSON format.</li>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get The specific field. Values:
-<li>`args`: Query parameter in the URI, such as "?name1=jack&age=12"</li>
-<li>`path`: Partial path in the URI, such as "/path/to/resource.jpg"</li>
-<li>`full`: Full path in the URI, such as "example.com/path/to/resource.jpg?name1=jack&age=12"</li>
-<li>`upload_filename`: File path segment</li>
-<li>`keys`: All keys</li>
-<li>`values`: Values of all keys</li>
-<li>`key_value`: Key and its value</li> 
-     * @return Selector The specific field. Values:
-<li>`args`: Query parameter in the URI, such as "?name1=jack&age=12"</li>
-<li>`path`: Partial path in the URI, such as "/path/to/resource.jpg"</li>
-<li>`full`: Full path in the URI, such as "example.com/path/to/resource.jpg?name1=jack&age=12"</li>
-<li>`upload_filename`: File path segment</li>
-<li>`keys`: All keys</li>
-<li>`values`: Values of all keys</li>
-<li>`key_value`: Key and its value</li>
+     * Get Field to skip. Value:
+<li>args: select query parameter under uri: ?name1=jack&age=12;</li>
+<li>path: Select a path under the uri: /path/to/resource.jpg;</li>
+<li>full: select the full path under uri: example.com/path/to/resource.jpg?name1=jack&age=12;</li>
+<li>upload_filename: Segmented file name, that is, when transferring files in segments;</li>
+<li>keys: all keys;</li>
+<li>values: The value corresponding to the match Key;</li>
+<li>key_value: Match key and match value.</li> 
+     * @return Selector Field to skip. Value:
+<li>args: select query parameter under uri: ?name1=jack&age=12;</li>
+<li>path: Select a path under the uri: /path/to/resource.jpg;</li>
+<li>full: select the full path under uri: example.com/path/to/resource.jpg?name1=jack&age=12;</li>
+<li>upload_filename: Segmented file name, that is, when transferring files in segments;</li>
+<li>keys: all keys;</li>
+<li>values: The value corresponding to the match Key;</li>
+<li>key_value: Match key and match value.</li>
      */
     public String getSelector() {
         return this.Selector;
     }
 
     /**
-     * Set The specific field. Values:
-<li>`args`: Query parameter in the URI, such as "?name1=jack&age=12"</li>
-<li>`path`: Partial path in the URI, such as "/path/to/resource.jpg"</li>
-<li>`full`: Full path in the URI, such as "example.com/path/to/resource.jpg?name1=jack&age=12"</li>
-<li>`upload_filename`: File path segment</li>
-<li>`keys`: All keys</li>
-<li>`values`: Values of all keys</li>
-<li>`key_value`: Key and its value</li>
-     * @param Selector The specific field. Values:
-<li>`args`: Query parameter in the URI, such as "?name1=jack&age=12"</li>
-<li>`path`: Partial path in the URI, such as "/path/to/resource.jpg"</li>
-<li>`full`: Full path in the URI, such as "example.com/path/to/resource.jpg?name1=jack&age=12"</li>
-<li>`upload_filename`: File path segment</li>
-<li>`keys`: All keys</li>
-<li>`values`: Values of all keys</li>
-<li>`key_value`: Key and its value</li>
+     * Set Field to skip. Value:
+<li>args: select query parameter under uri: ?name1=jack&age=12;</li>
+<li>path: Select a path under the uri: /path/to/resource.jpg;</li>
+<li>full: select the full path under uri: example.com/path/to/resource.jpg?name1=jack&age=12;</li>
+<li>upload_filename: Segmented file name, that is, when transferring files in segments;</li>
+<li>keys: all keys;</li>
+<li>values: The value corresponding to the match Key;</li>
+<li>key_value: Match key and match value.</li>
+     * @param Selector Field to skip. Value:
+<li>args: select query parameter under uri: ?name1=jack&age=12;</li>
+<li>path: Select a path under the uri: /path/to/resource.jpg;</li>
+<li>full: select the full path under uri: example.com/path/to/resource.jpg?name1=jack&age=12;</li>
+<li>upload_filename: Segmented file name, that is, when transferring files in segments;</li>
+<li>keys: all keys;</li>
+<li>values: The value corresponding to the match Key;</li>
+<li>key_value: Match key and match value.</li>
      */
     public void setSelector(String Selector) {
         this.Selector = Selector;
     }
 
     /**
-     * Get The match method used to match the key. Values:
-<li>`equal`: Exact match</li>
-<li>`wildcard`: Wildcard match (only asterisks)</li> 
-     * @return MatchFromType The match method used to match the key. Values:
-<li>`equal`: Exact match</li>
-<li>`wildcard`: Wildcard match (only asterisks)</li>
+     * Get Match mode used by the match Key. Value:
+<li>equal: exact match, equal to;</li>
+<li>wildcard: wildcard match, supports * wildcard.</li> 
+     * @return MatchFromType Match mode used by the match Key. Value:
+<li>equal: exact match, equal to;</li>
+<li>wildcard: wildcard match, supports * wildcard.</li>
      */
     public String getMatchFromType() {
         return this.MatchFromType;
     }
 
     /**
-     * Set The match method used to match the key. Values:
-<li>`equal`: Exact match</li>
-<li>`wildcard`: Wildcard match (only asterisks)</li>
-     * @param MatchFromType The match method used to match the key. Values:
-<li>`equal`: Exact match</li>
-<li>`wildcard`: Wildcard match (only asterisks)</li>
+     * Set Match mode used by the match Key. Value:
+<li>equal: exact match, equal to;</li>
+<li>wildcard: wildcard match, supports * wildcard.</li>
+     * @param MatchFromType Match mode used by the match Key. Value:
+<li>equal: exact match, equal to;</li>
+<li>wildcard: wildcard match, supports * wildcard.</li>
      */
     public void setMatchFromType(String MatchFromType) {
         this.MatchFromType = MatchFromType;
     }
 
     /**
-     * Get Match the Key value. 
-     * @return MatchFrom Match the Key value.
+     * Get Value of the match Key. 
+     * @return MatchFrom Value of the match Key.
      */
     public String [] getMatchFrom() {
         return this.MatchFrom;
     }
 
     /**
-     * Set Match the Key value.
-     * @param MatchFrom Match the Key value.
+     * Set Value of the match Key.
+     * @param MatchFrom Value of the match Key.
      */
     public void setMatchFrom(String [] MatchFrom) {
         this.MatchFrom = MatchFrom;
     }
 
     /**
-     * Get The match method used to match the content.
-<li>`equal`: Exact match</li>
-<li>`wildcard`: Wildcard match (only asterisks)</li> 
-     * @return MatchContentType The match method used to match the content.
-<li>`equal`: Exact match</li>
-<li>`wildcard`: Wildcard match (only asterisks)</li>
+     * Get Match mode used by Content. Value:
+<li>equal: exact match, equal to;</li>
+<li>wildcard: wildcard match, supports * wildcard.</li> 
+     * @return MatchContentType Match mode used by Content. Value:
+<li>equal: exact match, equal to;</li>
+<li>wildcard: wildcard match, supports * wildcard.</li>
      */
     public String getMatchContentType() {
         return this.MatchContentType;
     }
 
     /**
-     * Set The match method used to match the content.
-<li>`equal`: Exact match</li>
-<li>`wildcard`: Wildcard match (only asterisks)</li>
-     * @param MatchContentType The match method used to match the content.
-<li>`equal`: Exact match</li>
-<li>`wildcard`: Wildcard match (only asterisks)</li>
+     * Set Match mode used by Content. Value:
+<li>equal: exact match, equal to;</li>
+<li>wildcard: wildcard match, supports * wildcard.</li>
+     * @param MatchContentType Match mode used by Content. Value:
+<li>equal: exact match, equal to;</li>
+<li>wildcard: wildcard match, supports * wildcard.</li>
      */
     public void setMatchContentType(String MatchContentType) {
         this.MatchContentType = MatchContentType;
     }
 
     /**
-     * Get Match the Value. 
-     * @return MatchContent Match the Value.
+     * Get Value of the match Value. 
+     * @return MatchContent Value of the match Value.
      */
     public String [] getMatchContent() {
         return this.MatchContent;
     }
 
     /**
-     * Set Match the Value.
-     * @param MatchContent Match the Value.
+     * Set Value of the match Value.
+     * @param MatchContent Value of the match Value.
      */
     public void setMatchContent(String [] MatchContent) {
         this.MatchContent = MatchContent;

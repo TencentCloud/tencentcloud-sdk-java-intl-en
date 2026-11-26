@@ -24,51 +24,46 @@ import java.util.HashMap;
 public class ZoneConfigParameters extends AbstractModel {
 
     /**
-    * The site name.
+    * Site name.
     */
     @SerializedName("ZoneName")
     @Expose
     private String ZoneName;
 
     /**
-    * Site configuration information.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+    * Site configuration message.
     */
     @SerializedName("ZoneConfig")
     @Expose
     private ZoneConfig ZoneConfig;
 
     /**
-     * Get The site name. 
-     * @return ZoneName The site name.
+     * Get Site name. 
+     * @return ZoneName Site name.
      */
     public String getZoneName() {
         return this.ZoneName;
     }
 
     /**
-     * Set The site name.
-     * @param ZoneName The site name.
+     * Set Site name.
+     * @param ZoneName Site name.
      */
     public void setZoneName(String ZoneName) {
         this.ZoneName = ZoneName;
     }
 
     /**
-     * Get Site configuration information.
-Note: this field may return null, which indicates a failure to obtain a valid value. 
-     * @return ZoneConfig Site configuration information.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * Get Site configuration message. 
+     * @return ZoneConfig Site configuration message.
      */
     public ZoneConfig getZoneConfig() {
         return this.ZoneConfig;
     }
 
     /**
-     * Set Site configuration information.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-     * @param ZoneConfig Site configuration information.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * Set Site configuration message.
+     * @param ZoneConfig Site configuration message.
      */
     public void setZoneConfig(ZoneConfig ZoneConfig) {
         this.ZoneConfig = ZoneConfig;

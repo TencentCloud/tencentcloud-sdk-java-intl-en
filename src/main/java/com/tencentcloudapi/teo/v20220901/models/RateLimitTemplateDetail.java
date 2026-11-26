@@ -24,13 +24,13 @@ import java.util.HashMap;
 public class RateLimitTemplateDetail extends AbstractModel {
 
     /**
-    * Template level name. valid values:.
-<Li>Sup_loose: specifies super loose.</li>.
-<Li>`Loose`: loose</li>.
-<Li>`Emergency`: emergency</li>.
-<li>`normal`: moderate</li>.
-<li>strict</li>.
-<li>`close`: off, precise rate limiting effective.</li>.
+    * Template level name. Valid values:
+<li>sup_loose: super loose;</li>
+<li>loose: loose;</li>
+<li>emergency: emergency;</li>
+<li>normal: moderate;</li>
+<li>strict: strict;</li>
+<li>close: disabled, effective only for precise rate limiting.</li>
     */
     @SerializedName("Mode")
     @Expose
@@ -44,16 +44,16 @@ public class RateLimitTemplateDetail extends AbstractModel {
     private Long ID;
 
     /**
-    * Template action. valid values:.
-<li>alg: JavaScript challenge;</li>.
-<li>`monitor`: observe</li>.
+    * Template action. Valid values:
+<li>alg: JavaScript challenge;</li>
+<li>monitor: observation.</li>
     */
     @SerializedName("Action")
     @Expose
     private String Action;
 
     /**
-    * Penalty time, value range 0-2 days, unit second.
+    * Penalty duration, in seconds. Value range: 0-2 days.
     */
     @SerializedName("PunishTime")
     @Expose
@@ -74,40 +74,40 @@ public class RateLimitTemplateDetail extends AbstractModel {
     private Long Period;
 
     /**
-     * Get Template level name. valid values:.
-<Li>Sup_loose: specifies super loose.</li>.
-<Li>`Loose`: loose</li>.
-<Li>`Emergency`: emergency</li>.
-<li>`normal`: moderate</li>.
-<li>strict</li>.
-<li>`close`: off, precise rate limiting effective.</li>. 
-     * @return Mode Template level name. valid values:.
-<Li>Sup_loose: specifies super loose.</li>.
-<Li>`Loose`: loose</li>.
-<Li>`Emergency`: emergency</li>.
-<li>`normal`: moderate</li>.
-<li>strict</li>.
-<li>`close`: off, precise rate limiting effective.</li>.
+     * Get Template level name. Valid values:
+<li>sup_loose: super loose;</li>
+<li>loose: loose;</li>
+<li>emergency: emergency;</li>
+<li>normal: moderate;</li>
+<li>strict: strict;</li>
+<li>close: disabled, effective only for precise rate limiting.</li> 
+     * @return Mode Template level name. Valid values:
+<li>sup_loose: super loose;</li>
+<li>loose: loose;</li>
+<li>emergency: emergency;</li>
+<li>normal: moderate;</li>
+<li>strict: strict;</li>
+<li>close: disabled, effective only for precise rate limiting.</li>
      */
     public String getMode() {
         return this.Mode;
     }
 
     /**
-     * Set Template level name. valid values:.
-<Li>Sup_loose: specifies super loose.</li>.
-<Li>`Loose`: loose</li>.
-<Li>`Emergency`: emergency</li>.
-<li>`normal`: moderate</li>.
-<li>strict</li>.
-<li>`close`: off, precise rate limiting effective.</li>.
-     * @param Mode Template level name. valid values:.
-<Li>Sup_loose: specifies super loose.</li>.
-<Li>`Loose`: loose</li>.
-<Li>`Emergency`: emergency</li>.
-<li>`normal`: moderate</li>.
-<li>strict</li>.
-<li>`close`: off, precise rate limiting effective.</li>.
+     * Set Template level name. Valid values:
+<li>sup_loose: super loose;</li>
+<li>loose: loose;</li>
+<li>emergency: emergency;</li>
+<li>normal: moderate;</li>
+<li>strict: strict;</li>
+<li>close: disabled, effective only for precise rate limiting.</li>
+     * @param Mode Template level name. Valid values:
+<li>sup_loose: super loose;</li>
+<li>loose: loose;</li>
+<li>emergency: emergency;</li>
+<li>normal: moderate;</li>
+<li>strict: strict;</li>
+<li>close: disabled, effective only for precise rate limiting.</li>
      */
     public void setMode(String Mode) {
         this.Mode = Mode;
@@ -130,40 +130,40 @@ public class RateLimitTemplateDetail extends AbstractModel {
     }
 
     /**
-     * Get Template action. valid values:.
-<li>alg: JavaScript challenge;</li>.
-<li>`monitor`: observe</li>. 
-     * @return Action Template action. valid values:.
-<li>alg: JavaScript challenge;</li>.
-<li>`monitor`: observe</li>.
+     * Get Template action. Valid values:
+<li>alg: JavaScript challenge;</li>
+<li>monitor: observation.</li> 
+     * @return Action Template action. Valid values:
+<li>alg: JavaScript challenge;</li>
+<li>monitor: observation.</li>
      */
     public String getAction() {
         return this.Action;
     }
 
     /**
-     * Set Template action. valid values:.
-<li>alg: JavaScript challenge;</li>.
-<li>`monitor`: observe</li>.
-     * @param Action Template action. valid values:.
-<li>alg: JavaScript challenge;</li>.
-<li>`monitor`: observe</li>.
+     * Set Template action. Valid values:
+<li>alg: JavaScript challenge;</li>
+<li>monitor: observation.</li>
+     * @param Action Template action. Valid values:
+<li>alg: JavaScript challenge;</li>
+<li>monitor: observation.</li>
      */
     public void setAction(String Action) {
         this.Action = Action;
     }
 
     /**
-     * Get Penalty time, value range 0-2 days, unit second. 
-     * @return PunishTime Penalty time, value range 0-2 days, unit second.
+     * Get Penalty duration, in seconds. Value range: 0-2 days. 
+     * @return PunishTime Penalty duration, in seconds. Value range: 0-2 days.
      */
     public Long getPunishTime() {
         return this.PunishTime;
     }
 
     /**
-     * Set Penalty time, value range 0-2 days, unit second.
-     * @param PunishTime Penalty time, value range 0-2 days, unit second.
+     * Set Penalty duration, in seconds. Value range: 0-2 days.
+     * @param PunishTime Penalty duration, in seconds. Value range: 0-2 days.
      */
     public void setPunishTime(Long PunishTime) {
         this.PunishTime = PunishTime;

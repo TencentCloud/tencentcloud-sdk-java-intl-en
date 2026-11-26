@@ -38,7 +38,7 @@ public class EdgeKVDeleteRequest extends AbstractModel {
     private String Namespace;
 
     /**
-    * Name list. Maximum array length is 20. Each key cannot be empty, with a length of 1-512 characters, supporting valid UTF-8 characters. To delete one key, input an array containing one element.
+    * Key name list. The maximum array length is 20. Each key name cannot be empty and must be 1-512 characters long, supporting valid UTF-8 characters. To delete a single key, input an array containing one element.
     */
     @SerializedName("Keys")
     @Expose
@@ -77,16 +77,16 @@ public class EdgeKVDeleteRequest extends AbstractModel {
     }
 
     /**
-     * Get Name list. Maximum array length is 20. Each key cannot be empty, with a length of 1-512 characters, supporting valid UTF-8 characters. To delete one key, input an array containing one element. 
-     * @return Keys Name list. Maximum array length is 20. Each key cannot be empty, with a length of 1-512 characters, supporting valid UTF-8 characters. To delete one key, input an array containing one element.
+     * Get Key name list. The maximum array length is 20. Each key name cannot be empty and must be 1-512 characters long, supporting valid UTF-8 characters. To delete a single key, input an array containing one element. 
+     * @return Keys Key name list. The maximum array length is 20. Each key name cannot be empty and must be 1-512 characters long, supporting valid UTF-8 characters. To delete a single key, input an array containing one element.
      */
     public String [] getKeys() {
         return this.Keys;
     }
 
     /**
-     * Set Name list. Maximum array length is 20. Each key cannot be empty, with a length of 1-512 characters, supporting valid UTF-8 characters. To delete one key, input an array containing one element.
-     * @param Keys Name list. Maximum array length is 20. Each key cannot be empty, with a length of 1-512 characters, supporting valid UTF-8 characters. To delete one key, input an array containing one element.
+     * Set Key name list. The maximum array length is 20. Each key name cannot be empty and must be 1-512 characters long, supporting valid UTF-8 characters. To delete a single key, input an array containing one element.
+     * @param Keys Key name list. The maximum array length is 20. Each key name cannot be empty and must be 1-512 characters long, supporting valid UTF-8 characters. To delete a single key, input an array containing one element.
      */
     public void setKeys(String [] Keys) {
         this.Keys = Keys;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeInferenceHardwareSpecificationsResponse extends AbstractModel {
 
     /**
-    * <p>Hardware specifications list.</p>
+    * <p>Hardware specification list.</p>
     */
     @SerializedName("HardwareSpecifications")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeInferenceHardwareSpecificationsResponse extends AbstractMod
     private String RequestId;
 
     /**
-     * Get <p>Hardware specifications list.</p> 
-     * @return HardwareSpecifications <p>Hardware specifications list.</p>
+     * Get <p>Hardware specification list.</p> 
+     * @return HardwareSpecifications <p>Hardware specification list.</p>
      */
     public InferenceHardwareSpecification [] getHardwareSpecifications() {
         return this.HardwareSpecifications;
     }
 
     /**
-     * Set <p>Hardware specifications list.</p>
-     * @param HardwareSpecifications <p>Hardware specifications list.</p>
+     * Set <p>Hardware specification list.</p>
+     * @param HardwareSpecifications <p>Hardware specification list.</p>
      */
     public void setHardwareSpecifications(InferenceHardwareSpecification [] HardwareSpecifications) {
         this.HardwareSpecifications = HardwareSpecifications;

@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DescribeWebSecurityTemplatesRequest extends AbstractModel {
 
     /**
-    * List of zone IDs. A maximum of 100 zones can be queried in a single request.
+    * Site ID list. A single query can import up to 100 sites.
     */
     @SerializedName("ZoneIds")
     @Expose
     private String [] ZoneIds;
 
     /**
-     * Get List of zone IDs. A maximum of 100 zones can be queried in a single request. 
-     * @return ZoneIds List of zone IDs. A maximum of 100 zones can be queried in a single request.
+     * Get Site ID list. A single query can import up to 100 sites. 
+     * @return ZoneIds Site ID list. A single query can import up to 100 sites.
      */
     public String [] getZoneIds() {
         return this.ZoneIds;
     }
 
     /**
-     * Set List of zone IDs. A maximum of 100 zones can be queried in a single request.
-     * @param ZoneIds List of zone IDs. A maximum of 100 zones can be queried in a single request.
+     * Set Site ID list. A single query can import up to 100 sites.
+     * @param ZoneIds Site ID list. A single query can import up to 100 sites.
      */
     public void setZoneIds(String [] ZoneIds) {
         this.ZoneIds = ZoneIds;

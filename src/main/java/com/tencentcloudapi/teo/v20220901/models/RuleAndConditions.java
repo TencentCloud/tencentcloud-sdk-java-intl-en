@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class RuleAndConditions extends AbstractModel {
 
     /**
-    * Rule engine condition. This condition will be considered met if all items in the array are met.
+    * Condition of a rule engine. This condition is considered met if all items in the array are met.
     */
     @SerializedName("Conditions")
     @Expose
     private RuleCondition [] Conditions;
 
     /**
-     * Get Rule engine condition. This condition will be considered met if all items in the array are met. 
-     * @return Conditions Rule engine condition. This condition will be considered met if all items in the array are met.
+     * Get Condition of a rule engine. This condition is considered met if all items in the array are met. 
+     * @return Conditions Condition of a rule engine. This condition is considered met if all items in the array are met.
      */
     public RuleCondition [] getConditions() {
         return this.Conditions;
     }
 
     /**
-     * Set Rule engine condition. This condition will be considered met if all items in the array are met.
-     * @param Conditions Rule engine condition. This condition will be considered met if all items in the array are met.
+     * Set Condition of a rule engine. This condition is considered met if all items in the array are met.
+     * @param Conditions Condition of a rule engine. This condition is considered met if all items in the array are met.
      */
     public void setConditions(RuleCondition [] Conditions) {
         this.Conditions = Conditions;

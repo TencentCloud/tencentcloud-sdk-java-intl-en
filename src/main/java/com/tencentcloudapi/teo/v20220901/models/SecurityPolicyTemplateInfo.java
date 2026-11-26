@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class SecurityPolicyTemplateInfo extends AbstractModel {
 
     /**
-    * The zone ID to which the policy template belongs.
+    * Site ID of the policy template.
     */
     @SerializedName("ZoneId")
     @Expose
@@ -38,30 +38,30 @@ public class SecurityPolicyTemplateInfo extends AbstractModel {
     private String TemplateId;
 
     /**
-    * The name of the policy template.
+    * Policy template name.
     */
     @SerializedName("TemplateName")
     @Expose
     private String TemplateName;
 
     /**
-    * Information about domains bound to the policy template.
+    * Domain name info bound to the policy template.
     */
     @SerializedName("BindDomains")
     @Expose
     private BindDomainInfo [] BindDomains;
 
     /**
-     * Get The zone ID to which the policy template belongs. 
-     * @return ZoneId The zone ID to which the policy template belongs.
+     * Get Site ID of the policy template. 
+     * @return ZoneId Site ID of the policy template.
      */
     public String getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set The zone ID to which the policy template belongs.
-     * @param ZoneId The zone ID to which the policy template belongs.
+     * Set Site ID of the policy template.
+     * @param ZoneId Site ID of the policy template.
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;
@@ -84,32 +84,32 @@ public class SecurityPolicyTemplateInfo extends AbstractModel {
     }
 
     /**
-     * Get The name of the policy template. 
-     * @return TemplateName The name of the policy template.
+     * Get Policy template name. 
+     * @return TemplateName Policy template name.
      */
     public String getTemplateName() {
         return this.TemplateName;
     }
 
     /**
-     * Set The name of the policy template.
-     * @param TemplateName The name of the policy template.
+     * Set Policy template name.
+     * @param TemplateName Policy template name.
      */
     public void setTemplateName(String TemplateName) {
         this.TemplateName = TemplateName;
     }
 
     /**
-     * Get Information about domains bound to the policy template. 
-     * @return BindDomains Information about domains bound to the policy template.
+     * Get Domain name info bound to the policy template. 
+     * @return BindDomains Domain name info bound to the policy template.
      */
     public BindDomainInfo [] getBindDomains() {
         return this.BindDomains;
     }
 
     /**
-     * Set Information about domains bound to the policy template.
-     * @param BindDomains Information about domains bound to the policy template.
+     * Set Domain name info bound to the policy template.
+     * @param BindDomains Domain name info bound to the policy template.
      */
     public void setBindDomains(BindDomainInfo [] BindDomains) {
         this.BindDomains = BindDomains;

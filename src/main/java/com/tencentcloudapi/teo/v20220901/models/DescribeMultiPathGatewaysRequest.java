@@ -31,23 +31,23 @@ public class DescribeMultiPathGatewaysRequest extends AbstractModel {
     private String ZoneId;
 
     /**
-    * Pagination offset. Default value: 0.
+    * The offset of paginated query. Default value: 0.
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * Pagination limit. Default value: 20, maximum value: 1000.
+    * The limit of paginated query. Default value: 20. Maximum value: 1,000.
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * Filter fields for gateway list. If this parameter is left empty, return the current appid's all gateway information. detailed filter criteria:.
-<Li>Gateway-Type: filter by gateway type. valid values: cloud and private, representing cloud gateway and private gateway respectively.</li>
-<Li>Keyword: filter by keyword in the gateway name.</li>
+    * Filter field for the gateway list. If this parameter is left empty, all gateway information under the current appid is returned. The detailed filter criteria are as follows:
+<li> gateway-type: filter by gateway type. Valid values: cloud and private, representing Cloud Gateway and free gateway respectively;</li>
+<li> keyword: filter by the keyword of the gateway name.</li>
     */
     @SerializedName("Filters")
     @Expose
@@ -70,56 +70,56 @@ public class DescribeMultiPathGatewaysRequest extends AbstractModel {
     }
 
     /**
-     * Get Pagination offset. Default value: 0. 
-     * @return Offset Pagination offset. Default value: 0.
+     * Get The offset of paginated query. Default value: 0. 
+     * @return Offset The offset of paginated query. Default value: 0.
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Pagination offset. Default value: 0.
-     * @param Offset Pagination offset. Default value: 0.
+     * Set The offset of paginated query. Default value: 0.
+     * @param Offset The offset of paginated query. Default value: 0.
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get Pagination limit. Default value: 20, maximum value: 1000. 
-     * @return Limit Pagination limit. Default value: 20, maximum value: 1000.
+     * Get The limit of paginated query. Default value: 20. Maximum value: 1,000. 
+     * @return Limit The limit of paginated query. Default value: 20. Maximum value: 1,000.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Pagination limit. Default value: 20, maximum value: 1000.
-     * @param Limit Pagination limit. Default value: 20, maximum value: 1000.
+     * Set The limit of paginated query. Default value: 20. Maximum value: 1,000.
+     * @param Limit The limit of paginated query. Default value: 20. Maximum value: 1,000.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get Filter fields for gateway list. If this parameter is left empty, return the current appid's all gateway information. detailed filter criteria:.
-<Li>Gateway-Type: filter by gateway type. valid values: cloud and private, representing cloud gateway and private gateway respectively.</li>
-<Li>Keyword: filter by keyword in the gateway name.</li> 
-     * @return Filters Filter fields for gateway list. If this parameter is left empty, return the current appid's all gateway information. detailed filter criteria:.
-<Li>Gateway-Type: filter by gateway type. valid values: cloud and private, representing cloud gateway and private gateway respectively.</li>
-<Li>Keyword: filter by keyword in the gateway name.</li>
+     * Get Filter field for the gateway list. If this parameter is left empty, all gateway information under the current appid is returned. The detailed filter criteria are as follows:
+<li> gateway-type: filter by gateway type. Valid values: cloud and private, representing Cloud Gateway and free gateway respectively;</li>
+<li> keyword: filter by the keyword of the gateway name.</li> 
+     * @return Filters Filter field for the gateway list. If this parameter is left empty, all gateway information under the current appid is returned. The detailed filter criteria are as follows:
+<li> gateway-type: filter by gateway type. Valid values: cloud and private, representing Cloud Gateway and free gateway respectively;</li>
+<li> keyword: filter by the keyword of the gateway name.</li>
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set Filter fields for gateway list. If this parameter is left empty, return the current appid's all gateway information. detailed filter criteria:.
-<Li>Gateway-Type: filter by gateway type. valid values: cloud and private, representing cloud gateway and private gateway respectively.</li>
-<Li>Keyword: filter by keyword in the gateway name.</li>
-     * @param Filters Filter fields for gateway list. If this parameter is left empty, return the current appid's all gateway information. detailed filter criteria:.
-<Li>Gateway-Type: filter by gateway type. valid values: cloud and private, representing cloud gateway and private gateway respectively.</li>
-<Li>Keyword: filter by keyword in the gateway name.</li>
+     * Set Filter field for the gateway list. If this parameter is left empty, all gateway information under the current appid is returned. The detailed filter criteria are as follows:
+<li> gateway-type: filter by gateway type. Valid values: cloud and private, representing Cloud Gateway and free gateway respectively;</li>
+<li> keyword: filter by the keyword of the gateway name.</li>
+     * @param Filters Filter field for the gateway list. If this parameter is left empty, all gateway information under the current appid is returned. The detailed filter criteria are as follows:
+<li> gateway-type: filter by gateway type. Valid values: cloud and private, representing Cloud Gateway and free gateway respectively;</li>
+<li> keyword: filter by the keyword of the gateway name.</li>
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

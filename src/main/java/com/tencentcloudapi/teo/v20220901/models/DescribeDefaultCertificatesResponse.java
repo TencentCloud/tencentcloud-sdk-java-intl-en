@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeDefaultCertificatesResponse extends AbstractModel {
 
     /**
-    * Total number of certificates
+    * Total number of certificates.
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * List of default certificates
+    * Default certificate list.
     */
     @SerializedName("DefaultServerCertInfo")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeDefaultCertificatesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Total number of certificates 
-     * @return TotalCount Total number of certificates
+     * Get Total number of certificates. 
+     * @return TotalCount Total number of certificates.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Total number of certificates
-     * @param TotalCount Total number of certificates
+     * Set Total number of certificates.
+     * @param TotalCount Total number of certificates.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get List of default certificates 
-     * @return DefaultServerCertInfo List of default certificates
+     * Get Default certificate list. 
+     * @return DefaultServerCertInfo Default certificate list.
      */
     public DefaultServerCertInfo [] getDefaultServerCertInfo() {
         return this.DefaultServerCertInfo;
     }
 
     /**
-     * Set List of default certificates
-     * @param DefaultServerCertInfo List of default certificates
+     * Set Default certificate list.
+     * @param DefaultServerCertInfo Default certificate list.
      */
     public void setDefaultServerCertInfo(DefaultServerCertInfo [] DefaultServerCertInfo) {
         this.DefaultServerCertInfo = DefaultServerCertInfo;

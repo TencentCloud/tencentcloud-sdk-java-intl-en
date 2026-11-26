@@ -31,7 +31,7 @@ public class ModifyMultiPathGatewaySecretKeyRequest extends AbstractModel {
     private String ZoneId;
 
     /**
-    * Multi-Channel security acceleration gateway integration key, base64-encoded string with an unencoded length of 32-48 characters.
+    * Key for multi-channel security acceleration gateway integration, base64 string. The string length before encoding is 32-48 characters.
     */
     @SerializedName("SecretKey")
     @Expose
@@ -54,16 +54,16 @@ public class ModifyMultiPathGatewaySecretKeyRequest extends AbstractModel {
     }
 
     /**
-     * Get Multi-Channel security acceleration gateway integration key, base64-encoded string with an unencoded length of 32-48 characters. 
-     * @return SecretKey Multi-Channel security acceleration gateway integration key, base64-encoded string with an unencoded length of 32-48 characters.
+     * Get Key for multi-channel security acceleration gateway integration, base64 string. The string length before encoding is 32-48 characters. 
+     * @return SecretKey Key for multi-channel security acceleration gateway integration, base64 string. The string length before encoding is 32-48 characters.
      */
     public String getSecretKey() {
         return this.SecretKey;
     }
 
     /**
-     * Set Multi-Channel security acceleration gateway integration key, base64-encoded string with an unencoded length of 32-48 characters.
-     * @param SecretKey Multi-Channel security acceleration gateway integration key, base64-encoded string with an unencoded length of 32-48 characters.
+     * Set Key for multi-channel security acceleration gateway integration, base64 string. The string length before encoding is 32-48 characters.
+     * @param SecretKey Key for multi-channel security acceleration gateway integration, base64 string. The string length before encoding is 32-48 characters.
      */
     public void setSecretKey(String SecretKey) {
         this.SecretKey = SecretKey;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class InferenceServiceMonitorRecord extends AbstractModel {
 
     /**
-    * ID of the inference service.
+    * Inference service ID.
     */
     @SerializedName("ServiceId")
     @Expose
@@ -38,23 +38,23 @@ public class InferenceServiceMonitorRecord extends AbstractModel {
     private String MetricName;
 
     /**
-    * Detailed service monitoring data for reasoning.
+    * Detailed reasoning service monitoring data.
     */
     @SerializedName("InferenceServiceMonitorItems")
     @Expose
     private InferenceServiceMonitorItem [] InferenceServiceMonitorItems;
 
     /**
-     * Get ID of the inference service. 
-     * @return ServiceId ID of the inference service.
+     * Get Inference service ID. 
+     * @return ServiceId Inference service ID.
      */
     public String getServiceId() {
         return this.ServiceId;
     }
 
     /**
-     * Set ID of the inference service.
-     * @param ServiceId ID of the inference service.
+     * Set Inference service ID.
+     * @param ServiceId Inference service ID.
      */
     public void setServiceId(String ServiceId) {
         this.ServiceId = ServiceId;
@@ -77,16 +77,16 @@ public class InferenceServiceMonitorRecord extends AbstractModel {
     }
 
     /**
-     * Get Detailed service monitoring data for reasoning. 
-     * @return InferenceServiceMonitorItems Detailed service monitoring data for reasoning.
+     * Get Detailed reasoning service monitoring data. 
+     * @return InferenceServiceMonitorItems Detailed reasoning service monitoring data.
      */
     public InferenceServiceMonitorItem [] getInferenceServiceMonitorItems() {
         return this.InferenceServiceMonitorItems;
     }
 
     /**
-     * Set Detailed service monitoring data for reasoning.
-     * @param InferenceServiceMonitorItems Detailed service monitoring data for reasoning.
+     * Set Detailed reasoning service monitoring data.
+     * @param InferenceServiceMonitorItems Detailed reasoning service monitoring data.
      */
     public void setInferenceServiceMonitorItems(InferenceServiceMonitorItem [] InferenceServiceMonitorItems) {
         this.InferenceServiceMonitorItems = InferenceServiceMonitorItems;

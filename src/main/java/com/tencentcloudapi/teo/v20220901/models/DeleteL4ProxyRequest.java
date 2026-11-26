@@ -31,7 +31,7 @@ public class DeleteL4ProxyRequest extends AbstractModel {
     private String ZoneId;
 
     /**
-    * Layer 4 proxy instance ID.
+    * Layer 4 Proxy Instance ID.
     */
     @SerializedName("ProxyId")
     @Expose
@@ -54,16 +54,16 @@ public class DeleteL4ProxyRequest extends AbstractModel {
     }
 
     /**
-     * Get Layer 4 proxy instance ID. 
-     * @return ProxyId Layer 4 proxy instance ID.
+     * Get Layer 4 Proxy Instance ID. 
+     * @return ProxyId Layer 4 Proxy Instance ID.
      */
     public String getProxyId() {
         return this.ProxyId;
     }
 
     /**
-     * Set Layer 4 proxy instance ID.
-     * @param ProxyId Layer 4 proxy instance ID.
+     * Set Layer 4 Proxy Instance ID.
+     * @param ProxyId Layer 4 Proxy Instance ID.
      */
     public void setProxyId(String ProxyId) {
         this.ProxyId = ProxyId;

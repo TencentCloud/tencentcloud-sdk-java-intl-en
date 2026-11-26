@@ -24,194 +24,194 @@ import java.util.HashMap;
 public class L4OfflineLog extends AbstractModel {
 
     /**
-    * L4 proxy instance ID.
+    * Layer 4 Proxy Instance ID.
     */
     @SerializedName("ProxyId")
     @Expose
     private String ProxyId;
 
     /**
-    * Log query area. Valid values:
-<li>`mainland`: Chinese mainland;</li>
-<li>`overseas`: Global (outside the Chinese mainland). </li>
+    * Log region. Valid values:
+<li>mainland: within the Chinese mainland;</li>
+<li>overseas: global (excluding the Chinese mainland).</li>
     */
     @SerializedName("Area")
     @Expose
     private String Area;
 
     /**
-    * Log packet name.
+    * Name of the offline log data packet.
     */
     @SerializedName("LogPacketName")
     @Expose
     private String LogPacketName;
 
     /**
-    * Log download address.
+    * Offline log download URL.
     */
     @SerializedName("Url")
     @Expose
     private String Url;
 
     /**
-    * (Disused) Log packaging time. 
+    * Log packaging time. This parameter has been deprecated.
     */
     @SerializedName("LogTime")
     @Expose
     private Long LogTime;
 
     /**
-    * Start time of log packaging.
+    * Start time for log packaging.
     */
     @SerializedName("LogStartTime")
     @Expose
     private String LogStartTime;
 
     /**
-    * End time of the log package.
+    * Log packaging end time.
     */
     @SerializedName("LogEndTime")
     @Expose
     private String LogEndTime;
 
     /**
-    * Log size (in bytes).
+    * Log size in bytes.
     */
     @SerializedName("Size")
     @Expose
     private Long Size;
 
     /**
-     * Get L4 proxy instance ID. 
-     * @return ProxyId L4 proxy instance ID.
+     * Get Layer 4 Proxy Instance ID. 
+     * @return ProxyId Layer 4 Proxy Instance ID.
      */
     public String getProxyId() {
         return this.ProxyId;
     }
 
     /**
-     * Set L4 proxy instance ID.
-     * @param ProxyId L4 proxy instance ID.
+     * Set Layer 4 Proxy Instance ID.
+     * @param ProxyId Layer 4 Proxy Instance ID.
      */
     public void setProxyId(String ProxyId) {
         this.ProxyId = ProxyId;
     }
 
     /**
-     * Get Log query area. Valid values:
-<li>`mainland`: Chinese mainland;</li>
-<li>`overseas`: Global (outside the Chinese mainland). </li> 
-     * @return Area Log query area. Valid values:
-<li>`mainland`: Chinese mainland;</li>
-<li>`overseas`: Global (outside the Chinese mainland). </li>
+     * Get Log region. Valid values:
+<li>mainland: within the Chinese mainland;</li>
+<li>overseas: global (excluding the Chinese mainland).</li> 
+     * @return Area Log region. Valid values:
+<li>mainland: within the Chinese mainland;</li>
+<li>overseas: global (excluding the Chinese mainland).</li>
      */
     public String getArea() {
         return this.Area;
     }
 
     /**
-     * Set Log query area. Valid values:
-<li>`mainland`: Chinese mainland;</li>
-<li>`overseas`: Global (outside the Chinese mainland). </li>
-     * @param Area Log query area. Valid values:
-<li>`mainland`: Chinese mainland;</li>
-<li>`overseas`: Global (outside the Chinese mainland). </li>
+     * Set Log region. Valid values:
+<li>mainland: within the Chinese mainland;</li>
+<li>overseas: global (excluding the Chinese mainland).</li>
+     * @param Area Log region. Valid values:
+<li>mainland: within the Chinese mainland;</li>
+<li>overseas: global (excluding the Chinese mainland).</li>
      */
     public void setArea(String Area) {
         this.Area = Area;
     }
 
     /**
-     * Get Log packet name. 
-     * @return LogPacketName Log packet name.
+     * Get Name of the offline log data packet. 
+     * @return LogPacketName Name of the offline log data packet.
      */
     public String getLogPacketName() {
         return this.LogPacketName;
     }
 
     /**
-     * Set Log packet name.
-     * @param LogPacketName Log packet name.
+     * Set Name of the offline log data packet.
+     * @param LogPacketName Name of the offline log data packet.
      */
     public void setLogPacketName(String LogPacketName) {
         this.LogPacketName = LogPacketName;
     }
 
     /**
-     * Get Log download address. 
-     * @return Url Log download address.
+     * Get Offline log download URL. 
+     * @return Url Offline log download URL.
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * Set Log download address.
-     * @param Url Log download address.
+     * Set Offline log download URL.
+     * @param Url Offline log download URL.
      */
     public void setUrl(String Url) {
         this.Url = Url;
     }
 
     /**
-     * Get (Disused) Log packaging time.  
-     * @return LogTime (Disused) Log packaging time. 
+     * Get Log packaging time. This parameter has been deprecated. 
+     * @return LogTime Log packaging time. This parameter has been deprecated.
      */
     public Long getLogTime() {
         return this.LogTime;
     }
 
     /**
-     * Set (Disused) Log packaging time. 
-     * @param LogTime (Disused) Log packaging time. 
+     * Set Log packaging time. This parameter has been deprecated.
+     * @param LogTime Log packaging time. This parameter has been deprecated.
      */
     public void setLogTime(Long LogTime) {
         this.LogTime = LogTime;
     }
 
     /**
-     * Get Start time of log packaging. 
-     * @return LogStartTime Start time of log packaging.
+     * Get Start time for log packaging. 
+     * @return LogStartTime Start time for log packaging.
      */
     public String getLogStartTime() {
         return this.LogStartTime;
     }
 
     /**
-     * Set Start time of log packaging.
-     * @param LogStartTime Start time of log packaging.
+     * Set Start time for log packaging.
+     * @param LogStartTime Start time for log packaging.
      */
     public void setLogStartTime(String LogStartTime) {
         this.LogStartTime = LogStartTime;
     }
 
     /**
-     * Get End time of the log package. 
-     * @return LogEndTime End time of the log package.
+     * Get Log packaging end time. 
+     * @return LogEndTime Log packaging end time.
      */
     public String getLogEndTime() {
         return this.LogEndTime;
     }
 
     /**
-     * Set End time of the log package.
-     * @param LogEndTime End time of the log package.
+     * Set Log packaging end time.
+     * @param LogEndTime Log packaging end time.
      */
     public void setLogEndTime(String LogEndTime) {
         this.LogEndTime = LogEndTime;
     }
 
     /**
-     * Get Log size (in bytes). 
-     * @return Size Log size (in bytes).
+     * Get Log size in bytes. 
+     * @return Size Log size in bytes.
      */
     public Long getSize() {
         return this.Size;
     }
 
     /**
-     * Set Log size (in bytes).
-     * @param Size Log size (in bytes).
+     * Set Log size in bytes.
+     * @param Size Log size in bytes.
      */
     public void setSize(Long Size) {
         this.Size = Size;

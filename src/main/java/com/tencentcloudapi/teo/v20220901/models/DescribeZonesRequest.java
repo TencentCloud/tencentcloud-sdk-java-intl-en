@@ -24,155 +24,155 @@ import java.util.HashMap;
 public class DescribeZonesRequest extends AbstractModel {
 
     /**
-    * The page offset. Default value: 0.
+    * The offset of paginated query. Default value: 0.
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * Limit on paginated queries. Default value: 20. Maximum value: 100.
+    * Paginated query limit. Default value: 20, maximum value: 100.
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * Filter criteria. the maximum number of Filters.Values is 20. if this parameter is left empty, it returns all authorized site information under the current appid. the detailed filter criteria are as follows: <li>zone-name: filter by site name.</li><li>zone-type: filter by website type. options:<br>??full: NS access type;<br>??partial: CNAME-based;<br>??partialComposite: no domain access;<br>??dnsPodAccess: DNSPod managed access;<br>??pages: pages access type;<br>??ai: edge reasoning access type.</li><li>zone-id: filter by site id in the format like zone-2noz78a8ev6k.</li><li>status: filter by site status. options:<br>??active: NS switchover completed;<br>??pending: NS to be switched;<br>??deleted: has been deleted.</li><li>tag-key: filter according to the tag key.</li><li>tag-value: filter by tag value.</li><li>alias-zone-name: filter by identical site identifier.</li>fuzzy query supports filtering fields named zone-name or alias-zone-name.
+    * Filter criteria. The maximum number of Filters.Values is 20. If this parameter is left empty, all site information authorized under the current appid will be returned. The detailed filter criteria are as follows: <li>zone-name: Filter by site name.</li><li>zone-type: Filter by site type. Options:<br>        full: NS access type<br>        partial: CNAME access type<br>        partialComposite: domainless access<br>        dnsPodAccess: DNSPod managed access<br>        pages: Pages access type<br>        ai: edge reasoning access type.</li><li>zone-id: Filter by site ID in the format like zone-2noz78a8ev6k.</li><li>status: Filter by site status. Options:<br>        active: NS switched<br>        pending: NS to be switched<br>        deleted: deleted.</li><li>tag-key: Filter by tag key.</li><li>tag-value: Filter by tag value.</li><li>alias-zone-name: Filter by identical site identifier.</li>Fuzzy query supports filtering fields named zone-name or alias-zone-name.
     */
     @SerializedName("Filters")
     @Expose
     private AdvancedFilter [] Filters;
 
     /**
-    * Sort the returned results according to this field. Values include:
-<li>`type`: Connection mode</li>
-<li>`area`: Acceleration region</li>
-<li>`create-time`: Creation time</li>
-<li>`zone-name`: Site name</li>
-<li>`use-time`: Last used time</li>
-<li>`active-status` Effective status</li> Default value: `create-time`
+    * Sort returned results based on this field. Valid values:
+<li> type: access type;</li>
+<li> area: acceleration region;</li>
+<li> create-time: creation time;</li>
+<li> zone-name: site name;</li>
+<li> use-time: last used time;</li>
+<li> active-status: effective status.</li>If left empty, the returned results are sorted by create-time by default.
     */
     @SerializedName("Order")
     @Expose
     private String Order;
 
     /**
-    * Sort direction. If the field value is a number, sort by the numeric value. If the field value is text, sort by the ascill code. Values include:
-<li>`asc`: From the smallest to largest</li>
-<li>`desc`: From the largest to smallest.</li>Default value: `desc`
+    * Sorting order. If the field value is a number, sort by number size. If the field value is text, sort by ASCII code size. Valid values:
+<li> asc: sort in ascending order;</li>
+<li> desc: in descending order.</li>Use default value desc if not specified.
     */
     @SerializedName("Direction")
     @Expose
     private String Direction;
 
     /**
-     * Get The page offset. Default value: 0. 
-     * @return Offset The page offset. Default value: 0.
+     * Get The offset of paginated query. Default value: 0. 
+     * @return Offset The offset of paginated query. Default value: 0.
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set The page offset. Default value: 0.
-     * @param Offset The page offset. Default value: 0.
+     * Set The offset of paginated query. Default value: 0.
+     * @param Offset The offset of paginated query. Default value: 0.
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get Limit on paginated queries. Default value: 20. Maximum value: 100. 
-     * @return Limit Limit on paginated queries. Default value: 20. Maximum value: 100.
+     * Get Paginated query limit. Default value: 20, maximum value: 100. 
+     * @return Limit Paginated query limit. Default value: 20, maximum value: 100.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Limit on paginated queries. Default value: 20. Maximum value: 100.
-     * @param Limit Limit on paginated queries. Default value: 20. Maximum value: 100.
+     * Set Paginated query limit. Default value: 20, maximum value: 100.
+     * @param Limit Paginated query limit. Default value: 20, maximum value: 100.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get Filter criteria. the maximum number of Filters.Values is 20. if this parameter is left empty, it returns all authorized site information under the current appid. the detailed filter criteria are as follows: <li>zone-name: filter by site name.</li><li>zone-type: filter by website type. options:<br>??full: NS access type;<br>??partial: CNAME-based;<br>??partialComposite: no domain access;<br>??dnsPodAccess: DNSPod managed access;<br>??pages: pages access type;<br>??ai: edge reasoning access type.</li><li>zone-id: filter by site id in the format like zone-2noz78a8ev6k.</li><li>status: filter by site status. options:<br>??active: NS switchover completed;<br>??pending: NS to be switched;<br>??deleted: has been deleted.</li><li>tag-key: filter according to the tag key.</li><li>tag-value: filter by tag value.</li><li>alias-zone-name: filter by identical site identifier.</li>fuzzy query supports filtering fields named zone-name or alias-zone-name. 
-     * @return Filters Filter criteria. the maximum number of Filters.Values is 20. if this parameter is left empty, it returns all authorized site information under the current appid. the detailed filter criteria are as follows: <li>zone-name: filter by site name.</li><li>zone-type: filter by website type. options:<br>??full: NS access type;<br>??partial: CNAME-based;<br>??partialComposite: no domain access;<br>??dnsPodAccess: DNSPod managed access;<br>??pages: pages access type;<br>??ai: edge reasoning access type.</li><li>zone-id: filter by site id in the format like zone-2noz78a8ev6k.</li><li>status: filter by site status. options:<br>??active: NS switchover completed;<br>??pending: NS to be switched;<br>??deleted: has been deleted.</li><li>tag-key: filter according to the tag key.</li><li>tag-value: filter by tag value.</li><li>alias-zone-name: filter by identical site identifier.</li>fuzzy query supports filtering fields named zone-name or alias-zone-name.
+     * Get Filter criteria. The maximum number of Filters.Values is 20. If this parameter is left empty, all site information authorized under the current appid will be returned. The detailed filter criteria are as follows: <li>zone-name: Filter by site name.</li><li>zone-type: Filter by site type. Options:<br>        full: NS access type<br>        partial: CNAME access type<br>        partialComposite: domainless access<br>        dnsPodAccess: DNSPod managed access<br>        pages: Pages access type<br>        ai: edge reasoning access type.</li><li>zone-id: Filter by site ID in the format like zone-2noz78a8ev6k.</li><li>status: Filter by site status. Options:<br>        active: NS switched<br>        pending: NS to be switched<br>        deleted: deleted.</li><li>tag-key: Filter by tag key.</li><li>tag-value: Filter by tag value.</li><li>alias-zone-name: Filter by identical site identifier.</li>Fuzzy query supports filtering fields named zone-name or alias-zone-name. 
+     * @return Filters Filter criteria. The maximum number of Filters.Values is 20. If this parameter is left empty, all site information authorized under the current appid will be returned. The detailed filter criteria are as follows: <li>zone-name: Filter by site name.</li><li>zone-type: Filter by site type. Options:<br>        full: NS access type<br>        partial: CNAME access type<br>        partialComposite: domainless access<br>        dnsPodAccess: DNSPod managed access<br>        pages: Pages access type<br>        ai: edge reasoning access type.</li><li>zone-id: Filter by site ID in the format like zone-2noz78a8ev6k.</li><li>status: Filter by site status. Options:<br>        active: NS switched<br>        pending: NS to be switched<br>        deleted: deleted.</li><li>tag-key: Filter by tag key.</li><li>tag-value: Filter by tag value.</li><li>alias-zone-name: Filter by identical site identifier.</li>Fuzzy query supports filtering fields named zone-name or alias-zone-name.
      */
     public AdvancedFilter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set Filter criteria. the maximum number of Filters.Values is 20. if this parameter is left empty, it returns all authorized site information under the current appid. the detailed filter criteria are as follows: <li>zone-name: filter by site name.</li><li>zone-type: filter by website type. options:<br>??full: NS access type;<br>??partial: CNAME-based;<br>??partialComposite: no domain access;<br>??dnsPodAccess: DNSPod managed access;<br>??pages: pages access type;<br>??ai: edge reasoning access type.</li><li>zone-id: filter by site id in the format like zone-2noz78a8ev6k.</li><li>status: filter by site status. options:<br>??active: NS switchover completed;<br>??pending: NS to be switched;<br>??deleted: has been deleted.</li><li>tag-key: filter according to the tag key.</li><li>tag-value: filter by tag value.</li><li>alias-zone-name: filter by identical site identifier.</li>fuzzy query supports filtering fields named zone-name or alias-zone-name.
-     * @param Filters Filter criteria. the maximum number of Filters.Values is 20. if this parameter is left empty, it returns all authorized site information under the current appid. the detailed filter criteria are as follows: <li>zone-name: filter by site name.</li><li>zone-type: filter by website type. options:<br>??full: NS access type;<br>??partial: CNAME-based;<br>??partialComposite: no domain access;<br>??dnsPodAccess: DNSPod managed access;<br>??pages: pages access type;<br>??ai: edge reasoning access type.</li><li>zone-id: filter by site id in the format like zone-2noz78a8ev6k.</li><li>status: filter by site status. options:<br>??active: NS switchover completed;<br>??pending: NS to be switched;<br>??deleted: has been deleted.</li><li>tag-key: filter according to the tag key.</li><li>tag-value: filter by tag value.</li><li>alias-zone-name: filter by identical site identifier.</li>fuzzy query supports filtering fields named zone-name or alias-zone-name.
+     * Set Filter criteria. The maximum number of Filters.Values is 20. If this parameter is left empty, all site information authorized under the current appid will be returned. The detailed filter criteria are as follows: <li>zone-name: Filter by site name.</li><li>zone-type: Filter by site type. Options:<br>        full: NS access type<br>        partial: CNAME access type<br>        partialComposite: domainless access<br>        dnsPodAccess: DNSPod managed access<br>        pages: Pages access type<br>        ai: edge reasoning access type.</li><li>zone-id: Filter by site ID in the format like zone-2noz78a8ev6k.</li><li>status: Filter by site status. Options:<br>        active: NS switched<br>        pending: NS to be switched<br>        deleted: deleted.</li><li>tag-key: Filter by tag key.</li><li>tag-value: Filter by tag value.</li><li>alias-zone-name: Filter by identical site identifier.</li>Fuzzy query supports filtering fields named zone-name or alias-zone-name.
+     * @param Filters Filter criteria. The maximum number of Filters.Values is 20. If this parameter is left empty, all site information authorized under the current appid will be returned. The detailed filter criteria are as follows: <li>zone-name: Filter by site name.</li><li>zone-type: Filter by site type. Options:<br>        full: NS access type<br>        partial: CNAME access type<br>        partialComposite: domainless access<br>        dnsPodAccess: DNSPod managed access<br>        pages: Pages access type<br>        ai: edge reasoning access type.</li><li>zone-id: Filter by site ID in the format like zone-2noz78a8ev6k.</li><li>status: Filter by site status. Options:<br>        active: NS switched<br>        pending: NS to be switched<br>        deleted: deleted.</li><li>tag-key: Filter by tag key.</li><li>tag-value: Filter by tag value.</li><li>alias-zone-name: Filter by identical site identifier.</li>Fuzzy query supports filtering fields named zone-name or alias-zone-name.
      */
     public void setFilters(AdvancedFilter [] Filters) {
         this.Filters = Filters;
     }
 
     /**
-     * Get Sort the returned results according to this field. Values include:
-<li>`type`: Connection mode</li>
-<li>`area`: Acceleration region</li>
-<li>`create-time`: Creation time</li>
-<li>`zone-name`: Site name</li>
-<li>`use-time`: Last used time</li>
-<li>`active-status` Effective status</li> Default value: `create-time` 
-     * @return Order Sort the returned results according to this field. Values include:
-<li>`type`: Connection mode</li>
-<li>`area`: Acceleration region</li>
-<li>`create-time`: Creation time</li>
-<li>`zone-name`: Site name</li>
-<li>`use-time`: Last used time</li>
-<li>`active-status` Effective status</li> Default value: `create-time`
+     * Get Sort returned results based on this field. Valid values:
+<li> type: access type;</li>
+<li> area: acceleration region;</li>
+<li> create-time: creation time;</li>
+<li> zone-name: site name;</li>
+<li> use-time: last used time;</li>
+<li> active-status: effective status.</li>If left empty, the returned results are sorted by create-time by default. 
+     * @return Order Sort returned results based on this field. Valid values:
+<li> type: access type;</li>
+<li> area: acceleration region;</li>
+<li> create-time: creation time;</li>
+<li> zone-name: site name;</li>
+<li> use-time: last used time;</li>
+<li> active-status: effective status.</li>If left empty, the returned results are sorted by create-time by default.
      */
     public String getOrder() {
         return this.Order;
     }
 
     /**
-     * Set Sort the returned results according to this field. Values include:
-<li>`type`: Connection mode</li>
-<li>`area`: Acceleration region</li>
-<li>`create-time`: Creation time</li>
-<li>`zone-name`: Site name</li>
-<li>`use-time`: Last used time</li>
-<li>`active-status` Effective status</li> Default value: `create-time`
-     * @param Order Sort the returned results according to this field. Values include:
-<li>`type`: Connection mode</li>
-<li>`area`: Acceleration region</li>
-<li>`create-time`: Creation time</li>
-<li>`zone-name`: Site name</li>
-<li>`use-time`: Last used time</li>
-<li>`active-status` Effective status</li> Default value: `create-time`
+     * Set Sort returned results based on this field. Valid values:
+<li> type: access type;</li>
+<li> area: acceleration region;</li>
+<li> create-time: creation time;</li>
+<li> zone-name: site name;</li>
+<li> use-time: last used time;</li>
+<li> active-status: effective status.</li>If left empty, the returned results are sorted by create-time by default.
+     * @param Order Sort returned results based on this field. Valid values:
+<li> type: access type;</li>
+<li> area: acceleration region;</li>
+<li> create-time: creation time;</li>
+<li> zone-name: site name;</li>
+<li> use-time: last used time;</li>
+<li> active-status: effective status.</li>If left empty, the returned results are sorted by create-time by default.
      */
     public void setOrder(String Order) {
         this.Order = Order;
     }
 
     /**
-     * Get Sort direction. If the field value is a number, sort by the numeric value. If the field value is text, sort by the ascill code. Values include:
-<li>`asc`: From the smallest to largest</li>
-<li>`desc`: From the largest to smallest.</li>Default value: `desc` 
-     * @return Direction Sort direction. If the field value is a number, sort by the numeric value. If the field value is text, sort by the ascill code. Values include:
-<li>`asc`: From the smallest to largest</li>
-<li>`desc`: From the largest to smallest.</li>Default value: `desc`
+     * Get Sorting order. If the field value is a number, sort by number size. If the field value is text, sort by ASCII code size. Valid values:
+<li> asc: sort in ascending order;</li>
+<li> desc: in descending order.</li>Use default value desc if not specified. 
+     * @return Direction Sorting order. If the field value is a number, sort by number size. If the field value is text, sort by ASCII code size. Valid values:
+<li> asc: sort in ascending order;</li>
+<li> desc: in descending order.</li>Use default value desc if not specified.
      */
     public String getDirection() {
         return this.Direction;
     }
 
     /**
-     * Set Sort direction. If the field value is a number, sort by the numeric value. If the field value is text, sort by the ascill code. Values include:
-<li>`asc`: From the smallest to largest</li>
-<li>`desc`: From the largest to smallest.</li>Default value: `desc`
-     * @param Direction Sort direction. If the field value is a number, sort by the numeric value. If the field value is text, sort by the ascill code. Values include:
-<li>`asc`: From the smallest to largest</li>
-<li>`desc`: From the largest to smallest.</li>Default value: `desc`
+     * Set Sorting order. If the field value is a number, sort by number size. If the field value is text, sort by ASCII code size. Valid values:
+<li> asc: sort in ascending order;</li>
+<li> desc: in descending order.</li>Use default value desc if not specified.
+     * @param Direction Sorting order. If the field value is a number, sort by number size. If the field value is text, sort by ASCII code size. Valid values:
+<li> asc: sort in ascending order;</li>
+<li> desc: in descending order.</li>Use default value desc if not specified.
      */
     public void setDirection(String Direction) {
         this.Direction = Direction;

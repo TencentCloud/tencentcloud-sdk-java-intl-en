@@ -24,85 +24,82 @@ import java.util.HashMap;
 public class Cache extends AbstractModel {
 
     /**
-    * Whether to enable cache configuration. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+    * Cache configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * Specifies the cache expiration time settings.
-Unit: seconds. the maximum settable value is 365 days.
+    * Cache expiration time settings.
+Unit: seconds. Maximum settable to 365 days.
     */
     @SerializedName("CacheTime")
     @Expose
     private Long CacheTime;
 
     /**
-    * Whether to enable force cache. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable </li>
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Whether to enable forced caching. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
     */
     @SerializedName("IgnoreCacheControl")
     @Expose
     private String IgnoreCacheControl;
 
     /**
-     * Get Whether to enable cache configuration. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li> 
-     * @return Switch Whether to enable cache configuration. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+     * Get Cache configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li> 
+     * @return Switch Cache configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set Whether to enable cache configuration. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-     * @param Switch Whether to enable cache configuration. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+     * Set Cache configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+     * @param Switch Cache configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get Specifies the cache expiration time settings.
-Unit: seconds. the maximum settable value is 365 days. 
-     * @return CacheTime Specifies the cache expiration time settings.
-Unit: seconds. the maximum settable value is 365 days.
+     * Get Cache expiration time settings.
+Unit: seconds. Maximum settable to 365 days. 
+     * @return CacheTime Cache expiration time settings.
+Unit: seconds. Maximum settable to 365 days.
      */
     public Long getCacheTime() {
         return this.CacheTime;
     }
 
     /**
-     * Set Specifies the cache expiration time settings.
-Unit: seconds. the maximum settable value is 365 days.
-     * @param CacheTime Specifies the cache expiration time settings.
-Unit: seconds. the maximum settable value is 365 days.
+     * Set Cache expiration time settings.
+Unit: seconds. Maximum settable to 365 days.
+     * @param CacheTime Cache expiration time settings.
+Unit: seconds. Maximum settable to 365 days.
      */
     public void setCacheTime(Long CacheTime) {
         this.CacheTime = CacheTime;
     }
 
     /**
-     * Get Whether to enable force cache. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable </li>
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return IgnoreCacheControl Whether to enable force cache. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable </li>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Whether to enable forced caching. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li> 
+     * @return IgnoreCacheControl Whether to enable forced caching. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
      * @deprecated
      */
     @Deprecated
@@ -111,14 +108,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Whether to enable force cache. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable </li>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param IgnoreCacheControl Whether to enable force cache. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable </li>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Whether to enable forced caching. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+     * @param IgnoreCacheControl Whether to enable forced caching. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
      * @deprecated
      */
     @Deprecated

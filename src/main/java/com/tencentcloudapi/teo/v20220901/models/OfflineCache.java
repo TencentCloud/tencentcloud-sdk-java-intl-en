@@ -25,8 +25,8 @@ public class OfflineCache extends AbstractModel {
 
     /**
     * Whether offline cache is enabled. Valid values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
     */
     @SerializedName("Switch")
     @Expose
@@ -34,11 +34,11 @@ public class OfflineCache extends AbstractModel {
 
     /**
      * Get Whether offline cache is enabled. Valid values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li> 
+<li>`on`: Enable;</li>
+<li>off: Disable.</li> 
      * @return Switch Whether offline cache is enabled. Valid values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
      */
     public String getSwitch() {
         return this.Switch;
@@ -46,11 +46,11 @@ public class OfflineCache extends AbstractModel {
 
     /**
      * Set Whether offline cache is enabled. Valid values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
      * @param Switch Whether offline cache is enabled. Valid values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;

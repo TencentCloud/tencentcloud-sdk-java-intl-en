@@ -31,7 +31,7 @@ public class DescribePlansResponse extends AbstractModel {
     private Long TotalCount;
 
     /**
-    * Package information list.
+    * List of package information.
     */
     @SerializedName("Plans")
     @Expose
@@ -61,16 +61,16 @@ public class DescribePlansResponse extends AbstractModel {
     }
 
     /**
-     * Get Package information list. 
-     * @return Plans Package information list.
+     * Get List of package information. 
+     * @return Plans List of package information.
      */
     public Plan [] getPlans() {
         return this.Plans;
     }
 
     /**
-     * Set Package information list.
-     * @param Plans Package information list.
+     * Set List of package information.
+     * @param Plans List of package information.
      */
     public void setPlans(Plan [] Plans) {
         this.Plans = Plans;

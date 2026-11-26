@@ -24,104 +24,115 @@ import java.util.HashMap;
 public class ModifyOriginACLRequest extends AbstractModel {
 
     /**
-    * Specifies the site ID.
+    * <p>Site ID.</p>
     */
     @SerializedName("ZoneId")
     @Expose
     private String ZoneId;
 
     /**
-    * Specifies the instance that needs to configurate origin ACLs.
+    * <p>Origin protection mode for layer-7 accelerated domains. Default value: specific.<li>all: <strong>Automatic protection mode</strong>. All layer-7 accelerated domains in the site will be automatically added to the origin protection list, including newly added layer-7 accelerated domains;</li><li>specific: <strong>Manual protection mode</strong>. You need to manually specify the layer-7 accelerated domains to be added to origin protection (specified by the L7Hosts parameter). Resources not specified will not be added to the origin protection list. Subsequent protection resource adjustments can be made through the ModifyOriginACL API.</li>Note: When the value is all, leave L7Hosts empty; when the number of layer-7 accelerated domains under the site exceeds 200, enable protection in specific mode first, enable the remaining resources through the ModifyOriginACL API, and then switch to all through the ModifyOriginACL API.</p>
+    */
+    @SerializedName("L7EnableMode")
+    @Expose
+    private String L7EnableMode;
+
+    /**
+    * <p>Origin protection mode for layer-4 proxy instances. Default value: specific.<li>all: <strong>Automatic protection mode</strong>. All layer-4 proxy instances in the site will be automatically added to the origin protection list, including newly added layer-4 proxy instance resources;</li><li>specific: <strong>Manual protection mode</strong>. You need to manually specify the layer-4 proxy instances to be added to origin protection (specified by the L4ProxyIds parameter). Resources not specified will not be added to the origin protection list. Subsequent protection resource adjustments can be made through the ModifyOriginACL API.</li>Note: When the value is all, leave L4ProxyIds empty; when the number of layer-4 proxy instances under the site exceeds 100, enable protection in specific mode first, enable the remaining resources through the ModifyOriginACL API, and then switch to all through the ModifyOriginACL API.</p>
+    */
+    @SerializedName("L4EnableMode")
+    @Expose
+    private String L4EnableMode;
+
+    /**
+    * <p>Instances for which origin-pull from specific origin IP ranges needs to be enabled or disabled.<br>Note: This parameter is only applicable to resource adjustment in <strong>Manual protection mode</strong>; When the origin protection mode of the corresponding level is all, the resource list of this type is automatically maintained by the system. Do not include resources of this type in this parameter. For manual adjustment, switch the corresponding level to specific through L7EnableMode/L4EnableMode first.</p>
     */
     @SerializedName("OriginACLEntities")
     @Expose
     private OriginACLEntity [] OriginACLEntities;
 
     /**
-    * The origin protection back-to-origin ACL control domain remains unchanged by default if left blank. The domain information can be obtained through the DescribeAvailableOriginACLFamily API query.
-Valid values are as follows:
-<li>gaz: Standard global availability zone control domain;</li>
-<li>mlc: Standard Chinese mainland availability zone control domain;</li>
-<li>emc: Standard global (exclude Chinese mainland) availability zone control domain;</li>
-<li>plat-gaz: Simplify global availability zone control domain;</li>
-<li>plat-mlc: Simplified Chinese mainland availability zone control domain;</li>
-<li>plat-emc: Simplify the global (excluding Chinese mainland) availability zone control domain;</li>
+    * <p>Origin protection origin-pull ACL control domain. If not filled in, it remains unchanged by default; Control domain information can be obtained through the DescribeAvailableOriginACLFamily API.<br>Specific values are described as follows:</p><li>gaz: Standard global AZ control domain;</li><li>mlc: Standard Chinese mainland AZ control domain;</li><li>emc: Standard global (excluding Chinese mainland) AZ control domain;</li><li>plat-gaz: Simplified global AZ control domain;</li><li>plat-mlc: Simplified Chinese mainland AZ control domain;</li><li>plat-emc: Simplified global (excluding Chinese mainland) AZ control domain;</li>
     */
     @SerializedName("OriginACLFamily")
     @Expose
     private String OriginACLFamily;
 
     /**
-     * Get Specifies the site ID. 
-     * @return ZoneId Specifies the site ID.
+     * Get <p>Site ID.</p> 
+     * @return ZoneId <p>Site ID.</p>
      */
     public String getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set Specifies the site ID.
-     * @param ZoneId Specifies the site ID.
+     * Set <p>Site ID.</p>
+     * @param ZoneId <p>Site ID.</p>
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get Specifies the instance that needs to configurate origin ACLs. 
-     * @return OriginACLEntities Specifies the instance that needs to configurate origin ACLs.
+     * Get <p>Origin protection mode for layer-7 accelerated domains. Default value: specific.<li>all: <strong>Automatic protection mode</strong>. All layer-7 accelerated domains in the site will be automatically added to the origin protection list, including newly added layer-7 accelerated domains;</li><li>specific: <strong>Manual protection mode</strong>. You need to manually specify the layer-7 accelerated domains to be added to origin protection (specified by the L7Hosts parameter). Resources not specified will not be added to the origin protection list. Subsequent protection resource adjustments can be made through the ModifyOriginACL API.</li>Note: When the value is all, leave L7Hosts empty; when the number of layer-7 accelerated domains under the site exceeds 200, enable protection in specific mode first, enable the remaining resources through the ModifyOriginACL API, and then switch to all through the ModifyOriginACL API.</p> 
+     * @return L7EnableMode <p>Origin protection mode for layer-7 accelerated domains. Default value: specific.<li>all: <strong>Automatic protection mode</strong>. All layer-7 accelerated domains in the site will be automatically added to the origin protection list, including newly added layer-7 accelerated domains;</li><li>specific: <strong>Manual protection mode</strong>. You need to manually specify the layer-7 accelerated domains to be added to origin protection (specified by the L7Hosts parameter). Resources not specified will not be added to the origin protection list. Subsequent protection resource adjustments can be made through the ModifyOriginACL API.</li>Note: When the value is all, leave L7Hosts empty; when the number of layer-7 accelerated domains under the site exceeds 200, enable protection in specific mode first, enable the remaining resources through the ModifyOriginACL API, and then switch to all through the ModifyOriginACL API.</p>
+     */
+    public String getL7EnableMode() {
+        return this.L7EnableMode;
+    }
+
+    /**
+     * Set <p>Origin protection mode for layer-7 accelerated domains. Default value: specific.<li>all: <strong>Automatic protection mode</strong>. All layer-7 accelerated domains in the site will be automatically added to the origin protection list, including newly added layer-7 accelerated domains;</li><li>specific: <strong>Manual protection mode</strong>. You need to manually specify the layer-7 accelerated domains to be added to origin protection (specified by the L7Hosts parameter). Resources not specified will not be added to the origin protection list. Subsequent protection resource adjustments can be made through the ModifyOriginACL API.</li>Note: When the value is all, leave L7Hosts empty; when the number of layer-7 accelerated domains under the site exceeds 200, enable protection in specific mode first, enable the remaining resources through the ModifyOriginACL API, and then switch to all through the ModifyOriginACL API.</p>
+     * @param L7EnableMode <p>Origin protection mode for layer-7 accelerated domains. Default value: specific.<li>all: <strong>Automatic protection mode</strong>. All layer-7 accelerated domains in the site will be automatically added to the origin protection list, including newly added layer-7 accelerated domains;</li><li>specific: <strong>Manual protection mode</strong>. You need to manually specify the layer-7 accelerated domains to be added to origin protection (specified by the L7Hosts parameter). Resources not specified will not be added to the origin protection list. Subsequent protection resource adjustments can be made through the ModifyOriginACL API.</li>Note: When the value is all, leave L7Hosts empty; when the number of layer-7 accelerated domains under the site exceeds 200, enable protection in specific mode first, enable the remaining resources through the ModifyOriginACL API, and then switch to all through the ModifyOriginACL API.</p>
+     */
+    public void setL7EnableMode(String L7EnableMode) {
+        this.L7EnableMode = L7EnableMode;
+    }
+
+    /**
+     * Get <p>Origin protection mode for layer-4 proxy instances. Default value: specific.<li>all: <strong>Automatic protection mode</strong>. All layer-4 proxy instances in the site will be automatically added to the origin protection list, including newly added layer-4 proxy instance resources;</li><li>specific: <strong>Manual protection mode</strong>. You need to manually specify the layer-4 proxy instances to be added to origin protection (specified by the L4ProxyIds parameter). Resources not specified will not be added to the origin protection list. Subsequent protection resource adjustments can be made through the ModifyOriginACL API.</li>Note: When the value is all, leave L4ProxyIds empty; when the number of layer-4 proxy instances under the site exceeds 100, enable protection in specific mode first, enable the remaining resources through the ModifyOriginACL API, and then switch to all through the ModifyOriginACL API.</p> 
+     * @return L4EnableMode <p>Origin protection mode for layer-4 proxy instances. Default value: specific.<li>all: <strong>Automatic protection mode</strong>. All layer-4 proxy instances in the site will be automatically added to the origin protection list, including newly added layer-4 proxy instance resources;</li><li>specific: <strong>Manual protection mode</strong>. You need to manually specify the layer-4 proxy instances to be added to origin protection (specified by the L4ProxyIds parameter). Resources not specified will not be added to the origin protection list. Subsequent protection resource adjustments can be made through the ModifyOriginACL API.</li>Note: When the value is all, leave L4ProxyIds empty; when the number of layer-4 proxy instances under the site exceeds 100, enable protection in specific mode first, enable the remaining resources through the ModifyOriginACL API, and then switch to all through the ModifyOriginACL API.</p>
+     */
+    public String getL4EnableMode() {
+        return this.L4EnableMode;
+    }
+
+    /**
+     * Set <p>Origin protection mode for layer-4 proxy instances. Default value: specific.<li>all: <strong>Automatic protection mode</strong>. All layer-4 proxy instances in the site will be automatically added to the origin protection list, including newly added layer-4 proxy instance resources;</li><li>specific: <strong>Manual protection mode</strong>. You need to manually specify the layer-4 proxy instances to be added to origin protection (specified by the L4ProxyIds parameter). Resources not specified will not be added to the origin protection list. Subsequent protection resource adjustments can be made through the ModifyOriginACL API.</li>Note: When the value is all, leave L4ProxyIds empty; when the number of layer-4 proxy instances under the site exceeds 100, enable protection in specific mode first, enable the remaining resources through the ModifyOriginACL API, and then switch to all through the ModifyOriginACL API.</p>
+     * @param L4EnableMode <p>Origin protection mode for layer-4 proxy instances. Default value: specific.<li>all: <strong>Automatic protection mode</strong>. All layer-4 proxy instances in the site will be automatically added to the origin protection list, including newly added layer-4 proxy instance resources;</li><li>specific: <strong>Manual protection mode</strong>. You need to manually specify the layer-4 proxy instances to be added to origin protection (specified by the L4ProxyIds parameter). Resources not specified will not be added to the origin protection list. Subsequent protection resource adjustments can be made through the ModifyOriginACL API.</li>Note: When the value is all, leave L4ProxyIds empty; when the number of layer-4 proxy instances under the site exceeds 100, enable protection in specific mode first, enable the remaining resources through the ModifyOriginACL API, and then switch to all through the ModifyOriginACL API.</p>
+     */
+    public void setL4EnableMode(String L4EnableMode) {
+        this.L4EnableMode = L4EnableMode;
+    }
+
+    /**
+     * Get <p>Instances for which origin-pull from specific origin IP ranges needs to be enabled or disabled.<br>Note: This parameter is only applicable to resource adjustment in <strong>Manual protection mode</strong>; When the origin protection mode of the corresponding level is all, the resource list of this type is automatically maintained by the system. Do not include resources of this type in this parameter. For manual adjustment, switch the corresponding level to specific through L7EnableMode/L4EnableMode first.</p> 
+     * @return OriginACLEntities <p>Instances for which origin-pull from specific origin IP ranges needs to be enabled or disabled.<br>Note: This parameter is only applicable to resource adjustment in <strong>Manual protection mode</strong>; When the origin protection mode of the corresponding level is all, the resource list of this type is automatically maintained by the system. Do not include resources of this type in this parameter. For manual adjustment, switch the corresponding level to specific through L7EnableMode/L4EnableMode first.</p>
      */
     public OriginACLEntity [] getOriginACLEntities() {
         return this.OriginACLEntities;
     }
 
     /**
-     * Set Specifies the instance that needs to configurate origin ACLs.
-     * @param OriginACLEntities Specifies the instance that needs to configurate origin ACLs.
+     * Set <p>Instances for which origin-pull from specific origin IP ranges needs to be enabled or disabled.<br>Note: This parameter is only applicable to resource adjustment in <strong>Manual protection mode</strong>; When the origin protection mode of the corresponding level is all, the resource list of this type is automatically maintained by the system. Do not include resources of this type in this parameter. For manual adjustment, switch the corresponding level to specific through L7EnableMode/L4EnableMode first.</p>
+     * @param OriginACLEntities <p>Instances for which origin-pull from specific origin IP ranges needs to be enabled or disabled.<br>Note: This parameter is only applicable to resource adjustment in <strong>Manual protection mode</strong>; When the origin protection mode of the corresponding level is all, the resource list of this type is automatically maintained by the system. Do not include resources of this type in this parameter. For manual adjustment, switch the corresponding level to specific through L7EnableMode/L4EnableMode first.</p>
      */
     public void setOriginACLEntities(OriginACLEntity [] OriginACLEntities) {
         this.OriginACLEntities = OriginACLEntities;
     }
 
     /**
-     * Get The origin protection back-to-origin ACL control domain remains unchanged by default if left blank. The domain information can be obtained through the DescribeAvailableOriginACLFamily API query.
-Valid values are as follows:
-<li>gaz: Standard global availability zone control domain;</li>
-<li>mlc: Standard Chinese mainland availability zone control domain;</li>
-<li>emc: Standard global (exclude Chinese mainland) availability zone control domain;</li>
-<li>plat-gaz: Simplify global availability zone control domain;</li>
-<li>plat-mlc: Simplified Chinese mainland availability zone control domain;</li>
-<li>plat-emc: Simplify the global (excluding Chinese mainland) availability zone control domain;</li> 
-     * @return OriginACLFamily The origin protection back-to-origin ACL control domain remains unchanged by default if left blank. The domain information can be obtained through the DescribeAvailableOriginACLFamily API query.
-Valid values are as follows:
-<li>gaz: Standard global availability zone control domain;</li>
-<li>mlc: Standard Chinese mainland availability zone control domain;</li>
-<li>emc: Standard global (exclude Chinese mainland) availability zone control domain;</li>
-<li>plat-gaz: Simplify global availability zone control domain;</li>
-<li>plat-mlc: Simplified Chinese mainland availability zone control domain;</li>
-<li>plat-emc: Simplify the global (excluding Chinese mainland) availability zone control domain;</li>
+     * Get <p>Origin protection origin-pull ACL control domain. If not filled in, it remains unchanged by default; Control domain information can be obtained through the DescribeAvailableOriginACLFamily API.<br>Specific values are described as follows:</p><li>gaz: Standard global AZ control domain;</li><li>mlc: Standard Chinese mainland AZ control domain;</li><li>emc: Standard global (excluding Chinese mainland) AZ control domain;</li><li>plat-gaz: Simplified global AZ control domain;</li><li>plat-mlc: Simplified Chinese mainland AZ control domain;</li><li>plat-emc: Simplified global (excluding Chinese mainland) AZ control domain;</li> 
+     * @return OriginACLFamily <p>Origin protection origin-pull ACL control domain. If not filled in, it remains unchanged by default; Control domain information can be obtained through the DescribeAvailableOriginACLFamily API.<br>Specific values are described as follows:</p><li>gaz: Standard global AZ control domain;</li><li>mlc: Standard Chinese mainland AZ control domain;</li><li>emc: Standard global (excluding Chinese mainland) AZ control domain;</li><li>plat-gaz: Simplified global AZ control domain;</li><li>plat-mlc: Simplified Chinese mainland AZ control domain;</li><li>plat-emc: Simplified global (excluding Chinese mainland) AZ control domain;</li>
      */
     public String getOriginACLFamily() {
         return this.OriginACLFamily;
     }
 
     /**
-     * Set The origin protection back-to-origin ACL control domain remains unchanged by default if left blank. The domain information can be obtained through the DescribeAvailableOriginACLFamily API query.
-Valid values are as follows:
-<li>gaz: Standard global availability zone control domain;</li>
-<li>mlc: Standard Chinese mainland availability zone control domain;</li>
-<li>emc: Standard global (exclude Chinese mainland) availability zone control domain;</li>
-<li>plat-gaz: Simplify global availability zone control domain;</li>
-<li>plat-mlc: Simplified Chinese mainland availability zone control domain;</li>
-<li>plat-emc: Simplify the global (excluding Chinese mainland) availability zone control domain;</li>
-     * @param OriginACLFamily The origin protection back-to-origin ACL control domain remains unchanged by default if left blank. The domain information can be obtained through the DescribeAvailableOriginACLFamily API query.
-Valid values are as follows:
-<li>gaz: Standard global availability zone control domain;</li>
-<li>mlc: Standard Chinese mainland availability zone control domain;</li>
-<li>emc: Standard global (exclude Chinese mainland) availability zone control domain;</li>
-<li>plat-gaz: Simplify global availability zone control domain;</li>
-<li>plat-mlc: Simplified Chinese mainland availability zone control domain;</li>
-<li>plat-emc: Simplify the global (excluding Chinese mainland) availability zone control domain;</li>
+     * Set <p>Origin protection origin-pull ACL control domain. If not filled in, it remains unchanged by default; Control domain information can be obtained through the DescribeAvailableOriginACLFamily API.<br>Specific values are described as follows:</p><li>gaz: Standard global AZ control domain;</li><li>mlc: Standard Chinese mainland AZ control domain;</li><li>emc: Standard global (excluding Chinese mainland) AZ control domain;</li><li>plat-gaz: Simplified global AZ control domain;</li><li>plat-mlc: Simplified Chinese mainland AZ control domain;</li><li>plat-emc: Simplified global (excluding Chinese mainland) AZ control domain;</li>
+     * @param OriginACLFamily <p>Origin protection origin-pull ACL control domain. If not filled in, it remains unchanged by default; Control domain information can be obtained through the DescribeAvailableOriginACLFamily API.<br>Specific values are described as follows:</p><li>gaz: Standard global AZ control domain;</li><li>mlc: Standard Chinese mainland AZ control domain;</li><li>emc: Standard global (excluding Chinese mainland) AZ control domain;</li><li>plat-gaz: Simplified global AZ control domain;</li><li>plat-mlc: Simplified Chinese mainland AZ control domain;</li><li>plat-emc: Simplified global (excluding Chinese mainland) AZ control domain;</li>
      */
     public void setOriginACLFamily(String OriginACLFamily) {
         this.OriginACLFamily = OriginACLFamily;
@@ -137,6 +148,12 @@ Valid values are as follows:
     public ModifyOriginACLRequest(ModifyOriginACLRequest source) {
         if (source.ZoneId != null) {
             this.ZoneId = new String(source.ZoneId);
+        }
+        if (source.L7EnableMode != null) {
+            this.L7EnableMode = new String(source.L7EnableMode);
+        }
+        if (source.L4EnableMode != null) {
+            this.L4EnableMode = new String(source.L4EnableMode);
         }
         if (source.OriginACLEntities != null) {
             this.OriginACLEntities = new OriginACLEntity[source.OriginACLEntities.length];
@@ -155,6 +172,8 @@ Valid values are as follows:
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ZoneId", this.ZoneId);
+        this.setParamSimple(map, prefix + "L7EnableMode", this.L7EnableMode);
+        this.setParamSimple(map, prefix + "L4EnableMode", this.L4EnableMode);
         this.setParamArrayObj(map, prefix + "OriginACLEntities.", this.OriginACLEntities);
         this.setParamSimple(map, prefix + "OriginACLFamily", this.OriginACLFamily);
 

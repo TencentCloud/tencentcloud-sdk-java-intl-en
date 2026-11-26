@@ -40,11 +40,11 @@ public class DescribeOverviewL7DataRequest extends AbstractModel {
     /**
     * Queried metric. Valid values:
 <li>l7Flow_outFlux: EdgeOne response traffic;</li>
-<li>l7Flow_inFlux: EdgeOne request traffic;</li>
+<li>l7Flow_inFlux: Edgeone request traffic;</li>
 <li>l7Flow_outBandwidth: EdgeOne response bandwidth;</li>
-<li>l7Flow_inBandwidth: EdgeOne request traffic;</li>
+<li>l7Flow_inBandwidth: Edegone request bandwidth;</li>
 <li>l7Flow_hit_outFlux: cache hit traffic;</li>
-<li>l7Flow_request: number of access requests;</li>
+<li>`l7Flow_request`: Access requests;</li>
 <li>l7Flow_flux: upstream and downstream traffic of access requests;</li>
 <li>l7Flow_bandwidth: upstream and downstream bandwidths of access requests.</li>
     */
@@ -90,7 +90,7 @@ public class DescribeOverviewL7DataRequest extends AbstractModel {
 
     /**
     * Filter criteria. The detailed Key values of filter criteria are as follows:
-<li>socket:<br>   Filter by [<strong>HTTP protocol type</strong>].<br>   Valid values:<br>   HTTP: HTTP protocol; <br>   HTTPS: HTTPS protocol;<br>   QUIC: QUIC protocol.</li>
+<li>`socket`:<br>Filter by the specified <strong>HTTP protocol type</strong>.<br>Valid values:<br>`HTTP`: HTTP protocol; <br>`HTTPS`: HTTPS protocol;<br>`QUIC`: QUIC protocol.</li>
 <li>domain<br>?? Filter by [<strong>domain name</strong>].</li>
 <li>tagKey<br>?? Filter by [<strong>tag key</strong>].</li>
 <li>tagValue<br>?? Filter by [<strong>tag value</strong>].</li>
@@ -100,7 +100,7 @@ public class DescribeOverviewL7DataRequest extends AbstractModel {
     private QueryCondition [] Filters;
 
     /**
-    * Data ownership area. Valid values:
+    * Data ownership region. Valid values:
 <li>overseas: global (excluding the Chinese mainland) data;</li>
 <li>mainland: Chinese mainland data;</li>
 <li>global: global data.</li>If this parameter is not input, the default value `global` is used.
@@ -144,20 +144,20 @@ public class DescribeOverviewL7DataRequest extends AbstractModel {
     /**
      * Get Queried metric. Valid values:
 <li>l7Flow_outFlux: EdgeOne response traffic;</li>
-<li>l7Flow_inFlux: EdgeOne request traffic;</li>
+<li>l7Flow_inFlux: Edgeone request traffic;</li>
 <li>l7Flow_outBandwidth: EdgeOne response bandwidth;</li>
-<li>l7Flow_inBandwidth: EdgeOne request traffic;</li>
+<li>l7Flow_inBandwidth: Edegone request bandwidth;</li>
 <li>l7Flow_hit_outFlux: cache hit traffic;</li>
-<li>l7Flow_request: number of access requests;</li>
+<li>`l7Flow_request`: Access requests;</li>
 <li>l7Flow_flux: upstream and downstream traffic of access requests;</li>
 <li>l7Flow_bandwidth: upstream and downstream bandwidths of access requests.</li> 
      * @return MetricNames Queried metric. Valid values:
 <li>l7Flow_outFlux: EdgeOne response traffic;</li>
-<li>l7Flow_inFlux: EdgeOne request traffic;</li>
+<li>l7Flow_inFlux: Edgeone request traffic;</li>
 <li>l7Flow_outBandwidth: EdgeOne response bandwidth;</li>
-<li>l7Flow_inBandwidth: EdgeOne request traffic;</li>
+<li>l7Flow_inBandwidth: Edegone request bandwidth;</li>
 <li>l7Flow_hit_outFlux: cache hit traffic;</li>
-<li>l7Flow_request: number of access requests;</li>
+<li>`l7Flow_request`: Access requests;</li>
 <li>l7Flow_flux: upstream and downstream traffic of access requests;</li>
 <li>l7Flow_bandwidth: upstream and downstream bandwidths of access requests.</li>
      */
@@ -168,20 +168,20 @@ public class DescribeOverviewL7DataRequest extends AbstractModel {
     /**
      * Set Queried metric. Valid values:
 <li>l7Flow_outFlux: EdgeOne response traffic;</li>
-<li>l7Flow_inFlux: EdgeOne request traffic;</li>
+<li>l7Flow_inFlux: Edgeone request traffic;</li>
 <li>l7Flow_outBandwidth: EdgeOne response bandwidth;</li>
-<li>l7Flow_inBandwidth: EdgeOne request traffic;</li>
+<li>l7Flow_inBandwidth: Edegone request bandwidth;</li>
 <li>l7Flow_hit_outFlux: cache hit traffic;</li>
-<li>l7Flow_request: number of access requests;</li>
+<li>`l7Flow_request`: Access requests;</li>
 <li>l7Flow_flux: upstream and downstream traffic of access requests;</li>
 <li>l7Flow_bandwidth: upstream and downstream bandwidths of access requests.</li>
      * @param MetricNames Queried metric. Valid values:
 <li>l7Flow_outFlux: EdgeOne response traffic;</li>
-<li>l7Flow_inFlux: EdgeOne request traffic;</li>
+<li>l7Flow_inFlux: Edgeone request traffic;</li>
 <li>l7Flow_outBandwidth: EdgeOne response bandwidth;</li>
-<li>l7Flow_inBandwidth: EdgeOne request traffic;</li>
+<li>l7Flow_inBandwidth: Edegone request bandwidth;</li>
 <li>l7Flow_hit_outFlux: cache hit traffic;</li>
-<li>l7Flow_request: number of access requests;</li>
+<li>`l7Flow_request`: Access requests;</li>
 <li>l7Flow_flux: upstream and downstream traffic of access requests;</li>
 <li>l7Flow_bandwidth: upstream and downstream bandwidths of access requests.</li>
      */
@@ -287,12 +287,12 @@ public class DescribeOverviewL7DataRequest extends AbstractModel {
 
     /**
      * Get Filter criteria. The detailed Key values of filter criteria are as follows:
-<li>socket:<br>   Filter by [<strong>HTTP protocol type</strong>].<br>   Valid values:<br>   HTTP: HTTP protocol; <br>   HTTPS: HTTPS protocol;<br>   QUIC: QUIC protocol.</li>
+<li>`socket`:<br>Filter by the specified <strong>HTTP protocol type</strong>.<br>Valid values:<br>`HTTP`: HTTP protocol; <br>`HTTPS`: HTTPS protocol;<br>`QUIC`: QUIC protocol.</li>
 <li>domain<br>?? Filter by [<strong>domain name</strong>].</li>
 <li>tagKey<br>?? Filter by [<strong>tag key</strong>].</li>
 <li>tagValue<br>?? Filter by [<strong>tag value</strong>].</li> 
      * @return Filters Filter criteria. The detailed Key values of filter criteria are as follows:
-<li>socket:<br>   Filter by [<strong>HTTP protocol type</strong>].<br>   Valid values:<br>   HTTP: HTTP protocol; <br>   HTTPS: HTTPS protocol;<br>   QUIC: QUIC protocol.</li>
+<li>`socket`:<br>Filter by the specified <strong>HTTP protocol type</strong>.<br>Valid values:<br>`HTTP`: HTTP protocol; <br>`HTTPS`: HTTPS protocol;<br>`QUIC`: QUIC protocol.</li>
 <li>domain<br>?? Filter by [<strong>domain name</strong>].</li>
 <li>tagKey<br>?? Filter by [<strong>tag key</strong>].</li>
 <li>tagValue<br>?? Filter by [<strong>tag value</strong>].</li>
@@ -303,12 +303,12 @@ public class DescribeOverviewL7DataRequest extends AbstractModel {
 
     /**
      * Set Filter criteria. The detailed Key values of filter criteria are as follows:
-<li>socket:<br>   Filter by [<strong>HTTP protocol type</strong>].<br>   Valid values:<br>   HTTP: HTTP protocol; <br>   HTTPS: HTTPS protocol;<br>   QUIC: QUIC protocol.</li>
+<li>`socket`:<br>Filter by the specified <strong>HTTP protocol type</strong>.<br>Valid values:<br>`HTTP`: HTTP protocol; <br>`HTTPS`: HTTPS protocol;<br>`QUIC`: QUIC protocol.</li>
 <li>domain<br>?? Filter by [<strong>domain name</strong>].</li>
 <li>tagKey<br>?? Filter by [<strong>tag key</strong>].</li>
 <li>tagValue<br>?? Filter by [<strong>tag value</strong>].</li>
      * @param Filters Filter criteria. The detailed Key values of filter criteria are as follows:
-<li>socket:<br>   Filter by [<strong>HTTP protocol type</strong>].<br>   Valid values:<br>   HTTP: HTTP protocol; <br>   HTTPS: HTTPS protocol;<br>   QUIC: QUIC protocol.</li>
+<li>`socket`:<br>Filter by the specified <strong>HTTP protocol type</strong>.<br>Valid values:<br>`HTTP`: HTTP protocol; <br>`HTTPS`: HTTPS protocol;<br>`QUIC`: QUIC protocol.</li>
 <li>domain<br>?? Filter by [<strong>domain name</strong>].</li>
 <li>tagKey<br>?? Filter by [<strong>tag key</strong>].</li>
 <li>tagValue<br>?? Filter by [<strong>tag value</strong>].</li>
@@ -318,11 +318,11 @@ public class DescribeOverviewL7DataRequest extends AbstractModel {
     }
 
     /**
-     * Get Data ownership area. Valid values:
+     * Get Data ownership region. Valid values:
 <li>overseas: global (excluding the Chinese mainland) data;</li>
 <li>mainland: Chinese mainland data;</li>
 <li>global: global data.</li>If this parameter is not input, the default value `global` is used. 
-     * @return Area Data ownership area. Valid values:
+     * @return Area Data ownership region. Valid values:
 <li>overseas: global (excluding the Chinese mainland) data;</li>
 <li>mainland: Chinese mainland data;</li>
 <li>global: global data.</li>If this parameter is not input, the default value `global` is used.
@@ -332,11 +332,11 @@ public class DescribeOverviewL7DataRequest extends AbstractModel {
     }
 
     /**
-     * Set Data ownership area. Valid values:
+     * Set Data ownership region. Valid values:
 <li>overseas: global (excluding the Chinese mainland) data;</li>
 <li>mainland: Chinese mainland data;</li>
 <li>global: global data.</li>If this parameter is not input, the default value `global` is used.
-     * @param Area Data ownership area. Valid values:
+     * @param Area Data ownership region. Valid values:
 <li>overseas: global (excluding the Chinese mainland) data;</li>
 <li>mainland: Chinese mainland data;</li>
 <li>global: global data.</li>If this parameter is not input, the default value `global` is used.

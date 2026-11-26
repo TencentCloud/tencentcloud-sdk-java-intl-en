@@ -31,7 +31,7 @@ public class RuleEngineCustomActionParameterSchema extends AbstractModel {
     private String Name;
 
     /**
-    * <p>Parameter field data type. Valid values: <li>Boolean: boolean;</li><li>Integer: integer;</li><li>Float: floating-point;</li><li>String: string;</li><li>ArrayOfInteger: integer array;</li><li>ArrayOfFloat: floating-point array;</li><li>ArrayOfString: array of strings.</li></p>
+    * <p>Parameter field data type. Valid values: <li>Boolean: boolean;</li><li>Integer: integer;</li><li>Float: floating-point type;</li><li>String: string;</li><li>ArrayOfInteger: integer array;</li><li>ArrayOfFloat: floating-point array;</li><li>ArrayOfString: array of strings.</li></p>
     */
     @SerializedName("ValueType")
     @Expose
@@ -45,7 +45,7 @@ public class RuleEngineCustomActionParameterSchema extends AbstractModel {
     private String Description;
 
     /**
-    * <p>Field default value of the parameter.</p>
+    * <p>Parameter field default value.</p>
     */
     @SerializedName("Default")
     @Expose
@@ -59,77 +59,77 @@ public class RuleEngineCustomActionParameterSchema extends AbstractModel {
     private String Unit;
 
     /**
-    * <p>Whether the parameter field is required or not.</p><p>Default value: false</p><p>If filled, it is applicable to ALL parameter field type verification; if left blank, no verification.</p>
+    * <p>Whether the parameter field is required.</p><p>Default value: false</p><p>If filled, it is suitable for all parameter field type verification; if not filled, no verification.</p>
     */
     @SerializedName("Required")
     @Expose
     private Boolean Required;
 
     /**
-    * <p>Minimum value of the parameter field.</p><p>If filled, it is used to validate the value for integer, floating-point number, integer array, and floating-point number array type parameters; if left blank, there is no verification.</p>
+    * <p>Minimum value of the parameter field.</p><p>If filled, it is used to validate the value of integer, floating-point number, integer array, and floating-point number array type parameters. If not filled, no verification is performed.</p>
     */
     @SerializedName("MinValue")
     @Expose
     private Float MinValue;
 
     /**
-    * <p>Maximum value of the parameter field.</p><p>If filled, it is used for value verification of type parameters for integers, floating-point numbers, integer arrays, and floating-point number arrays. If left blank, there is no verification.</p>
+    * <p>Maximum value of the parameter field.</p><p>If filled, it applies to value verification for integers, floating-point numbers, integer arrays, and floating-point number arrays. If left blank, no verification is performed.</p>
     */
     @SerializedName("MaxValue")
     @Expose
     private Float MaxValue;
 
     /**
-    * <p>Minimum length of the parameter field.</p><p>If filled, it is used for value verification of string and string array type parameters. If not filled, there is no verification.</p>
+    * <p>Minimum length of the parameter field.</p><p>If filled, it applies to value verification for string and string array type parameters; if left blank, no verification is performed.</p>
     */
     @SerializedName("MinLength")
     @Expose
     private Long MinLength;
 
     /**
-    * <p>Maximum length of the parameter field.</p><p>If filled, it is used for value verification for strings and array of strings type parameters; if left blank, no verification.</p>
+    * <p>Maximum length of the parameter field.</p><p>If filled, it is used for value validation of string and string array type parameters; if not filled, no validation is performed.</p>
     */
     @SerializedName("MaxLength")
     @Expose
     private Long MaxLength;
 
     /**
-    * <p>Minimum item count of the parameter field.</p><p>If filled, it is applicable to value verification for various array type parameters; if left blank, there is no verification.</p>
+    * <p>Minimum item count of the parameter field.</p><p>If filled, it is used to validate the value of various array type parameters. If not filled, no verification is performed.</p>
     */
     @SerializedName("MinItems")
     @Expose
     private Long MinItems;
 
     /**
-    * <p>Maximum item count of the parameter field.</p><p>If filled, it is applicable to value verification for various array type parameters. If left blank, there is no verification.</p>
+    * <p>Maximum items in the parameter field.</p><p>If filled, it is suitable for value verification of various array type parameters; if left blank, no verification is performed.</p>
     */
     @SerializedName("MaxItems")
     @Expose
     private Long MaxItems;
 
     /**
-    * <p>Whether the parameter field item is unique.</p><p>Default value: false</p><p>If filled, it is applicable to various array type parameter value verification; if left blank, no verification.</p>
+    * <p>Whether the parameter field item is unique.</p><p>Default value: false</p><p>If filled, it is suitable for value verification of various array type parameters; if not filled, no verification.</p>
     */
     @SerializedName("UniqueItems")
     @Expose
     private Boolean UniqueItems;
 
     /**
-    * <p>Allowed format of the parameter field.</p><p>If filled, verification of string or string array content is required. If not filled, there is no verification.</p>
+    * <p>Allowed format of the parameter field.</p><p>If filled, verification is required to ensure the string or string array content is appropriate; if left blank, no verification is performed.</p>
     */
     @SerializedName("AllowedPattern")
     @Expose
     private String AllowedPattern;
 
     /**
-    * <p>Allowed values of the parameter field. If empty, there is no verification.</p><p>If this parameter is filled, it indicates that the corresponding parameter is an enum and only allows values from this parameter array; if left blank, there is no verification.</p>
+    * <p>Allowed values of the parameter field. If empty, no verification is performed.</p><p>If this parameter is filled, it indicates that the corresponding parameter is an enumeration type, and only values in this parameter array are allowed. If not filled, no verification is performed.</p>
     */
     @SerializedName("AllowedValues")
     @Expose
     private String [] AllowedValues;
 
     /**
-    * <p>Minimum step size of the parameter field.</p><p>If filled, it is suitable for value verification of floating-point and floating-point array type parameters. If not filled, there is no verification.</p>
+    * <p>Minimum step size of the parameter field. If filled, it applies to value verification for floating-point and floating-point array type parameters; if left blank, no verification is performed.</p>
     */
     @SerializedName("MultipleOf")
     @Expose
@@ -152,16 +152,16 @@ public class RuleEngineCustomActionParameterSchema extends AbstractModel {
     }
 
     /**
-     * Get <p>Parameter field data type. Valid values: <li>Boolean: boolean;</li><li>Integer: integer;</li><li>Float: floating-point;</li><li>String: string;</li><li>ArrayOfInteger: integer array;</li><li>ArrayOfFloat: floating-point array;</li><li>ArrayOfString: array of strings.</li></p> 
-     * @return ValueType <p>Parameter field data type. Valid values: <li>Boolean: boolean;</li><li>Integer: integer;</li><li>Float: floating-point;</li><li>String: string;</li><li>ArrayOfInteger: integer array;</li><li>ArrayOfFloat: floating-point array;</li><li>ArrayOfString: array of strings.</li></p>
+     * Get <p>Parameter field data type. Valid values: <li>Boolean: boolean;</li><li>Integer: integer;</li><li>Float: floating-point type;</li><li>String: string;</li><li>ArrayOfInteger: integer array;</li><li>ArrayOfFloat: floating-point array;</li><li>ArrayOfString: array of strings.</li></p> 
+     * @return ValueType <p>Parameter field data type. Valid values: <li>Boolean: boolean;</li><li>Integer: integer;</li><li>Float: floating-point type;</li><li>String: string;</li><li>ArrayOfInteger: integer array;</li><li>ArrayOfFloat: floating-point array;</li><li>ArrayOfString: array of strings.</li></p>
      */
     public String getValueType() {
         return this.ValueType;
     }
 
     /**
-     * Set <p>Parameter field data type. Valid values: <li>Boolean: boolean;</li><li>Integer: integer;</li><li>Float: floating-point;</li><li>String: string;</li><li>ArrayOfInteger: integer array;</li><li>ArrayOfFloat: floating-point array;</li><li>ArrayOfString: array of strings.</li></p>
-     * @param ValueType <p>Parameter field data type. Valid values: <li>Boolean: boolean;</li><li>Integer: integer;</li><li>Float: floating-point;</li><li>String: string;</li><li>ArrayOfInteger: integer array;</li><li>ArrayOfFloat: floating-point array;</li><li>ArrayOfString: array of strings.</li></p>
+     * Set <p>Parameter field data type. Valid values: <li>Boolean: boolean;</li><li>Integer: integer;</li><li>Float: floating-point type;</li><li>String: string;</li><li>ArrayOfInteger: integer array;</li><li>ArrayOfFloat: floating-point array;</li><li>ArrayOfString: array of strings.</li></p>
+     * @param ValueType <p>Parameter field data type. Valid values: <li>Boolean: boolean;</li><li>Integer: integer;</li><li>Float: floating-point type;</li><li>String: string;</li><li>ArrayOfInteger: integer array;</li><li>ArrayOfFloat: floating-point array;</li><li>ArrayOfString: array of strings.</li></p>
      */
     public void setValueType(String ValueType) {
         this.ValueType = ValueType;
@@ -184,16 +184,16 @@ public class RuleEngineCustomActionParameterSchema extends AbstractModel {
     }
 
     /**
-     * Get <p>Field default value of the parameter.</p> 
-     * @return Default <p>Field default value of the parameter.</p>
+     * Get <p>Parameter field default value.</p> 
+     * @return Default <p>Parameter field default value.</p>
      */
     public String getDefault() {
         return this.Default;
     }
 
     /**
-     * Set <p>Field default value of the parameter.</p>
-     * @param Default <p>Field default value of the parameter.</p>
+     * Set <p>Parameter field default value.</p>
+     * @param Default <p>Parameter field default value.</p>
      */
     public void setDefault(String Default) {
         this.Default = Default;
@@ -216,176 +216,176 @@ public class RuleEngineCustomActionParameterSchema extends AbstractModel {
     }
 
     /**
-     * Get <p>Whether the parameter field is required or not.</p><p>Default value: false</p><p>If filled, it is applicable to ALL parameter field type verification; if left blank, no verification.</p> 
-     * @return Required <p>Whether the parameter field is required or not.</p><p>Default value: false</p><p>If filled, it is applicable to ALL parameter field type verification; if left blank, no verification.</p>
+     * Get <p>Whether the parameter field is required.</p><p>Default value: false</p><p>If filled, it is suitable for all parameter field type verification; if not filled, no verification.</p> 
+     * @return Required <p>Whether the parameter field is required.</p><p>Default value: false</p><p>If filled, it is suitable for all parameter field type verification; if not filled, no verification.</p>
      */
     public Boolean getRequired() {
         return this.Required;
     }
 
     /**
-     * Set <p>Whether the parameter field is required or not.</p><p>Default value: false</p><p>If filled, it is applicable to ALL parameter field type verification; if left blank, no verification.</p>
-     * @param Required <p>Whether the parameter field is required or not.</p><p>Default value: false</p><p>If filled, it is applicable to ALL parameter field type verification; if left blank, no verification.</p>
+     * Set <p>Whether the parameter field is required.</p><p>Default value: false</p><p>If filled, it is suitable for all parameter field type verification; if not filled, no verification.</p>
+     * @param Required <p>Whether the parameter field is required.</p><p>Default value: false</p><p>If filled, it is suitable for all parameter field type verification; if not filled, no verification.</p>
      */
     public void setRequired(Boolean Required) {
         this.Required = Required;
     }
 
     /**
-     * Get <p>Minimum value of the parameter field.</p><p>If filled, it is used to validate the value for integer, floating-point number, integer array, and floating-point number array type parameters; if left blank, there is no verification.</p> 
-     * @return MinValue <p>Minimum value of the parameter field.</p><p>If filled, it is used to validate the value for integer, floating-point number, integer array, and floating-point number array type parameters; if left blank, there is no verification.</p>
+     * Get <p>Minimum value of the parameter field.</p><p>If filled, it is used to validate the value of integer, floating-point number, integer array, and floating-point number array type parameters. If not filled, no verification is performed.</p> 
+     * @return MinValue <p>Minimum value of the parameter field.</p><p>If filled, it is used to validate the value of integer, floating-point number, integer array, and floating-point number array type parameters. If not filled, no verification is performed.</p>
      */
     public Float getMinValue() {
         return this.MinValue;
     }
 
     /**
-     * Set <p>Minimum value of the parameter field.</p><p>If filled, it is used to validate the value for integer, floating-point number, integer array, and floating-point number array type parameters; if left blank, there is no verification.</p>
-     * @param MinValue <p>Minimum value of the parameter field.</p><p>If filled, it is used to validate the value for integer, floating-point number, integer array, and floating-point number array type parameters; if left blank, there is no verification.</p>
+     * Set <p>Minimum value of the parameter field.</p><p>If filled, it is used to validate the value of integer, floating-point number, integer array, and floating-point number array type parameters. If not filled, no verification is performed.</p>
+     * @param MinValue <p>Minimum value of the parameter field.</p><p>If filled, it is used to validate the value of integer, floating-point number, integer array, and floating-point number array type parameters. If not filled, no verification is performed.</p>
      */
     public void setMinValue(Float MinValue) {
         this.MinValue = MinValue;
     }
 
     /**
-     * Get <p>Maximum value of the parameter field.</p><p>If filled, it is used for value verification of type parameters for integers, floating-point numbers, integer arrays, and floating-point number arrays. If left blank, there is no verification.</p> 
-     * @return MaxValue <p>Maximum value of the parameter field.</p><p>If filled, it is used for value verification of type parameters for integers, floating-point numbers, integer arrays, and floating-point number arrays. If left blank, there is no verification.</p>
+     * Get <p>Maximum value of the parameter field.</p><p>If filled, it applies to value verification for integers, floating-point numbers, integer arrays, and floating-point number arrays. If left blank, no verification is performed.</p> 
+     * @return MaxValue <p>Maximum value of the parameter field.</p><p>If filled, it applies to value verification for integers, floating-point numbers, integer arrays, and floating-point number arrays. If left blank, no verification is performed.</p>
      */
     public Float getMaxValue() {
         return this.MaxValue;
     }
 
     /**
-     * Set <p>Maximum value of the parameter field.</p><p>If filled, it is used for value verification of type parameters for integers, floating-point numbers, integer arrays, and floating-point number arrays. If left blank, there is no verification.</p>
-     * @param MaxValue <p>Maximum value of the parameter field.</p><p>If filled, it is used for value verification of type parameters for integers, floating-point numbers, integer arrays, and floating-point number arrays. If left blank, there is no verification.</p>
+     * Set <p>Maximum value of the parameter field.</p><p>If filled, it applies to value verification for integers, floating-point numbers, integer arrays, and floating-point number arrays. If left blank, no verification is performed.</p>
+     * @param MaxValue <p>Maximum value of the parameter field.</p><p>If filled, it applies to value verification for integers, floating-point numbers, integer arrays, and floating-point number arrays. If left blank, no verification is performed.</p>
      */
     public void setMaxValue(Float MaxValue) {
         this.MaxValue = MaxValue;
     }
 
     /**
-     * Get <p>Minimum length of the parameter field.</p><p>If filled, it is used for value verification of string and string array type parameters. If not filled, there is no verification.</p> 
-     * @return MinLength <p>Minimum length of the parameter field.</p><p>If filled, it is used for value verification of string and string array type parameters. If not filled, there is no verification.</p>
+     * Get <p>Minimum length of the parameter field.</p><p>If filled, it applies to value verification for string and string array type parameters; if left blank, no verification is performed.</p> 
+     * @return MinLength <p>Minimum length of the parameter field.</p><p>If filled, it applies to value verification for string and string array type parameters; if left blank, no verification is performed.</p>
      */
     public Long getMinLength() {
         return this.MinLength;
     }
 
     /**
-     * Set <p>Minimum length of the parameter field.</p><p>If filled, it is used for value verification of string and string array type parameters. If not filled, there is no verification.</p>
-     * @param MinLength <p>Minimum length of the parameter field.</p><p>If filled, it is used for value verification of string and string array type parameters. If not filled, there is no verification.</p>
+     * Set <p>Minimum length of the parameter field.</p><p>If filled, it applies to value verification for string and string array type parameters; if left blank, no verification is performed.</p>
+     * @param MinLength <p>Minimum length of the parameter field.</p><p>If filled, it applies to value verification for string and string array type parameters; if left blank, no verification is performed.</p>
      */
     public void setMinLength(Long MinLength) {
         this.MinLength = MinLength;
     }
 
     /**
-     * Get <p>Maximum length of the parameter field.</p><p>If filled, it is used for value verification for strings and array of strings type parameters; if left blank, no verification.</p> 
-     * @return MaxLength <p>Maximum length of the parameter field.</p><p>If filled, it is used for value verification for strings and array of strings type parameters; if left blank, no verification.</p>
+     * Get <p>Maximum length of the parameter field.</p><p>If filled, it is used for value validation of string and string array type parameters; if not filled, no validation is performed.</p> 
+     * @return MaxLength <p>Maximum length of the parameter field.</p><p>If filled, it is used for value validation of string and string array type parameters; if not filled, no validation is performed.</p>
      */
     public Long getMaxLength() {
         return this.MaxLength;
     }
 
     /**
-     * Set <p>Maximum length of the parameter field.</p><p>If filled, it is used for value verification for strings and array of strings type parameters; if left blank, no verification.</p>
-     * @param MaxLength <p>Maximum length of the parameter field.</p><p>If filled, it is used for value verification for strings and array of strings type parameters; if left blank, no verification.</p>
+     * Set <p>Maximum length of the parameter field.</p><p>If filled, it is used for value validation of string and string array type parameters; if not filled, no validation is performed.</p>
+     * @param MaxLength <p>Maximum length of the parameter field.</p><p>If filled, it is used for value validation of string and string array type parameters; if not filled, no validation is performed.</p>
      */
     public void setMaxLength(Long MaxLength) {
         this.MaxLength = MaxLength;
     }
 
     /**
-     * Get <p>Minimum item count of the parameter field.</p><p>If filled, it is applicable to value verification for various array type parameters; if left blank, there is no verification.</p> 
-     * @return MinItems <p>Minimum item count of the parameter field.</p><p>If filled, it is applicable to value verification for various array type parameters; if left blank, there is no verification.</p>
+     * Get <p>Minimum item count of the parameter field.</p><p>If filled, it is used to validate the value of various array type parameters. If not filled, no verification is performed.</p> 
+     * @return MinItems <p>Minimum item count of the parameter field.</p><p>If filled, it is used to validate the value of various array type parameters. If not filled, no verification is performed.</p>
      */
     public Long getMinItems() {
         return this.MinItems;
     }
 
     /**
-     * Set <p>Minimum item count of the parameter field.</p><p>If filled, it is applicable to value verification for various array type parameters; if left blank, there is no verification.</p>
-     * @param MinItems <p>Minimum item count of the parameter field.</p><p>If filled, it is applicable to value verification for various array type parameters; if left blank, there is no verification.</p>
+     * Set <p>Minimum item count of the parameter field.</p><p>If filled, it is used to validate the value of various array type parameters. If not filled, no verification is performed.</p>
+     * @param MinItems <p>Minimum item count of the parameter field.</p><p>If filled, it is used to validate the value of various array type parameters. If not filled, no verification is performed.</p>
      */
     public void setMinItems(Long MinItems) {
         this.MinItems = MinItems;
     }
 
     /**
-     * Get <p>Maximum item count of the parameter field.</p><p>If filled, it is applicable to value verification for various array type parameters. If left blank, there is no verification.</p> 
-     * @return MaxItems <p>Maximum item count of the parameter field.</p><p>If filled, it is applicable to value verification for various array type parameters. If left blank, there is no verification.</p>
+     * Get <p>Maximum items in the parameter field.</p><p>If filled, it is suitable for value verification of various array type parameters; if left blank, no verification is performed.</p> 
+     * @return MaxItems <p>Maximum items in the parameter field.</p><p>If filled, it is suitable for value verification of various array type parameters; if left blank, no verification is performed.</p>
      */
     public Long getMaxItems() {
         return this.MaxItems;
     }
 
     /**
-     * Set <p>Maximum item count of the parameter field.</p><p>If filled, it is applicable to value verification for various array type parameters. If left blank, there is no verification.</p>
-     * @param MaxItems <p>Maximum item count of the parameter field.</p><p>If filled, it is applicable to value verification for various array type parameters. If left blank, there is no verification.</p>
+     * Set <p>Maximum items in the parameter field.</p><p>If filled, it is suitable for value verification of various array type parameters; if left blank, no verification is performed.</p>
+     * @param MaxItems <p>Maximum items in the parameter field.</p><p>If filled, it is suitable for value verification of various array type parameters; if left blank, no verification is performed.</p>
      */
     public void setMaxItems(Long MaxItems) {
         this.MaxItems = MaxItems;
     }
 
     /**
-     * Get <p>Whether the parameter field item is unique.</p><p>Default value: false</p><p>If filled, it is applicable to various array type parameter value verification; if left blank, no verification.</p> 
-     * @return UniqueItems <p>Whether the parameter field item is unique.</p><p>Default value: false</p><p>If filled, it is applicable to various array type parameter value verification; if left blank, no verification.</p>
+     * Get <p>Whether the parameter field item is unique.</p><p>Default value: false</p><p>If filled, it is suitable for value verification of various array type parameters; if not filled, no verification.</p> 
+     * @return UniqueItems <p>Whether the parameter field item is unique.</p><p>Default value: false</p><p>If filled, it is suitable for value verification of various array type parameters; if not filled, no verification.</p>
      */
     public Boolean getUniqueItems() {
         return this.UniqueItems;
     }
 
     /**
-     * Set <p>Whether the parameter field item is unique.</p><p>Default value: false</p><p>If filled, it is applicable to various array type parameter value verification; if left blank, no verification.</p>
-     * @param UniqueItems <p>Whether the parameter field item is unique.</p><p>Default value: false</p><p>If filled, it is applicable to various array type parameter value verification; if left blank, no verification.</p>
+     * Set <p>Whether the parameter field item is unique.</p><p>Default value: false</p><p>If filled, it is suitable for value verification of various array type parameters; if not filled, no verification.</p>
+     * @param UniqueItems <p>Whether the parameter field item is unique.</p><p>Default value: false</p><p>If filled, it is suitable for value verification of various array type parameters; if not filled, no verification.</p>
      */
     public void setUniqueItems(Boolean UniqueItems) {
         this.UniqueItems = UniqueItems;
     }
 
     /**
-     * Get <p>Allowed format of the parameter field.</p><p>If filled, verification of string or string array content is required. If not filled, there is no verification.</p> 
-     * @return AllowedPattern <p>Allowed format of the parameter field.</p><p>If filled, verification of string or string array content is required. If not filled, there is no verification.</p>
+     * Get <p>Allowed format of the parameter field.</p><p>If filled, verification is required to ensure the string or string array content is appropriate; if left blank, no verification is performed.</p> 
+     * @return AllowedPattern <p>Allowed format of the parameter field.</p><p>If filled, verification is required to ensure the string or string array content is appropriate; if left blank, no verification is performed.</p>
      */
     public String getAllowedPattern() {
         return this.AllowedPattern;
     }
 
     /**
-     * Set <p>Allowed format of the parameter field.</p><p>If filled, verification of string or string array content is required. If not filled, there is no verification.</p>
-     * @param AllowedPattern <p>Allowed format of the parameter field.</p><p>If filled, verification of string or string array content is required. If not filled, there is no verification.</p>
+     * Set <p>Allowed format of the parameter field.</p><p>If filled, verification is required to ensure the string or string array content is appropriate; if left blank, no verification is performed.</p>
+     * @param AllowedPattern <p>Allowed format of the parameter field.</p><p>If filled, verification is required to ensure the string or string array content is appropriate; if left blank, no verification is performed.</p>
      */
     public void setAllowedPattern(String AllowedPattern) {
         this.AllowedPattern = AllowedPattern;
     }
 
     /**
-     * Get <p>Allowed values of the parameter field. If empty, there is no verification.</p><p>If this parameter is filled, it indicates that the corresponding parameter is an enum and only allows values from this parameter array; if left blank, there is no verification.</p> 
-     * @return AllowedValues <p>Allowed values of the parameter field. If empty, there is no verification.</p><p>If this parameter is filled, it indicates that the corresponding parameter is an enum and only allows values from this parameter array; if left blank, there is no verification.</p>
+     * Get <p>Allowed values of the parameter field. If empty, no verification is performed.</p><p>If this parameter is filled, it indicates that the corresponding parameter is an enumeration type, and only values in this parameter array are allowed. If not filled, no verification is performed.</p> 
+     * @return AllowedValues <p>Allowed values of the parameter field. If empty, no verification is performed.</p><p>If this parameter is filled, it indicates that the corresponding parameter is an enumeration type, and only values in this parameter array are allowed. If not filled, no verification is performed.</p>
      */
     public String [] getAllowedValues() {
         return this.AllowedValues;
     }
 
     /**
-     * Set <p>Allowed values of the parameter field. If empty, there is no verification.</p><p>If this parameter is filled, it indicates that the corresponding parameter is an enum and only allows values from this parameter array; if left blank, there is no verification.</p>
-     * @param AllowedValues <p>Allowed values of the parameter field. If empty, there is no verification.</p><p>If this parameter is filled, it indicates that the corresponding parameter is an enum and only allows values from this parameter array; if left blank, there is no verification.</p>
+     * Set <p>Allowed values of the parameter field. If empty, no verification is performed.</p><p>If this parameter is filled, it indicates that the corresponding parameter is an enumeration type, and only values in this parameter array are allowed. If not filled, no verification is performed.</p>
+     * @param AllowedValues <p>Allowed values of the parameter field. If empty, no verification is performed.</p><p>If this parameter is filled, it indicates that the corresponding parameter is an enumeration type, and only values in this parameter array are allowed. If not filled, no verification is performed.</p>
      */
     public void setAllowedValues(String [] AllowedValues) {
         this.AllowedValues = AllowedValues;
     }
 
     /**
-     * Get <p>Minimum step size of the parameter field.</p><p>If filled, it is suitable for value verification of floating-point and floating-point array type parameters. If not filled, there is no verification.</p> 
-     * @return MultipleOf <p>Minimum step size of the parameter field.</p><p>If filled, it is suitable for value verification of floating-point and floating-point array type parameters. If not filled, there is no verification.</p>
+     * Get <p>Minimum step size of the parameter field. If filled, it applies to value verification for floating-point and floating-point array type parameters; if left blank, no verification is performed.</p> 
+     * @return MultipleOf <p>Minimum step size of the parameter field. If filled, it applies to value verification for floating-point and floating-point array type parameters; if left blank, no verification is performed.</p>
      */
     public String getMultipleOf() {
         return this.MultipleOf;
     }
 
     /**
-     * Set <p>Minimum step size of the parameter field.</p><p>If filled, it is suitable for value verification of floating-point and floating-point array type parameters. If not filled, there is no verification.</p>
-     * @param MultipleOf <p>Minimum step size of the parameter field.</p><p>If filled, it is suitable for value verification of floating-point and floating-point array type parameters. If not filled, there is no verification.</p>
+     * Set <p>Minimum step size of the parameter field. If filled, it applies to value verification for floating-point and floating-point array type parameters; if left blank, no verification is performed.</p>
+     * @param MultipleOf <p>Minimum step size of the parameter field. If filled, it applies to value verification for floating-point and floating-point array type parameters; if left blank, no verification is performed.</p>
      */
     public void setMultipleOf(String MultipleOf) {
         this.MultipleOf = MultipleOf;

@@ -24,281 +24,161 @@ import java.util.HashMap;
 public class UserApplicationVersion extends AbstractModel {
 
     /**
-    * Application version ID.
+    * <p>Application version Id</p>
     */
     @SerializedName("ApplicationVersionId")
     @Expose
     private String ApplicationVersionId;
 
     /**
-    * Application version size.
+    * <p>Application version size</p>
     */
     @SerializedName("ApplicationVersionSize")
     @Expose
     private Long ApplicationVersionSize;
 
     /**
-    * Application version status (Uploading: uploading; Creating: in creation; CreateFailed: creation failed; Deleting: deleting; Inuse: current version; Normal: to be released; Usable: available).
+    * <p>Application version status (Uploading: Creating, Creating: Creating, CreateFailed: Failed to create, Deleting: Deleting, Inuse: Current version, Normal: To be released, Usable: Available)</p>
     */
     @SerializedName("ApplicationVersionStatus")
     @Expose
     private String ApplicationVersionStatus;
 
     /**
-    * Application version name.
+    * <p>Application version name</p>
     */
     @SerializedName("ApplicationVersionName")
     @Expose
     private String ApplicationVersionName;
 
     /**
-    * Application version creation time.
+    * <p>Application version creation time</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * Region for application version distribution (
-Standard zone:
-ap-chinese-mainland: Chinese mainland
-na-north-america: North America
-eu-frankfurt: Frankfurt
-ap-mumbai: Mumbai
-ap-tokyo: Tokyo
-ap-seoul: Seoul
-ap-singapore: Singapore
-ap-bangkok: Bangkok
-ap-hongkong: Hong Kong (China)
-Integration zone:
-me-middle-east-fusion: Middle East
-na-north-america-fusion: North America
-sa-south-america-fusion: South America
-ap-tokyo-fusion: Tokyo
-ap-seoul-fusion: Seoul
-eu-frankfurt-fusion: Frankfurt
-ap-singapore-fusion: Singapore
-ap-hongkong-fusion: Hong Kong (China)
-).
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Application version distribution regions (<br>Standard regions:<br>ap-chinese-mainland: Chinese mainland,<br>na-north-america: North America,<br>eu-frankfurt: Frankfurt,<br>ap-mumbai: Mumbai,<br>ap-tokyo: Tokyo,<br>ap-seoul: Seoul,<br>ap-singapore: Singapore,<br>ap-bangkok: Bangkok,<br>ap-hongkong: Hong Kong (China),<br>Fusion regions:<br>me-middle-east-fusion: Middle East<br>na-north-america-fusion: North America<br>sa-south-america-fusion: South America<br>ap-tokyo-fusion: Tokyo<br>ap-seoul-fusion: Seoul<br>eu-frankfurt-fusion: Frankfurt<br>ap-singapore-fusion: Singapore<br>ap-hongkong-fusion: Hong Kong (China)<br>)</p>
     */
     @SerializedName("ApplicationVersionRegions")
     @Expose
     private String [] ApplicationVersionRegions;
 
     /**
-    * Application version update method.
-FULL: full update.
-INCREMENT: incremental update.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Application version update mode: <br>FULL: Full update, <br>INCREMENT: Incremental update</p>
     */
     @SerializedName("ApplicationVersionUpdateMode")
     @Expose
     private String ApplicationVersionUpdateMode;
 
     /**
-     * Get Application version ID. 
-     * @return ApplicationVersionId Application version ID.
+     * Get <p>Application version Id</p> 
+     * @return ApplicationVersionId <p>Application version Id</p>
      */
     public String getApplicationVersionId() {
         return this.ApplicationVersionId;
     }
 
     /**
-     * Set Application version ID.
-     * @param ApplicationVersionId Application version ID.
+     * Set <p>Application version Id</p>
+     * @param ApplicationVersionId <p>Application version Id</p>
      */
     public void setApplicationVersionId(String ApplicationVersionId) {
         this.ApplicationVersionId = ApplicationVersionId;
     }
 
     /**
-     * Get Application version size. 
-     * @return ApplicationVersionSize Application version size.
+     * Get <p>Application version size</p> 
+     * @return ApplicationVersionSize <p>Application version size</p>
      */
     public Long getApplicationVersionSize() {
         return this.ApplicationVersionSize;
     }
 
     /**
-     * Set Application version size.
-     * @param ApplicationVersionSize Application version size.
+     * Set <p>Application version size</p>
+     * @param ApplicationVersionSize <p>Application version size</p>
      */
     public void setApplicationVersionSize(Long ApplicationVersionSize) {
         this.ApplicationVersionSize = ApplicationVersionSize;
     }
 
     /**
-     * Get Application version status (Uploading: uploading; Creating: in creation; CreateFailed: creation failed; Deleting: deleting; Inuse: current version; Normal: to be released; Usable: available). 
-     * @return ApplicationVersionStatus Application version status (Uploading: uploading; Creating: in creation; CreateFailed: creation failed; Deleting: deleting; Inuse: current version; Normal: to be released; Usable: available).
+     * Get <p>Application version status (Uploading: Creating, Creating: Creating, CreateFailed: Failed to create, Deleting: Deleting, Inuse: Current version, Normal: To be released, Usable: Available)</p> 
+     * @return ApplicationVersionStatus <p>Application version status (Uploading: Creating, Creating: Creating, CreateFailed: Failed to create, Deleting: Deleting, Inuse: Current version, Normal: To be released, Usable: Available)</p>
      */
     public String getApplicationVersionStatus() {
         return this.ApplicationVersionStatus;
     }
 
     /**
-     * Set Application version status (Uploading: uploading; Creating: in creation; CreateFailed: creation failed; Deleting: deleting; Inuse: current version; Normal: to be released; Usable: available).
-     * @param ApplicationVersionStatus Application version status (Uploading: uploading; Creating: in creation; CreateFailed: creation failed; Deleting: deleting; Inuse: current version; Normal: to be released; Usable: available).
+     * Set <p>Application version status (Uploading: Creating, Creating: Creating, CreateFailed: Failed to create, Deleting: Deleting, Inuse: Current version, Normal: To be released, Usable: Available)</p>
+     * @param ApplicationVersionStatus <p>Application version status (Uploading: Creating, Creating: Creating, CreateFailed: Failed to create, Deleting: Deleting, Inuse: Current version, Normal: To be released, Usable: Available)</p>
      */
     public void setApplicationVersionStatus(String ApplicationVersionStatus) {
         this.ApplicationVersionStatus = ApplicationVersionStatus;
     }
 
     /**
-     * Get Application version name. 
-     * @return ApplicationVersionName Application version name.
+     * Get <p>Application version name</p> 
+     * @return ApplicationVersionName <p>Application version name</p>
      */
     public String getApplicationVersionName() {
         return this.ApplicationVersionName;
     }
 
     /**
-     * Set Application version name.
-     * @param ApplicationVersionName Application version name.
+     * Set <p>Application version name</p>
+     * @param ApplicationVersionName <p>Application version name</p>
      */
     public void setApplicationVersionName(String ApplicationVersionName) {
         this.ApplicationVersionName = ApplicationVersionName;
     }
 
     /**
-     * Get Application version creation time. 
-     * @return CreateTime Application version creation time.
+     * Get <p>Application version creation time</p> 
+     * @return CreateTime <p>Application version creation time</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set Application version creation time.
-     * @param CreateTime Application version creation time.
+     * Set <p>Application version creation time</p>
+     * @param CreateTime <p>Application version creation time</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get Region for application version distribution (
-Standard zone:
-ap-chinese-mainland: Chinese mainland
-na-north-america: North America
-eu-frankfurt: Frankfurt
-ap-mumbai: Mumbai
-ap-tokyo: Tokyo
-ap-seoul: Seoul
-ap-singapore: Singapore
-ap-bangkok: Bangkok
-ap-hongkong: Hong Kong (China)
-Integration zone:
-me-middle-east-fusion: Middle East
-na-north-america-fusion: North America
-sa-south-america-fusion: South America
-ap-tokyo-fusion: Tokyo
-ap-seoul-fusion: Seoul
-eu-frankfurt-fusion: Frankfurt
-ap-singapore-fusion: Singapore
-ap-hongkong-fusion: Hong Kong (China)
-).
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ApplicationVersionRegions Region for application version distribution (
-Standard zone:
-ap-chinese-mainland: Chinese mainland
-na-north-america: North America
-eu-frankfurt: Frankfurt
-ap-mumbai: Mumbai
-ap-tokyo: Tokyo
-ap-seoul: Seoul
-ap-singapore: Singapore
-ap-bangkok: Bangkok
-ap-hongkong: Hong Kong (China)
-Integration zone:
-me-middle-east-fusion: Middle East
-na-north-america-fusion: North America
-sa-south-america-fusion: South America
-ap-tokyo-fusion: Tokyo
-ap-seoul-fusion: Seoul
-eu-frankfurt-fusion: Frankfurt
-ap-singapore-fusion: Singapore
-ap-hongkong-fusion: Hong Kong (China)
-).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Application version distribution regions (<br>Standard regions:<br>ap-chinese-mainland: Chinese mainland,<br>na-north-america: North America,<br>eu-frankfurt: Frankfurt,<br>ap-mumbai: Mumbai,<br>ap-tokyo: Tokyo,<br>ap-seoul: Seoul,<br>ap-singapore: Singapore,<br>ap-bangkok: Bangkok,<br>ap-hongkong: Hong Kong (China),<br>Fusion regions:<br>me-middle-east-fusion: Middle East<br>na-north-america-fusion: North America<br>sa-south-america-fusion: South America<br>ap-tokyo-fusion: Tokyo<br>ap-seoul-fusion: Seoul<br>eu-frankfurt-fusion: Frankfurt<br>ap-singapore-fusion: Singapore<br>ap-hongkong-fusion: Hong Kong (China)<br>)</p> 
+     * @return ApplicationVersionRegions <p>Application version distribution regions (<br>Standard regions:<br>ap-chinese-mainland: Chinese mainland,<br>na-north-america: North America,<br>eu-frankfurt: Frankfurt,<br>ap-mumbai: Mumbai,<br>ap-tokyo: Tokyo,<br>ap-seoul: Seoul,<br>ap-singapore: Singapore,<br>ap-bangkok: Bangkok,<br>ap-hongkong: Hong Kong (China),<br>Fusion regions:<br>me-middle-east-fusion: Middle East<br>na-north-america-fusion: North America<br>sa-south-america-fusion: South America<br>ap-tokyo-fusion: Tokyo<br>ap-seoul-fusion: Seoul<br>eu-frankfurt-fusion: Frankfurt<br>ap-singapore-fusion: Singapore<br>ap-hongkong-fusion: Hong Kong (China)<br>)</p>
      */
     public String [] getApplicationVersionRegions() {
         return this.ApplicationVersionRegions;
     }
 
     /**
-     * Set Region for application version distribution (
-Standard zone:
-ap-chinese-mainland: Chinese mainland
-na-north-america: North America
-eu-frankfurt: Frankfurt
-ap-mumbai: Mumbai
-ap-tokyo: Tokyo
-ap-seoul: Seoul
-ap-singapore: Singapore
-ap-bangkok: Bangkok
-ap-hongkong: Hong Kong (China)
-Integration zone:
-me-middle-east-fusion: Middle East
-na-north-america-fusion: North America
-sa-south-america-fusion: South America
-ap-tokyo-fusion: Tokyo
-ap-seoul-fusion: Seoul
-eu-frankfurt-fusion: Frankfurt
-ap-singapore-fusion: Singapore
-ap-hongkong-fusion: Hong Kong (China)
-).
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ApplicationVersionRegions Region for application version distribution (
-Standard zone:
-ap-chinese-mainland: Chinese mainland
-na-north-america: North America
-eu-frankfurt: Frankfurt
-ap-mumbai: Mumbai
-ap-tokyo: Tokyo
-ap-seoul: Seoul
-ap-singapore: Singapore
-ap-bangkok: Bangkok
-ap-hongkong: Hong Kong (China)
-Integration zone:
-me-middle-east-fusion: Middle East
-na-north-america-fusion: North America
-sa-south-america-fusion: South America
-ap-tokyo-fusion: Tokyo
-ap-seoul-fusion: Seoul
-eu-frankfurt-fusion: Frankfurt
-ap-singapore-fusion: Singapore
-ap-hongkong-fusion: Hong Kong (China)
-).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Application version distribution regions (<br>Standard regions:<br>ap-chinese-mainland: Chinese mainland,<br>na-north-america: North America,<br>eu-frankfurt: Frankfurt,<br>ap-mumbai: Mumbai,<br>ap-tokyo: Tokyo,<br>ap-seoul: Seoul,<br>ap-singapore: Singapore,<br>ap-bangkok: Bangkok,<br>ap-hongkong: Hong Kong (China),<br>Fusion regions:<br>me-middle-east-fusion: Middle East<br>na-north-america-fusion: North America<br>sa-south-america-fusion: South America<br>ap-tokyo-fusion: Tokyo<br>ap-seoul-fusion: Seoul<br>eu-frankfurt-fusion: Frankfurt<br>ap-singapore-fusion: Singapore<br>ap-hongkong-fusion: Hong Kong (China)<br>)</p>
+     * @param ApplicationVersionRegions <p>Application version distribution regions (<br>Standard regions:<br>ap-chinese-mainland: Chinese mainland,<br>na-north-america: North America,<br>eu-frankfurt: Frankfurt,<br>ap-mumbai: Mumbai,<br>ap-tokyo: Tokyo,<br>ap-seoul: Seoul,<br>ap-singapore: Singapore,<br>ap-bangkok: Bangkok,<br>ap-hongkong: Hong Kong (China),<br>Fusion regions:<br>me-middle-east-fusion: Middle East<br>na-north-america-fusion: North America<br>sa-south-america-fusion: South America<br>ap-tokyo-fusion: Tokyo<br>ap-seoul-fusion: Seoul<br>eu-frankfurt-fusion: Frankfurt<br>ap-singapore-fusion: Singapore<br>ap-hongkong-fusion: Hong Kong (China)<br>)</p>
      */
     public void setApplicationVersionRegions(String [] ApplicationVersionRegions) {
         this.ApplicationVersionRegions = ApplicationVersionRegions;
     }
 
     /**
-     * Get Application version update method.
-FULL: full update.
-INCREMENT: incremental update.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ApplicationVersionUpdateMode Application version update method.
-FULL: full update.
-INCREMENT: incremental update.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Application version update mode: <br>FULL: Full update, <br>INCREMENT: Incremental update</p> 
+     * @return ApplicationVersionUpdateMode <p>Application version update mode: <br>FULL: Full update, <br>INCREMENT: Incremental update</p>
      */
     public String getApplicationVersionUpdateMode() {
         return this.ApplicationVersionUpdateMode;
     }
 
     /**
-     * Set Application version update method.
-FULL: full update.
-INCREMENT: incremental update.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ApplicationVersionUpdateMode Application version update method.
-FULL: full update.
-INCREMENT: incremental update.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Application version update mode: <br>FULL: Full update, <br>INCREMENT: Incremental update</p>
+     * @param ApplicationVersionUpdateMode <p>Application version update mode: <br>FULL: Full update, <br>INCREMENT: Incremental update</p>
      */
     public void setApplicationVersionUpdateMode(String ApplicationVersionUpdateMode) {
         this.ApplicationVersionUpdateMode = ApplicationVersionUpdateMode;

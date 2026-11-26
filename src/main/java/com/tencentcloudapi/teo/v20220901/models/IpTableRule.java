@@ -24,264 +24,319 @@ import java.util.HashMap;
 public class IpTableRule extends AbstractModel {
 
     /**
-    * The action. Values:
-<li>`drop`: Block</li>
-<li>`trans`: Allow</li>
-<li>`monitor`: Observe</li>
+    * Action. Valid values:
+<li> drop: block;</li>
+<li> trans: release;</li>
+<li>monitor: observation.</li>
     */
     @SerializedName("Action")
     @Expose
     private String Action;
 
     /**
-    * The matching dimension. Values:
-<li>`ip`: Match by IP.</li>
-<li>`area`: Match by IP region.</li>
+    * According to type matching. Valid values:
+<li>ip: Match by client IP;</li>
+<li>area: match by client IP region;</li>
+<li>asn: Match the autonomous system to which the client belongs;</li>
+<li>referer: match the Referer request header;</li>
+<li>ua: match the User-Agent request header;</li>
+<li>url: Request URL for matching.</li>
     */
     @SerializedName("MatchFrom")
     @Expose
     private String MatchFrom;
 
     /**
-    * Matching method. It defaults to `equal` if it’s left empty.
-Values: 
-<li>`is_empty`: The field is empty.</li>
-<li>`not_exists`: The configuration item does not exist.</li>
-<li>`include`: Include</li>
-<li>`not_include`: Do not include</li>
-<li>`equal`: Equal to</li>
-<li>`not_equal`: Not equal to</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Match method of the rule. Valid values:
+<li> match: match, suitable for MatchFrom as ip;</li>
+<li> not_match: Not match, suitable for when MatchFrom is ip;</li>
+<li> include_area: region inclusion, suitable for MatchFrom as area;</li>
+<li> not_include_area: Regions excluded, applicable to MatchFrom as area;</li>
+<li> asn_match: ASN contains, suitable for MatchFrom as asn;</li>
+<li> asn_not_match: ASN not contained, applicable to MatchFrom as asn;</li>
+<li> equal: equal, suitable for MatchFrom being ua, referer;</li>
+<li> not_equal: Not equal to, applicable to MatchFrom being ua, referer;</li>
+<li> include: wildcard match, suitable for MatchFrom being ua, referer, url;</li>
+<li> not_include: wildcard mismatch, suitable for MatchFrom being ua, referer;</li>
+<li> is_emty: The configuration content is empty, suitable for MatchFrom being ua or referer;</li>
+<li> not_exists: The configuration content does not exist. This is applicable when MatchFrom is ua or referer.</li>
     */
     @SerializedName("Operator")
     @Expose
     private String Operator;
 
     /**
-    * The rule ID, which is only used as an output parameter.
+    * Rule id. Output only.
     */
     @SerializedName("RuleID")
     @Expose
     private Long RuleID;
 
     /**
-    * The update time, which is only used as an output parameter.
+    * Update time. For output usage only.
     */
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
 
     /**
-    * The rule status. A null value indicates that the rule is enabled. Values:
-<li>`on`: Enabled</li>
-<li>`off`: Disabled</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Rule enablement status. Valid values:
+<li>`on`: Enable;</li>
+<li> off: Disabled.</li>
+If the input parameter is not specified, the value defaults to `on`.
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * Specifies the rule name.
+    * Rule name.
     */
     @SerializedName("RuleName")
     @Expose
     private String RuleName;
 
     /**
-    * Matching content. It’s not required when `Operator` is `is_emty` or `not_exists`. 
+    * Matching content. Multi-value input is supported.
+<li>When entering multiple matching values, please separate them with English commas;</li>
+<li>When MatchFrom is ua, multi-value input is not supported;</li>
+<li>When Operator is is_empty or not_exists, the input value of this field is invalid.</li>
     */
     @SerializedName("MatchContent")
     @Expose
     private String MatchContent;
 
     /**
-     * Get The action. Values:
-<li>`drop`: Block</li>
-<li>`trans`: Allow</li>
-<li>`monitor`: Observe</li> 
-     * @return Action The action. Values:
-<li>`drop`: Block</li>
-<li>`trans`: Allow</li>
-<li>`monitor`: Observe</li>
+     * Get Action. Valid values:
+<li> drop: block;</li>
+<li> trans: release;</li>
+<li>monitor: observation.</li> 
+     * @return Action Action. Valid values:
+<li> drop: block;</li>
+<li> trans: release;</li>
+<li>monitor: observation.</li>
      */
     public String getAction() {
         return this.Action;
     }
 
     /**
-     * Set The action. Values:
-<li>`drop`: Block</li>
-<li>`trans`: Allow</li>
-<li>`monitor`: Observe</li>
-     * @param Action The action. Values:
-<li>`drop`: Block</li>
-<li>`trans`: Allow</li>
-<li>`monitor`: Observe</li>
+     * Set Action. Valid values:
+<li> drop: block;</li>
+<li> trans: release;</li>
+<li>monitor: observation.</li>
+     * @param Action Action. Valid values:
+<li> drop: block;</li>
+<li> trans: release;</li>
+<li>monitor: observation.</li>
      */
     public void setAction(String Action) {
         this.Action = Action;
     }
 
     /**
-     * Get The matching dimension. Values:
-<li>`ip`: Match by IP.</li>
-<li>`area`: Match by IP region.</li> 
-     * @return MatchFrom The matching dimension. Values:
-<li>`ip`: Match by IP.</li>
-<li>`area`: Match by IP region.</li>
+     * Get According to type matching. Valid values:
+<li>ip: Match by client IP;</li>
+<li>area: match by client IP region;</li>
+<li>asn: Match the autonomous system to which the client belongs;</li>
+<li>referer: match the Referer request header;</li>
+<li>ua: match the User-Agent request header;</li>
+<li>url: Request URL for matching.</li> 
+     * @return MatchFrom According to type matching. Valid values:
+<li>ip: Match by client IP;</li>
+<li>area: match by client IP region;</li>
+<li>asn: Match the autonomous system to which the client belongs;</li>
+<li>referer: match the Referer request header;</li>
+<li>ua: match the User-Agent request header;</li>
+<li>url: Request URL for matching.</li>
      */
     public String getMatchFrom() {
         return this.MatchFrom;
     }
 
     /**
-     * Set The matching dimension. Values:
-<li>`ip`: Match by IP.</li>
-<li>`area`: Match by IP region.</li>
-     * @param MatchFrom The matching dimension. Values:
-<li>`ip`: Match by IP.</li>
-<li>`area`: Match by IP region.</li>
+     * Set According to type matching. Valid values:
+<li>ip: Match by client IP;</li>
+<li>area: match by client IP region;</li>
+<li>asn: Match the autonomous system to which the client belongs;</li>
+<li>referer: match the Referer request header;</li>
+<li>ua: match the User-Agent request header;</li>
+<li>url: Request URL for matching.</li>
+     * @param MatchFrom According to type matching. Valid values:
+<li>ip: Match by client IP;</li>
+<li>area: match by client IP region;</li>
+<li>asn: Match the autonomous system to which the client belongs;</li>
+<li>referer: match the Referer request header;</li>
+<li>ua: match the User-Agent request header;</li>
+<li>url: Request URL for matching.</li>
      */
     public void setMatchFrom(String MatchFrom) {
         this.MatchFrom = MatchFrom;
     }
 
     /**
-     * Get Matching method. It defaults to `equal` if it’s left empty.
-Values: 
-<li>`is_empty`: The field is empty.</li>
-<li>`not_exists`: The configuration item does not exist.</li>
-<li>`include`: Include</li>
-<li>`not_include`: Do not include</li>
-<li>`equal`: Equal to</li>
-<li>`not_equal`: Not equal to</li>
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Operator Matching method. It defaults to `equal` if it’s left empty.
-Values: 
-<li>`is_empty`: The field is empty.</li>
-<li>`not_exists`: The configuration item does not exist.</li>
-<li>`include`: Include</li>
-<li>`not_include`: Do not include</li>
-<li>`equal`: Equal to</li>
-<li>`not_equal`: Not equal to</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Match method of the rule. Valid values:
+<li> match: match, suitable for MatchFrom as ip;</li>
+<li> not_match: Not match, suitable for when MatchFrom is ip;</li>
+<li> include_area: region inclusion, suitable for MatchFrom as area;</li>
+<li> not_include_area: Regions excluded, applicable to MatchFrom as area;</li>
+<li> asn_match: ASN contains, suitable for MatchFrom as asn;</li>
+<li> asn_not_match: ASN not contained, applicable to MatchFrom as asn;</li>
+<li> equal: equal, suitable for MatchFrom being ua, referer;</li>
+<li> not_equal: Not equal to, applicable to MatchFrom being ua, referer;</li>
+<li> include: wildcard match, suitable for MatchFrom being ua, referer, url;</li>
+<li> not_include: wildcard mismatch, suitable for MatchFrom being ua, referer;</li>
+<li> is_emty: The configuration content is empty, suitable for MatchFrom being ua or referer;</li>
+<li> not_exists: The configuration content does not exist. This is applicable when MatchFrom is ua or referer.</li> 
+     * @return Operator Match method of the rule. Valid values:
+<li> match: match, suitable for MatchFrom as ip;</li>
+<li> not_match: Not match, suitable for when MatchFrom is ip;</li>
+<li> include_area: region inclusion, suitable for MatchFrom as area;</li>
+<li> not_include_area: Regions excluded, applicable to MatchFrom as area;</li>
+<li> asn_match: ASN contains, suitable for MatchFrom as asn;</li>
+<li> asn_not_match: ASN not contained, applicable to MatchFrom as asn;</li>
+<li> equal: equal, suitable for MatchFrom being ua, referer;</li>
+<li> not_equal: Not equal to, applicable to MatchFrom being ua, referer;</li>
+<li> include: wildcard match, suitable for MatchFrom being ua, referer, url;</li>
+<li> not_include: wildcard mismatch, suitable for MatchFrom being ua, referer;</li>
+<li> is_emty: The configuration content is empty, suitable for MatchFrom being ua or referer;</li>
+<li> not_exists: The configuration content does not exist. This is applicable when MatchFrom is ua or referer.</li>
      */
     public String getOperator() {
         return this.Operator;
     }
 
     /**
-     * Set Matching method. It defaults to `equal` if it’s left empty.
-Values: 
-<li>`is_empty`: The field is empty.</li>
-<li>`not_exists`: The configuration item does not exist.</li>
-<li>`include`: Include</li>
-<li>`not_include`: Do not include</li>
-<li>`equal`: Equal to</li>
-<li>`not_equal`: Not equal to</li>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Operator Matching method. It defaults to `equal` if it’s left empty.
-Values: 
-<li>`is_empty`: The field is empty.</li>
-<li>`not_exists`: The configuration item does not exist.</li>
-<li>`include`: Include</li>
-<li>`not_include`: Do not include</li>
-<li>`equal`: Equal to</li>
-<li>`not_equal`: Not equal to</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Match method of the rule. Valid values:
+<li> match: match, suitable for MatchFrom as ip;</li>
+<li> not_match: Not match, suitable for when MatchFrom is ip;</li>
+<li> include_area: region inclusion, suitable for MatchFrom as area;</li>
+<li> not_include_area: Regions excluded, applicable to MatchFrom as area;</li>
+<li> asn_match: ASN contains, suitable for MatchFrom as asn;</li>
+<li> asn_not_match: ASN not contained, applicable to MatchFrom as asn;</li>
+<li> equal: equal, suitable for MatchFrom being ua, referer;</li>
+<li> not_equal: Not equal to, applicable to MatchFrom being ua, referer;</li>
+<li> include: wildcard match, suitable for MatchFrom being ua, referer, url;</li>
+<li> not_include: wildcard mismatch, suitable for MatchFrom being ua, referer;</li>
+<li> is_emty: The configuration content is empty, suitable for MatchFrom being ua or referer;</li>
+<li> not_exists: The configuration content does not exist. This is applicable when MatchFrom is ua or referer.</li>
+     * @param Operator Match method of the rule. Valid values:
+<li> match: match, suitable for MatchFrom as ip;</li>
+<li> not_match: Not match, suitable for when MatchFrom is ip;</li>
+<li> include_area: region inclusion, suitable for MatchFrom as area;</li>
+<li> not_include_area: Regions excluded, applicable to MatchFrom as area;</li>
+<li> asn_match: ASN contains, suitable for MatchFrom as asn;</li>
+<li> asn_not_match: ASN not contained, applicable to MatchFrom as asn;</li>
+<li> equal: equal, suitable for MatchFrom being ua, referer;</li>
+<li> not_equal: Not equal to, applicable to MatchFrom being ua, referer;</li>
+<li> include: wildcard match, suitable for MatchFrom being ua, referer, url;</li>
+<li> not_include: wildcard mismatch, suitable for MatchFrom being ua, referer;</li>
+<li> is_emty: The configuration content is empty, suitable for MatchFrom being ua or referer;</li>
+<li> not_exists: The configuration content does not exist. This is applicable when MatchFrom is ua or referer.</li>
      */
     public void setOperator(String Operator) {
         this.Operator = Operator;
     }
 
     /**
-     * Get The rule ID, which is only used as an output parameter. 
-     * @return RuleID The rule ID, which is only used as an output parameter.
+     * Get Rule id. Output only. 
+     * @return RuleID Rule id. Output only.
      */
     public Long getRuleID() {
         return this.RuleID;
     }
 
     /**
-     * Set The rule ID, which is only used as an output parameter.
-     * @param RuleID The rule ID, which is only used as an output parameter.
+     * Set Rule id. Output only.
+     * @param RuleID Rule id. Output only.
      */
     public void setRuleID(Long RuleID) {
         this.RuleID = RuleID;
     }
 
     /**
-     * Get The update time, which is only used as an output parameter. 
-     * @return UpdateTime The update time, which is only used as an output parameter.
+     * Get Update time. For output usage only. 
+     * @return UpdateTime Update time. For output usage only.
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set The update time, which is only used as an output parameter.
-     * @param UpdateTime The update time, which is only used as an output parameter.
+     * Set Update time. For output usage only.
+     * @param UpdateTime Update time. For output usage only.
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
     }
 
     /**
-     * Get The rule status. A null value indicates that the rule is enabled. Values:
-<li>`on`: Enabled</li>
-<li>`off`: Disabled</li>
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Status The rule status. A null value indicates that the rule is enabled. Values:
-<li>`on`: Enabled</li>
-<li>`off`: Disabled</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Rule enablement status. Valid values:
+<li>`on`: Enable;</li>
+<li> off: Disabled.</li>
+If the input parameter is not specified, the value defaults to `on`. 
+     * @return Status Rule enablement status. Valid values:
+<li>`on`: Enable;</li>
+<li> off: Disabled.</li>
+If the input parameter is not specified, the value defaults to `on`.
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set The rule status. A null value indicates that the rule is enabled. Values:
-<li>`on`: Enabled</li>
-<li>`off`: Disabled</li>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Status The rule status. A null value indicates that the rule is enabled. Values:
-<li>`on`: Enabled</li>
-<li>`off`: Disabled</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Rule enablement status. Valid values:
+<li>`on`: Enable;</li>
+<li> off: Disabled.</li>
+If the input parameter is not specified, the value defaults to `on`.
+     * @param Status Rule enablement status. Valid values:
+<li>`on`: Enable;</li>
+<li> off: Disabled.</li>
+If the input parameter is not specified, the value defaults to `on`.
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Specifies the rule name. 
-     * @return RuleName Specifies the rule name.
+     * Get Rule name. 
+     * @return RuleName Rule name.
      */
     public String getRuleName() {
         return this.RuleName;
     }
 
     /**
-     * Set Specifies the rule name.
-     * @param RuleName Specifies the rule name.
+     * Set Rule name.
+     * @param RuleName Rule name.
      */
     public void setRuleName(String RuleName) {
         this.RuleName = RuleName;
     }
 
     /**
-     * Get Matching content. It’s not required when `Operator` is `is_emty` or `not_exists`.  
-     * @return MatchContent Matching content. It’s not required when `Operator` is `is_emty` or `not_exists`. 
+     * Get Matching content. Multi-value input is supported.
+<li>When entering multiple matching values, please separate them with English commas;</li>
+<li>When MatchFrom is ua, multi-value input is not supported;</li>
+<li>When Operator is is_empty or not_exists, the input value of this field is invalid.</li> 
+     * @return MatchContent Matching content. Multi-value input is supported.
+<li>When entering multiple matching values, please separate them with English commas;</li>
+<li>When MatchFrom is ua, multi-value input is not supported;</li>
+<li>When Operator is is_empty or not_exists, the input value of this field is invalid.</li>
      */
     public String getMatchContent() {
         return this.MatchContent;
     }
 
     /**
-     * Set Matching content. It’s not required when `Operator` is `is_emty` or `not_exists`. 
-     * @param MatchContent Matching content. It’s not required when `Operator` is `is_emty` or `not_exists`. 
+     * Set Matching content. Multi-value input is supported.
+<li>When entering multiple matching values, please separate them with English commas;</li>
+<li>When MatchFrom is ua, multi-value input is not supported;</li>
+<li>When Operator is is_empty or not_exists, the input value of this field is invalid.</li>
+     * @param MatchContent Matching content. Multi-value input is supported.
+<li>When entering multiple matching values, please separate them with English commas;</li>
+<li>When MatchFrom is ua, multi-value input is not supported;</li>
+<li>When Operator is is_empty or not_exists, the input value of this field is invalid.</li>
      */
     public void setMatchContent(String MatchContent) {
         this.MatchContent = MatchContent;

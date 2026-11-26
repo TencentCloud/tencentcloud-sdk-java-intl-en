@@ -24,148 +24,148 @@ import java.util.HashMap;
 public class Identification extends AbstractModel {
 
     /**
-    * The site name.
+    * Site name.
     */
     @SerializedName("ZoneName")
     @Expose
     private String ZoneName;
 
     /**
-    * The subdomain name to be verified. to verify the ownership of a site, leave it blank.
+    * Verify a subdomain. This value is empty when verifying a site. A subdomain is verified for a specific subdomain.
     */
     @SerializedName("Domain")
     @Expose
     private String Domain;
 
     /**
-    * The verification status. Values:
-<li>`pending`: The verification is ongoing.</li>
-<li>`finished`: The verification completed.</li>
+    * Verification status. Valid values:
+<li>pending: verifying.</li>
+<li> finished: verification complete.</li>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * Details of the DNS record.
+    * Site ownership verification: Dns verification information.
     */
     @SerializedName("Ascription")
     @Expose
     private AscriptionInfo Ascription;
 
     /**
-    * Specifies the current NS record of the domain name.
+    * Current NS record of the domain name.
     */
     @SerializedName("OriginalNameServers")
     @Expose
     private String [] OriginalNameServers;
 
     /**
-    * Details of the verification file.
+    * Site ownership verification: file verification information.
     */
     @SerializedName("FileAscription")
     @Expose
     private FileAscriptionInfo FileAscription;
 
     /**
-     * Get The site name. 
-     * @return ZoneName The site name.
+     * Get Site name. 
+     * @return ZoneName Site name.
      */
     public String getZoneName() {
         return this.ZoneName;
     }
 
     /**
-     * Set The site name.
-     * @param ZoneName The site name.
+     * Set Site name.
+     * @param ZoneName Site name.
      */
     public void setZoneName(String ZoneName) {
         this.ZoneName = ZoneName;
     }
 
     /**
-     * Get The subdomain name to be verified. to verify the ownership of a site, leave it blank. 
-     * @return Domain The subdomain name to be verified. to verify the ownership of a site, leave it blank.
+     * Get Verify a subdomain. This value is empty when verifying a site. A subdomain is verified for a specific subdomain. 
+     * @return Domain Verify a subdomain. This value is empty when verifying a site. A subdomain is verified for a specific subdomain.
      */
     public String getDomain() {
         return this.Domain;
     }
 
     /**
-     * Set The subdomain name to be verified. to verify the ownership of a site, leave it blank.
-     * @param Domain The subdomain name to be verified. to verify the ownership of a site, leave it blank.
+     * Set Verify a subdomain. This value is empty when verifying a site. A subdomain is verified for a specific subdomain.
+     * @param Domain Verify a subdomain. This value is empty when verifying a site. A subdomain is verified for a specific subdomain.
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;
     }
 
     /**
-     * Get The verification status. Values:
-<li>`pending`: The verification is ongoing.</li>
-<li>`finished`: The verification completed.</li> 
-     * @return Status The verification status. Values:
-<li>`pending`: The verification is ongoing.</li>
-<li>`finished`: The verification completed.</li>
+     * Get Verification status. Valid values:
+<li>pending: verifying.</li>
+<li> finished: verification complete.</li> 
+     * @return Status Verification status. Valid values:
+<li>pending: verifying.</li>
+<li> finished: verification complete.</li>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set The verification status. Values:
-<li>`pending`: The verification is ongoing.</li>
-<li>`finished`: The verification completed.</li>
-     * @param Status The verification status. Values:
-<li>`pending`: The verification is ongoing.</li>
-<li>`finished`: The verification completed.</li>
+     * Set Verification status. Valid values:
+<li>pending: verifying.</li>
+<li> finished: verification complete.</li>
+     * @param Status Verification status. Valid values:
+<li>pending: verifying.</li>
+<li> finished: verification complete.</li>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Details of the DNS record. 
-     * @return Ascription Details of the DNS record.
+     * Get Site ownership verification: Dns verification information. 
+     * @return Ascription Site ownership verification: Dns verification information.
      */
     public AscriptionInfo getAscription() {
         return this.Ascription;
     }
 
     /**
-     * Set Details of the DNS record.
-     * @param Ascription Details of the DNS record.
+     * Set Site ownership verification: Dns verification information.
+     * @param Ascription Site ownership verification: Dns verification information.
      */
     public void setAscription(AscriptionInfo Ascription) {
         this.Ascription = Ascription;
     }
 
     /**
-     * Get Specifies the current NS record of the domain name. 
-     * @return OriginalNameServers Specifies the current NS record of the domain name.
+     * Get Current NS record of the domain name. 
+     * @return OriginalNameServers Current NS record of the domain name.
      */
     public String [] getOriginalNameServers() {
         return this.OriginalNameServers;
     }
 
     /**
-     * Set Specifies the current NS record of the domain name.
-     * @param OriginalNameServers Specifies the current NS record of the domain name.
+     * Set Current NS record of the domain name.
+     * @param OriginalNameServers Current NS record of the domain name.
      */
     public void setOriginalNameServers(String [] OriginalNameServers) {
         this.OriginalNameServers = OriginalNameServers;
     }
 
     /**
-     * Get Details of the verification file. 
-     * @return FileAscription Details of the verification file.
+     * Get Site ownership verification: file verification information. 
+     * @return FileAscription Site ownership verification: file verification information.
      */
     public FileAscriptionInfo getFileAscription() {
         return this.FileAscription;
     }
 
     /**
-     * Set Details of the verification file.
-     * @param FileAscription Details of the verification file.
+     * Set Site ownership verification: file verification information.
+     * @param FileAscription Site ownership verification: file verification information.
      */
     public void setFileAscription(FileAscriptionInfo FileAscription) {
         this.FileAscription = FileAscription;

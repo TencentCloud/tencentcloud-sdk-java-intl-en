@@ -31,7 +31,7 @@ public class JustInTimeTranscodeTemplate extends AbstractModel {
     private String TemplateId;
 
     /**
-    * Specifies the transcoding template name.
+    * Transcoding template name.
     */
     @SerializedName("TemplateName")
     @Expose
@@ -45,49 +45,49 @@ public class JustInTimeTranscodeTemplate extends AbstractModel {
     private String Comment;
 
     /**
-    * Template type. valid values: <li>preset: system-preset template;</li> <li>custom: user-defined template.</li>.
+    * Template type. Valid values: <li>preset: system-preset template.</li><li>custom: custom template.</li>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * Enable video stream. valid values: <li>on: turn on;</li> <li>off: turn off.</li>.
+    * Enable the video stream switch. Value: <li>on: enable;</li><li>off: disable.</li>
     */
     @SerializedName("VideoStreamSwitch")
     @Expose
     private String VideoStreamSwitch;
 
     /**
-    * Enable audio stream. valid values: <li>on: enable;</li> <li>off: disable.</li>.
+    * Enable the audio stream switch. Valid values: <li>on: enable;</li><li>off: disable.</li>
     */
     @SerializedName("AudioStreamSwitch")
     @Expose
     private String AudioStreamSwitch;
 
     /**
-    * Video stream configuration parameters. this field is valid only when VideoStreamSwitch is on.
+    * Video stream configuration parameters. This field is valid only when VideoStreamSwitch is on.
     */
     @SerializedName("VideoTemplate")
     @Expose
     private VideoTemplateInfo VideoTemplate;
 
     /**
-    * Audio stream configuration parameters. specifies this field is valid only when AudioStreamSwitch is on.
+    * Audio stream configuration parameters. This field is valid only when AudioStreamSwitch is on.
     */
     @SerializedName("AudioTemplate")
     @Expose
     private AudioTemplateInfo AudioTemplate;
 
     /**
-    * Template creation time. uses [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
+    * Template creation time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * Template last modified time. uses [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
+    * Template last modified time, use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
     */
     @SerializedName("UpdateTime")
     @Expose
@@ -110,16 +110,16 @@ public class JustInTimeTranscodeTemplate extends AbstractModel {
     }
 
     /**
-     * Get Specifies the transcoding template name. 
-     * @return TemplateName Specifies the transcoding template name.
+     * Get Transcoding template name. 
+     * @return TemplateName Transcoding template name.
      */
     public String getTemplateName() {
         return this.TemplateName;
     }
 
     /**
-     * Set Specifies the transcoding template name.
-     * @param TemplateName Specifies the transcoding template name.
+     * Set Transcoding template name.
+     * @param TemplateName Transcoding template name.
      */
     public void setTemplateName(String TemplateName) {
         this.TemplateName = TemplateName;
@@ -142,112 +142,112 @@ public class JustInTimeTranscodeTemplate extends AbstractModel {
     }
 
     /**
-     * Get Template type. valid values: <li>preset: system-preset template;</li> <li>custom: user-defined template.</li>. 
-     * @return Type Template type. valid values: <li>preset: system-preset template;</li> <li>custom: user-defined template.</li>.
+     * Get Template type. Valid values: <li>preset: system-preset template.</li><li>custom: custom template.</li> 
+     * @return Type Template type. Valid values: <li>preset: system-preset template.</li><li>custom: custom template.</li>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Template type. valid values: <li>preset: system-preset template;</li> <li>custom: user-defined template.</li>.
-     * @param Type Template type. valid values: <li>preset: system-preset template;</li> <li>custom: user-defined template.</li>.
+     * Set Template type. Valid values: <li>preset: system-preset template.</li><li>custom: custom template.</li>
+     * @param Type Template type. Valid values: <li>preset: system-preset template.</li><li>custom: custom template.</li>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get Enable video stream. valid values: <li>on: turn on;</li> <li>off: turn off.</li>. 
-     * @return VideoStreamSwitch Enable video stream. valid values: <li>on: turn on;</li> <li>off: turn off.</li>.
+     * Get Enable the video stream switch. Value: <li>on: enable;</li><li>off: disable.</li> 
+     * @return VideoStreamSwitch Enable the video stream switch. Value: <li>on: enable;</li><li>off: disable.</li>
      */
     public String getVideoStreamSwitch() {
         return this.VideoStreamSwitch;
     }
 
     /**
-     * Set Enable video stream. valid values: <li>on: turn on;</li> <li>off: turn off.</li>.
-     * @param VideoStreamSwitch Enable video stream. valid values: <li>on: turn on;</li> <li>off: turn off.</li>.
+     * Set Enable the video stream switch. Value: <li>on: enable;</li><li>off: disable.</li>
+     * @param VideoStreamSwitch Enable the video stream switch. Value: <li>on: enable;</li><li>off: disable.</li>
      */
     public void setVideoStreamSwitch(String VideoStreamSwitch) {
         this.VideoStreamSwitch = VideoStreamSwitch;
     }
 
     /**
-     * Get Enable audio stream. valid values: <li>on: enable;</li> <li>off: disable.</li>. 
-     * @return AudioStreamSwitch Enable audio stream. valid values: <li>on: enable;</li> <li>off: disable.</li>.
+     * Get Enable the audio stream switch. Valid values: <li>on: enable;</li><li>off: disable.</li> 
+     * @return AudioStreamSwitch Enable the audio stream switch. Valid values: <li>on: enable;</li><li>off: disable.</li>
      */
     public String getAudioStreamSwitch() {
         return this.AudioStreamSwitch;
     }
 
     /**
-     * Set Enable audio stream. valid values: <li>on: enable;</li> <li>off: disable.</li>.
-     * @param AudioStreamSwitch Enable audio stream. valid values: <li>on: enable;</li> <li>off: disable.</li>.
+     * Set Enable the audio stream switch. Valid values: <li>on: enable;</li><li>off: disable.</li>
+     * @param AudioStreamSwitch Enable the audio stream switch. Valid values: <li>on: enable;</li><li>off: disable.</li>
      */
     public void setAudioStreamSwitch(String AudioStreamSwitch) {
         this.AudioStreamSwitch = AudioStreamSwitch;
     }
 
     /**
-     * Get Video stream configuration parameters. this field is valid only when VideoStreamSwitch is on. 
-     * @return VideoTemplate Video stream configuration parameters. this field is valid only when VideoStreamSwitch is on.
+     * Get Video stream configuration parameters. This field is valid only when VideoStreamSwitch is on. 
+     * @return VideoTemplate Video stream configuration parameters. This field is valid only when VideoStreamSwitch is on.
      */
     public VideoTemplateInfo getVideoTemplate() {
         return this.VideoTemplate;
     }
 
     /**
-     * Set Video stream configuration parameters. this field is valid only when VideoStreamSwitch is on.
-     * @param VideoTemplate Video stream configuration parameters. this field is valid only when VideoStreamSwitch is on.
+     * Set Video stream configuration parameters. This field is valid only when VideoStreamSwitch is on.
+     * @param VideoTemplate Video stream configuration parameters. This field is valid only when VideoStreamSwitch is on.
      */
     public void setVideoTemplate(VideoTemplateInfo VideoTemplate) {
         this.VideoTemplate = VideoTemplate;
     }
 
     /**
-     * Get Audio stream configuration parameters. specifies this field is valid only when AudioStreamSwitch is on. 
-     * @return AudioTemplate Audio stream configuration parameters. specifies this field is valid only when AudioStreamSwitch is on.
+     * Get Audio stream configuration parameters. This field is valid only when AudioStreamSwitch is on. 
+     * @return AudioTemplate Audio stream configuration parameters. This field is valid only when AudioStreamSwitch is on.
      */
     public AudioTemplateInfo getAudioTemplate() {
         return this.AudioTemplate;
     }
 
     /**
-     * Set Audio stream configuration parameters. specifies this field is valid only when AudioStreamSwitch is on.
-     * @param AudioTemplate Audio stream configuration parameters. specifies this field is valid only when AudioStreamSwitch is on.
+     * Set Audio stream configuration parameters. This field is valid only when AudioStreamSwitch is on.
+     * @param AudioTemplate Audio stream configuration parameters. This field is valid only when AudioStreamSwitch is on.
      */
     public void setAudioTemplate(AudioTemplateInfo AudioTemplate) {
         this.AudioTemplate = AudioTemplate;
     }
 
     /**
-     * Get Template creation time. uses [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format). 
-     * @return CreateTime Template creation time. uses [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
+     * Get Template creation time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). 
+     * @return CreateTime Template creation time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set Template creation time. uses [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
-     * @param CreateTime Template creation time. uses [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
+     * Set Template creation time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param CreateTime Template creation time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get Template last modified time. uses [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format). 
-     * @return UpdateTime Template last modified time. uses [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
+     * Get Template last modified time, use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). 
+     * @return UpdateTime Template last modified time, use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set Template last modified time. uses [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
-     * @param UpdateTime Template last modified time. uses [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
+     * Set Template last modified time, use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param UpdateTime Template last modified time, use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateSecurityAPIResourceResponse extends AbstractModel {
 
     /**
-    * Specifies the API resource ID list.
+    * API resource ID list.
     */
     @SerializedName("APIResourceIds")
     @Expose
@@ -38,16 +38,16 @@ public class CreateSecurityAPIResourceResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Specifies the API resource ID list. 
-     * @return APIResourceIds Specifies the API resource ID list.
+     * Get API resource ID list. 
+     * @return APIResourceIds API resource ID list.
      */
     public String [] getAPIResourceIds() {
         return this.APIResourceIds;
     }
 
     /**
-     * Set Specifies the API resource ID list.
-     * @param APIResourceIds Specifies the API resource ID list.
+     * Set API resource ID list.
+     * @param APIResourceIds API resource ID list.
      */
     public void setAPIResourceIds(String [] APIResourceIds) {
         this.APIResourceIds = APIResourceIds;

@@ -29,7 +29,7 @@ public class ModifyOriginParameters extends AbstractModel {
 <li>OriginGroup: origin server group type origin server;</li>
 <li>LoadBalance: load balancing. This feature is in beta test. If needed, submit a ticket;</li>
 <li>COS: Tencent Cloud COS origin server;</li>
-<li>AWSS3: supports ALL AWS S3-compatible COS origin servers.</li>
+<li>AWSS3: supports all COS origin servers using the AWS S3 protocol.</li>
     */
     @SerializedName("OriginType")
     @Expose
@@ -37,44 +37,44 @@ public class ModifyOriginParameters extends AbstractModel {
 
     /**
     * Origin server address, which varies according to the value of OriginType:
-<li>When OriginType = IPDomain, specify this parameter with an IPV4 address, an IPV6 address, or a domain name;</li>
-<li>When OriginType = COS, specify the cos bucket access domain.</li>
-<li>When OriginType = AWSS3, specify this parameter as the access domain of the S3 bucket;</li>
-<li>When OriginType = OriginGroup, fill in the origin server group ID; when it is an output parameter, if the origin server group of other sites is referenced, the format is {origin server group ID}@{ZoneID}. For example: og-testorigin@zone-38moq1z10wwwy;</li>
-<li>When OriginType = LoadBalance, specify this parameter as the Cloud Load Balancer instance ID. This feature is currently only available to the allowlist. When it is an output parameter, if the load balancing of other sites is referenced, the format is {LoadBalancer ID}@{ZoneID}, such as lb-2rxpamcyqfzg@zone-38moq1z10wwwy.</li>
+<li>When OriginType = IPDomain, fill in an IPV4 address, an IPV6 address, or a domain name;</li>
+<li>When OriginType = COS, specify the access domain of the COS bucket;</li>
+<li>When OriginType = AWSS3, fill in the access domain name of the S3 bucket;</li>
+<li>When OriginType = OriginGroup, fill in the origin server group ID. As an output parameter, if an origin server group from another site is referenced, the format is {origin server group ID}@{ZoneID}. For example: og-testorigin@zone-38moq1z10wwwy;</li>
+<li>When OriginType = LoadBalance, specify the Cloud Load Balancer instance ID. This feature is currently only available to the allowlist. As an output parameter, if a load balancer from another site is referenced, the format is {load balancer ID}@{ZoneID}. For example: lb-2rxpamcyqfzg@zone-38moq1z10wwwy.</li>
     */
     @SerializedName("Origin")
     @Expose
     private String Origin;
 
     /**
-    * Origin-Pull protocol configuration. this parameter is required when origintype is ipdomain, origingroup, or loadbalance. valid values are:.
-<Li>Http: use http protocol;</li>.
-<Li>Https: use https protocol;</li>.
-<Li>Follow: follow the protocol.</li>.
+    * Origin-pull protocol configuration. This parameter is required when OriginType is IPDomain, OriginGroup, or LoadBalance. Valid values:
+<li>http: use HTTP protocol;</li>
+<li>https: Use HTTPS protocol;</li>
+<li>follow: follow protocol.</li>
     */
     @SerializedName("OriginProtocol")
     @Expose
     private String OriginProtocol;
 
     /**
-    * The HTTP origin port, value ranges from 1 to 65535. this parameter is required when the origin-pull protocol OriginProtocol is HTTP or follow.
+    * HTTP origin-pull port, value ranges from 1 to 65535. This parameter is required when the origin-pull protocol OriginProtocol is http or follow.
     */
     @SerializedName("HTTPOriginPort")
     @Expose
     private Long HTTPOriginPort;
 
     /**
-    * The HTTPS origin port, value ranges from 1 to 65535. this parameter is required when the origin-pull protocol OriginProtocol is HTTPS or follow.
+    * HTTPS origin-pull port, value range: 1–65535. This parameter is required when OriginProtocol is https or follow.
     */
     @SerializedName("HTTPSOriginPort")
     @Expose
     private Long HTTPSOriginPort;
 
     /**
-    * Specifies whether access to the private object storage origin server is allowed. this parameter is required when the origin server type OriginType is COS or AWSS3. valid values:.
-<Li>On: enable private authentication;</li>.
-<li>off: disable private authentication.</li>.
+    * Whether access to the private object storage origin server is allowed. This parameter is required when the origin server type OriginType is COS or AWSS3. Valid values:
+<li>on: Enable private authentication;</li>
+<li>off: Disable private authentication. </li>
     */
     @SerializedName("PrivateAccess")
     @Expose
@@ -93,13 +93,13 @@ public class ModifyOriginParameters extends AbstractModel {
 <li>OriginGroup: origin server group type origin server;</li>
 <li>LoadBalance: load balancing. This feature is in beta test. If needed, submit a ticket;</li>
 <li>COS: Tencent Cloud COS origin server;</li>
-<li>AWSS3: supports ALL AWS S3-compatible COS origin servers.</li> 
+<li>AWSS3: supports all COS origin servers using the AWS S3 protocol.</li> 
      * @return OriginType Origin server type. Valid values:
 <li>IPDomain: IPV4, IPV6, or domain type origin server;</li>
 <li>OriginGroup: origin server group type origin server;</li>
 <li>LoadBalance: load balancing. This feature is in beta test. If needed, submit a ticket;</li>
 <li>COS: Tencent Cloud COS origin server;</li>
-<li>AWSS3: supports ALL AWS S3-compatible COS origin servers.</li>
+<li>AWSS3: supports all COS origin servers using the AWS S3 protocol.</li>
      */
     public String getOriginType() {
         return this.OriginType;
@@ -111,13 +111,13 @@ public class ModifyOriginParameters extends AbstractModel {
 <li>OriginGroup: origin server group type origin server;</li>
 <li>LoadBalance: load balancing. This feature is in beta test. If needed, submit a ticket;</li>
 <li>COS: Tencent Cloud COS origin server;</li>
-<li>AWSS3: supports ALL AWS S3-compatible COS origin servers.</li>
+<li>AWSS3: supports all COS origin servers using the AWS S3 protocol.</li>
      * @param OriginType Origin server type. Valid values:
 <li>IPDomain: IPV4, IPV6, or domain type origin server;</li>
 <li>OriginGroup: origin server group type origin server;</li>
 <li>LoadBalance: load balancing. This feature is in beta test. If needed, submit a ticket;</li>
 <li>COS: Tencent Cloud COS origin server;</li>
-<li>AWSS3: supports ALL AWS S3-compatible COS origin servers.</li>
+<li>AWSS3: supports all COS origin servers using the AWS S3 protocol.</li>
      */
     public void setOriginType(String OriginType) {
         this.OriginType = OriginType;
@@ -125,17 +125,17 @@ public class ModifyOriginParameters extends AbstractModel {
 
     /**
      * Get Origin server address, which varies according to the value of OriginType:
-<li>When OriginType = IPDomain, specify this parameter with an IPV4 address, an IPV6 address, or a domain name;</li>
-<li>When OriginType = COS, specify the cos bucket access domain.</li>
-<li>When OriginType = AWSS3, specify this parameter as the access domain of the S3 bucket;</li>
-<li>When OriginType = OriginGroup, fill in the origin server group ID; when it is an output parameter, if the origin server group of other sites is referenced, the format is {origin server group ID}@{ZoneID}. For example: og-testorigin@zone-38moq1z10wwwy;</li>
-<li>When OriginType = LoadBalance, specify this parameter as the Cloud Load Balancer instance ID. This feature is currently only available to the allowlist. When it is an output parameter, if the load balancing of other sites is referenced, the format is {LoadBalancer ID}@{ZoneID}, such as lb-2rxpamcyqfzg@zone-38moq1z10wwwy.</li> 
+<li>When OriginType = IPDomain, fill in an IPV4 address, an IPV6 address, or a domain name;</li>
+<li>When OriginType = COS, specify the access domain of the COS bucket;</li>
+<li>When OriginType = AWSS3, fill in the access domain name of the S3 bucket;</li>
+<li>When OriginType = OriginGroup, fill in the origin server group ID. As an output parameter, if an origin server group from another site is referenced, the format is {origin server group ID}@{ZoneID}. For example: og-testorigin@zone-38moq1z10wwwy;</li>
+<li>When OriginType = LoadBalance, specify the Cloud Load Balancer instance ID. This feature is currently only available to the allowlist. As an output parameter, if a load balancer from another site is referenced, the format is {load balancer ID}@{ZoneID}. For example: lb-2rxpamcyqfzg@zone-38moq1z10wwwy.</li> 
      * @return Origin Origin server address, which varies according to the value of OriginType:
-<li>When OriginType = IPDomain, specify this parameter with an IPV4 address, an IPV6 address, or a domain name;</li>
-<li>When OriginType = COS, specify the cos bucket access domain.</li>
-<li>When OriginType = AWSS3, specify this parameter as the access domain of the S3 bucket;</li>
-<li>When OriginType = OriginGroup, fill in the origin server group ID; when it is an output parameter, if the origin server group of other sites is referenced, the format is {origin server group ID}@{ZoneID}. For example: og-testorigin@zone-38moq1z10wwwy;</li>
-<li>When OriginType = LoadBalance, specify this parameter as the Cloud Load Balancer instance ID. This feature is currently only available to the allowlist. When it is an output parameter, if the load balancing of other sites is referenced, the format is {LoadBalancer ID}@{ZoneID}, such as lb-2rxpamcyqfzg@zone-38moq1z10wwwy.</li>
+<li>When OriginType = IPDomain, fill in an IPV4 address, an IPV6 address, or a domain name;</li>
+<li>When OriginType = COS, specify the access domain of the COS bucket;</li>
+<li>When OriginType = AWSS3, fill in the access domain name of the S3 bucket;</li>
+<li>When OriginType = OriginGroup, fill in the origin server group ID. As an output parameter, if an origin server group from another site is referenced, the format is {origin server group ID}@{ZoneID}. For example: og-testorigin@zone-38moq1z10wwwy;</li>
+<li>When OriginType = LoadBalance, specify the Cloud Load Balancer instance ID. This feature is currently only available to the allowlist. As an output parameter, if a load balancer from another site is referenced, the format is {load balancer ID}@{ZoneID}. For example: lb-2rxpamcyqfzg@zone-38moq1z10wwwy.</li>
      */
     public String getOrigin() {
         return this.Origin;
@@ -143,101 +143,101 @@ public class ModifyOriginParameters extends AbstractModel {
 
     /**
      * Set Origin server address, which varies according to the value of OriginType:
-<li>When OriginType = IPDomain, specify this parameter with an IPV4 address, an IPV6 address, or a domain name;</li>
-<li>When OriginType = COS, specify the cos bucket access domain.</li>
-<li>When OriginType = AWSS3, specify this parameter as the access domain of the S3 bucket;</li>
-<li>When OriginType = OriginGroup, fill in the origin server group ID; when it is an output parameter, if the origin server group of other sites is referenced, the format is {origin server group ID}@{ZoneID}. For example: og-testorigin@zone-38moq1z10wwwy;</li>
-<li>When OriginType = LoadBalance, specify this parameter as the Cloud Load Balancer instance ID. This feature is currently only available to the allowlist. When it is an output parameter, if the load balancing of other sites is referenced, the format is {LoadBalancer ID}@{ZoneID}, such as lb-2rxpamcyqfzg@zone-38moq1z10wwwy.</li>
+<li>When OriginType = IPDomain, fill in an IPV4 address, an IPV6 address, or a domain name;</li>
+<li>When OriginType = COS, specify the access domain of the COS bucket;</li>
+<li>When OriginType = AWSS3, fill in the access domain name of the S3 bucket;</li>
+<li>When OriginType = OriginGroup, fill in the origin server group ID. As an output parameter, if an origin server group from another site is referenced, the format is {origin server group ID}@{ZoneID}. For example: og-testorigin@zone-38moq1z10wwwy;</li>
+<li>When OriginType = LoadBalance, specify the Cloud Load Balancer instance ID. This feature is currently only available to the allowlist. As an output parameter, if a load balancer from another site is referenced, the format is {load balancer ID}@{ZoneID}. For example: lb-2rxpamcyqfzg@zone-38moq1z10wwwy.</li>
      * @param Origin Origin server address, which varies according to the value of OriginType:
-<li>When OriginType = IPDomain, specify this parameter with an IPV4 address, an IPV6 address, or a domain name;</li>
-<li>When OriginType = COS, specify the cos bucket access domain.</li>
-<li>When OriginType = AWSS3, specify this parameter as the access domain of the S3 bucket;</li>
-<li>When OriginType = OriginGroup, fill in the origin server group ID; when it is an output parameter, if the origin server group of other sites is referenced, the format is {origin server group ID}@{ZoneID}. For example: og-testorigin@zone-38moq1z10wwwy;</li>
-<li>When OriginType = LoadBalance, specify this parameter as the Cloud Load Balancer instance ID. This feature is currently only available to the allowlist. When it is an output parameter, if the load balancing of other sites is referenced, the format is {LoadBalancer ID}@{ZoneID}, such as lb-2rxpamcyqfzg@zone-38moq1z10wwwy.</li>
+<li>When OriginType = IPDomain, fill in an IPV4 address, an IPV6 address, or a domain name;</li>
+<li>When OriginType = COS, specify the access domain of the COS bucket;</li>
+<li>When OriginType = AWSS3, fill in the access domain name of the S3 bucket;</li>
+<li>When OriginType = OriginGroup, fill in the origin server group ID. As an output parameter, if an origin server group from another site is referenced, the format is {origin server group ID}@{ZoneID}. For example: og-testorigin@zone-38moq1z10wwwy;</li>
+<li>When OriginType = LoadBalance, specify the Cloud Load Balancer instance ID. This feature is currently only available to the allowlist. As an output parameter, if a load balancer from another site is referenced, the format is {load balancer ID}@{ZoneID}. For example: lb-2rxpamcyqfzg@zone-38moq1z10wwwy.</li>
      */
     public void setOrigin(String Origin) {
         this.Origin = Origin;
     }
 
     /**
-     * Get Origin-Pull protocol configuration. this parameter is required when origintype is ipdomain, origingroup, or loadbalance. valid values are:.
-<Li>Http: use http protocol;</li>.
-<Li>Https: use https protocol;</li>.
-<Li>Follow: follow the protocol.</li>. 
-     * @return OriginProtocol Origin-Pull protocol configuration. this parameter is required when origintype is ipdomain, origingroup, or loadbalance. valid values are:.
-<Li>Http: use http protocol;</li>.
-<Li>Https: use https protocol;</li>.
-<Li>Follow: follow the protocol.</li>.
+     * Get Origin-pull protocol configuration. This parameter is required when OriginType is IPDomain, OriginGroup, or LoadBalance. Valid values:
+<li>http: use HTTP protocol;</li>
+<li>https: Use HTTPS protocol;</li>
+<li>follow: follow protocol.</li> 
+     * @return OriginProtocol Origin-pull protocol configuration. This parameter is required when OriginType is IPDomain, OriginGroup, or LoadBalance. Valid values:
+<li>http: use HTTP protocol;</li>
+<li>https: Use HTTPS protocol;</li>
+<li>follow: follow protocol.</li>
      */
     public String getOriginProtocol() {
         return this.OriginProtocol;
     }
 
     /**
-     * Set Origin-Pull protocol configuration. this parameter is required when origintype is ipdomain, origingroup, or loadbalance. valid values are:.
-<Li>Http: use http protocol;</li>.
-<Li>Https: use https protocol;</li>.
-<Li>Follow: follow the protocol.</li>.
-     * @param OriginProtocol Origin-Pull protocol configuration. this parameter is required when origintype is ipdomain, origingroup, or loadbalance. valid values are:.
-<Li>Http: use http protocol;</li>.
-<Li>Https: use https protocol;</li>.
-<Li>Follow: follow the protocol.</li>.
+     * Set Origin-pull protocol configuration. This parameter is required when OriginType is IPDomain, OriginGroup, or LoadBalance. Valid values:
+<li>http: use HTTP protocol;</li>
+<li>https: Use HTTPS protocol;</li>
+<li>follow: follow protocol.</li>
+     * @param OriginProtocol Origin-pull protocol configuration. This parameter is required when OriginType is IPDomain, OriginGroup, or LoadBalance. Valid values:
+<li>http: use HTTP protocol;</li>
+<li>https: Use HTTPS protocol;</li>
+<li>follow: follow protocol.</li>
      */
     public void setOriginProtocol(String OriginProtocol) {
         this.OriginProtocol = OriginProtocol;
     }
 
     /**
-     * Get The HTTP origin port, value ranges from 1 to 65535. this parameter is required when the origin-pull protocol OriginProtocol is HTTP or follow. 
-     * @return HTTPOriginPort The HTTP origin port, value ranges from 1 to 65535. this parameter is required when the origin-pull protocol OriginProtocol is HTTP or follow.
+     * Get HTTP origin-pull port, value ranges from 1 to 65535. This parameter is required when the origin-pull protocol OriginProtocol is http or follow. 
+     * @return HTTPOriginPort HTTP origin-pull port, value ranges from 1 to 65535. This parameter is required when the origin-pull protocol OriginProtocol is http or follow.
      */
     public Long getHTTPOriginPort() {
         return this.HTTPOriginPort;
     }
 
     /**
-     * Set The HTTP origin port, value ranges from 1 to 65535. this parameter is required when the origin-pull protocol OriginProtocol is HTTP or follow.
-     * @param HTTPOriginPort The HTTP origin port, value ranges from 1 to 65535. this parameter is required when the origin-pull protocol OriginProtocol is HTTP or follow.
+     * Set HTTP origin-pull port, value ranges from 1 to 65535. This parameter is required when the origin-pull protocol OriginProtocol is http or follow.
+     * @param HTTPOriginPort HTTP origin-pull port, value ranges from 1 to 65535. This parameter is required when the origin-pull protocol OriginProtocol is http or follow.
      */
     public void setHTTPOriginPort(Long HTTPOriginPort) {
         this.HTTPOriginPort = HTTPOriginPort;
     }
 
     /**
-     * Get The HTTPS origin port, value ranges from 1 to 65535. this parameter is required when the origin-pull protocol OriginProtocol is HTTPS or follow. 
-     * @return HTTPSOriginPort The HTTPS origin port, value ranges from 1 to 65535. this parameter is required when the origin-pull protocol OriginProtocol is HTTPS or follow.
+     * Get HTTPS origin-pull port, value range: 1–65535. This parameter is required when OriginProtocol is https or follow. 
+     * @return HTTPSOriginPort HTTPS origin-pull port, value range: 1–65535. This parameter is required when OriginProtocol is https or follow.
      */
     public Long getHTTPSOriginPort() {
         return this.HTTPSOriginPort;
     }
 
     /**
-     * Set The HTTPS origin port, value ranges from 1 to 65535. this parameter is required when the origin-pull protocol OriginProtocol is HTTPS or follow.
-     * @param HTTPSOriginPort The HTTPS origin port, value ranges from 1 to 65535. this parameter is required when the origin-pull protocol OriginProtocol is HTTPS or follow.
+     * Set HTTPS origin-pull port, value range: 1–65535. This parameter is required when OriginProtocol is https or follow.
+     * @param HTTPSOriginPort HTTPS origin-pull port, value range: 1–65535. This parameter is required when OriginProtocol is https or follow.
      */
     public void setHTTPSOriginPort(Long HTTPSOriginPort) {
         this.HTTPSOriginPort = HTTPSOriginPort;
     }
 
     /**
-     * Get Specifies whether access to the private object storage origin server is allowed. this parameter is required when the origin server type OriginType is COS or AWSS3. valid values:.
-<Li>On: enable private authentication;</li>.
-<li>off: disable private authentication.</li>. 
-     * @return PrivateAccess Specifies whether access to the private object storage origin server is allowed. this parameter is required when the origin server type OriginType is COS or AWSS3. valid values:.
-<Li>On: enable private authentication;</li>.
-<li>off: disable private authentication.</li>.
+     * Get Whether access to the private object storage origin server is allowed. This parameter is required when the origin server type OriginType is COS or AWSS3. Valid values:
+<li>on: Enable private authentication;</li>
+<li>off: Disable private authentication. </li> 
+     * @return PrivateAccess Whether access to the private object storage origin server is allowed. This parameter is required when the origin server type OriginType is COS or AWSS3. Valid values:
+<li>on: Enable private authentication;</li>
+<li>off: Disable private authentication. </li>
      */
     public String getPrivateAccess() {
         return this.PrivateAccess;
     }
 
     /**
-     * Set Specifies whether access to the private object storage origin server is allowed. this parameter is required when the origin server type OriginType is COS or AWSS3. valid values:.
-<Li>On: enable private authentication;</li>.
-<li>off: disable private authentication.</li>.
-     * @param PrivateAccess Specifies whether access to the private object storage origin server is allowed. this parameter is required when the origin server type OriginType is COS or AWSS3. valid values:.
-<Li>On: enable private authentication;</li>.
-<li>off: disable private authentication.</li>.
+     * Set Whether access to the private object storage origin server is allowed. This parameter is required when the origin server type OriginType is COS or AWSS3. Valid values:
+<li>on: Enable private authentication;</li>
+<li>off: Disable private authentication. </li>
+     * @param PrivateAccess Whether access to the private object storage origin server is allowed. This parameter is required when the origin server type OriginType is COS or AWSS3. Valid values:
+<li>on: Enable private authentication;</li>
+<li>off: Disable private authentication. </li>
      */
     public void setPrivateAccess(String PrivateAccess) {
         this.PrivateAccess = PrivateAccess;

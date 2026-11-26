@@ -31,39 +31,37 @@ public class CreateMultiPathGatewayRequest extends AbstractModel {
     private String ZoneId;
 
     /**
-    * Gateway type. valid values:
-<Li> Cloud: cloud gateway, a gateway created and managed by Tencent cloud;</li>
-<Li>Private: private gateway, a user-deployed private gateway.</li>
+    * Gateway type. Valid values:
+<li> cloud: Cloud Gateway, a gateway created and managed by Tencent Cloud;</li>
+<li> private: Private gateway, a private gateway deployed by the user.</li>
     */
     @SerializedName("GatewayType")
     @Expose
     private String GatewayType;
 
     /**
-    * Gateway name: up to 16 characters, allowed characters (a-z, A-Z, 0-9, -, _).
+    * Gateway name, up to 16 characters. Available characters: a-z, A-Z, 0-9, -, _.
     */
     @SerializedName("GatewayName")
     @Expose
     private String GatewayName;
 
     /**
-    * Gateway port: value range: 1-65535 (excluding 8888).
+    * Gateway port. Range: 1–65535 (excluding 8888).
     */
     @SerializedName("GatewayPort")
     @Expose
     private Long GatewayPort;
 
     /**
-    * Gateway region: GatewayType value is cloud (cloud gateway). required. RegionId list can be obtained from the DescribeMultiPathGatewayRegions API.
+    * Gateway region. Required when the GatewayType value is cloud (Cloud Gateway). You can query the RegionId list via the DescribeMultiPathGatewayRegions API.
     */
     @SerializedName("RegionId")
     @Expose
     private String RegionId;
 
     /**
-    * Gateway address (required when GatewayType=private):
-Before using this address, ensure it has been registered in the Tencent Cloud Multi-Path Security Acceleration Gateway system. 
-If not registered, submit a support ticket or contact your architect to pre-register the gateway IP address in the system before API invocation.
+    * Gateway address. Required when GatewayType is private. When using this address, please ensure it has been entered into the Tencent Cloud multi-channel security acceleration gateway system. If not entered, the gateway IP address needs to be entered into the Tencent Cloud multi-channel security acceleration gateway system in advance through a ticket or by contacting the architect before calling this API.
     */
     @SerializedName("GatewayIP")
     @Expose
@@ -86,96 +84,88 @@ If not registered, submit a support ticket or contact your architect to pre-regi
     }
 
     /**
-     * Get Gateway type. valid values:
-<Li> Cloud: cloud gateway, a gateway created and managed by Tencent cloud;</li>
-<Li>Private: private gateway, a user-deployed private gateway.</li> 
-     * @return GatewayType Gateway type. valid values:
-<Li> Cloud: cloud gateway, a gateway created and managed by Tencent cloud;</li>
-<Li>Private: private gateway, a user-deployed private gateway.</li>
+     * Get Gateway type. Valid values:
+<li> cloud: Cloud Gateway, a gateway created and managed by Tencent Cloud;</li>
+<li> private: Private gateway, a private gateway deployed by the user.</li> 
+     * @return GatewayType Gateway type. Valid values:
+<li> cloud: Cloud Gateway, a gateway created and managed by Tencent Cloud;</li>
+<li> private: Private gateway, a private gateway deployed by the user.</li>
      */
     public String getGatewayType() {
         return this.GatewayType;
     }
 
     /**
-     * Set Gateway type. valid values:
-<Li> Cloud: cloud gateway, a gateway created and managed by Tencent cloud;</li>
-<Li>Private: private gateway, a user-deployed private gateway.</li>
-     * @param GatewayType Gateway type. valid values:
-<Li> Cloud: cloud gateway, a gateway created and managed by Tencent cloud;</li>
-<Li>Private: private gateway, a user-deployed private gateway.</li>
+     * Set Gateway type. Valid values:
+<li> cloud: Cloud Gateway, a gateway created and managed by Tencent Cloud;</li>
+<li> private: Private gateway, a private gateway deployed by the user.</li>
+     * @param GatewayType Gateway type. Valid values:
+<li> cloud: Cloud Gateway, a gateway created and managed by Tencent Cloud;</li>
+<li> private: Private gateway, a private gateway deployed by the user.</li>
      */
     public void setGatewayType(String GatewayType) {
         this.GatewayType = GatewayType;
     }
 
     /**
-     * Get Gateway name: up to 16 characters, allowed characters (a-z, A-Z, 0-9, -, _). 
-     * @return GatewayName Gateway name: up to 16 characters, allowed characters (a-z, A-Z, 0-9, -, _).
+     * Get Gateway name, up to 16 characters. Available characters: a-z, A-Z, 0-9, -, _. 
+     * @return GatewayName Gateway name, up to 16 characters. Available characters: a-z, A-Z, 0-9, -, _.
      */
     public String getGatewayName() {
         return this.GatewayName;
     }
 
     /**
-     * Set Gateway name: up to 16 characters, allowed characters (a-z, A-Z, 0-9, -, _).
-     * @param GatewayName Gateway name: up to 16 characters, allowed characters (a-z, A-Z, 0-9, -, _).
+     * Set Gateway name, up to 16 characters. Available characters: a-z, A-Z, 0-9, -, _.
+     * @param GatewayName Gateway name, up to 16 characters. Available characters: a-z, A-Z, 0-9, -, _.
      */
     public void setGatewayName(String GatewayName) {
         this.GatewayName = GatewayName;
     }
 
     /**
-     * Get Gateway port: value range: 1-65535 (excluding 8888). 
-     * @return GatewayPort Gateway port: value range: 1-65535 (excluding 8888).
+     * Get Gateway port. Range: 1–65535 (excluding 8888). 
+     * @return GatewayPort Gateway port. Range: 1–65535 (excluding 8888).
      */
     public Long getGatewayPort() {
         return this.GatewayPort;
     }
 
     /**
-     * Set Gateway port: value range: 1-65535 (excluding 8888).
-     * @param GatewayPort Gateway port: value range: 1-65535 (excluding 8888).
+     * Set Gateway port. Range: 1–65535 (excluding 8888).
+     * @param GatewayPort Gateway port. Range: 1–65535 (excluding 8888).
      */
     public void setGatewayPort(Long GatewayPort) {
         this.GatewayPort = GatewayPort;
     }
 
     /**
-     * Get Gateway region: GatewayType value is cloud (cloud gateway). required. RegionId list can be obtained from the DescribeMultiPathGatewayRegions API. 
-     * @return RegionId Gateway region: GatewayType value is cloud (cloud gateway). required. RegionId list can be obtained from the DescribeMultiPathGatewayRegions API.
+     * Get Gateway region. Required when the GatewayType value is cloud (Cloud Gateway). You can query the RegionId list via the DescribeMultiPathGatewayRegions API. 
+     * @return RegionId Gateway region. Required when the GatewayType value is cloud (Cloud Gateway). You can query the RegionId list via the DescribeMultiPathGatewayRegions API.
      */
     public String getRegionId() {
         return this.RegionId;
     }
 
     /**
-     * Set Gateway region: GatewayType value is cloud (cloud gateway). required. RegionId list can be obtained from the DescribeMultiPathGatewayRegions API.
-     * @param RegionId Gateway region: GatewayType value is cloud (cloud gateway). required. RegionId list can be obtained from the DescribeMultiPathGatewayRegions API.
+     * Set Gateway region. Required when the GatewayType value is cloud (Cloud Gateway). You can query the RegionId list via the DescribeMultiPathGatewayRegions API.
+     * @param RegionId Gateway region. Required when the GatewayType value is cloud (Cloud Gateway). You can query the RegionId list via the DescribeMultiPathGatewayRegions API.
      */
     public void setRegionId(String RegionId) {
         this.RegionId = RegionId;
     }
 
     /**
-     * Get Gateway address (required when GatewayType=private):
-Before using this address, ensure it has been registered in the Tencent Cloud Multi-Path Security Acceleration Gateway system. 
-If not registered, submit a support ticket or contact your architect to pre-register the gateway IP address in the system before API invocation. 
-     * @return GatewayIP Gateway address (required when GatewayType=private):
-Before using this address, ensure it has been registered in the Tencent Cloud Multi-Path Security Acceleration Gateway system. 
-If not registered, submit a support ticket or contact your architect to pre-register the gateway IP address in the system before API invocation.
+     * Get Gateway address. Required when GatewayType is private. When using this address, please ensure it has been entered into the Tencent Cloud multi-channel security acceleration gateway system. If not entered, the gateway IP address needs to be entered into the Tencent Cloud multi-channel security acceleration gateway system in advance through a ticket or by contacting the architect before calling this API. 
+     * @return GatewayIP Gateway address. Required when GatewayType is private. When using this address, please ensure it has been entered into the Tencent Cloud multi-channel security acceleration gateway system. If not entered, the gateway IP address needs to be entered into the Tencent Cloud multi-channel security acceleration gateway system in advance through a ticket or by contacting the architect before calling this API.
      */
     public String getGatewayIP() {
         return this.GatewayIP;
     }
 
     /**
-     * Set Gateway address (required when GatewayType=private):
-Before using this address, ensure it has been registered in the Tencent Cloud Multi-Path Security Acceleration Gateway system. 
-If not registered, submit a support ticket or contact your architect to pre-register the gateway IP address in the system before API invocation.
-     * @param GatewayIP Gateway address (required when GatewayType=private):
-Before using this address, ensure it has been registered in the Tencent Cloud Multi-Path Security Acceleration Gateway system. 
-If not registered, submit a support ticket or contact your architect to pre-register the gateway IP address in the system before API invocation.
+     * Set Gateway address. Required when GatewayType is private. When using this address, please ensure it has been entered into the Tencent Cloud multi-channel security acceleration gateway system. If not entered, the gateway IP address needs to be entered into the Tencent Cloud multi-channel security acceleration gateway system in advance through a ticket or by contacting the architect before calling this API.
+     * @param GatewayIP Gateway address. Required when GatewayType is private. When using this address, please ensure it has been entered into the Tencent Cloud multi-channel security acceleration gateway system. If not entered, the gateway IP address needs to be entered into the Tencent Cloud multi-channel security acceleration gateway system in advance through a ticket or by contacting the architect before calling this API.
      */
     public void setGatewayIP(String GatewayIP) {
         this.GatewayIP = GatewayIP;

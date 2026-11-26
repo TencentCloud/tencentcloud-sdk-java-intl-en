@@ -24,79 +24,79 @@ import java.util.HashMap;
 public class DeleteAccelerationDomainsRequest extends AbstractModel {
 
     /**
-    * ID of the site related with the accelerated domain name.
+    * Zone ID of the acceleration domain name.
     */
     @SerializedName("ZoneId")
     @Expose
     private String ZoneId;
 
     /**
-    * List of accelerated domain names to be deleted.
+    * List of acceleration domain name IDs that need to be deleted.
     */
     @SerializedName("DomainNames")
     @Expose
     private String [] DomainNames;
 
     /**
-    * Whether to forcibly delete a domain name if it is associated with resources (such as alias domain names and traffic scheduling policies). 
-<li>`true`: Delete the domain name and all associated resources.</li>
-<li>`false`: Do not delete the domain name and all associated resources.</li>If it’s not specified, the default value `false` is used.
+    * Whether to force delete. When a domain name has associated resources (for example, alias domain names or traffic scheduling functions), whether to force delete that domain name. Valid values:
+<li> true: delete that domain name and all associated resources;</li>
+<li> false: When the acceleration domain name has associated resources, deletion is not allowed.</li>If not specified, the default value is false.
     */
     @SerializedName("Force")
     @Expose
     private Boolean Force;
 
     /**
-     * Get ID of the site related with the accelerated domain name. 
-     * @return ZoneId ID of the site related with the accelerated domain name.
+     * Get Zone ID of the acceleration domain name. 
+     * @return ZoneId Zone ID of the acceleration domain name.
      */
     public String getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set ID of the site related with the accelerated domain name.
-     * @param ZoneId ID of the site related with the accelerated domain name.
+     * Set Zone ID of the acceleration domain name.
+     * @param ZoneId Zone ID of the acceleration domain name.
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get List of accelerated domain names to be deleted. 
-     * @return DomainNames List of accelerated domain names to be deleted.
+     * Get List of acceleration domain name IDs that need to be deleted. 
+     * @return DomainNames List of acceleration domain name IDs that need to be deleted.
      */
     public String [] getDomainNames() {
         return this.DomainNames;
     }
 
     /**
-     * Set List of accelerated domain names to be deleted.
-     * @param DomainNames List of accelerated domain names to be deleted.
+     * Set List of acceleration domain name IDs that need to be deleted.
+     * @param DomainNames List of acceleration domain name IDs that need to be deleted.
      */
     public void setDomainNames(String [] DomainNames) {
         this.DomainNames = DomainNames;
     }
 
     /**
-     * Get Whether to forcibly delete a domain name if it is associated with resources (such as alias domain names and traffic scheduling policies). 
-<li>`true`: Delete the domain name and all associated resources.</li>
-<li>`false`: Do not delete the domain name and all associated resources.</li>If it’s not specified, the default value `false` is used. 
-     * @return Force Whether to forcibly delete a domain name if it is associated with resources (such as alias domain names and traffic scheduling policies). 
-<li>`true`: Delete the domain name and all associated resources.</li>
-<li>`false`: Do not delete the domain name and all associated resources.</li>If it’s not specified, the default value `false` is used.
+     * Get Whether to force delete. When a domain name has associated resources (for example, alias domain names or traffic scheduling functions), whether to force delete that domain name. Valid values:
+<li> true: delete that domain name and all associated resources;</li>
+<li> false: When the acceleration domain name has associated resources, deletion is not allowed.</li>If not specified, the default value is false. 
+     * @return Force Whether to force delete. When a domain name has associated resources (for example, alias domain names or traffic scheduling functions), whether to force delete that domain name. Valid values:
+<li> true: delete that domain name and all associated resources;</li>
+<li> false: When the acceleration domain name has associated resources, deletion is not allowed.</li>If not specified, the default value is false.
      */
     public Boolean getForce() {
         return this.Force;
     }
 
     /**
-     * Set Whether to forcibly delete a domain name if it is associated with resources (such as alias domain names and traffic scheduling policies). 
-<li>`true`: Delete the domain name and all associated resources.</li>
-<li>`false`: Do not delete the domain name and all associated resources.</li>If it’s not specified, the default value `false` is used.
-     * @param Force Whether to forcibly delete a domain name if it is associated with resources (such as alias domain names and traffic scheduling policies). 
-<li>`true`: Delete the domain name and all associated resources.</li>
-<li>`false`: Do not delete the domain name and all associated resources.</li>If it’s not specified, the default value `false` is used.
+     * Set Whether to force delete. When a domain name has associated resources (for example, alias domain names or traffic scheduling functions), whether to force delete that domain name. Valid values:
+<li> true: delete that domain name and all associated resources;</li>
+<li> false: When the acceleration domain name has associated resources, deletion is not allowed.</li>If not specified, the default value is false.
+     * @param Force Whether to force delete. When a domain name has associated resources (for example, alias domain names or traffic scheduling functions), whether to force delete that domain name. Valid values:
+<li> true: delete that domain name and all associated resources;</li>
+<li> false: When the acceleration domain name has associated resources, deletion is not allowed.</li>If not specified, the default value is false.
      */
     public void setForce(Boolean Force) {
         this.Force = Force;

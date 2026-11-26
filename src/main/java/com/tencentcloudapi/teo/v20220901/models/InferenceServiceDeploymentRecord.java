@@ -31,11 +31,11 @@ public class InferenceServiceDeploymentRecord extends AbstractModel {
     private String RecordId;
 
     /**
-    * Deployment operation type, value:
-<li>create: creation</li>
-<li>update: refresh;</li>
-<li>resume: enabled;</li>
-<li>stop: disable.</li>
+    * Deployment operation type. Valid values:
+<li>create: create;</li>
+<li>update: update;</li>
+<li>resume: enable;</li>
+<li>stop: Disable.</li>
     */
     @SerializedName("Operation")
     @Expose
@@ -43,8 +43,8 @@ public class InferenceServiceDeploymentRecord extends AbstractModel {
 
     /**
     * Deployment state. Valid values:
-<li>processing: deployment in progress;</li>
-<li>succeeded: Deployment successful;</li>
+<li>processing: deploying;</li>
+<li>succeeded: Deployed successfully;</li>
 <li>failed: Deployment failed.</li>
     */
     @SerializedName("Status")
@@ -52,14 +52,14 @@ public class InferenceServiceDeploymentRecord extends AbstractModel {
     private String Status;
 
     /**
-    * Deployment duration, unit: second.
+    * Deployment duration. Unit: seconds.
     */
     @SerializedName("Duration")
     @Expose
     private Long Duration;
 
     /**
-    * Configuration for this service deployment.
+    * Configuration of this inference service deployment.
     */
     @SerializedName("InferenceServiceConfig")
     @Expose
@@ -73,9 +73,9 @@ public class InferenceServiceDeploymentRecord extends AbstractModel {
     private String CreateTime;
 
     /**
-    * Whether the deployment configuration is the effective configuration. Value:
-<li> active: effective configuration;</li>
-<li> inactive: earlier version or abnormal version configuration.</li>
+    * Whether the deployment configuration is currently effective. Value:
+<li> active: effective configuration currently in use;</li>
+<li> inactive: configuration of an earlier version or an abnormal version.</li>
     */
     @SerializedName("ActiveStatus")
     @Expose
@@ -98,32 +98,32 @@ public class InferenceServiceDeploymentRecord extends AbstractModel {
     }
 
     /**
-     * Get Deployment operation type, value:
-<li>create: creation</li>
-<li>update: refresh;</li>
-<li>resume: enabled;</li>
-<li>stop: disable.</li> 
-     * @return Operation Deployment operation type, value:
-<li>create: creation</li>
-<li>update: refresh;</li>
-<li>resume: enabled;</li>
-<li>stop: disable.</li>
+     * Get Deployment operation type. Valid values:
+<li>create: create;</li>
+<li>update: update;</li>
+<li>resume: enable;</li>
+<li>stop: Disable.</li> 
+     * @return Operation Deployment operation type. Valid values:
+<li>create: create;</li>
+<li>update: update;</li>
+<li>resume: enable;</li>
+<li>stop: Disable.</li>
      */
     public String getOperation() {
         return this.Operation;
     }
 
     /**
-     * Set Deployment operation type, value:
-<li>create: creation</li>
-<li>update: refresh;</li>
-<li>resume: enabled;</li>
-<li>stop: disable.</li>
-     * @param Operation Deployment operation type, value:
-<li>create: creation</li>
-<li>update: refresh;</li>
-<li>resume: enabled;</li>
-<li>stop: disable.</li>
+     * Set Deployment operation type. Valid values:
+<li>create: create;</li>
+<li>update: update;</li>
+<li>resume: enable;</li>
+<li>stop: Disable.</li>
+     * @param Operation Deployment operation type. Valid values:
+<li>create: create;</li>
+<li>update: update;</li>
+<li>resume: enable;</li>
+<li>stop: Disable.</li>
      */
     public void setOperation(String Operation) {
         this.Operation = Operation;
@@ -131,12 +131,12 @@ public class InferenceServiceDeploymentRecord extends AbstractModel {
 
     /**
      * Get Deployment state. Valid values:
-<li>processing: deployment in progress;</li>
-<li>succeeded: Deployment successful;</li>
+<li>processing: deploying;</li>
+<li>succeeded: Deployed successfully;</li>
 <li>failed: Deployment failed.</li> 
      * @return Status Deployment state. Valid values:
-<li>processing: deployment in progress;</li>
-<li>succeeded: Deployment successful;</li>
+<li>processing: deploying;</li>
+<li>succeeded: Deployed successfully;</li>
 <li>failed: Deployment failed.</li>
      */
     public String getStatus() {
@@ -145,12 +145,12 @@ public class InferenceServiceDeploymentRecord extends AbstractModel {
 
     /**
      * Set Deployment state. Valid values:
-<li>processing: deployment in progress;</li>
-<li>succeeded: Deployment successful;</li>
+<li>processing: deploying;</li>
+<li>succeeded: Deployed successfully;</li>
 <li>failed: Deployment failed.</li>
      * @param Status Deployment state. Valid values:
-<li>processing: deployment in progress;</li>
-<li>succeeded: Deployment successful;</li>
+<li>processing: deploying;</li>
+<li>succeeded: Deployed successfully;</li>
 <li>failed: Deployment failed.</li>
      */
     public void setStatus(String Status) {
@@ -158,32 +158,32 @@ public class InferenceServiceDeploymentRecord extends AbstractModel {
     }
 
     /**
-     * Get Deployment duration, unit: second. 
-     * @return Duration Deployment duration, unit: second.
+     * Get Deployment duration. Unit: seconds. 
+     * @return Duration Deployment duration. Unit: seconds.
      */
     public Long getDuration() {
         return this.Duration;
     }
 
     /**
-     * Set Deployment duration, unit: second.
-     * @param Duration Deployment duration, unit: second.
+     * Set Deployment duration. Unit: seconds.
+     * @param Duration Deployment duration. Unit: seconds.
      */
     public void setDuration(Long Duration) {
         this.Duration = Duration;
     }
 
     /**
-     * Get Configuration for this service deployment. 
-     * @return InferenceServiceConfig Configuration for this service deployment.
+     * Get Configuration of this inference service deployment. 
+     * @return InferenceServiceConfig Configuration of this inference service deployment.
      */
     public InferenceServiceConfig getInferenceServiceConfig() {
         return this.InferenceServiceConfig;
     }
 
     /**
-     * Set Configuration for this service deployment.
-     * @param InferenceServiceConfig Configuration for this service deployment.
+     * Set Configuration of this inference service deployment.
+     * @param InferenceServiceConfig Configuration of this inference service deployment.
      */
     public void setInferenceServiceConfig(InferenceServiceConfig InferenceServiceConfig) {
         this.InferenceServiceConfig = InferenceServiceConfig;
@@ -206,24 +206,24 @@ public class InferenceServiceDeploymentRecord extends AbstractModel {
     }
 
     /**
-     * Get Whether the deployment configuration is the effective configuration. Value:
-<li> active: effective configuration;</li>
-<li> inactive: earlier version or abnormal version configuration.</li> 
-     * @return ActiveStatus Whether the deployment configuration is the effective configuration. Value:
-<li> active: effective configuration;</li>
-<li> inactive: earlier version or abnormal version configuration.</li>
+     * Get Whether the deployment configuration is currently effective. Value:
+<li> active: effective configuration currently in use;</li>
+<li> inactive: configuration of an earlier version or an abnormal version.</li> 
+     * @return ActiveStatus Whether the deployment configuration is currently effective. Value:
+<li> active: effective configuration currently in use;</li>
+<li> inactive: configuration of an earlier version or an abnormal version.</li>
      */
     public String getActiveStatus() {
         return this.ActiveStatus;
     }
 
     /**
-     * Set Whether the deployment configuration is the effective configuration. Value:
-<li> active: effective configuration;</li>
-<li> inactive: earlier version or abnormal version configuration.</li>
-     * @param ActiveStatus Whether the deployment configuration is the effective configuration. Value:
-<li> active: effective configuration;</li>
-<li> inactive: earlier version or abnormal version configuration.</li>
+     * Set Whether the deployment configuration is currently effective. Value:
+<li> active: effective configuration currently in use;</li>
+<li> inactive: configuration of an earlier version or an abnormal version.</li>
+     * @param ActiveStatus Whether the deployment configuration is currently effective. Value:
+<li> active: effective configuration currently in use;</li>
+<li> inactive: configuration of an earlier version or an abnormal version.</li>
      */
     public void setActiveStatus(String ActiveStatus) {
         this.ActiveStatus = ActiveStatus;

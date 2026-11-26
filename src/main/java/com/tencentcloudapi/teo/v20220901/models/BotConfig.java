@@ -24,171 +24,171 @@ import java.util.HashMap;
 public class BotConfig extends AbstractModel {
 
     /**
-    * Whether to enable bot security. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+    * bot switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * The settings of the bot managed rule. If it is null, the settings that were last configured will be used.
+    * Common detailed basic rules. If it is null, use the last set configuration by default.
     */
     @SerializedName("BotManagedRule")
     @Expose
     private BotManagedRule BotManagedRule;
 
     /**
-    * The settings of the client reputation rule. If it is null, the settings that were last configured will be used.
+    * User profiling rule. If it is null, use the last set configuration by default.
     */
     @SerializedName("BotPortraitRule")
     @Expose
     private BotPortraitRule BotPortraitRule;
 
     /**
-    * Bot intelligent analysis. if null, use the last set configuration by default.
+    * Bot intelligent analysis. If it is null, use the last set configuration by default.
     */
     @SerializedName("IntelligenceRule")
     @Expose
     private IntelligenceRule IntelligenceRule;
 
     /**
-    * Settings of the custom bot rule. If it is null, the settings that were last configured will be used.
+    * Bot custom rule. If it is null, the last set configuration is used by default.
     */
     @SerializedName("BotUserRules")
     @Expose
     private BotUserRule [] BotUserRules;
 
     /**
-    * Active bot detection rule.
+    * Bot active feature detection rule.
     */
     @SerializedName("AlgDetectRule")
     @Expose
     private AlgDetectRule [] AlgDetectRule;
 
     /**
-    * Bot managed custom policy. optional input. output usage only.
+    * Bot managed custom policy. This input parameter is optional and is only used as an output parameter.
     */
     @SerializedName("Customizes")
     @Expose
     private BotUserRule [] Customizes;
 
     /**
-     * Get Whether to enable bot security. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li> 
-     * @return Switch Whether to enable bot security. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+     * Get bot switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li> 
+     * @return Switch bot switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set Whether to enable bot security. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-     * @param Switch Whether to enable bot security. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+     * Set bot switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+     * @param Switch bot switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get The settings of the bot managed rule. If it is null, the settings that were last configured will be used. 
-     * @return BotManagedRule The settings of the bot managed rule. If it is null, the settings that were last configured will be used.
+     * Get Common detailed basic rules. If it is null, use the last set configuration by default. 
+     * @return BotManagedRule Common detailed basic rules. If it is null, use the last set configuration by default.
      */
     public BotManagedRule getBotManagedRule() {
         return this.BotManagedRule;
     }
 
     /**
-     * Set The settings of the bot managed rule. If it is null, the settings that were last configured will be used.
-     * @param BotManagedRule The settings of the bot managed rule. If it is null, the settings that were last configured will be used.
+     * Set Common detailed basic rules. If it is null, use the last set configuration by default.
+     * @param BotManagedRule Common detailed basic rules. If it is null, use the last set configuration by default.
      */
     public void setBotManagedRule(BotManagedRule BotManagedRule) {
         this.BotManagedRule = BotManagedRule;
     }
 
     /**
-     * Get The settings of the client reputation rule. If it is null, the settings that were last configured will be used. 
-     * @return BotPortraitRule The settings of the client reputation rule. If it is null, the settings that were last configured will be used.
+     * Get User profiling rule. If it is null, use the last set configuration by default. 
+     * @return BotPortraitRule User profiling rule. If it is null, use the last set configuration by default.
      */
     public BotPortraitRule getBotPortraitRule() {
         return this.BotPortraitRule;
     }
 
     /**
-     * Set The settings of the client reputation rule. If it is null, the settings that were last configured will be used.
-     * @param BotPortraitRule The settings of the client reputation rule. If it is null, the settings that were last configured will be used.
+     * Set User profiling rule. If it is null, use the last set configuration by default.
+     * @param BotPortraitRule User profiling rule. If it is null, use the last set configuration by default.
      */
     public void setBotPortraitRule(BotPortraitRule BotPortraitRule) {
         this.BotPortraitRule = BotPortraitRule;
     }
 
     /**
-     * Get Bot intelligent analysis. if null, use the last set configuration by default. 
-     * @return IntelligenceRule Bot intelligent analysis. if null, use the last set configuration by default.
+     * Get Bot intelligent analysis. If it is null, use the last set configuration by default. 
+     * @return IntelligenceRule Bot intelligent analysis. If it is null, use the last set configuration by default.
      */
     public IntelligenceRule getIntelligenceRule() {
         return this.IntelligenceRule;
     }
 
     /**
-     * Set Bot intelligent analysis. if null, use the last set configuration by default.
-     * @param IntelligenceRule Bot intelligent analysis. if null, use the last set configuration by default.
+     * Set Bot intelligent analysis. If it is null, use the last set configuration by default.
+     * @param IntelligenceRule Bot intelligent analysis. If it is null, use the last set configuration by default.
      */
     public void setIntelligenceRule(IntelligenceRule IntelligenceRule) {
         this.IntelligenceRule = IntelligenceRule;
     }
 
     /**
-     * Get Settings of the custom bot rule. If it is null, the settings that were last configured will be used. 
-     * @return BotUserRules Settings of the custom bot rule. If it is null, the settings that were last configured will be used.
+     * Get Bot custom rule. If it is null, the last set configuration is used by default. 
+     * @return BotUserRules Bot custom rule. If it is null, the last set configuration is used by default.
      */
     public BotUserRule [] getBotUserRules() {
         return this.BotUserRules;
     }
 
     /**
-     * Set Settings of the custom bot rule. If it is null, the settings that were last configured will be used.
-     * @param BotUserRules Settings of the custom bot rule. If it is null, the settings that were last configured will be used.
+     * Set Bot custom rule. If it is null, the last set configuration is used by default.
+     * @param BotUserRules Bot custom rule. If it is null, the last set configuration is used by default.
      */
     public void setBotUserRules(BotUserRule [] BotUserRules) {
         this.BotUserRules = BotUserRules;
     }
 
     /**
-     * Get Active bot detection rule. 
-     * @return AlgDetectRule Active bot detection rule.
+     * Get Bot active feature detection rule. 
+     * @return AlgDetectRule Bot active feature detection rule.
      */
     public AlgDetectRule [] getAlgDetectRule() {
         return this.AlgDetectRule;
     }
 
     /**
-     * Set Active bot detection rule.
-     * @param AlgDetectRule Active bot detection rule.
+     * Set Bot active feature detection rule.
+     * @param AlgDetectRule Bot active feature detection rule.
      */
     public void setAlgDetectRule(AlgDetectRule [] AlgDetectRule) {
         this.AlgDetectRule = AlgDetectRule;
     }
 
     /**
-     * Get Bot managed custom policy. optional input. output usage only. 
-     * @return Customizes Bot managed custom policy. optional input. output usage only.
+     * Get Bot managed custom policy. This input parameter is optional and is only used as an output parameter. 
+     * @return Customizes Bot managed custom policy. This input parameter is optional and is only used as an output parameter.
      */
     public BotUserRule [] getCustomizes() {
         return this.Customizes;
     }
 
     /**
-     * Set Bot managed custom policy. optional input. output usage only.
-     * @param Customizes Bot managed custom policy. optional input. output usage only.
+     * Set Bot managed custom policy. This input parameter is optional and is only used as an output parameter.
+     * @param Customizes Bot managed custom policy. This input parameter is optional and is only used as an output parameter.
      */
     public void setCustomizes(BotUserRule [] Customizes) {
         this.Customizes = Customizes;

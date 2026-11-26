@@ -24,25 +24,24 @@ import java.util.HashMap;
 public class Hsts extends AbstractModel {
 
     /**
-    * Whether to enable the configuration. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+    * Whether it is enabled. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * MaxAge value. expressed in seconds, maximum value is 1 day.
+    * MaxAge value, in seconds. Maximum value: 1 day.
     */
     @SerializedName("MaxAge")
     @Expose
     private Long MaxAge;
 
     /**
-    * Specifies whether the subdomain is included. valid values:.
+    * Whether it contains subdomains. Valid values:
 <li>`on`: Enable;</li>
-
 <li>off: Disable.</li>
     */
     @SerializedName("IncludeSubDomains")
@@ -50,9 +49,8 @@ public class Hsts extends AbstractModel {
     private String IncludeSubDomains;
 
     /**
-    * Whether to enable preloading. valid values:.
+    * Whether to enable preloading. Valid values:
 <li>`on`: Enable;</li>
-
 <li>off: Disable.</li>
     */
     @SerializedName("Preload")
@@ -60,53 +58,51 @@ public class Hsts extends AbstractModel {
     private String Preload;
 
     /**
-     * Get Whether to enable the configuration. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li> 
-     * @return Switch Whether to enable the configuration. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+     * Get Whether it is enabled. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li> 
+     * @return Switch Whether it is enabled. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set Whether to enable the configuration. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-     * @param Switch Whether to enable the configuration. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+     * Set Whether it is enabled. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+     * @param Switch Whether it is enabled. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get MaxAge value. expressed in seconds, maximum value is 1 day. 
-     * @return MaxAge MaxAge value. expressed in seconds, maximum value is 1 day.
+     * Get MaxAge value, in seconds. Maximum value: 1 day. 
+     * @return MaxAge MaxAge value, in seconds. Maximum value: 1 day.
      */
     public Long getMaxAge() {
         return this.MaxAge;
     }
 
     /**
-     * Set MaxAge value. expressed in seconds, maximum value is 1 day.
-     * @param MaxAge MaxAge value. expressed in seconds, maximum value is 1 day.
+     * Set MaxAge value, in seconds. Maximum value: 1 day.
+     * @param MaxAge MaxAge value, in seconds. Maximum value: 1 day.
      */
     public void setMaxAge(Long MaxAge) {
         this.MaxAge = MaxAge;
     }
 
     /**
-     * Get Specifies whether the subdomain is included. valid values:.
+     * Get Whether it contains subdomains. Valid values:
 <li>`on`: Enable;</li>
-
 <li>off: Disable.</li> 
-     * @return IncludeSubDomains Specifies whether the subdomain is included. valid values:.
+     * @return IncludeSubDomains Whether it contains subdomains. Valid values:
 <li>`on`: Enable;</li>
-
 <li>off: Disable.</li>
      */
     public String getIncludeSubDomains() {
@@ -114,13 +110,11 @@ public class Hsts extends AbstractModel {
     }
 
     /**
-     * Set Specifies whether the subdomain is included. valid values:.
+     * Set Whether it contains subdomains. Valid values:
 <li>`on`: Enable;</li>
-
 <li>off: Disable.</li>
-     * @param IncludeSubDomains Specifies whether the subdomain is included. valid values:.
+     * @param IncludeSubDomains Whether it contains subdomains. Valid values:
 <li>`on`: Enable;</li>
-
 <li>off: Disable.</li>
      */
     public void setIncludeSubDomains(String IncludeSubDomains) {
@@ -128,13 +122,11 @@ public class Hsts extends AbstractModel {
     }
 
     /**
-     * Get Whether to enable preloading. valid values:.
+     * Get Whether to enable preloading. Valid values:
 <li>`on`: Enable;</li>
-
 <li>off: Disable.</li> 
-     * @return Preload Whether to enable preloading. valid values:.
+     * @return Preload Whether to enable preloading. Valid values:
 <li>`on`: Enable;</li>
-
 <li>off: Disable.</li>
      */
     public String getPreload() {
@@ -142,13 +134,11 @@ public class Hsts extends AbstractModel {
     }
 
     /**
-     * Set Whether to enable preloading. valid values:.
+     * Set Whether to enable preloading. Valid values:
 <li>`on`: Enable;</li>
-
 <li>off: Disable.</li>
-     * @param Preload Whether to enable preloading. valid values:.
+     * @param Preload Whether to enable preloading. Valid values:
 <li>`on`: Enable;</li>
-
 <li>off: Disable.</li>
      */
     public void setPreload(String Preload) {

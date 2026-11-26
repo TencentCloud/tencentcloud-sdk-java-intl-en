@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class ErrorPageParameters extends AbstractModel {
 
     /**
-    * Custom error page configuration list.
+    * List of custom error page configurations.
     */
     @SerializedName("ErrorPageParams")
     @Expose
     private ErrorPage [] ErrorPageParams;
 
     /**
-     * Get Custom error page configuration list. 
-     * @return ErrorPageParams Custom error page configuration list.
+     * Get List of custom error page configurations. 
+     * @return ErrorPageParams List of custom error page configurations.
      */
     public ErrorPage [] getErrorPageParams() {
         return this.ErrorPageParams;
     }
 
     /**
-     * Set Custom error page configuration list.
-     * @param ErrorPageParams Custom error page configuration list.
+     * Set List of custom error page configurations.
+     * @param ErrorPageParams List of custom error page configurations.
      */
     public void setErrorPageParams(ErrorPage [] ErrorPageParams) {
         this.ErrorPageParams = ErrorPageParams;

@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class CreateCustomizeErrorPageRequest extends AbstractModel {
 
     /**
-    * Zone ID.
+    * <p>Zone ID.</p>
     */
     @SerializedName("ZoneId")
     @Expose
     private String ZoneId;
 
     /**
-    * Custom error page name. The name must be 2-30 characters long.
+    * <p>Custom response page name, which must contain 2-30 characters.</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * Custom error page type, with values:<li>text/html; </li><li>application/json;</li><li>text/plain;</li><li>text/xml.</li>
+    * <p>Custom response page type, with values:</p><ul><li>text/html</li><li>application/json</li><li>plain/text</li><li>text/xml</li><li>text/css</li><li>text/javascript</li><li>application/javascript</li><li>text/markdown</li></ul>
     */
     @SerializedName("ContentType")
     @Expose
     private String ContentType;
 
     /**
-    * Custom error page description, not exceeding 60 characters.
+    * <p>Custom response page description, no more than 60 characters.</p>
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * Custom error page content, not exceeding 2 KB.
+    * <p>Custom response page content, no more than 16KB.</p>
     */
     @SerializedName("Content")
     @Expose
     private String Content;
 
     /**
-     * Get Zone ID. 
-     * @return ZoneId Zone ID.
+     * Get <p>Zone ID.</p> 
+     * @return ZoneId <p>Zone ID.</p>
      */
     public String getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set Zone ID.
-     * @param ZoneId Zone ID.
+     * Set <p>Zone ID.</p>
+     * @param ZoneId <p>Zone ID.</p>
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get Custom error page name. The name must be 2-30 characters long. 
-     * @return Name Custom error page name. The name must be 2-30 characters long.
+     * Get <p>Custom response page name, which must contain 2-30 characters.</p> 
+     * @return Name <p>Custom response page name, which must contain 2-30 characters.</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Custom error page name. The name must be 2-30 characters long.
-     * @param Name Custom error page name. The name must be 2-30 characters long.
+     * Set <p>Custom response page name, which must contain 2-30 characters.</p>
+     * @param Name <p>Custom response page name, which must contain 2-30 characters.</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Custom error page type, with values:<li>text/html; </li><li>application/json;</li><li>text/plain;</li><li>text/xml.</li> 
-     * @return ContentType Custom error page type, with values:<li>text/html; </li><li>application/json;</li><li>text/plain;</li><li>text/xml.</li>
+     * Get <p>Custom response page type, with values:</p><ul><li>text/html</li><li>application/json</li><li>plain/text</li><li>text/xml</li><li>text/css</li><li>text/javascript</li><li>application/javascript</li><li>text/markdown</li></ul> 
+     * @return ContentType <p>Custom response page type, with values:</p><ul><li>text/html</li><li>application/json</li><li>plain/text</li><li>text/xml</li><li>text/css</li><li>text/javascript</li><li>application/javascript</li><li>text/markdown</li></ul>
      */
     public String getContentType() {
         return this.ContentType;
     }
 
     /**
-     * Set Custom error page type, with values:<li>text/html; </li><li>application/json;</li><li>text/plain;</li><li>text/xml.</li>
-     * @param ContentType Custom error page type, with values:<li>text/html; </li><li>application/json;</li><li>text/plain;</li><li>text/xml.</li>
+     * Set <p>Custom response page type, with values:</p><ul><li>text/html</li><li>application/json</li><li>plain/text</li><li>text/xml</li><li>text/css</li><li>text/javascript</li><li>application/javascript</li><li>text/markdown</li></ul>
+     * @param ContentType <p>Custom response page type, with values:</p><ul><li>text/html</li><li>application/json</li><li>plain/text</li><li>text/xml</li><li>text/css</li><li>text/javascript</li><li>application/javascript</li><li>text/markdown</li></ul>
      */
     public void setContentType(String ContentType) {
         this.ContentType = ContentType;
     }
 
     /**
-     * Get Custom error page description, not exceeding 60 characters. 
-     * @return Description Custom error page description, not exceeding 60 characters.
+     * Get <p>Custom response page description, no more than 60 characters.</p> 
+     * @return Description <p>Custom response page description, no more than 60 characters.</p>
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set Custom error page description, not exceeding 60 characters.
-     * @param Description Custom error page description, not exceeding 60 characters.
+     * Set <p>Custom response page description, no more than 60 characters.</p>
+     * @param Description <p>Custom response page description, no more than 60 characters.</p>
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get Custom error page content, not exceeding 2 KB. 
-     * @return Content Custom error page content, not exceeding 2 KB.
+     * Get <p>Custom response page content, no more than 16KB.</p> 
+     * @return Content <p>Custom response page content, no more than 16KB.</p>
      */
     public String getContent() {
         return this.Content;
     }
 
     /**
-     * Set Custom error page content, not exceeding 2 KB.
-     * @param Content Custom error page content, not exceeding 2 KB.
+     * Set <p>Custom response page content, no more than 16KB.</p>
+     * @param Content <p>Custom response page content, no more than 16KB.</p>
      */
     public void setContent(String Content) {
         this.Content = Content;

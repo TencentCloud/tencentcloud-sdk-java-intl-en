@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class InferenceServiceMonitorItem extends AbstractModel {
 
     /**
-    * Corresponding time point of monitoring data.
+    * Time point of the monitoring data.
     */
     @SerializedName("Timestamp")
     @Expose
@@ -38,16 +38,16 @@ public class InferenceServiceMonitorItem extends AbstractModel {
     private Float Value;
 
     /**
-     * Get Corresponding time point of monitoring data. 
-     * @return Timestamp Corresponding time point of monitoring data.
+     * Get Time point of the monitoring data. 
+     * @return Timestamp Time point of the monitoring data.
      */
     public String getTimestamp() {
         return this.Timestamp;
     }
 
     /**
-     * Set Corresponding time point of monitoring data.
-     * @param Timestamp Corresponding time point of monitoring data.
+     * Set Time point of the monitoring data.
+     * @param Timestamp Time point of the monitoring data.
      */
     public void setTimestamp(String Timestamp) {
         this.Timestamp = Timestamp;

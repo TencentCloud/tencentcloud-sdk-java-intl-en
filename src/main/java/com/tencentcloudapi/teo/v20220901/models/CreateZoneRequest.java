@@ -24,37 +24,37 @@ import java.util.HashMap;
 public class CreateZoneRequest extends AbstractModel {
 
     /**
-    * Site access type. if this parameter is not input, the default value `partial` is used. valid values of this parameter are as follows:.
-<li>partial: CNAME access;</li>.
-<li>full: NS access;</li>.
-<li>noDomainAccess: access with no domain name.</li>.
-<li>dnsPodAccess: DNSPod hosted access. to use this access mode, your domain name should have been hosted on DNSPod.</li>.
-<li>ai: edge reasoning integration.</li>.
+    * Site access type. If this parameter is not input, the default value `partial` is used. Valid values of this parameter are as follows:
+<li>partial: CNAME access;</li>
+<li>full: NS access;</li>
+<li>noDomainAccess: access with no domain name.</li>
+<li>dnsPodAccess: DNSPod managed access. To use this access mode, your domain name should have been hosted on DNSPod;</li>
+<li>ai: Edge reasoning integration.</li>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * Site name. For sites connected via CNAME/NS, pass in the secondary domain name (example.com). Leave it blank if the site is connected without a domain name. 
+    * Site name. For CNAME/NS access, pass in the second-level domain (example.com) as the site name. For domainless access, leave this value empty.
     */
     @SerializedName("ZoneName")
     @Expose
     private String ZoneName;
 
     /**
-    * The acceleration area of the L7 domain name when `Type` is `partial` or `full`. When Type is `noDomainAccess`, please leave it blank.
-<li>`global`: Global AZs</li>
-<li>`mainland`: AZs in the Chinese mainland</li>
-<li>`overseas`: (Default) AZs outside the Chinese mainland </li>
+    * Acceleration region of the layer-7 domain name when Type is partial/full. The following are the values for this parameter. If left empty, the default value is overseas. When Type is noDomainAccess, retain this value as empty:
+<li> global: global availability zone;</li>
+<li>mainland: Chinese mainland availability zone;</li>
+<li>overseas: global availability zone (excluding the Chinese mainland).</li>
     */
     @SerializedName("Area")
     @Expose
     private String Area;
 
     /**
-    * Target package ID to bind. when a package already exists under your account, you can fill in this parameter to directly bind the site to the package. if there are currently no bindable packages, you can purchase a package via [CreatePlan](https://intl.cloud.tencent.com/document/product/1552/105771?from_cn_redirect=1).
-Note: if this parameter is not specified, a site in "init" status will be created. the site is inactive and will not be displayed in the console. you can bind a package and activate the site through [BindZoneToPlan](https://intl.cloud.tencent.com/document/product/1552/83042?from_cn_redirect=1). after activation, the site can provide service properly.
+    * ID of the target bundle to bind. If your account already has a bundle, you can fill in this parameter to bind the site to it directly. If you currently have no bindable bundle, you can purchase one through [CreatePlan](https://www.tencentcloud.com/document/product/1552/105771?from_cn_redirect=1).
+Note: If this parameter is not specified, a site in the "init" state will be created. The site is inactive and will not be displayed in the console. You can access [BindZoneToPlan](https://www.tencentcloud.com/document/product/1552/83042?from_cn_redirect=1) to bind a package and activate the site. After activation, the site can provide services properly.
 
 
     */
@@ -63,122 +63,122 @@ Note: if this parameter is not specified, a site in "init" status will be create
     private String PlanId;
 
     /**
-    * Identical site identifier. limits input to numbers, english letters, ".", "-", and "_", with a character limit of 200 characters. for details, see identical site identifier (https://intl.cloud.tencent.com/document/product/1552/70202?from_cn_redirect=1). leave this field blank if this usage scenario does not apply.
+    * Identical site identifier. Only numbers, English letters, ".", "-", and "_" are allowed, up to 200 characters. For details, see [Identical Site Identifier](https://www.tencentcloud.com/document/product/1552/70202?from_cn_redirect=1). If this usage scenario does not apply, just leave this field empty.
     */
     @SerializedName("AliasZoneName")
     @Expose
     private String AliasZoneName;
 
     /**
-    * Tags of the site. To create tags, go to the [Tag Console](https://console.cloud.tencent.com/tag/taglist).
+    * Tag. This parameter is used for authority control and cost allocation of the site. You need to go to the [tag console](https://console.cloud.tencent.com/tag/taglist) to create the corresponding tag before you can input the corresponding tag key and tag value here.
     */
     @SerializedName("Tags")
     @Expose
     private Tag [] Tags;
 
     /**
-    * Whether to allow duplicate sites. Values:
-<li>`true`: Duplicate sites are allowed.</li>
-<li>`false`: Duplicate sites are not allowed.</li>If it is left empty, the default value `false` is used.
+    * Whether repeated access is allowed.
+<li> true: Allow repeated access;</li>
+<li> false: Duplicate integration is not allowed.</li>If this field is not specified, the default value 'false' will be used.
     */
     @SerializedName("AllowDuplicates")
     @Expose
     private Boolean AllowDuplicates;
 
     /**
-    * Whether to skip scanning the existing DNS records of the site. Default value: false.
+    * Whether to skip scanning existing DNS records of the site. Default value: false.
     */
     @SerializedName("JumpStart")
     @Expose
     private Boolean JumpStart;
 
     /**
-     * Get Site access type. if this parameter is not input, the default value `partial` is used. valid values of this parameter are as follows:.
-<li>partial: CNAME access;</li>.
-<li>full: NS access;</li>.
-<li>noDomainAccess: access with no domain name.</li>.
-<li>dnsPodAccess: DNSPod hosted access. to use this access mode, your domain name should have been hosted on DNSPod.</li>.
-<li>ai: edge reasoning integration.</li>. 
-     * @return Type Site access type. if this parameter is not input, the default value `partial` is used. valid values of this parameter are as follows:.
-<li>partial: CNAME access;</li>.
-<li>full: NS access;</li>.
-<li>noDomainAccess: access with no domain name.</li>.
-<li>dnsPodAccess: DNSPod hosted access. to use this access mode, your domain name should have been hosted on DNSPod.</li>.
-<li>ai: edge reasoning integration.</li>.
+     * Get Site access type. If this parameter is not input, the default value `partial` is used. Valid values of this parameter are as follows:
+<li>partial: CNAME access;</li>
+<li>full: NS access;</li>
+<li>noDomainAccess: access with no domain name.</li>
+<li>dnsPodAccess: DNSPod managed access. To use this access mode, your domain name should have been hosted on DNSPod;</li>
+<li>ai: Edge reasoning integration.</li> 
+     * @return Type Site access type. If this parameter is not input, the default value `partial` is used. Valid values of this parameter are as follows:
+<li>partial: CNAME access;</li>
+<li>full: NS access;</li>
+<li>noDomainAccess: access with no domain name.</li>
+<li>dnsPodAccess: DNSPod managed access. To use this access mode, your domain name should have been hosted on DNSPod;</li>
+<li>ai: Edge reasoning integration.</li>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Site access type. if this parameter is not input, the default value `partial` is used. valid values of this parameter are as follows:.
-<li>partial: CNAME access;</li>.
-<li>full: NS access;</li>.
-<li>noDomainAccess: access with no domain name.</li>.
-<li>dnsPodAccess: DNSPod hosted access. to use this access mode, your domain name should have been hosted on DNSPod.</li>.
-<li>ai: edge reasoning integration.</li>.
-     * @param Type Site access type. if this parameter is not input, the default value `partial` is used. valid values of this parameter are as follows:.
-<li>partial: CNAME access;</li>.
-<li>full: NS access;</li>.
-<li>noDomainAccess: access with no domain name.</li>.
-<li>dnsPodAccess: DNSPod hosted access. to use this access mode, your domain name should have been hosted on DNSPod.</li>.
-<li>ai: edge reasoning integration.</li>.
+     * Set Site access type. If this parameter is not input, the default value `partial` is used. Valid values of this parameter are as follows:
+<li>partial: CNAME access;</li>
+<li>full: NS access;</li>
+<li>noDomainAccess: access with no domain name.</li>
+<li>dnsPodAccess: DNSPod managed access. To use this access mode, your domain name should have been hosted on DNSPod;</li>
+<li>ai: Edge reasoning integration.</li>
+     * @param Type Site access type. If this parameter is not input, the default value `partial` is used. Valid values of this parameter are as follows:
+<li>partial: CNAME access;</li>
+<li>full: NS access;</li>
+<li>noDomainAccess: access with no domain name.</li>
+<li>dnsPodAccess: DNSPod managed access. To use this access mode, your domain name should have been hosted on DNSPod;</li>
+<li>ai: Edge reasoning integration.</li>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get Site name. For sites connected via CNAME/NS, pass in the secondary domain name (example.com). Leave it blank if the site is connected without a domain name.  
-     * @return ZoneName Site name. For sites connected via CNAME/NS, pass in the secondary domain name (example.com). Leave it blank if the site is connected without a domain name. 
+     * Get Site name. For CNAME/NS access, pass in the second-level domain (example.com) as the site name. For domainless access, leave this value empty. 
+     * @return ZoneName Site name. For CNAME/NS access, pass in the second-level domain (example.com) as the site name. For domainless access, leave this value empty.
      */
     public String getZoneName() {
         return this.ZoneName;
     }
 
     /**
-     * Set Site name. For sites connected via CNAME/NS, pass in the secondary domain name (example.com). Leave it blank if the site is connected without a domain name. 
-     * @param ZoneName Site name. For sites connected via CNAME/NS, pass in the secondary domain name (example.com). Leave it blank if the site is connected without a domain name. 
+     * Set Site name. For CNAME/NS access, pass in the second-level domain (example.com) as the site name. For domainless access, leave this value empty.
+     * @param ZoneName Site name. For CNAME/NS access, pass in the second-level domain (example.com) as the site name. For domainless access, leave this value empty.
      */
     public void setZoneName(String ZoneName) {
         this.ZoneName = ZoneName;
     }
 
     /**
-     * Get The acceleration area of the L7 domain name when `Type` is `partial` or `full`. When Type is `noDomainAccess`, please leave it blank.
-<li>`global`: Global AZs</li>
-<li>`mainland`: AZs in the Chinese mainland</li>
-<li>`overseas`: (Default) AZs outside the Chinese mainland </li> 
-     * @return Area The acceleration area of the L7 domain name when `Type` is `partial` or `full`. When Type is `noDomainAccess`, please leave it blank.
-<li>`global`: Global AZs</li>
-<li>`mainland`: AZs in the Chinese mainland</li>
-<li>`overseas`: (Default) AZs outside the Chinese mainland </li>
+     * Get Acceleration region of the layer-7 domain name when Type is partial/full. The following are the values for this parameter. If left empty, the default value is overseas. When Type is noDomainAccess, retain this value as empty:
+<li> global: global availability zone;</li>
+<li>mainland: Chinese mainland availability zone;</li>
+<li>overseas: global availability zone (excluding the Chinese mainland).</li> 
+     * @return Area Acceleration region of the layer-7 domain name when Type is partial/full. The following are the values for this parameter. If left empty, the default value is overseas. When Type is noDomainAccess, retain this value as empty:
+<li> global: global availability zone;</li>
+<li>mainland: Chinese mainland availability zone;</li>
+<li>overseas: global availability zone (excluding the Chinese mainland).</li>
      */
     public String getArea() {
         return this.Area;
     }
 
     /**
-     * Set The acceleration area of the L7 domain name when `Type` is `partial` or `full`. When Type is `noDomainAccess`, please leave it blank.
-<li>`global`: Global AZs</li>
-<li>`mainland`: AZs in the Chinese mainland</li>
-<li>`overseas`: (Default) AZs outside the Chinese mainland </li>
-     * @param Area The acceleration area of the L7 domain name when `Type` is `partial` or `full`. When Type is `noDomainAccess`, please leave it blank.
-<li>`global`: Global AZs</li>
-<li>`mainland`: AZs in the Chinese mainland</li>
-<li>`overseas`: (Default) AZs outside the Chinese mainland </li>
+     * Set Acceleration region of the layer-7 domain name when Type is partial/full. The following are the values for this parameter. If left empty, the default value is overseas. When Type is noDomainAccess, retain this value as empty:
+<li> global: global availability zone;</li>
+<li>mainland: Chinese mainland availability zone;</li>
+<li>overseas: global availability zone (excluding the Chinese mainland).</li>
+     * @param Area Acceleration region of the layer-7 domain name when Type is partial/full. The following are the values for this parameter. If left empty, the default value is overseas. When Type is noDomainAccess, retain this value as empty:
+<li> global: global availability zone;</li>
+<li>mainland: Chinese mainland availability zone;</li>
+<li>overseas: global availability zone (excluding the Chinese mainland).</li>
      */
     public void setArea(String Area) {
         this.Area = Area;
     }
 
     /**
-     * Get Target package ID to bind. when a package already exists under your account, you can fill in this parameter to directly bind the site to the package. if there are currently no bindable packages, you can purchase a package via [CreatePlan](https://intl.cloud.tencent.com/document/product/1552/105771?from_cn_redirect=1).
-Note: if this parameter is not specified, a site in "init" status will be created. the site is inactive and will not be displayed in the console. you can bind a package and activate the site through [BindZoneToPlan](https://intl.cloud.tencent.com/document/product/1552/83042?from_cn_redirect=1). after activation, the site can provide service properly.
+     * Get ID of the target bundle to bind. If your account already has a bundle, you can fill in this parameter to bind the site to it directly. If you currently have no bindable bundle, you can purchase one through [CreatePlan](https://www.tencentcloud.com/document/product/1552/105771?from_cn_redirect=1).
+Note: If this parameter is not specified, a site in the "init" state will be created. The site is inactive and will not be displayed in the console. You can access [BindZoneToPlan](https://www.tencentcloud.com/document/product/1552/83042?from_cn_redirect=1) to bind a package and activate the site. After activation, the site can provide services properly.
 
  
-     * @return PlanId Target package ID to bind. when a package already exists under your account, you can fill in this parameter to directly bind the site to the package. if there are currently no bindable packages, you can purchase a package via [CreatePlan](https://intl.cloud.tencent.com/document/product/1552/105771?from_cn_redirect=1).
-Note: if this parameter is not specified, a site in "init" status will be created. the site is inactive and will not be displayed in the console. you can bind a package and activate the site through [BindZoneToPlan](https://intl.cloud.tencent.com/document/product/1552/83042?from_cn_redirect=1). after activation, the site can provide service properly.
+     * @return PlanId ID of the target bundle to bind. If your account already has a bundle, you can fill in this parameter to bind the site to it directly. If you currently have no bindable bundle, you can purchase one through [CreatePlan](https://www.tencentcloud.com/document/product/1552/105771?from_cn_redirect=1).
+Note: If this parameter is not specified, a site in the "init" state will be created. The site is inactive and will not be displayed in the console. You can access [BindZoneToPlan](https://www.tencentcloud.com/document/product/1552/83042?from_cn_redirect=1) to bind a package and activate the site. After activation, the site can provide services properly.
 
 
      */
@@ -187,12 +187,12 @@ Note: if this parameter is not specified, a site in "init" status will be create
     }
 
     /**
-     * Set Target package ID to bind. when a package already exists under your account, you can fill in this parameter to directly bind the site to the package. if there are currently no bindable packages, you can purchase a package via [CreatePlan](https://intl.cloud.tencent.com/document/product/1552/105771?from_cn_redirect=1).
-Note: if this parameter is not specified, a site in "init" status will be created. the site is inactive and will not be displayed in the console. you can bind a package and activate the site through [BindZoneToPlan](https://intl.cloud.tencent.com/document/product/1552/83042?from_cn_redirect=1). after activation, the site can provide service properly.
+     * Set ID of the target bundle to bind. If your account already has a bundle, you can fill in this parameter to bind the site to it directly. If you currently have no bindable bundle, you can purchase one through [CreatePlan](https://www.tencentcloud.com/document/product/1552/105771?from_cn_redirect=1).
+Note: If this parameter is not specified, a site in the "init" state will be created. The site is inactive and will not be displayed in the console. You can access [BindZoneToPlan](https://www.tencentcloud.com/document/product/1552/83042?from_cn_redirect=1) to bind a package and activate the site. After activation, the site can provide services properly.
 
 
-     * @param PlanId Target package ID to bind. when a package already exists under your account, you can fill in this parameter to directly bind the site to the package. if there are currently no bindable packages, you can purchase a package via [CreatePlan](https://intl.cloud.tencent.com/document/product/1552/105771?from_cn_redirect=1).
-Note: if this parameter is not specified, a site in "init" status will be created. the site is inactive and will not be displayed in the console. you can bind a package and activate the site through [BindZoneToPlan](https://intl.cloud.tencent.com/document/product/1552/83042?from_cn_redirect=1). after activation, the site can provide service properly.
+     * @param PlanId ID of the target bundle to bind. If your account already has a bundle, you can fill in this parameter to bind the site to it directly. If you currently have no bindable bundle, you can purchase one through [CreatePlan](https://www.tencentcloud.com/document/product/1552/105771?from_cn_redirect=1).
+Note: If this parameter is not specified, a site in the "init" state will be created. The site is inactive and will not be displayed in the console. You can access [BindZoneToPlan](https://www.tencentcloud.com/document/product/1552/83042?from_cn_redirect=1) to bind a package and activate the site. After activation, the site can provide services properly.
 
 
      */
@@ -201,44 +201,44 @@ Note: if this parameter is not specified, a site in "init" status will be create
     }
 
     /**
-     * Get Identical site identifier. limits input to numbers, english letters, ".", "-", and "_", with a character limit of 200 characters. for details, see identical site identifier (https://intl.cloud.tencent.com/document/product/1552/70202?from_cn_redirect=1). leave this field blank if this usage scenario does not apply. 
-     * @return AliasZoneName Identical site identifier. limits input to numbers, english letters, ".", "-", and "_", with a character limit of 200 characters. for details, see identical site identifier (https://intl.cloud.tencent.com/document/product/1552/70202?from_cn_redirect=1). leave this field blank if this usage scenario does not apply.
+     * Get Identical site identifier. Only numbers, English letters, ".", "-", and "_" are allowed, up to 200 characters. For details, see [Identical Site Identifier](https://www.tencentcloud.com/document/product/1552/70202?from_cn_redirect=1). If this usage scenario does not apply, just leave this field empty. 
+     * @return AliasZoneName Identical site identifier. Only numbers, English letters, ".", "-", and "_" are allowed, up to 200 characters. For details, see [Identical Site Identifier](https://www.tencentcloud.com/document/product/1552/70202?from_cn_redirect=1). If this usage scenario does not apply, just leave this field empty.
      */
     public String getAliasZoneName() {
         return this.AliasZoneName;
     }
 
     /**
-     * Set Identical site identifier. limits input to numbers, english letters, ".", "-", and "_", with a character limit of 200 characters. for details, see identical site identifier (https://intl.cloud.tencent.com/document/product/1552/70202?from_cn_redirect=1). leave this field blank if this usage scenario does not apply.
-     * @param AliasZoneName Identical site identifier. limits input to numbers, english letters, ".", "-", and "_", with a character limit of 200 characters. for details, see identical site identifier (https://intl.cloud.tencent.com/document/product/1552/70202?from_cn_redirect=1). leave this field blank if this usage scenario does not apply.
+     * Set Identical site identifier. Only numbers, English letters, ".", "-", and "_" are allowed, up to 200 characters. For details, see [Identical Site Identifier](https://www.tencentcloud.com/document/product/1552/70202?from_cn_redirect=1). If this usage scenario does not apply, just leave this field empty.
+     * @param AliasZoneName Identical site identifier. Only numbers, English letters, ".", "-", and "_" are allowed, up to 200 characters. For details, see [Identical Site Identifier](https://www.tencentcloud.com/document/product/1552/70202?from_cn_redirect=1). If this usage scenario does not apply, just leave this field empty.
      */
     public void setAliasZoneName(String AliasZoneName) {
         this.AliasZoneName = AliasZoneName;
     }
 
     /**
-     * Get Tags of the site. To create tags, go to the [Tag Console](https://console.cloud.tencent.com/tag/taglist). 
-     * @return Tags Tags of the site. To create tags, go to the [Tag Console](https://console.cloud.tencent.com/tag/taglist).
+     * Get Tag. This parameter is used for authority control and cost allocation of the site. You need to go to the [tag console](https://console.cloud.tencent.com/tag/taglist) to create the corresponding tag before you can input the corresponding tag key and tag value here. 
+     * @return Tags Tag. This parameter is used for authority control and cost allocation of the site. You need to go to the [tag console](https://console.cloud.tencent.com/tag/taglist) to create the corresponding tag before you can input the corresponding tag key and tag value here.
      */
     public Tag [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set Tags of the site. To create tags, go to the [Tag Console](https://console.cloud.tencent.com/tag/taglist).
-     * @param Tags Tags of the site. To create tags, go to the [Tag Console](https://console.cloud.tencent.com/tag/taglist).
+     * Set Tag. This parameter is used for authority control and cost allocation of the site. You need to go to the [tag console](https://console.cloud.tencent.com/tag/taglist) to create the corresponding tag before you can input the corresponding tag key and tag value here.
+     * @param Tags Tag. This parameter is used for authority control and cost allocation of the site. You need to go to the [tag console](https://console.cloud.tencent.com/tag/taglist) to create the corresponding tag before you can input the corresponding tag key and tag value here.
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get Whether to allow duplicate sites. Values:
-<li>`true`: Duplicate sites are allowed.</li>
-<li>`false`: Duplicate sites are not allowed.</li>If it is left empty, the default value `false` is used. 
-     * @return AllowDuplicates Whether to allow duplicate sites. Values:
-<li>`true`: Duplicate sites are allowed.</li>
-<li>`false`: Duplicate sites are not allowed.</li>If it is left empty, the default value `false` is used.
+     * Get Whether repeated access is allowed.
+<li> true: Allow repeated access;</li>
+<li> false: Duplicate integration is not allowed.</li>If this field is not specified, the default value 'false' will be used. 
+     * @return AllowDuplicates Whether repeated access is allowed.
+<li> true: Allow repeated access;</li>
+<li> false: Duplicate integration is not allowed.</li>If this field is not specified, the default value 'false' will be used.
      * @deprecated
      */
     @Deprecated
@@ -247,12 +247,12 @@ Note: if this parameter is not specified, a site in "init" status will be create
     }
 
     /**
-     * Set Whether to allow duplicate sites. Values:
-<li>`true`: Duplicate sites are allowed.</li>
-<li>`false`: Duplicate sites are not allowed.</li>If it is left empty, the default value `false` is used.
-     * @param AllowDuplicates Whether to allow duplicate sites. Values:
-<li>`true`: Duplicate sites are allowed.</li>
-<li>`false`: Duplicate sites are not allowed.</li>If it is left empty, the default value `false` is used.
+     * Set Whether repeated access is allowed.
+<li> true: Allow repeated access;</li>
+<li> false: Duplicate integration is not allowed.</li>If this field is not specified, the default value 'false' will be used.
+     * @param AllowDuplicates Whether repeated access is allowed.
+<li> true: Allow repeated access;</li>
+<li> false: Duplicate integration is not allowed.</li>If this field is not specified, the default value 'false' will be used.
      * @deprecated
      */
     @Deprecated
@@ -261,8 +261,8 @@ Note: if this parameter is not specified, a site in "init" status will be create
     }
 
     /**
-     * Get Whether to skip scanning the existing DNS records of the site. Default value: false. 
-     * @return JumpStart Whether to skip scanning the existing DNS records of the site. Default value: false.
+     * Get Whether to skip scanning existing DNS records of the site. Default value: false. 
+     * @return JumpStart Whether to skip scanning existing DNS records of the site. Default value: false.
      * @deprecated
      */
     @Deprecated
@@ -271,8 +271,8 @@ Note: if this parameter is not specified, a site in "init" status will be create
     }
 
     /**
-     * Set Whether to skip scanning the existing DNS records of the site. Default value: false.
-     * @param JumpStart Whether to skip scanning the existing DNS records of the site. Default value: false.
+     * Set Whether to skip scanning existing DNS records of the site. Default value: false.
+     * @param JumpStart Whether to skip scanning existing DNS records of the site. Default value: false.
      * @deprecated
      */
     @Deprecated

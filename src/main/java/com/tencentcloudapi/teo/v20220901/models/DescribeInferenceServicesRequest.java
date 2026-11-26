@@ -31,14 +31,14 @@ public class DescribeInferenceServicesRequest extends AbstractModel {
     private String ZoneId;
 
     /**
-    * <p>Filtering Conditions, maximum 20, multiple conditions have an AND relationship, the maximum for Filters.Values is 20. Detailed filter criteria are as follows: <li>service-name: filter by service name;</li><li>service-id: filter by service ID;</li><li>status: filter by service status.</li> Only the field named service-name supports filtering during a fuzzy query.</p>
+    * <p>Filter criteria. Up to 20 criteria are supported, and multiple criteria are in AND relationship. The maximum number of Filters.Values is 20. The detailed filter criteria are as follows: <li>service-name: filter by service name;</li><li>service-id: filter by service ID;</li><li>status: filter by service status.</li>For fuzzy query, only filtering by the field name service-name is supported.</p>
     */
     @SerializedName("Filters")
     @Expose
     private AdvancedFilter [] Filters;
 
     /**
-    * <p>Paginated query offset. Default value: 0.</p>
+    * <p>The offset of paginated query. Default value: 0.</p>
     */
     @SerializedName("Offset")
     @Expose
@@ -52,14 +52,14 @@ public class DescribeInferenceServicesRequest extends AbstractModel {
     private Long Limit;
 
     /**
-    * <p>Sort returned results based on this field. Valid values: <li>create-time: Creation time.</li>Default sorting order is by create-time if left empty.</p>
+    * <p>Returned results can be sorted by this field. Valid values: <li>create-time: creation time.</li>If left empty, results are sorted by create-time by default.</p>
     */
     @SerializedName("Order")
     @Expose
     private String Order;
 
     /**
-    * <p>Sorting order. If the field value is a number, sort based on its size; if the field value is text, sort based on ASCII code size. Valid values: <li>asc: sort in ascending order;</li><li>desc: sort in descending order.</li>Use default value if not specified.</p>
+    * <p>Sorting order. If the field value is a number, sort by numeric size; if the field value is text, sort by ASCII code size. Valid values: <li>asc: sort in ascending order;</li><li>desc: sort in descending order.</li>Use default value desc if not specified.</p>
     */
     @SerializedName("Direction")
     @Expose
@@ -82,32 +82,32 @@ public class DescribeInferenceServicesRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>Filtering Conditions, maximum 20, multiple conditions have an AND relationship, the maximum for Filters.Values is 20. Detailed filter criteria are as follows: <li>service-name: filter by service name;</li><li>service-id: filter by service ID;</li><li>status: filter by service status.</li> Only the field named service-name supports filtering during a fuzzy query.</p> 
-     * @return Filters <p>Filtering Conditions, maximum 20, multiple conditions have an AND relationship, the maximum for Filters.Values is 20. Detailed filter criteria are as follows: <li>service-name: filter by service name;</li><li>service-id: filter by service ID;</li><li>status: filter by service status.</li> Only the field named service-name supports filtering during a fuzzy query.</p>
+     * Get <p>Filter criteria. Up to 20 criteria are supported, and multiple criteria are in AND relationship. The maximum number of Filters.Values is 20. The detailed filter criteria are as follows: <li>service-name: filter by service name;</li><li>service-id: filter by service ID;</li><li>status: filter by service status.</li>For fuzzy query, only filtering by the field name service-name is supported.</p> 
+     * @return Filters <p>Filter criteria. Up to 20 criteria are supported, and multiple criteria are in AND relationship. The maximum number of Filters.Values is 20. The detailed filter criteria are as follows: <li>service-name: filter by service name;</li><li>service-id: filter by service ID;</li><li>status: filter by service status.</li>For fuzzy query, only filtering by the field name service-name is supported.</p>
      */
     public AdvancedFilter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set <p>Filtering Conditions, maximum 20, multiple conditions have an AND relationship, the maximum for Filters.Values is 20. Detailed filter criteria are as follows: <li>service-name: filter by service name;</li><li>service-id: filter by service ID;</li><li>status: filter by service status.</li> Only the field named service-name supports filtering during a fuzzy query.</p>
-     * @param Filters <p>Filtering Conditions, maximum 20, multiple conditions have an AND relationship, the maximum for Filters.Values is 20. Detailed filter criteria are as follows: <li>service-name: filter by service name;</li><li>service-id: filter by service ID;</li><li>status: filter by service status.</li> Only the field named service-name supports filtering during a fuzzy query.</p>
+     * Set <p>Filter criteria. Up to 20 criteria are supported, and multiple criteria are in AND relationship. The maximum number of Filters.Values is 20. The detailed filter criteria are as follows: <li>service-name: filter by service name;</li><li>service-id: filter by service ID;</li><li>status: filter by service status.</li>For fuzzy query, only filtering by the field name service-name is supported.</p>
+     * @param Filters <p>Filter criteria. Up to 20 criteria are supported, and multiple criteria are in AND relationship. The maximum number of Filters.Values is 20. The detailed filter criteria are as follows: <li>service-name: filter by service name;</li><li>service-id: filter by service ID;</li><li>status: filter by service status.</li>For fuzzy query, only filtering by the field name service-name is supported.</p>
      */
     public void setFilters(AdvancedFilter [] Filters) {
         this.Filters = Filters;
     }
 
     /**
-     * Get <p>Paginated query offset. Default value: 0.</p> 
-     * @return Offset <p>Paginated query offset. Default value: 0.</p>
+     * Get <p>The offset of paginated query. Default value: 0.</p> 
+     * @return Offset <p>The offset of paginated query. Default value: 0.</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set <p>Paginated query offset. Default value: 0.</p>
-     * @param Offset <p>Paginated query offset. Default value: 0.</p>
+     * Set <p>The offset of paginated query. Default value: 0.</p>
+     * @param Offset <p>The offset of paginated query. Default value: 0.</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
@@ -130,32 +130,32 @@ public class DescribeInferenceServicesRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>Sort returned results based on this field. Valid values: <li>create-time: Creation time.</li>Default sorting order is by create-time if left empty.</p> 
-     * @return Order <p>Sort returned results based on this field. Valid values: <li>create-time: Creation time.</li>Default sorting order is by create-time if left empty.</p>
+     * Get <p>Returned results can be sorted by this field. Valid values: <li>create-time: creation time.</li>If left empty, results are sorted by create-time by default.</p> 
+     * @return Order <p>Returned results can be sorted by this field. Valid values: <li>create-time: creation time.</li>If left empty, results are sorted by create-time by default.</p>
      */
     public String getOrder() {
         return this.Order;
     }
 
     /**
-     * Set <p>Sort returned results based on this field. Valid values: <li>create-time: Creation time.</li>Default sorting order is by create-time if left empty.</p>
-     * @param Order <p>Sort returned results based on this field. Valid values: <li>create-time: Creation time.</li>Default sorting order is by create-time if left empty.</p>
+     * Set <p>Returned results can be sorted by this field. Valid values: <li>create-time: creation time.</li>If left empty, results are sorted by create-time by default.</p>
+     * @param Order <p>Returned results can be sorted by this field. Valid values: <li>create-time: creation time.</li>If left empty, results are sorted by create-time by default.</p>
      */
     public void setOrder(String Order) {
         this.Order = Order;
     }
 
     /**
-     * Get <p>Sorting order. If the field value is a number, sort based on its size; if the field value is text, sort based on ASCII code size. Valid values: <li>asc: sort in ascending order;</li><li>desc: sort in descending order.</li>Use default value if not specified.</p> 
-     * @return Direction <p>Sorting order. If the field value is a number, sort based on its size; if the field value is text, sort based on ASCII code size. Valid values: <li>asc: sort in ascending order;</li><li>desc: sort in descending order.</li>Use default value if not specified.</p>
+     * Get <p>Sorting order. If the field value is a number, sort by numeric size; if the field value is text, sort by ASCII code size. Valid values: <li>asc: sort in ascending order;</li><li>desc: sort in descending order.</li>Use default value desc if not specified.</p> 
+     * @return Direction <p>Sorting order. If the field value is a number, sort by numeric size; if the field value is text, sort by ASCII code size. Valid values: <li>asc: sort in ascending order;</li><li>desc: sort in descending order.</li>Use default value desc if not specified.</p>
      */
     public String getDirection() {
         return this.Direction;
     }
 
     /**
-     * Set <p>Sorting order. If the field value is a number, sort based on its size; if the field value is text, sort based on ASCII code size. Valid values: <li>asc: sort in ascending order;</li><li>desc: sort in descending order.</li>Use default value if not specified.</p>
-     * @param Direction <p>Sorting order. If the field value is a number, sort based on its size; if the field value is text, sort based on ASCII code size. Valid values: <li>asc: sort in ascending order;</li><li>desc: sort in descending order.</li>Use default value if not specified.</p>
+     * Set <p>Sorting order. If the field value is a number, sort by numeric size; if the field value is text, sort by ASCII code size. Valid values: <li>asc: sort in ascending order;</li><li>desc: sort in descending order.</li>Use default value desc if not specified.</p>
+     * @param Direction <p>Sorting order. If the field value is a number, sort by numeric size; if the field value is text, sort by ASCII code size. Valid values: <li>asc: sort in ascending order;</li><li>desc: sort in descending order.</li>Use default value desc if not specified.</p>
      */
     public void setDirection(String Direction) {
         this.Direction = Direction;

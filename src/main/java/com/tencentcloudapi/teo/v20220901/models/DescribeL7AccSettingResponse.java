@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class DescribeL7AccSettingResponse extends AbstractModel {
 
     /**
-    * Global configuration for site acceleration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+    * Site acceleration global configuration.
     */
     @SerializedName("ZoneSetting")
     @Expose
@@ -39,20 +38,16 @@ Note: this field may return null, which indicates a failure to obtain a valid va
     private String RequestId;
 
     /**
-     * Get Global configuration for site acceleration.
-Note: this field may return null, which indicates a failure to obtain a valid value. 
-     * @return ZoneSetting Global configuration for site acceleration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * Get Site acceleration global configuration. 
+     * @return ZoneSetting Site acceleration global configuration.
      */
     public ZoneConfigParameters getZoneSetting() {
         return this.ZoneSetting;
     }
 
     /**
-     * Set Global configuration for site acceleration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-     * @param ZoneSetting Global configuration for site acceleration.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * Set Site acceleration global configuration.
+     * @param ZoneSetting Site acceleration global configuration.
      */
     public void setZoneSetting(ZoneConfigParameters ZoneSetting) {
         this.ZoneSetting = ZoneSetting;

@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeAvailableCustomActionsForRuleEngineResponse extends AbstractModel {
 
     /**
-    * <p>Total number of eligible rule engine custom configurations.</p>
+    * <p>Total number of eligible custom configurations for the rule engine.</p>
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * <p>List of eligible rule engine custom configurations.</p>
+    * <p>List of eligible custom configurations for the rule engine.</p>
     */
     @SerializedName("CustomActionSet")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeAvailableCustomActionsForRuleEngineResponse extends Abstrac
     private String RequestId;
 
     /**
-     * Get <p>Total number of eligible rule engine custom configurations.</p> 
-     * @return TotalCount <p>Total number of eligible rule engine custom configurations.</p>
+     * Get <p>Total number of eligible custom configurations for the rule engine.</p> 
+     * @return TotalCount <p>Total number of eligible custom configurations for the rule engine.</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set <p>Total number of eligible rule engine custom configurations.</p>
-     * @param TotalCount <p>Total number of eligible rule engine custom configurations.</p>
+     * Set <p>Total number of eligible custom configurations for the rule engine.</p>
+     * @param TotalCount <p>Total number of eligible custom configurations for the rule engine.</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get <p>List of eligible rule engine custom configurations.</p> 
-     * @return CustomActionSet <p>List of eligible rule engine custom configurations.</p>
+     * Get <p>List of eligible custom configurations for the rule engine.</p> 
+     * @return CustomActionSet <p>List of eligible custom configurations for the rule engine.</p>
      */
     public RuleEngineCustomAction [] getCustomActionSet() {
         return this.CustomActionSet;
     }
 
     /**
-     * Set <p>List of eligible rule engine custom configurations.</p>
-     * @param CustomActionSet <p>List of eligible rule engine custom configurations.</p>
+     * Set <p>List of eligible custom configurations for the rule engine.</p>
+     * @param CustomActionSet <p>List of eligible custom configurations for the rule engine.</p>
      */
     public void setCustomActionSet(RuleEngineCustomAction [] CustomActionSet) {
         this.CustomActionSet = CustomActionSet;

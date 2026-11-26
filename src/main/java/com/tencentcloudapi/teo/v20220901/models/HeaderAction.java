@@ -24,10 +24,10 @@ import java.util.HashMap;
 public class HeaderAction extends AbstractModel {
 
     /**
-    * HTTP header setting methods. valid values are:.
-<Li>`Set`: sets a value for an existing header parameter;</li>.
-<Li>`Del`: deletes a header parameter;</li>.
-<Li>`Add`: adds a header parameter.</li>.
+    * HTTP header setting method. Valid values:
+<li>set: Set. Change the value of the specified header parameter to the value after setting;</li>
+<li>del: delete. Delete the specified header parameter;</li>
+<li>add: Add. Add the specified header parameter.</li>
     */
     @SerializedName("Action")
     @Expose
@@ -41,35 +41,35 @@ public class HeaderAction extends AbstractModel {
     private String Name;
 
     /**
-    * HTTP header value. this parameter is required when the action is set to `set` or `add`; it is optional when the action is set to `del`.
+    * HTTP header value. This parameter is required when Action is set or add, and not required when Action is del.
     */
     @SerializedName("Value")
     @Expose
     private String Value;
 
     /**
-     * Get HTTP header setting methods. valid values are:.
-<Li>`Set`: sets a value for an existing header parameter;</li>.
-<Li>`Del`: deletes a header parameter;</li>.
-<Li>`Add`: adds a header parameter.</li>. 
-     * @return Action HTTP header setting methods. valid values are:.
-<Li>`Set`: sets a value for an existing header parameter;</li>.
-<Li>`Del`: deletes a header parameter;</li>.
-<Li>`Add`: adds a header parameter.</li>.
+     * Get HTTP header setting method. Valid values:
+<li>set: Set. Change the value of the specified header parameter to the value after setting;</li>
+<li>del: delete. Delete the specified header parameter;</li>
+<li>add: Add. Add the specified header parameter.</li> 
+     * @return Action HTTP header setting method. Valid values:
+<li>set: Set. Change the value of the specified header parameter to the value after setting;</li>
+<li>del: delete. Delete the specified header parameter;</li>
+<li>add: Add. Add the specified header parameter.</li>
      */
     public String getAction() {
         return this.Action;
     }
 
     /**
-     * Set HTTP header setting methods. valid values are:.
-<Li>`Set`: sets a value for an existing header parameter;</li>.
-<Li>`Del`: deletes a header parameter;</li>.
-<Li>`Add`: adds a header parameter.</li>.
-     * @param Action HTTP header setting methods. valid values are:.
-<Li>`Set`: sets a value for an existing header parameter;</li>.
-<Li>`Del`: deletes a header parameter;</li>.
-<Li>`Add`: adds a header parameter.</li>.
+     * Set HTTP header setting method. Valid values:
+<li>set: Set. Change the value of the specified header parameter to the value after setting;</li>
+<li>del: delete. Delete the specified header parameter;</li>
+<li>add: Add. Add the specified header parameter.</li>
+     * @param Action HTTP header setting method. Valid values:
+<li>set: Set. Change the value of the specified header parameter to the value after setting;</li>
+<li>del: delete. Delete the specified header parameter;</li>
+<li>add: Add. Add the specified header parameter.</li>
      */
     public void setAction(String Action) {
         this.Action = Action;
@@ -92,16 +92,16 @@ public class HeaderAction extends AbstractModel {
     }
 
     /**
-     * Get HTTP header value. this parameter is required when the action is set to `set` or `add`; it is optional when the action is set to `del`. 
-     * @return Value HTTP header value. this parameter is required when the action is set to `set` or `add`; it is optional when the action is set to `del`.
+     * Get HTTP header value. This parameter is required when Action is set or add, and not required when Action is del. 
+     * @return Value HTTP header value. This parameter is required when Action is set or add, and not required when Action is del.
      */
     public String getValue() {
         return this.Value;
     }
 
     /**
-     * Set HTTP header value. this parameter is required when the action is set to `set` or `add`; it is optional when the action is set to `del`.
-     * @param Value HTTP header value. this parameter is required when the action is set to `set` or `add`; it is optional when the action is set to `del`.
+     * Set HTTP header value. This parameter is required when Action is set or add, and not required when Action is del.
+     * @param Value HTTP header value. This parameter is required when Action is set or add, and not required when Action is del.
      */
     public void setValue(String Value) {
         this.Value = Value;

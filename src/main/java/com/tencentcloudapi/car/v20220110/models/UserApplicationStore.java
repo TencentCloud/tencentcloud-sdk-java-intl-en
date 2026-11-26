@@ -24,143 +24,141 @@ import java.util.HashMap;
 public class UserApplicationStore extends AbstractModel {
 
     /**
-    * COS bucket name.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Cos bucket name</p>
     */
     @SerializedName("CosBucket")
     @Expose
     private String CosBucket;
 
     /**
-    * COS bucket region.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Cos Bucket Region</p>
     */
     @SerializedName("CosRegion")
     @Expose
     private String CosRegion;
 
     /**
-    * Repository type. LOG: application logs; ARCHIVE: application archive.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Repository type. LOG: application logs; ARCHIVE: application archive.</p>
     */
     @SerializedName("StoreType")
     @Expose
     private String StoreType;
 
     /**
-    * Repository status. ON: enabled; OFF: disabled.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Repository status. ON: enabled; OFF: disabled.</p>
     */
     @SerializedName("StoreState")
     @Expose
     private String StoreState;
 
     /**
-    * Repository path.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Repository path</p><p>Primary path data. If StoreType is ARCHIVE and SubStorePaths is configured, the system default value will be used.</p>
     */
     @SerializedName("StorePath")
     @Expose
     private String StorePath;
 
     /**
-     * Get COS bucket name.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return CosBucket COS bucket name.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Subpath list</p><p>Subpath data (multi-path pattern) supports only ARCHIVE StoreType; up to 25 data entries.</p>
+    */
+    @SerializedName("SubStorePaths")
+    @Expose
+    private String [] SubStorePaths;
+
+    /**
+     * Get <p>Cos bucket name</p> 
+     * @return CosBucket <p>Cos bucket name</p>
      */
     public String getCosBucket() {
         return this.CosBucket;
     }
 
     /**
-     * Set COS bucket name.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param CosBucket COS bucket name.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Cos bucket name</p>
+     * @param CosBucket <p>Cos bucket name</p>
      */
     public void setCosBucket(String CosBucket) {
         this.CosBucket = CosBucket;
     }
 
     /**
-     * Get COS bucket region.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return CosRegion COS bucket region.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Cos Bucket Region</p> 
+     * @return CosRegion <p>Cos Bucket Region</p>
      */
     public String getCosRegion() {
         return this.CosRegion;
     }
 
     /**
-     * Set COS bucket region.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param CosRegion COS bucket region.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Cos Bucket Region</p>
+     * @param CosRegion <p>Cos Bucket Region</p>
      */
     public void setCosRegion(String CosRegion) {
         this.CosRegion = CosRegion;
     }
 
     /**
-     * Get Repository type. LOG: application logs; ARCHIVE: application archive.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return StoreType Repository type. LOG: application logs; ARCHIVE: application archive.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Repository type. LOG: application logs; ARCHIVE: application archive.</p> 
+     * @return StoreType <p>Repository type. LOG: application logs; ARCHIVE: application archive.</p>
      */
     public String getStoreType() {
         return this.StoreType;
     }
 
     /**
-     * Set Repository type. LOG: application logs; ARCHIVE: application archive.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param StoreType Repository type. LOG: application logs; ARCHIVE: application archive.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Repository type. LOG: application logs; ARCHIVE: application archive.</p>
+     * @param StoreType <p>Repository type. LOG: application logs; ARCHIVE: application archive.</p>
      */
     public void setStoreType(String StoreType) {
         this.StoreType = StoreType;
     }
 
     /**
-     * Get Repository status. ON: enabled; OFF: disabled.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return StoreState Repository status. ON: enabled; OFF: disabled.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Repository status. ON: enabled; OFF: disabled.</p> 
+     * @return StoreState <p>Repository status. ON: enabled; OFF: disabled.</p>
      */
     public String getStoreState() {
         return this.StoreState;
     }
 
     /**
-     * Set Repository status. ON: enabled; OFF: disabled.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param StoreState Repository status. ON: enabled; OFF: disabled.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Repository status. ON: enabled; OFF: disabled.</p>
+     * @param StoreState <p>Repository status. ON: enabled; OFF: disabled.</p>
      */
     public void setStoreState(String StoreState) {
         this.StoreState = StoreState;
     }
 
     /**
-     * Get Repository path.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return StorePath Repository path.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Repository path</p><p>Primary path data. If StoreType is ARCHIVE and SubStorePaths is configured, the system default value will be used.</p> 
+     * @return StorePath <p>Repository path</p><p>Primary path data. If StoreType is ARCHIVE and SubStorePaths is configured, the system default value will be used.</p>
      */
     public String getStorePath() {
         return this.StorePath;
     }
 
     /**
-     * Set Repository path.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param StorePath Repository path.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Repository path</p><p>Primary path data. If StoreType is ARCHIVE and SubStorePaths is configured, the system default value will be used.</p>
+     * @param StorePath <p>Repository path</p><p>Primary path data. If StoreType is ARCHIVE and SubStorePaths is configured, the system default value will be used.</p>
      */
     public void setStorePath(String StorePath) {
         this.StorePath = StorePath;
+    }
+
+    /**
+     * Get <p>Subpath list</p><p>Subpath data (multi-path pattern) supports only ARCHIVE StoreType; up to 25 data entries.</p> 
+     * @return SubStorePaths <p>Subpath list</p><p>Subpath data (multi-path pattern) supports only ARCHIVE StoreType; up to 25 data entries.</p>
+     */
+    public String [] getSubStorePaths() {
+        return this.SubStorePaths;
+    }
+
+    /**
+     * Set <p>Subpath list</p><p>Subpath data (multi-path pattern) supports only ARCHIVE StoreType; up to 25 data entries.</p>
+     * @param SubStorePaths <p>Subpath list</p><p>Subpath data (multi-path pattern) supports only ARCHIVE StoreType; up to 25 data entries.</p>
+     */
+    public void setSubStorePaths(String [] SubStorePaths) {
+        this.SubStorePaths = SubStorePaths;
     }
 
     public UserApplicationStore() {
@@ -186,6 +184,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.StorePath != null) {
             this.StorePath = new String(source.StorePath);
         }
+        if (source.SubStorePaths != null) {
+            this.SubStorePaths = new String[source.SubStorePaths.length];
+            for (int i = 0; i < source.SubStorePaths.length; i++) {
+                this.SubStorePaths[i] = new String(source.SubStorePaths[i]);
+            }
+        }
     }
 
 
@@ -198,6 +202,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "StoreType", this.StoreType);
         this.setParamSimple(map, prefix + "StoreState", this.StoreState);
         this.setParamSimple(map, prefix + "StorePath", this.StorePath);
+        this.setParamArraySimple(map, prefix + "SubStorePaths.", this.SubStorePaths);
 
     }
 }

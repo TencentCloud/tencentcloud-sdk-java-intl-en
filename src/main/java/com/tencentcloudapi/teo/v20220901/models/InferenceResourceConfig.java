@@ -24,125 +24,165 @@ import java.util.HashMap;
 public class InferenceResourceConfig extends AbstractModel {
 
     /**
-    * Scaling way. Valid values: <li>Auto: Automatically adjust instance count according to request volume;</li><li>Manual: Manual setting of fixed number of resource instances.</li>
+    * <p>Scaling method. Valid values: <li>Auto: automatically adjust instance count according to request volume;</li><li>Manual: manually set a fixed number of instances.</li></p>
     */
     @SerializedName("ScalingMode")
     @Expose
     private String ScalingMode;
 
     /**
-    * Hardware specifications.
+    * <p>Hardware specification flag. Abandoned. For reference, use <code>HardwareSpecId</code>.</p>
     */
     @SerializedName("HardwareSpec")
     @Expose
     private String HardwareSpec;
 
     /**
-    * Inference service automatic scaling configuration. Required when ScalingMode is Auto.
-Note: This field may return null, which indicates a failure to obtain a valid value.
+    * <p>Unique identification ID of the hardware specification. You can obtain the supported hardware specifications of the current site through the <code>DescribeInferenceHardwareSpecifications</code> API.</p><p>By default, the system configures the required resources for the inference service according to the hardware specification corresponding to the selected <code>HardwareSpecId</code>. If adjustments are needed, you can customize the hardware resource configuration through <code>HardwareConfig</code>.</p>
+    */
+    @SerializedName("HardwareSpecId")
+    @Expose
+    private String HardwareSpecId;
+
+    /**
+    * <p>Hardware configuration for the inference service.</p><p>As an input parameter, if unpadded, hardware resources are configured according to the default value of the selected <code>HardwareSpecId</code> specification; if padded, priority is given to the fill value for configuration.</p>
+    */
+    @SerializedName("HardwareConfig")
+    @Expose
+    private InferenceHardwareConfig HardwareConfig;
+
+    /**
+    * <p>Automatic scaling configuration of the inference service. Required when ScalingMode is Auto.</p>
     */
     @SerializedName("AutoScalingConfig")
     @Expose
     private InferenceAutoScalingConfig AutoScalingConfig;
 
     /**
-    * Manual setting of inference service instance configuration. Required when ScalingMode is Manual.
-Note: This field may return null, which indicates a failure to obtain a valid value.
+    * <p>Inference service manual setting instance configuration. Required when ScalingMode is Manual.</p>
     */
     @SerializedName("ManualInstanceConfig")
     @Expose
     private InferenceManualInstanceConfig ManualInstanceConfig;
 
     /**
-    * Single-instance concurrency. Default value is 1.
+    * <p>Concurrency of a single instance. Default value: 1.</p>
     */
     @SerializedName("Concurrency")
     @Expose
     private Long Concurrency;
 
     /**
-     * Get Scaling way. Valid values: <li>Auto: Automatically adjust instance count according to request volume;</li><li>Manual: Manual setting of fixed number of resource instances.</li> 
-     * @return ScalingMode Scaling way. Valid values: <li>Auto: Automatically adjust instance count according to request volume;</li><li>Manual: Manual setting of fixed number of resource instances.</li>
+     * Get <p>Scaling method. Valid values: <li>Auto: automatically adjust instance count according to request volume;</li><li>Manual: manually set a fixed number of instances.</li></p> 
+     * @return ScalingMode <p>Scaling method. Valid values: <li>Auto: automatically adjust instance count according to request volume;</li><li>Manual: manually set a fixed number of instances.</li></p>
      */
     public String getScalingMode() {
         return this.ScalingMode;
     }
 
     /**
-     * Set Scaling way. Valid values: <li>Auto: Automatically adjust instance count according to request volume;</li><li>Manual: Manual setting of fixed number of resource instances.</li>
-     * @param ScalingMode Scaling way. Valid values: <li>Auto: Automatically adjust instance count according to request volume;</li><li>Manual: Manual setting of fixed number of resource instances.</li>
+     * Set <p>Scaling method. Valid values: <li>Auto: automatically adjust instance count according to request volume;</li><li>Manual: manually set a fixed number of instances.</li></p>
+     * @param ScalingMode <p>Scaling method. Valid values: <li>Auto: automatically adjust instance count according to request volume;</li><li>Manual: manually set a fixed number of instances.</li></p>
      */
     public void setScalingMode(String ScalingMode) {
         this.ScalingMode = ScalingMode;
     }
 
     /**
-     * Get Hardware specifications. 
-     * @return HardwareSpec Hardware specifications.
+     * Get <p>Hardware specification flag. Abandoned. For reference, use <code>HardwareSpecId</code>.</p> 
+     * @return HardwareSpec <p>Hardware specification flag. Abandoned. For reference, use <code>HardwareSpecId</code>.</p>
+     * @deprecated
      */
+    @Deprecated
     public String getHardwareSpec() {
         return this.HardwareSpec;
     }
 
     /**
-     * Set Hardware specifications.
-     * @param HardwareSpec Hardware specifications.
+     * Set <p>Hardware specification flag. Abandoned. For reference, use <code>HardwareSpecId</code>.</p>
+     * @param HardwareSpec <p>Hardware specification flag. Abandoned. For reference, use <code>HardwareSpecId</code>.</p>
+     * @deprecated
      */
+    @Deprecated
     public void setHardwareSpec(String HardwareSpec) {
         this.HardwareSpec = HardwareSpec;
     }
 
     /**
-     * Get Inference service automatic scaling configuration. Required when ScalingMode is Auto.
-Note: This field may return null, which indicates a failure to obtain a valid value. 
-     * @return AutoScalingConfig Inference service automatic scaling configuration. Required when ScalingMode is Auto.
-Note: This field may return null, which indicates a failure to obtain a valid value.
+     * Get <p>Unique identification ID of the hardware specification. You can obtain the supported hardware specifications of the current site through the <code>DescribeInferenceHardwareSpecifications</code> API.</p><p>By default, the system configures the required resources for the inference service according to the hardware specification corresponding to the selected <code>HardwareSpecId</code>. If adjustments are needed, you can customize the hardware resource configuration through <code>HardwareConfig</code>.</p> 
+     * @return HardwareSpecId <p>Unique identification ID of the hardware specification. You can obtain the supported hardware specifications of the current site through the <code>DescribeInferenceHardwareSpecifications</code> API.</p><p>By default, the system configures the required resources for the inference service according to the hardware specification corresponding to the selected <code>HardwareSpecId</code>. If adjustments are needed, you can customize the hardware resource configuration through <code>HardwareConfig</code>.</p>
+     */
+    public String getHardwareSpecId() {
+        return this.HardwareSpecId;
+    }
+
+    /**
+     * Set <p>Unique identification ID of the hardware specification. You can obtain the supported hardware specifications of the current site through the <code>DescribeInferenceHardwareSpecifications</code> API.</p><p>By default, the system configures the required resources for the inference service according to the hardware specification corresponding to the selected <code>HardwareSpecId</code>. If adjustments are needed, you can customize the hardware resource configuration through <code>HardwareConfig</code>.</p>
+     * @param HardwareSpecId <p>Unique identification ID of the hardware specification. You can obtain the supported hardware specifications of the current site through the <code>DescribeInferenceHardwareSpecifications</code> API.</p><p>By default, the system configures the required resources for the inference service according to the hardware specification corresponding to the selected <code>HardwareSpecId</code>. If adjustments are needed, you can customize the hardware resource configuration through <code>HardwareConfig</code>.</p>
+     */
+    public void setHardwareSpecId(String HardwareSpecId) {
+        this.HardwareSpecId = HardwareSpecId;
+    }
+
+    /**
+     * Get <p>Hardware configuration for the inference service.</p><p>As an input parameter, if unpadded, hardware resources are configured according to the default value of the selected <code>HardwareSpecId</code> specification; if padded, priority is given to the fill value for configuration.</p> 
+     * @return HardwareConfig <p>Hardware configuration for the inference service.</p><p>As an input parameter, if unpadded, hardware resources are configured according to the default value of the selected <code>HardwareSpecId</code> specification; if padded, priority is given to the fill value for configuration.</p>
+     */
+    public InferenceHardwareConfig getHardwareConfig() {
+        return this.HardwareConfig;
+    }
+
+    /**
+     * Set <p>Hardware configuration for the inference service.</p><p>As an input parameter, if unpadded, hardware resources are configured according to the default value of the selected <code>HardwareSpecId</code> specification; if padded, priority is given to the fill value for configuration.</p>
+     * @param HardwareConfig <p>Hardware configuration for the inference service.</p><p>As an input parameter, if unpadded, hardware resources are configured according to the default value of the selected <code>HardwareSpecId</code> specification; if padded, priority is given to the fill value for configuration.</p>
+     */
+    public void setHardwareConfig(InferenceHardwareConfig HardwareConfig) {
+        this.HardwareConfig = HardwareConfig;
+    }
+
+    /**
+     * Get <p>Automatic scaling configuration of the inference service. Required when ScalingMode is Auto.</p> 
+     * @return AutoScalingConfig <p>Automatic scaling configuration of the inference service. Required when ScalingMode is Auto.</p>
      */
     public InferenceAutoScalingConfig getAutoScalingConfig() {
         return this.AutoScalingConfig;
     }
 
     /**
-     * Set Inference service automatic scaling configuration. Required when ScalingMode is Auto.
-Note: This field may return null, which indicates a failure to obtain a valid value.
-     * @param AutoScalingConfig Inference service automatic scaling configuration. Required when ScalingMode is Auto.
-Note: This field may return null, which indicates a failure to obtain a valid value.
+     * Set <p>Automatic scaling configuration of the inference service. Required when ScalingMode is Auto.</p>
+     * @param AutoScalingConfig <p>Automatic scaling configuration of the inference service. Required when ScalingMode is Auto.</p>
      */
     public void setAutoScalingConfig(InferenceAutoScalingConfig AutoScalingConfig) {
         this.AutoScalingConfig = AutoScalingConfig;
     }
 
     /**
-     * Get Manual setting of inference service instance configuration. Required when ScalingMode is Manual.
-Note: This field may return null, which indicates a failure to obtain a valid value. 
-     * @return ManualInstanceConfig Manual setting of inference service instance configuration. Required when ScalingMode is Manual.
-Note: This field may return null, which indicates a failure to obtain a valid value.
+     * Get <p>Inference service manual setting instance configuration. Required when ScalingMode is Manual.</p> 
+     * @return ManualInstanceConfig <p>Inference service manual setting instance configuration. Required when ScalingMode is Manual.</p>
      */
     public InferenceManualInstanceConfig getManualInstanceConfig() {
         return this.ManualInstanceConfig;
     }
 
     /**
-     * Set Manual setting of inference service instance configuration. Required when ScalingMode is Manual.
-Note: This field may return null, which indicates a failure to obtain a valid value.
-     * @param ManualInstanceConfig Manual setting of inference service instance configuration. Required when ScalingMode is Manual.
-Note: This field may return null, which indicates a failure to obtain a valid value.
+     * Set <p>Inference service manual setting instance configuration. Required when ScalingMode is Manual.</p>
+     * @param ManualInstanceConfig <p>Inference service manual setting instance configuration. Required when ScalingMode is Manual.</p>
      */
     public void setManualInstanceConfig(InferenceManualInstanceConfig ManualInstanceConfig) {
         this.ManualInstanceConfig = ManualInstanceConfig;
     }
 
     /**
-     * Get Single-instance concurrency. Default value is 1. 
-     * @return Concurrency Single-instance concurrency. Default value is 1.
+     * Get <p>Concurrency of a single instance. Default value: 1.</p> 
+     * @return Concurrency <p>Concurrency of a single instance. Default value: 1.</p>
      */
     public Long getConcurrency() {
         return this.Concurrency;
     }
 
     /**
-     * Set Single-instance concurrency. Default value is 1.
-     * @param Concurrency Single-instance concurrency. Default value is 1.
+     * Set <p>Concurrency of a single instance. Default value: 1.</p>
+     * @param Concurrency <p>Concurrency of a single instance. Default value: 1.</p>
      */
     public void setConcurrency(Long Concurrency) {
         this.Concurrency = Concurrency;
@@ -162,6 +202,12 @@ Note: This field may return null, which indicates a failure to obtain a valid va
         if (source.HardwareSpec != null) {
             this.HardwareSpec = new String(source.HardwareSpec);
         }
+        if (source.HardwareSpecId != null) {
+            this.HardwareSpecId = new String(source.HardwareSpecId);
+        }
+        if (source.HardwareConfig != null) {
+            this.HardwareConfig = new InferenceHardwareConfig(source.HardwareConfig);
+        }
         if (source.AutoScalingConfig != null) {
             this.AutoScalingConfig = new InferenceAutoScalingConfig(source.AutoScalingConfig);
         }
@@ -180,6 +226,8 @@ Note: This field may return null, which indicates a failure to obtain a valid va
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ScalingMode", this.ScalingMode);
         this.setParamSimple(map, prefix + "HardwareSpec", this.HardwareSpec);
+        this.setParamSimple(map, prefix + "HardwareSpecId", this.HardwareSpecId);
+        this.setParamObj(map, prefix + "HardwareConfig.", this.HardwareConfig);
         this.setParamObj(map, prefix + "AutoScalingConfig.", this.AutoScalingConfig);
         this.setParamObj(map, prefix + "ManualInstanceConfig.", this.ManualInstanceConfig);
         this.setParamSimple(map, prefix + "Concurrency", this.Concurrency);

@@ -24,92 +24,97 @@ import java.util.HashMap;
 public class DescribeHostsSettingRequest extends AbstractModel {
 
     /**
-    * The site ID.
+    * Site ID.
     */
     @SerializedName("ZoneId")
     @Expose
     private String ZoneId;
 
     /**
-    * Offset for paginated queries. Default value: 0. Minimum value: 0.
+    * The offset of paginated query. Default value: 0, minimum value: 0.
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * Limit on paginated queries. Default value: 100. Maximum value: 1000.
+    * Paginated query limit. Default value: 100. Maximum value: 1000.
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * Filter conditions. The maximum value for Filters.Values is 20. The detailed conditions are as follows:<li>host: Filter by domain name.</li>
+    * Filter criteria. The maximum value of Filters.Values is 20. The detailed filter criteria are as follows:
+<li>host: Filter by domain name.</li>
     */
     @SerializedName("Filters")
     @Expose
     private Filter [] Filters;
 
     /**
-     * Get The site ID. 
-     * @return ZoneId The site ID.
+     * Get Site ID. 
+     * @return ZoneId Site ID.
      */
     public String getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set The site ID.
-     * @param ZoneId The site ID.
+     * Set Site ID.
+     * @param ZoneId Site ID.
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get Offset for paginated queries. Default value: 0. Minimum value: 0. 
-     * @return Offset Offset for paginated queries. Default value: 0. Minimum value: 0.
+     * Get The offset of paginated query. Default value: 0, minimum value: 0. 
+     * @return Offset The offset of paginated query. Default value: 0, minimum value: 0.
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Offset for paginated queries. Default value: 0. Minimum value: 0.
-     * @param Offset Offset for paginated queries. Default value: 0. Minimum value: 0.
+     * Set The offset of paginated query. Default value: 0, minimum value: 0.
+     * @param Offset The offset of paginated query. Default value: 0, minimum value: 0.
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get Limit on paginated queries. Default value: 100. Maximum value: 1000. 
-     * @return Limit Limit on paginated queries. Default value: 100. Maximum value: 1000.
+     * Get Paginated query limit. Default value: 100. Maximum value: 1000. 
+     * @return Limit Paginated query limit. Default value: 100. Maximum value: 1000.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Limit on paginated queries. Default value: 100. Maximum value: 1000.
-     * @param Limit Limit on paginated queries. Default value: 100. Maximum value: 1000.
+     * Set Paginated query limit. Default value: 100. Maximum value: 1000.
+     * @param Limit Paginated query limit. Default value: 100. Maximum value: 1000.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get Filter conditions. The maximum value for Filters.Values is 20. The detailed conditions are as follows:<li>host: Filter by domain name.</li> 
-     * @return Filters Filter conditions. The maximum value for Filters.Values is 20. The detailed conditions are as follows:<li>host: Filter by domain name.</li>
+     * Get Filter criteria. The maximum value of Filters.Values is 20. The detailed filter criteria are as follows:
+<li>host: Filter by domain name.</li> 
+     * @return Filters Filter criteria. The maximum value of Filters.Values is 20. The detailed filter criteria are as follows:
+<li>host: Filter by domain name.</li>
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set Filter conditions. The maximum value for Filters.Values is 20. The detailed conditions are as follows:<li>host: Filter by domain name.</li>
-     * @param Filters Filter conditions. The maximum value for Filters.Values is 20. The detailed conditions are as follows:<li>host: Filter by domain name.</li>
+     * Set Filter criteria. The maximum value of Filters.Values is 20. The detailed filter criteria are as follows:
+<li>host: Filter by domain name.</li>
+     * @param Filters Filter criteria. The maximum value of Filters.Values is 20. The detailed filter criteria are as follows:
+<li>host: Filter by domain name.</li>
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

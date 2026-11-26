@@ -24,38 +24,33 @@ import java.util.HashMap;
 public class OfflineCacheParameters extends AbstractModel {
 
     /**
-    * Whether to enable offline caching. values:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li>.
+    * Offline cache switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-     * Get Whether to enable offline caching. values:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li>. 
-     * @return Switch Whether to enable offline caching. values:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li>.
+     * Get Offline cache switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li> 
+     * @return Switch Offline cache switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set Whether to enable offline caching. values:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li>.
-     * @param Switch Whether to enable offline caching. values:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li>.
+     * Set Offline cache switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+     * @param Switch Offline cache switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;

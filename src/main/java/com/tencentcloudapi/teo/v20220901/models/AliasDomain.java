@@ -24,196 +24,196 @@ import java.util.HashMap;
 public class AliasDomain extends AbstractModel {
 
     /**
-    * The alias domain name.
+    * Alias domain name.
     */
     @SerializedName("AliasName")
     @Expose
     private String AliasName;
 
     /**
-    * The site ID.
+    * Zone ID.
     */
     @SerializedName("ZoneId")
     @Expose
     private String ZoneId;
 
     /**
-    * The target domain name.
+    * Target domain name.
     */
     @SerializedName("TargetName")
     @Expose
     private String TargetName;
 
     /**
-    * Status of the alias domain name. Values:
-<li>`active`: Activated</li>
-<li>`pending`: Deploying</li>
-<li>`conflict`: Reclaimed</li>
-<li>`stop`: Stopped</li>
+    * Status of the alias domain name. Valid values:
+<li> active: effective; </li>
+<li> pending: deploying.</li>
+<li> conflict: Retrieved. </li>
+<li> stop: deactivated;</li>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * The blocking mode. Values:
-<li>`0`: Not blocked</li>
-<li>`11`: Blocked due to regulatory compliance</li>
-<li>`14`: Blocked due to ICP filing not obtained</li>
+    * Blocking mode. Valid values:
+<li>`0`: not blocked;</li>
+<li> 11: Block due to regulatory compliance;</li>
+<li> 14: Banned for non-filing.</li>
     */
     @SerializedName("ForbidMode")
     @Expose
     private Long ForbidMode;
 
     /**
-    * Creation time of the alias domain name.
+    * Alias domain creation time.
     */
     @SerializedName("CreatedOn")
     @Expose
     private String CreatedOn;
 
     /**
-    * Modification time of the alias domain name.
+    * Alias domain name modification time.
     */
     @SerializedName("ModifiedOn")
     @Expose
     private String ModifiedOn;
 
     /**
-     * Get The alias domain name. 
-     * @return AliasName The alias domain name.
+     * Get Alias domain name. 
+     * @return AliasName Alias domain name.
      */
     public String getAliasName() {
         return this.AliasName;
     }
 
     /**
-     * Set The alias domain name.
-     * @param AliasName The alias domain name.
+     * Set Alias domain name.
+     * @param AliasName Alias domain name.
      */
     public void setAliasName(String AliasName) {
         this.AliasName = AliasName;
     }
 
     /**
-     * Get The site ID. 
-     * @return ZoneId The site ID.
+     * Get Zone ID. 
+     * @return ZoneId Zone ID.
      */
     public String getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set The site ID.
-     * @param ZoneId The site ID.
+     * Set Zone ID.
+     * @param ZoneId Zone ID.
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get The target domain name. 
-     * @return TargetName The target domain name.
+     * Get Target domain name. 
+     * @return TargetName Target domain name.
      */
     public String getTargetName() {
         return this.TargetName;
     }
 
     /**
-     * Set The target domain name.
-     * @param TargetName The target domain name.
+     * Set Target domain name.
+     * @param TargetName Target domain name.
      */
     public void setTargetName(String TargetName) {
         this.TargetName = TargetName;
     }
 
     /**
-     * Get Status of the alias domain name. Values:
-<li>`active`: Activated</li>
-<li>`pending`: Deploying</li>
-<li>`conflict`: Reclaimed</li>
-<li>`stop`: Stopped</li> 
-     * @return Status Status of the alias domain name. Values:
-<li>`active`: Activated</li>
-<li>`pending`: Deploying</li>
-<li>`conflict`: Reclaimed</li>
-<li>`stop`: Stopped</li>
+     * Get Status of the alias domain name. Valid values:
+<li> active: effective; </li>
+<li> pending: deploying.</li>
+<li> conflict: Retrieved. </li>
+<li> stop: deactivated;</li> 
+     * @return Status Status of the alias domain name. Valid values:
+<li> active: effective; </li>
+<li> pending: deploying.</li>
+<li> conflict: Retrieved. </li>
+<li> stop: deactivated;</li>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Status of the alias domain name. Values:
-<li>`active`: Activated</li>
-<li>`pending`: Deploying</li>
-<li>`conflict`: Reclaimed</li>
-<li>`stop`: Stopped</li>
-     * @param Status Status of the alias domain name. Values:
-<li>`active`: Activated</li>
-<li>`pending`: Deploying</li>
-<li>`conflict`: Reclaimed</li>
-<li>`stop`: Stopped</li>
+     * Set Status of the alias domain name. Valid values:
+<li> active: effective; </li>
+<li> pending: deploying.</li>
+<li> conflict: Retrieved. </li>
+<li> stop: deactivated;</li>
+     * @param Status Status of the alias domain name. Valid values:
+<li> active: effective; </li>
+<li> pending: deploying.</li>
+<li> conflict: Retrieved. </li>
+<li> stop: deactivated;</li>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get The blocking mode. Values:
-<li>`0`: Not blocked</li>
-<li>`11`: Blocked due to regulatory compliance</li>
-<li>`14`: Blocked due to ICP filing not obtained</li> 
-     * @return ForbidMode The blocking mode. Values:
-<li>`0`: Not blocked</li>
-<li>`11`: Blocked due to regulatory compliance</li>
-<li>`14`: Blocked due to ICP filing not obtained</li>
+     * Get Blocking mode. Valid values:
+<li>`0`: not blocked;</li>
+<li> 11: Block due to regulatory compliance;</li>
+<li> 14: Banned for non-filing.</li> 
+     * @return ForbidMode Blocking mode. Valid values:
+<li>`0`: not blocked;</li>
+<li> 11: Block due to regulatory compliance;</li>
+<li> 14: Banned for non-filing.</li>
      */
     public Long getForbidMode() {
         return this.ForbidMode;
     }
 
     /**
-     * Set The blocking mode. Values:
-<li>`0`: Not blocked</li>
-<li>`11`: Blocked due to regulatory compliance</li>
-<li>`14`: Blocked due to ICP filing not obtained</li>
-     * @param ForbidMode The blocking mode. Values:
-<li>`0`: Not blocked</li>
-<li>`11`: Blocked due to regulatory compliance</li>
-<li>`14`: Blocked due to ICP filing not obtained</li>
+     * Set Blocking mode. Valid values:
+<li>`0`: not blocked;</li>
+<li> 11: Block due to regulatory compliance;</li>
+<li> 14: Banned for non-filing.</li>
+     * @param ForbidMode Blocking mode. Valid values:
+<li>`0`: not blocked;</li>
+<li> 11: Block due to regulatory compliance;</li>
+<li> 14: Banned for non-filing.</li>
      */
     public void setForbidMode(Long ForbidMode) {
         this.ForbidMode = ForbidMode;
     }
 
     /**
-     * Get Creation time of the alias domain name. 
-     * @return CreatedOn Creation time of the alias domain name.
+     * Get Alias domain creation time. 
+     * @return CreatedOn Alias domain creation time.
      */
     public String getCreatedOn() {
         return this.CreatedOn;
     }
 
     /**
-     * Set Creation time of the alias domain name.
-     * @param CreatedOn Creation time of the alias domain name.
+     * Set Alias domain creation time.
+     * @param CreatedOn Alias domain creation time.
      */
     public void setCreatedOn(String CreatedOn) {
         this.CreatedOn = CreatedOn;
     }
 
     /**
-     * Get Modification time of the alias domain name. 
-     * @return ModifiedOn Modification time of the alias domain name.
+     * Get Alias domain name modification time. 
+     * @return ModifiedOn Alias domain name modification time.
      */
     public String getModifiedOn() {
         return this.ModifiedOn;
     }
 
     /**
-     * Set Modification time of the alias domain name.
-     * @param ModifiedOn Modification time of the alias domain name.
+     * Set Alias domain name modification time.
+     * @param ModifiedOn Alias domain name modification time.
      */
     public void setModifiedOn(String ModifiedOn) {
         this.ModifiedOn = ModifiedOn;

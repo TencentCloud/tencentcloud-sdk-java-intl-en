@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeZoneConfigImportResultResponse extends AbstractModel {
 
     /**
-    * The status of this import task. Valid values: <li>success: It indicates the configuration was successfully imported;</li> <li>failure: It indicates the configuration import failed;</li> <li>doing: It indicates the configuration is being imported.</li>
+    * The import status of this import task. Valid values: <li>success: It indicates the configuration item was successfully imported;</li> <li>failure: It indicates the configuration item import failed;</li> <li>doing: It indicates the configuration item is being imported.</li>
     */
     @SerializedName("Status")
     @Expose
@@ -66,16 +66,16 @@ public class DescribeZoneConfigImportResultResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get The status of this import task. Valid values: <li>success: It indicates the configuration was successfully imported;</li> <li>failure: It indicates the configuration import failed;</li> <li>doing: It indicates the configuration is being imported.</li> 
-     * @return Status The status of this import task. Valid values: <li>success: It indicates the configuration was successfully imported;</li> <li>failure: It indicates the configuration import failed;</li> <li>doing: It indicates the configuration is being imported.</li>
+     * Get The import status of this import task. Valid values: <li>success: It indicates the configuration item was successfully imported;</li> <li>failure: It indicates the configuration item import failed;</li> <li>doing: It indicates the configuration item is being imported.</li> 
+     * @return Status The import status of this import task. Valid values: <li>success: It indicates the configuration item was successfully imported;</li> <li>failure: It indicates the configuration item import failed;</li> <li>doing: It indicates the configuration item is being imported.</li>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set The status of this import task. Valid values: <li>success: It indicates the configuration was successfully imported;</li> <li>failure: It indicates the configuration import failed;</li> <li>doing: It indicates the configuration is being imported.</li>
-     * @param Status The status of this import task. Valid values: <li>success: It indicates the configuration was successfully imported;</li> <li>failure: It indicates the configuration import failed;</li> <li>doing: It indicates the configuration is being imported.</li>
+     * Set The import status of this import task. Valid values: <li>success: It indicates the configuration item was successfully imported;</li> <li>failure: It indicates the configuration item import failed;</li> <li>doing: It indicates the configuration item is being imported.</li>
+     * @param Status The import status of this import task. Valid values: <li>success: It indicates the configuration item was successfully imported;</li> <li>failure: It indicates the configuration item import failed;</li> <li>doing: It indicates the configuration item is being imported.</li>
      */
     public void setStatus(String Status) {
         this.Status = Status;

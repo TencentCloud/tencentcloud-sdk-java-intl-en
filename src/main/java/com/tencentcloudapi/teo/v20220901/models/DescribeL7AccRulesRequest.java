@@ -24,97 +24,97 @@ import java.util.HashMap;
 public class DescribeL7AccRulesRequest extends AbstractModel {
 
     /**
-    * Zone id.
+    * Zone ID.
     */
     @SerializedName("ZoneId")
     @Expose
     private String ZoneId;
 
     /**
-    * Filter conditions. the upper limit for filters.values is 20. if this parameter is not filled in, the rules under the site are returned in order by default. detailed filtering conditions are as follows:.
-<Li>Rule-Id: filter by rule id.</li>.
+    * Filter criteria. The maximum number of Filters.Values is 20. If this parameter is not specified, rules under the site are returned in sequence by default. Detailed filter criteria:
+<li>rule-id: Filter by rule ID.</li>
     */
     @SerializedName("Filters")
     @Expose
     private Filter [] Filters;
 
     /**
-    * Number limit of paginated query. default value: 20. maximum value: 1000.
+    * Number limit of paginated query. Default value: 20. Maximum value: 1000.
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * Offset of paginated query. default value: 0.
+    * Offset of paginated query. Default value: 0.
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-     * Get Zone id. 
-     * @return ZoneId Zone id.
+     * Get Zone ID. 
+     * @return ZoneId Zone ID.
      */
     public String getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set Zone id.
-     * @param ZoneId Zone id.
+     * Set Zone ID.
+     * @param ZoneId Zone ID.
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get Filter conditions. the upper limit for filters.values is 20. if this parameter is not filled in, the rules under the site are returned in order by default. detailed filtering conditions are as follows:.
-<Li>Rule-Id: filter by rule id.</li>. 
-     * @return Filters Filter conditions. the upper limit for filters.values is 20. if this parameter is not filled in, the rules under the site are returned in order by default. detailed filtering conditions are as follows:.
-<Li>Rule-Id: filter by rule id.</li>.
+     * Get Filter criteria. The maximum number of Filters.Values is 20. If this parameter is not specified, rules under the site are returned in sequence by default. Detailed filter criteria:
+<li>rule-id: Filter by rule ID.</li> 
+     * @return Filters Filter criteria. The maximum number of Filters.Values is 20. If this parameter is not specified, rules under the site are returned in sequence by default. Detailed filter criteria:
+<li>rule-id: Filter by rule ID.</li>
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set Filter conditions. the upper limit for filters.values is 20. if this parameter is not filled in, the rules under the site are returned in order by default. detailed filtering conditions are as follows:.
-<Li>Rule-Id: filter by rule id.</li>.
-     * @param Filters Filter conditions. the upper limit for filters.values is 20. if this parameter is not filled in, the rules under the site are returned in order by default. detailed filtering conditions are as follows:.
-<Li>Rule-Id: filter by rule id.</li>.
+     * Set Filter criteria. The maximum number of Filters.Values is 20. If this parameter is not specified, rules under the site are returned in sequence by default. Detailed filter criteria:
+<li>rule-id: Filter by rule ID.</li>
+     * @param Filters Filter criteria. The maximum number of Filters.Values is 20. If this parameter is not specified, rules under the site are returned in sequence by default. Detailed filter criteria:
+<li>rule-id: Filter by rule ID.</li>
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;
     }
 
     /**
-     * Get Number limit of paginated query. default value: 20. maximum value: 1000. 
-     * @return Limit Number limit of paginated query. default value: 20. maximum value: 1000.
+     * Get Number limit of paginated query. Default value: 20. Maximum value: 1000. 
+     * @return Limit Number limit of paginated query. Default value: 20. Maximum value: 1000.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Number limit of paginated query. default value: 20. maximum value: 1000.
-     * @param Limit Number limit of paginated query. default value: 20. maximum value: 1000.
+     * Set Number limit of paginated query. Default value: 20. Maximum value: 1000.
+     * @param Limit Number limit of paginated query. Default value: 20. Maximum value: 1000.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get Offset of paginated query. default value: 0. 
-     * @return Offset Offset of paginated query. default value: 0.
+     * Get Offset of paginated query. Default value: 0. 
+     * @return Offset Offset of paginated query. Default value: 0.
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Offset of paginated query. default value: 0.
-     * @param Offset Offset of paginated query. default value: 0.
+     * Set Offset of paginated query. Default value: 0.
+     * @param Offset Offset of paginated query. Default value: 0.
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;

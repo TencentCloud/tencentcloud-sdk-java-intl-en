@@ -24,153 +24,153 @@ import java.util.HashMap;
 public class AlgDetectJS extends AbstractModel {
 
     /**
-    * Method to validate client behavior.
+    * Operation name.
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * Proof-of-work strength. Values:
-<li>`low` (default): Low</li>
-<li>`middle`: Medium</li>
-<li>`high`: High</li>
+    * Proof of Work (proof_Of-Work) verification strength. Default value: low. Valid values:
+<li>low: low;</li>
+<li>middle: Medium;</li>
+<li>high: high.</li>
     */
     @SerializedName("WorkLevel")
     @Expose
     private String WorkLevel;
 
     /**
-    * Implement a delay before executing JS in milliseconds. Value range: 0-1000. Default value: 500.
+    * Execution mode. The time when js delay execution is triggered. Unit: ms. Default value: 500. Value range: 0–1000.
     */
     @SerializedName("ExecuteMode")
     @Expose
     private Long ExecuteMode;
 
     /**
-    * The period threshold for validating the result "Client JS disabled" in seconds. Value range: 5-3600. Default value: 10.
+    * Statistical cycle for clients that do not have JS enabled (test not completed). Unit: seconds. Default: 10. Value range: 5–3600.
     */
     @SerializedName("InvalidStatTime")
     @Expose
     private Long InvalidStatTime;
 
     /**
-    * The number of times for the result "Client JS disabled" occurred in the specified period. Value range: 1-100000000. Default value: 30.
+    * Client JS not enabled (test not completed) trigger threshold. Count. Default: 300. Value: 1–100000000.
     */
     @SerializedName("InvalidThreshold")
     @Expose
     private Long InvalidThreshold;
 
     /**
-    * Client behavior validation results.
+    * Bot proactive feature recognition client behavior validation result.
     */
     @SerializedName("AlgDetectResults")
     @Expose
     private AlgDetectResult [] AlgDetectResults;
 
     /**
-     * Get Method to validate client behavior. 
-     * @return Name Method to validate client behavior.
+     * Get Operation name. 
+     * @return Name Operation name.
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Method to validate client behavior.
-     * @param Name Method to validate client behavior.
+     * Set Operation name.
+     * @param Name Operation name.
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Proof-of-work strength. Values:
-<li>`low` (default): Low</li>
-<li>`middle`: Medium</li>
-<li>`high`: High</li> 
-     * @return WorkLevel Proof-of-work strength. Values:
-<li>`low` (default): Low</li>
-<li>`middle`: Medium</li>
-<li>`high`: High</li>
+     * Get Proof of Work (proof_Of-Work) verification strength. Default value: low. Valid values:
+<li>low: low;</li>
+<li>middle: Medium;</li>
+<li>high: high.</li> 
+     * @return WorkLevel Proof of Work (proof_Of-Work) verification strength. Default value: low. Valid values:
+<li>low: low;</li>
+<li>middle: Medium;</li>
+<li>high: high.</li>
      */
     public String getWorkLevel() {
         return this.WorkLevel;
     }
 
     /**
-     * Set Proof-of-work strength. Values:
-<li>`low` (default): Low</li>
-<li>`middle`: Medium</li>
-<li>`high`: High</li>
-     * @param WorkLevel Proof-of-work strength. Values:
-<li>`low` (default): Low</li>
-<li>`middle`: Medium</li>
-<li>`high`: High</li>
+     * Set Proof of Work (proof_Of-Work) verification strength. Default value: low. Valid values:
+<li>low: low;</li>
+<li>middle: Medium;</li>
+<li>high: high.</li>
+     * @param WorkLevel Proof of Work (proof_Of-Work) verification strength. Default value: low. Valid values:
+<li>low: low;</li>
+<li>middle: Medium;</li>
+<li>high: high.</li>
      */
     public void setWorkLevel(String WorkLevel) {
         this.WorkLevel = WorkLevel;
     }
 
     /**
-     * Get Implement a delay before executing JS in milliseconds. Value range: 0-1000. Default value: 500. 
-     * @return ExecuteMode Implement a delay before executing JS in milliseconds. Value range: 0-1000. Default value: 500.
+     * Get Execution mode. The time when js delay execution is triggered. Unit: ms. Default value: 500. Value range: 0–1000. 
+     * @return ExecuteMode Execution mode. The time when js delay execution is triggered. Unit: ms. Default value: 500. Value range: 0–1000.
      */
     public Long getExecuteMode() {
         return this.ExecuteMode;
     }
 
     /**
-     * Set Implement a delay before executing JS in milliseconds. Value range: 0-1000. Default value: 500.
-     * @param ExecuteMode Implement a delay before executing JS in milliseconds. Value range: 0-1000. Default value: 500.
+     * Set Execution mode. The time when js delay execution is triggered. Unit: ms. Default value: 500. Value range: 0–1000.
+     * @param ExecuteMode Execution mode. The time when js delay execution is triggered. Unit: ms. Default value: 500. Value range: 0–1000.
      */
     public void setExecuteMode(Long ExecuteMode) {
         this.ExecuteMode = ExecuteMode;
     }
 
     /**
-     * Get The period threshold for validating the result "Client JS disabled" in seconds. Value range: 5-3600. Default value: 10. 
-     * @return InvalidStatTime The period threshold for validating the result "Client JS disabled" in seconds. Value range: 5-3600. Default value: 10.
+     * Get Statistical cycle for clients that do not have JS enabled (test not completed). Unit: seconds. Default: 10. Value range: 5–3600. 
+     * @return InvalidStatTime Statistical cycle for clients that do not have JS enabled (test not completed). Unit: seconds. Default: 10. Value range: 5–3600.
      */
     public Long getInvalidStatTime() {
         return this.InvalidStatTime;
     }
 
     /**
-     * Set The period threshold for validating the result "Client JS disabled" in seconds. Value range: 5-3600. Default value: 10.
-     * @param InvalidStatTime The period threshold for validating the result "Client JS disabled" in seconds. Value range: 5-3600. Default value: 10.
+     * Set Statistical cycle for clients that do not have JS enabled (test not completed). Unit: seconds. Default: 10. Value range: 5–3600.
+     * @param InvalidStatTime Statistical cycle for clients that do not have JS enabled (test not completed). Unit: seconds. Default: 10. Value range: 5–3600.
      */
     public void setInvalidStatTime(Long InvalidStatTime) {
         this.InvalidStatTime = InvalidStatTime;
     }
 
     /**
-     * Get The number of times for the result "Client JS disabled" occurred in the specified period. Value range: 1-100000000. Default value: 30. 
-     * @return InvalidThreshold The number of times for the result "Client JS disabled" occurred in the specified period. Value range: 1-100000000. Default value: 30.
+     * Get Client JS not enabled (test not completed) trigger threshold. Count. Default: 300. Value: 1–100000000. 
+     * @return InvalidThreshold Client JS not enabled (test not completed) trigger threshold. Count. Default: 300. Value: 1–100000000.
      */
     public Long getInvalidThreshold() {
         return this.InvalidThreshold;
     }
 
     /**
-     * Set The number of times for the result "Client JS disabled" occurred in the specified period. Value range: 1-100000000. Default value: 30.
-     * @param InvalidThreshold The number of times for the result "Client JS disabled" occurred in the specified period. Value range: 1-100000000. Default value: 30.
+     * Set Client JS not enabled (test not completed) trigger threshold. Count. Default: 300. Value: 1–100000000.
+     * @param InvalidThreshold Client JS not enabled (test not completed) trigger threshold. Count. Default: 300. Value: 1–100000000.
      */
     public void setInvalidThreshold(Long InvalidThreshold) {
         this.InvalidThreshold = InvalidThreshold;
     }
 
     /**
-     * Get Client behavior validation results. 
-     * @return AlgDetectResults Client behavior validation results.
+     * Get Bot proactive feature recognition client behavior validation result. 
+     * @return AlgDetectResults Bot proactive feature recognition client behavior validation result.
      */
     public AlgDetectResult [] getAlgDetectResults() {
         return this.AlgDetectResults;
     }
 
     /**
-     * Set Client behavior validation results.
-     * @param AlgDetectResults Client behavior validation results.
+     * Set Bot proactive feature recognition client behavior validation result.
+     * @param AlgDetectResults Bot proactive feature recognition client behavior validation result.
      */
     public void setAlgDetectResults(AlgDetectResult [] AlgDetectResults) {
         this.AlgDetectResults = AlgDetectResults;

@@ -24,67 +24,72 @@ import java.util.HashMap;
 public class CreateApplicationProxyRuleRequest extends AbstractModel {
 
     /**
-    * The site ID.
+    * Site ID.
     */
     @SerializedName("ZoneId")
     @Expose
     private String ZoneId;
 
     /**
-    * The proxy ID.
+    * Proxy ID.
     */
     @SerializedName("ProxyId")
     @Expose
     private String ProxyId;
 
     /**
-    * The protocol. Values:
-<li>`TCP`: TCP protocol</li>
-<li>`UDP`: UDP protocol</li>
+    * Protocol. Valid values:
+<li>TCP: TCP protocol;</li>
+<li>UDP: UDP protocol.</li>
     */
     @SerializedName("Proto")
     @Expose
     private String Proto;
 
     /**
-    * The access port, which can be:
-<li>A single port, such as 80</li>
-<li>A port range, such as 81-90</li>
+    * Port. Supported formats:
+<li>80: port 80;</li>
+<li>81-90: ports 81 to 90.</li>
     */
     @SerializedName("Port")
     @Expose
     private String [] Port;
 
     /**
-    * Origin server type. Valid values:<li>custom: Manually added;</li>
-<li>loadbalancer: Cloud Load Balancer;</li><li>origins: Origin server group.</li>
+    * Origin server type. Valid values:
+<li>`custom`: Manually added;</li>
+<li>loadbalancer: load balancing;</li>
+<li>origins: origin server group.</li>
     */
     @SerializedName("OriginType")
     @Expose
     private String OriginType;
 
     /**
-    * Details of the origin server:<li>When OriginType is custom, it indicates one or more origin servers, such as ["8.8.8.8","9.9.9.9"] or OriginValue=["test.com"];</li><li>When OriginType is loadbalancer, it indicates a single Cloud Load Balancer, such as ["lb-xdffsfasdfs"];</li><li>When OriginType is origins, it requires one and only one element, which represents an origin server group ID, such as ["origin-537f5b41-162a-11ed-abaa-525400c5da15"].</li>
+    * Details of the origin server:
+<li>When OriginType is custom, it indicates one or more origin servers, such as `["8.8.8.8","9.9.9.9"]` or `OriginValue=["test.com"]`;</li>
+<li>When OriginType is loadbalancer, it indicates a cloud load balancer, such as ["lb-xdffsfasdfs"];</li>
+<li>When OriginType is origins, it requires one and only one element, indicating the origin server group ID, such as ["origin-537f5b41-162a-11ed-abaa-525400c5da15"].</li>
     */
     @SerializedName("OriginValue")
     @Expose
     private String [] OriginValue;
 
     /**
-    * Passes the client IP. Values:
-<li>`TOA`: Pass the client IP via TOA (available only when `Proto=TCP`).</li>
-<li>`PPV1`: Pass the client IP via Proxy Protocol V1 (available only when `Proto=TCP`).</li>
-<li>`PPV2`: Pass the client IP via Proxy Protocol V2.</li>
-<li>`OFF`: Not pass the client IP.</li>Default value: OFF.
+    * Passing the client IP address. Valid values:
+<li>TOA: TOA (selectable only when Proto = TCP);</li>
+<li>PPV1: passing via Proxy Protocol V1, available only when Proto = TCP;</li>
+<li>PPV2: passing via Proxy Protocol V2;</li>
+<li>OFF: no passing.</li>Default value: OFF.
     */
     @SerializedName("ForwardClientIp")
     @Expose
     private String ForwardClientIp;
 
     /**
-    * Whether to enable session persistence. Values:
-<li>`true`: Enable.</li>
-<li>`false`: Disable.</li>Default value: false.
+    * Whether to enable session persistence. Valid values:
+<li>true: Enable;</li>
+<li>false: Disable.</li>Default value: false.
     */
     @SerializedName("SessionPersist")
     @Expose
@@ -98,188 +103,208 @@ public class CreateApplicationProxyRuleRequest extends AbstractModel {
     private Long SessionPersistTime;
 
     /**
-    * The origin port, which can be:
-<li>A single port, such as 80</li>
-<li>A port range, such as 81-82</li>
+    * Origin server port. Supported formats:
+<li>Single port: 80;</li>
+<li>Port range: 81-90, ports 81 to 90.</li>
     */
     @SerializedName("OriginPort")
     @Expose
     private String OriginPort;
 
     /**
-    * Rule tag. This parameter is left empty by default.
+    * Rule tag. The default value is an empty string.
     */
     @SerializedName("RuleTag")
     @Expose
     private String RuleTag;
 
     /**
-     * Get The site ID. 
-     * @return ZoneId The site ID.
+     * Get Site ID. 
+     * @return ZoneId Site ID.
      */
     public String getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set The site ID.
-     * @param ZoneId The site ID.
+     * Set Site ID.
+     * @param ZoneId Site ID.
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get The proxy ID. 
-     * @return ProxyId The proxy ID.
+     * Get Proxy ID. 
+     * @return ProxyId Proxy ID.
      */
     public String getProxyId() {
         return this.ProxyId;
     }
 
     /**
-     * Set The proxy ID.
-     * @param ProxyId The proxy ID.
+     * Set Proxy ID.
+     * @param ProxyId Proxy ID.
      */
     public void setProxyId(String ProxyId) {
         this.ProxyId = ProxyId;
     }
 
     /**
-     * Get The protocol. Values:
-<li>`TCP`: TCP protocol</li>
-<li>`UDP`: UDP protocol</li> 
-     * @return Proto The protocol. Values:
-<li>`TCP`: TCP protocol</li>
-<li>`UDP`: UDP protocol</li>
+     * Get Protocol. Valid values:
+<li>TCP: TCP protocol;</li>
+<li>UDP: UDP protocol.</li> 
+     * @return Proto Protocol. Valid values:
+<li>TCP: TCP protocol;</li>
+<li>UDP: UDP protocol.</li>
      */
     public String getProto() {
         return this.Proto;
     }
 
     /**
-     * Set The protocol. Values:
-<li>`TCP`: TCP protocol</li>
-<li>`UDP`: UDP protocol</li>
-     * @param Proto The protocol. Values:
-<li>`TCP`: TCP protocol</li>
-<li>`UDP`: UDP protocol</li>
+     * Set Protocol. Valid values:
+<li>TCP: TCP protocol;</li>
+<li>UDP: UDP protocol.</li>
+     * @param Proto Protocol. Valid values:
+<li>TCP: TCP protocol;</li>
+<li>UDP: UDP protocol.</li>
      */
     public void setProto(String Proto) {
         this.Proto = Proto;
     }
 
     /**
-     * Get The access port, which can be:
-<li>A single port, such as 80</li>
-<li>A port range, such as 81-90</li> 
-     * @return Port The access port, which can be:
-<li>A single port, such as 80</li>
-<li>A port range, such as 81-90</li>
+     * Get Port. Supported formats:
+<li>80: port 80;</li>
+<li>81-90: ports 81 to 90.</li> 
+     * @return Port Port. Supported formats:
+<li>80: port 80;</li>
+<li>81-90: ports 81 to 90.</li>
      */
     public String [] getPort() {
         return this.Port;
     }
 
     /**
-     * Set The access port, which can be:
-<li>A single port, such as 80</li>
-<li>A port range, such as 81-90</li>
-     * @param Port The access port, which can be:
-<li>A single port, such as 80</li>
-<li>A port range, such as 81-90</li>
+     * Set Port. Supported formats:
+<li>80: port 80;</li>
+<li>81-90: ports 81 to 90.</li>
+     * @param Port Port. Supported formats:
+<li>80: port 80;</li>
+<li>81-90: ports 81 to 90.</li>
      */
     public void setPort(String [] Port) {
         this.Port = Port;
     }
 
     /**
-     * Get Origin server type. Valid values:<li>custom: Manually added;</li>
-<li>loadbalancer: Cloud Load Balancer;</li><li>origins: Origin server group.</li> 
-     * @return OriginType Origin server type. Valid values:<li>custom: Manually added;</li>
-<li>loadbalancer: Cloud Load Balancer;</li><li>origins: Origin server group.</li>
+     * Get Origin server type. Valid values:
+<li>`custom`: Manually added;</li>
+<li>loadbalancer: load balancing;</li>
+<li>origins: origin server group.</li> 
+     * @return OriginType Origin server type. Valid values:
+<li>`custom`: Manually added;</li>
+<li>loadbalancer: load balancing;</li>
+<li>origins: origin server group.</li>
      */
     public String getOriginType() {
         return this.OriginType;
     }
 
     /**
-     * Set Origin server type. Valid values:<li>custom: Manually added;</li>
-<li>loadbalancer: Cloud Load Balancer;</li><li>origins: Origin server group.</li>
-     * @param OriginType Origin server type. Valid values:<li>custom: Manually added;</li>
-<li>loadbalancer: Cloud Load Balancer;</li><li>origins: Origin server group.</li>
+     * Set Origin server type. Valid values:
+<li>`custom`: Manually added;</li>
+<li>loadbalancer: load balancing;</li>
+<li>origins: origin server group.</li>
+     * @param OriginType Origin server type. Valid values:
+<li>`custom`: Manually added;</li>
+<li>loadbalancer: load balancing;</li>
+<li>origins: origin server group.</li>
      */
     public void setOriginType(String OriginType) {
         this.OriginType = OriginType;
     }
 
     /**
-     * Get Details of the origin server:<li>When OriginType is custom, it indicates one or more origin servers, such as ["8.8.8.8","9.9.9.9"] or OriginValue=["test.com"];</li><li>When OriginType is loadbalancer, it indicates a single Cloud Load Balancer, such as ["lb-xdffsfasdfs"];</li><li>When OriginType is origins, it requires one and only one element, which represents an origin server group ID, such as ["origin-537f5b41-162a-11ed-abaa-525400c5da15"].</li> 
-     * @return OriginValue Details of the origin server:<li>When OriginType is custom, it indicates one or more origin servers, such as ["8.8.8.8","9.9.9.9"] or OriginValue=["test.com"];</li><li>When OriginType is loadbalancer, it indicates a single Cloud Load Balancer, such as ["lb-xdffsfasdfs"];</li><li>When OriginType is origins, it requires one and only one element, which represents an origin server group ID, such as ["origin-537f5b41-162a-11ed-abaa-525400c5da15"].</li>
+     * Get Details of the origin server:
+<li>When OriginType is custom, it indicates one or more origin servers, such as `["8.8.8.8","9.9.9.9"]` or `OriginValue=["test.com"]`;</li>
+<li>When OriginType is loadbalancer, it indicates a cloud load balancer, such as ["lb-xdffsfasdfs"];</li>
+<li>When OriginType is origins, it requires one and only one element, indicating the origin server group ID, such as ["origin-537f5b41-162a-11ed-abaa-525400c5da15"].</li> 
+     * @return OriginValue Details of the origin server:
+<li>When OriginType is custom, it indicates one or more origin servers, such as `["8.8.8.8","9.9.9.9"]` or `OriginValue=["test.com"]`;</li>
+<li>When OriginType is loadbalancer, it indicates a cloud load balancer, such as ["lb-xdffsfasdfs"];</li>
+<li>When OriginType is origins, it requires one and only one element, indicating the origin server group ID, such as ["origin-537f5b41-162a-11ed-abaa-525400c5da15"].</li>
      */
     public String [] getOriginValue() {
         return this.OriginValue;
     }
 
     /**
-     * Set Details of the origin server:<li>When OriginType is custom, it indicates one or more origin servers, such as ["8.8.8.8","9.9.9.9"] or OriginValue=["test.com"];</li><li>When OriginType is loadbalancer, it indicates a single Cloud Load Balancer, such as ["lb-xdffsfasdfs"];</li><li>When OriginType is origins, it requires one and only one element, which represents an origin server group ID, such as ["origin-537f5b41-162a-11ed-abaa-525400c5da15"].</li>
-     * @param OriginValue Details of the origin server:<li>When OriginType is custom, it indicates one or more origin servers, such as ["8.8.8.8","9.9.9.9"] or OriginValue=["test.com"];</li><li>When OriginType is loadbalancer, it indicates a single Cloud Load Balancer, such as ["lb-xdffsfasdfs"];</li><li>When OriginType is origins, it requires one and only one element, which represents an origin server group ID, such as ["origin-537f5b41-162a-11ed-abaa-525400c5da15"].</li>
+     * Set Details of the origin server:
+<li>When OriginType is custom, it indicates one or more origin servers, such as `["8.8.8.8","9.9.9.9"]` or `OriginValue=["test.com"]`;</li>
+<li>When OriginType is loadbalancer, it indicates a cloud load balancer, such as ["lb-xdffsfasdfs"];</li>
+<li>When OriginType is origins, it requires one and only one element, indicating the origin server group ID, such as ["origin-537f5b41-162a-11ed-abaa-525400c5da15"].</li>
+     * @param OriginValue Details of the origin server:
+<li>When OriginType is custom, it indicates one or more origin servers, such as `["8.8.8.8","9.9.9.9"]` or `OriginValue=["test.com"]`;</li>
+<li>When OriginType is loadbalancer, it indicates a cloud load balancer, such as ["lb-xdffsfasdfs"];</li>
+<li>When OriginType is origins, it requires one and only one element, indicating the origin server group ID, such as ["origin-537f5b41-162a-11ed-abaa-525400c5da15"].</li>
      */
     public void setOriginValue(String [] OriginValue) {
         this.OriginValue = OriginValue;
     }
 
     /**
-     * Get Passes the client IP. Values:
-<li>`TOA`: Pass the client IP via TOA (available only when `Proto=TCP`).</li>
-<li>`PPV1`: Pass the client IP via Proxy Protocol V1 (available only when `Proto=TCP`).</li>
-<li>`PPV2`: Pass the client IP via Proxy Protocol V2.</li>
-<li>`OFF`: Not pass the client IP.</li>Default value: OFF. 
-     * @return ForwardClientIp Passes the client IP. Values:
-<li>`TOA`: Pass the client IP via TOA (available only when `Proto=TCP`).</li>
-<li>`PPV1`: Pass the client IP via Proxy Protocol V1 (available only when `Proto=TCP`).</li>
-<li>`PPV2`: Pass the client IP via Proxy Protocol V2.</li>
-<li>`OFF`: Not pass the client IP.</li>Default value: OFF.
+     * Get Passing the client IP address. Valid values:
+<li>TOA: TOA (selectable only when Proto = TCP);</li>
+<li>PPV1: passing via Proxy Protocol V1, available only when Proto = TCP;</li>
+<li>PPV2: passing via Proxy Protocol V2;</li>
+<li>OFF: no passing.</li>Default value: OFF. 
+     * @return ForwardClientIp Passing the client IP address. Valid values:
+<li>TOA: TOA (selectable only when Proto = TCP);</li>
+<li>PPV1: passing via Proxy Protocol V1, available only when Proto = TCP;</li>
+<li>PPV2: passing via Proxy Protocol V2;</li>
+<li>OFF: no passing.</li>Default value: OFF.
      */
     public String getForwardClientIp() {
         return this.ForwardClientIp;
     }
 
     /**
-     * Set Passes the client IP. Values:
-<li>`TOA`: Pass the client IP via TOA (available only when `Proto=TCP`).</li>
-<li>`PPV1`: Pass the client IP via Proxy Protocol V1 (available only when `Proto=TCP`).</li>
-<li>`PPV2`: Pass the client IP via Proxy Protocol V2.</li>
-<li>`OFF`: Not pass the client IP.</li>Default value: OFF.
-     * @param ForwardClientIp Passes the client IP. Values:
-<li>`TOA`: Pass the client IP via TOA (available only when `Proto=TCP`).</li>
-<li>`PPV1`: Pass the client IP via Proxy Protocol V1 (available only when `Proto=TCP`).</li>
-<li>`PPV2`: Pass the client IP via Proxy Protocol V2.</li>
-<li>`OFF`: Not pass the client IP.</li>Default value: OFF.
+     * Set Passing the client IP address. Valid values:
+<li>TOA: TOA (selectable only when Proto = TCP);</li>
+<li>PPV1: passing via Proxy Protocol V1, available only when Proto = TCP;</li>
+<li>PPV2: passing via Proxy Protocol V2;</li>
+<li>OFF: no passing.</li>Default value: OFF.
+     * @param ForwardClientIp Passing the client IP address. Valid values:
+<li>TOA: TOA (selectable only when Proto = TCP);</li>
+<li>PPV1: passing via Proxy Protocol V1, available only when Proto = TCP;</li>
+<li>PPV2: passing via Proxy Protocol V2;</li>
+<li>OFF: no passing.</li>Default value: OFF.
      */
     public void setForwardClientIp(String ForwardClientIp) {
         this.ForwardClientIp = ForwardClientIp;
     }
 
     /**
-     * Get Whether to enable session persistence. Values:
-<li>`true`: Enable.</li>
-<li>`false`: Disable.</li>Default value: false. 
-     * @return SessionPersist Whether to enable session persistence. Values:
-<li>`true`: Enable.</li>
-<li>`false`: Disable.</li>Default value: false.
+     * Get Whether to enable session persistence. Valid values:
+<li>true: Enable;</li>
+<li>false: Disable.</li>Default value: false. 
+     * @return SessionPersist Whether to enable session persistence. Valid values:
+<li>true: Enable;</li>
+<li>false: Disable.</li>Default value: false.
      */
     public Boolean getSessionPersist() {
         return this.SessionPersist;
     }
 
     /**
-     * Set Whether to enable session persistence. Values:
-<li>`true`: Enable.</li>
-<li>`false`: Disable.</li>Default value: false.
-     * @param SessionPersist Whether to enable session persistence. Values:
-<li>`true`: Enable.</li>
-<li>`false`: Disable.</li>Default value: false.
+     * Set Whether to enable session persistence. Valid values:
+<li>true: Enable;</li>
+<li>false: Disable.</li>Default value: false.
+     * @param SessionPersist Whether to enable session persistence. Valid values:
+<li>true: Enable;</li>
+<li>false: Disable.</li>Default value: false.
      */
     public void setSessionPersist(Boolean SessionPersist) {
         this.SessionPersist = SessionPersist;
@@ -302,40 +327,40 @@ public class CreateApplicationProxyRuleRequest extends AbstractModel {
     }
 
     /**
-     * Get The origin port, which can be:
-<li>A single port, such as 80</li>
-<li>A port range, such as 81-82</li> 
-     * @return OriginPort The origin port, which can be:
-<li>A single port, such as 80</li>
-<li>A port range, such as 81-82</li>
+     * Get Origin server port. Supported formats:
+<li>Single port: 80;</li>
+<li>Port range: 81-90, ports 81 to 90.</li> 
+     * @return OriginPort Origin server port. Supported formats:
+<li>Single port: 80;</li>
+<li>Port range: 81-90, ports 81 to 90.</li>
      */
     public String getOriginPort() {
         return this.OriginPort;
     }
 
     /**
-     * Set The origin port, which can be:
-<li>A single port, such as 80</li>
-<li>A port range, such as 81-82</li>
-     * @param OriginPort The origin port, which can be:
-<li>A single port, such as 80</li>
-<li>A port range, such as 81-82</li>
+     * Set Origin server port. Supported formats:
+<li>Single port: 80;</li>
+<li>Port range: 81-90, ports 81 to 90.</li>
+     * @param OriginPort Origin server port. Supported formats:
+<li>Single port: 80;</li>
+<li>Port range: 81-90, ports 81 to 90.</li>
      */
     public void setOriginPort(String OriginPort) {
         this.OriginPort = OriginPort;
     }
 
     /**
-     * Get Rule tag. This parameter is left empty by default. 
-     * @return RuleTag Rule tag. This parameter is left empty by default.
+     * Get Rule tag. The default value is an empty string. 
+     * @return RuleTag Rule tag. The default value is an empty string.
      */
     public String getRuleTag() {
         return this.RuleTag;
     }
 
     /**
-     * Set Rule tag. This parameter is left empty by default.
-     * @param RuleTag Rule tag. This parameter is left empty by default.
+     * Set Rule tag. The default value is an empty string.
+     * @param RuleTag Rule tag. The default value is an empty string.
      */
     public void setRuleTag(String RuleTag) {
         this.RuleTag = RuleTag;

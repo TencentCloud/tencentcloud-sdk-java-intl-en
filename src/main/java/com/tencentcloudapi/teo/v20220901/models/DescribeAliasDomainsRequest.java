@@ -24,28 +24,28 @@ import java.util.HashMap;
 public class DescribeAliasDomainsRequest extends AbstractModel {
 
     /**
-    * The site ID.
+    * Zone ID.
     */
     @SerializedName("ZoneId")
     @Expose
     private String ZoneId;
 
     /**
-    * The page offset. Default value: 0
+    * The offset of paginated query. Default value: 0.
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * The paginated query limit. Default value: 20. Maximum value: 1000.
+    * The limit of paginated query. Default value: 20. Maximum value: 1,000.
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * Filter conditions. The maximum value for Filters.Values is 20. The detailed conditions are as follows:
+    * Filter criteria. The maximum value of Filters.Values is 20. The detailed filter criteria are as follows:
 <li>target-name: Filter by the target domain name;</li>
 <li>alias-name: Filter by the alias of the domain name.</li>Fuzzy queries are only supported for the field name alias-name.
     */
@@ -54,58 +54,58 @@ public class DescribeAliasDomainsRequest extends AbstractModel {
     private AdvancedFilter [] Filters;
 
     /**
-     * Get The site ID. 
-     * @return ZoneId The site ID.
+     * Get Zone ID. 
+     * @return ZoneId Zone ID.
      */
     public String getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set The site ID.
-     * @param ZoneId The site ID.
+     * Set Zone ID.
+     * @param ZoneId Zone ID.
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get The page offset. Default value: 0 
-     * @return Offset The page offset. Default value: 0
+     * Get The offset of paginated query. Default value: 0. 
+     * @return Offset The offset of paginated query. Default value: 0.
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set The page offset. Default value: 0
-     * @param Offset The page offset. Default value: 0
+     * Set The offset of paginated query. Default value: 0.
+     * @param Offset The offset of paginated query. Default value: 0.
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get The paginated query limit. Default value: 20. Maximum value: 1000. 
-     * @return Limit The paginated query limit. Default value: 20. Maximum value: 1000.
+     * Get The limit of paginated query. Default value: 20. Maximum value: 1,000. 
+     * @return Limit The limit of paginated query. Default value: 20. Maximum value: 1,000.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set The paginated query limit. Default value: 20. Maximum value: 1000.
-     * @param Limit The paginated query limit. Default value: 20. Maximum value: 1000.
+     * Set The limit of paginated query. Default value: 20. Maximum value: 1,000.
+     * @param Limit The limit of paginated query. Default value: 20. Maximum value: 1,000.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get Filter conditions. The maximum value for Filters.Values is 20. The detailed conditions are as follows:
+     * Get Filter criteria. The maximum value of Filters.Values is 20. The detailed filter criteria are as follows:
 <li>target-name: Filter by the target domain name;</li>
 <li>alias-name: Filter by the alias of the domain name.</li>Fuzzy queries are only supported for the field name alias-name. 
-     * @return Filters Filter conditions. The maximum value for Filters.Values is 20. The detailed conditions are as follows:
+     * @return Filters Filter criteria. The maximum value of Filters.Values is 20. The detailed filter criteria are as follows:
 <li>target-name: Filter by the target domain name;</li>
 <li>alias-name: Filter by the alias of the domain name.</li>Fuzzy queries are only supported for the field name alias-name.
      */
@@ -114,10 +114,10 @@ public class DescribeAliasDomainsRequest extends AbstractModel {
     }
 
     /**
-     * Set Filter conditions. The maximum value for Filters.Values is 20. The detailed conditions are as follows:
+     * Set Filter criteria. The maximum value of Filters.Values is 20. The detailed filter criteria are as follows:
 <li>target-name: Filter by the target domain name;</li>
 <li>alias-name: Filter by the alias of the domain name.</li>Fuzzy queries are only supported for the field name alias-name.
-     * @param Filters Filter conditions. The maximum value for Filters.Values is 20. The detailed conditions are as follows:
+     * @param Filters Filter criteria. The maximum value of Filters.Values is 20. The detailed filter criteria are as follows:
 <li>target-name: Filter by the target domain name;</li>
 <li>alias-name: Filter by the alias of the domain name.</li>Fuzzy queries are only supported for the field name alias-name.
      */

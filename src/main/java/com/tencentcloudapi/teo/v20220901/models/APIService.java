@@ -31,14 +31,14 @@ public class APIService extends AbstractModel {
     private String Id;
 
     /**
-    * Specifies the API service name.
+    * API service name.
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * Specifies the base path.
+    * Base path.
     */
     @SerializedName("BasePath")
     @Expose
@@ -61,32 +61,32 @@ public class APIService extends AbstractModel {
     }
 
     /**
-     * Get Specifies the API service name. 
-     * @return Name Specifies the API service name.
+     * Get API service name. 
+     * @return Name API service name.
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Specifies the API service name.
-     * @param Name Specifies the API service name.
+     * Set API service name.
+     * @param Name API service name.
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Specifies the base path. 
-     * @return BasePath Specifies the base path.
+     * Get Base path. 
+     * @return BasePath Base path.
      */
     public String getBasePath() {
         return this.BasePath;
     }
 
     /**
-     * Set Specifies the base path.
-     * @param BasePath Specifies the base path.
+     * Set Base path.
+     * @param BasePath Base path.
      */
     public void setBasePath(String BasePath) {
         this.BasePath = BasePath;

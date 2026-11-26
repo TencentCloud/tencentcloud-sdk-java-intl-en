@@ -24,15 +24,14 @@ import java.util.HashMap;
 public class DescribeTopL7AnalysisDataResponse extends AbstractModel {
 
     /**
-    * Total number of query results.
+    * Total number of entries in the query result.
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * The top N data list obtained from the statistics of L7 access data by a specified dimension MetricName.
-Note: This field may return null, which indicates a failure to obtain a valid value.
+    * The top N data list obtained from the statistics of L7 access data by MetricName.
     */
     @SerializedName("Data")
     @Expose
@@ -46,36 +45,32 @@ Note: This field may return null, which indicates a failure to obtain a valid va
     private String RequestId;
 
     /**
-     * Get Total number of query results. 
-     * @return TotalCount Total number of query results.
+     * Get Total number of entries in the query result. 
+     * @return TotalCount Total number of entries in the query result.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Total number of query results.
-     * @param TotalCount Total number of query results.
+     * Set Total number of entries in the query result.
+     * @param TotalCount Total number of entries in the query result.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get The top N data list obtained from the statistics of L7 access data by a specified dimension MetricName.
-Note: This field may return null, which indicates a failure to obtain a valid value. 
-     * @return Data The top N data list obtained from the statistics of L7 access data by a specified dimension MetricName.
-Note: This field may return null, which indicates a failure to obtain a valid value.
+     * Get The top N data list obtained from the statistics of L7 access data by MetricName. 
+     * @return Data The top N data list obtained from the statistics of L7 access data by MetricName.
      */
     public TopDataRecord [] getData() {
         return this.Data;
     }
 
     /**
-     * Set The top N data list obtained from the statistics of L7 access data by a specified dimension MetricName.
-Note: This field may return null, which indicates a failure to obtain a valid value.
-     * @param Data The top N data list obtained from the statistics of L7 access data by a specified dimension MetricName.
-Note: This field may return null, which indicates a failure to obtain a valid value.
+     * Set The top N data list obtained from the statistics of L7 access data by MetricName.
+     * @param Data The top N data list obtained from the statistics of L7 access data by MetricName.
      */
     public void setData(TopDataRecord [] Data) {
         this.Data = Data;

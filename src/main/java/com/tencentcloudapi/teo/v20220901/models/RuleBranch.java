@@ -24,79 +24,69 @@ import java.util.HashMap;
 public class RuleBranch extends AbstractModel {
 
     /**
-    * Match condition (https://intl.cloud.tencent.com/document/product/1552/90438?from_cn_redirect=1#33f65828-c6c6-4b66-a011-25a20b548d5d).
+    * [Match condition](https://www.tencentcloud.com/document/product/1552/90438?from_cn_redirect=1#33f65828-c6c6-4b66-a011-25a20b548d5d).
     */
     @SerializedName("Condition")
     @Expose
     private String Condition;
 
     /**
-    * [Operations]( https://www.tencentcloud.com/document/product/1145/54759#c7bd7e02-9247-4a72-b0e4-11c27cadb198).<Br>Note: actions and subrules cannot both be empty.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+    * [Operate](https://www.tencentcloud.com/document/product/1552/90438?from_cn_redirect=1#c7bd7e02-9247-4a72-b0e4-11c27cadb198).<br>Note: Actions and SubRules cannot be empty at the same time.
     */
     @SerializedName("Actions")
     @Expose
     private RuleEngineAction [] Actions;
 
     /**
-    * List of sub-rules. multiple rules exist in this list and are executed sequentially from top to bottom.<br>note: subrules and actions cannot both be empty. currently, only one layer of subrules is supported.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+    * Sub-rule list. If there are multiple rules in the list, they are executed in order from top to bottom.<br>Note: SubRules and Actions cannot be empty at the same time. Currently only one level of SubRules is supported.
     */
     @SerializedName("SubRules")
     @Expose
     private RuleEngineSubRule [] SubRules;
 
     /**
-     * Get Match condition (https://intl.cloud.tencent.com/document/product/1552/90438?from_cn_redirect=1#33f65828-c6c6-4b66-a011-25a20b548d5d). 
-     * @return Condition Match condition (https://intl.cloud.tencent.com/document/product/1552/90438?from_cn_redirect=1#33f65828-c6c6-4b66-a011-25a20b548d5d).
+     * Get [Match condition](https://www.tencentcloud.com/document/product/1552/90438?from_cn_redirect=1#33f65828-c6c6-4b66-a011-25a20b548d5d). 
+     * @return Condition [Match condition](https://www.tencentcloud.com/document/product/1552/90438?from_cn_redirect=1#33f65828-c6c6-4b66-a011-25a20b548d5d).
      */
     public String getCondition() {
         return this.Condition;
     }
 
     /**
-     * Set Match condition (https://intl.cloud.tencent.com/document/product/1552/90438?from_cn_redirect=1#33f65828-c6c6-4b66-a011-25a20b548d5d).
-     * @param Condition Match condition (https://intl.cloud.tencent.com/document/product/1552/90438?from_cn_redirect=1#33f65828-c6c6-4b66-a011-25a20b548d5d).
+     * Set [Match condition](https://www.tencentcloud.com/document/product/1552/90438?from_cn_redirect=1#33f65828-c6c6-4b66-a011-25a20b548d5d).
+     * @param Condition [Match condition](https://www.tencentcloud.com/document/product/1552/90438?from_cn_redirect=1#33f65828-c6c6-4b66-a011-25a20b548d5d).
      */
     public void setCondition(String Condition) {
         this.Condition = Condition;
     }
 
     /**
-     * Get [Operations]( https://www.tencentcloud.com/document/product/1145/54759#c7bd7e02-9247-4a72-b0e4-11c27cadb198).<Br>Note: actions and subrules cannot both be empty.
-Note: this field may return null, which indicates a failure to obtain a valid value. 
-     * @return Actions [Operations]( https://www.tencentcloud.com/document/product/1145/54759#c7bd7e02-9247-4a72-b0e4-11c27cadb198).<Br>Note: actions and subrules cannot both be empty.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * Get [Operate](https://www.tencentcloud.com/document/product/1552/90438?from_cn_redirect=1#c7bd7e02-9247-4a72-b0e4-11c27cadb198).<br>Note: Actions and SubRules cannot be empty at the same time. 
+     * @return Actions [Operate](https://www.tencentcloud.com/document/product/1552/90438?from_cn_redirect=1#c7bd7e02-9247-4a72-b0e4-11c27cadb198).<br>Note: Actions and SubRules cannot be empty at the same time.
      */
     public RuleEngineAction [] getActions() {
         return this.Actions;
     }
 
     /**
-     * Set [Operations]( https://www.tencentcloud.com/document/product/1145/54759#c7bd7e02-9247-4a72-b0e4-11c27cadb198).<Br>Note: actions and subrules cannot both be empty.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-     * @param Actions [Operations]( https://www.tencentcloud.com/document/product/1145/54759#c7bd7e02-9247-4a72-b0e4-11c27cadb198).<Br>Note: actions and subrules cannot both be empty.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * Set [Operate](https://www.tencentcloud.com/document/product/1552/90438?from_cn_redirect=1#c7bd7e02-9247-4a72-b0e4-11c27cadb198).<br>Note: Actions and SubRules cannot be empty at the same time.
+     * @param Actions [Operate](https://www.tencentcloud.com/document/product/1552/90438?from_cn_redirect=1#c7bd7e02-9247-4a72-b0e4-11c27cadb198).<br>Note: Actions and SubRules cannot be empty at the same time.
      */
     public void setActions(RuleEngineAction [] Actions) {
         this.Actions = Actions;
     }
 
     /**
-     * Get List of sub-rules. multiple rules exist in this list and are executed sequentially from top to bottom.<br>note: subrules and actions cannot both be empty. currently, only one layer of subrules is supported.
-Note: this field may return null, which indicates a failure to obtain a valid value. 
-     * @return SubRules List of sub-rules. multiple rules exist in this list and are executed sequentially from top to bottom.<br>note: subrules and actions cannot both be empty. currently, only one layer of subrules is supported.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * Get Sub-rule list. If there are multiple rules in the list, they are executed in order from top to bottom.<br>Note: SubRules and Actions cannot be empty at the same time. Currently only one level of SubRules is supported. 
+     * @return SubRules Sub-rule list. If there are multiple rules in the list, they are executed in order from top to bottom.<br>Note: SubRules and Actions cannot be empty at the same time. Currently only one level of SubRules is supported.
      */
     public RuleEngineSubRule [] getSubRules() {
         return this.SubRules;
     }
 
     /**
-     * Set List of sub-rules. multiple rules exist in this list and are executed sequentially from top to bottom.<br>note: subrules and actions cannot both be empty. currently, only one layer of subrules is supported.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-     * @param SubRules List of sub-rules. multiple rules exist in this list and are executed sequentially from top to bottom.<br>note: subrules and actions cannot both be empty. currently, only one layer of subrules is supported.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * Set Sub-rule list. If there are multiple rules in the list, they are executed in order from top to bottom.<br>Note: SubRules and Actions cannot be empty at the same time. Currently only one level of SubRules is supported.
+     * @param SubRules Sub-rule list. If there are multiple rules in the list, they are executed in order from top to bottom.<br>Note: SubRules and Actions cannot be empty at the same time. Currently only one level of SubRules is supported.
      */
     public void setSubRules(RuleEngineSubRule [] SubRules) {
         this.SubRules = SubRules;

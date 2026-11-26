@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class SecurityTemplateBinding extends AbstractModel {
 
     /**
-    * template ID
+    * Template ID.
     */
     @SerializedName("TemplateId")
     @Expose
     private String TemplateId;
 
     /**
-    * Binding status of the template.
+    * Template binding status.
     */
     @SerializedName("TemplateScope")
     @Expose
     private TemplateScope [] TemplateScope;
 
     /**
-     * Get template ID 
-     * @return TemplateId template ID
+     * Get Template ID. 
+     * @return TemplateId Template ID.
      */
     public String getTemplateId() {
         return this.TemplateId;
     }
 
     /**
-     * Set template ID
-     * @param TemplateId template ID
+     * Set Template ID.
+     * @param TemplateId Template ID.
      */
     public void setTemplateId(String TemplateId) {
         this.TemplateId = TemplateId;
     }
 
     /**
-     * Get Binding status of the template. 
-     * @return TemplateScope Binding status of the template.
+     * Get Template binding status. 
+     * @return TemplateScope Template binding status.
      */
     public TemplateScope [] getTemplateScope() {
         return this.TemplateScope;
     }
 
     /**
-     * Set Binding status of the template.
-     * @param TemplateScope Binding status of the template.
+     * Set Template binding status.
+     * @param TemplateScope Template binding status.
      */
     public void setTemplateScope(TemplateScope [] TemplateScope) {
         this.TemplateScope = TemplateScope;

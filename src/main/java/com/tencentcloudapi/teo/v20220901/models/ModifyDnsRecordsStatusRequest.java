@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class ModifyDnsRecordsStatusRequest extends AbstractModel {
 
     /**
-    * Zone id.
+    * Zone ID.
     */
     @SerializedName("ZoneId")
     @Expose
     private String ZoneId;
 
     /**
-    * List of dns record ids to be enabled, upper limit: 200. <br>note: the same dns record id cannot exist in both recordstoenable and recordstodisable.
+    * List of DNS record IDs to be enabled. Capacity limit: 200.<br>Note: The same DNS record ID cannot exist in RecordsToEnable and RecordsToDisable at the same time.
     */
     @SerializedName("RecordsToEnable")
     @Expose
     private String [] RecordsToEnable;
 
     /**
-    * List of dns record ids to be disabled, upper limit: 200. <br>note: the same dns record id cannot exist in both recordstoenable and recordstodisable.
+    * List of DNS record IDs to be disabled. Capacity limit: 200.<br>Note: The same DNS record ID cannot exist in both RecordsToEnable and RecordsToDisable at the same time.
     */
     @SerializedName("RecordsToDisable")
     @Expose
     private String [] RecordsToDisable;
 
     /**
-     * Get Zone id. 
-     * @return ZoneId Zone id.
+     * Get Zone ID. 
+     * @return ZoneId Zone ID.
      */
     public String getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set Zone id.
-     * @param ZoneId Zone id.
+     * Set Zone ID.
+     * @param ZoneId Zone ID.
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get List of dns record ids to be enabled, upper limit: 200. <br>note: the same dns record id cannot exist in both recordstoenable and recordstodisable. 
-     * @return RecordsToEnable List of dns record ids to be enabled, upper limit: 200. <br>note: the same dns record id cannot exist in both recordstoenable and recordstodisable.
+     * Get List of DNS record IDs to be enabled. Capacity limit: 200.<br>Note: The same DNS record ID cannot exist in RecordsToEnable and RecordsToDisable at the same time. 
+     * @return RecordsToEnable List of DNS record IDs to be enabled. Capacity limit: 200.<br>Note: The same DNS record ID cannot exist in RecordsToEnable and RecordsToDisable at the same time.
      */
     public String [] getRecordsToEnable() {
         return this.RecordsToEnable;
     }
 
     /**
-     * Set List of dns record ids to be enabled, upper limit: 200. <br>note: the same dns record id cannot exist in both recordstoenable and recordstodisable.
-     * @param RecordsToEnable List of dns record ids to be enabled, upper limit: 200. <br>note: the same dns record id cannot exist in both recordstoenable and recordstodisable.
+     * Set List of DNS record IDs to be enabled. Capacity limit: 200.<br>Note: The same DNS record ID cannot exist in RecordsToEnable and RecordsToDisable at the same time.
+     * @param RecordsToEnable List of DNS record IDs to be enabled. Capacity limit: 200.<br>Note: The same DNS record ID cannot exist in RecordsToEnable and RecordsToDisable at the same time.
      */
     public void setRecordsToEnable(String [] RecordsToEnable) {
         this.RecordsToEnable = RecordsToEnable;
     }
 
     /**
-     * Get List of dns record ids to be disabled, upper limit: 200. <br>note: the same dns record id cannot exist in both recordstoenable and recordstodisable. 
-     * @return RecordsToDisable List of dns record ids to be disabled, upper limit: 200. <br>note: the same dns record id cannot exist in both recordstoenable and recordstodisable.
+     * Get List of DNS record IDs to be disabled. Capacity limit: 200.<br>Note: The same DNS record ID cannot exist in both RecordsToEnable and RecordsToDisable at the same time. 
+     * @return RecordsToDisable List of DNS record IDs to be disabled. Capacity limit: 200.<br>Note: The same DNS record ID cannot exist in both RecordsToEnable and RecordsToDisable at the same time.
      */
     public String [] getRecordsToDisable() {
         return this.RecordsToDisable;
     }
 
     /**
-     * Set List of dns record ids to be disabled, upper limit: 200. <br>note: the same dns record id cannot exist in both recordstoenable and recordstodisable.
-     * @param RecordsToDisable List of dns record ids to be disabled, upper limit: 200. <br>note: the same dns record id cannot exist in both recordstoenable and recordstodisable.
+     * Set List of DNS record IDs to be disabled. Capacity limit: 200.<br>Note: The same DNS record ID cannot exist in both RecordsToEnable and RecordsToDisable at the same time.
+     * @param RecordsToDisable List of DNS record IDs to be disabled. Capacity limit: 200.<br>Note: The same DNS record ID cannot exist in both RecordsToEnable and RecordsToDisable at the same time.
      */
     public void setRecordsToDisable(String [] RecordsToDisable) {
         this.RecordsToDisable = RecordsToDisable;

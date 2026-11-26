@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class NormalAction extends AbstractModel {
 
     /**
-    * Feature name. For details, see [DescribeRulesSetting](https://intl.cloud.tencent.com/document/product/1552/80618?from_cn_redirect=1) API
+    * Feature name. For feature name completion specifications, call the api [Query parameter settings of the rule engine](https://www.tencentcloud.com/document/product/1552/80618?from_cn_redirect=1) to view.
     */
     @SerializedName("Action")
     @Expose
     private String Action;
 
     /**
-    * Parameter
+    * Parameter.
     */
     @SerializedName("Parameters")
     @Expose
     private RuleNormalActionParams [] Parameters;
 
     /**
-     * Get Feature name. For details, see [DescribeRulesSetting](https://intl.cloud.tencent.com/document/product/1552/80618?from_cn_redirect=1) API 
-     * @return Action Feature name. For details, see [DescribeRulesSetting](https://intl.cloud.tencent.com/document/product/1552/80618?from_cn_redirect=1) API
+     * Get Feature name. For feature name completion specifications, call the api [Query parameter settings of the rule engine](https://www.tencentcloud.com/document/product/1552/80618?from_cn_redirect=1) to view. 
+     * @return Action Feature name. For feature name completion specifications, call the api [Query parameter settings of the rule engine](https://www.tencentcloud.com/document/product/1552/80618?from_cn_redirect=1) to view.
      */
     public String getAction() {
         return this.Action;
     }
 
     /**
-     * Set Feature name. For details, see [DescribeRulesSetting](https://intl.cloud.tencent.com/document/product/1552/80618?from_cn_redirect=1) API
-     * @param Action Feature name. For details, see [DescribeRulesSetting](https://intl.cloud.tencent.com/document/product/1552/80618?from_cn_redirect=1) API
+     * Set Feature name. For feature name completion specifications, call the api [Query parameter settings of the rule engine](https://www.tencentcloud.com/document/product/1552/80618?from_cn_redirect=1) to view.
+     * @param Action Feature name. For feature name completion specifications, call the api [Query parameter settings of the rule engine](https://www.tencentcloud.com/document/product/1552/80618?from_cn_redirect=1) to view.
      */
     public void setAction(String Action) {
         this.Action = Action;
     }
 
     /**
-     * Get Parameter 
-     * @return Parameters Parameter
+     * Get Parameter. 
+     * @return Parameters Parameter.
      */
     public RuleNormalActionParams [] getParameters() {
         return this.Parameters;
     }
 
     /**
-     * Set Parameter
-     * @param Parameters Parameter
+     * Set Parameter.
+     * @param Parameters Parameter.
      */
     public void setParameters(RuleNormalActionParams [] Parameters) {
         this.Parameters = Parameters;

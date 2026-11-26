@@ -31,22 +31,24 @@ public class DescribeL4ProxyRequest extends AbstractModel {
     private String ZoneId;
 
     /**
-    * Paginated query offset. Defaults to 0 when not specified.
+    * Offset of paginated query. If left empty, the default value is 0.
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * Paginated query limit. Default value: 20. Maximum value: 1000.
+    * The limit of paginated query. Default value: 20. Maximum value: 1,000.	
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * Filter criteria. The upper limit for Filters.Values is 20. If left empty, all Layer 4 proxy instance information under the current zone ID is returned. The detailed filter criteria are as follows: <li>proxy-id: Filters by Layer 4 proxy instance ID;</li>
-<li>ddos-protection-type: Filters by security protection type;</li>
+    * Filter criteria. The maximum value of Filters.Values is 20. If this parameter is left empty, all Layer 4 proxy instance information under the current zone ID will be returned. The detailed filter criteria are as follows:
+<li>proxy-id: filter by L4 proxy instance ID;</li>
+<li>ddos-protection-type: filters by security protection type.</li>
+
 
     */
     @SerializedName("Filters")
@@ -70,43 +72,47 @@ public class DescribeL4ProxyRequest extends AbstractModel {
     }
 
     /**
-     * Get Paginated query offset. Defaults to 0 when not specified. 
-     * @return Offset Paginated query offset. Defaults to 0 when not specified.
+     * Get Offset of paginated query. If left empty, the default value is 0. 
+     * @return Offset Offset of paginated query. If left empty, the default value is 0.
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Paginated query offset. Defaults to 0 when not specified.
-     * @param Offset Paginated query offset. Defaults to 0 when not specified.
+     * Set Offset of paginated query. If left empty, the default value is 0.
+     * @param Offset Offset of paginated query. If left empty, the default value is 0.
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get Paginated query limit. Default value: 20. Maximum value: 1000. 
-     * @return Limit Paginated query limit. Default value: 20. Maximum value: 1000.
+     * Get The limit of paginated query. Default value: 20. Maximum value: 1,000.	 
+     * @return Limit The limit of paginated query. Default value: 20. Maximum value: 1,000.	
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Paginated query limit. Default value: 20. Maximum value: 1000.
-     * @param Limit Paginated query limit. Default value: 20. Maximum value: 1000.
+     * Set The limit of paginated query. Default value: 20. Maximum value: 1,000.	
+     * @param Limit The limit of paginated query. Default value: 20. Maximum value: 1,000.	
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get Filter criteria. The upper limit for Filters.Values is 20. If left empty, all Layer 4 proxy instance information under the current zone ID is returned. The detailed filter criteria are as follows: <li>proxy-id: Filters by Layer 4 proxy instance ID;</li>
-<li>ddos-protection-type: Filters by security protection type;</li>
+     * Get Filter criteria. The maximum value of Filters.Values is 20. If this parameter is left empty, all Layer 4 proxy instance information under the current zone ID will be returned. The detailed filter criteria are as follows:
+<li>proxy-id: filter by L4 proxy instance ID;</li>
+<li>ddos-protection-type: filters by security protection type.</li>
+
  
-     * @return Filters Filter criteria. The upper limit for Filters.Values is 20. If left empty, all Layer 4 proxy instance information under the current zone ID is returned. The detailed filter criteria are as follows: <li>proxy-id: Filters by Layer 4 proxy instance ID;</li>
-<li>ddos-protection-type: Filters by security protection type;</li>
+     * @return Filters Filter criteria. The maximum value of Filters.Values is 20. If this parameter is left empty, all Layer 4 proxy instance information under the current zone ID will be returned. The detailed filter criteria are as follows:
+<li>proxy-id: filter by L4 proxy instance ID;</li>
+<li>ddos-protection-type: filters by security protection type.</li>
+
 
      */
     public Filter [] getFilters() {
@@ -114,11 +120,15 @@ public class DescribeL4ProxyRequest extends AbstractModel {
     }
 
     /**
-     * Set Filter criteria. The upper limit for Filters.Values is 20. If left empty, all Layer 4 proxy instance information under the current zone ID is returned. The detailed filter criteria are as follows: <li>proxy-id: Filters by Layer 4 proxy instance ID;</li>
-<li>ddos-protection-type: Filters by security protection type;</li>
+     * Set Filter criteria. The maximum value of Filters.Values is 20. If this parameter is left empty, all Layer 4 proxy instance information under the current zone ID will be returned. The detailed filter criteria are as follows:
+<li>proxy-id: filter by L4 proxy instance ID;</li>
+<li>ddos-protection-type: filters by security protection type.</li>
 
-     * @param Filters Filter criteria. The upper limit for Filters.Values is 20. If left empty, all Layer 4 proxy instance information under the current zone ID is returned. The detailed filter criteria are as follows: <li>proxy-id: Filters by Layer 4 proxy instance ID;</li>
-<li>ddos-protection-type: Filters by security protection type;</li>
+
+     * @param Filters Filter criteria. The maximum value of Filters.Values is 20. If this parameter is left empty, all Layer 4 proxy instance information under the current zone ID will be returned. The detailed filter criteria are as follows:
+<li>proxy-id: filter by L4 proxy instance ID;</li>
+<li>ddos-protection-type: filters by security protection type.</li>
+
 
      */
     public void setFilters(Filter [] Filters) {

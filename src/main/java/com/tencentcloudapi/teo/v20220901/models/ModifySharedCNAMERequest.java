@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModifySharedCNAMERequest extends AbstractModel {
 
     /**
-    * Shared CNAME associated site ID.
+    * ID of the site associated with the shared CNAME.
     */
     @SerializedName("ZoneId")
     @Expose
@@ -45,23 +45,23 @@ public class ModifySharedCNAMERequest extends AbstractModel {
     private String Description;
 
     /**
-    * Set the IP SSL message of the shared CNAME with IP SSL type.
+    * Set the IP SSL info of the shared CNAME of IP SSL type.
     */
     @SerializedName("IPSSLSetting")
     @Expose
     private IPSSLSetting IPSSLSetting;
 
     /**
-     * Get Shared CNAME associated site ID. 
-     * @return ZoneId Shared CNAME associated site ID.
+     * Get ID of the site associated with the shared CNAME. 
+     * @return ZoneId ID of the site associated with the shared CNAME.
      */
     public String getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set Shared CNAME associated site ID.
-     * @param ZoneId Shared CNAME associated site ID.
+     * Set ID of the site associated with the shared CNAME.
+     * @param ZoneId ID of the site associated with the shared CNAME.
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;
@@ -100,16 +100,16 @@ public class ModifySharedCNAMERequest extends AbstractModel {
     }
 
     /**
-     * Get Set the IP SSL message of the shared CNAME with IP SSL type. 
-     * @return IPSSLSetting Set the IP SSL message of the shared CNAME with IP SSL type.
+     * Get Set the IP SSL info of the shared CNAME of IP SSL type. 
+     * @return IPSSLSetting Set the IP SSL info of the shared CNAME of IP SSL type.
      */
     public IPSSLSetting getIPSSLSetting() {
         return this.IPSSLSetting;
     }
 
     /**
-     * Set Set the IP SSL message of the shared CNAME with IP SSL type.
-     * @param IPSSLSetting Set the IP SSL message of the shared CNAME with IP SSL type.
+     * Set Set the IP SSL info of the shared CNAME of IP SSL type.
+     * @param IPSSLSetting Set the IP SSL info of the shared CNAME of IP SSL type.
      */
     public void setIPSSLSetting(IPSSLSetting IPSSLSetting) {
         this.IPSSLSetting = IPSSLSetting;

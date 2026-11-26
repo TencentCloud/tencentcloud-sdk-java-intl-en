@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeSecurityAPIServiceRequest extends AbstractModel {
 
     /**
-    * Zone ID.		
+    * Zone ID.	
     */
     @SerializedName("ZoneId")
     @Expose
     private String ZoneId;
 
     /**
-    * Paginated query limit. default value: 20, maximum value: 100.
+    * Paginated query limit. Default value: 20, maximum value: 100.
     */
     @SerializedName("Limit")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeSecurityAPIServiceRequest extends AbstractModel {
     private Long Offset;
 
     /**
-     * Get Zone ID.		 
-     * @return ZoneId Zone ID.		
+     * Get Zone ID.	 
+     * @return ZoneId Zone ID.	
      */
     public String getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set Zone ID.		
-     * @param ZoneId Zone ID.		
+     * Set Zone ID.	
+     * @param ZoneId Zone ID.	
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get Paginated query limit. default value: 20, maximum value: 100. 
-     * @return Limit Paginated query limit. default value: 20, maximum value: 100.
+     * Get Paginated query limit. Default value: 20, maximum value: 100. 
+     * @return Limit Paginated query limit. Default value: 20, maximum value: 100.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Paginated query limit. default value: 20, maximum value: 100.
-     * @param Limit Paginated query limit. default value: 20, maximum value: 100.
+     * Set Paginated query limit. Default value: 20, maximum value: 100.
+     * @param Limit Paginated query limit. Default value: 20, maximum value: 100.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

@@ -24,56 +24,56 @@ import java.util.HashMap;
 public class CachePrefresh extends AbstractModel {
 
     /**
-    * Whether to enable cache prefresh. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+    * Cache pre-refresh configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * Cache pre-refresh percentage. value range: 1-99.
+    * Cache pre-refresh percentage. Value range: 1-99.
     */
     @SerializedName("Percent")
     @Expose
     private Long Percent;
 
     /**
-     * Get Whether to enable cache prefresh. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li> 
-     * @return Switch Whether to enable cache prefresh. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+     * Get Cache pre-refresh configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li> 
+     * @return Switch Cache pre-refresh configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set Whether to enable cache prefresh. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-     * @param Switch Whether to enable cache prefresh. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+     * Set Cache pre-refresh configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+     * @param Switch Cache pre-refresh configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get Cache pre-refresh percentage. value range: 1-99. 
-     * @return Percent Cache pre-refresh percentage. value range: 1-99.
+     * Get Cache pre-refresh percentage. Value range: 1-99. 
+     * @return Percent Cache pre-refresh percentage. Value range: 1-99.
      */
     public Long getPercent() {
         return this.Percent;
     }
 
     /**
-     * Set Cache pre-refresh percentage. value range: 1-99.
-     * @param Percent Cache pre-refresh percentage. value range: 1-99.
+     * Set Cache pre-refresh percentage. Value range: 1-99.
+     * @param Percent Cache pre-refresh percentage. Value range: 1-99.
      */
     public void setPercent(Long Percent) {
         this.Percent = Percent;

@@ -24,227 +24,227 @@ import java.util.HashMap;
 public class ExceptUserRuleCondition extends AbstractModel {
 
     /**
-    * The field to match. Values:
-<li>`host`: Request domain name</li>
-<li>`sip`: Client IP</li>
-<li>`ua`: User-Agent</li>
-<li>`cookie`: Cookie</li>
-<li>`cgi`: CGI script</li>
-<li>`xff`: XFF header</li>
-<li>`url`: Request URL</li>
-<li>`accept`: Request content type</li>
-<li>`method`: Request method</li>
-<li>`header`: Request header</li>
-<li>`sip_proto`: Network layer protocol</li>
+    * Matching item. Valid values:
+<li>host: request domain name;</li>
+<li>sip: Client IP;</li>
+<li>ua:User-Agent;</li>
+<li>cookie: Session cookie;</li>
+<li>cgi: CGI script;</li>
+<li>xff: XFF extension header;</li>
+<li>`url`: Request URL;
+<li>accept: request content type;</li>
+<li>method: request method;</li>
+<li>header: request header;</li>
+<li>sip_proto: network layer protocol.</li>
     */
     @SerializedName("MatchFrom")
     @Expose
     private String MatchFrom;
 
     /**
-    * The parameter of the field. Only when `MatchFrom = header`, the key contained in the header can be passed.
+    * Parameter of the matching item. Only when MatchFrom is header, you can use this parameter, and the key of the header can be set to this parameter.
     */
     @SerializedName("MatchParam")
     @Expose
     private String MatchParam;
 
     /**
-    * The logical operator. Values:
-<li>`equal`: String equals</li>
-<li>`not_equal`: Value not equals</li>
-<li>`include`: String contains</li>
-<li>`not_include`: String not contains</li>
-<li>`match`: IP matches</li>
-<li>`not_match`: IP not matches</li>
-<li>`include_area`: Regions contain</li>
-<li>`is_empty`: Value left empty</li>
-<li>`not_exists`: Key fields not exist</li>
-<li>`regexp`: Regex matches</li>
-<li>`len_gt`: Value greater than</li>
-<li>`len_lt`: Value smaller than</li>
-<li>`len_eq`: Value equals</li>
-<li>`match_prefix`: Prefix matches</li>
-<li>`match_suffix`: Suffix matches</li>
-<li>`wildcard`: Wildcard</li>
+    * Matching operator. Valid values:
+<li>equal: string equals;</li>
+<li>not_equal: value not equal to;</li>
+<li>include: string containing;</li>
+<li>not_include: string does not contain;</li>
+<li>match: ip match;</li>
+<li>not_match: ip not matched;</li>
+<li>include_area: region inclusion;</li>
+<li>is_empty: field with null value;</li>
+<li>not_exists: key field not found;</li>
+<li>regexp: regular expression matching;</li>
+<li>len_gt: value greater than;</li>
+<li>len_lt: value is less than;</li>
+<li>len_eq: value equal to;</li>
+<li>match_prefix: prefix match;</li>
+<li>match_suffix: suffix matching;</li>
+<li>wildcard: wildcard.</li>
     */
     @SerializedName("Operator")
     @Expose
     private String Operator;
 
     /**
-    * The value of the parameter.
+    * Matching value.
     */
     @SerializedName("MatchContent")
     @Expose
     private String MatchContent;
 
     /**
-     * Get The field to match. Values:
-<li>`host`: Request domain name</li>
-<li>`sip`: Client IP</li>
-<li>`ua`: User-Agent</li>
-<li>`cookie`: Cookie</li>
-<li>`cgi`: CGI script</li>
-<li>`xff`: XFF header</li>
-<li>`url`: Request URL</li>
-<li>`accept`: Request content type</li>
-<li>`method`: Request method</li>
-<li>`header`: Request header</li>
-<li>`sip_proto`: Network layer protocol</li> 
-     * @return MatchFrom The field to match. Values:
-<li>`host`: Request domain name</li>
-<li>`sip`: Client IP</li>
-<li>`ua`: User-Agent</li>
-<li>`cookie`: Cookie</li>
-<li>`cgi`: CGI script</li>
-<li>`xff`: XFF header</li>
-<li>`url`: Request URL</li>
-<li>`accept`: Request content type</li>
-<li>`method`: Request method</li>
-<li>`header`: Request header</li>
-<li>`sip_proto`: Network layer protocol</li>
+     * Get Matching item. Valid values:
+<li>host: request domain name;</li>
+<li>sip: Client IP;</li>
+<li>ua:User-Agent;</li>
+<li>cookie: Session cookie;</li>
+<li>cgi: CGI script;</li>
+<li>xff: XFF extension header;</li>
+<li>`url`: Request URL;
+<li>accept: request content type;</li>
+<li>method: request method;</li>
+<li>header: request header;</li>
+<li>sip_proto: network layer protocol.</li> 
+     * @return MatchFrom Matching item. Valid values:
+<li>host: request domain name;</li>
+<li>sip: Client IP;</li>
+<li>ua:User-Agent;</li>
+<li>cookie: Session cookie;</li>
+<li>cgi: CGI script;</li>
+<li>xff: XFF extension header;</li>
+<li>`url`: Request URL;
+<li>accept: request content type;</li>
+<li>method: request method;</li>
+<li>header: request header;</li>
+<li>sip_proto: network layer protocol.</li>
      */
     public String getMatchFrom() {
         return this.MatchFrom;
     }
 
     /**
-     * Set The field to match. Values:
-<li>`host`: Request domain name</li>
-<li>`sip`: Client IP</li>
-<li>`ua`: User-Agent</li>
-<li>`cookie`: Cookie</li>
-<li>`cgi`: CGI script</li>
-<li>`xff`: XFF header</li>
-<li>`url`: Request URL</li>
-<li>`accept`: Request content type</li>
-<li>`method`: Request method</li>
-<li>`header`: Request header</li>
-<li>`sip_proto`: Network layer protocol</li>
-     * @param MatchFrom The field to match. Values:
-<li>`host`: Request domain name</li>
-<li>`sip`: Client IP</li>
-<li>`ua`: User-Agent</li>
-<li>`cookie`: Cookie</li>
-<li>`cgi`: CGI script</li>
-<li>`xff`: XFF header</li>
-<li>`url`: Request URL</li>
-<li>`accept`: Request content type</li>
-<li>`method`: Request method</li>
-<li>`header`: Request header</li>
-<li>`sip_proto`: Network layer protocol</li>
+     * Set Matching item. Valid values:
+<li>host: request domain name;</li>
+<li>sip: Client IP;</li>
+<li>ua:User-Agent;</li>
+<li>cookie: Session cookie;</li>
+<li>cgi: CGI script;</li>
+<li>xff: XFF extension header;</li>
+<li>`url`: Request URL;
+<li>accept: request content type;</li>
+<li>method: request method;</li>
+<li>header: request header;</li>
+<li>sip_proto: network layer protocol.</li>
+     * @param MatchFrom Matching item. Valid values:
+<li>host: request domain name;</li>
+<li>sip: Client IP;</li>
+<li>ua:User-Agent;</li>
+<li>cookie: Session cookie;</li>
+<li>cgi: CGI script;</li>
+<li>xff: XFF extension header;</li>
+<li>`url`: Request URL;
+<li>accept: request content type;</li>
+<li>method: request method;</li>
+<li>header: request header;</li>
+<li>sip_proto: network layer protocol.</li>
      */
     public void setMatchFrom(String MatchFrom) {
         this.MatchFrom = MatchFrom;
     }
 
     /**
-     * Get The parameter of the field. Only when `MatchFrom = header`, the key contained in the header can be passed. 
-     * @return MatchParam The parameter of the field. Only when `MatchFrom = header`, the key contained in the header can be passed.
+     * Get Parameter of the matching item. Only when MatchFrom is header, you can use this parameter, and the key of the header can be set to this parameter. 
+     * @return MatchParam Parameter of the matching item. Only when MatchFrom is header, you can use this parameter, and the key of the header can be set to this parameter.
      */
     public String getMatchParam() {
         return this.MatchParam;
     }
 
     /**
-     * Set The parameter of the field. Only when `MatchFrom = header`, the key contained in the header can be passed.
-     * @param MatchParam The parameter of the field. Only when `MatchFrom = header`, the key contained in the header can be passed.
+     * Set Parameter of the matching item. Only when MatchFrom is header, you can use this parameter, and the key of the header can be set to this parameter.
+     * @param MatchParam Parameter of the matching item. Only when MatchFrom is header, you can use this parameter, and the key of the header can be set to this parameter.
      */
     public void setMatchParam(String MatchParam) {
         this.MatchParam = MatchParam;
     }
 
     /**
-     * Get The logical operator. Values:
-<li>`equal`: String equals</li>
-<li>`not_equal`: Value not equals</li>
-<li>`include`: String contains</li>
-<li>`not_include`: String not contains</li>
-<li>`match`: IP matches</li>
-<li>`not_match`: IP not matches</li>
-<li>`include_area`: Regions contain</li>
-<li>`is_empty`: Value left empty</li>
-<li>`not_exists`: Key fields not exist</li>
-<li>`regexp`: Regex matches</li>
-<li>`len_gt`: Value greater than</li>
-<li>`len_lt`: Value smaller than</li>
-<li>`len_eq`: Value equals</li>
-<li>`match_prefix`: Prefix matches</li>
-<li>`match_suffix`: Suffix matches</li>
-<li>`wildcard`: Wildcard</li> 
-     * @return Operator The logical operator. Values:
-<li>`equal`: String equals</li>
-<li>`not_equal`: Value not equals</li>
-<li>`include`: String contains</li>
-<li>`not_include`: String not contains</li>
-<li>`match`: IP matches</li>
-<li>`not_match`: IP not matches</li>
-<li>`include_area`: Regions contain</li>
-<li>`is_empty`: Value left empty</li>
-<li>`not_exists`: Key fields not exist</li>
-<li>`regexp`: Regex matches</li>
-<li>`len_gt`: Value greater than</li>
-<li>`len_lt`: Value smaller than</li>
-<li>`len_eq`: Value equals</li>
-<li>`match_prefix`: Prefix matches</li>
-<li>`match_suffix`: Suffix matches</li>
-<li>`wildcard`: Wildcard</li>
+     * Get Matching operator. Valid values:
+<li>equal: string equals;</li>
+<li>not_equal: value not equal to;</li>
+<li>include: string containing;</li>
+<li>not_include: string does not contain;</li>
+<li>match: ip match;</li>
+<li>not_match: ip not matched;</li>
+<li>include_area: region inclusion;</li>
+<li>is_empty: field with null value;</li>
+<li>not_exists: key field not found;</li>
+<li>regexp: regular expression matching;</li>
+<li>len_gt: value greater than;</li>
+<li>len_lt: value is less than;</li>
+<li>len_eq: value equal to;</li>
+<li>match_prefix: prefix match;</li>
+<li>match_suffix: suffix matching;</li>
+<li>wildcard: wildcard.</li> 
+     * @return Operator Matching operator. Valid values:
+<li>equal: string equals;</li>
+<li>not_equal: value not equal to;</li>
+<li>include: string containing;</li>
+<li>not_include: string does not contain;</li>
+<li>match: ip match;</li>
+<li>not_match: ip not matched;</li>
+<li>include_area: region inclusion;</li>
+<li>is_empty: field with null value;</li>
+<li>not_exists: key field not found;</li>
+<li>regexp: regular expression matching;</li>
+<li>len_gt: value greater than;</li>
+<li>len_lt: value is less than;</li>
+<li>len_eq: value equal to;</li>
+<li>match_prefix: prefix match;</li>
+<li>match_suffix: suffix matching;</li>
+<li>wildcard: wildcard.</li>
      */
     public String getOperator() {
         return this.Operator;
     }
 
     /**
-     * Set The logical operator. Values:
-<li>`equal`: String equals</li>
-<li>`not_equal`: Value not equals</li>
-<li>`include`: String contains</li>
-<li>`not_include`: String not contains</li>
-<li>`match`: IP matches</li>
-<li>`not_match`: IP not matches</li>
-<li>`include_area`: Regions contain</li>
-<li>`is_empty`: Value left empty</li>
-<li>`not_exists`: Key fields not exist</li>
-<li>`regexp`: Regex matches</li>
-<li>`len_gt`: Value greater than</li>
-<li>`len_lt`: Value smaller than</li>
-<li>`len_eq`: Value equals</li>
-<li>`match_prefix`: Prefix matches</li>
-<li>`match_suffix`: Suffix matches</li>
-<li>`wildcard`: Wildcard</li>
-     * @param Operator The logical operator. Values:
-<li>`equal`: String equals</li>
-<li>`not_equal`: Value not equals</li>
-<li>`include`: String contains</li>
-<li>`not_include`: String not contains</li>
-<li>`match`: IP matches</li>
-<li>`not_match`: IP not matches</li>
-<li>`include_area`: Regions contain</li>
-<li>`is_empty`: Value left empty</li>
-<li>`not_exists`: Key fields not exist</li>
-<li>`regexp`: Regex matches</li>
-<li>`len_gt`: Value greater than</li>
-<li>`len_lt`: Value smaller than</li>
-<li>`len_eq`: Value equals</li>
-<li>`match_prefix`: Prefix matches</li>
-<li>`match_suffix`: Suffix matches</li>
-<li>`wildcard`: Wildcard</li>
+     * Set Matching operator. Valid values:
+<li>equal: string equals;</li>
+<li>not_equal: value not equal to;</li>
+<li>include: string containing;</li>
+<li>not_include: string does not contain;</li>
+<li>match: ip match;</li>
+<li>not_match: ip not matched;</li>
+<li>include_area: region inclusion;</li>
+<li>is_empty: field with null value;</li>
+<li>not_exists: key field not found;</li>
+<li>regexp: regular expression matching;</li>
+<li>len_gt: value greater than;</li>
+<li>len_lt: value is less than;</li>
+<li>len_eq: value equal to;</li>
+<li>match_prefix: prefix match;</li>
+<li>match_suffix: suffix matching;</li>
+<li>wildcard: wildcard.</li>
+     * @param Operator Matching operator. Valid values:
+<li>equal: string equals;</li>
+<li>not_equal: value not equal to;</li>
+<li>include: string containing;</li>
+<li>not_include: string does not contain;</li>
+<li>match: ip match;</li>
+<li>not_match: ip not matched;</li>
+<li>include_area: region inclusion;</li>
+<li>is_empty: field with null value;</li>
+<li>not_exists: key field not found;</li>
+<li>regexp: regular expression matching;</li>
+<li>len_gt: value greater than;</li>
+<li>len_lt: value is less than;</li>
+<li>len_eq: value equal to;</li>
+<li>match_prefix: prefix match;</li>
+<li>match_suffix: suffix matching;</li>
+<li>wildcard: wildcard.</li>
      */
     public void setOperator(String Operator) {
         this.Operator = Operator;
     }
 
     /**
-     * Get The value of the parameter. 
-     * @return MatchContent The value of the parameter.
+     * Get Matching value. 
+     * @return MatchContent Matching value.
      */
     public String getMatchContent() {
         return this.MatchContent;
     }
 
     /**
-     * Set The value of the parameter.
-     * @param MatchContent The value of the parameter.
+     * Set Matching value.
+     * @param MatchContent Matching value.
      */
     public void setMatchContent(String MatchContent) {
         this.MatchContent = MatchContent;

@@ -31,7 +31,7 @@ public class DescribeSecurityClientAttesterRequest extends AbstractModel {
     private String ZoneId;
 
     /**
-    * Paginated query limit. default value: 20, maximum value: 100.
+    * Paginated query limit. Default value: 20, maximum value: 100.
     */
     @SerializedName("Limit")
     @Expose
@@ -61,16 +61,16 @@ public class DescribeSecurityClientAttesterRequest extends AbstractModel {
     }
 
     /**
-     * Get Paginated query limit. default value: 20, maximum value: 100. 
-     * @return Limit Paginated query limit. default value: 20, maximum value: 100.
+     * Get Paginated query limit. Default value: 20, maximum value: 100. 
+     * @return Limit Paginated query limit. Default value: 20, maximum value: 100.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Paginated query limit. default value: 20, maximum value: 100.
-     * @param Limit Paginated query limit. default value: 20, maximum value: 100.
+     * Set Paginated query limit. Default value: 20, maximum value: 100.
+     * @param Limit Paginated query limit. Default value: 20, maximum value: 100.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

@@ -25,26 +25,26 @@ public class OriginACLEntity extends AbstractModel {
 
     /**
     * Instance type. Valid values:
--l7: L7 acceleration domain;
--l4: L4 proxy instance.
+- l7: layer-7 accelerated domain;
+- l4: layer-4 proxy instance.
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * Instance detail. Valid values:
--When Type = l7, please enter the L7 acceleration domain.
--When Type = l4, please enter the L4 proxy instance ID.
+    * Instance details. Valid values:
+- When Type = l7, enter the layer-7 accelerated domain;
+- When Type = l4, enter the layer-4 proxy instance ID.
     */
     @SerializedName("Instances")
     @Expose
     private String [] Instances;
 
     /**
-    * Operation mode. Valid values:.
-- enable: enabled L7/L4 instances.
-- disable: disable L7/L4 instances.
+    * Operation mode. Valid values:
+<li>enable: enable;</li>
+<li>disable: disable.</li>
     */
     @SerializedName("OperationMode")
     @Expose
@@ -52,11 +52,11 @@ public class OriginACLEntity extends AbstractModel {
 
     /**
      * Get Instance type. Valid values:
--l7: L7 acceleration domain;
--l4: L4 proxy instance. 
+- l7: layer-7 accelerated domain;
+- l4: layer-4 proxy instance. 
      * @return Type Instance type. Valid values:
--l7: L7 acceleration domain;
--l4: L4 proxy instance.
+- l7: layer-7 accelerated domain;
+- l4: layer-4 proxy instance.
      */
     public String getType() {
         return this.Type;
@@ -64,59 +64,59 @@ public class OriginACLEntity extends AbstractModel {
 
     /**
      * Set Instance type. Valid values:
--l7: L7 acceleration domain;
--l4: L4 proxy instance.
+- l7: layer-7 accelerated domain;
+- l4: layer-4 proxy instance.
      * @param Type Instance type. Valid values:
--l7: L7 acceleration domain;
--l4: L4 proxy instance.
+- l7: layer-7 accelerated domain;
+- l4: layer-4 proxy instance.
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get Instance detail. Valid values:
--When Type = l7, please enter the L7 acceleration domain.
--When Type = l4, please enter the L4 proxy instance ID. 
-     * @return Instances Instance detail. Valid values:
--When Type = l7, please enter the L7 acceleration domain.
--When Type = l4, please enter the L4 proxy instance ID.
+     * Get Instance details. Valid values:
+- When Type = l7, enter the layer-7 accelerated domain;
+- When Type = l4, enter the layer-4 proxy instance ID. 
+     * @return Instances Instance details. Valid values:
+- When Type = l7, enter the layer-7 accelerated domain;
+- When Type = l4, enter the layer-4 proxy instance ID.
      */
     public String [] getInstances() {
         return this.Instances;
     }
 
     /**
-     * Set Instance detail. Valid values:
--When Type = l7, please enter the L7 acceleration domain.
--When Type = l4, please enter the L4 proxy instance ID.
-     * @param Instances Instance detail. Valid values:
--When Type = l7, please enter the L7 acceleration domain.
--When Type = l4, please enter the L4 proxy instance ID.
+     * Set Instance details. Valid values:
+- When Type = l7, enter the layer-7 accelerated domain;
+- When Type = l4, enter the layer-4 proxy instance ID.
+     * @param Instances Instance details. Valid values:
+- When Type = l7, enter the layer-7 accelerated domain;
+- When Type = l4, enter the layer-4 proxy instance ID.
      */
     public void setInstances(String [] Instances) {
         this.Instances = Instances;
     }
 
     /**
-     * Get Operation mode. Valid values:.
-- enable: enabled L7/L4 instances.
-- disable: disable L7/L4 instances. 
-     * @return OperationMode Operation mode. Valid values:.
-- enable: enabled L7/L4 instances.
-- disable: disable L7/L4 instances.
+     * Get Operation mode. Valid values:
+<li>enable: enable;</li>
+<li>disable: disable.</li> 
+     * @return OperationMode Operation mode. Valid values:
+<li>enable: enable;</li>
+<li>disable: disable.</li>
      */
     public String getOperationMode() {
         return this.OperationMode;
     }
 
     /**
-     * Set Operation mode. Valid values:.
-- enable: enabled L7/L4 instances.
-- disable: disable L7/L4 instances.
-     * @param OperationMode Operation mode. Valid values:.
-- enable: enabled L7/L4 instances.
-- disable: disable L7/L4 instances.
+     * Set Operation mode. Valid values:
+<li>enable: enable;</li>
+<li>disable: disable.</li>
+     * @param OperationMode Operation mode. Valid values:
+<li>enable: enable;</li>
+<li>disable: disable.</li>
      */
     public void setOperationMode(String OperationMode) {
         this.OperationMode = OperationMode;

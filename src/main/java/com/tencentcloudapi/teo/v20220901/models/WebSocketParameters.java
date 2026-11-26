@@ -24,56 +24,56 @@ import java.util.HashMap;
 public class WebSocketParameters extends AbstractModel {
 
     /**
-    * Whether to enable websocket connection timeout. values:.
-<Li>On: use timeout as the websocket timeout;</li>.
-<Li>Off: the platform still supports websocket connections, using the system default timeout of 15 seconds.</li>.
+    * WebSocket timeout configuration switch. Valid values:
+<li>on: Use Timeout as the WebSocket timeout period;</li>
+<li>off: The platform still supports WebSocket connections, and the system default timeout period of 15 seconds is used.</li>
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * Timeout, unit: seconds. maximum timeout is 120 seconds.<br>note: this field is required when switch is on; otherwise, this field will not take effect.
+    * Timeout period, in seconds. Maximum timeout time: 120 seconds.<br>Note: This field is required when Switch is on. Otherwise, it is ineffective.
     */
     @SerializedName("Timeout")
     @Expose
     private Long Timeout;
 
     /**
-     * Get Whether to enable websocket connection timeout. values:.
-<Li>On: use timeout as the websocket timeout;</li>.
-<Li>Off: the platform still supports websocket connections, using the system default timeout of 15 seconds.</li>. 
-     * @return Switch Whether to enable websocket connection timeout. values:.
-<Li>On: use timeout as the websocket timeout;</li>.
-<Li>Off: the platform still supports websocket connections, using the system default timeout of 15 seconds.</li>.
+     * Get WebSocket timeout configuration switch. Valid values:
+<li>on: Use Timeout as the WebSocket timeout period;</li>
+<li>off: The platform still supports WebSocket connections, and the system default timeout period of 15 seconds is used.</li> 
+     * @return Switch WebSocket timeout configuration switch. Valid values:
+<li>on: Use Timeout as the WebSocket timeout period;</li>
+<li>off: The platform still supports WebSocket connections, and the system default timeout period of 15 seconds is used.</li>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set Whether to enable websocket connection timeout. values:.
-<Li>On: use timeout as the websocket timeout;</li>.
-<Li>Off: the platform still supports websocket connections, using the system default timeout of 15 seconds.</li>.
-     * @param Switch Whether to enable websocket connection timeout. values:.
-<Li>On: use timeout as the websocket timeout;</li>.
-<Li>Off: the platform still supports websocket connections, using the system default timeout of 15 seconds.</li>.
+     * Set WebSocket timeout configuration switch. Valid values:
+<li>on: Use Timeout as the WebSocket timeout period;</li>
+<li>off: The platform still supports WebSocket connections, and the system default timeout period of 15 seconds is used.</li>
+     * @param Switch WebSocket timeout configuration switch. Valid values:
+<li>on: Use Timeout as the WebSocket timeout period;</li>
+<li>off: The platform still supports WebSocket connections, and the system default timeout period of 15 seconds is used.</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get Timeout, unit: seconds. maximum timeout is 120 seconds.<br>note: this field is required when switch is on; otherwise, this field will not take effect. 
-     * @return Timeout Timeout, unit: seconds. maximum timeout is 120 seconds.<br>note: this field is required when switch is on; otherwise, this field will not take effect.
+     * Get Timeout period, in seconds. Maximum timeout time: 120 seconds.<br>Note: This field is required when Switch is on. Otherwise, it is ineffective. 
+     * @return Timeout Timeout period, in seconds. Maximum timeout time: 120 seconds.<br>Note: This field is required when Switch is on. Otherwise, it is ineffective.
      */
     public Long getTimeout() {
         return this.Timeout;
     }
 
     /**
-     * Set Timeout, unit: seconds. maximum timeout is 120 seconds.<br>note: this field is required when switch is on; otherwise, this field will not take effect.
-     * @param Timeout Timeout, unit: seconds. maximum timeout is 120 seconds.<br>note: this field is required when switch is on; otherwise, this field will not take effect.
+     * Set Timeout period, in seconds. Maximum timeout time: 120 seconds.<br>Note: This field is required when Switch is on. Otherwise, it is ineffective.
+     * @param Timeout Timeout period, in seconds. Maximum timeout time: 120 seconds.<br>Note: This field is required when Switch is on. Otherwise, it is ineffective.
      */
     public void setTimeout(Long Timeout) {
         this.Timeout = Timeout;

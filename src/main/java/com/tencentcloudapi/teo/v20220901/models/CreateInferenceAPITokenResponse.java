@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateInferenceAPITokenResponse extends AbstractModel {
 
     /**
-    * Reasoning API Token ID.
+    * Inference API Token ID.
     */
     @SerializedName("TokenId")
     @Expose
@@ -45,16 +45,16 @@ public class CreateInferenceAPITokenResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Reasoning API Token ID. 
-     * @return TokenId Reasoning API Token ID.
+     * Get Inference API Token ID. 
+     * @return TokenId Inference API Token ID.
      */
     public String getTokenId() {
         return this.TokenId;
     }
 
     /**
-     * Set Reasoning API Token ID.
-     * @param TokenId Reasoning API Token ID.
+     * Set Inference API Token ID.
+     * @param TokenId Inference API Token ID.
      */
     public void setTokenId(String TokenId) {
         this.TokenId = TokenId;

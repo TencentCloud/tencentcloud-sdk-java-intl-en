@@ -31,7 +31,7 @@ public class ModifyL7AccRulePriorityRequest extends AbstractModel {
     private String ZoneId;
 
     /**
-    * The complete rule ID list under the site ID can be obtained by [Querying the seven-layer acceleration rules](https://intl.cloud.tencent.com/document/product/1552/115820?from_cn_redirect=1). The final priority order will be adjusted to the order of the rule ID list, and will be executed from the front to the back.
+    * Complete rule ID list under the site ID. The rule ID list can be obtained through [Query Layer-7 Acceleration Rules](https://www.tencentcloud.com/document/product/1552/115820?from_cn_redirect=1). The final priority order will be adjusted to the order of the rule ID list, and rules will be executed in sequence from front to back.
     */
     @SerializedName("RuleIds")
     @Expose
@@ -54,16 +54,16 @@ public class ModifyL7AccRulePriorityRequest extends AbstractModel {
     }
 
     /**
-     * Get The complete rule ID list under the site ID can be obtained by [Querying the seven-layer acceleration rules](https://intl.cloud.tencent.com/document/product/1552/115820?from_cn_redirect=1). The final priority order will be adjusted to the order of the rule ID list, and will be executed from the front to the back. 
-     * @return RuleIds The complete rule ID list under the site ID can be obtained by [Querying the seven-layer acceleration rules](https://intl.cloud.tencent.com/document/product/1552/115820?from_cn_redirect=1). The final priority order will be adjusted to the order of the rule ID list, and will be executed from the front to the back.
+     * Get Complete rule ID list under the site ID. The rule ID list can be obtained through [Query Layer-7 Acceleration Rules](https://www.tencentcloud.com/document/product/1552/115820?from_cn_redirect=1). The final priority order will be adjusted to the order of the rule ID list, and rules will be executed in sequence from front to back. 
+     * @return RuleIds Complete rule ID list under the site ID. The rule ID list can be obtained through [Query Layer-7 Acceleration Rules](https://www.tencentcloud.com/document/product/1552/115820?from_cn_redirect=1). The final priority order will be adjusted to the order of the rule ID list, and rules will be executed in sequence from front to back.
      */
     public String [] getRuleIds() {
         return this.RuleIds;
     }
 
     /**
-     * Set The complete rule ID list under the site ID can be obtained by [Querying the seven-layer acceleration rules](https://intl.cloud.tencent.com/document/product/1552/115820?from_cn_redirect=1). The final priority order will be adjusted to the order of the rule ID list, and will be executed from the front to the back.
-     * @param RuleIds The complete rule ID list under the site ID can be obtained by [Querying the seven-layer acceleration rules](https://intl.cloud.tencent.com/document/product/1552/115820?from_cn_redirect=1). The final priority order will be adjusted to the order of the rule ID list, and will be executed from the front to the back.
+     * Set Complete rule ID list under the site ID. The rule ID list can be obtained through [Query Layer-7 Acceleration Rules](https://www.tencentcloud.com/document/product/1552/115820?from_cn_redirect=1). The final priority order will be adjusted to the order of the rule ID list, and rules will be executed in sequence from front to back.
+     * @param RuleIds Complete rule ID list under the site ID. The rule ID list can be obtained through [Query Layer-7 Acceleration Rules](https://www.tencentcloud.com/document/product/1552/115820?from_cn_redirect=1). The final priority order will be adjusted to the order of the rule ID list, and rules will be executed in sequence from front to back.
      */
     public void setRuleIds(String [] RuleIds) {
         this.RuleIds = RuleIds;

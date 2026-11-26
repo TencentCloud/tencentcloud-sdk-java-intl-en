@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class NsVerification extends AbstractModel {
 
     /**
-    * The DNS server address assigned to the user when connecting a site to EO via NS. You need to switch the NameServer of the domain name to this address.
+    * DNS server address assigned to the user for NS access. Switch the domain's NameServer to this address.
     */
     @SerializedName("NameServers")
     @Expose
     private String [] NameServers;
 
     /**
-     * Get The DNS server address assigned to the user when connecting a site to EO via NS. You need to switch the NameServer of the domain name to this address. 
-     * @return NameServers The DNS server address assigned to the user when connecting a site to EO via NS. You need to switch the NameServer of the domain name to this address.
+     * Get DNS server address assigned to the user for NS access. Switch the domain's NameServer to this address. 
+     * @return NameServers DNS server address assigned to the user for NS access. Switch the domain's NameServer to this address.
      */
     public String [] getNameServers() {
         return this.NameServers;
     }
 
     /**
-     * Set The DNS server address assigned to the user when connecting a site to EO via NS. You need to switch the NameServer of the domain name to this address.
-     * @param NameServers The DNS server address assigned to the user when connecting a site to EO via NS. You need to switch the NameServer of the domain name to this address.
+     * Set DNS server address assigned to the user for NS access. Switch the domain's NameServer to this address.
+     * @param NameServers DNS server address assigned to the user for NS access. Switch the domain's NameServer to this address.
      */
     public void setNameServers(String [] NameServers) {
         this.NameServers = NameServers;

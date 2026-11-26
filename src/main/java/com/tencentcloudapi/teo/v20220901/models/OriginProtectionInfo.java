@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class OriginProtectionInfo extends AbstractModel {
 
     /**
-    * ID of the site.
+    * Site ID.
     */
     @SerializedName("ZoneId")
     @Expose
     private String ZoneId;
 
     /**
-    * List of domain names.
+    * Domain name list.
     */
     @SerializedName("Hosts")
     @Expose
@@ -45,76 +45,74 @@ public class OriginProtectionInfo extends AbstractModel {
     private String [] ProxyIds;
 
     /**
-    * The existing intermediate IPs.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+    * IP allowlist of the current version.
     */
     @SerializedName("CurrentIPWhitelist")
     @Expose
     private IPWhitelist CurrentIPWhitelist;
 
     /**
-    * Whether the intermediate IP update is needed for the site. Values:
-<li>`true`: Update needed;</li>
-<li>`false`: Update not needed.</li>
+    * Whether to update the origin server allowlist for this site. Valid values:
+<li>true: The IP allowlist needs to be updated;</li>
+<li>false: No need to update the IP allowlist.</li>
     */
     @SerializedName("NeedUpdate")
     @Expose
     private Boolean NeedUpdate;
 
     /**
-    * Status of the origin protection configuration. Values:
-<li>`online`: Origin protection is activated;</li>
-<li>`offline`: Origin protection is disabled.</li>
-<li>`nonactivate`: Origin protection is not activated. This value is returned only when the feature is not activated before it’s used.</li>
+    * Origin protection status. Valid values:
+<li>online: origin protection enabled;</li>
+<li>offline: Origin protection disabled;</li>
+<li>nonactivate: Origin protection is inactive. It is only returned in calls for sites that have never used the origin protection feature.</li>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * Whether origin protection is supported in the plan. Values:
-<li>`true`: Origin protection supported;</li>
-<li>`false`: Origin protection not supported.</li>
+    * Whether origin protection is supported for the site package, with values:
+<li>true: support;</li>
+<li>false: not supported.</li>
     */
     @SerializedName("PlanSupport")
     @Expose
     private Boolean PlanSupport;
 
     /**
-    * Differences between the latest and existing intermediate IPs.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+    * Comparison between the latest IP allowlist and the current IP allowlist.
     */
     @SerializedName("DiffIPWhitelist")
     @Expose
     private DiffIPWhitelist DiffIPWhitelist;
 
     /**
-     * Get ID of the site. 
-     * @return ZoneId ID of the site.
+     * Get Site ID. 
+     * @return ZoneId Site ID.
      */
     public String getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set ID of the site.
-     * @param ZoneId ID of the site.
+     * Set Site ID.
+     * @param ZoneId Site ID.
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get List of domain names. 
-     * @return Hosts List of domain names.
+     * Get Domain name list. 
+     * @return Hosts Domain name list.
      */
     public String [] getHosts() {
         return this.Hosts;
     }
 
     /**
-     * Set List of domain names.
-     * @param Hosts List of domain names.
+     * Set Domain name list.
+     * @param Hosts Domain name list.
      */
     public void setHosts(String [] Hosts) {
         this.Hosts = Hosts;
@@ -137,116 +135,108 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get The existing intermediate IPs.
-Note: This field may return `null`, indicating that no valid values can be obtained. 
-     * @return CurrentIPWhitelist The existing intermediate IPs.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * Get IP allowlist of the current version. 
+     * @return CurrentIPWhitelist IP allowlist of the current version.
      */
     public IPWhitelist getCurrentIPWhitelist() {
         return this.CurrentIPWhitelist;
     }
 
     /**
-     * Set The existing intermediate IPs.
-Note: This field may return `null`, indicating that no valid values can be obtained.
-     * @param CurrentIPWhitelist The existing intermediate IPs.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * Set IP allowlist of the current version.
+     * @param CurrentIPWhitelist IP allowlist of the current version.
      */
     public void setCurrentIPWhitelist(IPWhitelist CurrentIPWhitelist) {
         this.CurrentIPWhitelist = CurrentIPWhitelist;
     }
 
     /**
-     * Get Whether the intermediate IP update is needed for the site. Values:
-<li>`true`: Update needed;</li>
-<li>`false`: Update not needed.</li> 
-     * @return NeedUpdate Whether the intermediate IP update is needed for the site. Values:
-<li>`true`: Update needed;</li>
-<li>`false`: Update not needed.</li>
+     * Get Whether to update the origin server allowlist for this site. Valid values:
+<li>true: The IP allowlist needs to be updated;</li>
+<li>false: No need to update the IP allowlist.</li> 
+     * @return NeedUpdate Whether to update the origin server allowlist for this site. Valid values:
+<li>true: The IP allowlist needs to be updated;</li>
+<li>false: No need to update the IP allowlist.</li>
      */
     public Boolean getNeedUpdate() {
         return this.NeedUpdate;
     }
 
     /**
-     * Set Whether the intermediate IP update is needed for the site. Values:
-<li>`true`: Update needed;</li>
-<li>`false`: Update not needed.</li>
-     * @param NeedUpdate Whether the intermediate IP update is needed for the site. Values:
-<li>`true`: Update needed;</li>
-<li>`false`: Update not needed.</li>
+     * Set Whether to update the origin server allowlist for this site. Valid values:
+<li>true: The IP allowlist needs to be updated;</li>
+<li>false: No need to update the IP allowlist.</li>
+     * @param NeedUpdate Whether to update the origin server allowlist for this site. Valid values:
+<li>true: The IP allowlist needs to be updated;</li>
+<li>false: No need to update the IP allowlist.</li>
      */
     public void setNeedUpdate(Boolean NeedUpdate) {
         this.NeedUpdate = NeedUpdate;
     }
 
     /**
-     * Get Status of the origin protection configuration. Values:
-<li>`online`: Origin protection is activated;</li>
-<li>`offline`: Origin protection is disabled.</li>
-<li>`nonactivate`: Origin protection is not activated. This value is returned only when the feature is not activated before it’s used.</li> 
-     * @return Status Status of the origin protection configuration. Values:
-<li>`online`: Origin protection is activated;</li>
-<li>`offline`: Origin protection is disabled.</li>
-<li>`nonactivate`: Origin protection is not activated. This value is returned only when the feature is not activated before it’s used.</li>
+     * Get Origin protection status. Valid values:
+<li>online: origin protection enabled;</li>
+<li>offline: Origin protection disabled;</li>
+<li>nonactivate: Origin protection is inactive. It is only returned in calls for sites that have never used the origin protection feature.</li> 
+     * @return Status Origin protection status. Valid values:
+<li>online: origin protection enabled;</li>
+<li>offline: Origin protection disabled;</li>
+<li>nonactivate: Origin protection is inactive. It is only returned in calls for sites that have never used the origin protection feature.</li>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Status of the origin protection configuration. Values:
-<li>`online`: Origin protection is activated;</li>
-<li>`offline`: Origin protection is disabled.</li>
-<li>`nonactivate`: Origin protection is not activated. This value is returned only when the feature is not activated before it’s used.</li>
-     * @param Status Status of the origin protection configuration. Values:
-<li>`online`: Origin protection is activated;</li>
-<li>`offline`: Origin protection is disabled.</li>
-<li>`nonactivate`: Origin protection is not activated. This value is returned only when the feature is not activated before it’s used.</li>
+     * Set Origin protection status. Valid values:
+<li>online: origin protection enabled;</li>
+<li>offline: Origin protection disabled;</li>
+<li>nonactivate: Origin protection is inactive. It is only returned in calls for sites that have never used the origin protection feature.</li>
+     * @param Status Origin protection status. Valid values:
+<li>online: origin protection enabled;</li>
+<li>offline: Origin protection disabled;</li>
+<li>nonactivate: Origin protection is inactive. It is only returned in calls for sites that have never used the origin protection feature.</li>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Whether origin protection is supported in the plan. Values:
-<li>`true`: Origin protection supported;</li>
-<li>`false`: Origin protection not supported.</li> 
-     * @return PlanSupport Whether origin protection is supported in the plan. Values:
-<li>`true`: Origin protection supported;</li>
-<li>`false`: Origin protection not supported.</li>
+     * Get Whether origin protection is supported for the site package, with values:
+<li>true: support;</li>
+<li>false: not supported.</li> 
+     * @return PlanSupport Whether origin protection is supported for the site package, with values:
+<li>true: support;</li>
+<li>false: not supported.</li>
      */
     public Boolean getPlanSupport() {
         return this.PlanSupport;
     }
 
     /**
-     * Set Whether origin protection is supported in the plan. Values:
-<li>`true`: Origin protection supported;</li>
-<li>`false`: Origin protection not supported.</li>
-     * @param PlanSupport Whether origin protection is supported in the plan. Values:
-<li>`true`: Origin protection supported;</li>
-<li>`false`: Origin protection not supported.</li>
+     * Set Whether origin protection is supported for the site package, with values:
+<li>true: support;</li>
+<li>false: not supported.</li>
+     * @param PlanSupport Whether origin protection is supported for the site package, with values:
+<li>true: support;</li>
+<li>false: not supported.</li>
      */
     public void setPlanSupport(Boolean PlanSupport) {
         this.PlanSupport = PlanSupport;
     }
 
     /**
-     * Get Differences between the latest and existing intermediate IPs.
-Note: This field may return `null`, indicating that no valid values can be obtained. 
-     * @return DiffIPWhitelist Differences between the latest and existing intermediate IPs.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * Get Comparison between the latest IP allowlist and the current IP allowlist. 
+     * @return DiffIPWhitelist Comparison between the latest IP allowlist and the current IP allowlist.
      */
     public DiffIPWhitelist getDiffIPWhitelist() {
         return this.DiffIPWhitelist;
     }
 
     /**
-     * Set Differences between the latest and existing intermediate IPs.
-Note: This field may return `null`, indicating that no valid values can be obtained.
-     * @param DiffIPWhitelist Differences between the latest and existing intermediate IPs.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * Set Comparison between the latest IP allowlist and the current IP allowlist.
+     * @param DiffIPWhitelist Comparison between the latest IP allowlist and the current IP allowlist.
      */
     public void setDiffIPWhitelist(DiffIPWhitelist DiffIPWhitelist) {
         this.DiffIPWhitelist = DiffIPWhitelist;

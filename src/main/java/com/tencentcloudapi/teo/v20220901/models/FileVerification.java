@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class FileVerification extends AbstractModel {
 
     /**
-    * EdgeOne backend server will get file verification information via http://{Host}{URL Path} (for example http://www.example.com/.well-known/teo-verification/z12h416twn.txt). among them, this field specifies the URL Path part you need to create, and Host indicates the current accelerated domain.
+    * The EdgeOne backend server will get the file verification information via http://{Host}{URL Path} (for example, http://www.example.com/.well-known/teo-verification/z12h416twn.txt). This field is the URL Path part you need to create, and Host is the current accelerated domain.
     */
     @SerializedName("Path")
     @Expose
     private String Path;
 
     /**
-    * Content of the verification file. The contents of this field need to be filled into the text file returned by `Path`.
+    * Verify the content of the file. You need to fill in the content of this field into the txt file returned by the Path field.
     */
     @SerializedName("Content")
     @Expose
     private String Content;
 
     /**
-     * Get EdgeOne backend server will get file verification information via http://{Host}{URL Path} (for example http://www.example.com/.well-known/teo-verification/z12h416twn.txt). among them, this field specifies the URL Path part you need to create, and Host indicates the current accelerated domain. 
-     * @return Path EdgeOne backend server will get file verification information via http://{Host}{URL Path} (for example http://www.example.com/.well-known/teo-verification/z12h416twn.txt). among them, this field specifies the URL Path part you need to create, and Host indicates the current accelerated domain.
+     * Get The EdgeOne backend server will get the file verification information via http://{Host}{URL Path} (for example, http://www.example.com/.well-known/teo-verification/z12h416twn.txt). This field is the URL Path part you need to create, and Host is the current accelerated domain. 
+     * @return Path The EdgeOne backend server will get the file verification information via http://{Host}{URL Path} (for example, http://www.example.com/.well-known/teo-verification/z12h416twn.txt). This field is the URL Path part you need to create, and Host is the current accelerated domain.
      */
     public String getPath() {
         return this.Path;
     }
 
     /**
-     * Set EdgeOne backend server will get file verification information via http://{Host}{URL Path} (for example http://www.example.com/.well-known/teo-verification/z12h416twn.txt). among them, this field specifies the URL Path part you need to create, and Host indicates the current accelerated domain.
-     * @param Path EdgeOne backend server will get file verification information via http://{Host}{URL Path} (for example http://www.example.com/.well-known/teo-verification/z12h416twn.txt). among them, this field specifies the URL Path part you need to create, and Host indicates the current accelerated domain.
+     * Set The EdgeOne backend server will get the file verification information via http://{Host}{URL Path} (for example, http://www.example.com/.well-known/teo-verification/z12h416twn.txt). This field is the URL Path part you need to create, and Host is the current accelerated domain.
+     * @param Path The EdgeOne backend server will get the file verification information via http://{Host}{URL Path} (for example, http://www.example.com/.well-known/teo-verification/z12h416twn.txt). This field is the URL Path part you need to create, and Host is the current accelerated domain.
      */
     public void setPath(String Path) {
         this.Path = Path;
     }
 
     /**
-     * Get Content of the verification file. The contents of this field need to be filled into the text file returned by `Path`. 
-     * @return Content Content of the verification file. The contents of this field need to be filled into the text file returned by `Path`.
+     * Get Verify the content of the file. You need to fill in the content of this field into the txt file returned by the Path field. 
+     * @return Content Verify the content of the file. You need to fill in the content of this field into the txt file returned by the Path field.
      */
     public String getContent() {
         return this.Content;
     }
 
     /**
-     * Set Content of the verification file. The contents of this field need to be filled into the text file returned by `Path`.
-     * @param Content Content of the verification file. The contents of this field need to be filled into the text file returned by `Path`.
+     * Set Verify the content of the file. You need to fill in the content of this field into the txt file returned by the Path field.
+     * @param Content Verify the content of the file. You need to fill in the content of this field into the txt file returned by the Path field.
      */
     public void setContent(String Content) {
         this.Content = Content;

@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeSharedCNAMEResponse extends AbstractModel {
 
     /**
-    * Total number of shared CNAMEs that meet filtering criteria.
+    * Total count of shared CNAMEs that meet the filtering criteria.
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * Shared CNAME table detail.
+    * List of shared CNAMEs.
     */
     @SerializedName("SharedCNAMEInfo")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeSharedCNAMEResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Total number of shared CNAMEs that meet filtering criteria. 
-     * @return TotalCount Total number of shared CNAMEs that meet filtering criteria.
+     * Get Total count of shared CNAMEs that meet the filtering criteria. 
+     * @return TotalCount Total count of shared CNAMEs that meet the filtering criteria.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Total number of shared CNAMEs that meet filtering criteria.
-     * @param TotalCount Total number of shared CNAMEs that meet filtering criteria.
+     * Set Total count of shared CNAMEs that meet the filtering criteria.
+     * @param TotalCount Total count of shared CNAMEs that meet the filtering criteria.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get Shared CNAME table detail. 
-     * @return SharedCNAMEInfo Shared CNAME table detail.
+     * Get List of shared CNAMEs. 
+     * @return SharedCNAMEInfo List of shared CNAMEs.
      */
     public SharedCNAMEInfo [] getSharedCNAMEInfo() {
         return this.SharedCNAMEInfo;
     }
 
     /**
-     * Set Shared CNAME table detail.
-     * @param SharedCNAMEInfo Shared CNAME table detail.
+     * Set List of shared CNAMEs.
+     * @param SharedCNAMEInfo List of shared CNAMEs.
      */
     public void setSharedCNAMEInfo(SharedCNAMEInfo [] SharedCNAMEInfo) {
         this.SharedCNAMEInfo = SharedCNAMEInfo;

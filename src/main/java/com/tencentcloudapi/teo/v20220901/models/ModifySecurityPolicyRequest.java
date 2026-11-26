@@ -31,35 +31,35 @@ public class ModifySecurityPolicyRequest extends AbstractModel {
     private String ZoneId;
 
     /**
-    * Security policy configuration. <li>when ExceptionRules in the SecurityPolicy parameter is set, ExceptConfig in the SecurityConfig parameter will be ignored;</li> <li>when CustomRules in the SecurityPolicy parameter is set, AclConfig and IpTableConfig in the SecurityConfig parameter will be ignored;</li> <li>when HttpDDoSProtection and RateLimitingRules in the SecurityPolicy parameter are set, RateLimitConfig in the SecurityConfig parameter will be ignored;</li> <li>when ManagedRule in the SecurityPolicy parameter is set, WafConfig in the SecurityConfig parameter will be ignored;</li> <li>when BotManagement in the SecurityPolicy parameter is set, BotConfig in the SecurityConfig parameter will be ignored;</li> <li>for exception rules, custom rules, rate limiting, managed rules, and Bot management policy configuration, recommend using the SecurityPolicy parameter for settings.</li>.
+    * Security policy configuration.<li>When ExceptionRules in the SecurityPolicy parameter is set, ExceptConfig in the SecurityConfig parameter will be ignored;</li><li>When CustomRules in the SecurityPolicy parameter is set, AclConfig and IpTableConfig in the SecurityConfig parameter will be ignored;</li><li>When HttpDDoSProtection and RateLimitingRules in the SecurityPolicy parameter are set, RateLimitConfig in the SecurityConfig parameter will be ignored;</li><li>When ManagedRule in the SecurityPolicy parameter is set, WafConfig in the SecurityConfig parameter will be ignored;</li><li>When BotManagement in the SecurityPolicy parameter is set, BotConfig in the SecurityConfig parameter will be ignored;</li><li>For exception rules, custom rules, rate limits, managed rules, and bot management policies, it is recommended to use the SecurityPolicy parameter for configuration.</li>
     */
     @SerializedName("SecurityConfig")
     @Expose
     private SecurityConfig SecurityConfig;
 
     /**
-    * Security policy configuration. recommend using for Web exception rules, custom policies, rate rules, managed rules, and Bot management configuration. supports configuring security policies with expression grammar.
+    * Security policy configuration. For Web exception rules, custom protection policies, rate rules, managed rules, and Bot management configuration, we recommend using expression syntax to configure security policies.
     */
     @SerializedName("SecurityPolicy")
     @Expose
     private SecurityPolicy SecurityPolicy;
 
     /**
-    * `SecurityPolicy` type, the following parameter values can be used for query: <li>`ZoneDefaultPolicy`: used to specify a query for site-level policies;</li> <li>`Template`: used to specify a query for policy templates. the `TemplateId` parameter needs to be specified simultaneously;</li> <li>`Host`: used to specify a query for domain-level policies (note: when using `Host` to specify a domain name service policy, only domain name services or policy templates that have been applied domain-level policies are supported).</li>	
+    * Security policy type. The following parameter values are available: <li>ZoneDefaultPolicy: used to specify a site-level policy;</li><li>Template: used to specify a policy template. You need to simultaneously specify the TemplateId parameter;</li><li>Host: used to specify a domain-level policy (Note: when using a domain name to specify a domain name service policy, only DNS that has already applied a domain-level policy or policy template is supported).</li>
     */
     @SerializedName("Entity")
     @Expose
     private String Entity;
 
     /**
-    * Specify the domain name. When the `Entity` parameter value is set to `Host`, use the domain-level policy specified by this parameter to query the domain configuration. For example, use `www.example.com` to configure the domain-level policy for that domain name.
+    * Specified domain name. When the value of the `Entity` parameter is `Host`, use this parameter to specify a domain-level policy. For example, use `www.example.com` to configure the domain-level policy for that domain name.
     */
     @SerializedName("Host")
     @Expose
     private String Host;
 
     /**
-    * Specify the policy template ID. Use this parameter to specify the ID of the policy Template to query the Template configuration when the `Entity` parameter value is set to `Template`.
+    * Specify the policy template ID. When the Entity parameter value is Template, use this parameter to specify the policy template ID.
     */
     @SerializedName("TemplateId")
     @Expose
@@ -82,80 +82,80 @@ public class ModifySecurityPolicyRequest extends AbstractModel {
     }
 
     /**
-     * Get Security policy configuration. <li>when ExceptionRules in the SecurityPolicy parameter is set, ExceptConfig in the SecurityConfig parameter will be ignored;</li> <li>when CustomRules in the SecurityPolicy parameter is set, AclConfig and IpTableConfig in the SecurityConfig parameter will be ignored;</li> <li>when HttpDDoSProtection and RateLimitingRules in the SecurityPolicy parameter are set, RateLimitConfig in the SecurityConfig parameter will be ignored;</li> <li>when ManagedRule in the SecurityPolicy parameter is set, WafConfig in the SecurityConfig parameter will be ignored;</li> <li>when BotManagement in the SecurityPolicy parameter is set, BotConfig in the SecurityConfig parameter will be ignored;</li> <li>for exception rules, custom rules, rate limiting, managed rules, and Bot management policy configuration, recommend using the SecurityPolicy parameter for settings.</li>. 
-     * @return SecurityConfig Security policy configuration. <li>when ExceptionRules in the SecurityPolicy parameter is set, ExceptConfig in the SecurityConfig parameter will be ignored;</li> <li>when CustomRules in the SecurityPolicy parameter is set, AclConfig and IpTableConfig in the SecurityConfig parameter will be ignored;</li> <li>when HttpDDoSProtection and RateLimitingRules in the SecurityPolicy parameter are set, RateLimitConfig in the SecurityConfig parameter will be ignored;</li> <li>when ManagedRule in the SecurityPolicy parameter is set, WafConfig in the SecurityConfig parameter will be ignored;</li> <li>when BotManagement in the SecurityPolicy parameter is set, BotConfig in the SecurityConfig parameter will be ignored;</li> <li>for exception rules, custom rules, rate limiting, managed rules, and Bot management policy configuration, recommend using the SecurityPolicy parameter for settings.</li>.
+     * Get Security policy configuration.<li>When ExceptionRules in the SecurityPolicy parameter is set, ExceptConfig in the SecurityConfig parameter will be ignored;</li><li>When CustomRules in the SecurityPolicy parameter is set, AclConfig and IpTableConfig in the SecurityConfig parameter will be ignored;</li><li>When HttpDDoSProtection and RateLimitingRules in the SecurityPolicy parameter are set, RateLimitConfig in the SecurityConfig parameter will be ignored;</li><li>When ManagedRule in the SecurityPolicy parameter is set, WafConfig in the SecurityConfig parameter will be ignored;</li><li>When BotManagement in the SecurityPolicy parameter is set, BotConfig in the SecurityConfig parameter will be ignored;</li><li>For exception rules, custom rules, rate limits, managed rules, and bot management policies, it is recommended to use the SecurityPolicy parameter for configuration.</li> 
+     * @return SecurityConfig Security policy configuration.<li>When ExceptionRules in the SecurityPolicy parameter is set, ExceptConfig in the SecurityConfig parameter will be ignored;</li><li>When CustomRules in the SecurityPolicy parameter is set, AclConfig and IpTableConfig in the SecurityConfig parameter will be ignored;</li><li>When HttpDDoSProtection and RateLimitingRules in the SecurityPolicy parameter are set, RateLimitConfig in the SecurityConfig parameter will be ignored;</li><li>When ManagedRule in the SecurityPolicy parameter is set, WafConfig in the SecurityConfig parameter will be ignored;</li><li>When BotManagement in the SecurityPolicy parameter is set, BotConfig in the SecurityConfig parameter will be ignored;</li><li>For exception rules, custom rules, rate limits, managed rules, and bot management policies, it is recommended to use the SecurityPolicy parameter for configuration.</li>
      */
     public SecurityConfig getSecurityConfig() {
         return this.SecurityConfig;
     }
 
     /**
-     * Set Security policy configuration. <li>when ExceptionRules in the SecurityPolicy parameter is set, ExceptConfig in the SecurityConfig parameter will be ignored;</li> <li>when CustomRules in the SecurityPolicy parameter is set, AclConfig and IpTableConfig in the SecurityConfig parameter will be ignored;</li> <li>when HttpDDoSProtection and RateLimitingRules in the SecurityPolicy parameter are set, RateLimitConfig in the SecurityConfig parameter will be ignored;</li> <li>when ManagedRule in the SecurityPolicy parameter is set, WafConfig in the SecurityConfig parameter will be ignored;</li> <li>when BotManagement in the SecurityPolicy parameter is set, BotConfig in the SecurityConfig parameter will be ignored;</li> <li>for exception rules, custom rules, rate limiting, managed rules, and Bot management policy configuration, recommend using the SecurityPolicy parameter for settings.</li>.
-     * @param SecurityConfig Security policy configuration. <li>when ExceptionRules in the SecurityPolicy parameter is set, ExceptConfig in the SecurityConfig parameter will be ignored;</li> <li>when CustomRules in the SecurityPolicy parameter is set, AclConfig and IpTableConfig in the SecurityConfig parameter will be ignored;</li> <li>when HttpDDoSProtection and RateLimitingRules in the SecurityPolicy parameter are set, RateLimitConfig in the SecurityConfig parameter will be ignored;</li> <li>when ManagedRule in the SecurityPolicy parameter is set, WafConfig in the SecurityConfig parameter will be ignored;</li> <li>when BotManagement in the SecurityPolicy parameter is set, BotConfig in the SecurityConfig parameter will be ignored;</li> <li>for exception rules, custom rules, rate limiting, managed rules, and Bot management policy configuration, recommend using the SecurityPolicy parameter for settings.</li>.
+     * Set Security policy configuration.<li>When ExceptionRules in the SecurityPolicy parameter is set, ExceptConfig in the SecurityConfig parameter will be ignored;</li><li>When CustomRules in the SecurityPolicy parameter is set, AclConfig and IpTableConfig in the SecurityConfig parameter will be ignored;</li><li>When HttpDDoSProtection and RateLimitingRules in the SecurityPolicy parameter are set, RateLimitConfig in the SecurityConfig parameter will be ignored;</li><li>When ManagedRule in the SecurityPolicy parameter is set, WafConfig in the SecurityConfig parameter will be ignored;</li><li>When BotManagement in the SecurityPolicy parameter is set, BotConfig in the SecurityConfig parameter will be ignored;</li><li>For exception rules, custom rules, rate limits, managed rules, and bot management policies, it is recommended to use the SecurityPolicy parameter for configuration.</li>
+     * @param SecurityConfig Security policy configuration.<li>When ExceptionRules in the SecurityPolicy parameter is set, ExceptConfig in the SecurityConfig parameter will be ignored;</li><li>When CustomRules in the SecurityPolicy parameter is set, AclConfig and IpTableConfig in the SecurityConfig parameter will be ignored;</li><li>When HttpDDoSProtection and RateLimitingRules in the SecurityPolicy parameter are set, RateLimitConfig in the SecurityConfig parameter will be ignored;</li><li>When ManagedRule in the SecurityPolicy parameter is set, WafConfig in the SecurityConfig parameter will be ignored;</li><li>When BotManagement in the SecurityPolicy parameter is set, BotConfig in the SecurityConfig parameter will be ignored;</li><li>For exception rules, custom rules, rate limits, managed rules, and bot management policies, it is recommended to use the SecurityPolicy parameter for configuration.</li>
      */
     public void setSecurityConfig(SecurityConfig SecurityConfig) {
         this.SecurityConfig = SecurityConfig;
     }
 
     /**
-     * Get Security policy configuration. recommend using for Web exception rules, custom policies, rate rules, managed rules, and Bot management configuration. supports configuring security policies with expression grammar. 
-     * @return SecurityPolicy Security policy configuration. recommend using for Web exception rules, custom policies, rate rules, managed rules, and Bot management configuration. supports configuring security policies with expression grammar.
+     * Get Security policy configuration. For Web exception rules, custom protection policies, rate rules, managed rules, and Bot management configuration, we recommend using expression syntax to configure security policies. 
+     * @return SecurityPolicy Security policy configuration. For Web exception rules, custom protection policies, rate rules, managed rules, and Bot management configuration, we recommend using expression syntax to configure security policies.
      */
     public SecurityPolicy getSecurityPolicy() {
         return this.SecurityPolicy;
     }
 
     /**
-     * Set Security policy configuration. recommend using for Web exception rules, custom policies, rate rules, managed rules, and Bot management configuration. supports configuring security policies with expression grammar.
-     * @param SecurityPolicy Security policy configuration. recommend using for Web exception rules, custom policies, rate rules, managed rules, and Bot management configuration. supports configuring security policies with expression grammar.
+     * Set Security policy configuration. For Web exception rules, custom protection policies, rate rules, managed rules, and Bot management configuration, we recommend using expression syntax to configure security policies.
+     * @param SecurityPolicy Security policy configuration. For Web exception rules, custom protection policies, rate rules, managed rules, and Bot management configuration, we recommend using expression syntax to configure security policies.
      */
     public void setSecurityPolicy(SecurityPolicy SecurityPolicy) {
         this.SecurityPolicy = SecurityPolicy;
     }
 
     /**
-     * Get `SecurityPolicy` type, the following parameter values can be used for query: <li>`ZoneDefaultPolicy`: used to specify a query for site-level policies;</li> <li>`Template`: used to specify a query for policy templates. the `TemplateId` parameter needs to be specified simultaneously;</li> <li>`Host`: used to specify a query for domain-level policies (note: when using `Host` to specify a domain name service policy, only domain name services or policy templates that have been applied domain-level policies are supported).</li>	 
-     * @return Entity `SecurityPolicy` type, the following parameter values can be used for query: <li>`ZoneDefaultPolicy`: used to specify a query for site-level policies;</li> <li>`Template`: used to specify a query for policy templates. the `TemplateId` parameter needs to be specified simultaneously;</li> <li>`Host`: used to specify a query for domain-level policies (note: when using `Host` to specify a domain name service policy, only domain name services or policy templates that have been applied domain-level policies are supported).</li>	
+     * Get Security policy type. The following parameter values are available: <li>ZoneDefaultPolicy: used to specify a site-level policy;</li><li>Template: used to specify a policy template. You need to simultaneously specify the TemplateId parameter;</li><li>Host: used to specify a domain-level policy (Note: when using a domain name to specify a domain name service policy, only DNS that has already applied a domain-level policy or policy template is supported).</li> 
+     * @return Entity Security policy type. The following parameter values are available: <li>ZoneDefaultPolicy: used to specify a site-level policy;</li><li>Template: used to specify a policy template. You need to simultaneously specify the TemplateId parameter;</li><li>Host: used to specify a domain-level policy (Note: when using a domain name to specify a domain name service policy, only DNS that has already applied a domain-level policy or policy template is supported).</li>
      */
     public String getEntity() {
         return this.Entity;
     }
 
     /**
-     * Set `SecurityPolicy` type, the following parameter values can be used for query: <li>`ZoneDefaultPolicy`: used to specify a query for site-level policies;</li> <li>`Template`: used to specify a query for policy templates. the `TemplateId` parameter needs to be specified simultaneously;</li> <li>`Host`: used to specify a query for domain-level policies (note: when using `Host` to specify a domain name service policy, only domain name services or policy templates that have been applied domain-level policies are supported).</li>	
-     * @param Entity `SecurityPolicy` type, the following parameter values can be used for query: <li>`ZoneDefaultPolicy`: used to specify a query for site-level policies;</li> <li>`Template`: used to specify a query for policy templates. the `TemplateId` parameter needs to be specified simultaneously;</li> <li>`Host`: used to specify a query for domain-level policies (note: when using `Host` to specify a domain name service policy, only domain name services or policy templates that have been applied domain-level policies are supported).</li>	
+     * Set Security policy type. The following parameter values are available: <li>ZoneDefaultPolicy: used to specify a site-level policy;</li><li>Template: used to specify a policy template. You need to simultaneously specify the TemplateId parameter;</li><li>Host: used to specify a domain-level policy (Note: when using a domain name to specify a domain name service policy, only DNS that has already applied a domain-level policy or policy template is supported).</li>
+     * @param Entity Security policy type. The following parameter values are available: <li>ZoneDefaultPolicy: used to specify a site-level policy;</li><li>Template: used to specify a policy template. You need to simultaneously specify the TemplateId parameter;</li><li>Host: used to specify a domain-level policy (Note: when using a domain name to specify a domain name service policy, only DNS that has already applied a domain-level policy or policy template is supported).</li>
      */
     public void setEntity(String Entity) {
         this.Entity = Entity;
     }
 
     /**
-     * Get Specify the domain name. When the `Entity` parameter value is set to `Host`, use the domain-level policy specified by this parameter to query the domain configuration. For example, use `www.example.com` to configure the domain-level policy for that domain name. 
-     * @return Host Specify the domain name. When the `Entity` parameter value is set to `Host`, use the domain-level policy specified by this parameter to query the domain configuration. For example, use `www.example.com` to configure the domain-level policy for that domain name.
+     * Get Specified domain name. When the value of the `Entity` parameter is `Host`, use this parameter to specify a domain-level policy. For example, use `www.example.com` to configure the domain-level policy for that domain name. 
+     * @return Host Specified domain name. When the value of the `Entity` parameter is `Host`, use this parameter to specify a domain-level policy. For example, use `www.example.com` to configure the domain-level policy for that domain name.
      */
     public String getHost() {
         return this.Host;
     }
 
     /**
-     * Set Specify the domain name. When the `Entity` parameter value is set to `Host`, use the domain-level policy specified by this parameter to query the domain configuration. For example, use `www.example.com` to configure the domain-level policy for that domain name.
-     * @param Host Specify the domain name. When the `Entity` parameter value is set to `Host`, use the domain-level policy specified by this parameter to query the domain configuration. For example, use `www.example.com` to configure the domain-level policy for that domain name.
+     * Set Specified domain name. When the value of the `Entity` parameter is `Host`, use this parameter to specify a domain-level policy. For example, use `www.example.com` to configure the domain-level policy for that domain name.
+     * @param Host Specified domain name. When the value of the `Entity` parameter is `Host`, use this parameter to specify a domain-level policy. For example, use `www.example.com` to configure the domain-level policy for that domain name.
      */
     public void setHost(String Host) {
         this.Host = Host;
     }
 
     /**
-     * Get Specify the policy template ID. Use this parameter to specify the ID of the policy Template to query the Template configuration when the `Entity` parameter value is set to `Template`. 
-     * @return TemplateId Specify the policy template ID. Use this parameter to specify the ID of the policy Template to query the Template configuration when the `Entity` parameter value is set to `Template`.
+     * Get Specify the policy template ID. When the Entity parameter value is Template, use this parameter to specify the policy template ID. 
+     * @return TemplateId Specify the policy template ID. When the Entity parameter value is Template, use this parameter to specify the policy template ID.
      */
     public String getTemplateId() {
         return this.TemplateId;
     }
 
     /**
-     * Set Specify the policy template ID. Use this parameter to specify the ID of the policy Template to query the Template configuration when the `Entity` parameter value is set to `Template`.
-     * @param TemplateId Specify the policy template ID. Use this parameter to specify the ID of the policy Template to query the Template configuration when the `Entity` parameter value is set to `Template`.
+     * Set Specify the policy template ID. When the Entity parameter value is Template, use this parameter to specify the policy template ID.
+     * @param TemplateId Specify the policy template ID. When the Entity parameter value is Template, use this parameter to specify the policy template ID.
      */
     public void setTemplateId(String TemplateId) {
         this.TemplateId = TemplateId;

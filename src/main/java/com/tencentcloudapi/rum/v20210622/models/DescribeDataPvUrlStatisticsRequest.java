@@ -171,18 +171,14 @@ public class DescribeDataPvUrlStatisticsRequest extends AbstractModel {
     private String Env;
 
     /**
-    * group by parameter value enumeration: 1:1m
-   2:5m  3:30m 
-   4:1h
- 5:1d
+    * Time aggregation interval. Valid values: 1 (1 minute), 2 (5 minutes), 3 (30 minutes), 4 (1 hour), and 5 (1 day).
     */
     @SerializedName("GroupByType")
     @Expose
     private Long GroupByType;
 
     /**
-    * 1: Query Intelligent Research
-0: Use old logic, already offline, do not use
+    * Set to 1 to query the new data source. The legacy query mode (0) has been retired.
     */
     @SerializedName("IsNewData")
     @Expose
@@ -525,48 +521,32 @@ public class DescribeDataPvUrlStatisticsRequest extends AbstractModel {
     }
 
     /**
-     * Get group by parameter value enumeration: 1:1m
-   2:5m  3:30m 
-   4:1h
- 5:1d 
-     * @return GroupByType group by parameter value enumeration: 1:1m
-   2:5m  3:30m 
-   4:1h
- 5:1d
+     * Get Time aggregation interval. Valid values: 1 (1 minute), 2 (5 minutes), 3 (30 minutes), 4 (1 hour), and 5 (1 day). 
+     * @return GroupByType Time aggregation interval. Valid values: 1 (1 minute), 2 (5 minutes), 3 (30 minutes), 4 (1 hour), and 5 (1 day).
      */
     public Long getGroupByType() {
         return this.GroupByType;
     }
 
     /**
-     * Set group by parameter value enumeration: 1:1m
-   2:5m  3:30m 
-   4:1h
- 5:1d
-     * @param GroupByType group by parameter value enumeration: 1:1m
-   2:5m  3:30m 
-   4:1h
- 5:1d
+     * Set Time aggregation interval. Valid values: 1 (1 minute), 2 (5 minutes), 3 (30 minutes), 4 (1 hour), and 5 (1 day).
+     * @param GroupByType Time aggregation interval. Valid values: 1 (1 minute), 2 (5 minutes), 3 (30 minutes), 4 (1 hour), and 5 (1 day).
      */
     public void setGroupByType(Long GroupByType) {
         this.GroupByType = GroupByType;
     }
 
     /**
-     * Get 1: Query Intelligent Research
-0: Use old logic, already offline, do not use 
-     * @return IsNewData 1: Query Intelligent Research
-0: Use old logic, already offline, do not use
+     * Get Set to 1 to query the new data source. The legacy query mode (0) has been retired. 
+     * @return IsNewData Set to 1 to query the new data source. The legacy query mode (0) has been retired.
      */
     public Long getIsNewData() {
         return this.IsNewData;
     }
 
     /**
-     * Set 1: Query Intelligent Research
-0: Use old logic, already offline, do not use
-     * @param IsNewData 1: Query Intelligent Research
-0: Use old logic, already offline, do not use
+     * Set Set to 1 to query the new data source. The legacy query mode (0) has been retired.
+     * @param IsNewData Set to 1 to query the new data source. The legacy query mode (0) has been retired.
      */
     public void setIsNewData(Long IsNewData) {
         this.IsNewData = IsNewData;

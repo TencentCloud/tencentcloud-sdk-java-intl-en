@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class RuleCodeActionParams extends AbstractModel {
 
     /**
-    * The status code.
+    * Status Code.
     */
     @SerializedName("StatusCode")
     @Expose
     private Long StatusCode;
 
     /**
-    * The parameter name. For details, see [DescribeRulesSetting](https://intl.cloud.tencent.com/document/product/1552/80618?from_cn_redirect=1).
+    * Parameter name. For parameter completion specifications, call the api [Query parameter settings of the rule engine](https://www.tencentcloud.com/document/product/1552/80618?from_cn_redirect=1) to view.
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * The parameter value.
+    * Parameter value.
     */
     @SerializedName("Values")
     @Expose
     private String [] Values;
 
     /**
-     * Get The status code. 
-     * @return StatusCode The status code.
+     * Get Status Code. 
+     * @return StatusCode Status Code.
      */
     public Long getStatusCode() {
         return this.StatusCode;
     }
 
     /**
-     * Set The status code.
-     * @param StatusCode The status code.
+     * Set Status Code.
+     * @param StatusCode Status Code.
      */
     public void setStatusCode(Long StatusCode) {
         this.StatusCode = StatusCode;
     }
 
     /**
-     * Get The parameter name. For details, see [DescribeRulesSetting](https://intl.cloud.tencent.com/document/product/1552/80618?from_cn_redirect=1). 
-     * @return Name The parameter name. For details, see [DescribeRulesSetting](https://intl.cloud.tencent.com/document/product/1552/80618?from_cn_redirect=1).
+     * Get Parameter name. For parameter completion specifications, call the api [Query parameter settings of the rule engine](https://www.tencentcloud.com/document/product/1552/80618?from_cn_redirect=1) to view. 
+     * @return Name Parameter name. For parameter completion specifications, call the api [Query parameter settings of the rule engine](https://www.tencentcloud.com/document/product/1552/80618?from_cn_redirect=1) to view.
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set The parameter name. For details, see [DescribeRulesSetting](https://intl.cloud.tencent.com/document/product/1552/80618?from_cn_redirect=1).
-     * @param Name The parameter name. For details, see [DescribeRulesSetting](https://intl.cloud.tencent.com/document/product/1552/80618?from_cn_redirect=1).
+     * Set Parameter name. For parameter completion specifications, call the api [Query parameter settings of the rule engine](https://www.tencentcloud.com/document/product/1552/80618?from_cn_redirect=1) to view.
+     * @param Name Parameter name. For parameter completion specifications, call the api [Query parameter settings of the rule engine](https://www.tencentcloud.com/document/product/1552/80618?from_cn_redirect=1) to view.
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get The parameter value. 
-     * @return Values The parameter value.
+     * Get Parameter value. 
+     * @return Values Parameter value.
      */
     public String [] getValues() {
         return this.Values;
     }
 
     /**
-     * Set The parameter value.
-     * @param Values The parameter value.
+     * Set Parameter value.
+     * @param Values Parameter value.
      */
     public void setValues(String [] Values) {
         this.Values = Values;

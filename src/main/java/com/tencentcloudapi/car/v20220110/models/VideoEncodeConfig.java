@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class VideoEncodeConfig extends AbstractModel {
 
     /**
-    * Streaming GOP length, in seconds.Note: This field may return null, indicating that no valid values can be obtained.
+    * Push streaming GOP length, in seconds.
     */
     @SerializedName("StreamPushGOPSeconds")
     @Expose
     private Long StreamPushGOPSeconds;
 
     /**
-     * Get Streaming GOP length, in seconds.Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return StreamPushGOPSeconds Streaming GOP length, in seconds.Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Push streaming GOP length, in seconds. 
+     * @return StreamPushGOPSeconds Push streaming GOP length, in seconds.
      */
     public Long getStreamPushGOPSeconds() {
         return this.StreamPushGOPSeconds;
     }
 
     /**
-     * Set Streaming GOP length, in seconds.Note: This field may return null, indicating that no valid values can be obtained.
-     * @param StreamPushGOPSeconds Streaming GOP length, in seconds.Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Push streaming GOP length, in seconds.
+     * @param StreamPushGOPSeconds Push streaming GOP length, in seconds.
      */
     public void setStreamPushGOPSeconds(Long StreamPushGOPSeconds) {
         this.StreamPushGOPSeconds = StreamPushGOPSeconds;

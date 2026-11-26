@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class SubRuleItem extends AbstractModel {
 
     /**
-    * Nested rule settings
+    * Nested rule information.
     */
     @SerializedName("Rules")
     @Expose
     private SubRule [] Rules;
 
     /**
-    * Tag of the rule.
+    * Rule tag.
     */
     @SerializedName("Tags")
     @Expose
     private String [] Tags;
 
     /**
-     * Get Nested rule settings 
-     * @return Rules Nested rule settings
+     * Get Nested rule information. 
+     * @return Rules Nested rule information.
      */
     public SubRule [] getRules() {
         return this.Rules;
     }
 
     /**
-     * Set Nested rule settings
-     * @param Rules Nested rule settings
+     * Set Nested rule information.
+     * @param Rules Nested rule information.
      */
     public void setRules(SubRule [] Rules) {
         this.Rules = Rules;
     }
 
     /**
-     * Get Tag of the rule. 
-     * @return Tags Tag of the rule.
+     * Get Rule tag. 
+     * @return Tags Rule tag.
      */
     public String [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set Tag of the rule.
-     * @param Tags Tag of the rule.
+     * Set Rule tag.
+     * @param Tags Rule tag.
      */
     public void setTags(String [] Tags) {
         this.Tags = Tags;

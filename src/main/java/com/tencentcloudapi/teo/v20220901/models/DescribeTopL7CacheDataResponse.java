@@ -24,15 +24,14 @@ import java.util.HashMap;
 public class DescribeTopL7CacheDataResponse extends AbstractModel {
 
     /**
-    * Total number of query results.
+    * Total number of entries in the query result.
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * The list of cached L7 top-ranked traffic data.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Data list of top N Layer-7 cache traffic volumes.
     */
     @SerializedName("Data")
     @Expose
@@ -46,36 +45,32 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Total number of query results. 
-     * @return TotalCount Total number of query results.
+     * Get Total number of entries in the query result. 
+     * @return TotalCount Total number of entries in the query result.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Total number of query results.
-     * @param TotalCount Total number of query results.
+     * Set Total number of entries in the query result.
+     * @param TotalCount Total number of entries in the query result.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get The list of cached L7 top-ranked traffic data.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Data The list of cached L7 top-ranked traffic data.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Data list of top N Layer-7 cache traffic volumes. 
+     * @return Data Data list of top N Layer-7 cache traffic volumes.
      */
     public TopDataRecord [] getData() {
         return this.Data;
     }
 
     /**
-     * Set The list of cached L7 top-ranked traffic data.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Data The list of cached L7 top-ranked traffic data.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Data list of top N Layer-7 cache traffic volumes.
+     * @param Data Data list of top N Layer-7 cache traffic volumes.
      */
     public void setData(TopDataRecord [] Data) {
         this.Data = Data;

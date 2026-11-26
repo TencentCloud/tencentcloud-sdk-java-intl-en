@@ -24,624 +24,559 @@ import java.util.HashMap;
 public class DetailHost extends AbstractModel {
 
     /**
-    * The site ID.
+    * Site ID.
     */
     @SerializedName("ZoneId")
     @Expose
     private String ZoneId;
 
     /**
-    * The acceleration status. Values:
-<li>`process`: In progress</li>
-<li>`online`: Enabled</li>
-<li>`offline`: Disabled</li>
+    * Acceleration service status. Valid values:
+<li> process: deploying;</li>
+<li> online: started;</li>
+<li>offline: closed.</li>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * The domain name.
+    * Domain name.
     */
     @SerializedName("Host")
     @Expose
     private String Host;
 
     /**
-    * Name of the site
+    * Site name.
     */
     @SerializedName("ZoneName")
     @Expose
     private String ZoneName;
 
     /**
-    * The assigned CNAME
+    * Assigned Cname domain name
     */
     @SerializedName("Cname")
     @Expose
     private String Cname;
 
     /**
-    * The resource ID.
+    * Resource ID.
     */
     @SerializedName("Id")
     @Expose
     private String Id;
 
     /**
-    * The instance ID.
+    * Instance ID.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * The lock status.
+    * Lock status.
     */
     @SerializedName("Lock")
     @Expose
     private Long Lock;
 
     /**
-    * The domain name status.
+    * Domain name status type.
     */
     @SerializedName("Mode")
     @Expose
     private Long Mode;
 
     /**
-    * The acceleration area of the domain name. Values:
-<li>`global`: Global.</li>
-<li>`mainland`: Chinese mainland.</li>
-<li>`overseas`: Outside the Chinese mainland.</li>
+    * Domain name acceleration area. Valid values:
+<li> global: global;</li>
+<li> mainland: Chinese mainland;</li>
+<li> overseas: outside the Chinese mainland.</li>
     */
     @SerializedName("Area")
     @Expose
     private String Area;
 
     /**
-    * The acceleration type configuration item.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Acceleration type configuration item.
     */
     @SerializedName("AccelerateType")
     @Expose
     private AccelerateType AccelerateType;
 
     /**
-    * The HTTPS configuration item.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Https configuration item.
     */
     @SerializedName("Https")
     @Expose
     private Https Https;
 
     /**
-    * The cache configuration item.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Cache configuration item.
     */
     @SerializedName("CacheConfig")
     @Expose
     private CacheConfig CacheConfig;
 
     /**
-    * The origin configuration item.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Origin server configuration item.
     */
     @SerializedName("Origin")
     @Expose
     private Origin Origin;
 
     /**
-    * The security type.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Security type.
     */
     @SerializedName("SecurityType")
     @Expose
     private SecurityType SecurityType;
 
     /**
-    * The cache key configuration item.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Cache key configuration item.
     */
     @SerializedName("CacheKey")
     @Expose
     private CacheKey CacheKey;
 
     /**
-    * The smart compression configuration item.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Intelligent compression configuration item.
     */
     @SerializedName("Compression")
     @Expose
     private Compression Compression;
 
     /**
-    * The WAF protection configuration item.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Waf protection configuration item.
     */
     @SerializedName("Waf")
     @Expose
     private Waf Waf;
 
     /**
-    * The CC protection configuration item.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * CC protection configuration item.
     */
     @SerializedName("CC")
     @Expose
     private CC CC;
 
     /**
-    * DDoS mitigation configuration
-Note: This field may return null, indicating that no valid values can be obtained.
+    * DDoS protection configuration.
     */
     @SerializedName("DDoS")
     @Expose
     private DDoS DDoS;
 
     /**
-    * The smart routing configuration item.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Intelligent routing configuration item.
     */
     @SerializedName("SmartRouting")
     @Expose
     private SmartRouting SmartRouting;
 
     /**
-    * The IPv6 access configuration item.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Ipv6 access configuration item.
     */
     @SerializedName("Ipv6")
     @Expose
     private Ipv6 Ipv6;
 
     /**
-    * Whether to carry the location information of the client IP during origin-pull.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+    * Configuration of whether to carry the region of the client IP during origin-pull.
     */
     @SerializedName("ClientIpCountry")
     @Expose
     private ClientIpCountry ClientIpCountry;
 
     /**
-     * Get The site ID. 
-     * @return ZoneId The site ID.
+     * Get Site ID. 
+     * @return ZoneId Site ID.
      */
     public String getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set The site ID.
-     * @param ZoneId The site ID.
+     * Set Site ID.
+     * @param ZoneId Site ID.
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get The acceleration status. Values:
-<li>`process`: In progress</li>
-<li>`online`: Enabled</li>
-<li>`offline`: Disabled</li> 
-     * @return Status The acceleration status. Values:
-<li>`process`: In progress</li>
-<li>`online`: Enabled</li>
-<li>`offline`: Disabled</li>
+     * Get Acceleration service status. Valid values:
+<li> process: deploying;</li>
+<li> online: started;</li>
+<li>offline: closed.</li> 
+     * @return Status Acceleration service status. Valid values:
+<li> process: deploying;</li>
+<li> online: started;</li>
+<li>offline: closed.</li>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set The acceleration status. Values:
-<li>`process`: In progress</li>
-<li>`online`: Enabled</li>
-<li>`offline`: Disabled</li>
-     * @param Status The acceleration status. Values:
-<li>`process`: In progress</li>
-<li>`online`: Enabled</li>
-<li>`offline`: Disabled</li>
+     * Set Acceleration service status. Valid values:
+<li> process: deploying;</li>
+<li> online: started;</li>
+<li>offline: closed.</li>
+     * @param Status Acceleration service status. Valid values:
+<li> process: deploying;</li>
+<li> online: started;</li>
+<li>offline: closed.</li>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get The domain name. 
-     * @return Host The domain name.
+     * Get Domain name. 
+     * @return Host Domain name.
      */
     public String getHost() {
         return this.Host;
     }
 
     /**
-     * Set The domain name.
-     * @param Host The domain name.
+     * Set Domain name.
+     * @param Host Domain name.
      */
     public void setHost(String Host) {
         this.Host = Host;
     }
 
     /**
-     * Get Name of the site 
-     * @return ZoneName Name of the site
+     * Get Site name. 
+     * @return ZoneName Site name.
      */
     public String getZoneName() {
         return this.ZoneName;
     }
 
     /**
-     * Set Name of the site
-     * @param ZoneName Name of the site
+     * Set Site name.
+     * @param ZoneName Site name.
      */
     public void setZoneName(String ZoneName) {
         this.ZoneName = ZoneName;
     }
 
     /**
-     * Get The assigned CNAME 
-     * @return Cname The assigned CNAME
+     * Get Assigned Cname domain name 
+     * @return Cname Assigned Cname domain name
      */
     public String getCname() {
         return this.Cname;
     }
 
     /**
-     * Set The assigned CNAME
-     * @param Cname The assigned CNAME
+     * Set Assigned Cname domain name
+     * @param Cname Assigned Cname domain name
      */
     public void setCname(String Cname) {
         this.Cname = Cname;
     }
 
     /**
-     * Get The resource ID. 
-     * @return Id The resource ID.
+     * Get Resource ID. 
+     * @return Id Resource ID.
      */
     public String getId() {
         return this.Id;
     }
 
     /**
-     * Set The resource ID.
-     * @param Id The resource ID.
+     * Set Resource ID.
+     * @param Id Resource ID.
      */
     public void setId(String Id) {
         this.Id = Id;
     }
 
     /**
-     * Get The instance ID. 
-     * @return InstanceId The instance ID.
+     * Get Instance ID. 
+     * @return InstanceId Instance ID.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set The instance ID.
-     * @param InstanceId The instance ID.
+     * Set Instance ID.
+     * @param InstanceId Instance ID.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get The lock status. 
-     * @return Lock The lock status.
+     * Get Lock status. 
+     * @return Lock Lock status.
      */
     public Long getLock() {
         return this.Lock;
     }
 
     /**
-     * Set The lock status.
-     * @param Lock The lock status.
+     * Set Lock status.
+     * @param Lock Lock status.
      */
     public void setLock(Long Lock) {
         this.Lock = Lock;
     }
 
     /**
-     * Get The domain name status. 
-     * @return Mode The domain name status.
+     * Get Domain name status type. 
+     * @return Mode Domain name status type.
      */
     public Long getMode() {
         return this.Mode;
     }
 
     /**
-     * Set The domain name status.
-     * @param Mode The domain name status.
+     * Set Domain name status type.
+     * @param Mode Domain name status type.
      */
     public void setMode(Long Mode) {
         this.Mode = Mode;
     }
 
     /**
-     * Get The acceleration area of the domain name. Values:
-<li>`global`: Global.</li>
-<li>`mainland`: Chinese mainland.</li>
-<li>`overseas`: Outside the Chinese mainland.</li> 
-     * @return Area The acceleration area of the domain name. Values:
-<li>`global`: Global.</li>
-<li>`mainland`: Chinese mainland.</li>
-<li>`overseas`: Outside the Chinese mainland.</li>
+     * Get Domain name acceleration area. Valid values:
+<li> global: global;</li>
+<li> mainland: Chinese mainland;</li>
+<li> overseas: outside the Chinese mainland.</li> 
+     * @return Area Domain name acceleration area. Valid values:
+<li> global: global;</li>
+<li> mainland: Chinese mainland;</li>
+<li> overseas: outside the Chinese mainland.</li>
      */
     public String getArea() {
         return this.Area;
     }
 
     /**
-     * Set The acceleration area of the domain name. Values:
-<li>`global`: Global.</li>
-<li>`mainland`: Chinese mainland.</li>
-<li>`overseas`: Outside the Chinese mainland.</li>
-     * @param Area The acceleration area of the domain name. Values:
-<li>`global`: Global.</li>
-<li>`mainland`: Chinese mainland.</li>
-<li>`overseas`: Outside the Chinese mainland.</li>
+     * Set Domain name acceleration area. Valid values:
+<li> global: global;</li>
+<li> mainland: Chinese mainland;</li>
+<li> overseas: outside the Chinese mainland.</li>
+     * @param Area Domain name acceleration area. Valid values:
+<li> global: global;</li>
+<li> mainland: Chinese mainland;</li>
+<li> overseas: outside the Chinese mainland.</li>
      */
     public void setArea(String Area) {
         this.Area = Area;
     }
 
     /**
-     * Get The acceleration type configuration item.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return AccelerateType The acceleration type configuration item.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Acceleration type configuration item. 
+     * @return AccelerateType Acceleration type configuration item.
      */
     public AccelerateType getAccelerateType() {
         return this.AccelerateType;
     }
 
     /**
-     * Set The acceleration type configuration item.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param AccelerateType The acceleration type configuration item.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Acceleration type configuration item.
+     * @param AccelerateType Acceleration type configuration item.
      */
     public void setAccelerateType(AccelerateType AccelerateType) {
         this.AccelerateType = AccelerateType;
     }
 
     /**
-     * Get The HTTPS configuration item.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Https The HTTPS configuration item.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Https configuration item. 
+     * @return Https Https configuration item.
      */
     public Https getHttps() {
         return this.Https;
     }
 
     /**
-     * Set The HTTPS configuration item.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Https The HTTPS configuration item.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Https configuration item.
+     * @param Https Https configuration item.
      */
     public void setHttps(Https Https) {
         this.Https = Https;
     }
 
     /**
-     * Get The cache configuration item.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return CacheConfig The cache configuration item.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Cache configuration item. 
+     * @return CacheConfig Cache configuration item.
      */
     public CacheConfig getCacheConfig() {
         return this.CacheConfig;
     }
 
     /**
-     * Set The cache configuration item.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param CacheConfig The cache configuration item.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Cache configuration item.
+     * @param CacheConfig Cache configuration item.
      */
     public void setCacheConfig(CacheConfig CacheConfig) {
         this.CacheConfig = CacheConfig;
     }
 
     /**
-     * Get The origin configuration item.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Origin The origin configuration item.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Origin server configuration item. 
+     * @return Origin Origin server configuration item.
      */
     public Origin getOrigin() {
         return this.Origin;
     }
 
     /**
-     * Set The origin configuration item.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Origin The origin configuration item.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Origin server configuration item.
+     * @param Origin Origin server configuration item.
      */
     public void setOrigin(Origin Origin) {
         this.Origin = Origin;
     }
 
     /**
-     * Get The security type.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return SecurityType The security type.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Security type. 
+     * @return SecurityType Security type.
      */
     public SecurityType getSecurityType() {
         return this.SecurityType;
     }
 
     /**
-     * Set The security type.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param SecurityType The security type.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Security type.
+     * @param SecurityType Security type.
      */
     public void setSecurityType(SecurityType SecurityType) {
         this.SecurityType = SecurityType;
     }
 
     /**
-     * Get The cache key configuration item.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return CacheKey The cache key configuration item.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Cache key configuration item. 
+     * @return CacheKey Cache key configuration item.
      */
     public CacheKey getCacheKey() {
         return this.CacheKey;
     }
 
     /**
-     * Set The cache key configuration item.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param CacheKey The cache key configuration item.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Cache key configuration item.
+     * @param CacheKey Cache key configuration item.
      */
     public void setCacheKey(CacheKey CacheKey) {
         this.CacheKey = CacheKey;
     }
 
     /**
-     * Get The smart compression configuration item.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Compression The smart compression configuration item.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Intelligent compression configuration item. 
+     * @return Compression Intelligent compression configuration item.
      */
     public Compression getCompression() {
         return this.Compression;
     }
 
     /**
-     * Set The smart compression configuration item.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Compression The smart compression configuration item.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Intelligent compression configuration item.
+     * @param Compression Intelligent compression configuration item.
      */
     public void setCompression(Compression Compression) {
         this.Compression = Compression;
     }
 
     /**
-     * Get The WAF protection configuration item.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Waf The WAF protection configuration item.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Waf protection configuration item. 
+     * @return Waf Waf protection configuration item.
      */
     public Waf getWaf() {
         return this.Waf;
     }
 
     /**
-     * Set The WAF protection configuration item.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Waf The WAF protection configuration item.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Waf protection configuration item.
+     * @param Waf Waf protection configuration item.
      */
     public void setWaf(Waf Waf) {
         this.Waf = Waf;
     }
 
     /**
-     * Get The CC protection configuration item.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return CC The CC protection configuration item.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get CC protection configuration item. 
+     * @return CC CC protection configuration item.
      */
     public CC getCC() {
         return this.CC;
     }
 
     /**
-     * Set The CC protection configuration item.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param CC The CC protection configuration item.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set CC protection configuration item.
+     * @param CC CC protection configuration item.
      */
     public void setCC(CC CC) {
         this.CC = CC;
     }
 
     /**
-     * Get DDoS mitigation configuration
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return DDoS DDoS mitigation configuration
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get DDoS protection configuration. 
+     * @return DDoS DDoS protection configuration.
      */
     public DDoS getDDoS() {
         return this.DDoS;
     }
 
     /**
-     * Set DDoS mitigation configuration
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param DDoS DDoS mitigation configuration
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set DDoS protection configuration.
+     * @param DDoS DDoS protection configuration.
      */
     public void setDDoS(DDoS DDoS) {
         this.DDoS = DDoS;
     }
 
     /**
-     * Get The smart routing configuration item.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return SmartRouting The smart routing configuration item.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Intelligent routing configuration item. 
+     * @return SmartRouting Intelligent routing configuration item.
      */
     public SmartRouting getSmartRouting() {
         return this.SmartRouting;
     }
 
     /**
-     * Set The smart routing configuration item.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param SmartRouting The smart routing configuration item.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Intelligent routing configuration item.
+     * @param SmartRouting Intelligent routing configuration item.
      */
     public void setSmartRouting(SmartRouting SmartRouting) {
         this.SmartRouting = SmartRouting;
     }
 
     /**
-     * Get The IPv6 access configuration item.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Ipv6 The IPv6 access configuration item.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Ipv6 access configuration item. 
+     * @return Ipv6 Ipv6 access configuration item.
      */
     public Ipv6 getIpv6() {
         return this.Ipv6;
     }
 
     /**
-     * Set The IPv6 access configuration item.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Ipv6 The IPv6 access configuration item.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Ipv6 access configuration item.
+     * @param Ipv6 Ipv6 access configuration item.
      */
     public void setIpv6(Ipv6 Ipv6) {
         this.Ipv6 = Ipv6;
     }
 
     /**
-     * Get Whether to carry the location information of the client IP during origin-pull.
-Note: This field may return `null`, indicating that no valid value can be obtained. 
-     * @return ClientIpCountry Whether to carry the location information of the client IP during origin-pull.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Get Configuration of whether to carry the region of the client IP during origin-pull. 
+     * @return ClientIpCountry Configuration of whether to carry the region of the client IP during origin-pull.
      */
     public ClientIpCountry getClientIpCountry() {
         return this.ClientIpCountry;
     }
 
     /**
-     * Set Whether to carry the location information of the client IP during origin-pull.
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param ClientIpCountry Whether to carry the location information of the client IP during origin-pull.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Set Configuration of whether to carry the region of the client IP during origin-pull.
+     * @param ClientIpCountry Configuration of whether to carry the region of the client IP during origin-pull.
      */
     public void setClientIpCountry(ClientIpCountry ClientIpCountry) {
         this.ClientIpCountry = ClientIpCountry;

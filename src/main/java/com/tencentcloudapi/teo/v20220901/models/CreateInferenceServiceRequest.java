@@ -24,28 +24,28 @@ import java.util.HashMap;
 public class CreateInferenceServiceRequest extends AbstractModel {
 
     /**
-    * <p>Site ID.</p>
+    * <p>Zone ID.</p>
     */
     @SerializedName("ZoneId")
     @Expose
     private String ZoneId;
 
     /**
-    * <p>Service name. Length limit is no more than 30 characters, only lowercase letters, digits, and hyphens are supported, must start with a letter, ends with a digit or letter, duplicates are not supported.</p>
+    * <p>Name of the reasoning service. Length limited to 30 characters. Only lowercase letters, digits, and hyphens are supported. It must start with a letter and end with a number or letter. Repetition is not supported.</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * <p>Ports monitored by the model service. Only integers between 1 and 65535 are supported.</p>
+    * <p>Ports that the model service needs to monitor. Only integers between 1 and 65535 are supported.</p>
     */
     @SerializedName("ListenPort")
     @Expose
     private Long ListenPort;
 
     /**
-    * <p>Container configuration of the inference service. Currently only support setting 1 container.</p>
+    * <p>Container configuration for the inference service. Currently, only support setting 1 container.</p>
     */
     @SerializedName("Containers")
     @Expose
@@ -59,7 +59,14 @@ public class CreateInferenceServiceRequest extends AbstractModel {
     private InferenceResourceConfig ResourceConfig;
 
     /**
-    * <p>Request path list for inference service. Supports up to 20 paths.</p>
+    * <p>Inference service affinity configuration.</p>
+    */
+    @SerializedName("AffinityConfig")
+    @Expose
+    private InferenceAffinityConfig AffinityConfig;
+
+    /**
+    * <p>List of request paths for the inference service. Supports up to 20 paths.</p>
     */
     @SerializedName("RequestPaths")
     @Expose
@@ -73,64 +80,64 @@ public class CreateInferenceServiceRequest extends AbstractModel {
     private String Description;
 
     /**
-     * Get <p>Site ID.</p> 
-     * @return ZoneId <p>Site ID.</p>
+     * Get <p>Zone ID.</p> 
+     * @return ZoneId <p>Zone ID.</p>
      */
     public String getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set <p>Site ID.</p>
-     * @param ZoneId <p>Site ID.</p>
+     * Set <p>Zone ID.</p>
+     * @param ZoneId <p>Zone ID.</p>
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get <p>Service name. Length limit is no more than 30 characters, only lowercase letters, digits, and hyphens are supported, must start with a letter, ends with a digit or letter, duplicates are not supported.</p> 
-     * @return Name <p>Service name. Length limit is no more than 30 characters, only lowercase letters, digits, and hyphens are supported, must start with a letter, ends with a digit or letter, duplicates are not supported.</p>
+     * Get <p>Name of the reasoning service. Length limited to 30 characters. Only lowercase letters, digits, and hyphens are supported. It must start with a letter and end with a number or letter. Repetition is not supported.</p> 
+     * @return Name <p>Name of the reasoning service. Length limited to 30 characters. Only lowercase letters, digits, and hyphens are supported. It must start with a letter and end with a number or letter. Repetition is not supported.</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set <p>Service name. Length limit is no more than 30 characters, only lowercase letters, digits, and hyphens are supported, must start with a letter, ends with a digit or letter, duplicates are not supported.</p>
-     * @param Name <p>Service name. Length limit is no more than 30 characters, only lowercase letters, digits, and hyphens are supported, must start with a letter, ends with a digit or letter, duplicates are not supported.</p>
+     * Set <p>Name of the reasoning service. Length limited to 30 characters. Only lowercase letters, digits, and hyphens are supported. It must start with a letter and end with a number or letter. Repetition is not supported.</p>
+     * @param Name <p>Name of the reasoning service. Length limited to 30 characters. Only lowercase letters, digits, and hyphens are supported. It must start with a letter and end with a number or letter. Repetition is not supported.</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get <p>Ports monitored by the model service. Only integers between 1 and 65535 are supported.</p> 
-     * @return ListenPort <p>Ports monitored by the model service. Only integers between 1 and 65535 are supported.</p>
+     * Get <p>Ports that the model service needs to monitor. Only integers between 1 and 65535 are supported.</p> 
+     * @return ListenPort <p>Ports that the model service needs to monitor. Only integers between 1 and 65535 are supported.</p>
      */
     public Long getListenPort() {
         return this.ListenPort;
     }
 
     /**
-     * Set <p>Ports monitored by the model service. Only integers between 1 and 65535 are supported.</p>
-     * @param ListenPort <p>Ports monitored by the model service. Only integers between 1 and 65535 are supported.</p>
+     * Set <p>Ports that the model service needs to monitor. Only integers between 1 and 65535 are supported.</p>
+     * @param ListenPort <p>Ports that the model service needs to monitor. Only integers between 1 and 65535 are supported.</p>
      */
     public void setListenPort(Long ListenPort) {
         this.ListenPort = ListenPort;
     }
 
     /**
-     * Get <p>Container configuration of the inference service. Currently only support setting 1 container.</p> 
-     * @return Containers <p>Container configuration of the inference service. Currently only support setting 1 container.</p>
+     * Get <p>Container configuration for the inference service. Currently, only support setting 1 container.</p> 
+     * @return Containers <p>Container configuration for the inference service. Currently, only support setting 1 container.</p>
      */
     public InferenceContainerConfig [] getContainers() {
         return this.Containers;
     }
 
     /**
-     * Set <p>Container configuration of the inference service. Currently only support setting 1 container.</p>
-     * @param Containers <p>Container configuration of the inference service. Currently only support setting 1 container.</p>
+     * Set <p>Container configuration for the inference service. Currently, only support setting 1 container.</p>
+     * @param Containers <p>Container configuration for the inference service. Currently, only support setting 1 container.</p>
      */
     public void setContainers(InferenceContainerConfig [] Containers) {
         this.Containers = Containers;
@@ -153,16 +160,32 @@ public class CreateInferenceServiceRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>Request path list for inference service. Supports up to 20 paths.</p> 
-     * @return RequestPaths <p>Request path list for inference service. Supports up to 20 paths.</p>
+     * Get <p>Inference service affinity configuration.</p> 
+     * @return AffinityConfig <p>Inference service affinity configuration.</p>
+     */
+    public InferenceAffinityConfig getAffinityConfig() {
+        return this.AffinityConfig;
+    }
+
+    /**
+     * Set <p>Inference service affinity configuration.</p>
+     * @param AffinityConfig <p>Inference service affinity configuration.</p>
+     */
+    public void setAffinityConfig(InferenceAffinityConfig AffinityConfig) {
+        this.AffinityConfig = AffinityConfig;
+    }
+
+    /**
+     * Get <p>List of request paths for the inference service. Supports up to 20 paths.</p> 
+     * @return RequestPaths <p>List of request paths for the inference service. Supports up to 20 paths.</p>
      */
     public String [] getRequestPaths() {
         return this.RequestPaths;
     }
 
     /**
-     * Set <p>Request path list for inference service. Supports up to 20 paths.</p>
-     * @param RequestPaths <p>Request path list for inference service. Supports up to 20 paths.</p>
+     * Set <p>List of request paths for the inference service. Supports up to 20 paths.</p>
+     * @param RequestPaths <p>List of request paths for the inference service. Supports up to 20 paths.</p>
      */
     public void setRequestPaths(String [] RequestPaths) {
         this.RequestPaths = RequestPaths;
@@ -210,6 +233,9 @@ public class CreateInferenceServiceRequest extends AbstractModel {
         if (source.ResourceConfig != null) {
             this.ResourceConfig = new InferenceResourceConfig(source.ResourceConfig);
         }
+        if (source.AffinityConfig != null) {
+            this.AffinityConfig = new InferenceAffinityConfig(source.AffinityConfig);
+        }
         if (source.RequestPaths != null) {
             this.RequestPaths = new String[source.RequestPaths.length];
             for (int i = 0; i < source.RequestPaths.length; i++) {
@@ -231,6 +257,7 @@ public class CreateInferenceServiceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ListenPort", this.ListenPort);
         this.setParamArrayObj(map, prefix + "Containers.", this.Containers);
         this.setParamObj(map, prefix + "ResourceConfig.", this.ResourceConfig);
+        this.setParamObj(map, prefix + "AffinityConfig.", this.AffinityConfig);
         this.setParamArraySimple(map, prefix + "RequestPaths.", this.RequestPaths);
         this.setParamSimple(map, prefix + "Description", this.Description);
 

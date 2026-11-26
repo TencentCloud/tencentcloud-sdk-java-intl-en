@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeL4ProxyResponse extends AbstractModel {
 
     /**
-    * The number of Layer 4 proxy instances.
+    * The number of L4 proxy instances.
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * List of Layer 4 proxy instances.
+    * Layer-4 proxy instance list.
     */
     @SerializedName("L4Proxies")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeL4ProxyResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get The number of Layer 4 proxy instances. 
-     * @return TotalCount The number of Layer 4 proxy instances.
+     * Get The number of L4 proxy instances. 
+     * @return TotalCount The number of L4 proxy instances.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set The number of Layer 4 proxy instances.
-     * @param TotalCount The number of Layer 4 proxy instances.
+     * Set The number of L4 proxy instances.
+     * @param TotalCount The number of L4 proxy instances.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get List of Layer 4 proxy instances. 
-     * @return L4Proxies List of Layer 4 proxy instances.
+     * Get Layer-4 proxy instance list. 
+     * @return L4Proxies Layer-4 proxy instance list.
      */
     public L4Proxy [] getL4Proxies() {
         return this.L4Proxies;
     }
 
     /**
-     * Set List of Layer 4 proxy instances.
-     * @param L4Proxies List of Layer 4 proxy instances.
+     * Set Layer-4 proxy instance list.
+     * @param L4Proxies Layer-4 proxy instance list.
      */
     public void setL4Proxies(L4Proxy [] L4Proxies) {
         this.L4Proxies = L4Proxies;

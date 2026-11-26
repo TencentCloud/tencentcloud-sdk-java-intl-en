@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeMultiPathGatewayOriginACLResponse extends AbstractModel {
 
     /**
-    * Describes the binding relationship between the multi-channel gateway instance and the origin IP ranges.
+    * Details of the binding relationship between a multi-channel gateway instance and the origin-pull IP range.
     */
     @SerializedName("MultiPathGatewayOriginACLInfo")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeMultiPathGatewayOriginACLResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Describes the binding relationship between the multi-channel gateway instance and the origin IP ranges. 
-     * @return MultiPathGatewayOriginACLInfo Describes the binding relationship between the multi-channel gateway instance and the origin IP ranges.
+     * Get Details of the binding relationship between a multi-channel gateway instance and the origin-pull IP range. 
+     * @return MultiPathGatewayOriginACLInfo Details of the binding relationship between a multi-channel gateway instance and the origin-pull IP range.
      */
     public MultiPathGatewayOriginACLInfo getMultiPathGatewayOriginACLInfo() {
         return this.MultiPathGatewayOriginACLInfo;
     }
 
     /**
-     * Set Describes the binding relationship between the multi-channel gateway instance and the origin IP ranges.
-     * @param MultiPathGatewayOriginACLInfo Describes the binding relationship between the multi-channel gateway instance and the origin IP ranges.
+     * Set Details of the binding relationship between a multi-channel gateway instance and the origin-pull IP range.
+     * @param MultiPathGatewayOriginACLInfo Details of the binding relationship between a multi-channel gateway instance and the origin-pull IP range.
      */
     public void setMultiPathGatewayOriginACLInfo(MultiPathGatewayOriginACLInfo MultiPathGatewayOriginACLInfo) {
         this.MultiPathGatewayOriginACLInfo = MultiPathGatewayOriginACLInfo;

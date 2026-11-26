@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class DescribeOriginGroupRequest extends AbstractModel {
 
     /**
-    * (Required) Site ID
+    * Site ID. This parameter is required.
     */
     @SerializedName("ZoneId")
     @Expose
     private String ZoneId;
 
     /**
-    * The paginated query offset. Default value: 0
+    * Paginated query offset. Default value: 0.
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * Limit on paginated queries. Value range: 1-1000. Default value: 20.
+    * Paginated query limit. If not specified, the default value is 20. Value range: 1-1000.
     */
     @SerializedName("Limit")
     @Expose
@@ -46,56 +46,55 @@ public class DescribeOriginGroupRequest extends AbstractModel {
 
     /**
     * Filter criteria. The maximum value of Filters.Values is 20. The detailed filter criteria are as follows:
-
-<li>`origin-group-id`: filter by origin group id. fuzzy queries are not supported. format: `origin-2ccgtb24-7dc5-46s2-9r3e-95825d53dwe3a`;</li><li>`origin-group-name`: filter by origin group name. when fuzzy search is used, only one origin server group name is supported.</li>.
+<li>origin-group-id: filter by origin group ID. Fuzzy queries are not supported. The origin group ID format is: origin-2ccgtb24-7dc5-46s2-9r3e-95825d53dwe3a;</li><li>origin-group-name: filter by origin group name. When fuzzy search is used, only one origin group name can be filled in.</li>
     */
     @SerializedName("Filters")
     @Expose
     private AdvancedFilter [] Filters;
 
     /**
-     * Get (Required) Site ID 
-     * @return ZoneId (Required) Site ID
+     * Get Site ID. This parameter is required. 
+     * @return ZoneId Site ID. This parameter is required.
      */
     public String getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set (Required) Site ID
-     * @param ZoneId (Required) Site ID
+     * Set Site ID. This parameter is required.
+     * @param ZoneId Site ID. This parameter is required.
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get The paginated query offset. Default value: 0 
-     * @return Offset The paginated query offset. Default value: 0
+     * Get Paginated query offset. Default value: 0. 
+     * @return Offset Paginated query offset. Default value: 0.
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set The paginated query offset. Default value: 0
-     * @param Offset The paginated query offset. Default value: 0
+     * Set Paginated query offset. Default value: 0.
+     * @param Offset Paginated query offset. Default value: 0.
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get Limit on paginated queries. Value range: 1-1000. Default value: 20. 
-     * @return Limit Limit on paginated queries. Value range: 1-1000. Default value: 20.
+     * Get Paginated query limit. If not specified, the default value is 20. Value range: 1-1000. 
+     * @return Limit Paginated query limit. If not specified, the default value is 20. Value range: 1-1000.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Limit on paginated queries. Value range: 1-1000. Default value: 20.
-     * @param Limit Limit on paginated queries. Value range: 1-1000. Default value: 20.
+     * Set Paginated query limit. If not specified, the default value is 20. Value range: 1-1000.
+     * @param Limit Paginated query limit. If not specified, the default value is 20. Value range: 1-1000.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
@@ -103,11 +102,9 @@ public class DescribeOriginGroupRequest extends AbstractModel {
 
     /**
      * Get Filter criteria. The maximum value of Filters.Values is 20. The detailed filter criteria are as follows:
-
-<li>`origin-group-id`: filter by origin group id. fuzzy queries are not supported. format: `origin-2ccgtb24-7dc5-46s2-9r3e-95825d53dwe3a`;</li><li>`origin-group-name`: filter by origin group name. when fuzzy search is used, only one origin server group name is supported.</li>. 
+<li>origin-group-id: filter by origin group ID. Fuzzy queries are not supported. The origin group ID format is: origin-2ccgtb24-7dc5-46s2-9r3e-95825d53dwe3a;</li><li>origin-group-name: filter by origin group name. When fuzzy search is used, only one origin group name can be filled in.</li> 
      * @return Filters Filter criteria. The maximum value of Filters.Values is 20. The detailed filter criteria are as follows:
-
-<li>`origin-group-id`: filter by origin group id. fuzzy queries are not supported. format: `origin-2ccgtb24-7dc5-46s2-9r3e-95825d53dwe3a`;</li><li>`origin-group-name`: filter by origin group name. when fuzzy search is used, only one origin server group name is supported.</li>.
+<li>origin-group-id: filter by origin group ID. Fuzzy queries are not supported. The origin group ID format is: origin-2ccgtb24-7dc5-46s2-9r3e-95825d53dwe3a;</li><li>origin-group-name: filter by origin group name. When fuzzy search is used, only one origin group name can be filled in.</li>
      */
     public AdvancedFilter [] getFilters() {
         return this.Filters;
@@ -115,11 +112,9 @@ public class DescribeOriginGroupRequest extends AbstractModel {
 
     /**
      * Set Filter criteria. The maximum value of Filters.Values is 20. The detailed filter criteria are as follows:
-
-<li>`origin-group-id`: filter by origin group id. fuzzy queries are not supported. format: `origin-2ccgtb24-7dc5-46s2-9r3e-95825d53dwe3a`;</li><li>`origin-group-name`: filter by origin group name. when fuzzy search is used, only one origin server group name is supported.</li>.
+<li>origin-group-id: filter by origin group ID. Fuzzy queries are not supported. The origin group ID format is: origin-2ccgtb24-7dc5-46s2-9r3e-95825d53dwe3a;</li><li>origin-group-name: filter by origin group name. When fuzzy search is used, only one origin group name can be filled in.</li>
      * @param Filters Filter criteria. The maximum value of Filters.Values is 20. The detailed filter criteria are as follows:
-
-<li>`origin-group-id`: filter by origin group id. fuzzy queries are not supported. format: `origin-2ccgtb24-7dc5-46s2-9r3e-95825d53dwe3a`;</li><li>`origin-group-name`: filter by origin group name. when fuzzy search is used, only one origin server group name is supported.</li>.
+<li>origin-group-id: filter by origin group ID. Fuzzy queries are not supported. The origin group ID format is: origin-2ccgtb24-7dc5-46s2-9r3e-95825d53dwe3a;</li><li>origin-group-name: filter by origin group name. When fuzzy search is used, only one origin group name can be filled in.</li>
      */
     public void setFilters(AdvancedFilter [] Filters) {
         this.Filters = Filters;

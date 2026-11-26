@@ -24,161 +24,161 @@ import java.util.HashMap;
 public class AlgDetectRule extends AbstractModel {
 
     /**
-    * ID of the rule.
+    * Rule id.
     */
     @SerializedName("RuleID")
     @Expose
     private Long RuleID;
 
     /**
-    * Name of the rule.
+    * Rule name.
     */
     @SerializedName("RuleName")
     @Expose
     private String RuleName;
 
     /**
-    * Whether to enable the rule.
+    * Rule switch.
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * Condition specified for the rule.
+    * Custom rule.
     */
     @SerializedName("AlgConditions")
     @Expose
     private AclCondition [] AlgConditions;
 
     /**
-    * Checksum of the Cookie and behavior analysis of the session.
+    * Cookie checksum and session behavior analysis.
     */
     @SerializedName("AlgDetectSession")
     @Expose
     private AlgDetectSession AlgDetectSession;
 
     /**
-    * Validate client behavior when the condition is satisfied.
+    * Client behavior validation.
     */
     @SerializedName("AlgDetectJS")
     @Expose
     private AlgDetectJS [] AlgDetectJS;
 
     /**
-    * The update time, which is only used as an output parameter.
+    * Update time. For output usage only.
     */
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
 
     /**
-     * Get ID of the rule. 
-     * @return RuleID ID of the rule.
+     * Get Rule id. 
+     * @return RuleID Rule id.
      */
     public Long getRuleID() {
         return this.RuleID;
     }
 
     /**
-     * Set ID of the rule.
-     * @param RuleID ID of the rule.
+     * Set Rule id.
+     * @param RuleID Rule id.
      */
     public void setRuleID(Long RuleID) {
         this.RuleID = RuleID;
     }
 
     /**
-     * Get Name of the rule. 
-     * @return RuleName Name of the rule.
+     * Get Rule name. 
+     * @return RuleName Rule name.
      */
     public String getRuleName() {
         return this.RuleName;
     }
 
     /**
-     * Set Name of the rule.
-     * @param RuleName Name of the rule.
+     * Set Rule name.
+     * @param RuleName Rule name.
      */
     public void setRuleName(String RuleName) {
         this.RuleName = RuleName;
     }
 
     /**
-     * Get Whether to enable the rule. 
-     * @return Switch Whether to enable the rule.
+     * Get Rule switch. 
+     * @return Switch Rule switch.
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set Whether to enable the rule.
-     * @param Switch Whether to enable the rule.
+     * Set Rule switch.
+     * @param Switch Rule switch.
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get Condition specified for the rule. 
-     * @return AlgConditions Condition specified for the rule.
+     * Get Custom rule. 
+     * @return AlgConditions Custom rule.
      */
     public AclCondition [] getAlgConditions() {
         return this.AlgConditions;
     }
 
     /**
-     * Set Condition specified for the rule.
-     * @param AlgConditions Condition specified for the rule.
+     * Set Custom rule.
+     * @param AlgConditions Custom rule.
      */
     public void setAlgConditions(AclCondition [] AlgConditions) {
         this.AlgConditions = AlgConditions;
     }
 
     /**
-     * Get Checksum of the Cookie and behavior analysis of the session. 
-     * @return AlgDetectSession Checksum of the Cookie and behavior analysis of the session.
+     * Get Cookie checksum and session behavior analysis. 
+     * @return AlgDetectSession Cookie checksum and session behavior analysis.
      */
     public AlgDetectSession getAlgDetectSession() {
         return this.AlgDetectSession;
     }
 
     /**
-     * Set Checksum of the Cookie and behavior analysis of the session.
-     * @param AlgDetectSession Checksum of the Cookie and behavior analysis of the session.
+     * Set Cookie checksum and session behavior analysis.
+     * @param AlgDetectSession Cookie checksum and session behavior analysis.
      */
     public void setAlgDetectSession(AlgDetectSession AlgDetectSession) {
         this.AlgDetectSession = AlgDetectSession;
     }
 
     /**
-     * Get Validate client behavior when the condition is satisfied. 
-     * @return AlgDetectJS Validate client behavior when the condition is satisfied.
+     * Get Client behavior validation. 
+     * @return AlgDetectJS Client behavior validation.
      */
     public AlgDetectJS [] getAlgDetectJS() {
         return this.AlgDetectJS;
     }
 
     /**
-     * Set Validate client behavior when the condition is satisfied.
-     * @param AlgDetectJS Validate client behavior when the condition is satisfied.
+     * Set Client behavior validation.
+     * @param AlgDetectJS Client behavior validation.
      */
     public void setAlgDetectJS(AlgDetectJS [] AlgDetectJS) {
         this.AlgDetectJS = AlgDetectJS;
     }
 
     /**
-     * Get The update time, which is only used as an output parameter. 
-     * @return UpdateTime The update time, which is only used as an output parameter.
+     * Get Update time. For output usage only. 
+     * @return UpdateTime Update time. For output usage only.
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set The update time, which is only used as an output parameter.
-     * @param UpdateTime The update time, which is only used as an output parameter.
+     * Set Update time. For output usage only.
+     * @param UpdateTime Update time. For output usage only.
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;

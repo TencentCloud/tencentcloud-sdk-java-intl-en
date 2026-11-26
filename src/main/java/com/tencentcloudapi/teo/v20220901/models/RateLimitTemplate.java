@@ -24,109 +24,109 @@ import java.util.HashMap;
 public class RateLimitTemplate extends AbstractModel {
 
     /**
-    * The mode. Values:
-<li>`sup_loose`: Super loose</li>
-<li>`loose`: Loose</li>
-<li>`emergency`: Emergency</li>
-<li>`normal`: Moderate</li>
-<li>`strict`: Strict</li>
-<li>`close`: Off</li>
+    * Template level name. Valid values:
+<li>sup_loose: super loose;</li>
+<li>loose: loose;</li>
+<li>emergency: emergency;</li>
+<li>normal: moderate;</li>
+<li>strict: strict;</li>
+<li>close: disabled, effective only for precise rate limiting.</li>
     */
     @SerializedName("Mode")
     @Expose
     private String Mode;
 
     /**
-    * The action. Values:
-<li>`alg`: JavaScript challenge</li>
-<li>`monitor`: Observe</li>If it is left empty, the default value `alg` is used.
+    * Template action. Valid values:
+<li>alg: JavaScript challenge;</li>
+<li>monitor: observe.</li>Default value: alg if not specified.
     */
     @SerializedName("Action")
     @Expose
     private String Action;
 
     /**
-    * The settings of the rate limiting template. It is only used as an output parameter.
+    * Description of the template value. Returned only as an output parameter.
     */
     @SerializedName("RateLimitTemplateDetail")
     @Expose
     private RateLimitTemplateDetail RateLimitTemplateDetail;
 
     /**
-     * Get The mode. Values:
-<li>`sup_loose`: Super loose</li>
-<li>`loose`: Loose</li>
-<li>`emergency`: Emergency</li>
-<li>`normal`: Moderate</li>
-<li>`strict`: Strict</li>
-<li>`close`: Off</li> 
-     * @return Mode The mode. Values:
-<li>`sup_loose`: Super loose</li>
-<li>`loose`: Loose</li>
-<li>`emergency`: Emergency</li>
-<li>`normal`: Moderate</li>
-<li>`strict`: Strict</li>
-<li>`close`: Off</li>
+     * Get Template level name. Valid values:
+<li>sup_loose: super loose;</li>
+<li>loose: loose;</li>
+<li>emergency: emergency;</li>
+<li>normal: moderate;</li>
+<li>strict: strict;</li>
+<li>close: disabled, effective only for precise rate limiting.</li> 
+     * @return Mode Template level name. Valid values:
+<li>sup_loose: super loose;</li>
+<li>loose: loose;</li>
+<li>emergency: emergency;</li>
+<li>normal: moderate;</li>
+<li>strict: strict;</li>
+<li>close: disabled, effective only for precise rate limiting.</li>
      */
     public String getMode() {
         return this.Mode;
     }
 
     /**
-     * Set The mode. Values:
-<li>`sup_loose`: Super loose</li>
-<li>`loose`: Loose</li>
-<li>`emergency`: Emergency</li>
-<li>`normal`: Moderate</li>
-<li>`strict`: Strict</li>
-<li>`close`: Off</li>
-     * @param Mode The mode. Values:
-<li>`sup_loose`: Super loose</li>
-<li>`loose`: Loose</li>
-<li>`emergency`: Emergency</li>
-<li>`normal`: Moderate</li>
-<li>`strict`: Strict</li>
-<li>`close`: Off</li>
+     * Set Template level name. Valid values:
+<li>sup_loose: super loose;</li>
+<li>loose: loose;</li>
+<li>emergency: emergency;</li>
+<li>normal: moderate;</li>
+<li>strict: strict;</li>
+<li>close: disabled, effective only for precise rate limiting.</li>
+     * @param Mode Template level name. Valid values:
+<li>sup_loose: super loose;</li>
+<li>loose: loose;</li>
+<li>emergency: emergency;</li>
+<li>normal: moderate;</li>
+<li>strict: strict;</li>
+<li>close: disabled, effective only for precise rate limiting.</li>
      */
     public void setMode(String Mode) {
         this.Mode = Mode;
     }
 
     /**
-     * Get The action. Values:
-<li>`alg`: JavaScript challenge</li>
-<li>`monitor`: Observe</li>If it is left empty, the default value `alg` is used. 
-     * @return Action The action. Values:
-<li>`alg`: JavaScript challenge</li>
-<li>`monitor`: Observe</li>If it is left empty, the default value `alg` is used.
+     * Get Template action. Valid values:
+<li>alg: JavaScript challenge;</li>
+<li>monitor: observe.</li>Default value: alg if not specified. 
+     * @return Action Template action. Valid values:
+<li>alg: JavaScript challenge;</li>
+<li>monitor: observe.</li>Default value: alg if not specified.
      */
     public String getAction() {
         return this.Action;
     }
 
     /**
-     * Set The action. Values:
-<li>`alg`: JavaScript challenge</li>
-<li>`monitor`: Observe</li>If it is left empty, the default value `alg` is used.
-     * @param Action The action. Values:
-<li>`alg`: JavaScript challenge</li>
-<li>`monitor`: Observe</li>If it is left empty, the default value `alg` is used.
+     * Set Template action. Valid values:
+<li>alg: JavaScript challenge;</li>
+<li>monitor: observe.</li>Default value: alg if not specified.
+     * @param Action Template action. Valid values:
+<li>alg: JavaScript challenge;</li>
+<li>monitor: observe.</li>Default value: alg if not specified.
      */
     public void setAction(String Action) {
         this.Action = Action;
     }
 
     /**
-     * Get The settings of the rate limiting template. It is only used as an output parameter. 
-     * @return RateLimitTemplateDetail The settings of the rate limiting template. It is only used as an output parameter.
+     * Get Description of the template value. Returned only as an output parameter. 
+     * @return RateLimitTemplateDetail Description of the template value. Returned only as an output parameter.
      */
     public RateLimitTemplateDetail getRateLimitTemplateDetail() {
         return this.RateLimitTemplateDetail;
     }
 
     /**
-     * Set The settings of the rate limiting template. It is only used as an output parameter.
-     * @param RateLimitTemplateDetail The settings of the rate limiting template. It is only used as an output parameter.
+     * Set Description of the template value. Returned only as an output parameter.
+     * @param RateLimitTemplateDetail Description of the template value. Returned only as an output parameter.
      */
     public void setRateLimitTemplateDetail(RateLimitTemplateDetail RateLimitTemplateDetail) {
         this.RateLimitTemplateDetail = RateLimitTemplateDetail;

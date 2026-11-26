@@ -24,16 +24,16 @@ import java.util.HashMap;
 public class VerifyOwnershipResponse extends AbstractModel {
 
     /**
-    * Result of ownership verification
-<li>`success`: Verification passed</li>
-<li>`fail`: Verification failed</li>
+    * Ownership verification result.
+<li>success: Verification succeeded;</li>
+<li>fail: verification failed.</li>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * When the ownership verification result is `fail`, this field returns the reason of failure.
+    * When the verification result is failed, this field will return the reason to help you troubleshoot the problem.
     */
     @SerializedName("Result")
     @Expose
@@ -47,40 +47,40 @@ public class VerifyOwnershipResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Result of ownership verification
-<li>`success`: Verification passed</li>
-<li>`fail`: Verification failed</li> 
-     * @return Status Result of ownership verification
-<li>`success`: Verification passed</li>
-<li>`fail`: Verification failed</li>
+     * Get Ownership verification result.
+<li>success: Verification succeeded;</li>
+<li>fail: verification failed.</li> 
+     * @return Status Ownership verification result.
+<li>success: Verification succeeded;</li>
+<li>fail: verification failed.</li>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Result of ownership verification
-<li>`success`: Verification passed</li>
-<li>`fail`: Verification failed</li>
-     * @param Status Result of ownership verification
-<li>`success`: Verification passed</li>
-<li>`fail`: Verification failed</li>
+     * Set Ownership verification result.
+<li>success: Verification succeeded;</li>
+<li>fail: verification failed.</li>
+     * @param Status Ownership verification result.
+<li>success: Verification succeeded;</li>
+<li>fail: verification failed.</li>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get When the ownership verification result is `fail`, this field returns the reason of failure. 
-     * @return Result When the ownership verification result is `fail`, this field returns the reason of failure.
+     * Get When the verification result is failed, this field will return the reason to help you troubleshoot the problem. 
+     * @return Result When the verification result is failed, this field will return the reason to help you troubleshoot the problem.
      */
     public String getResult() {
         return this.Result;
     }
 
     /**
-     * Set When the ownership verification result is `fail`, this field returns the reason of failure.
-     * @param Result When the ownership verification result is `fail`, this field returns the reason of failure.
+     * Set When the verification result is failed, this field will return the reason to help you troubleshoot the problem.
+     * @param Result When the verification result is failed, this field will return the reason to help you troubleshoot the problem.
      */
     public void setResult(String Result) {
         this.Result = Result;

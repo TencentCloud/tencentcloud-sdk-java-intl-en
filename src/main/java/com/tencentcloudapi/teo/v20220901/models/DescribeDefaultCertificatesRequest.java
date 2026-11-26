@@ -31,22 +31,22 @@ public class DescribeDefaultCertificatesRequest extends AbstractModel {
     private String ZoneId;
 
     /**
-    * Filter criteria. Each filter criteria can have up to 5 entries.
-<li>`zone-id`: <br>Filter by <strong>site ID</strong>, such as zone-xxx<br>   Type: String<br>   Required: No</li>
+    * Filter criteria. The maximum value of Filters.Values is 5. The detailed filter criteria are as follows:
+<li>zone-id<br>   Filter by <strong>site ID</strong>. The site ID format is zone-xxx.<br>   Type: String<br>   Required: Yes </li>
     */
     @SerializedName("Filters")
     @Expose
     private Filter [] Filters;
 
     /**
-    * Offset for paginated queries. Default value: `0`
+    * The offset of paginated query. Default value: 0.
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * Limit on paginated queries. Default value: `20`. Maximum value: `100`.
+    * Paginated query limit. Default value: 20, maximum value: 100.
     */
     @SerializedName("Limit")
     @Expose
@@ -69,52 +69,52 @@ public class DescribeDefaultCertificatesRequest extends AbstractModel {
     }
 
     /**
-     * Get Filter criteria. Each filter criteria can have up to 5 entries.
-<li>`zone-id`: <br>Filter by <strong>site ID</strong>, such as zone-xxx<br>   Type: String<br>   Required: No</li> 
-     * @return Filters Filter criteria. Each filter criteria can have up to 5 entries.
-<li>`zone-id`: <br>Filter by <strong>site ID</strong>, such as zone-xxx<br>   Type: String<br>   Required: No</li>
+     * Get Filter criteria. The maximum value of Filters.Values is 5. The detailed filter criteria are as follows:
+<li>zone-id<br>   Filter by <strong>site ID</strong>. The site ID format is zone-xxx.<br>   Type: String<br>   Required: Yes </li> 
+     * @return Filters Filter criteria. The maximum value of Filters.Values is 5. The detailed filter criteria are as follows:
+<li>zone-id<br>   Filter by <strong>site ID</strong>. The site ID format is zone-xxx.<br>   Type: String<br>   Required: Yes </li>
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set Filter criteria. Each filter criteria can have up to 5 entries.
-<li>`zone-id`: <br>Filter by <strong>site ID</strong>, such as zone-xxx<br>   Type: String<br>   Required: No</li>
-     * @param Filters Filter criteria. Each filter criteria can have up to 5 entries.
-<li>`zone-id`: <br>Filter by <strong>site ID</strong>, such as zone-xxx<br>   Type: String<br>   Required: No</li>
+     * Set Filter criteria. The maximum value of Filters.Values is 5. The detailed filter criteria are as follows:
+<li>zone-id<br>   Filter by <strong>site ID</strong>. The site ID format is zone-xxx.<br>   Type: String<br>   Required: Yes </li>
+     * @param Filters Filter criteria. The maximum value of Filters.Values is 5. The detailed filter criteria are as follows:
+<li>zone-id<br>   Filter by <strong>site ID</strong>. The site ID format is zone-xxx.<br>   Type: String<br>   Required: Yes </li>
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;
     }
 
     /**
-     * Get Offset for paginated queries. Default value: `0` 
-     * @return Offset Offset for paginated queries. Default value: `0`
+     * Get The offset of paginated query. Default value: 0. 
+     * @return Offset The offset of paginated query. Default value: 0.
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Offset for paginated queries. Default value: `0`
-     * @param Offset Offset for paginated queries. Default value: `0`
+     * Set The offset of paginated query. Default value: 0.
+     * @param Offset The offset of paginated query. Default value: 0.
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get Limit on paginated queries. Default value: `20`. Maximum value: `100`. 
-     * @return Limit Limit on paginated queries. Default value: `20`. Maximum value: `100`.
+     * Get Paginated query limit. Default value: 20, maximum value: 100. 
+     * @return Limit Paginated query limit. Default value: 20, maximum value: 100.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Limit on paginated queries. Default value: `20`. Maximum value: `100`.
-     * @param Limit Limit on paginated queries. Default value: `20`. Maximum value: `100`.
+     * Set Paginated query limit. Default value: 20, maximum value: 100.
+     * @param Limit Paginated query limit. Default value: 20, maximum value: 100.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

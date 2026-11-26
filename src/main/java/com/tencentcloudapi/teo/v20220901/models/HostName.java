@@ -24,56 +24,56 @@ import java.util.HashMap;
 public class HostName extends AbstractModel {
 
     /**
-    * Target hostname configuration, valid values are:.
-<Li>`Follow`: follow the request;</li>.
-<Li>`Custom`: custom</li>.
+    * Target HostName configuration. Valid values:
+<li>follow: follow request;</li>
+<li>custom: Custom.</li>
     */
     @SerializedName("Action")
     @Expose
     private String Action;
 
     /**
-    * Custom value for target hostname, maximum length is 1024.<br>note: when action is custom, this field is required; when action is follow, this field is not effective.
+    * custom value of the target HostName. Maximum length: 1024.<br>Note: This field is required when Action is custom, and it is ineffective when Action is follow.
     */
     @SerializedName("Value")
     @Expose
     private String Value;
 
     /**
-     * Get Target hostname configuration, valid values are:.
-<Li>`Follow`: follow the request;</li>.
-<Li>`Custom`: custom</li>. 
-     * @return Action Target hostname configuration, valid values are:.
-<Li>`Follow`: follow the request;</li>.
-<Li>`Custom`: custom</li>.
+     * Get Target HostName configuration. Valid values:
+<li>follow: follow request;</li>
+<li>custom: Custom.</li> 
+     * @return Action Target HostName configuration. Valid values:
+<li>follow: follow request;</li>
+<li>custom: Custom.</li>
      */
     public String getAction() {
         return this.Action;
     }
 
     /**
-     * Set Target hostname configuration, valid values are:.
-<Li>`Follow`: follow the request;</li>.
-<Li>`Custom`: custom</li>.
-     * @param Action Target hostname configuration, valid values are:.
-<Li>`Follow`: follow the request;</li>.
-<Li>`Custom`: custom</li>.
+     * Set Target HostName configuration. Valid values:
+<li>follow: follow request;</li>
+<li>custom: Custom.</li>
+     * @param Action Target HostName configuration. Valid values:
+<li>follow: follow request;</li>
+<li>custom: Custom.</li>
      */
     public void setAction(String Action) {
         this.Action = Action;
     }
 
     /**
-     * Get Custom value for target hostname, maximum length is 1024.<br>note: when action is custom, this field is required; when action is follow, this field is not effective. 
-     * @return Value Custom value for target hostname, maximum length is 1024.<br>note: when action is custom, this field is required; when action is follow, this field is not effective.
+     * Get custom value of the target HostName. Maximum length: 1024.<br>Note: This field is required when Action is custom, and it is ineffective when Action is follow. 
+     * @return Value custom value of the target HostName. Maximum length: 1024.<br>Note: This field is required when Action is custom, and it is ineffective when Action is follow.
      */
     public String getValue() {
         return this.Value;
     }
 
     /**
-     * Set Custom value for target hostname, maximum length is 1024.<br>note: when action is custom, this field is required; when action is follow, this field is not effective.
-     * @param Value Custom value for target hostname, maximum length is 1024.<br>note: when action is custom, this field is required; when action is follow, this field is not effective.
+     * Set custom value of the target HostName. Maximum length: 1024.<br>Note: This field is required when Action is custom, and it is ineffective when Action is follow.
+     * @param Value custom value of the target HostName. Maximum length: 1024.<br>Note: This field is required when Action is custom, and it is ineffective when Action is follow.
      */
     public void setValue(String Value) {
         this.Value = Value;

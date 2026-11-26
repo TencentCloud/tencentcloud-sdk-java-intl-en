@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateL4ProxyRulesResponse extends AbstractModel {
 
     /**
-    * IDs of newly added forwarding rules, returned as an array.
+    * ID of newly added forwarding rule, returned as an array.
     */
     @SerializedName("L4ProxyRuleIds")
     @Expose
@@ -38,16 +38,16 @@ public class CreateL4ProxyRulesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get IDs of newly added forwarding rules, returned as an array. 
-     * @return L4ProxyRuleIds IDs of newly added forwarding rules, returned as an array.
+     * Get ID of newly added forwarding rule, returned as an array. 
+     * @return L4ProxyRuleIds ID of newly added forwarding rule, returned as an array.
      */
     public String [] getL4ProxyRuleIds() {
         return this.L4ProxyRuleIds;
     }
 
     /**
-     * Set IDs of newly added forwarding rules, returned as an array.
-     * @param L4ProxyRuleIds IDs of newly added forwarding rules, returned as an array.
+     * Set ID of newly added forwarding rule, returned as an array.
+     * @param L4ProxyRuleIds ID of newly added forwarding rule, returned as an array.
      */
     public void setL4ProxyRuleIds(String [] L4ProxyRuleIds) {
         this.L4ProxyRuleIds = L4ProxyRuleIds;

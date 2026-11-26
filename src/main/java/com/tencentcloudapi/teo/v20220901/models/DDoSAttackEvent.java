@@ -24,286 +24,279 @@ import java.util.HashMap;
 public class DDoSAttackEvent extends AbstractModel {
 
     /**
-    * The event ID.
+    * <p>Event ID.</p>
     */
     @SerializedName("EventId")
     @Expose
     private String EventId;
 
     /**
-    * The attack type.
+    * <p>Attack type.</p>
     */
     @SerializedName("AttackType")
     @Expose
     private String AttackType;
 
     /**
-    * The attack status.
+    * <p>Attack status.</p><p>Enumeration values:</p><ul><li>0: Observing</li><li>1: Attacking</li><li>2: Attack ended</li></ul>
     */
     @SerializedName("AttackStatus")
     @Expose
     private Long AttackStatus;
 
     /**
-    * Maximum bandwidth of the attack in bps.
+    * <p>Maximum attack bandwidth, in bps.</p>
     */
     @SerializedName("AttackMaxBandWidth")
     @Expose
     private Long AttackMaxBandWidth;
 
     /**
-    * Peak attack packet rate, unit: pps.
+    * <p>Peak attack packet rate, unit: pps.</p>
     */
     @SerializedName("AttackPacketMaxRate")
     @Expose
     private Long AttackPacketMaxRate;
 
     /**
-    * The attack start time recorded in seconds.
+    * <p>Attack start timestamp.</p><p>Unit: second</p>
     */
     @SerializedName("AttackStartTime")
     @Expose
     private Long AttackStartTime;
 
     /**
-    * The attack end time recorded in seconds.
+    * <p>Attack end timestamp.</p><p>Unit: second</p>
     */
     @SerializedName("AttackEndTime")
     @Expose
     private Long AttackEndTime;
 
     /**
-    * The DDoS policy ID. 
-Note: This field may return `null`, indicating that no valid value was found.
+    * <p>DDoS policy group ID.</p>
     */
     @SerializedName("PolicyId")
     @Expose
     private Long PolicyId;
 
     /**
-    * The site ID. 
-Note: This field may return `null`, indicating that no valid value was found.
+    * <p>Zone ID.</p>
     */
     @SerializedName("ZoneId")
     @Expose
     private String ZoneId;
 
     /**
-    * Geolocation scope. Values: 
-<li>`overseas`: Regions outside the Chinese mainland</li>
-<li>`mainland`: Chinese mainland</li>
-Note: This field may return `null`, indicating that no valid value was found.
+    * <p>Region of the attack event.</p><p>Enumeration values:</p><ul><li>overseas: global (excluding the Chinese mainland) data;</li><li>mainland: Chinese mainland data.</li></ul>
     */
     @SerializedName("Area")
     @Expose
     private String Area;
 
     /**
-    * The blocking time of a DDoS attack. 
-Note: This field may return `null`, indicating that no valid value was found.
+    * <p>Block and unblock info.</p>
     */
     @SerializedName("DDoSBlockData")
     @Expose
     private DDoSBlockData [] DDoSBlockData;
 
     /**
-     * Get The event ID. 
-     * @return EventId The event ID.
+    * <p>List of target IPs under DDoS attack.</p>
+    */
+    @SerializedName("DDoSAttackDips")
+    @Expose
+    private String [] DDoSAttackDips;
+
+    /**
+     * Get <p>Event ID.</p> 
+     * @return EventId <p>Event ID.</p>
      */
     public String getEventId() {
         return this.EventId;
     }
 
     /**
-     * Set The event ID.
-     * @param EventId The event ID.
+     * Set <p>Event ID.</p>
+     * @param EventId <p>Event ID.</p>
      */
     public void setEventId(String EventId) {
         this.EventId = EventId;
     }
 
     /**
-     * Get The attack type. 
-     * @return AttackType The attack type.
+     * Get <p>Attack type.</p> 
+     * @return AttackType <p>Attack type.</p>
      */
     public String getAttackType() {
         return this.AttackType;
     }
 
     /**
-     * Set The attack type.
-     * @param AttackType The attack type.
+     * Set <p>Attack type.</p>
+     * @param AttackType <p>Attack type.</p>
      */
     public void setAttackType(String AttackType) {
         this.AttackType = AttackType;
     }
 
     /**
-     * Get The attack status. 
-     * @return AttackStatus The attack status.
+     * Get <p>Attack status.</p><p>Enumeration values:</p><ul><li>0: Observing</li><li>1: Attacking</li><li>2: Attack ended</li></ul> 
+     * @return AttackStatus <p>Attack status.</p><p>Enumeration values:</p><ul><li>0: Observing</li><li>1: Attacking</li><li>2: Attack ended</li></ul>
      */
     public Long getAttackStatus() {
         return this.AttackStatus;
     }
 
     /**
-     * Set The attack status.
-     * @param AttackStatus The attack status.
+     * Set <p>Attack status.</p><p>Enumeration values:</p><ul><li>0: Observing</li><li>1: Attacking</li><li>2: Attack ended</li></ul>
+     * @param AttackStatus <p>Attack status.</p><p>Enumeration values:</p><ul><li>0: Observing</li><li>1: Attacking</li><li>2: Attack ended</li></ul>
      */
     public void setAttackStatus(Long AttackStatus) {
         this.AttackStatus = AttackStatus;
     }
 
     /**
-     * Get Maximum bandwidth of the attack in bps. 
-     * @return AttackMaxBandWidth Maximum bandwidth of the attack in bps.
+     * Get <p>Maximum attack bandwidth, in bps.</p> 
+     * @return AttackMaxBandWidth <p>Maximum attack bandwidth, in bps.</p>
      */
     public Long getAttackMaxBandWidth() {
         return this.AttackMaxBandWidth;
     }
 
     /**
-     * Set Maximum bandwidth of the attack in bps.
-     * @param AttackMaxBandWidth Maximum bandwidth of the attack in bps.
+     * Set <p>Maximum attack bandwidth, in bps.</p>
+     * @param AttackMaxBandWidth <p>Maximum attack bandwidth, in bps.</p>
      */
     public void setAttackMaxBandWidth(Long AttackMaxBandWidth) {
         this.AttackMaxBandWidth = AttackMaxBandWidth;
     }
 
     /**
-     * Get Peak attack packet rate, unit: pps. 
-     * @return AttackPacketMaxRate Peak attack packet rate, unit: pps.
+     * Get <p>Peak attack packet rate, unit: pps.</p> 
+     * @return AttackPacketMaxRate <p>Peak attack packet rate, unit: pps.</p>
      */
     public Long getAttackPacketMaxRate() {
         return this.AttackPacketMaxRate;
     }
 
     /**
-     * Set Peak attack packet rate, unit: pps.
-     * @param AttackPacketMaxRate Peak attack packet rate, unit: pps.
+     * Set <p>Peak attack packet rate, unit: pps.</p>
+     * @param AttackPacketMaxRate <p>Peak attack packet rate, unit: pps.</p>
      */
     public void setAttackPacketMaxRate(Long AttackPacketMaxRate) {
         this.AttackPacketMaxRate = AttackPacketMaxRate;
     }
 
     /**
-     * Get The attack start time recorded in seconds. 
-     * @return AttackStartTime The attack start time recorded in seconds.
+     * Get <p>Attack start timestamp.</p><p>Unit: second</p> 
+     * @return AttackStartTime <p>Attack start timestamp.</p><p>Unit: second</p>
      */
     public Long getAttackStartTime() {
         return this.AttackStartTime;
     }
 
     /**
-     * Set The attack start time recorded in seconds.
-     * @param AttackStartTime The attack start time recorded in seconds.
+     * Set <p>Attack start timestamp.</p><p>Unit: second</p>
+     * @param AttackStartTime <p>Attack start timestamp.</p><p>Unit: second</p>
      */
     public void setAttackStartTime(Long AttackStartTime) {
         this.AttackStartTime = AttackStartTime;
     }
 
     /**
-     * Get The attack end time recorded in seconds. 
-     * @return AttackEndTime The attack end time recorded in seconds.
+     * Get <p>Attack end timestamp.</p><p>Unit: second</p> 
+     * @return AttackEndTime <p>Attack end timestamp.</p><p>Unit: second</p>
      */
     public Long getAttackEndTime() {
         return this.AttackEndTime;
     }
 
     /**
-     * Set The attack end time recorded in seconds.
-     * @param AttackEndTime The attack end time recorded in seconds.
+     * Set <p>Attack end timestamp.</p><p>Unit: second</p>
+     * @param AttackEndTime <p>Attack end timestamp.</p><p>Unit: second</p>
      */
     public void setAttackEndTime(Long AttackEndTime) {
         this.AttackEndTime = AttackEndTime;
     }
 
     /**
-     * Get The DDoS policy ID. 
-Note: This field may return `null`, indicating that no valid value was found. 
-     * @return PolicyId The DDoS policy ID. 
-Note: This field may return `null`, indicating that no valid value was found.
+     * Get <p>DDoS policy group ID.</p> 
+     * @return PolicyId <p>DDoS policy group ID.</p>
      */
     public Long getPolicyId() {
         return this.PolicyId;
     }
 
     /**
-     * Set The DDoS policy ID. 
-Note: This field may return `null`, indicating that no valid value was found.
-     * @param PolicyId The DDoS policy ID. 
-Note: This field may return `null`, indicating that no valid value was found.
+     * Set <p>DDoS policy group ID.</p>
+     * @param PolicyId <p>DDoS policy group ID.</p>
      */
     public void setPolicyId(Long PolicyId) {
         this.PolicyId = PolicyId;
     }
 
     /**
-     * Get The site ID. 
-Note: This field may return `null`, indicating that no valid value was found. 
-     * @return ZoneId The site ID. 
-Note: This field may return `null`, indicating that no valid value was found.
+     * Get <p>Zone ID.</p> 
+     * @return ZoneId <p>Zone ID.</p>
      */
     public String getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set The site ID. 
-Note: This field may return `null`, indicating that no valid value was found.
-     * @param ZoneId The site ID. 
-Note: This field may return `null`, indicating that no valid value was found.
+     * Set <p>Zone ID.</p>
+     * @param ZoneId <p>Zone ID.</p>
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get Geolocation scope. Values: 
-<li>`overseas`: Regions outside the Chinese mainland</li>
-<li>`mainland`: Chinese mainland</li>
-Note: This field may return `null`, indicating that no valid value was found. 
-     * @return Area Geolocation scope. Values: 
-<li>`overseas`: Regions outside the Chinese mainland</li>
-<li>`mainland`: Chinese mainland</li>
-Note: This field may return `null`, indicating that no valid value was found.
+     * Get <p>Region of the attack event.</p><p>Enumeration values:</p><ul><li>overseas: global (excluding the Chinese mainland) data;</li><li>mainland: Chinese mainland data.</li></ul> 
+     * @return Area <p>Region of the attack event.</p><p>Enumeration values:</p><ul><li>overseas: global (excluding the Chinese mainland) data;</li><li>mainland: Chinese mainland data.</li></ul>
      */
     public String getArea() {
         return this.Area;
     }
 
     /**
-     * Set Geolocation scope. Values: 
-<li>`overseas`: Regions outside the Chinese mainland</li>
-<li>`mainland`: Chinese mainland</li>
-Note: This field may return `null`, indicating that no valid value was found.
-     * @param Area Geolocation scope. Values: 
-<li>`overseas`: Regions outside the Chinese mainland</li>
-<li>`mainland`: Chinese mainland</li>
-Note: This field may return `null`, indicating that no valid value was found.
+     * Set <p>Region of the attack event.</p><p>Enumeration values:</p><ul><li>overseas: global (excluding the Chinese mainland) data;</li><li>mainland: Chinese mainland data.</li></ul>
+     * @param Area <p>Region of the attack event.</p><p>Enumeration values:</p><ul><li>overseas: global (excluding the Chinese mainland) data;</li><li>mainland: Chinese mainland data.</li></ul>
      */
     public void setArea(String Area) {
         this.Area = Area;
     }
 
     /**
-     * Get The blocking time of a DDoS attack. 
-Note: This field may return `null`, indicating that no valid value was found. 
-     * @return DDoSBlockData The blocking time of a DDoS attack. 
-Note: This field may return `null`, indicating that no valid value was found.
+     * Get <p>Block and unblock info.</p> 
+     * @return DDoSBlockData <p>Block and unblock info.</p>
      */
     public DDoSBlockData [] getDDoSBlockData() {
         return this.DDoSBlockData;
     }
 
     /**
-     * Set The blocking time of a DDoS attack. 
-Note: This field may return `null`, indicating that no valid value was found.
-     * @param DDoSBlockData The blocking time of a DDoS attack. 
-Note: This field may return `null`, indicating that no valid value was found.
+     * Set <p>Block and unblock info.</p>
+     * @param DDoSBlockData <p>Block and unblock info.</p>
      */
     public void setDDoSBlockData(DDoSBlockData [] DDoSBlockData) {
         this.DDoSBlockData = DDoSBlockData;
+    }
+
+    /**
+     * Get <p>List of target IPs under DDoS attack.</p> 
+     * @return DDoSAttackDips <p>List of target IPs under DDoS attack.</p>
+     */
+    public String [] getDDoSAttackDips() {
+        return this.DDoSAttackDips;
+    }
+
+    /**
+     * Set <p>List of target IPs under DDoS attack.</p>
+     * @param DDoSAttackDips <p>List of target IPs under DDoS attack.</p>
+     */
+    public void setDDoSAttackDips(String [] DDoSAttackDips) {
+        this.DDoSAttackDips = DDoSAttackDips;
     }
 
     public DDoSAttackEvent() {
@@ -350,6 +343,12 @@ Note: This field may return `null`, indicating that no valid value was found.
                 this.DDoSBlockData[i] = new DDoSBlockData(source.DDoSBlockData[i]);
             }
         }
+        if (source.DDoSAttackDips != null) {
+            this.DDoSAttackDips = new String[source.DDoSAttackDips.length];
+            for (int i = 0; i < source.DDoSAttackDips.length; i++) {
+                this.DDoSAttackDips[i] = new String(source.DDoSAttackDips[i]);
+            }
+        }
     }
 
 
@@ -368,6 +367,7 @@ Note: This field may return `null`, indicating that no valid value was found.
         this.setParamSimple(map, prefix + "ZoneId", this.ZoneId);
         this.setParamSimple(map, prefix + "Area", this.Area);
         this.setParamArrayObj(map, prefix + "DDoSBlockData.", this.DDoSBlockData);
+        this.setParamArraySimple(map, prefix + "DDoSAttackDips.", this.DDoSAttackDips);
 
     }
 }

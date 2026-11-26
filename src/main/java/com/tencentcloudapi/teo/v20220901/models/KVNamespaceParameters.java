@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class KVNamespaceParameters extends AbstractModel {
 
     /**
-    * The site ID belonging to the KV namespace. Specifies the site where the KV namespace resides that should be bound, supporting cross-site binding.
+    * Site ID to which the KV namespace belongs. Specify the site where the KV namespace that should be bound is located. Cross-site binding is supported.
     */
     @SerializedName("ZoneId")
     @Expose
     private String ZoneId;
 
     /**
-    * KV namespace name. Specifies the specific namespace that should be bound. You can obtain the list of namespaces under the site through the DescribeKVNamespace API.
+    * KV namespace name. Specify the specific namespace that should be bound. You can obtain the list of namespaces under a site through the DescribeKVNamespace API.
     */
     @SerializedName("Namespace")
     @Expose
     private String Namespace;
 
     /**
-     * Get The site ID belonging to the KV namespace. Specifies the site where the KV namespace resides that should be bound, supporting cross-site binding. 
-     * @return ZoneId The site ID belonging to the KV namespace. Specifies the site where the KV namespace resides that should be bound, supporting cross-site binding.
+     * Get Site ID to which the KV namespace belongs. Specify the site where the KV namespace that should be bound is located. Cross-site binding is supported. 
+     * @return ZoneId Site ID to which the KV namespace belongs. Specify the site where the KV namespace that should be bound is located. Cross-site binding is supported.
      */
     public String getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set The site ID belonging to the KV namespace. Specifies the site where the KV namespace resides that should be bound, supporting cross-site binding.
-     * @param ZoneId The site ID belonging to the KV namespace. Specifies the site where the KV namespace resides that should be bound, supporting cross-site binding.
+     * Set Site ID to which the KV namespace belongs. Specify the site where the KV namespace that should be bound is located. Cross-site binding is supported.
+     * @param ZoneId Site ID to which the KV namespace belongs. Specify the site where the KV namespace that should be bound is located. Cross-site binding is supported.
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get KV namespace name. Specifies the specific namespace that should be bound. You can obtain the list of namespaces under the site through the DescribeKVNamespace API. 
-     * @return Namespace KV namespace name. Specifies the specific namespace that should be bound. You can obtain the list of namespaces under the site through the DescribeKVNamespace API.
+     * Get KV namespace name. Specify the specific namespace that should be bound. You can obtain the list of namespaces under a site through the DescribeKVNamespace API. 
+     * @return Namespace KV namespace name. Specify the specific namespace that should be bound. You can obtain the list of namespaces under a site through the DescribeKVNamespace API.
      */
     public String getNamespace() {
         return this.Namespace;
     }
 
     /**
-     * Set KV namespace name. Specifies the specific namespace that should be bound. You can obtain the list of namespaces under the site through the DescribeKVNamespace API.
-     * @param Namespace KV namespace name. Specifies the specific namespace that should be bound. You can obtain the list of namespaces under the site through the DescribeKVNamespace API.
+     * Set KV namespace name. Specify the specific namespace that should be bound. You can obtain the list of namespaces under a site through the DescribeKVNamespace API.
+     * @param Namespace KV namespace name. Specify the specific namespace that should be bound. You can obtain the list of namespaces under a site through the DescribeKVNamespace API.
      */
     public void setNamespace(String Namespace) {
         this.Namespace = Namespace;

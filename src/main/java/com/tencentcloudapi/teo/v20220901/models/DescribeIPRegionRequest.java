@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DescribeIPRegionRequest extends AbstractModel {
 
     /**
-    * List of IPs to be queried, supporting IPV4 and IPV6. Up to 100 can be queried.
+    * List of IPs to be queried. Supports IPV4 and IPV6. A maximum of 100 entries can be queried.
     */
     @SerializedName("IPs")
     @Expose
     private String [] IPs;
 
     /**
-     * Get List of IPs to be queried, supporting IPV4 and IPV6. Up to 100 can be queried. 
-     * @return IPs List of IPs to be queried, supporting IPV4 and IPV6. Up to 100 can be queried.
+     * Get List of IPs to be queried. Supports IPV4 and IPV6. A maximum of 100 entries can be queried. 
+     * @return IPs List of IPs to be queried. Supports IPV4 and IPV6. A maximum of 100 entries can be queried.
      */
     public String [] getIPs() {
         return this.IPs;
     }
 
     /**
-     * Set List of IPs to be queried, supporting IPV4 and IPV6. Up to 100 can be queried.
-     * @param IPs List of IPs to be queried, supporting IPV4 and IPV6. Up to 100 can be queried.
+     * Set List of IPs to be queried. Supports IPV4 and IPV6. A maximum of 100 entries can be queried.
+     * @param IPs List of IPs to be queried. Supports IPV4 and IPV6. A maximum of 100 entries can be queried.
      */
     public void setIPs(String [] IPs) {
         this.IPs = IPs;

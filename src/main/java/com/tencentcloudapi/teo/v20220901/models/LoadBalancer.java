@@ -24,293 +24,253 @@ import java.util.HashMap;
 public class LoadBalancer extends AbstractModel {
 
     /**
-    * LoadBalancer ID.
+    * <p>Instance ID.</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * LoadBalancer name, which can contain 1 to 200 characters, including a-z, A-Z, 0-9, underscores (_), and hyphens (-).	
+    * <p>Instance name, which can contain 1 to 200 characters, including a-z, A-Z, 0-9, underscores (_), and hyphens (-).</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * LoadBalancer type. Valid values:
-<li>HTTP: HTTP-specific LoadBalancer. It supports adding HTTP-specific and general origin server groups. It can only be referenced by site acceleration services (such as domain name service and rule engine).</li>
-<li>GENERAL: general LoadBalancer. It only supports adding general origin server groups. It can be referenced by site acceleration services (such as domain name service and rule engine) and Layer-4 proxy.</li>
+    * <p>Instance type. Valid values:</p><li>HTTP_V2: HTTP dedicated (V2). Supports adding HTTP dedicated and general origin groups. Site acceleration services reference only (for example, domain name service and rule engine). This instance type supports selecting the region to trigger probes, which can significantly reduce probe request volume but has lower sensitivity to origin health awareness.</li><li>HTTP: HTTP dedicated (V1). Supports adding HTTP dedicated and general origin groups. Site acceleration services reference only (for example, domain name service and rule engine). This instance type does not support selecting the region to trigger probes. The probe request volume is large, but the sensitivity to origin health awareness is higher.</li><li>GENERAL: General type. Supports adding general origin groups only. It can be referenced by site acceleration services (for example, domain name service and rule engine) and Layer-4 proxies. This instance type does not support selecting the region to trigger probes. The probe request volume is large, but the sensitivity to origin health awareness is higher.</li>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * Health check policy. For details, refer to [Health Check Policies](https://intl.cloud.tencent.com/document/product/1552/104228?from_cn_redirect=1).
+    * <p>Health check policy. For details, refer to <a href="https://www.tencentcloud.com/document/product/1552/104228?from_cn_redirect=1">Health Check Policies</a>.</p>
     */
     @SerializedName("HealthChecker")
     @Expose
     private HealthChecker HealthChecker;
 
     /**
-    * Traffic scheduling policy among origin server groups. Valid values:
-<li>Priority: Perform failover according to priority.</li>
+    * <p>Traffic scheduling policy among origin server groups. Valid values:</p><li>Pritory: Perform failover according to priority.</li>
     */
     @SerializedName("SteeringPolicy")
     @Expose
     private String SteeringPolicy;
 
     /**
-    * Request retry policy when access to an origin server fails. For details, refer to [Introduction to Request Retry Strategy](https://intl.cloud.tencent.com/document/product/1552/104227?from_cn_redirect=1). Valid values:
-<li>OtherOriginGroup: After a single request fails, retry with another origin server within the next lower priority origin server group.</li>
-<li>OtherRecordInOriginGroup: After a single request fails, retry with another origin server within the same origin server group.</li>
+    * <p>Request retry policy when access to an origin server fails. For details, refer to <a href="https://www.tencentcloud.com/document/product/1552/104227?from_cn_redirect=1">Introduction to Request Retry Strategy</a>. Valid values:</p><li>OtherOriginGroup: After a single request fails, retry with another origin server within the next lower priority origin server group;</li><li>OtherRecordInOriginGroup: After a single request fails, retry with another origin server within the same origin server group.</li>
     */
     @SerializedName("FailoverPolicy")
     @Expose
     private String FailoverPolicy;
 
     /**
-    * Origin server group health status.
+    * <p>Origin server group health status.</p>
     */
     @SerializedName("OriginGroupHealthStatus")
     @Expose
     private OriginGroupHealthStatus [] OriginGroupHealthStatus;
 
     /**
-    * LoadBalancer status. Valid values:
-<li>Pending: deploying.</li>
-<li>Deleting: deleting.</li>
-<li>Running: effective.</li>
+    * <p>Load balancing status. Valid values:</p><li>Pending: deploying;</li><li>Deleting: deleting;</li><li>Running: effective.</li>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * Specifies the list of l4 proxy instances bound to the load balancing instance.
+    * <p>List of L4 proxy instances bound to the load balancing instance.</p>
     */
     @SerializedName("L4UsedList")
     @Expose
     private String [] L4UsedList;
 
     /**
-    * List of Layer-7 domain names bound to a LoadBalancer.
+    * <p>List of Layer-7 domain names bound to the load balancing instance.</p>
     */
     @SerializedName("L7UsedList")
     @Expose
     private String [] L7UsedList;
 
     /**
-    * Specifies the list of instances referenced by cloud load balancer.
+    * <p>List of referenced instances of the load balancer.</p>
     */
     @SerializedName("References")
     @Expose
     private OriginGroupReference [] References;
 
     /**
-     * Get LoadBalancer ID. 
-     * @return InstanceId LoadBalancer ID.
+     * Get <p>Instance ID.</p> 
+     * @return InstanceId <p>Instance ID.</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set LoadBalancer ID.
-     * @param InstanceId LoadBalancer ID.
+     * Set <p>Instance ID.</p>
+     * @param InstanceId <p>Instance ID.</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get LoadBalancer name, which can contain 1 to 200 characters, including a-z, A-Z, 0-9, underscores (_), and hyphens (-).	 
-     * @return Name LoadBalancer name, which can contain 1 to 200 characters, including a-z, A-Z, 0-9, underscores (_), and hyphens (-).	
+     * Get <p>Instance name, which can contain 1 to 200 characters, including a-z, A-Z, 0-9, underscores (_), and hyphens (-).</p> 
+     * @return Name <p>Instance name, which can contain 1 to 200 characters, including a-z, A-Z, 0-9, underscores (_), and hyphens (-).</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set LoadBalancer name, which can contain 1 to 200 characters, including a-z, A-Z, 0-9, underscores (_), and hyphens (-).	
-     * @param Name LoadBalancer name, which can contain 1 to 200 characters, including a-z, A-Z, 0-9, underscores (_), and hyphens (-).	
+     * Set <p>Instance name, which can contain 1 to 200 characters, including a-z, A-Z, 0-9, underscores (_), and hyphens (-).</p>
+     * @param Name <p>Instance name, which can contain 1 to 200 characters, including a-z, A-Z, 0-9, underscores (_), and hyphens (-).</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get LoadBalancer type. Valid values:
-<li>HTTP: HTTP-specific LoadBalancer. It supports adding HTTP-specific and general origin server groups. It can only be referenced by site acceleration services (such as domain name service and rule engine).</li>
-<li>GENERAL: general LoadBalancer. It only supports adding general origin server groups. It can be referenced by site acceleration services (such as domain name service and rule engine) and Layer-4 proxy.</li> 
-     * @return Type LoadBalancer type. Valid values:
-<li>HTTP: HTTP-specific LoadBalancer. It supports adding HTTP-specific and general origin server groups. It can only be referenced by site acceleration services (such as domain name service and rule engine).</li>
-<li>GENERAL: general LoadBalancer. It only supports adding general origin server groups. It can be referenced by site acceleration services (such as domain name service and rule engine) and Layer-4 proxy.</li>
+     * Get <p>Instance type. Valid values:</p><li>HTTP_V2: HTTP dedicated (V2). Supports adding HTTP dedicated and general origin groups. Site acceleration services reference only (for example, domain name service and rule engine). This instance type supports selecting the region to trigger probes, which can significantly reduce probe request volume but has lower sensitivity to origin health awareness.</li><li>HTTP: HTTP dedicated (V1). Supports adding HTTP dedicated and general origin groups. Site acceleration services reference only (for example, domain name service and rule engine). This instance type does not support selecting the region to trigger probes. The probe request volume is large, but the sensitivity to origin health awareness is higher.</li><li>GENERAL: General type. Supports adding general origin groups only. It can be referenced by site acceleration services (for example, domain name service and rule engine) and Layer-4 proxies. This instance type does not support selecting the region to trigger probes. The probe request volume is large, but the sensitivity to origin health awareness is higher.</li> 
+     * @return Type <p>Instance type. Valid values:</p><li>HTTP_V2: HTTP dedicated (V2). Supports adding HTTP dedicated and general origin groups. Site acceleration services reference only (for example, domain name service and rule engine). This instance type supports selecting the region to trigger probes, which can significantly reduce probe request volume but has lower sensitivity to origin health awareness.</li><li>HTTP: HTTP dedicated (V1). Supports adding HTTP dedicated and general origin groups. Site acceleration services reference only (for example, domain name service and rule engine). This instance type does not support selecting the region to trigger probes. The probe request volume is large, but the sensitivity to origin health awareness is higher.</li><li>GENERAL: General type. Supports adding general origin groups only. It can be referenced by site acceleration services (for example, domain name service and rule engine) and Layer-4 proxies. This instance type does not support selecting the region to trigger probes. The probe request volume is large, but the sensitivity to origin health awareness is higher.</li>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set LoadBalancer type. Valid values:
-<li>HTTP: HTTP-specific LoadBalancer. It supports adding HTTP-specific and general origin server groups. It can only be referenced by site acceleration services (such as domain name service and rule engine).</li>
-<li>GENERAL: general LoadBalancer. It only supports adding general origin server groups. It can be referenced by site acceleration services (such as domain name service and rule engine) and Layer-4 proxy.</li>
-     * @param Type LoadBalancer type. Valid values:
-<li>HTTP: HTTP-specific LoadBalancer. It supports adding HTTP-specific and general origin server groups. It can only be referenced by site acceleration services (such as domain name service and rule engine).</li>
-<li>GENERAL: general LoadBalancer. It only supports adding general origin server groups. It can be referenced by site acceleration services (such as domain name service and rule engine) and Layer-4 proxy.</li>
+     * Set <p>Instance type. Valid values:</p><li>HTTP_V2: HTTP dedicated (V2). Supports adding HTTP dedicated and general origin groups. Site acceleration services reference only (for example, domain name service and rule engine). This instance type supports selecting the region to trigger probes, which can significantly reduce probe request volume but has lower sensitivity to origin health awareness.</li><li>HTTP: HTTP dedicated (V1). Supports adding HTTP dedicated and general origin groups. Site acceleration services reference only (for example, domain name service and rule engine). This instance type does not support selecting the region to trigger probes. The probe request volume is large, but the sensitivity to origin health awareness is higher.</li><li>GENERAL: General type. Supports adding general origin groups only. It can be referenced by site acceleration services (for example, domain name service and rule engine) and Layer-4 proxies. This instance type does not support selecting the region to trigger probes. The probe request volume is large, but the sensitivity to origin health awareness is higher.</li>
+     * @param Type <p>Instance type. Valid values:</p><li>HTTP_V2: HTTP dedicated (V2). Supports adding HTTP dedicated and general origin groups. Site acceleration services reference only (for example, domain name service and rule engine). This instance type supports selecting the region to trigger probes, which can significantly reduce probe request volume but has lower sensitivity to origin health awareness.</li><li>HTTP: HTTP dedicated (V1). Supports adding HTTP dedicated and general origin groups. Site acceleration services reference only (for example, domain name service and rule engine). This instance type does not support selecting the region to trigger probes. The probe request volume is large, but the sensitivity to origin health awareness is higher.</li><li>GENERAL: General type. Supports adding general origin groups only. It can be referenced by site acceleration services (for example, domain name service and rule engine) and Layer-4 proxies. This instance type does not support selecting the region to trigger probes. The probe request volume is large, but the sensitivity to origin health awareness is higher.</li>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get Health check policy. For details, refer to [Health Check Policies](https://intl.cloud.tencent.com/document/product/1552/104228?from_cn_redirect=1). 
-     * @return HealthChecker Health check policy. For details, refer to [Health Check Policies](https://intl.cloud.tencent.com/document/product/1552/104228?from_cn_redirect=1).
+     * Get <p>Health check policy. For details, refer to <a href="https://www.tencentcloud.com/document/product/1552/104228?from_cn_redirect=1">Health Check Policies</a>.</p> 
+     * @return HealthChecker <p>Health check policy. For details, refer to <a href="https://www.tencentcloud.com/document/product/1552/104228?from_cn_redirect=1">Health Check Policies</a>.</p>
      */
     public HealthChecker getHealthChecker() {
         return this.HealthChecker;
     }
 
     /**
-     * Set Health check policy. For details, refer to [Health Check Policies](https://intl.cloud.tencent.com/document/product/1552/104228?from_cn_redirect=1).
-     * @param HealthChecker Health check policy. For details, refer to [Health Check Policies](https://intl.cloud.tencent.com/document/product/1552/104228?from_cn_redirect=1).
+     * Set <p>Health check policy. For details, refer to <a href="https://www.tencentcloud.com/document/product/1552/104228?from_cn_redirect=1">Health Check Policies</a>.</p>
+     * @param HealthChecker <p>Health check policy. For details, refer to <a href="https://www.tencentcloud.com/document/product/1552/104228?from_cn_redirect=1">Health Check Policies</a>.</p>
      */
     public void setHealthChecker(HealthChecker HealthChecker) {
         this.HealthChecker = HealthChecker;
     }
 
     /**
-     * Get Traffic scheduling policy among origin server groups. Valid values:
-<li>Priority: Perform failover according to priority.</li> 
-     * @return SteeringPolicy Traffic scheduling policy among origin server groups. Valid values:
-<li>Priority: Perform failover according to priority.</li>
+     * Get <p>Traffic scheduling policy among origin server groups. Valid values:</p><li>Pritory: Perform failover according to priority.</li> 
+     * @return SteeringPolicy <p>Traffic scheduling policy among origin server groups. Valid values:</p><li>Pritory: Perform failover according to priority.</li>
      */
     public String getSteeringPolicy() {
         return this.SteeringPolicy;
     }
 
     /**
-     * Set Traffic scheduling policy among origin server groups. Valid values:
-<li>Priority: Perform failover according to priority.</li>
-     * @param SteeringPolicy Traffic scheduling policy among origin server groups. Valid values:
-<li>Priority: Perform failover according to priority.</li>
+     * Set <p>Traffic scheduling policy among origin server groups. Valid values:</p><li>Pritory: Perform failover according to priority.</li>
+     * @param SteeringPolicy <p>Traffic scheduling policy among origin server groups. Valid values:</p><li>Pritory: Perform failover according to priority.</li>
      */
     public void setSteeringPolicy(String SteeringPolicy) {
         this.SteeringPolicy = SteeringPolicy;
     }
 
     /**
-     * Get Request retry policy when access to an origin server fails. For details, refer to [Introduction to Request Retry Strategy](https://intl.cloud.tencent.com/document/product/1552/104227?from_cn_redirect=1). Valid values:
-<li>OtherOriginGroup: After a single request fails, retry with another origin server within the next lower priority origin server group.</li>
-<li>OtherRecordInOriginGroup: After a single request fails, retry with another origin server within the same origin server group.</li> 
-     * @return FailoverPolicy Request retry policy when access to an origin server fails. For details, refer to [Introduction to Request Retry Strategy](https://intl.cloud.tencent.com/document/product/1552/104227?from_cn_redirect=1). Valid values:
-<li>OtherOriginGroup: After a single request fails, retry with another origin server within the next lower priority origin server group.</li>
-<li>OtherRecordInOriginGroup: After a single request fails, retry with another origin server within the same origin server group.</li>
+     * Get <p>Request retry policy when access to an origin server fails. For details, refer to <a href="https://www.tencentcloud.com/document/product/1552/104227?from_cn_redirect=1">Introduction to Request Retry Strategy</a>. Valid values:</p><li>OtherOriginGroup: After a single request fails, retry with another origin server within the next lower priority origin server group;</li><li>OtherRecordInOriginGroup: After a single request fails, retry with another origin server within the same origin server group.</li> 
+     * @return FailoverPolicy <p>Request retry policy when access to an origin server fails. For details, refer to <a href="https://www.tencentcloud.com/document/product/1552/104227?from_cn_redirect=1">Introduction to Request Retry Strategy</a>. Valid values:</p><li>OtherOriginGroup: After a single request fails, retry with another origin server within the next lower priority origin server group;</li><li>OtherRecordInOriginGroup: After a single request fails, retry with another origin server within the same origin server group.</li>
      */
     public String getFailoverPolicy() {
         return this.FailoverPolicy;
     }
 
     /**
-     * Set Request retry policy when access to an origin server fails. For details, refer to [Introduction to Request Retry Strategy](https://intl.cloud.tencent.com/document/product/1552/104227?from_cn_redirect=1). Valid values:
-<li>OtherOriginGroup: After a single request fails, retry with another origin server within the next lower priority origin server group.</li>
-<li>OtherRecordInOriginGroup: After a single request fails, retry with another origin server within the same origin server group.</li>
-     * @param FailoverPolicy Request retry policy when access to an origin server fails. For details, refer to [Introduction to Request Retry Strategy](https://intl.cloud.tencent.com/document/product/1552/104227?from_cn_redirect=1). Valid values:
-<li>OtherOriginGroup: After a single request fails, retry with another origin server within the next lower priority origin server group.</li>
-<li>OtherRecordInOriginGroup: After a single request fails, retry with another origin server within the same origin server group.</li>
+     * Set <p>Request retry policy when access to an origin server fails. For details, refer to <a href="https://www.tencentcloud.com/document/product/1552/104227?from_cn_redirect=1">Introduction to Request Retry Strategy</a>. Valid values:</p><li>OtherOriginGroup: After a single request fails, retry with another origin server within the next lower priority origin server group;</li><li>OtherRecordInOriginGroup: After a single request fails, retry with another origin server within the same origin server group.</li>
+     * @param FailoverPolicy <p>Request retry policy when access to an origin server fails. For details, refer to <a href="https://www.tencentcloud.com/document/product/1552/104227?from_cn_redirect=1">Introduction to Request Retry Strategy</a>. Valid values:</p><li>OtherOriginGroup: After a single request fails, retry with another origin server within the next lower priority origin server group;</li><li>OtherRecordInOriginGroup: After a single request fails, retry with another origin server within the same origin server group.</li>
      */
     public void setFailoverPolicy(String FailoverPolicy) {
         this.FailoverPolicy = FailoverPolicy;
     }
 
     /**
-     * Get Origin server group health status. 
-     * @return OriginGroupHealthStatus Origin server group health status.
+     * Get <p>Origin server group health status.</p> 
+     * @return OriginGroupHealthStatus <p>Origin server group health status.</p>
      */
     public OriginGroupHealthStatus [] getOriginGroupHealthStatus() {
         return this.OriginGroupHealthStatus;
     }
 
     /**
-     * Set Origin server group health status.
-     * @param OriginGroupHealthStatus Origin server group health status.
+     * Set <p>Origin server group health status.</p>
+     * @param OriginGroupHealthStatus <p>Origin server group health status.</p>
      */
     public void setOriginGroupHealthStatus(OriginGroupHealthStatus [] OriginGroupHealthStatus) {
         this.OriginGroupHealthStatus = OriginGroupHealthStatus;
     }
 
     /**
-     * Get LoadBalancer status. Valid values:
-<li>Pending: deploying.</li>
-<li>Deleting: deleting.</li>
-<li>Running: effective.</li> 
-     * @return Status LoadBalancer status. Valid values:
-<li>Pending: deploying.</li>
-<li>Deleting: deleting.</li>
-<li>Running: effective.</li>
+     * Get <p>Load balancing status. Valid values:</p><li>Pending: deploying;</li><li>Deleting: deleting;</li><li>Running: effective.</li> 
+     * @return Status <p>Load balancing status. Valid values:</p><li>Pending: deploying;</li><li>Deleting: deleting;</li><li>Running: effective.</li>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set LoadBalancer status. Valid values:
-<li>Pending: deploying.</li>
-<li>Deleting: deleting.</li>
-<li>Running: effective.</li>
-     * @param Status LoadBalancer status. Valid values:
-<li>Pending: deploying.</li>
-<li>Deleting: deleting.</li>
-<li>Running: effective.</li>
+     * Set <p>Load balancing status. Valid values:</p><li>Pending: deploying;</li><li>Deleting: deleting;</li><li>Running: effective.</li>
+     * @param Status <p>Load balancing status. Valid values:</p><li>Pending: deploying;</li><li>Deleting: deleting;</li><li>Running: effective.</li>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Specifies the list of l4 proxy instances bound to the load balancing instance. 
-     * @return L4UsedList Specifies the list of l4 proxy instances bound to the load balancing instance.
+     * Get <p>List of L4 proxy instances bound to the load balancing instance.</p> 
+     * @return L4UsedList <p>List of L4 proxy instances bound to the load balancing instance.</p>
      */
     public String [] getL4UsedList() {
         return this.L4UsedList;
     }
 
     /**
-     * Set Specifies the list of l4 proxy instances bound to the load balancing instance.
-     * @param L4UsedList Specifies the list of l4 proxy instances bound to the load balancing instance.
+     * Set <p>List of L4 proxy instances bound to the load balancing instance.</p>
+     * @param L4UsedList <p>List of L4 proxy instances bound to the load balancing instance.</p>
      */
     public void setL4UsedList(String [] L4UsedList) {
         this.L4UsedList = L4UsedList;
     }
 
     /**
-     * Get List of Layer-7 domain names bound to a LoadBalancer. 
-     * @return L7UsedList List of Layer-7 domain names bound to a LoadBalancer.
+     * Get <p>List of Layer-7 domain names bound to the load balancing instance.</p> 
+     * @return L7UsedList <p>List of Layer-7 domain names bound to the load balancing instance.</p>
      */
     public String [] getL7UsedList() {
         return this.L7UsedList;
     }
 
     /**
-     * Set List of Layer-7 domain names bound to a LoadBalancer.
-     * @param L7UsedList List of Layer-7 domain names bound to a LoadBalancer.
+     * Set <p>List of Layer-7 domain names bound to the load balancing instance.</p>
+     * @param L7UsedList <p>List of Layer-7 domain names bound to the load balancing instance.</p>
      */
     public void setL7UsedList(String [] L7UsedList) {
         this.L7UsedList = L7UsedList;
     }
 
     /**
-     * Get Specifies the list of instances referenced by cloud load balancer. 
-     * @return References Specifies the list of instances referenced by cloud load balancer.
+     * Get <p>List of referenced instances of the load balancer.</p> 
+     * @return References <p>List of referenced instances of the load balancer.</p>
      */
     public OriginGroupReference [] getReferences() {
         return this.References;
     }
 
     /**
-     * Set Specifies the list of instances referenced by cloud load balancer.
-     * @param References Specifies the list of instances referenced by cloud load balancer.
+     * Set <p>List of referenced instances of the load balancer.</p>
+     * @param References <p>List of referenced instances of the load balancer.</p>
      */
     public void setReferences(OriginGroupReference [] References) {
         this.References = References;

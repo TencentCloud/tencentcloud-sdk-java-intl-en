@@ -31,14 +31,14 @@ public class EdgeKVGetRequest extends AbstractModel {
     private String ZoneId;
 
     /**
-    * Namespace name. You can obtain the list of namespaces under the site through the DescribeEdgeKVNamespaces API.
+    * Namespace name. You can obtain the list of namespaces under a site through the DescribeEdgeKVNamespaces API.
     */
     @SerializedName("Namespace")
     @Expose
     private String Namespace;
 
     /**
-    * Name list. Maximum array length is 20. Each key cannot be empty, with a length of 1-512 characters, and supports valid UTF-8 characters. When querying a single key, input an array with one element.
+    * Key name list. The maximum array length is 20. Each key name cannot be empty and must be 1-512 characters long. Valid UTF-8 characters are supported. To query one key, input an array containing one element.
     */
     @SerializedName("Keys")
     @Expose
@@ -61,32 +61,32 @@ public class EdgeKVGetRequest extends AbstractModel {
     }
 
     /**
-     * Get Namespace name. You can obtain the list of namespaces under the site through the DescribeEdgeKVNamespaces API. 
-     * @return Namespace Namespace name. You can obtain the list of namespaces under the site through the DescribeEdgeKVNamespaces API.
+     * Get Namespace name. You can obtain the list of namespaces under a site through the DescribeEdgeKVNamespaces API. 
+     * @return Namespace Namespace name. You can obtain the list of namespaces under a site through the DescribeEdgeKVNamespaces API.
      */
     public String getNamespace() {
         return this.Namespace;
     }
 
     /**
-     * Set Namespace name. You can obtain the list of namespaces under the site through the DescribeEdgeKVNamespaces API.
-     * @param Namespace Namespace name. You can obtain the list of namespaces under the site through the DescribeEdgeKVNamespaces API.
+     * Set Namespace name. You can obtain the list of namespaces under a site through the DescribeEdgeKVNamespaces API.
+     * @param Namespace Namespace name. You can obtain the list of namespaces under a site through the DescribeEdgeKVNamespaces API.
      */
     public void setNamespace(String Namespace) {
         this.Namespace = Namespace;
     }
 
     /**
-     * Get Name list. Maximum array length is 20. Each key cannot be empty, with a length of 1-512 characters, and supports valid UTF-8 characters. When querying a single key, input an array with one element. 
-     * @return Keys Name list. Maximum array length is 20. Each key cannot be empty, with a length of 1-512 characters, and supports valid UTF-8 characters. When querying a single key, input an array with one element.
+     * Get Key name list. The maximum array length is 20. Each key name cannot be empty and must be 1-512 characters long. Valid UTF-8 characters are supported. To query one key, input an array containing one element. 
+     * @return Keys Key name list. The maximum array length is 20. Each key name cannot be empty and must be 1-512 characters long. Valid UTF-8 characters are supported. To query one key, input an array containing one element.
      */
     public String [] getKeys() {
         return this.Keys;
     }
 
     /**
-     * Set Name list. Maximum array length is 20. Each key cannot be empty, with a length of 1-512 characters, and supports valid UTF-8 characters. When querying a single key, input an array with one element.
-     * @param Keys Name list. Maximum array length is 20. Each key cannot be empty, with a length of 1-512 characters, and supports valid UTF-8 characters. When querying a single key, input an array with one element.
+     * Set Key name list. The maximum array length is 20. Each key name cannot be empty and must be 1-512 characters long. Valid UTF-8 characters are supported. To query one key, input an array containing one element.
+     * @param Keys Key name list. The maximum array length is 20. Each key name cannot be empty and must be 1-512 characters long. Valid UTF-8 characters are supported. To query one key, input an array containing one element.
      */
     public void setKeys(String [] Keys) {
         this.Keys = Keys;

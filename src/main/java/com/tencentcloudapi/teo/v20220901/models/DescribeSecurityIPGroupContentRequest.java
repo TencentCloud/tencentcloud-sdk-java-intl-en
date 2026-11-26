@@ -31,14 +31,14 @@ public class DescribeSecurityIPGroupContentRequest extends AbstractModel {
     private String ZoneId;
 
     /**
-    * Specifies the IP group ID.
+    * IP group ID.
     */
     @SerializedName("GroupId")
     @Expose
     private Long GroupId;
 
     /**
-    * Paginated query limit. default value: 2000, maximum value: 100000.
+    * Paginated query limit. Default value: 2000. Maximum value: 100000.
     */
     @SerializedName("Limit")
     @Expose
@@ -68,32 +68,32 @@ public class DescribeSecurityIPGroupContentRequest extends AbstractModel {
     }
 
     /**
-     * Get Specifies the IP group ID. 
-     * @return GroupId Specifies the IP group ID.
+     * Get IP group ID. 
+     * @return GroupId IP group ID.
      */
     public Long getGroupId() {
         return this.GroupId;
     }
 
     /**
-     * Set Specifies the IP group ID.
-     * @param GroupId Specifies the IP group ID.
+     * Set IP group ID.
+     * @param GroupId IP group ID.
      */
     public void setGroupId(Long GroupId) {
         this.GroupId = GroupId;
     }
 
     /**
-     * Get Paginated query limit. default value: 2000, maximum value: 100000. 
-     * @return Limit Paginated query limit. default value: 2000, maximum value: 100000.
+     * Get Paginated query limit. Default value: 2000. Maximum value: 100000. 
+     * @return Limit Paginated query limit. Default value: 2000. Maximum value: 100000.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Paginated query limit. default value: 2000, maximum value: 100000.
-     * @param Limit Paginated query limit. default value: 2000, maximum value: 100000.
+     * Set Paginated query limit. Default value: 2000. Maximum value: 100000.
+     * @param Limit Paginated query limit. Default value: 2000. Maximum value: 100000.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

@@ -24,104 +24,99 @@ import java.util.HashMap;
 public class UpstreamRequestQueryString extends AbstractModel {
 
     /**
-    * Whether to enable origin-pull request parameter query string. values:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li>.
+    * Configuration switch for the origin-pull request parameter query string. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * Query string mode. this parameter is required when switch is on. values:.
-<Li>`Full`: retain all</li>.
-<Li>`Ignore`: ignore all;</li>.
-<Li>IncludeCustom: retain partial parameters.</li>.
-<Li>ExcludeCustom: ignore partial parameters.</li>.
+    * Query string mode. This parameter is required when Switch is on. Valid values:
+<li>full: retain all;</li>
+<li>ignore: Ignore all;</li>
+<li>includeCustom: reserve some parameters;</li>
+<li>excludeCustom: ignore some parameters.</li>
     */
     @SerializedName("Action")
     @Expose
     private String Action;
 
     /**
-    * Specifies parameter values. this parameter takes effect only when the query string mode action is `includecustom` or `excludecustom`, and is used to specify the parameters to be reserved or ignored. up to 10 parameters are supported.
+    * Specified parameter values. This parameter takes effect only when the string mode Action is includeCustom or excludeCustom. It is used to specify parameters to keep or ignore. Supports up to 10 parameters.
     */
     @SerializedName("Values")
     @Expose
     private String [] Values;
 
     /**
-     * Get Whether to enable origin-pull request parameter query string. values:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li>. 
-     * @return Switch Whether to enable origin-pull request parameter query string. values:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li>.
+     * Get Configuration switch for the origin-pull request parameter query string. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li> 
+     * @return Switch Configuration switch for the origin-pull request parameter query string. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set Whether to enable origin-pull request parameter query string. values:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li>.
-     * @param Switch Whether to enable origin-pull request parameter query string. values:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li>.
+     * Set Configuration switch for the origin-pull request parameter query string. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+     * @param Switch Configuration switch for the origin-pull request parameter query string. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get Query string mode. this parameter is required when switch is on. values:.
-<Li>`Full`: retain all</li>.
-<Li>`Ignore`: ignore all;</li>.
-<Li>IncludeCustom: retain partial parameters.</li>.
-<Li>ExcludeCustom: ignore partial parameters.</li>. 
-     * @return Action Query string mode. this parameter is required when switch is on. values:.
-<Li>`Full`: retain all</li>.
-<Li>`Ignore`: ignore all;</li>.
-<Li>IncludeCustom: retain partial parameters.</li>.
-<Li>ExcludeCustom: ignore partial parameters.</li>.
+     * Get Query string mode. This parameter is required when Switch is on. Valid values:
+<li>full: retain all;</li>
+<li>ignore: Ignore all;</li>
+<li>includeCustom: reserve some parameters;</li>
+<li>excludeCustom: ignore some parameters.</li> 
+     * @return Action Query string mode. This parameter is required when Switch is on. Valid values:
+<li>full: retain all;</li>
+<li>ignore: Ignore all;</li>
+<li>includeCustom: reserve some parameters;</li>
+<li>excludeCustom: ignore some parameters.</li>
      */
     public String getAction() {
         return this.Action;
     }
 
     /**
-     * Set Query string mode. this parameter is required when switch is on. values:.
-<Li>`Full`: retain all</li>.
-<Li>`Ignore`: ignore all;</li>.
-<Li>IncludeCustom: retain partial parameters.</li>.
-<Li>ExcludeCustom: ignore partial parameters.</li>.
-     * @param Action Query string mode. this parameter is required when switch is on. values:.
-<Li>`Full`: retain all</li>.
-<Li>`Ignore`: ignore all;</li>.
-<Li>IncludeCustom: retain partial parameters.</li>.
-<Li>ExcludeCustom: ignore partial parameters.</li>.
+     * Set Query string mode. This parameter is required when Switch is on. Valid values:
+<li>full: retain all;</li>
+<li>ignore: Ignore all;</li>
+<li>includeCustom: reserve some parameters;</li>
+<li>excludeCustom: ignore some parameters.</li>
+     * @param Action Query string mode. This parameter is required when Switch is on. Valid values:
+<li>full: retain all;</li>
+<li>ignore: Ignore all;</li>
+<li>includeCustom: reserve some parameters;</li>
+<li>excludeCustom: ignore some parameters.</li>
      */
     public void setAction(String Action) {
         this.Action = Action;
     }
 
     /**
-     * Get Specifies parameter values. this parameter takes effect only when the query string mode action is `includecustom` or `excludecustom`, and is used to specify the parameters to be reserved or ignored. up to 10 parameters are supported. 
-     * @return Values Specifies parameter values. this parameter takes effect only when the query string mode action is `includecustom` or `excludecustom`, and is used to specify the parameters to be reserved or ignored. up to 10 parameters are supported.
+     * Get Specified parameter values. This parameter takes effect only when the string mode Action is includeCustom or excludeCustom. It is used to specify parameters to keep or ignore. Supports up to 10 parameters. 
+     * @return Values Specified parameter values. This parameter takes effect only when the string mode Action is includeCustom or excludeCustom. It is used to specify parameters to keep or ignore. Supports up to 10 parameters.
      */
     public String [] getValues() {
         return this.Values;
     }
 
     /**
-     * Set Specifies parameter values. this parameter takes effect only when the query string mode action is `includecustom` or `excludecustom`, and is used to specify the parameters to be reserved or ignored. up to 10 parameters are supported.
-     * @param Values Specifies parameter values. this parameter takes effect only when the query string mode action is `includecustom` or `excludecustom`, and is used to specify the parameters to be reserved or ignored. up to 10 parameters are supported.
+     * Set Specified parameter values. This parameter takes effect only when the string mode Action is includeCustom or excludeCustom. It is used to specify parameters to keep or ignore. Supports up to 10 parameters.
+     * @param Values Specified parameter values. This parameter takes effect only when the string mode Action is includeCustom or excludeCustom. It is used to specify parameters to keep or ignore. Supports up to 10 parameters.
      */
     public void setValues(String [] Values) {
         this.Values = Values;

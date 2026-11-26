@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DnsRecord extends AbstractModel {
 
     /**
-    * Zone id.<br>note: zoneid is for output parameter use only and cannot be used as an input parameter in modifydnsrecords. if this parameter is passed, it will be ignored.
+    * Site ID.<br>Note: ZoneId is for output usage only. It cannot be used as an input parameter in ModifyDnsRecords. If this parameter is input, it will be ignored.
     */
     @SerializedName("ZoneId")
     @Expose
     private String ZoneId;
 
     /**
-    * DNS record id.
+    * DNS record ID.
     */
     @SerializedName("RecordId")
     @Expose
@@ -45,103 +45,103 @@ public class DnsRecord extends AbstractModel {
     private String Name;
 
     /**
-    * DNS record type. valid values are:.
-<Li>A: point the domain to a public network ipv4 address, such as 8.8.8.8;</li>.
-<Li>AAAA: point the domain to a public network ipv6 address;</li>.
-<Li>MX: used for email servers. when there are multiple mx records, the lower the priority, the higher the precedence;</li>.
-<Li>CNAME: point the domain to another domain name, which will resolve to the final ip address;</li>.
-<Li>TXT: identify and describe the domain, commonly used for domain verification and spf records (anti-spam);</li>.
-<Li>NS: if you need to delegate the resolution of a subdomain to another dns service provider, you need to add an ns record. ns records cannot be added to the root domain name;</li>.
-<Li>CAA: specifies the ca that can issue certificates for this site;</li>.
-<Li>SRV: indicates that a server is using a service, commonly seen in microsoft system directory management.</li>.
+    * DNS record type. Valid values:
+<li>A: Point the domain name to a public IPv4 address, for example 8.8.8.8;</li>
+<li>AAAA: point the domain name to a public IPv6 address;</li>
+<li>MX: for email servers. When multiple MX records exist, lower priority means higher preference;</li>
+<li>CNAME: Point the domain to another domain, which then resolves the final IP;</li>
+<li>TXT: Identifies and describes a domain name, commonly used for domain name verification and SPF records (anti-spam);</li>
+<li>NS: If you need to delegate subdomain resolution to another DNS service provider, you need to add an NS record. NS records cannot be added for the root domain;</li>
+<li>CAA: specify the CA that can issue certificates for this site;</li>
+<li>SRV: identifies that a server used a service, commonly seen in directory management of Microsoft systems.</li>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * DNS record resolution route, if not specified, defaults to default, indicating the default resolution route, effective in all regions.<br>resolution route configuration only applies when type (dns record type) is a, aaaa, or cname.<br>for valid values, refer to: [resolution routes and corresponding code enumeration](https://intl.cloud.tencent.com/document/product/1552/112542?from_cn_redirect=1).
+    * DNS record resolution route. If not specified, it defaults to Default, which means the default resolution route and represents that it takes effect in all regions.<br>Route configuration is applicable only when Type (DNS record type) is A, AAAA, or CNAME.<br>For values, see [Resolution routes and corresponding code enumeration](https://www.tencentcloud.com/document/product/1552/112542?from_cn_redirect=1).
     */
     @SerializedName("Location")
     @Expose
     private String Location;
 
     /**
-    * DNS record content. fill in the corresponding content based on the type value.
+    * DNS record content. Fill in the corresponding content based on the Type value.
     */
     @SerializedName("Content")
     @Expose
     private String Content;
 
     /**
-    * Cache time. value range: 60–86400. the smaller the value, the faster the record modification will take effect globally. unit: seconds.
+    * Cache time. Value range: 60–86400. A smaller value means the modification record takes effect faster in each region. Unit: seconds.
     */
     @SerializedName("TTL")
     @Expose
     private Long TTL;
 
     /**
-    * DNS record weight. value range: -1–100. a value of -1 means no weight is assigned, and 0 means no parsing. weight configuration is only applicable when type (dns record type) is a, aaaa, or cname.
+    * DNS record weight. Value range: -1 to 100. -1 means no weight is assigned, and 0 indicates no parsing. Weight configuration is applicable only when Type (DNS record type) is A, AAAA, or CNAME.
     */
     @SerializedName("Weight")
     @Expose
     private Long Weight;
 
     /**
-    * MX record priority. value range: 0–50. the smaller the value, the higher the priority.
+    * MX record priority. Value range: 0–50. A smaller value indicates a higher priority.
     */
     @SerializedName("Priority")
     @Expose
     private Long Priority;
 
     /**
-    * DNS record parsing status. valid values are: <li>enable: takes effect;</li><li>disable: disabled.</li> note: status is only used as an output parameter and cannot be used as an input parameter in modifydnsrecords. if this parameter is passed, it will be ignored.
+    * DNS record resolution status. Valid values: <li>enable: effective;</li><li>disable: disabled.</li>Note: Status is for output only. It cannot be used as an input parameter in ModifyDnsRecords and will be ignored if provided.
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * Creation time.<br>note: createdon is only used as an output parameter and cannot be used as an input parameter in modifydnsrecords. if this parameter is passed, it will be ignored.
+    * Creation time.<br>Note: CreatedOn is for output only and cannot be used as an input parameter in ModifyDnsRecords. If this parameter is input, it will be ignored.
     */
     @SerializedName("CreatedOn")
     @Expose
     private String CreatedOn;
 
     /**
-    * Modification time.<br>note: modifiedon is for output parameter only and cannot be used as an input parameter in modifydnsrecords. if this parameter is passed, it will be ignored.
+    * Last modified.<br>Note: ModifiedOn is for output only and cannot be used as an input parameter in ModifyDnsRecords. If this parameter is input, it will be ignored.
     */
     @SerializedName("ModifiedOn")
     @Expose
     private String ModifiedOn;
 
     /**
-     * Get Zone id.<br>note: zoneid is for output parameter use only and cannot be used as an input parameter in modifydnsrecords. if this parameter is passed, it will be ignored. 
-     * @return ZoneId Zone id.<br>note: zoneid is for output parameter use only and cannot be used as an input parameter in modifydnsrecords. if this parameter is passed, it will be ignored.
+     * Get Site ID.<br>Note: ZoneId is for output usage only. It cannot be used as an input parameter in ModifyDnsRecords. If this parameter is input, it will be ignored. 
+     * @return ZoneId Site ID.<br>Note: ZoneId is for output usage only. It cannot be used as an input parameter in ModifyDnsRecords. If this parameter is input, it will be ignored.
      */
     public String getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set Zone id.<br>note: zoneid is for output parameter use only and cannot be used as an input parameter in modifydnsrecords. if this parameter is passed, it will be ignored.
-     * @param ZoneId Zone id.<br>note: zoneid is for output parameter use only and cannot be used as an input parameter in modifydnsrecords. if this parameter is passed, it will be ignored.
+     * Set Site ID.<br>Note: ZoneId is for output usage only. It cannot be used as an input parameter in ModifyDnsRecords. If this parameter is input, it will be ignored.
+     * @param ZoneId Site ID.<br>Note: ZoneId is for output usage only. It cannot be used as an input parameter in ModifyDnsRecords. If this parameter is input, it will be ignored.
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get DNS record id. 
-     * @return RecordId DNS record id.
+     * Get DNS record ID. 
+     * @return RecordId DNS record ID.
      */
     public String getRecordId() {
         return this.RecordId;
     }
 
     /**
-     * Set DNS record id.
-     * @param RecordId DNS record id.
+     * Set DNS record ID.
+     * @param RecordId DNS record ID.
      */
     public void setRecordId(String RecordId) {
         this.RecordId = RecordId;
@@ -164,176 +164,176 @@ public class DnsRecord extends AbstractModel {
     }
 
     /**
-     * Get DNS record type. valid values are:.
-<Li>A: point the domain to a public network ipv4 address, such as 8.8.8.8;</li>.
-<Li>AAAA: point the domain to a public network ipv6 address;</li>.
-<Li>MX: used for email servers. when there are multiple mx records, the lower the priority, the higher the precedence;</li>.
-<Li>CNAME: point the domain to another domain name, which will resolve to the final ip address;</li>.
-<Li>TXT: identify and describe the domain, commonly used for domain verification and spf records (anti-spam);</li>.
-<Li>NS: if you need to delegate the resolution of a subdomain to another dns service provider, you need to add an ns record. ns records cannot be added to the root domain name;</li>.
-<Li>CAA: specifies the ca that can issue certificates for this site;</li>.
-<Li>SRV: indicates that a server is using a service, commonly seen in microsoft system directory management.</li>. 
-     * @return Type DNS record type. valid values are:.
-<Li>A: point the domain to a public network ipv4 address, such as 8.8.8.8;</li>.
-<Li>AAAA: point the domain to a public network ipv6 address;</li>.
-<Li>MX: used for email servers. when there are multiple mx records, the lower the priority, the higher the precedence;</li>.
-<Li>CNAME: point the domain to another domain name, which will resolve to the final ip address;</li>.
-<Li>TXT: identify and describe the domain, commonly used for domain verification and spf records (anti-spam);</li>.
-<Li>NS: if you need to delegate the resolution of a subdomain to another dns service provider, you need to add an ns record. ns records cannot be added to the root domain name;</li>.
-<Li>CAA: specifies the ca that can issue certificates for this site;</li>.
-<Li>SRV: indicates that a server is using a service, commonly seen in microsoft system directory management.</li>.
+     * Get DNS record type. Valid values:
+<li>A: Point the domain name to a public IPv4 address, for example 8.8.8.8;</li>
+<li>AAAA: point the domain name to a public IPv6 address;</li>
+<li>MX: for email servers. When multiple MX records exist, lower priority means higher preference;</li>
+<li>CNAME: Point the domain to another domain, which then resolves the final IP;</li>
+<li>TXT: Identifies and describes a domain name, commonly used for domain name verification and SPF records (anti-spam);</li>
+<li>NS: If you need to delegate subdomain resolution to another DNS service provider, you need to add an NS record. NS records cannot be added for the root domain;</li>
+<li>CAA: specify the CA that can issue certificates for this site;</li>
+<li>SRV: identifies that a server used a service, commonly seen in directory management of Microsoft systems.</li> 
+     * @return Type DNS record type. Valid values:
+<li>A: Point the domain name to a public IPv4 address, for example 8.8.8.8;</li>
+<li>AAAA: point the domain name to a public IPv6 address;</li>
+<li>MX: for email servers. When multiple MX records exist, lower priority means higher preference;</li>
+<li>CNAME: Point the domain to another domain, which then resolves the final IP;</li>
+<li>TXT: Identifies and describes a domain name, commonly used for domain name verification and SPF records (anti-spam);</li>
+<li>NS: If you need to delegate subdomain resolution to another DNS service provider, you need to add an NS record. NS records cannot be added for the root domain;</li>
+<li>CAA: specify the CA that can issue certificates for this site;</li>
+<li>SRV: identifies that a server used a service, commonly seen in directory management of Microsoft systems.</li>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set DNS record type. valid values are:.
-<Li>A: point the domain to a public network ipv4 address, such as 8.8.8.8;</li>.
-<Li>AAAA: point the domain to a public network ipv6 address;</li>.
-<Li>MX: used for email servers. when there are multiple mx records, the lower the priority, the higher the precedence;</li>.
-<Li>CNAME: point the domain to another domain name, which will resolve to the final ip address;</li>.
-<Li>TXT: identify and describe the domain, commonly used for domain verification and spf records (anti-spam);</li>.
-<Li>NS: if you need to delegate the resolution of a subdomain to another dns service provider, you need to add an ns record. ns records cannot be added to the root domain name;</li>.
-<Li>CAA: specifies the ca that can issue certificates for this site;</li>.
-<Li>SRV: indicates that a server is using a service, commonly seen in microsoft system directory management.</li>.
-     * @param Type DNS record type. valid values are:.
-<Li>A: point the domain to a public network ipv4 address, such as 8.8.8.8;</li>.
-<Li>AAAA: point the domain to a public network ipv6 address;</li>.
-<Li>MX: used for email servers. when there are multiple mx records, the lower the priority, the higher the precedence;</li>.
-<Li>CNAME: point the domain to another domain name, which will resolve to the final ip address;</li>.
-<Li>TXT: identify and describe the domain, commonly used for domain verification and spf records (anti-spam);</li>.
-<Li>NS: if you need to delegate the resolution of a subdomain to another dns service provider, you need to add an ns record. ns records cannot be added to the root domain name;</li>.
-<Li>CAA: specifies the ca that can issue certificates for this site;</li>.
-<Li>SRV: indicates that a server is using a service, commonly seen in microsoft system directory management.</li>.
+     * Set DNS record type. Valid values:
+<li>A: Point the domain name to a public IPv4 address, for example 8.8.8.8;</li>
+<li>AAAA: point the domain name to a public IPv6 address;</li>
+<li>MX: for email servers. When multiple MX records exist, lower priority means higher preference;</li>
+<li>CNAME: Point the domain to another domain, which then resolves the final IP;</li>
+<li>TXT: Identifies and describes a domain name, commonly used for domain name verification and SPF records (anti-spam);</li>
+<li>NS: If you need to delegate subdomain resolution to another DNS service provider, you need to add an NS record. NS records cannot be added for the root domain;</li>
+<li>CAA: specify the CA that can issue certificates for this site;</li>
+<li>SRV: identifies that a server used a service, commonly seen in directory management of Microsoft systems.</li>
+     * @param Type DNS record type. Valid values:
+<li>A: Point the domain name to a public IPv4 address, for example 8.8.8.8;</li>
+<li>AAAA: point the domain name to a public IPv6 address;</li>
+<li>MX: for email servers. When multiple MX records exist, lower priority means higher preference;</li>
+<li>CNAME: Point the domain to another domain, which then resolves the final IP;</li>
+<li>TXT: Identifies and describes a domain name, commonly used for domain name verification and SPF records (anti-spam);</li>
+<li>NS: If you need to delegate subdomain resolution to another DNS service provider, you need to add an NS record. NS records cannot be added for the root domain;</li>
+<li>CAA: specify the CA that can issue certificates for this site;</li>
+<li>SRV: identifies that a server used a service, commonly seen in directory management of Microsoft systems.</li>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get DNS record resolution route, if not specified, defaults to default, indicating the default resolution route, effective in all regions.<br>resolution route configuration only applies when type (dns record type) is a, aaaa, or cname.<br>for valid values, refer to: [resolution routes and corresponding code enumeration](https://intl.cloud.tencent.com/document/product/1552/112542?from_cn_redirect=1). 
-     * @return Location DNS record resolution route, if not specified, defaults to default, indicating the default resolution route, effective in all regions.<br>resolution route configuration only applies when type (dns record type) is a, aaaa, or cname.<br>for valid values, refer to: [resolution routes and corresponding code enumeration](https://intl.cloud.tencent.com/document/product/1552/112542?from_cn_redirect=1).
+     * Get DNS record resolution route. If not specified, it defaults to Default, which means the default resolution route and represents that it takes effect in all regions.<br>Route configuration is applicable only when Type (DNS record type) is A, AAAA, or CNAME.<br>For values, see [Resolution routes and corresponding code enumeration](https://www.tencentcloud.com/document/product/1552/112542?from_cn_redirect=1). 
+     * @return Location DNS record resolution route. If not specified, it defaults to Default, which means the default resolution route and represents that it takes effect in all regions.<br>Route configuration is applicable only when Type (DNS record type) is A, AAAA, or CNAME.<br>For values, see [Resolution routes and corresponding code enumeration](https://www.tencentcloud.com/document/product/1552/112542?from_cn_redirect=1).
      */
     public String getLocation() {
         return this.Location;
     }
 
     /**
-     * Set DNS record resolution route, if not specified, defaults to default, indicating the default resolution route, effective in all regions.<br>resolution route configuration only applies when type (dns record type) is a, aaaa, or cname.<br>for valid values, refer to: [resolution routes and corresponding code enumeration](https://intl.cloud.tencent.com/document/product/1552/112542?from_cn_redirect=1).
-     * @param Location DNS record resolution route, if not specified, defaults to default, indicating the default resolution route, effective in all regions.<br>resolution route configuration only applies when type (dns record type) is a, aaaa, or cname.<br>for valid values, refer to: [resolution routes and corresponding code enumeration](https://intl.cloud.tencent.com/document/product/1552/112542?from_cn_redirect=1).
+     * Set DNS record resolution route. If not specified, it defaults to Default, which means the default resolution route and represents that it takes effect in all regions.<br>Route configuration is applicable only when Type (DNS record type) is A, AAAA, or CNAME.<br>For values, see [Resolution routes and corresponding code enumeration](https://www.tencentcloud.com/document/product/1552/112542?from_cn_redirect=1).
+     * @param Location DNS record resolution route. If not specified, it defaults to Default, which means the default resolution route and represents that it takes effect in all regions.<br>Route configuration is applicable only when Type (DNS record type) is A, AAAA, or CNAME.<br>For values, see [Resolution routes and corresponding code enumeration](https://www.tencentcloud.com/document/product/1552/112542?from_cn_redirect=1).
      */
     public void setLocation(String Location) {
         this.Location = Location;
     }
 
     /**
-     * Get DNS record content. fill in the corresponding content based on the type value. 
-     * @return Content DNS record content. fill in the corresponding content based on the type value.
+     * Get DNS record content. Fill in the corresponding content based on the Type value. 
+     * @return Content DNS record content. Fill in the corresponding content based on the Type value.
      */
     public String getContent() {
         return this.Content;
     }
 
     /**
-     * Set DNS record content. fill in the corresponding content based on the type value.
-     * @param Content DNS record content. fill in the corresponding content based on the type value.
+     * Set DNS record content. Fill in the corresponding content based on the Type value.
+     * @param Content DNS record content. Fill in the corresponding content based on the Type value.
      */
     public void setContent(String Content) {
         this.Content = Content;
     }
 
     /**
-     * Get Cache time. value range: 60–86400. the smaller the value, the faster the record modification will take effect globally. unit: seconds. 
-     * @return TTL Cache time. value range: 60–86400. the smaller the value, the faster the record modification will take effect globally. unit: seconds.
+     * Get Cache time. Value range: 60–86400. A smaller value means the modification record takes effect faster in each region. Unit: seconds. 
+     * @return TTL Cache time. Value range: 60–86400. A smaller value means the modification record takes effect faster in each region. Unit: seconds.
      */
     public Long getTTL() {
         return this.TTL;
     }
 
     /**
-     * Set Cache time. value range: 60–86400. the smaller the value, the faster the record modification will take effect globally. unit: seconds.
-     * @param TTL Cache time. value range: 60–86400. the smaller the value, the faster the record modification will take effect globally. unit: seconds.
+     * Set Cache time. Value range: 60–86400. A smaller value means the modification record takes effect faster in each region. Unit: seconds.
+     * @param TTL Cache time. Value range: 60–86400. A smaller value means the modification record takes effect faster in each region. Unit: seconds.
      */
     public void setTTL(Long TTL) {
         this.TTL = TTL;
     }
 
     /**
-     * Get DNS record weight. value range: -1–100. a value of -1 means no weight is assigned, and 0 means no parsing. weight configuration is only applicable when type (dns record type) is a, aaaa, or cname. 
-     * @return Weight DNS record weight. value range: -1–100. a value of -1 means no weight is assigned, and 0 means no parsing. weight configuration is only applicable when type (dns record type) is a, aaaa, or cname.
+     * Get DNS record weight. Value range: -1 to 100. -1 means no weight is assigned, and 0 indicates no parsing. Weight configuration is applicable only when Type (DNS record type) is A, AAAA, or CNAME. 
+     * @return Weight DNS record weight. Value range: -1 to 100. -1 means no weight is assigned, and 0 indicates no parsing. Weight configuration is applicable only when Type (DNS record type) is A, AAAA, or CNAME.
      */
     public Long getWeight() {
         return this.Weight;
     }
 
     /**
-     * Set DNS record weight. value range: -1–100. a value of -1 means no weight is assigned, and 0 means no parsing. weight configuration is only applicable when type (dns record type) is a, aaaa, or cname.
-     * @param Weight DNS record weight. value range: -1–100. a value of -1 means no weight is assigned, and 0 means no parsing. weight configuration is only applicable when type (dns record type) is a, aaaa, or cname.
+     * Set DNS record weight. Value range: -1 to 100. -1 means no weight is assigned, and 0 indicates no parsing. Weight configuration is applicable only when Type (DNS record type) is A, AAAA, or CNAME.
+     * @param Weight DNS record weight. Value range: -1 to 100. -1 means no weight is assigned, and 0 indicates no parsing. Weight configuration is applicable only when Type (DNS record type) is A, AAAA, or CNAME.
      */
     public void setWeight(Long Weight) {
         this.Weight = Weight;
     }
 
     /**
-     * Get MX record priority. value range: 0–50. the smaller the value, the higher the priority. 
-     * @return Priority MX record priority. value range: 0–50. the smaller the value, the higher the priority.
+     * Get MX record priority. Value range: 0–50. A smaller value indicates a higher priority. 
+     * @return Priority MX record priority. Value range: 0–50. A smaller value indicates a higher priority.
      */
     public Long getPriority() {
         return this.Priority;
     }
 
     /**
-     * Set MX record priority. value range: 0–50. the smaller the value, the higher the priority.
-     * @param Priority MX record priority. value range: 0–50. the smaller the value, the higher the priority.
+     * Set MX record priority. Value range: 0–50. A smaller value indicates a higher priority.
+     * @param Priority MX record priority. Value range: 0–50. A smaller value indicates a higher priority.
      */
     public void setPriority(Long Priority) {
         this.Priority = Priority;
     }
 
     /**
-     * Get DNS record parsing status. valid values are: <li>enable: takes effect;</li><li>disable: disabled.</li> note: status is only used as an output parameter and cannot be used as an input parameter in modifydnsrecords. if this parameter is passed, it will be ignored. 
-     * @return Status DNS record parsing status. valid values are: <li>enable: takes effect;</li><li>disable: disabled.</li> note: status is only used as an output parameter and cannot be used as an input parameter in modifydnsrecords. if this parameter is passed, it will be ignored.
+     * Get DNS record resolution status. Valid values: <li>enable: effective;</li><li>disable: disabled.</li>Note: Status is for output only. It cannot be used as an input parameter in ModifyDnsRecords and will be ignored if provided. 
+     * @return Status DNS record resolution status. Valid values: <li>enable: effective;</li><li>disable: disabled.</li>Note: Status is for output only. It cannot be used as an input parameter in ModifyDnsRecords and will be ignored if provided.
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set DNS record parsing status. valid values are: <li>enable: takes effect;</li><li>disable: disabled.</li> note: status is only used as an output parameter and cannot be used as an input parameter in modifydnsrecords. if this parameter is passed, it will be ignored.
-     * @param Status DNS record parsing status. valid values are: <li>enable: takes effect;</li><li>disable: disabled.</li> note: status is only used as an output parameter and cannot be used as an input parameter in modifydnsrecords. if this parameter is passed, it will be ignored.
+     * Set DNS record resolution status. Valid values: <li>enable: effective;</li><li>disable: disabled.</li>Note: Status is for output only. It cannot be used as an input parameter in ModifyDnsRecords and will be ignored if provided.
+     * @param Status DNS record resolution status. Valid values: <li>enable: effective;</li><li>disable: disabled.</li>Note: Status is for output only. It cannot be used as an input parameter in ModifyDnsRecords and will be ignored if provided.
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Creation time.<br>note: createdon is only used as an output parameter and cannot be used as an input parameter in modifydnsrecords. if this parameter is passed, it will be ignored. 
-     * @return CreatedOn Creation time.<br>note: createdon is only used as an output parameter and cannot be used as an input parameter in modifydnsrecords. if this parameter is passed, it will be ignored.
+     * Get Creation time.<br>Note: CreatedOn is for output only and cannot be used as an input parameter in ModifyDnsRecords. If this parameter is input, it will be ignored. 
+     * @return CreatedOn Creation time.<br>Note: CreatedOn is for output only and cannot be used as an input parameter in ModifyDnsRecords. If this parameter is input, it will be ignored.
      */
     public String getCreatedOn() {
         return this.CreatedOn;
     }
 
     /**
-     * Set Creation time.<br>note: createdon is only used as an output parameter and cannot be used as an input parameter in modifydnsrecords. if this parameter is passed, it will be ignored.
-     * @param CreatedOn Creation time.<br>note: createdon is only used as an output parameter and cannot be used as an input parameter in modifydnsrecords. if this parameter is passed, it will be ignored.
+     * Set Creation time.<br>Note: CreatedOn is for output only and cannot be used as an input parameter in ModifyDnsRecords. If this parameter is input, it will be ignored.
+     * @param CreatedOn Creation time.<br>Note: CreatedOn is for output only and cannot be used as an input parameter in ModifyDnsRecords. If this parameter is input, it will be ignored.
      */
     public void setCreatedOn(String CreatedOn) {
         this.CreatedOn = CreatedOn;
     }
 
     /**
-     * Get Modification time.<br>note: modifiedon is for output parameter only and cannot be used as an input parameter in modifydnsrecords. if this parameter is passed, it will be ignored. 
-     * @return ModifiedOn Modification time.<br>note: modifiedon is for output parameter only and cannot be used as an input parameter in modifydnsrecords. if this parameter is passed, it will be ignored.
+     * Get Last modified.<br>Note: ModifiedOn is for output only and cannot be used as an input parameter in ModifyDnsRecords. If this parameter is input, it will be ignored. 
+     * @return ModifiedOn Last modified.<br>Note: ModifiedOn is for output only and cannot be used as an input parameter in ModifyDnsRecords. If this parameter is input, it will be ignored.
      */
     public String getModifiedOn() {
         return this.ModifiedOn;
     }
 
     /**
-     * Set Modification time.<br>note: modifiedon is for output parameter only and cannot be used as an input parameter in modifydnsrecords. if this parameter is passed, it will be ignored.
-     * @param ModifiedOn Modification time.<br>note: modifiedon is for output parameter only and cannot be used as an input parameter in modifydnsrecords. if this parameter is passed, it will be ignored.
+     * Set Last modified.<br>Note: ModifiedOn is for output only and cannot be used as an input parameter in ModifyDnsRecords. If this parameter is input, it will be ignored.
+     * @param ModifiedOn Last modified.<br>Note: ModifiedOn is for output only and cannot be used as an input parameter in ModifyDnsRecords. If this parameter is input, it will be ignored.
      */
     public void setModifiedOn(String ModifiedOn) {
         this.ModifiedOn = ModifiedOn;

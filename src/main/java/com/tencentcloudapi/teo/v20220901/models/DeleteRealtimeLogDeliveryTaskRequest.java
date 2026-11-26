@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class DeleteRealtimeLogDeliveryTaskRequest extends AbstractModel {
 
     /**
-    * Zone ID.
+    * Zone ID.	
     */
     @SerializedName("ZoneId")
     @Expose
     private String ZoneId;
 
     /**
-    * The ID of the real-time log delivery task.
+    * ID of a real-time log shipping task.
     */
     @SerializedName("TaskId")
     @Expose
     private String TaskId;
 
     /**
-     * Get Zone ID. 
-     * @return ZoneId Zone ID.
+     * Get Zone ID.	 
+     * @return ZoneId Zone ID.	
      */
     public String getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set Zone ID.
-     * @param ZoneId Zone ID.
+     * Set Zone ID.	
+     * @param ZoneId Zone ID.	
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get The ID of the real-time log delivery task. 
-     * @return TaskId The ID of the real-time log delivery task.
+     * Get ID of a real-time log shipping task. 
+     * @return TaskId ID of a real-time log shipping task.
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set The ID of the real-time log delivery task.
-     * @param TaskId The ID of the real-time log delivery task.
+     * Set ID of a real-time log shipping task.
+     * @param TaskId ID of a real-time log shipping task.
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;

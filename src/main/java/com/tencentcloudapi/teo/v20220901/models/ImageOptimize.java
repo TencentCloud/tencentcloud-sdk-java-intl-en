@@ -24,33 +24,33 @@ import java.util.HashMap;
 public class ImageOptimize extends AbstractModel {
 
     /**
-    * Whether to enable configuration. Values: 
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+    * Switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-     * Get Whether to enable configuration. Values: 
-<li>`on`: Enable</li>
-<li>`off`: Disable</li> 
-     * @return Switch Whether to enable configuration. Values: 
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+     * Get Switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li> 
+     * @return Switch Switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set Whether to enable configuration. Values: 
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-     * @param Switch Whether to enable configuration. Values: 
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+     * Set Switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+     * @param Switch Switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;

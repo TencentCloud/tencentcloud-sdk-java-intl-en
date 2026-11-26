@@ -24,41 +24,40 @@ import java.util.HashMap;
 public class OriginRecord extends AbstractModel {
 
     /**
-    * The origin record value, which can be an IPv4/IPv6 address or a domain name.
+    * Origin server record value, excluding port information. It can be an IPv4 address, IPv6 address, or domain name format.
     */
     @SerializedName("Record")
     @Expose
     private String Record;
 
     /**
-    * The origin type. Values:
-<li>`IP_DOMAIN`: IPv4/IPv6 address or domain name</li>
-<li>`COS`: COS bucket address</li>
-<li>`AWS_S3`: AWS S3 bucket address
+    * Origin server type. Valid values:
+<li>IP_DOMAIN: IPV4, IPV6, domain type origin server;</li>
+<li>COS: COS origin.</li>
+<li>AWS_S3: AWS S3 COS origin server.</li>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * The origin record ID.
+    * Origin record ID.
     */
     @SerializedName("RecordId")
     @Expose
     private String RecordId;
 
     /**
-    * [Origin server weight]: a parameter used to control traffic allocation priority, value ranges from 0 to 100 (integer): <li>empty value: no weight is set, and the system schedules traffic based on the default policy;</li> <li>0 value: explicitly set the weight to 0, and traffic will not be assigned to this origin server. note: make sure at least one origin server has a weight value above 0;</li> <li>normal value: the larger the value, the more traffic is assigned;</li>.
-Note: This field may return null, which indicates a failure to obtain a valid value.
+    * 【Origin server weight】: A parameter used to control traffic assignment priority. Value range: 0-100 (integer): <li>Empty value: No weight is set, and the system schedules traffic based on the default policy;</li><li>0: The weight is explicitly set to 0, and traffic will not be assigned to this origin server. Note: Make sure at least one origin server has a weight above 0;</li><li>Normal value: The larger the value, the more traffic is assigned;</li>
     */
     @SerializedName("Weight")
     @Expose
     private Long Weight;
 
     /**
-    * Whether to enable private authentication. It is valid when `OriginType=COS/AWS_S3`. Values:
-<li>`true`: Yes.</li>
-<li>`false`: No.</li>Default: `false`.
+    * Whether to use private authentication. This parameter is valid only when RecordType is COS or AWS_S3. Valid values:
+<li>true: Enable private authentication;</li>
+<li>false: Do not use private authentication.</li>Not specified. Default value: false.
 
     */
     @SerializedName("Private")
@@ -66,100 +65,96 @@ Note: This field may return null, which indicates a failure to obtain a valid va
     private Boolean Private;
 
     /**
-    * Private authentication parameters. This field is valid when `Private=true`.
+    * Private authentication parameter. Valid when the origin server type is Private=true.
     */
     @SerializedName("PrivateParameters")
     @Expose
     private PrivateParameter [] PrivateParameters;
 
     /**
-     * Get The origin record value, which can be an IPv4/IPv6 address or a domain name. 
-     * @return Record The origin record value, which can be an IPv4/IPv6 address or a domain name.
+     * Get Origin server record value, excluding port information. It can be an IPv4 address, IPv6 address, or domain name format. 
+     * @return Record Origin server record value, excluding port information. It can be an IPv4 address, IPv6 address, or domain name format.
      */
     public String getRecord() {
         return this.Record;
     }
 
     /**
-     * Set The origin record value, which can be an IPv4/IPv6 address or a domain name.
-     * @param Record The origin record value, which can be an IPv4/IPv6 address or a domain name.
+     * Set Origin server record value, excluding port information. It can be an IPv4 address, IPv6 address, or domain name format.
+     * @param Record Origin server record value, excluding port information. It can be an IPv4 address, IPv6 address, or domain name format.
      */
     public void setRecord(String Record) {
         this.Record = Record;
     }
 
     /**
-     * Get The origin type. Values:
-<li>`IP_DOMAIN`: IPv4/IPv6 address or domain name</li>
-<li>`COS`: COS bucket address</li>
-<li>`AWS_S3`: AWS S3 bucket address 
-     * @return Type The origin type. Values:
-<li>`IP_DOMAIN`: IPv4/IPv6 address or domain name</li>
-<li>`COS`: COS bucket address</li>
-<li>`AWS_S3`: AWS S3 bucket address
+     * Get Origin server type. Valid values:
+<li>IP_DOMAIN: IPV4, IPV6, domain type origin server;</li>
+<li>COS: COS origin.</li>
+<li>AWS_S3: AWS S3 COS origin server.</li> 
+     * @return Type Origin server type. Valid values:
+<li>IP_DOMAIN: IPV4, IPV6, domain type origin server;</li>
+<li>COS: COS origin.</li>
+<li>AWS_S3: AWS S3 COS origin server.</li>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set The origin type. Values:
-<li>`IP_DOMAIN`: IPv4/IPv6 address or domain name</li>
-<li>`COS`: COS bucket address</li>
-<li>`AWS_S3`: AWS S3 bucket address
-     * @param Type The origin type. Values:
-<li>`IP_DOMAIN`: IPv4/IPv6 address or domain name</li>
-<li>`COS`: COS bucket address</li>
-<li>`AWS_S3`: AWS S3 bucket address
+     * Set Origin server type. Valid values:
+<li>IP_DOMAIN: IPV4, IPV6, domain type origin server;</li>
+<li>COS: COS origin.</li>
+<li>AWS_S3: AWS S3 COS origin server.</li>
+     * @param Type Origin server type. Valid values:
+<li>IP_DOMAIN: IPV4, IPV6, domain type origin server;</li>
+<li>COS: COS origin.</li>
+<li>AWS_S3: AWS S3 COS origin server.</li>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get The origin record ID. 
-     * @return RecordId The origin record ID.
+     * Get Origin record ID. 
+     * @return RecordId Origin record ID.
      */
     public String getRecordId() {
         return this.RecordId;
     }
 
     /**
-     * Set The origin record ID.
-     * @param RecordId The origin record ID.
+     * Set Origin record ID.
+     * @param RecordId Origin record ID.
      */
     public void setRecordId(String RecordId) {
         this.RecordId = RecordId;
     }
 
     /**
-     * Get [Origin server weight]: a parameter used to control traffic allocation priority, value ranges from 0 to 100 (integer): <li>empty value: no weight is set, and the system schedules traffic based on the default policy;</li> <li>0 value: explicitly set the weight to 0, and traffic will not be assigned to this origin server. note: make sure at least one origin server has a weight value above 0;</li> <li>normal value: the larger the value, the more traffic is assigned;</li>.
-Note: This field may return null, which indicates a failure to obtain a valid value. 
-     * @return Weight [Origin server weight]: a parameter used to control traffic allocation priority, value ranges from 0 to 100 (integer): <li>empty value: no weight is set, and the system schedules traffic based on the default policy;</li> <li>0 value: explicitly set the weight to 0, and traffic will not be assigned to this origin server. note: make sure at least one origin server has a weight value above 0;</li> <li>normal value: the larger the value, the more traffic is assigned;</li>.
-Note: This field may return null, which indicates a failure to obtain a valid value.
+     * Get 【Origin server weight】: A parameter used to control traffic assignment priority. Value range: 0-100 (integer): <li>Empty value: No weight is set, and the system schedules traffic based on the default policy;</li><li>0: The weight is explicitly set to 0, and traffic will not be assigned to this origin server. Note: Make sure at least one origin server has a weight above 0;</li><li>Normal value: The larger the value, the more traffic is assigned;</li> 
+     * @return Weight 【Origin server weight】: A parameter used to control traffic assignment priority. Value range: 0-100 (integer): <li>Empty value: No weight is set, and the system schedules traffic based on the default policy;</li><li>0: The weight is explicitly set to 0, and traffic will not be assigned to this origin server. Note: Make sure at least one origin server has a weight above 0;</li><li>Normal value: The larger the value, the more traffic is assigned;</li>
      */
     public Long getWeight() {
         return this.Weight;
     }
 
     /**
-     * Set [Origin server weight]: a parameter used to control traffic allocation priority, value ranges from 0 to 100 (integer): <li>empty value: no weight is set, and the system schedules traffic based on the default policy;</li> <li>0 value: explicitly set the weight to 0, and traffic will not be assigned to this origin server. note: make sure at least one origin server has a weight value above 0;</li> <li>normal value: the larger the value, the more traffic is assigned;</li>.
-Note: This field may return null, which indicates a failure to obtain a valid value.
-     * @param Weight [Origin server weight]: a parameter used to control traffic allocation priority, value ranges from 0 to 100 (integer): <li>empty value: no weight is set, and the system schedules traffic based on the default policy;</li> <li>0 value: explicitly set the weight to 0, and traffic will not be assigned to this origin server. note: make sure at least one origin server has a weight value above 0;</li> <li>normal value: the larger the value, the more traffic is assigned;</li>.
-Note: This field may return null, which indicates a failure to obtain a valid value.
+     * Set 【Origin server weight】: A parameter used to control traffic assignment priority. Value range: 0-100 (integer): <li>Empty value: No weight is set, and the system schedules traffic based on the default policy;</li><li>0: The weight is explicitly set to 0, and traffic will not be assigned to this origin server. Note: Make sure at least one origin server has a weight above 0;</li><li>Normal value: The larger the value, the more traffic is assigned;</li>
+     * @param Weight 【Origin server weight】: A parameter used to control traffic assignment priority. Value range: 0-100 (integer): <li>Empty value: No weight is set, and the system schedules traffic based on the default policy;</li><li>0: The weight is explicitly set to 0, and traffic will not be assigned to this origin server. Note: Make sure at least one origin server has a weight above 0;</li><li>Normal value: The larger the value, the more traffic is assigned;</li>
      */
     public void setWeight(Long Weight) {
         this.Weight = Weight;
     }
 
     /**
-     * Get Whether to enable private authentication. It is valid when `OriginType=COS/AWS_S3`. Values:
-<li>`true`: Yes.</li>
-<li>`false`: No.</li>Default: `false`.
+     * Get Whether to use private authentication. This parameter is valid only when RecordType is COS or AWS_S3. Valid values:
+<li>true: Enable private authentication;</li>
+<li>false: Do not use private authentication.</li>Not specified. Default value: false.
  
-     * @return Private Whether to enable private authentication. It is valid when `OriginType=COS/AWS_S3`. Values:
-<li>`true`: Yes.</li>
-<li>`false`: No.</li>Default: `false`.
+     * @return Private Whether to use private authentication. This parameter is valid only when RecordType is COS or AWS_S3. Valid values:
+<li>true: Enable private authentication;</li>
+<li>false: Do not use private authentication.</li>Not specified. Default value: false.
 
      */
     public Boolean getPrivate() {
@@ -167,13 +162,13 @@ Note: This field may return null, which indicates a failure to obtain a valid va
     }
 
     /**
-     * Set Whether to enable private authentication. It is valid when `OriginType=COS/AWS_S3`. Values:
-<li>`true`: Yes.</li>
-<li>`false`: No.</li>Default: `false`.
+     * Set Whether to use private authentication. This parameter is valid only when RecordType is COS or AWS_S3. Valid values:
+<li>true: Enable private authentication;</li>
+<li>false: Do not use private authentication.</li>Not specified. Default value: false.
 
-     * @param Private Whether to enable private authentication. It is valid when `OriginType=COS/AWS_S3`. Values:
-<li>`true`: Yes.</li>
-<li>`false`: No.</li>Default: `false`.
+     * @param Private Whether to use private authentication. This parameter is valid only when RecordType is COS or AWS_S3. Valid values:
+<li>true: Enable private authentication;</li>
+<li>false: Do not use private authentication.</li>Not specified. Default value: false.
 
      */
     public void setPrivate(Boolean Private) {
@@ -181,16 +176,16 @@ Note: This field may return null, which indicates a failure to obtain a valid va
     }
 
     /**
-     * Get Private authentication parameters. This field is valid when `Private=true`. 
-     * @return PrivateParameters Private authentication parameters. This field is valid when `Private=true`.
+     * Get Private authentication parameter. Valid when the origin server type is Private=true. 
+     * @return PrivateParameters Private authentication parameter. Valid when the origin server type is Private=true.
      */
     public PrivateParameter [] getPrivateParameters() {
         return this.PrivateParameters;
     }
 
     /**
-     * Set Private authentication parameters. This field is valid when `Private=true`.
-     * @param PrivateParameters Private authentication parameters. This field is valid when `Private=true`.
+     * Set Private authentication parameter. Valid when the origin server type is Private=true.
+     * @param PrivateParameters Private authentication parameter. Valid when the origin server type is Private=true.
      */
     public void setPrivateParameters(PrivateParameter [] PrivateParameters) {
         this.PrivateParameters = PrivateParameters;

@@ -31,7 +31,7 @@ public class DescribeTimingL7OriginPullDataResponse extends AbstractModel {
     private Long TotalCount;
 
     /**
-    * Time series data list for origin-pull data.
+    * List of origin-pull time series data.
     */
     @SerializedName("TimingDataRecords")
     @Expose
@@ -61,16 +61,16 @@ public class DescribeTimingL7OriginPullDataResponse extends AbstractModel {
     }
 
     /**
-     * Get Time series data list for origin-pull data. 
-     * @return TimingDataRecords Time series data list for origin-pull data.
+     * Get List of origin-pull time series data. 
+     * @return TimingDataRecords List of origin-pull time series data.
      */
     public TimingDataRecord [] getTimingDataRecords() {
         return this.TimingDataRecords;
     }
 
     /**
-     * Set Time series data list for origin-pull data.
-     * @param TimingDataRecords Time series data list for origin-pull data.
+     * Set List of origin-pull time series data.
+     * @param TimingDataRecords List of origin-pull time series data.
      */
     public void setTimingDataRecords(TimingDataRecord [] TimingDataRecords) {
         this.TimingDataRecords = TimingDataRecords;

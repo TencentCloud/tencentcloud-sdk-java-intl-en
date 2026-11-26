@@ -24,79 +24,79 @@ import java.util.HashMap;
 public class StandardDebug extends AbstractModel {
 
     /**
-    * Whether to enable standard debugging. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable </li>
+    * Debug feature switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * The client IP to allow. It can be an IPv4/IPv6 address or a CIDR block. If not specified, it means to allow any client IP
+    * Allowed client sources. Supports filling in IPv4 and IPv6 IPs or IP ranges. 0.0.0.0/0 indicates that all IPv4 clients are allowed for debugging, and ::/0 indicates that all IPv6 clients are allowed for debugging.
     */
     @SerializedName("AllowClientIPList")
     @Expose
     private String [] AllowClientIPList;
 
     /**
-    * The time when the standard debugging setting expires. If it is exceeded, this feature becomes invalid.
+    * Debug feature expiration time. If the set time is exceeded, the feature becomes invalid.
     */
     @SerializedName("ExpireTime")
     @Expose
     private String ExpireTime;
 
     /**
-     * Get Whether to enable standard debugging. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable </li> 
-     * @return Switch Whether to enable standard debugging. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable </li>
+     * Get Debug feature switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li> 
+     * @return Switch Debug feature switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set Whether to enable standard debugging. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable </li>
-     * @param Switch Whether to enable standard debugging. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable </li>
+     * Set Debug feature switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+     * @param Switch Debug feature switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get The client IP to allow. It can be an IPv4/IPv6 address or a CIDR block. If not specified, it means to allow any client IP 
-     * @return AllowClientIPList The client IP to allow. It can be an IPv4/IPv6 address or a CIDR block. If not specified, it means to allow any client IP
+     * Get Allowed client sources. Supports filling in IPv4 and IPv6 IPs or IP ranges. 0.0.0.0/0 indicates that all IPv4 clients are allowed for debugging, and ::/0 indicates that all IPv6 clients are allowed for debugging. 
+     * @return AllowClientIPList Allowed client sources. Supports filling in IPv4 and IPv6 IPs or IP ranges. 0.0.0.0/0 indicates that all IPv4 clients are allowed for debugging, and ::/0 indicates that all IPv6 clients are allowed for debugging.
      */
     public String [] getAllowClientIPList() {
         return this.AllowClientIPList;
     }
 
     /**
-     * Set The client IP to allow. It can be an IPv4/IPv6 address or a CIDR block. If not specified, it means to allow any client IP
-     * @param AllowClientIPList The client IP to allow. It can be an IPv4/IPv6 address or a CIDR block. If not specified, it means to allow any client IP
+     * Set Allowed client sources. Supports filling in IPv4 and IPv6 IPs or IP ranges. 0.0.0.0/0 indicates that all IPv4 clients are allowed for debugging, and ::/0 indicates that all IPv6 clients are allowed for debugging.
+     * @param AllowClientIPList Allowed client sources. Supports filling in IPv4 and IPv6 IPs or IP ranges. 0.0.0.0/0 indicates that all IPv4 clients are allowed for debugging, and ::/0 indicates that all IPv6 clients are allowed for debugging.
      */
     public void setAllowClientIPList(String [] AllowClientIPList) {
         this.AllowClientIPList = AllowClientIPList;
     }
 
     /**
-     * Get The time when the standard debugging setting expires. If it is exceeded, this feature becomes invalid. 
-     * @return ExpireTime The time when the standard debugging setting expires. If it is exceeded, this feature becomes invalid.
+     * Get Debug feature expiration time. If the set time is exceeded, the feature becomes invalid. 
+     * @return ExpireTime Debug feature expiration time. If the set time is exceeded, the feature becomes invalid.
      */
     public String getExpireTime() {
         return this.ExpireTime;
     }
 
     /**
-     * Set The time when the standard debugging setting expires. If it is exceeded, this feature becomes invalid.
-     * @param ExpireTime The time when the standard debugging setting expires. If it is exceeded, this feature becomes invalid.
+     * Set Debug feature expiration time. If the set time is exceeded, the feature becomes invalid.
+     * @param ExpireTime Debug feature expiration time. If the set time is exceeded, the feature becomes invalid.
      */
     public void setExpireTime(String ExpireTime) {
         this.ExpireTime = ExpireTime;

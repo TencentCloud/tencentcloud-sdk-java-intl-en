@@ -24,125 +24,125 @@ import java.util.HashMap;
 public class RateLimitConfig extends AbstractModel {
 
     /**
-    * Switch. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+    * Switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * The settings of the custom rate limiting rule. If it is null, the settings that were last configured will be used.
+    * Rate limit - user rule list. If null, use the last set configuration by default.
     */
     @SerializedName("RateLimitUserRules")
     @Expose
     private RateLimitUserRule [] RateLimitUserRules;
 
     /**
-    * The rate limit template feature. if null, use the last set configuration by default.
+    * Rate limit template feature. If null, use the last set configuration by default.
     */
     @SerializedName("RateLimitTemplate")
     @Expose
     private RateLimitTemplate RateLimitTemplate;
 
     /**
-    * Intelligent client filtering. if null, use the last set configuration by default.
+    * Intelligent client filtering. If it is null, use the last set configuration by default.
     */
     @SerializedName("RateLimitIntelligence")
     @Expose
     private RateLimitIntelligence RateLimitIntelligence;
 
     /**
-    * The custom rate limiting rules. if it is `null`, the previous settings is used.
+    * Rate limit - Managed Custom Rules. If null, use the last set configuration by default.
     */
     @SerializedName("RateLimitCustomizes")
     @Expose
     private RateLimitUserRule [] RateLimitCustomizes;
 
     /**
-     * Get Switch. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li> 
-     * @return Switch Switch. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+     * Get Switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li> 
+     * @return Switch Switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set Switch. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-     * @param Switch Switch. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+     * Set Switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+     * @param Switch Switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get The settings of the custom rate limiting rule. If it is null, the settings that were last configured will be used. 
-     * @return RateLimitUserRules The settings of the custom rate limiting rule. If it is null, the settings that were last configured will be used.
+     * Get Rate limit - user rule list. If null, use the last set configuration by default. 
+     * @return RateLimitUserRules Rate limit - user rule list. If null, use the last set configuration by default.
      */
     public RateLimitUserRule [] getRateLimitUserRules() {
         return this.RateLimitUserRules;
     }
 
     /**
-     * Set The settings of the custom rate limiting rule. If it is null, the settings that were last configured will be used.
-     * @param RateLimitUserRules The settings of the custom rate limiting rule. If it is null, the settings that were last configured will be used.
+     * Set Rate limit - user rule list. If null, use the last set configuration by default.
+     * @param RateLimitUserRules Rate limit - user rule list. If null, use the last set configuration by default.
      */
     public void setRateLimitUserRules(RateLimitUserRule [] RateLimitUserRules) {
         this.RateLimitUserRules = RateLimitUserRules;
     }
 
     /**
-     * Get The rate limit template feature. if null, use the last set configuration by default. 
-     * @return RateLimitTemplate The rate limit template feature. if null, use the last set configuration by default.
+     * Get Rate limit template feature. If null, use the last set configuration by default. 
+     * @return RateLimitTemplate Rate limit template feature. If null, use the last set configuration by default.
      */
     public RateLimitTemplate getRateLimitTemplate() {
         return this.RateLimitTemplate;
     }
 
     /**
-     * Set The rate limit template feature. if null, use the last set configuration by default.
-     * @param RateLimitTemplate The rate limit template feature. if null, use the last set configuration by default.
+     * Set Rate limit template feature. If null, use the last set configuration by default.
+     * @param RateLimitTemplate Rate limit template feature. If null, use the last set configuration by default.
      */
     public void setRateLimitTemplate(RateLimitTemplate RateLimitTemplate) {
         this.RateLimitTemplate = RateLimitTemplate;
     }
 
     /**
-     * Get Intelligent client filtering. if null, use the last set configuration by default. 
-     * @return RateLimitIntelligence Intelligent client filtering. if null, use the last set configuration by default.
+     * Get Intelligent client filtering. If it is null, use the last set configuration by default. 
+     * @return RateLimitIntelligence Intelligent client filtering. If it is null, use the last set configuration by default.
      */
     public RateLimitIntelligence getRateLimitIntelligence() {
         return this.RateLimitIntelligence;
     }
 
     /**
-     * Set Intelligent client filtering. if null, use the last set configuration by default.
-     * @param RateLimitIntelligence Intelligent client filtering. if null, use the last set configuration by default.
+     * Set Intelligent client filtering. If it is null, use the last set configuration by default.
+     * @param RateLimitIntelligence Intelligent client filtering. If it is null, use the last set configuration by default.
      */
     public void setRateLimitIntelligence(RateLimitIntelligence RateLimitIntelligence) {
         this.RateLimitIntelligence = RateLimitIntelligence;
     }
 
     /**
-     * Get The custom rate limiting rules. if it is `null`, the previous settings is used. 
-     * @return RateLimitCustomizes The custom rate limiting rules. if it is `null`, the previous settings is used.
+     * Get Rate limit - Managed Custom Rules. If null, use the last set configuration by default. 
+     * @return RateLimitCustomizes Rate limit - Managed Custom Rules. If null, use the last set configuration by default.
      */
     public RateLimitUserRule [] getRateLimitCustomizes() {
         return this.RateLimitCustomizes;
     }
 
     /**
-     * Set The custom rate limiting rules. if it is `null`, the previous settings is used.
-     * @param RateLimitCustomizes The custom rate limiting rules. if it is `null`, the previous settings is used.
+     * Set Rate limit - Managed Custom Rules. If null, use the last set configuration by default.
+     * @param RateLimitCustomizes Rate limit - Managed Custom Rules. If null, use the last set configuration by default.
      */
     public void setRateLimitCustomizes(RateLimitUserRule [] RateLimitCustomizes) {
         this.RateLimitCustomizes = RateLimitCustomizes;

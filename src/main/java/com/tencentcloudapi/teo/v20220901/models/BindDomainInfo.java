@@ -31,17 +31,17 @@ public class BindDomainInfo extends AbstractModel {
     private String Domain;
 
     /**
-    * Zone ID to which the domain belongs.
+    * Site ID of the domain name.
     */
     @SerializedName("ZoneId")
     @Expose
     private String ZoneId;
 
     /**
-    * Binding status. valid values:. 
-<li>`process`: binding in progress</li>
-<li>`online`: binding succeeded.</li>
-<Li>`fail`: binding failed.</li>
+    * Binding status. Valid values: 
+<li>process: binding;</li>
+<li>online: binding succeeded;</li>
+<li>fail: Binding failed.</li>
     */
     @SerializedName("Status")
     @Expose
@@ -64,44 +64,44 @@ public class BindDomainInfo extends AbstractModel {
     }
 
     /**
-     * Get Zone ID to which the domain belongs. 
-     * @return ZoneId Zone ID to which the domain belongs.
+     * Get Site ID of the domain name. 
+     * @return ZoneId Site ID of the domain name.
      */
     public String getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set Zone ID to which the domain belongs.
-     * @param ZoneId Zone ID to which the domain belongs.
+     * Set Site ID of the domain name.
+     * @param ZoneId Site ID of the domain name.
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get Binding status. valid values:. 
-<li>`process`: binding in progress</li>
-<li>`online`: binding succeeded.</li>
-<Li>`fail`: binding failed.</li> 
-     * @return Status Binding status. valid values:. 
-<li>`process`: binding in progress</li>
-<li>`online`: binding succeeded.</li>
-<Li>`fail`: binding failed.</li>
+     * Get Binding status. Valid values: 
+<li>process: binding;</li>
+<li>online: binding succeeded;</li>
+<li>fail: Binding failed.</li> 
+     * @return Status Binding status. Valid values: 
+<li>process: binding;</li>
+<li>online: binding succeeded;</li>
+<li>fail: Binding failed.</li>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Binding status. valid values:. 
-<li>`process`: binding in progress</li>
-<li>`online`: binding succeeded.</li>
-<Li>`fail`: binding failed.</li>
-     * @param Status Binding status. valid values:. 
-<li>`process`: binding in progress</li>
-<li>`online`: binding succeeded.</li>
-<Li>`fail`: binding failed.</li>
+     * Set Binding status. Valid values: 
+<li>process: binding;</li>
+<li>online: binding succeeded;</li>
+<li>fail: Binding failed.</li>
+     * @param Status Binding status. Valid values: 
+<li>process: binding;</li>
+<li>online: binding succeeded;</li>
+<li>fail: Binding failed.</li>
      */
     public void setStatus(String Status) {
         this.Status = Status;

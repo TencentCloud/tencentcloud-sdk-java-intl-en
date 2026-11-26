@@ -31,7 +31,7 @@ public class UpstreamCertInfo extends AbstractModel {
     private MutualTLS UpstreamMutualTLS;
 
     /**
-    * In the origin certificate verification scenario, this field represents the CA certificate used by the EO node to verify the server-side certificate when returning to the origin. it is deployed in the EO node and used for the EO node to authenticate the server certificate. when used as an input parameter, leave blank to indicate retaining the original configuration.
+    * In the origin certificate verification scenario, this field is the CA certificate used by the EO node to verify the origin. It is deployed in the EO node and used for the EO node to authenticate the server certificate. As an input parameter, leave it blank to indicate retaining the original configuration.
     */
     @SerializedName("UpstreamCertificateVerify")
     @Expose
@@ -54,16 +54,16 @@ public class UpstreamCertInfo extends AbstractModel {
     }
 
     /**
-     * Get In the origin certificate verification scenario, this field represents the CA certificate used by the EO node to verify the server-side certificate when returning to the origin. it is deployed in the EO node and used for the EO node to authenticate the server certificate. when used as an input parameter, leave blank to indicate retaining the original configuration. 
-     * @return UpstreamCertificateVerify In the origin certificate verification scenario, this field represents the CA certificate used by the EO node to verify the server-side certificate when returning to the origin. it is deployed in the EO node and used for the EO node to authenticate the server certificate. when used as an input parameter, leave blank to indicate retaining the original configuration.
+     * Get In the origin certificate verification scenario, this field is the CA certificate used by the EO node to verify the origin. It is deployed in the EO node and used for the EO node to authenticate the server certificate. As an input parameter, leave it blank to indicate retaining the original configuration. 
+     * @return UpstreamCertificateVerify In the origin certificate verification scenario, this field is the CA certificate used by the EO node to verify the origin. It is deployed in the EO node and used for the EO node to authenticate the server certificate. As an input parameter, leave it blank to indicate retaining the original configuration.
      */
     public OriginCertificateVerify getUpstreamCertificateVerify() {
         return this.UpstreamCertificateVerify;
     }
 
     /**
-     * Set In the origin certificate verification scenario, this field represents the CA certificate used by the EO node to verify the server-side certificate when returning to the origin. it is deployed in the EO node and used for the EO node to authenticate the server certificate. when used as an input parameter, leave blank to indicate retaining the original configuration.
-     * @param UpstreamCertificateVerify In the origin certificate verification scenario, this field represents the CA certificate used by the EO node to verify the server-side certificate when returning to the origin. it is deployed in the EO node and used for the EO node to authenticate the server certificate. when used as an input parameter, leave blank to indicate retaining the original configuration.
+     * Set In the origin certificate verification scenario, this field is the CA certificate used by the EO node to verify the origin. It is deployed in the EO node and used for the EO node to authenticate the server certificate. As an input parameter, leave it blank to indicate retaining the original configuration.
+     * @param UpstreamCertificateVerify In the origin certificate verification scenario, this field is the CA certificate used by the EO node to verify the origin. It is deployed in the EO node and used for the EO node to authenticate the server certificate. As an input parameter, leave it blank to indicate retaining the original configuration.
      */
     public void setUpstreamCertificateVerify(OriginCertificateVerify UpstreamCertificateVerify) {
         this.UpstreamCertificateVerify = UpstreamCertificateVerify;

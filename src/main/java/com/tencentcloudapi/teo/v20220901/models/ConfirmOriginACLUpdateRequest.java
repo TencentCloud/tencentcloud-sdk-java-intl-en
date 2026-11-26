@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class ConfirmOriginACLUpdateRequest extends AbstractModel {
 
     /**
-    * Specifies the site ID.
+    * Zone ID.
     */
     @SerializedName("ZoneId")
     @Expose
     private String ZoneId;
 
     /**
-     * Get Specifies the site ID. 
-     * @return ZoneId Specifies the site ID.
+     * Get Zone ID. 
+     * @return ZoneId Zone ID.
      */
     public String getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set Specifies the site ID.
-     * @param ZoneId Specifies the site ID.
+     * Set Zone ID.
+     * @param ZoneId Zone ID.
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;

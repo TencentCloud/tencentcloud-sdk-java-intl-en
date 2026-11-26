@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class DeleteSecurityAPIResourceRequest extends AbstractModel {
 
     /**
-    * Zone ID.		
+    * Zone ID.	
     */
     @SerializedName("ZoneId")
     @Expose
     private String ZoneId;
 
     /**
-    * Specifies the ID list of API resources to be deleted.
+    * List of API resource IDs to delete.
     */
     @SerializedName("APIResourceIds")
     @Expose
     private String [] APIResourceIds;
 
     /**
-     * Get Zone ID.		 
-     * @return ZoneId Zone ID.		
+     * Get Zone ID.	 
+     * @return ZoneId Zone ID.	
      */
     public String getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set Zone ID.		
-     * @param ZoneId Zone ID.		
+     * Set Zone ID.	
+     * @param ZoneId Zone ID.	
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get Specifies the ID list of API resources to be deleted. 
-     * @return APIResourceIds Specifies the ID list of API resources to be deleted.
+     * Get List of API resource IDs to delete. 
+     * @return APIResourceIds List of API resource IDs to delete.
      */
     public String [] getAPIResourceIds() {
         return this.APIResourceIds;
     }
 
     /**
-     * Set Specifies the ID list of API resources to be deleted.
-     * @param APIResourceIds Specifies the ID list of API resources to be deleted.
+     * Set List of API resource IDs to delete.
+     * @param APIResourceIds List of API resource IDs to delete.
      */
     public void setAPIResourceIds(String [] APIResourceIds) {
         this.APIResourceIds = APIResourceIds;

@@ -24,9 +24,9 @@ import java.util.HashMap;
 public class SlowPostConfig extends AbstractModel {
 
     /**
-    * Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+    * Switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
     */
     @SerializedName("Switch")
     @Expose
@@ -40,47 +40,47 @@ public class SlowPostConfig extends AbstractModel {
     private FirstPartConfig FirstPartConfig;
 
     /**
-    * Specifies the basic configuration.
+    * Basic configuration.
     */
     @SerializedName("SlowRateConfig")
     @Expose
     private SlowRateConfig SlowRateConfig;
 
     /**
-    * Handling action for slow attack. valid values:.
-<li>`monitor`: observe</li>.
-<li>`drop`: block the request.</li>.
+    * Handling action for slow attacks. Valid values:
+<li>monitor: observation;</li>
+<li>drop: block.</li>
     */
     @SerializedName("Action")
     @Expose
     private String Action;
 
     /**
-    * Specifies the Id of this rule.
+    * Rule Id.
     */
     @SerializedName("RuleId")
     @Expose
     private Long RuleId;
 
     /**
-     * Get Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li> 
-     * @return Switch Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+     * Get Switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li> 
+     * @return Switch Switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-     * @param Switch Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+     * Set Switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+     * @param Switch Switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
@@ -103,56 +103,56 @@ public class SlowPostConfig extends AbstractModel {
     }
 
     /**
-     * Get Specifies the basic configuration. 
-     * @return SlowRateConfig Specifies the basic configuration.
+     * Get Basic configuration. 
+     * @return SlowRateConfig Basic configuration.
      */
     public SlowRateConfig getSlowRateConfig() {
         return this.SlowRateConfig;
     }
 
     /**
-     * Set Specifies the basic configuration.
-     * @param SlowRateConfig Specifies the basic configuration.
+     * Set Basic configuration.
+     * @param SlowRateConfig Basic configuration.
      */
     public void setSlowRateConfig(SlowRateConfig SlowRateConfig) {
         this.SlowRateConfig = SlowRateConfig;
     }
 
     /**
-     * Get Handling action for slow attack. valid values:.
-<li>`monitor`: observe</li>.
-<li>`drop`: block the request.</li>. 
-     * @return Action Handling action for slow attack. valid values:.
-<li>`monitor`: observe</li>.
-<li>`drop`: block the request.</li>.
+     * Get Handling action for slow attacks. Valid values:
+<li>monitor: observation;</li>
+<li>drop: block.</li> 
+     * @return Action Handling action for slow attacks. Valid values:
+<li>monitor: observation;</li>
+<li>drop: block.</li>
      */
     public String getAction() {
         return this.Action;
     }
 
     /**
-     * Set Handling action for slow attack. valid values:.
-<li>`monitor`: observe</li>.
-<li>`drop`: block the request.</li>.
-     * @param Action Handling action for slow attack. valid values:.
-<li>`monitor`: observe</li>.
-<li>`drop`: block the request.</li>.
+     * Set Handling action for slow attacks. Valid values:
+<li>monitor: observation;</li>
+<li>drop: block.</li>
+     * @param Action Handling action for slow attacks. Valid values:
+<li>monitor: observation;</li>
+<li>drop: block.</li>
      */
     public void setAction(String Action) {
         this.Action = Action;
     }
 
     /**
-     * Get Specifies the Id of this rule. 
-     * @return RuleId Specifies the Id of this rule.
+     * Get Rule Id. 
+     * @return RuleId Rule Id.
      */
     public Long getRuleId() {
         return this.RuleId;
     }
 
     /**
-     * Set Specifies the Id of this rule.
-     * @param RuleId Specifies the Id of this rule.
+     * Set Rule Id.
+     * @param RuleId Rule Id.
      */
     public void setRuleId(Long RuleId) {
         this.RuleId = RuleId;

@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class IdentifyZoneRequest extends AbstractModel {
 
     /**
-    * The site name.
+    * Site name.
     */
     @SerializedName("ZoneName")
     @Expose
     private String ZoneName;
 
     /**
-    * A subdomain name under the site. Specify this field if you want to verify the ownership of a subdomain name. Otherwise you can leave it blank.
+    * Subdomain under the site. If verifying a subdomain under the Verification Site, pass this value; otherwise empty.
 
     */
     @SerializedName("Domain")
@@ -39,25 +39,25 @@ public class IdentifyZoneRequest extends AbstractModel {
     private String Domain;
 
     /**
-     * Get The site name. 
-     * @return ZoneName The site name.
+     * Get Site name. 
+     * @return ZoneName Site name.
      */
     public String getZoneName() {
         return this.ZoneName;
     }
 
     /**
-     * Set The site name.
-     * @param ZoneName The site name.
+     * Set Site name.
+     * @param ZoneName Site name.
      */
     public void setZoneName(String ZoneName) {
         this.ZoneName = ZoneName;
     }
 
     /**
-     * Get A subdomain name under the site. Specify this field if you want to verify the ownership of a subdomain name. Otherwise you can leave it blank.
+     * Get Subdomain under the site. If verifying a subdomain under the Verification Site, pass this value; otherwise empty.
  
-     * @return Domain A subdomain name under the site. Specify this field if you want to verify the ownership of a subdomain name. Otherwise you can leave it blank.
+     * @return Domain Subdomain under the site. If verifying a subdomain under the Verification Site, pass this value; otherwise empty.
 
      */
     public String getDomain() {
@@ -65,9 +65,9 @@ public class IdentifyZoneRequest extends AbstractModel {
     }
 
     /**
-     * Set A subdomain name under the site. Specify this field if you want to verify the ownership of a subdomain name. Otherwise you can leave it blank.
+     * Set Subdomain under the site. If verifying a subdomain under the Verification Site, pass this value; otherwise empty.
 
-     * @param Domain A subdomain name under the site. Specify this field if you want to verify the ownership of a subdomain name. Otherwise you can leave it blank.
+     * @param Domain Subdomain under the site. If verifying a subdomain under the Verification Site, pass this value; otherwise empty.
 
      */
     public void setDomain(String Domain) {

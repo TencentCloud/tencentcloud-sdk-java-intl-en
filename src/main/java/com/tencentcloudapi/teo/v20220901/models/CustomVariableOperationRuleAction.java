@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CustomVariableOperationRuleAction extends AbstractModel {
 
     /**
-    * <p>Operation name. The name should correspond to the parameter structure. For example, if Name=Set, SetParameters is required. Currently only support filling in Set.</p><li>Set: custom variable settings;</li>
+    * <p>Operation name. The name should correspond to the parameter structure. For example, if Name=Set, SetParameters is required. Currently only support filling in Set.</p><li>Set: Custom Variable settings;</li>
     */
     @SerializedName("Name")
     @Expose
@@ -38,16 +38,16 @@ public class CustomVariableOperationRuleAction extends AbstractModel {
     private SetParameters SetParameters;
 
     /**
-     * Get <p>Operation name. The name should correspond to the parameter structure. For example, if Name=Set, SetParameters is required. Currently only support filling in Set.</p><li>Set: custom variable settings;</li> 
-     * @return Name <p>Operation name. The name should correspond to the parameter structure. For example, if Name=Set, SetParameters is required. Currently only support filling in Set.</p><li>Set: custom variable settings;</li>
+     * Get <p>Operation name. The name should correspond to the parameter structure. For example, if Name=Set, SetParameters is required. Currently only support filling in Set.</p><li>Set: Custom Variable settings;</li> 
+     * @return Name <p>Operation name. The name should correspond to the parameter structure. For example, if Name=Set, SetParameters is required. Currently only support filling in Set.</p><li>Set: Custom Variable settings;</li>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set <p>Operation name. The name should correspond to the parameter structure. For example, if Name=Set, SetParameters is required. Currently only support filling in Set.</p><li>Set: custom variable settings;</li>
-     * @param Name <p>Operation name. The name should correspond to the parameter structure. For example, if Name=Set, SetParameters is required. Currently only support filling in Set.</p><li>Set: custom variable settings;</li>
+     * Set <p>Operation name. The name should correspond to the parameter structure. For example, if Name=Set, SetParameters is required. Currently only support filling in Set.</p><li>Set: Custom Variable settings;</li>
+     * @param Name <p>Operation name. The name should correspond to the parameter structure. For example, if Name=Set, SetParameters is required. Currently only support filling in Set.</p><li>Set: Custom Variable settings;</li>
      */
     public void setName(String Name) {
         this.Name = Name;

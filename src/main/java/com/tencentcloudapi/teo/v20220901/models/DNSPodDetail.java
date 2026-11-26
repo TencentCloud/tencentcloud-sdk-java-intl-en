@@ -24,9 +24,9 @@ import java.util.HashMap;
 public class DNSPodDetail extends AbstractModel {
 
     /**
-    * Whether it is a fake site, with values:.
-<Li>0: non-fake site.</li>.
-<Li>1: fake site.</li>.
+    * Whether it is a fake site, with values:
+<li>0: non-fake site</li>
+<li> 1: Fake site.</li>
 
     */
     @SerializedName("IsFake")
@@ -34,13 +34,13 @@ public class DNSPodDetail extends AbstractModel {
     private Long IsFake;
 
     /**
-     * Get Whether it is a fake site, with values:.
-<Li>0: non-fake site.</li>.
-<Li>1: fake site.</li>.
+     * Get Whether it is a fake site, with values:
+<li>0: non-fake site</li>
+<li> 1: Fake site.</li>
  
-     * @return IsFake Whether it is a fake site, with values:.
-<Li>0: non-fake site.</li>.
-<Li>1: fake site.</li>.
+     * @return IsFake Whether it is a fake site, with values:
+<li>0: non-fake site</li>
+<li> 1: Fake site.</li>
 
      */
     public Long getIsFake() {
@@ -48,13 +48,13 @@ public class DNSPodDetail extends AbstractModel {
     }
 
     /**
-     * Set Whether it is a fake site, with values:.
-<Li>0: non-fake site.</li>.
-<Li>1: fake site.</li>.
+     * Set Whether it is a fake site, with values:
+<li>0: non-fake site</li>
+<li> 1: Fake site.</li>
 
-     * @param IsFake Whether it is a fake site, with values:.
-<Li>0: non-fake site.</li>.
-<Li>1: fake site.</li>.
+     * @param IsFake Whether it is a fake site, with values:
+<li>0: non-fake site</li>
+<li> 1: Fake site.</li>
 
      */
     public void setIsFake(Long IsFake) {

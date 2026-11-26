@@ -24,430 +24,348 @@ import java.util.HashMap;
 public class AccelerationDomain extends AbstractModel {
 
     /**
-    * ID of the site.
+    * <p>Site ID.</p>
     */
     @SerializedName("ZoneId")
     @Expose
     private String ZoneId;
 
     /**
-    * Accelerated domain name
+    * <p>Acceleration domain name.</p>
     */
     @SerializedName("DomainName")
     @Expose
     private String DomainName;
 
     /**
-    * Accelerated domain name status. valid values:.
-<li>online: in effect;</li>.
-<li>process: deployment in progress.</li>.
-<li>offline: disabled;</li>.
-<li>`forbidden`: banned.</li>.
-<li>init: not applied, site to be activated.</li>.
+    * <p>Acceleration domain name status</p><p>Enumeration values:</p><ul><li>online: effective</li><li>process: deploying</li><li>offline: disabled</li><li>init: not applied, site to be activated</li></ul>
     */
     @SerializedName("DomainStatus")
     @Expose
     private String DomainStatus;
 
     /**
-    * The CNAME address.
+    * <p>CNAME address.</p>
     */
     @SerializedName("Cname")
     @Expose
     private String Cname;
 
     /**
-    * IPv6 status. valid values:.
-<li>follow: specifies whether to adhere to the site IPv6 configuration.</li>.
-<li>on: enabled status.</li>.
-<li>off: disabled.</li>.
-Note: This field may return null, which indicates a failure to obtain a valid value.
+    * <p>IPv6 status. Valid values:</p><li>follow: Follow the site IPv6 configuration;</li><li>on: Enabled;</li><li>off: Disabled.</li>
     */
     @SerializedName("IPv6Status")
     @Expose
     private String IPv6Status;
 
     /**
-    * Acceleration domain ownership verification status. valid values:. 
-<li>pending: to be verified.</li>.
-<li>finished: verified.</li>.	
-Note: This field may return null, which indicates a failure to obtain a valid value.
+    * <p>Acceleration domain ownership verification status. Valid values: </p><li>pending: to be verified;</li><li>finished: verified.</li>
     */
     @SerializedName("IdentificationStatus")
     @Expose
     private String IdentificationStatus;
 
     /**
-    * Acceleration domain name needs to perform ownership verification to continue providing services. this object carries the required information for the corresponding verification method.
-Note: This field may return null, which indicates a failure to obtain a valid value.
+    * <p>When the acceleration domain name needs to perform ownership verification to continue providing services, this object will carry the information required for the corresponding verification method.</p>
     */
     @SerializedName("OwnershipVerification")
     @Expose
     private OwnershipVerification OwnershipVerification;
 
     /**
-    * Details of the origin.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Origin server information.</p>
     */
     @SerializedName("OriginDetail")
     @Expose
     private OriginDetail OriginDetail;
 
     /**
-    * Origin-Pull protocol. valid values:.
-<Li>FOLLOW: follow protocol.</li>.
-<Li>HTTP: specifies the http protocol for origin-pull.</li>.
-<Li>HTTPS: specifies the https protocol for origin-pull.</li>.
-Note: This field may return null, which indicates a failure to obtain a valid value.
+    * <p>Origin-pull protocol. Valid values:</p><li>FOLLOW: follow protocol;</li><li>HTTP: origin-pull over HTTP protocol;</li><li>HTTPS: origin-pull over HTTPS protocol.</li>
     */
     @SerializedName("OriginProtocol")
     @Expose
     private String OriginProtocol;
 
     /**
-    * Specifies the HTTP origin port.
-Note: This field may return null, which indicates a failure to obtain a valid value.
+    * <p>HTTP origin port.</p>
     */
     @SerializedName("HttpOriginPort")
     @Expose
     private Long HttpOriginPort;
 
     /**
-    * Specifies the HTTPS origin port.
-Note: This field may return null, which indicates a failure to obtain a valid value.
+    * <p>HTTPS origin port.</p>
     */
     @SerializedName("HttpsOriginPort")
     @Expose
     private Long HttpsOriginPort;
 
     /**
-    * Accelerates domain name certificate information.
-Note: This field may return null, which indicates a failure to obtain a valid value.
+    * <p>Acceleration domain name certificate information.</p>
     */
     @SerializedName("Certificate")
     @Expose
     private AccelerationDomainCertificate Certificate;
 
     /**
-    * Creation time of the accelerated domain name.
+    * <p>Creation time.</p>
     */
     @SerializedName("CreatedOn")
     @Expose
     private String CreatedOn;
 
     /**
-    * Modification time of the accelerated domain name.
+    * <p>Last modified.</p>
     */
     @SerializedName("ModifiedOn")
     @Expose
     private String ModifiedOn;
 
     /**
-     * Get ID of the site. 
-     * @return ZoneId ID of the site.
+    * <p>List of region access restrictions on a domain name due to compliance issues.</p>
+    */
+    @SerializedName("ComplianceRestrictions")
+    @Expose
+    private ComplianceRestriction [] ComplianceRestrictions;
+
+    /**
+     * Get <p>Site ID.</p> 
+     * @return ZoneId <p>Site ID.</p>
      */
     public String getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set ID of the site.
-     * @param ZoneId ID of the site.
+     * Set <p>Site ID.</p>
+     * @param ZoneId <p>Site ID.</p>
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get Accelerated domain name 
-     * @return DomainName Accelerated domain name
+     * Get <p>Acceleration domain name.</p> 
+     * @return DomainName <p>Acceleration domain name.</p>
      */
     public String getDomainName() {
         return this.DomainName;
     }
 
     /**
-     * Set Accelerated domain name
-     * @param DomainName Accelerated domain name
+     * Set <p>Acceleration domain name.</p>
+     * @param DomainName <p>Acceleration domain name.</p>
      */
     public void setDomainName(String DomainName) {
         this.DomainName = DomainName;
     }
 
     /**
-     * Get Accelerated domain name status. valid values:.
-<li>online: in effect;</li>.
-<li>process: deployment in progress.</li>.
-<li>offline: disabled;</li>.
-<li>`forbidden`: banned.</li>.
-<li>init: not applied, site to be activated.</li>. 
-     * @return DomainStatus Accelerated domain name status. valid values:.
-<li>online: in effect;</li>.
-<li>process: deployment in progress.</li>.
-<li>offline: disabled;</li>.
-<li>`forbidden`: banned.</li>.
-<li>init: not applied, site to be activated.</li>.
+     * Get <p>Acceleration domain name status</p><p>Enumeration values:</p><ul><li>online: effective</li><li>process: deploying</li><li>offline: disabled</li><li>init: not applied, site to be activated</li></ul> 
+     * @return DomainStatus <p>Acceleration domain name status</p><p>Enumeration values:</p><ul><li>online: effective</li><li>process: deploying</li><li>offline: disabled</li><li>init: not applied, site to be activated</li></ul>
      */
     public String getDomainStatus() {
         return this.DomainStatus;
     }
 
     /**
-     * Set Accelerated domain name status. valid values:.
-<li>online: in effect;</li>.
-<li>process: deployment in progress.</li>.
-<li>offline: disabled;</li>.
-<li>`forbidden`: banned.</li>.
-<li>init: not applied, site to be activated.</li>.
-     * @param DomainStatus Accelerated domain name status. valid values:.
-<li>online: in effect;</li>.
-<li>process: deployment in progress.</li>.
-<li>offline: disabled;</li>.
-<li>`forbidden`: banned.</li>.
-<li>init: not applied, site to be activated.</li>.
+     * Set <p>Acceleration domain name status</p><p>Enumeration values:</p><ul><li>online: effective</li><li>process: deploying</li><li>offline: disabled</li><li>init: not applied, site to be activated</li></ul>
+     * @param DomainStatus <p>Acceleration domain name status</p><p>Enumeration values:</p><ul><li>online: effective</li><li>process: deploying</li><li>offline: disabled</li><li>init: not applied, site to be activated</li></ul>
      */
     public void setDomainStatus(String DomainStatus) {
         this.DomainStatus = DomainStatus;
     }
 
     /**
-     * Get The CNAME address. 
-     * @return Cname The CNAME address.
+     * Get <p>CNAME address.</p> 
+     * @return Cname <p>CNAME address.</p>
      */
     public String getCname() {
         return this.Cname;
     }
 
     /**
-     * Set The CNAME address.
-     * @param Cname The CNAME address.
+     * Set <p>CNAME address.</p>
+     * @param Cname <p>CNAME address.</p>
      */
     public void setCname(String Cname) {
         this.Cname = Cname;
     }
 
     /**
-     * Get IPv6 status. valid values:.
-<li>follow: specifies whether to adhere to the site IPv6 configuration.</li>.
-<li>on: enabled status.</li>.
-<li>off: disabled.</li>.
-Note: This field may return null, which indicates a failure to obtain a valid value. 
-     * @return IPv6Status IPv6 status. valid values:.
-<li>follow: specifies whether to adhere to the site IPv6 configuration.</li>.
-<li>on: enabled status.</li>.
-<li>off: disabled.</li>.
-Note: This field may return null, which indicates a failure to obtain a valid value.
+     * Get <p>IPv6 status. Valid values:</p><li>follow: Follow the site IPv6 configuration;</li><li>on: Enabled;</li><li>off: Disabled.</li> 
+     * @return IPv6Status <p>IPv6 status. Valid values:</p><li>follow: Follow the site IPv6 configuration;</li><li>on: Enabled;</li><li>off: Disabled.</li>
      */
     public String getIPv6Status() {
         return this.IPv6Status;
     }
 
     /**
-     * Set IPv6 status. valid values:.
-<li>follow: specifies whether to adhere to the site IPv6 configuration.</li>.
-<li>on: enabled status.</li>.
-<li>off: disabled.</li>.
-Note: This field may return null, which indicates a failure to obtain a valid value.
-     * @param IPv6Status IPv6 status. valid values:.
-<li>follow: specifies whether to adhere to the site IPv6 configuration.</li>.
-<li>on: enabled status.</li>.
-<li>off: disabled.</li>.
-Note: This field may return null, which indicates a failure to obtain a valid value.
+     * Set <p>IPv6 status. Valid values:</p><li>follow: Follow the site IPv6 configuration;</li><li>on: Enabled;</li><li>off: Disabled.</li>
+     * @param IPv6Status <p>IPv6 status. Valid values:</p><li>follow: Follow the site IPv6 configuration;</li><li>on: Enabled;</li><li>off: Disabled.</li>
      */
     public void setIPv6Status(String IPv6Status) {
         this.IPv6Status = IPv6Status;
     }
 
     /**
-     * Get Acceleration domain ownership verification status. valid values:. 
-<li>pending: to be verified.</li>.
-<li>finished: verified.</li>.	
-Note: This field may return null, which indicates a failure to obtain a valid value. 
-     * @return IdentificationStatus Acceleration domain ownership verification status. valid values:. 
-<li>pending: to be verified.</li>.
-<li>finished: verified.</li>.	
-Note: This field may return null, which indicates a failure to obtain a valid value.
+     * Get <p>Acceleration domain ownership verification status. Valid values: </p><li>pending: to be verified;</li><li>finished: verified.</li> 
+     * @return IdentificationStatus <p>Acceleration domain ownership verification status. Valid values: </p><li>pending: to be verified;</li><li>finished: verified.</li>
      */
     public String getIdentificationStatus() {
         return this.IdentificationStatus;
     }
 
     /**
-     * Set Acceleration domain ownership verification status. valid values:. 
-<li>pending: to be verified.</li>.
-<li>finished: verified.</li>.	
-Note: This field may return null, which indicates a failure to obtain a valid value.
-     * @param IdentificationStatus Acceleration domain ownership verification status. valid values:. 
-<li>pending: to be verified.</li>.
-<li>finished: verified.</li>.	
-Note: This field may return null, which indicates a failure to obtain a valid value.
+     * Set <p>Acceleration domain ownership verification status. Valid values: </p><li>pending: to be verified;</li><li>finished: verified.</li>
+     * @param IdentificationStatus <p>Acceleration domain ownership verification status. Valid values: </p><li>pending: to be verified;</li><li>finished: verified.</li>
      */
     public void setIdentificationStatus(String IdentificationStatus) {
         this.IdentificationStatus = IdentificationStatus;
     }
 
     /**
-     * Get Acceleration domain name needs to perform ownership verification to continue providing services. this object carries the required information for the corresponding verification method.
-Note: This field may return null, which indicates a failure to obtain a valid value. 
-     * @return OwnershipVerification Acceleration domain name needs to perform ownership verification to continue providing services. this object carries the required information for the corresponding verification method.
-Note: This field may return null, which indicates a failure to obtain a valid value.
+     * Get <p>When the acceleration domain name needs to perform ownership verification to continue providing services, this object will carry the information required for the corresponding verification method.</p> 
+     * @return OwnershipVerification <p>When the acceleration domain name needs to perform ownership verification to continue providing services, this object will carry the information required for the corresponding verification method.</p>
      */
     public OwnershipVerification getOwnershipVerification() {
         return this.OwnershipVerification;
     }
 
     /**
-     * Set Acceleration domain name needs to perform ownership verification to continue providing services. this object carries the required information for the corresponding verification method.
-Note: This field may return null, which indicates a failure to obtain a valid value.
-     * @param OwnershipVerification Acceleration domain name needs to perform ownership verification to continue providing services. this object carries the required information for the corresponding verification method.
-Note: This field may return null, which indicates a failure to obtain a valid value.
+     * Set <p>When the acceleration domain name needs to perform ownership verification to continue providing services, this object will carry the information required for the corresponding verification method.</p>
+     * @param OwnershipVerification <p>When the acceleration domain name needs to perform ownership verification to continue providing services, this object will carry the information required for the corresponding verification method.</p>
      */
     public void setOwnershipVerification(OwnershipVerification OwnershipVerification) {
         this.OwnershipVerification = OwnershipVerification;
     }
 
     /**
-     * Get Details of the origin.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return OriginDetail Details of the origin.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Origin server information.</p> 
+     * @return OriginDetail <p>Origin server information.</p>
      */
     public OriginDetail getOriginDetail() {
         return this.OriginDetail;
     }
 
     /**
-     * Set Details of the origin.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param OriginDetail Details of the origin.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Origin server information.</p>
+     * @param OriginDetail <p>Origin server information.</p>
      */
     public void setOriginDetail(OriginDetail OriginDetail) {
         this.OriginDetail = OriginDetail;
     }
 
     /**
-     * Get Origin-Pull protocol. valid values:.
-<Li>FOLLOW: follow protocol.</li>.
-<Li>HTTP: specifies the http protocol for origin-pull.</li>.
-<Li>HTTPS: specifies the https protocol for origin-pull.</li>.
-Note: This field may return null, which indicates a failure to obtain a valid value. 
-     * @return OriginProtocol Origin-Pull protocol. valid values:.
-<Li>FOLLOW: follow protocol.</li>.
-<Li>HTTP: specifies the http protocol for origin-pull.</li>.
-<Li>HTTPS: specifies the https protocol for origin-pull.</li>.
-Note: This field may return null, which indicates a failure to obtain a valid value.
+     * Get <p>Origin-pull protocol. Valid values:</p><li>FOLLOW: follow protocol;</li><li>HTTP: origin-pull over HTTP protocol;</li><li>HTTPS: origin-pull over HTTPS protocol.</li> 
+     * @return OriginProtocol <p>Origin-pull protocol. Valid values:</p><li>FOLLOW: follow protocol;</li><li>HTTP: origin-pull over HTTP protocol;</li><li>HTTPS: origin-pull over HTTPS protocol.</li>
      */
     public String getOriginProtocol() {
         return this.OriginProtocol;
     }
 
     /**
-     * Set Origin-Pull protocol. valid values:.
-<Li>FOLLOW: follow protocol.</li>.
-<Li>HTTP: specifies the http protocol for origin-pull.</li>.
-<Li>HTTPS: specifies the https protocol for origin-pull.</li>.
-Note: This field may return null, which indicates a failure to obtain a valid value.
-     * @param OriginProtocol Origin-Pull protocol. valid values:.
-<Li>FOLLOW: follow protocol.</li>.
-<Li>HTTP: specifies the http protocol for origin-pull.</li>.
-<Li>HTTPS: specifies the https protocol for origin-pull.</li>.
-Note: This field may return null, which indicates a failure to obtain a valid value.
+     * Set <p>Origin-pull protocol. Valid values:</p><li>FOLLOW: follow protocol;</li><li>HTTP: origin-pull over HTTP protocol;</li><li>HTTPS: origin-pull over HTTPS protocol.</li>
+     * @param OriginProtocol <p>Origin-pull protocol. Valid values:</p><li>FOLLOW: follow protocol;</li><li>HTTP: origin-pull over HTTP protocol;</li><li>HTTPS: origin-pull over HTTPS protocol.</li>
      */
     public void setOriginProtocol(String OriginProtocol) {
         this.OriginProtocol = OriginProtocol;
     }
 
     /**
-     * Get Specifies the HTTP origin port.
-Note: This field may return null, which indicates a failure to obtain a valid value. 
-     * @return HttpOriginPort Specifies the HTTP origin port.
-Note: This field may return null, which indicates a failure to obtain a valid value.
+     * Get <p>HTTP origin port.</p> 
+     * @return HttpOriginPort <p>HTTP origin port.</p>
      */
     public Long getHttpOriginPort() {
         return this.HttpOriginPort;
     }
 
     /**
-     * Set Specifies the HTTP origin port.
-Note: This field may return null, which indicates a failure to obtain a valid value.
-     * @param HttpOriginPort Specifies the HTTP origin port.
-Note: This field may return null, which indicates a failure to obtain a valid value.
+     * Set <p>HTTP origin port.</p>
+     * @param HttpOriginPort <p>HTTP origin port.</p>
      */
     public void setHttpOriginPort(Long HttpOriginPort) {
         this.HttpOriginPort = HttpOriginPort;
     }
 
     /**
-     * Get Specifies the HTTPS origin port.
-Note: This field may return null, which indicates a failure to obtain a valid value. 
-     * @return HttpsOriginPort Specifies the HTTPS origin port.
-Note: This field may return null, which indicates a failure to obtain a valid value.
+     * Get <p>HTTPS origin port.</p> 
+     * @return HttpsOriginPort <p>HTTPS origin port.</p>
      */
     public Long getHttpsOriginPort() {
         return this.HttpsOriginPort;
     }
 
     /**
-     * Set Specifies the HTTPS origin port.
-Note: This field may return null, which indicates a failure to obtain a valid value.
-     * @param HttpsOriginPort Specifies the HTTPS origin port.
-Note: This field may return null, which indicates a failure to obtain a valid value.
+     * Set <p>HTTPS origin port.</p>
+     * @param HttpsOriginPort <p>HTTPS origin port.</p>
      */
     public void setHttpsOriginPort(Long HttpsOriginPort) {
         this.HttpsOriginPort = HttpsOriginPort;
     }
 
     /**
-     * Get Accelerates domain name certificate information.
-Note: This field may return null, which indicates a failure to obtain a valid value. 
-     * @return Certificate Accelerates domain name certificate information.
-Note: This field may return null, which indicates a failure to obtain a valid value.
+     * Get <p>Acceleration domain name certificate information.</p> 
+     * @return Certificate <p>Acceleration domain name certificate information.</p>
      */
     public AccelerationDomainCertificate getCertificate() {
         return this.Certificate;
     }
 
     /**
-     * Set Accelerates domain name certificate information.
-Note: This field may return null, which indicates a failure to obtain a valid value.
-     * @param Certificate Accelerates domain name certificate information.
-Note: This field may return null, which indicates a failure to obtain a valid value.
+     * Set <p>Acceleration domain name certificate information.</p>
+     * @param Certificate <p>Acceleration domain name certificate information.</p>
      */
     public void setCertificate(AccelerationDomainCertificate Certificate) {
         this.Certificate = Certificate;
     }
 
     /**
-     * Get Creation time of the accelerated domain name. 
-     * @return CreatedOn Creation time of the accelerated domain name.
+     * Get <p>Creation time.</p> 
+     * @return CreatedOn <p>Creation time.</p>
      */
     public String getCreatedOn() {
         return this.CreatedOn;
     }
 
     /**
-     * Set Creation time of the accelerated domain name.
-     * @param CreatedOn Creation time of the accelerated domain name.
+     * Set <p>Creation time.</p>
+     * @param CreatedOn <p>Creation time.</p>
      */
     public void setCreatedOn(String CreatedOn) {
         this.CreatedOn = CreatedOn;
     }
 
     /**
-     * Get Modification time of the accelerated domain name. 
-     * @return ModifiedOn Modification time of the accelerated domain name.
+     * Get <p>Last modified.</p> 
+     * @return ModifiedOn <p>Last modified.</p>
      */
     public String getModifiedOn() {
         return this.ModifiedOn;
     }
 
     /**
-     * Set Modification time of the accelerated domain name.
-     * @param ModifiedOn Modification time of the accelerated domain name.
+     * Set <p>Last modified.</p>
+     * @param ModifiedOn <p>Last modified.</p>
      */
     public void setModifiedOn(String ModifiedOn) {
         this.ModifiedOn = ModifiedOn;
+    }
+
+    /**
+     * Get <p>List of region access restrictions on a domain name due to compliance issues.</p> 
+     * @return ComplianceRestrictions <p>List of region access restrictions on a domain name due to compliance issues.</p>
+     */
+    public ComplianceRestriction [] getComplianceRestrictions() {
+        return this.ComplianceRestrictions;
+    }
+
+    /**
+     * Set <p>List of region access restrictions on a domain name due to compliance issues.</p>
+     * @param ComplianceRestrictions <p>List of region access restrictions on a domain name due to compliance issues.</p>
+     */
+    public void setComplianceRestrictions(ComplianceRestriction [] ComplianceRestrictions) {
+        this.ComplianceRestrictions = ComplianceRestrictions;
     }
 
     public AccelerationDomain() {
@@ -500,6 +418,12 @@ Note: This field may return null, which indicates a failure to obtain a valid va
         if (source.ModifiedOn != null) {
             this.ModifiedOn = new String(source.ModifiedOn);
         }
+        if (source.ComplianceRestrictions != null) {
+            this.ComplianceRestrictions = new ComplianceRestriction[source.ComplianceRestrictions.length];
+            for (int i = 0; i < source.ComplianceRestrictions.length; i++) {
+                this.ComplianceRestrictions[i] = new ComplianceRestriction(source.ComplianceRestrictions[i]);
+            }
+        }
     }
 
 
@@ -521,6 +445,7 @@ Note: This field may return null, which indicates a failure to obtain a valid va
         this.setParamObj(map, prefix + "Certificate.", this.Certificate);
         this.setParamSimple(map, prefix + "CreatedOn", this.CreatedOn);
         this.setParamSimple(map, prefix + "ModifiedOn", this.ModifiedOn);
+        this.setParamArrayObj(map, prefix + "ComplianceRestrictions.", this.ComplianceRestrictions);
 
     }
 }

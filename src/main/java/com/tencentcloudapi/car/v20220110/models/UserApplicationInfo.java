@@ -24,325 +24,348 @@ import java.util.HashMap;
 public class UserApplicationInfo extends AbstractModel {
 
     /**
-    * Application ID.
+    * <p>Application Id</p>
     */
     @SerializedName("ApplicationId")
     @Expose
     private String ApplicationId;
 
     /**
-    * Application name.
+    * <p>Application name</p>
     */
     @SerializedName("ApplicationName")
     @Expose
     private String ApplicationName;
 
     /**
-    * Application type (cloud 3D: Application3D; cloud XR: ApplicationXR; cloud Web: ApplicationWeb).
+    * <p>Application type (Cloud 3D: Application3D, Cloud XR: ApplicationXR, Cloud Web: ApplicationWeb)</p>
     */
     @SerializedName("ApplicationType")
     @Expose
     private String ApplicationType;
 
     /**
-    * Application program execution path.
+    * <p>Program execution path</p>
     */
     @SerializedName("ApplicationExePath")
     @Expose
     private String ApplicationExePath;
 
     /**
-    * Application process list.
+    * <p>Application process list</p>
     */
     @SerializedName("ApplicationInterList")
     @Expose
     private String ApplicationInterList;
 
     /**
-    * Application startup parameters.
+    * <p>Application startup parameter</p>
     */
     @SerializedName("ApplicationParams")
     @Expose
     private String ApplicationParams;
 
     /**
-    * Application running status (ApplicationDeleting: application deletion in progress; ApplicationCreateFail: application creation failed; ApplicationCreating: application creation in progress; ApplicationRunning: normal running; ApplicationNoConfigured: main execution program path not configured).
+    * <p>Application running status (ApplicationDeleting: application deletion in progress; ApplicationCreateFail: application creation failed; ApplicationCreating: application creation in progress; ApplicationRunning: normal running; ApplicationNoConfigured: main execution program path not configured).</p>
     */
     @SerializedName("ApplicationRunStatus")
     @Expose
     private String ApplicationRunStatus;
 
     /**
-    * Application update status (ApplicationUpdateCreating: version creation in progress; ApplicationUpdateCreateFail: version creation failed; ApplicationUpdateNoReleased: version to be released; ApplicationUpdateReleased: version release completed; ApplicationUpdateNormal: none).
+    * <p>Application update status (ApplicationUpdateCreating: version creation in progress; ApplicationUpdateCreateFail: version creation failed; ApplicationUpdateNoReleased: version to be released; ApplicationUpdateReleased: version release completed; ApplicationUpdateNormal: none)</p>
     */
     @SerializedName("ApplicationUpdateStatus")
     @Expose
     private String ApplicationUpdateStatus;
 
     /**
-    * Application creation time.
+    * <p>Application creation time</p>
     */
     @SerializedName("ApplicationCreateTime")
     @Expose
     private String ApplicationCreateTime;
 
     /**
-    * List of application versions.
+    * <p>Application version list</p>
     */
     @SerializedName("ApplicationVersions")
     @Expose
     private UserApplicationVersion [] ApplicationVersions;
 
     /**
-    * Application basic data.
+    * <p>Application basic data</p>
     */
     @SerializedName("ApplicationBaseInfo")
     @Expose
     private ApplicationBaseInfo ApplicationBaseInfo;
 
     /**
-    * Application update progress.
+    * <p>Application update progress</p>
     */
     @SerializedName("ApplicationUpdateProgress")
     @Expose
     private Long ApplicationUpdateProgress;
 
     /**
-    * Application nature (PUBLIC: public application; PRIVATE: user application).
+    * <p>Application nature (PUBLIC: public application; PRIVATE: user application)</p>
     */
     @SerializedName("ApplicationNature")
     @Expose
     private String ApplicationNature;
 
     /**
-    * Application repository list.
+    * <p>Application repository list</p>
     */
     @SerializedName("ApplicationStores")
     @Expose
     private UserApplicationStore [] ApplicationStores;
 
     /**
-     * Get Application ID. 
-     * @return ApplicationId Application ID.
+    * <p>Application tag</p>
+    */
+    @SerializedName("ApplicationTags")
+    @Expose
+    private Tag [] ApplicationTags;
+
+    /**
+     * Get <p>Application Id</p> 
+     * @return ApplicationId <p>Application Id</p>
      */
     public String getApplicationId() {
         return this.ApplicationId;
     }
 
     /**
-     * Set Application ID.
-     * @param ApplicationId Application ID.
+     * Set <p>Application Id</p>
+     * @param ApplicationId <p>Application Id</p>
      */
     public void setApplicationId(String ApplicationId) {
         this.ApplicationId = ApplicationId;
     }
 
     /**
-     * Get Application name. 
-     * @return ApplicationName Application name.
+     * Get <p>Application name</p> 
+     * @return ApplicationName <p>Application name</p>
      */
     public String getApplicationName() {
         return this.ApplicationName;
     }
 
     /**
-     * Set Application name.
-     * @param ApplicationName Application name.
+     * Set <p>Application name</p>
+     * @param ApplicationName <p>Application name</p>
      */
     public void setApplicationName(String ApplicationName) {
         this.ApplicationName = ApplicationName;
     }
 
     /**
-     * Get Application type (cloud 3D: Application3D; cloud XR: ApplicationXR; cloud Web: ApplicationWeb). 
-     * @return ApplicationType Application type (cloud 3D: Application3D; cloud XR: ApplicationXR; cloud Web: ApplicationWeb).
+     * Get <p>Application type (Cloud 3D: Application3D, Cloud XR: ApplicationXR, Cloud Web: ApplicationWeb)</p> 
+     * @return ApplicationType <p>Application type (Cloud 3D: Application3D, Cloud XR: ApplicationXR, Cloud Web: ApplicationWeb)</p>
      */
     public String getApplicationType() {
         return this.ApplicationType;
     }
 
     /**
-     * Set Application type (cloud 3D: Application3D; cloud XR: ApplicationXR; cloud Web: ApplicationWeb).
-     * @param ApplicationType Application type (cloud 3D: Application3D; cloud XR: ApplicationXR; cloud Web: ApplicationWeb).
+     * Set <p>Application type (Cloud 3D: Application3D, Cloud XR: ApplicationXR, Cloud Web: ApplicationWeb)</p>
+     * @param ApplicationType <p>Application type (Cloud 3D: Application3D, Cloud XR: ApplicationXR, Cloud Web: ApplicationWeb)</p>
      */
     public void setApplicationType(String ApplicationType) {
         this.ApplicationType = ApplicationType;
     }
 
     /**
-     * Get Application program execution path. 
-     * @return ApplicationExePath Application program execution path.
+     * Get <p>Program execution path</p> 
+     * @return ApplicationExePath <p>Program execution path</p>
      */
     public String getApplicationExePath() {
         return this.ApplicationExePath;
     }
 
     /**
-     * Set Application program execution path.
-     * @param ApplicationExePath Application program execution path.
+     * Set <p>Program execution path</p>
+     * @param ApplicationExePath <p>Program execution path</p>
      */
     public void setApplicationExePath(String ApplicationExePath) {
         this.ApplicationExePath = ApplicationExePath;
     }
 
     /**
-     * Get Application process list. 
-     * @return ApplicationInterList Application process list.
+     * Get <p>Application process list</p> 
+     * @return ApplicationInterList <p>Application process list</p>
      */
     public String getApplicationInterList() {
         return this.ApplicationInterList;
     }
 
     /**
-     * Set Application process list.
-     * @param ApplicationInterList Application process list.
+     * Set <p>Application process list</p>
+     * @param ApplicationInterList <p>Application process list</p>
      */
     public void setApplicationInterList(String ApplicationInterList) {
         this.ApplicationInterList = ApplicationInterList;
     }
 
     /**
-     * Get Application startup parameters. 
-     * @return ApplicationParams Application startup parameters.
+     * Get <p>Application startup parameter</p> 
+     * @return ApplicationParams <p>Application startup parameter</p>
      */
     public String getApplicationParams() {
         return this.ApplicationParams;
     }
 
     /**
-     * Set Application startup parameters.
-     * @param ApplicationParams Application startup parameters.
+     * Set <p>Application startup parameter</p>
+     * @param ApplicationParams <p>Application startup parameter</p>
      */
     public void setApplicationParams(String ApplicationParams) {
         this.ApplicationParams = ApplicationParams;
     }
 
     /**
-     * Get Application running status (ApplicationDeleting: application deletion in progress; ApplicationCreateFail: application creation failed; ApplicationCreating: application creation in progress; ApplicationRunning: normal running; ApplicationNoConfigured: main execution program path not configured). 
-     * @return ApplicationRunStatus Application running status (ApplicationDeleting: application deletion in progress; ApplicationCreateFail: application creation failed; ApplicationCreating: application creation in progress; ApplicationRunning: normal running; ApplicationNoConfigured: main execution program path not configured).
+     * Get <p>Application running status (ApplicationDeleting: application deletion in progress; ApplicationCreateFail: application creation failed; ApplicationCreating: application creation in progress; ApplicationRunning: normal running; ApplicationNoConfigured: main execution program path not configured).</p> 
+     * @return ApplicationRunStatus <p>Application running status (ApplicationDeleting: application deletion in progress; ApplicationCreateFail: application creation failed; ApplicationCreating: application creation in progress; ApplicationRunning: normal running; ApplicationNoConfigured: main execution program path not configured).</p>
      */
     public String getApplicationRunStatus() {
         return this.ApplicationRunStatus;
     }
 
     /**
-     * Set Application running status (ApplicationDeleting: application deletion in progress; ApplicationCreateFail: application creation failed; ApplicationCreating: application creation in progress; ApplicationRunning: normal running; ApplicationNoConfigured: main execution program path not configured).
-     * @param ApplicationRunStatus Application running status (ApplicationDeleting: application deletion in progress; ApplicationCreateFail: application creation failed; ApplicationCreating: application creation in progress; ApplicationRunning: normal running; ApplicationNoConfigured: main execution program path not configured).
+     * Set <p>Application running status (ApplicationDeleting: application deletion in progress; ApplicationCreateFail: application creation failed; ApplicationCreating: application creation in progress; ApplicationRunning: normal running; ApplicationNoConfigured: main execution program path not configured).</p>
+     * @param ApplicationRunStatus <p>Application running status (ApplicationDeleting: application deletion in progress; ApplicationCreateFail: application creation failed; ApplicationCreating: application creation in progress; ApplicationRunning: normal running; ApplicationNoConfigured: main execution program path not configured).</p>
      */
     public void setApplicationRunStatus(String ApplicationRunStatus) {
         this.ApplicationRunStatus = ApplicationRunStatus;
     }
 
     /**
-     * Get Application update status (ApplicationUpdateCreating: version creation in progress; ApplicationUpdateCreateFail: version creation failed; ApplicationUpdateNoReleased: version to be released; ApplicationUpdateReleased: version release completed; ApplicationUpdateNormal: none). 
-     * @return ApplicationUpdateStatus Application update status (ApplicationUpdateCreating: version creation in progress; ApplicationUpdateCreateFail: version creation failed; ApplicationUpdateNoReleased: version to be released; ApplicationUpdateReleased: version release completed; ApplicationUpdateNormal: none).
+     * Get <p>Application update status (ApplicationUpdateCreating: version creation in progress; ApplicationUpdateCreateFail: version creation failed; ApplicationUpdateNoReleased: version to be released; ApplicationUpdateReleased: version release completed; ApplicationUpdateNormal: none)</p> 
+     * @return ApplicationUpdateStatus <p>Application update status (ApplicationUpdateCreating: version creation in progress; ApplicationUpdateCreateFail: version creation failed; ApplicationUpdateNoReleased: version to be released; ApplicationUpdateReleased: version release completed; ApplicationUpdateNormal: none)</p>
      */
     public String getApplicationUpdateStatus() {
         return this.ApplicationUpdateStatus;
     }
 
     /**
-     * Set Application update status (ApplicationUpdateCreating: version creation in progress; ApplicationUpdateCreateFail: version creation failed; ApplicationUpdateNoReleased: version to be released; ApplicationUpdateReleased: version release completed; ApplicationUpdateNormal: none).
-     * @param ApplicationUpdateStatus Application update status (ApplicationUpdateCreating: version creation in progress; ApplicationUpdateCreateFail: version creation failed; ApplicationUpdateNoReleased: version to be released; ApplicationUpdateReleased: version release completed; ApplicationUpdateNormal: none).
+     * Set <p>Application update status (ApplicationUpdateCreating: version creation in progress; ApplicationUpdateCreateFail: version creation failed; ApplicationUpdateNoReleased: version to be released; ApplicationUpdateReleased: version release completed; ApplicationUpdateNormal: none)</p>
+     * @param ApplicationUpdateStatus <p>Application update status (ApplicationUpdateCreating: version creation in progress; ApplicationUpdateCreateFail: version creation failed; ApplicationUpdateNoReleased: version to be released; ApplicationUpdateReleased: version release completed; ApplicationUpdateNormal: none)</p>
      */
     public void setApplicationUpdateStatus(String ApplicationUpdateStatus) {
         this.ApplicationUpdateStatus = ApplicationUpdateStatus;
     }
 
     /**
-     * Get Application creation time. 
-     * @return ApplicationCreateTime Application creation time.
+     * Get <p>Application creation time</p> 
+     * @return ApplicationCreateTime <p>Application creation time</p>
      */
     public String getApplicationCreateTime() {
         return this.ApplicationCreateTime;
     }
 
     /**
-     * Set Application creation time.
-     * @param ApplicationCreateTime Application creation time.
+     * Set <p>Application creation time</p>
+     * @param ApplicationCreateTime <p>Application creation time</p>
      */
     public void setApplicationCreateTime(String ApplicationCreateTime) {
         this.ApplicationCreateTime = ApplicationCreateTime;
     }
 
     /**
-     * Get List of application versions. 
-     * @return ApplicationVersions List of application versions.
+     * Get <p>Application version list</p> 
+     * @return ApplicationVersions <p>Application version list</p>
      */
     public UserApplicationVersion [] getApplicationVersions() {
         return this.ApplicationVersions;
     }
 
     /**
-     * Set List of application versions.
-     * @param ApplicationVersions List of application versions.
+     * Set <p>Application version list</p>
+     * @param ApplicationVersions <p>Application version list</p>
      */
     public void setApplicationVersions(UserApplicationVersion [] ApplicationVersions) {
         this.ApplicationVersions = ApplicationVersions;
     }
 
     /**
-     * Get Application basic data. 
-     * @return ApplicationBaseInfo Application basic data.
+     * Get <p>Application basic data</p> 
+     * @return ApplicationBaseInfo <p>Application basic data</p>
      */
     public ApplicationBaseInfo getApplicationBaseInfo() {
         return this.ApplicationBaseInfo;
     }
 
     /**
-     * Set Application basic data.
-     * @param ApplicationBaseInfo Application basic data.
+     * Set <p>Application basic data</p>
+     * @param ApplicationBaseInfo <p>Application basic data</p>
      */
     public void setApplicationBaseInfo(ApplicationBaseInfo ApplicationBaseInfo) {
         this.ApplicationBaseInfo = ApplicationBaseInfo;
     }
 
     /**
-     * Get Application update progress. 
-     * @return ApplicationUpdateProgress Application update progress.
+     * Get <p>Application update progress</p> 
+     * @return ApplicationUpdateProgress <p>Application update progress</p>
      */
     public Long getApplicationUpdateProgress() {
         return this.ApplicationUpdateProgress;
     }
 
     /**
-     * Set Application update progress.
-     * @param ApplicationUpdateProgress Application update progress.
+     * Set <p>Application update progress</p>
+     * @param ApplicationUpdateProgress <p>Application update progress</p>
      */
     public void setApplicationUpdateProgress(Long ApplicationUpdateProgress) {
         this.ApplicationUpdateProgress = ApplicationUpdateProgress;
     }
 
     /**
-     * Get Application nature (PUBLIC: public application; PRIVATE: user application). 
-     * @return ApplicationNature Application nature (PUBLIC: public application; PRIVATE: user application).
+     * Get <p>Application nature (PUBLIC: public application; PRIVATE: user application)</p> 
+     * @return ApplicationNature <p>Application nature (PUBLIC: public application; PRIVATE: user application)</p>
      */
     public String getApplicationNature() {
         return this.ApplicationNature;
     }
 
     /**
-     * Set Application nature (PUBLIC: public application; PRIVATE: user application).
-     * @param ApplicationNature Application nature (PUBLIC: public application; PRIVATE: user application).
+     * Set <p>Application nature (PUBLIC: public application; PRIVATE: user application)</p>
+     * @param ApplicationNature <p>Application nature (PUBLIC: public application; PRIVATE: user application)</p>
      */
     public void setApplicationNature(String ApplicationNature) {
         this.ApplicationNature = ApplicationNature;
     }
 
     /**
-     * Get Application repository list. 
-     * @return ApplicationStores Application repository list.
+     * Get <p>Application repository list</p> 
+     * @return ApplicationStores <p>Application repository list</p>
      */
     public UserApplicationStore [] getApplicationStores() {
         return this.ApplicationStores;
     }
 
     /**
-     * Set Application repository list.
-     * @param ApplicationStores Application repository list.
+     * Set <p>Application repository list</p>
+     * @param ApplicationStores <p>Application repository list</p>
      */
     public void setApplicationStores(UserApplicationStore [] ApplicationStores) {
         this.ApplicationStores = ApplicationStores;
+    }
+
+    /**
+     * Get <p>Application tag</p> 
+     * @return ApplicationTags <p>Application tag</p>
+     */
+    public Tag [] getApplicationTags() {
+        return this.ApplicationTags;
+    }
+
+    /**
+     * Set <p>Application tag</p>
+     * @param ApplicationTags <p>Application tag</p>
+     */
+    public void setApplicationTags(Tag [] ApplicationTags) {
+        this.ApplicationTags = ApplicationTags;
     }
 
     public UserApplicationInfo() {
@@ -401,6 +424,12 @@ public class UserApplicationInfo extends AbstractModel {
                 this.ApplicationStores[i] = new UserApplicationStore(source.ApplicationStores[i]);
             }
         }
+        if (source.ApplicationTags != null) {
+            this.ApplicationTags = new Tag[source.ApplicationTags.length];
+            for (int i = 0; i < source.ApplicationTags.length; i++) {
+                this.ApplicationTags[i] = new Tag(source.ApplicationTags[i]);
+            }
+        }
     }
 
 
@@ -422,6 +451,7 @@ public class UserApplicationInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "ApplicationUpdateProgress", this.ApplicationUpdateProgress);
         this.setParamSimple(map, prefix + "ApplicationNature", this.ApplicationNature);
         this.setParamArrayObj(map, prefix + "ApplicationStores.", this.ApplicationStores);
+        this.setParamArrayObj(map, prefix + "ApplicationTags.", this.ApplicationTags);
 
     }
 }

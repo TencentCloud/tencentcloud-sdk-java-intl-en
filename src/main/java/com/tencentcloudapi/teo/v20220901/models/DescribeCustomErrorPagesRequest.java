@@ -24,112 +24,92 @@ import java.util.HashMap;
 public class DescribeCustomErrorPagesRequest extends AbstractModel {
 
     /**
-    * Zone ID.
+    * <p>Site ID.</p>
     */
     @SerializedName("ZoneId")
     @Expose
     private String ZoneId;
 
     /**
-    * Filter criteria. The maximum number of Filters.Values is 20. The detailed Name values of filter criteria are as follows:
-<li>page-id: Filter by page ID;</li>
-<li>name: Filter by page name;</li>
-<li>description: Filter by page description;</li>
-<li>content-type: Filter by page type.</li>
+    * <p>Filter criteria. The maximum value of Filters.Values is 20. The detailed filter criteria Name values are as follows: <li>page-id: filter by page ID;</li><li>name: filter by page name;</li><li>description: filter by page description;</li><li>content-type: filter by page type.</li></p>
     */
     @SerializedName("Filters")
     @Expose
     private AdvancedFilter [] Filters;
 
     /**
-    * The offset of paginated query. Default value: 0.
+    * <p>Paginated query offset. Default value: 0.</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * The limit of paginated query. Default value: 20. Maximum value: 1,000.  
+    * <p>Paginated query limit. Default value: 20. Maximum value: 1000.</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-     * Get Zone ID. 
-     * @return ZoneId Zone ID.
+     * Get <p>Site ID.</p> 
+     * @return ZoneId <p>Site ID.</p>
      */
     public String getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set Zone ID.
-     * @param ZoneId Zone ID.
+     * Set <p>Site ID.</p>
+     * @param ZoneId <p>Site ID.</p>
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get Filter criteria. The maximum number of Filters.Values is 20. The detailed Name values of filter criteria are as follows:
-<li>page-id: Filter by page ID;</li>
-<li>name: Filter by page name;</li>
-<li>description: Filter by page description;</li>
-<li>content-type: Filter by page type.</li> 
-     * @return Filters Filter criteria. The maximum number of Filters.Values is 20. The detailed Name values of filter criteria are as follows:
-<li>page-id: Filter by page ID;</li>
-<li>name: Filter by page name;</li>
-<li>description: Filter by page description;</li>
-<li>content-type: Filter by page type.</li>
+     * Get <p>Filter criteria. The maximum value of Filters.Values is 20. The detailed filter criteria Name values are as follows: <li>page-id: filter by page ID;</li><li>name: filter by page name;</li><li>description: filter by page description;</li><li>content-type: filter by page type.</li></p> 
+     * @return Filters <p>Filter criteria. The maximum value of Filters.Values is 20. The detailed filter criteria Name values are as follows: <li>page-id: filter by page ID;</li><li>name: filter by page name;</li><li>description: filter by page description;</li><li>content-type: filter by page type.</li></p>
      */
     public AdvancedFilter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set Filter criteria. The maximum number of Filters.Values is 20. The detailed Name values of filter criteria are as follows:
-<li>page-id: Filter by page ID;</li>
-<li>name: Filter by page name;</li>
-<li>description: Filter by page description;</li>
-<li>content-type: Filter by page type.</li>
-     * @param Filters Filter criteria. The maximum number of Filters.Values is 20. The detailed Name values of filter criteria are as follows:
-<li>page-id: Filter by page ID;</li>
-<li>name: Filter by page name;</li>
-<li>description: Filter by page description;</li>
-<li>content-type: Filter by page type.</li>
+     * Set <p>Filter criteria. The maximum value of Filters.Values is 20. The detailed filter criteria Name values are as follows: <li>page-id: filter by page ID;</li><li>name: filter by page name;</li><li>description: filter by page description;</li><li>content-type: filter by page type.</li></p>
+     * @param Filters <p>Filter criteria. The maximum value of Filters.Values is 20. The detailed filter criteria Name values are as follows: <li>page-id: filter by page ID;</li><li>name: filter by page name;</li><li>description: filter by page description;</li><li>content-type: filter by page type.</li></p>
      */
     public void setFilters(AdvancedFilter [] Filters) {
         this.Filters = Filters;
     }
 
     /**
-     * Get The offset of paginated query. Default value: 0. 
-     * @return Offset The offset of paginated query. Default value: 0.
+     * Get <p>Paginated query offset. Default value: 0.</p> 
+     * @return Offset <p>Paginated query offset. Default value: 0.</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set The offset of paginated query. Default value: 0.
-     * @param Offset The offset of paginated query. Default value: 0.
+     * Set <p>Paginated query offset. Default value: 0.</p>
+     * @param Offset <p>Paginated query offset. Default value: 0.</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get The limit of paginated query. Default value: 20. Maximum value: 1,000.   
-     * @return Limit The limit of paginated query. Default value: 20. Maximum value: 1,000.  
+     * Get <p>Paginated query limit. Default value: 20. Maximum value: 1000.</p> 
+     * @return Limit <p>Paginated query limit. Default value: 20. Maximum value: 1000.</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set The limit of paginated query. Default value: 20. Maximum value: 1,000.  
-     * @param Limit The limit of paginated query. Default value: 20. Maximum value: 1,000.  
+     * Set <p>Paginated query limit. Default value: 20. Maximum value: 1000.</p>
+     * @param Limit <p>Paginated query limit. Default value: 20. Maximum value: 1000.</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

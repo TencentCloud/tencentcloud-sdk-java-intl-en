@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class OriginAuthenticationRequestProperties extends AbstractModel {
 
     /**
-    * Specifies the origin-pull authentication parameter type. valid values: <li>QueryString: indicates setting the origin-pull authentication parameter type to query string.</li><li>Header: indicates setting the origin-pull authentication parameter type to request Header.</li>.
+    * Set the origin-pull authentication parameter type. Valid values: <li>QueryString: Set the origin-pull authentication parameter type to query string.</li><li>Header: Set the origin-pull authentication parameter type to request header.</li>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * Specifies the parameter name for the origin-pull authentication type.
+    * Name of the parameter corresponding to the origin-pull authentication type.
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * Specifies the parameter value for the origin-pull authentication type.
+    * Set the parameter value corresponding to the origin-pull authentication type.
     */
     @SerializedName("Value")
     @Expose
     private String Value;
 
     /**
-     * Get Specifies the origin-pull authentication parameter type. valid values: <li>QueryString: indicates setting the origin-pull authentication parameter type to query string.</li><li>Header: indicates setting the origin-pull authentication parameter type to request Header.</li>. 
-     * @return Type Specifies the origin-pull authentication parameter type. valid values: <li>QueryString: indicates setting the origin-pull authentication parameter type to query string.</li><li>Header: indicates setting the origin-pull authentication parameter type to request Header.</li>.
+     * Get Set the origin-pull authentication parameter type. Valid values: <li>QueryString: Set the origin-pull authentication parameter type to query string.</li><li>Header: Set the origin-pull authentication parameter type to request header.</li> 
+     * @return Type Set the origin-pull authentication parameter type. Valid values: <li>QueryString: Set the origin-pull authentication parameter type to query string.</li><li>Header: Set the origin-pull authentication parameter type to request header.</li>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Specifies the origin-pull authentication parameter type. valid values: <li>QueryString: indicates setting the origin-pull authentication parameter type to query string.</li><li>Header: indicates setting the origin-pull authentication parameter type to request Header.</li>.
-     * @param Type Specifies the origin-pull authentication parameter type. valid values: <li>QueryString: indicates setting the origin-pull authentication parameter type to query string.</li><li>Header: indicates setting the origin-pull authentication parameter type to request Header.</li>.
+     * Set Set the origin-pull authentication parameter type. Valid values: <li>QueryString: Set the origin-pull authentication parameter type to query string.</li><li>Header: Set the origin-pull authentication parameter type to request header.</li>
+     * @param Type Set the origin-pull authentication parameter type. Valid values: <li>QueryString: Set the origin-pull authentication parameter type to query string.</li><li>Header: Set the origin-pull authentication parameter type to request header.</li>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get Specifies the parameter name for the origin-pull authentication type. 
-     * @return Name Specifies the parameter name for the origin-pull authentication type.
+     * Get Name of the parameter corresponding to the origin-pull authentication type. 
+     * @return Name Name of the parameter corresponding to the origin-pull authentication type.
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Specifies the parameter name for the origin-pull authentication type.
-     * @param Name Specifies the parameter name for the origin-pull authentication type.
+     * Set Name of the parameter corresponding to the origin-pull authentication type.
+     * @param Name Name of the parameter corresponding to the origin-pull authentication type.
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Specifies the parameter value for the origin-pull authentication type. 
-     * @return Value Specifies the parameter value for the origin-pull authentication type.
+     * Get Set the parameter value corresponding to the origin-pull authentication type. 
+     * @return Value Set the parameter value corresponding to the origin-pull authentication type.
      */
     public String getValue() {
         return this.Value;
     }
 
     /**
-     * Set Specifies the parameter value for the origin-pull authentication type.
-     * @param Value Specifies the parameter value for the origin-pull authentication type.
+     * Set Set the parameter value corresponding to the origin-pull authentication type.
+     * @param Value Set the parameter value corresponding to the origin-pull authentication type.
      */
     public void setValue(String Value) {
         this.Value = Value;

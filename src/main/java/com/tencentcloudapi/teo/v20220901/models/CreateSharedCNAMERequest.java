@@ -24,89 +24,89 @@ import java.util.HashMap;
 public class CreateSharedCNAMERequest extends AbstractModel {
 
     /**
-    * ID of the site to which the shared CNAME belongs.	
+    * ID of the site associated with the shared CNAME.	
     */
     @SerializedName("ZoneId")
     @Expose
     private String ZoneId;
 
     /**
-    * Shared CNAME prefix. Enter a valid domain name prefix, such as "test-api" and "test-api.com". A maximum of 50 characters are allowed. 
+    * Share the CNAME prefix. Enter a valid domain name prefix, for example, "test-api" or "test-api.com", limited to 50 characters.
 
-Complete format of the shared CNAME: '<Custom prefix>+<A 12-character random string in ZoneId>+share.dnse[0-5].com'. 
+The full format of a shared CNAME is: `<custom prefix>+<12-bit random string in zoneid>+share.dnse[0-5].com`.
 
-For example, if the prefix is example.com, EdgeOne will create the shared CNAME: example.com.sai2ig51kaa5.share.dnse2.com.
+For example, if the prefix input is example.com, EdgeOne will create a shared CNAME for you: example.com.sai2ig51kaa5.share.dnse2.com.
     */
     @SerializedName("SharedCNAMEPrefix")
     @Expose
     private String SharedCNAMEPrefix;
 
     /**
-    * Description. It supports 1-50 characters.
+    * Description. Enter 1-50 characters.
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-     * Get ID of the site to which the shared CNAME belongs.	 
-     * @return ZoneId ID of the site to which the shared CNAME belongs.	
+     * Get ID of the site associated with the shared CNAME.	 
+     * @return ZoneId ID of the site associated with the shared CNAME.	
      */
     public String getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set ID of the site to which the shared CNAME belongs.	
-     * @param ZoneId ID of the site to which the shared CNAME belongs.	
+     * Set ID of the site associated with the shared CNAME.	
+     * @param ZoneId ID of the site associated with the shared CNAME.	
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get Shared CNAME prefix. Enter a valid domain name prefix, such as "test-api" and "test-api.com". A maximum of 50 characters are allowed. 
+     * Get Share the CNAME prefix. Enter a valid domain name prefix, for example, "test-api" or "test-api.com", limited to 50 characters.
 
-Complete format of the shared CNAME: '<Custom prefix>+<A 12-character random string in ZoneId>+share.dnse[0-5].com'. 
+The full format of a shared CNAME is: `<custom prefix>+<12-bit random string in zoneid>+share.dnse[0-5].com`.
 
-For example, if the prefix is example.com, EdgeOne will create the shared CNAME: example.com.sai2ig51kaa5.share.dnse2.com. 
-     * @return SharedCNAMEPrefix Shared CNAME prefix. Enter a valid domain name prefix, such as "test-api" and "test-api.com". A maximum of 50 characters are allowed. 
+For example, if the prefix input is example.com, EdgeOne will create a shared CNAME for you: example.com.sai2ig51kaa5.share.dnse2.com. 
+     * @return SharedCNAMEPrefix Share the CNAME prefix. Enter a valid domain name prefix, for example, "test-api" or "test-api.com", limited to 50 characters.
 
-Complete format of the shared CNAME: '<Custom prefix>+<A 12-character random string in ZoneId>+share.dnse[0-5].com'. 
+The full format of a shared CNAME is: `<custom prefix>+<12-bit random string in zoneid>+share.dnse[0-5].com`.
 
-For example, if the prefix is example.com, EdgeOne will create the shared CNAME: example.com.sai2ig51kaa5.share.dnse2.com.
+For example, if the prefix input is example.com, EdgeOne will create a shared CNAME for you: example.com.sai2ig51kaa5.share.dnse2.com.
      */
     public String getSharedCNAMEPrefix() {
         return this.SharedCNAMEPrefix;
     }
 
     /**
-     * Set Shared CNAME prefix. Enter a valid domain name prefix, such as "test-api" and "test-api.com". A maximum of 50 characters are allowed. 
+     * Set Share the CNAME prefix. Enter a valid domain name prefix, for example, "test-api" or "test-api.com", limited to 50 characters.
 
-Complete format of the shared CNAME: '<Custom prefix>+<A 12-character random string in ZoneId>+share.dnse[0-5].com'. 
+The full format of a shared CNAME is: `<custom prefix>+<12-bit random string in zoneid>+share.dnse[0-5].com`.
 
-For example, if the prefix is example.com, EdgeOne will create the shared CNAME: example.com.sai2ig51kaa5.share.dnse2.com.
-     * @param SharedCNAMEPrefix Shared CNAME prefix. Enter a valid domain name prefix, such as "test-api" and "test-api.com". A maximum of 50 characters are allowed. 
+For example, if the prefix input is example.com, EdgeOne will create a shared CNAME for you: example.com.sai2ig51kaa5.share.dnse2.com.
+     * @param SharedCNAMEPrefix Share the CNAME prefix. Enter a valid domain name prefix, for example, "test-api" or "test-api.com", limited to 50 characters.
 
-Complete format of the shared CNAME: '<Custom prefix>+<A 12-character random string in ZoneId>+share.dnse[0-5].com'. 
+The full format of a shared CNAME is: `<custom prefix>+<12-bit random string in zoneid>+share.dnse[0-5].com`.
 
-For example, if the prefix is example.com, EdgeOne will create the shared CNAME: example.com.sai2ig51kaa5.share.dnse2.com.
+For example, if the prefix input is example.com, EdgeOne will create a shared CNAME for you: example.com.sai2ig51kaa5.share.dnse2.com.
      */
     public void setSharedCNAMEPrefix(String SharedCNAMEPrefix) {
         this.SharedCNAMEPrefix = SharedCNAMEPrefix;
     }
 
     /**
-     * Get Description. It supports 1-50 characters. 
-     * @return Description Description. It supports 1-50 characters.
+     * Get Description. Enter 1-50 characters. 
+     * @return Description Description. Enter 1-50 characters.
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set Description. It supports 1-50 characters.
-     * @param Description Description. It supports 1-50 characters.
+     * Set Description. Enter 1-50 characters.
+     * @param Description Description. Enter 1-50 characters.
      */
     public void setDescription(String Description) {
         this.Description = Description;

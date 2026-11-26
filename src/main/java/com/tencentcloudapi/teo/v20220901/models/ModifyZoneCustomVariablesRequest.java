@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class ModifyZoneCustomVariablesRequest extends AbstractModel {
 
     /**
-    * <p>Site ID.</p>
+    * <p>Zone ID.</p>
     */
     @SerializedName("ZoneId")
     @Expose
     private String ZoneId;
 
     /**
-    * <p>List of site-level custom variables. CustomVariable.Name must use user.zone. as a prefix. Variables are initialized sequentially in array order. InitialValue can only reference variables before the current variable. It does not support referencing the current variable itself or variables after it.</p>
+    * <p>List of site-level custom variables. CustomVariable.Name requires the use of user.zone. as a prefix. Variables are initialized sequentially in array order. InitialValue can only reference variables before the current variable. It does not support referencing the current variable itself or variables after the current variable.</p>
     */
     @SerializedName("CustomVariables")
     @Expose
     private CustomVariable [] CustomVariables;
 
     /**
-    * <p>Site-level custom variable calculation rules. The calculation supports references to defined site-level custom variables. This list currently only supports filling in one rule; additional entries are invalid.</p>
+    * <p>Site-level custom variable calculation rules. The calculation supports references to defined site-level custom variables. This list currently only supports filling in one rule, and additional entries are invalid.</p>
     */
     @SerializedName("CustomVariableOperations")
     @Expose
     private CustomVariableOperation [] CustomVariableOperations;
 
     /**
-     * Get <p>Site ID.</p> 
-     * @return ZoneId <p>Site ID.</p>
+     * Get <p>Zone ID.</p> 
+     * @return ZoneId <p>Zone ID.</p>
      */
     public String getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set <p>Site ID.</p>
-     * @param ZoneId <p>Site ID.</p>
+     * Set <p>Zone ID.</p>
+     * @param ZoneId <p>Zone ID.</p>
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get <p>List of site-level custom variables. CustomVariable.Name must use user.zone. as a prefix. Variables are initialized sequentially in array order. InitialValue can only reference variables before the current variable. It does not support referencing the current variable itself or variables after it.</p> 
-     * @return CustomVariables <p>List of site-level custom variables. CustomVariable.Name must use user.zone. as a prefix. Variables are initialized sequentially in array order. InitialValue can only reference variables before the current variable. It does not support referencing the current variable itself or variables after it.</p>
+     * Get <p>List of site-level custom variables. CustomVariable.Name requires the use of user.zone. as a prefix. Variables are initialized sequentially in array order. InitialValue can only reference variables before the current variable. It does not support referencing the current variable itself or variables after the current variable.</p> 
+     * @return CustomVariables <p>List of site-level custom variables. CustomVariable.Name requires the use of user.zone. as a prefix. Variables are initialized sequentially in array order. InitialValue can only reference variables before the current variable. It does not support referencing the current variable itself or variables after the current variable.</p>
      */
     public CustomVariable [] getCustomVariables() {
         return this.CustomVariables;
     }
 
     /**
-     * Set <p>List of site-level custom variables. CustomVariable.Name must use user.zone. as a prefix. Variables are initialized sequentially in array order. InitialValue can only reference variables before the current variable. It does not support referencing the current variable itself or variables after it.</p>
-     * @param CustomVariables <p>List of site-level custom variables. CustomVariable.Name must use user.zone. as a prefix. Variables are initialized sequentially in array order. InitialValue can only reference variables before the current variable. It does not support referencing the current variable itself or variables after it.</p>
+     * Set <p>List of site-level custom variables. CustomVariable.Name requires the use of user.zone. as a prefix. Variables are initialized sequentially in array order. InitialValue can only reference variables before the current variable. It does not support referencing the current variable itself or variables after the current variable.</p>
+     * @param CustomVariables <p>List of site-level custom variables. CustomVariable.Name requires the use of user.zone. as a prefix. Variables are initialized sequentially in array order. InitialValue can only reference variables before the current variable. It does not support referencing the current variable itself or variables after the current variable.</p>
      */
     public void setCustomVariables(CustomVariable [] CustomVariables) {
         this.CustomVariables = CustomVariables;
     }
 
     /**
-     * Get <p>Site-level custom variable calculation rules. The calculation supports references to defined site-level custom variables. This list currently only supports filling in one rule; additional entries are invalid.</p> 
-     * @return CustomVariableOperations <p>Site-level custom variable calculation rules. The calculation supports references to defined site-level custom variables. This list currently only supports filling in one rule; additional entries are invalid.</p>
+     * Get <p>Site-level custom variable calculation rules. The calculation supports references to defined site-level custom variables. This list currently only supports filling in one rule, and additional entries are invalid.</p> 
+     * @return CustomVariableOperations <p>Site-level custom variable calculation rules. The calculation supports references to defined site-level custom variables. This list currently only supports filling in one rule, and additional entries are invalid.</p>
      */
     public CustomVariableOperation [] getCustomVariableOperations() {
         return this.CustomVariableOperations;
     }
 
     /**
-     * Set <p>Site-level custom variable calculation rules. The calculation supports references to defined site-level custom variables. This list currently only supports filling in one rule; additional entries are invalid.</p>
-     * @param CustomVariableOperations <p>Site-level custom variable calculation rules. The calculation supports references to defined site-level custom variables. This list currently only supports filling in one rule; additional entries are invalid.</p>
+     * Set <p>Site-level custom variable calculation rules. The calculation supports references to defined site-level custom variables. This list currently only supports filling in one rule, and additional entries are invalid.</p>
+     * @param CustomVariableOperations <p>Site-level custom variable calculation rules. The calculation supports references to defined site-level custom variables. This list currently only supports filling in one rule, and additional entries are invalid.</p>
      */
     public void setCustomVariableOperations(CustomVariableOperation [] CustomVariableOperations) {
         this.CustomVariableOperations = CustomVariableOperations;

@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class ModifyContentIdentifierRequest extends AbstractModel {
 
     /**
-    * Content identifier id.
+    * Content identifier ID.
     */
     @SerializedName("ContentId")
     @Expose
     private String ContentId;
 
     /**
-    * Content identifier description. length limit: 20 characters.
+    * Content identifier description, up to 20 characters.
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-     * Get Content identifier id. 
-     * @return ContentId Content identifier id.
+     * Get Content identifier ID. 
+     * @return ContentId Content identifier ID.
      */
     public String getContentId() {
         return this.ContentId;
     }
 
     /**
-     * Set Content identifier id.
-     * @param ContentId Content identifier id.
+     * Set Content identifier ID.
+     * @param ContentId Content identifier ID.
      */
     public void setContentId(String ContentId) {
         this.ContentId = ContentId;
     }
 
     /**
-     * Get Content identifier description. length limit: 20 characters. 
-     * @return Description Content identifier description. length limit: 20 characters.
+     * Get Content identifier description, up to 20 characters. 
+     * @return Description Content identifier description, up to 20 characters.
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set Content identifier description. length limit: 20 characters.
-     * @param Description Content identifier description. length limit: 20 characters.
+     * Set Content identifier description, up to 20 characters.
+     * @param Description Content identifier description, up to 20 characters.
      */
     public void setDescription(String Description) {
         this.Description = Description;

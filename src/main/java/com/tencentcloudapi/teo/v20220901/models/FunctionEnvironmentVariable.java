@@ -40,7 +40,7 @@ public class FunctionEnvironmentVariable extends AbstractModel {
     /**
     * Variable type. Valid values:
 <li>string: string type;</li>
-<li>json: JSON object type.</li>Default value: string.
+<li>json: JSON object type.</li><li>secret: Secret key type.</li>Default value: string.
     */
     @SerializedName("Type")
     @Expose
@@ -81,10 +81,10 @@ public class FunctionEnvironmentVariable extends AbstractModel {
     /**
      * Get Variable type. Valid values:
 <li>string: string type;</li>
-<li>json: JSON object type.</li>Default value: string. 
+<li>json: JSON object type.</li><li>secret: Secret key type.</li>Default value: string. 
      * @return Type Variable type. Valid values:
 <li>string: string type;</li>
-<li>json: JSON object type.</li>Default value: string.
+<li>json: JSON object type.</li><li>secret: Secret key type.</li>Default value: string.
      */
     public String getType() {
         return this.Type;
@@ -93,10 +93,10 @@ public class FunctionEnvironmentVariable extends AbstractModel {
     /**
      * Set Variable type. Valid values:
 <li>string: string type;</li>
-<li>json: JSON object type.</li>Default value: string.
+<li>json: JSON object type.</li><li>secret: Secret key type.</li>Default value: string.
      * @param Type Variable type. Valid values:
 <li>string: string type;</li>
-<li>json: JSON object type.</li>Default value: string.
+<li>json: JSON object type.</li><li>secret: Secret key type.</li>Default value: string.
      */
     public void setType(String Type) {
         this.Type = Type;

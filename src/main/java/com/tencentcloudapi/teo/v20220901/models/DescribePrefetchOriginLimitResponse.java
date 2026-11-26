@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribePrefetchOriginLimitResponse extends AbstractModel {
 
     /**
-    * Specifies the total count of origin-pull speed limit restrictions.
+    * Total number of origin-pull rate limits.
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * Describes the List of origin-pull speed limit details.
+    * List of origin-pull rate limits.
     */
     @SerializedName("Limits")
     @Expose
@@ -45,32 +45,32 @@ public class DescribePrefetchOriginLimitResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Specifies the total count of origin-pull speed limit restrictions. 
-     * @return TotalCount Specifies the total count of origin-pull speed limit restrictions.
+     * Get Total number of origin-pull rate limits. 
+     * @return TotalCount Total number of origin-pull rate limits.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Specifies the total count of origin-pull speed limit restrictions.
-     * @param TotalCount Specifies the total count of origin-pull speed limit restrictions.
+     * Set Total number of origin-pull rate limits.
+     * @param TotalCount Total number of origin-pull rate limits.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get Describes the List of origin-pull speed limit details. 
-     * @return Limits Describes the List of origin-pull speed limit details.
+     * Get List of origin-pull rate limits. 
+     * @return Limits List of origin-pull rate limits.
      */
     public PrefetchOriginLimit [] getLimits() {
         return this.Limits;
     }
 
     /**
-     * Set Describes the List of origin-pull speed limit details.
-     * @param Limits Describes the List of origin-pull speed limit details.
+     * Set List of origin-pull rate limits.
+     * @param Limits List of origin-pull rate limits.
      */
     public void setLimits(PrefetchOriginLimit [] Limits) {
         this.Limits = Limits;

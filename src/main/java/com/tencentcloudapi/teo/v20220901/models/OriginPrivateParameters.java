@@ -24,102 +24,102 @@ import java.util.HashMap;
 public class OriginPrivateParameters extends AbstractModel {
 
     /**
-    * Authentication parameter access key id.
+    * Access Key ID authentication parameter.
     */
     @SerializedName("AccessKeyId")
     @Expose
     private String AccessKeyId;
 
     /**
-    * Authentication parameter secret access key.
+    * Secret Access Key authentication parameter.
     */
     @SerializedName("SecretAccessKey")
     @Expose
     private String SecretAccessKey;
 
     /**
-    * Authentication version. values:.
-<Li>V2: v2 version;</li>.
-<Li>V4: v4 version.</li>.
+    * Authentication version. Valid values:
+<li>v2: v2 version;</li>
+<li>v4: v4 version.</li>
     */
     @SerializedName("SignatureVersion")
     @Expose
     private String SignatureVersion;
 
     /**
-    * Region of the bucket.
+    * Bucket region.
     */
     @SerializedName("Region")
     @Expose
     private String Region;
 
     /**
-     * Get Authentication parameter access key id. 
-     * @return AccessKeyId Authentication parameter access key id.
+     * Get Access Key ID authentication parameter. 
+     * @return AccessKeyId Access Key ID authentication parameter.
      */
     public String getAccessKeyId() {
         return this.AccessKeyId;
     }
 
     /**
-     * Set Authentication parameter access key id.
-     * @param AccessKeyId Authentication parameter access key id.
+     * Set Access Key ID authentication parameter.
+     * @param AccessKeyId Access Key ID authentication parameter.
      */
     public void setAccessKeyId(String AccessKeyId) {
         this.AccessKeyId = AccessKeyId;
     }
 
     /**
-     * Get Authentication parameter secret access key. 
-     * @return SecretAccessKey Authentication parameter secret access key.
+     * Get Secret Access Key authentication parameter. 
+     * @return SecretAccessKey Secret Access Key authentication parameter.
      */
     public String getSecretAccessKey() {
         return this.SecretAccessKey;
     }
 
     /**
-     * Set Authentication parameter secret access key.
-     * @param SecretAccessKey Authentication parameter secret access key.
+     * Set Secret Access Key authentication parameter.
+     * @param SecretAccessKey Secret Access Key authentication parameter.
      */
     public void setSecretAccessKey(String SecretAccessKey) {
         this.SecretAccessKey = SecretAccessKey;
     }
 
     /**
-     * Get Authentication version. values:.
-<Li>V2: v2 version;</li>.
-<Li>V4: v4 version.</li>. 
-     * @return SignatureVersion Authentication version. values:.
-<Li>V2: v2 version;</li>.
-<Li>V4: v4 version.</li>.
+     * Get Authentication version. Valid values:
+<li>v2: v2 version;</li>
+<li>v4: v4 version.</li> 
+     * @return SignatureVersion Authentication version. Valid values:
+<li>v2: v2 version;</li>
+<li>v4: v4 version.</li>
      */
     public String getSignatureVersion() {
         return this.SignatureVersion;
     }
 
     /**
-     * Set Authentication version. values:.
-<Li>V2: v2 version;</li>.
-<Li>V4: v4 version.</li>.
-     * @param SignatureVersion Authentication version. values:.
-<Li>V2: v2 version;</li>.
-<Li>V4: v4 version.</li>.
+     * Set Authentication version. Valid values:
+<li>v2: v2 version;</li>
+<li>v4: v4 version.</li>
+     * @param SignatureVersion Authentication version. Valid values:
+<li>v2: v2 version;</li>
+<li>v4: v4 version.</li>
      */
     public void setSignatureVersion(String SignatureVersion) {
         this.SignatureVersion = SignatureVersion;
     }
 
     /**
-     * Get Region of the bucket. 
-     * @return Region Region of the bucket.
+     * Get Bucket region. 
+     * @return Region Bucket region.
      */
     public String getRegion() {
         return this.Region;
     }
 
     /**
-     * Set Region of the bucket.
-     * @param Region Region of the bucket.
+     * Set Bucket region.
+     * @param Region Bucket region.
      */
     public void setRegion(String Region) {
         this.Region = Region;

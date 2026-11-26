@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ServerCertInfo extends AbstractModel {
 
     /**
-    * Specifies the server certificate ID, which originates from the SSL side. you can check the CertId from the [SSL certificate list](https://console.cloud.tencent.com/SSL).
+    * Server certificate ID, which originates from the SSL side. You can check the CertId from the [SSL Certificate List](https://console.cloud.tencent.com/ssl).
 
     */
     @SerializedName("CertId")
@@ -39,10 +39,10 @@ public class ServerCertInfo extends AbstractModel {
     private String Alias;
 
     /**
-    * Certificate type. valid values:.
-<Li>Specifies the default certificate.</li>.
-<Li>Upload: user upload;</li>.
-<li>managed: tencent cloud hosted.</li>.
+    * Certificate type. Valid values:
+<li>`default`: Default certificate;</li>
+<li>`upload`: User-upload;</li>
+<li>managed: Tencent Cloud hosted.</li>
     */
     @SerializedName("Type")
     @Expose
@@ -56,7 +56,7 @@ public class ServerCertInfo extends AbstractModel {
     private String ExpireTime;
 
     /**
-    * Specifies the cert deployment time.
+    * Deployment time of the certificate.
     */
     @SerializedName("DeployTime")
     @Expose
@@ -70,16 +70,16 @@ public class ServerCertInfo extends AbstractModel {
     private String SignAlgo;
 
     /**
-    * Domain name of the certificate.
+    * Domain name of the certificate ownership.
     */
     @SerializedName("CommonName")
     @Expose
     private String CommonName;
 
     /**
-     * Get Specifies the server certificate ID, which originates from the SSL side. you can check the CertId from the [SSL certificate list](https://console.cloud.tencent.com/SSL).
+     * Get Server certificate ID, which originates from the SSL side. You can check the CertId from the [SSL Certificate List](https://console.cloud.tencent.com/ssl).
  
-     * @return CertId Specifies the server certificate ID, which originates from the SSL side. you can check the CertId from the [SSL certificate list](https://console.cloud.tencent.com/SSL).
+     * @return CertId Server certificate ID, which originates from the SSL side. You can check the CertId from the [SSL Certificate List](https://console.cloud.tencent.com/ssl).
 
      */
     public String getCertId() {
@@ -87,9 +87,9 @@ public class ServerCertInfo extends AbstractModel {
     }
 
     /**
-     * Set Specifies the server certificate ID, which originates from the SSL side. you can check the CertId from the [SSL certificate list](https://console.cloud.tencent.com/SSL).
+     * Set Server certificate ID, which originates from the SSL side. You can check the CertId from the [SSL Certificate List](https://console.cloud.tencent.com/ssl).
 
-     * @param CertId Specifies the server certificate ID, which originates from the SSL side. you can check the CertId from the [SSL certificate list](https://console.cloud.tencent.com/SSL).
+     * @param CertId Server certificate ID, which originates from the SSL side. You can check the CertId from the [SSL Certificate List](https://console.cloud.tencent.com/ssl).
 
      */
     public void setCertId(String CertId) {
@@ -113,28 +113,28 @@ public class ServerCertInfo extends AbstractModel {
     }
 
     /**
-     * Get Certificate type. valid values:.
-<Li>Specifies the default certificate.</li>.
-<Li>Upload: user upload;</li>.
-<li>managed: tencent cloud hosted.</li>. 
-     * @return Type Certificate type. valid values:.
-<Li>Specifies the default certificate.</li>.
-<Li>Upload: user upload;</li>.
-<li>managed: tencent cloud hosted.</li>.
+     * Get Certificate type. Valid values:
+<li>`default`: Default certificate;</li>
+<li>`upload`: User-upload;</li>
+<li>managed: Tencent Cloud hosted.</li> 
+     * @return Type Certificate type. Valid values:
+<li>`default`: Default certificate;</li>
+<li>`upload`: User-upload;</li>
+<li>managed: Tencent Cloud hosted.</li>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Certificate type. valid values:.
-<Li>Specifies the default certificate.</li>.
-<Li>Upload: user upload;</li>.
-<li>managed: tencent cloud hosted.</li>.
-     * @param Type Certificate type. valid values:.
-<Li>Specifies the default certificate.</li>.
-<Li>Upload: user upload;</li>.
-<li>managed: tencent cloud hosted.</li>.
+     * Set Certificate type. Valid values:
+<li>`default`: Default certificate;</li>
+<li>`upload`: User-upload;</li>
+<li>managed: Tencent Cloud hosted.</li>
+     * @param Type Certificate type. Valid values:
+<li>`default`: Default certificate;</li>
+<li>`upload`: User-upload;</li>
+<li>managed: Tencent Cloud hosted.</li>
      */
     public void setType(String Type) {
         this.Type = Type;
@@ -157,16 +157,16 @@ public class ServerCertInfo extends AbstractModel {
     }
 
     /**
-     * Get Specifies the cert deployment time. 
-     * @return DeployTime Specifies the cert deployment time.
+     * Get Deployment time of the certificate. 
+     * @return DeployTime Deployment time of the certificate.
      */
     public String getDeployTime() {
         return this.DeployTime;
     }
 
     /**
-     * Set Specifies the cert deployment time.
-     * @param DeployTime Specifies the cert deployment time.
+     * Set Deployment time of the certificate.
+     * @param DeployTime Deployment time of the certificate.
      */
     public void setDeployTime(String DeployTime) {
         this.DeployTime = DeployTime;
@@ -189,16 +189,16 @@ public class ServerCertInfo extends AbstractModel {
     }
 
     /**
-     * Get Domain name of the certificate. 
-     * @return CommonName Domain name of the certificate.
+     * Get Domain name of the certificate ownership. 
+     * @return CommonName Domain name of the certificate ownership.
      */
     public String getCommonName() {
         return this.CommonName;
     }
 
     /**
-     * Set Domain name of the certificate.
-     * @param CommonName Domain name of the certificate.
+     * Set Domain name of the certificate ownership.
+     * @param CommonName Domain name of the certificate ownership.
      */
     public void setCommonName(String CommonName) {
         this.CommonName = CommonName;

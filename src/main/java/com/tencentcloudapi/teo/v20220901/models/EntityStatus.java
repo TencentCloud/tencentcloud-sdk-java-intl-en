@@ -24,74 +24,74 @@ import java.util.HashMap;
 public class EntityStatus extends AbstractModel {
 
     /**
-    * Instance name. Only subdomain names are supported.
+    * Instance name. Currently, only subdomains are available.
     */
     @SerializedName("Entity")
     @Expose
     private String Entity;
 
     /**
-    * Instance configuration status. Values:
-<li>`online`: Configuration has taken effect;</li><li>`fail`: Configuration failed;</li><li>`process`: Configuration is being delivered. </li>
+    * Instance configuration issuance status. Valid values:
+<li>online: Configuration in effect;</li><li>fail: Configuration failure;</li><li>process: Configuration is being deployed.</li>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * Message returned after the operation completed. 
+    * Prompt for instance configuration distribution.
     */
     @SerializedName("Message")
     @Expose
     private String Message;
 
     /**
-     * Get Instance name. Only subdomain names are supported. 
-     * @return Entity Instance name. Only subdomain names are supported.
+     * Get Instance name. Currently, only subdomains are available. 
+     * @return Entity Instance name. Currently, only subdomains are available.
      */
     public String getEntity() {
         return this.Entity;
     }
 
     /**
-     * Set Instance name. Only subdomain names are supported.
-     * @param Entity Instance name. Only subdomain names are supported.
+     * Set Instance name. Currently, only subdomains are available.
+     * @param Entity Instance name. Currently, only subdomains are available.
      */
     public void setEntity(String Entity) {
         this.Entity = Entity;
     }
 
     /**
-     * Get Instance configuration status. Values:
-<li>`online`: Configuration has taken effect;</li><li>`fail`: Configuration failed;</li><li>`process`: Configuration is being delivered. </li> 
-     * @return Status Instance configuration status. Values:
-<li>`online`: Configuration has taken effect;</li><li>`fail`: Configuration failed;</li><li>`process`: Configuration is being delivered. </li>
+     * Get Instance configuration issuance status. Valid values:
+<li>online: Configuration in effect;</li><li>fail: Configuration failure;</li><li>process: Configuration is being deployed.</li> 
+     * @return Status Instance configuration issuance status. Valid values:
+<li>online: Configuration in effect;</li><li>fail: Configuration failure;</li><li>process: Configuration is being deployed.</li>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Instance configuration status. Values:
-<li>`online`: Configuration has taken effect;</li><li>`fail`: Configuration failed;</li><li>`process`: Configuration is being delivered. </li>
-     * @param Status Instance configuration status. Values:
-<li>`online`: Configuration has taken effect;</li><li>`fail`: Configuration failed;</li><li>`process`: Configuration is being delivered. </li>
+     * Set Instance configuration issuance status. Valid values:
+<li>online: Configuration in effect;</li><li>fail: Configuration failure;</li><li>process: Configuration is being deployed.</li>
+     * @param Status Instance configuration issuance status. Valid values:
+<li>online: Configuration in effect;</li><li>fail: Configuration failure;</li><li>process: Configuration is being deployed.</li>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Message returned after the operation completed.  
-     * @return Message Message returned after the operation completed. 
+     * Get Prompt for instance configuration distribution. 
+     * @return Message Prompt for instance configuration distribution.
      */
     public String getMessage() {
         return this.Message;
     }
 
     /**
-     * Set Message returned after the operation completed. 
-     * @param Message Message returned after the operation completed. 
+     * Set Prompt for instance configuration distribution.
+     * @param Message Prompt for instance configuration distribution.
      */
     public void setMessage(String Message) {
         this.Message = Message;

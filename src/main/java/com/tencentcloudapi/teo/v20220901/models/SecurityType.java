@@ -24,33 +24,33 @@ import java.util.HashMap;
 public class SecurityType extends AbstractModel {
 
     /**
-    * Whether to enable the security type setting. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+    * Security type switch. Value:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-     * Get Whether to enable the security type setting. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li> 
-     * @return Switch Whether to enable the security type setting. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+     * Get Security type switch. Value:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li> 
+     * @return Switch Security type switch. Value:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set Whether to enable the security type setting. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-     * @param Switch Whether to enable the security type setting. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+     * Set Security type switch. Value:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+     * @param Switch Security type switch. Value:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;

@@ -24,38 +24,33 @@ import java.util.HashMap;
 public class AccelerateMainlandParameters extends AbstractModel {
 
     /**
-    * Mainland china acceleration optimization switch. valid values:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li>.
+    * Mainland China acceleration optimization configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-     * Get Mainland china acceleration optimization switch. valid values:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li>. 
-     * @return Switch Mainland china acceleration optimization switch. valid values:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li>.
+     * Get Mainland China acceleration optimization configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li> 
+     * @return Switch Mainland China acceleration optimization configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set Mainland china acceleration optimization switch. valid values:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li>.
-     * @param Switch Mainland china acceleration optimization switch. valid values:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li>.
+     * Set Mainland China acceleration optimization configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+     * @param Switch Mainland China acceleration optimization configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;

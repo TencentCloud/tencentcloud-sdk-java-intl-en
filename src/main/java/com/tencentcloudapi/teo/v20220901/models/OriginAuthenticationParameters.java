@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class OriginAuthenticationParameters extends AbstractModel {
 
     /**
-    * Specifies the authentication request attribute for origin pull.
+    * Origin-pull authentication request attributes.
     */
     @SerializedName("RequestProperties")
     @Expose
     private OriginAuthenticationRequestProperties [] RequestProperties;
 
     /**
-     * Get Specifies the authentication request attribute for origin pull. 
-     * @return RequestProperties Specifies the authentication request attribute for origin pull.
+     * Get Origin-pull authentication request attributes. 
+     * @return RequestProperties Origin-pull authentication request attributes.
      */
     public OriginAuthenticationRequestProperties [] getRequestProperties() {
         return this.RequestProperties;
     }
 
     /**
-     * Set Specifies the authentication request attribute for origin pull.
-     * @param RequestProperties Specifies the authentication request attribute for origin pull.
+     * Set Origin-pull authentication request attributes.
+     * @param RequestProperties Origin-pull authentication request attributes.
      */
     public void setRequestProperties(OriginAuthenticationRequestProperties [] RequestProperties) {
         this.RequestProperties = RequestProperties;

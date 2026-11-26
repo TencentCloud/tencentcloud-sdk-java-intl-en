@@ -24,84 +24,84 @@ import java.util.HashMap;
 public class RuleRewriteActionParams extends AbstractModel {
 
     /**
-    * Feature parameter name. For details, see [DescribeRulesSetting](https://intl.cloud.tencent.com/document/product/1552/80618?from_cn_redirect=1).
-<li>`add`: Add the HTTP header.</li>
-<li>`set`: Rewrite the HTTP header.</li>
-<li>`del`: Delete the HTTP header.</li>
+    * For feature parameter names and completion specifications, call the API to query the rule engine's parameter settings (https://www.tencentcloud.com/document/product/1552/80618?from_cn_redirect=1). Currently, only three values are supported:
+<li> add: Add an HTTP header;</li>
+<li> set: rewrite HTTP header;</li>
+<li> del: delete an HTTP header.</li>
     */
     @SerializedName("Action")
     @Expose
     private String Action;
 
     /**
-    * Parameter name
+    * Parameter name.
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * Parameter value
+    * Parameter value.
     */
     @SerializedName("Values")
     @Expose
     private String [] Values;
 
     /**
-     * Get Feature parameter name. For details, see [DescribeRulesSetting](https://intl.cloud.tencent.com/document/product/1552/80618?from_cn_redirect=1).
-<li>`add`: Add the HTTP header.</li>
-<li>`set`: Rewrite the HTTP header.</li>
-<li>`del`: Delete the HTTP header.</li> 
-     * @return Action Feature parameter name. For details, see [DescribeRulesSetting](https://intl.cloud.tencent.com/document/product/1552/80618?from_cn_redirect=1).
-<li>`add`: Add the HTTP header.</li>
-<li>`set`: Rewrite the HTTP header.</li>
-<li>`del`: Delete the HTTP header.</li>
+     * Get For feature parameter names and completion specifications, call the API to query the rule engine's parameter settings (https://www.tencentcloud.com/document/product/1552/80618?from_cn_redirect=1). Currently, only three values are supported:
+<li> add: Add an HTTP header;</li>
+<li> set: rewrite HTTP header;</li>
+<li> del: delete an HTTP header.</li> 
+     * @return Action For feature parameter names and completion specifications, call the API to query the rule engine's parameter settings (https://www.tencentcloud.com/document/product/1552/80618?from_cn_redirect=1). Currently, only three values are supported:
+<li> add: Add an HTTP header;</li>
+<li> set: rewrite HTTP header;</li>
+<li> del: delete an HTTP header.</li>
      */
     public String getAction() {
         return this.Action;
     }
 
     /**
-     * Set Feature parameter name. For details, see [DescribeRulesSetting](https://intl.cloud.tencent.com/document/product/1552/80618?from_cn_redirect=1).
-<li>`add`: Add the HTTP header.</li>
-<li>`set`: Rewrite the HTTP header.</li>
-<li>`del`: Delete the HTTP header.</li>
-     * @param Action Feature parameter name. For details, see [DescribeRulesSetting](https://intl.cloud.tencent.com/document/product/1552/80618?from_cn_redirect=1).
-<li>`add`: Add the HTTP header.</li>
-<li>`set`: Rewrite the HTTP header.</li>
-<li>`del`: Delete the HTTP header.</li>
+     * Set For feature parameter names and completion specifications, call the API to query the rule engine's parameter settings (https://www.tencentcloud.com/document/product/1552/80618?from_cn_redirect=1). Currently, only three values are supported:
+<li> add: Add an HTTP header;</li>
+<li> set: rewrite HTTP header;</li>
+<li> del: delete an HTTP header.</li>
+     * @param Action For feature parameter names and completion specifications, call the API to query the rule engine's parameter settings (https://www.tencentcloud.com/document/product/1552/80618?from_cn_redirect=1). Currently, only three values are supported:
+<li> add: Add an HTTP header;</li>
+<li> set: rewrite HTTP header;</li>
+<li> del: delete an HTTP header.</li>
      */
     public void setAction(String Action) {
         this.Action = Action;
     }
 
     /**
-     * Get Parameter name 
-     * @return Name Parameter name
+     * Get Parameter name. 
+     * @return Name Parameter name.
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Parameter name
-     * @param Name Parameter name
+     * Set Parameter name.
+     * @param Name Parameter name.
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Parameter value 
-     * @return Values Parameter value
+     * Get Parameter value. 
+     * @return Values Parameter value.
      */
     public String [] getValues() {
         return this.Values;
     }
 
     /**
-     * Set Parameter value
-     * @param Values Parameter value
+     * Set Parameter value.
+     * @param Values Parameter value.
      */
     public void setValues(String [] Values) {
         this.Values = Values;

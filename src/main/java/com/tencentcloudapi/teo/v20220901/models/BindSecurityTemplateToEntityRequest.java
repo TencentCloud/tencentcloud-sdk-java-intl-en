@@ -24,24 +24,24 @@ import java.util.HashMap;
 public class BindSecurityTemplateToEntityRequest extends AbstractModel {
 
     /**
-    * Site ID of the policy template to be bound to or unbound from.
+    * Site ID of the policy template to be bound or unbound.
     */
     @SerializedName("ZoneId")
     @Expose
     private String ZoneId;
 
     /**
-    * List of domain names to bind to/unbind from a policy template
+    * Domain name list bound to the policy template (or unbound from it).
     */
     @SerializedName("Entities")
     @Expose
     private String [] Entities;
 
     /**
-    * Bind or unbind operation option. valid values:.
-<Li>bind: bind the domain name to the policy template.</li>
-<li>unbind-keep-policy: unbind a domain name from the policy template while retaining the current policy.</li>
-<li>unbind-use-default: unbind a domain name from the policy template and use the default blank policy.</li> note: the unbinding operation currently only supports unbinding a single domain name. that is, when the Operate parameter value is unbind-keep-policy or unbind-use-default, the Entities parameter list only supports filling in one domain name.
+    * Bind or unbind operation options. Valid values:
+<li>bind: Bind a domain name to the policy template.</li>
+<li>unbind-keep-policy: Unbind the domain name from the policy template while retaining the current policy.</li>
+<li>unbind-use-default: Unbind the domain name from the policy template and use the default blank policy.</li>Note: The unbinding operation currently only supports unbinding a single domain name. That is, when the Operate parameter value is unbind-keep-policy or unbind-use-default, the Entities parameter list supports filling in only one domain name.
     */
     @SerializedName("Operate")
     @Expose
@@ -49,8 +49,8 @@ public class BindSecurityTemplateToEntityRequest extends AbstractModel {
 
     /**
     * Specifies the ID of the policy template or the site global policy to be bound or unbound.
-<li>To bind to a policy template, or unbind from it, specify the policy template ID.</li>.
-<li>To bind to the site's global policy, or unbind from it, use the @ZoneLevel@domain parameter value.</li>.
+<li>To bind to a policy template, or unbind from it, specify the policy template ID.</li>
+<li>To bind to the site's global policy, or unbind from it, use the @ZoneLevel@domain parameter value.</li>
 
 Note: After unbinding, the domain name will use an independent policy and rule quota will be calculated separately. Please make sure there is sufficient rule quota before unbinding.
     */
@@ -59,67 +59,67 @@ Note: After unbinding, the domain name will use an independent policy and rule q
     private String TemplateId;
 
     /**
-    * If the imported domain name has already been bound to a policy template (including a site-level security policy), this parameter indicates whether to replace the template by setting it. the default value is true. values: <li>`true`: replace the template currently bound to the domain.</li> <li>`false`: do not replace the template currently bound to the domain.</li> note: when set to false, if the imported domain name has already been bound to a policy template, the API will return an error; a site-level security policy is also a type of policy template.
+    * If the imported domain name is already bound to a policy template (including a site-level protection strategy), setting this parameter indicates whether to replace the template. Default value: true. Valid values: <li>true: Replace the template currently bound to the domain name.</li><li>false: Do not replace the template currently bound to the domain name.</li>Note: When set to false, if the imported domain name is already bound to a policy template, an error will be returned. A site-level protection strategy is also a type of policy template.
     */
     @SerializedName("OverWrite")
     @Expose
     private Boolean OverWrite;
 
     /**
-     * Get Site ID of the policy template to be bound to or unbound from. 
-     * @return ZoneId Site ID of the policy template to be bound to or unbound from.
+     * Get Site ID of the policy template to be bound or unbound. 
+     * @return ZoneId Site ID of the policy template to be bound or unbound.
      */
     public String getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set Site ID of the policy template to be bound to or unbound from.
-     * @param ZoneId Site ID of the policy template to be bound to or unbound from.
+     * Set Site ID of the policy template to be bound or unbound.
+     * @param ZoneId Site ID of the policy template to be bound or unbound.
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get List of domain names to bind to/unbind from a policy template 
-     * @return Entities List of domain names to bind to/unbind from a policy template
+     * Get Domain name list bound to the policy template (or unbound from it). 
+     * @return Entities Domain name list bound to the policy template (or unbound from it).
      */
     public String [] getEntities() {
         return this.Entities;
     }
 
     /**
-     * Set List of domain names to bind to/unbind from a policy template
-     * @param Entities List of domain names to bind to/unbind from a policy template
+     * Set Domain name list bound to the policy template (or unbound from it).
+     * @param Entities Domain name list bound to the policy template (or unbound from it).
      */
     public void setEntities(String [] Entities) {
         this.Entities = Entities;
     }
 
     /**
-     * Get Bind or unbind operation option. valid values:.
-<Li>bind: bind the domain name to the policy template.</li>
-<li>unbind-keep-policy: unbind a domain name from the policy template while retaining the current policy.</li>
-<li>unbind-use-default: unbind a domain name from the policy template and use the default blank policy.</li> note: the unbinding operation currently only supports unbinding a single domain name. that is, when the Operate parameter value is unbind-keep-policy or unbind-use-default, the Entities parameter list only supports filling in one domain name. 
-     * @return Operate Bind or unbind operation option. valid values:.
-<Li>bind: bind the domain name to the policy template.</li>
-<li>unbind-keep-policy: unbind a domain name from the policy template while retaining the current policy.</li>
-<li>unbind-use-default: unbind a domain name from the policy template and use the default blank policy.</li> note: the unbinding operation currently only supports unbinding a single domain name. that is, when the Operate parameter value is unbind-keep-policy or unbind-use-default, the Entities parameter list only supports filling in one domain name.
+     * Get Bind or unbind operation options. Valid values:
+<li>bind: Bind a domain name to the policy template.</li>
+<li>unbind-keep-policy: Unbind the domain name from the policy template while retaining the current policy.</li>
+<li>unbind-use-default: Unbind the domain name from the policy template and use the default blank policy.</li>Note: The unbinding operation currently only supports unbinding a single domain name. That is, when the Operate parameter value is unbind-keep-policy or unbind-use-default, the Entities parameter list supports filling in only one domain name. 
+     * @return Operate Bind or unbind operation options. Valid values:
+<li>bind: Bind a domain name to the policy template.</li>
+<li>unbind-keep-policy: Unbind the domain name from the policy template while retaining the current policy.</li>
+<li>unbind-use-default: Unbind the domain name from the policy template and use the default blank policy.</li>Note: The unbinding operation currently only supports unbinding a single domain name. That is, when the Operate parameter value is unbind-keep-policy or unbind-use-default, the Entities parameter list supports filling in only one domain name.
      */
     public String getOperate() {
         return this.Operate;
     }
 
     /**
-     * Set Bind or unbind operation option. valid values:.
-<Li>bind: bind the domain name to the policy template.</li>
-<li>unbind-keep-policy: unbind a domain name from the policy template while retaining the current policy.</li>
-<li>unbind-use-default: unbind a domain name from the policy template and use the default blank policy.</li> note: the unbinding operation currently only supports unbinding a single domain name. that is, when the Operate parameter value is unbind-keep-policy or unbind-use-default, the Entities parameter list only supports filling in one domain name.
-     * @param Operate Bind or unbind operation option. valid values:.
-<Li>bind: bind the domain name to the policy template.</li>
-<li>unbind-keep-policy: unbind a domain name from the policy template while retaining the current policy.</li>
-<li>unbind-use-default: unbind a domain name from the policy template and use the default blank policy.</li> note: the unbinding operation currently only supports unbinding a single domain name. that is, when the Operate parameter value is unbind-keep-policy or unbind-use-default, the Entities parameter list only supports filling in one domain name.
+     * Set Bind or unbind operation options. Valid values:
+<li>bind: Bind a domain name to the policy template.</li>
+<li>unbind-keep-policy: Unbind the domain name from the policy template while retaining the current policy.</li>
+<li>unbind-use-default: Unbind the domain name from the policy template and use the default blank policy.</li>Note: The unbinding operation currently only supports unbinding a single domain name. That is, when the Operate parameter value is unbind-keep-policy or unbind-use-default, the Entities parameter list supports filling in only one domain name.
+     * @param Operate Bind or unbind operation options. Valid values:
+<li>bind: Bind a domain name to the policy template.</li>
+<li>unbind-keep-policy: Unbind the domain name from the policy template while retaining the current policy.</li>
+<li>unbind-use-default: Unbind the domain name from the policy template and use the default blank policy.</li>Note: The unbinding operation currently only supports unbinding a single domain name. That is, when the Operate parameter value is unbind-keep-policy or unbind-use-default, the Entities parameter list supports filling in only one domain name.
      */
     public void setOperate(String Operate) {
         this.Operate = Operate;
@@ -127,13 +127,13 @@ Note: After unbinding, the domain name will use an independent policy and rule q
 
     /**
      * Get Specifies the ID of the policy template or the site global policy to be bound or unbound.
-<li>To bind to a policy template, or unbind from it, specify the policy template ID.</li>.
-<li>To bind to the site's global policy, or unbind from it, use the @ZoneLevel@domain parameter value.</li>.
+<li>To bind to a policy template, or unbind from it, specify the policy template ID.</li>
+<li>To bind to the site's global policy, or unbind from it, use the @ZoneLevel@domain parameter value.</li>
 
 Note: After unbinding, the domain name will use an independent policy and rule quota will be calculated separately. Please make sure there is sufficient rule quota before unbinding. 
      * @return TemplateId Specifies the ID of the policy template or the site global policy to be bound or unbound.
-<li>To bind to a policy template, or unbind from it, specify the policy template ID.</li>.
-<li>To bind to the site's global policy, or unbind from it, use the @ZoneLevel@domain parameter value.</li>.
+<li>To bind to a policy template, or unbind from it, specify the policy template ID.</li>
+<li>To bind to the site's global policy, or unbind from it, use the @ZoneLevel@domain parameter value.</li>
 
 Note: After unbinding, the domain name will use an independent policy and rule quota will be calculated separately. Please make sure there is sufficient rule quota before unbinding.
      */
@@ -143,13 +143,13 @@ Note: After unbinding, the domain name will use an independent policy and rule q
 
     /**
      * Set Specifies the ID of the policy template or the site global policy to be bound or unbound.
-<li>To bind to a policy template, or unbind from it, specify the policy template ID.</li>.
-<li>To bind to the site's global policy, or unbind from it, use the @ZoneLevel@domain parameter value.</li>.
+<li>To bind to a policy template, or unbind from it, specify the policy template ID.</li>
+<li>To bind to the site's global policy, or unbind from it, use the @ZoneLevel@domain parameter value.</li>
 
 Note: After unbinding, the domain name will use an independent policy and rule quota will be calculated separately. Please make sure there is sufficient rule quota before unbinding.
      * @param TemplateId Specifies the ID of the policy template or the site global policy to be bound or unbound.
-<li>To bind to a policy template, or unbind from it, specify the policy template ID.</li>.
-<li>To bind to the site's global policy, or unbind from it, use the @ZoneLevel@domain parameter value.</li>.
+<li>To bind to a policy template, or unbind from it, specify the policy template ID.</li>
+<li>To bind to the site's global policy, or unbind from it, use the @ZoneLevel@domain parameter value.</li>
 
 Note: After unbinding, the domain name will use an independent policy and rule quota will be calculated separately. Please make sure there is sufficient rule quota before unbinding.
      */
@@ -158,16 +158,16 @@ Note: After unbinding, the domain name will use an independent policy and rule q
     }
 
     /**
-     * Get If the imported domain name has already been bound to a policy template (including a site-level security policy), this parameter indicates whether to replace the template by setting it. the default value is true. values: <li>`true`: replace the template currently bound to the domain.</li> <li>`false`: do not replace the template currently bound to the domain.</li> note: when set to false, if the imported domain name has already been bound to a policy template, the API will return an error; a site-level security policy is also a type of policy template. 
-     * @return OverWrite If the imported domain name has already been bound to a policy template (including a site-level security policy), this parameter indicates whether to replace the template by setting it. the default value is true. values: <li>`true`: replace the template currently bound to the domain.</li> <li>`false`: do not replace the template currently bound to the domain.</li> note: when set to false, if the imported domain name has already been bound to a policy template, the API will return an error; a site-level security policy is also a type of policy template.
+     * Get If the imported domain name is already bound to a policy template (including a site-level protection strategy), setting this parameter indicates whether to replace the template. Default value: true. Valid values: <li>true: Replace the template currently bound to the domain name.</li><li>false: Do not replace the template currently bound to the domain name.</li>Note: When set to false, if the imported domain name is already bound to a policy template, an error will be returned. A site-level protection strategy is also a type of policy template. 
+     * @return OverWrite If the imported domain name is already bound to a policy template (including a site-level protection strategy), setting this parameter indicates whether to replace the template. Default value: true. Valid values: <li>true: Replace the template currently bound to the domain name.</li><li>false: Do not replace the template currently bound to the domain name.</li>Note: When set to false, if the imported domain name is already bound to a policy template, an error will be returned. A site-level protection strategy is also a type of policy template.
      */
     public Boolean getOverWrite() {
         return this.OverWrite;
     }
 
     /**
-     * Set If the imported domain name has already been bound to a policy template (including a site-level security policy), this parameter indicates whether to replace the template by setting it. the default value is true. values: <li>`true`: replace the template currently bound to the domain.</li> <li>`false`: do not replace the template currently bound to the domain.</li> note: when set to false, if the imported domain name has already been bound to a policy template, the API will return an error; a site-level security policy is also a type of policy template.
-     * @param OverWrite If the imported domain name has already been bound to a policy template (including a site-level security policy), this parameter indicates whether to replace the template by setting it. the default value is true. values: <li>`true`: replace the template currently bound to the domain.</li> <li>`false`: do not replace the template currently bound to the domain.</li> note: when set to false, if the imported domain name has already been bound to a policy template, the API will return an error; a site-level security policy is also a type of policy template.
+     * Set If the imported domain name is already bound to a policy template (including a site-level protection strategy), setting this parameter indicates whether to replace the template. Default value: true. Valid values: <li>true: Replace the template currently bound to the domain name.</li><li>false: Do not replace the template currently bound to the domain name.</li>Note: When set to false, if the imported domain name is already bound to a policy template, an error will be returned. A site-level protection strategy is also a type of policy template.
+     * @param OverWrite If the imported domain name is already bound to a policy template (including a site-level protection strategy), setting this parameter indicates whether to replace the template. Default value: true. Valid values: <li>true: Replace the template currently bound to the domain name.</li><li>false: Do not replace the template currently bound to the domain name.</li>Note: When set to false, if the imported domain name is already bound to a policy template, an error will be returned. A site-level protection strategy is also a type of policy template.
      */
     public void setOverWrite(Boolean OverWrite) {
         this.OverWrite = OverWrite;

@@ -24,79 +24,79 @@ import java.util.HashMap;
 public class BindSharedCNAMERequest extends AbstractModel {
 
     /**
-    * ID of the site related with the acceleration domain name.	
+    * Zone ID of the acceleration domain name.	
     */
     @SerializedName("ZoneId")
     @Expose
     private String ZoneId;
 
     /**
-    * Action type. Values:
-<li>`bind`: To bind</li>
-<li>`unbind`: To unbind</li>
+    * Binding type. Valid values:
+<li>bind: bind;</li>
+<li>unbind: Unbind.</li>
     */
     @SerializedName("BindType")
     @Expose
     private String BindType;
 
     /**
-    * Bindings between domain names and a shared CNAME
+    * Binding relationship between the domain name and shared CNAME.
     */
     @SerializedName("BindSharedCNAMEMaps")
     @Expose
     private BindSharedCNAMEMap [] BindSharedCNAMEMaps;
 
     /**
-     * Get ID of the site related with the acceleration domain name.	 
-     * @return ZoneId ID of the site related with the acceleration domain name.	
+     * Get Zone ID of the acceleration domain name.	 
+     * @return ZoneId Zone ID of the acceleration domain name.	
      */
     public String getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set ID of the site related with the acceleration domain name.	
-     * @param ZoneId ID of the site related with the acceleration domain name.	
+     * Set Zone ID of the acceleration domain name.	
+     * @param ZoneId Zone ID of the acceleration domain name.	
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get Action type. Values:
-<li>`bind`: To bind</li>
-<li>`unbind`: To unbind</li> 
-     * @return BindType Action type. Values:
-<li>`bind`: To bind</li>
-<li>`unbind`: To unbind</li>
+     * Get Binding type. Valid values:
+<li>bind: bind;</li>
+<li>unbind: Unbind.</li> 
+     * @return BindType Binding type. Valid values:
+<li>bind: bind;</li>
+<li>unbind: Unbind.</li>
      */
     public String getBindType() {
         return this.BindType;
     }
 
     /**
-     * Set Action type. Values:
-<li>`bind`: To bind</li>
-<li>`unbind`: To unbind</li>
-     * @param BindType Action type. Values:
-<li>`bind`: To bind</li>
-<li>`unbind`: To unbind</li>
+     * Set Binding type. Valid values:
+<li>bind: bind;</li>
+<li>unbind: Unbind.</li>
+     * @param BindType Binding type. Valid values:
+<li>bind: bind;</li>
+<li>unbind: Unbind.</li>
      */
     public void setBindType(String BindType) {
         this.BindType = BindType;
     }
 
     /**
-     * Get Bindings between domain names and a shared CNAME 
-     * @return BindSharedCNAMEMaps Bindings between domain names and a shared CNAME
+     * Get Binding relationship between the domain name and shared CNAME. 
+     * @return BindSharedCNAMEMaps Binding relationship between the domain name and shared CNAME.
      */
     public BindSharedCNAMEMap [] getBindSharedCNAMEMaps() {
         return this.BindSharedCNAMEMaps;
     }
 
     /**
-     * Set Bindings between domain names and a shared CNAME
-     * @param BindSharedCNAMEMaps Bindings between domain names and a shared CNAME
+     * Set Binding relationship between the domain name and shared CNAME.
+     * @param BindSharedCNAMEMaps Binding relationship between the domain name and shared CNAME.
      */
     public void setBindSharedCNAMEMaps(BindSharedCNAMEMap [] BindSharedCNAMEMaps) {
         this.BindSharedCNAMEMaps = BindSharedCNAMEMaps;

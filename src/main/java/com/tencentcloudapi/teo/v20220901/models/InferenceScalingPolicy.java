@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class InferenceScalingPolicy extends AbstractModel {
 
     /**
-    * Policy Name. Length limit is 1-30 characters. Policy name must be unique within the same service.
+    * Policy Name. Length limit: 1–30 characters. Must be unique within the same service.
     */
     @SerializedName("PolicyName")
     @Expose
     private String PolicyName;
 
     /**
-    * Policy type, cannot be modified after creation. Value: <li>ScheduledScaling: scheduled scaling.</li>
+    * Policy type. It cannot be modified after creation. Value: <li>ScheduledScaling: scheduled scaling.</li>
     */
     @SerializedName("PolicyType")
     @Expose
     private String PolicyType;
 
     /**
-    * Scheduled scaling configuration. This field is required when the PolicyType value is ScheduledScaling.
+    * Scheduled scaling configuration. This field is required when the value of PolicyType is ScheduledScaling.
     */
     @SerializedName("ScheduledScalingPolicy")
     @Expose
     private InferenceScheduledScalingPolicy ScheduledScalingPolicy;
 
     /**
-     * Get Policy Name. Length limit is 1-30 characters. Policy name must be unique within the same service. 
-     * @return PolicyName Policy Name. Length limit is 1-30 characters. Policy name must be unique within the same service.
+     * Get Policy Name. Length limit: 1–30 characters. Must be unique within the same service. 
+     * @return PolicyName Policy Name. Length limit: 1–30 characters. Must be unique within the same service.
      */
     public String getPolicyName() {
         return this.PolicyName;
     }
 
     /**
-     * Set Policy Name. Length limit is 1-30 characters. Policy name must be unique within the same service.
-     * @param PolicyName Policy Name. Length limit is 1-30 characters. Policy name must be unique within the same service.
+     * Set Policy Name. Length limit: 1–30 characters. Must be unique within the same service.
+     * @param PolicyName Policy Name. Length limit: 1–30 characters. Must be unique within the same service.
      */
     public void setPolicyName(String PolicyName) {
         this.PolicyName = PolicyName;
     }
 
     /**
-     * Get Policy type, cannot be modified after creation. Value: <li>ScheduledScaling: scheduled scaling.</li> 
-     * @return PolicyType Policy type, cannot be modified after creation. Value: <li>ScheduledScaling: scheduled scaling.</li>
+     * Get Policy type. It cannot be modified after creation. Value: <li>ScheduledScaling: scheduled scaling.</li> 
+     * @return PolicyType Policy type. It cannot be modified after creation. Value: <li>ScheduledScaling: scheduled scaling.</li>
      */
     public String getPolicyType() {
         return this.PolicyType;
     }
 
     /**
-     * Set Policy type, cannot be modified after creation. Value: <li>ScheduledScaling: scheduled scaling.</li>
-     * @param PolicyType Policy type, cannot be modified after creation. Value: <li>ScheduledScaling: scheduled scaling.</li>
+     * Set Policy type. It cannot be modified after creation. Value: <li>ScheduledScaling: scheduled scaling.</li>
+     * @param PolicyType Policy type. It cannot be modified after creation. Value: <li>ScheduledScaling: scheduled scaling.</li>
      */
     public void setPolicyType(String PolicyType) {
         this.PolicyType = PolicyType;
     }
 
     /**
-     * Get Scheduled scaling configuration. This field is required when the PolicyType value is ScheduledScaling. 
-     * @return ScheduledScalingPolicy Scheduled scaling configuration. This field is required when the PolicyType value is ScheduledScaling.
+     * Get Scheduled scaling configuration. This field is required when the value of PolicyType is ScheduledScaling. 
+     * @return ScheduledScalingPolicy Scheduled scaling configuration. This field is required when the value of PolicyType is ScheduledScaling.
      */
     public InferenceScheduledScalingPolicy getScheduledScalingPolicy() {
         return this.ScheduledScalingPolicy;
     }
 
     /**
-     * Set Scheduled scaling configuration. This field is required when the PolicyType value is ScheduledScaling.
-     * @param ScheduledScalingPolicy Scheduled scaling configuration. This field is required when the PolicyType value is ScheduledScaling.
+     * Set Scheduled scaling configuration. This field is required when the value of PolicyType is ScheduledScaling.
+     * @param ScheduledScalingPolicy Scheduled scaling configuration. This field is required when the value of PolicyType is ScheduledScaling.
      */
     public void setScheduledScalingPolicy(InferenceScheduledScalingPolicy ScheduledScalingPolicy) {
         this.ScheduledScalingPolicy = ScheduledScalingPolicy;

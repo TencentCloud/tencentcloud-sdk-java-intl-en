@@ -31,35 +31,35 @@ public class FunctionReplica extends AbstractModel {
     private String FunctionId;
 
     /**
-    * Edge function copy name.
+    * Name of the edge function copy.
     */
     @SerializedName("ReplicaName")
     @Expose
     private String ReplicaName;
 
     /**
-    * Edge function replica content. Format is JavaScript code.
+    * Content of the edge function copy. Format: JavaScript code.
     */
     @SerializedName("Content")
     @Expose
     private String Content;
 
     /**
-    * Edge function replica description.
+    * Description of the edge function replica.
     */
     @SerializedName("Remark")
     @Expose
     private String Remark;
 
     /**
-    * Edge function replica creation time.
+    * Creation time of the edge function replica.
     */
     @SerializedName("CreatedOn")
     @Expose
     private String CreatedOn;
 
     /**
-    * Edge function replica last update time.
+    * Last update time of the edge function replica.
     */
     @SerializedName("ModifiedOn")
     @Expose
@@ -82,80 +82,80 @@ public class FunctionReplica extends AbstractModel {
     }
 
     /**
-     * Get Edge function copy name. 
-     * @return ReplicaName Edge function copy name.
+     * Get Name of the edge function copy. 
+     * @return ReplicaName Name of the edge function copy.
      */
     public String getReplicaName() {
         return this.ReplicaName;
     }
 
     /**
-     * Set Edge function copy name.
-     * @param ReplicaName Edge function copy name.
+     * Set Name of the edge function copy.
+     * @param ReplicaName Name of the edge function copy.
      */
     public void setReplicaName(String ReplicaName) {
         this.ReplicaName = ReplicaName;
     }
 
     /**
-     * Get Edge function replica content. Format is JavaScript code. 
-     * @return Content Edge function replica content. Format is JavaScript code.
+     * Get Content of the edge function copy. Format: JavaScript code. 
+     * @return Content Content of the edge function copy. Format: JavaScript code.
      */
     public String getContent() {
         return this.Content;
     }
 
     /**
-     * Set Edge function replica content. Format is JavaScript code.
-     * @param Content Edge function replica content. Format is JavaScript code.
+     * Set Content of the edge function copy. Format: JavaScript code.
+     * @param Content Content of the edge function copy. Format: JavaScript code.
      */
     public void setContent(String Content) {
         this.Content = Content;
     }
 
     /**
-     * Get Edge function replica description. 
-     * @return Remark Edge function replica description.
+     * Get Description of the edge function replica. 
+     * @return Remark Description of the edge function replica.
      */
     public String getRemark() {
         return this.Remark;
     }
 
     /**
-     * Set Edge function replica description.
-     * @param Remark Edge function replica description.
+     * Set Description of the edge function replica.
+     * @param Remark Description of the edge function replica.
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;
     }
 
     /**
-     * Get Edge function replica creation time. 
-     * @return CreatedOn Edge function replica creation time.
+     * Get Creation time of the edge function replica. 
+     * @return CreatedOn Creation time of the edge function replica.
      */
     public String getCreatedOn() {
         return this.CreatedOn;
     }
 
     /**
-     * Set Edge function replica creation time.
-     * @param CreatedOn Edge function replica creation time.
+     * Set Creation time of the edge function replica.
+     * @param CreatedOn Creation time of the edge function replica.
      */
     public void setCreatedOn(String CreatedOn) {
         this.CreatedOn = CreatedOn;
     }
 
     /**
-     * Get Edge function replica last update time. 
-     * @return ModifiedOn Edge function replica last update time.
+     * Get Last update time of the edge function replica. 
+     * @return ModifiedOn Last update time of the edge function replica.
      */
     public String getModifiedOn() {
         return this.ModifiedOn;
     }
 
     /**
-     * Set Edge function replica last update time.
-     * @param ModifiedOn Edge function replica last update time.
+     * Set Last update time of the edge function replica.
+     * @param ModifiedOn Last update time of the edge function replica.
      */
     public void setModifiedOn(String ModifiedOn) {
         this.ModifiedOn = ModifiedOn;

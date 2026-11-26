@@ -24,38 +24,33 @@ import java.util.HashMap;
 public class RangeOriginPullParameters extends AbstractModel {
 
     /**
-    * Whether to enable range gets. values are:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li>.
+    * Range-based origin pull switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-     * Get Whether to enable range gets. values are:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li>. 
-     * @return Switch Whether to enable range gets. values are:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li>.
+     * Get Range-based origin pull switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li> 
+     * @return Switch Range-based origin pull switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set Whether to enable range gets. values are:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li>.
-     * @param Switch Whether to enable range gets. values are:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li>.
+     * Set Range-based origin pull switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+     * @param Switch Range-based origin pull switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;

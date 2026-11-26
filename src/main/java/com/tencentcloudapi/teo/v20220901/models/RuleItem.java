@@ -24,148 +24,148 @@ import java.util.HashMap;
 public class RuleItem extends AbstractModel {
 
     /**
-    * The rule ID.
+    * Rule ID.
     */
     @SerializedName("RuleId")
     @Expose
     private String RuleId;
 
     /**
-    * The rule name. It is a string that can contain 1–255 characters.
+    * Rule name. The name string must be 1 to 255 characters in length.
     */
     @SerializedName("RuleName")
     @Expose
     private String RuleName;
 
     /**
-    * Rule status. Values:
-<li>`enable`: Enabled</li>
-<li>`disable`: Disabled</li>
+    * Rule status. Valid values:
+<li> enable: enable; </li>
+<li> disable: disabled. </li>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * The rule content.
+    * Rule content.
     */
     @SerializedName("Rules")
     @Expose
     private Rule [] Rules;
 
     /**
-    * The rule priority. The greater the value, the higher the priority. The minimum value is `1`.
+    * Rule priority. A larger value indicates higher priority. Minimum value: 1.
     */
     @SerializedName("RulePriority")
     @Expose
     private Long RulePriority;
 
     /**
-    * Tag of the rule.
+    * Rule tag.
     */
     @SerializedName("Tags")
     @Expose
     private String [] Tags;
 
     /**
-     * Get The rule ID. 
-     * @return RuleId The rule ID.
+     * Get Rule ID. 
+     * @return RuleId Rule ID.
      */
     public String getRuleId() {
         return this.RuleId;
     }
 
     /**
-     * Set The rule ID.
-     * @param RuleId The rule ID.
+     * Set Rule ID.
+     * @param RuleId Rule ID.
      */
     public void setRuleId(String RuleId) {
         this.RuleId = RuleId;
     }
 
     /**
-     * Get The rule name. It is a string that can contain 1–255 characters. 
-     * @return RuleName The rule name. It is a string that can contain 1–255 characters.
+     * Get Rule name. The name string must be 1 to 255 characters in length. 
+     * @return RuleName Rule name. The name string must be 1 to 255 characters in length.
      */
     public String getRuleName() {
         return this.RuleName;
     }
 
     /**
-     * Set The rule name. It is a string that can contain 1–255 characters.
-     * @param RuleName The rule name. It is a string that can contain 1–255 characters.
+     * Set Rule name. The name string must be 1 to 255 characters in length.
+     * @param RuleName Rule name. The name string must be 1 to 255 characters in length.
      */
     public void setRuleName(String RuleName) {
         this.RuleName = RuleName;
     }
 
     /**
-     * Get Rule status. Values:
-<li>`enable`: Enabled</li>
-<li>`disable`: Disabled</li> 
-     * @return Status Rule status. Values:
-<li>`enable`: Enabled</li>
-<li>`disable`: Disabled</li>
+     * Get Rule status. Valid values:
+<li> enable: enable; </li>
+<li> disable: disabled. </li> 
+     * @return Status Rule status. Valid values:
+<li> enable: enable; </li>
+<li> disable: disabled. </li>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Rule status. Values:
-<li>`enable`: Enabled</li>
-<li>`disable`: Disabled</li>
-     * @param Status Rule status. Values:
-<li>`enable`: Enabled</li>
-<li>`disable`: Disabled</li>
+     * Set Rule status. Valid values:
+<li> enable: enable; </li>
+<li> disable: disabled. </li>
+     * @param Status Rule status. Valid values:
+<li> enable: enable; </li>
+<li> disable: disabled. </li>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get The rule content. 
-     * @return Rules The rule content.
+     * Get Rule content. 
+     * @return Rules Rule content.
      */
     public Rule [] getRules() {
         return this.Rules;
     }
 
     /**
-     * Set The rule content.
-     * @param Rules The rule content.
+     * Set Rule content.
+     * @param Rules Rule content.
      */
     public void setRules(Rule [] Rules) {
         this.Rules = Rules;
     }
 
     /**
-     * Get The rule priority. The greater the value, the higher the priority. The minimum value is `1`. 
-     * @return RulePriority The rule priority. The greater the value, the higher the priority. The minimum value is `1`.
+     * Get Rule priority. A larger value indicates higher priority. Minimum value: 1. 
+     * @return RulePriority Rule priority. A larger value indicates higher priority. Minimum value: 1.
      */
     public Long getRulePriority() {
         return this.RulePriority;
     }
 
     /**
-     * Set The rule priority. The greater the value, the higher the priority. The minimum value is `1`.
-     * @param RulePriority The rule priority. The greater the value, the higher the priority. The minimum value is `1`.
+     * Set Rule priority. A larger value indicates higher priority. Minimum value: 1.
+     * @param RulePriority Rule priority. A larger value indicates higher priority. Minimum value: 1.
      */
     public void setRulePriority(Long RulePriority) {
         this.RulePriority = RulePriority;
     }
 
     /**
-     * Get Tag of the rule. 
-     * @return Tags Tag of the rule.
+     * Get Rule tag. 
+     * @return Tags Rule tag.
      */
     public String [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set Tag of the rule.
-     * @param Tags Tag of the rule.
+     * Set Rule tag.
+     * @param Tags Rule tag.
      */
     public void setTags(String [] Tags) {
         this.Tags = Tags;

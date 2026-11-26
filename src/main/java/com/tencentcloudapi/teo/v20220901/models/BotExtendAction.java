@@ -24,81 +24,81 @@ import java.util.HashMap;
 public class BotExtendAction extends AbstractModel {
 
     /**
-    * Action. Valid values: 
-<li>`monitor`: Observe;</li>
-<li>`alg`: JavaScript challenge;</li>
-<li>`captcha`: Managed challenge;</li>
-<li>`random`: Actions are executed based on the percentage specified in `ExtendActions`;</li>
-<li>`silence`: Silence;</li>
-<li>`shortdelay`: Add short latency;</li>
-<li>`longdelay`: Add long latency.</li>
+    * Disposal actions. Valid values:
+<li>monitor: observation;</li>
+<li>alg: JavaScript challenge;</li>
+<li>captcha: hosted challenge;</li>
+<li>random: random, allocate handling actions and proportions according to ExtendActions;</li>
+<li>silence: silence;</li>
+<li>shortdelay: short-term response;</li>
+<li>longdelay: long-time response.</li>
     */
     @SerializedName("Action")
     @Expose
     private String Action;
 
     /**
-    * The probability for triggering the action. value range: 0-100.
+    * Probability for triggering the handling method. Value range: 0-100.
     */
     @SerializedName("Percent")
     @Expose
     private Long Percent;
 
     /**
-     * Get Action. Valid values: 
-<li>`monitor`: Observe;</li>
-<li>`alg`: JavaScript challenge;</li>
-<li>`captcha`: Managed challenge;</li>
-<li>`random`: Actions are executed based on the percentage specified in `ExtendActions`;</li>
-<li>`silence`: Silence;</li>
-<li>`shortdelay`: Add short latency;</li>
-<li>`longdelay`: Add long latency.</li> 
-     * @return Action Action. Valid values: 
-<li>`monitor`: Observe;</li>
-<li>`alg`: JavaScript challenge;</li>
-<li>`captcha`: Managed challenge;</li>
-<li>`random`: Actions are executed based on the percentage specified in `ExtendActions`;</li>
-<li>`silence`: Silence;</li>
-<li>`shortdelay`: Add short latency;</li>
-<li>`longdelay`: Add long latency.</li>
+     * Get Disposal actions. Valid values:
+<li>monitor: observation;</li>
+<li>alg: JavaScript challenge;</li>
+<li>captcha: hosted challenge;</li>
+<li>random: random, allocate handling actions and proportions according to ExtendActions;</li>
+<li>silence: silence;</li>
+<li>shortdelay: short-term response;</li>
+<li>longdelay: long-time response.</li> 
+     * @return Action Disposal actions. Valid values:
+<li>monitor: observation;</li>
+<li>alg: JavaScript challenge;</li>
+<li>captcha: hosted challenge;</li>
+<li>random: random, allocate handling actions and proportions according to ExtendActions;</li>
+<li>silence: silence;</li>
+<li>shortdelay: short-term response;</li>
+<li>longdelay: long-time response.</li>
      */
     public String getAction() {
         return this.Action;
     }
 
     /**
-     * Set Action. Valid values: 
-<li>`monitor`: Observe;</li>
-<li>`alg`: JavaScript challenge;</li>
-<li>`captcha`: Managed challenge;</li>
-<li>`random`: Actions are executed based on the percentage specified in `ExtendActions`;</li>
-<li>`silence`: Silence;</li>
-<li>`shortdelay`: Add short latency;</li>
-<li>`longdelay`: Add long latency.</li>
-     * @param Action Action. Valid values: 
-<li>`monitor`: Observe;</li>
-<li>`alg`: JavaScript challenge;</li>
-<li>`captcha`: Managed challenge;</li>
-<li>`random`: Actions are executed based on the percentage specified in `ExtendActions`;</li>
-<li>`silence`: Silence;</li>
-<li>`shortdelay`: Add short latency;</li>
-<li>`longdelay`: Add long latency.</li>
+     * Set Disposal actions. Valid values:
+<li>monitor: observation;</li>
+<li>alg: JavaScript challenge;</li>
+<li>captcha: hosted challenge;</li>
+<li>random: random, allocate handling actions and proportions according to ExtendActions;</li>
+<li>silence: silence;</li>
+<li>shortdelay: short-term response;</li>
+<li>longdelay: long-time response.</li>
+     * @param Action Disposal actions. Valid values:
+<li>monitor: observation;</li>
+<li>alg: JavaScript challenge;</li>
+<li>captcha: hosted challenge;</li>
+<li>random: random, allocate handling actions and proportions according to ExtendActions;</li>
+<li>silence: silence;</li>
+<li>shortdelay: short-term response;</li>
+<li>longdelay: long-time response.</li>
      */
     public void setAction(String Action) {
         this.Action = Action;
     }
 
     /**
-     * Get The probability for triggering the action. value range: 0-100. 
-     * @return Percent The probability for triggering the action. value range: 0-100.
+     * Get Probability for triggering the handling method. Value range: 0-100. 
+     * @return Percent Probability for triggering the handling method. Value range: 0-100.
      */
     public Long getPercent() {
         return this.Percent;
     }
 
     /**
-     * Set The probability for triggering the action. value range: 0-100.
-     * @param Percent The probability for triggering the action. value range: 0-100.
+     * Set Probability for triggering the handling method. Value range: 0-100.
+     * @param Percent Probability for triggering the handling method. Value range: 0-100.
      */
     public void setPercent(Long Percent) {
         this.Percent = Percent;

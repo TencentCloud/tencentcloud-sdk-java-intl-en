@@ -24,181 +24,181 @@ import java.util.HashMap;
 public class BotManagedRule extends AbstractModel {
 
     /**
-    * The rule action. Values:
-<li>`drop`: Block</li>
-<li>`trans`: Allow</li>
-<li>`alg`: JavaScript challenge</li>
-<li>`monitor`: Observe</li>
+    * Handling method after the trigger rule is triggered. Valid values:
+<li>drop: block;</li>
+<li>trans: pass;</li>
+<li>alg: Javascript challenge;</li>
+<li>monitor: observation.</li>
     */
     @SerializedName("Action")
     @Expose
     private String Action;
 
     /**
-    * The rule ID, which is only used as an output parameter.
+    * Rule ID. Output only.
     */
     @SerializedName("RuleID")
     @Expose
     private Long RuleID;
 
     /**
-    * Rule ID to allow. defaults to no rules configured for allowance.
+    * Rule ID to allow. By default, no rule is allowed.
     */
     @SerializedName("TransManagedIds")
     @Expose
     private Long [] TransManagedIds;
 
     /**
-    * Rule ID of the JS challenge. default is all rules without configuring the JS challenge.
+    * Rule ID of the JS challenge. By default, no JS challenge is configured for all rules.
     */
     @SerializedName("AlgManagedIds")
     @Expose
     private Long [] AlgManagedIds;
 
     /**
-    * The rule ID for digit verification code. by default, all rules do not configure digit verification code.
+    * Rule ID of the digit verification code. By default, no digit verification code is configured for all rules.
     */
     @SerializedName("CapManagedIds")
     @Expose
     private Long [] CapManagedIds;
 
     /**
-    * Rule ID for observation. by default, observation is not configured for all rules.
+    * Rule ID to observe. By default, no rule is configured for observation.
     */
     @SerializedName("MonManagedIds")
     @Expose
     private Long [] MonManagedIds;
 
     /**
-    * Rule ID for interception. by default, all rules have no configuration interception.
+    * Rule ID to intercept. By default, no rule is intercepted.
     */
     @SerializedName("DropManagedIds")
     @Expose
     private Long [] DropManagedIds;
 
     /**
-     * Get The rule action. Values:
-<li>`drop`: Block</li>
-<li>`trans`: Allow</li>
-<li>`alg`: JavaScript challenge</li>
-<li>`monitor`: Observe</li> 
-     * @return Action The rule action. Values:
-<li>`drop`: Block</li>
-<li>`trans`: Allow</li>
-<li>`alg`: JavaScript challenge</li>
-<li>`monitor`: Observe</li>
+     * Get Handling method after the trigger rule is triggered. Valid values:
+<li>drop: block;</li>
+<li>trans: pass;</li>
+<li>alg: Javascript challenge;</li>
+<li>monitor: observation.</li> 
+     * @return Action Handling method after the trigger rule is triggered. Valid values:
+<li>drop: block;</li>
+<li>trans: pass;</li>
+<li>alg: Javascript challenge;</li>
+<li>monitor: observation.</li>
      */
     public String getAction() {
         return this.Action;
     }
 
     /**
-     * Set The rule action. Values:
-<li>`drop`: Block</li>
-<li>`trans`: Allow</li>
-<li>`alg`: JavaScript challenge</li>
-<li>`monitor`: Observe</li>
-     * @param Action The rule action. Values:
-<li>`drop`: Block</li>
-<li>`trans`: Allow</li>
-<li>`alg`: JavaScript challenge</li>
-<li>`monitor`: Observe</li>
+     * Set Handling method after the trigger rule is triggered. Valid values:
+<li>drop: block;</li>
+<li>trans: pass;</li>
+<li>alg: Javascript challenge;</li>
+<li>monitor: observation.</li>
+     * @param Action Handling method after the trigger rule is triggered. Valid values:
+<li>drop: block;</li>
+<li>trans: pass;</li>
+<li>alg: Javascript challenge;</li>
+<li>monitor: observation.</li>
      */
     public void setAction(String Action) {
         this.Action = Action;
     }
 
     /**
-     * Get The rule ID, which is only used as an output parameter. 
-     * @return RuleID The rule ID, which is only used as an output parameter.
+     * Get Rule ID. Output only. 
+     * @return RuleID Rule ID. Output only.
      */
     public Long getRuleID() {
         return this.RuleID;
     }
 
     /**
-     * Set The rule ID, which is only used as an output parameter.
-     * @param RuleID The rule ID, which is only used as an output parameter.
+     * Set Rule ID. Output only.
+     * @param RuleID Rule ID. Output only.
      */
     public void setRuleID(Long RuleID) {
         this.RuleID = RuleID;
     }
 
     /**
-     * Get Rule ID to allow. defaults to no rules configured for allowance. 
-     * @return TransManagedIds Rule ID to allow. defaults to no rules configured for allowance.
+     * Get Rule ID to allow. By default, no rule is allowed. 
+     * @return TransManagedIds Rule ID to allow. By default, no rule is allowed.
      */
     public Long [] getTransManagedIds() {
         return this.TransManagedIds;
     }
 
     /**
-     * Set Rule ID to allow. defaults to no rules configured for allowance.
-     * @param TransManagedIds Rule ID to allow. defaults to no rules configured for allowance.
+     * Set Rule ID to allow. By default, no rule is allowed.
+     * @param TransManagedIds Rule ID to allow. By default, no rule is allowed.
      */
     public void setTransManagedIds(Long [] TransManagedIds) {
         this.TransManagedIds = TransManagedIds;
     }
 
     /**
-     * Get Rule ID of the JS challenge. default is all rules without configuring the JS challenge. 
-     * @return AlgManagedIds Rule ID of the JS challenge. default is all rules without configuring the JS challenge.
+     * Get Rule ID of the JS challenge. By default, no JS challenge is configured for all rules. 
+     * @return AlgManagedIds Rule ID of the JS challenge. By default, no JS challenge is configured for all rules.
      */
     public Long [] getAlgManagedIds() {
         return this.AlgManagedIds;
     }
 
     /**
-     * Set Rule ID of the JS challenge. default is all rules without configuring the JS challenge.
-     * @param AlgManagedIds Rule ID of the JS challenge. default is all rules without configuring the JS challenge.
+     * Set Rule ID of the JS challenge. By default, no JS challenge is configured for all rules.
+     * @param AlgManagedIds Rule ID of the JS challenge. By default, no JS challenge is configured for all rules.
      */
     public void setAlgManagedIds(Long [] AlgManagedIds) {
         this.AlgManagedIds = AlgManagedIds;
     }
 
     /**
-     * Get The rule ID for digit verification code. by default, all rules do not configure digit verification code. 
-     * @return CapManagedIds The rule ID for digit verification code. by default, all rules do not configure digit verification code.
+     * Get Rule ID of the digit verification code. By default, no digit verification code is configured for all rules. 
+     * @return CapManagedIds Rule ID of the digit verification code. By default, no digit verification code is configured for all rules.
      */
     public Long [] getCapManagedIds() {
         return this.CapManagedIds;
     }
 
     /**
-     * Set The rule ID for digit verification code. by default, all rules do not configure digit verification code.
-     * @param CapManagedIds The rule ID for digit verification code. by default, all rules do not configure digit verification code.
+     * Set Rule ID of the digit verification code. By default, no digit verification code is configured for all rules.
+     * @param CapManagedIds Rule ID of the digit verification code. By default, no digit verification code is configured for all rules.
      */
     public void setCapManagedIds(Long [] CapManagedIds) {
         this.CapManagedIds = CapManagedIds;
     }
 
     /**
-     * Get Rule ID for observation. by default, observation is not configured for all rules. 
-     * @return MonManagedIds Rule ID for observation. by default, observation is not configured for all rules.
+     * Get Rule ID to observe. By default, no rule is configured for observation. 
+     * @return MonManagedIds Rule ID to observe. By default, no rule is configured for observation.
      */
     public Long [] getMonManagedIds() {
         return this.MonManagedIds;
     }
 
     /**
-     * Set Rule ID for observation. by default, observation is not configured for all rules.
-     * @param MonManagedIds Rule ID for observation. by default, observation is not configured for all rules.
+     * Set Rule ID to observe. By default, no rule is configured for observation.
+     * @param MonManagedIds Rule ID to observe. By default, no rule is configured for observation.
      */
     public void setMonManagedIds(Long [] MonManagedIds) {
         this.MonManagedIds = MonManagedIds;
     }
 
     /**
-     * Get Rule ID for interception. by default, all rules have no configuration interception. 
-     * @return DropManagedIds Rule ID for interception. by default, all rules have no configuration interception.
+     * Get Rule ID to intercept. By default, no rule is intercepted. 
+     * @return DropManagedIds Rule ID to intercept. By default, no rule is intercepted.
      */
     public Long [] getDropManagedIds() {
         return this.DropManagedIds;
     }
 
     /**
-     * Set Rule ID for interception. by default, all rules have no configuration interception.
-     * @param DropManagedIds Rule ID for interception. by default, all rules have no configuration interception.
+     * Set Rule ID to intercept. By default, no rule is intercepted.
+     * @param DropManagedIds Rule ID to intercept. By default, no rule is intercepted.
      */
     public void setDropManagedIds(Long [] DropManagedIds) {
         this.DropManagedIds = DropManagedIds;

@@ -23,6 +23,29 @@ import java.util.HashMap;
 
 public class ApplicationConcurrentPackage extends AbstractModel {
 
+    /**
+    * <p>Concurrency pack ID</p>
+    */
+    @SerializedName("ConcurrentId")
+    @Expose
+    private String ConcurrentId;
+
+    /**
+     * Get <p>Concurrency pack ID</p> 
+     * @return ConcurrentId <p>Concurrency pack ID</p>
+     */
+    public String getConcurrentId() {
+        return this.ConcurrentId;
+    }
+
+    /**
+     * Set <p>Concurrency pack ID</p>
+     * @param ConcurrentId <p>Concurrency pack ID</p>
+     */
+    public void setConcurrentId(String ConcurrentId) {
+        this.ConcurrentId = ConcurrentId;
+    }
+
     public ApplicationConcurrentPackage() {
     }
 
@@ -31,6 +54,9 @@ public class ApplicationConcurrentPackage extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public ApplicationConcurrentPackage(ApplicationConcurrentPackage source) {
+        if (source.ConcurrentId != null) {
+            this.ConcurrentId = new String(source.ConcurrentId);
+        }
     }
 
 
@@ -38,6 +64,7 @@ public class ApplicationConcurrentPackage extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "ConcurrentId", this.ConcurrentId);
 
     }
 }

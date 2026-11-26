@@ -24,122 +24,102 @@ import java.util.HashMap;
 public class CurrentOriginACL extends AbstractModel {
 
     /**
-    * IP range details.
-Note: This field may return null, which indicates a failure to obtain a valid value.
+    * Origin-pull IP range details.
     */
     @SerializedName("EntireAddresses")
     @Expose
     private Addresses EntireAddresses;
 
     /**
-    * Version number.
-Note: This field may return null, which indicates a failure to obtain a valid value.
+    * Version.
     */
     @SerializedName("Version")
     @Expose
     private String Version;
 
     /**
-    * Version effective time in UTC+8, following the date and time format of the ISO 8601 standard.
-Note: This field may return null, which indicates a failure to obtain a valid value.
+    * Version effective time, which adopts Beijing time (UTC+8) and follows the date and time format of the ISO 8601 standard.
     */
     @SerializedName("ActiveTime")
     @Expose
     private String ActiveTime;
 
     /**
-    * This parameter is used to record whether "I've upgraded to the lastest version" is completed before the origin ACLs version is effective. valid values:.
-- true: specifies that the version is effective and the update to the latest version is confirmed.
-- false: when the version takes effect, the confirmation of updating to the latest origin ACLs are not completed. The IP range is forcibly updated to the latest version in the backend. When this parameter returns false, please confirm in time whether your origin server firewall configuration has been updated to the latest version to avoid origin-pull failure.
-Note: This field may return null, which indicates a failure to obtain a valid value.
+    * This parameter is used to record whether "I have updated to the latest origin-pull IP range" is confirmed before the current version takes effect. Valid values:
+<li>true: When the version takes effect, the confirmation of updating to the latest origin-pull IP is completed;</li>
+<li>false: When the version takes effect, the confirmation of updating to the latest origin-pull IP is not completed, and the origin-pull IP range is forcibly updated to the latest version by the backend.</li>Note: When this parameter returns false, confirm in time whether your origin server firewall configuration has been updated to the latest origin-pull IP range to avoid origin-pull failure.
     */
     @SerializedName("IsPlaned")
     @Expose
     private String IsPlaned;
 
     /**
-     * Get IP range details.
-Note: This field may return null, which indicates a failure to obtain a valid value. 
-     * @return EntireAddresses IP range details.
-Note: This field may return null, which indicates a failure to obtain a valid value.
+     * Get Origin-pull IP range details. 
+     * @return EntireAddresses Origin-pull IP range details.
      */
     public Addresses getEntireAddresses() {
         return this.EntireAddresses;
     }
 
     /**
-     * Set IP range details.
-Note: This field may return null, which indicates a failure to obtain a valid value.
-     * @param EntireAddresses IP range details.
-Note: This field may return null, which indicates a failure to obtain a valid value.
+     * Set Origin-pull IP range details.
+     * @param EntireAddresses Origin-pull IP range details.
      */
     public void setEntireAddresses(Addresses EntireAddresses) {
         this.EntireAddresses = EntireAddresses;
     }
 
     /**
-     * Get Version number.
-Note: This field may return null, which indicates a failure to obtain a valid value. 
-     * @return Version Version number.
-Note: This field may return null, which indicates a failure to obtain a valid value.
+     * Get Version. 
+     * @return Version Version.
      */
     public String getVersion() {
         return this.Version;
     }
 
     /**
-     * Set Version number.
-Note: This field may return null, which indicates a failure to obtain a valid value.
-     * @param Version Version number.
-Note: This field may return null, which indicates a failure to obtain a valid value.
+     * Set Version.
+     * @param Version Version.
      */
     public void setVersion(String Version) {
         this.Version = Version;
     }
 
     /**
-     * Get Version effective time in UTC+8, following the date and time format of the ISO 8601 standard.
-Note: This field may return null, which indicates a failure to obtain a valid value. 
-     * @return ActiveTime Version effective time in UTC+8, following the date and time format of the ISO 8601 standard.
-Note: This field may return null, which indicates a failure to obtain a valid value.
+     * Get Version effective time, which adopts Beijing time (UTC+8) and follows the date and time format of the ISO 8601 standard. 
+     * @return ActiveTime Version effective time, which adopts Beijing time (UTC+8) and follows the date and time format of the ISO 8601 standard.
      */
     public String getActiveTime() {
         return this.ActiveTime;
     }
 
     /**
-     * Set Version effective time in UTC+8, following the date and time format of the ISO 8601 standard.
-Note: This field may return null, which indicates a failure to obtain a valid value.
-     * @param ActiveTime Version effective time in UTC+8, following the date and time format of the ISO 8601 standard.
-Note: This field may return null, which indicates a failure to obtain a valid value.
+     * Set Version effective time, which adopts Beijing time (UTC+8) and follows the date and time format of the ISO 8601 standard.
+     * @param ActiveTime Version effective time, which adopts Beijing time (UTC+8) and follows the date and time format of the ISO 8601 standard.
      */
     public void setActiveTime(String ActiveTime) {
         this.ActiveTime = ActiveTime;
     }
 
     /**
-     * Get This parameter is used to record whether "I've upgraded to the lastest version" is completed before the origin ACLs version is effective. valid values:.
-- true: specifies that the version is effective and the update to the latest version is confirmed.
-- false: when the version takes effect, the confirmation of updating to the latest origin ACLs are not completed. The IP range is forcibly updated to the latest version in the backend. When this parameter returns false, please confirm in time whether your origin server firewall configuration has been updated to the latest version to avoid origin-pull failure.
-Note: This field may return null, which indicates a failure to obtain a valid value. 
-     * @return IsPlaned This parameter is used to record whether "I've upgraded to the lastest version" is completed before the origin ACLs version is effective. valid values:.
-- true: specifies that the version is effective and the update to the latest version is confirmed.
-- false: when the version takes effect, the confirmation of updating to the latest origin ACLs are not completed. The IP range is forcibly updated to the latest version in the backend. When this parameter returns false, please confirm in time whether your origin server firewall configuration has been updated to the latest version to avoid origin-pull failure.
-Note: This field may return null, which indicates a failure to obtain a valid value.
+     * Get This parameter is used to record whether "I have updated to the latest origin-pull IP range" is confirmed before the current version takes effect. Valid values:
+<li>true: When the version takes effect, the confirmation of updating to the latest origin-pull IP is completed;</li>
+<li>false: When the version takes effect, the confirmation of updating to the latest origin-pull IP is not completed, and the origin-pull IP range is forcibly updated to the latest version by the backend.</li>Note: When this parameter returns false, confirm in time whether your origin server firewall configuration has been updated to the latest origin-pull IP range to avoid origin-pull failure. 
+     * @return IsPlaned This parameter is used to record whether "I have updated to the latest origin-pull IP range" is confirmed before the current version takes effect. Valid values:
+<li>true: When the version takes effect, the confirmation of updating to the latest origin-pull IP is completed;</li>
+<li>false: When the version takes effect, the confirmation of updating to the latest origin-pull IP is not completed, and the origin-pull IP range is forcibly updated to the latest version by the backend.</li>Note: When this parameter returns false, confirm in time whether your origin server firewall configuration has been updated to the latest origin-pull IP range to avoid origin-pull failure.
      */
     public String getIsPlaned() {
         return this.IsPlaned;
     }
 
     /**
-     * Set This parameter is used to record whether "I've upgraded to the lastest version" is completed before the origin ACLs version is effective. valid values:.
-- true: specifies that the version is effective and the update to the latest version is confirmed.
-- false: when the version takes effect, the confirmation of updating to the latest origin ACLs are not completed. The IP range is forcibly updated to the latest version in the backend. When this parameter returns false, please confirm in time whether your origin server firewall configuration has been updated to the latest version to avoid origin-pull failure.
-Note: This field may return null, which indicates a failure to obtain a valid value.
-     * @param IsPlaned This parameter is used to record whether "I've upgraded to the lastest version" is completed before the origin ACLs version is effective. valid values:.
-- true: specifies that the version is effective and the update to the latest version is confirmed.
-- false: when the version takes effect, the confirmation of updating to the latest origin ACLs are not completed. The IP range is forcibly updated to the latest version in the backend. When this parameter returns false, please confirm in time whether your origin server firewall configuration has been updated to the latest version to avoid origin-pull failure.
-Note: This field may return null, which indicates a failure to obtain a valid value.
+     * Set This parameter is used to record whether "I have updated to the latest origin-pull IP range" is confirmed before the current version takes effect. Valid values:
+<li>true: When the version takes effect, the confirmation of updating to the latest origin-pull IP is completed;</li>
+<li>false: When the version takes effect, the confirmation of updating to the latest origin-pull IP is not completed, and the origin-pull IP range is forcibly updated to the latest version by the backend.</li>Note: When this parameter returns false, confirm in time whether your origin server firewall configuration has been updated to the latest origin-pull IP range to avoid origin-pull failure.
+     * @param IsPlaned This parameter is used to record whether "I have updated to the latest origin-pull IP range" is confirmed before the current version takes effect. Valid values:
+<li>true: When the version takes effect, the confirmation of updating to the latest origin-pull IP is completed;</li>
+<li>false: When the version takes effect, the confirmation of updating to the latest origin-pull IP is not completed, and the origin-pull IP range is forcibly updated to the latest version by the backend.</li>Note: When this parameter returns false, confirm in time whether your origin server firewall configuration has been updated to the latest origin-pull IP range to avoid origin-pull failure.
      */
     public void setIsPlaned(String IsPlaned) {
         this.IsPlaned = IsPlaned;

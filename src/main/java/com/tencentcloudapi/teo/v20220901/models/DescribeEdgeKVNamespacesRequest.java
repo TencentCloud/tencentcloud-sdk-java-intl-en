@@ -47,8 +47,8 @@ public class DescribeEdgeKVNamespacesRequest extends AbstractModel {
     /**
     * Sorting basis. Valid values:
 <li>created-on: creation time;</li>
-<li>updated-on: Update time.</li>
-Default value is created-on.
+<li>updated-on: update time.</li>
+Default value: created-on.
     */
     @SerializedName("SortBy")
     @Expose
@@ -57,8 +57,8 @@ Default value is created-on.
     /**
     * List sort method. Valid values:
 <li>asc: ascending order;</li>
-<li>desc: descending order.</li>
-Default value is desc.
+<li>desc: sort in descending order.</li>
+Default value: desc.
 
     */
     @SerializedName("SortOrder")
@@ -66,8 +66,8 @@ Default value is desc.
     private String SortOrder;
 
     /**
-    * Filter criteria. The maximum of Filters.Values is 20. If this parameter is left empty, return all KV namespaces under the site ID. Detailed filter criteria:
-<li>Namespace: Filter by KV namespace name. Fuzzy query is supported.</li>
+    * Filter criteria. The maximum number of Filters.Values is 20. If this parameter is left empty, all KV namespaces under the site ID are returned. The detailed filter criteria are as follows:
+<li>namespace: filter by KV namespace name; fuzzy query is supported;</li>
 <li>remark: Filter by namespace description. Fuzzy query is supported.</li>
 
     */
@@ -126,12 +126,12 @@ Default value is desc.
     /**
      * Get Sorting basis. Valid values:
 <li>created-on: creation time;</li>
-<li>updated-on: Update time.</li>
-Default value is created-on. 
+<li>updated-on: update time.</li>
+Default value: created-on. 
      * @return SortBy Sorting basis. Valid values:
 <li>created-on: creation time;</li>
-<li>updated-on: Update time.</li>
-Default value is created-on.
+<li>updated-on: update time.</li>
+Default value: created-on.
      */
     public String getSortBy() {
         return this.SortBy;
@@ -140,12 +140,12 @@ Default value is created-on.
     /**
      * Set Sorting basis. Valid values:
 <li>created-on: creation time;</li>
-<li>updated-on: Update time.</li>
-Default value is created-on.
+<li>updated-on: update time.</li>
+Default value: created-on.
      * @param SortBy Sorting basis. Valid values:
 <li>created-on: creation time;</li>
-<li>updated-on: Update time.</li>
-Default value is created-on.
+<li>updated-on: update time.</li>
+Default value: created-on.
      */
     public void setSortBy(String SortBy) {
         this.SortBy = SortBy;
@@ -154,13 +154,13 @@ Default value is created-on.
     /**
      * Get List sort method. Valid values:
 <li>asc: ascending order;</li>
-<li>desc: descending order.</li>
-Default value is desc.
+<li>desc: sort in descending order.</li>
+Default value: desc.
  
      * @return SortOrder List sort method. Valid values:
 <li>asc: ascending order;</li>
-<li>desc: descending order.</li>
-Default value is desc.
+<li>desc: sort in descending order.</li>
+Default value: desc.
 
      */
     public String getSortOrder() {
@@ -170,13 +170,13 @@ Default value is desc.
     /**
      * Set List sort method. Valid values:
 <li>asc: ascending order;</li>
-<li>desc: descending order.</li>
-Default value is desc.
+<li>desc: sort in descending order.</li>
+Default value: desc.
 
      * @param SortOrder List sort method. Valid values:
 <li>asc: ascending order;</li>
-<li>desc: descending order.</li>
-Default value is desc.
+<li>desc: sort in descending order.</li>
+Default value: desc.
 
      */
     public void setSortOrder(String SortOrder) {
@@ -184,12 +184,12 @@ Default value is desc.
     }
 
     /**
-     * Get Filter criteria. The maximum of Filters.Values is 20. If this parameter is left empty, return all KV namespaces under the site ID. Detailed filter criteria:
-<li>Namespace: Filter by KV namespace name. Fuzzy query is supported.</li>
+     * Get Filter criteria. The maximum number of Filters.Values is 20. If this parameter is left empty, all KV namespaces under the site ID are returned. The detailed filter criteria are as follows:
+<li>namespace: filter by KV namespace name; fuzzy query is supported;</li>
 <li>remark: Filter by namespace description. Fuzzy query is supported.</li>
  
-     * @return Filters Filter criteria. The maximum of Filters.Values is 20. If this parameter is left empty, return all KV namespaces under the site ID. Detailed filter criteria:
-<li>Namespace: Filter by KV namespace name. Fuzzy query is supported.</li>
+     * @return Filters Filter criteria. The maximum number of Filters.Values is 20. If this parameter is left empty, all KV namespaces under the site ID are returned. The detailed filter criteria are as follows:
+<li>namespace: filter by KV namespace name; fuzzy query is supported;</li>
 <li>remark: Filter by namespace description. Fuzzy query is supported.</li>
 
      */
@@ -198,12 +198,12 @@ Default value is desc.
     }
 
     /**
-     * Set Filter criteria. The maximum of Filters.Values is 20. If this parameter is left empty, return all KV namespaces under the site ID. Detailed filter criteria:
-<li>Namespace: Filter by KV namespace name. Fuzzy query is supported.</li>
+     * Set Filter criteria. The maximum number of Filters.Values is 20. If this parameter is left empty, all KV namespaces under the site ID are returned. The detailed filter criteria are as follows:
+<li>namespace: filter by KV namespace name; fuzzy query is supported;</li>
 <li>remark: Filter by namespace description. Fuzzy query is supported.</li>
 
-     * @param Filters Filter criteria. The maximum of Filters.Values is 20. If this parameter is left empty, return all KV namespaces under the site ID. Detailed filter criteria:
-<li>Namespace: Filter by KV namespace name. Fuzzy query is supported.</li>
+     * @param Filters Filter criteria. The maximum number of Filters.Values is 20. If this parameter is left empty, all KV namespaces under the site ID are returned. The detailed filter criteria are as follows:
+<li>namespace: filter by KV namespace name; fuzzy query is supported;</li>
 <li>remark: Filter by namespace description. Fuzzy query is supported.</li>
 
      */

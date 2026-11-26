@@ -31,9 +31,9 @@ public class DomainDDoSProtection extends AbstractModel {
     private String Domain;
 
     /**
-    * Standalone DDoS switch of the domain. valid values:.
-<li>on: enabled;</li>.
-<li>off: closed.</li>.
+    * Standalone DDoS switch of the domain. Value:
+<li>`on`: enabled;</li>
+<li>off: closed.</li>
     */
     @SerializedName("Switch")
     @Expose
@@ -56,24 +56,24 @@ public class DomainDDoSProtection extends AbstractModel {
     }
 
     /**
-     * Get Standalone DDoS switch of the domain. valid values:.
-<li>on: enabled;</li>.
-<li>off: closed.</li>. 
-     * @return Switch Standalone DDoS switch of the domain. valid values:.
-<li>on: enabled;</li>.
-<li>off: closed.</li>.
+     * Get Standalone DDoS switch of the domain. Value:
+<li>`on`: enabled;</li>
+<li>off: closed.</li> 
+     * @return Switch Standalone DDoS switch of the domain. Value:
+<li>`on`: enabled;</li>
+<li>off: closed.</li>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set Standalone DDoS switch of the domain. valid values:.
-<li>on: enabled;</li>.
-<li>off: closed.</li>.
-     * @param Switch Standalone DDoS switch of the domain. valid values:.
-<li>on: enabled;</li>.
-<li>off: closed.</li>.
+     * Set Standalone DDoS switch of the domain. Value:
+<li>`on`: enabled;</li>
+<li>off: closed.</li>
+     * @param Switch Standalone DDoS switch of the domain. Value:
+<li>`on`: enabled;</li>
+<li>off: closed.</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;

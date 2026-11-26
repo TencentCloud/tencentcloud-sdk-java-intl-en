@@ -24,84 +24,84 @@ import java.util.HashMap;
 public class MultiPathGatewayCurrentOriginACL extends AbstractModel {
 
     /**
-    * Describes the IP range details for origin servers.
+    * Origin-pull IP range details.
     */
     @SerializedName("EntireAddresses")
     @Expose
     private Addresses EntireAddresses;
 
     /**
-    * Specifies the version number.
+    * Version.
     */
     @SerializedName("Version")
     @Expose
     private Long Version;
 
     /**
-    * This parameter records whether "i have updated to the latest origin IP range" is completed before taking effect. valid values:.
-<li>true: confirms the update to the latest origin IP is completed.</li>.
-<li>false: indicates the update to the latest origin IP is not completed.</li>.
-Note: when false is returned for this parameter, please confirm in time whether your origin server firewall configuration has been updated to the latest IP range to avoid origin-pull failure.
+    * This parameter is used to record whether the confirmation of "I have updated to the latest origin-pull IP range" is completed before the current version takes effect. Valid values:
+<li>true: The confirmation of updating to the latest origin-pull IP is completed;</li>
+<li>false: The confirmation of updating to the latest origin-pull IP is not completed;</li>
+Note: When this parameter returns false, confirm in time whether your origin server firewall settings are updated to the latest origin-pull IP range to avoid origin-pull failure.
     */
     @SerializedName("IsPlaned")
     @Expose
     private String IsPlaned;
 
     /**
-     * Get Describes the IP range details for origin servers. 
-     * @return EntireAddresses Describes the IP range details for origin servers.
+     * Get Origin-pull IP range details. 
+     * @return EntireAddresses Origin-pull IP range details.
      */
     public Addresses getEntireAddresses() {
         return this.EntireAddresses;
     }
 
     /**
-     * Set Describes the IP range details for origin servers.
-     * @param EntireAddresses Describes the IP range details for origin servers.
+     * Set Origin-pull IP range details.
+     * @param EntireAddresses Origin-pull IP range details.
      */
     public void setEntireAddresses(Addresses EntireAddresses) {
         this.EntireAddresses = EntireAddresses;
     }
 
     /**
-     * Get Specifies the version number. 
-     * @return Version Specifies the version number.
+     * Get Version. 
+     * @return Version Version.
      */
     public Long getVersion() {
         return this.Version;
     }
 
     /**
-     * Set Specifies the version number.
-     * @param Version Specifies the version number.
+     * Set Version.
+     * @param Version Version.
      */
     public void setVersion(Long Version) {
         this.Version = Version;
     }
 
     /**
-     * Get This parameter records whether "i have updated to the latest origin IP range" is completed before taking effect. valid values:.
-<li>true: confirms the update to the latest origin IP is completed.</li>.
-<li>false: indicates the update to the latest origin IP is not completed.</li>.
-Note: when false is returned for this parameter, please confirm in time whether your origin server firewall configuration has been updated to the latest IP range to avoid origin-pull failure. 
-     * @return IsPlaned This parameter records whether "i have updated to the latest origin IP range" is completed before taking effect. valid values:.
-<li>true: confirms the update to the latest origin IP is completed.</li>.
-<li>false: indicates the update to the latest origin IP is not completed.</li>.
-Note: when false is returned for this parameter, please confirm in time whether your origin server firewall configuration has been updated to the latest IP range to avoid origin-pull failure.
+     * Get This parameter is used to record whether the confirmation of "I have updated to the latest origin-pull IP range" is completed before the current version takes effect. Valid values:
+<li>true: The confirmation of updating to the latest origin-pull IP is completed;</li>
+<li>false: The confirmation of updating to the latest origin-pull IP is not completed;</li>
+Note: When this parameter returns false, confirm in time whether your origin server firewall settings are updated to the latest origin-pull IP range to avoid origin-pull failure. 
+     * @return IsPlaned This parameter is used to record whether the confirmation of "I have updated to the latest origin-pull IP range" is completed before the current version takes effect. Valid values:
+<li>true: The confirmation of updating to the latest origin-pull IP is completed;</li>
+<li>false: The confirmation of updating to the latest origin-pull IP is not completed;</li>
+Note: When this parameter returns false, confirm in time whether your origin server firewall settings are updated to the latest origin-pull IP range to avoid origin-pull failure.
      */
     public String getIsPlaned() {
         return this.IsPlaned;
     }
 
     /**
-     * Set This parameter records whether "i have updated to the latest origin IP range" is completed before taking effect. valid values:.
-<li>true: confirms the update to the latest origin IP is completed.</li>.
-<li>false: indicates the update to the latest origin IP is not completed.</li>.
-Note: when false is returned for this parameter, please confirm in time whether your origin server firewall configuration has been updated to the latest IP range to avoid origin-pull failure.
-     * @param IsPlaned This parameter records whether "i have updated to the latest origin IP range" is completed before taking effect. valid values:.
-<li>true: confirms the update to the latest origin IP is completed.</li>.
-<li>false: indicates the update to the latest origin IP is not completed.</li>.
-Note: when false is returned for this parameter, please confirm in time whether your origin server firewall configuration has been updated to the latest IP range to avoid origin-pull failure.
+     * Set This parameter is used to record whether the confirmation of "I have updated to the latest origin-pull IP range" is completed before the current version takes effect. Valid values:
+<li>true: The confirmation of updating to the latest origin-pull IP is completed;</li>
+<li>false: The confirmation of updating to the latest origin-pull IP is not completed;</li>
+Note: When this parameter returns false, confirm in time whether your origin server firewall settings are updated to the latest origin-pull IP range to avoid origin-pull failure.
+     * @param IsPlaned This parameter is used to record whether the confirmation of "I have updated to the latest origin-pull IP range" is completed before the current version takes effect. Valid values:
+<li>true: The confirmation of updating to the latest origin-pull IP is completed;</li>
+<li>false: The confirmation of updating to the latest origin-pull IP is not completed;</li>
+Note: When this parameter returns false, confirm in time whether your origin server firewall settings are updated to the latest origin-pull IP range to avoid origin-pull failure.
      */
     public void setIsPlaned(String IsPlaned) {
         this.IsPlaned = IsPlaned;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeMultiPathGatewayRegionsResponse extends AbstractModel {
 
     /**
-    * Lists available regions for the gateway.
+    * List of available regions for the gateway.
     */
     @SerializedName("GatewayRegions")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeMultiPathGatewayRegionsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Lists available regions for the gateway. 
-     * @return GatewayRegions Lists available regions for the gateway.
+     * Get List of available regions for the gateway. 
+     * @return GatewayRegions List of available regions for the gateway.
      */
     public GatewayRegion [] getGatewayRegions() {
         return this.GatewayRegions;
     }
 
     /**
-     * Set Lists available regions for the gateway.
-     * @param GatewayRegions Lists available regions for the gateway.
+     * Set List of available regions for the gateway.
+     * @param GatewayRegions List of available regions for the gateway.
      */
     public void setGatewayRegions(GatewayRegion [] GatewayRegions) {
         this.GatewayRegions = GatewayRegions;

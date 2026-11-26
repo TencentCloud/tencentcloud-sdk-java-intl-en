@@ -38,28 +38,28 @@ public class ModifyPrefetchOriginLimitRequest extends AbstractModel {
     private String DomainName;
 
     /**
-    * Specifies the acceleration region with origin-pull speed limit.
-During preheating, the acceleration region will be subject to the configured Bandwidth value limit. valid values:.
-<Li>Overseas: global availability zone (excluding the chinese mainland);</li>.
-<Li>MainlandChina: chinese mainland availability zone.</li>.
+    * Acceleration region restricted by origin-pull rate limiting.
+During preheating, the acceleration region will be subject to the configured Bandwidth value limit. Valid values:
+<li>Overseas: global availability zone (excluding the Chinese mainland);</li>
+<li>MainlandChina: Chinese mainland availability zone.</li>
     */
     @SerializedName("Area")
     @Expose
     private String Area;
 
     /**
-    * Specifies the bandwidth limit for origin-pull.
-Specifies the upper limit of bandwidth returning to the origin server during preheating. value ranges from 100 to 100,000 Mbps.
+    * Origin-pull bandwidth limit.
+Upper limit of bandwidth for returning to the origin during preheating. Value range: 100-100,000. Unit: Mbps.
     */
     @SerializedName("Bandwidth")
     @Expose
     private Long Bandwidth;
 
     /**
-    * Specifies the control switch for origin-pull rate limiting.
-Used to enable/delete the origin-pull speed limit. valid values:.
-<li>on: enablement limit.</li>.
-<li>off: delete restriction.</li>.
+    * Origin-pull rate limiting control switch.
+Used to enable/delete this origin-pull speed limit. Valid values:
+<li>`on`: Enable restriction;</li>
+<li>off: Delete restriction.</li>
     */
     @SerializedName("Enabled")
     @Expose
@@ -98,76 +98,76 @@ Used to enable/delete the origin-pull speed limit. valid values:.
     }
 
     /**
-     * Get Specifies the acceleration region with origin-pull speed limit.
-During preheating, the acceleration region will be subject to the configured Bandwidth value limit. valid values:.
-<Li>Overseas: global availability zone (excluding the chinese mainland);</li>.
-<Li>MainlandChina: chinese mainland availability zone.</li>. 
-     * @return Area Specifies the acceleration region with origin-pull speed limit.
-During preheating, the acceleration region will be subject to the configured Bandwidth value limit. valid values:.
-<Li>Overseas: global availability zone (excluding the chinese mainland);</li>.
-<Li>MainlandChina: chinese mainland availability zone.</li>.
+     * Get Acceleration region restricted by origin-pull rate limiting.
+During preheating, the acceleration region will be subject to the configured Bandwidth value limit. Valid values:
+<li>Overseas: global availability zone (excluding the Chinese mainland);</li>
+<li>MainlandChina: Chinese mainland availability zone.</li> 
+     * @return Area Acceleration region restricted by origin-pull rate limiting.
+During preheating, the acceleration region will be subject to the configured Bandwidth value limit. Valid values:
+<li>Overseas: global availability zone (excluding the Chinese mainland);</li>
+<li>MainlandChina: Chinese mainland availability zone.</li>
      */
     public String getArea() {
         return this.Area;
     }
 
     /**
-     * Set Specifies the acceleration region with origin-pull speed limit.
-During preheating, the acceleration region will be subject to the configured Bandwidth value limit. valid values:.
-<Li>Overseas: global availability zone (excluding the chinese mainland);</li>.
-<Li>MainlandChina: chinese mainland availability zone.</li>.
-     * @param Area Specifies the acceleration region with origin-pull speed limit.
-During preheating, the acceleration region will be subject to the configured Bandwidth value limit. valid values:.
-<Li>Overseas: global availability zone (excluding the chinese mainland);</li>.
-<Li>MainlandChina: chinese mainland availability zone.</li>.
+     * Set Acceleration region restricted by origin-pull rate limiting.
+During preheating, the acceleration region will be subject to the configured Bandwidth value limit. Valid values:
+<li>Overseas: global availability zone (excluding the Chinese mainland);</li>
+<li>MainlandChina: Chinese mainland availability zone.</li>
+     * @param Area Acceleration region restricted by origin-pull rate limiting.
+During preheating, the acceleration region will be subject to the configured Bandwidth value limit. Valid values:
+<li>Overseas: global availability zone (excluding the Chinese mainland);</li>
+<li>MainlandChina: Chinese mainland availability zone.</li>
      */
     public void setArea(String Area) {
         this.Area = Area;
     }
 
     /**
-     * Get Specifies the bandwidth limit for origin-pull.
-Specifies the upper limit of bandwidth returning to the origin server during preheating. value ranges from 100 to 100,000 Mbps. 
-     * @return Bandwidth Specifies the bandwidth limit for origin-pull.
-Specifies the upper limit of bandwidth returning to the origin server during preheating. value ranges from 100 to 100,000 Mbps.
+     * Get Origin-pull bandwidth limit.
+Upper limit of bandwidth for returning to the origin during preheating. Value range: 100-100,000. Unit: Mbps. 
+     * @return Bandwidth Origin-pull bandwidth limit.
+Upper limit of bandwidth for returning to the origin during preheating. Value range: 100-100,000. Unit: Mbps.
      */
     public Long getBandwidth() {
         return this.Bandwidth;
     }
 
     /**
-     * Set Specifies the bandwidth limit for origin-pull.
-Specifies the upper limit of bandwidth returning to the origin server during preheating. value ranges from 100 to 100,000 Mbps.
-     * @param Bandwidth Specifies the bandwidth limit for origin-pull.
-Specifies the upper limit of bandwidth returning to the origin server during preheating. value ranges from 100 to 100,000 Mbps.
+     * Set Origin-pull bandwidth limit.
+Upper limit of bandwidth for returning to the origin during preheating. Value range: 100-100,000. Unit: Mbps.
+     * @param Bandwidth Origin-pull bandwidth limit.
+Upper limit of bandwidth for returning to the origin during preheating. Value range: 100-100,000. Unit: Mbps.
      */
     public void setBandwidth(Long Bandwidth) {
         this.Bandwidth = Bandwidth;
     }
 
     /**
-     * Get Specifies the control switch for origin-pull rate limiting.
-Used to enable/delete the origin-pull speed limit. valid values:.
-<li>on: enablement limit.</li>.
-<li>off: delete restriction.</li>. 
-     * @return Enabled Specifies the control switch for origin-pull rate limiting.
-Used to enable/delete the origin-pull speed limit. valid values:.
-<li>on: enablement limit.</li>.
-<li>off: delete restriction.</li>.
+     * Get Origin-pull rate limiting control switch.
+Used to enable/delete this origin-pull speed limit. Valid values:
+<li>`on`: Enable restriction;</li>
+<li>off: Delete restriction.</li> 
+     * @return Enabled Origin-pull rate limiting control switch.
+Used to enable/delete this origin-pull speed limit. Valid values:
+<li>`on`: Enable restriction;</li>
+<li>off: Delete restriction.</li>
      */
     public String getEnabled() {
         return this.Enabled;
     }
 
     /**
-     * Set Specifies the control switch for origin-pull rate limiting.
-Used to enable/delete the origin-pull speed limit. valid values:.
-<li>on: enablement limit.</li>.
-<li>off: delete restriction.</li>.
-     * @param Enabled Specifies the control switch for origin-pull rate limiting.
-Used to enable/delete the origin-pull speed limit. valid values:.
-<li>on: enablement limit.</li>.
-<li>off: delete restriction.</li>.
+     * Set Origin-pull rate limiting control switch.
+Used to enable/delete this origin-pull speed limit. Valid values:
+<li>`on`: Enable restriction;</li>
+<li>off: Delete restriction.</li>
+     * @param Enabled Origin-pull rate limiting control switch.
+Used to enable/delete this origin-pull speed limit. Valid values:
+<li>`on`: Enable restriction;</li>
+<li>off: Delete restriction.</li>
      */
     public void setEnabled(String Enabled) {
         this.Enabled = Enabled;

@@ -31,29 +31,29 @@ public class DescribeConfigGroupVersionsRequest extends AbstractModel {
     private String ZoneId;
 
     /**
-    * Configuraration group ID.
+    * Configuration group ID.
     */
     @SerializedName("GroupId")
     @Expose
     private String GroupId;
 
     /**
-    * Filtering condition. The maximum value of Filters.Values is 20. If this parameter is not specified, all version information for the selected configuration group is returned. Detailed filtering conditions: 
-<li>version-id: Filter by version ID.</li>
+    * Filter criteria. The maximum number of `Filters.Values` is 20. If this parameter is left empty, all version information under the selected configuration group is returned. Detailed filter criteria:
+<li>version-id: Filter by version ID;</li>
     */
     @SerializedName("Filters")
     @Expose
     private AdvancedFilter [] Filters;
 
     /**
-    * Paging query offset. The default value is 0.
+    * The offset of paginated query. Default value: 0.
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * Limited entries in paging queries. The default value is 20 and the maximum value is 100. 
+    * Paginated query limit. Default value: 20, maximum value: 100.
     */
     @SerializedName("Limit")
     @Expose
@@ -76,68 +76,68 @@ public class DescribeConfigGroupVersionsRequest extends AbstractModel {
     }
 
     /**
-     * Get Configuraration group ID. 
-     * @return GroupId Configuraration group ID.
+     * Get Configuration group ID. 
+     * @return GroupId Configuration group ID.
      */
     public String getGroupId() {
         return this.GroupId;
     }
 
     /**
-     * Set Configuraration group ID.
-     * @param GroupId Configuraration group ID.
+     * Set Configuration group ID.
+     * @param GroupId Configuration group ID.
      */
     public void setGroupId(String GroupId) {
         this.GroupId = GroupId;
     }
 
     /**
-     * Get Filtering condition. The maximum value of Filters.Values is 20. If this parameter is not specified, all version information for the selected configuration group is returned. Detailed filtering conditions: 
-<li>version-id: Filter by version ID.</li> 
-     * @return Filters Filtering condition. The maximum value of Filters.Values is 20. If this parameter is not specified, all version information for the selected configuration group is returned. Detailed filtering conditions: 
-<li>version-id: Filter by version ID.</li>
+     * Get Filter criteria. The maximum number of `Filters.Values` is 20. If this parameter is left empty, all version information under the selected configuration group is returned. Detailed filter criteria:
+<li>version-id: Filter by version ID;</li> 
+     * @return Filters Filter criteria. The maximum number of `Filters.Values` is 20. If this parameter is left empty, all version information under the selected configuration group is returned. Detailed filter criteria:
+<li>version-id: Filter by version ID;</li>
      */
     public AdvancedFilter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set Filtering condition. The maximum value of Filters.Values is 20. If this parameter is not specified, all version information for the selected configuration group is returned. Detailed filtering conditions: 
-<li>version-id: Filter by version ID.</li>
-     * @param Filters Filtering condition. The maximum value of Filters.Values is 20. If this parameter is not specified, all version information for the selected configuration group is returned. Detailed filtering conditions: 
-<li>version-id: Filter by version ID.</li>
+     * Set Filter criteria. The maximum number of `Filters.Values` is 20. If this parameter is left empty, all version information under the selected configuration group is returned. Detailed filter criteria:
+<li>version-id: Filter by version ID;</li>
+     * @param Filters Filter criteria. The maximum number of `Filters.Values` is 20. If this parameter is left empty, all version information under the selected configuration group is returned. Detailed filter criteria:
+<li>version-id: Filter by version ID;</li>
      */
     public void setFilters(AdvancedFilter [] Filters) {
         this.Filters = Filters;
     }
 
     /**
-     * Get Paging query offset. The default value is 0. 
-     * @return Offset Paging query offset. The default value is 0.
+     * Get The offset of paginated query. Default value: 0. 
+     * @return Offset The offset of paginated query. Default value: 0.
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Paging query offset. The default value is 0.
-     * @param Offset Paging query offset. The default value is 0.
+     * Set The offset of paginated query. Default value: 0.
+     * @param Offset The offset of paginated query. Default value: 0.
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get Limited entries in paging queries. The default value is 20 and the maximum value is 100.  
-     * @return Limit Limited entries in paging queries. The default value is 20 and the maximum value is 100. 
+     * Get Paginated query limit. Default value: 20, maximum value: 100. 
+     * @return Limit Paginated query limit. Default value: 20, maximum value: 100.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Limited entries in paging queries. The default value is 20 and the maximum value is 100. 
-     * @param Limit Limited entries in paging queries. The default value is 20 and the maximum value is 100. 
+     * Set Paginated query limit. Default value: 20, maximum value: 100.
+     * @param Limit Paginated query limit. Default value: 20, maximum value: 100.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

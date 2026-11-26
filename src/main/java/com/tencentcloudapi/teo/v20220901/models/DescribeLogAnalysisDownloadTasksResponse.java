@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeLogAnalysisDownloadTasksResponse extends AbstractModel {
 
     /**
-    * <p>Total number of entries for the log analysis download task that meets the match condition.</p>
+    * <p>Total number of log analysis download tasks that meet the log match conditions.</p>
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * <p>Download task list for log analysis that meets the log match condition.</p>
+    * <p>List of log analytics download tasks that meet the log match condition.</p>
     */
     @SerializedName("Tasks")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeLogAnalysisDownloadTasksResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get <p>Total number of entries for the log analysis download task that meets the match condition.</p> 
-     * @return TotalCount <p>Total number of entries for the log analysis download task that meets the match condition.</p>
+     * Get <p>Total number of log analysis download tasks that meet the log match conditions.</p> 
+     * @return TotalCount <p>Total number of log analysis download tasks that meet the log match conditions.</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set <p>Total number of entries for the log analysis download task that meets the match condition.</p>
-     * @param TotalCount <p>Total number of entries for the log analysis download task that meets the match condition.</p>
+     * Set <p>Total number of log analysis download tasks that meet the log match conditions.</p>
+     * @param TotalCount <p>Total number of log analysis download tasks that meet the log match conditions.</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get <p>Download task list for log analysis that meets the log match condition.</p> 
-     * @return Tasks <p>Download task list for log analysis that meets the log match condition.</p>
+     * Get <p>List of log analytics download tasks that meet the log match condition.</p> 
+     * @return Tasks <p>List of log analytics download tasks that meet the log match condition.</p>
      */
     public LogAnalysisDownloadTask [] getTasks() {
         return this.Tasks;
     }
 
     /**
-     * Set <p>Download task list for log analysis that meets the log match condition.</p>
-     * @param Tasks <p>Download task list for log analysis that meets the log match condition.</p>
+     * Set <p>List of log analytics download tasks that meet the log match condition.</p>
+     * @param Tasks <p>List of log analytics download tasks that meet the log match condition.</p>
      */
     public void setTasks(LogAnalysisDownloadTask [] Tasks) {
         this.Tasks = Tasks;

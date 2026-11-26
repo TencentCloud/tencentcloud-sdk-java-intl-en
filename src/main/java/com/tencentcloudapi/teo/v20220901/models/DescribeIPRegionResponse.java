@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeIPRegionResponse extends AbstractModel {
 
     /**
-    * List of IP attribution information.
+    * IP attribution information list.
     */
     @SerializedName("IPRegionInfo")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeIPRegionResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get List of IP attribution information. 
-     * @return IPRegionInfo List of IP attribution information.
+     * Get IP attribution information list. 
+     * @return IPRegionInfo IP attribution information list.
      */
     public IPRegionInfo [] getIPRegionInfo() {
         return this.IPRegionInfo;
     }
 
     /**
-     * Set List of IP attribution information.
-     * @param IPRegionInfo List of IP attribution information.
+     * Set IP attribution information list.
+     * @param IPRegionInfo IP attribution information list.
      */
     public void setIPRegionInfo(IPRegionInfo [] IPRegionInfo) {
         this.IPRegionInfo = IPRegionInfo;

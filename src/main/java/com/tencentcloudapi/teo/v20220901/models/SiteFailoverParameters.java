@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class SiteFailoverParameters extends AbstractModel {
 
     /**
-    * Origin server fault migration condition status code. The origin server response status code must hit the field return to execute origin server migration as SiteFailoverParams. The parameter value is one of 4xx, 5xx.
+    * Status code for origin fault migration condition. Origin migration is executed as specified in SiteFailoverParams only when the response status code returned by the origin hits the value of this field. The parameter value is one of 4xx and 5xx.
     */
     @SerializedName("SiteFailoverStatusCodes")
     @Expose
     private Long [] SiteFailoverStatusCodes;
 
     /**
-    * Origin server failure failover configuration parameter list. Minimum length is 1, maximum length is 2.
+    * List of origin server failover configuration parameters. Minimum length: 1. Maximum length: 2.
     */
     @SerializedName("SiteFailoverParams")
     @Expose
     private SiteFailover [] SiteFailoverParams;
 
     /**
-     * Get Origin server fault migration condition status code. The origin server response status code must hit the field return to execute origin server migration as SiteFailoverParams. The parameter value is one of 4xx, 5xx. 
-     * @return SiteFailoverStatusCodes Origin server fault migration condition status code. The origin server response status code must hit the field return to execute origin server migration as SiteFailoverParams. The parameter value is one of 4xx, 5xx.
+     * Get Status code for origin fault migration condition. Origin migration is executed as specified in SiteFailoverParams only when the response status code returned by the origin hits the value of this field. The parameter value is one of 4xx and 5xx. 
+     * @return SiteFailoverStatusCodes Status code for origin fault migration condition. Origin migration is executed as specified in SiteFailoverParams only when the response status code returned by the origin hits the value of this field. The parameter value is one of 4xx and 5xx.
      */
     public Long [] getSiteFailoverStatusCodes() {
         return this.SiteFailoverStatusCodes;
     }
 
     /**
-     * Set Origin server fault migration condition status code. The origin server response status code must hit the field return to execute origin server migration as SiteFailoverParams. The parameter value is one of 4xx, 5xx.
-     * @param SiteFailoverStatusCodes Origin server fault migration condition status code. The origin server response status code must hit the field return to execute origin server migration as SiteFailoverParams. The parameter value is one of 4xx, 5xx.
+     * Set Status code for origin fault migration condition. Origin migration is executed as specified in SiteFailoverParams only when the response status code returned by the origin hits the value of this field. The parameter value is one of 4xx and 5xx.
+     * @param SiteFailoverStatusCodes Status code for origin fault migration condition. Origin migration is executed as specified in SiteFailoverParams only when the response status code returned by the origin hits the value of this field. The parameter value is one of 4xx and 5xx.
      */
     public void setSiteFailoverStatusCodes(Long [] SiteFailoverStatusCodes) {
         this.SiteFailoverStatusCodes = SiteFailoverStatusCodes;
     }
 
     /**
-     * Get Origin server failure failover configuration parameter list. Minimum length is 1, maximum length is 2. 
-     * @return SiteFailoverParams Origin server failure failover configuration parameter list. Minimum length is 1, maximum length is 2.
+     * Get List of origin server failover configuration parameters. Minimum length: 1. Maximum length: 2. 
+     * @return SiteFailoverParams List of origin server failover configuration parameters. Minimum length: 1. Maximum length: 2.
      */
     public SiteFailover [] getSiteFailoverParams() {
         return this.SiteFailoverParams;
     }
 
     /**
-     * Set Origin server failure failover configuration parameter list. Minimum length is 1, maximum length is 2.
-     * @param SiteFailoverParams Origin server failure failover configuration parameter list. Minimum length is 1, maximum length is 2.
+     * Set List of origin server failover configuration parameters. Minimum length: 1. Maximum length: 2.
+     * @param SiteFailoverParams List of origin server failover configuration parameters. Minimum length: 1. Maximum length: 2.
      */
     public void setSiteFailoverParams(SiteFailover [] SiteFailoverParams) {
         this.SiteFailoverParams = SiteFailoverParams;

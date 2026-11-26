@@ -24,441 +24,441 @@ import java.util.HashMap;
 public class RateLimitUserRule extends AbstractModel {
 
     /**
-    * The request threshold. Value range: 0-4294967294.
+    * Rate limit statistical threshold, in times. Value range: 0-4294967294.
     */
     @SerializedName("Threshold")
     @Expose
     private Long Threshold;
 
     /**
-    * The statistical period. The value can be 10, 20, 30, 40, 50, or 60 seconds.
+    * Rate limit statistical time. Value range: 10/20/30/40/50/60. Unit: seconds.
     */
     @SerializedName("Period")
     @Expose
     private Long Period;
 
     /**
-    * The rule name, which consists of only letters, digits, and underscores and cannot start with an underscore.
+    * Rule name can only contain English characters, digits, and underscores, and cannot begin with an underscore.
     */
     @SerializedName("RuleName")
     @Expose
     private String RuleName;
 
     /**
-    * Action. Values:<li>`monitor`: Observe;</li><li>`drop`: Block;</li><li>`redirect`: Redirect;</li><li>`page`: Return a specific page;</li><li>`alg`: JavaScript challenge. </li>	
+    * Handling action. Valid values: <li>monitor: observe;</li> <li>drop: block;</li><li> redirect: redirect;</li><li> page: specified page;</li><li>alg: JavaScript challenge.</li>	
     */
     @SerializedName("Action")
     @Expose
     private String Action;
 
     /**
-    * The amount of time taken to perform the action. Value range: 0 seconds - 2 days.
+    * Penalty duration. Value range: 0-2 days.
     */
     @SerializedName("PunishTime")
     @Expose
     private Long PunishTime;
 
     /**
-    * The time unit. Values:
-<li>`second`: Second</li>
-<li>`minutes`: Minute</li>
-<li>`hour`: Hour</li>
+    * Penalty duration unit. Valid values:
+<li>second: second;</li>
+<li>minutes: minute;</li>
+<li>hour: hour.</li>
     */
     @SerializedName("PunishTimeUnit")
     @Expose
     private String PunishTimeUnit;
 
     /**
-    * The rule status. Values:
-<li>`on`: Enabled</li>
-<li>`off`: Disabled</li>Default value: `on`
+    * Rule status. Valid values:
+<li>on: enabled</li>
+<li>off: Disable.</li>Default on takes effect.
     */
     @SerializedName("RuleStatus")
     @Expose
     private String RuleStatus;
 
     /**
-    * The rule details.
+    * Rule details.
     */
     @SerializedName("AclConditions")
     @Expose
     private AclCondition [] AclConditions;
 
     /**
-    * The rule weight. Value range: 0-100.
+    * Rule weight. Value range: 0-100.
     */
     @SerializedName("RulePriority")
     @Expose
     private Long RulePriority;
 
     /**
-    * Rule ID, which is only used as an output parameter.
+    * Rule Id. Output only.
     */
     @SerializedName("RuleID")
     @Expose
     private Long RuleID;
 
     /**
-    * The filter. Values:
-<li>`sip`: Client IP</li>
-This parameter is left empty by default.
+    * Filter word. Valid values:
+<li>sip: Client IP.</li>
+Defaults to an empty string.
     */
     @SerializedName("FreqFields")
     @Expose
     private String [] FreqFields;
 
     /**
-    * Update time. It is only used as a response parameter, and defaults to the current time. 
+    * Update time. Output usage only. Defaults to the current time when modified.
     */
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
 
     /**
-    * Query scope. Values:
-<li>`source_to_eo`: (Response) Traffic going from the origin to EdgeOne.</li>
-<li>`client_to_eo`: (Request) Traffic going from the client to EdgeOne.</li>
-Default: `source_to_eo`.
+    * Statistical scope. Valid values:
+<li>source_to_eo: (Response) Origin server to EdgeOne;</li>
+<li>client_to_eo: (request) Client to EdgeOne.</li>
+Default value: source_to_eo.
     */
     @SerializedName("FreqScope")
     @Expose
     private String [] FreqScope;
 
     /**
-    * Name of the custom return page. It's required when `Action=page`.
+    * Name of the custom return page. Required when Action is page, and cannot be empty.
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * ID of custom response. The ID can be obtained via the `DescribeCustomErrorPages` API. It's required when `Action=page`.	
+    * Custom response Id, which can be obtained through the API for querying the custom error page list. The default value is default, which uses the system default page. Required and cannot be empty when Action is page.	
     */
     @SerializedName("CustomResponseId")
     @Expose
     private String CustomResponseId;
 
     /**
-    * The response code to trigger the return page. It's required when `Action=page`. Value: 100-600. 3xx response codes are not supported. Default value: 567.
+    * code of the custom return page. Required when Action is page. The value cannot be empty. Value range: 100-600. 3xx response codes are unsupported. Default value: 567.
     */
     @SerializedName("ResponseCode")
     @Expose
     private Long ResponseCode;
 
     /**
-    * The redirection URL. It's required when `Action=redirect`.
+    * Address for redirection. Required when Action is `redirect` and cannot be empty.
     */
     @SerializedName("RedirectUrl")
     @Expose
     private String RedirectUrl;
 
     /**
-     * Get The request threshold. Value range: 0-4294967294. 
-     * @return Threshold The request threshold. Value range: 0-4294967294.
+     * Get Rate limit statistical threshold, in times. Value range: 0-4294967294. 
+     * @return Threshold Rate limit statistical threshold, in times. Value range: 0-4294967294.
      */
     public Long getThreshold() {
         return this.Threshold;
     }
 
     /**
-     * Set The request threshold. Value range: 0-4294967294.
-     * @param Threshold The request threshold. Value range: 0-4294967294.
+     * Set Rate limit statistical threshold, in times. Value range: 0-4294967294.
+     * @param Threshold Rate limit statistical threshold, in times. Value range: 0-4294967294.
      */
     public void setThreshold(Long Threshold) {
         this.Threshold = Threshold;
     }
 
     /**
-     * Get The statistical period. The value can be 10, 20, 30, 40, 50, or 60 seconds. 
-     * @return Period The statistical period. The value can be 10, 20, 30, 40, 50, or 60 seconds.
+     * Get Rate limit statistical time. Value range: 10/20/30/40/50/60. Unit: seconds. 
+     * @return Period Rate limit statistical time. Value range: 10/20/30/40/50/60. Unit: seconds.
      */
     public Long getPeriod() {
         return this.Period;
     }
 
     /**
-     * Set The statistical period. The value can be 10, 20, 30, 40, 50, or 60 seconds.
-     * @param Period The statistical period. The value can be 10, 20, 30, 40, 50, or 60 seconds.
+     * Set Rate limit statistical time. Value range: 10/20/30/40/50/60. Unit: seconds.
+     * @param Period Rate limit statistical time. Value range: 10/20/30/40/50/60. Unit: seconds.
      */
     public void setPeriod(Long Period) {
         this.Period = Period;
     }
 
     /**
-     * Get The rule name, which consists of only letters, digits, and underscores and cannot start with an underscore. 
-     * @return RuleName The rule name, which consists of only letters, digits, and underscores and cannot start with an underscore.
+     * Get Rule name can only contain English characters, digits, and underscores, and cannot begin with an underscore. 
+     * @return RuleName Rule name can only contain English characters, digits, and underscores, and cannot begin with an underscore.
      */
     public String getRuleName() {
         return this.RuleName;
     }
 
     /**
-     * Set The rule name, which consists of only letters, digits, and underscores and cannot start with an underscore.
-     * @param RuleName The rule name, which consists of only letters, digits, and underscores and cannot start with an underscore.
+     * Set Rule name can only contain English characters, digits, and underscores, and cannot begin with an underscore.
+     * @param RuleName Rule name can only contain English characters, digits, and underscores, and cannot begin with an underscore.
      */
     public void setRuleName(String RuleName) {
         this.RuleName = RuleName;
     }
 
     /**
-     * Get Action. Values:<li>`monitor`: Observe;</li><li>`drop`: Block;</li><li>`redirect`: Redirect;</li><li>`page`: Return a specific page;</li><li>`alg`: JavaScript challenge. </li>	 
-     * @return Action Action. Values:<li>`monitor`: Observe;</li><li>`drop`: Block;</li><li>`redirect`: Redirect;</li><li>`page`: Return a specific page;</li><li>`alg`: JavaScript challenge. </li>	
+     * Get Handling action. Valid values: <li>monitor: observe;</li> <li>drop: block;</li><li> redirect: redirect;</li><li> page: specified page;</li><li>alg: JavaScript challenge.</li>	 
+     * @return Action Handling action. Valid values: <li>monitor: observe;</li> <li>drop: block;</li><li> redirect: redirect;</li><li> page: specified page;</li><li>alg: JavaScript challenge.</li>	
      */
     public String getAction() {
         return this.Action;
     }
 
     /**
-     * Set Action. Values:<li>`monitor`: Observe;</li><li>`drop`: Block;</li><li>`redirect`: Redirect;</li><li>`page`: Return a specific page;</li><li>`alg`: JavaScript challenge. </li>	
-     * @param Action Action. Values:<li>`monitor`: Observe;</li><li>`drop`: Block;</li><li>`redirect`: Redirect;</li><li>`page`: Return a specific page;</li><li>`alg`: JavaScript challenge. </li>	
+     * Set Handling action. Valid values: <li>monitor: observe;</li> <li>drop: block;</li><li> redirect: redirect;</li><li> page: specified page;</li><li>alg: JavaScript challenge.</li>	
+     * @param Action Handling action. Valid values: <li>monitor: observe;</li> <li>drop: block;</li><li> redirect: redirect;</li><li> page: specified page;</li><li>alg: JavaScript challenge.</li>	
      */
     public void setAction(String Action) {
         this.Action = Action;
     }
 
     /**
-     * Get The amount of time taken to perform the action. Value range: 0 seconds - 2 days. 
-     * @return PunishTime The amount of time taken to perform the action. Value range: 0 seconds - 2 days.
+     * Get Penalty duration. Value range: 0-2 days. 
+     * @return PunishTime Penalty duration. Value range: 0-2 days.
      */
     public Long getPunishTime() {
         return this.PunishTime;
     }
 
     /**
-     * Set The amount of time taken to perform the action. Value range: 0 seconds - 2 days.
-     * @param PunishTime The amount of time taken to perform the action. Value range: 0 seconds - 2 days.
+     * Set Penalty duration. Value range: 0-2 days.
+     * @param PunishTime Penalty duration. Value range: 0-2 days.
      */
     public void setPunishTime(Long PunishTime) {
         this.PunishTime = PunishTime;
     }
 
     /**
-     * Get The time unit. Values:
-<li>`second`: Second</li>
-<li>`minutes`: Minute</li>
-<li>`hour`: Hour</li> 
-     * @return PunishTimeUnit The time unit. Values:
-<li>`second`: Second</li>
-<li>`minutes`: Minute</li>
-<li>`hour`: Hour</li>
+     * Get Penalty duration unit. Valid values:
+<li>second: second;</li>
+<li>minutes: minute;</li>
+<li>hour: hour.</li> 
+     * @return PunishTimeUnit Penalty duration unit. Valid values:
+<li>second: second;</li>
+<li>minutes: minute;</li>
+<li>hour: hour.</li>
      */
     public String getPunishTimeUnit() {
         return this.PunishTimeUnit;
     }
 
     /**
-     * Set The time unit. Values:
-<li>`second`: Second</li>
-<li>`minutes`: Minute</li>
-<li>`hour`: Hour</li>
-     * @param PunishTimeUnit The time unit. Values:
-<li>`second`: Second</li>
-<li>`minutes`: Minute</li>
-<li>`hour`: Hour</li>
+     * Set Penalty duration unit. Valid values:
+<li>second: second;</li>
+<li>minutes: minute;</li>
+<li>hour: hour.</li>
+     * @param PunishTimeUnit Penalty duration unit. Valid values:
+<li>second: second;</li>
+<li>minutes: minute;</li>
+<li>hour: hour.</li>
      */
     public void setPunishTimeUnit(String PunishTimeUnit) {
         this.PunishTimeUnit = PunishTimeUnit;
     }
 
     /**
-     * Get The rule status. Values:
-<li>`on`: Enabled</li>
-<li>`off`: Disabled</li>Default value: `on` 
-     * @return RuleStatus The rule status. Values:
-<li>`on`: Enabled</li>
-<li>`off`: Disabled</li>Default value: `on`
+     * Get Rule status. Valid values:
+<li>on: enabled</li>
+<li>off: Disable.</li>Default on takes effect. 
+     * @return RuleStatus Rule status. Valid values:
+<li>on: enabled</li>
+<li>off: Disable.</li>Default on takes effect.
      */
     public String getRuleStatus() {
         return this.RuleStatus;
     }
 
     /**
-     * Set The rule status. Values:
-<li>`on`: Enabled</li>
-<li>`off`: Disabled</li>Default value: `on`
-     * @param RuleStatus The rule status. Values:
-<li>`on`: Enabled</li>
-<li>`off`: Disabled</li>Default value: `on`
+     * Set Rule status. Valid values:
+<li>on: enabled</li>
+<li>off: Disable.</li>Default on takes effect.
+     * @param RuleStatus Rule status. Valid values:
+<li>on: enabled</li>
+<li>off: Disable.</li>Default on takes effect.
      */
     public void setRuleStatus(String RuleStatus) {
         this.RuleStatus = RuleStatus;
     }
 
     /**
-     * Get The rule details. 
-     * @return AclConditions The rule details.
+     * Get Rule details. 
+     * @return AclConditions Rule details.
      */
     public AclCondition [] getAclConditions() {
         return this.AclConditions;
     }
 
     /**
-     * Set The rule details.
-     * @param AclConditions The rule details.
+     * Set Rule details.
+     * @param AclConditions Rule details.
      */
     public void setAclConditions(AclCondition [] AclConditions) {
         this.AclConditions = AclConditions;
     }
 
     /**
-     * Get The rule weight. Value range: 0-100. 
-     * @return RulePriority The rule weight. Value range: 0-100.
+     * Get Rule weight. Value range: 0-100. 
+     * @return RulePriority Rule weight. Value range: 0-100.
      */
     public Long getRulePriority() {
         return this.RulePriority;
     }
 
     /**
-     * Set The rule weight. Value range: 0-100.
-     * @param RulePriority The rule weight. Value range: 0-100.
+     * Set Rule weight. Value range: 0-100.
+     * @param RulePriority Rule weight. Value range: 0-100.
      */
     public void setRulePriority(Long RulePriority) {
         this.RulePriority = RulePriority;
     }
 
     /**
-     * Get Rule ID, which is only used as an output parameter. 
-     * @return RuleID Rule ID, which is only used as an output parameter.
+     * Get Rule Id. Output only. 
+     * @return RuleID Rule Id. Output only.
      */
     public Long getRuleID() {
         return this.RuleID;
     }
 
     /**
-     * Set Rule ID, which is only used as an output parameter.
-     * @param RuleID Rule ID, which is only used as an output parameter.
+     * Set Rule Id. Output only.
+     * @param RuleID Rule Id. Output only.
      */
     public void setRuleID(Long RuleID) {
         this.RuleID = RuleID;
     }
 
     /**
-     * Get The filter. Values:
-<li>`sip`: Client IP</li>
-This parameter is left empty by default. 
-     * @return FreqFields The filter. Values:
-<li>`sip`: Client IP</li>
-This parameter is left empty by default.
+     * Get Filter word. Valid values:
+<li>sip: Client IP.</li>
+Defaults to an empty string. 
+     * @return FreqFields Filter word. Valid values:
+<li>sip: Client IP.</li>
+Defaults to an empty string.
      */
     public String [] getFreqFields() {
         return this.FreqFields;
     }
 
     /**
-     * Set The filter. Values:
-<li>`sip`: Client IP</li>
-This parameter is left empty by default.
-     * @param FreqFields The filter. Values:
-<li>`sip`: Client IP</li>
-This parameter is left empty by default.
+     * Set Filter word. Valid values:
+<li>sip: Client IP.</li>
+Defaults to an empty string.
+     * @param FreqFields Filter word. Valid values:
+<li>sip: Client IP.</li>
+Defaults to an empty string.
      */
     public void setFreqFields(String [] FreqFields) {
         this.FreqFields = FreqFields;
     }
 
     /**
-     * Get Update time. It is only used as a response parameter, and defaults to the current time.  
-     * @return UpdateTime Update time. It is only used as a response parameter, and defaults to the current time. 
+     * Get Update time. Output usage only. Defaults to the current time when modified. 
+     * @return UpdateTime Update time. Output usage only. Defaults to the current time when modified.
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set Update time. It is only used as a response parameter, and defaults to the current time. 
-     * @param UpdateTime Update time. It is only used as a response parameter, and defaults to the current time. 
+     * Set Update time. Output usage only. Defaults to the current time when modified.
+     * @param UpdateTime Update time. Output usage only. Defaults to the current time when modified.
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
     }
 
     /**
-     * Get Query scope. Values:
-<li>`source_to_eo`: (Response) Traffic going from the origin to EdgeOne.</li>
-<li>`client_to_eo`: (Request) Traffic going from the client to EdgeOne.</li>
-Default: `source_to_eo`. 
-     * @return FreqScope Query scope. Values:
-<li>`source_to_eo`: (Response) Traffic going from the origin to EdgeOne.</li>
-<li>`client_to_eo`: (Request) Traffic going from the client to EdgeOne.</li>
-Default: `source_to_eo`.
+     * Get Statistical scope. Valid values:
+<li>source_to_eo: (Response) Origin server to EdgeOne;</li>
+<li>client_to_eo: (request) Client to EdgeOne.</li>
+Default value: source_to_eo. 
+     * @return FreqScope Statistical scope. Valid values:
+<li>source_to_eo: (Response) Origin server to EdgeOne;</li>
+<li>client_to_eo: (request) Client to EdgeOne.</li>
+Default value: source_to_eo.
      */
     public String [] getFreqScope() {
         return this.FreqScope;
     }
 
     /**
-     * Set Query scope. Values:
-<li>`source_to_eo`: (Response) Traffic going from the origin to EdgeOne.</li>
-<li>`client_to_eo`: (Request) Traffic going from the client to EdgeOne.</li>
-Default: `source_to_eo`.
-     * @param FreqScope Query scope. Values:
-<li>`source_to_eo`: (Response) Traffic going from the origin to EdgeOne.</li>
-<li>`client_to_eo`: (Request) Traffic going from the client to EdgeOne.</li>
-Default: `source_to_eo`.
+     * Set Statistical scope. Valid values:
+<li>source_to_eo: (Response) Origin server to EdgeOne;</li>
+<li>client_to_eo: (request) Client to EdgeOne.</li>
+Default value: source_to_eo.
+     * @param FreqScope Statistical scope. Valid values:
+<li>source_to_eo: (Response) Origin server to EdgeOne;</li>
+<li>client_to_eo: (request) Client to EdgeOne.</li>
+Default value: source_to_eo.
      */
     public void setFreqScope(String [] FreqScope) {
         this.FreqScope = FreqScope;
     }
 
     /**
-     * Get Name of the custom return page. It's required when `Action=page`. 
-     * @return Name Name of the custom return page. It's required when `Action=page`.
+     * Get Name of the custom return page. Required when Action is page, and cannot be empty. 
+     * @return Name Name of the custom return page. Required when Action is page, and cannot be empty.
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Name of the custom return page. It's required when `Action=page`.
-     * @param Name Name of the custom return page. It's required when `Action=page`.
+     * Set Name of the custom return page. Required when Action is page, and cannot be empty.
+     * @param Name Name of the custom return page. Required when Action is page, and cannot be empty.
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get ID of custom response. The ID can be obtained via the `DescribeCustomErrorPages` API. It's required when `Action=page`.	 
-     * @return CustomResponseId ID of custom response. The ID can be obtained via the `DescribeCustomErrorPages` API. It's required when `Action=page`.	
+     * Get Custom response Id, which can be obtained through the API for querying the custom error page list. The default value is default, which uses the system default page. Required and cannot be empty when Action is page.	 
+     * @return CustomResponseId Custom response Id, which can be obtained through the API for querying the custom error page list. The default value is default, which uses the system default page. Required and cannot be empty when Action is page.	
      */
     public String getCustomResponseId() {
         return this.CustomResponseId;
     }
 
     /**
-     * Set ID of custom response. The ID can be obtained via the `DescribeCustomErrorPages` API. It's required when `Action=page`.	
-     * @param CustomResponseId ID of custom response. The ID can be obtained via the `DescribeCustomErrorPages` API. It's required when `Action=page`.	
+     * Set Custom response Id, which can be obtained through the API for querying the custom error page list. The default value is default, which uses the system default page. Required and cannot be empty when Action is page.	
+     * @param CustomResponseId Custom response Id, which can be obtained through the API for querying the custom error page list. The default value is default, which uses the system default page. Required and cannot be empty when Action is page.	
      */
     public void setCustomResponseId(String CustomResponseId) {
         this.CustomResponseId = CustomResponseId;
     }
 
     /**
-     * Get The response code to trigger the return page. It's required when `Action=page`. Value: 100-600. 3xx response codes are not supported. Default value: 567. 
-     * @return ResponseCode The response code to trigger the return page. It's required when `Action=page`. Value: 100-600. 3xx response codes are not supported. Default value: 567.
+     * Get code of the custom return page. Required when Action is page. The value cannot be empty. Value range: 100-600. 3xx response codes are unsupported. Default value: 567. 
+     * @return ResponseCode code of the custom return page. Required when Action is page. The value cannot be empty. Value range: 100-600. 3xx response codes are unsupported. Default value: 567.
      */
     public Long getResponseCode() {
         return this.ResponseCode;
     }
 
     /**
-     * Set The response code to trigger the return page. It's required when `Action=page`. Value: 100-600. 3xx response codes are not supported. Default value: 567.
-     * @param ResponseCode The response code to trigger the return page. It's required when `Action=page`. Value: 100-600. 3xx response codes are not supported. Default value: 567.
+     * Set code of the custom return page. Required when Action is page. The value cannot be empty. Value range: 100-600. 3xx response codes are unsupported. Default value: 567.
+     * @param ResponseCode code of the custom return page. Required when Action is page. The value cannot be empty. Value range: 100-600. 3xx response codes are unsupported. Default value: 567.
      */
     public void setResponseCode(Long ResponseCode) {
         this.ResponseCode = ResponseCode;
     }
 
     /**
-     * Get The redirection URL. It's required when `Action=redirect`. 
-     * @return RedirectUrl The redirection URL. It's required when `Action=redirect`.
+     * Get Address for redirection. Required when Action is `redirect` and cannot be empty. 
+     * @return RedirectUrl Address for redirection. Required when Action is `redirect` and cannot be empty.
      */
     public String getRedirectUrl() {
         return this.RedirectUrl;
     }
 
     /**
-     * Set The redirection URL. It's required when `Action=redirect`.
-     * @param RedirectUrl The redirection URL. It's required when `Action=redirect`.
+     * Set Address for redirection. Required when Action is `redirect` and cannot be empty.
+     * @param RedirectUrl Address for redirection. Required when Action is `redirect` and cannot be empty.
      */
     public void setRedirectUrl(String RedirectUrl) {
         this.RedirectUrl = RedirectUrl;

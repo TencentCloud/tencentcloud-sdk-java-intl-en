@@ -24,99 +24,89 @@ import java.util.HashMap;
 public class CustomTime extends AbstractModel {
 
     /**
-    * Custom cache time switch. values:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li>.
+    * Custom cache time switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * Ignore origin server cachecontrol switch. values:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li> note: this field is required when `switch` is on. when `switch` is off, this field is not required and will not take effect if filled.
+    * Ignore the origin-pull CacheControl switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: disabled.</li>Note: When Switch is on, this field is required; when Switch is off, no need to specify this field, and if specified, it does not take effect.
     */
     @SerializedName("IgnoreCacheControl")
     @Expose
     private String IgnoreCacheControl;
 
     /**
-    * Custom cache time value, unit: seconds. value range: 0-315360000.<br>note: this field is required when switch is on; when switch is off, this field is not required and will not take effect if filled.
+    * Custom cache time value, in seconds. Value range: 0–315360000.<br>Note: This field is required when Switch is on. When Switch is off, this field is not required and does not take effect if specified.
     */
     @SerializedName("CacheTime")
     @Expose
     private Long CacheTime;
 
     /**
-     * Get Custom cache time switch. values:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li>. 
-     * @return Switch Custom cache time switch. values:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li>.
+     * Get Custom cache time switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li> 
+     * @return Switch Custom cache time switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set Custom cache time switch. values:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li>.
-     * @param Switch Custom cache time switch. values:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li>.
+     * Set Custom cache time switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+     * @param Switch Custom cache time switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get Ignore origin server cachecontrol switch. values:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li> note: this field is required when `switch` is on. when `switch` is off, this field is not required and will not take effect if filled. 
-     * @return IgnoreCacheControl Ignore origin server cachecontrol switch. values:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li> note: this field is required when `switch` is on. when `switch` is off, this field is not required and will not take effect if filled.
+     * Get Ignore the origin-pull CacheControl switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: disabled.</li>Note: When Switch is on, this field is required; when Switch is off, no need to specify this field, and if specified, it does not take effect. 
+     * @return IgnoreCacheControl Ignore the origin-pull CacheControl switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: disabled.</li>Note: When Switch is on, this field is required; when Switch is off, no need to specify this field, and if specified, it does not take effect.
      */
     public String getIgnoreCacheControl() {
         return this.IgnoreCacheControl;
     }
 
     /**
-     * Set Ignore origin server cachecontrol switch. values:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li> note: this field is required when `switch` is on. when `switch` is off, this field is not required and will not take effect if filled.
-     * @param IgnoreCacheControl Ignore origin server cachecontrol switch. values:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li> note: this field is required when `switch` is on. when `switch` is off, this field is not required and will not take effect if filled.
+     * Set Ignore the origin-pull CacheControl switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: disabled.</li>Note: When Switch is on, this field is required; when Switch is off, no need to specify this field, and if specified, it does not take effect.
+     * @param IgnoreCacheControl Ignore the origin-pull CacheControl switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: disabled.</li>Note: When Switch is on, this field is required; when Switch is off, no need to specify this field, and if specified, it does not take effect.
      */
     public void setIgnoreCacheControl(String IgnoreCacheControl) {
         this.IgnoreCacheControl = IgnoreCacheControl;
     }
 
     /**
-     * Get Custom cache time value, unit: seconds. value range: 0-315360000.<br>note: this field is required when switch is on; when switch is off, this field is not required and will not take effect if filled. 
-     * @return CacheTime Custom cache time value, unit: seconds. value range: 0-315360000.<br>note: this field is required when switch is on; when switch is off, this field is not required and will not take effect if filled.
+     * Get Custom cache time value, in seconds. Value range: 0–315360000.<br>Note: This field is required when Switch is on. When Switch is off, this field is not required and does not take effect if specified. 
+     * @return CacheTime Custom cache time value, in seconds. Value range: 0–315360000.<br>Note: This field is required when Switch is on. When Switch is off, this field is not required and does not take effect if specified.
      */
     public Long getCacheTime() {
         return this.CacheTime;
     }
 
     /**
-     * Set Custom cache time value, unit: seconds. value range: 0-315360000.<br>note: this field is required when switch is on; when switch is off, this field is not required and will not take effect if filled.
-     * @param CacheTime Custom cache time value, unit: seconds. value range: 0-315360000.<br>note: this field is required when switch is on; when switch is off, this field is not required and will not take effect if filled.
+     * Set Custom cache time value, in seconds. Value range: 0–315360000.<br>Note: This field is required when Switch is on. When Switch is off, this field is not required and does not take effect if specified.
+     * @param CacheTime Custom cache time value, in seconds. Value range: 0–315360000.<br>Note: This field is required when Switch is on. When Switch is off, this field is not required and does not take effect if specified.
      */
     public void setCacheTime(Long CacheTime) {
         this.CacheTime = CacheTime;

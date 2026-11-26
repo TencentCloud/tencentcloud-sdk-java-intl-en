@@ -31,42 +31,42 @@ public class IPGroupReference extends AbstractModel {
     private String ZoneId;
 
     /**
-    * <p>Entity type.</p><p>Enumeration value:</p><ul><li>WebSec.ZonePolicy: Site-level protection strategy</li><li>WebSec.HostPolicy: Domain-level security policy</li><li>WebSec.Template: Policy template</li><li>DDoS.L4Proxy: Layer 4 proxy DDoS protection</li><li>DDoS.L3Transit: Layer-3 transit DDoS protection</li></ul>
+    * <p>Entity type.</p><p>Enumeration values:</p><ul><li>WebSec.ZonePolicy: site-level security policy</li><li>WebSec.HostPolicy: domain-level security policy</li><li>WebSec.Template: policy template</li><li>DDoS.L4Proxy: Layer 4 proxy DDoS protection</li><li>DDoS.L3Transit: layer-3 anycast DDoS protection</li></ul>
     */
     @SerializedName("EntityType")
     @Expose
     private String EntityType;
 
     /**
-    * <p>The physical identification represents different meanings based on EntityType:</p><ul><li>WebSec.ZonePolicy: site ID;</li><li>WebSec.HostPolicy: domain name;</li><li>WebSec.Template: template ID;</li><li>DDoS.L4Proxy: instance ID;</li><li>DDoS.L3Transit: instance ID.</li></ul>
+    * <p>Entity identification, representing different meanings based on EntityType:</p><ul><li>WebSec.ZonePolicy: site ID;</li><li>WebSec.HostPolicy: domain name;</li><li>WebSec.Template: template ID;</li><li>DDoS.L4Proxy: instance ID;</li><li>DDoS.L3Transit: instance ID.</li></ul>
     */
     @SerializedName("EntityId")
     @Expose
     private String EntityId;
 
     /**
-    * <p>Entity identification represents different meanings based on EntityType:</p><ul><li>WebSec.ZonePolicy: empty;</li><li>WebSec.HostPolicy: empty;</li><li>WebSec.Template: template name;</li><li>DDoS.L4Proxy: empty;</li><li>DDoS.L3Transit: empty.</li></ul>
+    * <p>Entity identifier. Its meaning varies based on EntityType:</p><ul><li>WebSec.ZonePolicy: empty;</li><li>WebSec.HostPolicy: empty;</li><li>WebSec.Template: Template name;</li><li>DDoS.L4Proxy: empty;</li><li>DDoS.L3Transit: empty.</li></ul>
     */
     @SerializedName("EntityName")
     @Expose
     private String EntityName;
 
     /**
-    * <p>Sub-entity type.</p><p>Enumeration value:</p><ul><li>WebSec.ExceptionRule: Protection exception rule</li><li>WebSec.BasicAccessRule: Basic access control</li><li>WebSec.PreciseMatchRule: Precise matching rule</li><li>WebSec.RateLimitRule: Precision rate limiting</li><li>WebSec.BotCustomRule: Advanced bot management - custom rule</li><li>DDoS.L4Proxy.IpAccessControl: Layer 4 proxy ddos protection - IP blocklist and allowlist</li><li>DDoS.L3Transit.IpAccessControl: Layer-3 transit ddos protection - IP blocklist and allowlist</li></ul>
+    * <p>Sub-entity type.</p><p>Enumeration values:</p><ul><li>WebSec.ExceptionRule: protection exception rule</li><li>WebSec.BasicAccessRule: basic access control</li><li>WebSec.PreciseMatchRule: exact match rule</li><li>WebSec.RateLimitRule: precision rate limiting</li><li>WebSec.BotCustomRule: advanced bot management - custom rule</li><li>DDoS.L4Proxy.IpAccessControl: Layer 4 proxy DDoS protection - IP blocklist/allowlist</li><li>DDoS.L3Transit.IpAccessControl: layer-3 transit DDoS protection - IP blocklist/allowlist</li></ul>
     */
     @SerializedName("SubEntityType")
     @Expose
     private String SubEntityType;
 
     /**
-    * <p>Sub-entity ID, which represents different meanings according to SubEntityType:</p><ul><li>WebSec.ExceptionRule: rule ID;</li><li>WebSec.BasicAccessRule: rule ID;</li><li>WebSec.PreciseMatchRule: rule ID;</li><li>WebSec.RateLimitRule: rule ID;</li><li>WebSec.BotCustomRule: rule ID;</li><li>DDoS.L4Proxy.IpAccessControl: null;</li><li>DDoS.L3Transit.IpAccessControl: null. </li></ul><p>EntityType and SubEntityType are correspondences, and different EntityTypes support different SubEntityTypes. <br>WebSec.ZonePolicy, WebSec.HostPolicy, and WebSec.Template support the following SubEntityTypes:</p><ul><li>WebSec.ExceptionRule;</li><li>WebSec.BasicAccessRule;</li><li>WebSec.PreciseMatchRule;</li><li>WebSec.RateLimitRule;</li><li>WebSec.BotCustomRule. </li></ul>DDoS.L4Proxy supports the following SubEntityTypes: <ul><li>DDoS.L4Proxy.IpAccessControl;</li></ul> DDoS.L3Transit supports the following SubEntityTypes: <ul><li>DDoS.L3Transit.IpAccessControl. </li></ul>
+    * <p>Sub-entity identifier. It represents different meanings based on SubEntityType:</p><ul><li>WebSec.ExceptionRule: rule ID;</li><li>WebSec.BasicAccessRule: rule ID;</li><li>WebSec.PreciseMatchRule: rule ID;</li><li>WebSec.RateLimitRule: rule ID;</li><li>WebSec.BotCustomRule: rule ID;</li><li>DDoS.L4Proxy.IpAccessControl: empty;</li><li>DDoS.L3Transit.IpAccessControl: empty.</li></ul><p>EntityType corresponds to SubEntityType. Different EntityType supports different SubEntityType.<br>WebSec.ZonePolicy, WebSec.HostPolicy, and WebSec.Template support the following SubEntityType:</p><ul><li>WebSec.ExceptionRule;</li><li>WebSec.BasicAccessRule;</li><li>WebSec.PreciseMatchRule;</li><li>WebSec.RateLimitRule;</li><li>WebSec.BotCustomRule.</li></ul>DDoS.L4Proxy supports the following SubEntityType:<ul><li>DDoS.L4Proxy.IpAccessControl;</li></ul>DDoS.L3Transit supports the following SubEntityType:<ul><li>DDoS.L3Transit.IpAccessControl.</li></ul>
     */
     @SerializedName("SubEntityId")
     @Expose
     private String SubEntityId;
 
     /**
-    * <p>Sub-entity name. It represents different meanings based on SubEntityType:</p><ul><li>WebSec.ExceptionRule: rule name;</li><li>WebSec.BasicAccessRule: rule name;</li><li>WebSec.PreciseMatchRule: rule name;</li><li>WebSec.RateLimitRule: rule name;</li><li>WebSec.BotCustomRule: rule name;</li><li>DDoS.L4Proxy.IpAccessControl: rule name, block indicates blocklist, allow indicates allowlist;</li><li>DDoS.L3Transit.IpAccessControl: rule name, block indicates blocklist, allow indicates allowlist.</li></ul>
+    * <p>Sub-entity name, which represents different meanings according to SubEntityType:</p><ul><li>WebSec.ExceptionRule: rule name;</li><li>WebSec.BasicAccessRule: rule name;</li><li>WebSec.PreciseMatchRule: rule name;</li><li>WebSec.RateLimitRule: rule name;</li><li>WebSec.BotCustomRule: rule name;</li><li>DDoS.L4Proxy.IpAccessControl: rule name, where block means blocklist and allow means allowlist;</li><li>DDoS.L3Transit.IpAccessControl: rule name, where block means blocklist and allow means allowlist.</li></ul>
     */
     @SerializedName("SubEntityName")
     @Expose
@@ -89,96 +89,96 @@ public class IPGroupReference extends AbstractModel {
     }
 
     /**
-     * Get <p>Entity type.</p><p>Enumeration value:</p><ul><li>WebSec.ZonePolicy: Site-level protection strategy</li><li>WebSec.HostPolicy: Domain-level security policy</li><li>WebSec.Template: Policy template</li><li>DDoS.L4Proxy: Layer 4 proxy DDoS protection</li><li>DDoS.L3Transit: Layer-3 transit DDoS protection</li></ul> 
-     * @return EntityType <p>Entity type.</p><p>Enumeration value:</p><ul><li>WebSec.ZonePolicy: Site-level protection strategy</li><li>WebSec.HostPolicy: Domain-level security policy</li><li>WebSec.Template: Policy template</li><li>DDoS.L4Proxy: Layer 4 proxy DDoS protection</li><li>DDoS.L3Transit: Layer-3 transit DDoS protection</li></ul>
+     * Get <p>Entity type.</p><p>Enumeration values:</p><ul><li>WebSec.ZonePolicy: site-level security policy</li><li>WebSec.HostPolicy: domain-level security policy</li><li>WebSec.Template: policy template</li><li>DDoS.L4Proxy: Layer 4 proxy DDoS protection</li><li>DDoS.L3Transit: layer-3 anycast DDoS protection</li></ul> 
+     * @return EntityType <p>Entity type.</p><p>Enumeration values:</p><ul><li>WebSec.ZonePolicy: site-level security policy</li><li>WebSec.HostPolicy: domain-level security policy</li><li>WebSec.Template: policy template</li><li>DDoS.L4Proxy: Layer 4 proxy DDoS protection</li><li>DDoS.L3Transit: layer-3 anycast DDoS protection</li></ul>
      */
     public String getEntityType() {
         return this.EntityType;
     }
 
     /**
-     * Set <p>Entity type.</p><p>Enumeration value:</p><ul><li>WebSec.ZonePolicy: Site-level protection strategy</li><li>WebSec.HostPolicy: Domain-level security policy</li><li>WebSec.Template: Policy template</li><li>DDoS.L4Proxy: Layer 4 proxy DDoS protection</li><li>DDoS.L3Transit: Layer-3 transit DDoS protection</li></ul>
-     * @param EntityType <p>Entity type.</p><p>Enumeration value:</p><ul><li>WebSec.ZonePolicy: Site-level protection strategy</li><li>WebSec.HostPolicy: Domain-level security policy</li><li>WebSec.Template: Policy template</li><li>DDoS.L4Proxy: Layer 4 proxy DDoS protection</li><li>DDoS.L3Transit: Layer-3 transit DDoS protection</li></ul>
+     * Set <p>Entity type.</p><p>Enumeration values:</p><ul><li>WebSec.ZonePolicy: site-level security policy</li><li>WebSec.HostPolicy: domain-level security policy</li><li>WebSec.Template: policy template</li><li>DDoS.L4Proxy: Layer 4 proxy DDoS protection</li><li>DDoS.L3Transit: layer-3 anycast DDoS protection</li></ul>
+     * @param EntityType <p>Entity type.</p><p>Enumeration values:</p><ul><li>WebSec.ZonePolicy: site-level security policy</li><li>WebSec.HostPolicy: domain-level security policy</li><li>WebSec.Template: policy template</li><li>DDoS.L4Proxy: Layer 4 proxy DDoS protection</li><li>DDoS.L3Transit: layer-3 anycast DDoS protection</li></ul>
      */
     public void setEntityType(String EntityType) {
         this.EntityType = EntityType;
     }
 
     /**
-     * Get <p>The physical identification represents different meanings based on EntityType:</p><ul><li>WebSec.ZonePolicy: site ID;</li><li>WebSec.HostPolicy: domain name;</li><li>WebSec.Template: template ID;</li><li>DDoS.L4Proxy: instance ID;</li><li>DDoS.L3Transit: instance ID.</li></ul> 
-     * @return EntityId <p>The physical identification represents different meanings based on EntityType:</p><ul><li>WebSec.ZonePolicy: site ID;</li><li>WebSec.HostPolicy: domain name;</li><li>WebSec.Template: template ID;</li><li>DDoS.L4Proxy: instance ID;</li><li>DDoS.L3Transit: instance ID.</li></ul>
+     * Get <p>Entity identification, representing different meanings based on EntityType:</p><ul><li>WebSec.ZonePolicy: site ID;</li><li>WebSec.HostPolicy: domain name;</li><li>WebSec.Template: template ID;</li><li>DDoS.L4Proxy: instance ID;</li><li>DDoS.L3Transit: instance ID.</li></ul> 
+     * @return EntityId <p>Entity identification, representing different meanings based on EntityType:</p><ul><li>WebSec.ZonePolicy: site ID;</li><li>WebSec.HostPolicy: domain name;</li><li>WebSec.Template: template ID;</li><li>DDoS.L4Proxy: instance ID;</li><li>DDoS.L3Transit: instance ID.</li></ul>
      */
     public String getEntityId() {
         return this.EntityId;
     }
 
     /**
-     * Set <p>The physical identification represents different meanings based on EntityType:</p><ul><li>WebSec.ZonePolicy: site ID;</li><li>WebSec.HostPolicy: domain name;</li><li>WebSec.Template: template ID;</li><li>DDoS.L4Proxy: instance ID;</li><li>DDoS.L3Transit: instance ID.</li></ul>
-     * @param EntityId <p>The physical identification represents different meanings based on EntityType:</p><ul><li>WebSec.ZonePolicy: site ID;</li><li>WebSec.HostPolicy: domain name;</li><li>WebSec.Template: template ID;</li><li>DDoS.L4Proxy: instance ID;</li><li>DDoS.L3Transit: instance ID.</li></ul>
+     * Set <p>Entity identification, representing different meanings based on EntityType:</p><ul><li>WebSec.ZonePolicy: site ID;</li><li>WebSec.HostPolicy: domain name;</li><li>WebSec.Template: template ID;</li><li>DDoS.L4Proxy: instance ID;</li><li>DDoS.L3Transit: instance ID.</li></ul>
+     * @param EntityId <p>Entity identification, representing different meanings based on EntityType:</p><ul><li>WebSec.ZonePolicy: site ID;</li><li>WebSec.HostPolicy: domain name;</li><li>WebSec.Template: template ID;</li><li>DDoS.L4Proxy: instance ID;</li><li>DDoS.L3Transit: instance ID.</li></ul>
      */
     public void setEntityId(String EntityId) {
         this.EntityId = EntityId;
     }
 
     /**
-     * Get <p>Entity identification represents different meanings based on EntityType:</p><ul><li>WebSec.ZonePolicy: empty;</li><li>WebSec.HostPolicy: empty;</li><li>WebSec.Template: template name;</li><li>DDoS.L4Proxy: empty;</li><li>DDoS.L3Transit: empty.</li></ul> 
-     * @return EntityName <p>Entity identification represents different meanings based on EntityType:</p><ul><li>WebSec.ZonePolicy: empty;</li><li>WebSec.HostPolicy: empty;</li><li>WebSec.Template: template name;</li><li>DDoS.L4Proxy: empty;</li><li>DDoS.L3Transit: empty.</li></ul>
+     * Get <p>Entity identifier. Its meaning varies based on EntityType:</p><ul><li>WebSec.ZonePolicy: empty;</li><li>WebSec.HostPolicy: empty;</li><li>WebSec.Template: Template name;</li><li>DDoS.L4Proxy: empty;</li><li>DDoS.L3Transit: empty.</li></ul> 
+     * @return EntityName <p>Entity identifier. Its meaning varies based on EntityType:</p><ul><li>WebSec.ZonePolicy: empty;</li><li>WebSec.HostPolicy: empty;</li><li>WebSec.Template: Template name;</li><li>DDoS.L4Proxy: empty;</li><li>DDoS.L3Transit: empty.</li></ul>
      */
     public String getEntityName() {
         return this.EntityName;
     }
 
     /**
-     * Set <p>Entity identification represents different meanings based on EntityType:</p><ul><li>WebSec.ZonePolicy: empty;</li><li>WebSec.HostPolicy: empty;</li><li>WebSec.Template: template name;</li><li>DDoS.L4Proxy: empty;</li><li>DDoS.L3Transit: empty.</li></ul>
-     * @param EntityName <p>Entity identification represents different meanings based on EntityType:</p><ul><li>WebSec.ZonePolicy: empty;</li><li>WebSec.HostPolicy: empty;</li><li>WebSec.Template: template name;</li><li>DDoS.L4Proxy: empty;</li><li>DDoS.L3Transit: empty.</li></ul>
+     * Set <p>Entity identifier. Its meaning varies based on EntityType:</p><ul><li>WebSec.ZonePolicy: empty;</li><li>WebSec.HostPolicy: empty;</li><li>WebSec.Template: Template name;</li><li>DDoS.L4Proxy: empty;</li><li>DDoS.L3Transit: empty.</li></ul>
+     * @param EntityName <p>Entity identifier. Its meaning varies based on EntityType:</p><ul><li>WebSec.ZonePolicy: empty;</li><li>WebSec.HostPolicy: empty;</li><li>WebSec.Template: Template name;</li><li>DDoS.L4Proxy: empty;</li><li>DDoS.L3Transit: empty.</li></ul>
      */
     public void setEntityName(String EntityName) {
         this.EntityName = EntityName;
     }
 
     /**
-     * Get <p>Sub-entity type.</p><p>Enumeration value:</p><ul><li>WebSec.ExceptionRule: Protection exception rule</li><li>WebSec.BasicAccessRule: Basic access control</li><li>WebSec.PreciseMatchRule: Precise matching rule</li><li>WebSec.RateLimitRule: Precision rate limiting</li><li>WebSec.BotCustomRule: Advanced bot management - custom rule</li><li>DDoS.L4Proxy.IpAccessControl: Layer 4 proxy ddos protection - IP blocklist and allowlist</li><li>DDoS.L3Transit.IpAccessControl: Layer-3 transit ddos protection - IP blocklist and allowlist</li></ul> 
-     * @return SubEntityType <p>Sub-entity type.</p><p>Enumeration value:</p><ul><li>WebSec.ExceptionRule: Protection exception rule</li><li>WebSec.BasicAccessRule: Basic access control</li><li>WebSec.PreciseMatchRule: Precise matching rule</li><li>WebSec.RateLimitRule: Precision rate limiting</li><li>WebSec.BotCustomRule: Advanced bot management - custom rule</li><li>DDoS.L4Proxy.IpAccessControl: Layer 4 proxy ddos protection - IP blocklist and allowlist</li><li>DDoS.L3Transit.IpAccessControl: Layer-3 transit ddos protection - IP blocklist and allowlist</li></ul>
+     * Get <p>Sub-entity type.</p><p>Enumeration values:</p><ul><li>WebSec.ExceptionRule: protection exception rule</li><li>WebSec.BasicAccessRule: basic access control</li><li>WebSec.PreciseMatchRule: exact match rule</li><li>WebSec.RateLimitRule: precision rate limiting</li><li>WebSec.BotCustomRule: advanced bot management - custom rule</li><li>DDoS.L4Proxy.IpAccessControl: Layer 4 proxy DDoS protection - IP blocklist/allowlist</li><li>DDoS.L3Transit.IpAccessControl: layer-3 transit DDoS protection - IP blocklist/allowlist</li></ul> 
+     * @return SubEntityType <p>Sub-entity type.</p><p>Enumeration values:</p><ul><li>WebSec.ExceptionRule: protection exception rule</li><li>WebSec.BasicAccessRule: basic access control</li><li>WebSec.PreciseMatchRule: exact match rule</li><li>WebSec.RateLimitRule: precision rate limiting</li><li>WebSec.BotCustomRule: advanced bot management - custom rule</li><li>DDoS.L4Proxy.IpAccessControl: Layer 4 proxy DDoS protection - IP blocklist/allowlist</li><li>DDoS.L3Transit.IpAccessControl: layer-3 transit DDoS protection - IP blocklist/allowlist</li></ul>
      */
     public String getSubEntityType() {
         return this.SubEntityType;
     }
 
     /**
-     * Set <p>Sub-entity type.</p><p>Enumeration value:</p><ul><li>WebSec.ExceptionRule: Protection exception rule</li><li>WebSec.BasicAccessRule: Basic access control</li><li>WebSec.PreciseMatchRule: Precise matching rule</li><li>WebSec.RateLimitRule: Precision rate limiting</li><li>WebSec.BotCustomRule: Advanced bot management - custom rule</li><li>DDoS.L4Proxy.IpAccessControl: Layer 4 proxy ddos protection - IP blocklist and allowlist</li><li>DDoS.L3Transit.IpAccessControl: Layer-3 transit ddos protection - IP blocklist and allowlist</li></ul>
-     * @param SubEntityType <p>Sub-entity type.</p><p>Enumeration value:</p><ul><li>WebSec.ExceptionRule: Protection exception rule</li><li>WebSec.BasicAccessRule: Basic access control</li><li>WebSec.PreciseMatchRule: Precise matching rule</li><li>WebSec.RateLimitRule: Precision rate limiting</li><li>WebSec.BotCustomRule: Advanced bot management - custom rule</li><li>DDoS.L4Proxy.IpAccessControl: Layer 4 proxy ddos protection - IP blocklist and allowlist</li><li>DDoS.L3Transit.IpAccessControl: Layer-3 transit ddos protection - IP blocklist and allowlist</li></ul>
+     * Set <p>Sub-entity type.</p><p>Enumeration values:</p><ul><li>WebSec.ExceptionRule: protection exception rule</li><li>WebSec.BasicAccessRule: basic access control</li><li>WebSec.PreciseMatchRule: exact match rule</li><li>WebSec.RateLimitRule: precision rate limiting</li><li>WebSec.BotCustomRule: advanced bot management - custom rule</li><li>DDoS.L4Proxy.IpAccessControl: Layer 4 proxy DDoS protection - IP blocklist/allowlist</li><li>DDoS.L3Transit.IpAccessControl: layer-3 transit DDoS protection - IP blocklist/allowlist</li></ul>
+     * @param SubEntityType <p>Sub-entity type.</p><p>Enumeration values:</p><ul><li>WebSec.ExceptionRule: protection exception rule</li><li>WebSec.BasicAccessRule: basic access control</li><li>WebSec.PreciseMatchRule: exact match rule</li><li>WebSec.RateLimitRule: precision rate limiting</li><li>WebSec.BotCustomRule: advanced bot management - custom rule</li><li>DDoS.L4Proxy.IpAccessControl: Layer 4 proxy DDoS protection - IP blocklist/allowlist</li><li>DDoS.L3Transit.IpAccessControl: layer-3 transit DDoS protection - IP blocklist/allowlist</li></ul>
      */
     public void setSubEntityType(String SubEntityType) {
         this.SubEntityType = SubEntityType;
     }
 
     /**
-     * Get <p>Sub-entity ID, which represents different meanings according to SubEntityType:</p><ul><li>WebSec.ExceptionRule: rule ID;</li><li>WebSec.BasicAccessRule: rule ID;</li><li>WebSec.PreciseMatchRule: rule ID;</li><li>WebSec.RateLimitRule: rule ID;</li><li>WebSec.BotCustomRule: rule ID;</li><li>DDoS.L4Proxy.IpAccessControl: null;</li><li>DDoS.L3Transit.IpAccessControl: null. </li></ul><p>EntityType and SubEntityType are correspondences, and different EntityTypes support different SubEntityTypes. <br>WebSec.ZonePolicy, WebSec.HostPolicy, and WebSec.Template support the following SubEntityTypes:</p><ul><li>WebSec.ExceptionRule;</li><li>WebSec.BasicAccessRule;</li><li>WebSec.PreciseMatchRule;</li><li>WebSec.RateLimitRule;</li><li>WebSec.BotCustomRule. </li></ul>DDoS.L4Proxy supports the following SubEntityTypes: <ul><li>DDoS.L4Proxy.IpAccessControl;</li></ul> DDoS.L3Transit supports the following SubEntityTypes: <ul><li>DDoS.L3Transit.IpAccessControl. </li></ul> 
-     * @return SubEntityId <p>Sub-entity ID, which represents different meanings according to SubEntityType:</p><ul><li>WebSec.ExceptionRule: rule ID;</li><li>WebSec.BasicAccessRule: rule ID;</li><li>WebSec.PreciseMatchRule: rule ID;</li><li>WebSec.RateLimitRule: rule ID;</li><li>WebSec.BotCustomRule: rule ID;</li><li>DDoS.L4Proxy.IpAccessControl: null;</li><li>DDoS.L3Transit.IpAccessControl: null. </li></ul><p>EntityType and SubEntityType are correspondences, and different EntityTypes support different SubEntityTypes. <br>WebSec.ZonePolicy, WebSec.HostPolicy, and WebSec.Template support the following SubEntityTypes:</p><ul><li>WebSec.ExceptionRule;</li><li>WebSec.BasicAccessRule;</li><li>WebSec.PreciseMatchRule;</li><li>WebSec.RateLimitRule;</li><li>WebSec.BotCustomRule. </li></ul>DDoS.L4Proxy supports the following SubEntityTypes: <ul><li>DDoS.L4Proxy.IpAccessControl;</li></ul> DDoS.L3Transit supports the following SubEntityTypes: <ul><li>DDoS.L3Transit.IpAccessControl. </li></ul>
+     * Get <p>Sub-entity identifier. It represents different meanings based on SubEntityType:</p><ul><li>WebSec.ExceptionRule: rule ID;</li><li>WebSec.BasicAccessRule: rule ID;</li><li>WebSec.PreciseMatchRule: rule ID;</li><li>WebSec.RateLimitRule: rule ID;</li><li>WebSec.BotCustomRule: rule ID;</li><li>DDoS.L4Proxy.IpAccessControl: empty;</li><li>DDoS.L3Transit.IpAccessControl: empty.</li></ul><p>EntityType corresponds to SubEntityType. Different EntityType supports different SubEntityType.<br>WebSec.ZonePolicy, WebSec.HostPolicy, and WebSec.Template support the following SubEntityType:</p><ul><li>WebSec.ExceptionRule;</li><li>WebSec.BasicAccessRule;</li><li>WebSec.PreciseMatchRule;</li><li>WebSec.RateLimitRule;</li><li>WebSec.BotCustomRule.</li></ul>DDoS.L4Proxy supports the following SubEntityType:<ul><li>DDoS.L4Proxy.IpAccessControl;</li></ul>DDoS.L3Transit supports the following SubEntityType:<ul><li>DDoS.L3Transit.IpAccessControl.</li></ul> 
+     * @return SubEntityId <p>Sub-entity identifier. It represents different meanings based on SubEntityType:</p><ul><li>WebSec.ExceptionRule: rule ID;</li><li>WebSec.BasicAccessRule: rule ID;</li><li>WebSec.PreciseMatchRule: rule ID;</li><li>WebSec.RateLimitRule: rule ID;</li><li>WebSec.BotCustomRule: rule ID;</li><li>DDoS.L4Proxy.IpAccessControl: empty;</li><li>DDoS.L3Transit.IpAccessControl: empty.</li></ul><p>EntityType corresponds to SubEntityType. Different EntityType supports different SubEntityType.<br>WebSec.ZonePolicy, WebSec.HostPolicy, and WebSec.Template support the following SubEntityType:</p><ul><li>WebSec.ExceptionRule;</li><li>WebSec.BasicAccessRule;</li><li>WebSec.PreciseMatchRule;</li><li>WebSec.RateLimitRule;</li><li>WebSec.BotCustomRule.</li></ul>DDoS.L4Proxy supports the following SubEntityType:<ul><li>DDoS.L4Proxy.IpAccessControl;</li></ul>DDoS.L3Transit supports the following SubEntityType:<ul><li>DDoS.L3Transit.IpAccessControl.</li></ul>
      */
     public String getSubEntityId() {
         return this.SubEntityId;
     }
 
     /**
-     * Set <p>Sub-entity ID, which represents different meanings according to SubEntityType:</p><ul><li>WebSec.ExceptionRule: rule ID;</li><li>WebSec.BasicAccessRule: rule ID;</li><li>WebSec.PreciseMatchRule: rule ID;</li><li>WebSec.RateLimitRule: rule ID;</li><li>WebSec.BotCustomRule: rule ID;</li><li>DDoS.L4Proxy.IpAccessControl: null;</li><li>DDoS.L3Transit.IpAccessControl: null. </li></ul><p>EntityType and SubEntityType are correspondences, and different EntityTypes support different SubEntityTypes. <br>WebSec.ZonePolicy, WebSec.HostPolicy, and WebSec.Template support the following SubEntityTypes:</p><ul><li>WebSec.ExceptionRule;</li><li>WebSec.BasicAccessRule;</li><li>WebSec.PreciseMatchRule;</li><li>WebSec.RateLimitRule;</li><li>WebSec.BotCustomRule. </li></ul>DDoS.L4Proxy supports the following SubEntityTypes: <ul><li>DDoS.L4Proxy.IpAccessControl;</li></ul> DDoS.L3Transit supports the following SubEntityTypes: <ul><li>DDoS.L3Transit.IpAccessControl. </li></ul>
-     * @param SubEntityId <p>Sub-entity ID, which represents different meanings according to SubEntityType:</p><ul><li>WebSec.ExceptionRule: rule ID;</li><li>WebSec.BasicAccessRule: rule ID;</li><li>WebSec.PreciseMatchRule: rule ID;</li><li>WebSec.RateLimitRule: rule ID;</li><li>WebSec.BotCustomRule: rule ID;</li><li>DDoS.L4Proxy.IpAccessControl: null;</li><li>DDoS.L3Transit.IpAccessControl: null. </li></ul><p>EntityType and SubEntityType are correspondences, and different EntityTypes support different SubEntityTypes. <br>WebSec.ZonePolicy, WebSec.HostPolicy, and WebSec.Template support the following SubEntityTypes:</p><ul><li>WebSec.ExceptionRule;</li><li>WebSec.BasicAccessRule;</li><li>WebSec.PreciseMatchRule;</li><li>WebSec.RateLimitRule;</li><li>WebSec.BotCustomRule. </li></ul>DDoS.L4Proxy supports the following SubEntityTypes: <ul><li>DDoS.L4Proxy.IpAccessControl;</li></ul> DDoS.L3Transit supports the following SubEntityTypes: <ul><li>DDoS.L3Transit.IpAccessControl. </li></ul>
+     * Set <p>Sub-entity identifier. It represents different meanings based on SubEntityType:</p><ul><li>WebSec.ExceptionRule: rule ID;</li><li>WebSec.BasicAccessRule: rule ID;</li><li>WebSec.PreciseMatchRule: rule ID;</li><li>WebSec.RateLimitRule: rule ID;</li><li>WebSec.BotCustomRule: rule ID;</li><li>DDoS.L4Proxy.IpAccessControl: empty;</li><li>DDoS.L3Transit.IpAccessControl: empty.</li></ul><p>EntityType corresponds to SubEntityType. Different EntityType supports different SubEntityType.<br>WebSec.ZonePolicy, WebSec.HostPolicy, and WebSec.Template support the following SubEntityType:</p><ul><li>WebSec.ExceptionRule;</li><li>WebSec.BasicAccessRule;</li><li>WebSec.PreciseMatchRule;</li><li>WebSec.RateLimitRule;</li><li>WebSec.BotCustomRule.</li></ul>DDoS.L4Proxy supports the following SubEntityType:<ul><li>DDoS.L4Proxy.IpAccessControl;</li></ul>DDoS.L3Transit supports the following SubEntityType:<ul><li>DDoS.L3Transit.IpAccessControl.</li></ul>
+     * @param SubEntityId <p>Sub-entity identifier. It represents different meanings based on SubEntityType:</p><ul><li>WebSec.ExceptionRule: rule ID;</li><li>WebSec.BasicAccessRule: rule ID;</li><li>WebSec.PreciseMatchRule: rule ID;</li><li>WebSec.RateLimitRule: rule ID;</li><li>WebSec.BotCustomRule: rule ID;</li><li>DDoS.L4Proxy.IpAccessControl: empty;</li><li>DDoS.L3Transit.IpAccessControl: empty.</li></ul><p>EntityType corresponds to SubEntityType. Different EntityType supports different SubEntityType.<br>WebSec.ZonePolicy, WebSec.HostPolicy, and WebSec.Template support the following SubEntityType:</p><ul><li>WebSec.ExceptionRule;</li><li>WebSec.BasicAccessRule;</li><li>WebSec.PreciseMatchRule;</li><li>WebSec.RateLimitRule;</li><li>WebSec.BotCustomRule.</li></ul>DDoS.L4Proxy supports the following SubEntityType:<ul><li>DDoS.L4Proxy.IpAccessControl;</li></ul>DDoS.L3Transit supports the following SubEntityType:<ul><li>DDoS.L3Transit.IpAccessControl.</li></ul>
      */
     public void setSubEntityId(String SubEntityId) {
         this.SubEntityId = SubEntityId;
     }
 
     /**
-     * Get <p>Sub-entity name. It represents different meanings based on SubEntityType:</p><ul><li>WebSec.ExceptionRule: rule name;</li><li>WebSec.BasicAccessRule: rule name;</li><li>WebSec.PreciseMatchRule: rule name;</li><li>WebSec.RateLimitRule: rule name;</li><li>WebSec.BotCustomRule: rule name;</li><li>DDoS.L4Proxy.IpAccessControl: rule name, block indicates blocklist, allow indicates allowlist;</li><li>DDoS.L3Transit.IpAccessControl: rule name, block indicates blocklist, allow indicates allowlist.</li></ul> 
-     * @return SubEntityName <p>Sub-entity name. It represents different meanings based on SubEntityType:</p><ul><li>WebSec.ExceptionRule: rule name;</li><li>WebSec.BasicAccessRule: rule name;</li><li>WebSec.PreciseMatchRule: rule name;</li><li>WebSec.RateLimitRule: rule name;</li><li>WebSec.BotCustomRule: rule name;</li><li>DDoS.L4Proxy.IpAccessControl: rule name, block indicates blocklist, allow indicates allowlist;</li><li>DDoS.L3Transit.IpAccessControl: rule name, block indicates blocklist, allow indicates allowlist.</li></ul>
+     * Get <p>Sub-entity name, which represents different meanings according to SubEntityType:</p><ul><li>WebSec.ExceptionRule: rule name;</li><li>WebSec.BasicAccessRule: rule name;</li><li>WebSec.PreciseMatchRule: rule name;</li><li>WebSec.RateLimitRule: rule name;</li><li>WebSec.BotCustomRule: rule name;</li><li>DDoS.L4Proxy.IpAccessControl: rule name, where block means blocklist and allow means allowlist;</li><li>DDoS.L3Transit.IpAccessControl: rule name, where block means blocklist and allow means allowlist.</li></ul> 
+     * @return SubEntityName <p>Sub-entity name, which represents different meanings according to SubEntityType:</p><ul><li>WebSec.ExceptionRule: rule name;</li><li>WebSec.BasicAccessRule: rule name;</li><li>WebSec.PreciseMatchRule: rule name;</li><li>WebSec.RateLimitRule: rule name;</li><li>WebSec.BotCustomRule: rule name;</li><li>DDoS.L4Proxy.IpAccessControl: rule name, where block means blocklist and allow means allowlist;</li><li>DDoS.L3Transit.IpAccessControl: rule name, where block means blocklist and allow means allowlist.</li></ul>
      */
     public String getSubEntityName() {
         return this.SubEntityName;
     }
 
     /**
-     * Set <p>Sub-entity name. It represents different meanings based on SubEntityType:</p><ul><li>WebSec.ExceptionRule: rule name;</li><li>WebSec.BasicAccessRule: rule name;</li><li>WebSec.PreciseMatchRule: rule name;</li><li>WebSec.RateLimitRule: rule name;</li><li>WebSec.BotCustomRule: rule name;</li><li>DDoS.L4Proxy.IpAccessControl: rule name, block indicates blocklist, allow indicates allowlist;</li><li>DDoS.L3Transit.IpAccessControl: rule name, block indicates blocklist, allow indicates allowlist.</li></ul>
-     * @param SubEntityName <p>Sub-entity name. It represents different meanings based on SubEntityType:</p><ul><li>WebSec.ExceptionRule: rule name;</li><li>WebSec.BasicAccessRule: rule name;</li><li>WebSec.PreciseMatchRule: rule name;</li><li>WebSec.RateLimitRule: rule name;</li><li>WebSec.BotCustomRule: rule name;</li><li>DDoS.L4Proxy.IpAccessControl: rule name, block indicates blocklist, allow indicates allowlist;</li><li>DDoS.L3Transit.IpAccessControl: rule name, block indicates blocklist, allow indicates allowlist.</li></ul>
+     * Set <p>Sub-entity name, which represents different meanings according to SubEntityType:</p><ul><li>WebSec.ExceptionRule: rule name;</li><li>WebSec.BasicAccessRule: rule name;</li><li>WebSec.PreciseMatchRule: rule name;</li><li>WebSec.RateLimitRule: rule name;</li><li>WebSec.BotCustomRule: rule name;</li><li>DDoS.L4Proxy.IpAccessControl: rule name, where block means blocklist and allow means allowlist;</li><li>DDoS.L3Transit.IpAccessControl: rule name, where block means blocklist and allow means allowlist.</li></ul>
+     * @param SubEntityName <p>Sub-entity name, which represents different meanings according to SubEntityType:</p><ul><li>WebSec.ExceptionRule: rule name;</li><li>WebSec.BasicAccessRule: rule name;</li><li>WebSec.PreciseMatchRule: rule name;</li><li>WebSec.RateLimitRule: rule name;</li><li>WebSec.BotCustomRule: rule name;</li><li>DDoS.L4Proxy.IpAccessControl: rule name, where block means blocklist and allow means allowlist;</li><li>DDoS.L3Transit.IpAccessControl: rule name, where block means blocklist and allow means allowlist.</li></ul>
      */
     public void setSubEntityName(String SubEntityName) {
         this.SubEntityName = SubEntityName;

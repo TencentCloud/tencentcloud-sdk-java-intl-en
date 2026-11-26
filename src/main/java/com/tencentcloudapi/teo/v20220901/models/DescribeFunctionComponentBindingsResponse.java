@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeFunctionComponentBindingsResponse extends AbstractModel {
 
     /**
-    * Total number of eligible functions bound.
+    * Total number of bound functions that meet the condition.
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * Function component bound list.
+    * List of function component bindings.
     */
     @SerializedName("FunctionComponentBindings")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeFunctionComponentBindingsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Total number of eligible functions bound. 
-     * @return TotalCount Total number of eligible functions bound.
+     * Get Total number of bound functions that meet the condition. 
+     * @return TotalCount Total number of bound functions that meet the condition.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Total number of eligible functions bound.
-     * @param TotalCount Total number of eligible functions bound.
+     * Set Total number of bound functions that meet the condition.
+     * @param TotalCount Total number of bound functions that meet the condition.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get Function component bound list. 
-     * @return FunctionComponentBindings Function component bound list.
+     * Get List of function component bindings. 
+     * @return FunctionComponentBindings List of function component bindings.
      */
     public FunctionComponentBinding [] getFunctionComponentBindings() {
         return this.FunctionComponentBindings;
     }
 
     /**
-     * Set Function component bound list.
-     * @param FunctionComponentBindings Function component bound list.
+     * Set List of function component bindings.
+     * @param FunctionComponentBindings List of function component bindings.
      */
     public void setFunctionComponentBindings(FunctionComponentBinding [] FunctionComponentBindings) {
         this.FunctionComponentBindings = FunctionComponentBindings;

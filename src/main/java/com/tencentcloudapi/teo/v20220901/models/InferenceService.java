@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class InferenceService extends AbstractModel {
 
     /**
-    * ID of the inference service.
+    * Inference service ID.
     */
     @SerializedName("ServiceId")
     @Expose
     private String ServiceId;
 
     /**
-    * Reasoning service name.
+    * Name of the inference service.
     */
     @SerializedName("Name")
     @Expose
@@ -45,14 +45,14 @@ public class InferenceService extends AbstractModel {
     private String Description;
 
     /**
-    * Ports monitored by the model service. Only integers between 1 and 65535 are supported.
+    * Ports that the model service needs to monitor. Only integers between 1 and 65535 are supported.
     */
     @SerializedName("ListenPort")
     @Expose
     private Long ListenPort;
 
     /**
-    * Request path list for inference service. Supports up to 20 paths.
+    * Request path list for the inference service. Supports up to 20 paths.
     */
     @SerializedName("RequestPaths")
     @Expose
@@ -73,28 +73,28 @@ public class InferenceService extends AbstractModel {
     private InferenceResourceConfig ResourceConfig;
 
     /**
-    * Reasoning service status, which includes the following status: <li>Deploying: deployment in progress;</li><li>Running: running;</li><li>Stopping: stopping;</li><li>Stopped: stopped;</li><li>Exception: exception;</li><li>Banned: banned.</li>
+    * Status of the inference service, including the following: <li>Deploying: deployment in progress;</li><li>Running: running;</li><li>Stopping: stopping;</li><li>Stopped: stopped;</li><li>Exception: exception;</li><li>Banned: banned.</li>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * Scaling status. Valid values: <li>Normal: Stable operation, no scaling operation in progress;</li><li>ScalingOut: Scaling out;</li><li>ScalingIn: Scaling in.</li>
+    * Scaling status. Valid values: <li>Normal: running steadily with no scaling operation in progress;</li><li>ScalingOut: scaling out;</li><li>ScalingIn: scaling in.</li>
     */
     @SerializedName("ScalingStatus")
     @Expose
     private String ScalingStatus;
 
     /**
-    * Number of running instances.
+    * Number of currently running instances.
     */
     @SerializedName("CurrentInstanceCount")
     @Expose
     private Long CurrentInstanceCount;
 
     /**
-    * Reasoning access address, perform reasoning via links to access the underlying model.
+    * Inference access address. You can access the underlying model for reasoning via links.
     */
     @SerializedName("InferenceURL")
     @Expose
@@ -115,32 +115,32 @@ public class InferenceService extends AbstractModel {
     private String UpdateTime;
 
     /**
-     * Get ID of the inference service. 
-     * @return ServiceId ID of the inference service.
+     * Get Inference service ID. 
+     * @return ServiceId Inference service ID.
      */
     public String getServiceId() {
         return this.ServiceId;
     }
 
     /**
-     * Set ID of the inference service.
-     * @param ServiceId ID of the inference service.
+     * Set Inference service ID.
+     * @param ServiceId Inference service ID.
      */
     public void setServiceId(String ServiceId) {
         this.ServiceId = ServiceId;
     }
 
     /**
-     * Get Reasoning service name. 
-     * @return Name Reasoning service name.
+     * Get Name of the inference service. 
+     * @return Name Name of the inference service.
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Reasoning service name.
-     * @param Name Reasoning service name.
+     * Set Name of the inference service.
+     * @param Name Name of the inference service.
      */
     public void setName(String Name) {
         this.Name = Name;
@@ -163,32 +163,32 @@ public class InferenceService extends AbstractModel {
     }
 
     /**
-     * Get Ports monitored by the model service. Only integers between 1 and 65535 are supported. 
-     * @return ListenPort Ports monitored by the model service. Only integers between 1 and 65535 are supported.
+     * Get Ports that the model service needs to monitor. Only integers between 1 and 65535 are supported. 
+     * @return ListenPort Ports that the model service needs to monitor. Only integers between 1 and 65535 are supported.
      */
     public Long getListenPort() {
         return this.ListenPort;
     }
 
     /**
-     * Set Ports monitored by the model service. Only integers between 1 and 65535 are supported.
-     * @param ListenPort Ports monitored by the model service. Only integers between 1 and 65535 are supported.
+     * Set Ports that the model service needs to monitor. Only integers between 1 and 65535 are supported.
+     * @param ListenPort Ports that the model service needs to monitor. Only integers between 1 and 65535 are supported.
      */
     public void setListenPort(Long ListenPort) {
         this.ListenPort = ListenPort;
     }
 
     /**
-     * Get Request path list for inference service. Supports up to 20 paths. 
-     * @return RequestPaths Request path list for inference service. Supports up to 20 paths.
+     * Get Request path list for the inference service. Supports up to 20 paths. 
+     * @return RequestPaths Request path list for the inference service. Supports up to 20 paths.
      */
     public String [] getRequestPaths() {
         return this.RequestPaths;
     }
 
     /**
-     * Set Request path list for inference service. Supports up to 20 paths.
-     * @param RequestPaths Request path list for inference service. Supports up to 20 paths.
+     * Set Request path list for the inference service. Supports up to 20 paths.
+     * @param RequestPaths Request path list for the inference service. Supports up to 20 paths.
      */
     public void setRequestPaths(String [] RequestPaths) {
         this.RequestPaths = RequestPaths;
@@ -227,64 +227,64 @@ public class InferenceService extends AbstractModel {
     }
 
     /**
-     * Get Reasoning service status, which includes the following status: <li>Deploying: deployment in progress;</li><li>Running: running;</li><li>Stopping: stopping;</li><li>Stopped: stopped;</li><li>Exception: exception;</li><li>Banned: banned.</li> 
-     * @return Status Reasoning service status, which includes the following status: <li>Deploying: deployment in progress;</li><li>Running: running;</li><li>Stopping: stopping;</li><li>Stopped: stopped;</li><li>Exception: exception;</li><li>Banned: banned.</li>
+     * Get Status of the inference service, including the following: <li>Deploying: deployment in progress;</li><li>Running: running;</li><li>Stopping: stopping;</li><li>Stopped: stopped;</li><li>Exception: exception;</li><li>Banned: banned.</li> 
+     * @return Status Status of the inference service, including the following: <li>Deploying: deployment in progress;</li><li>Running: running;</li><li>Stopping: stopping;</li><li>Stopped: stopped;</li><li>Exception: exception;</li><li>Banned: banned.</li>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Reasoning service status, which includes the following status: <li>Deploying: deployment in progress;</li><li>Running: running;</li><li>Stopping: stopping;</li><li>Stopped: stopped;</li><li>Exception: exception;</li><li>Banned: banned.</li>
-     * @param Status Reasoning service status, which includes the following status: <li>Deploying: deployment in progress;</li><li>Running: running;</li><li>Stopping: stopping;</li><li>Stopped: stopped;</li><li>Exception: exception;</li><li>Banned: banned.</li>
+     * Set Status of the inference service, including the following: <li>Deploying: deployment in progress;</li><li>Running: running;</li><li>Stopping: stopping;</li><li>Stopped: stopped;</li><li>Exception: exception;</li><li>Banned: banned.</li>
+     * @param Status Status of the inference service, including the following: <li>Deploying: deployment in progress;</li><li>Running: running;</li><li>Stopping: stopping;</li><li>Stopped: stopped;</li><li>Exception: exception;</li><li>Banned: banned.</li>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Scaling status. Valid values: <li>Normal: Stable operation, no scaling operation in progress;</li><li>ScalingOut: Scaling out;</li><li>ScalingIn: Scaling in.</li> 
-     * @return ScalingStatus Scaling status. Valid values: <li>Normal: Stable operation, no scaling operation in progress;</li><li>ScalingOut: Scaling out;</li><li>ScalingIn: Scaling in.</li>
+     * Get Scaling status. Valid values: <li>Normal: running steadily with no scaling operation in progress;</li><li>ScalingOut: scaling out;</li><li>ScalingIn: scaling in.</li> 
+     * @return ScalingStatus Scaling status. Valid values: <li>Normal: running steadily with no scaling operation in progress;</li><li>ScalingOut: scaling out;</li><li>ScalingIn: scaling in.</li>
      */
     public String getScalingStatus() {
         return this.ScalingStatus;
     }
 
     /**
-     * Set Scaling status. Valid values: <li>Normal: Stable operation, no scaling operation in progress;</li><li>ScalingOut: Scaling out;</li><li>ScalingIn: Scaling in.</li>
-     * @param ScalingStatus Scaling status. Valid values: <li>Normal: Stable operation, no scaling operation in progress;</li><li>ScalingOut: Scaling out;</li><li>ScalingIn: Scaling in.</li>
+     * Set Scaling status. Valid values: <li>Normal: running steadily with no scaling operation in progress;</li><li>ScalingOut: scaling out;</li><li>ScalingIn: scaling in.</li>
+     * @param ScalingStatus Scaling status. Valid values: <li>Normal: running steadily with no scaling operation in progress;</li><li>ScalingOut: scaling out;</li><li>ScalingIn: scaling in.</li>
      */
     public void setScalingStatus(String ScalingStatus) {
         this.ScalingStatus = ScalingStatus;
     }
 
     /**
-     * Get Number of running instances. 
-     * @return CurrentInstanceCount Number of running instances.
+     * Get Number of currently running instances. 
+     * @return CurrentInstanceCount Number of currently running instances.
      */
     public Long getCurrentInstanceCount() {
         return this.CurrentInstanceCount;
     }
 
     /**
-     * Set Number of running instances.
-     * @param CurrentInstanceCount Number of running instances.
+     * Set Number of currently running instances.
+     * @param CurrentInstanceCount Number of currently running instances.
      */
     public void setCurrentInstanceCount(Long CurrentInstanceCount) {
         this.CurrentInstanceCount = CurrentInstanceCount;
     }
 
     /**
-     * Get Reasoning access address, perform reasoning via links to access the underlying model. 
-     * @return InferenceURL Reasoning access address, perform reasoning via links to access the underlying model.
+     * Get Inference access address. You can access the underlying model for reasoning via links. 
+     * @return InferenceURL Inference access address. You can access the underlying model for reasoning via links.
      */
     public String getInferenceURL() {
         return this.InferenceURL;
     }
 
     /**
-     * Set Reasoning access address, perform reasoning via links to access the underlying model.
-     * @param InferenceURL Reasoning access address, perform reasoning via links to access the underlying model.
+     * Set Inference access address. You can access the underlying model for reasoning via links.
+     * @param InferenceURL Inference access address. You can access the underlying model for reasoning via links.
      */
     public void setInferenceURL(String InferenceURL) {
         this.InferenceURL = InferenceURL;

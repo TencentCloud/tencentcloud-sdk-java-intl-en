@@ -31,21 +31,21 @@ public class DeployConfigGroupVersionRequest extends AbstractModel {
     private String ZoneId;
 
     /**
-    * Environment ID. Please specify the environment ID to which the version should be released.
+    * Environment ID. Please enter the environment ID to which the version needs to be released.
     */
     @SerializedName("EnvId")
     @Expose
     private String EnvId;
 
     /**
-    * Version information required for release. Multiple versions of different configuration groups can be modified simultaneously, while each group allows modifying only one version at a time.
+    * Version information to release. You can update versions of multiple different configuration groups at the same time. Each configuration group supports updating only one version at a time.
     */
     @SerializedName("ConfigGroupVersionInfos")
     @Expose
     private ConfigGroupVersionInfo [] ConfigGroupVersionInfos;
 
     /**
-    * Change description. It is used to describe the content and reasons for this change. A maximum of 100 characters are supported.
+    * Change description. Used to describe the content and reason for this change. Supports up to 100 characters.
     */
     @SerializedName("Description")
     @Expose
@@ -68,48 +68,48 @@ public class DeployConfigGroupVersionRequest extends AbstractModel {
     }
 
     /**
-     * Get Environment ID. Please specify the environment ID to which the version should be released. 
-     * @return EnvId Environment ID. Please specify the environment ID to which the version should be released.
+     * Get Environment ID. Please enter the environment ID to which the version needs to be released. 
+     * @return EnvId Environment ID. Please enter the environment ID to which the version needs to be released.
      */
     public String getEnvId() {
         return this.EnvId;
     }
 
     /**
-     * Set Environment ID. Please specify the environment ID to which the version should be released.
-     * @param EnvId Environment ID. Please specify the environment ID to which the version should be released.
+     * Set Environment ID. Please enter the environment ID to which the version needs to be released.
+     * @param EnvId Environment ID. Please enter the environment ID to which the version needs to be released.
      */
     public void setEnvId(String EnvId) {
         this.EnvId = EnvId;
     }
 
     /**
-     * Get Version information required for release. Multiple versions of different configuration groups can be modified simultaneously, while each group allows modifying only one version at a time. 
-     * @return ConfigGroupVersionInfos Version information required for release. Multiple versions of different configuration groups can be modified simultaneously, while each group allows modifying only one version at a time.
+     * Get Version information to release. You can update versions of multiple different configuration groups at the same time. Each configuration group supports updating only one version at a time. 
+     * @return ConfigGroupVersionInfos Version information to release. You can update versions of multiple different configuration groups at the same time. Each configuration group supports updating only one version at a time.
      */
     public ConfigGroupVersionInfo [] getConfigGroupVersionInfos() {
         return this.ConfigGroupVersionInfos;
     }
 
     /**
-     * Set Version information required for release. Multiple versions of different configuration groups can be modified simultaneously, while each group allows modifying only one version at a time.
-     * @param ConfigGroupVersionInfos Version information required for release. Multiple versions of different configuration groups can be modified simultaneously, while each group allows modifying only one version at a time.
+     * Set Version information to release. You can update versions of multiple different configuration groups at the same time. Each configuration group supports updating only one version at a time.
+     * @param ConfigGroupVersionInfos Version information to release. You can update versions of multiple different configuration groups at the same time. Each configuration group supports updating only one version at a time.
      */
     public void setConfigGroupVersionInfos(ConfigGroupVersionInfo [] ConfigGroupVersionInfos) {
         this.ConfigGroupVersionInfos = ConfigGroupVersionInfos;
     }
 
     /**
-     * Get Change description. It is used to describe the content and reasons for this change. A maximum of 100 characters are supported. 
-     * @return Description Change description. It is used to describe the content and reasons for this change. A maximum of 100 characters are supported.
+     * Get Change description. Used to describe the content and reason for this change. Supports up to 100 characters. 
+     * @return Description Change description. Used to describe the content and reason for this change. Supports up to 100 characters.
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set Change description. It is used to describe the content and reasons for this change. A maximum of 100 characters are supported.
-     * @param Description Change description. It is used to describe the content and reasons for this change. A maximum of 100 characters are supported.
+     * Set Change description. Used to describe the content and reason for this change. Supports up to 100 characters.
+     * @param Description Change description. Used to describe the content and reason for this change. Supports up to 100 characters.
      */
     public void setDescription(String Description) {
         this.Description = Description;

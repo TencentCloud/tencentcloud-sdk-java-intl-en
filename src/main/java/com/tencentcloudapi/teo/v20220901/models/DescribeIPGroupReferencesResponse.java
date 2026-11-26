@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeIPGroupReferencesResponse extends AbstractModel {
 
     /**
-    * <p>Details of policy configurations that reference the specified IP group.</p>
+    * <p>Refer to the configuration message of the corresponding IP group.</p>
     */
     @SerializedName("References")
     @Expose
@@ -45,16 +45,16 @@ public class DescribeIPGroupReferencesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get <p>Details of policy configurations that reference the specified IP group.</p> 
-     * @return References <p>Details of policy configurations that reference the specified IP group.</p>
+     * Get <p>Refer to the configuration message of the corresponding IP group.</p> 
+     * @return References <p>Refer to the configuration message of the corresponding IP group.</p>
      */
     public IPGroupReference [] getReferences() {
         return this.References;
     }
 
     /**
-     * Set <p>Details of policy configurations that reference the specified IP group.</p>
-     * @param References <p>Details of policy configurations that reference the specified IP group.</p>
+     * Set <p>Refer to the configuration message of the corresponding IP group.</p>
+     * @param References <p>Refer to the configuration message of the corresponding IP group.</p>
      */
     public void setReferences(IPGroupReference [] References) {
         this.References = References;

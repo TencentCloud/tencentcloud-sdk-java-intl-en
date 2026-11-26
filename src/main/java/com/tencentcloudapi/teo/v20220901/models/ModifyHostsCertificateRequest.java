@@ -24,29 +24,29 @@ import java.util.HashMap;
 public class ModifyHostsCertificateRequest extends AbstractModel {
 
     /**
-    * ID of the site.
+    * Zone ID.
     */
     @SerializedName("ZoneId")
     @Expose
     private String ZoneId;
 
     /**
-    * Domain names that you need to modify the certificate configuration
+    * Acceleration domain name whose certificate configuration needs to be modified.
     */
     @SerializedName("Hosts")
     @Expose
     private String [] Hosts;
 
     /**
-    * Configures the mode of the server certificate. valid values:.
-Disables server-side certificate configuration.
-<li>eofreecert: specifies to apply for a free certificate through automatic validation and deploy. for verification methods, see: [verification methods supported for free certificate application](https://www.tencentcloud.com/document/product/1552/90437?from_cn_redirect=1).</li>.
+    * Mode for configuring the server certificate. Valid values:
+<ul><li>disable: without configuring server certificate;</li>
+<li>eofreecert: apply for a free certificate through automatic validation and deploy it. For verification methods, see [verification methods supported for free certificate application](https://www.tencentcloud.com/document/product/1552/90437?from_cn_redirect=1)</li>
 
--In ns or DNSPod hosting access mode, free certificates can only be applied for via automatic validation.
--When the free certificate application fails, it can cause certificate deployment failure. you can obtain the reason for the application failure through the <a href = 'https://www.tencentcloud.com/document/product/1552/124806?from_cn_redirect=1'>check free certificate application result</a> api.
-eofreecert_manual: specifies the deployment of a free certificate applied through DNS delegation verification or file verification. before deploying the free certificate, you need to trigger the apply for free certificate API to apply for a free certificate. once the application is successful, you can use this enumeration value to deploy the free certificate.
-Note: during deployment of a free certificate, ensure a successful application for a free certificate already exists. you can check whether a successful application for a free certificate already exists through the <a href = 'https://www.tencentcloud.com/document/product/1552/124806?from_cn_redirect=1'>check free certificate application result</a> api.
-sslcert: specifies the managed service side certificate configuration.
+-In NS or DNSPod hosting access mode, free certificate application is only supported via automatic validation.
+- If a free certificate application fails, it will cause certificate deployment failure. You can obtain the failure reason through the <a href = 'https://www.tencentcloud.com/document/product/1552/124806?from_cn_redirect=1'>Check Free Certificate Application Result</a> API.</li>
+</ul><li>eofreecert_manual: deploy a free certificate applied through DNS delegated verification or file validation. Before deploying the free certificate, you need to trigger the <a href = 'https://www.tencentcloud.com/document/product/1552/124807?from_cn_redirect=1'>Apply for Free Certificate</a> API to apply for a free certificate. After a successful application, you can use this enumeration value to deploy the free certificate;</li>
+<ul><li>Note: When deploying a free certificate, ensure that a successfully applied free certificate already exists. You can check whether a successfully applied free certificate already exists through the <a href = 'https://www.tencentcloud.com/document/product/1552/124806?from_cn_redirect=1'>Check Free Certificate Application Result</a> API.</li>
+</ul><li>sslcert: Configure an SSL managed service side certificate.</li>
     */
     @SerializedName("Mode")
     @Expose
@@ -60,10 +60,10 @@ sslcert: specifies the managed service side certificate configuration.
     private ServerCertInfo [] ServerCertInfo;
 
     /**
-    * Whether the certificate is managed by EdgeOne. Values:
-<li>`none`: Not managed by EdgeOne</li>
-<li>`apply`: Managed by EdgeOne</li>
-Default value: `none`.
+    * Managed type. Valid values:
+<li>none: Do not manage EO;</li>
+<li>apply: manage EO</li>
+If this field is not specified, the default value 'none' will be used.
     */
     @SerializedName("ApplyType")
     @Expose
@@ -77,87 +77,87 @@ Default value: `none`.
     private MutualTLS ClientCertInfo;
 
     /**
-    * Specifies whether to enable/disable origin-pull mutual authentication and origin certificate verification. off by default. leave blank to indicate retaining the original configuration. the origin-pull mutual authentication configuration is currently in internal allowlist testing. if needed, please contact us (https://www.tencentcloud.com/online?from_cn_redirect=1-service).
+    * Used to enable or disable origin-pull mutual authentication and origin certificate verification respectively. Off by default. Leave blank to indicate retaining the original configuration. The origin-pull mutual authentication configuration is currently in internal allowlist testing. If needed, contact us (https://www.tencentcloud.com/online?from_cn_redirect=1-service).
     */
     @SerializedName("UpstreamCertInfo")
     @Expose
     private UpstreamCertInfo UpstreamCertInfo;
 
     /**
-     * Get ID of the site. 
-     * @return ZoneId ID of the site.
+     * Get Zone ID. 
+     * @return ZoneId Zone ID.
      */
     public String getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set ID of the site.
-     * @param ZoneId ID of the site.
+     * Set Zone ID.
+     * @param ZoneId Zone ID.
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get Domain names that you need to modify the certificate configuration 
-     * @return Hosts Domain names that you need to modify the certificate configuration
+     * Get Acceleration domain name whose certificate configuration needs to be modified. 
+     * @return Hosts Acceleration domain name whose certificate configuration needs to be modified.
      */
     public String [] getHosts() {
         return this.Hosts;
     }
 
     /**
-     * Set Domain names that you need to modify the certificate configuration
-     * @param Hosts Domain names that you need to modify the certificate configuration
+     * Set Acceleration domain name whose certificate configuration needs to be modified.
+     * @param Hosts Acceleration domain name whose certificate configuration needs to be modified.
      */
     public void setHosts(String [] Hosts) {
         this.Hosts = Hosts;
     }
 
     /**
-     * Get Configures the mode of the server certificate. valid values:.
-Disables server-side certificate configuration.
-<li>eofreecert: specifies to apply for a free certificate through automatic validation and deploy. for verification methods, see: [verification methods supported for free certificate application](https://www.tencentcloud.com/document/product/1552/90437?from_cn_redirect=1).</li>.
+     * Get Mode for configuring the server certificate. Valid values:
+<ul><li>disable: without configuring server certificate;</li>
+<li>eofreecert: apply for a free certificate through automatic validation and deploy it. For verification methods, see [verification methods supported for free certificate application](https://www.tencentcloud.com/document/product/1552/90437?from_cn_redirect=1)</li>
 
--In ns or DNSPod hosting access mode, free certificates can only be applied for via automatic validation.
--When the free certificate application fails, it can cause certificate deployment failure. you can obtain the reason for the application failure through the <a href = 'https://www.tencentcloud.com/document/product/1552/124806?from_cn_redirect=1'>check free certificate application result</a> api.
-eofreecert_manual: specifies the deployment of a free certificate applied through DNS delegation verification or file verification. before deploying the free certificate, you need to trigger the apply for free certificate API to apply for a free certificate. once the application is successful, you can use this enumeration value to deploy the free certificate.
-Note: during deployment of a free certificate, ensure a successful application for a free certificate already exists. you can check whether a successful application for a free certificate already exists through the <a href = 'https://www.tencentcloud.com/document/product/1552/124806?from_cn_redirect=1'>check free certificate application result</a> api.
-sslcert: specifies the managed service side certificate configuration. 
-     * @return Mode Configures the mode of the server certificate. valid values:.
-Disables server-side certificate configuration.
-<li>eofreecert: specifies to apply for a free certificate through automatic validation and deploy. for verification methods, see: [verification methods supported for free certificate application](https://www.tencentcloud.com/document/product/1552/90437?from_cn_redirect=1).</li>.
+-In NS or DNSPod hosting access mode, free certificate application is only supported via automatic validation.
+- If a free certificate application fails, it will cause certificate deployment failure. You can obtain the failure reason through the <a href = 'https://www.tencentcloud.com/document/product/1552/124806?from_cn_redirect=1'>Check Free Certificate Application Result</a> API.</li>
+</ul><li>eofreecert_manual: deploy a free certificate applied through DNS delegated verification or file validation. Before deploying the free certificate, you need to trigger the <a href = 'https://www.tencentcloud.com/document/product/1552/124807?from_cn_redirect=1'>Apply for Free Certificate</a> API to apply for a free certificate. After a successful application, you can use this enumeration value to deploy the free certificate;</li>
+<ul><li>Note: When deploying a free certificate, ensure that a successfully applied free certificate already exists. You can check whether a successfully applied free certificate already exists through the <a href = 'https://www.tencentcloud.com/document/product/1552/124806?from_cn_redirect=1'>Check Free Certificate Application Result</a> API.</li>
+</ul><li>sslcert: Configure an SSL managed service side certificate.</li> 
+     * @return Mode Mode for configuring the server certificate. Valid values:
+<ul><li>disable: without configuring server certificate;</li>
+<li>eofreecert: apply for a free certificate through automatic validation and deploy it. For verification methods, see [verification methods supported for free certificate application](https://www.tencentcloud.com/document/product/1552/90437?from_cn_redirect=1)</li>
 
--In ns or DNSPod hosting access mode, free certificates can only be applied for via automatic validation.
--When the free certificate application fails, it can cause certificate deployment failure. you can obtain the reason for the application failure through the <a href = 'https://www.tencentcloud.com/document/product/1552/124806?from_cn_redirect=1'>check free certificate application result</a> api.
-eofreecert_manual: specifies the deployment of a free certificate applied through DNS delegation verification or file verification. before deploying the free certificate, you need to trigger the apply for free certificate API to apply for a free certificate. once the application is successful, you can use this enumeration value to deploy the free certificate.
-Note: during deployment of a free certificate, ensure a successful application for a free certificate already exists. you can check whether a successful application for a free certificate already exists through the <a href = 'https://www.tencentcloud.com/document/product/1552/124806?from_cn_redirect=1'>check free certificate application result</a> api.
-sslcert: specifies the managed service side certificate configuration.
+-In NS or DNSPod hosting access mode, free certificate application is only supported via automatic validation.
+- If a free certificate application fails, it will cause certificate deployment failure. You can obtain the failure reason through the <a href = 'https://www.tencentcloud.com/document/product/1552/124806?from_cn_redirect=1'>Check Free Certificate Application Result</a> API.</li>
+</ul><li>eofreecert_manual: deploy a free certificate applied through DNS delegated verification or file validation. Before deploying the free certificate, you need to trigger the <a href = 'https://www.tencentcloud.com/document/product/1552/124807?from_cn_redirect=1'>Apply for Free Certificate</a> API to apply for a free certificate. After a successful application, you can use this enumeration value to deploy the free certificate;</li>
+<ul><li>Note: When deploying a free certificate, ensure that a successfully applied free certificate already exists. You can check whether a successfully applied free certificate already exists through the <a href = 'https://www.tencentcloud.com/document/product/1552/124806?from_cn_redirect=1'>Check Free Certificate Application Result</a> API.</li>
+</ul><li>sslcert: Configure an SSL managed service side certificate.</li>
      */
     public String getMode() {
         return this.Mode;
     }
 
     /**
-     * Set Configures the mode of the server certificate. valid values:.
-Disables server-side certificate configuration.
-<li>eofreecert: specifies to apply for a free certificate through automatic validation and deploy. for verification methods, see: [verification methods supported for free certificate application](https://www.tencentcloud.com/document/product/1552/90437?from_cn_redirect=1).</li>.
+     * Set Mode for configuring the server certificate. Valid values:
+<ul><li>disable: without configuring server certificate;</li>
+<li>eofreecert: apply for a free certificate through automatic validation and deploy it. For verification methods, see [verification methods supported for free certificate application](https://www.tencentcloud.com/document/product/1552/90437?from_cn_redirect=1)</li>
 
--In ns or DNSPod hosting access mode, free certificates can only be applied for via automatic validation.
--When the free certificate application fails, it can cause certificate deployment failure. you can obtain the reason for the application failure through the <a href = 'https://www.tencentcloud.com/document/product/1552/124806?from_cn_redirect=1'>check free certificate application result</a> api.
-eofreecert_manual: specifies the deployment of a free certificate applied through DNS delegation verification or file verification. before deploying the free certificate, you need to trigger the apply for free certificate API to apply for a free certificate. once the application is successful, you can use this enumeration value to deploy the free certificate.
-Note: during deployment of a free certificate, ensure a successful application for a free certificate already exists. you can check whether a successful application for a free certificate already exists through the <a href = 'https://www.tencentcloud.com/document/product/1552/124806?from_cn_redirect=1'>check free certificate application result</a> api.
-sslcert: specifies the managed service side certificate configuration.
-     * @param Mode Configures the mode of the server certificate. valid values:.
-Disables server-side certificate configuration.
-<li>eofreecert: specifies to apply for a free certificate through automatic validation and deploy. for verification methods, see: [verification methods supported for free certificate application](https://www.tencentcloud.com/document/product/1552/90437?from_cn_redirect=1).</li>.
+-In NS or DNSPod hosting access mode, free certificate application is only supported via automatic validation.
+- If a free certificate application fails, it will cause certificate deployment failure. You can obtain the failure reason through the <a href = 'https://www.tencentcloud.com/document/product/1552/124806?from_cn_redirect=1'>Check Free Certificate Application Result</a> API.</li>
+</ul><li>eofreecert_manual: deploy a free certificate applied through DNS delegated verification or file validation. Before deploying the free certificate, you need to trigger the <a href = 'https://www.tencentcloud.com/document/product/1552/124807?from_cn_redirect=1'>Apply for Free Certificate</a> API to apply for a free certificate. After a successful application, you can use this enumeration value to deploy the free certificate;</li>
+<ul><li>Note: When deploying a free certificate, ensure that a successfully applied free certificate already exists. You can check whether a successfully applied free certificate already exists through the <a href = 'https://www.tencentcloud.com/document/product/1552/124806?from_cn_redirect=1'>Check Free Certificate Application Result</a> API.</li>
+</ul><li>sslcert: Configure an SSL managed service side certificate.</li>
+     * @param Mode Mode for configuring the server certificate. Valid values:
+<ul><li>disable: without configuring server certificate;</li>
+<li>eofreecert: apply for a free certificate through automatic validation and deploy it. For verification methods, see [verification methods supported for free certificate application](https://www.tencentcloud.com/document/product/1552/90437?from_cn_redirect=1)</li>
 
--In ns or DNSPod hosting access mode, free certificates can only be applied for via automatic validation.
--When the free certificate application fails, it can cause certificate deployment failure. you can obtain the reason for the application failure through the <a href = 'https://www.tencentcloud.com/document/product/1552/124806?from_cn_redirect=1'>check free certificate application result</a> api.
-eofreecert_manual: specifies the deployment of a free certificate applied through DNS delegation verification or file verification. before deploying the free certificate, you need to trigger the apply for free certificate API to apply for a free certificate. once the application is successful, you can use this enumeration value to deploy the free certificate.
-Note: during deployment of a free certificate, ensure a successful application for a free certificate already exists. you can check whether a successful application for a free certificate already exists through the <a href = 'https://www.tencentcloud.com/document/product/1552/124806?from_cn_redirect=1'>check free certificate application result</a> api.
-sslcert: specifies the managed service side certificate configuration.
+-In NS or DNSPod hosting access mode, free certificate application is only supported via automatic validation.
+- If a free certificate application fails, it will cause certificate deployment failure. You can obtain the failure reason through the <a href = 'https://www.tencentcloud.com/document/product/1552/124806?from_cn_redirect=1'>Check Free Certificate Application Result</a> API.</li>
+</ul><li>eofreecert_manual: deploy a free certificate applied through DNS delegated verification or file validation. Before deploying the free certificate, you need to trigger the <a href = 'https://www.tencentcloud.com/document/product/1552/124807?from_cn_redirect=1'>Apply for Free Certificate</a> API to apply for a free certificate. After a successful application, you can use this enumeration value to deploy the free certificate;</li>
+<ul><li>Note: When deploying a free certificate, ensure that a successfully applied free certificate already exists. You can check whether a successfully applied free certificate already exists through the <a href = 'https://www.tencentcloud.com/document/product/1552/124806?from_cn_redirect=1'>Check Free Certificate Application Result</a> API.</li>
+</ul><li>sslcert: Configure an SSL managed service side certificate.</li>
      */
     public void setMode(String Mode) {
         this.Mode = Mode;
@@ -180,14 +180,14 @@ sslcert: specifies the managed service side certificate configuration.
     }
 
     /**
-     * Get Whether the certificate is managed by EdgeOne. Values:
-<li>`none`: Not managed by EdgeOne</li>
-<li>`apply`: Managed by EdgeOne</li>
-Default value: `none`. 
-     * @return ApplyType Whether the certificate is managed by EdgeOne. Values:
-<li>`none`: Not managed by EdgeOne</li>
-<li>`apply`: Managed by EdgeOne</li>
-Default value: `none`.
+     * Get Managed type. Valid values:
+<li>none: Do not manage EO;</li>
+<li>apply: manage EO</li>
+If this field is not specified, the default value 'none' will be used. 
+     * @return ApplyType Managed type. Valid values:
+<li>none: Do not manage EO;</li>
+<li>apply: manage EO</li>
+If this field is not specified, the default value 'none' will be used.
      * @deprecated
      */
     @Deprecated
@@ -196,14 +196,14 @@ Default value: `none`.
     }
 
     /**
-     * Set Whether the certificate is managed by EdgeOne. Values:
-<li>`none`: Not managed by EdgeOne</li>
-<li>`apply`: Managed by EdgeOne</li>
-Default value: `none`.
-     * @param ApplyType Whether the certificate is managed by EdgeOne. Values:
-<li>`none`: Not managed by EdgeOne</li>
-<li>`apply`: Managed by EdgeOne</li>
-Default value: `none`.
+     * Set Managed type. Valid values:
+<li>none: Do not manage EO;</li>
+<li>apply: manage EO</li>
+If this field is not specified, the default value 'none' will be used.
+     * @param ApplyType Managed type. Valid values:
+<li>none: Do not manage EO;</li>
+<li>apply: manage EO</li>
+If this field is not specified, the default value 'none' will be used.
      * @deprecated
      */
     @Deprecated
@@ -228,16 +228,16 @@ Default value: `none`.
     }
 
     /**
-     * Get Specifies whether to enable/disable origin-pull mutual authentication and origin certificate verification. off by default. leave blank to indicate retaining the original configuration. the origin-pull mutual authentication configuration is currently in internal allowlist testing. if needed, please contact us (https://www.tencentcloud.com/online?from_cn_redirect=1-service). 
-     * @return UpstreamCertInfo Specifies whether to enable/disable origin-pull mutual authentication and origin certificate verification. off by default. leave blank to indicate retaining the original configuration. the origin-pull mutual authentication configuration is currently in internal allowlist testing. if needed, please contact us (https://www.tencentcloud.com/online?from_cn_redirect=1-service).
+     * Get Used to enable or disable origin-pull mutual authentication and origin certificate verification respectively. Off by default. Leave blank to indicate retaining the original configuration. The origin-pull mutual authentication configuration is currently in internal allowlist testing. If needed, contact us (https://www.tencentcloud.com/online?from_cn_redirect=1-service). 
+     * @return UpstreamCertInfo Used to enable or disable origin-pull mutual authentication and origin certificate verification respectively. Off by default. Leave blank to indicate retaining the original configuration. The origin-pull mutual authentication configuration is currently in internal allowlist testing. If needed, contact us (https://www.tencentcloud.com/online?from_cn_redirect=1-service).
      */
     public UpstreamCertInfo getUpstreamCertInfo() {
         return this.UpstreamCertInfo;
     }
 
     /**
-     * Set Specifies whether to enable/disable origin-pull mutual authentication and origin certificate verification. off by default. leave blank to indicate retaining the original configuration. the origin-pull mutual authentication configuration is currently in internal allowlist testing. if needed, please contact us (https://www.tencentcloud.com/online?from_cn_redirect=1-service).
-     * @param UpstreamCertInfo Specifies whether to enable/disable origin-pull mutual authentication and origin certificate verification. off by default. leave blank to indicate retaining the original configuration. the origin-pull mutual authentication configuration is currently in internal allowlist testing. if needed, please contact us (https://www.tencentcloud.com/online?from_cn_redirect=1-service).
+     * Set Used to enable or disable origin-pull mutual authentication and origin certificate verification respectively. Off by default. Leave blank to indicate retaining the original configuration. The origin-pull mutual authentication configuration is currently in internal allowlist testing. If needed, contact us (https://www.tencentcloud.com/online?from_cn_redirect=1-service).
+     * @param UpstreamCertInfo Used to enable or disable origin-pull mutual authentication and origin certificate verification respectively. Off by default. Leave blank to indicate retaining the original configuration. The origin-pull mutual authentication configuration is currently in internal allowlist testing. If needed, contact us (https://www.tencentcloud.com/online?from_cn_redirect=1-service).
      */
     public void setUpstreamCertInfo(UpstreamCertInfo UpstreamCertInfo) {
         this.UpstreamCertInfo = UpstreamCertInfo;

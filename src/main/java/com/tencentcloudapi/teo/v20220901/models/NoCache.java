@@ -24,33 +24,33 @@ import java.util.HashMap;
 public class NoCache extends AbstractModel {
 
     /**
-    * Whether to enable no-cache configuration. Valid values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+    * No cache configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-     * Get Whether to enable no-cache configuration. Valid values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li> 
-     * @return Switch Whether to enable no-cache configuration. Valid values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+     * Get No cache configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li> 
+     * @return Switch No cache configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set Whether to enable no-cache configuration. Valid values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-     * @param Switch Whether to enable no-cache configuration. Valid values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+     * Set No cache configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+     * @param Switch No cache configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;

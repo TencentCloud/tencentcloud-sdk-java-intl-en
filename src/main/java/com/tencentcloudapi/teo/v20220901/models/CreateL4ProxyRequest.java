@@ -31,7 +31,7 @@ public class CreateL4ProxyRequest extends AbstractModel {
     private String ZoneId;
 
     /**
-    * Name of the L4 proxy instance, which can contain 1-50 characters, including a-z, 0-9, and hyphens (-). However, hyphens (-) cannot be used individually or consecutively and should not be placed at the beginning or end of the name. Modification is not allowed after creation.
+    * L4 proxy instance name. Enter 1-50 characters. Allowed characters: a-z, 0-9, and -. The hyphen cannot be registered alone or used continuously, and cannot be placed at the beginning or the end. Modifications are not allowed after creation.
 
     */
     @SerializedName("ProxyName")
@@ -49,7 +49,7 @@ public class CreateL4ProxyRequest extends AbstractModel {
     private String Area;
 
     /**
-    * Whether IPv6 access is enabled. default off if left empty. this configuration can only be enabled in certain acceleration zones and security protection configurations. for details, refer to [creating a new layer 4 proxy instance](https://www.tencentcloud.com/document/product/1552/90025?from_cn_redirect=1). valid values:.
+    * Whether IPv6 access is enabled. If left empty, it is off by default. This configuration can only be enabled in certain acceleration zones and security protection configurations. For details, refer to Creating a New Layer 4 Proxy Instance (https://www.tencentcloud.com/document/product/1552/90025?from_cn_redirect=1). Value:
 <li>`on`: Enable;</li>
 <li>off: Disable.</li>
     */
@@ -58,7 +58,7 @@ public class CreateL4ProxyRequest extends AbstractModel {
     private String Ipv6;
 
     /**
-    * Whether to enable static IP, default off if left empty. this configuration can only be enabled in certain acceleration zones and security protection configurations. for details, refer to creating a new layer 4 proxy instance (https://www.tencentcloud.com/document/product/1552/90025?from_cn_redirect=1). valid values:.
+    * Whether to enable static IP. Default off if left empty. This configuration can only be enabled in certain acceleration zones and security protection configurations. For details, refer to Creating a New Layer 4 Proxy Instance (https://www.tencentcloud.com/document/product/1552/90025?from_cn_redirect=1). Value:
 <li>`on`: Enable;</li>
 <li>off: Disable.</li>
     */
@@ -67,7 +67,7 @@ public class CreateL4ProxyRequest extends AbstractModel {
     private String StaticIp;
 
     /**
-    * Whether network optimization in the chinese mainland is enabled. default off if left empty. this configuration can only be enabled in certain acceleration zones and security protection configurations. for details, refer to creating a new layer 4 proxy instance (https://www.tencentcloud.com/document/product/1552/90025?from_cn_redirect=1). valid values:.
+    * Whether to enable network optimization in the Chinese mainland. If left empty, it is off by default. This configuration can only be enabled in certain acceleration zones and security protection configurations. For details, refer to Creating a New Layer 4 Proxy Instance. Value:
 <li>`on`: Enable;</li>
 <li>off: Disable.</li>
     */
@@ -76,8 +76,8 @@ public class CreateL4ProxyRequest extends AbstractModel {
     private String AccelerateMainland;
 
     /**
-    * Configuration of L3/L4 DDoS protection. If this parameter is not input, the default platform protection option is used. For details, see [Exclusive DDoS Protection Usage] (https://www.tencentcloud.com/document/product/1552/95994?from_cn_redirect=1).
-This field is deprecated, please use DDosProtectionId field specification for associated protection configuration.
+    * Configuration of L3/L4 DDoS protection. If this parameter is not input, the default platform protection option is used. For details, see [Exclusive DDoS Protection](https://www.tencentcloud.com/document/product/1552/95994?from_cn_redirect=1).
+This field is deprecated. Please use the DDosProtectionId field to specify the associated DDoS protection configuration.
     */
     @SerializedName("DDosProtectionConfig")
     @Expose
@@ -100,9 +100,9 @@ This field is deprecated, please use DDosProtectionId field specification for as
     }
 
     /**
-     * Get Name of the L4 proxy instance, which can contain 1-50 characters, including a-z, 0-9, and hyphens (-). However, hyphens (-) cannot be used individually or consecutively and should not be placed at the beginning or end of the name. Modification is not allowed after creation.
+     * Get L4 proxy instance name. Enter 1-50 characters. Allowed characters: a-z, 0-9, and -. The hyphen cannot be registered alone or used continuously, and cannot be placed at the beginning or the end. Modifications are not allowed after creation.
  
-     * @return ProxyName Name of the L4 proxy instance, which can contain 1-50 characters, including a-z, 0-9, and hyphens (-). However, hyphens (-) cannot be used individually or consecutively and should not be placed at the beginning or end of the name. Modification is not allowed after creation.
+     * @return ProxyName L4 proxy instance name. Enter 1-50 characters. Allowed characters: a-z, 0-9, and -. The hyphen cannot be registered alone or used continuously, and cannot be placed at the beginning or the end. Modifications are not allowed after creation.
 
      */
     public String getProxyName() {
@@ -110,9 +110,9 @@ This field is deprecated, please use DDosProtectionId field specification for as
     }
 
     /**
-     * Set Name of the L4 proxy instance, which can contain 1-50 characters, including a-z, 0-9, and hyphens (-). However, hyphens (-) cannot be used individually or consecutively and should not be placed at the beginning or end of the name. Modification is not allowed after creation.
+     * Set L4 proxy instance name. Enter 1-50 characters. Allowed characters: a-z, 0-9, and -. The hyphen cannot be registered alone or used continuously, and cannot be placed at the beginning or the end. Modifications are not allowed after creation.
 
-     * @param ProxyName Name of the L4 proxy instance, which can contain 1-50 characters, including a-z, 0-9, and hyphens (-). However, hyphens (-) cannot be used individually or consecutively and should not be placed at the beginning or end of the name. Modification is not allowed after creation.
+     * @param ProxyName L4 proxy instance name. Enter 1-50 characters. Allowed characters: a-z, 0-9, and -. The hyphen cannot be registered alone or used continuously, and cannot be placed at the beginning or the end. Modifications are not allowed after creation.
 
      */
     public void setProxyName(String ProxyName) {
@@ -148,10 +148,10 @@ This field is deprecated, please use DDosProtectionId field specification for as
     }
 
     /**
-     * Get Whether IPv6 access is enabled. default off if left empty. this configuration can only be enabled in certain acceleration zones and security protection configurations. for details, refer to [creating a new layer 4 proxy instance](https://www.tencentcloud.com/document/product/1552/90025?from_cn_redirect=1). valid values:.
+     * Get Whether IPv6 access is enabled. If left empty, it is off by default. This configuration can only be enabled in certain acceleration zones and security protection configurations. For details, refer to Creating a New Layer 4 Proxy Instance (https://www.tencentcloud.com/document/product/1552/90025?from_cn_redirect=1). Value:
 <li>`on`: Enable;</li>
 <li>off: Disable.</li> 
-     * @return Ipv6 Whether IPv6 access is enabled. default off if left empty. this configuration can only be enabled in certain acceleration zones and security protection configurations. for details, refer to [creating a new layer 4 proxy instance](https://www.tencentcloud.com/document/product/1552/90025?from_cn_redirect=1). valid values:.
+     * @return Ipv6 Whether IPv6 access is enabled. If left empty, it is off by default. This configuration can only be enabled in certain acceleration zones and security protection configurations. For details, refer to Creating a New Layer 4 Proxy Instance (https://www.tencentcloud.com/document/product/1552/90025?from_cn_redirect=1). Value:
 <li>`on`: Enable;</li>
 <li>off: Disable.</li>
      */
@@ -160,10 +160,10 @@ This field is deprecated, please use DDosProtectionId field specification for as
     }
 
     /**
-     * Set Whether IPv6 access is enabled. default off if left empty. this configuration can only be enabled in certain acceleration zones and security protection configurations. for details, refer to [creating a new layer 4 proxy instance](https://www.tencentcloud.com/document/product/1552/90025?from_cn_redirect=1). valid values:.
+     * Set Whether IPv6 access is enabled. If left empty, it is off by default. This configuration can only be enabled in certain acceleration zones and security protection configurations. For details, refer to Creating a New Layer 4 Proxy Instance (https://www.tencentcloud.com/document/product/1552/90025?from_cn_redirect=1). Value:
 <li>`on`: Enable;</li>
 <li>off: Disable.</li>
-     * @param Ipv6 Whether IPv6 access is enabled. default off if left empty. this configuration can only be enabled in certain acceleration zones and security protection configurations. for details, refer to [creating a new layer 4 proxy instance](https://www.tencentcloud.com/document/product/1552/90025?from_cn_redirect=1). valid values:.
+     * @param Ipv6 Whether IPv6 access is enabled. If left empty, it is off by default. This configuration can only be enabled in certain acceleration zones and security protection configurations. For details, refer to Creating a New Layer 4 Proxy Instance (https://www.tencentcloud.com/document/product/1552/90025?from_cn_redirect=1). Value:
 <li>`on`: Enable;</li>
 <li>off: Disable.</li>
      */
@@ -172,10 +172,10 @@ This field is deprecated, please use DDosProtectionId field specification for as
     }
 
     /**
-     * Get Whether to enable static IP, default off if left empty. this configuration can only be enabled in certain acceleration zones and security protection configurations. for details, refer to creating a new layer 4 proxy instance (https://www.tencentcloud.com/document/product/1552/90025?from_cn_redirect=1). valid values:.
+     * Get Whether to enable static IP. Default off if left empty. This configuration can only be enabled in certain acceleration zones and security protection configurations. For details, refer to Creating a New Layer 4 Proxy Instance (https://www.tencentcloud.com/document/product/1552/90025?from_cn_redirect=1). Value:
 <li>`on`: Enable;</li>
 <li>off: Disable.</li> 
-     * @return StaticIp Whether to enable static IP, default off if left empty. this configuration can only be enabled in certain acceleration zones and security protection configurations. for details, refer to creating a new layer 4 proxy instance (https://www.tencentcloud.com/document/product/1552/90025?from_cn_redirect=1). valid values:.
+     * @return StaticIp Whether to enable static IP. Default off if left empty. This configuration can only be enabled in certain acceleration zones and security protection configurations. For details, refer to Creating a New Layer 4 Proxy Instance (https://www.tencentcloud.com/document/product/1552/90025?from_cn_redirect=1). Value:
 <li>`on`: Enable;</li>
 <li>off: Disable.</li>
      */
@@ -184,10 +184,10 @@ This field is deprecated, please use DDosProtectionId field specification for as
     }
 
     /**
-     * Set Whether to enable static IP, default off if left empty. this configuration can only be enabled in certain acceleration zones and security protection configurations. for details, refer to creating a new layer 4 proxy instance (https://www.tencentcloud.com/document/product/1552/90025?from_cn_redirect=1). valid values:.
+     * Set Whether to enable static IP. Default off if left empty. This configuration can only be enabled in certain acceleration zones and security protection configurations. For details, refer to Creating a New Layer 4 Proxy Instance (https://www.tencentcloud.com/document/product/1552/90025?from_cn_redirect=1). Value:
 <li>`on`: Enable;</li>
 <li>off: Disable.</li>
-     * @param StaticIp Whether to enable static IP, default off if left empty. this configuration can only be enabled in certain acceleration zones and security protection configurations. for details, refer to creating a new layer 4 proxy instance (https://www.tencentcloud.com/document/product/1552/90025?from_cn_redirect=1). valid values:.
+     * @param StaticIp Whether to enable static IP. Default off if left empty. This configuration can only be enabled in certain acceleration zones and security protection configurations. For details, refer to Creating a New Layer 4 Proxy Instance (https://www.tencentcloud.com/document/product/1552/90025?from_cn_redirect=1). Value:
 <li>`on`: Enable;</li>
 <li>off: Disable.</li>
      */
@@ -196,10 +196,10 @@ This field is deprecated, please use DDosProtectionId field specification for as
     }
 
     /**
-     * Get Whether network optimization in the chinese mainland is enabled. default off if left empty. this configuration can only be enabled in certain acceleration zones and security protection configurations. for details, refer to creating a new layer 4 proxy instance (https://www.tencentcloud.com/document/product/1552/90025?from_cn_redirect=1). valid values:.
+     * Get Whether to enable network optimization in the Chinese mainland. If left empty, it is off by default. This configuration can only be enabled in certain acceleration zones and security protection configurations. For details, refer to Creating a New Layer 4 Proxy Instance. Value:
 <li>`on`: Enable;</li>
 <li>off: Disable.</li> 
-     * @return AccelerateMainland Whether network optimization in the chinese mainland is enabled. default off if left empty. this configuration can only be enabled in certain acceleration zones and security protection configurations. for details, refer to creating a new layer 4 proxy instance (https://www.tencentcloud.com/document/product/1552/90025?from_cn_redirect=1). valid values:.
+     * @return AccelerateMainland Whether to enable network optimization in the Chinese mainland. If left empty, it is off by default. This configuration can only be enabled in certain acceleration zones and security protection configurations. For details, refer to Creating a New Layer 4 Proxy Instance. Value:
 <li>`on`: Enable;</li>
 <li>off: Disable.</li>
      */
@@ -208,10 +208,10 @@ This field is deprecated, please use DDosProtectionId field specification for as
     }
 
     /**
-     * Set Whether network optimization in the chinese mainland is enabled. default off if left empty. this configuration can only be enabled in certain acceleration zones and security protection configurations. for details, refer to creating a new layer 4 proxy instance (https://www.tencentcloud.com/document/product/1552/90025?from_cn_redirect=1). valid values:.
+     * Set Whether to enable network optimization in the Chinese mainland. If left empty, it is off by default. This configuration can only be enabled in certain acceleration zones and security protection configurations. For details, refer to Creating a New Layer 4 Proxy Instance. Value:
 <li>`on`: Enable;</li>
 <li>off: Disable.</li>
-     * @param AccelerateMainland Whether network optimization in the chinese mainland is enabled. default off if left empty. this configuration can only be enabled in certain acceleration zones and security protection configurations. for details, refer to creating a new layer 4 proxy instance (https://www.tencentcloud.com/document/product/1552/90025?from_cn_redirect=1). valid values:.
+     * @param AccelerateMainland Whether to enable network optimization in the Chinese mainland. If left empty, it is off by default. This configuration can only be enabled in certain acceleration zones and security protection configurations. For details, refer to Creating a New Layer 4 Proxy Instance. Value:
 <li>`on`: Enable;</li>
 <li>off: Disable.</li>
      */
@@ -220,10 +220,10 @@ This field is deprecated, please use DDosProtectionId field specification for as
     }
 
     /**
-     * Get Configuration of L3/L4 DDoS protection. If this parameter is not input, the default platform protection option is used. For details, see [Exclusive DDoS Protection Usage] (https://www.tencentcloud.com/document/product/1552/95994?from_cn_redirect=1).
-This field is deprecated, please use DDosProtectionId field specification for associated protection configuration. 
-     * @return DDosProtectionConfig Configuration of L3/L4 DDoS protection. If this parameter is not input, the default platform protection option is used. For details, see [Exclusive DDoS Protection Usage] (https://www.tencentcloud.com/document/product/1552/95994?from_cn_redirect=1).
-This field is deprecated, please use DDosProtectionId field specification for associated protection configuration.
+     * Get Configuration of L3/L4 DDoS protection. If this parameter is not input, the default platform protection option is used. For details, see [Exclusive DDoS Protection](https://www.tencentcloud.com/document/product/1552/95994?from_cn_redirect=1).
+This field is deprecated. Please use the DDosProtectionId field to specify the associated DDoS protection configuration. 
+     * @return DDosProtectionConfig Configuration of L3/L4 DDoS protection. If this parameter is not input, the default platform protection option is used. For details, see [Exclusive DDoS Protection](https://www.tencentcloud.com/document/product/1552/95994?from_cn_redirect=1).
+This field is deprecated. Please use the DDosProtectionId field to specify the associated DDoS protection configuration.
      * @deprecated
      */
     @Deprecated
@@ -232,10 +232,10 @@ This field is deprecated, please use DDosProtectionId field specification for as
     }
 
     /**
-     * Set Configuration of L3/L4 DDoS protection. If this parameter is not input, the default platform protection option is used. For details, see [Exclusive DDoS Protection Usage] (https://www.tencentcloud.com/document/product/1552/95994?from_cn_redirect=1).
-This field is deprecated, please use DDosProtectionId field specification for associated protection configuration.
-     * @param DDosProtectionConfig Configuration of L3/L4 DDoS protection. If this parameter is not input, the default platform protection option is used. For details, see [Exclusive DDoS Protection Usage] (https://www.tencentcloud.com/document/product/1552/95994?from_cn_redirect=1).
-This field is deprecated, please use DDosProtectionId field specification for associated protection configuration.
+     * Set Configuration of L3/L4 DDoS protection. If this parameter is not input, the default platform protection option is used. For details, see [Exclusive DDoS Protection](https://www.tencentcloud.com/document/product/1552/95994?from_cn_redirect=1).
+This field is deprecated. Please use the DDosProtectionId field to specify the associated DDoS protection configuration.
+     * @param DDosProtectionConfig Configuration of L3/L4 DDoS protection. If this parameter is not input, the default platform protection option is used. For details, see [Exclusive DDoS Protection](https://www.tencentcloud.com/document/product/1552/95994?from_cn_redirect=1).
+This field is deprecated. Please use the DDosProtectionId field to specify the associated DDoS protection configuration.
      * @deprecated
      */
     @Deprecated

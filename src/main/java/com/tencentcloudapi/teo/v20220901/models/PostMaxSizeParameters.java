@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class PostMaxSizeParameters extends AbstractModel {
 
     /**
-    * Whether to enable post request file upload limit, in bytes (default limit: 32 * 2<sup>20</sup> bytes). valid values: <li>`on`: enable limit;</li><li>`off`: disable limit.</li>.
+    * Whether to enable the upload file limit for POST requests, in bytes. The platform defaults to a limit of 32 * 2<sup>20</sup> bytes. Valid values: <li>on: enable the limit;</li><li>off: disable the limit.</li>
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * Specifies the maximum limit for file streaming transmission in POST request upload. this field is valid only when Switch is on. value range: 1MB to 800MB. unit: byte.
+    * Maximum limit for file streaming transmission in a POST request upload. This field is valid only when Switch is on. Value range: 1–800 MB, in bytes.
     */
     @SerializedName("MaxSize")
     @Expose
     private Long MaxSize;
 
     /**
-     * Get Whether to enable post request file upload limit, in bytes (default limit: 32 * 2<sup>20</sup> bytes). valid values: <li>`on`: enable limit;</li><li>`off`: disable limit.</li>. 
-     * @return Switch Whether to enable post request file upload limit, in bytes (default limit: 32 * 2<sup>20</sup> bytes). valid values: <li>`on`: enable limit;</li><li>`off`: disable limit.</li>.
+     * Get Whether to enable the upload file limit for POST requests, in bytes. The platform defaults to a limit of 32 * 2<sup>20</sup> bytes. Valid values: <li>on: enable the limit;</li><li>off: disable the limit.</li> 
+     * @return Switch Whether to enable the upload file limit for POST requests, in bytes. The platform defaults to a limit of 32 * 2<sup>20</sup> bytes. Valid values: <li>on: enable the limit;</li><li>off: disable the limit.</li>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set Whether to enable post request file upload limit, in bytes (default limit: 32 * 2<sup>20</sup> bytes). valid values: <li>`on`: enable limit;</li><li>`off`: disable limit.</li>.
-     * @param Switch Whether to enable post request file upload limit, in bytes (default limit: 32 * 2<sup>20</sup> bytes). valid values: <li>`on`: enable limit;</li><li>`off`: disable limit.</li>.
+     * Set Whether to enable the upload file limit for POST requests, in bytes. The platform defaults to a limit of 32 * 2<sup>20</sup> bytes. Valid values: <li>on: enable the limit;</li><li>off: disable the limit.</li>
+     * @param Switch Whether to enable the upload file limit for POST requests, in bytes. The platform defaults to a limit of 32 * 2<sup>20</sup> bytes. Valid values: <li>on: enable the limit;</li><li>off: disable the limit.</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get Specifies the maximum limit for file streaming transmission in POST request upload. this field is valid only when Switch is on. value range: 1MB to 800MB. unit: byte. 
-     * @return MaxSize Specifies the maximum limit for file streaming transmission in POST request upload. this field is valid only when Switch is on. value range: 1MB to 800MB. unit: byte.
+     * Get Maximum limit for file streaming transmission in a POST request upload. This field is valid only when Switch is on. Value range: 1–800 MB, in bytes. 
+     * @return MaxSize Maximum limit for file streaming transmission in a POST request upload. This field is valid only when Switch is on. Value range: 1–800 MB, in bytes.
      */
     public Long getMaxSize() {
         return this.MaxSize;
     }
 
     /**
-     * Set Specifies the maximum limit for file streaming transmission in POST request upload. this field is valid only when Switch is on. value range: 1MB to 800MB. unit: byte.
-     * @param MaxSize Specifies the maximum limit for file streaming transmission in POST request upload. this field is valid only when Switch is on. value range: 1MB to 800MB. unit: byte.
+     * Set Maximum limit for file streaming transmission in a POST request upload. This field is valid only when Switch is on. Value range: 1–800 MB, in bytes.
+     * @param MaxSize Maximum limit for file streaming transmission in a POST request upload. This field is valid only when Switch is on. Value range: 1–800 MB, in bytes.
      */
     public void setMaxSize(Long MaxSize) {
         this.MaxSize = MaxSize;

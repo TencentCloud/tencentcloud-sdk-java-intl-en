@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class CreateSecurityAPIServiceRequest extends AbstractModel {
 
     /**
-    * Zone ID.		
+    * Zone ID.	
     */
     @SerializedName("ZoneId")
     @Expose
     private String ZoneId;
 
     /**
-    * API service list.
+    * List of API services.
     */
     @SerializedName("APIServices")
     @Expose
     private APIService [] APIServices;
 
     /**
-     * Get Zone ID.		 
-     * @return ZoneId Zone ID.		
+     * Get Zone ID.	 
+     * @return ZoneId Zone ID.	
      */
     public String getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set Zone ID.		
-     * @param ZoneId Zone ID.		
+     * Set Zone ID.	
+     * @param ZoneId Zone ID.	
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get API service list. 
-     * @return APIServices API service list.
+     * Get List of API services. 
+     * @return APIServices List of API services.
      */
     public APIService [] getAPIServices() {
         return this.APIServices;
     }
 
     /**
-     * Set API service list.
-     * @param APIServices API service list.
+     * Set List of API services.
+     * @param APIServices List of API services.
      */
     public void setAPIServices(APIService [] APIServices) {
         this.APIServices = APIServices;

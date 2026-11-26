@@ -31,14 +31,14 @@ public class CreateEdgeKVNamespaceRequest extends AbstractModel {
     private String ZoneId;
 
     /**
-    * Namespace name. Input content with the following restrictions: support input of 1-50 characters, allowed characters are a-z, A-Z, 0-9, -, and - cannot be registered alone or used continuously, cannot be placed at the beginning or the end. Under the same site, ensure the name is unique.
+    * Namespace name. Input restrictions: supports 1-50 characters. Allowed characters: a-z, A-Z, 0-9, and -. The hyphen cannot be used alone or consecutively, and cannot be placed at the beginning or the end. The name must be unique within the same site.
     */
     @SerializedName("Namespace")
     @Expose
     private String Namespace;
 
     /**
-    * Namespace description. Used to describe the purpose or business meaning of a namespace. Supports a maximum of 256 characters.
+    * Namespace description. Used to describe the purpose or business meaning of the namespace. Supports up to 256 characters.
     */
     @SerializedName("Remark")
     @Expose
@@ -61,32 +61,32 @@ public class CreateEdgeKVNamespaceRequest extends AbstractModel {
     }
 
     /**
-     * Get Namespace name. Input content with the following restrictions: support input of 1-50 characters, allowed characters are a-z, A-Z, 0-9, -, and - cannot be registered alone or used continuously, cannot be placed at the beginning or the end. Under the same site, ensure the name is unique. 
-     * @return Namespace Namespace name. Input content with the following restrictions: support input of 1-50 characters, allowed characters are a-z, A-Z, 0-9, -, and - cannot be registered alone or used continuously, cannot be placed at the beginning or the end. Under the same site, ensure the name is unique.
+     * Get Namespace name. Input restrictions: supports 1-50 characters. Allowed characters: a-z, A-Z, 0-9, and -. The hyphen cannot be used alone or consecutively, and cannot be placed at the beginning or the end. The name must be unique within the same site. 
+     * @return Namespace Namespace name. Input restrictions: supports 1-50 characters. Allowed characters: a-z, A-Z, 0-9, and -. The hyphen cannot be used alone or consecutively, and cannot be placed at the beginning or the end. The name must be unique within the same site.
      */
     public String getNamespace() {
         return this.Namespace;
     }
 
     /**
-     * Set Namespace name. Input content with the following restrictions: support input of 1-50 characters, allowed characters are a-z, A-Z, 0-9, -, and - cannot be registered alone or used continuously, cannot be placed at the beginning or the end. Under the same site, ensure the name is unique.
-     * @param Namespace Namespace name. Input content with the following restrictions: support input of 1-50 characters, allowed characters are a-z, A-Z, 0-9, -, and - cannot be registered alone or used continuously, cannot be placed at the beginning or the end. Under the same site, ensure the name is unique.
+     * Set Namespace name. Input restrictions: supports 1-50 characters. Allowed characters: a-z, A-Z, 0-9, and -. The hyphen cannot be used alone or consecutively, and cannot be placed at the beginning or the end. The name must be unique within the same site.
+     * @param Namespace Namespace name. Input restrictions: supports 1-50 characters. Allowed characters: a-z, A-Z, 0-9, and -. The hyphen cannot be used alone or consecutively, and cannot be placed at the beginning or the end. The name must be unique within the same site.
      */
     public void setNamespace(String Namespace) {
         this.Namespace = Namespace;
     }
 
     /**
-     * Get Namespace description. Used to describe the purpose or business meaning of a namespace. Supports a maximum of 256 characters. 
-     * @return Remark Namespace description. Used to describe the purpose or business meaning of a namespace. Supports a maximum of 256 characters.
+     * Get Namespace description. Used to describe the purpose or business meaning of the namespace. Supports up to 256 characters. 
+     * @return Remark Namespace description. Used to describe the purpose or business meaning of the namespace. Supports up to 256 characters.
      */
     public String getRemark() {
         return this.Remark;
     }
 
     /**
-     * Set Namespace description. Used to describe the purpose or business meaning of a namespace. Supports a maximum of 256 characters.
-     * @param Remark Namespace description. Used to describe the purpose or business meaning of a namespace. Supports a maximum of 256 characters.
+     * Set Namespace description. Used to describe the purpose or business meaning of the namespace. Supports up to 256 characters.
+     * @param Remark Namespace description. Used to describe the purpose or business meaning of the namespace. Supports up to 256 characters.
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;

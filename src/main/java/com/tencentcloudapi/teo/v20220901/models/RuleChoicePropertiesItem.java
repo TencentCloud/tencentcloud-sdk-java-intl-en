@@ -24,54 +24,54 @@ import java.util.HashMap;
 public class RuleChoicePropertiesItem extends AbstractModel {
 
     /**
-    * The parameter name.
+    * Parameter name.
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * The parameter value type.
-<li>CHOICE: The parameter value can be selected only from `Values`.</li>
-<li>TOGGLE: The parameter value is of switch type and can be selected from `ChoicesValue`.</li>
-<li>CUSTOM_NUM: The parameter value is a custom integer.</li>
-<li>CUSTOM_STRING: The parameter value is a custom string.</li>
+    * Parameter type.
+<li> CHOICE: The parameter value can only be selected from ChoicesValue; </li>
+<li> TOGGLE: The parameter value is a switch type, select from ChoicesValue;</li>
+<li> CUSTOM_NUM: The parameter value is user-customized, integer type;</li>
+<li>CUSTOM_STRING: The parameter value is user-customized and of string type.</li>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * Valid parameter values.
-Note: If `Type` is `CUSTOM_NUM` or `CUSTOM_STRING`, this parameter will be an empty array.
+    * Available values of the parameter.
+Note: If the parameter value is user-customized, this array is an empty array.
     */
     @SerializedName("ChoicesValue")
     @Expose
     private String [] ChoicesValue;
 
     /**
-    * Minimum value. If both `Min` and `Max` are set to `0`, this parameter does not take effect.
+    * Minimum value of the value parameter. This item is meaningless for non-numeric parameters or when both Min and Max are 0.
     */
     @SerializedName("Min")
     @Expose
     private Long Min;
 
     /**
-    * Maximum value. If both `Min` and `Max` are set to `0`, this parameter does not take effect.
+    * Maximum value of a numeric parameter. This item is meaningless for non-numeric parameters or when both Min and Max are 0.
     */
     @SerializedName("Max")
     @Expose
     private Long Max;
 
     /**
-    * Whether multiple values can be selected or entered.
+    * Whether the parameter value supports multi-select or filling in multiple values.
     */
     @SerializedName("IsMultiple")
     @Expose
     private Boolean IsMultiple;
 
     /**
-    * Whether the parameter can be left empty.
+    * Allow Empty.
     */
     @SerializedName("IsAllowEmpty")
     @Expose
@@ -79,141 +79,141 @@ Note: If `Type` is `CUSTOM_NUM` or `CUSTOM_STRING`, this parameter will be an em
 
     /**
     * Special parameter.
-<li>NULL: Select `NormalAction` for `RuleAction`. </li>
-<li>If the member parameter `Id` is `Action`, select `RewirteAction` for `RuleAction`.</li>
-<li>If the member parameter `Id` is `StatusCode`, select `CodeAction` for `RuleAction`.</li>
+<li> NULL: select NormalAction for RuleAction;</li>
+<li> The member parameter Id is Action: select RewirteAction for RuleAction;</li>
+<li> The member parameter Id is StatusCode: select CodeAction for RuleAction.</li>
     */
     @SerializedName("ExtraParameter")
     @Expose
     private RuleExtraParameter ExtraParameter;
 
     /**
-     * Get The parameter name. 
-     * @return Name The parameter name.
+     * Get Parameter name. 
+     * @return Name Parameter name.
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set The parameter name.
-     * @param Name The parameter name.
+     * Set Parameter name.
+     * @param Name Parameter name.
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get The parameter value type.
-<li>CHOICE: The parameter value can be selected only from `Values`.</li>
-<li>TOGGLE: The parameter value is of switch type and can be selected from `ChoicesValue`.</li>
-<li>CUSTOM_NUM: The parameter value is a custom integer.</li>
-<li>CUSTOM_STRING: The parameter value is a custom string.</li> 
-     * @return Type The parameter value type.
-<li>CHOICE: The parameter value can be selected only from `Values`.</li>
-<li>TOGGLE: The parameter value is of switch type and can be selected from `ChoicesValue`.</li>
-<li>CUSTOM_NUM: The parameter value is a custom integer.</li>
-<li>CUSTOM_STRING: The parameter value is a custom string.</li>
+     * Get Parameter type.
+<li> CHOICE: The parameter value can only be selected from ChoicesValue; </li>
+<li> TOGGLE: The parameter value is a switch type, select from ChoicesValue;</li>
+<li> CUSTOM_NUM: The parameter value is user-customized, integer type;</li>
+<li>CUSTOM_STRING: The parameter value is user-customized and of string type.</li> 
+     * @return Type Parameter type.
+<li> CHOICE: The parameter value can only be selected from ChoicesValue; </li>
+<li> TOGGLE: The parameter value is a switch type, select from ChoicesValue;</li>
+<li> CUSTOM_NUM: The parameter value is user-customized, integer type;</li>
+<li>CUSTOM_STRING: The parameter value is user-customized and of string type.</li>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set The parameter value type.
-<li>CHOICE: The parameter value can be selected only from `Values`.</li>
-<li>TOGGLE: The parameter value is of switch type and can be selected from `ChoicesValue`.</li>
-<li>CUSTOM_NUM: The parameter value is a custom integer.</li>
-<li>CUSTOM_STRING: The parameter value is a custom string.</li>
-     * @param Type The parameter value type.
-<li>CHOICE: The parameter value can be selected only from `Values`.</li>
-<li>TOGGLE: The parameter value is of switch type and can be selected from `ChoicesValue`.</li>
-<li>CUSTOM_NUM: The parameter value is a custom integer.</li>
-<li>CUSTOM_STRING: The parameter value is a custom string.</li>
+     * Set Parameter type.
+<li> CHOICE: The parameter value can only be selected from ChoicesValue; </li>
+<li> TOGGLE: The parameter value is a switch type, select from ChoicesValue;</li>
+<li> CUSTOM_NUM: The parameter value is user-customized, integer type;</li>
+<li>CUSTOM_STRING: The parameter value is user-customized and of string type.</li>
+     * @param Type Parameter type.
+<li> CHOICE: The parameter value can only be selected from ChoicesValue; </li>
+<li> TOGGLE: The parameter value is a switch type, select from ChoicesValue;</li>
+<li> CUSTOM_NUM: The parameter value is user-customized, integer type;</li>
+<li>CUSTOM_STRING: The parameter value is user-customized and of string type.</li>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get Valid parameter values.
-Note: If `Type` is `CUSTOM_NUM` or `CUSTOM_STRING`, this parameter will be an empty array. 
-     * @return ChoicesValue Valid parameter values.
-Note: If `Type` is `CUSTOM_NUM` or `CUSTOM_STRING`, this parameter will be an empty array.
+     * Get Available values of the parameter.
+Note: If the parameter value is user-customized, this array is an empty array. 
+     * @return ChoicesValue Available values of the parameter.
+Note: If the parameter value is user-customized, this array is an empty array.
      */
     public String [] getChoicesValue() {
         return this.ChoicesValue;
     }
 
     /**
-     * Set Valid parameter values.
-Note: If `Type` is `CUSTOM_NUM` or `CUSTOM_STRING`, this parameter will be an empty array.
-     * @param ChoicesValue Valid parameter values.
-Note: If `Type` is `CUSTOM_NUM` or `CUSTOM_STRING`, this parameter will be an empty array.
+     * Set Available values of the parameter.
+Note: If the parameter value is user-customized, this array is an empty array.
+     * @param ChoicesValue Available values of the parameter.
+Note: If the parameter value is user-customized, this array is an empty array.
      */
     public void setChoicesValue(String [] ChoicesValue) {
         this.ChoicesValue = ChoicesValue;
     }
 
     /**
-     * Get Minimum value. If both `Min` and `Max` are set to `0`, this parameter does not take effect. 
-     * @return Min Minimum value. If both `Min` and `Max` are set to `0`, this parameter does not take effect.
+     * Get Minimum value of the value parameter. This item is meaningless for non-numeric parameters or when both Min and Max are 0. 
+     * @return Min Minimum value of the value parameter. This item is meaningless for non-numeric parameters or when both Min and Max are 0.
      */
     public Long getMin() {
         return this.Min;
     }
 
     /**
-     * Set Minimum value. If both `Min` and `Max` are set to `0`, this parameter does not take effect.
-     * @param Min Minimum value. If both `Min` and `Max` are set to `0`, this parameter does not take effect.
+     * Set Minimum value of the value parameter. This item is meaningless for non-numeric parameters or when both Min and Max are 0.
+     * @param Min Minimum value of the value parameter. This item is meaningless for non-numeric parameters or when both Min and Max are 0.
      */
     public void setMin(Long Min) {
         this.Min = Min;
     }
 
     /**
-     * Get Maximum value. If both `Min` and `Max` are set to `0`, this parameter does not take effect. 
-     * @return Max Maximum value. If both `Min` and `Max` are set to `0`, this parameter does not take effect.
+     * Get Maximum value of a numeric parameter. This item is meaningless for non-numeric parameters or when both Min and Max are 0. 
+     * @return Max Maximum value of a numeric parameter. This item is meaningless for non-numeric parameters or when both Min and Max are 0.
      */
     public Long getMax() {
         return this.Max;
     }
 
     /**
-     * Set Maximum value. If both `Min` and `Max` are set to `0`, this parameter does not take effect.
-     * @param Max Maximum value. If both `Min` and `Max` are set to `0`, this parameter does not take effect.
+     * Set Maximum value of a numeric parameter. This item is meaningless for non-numeric parameters or when both Min and Max are 0.
+     * @param Max Maximum value of a numeric parameter. This item is meaningless for non-numeric parameters or when both Min and Max are 0.
      */
     public void setMax(Long Max) {
         this.Max = Max;
     }
 
     /**
-     * Get Whether multiple values can be selected or entered. 
-     * @return IsMultiple Whether multiple values can be selected or entered.
+     * Get Whether the parameter value supports multi-select or filling in multiple values. 
+     * @return IsMultiple Whether the parameter value supports multi-select or filling in multiple values.
      */
     public Boolean getIsMultiple() {
         return this.IsMultiple;
     }
 
     /**
-     * Set Whether multiple values can be selected or entered.
-     * @param IsMultiple Whether multiple values can be selected or entered.
+     * Set Whether the parameter value supports multi-select or filling in multiple values.
+     * @param IsMultiple Whether the parameter value supports multi-select or filling in multiple values.
      */
     public void setIsMultiple(Boolean IsMultiple) {
         this.IsMultiple = IsMultiple;
     }
 
     /**
-     * Get Whether the parameter can be left empty. 
-     * @return IsAllowEmpty Whether the parameter can be left empty.
+     * Get Allow Empty. 
+     * @return IsAllowEmpty Allow Empty.
      */
     public Boolean getIsAllowEmpty() {
         return this.IsAllowEmpty;
     }
 
     /**
-     * Set Whether the parameter can be left empty.
-     * @param IsAllowEmpty Whether the parameter can be left empty.
+     * Set Allow Empty.
+     * @param IsAllowEmpty Allow Empty.
      */
     public void setIsAllowEmpty(Boolean IsAllowEmpty) {
         this.IsAllowEmpty = IsAllowEmpty;
@@ -221,13 +221,13 @@ Note: If `Type` is `CUSTOM_NUM` or `CUSTOM_STRING`, this parameter will be an em
 
     /**
      * Get Special parameter.
-<li>NULL: Select `NormalAction` for `RuleAction`. </li>
-<li>If the member parameter `Id` is `Action`, select `RewirteAction` for `RuleAction`.</li>
-<li>If the member parameter `Id` is `StatusCode`, select `CodeAction` for `RuleAction`.</li> 
+<li> NULL: select NormalAction for RuleAction;</li>
+<li> The member parameter Id is Action: select RewirteAction for RuleAction;</li>
+<li> The member parameter Id is StatusCode: select CodeAction for RuleAction.</li> 
      * @return ExtraParameter Special parameter.
-<li>NULL: Select `NormalAction` for `RuleAction`. </li>
-<li>If the member parameter `Id` is `Action`, select `RewirteAction` for `RuleAction`.</li>
-<li>If the member parameter `Id` is `StatusCode`, select `CodeAction` for `RuleAction`.</li>
+<li> NULL: select NormalAction for RuleAction;</li>
+<li> The member parameter Id is Action: select RewirteAction for RuleAction;</li>
+<li> The member parameter Id is StatusCode: select CodeAction for RuleAction.</li>
      */
     public RuleExtraParameter getExtraParameter() {
         return this.ExtraParameter;
@@ -235,13 +235,13 @@ Note: If `Type` is `CUSTOM_NUM` or `CUSTOM_STRING`, this parameter will be an em
 
     /**
      * Set Special parameter.
-<li>NULL: Select `NormalAction` for `RuleAction`. </li>
-<li>If the member parameter `Id` is `Action`, select `RewirteAction` for `RuleAction`.</li>
-<li>If the member parameter `Id` is `StatusCode`, select `CodeAction` for `RuleAction`.</li>
+<li> NULL: select NormalAction for RuleAction;</li>
+<li> The member parameter Id is Action: select RewirteAction for RuleAction;</li>
+<li> The member parameter Id is StatusCode: select CodeAction for RuleAction.</li>
      * @param ExtraParameter Special parameter.
-<li>NULL: Select `NormalAction` for `RuleAction`. </li>
-<li>If the member parameter `Id` is `Action`, select `RewirteAction` for `RuleAction`.</li>
-<li>If the member parameter `Id` is `StatusCode`, select `CodeAction` for `RuleAction`.</li>
+<li> NULL: select NormalAction for RuleAction;</li>
+<li> The member parameter Id is Action: select RewirteAction for RuleAction;</li>
+<li> The member parameter Id is StatusCode: select CodeAction for RuleAction.</li>
      */
     public void setExtraParameter(RuleExtraParameter ExtraParameter) {
         this.ExtraParameter = ExtraParameter;

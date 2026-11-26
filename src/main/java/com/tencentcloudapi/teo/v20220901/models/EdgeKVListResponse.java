@@ -31,7 +31,7 @@ public class EdgeKVListResponse extends AbstractModel {
     private String [] Keys;
 
     /**
-    * Cursor position. Indicates current traversal position to obtain next batch data. Fill in this value for the Cursor parameter in the next request to proceed with backward traversal. If it is an empty string, it means all data has been traversed.
+    * Cursor position. Indicates the current traversal position and is used to obtain the next batch of data. Fill in this value in the Cursor parameter of the next request to continue backward traversal. If it is an empty string, all data has been traversed.
 
     */
     @SerializedName("Cursor")
@@ -62,9 +62,9 @@ public class EdgeKVListResponse extends AbstractModel {
     }
 
     /**
-     * Get Cursor position. Indicates current traversal position to obtain next batch data. Fill in this value for the Cursor parameter in the next request to proceed with backward traversal. If it is an empty string, it means all data has been traversed.
+     * Get Cursor position. Indicates the current traversal position and is used to obtain the next batch of data. Fill in this value in the Cursor parameter of the next request to continue backward traversal. If it is an empty string, all data has been traversed.
  
-     * @return Cursor Cursor position. Indicates current traversal position to obtain next batch data. Fill in this value for the Cursor parameter in the next request to proceed with backward traversal. If it is an empty string, it means all data has been traversed.
+     * @return Cursor Cursor position. Indicates the current traversal position and is used to obtain the next batch of data. Fill in this value in the Cursor parameter of the next request to continue backward traversal. If it is an empty string, all data has been traversed.
 
      */
     public String getCursor() {
@@ -72,9 +72,9 @@ public class EdgeKVListResponse extends AbstractModel {
     }
 
     /**
-     * Set Cursor position. Indicates current traversal position to obtain next batch data. Fill in this value for the Cursor parameter in the next request to proceed with backward traversal. If it is an empty string, it means all data has been traversed.
+     * Set Cursor position. Indicates the current traversal position and is used to obtain the next batch of data. Fill in this value in the Cursor parameter of the next request to continue backward traversal. If it is an empty string, all data has been traversed.
 
-     * @param Cursor Cursor position. Indicates current traversal position to obtain next batch data. Fill in this value for the Cursor parameter in the next request to proceed with backward traversal. If it is an empty string, it means all data has been traversed.
+     * @param Cursor Cursor position. Indicates the current traversal position and is used to obtain the next batch of data. Fill in this value in the Cursor parameter of the next request to continue backward traversal. If it is an empty string, all data has been traversed.
 
      */
     public void setCursor(String Cursor) {

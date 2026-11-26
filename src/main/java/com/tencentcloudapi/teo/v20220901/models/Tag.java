@@ -24,56 +24,46 @@ import java.util.HashMap;
 public class Tag extends AbstractModel {
 
     /**
-    * The tag key.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Tag key.
     */
     @SerializedName("TagKey")
     @Expose
     private String TagKey;
 
     /**
-    * The tag value.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Tag value.
     */
     @SerializedName("TagValue")
     @Expose
     private String TagValue;
 
     /**
-     * Get The tag key.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TagKey The tag key.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Tag key. 
+     * @return TagKey Tag key.
      */
     public String getTagKey() {
         return this.TagKey;
     }
 
     /**
-     * Set The tag key.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TagKey The tag key.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Tag key.
+     * @param TagKey Tag key.
      */
     public void setTagKey(String TagKey) {
         this.TagKey = TagKey;
     }
 
     /**
-     * Get The tag value.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TagValue The tag value.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Tag value. 
+     * @return TagValue Tag value.
      */
     public String getTagValue() {
         return this.TagValue;
     }
 
     /**
-     * Set The tag value.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TagValue The tag value.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Tag value.
+     * @param TagValue Tag value.
      */
     public void setTagValue(String TagValue) {
         this.TagValue = TagValue;

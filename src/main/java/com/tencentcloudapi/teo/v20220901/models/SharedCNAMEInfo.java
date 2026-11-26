@@ -24,148 +24,138 @@ import java.util.HashMap;
 public class SharedCNAMEInfo extends AbstractModel {
 
     /**
-    * Shared CNAME type: Value ranges from...to...
-<li>custom: User-created custom shared CNAME</li>
-<li>ip-ssl: Shared CNAME of IP SSL type</li>
+    * <p>Shared CNAME type: value range as follows:</p><li>custom: user-created custom shared CNAME</li><li>ip-ssl: IP SSL shared CNAME</li><li>zero-rating: zero-rating shared CNAME</li><li>preset: pre-configured resource shared CNAME</li>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * Shared CNAME name.
+    * <p>Shared CNAME name.</p>
     */
     @SerializedName("SharedCNAME")
     @Expose
     private String SharedCNAME;
 
     /**
-    * Description.
+    * <p>Description.</p>
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * When type is ip-ssl, show the associated IP SSL configuration message of the shared CNAME.
+    * <p>When type is ip-ssl, show the IP SSL configuration message associated with the shared CNAME.</p>
     */
     @SerializedName("IPSSLConfig")
     @Expose
     private IPSSLConfig IPSSLConfig;
 
     /**
-    * Number of acceleration domain names bound to the shared CNAME.
+    * <p>Number of acceleration domain names bound to the shared CNAME.</p>
     */
     @SerializedName("BindDomainCount")
     @Expose
     private Long BindDomainCount;
 
     /**
-    * List of acceleration domain names added to the shared CNAME. When the number of domains exceeds 100, only return the first 100 acceleration domain names.
+    * <p>List of acceleration domain names added to the shared CNAME. When the number of added domains exceeds 100, only return the first 100 acceleration domain names.</p>
     */
     @SerializedName("AccelerationDomains")
     @Expose
     private ReferenceHolder [] AccelerationDomains;
 
     /**
-     * Get Shared CNAME type: Value ranges from...to...
-<li>custom: User-created custom shared CNAME</li>
-<li>ip-ssl: Shared CNAME of IP SSL type</li> 
-     * @return Type Shared CNAME type: Value ranges from...to...
-<li>custom: User-created custom shared CNAME</li>
-<li>ip-ssl: Shared CNAME of IP SSL type</li>
+     * Get <p>Shared CNAME type: value range as follows:</p><li>custom: user-created custom shared CNAME</li><li>ip-ssl: IP SSL shared CNAME</li><li>zero-rating: zero-rating shared CNAME</li><li>preset: pre-configured resource shared CNAME</li> 
+     * @return Type <p>Shared CNAME type: value range as follows:</p><li>custom: user-created custom shared CNAME</li><li>ip-ssl: IP SSL shared CNAME</li><li>zero-rating: zero-rating shared CNAME</li><li>preset: pre-configured resource shared CNAME</li>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Shared CNAME type: Value ranges from...to...
-<li>custom: User-created custom shared CNAME</li>
-<li>ip-ssl: Shared CNAME of IP SSL type</li>
-     * @param Type Shared CNAME type: Value ranges from...to...
-<li>custom: User-created custom shared CNAME</li>
-<li>ip-ssl: Shared CNAME of IP SSL type</li>
+     * Set <p>Shared CNAME type: value range as follows:</p><li>custom: user-created custom shared CNAME</li><li>ip-ssl: IP SSL shared CNAME</li><li>zero-rating: zero-rating shared CNAME</li><li>preset: pre-configured resource shared CNAME</li>
+     * @param Type <p>Shared CNAME type: value range as follows:</p><li>custom: user-created custom shared CNAME</li><li>ip-ssl: IP SSL shared CNAME</li><li>zero-rating: zero-rating shared CNAME</li><li>preset: pre-configured resource shared CNAME</li>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get Shared CNAME name. 
-     * @return SharedCNAME Shared CNAME name.
+     * Get <p>Shared CNAME name.</p> 
+     * @return SharedCNAME <p>Shared CNAME name.</p>
      */
     public String getSharedCNAME() {
         return this.SharedCNAME;
     }
 
     /**
-     * Set Shared CNAME name.
-     * @param SharedCNAME Shared CNAME name.
+     * Set <p>Shared CNAME name.</p>
+     * @param SharedCNAME <p>Shared CNAME name.</p>
      */
     public void setSharedCNAME(String SharedCNAME) {
         this.SharedCNAME = SharedCNAME;
     }
 
     /**
-     * Get Description. 
-     * @return Description Description.
+     * Get <p>Description.</p> 
+     * @return Description <p>Description.</p>
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set Description.
-     * @param Description Description.
+     * Set <p>Description.</p>
+     * @param Description <p>Description.</p>
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get When type is ip-ssl, show the associated IP SSL configuration message of the shared CNAME. 
-     * @return IPSSLConfig When type is ip-ssl, show the associated IP SSL configuration message of the shared CNAME.
+     * Get <p>When type is ip-ssl, show the IP SSL configuration message associated with the shared CNAME.</p> 
+     * @return IPSSLConfig <p>When type is ip-ssl, show the IP SSL configuration message associated with the shared CNAME.</p>
      */
     public IPSSLConfig getIPSSLConfig() {
         return this.IPSSLConfig;
     }
 
     /**
-     * Set When type is ip-ssl, show the associated IP SSL configuration message of the shared CNAME.
-     * @param IPSSLConfig When type is ip-ssl, show the associated IP SSL configuration message of the shared CNAME.
+     * Set <p>When type is ip-ssl, show the IP SSL configuration message associated with the shared CNAME.</p>
+     * @param IPSSLConfig <p>When type is ip-ssl, show the IP SSL configuration message associated with the shared CNAME.</p>
      */
     public void setIPSSLConfig(IPSSLConfig IPSSLConfig) {
         this.IPSSLConfig = IPSSLConfig;
     }
 
     /**
-     * Get Number of acceleration domain names bound to the shared CNAME. 
-     * @return BindDomainCount Number of acceleration domain names bound to the shared CNAME.
+     * Get <p>Number of acceleration domain names bound to the shared CNAME.</p> 
+     * @return BindDomainCount <p>Number of acceleration domain names bound to the shared CNAME.</p>
      */
     public Long getBindDomainCount() {
         return this.BindDomainCount;
     }
 
     /**
-     * Set Number of acceleration domain names bound to the shared CNAME.
-     * @param BindDomainCount Number of acceleration domain names bound to the shared CNAME.
+     * Set <p>Number of acceleration domain names bound to the shared CNAME.</p>
+     * @param BindDomainCount <p>Number of acceleration domain names bound to the shared CNAME.</p>
      */
     public void setBindDomainCount(Long BindDomainCount) {
         this.BindDomainCount = BindDomainCount;
     }
 
     /**
-     * Get List of acceleration domain names added to the shared CNAME. When the number of domains exceeds 100, only return the first 100 acceleration domain names. 
-     * @return AccelerationDomains List of acceleration domain names added to the shared CNAME. When the number of domains exceeds 100, only return the first 100 acceleration domain names.
+     * Get <p>List of acceleration domain names added to the shared CNAME. When the number of added domains exceeds 100, only return the first 100 acceleration domain names.</p> 
+     * @return AccelerationDomains <p>List of acceleration domain names added to the shared CNAME. When the number of added domains exceeds 100, only return the first 100 acceleration domain names.</p>
      */
     public ReferenceHolder [] getAccelerationDomains() {
         return this.AccelerationDomains;
     }
 
     /**
-     * Set List of acceleration domain names added to the shared CNAME. When the number of domains exceeds 100, only return the first 100 acceleration domain names.
-     * @param AccelerationDomains List of acceleration domain names added to the shared CNAME. When the number of domains exceeds 100, only return the first 100 acceleration domain names.
+     * Set <p>List of acceleration domain names added to the shared CNAME. When the number of added domains exceeds 100, only return the first 100 acceleration domain names.</p>
+     * @param AccelerationDomains <p>List of acceleration domain names added to the shared CNAME. When the number of added domains exceeds 100, only return the first 100 acceleration domain names.</p>
      */
     public void setAccelerationDomains(ReferenceHolder [] AccelerationDomains) {
         this.AccelerationDomains = AccelerationDomains;

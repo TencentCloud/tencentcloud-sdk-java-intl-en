@@ -31,21 +31,21 @@ public class DescribeL4ProxyRulesRequest extends AbstractModel {
     private String ZoneId;
 
     /**
-    * Layer 4 proxy instance ID.
+    * Layer 4 Proxy Instance ID.
     */
     @SerializedName("ProxyId")
     @Expose
     private String ProxyId;
 
     /**
-    * Paginated query offset. Defaults to 0 when not specified.
+    * Offset of paginated query. If left empty, the default value is 0.	
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * Paginated query limit. Default value: 20. Maximum value: 1000.
+    * The limit of paginated query. Default value: 20. Maximum value: 1,000.	
     */
     @SerializedName("Limit")
     @Expose
@@ -75,48 +75,48 @@ public class DescribeL4ProxyRulesRequest extends AbstractModel {
     }
 
     /**
-     * Get Layer 4 proxy instance ID. 
-     * @return ProxyId Layer 4 proxy instance ID.
+     * Get Layer 4 Proxy Instance ID. 
+     * @return ProxyId Layer 4 Proxy Instance ID.
      */
     public String getProxyId() {
         return this.ProxyId;
     }
 
     /**
-     * Set Layer 4 proxy instance ID.
-     * @param ProxyId Layer 4 proxy instance ID.
+     * Set Layer 4 Proxy Instance ID.
+     * @param ProxyId Layer 4 Proxy Instance ID.
      */
     public void setProxyId(String ProxyId) {
         this.ProxyId = ProxyId;
     }
 
     /**
-     * Get Paginated query offset. Defaults to 0 when not specified. 
-     * @return Offset Paginated query offset. Defaults to 0 when not specified.
+     * Get Offset of paginated query. If left empty, the default value is 0.	 
+     * @return Offset Offset of paginated query. If left empty, the default value is 0.	
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Paginated query offset. Defaults to 0 when not specified.
-     * @param Offset Paginated query offset. Defaults to 0 when not specified.
+     * Set Offset of paginated query. If left empty, the default value is 0.	
+     * @param Offset Offset of paginated query. If left empty, the default value is 0.	
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get Paginated query limit. Default value: 20. Maximum value: 1000. 
-     * @return Limit Paginated query limit. Default value: 20. Maximum value: 1000.
+     * Get The limit of paginated query. Default value: 20. Maximum value: 1,000.	 
+     * @return Limit The limit of paginated query. Default value: 20. Maximum value: 1,000.	
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Paginated query limit. Default value: 20. Maximum value: 1000.
-     * @param Limit Paginated query limit. Default value: 20. Maximum value: 1000.
+     * Set The limit of paginated query. Default value: 20. Maximum value: 1,000.	
+     * @param Limit The limit of paginated query. Default value: 20. Maximum value: 1,000.	
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

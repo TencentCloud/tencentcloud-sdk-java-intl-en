@@ -33,7 +33,7 @@ public class CheckRegionHealthStatus extends AbstractModel {
     /**
     * Health status of origin servers in a single health check region. Valid values:
 <li>Healthy: healthy.</li>
-<li>Unhealthy: unhealthy.</li>
+<li>Unhealthy: unhealthy;</li>
 <li>Undetected: no data detected.</li>Note: If all origin servers in a single health check region are healthy, the status is healthy; otherwise, it is unhealthy.
     */
     @SerializedName("Healthy")
@@ -66,11 +66,11 @@ public class CheckRegionHealthStatus extends AbstractModel {
     /**
      * Get Health status of origin servers in a single health check region. Valid values:
 <li>Healthy: healthy.</li>
-<li>Unhealthy: unhealthy.</li>
+<li>Unhealthy: unhealthy;</li>
 <li>Undetected: no data detected.</li>Note: If all origin servers in a single health check region are healthy, the status is healthy; otherwise, it is unhealthy. 
      * @return Healthy Health status of origin servers in a single health check region. Valid values:
 <li>Healthy: healthy.</li>
-<li>Unhealthy: unhealthy.</li>
+<li>Unhealthy: unhealthy;</li>
 <li>Undetected: no data detected.</li>Note: If all origin servers in a single health check region are healthy, the status is healthy; otherwise, it is unhealthy.
      */
     public String getHealthy() {
@@ -80,11 +80,11 @@ public class CheckRegionHealthStatus extends AbstractModel {
     /**
      * Set Health status of origin servers in a single health check region. Valid values:
 <li>Healthy: healthy.</li>
-<li>Unhealthy: unhealthy.</li>
+<li>Unhealthy: unhealthy;</li>
 <li>Undetected: no data detected.</li>Note: If all origin servers in a single health check region are healthy, the status is healthy; otherwise, it is unhealthy.
      * @param Healthy Health status of origin servers in a single health check region. Valid values:
 <li>Healthy: healthy.</li>
-<li>Unhealthy: unhealthy.</li>
+<li>Unhealthy: unhealthy;</li>
 <li>Undetected: no data detected.</li>Note: If all origin servers in a single health check region are healthy, the status is healthy; otherwise, it is unhealthy.
      */
     public void setHealthy(String Healthy) {

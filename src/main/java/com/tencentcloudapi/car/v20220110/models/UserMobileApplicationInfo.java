@@ -24,187 +24,210 @@ import java.util.HashMap;
 public class UserMobileApplicationInfo extends AbstractModel {
 
     /**
-    * Application ID.
+    * <p>Application Id</p>
     */
     @SerializedName("ApplicationId")
     @Expose
     private String ApplicationId;
 
     /**
-    * Application name.
+    * <p>Application name</p>
     */
     @SerializedName("ApplicationName")
     @Expose
     private String ApplicationName;
 
     /**
-    * Application type (cloud APK: application APK).
+    * <p>App type (Cloud APK: ApplicationAPK)</p>
     */
     @SerializedName("ApplicationType")
     @Expose
     private String ApplicationType;
 
     /**
-    * Application running status (ApplicationRunning: normal running; ApplicationNoPackage: no available package).
+    * <p>Application running status (ApplicationRunning: normal running; ApplicationNoPackage: no available package)</p>
     */
     @SerializedName("ApplicationRunStatus")
     @Expose
     private String ApplicationRunStatus;
 
     /**
-    * Application update status (ApplicationUpdateCreating: version creation in progress; ApplicationUpdateCreateFail: version creation failed; ApplicationUpdateNoReleased: version to be released; ApplicationUpdateReleased: version release completed; ApplicationUpdateNormal: none).
+    * <p>Application update status (ApplicationUpdateCreating: version creation in progress; ApplicationUpdateCreateFail: version creation failed; ApplicationUpdateNoReleased: version to be released; ApplicationUpdateReleased: version release completed; ApplicationUpdateNormal: none)</p>
     */
     @SerializedName("ApplicationUpdateStatus")
     @Expose
     private String ApplicationUpdateStatus;
 
     /**
-    * Application creation time.
+    * <p>Application creation time</p>
     */
     @SerializedName("ApplicationCreateTime")
     @Expose
     private String ApplicationCreateTime;
 
     /**
-    * List of application versions.
+    * <p>Application version list</p>
     */
     @SerializedName("ApplicationVersions")
     @Expose
     private UserApplicationVersion [] ApplicationVersions;
 
     /**
-    * Application nature (PUBLIC: public application; PRIVATE: user application).
+    * <p>Application nature (PUBLIC: public application; PRIVATE: user application)</p>
     */
     @SerializedName("ApplicationNature")
     @Expose
     private String ApplicationNature;
 
     /**
-     * Get Application ID. 
-     * @return ApplicationId Application ID.
+    * <p>Application tag</p>
+    */
+    @SerializedName("ApplicationTags")
+    @Expose
+    private Tag [] ApplicationTags;
+
+    /**
+     * Get <p>Application Id</p> 
+     * @return ApplicationId <p>Application Id</p>
      */
     public String getApplicationId() {
         return this.ApplicationId;
     }
 
     /**
-     * Set Application ID.
-     * @param ApplicationId Application ID.
+     * Set <p>Application Id</p>
+     * @param ApplicationId <p>Application Id</p>
      */
     public void setApplicationId(String ApplicationId) {
         this.ApplicationId = ApplicationId;
     }
 
     /**
-     * Get Application name. 
-     * @return ApplicationName Application name.
+     * Get <p>Application name</p> 
+     * @return ApplicationName <p>Application name</p>
      */
     public String getApplicationName() {
         return this.ApplicationName;
     }
 
     /**
-     * Set Application name.
-     * @param ApplicationName Application name.
+     * Set <p>Application name</p>
+     * @param ApplicationName <p>Application name</p>
      */
     public void setApplicationName(String ApplicationName) {
         this.ApplicationName = ApplicationName;
     }
 
     /**
-     * Get Application type (cloud APK: application APK). 
-     * @return ApplicationType Application type (cloud APK: application APK).
+     * Get <p>App type (Cloud APK: ApplicationAPK)</p> 
+     * @return ApplicationType <p>App type (Cloud APK: ApplicationAPK)</p>
      */
     public String getApplicationType() {
         return this.ApplicationType;
     }
 
     /**
-     * Set Application type (cloud APK: application APK).
-     * @param ApplicationType Application type (cloud APK: application APK).
+     * Set <p>App type (Cloud APK: ApplicationAPK)</p>
+     * @param ApplicationType <p>App type (Cloud APK: ApplicationAPK)</p>
      */
     public void setApplicationType(String ApplicationType) {
         this.ApplicationType = ApplicationType;
     }
 
     /**
-     * Get Application running status (ApplicationRunning: normal running; ApplicationNoPackage: no available package). 
-     * @return ApplicationRunStatus Application running status (ApplicationRunning: normal running; ApplicationNoPackage: no available package).
+     * Get <p>Application running status (ApplicationRunning: normal running; ApplicationNoPackage: no available package)</p> 
+     * @return ApplicationRunStatus <p>Application running status (ApplicationRunning: normal running; ApplicationNoPackage: no available package)</p>
      */
     public String getApplicationRunStatus() {
         return this.ApplicationRunStatus;
     }
 
     /**
-     * Set Application running status (ApplicationRunning: normal running; ApplicationNoPackage: no available package).
-     * @param ApplicationRunStatus Application running status (ApplicationRunning: normal running; ApplicationNoPackage: no available package).
+     * Set <p>Application running status (ApplicationRunning: normal running; ApplicationNoPackage: no available package)</p>
+     * @param ApplicationRunStatus <p>Application running status (ApplicationRunning: normal running; ApplicationNoPackage: no available package)</p>
      */
     public void setApplicationRunStatus(String ApplicationRunStatus) {
         this.ApplicationRunStatus = ApplicationRunStatus;
     }
 
     /**
-     * Get Application update status (ApplicationUpdateCreating: version creation in progress; ApplicationUpdateCreateFail: version creation failed; ApplicationUpdateNoReleased: version to be released; ApplicationUpdateReleased: version release completed; ApplicationUpdateNormal: none). 
-     * @return ApplicationUpdateStatus Application update status (ApplicationUpdateCreating: version creation in progress; ApplicationUpdateCreateFail: version creation failed; ApplicationUpdateNoReleased: version to be released; ApplicationUpdateReleased: version release completed; ApplicationUpdateNormal: none).
+     * Get <p>Application update status (ApplicationUpdateCreating: version creation in progress; ApplicationUpdateCreateFail: version creation failed; ApplicationUpdateNoReleased: version to be released; ApplicationUpdateReleased: version release completed; ApplicationUpdateNormal: none)</p> 
+     * @return ApplicationUpdateStatus <p>Application update status (ApplicationUpdateCreating: version creation in progress; ApplicationUpdateCreateFail: version creation failed; ApplicationUpdateNoReleased: version to be released; ApplicationUpdateReleased: version release completed; ApplicationUpdateNormal: none)</p>
      */
     public String getApplicationUpdateStatus() {
         return this.ApplicationUpdateStatus;
     }
 
     /**
-     * Set Application update status (ApplicationUpdateCreating: version creation in progress; ApplicationUpdateCreateFail: version creation failed; ApplicationUpdateNoReleased: version to be released; ApplicationUpdateReleased: version release completed; ApplicationUpdateNormal: none).
-     * @param ApplicationUpdateStatus Application update status (ApplicationUpdateCreating: version creation in progress; ApplicationUpdateCreateFail: version creation failed; ApplicationUpdateNoReleased: version to be released; ApplicationUpdateReleased: version release completed; ApplicationUpdateNormal: none).
+     * Set <p>Application update status (ApplicationUpdateCreating: version creation in progress; ApplicationUpdateCreateFail: version creation failed; ApplicationUpdateNoReleased: version to be released; ApplicationUpdateReleased: version release completed; ApplicationUpdateNormal: none)</p>
+     * @param ApplicationUpdateStatus <p>Application update status (ApplicationUpdateCreating: version creation in progress; ApplicationUpdateCreateFail: version creation failed; ApplicationUpdateNoReleased: version to be released; ApplicationUpdateReleased: version release completed; ApplicationUpdateNormal: none)</p>
      */
     public void setApplicationUpdateStatus(String ApplicationUpdateStatus) {
         this.ApplicationUpdateStatus = ApplicationUpdateStatus;
     }
 
     /**
-     * Get Application creation time. 
-     * @return ApplicationCreateTime Application creation time.
+     * Get <p>Application creation time</p> 
+     * @return ApplicationCreateTime <p>Application creation time</p>
      */
     public String getApplicationCreateTime() {
         return this.ApplicationCreateTime;
     }
 
     /**
-     * Set Application creation time.
-     * @param ApplicationCreateTime Application creation time.
+     * Set <p>Application creation time</p>
+     * @param ApplicationCreateTime <p>Application creation time</p>
      */
     public void setApplicationCreateTime(String ApplicationCreateTime) {
         this.ApplicationCreateTime = ApplicationCreateTime;
     }
 
     /**
-     * Get List of application versions. 
-     * @return ApplicationVersions List of application versions.
+     * Get <p>Application version list</p> 
+     * @return ApplicationVersions <p>Application version list</p>
      */
     public UserApplicationVersion [] getApplicationVersions() {
         return this.ApplicationVersions;
     }
 
     /**
-     * Set List of application versions.
-     * @param ApplicationVersions List of application versions.
+     * Set <p>Application version list</p>
+     * @param ApplicationVersions <p>Application version list</p>
      */
     public void setApplicationVersions(UserApplicationVersion [] ApplicationVersions) {
         this.ApplicationVersions = ApplicationVersions;
     }
 
     /**
-     * Get Application nature (PUBLIC: public application; PRIVATE: user application). 
-     * @return ApplicationNature Application nature (PUBLIC: public application; PRIVATE: user application).
+     * Get <p>Application nature (PUBLIC: public application; PRIVATE: user application)</p> 
+     * @return ApplicationNature <p>Application nature (PUBLIC: public application; PRIVATE: user application)</p>
      */
     public String getApplicationNature() {
         return this.ApplicationNature;
     }
 
     /**
-     * Set Application nature (PUBLIC: public application; PRIVATE: user application).
-     * @param ApplicationNature Application nature (PUBLIC: public application; PRIVATE: user application).
+     * Set <p>Application nature (PUBLIC: public application; PRIVATE: user application)</p>
+     * @param ApplicationNature <p>Application nature (PUBLIC: public application; PRIVATE: user application)</p>
      */
     public void setApplicationNature(String ApplicationNature) {
         this.ApplicationNature = ApplicationNature;
+    }
+
+    /**
+     * Get <p>Application tag</p> 
+     * @return ApplicationTags <p>Application tag</p>
+     */
+    public Tag [] getApplicationTags() {
+        return this.ApplicationTags;
+    }
+
+    /**
+     * Set <p>Application tag</p>
+     * @param ApplicationTags <p>Application tag</p>
+     */
+    public void setApplicationTags(Tag [] ApplicationTags) {
+        this.ApplicationTags = ApplicationTags;
     }
 
     public UserMobileApplicationInfo() {
@@ -242,6 +265,12 @@ public class UserMobileApplicationInfo extends AbstractModel {
         if (source.ApplicationNature != null) {
             this.ApplicationNature = new String(source.ApplicationNature);
         }
+        if (source.ApplicationTags != null) {
+            this.ApplicationTags = new Tag[source.ApplicationTags.length];
+            for (int i = 0; i < source.ApplicationTags.length; i++) {
+                this.ApplicationTags[i] = new Tag(source.ApplicationTags[i]);
+            }
+        }
     }
 
 
@@ -257,6 +286,7 @@ public class UserMobileApplicationInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "ApplicationCreateTime", this.ApplicationCreateTime);
         this.setParamArrayObj(map, prefix + "ApplicationVersions.", this.ApplicationVersions);
         this.setParamSimple(map, prefix + "ApplicationNature", this.ApplicationNature);
+        this.setParamArrayObj(map, prefix + "ApplicationTags.", this.ApplicationTags);
 
     }
 }

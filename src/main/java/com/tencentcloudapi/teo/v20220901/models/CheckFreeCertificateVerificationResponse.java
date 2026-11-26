@@ -24,22 +24,22 @@ import java.util.HashMap;
 public class CheckFreeCertificateVerificationResponse extends AbstractModel {
 
     /**
-    * Specifies the domain name to which the certificate is issued when the free certificate application succeeds.
-Note: only one free certificate can be applied for a domain name. if a wildcard certificate has been applied for the domain name, its subdomains will use the wildcard certificate.
+    * Domain name to which the certificate is issued when the free certificate application succeeds.
+Note: A domain name can only be used to apply for one free certificate. If a free certificate has already been applied for a wildcard domain, its subdomains will match and use the wildcard certificate.
     */
     @SerializedName("CommonName")
     @Expose
     private String CommonName;
 
     /**
-    * Specifies the signature algorithm used by the certificate when the free certificate application succeeds. currently only support RSA 2048.
+    * Signature algorithm used by the free certificate when the application succeeds. Currently only support RSA 2048.
     */
     @SerializedName("SignatureAlgorithm")
     @Expose
     private String SignatureAlgorithm;
 
     /**
-    * Expiration time of the certificate when the free certificate application is successful. the time is in coordinated universal time (UTC), following the ISO 8601 standard date and time format.
+    * Expiration time of the certificate after a free certificate application succeeds. The time is in Coordinated Universal Time (UTC), following the ISO 8601 date and time format.
     */
     @SerializedName("ExpireTime")
     @Expose
@@ -53,52 +53,52 @@ Note: only one free certificate can be applied for a domain name. if a wildcard 
     private String RequestId;
 
     /**
-     * Get Specifies the domain name to which the certificate is issued when the free certificate application succeeds.
-Note: only one free certificate can be applied for a domain name. if a wildcard certificate has been applied for the domain name, its subdomains will use the wildcard certificate. 
-     * @return CommonName Specifies the domain name to which the certificate is issued when the free certificate application succeeds.
-Note: only one free certificate can be applied for a domain name. if a wildcard certificate has been applied for the domain name, its subdomains will use the wildcard certificate.
+     * Get Domain name to which the certificate is issued when the free certificate application succeeds.
+Note: A domain name can only be used to apply for one free certificate. If a free certificate has already been applied for a wildcard domain, its subdomains will match and use the wildcard certificate. 
+     * @return CommonName Domain name to which the certificate is issued when the free certificate application succeeds.
+Note: A domain name can only be used to apply for one free certificate. If a free certificate has already been applied for a wildcard domain, its subdomains will match and use the wildcard certificate.
      */
     public String getCommonName() {
         return this.CommonName;
     }
 
     /**
-     * Set Specifies the domain name to which the certificate is issued when the free certificate application succeeds.
-Note: only one free certificate can be applied for a domain name. if a wildcard certificate has been applied for the domain name, its subdomains will use the wildcard certificate.
-     * @param CommonName Specifies the domain name to which the certificate is issued when the free certificate application succeeds.
-Note: only one free certificate can be applied for a domain name. if a wildcard certificate has been applied for the domain name, its subdomains will use the wildcard certificate.
+     * Set Domain name to which the certificate is issued when the free certificate application succeeds.
+Note: A domain name can only be used to apply for one free certificate. If a free certificate has already been applied for a wildcard domain, its subdomains will match and use the wildcard certificate.
+     * @param CommonName Domain name to which the certificate is issued when the free certificate application succeeds.
+Note: A domain name can only be used to apply for one free certificate. If a free certificate has already been applied for a wildcard domain, its subdomains will match and use the wildcard certificate.
      */
     public void setCommonName(String CommonName) {
         this.CommonName = CommonName;
     }
 
     /**
-     * Get Specifies the signature algorithm used by the certificate when the free certificate application succeeds. currently only support RSA 2048. 
-     * @return SignatureAlgorithm Specifies the signature algorithm used by the certificate when the free certificate application succeeds. currently only support RSA 2048.
+     * Get Signature algorithm used by the free certificate when the application succeeds. Currently only support RSA 2048. 
+     * @return SignatureAlgorithm Signature algorithm used by the free certificate when the application succeeds. Currently only support RSA 2048.
      */
     public String getSignatureAlgorithm() {
         return this.SignatureAlgorithm;
     }
 
     /**
-     * Set Specifies the signature algorithm used by the certificate when the free certificate application succeeds. currently only support RSA 2048.
-     * @param SignatureAlgorithm Specifies the signature algorithm used by the certificate when the free certificate application succeeds. currently only support RSA 2048.
+     * Set Signature algorithm used by the free certificate when the application succeeds. Currently only support RSA 2048.
+     * @param SignatureAlgorithm Signature algorithm used by the free certificate when the application succeeds. Currently only support RSA 2048.
      */
     public void setSignatureAlgorithm(String SignatureAlgorithm) {
         this.SignatureAlgorithm = SignatureAlgorithm;
     }
 
     /**
-     * Get Expiration time of the certificate when the free certificate application is successful. the time is in coordinated universal time (UTC), following the ISO 8601 standard date and time format. 
-     * @return ExpireTime Expiration time of the certificate when the free certificate application is successful. the time is in coordinated universal time (UTC), following the ISO 8601 standard date and time format.
+     * Get Expiration time of the certificate after a free certificate application succeeds. The time is in Coordinated Universal Time (UTC), following the ISO 8601 date and time format. 
+     * @return ExpireTime Expiration time of the certificate after a free certificate application succeeds. The time is in Coordinated Universal Time (UTC), following the ISO 8601 date and time format.
      */
     public String getExpireTime() {
         return this.ExpireTime;
     }
 
     /**
-     * Set Expiration time of the certificate when the free certificate application is successful. the time is in coordinated universal time (UTC), following the ISO 8601 standard date and time format.
-     * @param ExpireTime Expiration time of the certificate when the free certificate application is successful. the time is in coordinated universal time (UTC), following the ISO 8601 standard date and time format.
+     * Set Expiration time of the certificate after a free certificate application succeeds. The time is in Coordinated Universal Time (UTC), following the ISO 8601 date and time format.
+     * @param ExpireTime Expiration time of the certificate after a free certificate application succeeds. The time is in Coordinated Universal Time (UTC), following the ISO 8601 date and time format.
      */
     public void setExpireTime(String ExpireTime) {
         this.ExpireTime = ExpireTime;

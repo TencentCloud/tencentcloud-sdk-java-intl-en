@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DeleteContentIdentifierRequest extends AbstractModel {
 
     /**
-    * Content identifier id.
+    * Content identifier ID.
     */
     @SerializedName("ContentId")
     @Expose
     private String ContentId;
 
     /**
-     * Get Content identifier id. 
-     * @return ContentId Content identifier id.
+     * Get Content identifier ID. 
+     * @return ContentId Content identifier ID.
      */
     public String getContentId() {
         return this.ContentId;
     }
 
     /**
-     * Set Content identifier id.
-     * @param ContentId Content identifier id.
+     * Set Content identifier ID.
+     * @param ContentId Content identifier ID.
      */
     public void setContentId(String ContentId) {
         this.ContentId = ContentId;

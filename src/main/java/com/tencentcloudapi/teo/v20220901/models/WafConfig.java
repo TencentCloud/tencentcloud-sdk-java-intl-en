@@ -24,160 +24,160 @@ import java.util.HashMap;
 public class WafConfig extends AbstractModel {
 
     /**
-    * Whether to enable WAF configuration. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>The configuration can be modified even when it is disabled.
+    * WafConfig switch. Valid values:
+<li>on: Enable;</li>
+<li> off: disabled.</li>The switch only affects whether the configuration takes effect. Even if it is off, the configuration content can still be modified normally.
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * The protection level. Values:
-<li>`loose`: Loose</li>
-<li>`normal`: Moderate</li>
-<li>`strict`: Strict</li>
-<li>`stricter`: Super strict</li>
-<li>`custom`: Custom</li>
+    * Protection level set last time. Valid values:
+<li> loose: loose;</li>
+<li> normal: Normal;</li>
+<li> strict: strict;</li>
+<li>stricter: ultra-strict;</li>
+<li> custom: Custom.</li>
     */
     @SerializedName("Level")
     @Expose
     private String Level;
 
     /**
-    * The WAF global mode. Values:
-<li>`block`: Block globally</li>
-<li>`observe`: Observe globally</li>
+    * Global WAF mode. Valid values:
+<li> block: block (global blocking, but you can configure rules to observe);</li>
+<li> observe: observation (regardless of the detailed rule configuration, it is always observation).</li>
     */
     @SerializedName("Mode")
     @Expose
     private String Mode;
 
     /**
-    * The settings of the managed rule. If it is null, the settings that were last configured will be used.
+    * Detailed configuration of the managed rule. If null, use the last set configuration by default.
     */
     @SerializedName("WafRule")
     @Expose
     private WafRule WafRule;
 
     /**
-    * The setting of the AI rule engine. If it is null, the setting that was last configured will be used.
+    * Protection configuration of the AI rule engine. If it is null, use the last set configuration by default.
     */
     @SerializedName("AiRule")
     @Expose
     private AiRule AiRule;
 
     /**
-     * Get Whether to enable WAF configuration. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>The configuration can be modified even when it is disabled. 
-     * @return Switch Whether to enable WAF configuration. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>The configuration can be modified even when it is disabled.
+     * Get WafConfig switch. Valid values:
+<li>on: Enable;</li>
+<li> off: disabled.</li>The switch only affects whether the configuration takes effect. Even if it is off, the configuration content can still be modified normally. 
+     * @return Switch WafConfig switch. Valid values:
+<li>on: Enable;</li>
+<li> off: disabled.</li>The switch only affects whether the configuration takes effect. Even if it is off, the configuration content can still be modified normally.
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set Whether to enable WAF configuration. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>The configuration can be modified even when it is disabled.
-     * @param Switch Whether to enable WAF configuration. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>The configuration can be modified even when it is disabled.
+     * Set WafConfig switch. Valid values:
+<li>on: Enable;</li>
+<li> off: disabled.</li>The switch only affects whether the configuration takes effect. Even if it is off, the configuration content can still be modified normally.
+     * @param Switch WafConfig switch. Valid values:
+<li>on: Enable;</li>
+<li> off: disabled.</li>The switch only affects whether the configuration takes effect. Even if it is off, the configuration content can still be modified normally.
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get The protection level. Values:
-<li>`loose`: Loose</li>
-<li>`normal`: Moderate</li>
-<li>`strict`: Strict</li>
-<li>`stricter`: Super strict</li>
-<li>`custom`: Custom</li> 
-     * @return Level The protection level. Values:
-<li>`loose`: Loose</li>
-<li>`normal`: Moderate</li>
-<li>`strict`: Strict</li>
-<li>`stricter`: Super strict</li>
-<li>`custom`: Custom</li>
+     * Get Protection level set last time. Valid values:
+<li> loose: loose;</li>
+<li> normal: Normal;</li>
+<li> strict: strict;</li>
+<li>stricter: ultra-strict;</li>
+<li> custom: Custom.</li> 
+     * @return Level Protection level set last time. Valid values:
+<li> loose: loose;</li>
+<li> normal: Normal;</li>
+<li> strict: strict;</li>
+<li>stricter: ultra-strict;</li>
+<li> custom: Custom.</li>
      */
     public String getLevel() {
         return this.Level;
     }
 
     /**
-     * Set The protection level. Values:
-<li>`loose`: Loose</li>
-<li>`normal`: Moderate</li>
-<li>`strict`: Strict</li>
-<li>`stricter`: Super strict</li>
-<li>`custom`: Custom</li>
-     * @param Level The protection level. Values:
-<li>`loose`: Loose</li>
-<li>`normal`: Moderate</li>
-<li>`strict`: Strict</li>
-<li>`stricter`: Super strict</li>
-<li>`custom`: Custom</li>
+     * Set Protection level set last time. Valid values:
+<li> loose: loose;</li>
+<li> normal: Normal;</li>
+<li> strict: strict;</li>
+<li>stricter: ultra-strict;</li>
+<li> custom: Custom.</li>
+     * @param Level Protection level set last time. Valid values:
+<li> loose: loose;</li>
+<li> normal: Normal;</li>
+<li> strict: strict;</li>
+<li>stricter: ultra-strict;</li>
+<li> custom: Custom.</li>
      */
     public void setLevel(String Level) {
         this.Level = Level;
     }
 
     /**
-     * Get The WAF global mode. Values:
-<li>`block`: Block globally</li>
-<li>`observe`: Observe globally</li> 
-     * @return Mode The WAF global mode. Values:
-<li>`block`: Block globally</li>
-<li>`observe`: Observe globally</li>
+     * Get Global WAF mode. Valid values:
+<li> block: block (global blocking, but you can configure rules to observe);</li>
+<li> observe: observation (regardless of the detailed rule configuration, it is always observation).</li> 
+     * @return Mode Global WAF mode. Valid values:
+<li> block: block (global blocking, but you can configure rules to observe);</li>
+<li> observe: observation (regardless of the detailed rule configuration, it is always observation).</li>
      */
     public String getMode() {
         return this.Mode;
     }
 
     /**
-     * Set The WAF global mode. Values:
-<li>`block`: Block globally</li>
-<li>`observe`: Observe globally</li>
-     * @param Mode The WAF global mode. Values:
-<li>`block`: Block globally</li>
-<li>`observe`: Observe globally</li>
+     * Set Global WAF mode. Valid values:
+<li> block: block (global blocking, but you can configure rules to observe);</li>
+<li> observe: observation (regardless of the detailed rule configuration, it is always observation).</li>
+     * @param Mode Global WAF mode. Valid values:
+<li> block: block (global blocking, but you can configure rules to observe);</li>
+<li> observe: observation (regardless of the detailed rule configuration, it is always observation).</li>
      */
     public void setMode(String Mode) {
         this.Mode = Mode;
     }
 
     /**
-     * Get The settings of the managed rule. If it is null, the settings that were last configured will be used. 
-     * @return WafRule The settings of the managed rule. If it is null, the settings that were last configured will be used.
+     * Get Detailed configuration of the managed rule. If null, use the last set configuration by default. 
+     * @return WafRule Detailed configuration of the managed rule. If null, use the last set configuration by default.
      */
     public WafRule getWafRule() {
         return this.WafRule;
     }
 
     /**
-     * Set The settings of the managed rule. If it is null, the settings that were last configured will be used.
-     * @param WafRule The settings of the managed rule. If it is null, the settings that were last configured will be used.
+     * Set Detailed configuration of the managed rule. If null, use the last set configuration by default.
+     * @param WafRule Detailed configuration of the managed rule. If null, use the last set configuration by default.
      */
     public void setWafRule(WafRule WafRule) {
         this.WafRule = WafRule;
     }
 
     /**
-     * Get The setting of the AI rule engine. If it is null, the setting that was last configured will be used. 
-     * @return AiRule The setting of the AI rule engine. If it is null, the setting that was last configured will be used.
+     * Get Protection configuration of the AI rule engine. If it is null, use the last set configuration by default. 
+     * @return AiRule Protection configuration of the AI rule engine. If it is null, use the last set configuration by default.
      */
     public AiRule getAiRule() {
         return this.AiRule;
     }
 
     /**
-     * Set The setting of the AI rule engine. If it is null, the setting that was last configured will be used.
-     * @param AiRule The setting of the AI rule engine. If it is null, the setting that was last configured will be used.
+     * Set Protection configuration of the AI rule engine. If it is null, use the last set configuration by default.
+     * @param AiRule Protection configuration of the AI rule engine. If it is null, use the last set configuration by default.
      */
     public void setAiRule(AiRule AiRule) {
         this.AiRule = AiRule;

@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class DeleteAliasDomainRequest extends AbstractModel {
 
     /**
-    * The site ID.
+    * Zone ID.
     */
     @SerializedName("ZoneId")
     @Expose
     private String ZoneId;
 
     /**
-    * The alias domain name to be deleted. If it is left empty, the delete operation is not performed.
+    * Alias domain name pending deletion. If it is empty, no deletion operation is performed.
     */
     @SerializedName("AliasNames")
     @Expose
     private String [] AliasNames;
 
     /**
-     * Get The site ID. 
-     * @return ZoneId The site ID.
+     * Get Zone ID. 
+     * @return ZoneId Zone ID.
      */
     public String getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set The site ID.
-     * @param ZoneId The site ID.
+     * Set Zone ID.
+     * @param ZoneId Zone ID.
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get The alias domain name to be deleted. If it is left empty, the delete operation is not performed. 
-     * @return AliasNames The alias domain name to be deleted. If it is left empty, the delete operation is not performed.
+     * Get Alias domain name pending deletion. If it is empty, no deletion operation is performed. 
+     * @return AliasNames Alias domain name pending deletion. If it is empty, no deletion operation is performed.
      */
     public String [] getAliasNames() {
         return this.AliasNames;
     }
 
     /**
-     * Set The alias domain name to be deleted. If it is left empty, the delete operation is not performed.
-     * @param AliasNames The alias domain name to be deleted. If it is left empty, the delete operation is not performed.
+     * Set Alias domain name pending deletion. If it is empty, no deletion operation is performed.
+     * @param AliasNames Alias domain name pending deletion. If it is empty, no deletion operation is performed.
      */
     public void setAliasNames(String [] AliasNames) {
         this.AliasNames = AliasNames;

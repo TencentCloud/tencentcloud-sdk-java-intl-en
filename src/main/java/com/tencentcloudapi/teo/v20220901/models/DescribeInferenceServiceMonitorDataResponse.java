@@ -31,7 +31,7 @@ public class DescribeInferenceServiceMonitorDataResponse extends AbstractModel {
     private Long TotalCount;
 
     /**
-    * <p>Service monitoring data for reasoning.</p>
+    * <p>Reasoning service monitoring data.</p>
     */
     @SerializedName("InferenceServiceMonitorRecords")
     @Expose
@@ -61,16 +61,16 @@ public class DescribeInferenceServiceMonitorDataResponse extends AbstractModel {
     }
 
     /**
-     * Get <p>Service monitoring data for reasoning.</p> 
-     * @return InferenceServiceMonitorRecords <p>Service monitoring data for reasoning.</p>
+     * Get <p>Reasoning service monitoring data.</p> 
+     * @return InferenceServiceMonitorRecords <p>Reasoning service monitoring data.</p>
      */
     public InferenceServiceMonitorRecord [] getInferenceServiceMonitorRecords() {
         return this.InferenceServiceMonitorRecords;
     }
 
     /**
-     * Set <p>Service monitoring data for reasoning.</p>
-     * @param InferenceServiceMonitorRecords <p>Service monitoring data for reasoning.</p>
+     * Set <p>Reasoning service monitoring data.</p>
+     * @param InferenceServiceMonitorRecords <p>Reasoning service monitoring data.</p>
      */
     public void setInferenceServiceMonitorRecords(InferenceServiceMonitorRecord [] InferenceServiceMonitorRecords) {
         this.InferenceServiceMonitorRecords = InferenceServiceMonitorRecords;

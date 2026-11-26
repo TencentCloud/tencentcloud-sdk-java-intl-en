@@ -31,46 +31,46 @@ public class ModifyMultiPathGatewayLineRequest extends AbstractModel {
     private String ZoneId;
 
     /**
-    * Multi-Channel security acceleration gateway ID.
+    * Multi-channel security acceleration gateway ID.
     */
     @SerializedName("GatewayId")
     @Expose
     private String GatewayId;
 
     /**
-    * Line ID. valid values:
-<Li>Line-1: EdgeOne layer-4 proxy line. Supports modifying instances and rules, but does not support deletion.  </li>
-<li<li>line-2 and above: EdgeOne layer-4 proxy lines or custom lines, supports modifying, deleting instances and rules.</li> 
+    * Line ID. Valid values:
+<li> line-1: EdgeOne Layer 4 proxy line. It supports modifying instances and rules, but deletion is not supported;</li>
+<li> line-2 or higher: EdgeOne Layer 4 proxy lines or custom lines. Modification and deletion of instances and rules are supported.</li>
     */
     @SerializedName("LineId")
     @Expose
     private String LineId;
 
     /**
-    * Line type. valid values:.
-<li>proxy: EdgeOne layer-4 proxy line, supports modifying instances and rules, but deletion is not supported.</li>.
-<Li>custom: Custom line.Supports editing, deleting instances and rules. 
+    * Line type. Valid values: 
+<li>proxy: EdgeOne Layer 4 proxy route. Supports modifying instances and rules. Deletion is not supported;</li> 
+<li>custom: custom lines, support editing, deletion of instances, and rules.</li>
     */
     @SerializedName("LineType")
     @Expose
     private String LineType;
 
     /**
-    * Line address, formatted as host:port. Direct lines (LineType value is direct) cannot be modified, while other types support modifications.
+    * Line address in the format of host:port. Direct-access lines (LineType value is direct) are not allowed to be modified. Modification is supported for other types.
     */
     @SerializedName("LineAddress")
     @Expose
     private String LineAddress;
 
     /**
-    * Layer-4 proxy instance ID. when the line type value is proxy (EdgeOne layer-4 proxy),  it allows modifications to the instance.
+    * Layer 4 Proxy Instance ID. This can be input when the line type LineType value is proxy (EdgeOne Layer 4 proxy) for modification.
     */
     @SerializedName("ProxyId")
     @Expose
     private String ProxyId;
 
     /**
-    * Forwarding rule ID. when the line type  value is proxy (EdgeOne layer-4 proxy), it allows input to modify.
+    * Forwarding rule ID. It can be passed in when the line type LineType is proxy (EdgeOne Layer 4 proxy) for modification.
     */
     @SerializedName("RuleId")
     @Expose
@@ -93,112 +93,112 @@ public class ModifyMultiPathGatewayLineRequest extends AbstractModel {
     }
 
     /**
-     * Get Multi-Channel security acceleration gateway ID. 
-     * @return GatewayId Multi-Channel security acceleration gateway ID.
+     * Get Multi-channel security acceleration gateway ID. 
+     * @return GatewayId Multi-channel security acceleration gateway ID.
      */
     public String getGatewayId() {
         return this.GatewayId;
     }
 
     /**
-     * Set Multi-Channel security acceleration gateway ID.
-     * @param GatewayId Multi-Channel security acceleration gateway ID.
+     * Set Multi-channel security acceleration gateway ID.
+     * @param GatewayId Multi-channel security acceleration gateway ID.
      */
     public void setGatewayId(String GatewayId) {
         this.GatewayId = GatewayId;
     }
 
     /**
-     * Get Line ID. valid values:
-<Li>Line-1: EdgeOne layer-4 proxy line. Supports modifying instances and rules, but does not support deletion.  </li>
-<li<li>line-2 and above: EdgeOne layer-4 proxy lines or custom lines, supports modifying, deleting instances and rules.</li>  
-     * @return LineId Line ID. valid values:
-<Li>Line-1: EdgeOne layer-4 proxy line. Supports modifying instances and rules, but does not support deletion.  </li>
-<li<li>line-2 and above: EdgeOne layer-4 proxy lines or custom lines, supports modifying, deleting instances and rules.</li> 
+     * Get Line ID. Valid values:
+<li> line-1: EdgeOne Layer 4 proxy line. It supports modifying instances and rules, but deletion is not supported;</li>
+<li> line-2 or higher: EdgeOne Layer 4 proxy lines or custom lines. Modification and deletion of instances and rules are supported.</li> 
+     * @return LineId Line ID. Valid values:
+<li> line-1: EdgeOne Layer 4 proxy line. It supports modifying instances and rules, but deletion is not supported;</li>
+<li> line-2 or higher: EdgeOne Layer 4 proxy lines or custom lines. Modification and deletion of instances and rules are supported.</li>
      */
     public String getLineId() {
         return this.LineId;
     }
 
     /**
-     * Set Line ID. valid values:
-<Li>Line-1: EdgeOne layer-4 proxy line. Supports modifying instances and rules, but does not support deletion.  </li>
-<li<li>line-2 and above: EdgeOne layer-4 proxy lines or custom lines, supports modifying, deleting instances and rules.</li> 
-     * @param LineId Line ID. valid values:
-<Li>Line-1: EdgeOne layer-4 proxy line. Supports modifying instances and rules, but does not support deletion.  </li>
-<li<li>line-2 and above: EdgeOne layer-4 proxy lines or custom lines, supports modifying, deleting instances and rules.</li> 
+     * Set Line ID. Valid values:
+<li> line-1: EdgeOne Layer 4 proxy line. It supports modifying instances and rules, but deletion is not supported;</li>
+<li> line-2 or higher: EdgeOne Layer 4 proxy lines or custom lines. Modification and deletion of instances and rules are supported.</li>
+     * @param LineId Line ID. Valid values:
+<li> line-1: EdgeOne Layer 4 proxy line. It supports modifying instances and rules, but deletion is not supported;</li>
+<li> line-2 or higher: EdgeOne Layer 4 proxy lines or custom lines. Modification and deletion of instances and rules are supported.</li>
      */
     public void setLineId(String LineId) {
         this.LineId = LineId;
     }
 
     /**
-     * Get Line type. valid values:.
-<li>proxy: EdgeOne layer-4 proxy line, supports modifying instances and rules, but deletion is not supported.</li>.
-<Li>custom: Custom line.Supports editing, deleting instances and rules.  
-     * @return LineType Line type. valid values:.
-<li>proxy: EdgeOne layer-4 proxy line, supports modifying instances and rules, but deletion is not supported.</li>.
-<Li>custom: Custom line.Supports editing, deleting instances and rules. 
+     * Get Line type. Valid values: 
+<li>proxy: EdgeOne Layer 4 proxy route. Supports modifying instances and rules. Deletion is not supported;</li> 
+<li>custom: custom lines, support editing, deletion of instances, and rules.</li> 
+     * @return LineType Line type. Valid values: 
+<li>proxy: EdgeOne Layer 4 proxy route. Supports modifying instances and rules. Deletion is not supported;</li> 
+<li>custom: custom lines, support editing, deletion of instances, and rules.</li>
      */
     public String getLineType() {
         return this.LineType;
     }
 
     /**
-     * Set Line type. valid values:.
-<li>proxy: EdgeOne layer-4 proxy line, supports modifying instances and rules, but deletion is not supported.</li>.
-<Li>custom: Custom line.Supports editing, deleting instances and rules. 
-     * @param LineType Line type. valid values:.
-<li>proxy: EdgeOne layer-4 proxy line, supports modifying instances and rules, but deletion is not supported.</li>.
-<Li>custom: Custom line.Supports editing, deleting instances and rules. 
+     * Set Line type. Valid values: 
+<li>proxy: EdgeOne Layer 4 proxy route. Supports modifying instances and rules. Deletion is not supported;</li> 
+<li>custom: custom lines, support editing, deletion of instances, and rules.</li>
+     * @param LineType Line type. Valid values: 
+<li>proxy: EdgeOne Layer 4 proxy route. Supports modifying instances and rules. Deletion is not supported;</li> 
+<li>custom: custom lines, support editing, deletion of instances, and rules.</li>
      */
     public void setLineType(String LineType) {
         this.LineType = LineType;
     }
 
     /**
-     * Get Line address, formatted as host:port. Direct lines (LineType value is direct) cannot be modified, while other types support modifications. 
-     * @return LineAddress Line address, formatted as host:port. Direct lines (LineType value is direct) cannot be modified, while other types support modifications.
+     * Get Line address in the format of host:port. Direct-access lines (LineType value is direct) are not allowed to be modified. Modification is supported for other types. 
+     * @return LineAddress Line address in the format of host:port. Direct-access lines (LineType value is direct) are not allowed to be modified. Modification is supported for other types.
      */
     public String getLineAddress() {
         return this.LineAddress;
     }
 
     /**
-     * Set Line address, formatted as host:port. Direct lines (LineType value is direct) cannot be modified, while other types support modifications.
-     * @param LineAddress Line address, formatted as host:port. Direct lines (LineType value is direct) cannot be modified, while other types support modifications.
+     * Set Line address in the format of host:port. Direct-access lines (LineType value is direct) are not allowed to be modified. Modification is supported for other types.
+     * @param LineAddress Line address in the format of host:port. Direct-access lines (LineType value is direct) are not allowed to be modified. Modification is supported for other types.
      */
     public void setLineAddress(String LineAddress) {
         this.LineAddress = LineAddress;
     }
 
     /**
-     * Get Layer-4 proxy instance ID. when the line type value is proxy (EdgeOne layer-4 proxy),  it allows modifications to the instance. 
-     * @return ProxyId Layer-4 proxy instance ID. when the line type value is proxy (EdgeOne layer-4 proxy),  it allows modifications to the instance.
+     * Get Layer 4 Proxy Instance ID. This can be input when the line type LineType value is proxy (EdgeOne Layer 4 proxy) for modification. 
+     * @return ProxyId Layer 4 Proxy Instance ID. This can be input when the line type LineType value is proxy (EdgeOne Layer 4 proxy) for modification.
      */
     public String getProxyId() {
         return this.ProxyId;
     }
 
     /**
-     * Set Layer-4 proxy instance ID. when the line type value is proxy (EdgeOne layer-4 proxy),  it allows modifications to the instance.
-     * @param ProxyId Layer-4 proxy instance ID. when the line type value is proxy (EdgeOne layer-4 proxy),  it allows modifications to the instance.
+     * Set Layer 4 Proxy Instance ID. This can be input when the line type LineType value is proxy (EdgeOne Layer 4 proxy) for modification.
+     * @param ProxyId Layer 4 Proxy Instance ID. This can be input when the line type LineType value is proxy (EdgeOne Layer 4 proxy) for modification.
      */
     public void setProxyId(String ProxyId) {
         this.ProxyId = ProxyId;
     }
 
     /**
-     * Get Forwarding rule ID. when the line type  value is proxy (EdgeOne layer-4 proxy), it allows input to modify. 
-     * @return RuleId Forwarding rule ID. when the line type  value is proxy (EdgeOne layer-4 proxy), it allows input to modify.
+     * Get Forwarding rule ID. It can be passed in when the line type LineType is proxy (EdgeOne Layer 4 proxy) for modification. 
+     * @return RuleId Forwarding rule ID. It can be passed in when the line type LineType is proxy (EdgeOne Layer 4 proxy) for modification.
      */
     public String getRuleId() {
         return this.RuleId;
     }
 
     /**
-     * Set Forwarding rule ID. when the line type  value is proxy (EdgeOne layer-4 proxy), it allows input to modify.
-     * @param RuleId Forwarding rule ID. when the line type  value is proxy (EdgeOne layer-4 proxy), it allows input to modify.
+     * Set Forwarding rule ID. It can be passed in when the line type LineType is proxy (EdgeOne Layer 4 proxy) for modification.
+     * @param RuleId Forwarding rule ID. It can be passed in when the line type LineType is proxy (EdgeOne Layer 4 proxy) for modification.
      */
     public void setRuleId(String RuleId) {
         this.RuleId = RuleId;

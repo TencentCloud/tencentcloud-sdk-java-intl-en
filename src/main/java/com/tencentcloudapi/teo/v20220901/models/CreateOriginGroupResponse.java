@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateOriginGroupResponse extends AbstractModel {
 
     /**
-    * The ID of the origin group.
+    * Origin server group ID.
     */
     @SerializedName("OriginGroupId")
     @Expose
@@ -38,16 +38,16 @@ public class CreateOriginGroupResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get The ID of the origin group. 
-     * @return OriginGroupId The ID of the origin group.
+     * Get Origin server group ID. 
+     * @return OriginGroupId Origin server group ID.
      */
     public String getOriginGroupId() {
         return this.OriginGroupId;
     }
 
     /**
-     * Set The ID of the origin group.
-     * @param OriginGroupId The ID of the origin group.
+     * Set Origin server group ID.
+     * @param OriginGroupId Origin server group ID.
      */
     public void setOriginGroupId(String OriginGroupId) {
         this.OriginGroupId = OriginGroupId;

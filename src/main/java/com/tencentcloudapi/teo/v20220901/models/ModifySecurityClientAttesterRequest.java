@@ -31,7 +31,7 @@ public class ModifySecurityClientAttesterRequest extends AbstractModel {
     private String ZoneId;
 
     /**
-    * Specifies the authentication option list.
+    * Authentication option list.
     */
     @SerializedName("ClientAttesters")
     @Expose
@@ -54,16 +54,16 @@ public class ModifySecurityClientAttesterRequest extends AbstractModel {
     }
 
     /**
-     * Get Specifies the authentication option list. 
-     * @return ClientAttesters Specifies the authentication option list.
+     * Get Authentication option list. 
+     * @return ClientAttesters Authentication option list.
      */
     public ClientAttester [] getClientAttesters() {
         return this.ClientAttesters;
     }
 
     /**
-     * Set Specifies the authentication option list.
-     * @param ClientAttesters Specifies the authentication option list.
+     * Set Authentication option list.
+     * @param ClientAttesters Authentication option list.
      */
     public void setClientAttesters(ClientAttester [] ClientAttesters) {
         this.ClientAttesters = ClientAttesters;

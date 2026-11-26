@@ -24,147 +24,147 @@ import java.util.HashMap;
 public class Zone extends AbstractModel {
 
     /**
-    * Site ID.
+    * Zone ID.
     */
     @SerializedName("ZoneId")
     @Expose
     private String ZoneId;
 
     /**
-    * The site name.
+    * Site name.
     */
     @SerializedName("ZoneName")
     @Expose
     private String ZoneName;
 
     /**
-    * Identical site identifier. specifies a composite of numbers, english letters, ".", "-", and "_" with a character limit of 200.
+    * Identical site identifier. It can contain digits, letters, ".", "-", and "_", up to 200 characters.
     */
     @SerializedName("AliasZoneName")
     @Expose
     private String AliasZoneName;
 
     /**
-    * Site acceleration region. valid values:.
-<Li>Global: global availability zone.</li>.
-<Li>Mainland: chinese mainland availability zone.</li>.
-<li>overseas: global availability zone (excluding the chinese mainland).</li>.
+    * Site acceleration region. Valid values:
+<li> global: global availability zone;</li>
+<li>mainland: Chinese mainland availability zone;</li>
+<li>overseas: global availability zone (excluding the Chinese mainland).</li>
     */
     @SerializedName("Area")
     @Expose
     private String Area;
 
     /**
-    * Site access type. valid values:.
-<li>full: NS access type;</li>.
-<li>partial: CNAME access type;</li>.
-<li>noDomainAccess: domainless access type.</li>.
-<li>dnsPodAccess: DNSPod managed type. this type requires your domain name to be hosted on tencent cloud DNSPod.</li>.
-<li> pages: pages data type;</li>.
-<li>ai: edge reasoning access type.</li>.
+    * Site access type. Valid values:
+<li>full: NS access type;</li>
+<li>partial: CNAME access type;</li>
+<li>noDomainAccess: domainless access type.</li>
+<li>dnsPodAccess: DNSPod managed type. This type requires your domain name to be hosted on Tencent Cloud DNSPod;</li>
+<li> pages: Pages type;</li>
+<li> ai: Edge reasoning access type.</li>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * Specifies the Tag associated with the site.
+    * Tag associated with the site.
     */
     @SerializedName("Tags")
     @Expose
     private Tag [] Tags;
 
     /**
-    * The list of billable resources.
+    * List of billable resources.
     */
     @SerializedName("Resources")
     @Expose
     private Resource [] Resources;
 
     /**
-    * NS site detail. returned only when Type = full.
+    * Site detail of the NS type. This value is returned only when Type is full.
     */
     @SerializedName("NSDetail")
     @Expose
     private NSDetail NSDetail;
 
     /**
-    * CNAME site detail. returned only when Type = partial.
+    * Site detail of CNAME type. This value is returned only when Type is partial.
     */
     @SerializedName("CNAMEDetail")
     @Expose
     private CNAMEDetail CNAMEDetail;
 
     /**
-    * DNSPod managed Type site detail. returned only when Type = dnsPodAccess.
+    * DNSPod managed type site detail. This return value is only available when Type = dnsPodAccess.
     */
     @SerializedName("DNSPodDetail")
     @Expose
     private DNSPodDetail DNSPodDetail;
 
     /**
-    * The creation time of the site.
+    * Site creation time.
     */
     @SerializedName("CreatedOn")
     @Expose
     private String CreatedOn;
 
     /**
-    * The modification date of the site.
+    * Site modification time.
     */
     @SerializedName("ModifiedOn")
     @Expose
     private String ModifiedOn;
 
     /**
-    * The site status. Values:
-u200c<li>`active`: The name server is switched to EdgeOne.</li>
-u200c<li>`pending`: The name server is not switched.</li>
-u200c<li>`moved`: The name server is changed to other service providers.</li>
-u200c<li>`deactivated`: The site is blocked.</li>
-<li>`initializing`: The site is not bound with any plan. </li>
+    * Site status. Valid values:
+<li> active: NS switched; </li>
+<li>pending: NS not switched.</li>
+<li> moved: The NS has been moved away;</li>
+<li>`deactivated`: The name server is blocked.</li>
+<li> initializing: Package to be bound. </li>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * CNAME record access status. Values:
-<li>`finished`: The site is verified.</li>
-<li>`pending`: The site is being verified.</li>
+    * CNAME access status. Valid values:
+<li> finished: site verified;</li>
+<li> pending: verifying site.</li>
     */
     @SerializedName("CnameStatus")
     @Expose
     private String CnameStatus;
 
     /**
-    * Status of the proxy. Values:
-<li>`active`: Enabled</li>
-<li>`inactive`: Not activated</li>
-<li>`paused`: Disabled</li>
+    * Display status. Valid values:
+<li> active: enabled;</li>
+<li> inactive: Not effective;</li>
+<li> paused: disabled.</li>
     */
     @SerializedName("ActiveStatus")
     @Expose
     private String ActiveStatus;
 
     /**
-    * Lock status. Values: <li>`enable`: Normal. Modification is allowed.</li><li>`disable`: Locked. Modification is not allowed.</li><li>`plan_migrate`: Adjusting the plan. Modification is not allowed.</li> 
+    * Lock status. Valid values: <li> enable: normal. Modifications are allowed;</li><li> disable: locked. Modifications are not allowed;</li><li> plan_migrate: package migrating. Modifications are not allowed.</li>
     */
     @SerializedName("LockStatus")
     @Expose
     private String LockStatus;
 
     /**
-    * Whether the site is disabled.
+    * Whether to close the site.
     */
     @SerializedName("Paused")
     @Expose
     private Boolean Paused;
 
     /**
-    * Specifies whether it is a fake site (this field is a historic reserved field and is no longer maintained, refer to the website type for the corresponding field). valid values:.
-<Li>0: non-fake site.</li>.
-<Li>1: fake site.</li>.
+    * Whether it is a fake site (this field is a reserved field for history and is no longer maintained. According to the website type, see the corresponding field). Valid values:
+<li>0: non-fake site</li>
+<li> 1: Fake site.</li>
 
     */
     @SerializedName("IsFake")
@@ -172,415 +172,412 @@ u200c<li>`deactivated`: The site is blocked.</li>
     private Long IsFake;
 
     /**
-    * Whether to enable CNAME acceleration (this field is a historic reserved field and is no longer maintained. refer to the website type for the corresponding field). valid values:.
-<Li>Enabled: specifies whether the feature is enabled.</li>.
-<li>disabled: specifies that the feature is turned off.</li>.
+    * Whether CNAME acceleration is enabled (this is a historic reserved field and no longer maintained. For the corresponding field, see the website type). Valid values:
+<li> enabled: Enable;</li>
+<li> disabled: Disable.</li>
     */
     @SerializedName("CnameSpeedUp")
     @Expose
     private String CnameSpeedUp;
 
     /**
-    * Ownership verification information. (this field is a historic reserved field and is no longer maintained. refer to the website type for the corresponding field.).
-Note: This field may return null, which indicates a failure to obtain a valid value.
+    * Ownership verification information. (This field is a historic reserved field and is no longer maintained. For the corresponding field, see the website type.)
     */
     @SerializedName("OwnershipVerification")
     @Expose
     private OwnershipVerification OwnershipVerification;
 
     /**
-    * Lists the currently used NS of the site. (this field is a historic reserved field and is no longer maintained. refer to the corresponding field based on the website type.).
+    * List of NS currently used by the site. (This field is a reserved field for history and is no longer maintained. According to the website type, see the corresponding field for reference.)
     */
     @SerializedName("OriginalNameServers")
     @Expose
     private String [] OriginalNameServers;
 
     /**
-    * Lists of NS assigned by tencent cloud. (this field is a historic reserved field and no longer maintained. refer to the website type for the corresponding field.).
+    * List of NS assigned by Tencent Cloud. (This field is a reserved field for history and no longer maintained. For reference, see the corresponding field based on the website type.)
     */
     @SerializedName("NameServers")
     @Expose
     private String [] NameServers;
 
     /**
-    * Specifies user-customized NS information. (this field is a historic reserved field and is no longer maintained. refer to the corresponding field according to the website type.).
-Note: This field may return null, which indicates a failure to obtain a valid value.
+    * User-customized NS information. (This is a reserved field for history and is no longer maintained. Refer to the corresponding field based on the website type.)
     */
     @SerializedName("VanityNameServers")
     @Expose
     private VanityNameServers VanityNameServers;
 
     /**
-    * User-Customized NS IP information. (this field is a historic reserved field and is no longer maintained. refer to the corresponding field according to the website type.).
-Note: This field may return null, which indicates a failure to obtain a valid value.
+    * User-customized NS IP information. (This is a reserved field for historical purposes and is no longer maintained. Refer to the corresponding field based on the website type.)
     */
     @SerializedName("VanityNameServersIps")
     @Expose
     private VanityNameServersIps [] VanityNameServersIps;
 
     /**
-    * Version management configuration group working mode. site configuration modules can enable "version management mode" or "immediate effect mode" by configuration group dimension. for details, see [version management](https://www.tencentcloud.com/document/product/1552/113690?from_cn_redirect=1).
+    * Version management configuration group working mode. Each configuration module of a site can enable "version management mode" or "immediate effect mode" by configuration group dimension. For details, see [Version Management](https://www.tencentcloud.com/document/product/1552/113690?from_cn_redirect=1).
     */
     @SerializedName("WorkModeInfos")
     @Expose
     private ConfigGroupWorkModeInfo [] WorkModeInfos;
 
     /**
-     * Get Site ID. 
-     * @return ZoneId Site ID.
+     * Get Zone ID. 
+     * @return ZoneId Zone ID.
      */
     public String getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set Site ID.
-     * @param ZoneId Site ID.
+     * Set Zone ID.
+     * @param ZoneId Zone ID.
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get The site name. 
-     * @return ZoneName The site name.
+     * Get Site name. 
+     * @return ZoneName Site name.
      */
     public String getZoneName() {
         return this.ZoneName;
     }
 
     /**
-     * Set The site name.
-     * @param ZoneName The site name.
+     * Set Site name.
+     * @param ZoneName Site name.
      */
     public void setZoneName(String ZoneName) {
         this.ZoneName = ZoneName;
     }
 
     /**
-     * Get Identical site identifier. specifies a composite of numbers, english letters, ".", "-", and "_" with a character limit of 200. 
-     * @return AliasZoneName Identical site identifier. specifies a composite of numbers, english letters, ".", "-", and "_" with a character limit of 200.
+     * Get Identical site identifier. It can contain digits, letters, ".", "-", and "_", up to 200 characters. 
+     * @return AliasZoneName Identical site identifier. It can contain digits, letters, ".", "-", and "_", up to 200 characters.
      */
     public String getAliasZoneName() {
         return this.AliasZoneName;
     }
 
     /**
-     * Set Identical site identifier. specifies a composite of numbers, english letters, ".", "-", and "_" with a character limit of 200.
-     * @param AliasZoneName Identical site identifier. specifies a composite of numbers, english letters, ".", "-", and "_" with a character limit of 200.
+     * Set Identical site identifier. It can contain digits, letters, ".", "-", and "_", up to 200 characters.
+     * @param AliasZoneName Identical site identifier. It can contain digits, letters, ".", "-", and "_", up to 200 characters.
      */
     public void setAliasZoneName(String AliasZoneName) {
         this.AliasZoneName = AliasZoneName;
     }
 
     /**
-     * Get Site acceleration region. valid values:.
-<Li>Global: global availability zone.</li>.
-<Li>Mainland: chinese mainland availability zone.</li>.
-<li>overseas: global availability zone (excluding the chinese mainland).</li>. 
-     * @return Area Site acceleration region. valid values:.
-<Li>Global: global availability zone.</li>.
-<Li>Mainland: chinese mainland availability zone.</li>.
-<li>overseas: global availability zone (excluding the chinese mainland).</li>.
+     * Get Site acceleration region. Valid values:
+<li> global: global availability zone;</li>
+<li>mainland: Chinese mainland availability zone;</li>
+<li>overseas: global availability zone (excluding the Chinese mainland).</li> 
+     * @return Area Site acceleration region. Valid values:
+<li> global: global availability zone;</li>
+<li>mainland: Chinese mainland availability zone;</li>
+<li>overseas: global availability zone (excluding the Chinese mainland).</li>
      */
     public String getArea() {
         return this.Area;
     }
 
     /**
-     * Set Site acceleration region. valid values:.
-<Li>Global: global availability zone.</li>.
-<Li>Mainland: chinese mainland availability zone.</li>.
-<li>overseas: global availability zone (excluding the chinese mainland).</li>.
-     * @param Area Site acceleration region. valid values:.
-<Li>Global: global availability zone.</li>.
-<Li>Mainland: chinese mainland availability zone.</li>.
-<li>overseas: global availability zone (excluding the chinese mainland).</li>.
+     * Set Site acceleration region. Valid values:
+<li> global: global availability zone;</li>
+<li>mainland: Chinese mainland availability zone;</li>
+<li>overseas: global availability zone (excluding the Chinese mainland).</li>
+     * @param Area Site acceleration region. Valid values:
+<li> global: global availability zone;</li>
+<li>mainland: Chinese mainland availability zone;</li>
+<li>overseas: global availability zone (excluding the Chinese mainland).</li>
      */
     public void setArea(String Area) {
         this.Area = Area;
     }
 
     /**
-     * Get Site access type. valid values:.
-<li>full: NS access type;</li>.
-<li>partial: CNAME access type;</li>.
-<li>noDomainAccess: domainless access type.</li>.
-<li>dnsPodAccess: DNSPod managed type. this type requires your domain name to be hosted on tencent cloud DNSPod.</li>.
-<li> pages: pages data type;</li>.
-<li>ai: edge reasoning access type.</li>. 
-     * @return Type Site access type. valid values:.
-<li>full: NS access type;</li>.
-<li>partial: CNAME access type;</li>.
-<li>noDomainAccess: domainless access type.</li>.
-<li>dnsPodAccess: DNSPod managed type. this type requires your domain name to be hosted on tencent cloud DNSPod.</li>.
-<li> pages: pages data type;</li>.
-<li>ai: edge reasoning access type.</li>.
+     * Get Site access type. Valid values:
+<li>full: NS access type;</li>
+<li>partial: CNAME access type;</li>
+<li>noDomainAccess: domainless access type.</li>
+<li>dnsPodAccess: DNSPod managed type. This type requires your domain name to be hosted on Tencent Cloud DNSPod;</li>
+<li> pages: Pages type;</li>
+<li> ai: Edge reasoning access type.</li> 
+     * @return Type Site access type. Valid values:
+<li>full: NS access type;</li>
+<li>partial: CNAME access type;</li>
+<li>noDomainAccess: domainless access type.</li>
+<li>dnsPodAccess: DNSPod managed type. This type requires your domain name to be hosted on Tencent Cloud DNSPod;</li>
+<li> pages: Pages type;</li>
+<li> ai: Edge reasoning access type.</li>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Site access type. valid values:.
-<li>full: NS access type;</li>.
-<li>partial: CNAME access type;</li>.
-<li>noDomainAccess: domainless access type.</li>.
-<li>dnsPodAccess: DNSPod managed type. this type requires your domain name to be hosted on tencent cloud DNSPod.</li>.
-<li> pages: pages data type;</li>.
-<li>ai: edge reasoning access type.</li>.
-     * @param Type Site access type. valid values:.
-<li>full: NS access type;</li>.
-<li>partial: CNAME access type;</li>.
-<li>noDomainAccess: domainless access type.</li>.
-<li>dnsPodAccess: DNSPod managed type. this type requires your domain name to be hosted on tencent cloud DNSPod.</li>.
-<li> pages: pages data type;</li>.
-<li>ai: edge reasoning access type.</li>.
+     * Set Site access type. Valid values:
+<li>full: NS access type;</li>
+<li>partial: CNAME access type;</li>
+<li>noDomainAccess: domainless access type.</li>
+<li>dnsPodAccess: DNSPod managed type. This type requires your domain name to be hosted on Tencent Cloud DNSPod;</li>
+<li> pages: Pages type;</li>
+<li> ai: Edge reasoning access type.</li>
+     * @param Type Site access type. Valid values:
+<li>full: NS access type;</li>
+<li>partial: CNAME access type;</li>
+<li>noDomainAccess: domainless access type.</li>
+<li>dnsPodAccess: DNSPod managed type. This type requires your domain name to be hosted on Tencent Cloud DNSPod;</li>
+<li> pages: Pages type;</li>
+<li> ai: Edge reasoning access type.</li>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get Specifies the Tag associated with the site. 
-     * @return Tags Specifies the Tag associated with the site.
+     * Get Tag associated with the site. 
+     * @return Tags Tag associated with the site.
      */
     public Tag [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set Specifies the Tag associated with the site.
-     * @param Tags Specifies the Tag associated with the site.
+     * Set Tag associated with the site.
+     * @param Tags Tag associated with the site.
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get The list of billable resources. 
-     * @return Resources The list of billable resources.
+     * Get List of billable resources. 
+     * @return Resources List of billable resources.
      */
     public Resource [] getResources() {
         return this.Resources;
     }
 
     /**
-     * Set The list of billable resources.
-     * @param Resources The list of billable resources.
+     * Set List of billable resources.
+     * @param Resources List of billable resources.
      */
     public void setResources(Resource [] Resources) {
         this.Resources = Resources;
     }
 
     /**
-     * Get NS site detail. returned only when Type = full. 
-     * @return NSDetail NS site detail. returned only when Type = full.
+     * Get Site detail of the NS type. This value is returned only when Type is full. 
+     * @return NSDetail Site detail of the NS type. This value is returned only when Type is full.
      */
     public NSDetail getNSDetail() {
         return this.NSDetail;
     }
 
     /**
-     * Set NS site detail. returned only when Type = full.
-     * @param NSDetail NS site detail. returned only when Type = full.
+     * Set Site detail of the NS type. This value is returned only when Type is full.
+     * @param NSDetail Site detail of the NS type. This value is returned only when Type is full.
      */
     public void setNSDetail(NSDetail NSDetail) {
         this.NSDetail = NSDetail;
     }
 
     /**
-     * Get CNAME site detail. returned only when Type = partial. 
-     * @return CNAMEDetail CNAME site detail. returned only when Type = partial.
+     * Get Site detail of CNAME type. This value is returned only when Type is partial. 
+     * @return CNAMEDetail Site detail of CNAME type. This value is returned only when Type is partial.
      */
     public CNAMEDetail getCNAMEDetail() {
         return this.CNAMEDetail;
     }
 
     /**
-     * Set CNAME site detail. returned only when Type = partial.
-     * @param CNAMEDetail CNAME site detail. returned only when Type = partial.
+     * Set Site detail of CNAME type. This value is returned only when Type is partial.
+     * @param CNAMEDetail Site detail of CNAME type. This value is returned only when Type is partial.
      */
     public void setCNAMEDetail(CNAMEDetail CNAMEDetail) {
         this.CNAMEDetail = CNAMEDetail;
     }
 
     /**
-     * Get DNSPod managed Type site detail. returned only when Type = dnsPodAccess. 
-     * @return DNSPodDetail DNSPod managed Type site detail. returned only when Type = dnsPodAccess.
+     * Get DNSPod managed type site detail. This return value is only available when Type = dnsPodAccess. 
+     * @return DNSPodDetail DNSPod managed type site detail. This return value is only available when Type = dnsPodAccess.
      */
     public DNSPodDetail getDNSPodDetail() {
         return this.DNSPodDetail;
     }
 
     /**
-     * Set DNSPod managed Type site detail. returned only when Type = dnsPodAccess.
-     * @param DNSPodDetail DNSPod managed Type site detail. returned only when Type = dnsPodAccess.
+     * Set DNSPod managed type site detail. This return value is only available when Type = dnsPodAccess.
+     * @param DNSPodDetail DNSPod managed type site detail. This return value is only available when Type = dnsPodAccess.
      */
     public void setDNSPodDetail(DNSPodDetail DNSPodDetail) {
         this.DNSPodDetail = DNSPodDetail;
     }
 
     /**
-     * Get The creation time of the site. 
-     * @return CreatedOn The creation time of the site.
+     * Get Site creation time. 
+     * @return CreatedOn Site creation time.
      */
     public String getCreatedOn() {
         return this.CreatedOn;
     }
 
     /**
-     * Set The creation time of the site.
-     * @param CreatedOn The creation time of the site.
+     * Set Site creation time.
+     * @param CreatedOn Site creation time.
      */
     public void setCreatedOn(String CreatedOn) {
         this.CreatedOn = CreatedOn;
     }
 
     /**
-     * Get The modification date of the site. 
-     * @return ModifiedOn The modification date of the site.
+     * Get Site modification time. 
+     * @return ModifiedOn Site modification time.
      */
     public String getModifiedOn() {
         return this.ModifiedOn;
     }
 
     /**
-     * Set The modification date of the site.
-     * @param ModifiedOn The modification date of the site.
+     * Set Site modification time.
+     * @param ModifiedOn Site modification time.
      */
     public void setModifiedOn(String ModifiedOn) {
         this.ModifiedOn = ModifiedOn;
     }
 
     /**
-     * Get The site status. Values:
-u200c<li>`active`: The name server is switched to EdgeOne.</li>
-u200c<li>`pending`: The name server is not switched.</li>
-u200c<li>`moved`: The name server is changed to other service providers.</li>
-u200c<li>`deactivated`: The site is blocked.</li>
-<li>`initializing`: The site is not bound with any plan. </li> 
-     * @return Status The site status. Values:
-u200c<li>`active`: The name server is switched to EdgeOne.</li>
-u200c<li>`pending`: The name server is not switched.</li>
-u200c<li>`moved`: The name server is changed to other service providers.</li>
-u200c<li>`deactivated`: The site is blocked.</li>
-<li>`initializing`: The site is not bound with any plan. </li>
+     * Get Site status. Valid values:
+<li> active: NS switched; </li>
+<li>pending: NS not switched.</li>
+<li> moved: The NS has been moved away;</li>
+<li>`deactivated`: The name server is blocked.</li>
+<li> initializing: Package to be bound. </li> 
+     * @return Status Site status. Valid values:
+<li> active: NS switched; </li>
+<li>pending: NS not switched.</li>
+<li> moved: The NS has been moved away;</li>
+<li>`deactivated`: The name server is blocked.</li>
+<li> initializing: Package to be bound. </li>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set The site status. Values:
-u200c<li>`active`: The name server is switched to EdgeOne.</li>
-u200c<li>`pending`: The name server is not switched.</li>
-u200c<li>`moved`: The name server is changed to other service providers.</li>
-u200c<li>`deactivated`: The site is blocked.</li>
-<li>`initializing`: The site is not bound with any plan. </li>
-     * @param Status The site status. Values:
-u200c<li>`active`: The name server is switched to EdgeOne.</li>
-u200c<li>`pending`: The name server is not switched.</li>
-u200c<li>`moved`: The name server is changed to other service providers.</li>
-u200c<li>`deactivated`: The site is blocked.</li>
-<li>`initializing`: The site is not bound with any plan. </li>
+     * Set Site status. Valid values:
+<li> active: NS switched; </li>
+<li>pending: NS not switched.</li>
+<li> moved: The NS has been moved away;</li>
+<li>`deactivated`: The name server is blocked.</li>
+<li> initializing: Package to be bound. </li>
+     * @param Status Site status. Valid values:
+<li> active: NS switched; </li>
+<li>pending: NS not switched.</li>
+<li> moved: The NS has been moved away;</li>
+<li>`deactivated`: The name server is blocked.</li>
+<li> initializing: Package to be bound. </li>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get CNAME record access status. Values:
-<li>`finished`: The site is verified.</li>
-<li>`pending`: The site is being verified.</li> 
-     * @return CnameStatus CNAME record access status. Values:
-<li>`finished`: The site is verified.</li>
-<li>`pending`: The site is being verified.</li>
+     * Get CNAME access status. Valid values:
+<li> finished: site verified;</li>
+<li> pending: verifying site.</li> 
+     * @return CnameStatus CNAME access status. Valid values:
+<li> finished: site verified;</li>
+<li> pending: verifying site.</li>
      */
     public String getCnameStatus() {
         return this.CnameStatus;
     }
 
     /**
-     * Set CNAME record access status. Values:
-<li>`finished`: The site is verified.</li>
-<li>`pending`: The site is being verified.</li>
-     * @param CnameStatus CNAME record access status. Values:
-<li>`finished`: The site is verified.</li>
-<li>`pending`: The site is being verified.</li>
+     * Set CNAME access status. Valid values:
+<li> finished: site verified;</li>
+<li> pending: verifying site.</li>
+     * @param CnameStatus CNAME access status. Valid values:
+<li> finished: site verified;</li>
+<li> pending: verifying site.</li>
      */
     public void setCnameStatus(String CnameStatus) {
         this.CnameStatus = CnameStatus;
     }
 
     /**
-     * Get Status of the proxy. Values:
-<li>`active`: Enabled</li>
-<li>`inactive`: Not activated</li>
-<li>`paused`: Disabled</li> 
-     * @return ActiveStatus Status of the proxy. Values:
-<li>`active`: Enabled</li>
-<li>`inactive`: Not activated</li>
-<li>`paused`: Disabled</li>
+     * Get Display status. Valid values:
+<li> active: enabled;</li>
+<li> inactive: Not effective;</li>
+<li> paused: disabled.</li> 
+     * @return ActiveStatus Display status. Valid values:
+<li> active: enabled;</li>
+<li> inactive: Not effective;</li>
+<li> paused: disabled.</li>
      */
     public String getActiveStatus() {
         return this.ActiveStatus;
     }
 
     /**
-     * Set Status of the proxy. Values:
-<li>`active`: Enabled</li>
-<li>`inactive`: Not activated</li>
-<li>`paused`: Disabled</li>
-     * @param ActiveStatus Status of the proxy. Values:
-<li>`active`: Enabled</li>
-<li>`inactive`: Not activated</li>
-<li>`paused`: Disabled</li>
+     * Set Display status. Valid values:
+<li> active: enabled;</li>
+<li> inactive: Not effective;</li>
+<li> paused: disabled.</li>
+     * @param ActiveStatus Display status. Valid values:
+<li> active: enabled;</li>
+<li> inactive: Not effective;</li>
+<li> paused: disabled.</li>
      */
     public void setActiveStatus(String ActiveStatus) {
         this.ActiveStatus = ActiveStatus;
     }
 
     /**
-     * Get Lock status. Values: <li>`enable`: Normal. Modification is allowed.</li><li>`disable`: Locked. Modification is not allowed.</li><li>`plan_migrate`: Adjusting the plan. Modification is not allowed.</li>  
-     * @return LockStatus Lock status. Values: <li>`enable`: Normal. Modification is allowed.</li><li>`disable`: Locked. Modification is not allowed.</li><li>`plan_migrate`: Adjusting the plan. Modification is not allowed.</li> 
+     * Get Lock status. Valid values: <li> enable: normal. Modifications are allowed;</li><li> disable: locked. Modifications are not allowed;</li><li> plan_migrate: package migrating. Modifications are not allowed.</li> 
+     * @return LockStatus Lock status. Valid values: <li> enable: normal. Modifications are allowed;</li><li> disable: locked. Modifications are not allowed;</li><li> plan_migrate: package migrating. Modifications are not allowed.</li>
      */
     public String getLockStatus() {
         return this.LockStatus;
     }
 
     /**
-     * Set Lock status. Values: <li>`enable`: Normal. Modification is allowed.</li><li>`disable`: Locked. Modification is not allowed.</li><li>`plan_migrate`: Adjusting the plan. Modification is not allowed.</li> 
-     * @param LockStatus Lock status. Values: <li>`enable`: Normal. Modification is allowed.</li><li>`disable`: Locked. Modification is not allowed.</li><li>`plan_migrate`: Adjusting the plan. Modification is not allowed.</li> 
+     * Set Lock status. Valid values: <li> enable: normal. Modifications are allowed;</li><li> disable: locked. Modifications are not allowed;</li><li> plan_migrate: package migrating. Modifications are not allowed.</li>
+     * @param LockStatus Lock status. Valid values: <li> enable: normal. Modifications are allowed;</li><li> disable: locked. Modifications are not allowed;</li><li> plan_migrate: package migrating. Modifications are not allowed.</li>
      */
     public void setLockStatus(String LockStatus) {
         this.LockStatus = LockStatus;
     }
 
     /**
-     * Get Whether the site is disabled. 
-     * @return Paused Whether the site is disabled.
+     * Get Whether to close the site. 
+     * @return Paused Whether to close the site.
      */
     public Boolean getPaused() {
         return this.Paused;
     }
 
     /**
-     * Set Whether the site is disabled.
-     * @param Paused Whether the site is disabled.
+     * Set Whether to close the site.
+     * @param Paused Whether to close the site.
      */
     public void setPaused(Boolean Paused) {
         this.Paused = Paused;
     }
 
     /**
-     * Get Specifies whether it is a fake site (this field is a historic reserved field and is no longer maintained, refer to the website type for the corresponding field). valid values:.
-<Li>0: non-fake site.</li>.
-<Li>1: fake site.</li>.
+     * Get Whether it is a fake site (this field is a reserved field for history and is no longer maintained. According to the website type, see the corresponding field). Valid values:
+<li>0: non-fake site</li>
+<li> 1: Fake site.</li>
  
-     * @return IsFake Specifies whether it is a fake site (this field is a historic reserved field and is no longer maintained, refer to the website type for the corresponding field). valid values:.
-<Li>0: non-fake site.</li>.
-<Li>1: fake site.</li>.
+     * @return IsFake Whether it is a fake site (this field is a reserved field for history and is no longer maintained. According to the website type, see the corresponding field). Valid values:
+<li>0: non-fake site</li>
+<li> 1: Fake site.</li>
 
      */
     public Long getIsFake() {
@@ -588,13 +585,13 @@ u200c<li>`deactivated`: The site is blocked.</li>
     }
 
     /**
-     * Set Specifies whether it is a fake site (this field is a historic reserved field and is no longer maintained, refer to the website type for the corresponding field). valid values:.
-<Li>0: non-fake site.</li>.
-<Li>1: fake site.</li>.
+     * Set Whether it is a fake site (this field is a reserved field for history and is no longer maintained. According to the website type, see the corresponding field). Valid values:
+<li>0: non-fake site</li>
+<li> 1: Fake site.</li>
 
-     * @param IsFake Specifies whether it is a fake site (this field is a historic reserved field and is no longer maintained, refer to the website type for the corresponding field). valid values:.
-<Li>0: non-fake site.</li>.
-<Li>1: fake site.</li>.
+     * @param IsFake Whether it is a fake site (this field is a reserved field for history and is no longer maintained. According to the website type, see the corresponding field). Valid values:
+<li>0: non-fake site</li>
+<li> 1: Fake site.</li>
 
      */
     public void setIsFake(Long IsFake) {
@@ -602,132 +599,120 @@ u200c<li>`deactivated`: The site is blocked.</li>
     }
 
     /**
-     * Get Whether to enable CNAME acceleration (this field is a historic reserved field and is no longer maintained. refer to the website type for the corresponding field). valid values:.
-<Li>Enabled: specifies whether the feature is enabled.</li>.
-<li>disabled: specifies that the feature is turned off.</li>. 
-     * @return CnameSpeedUp Whether to enable CNAME acceleration (this field is a historic reserved field and is no longer maintained. refer to the website type for the corresponding field). valid values:.
-<Li>Enabled: specifies whether the feature is enabled.</li>.
-<li>disabled: specifies that the feature is turned off.</li>.
+     * Get Whether CNAME acceleration is enabled (this is a historic reserved field and no longer maintained. For the corresponding field, see the website type). Valid values:
+<li> enabled: Enable;</li>
+<li> disabled: Disable.</li> 
+     * @return CnameSpeedUp Whether CNAME acceleration is enabled (this is a historic reserved field and no longer maintained. For the corresponding field, see the website type). Valid values:
+<li> enabled: Enable;</li>
+<li> disabled: Disable.</li>
      */
     public String getCnameSpeedUp() {
         return this.CnameSpeedUp;
     }
 
     /**
-     * Set Whether to enable CNAME acceleration (this field is a historic reserved field and is no longer maintained. refer to the website type for the corresponding field). valid values:.
-<Li>Enabled: specifies whether the feature is enabled.</li>.
-<li>disabled: specifies that the feature is turned off.</li>.
-     * @param CnameSpeedUp Whether to enable CNAME acceleration (this field is a historic reserved field and is no longer maintained. refer to the website type for the corresponding field). valid values:.
-<Li>Enabled: specifies whether the feature is enabled.</li>.
-<li>disabled: specifies that the feature is turned off.</li>.
+     * Set Whether CNAME acceleration is enabled (this is a historic reserved field and no longer maintained. For the corresponding field, see the website type). Valid values:
+<li> enabled: Enable;</li>
+<li> disabled: Disable.</li>
+     * @param CnameSpeedUp Whether CNAME acceleration is enabled (this is a historic reserved field and no longer maintained. For the corresponding field, see the website type). Valid values:
+<li> enabled: Enable;</li>
+<li> disabled: Disable.</li>
      */
     public void setCnameSpeedUp(String CnameSpeedUp) {
         this.CnameSpeedUp = CnameSpeedUp;
     }
 
     /**
-     * Get Ownership verification information. (this field is a historic reserved field and is no longer maintained. refer to the website type for the corresponding field.).
-Note: This field may return null, which indicates a failure to obtain a valid value. 
-     * @return OwnershipVerification Ownership verification information. (this field is a historic reserved field and is no longer maintained. refer to the website type for the corresponding field.).
-Note: This field may return null, which indicates a failure to obtain a valid value.
+     * Get Ownership verification information. (This field is a historic reserved field and is no longer maintained. For the corresponding field, see the website type.) 
+     * @return OwnershipVerification Ownership verification information. (This field is a historic reserved field and is no longer maintained. For the corresponding field, see the website type.)
      */
     public OwnershipVerification getOwnershipVerification() {
         return this.OwnershipVerification;
     }
 
     /**
-     * Set Ownership verification information. (this field is a historic reserved field and is no longer maintained. refer to the website type for the corresponding field.).
-Note: This field may return null, which indicates a failure to obtain a valid value.
-     * @param OwnershipVerification Ownership verification information. (this field is a historic reserved field and is no longer maintained. refer to the website type for the corresponding field.).
-Note: This field may return null, which indicates a failure to obtain a valid value.
+     * Set Ownership verification information. (This field is a historic reserved field and is no longer maintained. For the corresponding field, see the website type.)
+     * @param OwnershipVerification Ownership verification information. (This field is a historic reserved field and is no longer maintained. For the corresponding field, see the website type.)
      */
     public void setOwnershipVerification(OwnershipVerification OwnershipVerification) {
         this.OwnershipVerification = OwnershipVerification;
     }
 
     /**
-     * Get Lists the currently used NS of the site. (this field is a historic reserved field and is no longer maintained. refer to the corresponding field based on the website type.). 
-     * @return OriginalNameServers Lists the currently used NS of the site. (this field is a historic reserved field and is no longer maintained. refer to the corresponding field based on the website type.).
+     * Get List of NS currently used by the site. (This field is a reserved field for history and is no longer maintained. According to the website type, see the corresponding field for reference.) 
+     * @return OriginalNameServers List of NS currently used by the site. (This field is a reserved field for history and is no longer maintained. According to the website type, see the corresponding field for reference.)
      */
     public String [] getOriginalNameServers() {
         return this.OriginalNameServers;
     }
 
     /**
-     * Set Lists the currently used NS of the site. (this field is a historic reserved field and is no longer maintained. refer to the corresponding field based on the website type.).
-     * @param OriginalNameServers Lists the currently used NS of the site. (this field is a historic reserved field and is no longer maintained. refer to the corresponding field based on the website type.).
+     * Set List of NS currently used by the site. (This field is a reserved field for history and is no longer maintained. According to the website type, see the corresponding field for reference.)
+     * @param OriginalNameServers List of NS currently used by the site. (This field is a reserved field for history and is no longer maintained. According to the website type, see the corresponding field for reference.)
      */
     public void setOriginalNameServers(String [] OriginalNameServers) {
         this.OriginalNameServers = OriginalNameServers;
     }
 
     /**
-     * Get Lists of NS assigned by tencent cloud. (this field is a historic reserved field and no longer maintained. refer to the website type for the corresponding field.). 
-     * @return NameServers Lists of NS assigned by tencent cloud. (this field is a historic reserved field and no longer maintained. refer to the website type for the corresponding field.).
+     * Get List of NS assigned by Tencent Cloud. (This field is a reserved field for history and no longer maintained. For reference, see the corresponding field based on the website type.) 
+     * @return NameServers List of NS assigned by Tencent Cloud. (This field is a reserved field for history and no longer maintained. For reference, see the corresponding field based on the website type.)
      */
     public String [] getNameServers() {
         return this.NameServers;
     }
 
     /**
-     * Set Lists of NS assigned by tencent cloud. (this field is a historic reserved field and no longer maintained. refer to the website type for the corresponding field.).
-     * @param NameServers Lists of NS assigned by tencent cloud. (this field is a historic reserved field and no longer maintained. refer to the website type for the corresponding field.).
+     * Set List of NS assigned by Tencent Cloud. (This field is a reserved field for history and no longer maintained. For reference, see the corresponding field based on the website type.)
+     * @param NameServers List of NS assigned by Tencent Cloud. (This field is a reserved field for history and no longer maintained. For reference, see the corresponding field based on the website type.)
      */
     public void setNameServers(String [] NameServers) {
         this.NameServers = NameServers;
     }
 
     /**
-     * Get Specifies user-customized NS information. (this field is a historic reserved field and is no longer maintained. refer to the corresponding field according to the website type.).
-Note: This field may return null, which indicates a failure to obtain a valid value. 
-     * @return VanityNameServers Specifies user-customized NS information. (this field is a historic reserved field and is no longer maintained. refer to the corresponding field according to the website type.).
-Note: This field may return null, which indicates a failure to obtain a valid value.
+     * Get User-customized NS information. (This is a reserved field for history and is no longer maintained. Refer to the corresponding field based on the website type.) 
+     * @return VanityNameServers User-customized NS information. (This is a reserved field for history and is no longer maintained. Refer to the corresponding field based on the website type.)
      */
     public VanityNameServers getVanityNameServers() {
         return this.VanityNameServers;
     }
 
     /**
-     * Set Specifies user-customized NS information. (this field is a historic reserved field and is no longer maintained. refer to the corresponding field according to the website type.).
-Note: This field may return null, which indicates a failure to obtain a valid value.
-     * @param VanityNameServers Specifies user-customized NS information. (this field is a historic reserved field and is no longer maintained. refer to the corresponding field according to the website type.).
-Note: This field may return null, which indicates a failure to obtain a valid value.
+     * Set User-customized NS information. (This is a reserved field for history and is no longer maintained. Refer to the corresponding field based on the website type.)
+     * @param VanityNameServers User-customized NS information. (This is a reserved field for history and is no longer maintained. Refer to the corresponding field based on the website type.)
      */
     public void setVanityNameServers(VanityNameServers VanityNameServers) {
         this.VanityNameServers = VanityNameServers;
     }
 
     /**
-     * Get User-Customized NS IP information. (this field is a historic reserved field and is no longer maintained. refer to the corresponding field according to the website type.).
-Note: This field may return null, which indicates a failure to obtain a valid value. 
-     * @return VanityNameServersIps User-Customized NS IP information. (this field is a historic reserved field and is no longer maintained. refer to the corresponding field according to the website type.).
-Note: This field may return null, which indicates a failure to obtain a valid value.
+     * Get User-customized NS IP information. (This is a reserved field for historical purposes and is no longer maintained. Refer to the corresponding field based on the website type.) 
+     * @return VanityNameServersIps User-customized NS IP information. (This is a reserved field for historical purposes and is no longer maintained. Refer to the corresponding field based on the website type.)
      */
     public VanityNameServersIps [] getVanityNameServersIps() {
         return this.VanityNameServersIps;
     }
 
     /**
-     * Set User-Customized NS IP information. (this field is a historic reserved field and is no longer maintained. refer to the corresponding field according to the website type.).
-Note: This field may return null, which indicates a failure to obtain a valid value.
-     * @param VanityNameServersIps User-Customized NS IP information. (this field is a historic reserved field and is no longer maintained. refer to the corresponding field according to the website type.).
-Note: This field may return null, which indicates a failure to obtain a valid value.
+     * Set User-customized NS IP information. (This is a reserved field for historical purposes and is no longer maintained. Refer to the corresponding field based on the website type.)
+     * @param VanityNameServersIps User-customized NS IP information. (This is a reserved field for historical purposes and is no longer maintained. Refer to the corresponding field based on the website type.)
      */
     public void setVanityNameServersIps(VanityNameServersIps [] VanityNameServersIps) {
         this.VanityNameServersIps = VanityNameServersIps;
     }
 
     /**
-     * Get Version management configuration group working mode. site configuration modules can enable "version management mode" or "immediate effect mode" by configuration group dimension. for details, see [version management](https://www.tencentcloud.com/document/product/1552/113690?from_cn_redirect=1). 
-     * @return WorkModeInfos Version management configuration group working mode. site configuration modules can enable "version management mode" or "immediate effect mode" by configuration group dimension. for details, see [version management](https://www.tencentcloud.com/document/product/1552/113690?from_cn_redirect=1).
+     * Get Version management configuration group working mode. Each configuration module of a site can enable "version management mode" or "immediate effect mode" by configuration group dimension. For details, see [Version Management](https://www.tencentcloud.com/document/product/1552/113690?from_cn_redirect=1). 
+     * @return WorkModeInfos Version management configuration group working mode. Each configuration module of a site can enable "version management mode" or "immediate effect mode" by configuration group dimension. For details, see [Version Management](https://www.tencentcloud.com/document/product/1552/113690?from_cn_redirect=1).
      */
     public ConfigGroupWorkModeInfo [] getWorkModeInfos() {
         return this.WorkModeInfos;
     }
 
     /**
-     * Set Version management configuration group working mode. site configuration modules can enable "version management mode" or "immediate effect mode" by configuration group dimension. for details, see [version management](https://www.tencentcloud.com/document/product/1552/113690?from_cn_redirect=1).
-     * @param WorkModeInfos Version management configuration group working mode. site configuration modules can enable "version management mode" or "immediate effect mode" by configuration group dimension. for details, see [version management](https://www.tencentcloud.com/document/product/1552/113690?from_cn_redirect=1).
+     * Set Version management configuration group working mode. Each configuration module of a site can enable "version management mode" or "immediate effect mode" by configuration group dimension. For details, see [Version Management](https://www.tencentcloud.com/document/product/1552/113690?from_cn_redirect=1).
+     * @param WorkModeInfos Version management configuration group working mode. Each configuration module of a site can enable "version management mode" or "immediate effect mode" by configuration group dimension. For details, see [Version Management](https://www.tencentcloud.com/document/product/1552/113690?from_cn_redirect=1).
      */
     public void setWorkModeInfos(ConfigGroupWorkModeInfo [] WorkModeInfos) {
         this.WorkModeInfos = WorkModeInfos;

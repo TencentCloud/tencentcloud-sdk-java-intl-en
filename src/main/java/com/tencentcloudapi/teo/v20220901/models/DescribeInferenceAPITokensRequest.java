@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeInferenceAPITokensRequest extends AbstractModel {
 
     /**
-    * <p>Site ID.</p>
+    * <p>Zone ID.</p>
     */
     @SerializedName("ZoneId")
     @Expose
     private String ZoneId;
 
     /**
-    * <p>Paginated query offset. Default value: 0.</p>
+    * <p>The offset of paginated query. Default value: 0.</p>
     */
     @SerializedName("Offset")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeInferenceAPITokensRequest extends AbstractModel {
     private Long Limit;
 
     /**
-     * Get <p>Site ID.</p> 
-     * @return ZoneId <p>Site ID.</p>
+     * Get <p>Zone ID.</p> 
+     * @return ZoneId <p>Zone ID.</p>
      */
     public String getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set <p>Site ID.</p>
-     * @param ZoneId <p>Site ID.</p>
+     * Set <p>Zone ID.</p>
+     * @param ZoneId <p>Zone ID.</p>
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get <p>Paginated query offset. Default value: 0.</p> 
-     * @return Offset <p>Paginated query offset. Default value: 0.</p>
+     * Get <p>The offset of paginated query. Default value: 0.</p> 
+     * @return Offset <p>The offset of paginated query. Default value: 0.</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set <p>Paginated query offset. Default value: 0.</p>
-     * @param Offset <p>Paginated query offset. Default value: 0.</p>
+     * Set <p>The offset of paginated query. Default value: 0.</p>
+     * @param Offset <p>The offset of paginated query. Default value: 0.</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;

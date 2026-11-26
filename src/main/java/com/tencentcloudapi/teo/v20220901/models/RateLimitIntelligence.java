@@ -24,89 +24,89 @@ import java.util.HashMap;
 public class RateLimitIntelligence extends AbstractModel {
 
     /**
-    * Whether to enable configuration. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+    * Function switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * Action to be executed. Values:
-<li>`monitor`: Observe</li>
-<li>`alg`: Challenge</li>
+    * Execution action. Valid values:
+<li>monitor: observation;</li>
+<li>alg: Challenge.</li>
     */
     @SerializedName("Action")
     @Expose
     private String Action;
 
     /**
-    * The rule ID, which is only used as a response parameter.
+    * Rule id, output only.
     */
     @SerializedName("RuleId")
     @Expose
     private Long RuleId;
 
     /**
-     * Get Whether to enable configuration. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li> 
-     * @return Switch Whether to enable configuration. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+     * Get Function switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li> 
+     * @return Switch Function switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set Whether to enable configuration. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-     * @param Switch Whether to enable configuration. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+     * Set Function switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+     * @param Switch Function switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get Action to be executed. Values:
-<li>`monitor`: Observe</li>
-<li>`alg`: Challenge</li> 
-     * @return Action Action to be executed. Values:
-<li>`monitor`: Observe</li>
-<li>`alg`: Challenge</li>
+     * Get Execution action. Valid values:
+<li>monitor: observation;</li>
+<li>alg: Challenge.</li> 
+     * @return Action Execution action. Valid values:
+<li>monitor: observation;</li>
+<li>alg: Challenge.</li>
      */
     public String getAction() {
         return this.Action;
     }
 
     /**
-     * Set Action to be executed. Values:
-<li>`monitor`: Observe</li>
-<li>`alg`: Challenge</li>
-     * @param Action Action to be executed. Values:
-<li>`monitor`: Observe</li>
-<li>`alg`: Challenge</li>
+     * Set Execution action. Valid values:
+<li>monitor: observation;</li>
+<li>alg: Challenge.</li>
+     * @param Action Execution action. Valid values:
+<li>monitor: observation;</li>
+<li>alg: Challenge.</li>
      */
     public void setAction(String Action) {
         this.Action = Action;
     }
 
     /**
-     * Get The rule ID, which is only used as a response parameter. 
-     * @return RuleId The rule ID, which is only used as a response parameter.
+     * Get Rule id, output only. 
+     * @return RuleId Rule id, output only.
      */
     public Long getRuleId() {
         return this.RuleId;
     }
 
     /**
-     * Set The rule ID, which is only used as a response parameter.
-     * @param RuleId The rule ID, which is only used as a response parameter.
+     * Set Rule id, output only.
+     * @param RuleId Rule id, output only.
      */
     public void setRuleId(Long RuleId) {
         this.RuleId = RuleId;

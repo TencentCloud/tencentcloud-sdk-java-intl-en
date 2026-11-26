@@ -24,51 +24,46 @@ import java.util.HashMap;
 public class RuleEngineSubRule extends AbstractModel {
 
     /**
-    * Sub-Rule branch.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+    * Sub-rule branch
     */
     @SerializedName("Branches")
     @Expose
     private RuleBranch [] Branches;
 
     /**
-    * Rule comments.
+    * Rule note.
     */
     @SerializedName("Description")
     @Expose
     private String [] Description;
 
     /**
-     * Get Sub-Rule branch.
-Note: this field may return null, which indicates a failure to obtain a valid value. 
-     * @return Branches Sub-Rule branch.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * Get Sub-rule branch 
+     * @return Branches Sub-rule branch
      */
     public RuleBranch [] getBranches() {
         return this.Branches;
     }
 
     /**
-     * Set Sub-Rule branch.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-     * @param Branches Sub-Rule branch.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * Set Sub-rule branch
+     * @param Branches Sub-rule branch
      */
     public void setBranches(RuleBranch [] Branches) {
         this.Branches = Branches;
     }
 
     /**
-     * Get Rule comments. 
-     * @return Description Rule comments.
+     * Get Rule note. 
+     * @return Description Rule note.
      */
     public String [] getDescription() {
         return this.Description;
     }
 
     /**
-     * Set Rule comments.
-     * @param Description Rule comments.
+     * Set Rule note.
+     * @param Description Rule note.
      */
     public void setDescription(String [] Description) {
         this.Description = Description;

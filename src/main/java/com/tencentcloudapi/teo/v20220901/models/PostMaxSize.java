@@ -24,56 +24,56 @@ import java.util.HashMap;
 public class PostMaxSize extends AbstractModel {
 
     /**
-    * Whether to enable POST upload limit (default limit: 32 MB). Valid values: 
-<li>`on`: Enable;</li>
-<li>`off`: Disable.</li>
+    * Whether to enable the POST request upload file limit. The platform defaults to a limit of 32 MB. Valid values:
+<li>on: enable limit;</li>
+<li>off: disables the limit.</li>
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * Specifies the maximum limit. this field is valid only when Switch is on. value range: 1MB to 800MB. unit: byte.
+    * Maximum limit. This field is valid only when Switch is on. The value ranges from 1 MB to 800 MB, in bytes.
     */
     @SerializedName("MaxSize")
     @Expose
     private Long MaxSize;
 
     /**
-     * Get Whether to enable POST upload limit (default limit: 32 MB). Valid values: 
-<li>`on`: Enable;</li>
-<li>`off`: Disable.</li> 
-     * @return Switch Whether to enable POST upload limit (default limit: 32 MB). Valid values: 
-<li>`on`: Enable;</li>
-<li>`off`: Disable.</li>
+     * Get Whether to enable the POST request upload file limit. The platform defaults to a limit of 32 MB. Valid values:
+<li>on: enable limit;</li>
+<li>off: disables the limit.</li> 
+     * @return Switch Whether to enable the POST request upload file limit. The platform defaults to a limit of 32 MB. Valid values:
+<li>on: enable limit;</li>
+<li>off: disables the limit.</li>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set Whether to enable POST upload limit (default limit: 32 MB). Valid values: 
-<li>`on`: Enable;</li>
-<li>`off`: Disable.</li>
-     * @param Switch Whether to enable POST upload limit (default limit: 32 MB). Valid values: 
-<li>`on`: Enable;</li>
-<li>`off`: Disable.</li>
+     * Set Whether to enable the POST request upload file limit. The platform defaults to a limit of 32 MB. Valid values:
+<li>on: enable limit;</li>
+<li>off: disables the limit.</li>
+     * @param Switch Whether to enable the POST request upload file limit. The platform defaults to a limit of 32 MB. Valid values:
+<li>on: enable limit;</li>
+<li>off: disables the limit.</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get Specifies the maximum limit. this field is valid only when Switch is on. value range: 1MB to 800MB. unit: byte. 
-     * @return MaxSize Specifies the maximum limit. this field is valid only when Switch is on. value range: 1MB to 800MB. unit: byte.
+     * Get Maximum limit. This field is valid only when Switch is on. The value ranges from 1 MB to 800 MB, in bytes. 
+     * @return MaxSize Maximum limit. This field is valid only when Switch is on. The value ranges from 1 MB to 800 MB, in bytes.
      */
     public Long getMaxSize() {
         return this.MaxSize;
     }
 
     /**
-     * Set Specifies the maximum limit. this field is valid only when Switch is on. value range: 1MB to 800MB. unit: byte.
-     * @param MaxSize Specifies the maximum limit. this field is valid only when Switch is on. value range: 1MB to 800MB. unit: byte.
+     * Set Maximum limit. This field is valid only when Switch is on. The value ranges from 1 MB to 800 MB, in bytes.
+     * @param MaxSize Maximum limit. This field is valid only when Switch is on. The value ranges from 1 MB to 800 MB, in bytes.
      */
     public void setMaxSize(Long MaxSize) {
         this.MaxSize = MaxSize;

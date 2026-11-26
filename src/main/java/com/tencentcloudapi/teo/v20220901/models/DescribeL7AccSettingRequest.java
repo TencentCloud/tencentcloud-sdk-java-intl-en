@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DescribeL7AccSettingRequest extends AbstractModel {
 
     /**
-    * Zone id.
+    * Zone ID.
     */
     @SerializedName("ZoneId")
     @Expose
     private String ZoneId;
 
     /**
-     * Get Zone id. 
-     * @return ZoneId Zone id.
+     * Get Zone ID. 
+     * @return ZoneId Zone ID.
      */
     public String getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set Zone id.
-     * @param ZoneId Zone id.
+     * Set Zone ID.
+     * @param ZoneId Zone ID.
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;

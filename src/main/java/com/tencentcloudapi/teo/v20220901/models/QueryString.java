@@ -24,89 +24,89 @@ import java.util.HashMap;
 public class QueryString extends AbstractModel {
 
     /**
-    * Whether to use `QueryString` as part of `CacheKey`. Values:
-<li>`on`: Yes</li>
-<li>`off`: No</li>
+    * Whether CacheKey consists of QueryString. Valid values:
+<li>on: yes;</li>
+<li>off: No.</li>
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * CacheKey usage via QueryString, valid values:.
-<li>includeCustom: use partial url parameter;</li>.
-<li>excludeCustom: exclude partial url parameters.</li>.
+    * CacheKey uses QueryString. Valid values:
+<li>includeCustom: use partial url parameters;</li>
+<li>excludeCustom: Exclude some url parameters.</li>
     */
     @SerializedName("Action")
     @Expose
     private String Action;
 
     /**
-    * Specifies the url parameter array for usage/exclusion.
+    * url parameter array for usage or exclusion.
     */
     @SerializedName("Value")
     @Expose
     private String [] Value;
 
     /**
-     * Get Whether to use `QueryString` as part of `CacheKey`. Values:
-<li>`on`: Yes</li>
-<li>`off`: No</li> 
-     * @return Switch Whether to use `QueryString` as part of `CacheKey`. Values:
-<li>`on`: Yes</li>
-<li>`off`: No</li>
+     * Get Whether CacheKey consists of QueryString. Valid values:
+<li>on: yes;</li>
+<li>off: No.</li> 
+     * @return Switch Whether CacheKey consists of QueryString. Valid values:
+<li>on: yes;</li>
+<li>off: No.</li>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set Whether to use `QueryString` as part of `CacheKey`. Values:
-<li>`on`: Yes</li>
-<li>`off`: No</li>
-     * @param Switch Whether to use `QueryString` as part of `CacheKey`. Values:
-<li>`on`: Yes</li>
-<li>`off`: No</li>
+     * Set Whether CacheKey consists of QueryString. Valid values:
+<li>on: yes;</li>
+<li>off: No.</li>
+     * @param Switch Whether CacheKey consists of QueryString. Valid values:
+<li>on: yes;</li>
+<li>off: No.</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get CacheKey usage via QueryString, valid values:.
-<li>includeCustom: use partial url parameter;</li>.
-<li>excludeCustom: exclude partial url parameters.</li>. 
-     * @return Action CacheKey usage via QueryString, valid values:.
-<li>includeCustom: use partial url parameter;</li>.
-<li>excludeCustom: exclude partial url parameters.</li>.
+     * Get CacheKey uses QueryString. Valid values:
+<li>includeCustom: use partial url parameters;</li>
+<li>excludeCustom: Exclude some url parameters.</li> 
+     * @return Action CacheKey uses QueryString. Valid values:
+<li>includeCustom: use partial url parameters;</li>
+<li>excludeCustom: Exclude some url parameters.</li>
      */
     public String getAction() {
         return this.Action;
     }
 
     /**
-     * Set CacheKey usage via QueryString, valid values:.
-<li>includeCustom: use partial url parameter;</li>.
-<li>excludeCustom: exclude partial url parameters.</li>.
-     * @param Action CacheKey usage via QueryString, valid values:.
-<li>includeCustom: use partial url parameter;</li>.
-<li>excludeCustom: exclude partial url parameters.</li>.
+     * Set CacheKey uses QueryString. Valid values:
+<li>includeCustom: use partial url parameters;</li>
+<li>excludeCustom: Exclude some url parameters.</li>
+     * @param Action CacheKey uses QueryString. Valid values:
+<li>includeCustom: use partial url parameters;</li>
+<li>excludeCustom: Exclude some url parameters.</li>
      */
     public void setAction(String Action) {
         this.Action = Action;
     }
 
     /**
-     * Get Specifies the url parameter array for usage/exclusion. 
-     * @return Value Specifies the url parameter array for usage/exclusion.
+     * Get url parameter array for usage or exclusion. 
+     * @return Value url parameter array for usage or exclusion.
      */
     public String [] getValue() {
         return this.Value;
     }
 
     /**
-     * Set Specifies the url parameter array for usage/exclusion.
-     * @param Value Specifies the url parameter array for usage/exclusion.
+     * Set url parameter array for usage or exclusion.
+     * @param Value url parameter array for usage or exclusion.
      */
     public void setValue(String [] Value) {
         this.Value = Value;

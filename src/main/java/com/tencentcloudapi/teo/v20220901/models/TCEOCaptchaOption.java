@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class TCEOCaptchaOption extends AbstractModel {
 
     /**
-    * <p>Browser-side WebView human-machine verification interaction mode.</p><p>Enumeration values:</p><ul><li>Invisible: invisible verification</li><li>Adaptive: self adaptive interactive verification</li></ul><p>Default value: Invisible</p>
+    * <p>Browser-side WebView human-machine verification interaction mode.</p><p>Enumeration values:</p><ul><li>Invisible: invisible verification</li><li>Adaptive: self-adaptive interactive verification</li></ul><p>Default value: Invisible</p>
     */
     @SerializedName("CaptchaMode")
     @Expose
@@ -38,16 +38,16 @@ public class TCEOCaptchaOption extends AbstractModel {
     private String MobileCaptchaMode;
 
     /**
-     * Get <p>Browser-side WebView human-machine verification interaction mode.</p><p>Enumeration values:</p><ul><li>Invisible: invisible verification</li><li>Adaptive: self adaptive interactive verification</li></ul><p>Default value: Invisible</p> 
-     * @return CaptchaMode <p>Browser-side WebView human-machine verification interaction mode.</p><p>Enumeration values:</p><ul><li>Invisible: invisible verification</li><li>Adaptive: self adaptive interactive verification</li></ul><p>Default value: Invisible</p>
+     * Get <p>Browser-side WebView human-machine verification interaction mode.</p><p>Enumeration values:</p><ul><li>Invisible: invisible verification</li><li>Adaptive: self-adaptive interactive verification</li></ul><p>Default value: Invisible</p> 
+     * @return CaptchaMode <p>Browser-side WebView human-machine verification interaction mode.</p><p>Enumeration values:</p><ul><li>Invisible: invisible verification</li><li>Adaptive: self-adaptive interactive verification</li></ul><p>Default value: Invisible</p>
      */
     public String getCaptchaMode() {
         return this.CaptchaMode;
     }
 
     /**
-     * Set <p>Browser-side WebView human-machine verification interaction mode.</p><p>Enumeration values:</p><ul><li>Invisible: invisible verification</li><li>Adaptive: self adaptive interactive verification</li></ul><p>Default value: Invisible</p>
-     * @param CaptchaMode <p>Browser-side WebView human-machine verification interaction mode.</p><p>Enumeration values:</p><ul><li>Invisible: invisible verification</li><li>Adaptive: self adaptive interactive verification</li></ul><p>Default value: Invisible</p>
+     * Set <p>Browser-side WebView human-machine verification interaction mode.</p><p>Enumeration values:</p><ul><li>Invisible: invisible verification</li><li>Adaptive: self-adaptive interactive verification</li></ul><p>Default value: Invisible</p>
+     * @param CaptchaMode <p>Browser-side WebView human-machine verification interaction mode.</p><p>Enumeration values:</p><ul><li>Invisible: invisible verification</li><li>Adaptive: self-adaptive interactive verification</li></ul><p>Default value: Invisible</p>
      */
     public void setCaptchaMode(String CaptchaMode) {
         this.CaptchaMode = CaptchaMode;

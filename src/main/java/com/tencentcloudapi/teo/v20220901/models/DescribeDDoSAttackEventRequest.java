@@ -24,265 +24,265 @@ import java.util.HashMap;
 public class DescribeDDoSAttackEventRequest extends AbstractModel {
 
     /**
-    * The start time.
+    * Start time. Time range: 30 days.
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * End time. the query time range (`EndTime` - `StartTime`) must be less than or equal to 31 days.
+    * End time. The query time range (`EndTime` - `StartTime`) must be up to 31 days.
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-    * List of DDoS policy IDs. All policies are selected if this field is not specified.
+    * Collection of ddos policy groups. If left blank, all policies are selected by default.
     */
     @SerializedName("PolicyIds")
     @Expose
     private Long [] PolicyIds;
 
     /**
-    * Site ID set. this parameter will change from option to required after may 30, 2024. for details, see the notice: [tencent cloud EdgeOne API change notification](https://www.tencentcloud.com/document/product/1552/104902?from_cn_redirect=1). a maximum of 100 site ids can be imported. use `*` to query all site data under the tencent cloud root account. querying account-level data requires all resource permissions for all sites in this interface.
+    * Site ID set. This parameter will change from optional to required after May 30, 2024. For details, see the announcement: [Tencent Cloud EdgeOne Cloud API Change Notification](https://www.tencentcloud.com/document/product/1552/104902?from_cn_redirect=1). You can import up to 100 site IDs. To query all site data under the Tencent Cloud root account, use `*` instead. To query account-level data, you need permission for all site resources of this interface.
     */
     @SerializedName("ZoneIds")
     @Expose
     private String [] ZoneIds;
 
     /**
-    * Limit on paginated queries. Default value: 20. Maximum value: 1000.
+    * Number limit of paginated query. Default value: 20. Maximum number of query entries: 1000.
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * The page offset. Default value: 0.
+    * Page offset. Default value: 0
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * Parameter to show attack details. If it is configured as false, only the number of attacks is returned without details. If it is configured as true, attack details are returned.
+    * Parameter to show attack details. If set to `false`, only the number of attacks is returned. If set to `true`, attack details are returned.
     */
     @SerializedName("ShowDetail")
     @Expose
     private Boolean ShowDetail;
 
     /**
-    * Geolocation scope. Values: 
-<li>`overseas`: Regions outside the Chinese mainland</li>
-<li>`mainland`: Chinese mainland</li>
-<li>`global`: Global</li>If this field is not specified, the default value `global` is used.
+    * Data ownership region. Valid values:
+<li>overseas: global (excluding the Chinese mainland) data;</li>
+<li>mainland: Chinese mainland data;</li>
+<li>global: global data;</li>If this parameter is not input, the default value `global` is used.
     */
     @SerializedName("Area")
     @Expose
     private String Area;
 
     /**
-    * The sorting field. Values: 
-<li>`MaxBandWidth`: Peak bandwidth</li>
-<li>`AttackStartTime` Start time of the attack</li>If this field is not specified, the default value `AttackStartTime` is used.
+    * Sorting field. Valid values:
+<li>MaxBandWidth: bandwidth peak;</li>
+<li>AttackStartTime: attack start time.</li>If not specified, the default value is AttackStartTime.
     */
     @SerializedName("OrderBy")
     @Expose
     private String OrderBy;
 
     /**
-    * The sorting method. Values: 
-<Li>`asc`: Ascending</li>
-<li>`desc`: Descending</li>If this field is not specified, the default value `desc` is used.
+    * Sorting method. Valid values:
+<li>asc: in ascending order;</li>
+<li>desc: in descending order.</li> If not specified, the default value is desc.
     */
     @SerializedName("OrderType")
     @Expose
     private String OrderType;
 
     /**
-     * Get The start time. 
-     * @return StartTime The start time.
+     * Get Start time. Time range: 30 days. 
+     * @return StartTime Start time. Time range: 30 days.
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set The start time.
-     * @param StartTime The start time.
+     * Set Start time. Time range: 30 days.
+     * @param StartTime Start time. Time range: 30 days.
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get End time. the query time range (`EndTime` - `StartTime`) must be less than or equal to 31 days. 
-     * @return EndTime End time. the query time range (`EndTime` - `StartTime`) must be less than or equal to 31 days.
+     * Get End time. The query time range (`EndTime` - `StartTime`) must be up to 31 days. 
+     * @return EndTime End time. The query time range (`EndTime` - `StartTime`) must be up to 31 days.
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set End time. the query time range (`EndTime` - `StartTime`) must be less than or equal to 31 days.
-     * @param EndTime End time. the query time range (`EndTime` - `StartTime`) must be less than or equal to 31 days.
+     * Set End time. The query time range (`EndTime` - `StartTime`) must be up to 31 days.
+     * @param EndTime End time. The query time range (`EndTime` - `StartTime`) must be up to 31 days.
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get List of DDoS policy IDs. All policies are selected if this field is not specified. 
-     * @return PolicyIds List of DDoS policy IDs. All policies are selected if this field is not specified.
+     * Get Collection of ddos policy groups. If left blank, all policies are selected by default. 
+     * @return PolicyIds Collection of ddos policy groups. If left blank, all policies are selected by default.
      */
     public Long [] getPolicyIds() {
         return this.PolicyIds;
     }
 
     /**
-     * Set List of DDoS policy IDs. All policies are selected if this field is not specified.
-     * @param PolicyIds List of DDoS policy IDs. All policies are selected if this field is not specified.
+     * Set Collection of ddos policy groups. If left blank, all policies are selected by default.
+     * @param PolicyIds Collection of ddos policy groups. If left blank, all policies are selected by default.
      */
     public void setPolicyIds(Long [] PolicyIds) {
         this.PolicyIds = PolicyIds;
     }
 
     /**
-     * Get Site ID set. this parameter will change from option to required after may 30, 2024. for details, see the notice: [tencent cloud EdgeOne API change notification](https://www.tencentcloud.com/document/product/1552/104902?from_cn_redirect=1). a maximum of 100 site ids can be imported. use `*` to query all site data under the tencent cloud root account. querying account-level data requires all resource permissions for all sites in this interface. 
-     * @return ZoneIds Site ID set. this parameter will change from option to required after may 30, 2024. for details, see the notice: [tencent cloud EdgeOne API change notification](https://www.tencentcloud.com/document/product/1552/104902?from_cn_redirect=1). a maximum of 100 site ids can be imported. use `*` to query all site data under the tencent cloud root account. querying account-level data requires all resource permissions for all sites in this interface.
+     * Get Site ID set. This parameter will change from optional to required after May 30, 2024. For details, see the announcement: [Tencent Cloud EdgeOne Cloud API Change Notification](https://www.tencentcloud.com/document/product/1552/104902?from_cn_redirect=1). You can import up to 100 site IDs. To query all site data under the Tencent Cloud root account, use `*` instead. To query account-level data, you need permission for all site resources of this interface. 
+     * @return ZoneIds Site ID set. This parameter will change from optional to required after May 30, 2024. For details, see the announcement: [Tencent Cloud EdgeOne Cloud API Change Notification](https://www.tencentcloud.com/document/product/1552/104902?from_cn_redirect=1). You can import up to 100 site IDs. To query all site data under the Tencent Cloud root account, use `*` instead. To query account-level data, you need permission for all site resources of this interface.
      */
     public String [] getZoneIds() {
         return this.ZoneIds;
     }
 
     /**
-     * Set Site ID set. this parameter will change from option to required after may 30, 2024. for details, see the notice: [tencent cloud EdgeOne API change notification](https://www.tencentcloud.com/document/product/1552/104902?from_cn_redirect=1). a maximum of 100 site ids can be imported. use `*` to query all site data under the tencent cloud root account. querying account-level data requires all resource permissions for all sites in this interface.
-     * @param ZoneIds Site ID set. this parameter will change from option to required after may 30, 2024. for details, see the notice: [tencent cloud EdgeOne API change notification](https://www.tencentcloud.com/document/product/1552/104902?from_cn_redirect=1). a maximum of 100 site ids can be imported. use `*` to query all site data under the tencent cloud root account. querying account-level data requires all resource permissions for all sites in this interface.
+     * Set Site ID set. This parameter will change from optional to required after May 30, 2024. For details, see the announcement: [Tencent Cloud EdgeOne Cloud API Change Notification](https://www.tencentcloud.com/document/product/1552/104902?from_cn_redirect=1). You can import up to 100 site IDs. To query all site data under the Tencent Cloud root account, use `*` instead. To query account-level data, you need permission for all site resources of this interface.
+     * @param ZoneIds Site ID set. This parameter will change from optional to required after May 30, 2024. For details, see the announcement: [Tencent Cloud EdgeOne Cloud API Change Notification](https://www.tencentcloud.com/document/product/1552/104902?from_cn_redirect=1). You can import up to 100 site IDs. To query all site data under the Tencent Cloud root account, use `*` instead. To query account-level data, you need permission for all site resources of this interface.
      */
     public void setZoneIds(String [] ZoneIds) {
         this.ZoneIds = ZoneIds;
     }
 
     /**
-     * Get Limit on paginated queries. Default value: 20. Maximum value: 1000. 
-     * @return Limit Limit on paginated queries. Default value: 20. Maximum value: 1000.
+     * Get Number limit of paginated query. Default value: 20. Maximum number of query entries: 1000. 
+     * @return Limit Number limit of paginated query. Default value: 20. Maximum number of query entries: 1000.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Limit on paginated queries. Default value: 20. Maximum value: 1000.
-     * @param Limit Limit on paginated queries. Default value: 20. Maximum value: 1000.
+     * Set Number limit of paginated query. Default value: 20. Maximum number of query entries: 1000.
+     * @param Limit Number limit of paginated query. Default value: 20. Maximum number of query entries: 1000.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get The page offset. Default value: 0. 
-     * @return Offset The page offset. Default value: 0.
+     * Get Page offset. Default value: 0 
+     * @return Offset Page offset. Default value: 0
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set The page offset. Default value: 0.
-     * @param Offset The page offset. Default value: 0.
+     * Set Page offset. Default value: 0
+     * @param Offset Page offset. Default value: 0
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get Parameter to show attack details. If it is configured as false, only the number of attacks is returned without details. If it is configured as true, attack details are returned. 
-     * @return ShowDetail Parameter to show attack details. If it is configured as false, only the number of attacks is returned without details. If it is configured as true, attack details are returned.
+     * Get Parameter to show attack details. If set to `false`, only the number of attacks is returned. If set to `true`, attack details are returned. 
+     * @return ShowDetail Parameter to show attack details. If set to `false`, only the number of attacks is returned. If set to `true`, attack details are returned.
      */
     public Boolean getShowDetail() {
         return this.ShowDetail;
     }
 
     /**
-     * Set Parameter to show attack details. If it is configured as false, only the number of attacks is returned without details. If it is configured as true, attack details are returned.
-     * @param ShowDetail Parameter to show attack details. If it is configured as false, only the number of attacks is returned without details. If it is configured as true, attack details are returned.
+     * Set Parameter to show attack details. If set to `false`, only the number of attacks is returned. If set to `true`, attack details are returned.
+     * @param ShowDetail Parameter to show attack details. If set to `false`, only the number of attacks is returned. If set to `true`, attack details are returned.
      */
     public void setShowDetail(Boolean ShowDetail) {
         this.ShowDetail = ShowDetail;
     }
 
     /**
-     * Get Geolocation scope. Values: 
-<li>`overseas`: Regions outside the Chinese mainland</li>
-<li>`mainland`: Chinese mainland</li>
-<li>`global`: Global</li>If this field is not specified, the default value `global` is used. 
-     * @return Area Geolocation scope. Values: 
-<li>`overseas`: Regions outside the Chinese mainland</li>
-<li>`mainland`: Chinese mainland</li>
-<li>`global`: Global</li>If this field is not specified, the default value `global` is used.
+     * Get Data ownership region. Valid values:
+<li>overseas: global (excluding the Chinese mainland) data;</li>
+<li>mainland: Chinese mainland data;</li>
+<li>global: global data;</li>If this parameter is not input, the default value `global` is used. 
+     * @return Area Data ownership region. Valid values:
+<li>overseas: global (excluding the Chinese mainland) data;</li>
+<li>mainland: Chinese mainland data;</li>
+<li>global: global data;</li>If this parameter is not input, the default value `global` is used.
      */
     public String getArea() {
         return this.Area;
     }
 
     /**
-     * Set Geolocation scope. Values: 
-<li>`overseas`: Regions outside the Chinese mainland</li>
-<li>`mainland`: Chinese mainland</li>
-<li>`global`: Global</li>If this field is not specified, the default value `global` is used.
-     * @param Area Geolocation scope. Values: 
-<li>`overseas`: Regions outside the Chinese mainland</li>
-<li>`mainland`: Chinese mainland</li>
-<li>`global`: Global</li>If this field is not specified, the default value `global` is used.
+     * Set Data ownership region. Valid values:
+<li>overseas: global (excluding the Chinese mainland) data;</li>
+<li>mainland: Chinese mainland data;</li>
+<li>global: global data;</li>If this parameter is not input, the default value `global` is used.
+     * @param Area Data ownership region. Valid values:
+<li>overseas: global (excluding the Chinese mainland) data;</li>
+<li>mainland: Chinese mainland data;</li>
+<li>global: global data;</li>If this parameter is not input, the default value `global` is used.
      */
     public void setArea(String Area) {
         this.Area = Area;
     }
 
     /**
-     * Get The sorting field. Values: 
-<li>`MaxBandWidth`: Peak bandwidth</li>
-<li>`AttackStartTime` Start time of the attack</li>If this field is not specified, the default value `AttackStartTime` is used. 
-     * @return OrderBy The sorting field. Values: 
-<li>`MaxBandWidth`: Peak bandwidth</li>
-<li>`AttackStartTime` Start time of the attack</li>If this field is not specified, the default value `AttackStartTime` is used.
+     * Get Sorting field. Valid values:
+<li>MaxBandWidth: bandwidth peak;</li>
+<li>AttackStartTime: attack start time.</li>If not specified, the default value is AttackStartTime. 
+     * @return OrderBy Sorting field. Valid values:
+<li>MaxBandWidth: bandwidth peak;</li>
+<li>AttackStartTime: attack start time.</li>If not specified, the default value is AttackStartTime.
      */
     public String getOrderBy() {
         return this.OrderBy;
     }
 
     /**
-     * Set The sorting field. Values: 
-<li>`MaxBandWidth`: Peak bandwidth</li>
-<li>`AttackStartTime` Start time of the attack</li>If this field is not specified, the default value `AttackStartTime` is used.
-     * @param OrderBy The sorting field. Values: 
-<li>`MaxBandWidth`: Peak bandwidth</li>
-<li>`AttackStartTime` Start time of the attack</li>If this field is not specified, the default value `AttackStartTime` is used.
+     * Set Sorting field. Valid values:
+<li>MaxBandWidth: bandwidth peak;</li>
+<li>AttackStartTime: attack start time.</li>If not specified, the default value is AttackStartTime.
+     * @param OrderBy Sorting field. Valid values:
+<li>MaxBandWidth: bandwidth peak;</li>
+<li>AttackStartTime: attack start time.</li>If not specified, the default value is AttackStartTime.
      */
     public void setOrderBy(String OrderBy) {
         this.OrderBy = OrderBy;
     }
 
     /**
-     * Get The sorting method. Values: 
-<Li>`asc`: Ascending</li>
-<li>`desc`: Descending</li>If this field is not specified, the default value `desc` is used. 
-     * @return OrderType The sorting method. Values: 
-<Li>`asc`: Ascending</li>
-<li>`desc`: Descending</li>If this field is not specified, the default value `desc` is used.
+     * Get Sorting method. Valid values:
+<li>asc: in ascending order;</li>
+<li>desc: in descending order.</li> If not specified, the default value is desc. 
+     * @return OrderType Sorting method. Valid values:
+<li>asc: in ascending order;</li>
+<li>desc: in descending order.</li> If not specified, the default value is desc.
      */
     public String getOrderType() {
         return this.OrderType;
     }
 
     /**
-     * Set The sorting method. Values: 
-<Li>`asc`: Ascending</li>
-<li>`desc`: Descending</li>If this field is not specified, the default value `desc` is used.
-     * @param OrderType The sorting method. Values: 
-<Li>`asc`: Ascending</li>
-<li>`desc`: Descending</li>If this field is not specified, the default value `desc` is used.
+     * Set Sorting method. Valid values:
+<li>asc: in ascending order;</li>
+<li>desc: in descending order.</li> If not specified, the default value is desc.
+     * @param OrderType Sorting method. Valid values:
+<li>asc: in ascending order;</li>
+<li>desc: in descending order.</li> If not specified, the default value is desc.
      */
     public void setOrderType(String OrderType) {
         this.OrderType = OrderType;

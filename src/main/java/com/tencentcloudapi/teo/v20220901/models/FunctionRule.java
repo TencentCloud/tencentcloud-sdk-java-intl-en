@@ -39,9 +39,9 @@ public class FunctionRule extends AbstractModel {
 
     /**
     * Function selection configuration type.
-<Li>Direct: specifies the execution function directly.</li>.
-<Li>Weight: selects the function based on weight ratio.</li>.
-<li> region: specifies the country/region selection function based on client IP.</li>.
+<li> direct: directly specify the execution function;</li>
+<li> weight: select a function based on the weight ratio;</li>
+<li> region: country/region selection function based on client IP.</li>
 
     */
     @SerializedName("TriggerType")
@@ -49,14 +49,14 @@ public class FunctionRule extends AbstractModel {
     private String TriggerType;
 
     /**
-    * Specifies the function ID to be executed. valid only when TriggerType is direct.
+    * Specify the function ID to be executed. Valid when TriggerType is direct.
     */
     @SerializedName("FunctionId")
     @Expose
     private String FunctionId;
 
     /**
-    * Specifies the name of the function executed.
+    * Name of the function to execute.
     */
     @SerializedName("FunctionName")
     @Expose
@@ -70,7 +70,7 @@ public class FunctionRule extends AbstractModel {
     private FunctionRegionSelection [] RegionMappingSelections;
 
     /**
-    * Describes the function selection configuration based on weight.
+    * Function selection configuration based on weight.
     */
     @SerializedName("WeightedSelections")
     @Expose
@@ -138,14 +138,14 @@ public class FunctionRule extends AbstractModel {
 
     /**
      * Get Function selection configuration type.
-<Li>Direct: specifies the execution function directly.</li>.
-<Li>Weight: selects the function based on weight ratio.</li>.
-<li> region: specifies the country/region selection function based on client IP.</li>.
+<li> direct: directly specify the execution function;</li>
+<li> weight: select a function based on the weight ratio;</li>
+<li> region: country/region selection function based on client IP.</li>
  
      * @return TriggerType Function selection configuration type.
-<Li>Direct: specifies the execution function directly.</li>.
-<Li>Weight: selects the function based on weight ratio.</li>.
-<li> region: specifies the country/region selection function based on client IP.</li>.
+<li> direct: directly specify the execution function;</li>
+<li> weight: select a function based on the weight ratio;</li>
+<li> region: country/region selection function based on client IP.</li>
 
      */
     public String getTriggerType() {
@@ -154,14 +154,14 @@ public class FunctionRule extends AbstractModel {
 
     /**
      * Set Function selection configuration type.
-<Li>Direct: specifies the execution function directly.</li>.
-<Li>Weight: selects the function based on weight ratio.</li>.
-<li> region: specifies the country/region selection function based on client IP.</li>.
+<li> direct: directly specify the execution function;</li>
+<li> weight: select a function based on the weight ratio;</li>
+<li> region: country/region selection function based on client IP.</li>
 
      * @param TriggerType Function selection configuration type.
-<Li>Direct: specifies the execution function directly.</li>.
-<Li>Weight: selects the function based on weight ratio.</li>.
-<li> region: specifies the country/region selection function based on client IP.</li>.
+<li> direct: directly specify the execution function;</li>
+<li> weight: select a function based on the weight ratio;</li>
+<li> region: country/region selection function based on client IP.</li>
 
      */
     public void setTriggerType(String TriggerType) {
@@ -169,32 +169,32 @@ public class FunctionRule extends AbstractModel {
     }
 
     /**
-     * Get Specifies the function ID to be executed. valid only when TriggerType is direct. 
-     * @return FunctionId Specifies the function ID to be executed. valid only when TriggerType is direct.
+     * Get Specify the function ID to be executed. Valid when TriggerType is direct. 
+     * @return FunctionId Specify the function ID to be executed. Valid when TriggerType is direct.
      */
     public String getFunctionId() {
         return this.FunctionId;
     }
 
     /**
-     * Set Specifies the function ID to be executed. valid only when TriggerType is direct.
-     * @param FunctionId Specifies the function ID to be executed. valid only when TriggerType is direct.
+     * Set Specify the function ID to be executed. Valid when TriggerType is direct.
+     * @param FunctionId Specify the function ID to be executed. Valid when TriggerType is direct.
      */
     public void setFunctionId(String FunctionId) {
         this.FunctionId = FunctionId;
     }
 
     /**
-     * Get Specifies the name of the function executed. 
-     * @return FunctionName Specifies the name of the function executed.
+     * Get Name of the function to execute. 
+     * @return FunctionName Name of the function to execute.
      */
     public String getFunctionName() {
         return this.FunctionName;
     }
 
     /**
-     * Set Specifies the name of the function executed.
-     * @param FunctionName Specifies the name of the function executed.
+     * Set Name of the function to execute.
+     * @param FunctionName Name of the function to execute.
      */
     public void setFunctionName(String FunctionName) {
         this.FunctionName = FunctionName;
@@ -217,16 +217,16 @@ public class FunctionRule extends AbstractModel {
     }
 
     /**
-     * Get Describes the function selection configuration based on weight. 
-     * @return WeightedSelections Describes the function selection configuration based on weight.
+     * Get Function selection configuration based on weight. 
+     * @return WeightedSelections Function selection configuration based on weight.
      */
     public FunctionWeightedSelection [] getWeightedSelections() {
         return this.WeightedSelections;
     }
 
     /**
-     * Set Describes the function selection configuration based on weight.
-     * @param WeightedSelections Describes the function selection configuration based on weight.
+     * Set Function selection configuration based on weight.
+     * @param WeightedSelections Function selection configuration based on weight.
      */
     public void setWeightedSelections(FunctionWeightedSelection [] WeightedSelections) {
         this.WeightedSelections = WeightedSelections;

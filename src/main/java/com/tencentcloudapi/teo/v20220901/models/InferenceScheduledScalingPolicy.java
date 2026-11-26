@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class InferenceScheduledScalingPolicy extends AbstractModel {
 
     /**
-    * Scheduled scaling action list. Fill in at least 1, supports up to 10.
+    * List of scheduled scaling actions. Fill in at least 1 and up to 10.
     */
     @SerializedName("ScheduledActions")
     @Expose
     private InferenceScheduledScalingAction [] ScheduledActions;
 
     /**
-    * Validity period range, for description of whether the scheduled scaling policy is permanently valid or valid only within a specified date range.
+    * Validity period range, for description of whether the scheduled scaling policy is long-term valid or valid only within a specified date range.
     */
     @SerializedName("EffectiveRange")
     @Expose
     private InferenceScheduledScalingEffectiveRange EffectiveRange;
 
     /**
-    * Time zone, using [IANA time zone](https://www.iana.org/time-zones) to identify the trigger time in ScheduledActions, such as UTC, Asia/Shanghai, America/New_York, Europe/London, Asia/Kolkata. UTC is used by default if not specified.
+    * Time zone. Use the [IANA time zone](https://www.iana.org/time-zones) to identify the trigger time in ScheduledActions, such as UTC, Asia/Shanghai, America/New_York, Europe/London, and Asia/Kolkata. UTC is used by default if this parameter is not specified.
 
 
 
@@ -50,45 +50,45 @@ public class InferenceScheduledScalingPolicy extends AbstractModel {
     private String TimeZone;
 
     /**
-     * Get Scheduled scaling action list. Fill in at least 1, supports up to 10. 
-     * @return ScheduledActions Scheduled scaling action list. Fill in at least 1, supports up to 10.
+     * Get List of scheduled scaling actions. Fill in at least 1 and up to 10. 
+     * @return ScheduledActions List of scheduled scaling actions. Fill in at least 1 and up to 10.
      */
     public InferenceScheduledScalingAction [] getScheduledActions() {
         return this.ScheduledActions;
     }
 
     /**
-     * Set Scheduled scaling action list. Fill in at least 1, supports up to 10.
-     * @param ScheduledActions Scheduled scaling action list. Fill in at least 1, supports up to 10.
+     * Set List of scheduled scaling actions. Fill in at least 1 and up to 10.
+     * @param ScheduledActions List of scheduled scaling actions. Fill in at least 1 and up to 10.
      */
     public void setScheduledActions(InferenceScheduledScalingAction [] ScheduledActions) {
         this.ScheduledActions = ScheduledActions;
     }
 
     /**
-     * Get Validity period range, for description of whether the scheduled scaling policy is permanently valid or valid only within a specified date range. 
-     * @return EffectiveRange Validity period range, for description of whether the scheduled scaling policy is permanently valid or valid only within a specified date range.
+     * Get Validity period range, for description of whether the scheduled scaling policy is long-term valid or valid only within a specified date range. 
+     * @return EffectiveRange Validity period range, for description of whether the scheduled scaling policy is long-term valid or valid only within a specified date range.
      */
     public InferenceScheduledScalingEffectiveRange getEffectiveRange() {
         return this.EffectiveRange;
     }
 
     /**
-     * Set Validity period range, for description of whether the scheduled scaling policy is permanently valid or valid only within a specified date range.
-     * @param EffectiveRange Validity period range, for description of whether the scheduled scaling policy is permanently valid or valid only within a specified date range.
+     * Set Validity period range, for description of whether the scheduled scaling policy is long-term valid or valid only within a specified date range.
+     * @param EffectiveRange Validity period range, for description of whether the scheduled scaling policy is long-term valid or valid only within a specified date range.
      */
     public void setEffectiveRange(InferenceScheduledScalingEffectiveRange EffectiveRange) {
         this.EffectiveRange = EffectiveRange;
     }
 
     /**
-     * Get Time zone, using [IANA time zone](https://www.iana.org/time-zones) to identify the trigger time in ScheduledActions, such as UTC, Asia/Shanghai, America/New_York, Europe/London, Asia/Kolkata. UTC is used by default if not specified.
+     * Get Time zone. Use the [IANA time zone](https://www.iana.org/time-zones) to identify the trigger time in ScheduledActions, such as UTC, Asia/Shanghai, America/New_York, Europe/London, and Asia/Kolkata. UTC is used by default if this parameter is not specified.
 
 
 
 
  
-     * @return TimeZone Time zone, using [IANA time zone](https://www.iana.org/time-zones) to identify the trigger time in ScheduledActions, such as UTC, Asia/Shanghai, America/New_York, Europe/London, Asia/Kolkata. UTC is used by default if not specified.
+     * @return TimeZone Time zone. Use the [IANA time zone](https://www.iana.org/time-zones) to identify the trigger time in ScheduledActions, such as UTC, Asia/Shanghai, America/New_York, Europe/London, and Asia/Kolkata. UTC is used by default if this parameter is not specified.
 
 
 
@@ -100,13 +100,13 @@ public class InferenceScheduledScalingPolicy extends AbstractModel {
     }
 
     /**
-     * Set Time zone, using [IANA time zone](https://www.iana.org/time-zones) to identify the trigger time in ScheduledActions, such as UTC, Asia/Shanghai, America/New_York, Europe/London, Asia/Kolkata. UTC is used by default if not specified.
+     * Set Time zone. Use the [IANA time zone](https://www.iana.org/time-zones) to identify the trigger time in ScheduledActions, such as UTC, Asia/Shanghai, America/New_York, Europe/London, and Asia/Kolkata. UTC is used by default if this parameter is not specified.
 
 
 
 
 
-     * @param TimeZone Time zone, using [IANA time zone](https://www.iana.org/time-zones) to identify the trigger time in ScheduledActions, such as UTC, Asia/Shanghai, America/New_York, Europe/London, Asia/Kolkata. UTC is used by default if not specified.
+     * @param TimeZone Time zone. Use the [IANA time zone](https://www.iana.org/time-zones) to identify the trigger time in ScheduledActions, such as UTC, Asia/Shanghai, America/New_York, Europe/London, and Asia/Kolkata. UTC is used by default if this parameter is not specified.
 
 
 

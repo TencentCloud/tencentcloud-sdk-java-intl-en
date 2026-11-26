@@ -38,14 +38,14 @@ public class DescribeTimingL7AnalysisDataRequest extends AbstractModel {
     private String EndTime;
 
     /**
-    * <p>Metric list. Valid values:</p><li>l7Flow_outFlux: L7 EdgeOne response traffic. Measurement unit: Byte;</li><li>l7Flow_inFlux: L7 client request traffic. Measurement unit: Byte;</li><li>l7Flow_flux: L7 total access traffic (EdgeOne response + client request). Measurement unit: Byte;</li><li>l7Flow_outBandwidth: L7 EdgeOne response bandwidth. Measurement unit: bps;</li><li>l7Flow_inBandwidth: L7 client request bandwidth. Measurement unit: bps;</li><li>l7Flow_bandwidth: L7 total access bandwidth (EdgeOne response + client request). Measurement unit: bps;</li><li>l7Flow_request: L7 client request count. Measurement unit: count;</li><li>l7Flow_avgResponseTime: L7 average response time. Measurement unit: ms;</li><li>l7Flow_avgFirstByteResponseTime: L7 average first byte response time. Measurement unit: ms;</li><li>l7Flow_requestRate: L7 client request rate. Measurement unit: qps.</li>
+    * <p>Metric list. Valid values:</p><li>l7Flow_outFlux: L7 EdgeOne response traffic, unit: Byte;</li><li>l7Flow_inFlux: L7 client request traffic, unit: Byte;</li><li>l7Flow_flux: L7 total access traffic (EdgeOne response + client request), unit: Byte;</li><li>l7Flow_outBandwidth: L7 EdgeOne response bandwidth, unit: bps;</li><li>l7Flow_inBandwidth: L7 client request bandwidth, unit: bps;</li><li>l7Flow_bandwidth: L7 total access bandwidth (EdgeOne response + client request), unit: bps;</li><li>l7Flow_request: L7 access request count, unit: count;</li><li> l7Flow_avgResponseTime: L7 average response time, unit: ms;</li><li> l7Flow_avgFirstByteResponseTime: L7 average first byte response time, unit: ms;</li><li>l7Flow_requestRate: L7 access request rate, unit: qps.</li>
     */
     @SerializedName("MetricNames")
     @Expose
     private String [] MetricNames;
 
     /**
-    * <p>Site ID set. This parameter will change from optional to required after May 30, 2024. For details, see the notice: <a href="https://www.tencentcloud.com/document/product/1552/104902?from_cn_redirect=1">[Tencent Cloud EdgeOne] Cloud API Change Notification</a>. A maximum of 100 site IDs can be imported. To query all site data under the Tencent Cloud root account, use <code>*</code> as a replacement. Querying account-level data requires permission to all site resources of this interface.</p>
+    * <p>Site ID set. This parameter will change from optional to required after May 30, 2024. For details, see the announcement: <a href="https://www.tencentcloud.com/document/product/1552/104902?from_cn_redirect=1">[Tencent Cloud EdgeOne] Cloud API Change Notification</a>. You can import up to 100 site IDs. To query data of all sites under the Tencent Cloud root account, use <code>*</code> instead. To query account-level data, you must have permission for all site resources of this interface.</p>
     */
     @SerializedName("ZoneIds")
     @Expose
@@ -59,14 +59,14 @@ public class DescribeTimingL7AnalysisDataRequest extends AbstractModel {
     private String Interval;
 
     /**
-    * <p>Filter conditions used when filtering data. For available filter options, refer to the <a href="https://www.tencentcloud.com/document/product/1552/98219?from_cn_redirect=1#1aaf1150-55a4-4b4d-b103-3a8317ac7945">Analytics Filter Options</a> for L7 client traffic, bandwidth, and request counts.<br>To limit the query to specific sites or content identifiers, pass the corresponding values in the <code>ZoneIds.N</code> parameter separately.</p>
+    * <p>Filter criteria used when filtering data. For values, see the available filter items for L7 access traffic, bandwidth, and request count in <a href="https://www.tencentcloud.com/document/product/1552/98219?from_cn_redirect=1#1aaf1150-55a4-4b4d-b103-3a8317ac7945">Metric Analysis Filter Criteria</a>.<br>To limit by site or content identifier, input the corresponding values in the <code>ZoneIds.N</code> parameter.</p>
     */
     @SerializedName("Filters")
     @Expose
     private QueryCondition [] Filters;
 
     /**
-    * <p>The region to which the data belongs. This parameter is deprecated. To filter data by client region, use <code>Filters.country</code> instead.</p>
+    * <p>Data ownership region. This parameter is deprecated. Please filter data by client region in <code>Filters.country</code>.</p>
     */
     @SerializedName("Area")
     @Expose
@@ -105,32 +105,32 @@ public class DescribeTimingL7AnalysisDataRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>Metric list. Valid values:</p><li>l7Flow_outFlux: L7 EdgeOne response traffic. Measurement unit: Byte;</li><li>l7Flow_inFlux: L7 client request traffic. Measurement unit: Byte;</li><li>l7Flow_flux: L7 total access traffic (EdgeOne response + client request). Measurement unit: Byte;</li><li>l7Flow_outBandwidth: L7 EdgeOne response bandwidth. Measurement unit: bps;</li><li>l7Flow_inBandwidth: L7 client request bandwidth. Measurement unit: bps;</li><li>l7Flow_bandwidth: L7 total access bandwidth (EdgeOne response + client request). Measurement unit: bps;</li><li>l7Flow_request: L7 client request count. Measurement unit: count;</li><li>l7Flow_avgResponseTime: L7 average response time. Measurement unit: ms;</li><li>l7Flow_avgFirstByteResponseTime: L7 average first byte response time. Measurement unit: ms;</li><li>l7Flow_requestRate: L7 client request rate. Measurement unit: qps.</li> 
-     * @return MetricNames <p>Metric list. Valid values:</p><li>l7Flow_outFlux: L7 EdgeOne response traffic. Measurement unit: Byte;</li><li>l7Flow_inFlux: L7 client request traffic. Measurement unit: Byte;</li><li>l7Flow_flux: L7 total access traffic (EdgeOne response + client request). Measurement unit: Byte;</li><li>l7Flow_outBandwidth: L7 EdgeOne response bandwidth. Measurement unit: bps;</li><li>l7Flow_inBandwidth: L7 client request bandwidth. Measurement unit: bps;</li><li>l7Flow_bandwidth: L7 total access bandwidth (EdgeOne response + client request). Measurement unit: bps;</li><li>l7Flow_request: L7 client request count. Measurement unit: count;</li><li>l7Flow_avgResponseTime: L7 average response time. Measurement unit: ms;</li><li>l7Flow_avgFirstByteResponseTime: L7 average first byte response time. Measurement unit: ms;</li><li>l7Flow_requestRate: L7 client request rate. Measurement unit: qps.</li>
+     * Get <p>Metric list. Valid values:</p><li>l7Flow_outFlux: L7 EdgeOne response traffic, unit: Byte;</li><li>l7Flow_inFlux: L7 client request traffic, unit: Byte;</li><li>l7Flow_flux: L7 total access traffic (EdgeOne response + client request), unit: Byte;</li><li>l7Flow_outBandwidth: L7 EdgeOne response bandwidth, unit: bps;</li><li>l7Flow_inBandwidth: L7 client request bandwidth, unit: bps;</li><li>l7Flow_bandwidth: L7 total access bandwidth (EdgeOne response + client request), unit: bps;</li><li>l7Flow_request: L7 access request count, unit: count;</li><li> l7Flow_avgResponseTime: L7 average response time, unit: ms;</li><li> l7Flow_avgFirstByteResponseTime: L7 average first byte response time, unit: ms;</li><li>l7Flow_requestRate: L7 access request rate, unit: qps.</li> 
+     * @return MetricNames <p>Metric list. Valid values:</p><li>l7Flow_outFlux: L7 EdgeOne response traffic, unit: Byte;</li><li>l7Flow_inFlux: L7 client request traffic, unit: Byte;</li><li>l7Flow_flux: L7 total access traffic (EdgeOne response + client request), unit: Byte;</li><li>l7Flow_outBandwidth: L7 EdgeOne response bandwidth, unit: bps;</li><li>l7Flow_inBandwidth: L7 client request bandwidth, unit: bps;</li><li>l7Flow_bandwidth: L7 total access bandwidth (EdgeOne response + client request), unit: bps;</li><li>l7Flow_request: L7 access request count, unit: count;</li><li> l7Flow_avgResponseTime: L7 average response time, unit: ms;</li><li> l7Flow_avgFirstByteResponseTime: L7 average first byte response time, unit: ms;</li><li>l7Flow_requestRate: L7 access request rate, unit: qps.</li>
      */
     public String [] getMetricNames() {
         return this.MetricNames;
     }
 
     /**
-     * Set <p>Metric list. Valid values:</p><li>l7Flow_outFlux: L7 EdgeOne response traffic. Measurement unit: Byte;</li><li>l7Flow_inFlux: L7 client request traffic. Measurement unit: Byte;</li><li>l7Flow_flux: L7 total access traffic (EdgeOne response + client request). Measurement unit: Byte;</li><li>l7Flow_outBandwidth: L7 EdgeOne response bandwidth. Measurement unit: bps;</li><li>l7Flow_inBandwidth: L7 client request bandwidth. Measurement unit: bps;</li><li>l7Flow_bandwidth: L7 total access bandwidth (EdgeOne response + client request). Measurement unit: bps;</li><li>l7Flow_request: L7 client request count. Measurement unit: count;</li><li>l7Flow_avgResponseTime: L7 average response time. Measurement unit: ms;</li><li>l7Flow_avgFirstByteResponseTime: L7 average first byte response time. Measurement unit: ms;</li><li>l7Flow_requestRate: L7 client request rate. Measurement unit: qps.</li>
-     * @param MetricNames <p>Metric list. Valid values:</p><li>l7Flow_outFlux: L7 EdgeOne response traffic. Measurement unit: Byte;</li><li>l7Flow_inFlux: L7 client request traffic. Measurement unit: Byte;</li><li>l7Flow_flux: L7 total access traffic (EdgeOne response + client request). Measurement unit: Byte;</li><li>l7Flow_outBandwidth: L7 EdgeOne response bandwidth. Measurement unit: bps;</li><li>l7Flow_inBandwidth: L7 client request bandwidth. Measurement unit: bps;</li><li>l7Flow_bandwidth: L7 total access bandwidth (EdgeOne response + client request). Measurement unit: bps;</li><li>l7Flow_request: L7 client request count. Measurement unit: count;</li><li>l7Flow_avgResponseTime: L7 average response time. Measurement unit: ms;</li><li>l7Flow_avgFirstByteResponseTime: L7 average first byte response time. Measurement unit: ms;</li><li>l7Flow_requestRate: L7 client request rate. Measurement unit: qps.</li>
+     * Set <p>Metric list. Valid values:</p><li>l7Flow_outFlux: L7 EdgeOne response traffic, unit: Byte;</li><li>l7Flow_inFlux: L7 client request traffic, unit: Byte;</li><li>l7Flow_flux: L7 total access traffic (EdgeOne response + client request), unit: Byte;</li><li>l7Flow_outBandwidth: L7 EdgeOne response bandwidth, unit: bps;</li><li>l7Flow_inBandwidth: L7 client request bandwidth, unit: bps;</li><li>l7Flow_bandwidth: L7 total access bandwidth (EdgeOne response + client request), unit: bps;</li><li>l7Flow_request: L7 access request count, unit: count;</li><li> l7Flow_avgResponseTime: L7 average response time, unit: ms;</li><li> l7Flow_avgFirstByteResponseTime: L7 average first byte response time, unit: ms;</li><li>l7Flow_requestRate: L7 access request rate, unit: qps.</li>
+     * @param MetricNames <p>Metric list. Valid values:</p><li>l7Flow_outFlux: L7 EdgeOne response traffic, unit: Byte;</li><li>l7Flow_inFlux: L7 client request traffic, unit: Byte;</li><li>l7Flow_flux: L7 total access traffic (EdgeOne response + client request), unit: Byte;</li><li>l7Flow_outBandwidth: L7 EdgeOne response bandwidth, unit: bps;</li><li>l7Flow_inBandwidth: L7 client request bandwidth, unit: bps;</li><li>l7Flow_bandwidth: L7 total access bandwidth (EdgeOne response + client request), unit: bps;</li><li>l7Flow_request: L7 access request count, unit: count;</li><li> l7Flow_avgResponseTime: L7 average response time, unit: ms;</li><li> l7Flow_avgFirstByteResponseTime: L7 average first byte response time, unit: ms;</li><li>l7Flow_requestRate: L7 access request rate, unit: qps.</li>
      */
     public void setMetricNames(String [] MetricNames) {
         this.MetricNames = MetricNames;
     }
 
     /**
-     * Get <p>Site ID set. This parameter will change from optional to required after May 30, 2024. For details, see the notice: <a href="https://www.tencentcloud.com/document/product/1552/104902?from_cn_redirect=1">[Tencent Cloud EdgeOne] Cloud API Change Notification</a>. A maximum of 100 site IDs can be imported. To query all site data under the Tencent Cloud root account, use <code>*</code> as a replacement. Querying account-level data requires permission to all site resources of this interface.</p> 
-     * @return ZoneIds <p>Site ID set. This parameter will change from optional to required after May 30, 2024. For details, see the notice: <a href="https://www.tencentcloud.com/document/product/1552/104902?from_cn_redirect=1">[Tencent Cloud EdgeOne] Cloud API Change Notification</a>. A maximum of 100 site IDs can be imported. To query all site data under the Tencent Cloud root account, use <code>*</code> as a replacement. Querying account-level data requires permission to all site resources of this interface.</p>
+     * Get <p>Site ID set. This parameter will change from optional to required after May 30, 2024. For details, see the announcement: <a href="https://www.tencentcloud.com/document/product/1552/104902?from_cn_redirect=1">[Tencent Cloud EdgeOne] Cloud API Change Notification</a>. You can import up to 100 site IDs. To query data of all sites under the Tencent Cloud root account, use <code>*</code> instead. To query account-level data, you must have permission for all site resources of this interface.</p> 
+     * @return ZoneIds <p>Site ID set. This parameter will change from optional to required after May 30, 2024. For details, see the announcement: <a href="https://www.tencentcloud.com/document/product/1552/104902?from_cn_redirect=1">[Tencent Cloud EdgeOne] Cloud API Change Notification</a>. You can import up to 100 site IDs. To query data of all sites under the Tencent Cloud root account, use <code>*</code> instead. To query account-level data, you must have permission for all site resources of this interface.</p>
      */
     public String [] getZoneIds() {
         return this.ZoneIds;
     }
 
     /**
-     * Set <p>Site ID set. This parameter will change from optional to required after May 30, 2024. For details, see the notice: <a href="https://www.tencentcloud.com/document/product/1552/104902?from_cn_redirect=1">[Tencent Cloud EdgeOne] Cloud API Change Notification</a>. A maximum of 100 site IDs can be imported. To query all site data under the Tencent Cloud root account, use <code>*</code> as a replacement. Querying account-level data requires permission to all site resources of this interface.</p>
-     * @param ZoneIds <p>Site ID set. This parameter will change from optional to required after May 30, 2024. For details, see the notice: <a href="https://www.tencentcloud.com/document/product/1552/104902?from_cn_redirect=1">[Tencent Cloud EdgeOne] Cloud API Change Notification</a>. A maximum of 100 site IDs can be imported. To query all site data under the Tencent Cloud root account, use <code>*</code> as a replacement. Querying account-level data requires permission to all site resources of this interface.</p>
+     * Set <p>Site ID set. This parameter will change from optional to required after May 30, 2024. For details, see the announcement: <a href="https://www.tencentcloud.com/document/product/1552/104902?from_cn_redirect=1">[Tencent Cloud EdgeOne] Cloud API Change Notification</a>. You can import up to 100 site IDs. To query data of all sites under the Tencent Cloud root account, use <code>*</code> instead. To query account-level data, you must have permission for all site resources of this interface.</p>
+     * @param ZoneIds <p>Site ID set. This parameter will change from optional to required after May 30, 2024. For details, see the announcement: <a href="https://www.tencentcloud.com/document/product/1552/104902?from_cn_redirect=1">[Tencent Cloud EdgeOne] Cloud API Change Notification</a>. You can import up to 100 site IDs. To query data of all sites under the Tencent Cloud root account, use <code>*</code> instead. To query account-level data, you must have permission for all site resources of this interface.</p>
      */
     public void setZoneIds(String [] ZoneIds) {
         this.ZoneIds = ZoneIds;
@@ -153,32 +153,32 @@ public class DescribeTimingL7AnalysisDataRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>Filter conditions used when filtering data. For available filter options, refer to the <a href="https://www.tencentcloud.com/document/product/1552/98219?from_cn_redirect=1#1aaf1150-55a4-4b4d-b103-3a8317ac7945">Analytics Filter Options</a> for L7 client traffic, bandwidth, and request counts.<br>To limit the query to specific sites or content identifiers, pass the corresponding values in the <code>ZoneIds.N</code> parameter separately.</p> 
-     * @return Filters <p>Filter conditions used when filtering data. For available filter options, refer to the <a href="https://www.tencentcloud.com/document/product/1552/98219?from_cn_redirect=1#1aaf1150-55a4-4b4d-b103-3a8317ac7945">Analytics Filter Options</a> for L7 client traffic, bandwidth, and request counts.<br>To limit the query to specific sites or content identifiers, pass the corresponding values in the <code>ZoneIds.N</code> parameter separately.</p>
+     * Get <p>Filter criteria used when filtering data. For values, see the available filter items for L7 access traffic, bandwidth, and request count in <a href="https://www.tencentcloud.com/document/product/1552/98219?from_cn_redirect=1#1aaf1150-55a4-4b4d-b103-3a8317ac7945">Metric Analysis Filter Criteria</a>.<br>To limit by site or content identifier, input the corresponding values in the <code>ZoneIds.N</code> parameter.</p> 
+     * @return Filters <p>Filter criteria used when filtering data. For values, see the available filter items for L7 access traffic, bandwidth, and request count in <a href="https://www.tencentcloud.com/document/product/1552/98219?from_cn_redirect=1#1aaf1150-55a4-4b4d-b103-3a8317ac7945">Metric Analysis Filter Criteria</a>.<br>To limit by site or content identifier, input the corresponding values in the <code>ZoneIds.N</code> parameter.</p>
      */
     public QueryCondition [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set <p>Filter conditions used when filtering data. For available filter options, refer to the <a href="https://www.tencentcloud.com/document/product/1552/98219?from_cn_redirect=1#1aaf1150-55a4-4b4d-b103-3a8317ac7945">Analytics Filter Options</a> for L7 client traffic, bandwidth, and request counts.<br>To limit the query to specific sites or content identifiers, pass the corresponding values in the <code>ZoneIds.N</code> parameter separately.</p>
-     * @param Filters <p>Filter conditions used when filtering data. For available filter options, refer to the <a href="https://www.tencentcloud.com/document/product/1552/98219?from_cn_redirect=1#1aaf1150-55a4-4b4d-b103-3a8317ac7945">Analytics Filter Options</a> for L7 client traffic, bandwidth, and request counts.<br>To limit the query to specific sites or content identifiers, pass the corresponding values in the <code>ZoneIds.N</code> parameter separately.</p>
+     * Set <p>Filter criteria used when filtering data. For values, see the available filter items for L7 access traffic, bandwidth, and request count in <a href="https://www.tencentcloud.com/document/product/1552/98219?from_cn_redirect=1#1aaf1150-55a4-4b4d-b103-3a8317ac7945">Metric Analysis Filter Criteria</a>.<br>To limit by site or content identifier, input the corresponding values in the <code>ZoneIds.N</code> parameter.</p>
+     * @param Filters <p>Filter criteria used when filtering data. For values, see the available filter items for L7 access traffic, bandwidth, and request count in <a href="https://www.tencentcloud.com/document/product/1552/98219?from_cn_redirect=1#1aaf1150-55a4-4b4d-b103-3a8317ac7945">Metric Analysis Filter Criteria</a>.<br>To limit by site or content identifier, input the corresponding values in the <code>ZoneIds.N</code> parameter.</p>
      */
     public void setFilters(QueryCondition [] Filters) {
         this.Filters = Filters;
     }
 
     /**
-     * Get <p>The region to which the data belongs. This parameter is deprecated. To filter data by client region, use <code>Filters.country</code> instead.</p> 
-     * @return Area <p>The region to which the data belongs. This parameter is deprecated. To filter data by client region, use <code>Filters.country</code> instead.</p>
+     * Get <p>Data ownership region. This parameter is deprecated. Please filter data by client region in <code>Filters.country</code>.</p> 
+     * @return Area <p>Data ownership region. This parameter is deprecated. Please filter data by client region in <code>Filters.country</code>.</p>
      */
     public String getArea() {
         return this.Area;
     }
 
     /**
-     * Set <p>The region to which the data belongs. This parameter is deprecated. To filter data by client region, use <code>Filters.country</code> instead.</p>
-     * @param Area <p>The region to which the data belongs. This parameter is deprecated. To filter data by client region, use <code>Filters.country</code> instead.</p>
+     * Set <p>Data ownership region. This parameter is deprecated. Please filter data by client region in <code>Filters.country</code>.</p>
+     * @param Area <p>Data ownership region. This parameter is deprecated. Please filter data by client region in <code>Filters.country</code>.</p>
      */
     public void setArea(String Area) {
         this.Area = Area;

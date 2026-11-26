@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class SecEntryValue extends AbstractModel {
 
     /**
-    * The metric name.
+    * Metric name.
     */
     @SerializedName("Metric")
     @Expose
     private String Metric;
 
     /**
-    * The time-series data details.
+    * Details of time series data.
     */
     @SerializedName("Detail")
     @Expose
     private TimingDataItem [] Detail;
 
     /**
-    * The maximum value.
+    * Maximum value.
     */
     @SerializedName("Max")
     @Expose
     private Long Max;
 
     /**
-    * The average value.
+    * Mean.
     */
     @SerializedName("Avg")
     @Expose
     private Float Avg;
 
     /**
-    * Sum
+    * Total data.
     */
     @SerializedName("Sum")
     @Expose
     private Float Sum;
 
     /**
-     * Get The metric name. 
-     * @return Metric The metric name.
+     * Get Metric name. 
+     * @return Metric Metric name.
      */
     public String getMetric() {
         return this.Metric;
     }
 
     /**
-     * Set The metric name.
-     * @param Metric The metric name.
+     * Set Metric name.
+     * @param Metric Metric name.
      */
     public void setMetric(String Metric) {
         this.Metric = Metric;
     }
 
     /**
-     * Get The time-series data details. 
-     * @return Detail The time-series data details.
+     * Get Details of time series data. 
+     * @return Detail Details of time series data.
      */
     public TimingDataItem [] getDetail() {
         return this.Detail;
     }
 
     /**
-     * Set The time-series data details.
-     * @param Detail The time-series data details.
+     * Set Details of time series data.
+     * @param Detail Details of time series data.
      */
     public void setDetail(TimingDataItem [] Detail) {
         this.Detail = Detail;
     }
 
     /**
-     * Get The maximum value. 
-     * @return Max The maximum value.
+     * Get Maximum value. 
+     * @return Max Maximum value.
      */
     public Long getMax() {
         return this.Max;
     }
 
     /**
-     * Set The maximum value.
-     * @param Max The maximum value.
+     * Set Maximum value.
+     * @param Max Maximum value.
      */
     public void setMax(Long Max) {
         this.Max = Max;
     }
 
     /**
-     * Get The average value. 
-     * @return Avg The average value.
+     * Get Mean. 
+     * @return Avg Mean.
      */
     public Float getAvg() {
         return this.Avg;
     }
 
     /**
-     * Set The average value.
-     * @param Avg The average value.
+     * Set Mean.
+     * @param Avg Mean.
      */
     public void setAvg(Float Avg) {
         this.Avg = Avg;
     }
 
     /**
-     * Get Sum 
-     * @return Sum Sum
+     * Get Total data. 
+     * @return Sum Total data.
      */
     public Float getSum() {
         return this.Sum;
     }
 
     /**
-     * Set Sum
-     * @param Sum Sum
+     * Set Total data.
+     * @param Sum Total data.
      */
     public void setSum(Float Sum) {
         this.Sum = Sum;

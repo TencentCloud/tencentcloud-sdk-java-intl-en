@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class DeleteSecurityIPGroupRequest extends AbstractModel {
 
     /**
-    * Site ID.
+    * Site Id.
     */
     @SerializedName("ZoneId")
     @Expose
     private String ZoneId;
 
     /**
-    * IP group ID.
+    * IP group Id.
     */
     @SerializedName("GroupId")
     @Expose
     private Long GroupId;
 
     /**
-     * Get Site ID. 
-     * @return ZoneId Site ID.
+     * Get Site Id. 
+     * @return ZoneId Site Id.
      */
     public String getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set Site ID.
-     * @param ZoneId Site ID.
+     * Set Site Id.
+     * @param ZoneId Site Id.
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get IP group ID. 
-     * @return GroupId IP group ID.
+     * Get IP group Id. 
+     * @return GroupId IP group Id.
      */
     public Long getGroupId() {
         return this.GroupId;
     }
 
     /**
-     * Set IP group ID.
-     * @param GroupId IP group ID.
+     * Set IP group Id.
+     * @param GroupId IP group Id.
      */
     public void setGroupId(Long GroupId) {
         this.GroupId = GroupId;

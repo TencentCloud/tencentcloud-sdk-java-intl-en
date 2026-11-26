@@ -24,181 +24,181 @@ import java.util.HashMap;
 public class AlgDetectSession extends AbstractModel {
 
     /**
-    * Method to validate Cookie.
+    * Operation name.
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * The validation mode. Values:
-<li>`detect`: Validate only</li>
-<li>`update_detect` (default): Update Cookie and validate</li>
+    * Verification method. Default value: update_detect. Valid values:
+<li>detect: verify;</li>
+<li>update_detect: refresh the Cookie and validate it.</li>
     */
     @SerializedName("DetectMode")
     @Expose
     private String DetectMode;
 
     /**
-    * Whether to enable Cookie-based session check. The default value is `off`. Values:
-<li>`off`: Disable</li>
-<li>`on`: Enable</li>
+    * Switch for session rate and periodic feature verification. Default value: off. Valid values:
+<li>off: Disable;</li>
+<li>`on`: Enable.</li>
     */
     @SerializedName("SessionAnalyzeSwitch")
     @Expose
     private String SessionAnalyzeSwitch;
 
     /**
-    * The period threshold for validating the result "No Cookie/Cookie expired" in seconds. Value range: 5-3600. Default value: 10.
+    * Statistical cycle for the check result indicating no Cookie is carried or the Cookie has expired. Unit: seconds. Default: 10. Value range: 5–3600.
     */
     @SerializedName("InvalidStatTime")
     @Expose
     private Long InvalidStatTime;
 
     /**
-    * The number of times for the result "No Cookie/Cookie expired" occurred in the specified period. Value range: 1-100000000. Default value: 300.
+    * Trigger threshold for the check result indicating no Cookie is carried or the Cookie has expired. Unit: count. Default: 300. Value range: 1–100000000.
     */
     @SerializedName("InvalidThreshold")
     @Expose
     private Long InvalidThreshold;
 
     /**
-    * Cookie validation results.
+    * Cookie verification result.
     */
     @SerializedName("AlgDetectResults")
     @Expose
     private AlgDetectResult [] AlgDetectResults;
 
     /**
-    * Cookie-based session check results.
+    * Session rate and periodic feature verification result.
     */
     @SerializedName("SessionBehaviors")
     @Expose
     private AlgDetectResult [] SessionBehaviors;
 
     /**
-     * Get Method to validate Cookie. 
-     * @return Name Method to validate Cookie.
+     * Get Operation name. 
+     * @return Name Operation name.
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Method to validate Cookie.
-     * @param Name Method to validate Cookie.
+     * Set Operation name.
+     * @param Name Operation name.
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get The validation mode. Values:
-<li>`detect`: Validate only</li>
-<li>`update_detect` (default): Update Cookie and validate</li> 
-     * @return DetectMode The validation mode. Values:
-<li>`detect`: Validate only</li>
-<li>`update_detect` (default): Update Cookie and validate</li>
+     * Get Verification method. Default value: update_detect. Valid values:
+<li>detect: verify;</li>
+<li>update_detect: refresh the Cookie and validate it.</li> 
+     * @return DetectMode Verification method. Default value: update_detect. Valid values:
+<li>detect: verify;</li>
+<li>update_detect: refresh the Cookie and validate it.</li>
      */
     public String getDetectMode() {
         return this.DetectMode;
     }
 
     /**
-     * Set The validation mode. Values:
-<li>`detect`: Validate only</li>
-<li>`update_detect` (default): Update Cookie and validate</li>
-     * @param DetectMode The validation mode. Values:
-<li>`detect`: Validate only</li>
-<li>`update_detect` (default): Update Cookie and validate</li>
+     * Set Verification method. Default value: update_detect. Valid values:
+<li>detect: verify;</li>
+<li>update_detect: refresh the Cookie and validate it.</li>
+     * @param DetectMode Verification method. Default value: update_detect. Valid values:
+<li>detect: verify;</li>
+<li>update_detect: refresh the Cookie and validate it.</li>
      */
     public void setDetectMode(String DetectMode) {
         this.DetectMode = DetectMode;
     }
 
     /**
-     * Get Whether to enable Cookie-based session check. The default value is `off`. Values:
-<li>`off`: Disable</li>
-<li>`on`: Enable</li> 
-     * @return SessionAnalyzeSwitch Whether to enable Cookie-based session check. The default value is `off`. Values:
-<li>`off`: Disable</li>
-<li>`on`: Enable</li>
+     * Get Switch for session rate and periodic feature verification. Default value: off. Valid values:
+<li>off: Disable;</li>
+<li>`on`: Enable.</li> 
+     * @return SessionAnalyzeSwitch Switch for session rate and periodic feature verification. Default value: off. Valid values:
+<li>off: Disable;</li>
+<li>`on`: Enable.</li>
      */
     public String getSessionAnalyzeSwitch() {
         return this.SessionAnalyzeSwitch;
     }
 
     /**
-     * Set Whether to enable Cookie-based session check. The default value is `off`. Values:
-<li>`off`: Disable</li>
-<li>`on`: Enable</li>
-     * @param SessionAnalyzeSwitch Whether to enable Cookie-based session check. The default value is `off`. Values:
-<li>`off`: Disable</li>
-<li>`on`: Enable</li>
+     * Set Switch for session rate and periodic feature verification. Default value: off. Valid values:
+<li>off: Disable;</li>
+<li>`on`: Enable.</li>
+     * @param SessionAnalyzeSwitch Switch for session rate and periodic feature verification. Default value: off. Valid values:
+<li>off: Disable;</li>
+<li>`on`: Enable.</li>
      */
     public void setSessionAnalyzeSwitch(String SessionAnalyzeSwitch) {
         this.SessionAnalyzeSwitch = SessionAnalyzeSwitch;
     }
 
     /**
-     * Get The period threshold for validating the result "No Cookie/Cookie expired" in seconds. Value range: 5-3600. Default value: 10. 
-     * @return InvalidStatTime The period threshold for validating the result "No Cookie/Cookie expired" in seconds. Value range: 5-3600. Default value: 10.
+     * Get Statistical cycle for the check result indicating no Cookie is carried or the Cookie has expired. Unit: seconds. Default: 10. Value range: 5–3600. 
+     * @return InvalidStatTime Statistical cycle for the check result indicating no Cookie is carried or the Cookie has expired. Unit: seconds. Default: 10. Value range: 5–3600.
      */
     public Long getInvalidStatTime() {
         return this.InvalidStatTime;
     }
 
     /**
-     * Set The period threshold for validating the result "No Cookie/Cookie expired" in seconds. Value range: 5-3600. Default value: 10.
-     * @param InvalidStatTime The period threshold for validating the result "No Cookie/Cookie expired" in seconds. Value range: 5-3600. Default value: 10.
+     * Set Statistical cycle for the check result indicating no Cookie is carried or the Cookie has expired. Unit: seconds. Default: 10. Value range: 5–3600.
+     * @param InvalidStatTime Statistical cycle for the check result indicating no Cookie is carried or the Cookie has expired. Unit: seconds. Default: 10. Value range: 5–3600.
      */
     public void setInvalidStatTime(Long InvalidStatTime) {
         this.InvalidStatTime = InvalidStatTime;
     }
 
     /**
-     * Get The number of times for the result "No Cookie/Cookie expired" occurred in the specified period. Value range: 1-100000000. Default value: 300. 
-     * @return InvalidThreshold The number of times for the result "No Cookie/Cookie expired" occurred in the specified period. Value range: 1-100000000. Default value: 300.
+     * Get Trigger threshold for the check result indicating no Cookie is carried or the Cookie has expired. Unit: count. Default: 300. Value range: 1–100000000. 
+     * @return InvalidThreshold Trigger threshold for the check result indicating no Cookie is carried or the Cookie has expired. Unit: count. Default: 300. Value range: 1–100000000.
      */
     public Long getInvalidThreshold() {
         return this.InvalidThreshold;
     }
 
     /**
-     * Set The number of times for the result "No Cookie/Cookie expired" occurred in the specified period. Value range: 1-100000000. Default value: 300.
-     * @param InvalidThreshold The number of times for the result "No Cookie/Cookie expired" occurred in the specified period. Value range: 1-100000000. Default value: 300.
+     * Set Trigger threshold for the check result indicating no Cookie is carried or the Cookie has expired. Unit: count. Default: 300. Value range: 1–100000000.
+     * @param InvalidThreshold Trigger threshold for the check result indicating no Cookie is carried or the Cookie has expired. Unit: count. Default: 300. Value range: 1–100000000.
      */
     public void setInvalidThreshold(Long InvalidThreshold) {
         this.InvalidThreshold = InvalidThreshold;
     }
 
     /**
-     * Get Cookie validation results. 
-     * @return AlgDetectResults Cookie validation results.
+     * Get Cookie verification result. 
+     * @return AlgDetectResults Cookie verification result.
      */
     public AlgDetectResult [] getAlgDetectResults() {
         return this.AlgDetectResults;
     }
 
     /**
-     * Set Cookie validation results.
-     * @param AlgDetectResults Cookie validation results.
+     * Set Cookie verification result.
+     * @param AlgDetectResults Cookie verification result.
      */
     public void setAlgDetectResults(AlgDetectResult [] AlgDetectResults) {
         this.AlgDetectResults = AlgDetectResults;
     }
 
     /**
-     * Get Cookie-based session check results. 
-     * @return SessionBehaviors Cookie-based session check results.
+     * Get Session rate and periodic feature verification result. 
+     * @return SessionBehaviors Session rate and periodic feature verification result.
      */
     public AlgDetectResult [] getSessionBehaviors() {
         return this.SessionBehaviors;
     }
 
     /**
-     * Set Cookie-based session check results.
-     * @param SessionBehaviors Cookie-based session check results.
+     * Set Session rate and periodic feature verification result.
+     * @param SessionBehaviors Session rate and periodic feature verification result.
      */
     public void setSessionBehaviors(AlgDetectResult [] SessionBehaviors) {
         this.SessionBehaviors = SessionBehaviors;

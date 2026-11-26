@@ -38,7 +38,7 @@ public class GatewayRegion extends AbstractModel {
     private String CNName;
 
     /**
-    * English name of the region.
+    * English region name.
     */
     @SerializedName("ENName")
     @Expose
@@ -77,16 +77,16 @@ public class GatewayRegion extends AbstractModel {
     }
 
     /**
-     * Get English name of the region. 
-     * @return ENName English name of the region.
+     * Get English region name. 
+     * @return ENName English region name.
      */
     public String getENName() {
         return this.ENName;
     }
 
     /**
-     * Set English name of the region.
-     * @param ENName English name of the region.
+     * Set English region name.
+     * @param ENName English region name.
      */
     public void setENName(String ENName) {
         this.ENName = ENName;

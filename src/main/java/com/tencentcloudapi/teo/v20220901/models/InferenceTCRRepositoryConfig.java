@@ -31,14 +31,14 @@ public class InferenceTCRRepositoryConfig extends AbstractModel {
     private String TCRType;
 
     /**
-    * <p>Image address.</p>
+    * <p>Image URL.</p>
     */
     @SerializedName("Image")
     @Expose
     private String Image;
 
     /**
-    * <p>ID of the repository instance. Required when TCRType = Enterprise.</p>
+    * <p>Mirror repository instance ID. Required when TCRType is Enterprise.</p>
     */
     @SerializedName("RegistryId")
     @Expose
@@ -68,32 +68,32 @@ public class InferenceTCRRepositoryConfig extends AbstractModel {
     }
 
     /**
-     * Get <p>Image address.</p> 
-     * @return Image <p>Image address.</p>
+     * Get <p>Image URL.</p> 
+     * @return Image <p>Image URL.</p>
      */
     public String getImage() {
         return this.Image;
     }
 
     /**
-     * Set <p>Image address.</p>
-     * @param Image <p>Image address.</p>
+     * Set <p>Image URL.</p>
+     * @param Image <p>Image URL.</p>
      */
     public void setImage(String Image) {
         this.Image = Image;
     }
 
     /**
-     * Get <p>ID of the repository instance. Required when TCRType = Enterprise.</p> 
-     * @return RegistryId <p>ID of the repository instance. Required when TCRType = Enterprise.</p>
+     * Get <p>Mirror repository instance ID. Required when TCRType is Enterprise.</p> 
+     * @return RegistryId <p>Mirror repository instance ID. Required when TCRType is Enterprise.</p>
      */
     public String getRegistryId() {
         return this.RegistryId;
     }
 
     /**
-     * Set <p>ID of the repository instance. Required when TCRType = Enterprise.</p>
-     * @param RegistryId <p>ID of the repository instance. Required when TCRType = Enterprise.</p>
+     * Set <p>Mirror repository instance ID. Required when TCRType is Enterprise.</p>
+     * @param RegistryId <p>Mirror repository instance ID. Required when TCRType is Enterprise.</p>
      */
     public void setRegistryId(String RegistryId) {
         this.RegistryId = RegistryId;

@@ -24,38 +24,38 @@ import java.util.HashMap;
 public class ContentCompressionParameters extends AbstractModel {
 
     /**
-    * Specifies the content compression configuration switch. valid values:.
+    * Content compression configuration switch. Valid values:
 <li>`on`: Enable;</li>
 <li>off: Disable.</li>
-Specifies whether to simultaneously support brotli and gzip compression algorithms when Switch is on.
+When Switch is on, brotli and gzip compression algorithms are simultaneously supported.
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-     * Get Specifies the content compression configuration switch. valid values:.
+     * Get Content compression configuration switch. Valid values:
 <li>`on`: Enable;</li>
 <li>off: Disable.</li>
-Specifies whether to simultaneously support brotli and gzip compression algorithms when Switch is on. 
-     * @return Switch Specifies the content compression configuration switch. valid values:.
+When Switch is on, brotli and gzip compression algorithms are simultaneously supported. 
+     * @return Switch Content compression configuration switch. Valid values:
 <li>`on`: Enable;</li>
 <li>off: Disable.</li>
-Specifies whether to simultaneously support brotli and gzip compression algorithms when Switch is on.
+When Switch is on, brotli and gzip compression algorithms are simultaneously supported.
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set Specifies the content compression configuration switch. valid values:.
+     * Set Content compression configuration switch. Valid values:
 <li>`on`: Enable;</li>
 <li>off: Disable.</li>
-Specifies whether to simultaneously support brotli and gzip compression algorithms when Switch is on.
-     * @param Switch Specifies the content compression configuration switch. valid values:.
+When Switch is on, brotli and gzip compression algorithms are simultaneously supported.
+     * @param Switch Content compression configuration switch. Valid values:
 <li>`on`: Enable;</li>
 <li>off: Disable.</li>
-Specifies whether to simultaneously support brotli and gzip compression algorithms when Switch is on.
+When Switch is on, brotli and gzip compression algorithms are simultaneously supported.
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;

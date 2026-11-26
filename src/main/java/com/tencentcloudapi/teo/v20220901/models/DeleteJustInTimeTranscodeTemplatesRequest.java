@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class DeleteJustInTimeTranscodeTemplatesRequest extends AbstractModel {
 
     /**
-    * Specifies the site ID.
+    * Site ID.
     */
     @SerializedName("ZoneId")
     @Expose
     private String ZoneId;
 
     /**
-    * Specifies the array of transcoding template unique identifiers to be deleted, with a length limit of 100.
+    * Array of unique identifiers of instant transcoding templates to be deleted. Length limit: 100.
     */
     @SerializedName("TemplateIds")
     @Expose
     private String [] TemplateIds;
 
     /**
-     * Get Specifies the site ID. 
-     * @return ZoneId Specifies the site ID.
+     * Get Site ID. 
+     * @return ZoneId Site ID.
      */
     public String getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set Specifies the site ID.
-     * @param ZoneId Specifies the site ID.
+     * Set Site ID.
+     * @param ZoneId Site ID.
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get Specifies the array of transcoding template unique identifiers to be deleted, with a length limit of 100. 
-     * @return TemplateIds Specifies the array of transcoding template unique identifiers to be deleted, with a length limit of 100.
+     * Get Array of unique identifiers of instant transcoding templates to be deleted. Length limit: 100. 
+     * @return TemplateIds Array of unique identifiers of instant transcoding templates to be deleted. Length limit: 100.
      */
     public String [] getTemplateIds() {
         return this.TemplateIds;
     }
 
     /**
-     * Set Specifies the array of transcoding template unique identifiers to be deleted, with a length limit of 100.
-     * @param TemplateIds Specifies the array of transcoding template unique identifiers to be deleted, with a length limit of 100.
+     * Set Array of unique identifiers of instant transcoding templates to be deleted. Length limit: 100.
+     * @param TemplateIds Array of unique identifiers of instant transcoding templates to be deleted. Length limit: 100.
      */
     public void setTemplateIds(String [] TemplateIds) {
         this.TemplateIds = TemplateIds;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateMultiPathGatewayResponse extends AbstractModel {
 
     /**
-    * Specifies the gateway ID.
+    * Gateway ID.
     */
     @SerializedName("GatewayId")
     @Expose
@@ -38,16 +38,16 @@ public class CreateMultiPathGatewayResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Specifies the gateway ID. 
-     * @return GatewayId Specifies the gateway ID.
+     * Get Gateway ID. 
+     * @return GatewayId Gateway ID.
      */
     public String getGatewayId() {
         return this.GatewayId;
     }
 
     /**
-     * Set Specifies the gateway ID.
-     * @param GatewayId Specifies the gateway ID.
+     * Set Gateway ID.
+     * @param GatewayId Gateway ID.
      */
     public void setGatewayId(String GatewayId) {
         this.GatewayId = GatewayId;

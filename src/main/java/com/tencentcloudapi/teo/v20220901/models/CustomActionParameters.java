@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class CustomActionParameters extends AbstractModel {
 
     /**
-    * <p>Custom configuration list that needs to be configured.</p>
+    * <p>List of custom configurations that need to be configured.</p>
     */
     @SerializedName("CustomActions")
     @Expose
     private CustomAction [] CustomActions;
 
     /**
-     * Get <p>Custom configuration list that needs to be configured.</p> 
-     * @return CustomActions <p>Custom configuration list that needs to be configured.</p>
+     * Get <p>List of custom configurations that need to be configured.</p> 
+     * @return CustomActions <p>List of custom configurations that need to be configured.</p>
      */
     public CustomAction [] getCustomActions() {
         return this.CustomActions;
     }
 
     /**
-     * Set <p>Custom configuration list that needs to be configured.</p>
-     * @param CustomActions <p>Custom configuration list that needs to be configured.</p>
+     * Set <p>List of custom configurations that need to be configured.</p>
+     * @param CustomActions <p>List of custom configurations that need to be configured.</p>
      */
     public void setCustomActions(CustomAction [] CustomActions) {
         this.CustomActions = CustomActions;

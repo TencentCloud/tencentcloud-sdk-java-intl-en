@@ -24,79 +24,79 @@ import java.util.HashMap;
 public class SlowRateConfig extends AbstractModel {
 
     /**
-    * Switch. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+    * Switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * The statistics interval in seconds. after the first packet transfer, the data transmission axis is split by this parameter for separate computing of slow attacks on each shard.
+    * Statistics interval in seconds. After the first packet transfer is complete, the data transmission axis is split by this parameter, and slow attacks are calculated separately for each shard.
     */
     @SerializedName("Interval")
     @Expose
     private Long Interval;
 
     /**
-    * Specifies the rate threshold applied during statistics in bps. if the transmission rate in this shard does not reach the parameter value, it is identified as a slow attack and the slow attack handling method is applied.
+    * Rate threshold applied for statistics, in bps. If the transmission rate in this shard does not reach this parameter value, it is determined as a slow attack and the handling method for slow attacks is applied.
     */
     @SerializedName("Threshold")
     @Expose
     private Long Threshold;
 
     /**
-     * Get Switch. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li> 
-     * @return Switch Switch. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+     * Get Switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li> 
+     * @return Switch Switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set Switch. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-     * @param Switch Switch. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+     * Set Switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+     * @param Switch Switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get The statistics interval in seconds. after the first packet transfer, the data transmission axis is split by this parameter for separate computing of slow attacks on each shard. 
-     * @return Interval The statistics interval in seconds. after the first packet transfer, the data transmission axis is split by this parameter for separate computing of slow attacks on each shard.
+     * Get Statistics interval in seconds. After the first packet transfer is complete, the data transmission axis is split by this parameter, and slow attacks are calculated separately for each shard. 
+     * @return Interval Statistics interval in seconds. After the first packet transfer is complete, the data transmission axis is split by this parameter, and slow attacks are calculated separately for each shard.
      */
     public Long getInterval() {
         return this.Interval;
     }
 
     /**
-     * Set The statistics interval in seconds. after the first packet transfer, the data transmission axis is split by this parameter for separate computing of slow attacks on each shard.
-     * @param Interval The statistics interval in seconds. after the first packet transfer, the data transmission axis is split by this parameter for separate computing of slow attacks on each shard.
+     * Set Statistics interval in seconds. After the first packet transfer is complete, the data transmission axis is split by this parameter, and slow attacks are calculated separately for each shard.
+     * @param Interval Statistics interval in seconds. After the first packet transfer is complete, the data transmission axis is split by this parameter, and slow attacks are calculated separately for each shard.
      */
     public void setInterval(Long Interval) {
         this.Interval = Interval;
     }
 
     /**
-     * Get Specifies the rate threshold applied during statistics in bps. if the transmission rate in this shard does not reach the parameter value, it is identified as a slow attack and the slow attack handling method is applied. 
-     * @return Threshold Specifies the rate threshold applied during statistics in bps. if the transmission rate in this shard does not reach the parameter value, it is identified as a slow attack and the slow attack handling method is applied.
+     * Get Rate threshold applied for statistics, in bps. If the transmission rate in this shard does not reach this parameter value, it is determined as a slow attack and the handling method for slow attacks is applied. 
+     * @return Threshold Rate threshold applied for statistics, in bps. If the transmission rate in this shard does not reach this parameter value, it is determined as a slow attack and the handling method for slow attacks is applied.
      */
     public Long getThreshold() {
         return this.Threshold;
     }
 
     /**
-     * Set Specifies the rate threshold applied during statistics in bps. if the transmission rate in this shard does not reach the parameter value, it is identified as a slow attack and the slow attack handling method is applied.
-     * @param Threshold Specifies the rate threshold applied during statistics in bps. if the transmission rate in this shard does not reach the parameter value, it is identified as a slow attack and the slow attack handling method is applied.
+     * Set Rate threshold applied for statistics, in bps. If the transmission rate in this shard does not reach this parameter value, it is determined as a slow attack and the handling method for slow attacks is applied.
+     * @param Threshold Rate threshold applied for statistics, in bps. If the transmission rate in this shard does not reach this parameter value, it is determined as a slow attack and the handling method for slow attacks is applied.
      */
     public void setThreshold(Long Threshold) {
         this.Threshold = Threshold;

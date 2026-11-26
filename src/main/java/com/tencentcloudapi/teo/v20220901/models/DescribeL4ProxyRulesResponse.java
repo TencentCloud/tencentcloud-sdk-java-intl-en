@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeL4ProxyRulesResponse extends AbstractModel {
 
     /**
-    * The total count of forwarding rules.
+    * Total number of forwarding rules.
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * List of forwarding rules.	
+    * Forwarding rule list.	
     */
     @SerializedName("L4ProxyRules")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeL4ProxyRulesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get The total count of forwarding rules. 
-     * @return TotalCount The total count of forwarding rules.
+     * Get Total number of forwarding rules. 
+     * @return TotalCount Total number of forwarding rules.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set The total count of forwarding rules.
-     * @param TotalCount The total count of forwarding rules.
+     * Set Total number of forwarding rules.
+     * @param TotalCount Total number of forwarding rules.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get List of forwarding rules.	 
-     * @return L4ProxyRules List of forwarding rules.	
+     * Get Forwarding rule list.	 
+     * @return L4ProxyRules Forwarding rule list.	
      */
     public L4ProxyRule [] getL4ProxyRules() {
         return this.L4ProxyRules;
     }
 
     /**
-     * Set List of forwarding rules.	
-     * @param L4ProxyRules List of forwarding rules.	
+     * Set Forwarding rule list.	
+     * @param L4ProxyRules Forwarding rule list.	
      */
     public void setL4ProxyRules(L4ProxyRule [] L4ProxyRules) {
         this.L4ProxyRules = L4ProxyRules;

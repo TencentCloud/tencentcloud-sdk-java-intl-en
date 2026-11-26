@@ -25,7 +25,6 @@ public class DescribeBillingDataResponse extends AbstractModel {
 
     /**
     * Data point list.
-Note: This field may return null, which indicates a failure to obtain a valid value.
     */
     @SerializedName("Data")
     @Expose
@@ -39,10 +38,8 @@ Note: This field may return null, which indicates a failure to obtain a valid va
     private String RequestId;
 
     /**
-     * Get Data point list.
-Note: This field may return null, which indicates a failure to obtain a valid value. 
+     * Get Data point list. 
      * @return Data Data point list.
-Note: This field may return null, which indicates a failure to obtain a valid value.
      */
     public BillingData [] getData() {
         return this.Data;
@@ -50,9 +47,7 @@ Note: This field may return null, which indicates a failure to obtain a valid va
 
     /**
      * Set Data point list.
-Note: This field may return null, which indicates a failure to obtain a valid value.
      * @param Data Data point list.
-Note: This field may return null, which indicates a failure to obtain a valid value.
      */
     public void setData(BillingData [] Data) {
         this.Data = Data;

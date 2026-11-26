@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeRulesSettingResponse extends AbstractModel {
 
     /**
-    * List of the settings of the rule engine that can be used for request match and their detailed recommended configuration information.
+    * Settings list and detailed recommendation configuration information that the rule engine can apply to match requests.
     */
     @SerializedName("Actions")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeRulesSettingResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get List of the settings of the rule engine that can be used for request match and their detailed recommended configuration information. 
-     * @return Actions List of the settings of the rule engine that can be used for request match and their detailed recommended configuration information.
+     * Get Settings list and detailed recommendation configuration information that the rule engine can apply to match requests. 
+     * @return Actions Settings list and detailed recommendation configuration information that the rule engine can apply to match requests.
      */
     public RulesSettingAction [] getActions() {
         return this.Actions;
     }
 
     /**
-     * Set List of the settings of the rule engine that can be used for request match and their detailed recommended configuration information.
-     * @param Actions List of the settings of the rule engine that can be used for request match and their detailed recommended configuration information.
+     * Set Settings list and detailed recommendation configuration information that the rule engine can apply to match requests.
+     * @param Actions Settings list and detailed recommendation configuration information that the rule engine can apply to match requests.
      */
     public void setActions(RulesSettingAction [] Actions) {
         this.Actions = Actions;

@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class DescribeZoneSettingResponse extends AbstractModel {
 
     /**
-    * The site configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Site configuration.
     */
     @SerializedName("ZoneSetting")
     @Expose
@@ -39,20 +38,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get The site configuration.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ZoneSetting The site configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Site configuration. 
+     * @return ZoneSetting Site configuration.
      */
     public ZoneSetting getZoneSetting() {
         return this.ZoneSetting;
     }
 
     /**
-     * Set The site configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ZoneSetting The site configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Site configuration.
+     * @param ZoneSetting Site configuration.
      */
     public void setZoneSetting(ZoneSetting ZoneSetting) {
         this.ZoneSetting = ZoneSetting;

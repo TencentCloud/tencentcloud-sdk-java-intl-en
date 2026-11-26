@@ -32,7 +32,6 @@ public class DescribeOverviewL7DataResponse extends AbstractModel {
 
     /**
     * List of time series traffic data in L7 monitoring.
-Note: This field may return null, which indicates a failure to obtain a valid value.
     */
     @SerializedName("Data")
     @Expose
@@ -62,10 +61,8 @@ Note: This field may return null, which indicates a failure to obtain a valid va
     }
 
     /**
-     * Get List of time series traffic data in L7 monitoring.
-Note: This field may return null, which indicates a failure to obtain a valid value. 
+     * Get List of time series traffic data in L7 monitoring. 
      * @return Data List of time series traffic data in L7 monitoring.
-Note: This field may return null, which indicates a failure to obtain a valid value.
      */
     public TimingDataRecord [] getData() {
         return this.Data;
@@ -73,9 +70,7 @@ Note: This field may return null, which indicates a failure to obtain a valid va
 
     /**
      * Set List of time series traffic data in L7 monitoring.
-Note: This field may return null, which indicates a failure to obtain a valid value.
      * @param Data List of time series traffic data in L7 monitoring.
-Note: This field may return null, which indicates a failure to obtain a valid value.
      */
     public void setData(TimingDataRecord [] Data) {
         this.Data = Data;

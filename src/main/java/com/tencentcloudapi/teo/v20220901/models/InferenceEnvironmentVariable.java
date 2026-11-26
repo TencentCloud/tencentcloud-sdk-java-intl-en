@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class InferenceEnvironmentVariable extends AbstractModel {
 
     /**
-    * Variable name  is limited to uppercase and lowercase letters, digits, and underscores, and must start with a letter or underscore. The length is limited to no more than 64 characters.
+    * Variable name. Only letters, digits, and underscores are allowed, and it must start with a letter or underscore. Length limited to 64 characters.
     */
     @SerializedName("Key")
     @Expose
     private String Key;
 
     /**
-    * Variable value. Supports any visible characters such as letters, numbers, and symbols. Length limited to no more than 2048 characters.
+    * Variable value. Supports any visible characters, such as letters, digits, and symbols. Length limit: no more than 2048 characters.
     */
     @SerializedName("Value")
     @Expose
     private String Value;
 
     /**
-     * Get Variable name  is limited to uppercase and lowercase letters, digits, and underscores, and must start with a letter or underscore. The length is limited to no more than 64 characters. 
-     * @return Key Variable name  is limited to uppercase and lowercase letters, digits, and underscores, and must start with a letter or underscore. The length is limited to no more than 64 characters.
+     * Get Variable name. Only letters, digits, and underscores are allowed, and it must start with a letter or underscore. Length limited to 64 characters. 
+     * @return Key Variable name. Only letters, digits, and underscores are allowed, and it must start with a letter or underscore. Length limited to 64 characters.
      */
     public String getKey() {
         return this.Key;
     }
 
     /**
-     * Set Variable name  is limited to uppercase and lowercase letters, digits, and underscores, and must start with a letter or underscore. The length is limited to no more than 64 characters.
-     * @param Key Variable name  is limited to uppercase and lowercase letters, digits, and underscores, and must start with a letter or underscore. The length is limited to no more than 64 characters.
+     * Set Variable name. Only letters, digits, and underscores are allowed, and it must start with a letter or underscore. Length limited to 64 characters.
+     * @param Key Variable name. Only letters, digits, and underscores are allowed, and it must start with a letter or underscore. Length limited to 64 characters.
      */
     public void setKey(String Key) {
         this.Key = Key;
     }
 
     /**
-     * Get Variable value. Supports any visible characters such as letters, numbers, and symbols. Length limited to no more than 2048 characters. 
-     * @return Value Variable value. Supports any visible characters such as letters, numbers, and symbols. Length limited to no more than 2048 characters.
+     * Get Variable value. Supports any visible characters, such as letters, digits, and symbols. Length limit: no more than 2048 characters. 
+     * @return Value Variable value. Supports any visible characters, such as letters, digits, and symbols. Length limit: no more than 2048 characters.
      */
     public String getValue() {
         return this.Value;
     }
 
     /**
-     * Set Variable value. Supports any visible characters such as letters, numbers, and symbols. Length limited to no more than 2048 characters.
-     * @param Value Variable value. Supports any visible characters such as letters, numbers, and symbols. Length limited to no more than 2048 characters.
+     * Set Variable value. Supports any visible characters, such as letters, digits, and symbols. Length limit: no more than 2048 characters.
+     * @param Value Variable value. Supports any visible characters, such as letters, digits, and symbols. Length limit: no more than 2048 characters.
      */
     public void setValue(String Value) {
         this.Value = Value;

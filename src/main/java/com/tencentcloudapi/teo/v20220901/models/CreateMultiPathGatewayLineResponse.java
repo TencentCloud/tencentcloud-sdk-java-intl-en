@@ -24,9 +24,9 @@ import java.util.HashMap;
 public class CreateMultiPathGatewayLineResponse extends AbstractModel {
 
     /**
-    * Line ID. valid values:
-<li>line-1: EdgeOne layer-4 proxy line, supports modifying instances and rules, but cannot be deleted.</li>
-<li> line-2 and above: EdgeOne layer-4 proxy or custom lines, supports modifying, deleting instances and rules.</li>
+    * Line ID. Valid values:
+<li> line-1: EdgeOne Layer 4 proxy line. It supports modifying instances and rules, but cannot be deleted;</li>
+<li> line-2 or higher: EdgeOne Layer 4 proxy lines or custom lines, supports modifying and deletion of instances and rules.</li>
     */
     @SerializedName("LineId")
     @Expose
@@ -40,24 +40,24 @@ public class CreateMultiPathGatewayLineResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Line ID. valid values:
-<li>line-1: EdgeOne layer-4 proxy line, supports modifying instances and rules, but cannot be deleted.</li>
-<li> line-2 and above: EdgeOne layer-4 proxy or custom lines, supports modifying, deleting instances and rules.</li> 
-     * @return LineId Line ID. valid values:
-<li>line-1: EdgeOne layer-4 proxy line, supports modifying instances and rules, but cannot be deleted.</li>
-<li> line-2 and above: EdgeOne layer-4 proxy or custom lines, supports modifying, deleting instances and rules.</li>
+     * Get Line ID. Valid values:
+<li> line-1: EdgeOne Layer 4 proxy line. It supports modifying instances and rules, but cannot be deleted;</li>
+<li> line-2 or higher: EdgeOne Layer 4 proxy lines or custom lines, supports modifying and deletion of instances and rules.</li> 
+     * @return LineId Line ID. Valid values:
+<li> line-1: EdgeOne Layer 4 proxy line. It supports modifying instances and rules, but cannot be deleted;</li>
+<li> line-2 or higher: EdgeOne Layer 4 proxy lines or custom lines, supports modifying and deletion of instances and rules.</li>
      */
     public String getLineId() {
         return this.LineId;
     }
 
     /**
-     * Set Line ID. valid values:
-<li>line-1: EdgeOne layer-4 proxy line, supports modifying instances and rules, but cannot be deleted.</li>
-<li> line-2 and above: EdgeOne layer-4 proxy or custom lines, supports modifying, deleting instances and rules.</li>
-     * @param LineId Line ID. valid values:
-<li>line-1: EdgeOne layer-4 proxy line, supports modifying instances and rules, but cannot be deleted.</li>
-<li> line-2 and above: EdgeOne layer-4 proxy or custom lines, supports modifying, deleting instances and rules.</li>
+     * Set Line ID. Valid values:
+<li> line-1: EdgeOne Layer 4 proxy line. It supports modifying instances and rules, but cannot be deleted;</li>
+<li> line-2 or higher: EdgeOne Layer 4 proxy lines or custom lines, supports modifying and deletion of instances and rules.</li>
+     * @param LineId Line ID. Valid values:
+<li> line-1: EdgeOne Layer 4 proxy line. It supports modifying instances and rules, but cannot be deleted;</li>
+<li> line-2 or higher: EdgeOne Layer 4 proxy lines or custom lines, supports modifying and deletion of instances and rules.</li>
      */
     public void setLineId(String LineId) {
         this.LineId = LineId;

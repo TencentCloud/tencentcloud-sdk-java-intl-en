@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class ModifyDnsRecordsRequest extends AbstractModel {
 
     /**
-    * Zone id.
+    * Zone ID.
     */
     @SerializedName("ZoneId")
     @Expose
     private String ZoneId;
 
     /**
-    * DNS record modification data list, up to 100 entries can be modified at a time.
+    * DNS record modification data list. Up to 100 records can be modified at a time.
     */
     @SerializedName("DnsRecords")
     @Expose
     private DnsRecord [] DnsRecords;
 
     /**
-     * Get Zone id. 
-     * @return ZoneId Zone id.
+     * Get Zone ID. 
+     * @return ZoneId Zone ID.
      */
     public String getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set Zone id.
-     * @param ZoneId Zone id.
+     * Set Zone ID.
+     * @param ZoneId Zone ID.
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get DNS record modification data list, up to 100 entries can be modified at a time. 
-     * @return DnsRecords DNS record modification data list, up to 100 entries can be modified at a time.
+     * Get DNS record modification data list. Up to 100 records can be modified at a time. 
+     * @return DnsRecords DNS record modification data list. Up to 100 records can be modified at a time.
      */
     public DnsRecord [] getDnsRecords() {
         return this.DnsRecords;
     }
 
     /**
-     * Set DNS record modification data list, up to 100 entries can be modified at a time.
-     * @param DnsRecords DNS record modification data list, up to 100 entries can be modified at a time.
+     * Set DNS record modification data list. Up to 100 records can be modified at a time.
+     * @param DnsRecords DNS record modification data list. Up to 100 records can be modified at a time.
      */
     public void setDnsRecords(DnsRecord [] DnsRecords) {
         this.DnsRecords = DnsRecords;

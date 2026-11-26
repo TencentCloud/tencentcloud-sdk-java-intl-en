@@ -24,79 +24,79 @@ import java.util.HashMap;
 public class AclConfig extends AbstractModel {
 
     /**
-    * Switch. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+    * Switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * The custom rule.
+    * User-defined rules.
     */
     @SerializedName("AclUserRules")
     @Expose
     private AclUserRule [] AclUserRules;
 
     /**
-    * Managed custom rules.
+    * Managed custom rule
     */
     @SerializedName("Customizes")
     @Expose
     private AclUserRule [] Customizes;
 
     /**
-     * Get Switch. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li> 
-     * @return Switch Switch. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+     * Get Switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li> 
+     * @return Switch Switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set Switch. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-     * @param Switch Switch. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+     * Set Switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+     * @param Switch Switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get The custom rule. 
-     * @return AclUserRules The custom rule.
+     * Get User-defined rules. 
+     * @return AclUserRules User-defined rules.
      */
     public AclUserRule [] getAclUserRules() {
         return this.AclUserRules;
     }
 
     /**
-     * Set The custom rule.
-     * @param AclUserRules The custom rule.
+     * Set User-defined rules.
+     * @param AclUserRules User-defined rules.
      */
     public void setAclUserRules(AclUserRule [] AclUserRules) {
         this.AclUserRules = AclUserRules;
     }
 
     /**
-     * Get Managed custom rules. 
-     * @return Customizes Managed custom rules.
+     * Get Managed custom rule 
+     * @return Customizes Managed custom rule
      */
     public AclUserRule [] getCustomizes() {
         return this.Customizes;
     }
 
     /**
-     * Set Managed custom rules.
-     * @param Customizes Managed custom rules.
+     * Set Managed custom rule
+     * @param Customizes Managed custom rule
      */
     public void setCustomizes(AclUserRule [] Customizes) {
         this.Customizes = Customizes;

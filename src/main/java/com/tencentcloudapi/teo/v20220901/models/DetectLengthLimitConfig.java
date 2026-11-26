@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DetectLengthLimitConfig extends AbstractModel {
 
     /**
-    * List of rules that detect length limits.
+    * Rule list for detection length limit.
     */
     @SerializedName("DetectLengthLimitRules")
     @Expose
     private DetectLengthLimitRule [] DetectLengthLimitRules;
 
     /**
-     * Get List of rules that detect length limits. 
-     * @return DetectLengthLimitRules List of rules that detect length limits.
+     * Get Rule list for detection length limit. 
+     * @return DetectLengthLimitRules Rule list for detection length limit.
      */
     public DetectLengthLimitRule [] getDetectLengthLimitRules() {
         return this.DetectLengthLimitRules;
     }
 
     /**
-     * Set List of rules that detect length limits.
-     * @param DetectLengthLimitRules List of rules that detect length limits.
+     * Set Rule list for detection length limit.
+     * @param DetectLengthLimitRules Rule list for detection length limit.
      */
     public void setDetectLengthLimitRules(DetectLengthLimitRule [] DetectLengthLimitRules) {
         this.DetectLengthLimitRules = DetectLengthLimitRules;

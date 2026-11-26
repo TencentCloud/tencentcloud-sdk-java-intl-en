@@ -24,79 +24,79 @@ import java.util.HashMap;
 public class WafRule extends AbstractModel {
 
     /**
-    * Whether to enable managed rules. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+    * Managed rule switch. Valid values:
+<li> on: enabled;</li>
+<li> off: disabled</li>
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * IDs of the rules to be disabled.
+    * List of blocklisted IDs. Adding a rule ID to this parameter list disables the ID, meaning the rule ID no longer takes effect.
     */
     @SerializedName("BlockRuleIDs")
     @Expose
     private Long [] BlockRuleIDs;
 
     /**
-    * IDs of the rules to be executed in Observe mode.
+    * List of observation mode IDs. Add a rule ID to this parameter list to make the ID take effect in observation mode, that is, the rule ID enters observation mode.
     */
     @SerializedName("ObserveRuleIDs")
     @Expose
     private Long [] ObserveRuleIDs;
 
     /**
-     * Get Whether to enable managed rules. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li> 
-     * @return Switch Whether to enable managed rules. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+     * Get Managed rule switch. Valid values:
+<li> on: enabled;</li>
+<li> off: disabled</li> 
+     * @return Switch Managed rule switch. Valid values:
+<li> on: enabled;</li>
+<li> off: disabled</li>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set Whether to enable managed rules. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-     * @param Switch Whether to enable managed rules. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+     * Set Managed rule switch. Valid values:
+<li> on: enabled;</li>
+<li> off: disabled</li>
+     * @param Switch Managed rule switch. Valid values:
+<li> on: enabled;</li>
+<li> off: disabled</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get IDs of the rules to be disabled. 
-     * @return BlockRuleIDs IDs of the rules to be disabled.
+     * Get List of blocklisted IDs. Adding a rule ID to this parameter list disables the ID, meaning the rule ID no longer takes effect. 
+     * @return BlockRuleIDs List of blocklisted IDs. Adding a rule ID to this parameter list disables the ID, meaning the rule ID no longer takes effect.
      */
     public Long [] getBlockRuleIDs() {
         return this.BlockRuleIDs;
     }
 
     /**
-     * Set IDs of the rules to be disabled.
-     * @param BlockRuleIDs IDs of the rules to be disabled.
+     * Set List of blocklisted IDs. Adding a rule ID to this parameter list disables the ID, meaning the rule ID no longer takes effect.
+     * @param BlockRuleIDs List of blocklisted IDs. Adding a rule ID to this parameter list disables the ID, meaning the rule ID no longer takes effect.
      */
     public void setBlockRuleIDs(Long [] BlockRuleIDs) {
         this.BlockRuleIDs = BlockRuleIDs;
     }
 
     /**
-     * Get IDs of the rules to be executed in Observe mode. 
-     * @return ObserveRuleIDs IDs of the rules to be executed in Observe mode.
+     * Get List of observation mode IDs. Add a rule ID to this parameter list to make the ID take effect in observation mode, that is, the rule ID enters observation mode. 
+     * @return ObserveRuleIDs List of observation mode IDs. Add a rule ID to this parameter list to make the ID take effect in observation mode, that is, the rule ID enters observation mode.
      */
     public Long [] getObserveRuleIDs() {
         return this.ObserveRuleIDs;
     }
 
     /**
-     * Set IDs of the rules to be executed in Observe mode.
-     * @param ObserveRuleIDs IDs of the rules to be executed in Observe mode.
+     * Set List of observation mode IDs. Add a rule ID to this parameter list to make the ID take effect in observation mode, that is, the rule ID enters observation mode.
+     * @param ObserveRuleIDs List of observation mode IDs. Add a rule ID to this parameter list to make the ID take effect in observation mode, that is, the rule ID enters observation mode.
      */
     public void setObserveRuleIDs(Long [] ObserveRuleIDs) {
         this.ObserveRuleIDs = ObserveRuleIDs;

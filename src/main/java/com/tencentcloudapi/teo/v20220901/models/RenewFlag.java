@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class RenewFlag extends AbstractModel {
 
     /**
-    * The auto-renewal flag for prepaid plan has the following values:
+    * Auto-renewal flag for prepaid plan. Valid values:
 <li> on: Enable auto-renewal;</li>
 <li> off: Disable auto-renewal. </li>
     */
@@ -33,10 +33,10 @@ public class RenewFlag extends AbstractModel {
     private String Switch;
 
     /**
-     * Get The auto-renewal flag for prepaid plan has the following values:
+     * Get Auto-renewal flag for prepaid plan. Valid values:
 <li> on: Enable auto-renewal;</li>
 <li> off: Disable auto-renewal. </li> 
-     * @return Switch The auto-renewal flag for prepaid plan has the following values:
+     * @return Switch Auto-renewal flag for prepaid plan. Valid values:
 <li> on: Enable auto-renewal;</li>
 <li> off: Disable auto-renewal. </li>
      */
@@ -45,10 +45,10 @@ public class RenewFlag extends AbstractModel {
     }
 
     /**
-     * Set The auto-renewal flag for prepaid plan has the following values:
+     * Set Auto-renewal flag for prepaid plan. Valid values:
 <li> on: Enable auto-renewal;</li>
 <li> off: Disable auto-renewal. </li>
-     * @param Switch The auto-renewal flag for prepaid plan has the following values:
+     * @param Switch Auto-renewal flag for prepaid plan. Valid values:
 <li> on: Enable auto-renewal;</li>
 <li> off: Disable auto-renewal. </li>
      */

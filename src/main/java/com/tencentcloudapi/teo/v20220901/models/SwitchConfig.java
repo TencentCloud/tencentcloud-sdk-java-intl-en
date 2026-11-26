@@ -24,33 +24,33 @@ import java.util.HashMap;
 public class SwitchConfig extends AbstractModel {
 
     /**
-    * Whether to enable web protection. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>It does not affect DDoS and bot configuration.
+    * Master switch for Web security. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>Does not affect the DDoS and Bot switch.
     */
     @SerializedName("WebSwitch")
     @Expose
     private String WebSwitch;
 
     /**
-     * Get Whether to enable web protection. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>It does not affect DDoS and bot configuration. 
-     * @return WebSwitch Whether to enable web protection. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>It does not affect DDoS and bot configuration.
+     * Get Master switch for Web security. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>Does not affect the DDoS and Bot switch. 
+     * @return WebSwitch Master switch for Web security. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>Does not affect the DDoS and Bot switch.
      */
     public String getWebSwitch() {
         return this.WebSwitch;
     }
 
     /**
-     * Set Whether to enable web protection. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>It does not affect DDoS and bot configuration.
-     * @param WebSwitch Whether to enable web protection. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>It does not affect DDoS and bot configuration.
+     * Set Master switch for Web security. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>Does not affect the DDoS and Bot switch.
+     * @param WebSwitch Master switch for Web security. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>Does not affect the DDoS and Bot switch.
      */
     public void setWebSwitch(String WebSwitch) {
         this.WebSwitch = WebSwitch;

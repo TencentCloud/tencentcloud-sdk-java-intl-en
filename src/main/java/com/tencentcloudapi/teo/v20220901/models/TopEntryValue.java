@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class TopEntryValue extends AbstractModel {
 
     /**
-    * The item name.
+    * Sort entity names.
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * The number of items.
+    * Sort the number of entities.
     */
     @SerializedName("Count")
     @Expose
     private Long Count;
 
     /**
-     * Get The item name. 
-     * @return Name The item name.
+     * Get Sort entity names. 
+     * @return Name Sort entity names.
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set The item name.
-     * @param Name The item name.
+     * Set Sort entity names.
+     * @param Name Sort entity names.
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get The number of items. 
-     * @return Count The number of items.
+     * Get Sort the number of entities. 
+     * @return Count Sort the number of entities.
      */
     public Long getCount() {
         return this.Count;
     }
 
     /**
-     * Set The number of items.
-     * @param Count The number of items.
+     * Set Sort the number of entities.
+     * @param Count Sort the number of entities.
      */
     public void setCount(Long Count) {
         this.Count = Count;

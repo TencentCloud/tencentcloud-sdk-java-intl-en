@@ -24,141 +24,214 @@ import java.util.HashMap;
 public class InferenceHardwareSpecification extends AbstractModel {
 
     /**
-    * Specification flag.
+    * <p>Specification flag. Abandoned. For reference, use the field <code>HardwareSpecId</code>.</p>
     */
     @SerializedName("Spec")
     @Expose
     private String Spec;
 
     /**
-    * Specification name.
+    * <p>Unique identification ID of the specification.</p>
+    */
+    @SerializedName("HardwareSpecId")
+    @Expose
+    private String HardwareSpecId;
+
+    /**
+    * <p>Specification name.</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * Number of CPU cores.
-    */
-    @SerializedName("CPUNum")
-    @Expose
-    private Float CPUNum;
-
-    /**
-    * Memory size. Unit: MB.
-    */
-    @SerializedName("MemSize")
-    @Expose
-    private Long MemSize;
-
-    /**
-    * Number of GPU cards.
+    * <p>Number of GPU cards assigned by default for the specification.</p>
     */
     @SerializedName("GPUNum")
     @Expose
     private Float GPUNum;
 
     /**
-    * GPU VRAM size. Unit: MB.
+    * <p>Default number of CPU cores allocated to the specification.</p>
+    */
+    @SerializedName("CPUNum")
+    @Expose
+    private Float CPUNum;
+
+    /**
+    * <p>Default allocated memory size for the specification.</p><p>In MB.</p>
+    */
+    @SerializedName("MemSize")
+    @Expose
+    private Long MemSize;
+
+    /**
+    * <p>GPU VRAM size assigned by default in the specification.</p><p>Unit: MB</p>
     */
     @SerializedName("GPUMemSize")
     @Expose
     private Long GPUMemSize;
 
     /**
-     * Get Specification flag. 
-     * @return Spec Specification flag.
+    * <p>Default disk space allocated for the specification.</p><p>Unit: MB</p>
+    */
+    @SerializedName("DiskSize")
+    @Expose
+    private Long DiskSize;
+
+    /**
+    * <p>List of GPU card counts currently supported by the specification.</p><p>If not filled or filled with an empty array, only the GPU card count assigned by default for the specification is supported.</p>
+    */
+    @SerializedName("AllowedGPUNums")
+    @Expose
+    private Float [] AllowedGPUNums;
+
+    /**
+     * Get <p>Specification flag. Abandoned. For reference, use the field <code>HardwareSpecId</code>.</p> 
+     * @return Spec <p>Specification flag. Abandoned. For reference, use the field <code>HardwareSpecId</code>.</p>
+     * @deprecated
      */
+    @Deprecated
     public String getSpec() {
         return this.Spec;
     }
 
     /**
-     * Set Specification flag.
-     * @param Spec Specification flag.
+     * Set <p>Specification flag. Abandoned. For reference, use the field <code>HardwareSpecId</code>.</p>
+     * @param Spec <p>Specification flag. Abandoned. For reference, use the field <code>HardwareSpecId</code>.</p>
+     * @deprecated
      */
+    @Deprecated
     public void setSpec(String Spec) {
         this.Spec = Spec;
     }
 
     /**
-     * Get Specification name. 
-     * @return Name Specification name.
+     * Get <p>Unique identification ID of the specification.</p> 
+     * @return HardwareSpecId <p>Unique identification ID of the specification.</p>
+     */
+    public String getHardwareSpecId() {
+        return this.HardwareSpecId;
+    }
+
+    /**
+     * Set <p>Unique identification ID of the specification.</p>
+     * @param HardwareSpecId <p>Unique identification ID of the specification.</p>
+     */
+    public void setHardwareSpecId(String HardwareSpecId) {
+        this.HardwareSpecId = HardwareSpecId;
+    }
+
+    /**
+     * Get <p>Specification name.</p> 
+     * @return Name <p>Specification name.</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Specification name.
-     * @param Name Specification name.
+     * Set <p>Specification name.</p>
+     * @param Name <p>Specification name.</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Number of CPU cores. 
-     * @return CPUNum Number of CPU cores.
-     */
-    public Float getCPUNum() {
-        return this.CPUNum;
-    }
-
-    /**
-     * Set Number of CPU cores.
-     * @param CPUNum Number of CPU cores.
-     */
-    public void setCPUNum(Float CPUNum) {
-        this.CPUNum = CPUNum;
-    }
-
-    /**
-     * Get Memory size. Unit: MB. 
-     * @return MemSize Memory size. Unit: MB.
-     */
-    public Long getMemSize() {
-        return this.MemSize;
-    }
-
-    /**
-     * Set Memory size. Unit: MB.
-     * @param MemSize Memory size. Unit: MB.
-     */
-    public void setMemSize(Long MemSize) {
-        this.MemSize = MemSize;
-    }
-
-    /**
-     * Get Number of GPU cards. 
-     * @return GPUNum Number of GPU cards.
+     * Get <p>Number of GPU cards assigned by default for the specification.</p> 
+     * @return GPUNum <p>Number of GPU cards assigned by default for the specification.</p>
      */
     public Float getGPUNum() {
         return this.GPUNum;
     }
 
     /**
-     * Set Number of GPU cards.
-     * @param GPUNum Number of GPU cards.
+     * Set <p>Number of GPU cards assigned by default for the specification.</p>
+     * @param GPUNum <p>Number of GPU cards assigned by default for the specification.</p>
      */
     public void setGPUNum(Float GPUNum) {
         this.GPUNum = GPUNum;
     }
 
     /**
-     * Get GPU VRAM size. Unit: MB. 
-     * @return GPUMemSize GPU VRAM size. Unit: MB.
+     * Get <p>Default number of CPU cores allocated to the specification.</p> 
+     * @return CPUNum <p>Default number of CPU cores allocated to the specification.</p>
+     */
+    public Float getCPUNum() {
+        return this.CPUNum;
+    }
+
+    /**
+     * Set <p>Default number of CPU cores allocated to the specification.</p>
+     * @param CPUNum <p>Default number of CPU cores allocated to the specification.</p>
+     */
+    public void setCPUNum(Float CPUNum) {
+        this.CPUNum = CPUNum;
+    }
+
+    /**
+     * Get <p>Default allocated memory size for the specification.</p><p>In MB.</p> 
+     * @return MemSize <p>Default allocated memory size for the specification.</p><p>In MB.</p>
+     */
+    public Long getMemSize() {
+        return this.MemSize;
+    }
+
+    /**
+     * Set <p>Default allocated memory size for the specification.</p><p>In MB.</p>
+     * @param MemSize <p>Default allocated memory size for the specification.</p><p>In MB.</p>
+     */
+    public void setMemSize(Long MemSize) {
+        this.MemSize = MemSize;
+    }
+
+    /**
+     * Get <p>GPU VRAM size assigned by default in the specification.</p><p>Unit: MB</p> 
+     * @return GPUMemSize <p>GPU VRAM size assigned by default in the specification.</p><p>Unit: MB</p>
      */
     public Long getGPUMemSize() {
         return this.GPUMemSize;
     }
 
     /**
-     * Set GPU VRAM size. Unit: MB.
-     * @param GPUMemSize GPU VRAM size. Unit: MB.
+     * Set <p>GPU VRAM size assigned by default in the specification.</p><p>Unit: MB</p>
+     * @param GPUMemSize <p>GPU VRAM size assigned by default in the specification.</p><p>Unit: MB</p>
      */
     public void setGPUMemSize(Long GPUMemSize) {
         this.GPUMemSize = GPUMemSize;
+    }
+
+    /**
+     * Get <p>Default disk space allocated for the specification.</p><p>Unit: MB</p> 
+     * @return DiskSize <p>Default disk space allocated for the specification.</p><p>Unit: MB</p>
+     */
+    public Long getDiskSize() {
+        return this.DiskSize;
+    }
+
+    /**
+     * Set <p>Default disk space allocated for the specification.</p><p>Unit: MB</p>
+     * @param DiskSize <p>Default disk space allocated for the specification.</p><p>Unit: MB</p>
+     */
+    public void setDiskSize(Long DiskSize) {
+        this.DiskSize = DiskSize;
+    }
+
+    /**
+     * Get <p>List of GPU card counts currently supported by the specification.</p><p>If not filled or filled with an empty array, only the GPU card count assigned by default for the specification is supported.</p> 
+     * @return AllowedGPUNums <p>List of GPU card counts currently supported by the specification.</p><p>If not filled or filled with an empty array, only the GPU card count assigned by default for the specification is supported.</p>
+     */
+    public Float [] getAllowedGPUNums() {
+        return this.AllowedGPUNums;
+    }
+
+    /**
+     * Set <p>List of GPU card counts currently supported by the specification.</p><p>If not filled or filled with an empty array, only the GPU card count assigned by default for the specification is supported.</p>
+     * @param AllowedGPUNums <p>List of GPU card counts currently supported by the specification.</p><p>If not filled or filled with an empty array, only the GPU card count assigned by default for the specification is supported.</p>
+     */
+    public void setAllowedGPUNums(Float [] AllowedGPUNums) {
+        this.AllowedGPUNums = AllowedGPUNums;
     }
 
     public InferenceHardwareSpecification() {
@@ -172,8 +245,14 @@ public class InferenceHardwareSpecification extends AbstractModel {
         if (source.Spec != null) {
             this.Spec = new String(source.Spec);
         }
+        if (source.HardwareSpecId != null) {
+            this.HardwareSpecId = new String(source.HardwareSpecId);
+        }
         if (source.Name != null) {
             this.Name = new String(source.Name);
+        }
+        if (source.GPUNum != null) {
+            this.GPUNum = new Float(source.GPUNum);
         }
         if (source.CPUNum != null) {
             this.CPUNum = new Float(source.CPUNum);
@@ -181,11 +260,17 @@ public class InferenceHardwareSpecification extends AbstractModel {
         if (source.MemSize != null) {
             this.MemSize = new Long(source.MemSize);
         }
-        if (source.GPUNum != null) {
-            this.GPUNum = new Float(source.GPUNum);
-        }
         if (source.GPUMemSize != null) {
             this.GPUMemSize = new Long(source.GPUMemSize);
+        }
+        if (source.DiskSize != null) {
+            this.DiskSize = new Long(source.DiskSize);
+        }
+        if (source.AllowedGPUNums != null) {
+            this.AllowedGPUNums = new Float[source.AllowedGPUNums.length];
+            for (int i = 0; i < source.AllowedGPUNums.length; i++) {
+                this.AllowedGPUNums[i] = new Float(source.AllowedGPUNums[i]);
+            }
         }
     }
 
@@ -195,11 +280,14 @@ public class InferenceHardwareSpecification extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Spec", this.Spec);
+        this.setParamSimple(map, prefix + "HardwareSpecId", this.HardwareSpecId);
         this.setParamSimple(map, prefix + "Name", this.Name);
+        this.setParamSimple(map, prefix + "GPUNum", this.GPUNum);
         this.setParamSimple(map, prefix + "CPUNum", this.CPUNum);
         this.setParamSimple(map, prefix + "MemSize", this.MemSize);
-        this.setParamSimple(map, prefix + "GPUNum", this.GPUNum);
         this.setParamSimple(map, prefix + "GPUMemSize", this.GPUMemSize);
+        this.setParamSimple(map, prefix + "DiskSize", this.DiskSize);
+        this.setParamArraySimple(map, prefix + "AllowedGPUNums.", this.AllowedGPUNums);
 
     }
 }

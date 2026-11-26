@@ -24,33 +24,33 @@ import java.util.HashMap;
 public class AccelerateType extends AbstractModel {
 
     /**
-    * Acceleration switch. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+    * Acceleration switch. Value range:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-     * Get Acceleration switch. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li> 
-     * @return Switch Acceleration switch. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+     * Get Acceleration switch. Value range:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li> 
+     * @return Switch Acceleration switch. Value range:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set Acceleration switch. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-     * @param Switch Acceleration switch. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+     * Set Acceleration switch. Value range:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+     * @param Switch Acceleration switch. Value range:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;

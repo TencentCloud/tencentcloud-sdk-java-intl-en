@@ -24,280 +24,280 @@ import java.util.HashMap;
 public class CreateApplicationProxyRequest extends AbstractModel {
 
     /**
-    * Site ID.
+    * Zone ID.
     */
     @SerializedName("ZoneId")
     @Expose
     private String ZoneId;
 
     /**
-    * Domain name or subdomain name when `ProxyType=hostname`; 
-Instance name when `ProxyType=instance`.
+    * When ProxyType=hostname, it indicates a domain name or subdomain.
+When ProxyType=instance, it indicates the proxy name.
     */
     @SerializedName("ProxyName")
     @Expose
     private String ProxyName;
 
     /**
-    * The scheduling mode. Values:
-<li>`ip`: Schedule via Anycast IP.</li>
-<li>`domain`: Schedule via CNAME.</li>
+    * Scheduling mode. Valid values:
+<li>`ip`: Anycast IP;</li>
+<li>`domain`: CNAME.</li>
     */
     @SerializedName("PlatType")
     @Expose
     private String PlatType;
 
     /**
-    * Whether to enable security protection. Values:
-<li>`0`: Disable security protection.</li>
-<li>`1`: Enable security protection.</li>
+    * Whether security is enabled. Valid values:
+<li>0: security off;</li>
+<li>1: Enable security.</li>
     */
     @SerializedName("SecurityType")
     @Expose
     private Long SecurityType;
 
     /**
-    * Whether to enable acceleration. Values:
-<li>`0`: Disable acceleration.</li>
-<li>`1`: Enable acceleration.</li>
+    * Whether to enable acceleration. Valid values:
+<li>0: disable acceleration;</li>
+<li>1: Enable acceleration.</li>
     */
     @SerializedName("AccelerateType")
     @Expose
     private Long AccelerateType;
 
     /**
-    * Layer 4 proxy mode, with value: <li>instance: instance mode.</li>If not specified, the default value instance will be used.
+    * Layer 4 proxy mode. Valid values: <li>instance: instance mode.</li>Use default value instance if not specified.
     */
     @SerializedName("ProxyType")
     @Expose
     private String ProxyType;
 
     /**
-    * The session persistence duration. Value range: 30-3600 (in seconds).
-If not specified, this field uses the default value 600.
+    * Session persistence duration. Value range: 30-3600. Unit: second.
+If this field is not specified, the default value '600' will be used.
     */
     @SerializedName("SessionPersistTime")
     @Expose
     private Long SessionPersistTime;
 
     /**
-    * Ipv6 access configuration. 
-IPv6 access is disabled if it is not specified.
+    * Ipv6 access configuration.
+Not specified means disabling Ipv6 access.
     */
     @SerializedName("Ipv6")
     @Expose
     private Ipv6 Ipv6;
 
     /**
-    * The rule details.
-If this field is not specified, an application proxy rule will not be created.
+    * Rule details.
+If not specified, no rules are created.
     */
     @SerializedName("ApplicationProxyRules")
     @Expose
     private ApplicationProxyRule [] ApplicationProxyRules;
 
     /**
-    * Cross-MLC-border acceleration. It is disabled if this parameter is not specified.
+    * Acceleration optimization configuration for the Chinese mainland. Not specified means disabling acceleration optimization for the Chinese mainland.
     */
     @SerializedName("AccelerateMainland")
     @Expose
     private AccelerateMainland AccelerateMainland;
 
     /**
-     * Get Site ID. 
-     * @return ZoneId Site ID.
+     * Get Zone ID. 
+     * @return ZoneId Zone ID.
      */
     public String getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set Site ID.
-     * @param ZoneId Site ID.
+     * Set Zone ID.
+     * @param ZoneId Zone ID.
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get Domain name or subdomain name when `ProxyType=hostname`; 
-Instance name when `ProxyType=instance`. 
-     * @return ProxyName Domain name or subdomain name when `ProxyType=hostname`; 
-Instance name when `ProxyType=instance`.
+     * Get When ProxyType=hostname, it indicates a domain name or subdomain.
+When ProxyType=instance, it indicates the proxy name. 
+     * @return ProxyName When ProxyType=hostname, it indicates a domain name or subdomain.
+When ProxyType=instance, it indicates the proxy name.
      */
     public String getProxyName() {
         return this.ProxyName;
     }
 
     /**
-     * Set Domain name or subdomain name when `ProxyType=hostname`; 
-Instance name when `ProxyType=instance`.
-     * @param ProxyName Domain name or subdomain name when `ProxyType=hostname`; 
-Instance name when `ProxyType=instance`.
+     * Set When ProxyType=hostname, it indicates a domain name or subdomain.
+When ProxyType=instance, it indicates the proxy name.
+     * @param ProxyName When ProxyType=hostname, it indicates a domain name or subdomain.
+When ProxyType=instance, it indicates the proxy name.
      */
     public void setProxyName(String ProxyName) {
         this.ProxyName = ProxyName;
     }
 
     /**
-     * Get The scheduling mode. Values:
-<li>`ip`: Schedule via Anycast IP.</li>
-<li>`domain`: Schedule via CNAME.</li> 
-     * @return PlatType The scheduling mode. Values:
-<li>`ip`: Schedule via Anycast IP.</li>
-<li>`domain`: Schedule via CNAME.</li>
+     * Get Scheduling mode. Valid values:
+<li>`ip`: Anycast IP;</li>
+<li>`domain`: CNAME.</li> 
+     * @return PlatType Scheduling mode. Valid values:
+<li>`ip`: Anycast IP;</li>
+<li>`domain`: CNAME.</li>
      */
     public String getPlatType() {
         return this.PlatType;
     }
 
     /**
-     * Set The scheduling mode. Values:
-<li>`ip`: Schedule via Anycast IP.</li>
-<li>`domain`: Schedule via CNAME.</li>
-     * @param PlatType The scheduling mode. Values:
-<li>`ip`: Schedule via Anycast IP.</li>
-<li>`domain`: Schedule via CNAME.</li>
+     * Set Scheduling mode. Valid values:
+<li>`ip`: Anycast IP;</li>
+<li>`domain`: CNAME.</li>
+     * @param PlatType Scheduling mode. Valid values:
+<li>`ip`: Anycast IP;</li>
+<li>`domain`: CNAME.</li>
      */
     public void setPlatType(String PlatType) {
         this.PlatType = PlatType;
     }
 
     /**
-     * Get Whether to enable security protection. Values:
-<li>`0`: Disable security protection.</li>
-<li>`1`: Enable security protection.</li> 
-     * @return SecurityType Whether to enable security protection. Values:
-<li>`0`: Disable security protection.</li>
-<li>`1`: Enable security protection.</li>
+     * Get Whether security is enabled. Valid values:
+<li>0: security off;</li>
+<li>1: Enable security.</li> 
+     * @return SecurityType Whether security is enabled. Valid values:
+<li>0: security off;</li>
+<li>1: Enable security.</li>
      */
     public Long getSecurityType() {
         return this.SecurityType;
     }
 
     /**
-     * Set Whether to enable security protection. Values:
-<li>`0`: Disable security protection.</li>
-<li>`1`: Enable security protection.</li>
-     * @param SecurityType Whether to enable security protection. Values:
-<li>`0`: Disable security protection.</li>
-<li>`1`: Enable security protection.</li>
+     * Set Whether security is enabled. Valid values:
+<li>0: security off;</li>
+<li>1: Enable security.</li>
+     * @param SecurityType Whether security is enabled. Valid values:
+<li>0: security off;</li>
+<li>1: Enable security.</li>
      */
     public void setSecurityType(Long SecurityType) {
         this.SecurityType = SecurityType;
     }
 
     /**
-     * Get Whether to enable acceleration. Values:
-<li>`0`: Disable acceleration.</li>
-<li>`1`: Enable acceleration.</li> 
-     * @return AccelerateType Whether to enable acceleration. Values:
-<li>`0`: Disable acceleration.</li>
-<li>`1`: Enable acceleration.</li>
+     * Get Whether to enable acceleration. Valid values:
+<li>0: disable acceleration;</li>
+<li>1: Enable acceleration.</li> 
+     * @return AccelerateType Whether to enable acceleration. Valid values:
+<li>0: disable acceleration;</li>
+<li>1: Enable acceleration.</li>
      */
     public Long getAccelerateType() {
         return this.AccelerateType;
     }
 
     /**
-     * Set Whether to enable acceleration. Values:
-<li>`0`: Disable acceleration.</li>
-<li>`1`: Enable acceleration.</li>
-     * @param AccelerateType Whether to enable acceleration. Values:
-<li>`0`: Disable acceleration.</li>
-<li>`1`: Enable acceleration.</li>
+     * Set Whether to enable acceleration. Valid values:
+<li>0: disable acceleration;</li>
+<li>1: Enable acceleration.</li>
+     * @param AccelerateType Whether to enable acceleration. Valid values:
+<li>0: disable acceleration;</li>
+<li>1: Enable acceleration.</li>
      */
     public void setAccelerateType(Long AccelerateType) {
         this.AccelerateType = AccelerateType;
     }
 
     /**
-     * Get Layer 4 proxy mode, with value: <li>instance: instance mode.</li>If not specified, the default value instance will be used. 
-     * @return ProxyType Layer 4 proxy mode, with value: <li>instance: instance mode.</li>If not specified, the default value instance will be used.
+     * Get Layer 4 proxy mode. Valid values: <li>instance: instance mode.</li>Use default value instance if not specified. 
+     * @return ProxyType Layer 4 proxy mode. Valid values: <li>instance: instance mode.</li>Use default value instance if not specified.
      */
     public String getProxyType() {
         return this.ProxyType;
     }
 
     /**
-     * Set Layer 4 proxy mode, with value: <li>instance: instance mode.</li>If not specified, the default value instance will be used.
-     * @param ProxyType Layer 4 proxy mode, with value: <li>instance: instance mode.</li>If not specified, the default value instance will be used.
+     * Set Layer 4 proxy mode. Valid values: <li>instance: instance mode.</li>Use default value instance if not specified.
+     * @param ProxyType Layer 4 proxy mode. Valid values: <li>instance: instance mode.</li>Use default value instance if not specified.
      */
     public void setProxyType(String ProxyType) {
         this.ProxyType = ProxyType;
     }
 
     /**
-     * Get The session persistence duration. Value range: 30-3600 (in seconds).
-If not specified, this field uses the default value 600. 
-     * @return SessionPersistTime The session persistence duration. Value range: 30-3600 (in seconds).
-If not specified, this field uses the default value 600.
+     * Get Session persistence duration. Value range: 30-3600. Unit: second.
+If this field is not specified, the default value '600' will be used. 
+     * @return SessionPersistTime Session persistence duration. Value range: 30-3600. Unit: second.
+If this field is not specified, the default value '600' will be used.
      */
     public Long getSessionPersistTime() {
         return this.SessionPersistTime;
     }
 
     /**
-     * Set The session persistence duration. Value range: 30-3600 (in seconds).
-If not specified, this field uses the default value 600.
-     * @param SessionPersistTime The session persistence duration. Value range: 30-3600 (in seconds).
-If not specified, this field uses the default value 600.
+     * Set Session persistence duration. Value range: 30-3600. Unit: second.
+If this field is not specified, the default value '600' will be used.
+     * @param SessionPersistTime Session persistence duration. Value range: 30-3600. Unit: second.
+If this field is not specified, the default value '600' will be used.
      */
     public void setSessionPersistTime(Long SessionPersistTime) {
         this.SessionPersistTime = SessionPersistTime;
     }
 
     /**
-     * Get Ipv6 access configuration. 
-IPv6 access is disabled if it is not specified. 
-     * @return Ipv6 Ipv6 access configuration. 
-IPv6 access is disabled if it is not specified.
+     * Get Ipv6 access configuration.
+Not specified means disabling Ipv6 access. 
+     * @return Ipv6 Ipv6 access configuration.
+Not specified means disabling Ipv6 access.
      */
     public Ipv6 getIpv6() {
         return this.Ipv6;
     }
 
     /**
-     * Set Ipv6 access configuration. 
-IPv6 access is disabled if it is not specified.
-     * @param Ipv6 Ipv6 access configuration. 
-IPv6 access is disabled if it is not specified.
+     * Set Ipv6 access configuration.
+Not specified means disabling Ipv6 access.
+     * @param Ipv6 Ipv6 access configuration.
+Not specified means disabling Ipv6 access.
      */
     public void setIpv6(Ipv6 Ipv6) {
         this.Ipv6 = Ipv6;
     }
 
     /**
-     * Get The rule details.
-If this field is not specified, an application proxy rule will not be created. 
-     * @return ApplicationProxyRules The rule details.
-If this field is not specified, an application proxy rule will not be created.
+     * Get Rule details.
+If not specified, no rules are created. 
+     * @return ApplicationProxyRules Rule details.
+If not specified, no rules are created.
      */
     public ApplicationProxyRule [] getApplicationProxyRules() {
         return this.ApplicationProxyRules;
     }
 
     /**
-     * Set The rule details.
-If this field is not specified, an application proxy rule will not be created.
-     * @param ApplicationProxyRules The rule details.
-If this field is not specified, an application proxy rule will not be created.
+     * Set Rule details.
+If not specified, no rules are created.
+     * @param ApplicationProxyRules Rule details.
+If not specified, no rules are created.
      */
     public void setApplicationProxyRules(ApplicationProxyRule [] ApplicationProxyRules) {
         this.ApplicationProxyRules = ApplicationProxyRules;
     }
 
     /**
-     * Get Cross-MLC-border acceleration. It is disabled if this parameter is not specified. 
-     * @return AccelerateMainland Cross-MLC-border acceleration. It is disabled if this parameter is not specified.
+     * Get Acceleration optimization configuration for the Chinese mainland. Not specified means disabling acceleration optimization for the Chinese mainland. 
+     * @return AccelerateMainland Acceleration optimization configuration for the Chinese mainland. Not specified means disabling acceleration optimization for the Chinese mainland.
      */
     public AccelerateMainland getAccelerateMainland() {
         return this.AccelerateMainland;
     }
 
     /**
-     * Set Cross-MLC-border acceleration. It is disabled if this parameter is not specified.
-     * @param AccelerateMainland Cross-MLC-border acceleration. It is disabled if this parameter is not specified.
+     * Set Acceleration optimization configuration for the Chinese mainland. Not specified means disabling acceleration optimization for the Chinese mainland.
+     * @param AccelerateMainland Acceleration optimization configuration for the Chinese mainland. Not specified means disabling acceleration optimization for the Chinese mainland.
      */
     public void setAccelerateMainland(AccelerateMainland AccelerateMainland) {
         this.AccelerateMainland = AccelerateMainland;

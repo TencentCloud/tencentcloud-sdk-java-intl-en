@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class SecEntry extends AbstractModel {
 
     /**
-    * The query dimension value.
+    * Query the dimension value.
     */
     @SerializedName("Key")
     @Expose
     private String Key;
 
     /**
-    * The details.
+    * Detailed data under the query dimension.
     */
     @SerializedName("Value")
     @Expose
     private SecEntryValue [] Value;
 
     /**
-     * Get The query dimension value. 
-     * @return Key The query dimension value.
+     * Get Query the dimension value. 
+     * @return Key Query the dimension value.
      */
     public String getKey() {
         return this.Key;
     }
 
     /**
-     * Set The query dimension value.
-     * @param Key The query dimension value.
+     * Set Query the dimension value.
+     * @param Key Query the dimension value.
      */
     public void setKey(String Key) {
         this.Key = Key;
     }
 
     /**
-     * Get The details. 
-     * @return Value The details.
+     * Get Detailed data under the query dimension. 
+     * @return Value Detailed data under the query dimension.
      */
     public SecEntryValue [] getValue() {
         return this.Value;
     }
 
     /**
-     * Set The details.
-     * @param Value The details.
+     * Set Detailed data under the query dimension.
+     * @param Value Detailed data under the query dimension.
      */
     public void setValue(SecEntryValue [] Value) {
         this.Value = Value;

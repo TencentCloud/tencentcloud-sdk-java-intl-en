@@ -31,35 +31,35 @@ public class DescribeLogAnalysisDownloadTasksRequest extends AbstractModel {
     private String ZoneId;
 
     /**
-    * <p>Data service area. Available values:<ul><li>mainland: within the Chinese mainland;</li><li>overseas: global (excluding Mainland China).</li></ul> Note: If the site service area is "global availability zone", you need to query the data of mainland and overseas separately to obtain all data.</p>
+    * <p>Data ownership region. Available values: <ul><li>mainland: within the Chinese mainland;</li> <li>overseas: global (excluding the Chinese mainland).</li></ul> Note: If the site service area is "global availability zone", to obtain all data, query the data of mainland and overseas separately.</p>
     */
     @SerializedName("Area")
     @Expose
     private String Area;
 
     /**
-    * <p>Log type. Available values: <ul><li> l7-access-logs: Layer 7 Access Logs;</li><li>web-attack: Managed Rule Logs.</li></ul>Defaults to l7-access-logs.</p>
+    * <p>Log type. Available values: <ul><li> l7-access-logs: L7 access log;</li><li>web-attack: managed rule log.</li></ul>Defaults to l7-access-logs.</p>
     */
     @SerializedName("LogType")
     @Expose
     private String LogType;
 
     /**
-    * <p>Filtering Conditions. The maximum number of Filters.Values is 20. Detailed filter criteria are as follows:<ul><li>task-id: Filter by log download task id. For optional Values, refer to the TaskId returned by the CreateLogAnalysisDownloadTask api.</li></ul></p><p>For reference: CreateLogAnalysisDownloadTask</p>
+    * <p>Filter criteria. The maximum number of Filters.Values is 20. The detailed filter criteria are as follows: <ul><li>task-id: Filter by log download task id. For optional Values, see the TaskId returned by the CreateLogAnalysisDownloadTask API.</li></ul></p><p>Parameter value reference: CreateLogAnalysisDownloadTask</p>
     */
     @SerializedName("Filters")
     @Expose
     private AdvancedFilter [] Filters;
 
     /**
-    * <p>Paginated query limit. Default value: 20, maximum value: 100.</p>
+    * <p>Paginated query limit. Default value: 20. Maximum value: 100.</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * <p>Paginated query offset, defaults to 0.</p>
+    * <p>Paginated query offset. Default value: 0.</p>
     */
     @SerializedName("Offset")
     @Expose
@@ -82,80 +82,80 @@ public class DescribeLogAnalysisDownloadTasksRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>Data service area. Available values:<ul><li>mainland: within the Chinese mainland;</li><li>overseas: global (excluding Mainland China).</li></ul> Note: If the site service area is "global availability zone", you need to query the data of mainland and overseas separately to obtain all data.</p> 
-     * @return Area <p>Data service area. Available values:<ul><li>mainland: within the Chinese mainland;</li><li>overseas: global (excluding Mainland China).</li></ul> Note: If the site service area is "global availability zone", you need to query the data of mainland and overseas separately to obtain all data.</p>
+     * Get <p>Data ownership region. Available values: <ul><li>mainland: within the Chinese mainland;</li> <li>overseas: global (excluding the Chinese mainland).</li></ul> Note: If the site service area is "global availability zone", to obtain all data, query the data of mainland and overseas separately.</p> 
+     * @return Area <p>Data ownership region. Available values: <ul><li>mainland: within the Chinese mainland;</li> <li>overseas: global (excluding the Chinese mainland).</li></ul> Note: If the site service area is "global availability zone", to obtain all data, query the data of mainland and overseas separately.</p>
      */
     public String getArea() {
         return this.Area;
     }
 
     /**
-     * Set <p>Data service area. Available values:<ul><li>mainland: within the Chinese mainland;</li><li>overseas: global (excluding Mainland China).</li></ul> Note: If the site service area is "global availability zone", you need to query the data of mainland and overseas separately to obtain all data.</p>
-     * @param Area <p>Data service area. Available values:<ul><li>mainland: within the Chinese mainland;</li><li>overseas: global (excluding Mainland China).</li></ul> Note: If the site service area is "global availability zone", you need to query the data of mainland and overseas separately to obtain all data.</p>
+     * Set <p>Data ownership region. Available values: <ul><li>mainland: within the Chinese mainland;</li> <li>overseas: global (excluding the Chinese mainland).</li></ul> Note: If the site service area is "global availability zone", to obtain all data, query the data of mainland and overseas separately.</p>
+     * @param Area <p>Data ownership region. Available values: <ul><li>mainland: within the Chinese mainland;</li> <li>overseas: global (excluding the Chinese mainland).</li></ul> Note: If the site service area is "global availability zone", to obtain all data, query the data of mainland and overseas separately.</p>
      */
     public void setArea(String Area) {
         this.Area = Area;
     }
 
     /**
-     * Get <p>Log type. Available values: <ul><li> l7-access-logs: Layer 7 Access Logs;</li><li>web-attack: Managed Rule Logs.</li></ul>Defaults to l7-access-logs.</p> 
-     * @return LogType <p>Log type. Available values: <ul><li> l7-access-logs: Layer 7 Access Logs;</li><li>web-attack: Managed Rule Logs.</li></ul>Defaults to l7-access-logs.</p>
+     * Get <p>Log type. Available values: <ul><li> l7-access-logs: L7 access log;</li><li>web-attack: managed rule log.</li></ul>Defaults to l7-access-logs.</p> 
+     * @return LogType <p>Log type. Available values: <ul><li> l7-access-logs: L7 access log;</li><li>web-attack: managed rule log.</li></ul>Defaults to l7-access-logs.</p>
      */
     public String getLogType() {
         return this.LogType;
     }
 
     /**
-     * Set <p>Log type. Available values: <ul><li> l7-access-logs: Layer 7 Access Logs;</li><li>web-attack: Managed Rule Logs.</li></ul>Defaults to l7-access-logs.</p>
-     * @param LogType <p>Log type. Available values: <ul><li> l7-access-logs: Layer 7 Access Logs;</li><li>web-attack: Managed Rule Logs.</li></ul>Defaults to l7-access-logs.</p>
+     * Set <p>Log type. Available values: <ul><li> l7-access-logs: L7 access log;</li><li>web-attack: managed rule log.</li></ul>Defaults to l7-access-logs.</p>
+     * @param LogType <p>Log type. Available values: <ul><li> l7-access-logs: L7 access log;</li><li>web-attack: managed rule log.</li></ul>Defaults to l7-access-logs.</p>
      */
     public void setLogType(String LogType) {
         this.LogType = LogType;
     }
 
     /**
-     * Get <p>Filtering Conditions. The maximum number of Filters.Values is 20. Detailed filter criteria are as follows:<ul><li>task-id: Filter by log download task id. For optional Values, refer to the TaskId returned by the CreateLogAnalysisDownloadTask api.</li></ul></p><p>For reference: CreateLogAnalysisDownloadTask</p> 
-     * @return Filters <p>Filtering Conditions. The maximum number of Filters.Values is 20. Detailed filter criteria are as follows:<ul><li>task-id: Filter by log download task id. For optional Values, refer to the TaskId returned by the CreateLogAnalysisDownloadTask api.</li></ul></p><p>For reference: CreateLogAnalysisDownloadTask</p>
+     * Get <p>Filter criteria. The maximum number of Filters.Values is 20. The detailed filter criteria are as follows: <ul><li>task-id: Filter by log download task id. For optional Values, see the TaskId returned by the CreateLogAnalysisDownloadTask API.</li></ul></p><p>Parameter value reference: CreateLogAnalysisDownloadTask</p> 
+     * @return Filters <p>Filter criteria. The maximum number of Filters.Values is 20. The detailed filter criteria are as follows: <ul><li>task-id: Filter by log download task id. For optional Values, see the TaskId returned by the CreateLogAnalysisDownloadTask API.</li></ul></p><p>Parameter value reference: CreateLogAnalysisDownloadTask</p>
      */
     public AdvancedFilter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set <p>Filtering Conditions. The maximum number of Filters.Values is 20. Detailed filter criteria are as follows:<ul><li>task-id: Filter by log download task id. For optional Values, refer to the TaskId returned by the CreateLogAnalysisDownloadTask api.</li></ul></p><p>For reference: CreateLogAnalysisDownloadTask</p>
-     * @param Filters <p>Filtering Conditions. The maximum number of Filters.Values is 20. Detailed filter criteria are as follows:<ul><li>task-id: Filter by log download task id. For optional Values, refer to the TaskId returned by the CreateLogAnalysisDownloadTask api.</li></ul></p><p>For reference: CreateLogAnalysisDownloadTask</p>
+     * Set <p>Filter criteria. The maximum number of Filters.Values is 20. The detailed filter criteria are as follows: <ul><li>task-id: Filter by log download task id. For optional Values, see the TaskId returned by the CreateLogAnalysisDownloadTask API.</li></ul></p><p>Parameter value reference: CreateLogAnalysisDownloadTask</p>
+     * @param Filters <p>Filter criteria. The maximum number of Filters.Values is 20. The detailed filter criteria are as follows: <ul><li>task-id: Filter by log download task id. For optional Values, see the TaskId returned by the CreateLogAnalysisDownloadTask API.</li></ul></p><p>Parameter value reference: CreateLogAnalysisDownloadTask</p>
      */
     public void setFilters(AdvancedFilter [] Filters) {
         this.Filters = Filters;
     }
 
     /**
-     * Get <p>Paginated query limit. Default value: 20, maximum value: 100.</p> 
-     * @return Limit <p>Paginated query limit. Default value: 20, maximum value: 100.</p>
+     * Get <p>Paginated query limit. Default value: 20. Maximum value: 100.</p> 
+     * @return Limit <p>Paginated query limit. Default value: 20. Maximum value: 100.</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set <p>Paginated query limit. Default value: 20, maximum value: 100.</p>
-     * @param Limit <p>Paginated query limit. Default value: 20, maximum value: 100.</p>
+     * Set <p>Paginated query limit. Default value: 20. Maximum value: 100.</p>
+     * @param Limit <p>Paginated query limit. Default value: 20. Maximum value: 100.</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get <p>Paginated query offset, defaults to 0.</p> 
-     * @return Offset <p>Paginated query offset, defaults to 0.</p>
+     * Get <p>Paginated query offset. Default value: 0.</p> 
+     * @return Offset <p>Paginated query offset. Default value: 0.</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set <p>Paginated query offset, defaults to 0.</p>
-     * @param Offset <p>Paginated query offset, defaults to 0.</p>
+     * Set <p>Paginated query offset. Default value: 0.</p>
+     * @param Offset <p>Paginated query offset. Default value: 0.</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;

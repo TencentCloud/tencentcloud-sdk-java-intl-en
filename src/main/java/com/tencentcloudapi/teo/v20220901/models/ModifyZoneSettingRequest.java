@@ -24,173 +24,173 @@ import java.util.HashMap;
 public class ModifyZoneSettingRequest extends AbstractModel {
 
     /**
-    * Site ID to modify.
+    * Site ID to be changed.
     */
     @SerializedName("ZoneId")
     @Expose
     private String ZoneId;
 
     /**
-    * Cache expiration time configuration
-The original configuration will apply if this field is not specified.
+    * Cache expiration time configuration.
+Leave blank to retain the original configuration.
     */
     @SerializedName("CacheConfig")
     @Expose
     private CacheConfig CacheConfig;
 
     /**
-    * The node cache key configuration.
-The original configuration will apply if this field is not specified.
+    * Node cache key configuration.
+Leave blank to retain the original configuration.
     */
     @SerializedName("CacheKey")
     @Expose
     private CacheKey CacheKey;
 
     /**
-    * The browser cache configuration.
-The original configuration will apply if this field is not specified.
+    * Browser cache configuration.
+Leave blank to retain the original configuration.
     */
     @SerializedName("MaxAge")
     @Expose
     private MaxAge MaxAge;
 
     /**
-    * The offline cache configuration.
-The original configuration will apply if this field is not specified.
+    * Offline cache configuration.
+Leave blank to retain the original configuration.
     */
     @SerializedName("OfflineCache")
     @Expose
     private OfflineCache OfflineCache;
 
     /**
-    * QUIC access configuration. 
-The original configuration will apply if it is not specified.
+    * Quic access configuration.
+Leave blank to retain the original configuration.
     */
     @SerializedName("Quic")
     @Expose
     private Quic Quic;
 
     /**
-    * POST transport configuration. 
-The original configuration will apply if it is not specified.
+    * Configuration for Post request transmission.
+Leave blank to retain the original configuration.
     */
     @SerializedName("PostMaxSize")
     @Expose
     private PostMaxSize PostMaxSize;
 
     /**
-    * The smart compression configuration.
-The original configuration will apply if this field is not specified.
+    * Intelligent compression configuration.
+Leave blank to retain the original configuration.
     */
     @SerializedName("Compression")
     @Expose
     private Compression Compression;
 
     /**
-    * HTTP2 origin-pull configuration. 
-The original configuration will apply if it is not specified.
+    * Http2 origin-pull configuration.
+Leave blank to retain the original configuration.
     */
     @SerializedName("UpstreamHttp2")
     @Expose
     private UpstreamHttp2 UpstreamHttp2;
 
     /**
-    * Force HTTPS redirect configuration. 
-The original configuration will apply if it is not specified.
+    * Access protocol forcing Https redirection configuration.
+Leave blank to retain the original configuration.
     */
     @SerializedName("ForceRedirect")
     @Expose
     private ForceRedirect ForceRedirect;
 
     /**
-    * HTTPS acceleration configuration. 
-The original configuration will apply if it is not specified.
+    * Https acceleration configuration.
+Leave blank to retain the original configuration.
     */
     @SerializedName("Https")
     @Expose
     private Https Https;
 
     /**
-    * The origin server configuration.
-The original configuration will apply if this field is not specified.
+    * Origin server configuration.
+Leave blank to retain the original configuration.
     */
     @SerializedName("Origin")
     @Expose
     private Origin Origin;
 
     /**
-    * The smart acceleration configuration.
-The original configuration will apply if this field is not specified.
+    * Intelligent acceleration configuration.
+Leave blank to retain the original configuration.
     */
     @SerializedName("SmartRouting")
     @Expose
     private SmartRouting SmartRouting;
 
     /**
-    * WebSocket configuration. 
-The original configuration will apply if it is not specified.
+    * WebSocket configuration.
+Leave blank to retain the original configuration.
     */
     @SerializedName("WebSocket")
     @Expose
     private WebSocket WebSocket;
 
     /**
-    * Origin-pull client IP header configuration. 
-The original configuration will apply if it is not specified.
+    * Client IP origin-pull request header configuration.
+Leave blank to retain the original configuration.
     */
     @SerializedName("ClientIpHeader")
     @Expose
     private ClientIpHeader ClientIpHeader;
 
     /**
-    * The cache prefresh configuration.
-The original configuration will apply if this field is not specified.
+    * Cache pre-refresh configuration.
+Leave blank to retain the original configuration.
     */
     @SerializedName("CachePrefresh")
     @Expose
     private CachePrefresh CachePrefresh;
 
     /**
-    * Ipv6 access configuration. 
-The original configuration will apply if it is not specified.
+    * Ipv6 access configuration.
+Leave blank to retain the original configuration.
     */
     @SerializedName("Ipv6")
     @Expose
     private Ipv6 Ipv6;
 
     /**
-    * Whether to carry the location information of the client IP during origin-pull. 
-The original configuration will apply if it is not specified.
+    * Configuration of whether to carry the regional information of the client IP during origin-pull.
+Leave blank to retain the original configuration.
     */
     @SerializedName("ClientIpCountry")
     @Expose
     private ClientIpCountry ClientIpCountry;
 
     /**
-    * Configuration of gRPC support. 
-The original configuration will apply if it is not specified.
+    * Grpc protocol support configuration.
+Leave blank to retain the original configuration.
     */
     @SerializedName("Grpc")
     @Expose
     private Grpc Grpc;
 
     /**
-    * Network Error Logging configuration. The original configuration will apply if it is not specified.
+    * Network error log configuration. If this field is not specified, the original configuration will be retained.
     */
     @SerializedName("NetworkErrorLogging")
     @Expose
     private NetworkErrorLogging NetworkErrorLogging;
 
     /**
-    * Image optimization. 
-It is disabled if this parameter is not specified.
+    * Image optimization configuration.
+Not specified: disabled.
     */
     @SerializedName("ImageOptimize")
     @Expose
     private ImageOptimize ImageOptimize;
 
     /**
-    * Standard debugging configuration.
+    * Standard Debug configuration.
     */
     @SerializedName("StandardDebug")
     @Expose
@@ -204,428 +204,428 @@ It is disabled if this parameter is not specified.
     private JITVideoProcess JITVideoProcess;
 
     /**
-     * Get Site ID to modify. 
-     * @return ZoneId Site ID to modify.
+     * Get Site ID to be changed. 
+     * @return ZoneId Site ID to be changed.
      */
     public String getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set Site ID to modify.
-     * @param ZoneId Site ID to modify.
+     * Set Site ID to be changed.
+     * @param ZoneId Site ID to be changed.
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get Cache expiration time configuration
-The original configuration will apply if this field is not specified. 
-     * @return CacheConfig Cache expiration time configuration
-The original configuration will apply if this field is not specified.
+     * Get Cache expiration time configuration.
+Leave blank to retain the original configuration. 
+     * @return CacheConfig Cache expiration time configuration.
+Leave blank to retain the original configuration.
      */
     public CacheConfig getCacheConfig() {
         return this.CacheConfig;
     }
 
     /**
-     * Set Cache expiration time configuration
-The original configuration will apply if this field is not specified.
-     * @param CacheConfig Cache expiration time configuration
-The original configuration will apply if this field is not specified.
+     * Set Cache expiration time configuration.
+Leave blank to retain the original configuration.
+     * @param CacheConfig Cache expiration time configuration.
+Leave blank to retain the original configuration.
      */
     public void setCacheConfig(CacheConfig CacheConfig) {
         this.CacheConfig = CacheConfig;
     }
 
     /**
-     * Get The node cache key configuration.
-The original configuration will apply if this field is not specified. 
-     * @return CacheKey The node cache key configuration.
-The original configuration will apply if this field is not specified.
+     * Get Node cache key configuration.
+Leave blank to retain the original configuration. 
+     * @return CacheKey Node cache key configuration.
+Leave blank to retain the original configuration.
      */
     public CacheKey getCacheKey() {
         return this.CacheKey;
     }
 
     /**
-     * Set The node cache key configuration.
-The original configuration will apply if this field is not specified.
-     * @param CacheKey The node cache key configuration.
-The original configuration will apply if this field is not specified.
+     * Set Node cache key configuration.
+Leave blank to retain the original configuration.
+     * @param CacheKey Node cache key configuration.
+Leave blank to retain the original configuration.
      */
     public void setCacheKey(CacheKey CacheKey) {
         this.CacheKey = CacheKey;
     }
 
     /**
-     * Get The browser cache configuration.
-The original configuration will apply if this field is not specified. 
-     * @return MaxAge The browser cache configuration.
-The original configuration will apply if this field is not specified.
+     * Get Browser cache configuration.
+Leave blank to retain the original configuration. 
+     * @return MaxAge Browser cache configuration.
+Leave blank to retain the original configuration.
      */
     public MaxAge getMaxAge() {
         return this.MaxAge;
     }
 
     /**
-     * Set The browser cache configuration.
-The original configuration will apply if this field is not specified.
-     * @param MaxAge The browser cache configuration.
-The original configuration will apply if this field is not specified.
+     * Set Browser cache configuration.
+Leave blank to retain the original configuration.
+     * @param MaxAge Browser cache configuration.
+Leave blank to retain the original configuration.
      */
     public void setMaxAge(MaxAge MaxAge) {
         this.MaxAge = MaxAge;
     }
 
     /**
-     * Get The offline cache configuration.
-The original configuration will apply if this field is not specified. 
-     * @return OfflineCache The offline cache configuration.
-The original configuration will apply if this field is not specified.
+     * Get Offline cache configuration.
+Leave blank to retain the original configuration. 
+     * @return OfflineCache Offline cache configuration.
+Leave blank to retain the original configuration.
      */
     public OfflineCache getOfflineCache() {
         return this.OfflineCache;
     }
 
     /**
-     * Set The offline cache configuration.
-The original configuration will apply if this field is not specified.
-     * @param OfflineCache The offline cache configuration.
-The original configuration will apply if this field is not specified.
+     * Set Offline cache configuration.
+Leave blank to retain the original configuration.
+     * @param OfflineCache Offline cache configuration.
+Leave blank to retain the original configuration.
      */
     public void setOfflineCache(OfflineCache OfflineCache) {
         this.OfflineCache = OfflineCache;
     }
 
     /**
-     * Get QUIC access configuration. 
-The original configuration will apply if it is not specified. 
-     * @return Quic QUIC access configuration. 
-The original configuration will apply if it is not specified.
+     * Get Quic access configuration.
+Leave blank to retain the original configuration. 
+     * @return Quic Quic access configuration.
+Leave blank to retain the original configuration.
      */
     public Quic getQuic() {
         return this.Quic;
     }
 
     /**
-     * Set QUIC access configuration. 
-The original configuration will apply if it is not specified.
-     * @param Quic QUIC access configuration. 
-The original configuration will apply if it is not specified.
+     * Set Quic access configuration.
+Leave blank to retain the original configuration.
+     * @param Quic Quic access configuration.
+Leave blank to retain the original configuration.
      */
     public void setQuic(Quic Quic) {
         this.Quic = Quic;
     }
 
     /**
-     * Get POST transport configuration. 
-The original configuration will apply if it is not specified. 
-     * @return PostMaxSize POST transport configuration. 
-The original configuration will apply if it is not specified.
+     * Get Configuration for Post request transmission.
+Leave blank to retain the original configuration. 
+     * @return PostMaxSize Configuration for Post request transmission.
+Leave blank to retain the original configuration.
      */
     public PostMaxSize getPostMaxSize() {
         return this.PostMaxSize;
     }
 
     /**
-     * Set POST transport configuration. 
-The original configuration will apply if it is not specified.
-     * @param PostMaxSize POST transport configuration. 
-The original configuration will apply if it is not specified.
+     * Set Configuration for Post request transmission.
+Leave blank to retain the original configuration.
+     * @param PostMaxSize Configuration for Post request transmission.
+Leave blank to retain the original configuration.
      */
     public void setPostMaxSize(PostMaxSize PostMaxSize) {
         this.PostMaxSize = PostMaxSize;
     }
 
     /**
-     * Get The smart compression configuration.
-The original configuration will apply if this field is not specified. 
-     * @return Compression The smart compression configuration.
-The original configuration will apply if this field is not specified.
+     * Get Intelligent compression configuration.
+Leave blank to retain the original configuration. 
+     * @return Compression Intelligent compression configuration.
+Leave blank to retain the original configuration.
      */
     public Compression getCompression() {
         return this.Compression;
     }
 
     /**
-     * Set The smart compression configuration.
-The original configuration will apply if this field is not specified.
-     * @param Compression The smart compression configuration.
-The original configuration will apply if this field is not specified.
+     * Set Intelligent compression configuration.
+Leave blank to retain the original configuration.
+     * @param Compression Intelligent compression configuration.
+Leave blank to retain the original configuration.
      */
     public void setCompression(Compression Compression) {
         this.Compression = Compression;
     }
 
     /**
-     * Get HTTP2 origin-pull configuration. 
-The original configuration will apply if it is not specified. 
-     * @return UpstreamHttp2 HTTP2 origin-pull configuration. 
-The original configuration will apply if it is not specified.
+     * Get Http2 origin-pull configuration.
+Leave blank to retain the original configuration. 
+     * @return UpstreamHttp2 Http2 origin-pull configuration.
+Leave blank to retain the original configuration.
      */
     public UpstreamHttp2 getUpstreamHttp2() {
         return this.UpstreamHttp2;
     }
 
     /**
-     * Set HTTP2 origin-pull configuration. 
-The original configuration will apply if it is not specified.
-     * @param UpstreamHttp2 HTTP2 origin-pull configuration. 
-The original configuration will apply if it is not specified.
+     * Set Http2 origin-pull configuration.
+Leave blank to retain the original configuration.
+     * @param UpstreamHttp2 Http2 origin-pull configuration.
+Leave blank to retain the original configuration.
      */
     public void setUpstreamHttp2(UpstreamHttp2 UpstreamHttp2) {
         this.UpstreamHttp2 = UpstreamHttp2;
     }
 
     /**
-     * Get Force HTTPS redirect configuration. 
-The original configuration will apply if it is not specified. 
-     * @return ForceRedirect Force HTTPS redirect configuration. 
-The original configuration will apply if it is not specified.
+     * Get Access protocol forcing Https redirection configuration.
+Leave blank to retain the original configuration. 
+     * @return ForceRedirect Access protocol forcing Https redirection configuration.
+Leave blank to retain the original configuration.
      */
     public ForceRedirect getForceRedirect() {
         return this.ForceRedirect;
     }
 
     /**
-     * Set Force HTTPS redirect configuration. 
-The original configuration will apply if it is not specified.
-     * @param ForceRedirect Force HTTPS redirect configuration. 
-The original configuration will apply if it is not specified.
+     * Set Access protocol forcing Https redirection configuration.
+Leave blank to retain the original configuration.
+     * @param ForceRedirect Access protocol forcing Https redirection configuration.
+Leave blank to retain the original configuration.
      */
     public void setForceRedirect(ForceRedirect ForceRedirect) {
         this.ForceRedirect = ForceRedirect;
     }
 
     /**
-     * Get HTTPS acceleration configuration. 
-The original configuration will apply if it is not specified. 
-     * @return Https HTTPS acceleration configuration. 
-The original configuration will apply if it is not specified.
+     * Get Https acceleration configuration.
+Leave blank to retain the original configuration. 
+     * @return Https Https acceleration configuration.
+Leave blank to retain the original configuration.
      */
     public Https getHttps() {
         return this.Https;
     }
 
     /**
-     * Set HTTPS acceleration configuration. 
-The original configuration will apply if it is not specified.
-     * @param Https HTTPS acceleration configuration. 
-The original configuration will apply if it is not specified.
+     * Set Https acceleration configuration.
+Leave blank to retain the original configuration.
+     * @param Https Https acceleration configuration.
+Leave blank to retain the original configuration.
      */
     public void setHttps(Https Https) {
         this.Https = Https;
     }
 
     /**
-     * Get The origin server configuration.
-The original configuration will apply if this field is not specified. 
-     * @return Origin The origin server configuration.
-The original configuration will apply if this field is not specified.
+     * Get Origin server configuration.
+Leave blank to retain the original configuration. 
+     * @return Origin Origin server configuration.
+Leave blank to retain the original configuration.
      */
     public Origin getOrigin() {
         return this.Origin;
     }
 
     /**
-     * Set The origin server configuration.
-The original configuration will apply if this field is not specified.
-     * @param Origin The origin server configuration.
-The original configuration will apply if this field is not specified.
+     * Set Origin server configuration.
+Leave blank to retain the original configuration.
+     * @param Origin Origin server configuration.
+Leave blank to retain the original configuration.
      */
     public void setOrigin(Origin Origin) {
         this.Origin = Origin;
     }
 
     /**
-     * Get The smart acceleration configuration.
-The original configuration will apply if this field is not specified. 
-     * @return SmartRouting The smart acceleration configuration.
-The original configuration will apply if this field is not specified.
+     * Get Intelligent acceleration configuration.
+Leave blank to retain the original configuration. 
+     * @return SmartRouting Intelligent acceleration configuration.
+Leave blank to retain the original configuration.
      */
     public SmartRouting getSmartRouting() {
         return this.SmartRouting;
     }
 
     /**
-     * Set The smart acceleration configuration.
-The original configuration will apply if this field is not specified.
-     * @param SmartRouting The smart acceleration configuration.
-The original configuration will apply if this field is not specified.
+     * Set Intelligent acceleration configuration.
+Leave blank to retain the original configuration.
+     * @param SmartRouting Intelligent acceleration configuration.
+Leave blank to retain the original configuration.
      */
     public void setSmartRouting(SmartRouting SmartRouting) {
         this.SmartRouting = SmartRouting;
     }
 
     /**
-     * Get WebSocket configuration. 
-The original configuration will apply if it is not specified. 
-     * @return WebSocket WebSocket configuration. 
-The original configuration will apply if it is not specified.
+     * Get WebSocket configuration.
+Leave blank to retain the original configuration. 
+     * @return WebSocket WebSocket configuration.
+Leave blank to retain the original configuration.
      */
     public WebSocket getWebSocket() {
         return this.WebSocket;
     }
 
     /**
-     * Set WebSocket configuration. 
-The original configuration will apply if it is not specified.
-     * @param WebSocket WebSocket configuration. 
-The original configuration will apply if it is not specified.
+     * Set WebSocket configuration.
+Leave blank to retain the original configuration.
+     * @param WebSocket WebSocket configuration.
+Leave blank to retain the original configuration.
      */
     public void setWebSocket(WebSocket WebSocket) {
         this.WebSocket = WebSocket;
     }
 
     /**
-     * Get Origin-pull client IP header configuration. 
-The original configuration will apply if it is not specified. 
-     * @return ClientIpHeader Origin-pull client IP header configuration. 
-The original configuration will apply if it is not specified.
+     * Get Client IP origin-pull request header configuration.
+Leave blank to retain the original configuration. 
+     * @return ClientIpHeader Client IP origin-pull request header configuration.
+Leave blank to retain the original configuration.
      */
     public ClientIpHeader getClientIpHeader() {
         return this.ClientIpHeader;
     }
 
     /**
-     * Set Origin-pull client IP header configuration. 
-The original configuration will apply if it is not specified.
-     * @param ClientIpHeader Origin-pull client IP header configuration. 
-The original configuration will apply if it is not specified.
+     * Set Client IP origin-pull request header configuration.
+Leave blank to retain the original configuration.
+     * @param ClientIpHeader Client IP origin-pull request header configuration.
+Leave blank to retain the original configuration.
      */
     public void setClientIpHeader(ClientIpHeader ClientIpHeader) {
         this.ClientIpHeader = ClientIpHeader;
     }
 
     /**
-     * Get The cache prefresh configuration.
-The original configuration will apply if this field is not specified. 
-     * @return CachePrefresh The cache prefresh configuration.
-The original configuration will apply if this field is not specified.
+     * Get Cache pre-refresh configuration.
+Leave blank to retain the original configuration. 
+     * @return CachePrefresh Cache pre-refresh configuration.
+Leave blank to retain the original configuration.
      */
     public CachePrefresh getCachePrefresh() {
         return this.CachePrefresh;
     }
 
     /**
-     * Set The cache prefresh configuration.
-The original configuration will apply if this field is not specified.
-     * @param CachePrefresh The cache prefresh configuration.
-The original configuration will apply if this field is not specified.
+     * Set Cache pre-refresh configuration.
+Leave blank to retain the original configuration.
+     * @param CachePrefresh Cache pre-refresh configuration.
+Leave blank to retain the original configuration.
      */
     public void setCachePrefresh(CachePrefresh CachePrefresh) {
         this.CachePrefresh = CachePrefresh;
     }
 
     /**
-     * Get Ipv6 access configuration. 
-The original configuration will apply if it is not specified. 
-     * @return Ipv6 Ipv6 access configuration. 
-The original configuration will apply if it is not specified.
+     * Get Ipv6 access configuration.
+Leave blank to retain the original configuration. 
+     * @return Ipv6 Ipv6 access configuration.
+Leave blank to retain the original configuration.
      */
     public Ipv6 getIpv6() {
         return this.Ipv6;
     }
 
     /**
-     * Set Ipv6 access configuration. 
-The original configuration will apply if it is not specified.
-     * @param Ipv6 Ipv6 access configuration. 
-The original configuration will apply if it is not specified.
+     * Set Ipv6 access configuration.
+Leave blank to retain the original configuration.
+     * @param Ipv6 Ipv6 access configuration.
+Leave blank to retain the original configuration.
      */
     public void setIpv6(Ipv6 Ipv6) {
         this.Ipv6 = Ipv6;
     }
 
     /**
-     * Get Whether to carry the location information of the client IP during origin-pull. 
-The original configuration will apply if it is not specified. 
-     * @return ClientIpCountry Whether to carry the location information of the client IP during origin-pull. 
-The original configuration will apply if it is not specified.
+     * Get Configuration of whether to carry the regional information of the client IP during origin-pull.
+Leave blank to retain the original configuration. 
+     * @return ClientIpCountry Configuration of whether to carry the regional information of the client IP during origin-pull.
+Leave blank to retain the original configuration.
      */
     public ClientIpCountry getClientIpCountry() {
         return this.ClientIpCountry;
     }
 
     /**
-     * Set Whether to carry the location information of the client IP during origin-pull. 
-The original configuration will apply if it is not specified.
-     * @param ClientIpCountry Whether to carry the location information of the client IP during origin-pull. 
-The original configuration will apply if it is not specified.
+     * Set Configuration of whether to carry the regional information of the client IP during origin-pull.
+Leave blank to retain the original configuration.
+     * @param ClientIpCountry Configuration of whether to carry the regional information of the client IP during origin-pull.
+Leave blank to retain the original configuration.
      */
     public void setClientIpCountry(ClientIpCountry ClientIpCountry) {
         this.ClientIpCountry = ClientIpCountry;
     }
 
     /**
-     * Get Configuration of gRPC support. 
-The original configuration will apply if it is not specified. 
-     * @return Grpc Configuration of gRPC support. 
-The original configuration will apply if it is not specified.
+     * Get Grpc protocol support configuration.
+Leave blank to retain the original configuration. 
+     * @return Grpc Grpc protocol support configuration.
+Leave blank to retain the original configuration.
      */
     public Grpc getGrpc() {
         return this.Grpc;
     }
 
     /**
-     * Set Configuration of gRPC support. 
-The original configuration will apply if it is not specified.
-     * @param Grpc Configuration of gRPC support. 
-The original configuration will apply if it is not specified.
+     * Set Grpc protocol support configuration.
+Leave blank to retain the original configuration.
+     * @param Grpc Grpc protocol support configuration.
+Leave blank to retain the original configuration.
      */
     public void setGrpc(Grpc Grpc) {
         this.Grpc = Grpc;
     }
 
     /**
-     * Get Network Error Logging configuration. The original configuration will apply if it is not specified. 
-     * @return NetworkErrorLogging Network Error Logging configuration. The original configuration will apply if it is not specified.
+     * Get Network error log configuration. If this field is not specified, the original configuration will be retained. 
+     * @return NetworkErrorLogging Network error log configuration. If this field is not specified, the original configuration will be retained.
      */
     public NetworkErrorLogging getNetworkErrorLogging() {
         return this.NetworkErrorLogging;
     }
 
     /**
-     * Set Network Error Logging configuration. The original configuration will apply if it is not specified.
-     * @param NetworkErrorLogging Network Error Logging configuration. The original configuration will apply if it is not specified.
+     * Set Network error log configuration. If this field is not specified, the original configuration will be retained.
+     * @param NetworkErrorLogging Network error log configuration. If this field is not specified, the original configuration will be retained.
      */
     public void setNetworkErrorLogging(NetworkErrorLogging NetworkErrorLogging) {
         this.NetworkErrorLogging = NetworkErrorLogging;
     }
 
     /**
-     * Get Image optimization. 
-It is disabled if this parameter is not specified. 
-     * @return ImageOptimize Image optimization. 
-It is disabled if this parameter is not specified.
+     * Get Image optimization configuration.
+Not specified: disabled. 
+     * @return ImageOptimize Image optimization configuration.
+Not specified: disabled.
      */
     public ImageOptimize getImageOptimize() {
         return this.ImageOptimize;
     }
 
     /**
-     * Set Image optimization. 
-It is disabled if this parameter is not specified.
-     * @param ImageOptimize Image optimization. 
-It is disabled if this parameter is not specified.
+     * Set Image optimization configuration.
+Not specified: disabled.
+     * @param ImageOptimize Image optimization configuration.
+Not specified: disabled.
      */
     public void setImageOptimize(ImageOptimize ImageOptimize) {
         this.ImageOptimize = ImageOptimize;
     }
 
     /**
-     * Get Standard debugging configuration. 
-     * @return StandardDebug Standard debugging configuration.
+     * Get Standard Debug configuration. 
+     * @return StandardDebug Standard Debug configuration.
      */
     public StandardDebug getStandardDebug() {
         return this.StandardDebug;
     }
 
     /**
-     * Set Standard debugging configuration.
-     * @param StandardDebug Standard debugging configuration.
+     * Set Standard Debug configuration.
+     * @param StandardDebug Standard Debug configuration.
      */
     public void setStandardDebug(StandardDebug StandardDebug) {
         this.StandardDebug = StandardDebug;

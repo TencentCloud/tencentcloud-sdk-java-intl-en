@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class ModifyL7AccSettingRequest extends AbstractModel {
 
     /**
-    * Zone id.
+    * Zone ID.
     */
     @SerializedName("ZoneId")
     @Expose
     private String ZoneId;
 
     /**
-    * Site acceleration global configuration. the settings in this parameter will apply to all domain names under the site. you only need to modify the required settings directly, and other settings not passed in will remain unchanged.
+    * Global configuration for site acceleration. The configuration in this parameter takes effect for all domain names under the site. You just need to directly modify the desired configuration. Other configuration not passed in will keep its original status.
 
 
     */
@@ -40,26 +40,26 @@ public class ModifyL7AccSettingRequest extends AbstractModel {
     private ZoneConfig ZoneConfig;
 
     /**
-     * Get Zone id. 
-     * @return ZoneId Zone id.
+     * Get Zone ID. 
+     * @return ZoneId Zone ID.
      */
     public String getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set Zone id.
-     * @param ZoneId Zone id.
+     * Set Zone ID.
+     * @param ZoneId Zone ID.
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get Site acceleration global configuration. the settings in this parameter will apply to all domain names under the site. you only need to modify the required settings directly, and other settings not passed in will remain unchanged.
+     * Get Global configuration for site acceleration. The configuration in this parameter takes effect for all domain names under the site. You just need to directly modify the desired configuration. Other configuration not passed in will keep its original status.
 
  
-     * @return ZoneConfig Site acceleration global configuration. the settings in this parameter will apply to all domain names under the site. you only need to modify the required settings directly, and other settings not passed in will remain unchanged.
+     * @return ZoneConfig Global configuration for site acceleration. The configuration in this parameter takes effect for all domain names under the site. You just need to directly modify the desired configuration. Other configuration not passed in will keep its original status.
 
 
      */
@@ -68,10 +68,10 @@ public class ModifyL7AccSettingRequest extends AbstractModel {
     }
 
     /**
-     * Set Site acceleration global configuration. the settings in this parameter will apply to all domain names under the site. you only need to modify the required settings directly, and other settings not passed in will remain unchanged.
+     * Set Global configuration for site acceleration. The configuration in this parameter takes effect for all domain names under the site. You just need to directly modify the desired configuration. Other configuration not passed in will keep its original status.
 
 
-     * @param ZoneConfig Site acceleration global configuration. the settings in this parameter will apply to all domain names under the site. you only need to modify the required settings directly, and other settings not passed in will remain unchanged.
+     * @param ZoneConfig Global configuration for site acceleration. The configuration in this parameter takes effect for all domain names under the site. You just need to directly modify the desired configuration. Other configuration not passed in will keep its original status.
 
 
      */

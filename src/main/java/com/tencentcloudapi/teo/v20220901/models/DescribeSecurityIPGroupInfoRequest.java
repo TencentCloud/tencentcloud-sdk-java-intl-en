@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class DescribeSecurityIPGroupInfoRequest extends AbstractModel {
 
     /**
-    * Site ID, used to specify the query scope.
+    * Site ID, used to specify the scope of the queried site.
     */
     @SerializedName("ZoneId")
     @Expose
     private String ZoneId;
 
     /**
-    * Maximum number of entries returned in a single response. Default value: 20. Maximum query entries: 1000.
+    * Maximum number of entries returned in a single response. Default value: 20. Maximum number of query entries: 1000.
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * The starting entry offset for pagination queries. The default value is 0.
+    * Starting entry offset for pagination queries. Default value: 0.
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-     * Get Site ID, used to specify the query scope. 
-     * @return ZoneId Site ID, used to specify the query scope.
+     * Get Site ID, used to specify the scope of the queried site. 
+     * @return ZoneId Site ID, used to specify the scope of the queried site.
      */
     public String getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set Site ID, used to specify the query scope.
-     * @param ZoneId Site ID, used to specify the query scope.
+     * Set Site ID, used to specify the scope of the queried site.
+     * @param ZoneId Site ID, used to specify the scope of the queried site.
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get Maximum number of entries returned in a single response. Default value: 20. Maximum query entries: 1000. 
-     * @return Limit Maximum number of entries returned in a single response. Default value: 20. Maximum query entries: 1000.
+     * Get Maximum number of entries returned in a single response. Default value: 20. Maximum number of query entries: 1000. 
+     * @return Limit Maximum number of entries returned in a single response. Default value: 20. Maximum number of query entries: 1000.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Maximum number of entries returned in a single response. Default value: 20. Maximum query entries: 1000.
-     * @param Limit Maximum number of entries returned in a single response. Default value: 20. Maximum query entries: 1000.
+     * Set Maximum number of entries returned in a single response. Default value: 20. Maximum number of query entries: 1000.
+     * @param Limit Maximum number of entries returned in a single response. Default value: 20. Maximum number of query entries: 1000.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get The starting entry offset for pagination queries. The default value is 0. 
-     * @return Offset The starting entry offset for pagination queries. The default value is 0.
+     * Get Starting entry offset for pagination queries. Default value: 0. 
+     * @return Offset Starting entry offset for pagination queries. Default value: 0.
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set The starting entry offset for pagination queries. The default value is 0.
-     * @param Offset The starting entry offset for pagination queries. The default value is 0.
+     * Set Starting entry offset for pagination queries. Default value: 0.
+     * @param Offset Starting entry offset for pagination queries. Default value: 0.
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;

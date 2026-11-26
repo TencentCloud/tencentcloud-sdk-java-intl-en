@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeDnsRecordsResponse extends AbstractModel {
 
     /**
-    * Total number of dns records.
+    * Total number of DNS records.
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * List of dns records.
+    * DNS record list.
     */
     @SerializedName("DnsRecords")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeDnsRecordsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Total number of dns records. 
-     * @return TotalCount Total number of dns records.
+     * Get Total number of DNS records. 
+     * @return TotalCount Total number of DNS records.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Total number of dns records.
-     * @param TotalCount Total number of dns records.
+     * Set Total number of DNS records.
+     * @param TotalCount Total number of DNS records.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get List of dns records. 
-     * @return DnsRecords List of dns records.
+     * Get DNS record list. 
+     * @return DnsRecords DNS record list.
      */
     public DnsRecord [] getDnsRecords() {
         return this.DnsRecords;
     }
 
     /**
-     * Set List of dns records.
-     * @param DnsRecords List of dns records.
+     * Set DNS record list.
+     * @param DnsRecords DNS record list.
      */
     public void setDnsRecords(DnsRecord [] DnsRecords) {
         this.DnsRecords = DnsRecords;

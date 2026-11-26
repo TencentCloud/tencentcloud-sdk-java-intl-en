@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class InferenceScheduledScalingEffectiveRange extends AbstractModel {
 
     /**
-    * <p>Validity period type. Valid values: <li>LongTerm: Permanently valid;</li><li>Custom: Custom start and end date.</li></p>
+    * <p>Validity period type. Valid values: <li>LongTerm: permanently valid;</li><li>Custom: custom start and end date.</li></p>
     */
     @SerializedName("EffectiveType")
     @Expose
     private String EffectiveType;
 
     /**
-    * <p>Start date of the valid period. Required when EffectiveType is Custom. Do not pass this field when EffectiveType is LongTerm.</p>
+    * <p>Start date of the valid period. Required when EffectiveType is Custom; do not pass this field when EffectiveType is LongTerm.</p>
     */
     @SerializedName("StartDate")
     @Expose
@@ -45,32 +45,32 @@ public class InferenceScheduledScalingEffectiveRange extends AbstractModel {
     private String EndDate;
 
     /**
-     * Get <p>Validity period type. Valid values: <li>LongTerm: Permanently valid;</li><li>Custom: Custom start and end date.</li></p> 
-     * @return EffectiveType <p>Validity period type. Valid values: <li>LongTerm: Permanently valid;</li><li>Custom: Custom start and end date.</li></p>
+     * Get <p>Validity period type. Valid values: <li>LongTerm: permanently valid;</li><li>Custom: custom start and end date.</li></p> 
+     * @return EffectiveType <p>Validity period type. Valid values: <li>LongTerm: permanently valid;</li><li>Custom: custom start and end date.</li></p>
      */
     public String getEffectiveType() {
         return this.EffectiveType;
     }
 
     /**
-     * Set <p>Validity period type. Valid values: <li>LongTerm: Permanently valid;</li><li>Custom: Custom start and end date.</li></p>
-     * @param EffectiveType <p>Validity period type. Valid values: <li>LongTerm: Permanently valid;</li><li>Custom: Custom start and end date.</li></p>
+     * Set <p>Validity period type. Valid values: <li>LongTerm: permanently valid;</li><li>Custom: custom start and end date.</li></p>
+     * @param EffectiveType <p>Validity period type. Valid values: <li>LongTerm: permanently valid;</li><li>Custom: custom start and end date.</li></p>
      */
     public void setEffectiveType(String EffectiveType) {
         this.EffectiveType = EffectiveType;
     }
 
     /**
-     * Get <p>Start date of the valid period. Required when EffectiveType is Custom. Do not pass this field when EffectiveType is LongTerm.</p> 
-     * @return StartDate <p>Start date of the valid period. Required when EffectiveType is Custom. Do not pass this field when EffectiveType is LongTerm.</p>
+     * Get <p>Start date of the valid period. Required when EffectiveType is Custom; do not pass this field when EffectiveType is LongTerm.</p> 
+     * @return StartDate <p>Start date of the valid period. Required when EffectiveType is Custom; do not pass this field when EffectiveType is LongTerm.</p>
      */
     public String getStartDate() {
         return this.StartDate;
     }
 
     /**
-     * Set <p>Start date of the valid period. Required when EffectiveType is Custom. Do not pass this field when EffectiveType is LongTerm.</p>
-     * @param StartDate <p>Start date of the valid period. Required when EffectiveType is Custom. Do not pass this field when EffectiveType is LongTerm.</p>
+     * Set <p>Start date of the valid period. Required when EffectiveType is Custom; do not pass this field when EffectiveType is LongTerm.</p>
+     * @param StartDate <p>Start date of the valid period. Required when EffectiveType is Custom; do not pass this field when EffectiveType is LongTerm.</p>
      */
     public void setStartDate(String StartDate) {
         this.StartDate = StartDate;

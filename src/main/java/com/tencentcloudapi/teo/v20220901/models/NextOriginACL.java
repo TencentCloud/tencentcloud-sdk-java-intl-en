@@ -24,138 +24,138 @@ import java.util.HashMap;
 public class NextOriginACL extends AbstractModel {
 
     /**
-    * Version number.
+    * Version.
     */
     @SerializedName("Version")
     @Expose
     private String Version;
 
     /**
-    * Version effective time, which adopts UTC+8 and follows the date and time format of the ISO 8601 standard.
+    * Version effective time, which adopts Beijing time (UTC+8) and follows the date and time format of the ISO 8601 standard.
     */
     @SerializedName("PlannedActiveTime")
     @Expose
     private String PlannedActiveTime;
 
     /**
-    * IP range details.
+    * Origin-pull IP range details.
     */
     @SerializedName("EntireAddresses")
     @Expose
     private Addresses EntireAddresses;
 
     /**
-    * The latest origin IP range newly-added compared with the origin IP range in CurrentOrginACL.
+    * Latest origin-pull IP range newly added compared with the origin-pull IP range in CurrentOrginACL.
     */
     @SerializedName("AddedAddresses")
     @Expose
     private Addresses AddedAddresses;
 
     /**
-    * The latest origin IP range deleted compared with the origin IP range in CurrentOrginACL.
+    * The part deleted from the latest origin-pull IP range compared with the origin-pull IP range in CurrentOrginACL.
     */
     @SerializedName("RemovedAddresses")
     @Expose
     private Addresses RemovedAddresses;
 
     /**
-    * The latest origin IP range is unchanged compared with the origin IP range in CurrentOrginACL.
+    * The part of the latest origin-pull IP range that is unchanged compared with the origin-pull IP range in CurrentOrginACL.
     */
     @SerializedName("NoChangeAddresses")
     @Expose
     private Addresses NoChangeAddresses;
 
     /**
-     * Get Version number. 
-     * @return Version Version number.
+     * Get Version. 
+     * @return Version Version.
      */
     public String getVersion() {
         return this.Version;
     }
 
     /**
-     * Set Version number.
-     * @param Version Version number.
+     * Set Version.
+     * @param Version Version.
      */
     public void setVersion(String Version) {
         this.Version = Version;
     }
 
     /**
-     * Get Version effective time, which adopts UTC+8 and follows the date and time format of the ISO 8601 standard. 
-     * @return PlannedActiveTime Version effective time, which adopts UTC+8 and follows the date and time format of the ISO 8601 standard.
+     * Get Version effective time, which adopts Beijing time (UTC+8) and follows the date and time format of the ISO 8601 standard. 
+     * @return PlannedActiveTime Version effective time, which adopts Beijing time (UTC+8) and follows the date and time format of the ISO 8601 standard.
      */
     public String getPlannedActiveTime() {
         return this.PlannedActiveTime;
     }
 
     /**
-     * Set Version effective time, which adopts UTC+8 and follows the date and time format of the ISO 8601 standard.
-     * @param PlannedActiveTime Version effective time, which adopts UTC+8 and follows the date and time format of the ISO 8601 standard.
+     * Set Version effective time, which adopts Beijing time (UTC+8) and follows the date and time format of the ISO 8601 standard.
+     * @param PlannedActiveTime Version effective time, which adopts Beijing time (UTC+8) and follows the date and time format of the ISO 8601 standard.
      */
     public void setPlannedActiveTime(String PlannedActiveTime) {
         this.PlannedActiveTime = PlannedActiveTime;
     }
 
     /**
-     * Get IP range details. 
-     * @return EntireAddresses IP range details.
+     * Get Origin-pull IP range details. 
+     * @return EntireAddresses Origin-pull IP range details.
      */
     public Addresses getEntireAddresses() {
         return this.EntireAddresses;
     }
 
     /**
-     * Set IP range details.
-     * @param EntireAddresses IP range details.
+     * Set Origin-pull IP range details.
+     * @param EntireAddresses Origin-pull IP range details.
      */
     public void setEntireAddresses(Addresses EntireAddresses) {
         this.EntireAddresses = EntireAddresses;
     }
 
     /**
-     * Get The latest origin IP range newly-added compared with the origin IP range in CurrentOrginACL. 
-     * @return AddedAddresses The latest origin IP range newly-added compared with the origin IP range in CurrentOrginACL.
+     * Get Latest origin-pull IP range newly added compared with the origin-pull IP range in CurrentOrginACL. 
+     * @return AddedAddresses Latest origin-pull IP range newly added compared with the origin-pull IP range in CurrentOrginACL.
      */
     public Addresses getAddedAddresses() {
         return this.AddedAddresses;
     }
 
     /**
-     * Set The latest origin IP range newly-added compared with the origin IP range in CurrentOrginACL.
-     * @param AddedAddresses The latest origin IP range newly-added compared with the origin IP range in CurrentOrginACL.
+     * Set Latest origin-pull IP range newly added compared with the origin-pull IP range in CurrentOrginACL.
+     * @param AddedAddresses Latest origin-pull IP range newly added compared with the origin-pull IP range in CurrentOrginACL.
      */
     public void setAddedAddresses(Addresses AddedAddresses) {
         this.AddedAddresses = AddedAddresses;
     }
 
     /**
-     * Get The latest origin IP range deleted compared with the origin IP range in CurrentOrginACL. 
-     * @return RemovedAddresses The latest origin IP range deleted compared with the origin IP range in CurrentOrginACL.
+     * Get The part deleted from the latest origin-pull IP range compared with the origin-pull IP range in CurrentOrginACL. 
+     * @return RemovedAddresses The part deleted from the latest origin-pull IP range compared with the origin-pull IP range in CurrentOrginACL.
      */
     public Addresses getRemovedAddresses() {
         return this.RemovedAddresses;
     }
 
     /**
-     * Set The latest origin IP range deleted compared with the origin IP range in CurrentOrginACL.
-     * @param RemovedAddresses The latest origin IP range deleted compared with the origin IP range in CurrentOrginACL.
+     * Set The part deleted from the latest origin-pull IP range compared with the origin-pull IP range in CurrentOrginACL.
+     * @param RemovedAddresses The part deleted from the latest origin-pull IP range compared with the origin-pull IP range in CurrentOrginACL.
      */
     public void setRemovedAddresses(Addresses RemovedAddresses) {
         this.RemovedAddresses = RemovedAddresses;
     }
 
     /**
-     * Get The latest origin IP range is unchanged compared with the origin IP range in CurrentOrginACL. 
-     * @return NoChangeAddresses The latest origin IP range is unchanged compared with the origin IP range in CurrentOrginACL.
+     * Get The part of the latest origin-pull IP range that is unchanged compared with the origin-pull IP range in CurrentOrginACL. 
+     * @return NoChangeAddresses The part of the latest origin-pull IP range that is unchanged compared with the origin-pull IP range in CurrentOrginACL.
      */
     public Addresses getNoChangeAddresses() {
         return this.NoChangeAddresses;
     }
 
     /**
-     * Set The latest origin IP range is unchanged compared with the origin IP range in CurrentOrginACL.
-     * @param NoChangeAddresses The latest origin IP range is unchanged compared with the origin IP range in CurrentOrginACL.
+     * Set The part of the latest origin-pull IP range that is unchanged compared with the origin-pull IP range in CurrentOrginACL.
+     * @param NoChangeAddresses The part of the latest origin-pull IP range that is unchanged compared with the origin-pull IP range in CurrentOrginACL.
      */
     public void setNoChangeAddresses(Addresses NoChangeAddresses) {
         this.NoChangeAddresses = NoChangeAddresses;

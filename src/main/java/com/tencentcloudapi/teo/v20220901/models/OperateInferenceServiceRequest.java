@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class OperateInferenceServiceRequest extends AbstractModel {
 
     /**
-    * Zone ID.
+    * Site ID.
     */
     @SerializedName("ZoneId")
     @Expose
     private String ZoneId;
 
     /**
-    * ID of the inference service.
+    * Inference service ID.
     */
     @SerializedName("ServiceId")
     @Expose
@@ -45,32 +45,32 @@ public class OperateInferenceServiceRequest extends AbstractModel {
     private String Operation;
 
     /**
-     * Get Zone ID. 
-     * @return ZoneId Zone ID.
+     * Get Site ID. 
+     * @return ZoneId Site ID.
      */
     public String getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set Zone ID.
-     * @param ZoneId Zone ID.
+     * Set Site ID.
+     * @param ZoneId Site ID.
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get ID of the inference service. 
-     * @return ServiceId ID of the inference service.
+     * Get Inference service ID. 
+     * @return ServiceId Inference service ID.
      */
     public String getServiceId() {
         return this.ServiceId;
     }
 
     /**
-     * Set ID of the inference service.
-     * @param ServiceId ID of the inference service.
+     * Set Inference service ID.
+     * @param ServiceId Inference service ID.
      */
     public void setServiceId(String ServiceId) {
         this.ServiceId = ServiceId;

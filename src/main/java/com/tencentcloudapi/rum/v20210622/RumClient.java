@@ -39,43 +39,6 @@ public class RumClient extends AbstractClient{
     }
 
     /**
-     *API domain name: `rum.tencentcloudapi.com`.
-
-This API is used to create a log download task.
-
-Default API request rate limit: 20 requests/sec.
-     * @param req CreateLogExportRequest
-     * @return CreateLogExportResponse
-     * @throws TencentCloudSDKException
-     */
-    public CreateLogExportResponse CreateLogExport(CreateLogExportRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "CreateLogExport", CreateLogExportResponse.class);
-    }
-
-    /**
-     *This API is used to create an offline log listener to report offline logs of particular users.
-     * @param req CreateOfflineLogConfigRequest
-     * @return CreateOfflineLogConfigResponse
-     * @throws TencentCloudSDKException
-     */
-    public CreateOfflineLogConfigResponse CreateOfflineLogConfig(CreateOfflineLogConfigRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "CreateOfflineLogConfig", CreateOfflineLogConfigResponse.class);
-    }
-
-    /**
-     *This API is used to create a RUM application which belongs to a specific team.
-     * @param req CreateProjectRequest
-     * @return CreateProjectResponse
-     * @throws TencentCloudSDKException
-     */
-    public CreateProjectResponse CreateProject(CreateProjectRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "CreateProject", CreateProjectResponse.class);
-    }
-
-    /**
      *This API is used to create a file record for the specified project.
      * @param req CreateReleaseFileRequest
      * @return CreateReleaseFileResponse
@@ -98,17 +61,6 @@ Default API request rate limit: 20 requests/sec.
     }
 
     /**
-     *This API is used to create a RUM business system.
-     * @param req CreateTawInstanceRequest
-     * @return CreateTawInstanceResponse
-     * @throws TencentCloudSDKException
-     */
-    public CreateTawInstanceResponse CreateTawInstance(CreateTawInstanceRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "CreateTawInstance", CreateTawInstanceResponse.class);
-    }
-
-    /**
      *This API is used to create an allowlist.
      * @param req CreateWhitelistRequest
      * @return CreateWhitelistResponse
@@ -128,43 +80,6 @@ Default API request rate limit: 20 requests/sec.
     public DeleteInstanceResponse DeleteInstance(DeleteInstanceRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteInstance", DeleteInstanceResponse.class);
-    }
-
-    /**
-     *API domain name: `rum.tencentcloudapi.com`.
-
-This API is used to delete a log download task.
-
-Default API request rate limit: 20 requests/sec.
-     * @param req DeleteLogExportRequest
-     * @return DeleteLogExportResponse
-     * @throws TencentCloudSDKException
-     */
-    public DeleteLogExportResponse DeleteLogExport(DeleteLogExportRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DeleteLogExport", DeleteLogExportResponse.class);
-    }
-
-    /**
-     *This API is used to delete an offline RUM log listener. Then, offline logs of particular users will not be reported.
-     * @param req DeleteOfflineLogConfigRequest
-     * @return DeleteOfflineLogConfigResponse
-     * @throws TencentCloudSDKException
-     */
-    public DeleteOfflineLogConfigResponse DeleteOfflineLogConfig(DeleteOfflineLogConfigRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DeleteOfflineLogConfig", DeleteOfflineLogConfigResponse.class);
-    }
-
-    /**
-     *This API is used to delete an offline log record.
-     * @param req DeleteOfflineLogRecordRequest
-     * @return DeleteOfflineLogRecordResponse
-     * @throws TencentCloudSDKException
-     */
-    public DeleteOfflineLogRecordResponse DeleteOfflineLogRecord(DeleteOfflineLogRecordRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DeleteOfflineLogRecord", DeleteOfflineLogRecordResponse.class);
     }
 
     /**
@@ -377,17 +292,6 @@ Default API request rate limit: 20 requests/sec.
     }
 
     /**
-     *This API is used to get the PerformanceProject information.
-     * @param req DescribeDataPerformanceProjectRequest
-     * @return DescribeDataPerformanceProjectResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeDataPerformanceProjectResponse DescribeDataPerformanceProject(DescribeDataPerformanceProjectRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeDataPerformanceProject", DescribeDataPerformanceProjectResponse.class);
-    }
-
-    /**
      *This API is used to get the PvUrlInfo information.
      * @param req DescribeDataPvUrlInfoRequest
      * @return DescribeDataPvUrlInfoResponse
@@ -563,65 +467,6 @@ Web Vitals for page loading performance are key performance metrics.
     public DescribeErrorResponse DescribeError(DescribeErrorRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeError", DescribeErrorResponse.class);
-    }
-
-    /**
-     *API domain name: `rum.tencentcloudapi.com`.
-
-This API is used to get the list of log download tasks.
-
-Default API request rate limit: 20 requests/sec.
-     * @param req DescribeLogExportsRequest
-     * @return DescribeLogExportsResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeLogExportsResponse DescribeLogExports(DescribeLogExportsRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeLogExports", DescribeLogExportsResponse.class);
-    }
-
-    /**
-     *This API is used to get the log list. It has been deprecated. Use `DescribeRumLogList` instead.
-     * @param req DescribeLogListRequest
-     * @return DescribeLogListResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeLogListResponse DescribeLogList(DescribeLogListRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeLogList", DescribeLogListResponse.class);
-    }
-
-    /**
-     *This API is used to get the configuration of the set offline log listener and return the unique user ID.
-     * @param req DescribeOfflineLogConfigsRequest
-     * @return DescribeOfflineLogConfigsResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeOfflineLogConfigsResponse DescribeOfflineLogConfigs(DescribeOfflineLogConfigsRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeOfflineLogConfigs", DescribeOfflineLogConfigsResponse.class);
-    }
-
-    /**
-     *This API is used to get all (up to 100) offline log records.
-     * @param req DescribeOfflineLogRecordsRequest
-     * @return DescribeOfflineLogRecordsResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeOfflineLogRecordsResponse DescribeOfflineLogRecords(DescribeOfflineLogRecordsRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeOfflineLogRecords", DescribeOfflineLogRecordsResponse.class);
-    }
-
-    /**
-     *This API is used to get the specified offline log.
-     * @param req DescribeOfflineLogsRequest
-     * @return DescribeOfflineLogsResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeOfflineLogsResponse DescribeOfflineLogs(DescribeOfflineLogsRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeOfflineLogs", DescribeOfflineLogsResponse.class);
     }
 
     /**

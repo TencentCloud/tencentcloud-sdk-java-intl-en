@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeEdgeKVNamespacesResponse extends AbstractModel {
 
     /**
-    * Total number of eligible namespaces.
+    * Total number of namespaces meeting conditions.
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * KV namespace information list. If no matching criteria, return an empty array.
+    * List of KV namespace information. If no namespace meets the conditions, an empty array is returned.
     */
     @SerializedName("KVNamespaces")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeEdgeKVNamespacesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Total number of eligible namespaces. 
-     * @return TotalCount Total number of eligible namespaces.
+     * Get Total number of namespaces meeting conditions. 
+     * @return TotalCount Total number of namespaces meeting conditions.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Total number of eligible namespaces.
-     * @param TotalCount Total number of eligible namespaces.
+     * Set Total number of namespaces meeting conditions.
+     * @param TotalCount Total number of namespaces meeting conditions.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get KV namespace information list. If no matching criteria, return an empty array. 
-     * @return KVNamespaces KV namespace information list. If no matching criteria, return an empty array.
+     * Get List of KV namespace information. If no namespace meets the conditions, an empty array is returned. 
+     * @return KVNamespaces List of KV namespace information. If no namespace meets the conditions, an empty array is returned.
      */
     public KVNamespace [] getKVNamespaces() {
         return this.KVNamespaces;
     }
 
     /**
-     * Set KV namespace information list. If no matching criteria, return an empty array.
-     * @param KVNamespaces KV namespace information list. If no matching criteria, return an empty array.
+     * Set List of KV namespace information. If no namespace meets the conditions, an empty array is returned.
+     * @param KVNamespaces List of KV namespace information. If no namespace meets the conditions, an empty array is returned.
      */
     public void setKVNamespaces(KVNamespace [] KVNamespaces) {
         this.KVNamespaces = KVNamespaces;

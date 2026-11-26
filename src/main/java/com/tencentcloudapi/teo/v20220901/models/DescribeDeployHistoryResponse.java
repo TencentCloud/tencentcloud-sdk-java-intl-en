@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeDeployHistoryResponse extends AbstractModel {
 
     /**
-    * Total release records.
+    * Total number of release records.
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * Release record details.
+    * Details of the release record.
     */
     @SerializedName("Records")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeDeployHistoryResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Total release records. 
-     * @return TotalCount Total release records.
+     * Get Total number of release records. 
+     * @return TotalCount Total number of release records.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Total release records.
-     * @param TotalCount Total release records.
+     * Set Total number of release records.
+     * @param TotalCount Total number of release records.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get Release record details. 
-     * @return Records Release record details.
+     * Get Details of the release record. 
+     * @return Records Details of the release record.
      */
     public DeployRecord [] getRecords() {
         return this.Records;
     }
 
     /**
-     * Set Release record details.
-     * @param Records Release record details.
+     * Set Details of the release record.
+     * @param Records Details of the release record.
      */
     public void setRecords(DeployRecord [] Records) {
         this.Records = Records;

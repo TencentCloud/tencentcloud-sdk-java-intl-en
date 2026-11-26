@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class IPExpireInfo extends AbstractModel {
 
     /**
-    * Scheduled expiration time, following the ISO 8601 standard date and time format, such as "2022-01-01T00:00:00+08:00".
+    * Scheduled expiration time, following the ISO 8601 date and time format. For example, "2022-01-01T00:00:00+08:00".
     */
     @SerializedName("ExpireTime")
     @Expose
     private String ExpireTime;
 
     /**
-    * IP list. supports ip and ip range.
+    * IP list. Only IPs and IP ranges are supported.
     */
     @SerializedName("IPList")
     @Expose
     private String [] IPList;
 
     /**
-     * Get Scheduled expiration time, following the ISO 8601 standard date and time format, such as "2022-01-01T00:00:00+08:00". 
-     * @return ExpireTime Scheduled expiration time, following the ISO 8601 standard date and time format, such as "2022-01-01T00:00:00+08:00".
+     * Get Scheduled expiration time, following the ISO 8601 date and time format. For example, "2022-01-01T00:00:00+08:00". 
+     * @return ExpireTime Scheduled expiration time, following the ISO 8601 date and time format. For example, "2022-01-01T00:00:00+08:00".
      */
     public String getExpireTime() {
         return this.ExpireTime;
     }
 
     /**
-     * Set Scheduled expiration time, following the ISO 8601 standard date and time format, such as "2022-01-01T00:00:00+08:00".
-     * @param ExpireTime Scheduled expiration time, following the ISO 8601 standard date and time format, such as "2022-01-01T00:00:00+08:00".
+     * Set Scheduled expiration time, following the ISO 8601 date and time format. For example, "2022-01-01T00:00:00+08:00".
+     * @param ExpireTime Scheduled expiration time, following the ISO 8601 date and time format. For example, "2022-01-01T00:00:00+08:00".
      */
     public void setExpireTime(String ExpireTime) {
         this.ExpireTime = ExpireTime;
     }
 
     /**
-     * Get IP list. supports ip and ip range. 
-     * @return IPList IP list. supports ip and ip range.
+     * Get IP list. Only IPs and IP ranges are supported. 
+     * @return IPList IP list. Only IPs and IP ranges are supported.
      */
     public String [] getIPList() {
         return this.IPList;
     }
 
     /**
-     * Set IP list. supports ip and ip range.
-     * @param IPList IP list. supports ip and ip range.
+     * Set IP list. Only IPs and IP ranges are supported.
+     * @param IPList IP list. Only IPs and IP ranges are supported.
      */
     public void setIPList(String [] IPList) {
         this.IPList = IPList;

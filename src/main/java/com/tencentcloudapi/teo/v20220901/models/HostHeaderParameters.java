@@ -24,56 +24,56 @@ import java.util.HashMap;
 public class HostHeaderParameters extends AbstractModel {
 
     /**
-    * Action to be executed. values:.
-<Li>FollowOrigin: follow origin server domain name;</li>.
-<Li>`Custom`: custom</li>.
+    * Execution action. Valid values:
+<li>`followOrigin`: Follow source site domain;</li>
+<li>custom: Custom.</li>
     */
     @SerializedName("Action")
     @Expose
     private String Action;
 
     /**
-    * Host header rewrite requires a complete domain name.<br>note: this field is required when switch is on; when switch is off, this field is not required and any value will be ignored.
+    * Host Header rewrite requires a complete domain name.<br>Note: When Switch is on, this field is required. When Switch is off, no need to specify this field, and if specified, it does not take effect.
     */
     @SerializedName("ServerName")
     @Expose
     private String ServerName;
 
     /**
-     * Get Action to be executed. values:.
-<Li>FollowOrigin: follow origin server domain name;</li>.
-<Li>`Custom`: custom</li>. 
-     * @return Action Action to be executed. values:.
-<Li>FollowOrigin: follow origin server domain name;</li>.
-<Li>`Custom`: custom</li>.
+     * Get Execution action. Valid values:
+<li>`followOrigin`: Follow source site domain;</li>
+<li>custom: Custom.</li> 
+     * @return Action Execution action. Valid values:
+<li>`followOrigin`: Follow source site domain;</li>
+<li>custom: Custom.</li>
      */
     public String getAction() {
         return this.Action;
     }
 
     /**
-     * Set Action to be executed. values:.
-<Li>FollowOrigin: follow origin server domain name;</li>.
-<Li>`Custom`: custom</li>.
-     * @param Action Action to be executed. values:.
-<Li>FollowOrigin: follow origin server domain name;</li>.
-<Li>`Custom`: custom</li>.
+     * Set Execution action. Valid values:
+<li>`followOrigin`: Follow source site domain;</li>
+<li>custom: Custom.</li>
+     * @param Action Execution action. Valid values:
+<li>`followOrigin`: Follow source site domain;</li>
+<li>custom: Custom.</li>
      */
     public void setAction(String Action) {
         this.Action = Action;
     }
 
     /**
-     * Get Host header rewrite requires a complete domain name.<br>note: this field is required when switch is on; when switch is off, this field is not required and any value will be ignored. 
-     * @return ServerName Host header rewrite requires a complete domain name.<br>note: this field is required when switch is on; when switch is off, this field is not required and any value will be ignored.
+     * Get Host Header rewrite requires a complete domain name.<br>Note: When Switch is on, this field is required. When Switch is off, no need to specify this field, and if specified, it does not take effect. 
+     * @return ServerName Host Header rewrite requires a complete domain name.<br>Note: When Switch is on, this field is required. When Switch is off, no need to specify this field, and if specified, it does not take effect.
      */
     public String getServerName() {
         return this.ServerName;
     }
 
     /**
-     * Set Host header rewrite requires a complete domain name.<br>note: this field is required when switch is on; when switch is off, this field is not required and any value will be ignored.
-     * @param ServerName Host header rewrite requires a complete domain name.<br>note: this field is required when switch is on; when switch is off, this field is not required and any value will be ignored.
+     * Set Host Header rewrite requires a complete domain name.<br>Note: When Switch is on, this field is required. When Switch is off, no need to specify this field, and if specified, it does not take effect.
+     * @param ServerName Host Header rewrite requires a complete domain name.<br>Note: When Switch is on, this field is required. When Switch is off, no need to specify this field, and if specified, it does not take effect.
      */
     public void setServerName(String ServerName) {
         this.ServerName = ServerName;

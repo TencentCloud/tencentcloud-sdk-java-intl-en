@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeAccelerationDomainsResponse extends AbstractModel {
 
     /**
-    * Total of matched alias domain names
+    * <p>Count of acceleration domain names that meet the search criteria.</p>
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * Information of all matched acceleration domain names.
+    * <p>Information of all acceleration domain names that meet the search criteria.</p>
     */
     @SerializedName("AccelerationDomains")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeAccelerationDomainsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Total of matched alias domain names 
-     * @return TotalCount Total of matched alias domain names
+     * Get <p>Count of acceleration domain names that meet the search criteria.</p> 
+     * @return TotalCount <p>Count of acceleration domain names that meet the search criteria.</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Total of matched alias domain names
-     * @param TotalCount Total of matched alias domain names
+     * Set <p>Count of acceleration domain names that meet the search criteria.</p>
+     * @param TotalCount <p>Count of acceleration domain names that meet the search criteria.</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get Information of all matched acceleration domain names. 
-     * @return AccelerationDomains Information of all matched acceleration domain names.
+     * Get <p>Information of all acceleration domain names that meet the search criteria.</p> 
+     * @return AccelerationDomains <p>Information of all acceleration domain names that meet the search criteria.</p>
      */
     public AccelerationDomain [] getAccelerationDomains() {
         return this.AccelerationDomains;
     }
 
     /**
-     * Set Information of all matched acceleration domain names.
-     * @param AccelerationDomains Information of all matched acceleration domain names.
+     * Set <p>Information of all acceleration domain names that meet the search criteria.</p>
+     * @param AccelerationDomains <p>Information of all acceleration domain names that meet the search criteria.</p>
      */
     public void setAccelerationDomains(AccelerationDomain [] AccelerationDomains) {
         this.AccelerationDomains = AccelerationDomains;

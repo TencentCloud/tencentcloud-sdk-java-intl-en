@@ -24,79 +24,79 @@ import java.util.HashMap;
 public class DropPageConfig extends AbstractModel {
 
     /**
-    * Whether to enable configuration. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+    * Configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * Intercept page configuration for Waf(managed rules) module. if null, historical configuration is used by default.
+    * Interception page configuration of the Waf (managed rule) module. If null, the last set configuration is used by default.
     */
     @SerializedName("WafDropPageDetail")
     @Expose
     private DropPageDetail WafDropPageDetail;
 
     /**
-    * Interception page configuration for custom pages. if null, use the last set configuration by default.
+    * Interception page configuration for custom pages. If it is null, use the last set configuration by default.
     */
     @SerializedName("AclDropPageDetail")
     @Expose
     private DropPageDetail AclDropPageDetail;
 
     /**
-     * Get Whether to enable configuration. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li> 
-     * @return Switch Whether to enable configuration. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+     * Get Configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li> 
+     * @return Switch Configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set Whether to enable configuration. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-     * @param Switch Whether to enable configuration. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+     * Set Configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+     * @param Switch Configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get Intercept page configuration for Waf(managed rules) module. if null, historical configuration is used by default. 
-     * @return WafDropPageDetail Intercept page configuration for Waf(managed rules) module. if null, historical configuration is used by default.
+     * Get Interception page configuration of the Waf (managed rule) module. If null, the last set configuration is used by default. 
+     * @return WafDropPageDetail Interception page configuration of the Waf (managed rule) module. If null, the last set configuration is used by default.
      */
     public DropPageDetail getWafDropPageDetail() {
         return this.WafDropPageDetail;
     }
 
     /**
-     * Set Intercept page configuration for Waf(managed rules) module. if null, historical configuration is used by default.
-     * @param WafDropPageDetail Intercept page configuration for Waf(managed rules) module. if null, historical configuration is used by default.
+     * Set Interception page configuration of the Waf (managed rule) module. If null, the last set configuration is used by default.
+     * @param WafDropPageDetail Interception page configuration of the Waf (managed rule) module. If null, the last set configuration is used by default.
      */
     public void setWafDropPageDetail(DropPageDetail WafDropPageDetail) {
         this.WafDropPageDetail = WafDropPageDetail;
     }
 
     /**
-     * Get Interception page configuration for custom pages. if null, use the last set configuration by default. 
-     * @return AclDropPageDetail Interception page configuration for custom pages. if null, use the last set configuration by default.
+     * Get Interception page configuration for custom pages. If it is null, use the last set configuration by default. 
+     * @return AclDropPageDetail Interception page configuration for custom pages. If it is null, use the last set configuration by default.
      */
     public DropPageDetail getAclDropPageDetail() {
         return this.AclDropPageDetail;
     }
 
     /**
-     * Set Interception page configuration for custom pages. if null, use the last set configuration by default.
-     * @param AclDropPageDetail Interception page configuration for custom pages. if null, use the last set configuration by default.
+     * Set Interception page configuration for custom pages. If it is null, use the last set configuration by default.
+     * @param AclDropPageDetail Interception page configuration for custom pages. If it is null, use the last set configuration by default.
      */
     public void setAclDropPageDetail(DropPageDetail AclDropPageDetail) {
         this.AclDropPageDetail = AclDropPageDetail;

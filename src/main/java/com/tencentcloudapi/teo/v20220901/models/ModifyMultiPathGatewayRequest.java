@@ -31,28 +31,28 @@ public class ModifyMultiPathGatewayRequest extends AbstractModel {
     private String ZoneId;
 
     /**
-    * Specifies the gateway ID.
+    * Gateway ID.
     */
     @SerializedName("GatewayId")
     @Expose
     private String GatewayId;
 
     /**
-    * Gateway name, up to 16 characters, allowed characters (a-z, A-Z, 0-9, -, _).
+    * Gateway name, up to 16 characters. Usable characters: a-z, A-Z, 0-9, -, _.
     */
     @SerializedName("GatewayName")
     @Expose
     private String GatewayName;
 
     /**
-    * Gateway address, if GatewayType value is private (private gateway), you can fill in and modify it. When using this address, please ensure it has been entered into the Tencent cloud multi-channel security acceleration gateway system. if not entered, you need to submit a ticket or contact the architect to enter the gateway IP address into the Tencent cloud multi-channel security acceleration gateway system in advance before making API calls.
+    * Gateway address. When GatewayType is private, you can fill in and modify this address. Before using this address, please ensure it has been entered into the Tencent Cloud multi-channel security acceleration gateway system. If not, enter the gateway IP address into the Tencent Cloud multi-channel security acceleration gateway system in advance through a ticket or by contacting the architect before calling this API.
     */
     @SerializedName("GatewayIP")
     @Expose
     private String GatewayIP;
 
     /**
-    * Gateway port, range 1-65535 (excluding 8888), supports modifying GatewayType with a value of private gateway.
+    * Gateway port. Value range: 1–65535 (excluding 8888). Modification is supported only for private gateways with a GatewayType value of private.
     */
     @SerializedName("GatewayPort")
     @Expose
@@ -75,64 +75,64 @@ public class ModifyMultiPathGatewayRequest extends AbstractModel {
     }
 
     /**
-     * Get Specifies the gateway ID. 
-     * @return GatewayId Specifies the gateway ID.
+     * Get Gateway ID. 
+     * @return GatewayId Gateway ID.
      */
     public String getGatewayId() {
         return this.GatewayId;
     }
 
     /**
-     * Set Specifies the gateway ID.
-     * @param GatewayId Specifies the gateway ID.
+     * Set Gateway ID.
+     * @param GatewayId Gateway ID.
      */
     public void setGatewayId(String GatewayId) {
         this.GatewayId = GatewayId;
     }
 
     /**
-     * Get Gateway name, up to 16 characters, allowed characters (a-z, A-Z, 0-9, -, _). 
-     * @return GatewayName Gateway name, up to 16 characters, allowed characters (a-z, A-Z, 0-9, -, _).
+     * Get Gateway name, up to 16 characters. Usable characters: a-z, A-Z, 0-9, -, _. 
+     * @return GatewayName Gateway name, up to 16 characters. Usable characters: a-z, A-Z, 0-9, -, _.
      */
     public String getGatewayName() {
         return this.GatewayName;
     }
 
     /**
-     * Set Gateway name, up to 16 characters, allowed characters (a-z, A-Z, 0-9, -, _).
-     * @param GatewayName Gateway name, up to 16 characters, allowed characters (a-z, A-Z, 0-9, -, _).
+     * Set Gateway name, up to 16 characters. Usable characters: a-z, A-Z, 0-9, -, _.
+     * @param GatewayName Gateway name, up to 16 characters. Usable characters: a-z, A-Z, 0-9, -, _.
      */
     public void setGatewayName(String GatewayName) {
         this.GatewayName = GatewayName;
     }
 
     /**
-     * Get Gateway address, if GatewayType value is private (private gateway), you can fill in and modify it. When using this address, please ensure it has been entered into the Tencent cloud multi-channel security acceleration gateway system. if not entered, you need to submit a ticket or contact the architect to enter the gateway IP address into the Tencent cloud multi-channel security acceleration gateway system in advance before making API calls. 
-     * @return GatewayIP Gateway address, if GatewayType value is private (private gateway), you can fill in and modify it. When using this address, please ensure it has been entered into the Tencent cloud multi-channel security acceleration gateway system. if not entered, you need to submit a ticket or contact the architect to enter the gateway IP address into the Tencent cloud multi-channel security acceleration gateway system in advance before making API calls.
+     * Get Gateway address. When GatewayType is private, you can fill in and modify this address. Before using this address, please ensure it has been entered into the Tencent Cloud multi-channel security acceleration gateway system. If not, enter the gateway IP address into the Tencent Cloud multi-channel security acceleration gateway system in advance through a ticket or by contacting the architect before calling this API. 
+     * @return GatewayIP Gateway address. When GatewayType is private, you can fill in and modify this address. Before using this address, please ensure it has been entered into the Tencent Cloud multi-channel security acceleration gateway system. If not, enter the gateway IP address into the Tencent Cloud multi-channel security acceleration gateway system in advance through a ticket or by contacting the architect before calling this API.
      */
     public String getGatewayIP() {
         return this.GatewayIP;
     }
 
     /**
-     * Set Gateway address, if GatewayType value is private (private gateway), you can fill in and modify it. When using this address, please ensure it has been entered into the Tencent cloud multi-channel security acceleration gateway system. if not entered, you need to submit a ticket or contact the architect to enter the gateway IP address into the Tencent cloud multi-channel security acceleration gateway system in advance before making API calls.
-     * @param GatewayIP Gateway address, if GatewayType value is private (private gateway), you can fill in and modify it. When using this address, please ensure it has been entered into the Tencent cloud multi-channel security acceleration gateway system. if not entered, you need to submit a ticket or contact the architect to enter the gateway IP address into the Tencent cloud multi-channel security acceleration gateway system in advance before making API calls.
+     * Set Gateway address. When GatewayType is private, you can fill in and modify this address. Before using this address, please ensure it has been entered into the Tencent Cloud multi-channel security acceleration gateway system. If not, enter the gateway IP address into the Tencent Cloud multi-channel security acceleration gateway system in advance through a ticket or by contacting the architect before calling this API.
+     * @param GatewayIP Gateway address. When GatewayType is private, you can fill in and modify this address. Before using this address, please ensure it has been entered into the Tencent Cloud multi-channel security acceleration gateway system. If not, enter the gateway IP address into the Tencent Cloud multi-channel security acceleration gateway system in advance through a ticket or by contacting the architect before calling this API.
      */
     public void setGatewayIP(String GatewayIP) {
         this.GatewayIP = GatewayIP;
     }
 
     /**
-     * Get Gateway port, range 1-65535 (excluding 8888), supports modifying GatewayType with a value of private gateway. 
-     * @return GatewayPort Gateway port, range 1-65535 (excluding 8888), supports modifying GatewayType with a value of private gateway.
+     * Get Gateway port. Value range: 1–65535 (excluding 8888). Modification is supported only for private gateways with a GatewayType value of private. 
+     * @return GatewayPort Gateway port. Value range: 1–65535 (excluding 8888). Modification is supported only for private gateways with a GatewayType value of private.
      */
     public Long getGatewayPort() {
         return this.GatewayPort;
     }
 
     /**
-     * Set Gateway port, range 1-65535 (excluding 8888), supports modifying GatewayType with a value of private gateway.
-     * @param GatewayPort Gateway port, range 1-65535 (excluding 8888), supports modifying GatewayType with a value of private gateway.
+     * Set Gateway port. Value range: 1–65535 (excluding 8888). Modification is supported only for private gateways with a GatewayType value of private.
+     * @param GatewayPort Gateway port. Value range: 1–65535 (excluding 8888). Modification is supported only for private gateways with a GatewayType value of private.
      */
     public void setGatewayPort(Long GatewayPort) {
         this.GatewayPort = GatewayPort;

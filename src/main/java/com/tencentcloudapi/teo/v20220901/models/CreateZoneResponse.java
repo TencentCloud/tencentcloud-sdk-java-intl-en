@@ -24,21 +24,20 @@ import java.util.HashMap;
 public class CreateZoneResponse extends AbstractModel {
 
     /**
-    * Site ID.
+    * Zone ID.
     */
     @SerializedName("ZoneId")
     @Expose
     private String ZoneId;
 
     /**
-    * Site ownership verification information. After the site is created, you need to complete the ownership verification before the site can serve normally.
+    * Site ownership verification information. After site creation is completed, you also need to complete ownership verification before the site can run properly.
 
-If `Type=partial`, add TXT records to your DNS provider or add files to the root DNS server, and then call [VerifyOwnership]() to complete verification. For more information, see [Ownership Verification](https://intl.cloud.tencent.com/document/product/1552/70789?from_cn_redirect=1).
+When Type = partial, you need to refer to [site/domain ownership verification](https://www.tencentcloud.com/document/product/1552/70789?from_cn_redirect=1), go to your DNS service provider to add a TXT record or go to the root domain name server to add a file, and then call the API [VerifyOwnership]() to complete the verification;
 
-If `Type = full`, switch the DNS server as instructed by [Modifying DNS Server](https://intl.cloud.tencent.com/document/product/1552/90452?from_cn_redirect=1). Then call [VerifyOwnership]() to check the result.
+When Type is full, you need to refer to [modify DNS server](https://www.tencentcloud.com/document/product/1552/90452?from_cn_redirect=1) to switch the DNS server. You can query whether the DNS switchover is successful through the [VerifyOwnership]() API.
 
-If `Type = noDomainAccess`, leave it blank. No action is required.
-Note: This field may return·null, indicating that no valid values can be obtained.
+When Type is noDomainAccess, this value is empty and no operation is needed.
     */
     @SerializedName("OwnershipVerification")
     @Expose
@@ -52,60 +51,56 @@ Note: This field may return·null, indicating that no valid values can be obtain
     private String RequestId;
 
     /**
-     * Get Site ID. 
-     * @return ZoneId Site ID.
+     * Get Zone ID. 
+     * @return ZoneId Zone ID.
      */
     public String getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set Site ID.
-     * @param ZoneId Site ID.
+     * Set Zone ID.
+     * @param ZoneId Zone ID.
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get Site ownership verification information. After the site is created, you need to complete the ownership verification before the site can serve normally.
+     * Get Site ownership verification information. After site creation is completed, you also need to complete ownership verification before the site can run properly.
 
-If `Type=partial`, add TXT records to your DNS provider or add files to the root DNS server, and then call [VerifyOwnership]() to complete verification. For more information, see [Ownership Verification](https://intl.cloud.tencent.com/document/product/1552/70789?from_cn_redirect=1).
+When Type = partial, you need to refer to [site/domain ownership verification](https://www.tencentcloud.com/document/product/1552/70789?from_cn_redirect=1), go to your DNS service provider to add a TXT record or go to the root domain name server to add a file, and then call the API [VerifyOwnership]() to complete the verification;
 
-If `Type = full`, switch the DNS server as instructed by [Modifying DNS Server](https://intl.cloud.tencent.com/document/product/1552/90452?from_cn_redirect=1). Then call [VerifyOwnership]() to check the result.
+When Type is full, you need to refer to [modify DNS server](https://www.tencentcloud.com/document/product/1552/90452?from_cn_redirect=1) to switch the DNS server. You can query whether the DNS switchover is successful through the [VerifyOwnership]() API.
 
-If `Type = noDomainAccess`, leave it blank. No action is required.
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return OwnershipVerification Site ownership verification information. After the site is created, you need to complete the ownership verification before the site can serve normally.
+When Type is noDomainAccess, this value is empty and no operation is needed. 
+     * @return OwnershipVerification Site ownership verification information. After site creation is completed, you also need to complete ownership verification before the site can run properly.
 
-If `Type=partial`, add TXT records to your DNS provider or add files to the root DNS server, and then call [VerifyOwnership]() to complete verification. For more information, see [Ownership Verification](https://intl.cloud.tencent.com/document/product/1552/70789?from_cn_redirect=1).
+When Type = partial, you need to refer to [site/domain ownership verification](https://www.tencentcloud.com/document/product/1552/70789?from_cn_redirect=1), go to your DNS service provider to add a TXT record or go to the root domain name server to add a file, and then call the API [VerifyOwnership]() to complete the verification;
 
-If `Type = full`, switch the DNS server as instructed by [Modifying DNS Server](https://intl.cloud.tencent.com/document/product/1552/90452?from_cn_redirect=1). Then call [VerifyOwnership]() to check the result.
+When Type is full, you need to refer to [modify DNS server](https://www.tencentcloud.com/document/product/1552/90452?from_cn_redirect=1) to switch the DNS server. You can query whether the DNS switchover is successful through the [VerifyOwnership]() API.
 
-If `Type = noDomainAccess`, leave it blank. No action is required.
-Note: This field may return·null, indicating that no valid values can be obtained.
+When Type is noDomainAccess, this value is empty and no operation is needed.
      */
     public OwnershipVerification getOwnershipVerification() {
         return this.OwnershipVerification;
     }
 
     /**
-     * Set Site ownership verification information. After the site is created, you need to complete the ownership verification before the site can serve normally.
+     * Set Site ownership verification information. After site creation is completed, you also need to complete ownership verification before the site can run properly.
 
-If `Type=partial`, add TXT records to your DNS provider or add files to the root DNS server, and then call [VerifyOwnership]() to complete verification. For more information, see [Ownership Verification](https://intl.cloud.tencent.com/document/product/1552/70789?from_cn_redirect=1).
+When Type = partial, you need to refer to [site/domain ownership verification](https://www.tencentcloud.com/document/product/1552/70789?from_cn_redirect=1), go to your DNS service provider to add a TXT record or go to the root domain name server to add a file, and then call the API [VerifyOwnership]() to complete the verification;
 
-If `Type = full`, switch the DNS server as instructed by [Modifying DNS Server](https://intl.cloud.tencent.com/document/product/1552/90452?from_cn_redirect=1). Then call [VerifyOwnership]() to check the result.
+When Type is full, you need to refer to [modify DNS server](https://www.tencentcloud.com/document/product/1552/90452?from_cn_redirect=1) to switch the DNS server. You can query whether the DNS switchover is successful through the [VerifyOwnership]() API.
 
-If `Type = noDomainAccess`, leave it blank. No action is required.
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param OwnershipVerification Site ownership verification information. After the site is created, you need to complete the ownership verification before the site can serve normally.
+When Type is noDomainAccess, this value is empty and no operation is needed.
+     * @param OwnershipVerification Site ownership verification information. After site creation is completed, you also need to complete ownership verification before the site can run properly.
 
-If `Type=partial`, add TXT records to your DNS provider or add files to the root DNS server, and then call [VerifyOwnership]() to complete verification. For more information, see [Ownership Verification](https://intl.cloud.tencent.com/document/product/1552/70789?from_cn_redirect=1).
+When Type = partial, you need to refer to [site/domain ownership verification](https://www.tencentcloud.com/document/product/1552/70789?from_cn_redirect=1), go to your DNS service provider to add a TXT record or go to the root domain name server to add a file, and then call the API [VerifyOwnership]() to complete the verification;
 
-If `Type = full`, switch the DNS server as instructed by [Modifying DNS Server](https://intl.cloud.tencent.com/document/product/1552/90452?from_cn_redirect=1). Then call [VerifyOwnership]() to check the result.
+When Type is full, you need to refer to [modify DNS server](https://www.tencentcloud.com/document/product/1552/90452?from_cn_redirect=1) to switch the DNS server. You can query whether the DNS switchover is successful through the [VerifyOwnership]() API.
 
-If `Type = noDomainAccess`, leave it blank. No action is required.
-Note: This field may return·null, indicating that no valid values can be obtained.
+When Type is noDomainAccess, this value is empty and no operation is needed.
      */
     public void setOwnershipVerification(OwnershipVerification OwnershipVerification) {
         this.OwnershipVerification = OwnershipVerification;

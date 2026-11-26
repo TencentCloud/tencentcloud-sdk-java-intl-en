@@ -31,7 +31,7 @@ public class DescribeIdentificationsResponse extends AbstractModel {
     private Long TotalCount;
 
     /**
-    * The site verification information.
+    * Site verification information list.
     */
     @SerializedName("Identifications")
     @Expose
@@ -61,16 +61,16 @@ public class DescribeIdentificationsResponse extends AbstractModel {
     }
 
     /**
-     * Get The site verification information. 
-     * @return Identifications The site verification information.
+     * Get Site verification information list. 
+     * @return Identifications Site verification information list.
      */
     public Identification [] getIdentifications() {
         return this.Identifications;
     }
 
     /**
-     * Set The site verification information.
-     * @param Identifications The site verification information.
+     * Set Site verification information list.
+     * @param Identifications Site verification information list.
      */
     public void setIdentifications(Identification [] Identifications) {
         this.Identifications = Identifications;

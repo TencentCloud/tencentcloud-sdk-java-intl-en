@@ -31,15 +31,16 @@ public class ModifyL4ProxyStatusRequest extends AbstractModel {
     private String ZoneId;
 
     /**
-    * Layer 4 proxy instance ID.
+    * Layer 4 Proxy Instance ID.
     */
     @SerializedName("ProxyId")
     @Expose
     private String ProxyId;
 
     /**
-    * Layer 4 proxy instance status. Valid values:<li>online: Enabled;</li>
-<li>offline: Disabled.</li>
+    * Status of the Layer 4 proxy instance. Valid values:
+<li>`online`: Enable;</li>
+<li>offline: Disable.</li>
     */
     @SerializedName("Status")
     @Expose
@@ -62,36 +63,40 @@ public class ModifyL4ProxyStatusRequest extends AbstractModel {
     }
 
     /**
-     * Get Layer 4 proxy instance ID. 
-     * @return ProxyId Layer 4 proxy instance ID.
+     * Get Layer 4 Proxy Instance ID. 
+     * @return ProxyId Layer 4 Proxy Instance ID.
      */
     public String getProxyId() {
         return this.ProxyId;
     }
 
     /**
-     * Set Layer 4 proxy instance ID.
-     * @param ProxyId Layer 4 proxy instance ID.
+     * Set Layer 4 Proxy Instance ID.
+     * @param ProxyId Layer 4 Proxy Instance ID.
      */
     public void setProxyId(String ProxyId) {
         this.ProxyId = ProxyId;
     }
 
     /**
-     * Get Layer 4 proxy instance status. Valid values:<li>online: Enabled;</li>
-<li>offline: Disabled.</li> 
-     * @return Status Layer 4 proxy instance status. Valid values:<li>online: Enabled;</li>
-<li>offline: Disabled.</li>
+     * Get Status of the Layer 4 proxy instance. Valid values:
+<li>`online`: Enable;</li>
+<li>offline: Disable.</li> 
+     * @return Status Status of the Layer 4 proxy instance. Valid values:
+<li>`online`: Enable;</li>
+<li>offline: Disable.</li>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Layer 4 proxy instance status. Valid values:<li>online: Enabled;</li>
-<li>offline: Disabled.</li>
-     * @param Status Layer 4 proxy instance status. Valid values:<li>online: Enabled;</li>
-<li>offline: Disabled.</li>
+     * Set Status of the Layer 4 proxy instance. Valid values:
+<li>`online`: Enable;</li>
+<li>offline: Disable.</li>
+     * @param Status Status of the Layer 4 proxy instance. Valid values:
+<li>`online`: Enable;</li>
+<li>offline: Disable.</li>
      */
     public void setStatus(String Status) {
         this.Status = Status;

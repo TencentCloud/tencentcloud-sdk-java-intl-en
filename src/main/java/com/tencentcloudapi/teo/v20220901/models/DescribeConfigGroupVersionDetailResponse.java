@@ -31,7 +31,7 @@ public class DescribeConfigGroupVersionDetailResponse extends AbstractModel {
     private ConfigGroupVersionInfo ConfigGroupVersionInfo;
 
     /**
-    * Version file content. It is returned in JSON format.
+    * The content of the version file. Return in JSON format.
     */
     @SerializedName("Content")
     @Expose
@@ -61,16 +61,16 @@ public class DescribeConfigGroupVersionDetailResponse extends AbstractModel {
     }
 
     /**
-     * Get Version file content. It is returned in JSON format. 
-     * @return Content Version file content. It is returned in JSON format.
+     * Get The content of the version file. Return in JSON format. 
+     * @return Content The content of the version file. Return in JSON format.
      */
     public String getContent() {
         return this.Content;
     }
 
     /**
-     * Set Version file content. It is returned in JSON format.
-     * @param Content Version file content. It is returned in JSON format.
+     * Set The content of the version file. Return in JSON format.
+     * @param Content The content of the version file. Return in JSON format.
      */
     public void setContent(String Content) {
         this.Content = Content;

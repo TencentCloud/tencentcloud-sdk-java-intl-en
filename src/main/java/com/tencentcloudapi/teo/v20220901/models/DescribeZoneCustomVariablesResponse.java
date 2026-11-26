@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeZoneCustomVariablesResponse extends AbstractModel {
 
     /**
-    * <p>List of site-level custom variables.</p>
+    * <p>Site-level custom variable list.</p>
     */
     @SerializedName("CustomVariables")
     @Expose
@@ -45,16 +45,16 @@ public class DescribeZoneCustomVariablesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get <p>List of site-level custom variables.</p> 
-     * @return CustomVariables <p>List of site-level custom variables.</p>
+     * Get <p>Site-level custom variable list.</p> 
+     * @return CustomVariables <p>Site-level custom variable list.</p>
      */
     public CustomVariable [] getCustomVariables() {
         return this.CustomVariables;
     }
 
     /**
-     * Set <p>List of site-level custom variables.</p>
-     * @param CustomVariables <p>List of site-level custom variables.</p>
+     * Set <p>Site-level custom variable list.</p>
+     * @param CustomVariables <p>Site-level custom variable list.</p>
      */
     public void setCustomVariables(CustomVariable [] CustomVariables) {
         this.CustomVariables = CustomVariables;

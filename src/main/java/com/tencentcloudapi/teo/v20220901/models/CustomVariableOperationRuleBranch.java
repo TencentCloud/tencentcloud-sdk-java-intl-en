@@ -38,7 +38,7 @@ public class CustomVariableOperationRuleBranch extends AbstractModel {
     private CustomVariableOperationRuleAction [] Actions;
 
     /**
-    * <p>Sub-rule list. If there are multiple rules in the list, they are executed in order from top to bottom.<br>Note: SubRules and Actions cannot be empty at the same time. Currently only support filling one level of SubRules.</p>
+    * <p>Sub-rule list. If there are multiple rules in the list, they are executed in order from top to bottom.<br>Note: SubRules and Actions cannot be empty at the same time. Currently, only one level of SubRules is supported.</p>
     */
     @SerializedName("SubRules")
     @Expose
@@ -77,16 +77,16 @@ public class CustomVariableOperationRuleBranch extends AbstractModel {
     }
 
     /**
-     * Get <p>Sub-rule list. If there are multiple rules in the list, they are executed in order from top to bottom.<br>Note: SubRules and Actions cannot be empty at the same time. Currently only support filling one level of SubRules.</p> 
-     * @return SubRules <p>Sub-rule list. If there are multiple rules in the list, they are executed in order from top to bottom.<br>Note: SubRules and Actions cannot be empty at the same time. Currently only support filling one level of SubRules.</p>
+     * Get <p>Sub-rule list. If there are multiple rules in the list, they are executed in order from top to bottom.<br>Note: SubRules and Actions cannot be empty at the same time. Currently, only one level of SubRules is supported.</p> 
+     * @return SubRules <p>Sub-rule list. If there are multiple rules in the list, they are executed in order from top to bottom.<br>Note: SubRules and Actions cannot be empty at the same time. Currently, only one level of SubRules is supported.</p>
      */
     public CustomVariableOperationSubRule [] getSubRules() {
         return this.SubRules;
     }
 
     /**
-     * Set <p>Sub-rule list. If there are multiple rules in the list, they are executed in order from top to bottom.<br>Note: SubRules and Actions cannot be empty at the same time. Currently only support filling one level of SubRules.</p>
-     * @param SubRules <p>Sub-rule list. If there are multiple rules in the list, they are executed in order from top to bottom.<br>Note: SubRules and Actions cannot be empty at the same time. Currently only support filling one level of SubRules.</p>
+     * Set <p>Sub-rule list. If there are multiple rules in the list, they are executed in order from top to bottom.<br>Note: SubRules and Actions cannot be empty at the same time. Currently, only one level of SubRules is supported.</p>
+     * @param SubRules <p>Sub-rule list. If there are multiple rules in the list, they are executed in order from top to bottom.<br>Note: SubRules and Actions cannot be empty at the same time. Currently, only one level of SubRules is supported.</p>
      */
     public void setSubRules(CustomVariableOperationSubRule [] SubRules) {
         this.SubRules = SubRules;

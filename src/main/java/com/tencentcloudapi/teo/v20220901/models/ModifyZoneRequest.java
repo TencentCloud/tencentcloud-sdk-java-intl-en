@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModifyZoneRequest extends AbstractModel {
 
     /**
-    * The site ID.
+    * Zone ID.
     */
     @SerializedName("ZoneId")
     @Expose
@@ -32,7 +32,7 @@ public class ModifyZoneRequest extends AbstractModel {
 
     /**
     * Site access method. Valid values:
-<li>full: NS access.</li>
+<li>full: NS access;</li>
 <li>partial: CNAME access. If the site is currently accessed with no domain name, it can be switched only to CNAME access.</li>
 <li>dnsPodAccess: DNSPod hosted access. To use this access mode, your domain name should have been hosted on DNSPod.</li>If this parameter is not input, the original configuration is maintained.
     */
@@ -41,47 +41,47 @@ public class ModifyZoneRequest extends AbstractModel {
     private String Type;
 
     /**
-    * The custom name servers. The original configuration applies if this field is not specified. It is not allowed to pass this field when a site is connected without using a domain name.
+    * Custom site info used as an alternative to the default name server assigned by the system. Maintain the original configuration if not specified. This parameter cannot be passed when the site uses the no domain access method.
     */
     @SerializedName("VanityNameServers")
     @Expose
     private VanityNameServers VanityNameServers;
 
     /**
-    * Identical site identifier. limits input to numbers, english letters, ".", "-", and "_", with a character limit of 200 characters.
+    * Identical site identifier. Enter numbers, letters, ".", "-", and "_" only, up to 200 characters.
     */
     @SerializedName("AliasZoneName")
     @Expose
     private String AliasZoneName;
 
     /**
-    * The region where the site requests access. Values:
-<li> `global`: Global coverage</li>
-<li> `mainland`: Chinese mainland</li>
-<li> `overseas`: Outside the Chinese mainland </li>It is not allowed to pass this field when a site is connected without using a domain name.
+    * Site access region. Valid values:
+<li> global: global;</li>
+<li>mainland: Chinese mainland;</li>
+<li> overseas: outside the Chinese mainland.</li>This parameter is not allowed when the site uses no domain access method.
     */
     @SerializedName("Area")
     @Expose
     private String Area;
 
     /**
-    * Name of the site. This field takes effect only when the site switches from domainless access to CNAME access.
+    * Site name. This field is valid only when the site is switched from the no domain access method to the CNAME access method.
     */
     @SerializedName("ZoneName")
     @Expose
     private String ZoneName;
 
     /**
-     * Get The site ID. 
-     * @return ZoneId The site ID.
+     * Get Zone ID. 
+     * @return ZoneId Zone ID.
      */
     public String getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set The site ID.
-     * @param ZoneId The site ID.
+     * Set Zone ID.
+     * @param ZoneId Zone ID.
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;
@@ -89,11 +89,11 @@ public class ModifyZoneRequest extends AbstractModel {
 
     /**
      * Get Site access method. Valid values:
-<li>full: NS access.</li>
+<li>full: NS access;</li>
 <li>partial: CNAME access. If the site is currently accessed with no domain name, it can be switched only to CNAME access.</li>
 <li>dnsPodAccess: DNSPod hosted access. To use this access mode, your domain name should have been hosted on DNSPod.</li>If this parameter is not input, the original configuration is maintained. 
      * @return Type Site access method. Valid values:
-<li>full: NS access.</li>
+<li>full: NS access;</li>
 <li>partial: CNAME access. If the site is currently accessed with no domain name, it can be switched only to CNAME access.</li>
 <li>dnsPodAccess: DNSPod hosted access. To use this access mode, your domain name should have been hosted on DNSPod.</li>If this parameter is not input, the original configuration is maintained.
      */
@@ -103,11 +103,11 @@ public class ModifyZoneRequest extends AbstractModel {
 
     /**
      * Set Site access method. Valid values:
-<li>full: NS access.</li>
+<li>full: NS access;</li>
 <li>partial: CNAME access. If the site is currently accessed with no domain name, it can be switched only to CNAME access.</li>
 <li>dnsPodAccess: DNSPod hosted access. To use this access mode, your domain name should have been hosted on DNSPod.</li>If this parameter is not input, the original configuration is maintained.
      * @param Type Site access method. Valid values:
-<li>full: NS access.</li>
+<li>full: NS access;</li>
 <li>partial: CNAME access. If the site is currently accessed with no domain name, it can be switched only to CNAME access.</li>
 <li>dnsPodAccess: DNSPod hosted access. To use this access mode, your domain name should have been hosted on DNSPod.</li>If this parameter is not input, the original configuration is maintained.
      */
@@ -116,76 +116,76 @@ public class ModifyZoneRequest extends AbstractModel {
     }
 
     /**
-     * Get The custom name servers. The original configuration applies if this field is not specified. It is not allowed to pass this field when a site is connected without using a domain name. 
-     * @return VanityNameServers The custom name servers. The original configuration applies if this field is not specified. It is not allowed to pass this field when a site is connected without using a domain name.
+     * Get Custom site info used as an alternative to the default name server assigned by the system. Maintain the original configuration if not specified. This parameter cannot be passed when the site uses the no domain access method. 
+     * @return VanityNameServers Custom site info used as an alternative to the default name server assigned by the system. Maintain the original configuration if not specified. This parameter cannot be passed when the site uses the no domain access method.
      */
     public VanityNameServers getVanityNameServers() {
         return this.VanityNameServers;
     }
 
     /**
-     * Set The custom name servers. The original configuration applies if this field is not specified. It is not allowed to pass this field when a site is connected without using a domain name.
-     * @param VanityNameServers The custom name servers. The original configuration applies if this field is not specified. It is not allowed to pass this field when a site is connected without using a domain name.
+     * Set Custom site info used as an alternative to the default name server assigned by the system. Maintain the original configuration if not specified. This parameter cannot be passed when the site uses the no domain access method.
+     * @param VanityNameServers Custom site info used as an alternative to the default name server assigned by the system. Maintain the original configuration if not specified. This parameter cannot be passed when the site uses the no domain access method.
      */
     public void setVanityNameServers(VanityNameServers VanityNameServers) {
         this.VanityNameServers = VanityNameServers;
     }
 
     /**
-     * Get Identical site identifier. limits input to numbers, english letters, ".", "-", and "_", with a character limit of 200 characters. 
-     * @return AliasZoneName Identical site identifier. limits input to numbers, english letters, ".", "-", and "_", with a character limit of 200 characters.
+     * Get Identical site identifier. Enter numbers, letters, ".", "-", and "_" only, up to 200 characters. 
+     * @return AliasZoneName Identical site identifier. Enter numbers, letters, ".", "-", and "_" only, up to 200 characters.
      */
     public String getAliasZoneName() {
         return this.AliasZoneName;
     }
 
     /**
-     * Set Identical site identifier. limits input to numbers, english letters, ".", "-", and "_", with a character limit of 200 characters.
-     * @param AliasZoneName Identical site identifier. limits input to numbers, english letters, ".", "-", and "_", with a character limit of 200 characters.
+     * Set Identical site identifier. Enter numbers, letters, ".", "-", and "_" only, up to 200 characters.
+     * @param AliasZoneName Identical site identifier. Enter numbers, letters, ".", "-", and "_" only, up to 200 characters.
      */
     public void setAliasZoneName(String AliasZoneName) {
         this.AliasZoneName = AliasZoneName;
     }
 
     /**
-     * Get The region where the site requests access. Values:
-<li> `global`: Global coverage</li>
-<li> `mainland`: Chinese mainland</li>
-<li> `overseas`: Outside the Chinese mainland </li>It is not allowed to pass this field when a site is connected without using a domain name. 
-     * @return Area The region where the site requests access. Values:
-<li> `global`: Global coverage</li>
-<li> `mainland`: Chinese mainland</li>
-<li> `overseas`: Outside the Chinese mainland </li>It is not allowed to pass this field when a site is connected without using a domain name.
+     * Get Site access region. Valid values:
+<li> global: global;</li>
+<li>mainland: Chinese mainland;</li>
+<li> overseas: outside the Chinese mainland.</li>This parameter is not allowed when the site uses no domain access method. 
+     * @return Area Site access region. Valid values:
+<li> global: global;</li>
+<li>mainland: Chinese mainland;</li>
+<li> overseas: outside the Chinese mainland.</li>This parameter is not allowed when the site uses no domain access method.
      */
     public String getArea() {
         return this.Area;
     }
 
     /**
-     * Set The region where the site requests access. Values:
-<li> `global`: Global coverage</li>
-<li> `mainland`: Chinese mainland</li>
-<li> `overseas`: Outside the Chinese mainland </li>It is not allowed to pass this field when a site is connected without using a domain name.
-     * @param Area The region where the site requests access. Values:
-<li> `global`: Global coverage</li>
-<li> `mainland`: Chinese mainland</li>
-<li> `overseas`: Outside the Chinese mainland </li>It is not allowed to pass this field when a site is connected without using a domain name.
+     * Set Site access region. Valid values:
+<li> global: global;</li>
+<li>mainland: Chinese mainland;</li>
+<li> overseas: outside the Chinese mainland.</li>This parameter is not allowed when the site uses no domain access method.
+     * @param Area Site access region. Valid values:
+<li> global: global;</li>
+<li>mainland: Chinese mainland;</li>
+<li> overseas: outside the Chinese mainland.</li>This parameter is not allowed when the site uses no domain access method.
      */
     public void setArea(String Area) {
         this.Area = Area;
     }
 
     /**
-     * Get Name of the site. This field takes effect only when the site switches from domainless access to CNAME access. 
-     * @return ZoneName Name of the site. This field takes effect only when the site switches from domainless access to CNAME access.
+     * Get Site name. This field is valid only when the site is switched from the no domain access method to the CNAME access method. 
+     * @return ZoneName Site name. This field is valid only when the site is switched from the no domain access method to the CNAME access method.
      */
     public String getZoneName() {
         return this.ZoneName;
     }
 
     /**
-     * Set Name of the site. This field takes effect only when the site switches from domainless access to CNAME access.
-     * @param ZoneName Name of the site. This field takes effect only when the site switches from domainless access to CNAME access.
+     * Set Site name. This field is valid only when the site is switched from the no domain access method to the CNAME access method.
+     * @param ZoneName Site name. This field is valid only when the site is switched from the no domain access method to the CNAME access method.
      */
     public void setZoneName(String ZoneName) {
         this.ZoneName = ZoneName;

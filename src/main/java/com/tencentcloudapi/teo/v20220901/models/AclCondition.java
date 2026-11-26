@@ -24,262 +24,262 @@ import java.util.HashMap;
 public class AclCondition extends AbstractModel {
 
     /**
-    * Filters: 
-<li>`host`: Request domain name;</li>
-<li>`sip`: Client IP;</li>
-<li>`ua`: User-Agent;</li>
-<li>`cookie`: Cookie;</li>
-<li>`cgi`: CGI script;</li>
-<li>`xff`: XFF header;</li></li>
-<li>`url`: Request URL;<li></li>
-<li>`accept`: Request content type;</li>
-<li>`method`: Request method<;/li>
-<li>`header`: Request header;</li>
-<li>`app_proto`: Application layer protocol;</li>
-<li>`sip_proto`: Network layer protocol;</li>
-<li>`uabot`: UA rules (only available in custom bot rules);</li>
-<li>`idcid`: IDC rules (only available in custom bot rules);</li>
-<li>`sipbot`: Search engine rules (only available in custom bot rules);</li>
-<li>`portrait`: Client reputation (only available in custom bot rules);</li>
-<li>`header_seq`: Header sequence (only available in custom bot rules);</li>
-<li>`hdr`: Request body (only available in custom Web protection rules). </li>
+    * Matching field. Valid values:
+<li>host: request domain name;</li>
+<li>sip: Client IP;</li>
+<li>ua:User-Agent;</li>
+<li>cookie: Session cookie;</li>
+<li>cgi: CGI script;</li>
+<li>xff: XFF extension header;</li>
+<li>`url`: Request URL;
+<li>accept: request content type;</li>
+<li>method: request method;</li>
+<li>header: request header;</li>
+<li>app_proto: application layer protocol;</li>
+<li>sip_proto: network layer protocol;</li>
+<li>uabot: UA feature rule, available only for bot custom rules;</li>
+<li>idcid: IDC rule, only available for bot custom rules;</li>
+<li>sipbot: search engine rule, available only for bot custom rules;</li>
+<li>portrait: profile analysis, available only for bot custom rules;</li>
+<li>header_seq: Request header sequence, only available for bot custom rules;</li>
+<li>hdr: Request body, available only for custom rules in Web protection.</li>
     */
     @SerializedName("MatchFrom")
     @Expose
     private String MatchFrom;
 
     /**
-    * The parameter of the field. When `MatchFrom = header`, the key contained in the header can be passed.
+    * Matching string. When MatchFrom is header, the key of the header can be set to this parameter.
     */
     @SerializedName("MatchParam")
     @Expose
     private String MatchParam;
 
     /**
-    * The logical operator. Values:
-<li>`equal`: Value equals</li>
-<li>`not_equal`: Value not equals</li>
-<li>`include`: String contains</li>
-<li>`not_include`: String not contains</li>
-<li>`match`: IP matches</li>
-<li>`not_match`: IP not matches</li>
-<li>`include_area`: Regions contain</li>
-<li>`is_empty`: Value left empty</li>
-<li>`not_exists`: Key fields not exist</li>
-<li>`regexp`: Regex matches</li>
-<li>`len_gt`: Value greater than</li>
-<li>`len_lt`: Value smaller than</li>
-<li>`len_eq`: Value equals</li>
-<li>`match_prefix`: Prefix matches</li>
-<li>`match_suffix`: Suffix matches</li>
-<li>`wildcard`: Wildcard</li>
+    * Matching relationship. Valid values:
+<li>equal: string equals;</li>
+<li>not_equal: value not equal to;</li>
+<li>include: string containing;</li>
+<li>not_include: string does not contain;</li>
+<li>match: ip match;</li>
+<li>not_match: ip not matched;</li>
+<li>include_area: region inclusion;</li>
+<li>is_empty: field with null value;</li>
+<li>not_exists: key field not found;</li>
+<li>regexp: regular expression matching;</li>
+<li>len_gt: value greater than;</li>
+<li>len_lt: value is less than;</li>
+<li>len_eq: value equal to;</li>
+<li>match_prefix: prefix match;</li>
+<li>match_suffix: suffix matching;</li>
+<li>wildcard: wildcard.</li>
     */
     @SerializedName("Operator")
     @Expose
     private String Operator;
 
     /**
-    * The content to match.
+    * Matching content.
     */
     @SerializedName("MatchContent")
     @Expose
     private String MatchContent;
 
     /**
-     * Get Filters: 
-<li>`host`: Request domain name;</li>
-<li>`sip`: Client IP;</li>
-<li>`ua`: User-Agent;</li>
-<li>`cookie`: Cookie;</li>
-<li>`cgi`: CGI script;</li>
-<li>`xff`: XFF header;</li></li>
-<li>`url`: Request URL;<li></li>
-<li>`accept`: Request content type;</li>
-<li>`method`: Request method<;/li>
-<li>`header`: Request header;</li>
-<li>`app_proto`: Application layer protocol;</li>
-<li>`sip_proto`: Network layer protocol;</li>
-<li>`uabot`: UA rules (only available in custom bot rules);</li>
-<li>`idcid`: IDC rules (only available in custom bot rules);</li>
-<li>`sipbot`: Search engine rules (only available in custom bot rules);</li>
-<li>`portrait`: Client reputation (only available in custom bot rules);</li>
-<li>`header_seq`: Header sequence (only available in custom bot rules);</li>
-<li>`hdr`: Request body (only available in custom Web protection rules). </li> 
-     * @return MatchFrom Filters: 
-<li>`host`: Request domain name;</li>
-<li>`sip`: Client IP;</li>
-<li>`ua`: User-Agent;</li>
-<li>`cookie`: Cookie;</li>
-<li>`cgi`: CGI script;</li>
-<li>`xff`: XFF header;</li></li>
-<li>`url`: Request URL;<li></li>
-<li>`accept`: Request content type;</li>
-<li>`method`: Request method<;/li>
-<li>`header`: Request header;</li>
-<li>`app_proto`: Application layer protocol;</li>
-<li>`sip_proto`: Network layer protocol;</li>
-<li>`uabot`: UA rules (only available in custom bot rules);</li>
-<li>`idcid`: IDC rules (only available in custom bot rules);</li>
-<li>`sipbot`: Search engine rules (only available in custom bot rules);</li>
-<li>`portrait`: Client reputation (only available in custom bot rules);</li>
-<li>`header_seq`: Header sequence (only available in custom bot rules);</li>
-<li>`hdr`: Request body (only available in custom Web protection rules). </li>
+     * Get Matching field. Valid values:
+<li>host: request domain name;</li>
+<li>sip: Client IP;</li>
+<li>ua:User-Agent;</li>
+<li>cookie: Session cookie;</li>
+<li>cgi: CGI script;</li>
+<li>xff: XFF extension header;</li>
+<li>`url`: Request URL;
+<li>accept: request content type;</li>
+<li>method: request method;</li>
+<li>header: request header;</li>
+<li>app_proto: application layer protocol;</li>
+<li>sip_proto: network layer protocol;</li>
+<li>uabot: UA feature rule, available only for bot custom rules;</li>
+<li>idcid: IDC rule, only available for bot custom rules;</li>
+<li>sipbot: search engine rule, available only for bot custom rules;</li>
+<li>portrait: profile analysis, available only for bot custom rules;</li>
+<li>header_seq: Request header sequence, only available for bot custom rules;</li>
+<li>hdr: Request body, available only for custom rules in Web protection.</li> 
+     * @return MatchFrom Matching field. Valid values:
+<li>host: request domain name;</li>
+<li>sip: Client IP;</li>
+<li>ua:User-Agent;</li>
+<li>cookie: Session cookie;</li>
+<li>cgi: CGI script;</li>
+<li>xff: XFF extension header;</li>
+<li>`url`: Request URL;
+<li>accept: request content type;</li>
+<li>method: request method;</li>
+<li>header: request header;</li>
+<li>app_proto: application layer protocol;</li>
+<li>sip_proto: network layer protocol;</li>
+<li>uabot: UA feature rule, available only for bot custom rules;</li>
+<li>idcid: IDC rule, only available for bot custom rules;</li>
+<li>sipbot: search engine rule, available only for bot custom rules;</li>
+<li>portrait: profile analysis, available only for bot custom rules;</li>
+<li>header_seq: Request header sequence, only available for bot custom rules;</li>
+<li>hdr: Request body, available only for custom rules in Web protection.</li>
      */
     public String getMatchFrom() {
         return this.MatchFrom;
     }
 
     /**
-     * Set Filters: 
-<li>`host`: Request domain name;</li>
-<li>`sip`: Client IP;</li>
-<li>`ua`: User-Agent;</li>
-<li>`cookie`: Cookie;</li>
-<li>`cgi`: CGI script;</li>
-<li>`xff`: XFF header;</li></li>
-<li>`url`: Request URL;<li></li>
-<li>`accept`: Request content type;</li>
-<li>`method`: Request method<;/li>
-<li>`header`: Request header;</li>
-<li>`app_proto`: Application layer protocol;</li>
-<li>`sip_proto`: Network layer protocol;</li>
-<li>`uabot`: UA rules (only available in custom bot rules);</li>
-<li>`idcid`: IDC rules (only available in custom bot rules);</li>
-<li>`sipbot`: Search engine rules (only available in custom bot rules);</li>
-<li>`portrait`: Client reputation (only available in custom bot rules);</li>
-<li>`header_seq`: Header sequence (only available in custom bot rules);</li>
-<li>`hdr`: Request body (only available in custom Web protection rules). </li>
-     * @param MatchFrom Filters: 
-<li>`host`: Request domain name;</li>
-<li>`sip`: Client IP;</li>
-<li>`ua`: User-Agent;</li>
-<li>`cookie`: Cookie;</li>
-<li>`cgi`: CGI script;</li>
-<li>`xff`: XFF header;</li></li>
-<li>`url`: Request URL;<li></li>
-<li>`accept`: Request content type;</li>
-<li>`method`: Request method<;/li>
-<li>`header`: Request header;</li>
-<li>`app_proto`: Application layer protocol;</li>
-<li>`sip_proto`: Network layer protocol;</li>
-<li>`uabot`: UA rules (only available in custom bot rules);</li>
-<li>`idcid`: IDC rules (only available in custom bot rules);</li>
-<li>`sipbot`: Search engine rules (only available in custom bot rules);</li>
-<li>`portrait`: Client reputation (only available in custom bot rules);</li>
-<li>`header_seq`: Header sequence (only available in custom bot rules);</li>
-<li>`hdr`: Request body (only available in custom Web protection rules). </li>
+     * Set Matching field. Valid values:
+<li>host: request domain name;</li>
+<li>sip: Client IP;</li>
+<li>ua:User-Agent;</li>
+<li>cookie: Session cookie;</li>
+<li>cgi: CGI script;</li>
+<li>xff: XFF extension header;</li>
+<li>`url`: Request URL;
+<li>accept: request content type;</li>
+<li>method: request method;</li>
+<li>header: request header;</li>
+<li>app_proto: application layer protocol;</li>
+<li>sip_proto: network layer protocol;</li>
+<li>uabot: UA feature rule, available only for bot custom rules;</li>
+<li>idcid: IDC rule, only available for bot custom rules;</li>
+<li>sipbot: search engine rule, available only for bot custom rules;</li>
+<li>portrait: profile analysis, available only for bot custom rules;</li>
+<li>header_seq: Request header sequence, only available for bot custom rules;</li>
+<li>hdr: Request body, available only for custom rules in Web protection.</li>
+     * @param MatchFrom Matching field. Valid values:
+<li>host: request domain name;</li>
+<li>sip: Client IP;</li>
+<li>ua:User-Agent;</li>
+<li>cookie: Session cookie;</li>
+<li>cgi: CGI script;</li>
+<li>xff: XFF extension header;</li>
+<li>`url`: Request URL;
+<li>accept: request content type;</li>
+<li>method: request method;</li>
+<li>header: request header;</li>
+<li>app_proto: application layer protocol;</li>
+<li>sip_proto: network layer protocol;</li>
+<li>uabot: UA feature rule, available only for bot custom rules;</li>
+<li>idcid: IDC rule, only available for bot custom rules;</li>
+<li>sipbot: search engine rule, available only for bot custom rules;</li>
+<li>portrait: profile analysis, available only for bot custom rules;</li>
+<li>header_seq: Request header sequence, only available for bot custom rules;</li>
+<li>hdr: Request body, available only for custom rules in Web protection.</li>
      */
     public void setMatchFrom(String MatchFrom) {
         this.MatchFrom = MatchFrom;
     }
 
     /**
-     * Get The parameter of the field. When `MatchFrom = header`, the key contained in the header can be passed. 
-     * @return MatchParam The parameter of the field. When `MatchFrom = header`, the key contained in the header can be passed.
+     * Get Matching string. When MatchFrom is header, the key of the header can be set to this parameter. 
+     * @return MatchParam Matching string. When MatchFrom is header, the key of the header can be set to this parameter.
      */
     public String getMatchParam() {
         return this.MatchParam;
     }
 
     /**
-     * Set The parameter of the field. When `MatchFrom = header`, the key contained in the header can be passed.
-     * @param MatchParam The parameter of the field. When `MatchFrom = header`, the key contained in the header can be passed.
+     * Set Matching string. When MatchFrom is header, the key of the header can be set to this parameter.
+     * @param MatchParam Matching string. When MatchFrom is header, the key of the header can be set to this parameter.
      */
     public void setMatchParam(String MatchParam) {
         this.MatchParam = MatchParam;
     }
 
     /**
-     * Get The logical operator. Values:
-<li>`equal`: Value equals</li>
-<li>`not_equal`: Value not equals</li>
-<li>`include`: String contains</li>
-<li>`not_include`: String not contains</li>
-<li>`match`: IP matches</li>
-<li>`not_match`: IP not matches</li>
-<li>`include_area`: Regions contain</li>
-<li>`is_empty`: Value left empty</li>
-<li>`not_exists`: Key fields not exist</li>
-<li>`regexp`: Regex matches</li>
-<li>`len_gt`: Value greater than</li>
-<li>`len_lt`: Value smaller than</li>
-<li>`len_eq`: Value equals</li>
-<li>`match_prefix`: Prefix matches</li>
-<li>`match_suffix`: Suffix matches</li>
-<li>`wildcard`: Wildcard</li> 
-     * @return Operator The logical operator. Values:
-<li>`equal`: Value equals</li>
-<li>`not_equal`: Value not equals</li>
-<li>`include`: String contains</li>
-<li>`not_include`: String not contains</li>
-<li>`match`: IP matches</li>
-<li>`not_match`: IP not matches</li>
-<li>`include_area`: Regions contain</li>
-<li>`is_empty`: Value left empty</li>
-<li>`not_exists`: Key fields not exist</li>
-<li>`regexp`: Regex matches</li>
-<li>`len_gt`: Value greater than</li>
-<li>`len_lt`: Value smaller than</li>
-<li>`len_eq`: Value equals</li>
-<li>`match_prefix`: Prefix matches</li>
-<li>`match_suffix`: Suffix matches</li>
-<li>`wildcard`: Wildcard</li>
+     * Get Matching relationship. Valid values:
+<li>equal: string equals;</li>
+<li>not_equal: value not equal to;</li>
+<li>include: string containing;</li>
+<li>not_include: string does not contain;</li>
+<li>match: ip match;</li>
+<li>not_match: ip not matched;</li>
+<li>include_area: region inclusion;</li>
+<li>is_empty: field with null value;</li>
+<li>not_exists: key field not found;</li>
+<li>regexp: regular expression matching;</li>
+<li>len_gt: value greater than;</li>
+<li>len_lt: value is less than;</li>
+<li>len_eq: value equal to;</li>
+<li>match_prefix: prefix match;</li>
+<li>match_suffix: suffix matching;</li>
+<li>wildcard: wildcard.</li> 
+     * @return Operator Matching relationship. Valid values:
+<li>equal: string equals;</li>
+<li>not_equal: value not equal to;</li>
+<li>include: string containing;</li>
+<li>not_include: string does not contain;</li>
+<li>match: ip match;</li>
+<li>not_match: ip not matched;</li>
+<li>include_area: region inclusion;</li>
+<li>is_empty: field with null value;</li>
+<li>not_exists: key field not found;</li>
+<li>regexp: regular expression matching;</li>
+<li>len_gt: value greater than;</li>
+<li>len_lt: value is less than;</li>
+<li>len_eq: value equal to;</li>
+<li>match_prefix: prefix match;</li>
+<li>match_suffix: suffix matching;</li>
+<li>wildcard: wildcard.</li>
      */
     public String getOperator() {
         return this.Operator;
     }
 
     /**
-     * Set The logical operator. Values:
-<li>`equal`: Value equals</li>
-<li>`not_equal`: Value not equals</li>
-<li>`include`: String contains</li>
-<li>`not_include`: String not contains</li>
-<li>`match`: IP matches</li>
-<li>`not_match`: IP not matches</li>
-<li>`include_area`: Regions contain</li>
-<li>`is_empty`: Value left empty</li>
-<li>`not_exists`: Key fields not exist</li>
-<li>`regexp`: Regex matches</li>
-<li>`len_gt`: Value greater than</li>
-<li>`len_lt`: Value smaller than</li>
-<li>`len_eq`: Value equals</li>
-<li>`match_prefix`: Prefix matches</li>
-<li>`match_suffix`: Suffix matches</li>
-<li>`wildcard`: Wildcard</li>
-     * @param Operator The logical operator. Values:
-<li>`equal`: Value equals</li>
-<li>`not_equal`: Value not equals</li>
-<li>`include`: String contains</li>
-<li>`not_include`: String not contains</li>
-<li>`match`: IP matches</li>
-<li>`not_match`: IP not matches</li>
-<li>`include_area`: Regions contain</li>
-<li>`is_empty`: Value left empty</li>
-<li>`not_exists`: Key fields not exist</li>
-<li>`regexp`: Regex matches</li>
-<li>`len_gt`: Value greater than</li>
-<li>`len_lt`: Value smaller than</li>
-<li>`len_eq`: Value equals</li>
-<li>`match_prefix`: Prefix matches</li>
-<li>`match_suffix`: Suffix matches</li>
-<li>`wildcard`: Wildcard</li>
+     * Set Matching relationship. Valid values:
+<li>equal: string equals;</li>
+<li>not_equal: value not equal to;</li>
+<li>include: string containing;</li>
+<li>not_include: string does not contain;</li>
+<li>match: ip match;</li>
+<li>not_match: ip not matched;</li>
+<li>include_area: region inclusion;</li>
+<li>is_empty: field with null value;</li>
+<li>not_exists: key field not found;</li>
+<li>regexp: regular expression matching;</li>
+<li>len_gt: value greater than;</li>
+<li>len_lt: value is less than;</li>
+<li>len_eq: value equal to;</li>
+<li>match_prefix: prefix match;</li>
+<li>match_suffix: suffix matching;</li>
+<li>wildcard: wildcard.</li>
+     * @param Operator Matching relationship. Valid values:
+<li>equal: string equals;</li>
+<li>not_equal: value not equal to;</li>
+<li>include: string containing;</li>
+<li>not_include: string does not contain;</li>
+<li>match: ip match;</li>
+<li>not_match: ip not matched;</li>
+<li>include_area: region inclusion;</li>
+<li>is_empty: field with null value;</li>
+<li>not_exists: key field not found;</li>
+<li>regexp: regular expression matching;</li>
+<li>len_gt: value greater than;</li>
+<li>len_lt: value is less than;</li>
+<li>len_eq: value equal to;</li>
+<li>match_prefix: prefix match;</li>
+<li>match_suffix: suffix matching;</li>
+<li>wildcard: wildcard.</li>
      */
     public void setOperator(String Operator) {
         this.Operator = Operator;
     }
 
     /**
-     * Get The content to match. 
-     * @return MatchContent The content to match.
+     * Get Matching content. 
+     * @return MatchContent Matching content.
      */
     public String getMatchContent() {
         return this.MatchContent;
     }
 
     /**
-     * Set The content to match.
-     * @param MatchContent The content to match.
+     * Set Matching content.
+     * @param MatchContent Matching content.
      */
     public void setMatchContent(String MatchContent) {
         this.MatchContent = MatchContent;

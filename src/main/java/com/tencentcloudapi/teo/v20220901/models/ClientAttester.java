@@ -24,49 +24,49 @@ import java.util.HashMap;
 public class ClientAttester extends AbstractModel {
 
     /**
-    * <p>Option ID for certification.</p>
+    * <p>Authentication option ID.</p>
     */
     @SerializedName("Id")
     @Expose
     private String Id;
 
     /**
-    * <p>Option name for authentication.</p>
+    * <p>Authentication option name.</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * <p>Authentication rule type. Returned only in the response. Valid values:</p><li>PRESET: System preset rule. Only AttesterDuration can be modified.</li><li>CUSTOM: User-defined rule.</li>
+    * <p>Authentication rule type. Returned only as an output parameter. Valid values:</p><li>PRESET: system preset rule. Only AttesterDuration can be modified;</li><li>CUSTOM: user-defined rule.</li>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * <p>Authentication method. Valid values:</p><li>TC-RCE: Use risk identification RCE for authentication;</li><li>TC-CAPTCHA: Use Tianyu verification code for authentication;</li><li>TC-EO-CAPTCHA: Use EdgeOne human-machine verification for authentication.</li>
+    * <p>Authentication method. Valid values:</p><li>TC-RCE: Use risk identification RCE for authentication;</li><li>TC-CAPTCHA: Use Tencent Cloud CAPTCHA for authentication;</li><li>TC-EO-CAPTCHA: Use EdgeOne human-machine verification for authentication.</li>
     */
     @SerializedName("AttesterSource")
     @Expose
     private String AttesterSource;
 
     /**
-    * <p>Authentication validity time. Default value is 60s. Supported measurement units:</p><li>s: second, value ranges from 60 to 43200.</li><li>m: minute, value ranges from 1 to 720.</li><li>h: hour, value ranges from 1 to 12.</li>
+    * <p>Authentication validity time. Default is 60s. Supported units:</p><li>s: second, value ranges from 60 to 43200;</li><li>m: minute, value ranges from 1 to 720;</li><li>h: hour, value ranges from 1 to 12.</li>
     */
     @SerializedName("AttesterDuration")
     @Expose
     private String AttesterDuration;
 
     /**
-    * <p>Whether to enable the usage limit for attestation results. </p><p>Valid values:</p><ul><li>on: Enabled</li><li>off: Disabled</li></ul><p>Default value: off</p>
+    * <p>Whether to enable usage limits on authentication results. </p><p>Enumeration values:</p><ul><li>on: Enable</li><li>off: Disable</li></ul><p>Default value: off</p>
     */
     @SerializedName("UsageLimit")
     @Expose
     private String UsageLimit;
 
     /**
-    * <p>Whether to enable the usage limit for attestation results. </p><p>Valid values:</p><ul><li>on: Enabled</li><li>off: Disabled</li></ul><p>Default value: off</p>
+    * <p>Maximum number of uses for the authentication result. This field is required when UsageLimit is on.</p><p>Value range: [1, 100000]</p>
     */
     @SerializedName("MaxUsageCount")
     @Expose
@@ -80,126 +80,126 @@ public class ClientAttester extends AbstractModel {
     private TCRCEOption TCRCEOption;
 
     /**
-    * <p>Configuration message for TC-CAPTCHA certification.</p><li>This field is required when the AttesterSource parameter value is TC-CAPTCHA.</li>
+    * <p>Configuration message for TC-CAPTCHA authentication.</p><li>Required when the AttesterSource parameter value is TC-CAPTCHA.</li>
     */
     @SerializedName("TCCaptchaOption")
     @Expose
     private TCCaptchaOption TCCaptchaOption;
 
     /**
-    * <p>Configuration message for TC-EO-CAPTCHA certification.</p><li>This field is required when the AttesterSource parameter value is TC-EO-CAPTCHA.</li>
+    * <p>Configuration message for TC-EO-CAPTCHA authentication.</p><li>Required when the AttesterSource parameter value is TC-EO-CAPTCHA.</li>
     */
     @SerializedName("TCEOCaptchaOption")
     @Expose
     private TCEOCaptchaOption TCEOCaptchaOption;
 
     /**
-     * Get <p>Option ID for certification.</p> 
-     * @return Id <p>Option ID for certification.</p>
+     * Get <p>Authentication option ID.</p> 
+     * @return Id <p>Authentication option ID.</p>
      */
     public String getId() {
         return this.Id;
     }
 
     /**
-     * Set <p>Option ID for certification.</p>
-     * @param Id <p>Option ID for certification.</p>
+     * Set <p>Authentication option ID.</p>
+     * @param Id <p>Authentication option ID.</p>
      */
     public void setId(String Id) {
         this.Id = Id;
     }
 
     /**
-     * Get <p>Option name for authentication.</p> 
-     * @return Name <p>Option name for authentication.</p>
+     * Get <p>Authentication option name.</p> 
+     * @return Name <p>Authentication option name.</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set <p>Option name for authentication.</p>
-     * @param Name <p>Option name for authentication.</p>
+     * Set <p>Authentication option name.</p>
+     * @param Name <p>Authentication option name.</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get <p>Authentication rule type. Returned only in the response. Valid values:</p><li>PRESET: System preset rule. Only AttesterDuration can be modified.</li><li>CUSTOM: User-defined rule.</li> 
-     * @return Type <p>Authentication rule type. Returned only in the response. Valid values:</p><li>PRESET: System preset rule. Only AttesterDuration can be modified.</li><li>CUSTOM: User-defined rule.</li>
+     * Get <p>Authentication rule type. Returned only as an output parameter. Valid values:</p><li>PRESET: system preset rule. Only AttesterDuration can be modified;</li><li>CUSTOM: user-defined rule.</li> 
+     * @return Type <p>Authentication rule type. Returned only as an output parameter. Valid values:</p><li>PRESET: system preset rule. Only AttesterDuration can be modified;</li><li>CUSTOM: user-defined rule.</li>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set <p>Authentication rule type. Returned only in the response. Valid values:</p><li>PRESET: System preset rule. Only AttesterDuration can be modified.</li><li>CUSTOM: User-defined rule.</li>
-     * @param Type <p>Authentication rule type. Returned only in the response. Valid values:</p><li>PRESET: System preset rule. Only AttesterDuration can be modified.</li><li>CUSTOM: User-defined rule.</li>
+     * Set <p>Authentication rule type. Returned only as an output parameter. Valid values:</p><li>PRESET: system preset rule. Only AttesterDuration can be modified;</li><li>CUSTOM: user-defined rule.</li>
+     * @param Type <p>Authentication rule type. Returned only as an output parameter. Valid values:</p><li>PRESET: system preset rule. Only AttesterDuration can be modified;</li><li>CUSTOM: user-defined rule.</li>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get <p>Authentication method. Valid values:</p><li>TC-RCE: Use risk identification RCE for authentication;</li><li>TC-CAPTCHA: Use Tianyu verification code for authentication;</li><li>TC-EO-CAPTCHA: Use EdgeOne human-machine verification for authentication.</li> 
-     * @return AttesterSource <p>Authentication method. Valid values:</p><li>TC-RCE: Use risk identification RCE for authentication;</li><li>TC-CAPTCHA: Use Tianyu verification code for authentication;</li><li>TC-EO-CAPTCHA: Use EdgeOne human-machine verification for authentication.</li>
+     * Get <p>Authentication method. Valid values:</p><li>TC-RCE: Use risk identification RCE for authentication;</li><li>TC-CAPTCHA: Use Tencent Cloud CAPTCHA for authentication;</li><li>TC-EO-CAPTCHA: Use EdgeOne human-machine verification for authentication.</li> 
+     * @return AttesterSource <p>Authentication method. Valid values:</p><li>TC-RCE: Use risk identification RCE for authentication;</li><li>TC-CAPTCHA: Use Tencent Cloud CAPTCHA for authentication;</li><li>TC-EO-CAPTCHA: Use EdgeOne human-machine verification for authentication.</li>
      */
     public String getAttesterSource() {
         return this.AttesterSource;
     }
 
     /**
-     * Set <p>Authentication method. Valid values:</p><li>TC-RCE: Use risk identification RCE for authentication;</li><li>TC-CAPTCHA: Use Tianyu verification code for authentication;</li><li>TC-EO-CAPTCHA: Use EdgeOne human-machine verification for authentication.</li>
-     * @param AttesterSource <p>Authentication method. Valid values:</p><li>TC-RCE: Use risk identification RCE for authentication;</li><li>TC-CAPTCHA: Use Tianyu verification code for authentication;</li><li>TC-EO-CAPTCHA: Use EdgeOne human-machine verification for authentication.</li>
+     * Set <p>Authentication method. Valid values:</p><li>TC-RCE: Use risk identification RCE for authentication;</li><li>TC-CAPTCHA: Use Tencent Cloud CAPTCHA for authentication;</li><li>TC-EO-CAPTCHA: Use EdgeOne human-machine verification for authentication.</li>
+     * @param AttesterSource <p>Authentication method. Valid values:</p><li>TC-RCE: Use risk identification RCE for authentication;</li><li>TC-CAPTCHA: Use Tencent Cloud CAPTCHA for authentication;</li><li>TC-EO-CAPTCHA: Use EdgeOne human-machine verification for authentication.</li>
      */
     public void setAttesterSource(String AttesterSource) {
         this.AttesterSource = AttesterSource;
     }
 
     /**
-     * Get <p>Authentication validity time. Default value is 60s. Supported measurement units:</p><li>s: second, value ranges from 60 to 43200.</li><li>m: minute, value ranges from 1 to 720.</li><li>h: hour, value ranges from 1 to 12.</li> 
-     * @return AttesterDuration <p>Authentication validity time. Default value is 60s. Supported measurement units:</p><li>s: second, value ranges from 60 to 43200.</li><li>m: minute, value ranges from 1 to 720.</li><li>h: hour, value ranges from 1 to 12.</li>
+     * Get <p>Authentication validity time. Default is 60s. Supported units:</p><li>s: second, value ranges from 60 to 43200;</li><li>m: minute, value ranges from 1 to 720;</li><li>h: hour, value ranges from 1 to 12.</li> 
+     * @return AttesterDuration <p>Authentication validity time. Default is 60s. Supported units:</p><li>s: second, value ranges from 60 to 43200;</li><li>m: minute, value ranges from 1 to 720;</li><li>h: hour, value ranges from 1 to 12.</li>
      */
     public String getAttesterDuration() {
         return this.AttesterDuration;
     }
 
     /**
-     * Set <p>Authentication validity time. Default value is 60s. Supported measurement units:</p><li>s: second, value ranges from 60 to 43200.</li><li>m: minute, value ranges from 1 to 720.</li><li>h: hour, value ranges from 1 to 12.</li>
-     * @param AttesterDuration <p>Authentication validity time. Default value is 60s. Supported measurement units:</p><li>s: second, value ranges from 60 to 43200.</li><li>m: minute, value ranges from 1 to 720.</li><li>h: hour, value ranges from 1 to 12.</li>
+     * Set <p>Authentication validity time. Default is 60s. Supported units:</p><li>s: second, value ranges from 60 to 43200;</li><li>m: minute, value ranges from 1 to 720;</li><li>h: hour, value ranges from 1 to 12.</li>
+     * @param AttesterDuration <p>Authentication validity time. Default is 60s. Supported units:</p><li>s: second, value ranges from 60 to 43200;</li><li>m: minute, value ranges from 1 to 720;</li><li>h: hour, value ranges from 1 to 12.</li>
      */
     public void setAttesterDuration(String AttesterDuration) {
         this.AttesterDuration = AttesterDuration;
     }
 
     /**
-     * Get <p>Whether to enable the usage limit for attestation results. </p><p>Valid values:</p><ul><li>on: Enabled</li><li>off: Disabled</li></ul><p>Default value: off</p> 
-     * @return UsageLimit <p>Whether to enable the usage limit for attestation results. </p><p>Valid values:</p><ul><li>on: Enabled</li><li>off: Disabled</li></ul><p>Default value: off</p>
+     * Get <p>Whether to enable usage limits on authentication results. </p><p>Enumeration values:</p><ul><li>on: Enable</li><li>off: Disable</li></ul><p>Default value: off</p> 
+     * @return UsageLimit <p>Whether to enable usage limits on authentication results. </p><p>Enumeration values:</p><ul><li>on: Enable</li><li>off: Disable</li></ul><p>Default value: off</p>
      */
     public String getUsageLimit() {
         return this.UsageLimit;
     }
 
     /**
-     * Set <p>Whether to enable the usage limit for attestation results. </p><p>Valid values:</p><ul><li>on: Enabled</li><li>off: Disabled</li></ul><p>Default value: off</p>
-     * @param UsageLimit <p>Whether to enable the usage limit for attestation results. </p><p>Valid values:</p><ul><li>on: Enabled</li><li>off: Disabled</li></ul><p>Default value: off</p>
+     * Set <p>Whether to enable usage limits on authentication results. </p><p>Enumeration values:</p><ul><li>on: Enable</li><li>off: Disable</li></ul><p>Default value: off</p>
+     * @param UsageLimit <p>Whether to enable usage limits on authentication results. </p><p>Enumeration values:</p><ul><li>on: Enable</li><li>off: Disable</li></ul><p>Default value: off</p>
      */
     public void setUsageLimit(String UsageLimit) {
         this.UsageLimit = UsageLimit;
     }
 
     /**
-     * Get <p>Whether to enable the usage limit for attestation results. </p><p>Valid values:</p><ul><li>on: Enabled</li><li>off: Disabled</li></ul><p>Default value: off</p> 
-     * @return MaxUsageCount <p>Whether to enable the usage limit for attestation results. </p><p>Valid values:</p><ul><li>on: Enabled</li><li>off: Disabled</li></ul><p>Default value: off</p>
+     * Get <p>Maximum number of uses for the authentication result. This field is required when UsageLimit is on.</p><p>Value range: [1, 100000]</p> 
+     * @return MaxUsageCount <p>Maximum number of uses for the authentication result. This field is required when UsageLimit is on.</p><p>Value range: [1, 100000]</p>
      */
     public Long getMaxUsageCount() {
         return this.MaxUsageCount;
     }
 
     /**
-     * Set <p>Whether to enable the usage limit for attestation results. </p><p>Valid values:</p><ul><li>on: Enabled</li><li>off: Disabled</li></ul><p>Default value: off</p>
-     * @param MaxUsageCount <p>Whether to enable the usage limit for attestation results. </p><p>Valid values:</p><ul><li>on: Enabled</li><li>off: Disabled</li></ul><p>Default value: off</p>
+     * Set <p>Maximum number of uses for the authentication result. This field is required when UsageLimit is on.</p><p>Value range: [1, 100000]</p>
+     * @param MaxUsageCount <p>Maximum number of uses for the authentication result. This field is required when UsageLimit is on.</p><p>Value range: [1, 100000]</p>
      */
     public void setMaxUsageCount(Long MaxUsageCount) {
         this.MaxUsageCount = MaxUsageCount;
@@ -222,32 +222,32 @@ public class ClientAttester extends AbstractModel {
     }
 
     /**
-     * Get <p>Configuration message for TC-CAPTCHA certification.</p><li>This field is required when the AttesterSource parameter value is TC-CAPTCHA.</li> 
-     * @return TCCaptchaOption <p>Configuration message for TC-CAPTCHA certification.</p><li>This field is required when the AttesterSource parameter value is TC-CAPTCHA.</li>
+     * Get <p>Configuration message for TC-CAPTCHA authentication.</p><li>Required when the AttesterSource parameter value is TC-CAPTCHA.</li> 
+     * @return TCCaptchaOption <p>Configuration message for TC-CAPTCHA authentication.</p><li>Required when the AttesterSource parameter value is TC-CAPTCHA.</li>
      */
     public TCCaptchaOption getTCCaptchaOption() {
         return this.TCCaptchaOption;
     }
 
     /**
-     * Set <p>Configuration message for TC-CAPTCHA certification.</p><li>This field is required when the AttesterSource parameter value is TC-CAPTCHA.</li>
-     * @param TCCaptchaOption <p>Configuration message for TC-CAPTCHA certification.</p><li>This field is required when the AttesterSource parameter value is TC-CAPTCHA.</li>
+     * Set <p>Configuration message for TC-CAPTCHA authentication.</p><li>Required when the AttesterSource parameter value is TC-CAPTCHA.</li>
+     * @param TCCaptchaOption <p>Configuration message for TC-CAPTCHA authentication.</p><li>Required when the AttesterSource parameter value is TC-CAPTCHA.</li>
      */
     public void setTCCaptchaOption(TCCaptchaOption TCCaptchaOption) {
         this.TCCaptchaOption = TCCaptchaOption;
     }
 
     /**
-     * Get <p>Configuration message for TC-EO-CAPTCHA certification.</p><li>This field is required when the AttesterSource parameter value is TC-EO-CAPTCHA.</li> 
-     * @return TCEOCaptchaOption <p>Configuration message for TC-EO-CAPTCHA certification.</p><li>This field is required when the AttesterSource parameter value is TC-EO-CAPTCHA.</li>
+     * Get <p>Configuration message for TC-EO-CAPTCHA authentication.</p><li>Required when the AttesterSource parameter value is TC-EO-CAPTCHA.</li> 
+     * @return TCEOCaptchaOption <p>Configuration message for TC-EO-CAPTCHA authentication.</p><li>Required when the AttesterSource parameter value is TC-EO-CAPTCHA.</li>
      */
     public TCEOCaptchaOption getTCEOCaptchaOption() {
         return this.TCEOCaptchaOption;
     }
 
     /**
-     * Set <p>Configuration message for TC-EO-CAPTCHA certification.</p><li>This field is required when the AttesterSource parameter value is TC-EO-CAPTCHA.</li>
-     * @param TCEOCaptchaOption <p>Configuration message for TC-EO-CAPTCHA certification.</p><li>This field is required when the AttesterSource parameter value is TC-EO-CAPTCHA.</li>
+     * Set <p>Configuration message for TC-EO-CAPTCHA authentication.</p><li>Required when the AttesterSource parameter value is TC-EO-CAPTCHA.</li>
+     * @param TCEOCaptchaOption <p>Configuration message for TC-EO-CAPTCHA authentication.</p><li>Required when the AttesterSource parameter value is TC-EO-CAPTCHA.</li>
      */
     public void setTCEOCaptchaOption(TCEOCaptchaOption TCEOCaptchaOption) {
         this.TCEOCaptchaOption = TCEOCaptchaOption;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ContentIdentifier extends AbstractModel {
 
     /**
-    * Content identifier id.
+    * Content identifier ID.
     */
     @SerializedName("ContentId")
     @Expose
@@ -38,68 +38,67 @@ public class ContentIdentifier extends AbstractModel {
     private String Description;
 
     /**
-    * Count of citations by the rule engine.
+    * Number of times referenced by the rule engine.
     */
     @SerializedName("ReferenceCount")
     @Expose
     private Long ReferenceCount;
 
     /**
-    * Bound package id.
+    * Bound package ID.
     */
     @SerializedName("PlanId")
     @Expose
     private String PlanId;
 
     /**
-    * Bound tags.
+    * Bound tag.
     */
     @SerializedName("Tags")
     @Expose
     private Tag [] Tags;
 
     /**
-    * Content identifier status. valid values:.
-<Li>`Active`: activated</li>.
-<Li>`Deleted`: deleted</li>.
+    * Content identifier status. Valid values:
+<li> active: effective; </li>
+<li> deleted: Deleted.</li>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * Creation time, which adopts coordinated universal time (utc) and follows the date and time format of the iso 8601 standard.
+    * Creation time, which adopts Coordinated Universal Time (UTC) and follows the date and time format of the ISO 8601 standard.
     */
     @SerializedName("CreatedOn")
     @Expose
     private String CreatedOn;
 
     /**
-    * Latest update time, which adopts coordinated universal time (utc) and follows the date and time format of the iso 8601 standard.
+    * Latest update time, which adopts Coordinated Universal Time (UTC) and follows the date and time format of the ISO 8601 standard.
     */
     @SerializedName("ModifiedOn")
     @Expose
     private String ModifiedOn;
 
     /**
-    * Deletion time, which is empty when the status is not `deleted`. the time format follows the iso 8601 standard and is represented in coordinated universal time (utc).
-Note: this field may return null, which indicates a failure to obtain a valid value.
+    * Deletion time. It is empty when the status is not "deleted". The time is in Coordinated Universal Time (UTC), following the ISO 8601 date and time format.
     */
     @SerializedName("DeletedOn")
     @Expose
     private String DeletedOn;
 
     /**
-     * Get Content identifier id. 
-     * @return ContentId Content identifier id.
+     * Get Content identifier ID. 
+     * @return ContentId Content identifier ID.
      */
     public String getContentId() {
         return this.ContentId;
     }
 
     /**
-     * Set Content identifier id.
-     * @param ContentId Content identifier id.
+     * Set Content identifier ID.
+     * @param ContentId Content identifier ID.
      */
     public void setContentId(String ContentId) {
         this.ContentId = ContentId;
@@ -122,124 +121,120 @@ Note: this field may return null, which indicates a failure to obtain a valid va
     }
 
     /**
-     * Get Count of citations by the rule engine. 
-     * @return ReferenceCount Count of citations by the rule engine.
+     * Get Number of times referenced by the rule engine. 
+     * @return ReferenceCount Number of times referenced by the rule engine.
      */
     public Long getReferenceCount() {
         return this.ReferenceCount;
     }
 
     /**
-     * Set Count of citations by the rule engine.
-     * @param ReferenceCount Count of citations by the rule engine.
+     * Set Number of times referenced by the rule engine.
+     * @param ReferenceCount Number of times referenced by the rule engine.
      */
     public void setReferenceCount(Long ReferenceCount) {
         this.ReferenceCount = ReferenceCount;
     }
 
     /**
-     * Get Bound package id. 
-     * @return PlanId Bound package id.
+     * Get Bound package ID. 
+     * @return PlanId Bound package ID.
      */
     public String getPlanId() {
         return this.PlanId;
     }
 
     /**
-     * Set Bound package id.
-     * @param PlanId Bound package id.
+     * Set Bound package ID.
+     * @param PlanId Bound package ID.
      */
     public void setPlanId(String PlanId) {
         this.PlanId = PlanId;
     }
 
     /**
-     * Get Bound tags. 
-     * @return Tags Bound tags.
+     * Get Bound tag. 
+     * @return Tags Bound tag.
      */
     public Tag [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set Bound tags.
-     * @param Tags Bound tags.
+     * Set Bound tag.
+     * @param Tags Bound tag.
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get Content identifier status. valid values:.
-<Li>`Active`: activated</li>.
-<Li>`Deleted`: deleted</li>. 
-     * @return Status Content identifier status. valid values:.
-<Li>`Active`: activated</li>.
-<Li>`Deleted`: deleted</li>.
+     * Get Content identifier status. Valid values:
+<li> active: effective; </li>
+<li> deleted: Deleted.</li> 
+     * @return Status Content identifier status. Valid values:
+<li> active: effective; </li>
+<li> deleted: Deleted.</li>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Content identifier status. valid values:.
-<Li>`Active`: activated</li>.
-<Li>`Deleted`: deleted</li>.
-     * @param Status Content identifier status. valid values:.
-<Li>`Active`: activated</li>.
-<Li>`Deleted`: deleted</li>.
+     * Set Content identifier status. Valid values:
+<li> active: effective; </li>
+<li> deleted: Deleted.</li>
+     * @param Status Content identifier status. Valid values:
+<li> active: effective; </li>
+<li> deleted: Deleted.</li>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Creation time, which adopts coordinated universal time (utc) and follows the date and time format of the iso 8601 standard. 
-     * @return CreatedOn Creation time, which adopts coordinated universal time (utc) and follows the date and time format of the iso 8601 standard.
+     * Get Creation time, which adopts Coordinated Universal Time (UTC) and follows the date and time format of the ISO 8601 standard. 
+     * @return CreatedOn Creation time, which adopts Coordinated Universal Time (UTC) and follows the date and time format of the ISO 8601 standard.
      */
     public String getCreatedOn() {
         return this.CreatedOn;
     }
 
     /**
-     * Set Creation time, which adopts coordinated universal time (utc) and follows the date and time format of the iso 8601 standard.
-     * @param CreatedOn Creation time, which adopts coordinated universal time (utc) and follows the date and time format of the iso 8601 standard.
+     * Set Creation time, which adopts Coordinated Universal Time (UTC) and follows the date and time format of the ISO 8601 standard.
+     * @param CreatedOn Creation time, which adopts Coordinated Universal Time (UTC) and follows the date and time format of the ISO 8601 standard.
      */
     public void setCreatedOn(String CreatedOn) {
         this.CreatedOn = CreatedOn;
     }
 
     /**
-     * Get Latest update time, which adopts coordinated universal time (utc) and follows the date and time format of the iso 8601 standard. 
-     * @return ModifiedOn Latest update time, which adopts coordinated universal time (utc) and follows the date and time format of the iso 8601 standard.
+     * Get Latest update time, which adopts Coordinated Universal Time (UTC) and follows the date and time format of the ISO 8601 standard. 
+     * @return ModifiedOn Latest update time, which adopts Coordinated Universal Time (UTC) and follows the date and time format of the ISO 8601 standard.
      */
     public String getModifiedOn() {
         return this.ModifiedOn;
     }
 
     /**
-     * Set Latest update time, which adopts coordinated universal time (utc) and follows the date and time format of the iso 8601 standard.
-     * @param ModifiedOn Latest update time, which adopts coordinated universal time (utc) and follows the date and time format of the iso 8601 standard.
+     * Set Latest update time, which adopts Coordinated Universal Time (UTC) and follows the date and time format of the ISO 8601 standard.
+     * @param ModifiedOn Latest update time, which adopts Coordinated Universal Time (UTC) and follows the date and time format of the ISO 8601 standard.
      */
     public void setModifiedOn(String ModifiedOn) {
         this.ModifiedOn = ModifiedOn;
     }
 
     /**
-     * Get Deletion time, which is empty when the status is not `deleted`. the time format follows the iso 8601 standard and is represented in coordinated universal time (utc).
-Note: this field may return null, which indicates a failure to obtain a valid value. 
-     * @return DeletedOn Deletion time, which is empty when the status is not `deleted`. the time format follows the iso 8601 standard and is represented in coordinated universal time (utc).
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * Get Deletion time. It is empty when the status is not "deleted". The time is in Coordinated Universal Time (UTC), following the ISO 8601 date and time format. 
+     * @return DeletedOn Deletion time. It is empty when the status is not "deleted". The time is in Coordinated Universal Time (UTC), following the ISO 8601 date and time format.
      */
     public String getDeletedOn() {
         return this.DeletedOn;
     }
 
     /**
-     * Set Deletion time, which is empty when the status is not `deleted`. the time format follows the iso 8601 standard and is represented in coordinated universal time (utc).
-Note: this field may return null, which indicates a failure to obtain a valid value.
-     * @param DeletedOn Deletion time, which is empty when the status is not `deleted`. the time format follows the iso 8601 standard and is represented in coordinated universal time (utc).
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * Set Deletion time. It is empty when the status is not "deleted". The time is in Coordinated Universal Time (UTC), following the ISO 8601 date and time format.
+     * @param DeletedOn Deletion time. It is empty when the status is not "deleted". The time is in Coordinated Universal Time (UTC), following the ISO 8601 date and time format.
      */
     public void setDeletedOn(String DeletedOn) {
         this.DeletedOn = DeletedOn;

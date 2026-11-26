@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class CreatePlanForZoneResponse extends AbstractModel {
 
     /**
-    * List of purchased resources.
+    * Name list of purchased resources.
     */
     @SerializedName("ResourceNames")
     @Expose
     private String [] ResourceNames;
 
     /**
-    * List or order numbers.
+    * List of purchased order numbers.
     */
     @SerializedName("DealNames")
     @Expose
@@ -45,32 +45,32 @@ public class CreatePlanForZoneResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get List of purchased resources. 
-     * @return ResourceNames List of purchased resources.
+     * Get Name list of purchased resources. 
+     * @return ResourceNames Name list of purchased resources.
      */
     public String [] getResourceNames() {
         return this.ResourceNames;
     }
 
     /**
-     * Set List of purchased resources.
-     * @param ResourceNames List of purchased resources.
+     * Set Name list of purchased resources.
+     * @param ResourceNames Name list of purchased resources.
      */
     public void setResourceNames(String [] ResourceNames) {
         this.ResourceNames = ResourceNames;
     }
 
     /**
-     * Get List or order numbers. 
-     * @return DealNames List or order numbers.
+     * Get List of purchased order numbers. 
+     * @return DealNames List of purchased order numbers.
      */
     public String [] getDealNames() {
         return this.DealNames;
     }
 
     /**
-     * Set List or order numbers.
-     * @param DealNames List or order numbers.
+     * Set List of purchased order numbers.
+     * @param DealNames List of purchased order numbers.
      */
     public void setDealNames(String [] DealNames) {
         this.DealNames = DealNames;

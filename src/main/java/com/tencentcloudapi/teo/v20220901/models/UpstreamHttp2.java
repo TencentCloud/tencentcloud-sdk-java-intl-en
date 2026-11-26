@@ -24,33 +24,33 @@ import java.util.HashMap;
 public class UpstreamHttp2 extends AbstractModel {
 
     /**
-    * Whether to enable HTTP2 origin-pull. Valid values: 
+    * http/2 origin-pull configuration switch. Valid values:
 <li>`on`: Enable;</li>
-<li>`off`: Disable.</li>
+<li>off: Disable.</li>
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-     * Get Whether to enable HTTP2 origin-pull. Valid values: 
+     * Get http/2 origin-pull configuration switch. Valid values:
 <li>`on`: Enable;</li>
-<li>`off`: Disable.</li> 
-     * @return Switch Whether to enable HTTP2 origin-pull. Valid values: 
+<li>off: Disable.</li> 
+     * @return Switch http/2 origin-pull configuration switch. Valid values:
 <li>`on`: Enable;</li>
-<li>`off`: Disable.</li>
+<li>off: Disable.</li>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set Whether to enable HTTP2 origin-pull. Valid values: 
+     * Set http/2 origin-pull configuration switch. Valid values:
 <li>`on`: Enable;</li>
-<li>`off`: Disable.</li>
-     * @param Switch Whether to enable HTTP2 origin-pull. Valid values: 
+<li>off: Disable.</li>
+     * @param Switch http/2 origin-pull configuration switch. Valid values:
 <li>`on`: Enable;</li>
-<li>`off`: Disable.</li>
+<li>off: Disable.</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;

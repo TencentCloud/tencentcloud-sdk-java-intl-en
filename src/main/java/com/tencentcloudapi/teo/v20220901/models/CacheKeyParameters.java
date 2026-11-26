@@ -24,183 +24,168 @@ import java.util.HashMap;
 public class CacheKeyParameters extends AbstractModel {
 
     /**
-    * Switch for retaining the complete query string. values:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li> note: at least one of fullurlcache, ignorecase, header, scheme, or cookie must be configured. this field and querystring.switch must be set simultaneously, but cannot both be on.
+    * Switch to retain all query strings. Valid values:
+<li>`on`: Enable;</li>
+<li>off: disabled.</li>Note: At least one configuration must be set for FullURLCache, IgnoreCase, Header, Scheme, and Cookie. This field and QueryString.Switch must be set both at the same time, but they cannot both be on.
     */
     @SerializedName("FullURLCache")
     @Expose
     private String FullURLCache;
 
     /**
-    * Query string retention configuration parameter. This field and FullURLCache must be set both at the same time, but cannot both be on.
+    * Query string reserved configuration parameter. This field and FullURLCache must be set simultaneously, but cannot both be on.
     */
     @SerializedName("QueryString")
     @Expose
     private CacheKeyQueryString QueryString;
 
     /**
-    * Switch for ignoring case. values:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li> note: at least one of fullurlcache, ignorecase, header, scheme, or cookie must be configured.
+    * Case-insensitive switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: disabled.</li>Note: Configure at least one of FullURLCache, IgnoreCase, Header, Scheme, and Cookie.
     */
     @SerializedName("IgnoreCase")
     @Expose
     private String IgnoreCase;
 
     /**
-    * HTTP request header configuration parameter. Set at least one configuration among FullURLCache, IgnoreCase, Header, Scheme, and Cookie.
+    * HTTP request header configuration parameters. Set at least one configuration for FullURLCache, IgnoreCase, Header, Scheme, or Cookie.
     */
     @SerializedName("Header")
     @Expose
     private CacheKeyHeader Header;
 
     /**
-    * Request protocol switch. valid values:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li> note: at least one of fullurlcache, ignorecase, header, scheme, or cookie must be configured.
+    * Request protocol switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: disabled.</li>Note: Configure at least one of FullURLCache, IgnoreCase, Header, Scheme, and Cookie.
     */
     @SerializedName("Scheme")
     @Expose
     private String Scheme;
 
     /**
-    * Cookie configuration parameters. Set at least one configuration among FullURLCache, IgnoreCase, Header, Scheme, and Cookie.
+    * Cookie configuration parameters. Set at least one configuration for FullURLCache, IgnoreCase, Header, Scheme, or Cookie.
     */
     @SerializedName("Cookie")
     @Expose
     private CacheKeyCookie Cookie;
 
     /**
-     * Get Switch for retaining the complete query string. values:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li> note: at least one of fullurlcache, ignorecase, header, scheme, or cookie must be configured. this field and querystring.switch must be set simultaneously, but cannot both be on. 
-     * @return FullURLCache Switch for retaining the complete query string. values:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li> note: at least one of fullurlcache, ignorecase, header, scheme, or cookie must be configured. this field and querystring.switch must be set simultaneously, but cannot both be on.
+     * Get Switch to retain all query strings. Valid values:
+<li>`on`: Enable;</li>
+<li>off: disabled.</li>Note: At least one configuration must be set for FullURLCache, IgnoreCase, Header, Scheme, and Cookie. This field and QueryString.Switch must be set both at the same time, but they cannot both be on. 
+     * @return FullURLCache Switch to retain all query strings. Valid values:
+<li>`on`: Enable;</li>
+<li>off: disabled.</li>Note: At least one configuration must be set for FullURLCache, IgnoreCase, Header, Scheme, and Cookie. This field and QueryString.Switch must be set both at the same time, but they cannot both be on.
      */
     public String getFullURLCache() {
         return this.FullURLCache;
     }
 
     /**
-     * Set Switch for retaining the complete query string. values:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li> note: at least one of fullurlcache, ignorecase, header, scheme, or cookie must be configured. this field and querystring.switch must be set simultaneously, but cannot both be on.
-     * @param FullURLCache Switch for retaining the complete query string. values:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li> note: at least one of fullurlcache, ignorecase, header, scheme, or cookie must be configured. this field and querystring.switch must be set simultaneously, but cannot both be on.
+     * Set Switch to retain all query strings. Valid values:
+<li>`on`: Enable;</li>
+<li>off: disabled.</li>Note: At least one configuration must be set for FullURLCache, IgnoreCase, Header, Scheme, and Cookie. This field and QueryString.Switch must be set both at the same time, but they cannot both be on.
+     * @param FullURLCache Switch to retain all query strings. Valid values:
+<li>`on`: Enable;</li>
+<li>off: disabled.</li>Note: At least one configuration must be set for FullURLCache, IgnoreCase, Header, Scheme, and Cookie. This field and QueryString.Switch must be set both at the same time, but they cannot both be on.
      */
     public void setFullURLCache(String FullURLCache) {
         this.FullURLCache = FullURLCache;
     }
 
     /**
-     * Get Query string retention configuration parameter. This field and FullURLCache must be set both at the same time, but cannot both be on. 
-     * @return QueryString Query string retention configuration parameter. This field and FullURLCache must be set both at the same time, but cannot both be on.
+     * Get Query string reserved configuration parameter. This field and FullURLCache must be set simultaneously, but cannot both be on. 
+     * @return QueryString Query string reserved configuration parameter. This field and FullURLCache must be set simultaneously, but cannot both be on.
      */
     public CacheKeyQueryString getQueryString() {
         return this.QueryString;
     }
 
     /**
-     * Set Query string retention configuration parameter. This field and FullURLCache must be set both at the same time, but cannot both be on.
-     * @param QueryString Query string retention configuration parameter. This field and FullURLCache must be set both at the same time, but cannot both be on.
+     * Set Query string reserved configuration parameter. This field and FullURLCache must be set simultaneously, but cannot both be on.
+     * @param QueryString Query string reserved configuration parameter. This field and FullURLCache must be set simultaneously, but cannot both be on.
      */
     public void setQueryString(CacheKeyQueryString QueryString) {
         this.QueryString = QueryString;
     }
 
     /**
-     * Get Switch for ignoring case. values:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li> note: at least one of fullurlcache, ignorecase, header, scheme, or cookie must be configured. 
-     * @return IgnoreCase Switch for ignoring case. values:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li> note: at least one of fullurlcache, ignorecase, header, scheme, or cookie must be configured.
+     * Get Case-insensitive switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: disabled.</li>Note: Configure at least one of FullURLCache, IgnoreCase, Header, Scheme, and Cookie. 
+     * @return IgnoreCase Case-insensitive switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: disabled.</li>Note: Configure at least one of FullURLCache, IgnoreCase, Header, Scheme, and Cookie.
      */
     public String getIgnoreCase() {
         return this.IgnoreCase;
     }
 
     /**
-     * Set Switch for ignoring case. values:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li> note: at least one of fullurlcache, ignorecase, header, scheme, or cookie must be configured.
-     * @param IgnoreCase Switch for ignoring case. values:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li> note: at least one of fullurlcache, ignorecase, header, scheme, or cookie must be configured.
+     * Set Case-insensitive switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: disabled.</li>Note: Configure at least one of FullURLCache, IgnoreCase, Header, Scheme, and Cookie.
+     * @param IgnoreCase Case-insensitive switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: disabled.</li>Note: Configure at least one of FullURLCache, IgnoreCase, Header, Scheme, and Cookie.
      */
     public void setIgnoreCase(String IgnoreCase) {
         this.IgnoreCase = IgnoreCase;
     }
 
     /**
-     * Get HTTP request header configuration parameter. Set at least one configuration among FullURLCache, IgnoreCase, Header, Scheme, and Cookie. 
-     * @return Header HTTP request header configuration parameter. Set at least one configuration among FullURLCache, IgnoreCase, Header, Scheme, and Cookie.
+     * Get HTTP request header configuration parameters. Set at least one configuration for FullURLCache, IgnoreCase, Header, Scheme, or Cookie. 
+     * @return Header HTTP request header configuration parameters. Set at least one configuration for FullURLCache, IgnoreCase, Header, Scheme, or Cookie.
      */
     public CacheKeyHeader getHeader() {
         return this.Header;
     }
 
     /**
-     * Set HTTP request header configuration parameter. Set at least one configuration among FullURLCache, IgnoreCase, Header, Scheme, and Cookie.
-     * @param Header HTTP request header configuration parameter. Set at least one configuration among FullURLCache, IgnoreCase, Header, Scheme, and Cookie.
+     * Set HTTP request header configuration parameters. Set at least one configuration for FullURLCache, IgnoreCase, Header, Scheme, or Cookie.
+     * @param Header HTTP request header configuration parameters. Set at least one configuration for FullURLCache, IgnoreCase, Header, Scheme, or Cookie.
      */
     public void setHeader(CacheKeyHeader Header) {
         this.Header = Header;
     }
 
     /**
-     * Get Request protocol switch. valid values:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li> note: at least one of fullurlcache, ignorecase, header, scheme, or cookie must be configured. 
-     * @return Scheme Request protocol switch. valid values:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li> note: at least one of fullurlcache, ignorecase, header, scheme, or cookie must be configured.
+     * Get Request protocol switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: disabled.</li>Note: Configure at least one of FullURLCache, IgnoreCase, Header, Scheme, and Cookie. 
+     * @return Scheme Request protocol switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: disabled.</li>Note: Configure at least one of FullURLCache, IgnoreCase, Header, Scheme, and Cookie.
      */
     public String getScheme() {
         return this.Scheme;
     }
 
     /**
-     * Set Request protocol switch. valid values:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li> note: at least one of fullurlcache, ignorecase, header, scheme, or cookie must be configured.
-     * @param Scheme Request protocol switch. valid values:.
-<Li>`On`: enable;</li>
-.
-<Li>Off: disable.</li> note: at least one of fullurlcache, ignorecase, header, scheme, or cookie must be configured.
+     * Set Request protocol switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: disabled.</li>Note: Configure at least one of FullURLCache, IgnoreCase, Header, Scheme, and Cookie.
+     * @param Scheme Request protocol switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: disabled.</li>Note: Configure at least one of FullURLCache, IgnoreCase, Header, Scheme, and Cookie.
      */
     public void setScheme(String Scheme) {
         this.Scheme = Scheme;
     }
 
     /**
-     * Get Cookie configuration parameters. Set at least one configuration among FullURLCache, IgnoreCase, Header, Scheme, and Cookie. 
-     * @return Cookie Cookie configuration parameters. Set at least one configuration among FullURLCache, IgnoreCase, Header, Scheme, and Cookie.
+     * Get Cookie configuration parameters. Set at least one configuration for FullURLCache, IgnoreCase, Header, Scheme, or Cookie. 
+     * @return Cookie Cookie configuration parameters. Set at least one configuration for FullURLCache, IgnoreCase, Header, Scheme, or Cookie.
      */
     public CacheKeyCookie getCookie() {
         return this.Cookie;
     }
 
     /**
-     * Set Cookie configuration parameters. Set at least one configuration among FullURLCache, IgnoreCase, Header, Scheme, and Cookie.
-     * @param Cookie Cookie configuration parameters. Set at least one configuration among FullURLCache, IgnoreCase, Header, Scheme, and Cookie.
+     * Set Cookie configuration parameters. Set at least one configuration for FullURLCache, IgnoreCase, Header, Scheme, or Cookie.
+     * @param Cookie Cookie configuration parameters. Set at least one configuration for FullURLCache, IgnoreCase, Header, Scheme, or Cookie.
      */
     public void setCookie(CacheKeyCookie Cookie) {
         this.Cookie = Cookie;

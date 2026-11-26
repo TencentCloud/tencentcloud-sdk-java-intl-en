@@ -31,7 +31,7 @@ public class DescribeSecurityAPIResourceResponse extends AbstractModel {
     private Long TotalCount;
 
     /**
-    * API resource list.	
+    * List of API resources.	
     */
     @SerializedName("APIResources")
     @Expose
@@ -61,16 +61,16 @@ public class DescribeSecurityAPIResourceResponse extends AbstractModel {
     }
 
     /**
-     * Get API resource list.	 
-     * @return APIResources API resource list.	
+     * Get List of API resources.	 
+     * @return APIResources List of API resources.	
      */
     public APIResource [] getAPIResources() {
         return this.APIResources;
     }
 
     /**
-     * Set API resource list.	
-     * @param APIResources API resource list.	
+     * Set List of API resources.	
+     * @param APIResources List of API resources.	
      */
     public void setAPIResources(APIResource [] APIResources) {
         this.APIResources = APIResources;

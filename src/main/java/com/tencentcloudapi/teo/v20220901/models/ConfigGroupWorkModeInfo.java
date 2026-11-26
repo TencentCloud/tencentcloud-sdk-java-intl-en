@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class ConfigGroupWorkModeInfo extends AbstractModel {
 
     /**
-    * Configuration group type. Options are as follows:<li>l7_acceleration: layer-7 acceleration configuration group;</li><li>edge_functions: edge function configuration group.</li><li>web_security: web protection configuration group.</li>
+    * Configuration group type. Options are as follows: <li>l7_acceleration: layer-7 acceleration configuration group;</li><li>edge_functions: edge function configuration group.</li><li>web_security: web protection configuration group.</li>
     */
     @SerializedName("ConfigGroupType")
     @Expose
     private String ConfigGroupType;
 
     /**
-    * Working mode. options are as follows: <li>immediate_effect: immediate effect mode;</li><li>version_control: version management mode.</li>.
+    * Working mode. Options are as follows: <li>immediate_effect: immediate effect mode;</li><li>version_control: version management mode.</li>
     */
     @SerializedName("WorkMode")
     @Expose
     private String WorkMode;
 
     /**
-     * Get Configuration group type. Options are as follows:<li>l7_acceleration: layer-7 acceleration configuration group;</li><li>edge_functions: edge function configuration group.</li><li>web_security: web protection configuration group.</li> 
-     * @return ConfigGroupType Configuration group type. Options are as follows:<li>l7_acceleration: layer-7 acceleration configuration group;</li><li>edge_functions: edge function configuration group.</li><li>web_security: web protection configuration group.</li>
+     * Get Configuration group type. Options are as follows: <li>l7_acceleration: layer-7 acceleration configuration group;</li><li>edge_functions: edge function configuration group.</li><li>web_security: web protection configuration group.</li> 
+     * @return ConfigGroupType Configuration group type. Options are as follows: <li>l7_acceleration: layer-7 acceleration configuration group;</li><li>edge_functions: edge function configuration group.</li><li>web_security: web protection configuration group.</li>
      */
     public String getConfigGroupType() {
         return this.ConfigGroupType;
     }
 
     /**
-     * Set Configuration group type. Options are as follows:<li>l7_acceleration: layer-7 acceleration configuration group;</li><li>edge_functions: edge function configuration group.</li><li>web_security: web protection configuration group.</li>
-     * @param ConfigGroupType Configuration group type. Options are as follows:<li>l7_acceleration: layer-7 acceleration configuration group;</li><li>edge_functions: edge function configuration group.</li><li>web_security: web protection configuration group.</li>
+     * Set Configuration group type. Options are as follows: <li>l7_acceleration: layer-7 acceleration configuration group;</li><li>edge_functions: edge function configuration group.</li><li>web_security: web protection configuration group.</li>
+     * @param ConfigGroupType Configuration group type. Options are as follows: <li>l7_acceleration: layer-7 acceleration configuration group;</li><li>edge_functions: edge function configuration group.</li><li>web_security: web protection configuration group.</li>
      */
     public void setConfigGroupType(String ConfigGroupType) {
         this.ConfigGroupType = ConfigGroupType;
     }
 
     /**
-     * Get Working mode. options are as follows: <li>immediate_effect: immediate effect mode;</li><li>version_control: version management mode.</li>. 
-     * @return WorkMode Working mode. options are as follows: <li>immediate_effect: immediate effect mode;</li><li>version_control: version management mode.</li>.
+     * Get Working mode. Options are as follows: <li>immediate_effect: immediate effect mode;</li><li>version_control: version management mode.</li> 
+     * @return WorkMode Working mode. Options are as follows: <li>immediate_effect: immediate effect mode;</li><li>version_control: version management mode.</li>
      */
     public String getWorkMode() {
         return this.WorkMode;
     }
 
     /**
-     * Set Working mode. options are as follows: <li>immediate_effect: immediate effect mode;</li><li>version_control: version management mode.</li>.
-     * @param WorkMode Working mode. options are as follows: <li>immediate_effect: immediate effect mode;</li><li>version_control: version management mode.</li>.
+     * Set Working mode. Options are as follows: <li>immediate_effect: immediate effect mode;</li><li>version_control: version management mode.</li>
+     * @param WorkMode Working mode. Options are as follows: <li>immediate_effect: immediate effect mode;</li><li>version_control: version management mode.</li>
      */
     public void setWorkMode(String WorkMode) {
         this.WorkMode = WorkMode;

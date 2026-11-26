@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class AudioTemplateInfo extends AbstractModel {
 
     /**
-    * Encoding format for audio streams. optional values:.
+    * Audio stream encoding format. Optional values:
 <li>libfdk_aac.</li>
     */
     @SerializedName("Codec")
@@ -32,16 +32,16 @@ public class AudioTemplateInfo extends AbstractModel {
     private String Codec;
 
     /**
-    * Audio channel quantity. valid values: <li>2: dual-channel.</li> default value: 2.
+    * Audio channel quantity. Available values: <li>2: dual-channel.</li>Default value: 2.
     */
     @SerializedName("AudioChannel")
     @Expose
     private Long AudioChannel;
 
     /**
-     * Get Encoding format for audio streams. optional values:.
+     * Get Audio stream encoding format. Optional values:
 <li>libfdk_aac.</li> 
-     * @return Codec Encoding format for audio streams. optional values:.
+     * @return Codec Audio stream encoding format. Optional values:
 <li>libfdk_aac.</li>
      */
     public String getCodec() {
@@ -49,9 +49,9 @@ public class AudioTemplateInfo extends AbstractModel {
     }
 
     /**
-     * Set Encoding format for audio streams. optional values:.
+     * Set Audio stream encoding format. Optional values:
 <li>libfdk_aac.</li>
-     * @param Codec Encoding format for audio streams. optional values:.
+     * @param Codec Audio stream encoding format. Optional values:
 <li>libfdk_aac.</li>
      */
     public void setCodec(String Codec) {
@@ -59,16 +59,16 @@ public class AudioTemplateInfo extends AbstractModel {
     }
 
     /**
-     * Get Audio channel quantity. valid values: <li>2: dual-channel.</li> default value: 2. 
-     * @return AudioChannel Audio channel quantity. valid values: <li>2: dual-channel.</li> default value: 2.
+     * Get Audio channel quantity. Available values: <li>2: dual-channel.</li>Default value: 2. 
+     * @return AudioChannel Audio channel quantity. Available values: <li>2: dual-channel.</li>Default value: 2.
      */
     public Long getAudioChannel() {
         return this.AudioChannel;
     }
 
     /**
-     * Set Audio channel quantity. valid values: <li>2: dual-channel.</li> default value: 2.
-     * @param AudioChannel Audio channel quantity. valid values: <li>2: dual-channel.</li> default value: 2.
+     * Set Audio channel quantity. Available values: <li>2: dual-channel.</li>Default value: 2.
+     * @param AudioChannel Audio channel quantity. Available values: <li>2: dual-channel.</li>Default value: 2.
      */
     public void setAudioChannel(Long AudioChannel) {
         this.AudioChannel = AudioChannel;

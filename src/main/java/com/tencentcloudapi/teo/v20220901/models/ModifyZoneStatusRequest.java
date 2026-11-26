@@ -24,56 +24,56 @@ import java.util.HashMap;
 public class ModifyZoneStatusRequest extends AbstractModel {
 
     /**
-    * The site ID.
+    * Zone ID.
     */
     @SerializedName("ZoneId")
     @Expose
     private String ZoneId;
 
     /**
-    * The site status. Values:
-<li>`false`: Disabled</li>
-<li>`true`: Enabled</li>
+    * Site status. Valid values:
+<li> false: enable site;</li>
+<li> true: Disable the site.</li>
     */
     @SerializedName("Paused")
     @Expose
     private Boolean Paused;
 
     /**
-     * Get The site ID. 
-     * @return ZoneId The site ID.
+     * Get Zone ID. 
+     * @return ZoneId Zone ID.
      */
     public String getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set The site ID.
-     * @param ZoneId The site ID.
+     * Set Zone ID.
+     * @param ZoneId Zone ID.
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get The site status. Values:
-<li>`false`: Disabled</li>
-<li>`true`: Enabled</li> 
-     * @return Paused The site status. Values:
-<li>`false`: Disabled</li>
-<li>`true`: Enabled</li>
+     * Get Site status. Valid values:
+<li> false: enable site;</li>
+<li> true: Disable the site.</li> 
+     * @return Paused Site status. Valid values:
+<li> false: enable site;</li>
+<li> true: Disable the site.</li>
      */
     public Boolean getPaused() {
         return this.Paused;
     }
 
     /**
-     * Set The site status. Values:
-<li>`false`: Disabled</li>
-<li>`true`: Enabled</li>
-     * @param Paused The site status. Values:
-<li>`false`: Disabled</li>
-<li>`true`: Enabled</li>
+     * Set Site status. Valid values:
+<li> false: enable site;</li>
+<li> true: Disable the site.</li>
+     * @param Paused Site status. Valid values:
+<li> false: enable site;</li>
+<li> true: Disable the site.</li>
      */
     public void setPaused(Boolean Paused) {
         this.Paused = Paused;

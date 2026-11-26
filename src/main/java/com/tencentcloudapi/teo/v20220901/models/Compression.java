@@ -24,66 +24,66 @@ import java.util.HashMap;
 public class Compression extends AbstractModel {
 
     /**
-    * Whether to enable smart compression. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+    * Intelligent compression configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * Supported compression algorithm list. valid values:.
-<Li>Brotli: specifies the brotli algorithm.</li>.
-<Li>Gzip: specifies the gzip algorithm.</li>.
+    * List of supported compression algorithms. Valid values:
+<li>brotli: brotli algorithm;</li>
+<li>gzip: gzip algorithm.</li>
     */
     @SerializedName("Algorithms")
     @Expose
     private String [] Algorithms;
 
     /**
-     * Get Whether to enable smart compression. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li> 
-     * @return Switch Whether to enable smart compression. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+     * Get Intelligent compression configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li> 
+     * @return Switch Intelligent compression configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set Whether to enable smart compression. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-     * @param Switch Whether to enable smart compression. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+     * Set Intelligent compression configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+     * @param Switch Intelligent compression configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get Supported compression algorithm list. valid values:.
-<Li>Brotli: specifies the brotli algorithm.</li>.
-<Li>Gzip: specifies the gzip algorithm.</li>. 
-     * @return Algorithms Supported compression algorithm list. valid values:.
-<Li>Brotli: specifies the brotli algorithm.</li>.
-<Li>Gzip: specifies the gzip algorithm.</li>.
+     * Get List of supported compression algorithms. Valid values:
+<li>brotli: brotli algorithm;</li>
+<li>gzip: gzip algorithm.</li> 
+     * @return Algorithms List of supported compression algorithms. Valid values:
+<li>brotli: brotli algorithm;</li>
+<li>gzip: gzip algorithm.</li>
      */
     public String [] getAlgorithms() {
         return this.Algorithms;
     }
 
     /**
-     * Set Supported compression algorithm list. valid values:.
-<Li>Brotli: specifies the brotli algorithm.</li>.
-<Li>Gzip: specifies the gzip algorithm.</li>.
-     * @param Algorithms Supported compression algorithm list. valid values:.
-<Li>Brotli: specifies the brotli algorithm.</li>.
-<Li>Gzip: specifies the gzip algorithm.</li>.
+     * Set List of supported compression algorithms. Valid values:
+<li>brotli: brotli algorithm;</li>
+<li>gzip: gzip algorithm.</li>
+     * @param Algorithms List of supported compression algorithms. Valid values:
+<li>brotli: brotli algorithm;</li>
+<li>gzip: gzip algorithm.</li>
      */
     public void setAlgorithms(String [] Algorithms) {
         this.Algorithms = Algorithms;

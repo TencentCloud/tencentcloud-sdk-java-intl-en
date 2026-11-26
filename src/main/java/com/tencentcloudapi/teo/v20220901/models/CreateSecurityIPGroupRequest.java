@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateSecurityIPGroupRequest extends AbstractModel {
 
     /**
-    * Site ID.
+    * Site Id.
     */
     @SerializedName("ZoneId")
     @Expose
@@ -38,16 +38,16 @@ public class CreateSecurityIPGroupRequest extends AbstractModel {
     private IPGroup IPGroup;
 
     /**
-     * Get Site ID. 
-     * @return ZoneId Site ID.
+     * Get Site Id. 
+     * @return ZoneId Site Id.
      */
     public String getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set Site ID.
-     * @param ZoneId Site ID.
+     * Set Site Id.
+     * @param ZoneId Site Id.
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;

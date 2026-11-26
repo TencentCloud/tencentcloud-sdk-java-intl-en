@@ -24,9 +24,8 @@ import java.util.HashMap;
 public class IntelligenceRule extends AbstractModel {
 
     /**
-    * Switch. valid values:.
+    * Switch. Valid values:
 <li>`on`: Enable;</li>
-
 <li>off: Disable.</li>
     */
     @SerializedName("Switch")
@@ -34,20 +33,18 @@ public class IntelligenceRule extends AbstractModel {
     private String Switch;
 
     /**
-    * Specifies the rule detail.
+    * Rule details.
     */
     @SerializedName("IntelligenceRuleItems")
     @Expose
     private IntelligenceRuleItem [] IntelligenceRuleItems;
 
     /**
-     * Get Switch. valid values:.
+     * Get Switch. Valid values:
 <li>`on`: Enable;</li>
-
 <li>off: Disable.</li> 
-     * @return Switch Switch. valid values:.
+     * @return Switch Switch. Valid values:
 <li>`on`: Enable;</li>
-
 <li>off: Disable.</li>
      */
     public String getSwitch() {
@@ -55,13 +52,11 @@ public class IntelligenceRule extends AbstractModel {
     }
 
     /**
-     * Set Switch. valid values:.
+     * Set Switch. Valid values:
 <li>`on`: Enable;</li>
-
 <li>off: Disable.</li>
-     * @param Switch Switch. valid values:.
+     * @param Switch Switch. Valid values:
 <li>`on`: Enable;</li>
-
 <li>off: Disable.</li>
      */
     public void setSwitch(String Switch) {
@@ -69,16 +64,16 @@ public class IntelligenceRule extends AbstractModel {
     }
 
     /**
-     * Get Specifies the rule detail. 
-     * @return IntelligenceRuleItems Specifies the rule detail.
+     * Get Rule details. 
+     * @return IntelligenceRuleItems Rule details.
      */
     public IntelligenceRuleItem [] getIntelligenceRuleItems() {
         return this.IntelligenceRuleItems;
     }
 
     /**
-     * Set Specifies the rule detail.
-     * @param IntelligenceRuleItems Specifies the rule detail.
+     * Set Rule details.
+     * @param IntelligenceRuleItems Rule details.
      */
     public void setIntelligenceRuleItems(IntelligenceRuleItem [] IntelligenceRuleItems) {
         this.IntelligenceRuleItems = IntelligenceRuleItems;

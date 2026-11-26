@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class DeleteL7AccRulesRequest extends AbstractModel {
 
     /**
-    * Zone id.
+    * Zone ID.
     */
     @SerializedName("ZoneId")
     @Expose
     private String ZoneId;
 
     /**
-    * List of rule ids to be deleted. you can obtain ruleid through describel7accrules.
+    * List of rule IDs to delete. You can get the rule ID through DescribeL7AccRules.
     */
     @SerializedName("RuleIds")
     @Expose
     private String [] RuleIds;
 
     /**
-     * Get Zone id. 
-     * @return ZoneId Zone id.
+     * Get Zone ID. 
+     * @return ZoneId Zone ID.
      */
     public String getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set Zone id.
-     * @param ZoneId Zone id.
+     * Set Zone ID.
+     * @param ZoneId Zone ID.
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get List of rule ids to be deleted. you can obtain ruleid through describel7accrules. 
-     * @return RuleIds List of rule ids to be deleted. you can obtain ruleid through describel7accrules.
+     * Get List of rule IDs to delete. You can get the rule ID through DescribeL7AccRules. 
+     * @return RuleIds List of rule IDs to delete. You can get the rule ID through DescribeL7AccRules.
      */
     public String [] getRuleIds() {
         return this.RuleIds;
     }
 
     /**
-     * Set List of rule ids to be deleted. you can obtain ruleid through describel7accrules.
-     * @param RuleIds List of rule ids to be deleted. you can obtain ruleid through describel7accrules.
+     * Set List of rule IDs to delete. You can get the rule ID through DescribeL7AccRules.
+     * @param RuleIds List of rule IDs to delete. You can get the rule ID through DescribeL7AccRules.
      */
     public void setRuleIds(String [] RuleIds) {
         this.RuleIds = RuleIds;

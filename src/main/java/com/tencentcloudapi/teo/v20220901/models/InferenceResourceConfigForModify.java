@@ -24,95 +24,118 @@ import java.util.HashMap;
 public class InferenceResourceConfigForModify extends AbstractModel {
 
     /**
-    * Scaling way. Valid values: <li>Auto: Automatically adjust instance count based on request volume;</li><li>Manual: Fixed number of resource instances via manual setting.</li>
+    * <p>Scaling method. Valid values: <li>Auto: automatically adjust the number of instances based on request volume;</li><li>Manual: manually set a fixed number of instances.</li></p>
     */
     @SerializedName("ScalingMode")
     @Expose
     private String ScalingMode;
 
     /**
-    * Inference service auto scaling configuration. Required when ScalingMode is Auto.
+    * <p>Automatic scaling configuration for the inference service. Required when ScalingMode is Auto.</p>
     */
     @SerializedName("AutoScalingConfig")
     @Expose
     private InferenceAutoScalingConfig AutoScalingConfig;
 
     /**
-    * Manual setting of inference service instance configuration. Required when ScalingMode is Manual.
+    * <p>Inference service manual setting instance configuration. Required when ScalingMode is Manual.</p>
     */
     @SerializedName("ManualInstanceConfig")
     @Expose
     private InferenceManualInstanceConfig ManualInstanceConfig;
 
     /**
-    * Concurrency of a single instance. Default value is 1.
+    * <p>Concurrency of a single instance. Default value: 1.</p>
     */
     @SerializedName("Concurrency")
     @Expose
     private Long Concurrency;
 
     /**
-     * Get Scaling way. Valid values: <li>Auto: Automatically adjust instance count based on request volume;</li><li>Manual: Fixed number of resource instances via manual setting.</li> 
-     * @return ScalingMode Scaling way. Valid values: <li>Auto: Automatically adjust instance count based on request volume;</li><li>Manual: Fixed number of resource instances via manual setting.</li>
+    * <p>Hardware resource configuration of the inference service.</p>
+    */
+    @SerializedName("HardwareConfig")
+    @Expose
+    private InferenceHardwareConfigForModify HardwareConfig;
+
+    /**
+     * Get <p>Scaling method. Valid values: <li>Auto: automatically adjust the number of instances based on request volume;</li><li>Manual: manually set a fixed number of instances.</li></p> 
+     * @return ScalingMode <p>Scaling method. Valid values: <li>Auto: automatically adjust the number of instances based on request volume;</li><li>Manual: manually set a fixed number of instances.</li></p>
      */
     public String getScalingMode() {
         return this.ScalingMode;
     }
 
     /**
-     * Set Scaling way. Valid values: <li>Auto: Automatically adjust instance count based on request volume;</li><li>Manual: Fixed number of resource instances via manual setting.</li>
-     * @param ScalingMode Scaling way. Valid values: <li>Auto: Automatically adjust instance count based on request volume;</li><li>Manual: Fixed number of resource instances via manual setting.</li>
+     * Set <p>Scaling method. Valid values: <li>Auto: automatically adjust the number of instances based on request volume;</li><li>Manual: manually set a fixed number of instances.</li></p>
+     * @param ScalingMode <p>Scaling method. Valid values: <li>Auto: automatically adjust the number of instances based on request volume;</li><li>Manual: manually set a fixed number of instances.</li></p>
      */
     public void setScalingMode(String ScalingMode) {
         this.ScalingMode = ScalingMode;
     }
 
     /**
-     * Get Inference service auto scaling configuration. Required when ScalingMode is Auto. 
-     * @return AutoScalingConfig Inference service auto scaling configuration. Required when ScalingMode is Auto.
+     * Get <p>Automatic scaling configuration for the inference service. Required when ScalingMode is Auto.</p> 
+     * @return AutoScalingConfig <p>Automatic scaling configuration for the inference service. Required when ScalingMode is Auto.</p>
      */
     public InferenceAutoScalingConfig getAutoScalingConfig() {
         return this.AutoScalingConfig;
     }
 
     /**
-     * Set Inference service auto scaling configuration. Required when ScalingMode is Auto.
-     * @param AutoScalingConfig Inference service auto scaling configuration. Required when ScalingMode is Auto.
+     * Set <p>Automatic scaling configuration for the inference service. Required when ScalingMode is Auto.</p>
+     * @param AutoScalingConfig <p>Automatic scaling configuration for the inference service. Required when ScalingMode is Auto.</p>
      */
     public void setAutoScalingConfig(InferenceAutoScalingConfig AutoScalingConfig) {
         this.AutoScalingConfig = AutoScalingConfig;
     }
 
     /**
-     * Get Manual setting of inference service instance configuration. Required when ScalingMode is Manual. 
-     * @return ManualInstanceConfig Manual setting of inference service instance configuration. Required when ScalingMode is Manual.
+     * Get <p>Inference service manual setting instance configuration. Required when ScalingMode is Manual.</p> 
+     * @return ManualInstanceConfig <p>Inference service manual setting instance configuration. Required when ScalingMode is Manual.</p>
      */
     public InferenceManualInstanceConfig getManualInstanceConfig() {
         return this.ManualInstanceConfig;
     }
 
     /**
-     * Set Manual setting of inference service instance configuration. Required when ScalingMode is Manual.
-     * @param ManualInstanceConfig Manual setting of inference service instance configuration. Required when ScalingMode is Manual.
+     * Set <p>Inference service manual setting instance configuration. Required when ScalingMode is Manual.</p>
+     * @param ManualInstanceConfig <p>Inference service manual setting instance configuration. Required when ScalingMode is Manual.</p>
      */
     public void setManualInstanceConfig(InferenceManualInstanceConfig ManualInstanceConfig) {
         this.ManualInstanceConfig = ManualInstanceConfig;
     }
 
     /**
-     * Get Concurrency of a single instance. Default value is 1. 
-     * @return Concurrency Concurrency of a single instance. Default value is 1.
+     * Get <p>Concurrency of a single instance. Default value: 1.</p> 
+     * @return Concurrency <p>Concurrency of a single instance. Default value: 1.</p>
      */
     public Long getConcurrency() {
         return this.Concurrency;
     }
 
     /**
-     * Set Concurrency of a single instance. Default value is 1.
-     * @param Concurrency Concurrency of a single instance. Default value is 1.
+     * Set <p>Concurrency of a single instance. Default value: 1.</p>
+     * @param Concurrency <p>Concurrency of a single instance. Default value: 1.</p>
      */
     public void setConcurrency(Long Concurrency) {
         this.Concurrency = Concurrency;
+    }
+
+    /**
+     * Get <p>Hardware resource configuration of the inference service.</p> 
+     * @return HardwareConfig <p>Hardware resource configuration of the inference service.</p>
+     */
+    public InferenceHardwareConfigForModify getHardwareConfig() {
+        return this.HardwareConfig;
+    }
+
+    /**
+     * Set <p>Hardware resource configuration of the inference service.</p>
+     * @param HardwareConfig <p>Hardware resource configuration of the inference service.</p>
+     */
+    public void setHardwareConfig(InferenceHardwareConfigForModify HardwareConfig) {
+        this.HardwareConfig = HardwareConfig;
     }
 
     public InferenceResourceConfigForModify() {
@@ -135,6 +158,9 @@ public class InferenceResourceConfigForModify extends AbstractModel {
         if (source.Concurrency != null) {
             this.Concurrency = new Long(source.Concurrency);
         }
+        if (source.HardwareConfig != null) {
+            this.HardwareConfig = new InferenceHardwareConfigForModify(source.HardwareConfig);
+        }
     }
 
 
@@ -146,6 +172,7 @@ public class InferenceResourceConfigForModify extends AbstractModel {
         this.setParamObj(map, prefix + "AutoScalingConfig.", this.AutoScalingConfig);
         this.setParamObj(map, prefix + "ManualInstanceConfig.", this.ManualInstanceConfig);
         this.setParamSimple(map, prefix + "Concurrency", this.Concurrency);
+        this.setParamObj(map, prefix + "HardwareConfig.", this.HardwareConfig);
 
     }
 }

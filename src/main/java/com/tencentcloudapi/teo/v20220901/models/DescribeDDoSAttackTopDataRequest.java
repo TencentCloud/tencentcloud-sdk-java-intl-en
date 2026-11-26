@@ -24,300 +24,300 @@ import java.util.HashMap;
 public class DescribeDDoSAttackTopDataRequest extends AbstractModel {
 
     /**
-    * The start time.
+    * Start time.
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * End time. the query time range (`EndTime` - `StartTime`) must be less than or equal to 31 days.
+    * End time. The query time range (`EndTime` - `StartTime`) must be less than or equal to 31 days.
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-    * The statistical metric. Values:
-<li>`ddos_attackFlux_protocol`: Rank protocols by the attack traffic.</li>
-<li>`ddos_attackPackageNum_protocol`: Rank protocols by the number of attack packets.</li>
-<li>`ddos_attackNum_attackType`: Rank attack types by the number of attacks.</li>
-<li>`ddos_attackNum_sregion`: Rank attacker regions by the number of attacks.</li>
-<li>`ddos_attackFlux_sip`: Rank attacker IPs by the number of attacks.</li>
-<li>`ddos_attackFlux_sregion`: Rank attacker regions by the number of attacks.</li>
+    * Queried statistical metric. Valid values:
+<li>ddos_attackFlux_protocol: ranking of attack traffic by protocol;</li>
+<li>ddos_attackPackageNum_protocol: ranking by attack packet volume of each protocol;</li>
+<li>ddos_attackNum_attackType: Ranking by number of attacks for each attack type;</li>
+<li>ddos_attackNum_sregion: ranking by number of attacks by attack source region;</li>
+<li>ddos_attackFlux_sip: ranking by number of attacks from attack source IPs;</li>
+<li>ddos_attackFlux_sregion: ranking of attackNum by attack source region.</li>
     */
     @SerializedName("MetricName")
     @Expose
     private String MetricName;
 
     /**
-    * Site ID set. this parameter will change from option to required after may 30, 2024. for details, see the notice: [tencent cloud EdgeOne API change notification](https://www.tencentcloud.com/document/product/1552/104902?from_cn_redirect=1). a maximum of 100 site ids can be imported. use `*` to query all site data under the tencent cloud root account. querying account-level data requires all resource permissions for all sites in this interface.
+    * Site ID set. This parameter will change from optional to required after May 30, 2024. For details, see the announcement: [Tencent Cloud EdgeOne Cloud API Change Notification](https://www.tencentcloud.com/document/product/1552/104902?from_cn_redirect=1). Import up to 100 site IDs. To query data of all sites under the Tencent Cloud root account, use `*` instead. To query account-level data, you need permission for all site resources of this interface.
     */
     @SerializedName("ZoneIds")
     @Expose
     private String [] ZoneIds;
 
     /**
-    * The list of DDoS policy IDs to be specified. All policies will be selected if this field is not specified.
+    * Set of DDoS policy group IDs. If not specified, all policy IDs are selected by default.
     */
     @SerializedName("PolicyIds")
     @Expose
     private Long [] PolicyIds;
 
     /**
-    * The attack type. Values:
-<li>`flood`: Flood;</li>
-<li>`icmpFlood`: ICMP flood;</li>
-<li>`all`: All attack types.</li>This field will be set to the default value `all` if not specified.
+    * Attack type. Valid values:
+<li>flood: flood attack;</li>
+<li>icmpFlood: ICMP flood attack;</li>
+<li>all: all attack types.</li>If this parameter is not input, the default value `all` is used, indicating a query for all attack types.
     */
     @SerializedName("AttackType")
     @Expose
     private String AttackType;
 
     /**
-    * The protocol type. Values:
-<li>`tcp`: TCP protocol;</li>
-<li>`udp`: UDP protocol;</li>
-<li>`all`: All protocol types.</li>This field will be set to the default value `all` if not specified.
+    * Protocol type. Valid values:
+<li>tcp: TCP protocol;</li>
+<li>udp: UDP protocol;</li>
+<li>all: all protocol types.</li>If this parameter is not input, the default value `all` is used, indicating a query for all protocols.
     */
     @SerializedName("ProtocolType")
     @Expose
     private String ProtocolType;
 
     /**
-    * The port number.
+    * Port number.
     */
     @SerializedName("Port")
     @Expose
     private Long Port;
 
     /**
-    * Queries the top n rows of data. Top 10 rows of data will be queried if this field is not specified.
+    * Indicates the top N data to be queried. If this parameter is not input, the default value is 10, indicating querying the top 10 data.
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * Data storage region. Values:
-<li>`overseas`: Global (outside the Chinese mainland);</li>
-<li>`mainland`: Chinese mainland.</li>If this field is not specified, the data storage region will be determined based on the user's location.
+    * Data ownership region. Valid values:
+<li>overseas: global (excluding the Chinese mainland) data;</li>
+<li>mainland: Chinese mainland data.</li>If not specified, the region will be smart selected according to the user's location.
     */
     @SerializedName("Area")
     @Expose
     private String Area;
 
     /**
-     * Get The start time. 
-     * @return StartTime The start time.
+     * Get Start time. 
+     * @return StartTime Start time.
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set The start time.
-     * @param StartTime The start time.
+     * Set Start time.
+     * @param StartTime Start time.
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get End time. the query time range (`EndTime` - `StartTime`) must be less than or equal to 31 days. 
-     * @return EndTime End time. the query time range (`EndTime` - `StartTime`) must be less than or equal to 31 days.
+     * Get End time. The query time range (`EndTime` - `StartTime`) must be less than or equal to 31 days. 
+     * @return EndTime End time. The query time range (`EndTime` - `StartTime`) must be less than or equal to 31 days.
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set End time. the query time range (`EndTime` - `StartTime`) must be less than or equal to 31 days.
-     * @param EndTime End time. the query time range (`EndTime` - `StartTime`) must be less than or equal to 31 days.
+     * Set End time. The query time range (`EndTime` - `StartTime`) must be less than or equal to 31 days.
+     * @param EndTime End time. The query time range (`EndTime` - `StartTime`) must be less than or equal to 31 days.
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get The statistical metric. Values:
-<li>`ddos_attackFlux_protocol`: Rank protocols by the attack traffic.</li>
-<li>`ddos_attackPackageNum_protocol`: Rank protocols by the number of attack packets.</li>
-<li>`ddos_attackNum_attackType`: Rank attack types by the number of attacks.</li>
-<li>`ddos_attackNum_sregion`: Rank attacker regions by the number of attacks.</li>
-<li>`ddos_attackFlux_sip`: Rank attacker IPs by the number of attacks.</li>
-<li>`ddos_attackFlux_sregion`: Rank attacker regions by the number of attacks.</li> 
-     * @return MetricName The statistical metric. Values:
-<li>`ddos_attackFlux_protocol`: Rank protocols by the attack traffic.</li>
-<li>`ddos_attackPackageNum_protocol`: Rank protocols by the number of attack packets.</li>
-<li>`ddos_attackNum_attackType`: Rank attack types by the number of attacks.</li>
-<li>`ddos_attackNum_sregion`: Rank attacker regions by the number of attacks.</li>
-<li>`ddos_attackFlux_sip`: Rank attacker IPs by the number of attacks.</li>
-<li>`ddos_attackFlux_sregion`: Rank attacker regions by the number of attacks.</li>
+     * Get Queried statistical metric. Valid values:
+<li>ddos_attackFlux_protocol: ranking of attack traffic by protocol;</li>
+<li>ddos_attackPackageNum_protocol: ranking by attack packet volume of each protocol;</li>
+<li>ddos_attackNum_attackType: Ranking by number of attacks for each attack type;</li>
+<li>ddos_attackNum_sregion: ranking by number of attacks by attack source region;</li>
+<li>ddos_attackFlux_sip: ranking by number of attacks from attack source IPs;</li>
+<li>ddos_attackFlux_sregion: ranking of attackNum by attack source region.</li> 
+     * @return MetricName Queried statistical metric. Valid values:
+<li>ddos_attackFlux_protocol: ranking of attack traffic by protocol;</li>
+<li>ddos_attackPackageNum_protocol: ranking by attack packet volume of each protocol;</li>
+<li>ddos_attackNum_attackType: Ranking by number of attacks for each attack type;</li>
+<li>ddos_attackNum_sregion: ranking by number of attacks by attack source region;</li>
+<li>ddos_attackFlux_sip: ranking by number of attacks from attack source IPs;</li>
+<li>ddos_attackFlux_sregion: ranking of attackNum by attack source region.</li>
      */
     public String getMetricName() {
         return this.MetricName;
     }
 
     /**
-     * Set The statistical metric. Values:
-<li>`ddos_attackFlux_protocol`: Rank protocols by the attack traffic.</li>
-<li>`ddos_attackPackageNum_protocol`: Rank protocols by the number of attack packets.</li>
-<li>`ddos_attackNum_attackType`: Rank attack types by the number of attacks.</li>
-<li>`ddos_attackNum_sregion`: Rank attacker regions by the number of attacks.</li>
-<li>`ddos_attackFlux_sip`: Rank attacker IPs by the number of attacks.</li>
-<li>`ddos_attackFlux_sregion`: Rank attacker regions by the number of attacks.</li>
-     * @param MetricName The statistical metric. Values:
-<li>`ddos_attackFlux_protocol`: Rank protocols by the attack traffic.</li>
-<li>`ddos_attackPackageNum_protocol`: Rank protocols by the number of attack packets.</li>
-<li>`ddos_attackNum_attackType`: Rank attack types by the number of attacks.</li>
-<li>`ddos_attackNum_sregion`: Rank attacker regions by the number of attacks.</li>
-<li>`ddos_attackFlux_sip`: Rank attacker IPs by the number of attacks.</li>
-<li>`ddos_attackFlux_sregion`: Rank attacker regions by the number of attacks.</li>
+     * Set Queried statistical metric. Valid values:
+<li>ddos_attackFlux_protocol: ranking of attack traffic by protocol;</li>
+<li>ddos_attackPackageNum_protocol: ranking by attack packet volume of each protocol;</li>
+<li>ddos_attackNum_attackType: Ranking by number of attacks for each attack type;</li>
+<li>ddos_attackNum_sregion: ranking by number of attacks by attack source region;</li>
+<li>ddos_attackFlux_sip: ranking by number of attacks from attack source IPs;</li>
+<li>ddos_attackFlux_sregion: ranking of attackNum by attack source region.</li>
+     * @param MetricName Queried statistical metric. Valid values:
+<li>ddos_attackFlux_protocol: ranking of attack traffic by protocol;</li>
+<li>ddos_attackPackageNum_protocol: ranking by attack packet volume of each protocol;</li>
+<li>ddos_attackNum_attackType: Ranking by number of attacks for each attack type;</li>
+<li>ddos_attackNum_sregion: ranking by number of attacks by attack source region;</li>
+<li>ddos_attackFlux_sip: ranking by number of attacks from attack source IPs;</li>
+<li>ddos_attackFlux_sregion: ranking of attackNum by attack source region.</li>
      */
     public void setMetricName(String MetricName) {
         this.MetricName = MetricName;
     }
 
     /**
-     * Get Site ID set. this parameter will change from option to required after may 30, 2024. for details, see the notice: [tencent cloud EdgeOne API change notification](https://www.tencentcloud.com/document/product/1552/104902?from_cn_redirect=1). a maximum of 100 site ids can be imported. use `*` to query all site data under the tencent cloud root account. querying account-level data requires all resource permissions for all sites in this interface. 
-     * @return ZoneIds Site ID set. this parameter will change from option to required after may 30, 2024. for details, see the notice: [tencent cloud EdgeOne API change notification](https://www.tencentcloud.com/document/product/1552/104902?from_cn_redirect=1). a maximum of 100 site ids can be imported. use `*` to query all site data under the tencent cloud root account. querying account-level data requires all resource permissions for all sites in this interface.
+     * Get Site ID set. This parameter will change from optional to required after May 30, 2024. For details, see the announcement: [Tencent Cloud EdgeOne Cloud API Change Notification](https://www.tencentcloud.com/document/product/1552/104902?from_cn_redirect=1). Import up to 100 site IDs. To query data of all sites under the Tencent Cloud root account, use `*` instead. To query account-level data, you need permission for all site resources of this interface. 
+     * @return ZoneIds Site ID set. This parameter will change from optional to required after May 30, 2024. For details, see the announcement: [Tencent Cloud EdgeOne Cloud API Change Notification](https://www.tencentcloud.com/document/product/1552/104902?from_cn_redirect=1). Import up to 100 site IDs. To query data of all sites under the Tencent Cloud root account, use `*` instead. To query account-level data, you need permission for all site resources of this interface.
      */
     public String [] getZoneIds() {
         return this.ZoneIds;
     }
 
     /**
-     * Set Site ID set. this parameter will change from option to required after may 30, 2024. for details, see the notice: [tencent cloud EdgeOne API change notification](https://www.tencentcloud.com/document/product/1552/104902?from_cn_redirect=1). a maximum of 100 site ids can be imported. use `*` to query all site data under the tencent cloud root account. querying account-level data requires all resource permissions for all sites in this interface.
-     * @param ZoneIds Site ID set. this parameter will change from option to required after may 30, 2024. for details, see the notice: [tencent cloud EdgeOne API change notification](https://www.tencentcloud.com/document/product/1552/104902?from_cn_redirect=1). a maximum of 100 site ids can be imported. use `*` to query all site data under the tencent cloud root account. querying account-level data requires all resource permissions for all sites in this interface.
+     * Set Site ID set. This parameter will change from optional to required after May 30, 2024. For details, see the announcement: [Tencent Cloud EdgeOne Cloud API Change Notification](https://www.tencentcloud.com/document/product/1552/104902?from_cn_redirect=1). Import up to 100 site IDs. To query data of all sites under the Tencent Cloud root account, use `*` instead. To query account-level data, you need permission for all site resources of this interface.
+     * @param ZoneIds Site ID set. This parameter will change from optional to required after May 30, 2024. For details, see the announcement: [Tencent Cloud EdgeOne Cloud API Change Notification](https://www.tencentcloud.com/document/product/1552/104902?from_cn_redirect=1). Import up to 100 site IDs. To query data of all sites under the Tencent Cloud root account, use `*` instead. To query account-level data, you need permission for all site resources of this interface.
      */
     public void setZoneIds(String [] ZoneIds) {
         this.ZoneIds = ZoneIds;
     }
 
     /**
-     * Get The list of DDoS policy IDs to be specified. All policies will be selected if this field is not specified. 
-     * @return PolicyIds The list of DDoS policy IDs to be specified. All policies will be selected if this field is not specified.
+     * Get Set of DDoS policy group IDs. If not specified, all policy IDs are selected by default. 
+     * @return PolicyIds Set of DDoS policy group IDs. If not specified, all policy IDs are selected by default.
      */
     public Long [] getPolicyIds() {
         return this.PolicyIds;
     }
 
     /**
-     * Set The list of DDoS policy IDs to be specified. All policies will be selected if this field is not specified.
-     * @param PolicyIds The list of DDoS policy IDs to be specified. All policies will be selected if this field is not specified.
+     * Set Set of DDoS policy group IDs. If not specified, all policy IDs are selected by default.
+     * @param PolicyIds Set of DDoS policy group IDs. If not specified, all policy IDs are selected by default.
      */
     public void setPolicyIds(Long [] PolicyIds) {
         this.PolicyIds = PolicyIds;
     }
 
     /**
-     * Get The attack type. Values:
-<li>`flood`: Flood;</li>
-<li>`icmpFlood`: ICMP flood;</li>
-<li>`all`: All attack types.</li>This field will be set to the default value `all` if not specified. 
-     * @return AttackType The attack type. Values:
-<li>`flood`: Flood;</li>
-<li>`icmpFlood`: ICMP flood;</li>
-<li>`all`: All attack types.</li>This field will be set to the default value `all` if not specified.
+     * Get Attack type. Valid values:
+<li>flood: flood attack;</li>
+<li>icmpFlood: ICMP flood attack;</li>
+<li>all: all attack types.</li>If this parameter is not input, the default value `all` is used, indicating a query for all attack types. 
+     * @return AttackType Attack type. Valid values:
+<li>flood: flood attack;</li>
+<li>icmpFlood: ICMP flood attack;</li>
+<li>all: all attack types.</li>If this parameter is not input, the default value `all` is used, indicating a query for all attack types.
      */
     public String getAttackType() {
         return this.AttackType;
     }
 
     /**
-     * Set The attack type. Values:
-<li>`flood`: Flood;</li>
-<li>`icmpFlood`: ICMP flood;</li>
-<li>`all`: All attack types.</li>This field will be set to the default value `all` if not specified.
-     * @param AttackType The attack type. Values:
-<li>`flood`: Flood;</li>
-<li>`icmpFlood`: ICMP flood;</li>
-<li>`all`: All attack types.</li>This field will be set to the default value `all` if not specified.
+     * Set Attack type. Valid values:
+<li>flood: flood attack;</li>
+<li>icmpFlood: ICMP flood attack;</li>
+<li>all: all attack types.</li>If this parameter is not input, the default value `all` is used, indicating a query for all attack types.
+     * @param AttackType Attack type. Valid values:
+<li>flood: flood attack;</li>
+<li>icmpFlood: ICMP flood attack;</li>
+<li>all: all attack types.</li>If this parameter is not input, the default value `all` is used, indicating a query for all attack types.
      */
     public void setAttackType(String AttackType) {
         this.AttackType = AttackType;
     }
 
     /**
-     * Get The protocol type. Values:
-<li>`tcp`: TCP protocol;</li>
-<li>`udp`: UDP protocol;</li>
-<li>`all`: All protocol types.</li>This field will be set to the default value `all` if not specified. 
-     * @return ProtocolType The protocol type. Values:
-<li>`tcp`: TCP protocol;</li>
-<li>`udp`: UDP protocol;</li>
-<li>`all`: All protocol types.</li>This field will be set to the default value `all` if not specified.
+     * Get Protocol type. Valid values:
+<li>tcp: TCP protocol;</li>
+<li>udp: UDP protocol;</li>
+<li>all: all protocol types.</li>If this parameter is not input, the default value `all` is used, indicating a query for all protocols. 
+     * @return ProtocolType Protocol type. Valid values:
+<li>tcp: TCP protocol;</li>
+<li>udp: UDP protocol;</li>
+<li>all: all protocol types.</li>If this parameter is not input, the default value `all` is used, indicating a query for all protocols.
      */
     public String getProtocolType() {
         return this.ProtocolType;
     }
 
     /**
-     * Set The protocol type. Values:
-<li>`tcp`: TCP protocol;</li>
-<li>`udp`: UDP protocol;</li>
-<li>`all`: All protocol types.</li>This field will be set to the default value `all` if not specified.
-     * @param ProtocolType The protocol type. Values:
-<li>`tcp`: TCP protocol;</li>
-<li>`udp`: UDP protocol;</li>
-<li>`all`: All protocol types.</li>This field will be set to the default value `all` if not specified.
+     * Set Protocol type. Valid values:
+<li>tcp: TCP protocol;</li>
+<li>udp: UDP protocol;</li>
+<li>all: all protocol types.</li>If this parameter is not input, the default value `all` is used, indicating a query for all protocols.
+     * @param ProtocolType Protocol type. Valid values:
+<li>tcp: TCP protocol;</li>
+<li>udp: UDP protocol;</li>
+<li>all: all protocol types.</li>If this parameter is not input, the default value `all` is used, indicating a query for all protocols.
      */
     public void setProtocolType(String ProtocolType) {
         this.ProtocolType = ProtocolType;
     }
 
     /**
-     * Get The port number. 
-     * @return Port The port number.
+     * Get Port number. 
+     * @return Port Port number.
      */
     public Long getPort() {
         return this.Port;
     }
 
     /**
-     * Set The port number.
-     * @param Port The port number.
+     * Set Port number.
+     * @param Port Port number.
      */
     public void setPort(Long Port) {
         this.Port = Port;
     }
 
     /**
-     * Get Queries the top n rows of data. Top 10 rows of data will be queried if this field is not specified. 
-     * @return Limit Queries the top n rows of data. Top 10 rows of data will be queried if this field is not specified.
+     * Get Indicates the top N data to be queried. If this parameter is not input, the default value is 10, indicating querying the top 10 data. 
+     * @return Limit Indicates the top N data to be queried. If this parameter is not input, the default value is 10, indicating querying the top 10 data.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Queries the top n rows of data. Top 10 rows of data will be queried if this field is not specified.
-     * @param Limit Queries the top n rows of data. Top 10 rows of data will be queried if this field is not specified.
+     * Set Indicates the top N data to be queried. If this parameter is not input, the default value is 10, indicating querying the top 10 data.
+     * @param Limit Indicates the top N data to be queried. If this parameter is not input, the default value is 10, indicating querying the top 10 data.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get Data storage region. Values:
-<li>`overseas`: Global (outside the Chinese mainland);</li>
-<li>`mainland`: Chinese mainland.</li>If this field is not specified, the data storage region will be determined based on the user's location. 
-     * @return Area Data storage region. Values:
-<li>`overseas`: Global (outside the Chinese mainland);</li>
-<li>`mainland`: Chinese mainland.</li>If this field is not specified, the data storage region will be determined based on the user's location.
+     * Get Data ownership region. Valid values:
+<li>overseas: global (excluding the Chinese mainland) data;</li>
+<li>mainland: Chinese mainland data.</li>If not specified, the region will be smart selected according to the user's location. 
+     * @return Area Data ownership region. Valid values:
+<li>overseas: global (excluding the Chinese mainland) data;</li>
+<li>mainland: Chinese mainland data.</li>If not specified, the region will be smart selected according to the user's location.
      */
     public String getArea() {
         return this.Area;
     }
 
     /**
-     * Set Data storage region. Values:
-<li>`overseas`: Global (outside the Chinese mainland);</li>
-<li>`mainland`: Chinese mainland.</li>If this field is not specified, the data storage region will be determined based on the user's location.
-     * @param Area Data storage region. Values:
-<li>`overseas`: Global (outside the Chinese mainland);</li>
-<li>`mainland`: Chinese mainland.</li>If this field is not specified, the data storage region will be determined based on the user's location.
+     * Set Data ownership region. Valid values:
+<li>overseas: global (excluding the Chinese mainland) data;</li>
+<li>mainland: Chinese mainland data.</li>If not specified, the region will be smart selected according to the user's location.
+     * @param Area Data ownership region. Valid values:
+<li>overseas: global (excluding the Chinese mainland) data;</li>
+<li>mainland: Chinese mainland data.</li>If not specified, the region will be smart selected according to the user's location.
      */
     public void setArea(String Area) {
         this.Area = Area;

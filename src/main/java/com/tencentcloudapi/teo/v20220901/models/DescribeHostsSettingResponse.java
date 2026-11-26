@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeHostsSettingResponse extends AbstractModel {
 
     /**
-    * List of domain names.
+    * Domain name list.
     */
     @SerializedName("DetailHosts")
     @Expose
     private DetailHost [] DetailHosts;
 
     /**
-    * Number of domain names
+    * Number of domain names.
     */
     @SerializedName("TotalNumber")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeHostsSettingResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get List of domain names. 
-     * @return DetailHosts List of domain names.
+     * Get Domain name list. 
+     * @return DetailHosts Domain name list.
      */
     public DetailHost [] getDetailHosts() {
         return this.DetailHosts;
     }
 
     /**
-     * Set List of domain names.
-     * @param DetailHosts List of domain names.
+     * Set Domain name list.
+     * @param DetailHosts Domain name list.
      */
     public void setDetailHosts(DetailHost [] DetailHosts) {
         this.DetailHosts = DetailHosts;
     }
 
     /**
-     * Get Number of domain names 
-     * @return TotalNumber Number of domain names
+     * Get Number of domain names. 
+     * @return TotalNumber Number of domain names.
      */
     public Long getTotalNumber() {
         return this.TotalNumber;
     }
 
     /**
-     * Set Number of domain names
-     * @param TotalNumber Number of domain names
+     * Set Number of domain names.
+     * @param TotalNumber Number of domain names.
      */
     public void setTotalNumber(Long TotalNumber) {
         this.TotalNumber = TotalNumber;

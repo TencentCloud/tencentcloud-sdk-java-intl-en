@@ -24,191 +24,181 @@ import java.util.HashMap;
 public class CreateJustInTimeTranscodeTemplateRequest extends AbstractModel {
 
     /**
-    * Specifies the site ID.
+    * Site ID.
     */
     @SerializedName("ZoneId")
     @Expose
     private String ZoneId;
 
     /**
-    * Name of the just in time transcoding template, length limited to 64 characters.
+    * Just in time transcoding template name. Length limit: 64 characters.
     */
     @SerializedName("TemplateName")
     @Expose
     private String TemplateName;
 
     /**
-    * Template description, with a length limit of 256 characters. empty by default.
+    * Template description information. The length cannot exceed 256 characters. Empty by default.
     */
     @SerializedName("Comment")
     @Expose
     private String Comment;
 
     /**
-    * Enable video stream. valid values:.
+    * Video stream switch. Valid values:
 <li>`on`: Enable;</li>
-
-<li>off: disabled.</li>default value: on.
+<li>off: Disable.</li>Default value: on.
     */
     @SerializedName("VideoStreamSwitch")
     @Expose
     private String VideoStreamSwitch;
 
     /**
-    * Enable audio stream switch. valid values:.
+    * Enable audio stream switch. Value:
 <li>`on`: Enable;</li>
-
-<li>off: disabled.</li>default value: on.
+<li>off: Disable.</li>Default value: on.
     */
     @SerializedName("AudioStreamSwitch")
     @Expose
     private String AudioStreamSwitch;
 
     /**
-    * Video stream configuration parameters. this field is required when VideoStreamSwitch is on.
+    * Video stream configuration parameters. This field is required when VideoStreamSwitch is on.
     */
     @SerializedName("VideoTemplate")
     @Expose
     private VideoTemplateInfo VideoTemplate;
 
     /**
-    * Audio stream configuration parameters. this field is required when AudioStreamSwitch is on.
+    * Audio stream configuration parameters. This field is required when AudioStreamSwitch is on.
     */
     @SerializedName("AudioTemplate")
     @Expose
     private AudioTemplateInfo AudioTemplate;
 
     /**
-     * Get Specifies the site ID. 
-     * @return ZoneId Specifies the site ID.
+     * Get Site ID. 
+     * @return ZoneId Site ID.
      */
     public String getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set Specifies the site ID.
-     * @param ZoneId Specifies the site ID.
+     * Set Site ID.
+     * @param ZoneId Site ID.
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get Name of the just in time transcoding template, length limited to 64 characters. 
-     * @return TemplateName Name of the just in time transcoding template, length limited to 64 characters.
+     * Get Just in time transcoding template name. Length limit: 64 characters. 
+     * @return TemplateName Just in time transcoding template name. Length limit: 64 characters.
      */
     public String getTemplateName() {
         return this.TemplateName;
     }
 
     /**
-     * Set Name of the just in time transcoding template, length limited to 64 characters.
-     * @param TemplateName Name of the just in time transcoding template, length limited to 64 characters.
+     * Set Just in time transcoding template name. Length limit: 64 characters.
+     * @param TemplateName Just in time transcoding template name. Length limit: 64 characters.
      */
     public void setTemplateName(String TemplateName) {
         this.TemplateName = TemplateName;
     }
 
     /**
-     * Get Template description, with a length limit of 256 characters. empty by default. 
-     * @return Comment Template description, with a length limit of 256 characters. empty by default.
+     * Get Template description information. The length cannot exceed 256 characters. Empty by default. 
+     * @return Comment Template description information. The length cannot exceed 256 characters. Empty by default.
      */
     public String getComment() {
         return this.Comment;
     }
 
     /**
-     * Set Template description, with a length limit of 256 characters. empty by default.
-     * @param Comment Template description, with a length limit of 256 characters. empty by default.
+     * Set Template description information. The length cannot exceed 256 characters. Empty by default.
+     * @param Comment Template description information. The length cannot exceed 256 characters. Empty by default.
      */
     public void setComment(String Comment) {
         this.Comment = Comment;
     }
 
     /**
-     * Get Enable video stream. valid values:.
+     * Get Video stream switch. Valid values:
 <li>`on`: Enable;</li>
-
-<li>off: disabled.</li>default value: on. 
-     * @return VideoStreamSwitch Enable video stream. valid values:.
+<li>off: Disable.</li>Default value: on. 
+     * @return VideoStreamSwitch Video stream switch. Valid values:
 <li>`on`: Enable;</li>
-
-<li>off: disabled.</li>default value: on.
+<li>off: Disable.</li>Default value: on.
      */
     public String getVideoStreamSwitch() {
         return this.VideoStreamSwitch;
     }
 
     /**
-     * Set Enable video stream. valid values:.
+     * Set Video stream switch. Valid values:
 <li>`on`: Enable;</li>
-
-<li>off: disabled.</li>default value: on.
-     * @param VideoStreamSwitch Enable video stream. valid values:.
+<li>off: Disable.</li>Default value: on.
+     * @param VideoStreamSwitch Video stream switch. Valid values:
 <li>`on`: Enable;</li>
-
-<li>off: disabled.</li>default value: on.
+<li>off: Disable.</li>Default value: on.
      */
     public void setVideoStreamSwitch(String VideoStreamSwitch) {
         this.VideoStreamSwitch = VideoStreamSwitch;
     }
 
     /**
-     * Get Enable audio stream switch. valid values:.
+     * Get Enable audio stream switch. Value:
 <li>`on`: Enable;</li>
-
-<li>off: disabled.</li>default value: on. 
-     * @return AudioStreamSwitch Enable audio stream switch. valid values:.
+<li>off: Disable.</li>Default value: on. 
+     * @return AudioStreamSwitch Enable audio stream switch. Value:
 <li>`on`: Enable;</li>
-
-<li>off: disabled.</li>default value: on.
+<li>off: Disable.</li>Default value: on.
      */
     public String getAudioStreamSwitch() {
         return this.AudioStreamSwitch;
     }
 
     /**
-     * Set Enable audio stream switch. valid values:.
+     * Set Enable audio stream switch. Value:
 <li>`on`: Enable;</li>
-
-<li>off: disabled.</li>default value: on.
-     * @param AudioStreamSwitch Enable audio stream switch. valid values:.
+<li>off: Disable.</li>Default value: on.
+     * @param AudioStreamSwitch Enable audio stream switch. Value:
 <li>`on`: Enable;</li>
-
-<li>off: disabled.</li>default value: on.
+<li>off: Disable.</li>Default value: on.
      */
     public void setAudioStreamSwitch(String AudioStreamSwitch) {
         this.AudioStreamSwitch = AudioStreamSwitch;
     }
 
     /**
-     * Get Video stream configuration parameters. this field is required when VideoStreamSwitch is on. 
-     * @return VideoTemplate Video stream configuration parameters. this field is required when VideoStreamSwitch is on.
+     * Get Video stream configuration parameters. This field is required when VideoStreamSwitch is on. 
+     * @return VideoTemplate Video stream configuration parameters. This field is required when VideoStreamSwitch is on.
      */
     public VideoTemplateInfo getVideoTemplate() {
         return this.VideoTemplate;
     }
 
     /**
-     * Set Video stream configuration parameters. this field is required when VideoStreamSwitch is on.
-     * @param VideoTemplate Video stream configuration parameters. this field is required when VideoStreamSwitch is on.
+     * Set Video stream configuration parameters. This field is required when VideoStreamSwitch is on.
+     * @param VideoTemplate Video stream configuration parameters. This field is required when VideoStreamSwitch is on.
      */
     public void setVideoTemplate(VideoTemplateInfo VideoTemplate) {
         this.VideoTemplate = VideoTemplate;
     }
 
     /**
-     * Get Audio stream configuration parameters. this field is required when AudioStreamSwitch is on. 
-     * @return AudioTemplate Audio stream configuration parameters. this field is required when AudioStreamSwitch is on.
+     * Get Audio stream configuration parameters. This field is required when AudioStreamSwitch is on. 
+     * @return AudioTemplate Audio stream configuration parameters. This field is required when AudioStreamSwitch is on.
      */
     public AudioTemplateInfo getAudioTemplate() {
         return this.AudioTemplate;
     }
 
     /**
-     * Set Audio stream configuration parameters. this field is required when AudioStreamSwitch is on.
-     * @param AudioTemplate Audio stream configuration parameters. this field is required when AudioStreamSwitch is on.
+     * Set Audio stream configuration parameters. This field is required when AudioStreamSwitch is on.
+     * @param AudioTemplate Audio stream configuration parameters. This field is required when AudioStreamSwitch is on.
      */
     public void setAudioTemplate(AudioTemplateInfo AudioTemplate) {
         this.AudioTemplate = AudioTemplate;

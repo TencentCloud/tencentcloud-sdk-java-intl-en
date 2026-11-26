@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeOriginGroupResponse extends AbstractModel {
 
     /**
-    * Total number of records.
+    * Total number of records
     */
     @SerializedName("TotalCount")
     @Expose
@@ -45,16 +45,16 @@ public class DescribeOriginGroupResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Total number of records. 
-     * @return TotalCount Total number of records.
+     * Get Total number of records 
+     * @return TotalCount Total number of records
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Total number of records.
-     * @param TotalCount Total number of records.
+     * Set Total number of records
+     * @param TotalCount Total number of records
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

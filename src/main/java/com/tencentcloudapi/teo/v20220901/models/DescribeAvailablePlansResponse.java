@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class DescribeAvailablePlansResponse extends AbstractModel {
 
     /**
-    * Plans available for the current user
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Package types available for purchase and information related to the current account.
     */
     @SerializedName("PlanInfo")
     @Expose
@@ -39,20 +38,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Plans available for the current user
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return PlanInfo Plans available for the current user
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Package types available for purchase and information related to the current account. 
+     * @return PlanInfo Package types available for purchase and information related to the current account.
      */
     public PlanInfo [] getPlanInfo() {
         return this.PlanInfo;
     }
 
     /**
-     * Set Plans available for the current user
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param PlanInfo Plans available for the current user
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Package types available for purchase and information related to the current account.
+     * @param PlanInfo Package types available for purchase and information related to the current account.
      */
     public void setPlanInfo(PlanInfo [] PlanInfo) {
         this.PlanInfo = PlanInfo;

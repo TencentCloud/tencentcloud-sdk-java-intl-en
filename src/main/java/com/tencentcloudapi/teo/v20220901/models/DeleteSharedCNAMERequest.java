@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class DeleteSharedCNAMERequest extends AbstractModel {
 
     /**
-    * ID of the site to which the shared CNAME belongs.
+    * ID of the site associated with the shared CNAME.
     */
     @SerializedName("ZoneId")
     @Expose
     private String ZoneId;
 
     /**
-    * The shared CNAME to be deleted
+    * Shared CNAME that needs to be deleted.
     */
     @SerializedName("SharedCNAME")
     @Expose
     private String SharedCNAME;
 
     /**
-     * Get ID of the site to which the shared CNAME belongs. 
-     * @return ZoneId ID of the site to which the shared CNAME belongs.
+     * Get ID of the site associated with the shared CNAME. 
+     * @return ZoneId ID of the site associated with the shared CNAME.
      */
     public String getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set ID of the site to which the shared CNAME belongs.
-     * @param ZoneId ID of the site to which the shared CNAME belongs.
+     * Set ID of the site associated with the shared CNAME.
+     * @param ZoneId ID of the site associated with the shared CNAME.
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get The shared CNAME to be deleted 
-     * @return SharedCNAME The shared CNAME to be deleted
+     * Get Shared CNAME that needs to be deleted. 
+     * @return SharedCNAME Shared CNAME that needs to be deleted.
      */
     public String getSharedCNAME() {
         return this.SharedCNAME;
     }
 
     /**
-     * Set The shared CNAME to be deleted
-     * @param SharedCNAME The shared CNAME to be deleted
+     * Set Shared CNAME that needs to be deleted.
+     * @param SharedCNAME Shared CNAME that needs to be deleted.
      */
     public void setSharedCNAME(String SharedCNAME) {
         this.SharedCNAME = SharedCNAME;

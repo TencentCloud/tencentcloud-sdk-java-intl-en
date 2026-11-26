@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class ImportZoneConfigRequest extends AbstractModel {
 
     /**
-    * <p>Site ID.</p>
+    * <p>Zone ID.</p>
     */
     @SerializedName("ZoneId")
     @Expose
     private String ZoneId;
 
     /**
-    * <p>Configuration content to be imported. Use JSON format and encode by UTF-8. You can obtain the configuration content through the site configuration export interface (ExportZoneConfig). You can individually import "Site Acceleration - Global Acceleration Configuration" or "Site Acceleration - Rule Engine". Just pass in the corresponding fields. For specific details, see the example below.<br>Note: AccelerationDomain (acceleration domain name configuration) and Origin (origin configuration) exported by ExportZoneConfig are temporary not supported for import through this interface. If the Content contains the above configuration content, it will cause import failure.</p>
+    * <p>Configuration content to be imported. It must be in JSON format and encoded in UTF-8. You can obtain the configuration content through the site configuration export API (ExportZoneConfig). You can individually import "Site Acceleration - Global Acceleration Configuration" or "Site Acceleration - Rule Engine" by passing in the corresponding fields. For details, refer to the example below.<br>Note: AccelerationDomain (acceleration domain name configuration) and Origin (origin server configuration) exported by ExportZoneConfig are not currently supported for import through this interface. If Content contains the above configuration content, the import will fail.</p>
     */
     @SerializedName("Content")
     @Expose
     private String Content;
 
     /**
-     * Get <p>Site ID.</p> 
-     * @return ZoneId <p>Site ID.</p>
+     * Get <p>Zone ID.</p> 
+     * @return ZoneId <p>Zone ID.</p>
      */
     public String getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set <p>Site ID.</p>
-     * @param ZoneId <p>Site ID.</p>
+     * Set <p>Zone ID.</p>
+     * @param ZoneId <p>Zone ID.</p>
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get <p>Configuration content to be imported. Use JSON format and encode by UTF-8. You can obtain the configuration content through the site configuration export interface (ExportZoneConfig). You can individually import "Site Acceleration - Global Acceleration Configuration" or "Site Acceleration - Rule Engine". Just pass in the corresponding fields. For specific details, see the example below.<br>Note: AccelerationDomain (acceleration domain name configuration) and Origin (origin configuration) exported by ExportZoneConfig are temporary not supported for import through this interface. If the Content contains the above configuration content, it will cause import failure.</p> 
-     * @return Content <p>Configuration content to be imported. Use JSON format and encode by UTF-8. You can obtain the configuration content through the site configuration export interface (ExportZoneConfig). You can individually import "Site Acceleration - Global Acceleration Configuration" or "Site Acceleration - Rule Engine". Just pass in the corresponding fields. For specific details, see the example below.<br>Note: AccelerationDomain (acceleration domain name configuration) and Origin (origin configuration) exported by ExportZoneConfig are temporary not supported for import through this interface. If the Content contains the above configuration content, it will cause import failure.</p>
+     * Get <p>Configuration content to be imported. It must be in JSON format and encoded in UTF-8. You can obtain the configuration content through the site configuration export API (ExportZoneConfig). You can individually import "Site Acceleration - Global Acceleration Configuration" or "Site Acceleration - Rule Engine" by passing in the corresponding fields. For details, refer to the example below.<br>Note: AccelerationDomain (acceleration domain name configuration) and Origin (origin server configuration) exported by ExportZoneConfig are not currently supported for import through this interface. If Content contains the above configuration content, the import will fail.</p> 
+     * @return Content <p>Configuration content to be imported. It must be in JSON format and encoded in UTF-8. You can obtain the configuration content through the site configuration export API (ExportZoneConfig). You can individually import "Site Acceleration - Global Acceleration Configuration" or "Site Acceleration - Rule Engine" by passing in the corresponding fields. For details, refer to the example below.<br>Note: AccelerationDomain (acceleration domain name configuration) and Origin (origin server configuration) exported by ExportZoneConfig are not currently supported for import through this interface. If Content contains the above configuration content, the import will fail.</p>
      */
     public String getContent() {
         return this.Content;
     }
 
     /**
-     * Set <p>Configuration content to be imported. Use JSON format and encode by UTF-8. You can obtain the configuration content through the site configuration export interface (ExportZoneConfig). You can individually import "Site Acceleration - Global Acceleration Configuration" or "Site Acceleration - Rule Engine". Just pass in the corresponding fields. For specific details, see the example below.<br>Note: AccelerationDomain (acceleration domain name configuration) and Origin (origin configuration) exported by ExportZoneConfig are temporary not supported for import through this interface. If the Content contains the above configuration content, it will cause import failure.</p>
-     * @param Content <p>Configuration content to be imported. Use JSON format and encode by UTF-8. You can obtain the configuration content through the site configuration export interface (ExportZoneConfig). You can individually import "Site Acceleration - Global Acceleration Configuration" or "Site Acceleration - Rule Engine". Just pass in the corresponding fields. For specific details, see the example below.<br>Note: AccelerationDomain (acceleration domain name configuration) and Origin (origin configuration) exported by ExportZoneConfig are temporary not supported for import through this interface. If the Content contains the above configuration content, it will cause import failure.</p>
+     * Set <p>Configuration content to be imported. It must be in JSON format and encoded in UTF-8. You can obtain the configuration content through the site configuration export API (ExportZoneConfig). You can individually import "Site Acceleration - Global Acceleration Configuration" or "Site Acceleration - Rule Engine" by passing in the corresponding fields. For details, refer to the example below.<br>Note: AccelerationDomain (acceleration domain name configuration) and Origin (origin server configuration) exported by ExportZoneConfig are not currently supported for import through this interface. If Content contains the above configuration content, the import will fail.</p>
+     * @param Content <p>Configuration content to be imported. It must be in JSON format and encoded in UTF-8. You can obtain the configuration content through the site configuration export API (ExportZoneConfig). You can individually import "Site Acceleration - Global Acceleration Configuration" or "Site Acceleration - Rule Engine" by passing in the corresponding fields. For details, refer to the example below.<br>Note: AccelerationDomain (acceleration domain name configuration) and Origin (origin server configuration) exported by ExportZoneConfig are not currently supported for import through this interface. If Content contains the above configuration content, the import will fail.</p>
      */
     public void setContent(String Content) {
         this.Content = Content;

@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeLogAnalysisDetailResponse extends AbstractModel {
 
     /**
-    * <p>Log details list that meets the log match condition.</p>
+    * <p>List of log details that meet the log match conditions.</p>
     */
     @SerializedName("LogDetail")
     @Expose
     private LogItem [] LogDetail;
 
     /**
-    * <p>Total number of logs that meet the match condition.</p>
+    * <p>Total number of logs that meet the log match condition.</p>
     */
     @SerializedName("TotalCount")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeLogAnalysisDetailResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get <p>Log details list that meets the log match condition.</p> 
-     * @return LogDetail <p>Log details list that meets the log match condition.</p>
+     * Get <p>List of log details that meet the log match conditions.</p> 
+     * @return LogDetail <p>List of log details that meet the log match conditions.</p>
      */
     public LogItem [] getLogDetail() {
         return this.LogDetail;
     }
 
     /**
-     * Set <p>Log details list that meets the log match condition.</p>
-     * @param LogDetail <p>Log details list that meets the log match condition.</p>
+     * Set <p>List of log details that meet the log match conditions.</p>
+     * @param LogDetail <p>List of log details that meet the log match conditions.</p>
      */
     public void setLogDetail(LogItem [] LogDetail) {
         this.LogDetail = LogDetail;
     }
 
     /**
-     * Get <p>Total number of logs that meet the match condition.</p> 
-     * @return TotalCount <p>Total number of logs that meet the match condition.</p>
+     * Get <p>Total number of logs that meet the log match condition.</p> 
+     * @return TotalCount <p>Total number of logs that meet the log match condition.</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set <p>Total number of logs that meet the match condition.</p>
-     * @param TotalCount <p>Total number of logs that meet the match condition.</p>
+     * Set <p>Total number of logs that meet the log match condition.</p>
+     * @param TotalCount <p>Total number of logs that meet the log match condition.</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

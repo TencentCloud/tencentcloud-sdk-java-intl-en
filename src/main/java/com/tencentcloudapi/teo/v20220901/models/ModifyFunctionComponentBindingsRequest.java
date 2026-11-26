@@ -39,10 +39,10 @@ public class ModifyFunctionComponentBindingsRequest extends AbstractModel {
 
     /**
     * Operation type. Valid values:
-<li>bind: bind component;</li>
-<li>bind-override: Bind a component. If the binding already exists, it is a rebind action; otherwise, it is a bind action.</li>
+<li>bind: Bind a component;</li>
+<li>bind-override: Bind a component. If the binding already exists, it is a rebind action; otherwise, it is a bind action;</li>
 <li>unbind: Unbind a component;</li>
-<li>rebind: Reset the binding relationship. Clear all existing bindings and set to the passed in bound list. If an empty list is passed in, clear all bindings.</li>
+<li>rebind: Reset the binding relationship. Clear all existing bindings and set to the passed-in bound list. If an empty list is passed in, all bindings are cleared.</li>
 
     */
     @SerializedName("Operation")
@@ -50,7 +50,7 @@ public class ModifyFunctionComponentBindingsRequest extends AbstractModel {
     private String Operation;
 
     /**
-    * Bound list of function components to operate. When Operation is rebind and an empty list is input, it means to clear ALL bindings.
+    * List of bound function components to manipulate. If Operation is rebind and an empty list is imported, it means clearing all bindings.
     */
     @SerializedName("FunctionComponentBindings")
     @Expose
@@ -90,16 +90,16 @@ public class ModifyFunctionComponentBindingsRequest extends AbstractModel {
 
     /**
      * Get Operation type. Valid values:
-<li>bind: bind component;</li>
-<li>bind-override: Bind a component. If the binding already exists, it is a rebind action; otherwise, it is a bind action.</li>
+<li>bind: Bind a component;</li>
+<li>bind-override: Bind a component. If the binding already exists, it is a rebind action; otherwise, it is a bind action;</li>
 <li>unbind: Unbind a component;</li>
-<li>rebind: Reset the binding relationship. Clear all existing bindings and set to the passed in bound list. If an empty list is passed in, clear all bindings.</li>
+<li>rebind: Reset the binding relationship. Clear all existing bindings and set to the passed-in bound list. If an empty list is passed in, all bindings are cleared.</li>
  
      * @return Operation Operation type. Valid values:
-<li>bind: bind component;</li>
-<li>bind-override: Bind a component. If the binding already exists, it is a rebind action; otherwise, it is a bind action.</li>
+<li>bind: Bind a component;</li>
+<li>bind-override: Bind a component. If the binding already exists, it is a rebind action; otherwise, it is a bind action;</li>
 <li>unbind: Unbind a component;</li>
-<li>rebind: Reset the binding relationship. Clear all existing bindings and set to the passed in bound list. If an empty list is passed in, clear all bindings.</li>
+<li>rebind: Reset the binding relationship. Clear all existing bindings and set to the passed-in bound list. If an empty list is passed in, all bindings are cleared.</li>
 
      */
     public String getOperation() {
@@ -108,16 +108,16 @@ public class ModifyFunctionComponentBindingsRequest extends AbstractModel {
 
     /**
      * Set Operation type. Valid values:
-<li>bind: bind component;</li>
-<li>bind-override: Bind a component. If the binding already exists, it is a rebind action; otherwise, it is a bind action.</li>
+<li>bind: Bind a component;</li>
+<li>bind-override: Bind a component. If the binding already exists, it is a rebind action; otherwise, it is a bind action;</li>
 <li>unbind: Unbind a component;</li>
-<li>rebind: Reset the binding relationship. Clear all existing bindings and set to the passed in bound list. If an empty list is passed in, clear all bindings.</li>
+<li>rebind: Reset the binding relationship. Clear all existing bindings and set to the passed-in bound list. If an empty list is passed in, all bindings are cleared.</li>
 
      * @param Operation Operation type. Valid values:
-<li>bind: bind component;</li>
-<li>bind-override: Bind a component. If the binding already exists, it is a rebind action; otherwise, it is a bind action.</li>
+<li>bind: Bind a component;</li>
+<li>bind-override: Bind a component. If the binding already exists, it is a rebind action; otherwise, it is a bind action;</li>
 <li>unbind: Unbind a component;</li>
-<li>rebind: Reset the binding relationship. Clear all existing bindings and set to the passed in bound list. If an empty list is passed in, clear all bindings.</li>
+<li>rebind: Reset the binding relationship. Clear all existing bindings and set to the passed-in bound list. If an empty list is passed in, all bindings are cleared.</li>
 
      */
     public void setOperation(String Operation) {
@@ -125,16 +125,16 @@ public class ModifyFunctionComponentBindingsRequest extends AbstractModel {
     }
 
     /**
-     * Get Bound list of function components to operate. When Operation is rebind and an empty list is input, it means to clear ALL bindings. 
-     * @return FunctionComponentBindings Bound list of function components to operate. When Operation is rebind and an empty list is input, it means to clear ALL bindings.
+     * Get List of bound function components to manipulate. If Operation is rebind and an empty list is imported, it means clearing all bindings. 
+     * @return FunctionComponentBindings List of bound function components to manipulate. If Operation is rebind and an empty list is imported, it means clearing all bindings.
      */
     public FunctionComponentBinding [] getFunctionComponentBindings() {
         return this.FunctionComponentBindings;
     }
 
     /**
-     * Set Bound list of function components to operate. When Operation is rebind and an empty list is input, it means to clear ALL bindings.
-     * @param FunctionComponentBindings Bound list of function components to operate. When Operation is rebind and an empty list is input, it means to clear ALL bindings.
+     * Set List of bound function components to manipulate. If Operation is rebind and an empty list is imported, it means clearing all bindings.
+     * @param FunctionComponentBindings List of bound function components to manipulate. If Operation is rebind and an empty list is imported, it means clearing all bindings.
      */
     public void setFunctionComponentBindings(FunctionComponentBinding [] FunctionComponentBindings) {
         this.FunctionComponentBindings = FunctionComponentBindings;

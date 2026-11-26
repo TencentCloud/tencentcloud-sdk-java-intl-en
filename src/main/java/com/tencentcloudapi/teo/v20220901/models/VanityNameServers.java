@@ -24,56 +24,56 @@ import java.util.HashMap;
 public class VanityNameServers extends AbstractModel {
 
     /**
-    * Whether to enable custom name servers. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+    * Custom ns switch. Valid values:
+<li> on: enabled</li>
+<li>off: Disable.</li>
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * List of custom name servers
+    * List of custom namespaces.
     */
     @SerializedName("Servers")
     @Expose
     private String [] Servers;
 
     /**
-     * Get Whether to enable custom name servers. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li> 
-     * @return Switch Whether to enable custom name servers. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+     * Get Custom ns switch. Valid values:
+<li> on: enabled</li>
+<li>off: Disable.</li> 
+     * @return Switch Custom ns switch. Valid values:
+<li> on: enabled</li>
+<li>off: Disable.</li>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set Whether to enable custom name servers. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-     * @param Switch Whether to enable custom name servers. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+     * Set Custom ns switch. Valid values:
+<li> on: enabled</li>
+<li>off: Disable.</li>
+     * @param Switch Custom ns switch. Valid values:
+<li> on: enabled</li>
+<li>off: Disable.</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get List of custom name servers 
-     * @return Servers List of custom name servers
+     * Get List of custom namespaces. 
+     * @return Servers List of custom namespaces.
      */
     public String [] getServers() {
         return this.Servers;
     }
 
     /**
-     * Set List of custom name servers
-     * @param Servers List of custom name servers
+     * Set List of custom namespaces.
+     * @param Servers List of custom namespaces.
      */
     public void setServers(String [] Servers) {
         this.Servers = Servers;

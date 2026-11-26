@@ -31,7 +31,7 @@ public class CreateInferenceAPITokenRequest extends AbstractModel {
     private String ZoneId;
 
     /**
-    * Name of the reasoning API Token, length limited to no more than 30 characters.
+    * Name of the inference API Token. Length limited to 30 characters.
     */
     @SerializedName("Name")
     @Expose
@@ -54,16 +54,16 @@ public class CreateInferenceAPITokenRequest extends AbstractModel {
     }
 
     /**
-     * Get Name of the reasoning API Token, length limited to no more than 30 characters. 
-     * @return Name Name of the reasoning API Token, length limited to no more than 30 characters.
+     * Get Name of the inference API Token. Length limited to 30 characters. 
+     * @return Name Name of the inference API Token. Length limited to 30 characters.
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Name of the reasoning API Token, length limited to no more than 30 characters.
-     * @param Name Name of the reasoning API Token, length limited to no more than 30 characters.
+     * Set Name of the inference API Token. Length limited to 30 characters.
+     * @param Name Name of the inference API Token. Length limited to 30 characters.
      */
     public void setName(String Name) {
         this.Name = Name;

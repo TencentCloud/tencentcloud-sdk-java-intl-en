@@ -24,56 +24,46 @@ import java.util.HashMap;
 public class TemplateScope extends AbstractModel {
 
     /**
-    * ID of the site.
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Site ID.
     */
     @SerializedName("ZoneId")
     @Expose
     private String ZoneId;
 
     /**
-    * List of instance statuses
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Instance status list.
     */
     @SerializedName("EntityStatus")
     @Expose
     private EntityStatus [] EntityStatus;
 
     /**
-     * Get ID of the site.
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return ZoneId ID of the site.
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Site ID. 
+     * @return ZoneId Site ID.
      */
     public String getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set ID of the site.
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param ZoneId ID of the site.
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Site ID.
+     * @param ZoneId Site ID.
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get List of instance statuses
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return EntityStatus List of instance statuses
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Instance status list. 
+     * @return EntityStatus Instance status list.
      */
     public EntityStatus [] getEntityStatus() {
         return this.EntityStatus;
     }
 
     /**
-     * Set List of instance statuses
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param EntityStatus List of instance statuses
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Instance status list.
+     * @param EntityStatus Instance status list.
      */
     public void setEntityStatus(EntityStatus [] EntityStatus) {
         this.EntityStatus = EntityStatus;

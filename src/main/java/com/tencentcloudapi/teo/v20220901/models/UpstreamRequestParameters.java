@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class UpstreamRequestParameters extends AbstractModel {
 
     /**
-    * Query string configuration. Optional configuration, leave blank for no configuration.
+    * String configuration query. This is an optional configuration. No configuration is applied if this parameter is left empty.
     */
     @SerializedName("QueryString")
     @Expose
     private UpstreamRequestQueryString QueryString;
 
     /**
-    * Cookie configuration. Optional configuration. Leave it blank for no configuration.
+    * Cookie configuration. This is an optional configuration item. Leaving it blank means no configuration.
     */
     @SerializedName("Cookie")
     @Expose
     private UpstreamRequestCookie Cookie;
 
     /**
-     * Get Query string configuration. Optional configuration, leave blank for no configuration. 
-     * @return QueryString Query string configuration. Optional configuration, leave blank for no configuration.
+     * Get String configuration query. This is an optional configuration. No configuration is applied if this parameter is left empty. 
+     * @return QueryString String configuration query. This is an optional configuration. No configuration is applied if this parameter is left empty.
      */
     public UpstreamRequestQueryString getQueryString() {
         return this.QueryString;
     }
 
     /**
-     * Set Query string configuration. Optional configuration, leave blank for no configuration.
-     * @param QueryString Query string configuration. Optional configuration, leave blank for no configuration.
+     * Set String configuration query. This is an optional configuration. No configuration is applied if this parameter is left empty.
+     * @param QueryString String configuration query. This is an optional configuration. No configuration is applied if this parameter is left empty.
      */
     public void setQueryString(UpstreamRequestQueryString QueryString) {
         this.QueryString = QueryString;
     }
 
     /**
-     * Get Cookie configuration. Optional configuration. Leave it blank for no configuration. 
-     * @return Cookie Cookie configuration. Optional configuration. Leave it blank for no configuration.
+     * Get Cookie configuration. This is an optional configuration item. Leaving it blank means no configuration. 
+     * @return Cookie Cookie configuration. This is an optional configuration item. Leaving it blank means no configuration.
      */
     public UpstreamRequestCookie getCookie() {
         return this.Cookie;
     }
 
     /**
-     * Set Cookie configuration. Optional configuration. Leave it blank for no configuration.
-     * @param Cookie Cookie configuration. Optional configuration. Leave it blank for no configuration.
+     * Set Cookie configuration. This is an optional configuration item. Leaving it blank means no configuration.
+     * @param Cookie Cookie configuration. This is an optional configuration item. Leaving it blank means no configuration.
      */
     public void setCookie(UpstreamRequestCookie Cookie) {
         this.Cookie = Cookie;

@@ -31,7 +31,7 @@ public class DescribeLoadBalancerListRequest extends AbstractModel {
     private String ZoneId;
 
     /**
-    * Offset of paginated query. Default value: 0.		
+    * Offset of paginated query. Default value: 0.	
     */
     @SerializedName("Offset")
     @Expose
@@ -45,9 +45,9 @@ public class DescribeLoadBalancerListRequest extends AbstractModel {
     private Long Limit;
 
     /**
-    * Filter criteria. The maximum value of Filters.Values is 20. If this parameter is left empty, all LoadBalancer information under the current zone ID will be returned. The detailed filter criteria are as follows:
-<li>InstanceName: Filter by LoadBalancer name.</li>
-<li>InstanceId: Filter by LoadBalancer ID.</li>
+    * Filter criteria. The maximum number of Filters.Values is 20. If this parameter is left empty, information of all load balancing instances under the current zone-id is returned. Detailed filter criteria:
+<li>InstanceName: Filter by load balancing instance name.</li>
+<li>InstanceId: Filter by Cloud Load Balancer instance ID.</li>
 
     */
     @SerializedName("Filters")
@@ -71,16 +71,16 @@ public class DescribeLoadBalancerListRequest extends AbstractModel {
     }
 
     /**
-     * Get Offset of paginated query. Default value: 0.		 
-     * @return Offset Offset of paginated query. Default value: 0.		
+     * Get Offset of paginated query. Default value: 0.	 
+     * @return Offset Offset of paginated query. Default value: 0.	
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Offset of paginated query. Default value: 0.		
-     * @param Offset Offset of paginated query. Default value: 0.		
+     * Set Offset of paginated query. Default value: 0.	
+     * @param Offset Offset of paginated query. Default value: 0.	
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
@@ -103,13 +103,13 @@ public class DescribeLoadBalancerListRequest extends AbstractModel {
     }
 
     /**
-     * Get Filter criteria. The maximum value of Filters.Values is 20. If this parameter is left empty, all LoadBalancer information under the current zone ID will be returned. The detailed filter criteria are as follows:
-<li>InstanceName: Filter by LoadBalancer name.</li>
-<li>InstanceId: Filter by LoadBalancer ID.</li>
+     * Get Filter criteria. The maximum number of Filters.Values is 20. If this parameter is left empty, information of all load balancing instances under the current zone-id is returned. Detailed filter criteria:
+<li>InstanceName: Filter by load balancing instance name.</li>
+<li>InstanceId: Filter by Cloud Load Balancer instance ID.</li>
  
-     * @return Filters Filter criteria. The maximum value of Filters.Values is 20. If this parameter is left empty, all LoadBalancer information under the current zone ID will be returned. The detailed filter criteria are as follows:
-<li>InstanceName: Filter by LoadBalancer name.</li>
-<li>InstanceId: Filter by LoadBalancer ID.</li>
+     * @return Filters Filter criteria. The maximum number of Filters.Values is 20. If this parameter is left empty, information of all load balancing instances under the current zone-id is returned. Detailed filter criteria:
+<li>InstanceName: Filter by load balancing instance name.</li>
+<li>InstanceId: Filter by Cloud Load Balancer instance ID.</li>
 
      */
     public Filter [] getFilters() {
@@ -117,13 +117,13 @@ public class DescribeLoadBalancerListRequest extends AbstractModel {
     }
 
     /**
-     * Set Filter criteria. The maximum value of Filters.Values is 20. If this parameter is left empty, all LoadBalancer information under the current zone ID will be returned. The detailed filter criteria are as follows:
-<li>InstanceName: Filter by LoadBalancer name.</li>
-<li>InstanceId: Filter by LoadBalancer ID.</li>
+     * Set Filter criteria. The maximum number of Filters.Values is 20. If this parameter is left empty, information of all load balancing instances under the current zone-id is returned. Detailed filter criteria:
+<li>InstanceName: Filter by load balancing instance name.</li>
+<li>InstanceId: Filter by Cloud Load Balancer instance ID.</li>
 
-     * @param Filters Filter criteria. The maximum value of Filters.Values is 20. If this parameter is left empty, all LoadBalancer information under the current zone ID will be returned. The detailed filter criteria are as follows:
-<li>InstanceName: Filter by LoadBalancer name.</li>
-<li>InstanceId: Filter by LoadBalancer ID.</li>
+     * @param Filters Filter criteria. The maximum number of Filters.Values is 20. If this parameter is left empty, information of all load balancing instances under the current zone-id is returned. Detailed filter criteria:
+<li>InstanceName: Filter by load balancing instance name.</li>
+<li>InstanceId: Filter by Cloud Load Balancer instance ID.</li>
 
      */
     public void setFilters(Filter [] Filters) {

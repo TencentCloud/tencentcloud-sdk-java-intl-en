@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DefaultServerCertInfo extends AbstractModel {
 
     /**
-    * Specifies the server certificate ID.
+    * Server certificate ID.
     */
     @SerializedName("CertId")
     @Expose
@@ -38,11 +38,9 @@ public class DefaultServerCertInfo extends AbstractModel {
     private String Alias;
 
     /**
-    * Certificate type. valid values:.
+    * Certificate type. Valid values:
 <li>`default`: Default certificate;</li>
-
 <li>`upload`: External certificate;</li>
-
 <li>`managed`: Tencent Cloud managed certificate.</li>
     */
     @SerializedName("Type")
@@ -64,31 +62,31 @@ public class DefaultServerCertInfo extends AbstractModel {
     private String EffectiveTime;
 
     /**
-    * Common name of the cert.
+    * Certificate common name.
     */
     @SerializedName("CommonName")
     @Expose
     private String CommonName;
 
     /**
-    * Specifies the SAN domain of the certificate.
+    * SAN domain of the certificate.
     */
     @SerializedName("SubjectAltName")
     @Expose
     private String [] SubjectAltName;
 
     /**
-    * Deployment state. valid values:.
-<li>processing: deployment in progress;</li>.
-<Li>Deployed: deployed</li>.
-<Li>`Failed`: deployment failed</li>.
+    * Deployment status. Valid values:
+<li>processing: under deployment;</li>
+<li>deployed: deployed;</li>
+<li>failed: Deployment failed.</li>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * Indicates the failure reason when the Status is failed.
+    * If the Status is failed, this field returns the failure reason.
     */
     @SerializedName("Message")
     @Expose
@@ -102,16 +100,16 @@ public class DefaultServerCertInfo extends AbstractModel {
     private String SignAlgo;
 
     /**
-     * Get Specifies the server certificate ID. 
-     * @return CertId Specifies the server certificate ID.
+     * Get Server certificate ID. 
+     * @return CertId Server certificate ID.
      */
     public String getCertId() {
         return this.CertId;
     }
 
     /**
-     * Set Specifies the server certificate ID.
-     * @param CertId Specifies the server certificate ID.
+     * Set Server certificate ID.
+     * @param CertId Server certificate ID.
      */
     public void setCertId(String CertId) {
         this.CertId = CertId;
@@ -134,17 +132,13 @@ public class DefaultServerCertInfo extends AbstractModel {
     }
 
     /**
-     * Get Certificate type. valid values:.
+     * Get Certificate type. Valid values:
 <li>`default`: Default certificate;</li>
-
 <li>`upload`: External certificate;</li>
-
 <li>`managed`: Tencent Cloud managed certificate.</li> 
-     * @return Type Certificate type. valid values:.
+     * @return Type Certificate type. Valid values:
 <li>`default`: Default certificate;</li>
-
 <li>`upload`: External certificate;</li>
-
 <li>`managed`: Tencent Cloud managed certificate.</li>
      */
     public String getType() {
@@ -152,17 +146,13 @@ public class DefaultServerCertInfo extends AbstractModel {
     }
 
     /**
-     * Set Certificate type. valid values:.
+     * Set Certificate type. Valid values:
 <li>`default`: Default certificate;</li>
-
 <li>`upload`: External certificate;</li>
-
 <li>`managed`: Tencent Cloud managed certificate.</li>
-     * @param Type Certificate type. valid values:.
+     * @param Type Certificate type. Valid values:
 <li>`default`: Default certificate;</li>
-
 <li>`upload`: External certificate;</li>
-
 <li>`managed`: Tencent Cloud managed certificate.</li>
      */
     public void setType(String Type) {
@@ -202,76 +192,76 @@ public class DefaultServerCertInfo extends AbstractModel {
     }
 
     /**
-     * Get Common name of the cert. 
-     * @return CommonName Common name of the cert.
+     * Get Certificate common name. 
+     * @return CommonName Certificate common name.
      */
     public String getCommonName() {
         return this.CommonName;
     }
 
     /**
-     * Set Common name of the cert.
-     * @param CommonName Common name of the cert.
+     * Set Certificate common name.
+     * @param CommonName Certificate common name.
      */
     public void setCommonName(String CommonName) {
         this.CommonName = CommonName;
     }
 
     /**
-     * Get Specifies the SAN domain of the certificate. 
-     * @return SubjectAltName Specifies the SAN domain of the certificate.
+     * Get SAN domain of the certificate. 
+     * @return SubjectAltName SAN domain of the certificate.
      */
     public String [] getSubjectAltName() {
         return this.SubjectAltName;
     }
 
     /**
-     * Set Specifies the SAN domain of the certificate.
-     * @param SubjectAltName Specifies the SAN domain of the certificate.
+     * Set SAN domain of the certificate.
+     * @param SubjectAltName SAN domain of the certificate.
      */
     public void setSubjectAltName(String [] SubjectAltName) {
         this.SubjectAltName = SubjectAltName;
     }
 
     /**
-     * Get Deployment state. valid values:.
-<li>processing: deployment in progress;</li>.
-<Li>Deployed: deployed</li>.
-<Li>`Failed`: deployment failed</li>. 
-     * @return Status Deployment state. valid values:.
-<li>processing: deployment in progress;</li>.
-<Li>Deployed: deployed</li>.
-<Li>`Failed`: deployment failed</li>.
+     * Get Deployment status. Valid values:
+<li>processing: under deployment;</li>
+<li>deployed: deployed;</li>
+<li>failed: Deployment failed.</li> 
+     * @return Status Deployment status. Valid values:
+<li>processing: under deployment;</li>
+<li>deployed: deployed;</li>
+<li>failed: Deployment failed.</li>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Deployment state. valid values:.
-<li>processing: deployment in progress;</li>.
-<Li>Deployed: deployed</li>.
-<Li>`Failed`: deployment failed</li>.
-     * @param Status Deployment state. valid values:.
-<li>processing: deployment in progress;</li>.
-<Li>Deployed: deployed</li>.
-<Li>`Failed`: deployment failed</li>.
+     * Set Deployment status. Valid values:
+<li>processing: under deployment;</li>
+<li>deployed: deployed;</li>
+<li>failed: Deployment failed.</li>
+     * @param Status Deployment status. Valid values:
+<li>processing: under deployment;</li>
+<li>deployed: deployed;</li>
+<li>failed: Deployment failed.</li>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Indicates the failure reason when the Status is failed. 
-     * @return Message Indicates the failure reason when the Status is failed.
+     * Get If the Status is failed, this field returns the failure reason. 
+     * @return Message If the Status is failed, this field returns the failure reason.
      */
     public String getMessage() {
         return this.Message;
     }
 
     /**
-     * Set Indicates the failure reason when the Status is failed.
-     * @param Message Indicates the failure reason when the Status is failed.
+     * Set If the Status is failed, this field returns the failure reason.
+     * @param Message If the Status is failed, this field returns the failure reason.
      */
     public void setMessage(String Message) {
         this.Message = Message;

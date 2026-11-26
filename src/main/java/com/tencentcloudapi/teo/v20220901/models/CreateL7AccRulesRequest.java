@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class CreateL7AccRulesRequest extends AbstractModel {
 
     /**
-    * Zone id.
+    * Zone ID.
     */
     @SerializedName("ZoneId")
     @Expose
     private String ZoneId;
 
     /**
-    * The rule content.
+    * Rule content.
     */
     @SerializedName("Rules")
     @Expose
     private RuleEngineItem [] Rules;
 
     /**
-     * Get Zone id. 
-     * @return ZoneId Zone id.
+     * Get Zone ID. 
+     * @return ZoneId Zone ID.
      */
     public String getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set Zone id.
-     * @param ZoneId Zone id.
+     * Set Zone ID.
+     * @param ZoneId Zone ID.
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get The rule content. 
-     * @return Rules The rule content.
+     * Get Rule content. 
+     * @return Rules Rule content.
      */
     public RuleEngineItem [] getRules() {
         return this.Rules;
     }
 
     /**
-     * Set The rule content.
-     * @param Rules The rule content.
+     * Set Rule content.
+     * @param Rules Rule content.
      */
     public void setRules(RuleEngineItem [] Rules) {
         this.Rules = Rules;

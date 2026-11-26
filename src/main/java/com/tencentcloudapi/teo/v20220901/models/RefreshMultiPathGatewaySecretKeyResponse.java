@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class RefreshMultiPathGatewaySecretKeyResponse extends AbstractModel {
 
     /**
-    * Specifies the access key for the multi-channel security acceleration gateway.
+    * Key for integrating a multi-channel security acceleration gateway.
     */
     @SerializedName("SecretKey")
     @Expose
@@ -38,16 +38,16 @@ public class RefreshMultiPathGatewaySecretKeyResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Specifies the access key for the multi-channel security acceleration gateway. 
-     * @return SecretKey Specifies the access key for the multi-channel security acceleration gateway.
+     * Get Key for integrating a multi-channel security acceleration gateway. 
+     * @return SecretKey Key for integrating a multi-channel security acceleration gateway.
      */
     public String getSecretKey() {
         return this.SecretKey;
     }
 
     /**
-     * Set Specifies the access key for the multi-channel security acceleration gateway.
-     * @param SecretKey Specifies the access key for the multi-channel security acceleration gateway.
+     * Set Key for integrating a multi-channel security acceleration gateway.
+     * @param SecretKey Key for integrating a multi-channel security acceleration gateway.
      */
     public void setSecretKey(String SecretKey) {
         this.SecretKey = SecretKey;

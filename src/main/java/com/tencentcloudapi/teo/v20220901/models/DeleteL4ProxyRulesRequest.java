@@ -31,14 +31,14 @@ public class DeleteL4ProxyRulesRequest extends AbstractModel {
     private String ZoneId;
 
     /**
-    * Layer 4 proxy instance ID.
+    * Layer 4 Proxy Instance ID.
     */
     @SerializedName("ProxyId")
     @Expose
     private String ProxyId;
 
     /**
-    * List of forwarding rule IDs. It supports up to 200 forwarding rules at a time.
+    * List of forwarding rule IDs. Supports up to 200 forwarding rules at a time.
     */
     @SerializedName("RuleIds")
     @Expose
@@ -61,32 +61,32 @@ public class DeleteL4ProxyRulesRequest extends AbstractModel {
     }
 
     /**
-     * Get Layer 4 proxy instance ID. 
-     * @return ProxyId Layer 4 proxy instance ID.
+     * Get Layer 4 Proxy Instance ID. 
+     * @return ProxyId Layer 4 Proxy Instance ID.
      */
     public String getProxyId() {
         return this.ProxyId;
     }
 
     /**
-     * Set Layer 4 proxy instance ID.
-     * @param ProxyId Layer 4 proxy instance ID.
+     * Set Layer 4 Proxy Instance ID.
+     * @param ProxyId Layer 4 Proxy Instance ID.
      */
     public void setProxyId(String ProxyId) {
         this.ProxyId = ProxyId;
     }
 
     /**
-     * Get List of forwarding rule IDs. It supports up to 200 forwarding rules at a time. 
-     * @return RuleIds List of forwarding rule IDs. It supports up to 200 forwarding rules at a time.
+     * Get List of forwarding rule IDs. Supports up to 200 forwarding rules at a time. 
+     * @return RuleIds List of forwarding rule IDs. Supports up to 200 forwarding rules at a time.
      */
     public String [] getRuleIds() {
         return this.RuleIds;
     }
 
     /**
-     * Set List of forwarding rule IDs. It supports up to 200 forwarding rules at a time.
-     * @param RuleIds List of forwarding rule IDs. It supports up to 200 forwarding rules at a time.
+     * Set List of forwarding rule IDs. Supports up to 200 forwarding rules at a time.
+     * @param RuleIds List of forwarding rule IDs. Supports up to 200 forwarding rules at a time.
      */
     public void setRuleIds(String [] RuleIds) {
         this.RuleIds = RuleIds;

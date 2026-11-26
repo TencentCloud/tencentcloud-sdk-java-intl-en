@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class ModifyL7AccRuleRequest extends AbstractModel {
 
     /**
-    * Zone id.
+    * Zone ID.
     */
     @SerializedName("ZoneId")
     @Expose
     private String ZoneId;
 
     /**
-    * Rules to be modified. you can first obtain the ruleid of the rule to be modified through the describel7accrules api, then pass in the modified rule content. the original rule content will be updated in an overriding manner.
+    * Rule to modify. You can first call the DescribeL7AccRules API to get the Ruleid of the rule to modify, then input the modified rule content. The original rule content will be overwritten.
     */
     @SerializedName("Rule")
     @Expose
     private RuleEngineItem Rule;
 
     /**
-     * Get Zone id. 
-     * @return ZoneId Zone id.
+     * Get Zone ID. 
+     * @return ZoneId Zone ID.
      */
     public String getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set Zone id.
-     * @param ZoneId Zone id.
+     * Set Zone ID.
+     * @param ZoneId Zone ID.
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get Rules to be modified. you can first obtain the ruleid of the rule to be modified through the describel7accrules api, then pass in the modified rule content. the original rule content will be updated in an overriding manner. 
-     * @return Rule Rules to be modified. you can first obtain the ruleid of the rule to be modified through the describel7accrules api, then pass in the modified rule content. the original rule content will be updated in an overriding manner.
+     * Get Rule to modify. You can first call the DescribeL7AccRules API to get the Ruleid of the rule to modify, then input the modified rule content. The original rule content will be overwritten. 
+     * @return Rule Rule to modify. You can first call the DescribeL7AccRules API to get the Ruleid of the rule to modify, then input the modified rule content. The original rule content will be overwritten.
      */
     public RuleEngineItem getRule() {
         return this.Rule;
     }
 
     /**
-     * Set Rules to be modified. you can first obtain the ruleid of the rule to be modified through the describel7accrules api, then pass in the modified rule content. the original rule content will be updated in an overriding manner.
-     * @param Rule Rules to be modified. you can first obtain the ruleid of the rule to be modified through the describel7accrules api, then pass in the modified rule content. the original rule content will be updated in an overriding manner.
+     * Set Rule to modify. You can first call the DescribeL7AccRules API to get the Ruleid of the rule to modify, then input the modified rule content. The original rule content will be overwritten.
+     * @param Rule Rule to modify. You can first call the DescribeL7AccRules API to get the Ruleid of the rule to modify, then input the modified rule content. The original rule content will be overwritten.
      */
     public void setRule(RuleEngineItem Rule) {
         this.Rule = Rule;

@@ -24,33 +24,33 @@ import java.util.HashMap;
 public class NetworkErrorLogging extends AbstractModel {
 
     /**
-    * Specifies whether the Network Error Logging configuration is enabled. Valid values:.
+    * Whether to enable network error log configuration. Valid values:
 <li>`on`: Enable;</li>
-<li>`off`: Disable.</li>
+<li>off: Disable.</li>
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-     * Get Specifies whether the Network Error Logging configuration is enabled. Valid values:.
+     * Get Whether to enable network error log configuration. Valid values:
 <li>`on`: Enable;</li>
-<li>`off`: Disable.</li> 
-     * @return Switch Specifies whether the Network Error Logging configuration is enabled. Valid values:.
+<li>off: Disable.</li> 
+     * @return Switch Whether to enable network error log configuration. Valid values:
 <li>`on`: Enable;</li>
-<li>`off`: Disable.</li>
+<li>off: Disable.</li>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set Specifies whether the Network Error Logging configuration is enabled. Valid values:.
+     * Set Whether to enable network error log configuration. Valid values:
 <li>`on`: Enable;</li>
-<li>`off`: Disable.</li>
-     * @param Switch Specifies whether the Network Error Logging configuration is enabled. Valid values:.
+<li>off: Disable.</li>
+     * @param Switch Whether to enable network error log configuration. Valid values:
 <li>`on`: Enable;</li>
-<li>`off`: Disable.</li>
+<li>off: Disable.</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;

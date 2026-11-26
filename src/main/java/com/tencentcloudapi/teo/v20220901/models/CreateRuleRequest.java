@@ -24,125 +24,125 @@ import java.util.HashMap;
 public class CreateRuleRequest extends AbstractModel {
 
     /**
-    * ID of the site
+    * Zone ID.
     */
     @SerializedName("ZoneId")
     @Expose
     private String ZoneId;
 
     /**
-    * The rule name (1 to 255 characters)
+    * Rule name. The string length is 1–255.
     */
     @SerializedName("RuleName")
     @Expose
     private String RuleName;
 
     /**
-    * Rule status. Values:
-<li>`enable`: Enabled</li>
-<li>`disable`: Disabled</li>
+    * Rule status. Valid values:
+<li> enable: Enable;</li>
+<li> disable: disabled.</li>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * The rule content.
+    * Rule content.
     */
     @SerializedName("Rules")
     @Expose
     private Rule [] Rules;
 
     /**
-    * Tag of the rule.
+    * Rule tag.
     */
     @SerializedName("Tags")
     @Expose
     private String [] Tags;
 
     /**
-     * Get ID of the site 
-     * @return ZoneId ID of the site
+     * Get Zone ID. 
+     * @return ZoneId Zone ID.
      */
     public String getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set ID of the site
-     * @param ZoneId ID of the site
+     * Set Zone ID.
+     * @param ZoneId Zone ID.
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get The rule name (1 to 255 characters) 
-     * @return RuleName The rule name (1 to 255 characters)
+     * Get Rule name. The string length is 1–255. 
+     * @return RuleName Rule name. The string length is 1–255.
      */
     public String getRuleName() {
         return this.RuleName;
     }
 
     /**
-     * Set The rule name (1 to 255 characters)
-     * @param RuleName The rule name (1 to 255 characters)
+     * Set Rule name. The string length is 1–255.
+     * @param RuleName Rule name. The string length is 1–255.
      */
     public void setRuleName(String RuleName) {
         this.RuleName = RuleName;
     }
 
     /**
-     * Get Rule status. Values:
-<li>`enable`: Enabled</li>
-<li>`disable`: Disabled</li> 
-     * @return Status Rule status. Values:
-<li>`enable`: Enabled</li>
-<li>`disable`: Disabled</li>
+     * Get Rule status. Valid values:
+<li> enable: Enable;</li>
+<li> disable: disabled.</li> 
+     * @return Status Rule status. Valid values:
+<li> enable: Enable;</li>
+<li> disable: disabled.</li>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Rule status. Values:
-<li>`enable`: Enabled</li>
-<li>`disable`: Disabled</li>
-     * @param Status Rule status. Values:
-<li>`enable`: Enabled</li>
-<li>`disable`: Disabled</li>
+     * Set Rule status. Valid values:
+<li> enable: Enable;</li>
+<li> disable: disabled.</li>
+     * @param Status Rule status. Valid values:
+<li> enable: Enable;</li>
+<li> disable: disabled.</li>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get The rule content. 
-     * @return Rules The rule content.
+     * Get Rule content. 
+     * @return Rules Rule content.
      */
     public Rule [] getRules() {
         return this.Rules;
     }
 
     /**
-     * Set The rule content.
-     * @param Rules The rule content.
+     * Set Rule content.
+     * @param Rules Rule content.
      */
     public void setRules(Rule [] Rules) {
         this.Rules = Rules;
     }
 
     /**
-     * Get Tag of the rule. 
-     * @return Tags Tag of the rule.
+     * Get Rule tag. 
+     * @return Tags Rule tag.
      */
     public String [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set Tag of the rule.
-     * @param Tags Tag of the rule.
+     * Set Rule tag.
+     * @param Tags Rule tag.
      */
     public void setTags(String [] Tags) {
         this.Tags = Tags;

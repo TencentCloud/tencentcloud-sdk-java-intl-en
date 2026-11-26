@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.rum.v20210622.models;
+package com.tencentcloudapi.car.v20220110.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,67 +21,67 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteLogExportRequest extends AbstractModel {
+public class Tag extends AbstractModel {
 
     /**
-    * Project ID
+    * <p>Tag key</p>
     */
-    @SerializedName("ID")
+    @SerializedName("TagKey")
     @Expose
-    private Long ID;
+    private String TagKey;
 
     /**
-    * Log export ID
+    * <p>Tag value</p>
     */
-    @SerializedName("ExportID")
+    @SerializedName("TagValue")
     @Expose
-    private String ExportID;
+    private String TagValue;
 
     /**
-     * Get Project ID 
-     * @return ID Project ID
+     * Get <p>Tag key</p> 
+     * @return TagKey <p>Tag key</p>
      */
-    public Long getID() {
-        return this.ID;
+    public String getTagKey() {
+        return this.TagKey;
     }
 
     /**
-     * Set Project ID
-     * @param ID Project ID
+     * Set <p>Tag key</p>
+     * @param TagKey <p>Tag key</p>
      */
-    public void setID(Long ID) {
-        this.ID = ID;
+    public void setTagKey(String TagKey) {
+        this.TagKey = TagKey;
     }
 
     /**
-     * Get Log export ID 
-     * @return ExportID Log export ID
+     * Get <p>Tag value</p> 
+     * @return TagValue <p>Tag value</p>
      */
-    public String getExportID() {
-        return this.ExportID;
+    public String getTagValue() {
+        return this.TagValue;
     }
 
     /**
-     * Set Log export ID
-     * @param ExportID Log export ID
+     * Set <p>Tag value</p>
+     * @param TagValue <p>Tag value</p>
      */
-    public void setExportID(String ExportID) {
-        this.ExportID = ExportID;
+    public void setTagValue(String TagValue) {
+        this.TagValue = TagValue;
     }
 
-    public DeleteLogExportRequest() {
+    public Tag() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DeleteLogExportRequest(DeleteLogExportRequest source) {
-        if (source.ID != null) {
-            this.ID = new Long(source.ID);
+    public Tag(Tag source) {
+        if (source.TagKey != null) {
+            this.TagKey = new String(source.TagKey);
         }
-        if (source.ExportID != null) {
-            this.ExportID = new String(source.ExportID);
+        if (source.TagValue != null) {
+            this.TagValue = new String(source.TagValue);
         }
     }
 
@@ -90,8 +90,8 @@ public class DeleteLogExportRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "ID", this.ID);
-        this.setParamSimple(map, prefix + "ExportID", this.ExportID);
+        this.setParamSimple(map, prefix + "TagKey", this.TagKey);
+        this.setParamSimple(map, prefix + "TagValue", this.TagValue);
 
     }
 }

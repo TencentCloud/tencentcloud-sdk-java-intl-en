@@ -24,105 +24,105 @@ import java.util.HashMap;
 public class ApplicationProxy extends AbstractModel {
 
     /**
-    * The site ID.
+    * Site ID.
     */
     @SerializedName("ZoneId")
     @Expose
     private String ZoneId;
 
     /**
-    * The site name.
+    * Site name.
     */
     @SerializedName("ZoneName")
     @Expose
     private String ZoneName;
 
     /**
-    * The proxy ID.
+    * Proxy ID.
     */
     @SerializedName("ProxyId")
     @Expose
     private String ProxyId;
 
     /**
-    * The domain name or subdomain name when `ProxyType=hostname`.
-The instance name when `ProxyType=instance`.
+    * When ProxyType=hostname, it indicates a domain name or subdomain.
+When ProxyType=instance, it indicates the proxy name.
     */
     @SerializedName("ProxyName")
     @Expose
     private String ProxyName;
 
     /**
-    * The proxy type. Values:
-<li>`hostname`: The proxy is created by subdomain name.</li>
-<li>`instance`: The proxy is created by instance.</li>
+    * L4 proxy mode. Valid values:
+<li>`hostname`: Create by subdomain name;</li>
+<li>`instance`: Create by instance.</li>
     */
     @SerializedName("ProxyType")
     @Expose
     private String ProxyType;
 
     /**
-    * The scheduling mode. Values:
-<li>`ip`: Schedule via Anycast IP.</li>
-<li>`domain`: Schedule via CNAME.</li>
+    * Scheduling mode. Valid values:
+<li>`ip`: Anycast IP;</li>
+<li>`domain`: CNAME.</li>
     */
     @SerializedName("PlatType")
     @Expose
     private String PlatType;
 
     /**
-    * Acceleration region. Values:
-<li>`mainland`: Chinese mainland.</li>
-<li>`overseas`: Global (outside the Chinese mainland);</li>
-Default value: overseas.
+    * Acceleration region. Valid values:
+<li>mainland: within the Chinese mainland;</li>
+<li>overseas: global (excluding the Chinese mainland).</li>
+Default value: overseas
     */
     @SerializedName("Area")
     @Expose
     private String Area;
 
     /**
-    * Whether to enable security protection. Values:
-<li>`0`: Disable security protection.</li>
-<li>`1`: Enable security protection.</li>
+    * Whether security is enabled. Valid values:
+<li>0: Disable security;</li>
+<li>1: Enable security.</li>
     */
     @SerializedName("SecurityType")
     @Expose
     private Long SecurityType;
 
     /**
-    * Whether to enable acceleration. Values:
-<li>`0`: Disable acceleration.</li>
-<li>`1`: Enable acceleration.</li>
+    * Whether to enable acceleration. Valid values:
+<li>0: disable acceleration;</li>
+<li>1: Enable acceleration.</li>
     */
     @SerializedName("AccelerateType")
     @Expose
     private Long AccelerateType;
 
     /**
-    * Session hold time, unit: seconds.
+    * Session hold time, in seconds.
     */
     @SerializedName("SessionPersistTime")
     @Expose
     private Long SessionPersistTime;
 
     /**
-    * The rule status. Values:
-<li>`online`: Enabled</li>
-<li>`offline`: Disabled</li>
-<li>`progress`: Deploying</li>
-<li>`stopping`: Disabling</li>
-<li>`fail`: Failed to deploy or disable</li>
+    * Status. Valid values:
+<li>`online`: Enable;</li>
+<li>`offline`: Disable;</li>
+<li>progress: deploying;</li>
+<li>stopping: disabling;</li>
+<li>fail: deployment or disabling failed.</li>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * The blocking status of the proxy. Values:
-<li>`banned`: Blocked</li>
-<li>`banning`: Blocking</li>
-<li>`recover`: Unblocked</li>
-<li>`recovering`: Unblocking</li>
+    * Blocking status. Valid values:
+<li>banned: blocked;</li>
+<li>banning: Being banned;</li>
+<li>recover: unblocked;</li>
+<li>`recovering`: The name server is being unblocked.</li>
     */
     @SerializedName("BanStatus")
     @Expose
@@ -136,312 +136,312 @@ Default value: overseas.
     private String [] ScheduleValue;
 
     /**
-    * When `ProxyType=hostname`:
-This field indicates the unique ID of the subdomain name.
+    * When ProxyType=hostname:
+Indicates the unique ID of the proxy acceleration.
     */
     @SerializedName("HostId")
     @Expose
     private String HostId;
 
     /**
-    * The IPv6 access configuration.
+    * Ipv6 access configuration.
     */
     @SerializedName("Ipv6")
     @Expose
     private Ipv6 Ipv6;
 
     /**
-    * The update time.
+    * Update time.
     */
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
 
     /**
-    * List of rules.
+    * Rule list.
     */
     @SerializedName("ApplicationProxyRules")
     @Expose
     private ApplicationProxyRule [] ApplicationProxyRules;
 
     /**
-    * Cross-MLC-border acceleration.
+    * Acceleration optimization configuration for the Chinese mainland.
     */
     @SerializedName("AccelerateMainland")
     @Expose
     private AccelerateMainland AccelerateMainland;
 
     /**
-     * Get The site ID. 
-     * @return ZoneId The site ID.
+     * Get Site ID. 
+     * @return ZoneId Site ID.
      */
     public String getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set The site ID.
-     * @param ZoneId The site ID.
+     * Set Site ID.
+     * @param ZoneId Site ID.
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get The site name. 
-     * @return ZoneName The site name.
+     * Get Site name. 
+     * @return ZoneName Site name.
      */
     public String getZoneName() {
         return this.ZoneName;
     }
 
     /**
-     * Set The site name.
-     * @param ZoneName The site name.
+     * Set Site name.
+     * @param ZoneName Site name.
      */
     public void setZoneName(String ZoneName) {
         this.ZoneName = ZoneName;
     }
 
     /**
-     * Get The proxy ID. 
-     * @return ProxyId The proxy ID.
+     * Get Proxy ID. 
+     * @return ProxyId Proxy ID.
      */
     public String getProxyId() {
         return this.ProxyId;
     }
 
     /**
-     * Set The proxy ID.
-     * @param ProxyId The proxy ID.
+     * Set Proxy ID.
+     * @param ProxyId Proxy ID.
      */
     public void setProxyId(String ProxyId) {
         this.ProxyId = ProxyId;
     }
 
     /**
-     * Get The domain name or subdomain name when `ProxyType=hostname`.
-The instance name when `ProxyType=instance`. 
-     * @return ProxyName The domain name or subdomain name when `ProxyType=hostname`.
-The instance name when `ProxyType=instance`.
+     * Get When ProxyType=hostname, it indicates a domain name or subdomain.
+When ProxyType=instance, it indicates the proxy name. 
+     * @return ProxyName When ProxyType=hostname, it indicates a domain name or subdomain.
+When ProxyType=instance, it indicates the proxy name.
      */
     public String getProxyName() {
         return this.ProxyName;
     }
 
     /**
-     * Set The domain name or subdomain name when `ProxyType=hostname`.
-The instance name when `ProxyType=instance`.
-     * @param ProxyName The domain name or subdomain name when `ProxyType=hostname`.
-The instance name when `ProxyType=instance`.
+     * Set When ProxyType=hostname, it indicates a domain name or subdomain.
+When ProxyType=instance, it indicates the proxy name.
+     * @param ProxyName When ProxyType=hostname, it indicates a domain name or subdomain.
+When ProxyType=instance, it indicates the proxy name.
      */
     public void setProxyName(String ProxyName) {
         this.ProxyName = ProxyName;
     }
 
     /**
-     * Get The proxy type. Values:
-<li>`hostname`: The proxy is created by subdomain name.</li>
-<li>`instance`: The proxy is created by instance.</li> 
-     * @return ProxyType The proxy type. Values:
-<li>`hostname`: The proxy is created by subdomain name.</li>
-<li>`instance`: The proxy is created by instance.</li>
+     * Get L4 proxy mode. Valid values:
+<li>`hostname`: Create by subdomain name;</li>
+<li>`instance`: Create by instance.</li> 
+     * @return ProxyType L4 proxy mode. Valid values:
+<li>`hostname`: Create by subdomain name;</li>
+<li>`instance`: Create by instance.</li>
      */
     public String getProxyType() {
         return this.ProxyType;
     }
 
     /**
-     * Set The proxy type. Values:
-<li>`hostname`: The proxy is created by subdomain name.</li>
-<li>`instance`: The proxy is created by instance.</li>
-     * @param ProxyType The proxy type. Values:
-<li>`hostname`: The proxy is created by subdomain name.</li>
-<li>`instance`: The proxy is created by instance.</li>
+     * Set L4 proxy mode. Valid values:
+<li>`hostname`: Create by subdomain name;</li>
+<li>`instance`: Create by instance.</li>
+     * @param ProxyType L4 proxy mode. Valid values:
+<li>`hostname`: Create by subdomain name;</li>
+<li>`instance`: Create by instance.</li>
      */
     public void setProxyType(String ProxyType) {
         this.ProxyType = ProxyType;
     }
 
     /**
-     * Get The scheduling mode. Values:
-<li>`ip`: Schedule via Anycast IP.</li>
-<li>`domain`: Schedule via CNAME.</li> 
-     * @return PlatType The scheduling mode. Values:
-<li>`ip`: Schedule via Anycast IP.</li>
-<li>`domain`: Schedule via CNAME.</li>
+     * Get Scheduling mode. Valid values:
+<li>`ip`: Anycast IP;</li>
+<li>`domain`: CNAME.</li> 
+     * @return PlatType Scheduling mode. Valid values:
+<li>`ip`: Anycast IP;</li>
+<li>`domain`: CNAME.</li>
      */
     public String getPlatType() {
         return this.PlatType;
     }
 
     /**
-     * Set The scheduling mode. Values:
-<li>`ip`: Schedule via Anycast IP.</li>
-<li>`domain`: Schedule via CNAME.</li>
-     * @param PlatType The scheduling mode. Values:
-<li>`ip`: Schedule via Anycast IP.</li>
-<li>`domain`: Schedule via CNAME.</li>
+     * Set Scheduling mode. Valid values:
+<li>`ip`: Anycast IP;</li>
+<li>`domain`: CNAME.</li>
+     * @param PlatType Scheduling mode. Valid values:
+<li>`ip`: Anycast IP;</li>
+<li>`domain`: CNAME.</li>
      */
     public void setPlatType(String PlatType) {
         this.PlatType = PlatType;
     }
 
     /**
-     * Get Acceleration region. Values:
-<li>`mainland`: Chinese mainland.</li>
-<li>`overseas`: Global (outside the Chinese mainland);</li>
-Default value: overseas. 
-     * @return Area Acceleration region. Values:
-<li>`mainland`: Chinese mainland.</li>
-<li>`overseas`: Global (outside the Chinese mainland);</li>
-Default value: overseas.
+     * Get Acceleration region. Valid values:
+<li>mainland: within the Chinese mainland;</li>
+<li>overseas: global (excluding the Chinese mainland).</li>
+Default value: overseas 
+     * @return Area Acceleration region. Valid values:
+<li>mainland: within the Chinese mainland;</li>
+<li>overseas: global (excluding the Chinese mainland).</li>
+Default value: overseas
      */
     public String getArea() {
         return this.Area;
     }
 
     /**
-     * Set Acceleration region. Values:
-<li>`mainland`: Chinese mainland.</li>
-<li>`overseas`: Global (outside the Chinese mainland);</li>
-Default value: overseas.
-     * @param Area Acceleration region. Values:
-<li>`mainland`: Chinese mainland.</li>
-<li>`overseas`: Global (outside the Chinese mainland);</li>
-Default value: overseas.
+     * Set Acceleration region. Valid values:
+<li>mainland: within the Chinese mainland;</li>
+<li>overseas: global (excluding the Chinese mainland).</li>
+Default value: overseas
+     * @param Area Acceleration region. Valid values:
+<li>mainland: within the Chinese mainland;</li>
+<li>overseas: global (excluding the Chinese mainland).</li>
+Default value: overseas
      */
     public void setArea(String Area) {
         this.Area = Area;
     }
 
     /**
-     * Get Whether to enable security protection. Values:
-<li>`0`: Disable security protection.</li>
-<li>`1`: Enable security protection.</li> 
-     * @return SecurityType Whether to enable security protection. Values:
-<li>`0`: Disable security protection.</li>
-<li>`1`: Enable security protection.</li>
+     * Get Whether security is enabled. Valid values:
+<li>0: Disable security;</li>
+<li>1: Enable security.</li> 
+     * @return SecurityType Whether security is enabled. Valid values:
+<li>0: Disable security;</li>
+<li>1: Enable security.</li>
      */
     public Long getSecurityType() {
         return this.SecurityType;
     }
 
     /**
-     * Set Whether to enable security protection. Values:
-<li>`0`: Disable security protection.</li>
-<li>`1`: Enable security protection.</li>
-     * @param SecurityType Whether to enable security protection. Values:
-<li>`0`: Disable security protection.</li>
-<li>`1`: Enable security protection.</li>
+     * Set Whether security is enabled. Valid values:
+<li>0: Disable security;</li>
+<li>1: Enable security.</li>
+     * @param SecurityType Whether security is enabled. Valid values:
+<li>0: Disable security;</li>
+<li>1: Enable security.</li>
      */
     public void setSecurityType(Long SecurityType) {
         this.SecurityType = SecurityType;
     }
 
     /**
-     * Get Whether to enable acceleration. Values:
-<li>`0`: Disable acceleration.</li>
-<li>`1`: Enable acceleration.</li> 
-     * @return AccelerateType Whether to enable acceleration. Values:
-<li>`0`: Disable acceleration.</li>
-<li>`1`: Enable acceleration.</li>
+     * Get Whether to enable acceleration. Valid values:
+<li>0: disable acceleration;</li>
+<li>1: Enable acceleration.</li> 
+     * @return AccelerateType Whether to enable acceleration. Valid values:
+<li>0: disable acceleration;</li>
+<li>1: Enable acceleration.</li>
      */
     public Long getAccelerateType() {
         return this.AccelerateType;
     }
 
     /**
-     * Set Whether to enable acceleration. Values:
-<li>`0`: Disable acceleration.</li>
-<li>`1`: Enable acceleration.</li>
-     * @param AccelerateType Whether to enable acceleration. Values:
-<li>`0`: Disable acceleration.</li>
-<li>`1`: Enable acceleration.</li>
+     * Set Whether to enable acceleration. Valid values:
+<li>0: disable acceleration;</li>
+<li>1: Enable acceleration.</li>
+     * @param AccelerateType Whether to enable acceleration. Valid values:
+<li>0: disable acceleration;</li>
+<li>1: Enable acceleration.</li>
      */
     public void setAccelerateType(Long AccelerateType) {
         this.AccelerateType = AccelerateType;
     }
 
     /**
-     * Get Session hold time, unit: seconds. 
-     * @return SessionPersistTime Session hold time, unit: seconds.
+     * Get Session hold time, in seconds. 
+     * @return SessionPersistTime Session hold time, in seconds.
      */
     public Long getSessionPersistTime() {
         return this.SessionPersistTime;
     }
 
     /**
-     * Set Session hold time, unit: seconds.
-     * @param SessionPersistTime Session hold time, unit: seconds.
+     * Set Session hold time, in seconds.
+     * @param SessionPersistTime Session hold time, in seconds.
      */
     public void setSessionPersistTime(Long SessionPersistTime) {
         this.SessionPersistTime = SessionPersistTime;
     }
 
     /**
-     * Get The rule status. Values:
-<li>`online`: Enabled</li>
-<li>`offline`: Disabled</li>
-<li>`progress`: Deploying</li>
-<li>`stopping`: Disabling</li>
-<li>`fail`: Failed to deploy or disable</li> 
-     * @return Status The rule status. Values:
-<li>`online`: Enabled</li>
-<li>`offline`: Disabled</li>
-<li>`progress`: Deploying</li>
-<li>`stopping`: Disabling</li>
-<li>`fail`: Failed to deploy or disable</li>
+     * Get Status. Valid values:
+<li>`online`: Enable;</li>
+<li>`offline`: Disable;</li>
+<li>progress: deploying;</li>
+<li>stopping: disabling;</li>
+<li>fail: deployment or disabling failed.</li> 
+     * @return Status Status. Valid values:
+<li>`online`: Enable;</li>
+<li>`offline`: Disable;</li>
+<li>progress: deploying;</li>
+<li>stopping: disabling;</li>
+<li>fail: deployment or disabling failed.</li>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set The rule status. Values:
-<li>`online`: Enabled</li>
-<li>`offline`: Disabled</li>
-<li>`progress`: Deploying</li>
-<li>`stopping`: Disabling</li>
-<li>`fail`: Failed to deploy or disable</li>
-     * @param Status The rule status. Values:
-<li>`online`: Enabled</li>
-<li>`offline`: Disabled</li>
-<li>`progress`: Deploying</li>
-<li>`stopping`: Disabling</li>
-<li>`fail`: Failed to deploy or disable</li>
+     * Set Status. Valid values:
+<li>`online`: Enable;</li>
+<li>`offline`: Disable;</li>
+<li>progress: deploying;</li>
+<li>stopping: disabling;</li>
+<li>fail: deployment or disabling failed.</li>
+     * @param Status Status. Valid values:
+<li>`online`: Enable;</li>
+<li>`offline`: Disable;</li>
+<li>progress: deploying;</li>
+<li>stopping: disabling;</li>
+<li>fail: deployment or disabling failed.</li>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get The blocking status of the proxy. Values:
-<li>`banned`: Blocked</li>
-<li>`banning`: Blocking</li>
-<li>`recover`: Unblocked</li>
-<li>`recovering`: Unblocking</li> 
-     * @return BanStatus The blocking status of the proxy. Values:
-<li>`banned`: Blocked</li>
-<li>`banning`: Blocking</li>
-<li>`recover`: Unblocked</li>
-<li>`recovering`: Unblocking</li>
+     * Get Blocking status. Valid values:
+<li>banned: blocked;</li>
+<li>banning: Being banned;</li>
+<li>recover: unblocked;</li>
+<li>`recovering`: The name server is being unblocked.</li> 
+     * @return BanStatus Blocking status. Valid values:
+<li>banned: blocked;</li>
+<li>banning: Being banned;</li>
+<li>recover: unblocked;</li>
+<li>`recovering`: The name server is being unblocked.</li>
      */
     public String getBanStatus() {
         return this.BanStatus;
     }
 
     /**
-     * Set The blocking status of the proxy. Values:
-<li>`banned`: Blocked</li>
-<li>`banning`: Blocking</li>
-<li>`recover`: Unblocked</li>
-<li>`recovering`: Unblocking</li>
-     * @param BanStatus The blocking status of the proxy. Values:
-<li>`banned`: Blocked</li>
-<li>`banning`: Blocking</li>
-<li>`recover`: Unblocked</li>
-<li>`recovering`: Unblocking</li>
+     * Set Blocking status. Valid values:
+<li>banned: blocked;</li>
+<li>banning: Being banned;</li>
+<li>recover: unblocked;</li>
+<li>`recovering`: The name server is being unblocked.</li>
+     * @param BanStatus Blocking status. Valid values:
+<li>banned: blocked;</li>
+<li>banning: Being banned;</li>
+<li>recover: unblocked;</li>
+<li>`recovering`: The name server is being unblocked.</li>
      */
     public void setBanStatus(String BanStatus) {
         this.BanStatus = BanStatus;
@@ -464,84 +464,84 @@ Default value: overseas.
     }
 
     /**
-     * Get When `ProxyType=hostname`:
-This field indicates the unique ID of the subdomain name. 
-     * @return HostId When `ProxyType=hostname`:
-This field indicates the unique ID of the subdomain name.
+     * Get When ProxyType=hostname:
+Indicates the unique ID of the proxy acceleration. 
+     * @return HostId When ProxyType=hostname:
+Indicates the unique ID of the proxy acceleration.
      */
     public String getHostId() {
         return this.HostId;
     }
 
     /**
-     * Set When `ProxyType=hostname`:
-This field indicates the unique ID of the subdomain name.
-     * @param HostId When `ProxyType=hostname`:
-This field indicates the unique ID of the subdomain name.
+     * Set When ProxyType=hostname:
+Indicates the unique ID of the proxy acceleration.
+     * @param HostId When ProxyType=hostname:
+Indicates the unique ID of the proxy acceleration.
      */
     public void setHostId(String HostId) {
         this.HostId = HostId;
     }
 
     /**
-     * Get The IPv6 access configuration. 
-     * @return Ipv6 The IPv6 access configuration.
+     * Get Ipv6 access configuration. 
+     * @return Ipv6 Ipv6 access configuration.
      */
     public Ipv6 getIpv6() {
         return this.Ipv6;
     }
 
     /**
-     * Set The IPv6 access configuration.
-     * @param Ipv6 The IPv6 access configuration.
+     * Set Ipv6 access configuration.
+     * @param Ipv6 Ipv6 access configuration.
      */
     public void setIpv6(Ipv6 Ipv6) {
         this.Ipv6 = Ipv6;
     }
 
     /**
-     * Get The update time. 
-     * @return UpdateTime The update time.
+     * Get Update time. 
+     * @return UpdateTime Update time.
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set The update time.
-     * @param UpdateTime The update time.
+     * Set Update time.
+     * @param UpdateTime Update time.
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
     }
 
     /**
-     * Get List of rules. 
-     * @return ApplicationProxyRules List of rules.
+     * Get Rule list. 
+     * @return ApplicationProxyRules Rule list.
      */
     public ApplicationProxyRule [] getApplicationProxyRules() {
         return this.ApplicationProxyRules;
     }
 
     /**
-     * Set List of rules.
-     * @param ApplicationProxyRules List of rules.
+     * Set Rule list.
+     * @param ApplicationProxyRules Rule list.
      */
     public void setApplicationProxyRules(ApplicationProxyRule [] ApplicationProxyRules) {
         this.ApplicationProxyRules = ApplicationProxyRules;
     }
 
     /**
-     * Get Cross-MLC-border acceleration. 
-     * @return AccelerateMainland Cross-MLC-border acceleration.
+     * Get Acceleration optimization configuration for the Chinese mainland. 
+     * @return AccelerateMainland Acceleration optimization configuration for the Chinese mainland.
      */
     public AccelerateMainland getAccelerateMainland() {
         return this.AccelerateMainland;
     }
 
     /**
-     * Set Cross-MLC-border acceleration.
-     * @param AccelerateMainland Cross-MLC-border acceleration.
+     * Set Acceleration optimization configuration for the Chinese mainland.
+     * @param AccelerateMainland Acceleration optimization configuration for the Chinese mainland.
      */
     public void setAccelerateMainland(AccelerateMainland AccelerateMainland) {
         this.AccelerateMainland = AccelerateMainland;

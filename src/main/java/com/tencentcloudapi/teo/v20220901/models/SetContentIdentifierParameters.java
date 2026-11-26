@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class SetContentIdentifierParameters extends AbstractModel {
 
     /**
-    * Content identifier id.
+    * Content identifier ID
     */
     @SerializedName("ContentIdentifier")
     @Expose
     private String ContentIdentifier;
 
     /**
-     * Get Content identifier id. 
-     * @return ContentIdentifier Content identifier id.
+     * Get Content identifier ID 
+     * @return ContentIdentifier Content identifier ID
      */
     public String getContentIdentifier() {
         return this.ContentIdentifier;
     }
 
     /**
-     * Set Content identifier id.
-     * @param ContentIdentifier Content identifier id.
+     * Set Content identifier ID
+     * @param ContentIdentifier Content identifier ID
      */
     public void setContentIdentifier(String ContentIdentifier) {
         this.ContentIdentifier = ContentIdentifier;

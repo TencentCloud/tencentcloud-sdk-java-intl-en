@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class ModifyResponseHeaderParameters extends AbstractModel {
 
     /**
-    * HTTP origin header rule list.
+    * List of HTTP origin-pull header rules.
     */
     @SerializedName("HeaderActions")
     @Expose
     private HeaderAction [] HeaderActions;
 
     /**
-     * Get HTTP origin header rule list. 
-     * @return HeaderActions HTTP origin header rule list.
+     * Get List of HTTP origin-pull header rules. 
+     * @return HeaderActions List of HTTP origin-pull header rules.
      */
     public HeaderAction [] getHeaderActions() {
         return this.HeaderActions;
     }
 
     /**
-     * Set HTTP origin header rule list.
-     * @param HeaderActions HTTP origin header rule list.
+     * Set List of HTTP origin-pull header rules.
+     * @param HeaderActions List of HTTP origin-pull header rules.
      */
     public void setHeaderActions(HeaderAction [] HeaderActions) {
         this.HeaderActions = HeaderActions;

@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class UpstreamURLRewriteParameters extends AbstractModel {
 
     /**
-    * Origin-Pull URL rewrite type. valid values: Path.
+    * Origin-pull URL rewrite type. Only Path is supported.
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * Origin-Pull URL rewrite action. valid values:.
-<li><b>replace</b>: replace the full Path. used to replace the complete request URL Path with the specified Path.
+    * Origin-pull URL rewrite action. Valid values:
+<li><b>replace</b>: Replaces the full Path. It is used to replace the complete request URL Path with the specified Path.</li>
 </li>
-<li><b>addPrefix</b>: add Path prefix. used to add specified Path prefix to request URL Path.</li>.
+<li><b>addPrefix</b>: Add a path prefix. It is used to add the specified path prefix to the request URL Path.</li>
 </li>
-<li><b>rmvPrefix</b>: specifies the removal of Path prefix. used to remove the specified Path prefix from the request URL Path.
+<li><b>rmvPrefix</b>: removes the path prefix. It is used to remove the specified path prefix from the request URL Path.</li>
 </li>
-<li><b>regexReplace</b>: refers to regular expression replacement of the full path. used for matching and replacing the full path via Google RE2 regular expressions.
+<li><b>regexReplace</b>: regular replacement full path. Used to match and replace the full path through Google RE2 regular expressions.</li>
 </li>
     */
     @SerializedName("Action")
@@ -46,53 +46,53 @@ public class UpstreamURLRewriteParameters extends AbstractModel {
     private String Action;
 
     /**
-    * Origin-Pull URL rewrite value. should meet URL Path standard and ensure the rewritten Path starts with / to prevent the Host of the origin-pull URL from being modified, with a length range of 1–1024. when Action is addPrefix, it cannot end with /. when Action is rmvPrefix, * cannot exist. when Action is regexReplace, $NUM can be used to refer to regular expression capture groups, where NUM represents the group number, such as $1, and supports up to $9.
+    * Origin-pull URL rewrite value. It should meet the URL Path specification and ensure the rewritten Path starts with / to prevent the Host of the origin-pull URL from being modified. Length range: 1–1024. When Action is addPrefix, it cannot end with /. When Action is rmvPrefix, * cannot exist. When Action is regexReplace, $NUM can be used to refer to a regular expression capture group, where NUM represents the group number, for example $1, with support up to $9.
     */
     @SerializedName("Value")
     @Expose
     private String Value;
 
     /**
-    * Origin-Pull URL rewrite used for regex replacement to match the full path regular expression. should meet Google RE2 standard with length range 1–1024. this field is required when Action is regexReplace, otherwise not required.
+    * Origin-pull URL rewrite uses a regex replacement to match the regular expression of the full path. It should meet the Google RE2 specification with a length range of 1–1024. This field is required when Action is regexReplace. Otherwise, no need to specify this field.
     */
     @SerializedName("Regex")
     @Expose
     private String Regex;
 
     /**
-     * Get Origin-Pull URL rewrite type. valid values: Path. 
-     * @return Type Origin-Pull URL rewrite type. valid values: Path.
+     * Get Origin-pull URL rewrite type. Only Path is supported. 
+     * @return Type Origin-pull URL rewrite type. Only Path is supported.
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Origin-Pull URL rewrite type. valid values: Path.
-     * @param Type Origin-Pull URL rewrite type. valid values: Path.
+     * Set Origin-pull URL rewrite type. Only Path is supported.
+     * @param Type Origin-pull URL rewrite type. Only Path is supported.
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get Origin-Pull URL rewrite action. valid values:.
-<li><b>replace</b>: replace the full Path. used to replace the complete request URL Path with the specified Path.
+     * Get Origin-pull URL rewrite action. Valid values:
+<li><b>replace</b>: Replaces the full Path. It is used to replace the complete request URL Path with the specified Path.</li>
 </li>
-<li><b>addPrefix</b>: add Path prefix. used to add specified Path prefix to request URL Path.</li>.
+<li><b>addPrefix</b>: Add a path prefix. It is used to add the specified path prefix to the request URL Path.</li>
 </li>
-<li><b>rmvPrefix</b>: specifies the removal of Path prefix. used to remove the specified Path prefix from the request URL Path.
+<li><b>rmvPrefix</b>: removes the path prefix. It is used to remove the specified path prefix from the request URL Path.</li>
 </li>
-<li><b>regexReplace</b>: refers to regular expression replacement of the full path. used for matching and replacing the full path via Google RE2 regular expressions.
+<li><b>regexReplace</b>: regular replacement full path. Used to match and replace the full path through Google RE2 regular expressions.</li>
 </li> 
-     * @return Action Origin-Pull URL rewrite action. valid values:.
-<li><b>replace</b>: replace the full Path. used to replace the complete request URL Path with the specified Path.
+     * @return Action Origin-pull URL rewrite action. Valid values:
+<li><b>replace</b>: Replaces the full Path. It is used to replace the complete request URL Path with the specified Path.</li>
 </li>
-<li><b>addPrefix</b>: add Path prefix. used to add specified Path prefix to request URL Path.</li>.
+<li><b>addPrefix</b>: Add a path prefix. It is used to add the specified path prefix to the request URL Path.</li>
 </li>
-<li><b>rmvPrefix</b>: specifies the removal of Path prefix. used to remove the specified Path prefix from the request URL Path.
+<li><b>rmvPrefix</b>: removes the path prefix. It is used to remove the specified path prefix from the request URL Path.</li>
 </li>
-<li><b>regexReplace</b>: refers to regular expression replacement of the full path. used for matching and replacing the full path via Google RE2 regular expressions.
+<li><b>regexReplace</b>: regular replacement full path. Used to match and replace the full path through Google RE2 regular expressions.</li>
 </li>
      */
     public String getAction() {
@@ -100,23 +100,23 @@ public class UpstreamURLRewriteParameters extends AbstractModel {
     }
 
     /**
-     * Set Origin-Pull URL rewrite action. valid values:.
-<li><b>replace</b>: replace the full Path. used to replace the complete request URL Path with the specified Path.
+     * Set Origin-pull URL rewrite action. Valid values:
+<li><b>replace</b>: Replaces the full Path. It is used to replace the complete request URL Path with the specified Path.</li>
 </li>
-<li><b>addPrefix</b>: add Path prefix. used to add specified Path prefix to request URL Path.</li>.
+<li><b>addPrefix</b>: Add a path prefix. It is used to add the specified path prefix to the request URL Path.</li>
 </li>
-<li><b>rmvPrefix</b>: specifies the removal of Path prefix. used to remove the specified Path prefix from the request URL Path.
+<li><b>rmvPrefix</b>: removes the path prefix. It is used to remove the specified path prefix from the request URL Path.</li>
 </li>
-<li><b>regexReplace</b>: refers to regular expression replacement of the full path. used for matching and replacing the full path via Google RE2 regular expressions.
+<li><b>regexReplace</b>: regular replacement full path. Used to match and replace the full path through Google RE2 regular expressions.</li>
 </li>
-     * @param Action Origin-Pull URL rewrite action. valid values:.
-<li><b>replace</b>: replace the full Path. used to replace the complete request URL Path with the specified Path.
+     * @param Action Origin-pull URL rewrite action. Valid values:
+<li><b>replace</b>: Replaces the full Path. It is used to replace the complete request URL Path with the specified Path.</li>
 </li>
-<li><b>addPrefix</b>: add Path prefix. used to add specified Path prefix to request URL Path.</li>.
+<li><b>addPrefix</b>: Add a path prefix. It is used to add the specified path prefix to the request URL Path.</li>
 </li>
-<li><b>rmvPrefix</b>: specifies the removal of Path prefix. used to remove the specified Path prefix from the request URL Path.
+<li><b>rmvPrefix</b>: removes the path prefix. It is used to remove the specified path prefix from the request URL Path.</li>
 </li>
-<li><b>regexReplace</b>: refers to regular expression replacement of the full path. used for matching and replacing the full path via Google RE2 regular expressions.
+<li><b>regexReplace</b>: regular replacement full path. Used to match and replace the full path through Google RE2 regular expressions.</li>
 </li>
      */
     public void setAction(String Action) {
@@ -124,32 +124,32 @@ public class UpstreamURLRewriteParameters extends AbstractModel {
     }
 
     /**
-     * Get Origin-Pull URL rewrite value. should meet URL Path standard and ensure the rewritten Path starts with / to prevent the Host of the origin-pull URL from being modified, with a length range of 1–1024. when Action is addPrefix, it cannot end with /. when Action is rmvPrefix, * cannot exist. when Action is regexReplace, $NUM can be used to refer to regular expression capture groups, where NUM represents the group number, such as $1, and supports up to $9. 
-     * @return Value Origin-Pull URL rewrite value. should meet URL Path standard and ensure the rewritten Path starts with / to prevent the Host of the origin-pull URL from being modified, with a length range of 1–1024. when Action is addPrefix, it cannot end with /. when Action is rmvPrefix, * cannot exist. when Action is regexReplace, $NUM can be used to refer to regular expression capture groups, where NUM represents the group number, such as $1, and supports up to $9.
+     * Get Origin-pull URL rewrite value. It should meet the URL Path specification and ensure the rewritten Path starts with / to prevent the Host of the origin-pull URL from being modified. Length range: 1–1024. When Action is addPrefix, it cannot end with /. When Action is rmvPrefix, * cannot exist. When Action is regexReplace, $NUM can be used to refer to a regular expression capture group, where NUM represents the group number, for example $1, with support up to $9. 
+     * @return Value Origin-pull URL rewrite value. It should meet the URL Path specification and ensure the rewritten Path starts with / to prevent the Host of the origin-pull URL from being modified. Length range: 1–1024. When Action is addPrefix, it cannot end with /. When Action is rmvPrefix, * cannot exist. When Action is regexReplace, $NUM can be used to refer to a regular expression capture group, where NUM represents the group number, for example $1, with support up to $9.
      */
     public String getValue() {
         return this.Value;
     }
 
     /**
-     * Set Origin-Pull URL rewrite value. should meet URL Path standard and ensure the rewritten Path starts with / to prevent the Host of the origin-pull URL from being modified, with a length range of 1–1024. when Action is addPrefix, it cannot end with /. when Action is rmvPrefix, * cannot exist. when Action is regexReplace, $NUM can be used to refer to regular expression capture groups, where NUM represents the group number, such as $1, and supports up to $9.
-     * @param Value Origin-Pull URL rewrite value. should meet URL Path standard and ensure the rewritten Path starts with / to prevent the Host of the origin-pull URL from being modified, with a length range of 1–1024. when Action is addPrefix, it cannot end with /. when Action is rmvPrefix, * cannot exist. when Action is regexReplace, $NUM can be used to refer to regular expression capture groups, where NUM represents the group number, such as $1, and supports up to $9.
+     * Set Origin-pull URL rewrite value. It should meet the URL Path specification and ensure the rewritten Path starts with / to prevent the Host of the origin-pull URL from being modified. Length range: 1–1024. When Action is addPrefix, it cannot end with /. When Action is rmvPrefix, * cannot exist. When Action is regexReplace, $NUM can be used to refer to a regular expression capture group, where NUM represents the group number, for example $1, with support up to $9.
+     * @param Value Origin-pull URL rewrite value. It should meet the URL Path specification and ensure the rewritten Path starts with / to prevent the Host of the origin-pull URL from being modified. Length range: 1–1024. When Action is addPrefix, it cannot end with /. When Action is rmvPrefix, * cannot exist. When Action is regexReplace, $NUM can be used to refer to a regular expression capture group, where NUM represents the group number, for example $1, with support up to $9.
      */
     public void setValue(String Value) {
         this.Value = Value;
     }
 
     /**
-     * Get Origin-Pull URL rewrite used for regex replacement to match the full path regular expression. should meet Google RE2 standard with length range 1–1024. this field is required when Action is regexReplace, otherwise not required. 
-     * @return Regex Origin-Pull URL rewrite used for regex replacement to match the full path regular expression. should meet Google RE2 standard with length range 1–1024. this field is required when Action is regexReplace, otherwise not required.
+     * Get Origin-pull URL rewrite uses a regex replacement to match the regular expression of the full path. It should meet the Google RE2 specification with a length range of 1–1024. This field is required when Action is regexReplace. Otherwise, no need to specify this field. 
+     * @return Regex Origin-pull URL rewrite uses a regex replacement to match the regular expression of the full path. It should meet the Google RE2 specification with a length range of 1–1024. This field is required when Action is regexReplace. Otherwise, no need to specify this field.
      */
     public String getRegex() {
         return this.Regex;
     }
 
     /**
-     * Set Origin-Pull URL rewrite used for regex replacement to match the full path regular expression. should meet Google RE2 standard with length range 1–1024. this field is required when Action is regexReplace, otherwise not required.
-     * @param Regex Origin-Pull URL rewrite used for regex replacement to match the full path regular expression. should meet Google RE2 standard with length range 1–1024. this field is required when Action is regexReplace, otherwise not required.
+     * Set Origin-pull URL rewrite uses a regex replacement to match the regular expression of the full path. It should meet the Google RE2 specification with a length range of 1–1024. This field is required when Action is regexReplace. Otherwise, no need to specify this field.
+     * @param Regex Origin-pull URL rewrite uses a regex replacement to match the regular expression of the full path. It should meet the Google RE2 specification with a length range of 1–1024. This field is required when Action is regexReplace. Otherwise, no need to specify this field.
      */
     public void setRegex(String Regex) {
         this.Regex = Regex;

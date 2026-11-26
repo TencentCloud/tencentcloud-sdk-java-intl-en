@@ -38,8 +38,8 @@ public class DescribeDeployHistoryRequest extends AbstractModel {
     private String EnvId;
 
     /**
-    * Filtering condition. The maximum value of Filters.Values is 20. Detailed filtering conditions: 
-<li>record-id: Filter by release record ID. </li>
+    * Filter criteria. The maximum number of Filters.Values is 20. The detailed filter criteria are as follows:
+<li>record-id: Filter by release record ID.</li>
     */
     @SerializedName("Filters")
     @Expose
@@ -78,20 +78,20 @@ public class DescribeDeployHistoryRequest extends AbstractModel {
     }
 
     /**
-     * Get Filtering condition. The maximum value of Filters.Values is 20. Detailed filtering conditions: 
-<li>record-id: Filter by release record ID. </li> 
-     * @return Filters Filtering condition. The maximum value of Filters.Values is 20. Detailed filtering conditions: 
-<li>record-id: Filter by release record ID. </li>
+     * Get Filter criteria. The maximum number of Filters.Values is 20. The detailed filter criteria are as follows:
+<li>record-id: Filter by release record ID.</li> 
+     * @return Filters Filter criteria. The maximum number of Filters.Values is 20. The detailed filter criteria are as follows:
+<li>record-id: Filter by release record ID.</li>
      */
     public AdvancedFilter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set Filtering condition. The maximum value of Filters.Values is 20. Detailed filtering conditions: 
-<li>record-id: Filter by release record ID. </li>
-     * @param Filters Filtering condition. The maximum value of Filters.Values is 20. Detailed filtering conditions: 
-<li>record-id: Filter by release record ID. </li>
+     * Set Filter criteria. The maximum number of Filters.Values is 20. The detailed filter criteria are as follows:
+<li>record-id: Filter by release record ID.</li>
+     * @param Filters Filter criteria. The maximum number of Filters.Values is 20. The detailed filter criteria are as follows:
+<li>record-id: Filter by release record ID.</li>
      */
     public void setFilters(AdvancedFilter [] Filters) {
         this.Filters = Filters;

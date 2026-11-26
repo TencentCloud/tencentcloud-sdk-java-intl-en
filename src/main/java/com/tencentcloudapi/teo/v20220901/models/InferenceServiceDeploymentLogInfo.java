@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class InferenceServiceDeploymentLogInfo extends AbstractModel {
 
     /**
-    * Message content of log messages.
+    * Log message content.
     */
     @SerializedName("LogMessage")
     @Expose
@@ -38,16 +38,16 @@ public class InferenceServiceDeploymentLogInfo extends AbstractModel {
     private String Timestamp;
 
     /**
-     * Get Message content of log messages. 
-     * @return LogMessage Message content of log messages.
+     * Get Log message content. 
+     * @return LogMessage Log message content.
      */
     public String getLogMessage() {
         return this.LogMessage;
     }
 
     /**
-     * Set Message content of log messages.
-     * @param LogMessage Message content of log messages.
+     * Set Log message content.
+     * @param LogMessage Log message content.
      */
     public void setLogMessage(String LogMessage) {
         this.LogMessage = LogMessage;

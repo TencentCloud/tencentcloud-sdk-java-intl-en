@@ -24,412 +24,412 @@ import java.util.HashMap;
 public class BotUserRule extends AbstractModel {
 
     /**
-    * 
+    * Rule name can only contain English characters, digits, and underscores, and cannot begin with an underscore.
     */
     @SerializedName("RuleName")
     @Expose
     private String RuleName;
 
     /**
-    * The action. Values:
-<li>`drop`: Block the request</li>
-<li>`monitor`: Observe</li>
-<li>`trans`: Allow</li>
-<li>`redirect`: Redirect the request</li>
-<li>`page`: Return the specified page</li>
-<li>`alg`: JavaScript challenge</li>
-<li>`captcha`: Managed challenge</li>
-<li>`random`: Handle the request randomly by the weight</li>
-<li>`silence`: Keep the connection but do not response to the client</li>
-<li>`shortdelay`: Add a short latency period</li>
-<li>`longdelay`: Add a long latency period</li>
+    * Disposal actions. Valid values:
+<li>drop: block;</li>
+<li>monitor: observation;</li>
+<li>trans: pass;</li>
+<li>redirect: Redirection;</li>
+<li>page: Specified page;</li>
+<li>alg: JavaScript challenge;</li>
+<li>captcha: hosted challenge;</li>
+<li>random: Random disposal;</li>
+<li>silence: silence;</li>
+<li>shortdelay: short-term response;</li>
+<li>longdelay: long-time response.</li>
     */
     @SerializedName("Action")
     @Expose
     private String Action;
 
     /**
-    * The rule status. Values:
-<li>`on`: Enabled</li>
-<li>`off`: Disabled</li>Default value: `on`
+    * Rule status. Valid values:
+<li>`on`: Take effect;</li>
+<li>off: Not effective.</li>Default on takes effect.
     */
     @SerializedName("RuleStatus")
     @Expose
     private String RuleStatus;
 
     /**
-    * Details of the rule.
+    * Rule details.
     */
     @SerializedName("AclConditions")
     @Expose
     private AclCondition [] AclConditions;
 
     /**
-    * The rule weight. Value range: 0-100.
+    * Rule weight. Value range: 0-100.
     */
     @SerializedName("RulePriority")
     @Expose
     private Long RulePriority;
 
     /**
-    * Rule ID, which is only used as an output parameter.
+    * Rule Id. Output only.
     */
     @SerializedName("RuleID")
     @Expose
     private Long RuleID;
 
     /**
-    * [Currently unavailable] Specify the random action and percentage.
+    * Disposal method and proportion of random disposal. Optional for non-random disposal. Not currently supported.
     */
     @SerializedName("ExtendActions")
     @Expose
     private BotExtendAction [] ExtendActions;
 
     /**
-    * The filter. Values:
-<li>`sip`: Client IP</li>
-This parameter is left empty by default.
+    * Filter word. Valid values:
+<li>sip: Client IP.</li>
+Defaults to an empty string.
     */
     @SerializedName("FreqFields")
     @Expose
     private String [] FreqFields;
 
     /**
-    * The update time, which is only used as an output parameter.
+    * Update time. For output usage only.
     */
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
 
     /**
-    * Query scope. Values:
-<li>`source_to_eo`: (Response) Traffic going from the origin to EdgeOne.</li>
-<li>`client_to_eo`: (Request) Traffic going from the client to EdgeOne.</li>
-Default: `source_to_eo`.
+    * Statistical scope. Valid values:
+<li>source_to_eo: (Response) Origin server to EdgeOne;</li>
+<li>client_to_eo: (request) Client to EdgeOne.</li>
+Default value: source_to_eo.
     */
     @SerializedName("FreqScope")
     @Expose
     private String [] FreqScope;
 
     /**
-    * Name of the custom return page. It's required when `Action=page`.
+    * Name of the custom return page. Required when Action is page, and cannot be empty.
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * ID of custom response. The ID can be obtained via the `DescribeCustomErrorPages` API. It's required when `Action=page`.	
+    * Custom response Id, which can be obtained through the customized error page list interface. The default value is `default`, which uses the system default page. Required and cannot be empty when Action is `page`.	
     */
     @SerializedName("CustomResponseId")
     @Expose
     private String CustomResponseId;
 
     /**
-    * The response code to trigger the return page. It's required when `Action=page`. Value: 100-600. 3xx response codes are not supported. Default value: 567.
+    * Custom response code for the return to page. Required when Action is page, and cannot be empty. Value range: 100–600. 3xx response codes are not supported. Default value: 567.
     */
     @SerializedName("ResponseCode")
     @Expose
     private Long ResponseCode;
 
     /**
-    * The redirection URL. It's required when `Action=redirect`.
+    * Address for redirection. Required when Action is `redirect` and cannot be empty.
     */
     @SerializedName("RedirectUrl")
     @Expose
     private String RedirectUrl;
 
     /**
-     * Get  
-     * @return RuleName 
+     * Get Rule name can only contain English characters, digits, and underscores, and cannot begin with an underscore. 
+     * @return RuleName Rule name can only contain English characters, digits, and underscores, and cannot begin with an underscore.
      */
     public String getRuleName() {
         return this.RuleName;
     }
 
     /**
-     * Set 
-     * @param RuleName 
+     * Set Rule name can only contain English characters, digits, and underscores, and cannot begin with an underscore.
+     * @param RuleName Rule name can only contain English characters, digits, and underscores, and cannot begin with an underscore.
      */
     public void setRuleName(String RuleName) {
         this.RuleName = RuleName;
     }
 
     /**
-     * Get The action. Values:
-<li>`drop`: Block the request</li>
-<li>`monitor`: Observe</li>
-<li>`trans`: Allow</li>
-<li>`redirect`: Redirect the request</li>
-<li>`page`: Return the specified page</li>
-<li>`alg`: JavaScript challenge</li>
-<li>`captcha`: Managed challenge</li>
-<li>`random`: Handle the request randomly by the weight</li>
-<li>`silence`: Keep the connection but do not response to the client</li>
-<li>`shortdelay`: Add a short latency period</li>
-<li>`longdelay`: Add a long latency period</li> 
-     * @return Action The action. Values:
-<li>`drop`: Block the request</li>
-<li>`monitor`: Observe</li>
-<li>`trans`: Allow</li>
-<li>`redirect`: Redirect the request</li>
-<li>`page`: Return the specified page</li>
-<li>`alg`: JavaScript challenge</li>
-<li>`captcha`: Managed challenge</li>
-<li>`random`: Handle the request randomly by the weight</li>
-<li>`silence`: Keep the connection but do not response to the client</li>
-<li>`shortdelay`: Add a short latency period</li>
-<li>`longdelay`: Add a long latency period</li>
+     * Get Disposal actions. Valid values:
+<li>drop: block;</li>
+<li>monitor: observation;</li>
+<li>trans: pass;</li>
+<li>redirect: Redirection;</li>
+<li>page: Specified page;</li>
+<li>alg: JavaScript challenge;</li>
+<li>captcha: hosted challenge;</li>
+<li>random: Random disposal;</li>
+<li>silence: silence;</li>
+<li>shortdelay: short-term response;</li>
+<li>longdelay: long-time response.</li> 
+     * @return Action Disposal actions. Valid values:
+<li>drop: block;</li>
+<li>monitor: observation;</li>
+<li>trans: pass;</li>
+<li>redirect: Redirection;</li>
+<li>page: Specified page;</li>
+<li>alg: JavaScript challenge;</li>
+<li>captcha: hosted challenge;</li>
+<li>random: Random disposal;</li>
+<li>silence: silence;</li>
+<li>shortdelay: short-term response;</li>
+<li>longdelay: long-time response.</li>
      */
     public String getAction() {
         return this.Action;
     }
 
     /**
-     * Set The action. Values:
-<li>`drop`: Block the request</li>
-<li>`monitor`: Observe</li>
-<li>`trans`: Allow</li>
-<li>`redirect`: Redirect the request</li>
-<li>`page`: Return the specified page</li>
-<li>`alg`: JavaScript challenge</li>
-<li>`captcha`: Managed challenge</li>
-<li>`random`: Handle the request randomly by the weight</li>
-<li>`silence`: Keep the connection but do not response to the client</li>
-<li>`shortdelay`: Add a short latency period</li>
-<li>`longdelay`: Add a long latency period</li>
-     * @param Action The action. Values:
-<li>`drop`: Block the request</li>
-<li>`monitor`: Observe</li>
-<li>`trans`: Allow</li>
-<li>`redirect`: Redirect the request</li>
-<li>`page`: Return the specified page</li>
-<li>`alg`: JavaScript challenge</li>
-<li>`captcha`: Managed challenge</li>
-<li>`random`: Handle the request randomly by the weight</li>
-<li>`silence`: Keep the connection but do not response to the client</li>
-<li>`shortdelay`: Add a short latency period</li>
-<li>`longdelay`: Add a long latency period</li>
+     * Set Disposal actions. Valid values:
+<li>drop: block;</li>
+<li>monitor: observation;</li>
+<li>trans: pass;</li>
+<li>redirect: Redirection;</li>
+<li>page: Specified page;</li>
+<li>alg: JavaScript challenge;</li>
+<li>captcha: hosted challenge;</li>
+<li>random: Random disposal;</li>
+<li>silence: silence;</li>
+<li>shortdelay: short-term response;</li>
+<li>longdelay: long-time response.</li>
+     * @param Action Disposal actions. Valid values:
+<li>drop: block;</li>
+<li>monitor: observation;</li>
+<li>trans: pass;</li>
+<li>redirect: Redirection;</li>
+<li>page: Specified page;</li>
+<li>alg: JavaScript challenge;</li>
+<li>captcha: hosted challenge;</li>
+<li>random: Random disposal;</li>
+<li>silence: silence;</li>
+<li>shortdelay: short-term response;</li>
+<li>longdelay: long-time response.</li>
      */
     public void setAction(String Action) {
         this.Action = Action;
     }
 
     /**
-     * Get The rule status. Values:
-<li>`on`: Enabled</li>
-<li>`off`: Disabled</li>Default value: `on` 
-     * @return RuleStatus The rule status. Values:
-<li>`on`: Enabled</li>
-<li>`off`: Disabled</li>Default value: `on`
+     * Get Rule status. Valid values:
+<li>`on`: Take effect;</li>
+<li>off: Not effective.</li>Default on takes effect. 
+     * @return RuleStatus Rule status. Valid values:
+<li>`on`: Take effect;</li>
+<li>off: Not effective.</li>Default on takes effect.
      */
     public String getRuleStatus() {
         return this.RuleStatus;
     }
 
     /**
-     * Set The rule status. Values:
-<li>`on`: Enabled</li>
-<li>`off`: Disabled</li>Default value: `on`
-     * @param RuleStatus The rule status. Values:
-<li>`on`: Enabled</li>
-<li>`off`: Disabled</li>Default value: `on`
+     * Set Rule status. Valid values:
+<li>`on`: Take effect;</li>
+<li>off: Not effective.</li>Default on takes effect.
+     * @param RuleStatus Rule status. Valid values:
+<li>`on`: Take effect;</li>
+<li>off: Not effective.</li>Default on takes effect.
      */
     public void setRuleStatus(String RuleStatus) {
         this.RuleStatus = RuleStatus;
     }
 
     /**
-     * Get Details of the rule. 
-     * @return AclConditions Details of the rule.
+     * Get Rule details. 
+     * @return AclConditions Rule details.
      */
     public AclCondition [] getAclConditions() {
         return this.AclConditions;
     }
 
     /**
-     * Set Details of the rule.
-     * @param AclConditions Details of the rule.
+     * Set Rule details.
+     * @param AclConditions Rule details.
      */
     public void setAclConditions(AclCondition [] AclConditions) {
         this.AclConditions = AclConditions;
     }
 
     /**
-     * Get The rule weight. Value range: 0-100. 
-     * @return RulePriority The rule weight. Value range: 0-100.
+     * Get Rule weight. Value range: 0-100. 
+     * @return RulePriority Rule weight. Value range: 0-100.
      */
     public Long getRulePriority() {
         return this.RulePriority;
     }
 
     /**
-     * Set The rule weight. Value range: 0-100.
-     * @param RulePriority The rule weight. Value range: 0-100.
+     * Set Rule weight. Value range: 0-100.
+     * @param RulePriority Rule weight. Value range: 0-100.
      */
     public void setRulePriority(Long RulePriority) {
         this.RulePriority = RulePriority;
     }
 
     /**
-     * Get Rule ID, which is only used as an output parameter. 
-     * @return RuleID Rule ID, which is only used as an output parameter.
+     * Get Rule Id. Output only. 
+     * @return RuleID Rule Id. Output only.
      */
     public Long getRuleID() {
         return this.RuleID;
     }
 
     /**
-     * Set Rule ID, which is only used as an output parameter.
-     * @param RuleID Rule ID, which is only used as an output parameter.
+     * Set Rule Id. Output only.
+     * @param RuleID Rule Id. Output only.
      */
     public void setRuleID(Long RuleID) {
         this.RuleID = RuleID;
     }
 
     /**
-     * Get [Currently unavailable] Specify the random action and percentage. 
-     * @return ExtendActions [Currently unavailable] Specify the random action and percentage.
+     * Get Disposal method and proportion of random disposal. Optional for non-random disposal. Not currently supported. 
+     * @return ExtendActions Disposal method and proportion of random disposal. Optional for non-random disposal. Not currently supported.
      */
     public BotExtendAction [] getExtendActions() {
         return this.ExtendActions;
     }
 
     /**
-     * Set [Currently unavailable] Specify the random action and percentage.
-     * @param ExtendActions [Currently unavailable] Specify the random action and percentage.
+     * Set Disposal method and proportion of random disposal. Optional for non-random disposal. Not currently supported.
+     * @param ExtendActions Disposal method and proportion of random disposal. Optional for non-random disposal. Not currently supported.
      */
     public void setExtendActions(BotExtendAction [] ExtendActions) {
         this.ExtendActions = ExtendActions;
     }
 
     /**
-     * Get The filter. Values:
-<li>`sip`: Client IP</li>
-This parameter is left empty by default. 
-     * @return FreqFields The filter. Values:
-<li>`sip`: Client IP</li>
-This parameter is left empty by default.
+     * Get Filter word. Valid values:
+<li>sip: Client IP.</li>
+Defaults to an empty string. 
+     * @return FreqFields Filter word. Valid values:
+<li>sip: Client IP.</li>
+Defaults to an empty string.
      */
     public String [] getFreqFields() {
         return this.FreqFields;
     }
 
     /**
-     * Set The filter. Values:
-<li>`sip`: Client IP</li>
-This parameter is left empty by default.
-     * @param FreqFields The filter. Values:
-<li>`sip`: Client IP</li>
-This parameter is left empty by default.
+     * Set Filter word. Valid values:
+<li>sip: Client IP.</li>
+Defaults to an empty string.
+     * @param FreqFields Filter word. Valid values:
+<li>sip: Client IP.</li>
+Defaults to an empty string.
      */
     public void setFreqFields(String [] FreqFields) {
         this.FreqFields = FreqFields;
     }
 
     /**
-     * Get The update time, which is only used as an output parameter. 
-     * @return UpdateTime The update time, which is only used as an output parameter.
+     * Get Update time. For output usage only. 
+     * @return UpdateTime Update time. For output usage only.
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set The update time, which is only used as an output parameter.
-     * @param UpdateTime The update time, which is only used as an output parameter.
+     * Set Update time. For output usage only.
+     * @param UpdateTime Update time. For output usage only.
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
     }
 
     /**
-     * Get Query scope. Values:
-<li>`source_to_eo`: (Response) Traffic going from the origin to EdgeOne.</li>
-<li>`client_to_eo`: (Request) Traffic going from the client to EdgeOne.</li>
-Default: `source_to_eo`. 
-     * @return FreqScope Query scope. Values:
-<li>`source_to_eo`: (Response) Traffic going from the origin to EdgeOne.</li>
-<li>`client_to_eo`: (Request) Traffic going from the client to EdgeOne.</li>
-Default: `source_to_eo`.
+     * Get Statistical scope. Valid values:
+<li>source_to_eo: (Response) Origin server to EdgeOne;</li>
+<li>client_to_eo: (request) Client to EdgeOne.</li>
+Default value: source_to_eo. 
+     * @return FreqScope Statistical scope. Valid values:
+<li>source_to_eo: (Response) Origin server to EdgeOne;</li>
+<li>client_to_eo: (request) Client to EdgeOne.</li>
+Default value: source_to_eo.
      */
     public String [] getFreqScope() {
         return this.FreqScope;
     }
 
     /**
-     * Set Query scope. Values:
-<li>`source_to_eo`: (Response) Traffic going from the origin to EdgeOne.</li>
-<li>`client_to_eo`: (Request) Traffic going from the client to EdgeOne.</li>
-Default: `source_to_eo`.
-     * @param FreqScope Query scope. Values:
-<li>`source_to_eo`: (Response) Traffic going from the origin to EdgeOne.</li>
-<li>`client_to_eo`: (Request) Traffic going from the client to EdgeOne.</li>
-Default: `source_to_eo`.
+     * Set Statistical scope. Valid values:
+<li>source_to_eo: (Response) Origin server to EdgeOne;</li>
+<li>client_to_eo: (request) Client to EdgeOne.</li>
+Default value: source_to_eo.
+     * @param FreqScope Statistical scope. Valid values:
+<li>source_to_eo: (Response) Origin server to EdgeOne;</li>
+<li>client_to_eo: (request) Client to EdgeOne.</li>
+Default value: source_to_eo.
      */
     public void setFreqScope(String [] FreqScope) {
         this.FreqScope = FreqScope;
     }
 
     /**
-     * Get Name of the custom return page. It's required when `Action=page`. 
-     * @return Name Name of the custom return page. It's required when `Action=page`.
+     * Get Name of the custom return page. Required when Action is page, and cannot be empty. 
+     * @return Name Name of the custom return page. Required when Action is page, and cannot be empty.
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Name of the custom return page. It's required when `Action=page`.
-     * @param Name Name of the custom return page. It's required when `Action=page`.
+     * Set Name of the custom return page. Required when Action is page, and cannot be empty.
+     * @param Name Name of the custom return page. Required when Action is page, and cannot be empty.
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get ID of custom response. The ID can be obtained via the `DescribeCustomErrorPages` API. It's required when `Action=page`.	 
-     * @return CustomResponseId ID of custom response. The ID can be obtained via the `DescribeCustomErrorPages` API. It's required when `Action=page`.	
+     * Get Custom response Id, which can be obtained through the customized error page list interface. The default value is `default`, which uses the system default page. Required and cannot be empty when Action is `page`.	 
+     * @return CustomResponseId Custom response Id, which can be obtained through the customized error page list interface. The default value is `default`, which uses the system default page. Required and cannot be empty when Action is `page`.	
      */
     public String getCustomResponseId() {
         return this.CustomResponseId;
     }
 
     /**
-     * Set ID of custom response. The ID can be obtained via the `DescribeCustomErrorPages` API. It's required when `Action=page`.	
-     * @param CustomResponseId ID of custom response. The ID can be obtained via the `DescribeCustomErrorPages` API. It's required when `Action=page`.	
+     * Set Custom response Id, which can be obtained through the customized error page list interface. The default value is `default`, which uses the system default page. Required and cannot be empty when Action is `page`.	
+     * @param CustomResponseId Custom response Id, which can be obtained through the customized error page list interface. The default value is `default`, which uses the system default page. Required and cannot be empty when Action is `page`.	
      */
     public void setCustomResponseId(String CustomResponseId) {
         this.CustomResponseId = CustomResponseId;
     }
 
     /**
-     * Get The response code to trigger the return page. It's required when `Action=page`. Value: 100-600. 3xx response codes are not supported. Default value: 567. 
-     * @return ResponseCode The response code to trigger the return page. It's required when `Action=page`. Value: 100-600. 3xx response codes are not supported. Default value: 567.
+     * Get Custom response code for the return to page. Required when Action is page, and cannot be empty. Value range: 100–600. 3xx response codes are not supported. Default value: 567. 
+     * @return ResponseCode Custom response code for the return to page. Required when Action is page, and cannot be empty. Value range: 100–600. 3xx response codes are not supported. Default value: 567.
      */
     public Long getResponseCode() {
         return this.ResponseCode;
     }
 
     /**
-     * Set The response code to trigger the return page. It's required when `Action=page`. Value: 100-600. 3xx response codes are not supported. Default value: 567.
-     * @param ResponseCode The response code to trigger the return page. It's required when `Action=page`. Value: 100-600. 3xx response codes are not supported. Default value: 567.
+     * Set Custom response code for the return to page. Required when Action is page, and cannot be empty. Value range: 100–600. 3xx response codes are not supported. Default value: 567.
+     * @param ResponseCode Custom response code for the return to page. Required when Action is page, and cannot be empty. Value range: 100–600. 3xx response codes are not supported. Default value: 567.
      */
     public void setResponseCode(Long ResponseCode) {
         this.ResponseCode = ResponseCode;
     }
 
     /**
-     * Get The redirection URL. It's required when `Action=redirect`. 
-     * @return RedirectUrl The redirection URL. It's required when `Action=redirect`.
+     * Get Address for redirection. Required when Action is `redirect` and cannot be empty. 
+     * @return RedirectUrl Address for redirection. Required when Action is `redirect` and cannot be empty.
      */
     public String getRedirectUrl() {
         return this.RedirectUrl;
     }
 
     /**
-     * Set The redirection URL. It's required when `Action=redirect`.
-     * @param RedirectUrl The redirection URL. It's required when `Action=redirect`.
+     * Set Address for redirection. Required when Action is `redirect` and cannot be empty.
+     * @param RedirectUrl Address for redirection. Required when Action is `redirect` and cannot be empty.
      */
     public void setRedirectUrl(String RedirectUrl) {
         this.RedirectUrl = RedirectUrl;

@@ -38,21 +38,21 @@ public class CreateFunctionReplicaRequest extends AbstractModel {
     private String FunctionId;
 
     /**
-    * Edge function copy name. Limit to enter 1-50 characters. Allowed characters are a-z, 0-9, and -. The - cannot be registered alone or used continuously, and cannot be placed at the beginning or the end. Copy names under the same FunctionId must be unique.
+    * Edge function copy name. Limited to 1-50 characters. Allowed characters are a-z, 0-9, and -. The hyphen cannot be registered alone or used continuously, and cannot be placed at the beginning or the end. Copy names must be unique under the same FunctionId.
     */
     @SerializedName("ReplicaName")
     @Expose
     private String ReplicaName;
 
     /**
-    * Edge function replica content. Currently only supports JavaScript code. Supports a maximum of 5 MB.
+    * Content of the edge function copy. It currently only supports JavaScript code, with a maximum size of 5 MB.
     */
     @SerializedName("Content")
     @Expose
     private String Content;
 
     /**
-    * Edge function replica description. Supports up to 50 characters.
+    * Edge function replica description, which can contain up to 50 characters.
     */
     @SerializedName("Remark")
     @Expose
@@ -91,48 +91,48 @@ public class CreateFunctionReplicaRequest extends AbstractModel {
     }
 
     /**
-     * Get Edge function copy name. Limit to enter 1-50 characters. Allowed characters are a-z, 0-9, and -. The - cannot be registered alone or used continuously, and cannot be placed at the beginning or the end. Copy names under the same FunctionId must be unique. 
-     * @return ReplicaName Edge function copy name. Limit to enter 1-50 characters. Allowed characters are a-z, 0-9, and -. The - cannot be registered alone or used continuously, and cannot be placed at the beginning or the end. Copy names under the same FunctionId must be unique.
+     * Get Edge function copy name. Limited to 1-50 characters. Allowed characters are a-z, 0-9, and -. The hyphen cannot be registered alone or used continuously, and cannot be placed at the beginning or the end. Copy names must be unique under the same FunctionId. 
+     * @return ReplicaName Edge function copy name. Limited to 1-50 characters. Allowed characters are a-z, 0-9, and -. The hyphen cannot be registered alone or used continuously, and cannot be placed at the beginning or the end. Copy names must be unique under the same FunctionId.
      */
     public String getReplicaName() {
         return this.ReplicaName;
     }
 
     /**
-     * Set Edge function copy name. Limit to enter 1-50 characters. Allowed characters are a-z, 0-9, and -. The - cannot be registered alone or used continuously, and cannot be placed at the beginning or the end. Copy names under the same FunctionId must be unique.
-     * @param ReplicaName Edge function copy name. Limit to enter 1-50 characters. Allowed characters are a-z, 0-9, and -. The - cannot be registered alone or used continuously, and cannot be placed at the beginning or the end. Copy names under the same FunctionId must be unique.
+     * Set Edge function copy name. Limited to 1-50 characters. Allowed characters are a-z, 0-9, and -. The hyphen cannot be registered alone or used continuously, and cannot be placed at the beginning or the end. Copy names must be unique under the same FunctionId.
+     * @param ReplicaName Edge function copy name. Limited to 1-50 characters. Allowed characters are a-z, 0-9, and -. The hyphen cannot be registered alone or used continuously, and cannot be placed at the beginning or the end. Copy names must be unique under the same FunctionId.
      */
     public void setReplicaName(String ReplicaName) {
         this.ReplicaName = ReplicaName;
     }
 
     /**
-     * Get Edge function replica content. Currently only supports JavaScript code. Supports a maximum of 5 MB. 
-     * @return Content Edge function replica content. Currently only supports JavaScript code. Supports a maximum of 5 MB.
+     * Get Content of the edge function copy. It currently only supports JavaScript code, with a maximum size of 5 MB. 
+     * @return Content Content of the edge function copy. It currently only supports JavaScript code, with a maximum size of 5 MB.
      */
     public String getContent() {
         return this.Content;
     }
 
     /**
-     * Set Edge function replica content. Currently only supports JavaScript code. Supports a maximum of 5 MB.
-     * @param Content Edge function replica content. Currently only supports JavaScript code. Supports a maximum of 5 MB.
+     * Set Content of the edge function copy. It currently only supports JavaScript code, with a maximum size of 5 MB.
+     * @param Content Content of the edge function copy. It currently only supports JavaScript code, with a maximum size of 5 MB.
      */
     public void setContent(String Content) {
         this.Content = Content;
     }
 
     /**
-     * Get Edge function replica description. Supports up to 50 characters. 
-     * @return Remark Edge function replica description. Supports up to 50 characters.
+     * Get Edge function replica description, which can contain up to 50 characters. 
+     * @return Remark Edge function replica description, which can contain up to 50 characters.
      */
     public String getRemark() {
         return this.Remark;
     }
 
     /**
-     * Set Edge function replica description. Supports up to 50 characters.
-     * @param Remark Edge function replica description. Supports up to 50 characters.
+     * Set Edge function replica description, which can contain up to 50 characters.
+     * @param Remark Edge function replica description, which can contain up to 50 characters.
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;

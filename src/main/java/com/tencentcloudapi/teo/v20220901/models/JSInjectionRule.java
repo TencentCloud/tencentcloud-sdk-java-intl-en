@@ -31,30 +31,30 @@ public class JSInjectionRule extends AbstractModel {
     private String RuleId;
 
     /**
-    * Rule name
+    * Rule name.
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * Rule priority. a smaller value indicates higher priority execution. value range: 0-100. default value is 0.
+    * Rule priority. A smaller value indicates higher priority. Value range: 0-100. Default value: 0.
     */
     @SerializedName("Priority")
     @Expose
     private Long Priority;
 
     /**
-    * Specifies the match condition content, which must comply with the expression grammar. please refer to the product document for detailed requirements.
+    * Match condition content. It must comply with the expression syntax. For detailed specifications, see the product document.
     */
     @SerializedName("Condition")
     @Expose
     private String Condition;
 
     /**
-    * JavaScript injection option. default value: run-attestations. valid values:.
-<li>no-injection: specifies not to inject JavaScript.</li>.
-<li>inject-sdk-only: injects sdks for all currently supported authentication methods. currently supported: TC-RCE and TC-CAPTCHA. note: to execute authentication detection, configure challenge rules.</li>.
+    * JavaScript injection options. Default value: run-attestations. Valid values:
+<li> no-injection: Do not inject JavaScript;</li>
+<li> inject-sdk-only: Inject the SDKs of all currently supported authentication methods, including TC-RCE and TC-CAPTCHA. Note: To execute authentication detection, configure challenge rules.</li>
 
     */
     @SerializedName("InjectJS")
@@ -78,61 +78,61 @@ public class JSInjectionRule extends AbstractModel {
     }
 
     /**
-     * Get Rule name 
-     * @return Name Rule name
+     * Get Rule name. 
+     * @return Name Rule name.
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Rule name
-     * @param Name Rule name
+     * Set Rule name.
+     * @param Name Rule name.
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Rule priority. a smaller value indicates higher priority execution. value range: 0-100. default value is 0. 
-     * @return Priority Rule priority. a smaller value indicates higher priority execution. value range: 0-100. default value is 0.
+     * Get Rule priority. A smaller value indicates higher priority. Value range: 0-100. Default value: 0. 
+     * @return Priority Rule priority. A smaller value indicates higher priority. Value range: 0-100. Default value: 0.
      */
     public Long getPriority() {
         return this.Priority;
     }
 
     /**
-     * Set Rule priority. a smaller value indicates higher priority execution. value range: 0-100. default value is 0.
-     * @param Priority Rule priority. a smaller value indicates higher priority execution. value range: 0-100. default value is 0.
+     * Set Rule priority. A smaller value indicates higher priority. Value range: 0-100. Default value: 0.
+     * @param Priority Rule priority. A smaller value indicates higher priority. Value range: 0-100. Default value: 0.
      */
     public void setPriority(Long Priority) {
         this.Priority = Priority;
     }
 
     /**
-     * Get Specifies the match condition content, which must comply with the expression grammar. please refer to the product document for detailed requirements. 
-     * @return Condition Specifies the match condition content, which must comply with the expression grammar. please refer to the product document for detailed requirements.
+     * Get Match condition content. It must comply with the expression syntax. For detailed specifications, see the product document. 
+     * @return Condition Match condition content. It must comply with the expression syntax. For detailed specifications, see the product document.
      */
     public String getCondition() {
         return this.Condition;
     }
 
     /**
-     * Set Specifies the match condition content, which must comply with the expression grammar. please refer to the product document for detailed requirements.
-     * @param Condition Specifies the match condition content, which must comply with the expression grammar. please refer to the product document for detailed requirements.
+     * Set Match condition content. It must comply with the expression syntax. For detailed specifications, see the product document.
+     * @param Condition Match condition content. It must comply with the expression syntax. For detailed specifications, see the product document.
      */
     public void setCondition(String Condition) {
         this.Condition = Condition;
     }
 
     /**
-     * Get JavaScript injection option. default value: run-attestations. valid values:.
-<li>no-injection: specifies not to inject JavaScript.</li>.
-<li>inject-sdk-only: injects sdks for all currently supported authentication methods. currently supported: TC-RCE and TC-CAPTCHA. note: to execute authentication detection, configure challenge rules.</li>.
+     * Get JavaScript injection options. Default value: run-attestations. Valid values:
+<li> no-injection: Do not inject JavaScript;</li>
+<li> inject-sdk-only: Inject the SDKs of all currently supported authentication methods, including TC-RCE and TC-CAPTCHA. Note: To execute authentication detection, configure challenge rules.</li>
  
-     * @return InjectJS JavaScript injection option. default value: run-attestations. valid values:.
-<li>no-injection: specifies not to inject JavaScript.</li>.
-<li>inject-sdk-only: injects sdks for all currently supported authentication methods. currently supported: TC-RCE and TC-CAPTCHA. note: to execute authentication detection, configure challenge rules.</li>.
+     * @return InjectJS JavaScript injection options. Default value: run-attestations. Valid values:
+<li> no-injection: Do not inject JavaScript;</li>
+<li> inject-sdk-only: Inject the SDKs of all currently supported authentication methods, including TC-RCE and TC-CAPTCHA. Note: To execute authentication detection, configure challenge rules.</li>
 
      */
     public String getInjectJS() {
@@ -140,13 +140,13 @@ public class JSInjectionRule extends AbstractModel {
     }
 
     /**
-     * Set JavaScript injection option. default value: run-attestations. valid values:.
-<li>no-injection: specifies not to inject JavaScript.</li>.
-<li>inject-sdk-only: injects sdks for all currently supported authentication methods. currently supported: TC-RCE and TC-CAPTCHA. note: to execute authentication detection, configure challenge rules.</li>.
+     * Set JavaScript injection options. Default value: run-attestations. Valid values:
+<li> no-injection: Do not inject JavaScript;</li>
+<li> inject-sdk-only: Inject the SDKs of all currently supported authentication methods, including TC-RCE and TC-CAPTCHA. Note: To execute authentication detection, configure challenge rules.</li>
 
-     * @param InjectJS JavaScript injection option. default value: run-attestations. valid values:.
-<li>no-injection: specifies not to inject JavaScript.</li>.
-<li>inject-sdk-only: injects sdks for all currently supported authentication methods. currently supported: TC-RCE and TC-CAPTCHA. note: to execute authentication detection, configure challenge rules.</li>.
+     * @param InjectJS JavaScript injection options. Default value: run-attestations. Valid values:
+<li> no-injection: Do not inject JavaScript;</li>
+<li> inject-sdk-only: Inject the SDKs of all currently supported authentication methods, including TC-RCE and TC-CAPTCHA. Note: To execute authentication detection, configure challenge rules.</li>
 
      */
     public void setInjectJS(String InjectJS) {

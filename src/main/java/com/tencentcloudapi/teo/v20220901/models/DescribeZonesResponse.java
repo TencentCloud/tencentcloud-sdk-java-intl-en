@@ -31,7 +31,7 @@ public class DescribeZonesResponse extends AbstractModel {
     private Long TotalCount;
 
     /**
-    * Describes the list details of sites.
+    * Site list details.
     */
     @SerializedName("Zones")
     @Expose
@@ -61,16 +61,16 @@ public class DescribeZonesResponse extends AbstractModel {
     }
 
     /**
-     * Get Describes the list details of sites. 
-     * @return Zones Describes the list details of sites.
+     * Get Site list details. 
+     * @return Zones Site list details.
      */
     public Zone [] getZones() {
         return this.Zones;
     }
 
     /**
-     * Set Describes the list details of sites.
-     * @param Zones Describes the list details of sites.
+     * Set Site list details.
+     * @param Zones Site list details.
      */
     public void setZones(Zone [] Zones) {
         this.Zones = Zones;

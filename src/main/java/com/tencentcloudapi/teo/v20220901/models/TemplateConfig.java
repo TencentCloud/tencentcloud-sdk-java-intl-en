@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class TemplateConfig extends AbstractModel {
 
     /**
-    * The template ID.
+    * Template ID.
     */
     @SerializedName("TemplateId")
     @Expose
     private String TemplateId;
 
     /**
-    * The template name.
+    * Template Name
     */
     @SerializedName("TemplateName")
     @Expose
     private String TemplateName;
 
     /**
-     * Get The template ID. 
-     * @return TemplateId The template ID.
+     * Get Template ID. 
+     * @return TemplateId Template ID.
      */
     public String getTemplateId() {
         return this.TemplateId;
     }
 
     /**
-     * Set The template ID.
-     * @param TemplateId The template ID.
+     * Set Template ID.
+     * @param TemplateId Template ID.
      */
     public void setTemplateId(String TemplateId) {
         this.TemplateId = TemplateId;
     }
 
     /**
-     * Get The template name. 
-     * @return TemplateName The template name.
+     * Get Template Name 
+     * @return TemplateName Template Name
      */
     public String getTemplateName() {
         return this.TemplateName;
     }
 
     /**
-     * Set The template name.
-     * @param TemplateName The template name.
+     * Set Template Name
+     * @param TemplateName Template Name
      */
     public void setTemplateName(String TemplateName) {
         this.TemplateName = TemplateName;

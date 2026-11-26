@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateJustInTimeTranscodeTemplateResponse extends AbstractModel {
 
     /**
-    * Unique identifier of the instant transcoding template for jit transcoding URL concatenation.
+    * Unique identifier of the JIT transcoding template, used for JIT transcoding URL concatenation.
     */
     @SerializedName("TemplateId")
     @Expose
@@ -38,16 +38,16 @@ public class CreateJustInTimeTranscodeTemplateResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Unique identifier of the instant transcoding template for jit transcoding URL concatenation. 
-     * @return TemplateId Unique identifier of the instant transcoding template for jit transcoding URL concatenation.
+     * Get Unique identifier of the JIT transcoding template, used for JIT transcoding URL concatenation. 
+     * @return TemplateId Unique identifier of the JIT transcoding template, used for JIT transcoding URL concatenation.
      */
     public String getTemplateId() {
         return this.TemplateId;
     }
 
     /**
-     * Set Unique identifier of the instant transcoding template for jit transcoding URL concatenation.
-     * @param TemplateId Unique identifier of the instant transcoding template for jit transcoding URL concatenation.
+     * Set Unique identifier of the JIT transcoding template, used for JIT transcoding URL concatenation.
+     * @param TemplateId Unique identifier of the JIT transcoding template, used for JIT transcoding URL concatenation.
      */
     public void setTemplateId(String TemplateId) {
         this.TemplateId = TemplateId;

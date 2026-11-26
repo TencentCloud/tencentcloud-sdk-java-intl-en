@@ -24,112 +24,112 @@ import java.util.HashMap;
 public class ModifyAccelerationDomainStatusesRequest extends AbstractModel {
 
     /**
-    * ID of the site related with the accelerated domain name.
+    * Zone ID of the acceleration domain name.
     */
     @SerializedName("ZoneId")
     @Expose
     private String ZoneId;
 
     /**
-    * List of accelerated domain names to be modified.
+    * List of acceleration domain names for which to modify the execution status.
     */
     @SerializedName("DomainNames")
     @Expose
     private String [] DomainNames;
 
     /**
-    * Status of the accelerated domain name. Values:
-<li>`online`: Enabled</li>
-<li>`offline`: Disabled</li>
+    * Acceleration domain name status. Valid values:
+<li>`online`: Enable;</li>
+<li>offline: Disable.</li>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * Whether to force suspension when the domain name has associated resources (such as alias domain names and traffic scheduling policies). Values:
-<li>`true`: Suspend the domain name and all associated resources.</li>
-<li>`true`: Do not suspend the domain name and all associated resources.</li>Default value: `false`.
+    * Whether to force suspension. When a domain name has associated resources (for example, alias domain names or traffic scheduling functions), whether to force suspension of that domain name. Valid values:
+<li> true: disable that domain name and all associated resources;</li>
+<li> false: When the acceleration domain name has associated resources, it cannot be disabled.</li>If not specified, the default value is false.
     */
     @SerializedName("Force")
     @Expose
     private Boolean Force;
 
     /**
-     * Get ID of the site related with the accelerated domain name. 
-     * @return ZoneId ID of the site related with the accelerated domain name.
+     * Get Zone ID of the acceleration domain name. 
+     * @return ZoneId Zone ID of the acceleration domain name.
      */
     public String getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set ID of the site related with the accelerated domain name.
-     * @param ZoneId ID of the site related with the accelerated domain name.
+     * Set Zone ID of the acceleration domain name.
+     * @param ZoneId Zone ID of the acceleration domain name.
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get List of accelerated domain names to be modified. 
-     * @return DomainNames List of accelerated domain names to be modified.
+     * Get List of acceleration domain names for which to modify the execution status. 
+     * @return DomainNames List of acceleration domain names for which to modify the execution status.
      */
     public String [] getDomainNames() {
         return this.DomainNames;
     }
 
     /**
-     * Set List of accelerated domain names to be modified.
-     * @param DomainNames List of accelerated domain names to be modified.
+     * Set List of acceleration domain names for which to modify the execution status.
+     * @param DomainNames List of acceleration domain names for which to modify the execution status.
      */
     public void setDomainNames(String [] DomainNames) {
         this.DomainNames = DomainNames;
     }
 
     /**
-     * Get Status of the accelerated domain name. Values:
-<li>`online`: Enabled</li>
-<li>`offline`: Disabled</li> 
-     * @return Status Status of the accelerated domain name. Values:
-<li>`online`: Enabled</li>
-<li>`offline`: Disabled</li>
+     * Get Acceleration domain name status. Valid values:
+<li>`online`: Enable;</li>
+<li>offline: Disable.</li> 
+     * @return Status Acceleration domain name status. Valid values:
+<li>`online`: Enable;</li>
+<li>offline: Disable.</li>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Status of the accelerated domain name. Values:
-<li>`online`: Enabled</li>
-<li>`offline`: Disabled</li>
-     * @param Status Status of the accelerated domain name. Values:
-<li>`online`: Enabled</li>
-<li>`offline`: Disabled</li>
+     * Set Acceleration domain name status. Valid values:
+<li>`online`: Enable;</li>
+<li>offline: Disable.</li>
+     * @param Status Acceleration domain name status. Valid values:
+<li>`online`: Enable;</li>
+<li>offline: Disable.</li>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Whether to force suspension when the domain name has associated resources (such as alias domain names and traffic scheduling policies). Values:
-<li>`true`: Suspend the domain name and all associated resources.</li>
-<li>`true`: Do not suspend the domain name and all associated resources.</li>Default value: `false`. 
-     * @return Force Whether to force suspension when the domain name has associated resources (such as alias domain names and traffic scheduling policies). Values:
-<li>`true`: Suspend the domain name and all associated resources.</li>
-<li>`true`: Do not suspend the domain name and all associated resources.</li>Default value: `false`.
+     * Get Whether to force suspension. When a domain name has associated resources (for example, alias domain names or traffic scheduling functions), whether to force suspension of that domain name. Valid values:
+<li> true: disable that domain name and all associated resources;</li>
+<li> false: When the acceleration domain name has associated resources, it cannot be disabled.</li>If not specified, the default value is false. 
+     * @return Force Whether to force suspension. When a domain name has associated resources (for example, alias domain names or traffic scheduling functions), whether to force suspension of that domain name. Valid values:
+<li> true: disable that domain name and all associated resources;</li>
+<li> false: When the acceleration domain name has associated resources, it cannot be disabled.</li>If not specified, the default value is false.
      */
     public Boolean getForce() {
         return this.Force;
     }
 
     /**
-     * Set Whether to force suspension when the domain name has associated resources (such as alias domain names and traffic scheduling policies). Values:
-<li>`true`: Suspend the domain name and all associated resources.</li>
-<li>`true`: Do not suspend the domain name and all associated resources.</li>Default value: `false`.
-     * @param Force Whether to force suspension when the domain name has associated resources (such as alias domain names and traffic scheduling policies). Values:
-<li>`true`: Suspend the domain name and all associated resources.</li>
-<li>`true`: Do not suspend the domain name and all associated resources.</li>Default value: `false`.
+     * Set Whether to force suspension. When a domain name has associated resources (for example, alias domain names or traffic scheduling functions), whether to force suspension of that domain name. Valid values:
+<li> true: disable that domain name and all associated resources;</li>
+<li> false: When the acceleration domain name has associated resources, it cannot be disabled.</li>If not specified, the default value is false.
+     * @param Force Whether to force suspension. When a domain name has associated resources (for example, alias domain names or traffic scheduling functions), whether to force suspension of that domain name. Valid values:
+<li> true: disable that domain name and all associated resources;</li>
+<li> false: When the acceleration domain name has associated resources, it cannot be disabled.</li>If not specified, the default value is false.
      */
     public void setForce(Boolean Force) {
         this.Force = Force;

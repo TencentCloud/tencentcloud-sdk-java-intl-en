@@ -24,253 +24,253 @@ import java.util.HashMap;
 public class SecurityConfig extends AbstractModel {
 
     /**
-    * Managed rule. if the parameter is null or not filled, use the last set configuration by default.
+    * Managed rule. If the parameter is null or not filled, use the last set configuration by default.
     */
     @SerializedName("WafConfig")
     @Expose
     private WafConfig WafConfig;
 
     /**
-    * Rate limiting. if the parameter is null or not filled, the configuration last set will be used by default.
+    * Rate limit. If the parameter is null or not filled, use the last set configuration by default.
     */
     @SerializedName("RateLimitConfig")
     @Expose
     private RateLimitConfig RateLimitConfig;
 
     /**
-    * Custom rule. specifies if the parameter is null or not filled, use the last set configuration by default.
+    * Custom rule. If the parameter is null or not filled, use the last set configuration by default.
     */
     @SerializedName("AclConfig")
     @Expose
     private AclConfig AclConfig;
 
     /**
-    * Bot configuration. if the parameter is null or not filled, use the last set configuration by default.
+    * Bot configuration. If the parameter is null or not filled, use the last set configuration by default.
     */
     @SerializedName("BotConfig")
     @Expose
     private BotConfig BotConfig;
 
     /**
-    * Switch setting of the 7-layer protection. if the parameter is null or not filled, use the last set configuration by default.
+    * Switch setting of the 7-layer protection. If the parameter is null or not filled, use the last set configuration by default.
     */
     @SerializedName("SwitchConfig")
     @Expose
     private SwitchConfig SwitchConfig;
 
     /**
-    * Basic access control. if the parameter is null or not filled, use the last set configuration by default.
+    * Basic access control. If the parameter is null or not filled, use the last set configuration by default.
     */
     @SerializedName("IpTableConfig")
     @Expose
     private IpTableConfig IpTableConfig;
 
     /**
-    * Exception rule configuration. if the parameter is null or not filled, use the last set configuration by default.
+    * Exception rule configuration. If the parameter is null or not filled, use the last set configuration by default.
     */
     @SerializedName("ExceptConfig")
     @Expose
     private ExceptConfig ExceptConfig;
 
     /**
-    * Custom block page settings. if the parameter is null or not filled, use the last set configuration by default.
+    * Custom block page settings. If the parameter is null or not filled, the last set configuration is used by default.
     */
     @SerializedName("DropPageConfig")
     @Expose
     private DropPageConfig DropPageConfig;
 
     /**
-    * Template configuration. specifies parameter usage for output only.
+    * Template configuration. This parameter is output-only.
     */
     @SerializedName("TemplateConfig")
     @Expose
     private TemplateConfig TemplateConfig;
 
     /**
-    * Slow attack configuration. if the parameter is null or not filled, use the last set configuration by default.
+    * Slow attack configuration. If the parameter is null or not filled, use the last set configuration by default.
     */
     @SerializedName("SlowPostConfig")
     @Expose
     private SlowPostConfig SlowPostConfig;
 
     /**
-    * Detect length limit configuration. for output usage only.
+    * Detection length limit configuration. For output usage only.
     */
     @SerializedName("DetectLengthLimitConfig")
     @Expose
     private DetectLengthLimitConfig DetectLengthLimitConfig;
 
     /**
-     * Get Managed rule. if the parameter is null or not filled, use the last set configuration by default. 
-     * @return WafConfig Managed rule. if the parameter is null or not filled, use the last set configuration by default.
+     * Get Managed rule. If the parameter is null or not filled, use the last set configuration by default. 
+     * @return WafConfig Managed rule. If the parameter is null or not filled, use the last set configuration by default.
      */
     public WafConfig getWafConfig() {
         return this.WafConfig;
     }
 
     /**
-     * Set Managed rule. if the parameter is null or not filled, use the last set configuration by default.
-     * @param WafConfig Managed rule. if the parameter is null or not filled, use the last set configuration by default.
+     * Set Managed rule. If the parameter is null or not filled, use the last set configuration by default.
+     * @param WafConfig Managed rule. If the parameter is null or not filled, use the last set configuration by default.
      */
     public void setWafConfig(WafConfig WafConfig) {
         this.WafConfig = WafConfig;
     }
 
     /**
-     * Get Rate limiting. if the parameter is null or not filled, the configuration last set will be used by default. 
-     * @return RateLimitConfig Rate limiting. if the parameter is null or not filled, the configuration last set will be used by default.
+     * Get Rate limit. If the parameter is null or not filled, use the last set configuration by default. 
+     * @return RateLimitConfig Rate limit. If the parameter is null or not filled, use the last set configuration by default.
      */
     public RateLimitConfig getRateLimitConfig() {
         return this.RateLimitConfig;
     }
 
     /**
-     * Set Rate limiting. if the parameter is null or not filled, the configuration last set will be used by default.
-     * @param RateLimitConfig Rate limiting. if the parameter is null or not filled, the configuration last set will be used by default.
+     * Set Rate limit. If the parameter is null or not filled, use the last set configuration by default.
+     * @param RateLimitConfig Rate limit. If the parameter is null or not filled, use the last set configuration by default.
      */
     public void setRateLimitConfig(RateLimitConfig RateLimitConfig) {
         this.RateLimitConfig = RateLimitConfig;
     }
 
     /**
-     * Get Custom rule. specifies if the parameter is null or not filled, use the last set configuration by default. 
-     * @return AclConfig Custom rule. specifies if the parameter is null or not filled, use the last set configuration by default.
+     * Get Custom rule. If the parameter is null or not filled, use the last set configuration by default. 
+     * @return AclConfig Custom rule. If the parameter is null or not filled, use the last set configuration by default.
      */
     public AclConfig getAclConfig() {
         return this.AclConfig;
     }
 
     /**
-     * Set Custom rule. specifies if the parameter is null or not filled, use the last set configuration by default.
-     * @param AclConfig Custom rule. specifies if the parameter is null or not filled, use the last set configuration by default.
+     * Set Custom rule. If the parameter is null or not filled, use the last set configuration by default.
+     * @param AclConfig Custom rule. If the parameter is null or not filled, use the last set configuration by default.
      */
     public void setAclConfig(AclConfig AclConfig) {
         this.AclConfig = AclConfig;
     }
 
     /**
-     * Get Bot configuration. if the parameter is null or not filled, use the last set configuration by default. 
-     * @return BotConfig Bot configuration. if the parameter is null or not filled, use the last set configuration by default.
+     * Get Bot configuration. If the parameter is null or not filled, use the last set configuration by default. 
+     * @return BotConfig Bot configuration. If the parameter is null or not filled, use the last set configuration by default.
      */
     public BotConfig getBotConfig() {
         return this.BotConfig;
     }
 
     /**
-     * Set Bot configuration. if the parameter is null or not filled, use the last set configuration by default.
-     * @param BotConfig Bot configuration. if the parameter is null or not filled, use the last set configuration by default.
+     * Set Bot configuration. If the parameter is null or not filled, use the last set configuration by default.
+     * @param BotConfig Bot configuration. If the parameter is null or not filled, use the last set configuration by default.
      */
     public void setBotConfig(BotConfig BotConfig) {
         this.BotConfig = BotConfig;
     }
 
     /**
-     * Get Switch setting of the 7-layer protection. if the parameter is null or not filled, use the last set configuration by default. 
-     * @return SwitchConfig Switch setting of the 7-layer protection. if the parameter is null or not filled, use the last set configuration by default.
+     * Get Switch setting of the 7-layer protection. If the parameter is null or not filled, use the last set configuration by default. 
+     * @return SwitchConfig Switch setting of the 7-layer protection. If the parameter is null or not filled, use the last set configuration by default.
      */
     public SwitchConfig getSwitchConfig() {
         return this.SwitchConfig;
     }
 
     /**
-     * Set Switch setting of the 7-layer protection. if the parameter is null or not filled, use the last set configuration by default.
-     * @param SwitchConfig Switch setting of the 7-layer protection. if the parameter is null or not filled, use the last set configuration by default.
+     * Set Switch setting of the 7-layer protection. If the parameter is null or not filled, use the last set configuration by default.
+     * @param SwitchConfig Switch setting of the 7-layer protection. If the parameter is null or not filled, use the last set configuration by default.
      */
     public void setSwitchConfig(SwitchConfig SwitchConfig) {
         this.SwitchConfig = SwitchConfig;
     }
 
     /**
-     * Get Basic access control. if the parameter is null or not filled, use the last set configuration by default. 
-     * @return IpTableConfig Basic access control. if the parameter is null or not filled, use the last set configuration by default.
+     * Get Basic access control. If the parameter is null or not filled, use the last set configuration by default. 
+     * @return IpTableConfig Basic access control. If the parameter is null or not filled, use the last set configuration by default.
      */
     public IpTableConfig getIpTableConfig() {
         return this.IpTableConfig;
     }
 
     /**
-     * Set Basic access control. if the parameter is null or not filled, use the last set configuration by default.
-     * @param IpTableConfig Basic access control. if the parameter is null or not filled, use the last set configuration by default.
+     * Set Basic access control. If the parameter is null or not filled, use the last set configuration by default.
+     * @param IpTableConfig Basic access control. If the parameter is null or not filled, use the last set configuration by default.
      */
     public void setIpTableConfig(IpTableConfig IpTableConfig) {
         this.IpTableConfig = IpTableConfig;
     }
 
     /**
-     * Get Exception rule configuration. if the parameter is null or not filled, use the last set configuration by default. 
-     * @return ExceptConfig Exception rule configuration. if the parameter is null or not filled, use the last set configuration by default.
+     * Get Exception rule configuration. If the parameter is null or not filled, use the last set configuration by default. 
+     * @return ExceptConfig Exception rule configuration. If the parameter is null or not filled, use the last set configuration by default.
      */
     public ExceptConfig getExceptConfig() {
         return this.ExceptConfig;
     }
 
     /**
-     * Set Exception rule configuration. if the parameter is null or not filled, use the last set configuration by default.
-     * @param ExceptConfig Exception rule configuration. if the parameter is null or not filled, use the last set configuration by default.
+     * Set Exception rule configuration. If the parameter is null or not filled, use the last set configuration by default.
+     * @param ExceptConfig Exception rule configuration. If the parameter is null or not filled, use the last set configuration by default.
      */
     public void setExceptConfig(ExceptConfig ExceptConfig) {
         this.ExceptConfig = ExceptConfig;
     }
 
     /**
-     * Get Custom block page settings. if the parameter is null or not filled, use the last set configuration by default. 
-     * @return DropPageConfig Custom block page settings. if the parameter is null or not filled, use the last set configuration by default.
+     * Get Custom block page settings. If the parameter is null or not filled, the last set configuration is used by default. 
+     * @return DropPageConfig Custom block page settings. If the parameter is null or not filled, the last set configuration is used by default.
      */
     public DropPageConfig getDropPageConfig() {
         return this.DropPageConfig;
     }
 
     /**
-     * Set Custom block page settings. if the parameter is null or not filled, use the last set configuration by default.
-     * @param DropPageConfig Custom block page settings. if the parameter is null or not filled, use the last set configuration by default.
+     * Set Custom block page settings. If the parameter is null or not filled, the last set configuration is used by default.
+     * @param DropPageConfig Custom block page settings. If the parameter is null or not filled, the last set configuration is used by default.
      */
     public void setDropPageConfig(DropPageConfig DropPageConfig) {
         this.DropPageConfig = DropPageConfig;
     }
 
     /**
-     * Get Template configuration. specifies parameter usage for output only. 
-     * @return TemplateConfig Template configuration. specifies parameter usage for output only.
+     * Get Template configuration. This parameter is output-only. 
+     * @return TemplateConfig Template configuration. This parameter is output-only.
      */
     public TemplateConfig getTemplateConfig() {
         return this.TemplateConfig;
     }
 
     /**
-     * Set Template configuration. specifies parameter usage for output only.
-     * @param TemplateConfig Template configuration. specifies parameter usage for output only.
+     * Set Template configuration. This parameter is output-only.
+     * @param TemplateConfig Template configuration. This parameter is output-only.
      */
     public void setTemplateConfig(TemplateConfig TemplateConfig) {
         this.TemplateConfig = TemplateConfig;
     }
 
     /**
-     * Get Slow attack configuration. if the parameter is null or not filled, use the last set configuration by default. 
-     * @return SlowPostConfig Slow attack configuration. if the parameter is null or not filled, use the last set configuration by default.
+     * Get Slow attack configuration. If the parameter is null or not filled, use the last set configuration by default. 
+     * @return SlowPostConfig Slow attack configuration. If the parameter is null or not filled, use the last set configuration by default.
      */
     public SlowPostConfig getSlowPostConfig() {
         return this.SlowPostConfig;
     }
 
     /**
-     * Set Slow attack configuration. if the parameter is null or not filled, use the last set configuration by default.
-     * @param SlowPostConfig Slow attack configuration. if the parameter is null or not filled, use the last set configuration by default.
+     * Set Slow attack configuration. If the parameter is null or not filled, use the last set configuration by default.
+     * @param SlowPostConfig Slow attack configuration. If the parameter is null or not filled, use the last set configuration by default.
      */
     public void setSlowPostConfig(SlowPostConfig SlowPostConfig) {
         this.SlowPostConfig = SlowPostConfig;
     }
 
     /**
-     * Get Detect length limit configuration. for output usage only. 
-     * @return DetectLengthLimitConfig Detect length limit configuration. for output usage only.
+     * Get Detection length limit configuration. For output usage only. 
+     * @return DetectLengthLimitConfig Detection length limit configuration. For output usage only.
      */
     public DetectLengthLimitConfig getDetectLengthLimitConfig() {
         return this.DetectLengthLimitConfig;
     }
 
     /**
-     * Set Detect length limit configuration. for output usage only.
-     * @param DetectLengthLimitConfig Detect length limit configuration. for output usage only.
+     * Set Detection length limit configuration. For output usage only.
+     * @param DetectLengthLimitConfig Detection length limit configuration. For output usage only.
      */
     public void setDetectLengthLimitConfig(DetectLengthLimitConfig DetectLengthLimitConfig) {
         this.DetectLengthLimitConfig = DetectLengthLimitConfig;

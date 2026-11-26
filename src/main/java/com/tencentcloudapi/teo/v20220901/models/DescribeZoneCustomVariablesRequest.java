@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DescribeZoneCustomVariablesRequest extends AbstractModel {
 
     /**
-    * <p>Site ID.</p>
+    * <p>Zone ID.</p>
     */
     @SerializedName("ZoneId")
     @Expose
     private String ZoneId;
 
     /**
-     * Get <p>Site ID.</p> 
-     * @return ZoneId <p>Site ID.</p>
+     * Get <p>Zone ID.</p> 
+     * @return ZoneId <p>Zone ID.</p>
      */
     public String getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set <p>Site ID.</p>
-     * @param ZoneId <p>Site ID.</p>
+     * Set <p>Zone ID.</p>
+     * @param ZoneId <p>Zone ID.</p>
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;

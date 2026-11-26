@@ -24,79 +24,79 @@ import java.util.HashMap;
 public class ModifyAliasDomainStatusRequest extends AbstractModel {
 
     /**
-    * The site ID.
+    * Zone ID.
     */
     @SerializedName("ZoneId")
     @Expose
     private String ZoneId;
 
     /**
-    * Status of the alias domain name. Values:
-<li>`false`: Enable the alias domain name.</li>
-<li>`true`: Disable the alias domain name.</li>
+    * Alias domain name status. Valid values:
+<li> false: enable alias domain name;</li>
+<li> true: Disable the alias domain name.</li>
     */
     @SerializedName("Paused")
     @Expose
     private Boolean Paused;
 
     /**
-    * The alias domain name you want to modify its status. If it is left empty, the modify operation is not performed.
+    * Alias domain name in pending modification status. If it is empty, the modification status operation will not be performed.
     */
     @SerializedName("AliasNames")
     @Expose
     private String [] AliasNames;
 
     /**
-     * Get The site ID. 
-     * @return ZoneId The site ID.
+     * Get Zone ID. 
+     * @return ZoneId Zone ID.
      */
     public String getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set The site ID.
-     * @param ZoneId The site ID.
+     * Set Zone ID.
+     * @param ZoneId Zone ID.
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get Status of the alias domain name. Values:
-<li>`false`: Enable the alias domain name.</li>
-<li>`true`: Disable the alias domain name.</li> 
-     * @return Paused Status of the alias domain name. Values:
-<li>`false`: Enable the alias domain name.</li>
-<li>`true`: Disable the alias domain name.</li>
+     * Get Alias domain name status. Valid values:
+<li> false: enable alias domain name;</li>
+<li> true: Disable the alias domain name.</li> 
+     * @return Paused Alias domain name status. Valid values:
+<li> false: enable alias domain name;</li>
+<li> true: Disable the alias domain name.</li>
      */
     public Boolean getPaused() {
         return this.Paused;
     }
 
     /**
-     * Set Status of the alias domain name. Values:
-<li>`false`: Enable the alias domain name.</li>
-<li>`true`: Disable the alias domain name.</li>
-     * @param Paused Status of the alias domain name. Values:
-<li>`false`: Enable the alias domain name.</li>
-<li>`true`: Disable the alias domain name.</li>
+     * Set Alias domain name status. Valid values:
+<li> false: enable alias domain name;</li>
+<li> true: Disable the alias domain name.</li>
+     * @param Paused Alias domain name status. Valid values:
+<li> false: enable alias domain name;</li>
+<li> true: Disable the alias domain name.</li>
      */
     public void setPaused(Boolean Paused) {
         this.Paused = Paused;
     }
 
     /**
-     * Get The alias domain name you want to modify its status. If it is left empty, the modify operation is not performed. 
-     * @return AliasNames The alias domain name you want to modify its status. If it is left empty, the modify operation is not performed.
+     * Get Alias domain name in pending modification status. If it is empty, the modification status operation will not be performed. 
+     * @return AliasNames Alias domain name in pending modification status. If it is empty, the modification status operation will not be performed.
      */
     public String [] getAliasNames() {
         return this.AliasNames;
     }
 
     /**
-     * Set The alias domain name you want to modify its status. If it is left empty, the modify operation is not performed.
-     * @param AliasNames The alias domain name you want to modify its status. If it is left empty, the modify operation is not performed.
+     * Set Alias domain name in pending modification status. If it is empty, the modification status operation will not be performed.
+     * @param AliasNames Alias domain name in pending modification status. If it is empty, the modification status operation will not be performed.
      */
     public void setAliasNames(String [] AliasNames) {
         this.AliasNames = AliasNames;

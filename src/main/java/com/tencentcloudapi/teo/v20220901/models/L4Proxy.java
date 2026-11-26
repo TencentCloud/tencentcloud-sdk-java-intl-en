@@ -31,21 +31,24 @@ public class L4Proxy extends AbstractModel {
     private String ZoneId;
 
     /**
-    * Layer 4 proxy instance ID.
+    * Layer 4 Proxy Instance ID.
     */
     @SerializedName("ProxyId")
     @Expose
     private String ProxyId;
 
     /**
-    * Layer 4 proxy instance name.
+    * Name of the L4 proxy instance.
     */
     @SerializedName("ProxyName")
     @Expose
     private String ProxyName;
 
     /**
-    * Acceleration zone of the Layer 4 proxy instance.<li>mainland: Availability zone in the Chinese mainland;</li><li>overseas: Global availability zone (excluding the Chinese mainland);</li><li>global: Global availability zone.</li>	
+    * Acceleration zone of the Layer 4 proxy instance. 
+<li>mainland: Chinese mainland availability zone;</li>
+<li>overseas: global availability zone (excluding the Chinese mainland);</li>
+ <li>global: global availability zone.</li>	
     */
     @SerializedName("Area")
     @Expose
@@ -59,56 +62,60 @@ public class L4Proxy extends AbstractModel {
     private String Cname;
 
     /**
-    * After the fixed IP address is enabled, this value will return the corresponding access IP address; if it is not enabled, this value will be empty.
+    * After fixed IP address is enabled, this value returns the corresponding access IP address. If not enabled, this value is empty.
     */
     @SerializedName("Ips")
     @Expose
     private String [] Ips;
 
     /**
-    * Status of the Layer 4 proxy instance.<li>online: Enabled;</li>
+    * Status of the Layer 4 proxy instance.
+<li>online: enabled;</li>
 <li>offline: Disabled;</li>
-<li>progress: Deploying;</li>	
-<li>stopping: Disabling;</li>
-<li>banned: Blocked;</li>
-<li>fail: Failed to deploy or disable.</li>	
+<li>progress: deploying;</li>	
+<li>stopping: disabling;</li>
+<li>`banned`: The name server is banned.</li>
+<li>fail: deployment or disabling failed.</li>	
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * Specifies whether to enable IPv6 access.<li>on: Enable;</li> <li>off: Disable.</li>
+    * Specifies whether to enable IPv6 access. 
+<li>`on`: Enable;</li> 
+<li>off: Disable.</li>
     */
     @SerializedName("Ipv6")
     @Expose
     private String Ipv6;
 
     /**
-    * Specifies whether to enable the fixed IP address.<li>on: Enable;</li> <li>off: Disable.</li>
+    * Specifies whether to enable the fixed IP address.
+<li>`on`: Enable;</li> <li>`off`: Disable.</li>
     */
     @SerializedName("StaticIp")
     @Expose
     private String StaticIp;
 
     /**
-    * Specifies whether to enable network optimization in the Chinese mainland.<li>on: Enable</li> <li>off: Disable</li>
+    * Specifies whether to enable network optimization in the Chinese mainland.
+<li>on: Enable.</li> <li>off: Disable.</li>
     */
     @SerializedName("AccelerateMainland")
     @Expose
     private String AccelerateMainland;
 
     /**
-    * Security protection settings.
+    * Security protection configuration.
 This field is deprecated.
-Note: This field may return null, which indicates a failure to obtain a valid value.
     */
     @SerializedName("DDosProtectionConfig")
     @Expose
     private DDosProtectionConfig DDosProtectionConfig;
 
     /**
-    * Number of forwarding rules under the Layer 4 proxy instance.
+    * Number of forwarding rules under the layer 4 proxy instance.
     */
     @SerializedName("L4ProxyRuleCount")
     @Expose
@@ -138,48 +145,60 @@ Note: This field may return null, which indicates a failure to obtain a valid va
     }
 
     /**
-     * Get Layer 4 proxy instance ID. 
-     * @return ProxyId Layer 4 proxy instance ID.
+     * Get Layer 4 Proxy Instance ID. 
+     * @return ProxyId Layer 4 Proxy Instance ID.
      */
     public String getProxyId() {
         return this.ProxyId;
     }
 
     /**
-     * Set Layer 4 proxy instance ID.
-     * @param ProxyId Layer 4 proxy instance ID.
+     * Set Layer 4 Proxy Instance ID.
+     * @param ProxyId Layer 4 Proxy Instance ID.
      */
     public void setProxyId(String ProxyId) {
         this.ProxyId = ProxyId;
     }
 
     /**
-     * Get Layer 4 proxy instance name. 
-     * @return ProxyName Layer 4 proxy instance name.
+     * Get Name of the L4 proxy instance. 
+     * @return ProxyName Name of the L4 proxy instance.
      */
     public String getProxyName() {
         return this.ProxyName;
     }
 
     /**
-     * Set Layer 4 proxy instance name.
-     * @param ProxyName Layer 4 proxy instance name.
+     * Set Name of the L4 proxy instance.
+     * @param ProxyName Name of the L4 proxy instance.
      */
     public void setProxyName(String ProxyName) {
         this.ProxyName = ProxyName;
     }
 
     /**
-     * Get Acceleration zone of the Layer 4 proxy instance.<li>mainland: Availability zone in the Chinese mainland;</li><li>overseas: Global availability zone (excluding the Chinese mainland);</li><li>global: Global availability zone.</li>	 
-     * @return Area Acceleration zone of the Layer 4 proxy instance.<li>mainland: Availability zone in the Chinese mainland;</li><li>overseas: Global availability zone (excluding the Chinese mainland);</li><li>global: Global availability zone.</li>	
+     * Get Acceleration zone of the Layer 4 proxy instance. 
+<li>mainland: Chinese mainland availability zone;</li>
+<li>overseas: global availability zone (excluding the Chinese mainland);</li>
+ <li>global: global availability zone.</li>	 
+     * @return Area Acceleration zone of the Layer 4 proxy instance. 
+<li>mainland: Chinese mainland availability zone;</li>
+<li>overseas: global availability zone (excluding the Chinese mainland);</li>
+ <li>global: global availability zone.</li>	
      */
     public String getArea() {
         return this.Area;
     }
 
     /**
-     * Set Acceleration zone of the Layer 4 proxy instance.<li>mainland: Availability zone in the Chinese mainland;</li><li>overseas: Global availability zone (excluding the Chinese mainland);</li><li>global: Global availability zone.</li>	
-     * @param Area Acceleration zone of the Layer 4 proxy instance.<li>mainland: Availability zone in the Chinese mainland;</li><li>overseas: Global availability zone (excluding the Chinese mainland);</li><li>global: Global availability zone.</li>	
+     * Set Acceleration zone of the Layer 4 proxy instance. 
+<li>mainland: Chinese mainland availability zone;</li>
+<li>overseas: global availability zone (excluding the Chinese mainland);</li>
+ <li>global: global availability zone.</li>	
+     * @param Area Acceleration zone of the Layer 4 proxy instance. 
+<li>mainland: Chinese mainland availability zone;</li>
+<li>overseas: global availability zone (excluding the Chinese mainland);</li>
+ <li>global: global availability zone.</li>	
      */
     public void setArea(String Area) {
         this.Area = Area;
@@ -202,112 +221,130 @@ Note: This field may return null, which indicates a failure to obtain a valid va
     }
 
     /**
-     * Get After the fixed IP address is enabled, this value will return the corresponding access IP address; if it is not enabled, this value will be empty. 
-     * @return Ips After the fixed IP address is enabled, this value will return the corresponding access IP address; if it is not enabled, this value will be empty.
+     * Get After fixed IP address is enabled, this value returns the corresponding access IP address. If not enabled, this value is empty. 
+     * @return Ips After fixed IP address is enabled, this value returns the corresponding access IP address. If not enabled, this value is empty.
      */
     public String [] getIps() {
         return this.Ips;
     }
 
     /**
-     * Set After the fixed IP address is enabled, this value will return the corresponding access IP address; if it is not enabled, this value will be empty.
-     * @param Ips After the fixed IP address is enabled, this value will return the corresponding access IP address; if it is not enabled, this value will be empty.
+     * Set After fixed IP address is enabled, this value returns the corresponding access IP address. If not enabled, this value is empty.
+     * @param Ips After fixed IP address is enabled, this value returns the corresponding access IP address. If not enabled, this value is empty.
      */
     public void setIps(String [] Ips) {
         this.Ips = Ips;
     }
 
     /**
-     * Get Status of the Layer 4 proxy instance.<li>online: Enabled;</li>
+     * Get Status of the Layer 4 proxy instance.
+<li>online: enabled;</li>
 <li>offline: Disabled;</li>
-<li>progress: Deploying;</li>	
-<li>stopping: Disabling;</li>
-<li>banned: Blocked;</li>
-<li>fail: Failed to deploy or disable.</li>	 
-     * @return Status Status of the Layer 4 proxy instance.<li>online: Enabled;</li>
+<li>progress: deploying;</li>	
+<li>stopping: disabling;</li>
+<li>`banned`: The name server is banned.</li>
+<li>fail: deployment or disabling failed.</li>	 
+     * @return Status Status of the Layer 4 proxy instance.
+<li>online: enabled;</li>
 <li>offline: Disabled;</li>
-<li>progress: Deploying;</li>	
-<li>stopping: Disabling;</li>
-<li>banned: Blocked;</li>
-<li>fail: Failed to deploy or disable.</li>	
+<li>progress: deploying;</li>	
+<li>stopping: disabling;</li>
+<li>`banned`: The name server is banned.</li>
+<li>fail: deployment or disabling failed.</li>	
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Status of the Layer 4 proxy instance.<li>online: Enabled;</li>
+     * Set Status of the Layer 4 proxy instance.
+<li>online: enabled;</li>
 <li>offline: Disabled;</li>
-<li>progress: Deploying;</li>	
-<li>stopping: Disabling;</li>
-<li>banned: Blocked;</li>
-<li>fail: Failed to deploy or disable.</li>	
-     * @param Status Status of the Layer 4 proxy instance.<li>online: Enabled;</li>
+<li>progress: deploying;</li>	
+<li>stopping: disabling;</li>
+<li>`banned`: The name server is banned.</li>
+<li>fail: deployment or disabling failed.</li>	
+     * @param Status Status of the Layer 4 proxy instance.
+<li>online: enabled;</li>
 <li>offline: Disabled;</li>
-<li>progress: Deploying;</li>	
-<li>stopping: Disabling;</li>
-<li>banned: Blocked;</li>
-<li>fail: Failed to deploy or disable.</li>	
+<li>progress: deploying;</li>	
+<li>stopping: disabling;</li>
+<li>`banned`: The name server is banned.</li>
+<li>fail: deployment or disabling failed.</li>	
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Specifies whether to enable IPv6 access.<li>on: Enable;</li> <li>off: Disable.</li> 
-     * @return Ipv6 Specifies whether to enable IPv6 access.<li>on: Enable;</li> <li>off: Disable.</li>
+     * Get Specifies whether to enable IPv6 access. 
+<li>`on`: Enable;</li> 
+<li>off: Disable.</li> 
+     * @return Ipv6 Specifies whether to enable IPv6 access. 
+<li>`on`: Enable;</li> 
+<li>off: Disable.</li>
      */
     public String getIpv6() {
         return this.Ipv6;
     }
 
     /**
-     * Set Specifies whether to enable IPv6 access.<li>on: Enable;</li> <li>off: Disable.</li>
-     * @param Ipv6 Specifies whether to enable IPv6 access.<li>on: Enable;</li> <li>off: Disable.</li>
+     * Set Specifies whether to enable IPv6 access. 
+<li>`on`: Enable;</li> 
+<li>off: Disable.</li>
+     * @param Ipv6 Specifies whether to enable IPv6 access. 
+<li>`on`: Enable;</li> 
+<li>off: Disable.</li>
      */
     public void setIpv6(String Ipv6) {
         this.Ipv6 = Ipv6;
     }
 
     /**
-     * Get Specifies whether to enable the fixed IP address.<li>on: Enable;</li> <li>off: Disable.</li> 
-     * @return StaticIp Specifies whether to enable the fixed IP address.<li>on: Enable;</li> <li>off: Disable.</li>
+     * Get Specifies whether to enable the fixed IP address.
+<li>`on`: Enable;</li> <li>`off`: Disable.</li> 
+     * @return StaticIp Specifies whether to enable the fixed IP address.
+<li>`on`: Enable;</li> <li>`off`: Disable.</li>
      */
     public String getStaticIp() {
         return this.StaticIp;
     }
 
     /**
-     * Set Specifies whether to enable the fixed IP address.<li>on: Enable;</li> <li>off: Disable.</li>
-     * @param StaticIp Specifies whether to enable the fixed IP address.<li>on: Enable;</li> <li>off: Disable.</li>
+     * Set Specifies whether to enable the fixed IP address.
+<li>`on`: Enable;</li> <li>`off`: Disable.</li>
+     * @param StaticIp Specifies whether to enable the fixed IP address.
+<li>`on`: Enable;</li> <li>`off`: Disable.</li>
      */
     public void setStaticIp(String StaticIp) {
         this.StaticIp = StaticIp;
     }
 
     /**
-     * Get Specifies whether to enable network optimization in the Chinese mainland.<li>on: Enable</li> <li>off: Disable</li> 
-     * @return AccelerateMainland Specifies whether to enable network optimization in the Chinese mainland.<li>on: Enable</li> <li>off: Disable</li>
+     * Get Specifies whether to enable network optimization in the Chinese mainland.
+<li>on: Enable.</li> <li>off: Disable.</li> 
+     * @return AccelerateMainland Specifies whether to enable network optimization in the Chinese mainland.
+<li>on: Enable.</li> <li>off: Disable.</li>
      */
     public String getAccelerateMainland() {
         return this.AccelerateMainland;
     }
 
     /**
-     * Set Specifies whether to enable network optimization in the Chinese mainland.<li>on: Enable</li> <li>off: Disable</li>
-     * @param AccelerateMainland Specifies whether to enable network optimization in the Chinese mainland.<li>on: Enable</li> <li>off: Disable</li>
+     * Set Specifies whether to enable network optimization in the Chinese mainland.
+<li>on: Enable.</li> <li>off: Disable.</li>
+     * @param AccelerateMainland Specifies whether to enable network optimization in the Chinese mainland.
+<li>on: Enable.</li> <li>off: Disable.</li>
      */
     public void setAccelerateMainland(String AccelerateMainland) {
         this.AccelerateMainland = AccelerateMainland;
     }
 
     /**
-     * Get Security protection settings.
+     * Get Security protection configuration.
+This field is deprecated. 
+     * @return DDosProtectionConfig Security protection configuration.
 This field is deprecated.
-Note: This field may return null, which indicates a failure to obtain a valid value. 
-     * @return DDosProtectionConfig Security protection settings.
-This field is deprecated.
-Note: This field may return null, which indicates a failure to obtain a valid value.
      * @deprecated
      */
     @Deprecated
@@ -316,12 +353,10 @@ Note: This field may return null, which indicates a failure to obtain a valid va
     }
 
     /**
-     * Set Security protection settings.
+     * Set Security protection configuration.
 This field is deprecated.
-Note: This field may return null, which indicates a failure to obtain a valid value.
-     * @param DDosProtectionConfig Security protection settings.
+     * @param DDosProtectionConfig Security protection configuration.
 This field is deprecated.
-Note: This field may return null, which indicates a failure to obtain a valid value.
      * @deprecated
      */
     @Deprecated
@@ -330,16 +365,16 @@ Note: This field may return null, which indicates a failure to obtain a valid va
     }
 
     /**
-     * Get Number of forwarding rules under the Layer 4 proxy instance. 
-     * @return L4ProxyRuleCount Number of forwarding rules under the Layer 4 proxy instance.
+     * Get Number of forwarding rules under the layer 4 proxy instance. 
+     * @return L4ProxyRuleCount Number of forwarding rules under the layer 4 proxy instance.
      */
     public Long getL4ProxyRuleCount() {
         return this.L4ProxyRuleCount;
     }
 
     /**
-     * Set Number of forwarding rules under the Layer 4 proxy instance.
-     * @param L4ProxyRuleCount Number of forwarding rules under the Layer 4 proxy instance.
+     * Set Number of forwarding rules under the layer 4 proxy instance.
+     * @param L4ProxyRuleCount Number of forwarding rules under the layer 4 proxy instance.
      */
     public void setL4ProxyRuleCount(Long L4ProxyRuleCount) {
         this.L4ProxyRuleCount = L4ProxyRuleCount;

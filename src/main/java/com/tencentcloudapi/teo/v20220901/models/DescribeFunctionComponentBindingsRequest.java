@@ -52,8 +52,8 @@ public class DescribeFunctionComponentBindingsRequest extends AbstractModel {
     private Long Limit;
 
     /**
-    * Filter conditions. The maximum number of Filters.Values is 20. Detailed filter criteria:
-<li>Name: Filter by the bound variable name. Fuzzy query is supported.</li>
+    * Filter criteria. The maximum number of Filters.Values is 20. The detailed filter criteria are as follows:
+<li>name: filter by the bound variable name. Fuzzy query is supported;</li>
 <li>type: Filter by binding type. Fuzzy queries are not supported.</li>
 
     */
@@ -126,12 +126,12 @@ public class DescribeFunctionComponentBindingsRequest extends AbstractModel {
     }
 
     /**
-     * Get Filter conditions. The maximum number of Filters.Values is 20. Detailed filter criteria:
-<li>Name: Filter by the bound variable name. Fuzzy query is supported.</li>
+     * Get Filter criteria. The maximum number of Filters.Values is 20. The detailed filter criteria are as follows:
+<li>name: filter by the bound variable name. Fuzzy query is supported;</li>
 <li>type: Filter by binding type. Fuzzy queries are not supported.</li>
  
-     * @return Filters Filter conditions. The maximum number of Filters.Values is 20. Detailed filter criteria:
-<li>Name: Filter by the bound variable name. Fuzzy query is supported.</li>
+     * @return Filters Filter criteria. The maximum number of Filters.Values is 20. The detailed filter criteria are as follows:
+<li>name: filter by the bound variable name. Fuzzy query is supported;</li>
 <li>type: Filter by binding type. Fuzzy queries are not supported.</li>
 
      */
@@ -140,12 +140,12 @@ public class DescribeFunctionComponentBindingsRequest extends AbstractModel {
     }
 
     /**
-     * Set Filter conditions. The maximum number of Filters.Values is 20. Detailed filter criteria:
-<li>Name: Filter by the bound variable name. Fuzzy query is supported.</li>
+     * Set Filter criteria. The maximum number of Filters.Values is 20. The detailed filter criteria are as follows:
+<li>name: filter by the bound variable name. Fuzzy query is supported;</li>
 <li>type: Filter by binding type. Fuzzy queries are not supported.</li>
 
-     * @param Filters Filter conditions. The maximum number of Filters.Values is 20. Detailed filter criteria:
-<li>Name: Filter by the bound variable name. Fuzzy query is supported.</li>
+     * @param Filters Filter criteria. The maximum number of Filters.Values is 20. The detailed filter criteria are as follows:
+<li>name: filter by the bound variable name. Fuzzy query is supported;</li>
 <li>type: Filter by binding type. Fuzzy queries are not supported.</li>
 
      */

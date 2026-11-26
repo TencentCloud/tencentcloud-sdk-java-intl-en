@@ -31,7 +31,7 @@ public class DescribeZoneConfigImportResultRequest extends AbstractModel {
     private String ZoneId;
 
     /**
-    * It indicates the configuration import task ID for which the result needs to be queried. The import task ID is only retained for 7 days.
+    * It indicates the configuration import task ID for which the result needs to be queried. The import task ID only supports querying import tasks in the last 7 days.
     */
     @SerializedName("TaskId")
     @Expose
@@ -54,16 +54,16 @@ public class DescribeZoneConfigImportResultRequest extends AbstractModel {
     }
 
     /**
-     * Get It indicates the configuration import task ID for which the result needs to be queried. The import task ID is only retained for 7 days. 
-     * @return TaskId It indicates the configuration import task ID for which the result needs to be queried. The import task ID is only retained for 7 days.
+     * Get It indicates the configuration import task ID for which the result needs to be queried. The import task ID only supports querying import tasks in the last 7 days. 
+     * @return TaskId It indicates the configuration import task ID for which the result needs to be queried. The import task ID only supports querying import tasks in the last 7 days.
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set It indicates the configuration import task ID for which the result needs to be queried. The import task ID is only retained for 7 days.
-     * @param TaskId It indicates the configuration import task ID for which the result needs to be queried. The import task ID is only retained for 7 days.
+     * Set It indicates the configuration import task ID for which the result needs to be queried. The import task ID only supports querying import tasks in the last 7 days.
+     * @param TaskId It indicates the configuration import task ID for which the result needs to be queried. The import task ID only supports querying import tasks in the last 7 days.
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;

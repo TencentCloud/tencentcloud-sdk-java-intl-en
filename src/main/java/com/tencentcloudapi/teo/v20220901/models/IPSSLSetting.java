@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class IPSSLSetting extends AbstractModel {
 
     /**
-    * Operation type, values as follows: <li>bind: bind</li> <li>unbind: unbind</li>
+    * Operation type. Values are as follows: <li>bind: Bind</li> <li>unbind: Unbind</li>
     */
     @SerializedName("Operation")
     @Expose
@@ -38,16 +38,16 @@ public class IPSSLSetting extends AbstractModel {
     private String AssociatedDomain;
 
     /**
-     * Get Operation type, values as follows: <li>bind: bind</li> <li>unbind: unbind</li> 
-     * @return Operation Operation type, values as follows: <li>bind: bind</li> <li>unbind: unbind</li>
+     * Get Operation type. Values are as follows: <li>bind: Bind</li> <li>unbind: Unbind</li> 
+     * @return Operation Operation type. Values are as follows: <li>bind: Bind</li> <li>unbind: Unbind</li>
      */
     public String getOperation() {
         return this.Operation;
     }
 
     /**
-     * Set Operation type, values as follows: <li>bind: bind</li> <li>unbind: unbind</li>
-     * @param Operation Operation type, values as follows: <li>bind: bind</li> <li>unbind: unbind</li>
+     * Set Operation type. Values are as follows: <li>bind: Bind</li> <li>unbind: Unbind</li>
+     * @param Operation Operation type. Values are as follows: <li>bind: Bind</li> <li>unbind: Unbind</li>
      */
     public void setOperation(String Operation) {
         this.Operation = Operation;

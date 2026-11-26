@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeInferenceServiceDeploymentLogsRequest extends AbstractModel {
 
     /**
-    * Zone ID.
+    * Site ID.
     */
     @SerializedName("ZoneId")
     @Expose
     private String ZoneId;
 
     /**
-    * ID of the inference service.
+    * Inference service ID.
     */
     @SerializedName("ServiceId")
     @Expose
@@ -52,21 +52,21 @@ public class DescribeInferenceServiceDeploymentLogsRequest extends AbstractModel
     private String StartTime;
 
     /**
-    * End time for retrieving logs. Default query time range (EndTime - StartTime) is the most recent 7 days.
+    * End time for retrieving logs. The default query time range (`EndTime` - `StartTime`) is the most recent 7 days.
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-    * Sorting field. Valid values: <li>timestamp: Log generation time.</li>Default value: timestamp.
+    * Sorting field. Valid values: <li>timestamp: log generation time.</li> Default value: timestamp.
     */
     @SerializedName("SortBy")
     @Expose
     private String SortBy;
 
     /**
-    * <p>Sorting method. Valid values: <li>asc: ascending order;</li><li>desc: descending order.</li>Default value: desc.</p>
+    * Sorting method. Valid values: <li>asc: in ascending order;</li><li>desc: in descending order.</li> Default value: desc.
     */
     @SerializedName("SortOrder")
     @Expose
@@ -87,32 +87,32 @@ public class DescribeInferenceServiceDeploymentLogsRequest extends AbstractModel
     private Long Limit;
 
     /**
-     * Get Zone ID. 
-     * @return ZoneId Zone ID.
+     * Get Site ID. 
+     * @return ZoneId Site ID.
      */
     public String getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set Zone ID.
-     * @param ZoneId Zone ID.
+     * Set Site ID.
+     * @param ZoneId Site ID.
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get ID of the inference service. 
-     * @return ServiceId ID of the inference service.
+     * Get Inference service ID. 
+     * @return ServiceId Inference service ID.
      */
     public String getServiceId() {
         return this.ServiceId;
     }
 
     /**
-     * Set ID of the inference service.
-     * @param ServiceId ID of the inference service.
+     * Set Inference service ID.
+     * @param ServiceId Inference service ID.
      */
     public void setServiceId(String ServiceId) {
         this.ServiceId = ServiceId;
@@ -151,48 +151,48 @@ public class DescribeInferenceServiceDeploymentLogsRequest extends AbstractModel
     }
 
     /**
-     * Get End time for retrieving logs. Default query time range (EndTime - StartTime) is the most recent 7 days. 
-     * @return EndTime End time for retrieving logs. Default query time range (EndTime - StartTime) is the most recent 7 days.
+     * Get End time for retrieving logs. The default query time range (`EndTime` - `StartTime`) is the most recent 7 days. 
+     * @return EndTime End time for retrieving logs. The default query time range (`EndTime` - `StartTime`) is the most recent 7 days.
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set End time for retrieving logs. Default query time range (EndTime - StartTime) is the most recent 7 days.
-     * @param EndTime End time for retrieving logs. Default query time range (EndTime - StartTime) is the most recent 7 days.
+     * Set End time for retrieving logs. The default query time range (`EndTime` - `StartTime`) is the most recent 7 days.
+     * @param EndTime End time for retrieving logs. The default query time range (`EndTime` - `StartTime`) is the most recent 7 days.
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get Sorting field. Valid values: <li>timestamp: Log generation time.</li>Default value: timestamp. 
-     * @return SortBy Sorting field. Valid values: <li>timestamp: Log generation time.</li>Default value: timestamp.
+     * Get Sorting field. Valid values: <li>timestamp: log generation time.</li> Default value: timestamp. 
+     * @return SortBy Sorting field. Valid values: <li>timestamp: log generation time.</li> Default value: timestamp.
      */
     public String getSortBy() {
         return this.SortBy;
     }
 
     /**
-     * Set Sorting field. Valid values: <li>timestamp: Log generation time.</li>Default value: timestamp.
-     * @param SortBy Sorting field. Valid values: <li>timestamp: Log generation time.</li>Default value: timestamp.
+     * Set Sorting field. Valid values: <li>timestamp: log generation time.</li> Default value: timestamp.
+     * @param SortBy Sorting field. Valid values: <li>timestamp: log generation time.</li> Default value: timestamp.
      */
     public void setSortBy(String SortBy) {
         this.SortBy = SortBy;
     }
 
     /**
-     * Get <p>Sorting method. Valid values: <li>asc: ascending order;</li><li>desc: descending order.</li>Default value: desc.</p> 
-     * @return SortOrder <p>Sorting method. Valid values: <li>asc: ascending order;</li><li>desc: descending order.</li>Default value: desc.</p>
+     * Get Sorting method. Valid values: <li>asc: in ascending order;</li><li>desc: in descending order.</li> Default value: desc. 
+     * @return SortOrder Sorting method. Valid values: <li>asc: in ascending order;</li><li>desc: in descending order.</li> Default value: desc.
      */
     public String getSortOrder() {
         return this.SortOrder;
     }
 
     /**
-     * Set <p>Sorting method. Valid values: <li>asc: ascending order;</li><li>desc: descending order.</li>Default value: desc.</p>
-     * @param SortOrder <p>Sorting method. Valid values: <li>asc: ascending order;</li><li>desc: descending order.</li>Default value: desc.</p>
+     * Set Sorting method. Valid values: <li>asc: in ascending order;</li><li>desc: in descending order.</li> Default value: desc.
+     * @param SortOrder Sorting method. Valid values: <li>asc: in ascending order;</li><li>desc: in descending order.</li> Default value: desc.
      */
     public void setSortOrder(String SortOrder) {
         this.SortOrder = SortOrder;

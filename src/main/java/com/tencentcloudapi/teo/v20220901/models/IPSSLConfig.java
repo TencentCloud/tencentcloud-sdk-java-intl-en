@@ -24,71 +24,69 @@ import java.util.HashMap;
 public class IPSSLConfig extends AbstractModel {
 
     /**
-    * Domain name associated with IP SSL. If the Status value is unbound, this field is empty.
-Note: This field may return null, which indicates a failure to obtain a valid value.
+    * <p>ID of the site associated with the IP SSL domain name. If the Status value is unbound, this field is empty.</p>
+    */
+    @SerializedName("ZoneId")
+    @Expose
+    private String ZoneId;
+
+    /**
+    * <p>The domain name associated with the IP SSL. If the Status value is unbound, this field is empty.</p>
     */
     @SerializedName("AssociatedDomain")
     @Expose
     private String AssociatedDomain;
 
     /**
-    * Association status. Values as follows:
-<li>bound: The IP SSL configuration is bound</li>
-<li>Binding: IP SSL configuration binding in progress</li>
-<li>unbinding: IP SSL configuration is being unbound</li>
-<li>unbound: IP SSL configuration not bound to</li>
+    * <p>Association status. Values as follows:</p><li>bound: IP SSL configuration bound</li><li>binding: IP SSL configuration binding</li><li>unbinding: IP SSL configuration unbinding</li><li>unbound: IP SSL configuration not bound</li>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-     * Get Domain name associated with IP SSL. If the Status value is unbound, this field is empty.
-Note: This field may return null, which indicates a failure to obtain a valid value. 
-     * @return AssociatedDomain Domain name associated with IP SSL. If the Status value is unbound, this field is empty.
-Note: This field may return null, which indicates a failure to obtain a valid value.
+     * Get <p>ID of the site associated with the IP SSL domain name. If the Status value is unbound, this field is empty.</p> 
+     * @return ZoneId <p>ID of the site associated with the IP SSL domain name. If the Status value is unbound, this field is empty.</p>
+     */
+    public String getZoneId() {
+        return this.ZoneId;
+    }
+
+    /**
+     * Set <p>ID of the site associated with the IP SSL domain name. If the Status value is unbound, this field is empty.</p>
+     * @param ZoneId <p>ID of the site associated with the IP SSL domain name. If the Status value is unbound, this field is empty.</p>
+     */
+    public void setZoneId(String ZoneId) {
+        this.ZoneId = ZoneId;
+    }
+
+    /**
+     * Get <p>The domain name associated with the IP SSL. If the Status value is unbound, this field is empty.</p> 
+     * @return AssociatedDomain <p>The domain name associated with the IP SSL. If the Status value is unbound, this field is empty.</p>
      */
     public String getAssociatedDomain() {
         return this.AssociatedDomain;
     }
 
     /**
-     * Set Domain name associated with IP SSL. If the Status value is unbound, this field is empty.
-Note: This field may return null, which indicates a failure to obtain a valid value.
-     * @param AssociatedDomain Domain name associated with IP SSL. If the Status value is unbound, this field is empty.
-Note: This field may return null, which indicates a failure to obtain a valid value.
+     * Set <p>The domain name associated with the IP SSL. If the Status value is unbound, this field is empty.</p>
+     * @param AssociatedDomain <p>The domain name associated with the IP SSL. If the Status value is unbound, this field is empty.</p>
      */
     public void setAssociatedDomain(String AssociatedDomain) {
         this.AssociatedDomain = AssociatedDomain;
     }
 
     /**
-     * Get Association status. Values as follows:
-<li>bound: The IP SSL configuration is bound</li>
-<li>Binding: IP SSL configuration binding in progress</li>
-<li>unbinding: IP SSL configuration is being unbound</li>
-<li>unbound: IP SSL configuration not bound to</li> 
-     * @return Status Association status. Values as follows:
-<li>bound: The IP SSL configuration is bound</li>
-<li>Binding: IP SSL configuration binding in progress</li>
-<li>unbinding: IP SSL configuration is being unbound</li>
-<li>unbound: IP SSL configuration not bound to</li>
+     * Get <p>Association status. Values as follows:</p><li>bound: IP SSL configuration bound</li><li>binding: IP SSL configuration binding</li><li>unbinding: IP SSL configuration unbinding</li><li>unbound: IP SSL configuration not bound</li> 
+     * @return Status <p>Association status. Values as follows:</p><li>bound: IP SSL configuration bound</li><li>binding: IP SSL configuration binding</li><li>unbinding: IP SSL configuration unbinding</li><li>unbound: IP SSL configuration not bound</li>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Association status. Values as follows:
-<li>bound: The IP SSL configuration is bound</li>
-<li>Binding: IP SSL configuration binding in progress</li>
-<li>unbinding: IP SSL configuration is being unbound</li>
-<li>unbound: IP SSL configuration not bound to</li>
-     * @param Status Association status. Values as follows:
-<li>bound: The IP SSL configuration is bound</li>
-<li>Binding: IP SSL configuration binding in progress</li>
-<li>unbinding: IP SSL configuration is being unbound</li>
-<li>unbound: IP SSL configuration not bound to</li>
+     * Set <p>Association status. Values as follows:</p><li>bound: IP SSL configuration bound</li><li>binding: IP SSL configuration binding</li><li>unbinding: IP SSL configuration unbinding</li><li>unbound: IP SSL configuration not bound</li>
+     * @param Status <p>Association status. Values as follows:</p><li>bound: IP SSL configuration bound</li><li>binding: IP SSL configuration binding</li><li>unbinding: IP SSL configuration unbinding</li><li>unbound: IP SSL configuration not bound</li>
      */
     public void setStatus(String Status) {
         this.Status = Status;
@@ -102,6 +100,9 @@ Note: This field may return null, which indicates a failure to obtain a valid va
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public IPSSLConfig(IPSSLConfig source) {
+        if (source.ZoneId != null) {
+            this.ZoneId = new String(source.ZoneId);
+        }
         if (source.AssociatedDomain != null) {
             this.AssociatedDomain = new String(source.AssociatedDomain);
         }
@@ -115,6 +116,7 @@ Note: This field may return null, which indicates a failure to obtain a valid va
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "ZoneId", this.ZoneId);
         this.setParamSimple(map, prefix + "AssociatedDomain", this.AssociatedDomain);
         this.setParamSimple(map, prefix + "Status", this.Status);
 

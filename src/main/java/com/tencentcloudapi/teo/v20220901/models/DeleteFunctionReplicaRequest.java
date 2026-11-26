@@ -38,7 +38,7 @@ public class DeleteFunctionReplicaRequest extends AbstractModel {
     private String FunctionId;
 
     /**
-    * Copy name of the deleted function. Input in the form of a list is supported.
+    * Copy names of functions to be deleted. Input is supported in the form of a list.
     */
     @SerializedName("ReplicaNames")
     @Expose
@@ -77,16 +77,16 @@ public class DeleteFunctionReplicaRequest extends AbstractModel {
     }
 
     /**
-     * Get Copy name of the deleted function. Input in the form of a list is supported. 
-     * @return ReplicaNames Copy name of the deleted function. Input in the form of a list is supported.
+     * Get Copy names of functions to be deleted. Input is supported in the form of a list. 
+     * @return ReplicaNames Copy names of functions to be deleted. Input is supported in the form of a list.
      */
     public String [] getReplicaNames() {
         return this.ReplicaNames;
     }
 
     /**
-     * Set Copy name of the deleted function. Input in the form of a list is supported.
-     * @param ReplicaNames Copy name of the deleted function. Input in the form of a list is supported.
+     * Set Copy names of functions to be deleted. Input is supported in the form of a list.
+     * @param ReplicaNames Copy names of functions to be deleted. Input is supported in the form of a list.
      */
     public void setReplicaNames(String [] ReplicaNames) {
         this.ReplicaNames = ReplicaNames;

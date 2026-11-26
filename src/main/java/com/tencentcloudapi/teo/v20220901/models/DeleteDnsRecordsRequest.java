@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class DeleteDnsRecordsRequest extends AbstractModel {
 
     /**
-    * Zone id.
+    * Zone ID.
     */
     @SerializedName("ZoneId")
     @Expose
     private String ZoneId;
 
     /**
-    * List of dns record ids to be deleted, upper limit: 1000.
+    * List of DNS record IDs to be deleted. Upper limit: 1000.
     */
     @SerializedName("RecordIds")
     @Expose
     private String [] RecordIds;
 
     /**
-     * Get Zone id. 
-     * @return ZoneId Zone id.
+     * Get Zone ID. 
+     * @return ZoneId Zone ID.
      */
     public String getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set Zone id.
-     * @param ZoneId Zone id.
+     * Set Zone ID.
+     * @param ZoneId Zone ID.
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get List of dns record ids to be deleted, upper limit: 1000. 
-     * @return RecordIds List of dns record ids to be deleted, upper limit: 1000.
+     * Get List of DNS record IDs to be deleted. Upper limit: 1000. 
+     * @return RecordIds List of DNS record IDs to be deleted. Upper limit: 1000.
      */
     public String [] getRecordIds() {
         return this.RecordIds;
     }
 
     /**
-     * Set List of dns record ids to be deleted, upper limit: 1000.
-     * @param RecordIds List of dns record ids to be deleted, upper limit: 1000.
+     * Set List of DNS record IDs to be deleted. Upper limit: 1000.
+     * @param RecordIds List of DNS record IDs to be deleted. Upper limit: 1000.
      */
     public void setRecordIds(String [] RecordIds) {
         this.RecordIds = RecordIds;

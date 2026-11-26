@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class SetParameters extends AbstractModel {
 
     /**
-    * <p>Specify the custom variable name. A custom variable must be defined before it can be used in operations.</p>
+    * <p>Custom Variable name. A Custom Variable must be defined before it can be used in operations.</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * <p>Assign value to a Custom Variable. Supports the use of constant strings, variables, and formulas. Chinese characters are not allowed. Length cannot exceed 1000 characters.</p>
+    * <p>Assign values to custom variables. Supports using constant strings, variables, and formulas. Chinese characters are not allowed. Length cannot exceed 1000 characters.</p>
     */
     @SerializedName("Value")
     @Expose
     private String Value;
 
     /**
-     * Get <p>Specify the custom variable name. A custom variable must be defined before it can be used in operations.</p> 
-     * @return Name <p>Specify the custom variable name. A custom variable must be defined before it can be used in operations.</p>
+     * Get <p>Custom Variable name. A Custom Variable must be defined before it can be used in operations.</p> 
+     * @return Name <p>Custom Variable name. A Custom Variable must be defined before it can be used in operations.</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set <p>Specify the custom variable name. A custom variable must be defined before it can be used in operations.</p>
-     * @param Name <p>Specify the custom variable name. A custom variable must be defined before it can be used in operations.</p>
+     * Set <p>Custom Variable name. A Custom Variable must be defined before it can be used in operations.</p>
+     * @param Name <p>Custom Variable name. A Custom Variable must be defined before it can be used in operations.</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get <p>Assign value to a Custom Variable. Supports the use of constant strings, variables, and formulas. Chinese characters are not allowed. Length cannot exceed 1000 characters.</p> 
-     * @return Value <p>Assign value to a Custom Variable. Supports the use of constant strings, variables, and formulas. Chinese characters are not allowed. Length cannot exceed 1000 characters.</p>
+     * Get <p>Assign values to custom variables. Supports using constant strings, variables, and formulas. Chinese characters are not allowed. Length cannot exceed 1000 characters.</p> 
+     * @return Value <p>Assign values to custom variables. Supports using constant strings, variables, and formulas. Chinese characters are not allowed. Length cannot exceed 1000 characters.</p>
      */
     public String getValue() {
         return this.Value;
     }
 
     /**
-     * Set <p>Assign value to a Custom Variable. Supports the use of constant strings, variables, and formulas. Chinese characters are not allowed. Length cannot exceed 1000 characters.</p>
-     * @param Value <p>Assign value to a Custom Variable. Supports the use of constant strings, variables, and formulas. Chinese characters are not allowed. Length cannot exceed 1000 characters.</p>
+     * Set <p>Assign values to custom variables. Supports using constant strings, variables, and formulas. Chinese characters are not allowed. Length cannot exceed 1000 characters.</p>
+     * @param Value <p>Assign values to custom variables. Supports using constant strings, variables, and formulas. Chinese characters are not allowed. Length cannot exceed 1000 characters.</p>
      */
     public void setValue(String Value) {
         this.Value = Value;

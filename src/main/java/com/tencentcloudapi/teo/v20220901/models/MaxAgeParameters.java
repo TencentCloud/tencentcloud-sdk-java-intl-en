@@ -24,56 +24,56 @@ import java.util.HashMap;
 public class MaxAgeParameters extends AbstractModel {
 
     /**
-    * Specifies whether to follow the origin server cache-control configuration, with the following values:.
-<Li>`On`: follow the origin server and ignore the field cachetime;</li>.
-<Li>`Off`: do not follow the origin server and apply the field cachetime.</li>.
+    * Follow the origin server Cache-Control switch. Valid values:
+<li>on: follow the origin site and ignore the CacheTime setting;</li>
+<li>off: Do not follow the origin site. Use the CacheTime time setting.</li>
     */
     @SerializedName("FollowOrigin")
     @Expose
     private String FollowOrigin;
 
     /**
-    * Custom cache time value, unit: seconds. value range: 0-315360000.<br>note: when followorigin is off, it means not following the origin server and using cachetime to set the cache time; otherwise, this field will not take effect.
+    * Custom cache time value in seconds. Value range: 0–315360000.<br>Note: When FollowOrigin is off, it means not to follow the origin site and use CacheTime to set the cache time. Otherwise, this field is ineffective.
     */
     @SerializedName("CacheTime")
     @Expose
     private Long CacheTime;
 
     /**
-     * Get Specifies whether to follow the origin server cache-control configuration, with the following values:.
-<Li>`On`: follow the origin server and ignore the field cachetime;</li>.
-<Li>`Off`: do not follow the origin server and apply the field cachetime.</li>. 
-     * @return FollowOrigin Specifies whether to follow the origin server cache-control configuration, with the following values:.
-<Li>`On`: follow the origin server and ignore the field cachetime;</li>.
-<Li>`Off`: do not follow the origin server and apply the field cachetime.</li>.
+     * Get Follow the origin server Cache-Control switch. Valid values:
+<li>on: follow the origin site and ignore the CacheTime setting;</li>
+<li>off: Do not follow the origin site. Use the CacheTime time setting.</li> 
+     * @return FollowOrigin Follow the origin server Cache-Control switch. Valid values:
+<li>on: follow the origin site and ignore the CacheTime setting;</li>
+<li>off: Do not follow the origin site. Use the CacheTime time setting.</li>
      */
     public String getFollowOrigin() {
         return this.FollowOrigin;
     }
 
     /**
-     * Set Specifies whether to follow the origin server cache-control configuration, with the following values:.
-<Li>`On`: follow the origin server and ignore the field cachetime;</li>.
-<Li>`Off`: do not follow the origin server and apply the field cachetime.</li>.
-     * @param FollowOrigin Specifies whether to follow the origin server cache-control configuration, with the following values:.
-<Li>`On`: follow the origin server and ignore the field cachetime;</li>.
-<Li>`Off`: do not follow the origin server and apply the field cachetime.</li>.
+     * Set Follow the origin server Cache-Control switch. Valid values:
+<li>on: follow the origin site and ignore the CacheTime setting;</li>
+<li>off: Do not follow the origin site. Use the CacheTime time setting.</li>
+     * @param FollowOrigin Follow the origin server Cache-Control switch. Valid values:
+<li>on: follow the origin site and ignore the CacheTime setting;</li>
+<li>off: Do not follow the origin site. Use the CacheTime time setting.</li>
      */
     public void setFollowOrigin(String FollowOrigin) {
         this.FollowOrigin = FollowOrigin;
     }
 
     /**
-     * Get Custom cache time value, unit: seconds. value range: 0-315360000.<br>note: when followorigin is off, it means not following the origin server and using cachetime to set the cache time; otherwise, this field will not take effect. 
-     * @return CacheTime Custom cache time value, unit: seconds. value range: 0-315360000.<br>note: when followorigin is off, it means not following the origin server and using cachetime to set the cache time; otherwise, this field will not take effect.
+     * Get Custom cache time value in seconds. Value range: 0–315360000.<br>Note: When FollowOrigin is off, it means not to follow the origin site and use CacheTime to set the cache time. Otherwise, this field is ineffective. 
+     * @return CacheTime Custom cache time value in seconds. Value range: 0–315360000.<br>Note: When FollowOrigin is off, it means not to follow the origin site and use CacheTime to set the cache time. Otherwise, this field is ineffective.
      */
     public Long getCacheTime() {
         return this.CacheTime;
     }
 
     /**
-     * Set Custom cache time value, unit: seconds. value range: 0-315360000.<br>note: when followorigin is off, it means not following the origin server and using cachetime to set the cache time; otherwise, this field will not take effect.
-     * @param CacheTime Custom cache time value, unit: seconds. value range: 0-315360000.<br>note: when followorigin is off, it means not following the origin server and using cachetime to set the cache time; otherwise, this field will not take effect.
+     * Set Custom cache time value in seconds. Value range: 0–315360000.<br>Note: When FollowOrigin is off, it means not to follow the origin site and use CacheTime to set the cache time. Otherwise, this field is ineffective.
+     * @param CacheTime Custom cache time value in seconds. Value range: 0–315360000.<br>Note: When FollowOrigin is off, it means not to follow the origin site and use CacheTime to set the cache time. Otherwise, this field is ineffective.
      */
     public void setCacheTime(Long CacheTime) {
         this.CacheTime = CacheTime;

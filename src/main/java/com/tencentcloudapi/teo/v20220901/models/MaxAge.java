@@ -24,61 +24,61 @@ import java.util.HashMap;
 public class MaxAge extends AbstractModel {
 
     /**
-    * Whether to follow the origin server. Values:
-<li>`on`: Follow the origin server and ignore the field MaxAgeTime;</li>
-<li>`off`: Do not follow the origin server and apply the field MaxAgeTime.</li>
+    * Whether to follow the origin site, with values:
+<li>on: follow the origin site, ignore the MaxAge time setting;</li>
+<li>off: Do not follow the origin site. Use the MaxAge time setting.</li>
     */
     @SerializedName("FollowOrigin")
     @Expose
     private String FollowOrigin;
 
     /**
-    * MaxAge specifies the time setting in seconds. value range: 0–315360000.
-Specifies the time when the cache is disabled if set to 0.
+    * MaxAge time setting, in seconds. Value range: 0–315360000.
+Note: If the time is 0, no cache is used.
     */
     @SerializedName("MaxAgeTime")
     @Expose
     private Long MaxAgeTime;
 
     /**
-     * Get Whether to follow the origin server. Values:
-<li>`on`: Follow the origin server and ignore the field MaxAgeTime;</li>
-<li>`off`: Do not follow the origin server and apply the field MaxAgeTime.</li> 
-     * @return FollowOrigin Whether to follow the origin server. Values:
-<li>`on`: Follow the origin server and ignore the field MaxAgeTime;</li>
-<li>`off`: Do not follow the origin server and apply the field MaxAgeTime.</li>
+     * Get Whether to follow the origin site, with values:
+<li>on: follow the origin site, ignore the MaxAge time setting;</li>
+<li>off: Do not follow the origin site. Use the MaxAge time setting.</li> 
+     * @return FollowOrigin Whether to follow the origin site, with values:
+<li>on: follow the origin site, ignore the MaxAge time setting;</li>
+<li>off: Do not follow the origin site. Use the MaxAge time setting.</li>
      */
     public String getFollowOrigin() {
         return this.FollowOrigin;
     }
 
     /**
-     * Set Whether to follow the origin server. Values:
-<li>`on`: Follow the origin server and ignore the field MaxAgeTime;</li>
-<li>`off`: Do not follow the origin server and apply the field MaxAgeTime.</li>
-     * @param FollowOrigin Whether to follow the origin server. Values:
-<li>`on`: Follow the origin server and ignore the field MaxAgeTime;</li>
-<li>`off`: Do not follow the origin server and apply the field MaxAgeTime.</li>
+     * Set Whether to follow the origin site, with values:
+<li>on: follow the origin site, ignore the MaxAge time setting;</li>
+<li>off: Do not follow the origin site. Use the MaxAge time setting.</li>
+     * @param FollowOrigin Whether to follow the origin site, with values:
+<li>on: follow the origin site, ignore the MaxAge time setting;</li>
+<li>off: Do not follow the origin site. Use the MaxAge time setting.</li>
      */
     public void setFollowOrigin(String FollowOrigin) {
         this.FollowOrigin = FollowOrigin;
     }
 
     /**
-     * Get MaxAge specifies the time setting in seconds. value range: 0–315360000.
-Specifies the time when the cache is disabled if set to 0. 
-     * @return MaxAgeTime MaxAge specifies the time setting in seconds. value range: 0–315360000.
-Specifies the time when the cache is disabled if set to 0.
+     * Get MaxAge time setting, in seconds. Value range: 0–315360000.
+Note: If the time is 0, no cache is used. 
+     * @return MaxAgeTime MaxAge time setting, in seconds. Value range: 0–315360000.
+Note: If the time is 0, no cache is used.
      */
     public Long getMaxAgeTime() {
         return this.MaxAgeTime;
     }
 
     /**
-     * Set MaxAge specifies the time setting in seconds. value range: 0–315360000.
-Specifies the time when the cache is disabled if set to 0.
-     * @param MaxAgeTime MaxAge specifies the time setting in seconds. value range: 0–315360000.
-Specifies the time when the cache is disabled if set to 0.
+     * Set MaxAge time setting, in seconds. Value range: 0–315360000.
+Note: If the time is 0, no cache is used.
+     * @param MaxAgeTime MaxAge time setting, in seconds. Value range: 0–315360000.
+Note: If the time is 0, no cache is used.
      */
     public void setMaxAgeTime(Long MaxAgeTime) {
         this.MaxAgeTime = MaxAgeTime;

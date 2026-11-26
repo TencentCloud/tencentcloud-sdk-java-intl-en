@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class CheckCnameStatusRequest extends AbstractModel {
 
     /**
-    * Site ID.
+    * Zone ID.
     */
     @SerializedName("ZoneId")
     @Expose
     private String ZoneId;
 
     /**
-    * The domain name list that need to detect CNAME configuration state can be: <li>acceleration domain name;</li><li>alias domain name.</li>.
+    * Domain name list that need to detect CNAME configuration state, which can be: <li>acceleration domain name;</li><li>alias domain name.</li>
     */
     @SerializedName("RecordNames")
     @Expose
     private String [] RecordNames;
 
     /**
-     * Get Site ID. 
-     * @return ZoneId Site ID.
+     * Get Zone ID. 
+     * @return ZoneId Zone ID.
      */
     public String getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set Site ID.
-     * @param ZoneId Site ID.
+     * Set Zone ID.
+     * @param ZoneId Zone ID.
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get The domain name list that need to detect CNAME configuration state can be: <li>acceleration domain name;</li><li>alias domain name.</li>. 
-     * @return RecordNames The domain name list that need to detect CNAME configuration state can be: <li>acceleration domain name;</li><li>alias domain name.</li>.
+     * Get Domain name list that need to detect CNAME configuration state, which can be: <li>acceleration domain name;</li><li>alias domain name.</li> 
+     * @return RecordNames Domain name list that need to detect CNAME configuration state, which can be: <li>acceleration domain name;</li><li>alias domain name.</li>
      */
     public String [] getRecordNames() {
         return this.RecordNames;
     }
 
     /**
-     * Set The domain name list that need to detect CNAME configuration state can be: <li>acceleration domain name;</li><li>alias domain name.</li>.
-     * @param RecordNames The domain name list that need to detect CNAME configuration state can be: <li>acceleration domain name;</li><li>alias domain name.</li>.
+     * Set Domain name list that need to detect CNAME configuration state, which can be: <li>acceleration domain name;</li><li>alias domain name.</li>
+     * @param RecordNames Domain name list that need to detect CNAME configuration state, which can be: <li>acceleration domain name;</li><li>alias domain name.</li>
      */
     public void setRecordNames(String [] RecordNames) {
         this.RecordNames = RecordNames;

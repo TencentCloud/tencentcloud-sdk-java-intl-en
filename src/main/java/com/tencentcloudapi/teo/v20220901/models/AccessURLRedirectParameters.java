@@ -59,6 +59,13 @@ public class AccessURLRedirectParameters extends AbstractModel {
     private AccessURLRedirectQueryString QueryString;
 
     /**
+    * <p>Target port configuration.</p><p>If this parameter is not specified, it is processed in FollowProtocol mode, meaning the redirect address does not explicitly specify a port. The target protocol uses the default port: 80 for HTTP and 443 for HTTPS.</p>
+    */
+    @SerializedName("Port")
+    @Expose
+    private AccessURLRedirectPort Port;
+
+    /**
      * Get <p>Status code, value is one of 301, 302, 303, 307, 308.</p> 
      * @return StatusCode <p>Status code, value is one of 301, 302, 303, 307, 308.</p>
      */
@@ -138,6 +145,22 @@ public class AccessURLRedirectParameters extends AbstractModel {
         this.QueryString = QueryString;
     }
 
+    /**
+     * Get <p>Target port configuration.</p><p>If this parameter is not specified, it is processed in FollowProtocol mode, meaning the redirect address does not explicitly specify a port. The target protocol uses the default port: 80 for HTTP and 443 for HTTPS.</p> 
+     * @return Port <p>Target port configuration.</p><p>If this parameter is not specified, it is processed in FollowProtocol mode, meaning the redirect address does not explicitly specify a port. The target protocol uses the default port: 80 for HTTP and 443 for HTTPS.</p>
+     */
+    public AccessURLRedirectPort getPort() {
+        return this.Port;
+    }
+
+    /**
+     * Set <p>Target port configuration.</p><p>If this parameter is not specified, it is processed in FollowProtocol mode, meaning the redirect address does not explicitly specify a port. The target protocol uses the default port: 80 for HTTP and 443 for HTTPS.</p>
+     * @param Port <p>Target port configuration.</p><p>If this parameter is not specified, it is processed in FollowProtocol mode, meaning the redirect address does not explicitly specify a port. The target protocol uses the default port: 80 for HTTP and 443 for HTTPS.</p>
+     */
+    public void setPort(AccessURLRedirectPort Port) {
+        this.Port = Port;
+    }
+
     public AccessURLRedirectParameters() {
     }
 
@@ -161,6 +184,9 @@ public class AccessURLRedirectParameters extends AbstractModel {
         if (source.QueryString != null) {
             this.QueryString = new AccessURLRedirectQueryString(source.QueryString);
         }
+        if (source.Port != null) {
+            this.Port = new AccessURLRedirectPort(source.Port);
+        }
     }
 
 
@@ -173,6 +199,7 @@ public class AccessURLRedirectParameters extends AbstractModel {
         this.setParamObj(map, prefix + "HostName.", this.HostName);
         this.setParamObj(map, prefix + "URLPath.", this.URLPath);
         this.setParamObj(map, prefix + "QueryString.", this.QueryString);
+        this.setParamObj(map, prefix + "Port.", this.Port);
 
     }
 }

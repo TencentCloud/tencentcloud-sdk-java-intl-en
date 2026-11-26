@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class DescribeSecurityTemplateBindingsRequest extends AbstractModel {
 
     /**
-    * ID of the site to query
+    * Site ID to query.
     */
     @SerializedName("ZoneId")
     @Expose
     private String ZoneId;
 
     /**
-    * ID of the policy template to query.
+    * Template ID of the policy to query.
     */
     @SerializedName("TemplateId")
     @Expose
     private String [] TemplateId;
 
     /**
-     * Get ID of the site to query 
-     * @return ZoneId ID of the site to query
+     * Get Site ID to query. 
+     * @return ZoneId Site ID to query.
      */
     public String getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set ID of the site to query
-     * @param ZoneId ID of the site to query
+     * Set Site ID to query.
+     * @param ZoneId Site ID to query.
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get ID of the policy template to query. 
-     * @return TemplateId ID of the policy template to query.
+     * Get Template ID of the policy to query. 
+     * @return TemplateId Template ID of the policy to query.
      */
     public String [] getTemplateId() {
         return this.TemplateId;
     }
 
     /**
-     * Set ID of the policy template to query.
-     * @param TemplateId ID of the policy template to query.
+     * Set Template ID of the policy to query.
+     * @param TemplateId Template ID of the policy to query.
      */
     public void setTemplateId(String [] TemplateId) {
         this.TemplateId = TemplateId;

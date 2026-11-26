@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class Quota extends AbstractModel {
 
     /**
-    * 
+    * Quota limit for a single batch submission.
     */
     @SerializedName("Batch")
     @Expose
@@ -38,35 +38,35 @@ public class Quota extends AbstractModel {
     private Long Daily;
 
     /**
-    * Remaining daily submission quota.
+    * Daily unconsumed submission quota.
     */
     @SerializedName("DailyAvailable")
     @Expose
     private Long DailyAvailable;
 
     /**
-    * Type of cache purging/pre-warming. Values:
-<li>`purge_prefix`: Purge by prefix</li>
-<li>`purge_url`: Purge by URL</li>
-<li>`purge_host`: Purge by hostname</li>
-<li>`purge_all`: Purge all caches</li>
-<li>`purge_cache_tag`: Purge by cache tag</li><li>`prefetch_url`: Pre-warm by URL</li>
+    * Purge and prefetch cache type. Valid values:
+<li> purge_prefix: refresh by prefix;</li>
+<li> purge_url: refresh by URL;</li>
+<li> purge_host: refresh by Hostname;</li>
+<li> purge_all: Refresh all cached content;</li>
+<li> purge_cache_tag: refresh by cache tag;</li><li> prefetch_url: prefetch by url.</li>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-     * Get  
-     * @return Batch 
+     * Get Quota limit for a single batch submission. 
+     * @return Batch Quota limit for a single batch submission.
      */
     public Long getBatch() {
         return this.Batch;
     }
 
     /**
-     * Set 
-     * @param Batch 
+     * Set Quota limit for a single batch submission.
+     * @param Batch Quota limit for a single batch submission.
      */
     public void setBatch(Long Batch) {
         this.Batch = Batch;
@@ -89,52 +89,52 @@ public class Quota extends AbstractModel {
     }
 
     /**
-     * Get Remaining daily submission quota. 
-     * @return DailyAvailable Remaining daily submission quota.
+     * Get Daily unconsumed submission quota. 
+     * @return DailyAvailable Daily unconsumed submission quota.
      */
     public Long getDailyAvailable() {
         return this.DailyAvailable;
     }
 
     /**
-     * Set Remaining daily submission quota.
-     * @param DailyAvailable Remaining daily submission quota.
+     * Set Daily unconsumed submission quota.
+     * @param DailyAvailable Daily unconsumed submission quota.
      */
     public void setDailyAvailable(Long DailyAvailable) {
         this.DailyAvailable = DailyAvailable;
     }
 
     /**
-     * Get Type of cache purging/pre-warming. Values:
-<li>`purge_prefix`: Purge by prefix</li>
-<li>`purge_url`: Purge by URL</li>
-<li>`purge_host`: Purge by hostname</li>
-<li>`purge_all`: Purge all caches</li>
-<li>`purge_cache_tag`: Purge by cache tag</li><li>`prefetch_url`: Pre-warm by URL</li> 
-     * @return Type Type of cache purging/pre-warming. Values:
-<li>`purge_prefix`: Purge by prefix</li>
-<li>`purge_url`: Purge by URL</li>
-<li>`purge_host`: Purge by hostname</li>
-<li>`purge_all`: Purge all caches</li>
-<li>`purge_cache_tag`: Purge by cache tag</li><li>`prefetch_url`: Pre-warm by URL</li>
+     * Get Purge and prefetch cache type. Valid values:
+<li> purge_prefix: refresh by prefix;</li>
+<li> purge_url: refresh by URL;</li>
+<li> purge_host: refresh by Hostname;</li>
+<li> purge_all: Refresh all cached content;</li>
+<li> purge_cache_tag: refresh by cache tag;</li><li> prefetch_url: prefetch by url.</li> 
+     * @return Type Purge and prefetch cache type. Valid values:
+<li> purge_prefix: refresh by prefix;</li>
+<li> purge_url: refresh by URL;</li>
+<li> purge_host: refresh by Hostname;</li>
+<li> purge_all: Refresh all cached content;</li>
+<li> purge_cache_tag: refresh by cache tag;</li><li> prefetch_url: prefetch by url.</li>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Type of cache purging/pre-warming. Values:
-<li>`purge_prefix`: Purge by prefix</li>
-<li>`purge_url`: Purge by URL</li>
-<li>`purge_host`: Purge by hostname</li>
-<li>`purge_all`: Purge all caches</li>
-<li>`purge_cache_tag`: Purge by cache tag</li><li>`prefetch_url`: Pre-warm by URL</li>
-     * @param Type Type of cache purging/pre-warming. Values:
-<li>`purge_prefix`: Purge by prefix</li>
-<li>`purge_url`: Purge by URL</li>
-<li>`purge_host`: Purge by hostname</li>
-<li>`purge_all`: Purge all caches</li>
-<li>`purge_cache_tag`: Purge by cache tag</li><li>`prefetch_url`: Pre-warm by URL</li>
+     * Set Purge and prefetch cache type. Valid values:
+<li> purge_prefix: refresh by prefix;</li>
+<li> purge_url: refresh by URL;</li>
+<li> purge_host: refresh by Hostname;</li>
+<li> purge_all: Refresh all cached content;</li>
+<li> purge_cache_tag: refresh by cache tag;</li><li> prefetch_url: prefetch by url.</li>
+     * @param Type Purge and prefetch cache type. Valid values:
+<li> purge_prefix: refresh by prefix;</li>
+<li> purge_url: refresh by URL;</li>
+<li> purge_host: refresh by Hostname;</li>
+<li> purge_all: Refresh all cached content;</li>
+<li> purge_cache_tag: refresh by cache tag;</li><li> prefetch_url: prefetch by url.</li>
      */
     public void setType(String Type) {
         this.Type = Type;

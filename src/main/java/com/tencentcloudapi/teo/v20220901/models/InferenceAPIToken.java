@@ -31,14 +31,14 @@ public class InferenceAPIToken extends AbstractModel {
     private String TokenId;
 
     /**
-    * Reasoning API Token name.
+    * Name of the reasoning API Token.
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * Reasoning API Token content.
+    * Content of the reasoning API Token.
     */
     @SerializedName("Content")
     @Expose
@@ -68,32 +68,32 @@ public class InferenceAPIToken extends AbstractModel {
     }
 
     /**
-     * Get Reasoning API Token name. 
-     * @return Name Reasoning API Token name.
+     * Get Name of the reasoning API Token. 
+     * @return Name Name of the reasoning API Token.
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Reasoning API Token name.
-     * @param Name Reasoning API Token name.
+     * Set Name of the reasoning API Token.
+     * @param Name Name of the reasoning API Token.
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Reasoning API Token content. 
-     * @return Content Reasoning API Token content.
+     * Get Content of the reasoning API Token. 
+     * @return Content Content of the reasoning API Token.
      */
     public String getContent() {
         return this.Content;
     }
 
     /**
-     * Set Reasoning API Token content.
-     * @param Content Reasoning API Token content.
+     * Set Content of the reasoning API Token.
+     * @param Content Content of the reasoning API Token.
      */
     public void setContent(String Content) {
         this.Content = Content;

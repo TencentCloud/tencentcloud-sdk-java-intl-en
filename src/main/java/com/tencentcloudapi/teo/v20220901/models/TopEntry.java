@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class TopEntry extends AbstractModel {
 
     /**
-    * The query dimension value.
+    * top query dimension value.
     */
     @SerializedName("Key")
     @Expose
     private String Key;
 
     /**
-    * The details.
+    * Query specific data.
     */
     @SerializedName("Value")
     @Expose
     private TopEntryValue [] Value;
 
     /**
-     * Get The query dimension value. 
-     * @return Key The query dimension value.
+     * Get top query dimension value. 
+     * @return Key top query dimension value.
      */
     public String getKey() {
         return this.Key;
     }
 
     /**
-     * Set The query dimension value.
-     * @param Key The query dimension value.
+     * Set top query dimension value.
+     * @param Key top query dimension value.
      */
     public void setKey(String Key) {
         this.Key = Key;
     }
 
     /**
-     * Get The details. 
-     * @return Value The details.
+     * Get Query specific data. 
+     * @return Value Query specific data.
      */
     public TopEntryValue [] getValue() {
         return this.Value;
     }
 
     /**
-     * Set The details.
-     * @param Value The details.
+     * Set Query specific data.
+     * @param Value Query specific data.
      */
     public void setValue(TopEntryValue [] Value) {
         this.Value = Value;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ImportZoneConfigResponse extends AbstractModel {
 
     /**
-    * <p>Task Id of this import configuration. Use the site configuration import result query API (DescribeZoneConfigImportResult) to get the execution result of this import job. Note: The import task Id only supports querying the most recent 7 days of import tasks.</p>
+    * <p>Task Id of this import configuration. Call the site configuration import result query API (DescribeZoneConfigImportResult) to get the execution result of this import task. Note: The import task Id only supports querying import tasks from the most recent 7 days.</p>
     */
     @SerializedName("TaskId")
     @Expose
@@ -38,16 +38,16 @@ public class ImportZoneConfigResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get <p>Task Id of this import configuration. Use the site configuration import result query API (DescribeZoneConfigImportResult) to get the execution result of this import job. Note: The import task Id only supports querying the most recent 7 days of import tasks.</p> 
-     * @return TaskId <p>Task Id of this import configuration. Use the site configuration import result query API (DescribeZoneConfigImportResult) to get the execution result of this import job. Note: The import task Id only supports querying the most recent 7 days of import tasks.</p>
+     * Get <p>Task Id of this import configuration. Call the site configuration import result query API (DescribeZoneConfigImportResult) to get the execution result of this import task. Note: The import task Id only supports querying import tasks from the most recent 7 days.</p> 
+     * @return TaskId <p>Task Id of this import configuration. Call the site configuration import result query API (DescribeZoneConfigImportResult) to get the execution result of this import task. Note: The import task Id only supports querying import tasks from the most recent 7 days.</p>
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set <p>Task Id of this import configuration. Use the site configuration import result query API (DescribeZoneConfigImportResult) to get the execution result of this import job. Note: The import task Id only supports querying the most recent 7 days of import tasks.</p>
-     * @param TaskId <p>Task Id of this import configuration. Use the site configuration import result query API (DescribeZoneConfigImportResult) to get the execution result of this import job. Note: The import task Id only supports querying the most recent 7 days of import tasks.</p>
+     * Set <p>Task Id of this import configuration. Call the site configuration import result query API (DescribeZoneConfigImportResult) to get the execution result of this import task. Note: The import task Id only supports querying import tasks from the most recent 7 days.</p>
+     * @param TaskId <p>Task Id of this import configuration. Call the site configuration import result query API (DescribeZoneConfigImportResult) to get the execution result of this import task. Note: The import task Id only supports querying import tasks from the most recent 7 days.</p>
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;

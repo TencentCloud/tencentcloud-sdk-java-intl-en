@@ -24,84 +24,84 @@ import java.util.HashMap;
 public class URLPath extends AbstractModel {
 
     /**
-    * Action to be executed. values:.
-<Li>`Follow`: follow the request;</li>.
-<Li>`Custom`: custom;</li>.
-<Li>`Regex`: regular expression matching.</li>.
+    * Execution action. Valid values:
+<li>follow: follow request;</li>
+<li>custom: Custom;</li>
+<li>regex: regular expression matching.</li>
     */
     @SerializedName("Action")
     @Expose
     private String Action;
 
     /**
-    * Regular expression matching expression, length range is 1-1024.<br>note: when action is regex, this field is required; when action is follow or custom, this field is not required and will not take effect if filled.
+    * Regular expression for matching, with a length range of 1–1024.<br>Note: This field is required when Action is regex. When Action is follow or custom, no need to specify this field, and it does not take effect if specified.
     */
     @SerializedName("Regex")
     @Expose
     private String Regex;
 
     /**
-    * Redirect target url, length range is 1-1024.<br>note: when action is regex or custom, this field is required; when action is follow, this field is not required and will not take effect if filled.
+    * Target URL for redirection. Length range: 1–1024.<br>Note: This field is required when Action is regex or custom. When Action is follow, no need to specify this field, and it does not take effect if specified.
     */
     @SerializedName("Value")
     @Expose
     private String Value;
 
     /**
-     * Get Action to be executed. values:.
-<Li>`Follow`: follow the request;</li>.
-<Li>`Custom`: custom;</li>.
-<Li>`Regex`: regular expression matching.</li>. 
-     * @return Action Action to be executed. values:.
-<Li>`Follow`: follow the request;</li>.
-<Li>`Custom`: custom;</li>.
-<Li>`Regex`: regular expression matching.</li>.
+     * Get Execution action. Valid values:
+<li>follow: follow request;</li>
+<li>custom: Custom;</li>
+<li>regex: regular expression matching.</li> 
+     * @return Action Execution action. Valid values:
+<li>follow: follow request;</li>
+<li>custom: Custom;</li>
+<li>regex: regular expression matching.</li>
      */
     public String getAction() {
         return this.Action;
     }
 
     /**
-     * Set Action to be executed. values:.
-<Li>`Follow`: follow the request;</li>.
-<Li>`Custom`: custom;</li>.
-<Li>`Regex`: regular expression matching.</li>.
-     * @param Action Action to be executed. values:.
-<Li>`Follow`: follow the request;</li>.
-<Li>`Custom`: custom;</li>.
-<Li>`Regex`: regular expression matching.</li>.
+     * Set Execution action. Valid values:
+<li>follow: follow request;</li>
+<li>custom: Custom;</li>
+<li>regex: regular expression matching.</li>
+     * @param Action Execution action. Valid values:
+<li>follow: follow request;</li>
+<li>custom: Custom;</li>
+<li>regex: regular expression matching.</li>
      */
     public void setAction(String Action) {
         this.Action = Action;
     }
 
     /**
-     * Get Regular expression matching expression, length range is 1-1024.<br>note: when action is regex, this field is required; when action is follow or custom, this field is not required and will not take effect if filled. 
-     * @return Regex Regular expression matching expression, length range is 1-1024.<br>note: when action is regex, this field is required; when action is follow or custom, this field is not required and will not take effect if filled.
+     * Get Regular expression for matching, with a length range of 1–1024.<br>Note: This field is required when Action is regex. When Action is follow or custom, no need to specify this field, and it does not take effect if specified. 
+     * @return Regex Regular expression for matching, with a length range of 1–1024.<br>Note: This field is required when Action is regex. When Action is follow or custom, no need to specify this field, and it does not take effect if specified.
      */
     public String getRegex() {
         return this.Regex;
     }
 
     /**
-     * Set Regular expression matching expression, length range is 1-1024.<br>note: when action is regex, this field is required; when action is follow or custom, this field is not required and will not take effect if filled.
-     * @param Regex Regular expression matching expression, length range is 1-1024.<br>note: when action is regex, this field is required; when action is follow or custom, this field is not required and will not take effect if filled.
+     * Set Regular expression for matching, with a length range of 1–1024.<br>Note: This field is required when Action is regex. When Action is follow or custom, no need to specify this field, and it does not take effect if specified.
+     * @param Regex Regular expression for matching, with a length range of 1–1024.<br>Note: This field is required when Action is regex. When Action is follow or custom, no need to specify this field, and it does not take effect if specified.
      */
     public void setRegex(String Regex) {
         this.Regex = Regex;
     }
 
     /**
-     * Get Redirect target url, length range is 1-1024.<br>note: when action is regex or custom, this field is required; when action is follow, this field is not required and will not take effect if filled. 
-     * @return Value Redirect target url, length range is 1-1024.<br>note: when action is regex or custom, this field is required; when action is follow, this field is not required and will not take effect if filled.
+     * Get Target URL for redirection. Length range: 1–1024.<br>Note: This field is required when Action is regex or custom. When Action is follow, no need to specify this field, and it does not take effect if specified. 
+     * @return Value Target URL for redirection. Length range: 1–1024.<br>Note: This field is required when Action is regex or custom. When Action is follow, no need to specify this field, and it does not take effect if specified.
      */
     public String getValue() {
         return this.Value;
     }
 
     /**
-     * Set Redirect target url, length range is 1-1024.<br>note: when action is regex or custom, this field is required; when action is follow, this field is not required and will not take effect if filled.
-     * @param Value Redirect target url, length range is 1-1024.<br>note: when action is regex or custom, this field is required; when action is follow, this field is not required and will not take effect if filled.
+     * Set Target URL for redirection. Length range: 1–1024.<br>Note: This field is required when Action is regex or custom. When Action is follow, no need to specify this field, and it does not take effect if specified.
+     * @param Value Target URL for redirection. Length range: 1–1024.<br>Note: This field is required when Action is regex or custom. When Action is follow, no need to specify this field, and it does not take effect if specified.
      */
     public void setValue(String Value) {
         this.Value = Value;

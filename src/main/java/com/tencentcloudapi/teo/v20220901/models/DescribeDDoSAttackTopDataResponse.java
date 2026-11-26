@@ -24,15 +24,14 @@ import java.util.HashMap;
 public class DescribeDDoSAttackTopDataResponse extends AbstractModel {
 
     /**
-    * The list of top-ranked DDoS attack data.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * DDoS attack Top Data List.
     */
     @SerializedName("Data")
     @Expose
     private TopEntry [] Data;
 
     /**
-    * Total number of query results.
+    * Total number of entries in the query result.
     */
     @SerializedName("TotalCount")
     @Expose
@@ -46,36 +45,32 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get The list of top-ranked DDoS attack data.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Data The list of top-ranked DDoS attack data.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get DDoS attack Top Data List. 
+     * @return Data DDoS attack Top Data List.
      */
     public TopEntry [] getData() {
         return this.Data;
     }
 
     /**
-     * Set The list of top-ranked DDoS attack data.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Data The list of top-ranked DDoS attack data.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set DDoS attack Top Data List.
+     * @param Data DDoS attack Top Data List.
      */
     public void setData(TopEntry [] Data) {
         this.Data = Data;
     }
 
     /**
-     * Get Total number of query results. 
-     * @return TotalCount Total number of query results.
+     * Get Total number of entries in the query result. 
+     * @return TotalCount Total number of entries in the query result.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Total number of query results.
-     * @param TotalCount Total number of query results.
+     * Set Total number of entries in the query result.
+     * @param TotalCount Total number of entries in the query result.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

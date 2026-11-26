@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class BindZoneToPlanRequest extends AbstractModel {
 
     /**
-    * ID of the site to be bound.
+    * Site ID of the selected site that is not bound to a package.
     */
     @SerializedName("ZoneId")
     @Expose
     private String ZoneId;
 
     /**
-    * ID of the target plan.
+    * Target package ID to be bound.
     */
     @SerializedName("PlanId")
     @Expose
     private String PlanId;
 
     /**
-     * Get ID of the site to be bound. 
-     * @return ZoneId ID of the site to be bound.
+     * Get Site ID of the selected site that is not bound to a package. 
+     * @return ZoneId Site ID of the selected site that is not bound to a package.
      */
     public String getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set ID of the site to be bound.
-     * @param ZoneId ID of the site to be bound.
+     * Set Site ID of the selected site that is not bound to a package.
+     * @param ZoneId Site ID of the selected site that is not bound to a package.
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get ID of the target plan. 
-     * @return PlanId ID of the target plan.
+     * Get Target package ID to be bound. 
+     * @return PlanId Target package ID to be bound.
      */
     public String getPlanId() {
         return this.PlanId;
     }
 
     /**
-     * Set ID of the target plan.
-     * @param PlanId ID of the target plan.
+     * Set Target package ID to be bound.
+     * @param PlanId Target package ID to be bound.
      */
     public void setPlanId(String PlanId) {
         this.PlanId = PlanId;

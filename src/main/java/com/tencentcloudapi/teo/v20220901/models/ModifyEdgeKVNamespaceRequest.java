@@ -38,7 +38,7 @@ public class ModifyEdgeKVNamespaceRequest extends AbstractModel {
     private String Namespace;
 
     /**
-    * Namespace description. Used to describe the purpose or business meaning of a namespace. Supports a maximum of 256 characters.
+    * Namespace description. Used to describe the purpose or business meaning of a namespace. Supports up to 256 characters.
     */
     @SerializedName("Remark")
     @Expose
@@ -77,16 +77,16 @@ public class ModifyEdgeKVNamespaceRequest extends AbstractModel {
     }
 
     /**
-     * Get Namespace description. Used to describe the purpose or business meaning of a namespace. Supports a maximum of 256 characters. 
-     * @return Remark Namespace description. Used to describe the purpose or business meaning of a namespace. Supports a maximum of 256 characters.
+     * Get Namespace description. Used to describe the purpose or business meaning of a namespace. Supports up to 256 characters. 
+     * @return Remark Namespace description. Used to describe the purpose or business meaning of a namespace. Supports up to 256 characters.
      */
     public String getRemark() {
         return this.Remark;
     }
 
     /**
-     * Set Namespace description. Used to describe the purpose or business meaning of a namespace. Supports a maximum of 256 characters.
-     * @param Remark Namespace description. Used to describe the purpose or business meaning of a namespace. Supports a maximum of 256 characters.
+     * Set Namespace description. Used to describe the purpose or business meaning of a namespace. Supports up to 256 characters.
+     * @param Remark Namespace description. Used to describe the purpose or business meaning of a namespace. Supports up to 256 characters.
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;

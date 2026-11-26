@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class DeleteRulesRequest extends AbstractModel {
 
     /**
-    * ID of the site
+    * Zone ID.
     */
     @SerializedName("ZoneId")
     @Expose
     private String ZoneId;
 
     /**
-    * IDs of the rules to be deleted.
+    * List of specified rule IDs to be deleted.
     */
     @SerializedName("RuleIds")
     @Expose
     private String [] RuleIds;
 
     /**
-     * Get ID of the site 
-     * @return ZoneId ID of the site
+     * Get Zone ID. 
+     * @return ZoneId Zone ID.
      */
     public String getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set ID of the site
-     * @param ZoneId ID of the site
+     * Set Zone ID.
+     * @param ZoneId Zone ID.
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get IDs of the rules to be deleted. 
-     * @return RuleIds IDs of the rules to be deleted.
+     * Get List of specified rule IDs to be deleted. 
+     * @return RuleIds List of specified rule IDs to be deleted.
      */
     public String [] getRuleIds() {
         return this.RuleIds;
     }
 
     /**
-     * Set IDs of the rules to be deleted.
-     * @param RuleIds IDs of the rules to be deleted.
+     * Set List of specified rule IDs to be deleted.
+     * @param RuleIds List of specified rule IDs to be deleted.
      */
     public void setRuleIds(String [] RuleIds) {
         this.RuleIds = RuleIds;

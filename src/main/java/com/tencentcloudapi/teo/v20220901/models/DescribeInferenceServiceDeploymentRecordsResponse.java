@@ -31,7 +31,7 @@ public class DescribeInferenceServiceDeploymentRecordsResponse extends AbstractM
     private Long TotalCount;
 
     /**
-    * <p>History list for reasoning service deployment.</p>
+    * <p>Reasoning service deployment history list.</p>
     */
     @SerializedName("RecordSet")
     @Expose
@@ -61,16 +61,16 @@ public class DescribeInferenceServiceDeploymentRecordsResponse extends AbstractM
     }
 
     /**
-     * Get <p>History list for reasoning service deployment.</p> 
-     * @return RecordSet <p>History list for reasoning service deployment.</p>
+     * Get <p>Reasoning service deployment history list.</p> 
+     * @return RecordSet <p>Reasoning service deployment history list.</p>
      */
     public InferenceServiceDeploymentRecord [] getRecordSet() {
         return this.RecordSet;
     }
 
     /**
-     * Set <p>History list for reasoning service deployment.</p>
-     * @param RecordSet <p>History list for reasoning service deployment.</p>
+     * Set <p>Reasoning service deployment history list.</p>
+     * @param RecordSet <p>Reasoning service deployment history list.</p>
      */
     public void setRecordSet(InferenceServiceDeploymentRecord [] RecordSet) {
         this.RecordSet = RecordSet;

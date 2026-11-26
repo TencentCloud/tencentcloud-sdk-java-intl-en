@@ -24,15 +24,14 @@ import java.util.HashMap;
 public class DescribeTimingL7CacheDataResponse extends AbstractModel {
 
     /**
-    * Total number of query results.
+    * Total number of entries in the query result.
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * The list of cached L7 time-series data.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * List of time-series traffic data for Layer-7 cache analysis.
     */
     @SerializedName("Data")
     @Expose
@@ -46,36 +45,32 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Total number of query results. 
-     * @return TotalCount Total number of query results.
+     * Get Total number of entries in the query result. 
+     * @return TotalCount Total number of entries in the query result.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Total number of query results.
-     * @param TotalCount Total number of query results.
+     * Set Total number of entries in the query result.
+     * @param TotalCount Total number of entries in the query result.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get The list of cached L7 time-series data.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Data The list of cached L7 time-series data.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get List of time-series traffic data for Layer-7 cache analysis. 
+     * @return Data List of time-series traffic data for Layer-7 cache analysis.
      */
     public TimingDataRecord [] getData() {
         return this.Data;
     }
 
     /**
-     * Set The list of cached L7 time-series data.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Data The list of cached L7 time-series data.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set List of time-series traffic data for Layer-7 cache analysis.
+     * @param Data List of time-series traffic data for Layer-7 cache analysis.
      */
     public void setData(TimingDataRecord [] Data) {
         this.Data = Data;

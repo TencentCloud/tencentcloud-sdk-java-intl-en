@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class DescribeContentIdentifiersRequest extends AbstractModel {
 
     /**
-    * The offset of paginated query. default value: 0.
+    * The offset of paginated query. Default value: 0.
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * Limit on paginated queries. default value: `20`. maximum value: `100`.
+    * Number limit of paginated query. Default value: 20. Maximum value: 100.
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * Filter conditions. the upper limit for filters is 20, and the upper limit for filters.values is 20. if this parameter is not filled in, the content identifiers with permissions under the current appid are returned by default. detailed filtering conditions are as follows: <li>description: filter by content identifier description in batches; for example: test;</li><li>content-id: filter by content identifier id in batches; for example: eocontent-2noz78a8ev6k;</li><li>tag-key: filter by Tag key;</li><li>tag-value: filter by Tag value;</li><li>status: filter by content identifier status. valid values: active: active; deleted: deleted.</li>only description supports fuzzy query, other fields require precise query.
+    * Filter criteria. The maximum number of Filters is 20, and the maximum number of Filters.Values is 20. If this parameter is left empty, the content identifiers authorized under the current AppId are returned by default. The detailed filter criteria are as follows: <li>description: filter by content identifier description in batches. For example: test;</li><li>content-id: filter by content identifier ID in batches. For example: eocontent-2noz78a8ev6k;</li><li>tag-key: filter by tag key;</li> <li>tag-value: filter by tag value;</li><li>status: filter by content identifier status. Valid values: active: active; deleted: deleted.</li>Fuzzy query is supported only for description. Precise query is required for other fields.
     */
     @SerializedName("Filters")
     @Expose
     private AdvancedFilter [] Filters;
 
     /**
-     * Get The offset of paginated query. default value: 0. 
-     * @return Offset The offset of paginated query. default value: 0.
+     * Get The offset of paginated query. Default value: 0. 
+     * @return Offset The offset of paginated query. Default value: 0.
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set The offset of paginated query. default value: 0.
-     * @param Offset The offset of paginated query. default value: 0.
+     * Set The offset of paginated query. Default value: 0.
+     * @param Offset The offset of paginated query. Default value: 0.
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get Limit on paginated queries. default value: `20`. maximum value: `100`. 
-     * @return Limit Limit on paginated queries. default value: `20`. maximum value: `100`.
+     * Get Number limit of paginated query. Default value: 20. Maximum value: 100. 
+     * @return Limit Number limit of paginated query. Default value: 20. Maximum value: 100.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Limit on paginated queries. default value: `20`. maximum value: `100`.
-     * @param Limit Limit on paginated queries. default value: `20`. maximum value: `100`.
+     * Set Number limit of paginated query. Default value: 20. Maximum value: 100.
+     * @param Limit Number limit of paginated query. Default value: 20. Maximum value: 100.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get Filter conditions. the upper limit for filters is 20, and the upper limit for filters.values is 20. if this parameter is not filled in, the content identifiers with permissions under the current appid are returned by default. detailed filtering conditions are as follows: <li>description: filter by content identifier description in batches; for example: test;</li><li>content-id: filter by content identifier id in batches; for example: eocontent-2noz78a8ev6k;</li><li>tag-key: filter by Tag key;</li><li>tag-value: filter by Tag value;</li><li>status: filter by content identifier status. valid values: active: active; deleted: deleted.</li>only description supports fuzzy query, other fields require precise query. 
-     * @return Filters Filter conditions. the upper limit for filters is 20, and the upper limit for filters.values is 20. if this parameter is not filled in, the content identifiers with permissions under the current appid are returned by default. detailed filtering conditions are as follows: <li>description: filter by content identifier description in batches; for example: test;</li><li>content-id: filter by content identifier id in batches; for example: eocontent-2noz78a8ev6k;</li><li>tag-key: filter by Tag key;</li><li>tag-value: filter by Tag value;</li><li>status: filter by content identifier status. valid values: active: active; deleted: deleted.</li>only description supports fuzzy query, other fields require precise query.
+     * Get Filter criteria. The maximum number of Filters is 20, and the maximum number of Filters.Values is 20. If this parameter is left empty, the content identifiers authorized under the current AppId are returned by default. The detailed filter criteria are as follows: <li>description: filter by content identifier description in batches. For example: test;</li><li>content-id: filter by content identifier ID in batches. For example: eocontent-2noz78a8ev6k;</li><li>tag-key: filter by tag key;</li> <li>tag-value: filter by tag value;</li><li>status: filter by content identifier status. Valid values: active: active; deleted: deleted.</li>Fuzzy query is supported only for description. Precise query is required for other fields. 
+     * @return Filters Filter criteria. The maximum number of Filters is 20, and the maximum number of Filters.Values is 20. If this parameter is left empty, the content identifiers authorized under the current AppId are returned by default. The detailed filter criteria are as follows: <li>description: filter by content identifier description in batches. For example: test;</li><li>content-id: filter by content identifier ID in batches. For example: eocontent-2noz78a8ev6k;</li><li>tag-key: filter by tag key;</li> <li>tag-value: filter by tag value;</li><li>status: filter by content identifier status. Valid values: active: active; deleted: deleted.</li>Fuzzy query is supported only for description. Precise query is required for other fields.
      */
     public AdvancedFilter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set Filter conditions. the upper limit for filters is 20, and the upper limit for filters.values is 20. if this parameter is not filled in, the content identifiers with permissions under the current appid are returned by default. detailed filtering conditions are as follows: <li>description: filter by content identifier description in batches; for example: test;</li><li>content-id: filter by content identifier id in batches; for example: eocontent-2noz78a8ev6k;</li><li>tag-key: filter by Tag key;</li><li>tag-value: filter by Tag value;</li><li>status: filter by content identifier status. valid values: active: active; deleted: deleted.</li>only description supports fuzzy query, other fields require precise query.
-     * @param Filters Filter conditions. the upper limit for filters is 20, and the upper limit for filters.values is 20. if this parameter is not filled in, the content identifiers with permissions under the current appid are returned by default. detailed filtering conditions are as follows: <li>description: filter by content identifier description in batches; for example: test;</li><li>content-id: filter by content identifier id in batches; for example: eocontent-2noz78a8ev6k;</li><li>tag-key: filter by Tag key;</li><li>tag-value: filter by Tag value;</li><li>status: filter by content identifier status. valid values: active: active; deleted: deleted.</li>only description supports fuzzy query, other fields require precise query.
+     * Set Filter criteria. The maximum number of Filters is 20, and the maximum number of Filters.Values is 20. If this parameter is left empty, the content identifiers authorized under the current AppId are returned by default. The detailed filter criteria are as follows: <li>description: filter by content identifier description in batches. For example: test;</li><li>content-id: filter by content identifier ID in batches. For example: eocontent-2noz78a8ev6k;</li><li>tag-key: filter by tag key;</li> <li>tag-value: filter by tag value;</li><li>status: filter by content identifier status. Valid values: active: active; deleted: deleted.</li>Fuzzy query is supported only for description. Precise query is required for other fields.
+     * @param Filters Filter criteria. The maximum number of Filters is 20, and the maximum number of Filters.Values is 20. If this parameter is left empty, the content identifiers authorized under the current AppId are returned by default. The detailed filter criteria are as follows: <li>description: filter by content identifier description in batches. For example: test;</li><li>content-id: filter by content identifier ID in batches. For example: eocontent-2noz78a8ev6k;</li><li>tag-key: filter by tag key;</li> <li>tag-value: filter by tag value;</li><li>status: filter by content identifier status. Valid values: active: active; deleted: deleted.</li>Fuzzy query is supported only for description. Precise query is required for other fields.
      */
     public void setFilters(AdvancedFilter [] Filters) {
         this.Filters = Filters;

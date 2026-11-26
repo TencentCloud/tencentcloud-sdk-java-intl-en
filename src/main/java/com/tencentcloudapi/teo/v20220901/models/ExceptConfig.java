@@ -24,56 +24,56 @@ import java.util.HashMap;
 public class ExceptConfig extends AbstractModel {
 
     /**
-    * Whether to enable configuration. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+    * Configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * The settings of the exception rule. if it is null, the settings that were last configured will be used.
+    * Exception rule details. If null, use the last set configuration by default.
     */
     @SerializedName("ExceptUserRules")
     @Expose
     private ExceptUserRule [] ExceptUserRules;
 
     /**
-     * Get Whether to enable configuration. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li> 
-     * @return Switch Whether to enable configuration. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+     * Get Configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li> 
+     * @return Switch Configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set Whether to enable configuration. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-     * @param Switch Whether to enable configuration. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+     * Set Configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+     * @param Switch Configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get The settings of the exception rule. if it is null, the settings that were last configured will be used. 
-     * @return ExceptUserRules The settings of the exception rule. if it is null, the settings that were last configured will be used.
+     * Get Exception rule details. If null, use the last set configuration by default. 
+     * @return ExceptUserRules Exception rule details. If null, use the last set configuration by default.
      */
     public ExceptUserRule [] getExceptUserRules() {
         return this.ExceptUserRules;
     }
 
     /**
-     * Set The settings of the exception rule. if it is null, the settings that were last configured will be used.
-     * @param ExceptUserRules The settings of the exception rule. if it is null, the settings that were last configured will be used.
+     * Set Exception rule details. If null, use the last set configuration by default.
+     * @param ExceptUserRules Exception rule details. If null, use the last set configuration by default.
      */
     public void setExceptUserRules(ExceptUserRule [] ExceptUserRules) {
         this.ExceptUserRules = ExceptUserRules;

@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class CustomAction extends AbstractModel {
 
     /**
-    * <p>ID of the custom configuration item.</p><p>You can obtain it through the returned value CustomActionSet[].ActionId of the DescribeAvailableCustomActionsForRuleEngine API.</p>
+    * <p>Configuration item ID for custom configuration.</p><p>You can get it through the returned value CustomActionSet[].ActionId of the DescribeAvailableCustomActionsForRuleEngine API.</p>
     */
     @SerializedName("ActionId")
     @Expose
     private String ActionId;
 
     /**
-    * <p>Parameter values of each parameter field under this custom configuration.</p><p>You can obtain them through the API return value CustomActionSet[].Parameters of DescribeAvailableCustomActionsForRuleEngine.</p>
+    * <p>Values of each parameter field under this custom configuration item.</p><p>You can obtain them through the CustomActionSet[].Parameters field in the return value of the DescribeAvailableCustomActionsForRuleEngine API.</p>
     */
     @SerializedName("Parameters")
     @Expose
     private CustomActionParameter [] Parameters;
 
     /**
-     * Get <p>ID of the custom configuration item.</p><p>You can obtain it through the returned value CustomActionSet[].ActionId of the DescribeAvailableCustomActionsForRuleEngine API.</p> 
-     * @return ActionId <p>ID of the custom configuration item.</p><p>You can obtain it through the returned value CustomActionSet[].ActionId of the DescribeAvailableCustomActionsForRuleEngine API.</p>
+     * Get <p>Configuration item ID for custom configuration.</p><p>You can get it through the returned value CustomActionSet[].ActionId of the DescribeAvailableCustomActionsForRuleEngine API.</p> 
+     * @return ActionId <p>Configuration item ID for custom configuration.</p><p>You can get it through the returned value CustomActionSet[].ActionId of the DescribeAvailableCustomActionsForRuleEngine API.</p>
      */
     public String getActionId() {
         return this.ActionId;
     }
 
     /**
-     * Set <p>ID of the custom configuration item.</p><p>You can obtain it through the returned value CustomActionSet[].ActionId of the DescribeAvailableCustomActionsForRuleEngine API.</p>
-     * @param ActionId <p>ID of the custom configuration item.</p><p>You can obtain it through the returned value CustomActionSet[].ActionId of the DescribeAvailableCustomActionsForRuleEngine API.</p>
+     * Set <p>Configuration item ID for custom configuration.</p><p>You can get it through the returned value CustomActionSet[].ActionId of the DescribeAvailableCustomActionsForRuleEngine API.</p>
+     * @param ActionId <p>Configuration item ID for custom configuration.</p><p>You can get it through the returned value CustomActionSet[].ActionId of the DescribeAvailableCustomActionsForRuleEngine API.</p>
      */
     public void setActionId(String ActionId) {
         this.ActionId = ActionId;
     }
 
     /**
-     * Get <p>Parameter values of each parameter field under this custom configuration.</p><p>You can obtain them through the API return value CustomActionSet[].Parameters of DescribeAvailableCustomActionsForRuleEngine.</p> 
-     * @return Parameters <p>Parameter values of each parameter field under this custom configuration.</p><p>You can obtain them through the API return value CustomActionSet[].Parameters of DescribeAvailableCustomActionsForRuleEngine.</p>
+     * Get <p>Values of each parameter field under this custom configuration item.</p><p>You can obtain them through the CustomActionSet[].Parameters field in the return value of the DescribeAvailableCustomActionsForRuleEngine API.</p> 
+     * @return Parameters <p>Values of each parameter field under this custom configuration item.</p><p>You can obtain them through the CustomActionSet[].Parameters field in the return value of the DescribeAvailableCustomActionsForRuleEngine API.</p>
      */
     public CustomActionParameter [] getParameters() {
         return this.Parameters;
     }
 
     /**
-     * Set <p>Parameter values of each parameter field under this custom configuration.</p><p>You can obtain them through the API return value CustomActionSet[].Parameters of DescribeAvailableCustomActionsForRuleEngine.</p>
-     * @param Parameters <p>Parameter values of each parameter field under this custom configuration.</p><p>You can obtain them through the API return value CustomActionSet[].Parameters of DescribeAvailableCustomActionsForRuleEngine.</p>
+     * Set <p>Values of each parameter field under this custom configuration item.</p><p>You can obtain them through the CustomActionSet[].Parameters field in the return value of the DescribeAvailableCustomActionsForRuleEngine API.</p>
+     * @param Parameters <p>Values of each parameter field under this custom configuration item.</p><p>You can obtain them through the CustomActionSet[].Parameters field in the return value of the DescribeAvailableCustomActionsForRuleEngine API.</p>
      */
     public void setParameters(CustomActionParameter [] Parameters) {
         this.Parameters = Parameters;

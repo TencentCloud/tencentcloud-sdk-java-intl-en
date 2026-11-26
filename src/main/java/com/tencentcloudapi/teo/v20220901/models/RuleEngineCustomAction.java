@@ -52,7 +52,7 @@ public class RuleEngineCustomAction extends AbstractModel {
     private RuleEngineCustomActionParameterSchema [] Parameters;
 
     /**
-    * <p>Match conditions supported by custom configuration.</p><p>For supported match conditions, refer to the official documentation <a href="https://www.tencentcloud.com/document/product/1552/125344?from_cn_redirect=1">General Reference - Configuration Syntax - Variables</a>.</p>
+    * <p>Custom configuration supported match conditions.</p><p>For supported match conditions, see the official documentation <a href="https://www.tencentcloud.com/document/product/1552/125344?from_cn_redirect=1">General Reference - Configuration Syntax - Variables</a>.</p>
     */
     @SerializedName("SupportedConditions")
     @Expose
@@ -123,16 +123,16 @@ public class RuleEngineCustomAction extends AbstractModel {
     }
 
     /**
-     * Get <p>Match conditions supported by custom configuration.</p><p>For supported match conditions, refer to the official documentation <a href="https://www.tencentcloud.com/document/product/1552/125344?from_cn_redirect=1">General Reference - Configuration Syntax - Variables</a>.</p> 
-     * @return SupportedConditions <p>Match conditions supported by custom configuration.</p><p>For supported match conditions, refer to the official documentation <a href="https://www.tencentcloud.com/document/product/1552/125344?from_cn_redirect=1">General Reference - Configuration Syntax - Variables</a>.</p>
+     * Get <p>Custom configuration supported match conditions.</p><p>For supported match conditions, see the official documentation <a href="https://www.tencentcloud.com/document/product/1552/125344?from_cn_redirect=1">General Reference - Configuration Syntax - Variables</a>.</p> 
+     * @return SupportedConditions <p>Custom configuration supported match conditions.</p><p>For supported match conditions, see the official documentation <a href="https://www.tencentcloud.com/document/product/1552/125344?from_cn_redirect=1">General Reference - Configuration Syntax - Variables</a>.</p>
      */
     public String [] getSupportedConditions() {
         return this.SupportedConditions;
     }
 
     /**
-     * Set <p>Match conditions supported by custom configuration.</p><p>For supported match conditions, refer to the official documentation <a href="https://www.tencentcloud.com/document/product/1552/125344?from_cn_redirect=1">General Reference - Configuration Syntax - Variables</a>.</p>
-     * @param SupportedConditions <p>Match conditions supported by custom configuration.</p><p>For supported match conditions, refer to the official documentation <a href="https://www.tencentcloud.com/document/product/1552/125344?from_cn_redirect=1">General Reference - Configuration Syntax - Variables</a>.</p>
+     * Set <p>Custom configuration supported match conditions.</p><p>For supported match conditions, see the official documentation <a href="https://www.tencentcloud.com/document/product/1552/125344?from_cn_redirect=1">General Reference - Configuration Syntax - Variables</a>.</p>
+     * @param SupportedConditions <p>Custom configuration supported match conditions.</p><p>For supported match conditions, see the official documentation <a href="https://www.tencentcloud.com/document/product/1552/125344?from_cn_redirect=1">General Reference - Configuration Syntax - Variables</a>.</p>
      */
     public void setSupportedConditions(String [] SupportedConditions) {
         this.SupportedConditions = SupportedConditions;

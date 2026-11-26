@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class MultiPathGateway extends AbstractModel {
 
     /**
-    * Specifies the gateway ID.
+    * Gateway ID.
     */
     @SerializedName("GatewayId")
     @Expose
@@ -38,71 +38,71 @@ public class MultiPathGateway extends AbstractModel {
     private String GatewayName;
 
     /**
-    * Gateway type. valid values:
-<Li>Cloud: cloud gateway,  created and managed by Tencent cloud.</li>
-<Li>Private: private gateway, deployed by cutomer.</li>
+    * Gateway type. Valid values:
+<li> cloud: Cloud Gateway, a gateway created and managed by Tencent Cloud.</li>
+<li> private: private gateway, a Private Gateway deployed by the user.</li>
     */
     @SerializedName("GatewayType")
     @Expose
     private String GatewayType;
 
     /**
-    * Gateway port. value range: 1-65535 (excluding 8888).
+    * Gateway port. Range: 1–65535 (excluding 8888).
     */
     @SerializedName("GatewayPort")
     @Expose
     private Long GatewayPort;
 
     /**
-    * Gateway status. valid values:
-<Li>creating: The gateway is being created. </li>
-<Li>online: The gateway is online and operational.</li>
-<Li>offline: The gateway is offline and unavailable.</li>
-<Li>disabled: The gateway has been disabled.</li>
+    * Gateway status. Valid values:
+<li> creating : Creating;</li>
+<li> online : Online;</li>
+<li> offline : Offline;</li>
+<li> disable : disabled.</li>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * Gateway IP, in IPv4 format.
+    * Gateway IP in IPv4 format.
     */
     @SerializedName("GatewayIP")
     @Expose
     private String GatewayIP;
 
     /**
-    * Gateway region Id. which can be obtained from the DescribeMultiPathGatewayRegions API.
+    * Gateway region ID. You can obtain the RegionId list through the DescribeMultiPathGatewayRegions API.
     */
     @SerializedName("RegionId")
     @Expose
     private String RegionId;
 
     /**
-    * Line information. The line information will be returned when querying gateway information with DescribeMultiPathGateway ande not returned when querying the gateway list with DescribeMultiPathGateways.
+    * Line information. It will be returned when querying gateway information details via DescribeMultiPathGateway, but not when querying the gateway list via DescribeMultiPathGateways.
     */
     @SerializedName("Lines")
     @Expose
     private MultiPathGatewayLine [] Lines;
 
     /**
-    * Specifies whether the origin-pull IP list has changed and re-confirmation is required. valid values: <li>true: the origin-pull IP list has changed and confirmation is needed.</li><li>false: the origin-pull IP list remains unchanged and no confirmation is required.</li>.
+    * Whether the origin-pull IP list of the gateway has changed and needs confirmation. Valid values: <li>true: The origin-pull IP list has changed and needs confirmation;</li><li>false: The origin-pull IP list has not changed and does not need confirmation.</li>
     */
     @SerializedName("NeedConfirm")
     @Expose
     private String NeedConfirm;
 
     /**
-     * Get Specifies the gateway ID. 
-     * @return GatewayId Specifies the gateway ID.
+     * Get Gateway ID. 
+     * @return GatewayId Gateway ID.
      */
     public String getGatewayId() {
         return this.GatewayId;
     }
 
     /**
-     * Set Specifies the gateway ID.
-     * @param GatewayId Specifies the gateway ID.
+     * Set Gateway ID.
+     * @param GatewayId Gateway ID.
      */
     public void setGatewayId(String GatewayId) {
         this.GatewayId = GatewayId;
@@ -125,136 +125,136 @@ public class MultiPathGateway extends AbstractModel {
     }
 
     /**
-     * Get Gateway type. valid values:
-<Li>Cloud: cloud gateway,  created and managed by Tencent cloud.</li>
-<Li>Private: private gateway, deployed by cutomer.</li> 
-     * @return GatewayType Gateway type. valid values:
-<Li>Cloud: cloud gateway,  created and managed by Tencent cloud.</li>
-<Li>Private: private gateway, deployed by cutomer.</li>
+     * Get Gateway type. Valid values:
+<li> cloud: Cloud Gateway, a gateway created and managed by Tencent Cloud.</li>
+<li> private: private gateway, a Private Gateway deployed by the user.</li> 
+     * @return GatewayType Gateway type. Valid values:
+<li> cloud: Cloud Gateway, a gateway created and managed by Tencent Cloud.</li>
+<li> private: private gateway, a Private Gateway deployed by the user.</li>
      */
     public String getGatewayType() {
         return this.GatewayType;
     }
 
     /**
-     * Set Gateway type. valid values:
-<Li>Cloud: cloud gateway,  created and managed by Tencent cloud.</li>
-<Li>Private: private gateway, deployed by cutomer.</li>
-     * @param GatewayType Gateway type. valid values:
-<Li>Cloud: cloud gateway,  created and managed by Tencent cloud.</li>
-<Li>Private: private gateway, deployed by cutomer.</li>
+     * Set Gateway type. Valid values:
+<li> cloud: Cloud Gateway, a gateway created and managed by Tencent Cloud.</li>
+<li> private: private gateway, a Private Gateway deployed by the user.</li>
+     * @param GatewayType Gateway type. Valid values:
+<li> cloud: Cloud Gateway, a gateway created and managed by Tencent Cloud.</li>
+<li> private: private gateway, a Private Gateway deployed by the user.</li>
      */
     public void setGatewayType(String GatewayType) {
         this.GatewayType = GatewayType;
     }
 
     /**
-     * Get Gateway port. value range: 1-65535 (excluding 8888). 
-     * @return GatewayPort Gateway port. value range: 1-65535 (excluding 8888).
+     * Get Gateway port. Range: 1–65535 (excluding 8888). 
+     * @return GatewayPort Gateway port. Range: 1–65535 (excluding 8888).
      */
     public Long getGatewayPort() {
         return this.GatewayPort;
     }
 
     /**
-     * Set Gateway port. value range: 1-65535 (excluding 8888).
-     * @param GatewayPort Gateway port. value range: 1-65535 (excluding 8888).
+     * Set Gateway port. Range: 1–65535 (excluding 8888).
+     * @param GatewayPort Gateway port. Range: 1–65535 (excluding 8888).
      */
     public void setGatewayPort(Long GatewayPort) {
         this.GatewayPort = GatewayPort;
     }
 
     /**
-     * Get Gateway status. valid values:
-<Li>creating: The gateway is being created. </li>
-<Li>online: The gateway is online and operational.</li>
-<Li>offline: The gateway is offline and unavailable.</li>
-<Li>disabled: The gateway has been disabled.</li> 
-     * @return Status Gateway status. valid values:
-<Li>creating: The gateway is being created. </li>
-<Li>online: The gateway is online and operational.</li>
-<Li>offline: The gateway is offline and unavailable.</li>
-<Li>disabled: The gateway has been disabled.</li>
+     * Get Gateway status. Valid values:
+<li> creating : Creating;</li>
+<li> online : Online;</li>
+<li> offline : Offline;</li>
+<li> disable : disabled.</li> 
+     * @return Status Gateway status. Valid values:
+<li> creating : Creating;</li>
+<li> online : Online;</li>
+<li> offline : Offline;</li>
+<li> disable : disabled.</li>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Gateway status. valid values:
-<Li>creating: The gateway is being created. </li>
-<Li>online: The gateway is online and operational.</li>
-<Li>offline: The gateway is offline and unavailable.</li>
-<Li>disabled: The gateway has been disabled.</li>
-     * @param Status Gateway status. valid values:
-<Li>creating: The gateway is being created. </li>
-<Li>online: The gateway is online and operational.</li>
-<Li>offline: The gateway is offline and unavailable.</li>
-<Li>disabled: The gateway has been disabled.</li>
+     * Set Gateway status. Valid values:
+<li> creating : Creating;</li>
+<li> online : Online;</li>
+<li> offline : Offline;</li>
+<li> disable : disabled.</li>
+     * @param Status Gateway status. Valid values:
+<li> creating : Creating;</li>
+<li> online : Online;</li>
+<li> offline : Offline;</li>
+<li> disable : disabled.</li>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Gateway IP, in IPv4 format. 
-     * @return GatewayIP Gateway IP, in IPv4 format.
+     * Get Gateway IP in IPv4 format. 
+     * @return GatewayIP Gateway IP in IPv4 format.
      */
     public String getGatewayIP() {
         return this.GatewayIP;
     }
 
     /**
-     * Set Gateway IP, in IPv4 format.
-     * @param GatewayIP Gateway IP, in IPv4 format.
+     * Set Gateway IP in IPv4 format.
+     * @param GatewayIP Gateway IP in IPv4 format.
      */
     public void setGatewayIP(String GatewayIP) {
         this.GatewayIP = GatewayIP;
     }
 
     /**
-     * Get Gateway region Id. which can be obtained from the DescribeMultiPathGatewayRegions API. 
-     * @return RegionId Gateway region Id. which can be obtained from the DescribeMultiPathGatewayRegions API.
+     * Get Gateway region ID. You can obtain the RegionId list through the DescribeMultiPathGatewayRegions API. 
+     * @return RegionId Gateway region ID. You can obtain the RegionId list through the DescribeMultiPathGatewayRegions API.
      */
     public String getRegionId() {
         return this.RegionId;
     }
 
     /**
-     * Set Gateway region Id. which can be obtained from the DescribeMultiPathGatewayRegions API.
-     * @param RegionId Gateway region Id. which can be obtained from the DescribeMultiPathGatewayRegions API.
+     * Set Gateway region ID. You can obtain the RegionId list through the DescribeMultiPathGatewayRegions API.
+     * @param RegionId Gateway region ID. You can obtain the RegionId list through the DescribeMultiPathGatewayRegions API.
      */
     public void setRegionId(String RegionId) {
         this.RegionId = RegionId;
     }
 
     /**
-     * Get Line information. The line information will be returned when querying gateway information with DescribeMultiPathGateway ande not returned when querying the gateway list with DescribeMultiPathGateways. 
-     * @return Lines Line information. The line information will be returned when querying gateway information with DescribeMultiPathGateway ande not returned when querying the gateway list with DescribeMultiPathGateways.
+     * Get Line information. It will be returned when querying gateway information details via DescribeMultiPathGateway, but not when querying the gateway list via DescribeMultiPathGateways. 
+     * @return Lines Line information. It will be returned when querying gateway information details via DescribeMultiPathGateway, but not when querying the gateway list via DescribeMultiPathGateways.
      */
     public MultiPathGatewayLine [] getLines() {
         return this.Lines;
     }
 
     /**
-     * Set Line information. The line information will be returned when querying gateway information with DescribeMultiPathGateway ande not returned when querying the gateway list with DescribeMultiPathGateways.
-     * @param Lines Line information. The line information will be returned when querying gateway information with DescribeMultiPathGateway ande not returned when querying the gateway list with DescribeMultiPathGateways.
+     * Set Line information. It will be returned when querying gateway information details via DescribeMultiPathGateway, but not when querying the gateway list via DescribeMultiPathGateways.
+     * @param Lines Line information. It will be returned when querying gateway information details via DescribeMultiPathGateway, but not when querying the gateway list via DescribeMultiPathGateways.
      */
     public void setLines(MultiPathGatewayLine [] Lines) {
         this.Lines = Lines;
     }
 
     /**
-     * Get Specifies whether the origin-pull IP list has changed and re-confirmation is required. valid values: <li>true: the origin-pull IP list has changed and confirmation is needed.</li><li>false: the origin-pull IP list remains unchanged and no confirmation is required.</li>. 
-     * @return NeedConfirm Specifies whether the origin-pull IP list has changed and re-confirmation is required. valid values: <li>true: the origin-pull IP list has changed and confirmation is needed.</li><li>false: the origin-pull IP list remains unchanged and no confirmation is required.</li>.
+     * Get Whether the origin-pull IP list of the gateway has changed and needs confirmation. Valid values: <li>true: The origin-pull IP list has changed and needs confirmation;</li><li>false: The origin-pull IP list has not changed and does not need confirmation.</li> 
+     * @return NeedConfirm Whether the origin-pull IP list of the gateway has changed and needs confirmation. Valid values: <li>true: The origin-pull IP list has changed and needs confirmation;</li><li>false: The origin-pull IP list has not changed and does not need confirmation.</li>
      */
     public String getNeedConfirm() {
         return this.NeedConfirm;
     }
 
     /**
-     * Set Specifies whether the origin-pull IP list has changed and re-confirmation is required. valid values: <li>true: the origin-pull IP list has changed and confirmation is needed.</li><li>false: the origin-pull IP list remains unchanged and no confirmation is required.</li>.
-     * @param NeedConfirm Specifies whether the origin-pull IP list has changed and re-confirmation is required. valid values: <li>true: the origin-pull IP list has changed and confirmation is needed.</li><li>false: the origin-pull IP list remains unchanged and no confirmation is required.</li>.
+     * Set Whether the origin-pull IP list of the gateway has changed and needs confirmation. Valid values: <li>true: The origin-pull IP list has changed and needs confirmation;</li><li>false: The origin-pull IP list has not changed and does not need confirmation.</li>
+     * @param NeedConfirm Whether the origin-pull IP list of the gateway has changed and needs confirmation. Valid values: <li>true: The origin-pull IP list has changed and needs confirmation;</li><li>false: The origin-pull IP list has not changed and does not need confirmation.</li>
      */
     public void setNeedConfirm(String NeedConfirm) {
         this.NeedConfirm = NeedConfirm;

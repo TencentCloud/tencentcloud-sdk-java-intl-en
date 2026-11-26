@@ -24,143 +24,184 @@ import java.util.HashMap;
 public class RuleEngineItem extends AbstractModel {
 
     /**
-    * Rule status. values: <li>`enable`: enabled</li> <li>`disable`: disabled</li>.
+    * <p>Rule status. Valid values: <li> enable: Enable; </li><li> disable: Disabled.</li></p>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * Rule id. a unique identifier for the rule. this parameter is required when calling `modifyl7accrules`.
+    * <p>Rule ID. The unique identifier of a rule. This parameter is required when calling ModifyL7AccRule.</p>
     */
     @SerializedName("RuleId")
     @Expose
     private String RuleId;
 
     /**
-    * Rule name. name length limit: 255 characters.
+    * <p>Rule name. The name can contain no more than 255 characters.</p>
     */
     @SerializedName("RuleName")
     @Expose
     private String RuleName;
 
     /**
-    * Rule annotation. multiple annotations can be added.
+    * <p>Rule note. Multiple notes can be filled.</p>
     */
     @SerializedName("Description")
     @Expose
     private String [] Description;
 
     /**
-    * Sub-Rule branch. this list currently supports filling in only one rule; multiple entries are invalid.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+    * <p>List of rule-level custom variables. CustomVariable.Name requires the use of user.rule. as a prefix. Variables are initialized sequentially in the array order. InitialValue supports referencing site-level custom variables and rule-level custom variables before the current variable. It does not support referencing the current variable itself or rule-level custom variables after it. Site-level custom variables can be queried through the DescribeZoneCustomVariables API. When Branches is empty, CustomVariable cannot be filled in, and any entry is invalid.</p>
+    */
+    @SerializedName("CustomVariables")
+    @Expose
+    private CustomVariable [] CustomVariables;
+
+    /**
+    * <p>Operation details of rule-level custom variables. You can reference site-level custom variables and rule-level custom variables defined in the current rule during operations. Site-level custom variables can be queried through the DescribeZoneCustomVariables API. This list currently only supports filling in one rule; additional entries are invalid. When Branches is empty, CustomVariableOperations is not allowed to be filled in, and any entry will be invalid.</p>
+    */
+    @SerializedName("CustomVariableOperations")
+    @Expose
+    private CustomVariableOperation [] CustomVariableOperations;
+
+    /**
+    * <p>Sub-rule branch. This list currently only supports filling in one rule. Additional rules are invalid.</p>
     */
     @SerializedName("Branches")
     @Expose
     private RuleBranch [] Branches;
 
     /**
-    * Rule priority. only used as an output parameter.
+    * <p>Rule priority. Output only.</p>
     */
     @SerializedName("RulePriority")
     @Expose
     private Long RulePriority;
 
     /**
-     * Get Rule status. values: <li>`enable`: enabled</li> <li>`disable`: disabled</li>. 
-     * @return Status Rule status. values: <li>`enable`: enabled</li> <li>`disable`: disabled</li>.
+     * Get <p>Rule status. Valid values: <li> enable: Enable; </li><li> disable: Disabled.</li></p> 
+     * @return Status <p>Rule status. Valid values: <li> enable: Enable; </li><li> disable: Disabled.</li></p>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Rule status. values: <li>`enable`: enabled</li> <li>`disable`: disabled</li>.
-     * @param Status Rule status. values: <li>`enable`: enabled</li> <li>`disable`: disabled</li>.
+     * Set <p>Rule status. Valid values: <li> enable: Enable; </li><li> disable: Disabled.</li></p>
+     * @param Status <p>Rule status. Valid values: <li> enable: Enable; </li><li> disable: Disabled.</li></p>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Rule id. a unique identifier for the rule. this parameter is required when calling `modifyl7accrules`. 
-     * @return RuleId Rule id. a unique identifier for the rule. this parameter is required when calling `modifyl7accrules`.
+     * Get <p>Rule ID. The unique identifier of a rule. This parameter is required when calling ModifyL7AccRule.</p> 
+     * @return RuleId <p>Rule ID. The unique identifier of a rule. This parameter is required when calling ModifyL7AccRule.</p>
      */
     public String getRuleId() {
         return this.RuleId;
     }
 
     /**
-     * Set Rule id. a unique identifier for the rule. this parameter is required when calling `modifyl7accrules`.
-     * @param RuleId Rule id. a unique identifier for the rule. this parameter is required when calling `modifyl7accrules`.
+     * Set <p>Rule ID. The unique identifier of a rule. This parameter is required when calling ModifyL7AccRule.</p>
+     * @param RuleId <p>Rule ID. The unique identifier of a rule. This parameter is required when calling ModifyL7AccRule.</p>
      */
     public void setRuleId(String RuleId) {
         this.RuleId = RuleId;
     }
 
     /**
-     * Get Rule name. name length limit: 255 characters. 
-     * @return RuleName Rule name. name length limit: 255 characters.
+     * Get <p>Rule name. The name can contain no more than 255 characters.</p> 
+     * @return RuleName <p>Rule name. The name can contain no more than 255 characters.</p>
      */
     public String getRuleName() {
         return this.RuleName;
     }
 
     /**
-     * Set Rule name. name length limit: 255 characters.
-     * @param RuleName Rule name. name length limit: 255 characters.
+     * Set <p>Rule name. The name can contain no more than 255 characters.</p>
+     * @param RuleName <p>Rule name. The name can contain no more than 255 characters.</p>
      */
     public void setRuleName(String RuleName) {
         this.RuleName = RuleName;
     }
 
     /**
-     * Get Rule annotation. multiple annotations can be added. 
-     * @return Description Rule annotation. multiple annotations can be added.
+     * Get <p>Rule note. Multiple notes can be filled.</p> 
+     * @return Description <p>Rule note. Multiple notes can be filled.</p>
      */
     public String [] getDescription() {
         return this.Description;
     }
 
     /**
-     * Set Rule annotation. multiple annotations can be added.
-     * @param Description Rule annotation. multiple annotations can be added.
+     * Set <p>Rule note. Multiple notes can be filled.</p>
+     * @param Description <p>Rule note. Multiple notes can be filled.</p>
      */
     public void setDescription(String [] Description) {
         this.Description = Description;
     }
 
     /**
-     * Get Sub-Rule branch. this list currently supports filling in only one rule; multiple entries are invalid.
-Note: this field may return null, which indicates a failure to obtain a valid value. 
-     * @return Branches Sub-Rule branch. this list currently supports filling in only one rule; multiple entries are invalid.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * Get <p>List of rule-level custom variables. CustomVariable.Name requires the use of user.rule. as a prefix. Variables are initialized sequentially in the array order. InitialValue supports referencing site-level custom variables and rule-level custom variables before the current variable. It does not support referencing the current variable itself or rule-level custom variables after it. Site-level custom variables can be queried through the DescribeZoneCustomVariables API. When Branches is empty, CustomVariable cannot be filled in, and any entry is invalid.</p> 
+     * @return CustomVariables <p>List of rule-level custom variables. CustomVariable.Name requires the use of user.rule. as a prefix. Variables are initialized sequentially in the array order. InitialValue supports referencing site-level custom variables and rule-level custom variables before the current variable. It does not support referencing the current variable itself or rule-level custom variables after it. Site-level custom variables can be queried through the DescribeZoneCustomVariables API. When Branches is empty, CustomVariable cannot be filled in, and any entry is invalid.</p>
+     */
+    public CustomVariable [] getCustomVariables() {
+        return this.CustomVariables;
+    }
+
+    /**
+     * Set <p>List of rule-level custom variables. CustomVariable.Name requires the use of user.rule. as a prefix. Variables are initialized sequentially in the array order. InitialValue supports referencing site-level custom variables and rule-level custom variables before the current variable. It does not support referencing the current variable itself or rule-level custom variables after it. Site-level custom variables can be queried through the DescribeZoneCustomVariables API. When Branches is empty, CustomVariable cannot be filled in, and any entry is invalid.</p>
+     * @param CustomVariables <p>List of rule-level custom variables. CustomVariable.Name requires the use of user.rule. as a prefix. Variables are initialized sequentially in the array order. InitialValue supports referencing site-level custom variables and rule-level custom variables before the current variable. It does not support referencing the current variable itself or rule-level custom variables after it. Site-level custom variables can be queried through the DescribeZoneCustomVariables API. When Branches is empty, CustomVariable cannot be filled in, and any entry is invalid.</p>
+     */
+    public void setCustomVariables(CustomVariable [] CustomVariables) {
+        this.CustomVariables = CustomVariables;
+    }
+
+    /**
+     * Get <p>Operation details of rule-level custom variables. You can reference site-level custom variables and rule-level custom variables defined in the current rule during operations. Site-level custom variables can be queried through the DescribeZoneCustomVariables API. This list currently only supports filling in one rule; additional entries are invalid. When Branches is empty, CustomVariableOperations is not allowed to be filled in, and any entry will be invalid.</p> 
+     * @return CustomVariableOperations <p>Operation details of rule-level custom variables. You can reference site-level custom variables and rule-level custom variables defined in the current rule during operations. Site-level custom variables can be queried through the DescribeZoneCustomVariables API. This list currently only supports filling in one rule; additional entries are invalid. When Branches is empty, CustomVariableOperations is not allowed to be filled in, and any entry will be invalid.</p>
+     */
+    public CustomVariableOperation [] getCustomVariableOperations() {
+        return this.CustomVariableOperations;
+    }
+
+    /**
+     * Set <p>Operation details of rule-level custom variables. You can reference site-level custom variables and rule-level custom variables defined in the current rule during operations. Site-level custom variables can be queried through the DescribeZoneCustomVariables API. This list currently only supports filling in one rule; additional entries are invalid. When Branches is empty, CustomVariableOperations is not allowed to be filled in, and any entry will be invalid.</p>
+     * @param CustomVariableOperations <p>Operation details of rule-level custom variables. You can reference site-level custom variables and rule-level custom variables defined in the current rule during operations. Site-level custom variables can be queried through the DescribeZoneCustomVariables API. This list currently only supports filling in one rule; additional entries are invalid. When Branches is empty, CustomVariableOperations is not allowed to be filled in, and any entry will be invalid.</p>
+     */
+    public void setCustomVariableOperations(CustomVariableOperation [] CustomVariableOperations) {
+        this.CustomVariableOperations = CustomVariableOperations;
+    }
+
+    /**
+     * Get <p>Sub-rule branch. This list currently only supports filling in one rule. Additional rules are invalid.</p> 
+     * @return Branches <p>Sub-rule branch. This list currently only supports filling in one rule. Additional rules are invalid.</p>
      */
     public RuleBranch [] getBranches() {
         return this.Branches;
     }
 
     /**
-     * Set Sub-Rule branch. this list currently supports filling in only one rule; multiple entries are invalid.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-     * @param Branches Sub-Rule branch. this list currently supports filling in only one rule; multiple entries are invalid.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * Set <p>Sub-rule branch. This list currently only supports filling in one rule. Additional rules are invalid.</p>
+     * @param Branches <p>Sub-rule branch. This list currently only supports filling in one rule. Additional rules are invalid.</p>
      */
     public void setBranches(RuleBranch [] Branches) {
         this.Branches = Branches;
     }
 
     /**
-     * Get Rule priority. only used as an output parameter. 
-     * @return RulePriority Rule priority. only used as an output parameter.
+     * Get <p>Rule priority. Output only.</p> 
+     * @return RulePriority <p>Rule priority. Output only.</p>
      */
     public Long getRulePriority() {
         return this.RulePriority;
     }
 
     /**
-     * Set Rule priority. only used as an output parameter.
-     * @param RulePriority Rule priority. only used as an output parameter.
+     * Set <p>Rule priority. Output only.</p>
+     * @param RulePriority <p>Rule priority. Output only.</p>
      */
     public void setRulePriority(Long RulePriority) {
         this.RulePriority = RulePriority;
@@ -189,6 +230,18 @@ Note: this field may return null, which indicates a failure to obtain a valid va
                 this.Description[i] = new String(source.Description[i]);
             }
         }
+        if (source.CustomVariables != null) {
+            this.CustomVariables = new CustomVariable[source.CustomVariables.length];
+            for (int i = 0; i < source.CustomVariables.length; i++) {
+                this.CustomVariables[i] = new CustomVariable(source.CustomVariables[i]);
+            }
+        }
+        if (source.CustomVariableOperations != null) {
+            this.CustomVariableOperations = new CustomVariableOperation[source.CustomVariableOperations.length];
+            for (int i = 0; i < source.CustomVariableOperations.length; i++) {
+                this.CustomVariableOperations[i] = new CustomVariableOperation(source.CustomVariableOperations[i]);
+            }
+        }
         if (source.Branches != null) {
             this.Branches = new RuleBranch[source.Branches.length];
             for (int i = 0; i < source.Branches.length; i++) {
@@ -209,6 +262,8 @@ Note: this field may return null, which indicates a failure to obtain a valid va
         this.setParamSimple(map, prefix + "RuleId", this.RuleId);
         this.setParamSimple(map, prefix + "RuleName", this.RuleName);
         this.setParamArraySimple(map, prefix + "Description.", this.Description);
+        this.setParamArrayObj(map, prefix + "CustomVariables.", this.CustomVariables);
+        this.setParamArrayObj(map, prefix + "CustomVariableOperations.", this.CustomVariableOperations);
         this.setParamArrayObj(map, prefix + "Branches.", this.Branches);
         this.setParamSimple(map, prefix + "RulePriority", this.RulePriority);
 

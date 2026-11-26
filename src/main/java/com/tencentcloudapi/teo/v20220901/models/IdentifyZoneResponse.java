@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class IdentifyZoneResponse extends AbstractModel {
 
     /**
-    * Details of the DNS record.
+    * Site ownership verification: Dns verification information.
     */
     @SerializedName("Ascription")
     @Expose
     private AscriptionInfo Ascription;
 
     /**
-    * Details of the verification file.
+    * Site ownership verification: file verification information.
     */
     @SerializedName("FileAscription")
     @Expose
@@ -45,32 +45,32 @@ public class IdentifyZoneResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Details of the DNS record. 
-     * @return Ascription Details of the DNS record.
+     * Get Site ownership verification: Dns verification information. 
+     * @return Ascription Site ownership verification: Dns verification information.
      */
     public AscriptionInfo getAscription() {
         return this.Ascription;
     }
 
     /**
-     * Set Details of the DNS record.
-     * @param Ascription Details of the DNS record.
+     * Set Site ownership verification: Dns verification information.
+     * @param Ascription Site ownership verification: Dns verification information.
      */
     public void setAscription(AscriptionInfo Ascription) {
         this.Ascription = Ascription;
     }
 
     /**
-     * Get Details of the verification file. 
-     * @return FileAscription Details of the verification file.
+     * Get Site ownership verification: file verification information. 
+     * @return FileAscription Site ownership verification: file verification information.
      */
     public FileAscriptionInfo getFileAscription() {
         return this.FileAscription;
     }
 
     /**
-     * Set Details of the verification file.
-     * @param FileAscription Details of the verification file.
+     * Set Site ownership verification: file verification information.
+     * @param FileAscription Site ownership verification: file verification information.
      */
     public void setFileAscription(FileAscriptionInfo FileAscription) {
         this.FileAscription = FileAscription;

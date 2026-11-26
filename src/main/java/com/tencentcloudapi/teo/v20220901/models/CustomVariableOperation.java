@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class CustomVariableOperation extends AbstractModel {
 
     /**
-    * <p>Sub-rule branch. This list currently only supports filling in one rule; additional entries are invalid.</p>
+    * <p>Sub-rule branch. This list currently only supports filling in one rule. Additional rules are invalid.</p>
     */
     @SerializedName("Branches")
     @Expose
     private CustomVariableOperationRuleBranch [] Branches;
 
     /**
-    * <p>Rule note. Multiple notes can be filled.</p>
+    * <p>Rule annotation. Multiple annotations can be filled.</p>
     */
     @SerializedName("Description")
     @Expose
     private String [] Description;
 
     /**
-     * Get <p>Sub-rule branch. This list currently only supports filling in one rule; additional entries are invalid.</p> 
-     * @return Branches <p>Sub-rule branch. This list currently only supports filling in one rule; additional entries are invalid.</p>
+     * Get <p>Sub-rule branch. This list currently only supports filling in one rule. Additional rules are invalid.</p> 
+     * @return Branches <p>Sub-rule branch. This list currently only supports filling in one rule. Additional rules are invalid.</p>
      */
     public CustomVariableOperationRuleBranch [] getBranches() {
         return this.Branches;
     }
 
     /**
-     * Set <p>Sub-rule branch. This list currently only supports filling in one rule; additional entries are invalid.</p>
-     * @param Branches <p>Sub-rule branch. This list currently only supports filling in one rule; additional entries are invalid.</p>
+     * Set <p>Sub-rule branch. This list currently only supports filling in one rule. Additional rules are invalid.</p>
+     * @param Branches <p>Sub-rule branch. This list currently only supports filling in one rule. Additional rules are invalid.</p>
      */
     public void setBranches(CustomVariableOperationRuleBranch [] Branches) {
         this.Branches = Branches;
     }
 
     /**
-     * Get <p>Rule note. Multiple notes can be filled.</p> 
-     * @return Description <p>Rule note. Multiple notes can be filled.</p>
+     * Get <p>Rule annotation. Multiple annotations can be filled.</p> 
+     * @return Description <p>Rule annotation. Multiple annotations can be filled.</p>
      */
     public String [] getDescription() {
         return this.Description;
     }
 
     /**
-     * Set <p>Rule note. Multiple notes can be filled.</p>
-     * @param Description <p>Rule note. Multiple notes can be filled.</p>
+     * Set <p>Rule annotation. Multiple annotations can be filled.</p>
+     * @param Description <p>Rule annotation. Multiple annotations can be filled.</p>
      */
     public void setDescription(String [] Description) {
         this.Description = Description;

@@ -31,50 +31,50 @@ public class EnvInfo extends AbstractModel {
     private String EnvId;
 
     /**
-    * Environment type. Valid values: 
-<li>production: Production environment.</li><li> staging: Test environment. </li>
+    * Environment type. Valid values:
+<li>production: production environment;</li><li>staging: testing environment.</li>
     */
     @SerializedName("EnvType")
     @Expose
     private String EnvType;
 
     /**
-    * Environment status. Valid values: 
-<li>creating: Being created.</li>
-<li>running: The environment is stable, with version changes allowed.</li>
-<li>version_deploying: The version is currently being deployed, with no more changes allowed. </li>
+    * Environment status. Valid values:
+<li>creating: under creation;</li>
+<li>running: running steadily. Version change can be performed;</li>
+<li>version_deploying: Version deployment in progress, cannot proceed with new changes.</li>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * Effective scope of the configuration in the current environment. Valid values: 
-<li>ALL: It takes effect on the entire network when EnvType is set to production.</li>
-<li>It returns the IP address of the test node for host binding during testing when EnvType is set to staging. </li>
+    * Configuration effective range in the current environment:
+<li>When the value of EnvType is production, the value of this parameter is ["ALL"], which means it takes effect globally;</li>
+<li>When the value of EnvType is staging, the test node IP will be returned, which can be used to bind a host for testing.</li>
     */
     @SerializedName("Scope")
     @Expose
     private String [] Scope;
 
     /**
-    * For the effective versions of each configuration group in the current environment, there are two possible scenarios based on the value of Status: 
-<li>When Status is set to version_deploying, the returned value of this field represents the previously effective version. In other words, during the deployment of the new version, the effective version is the one that was in effect before any changes were made.</li>
-<li>When Status is set to running, the value returned by this field is the currently effective version. </li>
+    * Versions that actually take effect for each configuration group in the current environment. According to the value of Status, there are the following two scenarios:
+<li>When the value of Status is version_deploying, the value returned by this field is the version effective before the change action is executed. That is, during the new version deployment, the version actually effective is the version prior to the execution of the change action;</li>
+<li>When the value of Status is running, the returned value of this field is the currently effective version.</li>
     */
     @SerializedName("CurrentConfigGroupVersionInfos")
     @Expose
     private ConfigGroupVersionInfo [] CurrentConfigGroupVersionInfos;
 
     /**
-    * Creation time. The time format follows the ISO 8601 standard and is represented in Coordinated Universal Time (UTC).
+    * Creation time, which adopts Coordinated Universal Time (UTC) and follows the date and time format of the ISO 8601 standard.
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * Update time. The time format follows the ISO 8601 standard and is represented in Coordinated Universal Time (UTC).
+    * Update time, which adopts Coordinated Universal Time (UTC) and follows the date and time format of the ISO 8601 standard.
     */
     @SerializedName("UpdateTime")
     @Expose
@@ -97,128 +97,128 @@ public class EnvInfo extends AbstractModel {
     }
 
     /**
-     * Get Environment type. Valid values: 
-<li>production: Production environment.</li><li> staging: Test environment. </li> 
-     * @return EnvType Environment type. Valid values: 
-<li>production: Production environment.</li><li> staging: Test environment. </li>
+     * Get Environment type. Valid values:
+<li>production: production environment;</li><li>staging: testing environment.</li> 
+     * @return EnvType Environment type. Valid values:
+<li>production: production environment;</li><li>staging: testing environment.</li>
      */
     public String getEnvType() {
         return this.EnvType;
     }
 
     /**
-     * Set Environment type. Valid values: 
-<li>production: Production environment.</li><li> staging: Test environment. </li>
-     * @param EnvType Environment type. Valid values: 
-<li>production: Production environment.</li><li> staging: Test environment. </li>
+     * Set Environment type. Valid values:
+<li>production: production environment;</li><li>staging: testing environment.</li>
+     * @param EnvType Environment type. Valid values:
+<li>production: production environment;</li><li>staging: testing environment.</li>
      */
     public void setEnvType(String EnvType) {
         this.EnvType = EnvType;
     }
 
     /**
-     * Get Environment status. Valid values: 
-<li>creating: Being created.</li>
-<li>running: The environment is stable, with version changes allowed.</li>
-<li>version_deploying: The version is currently being deployed, with no more changes allowed. </li> 
-     * @return Status Environment status. Valid values: 
-<li>creating: Being created.</li>
-<li>running: The environment is stable, with version changes allowed.</li>
-<li>version_deploying: The version is currently being deployed, with no more changes allowed. </li>
+     * Get Environment status. Valid values:
+<li>creating: under creation;</li>
+<li>running: running steadily. Version change can be performed;</li>
+<li>version_deploying: Version deployment in progress, cannot proceed with new changes.</li> 
+     * @return Status Environment status. Valid values:
+<li>creating: under creation;</li>
+<li>running: running steadily. Version change can be performed;</li>
+<li>version_deploying: Version deployment in progress, cannot proceed with new changes.</li>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Environment status. Valid values: 
-<li>creating: Being created.</li>
-<li>running: The environment is stable, with version changes allowed.</li>
-<li>version_deploying: The version is currently being deployed, with no more changes allowed. </li>
-     * @param Status Environment status. Valid values: 
-<li>creating: Being created.</li>
-<li>running: The environment is stable, with version changes allowed.</li>
-<li>version_deploying: The version is currently being deployed, with no more changes allowed. </li>
+     * Set Environment status. Valid values:
+<li>creating: under creation;</li>
+<li>running: running steadily. Version change can be performed;</li>
+<li>version_deploying: Version deployment in progress, cannot proceed with new changes.</li>
+     * @param Status Environment status. Valid values:
+<li>creating: under creation;</li>
+<li>running: running steadily. Version change can be performed;</li>
+<li>version_deploying: Version deployment in progress, cannot proceed with new changes.</li>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Effective scope of the configuration in the current environment. Valid values: 
-<li>ALL: It takes effect on the entire network when EnvType is set to production.</li>
-<li>It returns the IP address of the test node for host binding during testing when EnvType is set to staging. </li> 
-     * @return Scope Effective scope of the configuration in the current environment. Valid values: 
-<li>ALL: It takes effect on the entire network when EnvType is set to production.</li>
-<li>It returns the IP address of the test node for host binding during testing when EnvType is set to staging. </li>
+     * Get Configuration effective range in the current environment:
+<li>When the value of EnvType is production, the value of this parameter is ["ALL"], which means it takes effect globally;</li>
+<li>When the value of EnvType is staging, the test node IP will be returned, which can be used to bind a host for testing.</li> 
+     * @return Scope Configuration effective range in the current environment:
+<li>When the value of EnvType is production, the value of this parameter is ["ALL"], which means it takes effect globally;</li>
+<li>When the value of EnvType is staging, the test node IP will be returned, which can be used to bind a host for testing.</li>
      */
     public String [] getScope() {
         return this.Scope;
     }
 
     /**
-     * Set Effective scope of the configuration in the current environment. Valid values: 
-<li>ALL: It takes effect on the entire network when EnvType is set to production.</li>
-<li>It returns the IP address of the test node for host binding during testing when EnvType is set to staging. </li>
-     * @param Scope Effective scope of the configuration in the current environment. Valid values: 
-<li>ALL: It takes effect on the entire network when EnvType is set to production.</li>
-<li>It returns the IP address of the test node for host binding during testing when EnvType is set to staging. </li>
+     * Set Configuration effective range in the current environment:
+<li>When the value of EnvType is production, the value of this parameter is ["ALL"], which means it takes effect globally;</li>
+<li>When the value of EnvType is staging, the test node IP will be returned, which can be used to bind a host for testing.</li>
+     * @param Scope Configuration effective range in the current environment:
+<li>When the value of EnvType is production, the value of this parameter is ["ALL"], which means it takes effect globally;</li>
+<li>When the value of EnvType is staging, the test node IP will be returned, which can be used to bind a host for testing.</li>
      */
     public void setScope(String [] Scope) {
         this.Scope = Scope;
     }
 
     /**
-     * Get For the effective versions of each configuration group in the current environment, there are two possible scenarios based on the value of Status: 
-<li>When Status is set to version_deploying, the returned value of this field represents the previously effective version. In other words, during the deployment of the new version, the effective version is the one that was in effect before any changes were made.</li>
-<li>When Status is set to running, the value returned by this field is the currently effective version. </li> 
-     * @return CurrentConfigGroupVersionInfos For the effective versions of each configuration group in the current environment, there are two possible scenarios based on the value of Status: 
-<li>When Status is set to version_deploying, the returned value of this field represents the previously effective version. In other words, during the deployment of the new version, the effective version is the one that was in effect before any changes were made.</li>
-<li>When Status is set to running, the value returned by this field is the currently effective version. </li>
+     * Get Versions that actually take effect for each configuration group in the current environment. According to the value of Status, there are the following two scenarios:
+<li>When the value of Status is version_deploying, the value returned by this field is the version effective before the change action is executed. That is, during the new version deployment, the version actually effective is the version prior to the execution of the change action;</li>
+<li>When the value of Status is running, the returned value of this field is the currently effective version.</li> 
+     * @return CurrentConfigGroupVersionInfos Versions that actually take effect for each configuration group in the current environment. According to the value of Status, there are the following two scenarios:
+<li>When the value of Status is version_deploying, the value returned by this field is the version effective before the change action is executed. That is, during the new version deployment, the version actually effective is the version prior to the execution of the change action;</li>
+<li>When the value of Status is running, the returned value of this field is the currently effective version.</li>
      */
     public ConfigGroupVersionInfo [] getCurrentConfigGroupVersionInfos() {
         return this.CurrentConfigGroupVersionInfos;
     }
 
     /**
-     * Set For the effective versions of each configuration group in the current environment, there are two possible scenarios based on the value of Status: 
-<li>When Status is set to version_deploying, the returned value of this field represents the previously effective version. In other words, during the deployment of the new version, the effective version is the one that was in effect before any changes were made.</li>
-<li>When Status is set to running, the value returned by this field is the currently effective version. </li>
-     * @param CurrentConfigGroupVersionInfos For the effective versions of each configuration group in the current environment, there are two possible scenarios based on the value of Status: 
-<li>When Status is set to version_deploying, the returned value of this field represents the previously effective version. In other words, during the deployment of the new version, the effective version is the one that was in effect before any changes were made.</li>
-<li>When Status is set to running, the value returned by this field is the currently effective version. </li>
+     * Set Versions that actually take effect for each configuration group in the current environment. According to the value of Status, there are the following two scenarios:
+<li>When the value of Status is version_deploying, the value returned by this field is the version effective before the change action is executed. That is, during the new version deployment, the version actually effective is the version prior to the execution of the change action;</li>
+<li>When the value of Status is running, the returned value of this field is the currently effective version.</li>
+     * @param CurrentConfigGroupVersionInfos Versions that actually take effect for each configuration group in the current environment. According to the value of Status, there are the following two scenarios:
+<li>When the value of Status is version_deploying, the value returned by this field is the version effective before the change action is executed. That is, during the new version deployment, the version actually effective is the version prior to the execution of the change action;</li>
+<li>When the value of Status is running, the returned value of this field is the currently effective version.</li>
      */
     public void setCurrentConfigGroupVersionInfos(ConfigGroupVersionInfo [] CurrentConfigGroupVersionInfos) {
         this.CurrentConfigGroupVersionInfos = CurrentConfigGroupVersionInfos;
     }
 
     /**
-     * Get Creation time. The time format follows the ISO 8601 standard and is represented in Coordinated Universal Time (UTC). 
-     * @return CreateTime Creation time. The time format follows the ISO 8601 standard and is represented in Coordinated Universal Time (UTC).
+     * Get Creation time, which adopts Coordinated Universal Time (UTC) and follows the date and time format of the ISO 8601 standard. 
+     * @return CreateTime Creation time, which adopts Coordinated Universal Time (UTC) and follows the date and time format of the ISO 8601 standard.
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set Creation time. The time format follows the ISO 8601 standard and is represented in Coordinated Universal Time (UTC).
-     * @param CreateTime Creation time. The time format follows the ISO 8601 standard and is represented in Coordinated Universal Time (UTC).
+     * Set Creation time, which adopts Coordinated Universal Time (UTC) and follows the date and time format of the ISO 8601 standard.
+     * @param CreateTime Creation time, which adopts Coordinated Universal Time (UTC) and follows the date and time format of the ISO 8601 standard.
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get Update time. The time format follows the ISO 8601 standard and is represented in Coordinated Universal Time (UTC). 
-     * @return UpdateTime Update time. The time format follows the ISO 8601 standard and is represented in Coordinated Universal Time (UTC).
+     * Get Update time, which adopts Coordinated Universal Time (UTC) and follows the date and time format of the ISO 8601 standard. 
+     * @return UpdateTime Update time, which adopts Coordinated Universal Time (UTC) and follows the date and time format of the ISO 8601 standard.
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set Update time. The time format follows the ISO 8601 standard and is represented in Coordinated Universal Time (UTC).
-     * @param UpdateTime Update time. The time format follows the ISO 8601 standard and is represented in Coordinated Universal Time (UTC).
+     * Set Update time, which adopts Coordinated Universal Time (UTC) and follows the date and time format of the ISO 8601 standard.
+     * @param UpdateTime Update time, which adopts Coordinated Universal Time (UTC) and follows the date and time format of the ISO 8601 standard.
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;

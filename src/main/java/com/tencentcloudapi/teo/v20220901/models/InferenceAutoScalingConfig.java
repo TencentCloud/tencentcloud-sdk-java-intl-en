@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class InferenceAutoScalingConfig extends AbstractModel {
 
     /**
-    * <p>Minimum number of instances. When a scaling policy is configured and the policy is in the valid period, it will not take effect.</p>
+    * <p>Minimum number of instances. It will not take effect when a scaling policy is configured and the policy is in its valid period.</p>
     */
     @SerializedName("MinInstanceCount")
     @Expose
@@ -38,16 +38,16 @@ public class InferenceAutoScalingConfig extends AbstractModel {
     private InferenceScalingPolicy [] ScalingPolicies;
 
     /**
-     * Get <p>Minimum number of instances. When a scaling policy is configured and the policy is in the valid period, it will not take effect.</p> 
-     * @return MinInstanceCount <p>Minimum number of instances. When a scaling policy is configured and the policy is in the valid period, it will not take effect.</p>
+     * Get <p>Minimum number of instances. It will not take effect when a scaling policy is configured and the policy is in its valid period.</p> 
+     * @return MinInstanceCount <p>Minimum number of instances. It will not take effect when a scaling policy is configured and the policy is in its valid period.</p>
      */
     public Long getMinInstanceCount() {
         return this.MinInstanceCount;
     }
 
     /**
-     * Set <p>Minimum number of instances. When a scaling policy is configured and the policy is in the valid period, it will not take effect.</p>
-     * @param MinInstanceCount <p>Minimum number of instances. When a scaling policy is configured and the policy is in the valid period, it will not take effect.</p>
+     * Set <p>Minimum number of instances. It will not take effect when a scaling policy is configured and the policy is in its valid period.</p>
+     * @param MinInstanceCount <p>Minimum number of instances. It will not take effect when a scaling policy is configured and the policy is in its valid period.</p>
      */
     public void setMinInstanceCount(Long MinInstanceCount) {
         this.MinInstanceCount = MinInstanceCount;

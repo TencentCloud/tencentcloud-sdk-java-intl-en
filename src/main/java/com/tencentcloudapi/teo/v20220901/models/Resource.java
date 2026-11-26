@@ -24,106 +24,104 @@ import java.util.HashMap;
 public class Resource extends AbstractModel {
 
     /**
-    * The resource ID.
+    * Resource ID.
     */
     @SerializedName("Id")
     @Expose
     private String Id;
 
     /**
-    * Billing mode
-`0`: Pay-as-you-go
+    * Payment mode. Valid values:
+<li>0: postpaid.</li>
     */
     @SerializedName("PayMode")
     @Expose
     private Long PayMode;
 
     /**
-    * The creation time.
+    * Creation time.
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * The effective time.
+    * Effective time.
     */
     @SerializedName("EnableTime")
     @Expose
     private String EnableTime;
 
     /**
-    * The expiration time.
+    * Expiration time.
     */
     @SerializedName("ExpireTime")
     @Expose
     private String ExpireTime;
 
     /**
-    * The plan status. Values:
-<li>`normal`: Normal</li>
-<li>`isolated`: Isolated</li>
-<li>`destroyed`: Terminated</li>
+    * Package status. Valid values:
+<li>normal: Normal;</li>
+<li>isolated: Isolated;</li>
+<li>destroyed: Terminated.</li>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * Pricing query parameter
+    * Price inquiry parameters.
     */
     @SerializedName("Sv")
     @Expose
     private Sv [] Sv;
 
     /**
-    * Whether to enable auto-renewal. Values:
-<li>`0`: Default status.</li>
-<li>`1`: Enable auto-renewal.</li>
-<li>`2`: Disable auto-renewal.</li>
+    * Whether it is automatically renewed. Valid values:
+<li>0: default state</li>
+<li>`1`: auto-renewal;</li>
+<li>`2`: no auto-renewal.</li>
     */
     @SerializedName("AutoRenewFlag")
     @Expose
     private Long AutoRenewFlag;
 
     /**
-    * ID of the resource associated with the plan.
+    * ID of the associated resource in the package.
     */
     @SerializedName("PlanId")
     @Expose
     private String PlanId;
 
     /**
-    * Region. valid values:.
-<Li>Mainland: within the chinese mainland;</li>.
-<li>overseas: outside the chinese mainland.</li>.
-<Li>Global: global.</li>.
+    * Region. Valid values:
+<li>mainland: within the Chinese mainland;</li>
+<li>overseas: outside the Chinese mainland.</li>
+<li>global: global.</li>
     */
     @SerializedName("Area")
     @Expose
     private String Area;
 
     /**
-    * The resource type. Values:
-<li>`plan`: Plan resources</li>
-<li>`pay-as-you-go`: Pay-as-you-go resources </li>
-<li>`value-added`: Value-added resources </li>
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Resource type. Valid values:
+<li>plan: package type;</li>
+<li>pay-as-you-go: postpaid mode.</li>
+<li>value-added: value-added service type.</li>
     */
     @SerializedName("Group")
     @Expose
     private String Group;
 
     /**
-    * The sites that are associated with the current resources.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Number of sites bound to the current resource.
     */
     @SerializedName("ZoneNumber")
     @Expose
     private Long ZoneNumber;
 
     /**
-    * Resource tag type. Valid values:
+    * Resource tag type, with values:
 <li>vodeo: vodeo resource.</li>
     */
     @SerializedName("Type")
@@ -131,261 +129,253 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String Type;
 
     /**
-     * Get The resource ID. 
-     * @return Id The resource ID.
+     * Get Resource ID. 
+     * @return Id Resource ID.
      */
     public String getId() {
         return this.Id;
     }
 
     /**
-     * Set The resource ID.
-     * @param Id The resource ID.
+     * Set Resource ID.
+     * @param Id Resource ID.
      */
     public void setId(String Id) {
         this.Id = Id;
     }
 
     /**
-     * Get Billing mode
-`0`: Pay-as-you-go 
-     * @return PayMode Billing mode
-`0`: Pay-as-you-go
+     * Get Payment mode. Valid values:
+<li>0: postpaid.</li> 
+     * @return PayMode Payment mode. Valid values:
+<li>0: postpaid.</li>
      */
     public Long getPayMode() {
         return this.PayMode;
     }
 
     /**
-     * Set Billing mode
-`0`: Pay-as-you-go
-     * @param PayMode Billing mode
-`0`: Pay-as-you-go
+     * Set Payment mode. Valid values:
+<li>0: postpaid.</li>
+     * @param PayMode Payment mode. Valid values:
+<li>0: postpaid.</li>
      */
     public void setPayMode(Long PayMode) {
         this.PayMode = PayMode;
     }
 
     /**
-     * Get The creation time. 
-     * @return CreateTime The creation time.
+     * Get Creation time. 
+     * @return CreateTime Creation time.
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set The creation time.
-     * @param CreateTime The creation time.
+     * Set Creation time.
+     * @param CreateTime Creation time.
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get The effective time. 
-     * @return EnableTime The effective time.
+     * Get Effective time. 
+     * @return EnableTime Effective time.
      */
     public String getEnableTime() {
         return this.EnableTime;
     }
 
     /**
-     * Set The effective time.
-     * @param EnableTime The effective time.
+     * Set Effective time.
+     * @param EnableTime Effective time.
      */
     public void setEnableTime(String EnableTime) {
         this.EnableTime = EnableTime;
     }
 
     /**
-     * Get The expiration time. 
-     * @return ExpireTime The expiration time.
+     * Get Expiration time. 
+     * @return ExpireTime Expiration time.
      */
     public String getExpireTime() {
         return this.ExpireTime;
     }
 
     /**
-     * Set The expiration time.
-     * @param ExpireTime The expiration time.
+     * Set Expiration time.
+     * @param ExpireTime Expiration time.
      */
     public void setExpireTime(String ExpireTime) {
         this.ExpireTime = ExpireTime;
     }
 
     /**
-     * Get The plan status. Values:
-<li>`normal`: Normal</li>
-<li>`isolated`: Isolated</li>
-<li>`destroyed`: Terminated</li> 
-     * @return Status The plan status. Values:
-<li>`normal`: Normal</li>
-<li>`isolated`: Isolated</li>
-<li>`destroyed`: Terminated</li>
+     * Get Package status. Valid values:
+<li>normal: Normal;</li>
+<li>isolated: Isolated;</li>
+<li>destroyed: Terminated.</li> 
+     * @return Status Package status. Valid values:
+<li>normal: Normal;</li>
+<li>isolated: Isolated;</li>
+<li>destroyed: Terminated.</li>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set The plan status. Values:
-<li>`normal`: Normal</li>
-<li>`isolated`: Isolated</li>
-<li>`destroyed`: Terminated</li>
-     * @param Status The plan status. Values:
-<li>`normal`: Normal</li>
-<li>`isolated`: Isolated</li>
-<li>`destroyed`: Terminated</li>
+     * Set Package status. Valid values:
+<li>normal: Normal;</li>
+<li>isolated: Isolated;</li>
+<li>destroyed: Terminated.</li>
+     * @param Status Package status. Valid values:
+<li>normal: Normal;</li>
+<li>isolated: Isolated;</li>
+<li>destroyed: Terminated.</li>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Pricing query parameter 
-     * @return Sv Pricing query parameter
+     * Get Price inquiry parameters. 
+     * @return Sv Price inquiry parameters.
      */
     public Sv [] getSv() {
         return this.Sv;
     }
 
     /**
-     * Set Pricing query parameter
-     * @param Sv Pricing query parameter
+     * Set Price inquiry parameters.
+     * @param Sv Price inquiry parameters.
      */
     public void setSv(Sv [] Sv) {
         this.Sv = Sv;
     }
 
     /**
-     * Get Whether to enable auto-renewal. Values:
-<li>`0`: Default status.</li>
-<li>`1`: Enable auto-renewal.</li>
-<li>`2`: Disable auto-renewal.</li> 
-     * @return AutoRenewFlag Whether to enable auto-renewal. Values:
-<li>`0`: Default status.</li>
-<li>`1`: Enable auto-renewal.</li>
-<li>`2`: Disable auto-renewal.</li>
+     * Get Whether it is automatically renewed. Valid values:
+<li>0: default state</li>
+<li>`1`: auto-renewal;</li>
+<li>`2`: no auto-renewal.</li> 
+     * @return AutoRenewFlag Whether it is automatically renewed. Valid values:
+<li>0: default state</li>
+<li>`1`: auto-renewal;</li>
+<li>`2`: no auto-renewal.</li>
      */
     public Long getAutoRenewFlag() {
         return this.AutoRenewFlag;
     }
 
     /**
-     * Set Whether to enable auto-renewal. Values:
-<li>`0`: Default status.</li>
-<li>`1`: Enable auto-renewal.</li>
-<li>`2`: Disable auto-renewal.</li>
-     * @param AutoRenewFlag Whether to enable auto-renewal. Values:
-<li>`0`: Default status.</li>
-<li>`1`: Enable auto-renewal.</li>
-<li>`2`: Disable auto-renewal.</li>
+     * Set Whether it is automatically renewed. Valid values:
+<li>0: default state</li>
+<li>`1`: auto-renewal;</li>
+<li>`2`: no auto-renewal.</li>
+     * @param AutoRenewFlag Whether it is automatically renewed. Valid values:
+<li>0: default state</li>
+<li>`1`: auto-renewal;</li>
+<li>`2`: no auto-renewal.</li>
      */
     public void setAutoRenewFlag(Long AutoRenewFlag) {
         this.AutoRenewFlag = AutoRenewFlag;
     }
 
     /**
-     * Get ID of the resource associated with the plan. 
-     * @return PlanId ID of the resource associated with the plan.
+     * Get ID of the associated resource in the package. 
+     * @return PlanId ID of the associated resource in the package.
      */
     public String getPlanId() {
         return this.PlanId;
     }
 
     /**
-     * Set ID of the resource associated with the plan.
-     * @param PlanId ID of the resource associated with the plan.
+     * Set ID of the associated resource in the package.
+     * @param PlanId ID of the associated resource in the package.
      */
     public void setPlanId(String PlanId) {
         this.PlanId = PlanId;
     }
 
     /**
-     * Get Region. valid values:.
-<Li>Mainland: within the chinese mainland;</li>.
-<li>overseas: outside the chinese mainland.</li>.
-<Li>Global: global.</li>. 
-     * @return Area Region. valid values:.
-<Li>Mainland: within the chinese mainland;</li>.
-<li>overseas: outside the chinese mainland.</li>.
-<Li>Global: global.</li>.
+     * Get Region. Valid values:
+<li>mainland: within the Chinese mainland;</li>
+<li>overseas: outside the Chinese mainland.</li>
+<li>global: global.</li> 
+     * @return Area Region. Valid values:
+<li>mainland: within the Chinese mainland;</li>
+<li>overseas: outside the Chinese mainland.</li>
+<li>global: global.</li>
      */
     public String getArea() {
         return this.Area;
     }
 
     /**
-     * Set Region. valid values:.
-<Li>Mainland: within the chinese mainland;</li>.
-<li>overseas: outside the chinese mainland.</li>.
-<Li>Global: global.</li>.
-     * @param Area Region. valid values:.
-<Li>Mainland: within the chinese mainland;</li>.
-<li>overseas: outside the chinese mainland.</li>.
-<Li>Global: global.</li>.
+     * Set Region. Valid values:
+<li>mainland: within the Chinese mainland;</li>
+<li>overseas: outside the Chinese mainland.</li>
+<li>global: global.</li>
+     * @param Area Region. Valid values:
+<li>mainland: within the Chinese mainland;</li>
+<li>overseas: outside the Chinese mainland.</li>
+<li>global: global.</li>
      */
     public void setArea(String Area) {
         this.Area = Area;
     }
 
     /**
-     * Get The resource type. Values:
-<li>`plan`: Plan resources</li>
-<li>`pay-as-you-go`: Pay-as-you-go resources </li>
-<li>`value-added`: Value-added resources </li>
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Group The resource type. Values:
-<li>`plan`: Plan resources</li>
-<li>`pay-as-you-go`: Pay-as-you-go resources </li>
-<li>`value-added`: Value-added resources </li>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Resource type. Valid values:
+<li>plan: package type;</li>
+<li>pay-as-you-go: postpaid mode.</li>
+<li>value-added: value-added service type.</li> 
+     * @return Group Resource type. Valid values:
+<li>plan: package type;</li>
+<li>pay-as-you-go: postpaid mode.</li>
+<li>value-added: value-added service type.</li>
      */
     public String getGroup() {
         return this.Group;
     }
 
     /**
-     * Set The resource type. Values:
-<li>`plan`: Plan resources</li>
-<li>`pay-as-you-go`: Pay-as-you-go resources </li>
-<li>`value-added`: Value-added resources </li>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Group The resource type. Values:
-<li>`plan`: Plan resources</li>
-<li>`pay-as-you-go`: Pay-as-you-go resources </li>
-<li>`value-added`: Value-added resources </li>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Resource type. Valid values:
+<li>plan: package type;</li>
+<li>pay-as-you-go: postpaid mode.</li>
+<li>value-added: value-added service type.</li>
+     * @param Group Resource type. Valid values:
+<li>plan: package type;</li>
+<li>pay-as-you-go: postpaid mode.</li>
+<li>value-added: value-added service type.</li>
      */
     public void setGroup(String Group) {
         this.Group = Group;
     }
 
     /**
-     * Get The sites that are associated with the current resources.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ZoneNumber The sites that are associated with the current resources.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Number of sites bound to the current resource. 
+     * @return ZoneNumber Number of sites bound to the current resource.
      */
     public Long getZoneNumber() {
         return this.ZoneNumber;
     }
 
     /**
-     * Set The sites that are associated with the current resources.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ZoneNumber The sites that are associated with the current resources.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Number of sites bound to the current resource.
+     * @param ZoneNumber Number of sites bound to the current resource.
      */
     public void setZoneNumber(Long ZoneNumber) {
         this.ZoneNumber = ZoneNumber;
     }
 
     /**
-     * Get Resource tag type. Valid values:
+     * Get Resource tag type, with values:
 <li>vodeo: vodeo resource.</li> 
-     * @return Type Resource tag type. Valid values:
+     * @return Type Resource tag type, with values:
 <li>vodeo: vodeo resource.</li>
      */
     public String getType() {
@@ -393,9 +383,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Resource tag type. Valid values:
+     * Set Resource tag type, with values:
 <li>vodeo: vodeo resource.</li>
-     * @param Type Resource tag type. Valid values:
+     * @param Type Resource tag type, with values:
 <li>vodeo: vodeo resource.</li>
      */
     public void setType(String Type) {

@@ -24,14 +24,16 @@ import java.util.HashMap;
 public class MutualTLS extends AbstractModel {
 
     /**
-    * Mutual authentication configuration switch, the values are:<li>on: enable; </li> <li>off: disable. </li>
+    * Mutual authentication configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * Mutual authentication certificate list.
+    * List of mutual authentication certificates.
 Note: When using MutualTLS as an input parameter in ModifyHostsCertificate, you only need to provide the CertId of the corresponding certificate. You can check the CertId from the [SSL Certificate List](https://console.cloud.tencent.com/ssl).
     */
     @SerializedName("CertInfos")
@@ -39,25 +41,33 @@ Note: When using MutualTLS as an input parameter in ModifyHostsCertificate, you 
     private CertificateInfo [] CertInfos;
 
     /**
-     * Get Mutual authentication configuration switch, the values are:<li>on: enable; </li> <li>off: disable. </li> 
-     * @return Switch Mutual authentication configuration switch, the values are:<li>on: enable; </li> <li>off: disable. </li>
+     * Get Mutual authentication configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li> 
+     * @return Switch Mutual authentication configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set Mutual authentication configuration switch, the values are:<li>on: enable; </li> <li>off: disable. </li>
-     * @param Switch Mutual authentication configuration switch, the values are:<li>on: enable; </li> <li>off: disable. </li>
+     * Set Mutual authentication configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+     * @param Switch Mutual authentication configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get Mutual authentication certificate list.
+     * Get List of mutual authentication certificates.
 Note: When using MutualTLS as an input parameter in ModifyHostsCertificate, you only need to provide the CertId of the corresponding certificate. You can check the CertId from the [SSL Certificate List](https://console.cloud.tencent.com/ssl). 
-     * @return CertInfos Mutual authentication certificate list.
+     * @return CertInfos List of mutual authentication certificates.
 Note: When using MutualTLS as an input parameter in ModifyHostsCertificate, you only need to provide the CertId of the corresponding certificate. You can check the CertId from the [SSL Certificate List](https://console.cloud.tencent.com/ssl).
      */
     public CertificateInfo [] getCertInfos() {
@@ -65,9 +75,9 @@ Note: When using MutualTLS as an input parameter in ModifyHostsCertificate, you 
     }
 
     /**
-     * Set Mutual authentication certificate list.
+     * Set List of mutual authentication certificates.
 Note: When using MutualTLS as an input parameter in ModifyHostsCertificate, you only need to provide the CertId of the corresponding certificate. You can check the CertId from the [SSL Certificate List](https://console.cloud.tencent.com/ssl).
-     * @param CertInfos Mutual authentication certificate list.
+     * @param CertInfos List of mutual authentication certificates.
 Note: When using MutualTLS as an input parameter in ModifyHostsCertificate, you only need to provide the CertId of the corresponding certificate. You can check the CertId from the [SSL Certificate List](https://console.cloud.tencent.com/ssl).
      */
     public void setCertInfos(CertificateInfo [] CertInfos) {

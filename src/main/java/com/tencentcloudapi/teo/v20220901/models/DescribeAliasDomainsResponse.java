@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeAliasDomainsResponse extends AbstractModel {
 
     /**
-    * Total eligible alias domain names.
+    * Number of eligible alias domain names.
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * Information of the eligible alias domain names.
+    * Alias domain name detailed information list.
     */
     @SerializedName("AliasDomains")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeAliasDomainsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Total eligible alias domain names. 
-     * @return TotalCount Total eligible alias domain names.
+     * Get Number of eligible alias domain names. 
+     * @return TotalCount Number of eligible alias domain names.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Total eligible alias domain names.
-     * @param TotalCount Total eligible alias domain names.
+     * Set Number of eligible alias domain names.
+     * @param TotalCount Number of eligible alias domain names.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get Information of the eligible alias domain names. 
-     * @return AliasDomains Information of the eligible alias domain names.
+     * Get Alias domain name detailed information list. 
+     * @return AliasDomains Alias domain name detailed information list.
      */
     public AliasDomain [] getAliasDomains() {
         return this.AliasDomains;
     }
 
     /**
-     * Set Information of the eligible alias domain names.
-     * @param AliasDomains Information of the eligible alias domain names.
+     * Set Alias domain name detailed information list.
+     * @param AliasDomains Alias domain name detailed information list.
      */
     public void setAliasDomains(AliasDomain [] AliasDomains) {
         this.AliasDomains = AliasDomains;

@@ -24,35 +24,35 @@ import java.util.HashMap;
 public class ConfigGroupVersionInfo extends AbstractModel {
 
     /**
-    * <p>Configuration group version ID, a unique resource ID allocated by EdgeOne when creating a configuration group version.</p><p>Parameter format: ver-2kplomhisdcb</p><p>For reference:</p><ul><li><a href="https://www.tencentcloud.com/document/api/1552/101867?from_cn_redirect=1">CreateConfigGroupVersion</a> return value <code>VersionId</code></li><li><a href="https://www.tencentcloud.com/document/api/1552/101864?from_cn_redirect=1">DescribeConfigGroupVersions</a> return value <code>ConfigGroupVersionInfos</code></li></ul>
+    * <p>Configuration group version ID, a unique resource ID assigned by EdgeOne when creating a configuration group version.</p><p>Parameter format: ver-2kplomhisdcb</p><p>For reference:</p><ul><li><a href="https://www.tencentcloud.com/document/api/1552/101867?from_cn_redirect=1">CreateConfigGroupVersion</a> return value <code>VersionId</code></li><li><a href="https://www.tencentcloud.com/document/api/1552/101864?from_cn_redirect=1">DescribeConfigGroupVersions</a> return value <code>ConfigGroupVersionInfos</code></li></ul>
     */
     @SerializedName("VersionId")
     @Expose
     private String VersionId;
 
     /**
-    * <p>Configuration group version number. This parameter only shows the version. Each time a new version of the configuration group is created, the version number increments by one. The initial version number is "0".</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/1552/101864?from_cn_redirect=1">DescribeConfigGroupVersions</a> return value <code>ConfigGroupVersionInfos</code></p>
+    * <p>Configuration group version number. This parameter is only for display. Each time a new version is created for the configuration group, the version number increases by one. The initial version number is "0".</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/1552/101864?from_cn_redirect=1">DescribeConfigGroupVersions</a> return value <code>ConfigGroupVersionInfos</code></p>
     */
     @SerializedName("VersionNumber")
     @Expose
     private String VersionNumber;
 
     /**
-    * <p>Version ID of the source version on which the configuration group version is based. When creating a configuration group version, designate the source version ID. The new version will be created as a derivative based on the configuration of that source version.</p><p>Parameter format: ver-2kplomhisdcb</p><p>Value for reference:</p><ul><li><a href="https://www.tencentcloud.com/document/api/1552/101867?from_cn_redirect=1">CreateConfigGroupVersion</a> return value <code>VersionId</code></li><li><a href="https://www.tencentcloud.com/document/api/1552/101864?from_cn_redirect=1">DescribeConfigGroupVersions</a> return value <code>ConfigGroupVersionInfos</code></li></ul>
+    * <p>The source version ID on which the configuration group version is based. Specify the source version ID when creating a configuration group version. The new version will be derived from the configuration of the source version.</p><p>Parameter format: ver-2kplomhisdcb</p><p>Parameter values for reference:</p><ul><li><a href="https://www.tencentcloud.com/document/api/1552/101867?from_cn_redirect=1">CreateConfigGroupVersion</a> return value <code>VersionId</code></li><li><a href="https://www.tencentcloud.com/document/api/1552/101864?from_cn_redirect=1">DescribeConfigGroupVersions</a> return value <code>ConfigGroupVersionInfos</code></li></ul>
     */
     @SerializedName("SourceVersion")
     @Expose
     private String SourceVersion;
 
     /**
-    * <p>Configuration group type to which the version belongs.</p><p>Enumeration value:</p><ul><li>l7_acceleration: Layer-7 acceleration configuration group</li><li>edge_functions: Edge function configuration group</li><li>web_security: Web protection configuration group</li></ul>
+    * <p>Configuration group type to which the version belongs.</p><p>Enumeration values:</p><ul><li>l7_acceleration: layer-7 acceleration configuration group</li><li>edge_functions: edge function configuration group</li><li>web_security: web protection configuration group</li></ul>
     */
     @SerializedName("GroupType")
     @Expose
     private String GroupType;
 
     /**
-    * <p>Configuration group ID for version ownership.</p><p>Parameter format: cg-2kplomhisdcb</p>
+    * <p>ID of the configuration group to which the version belongs.</p><p>Parameter format: cg-2kplomhisdcb</p>
     */
     @SerializedName("GroupId")
     @Expose
@@ -66,7 +66,7 @@ public class ConfigGroupVersionInfo extends AbstractModel {
     private String Description;
 
     /**
-    * <p>Version effective status.</p><p>Enumeration value:</p><ul><li>creating: Version creation in progress</li><li>inactive: Version not in effect</li><li>active: Version in effect</li></ul>
+    * <p>Version effective status.</p><p>Enumeration values:</p><ul><li>creating: version creating</li><li>inactive: version not in effect</li><li>active: version effective</li></ul>
     */
     @SerializedName("Status")
     @Expose
@@ -80,80 +80,80 @@ public class ConfigGroupVersionInfo extends AbstractModel {
     private String CreateTime;
 
     /**
-     * Get <p>Configuration group version ID, a unique resource ID allocated by EdgeOne when creating a configuration group version.</p><p>Parameter format: ver-2kplomhisdcb</p><p>For reference:</p><ul><li><a href="https://www.tencentcloud.com/document/api/1552/101867?from_cn_redirect=1">CreateConfigGroupVersion</a> return value <code>VersionId</code></li><li><a href="https://www.tencentcloud.com/document/api/1552/101864?from_cn_redirect=1">DescribeConfigGroupVersions</a> return value <code>ConfigGroupVersionInfos</code></li></ul> 
-     * @return VersionId <p>Configuration group version ID, a unique resource ID allocated by EdgeOne when creating a configuration group version.</p><p>Parameter format: ver-2kplomhisdcb</p><p>For reference:</p><ul><li><a href="https://www.tencentcloud.com/document/api/1552/101867?from_cn_redirect=1">CreateConfigGroupVersion</a> return value <code>VersionId</code></li><li><a href="https://www.tencentcloud.com/document/api/1552/101864?from_cn_redirect=1">DescribeConfigGroupVersions</a> return value <code>ConfigGroupVersionInfos</code></li></ul>
+     * Get <p>Configuration group version ID, a unique resource ID assigned by EdgeOne when creating a configuration group version.</p><p>Parameter format: ver-2kplomhisdcb</p><p>For reference:</p><ul><li><a href="https://www.tencentcloud.com/document/api/1552/101867?from_cn_redirect=1">CreateConfigGroupVersion</a> return value <code>VersionId</code></li><li><a href="https://www.tencentcloud.com/document/api/1552/101864?from_cn_redirect=1">DescribeConfigGroupVersions</a> return value <code>ConfigGroupVersionInfos</code></li></ul> 
+     * @return VersionId <p>Configuration group version ID, a unique resource ID assigned by EdgeOne when creating a configuration group version.</p><p>Parameter format: ver-2kplomhisdcb</p><p>For reference:</p><ul><li><a href="https://www.tencentcloud.com/document/api/1552/101867?from_cn_redirect=1">CreateConfigGroupVersion</a> return value <code>VersionId</code></li><li><a href="https://www.tencentcloud.com/document/api/1552/101864?from_cn_redirect=1">DescribeConfigGroupVersions</a> return value <code>ConfigGroupVersionInfos</code></li></ul>
      */
     public String getVersionId() {
         return this.VersionId;
     }
 
     /**
-     * Set <p>Configuration group version ID, a unique resource ID allocated by EdgeOne when creating a configuration group version.</p><p>Parameter format: ver-2kplomhisdcb</p><p>For reference:</p><ul><li><a href="https://www.tencentcloud.com/document/api/1552/101867?from_cn_redirect=1">CreateConfigGroupVersion</a> return value <code>VersionId</code></li><li><a href="https://www.tencentcloud.com/document/api/1552/101864?from_cn_redirect=1">DescribeConfigGroupVersions</a> return value <code>ConfigGroupVersionInfos</code></li></ul>
-     * @param VersionId <p>Configuration group version ID, a unique resource ID allocated by EdgeOne when creating a configuration group version.</p><p>Parameter format: ver-2kplomhisdcb</p><p>For reference:</p><ul><li><a href="https://www.tencentcloud.com/document/api/1552/101867?from_cn_redirect=1">CreateConfigGroupVersion</a> return value <code>VersionId</code></li><li><a href="https://www.tencentcloud.com/document/api/1552/101864?from_cn_redirect=1">DescribeConfigGroupVersions</a> return value <code>ConfigGroupVersionInfos</code></li></ul>
+     * Set <p>Configuration group version ID, a unique resource ID assigned by EdgeOne when creating a configuration group version.</p><p>Parameter format: ver-2kplomhisdcb</p><p>For reference:</p><ul><li><a href="https://www.tencentcloud.com/document/api/1552/101867?from_cn_redirect=1">CreateConfigGroupVersion</a> return value <code>VersionId</code></li><li><a href="https://www.tencentcloud.com/document/api/1552/101864?from_cn_redirect=1">DescribeConfigGroupVersions</a> return value <code>ConfigGroupVersionInfos</code></li></ul>
+     * @param VersionId <p>Configuration group version ID, a unique resource ID assigned by EdgeOne when creating a configuration group version.</p><p>Parameter format: ver-2kplomhisdcb</p><p>For reference:</p><ul><li><a href="https://www.tencentcloud.com/document/api/1552/101867?from_cn_redirect=1">CreateConfigGroupVersion</a> return value <code>VersionId</code></li><li><a href="https://www.tencentcloud.com/document/api/1552/101864?from_cn_redirect=1">DescribeConfigGroupVersions</a> return value <code>ConfigGroupVersionInfos</code></li></ul>
      */
     public void setVersionId(String VersionId) {
         this.VersionId = VersionId;
     }
 
     /**
-     * Get <p>Configuration group version number. This parameter only shows the version. Each time a new version of the configuration group is created, the version number increments by one. The initial version number is "0".</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/1552/101864?from_cn_redirect=1">DescribeConfigGroupVersions</a> return value <code>ConfigGroupVersionInfos</code></p> 
-     * @return VersionNumber <p>Configuration group version number. This parameter only shows the version. Each time a new version of the configuration group is created, the version number increments by one. The initial version number is "0".</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/1552/101864?from_cn_redirect=1">DescribeConfigGroupVersions</a> return value <code>ConfigGroupVersionInfos</code></p>
+     * Get <p>Configuration group version number. This parameter is only for display. Each time a new version is created for the configuration group, the version number increases by one. The initial version number is "0".</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/1552/101864?from_cn_redirect=1">DescribeConfigGroupVersions</a> return value <code>ConfigGroupVersionInfos</code></p> 
+     * @return VersionNumber <p>Configuration group version number. This parameter is only for display. Each time a new version is created for the configuration group, the version number increases by one. The initial version number is "0".</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/1552/101864?from_cn_redirect=1">DescribeConfigGroupVersions</a> return value <code>ConfigGroupVersionInfos</code></p>
      */
     public String getVersionNumber() {
         return this.VersionNumber;
     }
 
     /**
-     * Set <p>Configuration group version number. This parameter only shows the version. Each time a new version of the configuration group is created, the version number increments by one. The initial version number is "0".</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/1552/101864?from_cn_redirect=1">DescribeConfigGroupVersions</a> return value <code>ConfigGroupVersionInfos</code></p>
-     * @param VersionNumber <p>Configuration group version number. This parameter only shows the version. Each time a new version of the configuration group is created, the version number increments by one. The initial version number is "0".</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/1552/101864?from_cn_redirect=1">DescribeConfigGroupVersions</a> return value <code>ConfigGroupVersionInfos</code></p>
+     * Set <p>Configuration group version number. This parameter is only for display. Each time a new version is created for the configuration group, the version number increases by one. The initial version number is "0".</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/1552/101864?from_cn_redirect=1">DescribeConfigGroupVersions</a> return value <code>ConfigGroupVersionInfos</code></p>
+     * @param VersionNumber <p>Configuration group version number. This parameter is only for display. Each time a new version is created for the configuration group, the version number increases by one. The initial version number is "0".</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/1552/101864?from_cn_redirect=1">DescribeConfigGroupVersions</a> return value <code>ConfigGroupVersionInfos</code></p>
      */
     public void setVersionNumber(String VersionNumber) {
         this.VersionNumber = VersionNumber;
     }
 
     /**
-     * Get <p>Version ID of the source version on which the configuration group version is based. When creating a configuration group version, designate the source version ID. The new version will be created as a derivative based on the configuration of that source version.</p><p>Parameter format: ver-2kplomhisdcb</p><p>Value for reference:</p><ul><li><a href="https://www.tencentcloud.com/document/api/1552/101867?from_cn_redirect=1">CreateConfigGroupVersion</a> return value <code>VersionId</code></li><li><a href="https://www.tencentcloud.com/document/api/1552/101864?from_cn_redirect=1">DescribeConfigGroupVersions</a> return value <code>ConfigGroupVersionInfos</code></li></ul> 
-     * @return SourceVersion <p>Version ID of the source version on which the configuration group version is based. When creating a configuration group version, designate the source version ID. The new version will be created as a derivative based on the configuration of that source version.</p><p>Parameter format: ver-2kplomhisdcb</p><p>Value for reference:</p><ul><li><a href="https://www.tencentcloud.com/document/api/1552/101867?from_cn_redirect=1">CreateConfigGroupVersion</a> return value <code>VersionId</code></li><li><a href="https://www.tencentcloud.com/document/api/1552/101864?from_cn_redirect=1">DescribeConfigGroupVersions</a> return value <code>ConfigGroupVersionInfos</code></li></ul>
+     * Get <p>The source version ID on which the configuration group version is based. Specify the source version ID when creating a configuration group version. The new version will be derived from the configuration of the source version.</p><p>Parameter format: ver-2kplomhisdcb</p><p>Parameter values for reference:</p><ul><li><a href="https://www.tencentcloud.com/document/api/1552/101867?from_cn_redirect=1">CreateConfigGroupVersion</a> return value <code>VersionId</code></li><li><a href="https://www.tencentcloud.com/document/api/1552/101864?from_cn_redirect=1">DescribeConfigGroupVersions</a> return value <code>ConfigGroupVersionInfos</code></li></ul> 
+     * @return SourceVersion <p>The source version ID on which the configuration group version is based. Specify the source version ID when creating a configuration group version. The new version will be derived from the configuration of the source version.</p><p>Parameter format: ver-2kplomhisdcb</p><p>Parameter values for reference:</p><ul><li><a href="https://www.tencentcloud.com/document/api/1552/101867?from_cn_redirect=1">CreateConfigGroupVersion</a> return value <code>VersionId</code></li><li><a href="https://www.tencentcloud.com/document/api/1552/101864?from_cn_redirect=1">DescribeConfigGroupVersions</a> return value <code>ConfigGroupVersionInfos</code></li></ul>
      */
     public String getSourceVersion() {
         return this.SourceVersion;
     }
 
     /**
-     * Set <p>Version ID of the source version on which the configuration group version is based. When creating a configuration group version, designate the source version ID. The new version will be created as a derivative based on the configuration of that source version.</p><p>Parameter format: ver-2kplomhisdcb</p><p>Value for reference:</p><ul><li><a href="https://www.tencentcloud.com/document/api/1552/101867?from_cn_redirect=1">CreateConfigGroupVersion</a> return value <code>VersionId</code></li><li><a href="https://www.tencentcloud.com/document/api/1552/101864?from_cn_redirect=1">DescribeConfigGroupVersions</a> return value <code>ConfigGroupVersionInfos</code></li></ul>
-     * @param SourceVersion <p>Version ID of the source version on which the configuration group version is based. When creating a configuration group version, designate the source version ID. The new version will be created as a derivative based on the configuration of that source version.</p><p>Parameter format: ver-2kplomhisdcb</p><p>Value for reference:</p><ul><li><a href="https://www.tencentcloud.com/document/api/1552/101867?from_cn_redirect=1">CreateConfigGroupVersion</a> return value <code>VersionId</code></li><li><a href="https://www.tencentcloud.com/document/api/1552/101864?from_cn_redirect=1">DescribeConfigGroupVersions</a> return value <code>ConfigGroupVersionInfos</code></li></ul>
+     * Set <p>The source version ID on which the configuration group version is based. Specify the source version ID when creating a configuration group version. The new version will be derived from the configuration of the source version.</p><p>Parameter format: ver-2kplomhisdcb</p><p>Parameter values for reference:</p><ul><li><a href="https://www.tencentcloud.com/document/api/1552/101867?from_cn_redirect=1">CreateConfigGroupVersion</a> return value <code>VersionId</code></li><li><a href="https://www.tencentcloud.com/document/api/1552/101864?from_cn_redirect=1">DescribeConfigGroupVersions</a> return value <code>ConfigGroupVersionInfos</code></li></ul>
+     * @param SourceVersion <p>The source version ID on which the configuration group version is based. Specify the source version ID when creating a configuration group version. The new version will be derived from the configuration of the source version.</p><p>Parameter format: ver-2kplomhisdcb</p><p>Parameter values for reference:</p><ul><li><a href="https://www.tencentcloud.com/document/api/1552/101867?from_cn_redirect=1">CreateConfigGroupVersion</a> return value <code>VersionId</code></li><li><a href="https://www.tencentcloud.com/document/api/1552/101864?from_cn_redirect=1">DescribeConfigGroupVersions</a> return value <code>ConfigGroupVersionInfos</code></li></ul>
      */
     public void setSourceVersion(String SourceVersion) {
         this.SourceVersion = SourceVersion;
     }
 
     /**
-     * Get <p>Configuration group type to which the version belongs.</p><p>Enumeration value:</p><ul><li>l7_acceleration: Layer-7 acceleration configuration group</li><li>edge_functions: Edge function configuration group</li><li>web_security: Web protection configuration group</li></ul> 
-     * @return GroupType <p>Configuration group type to which the version belongs.</p><p>Enumeration value:</p><ul><li>l7_acceleration: Layer-7 acceleration configuration group</li><li>edge_functions: Edge function configuration group</li><li>web_security: Web protection configuration group</li></ul>
+     * Get <p>Configuration group type to which the version belongs.</p><p>Enumeration values:</p><ul><li>l7_acceleration: layer-7 acceleration configuration group</li><li>edge_functions: edge function configuration group</li><li>web_security: web protection configuration group</li></ul> 
+     * @return GroupType <p>Configuration group type to which the version belongs.</p><p>Enumeration values:</p><ul><li>l7_acceleration: layer-7 acceleration configuration group</li><li>edge_functions: edge function configuration group</li><li>web_security: web protection configuration group</li></ul>
      */
     public String getGroupType() {
         return this.GroupType;
     }
 
     /**
-     * Set <p>Configuration group type to which the version belongs.</p><p>Enumeration value:</p><ul><li>l7_acceleration: Layer-7 acceleration configuration group</li><li>edge_functions: Edge function configuration group</li><li>web_security: Web protection configuration group</li></ul>
-     * @param GroupType <p>Configuration group type to which the version belongs.</p><p>Enumeration value:</p><ul><li>l7_acceleration: Layer-7 acceleration configuration group</li><li>edge_functions: Edge function configuration group</li><li>web_security: Web protection configuration group</li></ul>
+     * Set <p>Configuration group type to which the version belongs.</p><p>Enumeration values:</p><ul><li>l7_acceleration: layer-7 acceleration configuration group</li><li>edge_functions: edge function configuration group</li><li>web_security: web protection configuration group</li></ul>
+     * @param GroupType <p>Configuration group type to which the version belongs.</p><p>Enumeration values:</p><ul><li>l7_acceleration: layer-7 acceleration configuration group</li><li>edge_functions: edge function configuration group</li><li>web_security: web protection configuration group</li></ul>
      */
     public void setGroupType(String GroupType) {
         this.GroupType = GroupType;
     }
 
     /**
-     * Get <p>Configuration group ID for version ownership.</p><p>Parameter format: cg-2kplomhisdcb</p> 
-     * @return GroupId <p>Configuration group ID for version ownership.</p><p>Parameter format: cg-2kplomhisdcb</p>
+     * Get <p>ID of the configuration group to which the version belongs.</p><p>Parameter format: cg-2kplomhisdcb</p> 
+     * @return GroupId <p>ID of the configuration group to which the version belongs.</p><p>Parameter format: cg-2kplomhisdcb</p>
      */
     public String getGroupId() {
         return this.GroupId;
     }
 
     /**
-     * Set <p>Configuration group ID for version ownership.</p><p>Parameter format: cg-2kplomhisdcb</p>
-     * @param GroupId <p>Configuration group ID for version ownership.</p><p>Parameter format: cg-2kplomhisdcb</p>
+     * Set <p>ID of the configuration group to which the version belongs.</p><p>Parameter format: cg-2kplomhisdcb</p>
+     * @param GroupId <p>ID of the configuration group to which the version belongs.</p><p>Parameter format: cg-2kplomhisdcb</p>
      */
     public void setGroupId(String GroupId) {
         this.GroupId = GroupId;
@@ -176,16 +176,16 @@ public class ConfigGroupVersionInfo extends AbstractModel {
     }
 
     /**
-     * Get <p>Version effective status.</p><p>Enumeration value:</p><ul><li>creating: Version creation in progress</li><li>inactive: Version not in effect</li><li>active: Version in effect</li></ul> 
-     * @return Status <p>Version effective status.</p><p>Enumeration value:</p><ul><li>creating: Version creation in progress</li><li>inactive: Version not in effect</li><li>active: Version in effect</li></ul>
+     * Get <p>Version effective status.</p><p>Enumeration values:</p><ul><li>creating: version creating</li><li>inactive: version not in effect</li><li>active: version effective</li></ul> 
+     * @return Status <p>Version effective status.</p><p>Enumeration values:</p><ul><li>creating: version creating</li><li>inactive: version not in effect</li><li>active: version effective</li></ul>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set <p>Version effective status.</p><p>Enumeration value:</p><ul><li>creating: Version creation in progress</li><li>inactive: Version not in effect</li><li>active: Version in effect</li></ul>
-     * @param Status <p>Version effective status.</p><p>Enumeration value:</p><ul><li>creating: Version creation in progress</li><li>inactive: Version not in effect</li><li>active: Version in effect</li></ul>
+     * Set <p>Version effective status.</p><p>Enumeration values:</p><ul><li>creating: version creating</li><li>inactive: version not in effect</li><li>active: version effective</li></ul>
+     * @param Status <p>Version effective status.</p><p>Enumeration values:</p><ul><li>creating: version creating</li><li>inactive: version not in effect</li><li>active: version effective</li></ul>
      */
     public void setStatus(String Status) {
         this.Status = Status;

@@ -24,72 +24,65 @@ import java.util.HashMap;
 public class ZoneSetting extends AbstractModel {
 
     /**
-    * Name of the site
+    * Site name.
     */
     @SerializedName("ZoneName")
     @Expose
     private String ZoneName;
 
     /**
-    * Site acceleration region. Values:
-<li>`mainland`: Acceleration in the Chinese mainland.</li>
-<li>`overseas`: Acceleration outside the Chinese mainland.</li>
+    * Site acceleration region info. Valid values:
+<li>mainland: domestic acceleration in China;</li>
+<li> overseas: acceleration outside the Chinese mainland.</li>
     */
     @SerializedName("Area")
     @Expose
     private String Area;
 
     /**
-    * Node cache key configuration
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Node cache key configuration.
     */
     @SerializedName("CacheKey")
     @Expose
     private CacheKey CacheKey;
 
     /**
-    * The QUIC access configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Quic access configuration.
     */
     @SerializedName("Quic")
     @Expose
     private Quic Quic;
 
     /**
-    * The POST transport configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * HTTP POST request transmission configuration.
     */
     @SerializedName("PostMaxSize")
     @Expose
     private PostMaxSize PostMaxSize;
 
     /**
-    * Smart compression configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Intelligent compression configuration.
     */
     @SerializedName("Compression")
     @Expose
     private Compression Compression;
 
     /**
-    * HTTP2 origin-pull configuration
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Http/2 origin-pull configuration.
     */
     @SerializedName("UpstreamHttp2")
     @Expose
     private UpstreamHttp2 UpstreamHttp2;
 
     /**
-    * Force HTTPS redirect configuration
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Access protocol mandatory Https redirection configuration.
     */
     @SerializedName("ForceRedirect")
     @Expose
     private ForceRedirect ForceRedirect;
 
     /**
-    * Cache expiration time configuration
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Cache expiration time configuration.
     */
     @SerializedName("CacheConfig")
     @Expose
@@ -97,31 +90,27 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Origin server configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Origin")
     @Expose
     private Origin Origin;
 
     /**
-    * Smart acceleration configuration
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Smart acceleration configuration.
     */
     @SerializedName("SmartRouting")
     @Expose
     private SmartRouting SmartRouting;
 
     /**
-    * Browser cache configuration
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Browser cache configuration.
     */
     @SerializedName("MaxAge")
     @Expose
     private MaxAge MaxAge;
 
     /**
-    * The offline cache configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Offline cache configuration.
     */
     @SerializedName("OfflineCache")
     @Expose
@@ -129,87 +118,76 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * WebSocket configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("WebSocket")
     @Expose
     private WebSocket WebSocket;
 
     /**
-    * Origin-pull client IP header configuration
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Client IP HTTP Request Headers configuration.
     */
     @SerializedName("ClientIpHeader")
     @Expose
     private ClientIpHeader ClientIpHeader;
 
     /**
-    * Cache prefresh configuration
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Cache pre-refresh configuration.
     */
     @SerializedName("CachePrefresh")
     @Expose
     private CachePrefresh CachePrefresh;
 
     /**
-    * IPv6 access configuration
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Ipv6 access configuration.
     */
     @SerializedName("Ipv6")
     @Expose
     private Ipv6 Ipv6;
 
     /**
-    * HTTPS acceleration configuration
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Https acceleration configuration.
     */
     @SerializedName("Https")
     @Expose
     private Https Https;
 
     /**
-    * Whether to carry the location information of the client IP during origin-pull.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+    * Configuration of whether to carry the regional information of the client IP during origin-pull.
     */
     @SerializedName("ClientIpCountry")
     @Expose
     private ClientIpCountry ClientIpCountry;
 
     /**
-    * Configuration of gRPC support
-Note: This field may return `null`, indicating that no valid value can be obtained.
+    * Grpc protocol supports configuration.
     */
     @SerializedName("Grpc")
     @Expose
     private Grpc Grpc;
 
     /**
-    * Network Error Logging configuration.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+    * Network error log configuration.
     */
     @SerializedName("NetworkErrorLogging")
     @Expose
     private NetworkErrorLogging NetworkErrorLogging;
 
     /**
-    * Image optimization configuration. 
-Note: This field may return `null`, indicating that no valid value was found.
+    * Image optimization configuration.
     */
     @SerializedName("ImageOptimize")
     @Expose
     private ImageOptimize ImageOptimize;
 
     /**
-    * Cross-MLC-border acceleration. 
-Note: This field may return `null`, indicating that no valid values can be obtained.
+    * Acceleration optimization configuration for the Chinese mainland.
     */
     @SerializedName("AccelerateMainland")
     @Expose
     private AccelerateMainland AccelerateMainland;
 
     /**
-    * Standard debugging configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Standard Debug configuration.
     */
     @SerializedName("StandardDebug")
     @Expose
@@ -217,197 +195,166 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Just-in-time media processing configuration.
-Note: This field may return null, which indicates a failure to obtain a valid value.
     */
     @SerializedName("JITVideoProcess")
     @Expose
     private JITVideoProcess JITVideoProcess;
 
     /**
-     * Get Name of the site 
-     * @return ZoneName Name of the site
+     * Get Site name. 
+     * @return ZoneName Site name.
      */
     public String getZoneName() {
         return this.ZoneName;
     }
 
     /**
-     * Set Name of the site
-     * @param ZoneName Name of the site
+     * Set Site name.
+     * @param ZoneName Site name.
      */
     public void setZoneName(String ZoneName) {
         this.ZoneName = ZoneName;
     }
 
     /**
-     * Get Site acceleration region. Values:
-<li>`mainland`: Acceleration in the Chinese mainland.</li>
-<li>`overseas`: Acceleration outside the Chinese mainland.</li> 
-     * @return Area Site acceleration region. Values:
-<li>`mainland`: Acceleration in the Chinese mainland.</li>
-<li>`overseas`: Acceleration outside the Chinese mainland.</li>
+     * Get Site acceleration region info. Valid values:
+<li>mainland: domestic acceleration in China;</li>
+<li> overseas: acceleration outside the Chinese mainland.</li> 
+     * @return Area Site acceleration region info. Valid values:
+<li>mainland: domestic acceleration in China;</li>
+<li> overseas: acceleration outside the Chinese mainland.</li>
      */
     public String getArea() {
         return this.Area;
     }
 
     /**
-     * Set Site acceleration region. Values:
-<li>`mainland`: Acceleration in the Chinese mainland.</li>
-<li>`overseas`: Acceleration outside the Chinese mainland.</li>
-     * @param Area Site acceleration region. Values:
-<li>`mainland`: Acceleration in the Chinese mainland.</li>
-<li>`overseas`: Acceleration outside the Chinese mainland.</li>
+     * Set Site acceleration region info. Valid values:
+<li>mainland: domestic acceleration in China;</li>
+<li> overseas: acceleration outside the Chinese mainland.</li>
+     * @param Area Site acceleration region info. Valid values:
+<li>mainland: domestic acceleration in China;</li>
+<li> overseas: acceleration outside the Chinese mainland.</li>
      */
     public void setArea(String Area) {
         this.Area = Area;
     }
 
     /**
-     * Get Node cache key configuration
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return CacheKey Node cache key configuration
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Node cache key configuration. 
+     * @return CacheKey Node cache key configuration.
      */
     public CacheKey getCacheKey() {
         return this.CacheKey;
     }
 
     /**
-     * Set Node cache key configuration
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param CacheKey Node cache key configuration
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Node cache key configuration.
+     * @param CacheKey Node cache key configuration.
      */
     public void setCacheKey(CacheKey CacheKey) {
         this.CacheKey = CacheKey;
     }
 
     /**
-     * Get The QUIC access configuration.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Quic The QUIC access configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Quic access configuration. 
+     * @return Quic Quic access configuration.
      */
     public Quic getQuic() {
         return this.Quic;
     }
 
     /**
-     * Set The QUIC access configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Quic The QUIC access configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Quic access configuration.
+     * @param Quic Quic access configuration.
      */
     public void setQuic(Quic Quic) {
         this.Quic = Quic;
     }
 
     /**
-     * Get The POST transport configuration.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return PostMaxSize The POST transport configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get HTTP POST request transmission configuration. 
+     * @return PostMaxSize HTTP POST request transmission configuration.
      */
     public PostMaxSize getPostMaxSize() {
         return this.PostMaxSize;
     }
 
     /**
-     * Set The POST transport configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param PostMaxSize The POST transport configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set HTTP POST request transmission configuration.
+     * @param PostMaxSize HTTP POST request transmission configuration.
      */
     public void setPostMaxSize(PostMaxSize PostMaxSize) {
         this.PostMaxSize = PostMaxSize;
     }
 
     /**
-     * Get Smart compression configuration.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Compression Smart compression configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Intelligent compression configuration. 
+     * @return Compression Intelligent compression configuration.
      */
     public Compression getCompression() {
         return this.Compression;
     }
 
     /**
-     * Set Smart compression configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Compression Smart compression configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Intelligent compression configuration.
+     * @param Compression Intelligent compression configuration.
      */
     public void setCompression(Compression Compression) {
         this.Compression = Compression;
     }
 
     /**
-     * Get HTTP2 origin-pull configuration
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return UpstreamHttp2 HTTP2 origin-pull configuration
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Http/2 origin-pull configuration. 
+     * @return UpstreamHttp2 Http/2 origin-pull configuration.
      */
     public UpstreamHttp2 getUpstreamHttp2() {
         return this.UpstreamHttp2;
     }
 
     /**
-     * Set HTTP2 origin-pull configuration
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param UpstreamHttp2 HTTP2 origin-pull configuration
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Http/2 origin-pull configuration.
+     * @param UpstreamHttp2 Http/2 origin-pull configuration.
      */
     public void setUpstreamHttp2(UpstreamHttp2 UpstreamHttp2) {
         this.UpstreamHttp2 = UpstreamHttp2;
     }
 
     /**
-     * Get Force HTTPS redirect configuration
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ForceRedirect Force HTTPS redirect configuration
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Access protocol mandatory Https redirection configuration. 
+     * @return ForceRedirect Access protocol mandatory Https redirection configuration.
      */
     public ForceRedirect getForceRedirect() {
         return this.ForceRedirect;
     }
 
     /**
-     * Set Force HTTPS redirect configuration
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ForceRedirect Force HTTPS redirect configuration
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Access protocol mandatory Https redirection configuration.
+     * @param ForceRedirect Access protocol mandatory Https redirection configuration.
      */
     public void setForceRedirect(ForceRedirect ForceRedirect) {
         this.ForceRedirect = ForceRedirect;
     }
 
     /**
-     * Get Cache expiration time configuration
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return CacheConfig Cache expiration time configuration
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Cache expiration time configuration. 
+     * @return CacheConfig Cache expiration time configuration.
      */
     public CacheConfig getCacheConfig() {
         return this.CacheConfig;
     }
 
     /**
-     * Set Cache expiration time configuration
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param CacheConfig Cache expiration time configuration
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Cache expiration time configuration.
+     * @param CacheConfig Cache expiration time configuration.
      */
     public void setCacheConfig(CacheConfig CacheConfig) {
         this.CacheConfig = CacheConfig;
     }
 
     /**
-     * Get Origin server configuration.
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Origin server configuration. 
      * @return Origin Origin server configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Origin getOrigin() {
         return this.Origin;
@@ -415,79 +362,63 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Origin server configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Origin Origin server configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setOrigin(Origin Origin) {
         this.Origin = Origin;
     }
 
     /**
-     * Get Smart acceleration configuration
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return SmartRouting Smart acceleration configuration
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Smart acceleration configuration. 
+     * @return SmartRouting Smart acceleration configuration.
      */
     public SmartRouting getSmartRouting() {
         return this.SmartRouting;
     }
 
     /**
-     * Set Smart acceleration configuration
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param SmartRouting Smart acceleration configuration
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Smart acceleration configuration.
+     * @param SmartRouting Smart acceleration configuration.
      */
     public void setSmartRouting(SmartRouting SmartRouting) {
         this.SmartRouting = SmartRouting;
     }
 
     /**
-     * Get Browser cache configuration
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return MaxAge Browser cache configuration
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Browser cache configuration. 
+     * @return MaxAge Browser cache configuration.
      */
     public MaxAge getMaxAge() {
         return this.MaxAge;
     }
 
     /**
-     * Set Browser cache configuration
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param MaxAge Browser cache configuration
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Browser cache configuration.
+     * @param MaxAge Browser cache configuration.
      */
     public void setMaxAge(MaxAge MaxAge) {
         this.MaxAge = MaxAge;
     }
 
     /**
-     * Get The offline cache configuration.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return OfflineCache The offline cache configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Offline cache configuration. 
+     * @return OfflineCache Offline cache configuration.
      */
     public OfflineCache getOfflineCache() {
         return this.OfflineCache;
     }
 
     /**
-     * Set The offline cache configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param OfflineCache The offline cache configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Offline cache configuration.
+     * @param OfflineCache Offline cache configuration.
      */
     public void setOfflineCache(OfflineCache OfflineCache) {
         this.OfflineCache = OfflineCache;
     }
 
     /**
-     * Get WebSocket configuration.
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get WebSocket configuration. 
      * @return WebSocket WebSocket configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public WebSocket getWebSocket() {
         return this.WebSocket;
@@ -495,149 +426,119 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set WebSocket configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param WebSocket WebSocket configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setWebSocket(WebSocket WebSocket) {
         this.WebSocket = WebSocket;
     }
 
     /**
-     * Get Origin-pull client IP header configuration
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ClientIpHeader Origin-pull client IP header configuration
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Client IP HTTP Request Headers configuration. 
+     * @return ClientIpHeader Client IP HTTP Request Headers configuration.
      */
     public ClientIpHeader getClientIpHeader() {
         return this.ClientIpHeader;
     }
 
     /**
-     * Set Origin-pull client IP header configuration
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ClientIpHeader Origin-pull client IP header configuration
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Client IP HTTP Request Headers configuration.
+     * @param ClientIpHeader Client IP HTTP Request Headers configuration.
      */
     public void setClientIpHeader(ClientIpHeader ClientIpHeader) {
         this.ClientIpHeader = ClientIpHeader;
     }
 
     /**
-     * Get Cache prefresh configuration
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return CachePrefresh Cache prefresh configuration
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Cache pre-refresh configuration. 
+     * @return CachePrefresh Cache pre-refresh configuration.
      */
     public CachePrefresh getCachePrefresh() {
         return this.CachePrefresh;
     }
 
     /**
-     * Set Cache prefresh configuration
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param CachePrefresh Cache prefresh configuration
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Cache pre-refresh configuration.
+     * @param CachePrefresh Cache pre-refresh configuration.
      */
     public void setCachePrefresh(CachePrefresh CachePrefresh) {
         this.CachePrefresh = CachePrefresh;
     }
 
     /**
-     * Get IPv6 access configuration
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Ipv6 IPv6 access configuration
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Ipv6 access configuration. 
+     * @return Ipv6 Ipv6 access configuration.
      */
     public Ipv6 getIpv6() {
         return this.Ipv6;
     }
 
     /**
-     * Set IPv6 access configuration
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Ipv6 IPv6 access configuration
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Ipv6 access configuration.
+     * @param Ipv6 Ipv6 access configuration.
      */
     public void setIpv6(Ipv6 Ipv6) {
         this.Ipv6 = Ipv6;
     }
 
     /**
-     * Get HTTPS acceleration configuration
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Https HTTPS acceleration configuration
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Https acceleration configuration. 
+     * @return Https Https acceleration configuration.
      */
     public Https getHttps() {
         return this.Https;
     }
 
     /**
-     * Set HTTPS acceleration configuration
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Https HTTPS acceleration configuration
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Https acceleration configuration.
+     * @param Https Https acceleration configuration.
      */
     public void setHttps(Https Https) {
         this.Https = Https;
     }
 
     /**
-     * Get Whether to carry the location information of the client IP during origin-pull.
-Note: This field may return `null`, indicating that no valid value can be obtained. 
-     * @return ClientIpCountry Whether to carry the location information of the client IP during origin-pull.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Get Configuration of whether to carry the regional information of the client IP during origin-pull. 
+     * @return ClientIpCountry Configuration of whether to carry the regional information of the client IP during origin-pull.
      */
     public ClientIpCountry getClientIpCountry() {
         return this.ClientIpCountry;
     }
 
     /**
-     * Set Whether to carry the location information of the client IP during origin-pull.
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param ClientIpCountry Whether to carry the location information of the client IP during origin-pull.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Set Configuration of whether to carry the regional information of the client IP during origin-pull.
+     * @param ClientIpCountry Configuration of whether to carry the regional information of the client IP during origin-pull.
      */
     public void setClientIpCountry(ClientIpCountry ClientIpCountry) {
         this.ClientIpCountry = ClientIpCountry;
     }
 
     /**
-     * Get Configuration of gRPC support
-Note: This field may return `null`, indicating that no valid value can be obtained. 
-     * @return Grpc Configuration of gRPC support
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Get Grpc protocol supports configuration. 
+     * @return Grpc Grpc protocol supports configuration.
      */
     public Grpc getGrpc() {
         return this.Grpc;
     }
 
     /**
-     * Set Configuration of gRPC support
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param Grpc Configuration of gRPC support
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Set Grpc protocol supports configuration.
+     * @param Grpc Grpc protocol supports configuration.
      */
     public void setGrpc(Grpc Grpc) {
         this.Grpc = Grpc;
     }
 
     /**
-     * Get Network Error Logging configuration.
-Note: This field may return `null`, indicating that no valid value can be obtained. 
-     * @return NetworkErrorLogging Network Error Logging configuration.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Get Network error log configuration. 
+     * @return NetworkErrorLogging Network error log configuration.
      */
     public NetworkErrorLogging getNetworkErrorLogging() {
         return this.NetworkErrorLogging;
     }
 
     /**
-     * Set Network Error Logging configuration.
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param NetworkErrorLogging Network Error Logging configuration.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Set Network error log configuration.
+     * @param NetworkErrorLogging Network error log configuration.
      */
     public void setNetworkErrorLogging(NetworkErrorLogging NetworkErrorLogging) {
         this.NetworkErrorLogging = NetworkErrorLogging;
@@ -645,69 +546,55 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 
     /**
      * Get Image optimization configuration. 
-Note: This field may return `null`, indicating that no valid value was found. 
-     * @return ImageOptimize Image optimization configuration. 
-Note: This field may return `null`, indicating that no valid value was found.
+     * @return ImageOptimize Image optimization configuration.
      */
     public ImageOptimize getImageOptimize() {
         return this.ImageOptimize;
     }
 
     /**
-     * Set Image optimization configuration. 
-Note: This field may return `null`, indicating that no valid value was found.
-     * @param ImageOptimize Image optimization configuration. 
-Note: This field may return `null`, indicating that no valid value was found.
+     * Set Image optimization configuration.
+     * @param ImageOptimize Image optimization configuration.
      */
     public void setImageOptimize(ImageOptimize ImageOptimize) {
         this.ImageOptimize = ImageOptimize;
     }
 
     /**
-     * Get Cross-MLC-border acceleration. 
-Note: This field may return `null`, indicating that no valid values can be obtained. 
-     * @return AccelerateMainland Cross-MLC-border acceleration. 
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * Get Acceleration optimization configuration for the Chinese mainland. 
+     * @return AccelerateMainland Acceleration optimization configuration for the Chinese mainland.
      */
     public AccelerateMainland getAccelerateMainland() {
         return this.AccelerateMainland;
     }
 
     /**
-     * Set Cross-MLC-border acceleration. 
-Note: This field may return `null`, indicating that no valid values can be obtained.
-     * @param AccelerateMainland Cross-MLC-border acceleration. 
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * Set Acceleration optimization configuration for the Chinese mainland.
+     * @param AccelerateMainland Acceleration optimization configuration for the Chinese mainland.
      */
     public void setAccelerateMainland(AccelerateMainland AccelerateMainland) {
         this.AccelerateMainland = AccelerateMainland;
     }
 
     /**
-     * Get Standard debugging configuration.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return StandardDebug Standard debugging configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Standard Debug configuration. 
+     * @return StandardDebug Standard Debug configuration.
      */
     public StandardDebug getStandardDebug() {
         return this.StandardDebug;
     }
 
     /**
-     * Set Standard debugging configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param StandardDebug Standard debugging configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Standard Debug configuration.
+     * @param StandardDebug Standard Debug configuration.
      */
     public void setStandardDebug(StandardDebug StandardDebug) {
         this.StandardDebug = StandardDebug;
     }
 
     /**
-     * Get Just-in-time media processing configuration.
-Note: This field may return null, which indicates a failure to obtain a valid value. 
+     * Get Just-in-time media processing configuration. 
      * @return JITVideoProcess Just-in-time media processing configuration.
-Note: This field may return null, which indicates a failure to obtain a valid value.
      */
     public JITVideoProcess getJITVideoProcess() {
         return this.JITVideoProcess;
@@ -715,9 +602,7 @@ Note: This field may return null, which indicates a failure to obtain a valid va
 
     /**
      * Set Just-in-time media processing configuration.
-Note: This field may return null, which indicates a failure to obtain a valid value.
      * @param JITVideoProcess Just-in-time media processing configuration.
-Note: This field may return null, which indicates a failure to obtain a valid value.
      */
     public void setJITVideoProcess(JITVideoProcess JITVideoProcess) {
         this.JITVideoProcess = JITVideoProcess;

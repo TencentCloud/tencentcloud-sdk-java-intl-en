@@ -25,12 +25,12 @@ public class OriginDetail extends AbstractModel {
 
     /**
     * Origin server type. Valid values:
-<li>IP_DOMAIN: IPv4, IPv6, or domain name type origin server;</li>
+<li>IP_DOMAIN: IPV4, IPV6, or DOMAIN type origin server;</li>
 <li>COS: Tencent Cloud COS origin server;</li>
 <li>AWS_S3: AWS S3 COS origin server;</li>
-<li>ORIGIN_GROUP: origin server group;</li>
+<li>ORIGIN_GROUP: origin server group type origin server;</li>
 <li>VOD: Video on Demand;</li>
-<li>SPACE: origin server uninstallation, currently only available to the allowlist;</li>
+<li>SPACE: origin server uninstallation. Currently only available to the allowlist;</li>
 <li>LB: load balancing. Currently only available to the allowlist. </li>
     */
     @SerializedName("OriginType")
@@ -38,33 +38,35 @@ public class OriginDetail extends AbstractModel {
     private String OriginType;
 
     /**
-    * Origin server address, which varies with the value of OriginType:
-<li>When OriginType = IP_DOMAIN, this parameter is an IPv4 address, an IPv6 address, or a domain name.</li>
-<li>When OriginType = COS, this parameter is the access domain name of the COS bucket.</li>
-<li>When OriginType = AWS_S3, this parameter is the access domain name of the S3 bucket.</li>
-<li>When OriginType = ORIGIN_GROUP, this parameter is the origin server group ID.</li>
+    * Origin server address, which varies according to the value of OriginType:
+<li>When OriginType = IP_DOMAIN, this parameter should be an IPv4 address, an IPv6 address, or a domain name;</li>
+<li>When OriginType = COS, this parameter is the access domain name of the COS bucket;</li>
+<li>When OriginType = AWS_S3, this parameter should be the access domain name of the S3 bucket;</li>
+<li>When OriginType = ORIGIN_GROUP, this parameter should be the origin server group ID; if referencing an origin server group from another site, the format is {origin server group ID}@{ZoneID}. For example: og-testorigin@zone-38moq1z10wwwy</li>
 <li>When OriginType = VOD, this parameter is the VOD application ID.</li>
+<li>When OriginType = LB, fill in the Cloud Load Balancer instance ID. This feature is currently only available to the allowlist. If you reference a load balancer from another site, the format is {load balancer ID}@{ZoneID}. For example: lb-2rxpamcyqfzg@zone-38moq1z10wwwy</li>
+<li>When OriginType = SPACE, fill in the origin server uninstallation space ID. This feature is currently only available to the allowlist.</li>
     */
     @SerializedName("Origin")
     @Expose
     private String Origin;
 
     /**
-    * Secondary origin group ID. This parameter is valid only when OriginType is ORIGIN_GROUP and a secondary origin group is configured.
+    * Secondary origin group ID. This parameter is valid only when OriginType = ORIGIN_GROUP and a secondary origin group is configured.
     */
     @SerializedName("BackupOrigin")
     @Expose
     private String BackupOrigin;
 
     /**
-    * Primary origin group name. This parameter returns a value when OriginType is ORIGIN_GROUP.
+    * Primary origin group name. This parameter returns a value when OriginType = ORIGIN_GROUP.
     */
     @SerializedName("OriginGroupName")
     @Expose
     private String OriginGroupName;
 
     /**
-    * Secondary origin group name. This parameter is valid only when OriginType is ORIGIN_GROUP and a secondary origin group is configured.
+    * Secondary origin group name. This parameter is valid only when OriginType = ORIGIN_GROUP and a secondary origin group is configured.
     */
     @SerializedName("BackOriginGroupName")
     @Expose
@@ -81,15 +83,14 @@ If this field is not specified, the default value 'off' will be used.
     private String PrivateAccess;
 
     /**
-    * Private authentication parameter. This parameter is valid only when PrivateAccess is on.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Private authentication parameter. This parameter is valid only when the origin server type is PrivateAccess = on.
     */
     @SerializedName("PrivateParameters")
     @Expose
     private PrivateParameter [] PrivateParameters;
 
     /**
-    * Specifies the current configuration of the origin-pull HOST header.
+    * Origin-pull HOST header of the current configuration.
     */
     @SerializedName("HostHeader")
     @Expose
@@ -110,14 +111,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String VodeoDistributionRange;
 
     /**
-    * MO bucket ID, required when the distribution range (DistributionRange) is bucket (Bucket)
+    * MO bucket ID. Required when the distribution scope (DistributionRange) is Bucket.
     */
     @SerializedName("VodeoBucketId")
     @Expose
     private String VodeoBucketId;
 
     /**
-    * VOD origin-pull range. this parameter returns a value when OriginType = VOD. valid values: <li>all: all files in the VOD application corresponding to the current origin server. the default value is all;</li> <li>bucket: files in a specified bucket under the VOD application corresponding to the current origin server. specify the bucket by the VodBucketId parameter.</li>.
+    * VOD origin-pull scope. This parameter returns a value when OriginType = VOD. Valid values: <li>all: all files in the VOD application corresponding to the current origin server. Default value: all;</li> <li>bucket: files in a specified bucket under the VOD application corresponding to the current origin server. Specify the bucket with the parameter VodBucketId.</li>
 </li>
     */
     @SerializedName("VodOriginScope")
@@ -125,7 +126,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String VodOriginScope;
 
     /**
-    * VOD bucket ID. this parameter is required when OriginType = VOD and VodOriginScope = bucket. data source: storage ID of the bucket under the VOD professional application.
+    * VOD bucket ID. This parameter is required when OriginType = VOD and VodOriginScope = bucket. Data source: storage ID of the bucket under the VOD professional application.
     */
     @SerializedName("VodBucketId")
     @Expose
@@ -133,20 +134,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Origin server type. Valid values:
-<li>IP_DOMAIN: IPv4, IPv6, or domain name type origin server;</li>
+<li>IP_DOMAIN: IPV4, IPV6, or DOMAIN type origin server;</li>
 <li>COS: Tencent Cloud COS origin server;</li>
 <li>AWS_S3: AWS S3 COS origin server;</li>
-<li>ORIGIN_GROUP: origin server group;</li>
+<li>ORIGIN_GROUP: origin server group type origin server;</li>
 <li>VOD: Video on Demand;</li>
-<li>SPACE: origin server uninstallation, currently only available to the allowlist;</li>
+<li>SPACE: origin server uninstallation. Currently only available to the allowlist;</li>
 <li>LB: load balancing. Currently only available to the allowlist. </li> 
      * @return OriginType Origin server type. Valid values:
-<li>IP_DOMAIN: IPv4, IPv6, or domain name type origin server;</li>
+<li>IP_DOMAIN: IPV4, IPV6, or DOMAIN type origin server;</li>
 <li>COS: Tencent Cloud COS origin server;</li>
 <li>AWS_S3: AWS S3 COS origin server;</li>
-<li>ORIGIN_GROUP: origin server group;</li>
+<li>ORIGIN_GROUP: origin server group type origin server;</li>
 <li>VOD: Video on Demand;</li>
-<li>SPACE: origin server uninstallation, currently only available to the allowlist;</li>
+<li>SPACE: origin server uninstallation. Currently only available to the allowlist;</li>
 <li>LB: load balancing. Currently only available to the allowlist. </li>
      */
     public String getOriginType() {
@@ -155,20 +156,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Origin server type. Valid values:
-<li>IP_DOMAIN: IPv4, IPv6, or domain name type origin server;</li>
+<li>IP_DOMAIN: IPV4, IPV6, or DOMAIN type origin server;</li>
 <li>COS: Tencent Cloud COS origin server;</li>
 <li>AWS_S3: AWS S3 COS origin server;</li>
-<li>ORIGIN_GROUP: origin server group;</li>
+<li>ORIGIN_GROUP: origin server group type origin server;</li>
 <li>VOD: Video on Demand;</li>
-<li>SPACE: origin server uninstallation, currently only available to the allowlist;</li>
+<li>SPACE: origin server uninstallation. Currently only available to the allowlist;</li>
 <li>LB: load balancing. Currently only available to the allowlist. </li>
      * @param OriginType Origin server type. Valid values:
-<li>IP_DOMAIN: IPv4, IPv6, or domain name type origin server;</li>
+<li>IP_DOMAIN: IPV4, IPV6, or DOMAIN type origin server;</li>
 <li>COS: Tencent Cloud COS origin server;</li>
 <li>AWS_S3: AWS S3 COS origin server;</li>
-<li>ORIGIN_GROUP: origin server group;</li>
+<li>ORIGIN_GROUP: origin server group type origin server;</li>
 <li>VOD: Video on Demand;</li>
-<li>SPACE: origin server uninstallation, currently only available to the allowlist;</li>
+<li>SPACE: origin server uninstallation. Currently only available to the allowlist;</li>
 <li>LB: load balancing. Currently only available to the allowlist. </li>
      */
     public void setOriginType(String OriginType) {
@@ -176,84 +177,92 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Origin server address, which varies with the value of OriginType:
-<li>When OriginType = IP_DOMAIN, this parameter is an IPv4 address, an IPv6 address, or a domain name.</li>
-<li>When OriginType = COS, this parameter is the access domain name of the COS bucket.</li>
-<li>When OriginType = AWS_S3, this parameter is the access domain name of the S3 bucket.</li>
-<li>When OriginType = ORIGIN_GROUP, this parameter is the origin server group ID.</li>
-<li>When OriginType = VOD, this parameter is the VOD application ID.</li> 
-     * @return Origin Origin server address, which varies with the value of OriginType:
-<li>When OriginType = IP_DOMAIN, this parameter is an IPv4 address, an IPv6 address, or a domain name.</li>
-<li>When OriginType = COS, this parameter is the access domain name of the COS bucket.</li>
-<li>When OriginType = AWS_S3, this parameter is the access domain name of the S3 bucket.</li>
-<li>When OriginType = ORIGIN_GROUP, this parameter is the origin server group ID.</li>
+     * Get Origin server address, which varies according to the value of OriginType:
+<li>When OriginType = IP_DOMAIN, this parameter should be an IPv4 address, an IPv6 address, or a domain name;</li>
+<li>When OriginType = COS, this parameter is the access domain name of the COS bucket;</li>
+<li>When OriginType = AWS_S3, this parameter should be the access domain name of the S3 bucket;</li>
+<li>When OriginType = ORIGIN_GROUP, this parameter should be the origin server group ID; if referencing an origin server group from another site, the format is {origin server group ID}@{ZoneID}. For example: og-testorigin@zone-38moq1z10wwwy</li>
 <li>When OriginType = VOD, this parameter is the VOD application ID.</li>
+<li>When OriginType = LB, fill in the Cloud Load Balancer instance ID. This feature is currently only available to the allowlist. If you reference a load balancer from another site, the format is {load balancer ID}@{ZoneID}. For example: lb-2rxpamcyqfzg@zone-38moq1z10wwwy</li>
+<li>When OriginType = SPACE, fill in the origin server uninstallation space ID. This feature is currently only available to the allowlist.</li> 
+     * @return Origin Origin server address, which varies according to the value of OriginType:
+<li>When OriginType = IP_DOMAIN, this parameter should be an IPv4 address, an IPv6 address, or a domain name;</li>
+<li>When OriginType = COS, this parameter is the access domain name of the COS bucket;</li>
+<li>When OriginType = AWS_S3, this parameter should be the access domain name of the S3 bucket;</li>
+<li>When OriginType = ORIGIN_GROUP, this parameter should be the origin server group ID; if referencing an origin server group from another site, the format is {origin server group ID}@{ZoneID}. For example: og-testorigin@zone-38moq1z10wwwy</li>
+<li>When OriginType = VOD, this parameter is the VOD application ID.</li>
+<li>When OriginType = LB, fill in the Cloud Load Balancer instance ID. This feature is currently only available to the allowlist. If you reference a load balancer from another site, the format is {load balancer ID}@{ZoneID}. For example: lb-2rxpamcyqfzg@zone-38moq1z10wwwy</li>
+<li>When OriginType = SPACE, fill in the origin server uninstallation space ID. This feature is currently only available to the allowlist.</li>
      */
     public String getOrigin() {
         return this.Origin;
     }
 
     /**
-     * Set Origin server address, which varies with the value of OriginType:
-<li>When OriginType = IP_DOMAIN, this parameter is an IPv4 address, an IPv6 address, or a domain name.</li>
-<li>When OriginType = COS, this parameter is the access domain name of the COS bucket.</li>
-<li>When OriginType = AWS_S3, this parameter is the access domain name of the S3 bucket.</li>
-<li>When OriginType = ORIGIN_GROUP, this parameter is the origin server group ID.</li>
+     * Set Origin server address, which varies according to the value of OriginType:
+<li>When OriginType = IP_DOMAIN, this parameter should be an IPv4 address, an IPv6 address, or a domain name;</li>
+<li>When OriginType = COS, this parameter is the access domain name of the COS bucket;</li>
+<li>When OriginType = AWS_S3, this parameter should be the access domain name of the S3 bucket;</li>
+<li>When OriginType = ORIGIN_GROUP, this parameter should be the origin server group ID; if referencing an origin server group from another site, the format is {origin server group ID}@{ZoneID}. For example: og-testorigin@zone-38moq1z10wwwy</li>
 <li>When OriginType = VOD, this parameter is the VOD application ID.</li>
-     * @param Origin Origin server address, which varies with the value of OriginType:
-<li>When OriginType = IP_DOMAIN, this parameter is an IPv4 address, an IPv6 address, or a domain name.</li>
-<li>When OriginType = COS, this parameter is the access domain name of the COS bucket.</li>
-<li>When OriginType = AWS_S3, this parameter is the access domain name of the S3 bucket.</li>
-<li>When OriginType = ORIGIN_GROUP, this parameter is the origin server group ID.</li>
+<li>When OriginType = LB, fill in the Cloud Load Balancer instance ID. This feature is currently only available to the allowlist. If you reference a load balancer from another site, the format is {load balancer ID}@{ZoneID}. For example: lb-2rxpamcyqfzg@zone-38moq1z10wwwy</li>
+<li>When OriginType = SPACE, fill in the origin server uninstallation space ID. This feature is currently only available to the allowlist.</li>
+     * @param Origin Origin server address, which varies according to the value of OriginType:
+<li>When OriginType = IP_DOMAIN, this parameter should be an IPv4 address, an IPv6 address, or a domain name;</li>
+<li>When OriginType = COS, this parameter is the access domain name of the COS bucket;</li>
+<li>When OriginType = AWS_S3, this parameter should be the access domain name of the S3 bucket;</li>
+<li>When OriginType = ORIGIN_GROUP, this parameter should be the origin server group ID; if referencing an origin server group from another site, the format is {origin server group ID}@{ZoneID}. For example: og-testorigin@zone-38moq1z10wwwy</li>
 <li>When OriginType = VOD, this parameter is the VOD application ID.</li>
+<li>When OriginType = LB, fill in the Cloud Load Balancer instance ID. This feature is currently only available to the allowlist. If you reference a load balancer from another site, the format is {load balancer ID}@{ZoneID}. For example: lb-2rxpamcyqfzg@zone-38moq1z10wwwy</li>
+<li>When OriginType = SPACE, fill in the origin server uninstallation space ID. This feature is currently only available to the allowlist.</li>
      */
     public void setOrigin(String Origin) {
         this.Origin = Origin;
     }
 
     /**
-     * Get Secondary origin group ID. This parameter is valid only when OriginType is ORIGIN_GROUP and a secondary origin group is configured. 
-     * @return BackupOrigin Secondary origin group ID. This parameter is valid only when OriginType is ORIGIN_GROUP and a secondary origin group is configured.
+     * Get Secondary origin group ID. This parameter is valid only when OriginType = ORIGIN_GROUP and a secondary origin group is configured. 
+     * @return BackupOrigin Secondary origin group ID. This parameter is valid only when OriginType = ORIGIN_GROUP and a secondary origin group is configured.
      */
     public String getBackupOrigin() {
         return this.BackupOrigin;
     }
 
     /**
-     * Set Secondary origin group ID. This parameter is valid only when OriginType is ORIGIN_GROUP and a secondary origin group is configured.
-     * @param BackupOrigin Secondary origin group ID. This parameter is valid only when OriginType is ORIGIN_GROUP and a secondary origin group is configured.
+     * Set Secondary origin group ID. This parameter is valid only when OriginType = ORIGIN_GROUP and a secondary origin group is configured.
+     * @param BackupOrigin Secondary origin group ID. This parameter is valid only when OriginType = ORIGIN_GROUP and a secondary origin group is configured.
      */
     public void setBackupOrigin(String BackupOrigin) {
         this.BackupOrigin = BackupOrigin;
     }
 
     /**
-     * Get Primary origin group name. This parameter returns a value when OriginType is ORIGIN_GROUP. 
-     * @return OriginGroupName Primary origin group name. This parameter returns a value when OriginType is ORIGIN_GROUP.
+     * Get Primary origin group name. This parameter returns a value when OriginType = ORIGIN_GROUP. 
+     * @return OriginGroupName Primary origin group name. This parameter returns a value when OriginType = ORIGIN_GROUP.
      */
     public String getOriginGroupName() {
         return this.OriginGroupName;
     }
 
     /**
-     * Set Primary origin group name. This parameter returns a value when OriginType is ORIGIN_GROUP.
-     * @param OriginGroupName Primary origin group name. This parameter returns a value when OriginType is ORIGIN_GROUP.
+     * Set Primary origin group name. This parameter returns a value when OriginType = ORIGIN_GROUP.
+     * @param OriginGroupName Primary origin group name. This parameter returns a value when OriginType = ORIGIN_GROUP.
      */
     public void setOriginGroupName(String OriginGroupName) {
         this.OriginGroupName = OriginGroupName;
     }
 
     /**
-     * Get Secondary origin group name. This parameter is valid only when OriginType is ORIGIN_GROUP and a secondary origin group is configured. 
-     * @return BackOriginGroupName Secondary origin group name. This parameter is valid only when OriginType is ORIGIN_GROUP and a secondary origin group is configured.
+     * Get Secondary origin group name. This parameter is valid only when OriginType = ORIGIN_GROUP and a secondary origin group is configured. 
+     * @return BackOriginGroupName Secondary origin group name. This parameter is valid only when OriginType = ORIGIN_GROUP and a secondary origin group is configured.
      */
     public String getBackOriginGroupName() {
         return this.BackOriginGroupName;
     }
 
     /**
-     * Set Secondary origin group name. This parameter is valid only when OriginType is ORIGIN_GROUP and a secondary origin group is configured.
-     * @param BackOriginGroupName Secondary origin group name. This parameter is valid only when OriginType is ORIGIN_GROUP and a secondary origin group is configured.
+     * Set Secondary origin group name. This parameter is valid only when OriginType = ORIGIN_GROUP and a secondary origin group is configured.
+     * @param BackOriginGroupName Secondary origin group name. This parameter is valid only when OriginType = ORIGIN_GROUP and a secondary origin group is configured.
      */
     public void setBackOriginGroupName(String BackOriginGroupName) {
         this.BackOriginGroupName = BackOriginGroupName;
@@ -288,36 +297,32 @@ If this field is not specified, the default value 'off' will be used.
     }
 
     /**
-     * Get Private authentication parameter. This parameter is valid only when PrivateAccess is on.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return PrivateParameters Private authentication parameter. This parameter is valid only when PrivateAccess is on.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Private authentication parameter. This parameter is valid only when the origin server type is PrivateAccess = on. 
+     * @return PrivateParameters Private authentication parameter. This parameter is valid only when the origin server type is PrivateAccess = on.
      */
     public PrivateParameter [] getPrivateParameters() {
         return this.PrivateParameters;
     }
 
     /**
-     * Set Private authentication parameter. This parameter is valid only when PrivateAccess is on.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param PrivateParameters Private authentication parameter. This parameter is valid only when PrivateAccess is on.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Private authentication parameter. This parameter is valid only when the origin server type is PrivateAccess = on.
+     * @param PrivateParameters Private authentication parameter. This parameter is valid only when the origin server type is PrivateAccess = on.
      */
     public void setPrivateParameters(PrivateParameter [] PrivateParameters) {
         this.PrivateParameters = PrivateParameters;
     }
 
     /**
-     * Get Specifies the current configuration of the origin-pull HOST header. 
-     * @return HostHeader Specifies the current configuration of the origin-pull HOST header.
+     * Get Origin-pull HOST header of the current configuration. 
+     * @return HostHeader Origin-pull HOST header of the current configuration.
      */
     public String getHostHeader() {
         return this.HostHeader;
     }
 
     /**
-     * Set Specifies the current configuration of the origin-pull HOST header.
-     * @param HostHeader Specifies the current configuration of the origin-pull HOST header.
+     * Set Origin-pull HOST header of the current configuration.
+     * @param HostHeader Origin-pull HOST header of the current configuration.
      */
     public void setHostHeader(String HostHeader) {
         this.HostHeader = HostHeader;
@@ -364,8 +369,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get MO bucket ID, required when the distribution range (DistributionRange) is bucket (Bucket) 
-     * @return VodeoBucketId MO bucket ID, required when the distribution range (DistributionRange) is bucket (Bucket)
+     * Get MO bucket ID. Required when the distribution scope (DistributionRange) is Bucket. 
+     * @return VodeoBucketId MO bucket ID. Required when the distribution scope (DistributionRange) is Bucket.
      * @deprecated
      */
     @Deprecated
@@ -374,8 +379,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set MO bucket ID, required when the distribution range (DistributionRange) is bucket (Bucket)
-     * @param VodeoBucketId MO bucket ID, required when the distribution range (DistributionRange) is bucket (Bucket)
+     * Set MO bucket ID. Required when the distribution scope (DistributionRange) is Bucket.
+     * @param VodeoBucketId MO bucket ID. Required when the distribution scope (DistributionRange) is Bucket.
      * @deprecated
      */
     @Deprecated
@@ -384,9 +389,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get VOD origin-pull range. this parameter returns a value when OriginType = VOD. valid values: <li>all: all files in the VOD application corresponding to the current origin server. the default value is all;</li> <li>bucket: files in a specified bucket under the VOD application corresponding to the current origin server. specify the bucket by the VodBucketId parameter.</li>.
+     * Get VOD origin-pull scope. This parameter returns a value when OriginType = VOD. Valid values: <li>all: all files in the VOD application corresponding to the current origin server. Default value: all;</li> <li>bucket: files in a specified bucket under the VOD application corresponding to the current origin server. Specify the bucket with the parameter VodBucketId.</li>
 </li> 
-     * @return VodOriginScope VOD origin-pull range. this parameter returns a value when OriginType = VOD. valid values: <li>all: all files in the VOD application corresponding to the current origin server. the default value is all;</li> <li>bucket: files in a specified bucket under the VOD application corresponding to the current origin server. specify the bucket by the VodBucketId parameter.</li>.
+     * @return VodOriginScope VOD origin-pull scope. This parameter returns a value when OriginType = VOD. Valid values: <li>all: all files in the VOD application corresponding to the current origin server. Default value: all;</li> <li>bucket: files in a specified bucket under the VOD application corresponding to the current origin server. Specify the bucket with the parameter VodBucketId.</li>
 </li>
      */
     public String getVodOriginScope() {
@@ -394,9 +399,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set VOD origin-pull range. this parameter returns a value when OriginType = VOD. valid values: <li>all: all files in the VOD application corresponding to the current origin server. the default value is all;</li> <li>bucket: files in a specified bucket under the VOD application corresponding to the current origin server. specify the bucket by the VodBucketId parameter.</li>.
+     * Set VOD origin-pull scope. This parameter returns a value when OriginType = VOD. Valid values: <li>all: all files in the VOD application corresponding to the current origin server. Default value: all;</li> <li>bucket: files in a specified bucket under the VOD application corresponding to the current origin server. Specify the bucket with the parameter VodBucketId.</li>
 </li>
-     * @param VodOriginScope VOD origin-pull range. this parameter returns a value when OriginType = VOD. valid values: <li>all: all files in the VOD application corresponding to the current origin server. the default value is all;</li> <li>bucket: files in a specified bucket under the VOD application corresponding to the current origin server. specify the bucket by the VodBucketId parameter.</li>.
+     * @param VodOriginScope VOD origin-pull scope. This parameter returns a value when OriginType = VOD. Valid values: <li>all: all files in the VOD application corresponding to the current origin server. Default value: all;</li> <li>bucket: files in a specified bucket under the VOD application corresponding to the current origin server. Specify the bucket with the parameter VodBucketId.</li>
 </li>
      */
     public void setVodOriginScope(String VodOriginScope) {
@@ -404,16 +409,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get VOD bucket ID. this parameter is required when OriginType = VOD and VodOriginScope = bucket. data source: storage ID of the bucket under the VOD professional application. 
-     * @return VodBucketId VOD bucket ID. this parameter is required when OriginType = VOD and VodOriginScope = bucket. data source: storage ID of the bucket under the VOD professional application.
+     * Get VOD bucket ID. This parameter is required when OriginType = VOD and VodOriginScope = bucket. Data source: storage ID of the bucket under the VOD professional application. 
+     * @return VodBucketId VOD bucket ID. This parameter is required when OriginType = VOD and VodOriginScope = bucket. Data source: storage ID of the bucket under the VOD professional application.
      */
     public String getVodBucketId() {
         return this.VodBucketId;
     }
 
     /**
-     * Set VOD bucket ID. this parameter is required when OriginType = VOD and VodOriginScope = bucket. data source: storage ID of the bucket under the VOD professional application.
-     * @param VodBucketId VOD bucket ID. this parameter is required when OriginType = VOD and VodOriginScope = bucket. data source: storage ID of the bucket under the VOD professional application.
+     * Set VOD bucket ID. This parameter is required when OriginType = VOD and VodOriginScope = bucket. Data source: storage ID of the bucket under the VOD professional application.
+     * @param VodBucketId VOD bucket ID. This parameter is required when OriginType = VOD and VodOriginScope = bucket. Data source: storage ID of the bucket under the VOD professional application.
      */
     public void setVodBucketId(String VodBucketId) {
         this.VodBucketId = VodBucketId;

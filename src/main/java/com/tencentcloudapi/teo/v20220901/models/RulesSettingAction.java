@@ -25,40 +25,40 @@ public class RulesSettingAction extends AbstractModel {
 
     /**
     * Feature name. Valid values:
-<li>Access URL rewrite (`AccessUrlRedirect`).</li>
-<li>Origin-pull URL rewrite (`UpstreamUrlRedirect`).</li>
-<li>Custom error page
-(`ErrorPage`).</li>
-<li>QUIC (`QUIC`).</li>
-<li>WebSocket (`WebSocket`).</li>
-<li>Video dragging (`VideoSeek`).</li>
-<li>Token authentication (`Authentication`).</li>
-<li>`CacheKey`: Custom cache key.</li>
-<li>`Cache`: Node cache TTL.</li>
-<li>`MaxAge`: Browser cache TTL.</li>
-<li>`OfflineCache`: Offline cache.</li>
-<li>`SmartRouting`: Smart acceleration.</li>
-<li>`RangeOriginPull`: Range GETs.</li>
-<li>`UpstreamHttp2`: HTTP/2 forwarding.</li>
-<li>`HostHeader`: Host header rewrite.</li>
-<li>`ForceRedirect`: Force HTTPS.</li>
-<li>`OriginPullProtocol`: Origin-pull HTTPS.</li>
-<li>`CachePrefresh`: Cache prefresh.</li>
-<li>`Compression`: Smart compression.</li>
-<li>`RequestHeader`: HTTP request header modification.</li>
-<li>HTTP response header modification (`ResponseHeader`).</li>
-<li>Status code cache TTL (`StatusCodeCache`).</li>
-<li>`Hsts`.</li>
-<li>`ClientIpHeader`.</li>
-<li>`TlsVersion`.</li>
-<li>`OcspStapling`.</li>
+<li> Access URL rewrite (AccessUrlRedirect);</li>
+<li> Origin-pull URL rewrite (UpstreamUrlRedirect);</li>
+<li> Custom error page
+(ErrorPage);</li>
+<li> QUIC(QUIC);</li>
+<li> WebSocket (WebSocket);</li>
+<li> Video dragging (VideoSeek);</li>
+<li> Token authentication (Authentication);</li>
+<li> Custom CacheKey (CacheKey);</li>
+<li> Node cache TTL (Cache);</li>
+<li> Browser caching TTL (MaxAge);</li>
+<li> Offline caching (OfflineCache);</li>
+<li> Smart routing (SmartRouting);</li>
+<li> Range-based origin pull (RangeOriginPull);</li>
+<li> HTTP/2 origin pull (UpstreamHttp2);</li>
+<li> Host header rewrite (HostHeader);</li>
+<li> force HTTPS (ForceRedirect);</li>
+<li> HTTPS origin pull (OriginPullProtocol);</li>
+<li> Cache pre-refresh (CachePrefresh);</li>
+<li> Intelligent compression (Compression);</li>
+<li>HTTP request header modification (RequestHeader);</li>
+<li> HTTP response header modification (ResponseHeader);</li>
+<li> Status code cache TTL (StatusCodeCache);</li>
+<li> Hsts;</li>
+<li> ClientIpHeader;</li>
+<li> TlsVersion;</li>
+<li> OcspStapling.</li>
     */
     @SerializedName("Action")
     @Expose
     private String Action;
 
     /**
-    * Parameter information
+    * Parameter information.
     */
     @SerializedName("Properties")
     @Expose
@@ -66,61 +66,61 @@ public class RulesSettingAction extends AbstractModel {
 
     /**
      * Get Feature name. Valid values:
-<li>Access URL rewrite (`AccessUrlRedirect`).</li>
-<li>Origin-pull URL rewrite (`UpstreamUrlRedirect`).</li>
-<li>Custom error page
-(`ErrorPage`).</li>
-<li>QUIC (`QUIC`).</li>
-<li>WebSocket (`WebSocket`).</li>
-<li>Video dragging (`VideoSeek`).</li>
-<li>Token authentication (`Authentication`).</li>
-<li>`CacheKey`: Custom cache key.</li>
-<li>`Cache`: Node cache TTL.</li>
-<li>`MaxAge`: Browser cache TTL.</li>
-<li>`OfflineCache`: Offline cache.</li>
-<li>`SmartRouting`: Smart acceleration.</li>
-<li>`RangeOriginPull`: Range GETs.</li>
-<li>`UpstreamHttp2`: HTTP/2 forwarding.</li>
-<li>`HostHeader`: Host header rewrite.</li>
-<li>`ForceRedirect`: Force HTTPS.</li>
-<li>`OriginPullProtocol`: Origin-pull HTTPS.</li>
-<li>`CachePrefresh`: Cache prefresh.</li>
-<li>`Compression`: Smart compression.</li>
-<li>`RequestHeader`: HTTP request header modification.</li>
-<li>HTTP response header modification (`ResponseHeader`).</li>
-<li>Status code cache TTL (`StatusCodeCache`).</li>
-<li>`Hsts`.</li>
-<li>`ClientIpHeader`.</li>
-<li>`TlsVersion`.</li>
-<li>`OcspStapling`.</li> 
+<li> Access URL rewrite (AccessUrlRedirect);</li>
+<li> Origin-pull URL rewrite (UpstreamUrlRedirect);</li>
+<li> Custom error page
+(ErrorPage);</li>
+<li> QUIC(QUIC);</li>
+<li> WebSocket (WebSocket);</li>
+<li> Video dragging (VideoSeek);</li>
+<li> Token authentication (Authentication);</li>
+<li> Custom CacheKey (CacheKey);</li>
+<li> Node cache TTL (Cache);</li>
+<li> Browser caching TTL (MaxAge);</li>
+<li> Offline caching (OfflineCache);</li>
+<li> Smart routing (SmartRouting);</li>
+<li> Range-based origin pull (RangeOriginPull);</li>
+<li> HTTP/2 origin pull (UpstreamHttp2);</li>
+<li> Host header rewrite (HostHeader);</li>
+<li> force HTTPS (ForceRedirect);</li>
+<li> HTTPS origin pull (OriginPullProtocol);</li>
+<li> Cache pre-refresh (CachePrefresh);</li>
+<li> Intelligent compression (Compression);</li>
+<li>HTTP request header modification (RequestHeader);</li>
+<li> HTTP response header modification (ResponseHeader);</li>
+<li> Status code cache TTL (StatusCodeCache);</li>
+<li> Hsts;</li>
+<li> ClientIpHeader;</li>
+<li> TlsVersion;</li>
+<li> OcspStapling.</li> 
      * @return Action Feature name. Valid values:
-<li>Access URL rewrite (`AccessUrlRedirect`).</li>
-<li>Origin-pull URL rewrite (`UpstreamUrlRedirect`).</li>
-<li>Custom error page
-(`ErrorPage`).</li>
-<li>QUIC (`QUIC`).</li>
-<li>WebSocket (`WebSocket`).</li>
-<li>Video dragging (`VideoSeek`).</li>
-<li>Token authentication (`Authentication`).</li>
-<li>`CacheKey`: Custom cache key.</li>
-<li>`Cache`: Node cache TTL.</li>
-<li>`MaxAge`: Browser cache TTL.</li>
-<li>`OfflineCache`: Offline cache.</li>
-<li>`SmartRouting`: Smart acceleration.</li>
-<li>`RangeOriginPull`: Range GETs.</li>
-<li>`UpstreamHttp2`: HTTP/2 forwarding.</li>
-<li>`HostHeader`: Host header rewrite.</li>
-<li>`ForceRedirect`: Force HTTPS.</li>
-<li>`OriginPullProtocol`: Origin-pull HTTPS.</li>
-<li>`CachePrefresh`: Cache prefresh.</li>
-<li>`Compression`: Smart compression.</li>
-<li>`RequestHeader`: HTTP request header modification.</li>
-<li>HTTP response header modification (`ResponseHeader`).</li>
-<li>Status code cache TTL (`StatusCodeCache`).</li>
-<li>`Hsts`.</li>
-<li>`ClientIpHeader`.</li>
-<li>`TlsVersion`.</li>
-<li>`OcspStapling`.</li>
+<li> Access URL rewrite (AccessUrlRedirect);</li>
+<li> Origin-pull URL rewrite (UpstreamUrlRedirect);</li>
+<li> Custom error page
+(ErrorPage);</li>
+<li> QUIC(QUIC);</li>
+<li> WebSocket (WebSocket);</li>
+<li> Video dragging (VideoSeek);</li>
+<li> Token authentication (Authentication);</li>
+<li> Custom CacheKey (CacheKey);</li>
+<li> Node cache TTL (Cache);</li>
+<li> Browser caching TTL (MaxAge);</li>
+<li> Offline caching (OfflineCache);</li>
+<li> Smart routing (SmartRouting);</li>
+<li> Range-based origin pull (RangeOriginPull);</li>
+<li> HTTP/2 origin pull (UpstreamHttp2);</li>
+<li> Host header rewrite (HostHeader);</li>
+<li> force HTTPS (ForceRedirect);</li>
+<li> HTTPS origin pull (OriginPullProtocol);</li>
+<li> Cache pre-refresh (CachePrefresh);</li>
+<li> Intelligent compression (Compression);</li>
+<li>HTTP request header modification (RequestHeader);</li>
+<li> HTTP response header modification (ResponseHeader);</li>
+<li> Status code cache TTL (StatusCodeCache);</li>
+<li> Hsts;</li>
+<li> ClientIpHeader;</li>
+<li> TlsVersion;</li>
+<li> OcspStapling.</li>
      */
     public String getAction() {
         return this.Action;
@@ -128,77 +128,77 @@ public class RulesSettingAction extends AbstractModel {
 
     /**
      * Set Feature name. Valid values:
-<li>Access URL rewrite (`AccessUrlRedirect`).</li>
-<li>Origin-pull URL rewrite (`UpstreamUrlRedirect`).</li>
-<li>Custom error page
-(`ErrorPage`).</li>
-<li>QUIC (`QUIC`).</li>
-<li>WebSocket (`WebSocket`).</li>
-<li>Video dragging (`VideoSeek`).</li>
-<li>Token authentication (`Authentication`).</li>
-<li>`CacheKey`: Custom cache key.</li>
-<li>`Cache`: Node cache TTL.</li>
-<li>`MaxAge`: Browser cache TTL.</li>
-<li>`OfflineCache`: Offline cache.</li>
-<li>`SmartRouting`: Smart acceleration.</li>
-<li>`RangeOriginPull`: Range GETs.</li>
-<li>`UpstreamHttp2`: HTTP/2 forwarding.</li>
-<li>`HostHeader`: Host header rewrite.</li>
-<li>`ForceRedirect`: Force HTTPS.</li>
-<li>`OriginPullProtocol`: Origin-pull HTTPS.</li>
-<li>`CachePrefresh`: Cache prefresh.</li>
-<li>`Compression`: Smart compression.</li>
-<li>`RequestHeader`: HTTP request header modification.</li>
-<li>HTTP response header modification (`ResponseHeader`).</li>
-<li>Status code cache TTL (`StatusCodeCache`).</li>
-<li>`Hsts`.</li>
-<li>`ClientIpHeader`.</li>
-<li>`TlsVersion`.</li>
-<li>`OcspStapling`.</li>
+<li> Access URL rewrite (AccessUrlRedirect);</li>
+<li> Origin-pull URL rewrite (UpstreamUrlRedirect);</li>
+<li> Custom error page
+(ErrorPage);</li>
+<li> QUIC(QUIC);</li>
+<li> WebSocket (WebSocket);</li>
+<li> Video dragging (VideoSeek);</li>
+<li> Token authentication (Authentication);</li>
+<li> Custom CacheKey (CacheKey);</li>
+<li> Node cache TTL (Cache);</li>
+<li> Browser caching TTL (MaxAge);</li>
+<li> Offline caching (OfflineCache);</li>
+<li> Smart routing (SmartRouting);</li>
+<li> Range-based origin pull (RangeOriginPull);</li>
+<li> HTTP/2 origin pull (UpstreamHttp2);</li>
+<li> Host header rewrite (HostHeader);</li>
+<li> force HTTPS (ForceRedirect);</li>
+<li> HTTPS origin pull (OriginPullProtocol);</li>
+<li> Cache pre-refresh (CachePrefresh);</li>
+<li> Intelligent compression (Compression);</li>
+<li>HTTP request header modification (RequestHeader);</li>
+<li> HTTP response header modification (ResponseHeader);</li>
+<li> Status code cache TTL (StatusCodeCache);</li>
+<li> Hsts;</li>
+<li> ClientIpHeader;</li>
+<li> TlsVersion;</li>
+<li> OcspStapling.</li>
      * @param Action Feature name. Valid values:
-<li>Access URL rewrite (`AccessUrlRedirect`).</li>
-<li>Origin-pull URL rewrite (`UpstreamUrlRedirect`).</li>
-<li>Custom error page
-(`ErrorPage`).</li>
-<li>QUIC (`QUIC`).</li>
-<li>WebSocket (`WebSocket`).</li>
-<li>Video dragging (`VideoSeek`).</li>
-<li>Token authentication (`Authentication`).</li>
-<li>`CacheKey`: Custom cache key.</li>
-<li>`Cache`: Node cache TTL.</li>
-<li>`MaxAge`: Browser cache TTL.</li>
-<li>`OfflineCache`: Offline cache.</li>
-<li>`SmartRouting`: Smart acceleration.</li>
-<li>`RangeOriginPull`: Range GETs.</li>
-<li>`UpstreamHttp2`: HTTP/2 forwarding.</li>
-<li>`HostHeader`: Host header rewrite.</li>
-<li>`ForceRedirect`: Force HTTPS.</li>
-<li>`OriginPullProtocol`: Origin-pull HTTPS.</li>
-<li>`CachePrefresh`: Cache prefresh.</li>
-<li>`Compression`: Smart compression.</li>
-<li>`RequestHeader`: HTTP request header modification.</li>
-<li>HTTP response header modification (`ResponseHeader`).</li>
-<li>Status code cache TTL (`StatusCodeCache`).</li>
-<li>`Hsts`.</li>
-<li>`ClientIpHeader`.</li>
-<li>`TlsVersion`.</li>
-<li>`OcspStapling`.</li>
+<li> Access URL rewrite (AccessUrlRedirect);</li>
+<li> Origin-pull URL rewrite (UpstreamUrlRedirect);</li>
+<li> Custom error page
+(ErrorPage);</li>
+<li> QUIC(QUIC);</li>
+<li> WebSocket (WebSocket);</li>
+<li> Video dragging (VideoSeek);</li>
+<li> Token authentication (Authentication);</li>
+<li> Custom CacheKey (CacheKey);</li>
+<li> Node cache TTL (Cache);</li>
+<li> Browser caching TTL (MaxAge);</li>
+<li> Offline caching (OfflineCache);</li>
+<li> Smart routing (SmartRouting);</li>
+<li> Range-based origin pull (RangeOriginPull);</li>
+<li> HTTP/2 origin pull (UpstreamHttp2);</li>
+<li> Host header rewrite (HostHeader);</li>
+<li> force HTTPS (ForceRedirect);</li>
+<li> HTTPS origin pull (OriginPullProtocol);</li>
+<li> Cache pre-refresh (CachePrefresh);</li>
+<li> Intelligent compression (Compression);</li>
+<li>HTTP request header modification (RequestHeader);</li>
+<li> HTTP response header modification (ResponseHeader);</li>
+<li> Status code cache TTL (StatusCodeCache);</li>
+<li> Hsts;</li>
+<li> ClientIpHeader;</li>
+<li> TlsVersion;</li>
+<li> OcspStapling.</li>
      */
     public void setAction(String Action) {
         this.Action = Action;
     }
 
     /**
-     * Get Parameter information 
-     * @return Properties Parameter information
+     * Get Parameter information. 
+     * @return Properties Parameter information.
      */
     public RulesProperties [] getProperties() {
         return this.Properties;
     }
 
     /**
-     * Set Parameter information
-     * @param Properties Parameter information
+     * Set Parameter information.
+     * @param Properties Parameter information.
      */
     public void setProperties(RulesProperties [] Properties) {
         this.Properties = Properties;

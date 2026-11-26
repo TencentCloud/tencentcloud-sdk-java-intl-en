@@ -24,294 +24,294 @@ import java.util.HashMap;
 public class PlanInfo extends AbstractModel {
 
     /**
-    * Settlement currency. Values:
-<li>`CNY`: Settled by Chinese RMB;</li>
-<li>`USD`: Settled by US dollars.</li>
+    * Settlement currency type. Valid values:
+<li> CNY: settlement in RMB; </li>
+<li> USD: Dollar settlement.</li>
     */
     @SerializedName("Currency")
     @Expose
     private String Currency;
 
     /**
-    * Traffic quota of the plan. It includes the traffic for security acceleration, content acceleration and smart acceleration. Unit: byte.
+    * Total traffic included in the package. This value is the sum of security acceleration traffic, content acceleration traffic, and smart acceleration traffic (unit: byte).
     */
     @SerializedName("Flux")
     @Expose
     private Long Flux;
 
     /**
-    * Settlement cycle. Values:
-<li>`y`: Settled by year;</li>
-<li>`m`: Settled by month;</li>
-<li>`h`: Settled by hour;</li>
-<li>`M`: Settled by minute;</li>
-<li>`s`: Settled by second.</li>
+    * Billing cycle. Valid values:
+<li> y: settle by year; </li>
+<li> m: monthly settlement;</li>
+<li> h: settled by hour; </li>
+<li> M: settle by minute;</li>
+<li> s: settle by second. </li>
     */
     @SerializedName("Frequency")
     @Expose
     private String Frequency;
 
     /**
-    * The plan option. Values:
-<li>`sta`: Standard plan that supports content delivery network outside the Chinese mainland.</li>
-<li>`sta_with_bot`: Standard plan that supports content delivery network outside the Chinese mainland and bot management.</li>
-<li>`sta_cm`: Standard plan that supports content delivery network inside the Chinese mainland.</li>
-<li>`sta_cm_with_bot`: Standard plan that supports content delivery network inside the Chinese mainland and bot management.</li>
-<li>`sta`: Standard plan that supports content delivery network over the globe.</li>
-<li>`sta_global_with_bot`: Standard plan that supports content delivery network over the globe and bot management.</li>
-<li>`ent`: Enterprise plan that supports content delivery network outside the Chinese mainland.</li>
-<li>`ent_with_bot`: Enterprise plan that supports content delivery network outside the Chinese mainland and bot management.</li>
-<li>`ent_cm`: Enterprise plan that supports content delivery network inside the Chinese mainland.</li>
-<li>`ent_cm_with_bot`: Enterprise plan that supports content delivery network inside the Chinese mainland and bot management.</li>
-<li>`ent_global`: Enterprise plan that supports content delivery network over the globe.</li>
-<li>`ent_global_with_bot`: Enterprise plan that supports content delivery network over the globe and bot management.</li>
+    * Package type. Valid values:
+<li> sta: Global content delivery network (excluding Chinese mainland) Standard Edition Plan; </li>
+<li> sta_with_bot: Standard Edition Plan of the global content delivery network (excluding Chinese mainland) with bundled bot management;</li>
+<li> sta_cm: CDN Standard Edition Plan for the Chinese mainland; </li>
+<li> sta_cm_with_bot: CDN Standard Edition Plan for Chinese mainland with bundled bot management;</li>
+<li> sta_global: Global content delivery network (including Chinese mainland) Standard Edition Plan; </li>
+<li> sta_global_with_bot: Standard Edition Plan for global content delivery network (including Chinese mainland) with bundled bot management;</li>
+<li> ent: Enterprise plan of the global content delivery network (excluding Chinese mainland); </li>
+<li> ent_with_bot: Global content delivery network (excluding Chinese mainland) enterprise package with bundled bot management;</li>
+<li> ent_cm: Enterprise edition package for CDN in Chinese mainland; </li>
+<li> ent_cm_with_bot: CDN enterprise package with bundled bot management in the Chinese mainland;</li>
+<li> ent_global: global content delivery network (including Chinese mainland) enterprise package; </li>
+<li> ent_global_with_bot: Global content delivery network (including Chinese mainland) enterprise package with bundled bot management.</li>
     */
     @SerializedName("PlanType")
     @Expose
     private String PlanType;
 
     /**
-    * Plan price (in CNY fen/US cent). The price unit depends on the settlement currency.
+    * Package pricing (unit: cent).
     */
     @SerializedName("Price")
     @Expose
     private Float Price;
 
     /**
-    * Quota on security acceleration requests
+    * Request count included in the package. This is the security acceleration request count. (Unit: count).
     */
     @SerializedName("Request")
     @Expose
     private Long Request;
 
     /**
-    * Number of sites to be bound to the plan
+    * Number of sites that can be bound to the package.
     */
     @SerializedName("SiteNumber")
     @Expose
     private Long SiteNumber;
 
     /**
-    * The acceleration region. Values:
-<li>`mainland`: Chinese mainland</li>
-<li>`overseas`: Global (Chinese mainland not included)</li>
-<li>`global`: Global (Chinese mainland included)</li>
+    * Acceleration region type of the package. Valid values:
+<li>mainland: Chinese mainland;</li>
+<li>overseas: global (excluding the Chinese mainland);</li>
+<li> global: worldwide (including Chinese mainland). </li>
     */
     @SerializedName("Area")
     @Expose
     private String Area;
 
     /**
-     * Get Settlement currency. Values:
-<li>`CNY`: Settled by Chinese RMB;</li>
-<li>`USD`: Settled by US dollars.</li> 
-     * @return Currency Settlement currency. Values:
-<li>`CNY`: Settled by Chinese RMB;</li>
-<li>`USD`: Settled by US dollars.</li>
+     * Get Settlement currency type. Valid values:
+<li> CNY: settlement in RMB; </li>
+<li> USD: Dollar settlement.</li> 
+     * @return Currency Settlement currency type. Valid values:
+<li> CNY: settlement in RMB; </li>
+<li> USD: Dollar settlement.</li>
      */
     public String getCurrency() {
         return this.Currency;
     }
 
     /**
-     * Set Settlement currency. Values:
-<li>`CNY`: Settled by Chinese RMB;</li>
-<li>`USD`: Settled by US dollars.</li>
-     * @param Currency Settlement currency. Values:
-<li>`CNY`: Settled by Chinese RMB;</li>
-<li>`USD`: Settled by US dollars.</li>
+     * Set Settlement currency type. Valid values:
+<li> CNY: settlement in RMB; </li>
+<li> USD: Dollar settlement.</li>
+     * @param Currency Settlement currency type. Valid values:
+<li> CNY: settlement in RMB; </li>
+<li> USD: Dollar settlement.</li>
      */
     public void setCurrency(String Currency) {
         this.Currency = Currency;
     }
 
     /**
-     * Get Traffic quota of the plan. It includes the traffic for security acceleration, content acceleration and smart acceleration. Unit: byte. 
-     * @return Flux Traffic quota of the plan. It includes the traffic for security acceleration, content acceleration and smart acceleration. Unit: byte.
+     * Get Total traffic included in the package. This value is the sum of security acceleration traffic, content acceleration traffic, and smart acceleration traffic (unit: byte). 
+     * @return Flux Total traffic included in the package. This value is the sum of security acceleration traffic, content acceleration traffic, and smart acceleration traffic (unit: byte).
      */
     public Long getFlux() {
         return this.Flux;
     }
 
     /**
-     * Set Traffic quota of the plan. It includes the traffic for security acceleration, content acceleration and smart acceleration. Unit: byte.
-     * @param Flux Traffic quota of the plan. It includes the traffic for security acceleration, content acceleration and smart acceleration. Unit: byte.
+     * Set Total traffic included in the package. This value is the sum of security acceleration traffic, content acceleration traffic, and smart acceleration traffic (unit: byte).
+     * @param Flux Total traffic included in the package. This value is the sum of security acceleration traffic, content acceleration traffic, and smart acceleration traffic (unit: byte).
      */
     public void setFlux(Long Flux) {
         this.Flux = Flux;
     }
 
     /**
-     * Get Settlement cycle. Values:
-<li>`y`: Settled by year;</li>
-<li>`m`: Settled by month;</li>
-<li>`h`: Settled by hour;</li>
-<li>`M`: Settled by minute;</li>
-<li>`s`: Settled by second.</li> 
-     * @return Frequency Settlement cycle. Values:
-<li>`y`: Settled by year;</li>
-<li>`m`: Settled by month;</li>
-<li>`h`: Settled by hour;</li>
-<li>`M`: Settled by minute;</li>
-<li>`s`: Settled by second.</li>
+     * Get Billing cycle. Valid values:
+<li> y: settle by year; </li>
+<li> m: monthly settlement;</li>
+<li> h: settled by hour; </li>
+<li> M: settle by minute;</li>
+<li> s: settle by second. </li> 
+     * @return Frequency Billing cycle. Valid values:
+<li> y: settle by year; </li>
+<li> m: monthly settlement;</li>
+<li> h: settled by hour; </li>
+<li> M: settle by minute;</li>
+<li> s: settle by second. </li>
      */
     public String getFrequency() {
         return this.Frequency;
     }
 
     /**
-     * Set Settlement cycle. Values:
-<li>`y`: Settled by year;</li>
-<li>`m`: Settled by month;</li>
-<li>`h`: Settled by hour;</li>
-<li>`M`: Settled by minute;</li>
-<li>`s`: Settled by second.</li>
-     * @param Frequency Settlement cycle. Values:
-<li>`y`: Settled by year;</li>
-<li>`m`: Settled by month;</li>
-<li>`h`: Settled by hour;</li>
-<li>`M`: Settled by minute;</li>
-<li>`s`: Settled by second.</li>
+     * Set Billing cycle. Valid values:
+<li> y: settle by year; </li>
+<li> m: monthly settlement;</li>
+<li> h: settled by hour; </li>
+<li> M: settle by minute;</li>
+<li> s: settle by second. </li>
+     * @param Frequency Billing cycle. Valid values:
+<li> y: settle by year; </li>
+<li> m: monthly settlement;</li>
+<li> h: settled by hour; </li>
+<li> M: settle by minute;</li>
+<li> s: settle by second. </li>
      */
     public void setFrequency(String Frequency) {
         this.Frequency = Frequency;
     }
 
     /**
-     * Get The plan option. Values:
-<li>`sta`: Standard plan that supports content delivery network outside the Chinese mainland.</li>
-<li>`sta_with_bot`: Standard plan that supports content delivery network outside the Chinese mainland and bot management.</li>
-<li>`sta_cm`: Standard plan that supports content delivery network inside the Chinese mainland.</li>
-<li>`sta_cm_with_bot`: Standard plan that supports content delivery network inside the Chinese mainland and bot management.</li>
-<li>`sta`: Standard plan that supports content delivery network over the globe.</li>
-<li>`sta_global_with_bot`: Standard plan that supports content delivery network over the globe and bot management.</li>
-<li>`ent`: Enterprise plan that supports content delivery network outside the Chinese mainland.</li>
-<li>`ent_with_bot`: Enterprise plan that supports content delivery network outside the Chinese mainland and bot management.</li>
-<li>`ent_cm`: Enterprise plan that supports content delivery network inside the Chinese mainland.</li>
-<li>`ent_cm_with_bot`: Enterprise plan that supports content delivery network inside the Chinese mainland and bot management.</li>
-<li>`ent_global`: Enterprise plan that supports content delivery network over the globe.</li>
-<li>`ent_global_with_bot`: Enterprise plan that supports content delivery network over the globe and bot management.</li> 
-     * @return PlanType The plan option. Values:
-<li>`sta`: Standard plan that supports content delivery network outside the Chinese mainland.</li>
-<li>`sta_with_bot`: Standard plan that supports content delivery network outside the Chinese mainland and bot management.</li>
-<li>`sta_cm`: Standard plan that supports content delivery network inside the Chinese mainland.</li>
-<li>`sta_cm_with_bot`: Standard plan that supports content delivery network inside the Chinese mainland and bot management.</li>
-<li>`sta`: Standard plan that supports content delivery network over the globe.</li>
-<li>`sta_global_with_bot`: Standard plan that supports content delivery network over the globe and bot management.</li>
-<li>`ent`: Enterprise plan that supports content delivery network outside the Chinese mainland.</li>
-<li>`ent_with_bot`: Enterprise plan that supports content delivery network outside the Chinese mainland and bot management.</li>
-<li>`ent_cm`: Enterprise plan that supports content delivery network inside the Chinese mainland.</li>
-<li>`ent_cm_with_bot`: Enterprise plan that supports content delivery network inside the Chinese mainland and bot management.</li>
-<li>`ent_global`: Enterprise plan that supports content delivery network over the globe.</li>
-<li>`ent_global_with_bot`: Enterprise plan that supports content delivery network over the globe and bot management.</li>
+     * Get Package type. Valid values:
+<li> sta: Global content delivery network (excluding Chinese mainland) Standard Edition Plan; </li>
+<li> sta_with_bot: Standard Edition Plan of the global content delivery network (excluding Chinese mainland) with bundled bot management;</li>
+<li> sta_cm: CDN Standard Edition Plan for the Chinese mainland; </li>
+<li> sta_cm_with_bot: CDN Standard Edition Plan for Chinese mainland with bundled bot management;</li>
+<li> sta_global: Global content delivery network (including Chinese mainland) Standard Edition Plan; </li>
+<li> sta_global_with_bot: Standard Edition Plan for global content delivery network (including Chinese mainland) with bundled bot management;</li>
+<li> ent: Enterprise plan of the global content delivery network (excluding Chinese mainland); </li>
+<li> ent_with_bot: Global content delivery network (excluding Chinese mainland) enterprise package with bundled bot management;</li>
+<li> ent_cm: Enterprise edition package for CDN in Chinese mainland; </li>
+<li> ent_cm_with_bot: CDN enterprise package with bundled bot management in the Chinese mainland;</li>
+<li> ent_global: global content delivery network (including Chinese mainland) enterprise package; </li>
+<li> ent_global_with_bot: Global content delivery network (including Chinese mainland) enterprise package with bundled bot management.</li> 
+     * @return PlanType Package type. Valid values:
+<li> sta: Global content delivery network (excluding Chinese mainland) Standard Edition Plan; </li>
+<li> sta_with_bot: Standard Edition Plan of the global content delivery network (excluding Chinese mainland) with bundled bot management;</li>
+<li> sta_cm: CDN Standard Edition Plan for the Chinese mainland; </li>
+<li> sta_cm_with_bot: CDN Standard Edition Plan for Chinese mainland with bundled bot management;</li>
+<li> sta_global: Global content delivery network (including Chinese mainland) Standard Edition Plan; </li>
+<li> sta_global_with_bot: Standard Edition Plan for global content delivery network (including Chinese mainland) with bundled bot management;</li>
+<li> ent: Enterprise plan of the global content delivery network (excluding Chinese mainland); </li>
+<li> ent_with_bot: Global content delivery network (excluding Chinese mainland) enterprise package with bundled bot management;</li>
+<li> ent_cm: Enterprise edition package for CDN in Chinese mainland; </li>
+<li> ent_cm_with_bot: CDN enterprise package with bundled bot management in the Chinese mainland;</li>
+<li> ent_global: global content delivery network (including Chinese mainland) enterprise package; </li>
+<li> ent_global_with_bot: Global content delivery network (including Chinese mainland) enterprise package with bundled bot management.</li>
      */
     public String getPlanType() {
         return this.PlanType;
     }
 
     /**
-     * Set The plan option. Values:
-<li>`sta`: Standard plan that supports content delivery network outside the Chinese mainland.</li>
-<li>`sta_with_bot`: Standard plan that supports content delivery network outside the Chinese mainland and bot management.</li>
-<li>`sta_cm`: Standard plan that supports content delivery network inside the Chinese mainland.</li>
-<li>`sta_cm_with_bot`: Standard plan that supports content delivery network inside the Chinese mainland and bot management.</li>
-<li>`sta`: Standard plan that supports content delivery network over the globe.</li>
-<li>`sta_global_with_bot`: Standard plan that supports content delivery network over the globe and bot management.</li>
-<li>`ent`: Enterprise plan that supports content delivery network outside the Chinese mainland.</li>
-<li>`ent_with_bot`: Enterprise plan that supports content delivery network outside the Chinese mainland and bot management.</li>
-<li>`ent_cm`: Enterprise plan that supports content delivery network inside the Chinese mainland.</li>
-<li>`ent_cm_with_bot`: Enterprise plan that supports content delivery network inside the Chinese mainland and bot management.</li>
-<li>`ent_global`: Enterprise plan that supports content delivery network over the globe.</li>
-<li>`ent_global_with_bot`: Enterprise plan that supports content delivery network over the globe and bot management.</li>
-     * @param PlanType The plan option. Values:
-<li>`sta`: Standard plan that supports content delivery network outside the Chinese mainland.</li>
-<li>`sta_with_bot`: Standard plan that supports content delivery network outside the Chinese mainland and bot management.</li>
-<li>`sta_cm`: Standard plan that supports content delivery network inside the Chinese mainland.</li>
-<li>`sta_cm_with_bot`: Standard plan that supports content delivery network inside the Chinese mainland and bot management.</li>
-<li>`sta`: Standard plan that supports content delivery network over the globe.</li>
-<li>`sta_global_with_bot`: Standard plan that supports content delivery network over the globe and bot management.</li>
-<li>`ent`: Enterprise plan that supports content delivery network outside the Chinese mainland.</li>
-<li>`ent_with_bot`: Enterprise plan that supports content delivery network outside the Chinese mainland and bot management.</li>
-<li>`ent_cm`: Enterprise plan that supports content delivery network inside the Chinese mainland.</li>
-<li>`ent_cm_with_bot`: Enterprise plan that supports content delivery network inside the Chinese mainland and bot management.</li>
-<li>`ent_global`: Enterprise plan that supports content delivery network over the globe.</li>
-<li>`ent_global_with_bot`: Enterprise plan that supports content delivery network over the globe and bot management.</li>
+     * Set Package type. Valid values:
+<li> sta: Global content delivery network (excluding Chinese mainland) Standard Edition Plan; </li>
+<li> sta_with_bot: Standard Edition Plan of the global content delivery network (excluding Chinese mainland) with bundled bot management;</li>
+<li> sta_cm: CDN Standard Edition Plan for the Chinese mainland; </li>
+<li> sta_cm_with_bot: CDN Standard Edition Plan for Chinese mainland with bundled bot management;</li>
+<li> sta_global: Global content delivery network (including Chinese mainland) Standard Edition Plan; </li>
+<li> sta_global_with_bot: Standard Edition Plan for global content delivery network (including Chinese mainland) with bundled bot management;</li>
+<li> ent: Enterprise plan of the global content delivery network (excluding Chinese mainland); </li>
+<li> ent_with_bot: Global content delivery network (excluding Chinese mainland) enterprise package with bundled bot management;</li>
+<li> ent_cm: Enterprise edition package for CDN in Chinese mainland; </li>
+<li> ent_cm_with_bot: CDN enterprise package with bundled bot management in the Chinese mainland;</li>
+<li> ent_global: global content delivery network (including Chinese mainland) enterprise package; </li>
+<li> ent_global_with_bot: Global content delivery network (including Chinese mainland) enterprise package with bundled bot management.</li>
+     * @param PlanType Package type. Valid values:
+<li> sta: Global content delivery network (excluding Chinese mainland) Standard Edition Plan; </li>
+<li> sta_with_bot: Standard Edition Plan of the global content delivery network (excluding Chinese mainland) with bundled bot management;</li>
+<li> sta_cm: CDN Standard Edition Plan for the Chinese mainland; </li>
+<li> sta_cm_with_bot: CDN Standard Edition Plan for Chinese mainland with bundled bot management;</li>
+<li> sta_global: Global content delivery network (including Chinese mainland) Standard Edition Plan; </li>
+<li> sta_global_with_bot: Standard Edition Plan for global content delivery network (including Chinese mainland) with bundled bot management;</li>
+<li> ent: Enterprise plan of the global content delivery network (excluding Chinese mainland); </li>
+<li> ent_with_bot: Global content delivery network (excluding Chinese mainland) enterprise package with bundled bot management;</li>
+<li> ent_cm: Enterprise edition package for CDN in Chinese mainland; </li>
+<li> ent_cm_with_bot: CDN enterprise package with bundled bot management in the Chinese mainland;</li>
+<li> ent_global: global content delivery network (including Chinese mainland) enterprise package; </li>
+<li> ent_global_with_bot: Global content delivery network (including Chinese mainland) enterprise package with bundled bot management.</li>
      */
     public void setPlanType(String PlanType) {
         this.PlanType = PlanType;
     }
 
     /**
-     * Get Plan price (in CNY fen/US cent). The price unit depends on the settlement currency. 
-     * @return Price Plan price (in CNY fen/US cent). The price unit depends on the settlement currency.
+     * Get Package pricing (unit: cent). 
+     * @return Price Package pricing (unit: cent).
      */
     public Float getPrice() {
         return this.Price;
     }
 
     /**
-     * Set Plan price (in CNY fen/US cent). The price unit depends on the settlement currency.
-     * @param Price Plan price (in CNY fen/US cent). The price unit depends on the settlement currency.
+     * Set Package pricing (unit: cent).
+     * @param Price Package pricing (unit: cent).
      */
     public void setPrice(Float Price) {
         this.Price = Price;
     }
 
     /**
-     * Get Quota on security acceleration requests 
-     * @return Request Quota on security acceleration requests
+     * Get Request count included in the package. This is the security acceleration request count. (Unit: count). 
+     * @return Request Request count included in the package. This is the security acceleration request count. (Unit: count).
      */
     public Long getRequest() {
         return this.Request;
     }
 
     /**
-     * Set Quota on security acceleration requests
-     * @param Request Quota on security acceleration requests
+     * Set Request count included in the package. This is the security acceleration request count. (Unit: count).
+     * @param Request Request count included in the package. This is the security acceleration request count. (Unit: count).
      */
     public void setRequest(Long Request) {
         this.Request = Request;
     }
 
     /**
-     * Get Number of sites to be bound to the plan 
-     * @return SiteNumber Number of sites to be bound to the plan
+     * Get Number of sites that can be bound to the package. 
+     * @return SiteNumber Number of sites that can be bound to the package.
      */
     public Long getSiteNumber() {
         return this.SiteNumber;
     }
 
     /**
-     * Set Number of sites to be bound to the plan
-     * @param SiteNumber Number of sites to be bound to the plan
+     * Set Number of sites that can be bound to the package.
+     * @param SiteNumber Number of sites that can be bound to the package.
      */
     public void setSiteNumber(Long SiteNumber) {
         this.SiteNumber = SiteNumber;
     }
 
     /**
-     * Get The acceleration region. Values:
-<li>`mainland`: Chinese mainland</li>
-<li>`overseas`: Global (Chinese mainland not included)</li>
-<li>`global`: Global (Chinese mainland included)</li> 
-     * @return Area The acceleration region. Values:
-<li>`mainland`: Chinese mainland</li>
-<li>`overseas`: Global (Chinese mainland not included)</li>
-<li>`global`: Global (Chinese mainland included)</li>
+     * Get Acceleration region type of the package. Valid values:
+<li>mainland: Chinese mainland;</li>
+<li>overseas: global (excluding the Chinese mainland);</li>
+<li> global: worldwide (including Chinese mainland). </li> 
+     * @return Area Acceleration region type of the package. Valid values:
+<li>mainland: Chinese mainland;</li>
+<li>overseas: global (excluding the Chinese mainland);</li>
+<li> global: worldwide (including Chinese mainland). </li>
      */
     public String getArea() {
         return this.Area;
     }
 
     /**
-     * Set The acceleration region. Values:
-<li>`mainland`: Chinese mainland</li>
-<li>`overseas`: Global (Chinese mainland not included)</li>
-<li>`global`: Global (Chinese mainland included)</li>
-     * @param Area The acceleration region. Values:
-<li>`mainland`: Chinese mainland</li>
-<li>`overseas`: Global (Chinese mainland not included)</li>
-<li>`global`: Global (Chinese mainland included)</li>
+     * Set Acceleration region type of the package. Valid values:
+<li>mainland: Chinese mainland;</li>
+<li>overseas: global (excluding the Chinese mainland);</li>
+<li> global: worldwide (including Chinese mainland). </li>
+     * @param Area Acceleration region type of the package. Valid values:
+<li>mainland: Chinese mainland;</li>
+<li>overseas: global (excluding the Chinese mainland);</li>
+<li> global: worldwide (including Chinese mainland). </li>
      */
     public void setArea(String Area) {
         this.Area = Area;

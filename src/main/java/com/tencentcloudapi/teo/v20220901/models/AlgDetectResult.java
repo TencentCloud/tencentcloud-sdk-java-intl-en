@@ -24,116 +24,116 @@ import java.util.HashMap;
 public class AlgDetectResult extends AbstractModel {
 
     /**
-    * The validation result. Values:
-<li>`invalid`: Invalid Cookie</li>
-<li>`cookie_empty`: No Cookie/Cookie expired</li>
-<li>`js_empty`: Client JS disabled</li>
-<li>`low`: Low-risk session</li>
-<li>`middle`: Medium-risk session</li>
-<li>`high`: High-risk session</li>
-<li>`timeout`: JS validation timed out</li>
-<li>`not_browser`: Invalid browser</li>
-<li>`is_bot`: Bot client</li>
+    * Check results. Valid values:
+<li>invalid: invalid Cookie;</li>
+<li>cookie_empty: No cookie carried or the cookie has expired;</li>
+<li>js_empty: JS is not enabled on the client (test not completed);</li>
+<li>low: low risk in session rate and periodic feature verification;</li>
+<li>middle: medium-risk in session rate and periodic feature verification;</li>
+<li>high: high-risk session rate and periodic feature verification;</li>
+<li>timeout: Timeout duration for detection;</li>
+<li>not_browser: invalid browser;</li>
+<li>is_bot: Bot Client.</li>
     */
     @SerializedName("Result")
     @Expose
     private String Result;
 
     /**
-    * The action. Values:
-<li>`drop`: Block</li>
-<li>`monitor`: Observe</li>
-<li>`silence`: Drop w/o response</li>
-<li>`shortdelay`: Add short latency</li>
-<li>`longdelay`: Add long latency</li>
+    * Penalty action. Valid values:
+<li>drop: block;</li>
+<li>monitor: observation;</li>
+<li>silence: silence;</li>
+<li>shortdelay: respond after a short time;</li>
+<li>longdelay: respond after a long wait.</li>
     */
     @SerializedName("Action")
     @Expose
     private String Action;
 
     /**
-     * Get The validation result. Values:
-<li>`invalid`: Invalid Cookie</li>
-<li>`cookie_empty`: No Cookie/Cookie expired</li>
-<li>`js_empty`: Client JS disabled</li>
-<li>`low`: Low-risk session</li>
-<li>`middle`: Medium-risk session</li>
-<li>`high`: High-risk session</li>
-<li>`timeout`: JS validation timed out</li>
-<li>`not_browser`: Invalid browser</li>
-<li>`is_bot`: Bot client</li> 
-     * @return Result The validation result. Values:
-<li>`invalid`: Invalid Cookie</li>
-<li>`cookie_empty`: No Cookie/Cookie expired</li>
-<li>`js_empty`: Client JS disabled</li>
-<li>`low`: Low-risk session</li>
-<li>`middle`: Medium-risk session</li>
-<li>`high`: High-risk session</li>
-<li>`timeout`: JS validation timed out</li>
-<li>`not_browser`: Invalid browser</li>
-<li>`is_bot`: Bot client</li>
+     * Get Check results. Valid values:
+<li>invalid: invalid Cookie;</li>
+<li>cookie_empty: No cookie carried or the cookie has expired;</li>
+<li>js_empty: JS is not enabled on the client (test not completed);</li>
+<li>low: low risk in session rate and periodic feature verification;</li>
+<li>middle: medium-risk in session rate and periodic feature verification;</li>
+<li>high: high-risk session rate and periodic feature verification;</li>
+<li>timeout: Timeout duration for detection;</li>
+<li>not_browser: invalid browser;</li>
+<li>is_bot: Bot Client.</li> 
+     * @return Result Check results. Valid values:
+<li>invalid: invalid Cookie;</li>
+<li>cookie_empty: No cookie carried or the cookie has expired;</li>
+<li>js_empty: JS is not enabled on the client (test not completed);</li>
+<li>low: low risk in session rate and periodic feature verification;</li>
+<li>middle: medium-risk in session rate and periodic feature verification;</li>
+<li>high: high-risk session rate and periodic feature verification;</li>
+<li>timeout: Timeout duration for detection;</li>
+<li>not_browser: invalid browser;</li>
+<li>is_bot: Bot Client.</li>
      */
     public String getResult() {
         return this.Result;
     }
 
     /**
-     * Set The validation result. Values:
-<li>`invalid`: Invalid Cookie</li>
-<li>`cookie_empty`: No Cookie/Cookie expired</li>
-<li>`js_empty`: Client JS disabled</li>
-<li>`low`: Low-risk session</li>
-<li>`middle`: Medium-risk session</li>
-<li>`high`: High-risk session</li>
-<li>`timeout`: JS validation timed out</li>
-<li>`not_browser`: Invalid browser</li>
-<li>`is_bot`: Bot client</li>
-     * @param Result The validation result. Values:
-<li>`invalid`: Invalid Cookie</li>
-<li>`cookie_empty`: No Cookie/Cookie expired</li>
-<li>`js_empty`: Client JS disabled</li>
-<li>`low`: Low-risk session</li>
-<li>`middle`: Medium-risk session</li>
-<li>`high`: High-risk session</li>
-<li>`timeout`: JS validation timed out</li>
-<li>`not_browser`: Invalid browser</li>
-<li>`is_bot`: Bot client</li>
+     * Set Check results. Valid values:
+<li>invalid: invalid Cookie;</li>
+<li>cookie_empty: No cookie carried or the cookie has expired;</li>
+<li>js_empty: JS is not enabled on the client (test not completed);</li>
+<li>low: low risk in session rate and periodic feature verification;</li>
+<li>middle: medium-risk in session rate and periodic feature verification;</li>
+<li>high: high-risk session rate and periodic feature verification;</li>
+<li>timeout: Timeout duration for detection;</li>
+<li>not_browser: invalid browser;</li>
+<li>is_bot: Bot Client.</li>
+     * @param Result Check results. Valid values:
+<li>invalid: invalid Cookie;</li>
+<li>cookie_empty: No cookie carried or the cookie has expired;</li>
+<li>js_empty: JS is not enabled on the client (test not completed);</li>
+<li>low: low risk in session rate and periodic feature verification;</li>
+<li>middle: medium-risk in session rate and periodic feature verification;</li>
+<li>high: high-risk session rate and periodic feature verification;</li>
+<li>timeout: Timeout duration for detection;</li>
+<li>not_browser: invalid browser;</li>
+<li>is_bot: Bot Client.</li>
      */
     public void setResult(String Result) {
         this.Result = Result;
     }
 
     /**
-     * Get The action. Values:
-<li>`drop`: Block</li>
-<li>`monitor`: Observe</li>
-<li>`silence`: Drop w/o response</li>
-<li>`shortdelay`: Add short latency</li>
-<li>`longdelay`: Add long latency</li> 
-     * @return Action The action. Values:
-<li>`drop`: Block</li>
-<li>`monitor`: Observe</li>
-<li>`silence`: Drop w/o response</li>
-<li>`shortdelay`: Add short latency</li>
-<li>`longdelay`: Add long latency</li>
+     * Get Penalty action. Valid values:
+<li>drop: block;</li>
+<li>monitor: observation;</li>
+<li>silence: silence;</li>
+<li>shortdelay: respond after a short time;</li>
+<li>longdelay: respond after a long wait.</li> 
+     * @return Action Penalty action. Valid values:
+<li>drop: block;</li>
+<li>monitor: observation;</li>
+<li>silence: silence;</li>
+<li>shortdelay: respond after a short time;</li>
+<li>longdelay: respond after a long wait.</li>
      */
     public String getAction() {
         return this.Action;
     }
 
     /**
-     * Set The action. Values:
-<li>`drop`: Block</li>
-<li>`monitor`: Observe</li>
-<li>`silence`: Drop w/o response</li>
-<li>`shortdelay`: Add short latency</li>
-<li>`longdelay`: Add long latency</li>
-     * @param Action The action. Values:
-<li>`drop`: Block</li>
-<li>`monitor`: Observe</li>
-<li>`silence`: Drop w/o response</li>
-<li>`shortdelay`: Add short latency</li>
-<li>`longdelay`: Add long latency</li>
+     * Set Penalty action. Valid values:
+<li>drop: block;</li>
+<li>monitor: observation;</li>
+<li>silence: silence;</li>
+<li>shortdelay: respond after a short time;</li>
+<li>longdelay: respond after a long wait.</li>
+     * @param Action Penalty action. Valid values:
+<li>drop: block;</li>
+<li>monitor: observation;</li>
+<li>silence: silence;</li>
+<li>shortdelay: respond after a short time;</li>
+<li>longdelay: respond after a long wait.</li>
      */
     public void setAction(String Action) {
         this.Action = Action;

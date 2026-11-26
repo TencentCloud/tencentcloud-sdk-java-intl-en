@@ -24,125 +24,125 @@ import java.util.HashMap;
 public class CreateAliasDomainRequest extends AbstractModel {
 
     /**
-    * The site ID.
+    * Zone ID.
     */
     @SerializedName("ZoneId")
     @Expose
     private String ZoneId;
 
     /**
-    * The alias domain name.
+    * Alias domain name.
     */
     @SerializedName("AliasName")
     @Expose
     private String AliasName;
 
     /**
-    * The target domain name.
+    * Target domain name.
     */
     @SerializedName("TargetName")
     @Expose
     private String TargetName;
 
     /**
-    * Certificate configuration. Values:
-<li>`none`: (Default) Do not configure</li>
-<li>`hosting`: Managed SSL certificate</li>
+    * Certificate configuration. Valid values:
+<li> none: without configuring;</li>
+<li> hosting: managed SSL certificate.</li>Default value: none.
     */
     @SerializedName("CertType")
     @Expose
     private String CertType;
 
     /**
-    * The certificate ID. This field is required when `CertType=hosting`.
+    * When the value of CertType is hosting, you must enter the certificate ID accordingly.
     */
     @SerializedName("CertId")
     @Expose
     private String [] CertId;
 
     /**
-     * Get The site ID. 
-     * @return ZoneId The site ID.
+     * Get Zone ID. 
+     * @return ZoneId Zone ID.
      */
     public String getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set The site ID.
-     * @param ZoneId The site ID.
+     * Set Zone ID.
+     * @param ZoneId Zone ID.
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get The alias domain name. 
-     * @return AliasName The alias domain name.
+     * Get Alias domain name. 
+     * @return AliasName Alias domain name.
      */
     public String getAliasName() {
         return this.AliasName;
     }
 
     /**
-     * Set The alias domain name.
-     * @param AliasName The alias domain name.
+     * Set Alias domain name.
+     * @param AliasName Alias domain name.
      */
     public void setAliasName(String AliasName) {
         this.AliasName = AliasName;
     }
 
     /**
-     * Get The target domain name. 
-     * @return TargetName The target domain name.
+     * Get Target domain name. 
+     * @return TargetName Target domain name.
      */
     public String getTargetName() {
         return this.TargetName;
     }
 
     /**
-     * Set The target domain name.
-     * @param TargetName The target domain name.
+     * Set Target domain name.
+     * @param TargetName Target domain name.
      */
     public void setTargetName(String TargetName) {
         this.TargetName = TargetName;
     }
 
     /**
-     * Get Certificate configuration. Values:
-<li>`none`: (Default) Do not configure</li>
-<li>`hosting`: Managed SSL certificate</li> 
-     * @return CertType Certificate configuration. Values:
-<li>`none`: (Default) Do not configure</li>
-<li>`hosting`: Managed SSL certificate</li>
+     * Get Certificate configuration. Valid values:
+<li> none: without configuring;</li>
+<li> hosting: managed SSL certificate.</li>Default value: none. 
+     * @return CertType Certificate configuration. Valid values:
+<li> none: without configuring;</li>
+<li> hosting: managed SSL certificate.</li>Default value: none.
      */
     public String getCertType() {
         return this.CertType;
     }
 
     /**
-     * Set Certificate configuration. Values:
-<li>`none`: (Default) Do not configure</li>
-<li>`hosting`: Managed SSL certificate</li>
-     * @param CertType Certificate configuration. Values:
-<li>`none`: (Default) Do not configure</li>
-<li>`hosting`: Managed SSL certificate</li>
+     * Set Certificate configuration. Valid values:
+<li> none: without configuring;</li>
+<li> hosting: managed SSL certificate.</li>Default value: none.
+     * @param CertType Certificate configuration. Valid values:
+<li> none: without configuring;</li>
+<li> hosting: managed SSL certificate.</li>Default value: none.
      */
     public void setCertType(String CertType) {
         this.CertType = CertType;
     }
 
     /**
-     * Get The certificate ID. This field is required when `CertType=hosting`. 
-     * @return CertId The certificate ID. This field is required when `CertType=hosting`.
+     * Get When the value of CertType is hosting, you must enter the certificate ID accordingly. 
+     * @return CertId When the value of CertType is hosting, you must enter the certificate ID accordingly.
      */
     public String [] getCertId() {
         return this.CertId;
     }
 
     /**
-     * Set The certificate ID. This field is required when `CertType=hosting`.
-     * @param CertId The certificate ID. This field is required when `CertType=hosting`.
+     * Set When the value of CertType is hosting, you must enter the certificate ID accordingly.
+     * @param CertId When the value of CertType is hosting, you must enter the certificate ID accordingly.
      */
     public void setCertId(String [] CertId) {
         this.CertId = CertId;

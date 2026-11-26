@@ -31,14 +31,14 @@ public class DescribeInferenceServiceMonitorDataRequest extends AbstractModel {
     private String ZoneId;
 
     /**
-    * <p>ID of the inference service. You can import up to 10 inference service IDs.</p>
+    * <p>Inference service ID. You can input up to 10 inference service IDs.</p>
     */
     @SerializedName("ServiceIds")
     @Expose
     private String [] ServiceIds;
 
     /**
-    * <p>Metric list, supports up to 10 metrics. Valid values: <li>cpu_usage_average: Average CPU utilization, unit: %, metric type: Float;</li><li>cpu_usage_max: Maximum CPU utilization, unit: %, metric type: Float;</li><li>gpu_usage_average: Average GPU utilization, unit: %, metric type: Float;</li><li>gpu_usage_max: Maximum GPU utilization, unit: %, metric type: Float;</li><li>instance_num_average: Average number of instances, unit: unit, metric type: Float;</li><li>instance_num_max: Maximum number of instances, unit: unit, metric type: Float;</li><li>gpu_memory_usage_max: Maximum GPU VRAM utilization, unit: %, metric type: Float;</li><li>memory_usage_average: Average memory utilization, unit: %, metric type: Float;</li><li>memory_usage_max: Maximum memory utilization, unit: %, metric type: Float;</li></p>
+    * <p>Metric list. A maximum of 10 metrics are supported. Valid values: <li>cpu_usage_average: average CPU usage rate, unit: %, metric type: Float;</li><li>cpu_usage_max: maximum CPU usage rate, unit: %, metric type: Float;</li><li>gpu_usage_average: average GPU usage rate, unit: %, metric type: Float;</li><li>gpu_usage_max: maximum GPU usage rate, unit: %, metric type: Float;</li><li>instance_num_average: average number of instances, unit: count, metric type: Float;</li><li>instance_num_max: maximum number of instances, unit: count, metric type: Float;</li><li>gpu_memory_usage_max: maximum GPU VRAM usage rate, unit: %, metric type: Float;</li><li>memory_usage_average: average memory usage rate, unit: %, metric type: Float;</li><li>memory_usage_max: maximum memory usage rate, unit: %, metric type: Float;</li></p>
     */
     @SerializedName("MetricNames")
     @Expose
@@ -59,7 +59,7 @@ public class DescribeInferenceServiceMonitorDataRequest extends AbstractModel {
     private String EndTime;
 
     /**
-    * <p>Query time granularity. Valid values:</p><li>min: 1 minute, supports queries within a 1-day range.</li><li>5min: 5 minutes, supports queries within a 7-day range.</li><li>hour: 1 hour, supports queries within a 30-day range.</li><li>day: 1 day, supports queries within a 30-day range.</li>If this parameter is not input, the granularity will be automatically inferred based on the interval between the start time and end time. Specifically, data will be queried with a granularity of min, 5min, hour, and day respectively when the period is no more than 2 hours, no more than 2 days, no more than 7 days, and over 7 days.
+    * <p>Query time granularity. Valid values:</p><li>min: 1 minute, supporting queries within 1 day;</li><li>5min: 5 minutes, supporting queries within 7 days;</li><li>hour: 1 hour, supporting queries within 30 days;</li><li>day: 1 day, supporting queries within 30 days;</li>If this parameter is not input, the granularity will be automatically calculated based on the interval between the start time and end time. Specifically, data will be queried with a granularity of min, 5min, hour, and day respectively when the period is no more than 2 hours, no more than 2 days, no more than 7 days, and over 7 days.
     */
     @SerializedName("Interval")
     @Expose
@@ -82,32 +82,32 @@ public class DescribeInferenceServiceMonitorDataRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>ID of the inference service. You can import up to 10 inference service IDs.</p> 
-     * @return ServiceIds <p>ID of the inference service. You can import up to 10 inference service IDs.</p>
+     * Get <p>Inference service ID. You can input up to 10 inference service IDs.</p> 
+     * @return ServiceIds <p>Inference service ID. You can input up to 10 inference service IDs.</p>
      */
     public String [] getServiceIds() {
         return this.ServiceIds;
     }
 
     /**
-     * Set <p>ID of the inference service. You can import up to 10 inference service IDs.</p>
-     * @param ServiceIds <p>ID of the inference service. You can import up to 10 inference service IDs.</p>
+     * Set <p>Inference service ID. You can input up to 10 inference service IDs.</p>
+     * @param ServiceIds <p>Inference service ID. You can input up to 10 inference service IDs.</p>
      */
     public void setServiceIds(String [] ServiceIds) {
         this.ServiceIds = ServiceIds;
     }
 
     /**
-     * Get <p>Metric list, supports up to 10 metrics. Valid values: <li>cpu_usage_average: Average CPU utilization, unit: %, metric type: Float;</li><li>cpu_usage_max: Maximum CPU utilization, unit: %, metric type: Float;</li><li>gpu_usage_average: Average GPU utilization, unit: %, metric type: Float;</li><li>gpu_usage_max: Maximum GPU utilization, unit: %, metric type: Float;</li><li>instance_num_average: Average number of instances, unit: unit, metric type: Float;</li><li>instance_num_max: Maximum number of instances, unit: unit, metric type: Float;</li><li>gpu_memory_usage_max: Maximum GPU VRAM utilization, unit: %, metric type: Float;</li><li>memory_usage_average: Average memory utilization, unit: %, metric type: Float;</li><li>memory_usage_max: Maximum memory utilization, unit: %, metric type: Float;</li></p> 
-     * @return MetricNames <p>Metric list, supports up to 10 metrics. Valid values: <li>cpu_usage_average: Average CPU utilization, unit: %, metric type: Float;</li><li>cpu_usage_max: Maximum CPU utilization, unit: %, metric type: Float;</li><li>gpu_usage_average: Average GPU utilization, unit: %, metric type: Float;</li><li>gpu_usage_max: Maximum GPU utilization, unit: %, metric type: Float;</li><li>instance_num_average: Average number of instances, unit: unit, metric type: Float;</li><li>instance_num_max: Maximum number of instances, unit: unit, metric type: Float;</li><li>gpu_memory_usage_max: Maximum GPU VRAM utilization, unit: %, metric type: Float;</li><li>memory_usage_average: Average memory utilization, unit: %, metric type: Float;</li><li>memory_usage_max: Maximum memory utilization, unit: %, metric type: Float;</li></p>
+     * Get <p>Metric list. A maximum of 10 metrics are supported. Valid values: <li>cpu_usage_average: average CPU usage rate, unit: %, metric type: Float;</li><li>cpu_usage_max: maximum CPU usage rate, unit: %, metric type: Float;</li><li>gpu_usage_average: average GPU usage rate, unit: %, metric type: Float;</li><li>gpu_usage_max: maximum GPU usage rate, unit: %, metric type: Float;</li><li>instance_num_average: average number of instances, unit: count, metric type: Float;</li><li>instance_num_max: maximum number of instances, unit: count, metric type: Float;</li><li>gpu_memory_usage_max: maximum GPU VRAM usage rate, unit: %, metric type: Float;</li><li>memory_usage_average: average memory usage rate, unit: %, metric type: Float;</li><li>memory_usage_max: maximum memory usage rate, unit: %, metric type: Float;</li></p> 
+     * @return MetricNames <p>Metric list. A maximum of 10 metrics are supported. Valid values: <li>cpu_usage_average: average CPU usage rate, unit: %, metric type: Float;</li><li>cpu_usage_max: maximum CPU usage rate, unit: %, metric type: Float;</li><li>gpu_usage_average: average GPU usage rate, unit: %, metric type: Float;</li><li>gpu_usage_max: maximum GPU usage rate, unit: %, metric type: Float;</li><li>instance_num_average: average number of instances, unit: count, metric type: Float;</li><li>instance_num_max: maximum number of instances, unit: count, metric type: Float;</li><li>gpu_memory_usage_max: maximum GPU VRAM usage rate, unit: %, metric type: Float;</li><li>memory_usage_average: average memory usage rate, unit: %, metric type: Float;</li><li>memory_usage_max: maximum memory usage rate, unit: %, metric type: Float;</li></p>
      */
     public String [] getMetricNames() {
         return this.MetricNames;
     }
 
     /**
-     * Set <p>Metric list, supports up to 10 metrics. Valid values: <li>cpu_usage_average: Average CPU utilization, unit: %, metric type: Float;</li><li>cpu_usage_max: Maximum CPU utilization, unit: %, metric type: Float;</li><li>gpu_usage_average: Average GPU utilization, unit: %, metric type: Float;</li><li>gpu_usage_max: Maximum GPU utilization, unit: %, metric type: Float;</li><li>instance_num_average: Average number of instances, unit: unit, metric type: Float;</li><li>instance_num_max: Maximum number of instances, unit: unit, metric type: Float;</li><li>gpu_memory_usage_max: Maximum GPU VRAM utilization, unit: %, metric type: Float;</li><li>memory_usage_average: Average memory utilization, unit: %, metric type: Float;</li><li>memory_usage_max: Maximum memory utilization, unit: %, metric type: Float;</li></p>
-     * @param MetricNames <p>Metric list, supports up to 10 metrics. Valid values: <li>cpu_usage_average: Average CPU utilization, unit: %, metric type: Float;</li><li>cpu_usage_max: Maximum CPU utilization, unit: %, metric type: Float;</li><li>gpu_usage_average: Average GPU utilization, unit: %, metric type: Float;</li><li>gpu_usage_max: Maximum GPU utilization, unit: %, metric type: Float;</li><li>instance_num_average: Average number of instances, unit: unit, metric type: Float;</li><li>instance_num_max: Maximum number of instances, unit: unit, metric type: Float;</li><li>gpu_memory_usage_max: Maximum GPU VRAM utilization, unit: %, metric type: Float;</li><li>memory_usage_average: Average memory utilization, unit: %, metric type: Float;</li><li>memory_usage_max: Maximum memory utilization, unit: %, metric type: Float;</li></p>
+     * Set <p>Metric list. A maximum of 10 metrics are supported. Valid values: <li>cpu_usage_average: average CPU usage rate, unit: %, metric type: Float;</li><li>cpu_usage_max: maximum CPU usage rate, unit: %, metric type: Float;</li><li>gpu_usage_average: average GPU usage rate, unit: %, metric type: Float;</li><li>gpu_usage_max: maximum GPU usage rate, unit: %, metric type: Float;</li><li>instance_num_average: average number of instances, unit: count, metric type: Float;</li><li>instance_num_max: maximum number of instances, unit: count, metric type: Float;</li><li>gpu_memory_usage_max: maximum GPU VRAM usage rate, unit: %, metric type: Float;</li><li>memory_usage_average: average memory usage rate, unit: %, metric type: Float;</li><li>memory_usage_max: maximum memory usage rate, unit: %, metric type: Float;</li></p>
+     * @param MetricNames <p>Metric list. A maximum of 10 metrics are supported. Valid values: <li>cpu_usage_average: average CPU usage rate, unit: %, metric type: Float;</li><li>cpu_usage_max: maximum CPU usage rate, unit: %, metric type: Float;</li><li>gpu_usage_average: average GPU usage rate, unit: %, metric type: Float;</li><li>gpu_usage_max: maximum GPU usage rate, unit: %, metric type: Float;</li><li>instance_num_average: average number of instances, unit: count, metric type: Float;</li><li>instance_num_max: maximum number of instances, unit: count, metric type: Float;</li><li>gpu_memory_usage_max: maximum GPU VRAM usage rate, unit: %, metric type: Float;</li><li>memory_usage_average: average memory usage rate, unit: %, metric type: Float;</li><li>memory_usage_max: maximum memory usage rate, unit: %, metric type: Float;</li></p>
      */
     public void setMetricNames(String [] MetricNames) {
         this.MetricNames = MetricNames;
@@ -146,16 +146,16 @@ public class DescribeInferenceServiceMonitorDataRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>Query time granularity. Valid values:</p><li>min: 1 minute, supports queries within a 1-day range.</li><li>5min: 5 minutes, supports queries within a 7-day range.</li><li>hour: 1 hour, supports queries within a 30-day range.</li><li>day: 1 day, supports queries within a 30-day range.</li>If this parameter is not input, the granularity will be automatically inferred based on the interval between the start time and end time. Specifically, data will be queried with a granularity of min, 5min, hour, and day respectively when the period is no more than 2 hours, no more than 2 days, no more than 7 days, and over 7 days. 
-     * @return Interval <p>Query time granularity. Valid values:</p><li>min: 1 minute, supports queries within a 1-day range.</li><li>5min: 5 minutes, supports queries within a 7-day range.</li><li>hour: 1 hour, supports queries within a 30-day range.</li><li>day: 1 day, supports queries within a 30-day range.</li>If this parameter is not input, the granularity will be automatically inferred based on the interval between the start time and end time. Specifically, data will be queried with a granularity of min, 5min, hour, and day respectively when the period is no more than 2 hours, no more than 2 days, no more than 7 days, and over 7 days.
+     * Get <p>Query time granularity. Valid values:</p><li>min: 1 minute, supporting queries within 1 day;</li><li>5min: 5 minutes, supporting queries within 7 days;</li><li>hour: 1 hour, supporting queries within 30 days;</li><li>day: 1 day, supporting queries within 30 days;</li>If this parameter is not input, the granularity will be automatically calculated based on the interval between the start time and end time. Specifically, data will be queried with a granularity of min, 5min, hour, and day respectively when the period is no more than 2 hours, no more than 2 days, no more than 7 days, and over 7 days. 
+     * @return Interval <p>Query time granularity. Valid values:</p><li>min: 1 minute, supporting queries within 1 day;</li><li>5min: 5 minutes, supporting queries within 7 days;</li><li>hour: 1 hour, supporting queries within 30 days;</li><li>day: 1 day, supporting queries within 30 days;</li>If this parameter is not input, the granularity will be automatically calculated based on the interval between the start time and end time. Specifically, data will be queried with a granularity of min, 5min, hour, and day respectively when the period is no more than 2 hours, no more than 2 days, no more than 7 days, and over 7 days.
      */
     public String getInterval() {
         return this.Interval;
     }
 
     /**
-     * Set <p>Query time granularity. Valid values:</p><li>min: 1 minute, supports queries within a 1-day range.</li><li>5min: 5 minutes, supports queries within a 7-day range.</li><li>hour: 1 hour, supports queries within a 30-day range.</li><li>day: 1 day, supports queries within a 30-day range.</li>If this parameter is not input, the granularity will be automatically inferred based on the interval between the start time and end time. Specifically, data will be queried with a granularity of min, 5min, hour, and day respectively when the period is no more than 2 hours, no more than 2 days, no more than 7 days, and over 7 days.
-     * @param Interval <p>Query time granularity. Valid values:</p><li>min: 1 minute, supports queries within a 1-day range.</li><li>5min: 5 minutes, supports queries within a 7-day range.</li><li>hour: 1 hour, supports queries within a 30-day range.</li><li>day: 1 day, supports queries within a 30-day range.</li>If this parameter is not input, the granularity will be automatically inferred based on the interval between the start time and end time. Specifically, data will be queried with a granularity of min, 5min, hour, and day respectively when the period is no more than 2 hours, no more than 2 days, no more than 7 days, and over 7 days.
+     * Set <p>Query time granularity. Valid values:</p><li>min: 1 minute, supporting queries within 1 day;</li><li>5min: 5 minutes, supporting queries within 7 days;</li><li>hour: 1 hour, supporting queries within 30 days;</li><li>day: 1 day, supporting queries within 30 days;</li>If this parameter is not input, the granularity will be automatically calculated based on the interval between the start time and end time. Specifically, data will be queried with a granularity of min, 5min, hour, and day respectively when the period is no more than 2 hours, no more than 2 days, no more than 7 days, and over 7 days.
+     * @param Interval <p>Query time granularity. Valid values:</p><li>min: 1 minute, supporting queries within 1 day;</li><li>5min: 5 minutes, supporting queries within 7 days;</li><li>hour: 1 hour, supporting queries within 30 days;</li><li>day: 1 day, supporting queries within 30 days;</li>If this parameter is not input, the granularity will be automatically calculated based on the interval between the start time and end time. Specifically, data will be queried with a granularity of min, 5min, hour, and day respectively when the period is no more than 2 hours, no more than 2 days, no more than 7 days, and over 7 days.
      */
     public void setInterval(String Interval) {
         this.Interval = Interval;

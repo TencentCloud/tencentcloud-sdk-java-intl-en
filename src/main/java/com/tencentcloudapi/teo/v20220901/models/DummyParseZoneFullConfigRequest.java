@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.rum.v20210622.models;
+package com.tencentcloudapi.teo.v20220901.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,42 +21,16 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeOfflineLogConfigsRequest extends AbstractModel {
+public class DummyParseZoneFullConfigRequest extends AbstractModel {
 
-    /**
-    * Unique project key for reporting
-    */
-    @SerializedName("ProjectKey")
-    @Expose
-    private String ProjectKey;
-
-    /**
-     * Get Unique project key for reporting 
-     * @return ProjectKey Unique project key for reporting
-     */
-    public String getProjectKey() {
-        return this.ProjectKey;
-    }
-
-    /**
-     * Set Unique project key for reporting
-     * @param ProjectKey Unique project key for reporting
-     */
-    public void setProjectKey(String ProjectKey) {
-        this.ProjectKey = ProjectKey;
-    }
-
-    public DescribeOfflineLogConfigsRequest() {
+    public DummyParseZoneFullConfigRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeOfflineLogConfigsRequest(DescribeOfflineLogConfigsRequest source) {
-        if (source.ProjectKey != null) {
-            this.ProjectKey = new String(source.ProjectKey);
-        }
+    public DummyParseZoneFullConfigRequest(DummyParseZoneFullConfigRequest source) {
     }
 
 
@@ -64,7 +38,6 @@ public class DescribeOfflineLogConfigsRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "ProjectKey", this.ProjectKey);
 
     }
 }

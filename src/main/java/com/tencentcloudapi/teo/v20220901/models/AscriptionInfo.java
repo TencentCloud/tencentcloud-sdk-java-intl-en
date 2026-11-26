@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class AscriptionInfo extends AbstractModel {
 
     /**
-    * 
+    * Host record.
     */
     @SerializedName("Subdomain")
     @Expose
     private String Subdomain;
 
     /**
-    * The record type.
+    * Record type.
     */
     @SerializedName("RecordType")
     @Expose
     private String RecordType;
 
     /**
-    * The record value.
+    * Record value.
     */
     @SerializedName("RecordValue")
     @Expose
     private String RecordValue;
 
     /**
-     * Get  
-     * @return Subdomain 
+     * Get Host record. 
+     * @return Subdomain Host record.
      */
     public String getSubdomain() {
         return this.Subdomain;
     }
 
     /**
-     * Set 
-     * @param Subdomain 
+     * Set Host record.
+     * @param Subdomain Host record.
      */
     public void setSubdomain(String Subdomain) {
         this.Subdomain = Subdomain;
     }
 
     /**
-     * Get The record type. 
-     * @return RecordType The record type.
+     * Get Record type. 
+     * @return RecordType Record type.
      */
     public String getRecordType() {
         return this.RecordType;
     }
 
     /**
-     * Set The record type.
-     * @param RecordType The record type.
+     * Set Record type.
+     * @param RecordType Record type.
      */
     public void setRecordType(String RecordType) {
         this.RecordType = RecordType;
     }
 
     /**
-     * Get The record value. 
-     * @return RecordValue The record value.
+     * Get Record value. 
+     * @return RecordValue Record value.
      */
     public String getRecordValue() {
         return this.RecordValue;
     }
 
     /**
-     * Set The record value.
-     * @param RecordValue The record value.
+     * Set Record value.
+     * @param RecordValue Record value.
      */
     public void setRecordValue(String RecordValue) {
         this.RecordValue = RecordValue;

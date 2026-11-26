@@ -31,7 +31,7 @@ public class FailReason extends AbstractModel {
     private String Reason;
 
     /**
-    * List of resources failed to be processed. 
+    * List of resources that failed processing.
     */
     @SerializedName("Targets")
     @Expose
@@ -54,16 +54,16 @@ public class FailReason extends AbstractModel {
     }
 
     /**
-     * Get List of resources failed to be processed.  
-     * @return Targets List of resources failed to be processed. 
+     * Get List of resources that failed processing. 
+     * @return Targets List of resources that failed processing.
      */
     public String [] getTargets() {
         return this.Targets;
     }
 
     /**
-     * Set List of resources failed to be processed. 
-     * @param Targets List of resources failed to be processed. 
+     * Set List of resources that failed processing.
+     * @param Targets List of resources that failed processing.
      */
     public void setTargets(String [] Targets) {
         this.Targets = Targets;

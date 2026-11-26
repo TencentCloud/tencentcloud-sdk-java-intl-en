@@ -24,201 +24,201 @@ import java.util.HashMap;
 public class ModifyAccelerationDomainRequest extends AbstractModel {
 
     /**
-    * ID of the site related with the accelerated domain name.
+    * Zone ID of the acceleration domain name.
     */
     @SerializedName("ZoneId")
     @Expose
     private String ZoneId;
 
     /**
-    * Accelerated domain name
+    * Acceleration domain name.
     */
     @SerializedName("DomainName")
     @Expose
     private String DomainName;
 
     /**
-    * Details of the origin.
+    * Origin server information.
     */
     @SerializedName("OriginInfo")
     @Expose
     private OriginInfo OriginInfo;
 
     /**
-    * Origin-pull protocol configuration. Values:
-<li>`FOLLOW`: Follow the protocol of origin</li>
-<li>`HTTP`: Send requests to the origin over HTTP</li>
-<li>`HTTPS`: Send requests to the origin over HTTPS</li>
-<li>The original configuration applies if this field is not specified.</li>
+    * Origin-pull protocol. Valid values:
+<li>FOLLOW: follow protocol;</li>
+<li>HTTP: Origin-pull over HTTP;</li>
+<li>HTTPS: Origin-pull over HTTPS protocol.</li>
+<li>Leave blank to retain the original configuration.</li>
     */
     @SerializedName("OriginProtocol")
     @Expose
     private String OriginProtocol;
 
     /**
-    * Ports for HTTP origin-pull requests. Range: 1-65535. It takes effect when `OriginProtocol=FOLLOW/HTTP`. The original configuration is used if it's not specified.
+    * HTTP origin-pull port. Value range: 1–65535. This parameter is valid only when OriginProtocol is FOLLOW or HTTP. If not specified, the original configuration is retained.
     */
     @SerializedName("HttpOriginPort")
     @Expose
     private Long HttpOriginPort;
 
     /**
-    * Ports for HTTPS origin-pull requests. Range: 1-65535. It takes effect when `OriginProtocol=FOLLOW/HTTPS`. The original configuration is used if it's not specified.
+    * HTTPS origin-pull port. Value range: 1-65535. This parameter is valid only when OriginProtocol is FOLLOW or HTTPS. If not specified, the original configuration is retained.
     */
     @SerializedName("HttpsOriginPort")
     @Expose
     private Long HttpsOriginPort;
 
     /**
-    * IPv6 status. Values:
-<li>`follow`: Follow the IPv6 configuration of the site</li>
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-<li>The original configuration applies if this field is not specified.</li>
+    * IPv6 status. Valid values:
+<li>follow: follow the site IPv6 configuration;</li>
+<li>on: enabled;</li>
+<li>off: Disabled.</li>
+<li>Leave blank to retain the original configuration.</li>
     */
     @SerializedName("IPv6Status")
     @Expose
     private String IPv6Status;
 
     /**
-     * Get ID of the site related with the accelerated domain name. 
-     * @return ZoneId ID of the site related with the accelerated domain name.
+     * Get Zone ID of the acceleration domain name. 
+     * @return ZoneId Zone ID of the acceleration domain name.
      */
     public String getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set ID of the site related with the accelerated domain name.
-     * @param ZoneId ID of the site related with the accelerated domain name.
+     * Set Zone ID of the acceleration domain name.
+     * @param ZoneId Zone ID of the acceleration domain name.
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get Accelerated domain name 
-     * @return DomainName Accelerated domain name
+     * Get Acceleration domain name. 
+     * @return DomainName Acceleration domain name.
      */
     public String getDomainName() {
         return this.DomainName;
     }
 
     /**
-     * Set Accelerated domain name
-     * @param DomainName Accelerated domain name
+     * Set Acceleration domain name.
+     * @param DomainName Acceleration domain name.
      */
     public void setDomainName(String DomainName) {
         this.DomainName = DomainName;
     }
 
     /**
-     * Get Details of the origin. 
-     * @return OriginInfo Details of the origin.
+     * Get Origin server information. 
+     * @return OriginInfo Origin server information.
      */
     public OriginInfo getOriginInfo() {
         return this.OriginInfo;
     }
 
     /**
-     * Set Details of the origin.
-     * @param OriginInfo Details of the origin.
+     * Set Origin server information.
+     * @param OriginInfo Origin server information.
      */
     public void setOriginInfo(OriginInfo OriginInfo) {
         this.OriginInfo = OriginInfo;
     }
 
     /**
-     * Get Origin-pull protocol configuration. Values:
-<li>`FOLLOW`: Follow the protocol of origin</li>
-<li>`HTTP`: Send requests to the origin over HTTP</li>
-<li>`HTTPS`: Send requests to the origin over HTTPS</li>
-<li>The original configuration applies if this field is not specified.</li> 
-     * @return OriginProtocol Origin-pull protocol configuration. Values:
-<li>`FOLLOW`: Follow the protocol of origin</li>
-<li>`HTTP`: Send requests to the origin over HTTP</li>
-<li>`HTTPS`: Send requests to the origin over HTTPS</li>
-<li>The original configuration applies if this field is not specified.</li>
+     * Get Origin-pull protocol. Valid values:
+<li>FOLLOW: follow protocol;</li>
+<li>HTTP: Origin-pull over HTTP;</li>
+<li>HTTPS: Origin-pull over HTTPS protocol.</li>
+<li>Leave blank to retain the original configuration.</li> 
+     * @return OriginProtocol Origin-pull protocol. Valid values:
+<li>FOLLOW: follow protocol;</li>
+<li>HTTP: Origin-pull over HTTP;</li>
+<li>HTTPS: Origin-pull over HTTPS protocol.</li>
+<li>Leave blank to retain the original configuration.</li>
      */
     public String getOriginProtocol() {
         return this.OriginProtocol;
     }
 
     /**
-     * Set Origin-pull protocol configuration. Values:
-<li>`FOLLOW`: Follow the protocol of origin</li>
-<li>`HTTP`: Send requests to the origin over HTTP</li>
-<li>`HTTPS`: Send requests to the origin over HTTPS</li>
-<li>The original configuration applies if this field is not specified.</li>
-     * @param OriginProtocol Origin-pull protocol configuration. Values:
-<li>`FOLLOW`: Follow the protocol of origin</li>
-<li>`HTTP`: Send requests to the origin over HTTP</li>
-<li>`HTTPS`: Send requests to the origin over HTTPS</li>
-<li>The original configuration applies if this field is not specified.</li>
+     * Set Origin-pull protocol. Valid values:
+<li>FOLLOW: follow protocol;</li>
+<li>HTTP: Origin-pull over HTTP;</li>
+<li>HTTPS: Origin-pull over HTTPS protocol.</li>
+<li>Leave blank to retain the original configuration.</li>
+     * @param OriginProtocol Origin-pull protocol. Valid values:
+<li>FOLLOW: follow protocol;</li>
+<li>HTTP: Origin-pull over HTTP;</li>
+<li>HTTPS: Origin-pull over HTTPS protocol.</li>
+<li>Leave blank to retain the original configuration.</li>
      */
     public void setOriginProtocol(String OriginProtocol) {
         this.OriginProtocol = OriginProtocol;
     }
 
     /**
-     * Get Ports for HTTP origin-pull requests. Range: 1-65535. It takes effect when `OriginProtocol=FOLLOW/HTTP`. The original configuration is used if it's not specified. 
-     * @return HttpOriginPort Ports for HTTP origin-pull requests. Range: 1-65535. It takes effect when `OriginProtocol=FOLLOW/HTTP`. The original configuration is used if it's not specified.
+     * Get HTTP origin-pull port. Value range: 1–65535. This parameter is valid only when OriginProtocol is FOLLOW or HTTP. If not specified, the original configuration is retained. 
+     * @return HttpOriginPort HTTP origin-pull port. Value range: 1–65535. This parameter is valid only when OriginProtocol is FOLLOW or HTTP. If not specified, the original configuration is retained.
      */
     public Long getHttpOriginPort() {
         return this.HttpOriginPort;
     }
 
     /**
-     * Set Ports for HTTP origin-pull requests. Range: 1-65535. It takes effect when `OriginProtocol=FOLLOW/HTTP`. The original configuration is used if it's not specified.
-     * @param HttpOriginPort Ports for HTTP origin-pull requests. Range: 1-65535. It takes effect when `OriginProtocol=FOLLOW/HTTP`. The original configuration is used if it's not specified.
+     * Set HTTP origin-pull port. Value range: 1–65535. This parameter is valid only when OriginProtocol is FOLLOW or HTTP. If not specified, the original configuration is retained.
+     * @param HttpOriginPort HTTP origin-pull port. Value range: 1–65535. This parameter is valid only when OriginProtocol is FOLLOW or HTTP. If not specified, the original configuration is retained.
      */
     public void setHttpOriginPort(Long HttpOriginPort) {
         this.HttpOriginPort = HttpOriginPort;
     }
 
     /**
-     * Get Ports for HTTPS origin-pull requests. Range: 1-65535. It takes effect when `OriginProtocol=FOLLOW/HTTPS`. The original configuration is used if it's not specified. 
-     * @return HttpsOriginPort Ports for HTTPS origin-pull requests. Range: 1-65535. It takes effect when `OriginProtocol=FOLLOW/HTTPS`. The original configuration is used if it's not specified.
+     * Get HTTPS origin-pull port. Value range: 1-65535. This parameter is valid only when OriginProtocol is FOLLOW or HTTPS. If not specified, the original configuration is retained. 
+     * @return HttpsOriginPort HTTPS origin-pull port. Value range: 1-65535. This parameter is valid only when OriginProtocol is FOLLOW or HTTPS. If not specified, the original configuration is retained.
      */
     public Long getHttpsOriginPort() {
         return this.HttpsOriginPort;
     }
 
     /**
-     * Set Ports for HTTPS origin-pull requests. Range: 1-65535. It takes effect when `OriginProtocol=FOLLOW/HTTPS`. The original configuration is used if it's not specified.
-     * @param HttpsOriginPort Ports for HTTPS origin-pull requests. Range: 1-65535. It takes effect when `OriginProtocol=FOLLOW/HTTPS`. The original configuration is used if it's not specified.
+     * Set HTTPS origin-pull port. Value range: 1-65535. This parameter is valid only when OriginProtocol is FOLLOW or HTTPS. If not specified, the original configuration is retained.
+     * @param HttpsOriginPort HTTPS origin-pull port. Value range: 1-65535. This parameter is valid only when OriginProtocol is FOLLOW or HTTPS. If not specified, the original configuration is retained.
      */
     public void setHttpsOriginPort(Long HttpsOriginPort) {
         this.HttpsOriginPort = HttpsOriginPort;
     }
 
     /**
-     * Get IPv6 status. Values:
-<li>`follow`: Follow the IPv6 configuration of the site</li>
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-<li>The original configuration applies if this field is not specified.</li> 
-     * @return IPv6Status IPv6 status. Values:
-<li>`follow`: Follow the IPv6 configuration of the site</li>
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-<li>The original configuration applies if this field is not specified.</li>
+     * Get IPv6 status. Valid values:
+<li>follow: follow the site IPv6 configuration;</li>
+<li>on: enabled;</li>
+<li>off: Disabled.</li>
+<li>Leave blank to retain the original configuration.</li> 
+     * @return IPv6Status IPv6 status. Valid values:
+<li>follow: follow the site IPv6 configuration;</li>
+<li>on: enabled;</li>
+<li>off: Disabled.</li>
+<li>Leave blank to retain the original configuration.</li>
      */
     public String getIPv6Status() {
         return this.IPv6Status;
     }
 
     /**
-     * Set IPv6 status. Values:
-<li>`follow`: Follow the IPv6 configuration of the site</li>
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-<li>The original configuration applies if this field is not specified.</li>
-     * @param IPv6Status IPv6 status. Values:
-<li>`follow`: Follow the IPv6 configuration of the site</li>
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-<li>The original configuration applies if this field is not specified.</li>
+     * Set IPv6 status. Valid values:
+<li>follow: follow the site IPv6 configuration;</li>
+<li>on: enabled;</li>
+<li>off: Disabled.</li>
+<li>Leave blank to retain the original configuration.</li>
+     * @param IPv6Status IPv6 status. Valid values:
+<li>follow: follow the site IPv6 configuration;</li>
+<li>on: enabled;</li>
+<li>off: Disabled.</li>
+<li>Leave blank to retain the original configuration.</li>
      */
     public void setIPv6Status(String IPv6Status) {
         this.IPv6Status = IPv6Status;

@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class AdvancedFilter extends AbstractModel {
 
     /**
-    * Field to be filtered.
+    * Fields to be filtered.
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * Value of the filtered field.
+    * Filter value of the field.
     */
     @SerializedName("Values")
     @Expose
@@ -45,32 +45,32 @@ public class AdvancedFilter extends AbstractModel {
     private Boolean Fuzzy;
 
     /**
-     * Get Field to be filtered. 
-     * @return Name Field to be filtered.
+     * Get Fields to be filtered. 
+     * @return Name Fields to be filtered.
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Field to be filtered.
-     * @param Name Field to be filtered.
+     * Set Fields to be filtered.
+     * @param Name Fields to be filtered.
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Value of the filtered field. 
-     * @return Values Value of the filtered field.
+     * Get Filter value of the field. 
+     * @return Values Filter value of the field.
      */
     public String [] getValues() {
         return this.Values;
     }
 
     /**
-     * Set Value of the filtered field.
-     * @param Values Value of the filtered field.
+     * Set Filter value of the field.
+     * @param Values Filter value of the field.
      */
     public void setValues(String [] Values) {
         this.Values = Values;

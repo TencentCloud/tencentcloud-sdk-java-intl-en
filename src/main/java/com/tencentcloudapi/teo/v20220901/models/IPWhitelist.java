@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class IPWhitelist extends AbstractModel {
 
     /**
-    * List of IPv4 addresses
+    * IPv4 list.
     */
     @SerializedName("IPv4")
     @Expose
     private String [] IPv4;
 
     /**
-    * List of IPv6 addresses
+    * IPv6 list.
     */
     @SerializedName("IPv6")
     @Expose
     private String [] IPv6;
 
     /**
-     * Get List of IPv4 addresses 
-     * @return IPv4 List of IPv4 addresses
+     * Get IPv4 list. 
+     * @return IPv4 IPv4 list.
      */
     public String [] getIPv4() {
         return this.IPv4;
     }
 
     /**
-     * Set List of IPv4 addresses
-     * @param IPv4 List of IPv4 addresses
+     * Set IPv4 list.
+     * @param IPv4 IPv4 list.
      */
     public void setIPv4(String [] IPv4) {
         this.IPv4 = IPv4;
     }
 
     /**
-     * Get List of IPv6 addresses 
-     * @return IPv6 List of IPv6 addresses
+     * Get IPv6 list. 
+     * @return IPv6 IPv6 list.
      */
     public String [] getIPv6() {
         return this.IPv6;
     }
 
     /**
-     * Set List of IPv6 addresses
-     * @param IPv6 List of IPv6 addresses
+     * Set IPv6 list.
+     * @param IPv6 IPv6 list.
      */
     public void setIPv6(String [] IPv6) {
         this.IPv6 = IPv6;

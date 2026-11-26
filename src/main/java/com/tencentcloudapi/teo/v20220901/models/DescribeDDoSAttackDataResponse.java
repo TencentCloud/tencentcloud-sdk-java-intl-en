@@ -24,15 +24,14 @@ import java.util.HashMap;
 public class DescribeDDoSAttackDataResponse extends AbstractModel {
 
     /**
-    * Total number of query results.
+    * <p>Total number of entries in the query result.</p>
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * List of DDoS attack data.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>List of DDoS attack data content.</p>
     */
     @SerializedName("Data")
     @Expose
@@ -46,36 +45,32 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Total number of query results. 
-     * @return TotalCount Total number of query results.
+     * Get <p>Total number of entries in the query result.</p> 
+     * @return TotalCount <p>Total number of entries in the query result.</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Total number of query results.
-     * @param TotalCount Total number of query results.
+     * Set <p>Total number of entries in the query result.</p>
+     * @param TotalCount <p>Total number of entries in the query result.</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get List of DDoS attack data.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Data List of DDoS attack data.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>List of DDoS attack data content.</p> 
+     * @return Data <p>List of DDoS attack data content.</p>
      */
     public SecEntry [] getData() {
         return this.Data;
     }
 
     /**
-     * Set List of DDoS attack data.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Data List of DDoS attack data.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>List of DDoS attack data content.</p>
+     * @param Data <p>List of DDoS attack data content.</p>
      */
     public void setData(SecEntry [] Data) {
         this.Data = Data;

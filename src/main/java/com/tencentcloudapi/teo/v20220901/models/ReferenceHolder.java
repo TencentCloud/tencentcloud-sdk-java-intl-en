@@ -31,7 +31,7 @@ public class ReferenceHolder extends AbstractModel {
     private String ZoneId;
 
     /**
-    * Instance type. Values as follows:
+    * Instance type. Valid values:
 <li>acceleration-domain: Acceleration domain name;</li>
     */
     @SerializedName("Type")
@@ -39,7 +39,7 @@ public class ReferenceHolder extends AbstractModel {
     private String Type;
 
     /**
-    * Referenced instance information.
+    * Instance information that is cited or referencing.
     */
     @SerializedName("Instance")
     @Expose
@@ -62,9 +62,9 @@ public class ReferenceHolder extends AbstractModel {
     }
 
     /**
-     * Get Instance type. Values as follows:
+     * Get Instance type. Valid values:
 <li>acceleration-domain: Acceleration domain name;</li> 
-     * @return Type Instance type. Values as follows:
+     * @return Type Instance type. Valid values:
 <li>acceleration-domain: Acceleration domain name;</li>
      */
     public String getType() {
@@ -72,9 +72,9 @@ public class ReferenceHolder extends AbstractModel {
     }
 
     /**
-     * Set Instance type. Values as follows:
+     * Set Instance type. Valid values:
 <li>acceleration-domain: Acceleration domain name;</li>
-     * @param Type Instance type. Values as follows:
+     * @param Type Instance type. Valid values:
 <li>acceleration-domain: Acceleration domain name;</li>
      */
     public void setType(String Type) {
@@ -82,16 +82,16 @@ public class ReferenceHolder extends AbstractModel {
     }
 
     /**
-     * Get Referenced instance information. 
-     * @return Instance Referenced instance information.
+     * Get Instance information that is cited or referencing. 
+     * @return Instance Instance information that is cited or referencing.
      */
     public String getInstance() {
         return this.Instance;
     }
 
     /**
-     * Set Referenced instance information.
-     * @param Instance Referenced instance information.
+     * Set Instance information that is cited or referencing.
+     * @param Instance Instance information that is cited or referencing.
      */
     public void setInstance(String Instance) {
         this.Instance = Instance;

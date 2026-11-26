@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeInferenceServicesResponse extends AbstractModel {
 
     /**
-    * <p>Total number of eligible services.</p>
+    * <p>Total services that meet the criteria.</p>
     */
     @SerializedName("TotalCount")
     @Expose
@@ -45,16 +45,16 @@ public class DescribeInferenceServicesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get <p>Total number of eligible services.</p> 
-     * @return TotalCount <p>Total number of eligible services.</p>
+     * Get <p>Total services that meet the criteria.</p> 
+     * @return TotalCount <p>Total services that meet the criteria.</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set <p>Total number of eligible services.</p>
-     * @param TotalCount <p>Total number of eligible services.</p>
+     * Set <p>Total services that meet the criteria.</p>
+     * @param TotalCount <p>Total services that meet the criteria.</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

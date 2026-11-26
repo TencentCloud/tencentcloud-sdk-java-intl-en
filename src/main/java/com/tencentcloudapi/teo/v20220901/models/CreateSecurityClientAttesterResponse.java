@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateSecurityClientAttesterResponse extends AbstractModel {
 
     /**
-    * Specifies the authentication option ID list.
+    * Authentication option ID list.
     */
     @SerializedName("ClientAttesterIds")
     @Expose
@@ -38,16 +38,16 @@ public class CreateSecurityClientAttesterResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Specifies the authentication option ID list. 
-     * @return ClientAttesterIds Specifies the authentication option ID list.
+     * Get Authentication option ID list. 
+     * @return ClientAttesterIds Authentication option ID list.
      */
     public String [] getClientAttesterIds() {
         return this.ClientAttesterIds;
     }
 
     /**
-     * Set Specifies the authentication option ID list.
-     * @param ClientAttesterIds Specifies the authentication option ID list.
+     * Set Authentication option ID list.
+     * @param ClientAttesterIds Authentication option ID list.
      */
     public void setClientAttesterIds(String [] ClientAttesterIds) {
         this.ClientAttesterIds = ClientAttesterIds;

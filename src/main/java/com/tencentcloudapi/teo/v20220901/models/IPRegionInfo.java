@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class IPRegionInfo extends AbstractModel {
 
     /**
-    * IP address, IPV4 or IPV6.
+    * IP, IPV4, or IPV6.
     */
     @SerializedName("IP")
     @Expose
@@ -32,24 +32,24 @@ public class IPRegionInfo extends AbstractModel {
 
     /**
     * Whether the IP belongs to an EdgeOne node. Valid values:
-<li>yes: This IP belongs to an EdgeOne node;</li>
-<li>no: This IP does not belong to an EdgeOne node.</li>
+<li>yes: The IP belongs to an EdgeOne node;</li>
+<li>no: The IP not within EdgeOne nodes.</li>
     */
     @SerializedName("IsEdgeOneIP")
     @Expose
     private String IsEdgeOneIP;
 
     /**
-     * Get IP address, IPV4 or IPV6. 
-     * @return IP IP address, IPV4 or IPV6.
+     * Get IP, IPV4, or IPV6. 
+     * @return IP IP, IPV4, or IPV6.
      */
     public String getIP() {
         return this.IP;
     }
 
     /**
-     * Set IP address, IPV4 or IPV6.
-     * @param IP IP address, IPV4 or IPV6.
+     * Set IP, IPV4, or IPV6.
+     * @param IP IP, IPV4, or IPV6.
      */
     public void setIP(String IP) {
         this.IP = IP;
@@ -57,11 +57,11 @@ public class IPRegionInfo extends AbstractModel {
 
     /**
      * Get Whether the IP belongs to an EdgeOne node. Valid values:
-<li>yes: This IP belongs to an EdgeOne node;</li>
-<li>no: This IP does not belong to an EdgeOne node.</li> 
+<li>yes: The IP belongs to an EdgeOne node;</li>
+<li>no: The IP not within EdgeOne nodes.</li> 
      * @return IsEdgeOneIP Whether the IP belongs to an EdgeOne node. Valid values:
-<li>yes: This IP belongs to an EdgeOne node;</li>
-<li>no: This IP does not belong to an EdgeOne node.</li>
+<li>yes: The IP belongs to an EdgeOne node;</li>
+<li>no: The IP not within EdgeOne nodes.</li>
      */
     public String getIsEdgeOneIP() {
         return this.IsEdgeOneIP;
@@ -69,11 +69,11 @@ public class IPRegionInfo extends AbstractModel {
 
     /**
      * Set Whether the IP belongs to an EdgeOne node. Valid values:
-<li>yes: This IP belongs to an EdgeOne node;</li>
-<li>no: This IP does not belong to an EdgeOne node.</li>
+<li>yes: The IP belongs to an EdgeOne node;</li>
+<li>no: The IP not within EdgeOne nodes.</li>
      * @param IsEdgeOneIP Whether the IP belongs to an EdgeOne node. Valid values:
-<li>yes: This IP belongs to an EdgeOne node;</li>
-<li>no: This IP does not belong to an EdgeOne node.</li>
+<li>yes: The IP belongs to an EdgeOne node;</li>
+<li>no: The IP not within EdgeOne nodes.</li>
      */
     public void setIsEdgeOneIP(String IsEdgeOneIP) {
         this.IsEdgeOneIP = IsEdgeOneIP;

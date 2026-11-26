@@ -38,7 +38,7 @@ public class ConfirmMultiPathGatewayOriginACLRequest extends AbstractModel {
     private String GatewayId;
 
     /**
-    * Describes the version number of the origin server IP.
+    * Origin-pull IP version number.
     */
     @SerializedName("OriginACLVersion")
     @Expose
@@ -77,16 +77,16 @@ public class ConfirmMultiPathGatewayOriginACLRequest extends AbstractModel {
     }
 
     /**
-     * Get Describes the version number of the origin server IP. 
-     * @return OriginACLVersion Describes the version number of the origin server IP.
+     * Get Origin-pull IP version number. 
+     * @return OriginACLVersion Origin-pull IP version number.
      */
     public Long getOriginACLVersion() {
         return this.OriginACLVersion;
     }
 
     /**
-     * Set Describes the version number of the origin server IP.
-     * @param OriginACLVersion Describes the version number of the origin server IP.
+     * Set Origin-pull IP version number.
+     * @param OriginACLVersion Origin-pull IP version number.
      */
     public void setOriginACLVersion(Long OriginACLVersion) {
         this.OriginACLVersion = OriginACLVersion;

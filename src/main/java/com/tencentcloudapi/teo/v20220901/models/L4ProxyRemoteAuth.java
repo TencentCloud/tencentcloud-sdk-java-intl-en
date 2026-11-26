@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class L4ProxyRemoteAuth extends AbstractModel {
 
     /**
-    * Whether to enable L4 remote authentication. Valid values:
+    * L4 remote authentication switch. Valid values:
 <li>on: Enable;</li>
 <li>off: Disable.</li>
     */
@@ -41,7 +41,7 @@ public class L4ProxyRemoteAuth extends AbstractModel {
     private String Address;
 
     /**
-    * Default origin-pull behavior based on L4 forwarding rules after the remote authentication service is disabled. Valid values:
+    * Default origin-pull behavior based on L4 forwarding rules after remote authentication service inaccessibility. Valid values:
 <li>reject: Block and deny access;</li>
 <li>allow: Allow access.</li>
     */
@@ -50,10 +50,10 @@ public class L4ProxyRemoteAuth extends AbstractModel {
     private String ServerFaultyBehavior;
 
     /**
-     * Get Whether to enable L4 remote authentication. Valid values:
+     * Get L4 remote authentication switch. Valid values:
 <li>on: Enable;</li>
 <li>off: Disable.</li> 
-     * @return Switch Whether to enable L4 remote authentication. Valid values:
+     * @return Switch L4 remote authentication switch. Valid values:
 <li>on: Enable;</li>
 <li>off: Disable.</li>
      */
@@ -62,10 +62,10 @@ public class L4ProxyRemoteAuth extends AbstractModel {
     }
 
     /**
-     * Set Whether to enable L4 remote authentication. Valid values:
+     * Set L4 remote authentication switch. Valid values:
 <li>on: Enable;</li>
 <li>off: Disable.</li>
-     * @param Switch Whether to enable L4 remote authentication. Valid values:
+     * @param Switch L4 remote authentication switch. Valid values:
 <li>on: Enable;</li>
 <li>off: Disable.</li>
      */
@@ -94,10 +94,10 @@ public class L4ProxyRemoteAuth extends AbstractModel {
     }
 
     /**
-     * Get Default origin-pull behavior based on L4 forwarding rules after the remote authentication service is disabled. Valid values:
+     * Get Default origin-pull behavior based on L4 forwarding rules after remote authentication service inaccessibility. Valid values:
 <li>reject: Block and deny access;</li>
 <li>allow: Allow access.</li> 
-     * @return ServerFaultyBehavior Default origin-pull behavior based on L4 forwarding rules after the remote authentication service is disabled. Valid values:
+     * @return ServerFaultyBehavior Default origin-pull behavior based on L4 forwarding rules after remote authentication service inaccessibility. Valid values:
 <li>reject: Block and deny access;</li>
 <li>allow: Allow access.</li>
      */
@@ -106,10 +106,10 @@ public class L4ProxyRemoteAuth extends AbstractModel {
     }
 
     /**
-     * Set Default origin-pull behavior based on L4 forwarding rules after the remote authentication service is disabled. Valid values:
+     * Set Default origin-pull behavior based on L4 forwarding rules after remote authentication service inaccessibility. Valid values:
 <li>reject: Block and deny access;</li>
 <li>allow: Allow access.</li>
-     * @param ServerFaultyBehavior Default origin-pull behavior based on L4 forwarding rules after the remote authentication service is disabled. Valid values:
+     * @param ServerFaultyBehavior Default origin-pull behavior based on L4 forwarding rules after remote authentication service inaccessibility. Valid values:
 <li>reject: Block and deny access;</li>
 <li>allow: Allow access.</li>
      */

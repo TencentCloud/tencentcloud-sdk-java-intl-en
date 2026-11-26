@@ -24,25 +24,25 @@ import java.util.HashMap;
 public class OriginGroupReference extends AbstractModel {
 
     /**
-    * Reference service type. valid values:.
-<Li>Acceleration-Domain: specifies the acceleration domain name.</li>.
-<Li>Rule-Engine: specifies the rule engine.</li>.
-<Li>Load-Balancer: specifies the cloud load balancer.</li>.
-<li>application-proxy: layer 4 proxy.</li>.
+    * Reference service type. Valid values:
+<li>acceleration-domain: Acceleration domain name;</li>
+<li>rule-engine: rule engine;</li>
+<li>load-balancer: load balancing;</li>
+<li>application-proxy: Layer 4 proxy.</li>
     */
     @SerializedName("InstanceType")
     @Expose
     private String InstanceType;
 
     /**
-    * ID of the instances referencing the origin group
+    * ID of the referenced instance.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Specifies the instance name of the reference type.
+    * Instance name of the reference type.
     */
     @SerializedName("InstanceName")
     @Expose
@@ -56,78 +56,78 @@ public class OriginGroupReference extends AbstractModel {
     private String ZoneId;
 
     /**
-    * Refers to the site name.
+    * Refer to the site name.
     */
     @SerializedName("ZoneName")
     @Expose
     private String ZoneName;
 
     /**
-    * Refers to the site alias.
+    * Refer to the site alias.
     */
     @SerializedName("AliasZoneName")
     @Expose
     private String AliasZoneName;
 
     /**
-     * Get Reference service type. valid values:.
-<Li>Acceleration-Domain: specifies the acceleration domain name.</li>.
-<Li>Rule-Engine: specifies the rule engine.</li>.
-<Li>Load-Balancer: specifies the cloud load balancer.</li>.
-<li>application-proxy: layer 4 proxy.</li>. 
-     * @return InstanceType Reference service type. valid values:.
-<Li>Acceleration-Domain: specifies the acceleration domain name.</li>.
-<Li>Rule-Engine: specifies the rule engine.</li>.
-<Li>Load-Balancer: specifies the cloud load balancer.</li>.
-<li>application-proxy: layer 4 proxy.</li>.
+     * Get Reference service type. Valid values:
+<li>acceleration-domain: Acceleration domain name;</li>
+<li>rule-engine: rule engine;</li>
+<li>load-balancer: load balancing;</li>
+<li>application-proxy: Layer 4 proxy.</li> 
+     * @return InstanceType Reference service type. Valid values:
+<li>acceleration-domain: Acceleration domain name;</li>
+<li>rule-engine: rule engine;</li>
+<li>load-balancer: load balancing;</li>
+<li>application-proxy: Layer 4 proxy.</li>
      */
     public String getInstanceType() {
         return this.InstanceType;
     }
 
     /**
-     * Set Reference service type. valid values:.
-<Li>Acceleration-Domain: specifies the acceleration domain name.</li>.
-<Li>Rule-Engine: specifies the rule engine.</li>.
-<Li>Load-Balancer: specifies the cloud load balancer.</li>.
-<li>application-proxy: layer 4 proxy.</li>.
-     * @param InstanceType Reference service type. valid values:.
-<Li>Acceleration-Domain: specifies the acceleration domain name.</li>.
-<Li>Rule-Engine: specifies the rule engine.</li>.
-<Li>Load-Balancer: specifies the cloud load balancer.</li>.
-<li>application-proxy: layer 4 proxy.</li>.
+     * Set Reference service type. Valid values:
+<li>acceleration-domain: Acceleration domain name;</li>
+<li>rule-engine: rule engine;</li>
+<li>load-balancer: load balancing;</li>
+<li>application-proxy: Layer 4 proxy.</li>
+     * @param InstanceType Reference service type. Valid values:
+<li>acceleration-domain: Acceleration domain name;</li>
+<li>rule-engine: rule engine;</li>
+<li>load-balancer: load balancing;</li>
+<li>application-proxy: Layer 4 proxy.</li>
      */
     public void setInstanceType(String InstanceType) {
         this.InstanceType = InstanceType;
     }
 
     /**
-     * Get ID of the instances referencing the origin group 
-     * @return InstanceId ID of the instances referencing the origin group
+     * Get ID of the referenced instance. 
+     * @return InstanceId ID of the referenced instance.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set ID of the instances referencing the origin group
-     * @param InstanceId ID of the instances referencing the origin group
+     * Set ID of the referenced instance.
+     * @param InstanceId ID of the referenced instance.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Specifies the instance name of the reference type. 
-     * @return InstanceName Specifies the instance name of the reference type.
+     * Get Instance name of the reference type. 
+     * @return InstanceName Instance name of the reference type.
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set Specifies the instance name of the reference type.
-     * @param InstanceName Specifies the instance name of the reference type.
+     * Set Instance name of the reference type.
+     * @param InstanceName Instance name of the reference type.
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
@@ -150,32 +150,32 @@ public class OriginGroupReference extends AbstractModel {
     }
 
     /**
-     * Get Refers to the site name. 
-     * @return ZoneName Refers to the site name.
+     * Get Refer to the site name. 
+     * @return ZoneName Refer to the site name.
      */
     public String getZoneName() {
         return this.ZoneName;
     }
 
     /**
-     * Set Refers to the site name.
-     * @param ZoneName Refers to the site name.
+     * Set Refer to the site name.
+     * @param ZoneName Refer to the site name.
      */
     public void setZoneName(String ZoneName) {
         this.ZoneName = ZoneName;
     }
 
     /**
-     * Get Refers to the site alias. 
-     * @return AliasZoneName Refers to the site alias.
+     * Get Refer to the site alias. 
+     * @return AliasZoneName Refer to the site alias.
      */
     public String getAliasZoneName() {
         return this.AliasZoneName;
     }
 
     /**
-     * Set Refers to the site alias.
-     * @param AliasZoneName Refers to the site alias.
+     * Set Refer to the site alias.
+     * @param AliasZoneName Refer to the site alias.
      */
     public void setAliasZoneName(String AliasZoneName) {
         this.AliasZoneName = AliasZoneName;

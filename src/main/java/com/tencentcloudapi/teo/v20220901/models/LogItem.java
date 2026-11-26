@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class LogItem extends AbstractModel {
 
     /**
-    * Log generation time point, using unix millisecond-level timestamp.
+    * Time point when the log is generated, using a unix millisecond-level timestamp.
     */
     @SerializedName("Timestamp")
     @Expose
     private Long Timestamp;
 
     /**
-    * Specific contents of the log, using JSON String Format.
+    * Specific contents of the log in JSON String Format.
     */
     @SerializedName("LogJson")
     @Expose
     private String LogJson;
 
     /**
-     * Get Log generation time point, using unix millisecond-level timestamp. 
-     * @return Timestamp Log generation time point, using unix millisecond-level timestamp.
+     * Get Time point when the log is generated, using a unix millisecond-level timestamp. 
+     * @return Timestamp Time point when the log is generated, using a unix millisecond-level timestamp.
      */
     public Long getTimestamp() {
         return this.Timestamp;
     }
 
     /**
-     * Set Log generation time point, using unix millisecond-level timestamp.
-     * @param Timestamp Log generation time point, using unix millisecond-level timestamp.
+     * Set Time point when the log is generated, using a unix millisecond-level timestamp.
+     * @param Timestamp Time point when the log is generated, using a unix millisecond-level timestamp.
      */
     public void setTimestamp(Long Timestamp) {
         this.Timestamp = Timestamp;
     }
 
     /**
-     * Get Specific contents of the log, using JSON String Format. 
-     * @return LogJson Specific contents of the log, using JSON String Format.
+     * Get Specific contents of the log in JSON String Format. 
+     * @return LogJson Specific contents of the log in JSON String Format.
      */
     public String getLogJson() {
         return this.LogJson;
     }
 
     /**
-     * Set Specific contents of the log, using JSON String Format.
-     * @param LogJson Specific contents of the log, using JSON String Format.
+     * Set Specific contents of the log in JSON String Format.
+     * @param LogJson Specific contents of the log in JSON String Format.
      */
     public void setLogJson(String LogJson) {
         this.LogJson = LogJson;

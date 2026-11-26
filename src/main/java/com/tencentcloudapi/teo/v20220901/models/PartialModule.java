@@ -24,61 +24,61 @@ import java.util.HashMap;
 public class PartialModule extends AbstractModel {
 
     /**
-    * Module name. value is.
-<li>managed-rule: managed rule Id;</li>.
-<Li>Managed-Group: managed rule group;</li>.
-<li>`waf`: to be deprecated, managed rule.</li>.
+    * Module name. Valid values:
+<li>managed-rule: managed rule Id;</li>
+<li>managed-group: managed rule group;</li>
+<li>waf: to be deprecated, managed rule.</li>
     */
     @SerializedName("Module")
     @Expose
     private String Module;
 
     /**
-    * Specifies the list of rule ids that require exceptions under the module.
+    * List of specific rule IDs that require exceptions under the module.
     */
     @SerializedName("Include")
     @Expose
     private Long [] Include;
 
     /**
-     * Get Module name. value is.
-<li>managed-rule: managed rule Id;</li>.
-<Li>Managed-Group: managed rule group;</li>.
-<li>`waf`: to be deprecated, managed rule.</li>. 
-     * @return Module Module name. value is.
-<li>managed-rule: managed rule Id;</li>.
-<Li>Managed-Group: managed rule group;</li>.
-<li>`waf`: to be deprecated, managed rule.</li>.
+     * Get Module name. Valid values:
+<li>managed-rule: managed rule Id;</li>
+<li>managed-group: managed rule group;</li>
+<li>waf: to be deprecated, managed rule.</li> 
+     * @return Module Module name. Valid values:
+<li>managed-rule: managed rule Id;</li>
+<li>managed-group: managed rule group;</li>
+<li>waf: to be deprecated, managed rule.</li>
      */
     public String getModule() {
         return this.Module;
     }
 
     /**
-     * Set Module name. value is.
-<li>managed-rule: managed rule Id;</li>.
-<Li>Managed-Group: managed rule group;</li>.
-<li>`waf`: to be deprecated, managed rule.</li>.
-     * @param Module Module name. value is.
-<li>managed-rule: managed rule Id;</li>.
-<Li>Managed-Group: managed rule group;</li>.
-<li>`waf`: to be deprecated, managed rule.</li>.
+     * Set Module name. Valid values:
+<li>managed-rule: managed rule Id;</li>
+<li>managed-group: managed rule group;</li>
+<li>waf: to be deprecated, managed rule.</li>
+     * @param Module Module name. Valid values:
+<li>managed-rule: managed rule Id;</li>
+<li>managed-group: managed rule group;</li>
+<li>waf: to be deprecated, managed rule.</li>
      */
     public void setModule(String Module) {
         this.Module = Module;
     }
 
     /**
-     * Get Specifies the list of rule ids that require exceptions under the module. 
-     * @return Include Specifies the list of rule ids that require exceptions under the module.
+     * Get List of specific rule IDs that require exceptions under the module. 
+     * @return Include List of specific rule IDs that require exceptions under the module.
      */
     public Long [] getInclude() {
         return this.Include;
     }
 
     /**
-     * Set Specifies the list of rule ids that require exceptions under the module.
-     * @param Include Specifies the list of rule ids that require exceptions under the module.
+     * Set List of specific rule IDs that require exceptions under the module.
+     * @param Include List of specific rule IDs that require exceptions under the module.
      */
     public void setInclude(Long [] Include) {
         this.Include = Include;

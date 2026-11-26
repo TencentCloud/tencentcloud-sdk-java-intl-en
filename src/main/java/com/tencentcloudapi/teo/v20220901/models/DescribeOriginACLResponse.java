@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeOriginACLResponse extends AbstractModel {
 
     /**
-    * Describes the binding relationship between the l7 acceleration domain/l4 proxy instance and the origin server IP range.
+    * Details of the binding relationship between an L7 acceleration domain name/L4 proxy instance and an origin-pull IP range.
     */
     @SerializedName("OriginACLInfo")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeOriginACLResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Describes the binding relationship between the l7 acceleration domain/l4 proxy instance and the origin server IP range. 
-     * @return OriginACLInfo Describes the binding relationship between the l7 acceleration domain/l4 proxy instance and the origin server IP range.
+     * Get Details of the binding relationship between an L7 acceleration domain name/L4 proxy instance and an origin-pull IP range. 
+     * @return OriginACLInfo Details of the binding relationship between an L7 acceleration domain name/L4 proxy instance and an origin-pull IP range.
      */
     public OriginACLInfo getOriginACLInfo() {
         return this.OriginACLInfo;
     }
 
     /**
-     * Set Describes the binding relationship between the l7 acceleration domain/l4 proxy instance and the origin server IP range.
-     * @param OriginACLInfo Describes the binding relationship between the l7 acceleration domain/l4 proxy instance and the origin server IP range.
+     * Set Details of the binding relationship between an L7 acceleration domain name/L4 proxy instance and an origin-pull IP range.
+     * @param OriginACLInfo Details of the binding relationship between an L7 acceleration domain name/L4 proxy instance and an origin-pull IP range.
      */
     public void setOriginACLInfo(OriginACLInfo OriginACLInfo) {
         this.OriginACLInfo = OriginACLInfo;

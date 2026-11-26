@@ -31,7 +31,7 @@ public class DescribeSecurityIPGroupRequest extends AbstractModel {
     private String ZoneId;
 
     /**
-    * Specifies the security ip group id. <li>when this parameter is provided, only the configuration of the specified security ip group id is queried;</li> <li>when this parameter is not provided, information of all security ip groups under the site is returned.</li>.
+    * Specify security IP group ID. <li>When this parameter is provided, only the configuration of the security IP group with the specified ID is queried;</li> <li>When no parameter is passed, information of all security IP groups under the site is returned.</li>
     */
     @SerializedName("GroupIds")
     @Expose
@@ -54,16 +54,16 @@ public class DescribeSecurityIPGroupRequest extends AbstractModel {
     }
 
     /**
-     * Get Specifies the security ip group id. <li>when this parameter is provided, only the configuration of the specified security ip group id is queried;</li> <li>when this parameter is not provided, information of all security ip groups under the site is returned.</li>. 
-     * @return GroupIds Specifies the security ip group id. <li>when this parameter is provided, only the configuration of the specified security ip group id is queried;</li> <li>when this parameter is not provided, information of all security ip groups under the site is returned.</li>.
+     * Get Specify security IP group ID. <li>When this parameter is provided, only the configuration of the security IP group with the specified ID is queried;</li> <li>When no parameter is passed, information of all security IP groups under the site is returned.</li> 
+     * @return GroupIds Specify security IP group ID. <li>When this parameter is provided, only the configuration of the security IP group with the specified ID is queried;</li> <li>When no parameter is passed, information of all security IP groups under the site is returned.</li>
      */
     public Long [] getGroupIds() {
         return this.GroupIds;
     }
 
     /**
-     * Set Specifies the security ip group id. <li>when this parameter is provided, only the configuration of the specified security ip group id is queried;</li> <li>when this parameter is not provided, information of all security ip groups under the site is returned.</li>.
-     * @param GroupIds Specifies the security ip group id. <li>when this parameter is provided, only the configuration of the specified security ip group id is queried;</li> <li>when this parameter is not provided, information of all security ip groups under the site is returned.</li>.
+     * Set Specify security IP group ID. <li>When this parameter is provided, only the configuration of the security IP group with the specified ID is queried;</li> <li>When no parameter is passed, information of all security IP groups under the site is returned.</li>
+     * @param GroupIds Specify security IP group ID. <li>When this parameter is provided, only the configuration of the security IP group with the specified ID is queried;</li> <li>When no parameter is passed, information of all security IP groups under the site is returned.</li>
      */
     public void setGroupIds(Long [] GroupIds) {
         this.GroupIds = GroupIds;

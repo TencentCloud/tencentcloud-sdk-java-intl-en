@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeRulesResponse extends AbstractModel {
 
     /**
-    * ID of the site
+    * Zone ID.
     */
     @SerializedName("ZoneId")
     @Expose
     private String ZoneId;
 
     /**
-    * List of rules. Rules are sorted in order of execution.
+    * Rule list, sorted by rule execution order from first to last.
     */
     @SerializedName("RuleItems")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeRulesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get ID of the site 
-     * @return ZoneId ID of the site
+     * Get Zone ID. 
+     * @return ZoneId Zone ID.
      */
     public String getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set ID of the site
-     * @param ZoneId ID of the site
+     * Set Zone ID.
+     * @param ZoneId Zone ID.
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get List of rules. Rules are sorted in order of execution. 
-     * @return RuleItems List of rules. Rules are sorted in order of execution.
+     * Get Rule list, sorted by rule execution order from first to last. 
+     * @return RuleItems Rule list, sorted by rule execution order from first to last.
      */
     public RuleItem [] getRuleItems() {
         return this.RuleItems;
     }
 
     /**
-     * Set List of rules. Rules are sorted in order of execution.
-     * @param RuleItems List of rules. Rules are sorted in order of execution.
+     * Set Rule list, sorted by rule execution order from first to last.
+     * @param RuleItems Rule list, sorted by rule execution order from first to last.
      */
     public void setRuleItems(RuleItem [] RuleItems) {
         this.RuleItems = RuleItems;

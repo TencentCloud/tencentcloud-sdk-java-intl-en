@@ -24,161 +24,161 @@ import java.util.HashMap;
 public class KVNamespace extends AbstractModel {
 
     /**
-    * Namespace name. Has uniqueness in the same site.
+    * Namespace name. It is unique within the same site.
     */
     @SerializedName("Namespace")
     @Expose
     private String Namespace;
 
     /**
-    * Namespace description. Remark information filled in upon creation, used for explaining the purpose or business meaning of the namespace. Supports a maximum of 256 characters.
+    * Namespace description. Remark information filled in upon creation, used to describe the purpose or business meaning of the namespace. Supports up to 256 characters.
     */
     @SerializedName("Remark")
     @Expose
     private String Remark;
 
     /**
-    * Available capacity of KV storage space in bytes. It indicates the maximum capacity limit of storable data in namespace, defaulting to 1 GB.
+    * Available capacity of the KV storage space, in bytes. It indicates the maximum capacity limit of storable data in the namespace, which defaults to 1 GB.
     */
     @SerializedName("Capacity")
     @Expose
     private Long Capacity;
 
     /**
-    * KV storage space used capacity in bytes (Byte). It indicates the currently used storage space size of the namespace.
+    * Used KV storage capacity in bytes. It indicates the currently used storage space size of the namespace.
     */
     @SerializedName("CapacityUsed")
     @Expose
     private Long CapacityUsed;
 
     /**
-    * List of referenced instances in the namespace. Shows which edge function instances reference the current namespace and the site information referenced. Returns an empty array if not referenced.
+    * List of instances that reference the namespace. Shows which edge function instances currently reference the namespace, as well as the site information of the references. If not referenced, return an empty array.
     */
     @SerializedName("References")
     @Expose
     private ComponentReference [] References;
 
     /**
-    * The creation time of the namespace follows the ISO 8601 standard in the format YYYY-MM-DDThh:mm:ssZ (UTC time).
+    * Namespace creation time in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ (UTC time).
     */
     @SerializedName("CreatedOn")
     @Expose
     private String CreatedOn;
 
     /**
-    * The last modification time of the namespace follows the ISO 8601 standard in the format YYYY-MM-DDThh:mm:ssZ (UTC time).
+    * Last modification time of the namespace, following the ISO 8601 standard, format: YYYY-MM-DDThh:mm:ssZ (UTC time).
     */
     @SerializedName("ModifiedOn")
     @Expose
     private String ModifiedOn;
 
     /**
-     * Get Namespace name. Has uniqueness in the same site. 
-     * @return Namespace Namespace name. Has uniqueness in the same site.
+     * Get Namespace name. It is unique within the same site. 
+     * @return Namespace Namespace name. It is unique within the same site.
      */
     public String getNamespace() {
         return this.Namespace;
     }
 
     /**
-     * Set Namespace name. Has uniqueness in the same site.
-     * @param Namespace Namespace name. Has uniqueness in the same site.
+     * Set Namespace name. It is unique within the same site.
+     * @param Namespace Namespace name. It is unique within the same site.
      */
     public void setNamespace(String Namespace) {
         this.Namespace = Namespace;
     }
 
     /**
-     * Get Namespace description. Remark information filled in upon creation, used for explaining the purpose or business meaning of the namespace. Supports a maximum of 256 characters. 
-     * @return Remark Namespace description. Remark information filled in upon creation, used for explaining the purpose or business meaning of the namespace. Supports a maximum of 256 characters.
+     * Get Namespace description. Remark information filled in upon creation, used to describe the purpose or business meaning of the namespace. Supports up to 256 characters. 
+     * @return Remark Namespace description. Remark information filled in upon creation, used to describe the purpose or business meaning of the namespace. Supports up to 256 characters.
      */
     public String getRemark() {
         return this.Remark;
     }
 
     /**
-     * Set Namespace description. Remark information filled in upon creation, used for explaining the purpose or business meaning of the namespace. Supports a maximum of 256 characters.
-     * @param Remark Namespace description. Remark information filled in upon creation, used for explaining the purpose or business meaning of the namespace. Supports a maximum of 256 characters.
+     * Set Namespace description. Remark information filled in upon creation, used to describe the purpose or business meaning of the namespace. Supports up to 256 characters.
+     * @param Remark Namespace description. Remark information filled in upon creation, used to describe the purpose or business meaning of the namespace. Supports up to 256 characters.
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;
     }
 
     /**
-     * Get Available capacity of KV storage space in bytes. It indicates the maximum capacity limit of storable data in namespace, defaulting to 1 GB. 
-     * @return Capacity Available capacity of KV storage space in bytes. It indicates the maximum capacity limit of storable data in namespace, defaulting to 1 GB.
+     * Get Available capacity of the KV storage space, in bytes. It indicates the maximum capacity limit of storable data in the namespace, which defaults to 1 GB. 
+     * @return Capacity Available capacity of the KV storage space, in bytes. It indicates the maximum capacity limit of storable data in the namespace, which defaults to 1 GB.
      */
     public Long getCapacity() {
         return this.Capacity;
     }
 
     /**
-     * Set Available capacity of KV storage space in bytes. It indicates the maximum capacity limit of storable data in namespace, defaulting to 1 GB.
-     * @param Capacity Available capacity of KV storage space in bytes. It indicates the maximum capacity limit of storable data in namespace, defaulting to 1 GB.
+     * Set Available capacity of the KV storage space, in bytes. It indicates the maximum capacity limit of storable data in the namespace, which defaults to 1 GB.
+     * @param Capacity Available capacity of the KV storage space, in bytes. It indicates the maximum capacity limit of storable data in the namespace, which defaults to 1 GB.
      */
     public void setCapacity(Long Capacity) {
         this.Capacity = Capacity;
     }
 
     /**
-     * Get KV storage space used capacity in bytes (Byte). It indicates the currently used storage space size of the namespace. 
-     * @return CapacityUsed KV storage space used capacity in bytes (Byte). It indicates the currently used storage space size of the namespace.
+     * Get Used KV storage capacity in bytes. It indicates the currently used storage space size of the namespace. 
+     * @return CapacityUsed Used KV storage capacity in bytes. It indicates the currently used storage space size of the namespace.
      */
     public Long getCapacityUsed() {
         return this.CapacityUsed;
     }
 
     /**
-     * Set KV storage space used capacity in bytes (Byte). It indicates the currently used storage space size of the namespace.
-     * @param CapacityUsed KV storage space used capacity in bytes (Byte). It indicates the currently used storage space size of the namespace.
+     * Set Used KV storage capacity in bytes. It indicates the currently used storage space size of the namespace.
+     * @param CapacityUsed Used KV storage capacity in bytes. It indicates the currently used storage space size of the namespace.
      */
     public void setCapacityUsed(Long CapacityUsed) {
         this.CapacityUsed = CapacityUsed;
     }
 
     /**
-     * Get List of referenced instances in the namespace. Shows which edge function instances reference the current namespace and the site information referenced. Returns an empty array if not referenced. 
-     * @return References List of referenced instances in the namespace. Shows which edge function instances reference the current namespace and the site information referenced. Returns an empty array if not referenced.
+     * Get List of instances that reference the namespace. Shows which edge function instances currently reference the namespace, as well as the site information of the references. If not referenced, return an empty array. 
+     * @return References List of instances that reference the namespace. Shows which edge function instances currently reference the namespace, as well as the site information of the references. If not referenced, return an empty array.
      */
     public ComponentReference [] getReferences() {
         return this.References;
     }
 
     /**
-     * Set List of referenced instances in the namespace. Shows which edge function instances reference the current namespace and the site information referenced. Returns an empty array if not referenced.
-     * @param References List of referenced instances in the namespace. Shows which edge function instances reference the current namespace and the site information referenced. Returns an empty array if not referenced.
+     * Set List of instances that reference the namespace. Shows which edge function instances currently reference the namespace, as well as the site information of the references. If not referenced, return an empty array.
+     * @param References List of instances that reference the namespace. Shows which edge function instances currently reference the namespace, as well as the site information of the references. If not referenced, return an empty array.
      */
     public void setReferences(ComponentReference [] References) {
         this.References = References;
     }
 
     /**
-     * Get The creation time of the namespace follows the ISO 8601 standard in the format YYYY-MM-DDThh:mm:ssZ (UTC time). 
-     * @return CreatedOn The creation time of the namespace follows the ISO 8601 standard in the format YYYY-MM-DDThh:mm:ssZ (UTC time).
+     * Get Namespace creation time in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ (UTC time). 
+     * @return CreatedOn Namespace creation time in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ (UTC time).
      */
     public String getCreatedOn() {
         return this.CreatedOn;
     }
 
     /**
-     * Set The creation time of the namespace follows the ISO 8601 standard in the format YYYY-MM-DDThh:mm:ssZ (UTC time).
-     * @param CreatedOn The creation time of the namespace follows the ISO 8601 standard in the format YYYY-MM-DDThh:mm:ssZ (UTC time).
+     * Set Namespace creation time in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ (UTC time).
+     * @param CreatedOn Namespace creation time in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ (UTC time).
      */
     public void setCreatedOn(String CreatedOn) {
         this.CreatedOn = CreatedOn;
     }
 
     /**
-     * Get The last modification time of the namespace follows the ISO 8601 standard in the format YYYY-MM-DDThh:mm:ssZ (UTC time). 
-     * @return ModifiedOn The last modification time of the namespace follows the ISO 8601 standard in the format YYYY-MM-DDThh:mm:ssZ (UTC time).
+     * Get Last modification time of the namespace, following the ISO 8601 standard, format: YYYY-MM-DDThh:mm:ssZ (UTC time). 
+     * @return ModifiedOn Last modification time of the namespace, following the ISO 8601 standard, format: YYYY-MM-DDThh:mm:ssZ (UTC time).
      */
     public String getModifiedOn() {
         return this.ModifiedOn;
     }
 
     /**
-     * Set The last modification time of the namespace follows the ISO 8601 standard in the format YYYY-MM-DDThh:mm:ssZ (UTC time).
-     * @param ModifiedOn The last modification time of the namespace follows the ISO 8601 standard in the format YYYY-MM-DDThh:mm:ssZ (UTC time).
+     * Set Last modification time of the namespace, following the ISO 8601 standard, format: YYYY-MM-DDThh:mm:ssZ (UTC time).
+     * @param ModifiedOn Last modification time of the namespace, following the ISO 8601 standard, format: YYYY-MM-DDThh:mm:ssZ (UTC time).
      */
     public void setModifiedOn(String ModifiedOn) {
         this.ModifiedOn = ModifiedOn;

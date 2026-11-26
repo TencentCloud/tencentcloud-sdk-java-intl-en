@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class MultiPathGatewayNextOriginACL extends AbstractModel {
 
     /**
-    * Specifies the version number.
+    * Version.
     */
     @SerializedName("Version")
     @Expose
     private Long Version;
 
     /**
-    * Describes the IP range details for origin servers.
+    * Origin-pull IP range details.
     */
     @SerializedName("EntireAddresses")
     @Expose
     private Addresses EntireAddresses;
 
     /**
-    * The latest origin IP range newly added compared with the origin IP range in MultiPathGatewayCurrentOrginACL.
+    * Latest origin-pull IP range compared with the newly-added part of the origin-pull IP range in MultiPathGatewayCurrentOrginACL.
     */
     @SerializedName("AddedAddresses")
     @Expose
     private Addresses AddedAddresses;
 
     /**
-    * Specifies the latest IP address range removed from the origin IP range in MultiPathGatewayCurrentOrginACL compared with the original.
+    * Latest origin IP range compared with the part deleted from the origin IP range in MultiPathGatewayCurrentOrginACL.
     */
     @SerializedName("RemovedAddresses")
     @Expose
     private Addresses RemovedAddresses;
 
     /**
-    * The latest origin IP range unchanged compared with the origin IP range in MultiPathGatewayCurrentOrginACL.
+    * The part of the latest origin-pull IP range that is unchanged compared with the origin-pull IP range in MultiPathGatewayCurrentOrginACL.
     */
     @SerializedName("NoChangeAddresses")
     @Expose
     private Addresses NoChangeAddresses;
 
     /**
-     * Get Specifies the version number. 
-     * @return Version Specifies the version number.
+     * Get Version. 
+     * @return Version Version.
      */
     public Long getVersion() {
         return this.Version;
     }
 
     /**
-     * Set Specifies the version number.
-     * @param Version Specifies the version number.
+     * Set Version.
+     * @param Version Version.
      */
     public void setVersion(Long Version) {
         this.Version = Version;
     }
 
     /**
-     * Get Describes the IP range details for origin servers. 
-     * @return EntireAddresses Describes the IP range details for origin servers.
+     * Get Origin-pull IP range details. 
+     * @return EntireAddresses Origin-pull IP range details.
      */
     public Addresses getEntireAddresses() {
         return this.EntireAddresses;
     }
 
     /**
-     * Set Describes the IP range details for origin servers.
-     * @param EntireAddresses Describes the IP range details for origin servers.
+     * Set Origin-pull IP range details.
+     * @param EntireAddresses Origin-pull IP range details.
      */
     public void setEntireAddresses(Addresses EntireAddresses) {
         this.EntireAddresses = EntireAddresses;
     }
 
     /**
-     * Get The latest origin IP range newly added compared with the origin IP range in MultiPathGatewayCurrentOrginACL. 
-     * @return AddedAddresses The latest origin IP range newly added compared with the origin IP range in MultiPathGatewayCurrentOrginACL.
+     * Get Latest origin-pull IP range compared with the newly-added part of the origin-pull IP range in MultiPathGatewayCurrentOrginACL. 
+     * @return AddedAddresses Latest origin-pull IP range compared with the newly-added part of the origin-pull IP range in MultiPathGatewayCurrentOrginACL.
      */
     public Addresses getAddedAddresses() {
         return this.AddedAddresses;
     }
 
     /**
-     * Set The latest origin IP range newly added compared with the origin IP range in MultiPathGatewayCurrentOrginACL.
-     * @param AddedAddresses The latest origin IP range newly added compared with the origin IP range in MultiPathGatewayCurrentOrginACL.
+     * Set Latest origin-pull IP range compared with the newly-added part of the origin-pull IP range in MultiPathGatewayCurrentOrginACL.
+     * @param AddedAddresses Latest origin-pull IP range compared with the newly-added part of the origin-pull IP range in MultiPathGatewayCurrentOrginACL.
      */
     public void setAddedAddresses(Addresses AddedAddresses) {
         this.AddedAddresses = AddedAddresses;
     }
 
     /**
-     * Get Specifies the latest IP address range removed from the origin IP range in MultiPathGatewayCurrentOrginACL compared with the original. 
-     * @return RemovedAddresses Specifies the latest IP address range removed from the origin IP range in MultiPathGatewayCurrentOrginACL compared with the original.
+     * Get Latest origin IP range compared with the part deleted from the origin IP range in MultiPathGatewayCurrentOrginACL. 
+     * @return RemovedAddresses Latest origin IP range compared with the part deleted from the origin IP range in MultiPathGatewayCurrentOrginACL.
      */
     public Addresses getRemovedAddresses() {
         return this.RemovedAddresses;
     }
 
     /**
-     * Set Specifies the latest IP address range removed from the origin IP range in MultiPathGatewayCurrentOrginACL compared with the original.
-     * @param RemovedAddresses Specifies the latest IP address range removed from the origin IP range in MultiPathGatewayCurrentOrginACL compared with the original.
+     * Set Latest origin IP range compared with the part deleted from the origin IP range in MultiPathGatewayCurrentOrginACL.
+     * @param RemovedAddresses Latest origin IP range compared with the part deleted from the origin IP range in MultiPathGatewayCurrentOrginACL.
      */
     public void setRemovedAddresses(Addresses RemovedAddresses) {
         this.RemovedAddresses = RemovedAddresses;
     }
 
     /**
-     * Get The latest origin IP range unchanged compared with the origin IP range in MultiPathGatewayCurrentOrginACL. 
-     * @return NoChangeAddresses The latest origin IP range unchanged compared with the origin IP range in MultiPathGatewayCurrentOrginACL.
+     * Get The part of the latest origin-pull IP range that is unchanged compared with the origin-pull IP range in MultiPathGatewayCurrentOrginACL. 
+     * @return NoChangeAddresses The part of the latest origin-pull IP range that is unchanged compared with the origin-pull IP range in MultiPathGatewayCurrentOrginACL.
      */
     public Addresses getNoChangeAddresses() {
         return this.NoChangeAddresses;
     }
 
     /**
-     * Set The latest origin IP range unchanged compared with the origin IP range in MultiPathGatewayCurrentOrginACL.
-     * @param NoChangeAddresses The latest origin IP range unchanged compared with the origin IP range in MultiPathGatewayCurrentOrginACL.
+     * Set The part of the latest origin-pull IP range that is unchanged compared with the origin-pull IP range in MultiPathGatewayCurrentOrginACL.
+     * @param NoChangeAddresses The part of the latest origin-pull IP range that is unchanged compared with the origin-pull IP range in MultiPathGatewayCurrentOrginACL.
      */
     public void setNoChangeAddresses(Addresses NoChangeAddresses) {
         this.NoChangeAddresses = NoChangeAddresses;

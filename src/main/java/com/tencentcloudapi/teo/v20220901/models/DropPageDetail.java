@@ -24,30 +24,30 @@ import java.util.HashMap;
 public class DropPageDetail extends AbstractModel {
 
     /**
-    * The ID of the block page. Specify `0` to use the default block page. 
-(Disused) If 0 is passed, the default block page will be used.
+    * Unique Id of the interception page. The system includes a built-in interception page by default, with Id 0.
+The Id can be obtained by uploading via the blocking page creation interface. If 0 is passed in, the system default blocking page is used. This parameter is deprecated.
     */
     @SerializedName("PageId")
     @Expose
     private Long PageId;
 
     /**
-    * The HTTP status code to trigger the block page. Range: 100-600, excluding 3xx codes. Code 566: Requests blocked by managed rules. Code 567: Requests blocked by web security rules (except managed rules).
+    * HTTP status code of the interception page. Value range: 100–600. 3xx status codes are not supported. Default for managed rule interception page: 566. Default for security protection (excluding managed rules) interception page: 567.
     */
     @SerializedName("StatusCode")
     @Expose
     private Long StatusCode;
 
     /**
-    * The block page file or URL.
+    * Page file name or url.
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * Type of the block page. Values:
-<li>`page`: Return the specified page.</li>
+    * Page type, with values:
+<li>page: Specified page.</li>
 
     */
     @SerializedName("Type")
@@ -55,70 +55,70 @@ public class DropPageDetail extends AbstractModel {
     private String Type;
 
     /**
-    * ID of custom response. The ID can be obtained via the `DescribeCustomErrorPages` API. It's required when `Type=page`.
+    * Id. You can obtain this Id through the API for querying the custom error page list. The default value is `default`, which uses the system default page. This field is required and cannot be empty when Type is `page`.
     */
     @SerializedName("CustomResponseId")
     @Expose
     private String CustomResponseId;
 
     /**
-     * Get The ID of the block page. Specify `0` to use the default block page. 
-(Disused) If 0 is passed, the default block page will be used. 
-     * @return PageId The ID of the block page. Specify `0` to use the default block page. 
-(Disused) If 0 is passed, the default block page will be used.
+     * Get Unique Id of the interception page. The system includes a built-in interception page by default, with Id 0.
+The Id can be obtained by uploading via the blocking page creation interface. If 0 is passed in, the system default blocking page is used. This parameter is deprecated. 
+     * @return PageId Unique Id of the interception page. The system includes a built-in interception page by default, with Id 0.
+The Id can be obtained by uploading via the blocking page creation interface. If 0 is passed in, the system default blocking page is used. This parameter is deprecated.
      */
     public Long getPageId() {
         return this.PageId;
     }
 
     /**
-     * Set The ID of the block page. Specify `0` to use the default block page. 
-(Disused) If 0 is passed, the default block page will be used.
-     * @param PageId The ID of the block page. Specify `0` to use the default block page. 
-(Disused) If 0 is passed, the default block page will be used.
+     * Set Unique Id of the interception page. The system includes a built-in interception page by default, with Id 0.
+The Id can be obtained by uploading via the blocking page creation interface. If 0 is passed in, the system default blocking page is used. This parameter is deprecated.
+     * @param PageId Unique Id of the interception page. The system includes a built-in interception page by default, with Id 0.
+The Id can be obtained by uploading via the blocking page creation interface. If 0 is passed in, the system default blocking page is used. This parameter is deprecated.
      */
     public void setPageId(Long PageId) {
         this.PageId = PageId;
     }
 
     /**
-     * Get The HTTP status code to trigger the block page. Range: 100-600, excluding 3xx codes. Code 566: Requests blocked by managed rules. Code 567: Requests blocked by web security rules (except managed rules). 
-     * @return StatusCode The HTTP status code to trigger the block page. Range: 100-600, excluding 3xx codes. Code 566: Requests blocked by managed rules. Code 567: Requests blocked by web security rules (except managed rules).
+     * Get HTTP status code of the interception page. Value range: 100–600. 3xx status codes are not supported. Default for managed rule interception page: 566. Default for security protection (excluding managed rules) interception page: 567. 
+     * @return StatusCode HTTP status code of the interception page. Value range: 100–600. 3xx status codes are not supported. Default for managed rule interception page: 566. Default for security protection (excluding managed rules) interception page: 567.
      */
     public Long getStatusCode() {
         return this.StatusCode;
     }
 
     /**
-     * Set The HTTP status code to trigger the block page. Range: 100-600, excluding 3xx codes. Code 566: Requests blocked by managed rules. Code 567: Requests blocked by web security rules (except managed rules).
-     * @param StatusCode The HTTP status code to trigger the block page. Range: 100-600, excluding 3xx codes. Code 566: Requests blocked by managed rules. Code 567: Requests blocked by web security rules (except managed rules).
+     * Set HTTP status code of the interception page. Value range: 100–600. 3xx status codes are not supported. Default for managed rule interception page: 566. Default for security protection (excluding managed rules) interception page: 567.
+     * @param StatusCode HTTP status code of the interception page. Value range: 100–600. 3xx status codes are not supported. Default for managed rule interception page: 566. Default for security protection (excluding managed rules) interception page: 567.
      */
     public void setStatusCode(Long StatusCode) {
         this.StatusCode = StatusCode;
     }
 
     /**
-     * Get The block page file or URL. 
-     * @return Name The block page file or URL.
+     * Get Page file name or url. 
+     * @return Name Page file name or url.
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set The block page file or URL.
-     * @param Name The block page file or URL.
+     * Set Page file name or url.
+     * @param Name Page file name or url.
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Type of the block page. Values:
-<li>`page`: Return the specified page.</li>
+     * Get Page type, with values:
+<li>page: Specified page.</li>
  
-     * @return Type Type of the block page. Values:
-<li>`page`: Return the specified page.</li>
+     * @return Type Page type, with values:
+<li>page: Specified page.</li>
 
      */
     public String getType() {
@@ -126,11 +126,11 @@ public class DropPageDetail extends AbstractModel {
     }
 
     /**
-     * Set Type of the block page. Values:
-<li>`page`: Return the specified page.</li>
+     * Set Page type, with values:
+<li>page: Specified page.</li>
 
-     * @param Type Type of the block page. Values:
-<li>`page`: Return the specified page.</li>
+     * @param Type Page type, with values:
+<li>page: Specified page.</li>
 
      */
     public void setType(String Type) {
@@ -138,16 +138,16 @@ public class DropPageDetail extends AbstractModel {
     }
 
     /**
-     * Get ID of custom response. The ID can be obtained via the `DescribeCustomErrorPages` API. It's required when `Type=page`. 
-     * @return CustomResponseId ID of custom response. The ID can be obtained via the `DescribeCustomErrorPages` API. It's required when `Type=page`.
+     * Get Id. You can obtain this Id through the API for querying the custom error page list. The default value is `default`, which uses the system default page. This field is required and cannot be empty when Type is `page`. 
+     * @return CustomResponseId Id. You can obtain this Id through the API for querying the custom error page list. The default value is `default`, which uses the system default page. This field is required and cannot be empty when Type is `page`.
      */
     public String getCustomResponseId() {
         return this.CustomResponseId;
     }
 
     /**
-     * Set ID of custom response. The ID can be obtained via the `DescribeCustomErrorPages` API. It's required when `Type=page`.
-     * @param CustomResponseId ID of custom response. The ID can be obtained via the `DescribeCustomErrorPages` API. It's required when `Type=page`.
+     * Set Id. You can obtain this Id through the API for querying the custom error page list. The default value is `default`, which uses the system default page. This field is required and cannot be empty when Type is `page`.
+     * @param CustomResponseId Id. You can obtain this Id through the API for querying the custom error page list. The default value is `default`, which uses the system default page. This field is required and cannot be empty when Type is `page`.
      */
     public void setCustomResponseId(String CustomResponseId) {
         this.CustomResponseId = CustomResponseId;

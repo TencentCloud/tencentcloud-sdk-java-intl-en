@@ -25,7 +25,7 @@ public class JITVideoProcess extends AbstractModel {
 
     /**
     * Just-in-time media processing configuration switch. Valid values:
-<li>on: Enable.</li>
+<li>`on`: Enable;</li>
 <li>off: Disable.</li>
     */
     @SerializedName("Switch")
@@ -34,10 +34,10 @@ public class JITVideoProcess extends AbstractModel {
 
     /**
      * Get Just-in-time media processing configuration switch. Valid values:
-<li>on: Enable.</li>
+<li>`on`: Enable;</li>
 <li>off: Disable.</li> 
      * @return Switch Just-in-time media processing configuration switch. Valid values:
-<li>on: Enable.</li>
+<li>`on`: Enable;</li>
 <li>off: Disable.</li>
      */
     public String getSwitch() {
@@ -46,10 +46,10 @@ public class JITVideoProcess extends AbstractModel {
 
     /**
      * Set Just-in-time media processing configuration switch. Valid values:
-<li>on: Enable.</li>
+<li>`on`: Enable;</li>
 <li>off: Disable.</li>
      * @param Switch Just-in-time media processing configuration switch. Valid values:
-<li>on: Enable.</li>
+<li>`on`: Enable;</li>
 <li>off: Disable.</li>
      */
     public void setSwitch(String Switch) {

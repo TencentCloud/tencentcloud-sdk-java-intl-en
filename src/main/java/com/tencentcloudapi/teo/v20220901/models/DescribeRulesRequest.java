@@ -24,56 +24,51 @@ import java.util.HashMap;
 public class DescribeRulesRequest extends AbstractModel {
 
     /**
-    * ID of the site
+    * Zone ID.
     */
     @SerializedName("ZoneId")
     @Expose
     private String ZoneId;
 
     /**
-    * Filter criteria. the maximum value of filters.values is 20. the detailed filter criteria are as follows:
-.
-<Li>Rule-Id: filter by rule id.</li>.
+    * Filter criteria. The maximum value of Filters.Values is 20. The detailed filter criteria are as follows:
+<li>rule-id: Filter by rule ID.</li>
     */
     @SerializedName("Filters")
     @Expose
     private Filter [] Filters;
 
     /**
-     * Get ID of the site 
-     * @return ZoneId ID of the site
+     * Get Zone ID. 
+     * @return ZoneId Zone ID.
      */
     public String getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set ID of the site
-     * @param ZoneId ID of the site
+     * Set Zone ID.
+     * @param ZoneId Zone ID.
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get Filter criteria. the maximum value of filters.values is 20. the detailed filter criteria are as follows:
-.
-<Li>Rule-Id: filter by rule id.</li>. 
-     * @return Filters Filter criteria. the maximum value of filters.values is 20. the detailed filter criteria are as follows:
-.
-<Li>Rule-Id: filter by rule id.</li>.
+     * Get Filter criteria. The maximum value of Filters.Values is 20. The detailed filter criteria are as follows:
+<li>rule-id: Filter by rule ID.</li> 
+     * @return Filters Filter criteria. The maximum value of Filters.Values is 20. The detailed filter criteria are as follows:
+<li>rule-id: Filter by rule ID.</li>
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set Filter criteria. the maximum value of filters.values is 20. the detailed filter criteria are as follows:
-.
-<Li>Rule-Id: filter by rule id.</li>.
-     * @param Filters Filter criteria. the maximum value of filters.values is 20. the detailed filter criteria are as follows:
-.
-<Li>Rule-Id: filter by rule id.</li>.
+     * Set Filter criteria. The maximum value of Filters.Values is 20. The detailed filter criteria are as follows:
+<li>rule-id: Filter by rule ID.</li>
+     * @param Filters Filter criteria. The maximum value of Filters.Values is 20. The detailed filter criteria are as follows:
+<li>rule-id: Filter by rule ID.</li>
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

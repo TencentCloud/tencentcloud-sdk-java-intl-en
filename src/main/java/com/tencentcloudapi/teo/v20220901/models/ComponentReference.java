@@ -24,16 +24,16 @@ import java.util.HashMap;
 public class ComponentReference extends AbstractModel {
 
     /**
-    * Refer to the instance type. Valid values:
-<li>edge-function: Edge function.</li>
+    * Instance type to refer. Valid values:
+<li>edge-function: edge function.</li>
     */
     @SerializedName("ReferenceType")
     @Expose
     private String ReferenceType;
 
     /**
-    * Referenced instance ID. According to the value of ReferenceType, return the corresponding instance ID.
-<li>When ReferenceType is edge-function: Return the edge function ID in the format of ef-2vc5oe9mzqhm.</li>
+    * ID of the referenced instance. Based on the value of ReferenceType, return the corresponding instance ID:
+<li>When ReferenceType is edge-function: return the edge function ID in the format of ef-2vc5oe9mzqhm.</li>
 
     */
     @SerializedName("ReferenceId")
@@ -41,8 +41,8 @@ public class ComponentReference extends AbstractModel {
     private String ReferenceId;
 
     /**
-    * Referenced instance name. According to the value of ReferenceType, return the corresponding instance name.
-<li>When ReferenceType is edge-function: Returns the edge function name.</li>
+    * Name of the referenced instance. Based on the value of ReferenceType, the corresponding instance name is returned:
+<li>When ReferenceType is edge-function: return the edge function name.</li>
 
     */
     @SerializedName("ReferenceName")
@@ -50,52 +50,52 @@ public class ComponentReference extends AbstractModel {
     private String ReferenceName;
 
     /**
-    * Site ID. Site identifier of the instance ownership that refers to the namespace.
+    * Zone ID. Site identifier of the instance that references the namespace.
     */
     @SerializedName("ZoneId")
     @Expose
     private String ZoneId;
 
     /**
-    * Site name. Refer to the site name of the instance ownership in namespace.
+    * Site name. The name of the site to which the instances in this namespace belong.
     */
     @SerializedName("ZoneName")
     @Expose
     private String ZoneName;
 
     /**
-    * Refer to the site alias of the namespace instance. If the site alias is not set, return an empty string.
+    * Alias of the site that the instance in the namespace belongs to. If no site alias is set, an empty string is returned.
     */
     @SerializedName("AliasZoneName")
     @Expose
     private String AliasZoneName;
 
     /**
-     * Get Refer to the instance type. Valid values:
-<li>edge-function: Edge function.</li> 
-     * @return ReferenceType Refer to the instance type. Valid values:
-<li>edge-function: Edge function.</li>
+     * Get Instance type to refer. Valid values:
+<li>edge-function: edge function.</li> 
+     * @return ReferenceType Instance type to refer. Valid values:
+<li>edge-function: edge function.</li>
      */
     public String getReferenceType() {
         return this.ReferenceType;
     }
 
     /**
-     * Set Refer to the instance type. Valid values:
-<li>edge-function: Edge function.</li>
-     * @param ReferenceType Refer to the instance type. Valid values:
-<li>edge-function: Edge function.</li>
+     * Set Instance type to refer. Valid values:
+<li>edge-function: edge function.</li>
+     * @param ReferenceType Instance type to refer. Valid values:
+<li>edge-function: edge function.</li>
      */
     public void setReferenceType(String ReferenceType) {
         this.ReferenceType = ReferenceType;
     }
 
     /**
-     * Get Referenced instance ID. According to the value of ReferenceType, return the corresponding instance ID.
-<li>When ReferenceType is edge-function: Return the edge function ID in the format of ef-2vc5oe9mzqhm.</li>
+     * Get ID of the referenced instance. Based on the value of ReferenceType, return the corresponding instance ID:
+<li>When ReferenceType is edge-function: return the edge function ID in the format of ef-2vc5oe9mzqhm.</li>
  
-     * @return ReferenceId Referenced instance ID. According to the value of ReferenceType, return the corresponding instance ID.
-<li>When ReferenceType is edge-function: Return the edge function ID in the format of ef-2vc5oe9mzqhm.</li>
+     * @return ReferenceId ID of the referenced instance. Based on the value of ReferenceType, return the corresponding instance ID:
+<li>When ReferenceType is edge-function: return the edge function ID in the format of ef-2vc5oe9mzqhm.</li>
 
      */
     public String getReferenceId() {
@@ -103,11 +103,11 @@ public class ComponentReference extends AbstractModel {
     }
 
     /**
-     * Set Referenced instance ID. According to the value of ReferenceType, return the corresponding instance ID.
-<li>When ReferenceType is edge-function: Return the edge function ID in the format of ef-2vc5oe9mzqhm.</li>
+     * Set ID of the referenced instance. Based on the value of ReferenceType, return the corresponding instance ID:
+<li>When ReferenceType is edge-function: return the edge function ID in the format of ef-2vc5oe9mzqhm.</li>
 
-     * @param ReferenceId Referenced instance ID. According to the value of ReferenceType, return the corresponding instance ID.
-<li>When ReferenceType is edge-function: Return the edge function ID in the format of ef-2vc5oe9mzqhm.</li>
+     * @param ReferenceId ID of the referenced instance. Based on the value of ReferenceType, return the corresponding instance ID:
+<li>When ReferenceType is edge-function: return the edge function ID in the format of ef-2vc5oe9mzqhm.</li>
 
      */
     public void setReferenceId(String ReferenceId) {
@@ -115,11 +115,11 @@ public class ComponentReference extends AbstractModel {
     }
 
     /**
-     * Get Referenced instance name. According to the value of ReferenceType, return the corresponding instance name.
-<li>When ReferenceType is edge-function: Returns the edge function name.</li>
+     * Get Name of the referenced instance. Based on the value of ReferenceType, the corresponding instance name is returned:
+<li>When ReferenceType is edge-function: return the edge function name.</li>
  
-     * @return ReferenceName Referenced instance name. According to the value of ReferenceType, return the corresponding instance name.
-<li>When ReferenceType is edge-function: Returns the edge function name.</li>
+     * @return ReferenceName Name of the referenced instance. Based on the value of ReferenceType, the corresponding instance name is returned:
+<li>When ReferenceType is edge-function: return the edge function name.</li>
 
      */
     public String getReferenceName() {
@@ -127,11 +127,11 @@ public class ComponentReference extends AbstractModel {
     }
 
     /**
-     * Set Referenced instance name. According to the value of ReferenceType, return the corresponding instance name.
-<li>When ReferenceType is edge-function: Returns the edge function name.</li>
+     * Set Name of the referenced instance. Based on the value of ReferenceType, the corresponding instance name is returned:
+<li>When ReferenceType is edge-function: return the edge function name.</li>
 
-     * @param ReferenceName Referenced instance name. According to the value of ReferenceType, return the corresponding instance name.
-<li>When ReferenceType is edge-function: Returns the edge function name.</li>
+     * @param ReferenceName Name of the referenced instance. Based on the value of ReferenceType, the corresponding instance name is returned:
+<li>When ReferenceType is edge-function: return the edge function name.</li>
 
      */
     public void setReferenceName(String ReferenceName) {
@@ -139,48 +139,48 @@ public class ComponentReference extends AbstractModel {
     }
 
     /**
-     * Get Site ID. Site identifier of the instance ownership that refers to the namespace. 
-     * @return ZoneId Site ID. Site identifier of the instance ownership that refers to the namespace.
+     * Get Zone ID. Site identifier of the instance that references the namespace. 
+     * @return ZoneId Zone ID. Site identifier of the instance that references the namespace.
      */
     public String getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set Site ID. Site identifier of the instance ownership that refers to the namespace.
-     * @param ZoneId Site ID. Site identifier of the instance ownership that refers to the namespace.
+     * Set Zone ID. Site identifier of the instance that references the namespace.
+     * @param ZoneId Zone ID. Site identifier of the instance that references the namespace.
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get Site name. Refer to the site name of the instance ownership in namespace. 
-     * @return ZoneName Site name. Refer to the site name of the instance ownership in namespace.
+     * Get Site name. The name of the site to which the instances in this namespace belong. 
+     * @return ZoneName Site name. The name of the site to which the instances in this namespace belong.
      */
     public String getZoneName() {
         return this.ZoneName;
     }
 
     /**
-     * Set Site name. Refer to the site name of the instance ownership in namespace.
-     * @param ZoneName Site name. Refer to the site name of the instance ownership in namespace.
+     * Set Site name. The name of the site to which the instances in this namespace belong.
+     * @param ZoneName Site name. The name of the site to which the instances in this namespace belong.
      */
     public void setZoneName(String ZoneName) {
         this.ZoneName = ZoneName;
     }
 
     /**
-     * Get Refer to the site alias of the namespace instance. If the site alias is not set, return an empty string. 
-     * @return AliasZoneName Refer to the site alias of the namespace instance. If the site alias is not set, return an empty string.
+     * Get Alias of the site that the instance in the namespace belongs to. If no site alias is set, an empty string is returned. 
+     * @return AliasZoneName Alias of the site that the instance in the namespace belongs to. If no site alias is set, an empty string is returned.
      */
     public String getAliasZoneName() {
         return this.AliasZoneName;
     }
 
     /**
-     * Set Refer to the site alias of the namespace instance. If the site alias is not set, return an empty string.
-     * @param AliasZoneName Refer to the site alias of the namespace instance. If the site alias is not set, return an empty string.
+     * Set Alias of the site that the instance in the namespace belongs to. If no site alias is set, an empty string is returned.
+     * @param AliasZoneName Alias of the site that the instance in the namespace belongs to. If no site alias is set, an empty string is returned.
      */
     public void setAliasZoneName(String AliasZoneName) {
         this.AliasZoneName = AliasZoneName;

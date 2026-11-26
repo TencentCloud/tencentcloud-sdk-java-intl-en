@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class DeleteApplicationProxyRequest extends AbstractModel {
 
     /**
-    * The site ID.
+    * Site ID.
     */
     @SerializedName("ZoneId")
     @Expose
     private String ZoneId;
 
     /**
-    * The proxy ID.
+    * Proxy ID.
     */
     @SerializedName("ProxyId")
     @Expose
     private String ProxyId;
 
     /**
-     * Get The site ID. 
-     * @return ZoneId The site ID.
+     * Get Site ID. 
+     * @return ZoneId Site ID.
      */
     public String getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set The site ID.
-     * @param ZoneId The site ID.
+     * Set Site ID.
+     * @param ZoneId Site ID.
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get The proxy ID. 
-     * @return ProxyId The proxy ID.
+     * Get Proxy ID. 
+     * @return ProxyId Proxy ID.
      */
     public String getProxyId() {
         return this.ProxyId;
     }
 
     /**
-     * Set The proxy ID.
-     * @param ProxyId The proxy ID.
+     * Set Proxy ID.
+     * @param ProxyId Proxy ID.
      */
     public void setProxyId(String ProxyId) {
         this.ProxyId = ProxyId;

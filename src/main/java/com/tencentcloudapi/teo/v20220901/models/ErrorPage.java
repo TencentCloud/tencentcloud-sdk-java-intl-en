@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class ErrorPage extends AbstractModel {
 
     /**
-    * Status code. supported values are 400, 403, 404, 405, 414, 416, 451, 500, 501, 502, 503, 504.
+    * Status code. Supported values: 400, 403, 404, 405, 414, 416, 451, 500, 501, 502, 503, 504.
     */
     @SerializedName("StatusCode")
     @Expose
     private Long StatusCode;
 
     /**
-    * Redirect url. requires a full redirect path, such as https://www.test.com/error.html.
+    * Redirect URL. It needs to be a complete jump path, for example, https://www.test.com/error.html.
     */
     @SerializedName("RedirectURL")
     @Expose
     private String RedirectURL;
 
     /**
-     * Get Status code. supported values are 400, 403, 404, 405, 414, 416, 451, 500, 501, 502, 503, 504. 
-     * @return StatusCode Status code. supported values are 400, 403, 404, 405, 414, 416, 451, 500, 501, 502, 503, 504.
+     * Get Status code. Supported values: 400, 403, 404, 405, 414, 416, 451, 500, 501, 502, 503, 504. 
+     * @return StatusCode Status code. Supported values: 400, 403, 404, 405, 414, 416, 451, 500, 501, 502, 503, 504.
      */
     public Long getStatusCode() {
         return this.StatusCode;
     }
 
     /**
-     * Set Status code. supported values are 400, 403, 404, 405, 414, 416, 451, 500, 501, 502, 503, 504.
-     * @param StatusCode Status code. supported values are 400, 403, 404, 405, 414, 416, 451, 500, 501, 502, 503, 504.
+     * Set Status code. Supported values: 400, 403, 404, 405, 414, 416, 451, 500, 501, 502, 503, 504.
+     * @param StatusCode Status code. Supported values: 400, 403, 404, 405, 414, 416, 451, 500, 501, 502, 503, 504.
      */
     public void setStatusCode(Long StatusCode) {
         this.StatusCode = StatusCode;
     }
 
     /**
-     * Get Redirect url. requires a full redirect path, such as https://www.test.com/error.html. 
-     * @return RedirectURL Redirect url. requires a full redirect path, such as https://www.test.com/error.html.
+     * Get Redirect URL. It needs to be a complete jump path, for example, https://www.test.com/error.html. 
+     * @return RedirectURL Redirect URL. It needs to be a complete jump path, for example, https://www.test.com/error.html.
      */
     public String getRedirectURL() {
         return this.RedirectURL;
     }
 
     /**
-     * Set Redirect url. requires a full redirect path, such as https://www.test.com/error.html.
-     * @param RedirectURL Redirect url. requires a full redirect path, such as https://www.test.com/error.html.
+     * Set Redirect URL. It needs to be a complete jump path, for example, https://www.test.com/error.html.
+     * @param RedirectURL Redirect URL. It needs to be a complete jump path, for example, https://www.test.com/error.html.
      */
     public void setRedirectURL(String RedirectURL) {
         this.RedirectURL = RedirectURL;

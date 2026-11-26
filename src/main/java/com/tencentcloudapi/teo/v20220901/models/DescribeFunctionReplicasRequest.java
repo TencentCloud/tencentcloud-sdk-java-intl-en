@@ -52,21 +52,21 @@ public class DescribeFunctionReplicasRequest extends AbstractModel {
     private Long Limit;
 
     /**
-    * Sorting basis. Valid values: <li>created-on: Creation time.</li> Default sorting is based on the created-on attribute.
+    * Sorting basis. Valid values: <li>created-on: creation time.</li> Default: sort by the created-on attribute.
     */
     @SerializedName("SortBy")
     @Expose
     private String SortBy;
 
     /**
-    * List sort method. Valid values: <li>asc: ascending order;</li> <li>desc: sort in descending order.</li> Default value: asc.
+    * List sort method. Valid values: <li>asc: ascending order;</li> <li>desc: descending order.</li> Default value: asc.
     */
     @SerializedName("SortOrder")
     @Expose
     private String SortOrder;
 
     /**
-    * Filtering Conditions. The maximum of Filters.Values is 20. If this parameter is left empty, it returns all function replicas under the function ID. Detailed filter criteria: <li>replica-name: Filter by function replica name. Fuzzy query is supported.</li>
+    * Filter criteria. The maximum number of Filters.Values is 20. If this parameter is left empty, all function copies under the function ID are returned. The detailed filter criteria are as follows: <li> replica-name: filter by function copy name. Fuzzy query is supported.</li>
     */
     @SerializedName("Filters")
     @Expose
@@ -137,48 +137,48 @@ public class DescribeFunctionReplicasRequest extends AbstractModel {
     }
 
     /**
-     * Get Sorting basis. Valid values: <li>created-on: Creation time.</li> Default sorting is based on the created-on attribute. 
-     * @return SortBy Sorting basis. Valid values: <li>created-on: Creation time.</li> Default sorting is based on the created-on attribute.
+     * Get Sorting basis. Valid values: <li>created-on: creation time.</li> Default: sort by the created-on attribute. 
+     * @return SortBy Sorting basis. Valid values: <li>created-on: creation time.</li> Default: sort by the created-on attribute.
      */
     public String getSortBy() {
         return this.SortBy;
     }
 
     /**
-     * Set Sorting basis. Valid values: <li>created-on: Creation time.</li> Default sorting is based on the created-on attribute.
-     * @param SortBy Sorting basis. Valid values: <li>created-on: Creation time.</li> Default sorting is based on the created-on attribute.
+     * Set Sorting basis. Valid values: <li>created-on: creation time.</li> Default: sort by the created-on attribute.
+     * @param SortBy Sorting basis. Valid values: <li>created-on: creation time.</li> Default: sort by the created-on attribute.
      */
     public void setSortBy(String SortBy) {
         this.SortBy = SortBy;
     }
 
     /**
-     * Get List sort method. Valid values: <li>asc: ascending order;</li> <li>desc: sort in descending order.</li> Default value: asc. 
-     * @return SortOrder List sort method. Valid values: <li>asc: ascending order;</li> <li>desc: sort in descending order.</li> Default value: asc.
+     * Get List sort method. Valid values: <li>asc: ascending order;</li> <li>desc: descending order.</li> Default value: asc. 
+     * @return SortOrder List sort method. Valid values: <li>asc: ascending order;</li> <li>desc: descending order.</li> Default value: asc.
      */
     public String getSortOrder() {
         return this.SortOrder;
     }
 
     /**
-     * Set List sort method. Valid values: <li>asc: ascending order;</li> <li>desc: sort in descending order.</li> Default value: asc.
-     * @param SortOrder List sort method. Valid values: <li>asc: ascending order;</li> <li>desc: sort in descending order.</li> Default value: asc.
+     * Set List sort method. Valid values: <li>asc: ascending order;</li> <li>desc: descending order.</li> Default value: asc.
+     * @param SortOrder List sort method. Valid values: <li>asc: ascending order;</li> <li>desc: descending order.</li> Default value: asc.
      */
     public void setSortOrder(String SortOrder) {
         this.SortOrder = SortOrder;
     }
 
     /**
-     * Get Filtering Conditions. The maximum of Filters.Values is 20. If this parameter is left empty, it returns all function replicas under the function ID. Detailed filter criteria: <li>replica-name: Filter by function replica name. Fuzzy query is supported.</li> 
-     * @return Filters Filtering Conditions. The maximum of Filters.Values is 20. If this parameter is left empty, it returns all function replicas under the function ID. Detailed filter criteria: <li>replica-name: Filter by function replica name. Fuzzy query is supported.</li>
+     * Get Filter criteria. The maximum number of Filters.Values is 20. If this parameter is left empty, all function copies under the function ID are returned. The detailed filter criteria are as follows: <li> replica-name: filter by function copy name. Fuzzy query is supported.</li> 
+     * @return Filters Filter criteria. The maximum number of Filters.Values is 20. If this parameter is left empty, all function copies under the function ID are returned. The detailed filter criteria are as follows: <li> replica-name: filter by function copy name. Fuzzy query is supported.</li>
      */
     public AdvancedFilter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set Filtering Conditions. The maximum of Filters.Values is 20. If this parameter is left empty, it returns all function replicas under the function ID. Detailed filter criteria: <li>replica-name: Filter by function replica name. Fuzzy query is supported.</li>
-     * @param Filters Filtering Conditions. The maximum of Filters.Values is 20. If this parameter is left empty, it returns all function replicas under the function ID. Detailed filter criteria: <li>replica-name: Filter by function replica name. Fuzzy query is supported.</li>
+     * Set Filter criteria. The maximum number of Filters.Values is 20. If this parameter is left empty, all function copies under the function ID are returned. The detailed filter criteria are as follows: <li> replica-name: filter by function copy name. Fuzzy query is supported.</li>
+     * @param Filters Filter criteria. The maximum number of Filters.Values is 20. If this parameter is left empty, all function copies under the function ID are returned. The detailed filter criteria are as follows: <li> replica-name: filter by function copy name. Fuzzy query is supported.</li>
      */
     public void setFilters(AdvancedFilter [] Filters) {
         this.Filters = Filters;

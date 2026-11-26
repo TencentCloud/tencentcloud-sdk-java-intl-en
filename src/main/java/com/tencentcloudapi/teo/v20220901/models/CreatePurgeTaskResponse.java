@@ -24,15 +24,14 @@ import java.util.HashMap;
 public class CreatePurgeTaskResponse extends AbstractModel {
 
     /**
-    * ID of the task.
+    * Task ID.
     */
     @SerializedName("JobId")
     @Expose
     private String JobId;
 
     /**
-    * List of failed tasks and reasons.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * List of failed tasks and causes.
     */
     @SerializedName("FailedList")
     @Expose
@@ -46,36 +45,32 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get ID of the task. 
-     * @return JobId ID of the task.
+     * Get Task ID. 
+     * @return JobId Task ID.
      */
     public String getJobId() {
         return this.JobId;
     }
 
     /**
-     * Set ID of the task.
-     * @param JobId ID of the task.
+     * Set Task ID.
+     * @param JobId Task ID.
      */
     public void setJobId(String JobId) {
         this.JobId = JobId;
     }
 
     /**
-     * Get List of failed tasks and reasons.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return FailedList List of failed tasks and reasons.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get List of failed tasks and causes. 
+     * @return FailedList List of failed tasks and causes.
      */
     public FailReason [] getFailedList() {
         return this.FailedList;
     }
 
     /**
-     * Set List of failed tasks and reasons.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param FailedList List of failed tasks and reasons.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set List of failed tasks and causes.
+     * @param FailedList List of failed tasks and causes.
      */
     public void setFailedList(FailReason [] FailedList) {
         this.FailedList = FailedList;

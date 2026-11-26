@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeDDoSProtectionResponse extends AbstractModel {
 
     /**
-    * Exclusive DDoS protection configuration. used to control the effective scope of exclusive DDoS protection.
+    * Exclusive DDoS protection configuration. Used to control the effective scope of exclusive DDoS protection.
     */
     @SerializedName("DDoSProtection")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeDDoSProtectionResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Exclusive DDoS protection configuration. used to control the effective scope of exclusive DDoS protection. 
-     * @return DDoSProtection Exclusive DDoS protection configuration. used to control the effective scope of exclusive DDoS protection.
+     * Get Exclusive DDoS protection configuration. Used to control the effective scope of exclusive DDoS protection. 
+     * @return DDoSProtection Exclusive DDoS protection configuration. Used to control the effective scope of exclusive DDoS protection.
      */
     public DDoSProtection getDDoSProtection() {
         return this.DDoSProtection;
     }
 
     /**
-     * Set Exclusive DDoS protection configuration. used to control the effective scope of exclusive DDoS protection.
-     * @param DDoSProtection Exclusive DDoS protection configuration. used to control the effective scope of exclusive DDoS protection.
+     * Set Exclusive DDoS protection configuration. Used to control the effective scope of exclusive DDoS protection.
+     * @param DDoSProtection Exclusive DDoS protection configuration. Used to control the effective scope of exclusive DDoS protection.
      */
     public void setDDoSProtection(DDoSProtection DDoSProtection) {
         this.DDoSProtection = DDoSProtection;

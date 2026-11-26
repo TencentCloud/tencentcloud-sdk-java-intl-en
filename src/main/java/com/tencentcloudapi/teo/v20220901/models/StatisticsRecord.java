@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.rum.v20210622.models;
+package com.tencentcloudapi.teo.v20220901.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,41 +21,44 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeLogExportsRequest extends AbstractModel {
+public class StatisticsRecord extends AbstractModel {
 
     /**
-    * Project ID
+    * <p>List single row record.</p>
     */
-    @SerializedName("ID")
+    @SerializedName("Record")
     @Expose
-    private Long ID;
+    private String [] Record;
 
     /**
-     * Get Project ID 
-     * @return ID Project ID
+     * Get <p>List single row record.</p> 
+     * @return Record <p>List single row record.</p>
      */
-    public Long getID() {
-        return this.ID;
+    public String [] getRecord() {
+        return this.Record;
     }
 
     /**
-     * Set Project ID
-     * @param ID Project ID
+     * Set <p>List single row record.</p>
+     * @param Record <p>List single row record.</p>
      */
-    public void setID(Long ID) {
-        this.ID = ID;
+    public void setRecord(String [] Record) {
+        this.Record = Record;
     }
 
-    public DescribeLogExportsRequest() {
+    public StatisticsRecord() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeLogExportsRequest(DescribeLogExportsRequest source) {
-        if (source.ID != null) {
-            this.ID = new Long(source.ID);
+    public StatisticsRecord(StatisticsRecord source) {
+        if (source.Record != null) {
+            this.Record = new String[source.Record.length];
+            for (int i = 0; i < source.Record.length; i++) {
+                this.Record[i] = new String(source.Record[i]);
+            }
         }
     }
 
@@ -64,7 +67,7 @@ public class DescribeLogExportsRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "ID", this.ID);
+        this.setParamArraySimple(map, prefix + "Record.", this.Record);
 
     }
 }

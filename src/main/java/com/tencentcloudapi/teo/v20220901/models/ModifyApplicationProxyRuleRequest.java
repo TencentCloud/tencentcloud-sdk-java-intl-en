@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class ModifyApplicationProxyRuleRequest extends AbstractModel {
 
     /**
-    * The site ID.
+    * Site ID.
     */
     @SerializedName("ZoneId")
     @Expose
     private String ZoneId;
 
     /**
-    * The proxy ID.
+    * Proxy ID.
     */
     @SerializedName("ProxyId")
     @Expose
     private String ProxyId;
 
     /**
-    * The rule ID.
+    * Rule ID.
     */
     @SerializedName("RuleId")
     @Expose
@@ -46,57 +46,57 @@ public class ModifyApplicationProxyRuleRequest extends AbstractModel {
 
     /**
     * Origin server type. Valid values:
-<li>custom: Manually added;</li>
-<li>origins: Origin server group.</li>
+<li>`custom`: Manually added;</li>
+<li>origins: origin server group.</li>
     */
     @SerializedName("OriginType")
     @Expose
     private String OriginType;
 
     /**
-    * The access port, which can be:
-<li>A single port, such as 80</li>
-<li>A port range, such as 81-90</li>
+    * Port. Supported formats:
+<li>80: port 80;</li>
+<li>81-90: ports 81 to 90.</li>
     */
     @SerializedName("Port")
     @Expose
     private String [] Port;
 
     /**
-    * The protocol. Values:
-<li>`TCP`: TCP protocol</li>
-<li>`UDP`: UDP protocol</li>The original configuration will apply if this field is not specified.
+    * Protocol. Valid values:
+<li>TCP: TCP protocol;</li>
+<li>UDP: UDP protocol.</li>Leave it blank to keep the original value.
     */
     @SerializedName("Proto")
     @Expose
     private String Proto;
 
     /**
-    * Origin server information:
-<li>When `OriginType=custom`, it indicates one or more origin servers, such as ["8.8.8.8","9.9.9.9"] or ["test.com"].</li>
-<li>When `OriginType=origins`, it indicates an origin group ID, such as ["origin-537f5b41-162a-11ed-abaa-525400c5da15"].</li>
+    * Details of the origin server:
+<li>When OriginType is custom, it indicates one or more origin servers, such as `["8.8.8.8","9.9.9.9"]` or `OriginValue=["test.com"]`;</li>
+<li>When OriginType is origins, it requires one and only one element, indicating the origin server group ID, such as ["origin-537f5b41-162a-11ed-abaa-525400c5da15"].</li>
 
-The original configuration will apply if this field is not specified.
+If not specified, the original value is retained.
     */
     @SerializedName("OriginValue")
     @Expose
     private String [] OriginValue;
 
     /**
-    * Passes the client IP. Values:
-<li>`TOA`: Pass the client IP via TOA (available only when `Proto=TCP`).</li>
-<li>`PPV1`: Pass the client IP via Proxy Protocol V1 (available only when `Proto=TCP`).</li>
-<li>`PPV2`: Pass the client IP via Proxy Protocol V2.</li>
-<li>`OFF`: Not pass the client IP.</li>If not specified, this field uses the default value OFF.
+    * Pass the client IP address. Valid values:
+<li>TOA: TOA (selectable only when Proto = TCP);</li>
+<li>PPV1: passing via Proxy Protocol V1, available only when Proto = TCP;</li>
+<li>PPV2: passing via Proxy Protocol V2;</li>
+<li>OFF: no passing.</li>Leave it blank to keep the original value.
     */
     @SerializedName("ForwardClientIp")
     @Expose
     private String ForwardClientIp;
 
     /**
-    * Whether to enable session persistence. Values:
-<li>`true`: Enable</li>
-<li>`false`: Disable</li>If it is left empty, the default value `false` is used.
+    * Whether to enable session persistence. Valid values:
+<li>true: Enable;</li>
+<li>false: Disable.</li>If not specified, false.
     */
     @SerializedName("SessionPersist")
     @Expose
@@ -110,64 +110,64 @@ The original configuration will apply if this field is not specified.
     private Long SessionPersistTime;
 
     /**
-    * The origin port, which can be:
-<li>A single port, such as 80</li>
-<li>A port range, such as 81-82</li>
+    * Origin server port. Supported formats:
+<li>Single port: 80;</li>
+<li>Port range: 81-90, ports 81 to 90.</li>
     */
     @SerializedName("OriginPort")
     @Expose
     private String OriginPort;
 
     /**
-    * Rule tag. The original configuration will apply if it is not specified.
+    * Rule tag. If not specified, the original value is retained.
     */
     @SerializedName("RuleTag")
     @Expose
     private String RuleTag;
 
     /**
-     * Get The site ID. 
-     * @return ZoneId The site ID.
+     * Get Site ID. 
+     * @return ZoneId Site ID.
      */
     public String getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set The site ID.
-     * @param ZoneId The site ID.
+     * Set Site ID.
+     * @param ZoneId Site ID.
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get The proxy ID. 
-     * @return ProxyId The proxy ID.
+     * Get Proxy ID. 
+     * @return ProxyId Proxy ID.
      */
     public String getProxyId() {
         return this.ProxyId;
     }
 
     /**
-     * Set The proxy ID.
-     * @param ProxyId The proxy ID.
+     * Set Proxy ID.
+     * @param ProxyId Proxy ID.
      */
     public void setProxyId(String ProxyId) {
         this.ProxyId = ProxyId;
     }
 
     /**
-     * Get The rule ID. 
-     * @return RuleId The rule ID.
+     * Get Rule ID. 
+     * @return RuleId Rule ID.
      */
     public String getRuleId() {
         return this.RuleId;
     }
 
     /**
-     * Set The rule ID.
-     * @param RuleId The rule ID.
+     * Set Rule ID.
+     * @param RuleId Rule ID.
      */
     public void setRuleId(String RuleId) {
         this.RuleId = RuleId;
@@ -175,11 +175,11 @@ The original configuration will apply if this field is not specified.
 
     /**
      * Get Origin server type. Valid values:
-<li>custom: Manually added;</li>
-<li>origins: Origin server group.</li> 
+<li>`custom`: Manually added;</li>
+<li>origins: origin server group.</li> 
      * @return OriginType Origin server type. Valid values:
-<li>custom: Manually added;</li>
-<li>origins: Origin server group.</li>
+<li>`custom`: Manually added;</li>
+<li>origins: origin server group.</li>
      */
     public String getOriginType() {
         return this.OriginType;
@@ -187,147 +187,147 @@ The original configuration will apply if this field is not specified.
 
     /**
      * Set Origin server type. Valid values:
-<li>custom: Manually added;</li>
-<li>origins: Origin server group.</li>
+<li>`custom`: Manually added;</li>
+<li>origins: origin server group.</li>
      * @param OriginType Origin server type. Valid values:
-<li>custom: Manually added;</li>
-<li>origins: Origin server group.</li>
+<li>`custom`: Manually added;</li>
+<li>origins: origin server group.</li>
      */
     public void setOriginType(String OriginType) {
         this.OriginType = OriginType;
     }
 
     /**
-     * Get The access port, which can be:
-<li>A single port, such as 80</li>
-<li>A port range, such as 81-90</li> 
-     * @return Port The access port, which can be:
-<li>A single port, such as 80</li>
-<li>A port range, such as 81-90</li>
+     * Get Port. Supported formats:
+<li>80: port 80;</li>
+<li>81-90: ports 81 to 90.</li> 
+     * @return Port Port. Supported formats:
+<li>80: port 80;</li>
+<li>81-90: ports 81 to 90.</li>
      */
     public String [] getPort() {
         return this.Port;
     }
 
     /**
-     * Set The access port, which can be:
-<li>A single port, such as 80</li>
-<li>A port range, such as 81-90</li>
-     * @param Port The access port, which can be:
-<li>A single port, such as 80</li>
-<li>A port range, such as 81-90</li>
+     * Set Port. Supported formats:
+<li>80: port 80;</li>
+<li>81-90: ports 81 to 90.</li>
+     * @param Port Port. Supported formats:
+<li>80: port 80;</li>
+<li>81-90: ports 81 to 90.</li>
      */
     public void setPort(String [] Port) {
         this.Port = Port;
     }
 
     /**
-     * Get The protocol. Values:
-<li>`TCP`: TCP protocol</li>
-<li>`UDP`: UDP protocol</li>The original configuration will apply if this field is not specified. 
-     * @return Proto The protocol. Values:
-<li>`TCP`: TCP protocol</li>
-<li>`UDP`: UDP protocol</li>The original configuration will apply if this field is not specified.
+     * Get Protocol. Valid values:
+<li>TCP: TCP protocol;</li>
+<li>UDP: UDP protocol.</li>Leave it blank to keep the original value. 
+     * @return Proto Protocol. Valid values:
+<li>TCP: TCP protocol;</li>
+<li>UDP: UDP protocol.</li>Leave it blank to keep the original value.
      */
     public String getProto() {
         return this.Proto;
     }
 
     /**
-     * Set The protocol. Values:
-<li>`TCP`: TCP protocol</li>
-<li>`UDP`: UDP protocol</li>The original configuration will apply if this field is not specified.
-     * @param Proto The protocol. Values:
-<li>`TCP`: TCP protocol</li>
-<li>`UDP`: UDP protocol</li>The original configuration will apply if this field is not specified.
+     * Set Protocol. Valid values:
+<li>TCP: TCP protocol;</li>
+<li>UDP: UDP protocol.</li>Leave it blank to keep the original value.
+     * @param Proto Protocol. Valid values:
+<li>TCP: TCP protocol;</li>
+<li>UDP: UDP protocol.</li>Leave it blank to keep the original value.
      */
     public void setProto(String Proto) {
         this.Proto = Proto;
     }
 
     /**
-     * Get Origin server information:
-<li>When `OriginType=custom`, it indicates one or more origin servers, such as ["8.8.8.8","9.9.9.9"] or ["test.com"].</li>
-<li>When `OriginType=origins`, it indicates an origin group ID, such as ["origin-537f5b41-162a-11ed-abaa-525400c5da15"].</li>
+     * Get Details of the origin server:
+<li>When OriginType is custom, it indicates one or more origin servers, such as `["8.8.8.8","9.9.9.9"]` or `OriginValue=["test.com"]`;</li>
+<li>When OriginType is origins, it requires one and only one element, indicating the origin server group ID, such as ["origin-537f5b41-162a-11ed-abaa-525400c5da15"].</li>
 
-The original configuration will apply if this field is not specified. 
-     * @return OriginValue Origin server information:
-<li>When `OriginType=custom`, it indicates one or more origin servers, such as ["8.8.8.8","9.9.9.9"] or ["test.com"].</li>
-<li>When `OriginType=origins`, it indicates an origin group ID, such as ["origin-537f5b41-162a-11ed-abaa-525400c5da15"].</li>
+If not specified, the original value is retained. 
+     * @return OriginValue Details of the origin server:
+<li>When OriginType is custom, it indicates one or more origin servers, such as `["8.8.8.8","9.9.9.9"]` or `OriginValue=["test.com"]`;</li>
+<li>When OriginType is origins, it requires one and only one element, indicating the origin server group ID, such as ["origin-537f5b41-162a-11ed-abaa-525400c5da15"].</li>
 
-The original configuration will apply if this field is not specified.
+If not specified, the original value is retained.
      */
     public String [] getOriginValue() {
         return this.OriginValue;
     }
 
     /**
-     * Set Origin server information:
-<li>When `OriginType=custom`, it indicates one or more origin servers, such as ["8.8.8.8","9.9.9.9"] or ["test.com"].</li>
-<li>When `OriginType=origins`, it indicates an origin group ID, such as ["origin-537f5b41-162a-11ed-abaa-525400c5da15"].</li>
+     * Set Details of the origin server:
+<li>When OriginType is custom, it indicates one or more origin servers, such as `["8.8.8.8","9.9.9.9"]` or `OriginValue=["test.com"]`;</li>
+<li>When OriginType is origins, it requires one and only one element, indicating the origin server group ID, such as ["origin-537f5b41-162a-11ed-abaa-525400c5da15"].</li>
 
-The original configuration will apply if this field is not specified.
-     * @param OriginValue Origin server information:
-<li>When `OriginType=custom`, it indicates one or more origin servers, such as ["8.8.8.8","9.9.9.9"] or ["test.com"].</li>
-<li>When `OriginType=origins`, it indicates an origin group ID, such as ["origin-537f5b41-162a-11ed-abaa-525400c5da15"].</li>
+If not specified, the original value is retained.
+     * @param OriginValue Details of the origin server:
+<li>When OriginType is custom, it indicates one or more origin servers, such as `["8.8.8.8","9.9.9.9"]` or `OriginValue=["test.com"]`;</li>
+<li>When OriginType is origins, it requires one and only one element, indicating the origin server group ID, such as ["origin-537f5b41-162a-11ed-abaa-525400c5da15"].</li>
 
-The original configuration will apply if this field is not specified.
+If not specified, the original value is retained.
      */
     public void setOriginValue(String [] OriginValue) {
         this.OriginValue = OriginValue;
     }
 
     /**
-     * Get Passes the client IP. Values:
-<li>`TOA`: Pass the client IP via TOA (available only when `Proto=TCP`).</li>
-<li>`PPV1`: Pass the client IP via Proxy Protocol V1 (available only when `Proto=TCP`).</li>
-<li>`PPV2`: Pass the client IP via Proxy Protocol V2.</li>
-<li>`OFF`: Not pass the client IP.</li>If not specified, this field uses the default value OFF. 
-     * @return ForwardClientIp Passes the client IP. Values:
-<li>`TOA`: Pass the client IP via TOA (available only when `Proto=TCP`).</li>
-<li>`PPV1`: Pass the client IP via Proxy Protocol V1 (available only when `Proto=TCP`).</li>
-<li>`PPV2`: Pass the client IP via Proxy Protocol V2.</li>
-<li>`OFF`: Not pass the client IP.</li>If not specified, this field uses the default value OFF.
+     * Get Pass the client IP address. Valid values:
+<li>TOA: TOA (selectable only when Proto = TCP);</li>
+<li>PPV1: passing via Proxy Protocol V1, available only when Proto = TCP;</li>
+<li>PPV2: passing via Proxy Protocol V2;</li>
+<li>OFF: no passing.</li>Leave it blank to keep the original value. 
+     * @return ForwardClientIp Pass the client IP address. Valid values:
+<li>TOA: TOA (selectable only when Proto = TCP);</li>
+<li>PPV1: passing via Proxy Protocol V1, available only when Proto = TCP;</li>
+<li>PPV2: passing via Proxy Protocol V2;</li>
+<li>OFF: no passing.</li>Leave it blank to keep the original value.
      */
     public String getForwardClientIp() {
         return this.ForwardClientIp;
     }
 
     /**
-     * Set Passes the client IP. Values:
-<li>`TOA`: Pass the client IP via TOA (available only when `Proto=TCP`).</li>
-<li>`PPV1`: Pass the client IP via Proxy Protocol V1 (available only when `Proto=TCP`).</li>
-<li>`PPV2`: Pass the client IP via Proxy Protocol V2.</li>
-<li>`OFF`: Not pass the client IP.</li>If not specified, this field uses the default value OFF.
-     * @param ForwardClientIp Passes the client IP. Values:
-<li>`TOA`: Pass the client IP via TOA (available only when `Proto=TCP`).</li>
-<li>`PPV1`: Pass the client IP via Proxy Protocol V1 (available only when `Proto=TCP`).</li>
-<li>`PPV2`: Pass the client IP via Proxy Protocol V2.</li>
-<li>`OFF`: Not pass the client IP.</li>If not specified, this field uses the default value OFF.
+     * Set Pass the client IP address. Valid values:
+<li>TOA: TOA (selectable only when Proto = TCP);</li>
+<li>PPV1: passing via Proxy Protocol V1, available only when Proto = TCP;</li>
+<li>PPV2: passing via Proxy Protocol V2;</li>
+<li>OFF: no passing.</li>Leave it blank to keep the original value.
+     * @param ForwardClientIp Pass the client IP address. Valid values:
+<li>TOA: TOA (selectable only when Proto = TCP);</li>
+<li>PPV1: passing via Proxy Protocol V1, available only when Proto = TCP;</li>
+<li>PPV2: passing via Proxy Protocol V2;</li>
+<li>OFF: no passing.</li>Leave it blank to keep the original value.
      */
     public void setForwardClientIp(String ForwardClientIp) {
         this.ForwardClientIp = ForwardClientIp;
     }
 
     /**
-     * Get Whether to enable session persistence. Values:
-<li>`true`: Enable</li>
-<li>`false`: Disable</li>If it is left empty, the default value `false` is used. 
-     * @return SessionPersist Whether to enable session persistence. Values:
-<li>`true`: Enable</li>
-<li>`false`: Disable</li>If it is left empty, the default value `false` is used.
+     * Get Whether to enable session persistence. Valid values:
+<li>true: Enable;</li>
+<li>false: Disable.</li>If not specified, false. 
+     * @return SessionPersist Whether to enable session persistence. Valid values:
+<li>true: Enable;</li>
+<li>false: Disable.</li>If not specified, false.
      */
     public Boolean getSessionPersist() {
         return this.SessionPersist;
     }
 
     /**
-     * Set Whether to enable session persistence. Values:
-<li>`true`: Enable</li>
-<li>`false`: Disable</li>If it is left empty, the default value `false` is used.
-     * @param SessionPersist Whether to enable session persistence. Values:
-<li>`true`: Enable</li>
-<li>`false`: Disable</li>If it is left empty, the default value `false` is used.
+     * Set Whether to enable session persistence. Valid values:
+<li>true: Enable;</li>
+<li>false: Disable.</li>If not specified, false.
+     * @param SessionPersist Whether to enable session persistence. Valid values:
+<li>true: Enable;</li>
+<li>false: Disable.</li>If not specified, false.
      */
     public void setSessionPersist(Boolean SessionPersist) {
         this.SessionPersist = SessionPersist;
@@ -350,40 +350,40 @@ The original configuration will apply if this field is not specified.
     }
 
     /**
-     * Get The origin port, which can be:
-<li>A single port, such as 80</li>
-<li>A port range, such as 81-82</li> 
-     * @return OriginPort The origin port, which can be:
-<li>A single port, such as 80</li>
-<li>A port range, such as 81-82</li>
+     * Get Origin server port. Supported formats:
+<li>Single port: 80;</li>
+<li>Port range: 81-90, ports 81 to 90.</li> 
+     * @return OriginPort Origin server port. Supported formats:
+<li>Single port: 80;</li>
+<li>Port range: 81-90, ports 81 to 90.</li>
      */
     public String getOriginPort() {
         return this.OriginPort;
     }
 
     /**
-     * Set The origin port, which can be:
-<li>A single port, such as 80</li>
-<li>A port range, such as 81-82</li>
-     * @param OriginPort The origin port, which can be:
-<li>A single port, such as 80</li>
-<li>A port range, such as 81-82</li>
+     * Set Origin server port. Supported formats:
+<li>Single port: 80;</li>
+<li>Port range: 81-90, ports 81 to 90.</li>
+     * @param OriginPort Origin server port. Supported formats:
+<li>Single port: 80;</li>
+<li>Port range: 81-90, ports 81 to 90.</li>
      */
     public void setOriginPort(String OriginPort) {
         this.OriginPort = OriginPort;
     }
 
     /**
-     * Get Rule tag. The original configuration will apply if it is not specified. 
-     * @return RuleTag Rule tag. The original configuration will apply if it is not specified.
+     * Get Rule tag. If not specified, the original value is retained. 
+     * @return RuleTag Rule tag. If not specified, the original value is retained.
      */
     public String getRuleTag() {
         return this.RuleTag;
     }
 
     /**
-     * Set Rule tag. The original configuration will apply if it is not specified.
-     * @param RuleTag Rule tag. The original configuration will apply if it is not specified.
+     * Set Rule tag. If not specified, the original value is retained.
+     * @param RuleTag Rule tag. If not specified, the original value is retained.
      */
     public void setRuleTag(String RuleTag) {
         this.RuleTag = RuleTag;

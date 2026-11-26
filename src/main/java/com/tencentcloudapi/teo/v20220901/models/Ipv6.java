@@ -24,33 +24,33 @@ import java.util.HashMap;
 public class Ipv6 extends AbstractModel {
 
     /**
-    * Whether to enable IPv6 access. Valid values: 
-<li>`on`: Enable;</li>
-<li>`off`: Disable.</li>
+    * Ipv6 access feature configuration. Valid values:
+<li>on: Turn on the Ipv6 access feature;</li>
+<li>off: Disables the Ipv6 access feature.</li>
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-     * Get Whether to enable IPv6 access. Valid values: 
-<li>`on`: Enable;</li>
-<li>`off`: Disable.</li> 
-     * @return Switch Whether to enable IPv6 access. Valid values: 
-<li>`on`: Enable;</li>
-<li>`off`: Disable.</li>
+     * Get Ipv6 access feature configuration. Valid values:
+<li>on: Turn on the Ipv6 access feature;</li>
+<li>off: Disables the Ipv6 access feature.</li> 
+     * @return Switch Ipv6 access feature configuration. Valid values:
+<li>on: Turn on the Ipv6 access feature;</li>
+<li>off: Disables the Ipv6 access feature.</li>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set Whether to enable IPv6 access. Valid values: 
-<li>`on`: Enable;</li>
-<li>`off`: Disable.</li>
-     * @param Switch Whether to enable IPv6 access. Valid values: 
-<li>`on`: Enable;</li>
-<li>`off`: Disable.</li>
+     * Set Ipv6 access feature configuration. Valid values:
+<li>on: Turn on the Ipv6 access feature;</li>
+<li>off: Disables the Ipv6 access feature.</li>
+     * @param Switch Ipv6 access feature configuration. Valid values:
+<li>on: Turn on the Ipv6 access feature;</li>
+<li>off: Disables the Ipv6 access feature.</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;

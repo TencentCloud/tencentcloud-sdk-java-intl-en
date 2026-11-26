@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class Origin extends AbstractModel {
 
     /**
-    * Origin server list.
+    * Primary origin server list.
     */
     @SerializedName("Origins")
     @Expose
@@ -38,35 +38,35 @@ public class Origin extends AbstractModel {
     private String [] BackupOrigins;
 
     /**
-    * Origin server protocol configuration. valid values:.
-<Li>Http: forced http back to source;</li>.
-<Li>`Follow`: follow protocol.</li>.
-<Li>Https: enforce https origin-pull.</li>.
+    * Origin-pull protocol configuration, with values:
+<li>http: Force HTTP origin-pull.</li>
+<li>follow: follow protocol for origin-pull;</li>
+<li>https: Force HTTPS origin-pull.</li>
     */
     @SerializedName("OriginPullProtocol")
     @Expose
     private String OriginPullProtocol;
 
     /**
-    * When the origin is tencent cloud COS, whether it is a private access bucket. valid values:.
-<li>`on`: private network access;</li>.
-<li>`off`: public access.</li>.
+    * Whether the origin server is a private access bucket when it is Tencent Cloud COS. Valid values:
+<li>on: Private access;</li>
+<li>off: Public Access.</li>
     */
     @SerializedName("CosPrivateAccess")
     @Expose
     private String CosPrivateAccess;
 
     /**
-     * Get Origin server list. 
-     * @return Origins Origin server list.
+     * Get Primary origin server list. 
+     * @return Origins Primary origin server list.
      */
     public String [] getOrigins() {
         return this.Origins;
     }
 
     /**
-     * Set Origin server list.
-     * @param Origins Origin server list.
+     * Set Primary origin server list.
+     * @param Origins Primary origin server list.
      */
     public void setOrigins(String [] Origins) {
         this.Origins = Origins;
@@ -89,52 +89,52 @@ public class Origin extends AbstractModel {
     }
 
     /**
-     * Get Origin server protocol configuration. valid values:.
-<Li>Http: forced http back to source;</li>.
-<Li>`Follow`: follow protocol.</li>.
-<Li>Https: enforce https origin-pull.</li>. 
-     * @return OriginPullProtocol Origin server protocol configuration. valid values:.
-<Li>Http: forced http back to source;</li>.
-<Li>`Follow`: follow protocol.</li>.
-<Li>Https: enforce https origin-pull.</li>.
+     * Get Origin-pull protocol configuration, with values:
+<li>http: Force HTTP origin-pull.</li>
+<li>follow: follow protocol for origin-pull;</li>
+<li>https: Force HTTPS origin-pull.</li> 
+     * @return OriginPullProtocol Origin-pull protocol configuration, with values:
+<li>http: Force HTTP origin-pull.</li>
+<li>follow: follow protocol for origin-pull;</li>
+<li>https: Force HTTPS origin-pull.</li>
      */
     public String getOriginPullProtocol() {
         return this.OriginPullProtocol;
     }
 
     /**
-     * Set Origin server protocol configuration. valid values:.
-<Li>Http: forced http back to source;</li>.
-<Li>`Follow`: follow protocol.</li>.
-<Li>Https: enforce https origin-pull.</li>.
-     * @param OriginPullProtocol Origin server protocol configuration. valid values:.
-<Li>Http: forced http back to source;</li>.
-<Li>`Follow`: follow protocol.</li>.
-<Li>Https: enforce https origin-pull.</li>.
+     * Set Origin-pull protocol configuration, with values:
+<li>http: Force HTTP origin-pull.</li>
+<li>follow: follow protocol for origin-pull;</li>
+<li>https: Force HTTPS origin-pull.</li>
+     * @param OriginPullProtocol Origin-pull protocol configuration, with values:
+<li>http: Force HTTP origin-pull.</li>
+<li>follow: follow protocol for origin-pull;</li>
+<li>https: Force HTTPS origin-pull.</li>
      */
     public void setOriginPullProtocol(String OriginPullProtocol) {
         this.OriginPullProtocol = OriginPullProtocol;
     }
 
     /**
-     * Get When the origin is tencent cloud COS, whether it is a private access bucket. valid values:.
-<li>`on`: private network access;</li>.
-<li>`off`: public access.</li>. 
-     * @return CosPrivateAccess When the origin is tencent cloud COS, whether it is a private access bucket. valid values:.
-<li>`on`: private network access;</li>.
-<li>`off`: public access.</li>.
+     * Get Whether the origin server is a private access bucket when it is Tencent Cloud COS. Valid values:
+<li>on: Private access;</li>
+<li>off: Public Access.</li> 
+     * @return CosPrivateAccess Whether the origin server is a private access bucket when it is Tencent Cloud COS. Valid values:
+<li>on: Private access;</li>
+<li>off: Public Access.</li>
      */
     public String getCosPrivateAccess() {
         return this.CosPrivateAccess;
     }
 
     /**
-     * Set When the origin is tencent cloud COS, whether it is a private access bucket. valid values:.
-<li>`on`: private network access;</li>.
-<li>`off`: public access.</li>.
-     * @param CosPrivateAccess When the origin is tencent cloud COS, whether it is a private access bucket. valid values:.
-<li>`on`: private network access;</li>.
-<li>`off`: public access.</li>.
+     * Set Whether the origin server is a private access bucket when it is Tencent Cloud COS. Valid values:
+<li>on: Private access;</li>
+<li>off: Public Access.</li>
+     * @param CosPrivateAccess Whether the origin server is a private access bucket when it is Tencent Cloud COS. Valid values:
+<li>on: Private access;</li>
+<li>off: Public Access.</li>
      */
     public void setCosPrivateAccess(String CosPrivateAccess) {
         this.CosPrivateAccess = CosPrivateAccess;

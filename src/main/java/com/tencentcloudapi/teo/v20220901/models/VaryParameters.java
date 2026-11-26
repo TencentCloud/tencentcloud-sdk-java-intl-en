@@ -24,9 +24,8 @@ import java.util.HashMap;
 public class VaryParameters extends AbstractModel {
 
     /**
-    * Vary feature configuration switch. valid values:.
+    * Vary feature configuration switch. Valid values:
 <li>`on`: Enable;</li>
-
 <li>off: Disable.</li>
     */
     @SerializedName("Switch")
@@ -34,13 +33,11 @@ public class VaryParameters extends AbstractModel {
     private String Switch;
 
     /**
-     * Get Vary feature configuration switch. valid values:.
+     * Get Vary feature configuration switch. Valid values:
 <li>`on`: Enable;</li>
-
 <li>off: Disable.</li> 
-     * @return Switch Vary feature configuration switch. valid values:.
+     * @return Switch Vary feature configuration switch. Valid values:
 <li>`on`: Enable;</li>
-
 <li>off: Disable.</li>
      */
     public String getSwitch() {
@@ -48,13 +45,11 @@ public class VaryParameters extends AbstractModel {
     }
 
     /**
-     * Set Vary feature configuration switch. valid values:.
+     * Set Vary feature configuration switch. Valid values:
 <li>`on`: Enable;</li>
-
 <li>off: Disable.</li>
-     * @param Switch Vary feature configuration switch. valid values:.
+     * @param Switch Vary feature configuration switch. Valid values:
 <li>`on`: Enable;</li>
-
 <li>off: Disable.</li>
      */
     public void setSwitch(String Switch) {

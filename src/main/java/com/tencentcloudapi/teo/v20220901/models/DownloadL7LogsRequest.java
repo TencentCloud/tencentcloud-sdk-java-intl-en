@@ -24,138 +24,138 @@ import java.util.HashMap;
 public class DownloadL7LogsRequest extends AbstractModel {
 
     /**
-    * The start time.
+    * Start time.
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * The end time.
+    * End time.
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-    * Specifies the site ID set. this parameter will change from selectable to required after may 30, 2024. for details, see the announcement: [tencent cloud EdgeOne: tencentcloud API change notification](https://www.tencentcloud.com/document/product/1552/104902?from_cn_redirect=1).
+    * Site ID set. This parameter will change from selectable to required after May 30, 2024. For details, see the announcement: [Tencent Cloud EdgeOne Cloud API Change Notification](https://www.tencentcloud.com/document/product/1552/104902?from_cn_redirect=1).
     */
     @SerializedName("ZoneIds")
     @Expose
     private String [] ZoneIds;
 
     /**
-    * List of subdomain names to be queried. All subdomain names will be selected if this field is not specified.
+    * Subdomain set. If left blank, select all subdomains by default.
     */
     @SerializedName("Domains")
     @Expose
     private String [] Domains;
 
     /**
-    * Limit on paginated queries. Default value: 20. Maximum value: 300.
+    * Number limit of paginated query. Default value: 20. Maximum number of query entries: 300.
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * The page offset. Default value: 0.
+    * Pagination offset. Default value: 0.
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-     * Get The start time. 
-     * @return StartTime The start time.
+     * Get Start time. 
+     * @return StartTime Start time.
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set The start time.
-     * @param StartTime The start time.
+     * Set Start time.
+     * @param StartTime Start time.
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get The end time. 
-     * @return EndTime The end time.
+     * Get End time. 
+     * @return EndTime End time.
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set The end time.
-     * @param EndTime The end time.
+     * Set End time.
+     * @param EndTime End time.
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get Specifies the site ID set. this parameter will change from selectable to required after may 30, 2024. for details, see the announcement: [tencent cloud EdgeOne: tencentcloud API change notification](https://www.tencentcloud.com/document/product/1552/104902?from_cn_redirect=1). 
-     * @return ZoneIds Specifies the site ID set. this parameter will change from selectable to required after may 30, 2024. for details, see the announcement: [tencent cloud EdgeOne: tencentcloud API change notification](https://www.tencentcloud.com/document/product/1552/104902?from_cn_redirect=1).
+     * Get Site ID set. This parameter will change from selectable to required after May 30, 2024. For details, see the announcement: [Tencent Cloud EdgeOne Cloud API Change Notification](https://www.tencentcloud.com/document/product/1552/104902?from_cn_redirect=1). 
+     * @return ZoneIds Site ID set. This parameter will change from selectable to required after May 30, 2024. For details, see the announcement: [Tencent Cloud EdgeOne Cloud API Change Notification](https://www.tencentcloud.com/document/product/1552/104902?from_cn_redirect=1).
      */
     public String [] getZoneIds() {
         return this.ZoneIds;
     }
 
     /**
-     * Set Specifies the site ID set. this parameter will change from selectable to required after may 30, 2024. for details, see the announcement: [tencent cloud EdgeOne: tencentcloud API change notification](https://www.tencentcloud.com/document/product/1552/104902?from_cn_redirect=1).
-     * @param ZoneIds Specifies the site ID set. this parameter will change from selectable to required after may 30, 2024. for details, see the announcement: [tencent cloud EdgeOne: tencentcloud API change notification](https://www.tencentcloud.com/document/product/1552/104902?from_cn_redirect=1).
+     * Set Site ID set. This parameter will change from selectable to required after May 30, 2024. For details, see the announcement: [Tencent Cloud EdgeOne Cloud API Change Notification](https://www.tencentcloud.com/document/product/1552/104902?from_cn_redirect=1).
+     * @param ZoneIds Site ID set. This parameter will change from selectable to required after May 30, 2024. For details, see the announcement: [Tencent Cloud EdgeOne Cloud API Change Notification](https://www.tencentcloud.com/document/product/1552/104902?from_cn_redirect=1).
      */
     public void setZoneIds(String [] ZoneIds) {
         this.ZoneIds = ZoneIds;
     }
 
     /**
-     * Get List of subdomain names to be queried. All subdomain names will be selected if this field is not specified. 
-     * @return Domains List of subdomain names to be queried. All subdomain names will be selected if this field is not specified.
+     * Get Subdomain set. If left blank, select all subdomains by default. 
+     * @return Domains Subdomain set. If left blank, select all subdomains by default.
      */
     public String [] getDomains() {
         return this.Domains;
     }
 
     /**
-     * Set List of subdomain names to be queried. All subdomain names will be selected if this field is not specified.
-     * @param Domains List of subdomain names to be queried. All subdomain names will be selected if this field is not specified.
+     * Set Subdomain set. If left blank, select all subdomains by default.
+     * @param Domains Subdomain set. If left blank, select all subdomains by default.
      */
     public void setDomains(String [] Domains) {
         this.Domains = Domains;
     }
 
     /**
-     * Get Limit on paginated queries. Default value: 20. Maximum value: 300. 
-     * @return Limit Limit on paginated queries. Default value: 20. Maximum value: 300.
+     * Get Number limit of paginated query. Default value: 20. Maximum number of query entries: 300. 
+     * @return Limit Number limit of paginated query. Default value: 20. Maximum number of query entries: 300.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Limit on paginated queries. Default value: 20. Maximum value: 300.
-     * @param Limit Limit on paginated queries. Default value: 20. Maximum value: 300.
+     * Set Number limit of paginated query. Default value: 20. Maximum number of query entries: 300.
+     * @param Limit Number limit of paginated query. Default value: 20. Maximum number of query entries: 300.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get The page offset. Default value: 0. 
-     * @return Offset The page offset. Default value: 0.
+     * Get Pagination offset. Default value: 0. 
+     * @return Offset Pagination offset. Default value: 0.
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set The page offset. Default value: 0.
-     * @param Offset The page offset. Default value: 0.
+     * Set Pagination offset. Default value: 0.
+     * @param Offset Pagination offset. Default value: 0.
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;

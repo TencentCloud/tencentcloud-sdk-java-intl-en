@@ -24,163 +24,184 @@ import java.util.HashMap;
 public class OriginACLInfo extends AbstractModel {
 
     /**
-    * The list of L7 accelerated domains that enable the origin ACLs. This field is empty when origin protection is not enabled.
+    * <p>Origin protection mode for layer-7 acceleration domain names. Valid values: <li>all: automatic protection mode. All layer-7 acceleration domain names in the site are included in the origin protection list, including newly added layer-7 acceleration domain names;</li><li>specific: specified protection mode. Only bound layer-7 acceleration domain names are protected.</li></p>
+    */
+    @SerializedName("L7EnableMode")
+    @Expose
+    private String L7EnableMode;
+
+    /**
+    * <p>List of layer-7 acceleration domain names that have origin-pull from specific origin IP ranges enabled. Empty when origin protection is not enabled.</p>
     */
     @SerializedName("L7Hosts")
     @Expose
     private String [] L7Hosts;
 
     /**
-    * The list of L4 proxy instances that enable the origin ACLs. This field is empty when origin protection is not enabled.
+    * <p>Origin protection mode for layer-4 proxy instances. Valid values: <li>all: automatic protection mode. All layer-4 proxy instances in the site are included in the origin protection list, including newly added layer-4 proxy instances;</li><li>specific: specified protection mode. Only bound layer-4 proxy instances are protected.</li></p>
+    */
+    @SerializedName("L4EnableMode")
+    @Expose
+    private String L4EnableMode;
+
+    /**
+    * <p>List of layer-4 proxy instances that have origin-pull from specific origin IP ranges enabled. Empty when origin protection is not enabled.</p>
     */
     @SerializedName("L4ProxyIds")
     @Expose
     private String [] L4ProxyIds;
 
     /**
-    * Currently effective origin ACLs. This field is empty when origin protection is not enabled.
-Note: This field may return null, which indicates a failure to obtain a valid value.
+    * <p>Currently effective origin IP range. Empty when origin protection is not enabled.</p>
     */
     @SerializedName("CurrentOriginACL")
     @Expose
     private CurrentOriginACL CurrentOriginACL;
 
     /**
-    * When the origin ACLs are updated, this field will be returned with the next version's origin IP range to take effect, including a comparison with the current origin IP range. This field is empty if not updated or origin protection is not enabled.
-Note: This field may return null, which indicates a failure to obtain a valid value.
+    * <p>When the origin IP range is updated, this field returns the origin IP range that will take effect in the next version, including a comparison with the current origin IP range. Empty when there is no update or origin protection is not enabled.</p>
     */
     @SerializedName("NextOriginACL")
     @Expose
     private NextOriginACL NextOriginACL;
 
     /**
-    * Origin protection status. Vaild values:
-- online: in effect;
-- offline: disabled;
-- updating: configuration deployment in progress.
+    * <p>Origin protection status. Valid values:</p><li>online: Effective;</li><li>offline: Disabled;</li><li>updating: Configuration being deployed.</li>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * Origin protection back-to-origin ACL control domain.
+    * <p>Origin protection origin-pull ACL control domain.</p>
     */
     @SerializedName("OriginACLFamily")
     @Expose
     private String OriginACLFamily;
 
     /**
-     * Get The list of L7 accelerated domains that enable the origin ACLs. This field is empty when origin protection is not enabled. 
-     * @return L7Hosts The list of L7 accelerated domains that enable the origin ACLs. This field is empty when origin protection is not enabled.
+     * Get <p>Origin protection mode for layer-7 acceleration domain names. Valid values: <li>all: automatic protection mode. All layer-7 acceleration domain names in the site are included in the origin protection list, including newly added layer-7 acceleration domain names;</li><li>specific: specified protection mode. Only bound layer-7 acceleration domain names are protected.</li></p> 
+     * @return L7EnableMode <p>Origin protection mode for layer-7 acceleration domain names. Valid values: <li>all: automatic protection mode. All layer-7 acceleration domain names in the site are included in the origin protection list, including newly added layer-7 acceleration domain names;</li><li>specific: specified protection mode. Only bound layer-7 acceleration domain names are protected.</li></p>
+     */
+    public String getL7EnableMode() {
+        return this.L7EnableMode;
+    }
+
+    /**
+     * Set <p>Origin protection mode for layer-7 acceleration domain names. Valid values: <li>all: automatic protection mode. All layer-7 acceleration domain names in the site are included in the origin protection list, including newly added layer-7 acceleration domain names;</li><li>specific: specified protection mode. Only bound layer-7 acceleration domain names are protected.</li></p>
+     * @param L7EnableMode <p>Origin protection mode for layer-7 acceleration domain names. Valid values: <li>all: automatic protection mode. All layer-7 acceleration domain names in the site are included in the origin protection list, including newly added layer-7 acceleration domain names;</li><li>specific: specified protection mode. Only bound layer-7 acceleration domain names are protected.</li></p>
+     */
+    public void setL7EnableMode(String L7EnableMode) {
+        this.L7EnableMode = L7EnableMode;
+    }
+
+    /**
+     * Get <p>List of layer-7 acceleration domain names that have origin-pull from specific origin IP ranges enabled. Empty when origin protection is not enabled.</p> 
+     * @return L7Hosts <p>List of layer-7 acceleration domain names that have origin-pull from specific origin IP ranges enabled. Empty when origin protection is not enabled.</p>
      */
     public String [] getL7Hosts() {
         return this.L7Hosts;
     }
 
     /**
-     * Set The list of L7 accelerated domains that enable the origin ACLs. This field is empty when origin protection is not enabled.
-     * @param L7Hosts The list of L7 accelerated domains that enable the origin ACLs. This field is empty when origin protection is not enabled.
+     * Set <p>List of layer-7 acceleration domain names that have origin-pull from specific origin IP ranges enabled. Empty when origin protection is not enabled.</p>
+     * @param L7Hosts <p>List of layer-7 acceleration domain names that have origin-pull from specific origin IP ranges enabled. Empty when origin protection is not enabled.</p>
      */
     public void setL7Hosts(String [] L7Hosts) {
         this.L7Hosts = L7Hosts;
     }
 
     /**
-     * Get The list of L4 proxy instances that enable the origin ACLs. This field is empty when origin protection is not enabled. 
-     * @return L4ProxyIds The list of L4 proxy instances that enable the origin ACLs. This field is empty when origin protection is not enabled.
+     * Get <p>Origin protection mode for layer-4 proxy instances. Valid values: <li>all: automatic protection mode. All layer-4 proxy instances in the site are included in the origin protection list, including newly added layer-4 proxy instances;</li><li>specific: specified protection mode. Only bound layer-4 proxy instances are protected.</li></p> 
+     * @return L4EnableMode <p>Origin protection mode for layer-4 proxy instances. Valid values: <li>all: automatic protection mode. All layer-4 proxy instances in the site are included in the origin protection list, including newly added layer-4 proxy instances;</li><li>specific: specified protection mode. Only bound layer-4 proxy instances are protected.</li></p>
+     */
+    public String getL4EnableMode() {
+        return this.L4EnableMode;
+    }
+
+    /**
+     * Set <p>Origin protection mode for layer-4 proxy instances. Valid values: <li>all: automatic protection mode. All layer-4 proxy instances in the site are included in the origin protection list, including newly added layer-4 proxy instances;</li><li>specific: specified protection mode. Only bound layer-4 proxy instances are protected.</li></p>
+     * @param L4EnableMode <p>Origin protection mode for layer-4 proxy instances. Valid values: <li>all: automatic protection mode. All layer-4 proxy instances in the site are included in the origin protection list, including newly added layer-4 proxy instances;</li><li>specific: specified protection mode. Only bound layer-4 proxy instances are protected.</li></p>
+     */
+    public void setL4EnableMode(String L4EnableMode) {
+        this.L4EnableMode = L4EnableMode;
+    }
+
+    /**
+     * Get <p>List of layer-4 proxy instances that have origin-pull from specific origin IP ranges enabled. Empty when origin protection is not enabled.</p> 
+     * @return L4ProxyIds <p>List of layer-4 proxy instances that have origin-pull from specific origin IP ranges enabled. Empty when origin protection is not enabled.</p>
      */
     public String [] getL4ProxyIds() {
         return this.L4ProxyIds;
     }
 
     /**
-     * Set The list of L4 proxy instances that enable the origin ACLs. This field is empty when origin protection is not enabled.
-     * @param L4ProxyIds The list of L4 proxy instances that enable the origin ACLs. This field is empty when origin protection is not enabled.
+     * Set <p>List of layer-4 proxy instances that have origin-pull from specific origin IP ranges enabled. Empty when origin protection is not enabled.</p>
+     * @param L4ProxyIds <p>List of layer-4 proxy instances that have origin-pull from specific origin IP ranges enabled. Empty when origin protection is not enabled.</p>
      */
     public void setL4ProxyIds(String [] L4ProxyIds) {
         this.L4ProxyIds = L4ProxyIds;
     }
 
     /**
-     * Get Currently effective origin ACLs. This field is empty when origin protection is not enabled.
-Note: This field may return null, which indicates a failure to obtain a valid value. 
-     * @return CurrentOriginACL Currently effective origin ACLs. This field is empty when origin protection is not enabled.
-Note: This field may return null, which indicates a failure to obtain a valid value.
+     * Get <p>Currently effective origin IP range. Empty when origin protection is not enabled.</p> 
+     * @return CurrentOriginACL <p>Currently effective origin IP range. Empty when origin protection is not enabled.</p>
      */
     public CurrentOriginACL getCurrentOriginACL() {
         return this.CurrentOriginACL;
     }
 
     /**
-     * Set Currently effective origin ACLs. This field is empty when origin protection is not enabled.
-Note: This field may return null, which indicates a failure to obtain a valid value.
-     * @param CurrentOriginACL Currently effective origin ACLs. This field is empty when origin protection is not enabled.
-Note: This field may return null, which indicates a failure to obtain a valid value.
+     * Set <p>Currently effective origin IP range. Empty when origin protection is not enabled.</p>
+     * @param CurrentOriginACL <p>Currently effective origin IP range. Empty when origin protection is not enabled.</p>
      */
     public void setCurrentOriginACL(CurrentOriginACL CurrentOriginACL) {
         this.CurrentOriginACL = CurrentOriginACL;
     }
 
     /**
-     * Get When the origin ACLs are updated, this field will be returned with the next version's origin IP range to take effect, including a comparison with the current origin IP range. This field is empty if not updated or origin protection is not enabled.
-Note: This field may return null, which indicates a failure to obtain a valid value. 
-     * @return NextOriginACL When the origin ACLs are updated, this field will be returned with the next version's origin IP range to take effect, including a comparison with the current origin IP range. This field is empty if not updated or origin protection is not enabled.
-Note: This field may return null, which indicates a failure to obtain a valid value.
+     * Get <p>When the origin IP range is updated, this field returns the origin IP range that will take effect in the next version, including a comparison with the current origin IP range. Empty when there is no update or origin protection is not enabled.</p> 
+     * @return NextOriginACL <p>When the origin IP range is updated, this field returns the origin IP range that will take effect in the next version, including a comparison with the current origin IP range. Empty when there is no update or origin protection is not enabled.</p>
      */
     public NextOriginACL getNextOriginACL() {
         return this.NextOriginACL;
     }
 
     /**
-     * Set When the origin ACLs are updated, this field will be returned with the next version's origin IP range to take effect, including a comparison with the current origin IP range. This field is empty if not updated or origin protection is not enabled.
-Note: This field may return null, which indicates a failure to obtain a valid value.
-     * @param NextOriginACL When the origin ACLs are updated, this field will be returned with the next version's origin IP range to take effect, including a comparison with the current origin IP range. This field is empty if not updated or origin protection is not enabled.
-Note: This field may return null, which indicates a failure to obtain a valid value.
+     * Set <p>When the origin IP range is updated, this field returns the origin IP range that will take effect in the next version, including a comparison with the current origin IP range. Empty when there is no update or origin protection is not enabled.</p>
+     * @param NextOriginACL <p>When the origin IP range is updated, this field returns the origin IP range that will take effect in the next version, including a comparison with the current origin IP range. Empty when there is no update or origin protection is not enabled.</p>
      */
     public void setNextOriginACL(NextOriginACL NextOriginACL) {
         this.NextOriginACL = NextOriginACL;
     }
 
     /**
-     * Get Origin protection status. Vaild values:
-- online: in effect;
-- offline: disabled;
-- updating: configuration deployment in progress. 
-     * @return Status Origin protection status. Vaild values:
-- online: in effect;
-- offline: disabled;
-- updating: configuration deployment in progress.
+     * Get <p>Origin protection status. Valid values:</p><li>online: Effective;</li><li>offline: Disabled;</li><li>updating: Configuration being deployed.</li> 
+     * @return Status <p>Origin protection status. Valid values:</p><li>online: Effective;</li><li>offline: Disabled;</li><li>updating: Configuration being deployed.</li>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Origin protection status. Vaild values:
-- online: in effect;
-- offline: disabled;
-- updating: configuration deployment in progress.
-     * @param Status Origin protection status. Vaild values:
-- online: in effect;
-- offline: disabled;
-- updating: configuration deployment in progress.
+     * Set <p>Origin protection status. Valid values:</p><li>online: Effective;</li><li>offline: Disabled;</li><li>updating: Configuration being deployed.</li>
+     * @param Status <p>Origin protection status. Valid values:</p><li>online: Effective;</li><li>offline: Disabled;</li><li>updating: Configuration being deployed.</li>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Origin protection back-to-origin ACL control domain. 
-     * @return OriginACLFamily Origin protection back-to-origin ACL control domain.
+     * Get <p>Origin protection origin-pull ACL control domain.</p> 
+     * @return OriginACLFamily <p>Origin protection origin-pull ACL control domain.</p>
      */
     public String getOriginACLFamily() {
         return this.OriginACLFamily;
     }
 
     /**
-     * Set Origin protection back-to-origin ACL control domain.
-     * @param OriginACLFamily Origin protection back-to-origin ACL control domain.
+     * Set <p>Origin protection origin-pull ACL control domain.</p>
+     * @param OriginACLFamily <p>Origin protection origin-pull ACL control domain.</p>
      */
     public void setOriginACLFamily(String OriginACLFamily) {
         this.OriginACLFamily = OriginACLFamily;
@@ -194,11 +215,17 @@ Note: This field may return null, which indicates a failure to obtain a valid va
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public OriginACLInfo(OriginACLInfo source) {
+        if (source.L7EnableMode != null) {
+            this.L7EnableMode = new String(source.L7EnableMode);
+        }
         if (source.L7Hosts != null) {
             this.L7Hosts = new String[source.L7Hosts.length];
             for (int i = 0; i < source.L7Hosts.length; i++) {
                 this.L7Hosts[i] = new String(source.L7Hosts[i]);
             }
+        }
+        if (source.L4EnableMode != null) {
+            this.L4EnableMode = new String(source.L4EnableMode);
         }
         if (source.L4ProxyIds != null) {
             this.L4ProxyIds = new String[source.L4ProxyIds.length];
@@ -225,7 +252,9 @@ Note: This field may return null, which indicates a failure to obtain a valid va
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "L7EnableMode", this.L7EnableMode);
         this.setParamArraySimple(map, prefix + "L7Hosts.", this.L7Hosts);
+        this.setParamSimple(map, prefix + "L4EnableMode", this.L4EnableMode);
         this.setParamArraySimple(map, prefix + "L4ProxyIds.", this.L4ProxyIds);
         this.setParamObj(map, prefix + "CurrentOriginACL.", this.CurrentOriginACL);
         this.setParamObj(map, prefix + "NextOriginACL.", this.NextOriginACL);

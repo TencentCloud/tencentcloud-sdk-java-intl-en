@@ -24,51 +24,51 @@ import java.util.HashMap;
 public class SubRule extends AbstractModel {
 
     /**
-    * The condition that determines if a feature should run.
-Note: If any condition in the array is met, the feature will run.
+    * Judgment condition for executing the feature.
+Note: The feature can be executed if any condition in the array is met.
     */
     @SerializedName("Conditions")
     @Expose
     private RuleAndConditions [] Conditions;
 
     /**
-    * The feature to be executed.
+    * Function to execute.
     */
     @SerializedName("Actions")
     @Expose
     private Action [] Actions;
 
     /**
-     * Get The condition that determines if a feature should run.
-Note: If any condition in the array is met, the feature will run. 
-     * @return Conditions The condition that determines if a feature should run.
-Note: If any condition in the array is met, the feature will run.
+     * Get Judgment condition for executing the feature.
+Note: The feature can be executed if any condition in the array is met. 
+     * @return Conditions Judgment condition for executing the feature.
+Note: The feature can be executed if any condition in the array is met.
      */
     public RuleAndConditions [] getConditions() {
         return this.Conditions;
     }
 
     /**
-     * Set The condition that determines if a feature should run.
-Note: If any condition in the array is met, the feature will run.
-     * @param Conditions The condition that determines if a feature should run.
-Note: If any condition in the array is met, the feature will run.
+     * Set Judgment condition for executing the feature.
+Note: The feature can be executed if any condition in the array is met.
+     * @param Conditions Judgment condition for executing the feature.
+Note: The feature can be executed if any condition in the array is met.
      */
     public void setConditions(RuleAndConditions [] Conditions) {
         this.Conditions = Conditions;
     }
 
     /**
-     * Get The feature to be executed. 
-     * @return Actions The feature to be executed.
+     * Get Function to execute. 
+     * @return Actions Function to execute.
      */
     public Action [] getActions() {
         return this.Actions;
     }
 
     /**
-     * Set The feature to be executed.
-     * @param Actions The feature to be executed.
+     * Set Function to execute.
+     * @param Actions Function to execute.
      */
     public void setActions(Action [] Actions) {
         this.Actions = Actions;

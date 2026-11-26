@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateLoadBalancerResponse extends AbstractModel {
 
     /**
-    * CLB instance ID.
+    * <p>Cloud Load Balancer instance ID.</p>
     */
     @SerializedName("InstanceId")
     @Expose
@@ -38,16 +38,16 @@ public class CreateLoadBalancerResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get CLB instance ID. 
-     * @return InstanceId CLB instance ID.
+     * Get <p>Cloud Load Balancer instance ID.</p> 
+     * @return InstanceId <p>Cloud Load Balancer instance ID.</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set CLB instance ID.
-     * @param InstanceId CLB instance ID.
+     * Set <p>Cloud Load Balancer instance ID.</p>
+     * @param InstanceId <p>Cloud Load Balancer instance ID.</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;

@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class CreateAccelerationDomainResponse extends AbstractModel {
 
     /**
-    * Use the information returned by this parameter to verify the ownership of a domain name. For details, see [Ownership Verification](https://intl.cloud.tencent.com/document/product/1552/70789?from_cn_redirect=1).
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * If ownership of your site is not verified, you can use the returned message through this parameter to verify domain name ownership separately. For details, see [Site/Domain Name Ownership Verification](https://www.tencentcloud.com/document/product/1552/70789?from_cn_redirect=1).
     */
     @SerializedName("OwnershipVerification")
     @Expose
@@ -39,20 +38,16 @@ Note: This field may return·null, indicating that no valid values can be obtain
     private String RequestId;
 
     /**
-     * Get Use the information returned by this parameter to verify the ownership of a domain name. For details, see [Ownership Verification](https://intl.cloud.tencent.com/document/product/1552/70789?from_cn_redirect=1).
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return OwnershipVerification Use the information returned by this parameter to verify the ownership of a domain name. For details, see [Ownership Verification](https://intl.cloud.tencent.com/document/product/1552/70789?from_cn_redirect=1).
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get If ownership of your site is not verified, you can use the returned message through this parameter to verify domain name ownership separately. For details, see [Site/Domain Name Ownership Verification](https://www.tencentcloud.com/document/product/1552/70789?from_cn_redirect=1). 
+     * @return OwnershipVerification If ownership of your site is not verified, you can use the returned message through this parameter to verify domain name ownership separately. For details, see [Site/Domain Name Ownership Verification](https://www.tencentcloud.com/document/product/1552/70789?from_cn_redirect=1).
      */
     public OwnershipVerification getOwnershipVerification() {
         return this.OwnershipVerification;
     }
 
     /**
-     * Set Use the information returned by this parameter to verify the ownership of a domain name. For details, see [Ownership Verification](https://intl.cloud.tencent.com/document/product/1552/70789?from_cn_redirect=1).
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param OwnershipVerification Use the information returned by this parameter to verify the ownership of a domain name. For details, see [Ownership Verification](https://intl.cloud.tencent.com/document/product/1552/70789?from_cn_redirect=1).
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set If ownership of your site is not verified, you can use the returned message through this parameter to verify domain name ownership separately. For details, see [Site/Domain Name Ownership Verification](https://www.tencentcloud.com/document/product/1552/70789?from_cn_redirect=1).
+     * @param OwnershipVerification If ownership of your site is not verified, you can use the returned message through this parameter to verify domain name ownership separately. For details, see [Site/Domain Name Ownership Verification](https://www.tencentcloud.com/document/product/1552/70789?from_cn_redirect=1).
      */
     public void setOwnershipVerification(OwnershipVerification OwnershipVerification) {
         this.OwnershipVerification = OwnershipVerification;

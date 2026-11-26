@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class HTTPResponseParameters extends AbstractModel {
 
     /**
-    * Response status code. supports 2xx, 4xx, 5xx, excluding 499, 514, 101, 301, 302, 303, 509, 520-599.
+    * status code. Supports 2XX, 4XX, 5XX, excluding 499, 514, 101, 301, 302, 303, 509, 520-599.
     */
     @SerializedName("StatusCode")
     @Expose
     private Long StatusCode;
 
     /**
-    * Response page id.
+    * page ID.
     */
     @SerializedName("ResponsePage")
     @Expose
     private String ResponsePage;
 
     /**
-     * Get Response status code. supports 2xx, 4xx, 5xx, excluding 499, 514, 101, 301, 302, 303, 509, 520-599. 
-     * @return StatusCode Response status code. supports 2xx, 4xx, 5xx, excluding 499, 514, 101, 301, 302, 303, 509, 520-599.
+     * Get status code. Supports 2XX, 4XX, 5XX, excluding 499, 514, 101, 301, 302, 303, 509, 520-599. 
+     * @return StatusCode status code. Supports 2XX, 4XX, 5XX, excluding 499, 514, 101, 301, 302, 303, 509, 520-599.
      */
     public Long getStatusCode() {
         return this.StatusCode;
     }
 
     /**
-     * Set Response status code. supports 2xx, 4xx, 5xx, excluding 499, 514, 101, 301, 302, 303, 509, 520-599.
-     * @param StatusCode Response status code. supports 2xx, 4xx, 5xx, excluding 499, 514, 101, 301, 302, 303, 509, 520-599.
+     * Set status code. Supports 2XX, 4XX, 5XX, excluding 499, 514, 101, 301, 302, 303, 509, 520-599.
+     * @param StatusCode status code. Supports 2XX, 4XX, 5XX, excluding 499, 514, 101, 301, 302, 303, 509, 520-599.
      */
     public void setStatusCode(Long StatusCode) {
         this.StatusCode = StatusCode;
     }
 
     /**
-     * Get Response page id. 
-     * @return ResponsePage Response page id.
+     * Get page ID. 
+     * @return ResponsePage page ID.
      */
     public String getResponsePage() {
         return this.ResponsePage;
     }
 
     /**
-     * Set Response page id.
-     * @param ResponsePage Response page id.
+     * Set page ID.
+     * @param ResponsePage page ID.
      */
     public void setResponsePage(String ResponsePage) {
         this.ResponsePage = ResponsePage;

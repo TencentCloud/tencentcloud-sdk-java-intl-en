@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class CreateSecurityJSInjectionRuleRequest extends AbstractModel {
 
     /**
-    * Zone ID.		
+    * Zone ID.	
     */
     @SerializedName("ZoneId")
     @Expose
     private String ZoneId;
 
     /**
-    * JavaScript injection rule list.
+    * List of JavaScript injection rules.
     */
     @SerializedName("JSInjectionRules")
     @Expose
     private JSInjectionRule [] JSInjectionRules;
 
     /**
-     * Get Zone ID.		 
-     * @return ZoneId Zone ID.		
+     * Get Zone ID.	 
+     * @return ZoneId Zone ID.	
      */
     public String getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set Zone ID.		
-     * @param ZoneId Zone ID.		
+     * Set Zone ID.	
+     * @param ZoneId Zone ID.	
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get JavaScript injection rule list. 
-     * @return JSInjectionRules JavaScript injection rule list.
+     * Get List of JavaScript injection rules. 
+     * @return JSInjectionRules List of JavaScript injection rules.
      */
     public JSInjectionRule [] getJSInjectionRules() {
         return this.JSInjectionRules;
     }
 
     /**
-     * Set JavaScript injection rule list.
-     * @param JSInjectionRules JavaScript injection rule list.
+     * Set List of JavaScript injection rules.
+     * @param JSInjectionRules List of JavaScript injection rules.
      */
     public void setJSInjectionRules(JSInjectionRule [] JSInjectionRules) {
         this.JSInjectionRules = JSInjectionRules;

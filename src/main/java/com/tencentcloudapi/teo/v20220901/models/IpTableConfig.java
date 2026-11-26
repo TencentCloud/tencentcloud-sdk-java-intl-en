@@ -24,61 +24,56 @@ import java.util.HashMap;
 public class IpTableConfig extends AbstractModel {
 
     /**
-    * Switch. valid values:.
+    * Switch. Valid values:
 <li>`on`: Enable;</li>
-
-<li>off: disabled;</li>.
+<li>off: Disable;</li>
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * Basic control rules. if null, historical configuration is used by default.
+    * Basic access control rule. If it is null, use the last set configuration by default.
     */
     @SerializedName("IpTableRules")
     @Expose
     private IpTableRule [] IpTableRules;
 
     /**
-     * Get Switch. valid values:.
+     * Get Switch. Valid values:
 <li>`on`: Enable;</li>
-
-<li>off: disabled;</li>. 
-     * @return Switch Switch. valid values:.
+<li>off: Disable;</li> 
+     * @return Switch Switch. Valid values:
 <li>`on`: Enable;</li>
-
-<li>off: disabled;</li>.
+<li>off: Disable;</li>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set Switch. valid values:.
+     * Set Switch. Valid values:
 <li>`on`: Enable;</li>
-
-<li>off: disabled;</li>.
-     * @param Switch Switch. valid values:.
+<li>off: Disable;</li>
+     * @param Switch Switch. Valid values:
 <li>`on`: Enable;</li>
-
-<li>off: disabled;</li>.
+<li>off: Disable;</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get Basic control rules. if null, historical configuration is used by default. 
-     * @return IpTableRules Basic control rules. if null, historical configuration is used by default.
+     * Get Basic access control rule. If it is null, use the last set configuration by default. 
+     * @return IpTableRules Basic access control rule. If it is null, use the last set configuration by default.
      */
     public IpTableRule [] getIpTableRules() {
         return this.IpTableRules;
     }
 
     /**
-     * Set Basic control rules. if null, historical configuration is used by default.
-     * @param IpTableRules Basic control rules. if null, historical configuration is used by default.
+     * Set Basic access control rule. If it is null, use the last set configuration by default.
+     * @param IpTableRules Basic access control rule. If it is null, use the last set configuration by default.
      */
     public void setIpTableRules(IpTableRule [] IpTableRules) {
         this.IpTableRules = IpTableRules;

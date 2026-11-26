@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribePrefetchOriginLimitRequest extends AbstractModel {
 
     /**
-    * Specifies the site ID.
+    * Site ID.
     */
     @SerializedName("ZoneId")
     @Expose
@@ -38,32 +38,32 @@ public class DescribePrefetchOriginLimitRequest extends AbstractModel {
     private Long Offset;
 
     /**
-    * Specifies the paginated query limit. default value: 20. upper limit: 100.
+    * Number limit of paginated query. Default value: 20. Maximum value: 100.
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * Filter condition. specifies the maximum number of Filters.Values is 20. detailed filter criteria:.
-<Li>Domain-Name: specifies domain filtering. the domain-name format is like www.qq.com. fuzzy queries are not supported.</li>.
-<li>area: specifies the acceleration region to filter by limit. fuzzy queries are not supported. valid values:<br> Overseas: global availability zone (excludes chinese mainland);<br> MainlandChina: chinese mainland availability zone.</li>.
+    * Filter criteria. The maximum number of Filters.Values is 20. The detailed filter criteria are as follows:
+<li>domain-name: Filter by domain name. The domain-name format is like www.qq.com. Fuzzy queries are not supported.</li>
+<li>area: Filter by restricted acceleration region. Fuzzy queries are not supported. Options:<br> Overseas: Global availability zone (excluding Chinese mainland);<br> MainlandChina: Chinese mainland availability zone.</li>
     */
     @SerializedName("Filters")
     @Expose
     private Filter [] Filters;
 
     /**
-     * Get Specifies the site ID. 
-     * @return ZoneId Specifies the site ID.
+     * Get Site ID. 
+     * @return ZoneId Site ID.
      */
     public String getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set Specifies the site ID.
-     * @param ZoneId Specifies the site ID.
+     * Set Site ID.
+     * @param ZoneId Site ID.
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;
@@ -86,40 +86,40 @@ public class DescribePrefetchOriginLimitRequest extends AbstractModel {
     }
 
     /**
-     * Get Specifies the paginated query limit. default value: 20. upper limit: 100. 
-     * @return Limit Specifies the paginated query limit. default value: 20. upper limit: 100.
+     * Get Number limit of paginated query. Default value: 20. Maximum value: 100. 
+     * @return Limit Number limit of paginated query. Default value: 20. Maximum value: 100.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Specifies the paginated query limit. default value: 20. upper limit: 100.
-     * @param Limit Specifies the paginated query limit. default value: 20. upper limit: 100.
+     * Set Number limit of paginated query. Default value: 20. Maximum value: 100.
+     * @param Limit Number limit of paginated query. Default value: 20. Maximum value: 100.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get Filter condition. specifies the maximum number of Filters.Values is 20. detailed filter criteria:.
-<Li>Domain-Name: specifies domain filtering. the domain-name format is like www.qq.com. fuzzy queries are not supported.</li>.
-<li>area: specifies the acceleration region to filter by limit. fuzzy queries are not supported. valid values:<br> Overseas: global availability zone (excludes chinese mainland);<br> MainlandChina: chinese mainland availability zone.</li>. 
-     * @return Filters Filter condition. specifies the maximum number of Filters.Values is 20. detailed filter criteria:.
-<Li>Domain-Name: specifies domain filtering. the domain-name format is like www.qq.com. fuzzy queries are not supported.</li>.
-<li>area: specifies the acceleration region to filter by limit. fuzzy queries are not supported. valid values:<br> Overseas: global availability zone (excludes chinese mainland);<br> MainlandChina: chinese mainland availability zone.</li>.
+     * Get Filter criteria. The maximum number of Filters.Values is 20. The detailed filter criteria are as follows:
+<li>domain-name: Filter by domain name. The domain-name format is like www.qq.com. Fuzzy queries are not supported.</li>
+<li>area: Filter by restricted acceleration region. Fuzzy queries are not supported. Options:<br> Overseas: Global availability zone (excluding Chinese mainland);<br> MainlandChina: Chinese mainland availability zone.</li> 
+     * @return Filters Filter criteria. The maximum number of Filters.Values is 20. The detailed filter criteria are as follows:
+<li>domain-name: Filter by domain name. The domain-name format is like www.qq.com. Fuzzy queries are not supported.</li>
+<li>area: Filter by restricted acceleration region. Fuzzy queries are not supported. Options:<br> Overseas: Global availability zone (excluding Chinese mainland);<br> MainlandChina: Chinese mainland availability zone.</li>
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set Filter condition. specifies the maximum number of Filters.Values is 20. detailed filter criteria:.
-<Li>Domain-Name: specifies domain filtering. the domain-name format is like www.qq.com. fuzzy queries are not supported.</li>.
-<li>area: specifies the acceleration region to filter by limit. fuzzy queries are not supported. valid values:<br> Overseas: global availability zone (excludes chinese mainland);<br> MainlandChina: chinese mainland availability zone.</li>.
-     * @param Filters Filter condition. specifies the maximum number of Filters.Values is 20. detailed filter criteria:.
-<Li>Domain-Name: specifies domain filtering. the domain-name format is like www.qq.com. fuzzy queries are not supported.</li>.
-<li>area: specifies the acceleration region to filter by limit. fuzzy queries are not supported. valid values:<br> Overseas: global availability zone (excludes chinese mainland);<br> MainlandChina: chinese mainland availability zone.</li>.
+     * Set Filter criteria. The maximum number of Filters.Values is 20. The detailed filter criteria are as follows:
+<li>domain-name: Filter by domain name. The domain-name format is like www.qq.com. Fuzzy queries are not supported.</li>
+<li>area: Filter by restricted acceleration region. Fuzzy queries are not supported. Options:<br> Overseas: Global availability zone (excluding Chinese mainland);<br> MainlandChina: Chinese mainland availability zone.</li>
+     * @param Filters Filter criteria. The maximum number of Filters.Values is 20. The detailed filter criteria are as follows:
+<li>domain-name: Filter by domain name. The domain-name format is like www.qq.com. Fuzzy queries are not supported.</li>
+<li>area: Filter by restricted acceleration region. Fuzzy queries are not supported. Options:<br> Overseas: Global availability zone (excluding Chinese mainland);<br> MainlandChina: Chinese mainland availability zone.</li>
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

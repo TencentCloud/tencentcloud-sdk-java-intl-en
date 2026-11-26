@@ -31,21 +31,21 @@ public class DescribeInferenceServiceDeploymentRecordsRequest extends AbstractMo
     private String ZoneId;
 
     /**
-    * <p>ID of the inference service.</p>
+    * <p>Inference service ID.</p>
     */
     @SerializedName("ServiceId")
     @Expose
     private String ServiceId;
 
     /**
-    * <p>Sorting field. Valid values: <li>create-time: Deployment creation time.</li>Default value: create-time.</p>
+    * <p>Sorting field. Valid values: <li>create-time: deployment creation time.</li> Default value: create-time.</p>
     */
     @SerializedName("SortBy")
     @Expose
     private String SortBy;
 
     /**
-    * <p>Sorting method. Valid values: <li>asc: ascending order;</li><li>desc: descending order.</li>Default value: desc.</p>
+    * <p>Sorting method. Valid values: <li>asc: in ascending order;</li><li>desc: in descending order.</li> Default value: desc.</p>
     */
     @SerializedName("SortOrder")
     @Expose
@@ -82,48 +82,48 @@ public class DescribeInferenceServiceDeploymentRecordsRequest extends AbstractMo
     }
 
     /**
-     * Get <p>ID of the inference service.</p> 
-     * @return ServiceId <p>ID of the inference service.</p>
+     * Get <p>Inference service ID.</p> 
+     * @return ServiceId <p>Inference service ID.</p>
      */
     public String getServiceId() {
         return this.ServiceId;
     }
 
     /**
-     * Set <p>ID of the inference service.</p>
-     * @param ServiceId <p>ID of the inference service.</p>
+     * Set <p>Inference service ID.</p>
+     * @param ServiceId <p>Inference service ID.</p>
      */
     public void setServiceId(String ServiceId) {
         this.ServiceId = ServiceId;
     }
 
     /**
-     * Get <p>Sorting field. Valid values: <li>create-time: Deployment creation time.</li>Default value: create-time.</p> 
-     * @return SortBy <p>Sorting field. Valid values: <li>create-time: Deployment creation time.</li>Default value: create-time.</p>
+     * Get <p>Sorting field. Valid values: <li>create-time: deployment creation time.</li> Default value: create-time.</p> 
+     * @return SortBy <p>Sorting field. Valid values: <li>create-time: deployment creation time.</li> Default value: create-time.</p>
      */
     public String getSortBy() {
         return this.SortBy;
     }
 
     /**
-     * Set <p>Sorting field. Valid values: <li>create-time: Deployment creation time.</li>Default value: create-time.</p>
-     * @param SortBy <p>Sorting field. Valid values: <li>create-time: Deployment creation time.</li>Default value: create-time.</p>
+     * Set <p>Sorting field. Valid values: <li>create-time: deployment creation time.</li> Default value: create-time.</p>
+     * @param SortBy <p>Sorting field. Valid values: <li>create-time: deployment creation time.</li> Default value: create-time.</p>
      */
     public void setSortBy(String SortBy) {
         this.SortBy = SortBy;
     }
 
     /**
-     * Get <p>Sorting method. Valid values: <li>asc: ascending order;</li><li>desc: descending order.</li>Default value: desc.</p> 
-     * @return SortOrder <p>Sorting method. Valid values: <li>asc: ascending order;</li><li>desc: descending order.</li>Default value: desc.</p>
+     * Get <p>Sorting method. Valid values: <li>asc: in ascending order;</li><li>desc: in descending order.</li> Default value: desc.</p> 
+     * @return SortOrder <p>Sorting method. Valid values: <li>asc: in ascending order;</li><li>desc: in descending order.</li> Default value: desc.</p>
      */
     public String getSortOrder() {
         return this.SortOrder;
     }
 
     /**
-     * Set <p>Sorting method. Valid values: <li>asc: ascending order;</li><li>desc: descending order.</li>Default value: desc.</p>
-     * @param SortOrder <p>Sorting method. Valid values: <li>asc: ascending order;</li><li>desc: descending order.</li>Default value: desc.</p>
+     * Set <p>Sorting method. Valid values: <li>asc: in ascending order;</li><li>desc: in descending order.</li> Default value: desc.</p>
+     * @param SortOrder <p>Sorting method. Valid values: <li>asc: in ascending order;</li><li>desc: in descending order.</li> Default value: desc.</p>
      */
     public void setSortOrder(String SortOrder) {
         this.SortOrder = SortOrder;

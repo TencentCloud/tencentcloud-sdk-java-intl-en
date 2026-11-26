@@ -44,8 +44,8 @@ Note: Up to 20 ports can be input for each rule.
 
     /**
     * Origin server type. Valid values:
-<li>custom: manually added;</li>
-<li>loadbalancer: cloud load balancer;</li>
+<li>`custom`: Manually added;</li>
+<li>loadbalancer: load balancing;</li>
 <li>origins: origin server group.</li>
     */
     @SerializedName("OriginType")
@@ -55,7 +55,7 @@ Note: Up to 20 ports can be input for each rule.
     /**
     * Details of the origin server:
 <li>When OriginType is custom, it indicates one or more origin servers, such as `["8.8.8.8","9.9.9.9"]` or `OriginValue=["test.com"]`;</li>
-<li>When OriginType is loadbalancer, it indicates a load balancer, such as ["lb-3pbiw4d9iqz0"];</li>
+<li>When OriginType is loadbalancer, it indicates a cloud load balancer, such as ["lb-3pbiw4d9iqz0"];</li>
 <li>When OriginType is origins, it requires one and only one element, indicating the origin server group ID, such as ["origin-537f5b41-162a-11ed-abaa-525400c5da15"].</li>
     */
     @SerializedName("OriginValue")
@@ -71,8 +71,8 @@ Note: Up to 20 ports can be input for each rule.
 
     /**
     * Status. Valid values:
-<li>online: enabled;</li>
-<li>offline: disabled;</li>
+<li>`online`: Enable;</li>
+<li>`offline`: Disable;</li>
 <li>progress: deploying;</li>
 <li>stopping: disabling;</li>
 <li>fail: deployment or disabling failed.</li>
@@ -118,7 +118,7 @@ Note: Up to 20 ports can be input for each rule.
     private String OriginPort;
 
     /**
-    * Tag of the rule.
+    * Rule tag.
     */
     @SerializedName("RuleTag")
     @Expose
@@ -178,12 +178,12 @@ Note: Up to 20 ports can be input for each rule.
 
     /**
      * Get Origin server type. Valid values:
-<li>custom: manually added;</li>
-<li>loadbalancer: cloud load balancer;</li>
+<li>`custom`: Manually added;</li>
+<li>loadbalancer: load balancing;</li>
 <li>origins: origin server group.</li> 
      * @return OriginType Origin server type. Valid values:
-<li>custom: manually added;</li>
-<li>loadbalancer: cloud load balancer;</li>
+<li>`custom`: Manually added;</li>
+<li>loadbalancer: load balancing;</li>
 <li>origins: origin server group.</li>
      */
     public String getOriginType() {
@@ -192,12 +192,12 @@ Note: Up to 20 ports can be input for each rule.
 
     /**
      * Set Origin server type. Valid values:
-<li>custom: manually added;</li>
-<li>loadbalancer: cloud load balancer;</li>
+<li>`custom`: Manually added;</li>
+<li>loadbalancer: load balancing;</li>
 <li>origins: origin server group.</li>
      * @param OriginType Origin server type. Valid values:
-<li>custom: manually added;</li>
-<li>loadbalancer: cloud load balancer;</li>
+<li>`custom`: Manually added;</li>
+<li>loadbalancer: load balancing;</li>
 <li>origins: origin server group.</li>
      */
     public void setOriginType(String OriginType) {
@@ -207,11 +207,11 @@ Note: Up to 20 ports can be input for each rule.
     /**
      * Get Details of the origin server:
 <li>When OriginType is custom, it indicates one or more origin servers, such as `["8.8.8.8","9.9.9.9"]` or `OriginValue=["test.com"]`;</li>
-<li>When OriginType is loadbalancer, it indicates a load balancer, such as ["lb-3pbiw4d9iqz0"];</li>
+<li>When OriginType is loadbalancer, it indicates a cloud load balancer, such as ["lb-3pbiw4d9iqz0"];</li>
 <li>When OriginType is origins, it requires one and only one element, indicating the origin server group ID, such as ["origin-537f5b41-162a-11ed-abaa-525400c5da15"].</li> 
      * @return OriginValue Details of the origin server:
 <li>When OriginType is custom, it indicates one or more origin servers, such as `["8.8.8.8","9.9.9.9"]` or `OriginValue=["test.com"]`;</li>
-<li>When OriginType is loadbalancer, it indicates a load balancer, such as ["lb-3pbiw4d9iqz0"];</li>
+<li>When OriginType is loadbalancer, it indicates a cloud load balancer, such as ["lb-3pbiw4d9iqz0"];</li>
 <li>When OriginType is origins, it requires one and only one element, indicating the origin server group ID, such as ["origin-537f5b41-162a-11ed-abaa-525400c5da15"].</li>
      */
     public String [] getOriginValue() {
@@ -221,11 +221,11 @@ Note: Up to 20 ports can be input for each rule.
     /**
      * Set Details of the origin server:
 <li>When OriginType is custom, it indicates one or more origin servers, such as `["8.8.8.8","9.9.9.9"]` or `OriginValue=["test.com"]`;</li>
-<li>When OriginType is loadbalancer, it indicates a load balancer, such as ["lb-3pbiw4d9iqz0"];</li>
+<li>When OriginType is loadbalancer, it indicates a cloud load balancer, such as ["lb-3pbiw4d9iqz0"];</li>
 <li>When OriginType is origins, it requires one and only one element, indicating the origin server group ID, such as ["origin-537f5b41-162a-11ed-abaa-525400c5da15"].</li>
      * @param OriginValue Details of the origin server:
 <li>When OriginType is custom, it indicates one or more origin servers, such as `["8.8.8.8","9.9.9.9"]` or `OriginValue=["test.com"]`;</li>
-<li>When OriginType is loadbalancer, it indicates a load balancer, such as ["lb-3pbiw4d9iqz0"];</li>
+<li>When OriginType is loadbalancer, it indicates a cloud load balancer, such as ["lb-3pbiw4d9iqz0"];</li>
 <li>When OriginType is origins, it requires one and only one element, indicating the origin server group ID, such as ["origin-537f5b41-162a-11ed-abaa-525400c5da15"].</li>
      */
     public void setOriginValue(String [] OriginValue) {
@@ -250,14 +250,14 @@ Note: Up to 20 ports can be input for each rule.
 
     /**
      * Get Status. Valid values:
-<li>online: enabled;</li>
-<li>offline: disabled;</li>
+<li>`online`: Enable;</li>
+<li>`offline`: Disable;</li>
 <li>progress: deploying;</li>
 <li>stopping: disabling;</li>
 <li>fail: deployment or disabling failed.</li> 
      * @return Status Status. Valid values:
-<li>online: enabled;</li>
-<li>offline: disabled;</li>
+<li>`online`: Enable;</li>
+<li>`offline`: Disable;</li>
 <li>progress: deploying;</li>
 <li>stopping: disabling;</li>
 <li>fail: deployment or disabling failed.</li>
@@ -268,14 +268,14 @@ Note: Up to 20 ports can be input for each rule.
 
     /**
      * Set Status. Valid values:
-<li>online: enabled;</li>
-<li>offline: disabled;</li>
+<li>`online`: Enable;</li>
+<li>`offline`: Disable;</li>
 <li>progress: deploying;</li>
 <li>stopping: disabling;</li>
 <li>fail: deployment or disabling failed.</li>
      * @param Status Status. Valid values:
-<li>online: enabled;</li>
-<li>offline: disabled;</li>
+<li>`online`: Enable;</li>
+<li>`offline`: Disable;</li>
 <li>progress: deploying;</li>
 <li>stopping: disabling;</li>
 <li>fail: deployment or disabling failed.</li>
@@ -381,16 +381,16 @@ Note: Up to 20 ports can be input for each rule.
     }
 
     /**
-     * Get Tag of the rule. 
-     * @return RuleTag Tag of the rule.
+     * Get Rule tag. 
+     * @return RuleTag Rule tag.
      */
     public String getRuleTag() {
         return this.RuleTag;
     }
 
     /**
-     * Set Tag of the rule.
-     * @param RuleTag Tag of the rule.
+     * Set Rule tag.
+     * @param RuleTag Rule tag.
      */
     public void setRuleTag(String RuleTag) {
         this.RuleTag = RuleTag;

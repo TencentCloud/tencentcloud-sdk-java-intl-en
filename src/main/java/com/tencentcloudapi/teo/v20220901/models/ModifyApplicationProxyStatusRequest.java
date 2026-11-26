@@ -24,79 +24,79 @@ import java.util.HashMap;
 public class ModifyApplicationProxyStatusRequest extends AbstractModel {
 
     /**
-    * The site ID.
+    * Site ID.
     */
     @SerializedName("ZoneId")
     @Expose
     private String ZoneId;
 
     /**
-    * The proxy ID.
+    * Proxy ID.
     */
     @SerializedName("ProxyId")
     @Expose
     private String ProxyId;
 
     /**
-    * The proxy status. Values:
-<li>`offline`: The proxy is disabled.</li>
-<li>`online`: The proxy is enabled.</li>
+    * Status. Valid values:
+<li>offline: disabled;</li>
+<li>online: enabled.</li>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-     * Get The site ID. 
-     * @return ZoneId The site ID.
+     * Get Site ID. 
+     * @return ZoneId Site ID.
      */
     public String getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set The site ID.
-     * @param ZoneId The site ID.
+     * Set Site ID.
+     * @param ZoneId Site ID.
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get The proxy ID. 
-     * @return ProxyId The proxy ID.
+     * Get Proxy ID. 
+     * @return ProxyId Proxy ID.
      */
     public String getProxyId() {
         return this.ProxyId;
     }
 
     /**
-     * Set The proxy ID.
-     * @param ProxyId The proxy ID.
+     * Set Proxy ID.
+     * @param ProxyId Proxy ID.
      */
     public void setProxyId(String ProxyId) {
         this.ProxyId = ProxyId;
     }
 
     /**
-     * Get The proxy status. Values:
-<li>`offline`: The proxy is disabled.</li>
-<li>`online`: The proxy is enabled.</li> 
-     * @return Status The proxy status. Values:
-<li>`offline`: The proxy is disabled.</li>
-<li>`online`: The proxy is enabled.</li>
+     * Get Status. Valid values:
+<li>offline: disabled;</li>
+<li>online: enabled.</li> 
+     * @return Status Status. Valid values:
+<li>offline: disabled;</li>
+<li>online: enabled.</li>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set The proxy status. Values:
-<li>`offline`: The proxy is disabled.</li>
-<li>`online`: The proxy is enabled.</li>
-     * @param Status The proxy status. Values:
-<li>`offline`: The proxy is disabled.</li>
-<li>`online`: The proxy is enabled.</li>
+     * Set Status. Valid values:
+<li>offline: disabled;</li>
+<li>online: enabled.</li>
+     * @param Status Status. Valid values:
+<li>offline: disabled;</li>
+<li>online: enabled.</li>
      */
     public void setStatus(String Status) {
         this.Status = Status;

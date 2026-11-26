@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateRuleResponse extends AbstractModel {
 
     /**
-    * Rule ID
+    * Rule ID.
     */
     @SerializedName("RuleId")
     @Expose
@@ -38,16 +38,16 @@ public class CreateRuleResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Rule ID 
-     * @return RuleId Rule ID
+     * Get Rule ID. 
+     * @return RuleId Rule ID.
      */
     public String getRuleId() {
         return this.RuleId;
     }
 
     /**
-     * Set Rule ID
-     * @param RuleId Rule ID
+     * Set Rule ID.
+     * @param RuleId Rule ID.
      */
     public void setRuleId(String RuleId) {
         this.RuleId = RuleId;

@@ -24,56 +24,56 @@ import java.util.HashMap;
 public class Waf extends AbstractModel {
 
     /**
-    * Whether to enable WAF. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+    * Waf switch. Value:
+<li>`on`: Enable;</li>
+<li> off: Disable.</li>
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * ID of the policy
+    * Policy ID.
     */
     @SerializedName("PolicyId")
     @Expose
     private Long PolicyId;
 
     /**
-     * Get Whether to enable WAF. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li> 
-     * @return Switch Whether to enable WAF. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+     * Get Waf switch. Value:
+<li>`on`: Enable;</li>
+<li> off: Disable.</li> 
+     * @return Switch Waf switch. Value:
+<li>`on`: Enable;</li>
+<li> off: Disable.</li>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set Whether to enable WAF. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-     * @param Switch Whether to enable WAF. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+     * Set Waf switch. Value:
+<li>`on`: Enable;</li>
+<li> off: Disable.</li>
+     * @param Switch Waf switch. Value:
+<li>`on`: Enable;</li>
+<li> off: Disable.</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get ID of the policy 
-     * @return PolicyId ID of the policy
+     * Get Policy ID. 
+     * @return PolicyId Policy ID.
      */
     public Long getPolicyId() {
         return this.PolicyId;
     }
 
     /**
-     * Set ID of the policy
-     * @param PolicyId ID of the policy
+     * Set Policy ID.
+     * @param PolicyId Policy ID.
      */
     public void setPolicyId(Long PolicyId) {
         this.PolicyId = PolicyId;

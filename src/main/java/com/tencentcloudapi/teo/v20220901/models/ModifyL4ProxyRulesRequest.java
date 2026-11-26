@@ -31,15 +31,15 @@ public class ModifyL4ProxyRulesRequest extends AbstractModel {
     private String ZoneId;
 
     /**
-    * Layer 4 proxy instance ID.
+    * Layer 4 Proxy Instance ID.
     */
     @SerializedName("ProxyId")
     @Expose
     private String ProxyId;
 
     /**
-    * List of forwarding rules. A single request supports up to 200 forwarding rules.
-Note: When L4ProxyRule is used here, RuleId is a required field; Protocol, PortRange, OriginType, OriginValue, OriginPortRange, ClientIPPassThroughMode, SessionPersist, SessionPersistTime, and RuleTag are all optional fields. No modification is made when no value is specified for those fields. Status should not be filled.
+    * Forwarding rule list. Supports up to 200 forwarding rules at a time.
+Note: When L4ProxyRule is used here, RuleId is a required field. Protocol, PortRange, OriginType, OriginValue, OriginPortRange, ClientIPPassThroughMode, SessionPersist, SessionPersistTime, and RuleTag are optional fields. Retain existing value if not specified. Status should not be filled.
     */
     @SerializedName("L4ProxyRules")
     @Expose
@@ -62,36 +62,36 @@ Note: When L4ProxyRule is used here, RuleId is a required field; Protocol, PortR
     }
 
     /**
-     * Get Layer 4 proxy instance ID. 
-     * @return ProxyId Layer 4 proxy instance ID.
+     * Get Layer 4 Proxy Instance ID. 
+     * @return ProxyId Layer 4 Proxy Instance ID.
      */
     public String getProxyId() {
         return this.ProxyId;
     }
 
     /**
-     * Set Layer 4 proxy instance ID.
-     * @param ProxyId Layer 4 proxy instance ID.
+     * Set Layer 4 Proxy Instance ID.
+     * @param ProxyId Layer 4 Proxy Instance ID.
      */
     public void setProxyId(String ProxyId) {
         this.ProxyId = ProxyId;
     }
 
     /**
-     * Get List of forwarding rules. A single request supports up to 200 forwarding rules.
-Note: When L4ProxyRule is used here, RuleId is a required field; Protocol, PortRange, OriginType, OriginValue, OriginPortRange, ClientIPPassThroughMode, SessionPersist, SessionPersistTime, and RuleTag are all optional fields. No modification is made when no value is specified for those fields. Status should not be filled. 
-     * @return L4ProxyRules List of forwarding rules. A single request supports up to 200 forwarding rules.
-Note: When L4ProxyRule is used here, RuleId is a required field; Protocol, PortRange, OriginType, OriginValue, OriginPortRange, ClientIPPassThroughMode, SessionPersist, SessionPersistTime, and RuleTag are all optional fields. No modification is made when no value is specified for those fields. Status should not be filled.
+     * Get Forwarding rule list. Supports up to 200 forwarding rules at a time.
+Note: When L4ProxyRule is used here, RuleId is a required field. Protocol, PortRange, OriginType, OriginValue, OriginPortRange, ClientIPPassThroughMode, SessionPersist, SessionPersistTime, and RuleTag are optional fields. Retain existing value if not specified. Status should not be filled. 
+     * @return L4ProxyRules Forwarding rule list. Supports up to 200 forwarding rules at a time.
+Note: When L4ProxyRule is used here, RuleId is a required field. Protocol, PortRange, OriginType, OriginValue, OriginPortRange, ClientIPPassThroughMode, SessionPersist, SessionPersistTime, and RuleTag are optional fields. Retain existing value if not specified. Status should not be filled.
      */
     public L4ProxyRule [] getL4ProxyRules() {
         return this.L4ProxyRules;
     }
 
     /**
-     * Set List of forwarding rules. A single request supports up to 200 forwarding rules.
-Note: When L4ProxyRule is used here, RuleId is a required field; Protocol, PortRange, OriginType, OriginValue, OriginPortRange, ClientIPPassThroughMode, SessionPersist, SessionPersistTime, and RuleTag are all optional fields. No modification is made when no value is specified for those fields. Status should not be filled.
-     * @param L4ProxyRules List of forwarding rules. A single request supports up to 200 forwarding rules.
-Note: When L4ProxyRule is used here, RuleId is a required field; Protocol, PortRange, OriginType, OriginValue, OriginPortRange, ClientIPPassThroughMode, SessionPersist, SessionPersistTime, and RuleTag are all optional fields. No modification is made when no value is specified for those fields. Status should not be filled.
+     * Set Forwarding rule list. Supports up to 200 forwarding rules at a time.
+Note: When L4ProxyRule is used here, RuleId is a required field. Protocol, PortRange, OriginType, OriginValue, OriginPortRange, ClientIPPassThroughMode, SessionPersist, SessionPersistTime, and RuleTag are optional fields. Retain existing value if not specified. Status should not be filled.
+     * @param L4ProxyRules Forwarding rule list. Supports up to 200 forwarding rules at a time.
+Note: When L4ProxyRule is used here, RuleId is a required field. Protocol, PortRange, OriginType, OriginValue, OriginPortRange, ClientIPPassThroughMode, SessionPersist, SessionPersistTime, and RuleTag are optional fields. Retain existing value if not specified. Status should not be filled.
      */
     public void setL4ProxyRules(L4ProxyRule [] L4ProxyRules) {
         this.L4ProxyRules = L4ProxyRules;

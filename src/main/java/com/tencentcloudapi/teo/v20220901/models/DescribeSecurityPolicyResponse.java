@@ -25,7 +25,6 @@ public class DescribeSecurityPolicyResponse extends AbstractModel {
 
     /**
     * Security policy configuration.
-Note: This field may return null, which indicates a failure to obtain a valid value.
     */
     @SerializedName("SecurityPolicy")
     @Expose
@@ -39,10 +38,8 @@ Note: This field may return null, which indicates a failure to obtain a valid va
     private String RequestId;
 
     /**
-     * Get Security policy configuration.
-Note: This field may return null, which indicates a failure to obtain a valid value. 
+     * Get Security policy configuration. 
      * @return SecurityPolicy Security policy configuration.
-Note: This field may return null, which indicates a failure to obtain a valid value.
      */
     public SecurityPolicy getSecurityPolicy() {
         return this.SecurityPolicy;
@@ -50,9 +47,7 @@ Note: This field may return null, which indicates a failure to obtain a valid va
 
     /**
      * Set Security policy configuration.
-Note: This field may return null, which indicates a failure to obtain a valid value.
      * @param SecurityPolicy Security policy configuration.
-Note: This field may return null, which indicates a failure to obtain a valid value.
      */
     public void setSecurityPolicy(SecurityPolicy SecurityPolicy) {
         this.SecurityPolicy = SecurityPolicy;

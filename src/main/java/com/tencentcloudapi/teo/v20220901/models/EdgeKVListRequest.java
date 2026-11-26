@@ -38,14 +38,14 @@ public class EdgeKVListRequest extends AbstractModel {
     private String Namespace;
 
     /**
-    * Prefix filtering for key names. Only return key names that begin with the specified prefix, with a length of 1-512 characters. Not specified means return all key names; does not allow input of empty string.
+    * Filter by key name prefix. Only return key names beginning with the specified prefix. Length: 1–512 characters. If not specified, all key names are returned. Empty string is not allowed.
     */
     @SerializedName("Prefix")
     @Expose
     private String Prefix;
 
     /**
-    * Cursor position. Indicates the starting position of the current query for traversing large amounts of data. Do not fill in during the initial query, start traversal from the beginning. Fill in the Cursor value returned last time during follow-up queries to proceed with traversal from that position.
+    * Cursor position. Identifies the starting position of the current query, used for traversing large amounts of data. Do not fill in for the initial query to start from the beginning. For subsequent queries, fill in the Cursor value returned last time to continue traversing backward from that position.
 
     */
     @SerializedName("Cursor")
@@ -53,7 +53,7 @@ public class EdgeKVListRequest extends AbstractModel {
     private String Cursor;
 
     /**
-    * Number of key names returned. Default value: 20. Maximum value: 1000.
+    * Number of returned key names. Default value: 20. Maximum value: 1000.
     */
     @SerializedName("Limit")
     @Expose
@@ -92,25 +92,25 @@ public class EdgeKVListRequest extends AbstractModel {
     }
 
     /**
-     * Get Prefix filtering for key names. Only return key names that begin with the specified prefix, with a length of 1-512 characters. Not specified means return all key names; does not allow input of empty string. 
-     * @return Prefix Prefix filtering for key names. Only return key names that begin with the specified prefix, with a length of 1-512 characters. Not specified means return all key names; does not allow input of empty string.
+     * Get Filter by key name prefix. Only return key names beginning with the specified prefix. Length: 1–512 characters. If not specified, all key names are returned. Empty string is not allowed. 
+     * @return Prefix Filter by key name prefix. Only return key names beginning with the specified prefix. Length: 1–512 characters. If not specified, all key names are returned. Empty string is not allowed.
      */
     public String getPrefix() {
         return this.Prefix;
     }
 
     /**
-     * Set Prefix filtering for key names. Only return key names that begin with the specified prefix, with a length of 1-512 characters. Not specified means return all key names; does not allow input of empty string.
-     * @param Prefix Prefix filtering for key names. Only return key names that begin with the specified prefix, with a length of 1-512 characters. Not specified means return all key names; does not allow input of empty string.
+     * Set Filter by key name prefix. Only return key names beginning with the specified prefix. Length: 1–512 characters. If not specified, all key names are returned. Empty string is not allowed.
+     * @param Prefix Filter by key name prefix. Only return key names beginning with the specified prefix. Length: 1–512 characters. If not specified, all key names are returned. Empty string is not allowed.
      */
     public void setPrefix(String Prefix) {
         this.Prefix = Prefix;
     }
 
     /**
-     * Get Cursor position. Indicates the starting position of the current query for traversing large amounts of data. Do not fill in during the initial query, start traversal from the beginning. Fill in the Cursor value returned last time during follow-up queries to proceed with traversal from that position.
+     * Get Cursor position. Identifies the starting position of the current query, used for traversing large amounts of data. Do not fill in for the initial query to start from the beginning. For subsequent queries, fill in the Cursor value returned last time to continue traversing backward from that position.
  
-     * @return Cursor Cursor position. Indicates the starting position of the current query for traversing large amounts of data. Do not fill in during the initial query, start traversal from the beginning. Fill in the Cursor value returned last time during follow-up queries to proceed with traversal from that position.
+     * @return Cursor Cursor position. Identifies the starting position of the current query, used for traversing large amounts of data. Do not fill in for the initial query to start from the beginning. For subsequent queries, fill in the Cursor value returned last time to continue traversing backward from that position.
 
      */
     public String getCursor() {
@@ -118,9 +118,9 @@ public class EdgeKVListRequest extends AbstractModel {
     }
 
     /**
-     * Set Cursor position. Indicates the starting position of the current query for traversing large amounts of data. Do not fill in during the initial query, start traversal from the beginning. Fill in the Cursor value returned last time during follow-up queries to proceed with traversal from that position.
+     * Set Cursor position. Identifies the starting position of the current query, used for traversing large amounts of data. Do not fill in for the initial query to start from the beginning. For subsequent queries, fill in the Cursor value returned last time to continue traversing backward from that position.
 
-     * @param Cursor Cursor position. Indicates the starting position of the current query for traversing large amounts of data. Do not fill in during the initial query, start traversal from the beginning. Fill in the Cursor value returned last time during follow-up queries to proceed with traversal from that position.
+     * @param Cursor Cursor position. Identifies the starting position of the current query, used for traversing large amounts of data. Do not fill in for the initial query to start from the beginning. For subsequent queries, fill in the Cursor value returned last time to continue traversing backward from that position.
 
      */
     public void setCursor(String Cursor) {
@@ -128,16 +128,16 @@ public class EdgeKVListRequest extends AbstractModel {
     }
 
     /**
-     * Get Number of key names returned. Default value: 20. Maximum value: 1000. 
-     * @return Limit Number of key names returned. Default value: 20. Maximum value: 1000.
+     * Get Number of returned key names. Default value: 20. Maximum value: 1000. 
+     * @return Limit Number of returned key names. Default value: 20. Maximum value: 1000.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Number of key names returned. Default value: 20. Maximum value: 1000.
-     * @param Limit Number of key names returned. Default value: 20. Maximum value: 1000.
+     * Set Number of returned key names. Default value: 20. Maximum value: 1000.
+     * @param Limit Number of returned key names. Default value: 20. Maximum value: 1000.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

@@ -24,95 +24,118 @@ import java.util.HashMap;
 public class InferenceServiceConfig extends AbstractModel {
 
     /**
-    * Ports monitored by the model service.
+    * <p>Ports monitored by the model service.</p>
     */
     @SerializedName("ListenPort")
     @Expose
     private Long ListenPort;
 
     /**
-    * Request path list for inference service.
+    * <p>Request path list of the inference service.</p>
     */
     @SerializedName("RequestPaths")
     @Expose
     private String [] RequestPaths;
 
     /**
-    * Container configuration of the inference service.
+    * <p>Container configuration for the inference service.</p>
     */
     @SerializedName("Containers")
     @Expose
     private InferenceContainerConfig [] Containers;
 
     /**
-    * Resource configuration of the inference service.
+    * <p>Resource configuration of the inference service.</p>
     */
     @SerializedName("ResourceConfig")
     @Expose
     private InferenceResourceConfig ResourceConfig;
 
     /**
-     * Get Ports monitored by the model service. 
-     * @return ListenPort Ports monitored by the model service.
+    * <p>Inference service affinity configuration.</p>
+    */
+    @SerializedName("AffinityConfig")
+    @Expose
+    private InferenceAffinityConfig AffinityConfig;
+
+    /**
+     * Get <p>Ports monitored by the model service.</p> 
+     * @return ListenPort <p>Ports monitored by the model service.</p>
      */
     public Long getListenPort() {
         return this.ListenPort;
     }
 
     /**
-     * Set Ports monitored by the model service.
-     * @param ListenPort Ports monitored by the model service.
+     * Set <p>Ports monitored by the model service.</p>
+     * @param ListenPort <p>Ports monitored by the model service.</p>
      */
     public void setListenPort(Long ListenPort) {
         this.ListenPort = ListenPort;
     }
 
     /**
-     * Get Request path list for inference service. 
-     * @return RequestPaths Request path list for inference service.
+     * Get <p>Request path list of the inference service.</p> 
+     * @return RequestPaths <p>Request path list of the inference service.</p>
      */
     public String [] getRequestPaths() {
         return this.RequestPaths;
     }
 
     /**
-     * Set Request path list for inference service.
-     * @param RequestPaths Request path list for inference service.
+     * Set <p>Request path list of the inference service.</p>
+     * @param RequestPaths <p>Request path list of the inference service.</p>
      */
     public void setRequestPaths(String [] RequestPaths) {
         this.RequestPaths = RequestPaths;
     }
 
     /**
-     * Get Container configuration of the inference service. 
-     * @return Containers Container configuration of the inference service.
+     * Get <p>Container configuration for the inference service.</p> 
+     * @return Containers <p>Container configuration for the inference service.</p>
      */
     public InferenceContainerConfig [] getContainers() {
         return this.Containers;
     }
 
     /**
-     * Set Container configuration of the inference service.
-     * @param Containers Container configuration of the inference service.
+     * Set <p>Container configuration for the inference service.</p>
+     * @param Containers <p>Container configuration for the inference service.</p>
      */
     public void setContainers(InferenceContainerConfig [] Containers) {
         this.Containers = Containers;
     }
 
     /**
-     * Get Resource configuration of the inference service. 
-     * @return ResourceConfig Resource configuration of the inference service.
+     * Get <p>Resource configuration of the inference service.</p> 
+     * @return ResourceConfig <p>Resource configuration of the inference service.</p>
      */
     public InferenceResourceConfig getResourceConfig() {
         return this.ResourceConfig;
     }
 
     /**
-     * Set Resource configuration of the inference service.
-     * @param ResourceConfig Resource configuration of the inference service.
+     * Set <p>Resource configuration of the inference service.</p>
+     * @param ResourceConfig <p>Resource configuration of the inference service.</p>
      */
     public void setResourceConfig(InferenceResourceConfig ResourceConfig) {
         this.ResourceConfig = ResourceConfig;
+    }
+
+    /**
+     * Get <p>Inference service affinity configuration.</p> 
+     * @return AffinityConfig <p>Inference service affinity configuration.</p>
+     */
+    public InferenceAffinityConfig getAffinityConfig() {
+        return this.AffinityConfig;
+    }
+
+    /**
+     * Set <p>Inference service affinity configuration.</p>
+     * @param AffinityConfig <p>Inference service affinity configuration.</p>
+     */
+    public void setAffinityConfig(InferenceAffinityConfig AffinityConfig) {
+        this.AffinityConfig = AffinityConfig;
     }
 
     public InferenceServiceConfig() {
@@ -141,6 +164,9 @@ public class InferenceServiceConfig extends AbstractModel {
         if (source.ResourceConfig != null) {
             this.ResourceConfig = new InferenceResourceConfig(source.ResourceConfig);
         }
+        if (source.AffinityConfig != null) {
+            this.AffinityConfig = new InferenceAffinityConfig(source.AffinityConfig);
+        }
     }
 
 
@@ -152,6 +178,7 @@ public class InferenceServiceConfig extends AbstractModel {
         this.setParamArraySimple(map, prefix + "RequestPaths.", this.RequestPaths);
         this.setParamArrayObj(map, prefix + "Containers.", this.Containers);
         this.setParamObj(map, prefix + "ResourceConfig.", this.ResourceConfig);
+        this.setParamObj(map, prefix + "AffinityConfig.", this.AffinityConfig);
 
     }
 }

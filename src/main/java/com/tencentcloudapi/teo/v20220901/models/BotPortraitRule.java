@@ -24,148 +24,148 @@ import java.util.HashMap;
 public class BotPortraitRule extends AbstractModel {
 
     /**
-    * Switch. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+    * Feature switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * The rule ID, which is only used as an output parameter.
+    * Rule ID. Output only.
     */
     @SerializedName("RuleID")
     @Expose
     private Long RuleID;
 
     /**
-    * The rule ID of JS challenge. default all rules without configuring JS challenge.
+    * Rule ID of the JS challenge. All rules have no JS challenge configured by default.
     */
     @SerializedName("AlgManagedIds")
     @Expose
     private Long [] AlgManagedIds;
 
     /**
-    * Rule ID for digit captcha-intl. default is all rules without configuring digit captcha-intl.
+    * Rule ID of the digit verification code. By default, no digit verification code is configured for all rules.
     */
     @SerializedName("CapManagedIds")
     @Expose
     private Long [] CapManagedIds;
 
     /**
-    * Rule ID for observation. by default, observation is not configured for all rules.
+    * Rule ID for observation. By default, no rule is configured for observation.
     */
     @SerializedName("MonManagedIds")
     @Expose
     private Long [] MonManagedIds;
 
     /**
-    * Rule ID for interception. default to all rules with no configuration interception.
+    * Rule ID for interception. By default, no interception is configured for all rules.
     */
     @SerializedName("DropManagedIds")
     @Expose
     private Long [] DropManagedIds;
 
     /**
-     * Get Switch. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li> 
-     * @return Switch Switch. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+     * Get Feature switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li> 
+     * @return Switch Feature switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set Switch. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-     * @param Switch Switch. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
+     * Set Feature switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
+     * @param Switch Feature switch. Valid values:
+<li>`on`: Enable;</li>
+<li>off: Disable.</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get The rule ID, which is only used as an output parameter. 
-     * @return RuleID The rule ID, which is only used as an output parameter.
+     * Get Rule ID. Output only. 
+     * @return RuleID Rule ID. Output only.
      */
     public Long getRuleID() {
         return this.RuleID;
     }
 
     /**
-     * Set The rule ID, which is only used as an output parameter.
-     * @param RuleID The rule ID, which is only used as an output parameter.
+     * Set Rule ID. Output only.
+     * @param RuleID Rule ID. Output only.
      */
     public void setRuleID(Long RuleID) {
         this.RuleID = RuleID;
     }
 
     /**
-     * Get The rule ID of JS challenge. default all rules without configuring JS challenge. 
-     * @return AlgManagedIds The rule ID of JS challenge. default all rules without configuring JS challenge.
+     * Get Rule ID of the JS challenge. All rules have no JS challenge configured by default. 
+     * @return AlgManagedIds Rule ID of the JS challenge. All rules have no JS challenge configured by default.
      */
     public Long [] getAlgManagedIds() {
         return this.AlgManagedIds;
     }
 
     /**
-     * Set The rule ID of JS challenge. default all rules without configuring JS challenge.
-     * @param AlgManagedIds The rule ID of JS challenge. default all rules without configuring JS challenge.
+     * Set Rule ID of the JS challenge. All rules have no JS challenge configured by default.
+     * @param AlgManagedIds Rule ID of the JS challenge. All rules have no JS challenge configured by default.
      */
     public void setAlgManagedIds(Long [] AlgManagedIds) {
         this.AlgManagedIds = AlgManagedIds;
     }
 
     /**
-     * Get Rule ID for digit captcha-intl. default is all rules without configuring digit captcha-intl. 
-     * @return CapManagedIds Rule ID for digit captcha-intl. default is all rules without configuring digit captcha-intl.
+     * Get Rule ID of the digit verification code. By default, no digit verification code is configured for all rules. 
+     * @return CapManagedIds Rule ID of the digit verification code. By default, no digit verification code is configured for all rules.
      */
     public Long [] getCapManagedIds() {
         return this.CapManagedIds;
     }
 
     /**
-     * Set Rule ID for digit captcha-intl. default is all rules without configuring digit captcha-intl.
-     * @param CapManagedIds Rule ID for digit captcha-intl. default is all rules without configuring digit captcha-intl.
+     * Set Rule ID of the digit verification code. By default, no digit verification code is configured for all rules.
+     * @param CapManagedIds Rule ID of the digit verification code. By default, no digit verification code is configured for all rules.
      */
     public void setCapManagedIds(Long [] CapManagedIds) {
         this.CapManagedIds = CapManagedIds;
     }
 
     /**
-     * Get Rule ID for observation. by default, observation is not configured for all rules. 
-     * @return MonManagedIds Rule ID for observation. by default, observation is not configured for all rules.
+     * Get Rule ID for observation. By default, no rule is configured for observation. 
+     * @return MonManagedIds Rule ID for observation. By default, no rule is configured for observation.
      */
     public Long [] getMonManagedIds() {
         return this.MonManagedIds;
     }
 
     /**
-     * Set Rule ID for observation. by default, observation is not configured for all rules.
-     * @param MonManagedIds Rule ID for observation. by default, observation is not configured for all rules.
+     * Set Rule ID for observation. By default, no rule is configured for observation.
+     * @param MonManagedIds Rule ID for observation. By default, no rule is configured for observation.
      */
     public void setMonManagedIds(Long [] MonManagedIds) {
         this.MonManagedIds = MonManagedIds;
     }
 
     /**
-     * Get Rule ID for interception. default to all rules with no configuration interception. 
-     * @return DropManagedIds Rule ID for interception. default to all rules with no configuration interception.
+     * Get Rule ID for interception. By default, no interception is configured for all rules. 
+     * @return DropManagedIds Rule ID for interception. By default, no interception is configured for all rules.
      */
     public Long [] getDropManagedIds() {
         return this.DropManagedIds;
     }
 
     /**
-     * Set Rule ID for interception. default to all rules with no configuration interception.
-     * @param DropManagedIds Rule ID for interception. default to all rules with no configuration interception.
+     * Set Rule ID for interception. By default, no interception is configured for all rules.
+     * @param DropManagedIds Rule ID for interception. By default, no interception is configured for all rules.
      */
     public void setDropManagedIds(Long [] DropManagedIds) {
         this.DropManagedIds = DropManagedIds;

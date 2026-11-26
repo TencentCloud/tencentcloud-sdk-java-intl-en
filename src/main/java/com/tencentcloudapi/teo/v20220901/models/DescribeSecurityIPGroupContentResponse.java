@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeSecurityIPGroupContentResponse extends AbstractModel {
 
     /**
-    * Specifies the number of effective ips or IP ranges in the IP group.
+    * Number of IPs or IP ranges in effect in the IP group.
     */
     @SerializedName("IPTotalCount")
     @Expose
     private Long IPTotalCount;
 
     /**
-    * List of ips or ranges that meet the query conditions. limited by the Offset and Limit parameters.
+    * List of IPs or IP ranges that meet the query condition. Limited by the Limit and Offset parameters.
     */
     @SerializedName("IPList")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeSecurityIPGroupContentResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Specifies the number of effective ips or IP ranges in the IP group. 
-     * @return IPTotalCount Specifies the number of effective ips or IP ranges in the IP group.
+     * Get Number of IPs or IP ranges in effect in the IP group. 
+     * @return IPTotalCount Number of IPs or IP ranges in effect in the IP group.
      */
     public Long getIPTotalCount() {
         return this.IPTotalCount;
     }
 
     /**
-     * Set Specifies the number of effective ips or IP ranges in the IP group.
-     * @param IPTotalCount Specifies the number of effective ips or IP ranges in the IP group.
+     * Set Number of IPs or IP ranges in effect in the IP group.
+     * @param IPTotalCount Number of IPs or IP ranges in effect in the IP group.
      */
     public void setIPTotalCount(Long IPTotalCount) {
         this.IPTotalCount = IPTotalCount;
     }
 
     /**
-     * Get List of ips or ranges that meet the query conditions. limited by the Offset and Limit parameters. 
-     * @return IPList List of ips or ranges that meet the query conditions. limited by the Offset and Limit parameters.
+     * Get List of IPs or IP ranges that meet the query condition. Limited by the Limit and Offset parameters. 
+     * @return IPList List of IPs or IP ranges that meet the query condition. Limited by the Limit and Offset parameters.
      */
     public String [] getIPList() {
         return this.IPList;
     }
 
     /**
-     * Set List of ips or ranges that meet the query conditions. limited by the Offset and Limit parameters.
-     * @param IPList List of ips or ranges that meet the query conditions. limited by the Offset and Limit parameters.
+     * Set List of IPs or IP ranges that meet the query condition. Limited by the Limit and Offset parameters.
+     * @param IPList List of IPs or IP ranges that meet the query condition. Limited by the Limit and Offset parameters.
      */
     public void setIPList(String [] IPList) {
         this.IPList = IPList;

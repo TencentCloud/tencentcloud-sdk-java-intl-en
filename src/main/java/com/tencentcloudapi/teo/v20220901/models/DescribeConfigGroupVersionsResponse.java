@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeConfigGroupVersionsResponse extends AbstractModel {
 
     /**
-    * Total versions.
+    * Total number of versions.
     */
     @SerializedName("TotalCount")
     @Expose
@@ -45,16 +45,16 @@ public class DescribeConfigGroupVersionsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Total versions. 
-     * @return TotalCount Total versions.
+     * Get Total number of versions. 
+     * @return TotalCount Total number of versions.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Total versions.
-     * @param TotalCount Total versions.
+     * Set Total number of versions.
+     * @param TotalCount Total number of versions.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

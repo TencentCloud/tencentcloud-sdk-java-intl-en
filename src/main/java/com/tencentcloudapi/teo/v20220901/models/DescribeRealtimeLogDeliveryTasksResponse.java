@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeRealtimeLogDeliveryTasksResponse extends AbstractModel {
 
     /**
-    * The number of real-time log delivery tasks which match the query conditions.
+    * Number of real-time log delivery tasks that meet the search criteria.
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * The list of all real-time log delivery tasks which match the query conditions.
+    * List of all real-time log delivery tasks that meet the search criteria.
     */
     @SerializedName("RealtimeLogDeliveryTasks")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeRealtimeLogDeliveryTasksResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get The number of real-time log delivery tasks which match the query conditions. 
-     * @return TotalCount The number of real-time log delivery tasks which match the query conditions.
+     * Get Number of real-time log delivery tasks that meet the search criteria. 
+     * @return TotalCount Number of real-time log delivery tasks that meet the search criteria.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set The number of real-time log delivery tasks which match the query conditions.
-     * @param TotalCount The number of real-time log delivery tasks which match the query conditions.
+     * Set Number of real-time log delivery tasks that meet the search criteria.
+     * @param TotalCount Number of real-time log delivery tasks that meet the search criteria.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get The list of all real-time log delivery tasks which match the query conditions. 
-     * @return RealtimeLogDeliveryTasks The list of all real-time log delivery tasks which match the query conditions.
+     * Get List of all real-time log delivery tasks that meet the search criteria. 
+     * @return RealtimeLogDeliveryTasks List of all real-time log delivery tasks that meet the search criteria.
      */
     public RealtimeLogDeliveryTask [] getRealtimeLogDeliveryTasks() {
         return this.RealtimeLogDeliveryTasks;
     }
 
     /**
-     * Set The list of all real-time log delivery tasks which match the query conditions.
-     * @param RealtimeLogDeliveryTasks The list of all real-time log delivery tasks which match the query conditions.
+     * Set List of all real-time log delivery tasks that meet the search criteria.
+     * @param RealtimeLogDeliveryTasks List of all real-time log delivery tasks that meet the search criteria.
      */
     public void setRealtimeLogDeliveryTasks(RealtimeLogDeliveryTask [] RealtimeLogDeliveryTasks) {
         this.RealtimeLogDeliveryTasks = RealtimeLogDeliveryTasks;

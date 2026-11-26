@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class BindSharedCNAMEMap extends AbstractModel {
 
     /**
-    * The shared CNAME to be bound with or unbound from.
+    * Shared CNAME to bind or unbind.
     */
     @SerializedName("SharedCNAME")
     @Expose
     private String SharedCNAME;
 
     /**
-    * Acceleration domains (up to 20).
+    * Acceleration domain names. You can pass multiple ones, up to 20.
     */
     @SerializedName("DomainNames")
     @Expose
     private String [] DomainNames;
 
     /**
-     * Get The shared CNAME to be bound with or unbound from. 
-     * @return SharedCNAME The shared CNAME to be bound with or unbound from.
+     * Get Shared CNAME to bind or unbind. 
+     * @return SharedCNAME Shared CNAME to bind or unbind.
      */
     public String getSharedCNAME() {
         return this.SharedCNAME;
     }
 
     /**
-     * Set The shared CNAME to be bound with or unbound from.
-     * @param SharedCNAME The shared CNAME to be bound with or unbound from.
+     * Set Shared CNAME to bind or unbind.
+     * @param SharedCNAME Shared CNAME to bind or unbind.
      */
     public void setSharedCNAME(String SharedCNAME) {
         this.SharedCNAME = SharedCNAME;
     }
 
     /**
-     * Get Acceleration domains (up to 20). 
-     * @return DomainNames Acceleration domains (up to 20).
+     * Get Acceleration domain names. You can pass multiple ones, up to 20. 
+     * @return DomainNames Acceleration domain names. You can pass multiple ones, up to 20.
      */
     public String [] getDomainNames() {
         return this.DomainNames;
     }
 
     /**
-     * Set Acceleration domains (up to 20).
-     * @param DomainNames Acceleration domains (up to 20).
+     * Set Acceleration domain names. You can pass multiple ones, up to 20.
+     * @param DomainNames Acceleration domain names. You can pass multiple ones, up to 20.
      */
     public void setDomainNames(String [] DomainNames) {
         this.DomainNames = DomainNames;

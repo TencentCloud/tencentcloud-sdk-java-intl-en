@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModifyApplicationProxyRequest extends AbstractModel {
 
     /**
-    * Site ID.
+    * Zone ID.
     */
     @SerializedName("ZoneId")
     @Expose
@@ -38,54 +38,54 @@ public class ModifyApplicationProxyRequest extends AbstractModel {
     private String ProxyId;
 
     /**
-    * Domain name or subdomain name when `ProxyType=hostname`; 
-Instance name when `ProxyType=instance`.
+    * When ProxyType=hostname, it indicates a domain name or subdomain.
+Proxy name when `ProxyType=instance`.
     */
     @SerializedName("ProxyName")
     @Expose
     private String ProxyName;
 
     /**
-    * The session persistence duration. Value range: 30-3600 (in seconds).
-The original configuration will apply if this field is not specified.
+    * Session persistence duration. Value range: 30-3600. Unit: second.
+Maintain the original configuration if not specified.
     */
     @SerializedName("SessionPersistTime")
     @Expose
     private Long SessionPersistTime;
 
     /**
-    * L4 proxy mode. Valid values: 
-<li>instance: Instance mode. </li>If it is not specified, instance is used by default.
+    * L4 proxy mode. Valid values:
+<li>`instance`: Create by instance.</li>Use default value `instance` if not specified.
     */
     @SerializedName("ProxyType")
     @Expose
     private String ProxyType;
 
     /**
-    * IPv6 access configuration. The original configuration will apply if it is not specified.
+    * Ipv6 access configuration. Maintain the original configuration if not specified.
     */
     @SerializedName("Ipv6")
     @Expose
     private Ipv6 Ipv6;
 
     /**
-    * Cross-MLC-border acceleration. The original configuration will apply if it is not specified.
+    * Chinese mainland acceleration optimization configuration. Leave blank to indicate retaining the original configuration.
     */
     @SerializedName("AccelerateMainland")
     @Expose
     private AccelerateMainland AccelerateMainland;
 
     /**
-     * Get Site ID. 
-     * @return ZoneId Site ID.
+     * Get Zone ID. 
+     * @return ZoneId Zone ID.
      */
     public String getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set Site ID.
-     * @param ZoneId Site ID.
+     * Set Zone ID.
+     * @param ZoneId Zone ID.
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;
@@ -108,92 +108,92 @@ The original configuration will apply if this field is not specified.
     }
 
     /**
-     * Get Domain name or subdomain name when `ProxyType=hostname`; 
-Instance name when `ProxyType=instance`. 
-     * @return ProxyName Domain name or subdomain name when `ProxyType=hostname`; 
-Instance name when `ProxyType=instance`.
+     * Get When ProxyType=hostname, it indicates a domain name or subdomain.
+Proxy name when `ProxyType=instance`. 
+     * @return ProxyName When ProxyType=hostname, it indicates a domain name or subdomain.
+Proxy name when `ProxyType=instance`.
      */
     public String getProxyName() {
         return this.ProxyName;
     }
 
     /**
-     * Set Domain name or subdomain name when `ProxyType=hostname`; 
-Instance name when `ProxyType=instance`.
-     * @param ProxyName Domain name or subdomain name when `ProxyType=hostname`; 
-Instance name when `ProxyType=instance`.
+     * Set When ProxyType=hostname, it indicates a domain name or subdomain.
+Proxy name when `ProxyType=instance`.
+     * @param ProxyName When ProxyType=hostname, it indicates a domain name or subdomain.
+Proxy name when `ProxyType=instance`.
      */
     public void setProxyName(String ProxyName) {
         this.ProxyName = ProxyName;
     }
 
     /**
-     * Get The session persistence duration. Value range: 30-3600 (in seconds).
-The original configuration will apply if this field is not specified. 
-     * @return SessionPersistTime The session persistence duration. Value range: 30-3600 (in seconds).
-The original configuration will apply if this field is not specified.
+     * Get Session persistence duration. Value range: 30-3600. Unit: second.
+Maintain the original configuration if not specified. 
+     * @return SessionPersistTime Session persistence duration. Value range: 30-3600. Unit: second.
+Maintain the original configuration if not specified.
      */
     public Long getSessionPersistTime() {
         return this.SessionPersistTime;
     }
 
     /**
-     * Set The session persistence duration. Value range: 30-3600 (in seconds).
-The original configuration will apply if this field is not specified.
-     * @param SessionPersistTime The session persistence duration. Value range: 30-3600 (in seconds).
-The original configuration will apply if this field is not specified.
+     * Set Session persistence duration. Value range: 30-3600. Unit: second.
+Maintain the original configuration if not specified.
+     * @param SessionPersistTime Session persistence duration. Value range: 30-3600. Unit: second.
+Maintain the original configuration if not specified.
      */
     public void setSessionPersistTime(Long SessionPersistTime) {
         this.SessionPersistTime = SessionPersistTime;
     }
 
     /**
-     * Get L4 proxy mode. Valid values: 
-<li>instance: Instance mode. </li>If it is not specified, instance is used by default. 
-     * @return ProxyType L4 proxy mode. Valid values: 
-<li>instance: Instance mode. </li>If it is not specified, instance is used by default.
+     * Get L4 proxy mode. Valid values:
+<li>`instance`: Create by instance.</li>Use default value `instance` if not specified. 
+     * @return ProxyType L4 proxy mode. Valid values:
+<li>`instance`: Create by instance.</li>Use default value `instance` if not specified.
      */
     public String getProxyType() {
         return this.ProxyType;
     }
 
     /**
-     * Set L4 proxy mode. Valid values: 
-<li>instance: Instance mode. </li>If it is not specified, instance is used by default.
-     * @param ProxyType L4 proxy mode. Valid values: 
-<li>instance: Instance mode. </li>If it is not specified, instance is used by default.
+     * Set L4 proxy mode. Valid values:
+<li>`instance`: Create by instance.</li>Use default value `instance` if not specified.
+     * @param ProxyType L4 proxy mode. Valid values:
+<li>`instance`: Create by instance.</li>Use default value `instance` if not specified.
      */
     public void setProxyType(String ProxyType) {
         this.ProxyType = ProxyType;
     }
 
     /**
-     * Get IPv6 access configuration. The original configuration will apply if it is not specified. 
-     * @return Ipv6 IPv6 access configuration. The original configuration will apply if it is not specified.
+     * Get Ipv6 access configuration. Maintain the original configuration if not specified. 
+     * @return Ipv6 Ipv6 access configuration. Maintain the original configuration if not specified.
      */
     public Ipv6 getIpv6() {
         return this.Ipv6;
     }
 
     /**
-     * Set IPv6 access configuration. The original configuration will apply if it is not specified.
-     * @param Ipv6 IPv6 access configuration. The original configuration will apply if it is not specified.
+     * Set Ipv6 access configuration. Maintain the original configuration if not specified.
+     * @param Ipv6 Ipv6 access configuration. Maintain the original configuration if not specified.
      */
     public void setIpv6(Ipv6 Ipv6) {
         this.Ipv6 = Ipv6;
     }
 
     /**
-     * Get Cross-MLC-border acceleration. The original configuration will apply if it is not specified. 
-     * @return AccelerateMainland Cross-MLC-border acceleration. The original configuration will apply if it is not specified.
+     * Get Chinese mainland acceleration optimization configuration. Leave blank to indicate retaining the original configuration. 
+     * @return AccelerateMainland Chinese mainland acceleration optimization configuration. Leave blank to indicate retaining the original configuration.
      */
     public AccelerateMainland getAccelerateMainland() {
         return this.AccelerateMainland;
     }
 
     /**
-     * Set Cross-MLC-border acceleration. The original configuration will apply if it is not specified.
-     * @param AccelerateMainland Cross-MLC-border acceleration. The original configuration will apply if it is not specified.
+     * Set Chinese mainland acceleration optimization configuration. Leave blank to indicate retaining the original configuration.
+     * @param AccelerateMainland Chinese mainland acceleration optimization configuration. Leave blank to indicate retaining the original configuration.
      */
     public void setAccelerateMainland(AccelerateMainland AccelerateMainland) {
         this.AccelerateMainland = AccelerateMainland;

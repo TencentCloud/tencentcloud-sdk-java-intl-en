@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class VanityNameServersIps extends AbstractModel {
 
     /**
-    * Custom name of the name server
+    * Custom name server name.
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * IPv4 address of the custom name server
+    * Custom IPv4 address of the name server.
     */
     @SerializedName("IPv4")
     @Expose
     private String IPv4;
 
     /**
-     * Get Custom name of the name server 
-     * @return Name Custom name of the name server
+     * Get Custom name server name. 
+     * @return Name Custom name server name.
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Custom name of the name server
-     * @param Name Custom name of the name server
+     * Set Custom name server name.
+     * @param Name Custom name server name.
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get IPv4 address of the custom name server 
-     * @return IPv4 IPv4 address of the custom name server
+     * Get Custom IPv4 address of the name server. 
+     * @return IPv4 Custom IPv4 address of the name server.
      */
     public String getIPv4() {
         return this.IPv4;
     }
 
     /**
-     * Set IPv4 address of the custom name server
-     * @param IPv4 IPv4 address of the custom name server
+     * Set Custom IPv4 address of the name server.
+     * @param IPv4 Custom IPv4 address of the name server.
      */
     public void setIPv4(String IPv4) {
         this.IPv4 = IPv4;

@@ -24,16 +24,14 @@ import java.util.HashMap;
 public class DescribeContentQuotaResponse extends AbstractModel {
 
     /**
-    * Purging quotas.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Update related quotas.
     */
     @SerializedName("PurgeQuota")
     @Expose
     private Quota [] PurgeQuota;
 
     /**
-    * Pre-warming quotas.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Preheating-related quota.
     */
     @SerializedName("PrefetchQuota")
     @Expose
@@ -47,40 +45,32 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Purging quotas.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return PurgeQuota Purging quotas.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Update related quotas. 
+     * @return PurgeQuota Update related quotas.
      */
     public Quota [] getPurgeQuota() {
         return this.PurgeQuota;
     }
 
     /**
-     * Set Purging quotas.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param PurgeQuota Purging quotas.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Update related quotas.
+     * @param PurgeQuota Update related quotas.
      */
     public void setPurgeQuota(Quota [] PurgeQuota) {
         this.PurgeQuota = PurgeQuota;
     }
 
     /**
-     * Get Pre-warming quotas.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return PrefetchQuota Pre-warming quotas.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Preheating-related quota. 
+     * @return PrefetchQuota Preheating-related quota.
      */
     public Quota [] getPrefetchQuota() {
         return this.PrefetchQuota;
     }
 
     /**
-     * Set Pre-warming quotas.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param PrefetchQuota Pre-warming quotas.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Preheating-related quota.
+     * @param PrefetchQuota Preheating-related quota.
      */
     public void setPrefetchQuota(Quota [] PrefetchQuota) {
         this.PrefetchQuota = PrefetchQuota;

@@ -24,84 +24,69 @@ import java.util.HashMap;
 public class CacheConfigParameters extends AbstractModel {
 
     /**
-    * Follow origin server cache configuration. only one of followorigin, nocache, customtime can have switch set to on.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+    * Cache configuration follows the origin site. At most one of FollowOrigin, NoCache, and CustomTime can be configured with Switch on.
     */
     @SerializedName("FollowOrigin")
     @Expose
     private FollowOrigin FollowOrigin;
 
     /**
-    * No cache configuration. only one of followorigin, nocache, customtime can have switch set to on.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+    * No cache configuration. For FollowOrigin, NoCache, and CustomTime, at most one Switch can be set to on.
     */
     @SerializedName("NoCache")
     @Expose
     private NoCache NoCache;
 
     /**
-    * Custom cache time configuration. only one of followorigin, nocache, customtime can have switch set to on.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+    * Custom cache time configuration. For FollowOrigin, NoCache, and CustomTime, at most one can have Switch set to on.
     */
     @SerializedName("CustomTime")
     @Expose
     private CacheConfigCustomTime CustomTime;
 
     /**
-     * Get Follow origin server cache configuration. only one of followorigin, nocache, customtime can have switch set to on.
-Note: this field may return null, which indicates a failure to obtain a valid value. 
-     * @return FollowOrigin Follow origin server cache configuration. only one of followorigin, nocache, customtime can have switch set to on.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * Get Cache configuration follows the origin site. At most one of FollowOrigin, NoCache, and CustomTime can be configured with Switch on. 
+     * @return FollowOrigin Cache configuration follows the origin site. At most one of FollowOrigin, NoCache, and CustomTime can be configured with Switch on.
      */
     public FollowOrigin getFollowOrigin() {
         return this.FollowOrigin;
     }
 
     /**
-     * Set Follow origin server cache configuration. only one of followorigin, nocache, customtime can have switch set to on.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-     * @param FollowOrigin Follow origin server cache configuration. only one of followorigin, nocache, customtime can have switch set to on.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * Set Cache configuration follows the origin site. At most one of FollowOrigin, NoCache, and CustomTime can be configured with Switch on.
+     * @param FollowOrigin Cache configuration follows the origin site. At most one of FollowOrigin, NoCache, and CustomTime can be configured with Switch on.
      */
     public void setFollowOrigin(FollowOrigin FollowOrigin) {
         this.FollowOrigin = FollowOrigin;
     }
 
     /**
-     * Get No cache configuration. only one of followorigin, nocache, customtime can have switch set to on.
-Note: this field may return null, which indicates a failure to obtain a valid value. 
-     * @return NoCache No cache configuration. only one of followorigin, nocache, customtime can have switch set to on.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * Get No cache configuration. For FollowOrigin, NoCache, and CustomTime, at most one Switch can be set to on. 
+     * @return NoCache No cache configuration. For FollowOrigin, NoCache, and CustomTime, at most one Switch can be set to on.
      */
     public NoCache getNoCache() {
         return this.NoCache;
     }
 
     /**
-     * Set No cache configuration. only one of followorigin, nocache, customtime can have switch set to on.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-     * @param NoCache No cache configuration. only one of followorigin, nocache, customtime can have switch set to on.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * Set No cache configuration. For FollowOrigin, NoCache, and CustomTime, at most one Switch can be set to on.
+     * @param NoCache No cache configuration. For FollowOrigin, NoCache, and CustomTime, at most one Switch can be set to on.
      */
     public void setNoCache(NoCache NoCache) {
         this.NoCache = NoCache;
     }
 
     /**
-     * Get Custom cache time configuration. only one of followorigin, nocache, customtime can have switch set to on.
-Note: this field may return null, which indicates a failure to obtain a valid value. 
-     * @return CustomTime Custom cache time configuration. only one of followorigin, nocache, customtime can have switch set to on.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * Get Custom cache time configuration. For FollowOrigin, NoCache, and CustomTime, at most one can have Switch set to on. 
+     * @return CustomTime Custom cache time configuration. For FollowOrigin, NoCache, and CustomTime, at most one can have Switch set to on.
      */
     public CacheConfigCustomTime getCustomTime() {
         return this.CustomTime;
     }
 
     /**
-     * Set Custom cache time configuration. only one of followorigin, nocache, customtime can have switch set to on.
-Note: this field may return null, which indicates a failure to obtain a valid value.
-     * @param CustomTime Custom cache time configuration. only one of followorigin, nocache, customtime can have switch set to on.
-Note: this field may return null, which indicates a failure to obtain a valid value.
+     * Set Custom cache time configuration. For FollowOrigin, NoCache, and CustomTime, at most one can have Switch set to on.
+     * @param CustomTime Custom cache time configuration. For FollowOrigin, NoCache, and CustomTime, at most one can have Switch set to on.
      */
     public void setCustomTime(CacheConfigCustomTime CustomTime) {
         this.CustomTime = CustomTime;

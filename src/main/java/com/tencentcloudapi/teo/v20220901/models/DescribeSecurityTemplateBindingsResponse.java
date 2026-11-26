@@ -24,13 +24,13 @@ import java.util.HashMap;
 public class DescribeSecurityTemplateBindingsResponse extends AbstractModel {
 
     /**
-    * Bindings of the specified policy template.
+    * List of binding relationships of the specified policy template.
 
-When a domain name of a site is bound with the specified policy template, `TemplateScope` includes the `ZoneId` of the related site and the bindings of the domain name. 
+When a domain name in a site is included in the binding relationship of a specified policy template, the binding relationship list `TemplateScope` will include the `ZoneId` of the site and the domain name binding relationships under the site related to the policy template.
 
-Note: If the template is not bound with any domain name, and there is not any existing binding, `TemplateScope=0` is returned.
+Note: When no any domain name is being bound or has been bound to the specified policy template, the binding relationship is empty. That is, in the return structure, the length of the `TemplateScope` array is 0.
 
-In the binding list, the same domain name may appear repeatedly in the `EntityStatus` list with different `Status`. For example, when a domain name is being bound to another policy template, it's marked both `online` and `pending`.
+In a binding relationship, the same domain name may appear repeatedly in the `EntityStatus` list and be marked with different `Status`. For example, a domain name being bound to another policy template is marked as both `online` and `pending` at the same time.
     */
     @SerializedName("SecurityTemplate")
     @Expose
@@ -44,40 +44,40 @@ In the binding list, the same domain name may appear repeatedly in the `EntitySt
     private String RequestId;
 
     /**
-     * Get Bindings of the specified policy template.
+     * Get List of binding relationships of the specified policy template.
 
-When a domain name of a site is bound with the specified policy template, `TemplateScope` includes the `ZoneId` of the related site and the bindings of the domain name. 
+When a domain name in a site is included in the binding relationship of a specified policy template, the binding relationship list `TemplateScope` will include the `ZoneId` of the site and the domain name binding relationships under the site related to the policy template.
 
-Note: If the template is not bound with any domain name, and there is not any existing binding, `TemplateScope=0` is returned.
+Note: When no any domain name is being bound or has been bound to the specified policy template, the binding relationship is empty. That is, in the return structure, the length of the `TemplateScope` array is 0.
 
-In the binding list, the same domain name may appear repeatedly in the `EntityStatus` list with different `Status`. For example, when a domain name is being bound to another policy template, it's marked both `online` and `pending`. 
-     * @return SecurityTemplate Bindings of the specified policy template.
+In a binding relationship, the same domain name may appear repeatedly in the `EntityStatus` list and be marked with different `Status`. For example, a domain name being bound to another policy template is marked as both `online` and `pending` at the same time. 
+     * @return SecurityTemplate List of binding relationships of the specified policy template.
 
-When a domain name of a site is bound with the specified policy template, `TemplateScope` includes the `ZoneId` of the related site and the bindings of the domain name. 
+When a domain name in a site is included in the binding relationship of a specified policy template, the binding relationship list `TemplateScope` will include the `ZoneId` of the site and the domain name binding relationships under the site related to the policy template.
 
-Note: If the template is not bound with any domain name, and there is not any existing binding, `TemplateScope=0` is returned.
+Note: When no any domain name is being bound or has been bound to the specified policy template, the binding relationship is empty. That is, in the return structure, the length of the `TemplateScope` array is 0.
 
-In the binding list, the same domain name may appear repeatedly in the `EntityStatus` list with different `Status`. For example, when a domain name is being bound to another policy template, it's marked both `online` and `pending`.
+In a binding relationship, the same domain name may appear repeatedly in the `EntityStatus` list and be marked with different `Status`. For example, a domain name being bound to another policy template is marked as both `online` and `pending` at the same time.
      */
     public SecurityTemplateBinding [] getSecurityTemplate() {
         return this.SecurityTemplate;
     }
 
     /**
-     * Set Bindings of the specified policy template.
+     * Set List of binding relationships of the specified policy template.
 
-When a domain name of a site is bound with the specified policy template, `TemplateScope` includes the `ZoneId` of the related site and the bindings of the domain name. 
+When a domain name in a site is included in the binding relationship of a specified policy template, the binding relationship list `TemplateScope` will include the `ZoneId` of the site and the domain name binding relationships under the site related to the policy template.
 
-Note: If the template is not bound with any domain name, and there is not any existing binding, `TemplateScope=0` is returned.
+Note: When no any domain name is being bound or has been bound to the specified policy template, the binding relationship is empty. That is, in the return structure, the length of the `TemplateScope` array is 0.
 
-In the binding list, the same domain name may appear repeatedly in the `EntityStatus` list with different `Status`. For example, when a domain name is being bound to another policy template, it's marked both `online` and `pending`.
-     * @param SecurityTemplate Bindings of the specified policy template.
+In a binding relationship, the same domain name may appear repeatedly in the `EntityStatus` list and be marked with different `Status`. For example, a domain name being bound to another policy template is marked as both `online` and `pending` at the same time.
+     * @param SecurityTemplate List of binding relationships of the specified policy template.
 
-When a domain name of a site is bound with the specified policy template, `TemplateScope` includes the `ZoneId` of the related site and the bindings of the domain name. 
+When a domain name in a site is included in the binding relationship of a specified policy template, the binding relationship list `TemplateScope` will include the `ZoneId` of the site and the domain name binding relationships under the site related to the policy template.
 
-Note: If the template is not bound with any domain name, and there is not any existing binding, `TemplateScope=0` is returned.
+Note: When no any domain name is being bound or has been bound to the specified policy template, the binding relationship is empty. That is, in the return structure, the length of the `TemplateScope` array is 0.
 
-In the binding list, the same domain name may appear repeatedly in the `EntityStatus` list with different `Status`. For example, when a domain name is being bound to another policy template, it's marked both `online` and `pending`.
+In a binding relationship, the same domain name may appear repeatedly in the `EntityStatus` list and be marked with different `Status`. For example, a domain name being bound to another policy template is marked as both `online` and `pending` at the same time.
      */
     public void setSecurityTemplate(SecurityTemplateBinding [] SecurityTemplate) {
         this.SecurityTemplate = SecurityTemplate;

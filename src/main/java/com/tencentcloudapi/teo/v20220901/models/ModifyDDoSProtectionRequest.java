@@ -31,7 +31,7 @@ public class ModifyDDoSProtectionRequest extends AbstractModel {
     private String ZoneId;
 
     /**
-    * Specifies the exclusive Anti-DDoS configuration.
+    * Exclusive DDoS protection configuration.
     */
     @SerializedName("DDoSProtection")
     @Expose
@@ -54,16 +54,16 @@ public class ModifyDDoSProtectionRequest extends AbstractModel {
     }
 
     /**
-     * Get Specifies the exclusive Anti-DDoS configuration. 
-     * @return DDoSProtection Specifies the exclusive Anti-DDoS configuration.
+     * Get Exclusive DDoS protection configuration. 
+     * @return DDoSProtection Exclusive DDoS protection configuration.
      */
     public DDoSProtection getDDoSProtection() {
         return this.DDoSProtection;
     }
 
     /**
-     * Set Specifies the exclusive Anti-DDoS configuration.
-     * @param DDoSProtection Specifies the exclusive Anti-DDoS configuration.
+     * Set Exclusive DDoS protection configuration.
+     * @param DDoSProtection Exclusive DDoS protection configuration.
      */
     public void setDDoSProtection(DDoSProtection DDoSProtection) {
         this.DDoSProtection = DDoSProtection;

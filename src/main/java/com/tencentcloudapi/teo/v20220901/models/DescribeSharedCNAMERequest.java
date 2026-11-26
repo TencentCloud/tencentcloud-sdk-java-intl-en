@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeSharedCNAMERequest extends AbstractModel {
 
     /**
-    * Shared CNAME associated site ID.
+    * Zone ID associated with the shared CNAME.
     */
     @SerializedName("ZoneId")
     @Expose
@@ -32,9 +32,9 @@ public class DescribeSharedCNAMERequest extends AbstractModel {
 
     /**
     * Filter criteria. The maximum value of Filters.Values is 20. The detailed filter criteria are as follows:
-<li>shared-cname<br>   Filter by [<strong>shared CNAME</strong>].<br>   Type: String<br>   Required: No</li>
-<li>type<br>   Filter by [<strong>shared CNAME type</strong>].<br>   type: String<br>   Required: No</li>
-<li>Description<br>   Filter by [<strong>description</strong>].<br>   Type: String<br>   Required: No</li>
+<li>shared-cname<br>        Filter by [<strong>shared CNAME</strong>].<br>        Type: String<br>        Required: No</li>
+<li>type<br>        Filter by [<strong>shared canme type</strong>].<br>        Type: String<br>        Required: No</li>
+<li>description<br> Filter by <strong>description</strong>.<br> Type: String<br> Required: No</li>
     */
     @SerializedName("Filters")
     @Expose
@@ -43,7 +43,7 @@ public class DescribeSharedCNAMERequest extends AbstractModel {
     /**
     * List sort method. Valid values:
 <li>asc: ascending order;</li>
-<li>desc: Sort in descending order.</li>The default value is `asc`.
+<li>desc: descending order.</li>Default value: asc.
     */
     @SerializedName("Direction")
     @Expose
@@ -51,8 +51,8 @@ public class DescribeSharedCNAMERequest extends AbstractModel {
 
     /**
     * Match mode. Valid values:
-<li>all: Returns the shared CNAME that matches all query conditions.</li>
-<li>any: Returns the shared CNAME that matches any query condition.</li> Default value is all.
+<li>all: return the shared CNAME that matches all query conditions;</li>
+<li>any: return the shared CNAME that matches any query condition.</li>The default value is all.
     */
     @SerializedName("Match")
     @Expose
@@ -60,8 +60,8 @@ public class DescribeSharedCNAMERequest extends AbstractModel {
 
     /**
     * Sorting basis. Valid values:
-<li>create-time: Creation time;</li>
-<li>shared-cname: Shared CNAME.</li> Default sorting order is based on the shared-cname attribute.
+<li>create-time: creation time;</li>
+<li>shared-cname: Shared CNAME.</li>Sorted by the shared-cname attribute by default.
     */
     @SerializedName("Order")
     @Expose
@@ -75,23 +75,23 @@ public class DescribeSharedCNAMERequest extends AbstractModel {
     private Long Offset;
 
     /**
-    * Number limit of paginated query. Default value: 20. Upper limit: 200.
+    * Number limit of paginated query. Default value: 20. Maximum value: 200.
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-     * Get Shared CNAME associated site ID. 
-     * @return ZoneId Shared CNAME associated site ID.
+     * Get Zone ID associated with the shared CNAME. 
+     * @return ZoneId Zone ID associated with the shared CNAME.
      */
     public String getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set Shared CNAME associated site ID.
-     * @param ZoneId Shared CNAME associated site ID.
+     * Set Zone ID associated with the shared CNAME.
+     * @param ZoneId Zone ID associated with the shared CNAME.
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;
@@ -99,13 +99,13 @@ public class DescribeSharedCNAMERequest extends AbstractModel {
 
     /**
      * Get Filter criteria. The maximum value of Filters.Values is 20. The detailed filter criteria are as follows:
-<li>shared-cname<br>   Filter by [<strong>shared CNAME</strong>].<br>   Type: String<br>   Required: No</li>
-<li>type<br>   Filter by [<strong>shared CNAME type</strong>].<br>   type: String<br>   Required: No</li>
-<li>Description<br>   Filter by [<strong>description</strong>].<br>   Type: String<br>   Required: No</li> 
+<li>shared-cname<br>        Filter by [<strong>shared CNAME</strong>].<br>        Type: String<br>        Required: No</li>
+<li>type<br>        Filter by [<strong>shared canme type</strong>].<br>        Type: String<br>        Required: No</li>
+<li>description<br> Filter by <strong>description</strong>.<br> Type: String<br> Required: No</li> 
      * @return Filters Filter criteria. The maximum value of Filters.Values is 20. The detailed filter criteria are as follows:
-<li>shared-cname<br>   Filter by [<strong>shared CNAME</strong>].<br>   Type: String<br>   Required: No</li>
-<li>type<br>   Filter by [<strong>shared CNAME type</strong>].<br>   type: String<br>   Required: No</li>
-<li>Description<br>   Filter by [<strong>description</strong>].<br>   Type: String<br>   Required: No</li>
+<li>shared-cname<br>        Filter by [<strong>shared CNAME</strong>].<br>        Type: String<br>        Required: No</li>
+<li>type<br>        Filter by [<strong>shared canme type</strong>].<br>        Type: String<br>        Required: No</li>
+<li>description<br> Filter by <strong>description</strong>.<br> Type: String<br> Required: No</li>
      */
     public AdvancedFilter [] getFilters() {
         return this.Filters;
@@ -113,13 +113,13 @@ public class DescribeSharedCNAMERequest extends AbstractModel {
 
     /**
      * Set Filter criteria. The maximum value of Filters.Values is 20. The detailed filter criteria are as follows:
-<li>shared-cname<br>   Filter by [<strong>shared CNAME</strong>].<br>   Type: String<br>   Required: No</li>
-<li>type<br>   Filter by [<strong>shared CNAME type</strong>].<br>   type: String<br>   Required: No</li>
-<li>Description<br>   Filter by [<strong>description</strong>].<br>   Type: String<br>   Required: No</li>
+<li>shared-cname<br>        Filter by [<strong>shared CNAME</strong>].<br>        Type: String<br>        Required: No</li>
+<li>type<br>        Filter by [<strong>shared canme type</strong>].<br>        Type: String<br>        Required: No</li>
+<li>description<br> Filter by <strong>description</strong>.<br> Type: String<br> Required: No</li>
      * @param Filters Filter criteria. The maximum value of Filters.Values is 20. The detailed filter criteria are as follows:
-<li>shared-cname<br>   Filter by [<strong>shared CNAME</strong>].<br>   Type: String<br>   Required: No</li>
-<li>type<br>   Filter by [<strong>shared CNAME type</strong>].<br>   type: String<br>   Required: No</li>
-<li>Description<br>   Filter by [<strong>description</strong>].<br>   Type: String<br>   Required: No</li>
+<li>shared-cname<br>        Filter by [<strong>shared CNAME</strong>].<br>        Type: String<br>        Required: No</li>
+<li>type<br>        Filter by [<strong>shared canme type</strong>].<br>        Type: String<br>        Required: No</li>
+<li>description<br> Filter by <strong>description</strong>.<br> Type: String<br> Required: No</li>
      */
     public void setFilters(AdvancedFilter [] Filters) {
         this.Filters = Filters;
@@ -128,10 +128,10 @@ public class DescribeSharedCNAMERequest extends AbstractModel {
     /**
      * Get List sort method. Valid values:
 <li>asc: ascending order;</li>
-<li>desc: Sort in descending order.</li>The default value is `asc`. 
+<li>desc: descending order.</li>Default value: asc. 
      * @return Direction List sort method. Valid values:
 <li>asc: ascending order;</li>
-<li>desc: Sort in descending order.</li>The default value is `asc`.
+<li>desc: descending order.</li>Default value: asc.
      */
     public String getDirection() {
         return this.Direction;
@@ -140,10 +140,10 @@ public class DescribeSharedCNAMERequest extends AbstractModel {
     /**
      * Set List sort method. Valid values:
 <li>asc: ascending order;</li>
-<li>desc: Sort in descending order.</li>The default value is `asc`.
+<li>desc: descending order.</li>Default value: asc.
      * @param Direction List sort method. Valid values:
 <li>asc: ascending order;</li>
-<li>desc: Sort in descending order.</li>The default value is `asc`.
+<li>desc: descending order.</li>Default value: asc.
      */
     public void setDirection(String Direction) {
         this.Direction = Direction;
@@ -151,11 +151,11 @@ public class DescribeSharedCNAMERequest extends AbstractModel {
 
     /**
      * Get Match mode. Valid values:
-<li>all: Returns the shared CNAME that matches all query conditions.</li>
-<li>any: Returns the shared CNAME that matches any query condition.</li> Default value is all. 
+<li>all: return the shared CNAME that matches all query conditions;</li>
+<li>any: return the shared CNAME that matches any query condition.</li>The default value is all. 
      * @return Match Match mode. Valid values:
-<li>all: Returns the shared CNAME that matches all query conditions.</li>
-<li>any: Returns the shared CNAME that matches any query condition.</li> Default value is all.
+<li>all: return the shared CNAME that matches all query conditions;</li>
+<li>any: return the shared CNAME that matches any query condition.</li>The default value is all.
      */
     public String getMatch() {
         return this.Match;
@@ -163,11 +163,11 @@ public class DescribeSharedCNAMERequest extends AbstractModel {
 
     /**
      * Set Match mode. Valid values:
-<li>all: Returns the shared CNAME that matches all query conditions.</li>
-<li>any: Returns the shared CNAME that matches any query condition.</li> Default value is all.
+<li>all: return the shared CNAME that matches all query conditions;</li>
+<li>any: return the shared CNAME that matches any query condition.</li>The default value is all.
      * @param Match Match mode. Valid values:
-<li>all: Returns the shared CNAME that matches all query conditions.</li>
-<li>any: Returns the shared CNAME that matches any query condition.</li> Default value is all.
+<li>all: return the shared CNAME that matches all query conditions;</li>
+<li>any: return the shared CNAME that matches any query condition.</li>The default value is all.
      */
     public void setMatch(String Match) {
         this.Match = Match;
@@ -175,11 +175,11 @@ public class DescribeSharedCNAMERequest extends AbstractModel {
 
     /**
      * Get Sorting basis. Valid values:
-<li>create-time: Creation time;</li>
-<li>shared-cname: Shared CNAME.</li> Default sorting order is based on the shared-cname attribute. 
+<li>create-time: creation time;</li>
+<li>shared-cname: Shared CNAME.</li>Sorted by the shared-cname attribute by default. 
      * @return Order Sorting basis. Valid values:
-<li>create-time: Creation time;</li>
-<li>shared-cname: Shared CNAME.</li> Default sorting order is based on the shared-cname attribute.
+<li>create-time: creation time;</li>
+<li>shared-cname: Shared CNAME.</li>Sorted by the shared-cname attribute by default.
      */
     public String getOrder() {
         return this.Order;
@@ -187,11 +187,11 @@ public class DescribeSharedCNAMERequest extends AbstractModel {
 
     /**
      * Set Sorting basis. Valid values:
-<li>create-time: Creation time;</li>
-<li>shared-cname: Shared CNAME.</li> Default sorting order is based on the shared-cname attribute.
+<li>create-time: creation time;</li>
+<li>shared-cname: Shared CNAME.</li>Sorted by the shared-cname attribute by default.
      * @param Order Sorting basis. Valid values:
-<li>create-time: Creation time;</li>
-<li>shared-cname: Shared CNAME.</li> Default sorting order is based on the shared-cname attribute.
+<li>create-time: creation time;</li>
+<li>shared-cname: Shared CNAME.</li>Sorted by the shared-cname attribute by default.
      */
     public void setOrder(String Order) {
         this.Order = Order;
@@ -214,16 +214,16 @@ public class DescribeSharedCNAMERequest extends AbstractModel {
     }
 
     /**
-     * Get Number limit of paginated query. Default value: 20. Upper limit: 200. 
-     * @return Limit Number limit of paginated query. Default value: 20. Upper limit: 200.
+     * Get Number limit of paginated query. Default value: 20. Maximum value: 200. 
+     * @return Limit Number limit of paginated query. Default value: 20. Maximum value: 200.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Number limit of paginated query. Default value: 20. Upper limit: 200.
-     * @param Limit Number limit of paginated query. Default value: 20. Upper limit: 200.
+     * Set Number limit of paginated query. Default value: 20. Maximum value: 200.
+     * @param Limit Number limit of paginated query. Default value: 20. Maximum value: 200.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

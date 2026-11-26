@@ -31,7 +31,7 @@ public class DescribeFunctionReplicasResponse extends AbstractModel {
     private Long TotalCount;
 
     /**
-    * Edge function replica list.
+    * List of edge function replicas.
     */
     @SerializedName("FunctionReplicas")
     @Expose
@@ -61,16 +61,16 @@ public class DescribeFunctionReplicasResponse extends AbstractModel {
     }
 
     /**
-     * Get Edge function replica list. 
-     * @return FunctionReplicas Edge function replica list.
+     * Get List of edge function replicas. 
+     * @return FunctionReplicas List of edge function replicas.
      */
     public FunctionReplica [] getFunctionReplicas() {
         return this.FunctionReplicas;
     }
 
     /**
-     * Set Edge function replica list.
-     * @param FunctionReplicas Edge function replica list.
+     * Set List of edge function replicas.
+     * @param FunctionReplicas List of edge function replicas.
      */
     public void setFunctionReplicas(FunctionReplica [] FunctionReplicas) {
         this.FunctionReplicas = FunctionReplicas;

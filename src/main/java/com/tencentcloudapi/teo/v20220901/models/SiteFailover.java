@@ -24,53 +24,53 @@ import java.util.HashMap;
 public class SiteFailover extends AbstractModel {
 
     /**
-    * Origin server failover type. Valid values:
-<li>FailoverToHost: Fail back to the specified IP/domain.</li>
-<li>FailoverToCOS: Fail back to Tencent Cloud COS;</li>
-<li>FailoverToS3CompatibleObjectStorage: Fail over to S3-compatible object storage;</li>
-<li> FailoverRedirectToURL: Redirect to the specified URL.</li>
-<li>FailoverCustomResponsePage: Use a custom response page.</li>
+    * Origin-pull failover type. Valid values:
+<li>FailoverToHost: Failover to the specified IP/domain;</li>
+<li> FailoverToCOS: Failover to Tencent Cloud COS;</li>
+<li>FailoverToS3CompatibleObjectStorage: Failover to S3-compatible storage;</li>
+<li> FailoverRedirectToURL: redirect to the specified URL;</li>
+<li> FailoverCustomResponsePage: Use a custom response page.</li>
     */
     @SerializedName("Mode")
     @Expose
     private String Mode;
 
     /**
-    * Origin server address, divided into following scenarios based on the Mode value:
-<li>When Mode = FailoverToHost, specify an IPV4 address, an IPV6 address, or a domain name;</li>
-<li>When Mode = FailoverToCOS, specify the access domain name of the COS bucket;</li>
-<li>When Mode = FailoverToS3CompatibleObjectStorage, specify the access domain of the S3 bucket.</li>
+    * Origin server address, divided into the following scenarios based on the value of Mode:
+<li>When Mode = FailoverToHost, fill in an IPV4 address, an IPV6 address, or a domain name;</li>
+<li>When Mode = FailoverToCOS, fill in the access domain name of the COS bucket;</li>
+<li>When Mode = FailoverToS3CompatibleObjectStorage, fill in the access domain name of the S3 bucket.</li>
     */
     @SerializedName("Origin")
     @Expose
     private String Origin;
 
     /**
-    * Protocol configuration. This parameter is required when Mode value is FailoverToHost. Valid values:
+    * Origin-pull protocol configuration. This parameter is required when Mode is FailoverToHost. Valid values:
 <li>http: use HTTP protocol;</li>
-<li>https: Using HTTPS protocol;</li>
-<li>follow: protocol following.</li>
+<li>https: Use HTTPS protocol;</li>
+<li>follow: follow protocol.</li>
     */
     @SerializedName("OriginProtocol")
     @Expose
     private String OriginProtocol;
 
     /**
-    * HTTP origin port, value ranges from 1 to 65535. This parameter is required when the origin-pull protocol OriginProtocol is http or follow.
+    * HTTP origin-pull port. Value range: 1–65535. This parameter is required when the origin-pull protocol OriginProtocol is http or follow.
     */
     @SerializedName("HTTPOriginPort")
     @Expose
     private Long HTTPOriginPort;
 
     /**
-    * HTTPS origin port, value ranges from 1–65535. This parameter is required when the origin-pull protocol OriginProtocol is https or follow.
+    * HTTPS origin-pull port, in the range of 1–65535. This parameter is required when OriginProtocol is https or follow.
     */
     @SerializedName("HTTPSOriginPort")
     @Expose
     private Long HTTPSOriginPort;
 
     /**
-    * Host Header rewrite configuration for origin-pull
+    * Host Header rewrite configuration for origin-pull.
     */
     @SerializedName("UpstreamHostHeader")
     @Expose
@@ -84,21 +84,21 @@ public class SiteFailover extends AbstractModel {
     private UpstreamURLRewriteParameters UpstreamURLRewrite;
 
     /**
-    * Origin Requests parameter configuration.
+    * Origin-pull request parameter configuration.
     */
     @SerializedName("UpstreamRequestParameters")
     @Expose
     private UpstreamRequestParameters UpstreamRequestParameters;
 
     /**
-    * HTTP2 origin-pull configuration parameters.
+    * HTTP/2 origin-pull configuration parameter.
     */
     @SerializedName("UpstreamHTTP2Parameters")
     @Expose
     private UpstreamHTTP2Parameters UpstreamHTTP2Parameters;
 
     /**
-    * Specify whether access to the private object storage origin server is allowed. This parameter is required when the origin server type is FailoverToCOS or FailoverToS3CompatibleObjectStorage. Valid values:
+    * Whether access to the private object storage origin server is allowed. This parameter is required when the origin server type Mode is FailoverToCOS or FailoverToS3CompatibleObjectStorage. Valid values:
 <li>on: Enable private authentication;</li>
 <li>off: Disable private authentication.</li>
     */
@@ -114,22 +114,22 @@ public class SiteFailover extends AbstractModel {
     private OriginPrivateParameters PrivateParameters;
 
     /**
-    * Redirect target URL. This parameter is required when Mode has a value of FailoverRedirectToURL.
+    * Redirect target URL. This parameter is required when Mode is FailoverRedirectToURL.
     */
     @SerializedName("RedirectURL")
     @Expose
     private String RedirectURL;
 
     /**
-    * Response page ID. This parameter is required when Mode value is FailoverCustomResponsePage.
+    * page ID. This parameter is required when Mode is FailoverCustomResponsePage.
     */
     @SerializedName("ResponsePageId")
     @Expose
     private String ResponsePageId;
 
     /**
-    * Response status code. This parameter is required when Mode is a value of FailoverRedirectToURL or FailoverCustomResponsePage. Valid values:
-<li>When Mode = FailoverRedirectToURL, the parameter value is one of 301, 302, 303, 307, 308.</li>
+    * status code. This parameter is required when Mode is FailoverRedirectToURL or FailoverCustomResponsePage. Valid values:
+<li>When Mode = FailoverRedirectToURL, the parameter value is one of 301, 302, 303, 307, 308;</li>
 <li>When Mode = FailoverCustomResponsePage, the parameter value is one of 400, 403, 404, 405, 414, 416, 451, 500, 501, 502, 503, 504.</li>
     */
     @SerializedName("StatusCode")
@@ -137,140 +137,140 @@ public class SiteFailover extends AbstractModel {
     private Long StatusCode;
 
     /**
-     * Get Origin server failover type. Valid values:
-<li>FailoverToHost: Fail back to the specified IP/domain.</li>
-<li>FailoverToCOS: Fail back to Tencent Cloud COS;</li>
-<li>FailoverToS3CompatibleObjectStorage: Fail over to S3-compatible object storage;</li>
-<li> FailoverRedirectToURL: Redirect to the specified URL.</li>
-<li>FailoverCustomResponsePage: Use a custom response page.</li> 
-     * @return Mode Origin server failover type. Valid values:
-<li>FailoverToHost: Fail back to the specified IP/domain.</li>
-<li>FailoverToCOS: Fail back to Tencent Cloud COS;</li>
-<li>FailoverToS3CompatibleObjectStorage: Fail over to S3-compatible object storage;</li>
-<li> FailoverRedirectToURL: Redirect to the specified URL.</li>
-<li>FailoverCustomResponsePage: Use a custom response page.</li>
+     * Get Origin-pull failover type. Valid values:
+<li>FailoverToHost: Failover to the specified IP/domain;</li>
+<li> FailoverToCOS: Failover to Tencent Cloud COS;</li>
+<li>FailoverToS3CompatibleObjectStorage: Failover to S3-compatible storage;</li>
+<li> FailoverRedirectToURL: redirect to the specified URL;</li>
+<li> FailoverCustomResponsePage: Use a custom response page.</li> 
+     * @return Mode Origin-pull failover type. Valid values:
+<li>FailoverToHost: Failover to the specified IP/domain;</li>
+<li> FailoverToCOS: Failover to Tencent Cloud COS;</li>
+<li>FailoverToS3CompatibleObjectStorage: Failover to S3-compatible storage;</li>
+<li> FailoverRedirectToURL: redirect to the specified URL;</li>
+<li> FailoverCustomResponsePage: Use a custom response page.</li>
      */
     public String getMode() {
         return this.Mode;
     }
 
     /**
-     * Set Origin server failover type. Valid values:
-<li>FailoverToHost: Fail back to the specified IP/domain.</li>
-<li>FailoverToCOS: Fail back to Tencent Cloud COS;</li>
-<li>FailoverToS3CompatibleObjectStorage: Fail over to S3-compatible object storage;</li>
-<li> FailoverRedirectToURL: Redirect to the specified URL.</li>
-<li>FailoverCustomResponsePage: Use a custom response page.</li>
-     * @param Mode Origin server failover type. Valid values:
-<li>FailoverToHost: Fail back to the specified IP/domain.</li>
-<li>FailoverToCOS: Fail back to Tencent Cloud COS;</li>
-<li>FailoverToS3CompatibleObjectStorage: Fail over to S3-compatible object storage;</li>
-<li> FailoverRedirectToURL: Redirect to the specified URL.</li>
-<li>FailoverCustomResponsePage: Use a custom response page.</li>
+     * Set Origin-pull failover type. Valid values:
+<li>FailoverToHost: Failover to the specified IP/domain;</li>
+<li> FailoverToCOS: Failover to Tencent Cloud COS;</li>
+<li>FailoverToS3CompatibleObjectStorage: Failover to S3-compatible storage;</li>
+<li> FailoverRedirectToURL: redirect to the specified URL;</li>
+<li> FailoverCustomResponsePage: Use a custom response page.</li>
+     * @param Mode Origin-pull failover type. Valid values:
+<li>FailoverToHost: Failover to the specified IP/domain;</li>
+<li> FailoverToCOS: Failover to Tencent Cloud COS;</li>
+<li>FailoverToS3CompatibleObjectStorage: Failover to S3-compatible storage;</li>
+<li> FailoverRedirectToURL: redirect to the specified URL;</li>
+<li> FailoverCustomResponsePage: Use a custom response page.</li>
      */
     public void setMode(String Mode) {
         this.Mode = Mode;
     }
 
     /**
-     * Get Origin server address, divided into following scenarios based on the Mode value:
-<li>When Mode = FailoverToHost, specify an IPV4 address, an IPV6 address, or a domain name;</li>
-<li>When Mode = FailoverToCOS, specify the access domain name of the COS bucket;</li>
-<li>When Mode = FailoverToS3CompatibleObjectStorage, specify the access domain of the S3 bucket.</li> 
-     * @return Origin Origin server address, divided into following scenarios based on the Mode value:
-<li>When Mode = FailoverToHost, specify an IPV4 address, an IPV6 address, or a domain name;</li>
-<li>When Mode = FailoverToCOS, specify the access domain name of the COS bucket;</li>
-<li>When Mode = FailoverToS3CompatibleObjectStorage, specify the access domain of the S3 bucket.</li>
+     * Get Origin server address, divided into the following scenarios based on the value of Mode:
+<li>When Mode = FailoverToHost, fill in an IPV4 address, an IPV6 address, or a domain name;</li>
+<li>When Mode = FailoverToCOS, fill in the access domain name of the COS bucket;</li>
+<li>When Mode = FailoverToS3CompatibleObjectStorage, fill in the access domain name of the S3 bucket.</li> 
+     * @return Origin Origin server address, divided into the following scenarios based on the value of Mode:
+<li>When Mode = FailoverToHost, fill in an IPV4 address, an IPV6 address, or a domain name;</li>
+<li>When Mode = FailoverToCOS, fill in the access domain name of the COS bucket;</li>
+<li>When Mode = FailoverToS3CompatibleObjectStorage, fill in the access domain name of the S3 bucket.</li>
      */
     public String getOrigin() {
         return this.Origin;
     }
 
     /**
-     * Set Origin server address, divided into following scenarios based on the Mode value:
-<li>When Mode = FailoverToHost, specify an IPV4 address, an IPV6 address, or a domain name;</li>
-<li>When Mode = FailoverToCOS, specify the access domain name of the COS bucket;</li>
-<li>When Mode = FailoverToS3CompatibleObjectStorage, specify the access domain of the S3 bucket.</li>
-     * @param Origin Origin server address, divided into following scenarios based on the Mode value:
-<li>When Mode = FailoverToHost, specify an IPV4 address, an IPV6 address, or a domain name;</li>
-<li>When Mode = FailoverToCOS, specify the access domain name of the COS bucket;</li>
-<li>When Mode = FailoverToS3CompatibleObjectStorage, specify the access domain of the S3 bucket.</li>
+     * Set Origin server address, divided into the following scenarios based on the value of Mode:
+<li>When Mode = FailoverToHost, fill in an IPV4 address, an IPV6 address, or a domain name;</li>
+<li>When Mode = FailoverToCOS, fill in the access domain name of the COS bucket;</li>
+<li>When Mode = FailoverToS3CompatibleObjectStorage, fill in the access domain name of the S3 bucket.</li>
+     * @param Origin Origin server address, divided into the following scenarios based on the value of Mode:
+<li>When Mode = FailoverToHost, fill in an IPV4 address, an IPV6 address, or a domain name;</li>
+<li>When Mode = FailoverToCOS, fill in the access domain name of the COS bucket;</li>
+<li>When Mode = FailoverToS3CompatibleObjectStorage, fill in the access domain name of the S3 bucket.</li>
      */
     public void setOrigin(String Origin) {
         this.Origin = Origin;
     }
 
     /**
-     * Get Protocol configuration. This parameter is required when Mode value is FailoverToHost. Valid values:
+     * Get Origin-pull protocol configuration. This parameter is required when Mode is FailoverToHost. Valid values:
 <li>http: use HTTP protocol;</li>
-<li>https: Using HTTPS protocol;</li>
-<li>follow: protocol following.</li> 
-     * @return OriginProtocol Protocol configuration. This parameter is required when Mode value is FailoverToHost. Valid values:
+<li>https: Use HTTPS protocol;</li>
+<li>follow: follow protocol.</li> 
+     * @return OriginProtocol Origin-pull protocol configuration. This parameter is required when Mode is FailoverToHost. Valid values:
 <li>http: use HTTP protocol;</li>
-<li>https: Using HTTPS protocol;</li>
-<li>follow: protocol following.</li>
+<li>https: Use HTTPS protocol;</li>
+<li>follow: follow protocol.</li>
      */
     public String getOriginProtocol() {
         return this.OriginProtocol;
     }
 
     /**
-     * Set Protocol configuration. This parameter is required when Mode value is FailoverToHost. Valid values:
+     * Set Origin-pull protocol configuration. This parameter is required when Mode is FailoverToHost. Valid values:
 <li>http: use HTTP protocol;</li>
-<li>https: Using HTTPS protocol;</li>
-<li>follow: protocol following.</li>
-     * @param OriginProtocol Protocol configuration. This parameter is required when Mode value is FailoverToHost. Valid values:
+<li>https: Use HTTPS protocol;</li>
+<li>follow: follow protocol.</li>
+     * @param OriginProtocol Origin-pull protocol configuration. This parameter is required when Mode is FailoverToHost. Valid values:
 <li>http: use HTTP protocol;</li>
-<li>https: Using HTTPS protocol;</li>
-<li>follow: protocol following.</li>
+<li>https: Use HTTPS protocol;</li>
+<li>follow: follow protocol.</li>
      */
     public void setOriginProtocol(String OriginProtocol) {
         this.OriginProtocol = OriginProtocol;
     }
 
     /**
-     * Get HTTP origin port, value ranges from 1 to 65535. This parameter is required when the origin-pull protocol OriginProtocol is http or follow. 
-     * @return HTTPOriginPort HTTP origin port, value ranges from 1 to 65535. This parameter is required when the origin-pull protocol OriginProtocol is http or follow.
+     * Get HTTP origin-pull port. Value range: 1–65535. This parameter is required when the origin-pull protocol OriginProtocol is http or follow. 
+     * @return HTTPOriginPort HTTP origin-pull port. Value range: 1–65535. This parameter is required when the origin-pull protocol OriginProtocol is http or follow.
      */
     public Long getHTTPOriginPort() {
         return this.HTTPOriginPort;
     }
 
     /**
-     * Set HTTP origin port, value ranges from 1 to 65535. This parameter is required when the origin-pull protocol OriginProtocol is http or follow.
-     * @param HTTPOriginPort HTTP origin port, value ranges from 1 to 65535. This parameter is required when the origin-pull protocol OriginProtocol is http or follow.
+     * Set HTTP origin-pull port. Value range: 1–65535. This parameter is required when the origin-pull protocol OriginProtocol is http or follow.
+     * @param HTTPOriginPort HTTP origin-pull port. Value range: 1–65535. This parameter is required when the origin-pull protocol OriginProtocol is http or follow.
      */
     public void setHTTPOriginPort(Long HTTPOriginPort) {
         this.HTTPOriginPort = HTTPOriginPort;
     }
 
     /**
-     * Get HTTPS origin port, value ranges from 1–65535. This parameter is required when the origin-pull protocol OriginProtocol is https or follow. 
-     * @return HTTPSOriginPort HTTPS origin port, value ranges from 1–65535. This parameter is required when the origin-pull protocol OriginProtocol is https or follow.
+     * Get HTTPS origin-pull port, in the range of 1–65535. This parameter is required when OriginProtocol is https or follow. 
+     * @return HTTPSOriginPort HTTPS origin-pull port, in the range of 1–65535. This parameter is required when OriginProtocol is https or follow.
      */
     public Long getHTTPSOriginPort() {
         return this.HTTPSOriginPort;
     }
 
     /**
-     * Set HTTPS origin port, value ranges from 1–65535. This parameter is required when the origin-pull protocol OriginProtocol is https or follow.
-     * @param HTTPSOriginPort HTTPS origin port, value ranges from 1–65535. This parameter is required when the origin-pull protocol OriginProtocol is https or follow.
+     * Set HTTPS origin-pull port, in the range of 1–65535. This parameter is required when OriginProtocol is https or follow.
+     * @param HTTPSOriginPort HTTPS origin-pull port, in the range of 1–65535. This parameter is required when OriginProtocol is https or follow.
      */
     public void setHTTPSOriginPort(Long HTTPSOriginPort) {
         this.HTTPSOriginPort = HTTPSOriginPort;
     }
 
     /**
-     * Get Host Header rewrite configuration for origin-pull 
-     * @return UpstreamHostHeader Host Header rewrite configuration for origin-pull
+     * Get Host Header rewrite configuration for origin-pull. 
+     * @return UpstreamHostHeader Host Header rewrite configuration for origin-pull.
      */
     public HostHeaderParameters getUpstreamHostHeader() {
         return this.UpstreamHostHeader;
     }
 
     /**
-     * Set Host Header rewrite configuration for origin-pull
-     * @param UpstreamHostHeader Host Header rewrite configuration for origin-pull
+     * Set Host Header rewrite configuration for origin-pull.
+     * @param UpstreamHostHeader Host Header rewrite configuration for origin-pull.
      */
     public void setUpstreamHostHeader(HostHeaderParameters UpstreamHostHeader) {
         this.UpstreamHostHeader = UpstreamHostHeader;
@@ -293,42 +293,42 @@ public class SiteFailover extends AbstractModel {
     }
 
     /**
-     * Get Origin Requests parameter configuration. 
-     * @return UpstreamRequestParameters Origin Requests parameter configuration.
+     * Get Origin-pull request parameter configuration. 
+     * @return UpstreamRequestParameters Origin-pull request parameter configuration.
      */
     public UpstreamRequestParameters getUpstreamRequestParameters() {
         return this.UpstreamRequestParameters;
     }
 
     /**
-     * Set Origin Requests parameter configuration.
-     * @param UpstreamRequestParameters Origin Requests parameter configuration.
+     * Set Origin-pull request parameter configuration.
+     * @param UpstreamRequestParameters Origin-pull request parameter configuration.
      */
     public void setUpstreamRequestParameters(UpstreamRequestParameters UpstreamRequestParameters) {
         this.UpstreamRequestParameters = UpstreamRequestParameters;
     }
 
     /**
-     * Get HTTP2 origin-pull configuration parameters. 
-     * @return UpstreamHTTP2Parameters HTTP2 origin-pull configuration parameters.
+     * Get HTTP/2 origin-pull configuration parameter. 
+     * @return UpstreamHTTP2Parameters HTTP/2 origin-pull configuration parameter.
      */
     public UpstreamHTTP2Parameters getUpstreamHTTP2Parameters() {
         return this.UpstreamHTTP2Parameters;
     }
 
     /**
-     * Set HTTP2 origin-pull configuration parameters.
-     * @param UpstreamHTTP2Parameters HTTP2 origin-pull configuration parameters.
+     * Set HTTP/2 origin-pull configuration parameter.
+     * @param UpstreamHTTP2Parameters HTTP/2 origin-pull configuration parameter.
      */
     public void setUpstreamHTTP2Parameters(UpstreamHTTP2Parameters UpstreamHTTP2Parameters) {
         this.UpstreamHTTP2Parameters = UpstreamHTTP2Parameters;
     }
 
     /**
-     * Get Specify whether access to the private object storage origin server is allowed. This parameter is required when the origin server type is FailoverToCOS or FailoverToS3CompatibleObjectStorage. Valid values:
+     * Get Whether access to the private object storage origin server is allowed. This parameter is required when the origin server type Mode is FailoverToCOS or FailoverToS3CompatibleObjectStorage. Valid values:
 <li>on: Enable private authentication;</li>
 <li>off: Disable private authentication.</li> 
-     * @return PrivateAccess Specify whether access to the private object storage origin server is allowed. This parameter is required when the origin server type is FailoverToCOS or FailoverToS3CompatibleObjectStorage. Valid values:
+     * @return PrivateAccess Whether access to the private object storage origin server is allowed. This parameter is required when the origin server type Mode is FailoverToCOS or FailoverToS3CompatibleObjectStorage. Valid values:
 <li>on: Enable private authentication;</li>
 <li>off: Disable private authentication.</li>
      */
@@ -337,10 +337,10 @@ public class SiteFailover extends AbstractModel {
     }
 
     /**
-     * Set Specify whether access to the private object storage origin server is allowed. This parameter is required when the origin server type is FailoverToCOS or FailoverToS3CompatibleObjectStorage. Valid values:
+     * Set Whether access to the private object storage origin server is allowed. This parameter is required when the origin server type Mode is FailoverToCOS or FailoverToS3CompatibleObjectStorage. Valid values:
 <li>on: Enable private authentication;</li>
 <li>off: Disable private authentication.</li>
-     * @param PrivateAccess Specify whether access to the private object storage origin server is allowed. This parameter is required when the origin server type is FailoverToCOS or FailoverToS3CompatibleObjectStorage. Valid values:
+     * @param PrivateAccess Whether access to the private object storage origin server is allowed. This parameter is required when the origin server type Mode is FailoverToCOS or FailoverToS3CompatibleObjectStorage. Valid values:
 <li>on: Enable private authentication;</li>
 <li>off: Disable private authentication.</li>
      */
@@ -365,43 +365,43 @@ public class SiteFailover extends AbstractModel {
     }
 
     /**
-     * Get Redirect target URL. This parameter is required when Mode has a value of FailoverRedirectToURL. 
-     * @return RedirectURL Redirect target URL. This parameter is required when Mode has a value of FailoverRedirectToURL.
+     * Get Redirect target URL. This parameter is required when Mode is FailoverRedirectToURL. 
+     * @return RedirectURL Redirect target URL. This parameter is required when Mode is FailoverRedirectToURL.
      */
     public String getRedirectURL() {
         return this.RedirectURL;
     }
 
     /**
-     * Set Redirect target URL. This parameter is required when Mode has a value of FailoverRedirectToURL.
-     * @param RedirectURL Redirect target URL. This parameter is required when Mode has a value of FailoverRedirectToURL.
+     * Set Redirect target URL. This parameter is required when Mode is FailoverRedirectToURL.
+     * @param RedirectURL Redirect target URL. This parameter is required when Mode is FailoverRedirectToURL.
      */
     public void setRedirectURL(String RedirectURL) {
         this.RedirectURL = RedirectURL;
     }
 
     /**
-     * Get Response page ID. This parameter is required when Mode value is FailoverCustomResponsePage. 
-     * @return ResponsePageId Response page ID. This parameter is required when Mode value is FailoverCustomResponsePage.
+     * Get page ID. This parameter is required when Mode is FailoverCustomResponsePage. 
+     * @return ResponsePageId page ID. This parameter is required when Mode is FailoverCustomResponsePage.
      */
     public String getResponsePageId() {
         return this.ResponsePageId;
     }
 
     /**
-     * Set Response page ID. This parameter is required when Mode value is FailoverCustomResponsePage.
-     * @param ResponsePageId Response page ID. This parameter is required when Mode value is FailoverCustomResponsePage.
+     * Set page ID. This parameter is required when Mode is FailoverCustomResponsePage.
+     * @param ResponsePageId page ID. This parameter is required when Mode is FailoverCustomResponsePage.
      */
     public void setResponsePageId(String ResponsePageId) {
         this.ResponsePageId = ResponsePageId;
     }
 
     /**
-     * Get Response status code. This parameter is required when Mode is a value of FailoverRedirectToURL or FailoverCustomResponsePage. Valid values:
-<li>When Mode = FailoverRedirectToURL, the parameter value is one of 301, 302, 303, 307, 308.</li>
+     * Get status code. This parameter is required when Mode is FailoverRedirectToURL or FailoverCustomResponsePage. Valid values:
+<li>When Mode = FailoverRedirectToURL, the parameter value is one of 301, 302, 303, 307, 308;</li>
 <li>When Mode = FailoverCustomResponsePage, the parameter value is one of 400, 403, 404, 405, 414, 416, 451, 500, 501, 502, 503, 504.</li> 
-     * @return StatusCode Response status code. This parameter is required when Mode is a value of FailoverRedirectToURL or FailoverCustomResponsePage. Valid values:
-<li>When Mode = FailoverRedirectToURL, the parameter value is one of 301, 302, 303, 307, 308.</li>
+     * @return StatusCode status code. This parameter is required when Mode is FailoverRedirectToURL or FailoverCustomResponsePage. Valid values:
+<li>When Mode = FailoverRedirectToURL, the parameter value is one of 301, 302, 303, 307, 308;</li>
 <li>When Mode = FailoverCustomResponsePage, the parameter value is one of 400, 403, 404, 405, 414, 416, 451, 500, 501, 502, 503, 504.</li>
      */
     public Long getStatusCode() {
@@ -409,11 +409,11 @@ public class SiteFailover extends AbstractModel {
     }
 
     /**
-     * Set Response status code. This parameter is required when Mode is a value of FailoverRedirectToURL or FailoverCustomResponsePage. Valid values:
-<li>When Mode = FailoverRedirectToURL, the parameter value is one of 301, 302, 303, 307, 308.</li>
+     * Set status code. This parameter is required when Mode is FailoverRedirectToURL or FailoverCustomResponsePage. Valid values:
+<li>When Mode = FailoverRedirectToURL, the parameter value is one of 301, 302, 303, 307, 308;</li>
 <li>When Mode = FailoverCustomResponsePage, the parameter value is one of 400, 403, 404, 405, 414, 416, 451, 500, 501, 502, 503, 504.</li>
-     * @param StatusCode Response status code. This parameter is required when Mode is a value of FailoverRedirectToURL or FailoverCustomResponsePage. Valid values:
-<li>When Mode = FailoverRedirectToURL, the parameter value is one of 301, 302, 303, 307, 308.</li>
+     * @param StatusCode status code. This parameter is required when Mode is FailoverRedirectToURL or FailoverCustomResponsePage. Valid values:
+<li>When Mode = FailoverRedirectToURL, the parameter value is one of 301, 302, 303, 307, 308;</li>
 <li>When Mode = FailoverCustomResponsePage, the parameter value is one of 400, 403, 404, 405, 414, 416, 451, 500, 501, 502, 503, 504.</li>
      */
     public void setStatusCode(Long StatusCode) {

@@ -31,21 +31,21 @@ public class DescribeIPGroupReferencesRequest extends AbstractModel {
     private String ZoneId;
 
     /**
-    * <p>IP group ID.</p>
+    * <p>ID of the IP group.</p>
     */
     @SerializedName("GroupId")
     @Expose
     private Long GroupId;
 
     /**
-    * <p>Paging offset.</p><p>Default value: 0.</p>
+    * <p>Paging offset.</p><p>Default value: 0</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * <p>Paging query to refer to the number of entries of IP group configuration.</p><p>Value ranges from 1 to 200.</p><p>Default value: 20.</p>
+    * <p>Number of entries for paging query of IP group configuration.</p><p>Value range: [1, 200]</p><p>Default value: 20</p>
     */
     @SerializedName("Limit")
     @Expose
@@ -68,48 +68,48 @@ public class DescribeIPGroupReferencesRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>IP group ID.</p> 
-     * @return GroupId <p>IP group ID.</p>
+     * Get <p>ID of the IP group.</p> 
+     * @return GroupId <p>ID of the IP group.</p>
      */
     public Long getGroupId() {
         return this.GroupId;
     }
 
     /**
-     * Set <p>IP group ID.</p>
-     * @param GroupId <p>IP group ID.</p>
+     * Set <p>ID of the IP group.</p>
+     * @param GroupId <p>ID of the IP group.</p>
      */
     public void setGroupId(Long GroupId) {
         this.GroupId = GroupId;
     }
 
     /**
-     * Get <p>Paging offset.</p><p>Default value: 0.</p> 
-     * @return Offset <p>Paging offset.</p><p>Default value: 0.</p>
+     * Get <p>Paging offset.</p><p>Default value: 0</p> 
+     * @return Offset <p>Paging offset.</p><p>Default value: 0</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set <p>Paging offset.</p><p>Default value: 0.</p>
-     * @param Offset <p>Paging offset.</p><p>Default value: 0.</p>
+     * Set <p>Paging offset.</p><p>Default value: 0</p>
+     * @param Offset <p>Paging offset.</p><p>Default value: 0</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get <p>Paging query to refer to the number of entries of IP group configuration.</p><p>Value ranges from 1 to 200.</p><p>Default value: 20.</p> 
-     * @return Limit <p>Paging query to refer to the number of entries of IP group configuration.</p><p>Value ranges from 1 to 200.</p><p>Default value: 20.</p>
+     * Get <p>Number of entries for paging query of IP group configuration.</p><p>Value range: [1, 200]</p><p>Default value: 20</p> 
+     * @return Limit <p>Number of entries for paging query of IP group configuration.</p><p>Value range: [1, 200]</p><p>Default value: 20</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set <p>Paging query to refer to the number of entries of IP group configuration.</p><p>Value ranges from 1 to 200.</p><p>Default value: 20.</p>
-     * @param Limit <p>Paging query to refer to the number of entries of IP group configuration.</p><p>Value ranges from 1 to 200.</p><p>Default value: 20.</p>
+     * Set <p>Number of entries for paging query of IP group configuration.</p><p>Value range: [1, 200]</p><p>Default value: 20</p>
+     * @param Limit <p>Number of entries for paging query of IP group configuration.</p><p>Value range: [1, 200]</p><p>Default value: 20</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

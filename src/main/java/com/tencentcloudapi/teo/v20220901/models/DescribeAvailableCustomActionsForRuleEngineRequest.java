@@ -24,138 +24,138 @@ import java.util.HashMap;
 public class DescribeAvailableCustomActionsForRuleEngineRequest extends AbstractModel {
 
     /**
-    * <p>Zone ID.</p>
+    * <p>Site ID.</p>
     */
     @SerializedName("ZoneId")
     @Expose
     private String ZoneId;
 
     /**
-    * <p>Filter criteria. Multiple conditions have an AND relationship. The maximum number of Filters.Values is 20. If this parameter is left empty, return all available rule engine custom configurations under the current site. Detailed filter criteria:</p><li>action-id: Filter by the unique identification ID of the custom configuration.</li><li>name: Filter by the name of the custom configuration.</a></li>Fuzzy query only supports filtering fields named <code>name</code>.<p></p>
+    * <p>Filter criteria. Multiple criteria are in an AND relationship. The maximum number of Filters.Values is 20. If this parameter is left empty, all available custom configurations of the rule engine under the current site are returned. The detailed filter criteria are as follows:</p><li>action-id: filter by the unique identification ID of the custom configuration;</li><li>name: filter by the name of the custom configuration.</li>For fuzzy query, only filtering by the field name <code>name</code> is supported.<p></p>
     */
     @SerializedName("Filters")
     @Expose
     private AdvancedFilter [] Filters;
 
     /**
-    * <p>Paginated query limit.</p><p>Value ranges from 0 to 1000.</p><p>Default value: 20.</p>
+    * <p>Number limit of paginated query.</p><p>Value range: [0, 1000]</p><p>Default value: 20</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * <p>Paging offset.</p><p>Default value: 0.</p>
+    * <p>Paging offset.</p><p>Default value: 0</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * <p>Sorting field. Valid values:</p><li>action-id: Sort by custom configuration unique identification ID.</li><li>create-time: Sort by custom configuration creation time.</li>Default value: <code>action-id</code>.<p></p>
+    * <p>Sorting field. Valid values:</p><li>action-id: Sort by custom configuration unique identification ID.</li><li>create-time: Sort by configuration creation time.</li>Default value: <code>action-id</code>.<p></p>
     */
     @SerializedName("SortBy")
     @Expose
     private String SortBy;
 
     /**
-    * <p>Sorting method. Valid values:</p><li>asc: ascending sort;</li><li>desc: sort in descending order.</li>Default value: desc.<p></p>
+    * <p>Sorting method. Valid values:</p><li>asc: ascending sort;</li><li>desc: descending sort.</li>Default value: desc.<p></p>
     */
     @SerializedName("SortOrder")
     @Expose
     private String SortOrder;
 
     /**
-     * Get <p>Zone ID.</p> 
-     * @return ZoneId <p>Zone ID.</p>
+     * Get <p>Site ID.</p> 
+     * @return ZoneId <p>Site ID.</p>
      */
     public String getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set <p>Zone ID.</p>
-     * @param ZoneId <p>Zone ID.</p>
+     * Set <p>Site ID.</p>
+     * @param ZoneId <p>Site ID.</p>
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get <p>Filter criteria. Multiple conditions have an AND relationship. The maximum number of Filters.Values is 20. If this parameter is left empty, return all available rule engine custom configurations under the current site. Detailed filter criteria:</p><li>action-id: Filter by the unique identification ID of the custom configuration.</li><li>name: Filter by the name of the custom configuration.</a></li>Fuzzy query only supports filtering fields named <code>name</code>.<p></p> 
-     * @return Filters <p>Filter criteria. Multiple conditions have an AND relationship. The maximum number of Filters.Values is 20. If this parameter is left empty, return all available rule engine custom configurations under the current site. Detailed filter criteria:</p><li>action-id: Filter by the unique identification ID of the custom configuration.</li><li>name: Filter by the name of the custom configuration.</a></li>Fuzzy query only supports filtering fields named <code>name</code>.<p></p>
+     * Get <p>Filter criteria. Multiple criteria are in an AND relationship. The maximum number of Filters.Values is 20. If this parameter is left empty, all available custom configurations of the rule engine under the current site are returned. The detailed filter criteria are as follows:</p><li>action-id: filter by the unique identification ID of the custom configuration;</li><li>name: filter by the name of the custom configuration.</li>For fuzzy query, only filtering by the field name <code>name</code> is supported.<p></p> 
+     * @return Filters <p>Filter criteria. Multiple criteria are in an AND relationship. The maximum number of Filters.Values is 20. If this parameter is left empty, all available custom configurations of the rule engine under the current site are returned. The detailed filter criteria are as follows:</p><li>action-id: filter by the unique identification ID of the custom configuration;</li><li>name: filter by the name of the custom configuration.</li>For fuzzy query, only filtering by the field name <code>name</code> is supported.<p></p>
      */
     public AdvancedFilter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set <p>Filter criteria. Multiple conditions have an AND relationship. The maximum number of Filters.Values is 20. If this parameter is left empty, return all available rule engine custom configurations under the current site. Detailed filter criteria:</p><li>action-id: Filter by the unique identification ID of the custom configuration.</li><li>name: Filter by the name of the custom configuration.</a></li>Fuzzy query only supports filtering fields named <code>name</code>.<p></p>
-     * @param Filters <p>Filter criteria. Multiple conditions have an AND relationship. The maximum number of Filters.Values is 20. If this parameter is left empty, return all available rule engine custom configurations under the current site. Detailed filter criteria:</p><li>action-id: Filter by the unique identification ID of the custom configuration.</li><li>name: Filter by the name of the custom configuration.</a></li>Fuzzy query only supports filtering fields named <code>name</code>.<p></p>
+     * Set <p>Filter criteria. Multiple criteria are in an AND relationship. The maximum number of Filters.Values is 20. If this parameter is left empty, all available custom configurations of the rule engine under the current site are returned. The detailed filter criteria are as follows:</p><li>action-id: filter by the unique identification ID of the custom configuration;</li><li>name: filter by the name of the custom configuration.</li>For fuzzy query, only filtering by the field name <code>name</code> is supported.<p></p>
+     * @param Filters <p>Filter criteria. Multiple criteria are in an AND relationship. The maximum number of Filters.Values is 20. If this parameter is left empty, all available custom configurations of the rule engine under the current site are returned. The detailed filter criteria are as follows:</p><li>action-id: filter by the unique identification ID of the custom configuration;</li><li>name: filter by the name of the custom configuration.</li>For fuzzy query, only filtering by the field name <code>name</code> is supported.<p></p>
      */
     public void setFilters(AdvancedFilter [] Filters) {
         this.Filters = Filters;
     }
 
     /**
-     * Get <p>Paginated query limit.</p><p>Value ranges from 0 to 1000.</p><p>Default value: 20.</p> 
-     * @return Limit <p>Paginated query limit.</p><p>Value ranges from 0 to 1000.</p><p>Default value: 20.</p>
+     * Get <p>Number limit of paginated query.</p><p>Value range: [0, 1000]</p><p>Default value: 20</p> 
+     * @return Limit <p>Number limit of paginated query.</p><p>Value range: [0, 1000]</p><p>Default value: 20</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set <p>Paginated query limit.</p><p>Value ranges from 0 to 1000.</p><p>Default value: 20.</p>
-     * @param Limit <p>Paginated query limit.</p><p>Value ranges from 0 to 1000.</p><p>Default value: 20.</p>
+     * Set <p>Number limit of paginated query.</p><p>Value range: [0, 1000]</p><p>Default value: 20</p>
+     * @param Limit <p>Number limit of paginated query.</p><p>Value range: [0, 1000]</p><p>Default value: 20</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get <p>Paging offset.</p><p>Default value: 0.</p> 
-     * @return Offset <p>Paging offset.</p><p>Default value: 0.</p>
+     * Get <p>Paging offset.</p><p>Default value: 0</p> 
+     * @return Offset <p>Paging offset.</p><p>Default value: 0</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set <p>Paging offset.</p><p>Default value: 0.</p>
-     * @param Offset <p>Paging offset.</p><p>Default value: 0.</p>
+     * Set <p>Paging offset.</p><p>Default value: 0</p>
+     * @param Offset <p>Paging offset.</p><p>Default value: 0</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get <p>Sorting field. Valid values:</p><li>action-id: Sort by custom configuration unique identification ID.</li><li>create-time: Sort by custom configuration creation time.</li>Default value: <code>action-id</code>.<p></p> 
-     * @return SortBy <p>Sorting field. Valid values:</p><li>action-id: Sort by custom configuration unique identification ID.</li><li>create-time: Sort by custom configuration creation time.</li>Default value: <code>action-id</code>.<p></p>
+     * Get <p>Sorting field. Valid values:</p><li>action-id: Sort by custom configuration unique identification ID.</li><li>create-time: Sort by configuration creation time.</li>Default value: <code>action-id</code>.<p></p> 
+     * @return SortBy <p>Sorting field. Valid values:</p><li>action-id: Sort by custom configuration unique identification ID.</li><li>create-time: Sort by configuration creation time.</li>Default value: <code>action-id</code>.<p></p>
      */
     public String getSortBy() {
         return this.SortBy;
     }
 
     /**
-     * Set <p>Sorting field. Valid values:</p><li>action-id: Sort by custom configuration unique identification ID.</li><li>create-time: Sort by custom configuration creation time.</li>Default value: <code>action-id</code>.<p></p>
-     * @param SortBy <p>Sorting field. Valid values:</p><li>action-id: Sort by custom configuration unique identification ID.</li><li>create-time: Sort by custom configuration creation time.</li>Default value: <code>action-id</code>.<p></p>
+     * Set <p>Sorting field. Valid values:</p><li>action-id: Sort by custom configuration unique identification ID.</li><li>create-time: Sort by configuration creation time.</li>Default value: <code>action-id</code>.<p></p>
+     * @param SortBy <p>Sorting field. Valid values:</p><li>action-id: Sort by custom configuration unique identification ID.</li><li>create-time: Sort by configuration creation time.</li>Default value: <code>action-id</code>.<p></p>
      */
     public void setSortBy(String SortBy) {
         this.SortBy = SortBy;
     }
 
     /**
-     * Get <p>Sorting method. Valid values:</p><li>asc: ascending sort;</li><li>desc: sort in descending order.</li>Default value: desc.<p></p> 
-     * @return SortOrder <p>Sorting method. Valid values:</p><li>asc: ascending sort;</li><li>desc: sort in descending order.</li>Default value: desc.<p></p>
+     * Get <p>Sorting method. Valid values:</p><li>asc: ascending sort;</li><li>desc: descending sort.</li>Default value: desc.<p></p> 
+     * @return SortOrder <p>Sorting method. Valid values:</p><li>asc: ascending sort;</li><li>desc: descending sort.</li>Default value: desc.<p></p>
      */
     public String getSortOrder() {
         return this.SortOrder;
     }
 
     /**
-     * Set <p>Sorting method. Valid values:</p><li>asc: ascending sort;</li><li>desc: sort in descending order.</li>Default value: desc.<p></p>
-     * @param SortOrder <p>Sorting method. Valid values:</p><li>asc: ascending sort;</li><li>desc: sort in descending order.</li>Default value: desc.<p></p>
+     * Set <p>Sorting method. Valid values:</p><li>asc: ascending sort;</li><li>desc: descending sort.</li>Default value: desc.<p></p>
+     * @param SortOrder <p>Sorting method. Valid values:</p><li>asc: ascending sort;</li><li>desc: descending sort.</li>Default value: desc.<p></p>
      */
     public void setSortOrder(String SortOrder) {
         this.SortOrder = SortOrder;

@@ -31,7 +31,7 @@ public class LogAnalysisDownloadTask extends AbstractModel {
     private String TaskId;
 
     /**
-    * <p>Site ID.</p>
+    * <p>Zone ID.</p>
     */
     @SerializedName("ZoneId")
     @Expose
@@ -45,7 +45,7 @@ public class LogAnalysisDownloadTask extends AbstractModel {
     private String Area;
 
     /**
-    * <p>Start time, example value: 2020-04-29T00:00:00Z.</p>
+    * <p>Start time. Example value: 2020-04-29T00:00:00Z.</p>
     */
     @SerializedName("StartTime")
     @Expose
@@ -59,56 +59,56 @@ public class LogAnalysisDownloadTask extends AbstractModel {
     private String EndTime;
 
     /**
-    * <p>Log type. Valid values: <ul><li> l7-access-logs: Layer 7 Access Logs;</li><li>web-attack: Managed rule log.</li></ul></p>
+    * <p>Log type. Valid values: <ul><li> l7-access-logs: L7 access log;</li><li>web-attack: managed rule log.</li></ul></p>
     */
     @SerializedName("LogType")
     @Expose
     private String LogType;
 
     /**
-    * <p><a href="https://www.tencentcloud.com/document/product/1552/124662?from_cn_redirect=1">Log match condition</a>. Maximum length 12KB.</p>
+    * <p><a href="https://www.tencentcloud.com/document/product/1552/124662?from_cn_redirect=1">Log match condition</a>, with a maximum length of 12 KB.</p>
     */
     @SerializedName("Condition")
     @Expose
     private String Condition;
 
     /**
-    * <p>File format, valid values:</p><ul><li>csv.</li></ul>
+    * <p>File format. Valid values:</p><ul><li>csv.</li></ul>
     */
     @SerializedName("Format")
     @Expose
     private String Format;
 
     /**
-    * <p>Whether raw logs are returned in time sequence. Valid values: <ul><li>asc: ascending order;</li><li>desc: descending order.</li></ul></p>
+    * <p>Whether raw logs are returned in time sequence. Valid values: <ul><li>asc: in ascending order;</li><li>desc: in descending order.</li></ul></p>
     */
     @SerializedName("Sort")
     @Expose
     private String Sort;
 
     /**
-    * <p>Task status, valid values: <ul><li>loading: being processed, waiting to generate download link;</li><li> failed: processing failure, current task cannot be downloaded;</li><li>completed: packaging completed, ready for download.</li></ul></p>
+    * <p>Task status. Valid values: <ul><li>loading: processing, waiting to generate a download link;</li><li> failed: processing failure, the current task cannot be downloaded;</li><li>completed: packaged and ready for download.</li></ul></p>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * <p>Task creation time. After successful task creation, the retention period is 3 days.</p>
+    * <p>Task creation time. It will be retained for 3 days after successful task creation.</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * <p>Download link, only returned when Status = completed.</p>
+    * <p>Download URL. It is returned only when Status = completed.</p>
     */
     @SerializedName("Url")
     @Expose
     private String Url;
 
     /**
-    * <p>Task expiration time. After expiry, the download address will be unavailable. Please obtain a new download address through this API.</p>
+    * <p>Task expiration time for download. The download address will be unavailable after expiry. Obtain a new download address through this API.</p>
     */
     @SerializedName("ExpireTime")
     @Expose
@@ -131,16 +131,16 @@ public class LogAnalysisDownloadTask extends AbstractModel {
     }
 
     /**
-     * Get <p>Site ID.</p> 
-     * @return ZoneId <p>Site ID.</p>
+     * Get <p>Zone ID.</p> 
+     * @return ZoneId <p>Zone ID.</p>
      */
     public String getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set <p>Site ID.</p>
-     * @param ZoneId <p>Site ID.</p>
+     * Set <p>Zone ID.</p>
+     * @param ZoneId <p>Zone ID.</p>
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;
@@ -163,16 +163,16 @@ public class LogAnalysisDownloadTask extends AbstractModel {
     }
 
     /**
-     * Get <p>Start time, example value: 2020-04-29T00:00:00Z.</p> 
-     * @return StartTime <p>Start time, example value: 2020-04-29T00:00:00Z.</p>
+     * Get <p>Start time. Example value: 2020-04-29T00:00:00Z.</p> 
+     * @return StartTime <p>Start time. Example value: 2020-04-29T00:00:00Z.</p>
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set <p>Start time, example value: 2020-04-29T00:00:00Z.</p>
-     * @param StartTime <p>Start time, example value: 2020-04-29T00:00:00Z.</p>
+     * Set <p>Start time. Example value: 2020-04-29T00:00:00Z.</p>
+     * @param StartTime <p>Start time. Example value: 2020-04-29T00:00:00Z.</p>
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
@@ -195,128 +195,128 @@ public class LogAnalysisDownloadTask extends AbstractModel {
     }
 
     /**
-     * Get <p>Log type. Valid values: <ul><li> l7-access-logs: Layer 7 Access Logs;</li><li>web-attack: Managed rule log.</li></ul></p> 
-     * @return LogType <p>Log type. Valid values: <ul><li> l7-access-logs: Layer 7 Access Logs;</li><li>web-attack: Managed rule log.</li></ul></p>
+     * Get <p>Log type. Valid values: <ul><li> l7-access-logs: L7 access log;</li><li>web-attack: managed rule log.</li></ul></p> 
+     * @return LogType <p>Log type. Valid values: <ul><li> l7-access-logs: L7 access log;</li><li>web-attack: managed rule log.</li></ul></p>
      */
     public String getLogType() {
         return this.LogType;
     }
 
     /**
-     * Set <p>Log type. Valid values: <ul><li> l7-access-logs: Layer 7 Access Logs;</li><li>web-attack: Managed rule log.</li></ul></p>
-     * @param LogType <p>Log type. Valid values: <ul><li> l7-access-logs: Layer 7 Access Logs;</li><li>web-attack: Managed rule log.</li></ul></p>
+     * Set <p>Log type. Valid values: <ul><li> l7-access-logs: L7 access log;</li><li>web-attack: managed rule log.</li></ul></p>
+     * @param LogType <p>Log type. Valid values: <ul><li> l7-access-logs: L7 access log;</li><li>web-attack: managed rule log.</li></ul></p>
      */
     public void setLogType(String LogType) {
         this.LogType = LogType;
     }
 
     /**
-     * Get <p><a href="https://www.tencentcloud.com/document/product/1552/124662?from_cn_redirect=1">Log match condition</a>. Maximum length 12KB.</p> 
-     * @return Condition <p><a href="https://www.tencentcloud.com/document/product/1552/124662?from_cn_redirect=1">Log match condition</a>. Maximum length 12KB.</p>
+     * Get <p><a href="https://www.tencentcloud.com/document/product/1552/124662?from_cn_redirect=1">Log match condition</a>, with a maximum length of 12 KB.</p> 
+     * @return Condition <p><a href="https://www.tencentcloud.com/document/product/1552/124662?from_cn_redirect=1">Log match condition</a>, with a maximum length of 12 KB.</p>
      */
     public String getCondition() {
         return this.Condition;
     }
 
     /**
-     * Set <p><a href="https://www.tencentcloud.com/document/product/1552/124662?from_cn_redirect=1">Log match condition</a>. Maximum length 12KB.</p>
-     * @param Condition <p><a href="https://www.tencentcloud.com/document/product/1552/124662?from_cn_redirect=1">Log match condition</a>. Maximum length 12KB.</p>
+     * Set <p><a href="https://www.tencentcloud.com/document/product/1552/124662?from_cn_redirect=1">Log match condition</a>, with a maximum length of 12 KB.</p>
+     * @param Condition <p><a href="https://www.tencentcloud.com/document/product/1552/124662?from_cn_redirect=1">Log match condition</a>, with a maximum length of 12 KB.</p>
      */
     public void setCondition(String Condition) {
         this.Condition = Condition;
     }
 
     /**
-     * Get <p>File format, valid values:</p><ul><li>csv.</li></ul> 
-     * @return Format <p>File format, valid values:</p><ul><li>csv.</li></ul>
+     * Get <p>File format. Valid values:</p><ul><li>csv.</li></ul> 
+     * @return Format <p>File format. Valid values:</p><ul><li>csv.</li></ul>
      */
     public String getFormat() {
         return this.Format;
     }
 
     /**
-     * Set <p>File format, valid values:</p><ul><li>csv.</li></ul>
-     * @param Format <p>File format, valid values:</p><ul><li>csv.</li></ul>
+     * Set <p>File format. Valid values:</p><ul><li>csv.</li></ul>
+     * @param Format <p>File format. Valid values:</p><ul><li>csv.</li></ul>
      */
     public void setFormat(String Format) {
         this.Format = Format;
     }
 
     /**
-     * Get <p>Whether raw logs are returned in time sequence. Valid values: <ul><li>asc: ascending order;</li><li>desc: descending order.</li></ul></p> 
-     * @return Sort <p>Whether raw logs are returned in time sequence. Valid values: <ul><li>asc: ascending order;</li><li>desc: descending order.</li></ul></p>
+     * Get <p>Whether raw logs are returned in time sequence. Valid values: <ul><li>asc: in ascending order;</li><li>desc: in descending order.</li></ul></p> 
+     * @return Sort <p>Whether raw logs are returned in time sequence. Valid values: <ul><li>asc: in ascending order;</li><li>desc: in descending order.</li></ul></p>
      */
     public String getSort() {
         return this.Sort;
     }
 
     /**
-     * Set <p>Whether raw logs are returned in time sequence. Valid values: <ul><li>asc: ascending order;</li><li>desc: descending order.</li></ul></p>
-     * @param Sort <p>Whether raw logs are returned in time sequence. Valid values: <ul><li>asc: ascending order;</li><li>desc: descending order.</li></ul></p>
+     * Set <p>Whether raw logs are returned in time sequence. Valid values: <ul><li>asc: in ascending order;</li><li>desc: in descending order.</li></ul></p>
+     * @param Sort <p>Whether raw logs are returned in time sequence. Valid values: <ul><li>asc: in ascending order;</li><li>desc: in descending order.</li></ul></p>
      */
     public void setSort(String Sort) {
         this.Sort = Sort;
     }
 
     /**
-     * Get <p>Task status, valid values: <ul><li>loading: being processed, waiting to generate download link;</li><li> failed: processing failure, current task cannot be downloaded;</li><li>completed: packaging completed, ready for download.</li></ul></p> 
-     * @return Status <p>Task status, valid values: <ul><li>loading: being processed, waiting to generate download link;</li><li> failed: processing failure, current task cannot be downloaded;</li><li>completed: packaging completed, ready for download.</li></ul></p>
+     * Get <p>Task status. Valid values: <ul><li>loading: processing, waiting to generate a download link;</li><li> failed: processing failure, the current task cannot be downloaded;</li><li>completed: packaged and ready for download.</li></ul></p> 
+     * @return Status <p>Task status. Valid values: <ul><li>loading: processing, waiting to generate a download link;</li><li> failed: processing failure, the current task cannot be downloaded;</li><li>completed: packaged and ready for download.</li></ul></p>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set <p>Task status, valid values: <ul><li>loading: being processed, waiting to generate download link;</li><li> failed: processing failure, current task cannot be downloaded;</li><li>completed: packaging completed, ready for download.</li></ul></p>
-     * @param Status <p>Task status, valid values: <ul><li>loading: being processed, waiting to generate download link;</li><li> failed: processing failure, current task cannot be downloaded;</li><li>completed: packaging completed, ready for download.</li></ul></p>
+     * Set <p>Task status. Valid values: <ul><li>loading: processing, waiting to generate a download link;</li><li> failed: processing failure, the current task cannot be downloaded;</li><li>completed: packaged and ready for download.</li></ul></p>
+     * @param Status <p>Task status. Valid values: <ul><li>loading: processing, waiting to generate a download link;</li><li> failed: processing failure, the current task cannot be downloaded;</li><li>completed: packaged and ready for download.</li></ul></p>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get <p>Task creation time. After successful task creation, the retention period is 3 days.</p> 
-     * @return CreateTime <p>Task creation time. After successful task creation, the retention period is 3 days.</p>
+     * Get <p>Task creation time. It will be retained for 3 days after successful task creation.</p> 
+     * @return CreateTime <p>Task creation time. It will be retained for 3 days after successful task creation.</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set <p>Task creation time. After successful task creation, the retention period is 3 days.</p>
-     * @param CreateTime <p>Task creation time. After successful task creation, the retention period is 3 days.</p>
+     * Set <p>Task creation time. It will be retained for 3 days after successful task creation.</p>
+     * @param CreateTime <p>Task creation time. It will be retained for 3 days after successful task creation.</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get <p>Download link, only returned when Status = completed.</p> 
-     * @return Url <p>Download link, only returned when Status = completed.</p>
+     * Get <p>Download URL. It is returned only when Status = completed.</p> 
+     * @return Url <p>Download URL. It is returned only when Status = completed.</p>
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * Set <p>Download link, only returned when Status = completed.</p>
-     * @param Url <p>Download link, only returned when Status = completed.</p>
+     * Set <p>Download URL. It is returned only when Status = completed.</p>
+     * @param Url <p>Download URL. It is returned only when Status = completed.</p>
      */
     public void setUrl(String Url) {
         this.Url = Url;
     }
 
     /**
-     * Get <p>Task expiration time. After expiry, the download address will be unavailable. Please obtain a new download address through this API.</p> 
-     * @return ExpireTime <p>Task expiration time. After expiry, the download address will be unavailable. Please obtain a new download address through this API.</p>
+     * Get <p>Task expiration time for download. The download address will be unavailable after expiry. Obtain a new download address through this API.</p> 
+     * @return ExpireTime <p>Task expiration time for download. The download address will be unavailable after expiry. Obtain a new download address through this API.</p>
      */
     public String getExpireTime() {
         return this.ExpireTime;
     }
 
     /**
-     * Set <p>Task expiration time. After expiry, the download address will be unavailable. Please obtain a new download address through this API.</p>
-     * @param ExpireTime <p>Task expiration time. After expiry, the download address will be unavailable. Please obtain a new download address through this API.</p>
+     * Set <p>Task expiration time for download. The download address will be unavailable after expiry. Obtain a new download address through this API.</p>
+     * @param ExpireTime <p>Task expiration time for download. The download address will be unavailable after expiry. Obtain a new download address through this API.</p>
      */
     public void setExpireTime(String ExpireTime) {
         this.ExpireTime = ExpireTime;

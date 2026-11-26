@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeApplicationProxiesResponse extends AbstractModel {
 
     /**
-    * List of application proxies.
+    * Application proxy list.
     */
     @SerializedName("ApplicationProxies")
     @Expose
     private ApplicationProxy [] ApplicationProxies;
 
     /**
-    * Total number of records.
+    * Total number of records
     */
     @SerializedName("TotalCount")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeApplicationProxiesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get List of application proxies. 
-     * @return ApplicationProxies List of application proxies.
+     * Get Application proxy list. 
+     * @return ApplicationProxies Application proxy list.
      */
     public ApplicationProxy [] getApplicationProxies() {
         return this.ApplicationProxies;
     }
 
     /**
-     * Set List of application proxies.
-     * @param ApplicationProxies List of application proxies.
+     * Set Application proxy list.
+     * @param ApplicationProxies Application proxy list.
      */
     public void setApplicationProxies(ApplicationProxy [] ApplicationProxies) {
         this.ApplicationProxies = ApplicationProxies;
     }
 
     /**
-     * Get Total number of records. 
-     * @return TotalCount Total number of records.
+     * Get Total number of records 
+     * @return TotalCount Total number of records
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Total number of records.
-     * @param TotalCount Total number of records.
+     * Set Total number of records
+     * @param TotalCount Total number of records
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

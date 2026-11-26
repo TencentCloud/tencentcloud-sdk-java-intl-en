@@ -24,444 +24,414 @@ import java.util.HashMap;
 public class ApplicationProject extends AbstractModel {
 
     /**
-    * Project ID.Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Project ID.</p>
     */
     @SerializedName("ProjectId")
     @Expose
     private String ProjectId;
 
     /**
-    * Project name.Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Project name.</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * Project description.Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Project description.</p>
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * Concurrency type required for project operation.S1: concurrency for rendering small cloud applications.M1: concurrency for rendering medium cloud applications.L1: concurrency for rendering large cloud applications.L2: concurrency for rendering large cloud applications.XL2: concurrency for rendering extra large cloud applications.MM1_HD: concurrency for performance-based cloud ARM (HD).MM1_FHD: concurrency for performance-based cloud ARM (FHD).Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Concurrency type required for project operation.<br>S1: Small-scale cloud application rendering concurrency<br>M1: Medium cloud application rendering concurrency<br>L1: Large cloud application rendering concurrency<br>L2: Large cloud application rendering concurrency<br>XL2: Ultra-large cloud application rendering concurrency<br>MM1_HD: Performance Cloud ARM concurrency - high-definition<br>MM1_FHD: Performance Cloud ARM concurrency - ultra-high-definition</p>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * Cloud application ID.Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Cloud Application ID</p>
     */
     @SerializedName("ApplicationId")
     @Expose
     private String ApplicationId;
 
     /**
-    * Pre-launch.Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Pre-launch</p>
     */
     @SerializedName("IsPreload")
     @Expose
     private Boolean IsPreload;
 
     /**
-    * Number of concurrencies already configured.Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Configured concurrency</p>
     */
     @SerializedName("Amount")
     @Expose
     private Long Amount;
 
     /**
-    * Number of concurrencies in use.Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Number of concurrencies in use</p>
     */
     @SerializedName("Using")
     @Expose
     private Long Using;
 
     /**
-    * Application status. NoConcurrent: no concurrency pack configured; Online: activated. Cloud application status: applicationCreating: creating; applicationCreateFail: creation failed; applicationDeleting: deleting; applicationNoConfigured: startup parameters not configured.Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Application status: NoConcurrent - no concurrency package configured, Online - launched, other statuses are cloud application status: applicationCreating - creating, applicationCreateFail - creation failed, applicationDeleting - deleting, applicationNoConfigured - startup parameter not configured</p>
     */
     @SerializedName("ApplicationStatus")
     @Expose
     private String ApplicationStatus;
 
     /**
-    * Application startup parameters.
-
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Application startup parameter</p>
     */
     @SerializedName("ApplicationParams")
     @Expose
     private String ApplicationParams;
 
     /**
-    * Creation time.
-
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Creation time.</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * Application name.
-
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Application name</p>
     */
     @SerializedName("ApplicationName")
     @Expose
     private String ApplicationName;
 
     /**
-    * Resolution, in the format of widthxheight, such as 1920x1080.Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Resolution, format as "width x height", for example 1920x1080</p>
     */
     @SerializedName("Resolution")
     @Expose
     private String Resolution;
 
     /**
-    * Project type.SHARED: shared by all applications.EXCLUSIVE (default value): dedicated for one application.Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Project type.<br>SHARED: Shared by all applications<br>EXCLUSIVE (default value): Dedicated for one application</p>
     */
     @SerializedName("ProjectType")
     @Expose
     private String ProjectType;
 
     /**
-    * Purpose.EXPERIENCE: Experience.Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Purpose.<br>EXPERIENCE: Experience</p>
     */
     @SerializedName("Purpose")
     @Expose
     private String Purpose;
 
     /**
-    * Application distribution area. Standard areas are as follows. ap-chinese-mainland: Chinese mainland; na-north-america: North America; eu-frankfurt: Frankfurt; ap-mumbai: Mumbai; ap-tokyo: Tokyo; ap-seoul: Seoul; ap-singapore: Singapore; ap-bangkok: Bangkok; ap-hongkong: Hong Kong (China). Fusion areas are as follows. me-middle-east-fusion: Middle East; na-north-america-fusion: North America; sa-south-america-fusion: South America; ap-tokyo-fusion: Tokyo; ap-seoul-fusion: Seoul; eu-frankfurt-fusion: Frankfurt; ap-singapore-fusion: Singapore; ap-hongkong-fusion: Hong Kong (China).Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Application distribution area (Standard zone: ap-chinese-mainland: Chinese mainland, na-north-america: North America, eu-frankfurt: Frankfurt, ap-mumbai: Mumbai, ap-tokyo: Tokyo, ap-seoul: Seoul, ap-singapore: Singapore, ap-bangkok: Bangkok, ap-hongkong: Hong Kong (China). Fusion region: me-middle-east-fusion: Middle East, na-north-america-fusion: North America, sa-south-america-fusion: South America, ap-tokyo-fusion: Tokyo, ap-seoul-fusion: Seoul, eu-frankfurt-fusion: Frankfurt, ap-singapore-fusion: Singapore, ap-hongkong-fusion: Hong Kong (China))</p>
     */
     @SerializedName("ApplicationRegions")
     @Expose
     private String [] ApplicationRegions;
 
     /**
-    * Concurrency area. Standard areas are as follows. ap-chinese-mainland: Chinese mainland; na-north-america: North America; eu-frankfurt: Frankfurt; ap-mumbai: Mumbai; ap-tokyo: Tokyo; ap-seoul: Seoul; ap-singapore: Singapore; ap-bangkok: Bangkok; ap-hongkong: Hong Kong (China). Fusion areas are as follows. me-middle-east-fusion: Middle East; na-north-america-fusion: North America; sa-south-america-fusion: South America; ap-tokyo-fusion: Tokyo; ap-seoul-fusion: Seoul; eu-frankfurt-fusion: Frankfurt; ap-singapore-fusion: Singapore; ap-hongkong-fusion: Hong Kong (China).Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Concurrent region (Standard zone: ap-chinese-mainland: Chinese mainland, na-north-america: North America, eu-frankfurt: Frankfurt, ap-mumbai: Mumbai, ap-tokyo: Tokyo, ap-seoul: Seoul, ap-singapore: Singapore, ap-bangkok: Bangkok, ap-hongkong: Hong Kong (China), Fusion region: me-middle-east-fusion: Middle East, na-north-america-fusion: North America, sa-south-america-fusion: South America, ap-tokyo-fusion: Tokyo, ap-seoul-fusion: Seoul, eu-frankfurt-fusion: Frankfurt, ap-singapore-fusion: Singapore, ap-hongkong-fusion: Hong Kong (China))</p>
     */
     @SerializedName("ConcurrentRegions")
     @Expose
     private String [] ConcurrentRegions;
 
     /**
-    * Project category.DESKTOP: desktop (default value).MOBILE: mobile.Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Project category.<br>DESKTOP: On PC, default value<br>MOBILE: Mobile terminal</p>
     */
     @SerializedName("ProjectCategory")
     @Expose
     private String ProjectCategory;
 
     /**
-     * Get Project ID.Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ProjectId Project ID.Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Project ID.</p> 
+     * @return ProjectId <p>Project ID.</p>
      */
     public String getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set Project ID.Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ProjectId Project ID.Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Project ID.</p>
+     * @param ProjectId <p>Project ID.</p>
      */
     public void setProjectId(String ProjectId) {
         this.ProjectId = ProjectId;
     }
 
     /**
-     * Get Project name.Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Name Project name.Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Project name.</p> 
+     * @return Name <p>Project name.</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Project name.Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Name Project name.Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Project name.</p>
+     * @param Name <p>Project name.</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Project description.Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Description Project description.Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Project description.</p> 
+     * @return Description <p>Project description.</p>
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set Project description.Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Description Project description.Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Project description.</p>
+     * @param Description <p>Project description.</p>
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get Concurrency type required for project operation.S1: concurrency for rendering small cloud applications.M1: concurrency for rendering medium cloud applications.L1: concurrency for rendering large cloud applications.L2: concurrency for rendering large cloud applications.XL2: concurrency for rendering extra large cloud applications.MM1_HD: concurrency for performance-based cloud ARM (HD).MM1_FHD: concurrency for performance-based cloud ARM (FHD).Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Type Concurrency type required for project operation.S1: concurrency for rendering small cloud applications.M1: concurrency for rendering medium cloud applications.L1: concurrency for rendering large cloud applications.L2: concurrency for rendering large cloud applications.XL2: concurrency for rendering extra large cloud applications.MM1_HD: concurrency for performance-based cloud ARM (HD).MM1_FHD: concurrency for performance-based cloud ARM (FHD).Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Concurrency type required for project operation.<br>S1: Small-scale cloud application rendering concurrency<br>M1: Medium cloud application rendering concurrency<br>L1: Large cloud application rendering concurrency<br>L2: Large cloud application rendering concurrency<br>XL2: Ultra-large cloud application rendering concurrency<br>MM1_HD: Performance Cloud ARM concurrency - high-definition<br>MM1_FHD: Performance Cloud ARM concurrency - ultra-high-definition</p> 
+     * @return Type <p>Concurrency type required for project operation.<br>S1: Small-scale cloud application rendering concurrency<br>M1: Medium cloud application rendering concurrency<br>L1: Large cloud application rendering concurrency<br>L2: Large cloud application rendering concurrency<br>XL2: Ultra-large cloud application rendering concurrency<br>MM1_HD: Performance Cloud ARM concurrency - high-definition<br>MM1_FHD: Performance Cloud ARM concurrency - ultra-high-definition</p>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Concurrency type required for project operation.S1: concurrency for rendering small cloud applications.M1: concurrency for rendering medium cloud applications.L1: concurrency for rendering large cloud applications.L2: concurrency for rendering large cloud applications.XL2: concurrency for rendering extra large cloud applications.MM1_HD: concurrency for performance-based cloud ARM (HD).MM1_FHD: concurrency for performance-based cloud ARM (FHD).Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Type Concurrency type required for project operation.S1: concurrency for rendering small cloud applications.M1: concurrency for rendering medium cloud applications.L1: concurrency for rendering large cloud applications.L2: concurrency for rendering large cloud applications.XL2: concurrency for rendering extra large cloud applications.MM1_HD: concurrency for performance-based cloud ARM (HD).MM1_FHD: concurrency for performance-based cloud ARM (FHD).Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Concurrency type required for project operation.<br>S1: Small-scale cloud application rendering concurrency<br>M1: Medium cloud application rendering concurrency<br>L1: Large cloud application rendering concurrency<br>L2: Large cloud application rendering concurrency<br>XL2: Ultra-large cloud application rendering concurrency<br>MM1_HD: Performance Cloud ARM concurrency - high-definition<br>MM1_FHD: Performance Cloud ARM concurrency - ultra-high-definition</p>
+     * @param Type <p>Concurrency type required for project operation.<br>S1: Small-scale cloud application rendering concurrency<br>M1: Medium cloud application rendering concurrency<br>L1: Large cloud application rendering concurrency<br>L2: Large cloud application rendering concurrency<br>XL2: Ultra-large cloud application rendering concurrency<br>MM1_HD: Performance Cloud ARM concurrency - high-definition<br>MM1_FHD: Performance Cloud ARM concurrency - ultra-high-definition</p>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get Cloud application ID.Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ApplicationId Cloud application ID.Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Cloud Application ID</p> 
+     * @return ApplicationId <p>Cloud Application ID</p>
      */
     public String getApplicationId() {
         return this.ApplicationId;
     }
 
     /**
-     * Set Cloud application ID.Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ApplicationId Cloud application ID.Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Cloud Application ID</p>
+     * @param ApplicationId <p>Cloud Application ID</p>
      */
     public void setApplicationId(String ApplicationId) {
         this.ApplicationId = ApplicationId;
     }
 
     /**
-     * Get Pre-launch.Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return IsPreload Pre-launch.Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Pre-launch</p> 
+     * @return IsPreload <p>Pre-launch</p>
      */
     public Boolean getIsPreload() {
         return this.IsPreload;
     }
 
     /**
-     * Set Pre-launch.Note: This field may return null, indicating that no valid values can be obtained.
-     * @param IsPreload Pre-launch.Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Pre-launch</p>
+     * @param IsPreload <p>Pre-launch</p>
      */
     public void setIsPreload(Boolean IsPreload) {
         this.IsPreload = IsPreload;
     }
 
     /**
-     * Get Number of concurrencies already configured.Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Amount Number of concurrencies already configured.Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Configured concurrency</p> 
+     * @return Amount <p>Configured concurrency</p>
      */
     public Long getAmount() {
         return this.Amount;
     }
 
     /**
-     * Set Number of concurrencies already configured.Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Amount Number of concurrencies already configured.Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Configured concurrency</p>
+     * @param Amount <p>Configured concurrency</p>
      */
     public void setAmount(Long Amount) {
         this.Amount = Amount;
     }
 
     /**
-     * Get Number of concurrencies in use.Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Using Number of concurrencies in use.Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Number of concurrencies in use</p> 
+     * @return Using <p>Number of concurrencies in use</p>
      */
     public Long getUsing() {
         return this.Using;
     }
 
     /**
-     * Set Number of concurrencies in use.Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Using Number of concurrencies in use.Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Number of concurrencies in use</p>
+     * @param Using <p>Number of concurrencies in use</p>
      */
     public void setUsing(Long Using) {
         this.Using = Using;
     }
 
     /**
-     * Get Application status. NoConcurrent: no concurrency pack configured; Online: activated. Cloud application status: applicationCreating: creating; applicationCreateFail: creation failed; applicationDeleting: deleting; applicationNoConfigured: startup parameters not configured.Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ApplicationStatus Application status. NoConcurrent: no concurrency pack configured; Online: activated. Cloud application status: applicationCreating: creating; applicationCreateFail: creation failed; applicationDeleting: deleting; applicationNoConfigured: startup parameters not configured.Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Application status: NoConcurrent - no concurrency package configured, Online - launched, other statuses are cloud application status: applicationCreating - creating, applicationCreateFail - creation failed, applicationDeleting - deleting, applicationNoConfigured - startup parameter not configured</p> 
+     * @return ApplicationStatus <p>Application status: NoConcurrent - no concurrency package configured, Online - launched, other statuses are cloud application status: applicationCreating - creating, applicationCreateFail - creation failed, applicationDeleting - deleting, applicationNoConfigured - startup parameter not configured</p>
      */
     public String getApplicationStatus() {
         return this.ApplicationStatus;
     }
 
     /**
-     * Set Application status. NoConcurrent: no concurrency pack configured; Online: activated. Cloud application status: applicationCreating: creating; applicationCreateFail: creation failed; applicationDeleting: deleting; applicationNoConfigured: startup parameters not configured.Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ApplicationStatus Application status. NoConcurrent: no concurrency pack configured; Online: activated. Cloud application status: applicationCreating: creating; applicationCreateFail: creation failed; applicationDeleting: deleting; applicationNoConfigured: startup parameters not configured.Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Application status: NoConcurrent - no concurrency package configured, Online - launched, other statuses are cloud application status: applicationCreating - creating, applicationCreateFail - creation failed, applicationDeleting - deleting, applicationNoConfigured - startup parameter not configured</p>
+     * @param ApplicationStatus <p>Application status: NoConcurrent - no concurrency package configured, Online - launched, other statuses are cloud application status: applicationCreating - creating, applicationCreateFail - creation failed, applicationDeleting - deleting, applicationNoConfigured - startup parameter not configured</p>
      */
     public void setApplicationStatus(String ApplicationStatus) {
         this.ApplicationStatus = ApplicationStatus;
     }
 
     /**
-     * Get Application startup parameters.
-
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ApplicationParams Application startup parameters.
-
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Application startup parameter</p> 
+     * @return ApplicationParams <p>Application startup parameter</p>
      */
     public String getApplicationParams() {
         return this.ApplicationParams;
     }
 
     /**
-     * Set Application startup parameters.
-
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ApplicationParams Application startup parameters.
-
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Application startup parameter</p>
+     * @param ApplicationParams <p>Application startup parameter</p>
      */
     public void setApplicationParams(String ApplicationParams) {
         this.ApplicationParams = ApplicationParams;
     }
 
     /**
-     * Get Creation time.
-
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return CreateTime Creation time.
-
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Creation time.</p> 
+     * @return CreateTime <p>Creation time.</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set Creation time.
-
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param CreateTime Creation time.
-
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Creation time.</p>
+     * @param CreateTime <p>Creation time.</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get Application name.
-
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ApplicationName Application name.
-
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Application name</p> 
+     * @return ApplicationName <p>Application name</p>
      */
     public String getApplicationName() {
         return this.ApplicationName;
     }
 
     /**
-     * Set Application name.
-
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ApplicationName Application name.
-
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Application name</p>
+     * @param ApplicationName <p>Application name</p>
      */
     public void setApplicationName(String ApplicationName) {
         this.ApplicationName = ApplicationName;
     }
 
     /**
-     * Get Resolution, in the format of widthxheight, such as 1920x1080.Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Resolution Resolution, in the format of widthxheight, such as 1920x1080.Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Resolution, format as "width x height", for example 1920x1080</p> 
+     * @return Resolution <p>Resolution, format as "width x height", for example 1920x1080</p>
      */
     public String getResolution() {
         return this.Resolution;
     }
 
     /**
-     * Set Resolution, in the format of widthxheight, such as 1920x1080.Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Resolution Resolution, in the format of widthxheight, such as 1920x1080.Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Resolution, format as "width x height", for example 1920x1080</p>
+     * @param Resolution <p>Resolution, format as "width x height", for example 1920x1080</p>
      */
     public void setResolution(String Resolution) {
         this.Resolution = Resolution;
     }
 
     /**
-     * Get Project type.SHARED: shared by all applications.EXCLUSIVE (default value): dedicated for one application.Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ProjectType Project type.SHARED: shared by all applications.EXCLUSIVE (default value): dedicated for one application.Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Project type.<br>SHARED: Shared by all applications<br>EXCLUSIVE (default value): Dedicated for one application</p> 
+     * @return ProjectType <p>Project type.<br>SHARED: Shared by all applications<br>EXCLUSIVE (default value): Dedicated for one application</p>
      */
     public String getProjectType() {
         return this.ProjectType;
     }
 
     /**
-     * Set Project type.SHARED: shared by all applications.EXCLUSIVE (default value): dedicated for one application.Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ProjectType Project type.SHARED: shared by all applications.EXCLUSIVE (default value): dedicated for one application.Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Project type.<br>SHARED: Shared by all applications<br>EXCLUSIVE (default value): Dedicated for one application</p>
+     * @param ProjectType <p>Project type.<br>SHARED: Shared by all applications<br>EXCLUSIVE (default value): Dedicated for one application</p>
      */
     public void setProjectType(String ProjectType) {
         this.ProjectType = ProjectType;
     }
 
     /**
-     * Get Purpose.EXPERIENCE: Experience.Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Purpose Purpose.EXPERIENCE: Experience.Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Purpose.<br>EXPERIENCE: Experience</p> 
+     * @return Purpose <p>Purpose.<br>EXPERIENCE: Experience</p>
      */
     public String getPurpose() {
         return this.Purpose;
     }
 
     /**
-     * Set Purpose.EXPERIENCE: Experience.Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Purpose Purpose.EXPERIENCE: Experience.Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Purpose.<br>EXPERIENCE: Experience</p>
+     * @param Purpose <p>Purpose.<br>EXPERIENCE: Experience</p>
      */
     public void setPurpose(String Purpose) {
         this.Purpose = Purpose;
     }
 
     /**
-     * Get Application distribution area. Standard areas are as follows. ap-chinese-mainland: Chinese mainland; na-north-america: North America; eu-frankfurt: Frankfurt; ap-mumbai: Mumbai; ap-tokyo: Tokyo; ap-seoul: Seoul; ap-singapore: Singapore; ap-bangkok: Bangkok; ap-hongkong: Hong Kong (China). Fusion areas are as follows. me-middle-east-fusion: Middle East; na-north-america-fusion: North America; sa-south-america-fusion: South America; ap-tokyo-fusion: Tokyo; ap-seoul-fusion: Seoul; eu-frankfurt-fusion: Frankfurt; ap-singapore-fusion: Singapore; ap-hongkong-fusion: Hong Kong (China).Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ApplicationRegions Application distribution area. Standard areas are as follows. ap-chinese-mainland: Chinese mainland; na-north-america: North America; eu-frankfurt: Frankfurt; ap-mumbai: Mumbai; ap-tokyo: Tokyo; ap-seoul: Seoul; ap-singapore: Singapore; ap-bangkok: Bangkok; ap-hongkong: Hong Kong (China). Fusion areas are as follows. me-middle-east-fusion: Middle East; na-north-america-fusion: North America; sa-south-america-fusion: South America; ap-tokyo-fusion: Tokyo; ap-seoul-fusion: Seoul; eu-frankfurt-fusion: Frankfurt; ap-singapore-fusion: Singapore; ap-hongkong-fusion: Hong Kong (China).Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Application distribution area (Standard zone: ap-chinese-mainland: Chinese mainland, na-north-america: North America, eu-frankfurt: Frankfurt, ap-mumbai: Mumbai, ap-tokyo: Tokyo, ap-seoul: Seoul, ap-singapore: Singapore, ap-bangkok: Bangkok, ap-hongkong: Hong Kong (China). Fusion region: me-middle-east-fusion: Middle East, na-north-america-fusion: North America, sa-south-america-fusion: South America, ap-tokyo-fusion: Tokyo, ap-seoul-fusion: Seoul, eu-frankfurt-fusion: Frankfurt, ap-singapore-fusion: Singapore, ap-hongkong-fusion: Hong Kong (China))</p> 
+     * @return ApplicationRegions <p>Application distribution area (Standard zone: ap-chinese-mainland: Chinese mainland, na-north-america: North America, eu-frankfurt: Frankfurt, ap-mumbai: Mumbai, ap-tokyo: Tokyo, ap-seoul: Seoul, ap-singapore: Singapore, ap-bangkok: Bangkok, ap-hongkong: Hong Kong (China). Fusion region: me-middle-east-fusion: Middle East, na-north-america-fusion: North America, sa-south-america-fusion: South America, ap-tokyo-fusion: Tokyo, ap-seoul-fusion: Seoul, eu-frankfurt-fusion: Frankfurt, ap-singapore-fusion: Singapore, ap-hongkong-fusion: Hong Kong (China))</p>
      */
     public String [] getApplicationRegions() {
         return this.ApplicationRegions;
     }
 
     /**
-     * Set Application distribution area. Standard areas are as follows. ap-chinese-mainland: Chinese mainland; na-north-america: North America; eu-frankfurt: Frankfurt; ap-mumbai: Mumbai; ap-tokyo: Tokyo; ap-seoul: Seoul; ap-singapore: Singapore; ap-bangkok: Bangkok; ap-hongkong: Hong Kong (China). Fusion areas are as follows. me-middle-east-fusion: Middle East; na-north-america-fusion: North America; sa-south-america-fusion: South America; ap-tokyo-fusion: Tokyo; ap-seoul-fusion: Seoul; eu-frankfurt-fusion: Frankfurt; ap-singapore-fusion: Singapore; ap-hongkong-fusion: Hong Kong (China).Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ApplicationRegions Application distribution area. Standard areas are as follows. ap-chinese-mainland: Chinese mainland; na-north-america: North America; eu-frankfurt: Frankfurt; ap-mumbai: Mumbai; ap-tokyo: Tokyo; ap-seoul: Seoul; ap-singapore: Singapore; ap-bangkok: Bangkok; ap-hongkong: Hong Kong (China). Fusion areas are as follows. me-middle-east-fusion: Middle East; na-north-america-fusion: North America; sa-south-america-fusion: South America; ap-tokyo-fusion: Tokyo; ap-seoul-fusion: Seoul; eu-frankfurt-fusion: Frankfurt; ap-singapore-fusion: Singapore; ap-hongkong-fusion: Hong Kong (China).Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Application distribution area (Standard zone: ap-chinese-mainland: Chinese mainland, na-north-america: North America, eu-frankfurt: Frankfurt, ap-mumbai: Mumbai, ap-tokyo: Tokyo, ap-seoul: Seoul, ap-singapore: Singapore, ap-bangkok: Bangkok, ap-hongkong: Hong Kong (China). Fusion region: me-middle-east-fusion: Middle East, na-north-america-fusion: North America, sa-south-america-fusion: South America, ap-tokyo-fusion: Tokyo, ap-seoul-fusion: Seoul, eu-frankfurt-fusion: Frankfurt, ap-singapore-fusion: Singapore, ap-hongkong-fusion: Hong Kong (China))</p>
+     * @param ApplicationRegions <p>Application distribution area (Standard zone: ap-chinese-mainland: Chinese mainland, na-north-america: North America, eu-frankfurt: Frankfurt, ap-mumbai: Mumbai, ap-tokyo: Tokyo, ap-seoul: Seoul, ap-singapore: Singapore, ap-bangkok: Bangkok, ap-hongkong: Hong Kong (China). Fusion region: me-middle-east-fusion: Middle East, na-north-america-fusion: North America, sa-south-america-fusion: South America, ap-tokyo-fusion: Tokyo, ap-seoul-fusion: Seoul, eu-frankfurt-fusion: Frankfurt, ap-singapore-fusion: Singapore, ap-hongkong-fusion: Hong Kong (China))</p>
      */
     public void setApplicationRegions(String [] ApplicationRegions) {
         this.ApplicationRegions = ApplicationRegions;
     }
 
     /**
-     * Get Concurrency area. Standard areas are as follows. ap-chinese-mainland: Chinese mainland; na-north-america: North America; eu-frankfurt: Frankfurt; ap-mumbai: Mumbai; ap-tokyo: Tokyo; ap-seoul: Seoul; ap-singapore: Singapore; ap-bangkok: Bangkok; ap-hongkong: Hong Kong (China). Fusion areas are as follows. me-middle-east-fusion: Middle East; na-north-america-fusion: North America; sa-south-america-fusion: South America; ap-tokyo-fusion: Tokyo; ap-seoul-fusion: Seoul; eu-frankfurt-fusion: Frankfurt; ap-singapore-fusion: Singapore; ap-hongkong-fusion: Hong Kong (China).Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ConcurrentRegions Concurrency area. Standard areas are as follows. ap-chinese-mainland: Chinese mainland; na-north-america: North America; eu-frankfurt: Frankfurt; ap-mumbai: Mumbai; ap-tokyo: Tokyo; ap-seoul: Seoul; ap-singapore: Singapore; ap-bangkok: Bangkok; ap-hongkong: Hong Kong (China). Fusion areas are as follows. me-middle-east-fusion: Middle East; na-north-america-fusion: North America; sa-south-america-fusion: South America; ap-tokyo-fusion: Tokyo; ap-seoul-fusion: Seoul; eu-frankfurt-fusion: Frankfurt; ap-singapore-fusion: Singapore; ap-hongkong-fusion: Hong Kong (China).Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Concurrent region (Standard zone: ap-chinese-mainland: Chinese mainland, na-north-america: North America, eu-frankfurt: Frankfurt, ap-mumbai: Mumbai, ap-tokyo: Tokyo, ap-seoul: Seoul, ap-singapore: Singapore, ap-bangkok: Bangkok, ap-hongkong: Hong Kong (China), Fusion region: me-middle-east-fusion: Middle East, na-north-america-fusion: North America, sa-south-america-fusion: South America, ap-tokyo-fusion: Tokyo, ap-seoul-fusion: Seoul, eu-frankfurt-fusion: Frankfurt, ap-singapore-fusion: Singapore, ap-hongkong-fusion: Hong Kong (China))</p> 
+     * @return ConcurrentRegions <p>Concurrent region (Standard zone: ap-chinese-mainland: Chinese mainland, na-north-america: North America, eu-frankfurt: Frankfurt, ap-mumbai: Mumbai, ap-tokyo: Tokyo, ap-seoul: Seoul, ap-singapore: Singapore, ap-bangkok: Bangkok, ap-hongkong: Hong Kong (China), Fusion region: me-middle-east-fusion: Middle East, na-north-america-fusion: North America, sa-south-america-fusion: South America, ap-tokyo-fusion: Tokyo, ap-seoul-fusion: Seoul, eu-frankfurt-fusion: Frankfurt, ap-singapore-fusion: Singapore, ap-hongkong-fusion: Hong Kong (China))</p>
      */
     public String [] getConcurrentRegions() {
         return this.ConcurrentRegions;
     }
 
     /**
-     * Set Concurrency area. Standard areas are as follows. ap-chinese-mainland: Chinese mainland; na-north-america: North America; eu-frankfurt: Frankfurt; ap-mumbai: Mumbai; ap-tokyo: Tokyo; ap-seoul: Seoul; ap-singapore: Singapore; ap-bangkok: Bangkok; ap-hongkong: Hong Kong (China). Fusion areas are as follows. me-middle-east-fusion: Middle East; na-north-america-fusion: North America; sa-south-america-fusion: South America; ap-tokyo-fusion: Tokyo; ap-seoul-fusion: Seoul; eu-frankfurt-fusion: Frankfurt; ap-singapore-fusion: Singapore; ap-hongkong-fusion: Hong Kong (China).Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ConcurrentRegions Concurrency area. Standard areas are as follows. ap-chinese-mainland: Chinese mainland; na-north-america: North America; eu-frankfurt: Frankfurt; ap-mumbai: Mumbai; ap-tokyo: Tokyo; ap-seoul: Seoul; ap-singapore: Singapore; ap-bangkok: Bangkok; ap-hongkong: Hong Kong (China). Fusion areas are as follows. me-middle-east-fusion: Middle East; na-north-america-fusion: North America; sa-south-america-fusion: South America; ap-tokyo-fusion: Tokyo; ap-seoul-fusion: Seoul; eu-frankfurt-fusion: Frankfurt; ap-singapore-fusion: Singapore; ap-hongkong-fusion: Hong Kong (China).Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Concurrent region (Standard zone: ap-chinese-mainland: Chinese mainland, na-north-america: North America, eu-frankfurt: Frankfurt, ap-mumbai: Mumbai, ap-tokyo: Tokyo, ap-seoul: Seoul, ap-singapore: Singapore, ap-bangkok: Bangkok, ap-hongkong: Hong Kong (China), Fusion region: me-middle-east-fusion: Middle East, na-north-america-fusion: North America, sa-south-america-fusion: South America, ap-tokyo-fusion: Tokyo, ap-seoul-fusion: Seoul, eu-frankfurt-fusion: Frankfurt, ap-singapore-fusion: Singapore, ap-hongkong-fusion: Hong Kong (China))</p>
+     * @param ConcurrentRegions <p>Concurrent region (Standard zone: ap-chinese-mainland: Chinese mainland, na-north-america: North America, eu-frankfurt: Frankfurt, ap-mumbai: Mumbai, ap-tokyo: Tokyo, ap-seoul: Seoul, ap-singapore: Singapore, ap-bangkok: Bangkok, ap-hongkong: Hong Kong (China), Fusion region: me-middle-east-fusion: Middle East, na-north-america-fusion: North America, sa-south-america-fusion: South America, ap-tokyo-fusion: Tokyo, ap-seoul-fusion: Seoul, eu-frankfurt-fusion: Frankfurt, ap-singapore-fusion: Singapore, ap-hongkong-fusion: Hong Kong (China))</p>
      */
     public void setConcurrentRegions(String [] ConcurrentRegions) {
         this.ConcurrentRegions = ConcurrentRegions;
     }
 
     /**
-     * Get Project category.DESKTOP: desktop (default value).MOBILE: mobile.Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ProjectCategory Project category.DESKTOP: desktop (default value).MOBILE: mobile.Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Project category.<br>DESKTOP: On PC, default value<br>MOBILE: Mobile terminal</p> 
+     * @return ProjectCategory <p>Project category.<br>DESKTOP: On PC, default value<br>MOBILE: Mobile terminal</p>
      */
     public String getProjectCategory() {
         return this.ProjectCategory;
     }
 
     /**
-     * Set Project category.DESKTOP: desktop (default value).MOBILE: mobile.Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ProjectCategory Project category.DESKTOP: desktop (default value).MOBILE: mobile.Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Project category.<br>DESKTOP: On PC, default value<br>MOBILE: Mobile terminal</p>
+     * @param ProjectCategory <p>Project category.<br>DESKTOP: On PC, default value<br>MOBILE: Mobile terminal</p>
      */
     public void setProjectCategory(String ProjectCategory) {
         this.ProjectCategory = ProjectCategory;

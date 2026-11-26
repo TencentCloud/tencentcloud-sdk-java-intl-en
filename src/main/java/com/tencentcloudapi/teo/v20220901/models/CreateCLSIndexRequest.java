@@ -31,7 +31,7 @@ public class CreateCLSIndexRequest extends AbstractModel {
     private String ZoneId;
 
     /**
-    * The ID of the real-time log delivery task.
+    * ID of a real-time log shipping task.
     */
     @SerializedName("TaskId")
     @Expose
@@ -54,16 +54,16 @@ public class CreateCLSIndexRequest extends AbstractModel {
     }
 
     /**
-     * Get The ID of the real-time log delivery task. 
-     * @return TaskId The ID of the real-time log delivery task.
+     * Get ID of a real-time log shipping task. 
+     * @return TaskId ID of a real-time log shipping task.
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set The ID of the real-time log delivery task.
-     * @param TaskId The ID of the real-time log delivery task.
+     * Set ID of a real-time log shipping task.
+     * @param TaskId ID of a real-time log shipping task.
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;

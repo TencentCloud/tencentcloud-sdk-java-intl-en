@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CodeAction extends AbstractModel {
 
     /**
-    * Feature name. For details, see [DescribeRulesSetting](https://intl.cloud.tencent.com/document/product/1552/80618?from_cn_redirect=1) API
+    * Feature name. For completion specifications, call the API to query the parameter settings of the rule engine (https://www.tencentcloud.com/document/product/1552/80618?from_cn_redirect=1).
     */
     @SerializedName("Action")
     @Expose
@@ -38,16 +38,16 @@ public class CodeAction extends AbstractModel {
     private RuleCodeActionParams [] Parameters;
 
     /**
-     * Get Feature name. For details, see [DescribeRulesSetting](https://intl.cloud.tencent.com/document/product/1552/80618?from_cn_redirect=1) API 
-     * @return Action Feature name. For details, see [DescribeRulesSetting](https://intl.cloud.tencent.com/document/product/1552/80618?from_cn_redirect=1) API
+     * Get Feature name. For completion specifications, call the API to query the parameter settings of the rule engine (https://www.tencentcloud.com/document/product/1552/80618?from_cn_redirect=1). 
+     * @return Action Feature name. For completion specifications, call the API to query the parameter settings of the rule engine (https://www.tencentcloud.com/document/product/1552/80618?from_cn_redirect=1).
      */
     public String getAction() {
         return this.Action;
     }
 
     /**
-     * Set Feature name. For details, see [DescribeRulesSetting](https://intl.cloud.tencent.com/document/product/1552/80618?from_cn_redirect=1) API
-     * @param Action Feature name. For details, see [DescribeRulesSetting](https://intl.cloud.tencent.com/document/product/1552/80618?from_cn_redirect=1) API
+     * Set Feature name. For completion specifications, call the API to query the parameter settings of the rule engine (https://www.tencentcloud.com/document/product/1552/80618?from_cn_redirect=1).
+     * @param Action Feature name. For completion specifications, call the API to query the parameter settings of the rule engine (https://www.tencentcloud.com/document/product/1552/80618?from_cn_redirect=1).
      */
     public void setAction(String Action) {
         this.Action = Action;

@@ -24,35 +24,35 @@ import java.util.HashMap;
 public class ModifyInferenceServiceRequest extends AbstractModel {
 
     /**
-    * <p>Site ID.</p>
+    * <p>Zone ID.</p>
     */
     @SerializedName("ZoneId")
     @Expose
     private String ZoneId;
 
     /**
-    * <p>ID of the inference service.</p>
+    * <p>Inference service ID.</p>
     */
     @SerializedName("ServiceId")
     @Expose
     private String ServiceId;
 
     /**
-    * <p>Ports monitored by the model service. Only integers between 1 and 65535 are supported.</p>
+    * <p>Ports that the model service needs to monitor. Only integers between 1 and 65535 are supported.</p>
     */
     @SerializedName("ListenPort")
     @Expose
     private Long ListenPort;
 
     /**
-    * <p>Request path list for inference service. Supports up to 20 paths.</p>
+    * <p>Request path list for the inference service. Supports up to 20 paths.</p>
     */
     @SerializedName("RequestPaths")
     @Expose
     private String [] RequestPaths;
 
     /**
-    * <p>Container configuration of the inference service. Currently only support setting 1 container.</p>
+    * <p>Container configuration for the inference service. Currently only support setting 1 container.</p>
     */
     @SerializedName("Containers")
     @Expose
@@ -66,87 +66,94 @@ public class ModifyInferenceServiceRequest extends AbstractModel {
     private InferenceResourceConfigForModify ResourceConfig;
 
     /**
-    * <p>Description. The length is limited to 60 characters.</p>
+    * <p>Inference service affinity configuration</p>
+    */
+    @SerializedName("AffinityConfig")
+    @Expose
+    private InferenceAffinityConfig AffinityConfig;
+
+    /**
+    * <p>Description. Length limit: no more than 60 characters.</p>
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-     * Get <p>Site ID.</p> 
-     * @return ZoneId <p>Site ID.</p>
+     * Get <p>Zone ID.</p> 
+     * @return ZoneId <p>Zone ID.</p>
      */
     public String getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set <p>Site ID.</p>
-     * @param ZoneId <p>Site ID.</p>
+     * Set <p>Zone ID.</p>
+     * @param ZoneId <p>Zone ID.</p>
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get <p>ID of the inference service.</p> 
-     * @return ServiceId <p>ID of the inference service.</p>
+     * Get <p>Inference service ID.</p> 
+     * @return ServiceId <p>Inference service ID.</p>
      */
     public String getServiceId() {
         return this.ServiceId;
     }
 
     /**
-     * Set <p>ID of the inference service.</p>
-     * @param ServiceId <p>ID of the inference service.</p>
+     * Set <p>Inference service ID.</p>
+     * @param ServiceId <p>Inference service ID.</p>
      */
     public void setServiceId(String ServiceId) {
         this.ServiceId = ServiceId;
     }
 
     /**
-     * Get <p>Ports monitored by the model service. Only integers between 1 and 65535 are supported.</p> 
-     * @return ListenPort <p>Ports monitored by the model service. Only integers between 1 and 65535 are supported.</p>
+     * Get <p>Ports that the model service needs to monitor. Only integers between 1 and 65535 are supported.</p> 
+     * @return ListenPort <p>Ports that the model service needs to monitor. Only integers between 1 and 65535 are supported.</p>
      */
     public Long getListenPort() {
         return this.ListenPort;
     }
 
     /**
-     * Set <p>Ports monitored by the model service. Only integers between 1 and 65535 are supported.</p>
-     * @param ListenPort <p>Ports monitored by the model service. Only integers between 1 and 65535 are supported.</p>
+     * Set <p>Ports that the model service needs to monitor. Only integers between 1 and 65535 are supported.</p>
+     * @param ListenPort <p>Ports that the model service needs to monitor. Only integers between 1 and 65535 are supported.</p>
      */
     public void setListenPort(Long ListenPort) {
         this.ListenPort = ListenPort;
     }
 
     /**
-     * Get <p>Request path list for inference service. Supports up to 20 paths.</p> 
-     * @return RequestPaths <p>Request path list for inference service. Supports up to 20 paths.</p>
+     * Get <p>Request path list for the inference service. Supports up to 20 paths.</p> 
+     * @return RequestPaths <p>Request path list for the inference service. Supports up to 20 paths.</p>
      */
     public String [] getRequestPaths() {
         return this.RequestPaths;
     }
 
     /**
-     * Set <p>Request path list for inference service. Supports up to 20 paths.</p>
-     * @param RequestPaths <p>Request path list for inference service. Supports up to 20 paths.</p>
+     * Set <p>Request path list for the inference service. Supports up to 20 paths.</p>
+     * @param RequestPaths <p>Request path list for the inference service. Supports up to 20 paths.</p>
      */
     public void setRequestPaths(String [] RequestPaths) {
         this.RequestPaths = RequestPaths;
     }
 
     /**
-     * Get <p>Container configuration of the inference service. Currently only support setting 1 container.</p> 
-     * @return Containers <p>Container configuration of the inference service. Currently only support setting 1 container.</p>
+     * Get <p>Container configuration for the inference service. Currently only support setting 1 container.</p> 
+     * @return Containers <p>Container configuration for the inference service. Currently only support setting 1 container.</p>
      */
     public InferenceContainerConfigForModify [] getContainers() {
         return this.Containers;
     }
 
     /**
-     * Set <p>Container configuration of the inference service. Currently only support setting 1 container.</p>
-     * @param Containers <p>Container configuration of the inference service. Currently only support setting 1 container.</p>
+     * Set <p>Container configuration for the inference service. Currently only support setting 1 container.</p>
+     * @param Containers <p>Container configuration for the inference service. Currently only support setting 1 container.</p>
      */
     public void setContainers(InferenceContainerConfigForModify [] Containers) {
         this.Containers = Containers;
@@ -169,16 +176,32 @@ public class ModifyInferenceServiceRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>Description. The length is limited to 60 characters.</p> 
-     * @return Description <p>Description. The length is limited to 60 characters.</p>
+     * Get <p>Inference service affinity configuration</p> 
+     * @return AffinityConfig <p>Inference service affinity configuration</p>
+     */
+    public InferenceAffinityConfig getAffinityConfig() {
+        return this.AffinityConfig;
+    }
+
+    /**
+     * Set <p>Inference service affinity configuration</p>
+     * @param AffinityConfig <p>Inference service affinity configuration</p>
+     */
+    public void setAffinityConfig(InferenceAffinityConfig AffinityConfig) {
+        this.AffinityConfig = AffinityConfig;
+    }
+
+    /**
+     * Get <p>Description. Length limit: no more than 60 characters.</p> 
+     * @return Description <p>Description. Length limit: no more than 60 characters.</p>
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set <p>Description. The length is limited to 60 characters.</p>
-     * @param Description <p>Description. The length is limited to 60 characters.</p>
+     * Set <p>Description. Length limit: no more than 60 characters.</p>
+     * @param Description <p>Description. Length limit: no more than 60 characters.</p>
      */
     public void setDescription(String Description) {
         this.Description = Description;
@@ -216,6 +239,9 @@ public class ModifyInferenceServiceRequest extends AbstractModel {
         if (source.ResourceConfig != null) {
             this.ResourceConfig = new InferenceResourceConfigForModify(source.ResourceConfig);
         }
+        if (source.AffinityConfig != null) {
+            this.AffinityConfig = new InferenceAffinityConfig(source.AffinityConfig);
+        }
         if (source.Description != null) {
             this.Description = new String(source.Description);
         }
@@ -232,6 +258,7 @@ public class ModifyInferenceServiceRequest extends AbstractModel {
         this.setParamArraySimple(map, prefix + "RequestPaths.", this.RequestPaths);
         this.setParamArrayObj(map, prefix + "Containers.", this.Containers);
         this.setParamObj(map, prefix + "ResourceConfig.", this.ResourceConfig);
+        this.setParamObj(map, prefix + "AffinityConfig.", this.AffinityConfig);
         this.setParamSimple(map, prefix + "Description", this.Description);
 
     }

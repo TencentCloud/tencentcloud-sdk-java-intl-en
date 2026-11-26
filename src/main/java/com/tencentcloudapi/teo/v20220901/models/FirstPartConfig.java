@@ -24,9 +24,8 @@ import java.util.HashMap;
 public class FirstPartConfig extends AbstractModel {
 
     /**
-    * Switch. valid values:.
+    * Switch. Valid values:
 <li>`on`: Enable;</li>
-
 <li>off: Disable.</li>
     */
     @SerializedName("Switch")
@@ -34,20 +33,18 @@ public class FirstPartConfig extends AbstractModel {
     private String Switch;
 
     /**
-    * The statistical period of the first segment packet is in seconds. expect the duration to be 5 seconds by default.
+    * Statistical period of the first segment packet, in seconds. This is the expected statistical period of the first segment packet. Default value: 5 seconds.
     */
     @SerializedName("StatTime")
     @Expose
     private Long StatTime;
 
     /**
-     * Get Switch. valid values:.
+     * Get Switch. Valid values:
 <li>`on`: Enable;</li>
-
 <li>off: Disable.</li> 
-     * @return Switch Switch. valid values:.
+     * @return Switch Switch. Valid values:
 <li>`on`: Enable;</li>
-
 <li>off: Disable.</li>
      */
     public String getSwitch() {
@@ -55,13 +52,11 @@ public class FirstPartConfig extends AbstractModel {
     }
 
     /**
-     * Set Switch. valid values:.
+     * Set Switch. Valid values:
 <li>`on`: Enable;</li>
-
 <li>off: Disable.</li>
-     * @param Switch Switch. valid values:.
+     * @param Switch Switch. Valid values:
 <li>`on`: Enable;</li>
-
 <li>off: Disable.</li>
      */
     public void setSwitch(String Switch) {
@@ -69,16 +64,16 @@ public class FirstPartConfig extends AbstractModel {
     }
 
     /**
-     * Get The statistical period of the first segment packet is in seconds. expect the duration to be 5 seconds by default. 
-     * @return StatTime The statistical period of the first segment packet is in seconds. expect the duration to be 5 seconds by default.
+     * Get Statistical period of the first segment packet, in seconds. This is the expected statistical period of the first segment packet. Default value: 5 seconds. 
+     * @return StatTime Statistical period of the first segment packet, in seconds. This is the expected statistical period of the first segment packet. Default value: 5 seconds.
      */
     public Long getStatTime() {
         return this.StatTime;
     }
 
     /**
-     * Set The statistical period of the first segment packet is in seconds. expect the duration to be 5 seconds by default.
-     * @param StatTime The statistical period of the first segment packet is in seconds. expect the duration to be 5 seconds by default.
+     * Set Statistical period of the first segment packet, in seconds. This is the expected statistical period of the first segment packet. Default value: 5 seconds.
+     * @param StatTime Statistical period of the first segment packet, in seconds. This is the expected statistical period of the first segment packet. Default value: 5 seconds.
      */
     public void setStatTime(Long StatTime) {
         this.StatTime = StatTime;

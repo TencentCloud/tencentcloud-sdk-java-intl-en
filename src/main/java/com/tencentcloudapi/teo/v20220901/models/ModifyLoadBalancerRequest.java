@@ -45,14 +45,14 @@ public class ModifyLoadBalancerRequest extends AbstractModel {
     private String Name;
 
     /**
-    * List of origin server groups and their corresponding disaster recovery scheduling priorities. For details, refer to Sample Scenario in [Quickly Create Load Balancers](https://intl.cloud.tencent.com/document/product/1552/104223?from_cn_redirect=1). The original configuration applies if this field is not specified.
+    * List of origin server groups and their corresponding disaster recovery scheduling priorities. For details, refer to Sample Scenario in [Quickly Create Load Balancers](https://www.tencentcloud.com/document/product/1552/104223?from_cn_redirect=1). The original configuration applies if this field is not specified.
     */
     @SerializedName("OriginGroups")
     @Expose
     private OriginGroupInLoadBalancer [] OriginGroups;
 
     /**
-    * Health check policy. For details, refer to [Health Check Policies](https://intl.cloud.tencent.com/document/product/1552/104228?from_cn_redirect=1). The original configuration applies if this field is not specified.
+    * Health check policy. For details, refer to [Health Check Policies](https://www.tencentcloud.com/document/product/1552/104228?from_cn_redirect=1). The original configuration applies if this field is not specified.
     */
     @SerializedName("HealthChecker")
     @Expose
@@ -67,7 +67,7 @@ public class ModifyLoadBalancerRequest extends AbstractModel {
     private String SteeringPolicy;
 
     /**
-    * Request retry policy when access to an origin server fails. For details, refer to [Introduction to Request Retry Strategy](https://intl.cloud.tencent.com/document/product/1552/104227?from_cn_redirect=1). Valid values:
+    * Request retry policy when access to an origin server fails. For details, refer to [Introduction to Request Retry Strategy](https://www.tencentcloud.com/document/product/1552/104227?from_cn_redirect=1). Valid values:
 <li>OtherOriginGroup: After a single request fails, retry with another origin server within the next lower priority origin server group.</li>
 <li>OtherRecordInOriginGroup: After a single request fails, retry with another origin server within the same origin server group.</li> The original configuration applies if not specified.
     */
@@ -124,32 +124,32 @@ public class ModifyLoadBalancerRequest extends AbstractModel {
     }
 
     /**
-     * Get List of origin server groups and their corresponding disaster recovery scheduling priorities. For details, refer to Sample Scenario in [Quickly Create Load Balancers](https://intl.cloud.tencent.com/document/product/1552/104223?from_cn_redirect=1). The original configuration applies if this field is not specified. 
-     * @return OriginGroups List of origin server groups and their corresponding disaster recovery scheduling priorities. For details, refer to Sample Scenario in [Quickly Create Load Balancers](https://intl.cloud.tencent.com/document/product/1552/104223?from_cn_redirect=1). The original configuration applies if this field is not specified.
+     * Get List of origin server groups and their corresponding disaster recovery scheduling priorities. For details, refer to Sample Scenario in [Quickly Create Load Balancers](https://www.tencentcloud.com/document/product/1552/104223?from_cn_redirect=1). The original configuration applies if this field is not specified. 
+     * @return OriginGroups List of origin server groups and their corresponding disaster recovery scheduling priorities. For details, refer to Sample Scenario in [Quickly Create Load Balancers](https://www.tencentcloud.com/document/product/1552/104223?from_cn_redirect=1). The original configuration applies if this field is not specified.
      */
     public OriginGroupInLoadBalancer [] getOriginGroups() {
         return this.OriginGroups;
     }
 
     /**
-     * Set List of origin server groups and their corresponding disaster recovery scheduling priorities. For details, refer to Sample Scenario in [Quickly Create Load Balancers](https://intl.cloud.tencent.com/document/product/1552/104223?from_cn_redirect=1). The original configuration applies if this field is not specified.
-     * @param OriginGroups List of origin server groups and their corresponding disaster recovery scheduling priorities. For details, refer to Sample Scenario in [Quickly Create Load Balancers](https://intl.cloud.tencent.com/document/product/1552/104223?from_cn_redirect=1). The original configuration applies if this field is not specified.
+     * Set List of origin server groups and their corresponding disaster recovery scheduling priorities. For details, refer to Sample Scenario in [Quickly Create Load Balancers](https://www.tencentcloud.com/document/product/1552/104223?from_cn_redirect=1). The original configuration applies if this field is not specified.
+     * @param OriginGroups List of origin server groups and their corresponding disaster recovery scheduling priorities. For details, refer to Sample Scenario in [Quickly Create Load Balancers](https://www.tencentcloud.com/document/product/1552/104223?from_cn_redirect=1). The original configuration applies if this field is not specified.
      */
     public void setOriginGroups(OriginGroupInLoadBalancer [] OriginGroups) {
         this.OriginGroups = OriginGroups;
     }
 
     /**
-     * Get Health check policy. For details, refer to [Health Check Policies](https://intl.cloud.tencent.com/document/product/1552/104228?from_cn_redirect=1). The original configuration applies if this field is not specified. 
-     * @return HealthChecker Health check policy. For details, refer to [Health Check Policies](https://intl.cloud.tencent.com/document/product/1552/104228?from_cn_redirect=1). The original configuration applies if this field is not specified.
+     * Get Health check policy. For details, refer to [Health Check Policies](https://www.tencentcloud.com/document/product/1552/104228?from_cn_redirect=1). The original configuration applies if this field is not specified. 
+     * @return HealthChecker Health check policy. For details, refer to [Health Check Policies](https://www.tencentcloud.com/document/product/1552/104228?from_cn_redirect=1). The original configuration applies if this field is not specified.
      */
     public HealthChecker getHealthChecker() {
         return this.HealthChecker;
     }
 
     /**
-     * Set Health check policy. For details, refer to [Health Check Policies](https://intl.cloud.tencent.com/document/product/1552/104228?from_cn_redirect=1). The original configuration applies if this field is not specified.
-     * @param HealthChecker Health check policy. For details, refer to [Health Check Policies](https://intl.cloud.tencent.com/document/product/1552/104228?from_cn_redirect=1). The original configuration applies if this field is not specified.
+     * Set Health check policy. For details, refer to [Health Check Policies](https://www.tencentcloud.com/document/product/1552/104228?from_cn_redirect=1). The original configuration applies if this field is not specified.
+     * @param HealthChecker Health check policy. For details, refer to [Health Check Policies](https://www.tencentcloud.com/document/product/1552/104228?from_cn_redirect=1). The original configuration applies if this field is not specified.
      */
     public void setHealthChecker(HealthChecker HealthChecker) {
         this.HealthChecker = HealthChecker;
@@ -176,10 +176,10 @@ public class ModifyLoadBalancerRequest extends AbstractModel {
     }
 
     /**
-     * Get Request retry policy when access to an origin server fails. For details, refer to [Introduction to Request Retry Strategy](https://intl.cloud.tencent.com/document/product/1552/104227?from_cn_redirect=1). Valid values:
+     * Get Request retry policy when access to an origin server fails. For details, refer to [Introduction to Request Retry Strategy](https://www.tencentcloud.com/document/product/1552/104227?from_cn_redirect=1). Valid values:
 <li>OtherOriginGroup: After a single request fails, retry with another origin server within the next lower priority origin server group.</li>
 <li>OtherRecordInOriginGroup: After a single request fails, retry with another origin server within the same origin server group.</li> The original configuration applies if not specified. 
-     * @return FailoverPolicy Request retry policy when access to an origin server fails. For details, refer to [Introduction to Request Retry Strategy](https://intl.cloud.tencent.com/document/product/1552/104227?from_cn_redirect=1). Valid values:
+     * @return FailoverPolicy Request retry policy when access to an origin server fails. For details, refer to [Introduction to Request Retry Strategy](https://www.tencentcloud.com/document/product/1552/104227?from_cn_redirect=1). Valid values:
 <li>OtherOriginGroup: After a single request fails, retry with another origin server within the next lower priority origin server group.</li>
 <li>OtherRecordInOriginGroup: After a single request fails, retry with another origin server within the same origin server group.</li> The original configuration applies if not specified.
      */
@@ -188,10 +188,10 @@ public class ModifyLoadBalancerRequest extends AbstractModel {
     }
 
     /**
-     * Set Request retry policy when access to an origin server fails. For details, refer to [Introduction to Request Retry Strategy](https://intl.cloud.tencent.com/document/product/1552/104227?from_cn_redirect=1). Valid values:
+     * Set Request retry policy when access to an origin server fails. For details, refer to [Introduction to Request Retry Strategy](https://www.tencentcloud.com/document/product/1552/104227?from_cn_redirect=1). Valid values:
 <li>OtherOriginGroup: After a single request fails, retry with another origin server within the next lower priority origin server group.</li>
 <li>OtherRecordInOriginGroup: After a single request fails, retry with another origin server within the same origin server group.</li> The original configuration applies if not specified.
-     * @param FailoverPolicy Request retry policy when access to an origin server fails. For details, refer to [Introduction to Request Retry Strategy](https://intl.cloud.tencent.com/document/product/1552/104227?from_cn_redirect=1). Valid values:
+     * @param FailoverPolicy Request retry policy when access to an origin server fails. For details, refer to [Introduction to Request Retry Strategy](https://www.tencentcloud.com/document/product/1552/104227?from_cn_redirect=1). Valid values:
 <li>OtherOriginGroup: After a single request fails, retry with another origin server within the next lower priority origin server group.</li>
 <li>OtherRecordInOriginGroup: After a single request fails, retry with another origin server within the same origin server group.</li> The original configuration applies if not specified.
      */

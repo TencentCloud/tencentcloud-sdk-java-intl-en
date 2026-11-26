@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class DiffIPWhitelist extends AbstractModel {
 
     /**
-    * The latest intermediate IPs.
+    * Latest IP whitelist list.
     */
     @SerializedName("LatestIPWhitelist")
     @Expose
     private IPWhitelist LatestIPWhitelist;
 
     /**
-    * The intermediate IPs added to the existing list.
+    * Newly added part of the latest IP whitelist list compared with the current IP whitelist list.
     */
     @SerializedName("AddedIPWhitelist")
     @Expose
     private IPWhitelist AddedIPWhitelist;
 
     /**
-    * The intermediate IPs removed from the existing list.
+    * The latest IP whitelist list has partially deleted entries compared with the current IP whitelist list.
     */
     @SerializedName("RemovedIPWhitelist")
     @Expose
     private IPWhitelist RemovedIPWhitelist;
 
     /**
-    * The intermediate IPs that remain unchanged.
+    * Unchanged part of the latest IP allowlist compared with the current IP allowlist.
     */
     @SerializedName("NoChangeIPWhitelist")
     @Expose
     private IPWhitelist NoChangeIPWhitelist;
 
     /**
-     * Get The latest intermediate IPs. 
-     * @return LatestIPWhitelist The latest intermediate IPs.
+     * Get Latest IP whitelist list. 
+     * @return LatestIPWhitelist Latest IP whitelist list.
      */
     public IPWhitelist getLatestIPWhitelist() {
         return this.LatestIPWhitelist;
     }
 
     /**
-     * Set The latest intermediate IPs.
-     * @param LatestIPWhitelist The latest intermediate IPs.
+     * Set Latest IP whitelist list.
+     * @param LatestIPWhitelist Latest IP whitelist list.
      */
     public void setLatestIPWhitelist(IPWhitelist LatestIPWhitelist) {
         this.LatestIPWhitelist = LatestIPWhitelist;
     }
 
     /**
-     * Get The intermediate IPs added to the existing list. 
-     * @return AddedIPWhitelist The intermediate IPs added to the existing list.
+     * Get Newly added part of the latest IP whitelist list compared with the current IP whitelist list. 
+     * @return AddedIPWhitelist Newly added part of the latest IP whitelist list compared with the current IP whitelist list.
      */
     public IPWhitelist getAddedIPWhitelist() {
         return this.AddedIPWhitelist;
     }
 
     /**
-     * Set The intermediate IPs added to the existing list.
-     * @param AddedIPWhitelist The intermediate IPs added to the existing list.
+     * Set Newly added part of the latest IP whitelist list compared with the current IP whitelist list.
+     * @param AddedIPWhitelist Newly added part of the latest IP whitelist list compared with the current IP whitelist list.
      */
     public void setAddedIPWhitelist(IPWhitelist AddedIPWhitelist) {
         this.AddedIPWhitelist = AddedIPWhitelist;
     }
 
     /**
-     * Get The intermediate IPs removed from the existing list. 
-     * @return RemovedIPWhitelist The intermediate IPs removed from the existing list.
+     * Get The latest IP whitelist list has partially deleted entries compared with the current IP whitelist list. 
+     * @return RemovedIPWhitelist The latest IP whitelist list has partially deleted entries compared with the current IP whitelist list.
      */
     public IPWhitelist getRemovedIPWhitelist() {
         return this.RemovedIPWhitelist;
     }
 
     /**
-     * Set The intermediate IPs removed from the existing list.
-     * @param RemovedIPWhitelist The intermediate IPs removed from the existing list.
+     * Set The latest IP whitelist list has partially deleted entries compared with the current IP whitelist list.
+     * @param RemovedIPWhitelist The latest IP whitelist list has partially deleted entries compared with the current IP whitelist list.
      */
     public void setRemovedIPWhitelist(IPWhitelist RemovedIPWhitelist) {
         this.RemovedIPWhitelist = RemovedIPWhitelist;
     }
 
     /**
-     * Get The intermediate IPs that remain unchanged. 
-     * @return NoChangeIPWhitelist The intermediate IPs that remain unchanged.
+     * Get Unchanged part of the latest IP allowlist compared with the current IP allowlist. 
+     * @return NoChangeIPWhitelist Unchanged part of the latest IP allowlist compared with the current IP allowlist.
      */
     public IPWhitelist getNoChangeIPWhitelist() {
         return this.NoChangeIPWhitelist;
     }
 
     /**
-     * Set The intermediate IPs that remain unchanged.
-     * @param NoChangeIPWhitelist The intermediate IPs that remain unchanged.
+     * Set Unchanged part of the latest IP allowlist compared with the current IP allowlist.
+     * @param NoChangeIPWhitelist Unchanged part of the latest IP allowlist compared with the current IP allowlist.
      */
     public void setNoChangeIPWhitelist(IPWhitelist NoChangeIPWhitelist) {
         this.NoChangeIPWhitelist = NoChangeIPWhitelist;

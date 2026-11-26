@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateApplicationProxyResponse extends AbstractModel {
 
     /**
-    * The L4 application proxy ID.
+    * ID of the newly-added L4 proxy application.
     */
     @SerializedName("ProxyId")
     @Expose
@@ -38,16 +38,16 @@ public class CreateApplicationProxyResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get The L4 application proxy ID. 
-     * @return ProxyId The L4 application proxy ID.
+     * Get ID of the newly-added L4 proxy application. 
+     * @return ProxyId ID of the newly-added L4 proxy application.
      */
     public String getProxyId() {
         return this.ProxyId;
     }
 
     /**
-     * Set The L4 application proxy ID.
-     * @param ProxyId The L4 application proxy ID.
+     * Set ID of the newly-added L4 proxy application.
+     * @param ProxyId ID of the newly-added L4 proxy application.
      */
     public void setProxyId(String ProxyId) {
         this.ProxyId = ProxyId;

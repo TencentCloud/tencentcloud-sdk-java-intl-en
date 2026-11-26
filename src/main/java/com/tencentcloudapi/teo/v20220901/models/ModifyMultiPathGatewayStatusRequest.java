@@ -38,7 +38,7 @@ public class ModifyMultiPathGatewayStatusRequest extends AbstractModel {
     private String ZoneId;
 
     /**
-    * Modifies the enabled/disabled status of the gateway. valid values: <li> offline: disabled;</li> <li> online: enabled.</li>.
+    * Modify the enabled/disabled status of the gateway. Valid values: <li> offline: disabled;</li><li> online: enabled.</li>
     */
     @SerializedName("GatewayStatus")
     @Expose
@@ -77,16 +77,16 @@ public class ModifyMultiPathGatewayStatusRequest extends AbstractModel {
     }
 
     /**
-     * Get Modifies the enabled/disabled status of the gateway. valid values: <li> offline: disabled;</li> <li> online: enabled.</li>. 
-     * @return GatewayStatus Modifies the enabled/disabled status of the gateway. valid values: <li> offline: disabled;</li> <li> online: enabled.</li>.
+     * Get Modify the enabled/disabled status of the gateway. Valid values: <li> offline: disabled;</li><li> online: enabled.</li> 
+     * @return GatewayStatus Modify the enabled/disabled status of the gateway. Valid values: <li> offline: disabled;</li><li> online: enabled.</li>
      */
     public String getGatewayStatus() {
         return this.GatewayStatus;
     }
 
     /**
-     * Set Modifies the enabled/disabled status of the gateway. valid values: <li> offline: disabled;</li> <li> online: enabled.</li>.
-     * @param GatewayStatus Modifies the enabled/disabled status of the gateway. valid values: <li> offline: disabled;</li> <li> online: enabled.</li>.
+     * Set Modify the enabled/disabled status of the gateway. Valid values: <li> offline: disabled;</li><li> online: enabled.</li>
+     * @param GatewayStatus Modify the enabled/disabled status of the gateway. Valid values: <li> offline: disabled;</li><li> online: enabled.</li>
      */
     public void setGatewayStatus(String GatewayStatus) {
         this.GatewayStatus = GatewayStatus;

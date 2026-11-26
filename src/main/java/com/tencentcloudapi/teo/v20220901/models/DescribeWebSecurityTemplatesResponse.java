@@ -31,7 +31,7 @@ public class DescribeWebSecurityTemplatesResponse extends AbstractModel {
     private Long TotalCount;
 
     /**
-    * List of policy templates.
+    * Policy template list.
     */
     @SerializedName("SecurityPolicyTemplates")
     @Expose
@@ -61,16 +61,16 @@ public class DescribeWebSecurityTemplatesResponse extends AbstractModel {
     }
 
     /**
-     * Get List of policy templates. 
-     * @return SecurityPolicyTemplates List of policy templates.
+     * Get Policy template list. 
+     * @return SecurityPolicyTemplates Policy template list.
      */
     public SecurityPolicyTemplateInfo [] getSecurityPolicyTemplates() {
         return this.SecurityPolicyTemplates;
     }
 
     /**
-     * Set List of policy templates.
-     * @param SecurityPolicyTemplates List of policy templates.
+     * Set Policy template list.
+     * @param SecurityPolicyTemplates Policy template list.
      */
     public void setSecurityPolicyTemplates(SecurityPolicyTemplateInfo [] SecurityPolicyTemplates) {
         this.SecurityPolicyTemplates = SecurityPolicyTemplates;

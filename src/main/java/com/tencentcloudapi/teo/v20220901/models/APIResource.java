@@ -24,138 +24,138 @@ import java.util.HashMap;
 public class APIResource extends AbstractModel {
 
     /**
-    * Specifies the resource ID.
+    * Resource ID.
     */
     @SerializedName("Id")
     @Expose
     private String Id;
 
     /**
-    * Specifies the resource name.
+    * Resource name.
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * Specifies the API service ID list associated with the API resource.
+    * List of API service IDs associated with the API resource.
     */
     @SerializedName("APIServiceIds")
     @Expose
     private String [] APIServiceIds;
 
     /**
-    * Specifies the resource path.
+    * Resource path.
     */
     @SerializedName("Path")
     @Expose
     private String Path;
 
     /**
-    * Request method list. valid values: GET, POST, PUT, HEAD, PATCH, OPTIONS, DELETE.
+    * Request method list. Supports the following values: GET, POST, PUT, HEAD, PATCH, OPTIONS, DELETE.
     */
     @SerializedName("Methods")
     @Expose
     private String [] Methods;
 
     /**
-    * Specifies the specific content of the request content match rule, which must comply with the expression grammar. please refer to the product document for detailed requirements.
+    * Specific content of the request content matching rule. It must comply with the expression syntax. For detailed specifications, see the product document.
     */
     @SerializedName("RequestConstraint")
     @Expose
     private String RequestConstraint;
 
     /**
-     * Get Specifies the resource ID. 
-     * @return Id Specifies the resource ID.
+     * Get Resource ID. 
+     * @return Id Resource ID.
      */
     public String getId() {
         return this.Id;
     }
 
     /**
-     * Set Specifies the resource ID.
-     * @param Id Specifies the resource ID.
+     * Set Resource ID.
+     * @param Id Resource ID.
      */
     public void setId(String Id) {
         this.Id = Id;
     }
 
     /**
-     * Get Specifies the resource name. 
-     * @return Name Specifies the resource name.
+     * Get Resource name. 
+     * @return Name Resource name.
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Specifies the resource name.
-     * @param Name Specifies the resource name.
+     * Set Resource name.
+     * @param Name Resource name.
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Specifies the API service ID list associated with the API resource. 
-     * @return APIServiceIds Specifies the API service ID list associated with the API resource.
+     * Get List of API service IDs associated with the API resource. 
+     * @return APIServiceIds List of API service IDs associated with the API resource.
      */
     public String [] getAPIServiceIds() {
         return this.APIServiceIds;
     }
 
     /**
-     * Set Specifies the API service ID list associated with the API resource.
-     * @param APIServiceIds Specifies the API service ID list associated with the API resource.
+     * Set List of API service IDs associated with the API resource.
+     * @param APIServiceIds List of API service IDs associated with the API resource.
      */
     public void setAPIServiceIds(String [] APIServiceIds) {
         this.APIServiceIds = APIServiceIds;
     }
 
     /**
-     * Get Specifies the resource path. 
-     * @return Path Specifies the resource path.
+     * Get Resource path. 
+     * @return Path Resource path.
      */
     public String getPath() {
         return this.Path;
     }
 
     /**
-     * Set Specifies the resource path.
-     * @param Path Specifies the resource path.
+     * Set Resource path.
+     * @param Path Resource path.
      */
     public void setPath(String Path) {
         this.Path = Path;
     }
 
     /**
-     * Get Request method list. valid values: GET, POST, PUT, HEAD, PATCH, OPTIONS, DELETE. 
-     * @return Methods Request method list. valid values: GET, POST, PUT, HEAD, PATCH, OPTIONS, DELETE.
+     * Get Request method list. Supports the following values: GET, POST, PUT, HEAD, PATCH, OPTIONS, DELETE. 
+     * @return Methods Request method list. Supports the following values: GET, POST, PUT, HEAD, PATCH, OPTIONS, DELETE.
      */
     public String [] getMethods() {
         return this.Methods;
     }
 
     /**
-     * Set Request method list. valid values: GET, POST, PUT, HEAD, PATCH, OPTIONS, DELETE.
-     * @param Methods Request method list. valid values: GET, POST, PUT, HEAD, PATCH, OPTIONS, DELETE.
+     * Set Request method list. Supports the following values: GET, POST, PUT, HEAD, PATCH, OPTIONS, DELETE.
+     * @param Methods Request method list. Supports the following values: GET, POST, PUT, HEAD, PATCH, OPTIONS, DELETE.
      */
     public void setMethods(String [] Methods) {
         this.Methods = Methods;
     }
 
     /**
-     * Get Specifies the specific content of the request content match rule, which must comply with the expression grammar. please refer to the product document for detailed requirements. 
-     * @return RequestConstraint Specifies the specific content of the request content match rule, which must comply with the expression grammar. please refer to the product document for detailed requirements.
+     * Get Specific content of the request content matching rule. It must comply with the expression syntax. For detailed specifications, see the product document. 
+     * @return RequestConstraint Specific content of the request content matching rule. It must comply with the expression syntax. For detailed specifications, see the product document.
      */
     public String getRequestConstraint() {
         return this.RequestConstraint;
     }
 
     /**
-     * Set Specifies the specific content of the request content match rule, which must comply with the expression grammar. please refer to the product document for detailed requirements.
-     * @param RequestConstraint Specifies the specific content of the request content match rule, which must comply with the expression grammar. please refer to the product document for detailed requirements.
+     * Set Specific content of the request content matching rule. It must comply with the expression syntax. For detailed specifications, see the product document.
+     * @param RequestConstraint Specific content of the request content matching rule. It must comply with the expression syntax. For detailed specifications, see the product document.
      */
     public void setRequestConstraint(String RequestConstraint) {
         this.RequestConstraint = RequestConstraint;

@@ -31,31 +31,31 @@ public class CertificateInfo extends AbstractModel {
     private String CertId;
 
     /**
-    * Alias of the certificate.
+    * Certificate remark name.
     */
     @SerializedName("Alias")
     @Expose
     private String Alias;
 
     /**
-    * Type of the certificate. Values:
-<li>`default`: Default certificate</li>
-<li>`upload`: Specified certificate</li>
-<li>`managed`: Tencent Cloud-managed certificate</li>
+    * Certificate type. Valid values:
+<li>default: default certificate;</li>
+<li>upload: user upload;</li>
+<li>managed: Tencent Cloud hosted.</li>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * The certificate expiration time.
+    * Certificate expiration time.
     */
     @SerializedName("ExpireTime")
     @Expose
     private String ExpireTime;
 
     /**
-    * Time when the certificate is deployed.
+    * Deployment time of the certificate.
     */
     @SerializedName("DeployTime")
     @Expose
@@ -69,12 +69,12 @@ public class CertificateInfo extends AbstractModel {
     private String SignAlgo;
 
     /**
-    * Status of the certificate. Values:
-u200c<li>`deployed`: The deployment has completed</li>
-u200c<li>`processing`: Deployment in progress</li>
-u200c<li>`applying`: Application in progress</li>
-u200c<li>`failed`: Application rejected</li>
-<li>`issued`: Binding failed.</li>
+    * Certificate status. Valid values:
+<li>deployed: Deployed;</li>
+<li>processing: deploying;</li>
+<li>applying: application in progress.</li>
+<li>failed: Application failed;</li>
+<li>issued: failed to bind.</li>
     */
     @SerializedName("Status")
     @Expose
@@ -97,76 +97,76 @@ u200c<li>`failed`: Application rejected</li>
     }
 
     /**
-     * Get Alias of the certificate. 
-     * @return Alias Alias of the certificate.
+     * Get Certificate remark name. 
+     * @return Alias Certificate remark name.
      */
     public String getAlias() {
         return this.Alias;
     }
 
     /**
-     * Set Alias of the certificate.
-     * @param Alias Alias of the certificate.
+     * Set Certificate remark name.
+     * @param Alias Certificate remark name.
      */
     public void setAlias(String Alias) {
         this.Alias = Alias;
     }
 
     /**
-     * Get Type of the certificate. Values:
-<li>`default`: Default certificate</li>
-<li>`upload`: Specified certificate</li>
-<li>`managed`: Tencent Cloud-managed certificate</li> 
-     * @return Type Type of the certificate. Values:
-<li>`default`: Default certificate</li>
-<li>`upload`: Specified certificate</li>
-<li>`managed`: Tencent Cloud-managed certificate</li>
+     * Get Certificate type. Valid values:
+<li>default: default certificate;</li>
+<li>upload: user upload;</li>
+<li>managed: Tencent Cloud hosted.</li> 
+     * @return Type Certificate type. Valid values:
+<li>default: default certificate;</li>
+<li>upload: user upload;</li>
+<li>managed: Tencent Cloud hosted.</li>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Type of the certificate. Values:
-<li>`default`: Default certificate</li>
-<li>`upload`: Specified certificate</li>
-<li>`managed`: Tencent Cloud-managed certificate</li>
-     * @param Type Type of the certificate. Values:
-<li>`default`: Default certificate</li>
-<li>`upload`: Specified certificate</li>
-<li>`managed`: Tencent Cloud-managed certificate</li>
+     * Set Certificate type. Valid values:
+<li>default: default certificate;</li>
+<li>upload: user upload;</li>
+<li>managed: Tencent Cloud hosted.</li>
+     * @param Type Certificate type. Valid values:
+<li>default: default certificate;</li>
+<li>upload: user upload;</li>
+<li>managed: Tencent Cloud hosted.</li>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get The certificate expiration time. 
-     * @return ExpireTime The certificate expiration time.
+     * Get Certificate expiration time. 
+     * @return ExpireTime Certificate expiration time.
      */
     public String getExpireTime() {
         return this.ExpireTime;
     }
 
     /**
-     * Set The certificate expiration time.
-     * @param ExpireTime The certificate expiration time.
+     * Set Certificate expiration time.
+     * @param ExpireTime Certificate expiration time.
      */
     public void setExpireTime(String ExpireTime) {
         this.ExpireTime = ExpireTime;
     }
 
     /**
-     * Get Time when the certificate is deployed. 
-     * @return DeployTime Time when the certificate is deployed.
+     * Get Deployment time of the certificate. 
+     * @return DeployTime Deployment time of the certificate.
      */
     public String getDeployTime() {
         return this.DeployTime;
     }
 
     /**
-     * Set Time when the certificate is deployed.
-     * @param DeployTime Time when the certificate is deployed.
+     * Set Deployment time of the certificate.
+     * @param DeployTime Deployment time of the certificate.
      */
     public void setDeployTime(String DeployTime) {
         this.DeployTime = DeployTime;
@@ -189,36 +189,36 @@ u200c<li>`failed`: Application rejected</li>
     }
 
     /**
-     * Get Status of the certificate. Values:
-u200c<li>`deployed`: The deployment has completed</li>
-u200c<li>`processing`: Deployment in progress</li>
-u200c<li>`applying`: Application in progress</li>
-u200c<li>`failed`: Application rejected</li>
-<li>`issued`: Binding failed.</li> 
-     * @return Status Status of the certificate. Values:
-u200c<li>`deployed`: The deployment has completed</li>
-u200c<li>`processing`: Deployment in progress</li>
-u200c<li>`applying`: Application in progress</li>
-u200c<li>`failed`: Application rejected</li>
-<li>`issued`: Binding failed.</li>
+     * Get Certificate status. Valid values:
+<li>deployed: Deployed;</li>
+<li>processing: deploying;</li>
+<li>applying: application in progress.</li>
+<li>failed: Application failed;</li>
+<li>issued: failed to bind.</li> 
+     * @return Status Certificate status. Valid values:
+<li>deployed: Deployed;</li>
+<li>processing: deploying;</li>
+<li>applying: application in progress.</li>
+<li>failed: Application failed;</li>
+<li>issued: failed to bind.</li>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Status of the certificate. Values:
-u200c<li>`deployed`: The deployment has completed</li>
-u200c<li>`processing`: Deployment in progress</li>
-u200c<li>`applying`: Application in progress</li>
-u200c<li>`failed`: Application rejected</li>
-<li>`issued`: Binding failed.</li>
-     * @param Status Status of the certificate. Values:
-u200c<li>`deployed`: The deployment has completed</li>
-u200c<li>`processing`: Deployment in progress</li>
-u200c<li>`applying`: Application in progress</li>
-u200c<li>`failed`: Application rejected</li>
-<li>`issued`: Binding failed.</li>
+     * Set Certificate status. Valid values:
+<li>deployed: Deployed;</li>
+<li>processing: deploying;</li>
+<li>applying: application in progress.</li>
+<li>failed: Application failed;</li>
+<li>issued: failed to bind.</li>
+     * @param Status Certificate status. Valid values:
+<li>deployed: Deployed;</li>
+<li>processing: deploying;</li>
+<li>applying: application in progress.</li>
+<li>failed: Application failed;</li>
+<li>issued: failed to bind.</li>
      */
     public void setStatus(String Status) {
         this.Status = Status;

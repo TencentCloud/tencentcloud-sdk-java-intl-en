@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class DescribeOriginProtectionResponse extends AbstractModel {
 
     /**
-    * Origin protection configuration.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+    * Origin protection information.
     */
     @SerializedName("OriginProtectionInfo")
     @Expose
@@ -39,20 +38,16 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     private String RequestId;
 
     /**
-     * Get Origin protection configuration.
-Note: This field may return `null`, indicating that no valid values can be obtained. 
-     * @return OriginProtectionInfo Origin protection configuration.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * Get Origin protection information. 
+     * @return OriginProtectionInfo Origin protection information.
      */
     public OriginProtectionInfo [] getOriginProtectionInfo() {
         return this.OriginProtectionInfo;
     }
 
     /**
-     * Set Origin protection configuration.
-Note: This field may return `null`, indicating that no valid values can be obtained.
-     * @param OriginProtectionInfo Origin protection configuration.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * Set Origin protection information.
+     * @param OriginProtectionInfo Origin protection information.
      */
     public void setOriginProtectionInfo(OriginProtectionInfo [] OriginProtectionInfo) {
         this.OriginProtectionInfo = OriginProtectionInfo;

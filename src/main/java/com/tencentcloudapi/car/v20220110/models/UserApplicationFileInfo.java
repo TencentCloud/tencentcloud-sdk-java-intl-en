@@ -25,25 +25,21 @@ public class UserApplicationFileInfo extends AbstractModel {
 
     /**
     * Application file path.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("FilePath")
     @Expose
     private String FilePath;
 
     /**
-    * File status. NO_EXIST: The file does not exist; EXIST: The file exists.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * File status. NO_EXIST: not EXIST; EXIST: exist.
     */
     @SerializedName("FileState")
     @Expose
     private String FileState;
 
     /**
-     * Get Application file path.
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Application file path. 
      * @return FilePath Application file path.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getFilePath() {
         return this.FilePath;
@@ -51,29 +47,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Application file path.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param FilePath Application file path.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setFilePath(String FilePath) {
         this.FilePath = FilePath;
     }
 
     /**
-     * Get File status. NO_EXIST: The file does not exist; EXIST: The file exists.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return FileState File status. NO_EXIST: The file does not exist; EXIST: The file exists.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get File status. NO_EXIST: not EXIST; EXIST: exist. 
+     * @return FileState File status. NO_EXIST: not EXIST; EXIST: exist.
      */
     public String getFileState() {
         return this.FileState;
     }
 
     /**
-     * Set File status. NO_EXIST: The file does not exist; EXIST: The file exists.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param FileState File status. NO_EXIST: The file does not exist; EXIST: The file exists.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set File status. NO_EXIST: not EXIST; EXIST: exist.
+     * @param FileState File status. NO_EXIST: not EXIST; EXIST: exist.
      */
     public void setFileState(String FileState) {
         this.FileState = FileState;

@@ -24,33 +24,33 @@ import java.util.HashMap;
 public class AccessURLRedirectQueryString extends AbstractModel {
 
     /**
-    * Action to be executed. values:.
-<Li>`Full`: retain all</li>.
-<Li>`Ignore`: ignore all</li>.
+    * Execution action. Valid values:
+<li>full: retain all;</li>
+<li>ignore: Ignore all.</li>
     */
     @SerializedName("Action")
     @Expose
     private String Action;
 
     /**
-     * Get Action to be executed. values:.
-<Li>`Full`: retain all</li>.
-<Li>`Ignore`: ignore all</li>. 
-     * @return Action Action to be executed. values:.
-<Li>`Full`: retain all</li>.
-<Li>`Ignore`: ignore all</li>.
+     * Get Execution action. Valid values:
+<li>full: retain all;</li>
+<li>ignore: Ignore all.</li> 
+     * @return Action Execution action. Valid values:
+<li>full: retain all;</li>
+<li>ignore: Ignore all.</li>
      */
     public String getAction() {
         return this.Action;
     }
 
     /**
-     * Set Action to be executed. values:.
-<Li>`Full`: retain all</li>.
-<Li>`Ignore`: ignore all</li>.
-     * @param Action Action to be executed. values:.
-<Li>`Full`: retain all</li>.
-<Li>`Ignore`: ignore all</li>.
+     * Set Execution action. Valid values:
+<li>full: retain all;</li>
+<li>ignore: Ignore all.</li>
+     * @param Action Execution action. Valid values:
+<li>full: retain all;</li>
+<li>ignore: Ignore all.</li>
      */
     public void setAction(String Action) {
         this.Action = Action;
