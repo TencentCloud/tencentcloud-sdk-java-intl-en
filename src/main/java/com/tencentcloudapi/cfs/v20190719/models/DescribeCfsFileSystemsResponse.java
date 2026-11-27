@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeCfsFileSystemsResponse extends AbstractModel {
 
     /**
-    * File system information
+    * <p>File system information</p>
     */
     @SerializedName("FileSystems")
     @Expose
     private FileSystemInfo [] FileSystems;
 
     /**
-    * Total number of file systems
+    * <p>Total number of file systems</p>
     */
     @SerializedName("TotalCount")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeCfsFileSystemsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get File system information 
-     * @return FileSystems File system information
+     * Get <p>File system information</p> 
+     * @return FileSystems <p>File system information</p>
      */
     public FileSystemInfo [] getFileSystems() {
         return this.FileSystems;
     }
 
     /**
-     * Set File system information
-     * @param FileSystems File system information
+     * Set <p>File system information</p>
+     * @param FileSystems <p>File system information</p>
      */
     public void setFileSystems(FileSystemInfo [] FileSystems) {
         this.FileSystems = FileSystems;
     }
 
     /**
-     * Get Total number of file systems 
-     * @return TotalCount Total number of file systems
+     * Get <p>Total number of file systems</p> 
+     * @return TotalCount <p>Total number of file systems</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Total number of file systems
-     * @param TotalCount Total number of file systems
+     * Set <p>Total number of file systems</p>
+     * @param TotalCount <p>Total number of file systems</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

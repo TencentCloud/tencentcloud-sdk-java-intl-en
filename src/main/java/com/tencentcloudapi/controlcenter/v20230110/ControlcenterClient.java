@@ -61,7 +61,7 @@ public class ControlcenterClient extends AbstractClient{
     }
 
     /**
-     *This API is used to obtain account factory system baseline items.
+     *This API is used to obtain Account Factory system baseline items.
      * @param req ListAccountFactoryBaselineItemsRequest
      * @return ListAccountFactoryBaselineItemsResponse
      * @throws TencentCloudSDKException

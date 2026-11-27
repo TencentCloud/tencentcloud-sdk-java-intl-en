@@ -61,6 +61,17 @@ public class CfsClient extends AbstractClient{
     }
 
     /**
+     *This API is used to create an automatic data deletion policy for a specified CFS file system.
+     * @param req CreateAutoDeletePolicyRequest
+     * @return CreateAutoDeletePolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateAutoDeletePolicyResponse CreateAutoDeletePolicy(CreateAutoDeletePolicyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateAutoDeletePolicy", CreateAutoDeletePolicyResponse.class);
+    }
+
+    /**
      *This API is used to create a scheduled snapshot policy.
      * @param req CreateAutoSnapshotPolicyRequest
      * @return CreateAutoSnapshotPolicyResponse
@@ -127,6 +138,17 @@ public class CfsClient extends AbstractClient{
     }
 
     /**
+     *This API is used to create data retrieval.
+     * @param req CreateDataRetrievalRequest
+     * @return CreateDataRetrievalResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateDataRetrievalResponse CreateDataRetrieval(CreateDataRetrievalRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateDataRetrieval", CreateDataRetrievalResponse.class);
+    }
+
+    /**
      *Support proactive settlement/preheat API.
      * @param req CreateLifecycleDataTaskRequest
      * @return CreateLifecycleDataTaskResponse
@@ -168,6 +190,17 @@ public class CfsClient extends AbstractClient{
     public CreateMigrationTaskResponse CreateMigrationTask(CreateMigrationTaskRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateMigrationTask", CreateMigrationTaskResponse.class);
+    }
+
+    /**
+     *This API is used to delete a specified automatic deletion policy.
+     * @param req DeleteAutoDeletePolicyRequest
+     * @return DeleteAutoDeletePolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteAutoDeletePolicyResponse DeleteAutoDeletePolicy(DeleteAutoDeletePolicyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteAutoDeletePolicy", DeleteAutoDeletePolicyResponse.class);
     }
 
     /**
@@ -237,6 +270,19 @@ public class CfsClient extends AbstractClient{
     }
 
     /**
+     *This API is used to delete data retrieval.
+
+This API is used to delete a specified data retrieval configuration. Deletion is not allowed when associated tasks exist. After this API is called, if the corresponding data retrieval cannot be found through the DescribeDataRetrieval API, the deletion is successful.
+     * @param req DeleteDataRetrievalRequest
+     * @return DeleteDataRetrievalResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteDataRetrievalResponse DeleteDataRetrieval(DeleteDataRetrievalRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteDataRetrieval", DeleteDataRetrievalResponse.class);
+    }
+
+    /**
      *Delete a lifecycle management policy.
      * @param req DeleteLifecyclePolicyRequest
      * @return DeleteLifecyclePolicyResponse
@@ -256,6 +302,17 @@ public class CfsClient extends AbstractClient{
     public DeleteMigrationTaskResponse DeleteMigrationTask(DeleteMigrationTaskRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteMigrationTask", DeleteMigrationTaskResponse.class);
+    }
+
+    /**
+     *This API is used to query the list of automatic data deletion policies.
+     * @param req DescribeAutoDeletePoliciesRequest
+     * @return DescribeAutoDeletePoliciesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAutoDeletePoliciesResponse DescribeAutoDeletePolicies(DescribeAutoDeletePoliciesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAutoDeletePolicies", DescribeAutoDeletePoliciesResponse.class);
     }
 
     /**
@@ -444,6 +501,17 @@ To use this API, submit a ticket for us to add you to the allowlist.
     public DoDirectoryOperationResponse DoDirectoryOperation(DoDirectoryOperationRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DoDirectoryOperation", DoDirectoryOperationResponse.class);
+    }
+
+    /**
+     *This API is used to modify the name or cleanup path of an automatic deletion policy.
+     * @param req ModifyAutoDeletePolicyRequest
+     * @return ModifyAutoDeletePolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyAutoDeletePolicyResponse ModifyAutoDeletePolicy(ModifyAutoDeletePolicyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyAutoDeletePolicy", ModifyAutoDeletePolicyResponse.class);
     }
 
     /**

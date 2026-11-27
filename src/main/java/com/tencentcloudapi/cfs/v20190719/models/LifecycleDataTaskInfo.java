@@ -24,510 +24,463 @@ import java.util.HashMap;
 public class LifecycleDataTaskInfo extends AbstractModel {
 
     /**
-    * Task ID.
+    * <p>Task ID.</p>
     */
     @SerializedName("TaskId")
     @Expose
     private String TaskId;
 
     /**
-    * Task status.
-init: pending.
-running: executing, finished: completed.
-failed: failure.
-Stopping: stopping, stopped: stopped.
+    * <p>Task status.</p><p>Valid values:</p><ul><li>init: queuing</li><li>running: running</li><li>finished: completed</li><li>failed: failed</li><li>stopping: stopping</li><li>stopped: stopped</li></ul>
     */
     @SerializedName("TaskStatus")
     @Expose
     private String TaskStatus;
 
     /**
-    * Task creation time
+    * <p>Task creation time</p>
     */
     @SerializedName("CreationTime")
     @Expose
     private String CreationTime;
 
     /**
-    * Task end time.
+    * <p>Task end time</p>
     */
     @SerializedName("FinishTime")
     @Expose
     private String FinishTime;
 
     /**
-    * Total files.
+    * <p>Total number of files</p>
     */
     @SerializedName("FileTotalCount")
     @Expose
     private Long FileTotalCount;
 
     /**
-    * Number of successfully processed files.
+    * <p>Number of files processed successfully</p>
     */
     @SerializedName("FileSuccessedCount")
     @Expose
     private Long FileSuccessedCount;
 
     /**
-    * Number of failed files.
+    * <p>Number of files that have failed</p>
     */
     @SerializedName("FileFailedCount")
     @Expose
     private Long FileFailedCount;
 
     /**
-    * File capacity, in Byte.
-
-
+    * <p>File size, in bytes</p>
     */
     @SerializedName("FileTotalSize")
     @Expose
     private Long FileTotalSize;
 
     /**
-    * Processed file capacity, in Byte.
-
-
+    * <p>Size of processed files, in bytes</p>
     */
     @SerializedName("FileSuccessedSize")
     @Expose
     private Long FileSuccessedSize;
 
     /**
-    * Capacity of processed failed files, in Byte.
-
+    * <p>Size of failed files, in bytes</p>
     */
     @SerializedName("FileFailedSize")
     @Expose
     private Long FileFailedSize;
 
     /**
-    * Total file list.
+    * <p>Total file list.</p>
     */
     @SerializedName("FileTotalList")
     @Expose
     private String FileTotalList;
 
     /**
-    * List of successful files.
+    * <p>List of successful files.</p>
     */
     @SerializedName("FileSuccessedList")
     @Expose
     private String FileSuccessedList;
 
     /**
-    * List of failed files.
+    * <p>List of failed files.</p>
     */
     @SerializedName("FileFailedList")
     @Expose
     private String FileFailedList;
 
     /**
-    * FileSystemId
+    * <p>FileSystemId</p>
     */
     @SerializedName("FileSystemId")
     @Expose
     private String FileSystemId;
 
     /**
-    * Task name.
+    * <p>Task name.</p>
     */
     @SerializedName("TaskName")
     @Expose
     private String TaskName;
 
     /**
-    * Task path.
+    * <p>Task path.</p>
     */
     @SerializedName("TaskPath")
     @Expose
     private String TaskPath;
 
     /**
-    * Task type, archive: indicates settlement task, restore: indicates pull task.
+    * <p>Task type. archive: an archiving task. restore: a retrieval task.</p>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * Data flow Id.
+    * <p>Data flow Id.</p>
     */
     @SerializedName("DataFlowId")
     @Expose
     private String DataFlowId;
 
     /**
-    * When a file in CFSTurbo and an external storage have the same name, whether to overwrite.
-
-Override.
-
-false: not overwrite (at the same time, it does not release hot data storage).
-Default false when empty.
+    * <p>Whether to overwrite files with the same name in CFS Turbo and external storage.</p><p>true: Overwrite.</p><p>false: Do not overwrite (and hot storage data will not be released).<br>If this parameter is left empty, the default value is false.</p>
     */
     @SerializedName("IsOverwrite")
     @Expose
     private Boolean IsOverwrite;
 
     /**
-     * Get Task ID. 
-     * @return TaskId Task ID.
+    * <p>Path of the data manifest file. Each line in the manifest file is the full path of a file to be processed. All paths (including the manifest file path and the paths of files to be processed in each line of the manifest file) must start with /cfs and point to existing files in the CFS file system. This parameter and TaskPath are alternative. <br>Example:</p><ul><li>If the CFS root directory / is mounted and the manifest file is located at lists/archive_list.txt under the mount path, set this parameter to /cfs/lists/archive_list.txt.</li><li>If the CFS subdirectory /subdir is mounted and the manifest file is located at lists/archive_list.txt under the mount path, set this parameter to /cfs/subdir/lists/archive_list.txt.</li></ul>
+    */
+    @SerializedName("ListPath")
+    @Expose
+    private String ListPath;
+
+    /**
+     * Get <p>Task ID.</p> 
+     * @return TaskId <p>Task ID.</p>
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set Task ID.
-     * @param TaskId Task ID.
+     * Set <p>Task ID.</p>
+     * @param TaskId <p>Task ID.</p>
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * Get Task status.
-init: pending.
-running: executing, finished: completed.
-failed: failure.
-Stopping: stopping, stopped: stopped. 
-     * @return TaskStatus Task status.
-init: pending.
-running: executing, finished: completed.
-failed: failure.
-Stopping: stopping, stopped: stopped.
+     * Get <p>Task status.</p><p>Valid values:</p><ul><li>init: queuing</li><li>running: running</li><li>finished: completed</li><li>failed: failed</li><li>stopping: stopping</li><li>stopped: stopped</li></ul> 
+     * @return TaskStatus <p>Task status.</p><p>Valid values:</p><ul><li>init: queuing</li><li>running: running</li><li>finished: completed</li><li>failed: failed</li><li>stopping: stopping</li><li>stopped: stopped</li></ul>
      */
     public String getTaskStatus() {
         return this.TaskStatus;
     }
 
     /**
-     * Set Task status.
-init: pending.
-running: executing, finished: completed.
-failed: failure.
-Stopping: stopping, stopped: stopped.
-     * @param TaskStatus Task status.
-init: pending.
-running: executing, finished: completed.
-failed: failure.
-Stopping: stopping, stopped: stopped.
+     * Set <p>Task status.</p><p>Valid values:</p><ul><li>init: queuing</li><li>running: running</li><li>finished: completed</li><li>failed: failed</li><li>stopping: stopping</li><li>stopped: stopped</li></ul>
+     * @param TaskStatus <p>Task status.</p><p>Valid values:</p><ul><li>init: queuing</li><li>running: running</li><li>finished: completed</li><li>failed: failed</li><li>stopping: stopping</li><li>stopped: stopped</li></ul>
      */
     public void setTaskStatus(String TaskStatus) {
         this.TaskStatus = TaskStatus;
     }
 
     /**
-     * Get Task creation time 
-     * @return CreationTime Task creation time
+     * Get <p>Task creation time</p> 
+     * @return CreationTime <p>Task creation time</p>
      */
     public String getCreationTime() {
         return this.CreationTime;
     }
 
     /**
-     * Set Task creation time
-     * @param CreationTime Task creation time
+     * Set <p>Task creation time</p>
+     * @param CreationTime <p>Task creation time</p>
      */
     public void setCreationTime(String CreationTime) {
         this.CreationTime = CreationTime;
     }
 
     /**
-     * Get Task end time. 
-     * @return FinishTime Task end time.
+     * Get <p>Task end time</p> 
+     * @return FinishTime <p>Task end time</p>
      */
     public String getFinishTime() {
         return this.FinishTime;
     }
 
     /**
-     * Set Task end time.
-     * @param FinishTime Task end time.
+     * Set <p>Task end time</p>
+     * @param FinishTime <p>Task end time</p>
      */
     public void setFinishTime(String FinishTime) {
         this.FinishTime = FinishTime;
     }
 
     /**
-     * Get Total files. 
-     * @return FileTotalCount Total files.
+     * Get <p>Total number of files</p> 
+     * @return FileTotalCount <p>Total number of files</p>
      */
     public Long getFileTotalCount() {
         return this.FileTotalCount;
     }
 
     /**
-     * Set Total files.
-     * @param FileTotalCount Total files.
+     * Set <p>Total number of files</p>
+     * @param FileTotalCount <p>Total number of files</p>
      */
     public void setFileTotalCount(Long FileTotalCount) {
         this.FileTotalCount = FileTotalCount;
     }
 
     /**
-     * Get Number of successfully processed files. 
-     * @return FileSuccessedCount Number of successfully processed files.
+     * Get <p>Number of files processed successfully</p> 
+     * @return FileSuccessedCount <p>Number of files processed successfully</p>
      */
     public Long getFileSuccessedCount() {
         return this.FileSuccessedCount;
     }
 
     /**
-     * Set Number of successfully processed files.
-     * @param FileSuccessedCount Number of successfully processed files.
+     * Set <p>Number of files processed successfully</p>
+     * @param FileSuccessedCount <p>Number of files processed successfully</p>
      */
     public void setFileSuccessedCount(Long FileSuccessedCount) {
         this.FileSuccessedCount = FileSuccessedCount;
     }
 
     /**
-     * Get Number of failed files. 
-     * @return FileFailedCount Number of failed files.
+     * Get <p>Number of files that have failed</p> 
+     * @return FileFailedCount <p>Number of files that have failed</p>
      */
     public Long getFileFailedCount() {
         return this.FileFailedCount;
     }
 
     /**
-     * Set Number of failed files.
-     * @param FileFailedCount Number of failed files.
+     * Set <p>Number of files that have failed</p>
+     * @param FileFailedCount <p>Number of files that have failed</p>
      */
     public void setFileFailedCount(Long FileFailedCount) {
         this.FileFailedCount = FileFailedCount;
     }
 
     /**
-     * Get File capacity, in Byte.
-
- 
-     * @return FileTotalSize File capacity, in Byte.
-
-
+     * Get <p>File size, in bytes</p> 
+     * @return FileTotalSize <p>File size, in bytes</p>
      */
     public Long getFileTotalSize() {
         return this.FileTotalSize;
     }
 
     /**
-     * Set File capacity, in Byte.
-
-
-     * @param FileTotalSize File capacity, in Byte.
-
-
+     * Set <p>File size, in bytes</p>
+     * @param FileTotalSize <p>File size, in bytes</p>
      */
     public void setFileTotalSize(Long FileTotalSize) {
         this.FileTotalSize = FileTotalSize;
     }
 
     /**
-     * Get Processed file capacity, in Byte.
-
- 
-     * @return FileSuccessedSize Processed file capacity, in Byte.
-
-
+     * Get <p>Size of processed files, in bytes</p> 
+     * @return FileSuccessedSize <p>Size of processed files, in bytes</p>
      */
     public Long getFileSuccessedSize() {
         return this.FileSuccessedSize;
     }
 
     /**
-     * Set Processed file capacity, in Byte.
-
-
-     * @param FileSuccessedSize Processed file capacity, in Byte.
-
-
+     * Set <p>Size of processed files, in bytes</p>
+     * @param FileSuccessedSize <p>Size of processed files, in bytes</p>
      */
     public void setFileSuccessedSize(Long FileSuccessedSize) {
         this.FileSuccessedSize = FileSuccessedSize;
     }
 
     /**
-     * Get Capacity of processed failed files, in Byte.
- 
-     * @return FileFailedSize Capacity of processed failed files, in Byte.
-
+     * Get <p>Size of failed files, in bytes</p> 
+     * @return FileFailedSize <p>Size of failed files, in bytes</p>
      */
     public Long getFileFailedSize() {
         return this.FileFailedSize;
     }
 
     /**
-     * Set Capacity of processed failed files, in Byte.
-
-     * @param FileFailedSize Capacity of processed failed files, in Byte.
-
+     * Set <p>Size of failed files, in bytes</p>
+     * @param FileFailedSize <p>Size of failed files, in bytes</p>
      */
     public void setFileFailedSize(Long FileFailedSize) {
         this.FileFailedSize = FileFailedSize;
     }
 
     /**
-     * Get Total file list. 
-     * @return FileTotalList Total file list.
+     * Get <p>Total file list.</p> 
+     * @return FileTotalList <p>Total file list.</p>
      */
     public String getFileTotalList() {
         return this.FileTotalList;
     }
 
     /**
-     * Set Total file list.
-     * @param FileTotalList Total file list.
+     * Set <p>Total file list.</p>
+     * @param FileTotalList <p>Total file list.</p>
      */
     public void setFileTotalList(String FileTotalList) {
         this.FileTotalList = FileTotalList;
     }
 
     /**
-     * Get List of successful files. 
-     * @return FileSuccessedList List of successful files.
+     * Get <p>List of successful files.</p> 
+     * @return FileSuccessedList <p>List of successful files.</p>
      */
     public String getFileSuccessedList() {
         return this.FileSuccessedList;
     }
 
     /**
-     * Set List of successful files.
-     * @param FileSuccessedList List of successful files.
+     * Set <p>List of successful files.</p>
+     * @param FileSuccessedList <p>List of successful files.</p>
      */
     public void setFileSuccessedList(String FileSuccessedList) {
         this.FileSuccessedList = FileSuccessedList;
     }
 
     /**
-     * Get List of failed files. 
-     * @return FileFailedList List of failed files.
+     * Get <p>List of failed files.</p> 
+     * @return FileFailedList <p>List of failed files.</p>
      */
     public String getFileFailedList() {
         return this.FileFailedList;
     }
 
     /**
-     * Set List of failed files.
-     * @param FileFailedList List of failed files.
+     * Set <p>List of failed files.</p>
+     * @param FileFailedList <p>List of failed files.</p>
      */
     public void setFileFailedList(String FileFailedList) {
         this.FileFailedList = FileFailedList;
     }
 
     /**
-     * Get FileSystemId 
-     * @return FileSystemId FileSystemId
+     * Get <p>FileSystemId</p> 
+     * @return FileSystemId <p>FileSystemId</p>
      */
     public String getFileSystemId() {
         return this.FileSystemId;
     }
 
     /**
-     * Set FileSystemId
-     * @param FileSystemId FileSystemId
+     * Set <p>FileSystemId</p>
+     * @param FileSystemId <p>FileSystemId</p>
      */
     public void setFileSystemId(String FileSystemId) {
         this.FileSystemId = FileSystemId;
     }
 
     /**
-     * Get Task name. 
-     * @return TaskName Task name.
+     * Get <p>Task name.</p> 
+     * @return TaskName <p>Task name.</p>
      */
     public String getTaskName() {
         return this.TaskName;
     }
 
     /**
-     * Set Task name.
-     * @param TaskName Task name.
+     * Set <p>Task name.</p>
+     * @param TaskName <p>Task name.</p>
      */
     public void setTaskName(String TaskName) {
         this.TaskName = TaskName;
     }
 
     /**
-     * Get Task path. 
-     * @return TaskPath Task path.
+     * Get <p>Task path.</p> 
+     * @return TaskPath <p>Task path.</p>
      */
     public String getTaskPath() {
         return this.TaskPath;
     }
 
     /**
-     * Set Task path.
-     * @param TaskPath Task path.
+     * Set <p>Task path.</p>
+     * @param TaskPath <p>Task path.</p>
      */
     public void setTaskPath(String TaskPath) {
         this.TaskPath = TaskPath;
     }
 
     /**
-     * Get Task type, archive: indicates settlement task, restore: indicates pull task. 
-     * @return Type Task type, archive: indicates settlement task, restore: indicates pull task.
+     * Get <p>Task type. archive: an archiving task. restore: a retrieval task.</p> 
+     * @return Type <p>Task type. archive: an archiving task. restore: a retrieval task.</p>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Task type, archive: indicates settlement task, restore: indicates pull task.
-     * @param Type Task type, archive: indicates settlement task, restore: indicates pull task.
+     * Set <p>Task type. archive: an archiving task. restore: a retrieval task.</p>
+     * @param Type <p>Task type. archive: an archiving task. restore: a retrieval task.</p>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get Data flow Id. 
-     * @return DataFlowId Data flow Id.
+     * Get <p>Data flow Id.</p> 
+     * @return DataFlowId <p>Data flow Id.</p>
      */
     public String getDataFlowId() {
         return this.DataFlowId;
     }
 
     /**
-     * Set Data flow Id.
-     * @param DataFlowId Data flow Id.
+     * Set <p>Data flow Id.</p>
+     * @param DataFlowId <p>Data flow Id.</p>
      */
     public void setDataFlowId(String DataFlowId) {
         this.DataFlowId = DataFlowId;
     }
 
     /**
-     * Get When a file in CFSTurbo and an external storage have the same name, whether to overwrite.
-
-Override.
-
-false: not overwrite (at the same time, it does not release hot data storage).
-Default false when empty. 
-     * @return IsOverwrite When a file in CFSTurbo and an external storage have the same name, whether to overwrite.
-
-Override.
-
-false: not overwrite (at the same time, it does not release hot data storage).
-Default false when empty.
+     * Get <p>Whether to overwrite files with the same name in CFS Turbo and external storage.</p><p>true: Overwrite.</p><p>false: Do not overwrite (and hot storage data will not be released).<br>If this parameter is left empty, the default value is false.</p> 
+     * @return IsOverwrite <p>Whether to overwrite files with the same name in CFS Turbo and external storage.</p><p>true: Overwrite.</p><p>false: Do not overwrite (and hot storage data will not be released).<br>If this parameter is left empty, the default value is false.</p>
      */
     public Boolean getIsOverwrite() {
         return this.IsOverwrite;
     }
 
     /**
-     * Set When a file in CFSTurbo and an external storage have the same name, whether to overwrite.
-
-Override.
-
-false: not overwrite (at the same time, it does not release hot data storage).
-Default false when empty.
-     * @param IsOverwrite When a file in CFSTurbo and an external storage have the same name, whether to overwrite.
-
-Override.
-
-false: not overwrite (at the same time, it does not release hot data storage).
-Default false when empty.
+     * Set <p>Whether to overwrite files with the same name in CFS Turbo and external storage.</p><p>true: Overwrite.</p><p>false: Do not overwrite (and hot storage data will not be released).<br>If this parameter is left empty, the default value is false.</p>
+     * @param IsOverwrite <p>Whether to overwrite files with the same name in CFS Turbo and external storage.</p><p>true: Overwrite.</p><p>false: Do not overwrite (and hot storage data will not be released).<br>If this parameter is left empty, the default value is false.</p>
      */
     public void setIsOverwrite(Boolean IsOverwrite) {
         this.IsOverwrite = IsOverwrite;
+    }
+
+    /**
+     * Get <p>Path of the data manifest file. Each line in the manifest file is the full path of a file to be processed. All paths (including the manifest file path and the paths of files to be processed in each line of the manifest file) must start with /cfs and point to existing files in the CFS file system. This parameter and TaskPath are alternative. <br>Example:</p><ul><li>If the CFS root directory / is mounted and the manifest file is located at lists/archive_list.txt under the mount path, set this parameter to /cfs/lists/archive_list.txt.</li><li>If the CFS subdirectory /subdir is mounted and the manifest file is located at lists/archive_list.txt under the mount path, set this parameter to /cfs/subdir/lists/archive_list.txt.</li></ul> 
+     * @return ListPath <p>Path of the data manifest file. Each line in the manifest file is the full path of a file to be processed. All paths (including the manifest file path and the paths of files to be processed in each line of the manifest file) must start with /cfs and point to existing files in the CFS file system. This parameter and TaskPath are alternative. <br>Example:</p><ul><li>If the CFS root directory / is mounted and the manifest file is located at lists/archive_list.txt under the mount path, set this parameter to /cfs/lists/archive_list.txt.</li><li>If the CFS subdirectory /subdir is mounted and the manifest file is located at lists/archive_list.txt under the mount path, set this parameter to /cfs/subdir/lists/archive_list.txt.</li></ul>
+     */
+    public String getListPath() {
+        return this.ListPath;
+    }
+
+    /**
+     * Set <p>Path of the data manifest file. Each line in the manifest file is the full path of a file to be processed. All paths (including the manifest file path and the paths of files to be processed in each line of the manifest file) must start with /cfs and point to existing files in the CFS file system. This parameter and TaskPath are alternative. <br>Example:</p><ul><li>If the CFS root directory / is mounted and the manifest file is located at lists/archive_list.txt under the mount path, set this parameter to /cfs/lists/archive_list.txt.</li><li>If the CFS subdirectory /subdir is mounted and the manifest file is located at lists/archive_list.txt under the mount path, set this parameter to /cfs/subdir/lists/archive_list.txt.</li></ul>
+     * @param ListPath <p>Path of the data manifest file. Each line in the manifest file is the full path of a file to be processed. All paths (including the manifest file path and the paths of files to be processed in each line of the manifest file) must start with /cfs and point to existing files in the CFS file system. This parameter and TaskPath are alternative. <br>Example:</p><ul><li>If the CFS root directory / is mounted and the manifest file is located at lists/archive_list.txt under the mount path, set this parameter to /cfs/lists/archive_list.txt.</li><li>If the CFS subdirectory /subdir is mounted and the manifest file is located at lists/archive_list.txt under the mount path, set this parameter to /cfs/subdir/lists/archive_list.txt.</li></ul>
+     */
+    public void setListPath(String ListPath) {
+        this.ListPath = ListPath;
     }
 
     public LifecycleDataTaskInfo() {
@@ -595,6 +548,9 @@ Default false when empty.
         if (source.IsOverwrite != null) {
             this.IsOverwrite = new Boolean(source.IsOverwrite);
         }
+        if (source.ListPath != null) {
+            this.ListPath = new String(source.ListPath);
+        }
     }
 
 
@@ -621,6 +577,7 @@ Default false when empty.
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "DataFlowId", this.DataFlowId);
         this.setParamSimple(map, prefix + "IsOverwrite", this.IsOverwrite);
+        this.setParamSimple(map, prefix + "ListPath", this.ListPath);
 
     }
 }

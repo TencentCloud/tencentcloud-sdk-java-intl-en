@@ -24,23 +24,21 @@ import java.util.HashMap;
 public class ApplyWebVerificationBizTokenIntlResponse extends AbstractModel {
 
     /**
-    * The token identifying this web-based verification process, valid for 7,200s after issuance. It is required for getting the result after the verification process is completed.
-Example: `https://intl.faceid.qq.com/reflect/?token=81EEF678-28EE-4759-A82E-6CBBBE6BC442`
+    * <p>The URL of the current verification process. After it is returned to the browser frontend, open this URL to start the verification process.</p>
     */
     @SerializedName("VerificationUrl")
     @Expose
     private String VerificationUrl;
 
     /**
-    * A token that identifies a Web verification process, with a validity time of 10 minutes. after the process is complete, the token can be used to obtain the verification result.
+    * <p>The token that identifies a Web verification process, valid for 10 minutes. After the process is completed, this token can be used to obtain the verification result information.</p>
     */
     @SerializedName("BizToken")
     @Expose
     private String BizToken;
 
     /**
-    * The verification URL to be opened with a browser to start the verification process.
-Example: https://intl.faceid.qq.com/reflect/?token=81EEF678-28EE-4759-A82E-6CBBBE6BC442
+    * <p>The URL of the current verification process. After it is returned to the browser frontend, open this URL to start the verification process.</p>
     */
     @SerializedName("VerificationURL")
     @Expose
@@ -54,10 +52,8 @@ Example: https://intl.faceid.qq.com/reflect/?token=81EEF678-28EE-4759-A82E-6CBBB
     private String RequestId;
 
     /**
-     * Get The token identifying this web-based verification process, valid for 7,200s after issuance. It is required for getting the result after the verification process is completed.
-Example: `https://intl.faceid.qq.com/reflect/?token=81EEF678-28EE-4759-A82E-6CBBBE6BC442` 
-     * @return VerificationUrl The token identifying this web-based verification process, valid for 7,200s after issuance. It is required for getting the result after the verification process is completed.
-Example: `https://intl.faceid.qq.com/reflect/?token=81EEF678-28EE-4759-A82E-6CBBBE6BC442`
+     * Get <p>The URL of the current verification process. After it is returned to the browser frontend, open this URL to start the verification process.</p> 
+     * @return VerificationUrl <p>The URL of the current verification process. After it is returned to the browser frontend, open this URL to start the verification process.</p>
      * @deprecated
      */
     @Deprecated
@@ -66,10 +62,8 @@ Example: `https://intl.faceid.qq.com/reflect/?token=81EEF678-28EE-4759-A82E-6CBB
     }
 
     /**
-     * Set The token identifying this web-based verification process, valid for 7,200s after issuance. It is required for getting the result after the verification process is completed.
-Example: `https://intl.faceid.qq.com/reflect/?token=81EEF678-28EE-4759-A82E-6CBBBE6BC442`
-     * @param VerificationUrl The token identifying this web-based verification process, valid for 7,200s after issuance. It is required for getting the result after the verification process is completed.
-Example: `https://intl.faceid.qq.com/reflect/?token=81EEF678-28EE-4759-A82E-6CBBBE6BC442`
+     * Set <p>The URL of the current verification process. After it is returned to the browser frontend, open this URL to start the verification process.</p>
+     * @param VerificationUrl <p>The URL of the current verification process. After it is returned to the browser frontend, open this URL to start the verification process.</p>
      * @deprecated
      */
     @Deprecated
@@ -78,36 +72,32 @@ Example: `https://intl.faceid.qq.com/reflect/?token=81EEF678-28EE-4759-A82E-6CBB
     }
 
     /**
-     * Get A token that identifies a Web verification process, with a validity time of 10 minutes. after the process is complete, the token can be used to obtain the verification result. 
-     * @return BizToken A token that identifies a Web verification process, with a validity time of 10 minutes. after the process is complete, the token can be used to obtain the verification result.
+     * Get <p>The token that identifies a Web verification process, valid for 10 minutes. After the process is completed, this token can be used to obtain the verification result information.</p> 
+     * @return BizToken <p>The token that identifies a Web verification process, valid for 10 minutes. After the process is completed, this token can be used to obtain the verification result information.</p>
      */
     public String getBizToken() {
         return this.BizToken;
     }
 
     /**
-     * Set A token that identifies a Web verification process, with a validity time of 10 minutes. after the process is complete, the token can be used to obtain the verification result.
-     * @param BizToken A token that identifies a Web verification process, with a validity time of 10 minutes. after the process is complete, the token can be used to obtain the verification result.
+     * Set <p>The token that identifies a Web verification process, valid for 10 minutes. After the process is completed, this token can be used to obtain the verification result information.</p>
+     * @param BizToken <p>The token that identifies a Web verification process, valid for 10 minutes. After the process is completed, this token can be used to obtain the verification result information.</p>
      */
     public void setBizToken(String BizToken) {
         this.BizToken = BizToken;
     }
 
     /**
-     * Get The verification URL to be opened with a browser to start the verification process.
-Example: https://intl.faceid.qq.com/reflect/?token=81EEF678-28EE-4759-A82E-6CBBBE6BC442 
-     * @return VerificationURL The verification URL to be opened with a browser to start the verification process.
-Example: https://intl.faceid.qq.com/reflect/?token=81EEF678-28EE-4759-A82E-6CBBBE6BC442
+     * Get <p>The URL of the current verification process. After it is returned to the browser frontend, open this URL to start the verification process.</p> 
+     * @return VerificationURL <p>The URL of the current verification process. After it is returned to the browser frontend, open this URL to start the verification process.</p>
      */
     public String getVerificationURL() {
         return this.VerificationURL;
     }
 
     /**
-     * Set The verification URL to be opened with a browser to start the verification process.
-Example: https://intl.faceid.qq.com/reflect/?token=81EEF678-28EE-4759-A82E-6CBBBE6BC442
-     * @param VerificationURL The verification URL to be opened with a browser to start the verification process.
-Example: https://intl.faceid.qq.com/reflect/?token=81EEF678-28EE-4759-A82E-6CBBBE6BC442
+     * Set <p>The URL of the current verification process. After it is returned to the browser frontend, open this URL to start the verification process.</p>
+     * @param VerificationURL <p>The URL of the current verification process. After it is returned to the browser frontend, open this URL to start the verification process.</p>
      */
     public void setVerificationURL(String VerificationURL) {
         this.VerificationURL = VerificationURL;

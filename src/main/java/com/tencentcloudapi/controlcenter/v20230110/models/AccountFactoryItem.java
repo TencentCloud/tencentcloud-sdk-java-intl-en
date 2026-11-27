@@ -24,230 +24,230 @@ import java.util.HashMap;
 public class AccountFactoryItem extends AbstractModel {
 
     /**
-    * Specifies the unique identifier for account factory baseline item, can only contain english letters, digits, and @, ,._[]-:()()[]+=., with a length of 2-128 characters.
+    * Unique ID of the Account Factory baseline item, which can contain only English letters, numbers, and symbols (@,._[]-:()+=), and must be 2 to 128 characters in length.
     */
     @SerializedName("Identifier")
     @Expose
     private String Identifier;
 
     /**
-    * Baseline item name. specifies a unique name for the feature item. supports a combination of english letters, numbers, chinese characters, and symbols @, &, _, [, ], -. valid values: 1-25 chinese or english characters.
+    * Baseline item name, which is unique, supports only the combination of English letters, digits, and symbols (@&_[]-), and is 1 to 25 characters in length.
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * Baseline item english name. specifies a unique name for the baseline item. supports a combination of english letters, digits, spaces, and symbols @, &, _, [], -. valid values: 1-64 english characters.
+    * Baseline item English name, which must be unique, can contain only English letters, numbers, spaces, and symbols (@&_[]-), and must be 1 to 64 characters in length.
     */
     @SerializedName("NameEn")
     @Expose
     private String NameEn;
 
     /**
-    * Baseline item weight. the smaller the value, the higher the weight. value range equal to or greater than 0.
+    * Baseline item weight. A smaller value indicates a higher priority. Value range: greater than or equal to 0.
     */
     @SerializedName("Weight")
     @Expose
     private Long Weight;
 
     /**
-    * Specifies whether the baseline item is required (1: required; 0: optional).
+    * Whether the baseline item is required. Valid values: 1 (yes) and 0 (no).
     */
     @SerializedName("Required")
     @Expose
     private Long Required;
 
     /**
-    * Baseline item dependency. value range of N depends on the count of other baseline items it relies on.
+    * Baseline item dependencies. The value range of N depends on the number of other baseline items that the current baseline item depends on.
     */
     @SerializedName("DependsOn")
     @Expose
     private DependsOnItem [] DependsOn;
 
     /**
-    * Baseline description, with a length of 2 to 256 english or chinese characters. it is empty by default.
+    * Baseline description, which is 2 to 256 English characters in length. The default value is empty.
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * Baseline item english description, with a length of 2 to 1024 english characters. it is empty by default.
+    * Baseline item English description, which is 2 to 1024 English characters in length. The default value is empty.
     */
     @SerializedName("DescriptionEn")
     @Expose
     private String DescriptionEn;
 
     /**
-    * Baseline classification. length: 2-32 english or chinese characters. values cannot be empty.
+    * Baseline category, which is 2 to 32 English characters in length and cannot be empty.
     */
     @SerializedName("Classify")
     @Expose
     private String Classify;
 
     /**
-    * Baseline english classification, with a length of 2-64 english characters. cannot be empty.
+    * Baseline English category, which is 2 to 64 English characters in length and cannot be empty.
     */
     @SerializedName("ClassifyEn")
     @Expose
     private String ClassifyEn;
 
     /**
-     * Get Specifies the unique identifier for account factory baseline item, can only contain english letters, digits, and @, ,._[]-:()()[]+=., with a length of 2-128 characters. 
-     * @return Identifier Specifies the unique identifier for account factory baseline item, can only contain english letters, digits, and @, ,._[]-:()()[]+=., with a length of 2-128 characters.
+     * Get Unique ID of the Account Factory baseline item, which can contain only English letters, numbers, and symbols (@,._[]-:()+=), and must be 2 to 128 characters in length. 
+     * @return Identifier Unique ID of the Account Factory baseline item, which can contain only English letters, numbers, and symbols (@,._[]-:()+=), and must be 2 to 128 characters in length.
      */
     public String getIdentifier() {
         return this.Identifier;
     }
 
     /**
-     * Set Specifies the unique identifier for account factory baseline item, can only contain english letters, digits, and @, ,._[]-:()()[]+=., with a length of 2-128 characters.
-     * @param Identifier Specifies the unique identifier for account factory baseline item, can only contain english letters, digits, and @, ,._[]-:()()[]+=., with a length of 2-128 characters.
+     * Set Unique ID of the Account Factory baseline item, which can contain only English letters, numbers, and symbols (@,._[]-:()+=), and must be 2 to 128 characters in length.
+     * @param Identifier Unique ID of the Account Factory baseline item, which can contain only English letters, numbers, and symbols (@,._[]-:()+=), and must be 2 to 128 characters in length.
      */
     public void setIdentifier(String Identifier) {
         this.Identifier = Identifier;
     }
 
     /**
-     * Get Baseline item name. specifies a unique name for the feature item. supports a combination of english letters, numbers, chinese characters, and symbols @, &, _, [, ], -. valid values: 1-25 chinese or english characters. 
-     * @return Name Baseline item name. specifies a unique name for the feature item. supports a combination of english letters, numbers, chinese characters, and symbols @, &, _, [, ], -. valid values: 1-25 chinese or english characters.
+     * Get Baseline item name, which is unique, supports only the combination of English letters, digits, and symbols (@&_[]-), and is 1 to 25 characters in length. 
+     * @return Name Baseline item name, which is unique, supports only the combination of English letters, digits, and symbols (@&_[]-), and is 1 to 25 characters in length.
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Baseline item name. specifies a unique name for the feature item. supports a combination of english letters, numbers, chinese characters, and symbols @, &, _, [, ], -. valid values: 1-25 chinese or english characters.
-     * @param Name Baseline item name. specifies a unique name for the feature item. supports a combination of english letters, numbers, chinese characters, and symbols @, &, _, [, ], -. valid values: 1-25 chinese or english characters.
+     * Set Baseline item name, which is unique, supports only the combination of English letters, digits, and symbols (@&_[]-), and is 1 to 25 characters in length.
+     * @param Name Baseline item name, which is unique, supports only the combination of English letters, digits, and symbols (@&_[]-), and is 1 to 25 characters in length.
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Baseline item english name. specifies a unique name for the baseline item. supports a combination of english letters, digits, spaces, and symbols @, &, _, [], -. valid values: 1-64 english characters. 
-     * @return NameEn Baseline item english name. specifies a unique name for the baseline item. supports a combination of english letters, digits, spaces, and symbols @, &, _, [], -. valid values: 1-64 english characters.
+     * Get Baseline item English name, which must be unique, can contain only English letters, numbers, spaces, and symbols (@&_[]-), and must be 1 to 64 characters in length. 
+     * @return NameEn Baseline item English name, which must be unique, can contain only English letters, numbers, spaces, and symbols (@&_[]-), and must be 1 to 64 characters in length.
      */
     public String getNameEn() {
         return this.NameEn;
     }
 
     /**
-     * Set Baseline item english name. specifies a unique name for the baseline item. supports a combination of english letters, digits, spaces, and symbols @, &, _, [], -. valid values: 1-64 english characters.
-     * @param NameEn Baseline item english name. specifies a unique name for the baseline item. supports a combination of english letters, digits, spaces, and symbols @, &, _, [], -. valid values: 1-64 english characters.
+     * Set Baseline item English name, which must be unique, can contain only English letters, numbers, spaces, and symbols (@&_[]-), and must be 1 to 64 characters in length.
+     * @param NameEn Baseline item English name, which must be unique, can contain only English letters, numbers, spaces, and symbols (@&_[]-), and must be 1 to 64 characters in length.
      */
     public void setNameEn(String NameEn) {
         this.NameEn = NameEn;
     }
 
     /**
-     * Get Baseline item weight. the smaller the value, the higher the weight. value range equal to or greater than 0. 
-     * @return Weight Baseline item weight. the smaller the value, the higher the weight. value range equal to or greater than 0.
+     * Get Baseline item weight. A smaller value indicates a higher priority. Value range: greater than or equal to 0. 
+     * @return Weight Baseline item weight. A smaller value indicates a higher priority. Value range: greater than or equal to 0.
      */
     public Long getWeight() {
         return this.Weight;
     }
 
     /**
-     * Set Baseline item weight. the smaller the value, the higher the weight. value range equal to or greater than 0.
-     * @param Weight Baseline item weight. the smaller the value, the higher the weight. value range equal to or greater than 0.
+     * Set Baseline item weight. A smaller value indicates a higher priority. Value range: greater than or equal to 0.
+     * @param Weight Baseline item weight. A smaller value indicates a higher priority. Value range: greater than or equal to 0.
      */
     public void setWeight(Long Weight) {
         this.Weight = Weight;
     }
 
     /**
-     * Get Specifies whether the baseline item is required (1: required; 0: optional). 
-     * @return Required Specifies whether the baseline item is required (1: required; 0: optional).
+     * Get Whether the baseline item is required. Valid values: 1 (yes) and 0 (no). 
+     * @return Required Whether the baseline item is required. Valid values: 1 (yes) and 0 (no).
      */
     public Long getRequired() {
         return this.Required;
     }
 
     /**
-     * Set Specifies whether the baseline item is required (1: required; 0: optional).
-     * @param Required Specifies whether the baseline item is required (1: required; 0: optional).
+     * Set Whether the baseline item is required. Valid values: 1 (yes) and 0 (no).
+     * @param Required Whether the baseline item is required. Valid values: 1 (yes) and 0 (no).
      */
     public void setRequired(Long Required) {
         this.Required = Required;
     }
 
     /**
-     * Get Baseline item dependency. value range of N depends on the count of other baseline items it relies on. 
-     * @return DependsOn Baseline item dependency. value range of N depends on the count of other baseline items it relies on.
+     * Get Baseline item dependencies. The value range of N depends on the number of other baseline items that the current baseline item depends on. 
+     * @return DependsOn Baseline item dependencies. The value range of N depends on the number of other baseline items that the current baseline item depends on.
      */
     public DependsOnItem [] getDependsOn() {
         return this.DependsOn;
     }
 
     /**
-     * Set Baseline item dependency. value range of N depends on the count of other baseline items it relies on.
-     * @param DependsOn Baseline item dependency. value range of N depends on the count of other baseline items it relies on.
+     * Set Baseline item dependencies. The value range of N depends on the number of other baseline items that the current baseline item depends on.
+     * @param DependsOn Baseline item dependencies. The value range of N depends on the number of other baseline items that the current baseline item depends on.
      */
     public void setDependsOn(DependsOnItem [] DependsOn) {
         this.DependsOn = DependsOn;
     }
 
     /**
-     * Get Baseline description, with a length of 2 to 256 english or chinese characters. it is empty by default. 
-     * @return Description Baseline description, with a length of 2 to 256 english or chinese characters. it is empty by default.
+     * Get Baseline description, which is 2 to 256 English characters in length. The default value is empty. 
+     * @return Description Baseline description, which is 2 to 256 English characters in length. The default value is empty.
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set Baseline description, with a length of 2 to 256 english or chinese characters. it is empty by default.
-     * @param Description Baseline description, with a length of 2 to 256 english or chinese characters. it is empty by default.
+     * Set Baseline description, which is 2 to 256 English characters in length. The default value is empty.
+     * @param Description Baseline description, which is 2 to 256 English characters in length. The default value is empty.
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get Baseline item english description, with a length of 2 to 1024 english characters. it is empty by default. 
-     * @return DescriptionEn Baseline item english description, with a length of 2 to 1024 english characters. it is empty by default.
+     * Get Baseline item English description, which is 2 to 1024 English characters in length. The default value is empty. 
+     * @return DescriptionEn Baseline item English description, which is 2 to 1024 English characters in length. The default value is empty.
      */
     public String getDescriptionEn() {
         return this.DescriptionEn;
     }
 
     /**
-     * Set Baseline item english description, with a length of 2 to 1024 english characters. it is empty by default.
-     * @param DescriptionEn Baseline item english description, with a length of 2 to 1024 english characters. it is empty by default.
+     * Set Baseline item English description, which is 2 to 1024 English characters in length. The default value is empty.
+     * @param DescriptionEn Baseline item English description, which is 2 to 1024 English characters in length. The default value is empty.
      */
     public void setDescriptionEn(String DescriptionEn) {
         this.DescriptionEn = DescriptionEn;
     }
 
     /**
-     * Get Baseline classification. length: 2-32 english or chinese characters. values cannot be empty. 
-     * @return Classify Baseline classification. length: 2-32 english or chinese characters. values cannot be empty.
+     * Get Baseline category, which is 2 to 32 English characters in length and cannot be empty. 
+     * @return Classify Baseline category, which is 2 to 32 English characters in length and cannot be empty.
      */
     public String getClassify() {
         return this.Classify;
     }
 
     /**
-     * Set Baseline classification. length: 2-32 english or chinese characters. values cannot be empty.
-     * @param Classify Baseline classification. length: 2-32 english or chinese characters. values cannot be empty.
+     * Set Baseline category, which is 2 to 32 English characters in length and cannot be empty.
+     * @param Classify Baseline category, which is 2 to 32 English characters in length and cannot be empty.
      */
     public void setClassify(String Classify) {
         this.Classify = Classify;
     }
 
     /**
-     * Get Baseline english classification, with a length of 2-64 english characters. cannot be empty. 
-     * @return ClassifyEn Baseline english classification, with a length of 2-64 english characters. cannot be empty.
+     * Get Baseline English category, which is 2 to 64 English characters in length and cannot be empty. 
+     * @return ClassifyEn Baseline English category, which is 2 to 64 English characters in length and cannot be empty.
      */
     public String getClassifyEn() {
         return this.ClassifyEn;
     }
 
     /**
-     * Set Baseline english classification, with a length of 2-64 english characters. cannot be empty.
-     * @param ClassifyEn Baseline english classification, with a length of 2-64 english characters. cannot be empty.
+     * Set Baseline English category, which is 2 to 64 English characters in length and cannot be empty.
+     * @param ClassifyEn Baseline English category, which is 2 to 64 English characters in length and cannot be empty.
      */
     public void setClassifyEn(String ClassifyEn) {
         this.ClassifyEn = ClassifyEn;

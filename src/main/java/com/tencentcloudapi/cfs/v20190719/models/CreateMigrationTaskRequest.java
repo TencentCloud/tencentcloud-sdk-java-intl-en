@@ -24,368 +24,368 @@ import java.util.HashMap;
 public class CreateMigrationTaskRequest extends AbstractModel {
 
     /**
-    * Migration task name
+    * <p>Migration task name.</p>
     */
     @SerializedName("TaskName")
     @Expose
     private String TaskName;
 
     /**
-    * Migration method flags, default is 0. 0: bucket migration; 1: inventory migration.
+    * <p>Migration mode flag. Default value: 0. 0: Bucket migration; 1: Inventory migration.</p>
     */
     @SerializedName("MigrationType")
     @Expose
     private Long MigrationType;
 
     /**
-    * Migration mode. Default value: `0` (full migration).
+    * <p>Migration mode. Default value: 0. 0: Full migration.</p>
     */
     @SerializedName("MigrationMode")
     @Expose
     private Long MigrationMode;
 
     /**
-    * SecretId of the data source account.
+    * <p>SecretId of the data source account.</p>
     */
     @SerializedName("SrcSecretId")
     @Expose
     private String SrcSecretId;
 
     /**
-    * SecretKey of the data source account.
+    * <p>SecretKey of the data source account.</p>
     */
     @SerializedName("SrcSecretKey")
     @Expose
     private String SrcSecretKey;
 
     /**
-    * File system instance ID, which can be obtained by querying the file system through the [DescribeCfsFileSystems](https://www.tencentcloud.com/document/product/582/38170?from_cn_redirect=1) api.
+    * <p>File system instance ID, which can be obtained through <a href="https://www.tencentcloud.com/document/product/582/38170?from_cn_redirect=1">DescribeCfsFileSystems</a>.</p>
     */
     @SerializedName("FileSystemId")
     @Expose
     private String FileSystemId;
 
     /**
-    * File system path
+    * <p>Directory path in the file system. It does not involve the actual mounted subdirectory or root directory, and does not need to be prefixed with /cfs/.</p>
     */
     @SerializedName("FsPath")
     @Expose
     private String FsPath;
 
     /**
-    * Overwrite policy for files with the same name. Valid values: `0` (retain the file with the latest modified time), `1` (overwrite); and `2` (not overwrite). Default value: `0`.
+    * <p>Overwrite policy for files with the same name during migration. Default value: 0. 0: The file with the latest modification time takes precedence; 1: Full overwrite; 2: No overwrite.</p>
     */
     @SerializedName("CoverType")
     @Expose
     private Long CoverType;
 
     /**
-    * Data source service providers. COS: tencent cloud COS, OSS: alibaba cloud OSS, OBS: huawei cloud OBS.
+    * <p>Data source service provider.</p><p>Valid values:</p><ul><li>COS: Tencent Cloud COS</li><li>OSS: Alibaba Cloud OSS</li><li>OBS: Huawei Cloud OBS</li><li>BOS: Baidu Cloud BOS</li><li>TOS: Volcano Engine TOS</li></ul>
     */
     @SerializedName("SrcService")
     @Expose
     private String SrcService;
 
     /**
-    * Data source bucket name. specifies the bucket name for migration. either BucketName or BucketAddress is required for bucket migration. this parameter is not required for inventory migration.
+    * <p>Name of the data source bucket. For bucket migration, either BucketName or BucketAddress is required. For inventory migration, this parameter is not required.</p>
     */
     @SerializedName("BucketName")
     @Expose
     private String BucketName;
 
     /**
-    * Data source bucket region
+    * <p>Region of the data source bucket.</p>
     */
     @SerializedName("BucketRegion")
     @Expose
     private String BucketRegion;
 
     /**
-    * Source bucket address. specifies the bucket address of the data source. for bucket migration, either BucketName or BucketAddress is required. this parameter is not required for inventory migration.
+    * <p>Address of the data source bucket. For bucket migration, either BucketName or BucketAddress is required. For inventory migration, this parameter is not required.</p>
     */
     @SerializedName("BucketAddress")
     @Expose
     private String BucketAddress;
 
     /**
-    * List address. This parameter is required if `MigrationType` is set to `1` (list).
+    * <p>Inventory address. Required when the migration mode is inventory migration.</p>
     */
     @SerializedName("ListAddress")
     @Expose
     private String ListAddress;
 
     /**
-    * Target file system name
+    * <p>Name of the destination file system.</p>
     */
     @SerializedName("FsName")
     @Expose
     private String FsName;
 
     /**
-    * Source bucket path, defaults to /.
+    * <p>Source bucket path. Default value: /.</p>
     */
     @SerializedName("BucketPath")
     @Expose
     private String BucketPath;
 
     /**
-    * Migration direction. valid values: 0 (cos migration to file system), 1 (file system migration to cos). default is 0.
+    * <p>Migration direction. 0: Migrate from object storage to file system. 1: Migrate from file system to object storage. Default value: 0.</p>
     */
     @SerializedName("Direction")
     @Expose
     private Long Direction;
 
     /**
-     * Get Migration task name 
-     * @return TaskName Migration task name
+     * Get <p>Migration task name.</p> 
+     * @return TaskName <p>Migration task name.</p>
      */
     public String getTaskName() {
         return this.TaskName;
     }
 
     /**
-     * Set Migration task name
-     * @param TaskName Migration task name
+     * Set <p>Migration task name.</p>
+     * @param TaskName <p>Migration task name.</p>
      */
     public void setTaskName(String TaskName) {
         this.TaskName = TaskName;
     }
 
     /**
-     * Get Migration method flags, default is 0. 0: bucket migration; 1: inventory migration. 
-     * @return MigrationType Migration method flags, default is 0. 0: bucket migration; 1: inventory migration.
+     * Get <p>Migration mode flag. Default value: 0. 0: Bucket migration; 1: Inventory migration.</p> 
+     * @return MigrationType <p>Migration mode flag. Default value: 0. 0: Bucket migration; 1: Inventory migration.</p>
      */
     public Long getMigrationType() {
         return this.MigrationType;
     }
 
     /**
-     * Set Migration method flags, default is 0. 0: bucket migration; 1: inventory migration.
-     * @param MigrationType Migration method flags, default is 0. 0: bucket migration; 1: inventory migration.
+     * Set <p>Migration mode flag. Default value: 0. 0: Bucket migration; 1: Inventory migration.</p>
+     * @param MigrationType <p>Migration mode flag. Default value: 0. 0: Bucket migration; 1: Inventory migration.</p>
      */
     public void setMigrationType(Long MigrationType) {
         this.MigrationType = MigrationType;
     }
 
     /**
-     * Get Migration mode. Default value: `0` (full migration). 
-     * @return MigrationMode Migration mode. Default value: `0` (full migration).
+     * Get <p>Migration mode. Default value: 0. 0: Full migration.</p> 
+     * @return MigrationMode <p>Migration mode. Default value: 0. 0: Full migration.</p>
      */
     public Long getMigrationMode() {
         return this.MigrationMode;
     }
 
     /**
-     * Set Migration mode. Default value: `0` (full migration).
-     * @param MigrationMode Migration mode. Default value: `0` (full migration).
+     * Set <p>Migration mode. Default value: 0. 0: Full migration.</p>
+     * @param MigrationMode <p>Migration mode. Default value: 0. 0: Full migration.</p>
      */
     public void setMigrationMode(Long MigrationMode) {
         this.MigrationMode = MigrationMode;
     }
 
     /**
-     * Get SecretId of the data source account. 
-     * @return SrcSecretId SecretId of the data source account.
+     * Get <p>SecretId of the data source account.</p> 
+     * @return SrcSecretId <p>SecretId of the data source account.</p>
      */
     public String getSrcSecretId() {
         return this.SrcSecretId;
     }
 
     /**
-     * Set SecretId of the data source account.
-     * @param SrcSecretId SecretId of the data source account.
+     * Set <p>SecretId of the data source account.</p>
+     * @param SrcSecretId <p>SecretId of the data source account.</p>
      */
     public void setSrcSecretId(String SrcSecretId) {
         this.SrcSecretId = SrcSecretId;
     }
 
     /**
-     * Get SecretKey of the data source account. 
-     * @return SrcSecretKey SecretKey of the data source account.
+     * Get <p>SecretKey of the data source account.</p> 
+     * @return SrcSecretKey <p>SecretKey of the data source account.</p>
      */
     public String getSrcSecretKey() {
         return this.SrcSecretKey;
     }
 
     /**
-     * Set SecretKey of the data source account.
-     * @param SrcSecretKey SecretKey of the data source account.
+     * Set <p>SecretKey of the data source account.</p>
+     * @param SrcSecretKey <p>SecretKey of the data source account.</p>
      */
     public void setSrcSecretKey(String SrcSecretKey) {
         this.SrcSecretKey = SrcSecretKey;
     }
 
     /**
-     * Get File system instance ID, which can be obtained by querying the file system through the [DescribeCfsFileSystems](https://www.tencentcloud.com/document/product/582/38170?from_cn_redirect=1) api. 
-     * @return FileSystemId File system instance ID, which can be obtained by querying the file system through the [DescribeCfsFileSystems](https://www.tencentcloud.com/document/product/582/38170?from_cn_redirect=1) api.
+     * Get <p>File system instance ID, which can be obtained through <a href="https://www.tencentcloud.com/document/product/582/38170?from_cn_redirect=1">DescribeCfsFileSystems</a>.</p> 
+     * @return FileSystemId <p>File system instance ID, which can be obtained through <a href="https://www.tencentcloud.com/document/product/582/38170?from_cn_redirect=1">DescribeCfsFileSystems</a>.</p>
      */
     public String getFileSystemId() {
         return this.FileSystemId;
     }
 
     /**
-     * Set File system instance ID, which can be obtained by querying the file system through the [DescribeCfsFileSystems](https://www.tencentcloud.com/document/product/582/38170?from_cn_redirect=1) api.
-     * @param FileSystemId File system instance ID, which can be obtained by querying the file system through the [DescribeCfsFileSystems](https://www.tencentcloud.com/document/product/582/38170?from_cn_redirect=1) api.
+     * Set <p>File system instance ID, which can be obtained through <a href="https://www.tencentcloud.com/document/product/582/38170?from_cn_redirect=1">DescribeCfsFileSystems</a>.</p>
+     * @param FileSystemId <p>File system instance ID, which can be obtained through <a href="https://www.tencentcloud.com/document/product/582/38170?from_cn_redirect=1">DescribeCfsFileSystems</a>.</p>
      */
     public void setFileSystemId(String FileSystemId) {
         this.FileSystemId = FileSystemId;
     }
 
     /**
-     * Get File system path 
-     * @return FsPath File system path
+     * Get <p>Directory path in the file system. It does not involve the actual mounted subdirectory or root directory, and does not need to be prefixed with /cfs/.</p> 
+     * @return FsPath <p>Directory path in the file system. It does not involve the actual mounted subdirectory or root directory, and does not need to be prefixed with /cfs/.</p>
      */
     public String getFsPath() {
         return this.FsPath;
     }
 
     /**
-     * Set File system path
-     * @param FsPath File system path
+     * Set <p>Directory path in the file system. It does not involve the actual mounted subdirectory or root directory, and does not need to be prefixed with /cfs/.</p>
+     * @param FsPath <p>Directory path in the file system. It does not involve the actual mounted subdirectory or root directory, and does not need to be prefixed with /cfs/.</p>
      */
     public void setFsPath(String FsPath) {
         this.FsPath = FsPath;
     }
 
     /**
-     * Get Overwrite policy for files with the same name. Valid values: `0` (retain the file with the latest modified time), `1` (overwrite); and `2` (not overwrite). Default value: `0`. 
-     * @return CoverType Overwrite policy for files with the same name. Valid values: `0` (retain the file with the latest modified time), `1` (overwrite); and `2` (not overwrite). Default value: `0`.
+     * Get <p>Overwrite policy for files with the same name during migration. Default value: 0. 0: The file with the latest modification time takes precedence; 1: Full overwrite; 2: No overwrite.</p> 
+     * @return CoverType <p>Overwrite policy for files with the same name during migration. Default value: 0. 0: The file with the latest modification time takes precedence; 1: Full overwrite; 2: No overwrite.</p>
      */
     public Long getCoverType() {
         return this.CoverType;
     }
 
     /**
-     * Set Overwrite policy for files with the same name. Valid values: `0` (retain the file with the latest modified time), `1` (overwrite); and `2` (not overwrite). Default value: `0`.
-     * @param CoverType Overwrite policy for files with the same name. Valid values: `0` (retain the file with the latest modified time), `1` (overwrite); and `2` (not overwrite). Default value: `0`.
+     * Set <p>Overwrite policy for files with the same name during migration. Default value: 0. 0: The file with the latest modification time takes precedence; 1: Full overwrite; 2: No overwrite.</p>
+     * @param CoverType <p>Overwrite policy for files with the same name during migration. Default value: 0. 0: The file with the latest modification time takes precedence; 1: Full overwrite; 2: No overwrite.</p>
      */
     public void setCoverType(Long CoverType) {
         this.CoverType = CoverType;
     }
 
     /**
-     * Get Data source service providers. COS: tencent cloud COS, OSS: alibaba cloud OSS, OBS: huawei cloud OBS. 
-     * @return SrcService Data source service providers. COS: tencent cloud COS, OSS: alibaba cloud OSS, OBS: huawei cloud OBS.
+     * Get <p>Data source service provider.</p><p>Valid values:</p><ul><li>COS: Tencent Cloud COS</li><li>OSS: Alibaba Cloud OSS</li><li>OBS: Huawei Cloud OBS</li><li>BOS: Baidu Cloud BOS</li><li>TOS: Volcano Engine TOS</li></ul> 
+     * @return SrcService <p>Data source service provider.</p><p>Valid values:</p><ul><li>COS: Tencent Cloud COS</li><li>OSS: Alibaba Cloud OSS</li><li>OBS: Huawei Cloud OBS</li><li>BOS: Baidu Cloud BOS</li><li>TOS: Volcano Engine TOS</li></ul>
      */
     public String getSrcService() {
         return this.SrcService;
     }
 
     /**
-     * Set Data source service providers. COS: tencent cloud COS, OSS: alibaba cloud OSS, OBS: huawei cloud OBS.
-     * @param SrcService Data source service providers. COS: tencent cloud COS, OSS: alibaba cloud OSS, OBS: huawei cloud OBS.
+     * Set <p>Data source service provider.</p><p>Valid values:</p><ul><li>COS: Tencent Cloud COS</li><li>OSS: Alibaba Cloud OSS</li><li>OBS: Huawei Cloud OBS</li><li>BOS: Baidu Cloud BOS</li><li>TOS: Volcano Engine TOS</li></ul>
+     * @param SrcService <p>Data source service provider.</p><p>Valid values:</p><ul><li>COS: Tencent Cloud COS</li><li>OSS: Alibaba Cloud OSS</li><li>OBS: Huawei Cloud OBS</li><li>BOS: Baidu Cloud BOS</li><li>TOS: Volcano Engine TOS</li></ul>
      */
     public void setSrcService(String SrcService) {
         this.SrcService = SrcService;
     }
 
     /**
-     * Get Data source bucket name. specifies the bucket name for migration. either BucketName or BucketAddress is required for bucket migration. this parameter is not required for inventory migration. 
-     * @return BucketName Data source bucket name. specifies the bucket name for migration. either BucketName or BucketAddress is required for bucket migration. this parameter is not required for inventory migration.
+     * Get <p>Name of the data source bucket. For bucket migration, either BucketName or BucketAddress is required. For inventory migration, this parameter is not required.</p> 
+     * @return BucketName <p>Name of the data source bucket. For bucket migration, either BucketName or BucketAddress is required. For inventory migration, this parameter is not required.</p>
      */
     public String getBucketName() {
         return this.BucketName;
     }
 
     /**
-     * Set Data source bucket name. specifies the bucket name for migration. either BucketName or BucketAddress is required for bucket migration. this parameter is not required for inventory migration.
-     * @param BucketName Data source bucket name. specifies the bucket name for migration. either BucketName or BucketAddress is required for bucket migration. this parameter is not required for inventory migration.
+     * Set <p>Name of the data source bucket. For bucket migration, either BucketName or BucketAddress is required. For inventory migration, this parameter is not required.</p>
+     * @param BucketName <p>Name of the data source bucket. For bucket migration, either BucketName or BucketAddress is required. For inventory migration, this parameter is not required.</p>
      */
     public void setBucketName(String BucketName) {
         this.BucketName = BucketName;
     }
 
     /**
-     * Get Data source bucket region 
-     * @return BucketRegion Data source bucket region
+     * Get <p>Region of the data source bucket.</p> 
+     * @return BucketRegion <p>Region of the data source bucket.</p>
      */
     public String getBucketRegion() {
         return this.BucketRegion;
     }
 
     /**
-     * Set Data source bucket region
-     * @param BucketRegion Data source bucket region
+     * Set <p>Region of the data source bucket.</p>
+     * @param BucketRegion <p>Region of the data source bucket.</p>
      */
     public void setBucketRegion(String BucketRegion) {
         this.BucketRegion = BucketRegion;
     }
 
     /**
-     * Get Source bucket address. specifies the bucket address of the data source. for bucket migration, either BucketName or BucketAddress is required. this parameter is not required for inventory migration. 
-     * @return BucketAddress Source bucket address. specifies the bucket address of the data source. for bucket migration, either BucketName or BucketAddress is required. this parameter is not required for inventory migration.
+     * Get <p>Address of the data source bucket. For bucket migration, either BucketName or BucketAddress is required. For inventory migration, this parameter is not required.</p> 
+     * @return BucketAddress <p>Address of the data source bucket. For bucket migration, either BucketName or BucketAddress is required. For inventory migration, this parameter is not required.</p>
      */
     public String getBucketAddress() {
         return this.BucketAddress;
     }
 
     /**
-     * Set Source bucket address. specifies the bucket address of the data source. for bucket migration, either BucketName or BucketAddress is required. this parameter is not required for inventory migration.
-     * @param BucketAddress Source bucket address. specifies the bucket address of the data source. for bucket migration, either BucketName or BucketAddress is required. this parameter is not required for inventory migration.
+     * Set <p>Address of the data source bucket. For bucket migration, either BucketName or BucketAddress is required. For inventory migration, this parameter is not required.</p>
+     * @param BucketAddress <p>Address of the data source bucket. For bucket migration, either BucketName or BucketAddress is required. For inventory migration, this parameter is not required.</p>
      */
     public void setBucketAddress(String BucketAddress) {
         this.BucketAddress = BucketAddress;
     }
 
     /**
-     * Get List address. This parameter is required if `MigrationType` is set to `1` (list). 
-     * @return ListAddress List address. This parameter is required if `MigrationType` is set to `1` (list).
+     * Get <p>Inventory address. Required when the migration mode is inventory migration.</p> 
+     * @return ListAddress <p>Inventory address. Required when the migration mode is inventory migration.</p>
      */
     public String getListAddress() {
         return this.ListAddress;
     }
 
     /**
-     * Set List address. This parameter is required if `MigrationType` is set to `1` (list).
-     * @param ListAddress List address. This parameter is required if `MigrationType` is set to `1` (list).
+     * Set <p>Inventory address. Required when the migration mode is inventory migration.</p>
+     * @param ListAddress <p>Inventory address. Required when the migration mode is inventory migration.</p>
      */
     public void setListAddress(String ListAddress) {
         this.ListAddress = ListAddress;
     }
 
     /**
-     * Get Target file system name 
-     * @return FsName Target file system name
+     * Get <p>Name of the destination file system.</p> 
+     * @return FsName <p>Name of the destination file system.</p>
      */
     public String getFsName() {
         return this.FsName;
     }
 
     /**
-     * Set Target file system name
-     * @param FsName Target file system name
+     * Set <p>Name of the destination file system.</p>
+     * @param FsName <p>Name of the destination file system.</p>
      */
     public void setFsName(String FsName) {
         this.FsName = FsName;
     }
 
     /**
-     * Get Source bucket path, defaults to /. 
-     * @return BucketPath Source bucket path, defaults to /.
+     * Get <p>Source bucket path. Default value: /.</p> 
+     * @return BucketPath <p>Source bucket path. Default value: /.</p>
      */
     public String getBucketPath() {
         return this.BucketPath;
     }
 
     /**
-     * Set Source bucket path, defaults to /.
-     * @param BucketPath Source bucket path, defaults to /.
+     * Set <p>Source bucket path. Default value: /.</p>
+     * @param BucketPath <p>Source bucket path. Default value: /.</p>
      */
     public void setBucketPath(String BucketPath) {
         this.BucketPath = BucketPath;
     }
 
     /**
-     * Get Migration direction. valid values: 0 (cos migration to file system), 1 (file system migration to cos). default is 0. 
-     * @return Direction Migration direction. valid values: 0 (cos migration to file system), 1 (file system migration to cos). default is 0.
+     * Get <p>Migration direction. 0: Migrate from object storage to file system. 1: Migrate from file system to object storage. Default value: 0.</p> 
+     * @return Direction <p>Migration direction. 0: Migrate from object storage to file system. 1: Migrate from file system to object storage. Default value: 0.</p>
      */
     public Long getDirection() {
         return this.Direction;
     }
 
     /**
-     * Set Migration direction. valid values: 0 (cos migration to file system), 1 (file system migration to cos). default is 0.
-     * @param Direction Migration direction. valid values: 0 (cos migration to file system), 1 (file system migration to cos). default is 0.
+     * Set <p>Migration direction. 0: Migrate from object storage to file system. 1: Migrate from file system to object storage. Default value: 0.</p>
+     * @param Direction <p>Migration direction. 0: Migrate from object storage to file system. 1: Migrate from file system to object storage. Default value: 0.</p>
      */
     public void setDirection(Long Direction) {
         this.Direction = Direction;

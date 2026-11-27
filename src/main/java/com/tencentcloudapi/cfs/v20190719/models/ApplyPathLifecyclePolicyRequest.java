@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class ApplyPathLifecyclePolicyRequest extends AbstractModel {
 
     /**
-    * Lifecycle management policy ID.
+    * <p>Lifecycle management policy ID.</p>
     */
     @SerializedName("LifecyclePolicyID")
     @Expose
     private String LifecyclePolicyID;
 
     /**
-    * List of absolute paths for directories associated with the lifecycle management policy.
+    * <p>List of directory paths associated with the lifecycle management policy. Each path must start with /cfs/, representing a logical path within the file storage instance, not a local mount point path.</p><p>Examples:</p><ul><li>If the CFS root directory / is mounted and you need to associate test1/test2 under the mount path, the input value is /cfs/test1/test2.</li><li>If the CFS subdirectory /subdir is mounted and you need to associate test1/test2 under the mount path, the input value is /cfs/subdir/test1/test2.</li></ul>
     */
     @SerializedName("Paths")
     @Expose
     private PathInfo [] Paths;
 
     /**
-     * Get Lifecycle management policy ID. 
-     * @return LifecyclePolicyID Lifecycle management policy ID.
+     * Get <p>Lifecycle management policy ID.</p> 
+     * @return LifecyclePolicyID <p>Lifecycle management policy ID.</p>
      */
     public String getLifecyclePolicyID() {
         return this.LifecyclePolicyID;
     }
 
     /**
-     * Set Lifecycle management policy ID.
-     * @param LifecyclePolicyID Lifecycle management policy ID.
+     * Set <p>Lifecycle management policy ID.</p>
+     * @param LifecyclePolicyID <p>Lifecycle management policy ID.</p>
      */
     public void setLifecyclePolicyID(String LifecyclePolicyID) {
         this.LifecyclePolicyID = LifecyclePolicyID;
     }
 
     /**
-     * Get List of absolute paths for directories associated with the lifecycle management policy. 
-     * @return Paths List of absolute paths for directories associated with the lifecycle management policy.
+     * Get <p>List of directory paths associated with the lifecycle management policy. Each path must start with /cfs/, representing a logical path within the file storage instance, not a local mount point path.</p><p>Examples:</p><ul><li>If the CFS root directory / is mounted and you need to associate test1/test2 under the mount path, the input value is /cfs/test1/test2.</li><li>If the CFS subdirectory /subdir is mounted and you need to associate test1/test2 under the mount path, the input value is /cfs/subdir/test1/test2.</li></ul> 
+     * @return Paths <p>List of directory paths associated with the lifecycle management policy. Each path must start with /cfs/, representing a logical path within the file storage instance, not a local mount point path.</p><p>Examples:</p><ul><li>If the CFS root directory / is mounted and you need to associate test1/test2 under the mount path, the input value is /cfs/test1/test2.</li><li>If the CFS subdirectory /subdir is mounted and you need to associate test1/test2 under the mount path, the input value is /cfs/subdir/test1/test2.</li></ul>
      */
     public PathInfo [] getPaths() {
         return this.Paths;
     }
 
     /**
-     * Set List of absolute paths for directories associated with the lifecycle management policy.
-     * @param Paths List of absolute paths for directories associated with the lifecycle management policy.
+     * Set <p>List of directory paths associated with the lifecycle management policy. Each path must start with /cfs/, representing a logical path within the file storage instance, not a local mount point path.</p><p>Examples:</p><ul><li>If the CFS root directory / is mounted and you need to associate test1/test2 under the mount path, the input value is /cfs/test1/test2.</li><li>If the CFS subdirectory /subdir is mounted and you need to associate test1/test2 under the mount path, the input value is /cfs/subdir/test1/test2.</li></ul>
+     * @param Paths <p>List of directory paths associated with the lifecycle management policy. Each path must start with /cfs/, representing a logical path within the file storage instance, not a local mount point path.</p><p>Examples:</p><ul><li>If the CFS root directory / is mounted and you need to associate test1/test2 under the mount path, the input value is /cfs/test1/test2.</li><li>If the CFS subdirectory /subdir is mounted and you need to associate test1/test2 under the mount path, the input value is /cfs/subdir/test1/test2.</li></ul>
      */
     public void setPaths(PathInfo [] Paths) {
         this.Paths = Paths;

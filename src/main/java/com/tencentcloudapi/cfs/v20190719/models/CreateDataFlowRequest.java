@@ -24,299 +24,299 @@ import java.util.HashMap;
 public class CreateDataFlowRequest extends AbstractModel {
 
     /**
-    * File system ID, which can be obtained by querying the file system through the [DescribeCfsFileSystems](https://www.tencentcloud.com/document/product/582/38170?from_cn_redirect=1) api.
+    * <p>File system ID, which can be obtained through the API for querying file systems <a href="https://www.tencentcloud.com/document/product/582/38170?from_cn_redirect=1">DescribeCfsFileSystems</a>.</p>
     */
     @SerializedName("FileSystemId")
     @Expose
     private String FileSystemId;
 
     /**
-    * Source data type; includes S3_COS, S3_L5.
+    * <p>Source data type. Valid values: S3_COS and S3_L5.</p>
     */
     @SerializedName("SourceStorageType")
     @Expose
     private String SourceStorageType;
 
     /**
-    * Source storage address.
+    * <p>Source storage address</p>
     */
     @SerializedName("SourceStorageAddress")
     @Expose
     private String SourceStorageAddress;
 
     /**
-    * Source path.
+    * <p>Source path</p>
     */
     @SerializedName("SourcePath")
     @Expose
     private String SourcePath;
 
     /**
-    * Target path in the file system.
+    * <p>Target path in the file system specified when setting data flow. It must start with /cfs/ and represents a logical path inside the file storage instance, not a local mount point path.<br>Example:</p><ul><li>If the CFS root directory / is mounted, and you need to map the source directory on object storage to test1/test2 under the mount path, the value of this parameter is /cfs/test1/test2.</li><li>If the CFS subdirectory /subdir is mounted, and you need to map the source directory on object storage to test1/test2 under the mount path, the value of this parameter is /cfs/subdir/test1/test2.</li></ul>
     */
     @SerializedName("TargetPath")
     @Expose
     private String TargetPath;
 
     /**
-    * Key ID.
+    * <p>Secret ID</p>
     */
     @SerializedName("SecretId")
     @Expose
     private String SecretId;
 
     /**
-    * key.
+    * <p>Secret key</p>
     */
     @SerializedName("SecretKey")
     @Expose
     private String SecretKey;
 
     /**
-    * Data flow name, supports no more than 64 characters in length, supports chinese, numbers, _, and -.
+    * <p>Data flow name. It supports up to 64 characters, including Chinese characters, digits, underscores (_), and hyphens (-).</p>
     */
     @SerializedName("DataFlowName")
     @Expose
     private String DataFlowName;
 
     /**
-    * 0: disable auto-update  1: enable auto-update.
+    * <p>0: Automatic update disabled. 1: Automatic update enabled.</p>
     */
     @SerializedName("AutoRefresh")
     @Expose
     private Long AutoRefresh;
 
     /**
-    * Topic Parameter used by KafkaConsumer during consumption
+    * <p>Topic parameter used by KafkaConsumer for consumption</p>
     */
     @SerializedName("UserKafkaTopic")
     @Expose
     private String UserKafkaTopic;
 
     /**
-    * 	Service address example value: kafkaconsumer-ap-beijing.cls.tencentyun.com:9095.
+    * <p>Service address. Example: kafkaconsumer-ap-beijing.cls.tencentyun.com:9095</p>
     */
     @SerializedName("ServerAddr")
     @Expose
     private String ServerAddr;
 
     /**
-    * Kafka consuming user name. example value: name.
+    * <p>Kafka consumer username. Example: name</p>
     */
     @SerializedName("UserName")
     @Expose
     private String UserName;
 
     /**
-    * Kafka consuming user password. default ${SecretId}#${SecretKey}.
+    * <p>Kafka consumer password. Default value: ${SecretId}#${SecretKey}.</p>
     */
     @SerializedName("Password")
     @Expose
     private String Password;
 
     /**
-     * Get File system ID, which can be obtained by querying the file system through the [DescribeCfsFileSystems](https://www.tencentcloud.com/document/product/582/38170?from_cn_redirect=1) api. 
-     * @return FileSystemId File system ID, which can be obtained by querying the file system through the [DescribeCfsFileSystems](https://www.tencentcloud.com/document/product/582/38170?from_cn_redirect=1) api.
+     * Get <p>File system ID, which can be obtained through the API for querying file systems <a href="https://www.tencentcloud.com/document/product/582/38170?from_cn_redirect=1">DescribeCfsFileSystems</a>.</p> 
+     * @return FileSystemId <p>File system ID, which can be obtained through the API for querying file systems <a href="https://www.tencentcloud.com/document/product/582/38170?from_cn_redirect=1">DescribeCfsFileSystems</a>.</p>
      */
     public String getFileSystemId() {
         return this.FileSystemId;
     }
 
     /**
-     * Set File system ID, which can be obtained by querying the file system through the [DescribeCfsFileSystems](https://www.tencentcloud.com/document/product/582/38170?from_cn_redirect=1) api.
-     * @param FileSystemId File system ID, which can be obtained by querying the file system through the [DescribeCfsFileSystems](https://www.tencentcloud.com/document/product/582/38170?from_cn_redirect=1) api.
+     * Set <p>File system ID, which can be obtained through the API for querying file systems <a href="https://www.tencentcloud.com/document/product/582/38170?from_cn_redirect=1">DescribeCfsFileSystems</a>.</p>
+     * @param FileSystemId <p>File system ID, which can be obtained through the API for querying file systems <a href="https://www.tencentcloud.com/document/product/582/38170?from_cn_redirect=1">DescribeCfsFileSystems</a>.</p>
      */
     public void setFileSystemId(String FileSystemId) {
         this.FileSystemId = FileSystemId;
     }
 
     /**
-     * Get Source data type; includes S3_COS, S3_L5. 
-     * @return SourceStorageType Source data type; includes S3_COS, S3_L5.
+     * Get <p>Source data type. Valid values: S3_COS and S3_L5.</p> 
+     * @return SourceStorageType <p>Source data type. Valid values: S3_COS and S3_L5.</p>
      */
     public String getSourceStorageType() {
         return this.SourceStorageType;
     }
 
     /**
-     * Set Source data type; includes S3_COS, S3_L5.
-     * @param SourceStorageType Source data type; includes S3_COS, S3_L5.
+     * Set <p>Source data type. Valid values: S3_COS and S3_L5.</p>
+     * @param SourceStorageType <p>Source data type. Valid values: S3_COS and S3_L5.</p>
      */
     public void setSourceStorageType(String SourceStorageType) {
         this.SourceStorageType = SourceStorageType;
     }
 
     /**
-     * Get Source storage address. 
-     * @return SourceStorageAddress Source storage address.
+     * Get <p>Source storage address</p> 
+     * @return SourceStorageAddress <p>Source storage address</p>
      */
     public String getSourceStorageAddress() {
         return this.SourceStorageAddress;
     }
 
     /**
-     * Set Source storage address.
-     * @param SourceStorageAddress Source storage address.
+     * Set <p>Source storage address</p>
+     * @param SourceStorageAddress <p>Source storage address</p>
      */
     public void setSourceStorageAddress(String SourceStorageAddress) {
         this.SourceStorageAddress = SourceStorageAddress;
     }
 
     /**
-     * Get Source path. 
-     * @return SourcePath Source path.
+     * Get <p>Source path</p> 
+     * @return SourcePath <p>Source path</p>
      */
     public String getSourcePath() {
         return this.SourcePath;
     }
 
     /**
-     * Set Source path.
-     * @param SourcePath Source path.
+     * Set <p>Source path</p>
+     * @param SourcePath <p>Source path</p>
      */
     public void setSourcePath(String SourcePath) {
         this.SourcePath = SourcePath;
     }
 
     /**
-     * Get Target path in the file system. 
-     * @return TargetPath Target path in the file system.
+     * Get <p>Target path in the file system specified when setting data flow. It must start with /cfs/ and represents a logical path inside the file storage instance, not a local mount point path.<br>Example:</p><ul><li>If the CFS root directory / is mounted, and you need to map the source directory on object storage to test1/test2 under the mount path, the value of this parameter is /cfs/test1/test2.</li><li>If the CFS subdirectory /subdir is mounted, and you need to map the source directory on object storage to test1/test2 under the mount path, the value of this parameter is /cfs/subdir/test1/test2.</li></ul> 
+     * @return TargetPath <p>Target path in the file system specified when setting data flow. It must start with /cfs/ and represents a logical path inside the file storage instance, not a local mount point path.<br>Example:</p><ul><li>If the CFS root directory / is mounted, and you need to map the source directory on object storage to test1/test2 under the mount path, the value of this parameter is /cfs/test1/test2.</li><li>If the CFS subdirectory /subdir is mounted, and you need to map the source directory on object storage to test1/test2 under the mount path, the value of this parameter is /cfs/subdir/test1/test2.</li></ul>
      */
     public String getTargetPath() {
         return this.TargetPath;
     }
 
     /**
-     * Set Target path in the file system.
-     * @param TargetPath Target path in the file system.
+     * Set <p>Target path in the file system specified when setting data flow. It must start with /cfs/ and represents a logical path inside the file storage instance, not a local mount point path.<br>Example:</p><ul><li>If the CFS root directory / is mounted, and you need to map the source directory on object storage to test1/test2 under the mount path, the value of this parameter is /cfs/test1/test2.</li><li>If the CFS subdirectory /subdir is mounted, and you need to map the source directory on object storage to test1/test2 under the mount path, the value of this parameter is /cfs/subdir/test1/test2.</li></ul>
+     * @param TargetPath <p>Target path in the file system specified when setting data flow. It must start with /cfs/ and represents a logical path inside the file storage instance, not a local mount point path.<br>Example:</p><ul><li>If the CFS root directory / is mounted, and you need to map the source directory on object storage to test1/test2 under the mount path, the value of this parameter is /cfs/test1/test2.</li><li>If the CFS subdirectory /subdir is mounted, and you need to map the source directory on object storage to test1/test2 under the mount path, the value of this parameter is /cfs/subdir/test1/test2.</li></ul>
      */
     public void setTargetPath(String TargetPath) {
         this.TargetPath = TargetPath;
     }
 
     /**
-     * Get Key ID. 
-     * @return SecretId Key ID.
+     * Get <p>Secret ID</p> 
+     * @return SecretId <p>Secret ID</p>
      */
     public String getSecretId() {
         return this.SecretId;
     }
 
     /**
-     * Set Key ID.
-     * @param SecretId Key ID.
+     * Set <p>Secret ID</p>
+     * @param SecretId <p>Secret ID</p>
      */
     public void setSecretId(String SecretId) {
         this.SecretId = SecretId;
     }
 
     /**
-     * Get key. 
-     * @return SecretKey key.
+     * Get <p>Secret key</p> 
+     * @return SecretKey <p>Secret key</p>
      */
     public String getSecretKey() {
         return this.SecretKey;
     }
 
     /**
-     * Set key.
-     * @param SecretKey key.
+     * Set <p>Secret key</p>
+     * @param SecretKey <p>Secret key</p>
      */
     public void setSecretKey(String SecretKey) {
         this.SecretKey = SecretKey;
     }
 
     /**
-     * Get Data flow name, supports no more than 64 characters in length, supports chinese, numbers, _, and -. 
-     * @return DataFlowName Data flow name, supports no more than 64 characters in length, supports chinese, numbers, _, and -.
+     * Get <p>Data flow name. It supports up to 64 characters, including Chinese characters, digits, underscores (_), and hyphens (-).</p> 
+     * @return DataFlowName <p>Data flow name. It supports up to 64 characters, including Chinese characters, digits, underscores (_), and hyphens (-).</p>
      */
     public String getDataFlowName() {
         return this.DataFlowName;
     }
 
     /**
-     * Set Data flow name, supports no more than 64 characters in length, supports chinese, numbers, _, and -.
-     * @param DataFlowName Data flow name, supports no more than 64 characters in length, supports chinese, numbers, _, and -.
+     * Set <p>Data flow name. It supports up to 64 characters, including Chinese characters, digits, underscores (_), and hyphens (-).</p>
+     * @param DataFlowName <p>Data flow name. It supports up to 64 characters, including Chinese characters, digits, underscores (_), and hyphens (-).</p>
      */
     public void setDataFlowName(String DataFlowName) {
         this.DataFlowName = DataFlowName;
     }
 
     /**
-     * Get 0: disable auto-update  1: enable auto-update. 
-     * @return AutoRefresh 0: disable auto-update  1: enable auto-update.
+     * Get <p>0: Automatic update disabled. 1: Automatic update enabled.</p> 
+     * @return AutoRefresh <p>0: Automatic update disabled. 1: Automatic update enabled.</p>
      */
     public Long getAutoRefresh() {
         return this.AutoRefresh;
     }
 
     /**
-     * Set 0: disable auto-update  1: enable auto-update.
-     * @param AutoRefresh 0: disable auto-update  1: enable auto-update.
+     * Set <p>0: Automatic update disabled. 1: Automatic update enabled.</p>
+     * @param AutoRefresh <p>0: Automatic update disabled. 1: Automatic update enabled.</p>
      */
     public void setAutoRefresh(Long AutoRefresh) {
         this.AutoRefresh = AutoRefresh;
     }
 
     /**
-     * Get Topic Parameter used by KafkaConsumer during consumption 
-     * @return UserKafkaTopic Topic Parameter used by KafkaConsumer during consumption
+     * Get <p>Topic parameter used by KafkaConsumer for consumption</p> 
+     * @return UserKafkaTopic <p>Topic parameter used by KafkaConsumer for consumption</p>
      */
     public String getUserKafkaTopic() {
         return this.UserKafkaTopic;
     }
 
     /**
-     * Set Topic Parameter used by KafkaConsumer during consumption
-     * @param UserKafkaTopic Topic Parameter used by KafkaConsumer during consumption
+     * Set <p>Topic parameter used by KafkaConsumer for consumption</p>
+     * @param UserKafkaTopic <p>Topic parameter used by KafkaConsumer for consumption</p>
      */
     public void setUserKafkaTopic(String UserKafkaTopic) {
         this.UserKafkaTopic = UserKafkaTopic;
     }
 
     /**
-     * Get 	Service address example value: kafkaconsumer-ap-beijing.cls.tencentyun.com:9095. 
-     * @return ServerAddr 	Service address example value: kafkaconsumer-ap-beijing.cls.tencentyun.com:9095.
+     * Get <p>Service address. Example: kafkaconsumer-ap-beijing.cls.tencentyun.com:9095</p> 
+     * @return ServerAddr <p>Service address. Example: kafkaconsumer-ap-beijing.cls.tencentyun.com:9095</p>
      */
     public String getServerAddr() {
         return this.ServerAddr;
     }
 
     /**
-     * Set 	Service address example value: kafkaconsumer-ap-beijing.cls.tencentyun.com:9095.
-     * @param ServerAddr 	Service address example value: kafkaconsumer-ap-beijing.cls.tencentyun.com:9095.
+     * Set <p>Service address. Example: kafkaconsumer-ap-beijing.cls.tencentyun.com:9095</p>
+     * @param ServerAddr <p>Service address. Example: kafkaconsumer-ap-beijing.cls.tencentyun.com:9095</p>
      */
     public void setServerAddr(String ServerAddr) {
         this.ServerAddr = ServerAddr;
     }
 
     /**
-     * Get Kafka consuming user name. example value: name. 
-     * @return UserName Kafka consuming user name. example value: name.
+     * Get <p>Kafka consumer username. Example: name</p> 
+     * @return UserName <p>Kafka consumer username. Example: name</p>
      */
     public String getUserName() {
         return this.UserName;
     }
 
     /**
-     * Set Kafka consuming user name. example value: name.
-     * @param UserName Kafka consuming user name. example value: name.
+     * Set <p>Kafka consumer username. Example: name</p>
+     * @param UserName <p>Kafka consumer username. Example: name</p>
      */
     public void setUserName(String UserName) {
         this.UserName = UserName;
     }
 
     /**
-     * Get Kafka consuming user password. default ${SecretId}#${SecretKey}. 
-     * @return Password Kafka consuming user password. default ${SecretId}#${SecretKey}.
+     * Get <p>Kafka consumer password. Default value: ${SecretId}#${SecretKey}.</p> 
+     * @return Password <p>Kafka consumer password. Default value: ${SecretId}#${SecretKey}.</p>
      */
     public String getPassword() {
         return this.Password;
     }
 
     /**
-     * Set Kafka consuming user password. default ${SecretId}#${SecretKey}.
-     * @param Password Kafka consuming user password. default ${SecretId}#${SecretKey}.
+     * Set <p>Kafka consumer password. Default value: ${SecretId}#${SecretKey}.</p>
+     * @param Password <p>Kafka consumer password. Default value: ${SecretId}#${SecretKey}.</p>
      */
     public void setPassword(String Password) {
         this.Password = Password;

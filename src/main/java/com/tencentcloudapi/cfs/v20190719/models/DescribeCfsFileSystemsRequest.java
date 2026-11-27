@@ -24,141 +24,187 @@ import java.util.HashMap;
 public class DescribeCfsFileSystemsRequest extends AbstractModel {
 
     /**
-    * File system ID
+    * <p>File system ID.</p>
     */
     @SerializedName("FileSystemId")
     @Expose
     private String FileSystemId;
 
     /**
-    * VPC ID
+    * <p>Virtual Private Cloud (VPC) ID.</p>
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * Subnet ID
+    * <p>Subnet ID.</p>
     */
     @SerializedName("SubnetId")
     @Expose
     private String SubnetId;
 
     /**
-    * Offset paging number. default 0.
+    * <p>Offset for pagination. Default value: 0.</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * Limit page size. default value 10.
+    * <p>Limit for page size. Default value: 10.</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * User-defined name
+    * <p>User-defined name.</p>
     */
     @SerializedName("CreationToken")
     @Expose
     private String CreationToken;
 
     /**
-     * Get File system ID 
-     * @return FileSystemId File system ID
+    * <p>Filter conditions.<br><br><li>Protocol - Array of String - optional - (Filter condition) Filters by protocol. (NFS | CIFS | TURBO) </li><br><br><li>StorageType - Array of String - optional - (Filter condition) Filters by storage type. (SD | HP | TB | TP | THP) </li><br><br><li>LifeCycleState - Array of String - optional - (Filter condition) Filters by lifecycle state. (creating | create_failed | available | deleting | delete_failed | upgrading | unserviced | expanding) </li><br><br><li>Zone - Array of String - optional - (Filter condition) Filters by AZ. (For example: ap-guangzhou-3) </li><br><br><li>IpAddress - Array of String - optional - (Filter condition) Filters by export point IP address. (For example: 10.0.0.3) </li><br><br><li>PGroupId - Array of String - optional - (Filter condition) Filters by permission group ID. (For example: pgroup-xxxxxrxt) </li><br><br><li>PGroupName - Array of String - optional - (Filter condition) Filters by permission group name. (For example: default permission group) </li><br><br><li>Scenario- Array of String - optional - (Filter condition) Filters by permission group name. (For example: AgentSandbox) </li></p>
+    */
+    @SerializedName("Filters")
+    @Expose
+    private Filter [] Filters;
+
+    /**
+    * <p>Tag.</p>
+    */
+    @SerializedName("Tags")
+    @Expose
+    private TagInfo [] Tags;
+
+    /**
+     * Get <p>File system ID.</p> 
+     * @return FileSystemId <p>File system ID.</p>
      */
     public String getFileSystemId() {
         return this.FileSystemId;
     }
 
     /**
-     * Set File system ID
-     * @param FileSystemId File system ID
+     * Set <p>File system ID.</p>
+     * @param FileSystemId <p>File system ID.</p>
      */
     public void setFileSystemId(String FileSystemId) {
         this.FileSystemId = FileSystemId;
     }
 
     /**
-     * Get VPC ID 
-     * @return VpcId VPC ID
+     * Get <p>Virtual Private Cloud (VPC) ID.</p> 
+     * @return VpcId <p>Virtual Private Cloud (VPC) ID.</p>
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set VPC ID
-     * @param VpcId VPC ID
+     * Set <p>Virtual Private Cloud (VPC) ID.</p>
+     * @param VpcId <p>Virtual Private Cloud (VPC) ID.</p>
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get Subnet ID 
-     * @return SubnetId Subnet ID
+     * Get <p>Subnet ID.</p> 
+     * @return SubnetId <p>Subnet ID.</p>
      */
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set Subnet ID
-     * @param SubnetId Subnet ID
+     * Set <p>Subnet ID.</p>
+     * @param SubnetId <p>Subnet ID.</p>
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
     }
 
     /**
-     * Get Offset paging number. default 0. 
-     * @return Offset Offset paging number. default 0.
+     * Get <p>Offset for pagination. Default value: 0.</p> 
+     * @return Offset <p>Offset for pagination. Default value: 0.</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Offset paging number. default 0.
-     * @param Offset Offset paging number. default 0.
+     * Set <p>Offset for pagination. Default value: 0.</p>
+     * @param Offset <p>Offset for pagination. Default value: 0.</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get Limit page size. default value 10. 
-     * @return Limit Limit page size. default value 10.
+     * Get <p>Limit for page size. Default value: 10.</p> 
+     * @return Limit <p>Limit for page size. Default value: 10.</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Limit page size. default value 10.
-     * @param Limit Limit page size. default value 10.
+     * Set <p>Limit for page size. Default value: 10.</p>
+     * @param Limit <p>Limit for page size. Default value: 10.</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get User-defined name 
-     * @return CreationToken User-defined name
+     * Get <p>User-defined name.</p> 
+     * @return CreationToken <p>User-defined name.</p>
      */
     public String getCreationToken() {
         return this.CreationToken;
     }
 
     /**
-     * Set User-defined name
-     * @param CreationToken User-defined name
+     * Set <p>User-defined name.</p>
+     * @param CreationToken <p>User-defined name.</p>
      */
     public void setCreationToken(String CreationToken) {
         this.CreationToken = CreationToken;
+    }
+
+    /**
+     * Get <p>Filter conditions.<br><br><li>Protocol - Array of String - optional - (Filter condition) Filters by protocol. (NFS | CIFS | TURBO) </li><br><br><li>StorageType - Array of String - optional - (Filter condition) Filters by storage type. (SD | HP | TB | TP | THP) </li><br><br><li>LifeCycleState - Array of String - optional - (Filter condition) Filters by lifecycle state. (creating | create_failed | available | deleting | delete_failed | upgrading | unserviced | expanding) </li><br><br><li>Zone - Array of String - optional - (Filter condition) Filters by AZ. (For example: ap-guangzhou-3) </li><br><br><li>IpAddress - Array of String - optional - (Filter condition) Filters by export point IP address. (For example: 10.0.0.3) </li><br><br><li>PGroupId - Array of String - optional - (Filter condition) Filters by permission group ID. (For example: pgroup-xxxxxrxt) </li><br><br><li>PGroupName - Array of String - optional - (Filter condition) Filters by permission group name. (For example: default permission group) </li><br><br><li>Scenario- Array of String - optional - (Filter condition) Filters by permission group name. (For example: AgentSandbox) </li></p> 
+     * @return Filters <p>Filter conditions.<br><br><li>Protocol - Array of String - optional - (Filter condition) Filters by protocol. (NFS | CIFS | TURBO) </li><br><br><li>StorageType - Array of String - optional - (Filter condition) Filters by storage type. (SD | HP | TB | TP | THP) </li><br><br><li>LifeCycleState - Array of String - optional - (Filter condition) Filters by lifecycle state. (creating | create_failed | available | deleting | delete_failed | upgrading | unserviced | expanding) </li><br><br><li>Zone - Array of String - optional - (Filter condition) Filters by AZ. (For example: ap-guangzhou-3) </li><br><br><li>IpAddress - Array of String - optional - (Filter condition) Filters by export point IP address. (For example: 10.0.0.3) </li><br><br><li>PGroupId - Array of String - optional - (Filter condition) Filters by permission group ID. (For example: pgroup-xxxxxrxt) </li><br><br><li>PGroupName - Array of String - optional - (Filter condition) Filters by permission group name. (For example: default permission group) </li><br><br><li>Scenario- Array of String - optional - (Filter condition) Filters by permission group name. (For example: AgentSandbox) </li></p>
+     */
+    public Filter [] getFilters() {
+        return this.Filters;
+    }
+
+    /**
+     * Set <p>Filter conditions.<br><br><li>Protocol - Array of String - optional - (Filter condition) Filters by protocol. (NFS | CIFS | TURBO) </li><br><br><li>StorageType - Array of String - optional - (Filter condition) Filters by storage type. (SD | HP | TB | TP | THP) </li><br><br><li>LifeCycleState - Array of String - optional - (Filter condition) Filters by lifecycle state. (creating | create_failed | available | deleting | delete_failed | upgrading | unserviced | expanding) </li><br><br><li>Zone - Array of String - optional - (Filter condition) Filters by AZ. (For example: ap-guangzhou-3) </li><br><br><li>IpAddress - Array of String - optional - (Filter condition) Filters by export point IP address. (For example: 10.0.0.3) </li><br><br><li>PGroupId - Array of String - optional - (Filter condition) Filters by permission group ID. (For example: pgroup-xxxxxrxt) </li><br><br><li>PGroupName - Array of String - optional - (Filter condition) Filters by permission group name. (For example: default permission group) </li><br><br><li>Scenario- Array of String - optional - (Filter condition) Filters by permission group name. (For example: AgentSandbox) </li></p>
+     * @param Filters <p>Filter conditions.<br><br><li>Protocol - Array of String - optional - (Filter condition) Filters by protocol. (NFS | CIFS | TURBO) </li><br><br><li>StorageType - Array of String - optional - (Filter condition) Filters by storage type. (SD | HP | TB | TP | THP) </li><br><br><li>LifeCycleState - Array of String - optional - (Filter condition) Filters by lifecycle state. (creating | create_failed | available | deleting | delete_failed | upgrading | unserviced | expanding) </li><br><br><li>Zone - Array of String - optional - (Filter condition) Filters by AZ. (For example: ap-guangzhou-3) </li><br><br><li>IpAddress - Array of String - optional - (Filter condition) Filters by export point IP address. (For example: 10.0.0.3) </li><br><br><li>PGroupId - Array of String - optional - (Filter condition) Filters by permission group ID. (For example: pgroup-xxxxxrxt) </li><br><br><li>PGroupName - Array of String - optional - (Filter condition) Filters by permission group name. (For example: default permission group) </li><br><br><li>Scenario- Array of String - optional - (Filter condition) Filters by permission group name. (For example: AgentSandbox) </li></p>
+     */
+    public void setFilters(Filter [] Filters) {
+        this.Filters = Filters;
+    }
+
+    /**
+     * Get <p>Tag.</p> 
+     * @return Tags <p>Tag.</p>
+     */
+    public TagInfo [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set <p>Tag.</p>
+     * @param Tags <p>Tag.</p>
+     */
+    public void setTags(TagInfo [] Tags) {
+        this.Tags = Tags;
     }
 
     public DescribeCfsFileSystemsRequest() {
@@ -187,6 +233,18 @@ public class DescribeCfsFileSystemsRequest extends AbstractModel {
         if (source.CreationToken != null) {
             this.CreationToken = new String(source.CreationToken);
         }
+        if (source.Filters != null) {
+            this.Filters = new Filter[source.Filters.length];
+            for (int i = 0; i < source.Filters.length; i++) {
+                this.Filters[i] = new Filter(source.Filters[i]);
+            }
+        }
+        if (source.Tags != null) {
+            this.Tags = new TagInfo[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new TagInfo(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -200,6 +258,8 @@ public class DescribeCfsFileSystemsRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "CreationToken", this.CreationToken);
+        this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

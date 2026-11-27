@@ -24,702 +24,739 @@ import java.util.HashMap;
 public class FileSystemInfo extends AbstractModel {
 
     /**
-    * Creation time
+    * <p>Creation time.</p>
     */
     @SerializedName("CreationTime")
     @Expose
     private String CreationTime;
 
     /**
-    * Custom name
+    * <p>User-defined name.</p>
     */
     @SerializedName("CreationToken")
     @Expose
     private String CreationToken;
 
     /**
-    * File system ID
+    * <p>File system ID.</p>
     */
     @SerializedName("FileSystemId")
     @Expose
     private String FileSystemId;
 
     /**
-    * File system status. Valid values:
-- creating
-- mounting
-- create_failed
-- available
-- unserviced
-- upgrading
+    * <p>File system status. Valid values:</p><ul><li>creating: Creating</li><li>mounting: Mounting</li><li>create_failed: Failed to create</li><li>available: Available</li><li>unserviced: Service suspended</li><li>upgrading: Upgrading</li></ul>
     */
     @SerializedName("LifeCycleState")
     @Expose
     private String LifeCycleState;
 
     /**
-    * Used capacity of the file system, in Byte.
+    * <p>Used capacity of the file system. Unit: Byte.</p>
     */
     @SerializedName("SizeByte")
     @Expose
     private Long SizeByte;
 
     /**
-    * File system space limit, in GiB.
+    * <p>File system space limit. Unit: GiB.</p>
     */
     @SerializedName("SizeLimit")
     @Expose
     private Long SizeLimit;
 
     /**
-    * Region ID
+    * <p>Region ID.</p>
     */
     @SerializedName("ZoneId")
     @Expose
     private Long ZoneId;
 
     /**
-    * Region name
+    * <p>Region name.</p>
     */
     @SerializedName("Zone")
     @Expose
     private String Zone;
 
     /**
-    * File system protocol type. Valid values: NFS, CIFS, and TURBO.
+    * <p>File system protocol type. Valid values: NFS, CIFS, and TURBO.</p>
     */
     @SerializedName("Protocol")
     @Expose
     private String Protocol;
 
     /**
-    * Storage type. HP: high-performance; SD: standard; TP: high-performance Turbo; TB: standard Turbo; THP: throughput.
+    * <p>Storage type. Valid values: HP: General performance; SD: General standard; TP: turbo performance; TB: turbo standard; THP: Throughput.</p>
     */
     @SerializedName("StorageType")
     @Expose
     private String StorageType;
 
     /**
-    * Prepaid storage pack bound with the file system
+    * <p>Prepaid storage pack bound to the file system.</p>
     */
     @SerializedName("StorageResourcePkg")
     @Expose
     private String StorageResourcePkg;
 
     /**
-    * Prepaid bandwidth pack bound to a file system (not supported currently)
+    * <p>Prepaid bandwidth pack bound to the file system (not supported yet).</p>
     */
     @SerializedName("BandwidthResourcePkg")
     @Expose
     private String BandwidthResourcePkg;
 
     /**
-    * Information of permission groups bound to a file system
+    * <p>Information of the permission group bound to the file system.</p>
     */
     @SerializedName("PGroup")
     @Expose
     private PGroup PGroup;
 
     /**
-    * Custom name
+    * <p>User-defined name.</p>
     */
     @SerializedName("FsName")
     @Expose
     private String FsName;
 
     /**
-    * Is the file system encrypted. true: encrypted. false: non-encrypted.
+    * <p>Whether the file system is encrypted. true: encrypted; false: not encrypted.</p>
     */
     @SerializedName("Encrypted")
     @Expose
     private Boolean Encrypted;
 
     /**
-    * Key used for encryption, which can be the key ID or ARN
+    * <p>Key used for encryption, which can be the key ID or ARN.</p>
     */
     @SerializedName("KmsKeyId")
     @Expose
     private String KmsKeyId;
 
     /**
-    * Application ID
+    * <p>Application ID.</p>
     */
     @SerializedName("AppId")
     @Expose
     private Long AppId;
 
     /**
-    * Upper limit of the file system throughput, in MiB/s. The upper limit is determined based on the current storage used of the file system, bound storage resource packages, and throughput resource packages.
+    * <p>Maximum file system throughput, which is determined by the current used storage capacity of the file system, the bound storage pack, and the throughput pack. Unit: MiB/s.</p>
     */
     @SerializedName("BandwidthLimit")
     @Expose
     private Float BandwidthLimit;
 
     /**
-    * Snapshot policy associated with the file system.
+    * <p>Snapshot policy associated with the file system.</p>
     */
     @SerializedName("AutoSnapshotPolicyId")
     @Expose
     private String AutoSnapshotPolicyId;
 
     /**
-    * File system processes snapshot status, snapping: in snapshot, normal: in normal status.
+    * <p>Snapshot processing status of the file system. snapping: snapshot in progress; normal: normal status.</p>
     */
     @SerializedName("SnapStatus")
     @Expose
     private String SnapStatus;
 
     /**
-    * Upper limit of file system capacity.
-Unit: GiB.
+    * <p>Maximum capacity specification of the file system.<br>Unit: GiB.</p>
     */
     @SerializedName("Capacity")
     @Expose
     private Long Capacity;
 
     /**
-    * File system tag list
+    * <p>List of file system tags.</p>
     */
     @SerializedName("Tags")
     @Expose
     private TagInfo [] Tags;
 
     /**
-    * Status of file system lifecycle management.
-NotAvailable: unavailable.
-Available.
+    * <p>Lifecycle management status of the file system.<br>NotAvailable: Unavailable.<br>Available: Available.</p>
     */
     @SerializedName("TieringState")
     @Expose
     private String TieringState;
 
     /**
-    * Layered storage detail.
+    * <p>Tiered storage details.</p>
     */
     @SerializedName("TieringDetail")
     @Expose
     private TieringDetailInfo TieringDetail;
 
     /**
-    * File system auto scale-out policy.
+    * <p>Automatic scaling policy of the file system.</p>
     */
     @SerializedName("AutoScaleUpRule")
     @Expose
     private AutoScaleUpRule AutoScaleUpRule;
 
     /**
-    * File System Version
+    * <p>File system version.</p>
     */
     @SerializedName("Version")
     @Expose
     private String Version;
 
     /**
-    * Additional performance info.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Additional performance information.</p>
     */
     @SerializedName("ExstraPerformanceInfo")
     @Expose
     private ExstraPerformanceInfo [] ExstraPerformanceInfo;
 
     /**
-    * basic: standard version metadata type.
-enhanced: additional metadata type.
+    * <p>basic: standard metadata type.<br>enhanced: enhanced metadata type.</p>
     */
     @SerializedName("MetaType")
     @Expose
     private String MetaType;
 
     /**
-     * Get Creation time 
-     * @return CreationTime Creation time
+    * <p>Business scenario.</p><p>Valid values:</p><ul><li>AgentSandbox: Create AgentCFS.</li></ul>
+    */
+    @SerializedName("Scenario")
+    @Expose
+    private String Scenario;
+
+    /**
+    * <p>Overfull deletion capacity ratio. 0.0 indicates disabled.</p><p>Value range: [0.0, 1.0].</p>
+    */
+    @SerializedName("FullDeleteCapacityUsage")
+    @Expose
+    private Float FullDeleteCapacityUsage;
+
+    /**
+    * <p>Minimum survival time before overfull deletion, in seconds.</p><p>Unit: seconds.</p>
+    */
+    @SerializedName("FullDeleteMinTtl")
+    @Expose
+    private Long FullDeleteMinTtl;
+
+    /**
+    * <p>Expiration deletion TTL, in seconds. 0 indicates disabled.</p><p>Unit: seconds.</p>
+    */
+    @SerializedName("ExpireDeleteTtl")
+    @Expose
+    private Long ExpireDeleteTtl;
+
+    /**
+     * Get <p>Creation time.</p> 
+     * @return CreationTime <p>Creation time.</p>
      */
     public String getCreationTime() {
         return this.CreationTime;
     }
 
     /**
-     * Set Creation time
-     * @param CreationTime Creation time
+     * Set <p>Creation time.</p>
+     * @param CreationTime <p>Creation time.</p>
      */
     public void setCreationTime(String CreationTime) {
         this.CreationTime = CreationTime;
     }
 
     /**
-     * Get Custom name 
-     * @return CreationToken Custom name
+     * Get <p>User-defined name.</p> 
+     * @return CreationToken <p>User-defined name.</p>
      */
     public String getCreationToken() {
         return this.CreationToken;
     }
 
     /**
-     * Set Custom name
-     * @param CreationToken Custom name
+     * Set <p>User-defined name.</p>
+     * @param CreationToken <p>User-defined name.</p>
      */
     public void setCreationToken(String CreationToken) {
         this.CreationToken = CreationToken;
     }
 
     /**
-     * Get File system ID 
-     * @return FileSystemId File system ID
+     * Get <p>File system ID.</p> 
+     * @return FileSystemId <p>File system ID.</p>
      */
     public String getFileSystemId() {
         return this.FileSystemId;
     }
 
     /**
-     * Set File system ID
-     * @param FileSystemId File system ID
+     * Set <p>File system ID.</p>
+     * @param FileSystemId <p>File system ID.</p>
      */
     public void setFileSystemId(String FileSystemId) {
         this.FileSystemId = FileSystemId;
     }
 
     /**
-     * Get File system status. Valid values:
-- creating
-- mounting
-- create_failed
-- available
-- unserviced
-- upgrading 
-     * @return LifeCycleState File system status. Valid values:
-- creating
-- mounting
-- create_failed
-- available
-- unserviced
-- upgrading
+     * Get <p>File system status. Valid values:</p><ul><li>creating: Creating</li><li>mounting: Mounting</li><li>create_failed: Failed to create</li><li>available: Available</li><li>unserviced: Service suspended</li><li>upgrading: Upgrading</li></ul> 
+     * @return LifeCycleState <p>File system status. Valid values:</p><ul><li>creating: Creating</li><li>mounting: Mounting</li><li>create_failed: Failed to create</li><li>available: Available</li><li>unserviced: Service suspended</li><li>upgrading: Upgrading</li></ul>
      */
     public String getLifeCycleState() {
         return this.LifeCycleState;
     }
 
     /**
-     * Set File system status. Valid values:
-- creating
-- mounting
-- create_failed
-- available
-- unserviced
-- upgrading
-     * @param LifeCycleState File system status. Valid values:
-- creating
-- mounting
-- create_failed
-- available
-- unserviced
-- upgrading
+     * Set <p>File system status. Valid values:</p><ul><li>creating: Creating</li><li>mounting: Mounting</li><li>create_failed: Failed to create</li><li>available: Available</li><li>unserviced: Service suspended</li><li>upgrading: Upgrading</li></ul>
+     * @param LifeCycleState <p>File system status. Valid values:</p><ul><li>creating: Creating</li><li>mounting: Mounting</li><li>create_failed: Failed to create</li><li>available: Available</li><li>unserviced: Service suspended</li><li>upgrading: Upgrading</li></ul>
      */
     public void setLifeCycleState(String LifeCycleState) {
         this.LifeCycleState = LifeCycleState;
     }
 
     /**
-     * Get Used capacity of the file system, in Byte. 
-     * @return SizeByte Used capacity of the file system, in Byte.
+     * Get <p>Used capacity of the file system. Unit: Byte.</p> 
+     * @return SizeByte <p>Used capacity of the file system. Unit: Byte.</p>
      */
     public Long getSizeByte() {
         return this.SizeByte;
     }
 
     /**
-     * Set Used capacity of the file system, in Byte.
-     * @param SizeByte Used capacity of the file system, in Byte.
+     * Set <p>Used capacity of the file system. Unit: Byte.</p>
+     * @param SizeByte <p>Used capacity of the file system. Unit: Byte.</p>
      */
     public void setSizeByte(Long SizeByte) {
         this.SizeByte = SizeByte;
     }
 
     /**
-     * Get File system space limit, in GiB. 
-     * @return SizeLimit File system space limit, in GiB.
+     * Get <p>File system space limit. Unit: GiB.</p> 
+     * @return SizeLimit <p>File system space limit. Unit: GiB.</p>
      */
     public Long getSizeLimit() {
         return this.SizeLimit;
     }
 
     /**
-     * Set File system space limit, in GiB.
-     * @param SizeLimit File system space limit, in GiB.
+     * Set <p>File system space limit. Unit: GiB.</p>
+     * @param SizeLimit <p>File system space limit. Unit: GiB.</p>
      */
     public void setSizeLimit(Long SizeLimit) {
         this.SizeLimit = SizeLimit;
     }
 
     /**
-     * Get Region ID 
-     * @return ZoneId Region ID
+     * Get <p>Region ID.</p> 
+     * @return ZoneId <p>Region ID.</p>
      */
     public Long getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set Region ID
-     * @param ZoneId Region ID
+     * Set <p>Region ID.</p>
+     * @param ZoneId <p>Region ID.</p>
      */
     public void setZoneId(Long ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get Region name 
-     * @return Zone Region name
+     * Get <p>Region name.</p> 
+     * @return Zone <p>Region name.</p>
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * Set Region name
-     * @param Zone Region name
+     * Set <p>Region name.</p>
+     * @param Zone <p>Region name.</p>
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
     }
 
     /**
-     * Get File system protocol type. Valid values: NFS, CIFS, and TURBO. 
-     * @return Protocol File system protocol type. Valid values: NFS, CIFS, and TURBO.
+     * Get <p>File system protocol type. Valid values: NFS, CIFS, and TURBO.</p> 
+     * @return Protocol <p>File system protocol type. Valid values: NFS, CIFS, and TURBO.</p>
      */
     public String getProtocol() {
         return this.Protocol;
     }
 
     /**
-     * Set File system protocol type. Valid values: NFS, CIFS, and TURBO.
-     * @param Protocol File system protocol type. Valid values: NFS, CIFS, and TURBO.
+     * Set <p>File system protocol type. Valid values: NFS, CIFS, and TURBO.</p>
+     * @param Protocol <p>File system protocol type. Valid values: NFS, CIFS, and TURBO.</p>
      */
     public void setProtocol(String Protocol) {
         this.Protocol = Protocol;
     }
 
     /**
-     * Get Storage type. HP: high-performance; SD: standard; TP: high-performance Turbo; TB: standard Turbo; THP: throughput. 
-     * @return StorageType Storage type. HP: high-performance; SD: standard; TP: high-performance Turbo; TB: standard Turbo; THP: throughput.
+     * Get <p>Storage type. Valid values: HP: General performance; SD: General standard; TP: turbo performance; TB: turbo standard; THP: Throughput.</p> 
+     * @return StorageType <p>Storage type. Valid values: HP: General performance; SD: General standard; TP: turbo performance; TB: turbo standard; THP: Throughput.</p>
      */
     public String getStorageType() {
         return this.StorageType;
     }
 
     /**
-     * Set Storage type. HP: high-performance; SD: standard; TP: high-performance Turbo; TB: standard Turbo; THP: throughput.
-     * @param StorageType Storage type. HP: high-performance; SD: standard; TP: high-performance Turbo; TB: standard Turbo; THP: throughput.
+     * Set <p>Storage type. Valid values: HP: General performance; SD: General standard; TP: turbo performance; TB: turbo standard; THP: Throughput.</p>
+     * @param StorageType <p>Storage type. Valid values: HP: General performance; SD: General standard; TP: turbo performance; TB: turbo standard; THP: Throughput.</p>
      */
     public void setStorageType(String StorageType) {
         this.StorageType = StorageType;
     }
 
     /**
-     * Get Prepaid storage pack bound with the file system 
-     * @return StorageResourcePkg Prepaid storage pack bound with the file system
+     * Get <p>Prepaid storage pack bound to the file system.</p> 
+     * @return StorageResourcePkg <p>Prepaid storage pack bound to the file system.</p>
      */
     public String getStorageResourcePkg() {
         return this.StorageResourcePkg;
     }
 
     /**
-     * Set Prepaid storage pack bound with the file system
-     * @param StorageResourcePkg Prepaid storage pack bound with the file system
+     * Set <p>Prepaid storage pack bound to the file system.</p>
+     * @param StorageResourcePkg <p>Prepaid storage pack bound to the file system.</p>
      */
     public void setStorageResourcePkg(String StorageResourcePkg) {
         this.StorageResourcePkg = StorageResourcePkg;
     }
 
     /**
-     * Get Prepaid bandwidth pack bound to a file system (not supported currently) 
-     * @return BandwidthResourcePkg Prepaid bandwidth pack bound to a file system (not supported currently)
+     * Get <p>Prepaid bandwidth pack bound to the file system (not supported yet).</p> 
+     * @return BandwidthResourcePkg <p>Prepaid bandwidth pack bound to the file system (not supported yet).</p>
      */
     public String getBandwidthResourcePkg() {
         return this.BandwidthResourcePkg;
     }
 
     /**
-     * Set Prepaid bandwidth pack bound to a file system (not supported currently)
-     * @param BandwidthResourcePkg Prepaid bandwidth pack bound to a file system (not supported currently)
+     * Set <p>Prepaid bandwidth pack bound to the file system (not supported yet).</p>
+     * @param BandwidthResourcePkg <p>Prepaid bandwidth pack bound to the file system (not supported yet).</p>
      */
     public void setBandwidthResourcePkg(String BandwidthResourcePkg) {
         this.BandwidthResourcePkg = BandwidthResourcePkg;
     }
 
     /**
-     * Get Information of permission groups bound to a file system 
-     * @return PGroup Information of permission groups bound to a file system
+     * Get <p>Information of the permission group bound to the file system.</p> 
+     * @return PGroup <p>Information of the permission group bound to the file system.</p>
      */
     public PGroup getPGroup() {
         return this.PGroup;
     }
 
     /**
-     * Set Information of permission groups bound to a file system
-     * @param PGroup Information of permission groups bound to a file system
+     * Set <p>Information of the permission group bound to the file system.</p>
+     * @param PGroup <p>Information of the permission group bound to the file system.</p>
      */
     public void setPGroup(PGroup PGroup) {
         this.PGroup = PGroup;
     }
 
     /**
-     * Get Custom name 
-     * @return FsName Custom name
+     * Get <p>User-defined name.</p> 
+     * @return FsName <p>User-defined name.</p>
      */
     public String getFsName() {
         return this.FsName;
     }
 
     /**
-     * Set Custom name
-     * @param FsName Custom name
+     * Set <p>User-defined name.</p>
+     * @param FsName <p>User-defined name.</p>
      */
     public void setFsName(String FsName) {
         this.FsName = FsName;
     }
 
     /**
-     * Get Is the file system encrypted. true: encrypted. false: non-encrypted. 
-     * @return Encrypted Is the file system encrypted. true: encrypted. false: non-encrypted.
+     * Get <p>Whether the file system is encrypted. true: encrypted; false: not encrypted.</p> 
+     * @return Encrypted <p>Whether the file system is encrypted. true: encrypted; false: not encrypted.</p>
      */
     public Boolean getEncrypted() {
         return this.Encrypted;
     }
 
     /**
-     * Set Is the file system encrypted. true: encrypted. false: non-encrypted.
-     * @param Encrypted Is the file system encrypted. true: encrypted. false: non-encrypted.
+     * Set <p>Whether the file system is encrypted. true: encrypted; false: not encrypted.</p>
+     * @param Encrypted <p>Whether the file system is encrypted. true: encrypted; false: not encrypted.</p>
      */
     public void setEncrypted(Boolean Encrypted) {
         this.Encrypted = Encrypted;
     }
 
     /**
-     * Get Key used for encryption, which can be the key ID or ARN 
-     * @return KmsKeyId Key used for encryption, which can be the key ID or ARN
+     * Get <p>Key used for encryption, which can be the key ID or ARN.</p> 
+     * @return KmsKeyId <p>Key used for encryption, which can be the key ID or ARN.</p>
      */
     public String getKmsKeyId() {
         return this.KmsKeyId;
     }
 
     /**
-     * Set Key used for encryption, which can be the key ID or ARN
-     * @param KmsKeyId Key used for encryption, which can be the key ID or ARN
+     * Set <p>Key used for encryption, which can be the key ID or ARN.</p>
+     * @param KmsKeyId <p>Key used for encryption, which can be the key ID or ARN.</p>
      */
     public void setKmsKeyId(String KmsKeyId) {
         this.KmsKeyId = KmsKeyId;
     }
 
     /**
-     * Get Application ID 
-     * @return AppId Application ID
+     * Get <p>Application ID.</p> 
+     * @return AppId <p>Application ID.</p>
      */
     public Long getAppId() {
         return this.AppId;
     }
 
     /**
-     * Set Application ID
-     * @param AppId Application ID
+     * Set <p>Application ID.</p>
+     * @param AppId <p>Application ID.</p>
      */
     public void setAppId(Long AppId) {
         this.AppId = AppId;
     }
 
     /**
-     * Get Upper limit of the file system throughput, in MiB/s. The upper limit is determined based on the current storage used of the file system, bound storage resource packages, and throughput resource packages. 
-     * @return BandwidthLimit Upper limit of the file system throughput, in MiB/s. The upper limit is determined based on the current storage used of the file system, bound storage resource packages, and throughput resource packages.
+     * Get <p>Maximum file system throughput, which is determined by the current used storage capacity of the file system, the bound storage pack, and the throughput pack. Unit: MiB/s.</p> 
+     * @return BandwidthLimit <p>Maximum file system throughput, which is determined by the current used storage capacity of the file system, the bound storage pack, and the throughput pack. Unit: MiB/s.</p>
      */
     public Float getBandwidthLimit() {
         return this.BandwidthLimit;
     }
 
     /**
-     * Set Upper limit of the file system throughput, in MiB/s. The upper limit is determined based on the current storage used of the file system, bound storage resource packages, and throughput resource packages.
-     * @param BandwidthLimit Upper limit of the file system throughput, in MiB/s. The upper limit is determined based on the current storage used of the file system, bound storage resource packages, and throughput resource packages.
+     * Set <p>Maximum file system throughput, which is determined by the current used storage capacity of the file system, the bound storage pack, and the throughput pack. Unit: MiB/s.</p>
+     * @param BandwidthLimit <p>Maximum file system throughput, which is determined by the current used storage capacity of the file system, the bound storage pack, and the throughput pack. Unit: MiB/s.</p>
      */
     public void setBandwidthLimit(Float BandwidthLimit) {
         this.BandwidthLimit = BandwidthLimit;
     }
 
     /**
-     * Get Snapshot policy associated with the file system. 
-     * @return AutoSnapshotPolicyId Snapshot policy associated with the file system.
+     * Get <p>Snapshot policy associated with the file system.</p> 
+     * @return AutoSnapshotPolicyId <p>Snapshot policy associated with the file system.</p>
      */
     public String getAutoSnapshotPolicyId() {
         return this.AutoSnapshotPolicyId;
     }
 
     /**
-     * Set Snapshot policy associated with the file system.
-     * @param AutoSnapshotPolicyId Snapshot policy associated with the file system.
+     * Set <p>Snapshot policy associated with the file system.</p>
+     * @param AutoSnapshotPolicyId <p>Snapshot policy associated with the file system.</p>
      */
     public void setAutoSnapshotPolicyId(String AutoSnapshotPolicyId) {
         this.AutoSnapshotPolicyId = AutoSnapshotPolicyId;
     }
 
     /**
-     * Get File system processes snapshot status, snapping: in snapshot, normal: in normal status. 
-     * @return SnapStatus File system processes snapshot status, snapping: in snapshot, normal: in normal status.
+     * Get <p>Snapshot processing status of the file system. snapping: snapshot in progress; normal: normal status.</p> 
+     * @return SnapStatus <p>Snapshot processing status of the file system. snapping: snapshot in progress; normal: normal status.</p>
      */
     public String getSnapStatus() {
         return this.SnapStatus;
     }
 
     /**
-     * Set File system processes snapshot status, snapping: in snapshot, normal: in normal status.
-     * @param SnapStatus File system processes snapshot status, snapping: in snapshot, normal: in normal status.
+     * Set <p>Snapshot processing status of the file system. snapping: snapshot in progress; normal: normal status.</p>
+     * @param SnapStatus <p>Snapshot processing status of the file system. snapping: snapshot in progress; normal: normal status.</p>
      */
     public void setSnapStatus(String SnapStatus) {
         this.SnapStatus = SnapStatus;
     }
 
     /**
-     * Get Upper limit of file system capacity.
-Unit: GiB. 
-     * @return Capacity Upper limit of file system capacity.
-Unit: GiB.
+     * Get <p>Maximum capacity specification of the file system.<br>Unit: GiB.</p> 
+     * @return Capacity <p>Maximum capacity specification of the file system.<br>Unit: GiB.</p>
      */
     public Long getCapacity() {
         return this.Capacity;
     }
 
     /**
-     * Set Upper limit of file system capacity.
-Unit: GiB.
-     * @param Capacity Upper limit of file system capacity.
-Unit: GiB.
+     * Set <p>Maximum capacity specification of the file system.<br>Unit: GiB.</p>
+     * @param Capacity <p>Maximum capacity specification of the file system.<br>Unit: GiB.</p>
      */
     public void setCapacity(Long Capacity) {
         this.Capacity = Capacity;
     }
 
     /**
-     * Get File system tag list 
-     * @return Tags File system tag list
+     * Get <p>List of file system tags.</p> 
+     * @return Tags <p>List of file system tags.</p>
      */
     public TagInfo [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set File system tag list
-     * @param Tags File system tag list
+     * Set <p>List of file system tags.</p>
+     * @param Tags <p>List of file system tags.</p>
      */
     public void setTags(TagInfo [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get Status of file system lifecycle management.
-NotAvailable: unavailable.
-Available. 
-     * @return TieringState Status of file system lifecycle management.
-NotAvailable: unavailable.
-Available.
+     * Get <p>Lifecycle management status of the file system.<br>NotAvailable: Unavailable.<br>Available: Available.</p> 
+     * @return TieringState <p>Lifecycle management status of the file system.<br>NotAvailable: Unavailable.<br>Available: Available.</p>
      */
     public String getTieringState() {
         return this.TieringState;
     }
 
     /**
-     * Set Status of file system lifecycle management.
-NotAvailable: unavailable.
-Available.
-     * @param TieringState Status of file system lifecycle management.
-NotAvailable: unavailable.
-Available.
+     * Set <p>Lifecycle management status of the file system.<br>NotAvailable: Unavailable.<br>Available: Available.</p>
+     * @param TieringState <p>Lifecycle management status of the file system.<br>NotAvailable: Unavailable.<br>Available: Available.</p>
      */
     public void setTieringState(String TieringState) {
         this.TieringState = TieringState;
     }
 
     /**
-     * Get Layered storage detail. 
-     * @return TieringDetail Layered storage detail.
+     * Get <p>Tiered storage details.</p> 
+     * @return TieringDetail <p>Tiered storage details.</p>
      */
     public TieringDetailInfo getTieringDetail() {
         return this.TieringDetail;
     }
 
     /**
-     * Set Layered storage detail.
-     * @param TieringDetail Layered storage detail.
+     * Set <p>Tiered storage details.</p>
+     * @param TieringDetail <p>Tiered storage details.</p>
      */
     public void setTieringDetail(TieringDetailInfo TieringDetail) {
         this.TieringDetail = TieringDetail;
     }
 
     /**
-     * Get File system auto scale-out policy. 
-     * @return AutoScaleUpRule File system auto scale-out policy.
+     * Get <p>Automatic scaling policy of the file system.</p> 
+     * @return AutoScaleUpRule <p>Automatic scaling policy of the file system.</p>
      */
     public AutoScaleUpRule getAutoScaleUpRule() {
         return this.AutoScaleUpRule;
     }
 
     /**
-     * Set File system auto scale-out policy.
-     * @param AutoScaleUpRule File system auto scale-out policy.
+     * Set <p>Automatic scaling policy of the file system.</p>
+     * @param AutoScaleUpRule <p>Automatic scaling policy of the file system.</p>
      */
     public void setAutoScaleUpRule(AutoScaleUpRule AutoScaleUpRule) {
         this.AutoScaleUpRule = AutoScaleUpRule;
     }
 
     /**
-     * Get File System Version 
-     * @return Version File System Version
+     * Get <p>File system version.</p> 
+     * @return Version <p>File system version.</p>
      */
     public String getVersion() {
         return this.Version;
     }
 
     /**
-     * Set File System Version
-     * @param Version File System Version
+     * Set <p>File system version.</p>
+     * @param Version <p>File system version.</p>
      */
     public void setVersion(String Version) {
         this.Version = Version;
     }
 
     /**
-     * Get Additional performance info.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ExstraPerformanceInfo Additional performance info.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Additional performance information.</p> 
+     * @return ExstraPerformanceInfo <p>Additional performance information.</p>
      */
     public ExstraPerformanceInfo [] getExstraPerformanceInfo() {
         return this.ExstraPerformanceInfo;
     }
 
     /**
-     * Set Additional performance info.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ExstraPerformanceInfo Additional performance info.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Additional performance information.</p>
+     * @param ExstraPerformanceInfo <p>Additional performance information.</p>
      */
     public void setExstraPerformanceInfo(ExstraPerformanceInfo [] ExstraPerformanceInfo) {
         this.ExstraPerformanceInfo = ExstraPerformanceInfo;
     }
 
     /**
-     * Get basic: standard version metadata type.
-enhanced: additional metadata type. 
-     * @return MetaType basic: standard version metadata type.
-enhanced: additional metadata type.
+     * Get <p>basic: standard metadata type.<br>enhanced: enhanced metadata type.</p> 
+     * @return MetaType <p>basic: standard metadata type.<br>enhanced: enhanced metadata type.</p>
      */
     public String getMetaType() {
         return this.MetaType;
     }
 
     /**
-     * Set basic: standard version metadata type.
-enhanced: additional metadata type.
-     * @param MetaType basic: standard version metadata type.
-enhanced: additional metadata type.
+     * Set <p>basic: standard metadata type.<br>enhanced: enhanced metadata type.</p>
+     * @param MetaType <p>basic: standard metadata type.<br>enhanced: enhanced metadata type.</p>
      */
     public void setMetaType(String MetaType) {
         this.MetaType = MetaType;
+    }
+
+    /**
+     * Get <p>Business scenario.</p><p>Valid values:</p><ul><li>AgentSandbox: Create AgentCFS.</li></ul> 
+     * @return Scenario <p>Business scenario.</p><p>Valid values:</p><ul><li>AgentSandbox: Create AgentCFS.</li></ul>
+     */
+    public String getScenario() {
+        return this.Scenario;
+    }
+
+    /**
+     * Set <p>Business scenario.</p><p>Valid values:</p><ul><li>AgentSandbox: Create AgentCFS.</li></ul>
+     * @param Scenario <p>Business scenario.</p><p>Valid values:</p><ul><li>AgentSandbox: Create AgentCFS.</li></ul>
+     */
+    public void setScenario(String Scenario) {
+        this.Scenario = Scenario;
+    }
+
+    /**
+     * Get <p>Overfull deletion capacity ratio. 0.0 indicates disabled.</p><p>Value range: [0.0, 1.0].</p> 
+     * @return FullDeleteCapacityUsage <p>Overfull deletion capacity ratio. 0.0 indicates disabled.</p><p>Value range: [0.0, 1.0].</p>
+     */
+    public Float getFullDeleteCapacityUsage() {
+        return this.FullDeleteCapacityUsage;
+    }
+
+    /**
+     * Set <p>Overfull deletion capacity ratio. 0.0 indicates disabled.</p><p>Value range: [0.0, 1.0].</p>
+     * @param FullDeleteCapacityUsage <p>Overfull deletion capacity ratio. 0.0 indicates disabled.</p><p>Value range: [0.0, 1.0].</p>
+     */
+    public void setFullDeleteCapacityUsage(Float FullDeleteCapacityUsage) {
+        this.FullDeleteCapacityUsage = FullDeleteCapacityUsage;
+    }
+
+    /**
+     * Get <p>Minimum survival time before overfull deletion, in seconds.</p><p>Unit: seconds.</p> 
+     * @return FullDeleteMinTtl <p>Minimum survival time before overfull deletion, in seconds.</p><p>Unit: seconds.</p>
+     */
+    public Long getFullDeleteMinTtl() {
+        return this.FullDeleteMinTtl;
+    }
+
+    /**
+     * Set <p>Minimum survival time before overfull deletion, in seconds.</p><p>Unit: seconds.</p>
+     * @param FullDeleteMinTtl <p>Minimum survival time before overfull deletion, in seconds.</p><p>Unit: seconds.</p>
+     */
+    public void setFullDeleteMinTtl(Long FullDeleteMinTtl) {
+        this.FullDeleteMinTtl = FullDeleteMinTtl;
+    }
+
+    /**
+     * Get <p>Expiration deletion TTL, in seconds. 0 indicates disabled.</p><p>Unit: seconds.</p> 
+     * @return ExpireDeleteTtl <p>Expiration deletion TTL, in seconds. 0 indicates disabled.</p><p>Unit: seconds.</p>
+     */
+    public Long getExpireDeleteTtl() {
+        return this.ExpireDeleteTtl;
+    }
+
+    /**
+     * Set <p>Expiration deletion TTL, in seconds. 0 indicates disabled.</p><p>Unit: seconds.</p>
+     * @param ExpireDeleteTtl <p>Expiration deletion TTL, in seconds. 0 indicates disabled.</p><p>Unit: seconds.</p>
+     */
+    public void setExpireDeleteTtl(Long ExpireDeleteTtl) {
+        this.ExpireDeleteTtl = ExpireDeleteTtl;
     }
 
     public FileSystemInfo() {
@@ -820,6 +857,18 @@ enhanced: additional metadata type.
         if (source.MetaType != null) {
             this.MetaType = new String(source.MetaType);
         }
+        if (source.Scenario != null) {
+            this.Scenario = new String(source.Scenario);
+        }
+        if (source.FullDeleteCapacityUsage != null) {
+            this.FullDeleteCapacityUsage = new Float(source.FullDeleteCapacityUsage);
+        }
+        if (source.FullDeleteMinTtl != null) {
+            this.FullDeleteMinTtl = new Long(source.FullDeleteMinTtl);
+        }
+        if (source.ExpireDeleteTtl != null) {
+            this.ExpireDeleteTtl = new Long(source.ExpireDeleteTtl);
+        }
     }
 
 
@@ -855,6 +904,10 @@ enhanced: additional metadata type.
         this.setParamSimple(map, prefix + "Version", this.Version);
         this.setParamArrayObj(map, prefix + "ExstraPerformanceInfo.", this.ExstraPerformanceInfo);
         this.setParamSimple(map, prefix + "MetaType", this.MetaType);
+        this.setParamSimple(map, prefix + "Scenario", this.Scenario);
+        this.setParamSimple(map, prefix + "FullDeleteCapacityUsage", this.FullDeleteCapacityUsage);
+        this.setParamSimple(map, prefix + "FullDeleteMinTtl", this.FullDeleteMinTtl);
+        this.setParamSimple(map, prefix + "ExpireDeleteTtl", this.ExpireDeleteTtl);
 
     }
 }

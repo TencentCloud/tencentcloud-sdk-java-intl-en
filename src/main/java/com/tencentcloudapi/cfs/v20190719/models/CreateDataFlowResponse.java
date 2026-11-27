@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateDataFlowResponse extends AbstractModel {
 
     /**
-    * Data flow manage ID.
+    * <p>Data flow management ID</p>
     */
     @SerializedName("DataFlowId")
     @Expose
@@ -38,16 +38,16 @@ public class CreateDataFlowResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Data flow manage ID. 
-     * @return DataFlowId Data flow manage ID.
+     * Get <p>Data flow management ID</p> 
+     * @return DataFlowId <p>Data flow management ID</p>
      */
     public String getDataFlowId() {
         return this.DataFlowId;
     }
 
     /**
-     * Set Data flow manage ID.
-     * @param DataFlowId Data flow manage ID.
+     * Set <p>Data flow management ID</p>
+     * @param DataFlowId <p>Data flow management ID</p>
      */
     public void setDataFlowId(String DataFlowId) {
         this.DataFlowId = DataFlowId;

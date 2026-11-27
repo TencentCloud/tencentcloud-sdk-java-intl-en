@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class ListAccountFactoryBaselineItemsRequest extends AbstractModel {
 
     /**
-    * Maximum number of returned records. value ranges from 0 to 200.
+    * Maximum number of returned records. Value range: 0-200.
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * Offset. valid values are equal to or greater than 0.
+    * Offset. Value range: greater than or equal to 0.
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-     * Get Maximum number of returned records. value ranges from 0 to 200. 
-     * @return Limit Maximum number of returned records. value ranges from 0 to 200.
+     * Get Maximum number of returned records. Value range: 0-200. 
+     * @return Limit Maximum number of returned records. Value range: 0-200.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Maximum number of returned records. value ranges from 0 to 200.
-     * @param Limit Maximum number of returned records. value ranges from 0 to 200.
+     * Set Maximum number of returned records. Value range: 0-200.
+     * @param Limit Maximum number of returned records. Value range: 0-200.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get Offset. valid values are equal to or greater than 0. 
-     * @return Offset Offset. valid values are equal to or greater than 0.
+     * Get Offset. Value range: greater than or equal to 0. 
+     * @return Offset Offset. Value range: greater than or equal to 0.
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Offset. valid values are equal to or greater than 0.
-     * @param Offset Offset. valid values are equal to or greater than 0.
+     * Set Offset. Value range: greater than or equal to 0.
+     * @param Offset Offset. Value range: greater than or equal to 0.
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;

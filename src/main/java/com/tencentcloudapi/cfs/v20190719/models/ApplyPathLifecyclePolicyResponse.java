@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class ApplyPathLifecyclePolicyResponse extends AbstractModel {
 
     /**
-    * Returns existing rule information if there is a rule conflict.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Information of existing conflicting rules returned when rule conflicts occur.</p>
     */
     @SerializedName("CheckResults")
     @Expose
@@ -39,20 +38,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Returns existing rule information if there is a rule conflict.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return CheckResults Returns existing rule information if there is a rule conflict.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Information of existing conflicting rules returned when rule conflicts occur.</p> 
+     * @return CheckResults <p>Information of existing conflicting rules returned when rule conflicts occur.</p>
      */
     public CheckResult [] getCheckResults() {
         return this.CheckResults;
     }
 
     /**
-     * Set Returns existing rule information if there is a rule conflict.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param CheckResults Returns existing rule information if there is a rule conflict.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Information of existing conflicting rules returned when rule conflicts occur.</p>
+     * @param CheckResults <p>Information of existing conflicting rules returned when rule conflicts occur.</p>
      */
     public void setCheckResults(CheckResult [] CheckResults) {
         this.CheckResults = CheckResults;

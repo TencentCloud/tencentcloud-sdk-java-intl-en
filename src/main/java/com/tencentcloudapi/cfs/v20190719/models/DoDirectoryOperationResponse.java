@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DoDirectoryOperationResponse extends AbstractModel {
 
     /**
-    * 1: success 0: failure. for the create directory operation, 1 indicates successful creation, 0 indicates creation failed. for the confirm directory existence operation, 1 indicates the directory exists, 0 indicates the directory does not exist. in addition, if the directory already exists during the create directory operation, it will also return creation succeeded.
+    * <p>1: success. 0: failure. For the operation of creating a directory, 1 indicates that the directory is created successfully, and 0 indicates a creation failure. For the operation of checking whether a directory exists, 1 indicates that the directory exists, and 0 indicates that the directory does not exist. In addition, if the directory already exists during the directory creation operation, the creation is also considered successful.</p>
     */
     @SerializedName("Result")
     @Expose
@@ -38,16 +38,16 @@ public class DoDirectoryOperationResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 1: success 0: failure. for the create directory operation, 1 indicates successful creation, 0 indicates creation failed. for the confirm directory existence operation, 1 indicates the directory exists, 0 indicates the directory does not exist. in addition, if the directory already exists during the create directory operation, it will also return creation succeeded. 
-     * @return Result 1: success 0: failure. for the create directory operation, 1 indicates successful creation, 0 indicates creation failed. for the confirm directory existence operation, 1 indicates the directory exists, 0 indicates the directory does not exist. in addition, if the directory already exists during the create directory operation, it will also return creation succeeded.
+     * Get <p>1: success. 0: failure. For the operation of creating a directory, 1 indicates that the directory is created successfully, and 0 indicates a creation failure. For the operation of checking whether a directory exists, 1 indicates that the directory exists, and 0 indicates that the directory does not exist. In addition, if the directory already exists during the directory creation operation, the creation is also considered successful.</p> 
+     * @return Result <p>1: success. 0: failure. For the operation of creating a directory, 1 indicates that the directory is created successfully, and 0 indicates a creation failure. For the operation of checking whether a directory exists, 1 indicates that the directory exists, and 0 indicates that the directory does not exist. In addition, if the directory already exists during the directory creation operation, the creation is also considered successful.</p>
      */
     public Long getResult() {
         return this.Result;
     }
 
     /**
-     * Set 1: success 0: failure. for the create directory operation, 1 indicates successful creation, 0 indicates creation failed. for the confirm directory existence operation, 1 indicates the directory exists, 0 indicates the directory does not exist. in addition, if the directory already exists during the create directory operation, it will also return creation succeeded.
-     * @param Result 1: success 0: failure. for the create directory operation, 1 indicates successful creation, 0 indicates creation failed. for the confirm directory existence operation, 1 indicates the directory exists, 0 indicates the directory does not exist. in addition, if the directory already exists during the create directory operation, it will also return creation succeeded.
+     * Set <p>1: success. 0: failure. For the operation of creating a directory, 1 indicates that the directory is created successfully, and 0 indicates a creation failure. For the operation of checking whether a directory exists, 1 indicates that the directory exists, and 0 indicates that the directory does not exist. In addition, if the directory already exists during the directory creation operation, the creation is also considered successful.</p>
+     * @param Result <p>1: success. 0: failure. For the operation of creating a directory, 1 indicates that the directory is created successfully, and 0 indicates a creation failure. For the operation of checking whether a directory exists, 1 indicates that the directory exists, and 0 indicates that the directory does not exist. In addition, if the directory already exists during the directory creation operation, the creation is also considered successful.</p>
      */
     public void setResult(Long Result) {
         this.Result = Result;

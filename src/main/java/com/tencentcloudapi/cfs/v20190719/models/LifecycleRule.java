@@ -24,278 +24,302 @@ import java.util.HashMap;
 public class LifecycleRule extends AbstractModel {
 
     /**
-    * Storage type after data dump. among them: InfrequentAccess: infrequent medium storage; ColdStorage: cold storage.
+    * <p>Storage type after data dumping. Valid values: InfrequentAccess: Infrequent Access storage. ColdStorage: Cold storage.</p>
     */
     @SerializedName("StorageType")
     @Expose
     private String StorageType;
 
     /**
-    * Data dump FILE type. among them, BIG_FILE: extra large FILE; STD_FILE: regular FILE; SMALL_FILE: SMALL FILE; ALL: ALL files.
+    * <p>File type for data dumping. Valid values: BIG_FILE: Very large files. STD_FILE: Standard files. SMALL_FILE: Small files. ALL: All files.</p>
     */
     @SerializedName("FileType")
     @Expose
     private String FileType;
 
     /**
-    * Data dumping action. among them, Archive: settlement; Noarchive: no settlement.
+    * <p>Data dumping behavior. Valid values: Archive: Archive. Noarchive: Do not archive.</p>
     */
     @SerializedName("Action")
     @Expose
     private String Action;
 
     /**
-    * Data dump trigger time. consists of "DEFAULT_ATIME_" and a number, in days. keep it empty when Action is Noarchive.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Trigger time for data dumping. It consists of "DEFAULT_ATIME_" and a number, in the unit of days. Leave this parameter empty when Action is Noarchive.</p>
     */
     @SerializedName("Interval")
     @Expose
     private String Interval;
 
     /**
-    * Maximum specification for data dump files. the value needs to use the "number+measurement unit" format, and the supported units are K (KiB), M (MiB), and G (GiB).
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Maximum size of a file for data dumping. The value must be in the format of "number + unit". Supported units: K (KiB), M (MiB), and G (GiB).</p>
     */
     @SerializedName("FileMaxSize")
     @Expose
     private String FileMaxSize;
 
     /**
-    * Minimum specification of the dump file. its numeric value needs to use the "number+measurement unit" format, and the supported units are K (KiB), M (MiB), and G (GiB).
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Minimum size of a file for data dumping. The value must be in the format of "number + unit". Supported units: K (KiB), M (MiB), and G (GiB).</p>
     */
     @SerializedName("FileMinSize")
     @Expose
     private String FileMinSize;
 
     /**
-    * Policy type.
+    * <p>Policy type</p>
     */
     @SerializedName("PolicyType")
     @Expose
     private String PolicyType;
 
     /**
-    * Threshold range: 10-90.
+    * <p>Threshold range [10-90]</p>
     */
     @SerializedName("ExpireThreshold")
     @Expose
     private Long ExpireThreshold;
 
     /**
-    * Threshold range: 10-90.
+    * <p>Threshold range [10-90]</p>
     */
     @SerializedName("TargetThreshold")
     @Expose
     private Long TargetThreshold;
 
     /**
-    * When a file in CFSTurbo and an external storage have the same name, whether to overwrite.
-
-Override.
-
-false: not overwrite (at the same time will not release hot data storage).
-
-Default false when empty.
+    * <p>Whether to overwrite a file in CFSTurbo if it has the same name as a file in the external storage.</p><p>true: Overwrite.</p><p>false: Do not overwrite (and hot storage data will not be released).</p><p>If this parameter is left empty, the default value is false.</p>
     */
     @SerializedName("IsOverwrite")
     @Expose
     private Boolean IsOverwrite;
 
     /**
-     * Get Storage type after data dump. among them: InfrequentAccess: infrequent medium storage; ColdStorage: cold storage. 
-     * @return StorageType Storage type after data dump. among them: InfrequentAccess: infrequent medium storage; ColdStorage: cold storage.
+    * <p>Whether to sync new files to S3 in near real time. true: Near real-time sync (within 30 seconds). false: Sync based on the time configured in the policy. The default value is false. This parameter takes effect only when StorageType=ExternalStorage.</p>
+    */
+    @SerializedName("IsCreateRealTimeSync")
+    @Expose
+    private Boolean IsCreateRealTimeSync;
+
+    /**
+    * <p>Whether to sync modified files to S3 in near real time. true: Near real-time sync (within 30 seconds) / false: Sync based on the time configured in the policy. The default value is false. This parameter takes effect only when StorageType=ExternalStorage. It is independent of IsOverwrite.</p>
+    */
+    @SerializedName("IsModifyRealTimeSync")
+    @Expose
+    private Boolean IsModifyRealTimeSync;
+
+    /**
+    * <p>Whether to sync file deletion to S3. true: Sync deletion (within 30 seconds) / false: Do not sync deletion. The default value is false. If this parameter is set to true, versioning must be enabled for the destination COS Bucket. This parameter takes effect only when StorageType=ExternalStorage.</p>
+    */
+    @SerializedName("IsSyncDelete")
+    @Expose
+    private Boolean IsSyncDelete;
+
+    /**
+     * Get <p>Storage type after data dumping. Valid values: InfrequentAccess: Infrequent Access storage. ColdStorage: Cold storage.</p> 
+     * @return StorageType <p>Storage type after data dumping. Valid values: InfrequentAccess: Infrequent Access storage. ColdStorage: Cold storage.</p>
      */
     public String getStorageType() {
         return this.StorageType;
     }
 
     /**
-     * Set Storage type after data dump. among them: InfrequentAccess: infrequent medium storage; ColdStorage: cold storage.
-     * @param StorageType Storage type after data dump. among them: InfrequentAccess: infrequent medium storage; ColdStorage: cold storage.
+     * Set <p>Storage type after data dumping. Valid values: InfrequentAccess: Infrequent Access storage. ColdStorage: Cold storage.</p>
+     * @param StorageType <p>Storage type after data dumping. Valid values: InfrequentAccess: Infrequent Access storage. ColdStorage: Cold storage.</p>
      */
     public void setStorageType(String StorageType) {
         this.StorageType = StorageType;
     }
 
     /**
-     * Get Data dump FILE type. among them, BIG_FILE: extra large FILE; STD_FILE: regular FILE; SMALL_FILE: SMALL FILE; ALL: ALL files. 
-     * @return FileType Data dump FILE type. among them, BIG_FILE: extra large FILE; STD_FILE: regular FILE; SMALL_FILE: SMALL FILE; ALL: ALL files.
+     * Get <p>File type for data dumping. Valid values: BIG_FILE: Very large files. STD_FILE: Standard files. SMALL_FILE: Small files. ALL: All files.</p> 
+     * @return FileType <p>File type for data dumping. Valid values: BIG_FILE: Very large files. STD_FILE: Standard files. SMALL_FILE: Small files. ALL: All files.</p>
      */
     public String getFileType() {
         return this.FileType;
     }
 
     /**
-     * Set Data dump FILE type. among them, BIG_FILE: extra large FILE; STD_FILE: regular FILE; SMALL_FILE: SMALL FILE; ALL: ALL files.
-     * @param FileType Data dump FILE type. among them, BIG_FILE: extra large FILE; STD_FILE: regular FILE; SMALL_FILE: SMALL FILE; ALL: ALL files.
+     * Set <p>File type for data dumping. Valid values: BIG_FILE: Very large files. STD_FILE: Standard files. SMALL_FILE: Small files. ALL: All files.</p>
+     * @param FileType <p>File type for data dumping. Valid values: BIG_FILE: Very large files. STD_FILE: Standard files. SMALL_FILE: Small files. ALL: All files.</p>
      */
     public void setFileType(String FileType) {
         this.FileType = FileType;
     }
 
     /**
-     * Get Data dumping action. among them, Archive: settlement; Noarchive: no settlement. 
-     * @return Action Data dumping action. among them, Archive: settlement; Noarchive: no settlement.
+     * Get <p>Data dumping behavior. Valid values: Archive: Archive. Noarchive: Do not archive.</p> 
+     * @return Action <p>Data dumping behavior. Valid values: Archive: Archive. Noarchive: Do not archive.</p>
      */
     public String getAction() {
         return this.Action;
     }
 
     /**
-     * Set Data dumping action. among them, Archive: settlement; Noarchive: no settlement.
-     * @param Action Data dumping action. among them, Archive: settlement; Noarchive: no settlement.
+     * Set <p>Data dumping behavior. Valid values: Archive: Archive. Noarchive: Do not archive.</p>
+     * @param Action <p>Data dumping behavior. Valid values: Archive: Archive. Noarchive: Do not archive.</p>
      */
     public void setAction(String Action) {
         this.Action = Action;
     }
 
     /**
-     * Get Data dump trigger time. consists of "DEFAULT_ATIME_" and a number, in days. keep it empty when Action is Noarchive.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Interval Data dump trigger time. consists of "DEFAULT_ATIME_" and a number, in days. keep it empty when Action is Noarchive.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Trigger time for data dumping. It consists of "DEFAULT_ATIME_" and a number, in the unit of days. Leave this parameter empty when Action is Noarchive.</p> 
+     * @return Interval <p>Trigger time for data dumping. It consists of "DEFAULT_ATIME_" and a number, in the unit of days. Leave this parameter empty when Action is Noarchive.</p>
      */
     public String getInterval() {
         return this.Interval;
     }
 
     /**
-     * Set Data dump trigger time. consists of "DEFAULT_ATIME_" and a number, in days. keep it empty when Action is Noarchive.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Interval Data dump trigger time. consists of "DEFAULT_ATIME_" and a number, in days. keep it empty when Action is Noarchive.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Trigger time for data dumping. It consists of "DEFAULT_ATIME_" and a number, in the unit of days. Leave this parameter empty when Action is Noarchive.</p>
+     * @param Interval <p>Trigger time for data dumping. It consists of "DEFAULT_ATIME_" and a number, in the unit of days. Leave this parameter empty when Action is Noarchive.</p>
      */
     public void setInterval(String Interval) {
         this.Interval = Interval;
     }
 
     /**
-     * Get Maximum specification for data dump files. the value needs to use the "number+measurement unit" format, and the supported units are K (KiB), M (MiB), and G (GiB).
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return FileMaxSize Maximum specification for data dump files. the value needs to use the "number+measurement unit" format, and the supported units are K (KiB), M (MiB), and G (GiB).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Maximum size of a file for data dumping. The value must be in the format of "number + unit". Supported units: K (KiB), M (MiB), and G (GiB).</p> 
+     * @return FileMaxSize <p>Maximum size of a file for data dumping. The value must be in the format of "number + unit". Supported units: K (KiB), M (MiB), and G (GiB).</p>
      */
     public String getFileMaxSize() {
         return this.FileMaxSize;
     }
 
     /**
-     * Set Maximum specification for data dump files. the value needs to use the "number+measurement unit" format, and the supported units are K (KiB), M (MiB), and G (GiB).
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param FileMaxSize Maximum specification for data dump files. the value needs to use the "number+measurement unit" format, and the supported units are K (KiB), M (MiB), and G (GiB).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Maximum size of a file for data dumping. The value must be in the format of "number + unit". Supported units: K (KiB), M (MiB), and G (GiB).</p>
+     * @param FileMaxSize <p>Maximum size of a file for data dumping. The value must be in the format of "number + unit". Supported units: K (KiB), M (MiB), and G (GiB).</p>
      */
     public void setFileMaxSize(String FileMaxSize) {
         this.FileMaxSize = FileMaxSize;
     }
 
     /**
-     * Get Minimum specification of the dump file. its numeric value needs to use the "number+measurement unit" format, and the supported units are K (KiB), M (MiB), and G (GiB).
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return FileMinSize Minimum specification of the dump file. its numeric value needs to use the "number+measurement unit" format, and the supported units are K (KiB), M (MiB), and G (GiB).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Minimum size of a file for data dumping. The value must be in the format of "number + unit". Supported units: K (KiB), M (MiB), and G (GiB).</p> 
+     * @return FileMinSize <p>Minimum size of a file for data dumping. The value must be in the format of "number + unit". Supported units: K (KiB), M (MiB), and G (GiB).</p>
      */
     public String getFileMinSize() {
         return this.FileMinSize;
     }
 
     /**
-     * Set Minimum specification of the dump file. its numeric value needs to use the "number+measurement unit" format, and the supported units are K (KiB), M (MiB), and G (GiB).
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param FileMinSize Minimum specification of the dump file. its numeric value needs to use the "number+measurement unit" format, and the supported units are K (KiB), M (MiB), and G (GiB).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Minimum size of a file for data dumping. The value must be in the format of "number + unit". Supported units: K (KiB), M (MiB), and G (GiB).</p>
+     * @param FileMinSize <p>Minimum size of a file for data dumping. The value must be in the format of "number + unit". Supported units: K (KiB), M (MiB), and G (GiB).</p>
      */
     public void setFileMinSize(String FileMinSize) {
         this.FileMinSize = FileMinSize;
     }
 
     /**
-     * Get Policy type. 
-     * @return PolicyType Policy type.
+     * Get <p>Policy type</p> 
+     * @return PolicyType <p>Policy type</p>
      */
     public String getPolicyType() {
         return this.PolicyType;
     }
 
     /**
-     * Set Policy type.
-     * @param PolicyType Policy type.
+     * Set <p>Policy type</p>
+     * @param PolicyType <p>Policy type</p>
      */
     public void setPolicyType(String PolicyType) {
         this.PolicyType = PolicyType;
     }
 
     /**
-     * Get Threshold range: 10-90. 
-     * @return ExpireThreshold Threshold range: 10-90.
+     * Get <p>Threshold range [10-90]</p> 
+     * @return ExpireThreshold <p>Threshold range [10-90]</p>
      */
     public Long getExpireThreshold() {
         return this.ExpireThreshold;
     }
 
     /**
-     * Set Threshold range: 10-90.
-     * @param ExpireThreshold Threshold range: 10-90.
+     * Set <p>Threshold range [10-90]</p>
+     * @param ExpireThreshold <p>Threshold range [10-90]</p>
      */
     public void setExpireThreshold(Long ExpireThreshold) {
         this.ExpireThreshold = ExpireThreshold;
     }
 
     /**
-     * Get Threshold range: 10-90. 
-     * @return TargetThreshold Threshold range: 10-90.
+     * Get <p>Threshold range [10-90]</p> 
+     * @return TargetThreshold <p>Threshold range [10-90]</p>
      */
     public Long getTargetThreshold() {
         return this.TargetThreshold;
     }
 
     /**
-     * Set Threshold range: 10-90.
-     * @param TargetThreshold Threshold range: 10-90.
+     * Set <p>Threshold range [10-90]</p>
+     * @param TargetThreshold <p>Threshold range [10-90]</p>
      */
     public void setTargetThreshold(Long TargetThreshold) {
         this.TargetThreshold = TargetThreshold;
     }
 
     /**
-     * Get When a file in CFSTurbo and an external storage have the same name, whether to overwrite.
-
-Override.
-
-false: not overwrite (at the same time will not release hot data storage).
-
-Default false when empty. 
-     * @return IsOverwrite When a file in CFSTurbo and an external storage have the same name, whether to overwrite.
-
-Override.
-
-false: not overwrite (at the same time will not release hot data storage).
-
-Default false when empty.
+     * Get <p>Whether to overwrite a file in CFSTurbo if it has the same name as a file in the external storage.</p><p>true: Overwrite.</p><p>false: Do not overwrite (and hot storage data will not be released).</p><p>If this parameter is left empty, the default value is false.</p> 
+     * @return IsOverwrite <p>Whether to overwrite a file in CFSTurbo if it has the same name as a file in the external storage.</p><p>true: Overwrite.</p><p>false: Do not overwrite (and hot storage data will not be released).</p><p>If this parameter is left empty, the default value is false.</p>
      */
     public Boolean getIsOverwrite() {
         return this.IsOverwrite;
     }
 
     /**
-     * Set When a file in CFSTurbo and an external storage have the same name, whether to overwrite.
-
-Override.
-
-false: not overwrite (at the same time will not release hot data storage).
-
-Default false when empty.
-     * @param IsOverwrite When a file in CFSTurbo and an external storage have the same name, whether to overwrite.
-
-Override.
-
-false: not overwrite (at the same time will not release hot data storage).
-
-Default false when empty.
+     * Set <p>Whether to overwrite a file in CFSTurbo if it has the same name as a file in the external storage.</p><p>true: Overwrite.</p><p>false: Do not overwrite (and hot storage data will not be released).</p><p>If this parameter is left empty, the default value is false.</p>
+     * @param IsOverwrite <p>Whether to overwrite a file in CFSTurbo if it has the same name as a file in the external storage.</p><p>true: Overwrite.</p><p>false: Do not overwrite (and hot storage data will not be released).</p><p>If this parameter is left empty, the default value is false.</p>
      */
     public void setIsOverwrite(Boolean IsOverwrite) {
         this.IsOverwrite = IsOverwrite;
+    }
+
+    /**
+     * Get <p>Whether to sync new files to S3 in near real time. true: Near real-time sync (within 30 seconds). false: Sync based on the time configured in the policy. The default value is false. This parameter takes effect only when StorageType=ExternalStorage.</p> 
+     * @return IsCreateRealTimeSync <p>Whether to sync new files to S3 in near real time. true: Near real-time sync (within 30 seconds). false: Sync based on the time configured in the policy. The default value is false. This parameter takes effect only when StorageType=ExternalStorage.</p>
+     */
+    public Boolean getIsCreateRealTimeSync() {
+        return this.IsCreateRealTimeSync;
+    }
+
+    /**
+     * Set <p>Whether to sync new files to S3 in near real time. true: Near real-time sync (within 30 seconds). false: Sync based on the time configured in the policy. The default value is false. This parameter takes effect only when StorageType=ExternalStorage.</p>
+     * @param IsCreateRealTimeSync <p>Whether to sync new files to S3 in near real time. true: Near real-time sync (within 30 seconds). false: Sync based on the time configured in the policy. The default value is false. This parameter takes effect only when StorageType=ExternalStorage.</p>
+     */
+    public void setIsCreateRealTimeSync(Boolean IsCreateRealTimeSync) {
+        this.IsCreateRealTimeSync = IsCreateRealTimeSync;
+    }
+
+    /**
+     * Get <p>Whether to sync modified files to S3 in near real time. true: Near real-time sync (within 30 seconds) / false: Sync based on the time configured in the policy. The default value is false. This parameter takes effect only when StorageType=ExternalStorage. It is independent of IsOverwrite.</p> 
+     * @return IsModifyRealTimeSync <p>Whether to sync modified files to S3 in near real time. true: Near real-time sync (within 30 seconds) / false: Sync based on the time configured in the policy. The default value is false. This parameter takes effect only when StorageType=ExternalStorage. It is independent of IsOverwrite.</p>
+     */
+    public Boolean getIsModifyRealTimeSync() {
+        return this.IsModifyRealTimeSync;
+    }
+
+    /**
+     * Set <p>Whether to sync modified files to S3 in near real time. true: Near real-time sync (within 30 seconds) / false: Sync based on the time configured in the policy. The default value is false. This parameter takes effect only when StorageType=ExternalStorage. It is independent of IsOverwrite.</p>
+     * @param IsModifyRealTimeSync <p>Whether to sync modified files to S3 in near real time. true: Near real-time sync (within 30 seconds) / false: Sync based on the time configured in the policy. The default value is false. This parameter takes effect only when StorageType=ExternalStorage. It is independent of IsOverwrite.</p>
+     */
+    public void setIsModifyRealTimeSync(Boolean IsModifyRealTimeSync) {
+        this.IsModifyRealTimeSync = IsModifyRealTimeSync;
+    }
+
+    /**
+     * Get <p>Whether to sync file deletion to S3. true: Sync deletion (within 30 seconds) / false: Do not sync deletion. The default value is false. If this parameter is set to true, versioning must be enabled for the destination COS Bucket. This parameter takes effect only when StorageType=ExternalStorage.</p> 
+     * @return IsSyncDelete <p>Whether to sync file deletion to S3. true: Sync deletion (within 30 seconds) / false: Do not sync deletion. The default value is false. If this parameter is set to true, versioning must be enabled for the destination COS Bucket. This parameter takes effect only when StorageType=ExternalStorage.</p>
+     */
+    public Boolean getIsSyncDelete() {
+        return this.IsSyncDelete;
+    }
+
+    /**
+     * Set <p>Whether to sync file deletion to S3. true: Sync deletion (within 30 seconds) / false: Do not sync deletion. The default value is false. If this parameter is set to true, versioning must be enabled for the destination COS Bucket. This parameter takes effect only when StorageType=ExternalStorage.</p>
+     * @param IsSyncDelete <p>Whether to sync file deletion to S3. true: Sync deletion (within 30 seconds) / false: Do not sync deletion. The default value is false. If this parameter is set to true, versioning must be enabled for the destination COS Bucket. This parameter takes effect only when StorageType=ExternalStorage.</p>
+     */
+    public void setIsSyncDelete(Boolean IsSyncDelete) {
+        this.IsSyncDelete = IsSyncDelete;
     }
 
     public LifecycleRule() {
@@ -336,6 +360,15 @@ Default false when empty.
         if (source.IsOverwrite != null) {
             this.IsOverwrite = new Boolean(source.IsOverwrite);
         }
+        if (source.IsCreateRealTimeSync != null) {
+            this.IsCreateRealTimeSync = new Boolean(source.IsCreateRealTimeSync);
+        }
+        if (source.IsModifyRealTimeSync != null) {
+            this.IsModifyRealTimeSync = new Boolean(source.IsModifyRealTimeSync);
+        }
+        if (source.IsSyncDelete != null) {
+            this.IsSyncDelete = new Boolean(source.IsSyncDelete);
+        }
     }
 
 
@@ -353,6 +386,9 @@ Default false when empty.
         this.setParamSimple(map, prefix + "ExpireThreshold", this.ExpireThreshold);
         this.setParamSimple(map, prefix + "TargetThreshold", this.TargetThreshold);
         this.setParamSimple(map, prefix + "IsOverwrite", this.IsOverwrite);
+        this.setParamSimple(map, prefix + "IsCreateRealTimeSync", this.IsCreateRealTimeSync);
+        this.setParamSimple(map, prefix + "IsModifyRealTimeSync", this.IsModifyRealTimeSync);
+        this.setParamSimple(map, prefix + "IsSyncDelete", this.IsSyncDelete);
 
     }
 }

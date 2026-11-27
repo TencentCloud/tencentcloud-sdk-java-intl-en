@@ -24,513 +24,486 @@ import java.util.HashMap;
 public class CreateCfsFileSystemRequest extends AbstractModel {
 
     /**
-    * AZ name, such as "ap-beijing-1". For the list of regions and AZs, please see [Overview](https://intl.cloud.tencent.com/document/product/582/13225?from_cn_redirect=1)
+    * <p>AZ name</p><p>For valid values, see <a href="https://www.tencentcloud.com/document/product/213/15707??from_cn_redirect=1">Querying the List of AZs</a></p>
     */
     @SerializedName("Zone")
     @Expose
     private String Zone;
 
     /**
-    * Network type. Valid values: `VPC` and `CCN`. Select `VPC` for a Standard or High-Performance file system, and `CCN` for a Standard Turbo or High-Performance Turbo one.
+    * <p>Network type</p><p>Valid values:</p><ul><li><p>VPC: Virtual Private Cloud</p></li><li><p>CCN: Cloud Connect Network</p></li><li><p>For General-purpose Standard/Performance (including enhanced) and Throughput types, select VPC.</p></li><li><p>For Turbo Standard/Performance types, VPC or CCN can be selected.</p></li><li><p>When Scenario=AgentSandbox, this parameter is not required for creating AgentCFS and will be ignored if passed in.</p></li></ul>
     */
     @SerializedName("NetInterface")
     @Expose
     private String NetInterface;
 
     /**
-    * Permission group ID. pgroupbasic is the default permission group. obtain through the api [DescribeCfsPGroups](https://www.tencentcloud.com/document/product/582/38157?from_cn_redirect=1) to query the permission group list.
+    * <p>Permission group ID. A permission group defines a set of allowlisted visitors and operation permissions.</p><p>For valid values, see <a href="https://www.tencentcloud.com/document/api/582/38157?from_cn_redirect=1">DescribeCfsPGroups</a></p><ul><li>pgroupbasic is the default permission group, which allows access and read/write permissions for all IP addresses. </li><li>Note: When Scenario=AgentSandbox, that is, when creating AgentCFS, pgroupbasic (the default permission group) must be passed in. Passing in other values will cause an error.</li></ul>
     */
     @SerializedName("PGroupId")
     @Expose
     private String PGroupId;
 
     /**
-    * File system protocol type. valid values: NFS, CIFS, and TURBO. if left blank, NFS by default. the TURBO series must select TURBO. NFS and CIFS are not supported.
+    * <p>File system protocol type</p><p>Valid values:</p><ul><li>NFS: Instances of General-purpose Standard (including enhanced) and General-purpose Performance (including enhanced) types can be created with this protocol.</li><li>CIFS: The SMB protocol. Only General-purpose Standard and Throughput types in certain AZs support this protocol.</li><li>TURBO: Instances of Turbo Standard/Turbo Performance/AgentCFS types can be created with this protocol.</li></ul><p>Default value: NFS</p>
     */
     @SerializedName("Protocol")
     @Expose
     private String Protocol;
 
     /**
-    * Storage type of the file system. Valid values: `SD` (Standard), `HP` (High-Performance), `TB` (Standard Turbo), and `TP` (High-Performance Turbo). Default value: `SD`.
+    * <p>File system storage type. SD indicates General-purpose Standard storage, HP indicates General-purpose Performance storage, TB indicates Turbo Standard, and TP indicates Turbo Performance.</p><p>Valid values:</p><ul><li>SD: General-purpose Standard (including enhanced). For General-purpose Standard, version = v1.5; for General-purpose Standard (enhanced), version = v3.1.</li><li>HP: General-purpose Performance (including enhanced). For General-purpose Performance, version = v1.5; for General-purpose Performance (enhanced), version = v3.1.</li><li>TB: Turbo Standard</li><li>TP: Turbo Performance</li><li>THP: Throughput</li></ul><p>Default value: SD</p>
     */
     @SerializedName("StorageType")
     @Expose
     private String StorageType;
 
     /**
-    * Private network (VPC) ID. if the network type is VPC, this field must be specified. obtain it by querying the private network interface.
-[DescribeVpcs](https://www.tencentcloud.com/document/product/215/15778?from_cn_redirect=1)
+    * <p>VPC ID. This field is required if VPC is selected as the network type.</p><p>For valid values, see <a href="https://www.tencentcloud.com/document/product/215/15778?from_cn_redirect=1">Querying the List of VPCs</a></p><p>When Scenario=AgentSandbox, that is, when creating AgentCFS, this parameter is not required and will be ignored if passed in.</p>
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * Subnet ID. this field must be specified if the network type is VPC. obtain through the api for querying subnets.
-[DescribeSubnets](https://www.tencentcloud.com/document/product/215/15784?from_cn_redirect=1)
+    * <p>Subnet ID. This field is required if VPC is selected as the network type.</p><p>For valid values, see <a href="https://www.tencentcloud.com/document/product/215/15784?from_cn_redirect=1">Querying the List of Subnets</a></p><p>When Scenario=AgentSandbox, that is, when creating AgentCFS, this parameter is not required and will be ignored if passed in.</p>
     */
     @SerializedName("SubnetId")
     @Expose
     private String SubnetId;
 
     /**
-    * IP address (this parameter supports only the VPC network type, and the Turbo series is not supported). If this parameter is left empty, a random IP in the subnet will be assigned.
+    * <p>Specifies the IP address. Only VPC networks support this. If this parameter is not specified, an IP address will be randomly assigned from the subnet. Turbo series currently does not support specifying an IP address.</p>
     */
     @SerializedName("MountIP")
     @Expose
     private String MountIP;
 
     /**
-    * Custom file system name
+    * <p>User-defined file system name</p>
     */
     @SerializedName("FsName")
     @Expose
     private String FsName;
 
     /**
-    * 
+    * <p>Indicates whether the file system is encrypted. If this parameter is left empty, the file system is not encrypted by default.</p>
     */
     @SerializedName("Encrypted")
     @Expose
     private Boolean Encrypted;
 
     /**
-    * File system tag
+    * <p>File system tag</p>
     */
     @SerializedName("ResourceTags")
     @Expose
     private TagInfo [] ResourceTags;
 
     /**
-    * A unique string supplied by the client to ensure that the request is idempotent. Its maximum length is 64 ASCII characters. If this parameter is not specified, the idempotency of the request cannot be guaranteed. This string is valid for 2 hours.
+    * <p>String used to ensure the idempotency of the request. This string is generated by the customer and must be unique across different requests, with a maximum length of 64 ASCII characters. If this parameter is not specified, the idempotency of the request cannot be guaranteed. The string used to ensure idempotency expires after 2 hours.</p>
     */
     @SerializedName("ClientToken")
     @Expose
     private String ClientToken;
 
     /**
-    * Cloud connect network ID. this field must be specified if the network type is CCN. obtain it by querying the CCN list through the api.
-[DescribeCcns](https://www.tencentcloud.com/document/product/215/19199?from_cn_redirect=1)
-
+    * <p>CCN ID. This field is required if CCN is selected as the network type.</p><p>For valid values, see <a href="https://www.tencentcloud.com/document/product/215/19199?from_cn_redirect=1">Querying the List of CCNs</a></p><p>When Scenario=AgentSandbox, that is, when creating AgentCFS, this parameter is not required and will be ignored if passed in.</p>
     */
     @SerializedName("CcnId")
     @Expose
     private String CcnId;
 
     /**
-    * CCN IP range used by the CFS (required if the network type is CCN), which cannot conflict with other IP ranges bound in CCN
+    * <p>CIDR block used by CFS in the CCN. This field is required if CCN is selected as the network type, and it cannot conflict with CIDR blocks already bound in the CCN.</p><p>When Scenario=AgentSandbox, that is, when creating AgentCFS, this parameter is not required and will be ignored if passed in.</p>
     */
     @SerializedName("CidrBlock")
     @Expose
     private String CidrBlock;
 
     /**
-    * File system capacity, required for the turbo series, in GiB. turbo standard type in GB, starting from 20 TiB (20480 GiB); scaling increment 10 TiB (10240 GiB). turbo performance type starts from 10 TiB (10240 GiB); capacity expansion step 10 TiB (10240 GiB).
+    * <p>File system capacity. This parameter is required for Turbo series.</p><p>Unit: GiB</p><p>Turbo Standard starts at 20 TiB, that is, 20,480 GiB, with a scale-out step of 10 TiB, that is, 10,240 GiB. Turbo Performance starts at 10 TiB, that is, 10,240 GiB, with a scale-out step of 10 TiB, that is, 10,240 GiB.</p>
     */
     @SerializedName("Capacity")
     @Expose
     private Long Capacity;
 
     /**
-    * File system snapshot ID. this parameter can be obtained by querying the snapshot list.
-[DescribeCfsSnapshots](https://www.tencentcloud.com/document/product/582/80206?from_cn_redirect=1)
+    * <p>File system snapshot ID</p><p>For valid values, see <a href="https://www.tencentcloud.com/document/api/582/80206?from_cn_redirect=1">DescribeCfsSnapshots</a></p>
     */
     @SerializedName("SnapshotId")
     @Expose
     private String SnapshotId;
 
     /**
-    * Scheduled snapshot policy ID, which can be obtained by querying the snapshot policy information.
-[DescribeAutoSnapshotPolicies](https://www.tencentcloud.com/document/product/582/38157?from_cn_redirect=1)
+    * <p>Scheduled snapshot policy ID</p><p>For valid values, see <a href="https://www.tencentcloud.com/document/api/582/80208?from_cn_redirect=1">DescribeAutoSnapshotPolicies</a></p>
     */
     @SerializedName("AutoSnapshotPolicyId")
     @Expose
     private String AutoSnapshotPolicyId;
 
     /**
-    * Whether default expansion is enabled. only turbo file storage supports this feature.
+    * <p>Indicates whether to enable the automatic scale-out policy. Only turbo file storage supports this feature.</p>
     */
     @SerializedName("EnableAutoScaleUp")
     @Expose
     private Boolean EnableAutoScaleUp;
 
     /**
-    * v1.5: create a standard edition general file system.
-v3.1: create an enhanced general file system.
-Description: the enhanced universal system requires enabling the allowlist to use. if needed, submit a ticket to contact us.
+    * <p>File system version.</p><p>Valid values:</p><ul><li>v1.5: Creates a General Purpose Standard or General Purpose Performance file system.</li><li>v3.1: Creates a General Purpose Standard (Enhanced) or General Purpose Performance (Enhanced) file system. This parameter is required if you want to create an enhanced file system.</li><li>v4.0: Creates a Turbo Standard, Turbo Performance, or Throughput file system. This parameter is optional.</li></ul><p>To create a General Purpose Standard (Enhanced) or General Purpose Performance (Enhanced) file system, the root account must be added to the allowlist. Contact us if needed.</p>
     */
     @SerializedName("CfsVersion")
     @Expose
     private String CfsVersion;
 
     /**
-    * turbo file system metadata attribute.
-basic: creates metadata of the standard type.
-Enhanced: creates enhanced metadata.
+    * <p>Metadata type of the Turbo file system.</p><p>Valid values:</p><ul><li>basic: Creates standard metadata.</li><li>enhanced: Creates enhanced metadata.</li></ul><p>For details, see <a href="https://www.tencentcloud.com/document/product/582/116836?from_cn_redirect=1">Turbo File System Metadata Types</a></p>
     */
     @SerializedName("MetaType")
     @Expose
     private String MetaType;
 
     /**
-     * Get AZ name, such as "ap-beijing-1". For the list of regions and AZs, please see [Overview](https://intl.cloud.tencent.com/document/product/582/13225?from_cn_redirect=1) 
-     * @return Zone AZ name, such as "ap-beijing-1". For the list of regions and AZs, please see [Overview](https://intl.cloud.tencent.com/document/product/582/13225?from_cn_redirect=1)
+    * <p>Business scenario.</p><p>Valid values:</p><ul><li>AgentSandbox: Required when creating AgentCFS.</li></ul>
+    */
+    @SerializedName("Scenario")
+    @Expose
+    private String Scenario;
+
+    /**
+     * Get <p>AZ name</p><p>For valid values, see <a href="https://www.tencentcloud.com/document/product/213/15707??from_cn_redirect=1">Querying the List of AZs</a></p> 
+     * @return Zone <p>AZ name</p><p>For valid values, see <a href="https://www.tencentcloud.com/document/product/213/15707??from_cn_redirect=1">Querying the List of AZs</a></p>
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * Set AZ name, such as "ap-beijing-1". For the list of regions and AZs, please see [Overview](https://intl.cloud.tencent.com/document/product/582/13225?from_cn_redirect=1)
-     * @param Zone AZ name, such as "ap-beijing-1". For the list of regions and AZs, please see [Overview](https://intl.cloud.tencent.com/document/product/582/13225?from_cn_redirect=1)
+     * Set <p>AZ name</p><p>For valid values, see <a href="https://www.tencentcloud.com/document/product/213/15707??from_cn_redirect=1">Querying the List of AZs</a></p>
+     * @param Zone <p>AZ name</p><p>For valid values, see <a href="https://www.tencentcloud.com/document/product/213/15707??from_cn_redirect=1">Querying the List of AZs</a></p>
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
     }
 
     /**
-     * Get Network type. Valid values: `VPC` and `CCN`. Select `VPC` for a Standard or High-Performance file system, and `CCN` for a Standard Turbo or High-Performance Turbo one. 
-     * @return NetInterface Network type. Valid values: `VPC` and `CCN`. Select `VPC` for a Standard or High-Performance file system, and `CCN` for a Standard Turbo or High-Performance Turbo one.
+     * Get <p>Network type</p><p>Valid values:</p><ul><li><p>VPC: Virtual Private Cloud</p></li><li><p>CCN: Cloud Connect Network</p></li><li><p>For General-purpose Standard/Performance (including enhanced) and Throughput types, select VPC.</p></li><li><p>For Turbo Standard/Performance types, VPC or CCN can be selected.</p></li><li><p>When Scenario=AgentSandbox, this parameter is not required for creating AgentCFS and will be ignored if passed in.</p></li></ul> 
+     * @return NetInterface <p>Network type</p><p>Valid values:</p><ul><li><p>VPC: Virtual Private Cloud</p></li><li><p>CCN: Cloud Connect Network</p></li><li><p>For General-purpose Standard/Performance (including enhanced) and Throughput types, select VPC.</p></li><li><p>For Turbo Standard/Performance types, VPC or CCN can be selected.</p></li><li><p>When Scenario=AgentSandbox, this parameter is not required for creating AgentCFS and will be ignored if passed in.</p></li></ul>
      */
     public String getNetInterface() {
         return this.NetInterface;
     }
 
     /**
-     * Set Network type. Valid values: `VPC` and `CCN`. Select `VPC` for a Standard or High-Performance file system, and `CCN` for a Standard Turbo or High-Performance Turbo one.
-     * @param NetInterface Network type. Valid values: `VPC` and `CCN`. Select `VPC` for a Standard or High-Performance file system, and `CCN` for a Standard Turbo or High-Performance Turbo one.
+     * Set <p>Network type</p><p>Valid values:</p><ul><li><p>VPC: Virtual Private Cloud</p></li><li><p>CCN: Cloud Connect Network</p></li><li><p>For General-purpose Standard/Performance (including enhanced) and Throughput types, select VPC.</p></li><li><p>For Turbo Standard/Performance types, VPC or CCN can be selected.</p></li><li><p>When Scenario=AgentSandbox, this parameter is not required for creating AgentCFS and will be ignored if passed in.</p></li></ul>
+     * @param NetInterface <p>Network type</p><p>Valid values:</p><ul><li><p>VPC: Virtual Private Cloud</p></li><li><p>CCN: Cloud Connect Network</p></li><li><p>For General-purpose Standard/Performance (including enhanced) and Throughput types, select VPC.</p></li><li><p>For Turbo Standard/Performance types, VPC or CCN can be selected.</p></li><li><p>When Scenario=AgentSandbox, this parameter is not required for creating AgentCFS and will be ignored if passed in.</p></li></ul>
      */
     public void setNetInterface(String NetInterface) {
         this.NetInterface = NetInterface;
     }
 
     /**
-     * Get Permission group ID. pgroupbasic is the default permission group. obtain through the api [DescribeCfsPGroups](https://www.tencentcloud.com/document/product/582/38157?from_cn_redirect=1) to query the permission group list. 
-     * @return PGroupId Permission group ID. pgroupbasic is the default permission group. obtain through the api [DescribeCfsPGroups](https://www.tencentcloud.com/document/product/582/38157?from_cn_redirect=1) to query the permission group list.
+     * Get <p>Permission group ID. A permission group defines a set of allowlisted visitors and operation permissions.</p><p>For valid values, see <a href="https://www.tencentcloud.com/document/api/582/38157?from_cn_redirect=1">DescribeCfsPGroups</a></p><ul><li>pgroupbasic is the default permission group, which allows access and read/write permissions for all IP addresses. </li><li>Note: When Scenario=AgentSandbox, that is, when creating AgentCFS, pgroupbasic (the default permission group) must be passed in. Passing in other values will cause an error.</li></ul> 
+     * @return PGroupId <p>Permission group ID. A permission group defines a set of allowlisted visitors and operation permissions.</p><p>For valid values, see <a href="https://www.tencentcloud.com/document/api/582/38157?from_cn_redirect=1">DescribeCfsPGroups</a></p><ul><li>pgroupbasic is the default permission group, which allows access and read/write permissions for all IP addresses. </li><li>Note: When Scenario=AgentSandbox, that is, when creating AgentCFS, pgroupbasic (the default permission group) must be passed in. Passing in other values will cause an error.</li></ul>
      */
     public String getPGroupId() {
         return this.PGroupId;
     }
 
     /**
-     * Set Permission group ID. pgroupbasic is the default permission group. obtain through the api [DescribeCfsPGroups](https://www.tencentcloud.com/document/product/582/38157?from_cn_redirect=1) to query the permission group list.
-     * @param PGroupId Permission group ID. pgroupbasic is the default permission group. obtain through the api [DescribeCfsPGroups](https://www.tencentcloud.com/document/product/582/38157?from_cn_redirect=1) to query the permission group list.
+     * Set <p>Permission group ID. A permission group defines a set of allowlisted visitors and operation permissions.</p><p>For valid values, see <a href="https://www.tencentcloud.com/document/api/582/38157?from_cn_redirect=1">DescribeCfsPGroups</a></p><ul><li>pgroupbasic is the default permission group, which allows access and read/write permissions for all IP addresses. </li><li>Note: When Scenario=AgentSandbox, that is, when creating AgentCFS, pgroupbasic (the default permission group) must be passed in. Passing in other values will cause an error.</li></ul>
+     * @param PGroupId <p>Permission group ID. A permission group defines a set of allowlisted visitors and operation permissions.</p><p>For valid values, see <a href="https://www.tencentcloud.com/document/api/582/38157?from_cn_redirect=1">DescribeCfsPGroups</a></p><ul><li>pgroupbasic is the default permission group, which allows access and read/write permissions for all IP addresses. </li><li>Note: When Scenario=AgentSandbox, that is, when creating AgentCFS, pgroupbasic (the default permission group) must be passed in. Passing in other values will cause an error.</li></ul>
      */
     public void setPGroupId(String PGroupId) {
         this.PGroupId = PGroupId;
     }
 
     /**
-     * Get File system protocol type. valid values: NFS, CIFS, and TURBO. if left blank, NFS by default. the TURBO series must select TURBO. NFS and CIFS are not supported. 
-     * @return Protocol File system protocol type. valid values: NFS, CIFS, and TURBO. if left blank, NFS by default. the TURBO series must select TURBO. NFS and CIFS are not supported.
+     * Get <p>File system protocol type</p><p>Valid values:</p><ul><li>NFS: Instances of General-purpose Standard (including enhanced) and General-purpose Performance (including enhanced) types can be created with this protocol.</li><li>CIFS: The SMB protocol. Only General-purpose Standard and Throughput types in certain AZs support this protocol.</li><li>TURBO: Instances of Turbo Standard/Turbo Performance/AgentCFS types can be created with this protocol.</li></ul><p>Default value: NFS</p> 
+     * @return Protocol <p>File system protocol type</p><p>Valid values:</p><ul><li>NFS: Instances of General-purpose Standard (including enhanced) and General-purpose Performance (including enhanced) types can be created with this protocol.</li><li>CIFS: The SMB protocol. Only General-purpose Standard and Throughput types in certain AZs support this protocol.</li><li>TURBO: Instances of Turbo Standard/Turbo Performance/AgentCFS types can be created with this protocol.</li></ul><p>Default value: NFS</p>
      */
     public String getProtocol() {
         return this.Protocol;
     }
 
     /**
-     * Set File system protocol type. valid values: NFS, CIFS, and TURBO. if left blank, NFS by default. the TURBO series must select TURBO. NFS and CIFS are not supported.
-     * @param Protocol File system protocol type. valid values: NFS, CIFS, and TURBO. if left blank, NFS by default. the TURBO series must select TURBO. NFS and CIFS are not supported.
+     * Set <p>File system protocol type</p><p>Valid values:</p><ul><li>NFS: Instances of General-purpose Standard (including enhanced) and General-purpose Performance (including enhanced) types can be created with this protocol.</li><li>CIFS: The SMB protocol. Only General-purpose Standard and Throughput types in certain AZs support this protocol.</li><li>TURBO: Instances of Turbo Standard/Turbo Performance/AgentCFS types can be created with this protocol.</li></ul><p>Default value: NFS</p>
+     * @param Protocol <p>File system protocol type</p><p>Valid values:</p><ul><li>NFS: Instances of General-purpose Standard (including enhanced) and General-purpose Performance (including enhanced) types can be created with this protocol.</li><li>CIFS: The SMB protocol. Only General-purpose Standard and Throughput types in certain AZs support this protocol.</li><li>TURBO: Instances of Turbo Standard/Turbo Performance/AgentCFS types can be created with this protocol.</li></ul><p>Default value: NFS</p>
      */
     public void setProtocol(String Protocol) {
         this.Protocol = Protocol;
     }
 
     /**
-     * Get Storage type of the file system. Valid values: `SD` (Standard), `HP` (High-Performance), `TB` (Standard Turbo), and `TP` (High-Performance Turbo). Default value: `SD`. 
-     * @return StorageType Storage type of the file system. Valid values: `SD` (Standard), `HP` (High-Performance), `TB` (Standard Turbo), and `TP` (High-Performance Turbo). Default value: `SD`.
+     * Get <p>File system storage type. SD indicates General-purpose Standard storage, HP indicates General-purpose Performance storage, TB indicates Turbo Standard, and TP indicates Turbo Performance.</p><p>Valid values:</p><ul><li>SD: General-purpose Standard (including enhanced). For General-purpose Standard, version = v1.5; for General-purpose Standard (enhanced), version = v3.1.</li><li>HP: General-purpose Performance (including enhanced). For General-purpose Performance, version = v1.5; for General-purpose Performance (enhanced), version = v3.1.</li><li>TB: Turbo Standard</li><li>TP: Turbo Performance</li><li>THP: Throughput</li></ul><p>Default value: SD</p> 
+     * @return StorageType <p>File system storage type. SD indicates General-purpose Standard storage, HP indicates General-purpose Performance storage, TB indicates Turbo Standard, and TP indicates Turbo Performance.</p><p>Valid values:</p><ul><li>SD: General-purpose Standard (including enhanced). For General-purpose Standard, version = v1.5; for General-purpose Standard (enhanced), version = v3.1.</li><li>HP: General-purpose Performance (including enhanced). For General-purpose Performance, version = v1.5; for General-purpose Performance (enhanced), version = v3.1.</li><li>TB: Turbo Standard</li><li>TP: Turbo Performance</li><li>THP: Throughput</li></ul><p>Default value: SD</p>
      */
     public String getStorageType() {
         return this.StorageType;
     }
 
     /**
-     * Set Storage type of the file system. Valid values: `SD` (Standard), `HP` (High-Performance), `TB` (Standard Turbo), and `TP` (High-Performance Turbo). Default value: `SD`.
-     * @param StorageType Storage type of the file system. Valid values: `SD` (Standard), `HP` (High-Performance), `TB` (Standard Turbo), and `TP` (High-Performance Turbo). Default value: `SD`.
+     * Set <p>File system storage type. SD indicates General-purpose Standard storage, HP indicates General-purpose Performance storage, TB indicates Turbo Standard, and TP indicates Turbo Performance.</p><p>Valid values:</p><ul><li>SD: General-purpose Standard (including enhanced). For General-purpose Standard, version = v1.5; for General-purpose Standard (enhanced), version = v3.1.</li><li>HP: General-purpose Performance (including enhanced). For General-purpose Performance, version = v1.5; for General-purpose Performance (enhanced), version = v3.1.</li><li>TB: Turbo Standard</li><li>TP: Turbo Performance</li><li>THP: Throughput</li></ul><p>Default value: SD</p>
+     * @param StorageType <p>File system storage type. SD indicates General-purpose Standard storage, HP indicates General-purpose Performance storage, TB indicates Turbo Standard, and TP indicates Turbo Performance.</p><p>Valid values:</p><ul><li>SD: General-purpose Standard (including enhanced). For General-purpose Standard, version = v1.5; for General-purpose Standard (enhanced), version = v3.1.</li><li>HP: General-purpose Performance (including enhanced). For General-purpose Performance, version = v1.5; for General-purpose Performance (enhanced), version = v3.1.</li><li>TB: Turbo Standard</li><li>TP: Turbo Performance</li><li>THP: Throughput</li></ul><p>Default value: SD</p>
      */
     public void setStorageType(String StorageType) {
         this.StorageType = StorageType;
     }
 
     /**
-     * Get Private network (VPC) ID. if the network type is VPC, this field must be specified. obtain it by querying the private network interface.
-[DescribeVpcs](https://www.tencentcloud.com/document/product/215/15778?from_cn_redirect=1) 
-     * @return VpcId Private network (VPC) ID. if the network type is VPC, this field must be specified. obtain it by querying the private network interface.
-[DescribeVpcs](https://www.tencentcloud.com/document/product/215/15778?from_cn_redirect=1)
+     * Get <p>VPC ID. This field is required if VPC is selected as the network type.</p><p>For valid values, see <a href="https://www.tencentcloud.com/document/product/215/15778?from_cn_redirect=1">Querying the List of VPCs</a></p><p>When Scenario=AgentSandbox, that is, when creating AgentCFS, this parameter is not required and will be ignored if passed in.</p> 
+     * @return VpcId <p>VPC ID. This field is required if VPC is selected as the network type.</p><p>For valid values, see <a href="https://www.tencentcloud.com/document/product/215/15778?from_cn_redirect=1">Querying the List of VPCs</a></p><p>When Scenario=AgentSandbox, that is, when creating AgentCFS, this parameter is not required and will be ignored if passed in.</p>
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set Private network (VPC) ID. if the network type is VPC, this field must be specified. obtain it by querying the private network interface.
-[DescribeVpcs](https://www.tencentcloud.com/document/product/215/15778?from_cn_redirect=1)
-     * @param VpcId Private network (VPC) ID. if the network type is VPC, this field must be specified. obtain it by querying the private network interface.
-[DescribeVpcs](https://www.tencentcloud.com/document/product/215/15778?from_cn_redirect=1)
+     * Set <p>VPC ID. This field is required if VPC is selected as the network type.</p><p>For valid values, see <a href="https://www.tencentcloud.com/document/product/215/15778?from_cn_redirect=1">Querying the List of VPCs</a></p><p>When Scenario=AgentSandbox, that is, when creating AgentCFS, this parameter is not required and will be ignored if passed in.</p>
+     * @param VpcId <p>VPC ID. This field is required if VPC is selected as the network type.</p><p>For valid values, see <a href="https://www.tencentcloud.com/document/product/215/15778?from_cn_redirect=1">Querying the List of VPCs</a></p><p>When Scenario=AgentSandbox, that is, when creating AgentCFS, this parameter is not required and will be ignored if passed in.</p>
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get Subnet ID. this field must be specified if the network type is VPC. obtain through the api for querying subnets.
-[DescribeSubnets](https://www.tencentcloud.com/document/product/215/15784?from_cn_redirect=1) 
-     * @return SubnetId Subnet ID. this field must be specified if the network type is VPC. obtain through the api for querying subnets.
-[DescribeSubnets](https://www.tencentcloud.com/document/product/215/15784?from_cn_redirect=1)
+     * Get <p>Subnet ID. This field is required if VPC is selected as the network type.</p><p>For valid values, see <a href="https://www.tencentcloud.com/document/product/215/15784?from_cn_redirect=1">Querying the List of Subnets</a></p><p>When Scenario=AgentSandbox, that is, when creating AgentCFS, this parameter is not required and will be ignored if passed in.</p> 
+     * @return SubnetId <p>Subnet ID. This field is required if VPC is selected as the network type.</p><p>For valid values, see <a href="https://www.tencentcloud.com/document/product/215/15784?from_cn_redirect=1">Querying the List of Subnets</a></p><p>When Scenario=AgentSandbox, that is, when creating AgentCFS, this parameter is not required and will be ignored if passed in.</p>
      */
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set Subnet ID. this field must be specified if the network type is VPC. obtain through the api for querying subnets.
-[DescribeSubnets](https://www.tencentcloud.com/document/product/215/15784?from_cn_redirect=1)
-     * @param SubnetId Subnet ID. this field must be specified if the network type is VPC. obtain through the api for querying subnets.
-[DescribeSubnets](https://www.tencentcloud.com/document/product/215/15784?from_cn_redirect=1)
+     * Set <p>Subnet ID. This field is required if VPC is selected as the network type.</p><p>For valid values, see <a href="https://www.tencentcloud.com/document/product/215/15784?from_cn_redirect=1">Querying the List of Subnets</a></p><p>When Scenario=AgentSandbox, that is, when creating AgentCFS, this parameter is not required and will be ignored if passed in.</p>
+     * @param SubnetId <p>Subnet ID. This field is required if VPC is selected as the network type.</p><p>For valid values, see <a href="https://www.tencentcloud.com/document/product/215/15784?from_cn_redirect=1">Querying the List of Subnets</a></p><p>When Scenario=AgentSandbox, that is, when creating AgentCFS, this parameter is not required and will be ignored if passed in.</p>
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
     }
 
     /**
-     * Get IP address (this parameter supports only the VPC network type, and the Turbo series is not supported). If this parameter is left empty, a random IP in the subnet will be assigned. 
-     * @return MountIP IP address (this parameter supports only the VPC network type, and the Turbo series is not supported). If this parameter is left empty, a random IP in the subnet will be assigned.
+     * Get <p>Specifies the IP address. Only VPC networks support this. If this parameter is not specified, an IP address will be randomly assigned from the subnet. Turbo series currently does not support specifying an IP address.</p> 
+     * @return MountIP <p>Specifies the IP address. Only VPC networks support this. If this parameter is not specified, an IP address will be randomly assigned from the subnet. Turbo series currently does not support specifying an IP address.</p>
      */
     public String getMountIP() {
         return this.MountIP;
     }
 
     /**
-     * Set IP address (this parameter supports only the VPC network type, and the Turbo series is not supported). If this parameter is left empty, a random IP in the subnet will be assigned.
-     * @param MountIP IP address (this parameter supports only the VPC network type, and the Turbo series is not supported). If this parameter is left empty, a random IP in the subnet will be assigned.
+     * Set <p>Specifies the IP address. Only VPC networks support this. If this parameter is not specified, an IP address will be randomly assigned from the subnet. Turbo series currently does not support specifying an IP address.</p>
+     * @param MountIP <p>Specifies the IP address. Only VPC networks support this. If this parameter is not specified, an IP address will be randomly assigned from the subnet. Turbo series currently does not support specifying an IP address.</p>
      */
     public void setMountIP(String MountIP) {
         this.MountIP = MountIP;
     }
 
     /**
-     * Get Custom file system name 
-     * @return FsName Custom file system name
+     * Get <p>User-defined file system name</p> 
+     * @return FsName <p>User-defined file system name</p>
      */
     public String getFsName() {
         return this.FsName;
     }
 
     /**
-     * Set Custom file system name
-     * @param FsName Custom file system name
+     * Set <p>User-defined file system name</p>
+     * @param FsName <p>User-defined file system name</p>
      */
     public void setFsName(String FsName) {
         this.FsName = FsName;
     }
 
     /**
-     * Get  
-     * @return Encrypted 
+     * Get <p>Indicates whether the file system is encrypted. If this parameter is left empty, the file system is not encrypted by default.</p> 
+     * @return Encrypted <p>Indicates whether the file system is encrypted. If this parameter is left empty, the file system is not encrypted by default.</p>
      */
     public Boolean getEncrypted() {
         return this.Encrypted;
     }
 
     /**
-     * Set 
-     * @param Encrypted 
+     * Set <p>Indicates whether the file system is encrypted. If this parameter is left empty, the file system is not encrypted by default.</p>
+     * @param Encrypted <p>Indicates whether the file system is encrypted. If this parameter is left empty, the file system is not encrypted by default.</p>
      */
     public void setEncrypted(Boolean Encrypted) {
         this.Encrypted = Encrypted;
     }
 
     /**
-     * Get File system tag 
-     * @return ResourceTags File system tag
+     * Get <p>File system tag</p> 
+     * @return ResourceTags <p>File system tag</p>
      */
     public TagInfo [] getResourceTags() {
         return this.ResourceTags;
     }
 
     /**
-     * Set File system tag
-     * @param ResourceTags File system tag
+     * Set <p>File system tag</p>
+     * @param ResourceTags <p>File system tag</p>
      */
     public void setResourceTags(TagInfo [] ResourceTags) {
         this.ResourceTags = ResourceTags;
     }
 
     /**
-     * Get A unique string supplied by the client to ensure that the request is idempotent. Its maximum length is 64 ASCII characters. If this parameter is not specified, the idempotency of the request cannot be guaranteed. This string is valid for 2 hours. 
-     * @return ClientToken A unique string supplied by the client to ensure that the request is idempotent. Its maximum length is 64 ASCII characters. If this parameter is not specified, the idempotency of the request cannot be guaranteed. This string is valid for 2 hours.
+     * Get <p>String used to ensure the idempotency of the request. This string is generated by the customer and must be unique across different requests, with a maximum length of 64 ASCII characters. If this parameter is not specified, the idempotency of the request cannot be guaranteed. The string used to ensure idempotency expires after 2 hours.</p> 
+     * @return ClientToken <p>String used to ensure the idempotency of the request. This string is generated by the customer and must be unique across different requests, with a maximum length of 64 ASCII characters. If this parameter is not specified, the idempotency of the request cannot be guaranteed. The string used to ensure idempotency expires after 2 hours.</p>
      */
     public String getClientToken() {
         return this.ClientToken;
     }
 
     /**
-     * Set A unique string supplied by the client to ensure that the request is idempotent. Its maximum length is 64 ASCII characters. If this parameter is not specified, the idempotency of the request cannot be guaranteed. This string is valid for 2 hours.
-     * @param ClientToken A unique string supplied by the client to ensure that the request is idempotent. Its maximum length is 64 ASCII characters. If this parameter is not specified, the idempotency of the request cannot be guaranteed. This string is valid for 2 hours.
+     * Set <p>String used to ensure the idempotency of the request. This string is generated by the customer and must be unique across different requests, with a maximum length of 64 ASCII characters. If this parameter is not specified, the idempotency of the request cannot be guaranteed. The string used to ensure idempotency expires after 2 hours.</p>
+     * @param ClientToken <p>String used to ensure the idempotency of the request. This string is generated by the customer and must be unique across different requests, with a maximum length of 64 ASCII characters. If this parameter is not specified, the idempotency of the request cannot be guaranteed. The string used to ensure idempotency expires after 2 hours.</p>
      */
     public void setClientToken(String ClientToken) {
         this.ClientToken = ClientToken;
     }
 
     /**
-     * Get Cloud connect network ID. this field must be specified if the network type is CCN. obtain it by querying the CCN list through the api.
-[DescribeCcns](https://www.tencentcloud.com/document/product/215/19199?from_cn_redirect=1)
- 
-     * @return CcnId Cloud connect network ID. this field must be specified if the network type is CCN. obtain it by querying the CCN list through the api.
-[DescribeCcns](https://www.tencentcloud.com/document/product/215/19199?from_cn_redirect=1)
-
+     * Get <p>CCN ID. This field is required if CCN is selected as the network type.</p><p>For valid values, see <a href="https://www.tencentcloud.com/document/product/215/19199?from_cn_redirect=1">Querying the List of CCNs</a></p><p>When Scenario=AgentSandbox, that is, when creating AgentCFS, this parameter is not required and will be ignored if passed in.</p> 
+     * @return CcnId <p>CCN ID. This field is required if CCN is selected as the network type.</p><p>For valid values, see <a href="https://www.tencentcloud.com/document/product/215/19199?from_cn_redirect=1">Querying the List of CCNs</a></p><p>When Scenario=AgentSandbox, that is, when creating AgentCFS, this parameter is not required and will be ignored if passed in.</p>
      */
     public String getCcnId() {
         return this.CcnId;
     }
 
     /**
-     * Set Cloud connect network ID. this field must be specified if the network type is CCN. obtain it by querying the CCN list through the api.
-[DescribeCcns](https://www.tencentcloud.com/document/product/215/19199?from_cn_redirect=1)
-
-     * @param CcnId Cloud connect network ID. this field must be specified if the network type is CCN. obtain it by querying the CCN list through the api.
-[DescribeCcns](https://www.tencentcloud.com/document/product/215/19199?from_cn_redirect=1)
-
+     * Set <p>CCN ID. This field is required if CCN is selected as the network type.</p><p>For valid values, see <a href="https://www.tencentcloud.com/document/product/215/19199?from_cn_redirect=1">Querying the List of CCNs</a></p><p>When Scenario=AgentSandbox, that is, when creating AgentCFS, this parameter is not required and will be ignored if passed in.</p>
+     * @param CcnId <p>CCN ID. This field is required if CCN is selected as the network type.</p><p>For valid values, see <a href="https://www.tencentcloud.com/document/product/215/19199?from_cn_redirect=1">Querying the List of CCNs</a></p><p>When Scenario=AgentSandbox, that is, when creating AgentCFS, this parameter is not required and will be ignored if passed in.</p>
      */
     public void setCcnId(String CcnId) {
         this.CcnId = CcnId;
     }
 
     /**
-     * Get CCN IP range used by the CFS (required if the network type is CCN), which cannot conflict with other IP ranges bound in CCN 
-     * @return CidrBlock CCN IP range used by the CFS (required if the network type is CCN), which cannot conflict with other IP ranges bound in CCN
+     * Get <p>CIDR block used by CFS in the CCN. This field is required if CCN is selected as the network type, and it cannot conflict with CIDR blocks already bound in the CCN.</p><p>When Scenario=AgentSandbox, that is, when creating AgentCFS, this parameter is not required and will be ignored if passed in.</p> 
+     * @return CidrBlock <p>CIDR block used by CFS in the CCN. This field is required if CCN is selected as the network type, and it cannot conflict with CIDR blocks already bound in the CCN.</p><p>When Scenario=AgentSandbox, that is, when creating AgentCFS, this parameter is not required and will be ignored if passed in.</p>
      */
     public String getCidrBlock() {
         return this.CidrBlock;
     }
 
     /**
-     * Set CCN IP range used by the CFS (required if the network type is CCN), which cannot conflict with other IP ranges bound in CCN
-     * @param CidrBlock CCN IP range used by the CFS (required if the network type is CCN), which cannot conflict with other IP ranges bound in CCN
+     * Set <p>CIDR block used by CFS in the CCN. This field is required if CCN is selected as the network type, and it cannot conflict with CIDR blocks already bound in the CCN.</p><p>When Scenario=AgentSandbox, that is, when creating AgentCFS, this parameter is not required and will be ignored if passed in.</p>
+     * @param CidrBlock <p>CIDR block used by CFS in the CCN. This field is required if CCN is selected as the network type, and it cannot conflict with CIDR blocks already bound in the CCN.</p><p>When Scenario=AgentSandbox, that is, when creating AgentCFS, this parameter is not required and will be ignored if passed in.</p>
      */
     public void setCidrBlock(String CidrBlock) {
         this.CidrBlock = CidrBlock;
     }
 
     /**
-     * Get File system capacity, required for the turbo series, in GiB. turbo standard type in GB, starting from 20 TiB (20480 GiB); scaling increment 10 TiB (10240 GiB). turbo performance type starts from 10 TiB (10240 GiB); capacity expansion step 10 TiB (10240 GiB). 
-     * @return Capacity File system capacity, required for the turbo series, in GiB. turbo standard type in GB, starting from 20 TiB (20480 GiB); scaling increment 10 TiB (10240 GiB). turbo performance type starts from 10 TiB (10240 GiB); capacity expansion step 10 TiB (10240 GiB).
+     * Get <p>File system capacity. This parameter is required for Turbo series.</p><p>Unit: GiB</p><p>Turbo Standard starts at 20 TiB, that is, 20,480 GiB, with a scale-out step of 10 TiB, that is, 10,240 GiB. Turbo Performance starts at 10 TiB, that is, 10,240 GiB, with a scale-out step of 10 TiB, that is, 10,240 GiB.</p> 
+     * @return Capacity <p>File system capacity. This parameter is required for Turbo series.</p><p>Unit: GiB</p><p>Turbo Standard starts at 20 TiB, that is, 20,480 GiB, with a scale-out step of 10 TiB, that is, 10,240 GiB. Turbo Performance starts at 10 TiB, that is, 10,240 GiB, with a scale-out step of 10 TiB, that is, 10,240 GiB.</p>
      */
     public Long getCapacity() {
         return this.Capacity;
     }
 
     /**
-     * Set File system capacity, required for the turbo series, in GiB. turbo standard type in GB, starting from 20 TiB (20480 GiB); scaling increment 10 TiB (10240 GiB). turbo performance type starts from 10 TiB (10240 GiB); capacity expansion step 10 TiB (10240 GiB).
-     * @param Capacity File system capacity, required for the turbo series, in GiB. turbo standard type in GB, starting from 20 TiB (20480 GiB); scaling increment 10 TiB (10240 GiB). turbo performance type starts from 10 TiB (10240 GiB); capacity expansion step 10 TiB (10240 GiB).
+     * Set <p>File system capacity. This parameter is required for Turbo series.</p><p>Unit: GiB</p><p>Turbo Standard starts at 20 TiB, that is, 20,480 GiB, with a scale-out step of 10 TiB, that is, 10,240 GiB. Turbo Performance starts at 10 TiB, that is, 10,240 GiB, with a scale-out step of 10 TiB, that is, 10,240 GiB.</p>
+     * @param Capacity <p>File system capacity. This parameter is required for Turbo series.</p><p>Unit: GiB</p><p>Turbo Standard starts at 20 TiB, that is, 20,480 GiB, with a scale-out step of 10 TiB, that is, 10,240 GiB. Turbo Performance starts at 10 TiB, that is, 10,240 GiB, with a scale-out step of 10 TiB, that is, 10,240 GiB.</p>
      */
     public void setCapacity(Long Capacity) {
         this.Capacity = Capacity;
     }
 
     /**
-     * Get File system snapshot ID. this parameter can be obtained by querying the snapshot list.
-[DescribeCfsSnapshots](https://www.tencentcloud.com/document/product/582/80206?from_cn_redirect=1) 
-     * @return SnapshotId File system snapshot ID. this parameter can be obtained by querying the snapshot list.
-[DescribeCfsSnapshots](https://www.tencentcloud.com/document/product/582/80206?from_cn_redirect=1)
+     * Get <p>File system snapshot ID</p><p>For valid values, see <a href="https://www.tencentcloud.com/document/api/582/80206?from_cn_redirect=1">DescribeCfsSnapshots</a></p> 
+     * @return SnapshotId <p>File system snapshot ID</p><p>For valid values, see <a href="https://www.tencentcloud.com/document/api/582/80206?from_cn_redirect=1">DescribeCfsSnapshots</a></p>
      */
     public String getSnapshotId() {
         return this.SnapshotId;
     }
 
     /**
-     * Set File system snapshot ID. this parameter can be obtained by querying the snapshot list.
-[DescribeCfsSnapshots](https://www.tencentcloud.com/document/product/582/80206?from_cn_redirect=1)
-     * @param SnapshotId File system snapshot ID. this parameter can be obtained by querying the snapshot list.
-[DescribeCfsSnapshots](https://www.tencentcloud.com/document/product/582/80206?from_cn_redirect=1)
+     * Set <p>File system snapshot ID</p><p>For valid values, see <a href="https://www.tencentcloud.com/document/api/582/80206?from_cn_redirect=1">DescribeCfsSnapshots</a></p>
+     * @param SnapshotId <p>File system snapshot ID</p><p>For valid values, see <a href="https://www.tencentcloud.com/document/api/582/80206?from_cn_redirect=1">DescribeCfsSnapshots</a></p>
      */
     public void setSnapshotId(String SnapshotId) {
         this.SnapshotId = SnapshotId;
     }
 
     /**
-     * Get Scheduled snapshot policy ID, which can be obtained by querying the snapshot policy information.
-[DescribeAutoSnapshotPolicies](https://www.tencentcloud.com/document/product/582/38157?from_cn_redirect=1) 
-     * @return AutoSnapshotPolicyId Scheduled snapshot policy ID, which can be obtained by querying the snapshot policy information.
-[DescribeAutoSnapshotPolicies](https://www.tencentcloud.com/document/product/582/38157?from_cn_redirect=1)
+     * Get <p>Scheduled snapshot policy ID</p><p>For valid values, see <a href="https://www.tencentcloud.com/document/api/582/80208?from_cn_redirect=1">DescribeAutoSnapshotPolicies</a></p> 
+     * @return AutoSnapshotPolicyId <p>Scheduled snapshot policy ID</p><p>For valid values, see <a href="https://www.tencentcloud.com/document/api/582/80208?from_cn_redirect=1">DescribeAutoSnapshotPolicies</a></p>
      */
     public String getAutoSnapshotPolicyId() {
         return this.AutoSnapshotPolicyId;
     }
 
     /**
-     * Set Scheduled snapshot policy ID, which can be obtained by querying the snapshot policy information.
-[DescribeAutoSnapshotPolicies](https://www.tencentcloud.com/document/product/582/38157?from_cn_redirect=1)
-     * @param AutoSnapshotPolicyId Scheduled snapshot policy ID, which can be obtained by querying the snapshot policy information.
-[DescribeAutoSnapshotPolicies](https://www.tencentcloud.com/document/product/582/38157?from_cn_redirect=1)
+     * Set <p>Scheduled snapshot policy ID</p><p>For valid values, see <a href="https://www.tencentcloud.com/document/api/582/80208?from_cn_redirect=1">DescribeAutoSnapshotPolicies</a></p>
+     * @param AutoSnapshotPolicyId <p>Scheduled snapshot policy ID</p><p>For valid values, see <a href="https://www.tencentcloud.com/document/api/582/80208?from_cn_redirect=1">DescribeAutoSnapshotPolicies</a></p>
      */
     public void setAutoSnapshotPolicyId(String AutoSnapshotPolicyId) {
         this.AutoSnapshotPolicyId = AutoSnapshotPolicyId;
     }
 
     /**
-     * Get Whether default expansion is enabled. only turbo file storage supports this feature. 
-     * @return EnableAutoScaleUp Whether default expansion is enabled. only turbo file storage supports this feature.
+     * Get <p>Indicates whether to enable the automatic scale-out policy. Only turbo file storage supports this feature.</p> 
+     * @return EnableAutoScaleUp <p>Indicates whether to enable the automatic scale-out policy. Only turbo file storage supports this feature.</p>
      */
     public Boolean getEnableAutoScaleUp() {
         return this.EnableAutoScaleUp;
     }
 
     /**
-     * Set Whether default expansion is enabled. only turbo file storage supports this feature.
-     * @param EnableAutoScaleUp Whether default expansion is enabled. only turbo file storage supports this feature.
+     * Set <p>Indicates whether to enable the automatic scale-out policy. Only turbo file storage supports this feature.</p>
+     * @param EnableAutoScaleUp <p>Indicates whether to enable the automatic scale-out policy. Only turbo file storage supports this feature.</p>
      */
     public void setEnableAutoScaleUp(Boolean EnableAutoScaleUp) {
         this.EnableAutoScaleUp = EnableAutoScaleUp;
     }
 
     /**
-     * Get v1.5: create a standard edition general file system.
-v3.1: create an enhanced general file system.
-Description: the enhanced universal system requires enabling the allowlist to use. if needed, submit a ticket to contact us. 
-     * @return CfsVersion v1.5: create a standard edition general file system.
-v3.1: create an enhanced general file system.
-Description: the enhanced universal system requires enabling the allowlist to use. if needed, submit a ticket to contact us.
+     * Get <p>File system version.</p><p>Valid values:</p><ul><li>v1.5: Creates a General Purpose Standard or General Purpose Performance file system.</li><li>v3.1: Creates a General Purpose Standard (Enhanced) or General Purpose Performance (Enhanced) file system. This parameter is required if you want to create an enhanced file system.</li><li>v4.0: Creates a Turbo Standard, Turbo Performance, or Throughput file system. This parameter is optional.</li></ul><p>To create a General Purpose Standard (Enhanced) or General Purpose Performance (Enhanced) file system, the root account must be added to the allowlist. Contact us if needed.</p> 
+     * @return CfsVersion <p>File system version.</p><p>Valid values:</p><ul><li>v1.5: Creates a General Purpose Standard or General Purpose Performance file system.</li><li>v3.1: Creates a General Purpose Standard (Enhanced) or General Purpose Performance (Enhanced) file system. This parameter is required if you want to create an enhanced file system.</li><li>v4.0: Creates a Turbo Standard, Turbo Performance, or Throughput file system. This parameter is optional.</li></ul><p>To create a General Purpose Standard (Enhanced) or General Purpose Performance (Enhanced) file system, the root account must be added to the allowlist. Contact us if needed.</p>
      */
     public String getCfsVersion() {
         return this.CfsVersion;
     }
 
     /**
-     * Set v1.5: create a standard edition general file system.
-v3.1: create an enhanced general file system.
-Description: the enhanced universal system requires enabling the allowlist to use. if needed, submit a ticket to contact us.
-     * @param CfsVersion v1.5: create a standard edition general file system.
-v3.1: create an enhanced general file system.
-Description: the enhanced universal system requires enabling the allowlist to use. if needed, submit a ticket to contact us.
+     * Set <p>File system version.</p><p>Valid values:</p><ul><li>v1.5: Creates a General Purpose Standard or General Purpose Performance file system.</li><li>v3.1: Creates a General Purpose Standard (Enhanced) or General Purpose Performance (Enhanced) file system. This parameter is required if you want to create an enhanced file system.</li><li>v4.0: Creates a Turbo Standard, Turbo Performance, or Throughput file system. This parameter is optional.</li></ul><p>To create a General Purpose Standard (Enhanced) or General Purpose Performance (Enhanced) file system, the root account must be added to the allowlist. Contact us if needed.</p>
+     * @param CfsVersion <p>File system version.</p><p>Valid values:</p><ul><li>v1.5: Creates a General Purpose Standard or General Purpose Performance file system.</li><li>v3.1: Creates a General Purpose Standard (Enhanced) or General Purpose Performance (Enhanced) file system. This parameter is required if you want to create an enhanced file system.</li><li>v4.0: Creates a Turbo Standard, Turbo Performance, or Throughput file system. This parameter is optional.</li></ul><p>To create a General Purpose Standard (Enhanced) or General Purpose Performance (Enhanced) file system, the root account must be added to the allowlist. Contact us if needed.</p>
      */
     public void setCfsVersion(String CfsVersion) {
         this.CfsVersion = CfsVersion;
     }
 
     /**
-     * Get turbo file system metadata attribute.
-basic: creates metadata of the standard type.
-Enhanced: creates enhanced metadata. 
-     * @return MetaType turbo file system metadata attribute.
-basic: creates metadata of the standard type.
-Enhanced: creates enhanced metadata.
+     * Get <p>Metadata type of the Turbo file system.</p><p>Valid values:</p><ul><li>basic: Creates standard metadata.</li><li>enhanced: Creates enhanced metadata.</li></ul><p>For details, see <a href="https://www.tencentcloud.com/document/product/582/116836?from_cn_redirect=1">Turbo File System Metadata Types</a></p> 
+     * @return MetaType <p>Metadata type of the Turbo file system.</p><p>Valid values:</p><ul><li>basic: Creates standard metadata.</li><li>enhanced: Creates enhanced metadata.</li></ul><p>For details, see <a href="https://www.tencentcloud.com/document/product/582/116836?from_cn_redirect=1">Turbo File System Metadata Types</a></p>
      */
     public String getMetaType() {
         return this.MetaType;
     }
 
     /**
-     * Set turbo file system metadata attribute.
-basic: creates metadata of the standard type.
-Enhanced: creates enhanced metadata.
-     * @param MetaType turbo file system metadata attribute.
-basic: creates metadata of the standard type.
-Enhanced: creates enhanced metadata.
+     * Set <p>Metadata type of the Turbo file system.</p><p>Valid values:</p><ul><li>basic: Creates standard metadata.</li><li>enhanced: Creates enhanced metadata.</li></ul><p>For details, see <a href="https://www.tencentcloud.com/document/product/582/116836?from_cn_redirect=1">Turbo File System Metadata Types</a></p>
+     * @param MetaType <p>Metadata type of the Turbo file system.</p><p>Valid values:</p><ul><li>basic: Creates standard metadata.</li><li>enhanced: Creates enhanced metadata.</li></ul><p>For details, see <a href="https://www.tencentcloud.com/document/product/582/116836?from_cn_redirect=1">Turbo File System Metadata Types</a></p>
      */
     public void setMetaType(String MetaType) {
         this.MetaType = MetaType;
+    }
+
+    /**
+     * Get <p>Business scenario.</p><p>Valid values:</p><ul><li>AgentSandbox: Required when creating AgentCFS.</li></ul> 
+     * @return Scenario <p>Business scenario.</p><p>Valid values:</p><ul><li>AgentSandbox: Required when creating AgentCFS.</li></ul>
+     */
+    public String getScenario() {
+        return this.Scenario;
+    }
+
+    /**
+     * Set <p>Business scenario.</p><p>Valid values:</p><ul><li>AgentSandbox: Required when creating AgentCFS.</li></ul>
+     * @param Scenario <p>Business scenario.</p><p>Valid values:</p><ul><li>AgentSandbox: Required when creating AgentCFS.</li></ul>
+     */
+    public void setScenario(String Scenario) {
+        this.Scenario = Scenario;
     }
 
     public CreateCfsFileSystemRequest() {
@@ -604,6 +577,9 @@ Enhanced: creates enhanced metadata.
         if (source.MetaType != null) {
             this.MetaType = new String(source.MetaType);
         }
+        if (source.Scenario != null) {
+            this.Scenario = new String(source.Scenario);
+        }
     }
 
 
@@ -631,6 +607,7 @@ Enhanced: creates enhanced metadata.
         this.setParamSimple(map, prefix + "EnableAutoScaleUp", this.EnableAutoScaleUp);
         this.setParamSimple(map, prefix + "CfsVersion", this.CfsVersion);
         this.setParamSimple(map, prefix + "MetaType", this.MetaType);
+        this.setParamSimple(map, prefix + "Scenario", this.Scenario);
 
     }
 }

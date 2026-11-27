@@ -24,125 +24,115 @@ import java.util.HashMap;
 public class DoDirectoryOperationRequest extends AbstractModel {
 
     /**
-    * File system ID. currently, only Turbo series file systems support calling this api. general series file systems (including enhanced) do not support calling.
+    * <p>File system ID. Currently, only Turbo file systems support this API. General-purpose file systems (including enhanced ones) do not support this API.</p>
     */
     @SerializedName("FileSystemId")
     @Expose
     private String FileSystemId;
 
     /**
-    * create a directory, equivalent to mkdir.
-check: confirm the existence of the directory, equivalent to stat.
-move: rename a file or directory, equivalent to mv.
+    * <p>create: creates a directory, equivalent to mkdir.<br>check: checks whether a directory exists, equivalent to stat.<br>move: renames a file or directory, equivalent to mv.</p>
     */
     @SerializedName("OpetationType")
     @Expose
     private String OpetationType;
 
     /**
-    * Absolute path of the directory. recursive creation is enabled by default (if the directory contains non-existent subdirectories, create the corresponding subdirectory first).
+    * <p>The system recursively creates all parent directories in the path by default. The path must start with /cfs/, which represents the logical path inside the file storage instance, not the local mount point path.<br>Example:</p><ul><li><p>If the operation is create/check</p><ul><li>If the CFS root directory / is mounted, and you need to create/check whether test1/test2 exists under the mount path, the input value is /cfs/test1/test2</li><li>If the CFS subdirectory /subdir is mounted, and you need to create/check whether test1/test2 exists under the mount path, the input value is /cfs/subdir/test1/test2</li></ul></li><li><p>If the operation is move</p><ul><li>If the CFS root directory / is mounted, and you need to move files under test1/test2 to DestPath, the input value is /cfs/test1/test2</li><li>If the CFS subdirectory /subdir is mounted, and you need to move files under test1/test2 to DestPath, the input value is /cfs/subdir/test1/test2</li></ul></li></ul>
     */
     @SerializedName("DirectoryPath")
     @Expose
     private String DirectoryPath;
 
     /**
-    * Permission to create directory. if not specified, it defaults to 0755. if OperationType is check, this value is meaningless.
+    * <p>Permission for creating the directory. If not specified, the default value is 0755. If OperationType is check, this value is meaningless.</p>
     */
     @SerializedName("Mode")
     @Expose
     private String Mode;
 
     /**
-    * The destination directory name for the mv operation. the path must start with /cfs/.
+    * <p>Target directory path for the mv operation. It must start with /cfs/, which represents the logical path inside the file storage instance, not the local mount point path.<br>Example:</p><ul><li>If the CFS root directory / is mounted, and you need to move files under DirectoryPath to test3/test4 under the mount path, the input value is /cfs/test3/test4</li><li>If the CFS subdirectory /subdir is mounted, and you need to move files under DirectoryPath to test3/test4 under the mount path, the input value is /cfs/subdir/test3/test4</li></ul>
     */
     @SerializedName("DestPath")
     @Expose
     private String DestPath;
 
     /**
-     * Get File system ID. currently, only Turbo series file systems support calling this api. general series file systems (including enhanced) do not support calling. 
-     * @return FileSystemId File system ID. currently, only Turbo series file systems support calling this api. general series file systems (including enhanced) do not support calling.
+     * Get <p>File system ID. Currently, only Turbo file systems support this API. General-purpose file systems (including enhanced ones) do not support this API.</p> 
+     * @return FileSystemId <p>File system ID. Currently, only Turbo file systems support this API. General-purpose file systems (including enhanced ones) do not support this API.</p>
      */
     public String getFileSystemId() {
         return this.FileSystemId;
     }
 
     /**
-     * Set File system ID. currently, only Turbo series file systems support calling this api. general series file systems (including enhanced) do not support calling.
-     * @param FileSystemId File system ID. currently, only Turbo series file systems support calling this api. general series file systems (including enhanced) do not support calling.
+     * Set <p>File system ID. Currently, only Turbo file systems support this API. General-purpose file systems (including enhanced ones) do not support this API.</p>
+     * @param FileSystemId <p>File system ID. Currently, only Turbo file systems support this API. General-purpose file systems (including enhanced ones) do not support this API.</p>
      */
     public void setFileSystemId(String FileSystemId) {
         this.FileSystemId = FileSystemId;
     }
 
     /**
-     * Get create a directory, equivalent to mkdir.
-check: confirm the existence of the directory, equivalent to stat.
-move: rename a file or directory, equivalent to mv. 
-     * @return OpetationType create a directory, equivalent to mkdir.
-check: confirm the existence of the directory, equivalent to stat.
-move: rename a file or directory, equivalent to mv.
+     * Get <p>create: creates a directory, equivalent to mkdir.<br>check: checks whether a directory exists, equivalent to stat.<br>move: renames a file or directory, equivalent to mv.</p> 
+     * @return OpetationType <p>create: creates a directory, equivalent to mkdir.<br>check: checks whether a directory exists, equivalent to stat.<br>move: renames a file or directory, equivalent to mv.</p>
      */
     public String getOpetationType() {
         return this.OpetationType;
     }
 
     /**
-     * Set create a directory, equivalent to mkdir.
-check: confirm the existence of the directory, equivalent to stat.
-move: rename a file or directory, equivalent to mv.
-     * @param OpetationType create a directory, equivalent to mkdir.
-check: confirm the existence of the directory, equivalent to stat.
-move: rename a file or directory, equivalent to mv.
+     * Set <p>create: creates a directory, equivalent to mkdir.<br>check: checks whether a directory exists, equivalent to stat.<br>move: renames a file or directory, equivalent to mv.</p>
+     * @param OpetationType <p>create: creates a directory, equivalent to mkdir.<br>check: checks whether a directory exists, equivalent to stat.<br>move: renames a file or directory, equivalent to mv.</p>
      */
     public void setOpetationType(String OpetationType) {
         this.OpetationType = OpetationType;
     }
 
     /**
-     * Get Absolute path of the directory. recursive creation is enabled by default (if the directory contains non-existent subdirectories, create the corresponding subdirectory first). 
-     * @return DirectoryPath Absolute path of the directory. recursive creation is enabled by default (if the directory contains non-existent subdirectories, create the corresponding subdirectory first).
+     * Get <p>The system recursively creates all parent directories in the path by default. The path must start with /cfs/, which represents the logical path inside the file storage instance, not the local mount point path.<br>Example:</p><ul><li><p>If the operation is create/check</p><ul><li>If the CFS root directory / is mounted, and you need to create/check whether test1/test2 exists under the mount path, the input value is /cfs/test1/test2</li><li>If the CFS subdirectory /subdir is mounted, and you need to create/check whether test1/test2 exists under the mount path, the input value is /cfs/subdir/test1/test2</li></ul></li><li><p>If the operation is move</p><ul><li>If the CFS root directory / is mounted, and you need to move files under test1/test2 to DestPath, the input value is /cfs/test1/test2</li><li>If the CFS subdirectory /subdir is mounted, and you need to move files under test1/test2 to DestPath, the input value is /cfs/subdir/test1/test2</li></ul></li></ul> 
+     * @return DirectoryPath <p>The system recursively creates all parent directories in the path by default. The path must start with /cfs/, which represents the logical path inside the file storage instance, not the local mount point path.<br>Example:</p><ul><li><p>If the operation is create/check</p><ul><li>If the CFS root directory / is mounted, and you need to create/check whether test1/test2 exists under the mount path, the input value is /cfs/test1/test2</li><li>If the CFS subdirectory /subdir is mounted, and you need to create/check whether test1/test2 exists under the mount path, the input value is /cfs/subdir/test1/test2</li></ul></li><li><p>If the operation is move</p><ul><li>If the CFS root directory / is mounted, and you need to move files under test1/test2 to DestPath, the input value is /cfs/test1/test2</li><li>If the CFS subdirectory /subdir is mounted, and you need to move files under test1/test2 to DestPath, the input value is /cfs/subdir/test1/test2</li></ul></li></ul>
      */
     public String getDirectoryPath() {
         return this.DirectoryPath;
     }
 
     /**
-     * Set Absolute path of the directory. recursive creation is enabled by default (if the directory contains non-existent subdirectories, create the corresponding subdirectory first).
-     * @param DirectoryPath Absolute path of the directory. recursive creation is enabled by default (if the directory contains non-existent subdirectories, create the corresponding subdirectory first).
+     * Set <p>The system recursively creates all parent directories in the path by default. The path must start with /cfs/, which represents the logical path inside the file storage instance, not the local mount point path.<br>Example:</p><ul><li><p>If the operation is create/check</p><ul><li>If the CFS root directory / is mounted, and you need to create/check whether test1/test2 exists under the mount path, the input value is /cfs/test1/test2</li><li>If the CFS subdirectory /subdir is mounted, and you need to create/check whether test1/test2 exists under the mount path, the input value is /cfs/subdir/test1/test2</li></ul></li><li><p>If the operation is move</p><ul><li>If the CFS root directory / is mounted, and you need to move files under test1/test2 to DestPath, the input value is /cfs/test1/test2</li><li>If the CFS subdirectory /subdir is mounted, and you need to move files under test1/test2 to DestPath, the input value is /cfs/subdir/test1/test2</li></ul></li></ul>
+     * @param DirectoryPath <p>The system recursively creates all parent directories in the path by default. The path must start with /cfs/, which represents the logical path inside the file storage instance, not the local mount point path.<br>Example:</p><ul><li><p>If the operation is create/check</p><ul><li>If the CFS root directory / is mounted, and you need to create/check whether test1/test2 exists under the mount path, the input value is /cfs/test1/test2</li><li>If the CFS subdirectory /subdir is mounted, and you need to create/check whether test1/test2 exists under the mount path, the input value is /cfs/subdir/test1/test2</li></ul></li><li><p>If the operation is move</p><ul><li>If the CFS root directory / is mounted, and you need to move files under test1/test2 to DestPath, the input value is /cfs/test1/test2</li><li>If the CFS subdirectory /subdir is mounted, and you need to move files under test1/test2 to DestPath, the input value is /cfs/subdir/test1/test2</li></ul></li></ul>
      */
     public void setDirectoryPath(String DirectoryPath) {
         this.DirectoryPath = DirectoryPath;
     }
 
     /**
-     * Get Permission to create directory. if not specified, it defaults to 0755. if OperationType is check, this value is meaningless. 
-     * @return Mode Permission to create directory. if not specified, it defaults to 0755. if OperationType is check, this value is meaningless.
+     * Get <p>Permission for creating the directory. If not specified, the default value is 0755. If OperationType is check, this value is meaningless.</p> 
+     * @return Mode <p>Permission for creating the directory. If not specified, the default value is 0755. If OperationType is check, this value is meaningless.</p>
      */
     public String getMode() {
         return this.Mode;
     }
 
     /**
-     * Set Permission to create directory. if not specified, it defaults to 0755. if OperationType is check, this value is meaningless.
-     * @param Mode Permission to create directory. if not specified, it defaults to 0755. if OperationType is check, this value is meaningless.
+     * Set <p>Permission for creating the directory. If not specified, the default value is 0755. If OperationType is check, this value is meaningless.</p>
+     * @param Mode <p>Permission for creating the directory. If not specified, the default value is 0755. If OperationType is check, this value is meaningless.</p>
      */
     public void setMode(String Mode) {
         this.Mode = Mode;
     }
 
     /**
-     * Get The destination directory name for the mv operation. the path must start with /cfs/. 
-     * @return DestPath The destination directory name for the mv operation. the path must start with /cfs/.
+     * Get <p>Target directory path for the mv operation. It must start with /cfs/, which represents the logical path inside the file storage instance, not the local mount point path.<br>Example:</p><ul><li>If the CFS root directory / is mounted, and you need to move files under DirectoryPath to test3/test4 under the mount path, the input value is /cfs/test3/test4</li><li>If the CFS subdirectory /subdir is mounted, and you need to move files under DirectoryPath to test3/test4 under the mount path, the input value is /cfs/subdir/test3/test4</li></ul> 
+     * @return DestPath <p>Target directory path for the mv operation. It must start with /cfs/, which represents the logical path inside the file storage instance, not the local mount point path.<br>Example:</p><ul><li>If the CFS root directory / is mounted, and you need to move files under DirectoryPath to test3/test4 under the mount path, the input value is /cfs/test3/test4</li><li>If the CFS subdirectory /subdir is mounted, and you need to move files under DirectoryPath to test3/test4 under the mount path, the input value is /cfs/subdir/test3/test4</li></ul>
      */
     public String getDestPath() {
         return this.DestPath;
     }
 
     /**
-     * Set The destination directory name for the mv operation. the path must start with /cfs/.
-     * @param DestPath The destination directory name for the mv operation. the path must start with /cfs/.
+     * Set <p>Target directory path for the mv operation. It must start with /cfs/, which represents the logical path inside the file storage instance, not the local mount point path.<br>Example:</p><ul><li>If the CFS root directory / is mounted, and you need to move files under DirectoryPath to test3/test4 under the mount path, the input value is /cfs/test3/test4</li><li>If the CFS subdirectory /subdir is mounted, and you need to move files under DirectoryPath to test3/test4 under the mount path, the input value is /cfs/subdir/test3/test4</li></ul>
+     * @param DestPath <p>Target directory path for the mv operation. It must start with /cfs/, which represents the logical path inside the file storage instance, not the local mount point path.<br>Example:</p><ul><li>If the CFS root directory / is mounted, and you need to move files under DirectoryPath to test3/test4 under the mount path, the input value is /cfs/test3/test4</li><li>If the CFS subdirectory /subdir is mounted, and you need to move files under DirectoryPath to test3/test4 under the mount path, the input value is /cfs/subdir/test3/test4</li></ul>
      */
     public void setDestPath(String DestPath) {
         this.DestPath = DestPath;

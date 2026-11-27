@@ -24,56 +24,56 @@ import java.util.HashMap;
 public class CreateCfsFileSystemResponse extends AbstractModel {
 
     /**
-    * File system creation time
+    * <p>File system creation time.</p>
     */
     @SerializedName("CreationTime")
     @Expose
     private String CreationTime;
 
     /**
-    * Custom file system name
+    * <p>User-defined file system name.</p>
     */
     @SerializedName("CreationToken")
     @Expose
     private String CreationToken;
 
     /**
-    * File system ID
+    * <p>File system ID.</p>
     */
     @SerializedName("FileSystemId")
     @Expose
     private String FileSystemId;
 
     /**
-    * File system status. Valid values: `creating`, `create_failed`, `available`, `unserviced`, `upgrading`, `deleting`
+    * <p>File system status. Possible statuses include: "creating": Creating, "create_failed": Creation failed, "available": Available, "unserviced": Unavailable, "upgrading": Upgrading, and "deleting": Deleting.</p>
     */
     @SerializedName("LifeCycleState")
     @Expose
     private String LifeCycleState;
 
     /**
-    * Storage used by the file system, in bytes
+    * <p>Used capacity of the file system, in bytes.</p>
     */
     @SerializedName("SizeByte")
     @Expose
     private Long SizeByte;
 
     /**
-    * AZ ID
+    * <p>AZ ID.</p>
     */
     @SerializedName("ZoneId")
     @Expose
     private Long ZoneId;
 
     /**
-    * Custom file system name
+    * <p>User-defined file system name.</p>
     */
     @SerializedName("FsName")
     @Expose
     private String FsName;
 
     /**
-    * Whether a file system is encrypted
+    * <p>Whether the file system is encrypted.</p>
     */
     @SerializedName("Encrypted")
     @Expose
@@ -87,128 +87,128 @@ public class CreateCfsFileSystemResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get File system creation time 
-     * @return CreationTime File system creation time
+     * Get <p>File system creation time.</p> 
+     * @return CreationTime <p>File system creation time.</p>
      */
     public String getCreationTime() {
         return this.CreationTime;
     }
 
     /**
-     * Set File system creation time
-     * @param CreationTime File system creation time
+     * Set <p>File system creation time.</p>
+     * @param CreationTime <p>File system creation time.</p>
      */
     public void setCreationTime(String CreationTime) {
         this.CreationTime = CreationTime;
     }
 
     /**
-     * Get Custom file system name 
-     * @return CreationToken Custom file system name
+     * Get <p>User-defined file system name.</p> 
+     * @return CreationToken <p>User-defined file system name.</p>
      */
     public String getCreationToken() {
         return this.CreationToken;
     }
 
     /**
-     * Set Custom file system name
-     * @param CreationToken Custom file system name
+     * Set <p>User-defined file system name.</p>
+     * @param CreationToken <p>User-defined file system name.</p>
      */
     public void setCreationToken(String CreationToken) {
         this.CreationToken = CreationToken;
     }
 
     /**
-     * Get File system ID 
-     * @return FileSystemId File system ID
+     * Get <p>File system ID.</p> 
+     * @return FileSystemId <p>File system ID.</p>
      */
     public String getFileSystemId() {
         return this.FileSystemId;
     }
 
     /**
-     * Set File system ID
-     * @param FileSystemId File system ID
+     * Set <p>File system ID.</p>
+     * @param FileSystemId <p>File system ID.</p>
      */
     public void setFileSystemId(String FileSystemId) {
         this.FileSystemId = FileSystemId;
     }
 
     /**
-     * Get File system status. Valid values: `creating`, `create_failed`, `available`, `unserviced`, `upgrading`, `deleting` 
-     * @return LifeCycleState File system status. Valid values: `creating`, `create_failed`, `available`, `unserviced`, `upgrading`, `deleting`
+     * Get <p>File system status. Possible statuses include: "creating": Creating, "create_failed": Creation failed, "available": Available, "unserviced": Unavailable, "upgrading": Upgrading, and "deleting": Deleting.</p> 
+     * @return LifeCycleState <p>File system status. Possible statuses include: "creating": Creating, "create_failed": Creation failed, "available": Available, "unserviced": Unavailable, "upgrading": Upgrading, and "deleting": Deleting.</p>
      */
     public String getLifeCycleState() {
         return this.LifeCycleState;
     }
 
     /**
-     * Set File system status. Valid values: `creating`, `create_failed`, `available`, `unserviced`, `upgrading`, `deleting`
-     * @param LifeCycleState File system status. Valid values: `creating`, `create_failed`, `available`, `unserviced`, `upgrading`, `deleting`
+     * Set <p>File system status. Possible statuses include: "creating": Creating, "create_failed": Creation failed, "available": Available, "unserviced": Unavailable, "upgrading": Upgrading, and "deleting": Deleting.</p>
+     * @param LifeCycleState <p>File system status. Possible statuses include: "creating": Creating, "create_failed": Creation failed, "available": Available, "unserviced": Unavailable, "upgrading": Upgrading, and "deleting": Deleting.</p>
      */
     public void setLifeCycleState(String LifeCycleState) {
         this.LifeCycleState = LifeCycleState;
     }
 
     /**
-     * Get Storage used by the file system, in bytes 
-     * @return SizeByte Storage used by the file system, in bytes
+     * Get <p>Used capacity of the file system, in bytes.</p> 
+     * @return SizeByte <p>Used capacity of the file system, in bytes.</p>
      */
     public Long getSizeByte() {
         return this.SizeByte;
     }
 
     /**
-     * Set Storage used by the file system, in bytes
-     * @param SizeByte Storage used by the file system, in bytes
+     * Set <p>Used capacity of the file system, in bytes.</p>
+     * @param SizeByte <p>Used capacity of the file system, in bytes.</p>
      */
     public void setSizeByte(Long SizeByte) {
         this.SizeByte = SizeByte;
     }
 
     /**
-     * Get AZ ID 
-     * @return ZoneId AZ ID
+     * Get <p>AZ ID.</p> 
+     * @return ZoneId <p>AZ ID.</p>
      */
     public Long getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set AZ ID
-     * @param ZoneId AZ ID
+     * Set <p>AZ ID.</p>
+     * @param ZoneId <p>AZ ID.</p>
      */
     public void setZoneId(Long ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get Custom file system name 
-     * @return FsName Custom file system name
+     * Get <p>User-defined file system name.</p> 
+     * @return FsName <p>User-defined file system name.</p>
      */
     public String getFsName() {
         return this.FsName;
     }
 
     /**
-     * Set Custom file system name
-     * @param FsName Custom file system name
+     * Set <p>User-defined file system name.</p>
+     * @param FsName <p>User-defined file system name.</p>
      */
     public void setFsName(String FsName) {
         this.FsName = FsName;
     }
 
     /**
-     * Get Whether a file system is encrypted 
-     * @return Encrypted Whether a file system is encrypted
+     * Get <p>Whether the file system is encrypted.</p> 
+     * @return Encrypted <p>Whether the file system is encrypted.</p>
      */
     public Boolean getEncrypted() {
         return this.Encrypted;
     }
 
     /**
-     * Set Whether a file system is encrypted
-     * @param Encrypted Whether a file system is encrypted
+     * Set <p>Whether the file system is encrypted.</p>
+     * @param Encrypted <p>Whether the file system is encrypted.</p>
      */
     public void setEncrypted(Boolean Encrypted) {
         this.Encrypted = Encrypted;

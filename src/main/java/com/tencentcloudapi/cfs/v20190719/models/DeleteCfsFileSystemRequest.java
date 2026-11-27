@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DeleteCfsFileSystemRequest extends AbstractModel {
 
     /**
-    * File system ID, which can be obtained by [querying the file system interface](https://www.tencentcloud.com/document/api/582/38170?from_cn_redirect=1). note: the DeleteMountTarget api must be called to remove the mount point of this file system before file system deletion, otherwise deletion will fail.
+    * File system ID, which can be obtained through the [API for querying file systems](https://www.tencentcloud.com/document/api/582/38170?from_cn_redirect=1). Note: Before deleting a file system, you need to call the DeleteMountTarget API to delete the mount target of the file system. Otherwise, the deletion will fail.
     */
     @SerializedName("FileSystemId")
     @Expose
     private String FileSystemId;
 
     /**
-     * Get File system ID, which can be obtained by [querying the file system interface](https://www.tencentcloud.com/document/api/582/38170?from_cn_redirect=1). note: the DeleteMountTarget api must be called to remove the mount point of this file system before file system deletion, otherwise deletion will fail. 
-     * @return FileSystemId File system ID, which can be obtained by [querying the file system interface](https://www.tencentcloud.com/document/api/582/38170?from_cn_redirect=1). note: the DeleteMountTarget api must be called to remove the mount point of this file system before file system deletion, otherwise deletion will fail.
+     * Get File system ID, which can be obtained through the [API for querying file systems](https://www.tencentcloud.com/document/api/582/38170?from_cn_redirect=1). Note: Before deleting a file system, you need to call the DeleteMountTarget API to delete the mount target of the file system. Otherwise, the deletion will fail. 
+     * @return FileSystemId File system ID, which can be obtained through the [API for querying file systems](https://www.tencentcloud.com/document/api/582/38170?from_cn_redirect=1). Note: Before deleting a file system, you need to call the DeleteMountTarget API to delete the mount target of the file system. Otherwise, the deletion will fail.
      */
     public String getFileSystemId() {
         return this.FileSystemId;
     }
 
     /**
-     * Set File system ID, which can be obtained by [querying the file system interface](https://www.tencentcloud.com/document/api/582/38170?from_cn_redirect=1). note: the DeleteMountTarget api must be called to remove the mount point of this file system before file system deletion, otherwise deletion will fail.
-     * @param FileSystemId File system ID, which can be obtained by [querying the file system interface](https://www.tencentcloud.com/document/api/582/38170?from_cn_redirect=1). note: the DeleteMountTarget api must be called to remove the mount point of this file system before file system deletion, otherwise deletion will fail.
+     * Set File system ID, which can be obtained through the [API for querying file systems](https://www.tencentcloud.com/document/api/582/38170?from_cn_redirect=1). Note: Before deleting a file system, you need to call the DeleteMountTarget API to delete the mount target of the file system. Otherwise, the deletion will fail.
+     * @param FileSystemId File system ID, which can be obtained through the [API for querying file systems](https://www.tencentcloud.com/document/api/582/38170?from_cn_redirect=1). Note: Before deleting a file system, you need to call the DeleteMountTarget API to delete the mount target of the file system. Otherwise, the deletion will fail.
      */
     public void setFileSystemId(String FileSystemId) {
         this.FileSystemId = FileSystemId;

@@ -24,141 +24,164 @@ import java.util.HashMap;
 public class CreateLifecycleDataTaskRequest extends AbstractModel {
 
     /**
-    * File system unique ID.
+    * <p>Unique file system ID.</p>
     */
     @SerializedName("FileSystemId")
     @Expose
     private String FileSystemId;
 
     /**
-    * Lifecycle task type; archive: settlement; restore: preheating; release: data release; metaload: metadata loading.
+    * <p>Lifecycle task type. archive: archiving; restore: preheating; release: data release; metaload: metadata loading.</p>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * Task name.
+    * <p>Task name.</p>
     */
     @SerializedName("TaskName")
     @Expose
     private String TaskName;
 
     /**
-    * The path or file to be settled supports passing only one path and cannot be empty.
+    * <p>Path or file to be archived. Only one path is supported and it cannot be empty.</p>
     */
     @SerializedName("TaskPath")
     @Expose
     private String TaskPath;
 
     /**
-    * Data flow ID. this api can be accessed through DescribeDataFlow.
+    * <p>Data flow ID. It can be queried through DescribeDataFlow.</p>
     */
     @SerializedName("DataFlowId")
     @Expose
     private String DataFlowId;
 
     /**
-    * When a file in CFS Turbo and an external storage have the same name, whether to overwrite. true: overwrite. false: not overwrite (at the same time, data storage will not be released). default false when empty.
+    * <p>Whether to overwrite a file in CFSTurbo if it has the same name as a file in the external storage. true: overwrite; false: do not overwrite (and hot storage data will not be released). If this parameter is left empty, the default value is false.</p>
     */
     @SerializedName("IsOverwrite")
     @Expose
     private Boolean IsOverwrite;
 
     /**
-     * Get File system unique ID. 
-     * @return FileSystemId File system unique ID.
+    * <p>Path of the data manifest file. Each line in the manifest file is the full path of a file to be processed. All paths (including the manifest file path and the paths of files to be processed in each line of the manifest file) must start with /cfs and point to existing files in the CFS file system. Specify either this parameter or TaskPath.<br>Example:</p><ul><li>If the CFS root directory / is mounted and the manifest file is located at lists/archive_list.txt under the mount path, set this parameter to /cfs/lists/archive_list.txt.</li><li>If the CFS subdirectory /subdir is mounted and the manifest file is located at lists/archive_list.txt under the mount path, set this parameter to /cfs/subdir/lists/archive_list.txt.</li></ul>
+    */
+    @SerializedName("ListPath")
+    @Expose
+    private String ListPath;
+
+    /**
+     * Get <p>Unique file system ID.</p> 
+     * @return FileSystemId <p>Unique file system ID.</p>
      */
     public String getFileSystemId() {
         return this.FileSystemId;
     }
 
     /**
-     * Set File system unique ID.
-     * @param FileSystemId File system unique ID.
+     * Set <p>Unique file system ID.</p>
+     * @param FileSystemId <p>Unique file system ID.</p>
      */
     public void setFileSystemId(String FileSystemId) {
         this.FileSystemId = FileSystemId;
     }
 
     /**
-     * Get Lifecycle task type; archive: settlement; restore: preheating; release: data release; metaload: metadata loading. 
-     * @return Type Lifecycle task type; archive: settlement; restore: preheating; release: data release; metaload: metadata loading.
+     * Get <p>Lifecycle task type. archive: archiving; restore: preheating; release: data release; metaload: metadata loading.</p> 
+     * @return Type <p>Lifecycle task type. archive: archiving; restore: preheating; release: data release; metaload: metadata loading.</p>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Lifecycle task type; archive: settlement; restore: preheating; release: data release; metaload: metadata loading.
-     * @param Type Lifecycle task type; archive: settlement; restore: preheating; release: data release; metaload: metadata loading.
+     * Set <p>Lifecycle task type. archive: archiving; restore: preheating; release: data release; metaload: metadata loading.</p>
+     * @param Type <p>Lifecycle task type. archive: archiving; restore: preheating; release: data release; metaload: metadata loading.</p>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get Task name. 
-     * @return TaskName Task name.
+     * Get <p>Task name.</p> 
+     * @return TaskName <p>Task name.</p>
      */
     public String getTaskName() {
         return this.TaskName;
     }
 
     /**
-     * Set Task name.
-     * @param TaskName Task name.
+     * Set <p>Task name.</p>
+     * @param TaskName <p>Task name.</p>
      */
     public void setTaskName(String TaskName) {
         this.TaskName = TaskName;
     }
 
     /**
-     * Get The path or file to be settled supports passing only one path and cannot be empty. 
-     * @return TaskPath The path or file to be settled supports passing only one path and cannot be empty.
+     * Get <p>Path or file to be archived. Only one path is supported and it cannot be empty.</p> 
+     * @return TaskPath <p>Path or file to be archived. Only one path is supported and it cannot be empty.</p>
      */
     public String getTaskPath() {
         return this.TaskPath;
     }
 
     /**
-     * Set The path or file to be settled supports passing only one path and cannot be empty.
-     * @param TaskPath The path or file to be settled supports passing only one path and cannot be empty.
+     * Set <p>Path or file to be archived. Only one path is supported and it cannot be empty.</p>
+     * @param TaskPath <p>Path or file to be archived. Only one path is supported and it cannot be empty.</p>
      */
     public void setTaskPath(String TaskPath) {
         this.TaskPath = TaskPath;
     }
 
     /**
-     * Get Data flow ID. this api can be accessed through DescribeDataFlow. 
-     * @return DataFlowId Data flow ID. this api can be accessed through DescribeDataFlow.
+     * Get <p>Data flow ID. It can be queried through DescribeDataFlow.</p> 
+     * @return DataFlowId <p>Data flow ID. It can be queried through DescribeDataFlow.</p>
      */
     public String getDataFlowId() {
         return this.DataFlowId;
     }
 
     /**
-     * Set Data flow ID. this api can be accessed through DescribeDataFlow.
-     * @param DataFlowId Data flow ID. this api can be accessed through DescribeDataFlow.
+     * Set <p>Data flow ID. It can be queried through DescribeDataFlow.</p>
+     * @param DataFlowId <p>Data flow ID. It can be queried through DescribeDataFlow.</p>
      */
     public void setDataFlowId(String DataFlowId) {
         this.DataFlowId = DataFlowId;
     }
 
     /**
-     * Get When a file in CFS Turbo and an external storage have the same name, whether to overwrite. true: overwrite. false: not overwrite (at the same time, data storage will not be released). default false when empty. 
-     * @return IsOverwrite When a file in CFS Turbo and an external storage have the same name, whether to overwrite. true: overwrite. false: not overwrite (at the same time, data storage will not be released). default false when empty.
+     * Get <p>Whether to overwrite a file in CFSTurbo if it has the same name as a file in the external storage. true: overwrite; false: do not overwrite (and hot storage data will not be released). If this parameter is left empty, the default value is false.</p> 
+     * @return IsOverwrite <p>Whether to overwrite a file in CFSTurbo if it has the same name as a file in the external storage. true: overwrite; false: do not overwrite (and hot storage data will not be released). If this parameter is left empty, the default value is false.</p>
      */
     public Boolean getIsOverwrite() {
         return this.IsOverwrite;
     }
 
     /**
-     * Set When a file in CFS Turbo and an external storage have the same name, whether to overwrite. true: overwrite. false: not overwrite (at the same time, data storage will not be released). default false when empty.
-     * @param IsOverwrite When a file in CFS Turbo and an external storage have the same name, whether to overwrite. true: overwrite. false: not overwrite (at the same time, data storage will not be released). default false when empty.
+     * Set <p>Whether to overwrite a file in CFSTurbo if it has the same name as a file in the external storage. true: overwrite; false: do not overwrite (and hot storage data will not be released). If this parameter is left empty, the default value is false.</p>
+     * @param IsOverwrite <p>Whether to overwrite a file in CFSTurbo if it has the same name as a file in the external storage. true: overwrite; false: do not overwrite (and hot storage data will not be released). If this parameter is left empty, the default value is false.</p>
      */
     public void setIsOverwrite(Boolean IsOverwrite) {
         this.IsOverwrite = IsOverwrite;
+    }
+
+    /**
+     * Get <p>Path of the data manifest file. Each line in the manifest file is the full path of a file to be processed. All paths (including the manifest file path and the paths of files to be processed in each line of the manifest file) must start with /cfs and point to existing files in the CFS file system. Specify either this parameter or TaskPath.<br>Example:</p><ul><li>If the CFS root directory / is mounted and the manifest file is located at lists/archive_list.txt under the mount path, set this parameter to /cfs/lists/archive_list.txt.</li><li>If the CFS subdirectory /subdir is mounted and the manifest file is located at lists/archive_list.txt under the mount path, set this parameter to /cfs/subdir/lists/archive_list.txt.</li></ul> 
+     * @return ListPath <p>Path of the data manifest file. Each line in the manifest file is the full path of a file to be processed. All paths (including the manifest file path and the paths of files to be processed in each line of the manifest file) must start with /cfs and point to existing files in the CFS file system. Specify either this parameter or TaskPath.<br>Example:</p><ul><li>If the CFS root directory / is mounted and the manifest file is located at lists/archive_list.txt under the mount path, set this parameter to /cfs/lists/archive_list.txt.</li><li>If the CFS subdirectory /subdir is mounted and the manifest file is located at lists/archive_list.txt under the mount path, set this parameter to /cfs/subdir/lists/archive_list.txt.</li></ul>
+     */
+    public String getListPath() {
+        return this.ListPath;
+    }
+
+    /**
+     * Set <p>Path of the data manifest file. Each line in the manifest file is the full path of a file to be processed. All paths (including the manifest file path and the paths of files to be processed in each line of the manifest file) must start with /cfs and point to existing files in the CFS file system. Specify either this parameter or TaskPath.<br>Example:</p><ul><li>If the CFS root directory / is mounted and the manifest file is located at lists/archive_list.txt under the mount path, set this parameter to /cfs/lists/archive_list.txt.</li><li>If the CFS subdirectory /subdir is mounted and the manifest file is located at lists/archive_list.txt under the mount path, set this parameter to /cfs/subdir/lists/archive_list.txt.</li></ul>
+     * @param ListPath <p>Path of the data manifest file. Each line in the manifest file is the full path of a file to be processed. All paths (including the manifest file path and the paths of files to be processed in each line of the manifest file) must start with /cfs and point to existing files in the CFS file system. Specify either this parameter or TaskPath.<br>Example:</p><ul><li>If the CFS root directory / is mounted and the manifest file is located at lists/archive_list.txt under the mount path, set this parameter to /cfs/lists/archive_list.txt.</li><li>If the CFS subdirectory /subdir is mounted and the manifest file is located at lists/archive_list.txt under the mount path, set this parameter to /cfs/subdir/lists/archive_list.txt.</li></ul>
+     */
+    public void setListPath(String ListPath) {
+        this.ListPath = ListPath;
     }
 
     public CreateLifecycleDataTaskRequest() {
@@ -187,6 +210,9 @@ public class CreateLifecycleDataTaskRequest extends AbstractModel {
         if (source.IsOverwrite != null) {
             this.IsOverwrite = new Boolean(source.IsOverwrite);
         }
+        if (source.ListPath != null) {
+            this.ListPath = new String(source.ListPath);
+        }
     }
 
 
@@ -200,6 +226,7 @@ public class CreateLifecycleDataTaskRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "TaskPath", this.TaskPath);
         this.setParamSimple(map, prefix + "DataFlowId", this.DataFlowId);
         this.setParamSimple(map, prefix + "IsOverwrite", this.IsOverwrite);
+        this.setParamSimple(map, prefix + "ListPath", this.ListPath);
 
     }
 }
